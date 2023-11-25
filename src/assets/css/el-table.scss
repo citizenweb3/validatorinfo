@@ -1,0 +1,69 @@
+.is-light .el-table__header thead tr {
+  @apply h-10;
+}
+
+.is-light .el-table__body .el-table__row {
+  @apply h-13;
+}
+
+.is-light .el-table__header thead tr > th {
+  @apply bg-slate-50 font-semibold px-4 py-2 whitespace-nowrap text-0.65 text-[#8898aa] #{!important};
+}
+
+.is-light .el-table__body-wrapper tr td:first-child {
+  @apply pl-4 #{!important};
+}
+
+.is-dark .el-table__body .el-table__row {
+  @apply text-white h-13 #{!important};
+}
+
+.is-dark .el-table__header thead tr {
+  @apply h-10;
+}
+
+.is-dark .el-table__header thead tr > th {
+  @apply bg-dark-light font-semibold px-4 py-2 whitespace-nowrap text-0.65 text-[#4d7bca] #{!important};
+}
+
+
+// Dark table style
+.is-dark .el-table__body-wrapper tr td:first-child {
+  @apply pl-4 #{!important};
+}
+
+.is-dark.el-table th,
+.is-dark.el-table tr {
+  @apply bg-dark;
+}
+
+.is-dark .el-table__row {
+  @apply border-dark-light #{!important};
+}
+
+.is-dark .el-table__row:hover,
+.is-dark .el-table__row.hover-row {
+  @apply bg-dark-light text-white #{!important};
+}
+
+.is-dark.el-table th.is-leaf {
+  @apply border-y-0.5 border-[#1f3a68] #{!important};
+}
+
+.is-dark.el-table td,
+.is-dark.el-table th {
+  @apply border-solid border-[#274a84] #{!important};
+}
+
+
+
+.is-dark .el-table__body tr > td {
+  @apply bg-dark text-white #{!important};
+}
+
+.is-dark .el-table__body tr.hover-row.current-row > td,
+.is-dark .el-table__body tr.hover-row.el-table__row--striped.current-row > td,
+.is-dark .el-table__body tr.hover-row.el-table__row--striped > td,
+.is-dark .el-table__body tr.hover-row > td {
+  @apply bg-dark-light text-white #{!important};
+}

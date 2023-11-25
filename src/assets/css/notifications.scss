@@ -1,0 +1,175 @@
+body {
+  // Overlay opacity
+  .el-overlay {
+    @apply bg-dark-10 #{!important};
+  }
+
+  // Alerts
+  .el-alert {
+    @apply py-4 p-6 text-sm rounded-md;
+  }
+  .el-alert__closebtn {
+    @apply top-2/4 right-6 text-lg translate-y-[-50%] text-slate-10 bg-transparent h-5 w-5 hover:bg-transparent hover:opacity-75 #{!important};
+  }
+  .el-alert__title {
+    @apply text-sm font-semibold leading-8;
+  }
+  // Alerts - Custom
+  .el-alert.success {
+    @apply bg-success;
+  }
+  .el-alert.info {
+    @apply bg-cyan-310;
+  }
+  .el-alert.warning {
+    @apply bg-warning-50;
+  }
+  .el-alert.danger {
+    @apply bg-danger-50;
+  }
+  .el-alert.success,
+  .el-alert.info,
+  .el-alert.warning,
+  .el-alert.danger {
+    @apply text-white;
+  }
+
+  // Notifications
+  .el-message {
+    @apply py-4 pl-6 pr-20 min-w-0 w-[90%] max-w-1.5xl items-start rounded-md;
+  }
+  .el-message.default {
+    @apply bg-dark-50 border-dark-50 text-white #{!important};
+  }
+  .el-message .is-closable {
+    @apply mb-4;
+  }
+  .el-message .el-message__closeBtn {
+    @apply top-6 right-7 text-base font-bold #{!important};
+  }
+  .el-message .message-header {
+    @apply text-base font-semibold #{!important};
+  }
+  .el-message .message-footer {
+    @apply text-sm font-normal #{!important};
+  }
+  .el-message .el-message-icon--success,
+  .el-message .el-message-icon--info,
+  .el-message .el-message-icon--warning,
+  .el-message .el-message-icon--error {
+    @apply text-xl mr-5 #{!important};
+  }
+
+  // Notifications Custom
+  .el-message.default .el-icon {
+    @apply text-white #{!important};
+  }
+  .el-message.is-closable.default .message-header,
+  .el-message.is-closable.default .message-footer {
+    @apply text-white;
+  }
+
+  .el-message.info {
+    @apply bg-cyan-310 border-cyan-310 text-white #{!important};
+  }
+  .el-message.info .el-icon {
+    @apply text-white #{!important};
+  }
+  .el-message.is-closable.info .message-header,
+  .el-message.is-closable.info .message-footer {
+    @apply text-white;
+  }
+
+  .el-message.success {
+    @apply bg-success-50 border-success-50 text-white #{!important};
+  }
+  .el-message.success .el-icon {
+    @apply text-white #{!important};
+  }
+  .el-message.is-closable.success .message-header,
+  .el-message.is-closable.success .message-footer {
+    @apply text-white;
+  }
+
+  .el-message.warning {
+    @apply bg-warning-50 border-warning-50 text-white #{!important};
+  }
+  .el-message.warning .el-icon {
+    @apply text-white #{!important};
+  }
+  .el-message.is-closable.warning .message-header,
+  .el-message.is-closable.warning .message-footer {
+    @apply text-white;
+  }
+
+  .el-message.danger {
+    @apply bg-danger-50 border-danger-50 text-white #{!important};
+  }
+  .el-message.danger .el-icon {
+    @apply text-white #{!important};
+  }
+  .el-message.is-closable.danger .message-header,
+  .el-message.is-closable.danger .message-footer {
+    @apply text-white;
+  }
+
+  // el-dialog - danger
+  .el-dialog.danger {
+    @apply bg-gradient-to-r from-danger to-red-light;
+    .el-dialog__title,
+    .el-dialog__body {
+      @apply text-white break-normal #{!important};
+    }
+    .el-dialog__body .el-icon {
+      @apply text-5xl text-center #{!important};
+    }
+
+    .el-button.el-button--danger {
+      @apply bg-transparent text-white border-transparent shadow-none hover:translate-y-0 hover:border-transparent #{!important};
+    }
+  }
+
+  // el-dialog -default
+  .el-dialog {
+    @apply w-97/100 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-[32.95%] rounded-md #{!important};
+
+    .el-button {
+      @apply will-change-transform;
+    }
+
+    .el-dialog__header {
+      @apply p-5 h-15;
+    }
+    .el-dialog__title {
+      @apply inline-block text-1.0625 font-semibold h-[18.7px];
+    }
+    .el-dialog__headerbtn .el-dialog__close {
+      @apply h-5 w-5;
+    }
+
+    .el-dialog__body {
+      @apply break-normal p-6 mb-4;
+    }
+    .el-dialog__body .el-icon {
+      @apply text-base #{!important};
+    }
+    .el-dialog__body p {
+      @apply text-base leading-1.7;
+    }
+
+    .el-dialog__footer {
+      @apply p-6;
+    }
+    .el-dialog__footer .dialog-footer {
+      @apply w-full flex justify-between;
+    }
+
+    .el-button.el-button--secondary.is-plain {
+      @apply bg-transparent text-indigo-410 hover:translate-y-0 border-transparent shadow-none hover:bg-transparent #{!important};
+    }
+
+    .el-icon.el-dialog__close {
+      @apply text-slate-300 hover:text-slate-200 #{!important};
+    }
+  }
+}

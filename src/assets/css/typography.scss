@@ -1,0 +1,128 @@
+body {
+  // Default
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-primary-dark font-semibold leading-normal #{!important};
+  }
+  h1 {
+    @apply text-1.625;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-1.0625;
+  }
+  h4 {
+    @apply text-0.9375;
+  }
+  h5 {
+    @apply text-0.8125;
+  }
+  h6 {
+    @apply text-0.625;
+  }
+  abbr {
+    @apply underline decoration-dotted text-base uppercase cursor-help;
+  }
+
+  // Customizing classes for H tags
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    @apply text-primary-dark font-semibold leading-normal #{!important};
+  }
+  .h1 {
+    @apply text-1.625;
+  }
+  .h2 {
+    @apply text-xl;
+  }
+  .h3 {
+    @apply text-1.0625;
+  }
+  .h4 {
+    @apply text-0.9375;
+  }
+  .h5 {
+    @apply text-0.8125;
+  }
+  .h6 {
+    @apply text-0.625;
+  }
+
+  // Display-1
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4 {
+    @apply text-primary-dark font-semibold break-all sm:break-normal;
+  }
+  .display-1 {
+    @apply text-3.3;
+  }
+  .display-2 {
+    @apply text-2.75;
+  }
+  .display-3 {
+    @apply text-2.1875 break-normal #{!important};
+  }
+  .display-4 {
+    @apply text-1.6275;
+  }
+
+  // Specialized title
+  .heading {
+    @apply uppercase text-0.95 text-primary-dark font-semibold tracking-wide #{!important};
+  }
+  .heading-title {
+    @apply uppercase text-1.375 text-primary-dark font-semibold tracking-wide;
+  }
+  .lead {
+    @apply text-xl font-light leading-1.7;
+  }
+  .mark {
+    @apply bg-amber-60 p-[0.2rem];
+  }
+  .small {
+    @apply text-[0.8rem] font-normal;
+  }
+  .initialism {
+    @apply text-[0.9rem];
+  }
+
+  // Paragraphs
+  p {
+    @apply text-dark-lighter text-base font-light leading-1.7;
+  }
+  .blockquote {
+    @apply mb-4 text-xl text-dark-lighter font-normal leading-normal;
+  }
+  .blockquote-footer {
+    @apply text-muted text-80 font-normal leading-normal;
+  }
+  // .text-primary {
+  //   @apply text-indigo-410 #{!important};
+  // }
+
+  // List
+  ul {
+    @apply list-disc pl-10;
+  }
+  .list-unstyled {
+    @apply pl-0 list-none;
+  }
+  .list-inline {
+    @apply mb-4;
+  }
+  .list-inline-item {
+    @apply mr-2 inline-block;
+  }
+}
