@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "codezombiech.gitignore",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "orta.vscode-jest",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "christian-kohler.path-intellisense",
+    "wayou.vscode-todo-highlight",
+    "hollowtree.vue-snippets",
+    "prisma.prisma",
+    "vue.volar"
+  ]
+}
