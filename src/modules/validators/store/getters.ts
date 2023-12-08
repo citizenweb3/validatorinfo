@@ -8,7 +8,7 @@ export const getters: StoreGetters<DashboardState> = {
 import { computed } from 'vue'
 import { useState } from './state'
 
-export const useGetters = defineStore('dashboard.getters', () => {
+export const useGetters = defineStore('validators.getters', () => {
   const state = useState()
   const getText = computed((): string => `foo-${state.welcomeText.toString()}`)
 

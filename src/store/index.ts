@@ -1,4 +1,4 @@
-import { useDashboardStore } from 'modules/dashboard/store';
+import { useValidatorsStore } from 'modules/validators/store';
 import { useAuthStore } from 'modules/auth/store';
 import { defineStore } from 'pinia'
 
@@ -14,7 +14,7 @@ export const globalStore = defineStore('global', {
 })
 
 const useStore = () => ({
-  dashboard: useDashboardStore(),
+  validators: useValidatorsStore(),
   auth: useAuthStore(),
   global: globalStore(),
 });

@@ -37,7 +37,7 @@ export default defineComponent({
   setup() {
     const store = useStore()
     const textInput = ref('')
-    const isSBPin = computed(() => store.dashboard.isSBPin)
+    const isSBPin = computed(() => store.validators.isSBPin)
 
     return {
       isSBPin,

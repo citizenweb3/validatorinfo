@@ -4,7 +4,7 @@ import { useActions } from './actions'
 import { useGetters } from './getters'
 import { useState } from './state'
 
-export const useDashboardStore = defineStore('dashboard', () => {
+export const useValidatorsStore = defineStore('validators', () => {
   return {
     ...extractStore(useState()),
     ...extractStore(useGetters()),

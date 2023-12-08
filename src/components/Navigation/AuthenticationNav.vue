@@ -46,7 +46,7 @@
                   >
                     <template #reference>
                       <el-link
-                        href="https://github.com/ltv/fancy-dashboard-vue3"
+                        href="https://github.com/ltv/fancy-validators-vue3"
                         :underline="false"
                         class="py-px text-default font-medium w-full justify-start"
                       >
@@ -101,7 +101,7 @@
           >
             <template #reference>
               <el-link
-                href="https://github.com/ltv/fancy-dashboard-vue3"
+                href="https://github.com/ltv/fancy-validators-vue3"
                 :underline="false"
                 class="text-secondary hover:text-secondary-active"
               >
