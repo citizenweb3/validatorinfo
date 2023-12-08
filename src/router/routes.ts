@@ -47,135 +47,135 @@ const routes = [
       parentPath: 'Home'
     },
   },
-  {
-    path: '/components/:componentItem?',
-    component: ComponentLayout,
-    name: 'Components',
-    meta: {
-      title: 'Components',
-      icon: ColorSwatchIcon,
-      color: 'text-info',
-      requiresAuth: true,
-      parentPath: 'Components'
-    },
-    children: [
-      {
-        path: 'buttons',
-        name: 'Buttons',
-        component: Button,
-        meta: {
-          title: 'Buttons',
-          icon: CursorClickIcon,
-          color: 'text-danger-50',
-          requiresAuth: true,
-        },
-      },
-      {
-        path: 'tags',
-        name: 'Tags',
-        component: Tags,
-        meta: {
-          title: 'Tags',
-          icon: CursorClickIcon,
-          color: 'text-primary',
-          requiresAuth: true,
-        },
-      },
-      {
-        path: 'notifications',
-        component: Notification,
-        name: 'Notifications',
-        meta: {
-          title: 'Notifications',
-          icon: BellIcon,
-          color: 'text-success-50',
-          requiresAuth: true,
-        },
-      },
-      {
-        path: 'tables',
-        component: Table,
-        name: 'Tables',
-        meta: {
-          title: 'Tables',
-          icon: ViewBoardsIcon,
-          color: 'text-indigo-410',
-          requiresAuth: true,
-        },
-      },
-      {
-        path: 'grid',
-        component: Grid,
-        name: 'Grid',
-        meta: {
-          title: 'Grid',
-          icon: ViewGridIcon,
-          color: 'text-info',
-          requiresAuth: true,
-        },
-      },
-      {
-        path: 'typography',
-        component: Typography,
-        name: 'Typography',
-        meta: {
-          title: 'Typography',
-          icon: DocumentTextIcon,
-          color: 'text-yellow-310',
-          requiresAuth: true,
-        },
-      },
-      {
-        path: 'cards',
-        component: Card,
-        name: 'Cards',
-        meta: {
-          title: 'Cards',
-          icon: CreditCardIcon,
-          color: 'text-warning-50',
-          requiresAuth: true,
-        },
-      },
-      {
-        path: 'icons',
-        component: Icons,
-        name: 'Icons',
-        meta: {
-          title: 'Icons',
-          icon: StarIcon,
-          color: 'text-red-410',
-          requiresAuth: true,
-        },
-      },
-    ]
-  },
+  // {
+  //   path: '/components/:componentItem?',
+  //   component: ComponentLayout,
+  //   name: 'Components',
+  //   meta: {
+  //     title: 'Components',
+  //     icon: ColorSwatchIcon,
+  //     color: 'text-info',
+  //     requiresAuth: true,
+  //     parentPath: 'Components'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'buttons',
+  //       name: 'Buttons',
+  //       component: Button,
+  //       meta: {
+  //         title: 'Buttons',
+  //         icon: CursorClickIcon,
+  //         color: 'text-danger-50',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //     {
+  //       path: 'tags',
+  //       name: 'Tags',
+  //       component: Tags,
+  //       meta: {
+  //         title: 'Tags',
+  //         icon: CursorClickIcon,
+  //         color: 'text-primary',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //     {
+  //       path: 'notifications',
+  //       component: Notification,
+  //       name: 'Notifications',
+  //       meta: {
+  //         title: 'Notifications',
+  //         icon: BellIcon,
+  //         color: 'text-success-50',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //     {
+  //       path: 'tables',
+  //       component: Table,
+  //       name: 'Tables',
+  //       meta: {
+  //         title: 'Tables',
+  //         icon: ViewBoardsIcon,
+  //         color: 'text-indigo-410',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //     {
+  //       path: 'grid',
+  //       component: Grid,
+  //       name: 'Grid',
+  //       meta: {
+  //         title: 'Grid',
+  //         icon: ViewGridIcon,
+  //         color: 'text-info',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //     {
+  //       path: 'typography',
+  //       component: Typography,
+  //       name: 'Typography',
+  //       meta: {
+  //         title: 'Typography',
+  //         icon: DocumentTextIcon,
+  //         color: 'text-yellow-310',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //     {
+  //       path: 'cards',
+  //       component: Card,
+  //       name: 'Cards',
+  //       meta: {
+  //         title: 'Cards',
+  //         icon: CreditCardIcon,
+  //         color: 'text-warning-50',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //     {
+  //       path: 'icons',
+  //       component: Icons,
+  //       name: 'Icons',
+  //       meta: {
+  //         title: 'Icons',
+  //         icon: StarIcon,
+  //         color: 'text-red-410',
+  //         requiresAuth: true,
+  //       },
+  //     },
+  //   ]
+  // },
 
-  {
-    path: '/profile',
-    component: Profile,
-    name: 'Profile',
-    meta: {
-      title: 'Profile',
-      icon: UserIcon,
-      color: 'text-success-50',
-      isDarkBackground: true,
-      isFullWidthLayout: true,
-      requiresAuth: true,
-      parentPath: 'Home'
-    },
-  },
-  {
-    path: '/map',
-    component: Map,
-    name: 'Map',
-    meta: {
-      title: 'Map',
-      icon: LocationMarkerIcon,
-      color: 'text-red-410',
-      requiresAuth: true,
-      parentPath: 'Home'
-    },
-  },
+  // {
+  //   path: '/profile',
+  //   component: Profile,
+  //   name: 'Profile',
+  //   meta: {
+  //     title: 'Profile',
+  //     icon: UserIcon,
+  //     color: 'text-success-50',
+  //     isDarkBackground: true,
+  //     isFullWidthLayout: true,
+  //     requiresAuth: true,
+  //     parentPath: 'Home'
+  //   },
+  // },
+  // {
+  //   path: '/map',
+  //   component: Map,
+  //   name: 'Map',
+  //   meta: {
+  //     title: 'Map',
+  //     icon: LocationMarkerIcon,
+  //     color: 'text-red-410',
+  //     requiresAuth: true,
+  //     parentPath: 'Home'
+  //   },
+  // },
   {
     path: '/register',
     component: Register,
