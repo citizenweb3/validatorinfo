@@ -9,7 +9,7 @@ const router: Router = createRouter({
 
 router.beforeEach(() => {
   const store = useStore()
-  store.dashboard.setIsSBOpen(false)
+  store.validators.setIsSBOpen(false)
 })
 
 export default router

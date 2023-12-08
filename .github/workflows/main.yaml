@@ -36,7 +36,7 @@ jobs:
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          target: argon-dashboard-vue3
+          target: argon-validators-vue3
           channelId: live
           projectId: ltv-project-template
           entryPoint: ./

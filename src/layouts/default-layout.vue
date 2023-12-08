@@ -70,10 +70,10 @@ export default defineComponent({
   setup() {
     const route: any = useRoute()
     const store = useStore()
-    const isSBPin = computed<boolean>(() => store.dashboard.isSBPin)
+    const isSBPin = computed<boolean>(() => store.validators.isSBPin)
     const loading = computed(() => store.global.loading)
 
-    const setIsSBPin = (b: boolean) => store.dashboard.setIsSBPin(b)
+    const setIsSBPin = (b: boolean) => store.validators.setIsSBPin(b)
     return {
       isSBPin,
       loading,

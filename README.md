@@ -1,8 +1,8 @@
-# argon-dashboard-vue3
+# argon-validators-vue3
 
-Argon Dashboard Vue 3, ElementUI &amp; TailwindCSS - Inspired by [Creative Tim](https://www.creative-tim.com/product/vue-argon-dashboard)
+Argon Dashboard Vue 3, ElementUI &amp; TailwindCSS - Inspired by [Creative Tim](https://www.creative-tim.com/product/vue-argon-validators)
 
-![Hi](/src/assets/images/dashboard.png)
+![Hi](/src/assets/images/validators.png)
 
 ## Nice stack (VET)
 

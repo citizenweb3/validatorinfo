@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "site": "argon-dashboard-vue3",
+      "site": "argon-validators-vue3",
       "public": "dist",
       "ignore": ["firebase.json", "**/.*", "**/*.map", "**/node_modules/**"],
       "rewrites": [

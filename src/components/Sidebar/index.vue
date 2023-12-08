@@ -14,7 +14,7 @@
           v-if="(isSBOpen && !isSBPin) || isSBPin"
           :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
           class="transition-opacity duration-300 opacity-1 p-6 block"
-          :to="{ name: 'Dashboard' }"
+          :to="{ name: 'Validators' }"
         >
           <img src="@/assets/images/blue.png" class="max-h-8 max-w-full align-middle" alt="..." />
         </router-link>
@@ -226,18 +226,18 @@ export default defineComponent({
 
     const handleOnResize = () => {
       if (window.innerWidth < 1024) {
-        store.dashboard.setIsSBOpen(false)
-        store.dashboard.setIsSBPin(false)
+        store.validators.setIsSBOpen(false)
+        store.validators.setIsSBPin(false)
       }
     }
 
     onClickOutside(target, (_) => {
-      if (window.innerWidth < 1024) store.dashboard.setIsSBOpen(false)
+      if (window.innerWidth < 1024) store.validators.setIsSBOpen(false)
     })
     onBeforeMount(() => {
       if (isMobile || window.innerWidth < 1024) {
-        store.dashboard.setIsSBOpen(false)
-        store.dashboard.setIsSBPin(false)
+        store.validators.setIsSBOpen(false)
+        store.validators.setIsSBPin(false)
       }
     })
     onMounted(() => {
@@ -248,15 +248,15 @@ export default defineComponent({
       window.removeEventListener('resize', handleOnResize)
     })
 
-    const isSBPin = computed<boolean>(() => store.dashboard.isSBPin)
-    const isSBOpen = computed<boolean>(() => store.dashboard.isSBOpen)
+    const isSBPin = computed<boolean>(() => store.validators.isSBPin)
+    const isSBOpen = computed<boolean>(() => store.validators.isSBOpen)
 
     const hoverLeftBar = (v: boolean) => {
-      if (!isMobile && window.innerWidth > 1023) store.dashboard.setIsSBOpen(v)
+      if (!isMobile && window.innerWidth > 1023) store.validators.setIsSBOpen(v)
     }
 
     const handleMenuClick = () => {
-      store.dashboard.toggleMenu()
+      store.validators.toggleMenu()
     }
 
     return {
