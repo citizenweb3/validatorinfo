@@ -154,28 +154,6 @@
             </template>
           </el-menu>
           <el-divider />
-          <div
-            class="pl-6.5 text-muted text-12.8 font-bold"
-            :class="{ hidden: !isSBOpen && !isSBPin }"
-          >
-            DOCUMENTATION
-          </div>
-          <div class="relative mt-0 rounded-lg mx-2">
-            <el-link class="px-2 h-11.25" :underline="false" :href="documentHref" target="_blank">
-              <div
-                class="inline-flex pl-1.5 items-center w-full text-sm my-0.5 font-normal transition-colors"
-              >
-                <div class="h-5 w-6 block">
-                  <el-icon class="w-6 mx-auto text-dark-20"><Promotion /></el-icon>
-                </div>
-                <span
-                  class="transition-opacity opacity-1 ml-3 text-sm font-normal text-dark-20"
-                  :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
-                  >Getting started</span
-                >
-              </div>
-            </el-link>
-          </div>
         </el-scrollbar>
       </div>
     </div>
