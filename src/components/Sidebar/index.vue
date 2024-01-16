@@ -23,7 +23,7 @@
       <div class="flex-1 overflow-y-hidden">
         <el-scrollbar>
           <el-menu ref="target" class="text-dark-20 before:block before:md:mt-4 mt-0" default-active="0"
-            :default-openeds="!leftSideBarItems.includes(route.name) ? ['1'] : ['0']">
+            :default-openeds="!leftSideBarItems.includes(route.name) ? ['2'] : ['2']">
             <template v-for="(item, index) in menuItems" :key="index">
               <el-sub-menu class="relative rounded-lg mx-2" :class="{
                 ' bg-slate-100/50 ': route.name === item.name,
@@ -78,8 +78,10 @@
                     aria-hidden="true" />
                   <router-link
                     class="inline-flex pl-1.5 items-center w-full h-full text-sm my-0.5 font-normal transition-colors duration-150 hover:text-gray-500/100 focus:text-gray-800"
-                    :class="{ ' text-gray-800 ': route.name === item.name }" :to="{ name: item.name }"
-                    :title="item.title">
+                    :class="{
+                      ' text-gray-800 ': route.name === item.name,
+                      ' ml-4.5 ': item.subOffset,
+                    }" :to="{ name: item.name }" :title="item.title">
                     <div>
                       <em class="h-5 w-6 block">
                         <component :is="item.icon" :class="` w-5 mx-auto ${item.color}`" aria-hidden="true" />
@@ -119,6 +121,7 @@ interface MenuItem {
   color: string
   children: any
   requiresAuth: boolean
+  subOffset?: boolean
 }
 
 export default defineComponent({
