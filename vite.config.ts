@@ -66,5 +66,5 @@ export default defineConfig({
     },
     sourcemap: true,
   },
-  optimizeDeps: {},
+  optimizeDeps: {}
 })

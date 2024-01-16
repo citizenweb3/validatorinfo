@@ -20,7 +20,7 @@
             >Creative Tim</a
           > -->
         </div>
-        <div class="">
+        <!-- <div class="">
           <a href="#" class="text-sm text-dark-lighter hover:text-indigo-410" target="_blank">About Us</a>
         </div>
         <div class="">
@@ -28,7 +28,7 @@
         </div>
         <div class="">
           <a href="#" class="text-sm text-dark-lighter hover:text-indigo-410" target="_blank">MIT License</a>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
