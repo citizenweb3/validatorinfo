@@ -1,91 +1,127 @@
 <template>
-  <div class="w-full h-screen">
-    <el-auto-resizer>
-      <template #default="{ height, width }">
-        <el-table-v2 :data="data" :columns="columns" :width="width" :height="height">
-        </el-table-v2>
-      </template>
-    </el-auto-resizer>
+  <div class="w-full">
+    <div class="flex flex-wrap flex-col bg-white shadow mb-7 mx-auto rounded-md">
+      <div class="flex flex-wrap items-center py-2 px-6 mb-0 border-b-dark-4">
+        <div class="max-w-full basis-0 grow">
+          <h3 class="mb-0 cursor-auto text-primary-dark">{{ title }}</h3>
+        </div>
+        <div class="max-w-full basis-0 grow">
+          <div class="flex flex-wrap mb-0 pl-0 justify-end gap-x-3">
+            <div>
+              <el-button type="primary" size="small"> See all </el-button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="block overflow-x-auto w-full p-0">
+        <el-table :data="tableData" style="width: 100%" class="is-light">
+          <el-table-column label="PAGE NAME" min-width="200">
+            <template #default="scope">
+              <div class="flex items-center">
+                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">{{
+                  scope.row.pageName
+                }}</span>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="VISITORS" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <span class="px-4 text-0.8125 font-normal cursor-auto text-dark-lighter">{{
+                  scope.row.visitorNumber
+                }}</span>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="UNIQUE USERS" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <span class="px-4 text-0.8125 font-normal text-dark-lighter">{{
+                  scope.row.userNumber
+                }}</span>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="BOUNCE RATE" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <div class="px-4 flex justify-center gap-1">
+                  <div>
+                    <ArrowNarrowUpIcon v-if="scope.row.rate > 45.0" class="w-4 h-4 text-success" />
+                    <ArrowNarrowDownIcon v-else class="w-4 h-4 text-warning" />
+                  </div>
+
+                  <span class="text-0.8125 font-normal text-dark-lighter">{{ scope.row.rate }}%</span>
+                </div>
+              </div>
+            </template>
+          </el-table-column>
+        </el-table>
+      </div>
+    </div>
   </div>
 </template>
 
-<script lang="tsx" setup>
-import { unref, ref } from 'vue'
-import { ElCheckbox } from 'element-plus'
-import type { FunctionalComponent } from 'vue'
-import type { CheckboxValueType, Column } from 'element-plus'
-// TODO: WORK IN PROGRESS problems with tsx rendering
-type SelectionCellProps = {
-  value: boolean
-  intermediate?: boolean
-  onChange: (value: CheckboxValueType) => void
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { ArrowNarrowDownIcon, ArrowNarrowUpIcon } from '@heroicons/vue/outline'
+
+interface PageVisitInfo {
+  pageName: string
+  visitorNumber: string
+  userNumber: number
+  rate: number
 }
-
-const SelectionCell: FunctionalComponent<SelectionCellProps> = ({
-  value,
-  intermediate = false,
-  onChange,
-}) => {
-  return (<ElCheckbox onChange={onChange} modelValue={value} indeterminate={intermediate} />)
-}
-
-const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
-  Array.from({ length }).map((_, columnIndex) => ({
-    ...props,
-    key: `${prefix}${columnIndex}`,
-    dataKey: `${prefix}${columnIndex}`,
-    title: `Column ${columnIndex}`,
-    width: 150,
-  }))
-
-const generateData = (
-  columns: ReturnType<typeof generateColumns>,
-  length = 200,
-  prefix = 'row-'
-) =>
-  Array.from({ length }).map((_, rowIndex) => {
-    return columns.reduce(
-      (rowData, column, columnIndex) => {
-        rowData[column.dataKey] = `Row ${rowIndex} - Col ${columnIndex}`
-        return rowData
+export default defineComponent({
+  name: 'ValidatorsTable',
+  components: {
+    ArrowNarrowDownIcon,
+    ArrowNarrowUpIcon,
+  },
+  props: {
+    title: {
+      type: String,
+      default: 'Page visits',
+    },
+  },
+  setup() {
+    const tableData: PageVisitInfo[] = [
+      {
+        pageName: 'Ala Bala',
+        visitorNumber: '4,569',
+        userNumber: 340,
+        rate: 46.53,
       },
       {
-        id: `${prefix}${rowIndex}`,
-        checked: false,
-        parentId: null,
-      }
-    )
-  })
+        pageName: '/argon/index.html',
+        visitorNumber: '3,985',
+        userNumber: 319,
+        rate: 46.53,
+      },
+      {
+        pageName: '/argon/charts.html',
+        visitorNumber: '3,513	',
+        userNumber: 294,
+        rate: 36.49,
+      },
+      {
+        pageName: '/argon/tables.html',
+        visitorNumber: '2,000',
+        userNumber: 147,
+        rate: 50.87,
+      },
+      {
+        pageName: '/argon/profile.html',
+        visitorNumber: '1,795',
+        userNumber: 190,
+        rate: 42.53,
+      },
+    ]
 
-const columns: Column<any>[] = generateColumns(10)
-columns.unshift({
-  key: 'selection',
-  width: 50,
-  // cellRenderer: ({ rowData }) => {
-  //   const onChange = (value: CheckboxValueType) => (rowData.checked = value)
-  //   return <SelectionCell value={rowData.checked} onChange={onChange} />
-  // },
-
-  // headerCellRenderer: () => {
-  //   const _data = unref(data)
-  //   const onChange = (value: CheckboxValueType) =>
-  //   (data.value = _data.map((row) => {
-  //     row.checked = value
-  //     return row
-  //   }))
-  //   const allSelected = _data.every((row) => row.checked)
-  //   const containsChecked = _data.some((row) => row.checked)
-
-  //   return (
-  //     <SelectionCell
-  //       value={allSelected}
-  //       intermediate={containsChecked && !allSelected}
-  //       onChange={onChange}
-  //     />
-  //   )
-  // },
+    return {
+      tableData,
+    }
+  },
 })
-
-const data = ref(generateData(columns, 200))
-
 </script>
