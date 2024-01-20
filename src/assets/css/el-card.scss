@@ -1,0 +1,17 @@
+body {
+  .el-card {
+    @apply relative flex flex-col bg-clip-border break-words min-w-0 rounded-5 shadow-card cursor-auto text-primary-dark #{!important};
+    --el-card-bg-color: white !important;
+  }
+  .el-card .card-header {
+    h3 {
+      @apply mb-0 cursor-auto text-primary-dark;
+    }
+  }
+  .el-card .el-card__header {
+    @apply w-full py-5 px-6 mb-0 border-b-dark-4;
+  }
+  .el-card .el-card__body {
+    @apply w-full py-6 px-6 grow shrink;
+  }
+}

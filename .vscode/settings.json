@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "fontawesome",
+    "fortawesome",
+    "headlessui",
+    "heroicons",
+    "pinia",
+    "Srcs",
+    "sweetalert",
+    "tailwindcss",
+    "unplugin",
+    "unstyled",
+    "VITE",
+    "vuex"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
