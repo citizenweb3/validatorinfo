@@ -11,8 +11,8 @@
           v-if="!route.meta.isDarkBackground">
           <div class="w-full flex flex-wrap flex-row">
             <div class="flex w-1/2">
-              <div class="text-white text-xl font-semibold inline-block pt-px">
-                {{ route.meta.title }}
+              <div class="text-xl font-semibold inline-block pt-px">
+                Home
               </div>
               <div class="md:ml-7 hidden md:inline-block pt-1.5">
                 <BreadCrumb :parentPath="route.meta.parentPath" :title="route.meta.title" />

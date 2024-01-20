@@ -16,43 +16,78 @@
 
       <div class="block overflow-x-auto w-full p-0">
         <el-table :data="tableData" style="width: 100%" class="is-light">
-          <el-table-column label="PAGE NAME" min-width="200">
+          <el-table-column label="Validator Name" min-width="200">
+            <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
-                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">{{
-                  scope.row.pageName
-                }}</span>
+                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
               </div>
             </template>
           </el-table-column>
-          <el-table-column label="VISITORS" min-width="150">
+          <el-table-column label="Supported Assets" min-width="150">
             <template #default="scope">
               <div class="flex items-center">
-                <span class="px-4 text-0.8125 font-normal cursor-auto text-dark-lighter">{{
-                  scope.row.visitorNumber
-                }}</span>
+                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
               </div>
             </template>
           </el-table-column>
-          <el-table-column label="UNIQUE USERS" min-width="150">
+          <el-table-column label="Battery" min-width="150">
             <template #default="scope">
               <div class="flex items-center">
-                <span class="px-4 text-0.8125 font-normal text-dark-lighter">{{
-                  scope.row.userNumber
-                }}</span>
+                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
               </div>
             </template>
           </el-table-column>
-          <el-table-column label="BOUNCE RATE" min-width="150">
+          <el-table-column label="TVS" min-width="150">
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-4 flex justify-center gap-1">
-                  <div>
-                    <ArrowNarrowUpIcon v-if="scope.row.rate > 45.0" class="w-4 h-4 text-success" />
-                    <ArrowNarrowDownIcon v-else class="w-4 h-4 text-warning" />
-                  </div>
-
-                  <span class="text-0.8125 font-normal text-dark-lighter">{{ scope.row.rate }}%</span>
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                </div>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="Tech Score" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <div class="px-4 flex justify-center gap-1">
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                </div>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="Soc. Score" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <div class="px-4 flex justify-center gap-1">
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                </div>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="Gov. Score" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <div class="px-4 flex justify-center gap-1">
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                </div>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="User Score" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <div class="px-4 flex justify-center gap-1">
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                </div>
+              </div>
+            </template>
+          </el-table-column>
+          <el-table-column label="Links" min-width="150">
+            <template #default="scope">
+              <div class="flex items-center">
+                <div class="px-4 flex justify-center gap-1">
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
                 </div>
               </div>
             </template>

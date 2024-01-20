@@ -52,9 +52,7 @@
                     <ArrowNarrowDownIcon v-else class="w-4 h-4 text-warning" />
                   </div>
 
-                  <span class="text-0.8125 font-normal text-dark-lighter"
-                    >{{ scope.row.rate }}%</span
-                  >
+                  <span class="text-0.8125 font-normal text-dark-lighter">{{ scope.row.rate }}%</span>
                 </div>
               </div>
             </template>
