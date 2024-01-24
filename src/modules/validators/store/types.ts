@@ -1,9 +1,5 @@
-import { TableV2CustomizedHeaderSlotParam } from "element-plus"
-
-export interface DashboardState {
-  welcomeText: string
-  isSBPin: boolean
-  isSBOpen: boolean
+export interface ValidatorState {
+  data: ValidatorOverviewInfo[]
 }
 
 /**
@@ -23,7 +19,7 @@ export interface Link {
 }
 
 /**
- * A link correspoding to networks such as Ethereum, Polkadot, Cosmos, Osmosis, etc.
+ * A link corresponding to networks such as Ethereum, Polkadot, Cosmos, Osmosis, etc.
  */
 export type NetworkAssetLink = Link
 

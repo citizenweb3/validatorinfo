@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { useState } from './state'
 import { useGetters } from './getters'
 
-export const useActions = defineStore('validators.actions', () => {
+export const useActions = defineStore('dashboard.actions', () => {
   const state = useState()
   const getters = useGetters()
 

@@ -335,11 +335,11 @@ export default defineComponent({
       isSideMenuOpen.value = false
     }
 
-    const isSBPin = computed(() => store.validators.isSBPin)
-    const isSBOpen = computed(() => store.validators.isSBOpen)
+    const isSBPin = computed(() => store.dashboard.isSBPin)
+    const isSBOpen = computed(() => store.dashboard.isSBOpen)
 
     const handleMenuClick = () => {
-      store.validators.toggleMenu()
+      store.dashboard.toggleMenu()
     }
 
     const handleLogoutClick = () => {
