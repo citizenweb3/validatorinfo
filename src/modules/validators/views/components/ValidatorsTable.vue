@@ -20,21 +20,29 @@
             <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
-                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                  {{ scope.row.name }}
+                </span>
               </div>
             </template>
           </el-table-column>
           <el-table-column label="Supported Assets" min-width="150">
             <template #default="scope">
               <div class="flex items-center">
-                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter validator-panel">
+                  <div v-for="(item, index) in scope.row.supportedAssets" :key="index">
+                    <img v-if="item.logoUrl" :src="item.logoUrl" class="img-fluid" height="35" width="35" />
+                  </div>
+                </span>
               </div>
             </template>
           </el-table-column>
           <el-table-column label="Battery" min-width="150">
             <template #default="scope">
               <div class="flex items-center">
-                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                  {{ scope.row.batteryLevel }}
+                </span>
               </div>
             </template>
           </el-table-column>
@@ -42,7 +50,9 @@
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                    {{ scope.row.tvl }}
+                  </span>
                 </div>
               </div>
             </template>
@@ -51,7 +61,9 @@
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                    {{ scope.row.techScore }}
+                  </span>
                 </div>
               </div>
             </template>
@@ -60,7 +72,9 @@
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                    {{ scope.row.socialScore }}
+                  </span>
                 </div>
               </div>
             </template>
@@ -69,7 +83,9 @@
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                    {{ scope.row.govScore }}
+                  </span>
                 </div>
               </div>
             </template>
@@ -78,7 +94,9 @@
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                    {{ scope.row.userScore }}
+                  </span>
                 </div>
               </div>
             </template>
@@ -127,3 +145,8 @@ export default defineComponent({
   },
 })
 </script>
+<style lang="css">
+.validator-panel {
+  display: flex;
+}
+</style>
