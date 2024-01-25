@@ -9,7 +9,7 @@ export const useState = defineStore({
         {
           name: "Validator One",
           supportedAssets: [
-            { name: "Ethereum", url: "https://ethereum.org", logoUrl: "https://app.osmosis.zone/tokens/generated/weth.svg" },
+            { name: "Ethereum", url: "https://ethereum.org", logoUrl: "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=029" },
             { name: "Polkadot", url: "https://polkadot.network", logoUrl: "https://app.osmosis.zone/tokens/generated/dot.svg" }
           ],
           batteryLevel: 75,
@@ -46,7 +46,7 @@ export const useState = defineStore({
           name: "Validator Three",
           supportedAssets: [
             { name: "Binance Smart Chain", url: "https://bscscan.com", logoUrl: "https://app.osmosis.zone/tokens/generated/bnb.svg" },
-            { name: "Avalanche", url: "https://avax.network", logoUrl: "https://app.osmosis.zone/tokens/generated/avax.svg" }
+            { name: "Avalanche", url: "https://avax.network", logoUrl: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=029" }
           ],
           batteryLevel: 85,
           tvl: [0.5, 0.5],
