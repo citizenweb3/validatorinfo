@@ -29,9 +29,9 @@
           <el-table-column label="Supported Assets" min-width="150">
             <template #default="scope">
               <div class="flex items-center">
-                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter validator-panel">
-                  <div v-for="(item, index) in scope.row.supportedAssets" :key="index">
-                    <img v-if="item.logoUrl" :src="item.logoUrl" class="img-fluid" height="35" width="35" />
+                <span class="flex mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                  <div v-for="(item, index) in scope.row.supportedAssets" :key="index" class="logo-wrapper">
+                    <div class="validator-logo" :style="{ 'background-image': 'url(' + item.logoUrl + ')' }" />
                   </div>
                 </span>
               </div>
@@ -41,6 +41,7 @@
             <template #default="scope">
               <div class="flex items-center">
                 <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                  <battery-component />
                   {{ scope.row.batteryLevel }}
                 </span>
               </div>
@@ -120,6 +121,7 @@
 import { defineComponent } from 'vue'
 import { ValidatorOverviewInfo } from 'modules/validators/store/types'
 import { ArrowNarrowDownIcon, ArrowNarrowUpIcon } from '@heroicons/vue/outline'
+import BatteryComponent from './BatteryComponent.vue'
 import useStore from 'store'
 
 const store = useStore()
@@ -129,6 +131,7 @@ export default defineComponent({
   components: {
     ArrowNarrowDownIcon,
     ArrowNarrowUpIcon,
+    BatteryComponent
   },
   props: {
     title: {
@@ -145,8 +148,18 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="css">
-.validator-panel {
-  display: flex;
+<style lang="scss" scoped>
+.logo-wrapper {
+  .validator-logo {
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    margin: 5px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }
 </style>
