@@ -41,8 +41,7 @@
             <template #default="scope">
               <div class="flex items-center">
                 <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                  <battery-component />
-                  {{ scope.row.batteryLevel }}
+                  <battery-component :battery-level="scope.row.batteryLevel" />
                 </span>
               </div>
             </template>
