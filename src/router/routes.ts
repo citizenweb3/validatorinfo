@@ -33,6 +33,7 @@ const Map = () => import('modules/map/views/index.vue')
 
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
+import Validator from '../modules/validator/index.vue';
 
 const routes = [
   {
@@ -43,8 +44,19 @@ const routes = [
       title: 'Validators',
       icon: HomeIcon,
       color: 'text-indigo-410',
-      requiresAuth: true,
+      requiresAuth: false,
       parentPath: 'Validators'
+    }
+  },
+  {
+    path: '/validator/:id?',
+    name: 'Validator',
+    component: Validator,
+    meta: {
+      title: 'Validator',
+      icon: HomeIcon,
+      color: 'text-indigo-410',
+      requiresAuth: false,
     },
   },
   {
@@ -55,7 +67,7 @@ const routes = [
       title: 'Networks',
       icon: HomeIcon,
       color: 'text-indigo-410',
-      requiresAuth: true,
+      requiresAuth: false,
       parentPath: 'Networks'
     },
   },

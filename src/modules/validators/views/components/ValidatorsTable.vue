@@ -15,14 +15,16 @@
       </div>
 
       <div class="block overflow-x-auto w-full p-0">
-        <el-table :data="tableData" style="width: 100%" class="is-light">
+        <el-table :data="tableData" style="width: 100%" class="is-light cursor-pointer">
           <el-table-column label="Validator Name" min-width="200">
             <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
-                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                  {{ scope.row.name }}
-                </span>
+                <router-link :to="`/validator/${scope.row.id}`">
+                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter cursor-pointer">
+                    {{ scope.row.name }}
+                  </span>
+                </router-link>
               </div>
             </template>
           </el-table-column>

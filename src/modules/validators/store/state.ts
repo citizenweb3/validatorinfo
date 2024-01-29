@@ -7,6 +7,7 @@ export const useState = defineStore({
     return {
       data: [
         {
+          id: 0,
           name: "Validator One",
           supportedAssets: [
             { name: "Ethereum", url: "https://ethereum.org", logoUrl: "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=029" },
@@ -24,6 +25,7 @@ export const useState = defineStore({
           ]
         },
         {
+          id: 1,
           name: "Validator Two",
           supportedAssets: [
             { name: "Cosmos", url: "https://cosmos.network", logoUrl: "https://app.osmosis.zone/tokens/generated/atom.svg" },
@@ -40,9 +42,10 @@ export const useState = defineStore({
             { name: "Support", url: "https://validatorTwo.com/support", logoUrl: "https://validatorTwo.com/support/logo.png" }
           ]
         },
-  
+
         // Validator 3
         {
+          id: 2,
           name: "Validator Three",
           supportedAssets: [
             { name: "Binance Smart Chain", url: "https://bscscan.com", logoUrl: "https://app.osmosis.zone/tokens/generated/bnb.svg" },

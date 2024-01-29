@@ -24,6 +24,7 @@ export interface Link {
 export type NetworkAssetLink = Link
 
 export interface ValidatorOverviewInfo {
+  id: number,
   name: string
   supportedAssets: NetworkAssetLink[]
   batteryLevel: number
