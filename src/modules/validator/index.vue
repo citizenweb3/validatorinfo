@@ -1,3 +1,3 @@
 <template>
-    <h1>Validator Details</h1>
+    <h1>Validator ID: {{ $route.params.id }}</h1>
 </template>
