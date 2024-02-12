@@ -1,14 +1,16 @@
 <template>
-  <div class="">
+  <div>
     <ul class="flex flex-nowrap justify-between pl-0">
       <li
         class="
-          w-full
-          font-black
-          text-center
-          py-4
-          cursor-pointer
-          list-none
+        font-main
+        text-white
+        text-20
+        bg-blackOlive
+        px-10
+        py-3
+        cursor-pointer
+        list-none
         "
         :class="{
           'bg-gradient-to-t from-lime-500 to-red-500': tab.hash === activeTabHash,
@@ -46,5 +48,11 @@ export default {
       activeTabHash: computed(() => this.activeTabHash),
     };
   },
+  // props: {
+  //   tabs: {
+  //     type: Array,
+  //     required: true
+  //   }
+  // }
 };
 </script>

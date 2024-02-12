@@ -29,6 +29,7 @@ const Typography = () => import('modules/typography/views/index.vue')
 const Card = () => import('modules/cards/views/index.vue')
 const Icons = () => import('modules/icons/views/index.vue')
 const Profile = () => import('modules/profile/views/index.vue')
+const ValidatorsPage = () => import('modules/validatorProfilePage/index.vue')
 const Map = () => import('modules/map/views/index.vue')
 
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
@@ -36,9 +37,21 @@ const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 import Validator from '../modules/validator/index.vue';
 
 const routes = [
+  // {
+  //   path: '/',
+  //   component: Validators,
+  //   name: 'Validators',
+  //   meta: {
+  //     title: 'Validators',
+  //     icon: HomeIcon,
+  //     color: 'text-indigo-410',
+  //     requiresAuth: false,
+  //     parentPath: 'Validators'
+  //   }
+  // },
   {
     path: '/',
-    component: Validators,
+    component: ValidatorsPage,
     name: 'Validators',
     meta: {
       title: 'Validators',

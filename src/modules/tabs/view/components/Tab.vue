@@ -1,7 +1,8 @@
 <template>
-  <div class="p-8" v-show="isActive">
+  <div class="px-8" v-show="isActive">
     <slot />
   </div>
+
 </template>
 
 <script>
@@ -18,7 +19,6 @@ export default {
   },
   created() {
     this.hash = '#' + this.title.toLowerCase().replace(/ /g, '-');
-
     this.addTab({
       title: this.title,
       hash: this.hash,
@@ -26,8 +26,9 @@ export default {
   },
   watch: {
     activeTabHash() {
-      console.log('test');
+
       this.isActive = this.activeTabHash === this.hash;
+      console.log('test', {isActive: this.isActive, activeTabHash: this.activeTabHash, hash: this.hash});
     },
   },
 };
