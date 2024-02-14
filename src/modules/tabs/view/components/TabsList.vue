@@ -1,38 +1,45 @@
 <template>
   <div>
-    <ul class="flex flex-nowrap justify-between pl-0">
+    <ul class="flex flex-nowrap justify-between pl-0 items-center">
       <li
-        class="
-        font-main
-        text-white
-        text-20
-        bg-blackOlive
-        px-10
-        py-3
-        cursor-pointer
-        list-none
-        "
-        :class="{
-          'bg-gradient-to-t from-lime-500 to-red-500': tab.hash === activeTabHash,
-        }"
+        class="cursor-pointer mx-auto flex min-h-full max-w-screen-sm items-center justify-center"
         v-for="tab in tabs"
         :key="tab.title"
         @click="activeTabHash = tab.hash"
       >
-        {{ tab.title }}
+        <div
+          class="h-full w-full"
+          :class="{
+            'rounded-ms bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1':
+              tab.hash === activeTabHash,
+          }"
+        >
+          <div class="bg-blackOlive font-main text-white p-1">
+            <div
+              class="font-main"
+              :class="{
+                'bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 inline-block text-transparent bg-clip-text ':
+                  tab.hash === activeTabHash,
+              }"
+            >
+              {{ tab.title }}
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
+
     <slot />
   </div>
 </template>
 
 <script>
-import { computed } from 'vue';
+import { computed } from "vue";
 
 export default {
   data() {
     return {
-      activeTabHash: '',
+      activeTabHash: "",
       tabs: [],
     };
   },
