@@ -2,7 +2,8 @@
   <div>
     <ul class="flex flex-nowrap justify-between pl-0 items-center">
       <li
-        class="cursor-pointer mx-auto flex min-h-full max-w-screen-sm items-center justify-center"
+        class="cursor-pointer mx-auto flex min-h-full items-center justify-center"
+
         v-for="tab in tabs"
         :key="tab.title"
         @click="activeTabHash = tab.hash"
@@ -10,13 +11,13 @@
         <div
           class="h-full w-full"
           :class="{
-            'rounded-ms bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1':
+            'bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1':
               tab.hash === activeTabHash,
           }"
         >
           <div class="bg-blackOlive font-main text-white p-1">
             <div
-              class="font-main"
+              class="font-main px-6"
               :class="{
                 'bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 inline-block text-transparent bg-clip-text ':
                   tab.hash === activeTabHash,
