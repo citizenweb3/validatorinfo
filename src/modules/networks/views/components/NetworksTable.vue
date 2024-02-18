@@ -20,7 +20,7 @@
             <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
-                <router-link :to="`/validator/${scope.row.id}`">
+                <router-link :to="`/network/${scope.row.id}`">
                   <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter cursor-pointer">
                     {{ scope.row.name }}
                   </span>
