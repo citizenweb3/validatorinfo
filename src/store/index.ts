@@ -2,6 +2,7 @@ import { useValidatorsStore } from 'modules/validators/store';
 import { useDashboardStore } from 'modules/dashboard/store';
 import { useAuthStore } from 'modules/auth/store';
 import { defineStore } from 'pinia'
+import { useNetworksStore } from 'modules/networks/store';
 
 export const globalStore = defineStore('global', {
   state: () => ({
@@ -16,6 +17,7 @@ export const globalStore = defineStore('global', {
 
 const useStore = () => ({
   validators: useValidatorsStore(),
+  networks: useNetworksStore(),
   dashboard: useDashboardStore(),
   auth: useAuthStore(),
   global: globalStore(),

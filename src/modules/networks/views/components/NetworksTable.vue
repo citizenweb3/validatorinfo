@@ -16,7 +16,7 @@
 
       <div class="block overflow-x-auto w-full p-0">
         <el-table :data="tableData" style="width: 100%" class="is-light cursor-pointer">
-          <el-table-column label="Validator Name" min-width="200">
+          <el-table-column label="Network Name" min-width="200">
             <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
@@ -25,90 +25,6 @@
                     {{ scope.row.name }}
                   </span>
                 </router-link>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="Supported Assets" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <span class="flex mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                  <div v-for="(item, index) in scope.row.supportedAssets" :key="index" class="logo-wrapper">
-                    <div class="validator-logo" :style="{ 'background-image': 'url(' + item.logoUrl + ')' }" />
-                  </div>
-                </span>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="Battery" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                  <battery-component :battery-level="scope.row.batteryLevel" />
-                </span>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="TVS" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                    {{ scope.row.tvl }}
-                  </span>
-                </div>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="Tech Score" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                    {{ scope.row.techScore }}
-                  </span>
-                </div>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="Soc. Score" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                    {{ scope.row.socialScore }}
-                  </span>
-                </div>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="Gov. Score" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                    {{ scope.row.govScore }}
-                  </span>
-                </div>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="User Score" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                    {{ scope.row.userScore }}
-                  </span>
-                </div>
-              </div>
-            </template>
-          </el-table-column>
-          <el-table-column label="Links" min-width="150">
-            <template #default="scope">
-              <div class="flex items-center">
-                <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
-                </div>
               </div>
             </template>
           </el-table-column>
@@ -122,17 +38,15 @@
 import { defineComponent } from 'vue'
 import { NetworkOverviewInfo } from '../../store/types'
 import { ArrowNarrowDownIcon, ArrowNarrowUpIcon } from '@heroicons/vue/outline'
-import BatteryComponent from './BatteryComponent.vue'
 import useStore from 'store'
 
 const store = useStore()
 
 export default defineComponent({
-  name: 'ValidatorsTable',
+  name: 'NetworksTable',
   components: {
     ArrowNarrowDownIcon,
     ArrowNarrowUpIcon,
-    BatteryComponent
   },
   props: {
     title: {
@@ -141,7 +55,7 @@ export default defineComponent({
     },
   },
   setup() {
-    const tableData: NetworkOverviewInfo[] = store.validators.data
+    const tableData: NetworkOverviewInfo[] = store.networks.data
 
     return {
       tableData,
