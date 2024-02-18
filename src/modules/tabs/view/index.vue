@@ -5,6 +5,11 @@ import TabComposition from './components/Tab.vue';
 
 export default defineComponent({
   name: 'Tabs',
+  props: {
+    tabs: {
+      type: Object
+    }
+  },
   setup() {
     return {}
   },
@@ -18,11 +23,9 @@ export default defineComponent({
 <template>
   <div>
     <TabsComposition>
-      <TabComposition title="Revenue"></TabComposition>
-      <TabComposition title="Metrics"></TabComposition>
-      <TabComposition title="Network Table"></TabComposition>
-      <TabComposition title="Public Good"></TabComposition>
-      <TabComposition title="Governance"></TabComposition>
+      <TabComposition>
+        
+      </TabComposition>
     </TabsComposition>
   </div>
 </template>

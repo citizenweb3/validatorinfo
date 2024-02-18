@@ -29,7 +29,8 @@ const Typography = () => import('modules/typography/views/index.vue')
 const Card = () => import('modules/cards/views/index.vue')
 const Icons = () => import('modules/icons/views/index.vue')
 const Profile = () => import('modules/profile/views/index.vue')
-const ValidatorsPage = () => import('modules/validatorProfilePage/index.vue')
+const ValidatorsPage = () => import('modules/validators/views/index.vue')
+const ValidatorsProfilePage = () => import('modules/validatorProfile/index.vue')
 const Map = () => import('modules/map/views/index.vue')
 
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
@@ -64,7 +65,7 @@ const routes = [
   {
     path: '/validator/:id?',
     name: 'Validator',
-    component: Validator,
+    component: ValidatorsProfilePage,
     meta: {
       title: 'Validator',
       icon: HomeIcon,
