@@ -15,7 +15,7 @@
       </div>
 
       <div class="block overflow-x-auto w-full p-0">
-        <el-table :data="tableData" style="width: 100%" class="is-light cursor-pointer">
+        <el-table v-if="tableData" :data="tableData" style="width: 100%" class="is-light cursor-pointer">
           <el-table-column label="Network Name" min-width="200">
             <!--  scope.row.pageName -->
             <template #default="scope">
