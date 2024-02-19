@@ -155,7 +155,7 @@ export default defineComponent({
   props: {
     title: {
       type: String,
-      default: 'Network Table',
+      default: 'Validator Network Table',
     },
   },
   setup() {
