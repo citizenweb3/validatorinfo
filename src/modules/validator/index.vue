@@ -1,16 +1,17 @@
 <template>
-  <h1>Validator ID: {{ validatorId }}</h1>
+  <h1>Dummy validator page. Should be deleted on merge. Validator page developed in feature/validators-profile</h1>
+  <h2>ID: {{ validatorId }}</h2>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
-const route = useRoute()
 
 export default defineComponent({
   name: 'ValidatorsDashboard',
   setup() {
+    const router = useRoute()
     return {
-      validatorId: route.params.id,
+      validatorId: router.params.id,
     }
   },
 })

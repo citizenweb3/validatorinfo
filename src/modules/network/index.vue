@@ -4,13 +4,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
-const route = useRoute()
 
 export default defineComponent({
   name: 'NetworkDashboard',
   setup() {
+    const router = useRoute()
     return {
-      networkId: route.params.id,
+      networkId: router.params.id,
     }
   },
 })

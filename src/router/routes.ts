@@ -19,8 +19,12 @@ const Login = () => import('modules/auth/views/login.vue')
 const Register = () => import('modules/auth/views/register.vue')
 const ForgotPassword = () => import('modules/auth/views/forgot-password.vue')
 const NotFound = () => import('modules/pages/views/404.vue')
+
 const Validators = () => import('modules/validators/views/index.vue')
+import Validator from '../modules/validator/index.vue';
+
 const Networks = () => import('modules/networks/views/index.vue')
+const Network = () => import('modules/network/index.vue')
 
 const Table = () => import('modules/table/views/index.vue')
 const Grid = () => import('modules/grid/views/index.vue')
@@ -34,10 +38,6 @@ const Profile = () => import('modules/profile/views/index.vue')
 const Map = () => import('modules/map/views/index.vue')
 
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
-
-import Validator from '../modules/validator/index.vue';
-import Network from '../modules/network/index.vue';
-
 
 const routes = [
   {
@@ -76,14 +76,14 @@ const routes = [
     },
   },
   {
-    path: '/network/:id?',
-    name: 'Validator',
+    path: '/networks/:id',
+    name: 'Network',
     component: Network,
     meta: {
       title: 'Network',
-      icon: HomeIcon,
       color: 'text-indigo-410',
       requiresAuth: false,
+      parentPath: 'Networks'
     },
   },
   {
