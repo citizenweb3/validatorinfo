@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import ValidatorNetworksTable from './components/ValidatorNetworksTable.vue'
 const activeName = ref('network')
 </script>
@@ -19,7 +19,7 @@ const activeName = ref('network')
 <style lang='scss'>
 .tabs .el-tabs__item {
   @apply bg-blackOlive font-main text-white p-1;
-  
+
   &.is-active {
     @apply bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1;
   }

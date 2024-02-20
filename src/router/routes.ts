@@ -37,6 +37,8 @@ const Icons = () => import('modules/icons/views/index.vue')
 const Profile = () => import('modules/profile/views/index.vue')
 const Map = () => import('modules/map/views/index.vue')
 
+const AboutUs = () => import('modules/aboutUs/index.vue')
+
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
 const routes = [
@@ -137,7 +139,7 @@ const routes = [
   {
 
     path: '/about-us',
-    component: Validators,
+    component: AboutUs,
     name: 'AboutUs',
     meta: {
       title: 'About us',
