@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
-const activeName = ref('network')
+import General from 'modules/aboutUs/components/General.vue'
+const activeName = ref('generalInfo')
 </script>
 
 <template>
@@ -8,6 +9,7 @@ const activeName = ref('network')
     <el-tab-pane label="Staking"></el-tab-pane>
     <el-tab-pane label="Partners"></el-tab-pane>
     <el-tab-pane label="General info" name="generalInfo">
+      <General/>
     </el-tab-pane>
     <el-tab-pane label="Contacts"></el-tab-pane>
   </el-tabs>
