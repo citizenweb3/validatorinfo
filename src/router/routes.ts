@@ -21,7 +21,7 @@ const ForgotPassword = () => import('modules/auth/views/forgot-password.vue')
 const NotFound = () => import('modules/pages/views/404.vue')
 
 const Validators = () => import('modules/validators/views/index.vue')
-import Validator from '../modules/validator/index.vue';
+const ValidatorsProfilePage = () => import('modules/validatorProfile/index.vue')
 
 const Networks = () => import('modules/networks/views/index.vue')
 const Network = () => import('modules/network/index.vue')
@@ -40,6 +40,18 @@ const Map = () => import('modules/map/views/index.vue')
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
 const routes = [
+  // {
+  //   path: '/',
+  //   component: Validators,
+  //   name: 'Validators',
+  //   meta: {
+  //     title: 'Validators',
+  //     icon: HomeIcon,
+  //     color: 'text-indigo-410',
+  //     requiresAuth: false,
+  //     parentPath: 'Validators'
+  //   }
+  // },
   {
     path: '/',
     component: Validators,
@@ -55,7 +67,7 @@ const routes = [
   {
     path: '/validator/:id?',
     name: 'Validator',
-    component: Validator,
+    component: ValidatorsProfilePage,
     meta: {
       title: 'Validator',
       icon: HomeIcon,

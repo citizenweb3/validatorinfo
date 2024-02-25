@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   important: true,
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -141,7 +143,7 @@ module.exports = {
         '1.5xl': '37.5rem', //600px
         '2.625xl': '45rem', //720px
         '4.5xl': '60rem', //960px
-        '5.75xl': '71.25rem', //1140px       
+        '5.75xl': '71.25rem', //1140px
         '1/3': '33.333333%',
         '5/12': '41.666667%',
         '1/2': '50%',
@@ -200,7 +202,7 @@ module.exports = {
           light: 'rgb(28 52 93)',
           lighter: 'rgb(82 95 127)', //#525f7f
           4: 'rgb(0 0 0 / 0.05)', // #0000000d
-          10: 'rgb(0 0 0 / 0.2)', 
+          10: 'rgb(0 0 0 / 0.2)',
           20: 'rgb(0 0 0 / 0.6)', // #00000099
           50: 'rgb(0 0 0 / 0.95)', //#000000f2
           100: "rgb(26 23 77)", // #1a174d
@@ -211,7 +213,7 @@ module.exports = {
           10: 'rgb(233 236 239)', //#e9ecef
         },
         primary: {
-          DEFAULT: 'rgb(50 76 221)', 
+          DEFAULT: 'rgb(50 76 221)',
           dark: 'rgb(50 50 93)',
           white: 'rgb(0 0 0 / 0.05)',
         },
@@ -229,7 +231,7 @@ module.exports = {
         },
         warning: {
           DEFAULT: 'rgb(251 99 64)',
-          active: 'rgb(250 58 14)',          
+          active: 'rgb(250 58 14)',
           50: 'rgb(252 124 95)', //#fc7c5f
         },
         success: {
@@ -239,7 +241,7 @@ module.exports = {
         },
         danger: {
           DEFAULT: 'rgb(245 54 92)',
-          active: 'rgb(236 12 56)',          
+          active: 'rgb(236 12 56)',
           50: 'rgb(247 86 118)', //#f75676
         },
         webkit: {
@@ -263,7 +265,9 @@ module.exports = {
         },
         yellow: {
           310: 'rgb(255 214 0)'
-        }
+        },
+        eerieBlack:  '#1E1E1E',
+        blackOlive: "#3E3E3E",
       },
       fontSize: {
         0.625: ['0.625rem', '1.5'],
@@ -273,7 +277,7 @@ module.exports = {
         0.9375: ['0.9375rem', '1.5'],
         0.95: ['0.95rem', '1.5'],
         1.0625: ['1.0625rem', '1.5'],
-        1.1: ['1.1rem', '1.5'], 
+        1.1: ['1.1rem', '1.5'],
         1.375: ['1.375rem', '1.5'],
         1.6: ['1.6rem', '1.5'],
         1.625: ['1.625rem', '1.5'],
@@ -289,7 +293,8 @@ module.exports = {
         sm: ['.875rem', '1.5'],
         12.8: ['12.8px', '1.5'],
         15: ['15px', '1.5'],
-        17: ['17px', '1.5']
+        17: ['17px', '1.5'],
+        20: ['20px']
       },
       lineHeight: {
         1.6: '1.6',
@@ -304,9 +309,9 @@ module.exports = {
         'form-input': '0 1px 3px rgb(50, 50, 93, 0.15), 0 1px 0 rgb(0, 0, 0, 0.08)'
       },
     },
-    
+
     fontFamily: {
-      body: ['"Open Sans"'],
+      main: ['"DotGothic16"'],
     },
   },
   plugins: [require('@tailwindcss/forms')],
