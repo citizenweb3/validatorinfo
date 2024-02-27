@@ -271,7 +271,7 @@ module.exports = {
         lust: "#EB1616",
         apple: '#4FB848',
         americanYellow: "#F3B101",
-        white: "#FFFFFF"
+        white: "#FFFFFF",
       },
       fontSize: {
         0.625: ['0.625rem', '1.5'],

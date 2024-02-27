@@ -1,35 +1,87 @@
 <template>
-  <div class='header flex justify-between items-center'>
-    <div class='navigations flex space-x-20'>
-      <p>Ecosystems: XXX</p>
-      <p>TVL: XXX</p>
-      <p>Domicance: XXX </p>
-       <p>Cosmos: XX%</p>
-      <p>ETH: XX%</p>
-      <p>Polkadot: XX%</p>
+  <div class="header flex justify-between items-center m-4">
+    <div class="navigations flex space-x-20">
+      <p class="text-inherit">Validators: XXX</p>
+      <p class="text-inherit">Ecosystems: XXX</p>
+      <p class="text-inherit">TVL: XXX</p>
+      <p class="text-inherit">Domicance: XXX</p>
+      <p class="text-inherit">Cosmos: XX%</p>
+      <p class="text-inherit">ETH: XX%</p>
+      <p class="text-inherit">Polkadot: XX%</p>
     </div>
-    <div class='controls'>
-      <el-button type="primary"><Icons name="brilliance" /></el-button>
-      <el-button type="primary">Primary</el-button>
-      <el-button type="primary">Primary</el-button>
+    <div class="controls flex justify-between">
+      <button
+        class="bg-blackOlive px-2 border border-gradient-apple-to-lust border-b border-b-3 hover"
+      >
+        <BrillianceIcon class="bg-blackOlive" />
+      </button>
+      <button
+        class="bg-blackOlive px-2 border border-gradient-apple-to-lust ml-1 border-b border-b-3 hover"
+      >
+         <span
+           class="bg-transparent"
+           :class="{ 'active-text': isActive }"
+           @click="toggleActive"
+         >EN</span>
+      </button>
+      <button
+        class="bg-blackOlive px-2 border border-gradient-apple-to-lust ml-1 border-b border-b-3 hover"
+      >
+        <span
+          class="bg-transparent"
+          :class="{ 'active-text': isActive }"
+          @click="toggleActive"
+        >USD</span
+        >
+      </button>
     </div>
   </div>
 </template>
 
-
-<script lang='ts'>
-import { defineComponent } from 'vue'
-import Icons from '../Icons/index.vue'
+<script lang="ts">
+import { defineComponent } from "vue";
+import BrillianceIcon from "@/components/Icons/brilliance.vue";
 export default defineComponent({
-  name: 'Header',
+  name: "Header",
   components: {
-    Icons
-  }
-})
+    BrillianceIcon,
+  },
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+  methods: {
+    toggleActive() {
+      this.isActive = !this.isActive;
+    },
+  },
+});
 </script>
 
+<style scoped lang="scss">
+.border-gradient-apple-to-lust {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+      180deg,
+      theme("colors.lust"),
+      theme("colors.apple")
+  );
+}
 
+.hover {
+  transition: text-shadow 0.3s ease;
 
-<style scoped lang='scss'>
+  &:hover {
+    text-shadow: 0px 0 10px gold;
+  }
+}
+.active-text:active {
+  color: gold;
+}
 
+svg:hover {
+  filter: drop-shadow(0 0 5px gold);
+}
 </style>
