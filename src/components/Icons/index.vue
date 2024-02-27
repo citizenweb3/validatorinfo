@@ -1,21 +1,18 @@
-<script setup lang='ts'>
+<script setup lang="ts">
+import { defineAsyncComponent } from 'vue'
 
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+})
+
+const icon = defineAsyncComponent(() => import(`./../../assets/icons/${props.name}.svg`))
+
+console.log('icon', icon)
 </script>
 
 <template>
-  <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_831_3221)">
-      <path d="M8.62591 0.841797H7.3282V3.43722H8.62591V0.841797ZM0.190796 7.9792V9.27691H2.78622V7.9792H0.190796ZM15.7633 7.9792V9.27691H13.1679V7.9792H15.7633ZM8.62591 16.4143H7.3282V13.8189H8.62591V16.4143ZM5.38164 4.73493H10.5725V6.03264H5.38164V4.73493ZM4.08393 6.03264H5.38164V11.2235H4.08393V6.03264ZM5.38164 12.5212V11.2235H10.5725V12.5212H5.38164ZM11.8702 11.2235H10.5725V6.03264H11.8702V11.2235ZM13.1679 2.13951H14.4656V3.43722H13.1679V2.13951ZM13.1679 3.43722V4.73493H11.8702V3.43722H13.1679ZM14.4656 15.1166H13.1679V13.8189H14.4656V15.1166ZM13.1679 13.8189H11.8702V12.5212H13.1679V13.8189ZM2.78622 2.13951H1.48851V3.43722H2.78622V4.73493H4.08393V3.43722H2.78622V2.13951ZM1.48851 15.1166H2.78622V13.8189H4.08393V12.5212H2.78622V13.8189H1.48851V15.1166Z" fill="white"/>
-    </g>
-    <defs>
-      <clipPath>
-        <rect width="15.5725" height="15.5725" fill="white" transform="translate(0.190796 0.841797)"/>
-      </clipPath>
-    </defs>
-  </svg>
-
+  <component :is="icon" class="fill-current" />
 </template>
-
-<style scoped lang='scss'>
-
-</style>
