@@ -1,6 +1,6 @@
 export interface AboutUsState {
   staking: StakingInfo,
-  partners:  PartnersInfo,
+  partners: PartnersInfo,
   general: GeneralInfo,
   podcast: PodcastInfo,
   contacts: ContactsInfo
@@ -14,7 +14,11 @@ export interface PartnersInfo {
   data: string
 }
 export interface GeneralInfo {
-  data: string
+  title: string,
+  data: {
+    label: string,
+    content: string,
+  }[]
 }
 export interface PodcastInfo {
   data: string
