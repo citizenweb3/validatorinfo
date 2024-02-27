@@ -6,8 +6,8 @@
       <small class="absolute pl-2 left-0 bottom-0 italic text-cyan-800">v{{ version }}</small>
       <div class="h-19.5 flex items-center relative">
         <router-link v-if="(isSBOpen && !isSBPin) || isSBPin" :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
-          class="transition-opacity duration-300 opacity-1 p-6 block" :to="{ name: 'Validators' }">
-          <!-- <img src="@/assets/images/blue.png" class="max-h-8 max-w-full align-middle" alt="..." /> -->
+          class="transition-opacity duration-300 opacity-1 p-6 block" :to="{ name: 'ValidatorInfo' }">
+          <img src="@/assets/images/valinfologo.png" class="max-h-24 max-w-full align-middle" alt="..." />
         </router-link>
         <div class="ml-auto">
           <div class="lg:col-span-10 xl:col-span-10 flex">

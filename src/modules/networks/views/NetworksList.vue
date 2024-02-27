@@ -36,14 +36,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { NetworkOverviewInfo } from '../../store/types'
+import { NetworkOverviewInfo } from '../store/types'
 import { ArrowNarrowDownIcon, ArrowNarrowUpIcon } from '@heroicons/vue/outline'
 import useStore from 'store'
 
 const store = useStore()
 
 export default defineComponent({
-  name: 'NetworksTable',
+  name: 'NetworksList',
   components: {
     ArrowNarrowDownIcon,
     ArrowNarrowUpIcon,

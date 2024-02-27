@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
 import ValidatorNetworksTable from './components/ValidatorNetworksTable.vue'
 const activeName = ref('network')
 </script>

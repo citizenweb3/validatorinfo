@@ -20,11 +20,12 @@ const Register = () => import('modules/auth/views/register.vue')
 const ForgotPassword = () => import('modules/auth/views/forgot-password.vue')
 const NotFound = () => import('modules/pages/views/404.vue')
 
-const Validators = () => import('modules/validators/views/index.vue')
-const ValidatorsProfilePage = () => import('modules/validatorProfile/index.vue')
+const ValidatorInfo = () => import('modules/validators/views/ValidatorInfo.vue')
+const ValidatorsList = () => import('modules/validators/components/ValidatorsList.vue')
+const ValidatorProfilePage = () => import('modules/validatorProfile/index.vue')
 
-const Networks = () => import('modules/networks/views/index.vue')
-const Network = () => import('modules/network/index.vue')
+const NetworksList = () => import('modules/networks/views/NetworksList.vue')
+const NetworkProfile = () => import('modules/network/index.vue')
 
 const Table = () => import('modules/table/views/index.vue')
 const Grid = () => import('modules/grid/views/index.vue')
@@ -54,48 +55,52 @@ const routes = [
   // },
   {
     path: '/',
-    component: Validators,
-    name: 'Validators',
+    component: ValidatorInfo,
+    name: 'ValidatorInfo',
     meta: {
-      title: 'Validators',
-      icon: HomeIcon,
-      color: 'text-indigo-410',
-      requiresAuth: false,
-      parentPath: 'Validators'
+      requiresAuth: false
     }
   },
   {
-    path: '/validator/:id?',
-    name: 'Validator',
-    component: ValidatorsProfilePage,
+    path: '/validators',
+    component: ValidatorsList,
+    name: 'Validators',
     meta: {
-      title: 'Validator',
       icon: HomeIcon,
+      title: 'Validators',
+      parentPath: 'Validators',
       color: 'text-indigo-410',
+      requiresAuth: false
+    }
+  },
+  {
+    path: '/validators/:id?',
+    name: 'ValidatorProfilePage',
+    component: ValidatorProfilePage,
+    meta: {
       requiresAuth: false,
+      parentPath: 'Validators',
     },
   },
   {
     path: '/networks',
-    component: Networks,
-    name: 'Networks',
+    component: NetworksList,
+    name: 'NetworksList',
     meta: {
       title: 'Networks',
       icon: HomeIcon,
       color: 'text-indigo-410',
       requiresAuth: false,
-      parentPath: 'Networks'
+      parentPath: 'Networks',
     },
   },
   {
     path: '/networks/:id',
-    name: 'Network',
-    component: Network,
+    name: 'NetworkProfile',
+    component: NetworkProfile,
     meta: {
-      title: 'Network',
-      color: 'text-indigo-410',
       requiresAuth: false,
-      parentPath: 'Networks'
+      parentPath: 'Networks',
     },
   },
   {
@@ -137,7 +142,7 @@ const routes = [
   {
 
     path: '/about-us',
-    component: Validators,
+    component: ValidatorsList,
     name: 'AboutUs',
     meta: {
       title: 'About us',
