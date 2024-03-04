@@ -27,6 +27,12 @@ const ValidatorProfilePage = () => import('modules/validatorProfile/index.vue')
 const NetworksList = () => import('modules/networks/views/NetworksList.vue')
 const NetworkProfile = () => import('modules/network/index.vue')
 
+const ValidatorNetworksTable = () => import('modules/validatorProfile/components/ValidatorNetworksTable.vue')
+const ValidatorRevenue = () => import('modules/validatorProfile/components/ValidatorRevenue.vue')
+const ValidatorMetrics = () => import('modules/validatorProfile/components/ValidatorMetrics.vue')
+const ValidatorPublic = () => import('modules/validatorProfile/components/ValidatorPublic.vue')
+const ValidatorGovernance = () => import('modules/validatorProfile/components/ValidatorGovernance.vue')
+
 const Table = () => import('modules/table/views/index.vue')
 const Grid = () => import('modules/grid/views/index.vue')
 const Notification = () => import('modules/notification/views/index.vue')
@@ -81,6 +87,33 @@ const routes = [
       requiresAuth: false,
       parentPath: 'Validators',
     },
+    children: [
+      {
+        name: 'ValidatorNetworksTable',
+        path: 'validator-network',
+        component: ValidatorNetworksTable,
+      },
+      {
+        name: 'ValidatorRevenue',
+        path: 'validator-revenue',
+        component: ValidatorRevenue,
+      },
+      {
+        name: 'ValidatorMetrics',
+        path: 'validator-metrics',
+        component: ValidatorMetrics,
+      },
+      {
+        name: 'ValidatorPublic',
+        path: 'validator-public',
+        component: ValidatorPublic,
+      },
+      {
+        name: 'ValidatorGovernance',
+        path: 'validator-governance',
+        component: ValidatorGovernance,
+      },
+    ],
   },
   {
     path: '/networks',
