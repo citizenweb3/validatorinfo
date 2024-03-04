@@ -80,7 +80,7 @@ const routes = [
     }
   },
   {
-    path: '/validators/:id?',
+    path: '/validators/:id',
     name: 'ValidatorProfilePage',
     component: ValidatorProfilePage,
     meta: {
