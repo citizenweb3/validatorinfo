@@ -1,6 +1,6 @@
 <template>
 <div class='wrapper'>
-  <div class="title py-3">{{label.toUpperCase()}}:</div>
+  <div class="title py-3 text-white">{{label.toUpperCase()}}:</div>
   <div class="content">{{content}}</div>
 </div>
 </template>
@@ -25,10 +25,17 @@ export default defineComponent({
 
 <style scoped lang="scss">
 * {
-  font-family: "Inter";
+  //font-family: "Inter";
+  font-family: "Kode Mono", monospace;
 }
 .title {
   font-weight: 600;
 }
 .content{ font-weight: 300}
+.dark-theme {
+  .content {
+    color: white;
+    font-size: 0.95rem;
+  }
+}
 </style>
