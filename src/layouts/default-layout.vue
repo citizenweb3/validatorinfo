@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="h-screen overflow-hidden flex bg-slate-20 w-full" v-loading.fullscreen.lock="loading">
     <sidebar />
     <div class="main-content flex flex-col flex-1 w-full overflow-auto"

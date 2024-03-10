@@ -268,6 +268,10 @@ module.exports = {
         },
         eerieBlack:  '#1E1E1E',
         blackOlive: "#3E3E3E",
+        lust: "#EB1616",
+        apple: '#4FB848',
+        americanYellow: "#F3B101",
+        white: "#FFFFFF",
       },
       fontSize: {
         0.625: ['0.625rem', '1.5'],
@@ -309,7 +313,6 @@ module.exports = {
         'form-input': '0 1px 3px rgb(50, 50, 93, 0.15), 0 1px 0 rgb(0, 0, 0, 0.08)'
       },
     },
-
     fontFamily: {
       main: ['"DotGothic16"'],
     },

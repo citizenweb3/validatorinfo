@@ -40,6 +40,8 @@ const NetworkInfo = () => import('modules/networkProfile/components/NetworkInfo.
 const NetworkLiveliness = () => import('modules/networkProfile/components/NetworkLiveliness.vue')
 const NetworkStatistics = () => import('modules/networkProfile/components/NetworkStatistics.vue')
 
+const AboutUs = () => import('modules/aboutUs/index.vue')
+
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
 const routes = [
@@ -199,7 +201,7 @@ const routes = [
   {
 
     path: '/about-us',
-    component: ValidatorsList,
+    component: AboutUs,
     name: 'AboutUs',
     meta: {
       title: 'About us',

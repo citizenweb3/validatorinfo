@@ -39,7 +39,7 @@ export const useState = defineStore({
             denom: 'DOT'
           },
           votingPower: 0.25
-          
+
         },
         {
           id: 'ethereum',
