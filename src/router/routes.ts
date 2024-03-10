@@ -30,7 +30,6 @@ const ValidatorMetrics = () => import('modules/validatorProfile/components/Valid
 const ValidatorPublic = () => import('modules/validatorProfile/components/ValidatorPublic.vue')
 const ValidatorGovernance = () => import('modules/validatorProfile/components/ValidatorGovernance.vue')
 
-
 const NetworksList = () => import('modules/networks/views/NetworksList.vue')
 const NetworkProfile = () => import('modules/networkProfile/index.vue')
 
@@ -41,6 +40,10 @@ const NetworkLiveliness = () => import('modules/networkProfile/components/Networ
 const NetworkStatistics = () => import('modules/networkProfile/components/NetworkStatistics.vue')
 
 const AboutUs = () => import('modules/aboutUs/index.vue')
+const AboutUsGeneral = () => import('modules/aboutUs/components/General.vue')
+const AboutUsStaking = () => import('modules/aboutUs/components/Staking.vue')
+const AboutUsContacts = () => import('modules/aboutUs/components/Contacts.vue')
+const AboutUsPartners = () => import('modules/aboutUs/components/Partners.vue')
 
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
@@ -133,7 +136,6 @@ const routes = [
       requiresAuth: false,
       parentPath: 'Networks',
     },
-
     children: [
       {
         name: 'NetworkInfo',
@@ -180,8 +182,6 @@ const routes = [
       title: 'Staking calculator',
       icon: CursorClickIcon,
       color: 'text-danger-50',
-      requiresAuth: true,
-      subOffset: true,
     },
   },
   {
@@ -200,7 +200,7 @@ const routes = [
   },
   {
 
-    path: '/about-us',
+    path: '/citizen-web3',
     component: AboutUs,
     name: 'AboutUs',
     meta: {
@@ -208,6 +208,28 @@ const routes = [
       icon: UserIcon,
       requiresAuth: false,
     },
+    children: [
+      {
+        name: 'AboutUsGeneral',
+        path: 'info',
+        component: AboutUsGeneral,
+      },
+      {
+        name: 'AboutUsStaking',
+        path: 'staking',
+        component: AboutUsStaking,
+      },
+      {
+        name: 'AboutUsPartners',
+        path: 'partners',
+        component: AboutUsPartners,
+      },
+      {
+        name: 'AboutUsContacts',
+        path: 'contacts',
+        component: AboutUsContacts,
+      }
+    ],
   },
   {
 

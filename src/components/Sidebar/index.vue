@@ -31,7 +31,7 @@
                 <el-sub-menu class="relative rounded-lg mx-2" :class="{
                   ' bg-slate-100/50 ': route.name === item.name,
                   ' arrow-left ': !isSBOpen && !isSBPin,
-                }" :index="`${index}`" v-if="item.children">
+                }" :index="`${index}`" v-if="false && item.children">
                   <template #title>
                     <span v-if="route.name === item.name"
                       class="absolute inset-y-1 -left-2 w-0.5 h-5/6 rounded-tr-lg rounded-br-lg bg-indigo-410"

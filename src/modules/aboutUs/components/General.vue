@@ -15,7 +15,7 @@ import ContentItem from "modules/aboutUs/components/ContentItem.vue";
 const store = useStore();
 
 export default defineComponent({
-  name: "General",
+  name: "AboutUsGeneral",
   components: {
     ContentItem,
   },
@@ -42,7 +42,7 @@ export default defineComponent({
   border-bottom: 1px solid theme("colors.blackOlive");
   width: fit-content;
 }
-.contentItem{
+.contentItem {
 border: none;
 
   &:not(:first-of-type) {
