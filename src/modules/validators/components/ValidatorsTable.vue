@@ -7,7 +7,7 @@
             <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
-                <router-link :to="`/validators/${scope.row.id}`">
+                <router-link :to="`/validators/${scope.row.id}/networks`">
                   <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter cursor-pointer">
                     {{ scope.row.name }}
                   </span>

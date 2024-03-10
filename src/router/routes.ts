@@ -16,16 +16,13 @@ import {
 } from '@heroicons/vue/solid'
 
 const Login = () => import('modules/auth/views/login.vue')
-const Register = () => import('modules/auth/views/register.vue')
-const ForgotPassword = () => import('modules/auth/views/forgot-password.vue')
+// const Register = () => import('modules/auth/views/register.vue')
+// const ForgotPassword = () => import('modules/auth/views/forgot-password.vue')
 const NotFound = () => import('modules/pages/views/404.vue')
 
 const ValidatorInfo = () => import('modules/validators/views/ValidatorInfo.vue')
 const ValidatorsList = () => import('modules/validators/components/ValidatorsList.vue')
 const ValidatorProfilePage = () => import('modules/validatorProfile/index.vue')
-
-const NetworksList = () => import('modules/networks/views/NetworksList.vue')
-const NetworkProfile = () => import('modules/network/index.vue')
 
 const ValidatorNetworksTable = () => import('modules/validatorProfile/components/ValidatorNetworksTable.vue')
 const ValidatorRevenue = () => import('modules/validatorProfile/components/ValidatorRevenue.vue')
@@ -33,16 +30,15 @@ const ValidatorMetrics = () => import('modules/validatorProfile/components/Valid
 const ValidatorPublic = () => import('modules/validatorProfile/components/ValidatorPublic.vue')
 const ValidatorGovernance = () => import('modules/validatorProfile/components/ValidatorGovernance.vue')
 
-const Table = () => import('modules/table/views/index.vue')
-const Grid = () => import('modules/grid/views/index.vue')
-const Notification = () => import('modules/notification/views/index.vue')
-const Button = () => import('modules/buttons/views/index.vue')
-const Tags = () => import('modules/tags/views/index.vue')
-const Typography = () => import('modules/typography/views/index.vue')
-const Card = () => import('modules/cards/views/index.vue')
-const Icons = () => import('modules/icons/views/index.vue')
-const Profile = () => import('modules/profile/views/index.vue')
-const Map = () => import('modules/map/views/index.vue')
+
+const NetworksList = () => import('modules/networks/views/NetworksList.vue')
+const NetworkProfile = () => import('modules/networkProfile/index.vue')
+
+const NetworkDevInfo = () => import('modules/networkProfile/components/NetworkDevInfo.vue')
+const NetworkGovernance = () => import('modules/networkProfile/components/NetworkGovernance.vue')
+const NetworkInfo = () => import('modules/networkProfile/components/NetworkInfo.vue')
+const NetworkLiveliness = () => import('modules/networkProfile/components/NetworkLiveliness.vue')
+const NetworkStatistics = () => import('modules/networkProfile/components/NetworkStatistics.vue')
 
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
@@ -90,27 +86,27 @@ const routes = [
     children: [
       {
         name: 'ValidatorNetworksTable',
-        path: 'validator-network',
+        path: 'networks',
         component: ValidatorNetworksTable,
       },
       {
         name: 'ValidatorRevenue',
-        path: 'validator-revenue',
+        path: 'revenue',
         component: ValidatorRevenue,
       },
       {
         name: 'ValidatorMetrics',
-        path: 'validator-metrics',
+        path: 'metrics',
         component: ValidatorMetrics,
       },
       {
         name: 'ValidatorPublic',
-        path: 'validator-public',
+        path: 'public-goods',
         component: ValidatorPublic,
       },
       {
         name: 'ValidatorGovernance',
-        path: 'validator-governance',
+        path: 'governance',
         component: ValidatorGovernance,
       },
     ],
@@ -135,6 +131,34 @@ const routes = [
       requiresAuth: false,
       parentPath: 'Networks',
     },
+
+    children: [
+      {
+        name: 'NetworkInfo',
+        path: 'info',
+        component: NetworkInfo,
+      },
+      {
+        name: 'NetworkStatistics',
+        path: 'stats',
+        component: NetworkStatistics,
+      },
+      {
+        name: 'NetworkGovernance',
+        path: 'governance',
+        component: NetworkGovernance,
+      },
+      {
+        name: 'NetworkDevInfo',
+        path: 'developers',
+        component: NetworkDevInfo,
+      },
+      {
+        name: 'NetworkLiveliness',
+        path: 'liveliness',
+        component: NetworkLiveliness,
+      },
+    ],
   },
   {
     name: "Metrics",
@@ -149,7 +173,7 @@ const routes = [
   {
     path: '/staking-calculator',
     name: 'StakingCalculator',
-    component: Button,
+    component: ComponentLayout,
     meta: {
       title: 'Staking calculator',
       icon: CursorClickIcon,
@@ -160,7 +184,7 @@ const routes = [
   },
   {
     path: '/library',
-    component: Profile,
+    component: ComponentLayout,
     name: 'Library',
     meta: {
       title: 'Library',

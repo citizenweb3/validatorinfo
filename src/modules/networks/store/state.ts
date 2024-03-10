@@ -7,16 +7,16 @@ export const useState = defineStore({
     return {
       data: [
         {
-          id: 0,
+          id: 'cosmos',
           name: "Cosmos"
         },
         {
-          id: 1,
+          id: 'polkadot',
           name: "Polkadot",
           
         },
         {
-          id: 2,
+          id: 'ethereum',
           name: "Ethereum",
         },
       ]

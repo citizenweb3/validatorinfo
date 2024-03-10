@@ -3,6 +3,6 @@ export interface NetworkState {
 }
 
 export interface NetworkOverviewInfo {
-  id: number,
+  id: string,
   name: string,
 }
