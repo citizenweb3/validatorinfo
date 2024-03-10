@@ -1,2 +1,2 @@
 [build.environment]
-  GENERATE_SOURCEMAP = false
+  GENERATE_SOURCEMAP = "false"
