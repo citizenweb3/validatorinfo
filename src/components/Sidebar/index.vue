@@ -1,6 +1,6 @@
 <template>
   <aside ref="target" @mouseover="hoverLeftBar(true)" @mouseleave="hoverLeftBar(false)" aria-labelledby="primary-heading"
-    class="transition-all duration-300 fixed z-20 bg-white flex-shrink-0 overflow-hidden h-full items-center shadow-card"
+    class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center shadow-card"
     :class="{ ' hidden-aside w-17 ': !isSBOpen && !isSBPin }">
     <div class="flex flex-col mx-auto items-stretch h-full">
       <small class="absolute pl-2 left-0 bottom-0 italic text-cyan-800">v{{ version }}</small>

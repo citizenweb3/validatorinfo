@@ -1,5 +1,5 @@
 <template>
-  <div class="header flex justify-between items-center m-4">
+  <div class="dark-theme-header header flex justify-between items-center p-4">
     <div class="navigations flex space-x-20">
       <p class="text-inherit">Validators: XXX</p>
       <p class="text-inherit">Ecosystems: XXX</p>
@@ -83,5 +83,11 @@ export default defineComponent({
 
 svg:hover {
   filter: drop-shadow(0 0 5px gold);
+}
+
+/** Theme Dark **/
+.dark-theme-header {
+  background-color: #202020;
+  color: white;
 }
 </style>

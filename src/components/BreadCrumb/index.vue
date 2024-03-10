@@ -3,7 +3,7 @@
     <el-breadcrumb separator="-" class="flex items-center justify-center">
       <el-breadcrumb-item :to="{ path: '/' }">
         <div class="inline-block items-center">
-          <el-icon :size="16" class="cursor-pointer w-4 h-4 hover:text-slate-300">
+          <el-icon :size="16" class="cursor-pointer w-4 h-4 text-white hover:text-slate-300">
             <HomeFilled />
           </el-icon>
         </div>
@@ -11,7 +11,7 @@
       <el-breadcrumb-item>
         <div class="inline-block items-center">
           <div>
-            <el-link :underline="false" href="#!" class="text-sm hover:text-white font-semibold">
+            <el-link :underline="false" href="#!" class="text-sm text-white hover:text-white font-semibold">
               {{ parentPath }}
             </el-link>
           </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="flex flex-wrap flex-col bg-white shadow mb-7 mx-auto rounded-md">
+    <div class="flex flex-wrap flex-col bg-dark shadow mb-7 mx-auto">
       <div class="block overflow-x-auto w-full p-0">
         <el-table v-if="tableData" :data="tableData" style="width: 100%" class="is-light cursor-pointer">
           <el-table-column label="Validator Name" min-width="200">

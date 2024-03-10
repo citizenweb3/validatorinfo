@@ -4,8 +4,8 @@
 
 @layer base {
   * {
-    font-family: 'DotGothic16', sans-serif;
-    background-color: theme('colors.eerieBlack');
-    color: theme('colors.white')
+    /*font-family: 'Open Sans', sans-serif; */
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
   }
 }
