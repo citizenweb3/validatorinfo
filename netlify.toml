@@ -1,4 +1,3 @@
 [build.environment]
   GENERATE_SOURCEMAP = "false"
   NODE_VERSION = "16.17.0"
-  NETLIFY_USE_YARN = "false"
