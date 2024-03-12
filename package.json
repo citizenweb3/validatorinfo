@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vite --host 0.0.0.0",
     "build-dev": "vue-tsc --noEmit && vite build",
-    "build": "yarn cache clean && vue-tsc --noEmit && cross-env NODE_OPTIONS=--max-old-space-size=16384 vite build",
+    "build": "vue-tsc --noEmit && cross-env NODE_OPTIONS=--max-old-space-size=16384 vite build",
     "preview": "vite preview",
     "store": "node tools/store/index"
   },
