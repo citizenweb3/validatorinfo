@@ -44,6 +44,7 @@ const AboutUsGeneral = () => import('modules/aboutUs/components/General.vue')
 const AboutUsStaking = () => import('modules/aboutUs/components/Staking.vue')
 const AboutUsContacts = () => import('modules/aboutUs/components/Contacts.vue')
 const AboutUsPartners = () => import('modules/aboutUs/components/Partners.vue')
+const AboutUsPodcast = () => import('modules/aboutUs/components/Podcast.vue')
 
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
@@ -200,7 +201,7 @@ const routes = [
   },
   {
 
-    path: '/citizen-web3',
+    path: '/citizen-web3/info',
     component: AboutUs,
     name: 'AboutUs',
     meta: {
@@ -228,6 +229,11 @@ const routes = [
         name: 'AboutUsContacts',
         path: 'contacts',
         component: AboutUsContacts,
+      },
+      {
+        name: 'AboutUsPodcast',
+        path: 'podcast',
+        component: AboutUsPodcast,
       }
     ],
   },
