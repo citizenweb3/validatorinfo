@@ -12,7 +12,7 @@
         <div class="ml-auto">
           <div class="lg:col-span-10 xl:col-span-10 flex">
             <div class="hidden lg:block flex-grow">
-              <div class="flex items-center space-x-2 2xl:space-x-4 text-black px-6">
+              <div class="flex items-center space-x-2 2xl:space-x-4 text-white px-6">
                 <MenuIcon v-if="!isSBPin" class="cursor-pointer h-6 w-5" @click="handleMenuClick" />
                 <MenuAlt1Icon v-else class="cursor-pointer h-6 w-5" @click="handleMenuClick" />
               </div>
@@ -87,7 +87,15 @@
                       }" :to="{ name: item.name }" :title="item.title">
                       <div>
                         <em class="h-5 w-6 block">
-                          <component :is="item.icon" :class="` w-5 mx-auto ${item.color}`" aria-hidden="true" />
+                          <div class="menu-item-inner">
+                            <img v-if="item.name === 'Validators'" src="/icons/ValidatorsIcon.svg">
+                            <img v-if="item.name === 'NetworksList'" src="/icons/NetworksIcon.svg">
+                            <img v-if="item.name === 'Metrics'" src="/icons/MetricsIcon.svg">
+                            <img v-if="item.name === 'Library'" src="/icons/LibraryIcon.svg">
+                            <img v-if="item.name === 'AboutUs'" src="/icons/AboutUsIcon.svg">
+                            <img v-if="item.name === 'StakingCalculator'" src="/icons/StakingIcon.svg">
+                            <component :class="` w-5 mx-auto ${item.color}`" aria-hidden="true" />
+                          </div>
                         </em>
                       </div>
                       <span class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
@@ -205,5 +213,9 @@ export default defineComponent({
 <style scoped>
 .hidden-aside {
   @apply -translate-x-3/2 lg:translate-x-0 lg:block;
+}
+.menu-item-inner {
+  display: flex;
+  align-items: center;
 }
 </style>

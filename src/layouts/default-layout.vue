@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="h-screen overflow-hidden flex bg-slate-20 w-full dark-theme" v-loading.fullscreen.lock="loading">
+  <div class="h-screen overflow-hidden flex w-full dark-theme" v-loading.fullscreen.lock="loading">
     <sidebar />
     <div class="main-content flex flex-col flex-1 w-full overflow-auto main-content-dark"
       :class="`${!isSBPin ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`">
