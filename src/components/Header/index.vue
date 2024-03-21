@@ -5,6 +5,8 @@
       <p class="text-inherit">Ecosystems: XXX</p>
       <p class="text-inherit">TVL: XXX</p>
       <p class="text-inherit">Domicance: XXX</p>
+
+      <!-- Prices -->
       <p class="text-inherit">Cosmos: XX%</p>
       <p class="text-inherit">ETH: XX%</p>
       <p class="text-inherit">Polkadot: XX%</p>
@@ -39,23 +41,37 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
 import BrillianceIcon from "@/components/Icons/brilliance.vue";
+import { defineComponent, ref, inject, onMounted } from 'vue'
 export default defineComponent({
   name: "Header",
   components: {
     BrillianceIcon,
   },
-  data() {
-    return {
-      isActive: false,
+  setup() {
+    const isActive = ref(false);
+    const toggleActive = () => {
+      isActive.value = !isActive.value
+    }
+
+    const axios: any = inject('axios');
+    const fetchCryptoPrices = (): void => {
+      axios
+        .get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
+        .then((res: any) => {
+          console.log(res)
+        });
     };
-  },
-  methods: {
-    toggleActive() {
-      this.isActive = !this.isActive;
-    },
-  },
+    onMounted(() => {
+      fetchCryptoPrices()
+    })
+
+    return {
+      isActive,
+      toggleActive,
+      fetchCryptoPrices
+    }
+  }
 });
 </script>
 
