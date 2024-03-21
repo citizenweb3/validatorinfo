@@ -7,9 +7,24 @@
       <p class="text-inherit">Domicance: XXX</p>
 
       <!-- Prices -->
-      <p class="text-inherit">Cosmos: XX%</p>
-      <p class="text-inherit">ETH: XX%</p>
-      <p class="text-inherit">Polkadot: XX%</p>
+      <p class="text-inherit">Cosmos:
+        <template v-if="cosmos">
+          <span v-if="cosmos.price_change_percentage_24h >= 0" class="text-green">{{ cosmos.price_change_percentage_24h }} %</span>
+          <span v-else class="text-red">{{ cosmos.price_change_percentage_24h }} %</span>
+        </template>
+      </p>
+      <p class="text-inherit">ETH: 
+        <template v-if="eth">
+          <span v-if="eth.price_change_percentage_24h >= 0" class="text-green">{{ eth.price_change_percentage_24h }} %</span>
+          <span v-else class="text-red">{{ eth.price_change_percentage_24h }} %</span>
+        </template>
+      </p>
+      <p class="text-inherit">Polkadot: 
+        <template v-if="polkadot">
+          <span v-if="polkadot.price_change_percentage_24h >= 0" class="text-green">{{ polkadot.price_change_percentage_24h }} %</span>
+          <span v-else class="text-red">{{ polkadot.price_change_percentage_24h }} %</span>
+        </template>
+      </p>
     </div>
     <div class="controls flex justify-between">
       <button
@@ -53,13 +68,20 @@ export default defineComponent({
     const toggleActive = () => {
       isActive.value = !isActive.value
     }
+    let cosmos = ref({});
+    let eth = ref({});
+    let polkadot = ref({});
 
     const axios: any = inject('axios');
     const fetchCryptoPrices = (): void => {
       axios
         .get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
         .then((res: any) => {
-          console.log(res)
+          res.data.map((item: any) => {
+            if (item.id === 'cosmos') { cosmos.value = item; }
+            if (item.id === 'ethereum') { eth.value = item; }
+            if (item.id === 'polkadot') { polkadot.value = item; }
+          })
         });
     };
     onMounted(() => {
@@ -68,8 +90,11 @@ export default defineComponent({
 
     return {
       isActive,
+      cosmos,
+      eth,
+      polkadot,
       toggleActive,
-      fetchCryptoPrices
+      fetchCryptoPrices,
     }
   }
 });
@@ -99,6 +124,14 @@ export default defineComponent({
 
 svg:hover {
   filter: drop-shadow(0 0 5px gold);
+}
+
+.text-green {
+  color: #4FB848;
+}
+
+.text-red {
+  color: #EB1616;
 }
 
 /** Theme Dark **/
