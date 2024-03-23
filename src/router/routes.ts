@@ -1,19 +1,4 @@
-import {
-  ViewGridIcon,
-  CursorClickIcon,
-  DocumentTextIcon,
-  StarIcon,
-  HomeIcon,
-  ViewBoardsIcon,
-  BellIcon,
-  LocationMarkerIcon,
-  UserIcon,
-  ColorSwatchIcon
-} from '@heroicons/vue/outline'
-
-import {
-  CreditCardIcon,
-} from '@heroicons/vue/solid'
+import { CursorClickIcon, HomeIcon, UserIcon, ColorSwatchIcon } from '@heroicons/vue/outline'
 
 const Login = () => import('modules/auth/views/login.vue')
 // const Register = () => import('modules/auth/views/register.vue')
@@ -24,11 +9,13 @@ const ValidatorInfo = () => import('modules/validators/views/ValidatorInfo.vue')
 const ValidatorsList = () => import('modules/validators/components/ValidatorsList.vue')
 const ValidatorProfilePage = () => import('modules/validatorProfile/index.vue')
 
-const ValidatorNetworksTable = () => import('modules/validatorProfile/components/ValidatorNetworksTable.vue')
+const ValidatorNetworksTable = () =>
+  import('modules/validatorProfile/components/ValidatorNetworksTable.vue')
 const ValidatorRevenue = () => import('modules/validatorProfile/components/ValidatorRevenue.vue')
 const ValidatorMetrics = () => import('modules/validatorProfile/components/ValidatorMetrics.vue')
 const ValidatorPublic = () => import('modules/validatorProfile/components/ValidatorPublic.vue')
-const ValidatorGovernance = () => import('modules/validatorProfile/components/ValidatorGovernance.vue')
+const ValidatorGovernance = () =>
+  import('modules/validatorProfile/components/ValidatorGovernance.vue')
 
 const NetworksList = () => import('modules/networks/views/NetworksList.vue')
 const NetworkProfile = () => import('modules/networkProfile/index.vue')
@@ -49,25 +36,13 @@ const AboutUsPodcast = () => import('modules/aboutUs/components/Podcast.vue')
 const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 
 const routes = [
-  // {
-  //   path: '/',
-  //   component: Validators,
-  //   name: 'Validators',
-  //   meta: {
-  //     title: 'Validators',
-  //     icon: HomeIcon,
-  //     color: 'text-indigo-410',
-  //     requiresAuth: false,
-  //     parentPath: 'Validators'
-  //   }
-  // },
   {
     path: '/',
     component: ValidatorInfo,
     name: 'ValidatorInfo',
     meta: {
-      requiresAuth: false
-    }
+      requiresAuth: false,
+    },
   },
   {
     path: '/validators',
@@ -78,8 +53,8 @@ const routes = [
       title: 'Validators',
       parentPath: 'Validators',
       color: 'text-indigo-410',
-      requiresAuth: false
-    }
+      requiresAuth: false,
+    },
   },
   {
     path: '/validators/:id',
@@ -166,14 +141,14 @@ const routes = [
     ],
   },
   {
-    name: "Metrics",
+    name: 'Metrics',
     path: '/metrics',
     component: ComponentLayout,
     meta: {
       title: 'Metrics',
       icon: ColorSwatchIcon,
       color: 'text-info',
-    }
+    },
   },
   {
     path: '/staking-calculator',
@@ -196,11 +171,10 @@ const routes = [
       isDarkBackground: true,
       isFullWidthLayout: true,
       requiresAuth: true,
-      parentPath: 'Library'
+      parentPath: 'Library',
     },
   },
   {
-
     path: '/citizen-web3/info',
     component: AboutUs,
     name: 'AboutUs',
@@ -208,6 +182,7 @@ const routes = [
       title: 'About us',
       icon: UserIcon,
       requiresAuth: false,
+      parentPath: 'AboutUs',
     },
     children: [
       {
@@ -234,11 +209,10 @@ const routes = [
         name: 'AboutUsPodcast',
         path: 'podcast',
         component: AboutUsPodcast,
-      }
+      },
     ],
   },
   {
-
     path: '/login',
     component: Login,
     name: 'login',

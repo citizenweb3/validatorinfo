@@ -1,31 +1,40 @@
 <template>
   <Header />
-  <div class="h-screen overflow-hidden flex w-full dark-theme" v-loading.fullscreen.lock="loading">
+  <div
+    class="h-screen overflow-hidden flex w-full dark-theme pr-10"
+    v-loading.fullscreen.lock="loading"
+  >
     <sidebar />
-    <div class="main-content flex flex-col flex-1 w-full overflow-auto main-content-dark"
-      :class="`${!isSBPin ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`">
+    <div
+      class="main-content flex flex-col flex-1 w-full overflow-auto main-content-dark"
+      :class="`${!isSBPin ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`"
+    >
       <navigation />
-      <div class="w-full h-38 relative bg-transparent border-none" :class="{
-        'bg-indigo-410': !route.meta.isDarkBackground,
-      }">
-        <div class="flex items-center py-5 mb-0 px-3.75 pr-3.5 md:px-7.25 md:pl-7.5 pt-6"
-          v-if="!route.meta.isDarkBackground">
+      <div
+        class="w-full h-38 relative bg-transparent border-none"
+        :class="{
+          'bg-indigo-410': !route.meta.isDarkBackground,
+        }"
+      >
+        <div class="flex items-center py-5 mb-0 pt-6" v-if="!route.meta.isDarkBackground">
           <div class="w-full flex flex-wrap flex-row">
-            <div class="flex w-1/2">
-              <div class="text-xl font-semibold inline-block pt-px text-white">
-                Home
-              </div>
-              <div class="md:ml-7 hidden md:inline-block pt-1.5">
+            <div class="flex w-full justify-center flex-col">
+              <div class="hidden md:inline-block pt-1.5 ml-0">
                 <BreadCrumb :parentPath="route.meta.parentPath" :title="route.meta.title" />
+              </div>
+              <div class="flex">
+                <CentralLogo />
               </div>
             </div>
           </div>
         </div>
 
         <router-view v-slot="{ Component }">
-          <component :is="Component" :class="{ 'py-1.25 px-4 md:px-7.5 lg:px-6.2': !route.meta.isFullWidthLayout }" />
+          <component
+            :is="Component"
+            :class="{ 'py-1.25 px-4 md:px-7.5 lg:px-6.2': !route.meta.isFullWidthLayout }"
+          />
         </router-view>
-
         <div class="w-full py-8 mx-auto px-4 md:px-7.5 lg:px-7.15">
           <Footer />
         </div>
@@ -77,6 +86,6 @@ export default defineComponent({
 
 /** Dark Theme **/
 .main-content-dark {
-  background-color: #1E1E1E!important;
+  background-color: #1e1e1e !important;
 }
 </style>

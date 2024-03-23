@@ -15,15 +15,29 @@ export interface StakingInfo {
 }
 
 export interface PartnersInfo {
-  data: string
+  title: string
+  data: {
+    name: string
+    logo: string
+    link: string
+  }[]
 }
+
 export interface GeneralInfo {
   title: string
   data: {
-    label: string
-    content: string
-  }[]
+    description: string[]
+    section: {
+      title: string
+      isModal: boolean
+      textButton: string
+      isRichText: boolean
+      content?: string[]
+      richTextContent: string
+    }[]
+  }
 }
+
 export interface PodcastInfo {
   title: string
   data: {

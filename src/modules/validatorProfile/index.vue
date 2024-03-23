@@ -6,13 +6,16 @@ const activeName = ref('network')
 
 <template>
   <div class="tabs-routes tabs el-tabs is-top is-stretch">
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorRevenue'}">Revenue</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorMetrics'}">Metrics</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorNetworksTable'}">Network Table</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorPublic'}">Public Good</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorGovernance'}">Governance</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorRevenue' }">Revenue</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorMetrics' }">Metrics</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorNetworksTable' }"
+      >Network Table</router-link
+    >
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorPublic' }">Public Good</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorGovernance' }"
+      >Governance</router-link
+    >
   </div>
-
 
   <!-- El Tabs are now replaced with Router Links -->
   <el-tabs class="tabs d-none" stretch v-model="activeName">
@@ -28,16 +31,16 @@ const activeName = ref('network')
   <router-view></router-view>
 </template>
 
-<style lang='scss'>
+<style lang="scss">
 .d-none {
   display: none;
 }
 .tabs .el-tabs__item {
   @apply bg-blackOlive font-main text-white p-1;
-  
+
   &.is-active,
   &.router-link-active {
-    @apply bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1;
+    @apply bg-gradient-to-t from-green to-red via-americanYellow p-1;
   }
 }
 
