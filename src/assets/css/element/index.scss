@@ -11,13 +11,14 @@
   }
   .el-menu {
     background-color: $color-dark!important;
+    border-right-color: $color-dark!important;
 
     .el-menu-item {
       color: white!important;
     }
   }
   .el-scrollbar__view {
-    border-color: transparent!important;
+    border-bottom-color: $color-dark!important;
   }
 
   /** Tables **/
