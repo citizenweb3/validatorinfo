@@ -1,7 +1,8 @@
 <template>
-  <div class="h-screen overflow-hidden flex bg-slate-20 w-full" v-loading.fullscreen.lock="loading">
+  <Header />
+  <div class="h-screen overflow-hidden flex w-full dark-theme" v-loading.fullscreen.lock="loading">
     <sidebar />
-    <div class="main-content flex flex-col flex-1 w-full overflow-auto"
+    <div class="main-content flex flex-col flex-1 w-full overflow-auto main-content-dark"
       :class="`${!isSBPin ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`">
       <navigation />
       <div class="w-full h-38 relative bg-transparent border-none" :class="{
@@ -11,8 +12,8 @@
           v-if="!route.meta.isDarkBackground">
           <div class="w-full flex flex-wrap flex-row">
             <div class="flex w-1/2">
-              <div class="text-white text-xl font-semibold inline-block pt-px">
-                {{ route.meta.title }}
+              <div class="text-xl font-semibold inline-block pt-px text-white">
+                Home
               </div>
               <div class="md:ml-7 hidden md:inline-block pt-1.5">
                 <BreadCrumb :parentPath="route.meta.parentPath" :title="route.meta.title" />
@@ -48,10 +49,10 @@ export default defineComponent({
   setup() {
     const route: any = useRoute()
     const store = useStore()
-    const isSBPin = computed<boolean>(() => store.validators.isSBPin)
+    const isSBPin = computed<boolean>(() => store.dashboard.isSBPin)
     const loading = computed(() => store.global.loading)
 
-    const setIsSBPin = (b: boolean) => store.validators.setIsSBPin(b)
+    const setIsSBPin = (b: boolean) => store.dashboard.setIsSBPin(b)
     return {
       isSBPin,
       loading,
@@ -72,5 +73,10 @@ export default defineComponent({
   .main-content {
     margin-left: 0 !important;
   }
+}
+
+/** Dark Theme **/
+.main-content-dark {
+  background-color: #1E1E1E!important;
 }
 </style>

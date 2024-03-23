@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
-    <div class="flex flex-wrap flex-col bg-white shadow mb-7 mx-auto rounded-md">
+    <div class="flex flex-wrap flex-col bg-dark shadow mb-7 mx-auto rounded-md">
       <div class="flex flex-wrap items-center py-2 px-6 mb-0 border-b-dark-4">
         <div class="max-w-full basis-0 grow">
-          <h3 class="mb-0 cursor-auto text-primary-dark">{{ title }}</h3>
+          <h3 class="mb-0 cursor-auto text-white">{{ title }}</h3>
         </div>
         <div class="max-w-full basis-0 grow">
           <div class="flex flex-wrap mb-0 pl-0 justify-end gap-x-3">
@@ -65,11 +65,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { ValidatorOverviewInfo } from 'modules/validators/store/types'
 import { ArrowNarrowDownIcon, ArrowNarrowUpIcon } from '@heroicons/vue/outline'
 
+interface PageVisitInfo {
+  pageName: string
+  visitorNumber: string
+  userNumber: number
+  rate: number
+}
 export default defineComponent({
-  name: 'ValidatorsTable',
+  name: 'PageVisitTable',
   components: {
     ArrowNarrowDownIcon,
     ArrowNarrowUpIcon,
@@ -77,63 +82,40 @@ export default defineComponent({
   props: {
     title: {
       type: String,
-      default: 'Validators',
+      default: 'Page visits',
     },
   },
   setup() {
-    const tableData: ValidatorOverviewInfo[] = [
+    const tableData: PageVisitInfo[] = [
       {
-        name: "Validator One",
-        supportedAssets: [
-          { name: "Ethereum", url: "https://ethereum.org", logoUrl: "https://app.osmosis.zone/tokens/generated/weth.svg" },
-          { name: "Polkadot", url: "https://polkadot.network", logoUrl: "https://app.osmosis.zone/tokens/generated/dot.svg" }
-        ],
-        batteryLevel: 75,
-        tvl: [0.7, 0.3],
-        techScore: 0.9,
-        socialScore: 0.8,
-        govScore: 0.7,
-        userScore: 0.85,
-        links: [
-          { name: "Official Website", url: "https://validatorone.com", logoUrl: "" },
-          { name: "Documentation", url: "https://validatorone.com/docs", logoUrl: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" }
-        ]
+        pageName: '/argon/',
+        visitorNumber: '4,569',
+        userNumber: 340,
+        rate: 46.53,
       },
       {
-        name: "Validator Two",
-        supportedAssets: [
-          { name: "Cosmos", url: "https://cosmos.network", logoUrl: "https://app.osmosis.zone/tokens/generated/atom.svg" },
-          { name: "Osmosis", url: "https://osmosis.zone", logoUrl: "https://app.osmosis.zone/tokens/generated/osmo.svg" }
-        ],
-        batteryLevel: 60,
-        tvl: [0.2, 0.8],
-        techScore: 0.75,
-        socialScore: 0.65,
-        govScore: 0.8,
-        userScore: 0.7,
-        links: [
-          { name: "Homepage", url: "https://validatorTwo.com", logoUrl: "https://validatorTwo.com/logo.png" },
-          { name: "Support", url: "https://validatorTwo.com/support", logoUrl: "https://validatorTwo.com/support/logo.png" }
-        ]
+        pageName: '/argon/index.html',
+        visitorNumber: '3,985',
+        userNumber: 319,
+        rate: 46.53,
       },
-
-      // Validator 3
       {
-        name: "Validator Three",
-        supportedAssets: [
-          { name: "Binance Smart Chain", url: "https://bscscan.com", logoUrl: "https://app.osmosis.zone/tokens/generated/bnb.svg" },
-          { name: "Avalanche", url: "https://avax.network", logoUrl: "https://app.osmosis.zone/tokens/generated/avax.svg" }
-        ],
-        batteryLevel: 85,
-        tvl: [0.5, 0.5],
-        techScore: 0.88,
-        socialScore: 0.77,
-        govScore: 0.66,
-        userScore: 0.78,
-        links: [
-          { name: "Blog", url: "https://validatorThree.com/blog", logoUrl: "https://validatorThree.com/blog/logo.png" },
-          { name: "FAQ", url: "https://validatorThree.com/faq", logoUrl: "https://validatorThree.com/faq/logo.png" }
-        ]
+        pageName: '/argon/charts.html',
+        visitorNumber: '3,513	',
+        userNumber: 294,
+        rate: 36.49,
+      },
+      {
+        pageName: '/argon/tables.html',
+        visitorNumber: '2,000',
+        userNumber: 147,
+        rate: 50.87,
+      },
+      {
+        pageName: '/argon/profile.html',
+        visitorNumber: '1,795',
+        userNumber: 190,
+        rate: 42.53,
       },
     ]
 

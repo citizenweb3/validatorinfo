@@ -1,5 +1,7 @@
 import vueEmitter from 'core/emitter'
 import { createApp, h } from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 import { createPinia } from 'pinia'
 import ElementPlus from 'element-plus'
 import App from './App.vue'
@@ -29,6 +31,8 @@ const createNewApp = () => {
   app.use(AppComponents)
   app.use(createPinia())
   app.use(VueSweetAlert2)
+  app.use(VueAxios, axios)
+  app.provide('axios', app.config.globalProperties.axios)
 
   app.mount('#app')
   app.config.performance = true

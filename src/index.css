@@ -4,6 +4,8 @@
 
 @layer base {
   * {
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif; */
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
   }
 }

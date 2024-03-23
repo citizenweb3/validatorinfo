@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="p-8">
-        <div class="text-center text-primary-dark">
+        <div class="text-center text-white">
           <h3 class="font-semibold pb-2">
             {{ name }}<span class="font-thin">, {{ age }}</span>
           </h3>
@@ -66,7 +66,7 @@
             {{ location }}
           </h5>
         </div>
-        <div class="text-center text-primary-dark">
+        <div class="text-center text-white">
           <h3 class="text-0.813 mt-6 font-semibold pb-2">
             {{ job }}
           </h3>

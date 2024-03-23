@@ -37,7 +37,7 @@ export default defineComponent({
   setup() {
     const store = useStore()
     const textInput = ref('')
-    const isSBPin = computed(() => store.validators.isSBPin)
+    const isSBPin = computed(() => store.dashboard.isSBPin)
 
     return {
       isSBPin,
@@ -53,7 +53,7 @@ export default defineComponent({
   ::v-deep(.el-input__inner) {
     @apply relative transition-all duration-200 pt-2.5 pl-10.25 placeholder:text-sm placeholder:text-gray-500/90 text-sm w-full sm:w-[291px] h-11.5 resize-y leading-6 rounded-full bg-[#eff1fc] font-normal shadow-none border-none #{!important};
     &:focus {
-      @apply w-full sm:w-98 bg-white text-black border-indigo-410 #{!important};
+      @apply w-full sm:w-98 bg-dark text-black border-indigo-410 #{!important};
     }
   }
 }

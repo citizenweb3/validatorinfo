@@ -27,7 +27,7 @@
 .icon-popper.el-popover.el-popper {
   @apply transition-all duration-300 p-1 min-w-fit min-h-fit rounded-md #{!important};
   .el-popper__arrow::before {
-    @apply bg-white #{!important};
+    @apply bg-dark #{!important};
   }
 }
 .auth-menu-popper.el-popper {
@@ -42,7 +42,7 @@
   .el-dropdown-menu__item {
     @apply p-0 m-0;
     &:hover {
-      @apply bg-white;
+      @apply bg-dark;
     }
   }
   .el-popper__arrow {
@@ -68,9 +68,9 @@
     @apply m-0;
   }
   .el-dropdown-menu__item:first-child {
-    @apply m-0 bg-white rounded-lg;
+    @apply m-0 bg-dark rounded-lg;
     &:hover {
-      @apply bg-white #{!important};
+      @apply bg-dark #{!important};
     }
   }
   .el-dropdown-menu__item {
@@ -90,7 +90,7 @@
     .el-dropdown-menu__item:first-child {
       @apply m-0 rounded-lg;
       &:hover {
-        @apply bg-white #{!important};
+        @apply bg-dark #{!important};
       }
     }
     .el-dropdown-menu__item {
