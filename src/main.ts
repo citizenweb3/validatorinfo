@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import 'sweetalert2/dist/sweetalert2.min.css'
 
-import './index.css'
+import './index.scss'
 import router from './router'
 // create new app instance
 const createNewApp = () => {

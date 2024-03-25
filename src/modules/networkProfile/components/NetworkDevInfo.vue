@@ -1,5 +1,5 @@
 <template>
   <div class="w-full">
-      <h1>Network Dev info</h1>
+      <div class='title'>Network Dev info</div>
   </div>
 </template>

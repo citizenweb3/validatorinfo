@@ -20,7 +20,7 @@
             <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
-                <router-link :to="`/networks/${scope.row.id}/info`">
+                <router-link :to="`/validators/${validatorId}/${scope.row.id}`">
                   <span
                     class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter cursor-pointer"
                   >
@@ -143,8 +143,7 @@ import { defineComponent } from 'vue'
 import { ValidatorNetworkInfo } from '../store/types'
 import { ArrowNarrowDownIcon, ArrowNarrowUpIcon } from '@heroicons/vue/outline'
 import useStore from 'store'
-
-const store = useStore()
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'ValidatorNetworksTable',
@@ -153,9 +152,12 @@ export default defineComponent({
     ArrowNarrowUpIcon,
   },
   setup() {
+    const store = useStore()
+    const route= useRouter();
     const tableData: ValidatorNetworkInfo[] = store.validatorProfile.networks
 
     return {
+      validatorId: route.currentRoute.value.params.id,
       tableData,
     }
   },

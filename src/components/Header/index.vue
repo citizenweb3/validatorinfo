@@ -13,13 +13,13 @@
           <span v-else class="text-red">{{ cosmos.price_change_percentage_24h }} %</span>
         </template>
       </p>
-      <p class="text-inherit">ETH: 
+      <p class="text-inherit">ETH:
         <template v-if="eth">
           <span v-if="eth.price_change_percentage_24h >= 0" class="text-green">{{ eth.price_change_percentage_24h }} %</span>
           <span v-else class="text-red">{{ eth.price_change_percentage_24h }} %</span>
         </template>
       </p>
-      <p class="text-inherit">Polkadot: 
+      <p class="text-inherit">Polkadot:
         <template v-if="polkadot">
           <span v-if="polkadot.price_change_percentage_24h >= 0" class="text-green">{{ polkadot.price_change_percentage_24h }} %</span>
           <span v-else class="text-red">{{ polkadot.price_change_percentage_24h }} %</span>
@@ -101,42 +101,4 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.border-gradient-apple-to-lust {
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(
-      180deg,
-      theme("colors.lust"),
-      theme("colors.apple")
-  );
-}
-
-.hover {
-  transition: text-shadow 0.3s ease;
-
-  &:hover {
-    text-shadow: 0px 0 10px gold;
-  }
-}
-.active-text:active {
-  color: gold;
-}
-
-svg:hover {
-  filter: drop-shadow(0 0 5px gold);
-}
-
-.text-green {
-  color: #4FB848;
-}
-
-.text-red {
-  color: #EB1616;
-}
-
-/** Theme Dark **/
-.dark-theme-header {
-  background-color: #202020;
-  color: white;
-}
 </style>

@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    /*font-family: 'Open Sans', sans-serif; */
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.border-gradient-apple-to-lust {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    180deg,
+    theme("colors.lust"),
+    theme("colors.apple")
+  );
+}
+
+.hover {
+  transition: text-shadow 0.3s ease;
+
+&:hover {
+   text-shadow: 0 0 10px gold;
+ }
+}
+
+.active-text:active {
+  color: gold;
+}
+
+svg:hover {
+  filter: drop-shadow(0 0 5px gold);
+}
+
+.text-green {
+  color: #4FB848;
+}
+
+.text-red {
+  color: #EB1616;
+}
+
+/** Theme Dark **/
+.dark-theme-header {
+  background-color: #202020;
+  color: white;
+}
+
+.title {
+  color: theme("colors.americanYellow");
+  font-size: 24px;
+  padding-bottom: 0.25px;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid theme("colors.blackOlive");
+  width: fit-content;
+}
+.title-secondary {
+  font-size: 18px;
+}
+
+.contentItem {
+  border: none;
+
+  &:not(:first-of-type) {
+    border-top: 1px solid theme("colors.blackOlive");
+  }
+}
+
