@@ -3,7 +3,7 @@
     <div class="flex flex-wrap gap-3.25">
       <el-card class="mb-7.5 border-none">
         <template #header>
-          <h3 class="cursor-auto mb-0 text-primary-dark">Tags</h3>
+          <h3 class="cursor-auto mb-0 text-white">Tags</h3>
         </template>
         <p>dark</p>
         <div class="mb-5">

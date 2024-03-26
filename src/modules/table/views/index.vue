@@ -1,6 +1,6 @@
 <template>
   <div class="w-full block mx-auto h-auto py-2">
-    <div class="flex flex-wrap flex-col bg-white shadow mb-7 mx-auto rounded-md">
+    <div class="flex flex-wrap flex-col bg-dark shadow mb-7 mx-auto rounded-md">
       <div class="py-5 px-6 border-b border-primary-white">
         <h3 class="cursor-auto">Light table</h3>
       </div>

@@ -10,7 +10,7 @@ body {
     @apply h-11.5 rounded border border-light placeholder:text-muted text-sm;
   }
   .el-input-group__append {
-    @apply text-base text-muted bg-white font-normal;
+    @apply text-base text-muted bg-dark font-normal;
   }
   .el-upload .el-input__inner {
     @apply text-base font-medium placeholder:text-muted;
@@ -57,7 +57,7 @@ body {
       @apply w-full border-0 p-0 drop-shadow-sm;
     }
     .el-input.el-input--default .el-input__inner {
-      @apply h-11.5 p-0 text-sm rounded bg-white border-transparent placeholder:text-muted focus:text-muted focus:font-normal text-slate-400 focus:ring-0 focus:bg-white #{!important};
+      @apply h-11.5 p-0 text-sm rounded bg-dark border-transparent placeholder:text-muted focus:text-muted focus:font-normal text-slate-400 focus:ring-0 focus:bg-dark #{!important};
     }
     .el-form-item__content {
       @apply justify-center;

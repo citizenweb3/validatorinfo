@@ -9,6 +9,7 @@ import Footer from './Footer/index.vue'
 import BreadCrumb from './BreadCrumb/index.vue'
 import SearchBar from './SearchBar/index.vue'
 import Pagination from './Pagination/index.vue'
+import Header from './Header/index.vue'
 
 export default {
   install: (app: App) => {
@@ -21,6 +22,7 @@ export default {
     app.component('BreadCrumb', BreadCrumb)
     app.component('SearchBar', SearchBar)
     app.component('Pagination', Pagination)
+    app.component('Header', Header)
 
     // Element Plus
     useElementPlus(app)

@@ -1,11 +1,11 @@
 body {
   .el-card {
-    @apply relative flex flex-col bg-clip-border break-words min-w-0 rounded-5 shadow-card cursor-auto text-primary-dark #{!important};
+    @apply relative flex flex-col bg-clip-border break-words min-w-0 rounded-5 shadow-card cursor-auto text-white #{!important};
     --el-card-bg-color: white !important;
   }
   .el-card .card-header {
     h3 {
-      @apply mb-0 cursor-auto text-primary-dark;
+      @apply mb-0 cursor-auto text-white;
     }
   }
   .el-card .el-card__header {

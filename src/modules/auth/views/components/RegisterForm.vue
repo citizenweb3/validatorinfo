@@ -4,11 +4,11 @@
       <template #header>
         <div class="text-muted text-center mt-1.5 mb-6"><small>Sign up with</small></div>
         <div class="flex flex-nowrap text-center justify-center pb-7.5">
-          <el-button class="bg-white border-white" href="#">
+          <el-button class="bg-dark border-white" href="#">
             <img src="@/assets/images/github.png" alt="" class="h-4 w-4" />
             <span class="pl-4 text-indigo-410">Github</span>
           </el-button>
-          <el-button class="bg-white border-white ml-7" href="#">
+          <el-button class="bg-dark border-white ml-7" href="#">
             <img src="@/assets/images/google.png" alt="" class="h-4 w-4" />
             <span class="pl-4 text-indigo-410">Google</span>
           </el-button>

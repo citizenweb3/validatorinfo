@@ -71,7 +71,7 @@
             <el-card class="border-slate-100" :body-style="{ padding: '0px' }">
               <img alt="..." src="@/assets/images/man_draw.jpg" />
               <div class="px-6 pt-4 pb-8">
-                <div class="text-xl font-semibold pt-2 pb-1 text-primary-dark">
+                <div class="text-xl font-semibold pt-2 pb-1 text-white">
                   Get started with Argon
                 </div>
                 <div class="font-normal text-80 text-muted">
@@ -116,7 +116,7 @@
                 <div class="table-row-group">
                   <div class="table-row h-16">
                     <div class="table-cell w-10 justify-center align-middle">
-                      <div class="w-6 h-6 rounded-full text-slate-500 bg-white">
+                      <div class="w-6 h-6 rounded-full text-slate-500 bg-dark">
                         <font-awesome-icon :icon="['fas', 'terminal']" size="xs" />
                       </div>
                     </div>
@@ -129,7 +129,7 @@
 
                   <div class="table-row h-16">
                     <div class="table-cell w-10 justify-center align-middle">
-                      <div class="w-6 h-6 rounded-full text-slate-500 bg-white">
+                      <div class="w-6 h-6 rounded-full text-slate-500 bg-dark">
                         <font-awesome-icon :icon="['fas', 'pen-fancy']" size="xs" />
                       </div>
                     </div>
@@ -142,7 +142,7 @@
 
                   <div class="table-row h-16">
                     <div class="table-cell w-10 justify-center align-middle">
-                      <div class="w-6 h-6 rounded-full text-slate-500 bg-white">
+                      <div class="w-6 h-6 rounded-full text-slate-500 bg-dark">
                         <font-awesome-icon :icon="['fas', 'hard-drive']" size="xs" />
                       </div>
                     </div>

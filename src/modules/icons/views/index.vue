@@ -50,7 +50,7 @@ body {
     px-6
     flex 
     w-full 
-    text-primary-dark 
+    text-white 
     text-base 
     font-normal 
     leading-5 
@@ -70,8 +70,8 @@ body {
     translate-x-0
     translate-y-0
     hover:border-opacity-95
-    hover:bg-white 
-    hover:text-primary-dark
+    hover:bg-dark 
+    hover:text-white
     hover:shadow-medium
     hover:drop-shadow
     #{!important};
@@ -86,7 +86,7 @@ body {
     @apply text-2xl text-indigo-410 inline-block -ml-2 mr-0.5 #{!important};
   }
   .card-typography {
-    @apply bg-white break-words mt-2 mb-7 shadow rounded-lg flex flex-col;
+    @apply bg-dark break-words mt-2 mb-7 shadow rounded-lg flex flex-col;
   }
   .card-header {
     @apply p-5 border-b border-primary-white;

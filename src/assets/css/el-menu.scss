@@ -29,7 +29,7 @@
         @apply text-indigo-410;
       }
       &:hover {
-        @apply bg-white;
+        @apply bg-dark;
       }
     }
 
@@ -37,7 +37,7 @@
       @apply text-dark-20;
       @apply pl-1.5 #{!important};
       &:hover {
-        @apply bg-white;
+        @apply bg-dark;
       }
     }
   }
@@ -45,7 +45,7 @@
   .el-menu-item {
     @apply rounded-md px-2 pr-0 h-11.25 text-dark-20 #{!important};
     &:hover {
-      @apply bg-white;
+      @apply bg-dark;
     }
     
   }

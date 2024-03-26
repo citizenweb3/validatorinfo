@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 148.49 148.49">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3b101;
+        font-family: HydrophiliaIced, 'Hydrophilia Iced';
+        font-size: 40px;
+      }
+
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g id="Layer_2-2" data-name="Layer 2-2">
+      <g class="cls-2">
+        <text class="cls-1" transform="translate(59.38 76.11) rotate(45)"><tspan x="0" y="0">+</tspan></text>
+      </g>
+      <image class="cls-2" width="92" height="118" transform="translate(83.44) rotate(45)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAB2CAYAAABF2PQIAAAACXBIWXMAAAsSAAALEgHS3X78AAADHUlEQVR4nO3Zz24aVxjG4d93YBxSZNlNYjM43kWNvMkmXEDcm8l1zHX0asgFTLKrkCtaVQIZUuI/smNjYM7XBSS1okppu+GQvo90JEZsPl4dvTOHAREREREREREREREREREREREREREREREREREREREREREREfmPbN0D/FsOhq8uDIzPVxthYwJ3MAqMVwS2V3Nf4bwhUuCbEnxY9wD/hIN1C2p0aHDOzmTI3mTIHufs0KHRLaj5hmyejRjSCwIdGlN44vDUI48ALHBmMGzAhJKpFcR1z/o19XUP8DXuGD9RG93S3NnikBA6EZ4B1Jy+x2ijGbd5m7k7bpZ2tSRbKQ7mBYGSOgdkjYxmZeRV5Aj8JfjLKnJUGXkjo8kBGSV1Lwgp10uSgd/v7KtTdi4W7AejFaCFeQ4sl3keoBWM1sWC/avT9Ds9yaHud/bcOKwvaFVGjnOEWYdVpQB93EuMXs0ZLeqMM2eQcqcn1+HuGF3C6TXf7cJTi6FTwZHjuRktcw7daAIsPxsOhxU2skjPLfop3LRfMUux05MLHIATLMvZWlQ8thrPzPwFyx2+7UYTpwHgxiPggRn7hu+523yx4Lesxu+cYByv92f8nSQ7/FuW5g5/js+vmTUDHyqn79Eyx/8wPlfK8jncOXNj4M4YtxGBfj3jwzXMeJ5WlXySXOBmuBfEdoebKQw9RKtHBhXLm6abATwAcGOAe2lGr4aPFoGxOcM23PCGaD+mF3qalVLg3ZJZAyY4J3fOu+i8DUYPGANXqzUORi86b++cdzgnDZh0S2YU6YUNiQZu4McFFSXT7TaXu3XeR2ccWVUHLJfbKMI4OuPdOu+321xSMj0uqFL9MyvJ5/D7Vkf7+uh7dne2+IEQOpWvjvZGnxjLyxm/5Odc8JpFao+BX0quw7+06vQqP+DjFAZO9OD8uvySM6sxzB/ykZ+pUg8bNmCHw19H/eMOW8x5OKktb5pPKu7IuO2WzFKukfs2InD4dl5AbEzgn2z6KzYREREREREREREREREREREREREREREREREREREREREREREREZH/oT8BNidHKR+542UAAAAASUVORK5CYII="/>
+    </g>
+  </g>
+</svg>

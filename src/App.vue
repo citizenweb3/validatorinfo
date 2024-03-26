@@ -44,4 +44,8 @@ export default defineComponent({
 #global-loading {
   z-index: 120000;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
 </style>

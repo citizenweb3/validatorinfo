@@ -9,7 +9,7 @@
           <h2 class="text-xl text-white font-semibold mb-0 leading-7.5">49,65%</h2>
         </div>
         <div
-          class="w-12 h-12 text-center inline-flex items-center justify-center rounded-full text-black bg-white"
+          class="w-12 h-12 text-center inline-flex items-center justify-center rounded-full text-black bg-dark"
         >
           <font-awesome-icon :icon="['fas', 'chart-simple']" size="lg" />
         </div>

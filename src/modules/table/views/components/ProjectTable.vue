@@ -94,8 +94,8 @@
         <div class="text-center h-12 pt-2.5">
           <el-dropdown placement="bottom-end" trigger="click" popper-class="action-column-popper">
             <el-button class="w-5 h-7 border-none bg-transparent hover:shadow-md" plain>
-              <div class="flex items-center space-x-2 2xl:space-x-4 text-black px-5">
-                <DotsVerticalIcon class="cursor-pointer h-5 w-5 text-[#ced4da] font-extrabold" />
+              <div class="flex items-center space-x-2 2xl:space-x-4 text-white px-5">
+                <DotsVerticalIcon class="cursor-pointer h-5 w-5 text-white font-extrabold" />
               </div>
             </el-button>
             <template #dropdown>
