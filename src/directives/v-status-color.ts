@@ -1,8 +1,21 @@
 import Vue from 'vue'
-export const statusColorDirective = (el: HTMLElement, { value }: any) => {
+
+const valueTrueClass = 'text-green'
+const valueFalseClass = 'text-red'
+const valueNullClass = 'text-yellow'
+let getClass = function (v: boolean | null): string {
+  return {
+    true: valueTrueClass,
+    false: valueFalseClass,
+    null: valueNullClass,
+  }['' + v]!;
+}
+let without = function(v: boolean | null): string[] {
+  return [valueTrueClass, valueFalseClass, valueNullClass].filter(s => s !== getClass(v));
+}
+
+export const statusColorDirective = (el: HTMLElement, { value }: { value: boolean | null }) => {
     // this will be called for both `mounted` and `updated`
-    let valueTrueClass = 'text-green'
-    let valueFalseClass = 'text-red'
-    el.classList.add(value === true ? valueTrueClass : valueFalseClass);
-    el.classList.remove(value === false ? valueTrueClass : valueFalseClass);
-  }
+    el.classList.add(getClass(value));
+    el.classList.remove(...without(value));
+}
