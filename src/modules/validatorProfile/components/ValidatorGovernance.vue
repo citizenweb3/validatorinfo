@@ -13,7 +13,7 @@
       <el-table-column label="Network" min-width="25%">
         <template #default="scope">
         <span class="flex items-center">
-          <font-awesome-icon :icon="['fas', 'square']" :style="{ color: scope.row.status ? '#56dd1d' : '#DD1D1DFF' }" />
+          <font-awesome-icon :icon="['fas', 'square']" v-status-color='scope.row.status' />
           {{scope.row.network}}
         </span>
         </template>
@@ -28,7 +28,7 @@
       </el-table-column>
       <el-table-column label="Vote" min-width="25%">
         <template #default="scope">
-          <div class="flex items-center" :style="{ color: scope.row.vote === 'Yes' ? '#56dd1d' : '#DD1D1DFF' }">
+          <div class="flex items-center" v-status-color='scope.row.status'>
             {{scope.row.vote}}
           </div>
         </template>

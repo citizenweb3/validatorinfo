@@ -5,7 +5,7 @@
       <el-table-column label="Network" min-width="33%">
         <template #default="scope">
           <span class="flex items-center">
-            <font-awesome-icon :icon="['fas', 'square']" :style="{ color: scope.row.status ? '#56dd1d' : '#DD1D1DFF' }" />
+            <font-awesome-icon :icon="['fas', 'square']" v-status-color='scope.row.status' />
             {{scope.row.network}}
           </span>
         </template>
@@ -33,7 +33,7 @@
       <el-table-column label="Network" min-width="33%">
         <template #default="scope">
           <span class="flex items-center">
-            <font-awesome-icon :icon="['fas', 'square']" :style="{ color: scope.row.status ? '#56dd1d' : '#DD1D1DFF' }" />
+            <font-awesome-icon :icon="['fas', 'square']" v-status-color='scope.row.status' />
             {{scope.row.network}}
           </span>
         </template>
@@ -61,7 +61,7 @@
       <el-table-column label="Network" min-width="33%">
         <template #default="scope">
           <span class="flex items-center">
-            <font-awesome-icon :icon="['fas', 'square']" :style="{ color: scope.row.status ? '#56dd1d' : '#DD1D1DFF' }" />
+            <font-awesome-icon :icon="['fas', 'square']" v-status-color='scope.row.status' />
             {{scope.row.network}}
           </span>
         </template>
@@ -89,7 +89,7 @@
       <el-table-column label="Network" min-width="33%">
         <template #default="scope">
           <span class="flex items-center">
-            <font-awesome-icon :icon="['fas', 'square']" :style="{ color: scope.row.status ? '#56dd1d' : '#DD1D1DFF' }" />
+            <font-awesome-icon :icon="['fas', 'square']" v-status-color='scope.row.status' />
             {{scope.row.network}}
           </span>
         </template>
