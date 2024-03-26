@@ -1,5 +1,5 @@
 <template>
   <div class="w-full">
-      <h1>Validator Metrics</h1>
+      <div class='title'>Validator Metrics</div>
   </div>
 </template>
