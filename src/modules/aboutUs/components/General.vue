@@ -21,7 +21,6 @@
           <button
             class="text-americanYellow bg-eerieBlack border-2 absolute w-full bottom-1.5 rounded-md left-0 border-gradient-apple-to-lust hover:border-gradient-apple-to-lust hover:border-b-3"
           >
-            >
             {{ item.textButton }}
           </button>
         </div>
