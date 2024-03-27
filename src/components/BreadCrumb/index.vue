@@ -16,7 +16,6 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import { computed } from 'vue'
-import { HomeFilled } from '@element-plus/icons-vue'
 
 const route = useRouter()
 const props = defineProps({
