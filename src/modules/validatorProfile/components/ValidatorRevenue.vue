@@ -1,5 +1,5 @@
 <template>
   <div class="w-full">
-      <h1>Validator Revenue</h1>
+      <div class='title'>Validator Revenue</div>
   </div>
 </template>

@@ -6,7 +6,7 @@
         <span class="title block">Heading 1</span>
       </div>
       <div class="md:w-3/4">
-        <h1>Argon Dashboard</h1>
+        <div class='title'>Argon Dashboard</div>
       </div>
     </div>
     <!-- Heading 2 -->

@@ -11,7 +11,7 @@
   
   Chart.register(...registerables);
   export default defineComponent({
-    name: "App",
+    name: "PieChart",
     components: { DoughnutChart },
     setup() {
       const dataValues = ref([5, 10, 15, 70]);

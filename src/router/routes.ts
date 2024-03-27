@@ -1,19 +1,10 @@
 import {
-  ViewGridIcon,
   CursorClickIcon,
-  DocumentTextIcon,
-  StarIcon,
   HomeIcon,
-  ViewBoardsIcon,
-  BellIcon,
-  LocationMarkerIcon,
   UserIcon,
   ColorSwatchIcon
 } from '@heroicons/vue/outline'
 
-import {
-  CreditCardIcon,
-} from '@heroicons/vue/solid'
 
 const Login = () => import('modules/auth/views/login.vue')
 // const Register = () => import('modules/auth/views/register.vue')
@@ -75,7 +66,6 @@ const routes = [
     meta: {
       icon: HomeIcon,
       title: 'Validators',
-      parentPath: 'Validators',
       color: 'text-indigo-410',
       requiresAuth: false
     }
@@ -84,11 +74,26 @@ const routes = [
     path: '/validators/:id',
     name: 'ValidatorProfilePage',
     component: ValidatorProfilePage,
+    redirect: (to: any) => { // default to networks
+      return { path: 'networks', params: to.params.id }
+    },
     meta: {
       requiresAuth: false,
-      parentPath: 'Validators',
+      parentPath: {
+        title: 'Validators',
+        href: '/validators'
+      },
+      title: ':id',
     },
     children: [
+      {
+        name: 'ValidatorNetworkProfile',
+        path: ':validatorNetworkId',
+        meta: {
+          title: ':validatorNetworkId'
+        },
+        component: NotFound,
+      },
       {
         name: 'ValidatorNetworksTable',
         path: 'networks',
@@ -134,7 +139,14 @@ const routes = [
     component: NetworkProfile,
     meta: {
       requiresAuth: false,
-      parentPath: 'Networks',
+      parentPath: {
+        title: 'Networks',
+        href: '/networks'
+      },
+      title: ':id',
+    },
+    redirect: (to: any) => { // default to info
+      return { path: 'info', params: to.params.id }
     },
     children: [
       {

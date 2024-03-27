@@ -6,24 +6,20 @@
       :class="`${!isSBPin ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`">
       <navigation />
       <div class="w-full h-38 relative bg-transparent border-none" :class="{
-        'bg-indigo-410': !route.meta.isDarkBackground,
+        'bg-indigo-410': false,
       }">
-        <div class="flex items-center py-5 mb-0 px-3.75 pr-3.5 md:px-7.25 md:pl-7.5 pt-6"
-          v-if="!route.meta.isDarkBackground">
+        <div class="flex items-center py-5 mb-0 px-3.75 pr-3.5 md:px-7.25 md:pl-7.5 pt-6">
           <div class="w-full flex flex-wrap flex-row">
             <div class="flex w-1/2">
-              <div class="text-xl font-semibold inline-block pt-px text-white">
-                Home
-              </div>
               <div class="md:ml-7 hidden md:inline-block pt-1.5">
-                <BreadCrumb :parentPath="route.meta.parentPath" :title="route.meta.title" />
+                <BreadCrumb :fullRoute='fullRoute' />
               </div>
             </div>
           </div>
         </div>
 
         <router-view v-slot="{ Component }">
-          <component :is="Component" :class="{ 'py-1.25 px-4 md:px-7.5 lg:px-6.2': !route.meta.isFullWidthLayout }" />
+          <component :is="Component" :class="{ 'py-1.25 px-4 md:px-7.5 lg:px-6.2': false }" />
         </router-view>
 
         <div class="w-full py-8 mx-auto px-4 md:px-7.5 lg:px-7.15">
@@ -37,28 +33,23 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
 import useStore from 'store'
-import { HomeFilled } from '@element-plus/icons-vue'
 import { useRoute } from 'vue-router'
 
 export default defineComponent({
   name: 'Layout',
-  components: {
-    HomeFilled,
-  },
 
   setup() {
-    const route: any = useRoute()
+    const route = useRoute()
     const store = useStore()
     const isSBPin = computed<boolean>(() => store.dashboard.isSBPin)
     const loading = computed(() => store.global.loading)
-
+    const fullRoute = computed(() => route.matched);
     const setIsSBPin = (b: boolean) => store.dashboard.setIsSBPin(b)
     return {
       isSBPin,
       loading,
       setIsSBPin,
-      route,
-      store,
+      fullRoute,
     }
   },
 })
