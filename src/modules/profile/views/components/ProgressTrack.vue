@@ -10,13 +10,13 @@
             :underline="false"
             class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
           >
-            <el-avatar
-              :size="!isHover ? 48 : 48"
-              @mouseover="hoverCheck(true)"
-              @mouseleave="hoverCheck(false)"
-              :src="bootstrapLogo"
-              class="transition-all border-white border-0"
-            />
+            <!--            <el-avatar-->
+            <!--              :size="!isHover ? 48 : 48"-->
+            <!--              @mouseover="hoverCheck(true)"-->
+            <!--              @mouseleave="hoverCheck(false)"-->
+            <!--              :src="bootstrapLogo"-->
+            <!--              class="transition-all border-white border-0"-->
+            <!--            />-->
           </el-link>
 
           <div class="flex-auto">
@@ -29,13 +29,13 @@
             :underline="false"
             class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
           >
-            <el-avatar
-              :size="!isHover ? 48 : 48"
-              @mouseover="hoverCheck(true)"
-              @mouseleave="hoverCheck(false)"
-              :src="angularLogo"
-              class="transition-all border-white border-0"
-            />
+            <!--            <el-avatar-->
+            <!--              :size="!isHover ? 48 : 48"-->
+            <!--              @mouseover="hoverCheck(true)"-->
+            <!--              @mouseleave="hoverCheck(false)"-->
+            <!--              :src="angularLogo"-->
+            <!--              class="transition-all border-white border-0"-->
+            <!--            />-->
           </el-link>
 
           <div class="flex-auto">
@@ -48,13 +48,13 @@
             :underline="false"
             class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
           >
-            <el-avatar
-              :size="!isHover ? 48 : 48"
-              @mouseover="hoverCheck(true)"
-              @mouseleave="hoverCheck(false)"
-              :src="sketchLogo"
-              class="transition-all border-white border-0"
-            />
+            <!--            <el-avatar-->
+            <!--              :size="!isHover ? 48 : 48"-->
+            <!--              @mouseover="hoverCheck(true)"-->
+            <!--              @mouseleave="hoverCheck(false)"-->
+            <!--              :src="sketchLogo"-->
+            <!--              class="transition-all border-white border-0"-->
+            <!--            />-->
           </el-link>
 
           <div class="flex-auto">
@@ -67,13 +67,13 @@
             :underline="false"
             class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
           >
-            <el-avatar
-              :size="!isHover ? 48 : 48"
-              @mouseover="hoverCheck(true)"
-              @mouseleave="hoverCheck(false)"
-              :src="reactLogo"
-              class="transition-all border-white border-0"
-            />
+            <!--            <el-avatar-->
+            <!--              :size="!isHover ? 48 : 48"-->
+            <!--              @mouseover="hoverCheck(true)"-->
+            <!--              @mouseleave="hoverCheck(false)"-->
+            <!--              :src="reactLogo"-->
+            <!--              class="transition-all border-white border-0"-->
+            <!--            />-->
           </el-link>
 
           <div class="flex-auto">
@@ -86,13 +86,13 @@
             :underline="false"
             class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
           >
-            <el-avatar
-              :size="!isHover ? 48 : 48"
-              @mouseover="hoverCheck(true)"
-              @mouseleave="hoverCheck(false)"
-              :src="vueLogo"
-              class="transition-all border-white border-0"
-            />
+            <!--            <el-avatar-->
+            <!--              :size="!isHover ? 48 : 48"-->
+            <!--              @mouseover="hoverCheck(true)"-->
+            <!--              @mouseleave="hoverCheck(false)"-->
+            <!--              :src="vueLogo"-->
+            <!--              class="transition-all border-white border-0"-->
+            <!--            />-->
           </el-link>
 
           <div class="flex-auto">
@@ -107,12 +107,6 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-
-import reactLogo from '@/assets/images/react.jpg'
-import sketchLogo from '@/assets/images/sketch.jpg'
-import bootstrapLogo from '@/assets/images/bootstrap.jpg'
-import vueLogo from '@/assets/images/vue.jpg'
-import angularLogo from '@/assets/images/angular.jpg'
 
 export default defineComponent({
   name: 'ProgressTrack',
@@ -131,11 +125,7 @@ export default defineComponent({
 
     return {
       customColors,
-      bootstrapLogo,
-      reactLogo,
-      sketchLogo,
-      vueLogo,
-      angularLogo,
+
       isHover,
       hoverCheck,
     }

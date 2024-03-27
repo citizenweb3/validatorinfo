@@ -1,14 +1,15 @@
 <template>
-  <div class="relative flex-grow w-full h-11.5 mb-0.5">
+  <div class="relative flex-grow w-full mb-0.5 bg-transparent">
     <div class="z-10 absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-      <font-awesome-icon class="text-gray-500" :icon="['fas', 'search']" size="sm" />
+      <font-awesome-icon class="text-americanYellow" :icon="['fas', 'search']" size="sm" />
     </div>
     <div>
       <el-input
         v-model="textInput"
         type="text"
         placeholder="Search"
-        input-style="color: black; font-weight: 400;font-size: .875rem;"
+        input-style="color: red; font-weight: 400;"
+        clearable
       />
       <div
         class="flex z-10 absolute inset-y-0 right-0 pr-4 items-center lg:hidden md:hidden sm:hidden"
@@ -16,13 +17,27 @@
       >
         <el-icon
           :size="20"
-          class="cursor-pointer w-4 h-4 text-black hover:text-slate-300"
+          class="w-4 h-4 text-black hover:text-slate-300"
           @click="$emit('close-search')"
         >
           <Close />
         </el-icon>
       </div>
     </div>
+  </div>
+  <hr class="solidline" />
+  <div class="flex justify-center">
+    <button class="button mr-10" @click="handleKnokKnokButtonClick">
+      <img src="@/assets/images/ai%20button.png" width="60px" height="60px" alt="Ai button" />
+    </button>
+    <button class="button" @click="handleLuckyButtonClick">
+      <img
+        src="/src/assets/images/random_validator_button.svg"
+        width="60px"
+        height="60px"
+        alt="Random validator button"
+      />
+    </button>
   </div>
 </template>
 <script lang="ts">
@@ -44,17 +59,49 @@ export default defineComponent({
       textInput,
     }
   },
+  methods: {
+    handleKnokKnokButtonClick() {
+      console.log('knok knok')
+    },
+
+    handleLuckyButtonClick() {
+      console.log('lucky lucky')
+    },
+  },
 })
 </script>
 
 <style lang="scss" scoped>
 .el-input {
-  @apply w-full;
+  @apply bg-transparent;
   ::v-deep(.el-input__inner) {
-    @apply relative transition-all duration-200 pt-2.5 pl-10.25 placeholder:text-sm placeholder:text-gray-500/90 text-sm w-full sm:w-[291px] h-11.5 resize-y leading-6 rounded-full bg-[#eff1fc] font-normal shadow-none border-none #{!important};
+    @apply relative transition-all duration-200 pt-2 pl-10.25 placeholder:text-h6   sm:w-[291px] resize-y leading-6 font-normal shadow-none border-none bg-transparent #{!important};
+    caret-color: theme('colors.americanYellow') #{!important};
     &:focus {
-      @apply w-full sm:w-98 bg-dark text-black border-indigo-410 #{!important};
+      @apply w-full bg-transparent text-black  #{!important};
     }
+    cursor: url('@/assets/images/cursor.svg') 0 0, auto #{!important};
   }
+  ::v-deep(.el-input__wrapper) {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+}
+.solidline {
+  width: 100%; /* Ширина полосы */
+  height: 2px; /* Высота полосы */
+  background: linear-gradient(
+    to right,
+    theme('colors.lust'),
+    theme('colors.americanYellow'),
+    theme('colors.apple')
+  ); /* Цвет полосы */
+  border: none;
+  margin-top: -10px;
+}
+.button {
+  border-bottom: 1px solid theme('colors.americanYellow');
 }
 </style>

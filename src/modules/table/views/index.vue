@@ -25,7 +25,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import John_Snow_Url from '@/assets/images/John_Snow.png'
 import Team_2_Url from '@/assets/images/team-2.jpg'
 import Team_3_Url from '@/assets/images/team-3.jpg'
 import Team_4_Url from '@/assets/images/team-4.jpg'
@@ -51,10 +50,6 @@ export default defineComponent({
   },
   setup() {
     const usersData: User[] = [
-      {
-        avatarPath: John_Snow_Url,
-        name: 'Ryan Tompson',
-      },
       {
         avatarPath: Team_2_Url,
         name: 'Romina Hadid',

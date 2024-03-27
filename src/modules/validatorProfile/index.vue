@@ -29,16 +29,20 @@ const validatorNetworkId =  computed(() => route.params.validatorNetworkId);
     </div>
   </div>
   <div class="tabs-routes tabs el-tabs is-top is-stretch" v-if='!validatorNetworkId'>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorRevenue'}">Revenue</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorMetrics'}">Metrics</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorNetworksTable'}">Network Table</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorPublic'}">Public Good</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'ValidatorGovernance'}">Governance</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorRevenue' }">Revenue</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorMetrics' }">Metrics</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorNetworksTable' }"
+      >Network Table</router-link
+    >
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorPublic' }">Public Good</router-link>
+    <router-link class="el-tabs__item" :to="{ name: 'ValidatorGovernance' }"
+      >Governance</router-link
+    >
   </div>
   <router-view></router-view>
 </template>
 
-<style lang='scss'>
+<style lang="scss">
 .d-none {
   display: none;
 }
@@ -47,7 +51,7 @@ const validatorNetworkId =  computed(() => route.params.validatorNetworkId);
 
   &.is-active,
   &.router-link-active {
-    @apply bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1;
+    @apply bg-gradient-to-t from-green to-red via-americanYellow p-1;
   }
 }
 

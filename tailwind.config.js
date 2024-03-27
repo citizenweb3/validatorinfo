@@ -17,7 +17,7 @@ module.exports = {
         0.625: '.0625rem',
       },
       borderRadius: {
-        5: '5px'
+        5: '5px',
       },
       borderWidth: {
         0.5: '0.5px',
@@ -25,7 +25,7 @@ module.exports = {
         3: '3px',
       },
       zIndex: {
-        '100': '100',
+        100: '100',
       },
       flex: {
         4: '0 0 33.333333%',
@@ -51,7 +51,7 @@ module.exports = {
       translate: {
         0: '0px',
         0.25: '0.075rem',
-        'px': '1px',
+        px: '1px',
         '3/2': '150%',
       },
       padding: {
@@ -80,7 +80,7 @@ module.exports = {
         7.5: '1.875rem', //30px
         8.5: '34px',
         9.5: '38px',
-        10.25:'41px',
+        10.25: '41px',
         11.25: '45px',
         11.5: '46px',
         13.25: '3.125rem', //50px
@@ -190,7 +190,7 @@ module.exports = {
         cyan: {
           30: 'rgb(233 236 239)',
           310: 'rgb(55 213 242)',
-          320: 'rgb(34 209 240)'
+          320: 'rgb(34 209 240)',
         },
         normal: 'rgb(82 95 127)',
         gray: {
@@ -205,7 +205,7 @@ module.exports = {
           10: 'rgb(0 0 0 / 0.2)',
           20: 'rgb(0 0 0 / 0.6)', // #00000099
           50: 'rgb(0 0 0 / 0.95)', //#000000f2
-          100: "rgb(26 23 77)", // #1a174d
+          100: 'rgb(26 23 77)', // #1a174d
           120: 'rgb(11 21 38)', //
         },
         light: {
@@ -256,7 +256,7 @@ module.exports = {
         },
         red: {
           410: 'rgb(244 100 95)',
-          light: 'rgb(245 96 54)'
+          light: 'rgb(245 96 54)',
         },
         indigo: {
           210: 'rgb(50 50 93)', //#32325d
@@ -264,14 +264,14 @@ module.exports = {
           450: 'rgb(130 94 228)', //#825ee4
         },
         yellow: {
-          310: 'rgb(255 214 0)'
+          310: 'rgb(255 214 0)',
         },
-        eerieBlack:  '#1E1E1E',
-        blackOlive: "#3E3E3E",
-        lust: "#EB1616",
+        eerieBlack: '#1E1E1E',
+        blackOlive: '#3E3E3E',
+        lust: '#EB1616',
         apple: '#4FB848',
-        americanYellow: "#F3B101",
-        white: "#FFFFFF",
+        americanYellow: '#F3B101',
+        white: '#FFFFFF',
       },
       fontSize: {
         0.625: ['0.625rem', '1.5'],
@@ -298,7 +298,13 @@ module.exports = {
         12.8: ['12.8px', '1.5'],
         15: ['15px', '1.5'],
         17: ['17px', '1.5'],
-        20: ['20px']
+        20: ['20px'],
+        h1: ['34px'],
+        h2: ['24px'],
+        h3: ['19px'],
+        h4: ['16px'],
+        h5: ['13px'],
+        h6: ['11px'],
       },
       lineHeight: {
         1.6: '1.6',
@@ -306,11 +312,11 @@ module.exports = {
         7.5: '30px',
       },
       boxShadow: {
-        'light': '0 0 0 1px rgb(0 0 0 / 10%)',
-        'medium': '0 0 0 1px rgb(0 0 0 / 10%), 0 4px 16px rgb(0 0 0 / 10%)',
-        'card': '0 0 2rem 0 rgba(136, 152, 170, 0.15)',
-        'button': '0 4px 6px rgb(50, 50, 93, 0.11), 0 1px 3px rgb(0, 0, 0 , 0.08)',
-        'form-input': '0 1px 3px rgb(50, 50, 93, 0.15), 0 1px 0 rgb(0, 0, 0, 0.08)'
+        light: '0 0 0 1px rgb(0 0 0 / 10%)',
+        medium: '0 0 0 1px rgb(0 0 0 / 10%), 0 4px 16px rgb(0 0 0 / 10%)',
+        card: '0 0 2rem 0 rgba(136, 152, 170, 0.15)',
+        button: '0 4px 6px rgb(50, 50, 93, 0.11), 0 1px 3px rgb(0, 0, 0 , 0.08)',
+        'form-input': '0 1px 3px rgb(50, 50, 93, 0.15), 0 1px 0 rgb(0, 0, 0, 0.08)',
       },
     },
     fontFamily: {
