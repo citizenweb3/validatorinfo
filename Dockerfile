@@ -1,7 +1,7 @@
-FROM node:14-alpine AS builder
+FROM node:18-alpine AS builder
 
 RUN apk --no-cache add \
-  g++ make python git \
+  g++ make python3 git \
   && yarn global add node-gyp \
   && rm -rf /var/cache/apk/*
 
@@ -21,6 +21,7 @@ ADD . .
 ADD prod.env .env
 
 RUN cat .env
+ENV NODE_OPTIONS="--max-old-space-size=5632"
 RUN yarn build --mode production
 
 # ===== Image =====

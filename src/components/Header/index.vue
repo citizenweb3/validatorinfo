@@ -111,38 +111,4 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.border-gradient-apple-to-lust {
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(180deg, theme('colors.lust'), theme('colors.apple'));
-}
-
-.hover {
-  transition: text-shadow 0.3s ease;
-
-  &:hover {
-    text-shadow: 0px 0 10px theme('colors.americanYellow');
-  }
-}
-.active-text:active {
-  color: theme('colors.americanYellow');
-}
-
-svg:hover {
-  filter: drop-shadow(0 0 5px gold);
-}
-
-.text-apple {
-  color: theme('colors.apple');
-}
-
-.text-red {
-  color: theme('colors.lust');
-}
-
-/** Theme Dark **/
-.dark-theme-header {
-  background-color: #202020;
-  color: white;
-}
 </style>

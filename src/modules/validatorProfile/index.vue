@@ -1,11 +1,34 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import ValidatorNetworksTable from './components/ValidatorNetworksTable.vue'
+import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
 const activeName = ref('network')
+const route = useRoute();
+const validatorId =  computed(() => route.params.id);
+const validatorNetworkId =  computed(() => route.params.validatorNetworkId);
 </script>
 
 <template>
-  <div class="tabs-routes tabs el-tabs is-top is-stretch">
+  <div>
+    <div class='title'>Validator Profile: {{validatorId}}</div>
+    <div class='flex center-items flex-row justify-space-between'>
+      <div class='flex text-white w-1/3'>
+        Embracing Decentralization,
+        Empowering Communities.
+        The Voice of Web3 &
+        Non-custodial staking service.
+      </div>
+      <div class='flex w-1/3 text-white'>
+        Validator graph
+      </div>
+      <div class='flex flex-col center-items w-1/3'>
+        <h2 class='block'>Merits:</h2>
+        <div class='text-white block'>
+          <button class='border-white'>Claimed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabs-routes tabs el-tabs is-top is-stretch" v-if='!validatorNetworkId'>
     <router-link class="el-tabs__item" :to="{ name: 'ValidatorRevenue' }">Revenue</router-link>
     <router-link class="el-tabs__item" :to="{ name: 'ValidatorMetrics' }">Metrics</router-link>
     <router-link class="el-tabs__item" :to="{ name: 'ValidatorNetworksTable' }"
@@ -16,18 +39,6 @@ const activeName = ref('network')
       >Governance</router-link
     >
   </div>
-
-  <!-- El Tabs are now replaced with Router Links -->
-  <el-tabs class="tabs d-none" stretch v-model="activeName">
-    <el-tab-pane label="Revenue"></el-tab-pane>
-    <el-tab-pane label="Metrics"></el-tab-pane>
-    <el-tab-pane label="Network Table" name="network">
-      <ValidatorNetworksTable></ValidatorNetworksTable>
-    </el-tab-pane>
-    <el-tab-pane label="Public Good"></el-tab-pane>
-    <el-tab-pane label="Governance"></el-tab-pane>
-  </el-tabs>
-
   <router-view></router-view>
 </template>
 
