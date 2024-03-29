@@ -1,21 +1,15 @@
 <template>
   <div class="w-full mx-auto">
     <el-tabs class="tabs" stretch v-model="activeName">
-      <el-tab-pane label="Global-POS">
-
-      </el-tab-pane>
+      <el-tab-pane label="Global-POS"> </el-tab-pane>
       <el-tab-pane label="St. Cal.">
-          <router-view ></router-view>
+        <router-view></router-view>
       </el-tab-pane>
       <el-tab-pane label="Validator info" name="valInfo">
-        <ValidatorsTable />    
+        <ValidatorsTable />
       </el-tab-pane>
-      <el-tab-pane label="Val. Comp.">
-
-      </el-tab-pane>
-      <el-tab-pane label="AI">
-
-      </el-tab-pane>
+      <el-tab-pane label="Val. Comp."> </el-tab-pane>
+      <el-tab-pane label="AI"> </el-tab-pane>
     </el-tabs>
   </div>
 </template>
@@ -25,16 +19,15 @@ import { ref } from 'vue'
 // Table
 import ValidatorsTable from '../components/ValidatorsTable.vue'
 
-const activeName = ref('valInfo');
-
-
+const activeName = ref('valInfo')
 </script>
 
 <style lang="scss">
 .tabs .el-tabs__item {
   @apply bg-blackOlive font-main text-white p-1;
-  
+
   &.is-active {
-    @apply bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1;
+    @apply bg-gradient-to-t from-apple to-lust via-americanYellow p-1;
   }
-}</style>
+}
+</style>

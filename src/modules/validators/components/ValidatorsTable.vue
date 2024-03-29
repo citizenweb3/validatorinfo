@@ -93,11 +93,11 @@
           </el-table-column>
           <el-table-column label="Links" min-width="150">
             <template #default="scope">
-              <div class="flex items-center">
-                <div class="px-4 flex justify-center gap-1">
-                  <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter"></span>
-                </div>
-              </div>
+              <span class="flex mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                  <div v-for="(item, index) in scope.row.links" :key="index" class="logo-wrapper">
+                    <el-link :underline='false' :href='item.url' class="validator-logo" :style="{ 'background-image': 'url(' + item.logoUrl + ')' }" />
+                  </div>
+                </span>
             </template>
           </el-table-column>
         </el-table>

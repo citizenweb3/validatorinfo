@@ -1,13 +1,26 @@
 <template>
-  <aside ref="target" @mouseover="hoverLeftBar(true)" @mouseleave="hoverLeftBar(false)" aria-labelledby="primary-heading"
+  <aside
+    ref="target"
+    @mouseover="hoverLeftBar(true)"
+    @mouseleave="hoverLeftBar(false)"
+    aria-labelledby="primary-heading"
     class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center shadow-card"
-    :class="{ ' hidden-aside w-17 ': !isSBOpen && !isSBPin }">
+    :class="{ ' hidden-aside w-17 ': !isSBOpen && !isSBPin }"
+  >
     <div class="flex flex-col mx-auto items-stretch h-full">
       <small class="absolute pl-2 left-0 bottom-0 italic text-cyan-800">v{{ version }}</small>
       <div class="h-19.5 flex items-center relative">
-        <router-link v-if="(isSBOpen && !isSBPin) || isSBPin" :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
-          class="transition-opacity duration-300 opacity-1 p-6 block" :to="{ name: 'ValidatorInfo' }">
-          <img src="@/assets/images/valinfologo.png" class="max-h-24 max-w-full align-middle" alt="..." />
+        <router-link
+          v-if="(isSBOpen && !isSBPin) || isSBPin"
+          :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
+          class="transition-opacity duration-300 opacity-1 p-6 block"
+          :to="{ name: 'ValidatorInfo' }"
+        >
+          <img
+            src="../../../public/ValidatorInfoLogo.png"
+            class="max-h-24 max-w-full align-middle"
+            alt="..."
+          />
         </router-link>
         <div class="ml-auto">
           <div class="lg:col-span-10 xl:col-span-10 flex">
@@ -22,90 +35,145 @@
       </div>
       <div class="flex-1 overflow-y-hidden">
         <el-scrollbar>
-          <el-menu ref="target" class="text-dark-20 before:block before:md:mt-4 mt-0" default-active="0"
-            :default-openeds="!leftSideBarItems.includes(route.name) ? ['1'] : ['0']">
+          <el-menu
+            ref="target"
+            class="text-dark-20 before:block before:md:mt-4 mt-0"
+            default-active="0"
+            :default-openeds="!leftSideBarItems.includes(route.name) ? ['1'] : ['0']"
+          >
             <template v-for="(item, index) in menuItems" :key="index">
-
               <!-- Exclude Nested Routes from Sidebar -->
               <template v-if="item.name !== 'Validator'">
-                <el-sub-menu class="relative rounded-lg mx-2" :class="{
-                  ' bg-slate-100/50 ': route.name === item.name,
-                  ' arrow-left ': !isSBOpen && !isSBPin,
-                }" :index="`${index}`" v-if="false && item.children">
+                <el-sub-menu
+                  class="relative rounded-lg mx-2"
+                  :class="{
+                    ' bg-slate-100/50 ': route.name === item.name,
+                    ' arrow-left ': !isSBOpen && !isSBPin,
+                  }"
+                  :index="`${index}`"
+                  v-if="false && item.children"
+                >
                   <template #title>
-                    <span v-if="route.name === item.name"
-                      class="absolute inset-y-1 -left-2 w-0.5 h-5/6 rounded-tr-lg rounded-br-lg bg-indigo-410"
-                      aria-hidden="true" />
                     <span
-                      class="inline-flex pl-1.5 items-center w-full text-sm my-0.5 font-normal transition-colors duration-150 hover:text-gray-500/100 focus:text-gray-800">
+                      v-if="route.name === item.name"
+                      class="absolute inset-y-1 -left-2 w-0.5 h-5/6 rounded-tr-lg rounded-br-lg bg-indigo-410"
+                      aria-hidden="true"
+                    />
+                    <span
+                      class="inline-flex pl-1.5 items-center w-full text-sm my-0.5 font-normal transition-colors duration-150 hover:text-gray-500/100 focus:text-gray-800"
+                    >
                       <div>
                         <em class="h-5 w-6 block">
-                          <component :is="item.icon" :class="` w-5 mx-auto ${item.color}`" aria-hidden="true" />
+                          <component
+                            :is="item.icon"
+                            :class="` w-5 mx-auto ${item.color}`"
+                            aria-hidden="true"
+                          />
                         </em>
                       </div>
-                      <span class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
-                        :class="{ 'opacity-0': !isSBOpen && !isSBPin }">{{ item.title }}</span>
+                      <span
+                        class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
+                        :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
+                        >{{ item.title }}</span
+                      >
                     </span>
                   </template>
                   <el-menu-item-group class="flex flex-col">
-                    <el-menu-item class="relative flex flex-row h-11.25 rounded-lg mb-px mt-0.5" :class="{
-                      ' bg-slate-100/50': route.name === subItem.name,
-                    }" v-for="(subItem, subIndex) in item.children" :key="subIndex" :index="`${index}-${subIndex}`">
-                      <span v-if="route.name === subItem.name"
+                    <el-menu-item
+                      class="relative flex flex-row h-11.25 rounded-lg mb-px mt-0.5"
+                      :class="{
+                        ' bg-slate-100/50': route.name === subItem.name,
+                      }"
+                      v-for="(subItem, subIndex) in item.children"
+                      :key="subIndex"
+                      :index="`${index}-${subIndex}`"
+                    >
+                      <span
+                        v-if="route.name === subItem.name"
                         class="absolute inset-y-1 -left-2 w-0.5 h-5/6 rounded-tr-lg rounded-br-lg bg-indigo-410"
-                        aria-hidden="true" />
+                        aria-hidden="true"
+                      />
                       <router-link
                         class="inline-flex ml-2 items-center w-full h-full text-sm my-0.5 font-normal transition-all duration-200 hover:text-gray-500/100 focus:text-gray-800"
                         :class="{
                           ' text-gray-800 ': route.name === subItem.name,
                           ' ml-4.5 ': isSBOpen || isSBPin,
-                        }" :to="{ name: subItem.name }" :title="subItem.meta.title">
+                        }"
+                        :to="{ name: subItem.name }"
+                        :title="subItem.meta.title"
+                      >
                         <div>
                           <em class="h-5 w-6 block">
-                            <component :is="subItem.meta.icon" :class="` w-5 mx-auto ${subItem.meta.color}`"
-                              aria-hidden="true" />
+                            <component
+                              :is="subItem.meta.icon"
+                              :class="` w-5 mx-auto ${subItem.meta.color}`"
+                              aria-hidden="true"
+                            />
                           </em>
                         </div>
-                        <span class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
-                          :class="{ 'opacity-0': !isSBOpen && !isSBPin }">{{ subItem.meta.title }}</span>
+                        <span
+                          class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
+                          :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
+                          >{{ subItem.meta.title }}</span
+                        >
                       </router-link>
                     </el-menu-item>
                   </el-menu-item-group>
                 </el-sub-menu>
-                <el-menu-item class="relative rounded-lg mx-2" :class="{
-                  ' bg-slate-100/50 ': route.name === item.name,
-                }" :index="`${index}`" v-else>
+                <el-menu-item
+                  class="relative rounded-lg mx-2"
+                  :class="{
+                    ' bg-slate-100/50 ': route.name === item.name,
+                  }"
+                  :index="`${index}`"
+                  v-else
+                >
                   <template #title>
-                    <span v-if="route.name === item.name"
+                    <span
+                      v-if="route.name === item.name"
                       class="absolute inset-y-1 -left-2 w-0.5 h-5/6 rounded-tr-lg rounded-br-lg bg-indigo-410"
-                      aria-hidden="true" />
+                      aria-hidden="true"
+                    />
                     <router-link
                       class="inline-flex pl-1.5 items-center w-full h-full text-sm my-0.5 font-normal transition-colors duration-150 hover:text-gray-500/100 focus:text-gray-800"
                       :class="{
                         ' text-gray-800 ': route.name === item.name,
                         ' ml-4.5 ': item.subOffset,
-                      }" :to="{ name: item.name }" :title="item.title">
+                      }"
+                      :to="{ name: item.name }"
+                      :title="item.title"
+                    >
                       <div>
                         <em class="h-5 w-6 block">
                           <div class="menu-item-inner">
-                            <img v-if="item.name === 'Validators'" src="/icons/ValidatorsIcon.svg">
-                            <img v-if="item.name === 'NetworksList'" src="/icons/NetworksIcon.svg">
-                            <img v-if="item.name === 'Metrics'" src="/icons/MetricsIcon.svg">
-                            <img v-if="item.name === 'Library'" src="/icons/LibraryIcon.svg">
-                            <img v-if="item.name === 'AboutUs'" src="/icons/AboutUsIcon.svg">
-                            <img v-if="item.name === 'StakingCalculator'" src="/icons/StakingIcon.svg">
+                            <img
+                              v-if="item.name === 'Validators'"
+                              src="/icons/ValidatorsIcon.svg"
+                            />
+                            <img
+                              v-if="item.name === 'NetworksList'"
+                              src="/icons/NetworksIcon.svg"
+                            />
+                            <img v-if="item.name === 'Metrics'" src="/icons/MetricsIcon.svg" />
+                            <img v-if="item.name === 'Library'" src="/icons/LibraryIcon.svg" />
+                            <img v-if="item.name === 'AboutUs'" src="/icons/AboutUsIcon.svg" />
+                            <img
+                              v-if="item.name === 'StakingCalculator'"
+                              src="/icons/StakingIcon.svg"
+                            />
                             <component :class="` w-5 mx-auto ${item.color}`" aria-hidden="true" />
                           </div>
                         </em>
                       </div>
-                      <span class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
-                        :class="{ 'opacity-0': !isSBOpen && !isSBPin }">{{ item.title }}
+                      <span
+                        class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
+                        :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
+                        >{{ item.title }}
                       </span>
                     </router-link>
                   </template>
                 </el-menu-item>
               </template>
-
             </template>
           </el-menu>
           <el-divider />

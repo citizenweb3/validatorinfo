@@ -44,18 +44,18 @@
       <div class="grid grid-flow-row grid-cols-6 gap-7">
         <!-- Admin card -->
         <div class="col-span-6">
-          <ProfileCard
-            :avatarImg="avatarUrl"
-            :backgroundImg="avatarBackgroundUrl"
-            name="Admin"
-            :age="67"
-            location="The Castle of Trujillo, Spain"
-            :friends="22"
-            :photos="10"
-            :comments="89"
-            job="Solution Manager - Creative Tim Officer"
-            degree="University of Computer Science"
-          />
+          <!--                    <ProfileCard-->
+          <!--                      :avatarImg="avatarUrl"-->
+          <!--                      :backgroundImg="avatarBackgroundUrl"-->
+          <!--                      name="Admin"-->
+          <!--                      :age="67"-->
+          <!--                      location="The Castle of Trujillo, Spain"-->
+          <!--                      :friends="22"-->
+          <!--                      :photos="10"-->
+          <!--                      :comments="89"-->
+          <!--                      job="Solution Manager - Creative Tim Officer"-->
+          <!--                      degree="University of Computer Science"-->
+          <!--                    />-->
         </div>
         <!-- End admin -->
 
@@ -79,10 +79,6 @@ import EditProfileForm from './components/EditProfileForm.vue'
 import ProgressTrack from './components/ProgressTrack.vue'
 import ProfileCard from '../../cards/views/components/ProfileCard.vue'
 
-import backGround from '@/assets/images/profile-cover.jpg'
-import avatarUrl from '@/assets/images/team-3.jpg'
-import avatarBackgroundUrl from '@/assets/images/window-purple-image.jpg'
-
 export default defineComponent({
   name: 'Profile',
   components: {
@@ -93,11 +89,7 @@ export default defineComponent({
     ProfileCard,
   },
   setup(_) {
-    return {
-      backGround,
-      avatarUrl,
-      avatarBackgroundUrl,
-    }
+    return {}
   },
 })
 </script>
