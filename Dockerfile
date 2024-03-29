@@ -9,7 +9,7 @@ WORKDIR /builder/
 
 # Cache frontend's package
 ADD package.json          .
-ADD yarn.lock             .
+# ADD yarn.lock             .
 
 # Install dependencies
 RUN yarn install --immutable --immutable-cache --check-cache
