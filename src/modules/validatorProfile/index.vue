@@ -9,8 +9,8 @@ const validatorNetworkId =  computed(() => route.params.validatorNetworkId);
 
 <template>
   <div>
-    <div class='title'>Validator Profile: {{validatorId}}</div>
-    <div class='flex center-items flex-row justify-space-between'>
+    <div class='title'>Validator Profile: <span class='capitalize'>{{validatorId}}</span></div>
+    <div class='flex center-items flex-row justify-space-between mt-5'>
       <div class='flex text-white w-1/3'>
         Embracing Decentralization,
         Empowering Communities.
@@ -22,27 +22,25 @@ const validatorNetworkId =  computed(() => route.params.validatorNetworkId);
       </div>
       <div class='flex flex-col center-items w-1/3'>
         <h2 class='block'>Merits:</h2>
-        <div class='text-white block'>
-          <button class='border-white'>Claimed</button>
-        </div>
+        <button
+          class="bg-blackOlive px-2 border border-gradient-apple-to-lust border-b border-b-3 hover w-40"
+        >
+          <span class="bg-transparent text-white">Claimed</span>
+        </button>
       </div>
     </div>
   </div>
-  <div class="tabs-routes tabs el-tabs is-top is-stretch" v-if='!validatorNetworkId'>
-    <router-link class="el-tabs__item" :to="{ name: 'ValidatorRevenue' }">Revenue</router-link>
-    <router-link class="el-tabs__item" :to="{ name: 'ValidatorMetrics' }">Metrics</router-link>
-    <router-link class="el-tabs__item" :to="{ name: 'ValidatorNetworksTable' }"
-      >Network Table</router-link
-    >
-    <router-link class="el-tabs__item" :to="{ name: 'ValidatorPublic' }">Public Good</router-link>
-    <router-link class="el-tabs__item" :to="{ name: 'ValidatorGovernance' }"
-      >Governance</router-link
-    >
+  <div class="tabs-routes tabs el-tabs is-top is-stretch mt-5" v-if='!validatorNetworkId'>
+    <router-link class="el-tabs__item" :to="{name: 'ValidatorRevenue'}">Revenue</router-link>
+    <router-link class="el-tabs__item" :to="{name: 'ValidatorMetrics'}">Metrics</router-link>
+    <router-link class="el-tabs__item" :to="{name: 'ValidatorNetworksTable'}">Network Table</router-link>
+    <router-link class="el-tabs__item" :to="{name: 'ValidatorPublic'}">Public Good</router-link>
+    <router-link class="el-tabs__item" :to="{name: 'ValidatorGovernance'}">Governance</router-link>
   </div>
   <router-view></router-view>
 </template>
 
-<style lang="scss">
+<style lang='scss'>
 .d-none {
   display: none;
 }
@@ -51,7 +49,7 @@ const validatorNetworkId =  computed(() => route.params.validatorNetworkId);
 
   &.is-active,
   &.router-link-active {
-    @apply bg-gradient-to-t from-green to-red via-americanYellow p-1;
+    @apply bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1;
   }
 }
 
