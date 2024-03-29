@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 const router = useRoute()
 
-const networkId = router.params.id;
+const networkId = router.params.id
 </script>
 
 <template>
@@ -38,7 +38,7 @@ const networkId = router.params.id;
   <router-view></router-view>
 </template>
 
-<style lang='scss'>
+<style lang="scss">
 .d-none {
   display: none;
 }
