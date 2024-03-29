@@ -10,7 +10,7 @@
       </el-breadcrumb-item>
       <el-breadcrumb-item v-for='route in fullRouteResolved' :to='route.href'>
         <div class="inline-block items-center cursor-pointer text-sm text-white hover:text-slate-300 font-semibold">
-            {{ route.title }}
+          <span class='capitalize'>{{ route.title }}</span>
         </div>
       </el-breadcrumb-item>
     </el-breadcrumb>
