@@ -7,6 +7,7 @@ export const useState = defineStore({
     return {
       networks: [
         {
+          status: true,
           id: 'cosmos',
           name: "Cosmos",
           apy: 0.1,
@@ -24,6 +25,7 @@ export const useState = defineStore({
           votingPower: 0.3
         },
         {
+          status: null,
           id: 'polkadot',
           name: "Polkadot",
           apy: 0.14,
@@ -43,6 +45,7 @@ export const useState = defineStore({
         },
         {
           id: 'ethereum',
+          status: false,
           name: "Ethereum",
           apy: 0.11,
           commission: 0.05,
