@@ -1,34 +1,40 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Button from 'components/Button/index.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+import { ref } from 'vue'
+
+const activeButtonIndex = ref(2)
+const handleClick = (index: number) => {
+  activeButtonIndex.value = index
+}
+</script>
 
 <template>
-  <div class="tabs-routes tabs el-tabs is-top is-stretch mb-8 justify-between flex-wrap">
-    <router-link class="el-tabs__item" :to="{ name: 'AboutUsStaking' }">Staking</router-link>
-    <router-link class="el-tabs__item" :to="{ name: 'AboutUsPartners' }">Partners</router-link>
-    <router-link class="el-tabs__item" :to="{ name: 'AboutUsGeneral' }">General info</router-link>
-    <router-link class="el-tabs__item" :to="{ name: 'AboutUsPodcast' }">Podcast</router-link>
-    <router-link class="el-tabs__item" :to="{ name: 'AboutUsContacts' }">Contacts</router-link>
+  <div class="flex justify-between">
+    <router-link :to="{ name: 'AboutUsStaking' }" @click.prevent.native="handleClick(0)">
+      <Button :text="'Staking'" :tabs="true" :index="0" :active-button-index="activeButtonIndex" />
+    </router-link>
+    <router-link :to="{ name: 'AboutUsPartners' }" @click.prevent.native="handleClick(1)">
+      <Button :text="'Partners'" :tabs="true" :index="1" :active-button-index="activeButtonIndex" />
+    </router-link>
+    <router-link :to="{ name: 'AboutUsGeneral' }" @click.prevent.native="handleClick(2)">
+      <Button
+        :text="'General info'"
+        :tabs="true"
+        :index="2"
+        :active-button-index="activeButtonIndex"
+      />
+    </router-link>
+    <router-link :to="{ name: 'AboutUsPodcast' }" @click.prevent.native="handleClick(3)">
+      <Button :text="'Podcast'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
+    </router-link>
+    <router-link :to="{ name: 'AboutUsContacts' }" @click.prevent.native="handleClick(4)">
+      <Button :text="'Contacts'" :tabs="true" :index="4" :active-button-index="activeButtonIndex" />
+    </router-link>
   </div>
   <router-view></router-view>
 </template>
 
-<style scoped lang="scss">
-.d-none {
-  display: none;
-}
-.tabs .el-tabs__item {
-  @apply bg-blackOlive font-main text-white p-1;
-
-  &.is-active,
-  &.router-link-active {
-    @apply bg-gradient-to-t from-apple to-lust via-americanYellow p-1;
-  }
-}
-
-.tabs-routes {
-  display: flex;
-  .el-tabs__item {
-    display: flex;
-    min-width: 257px;
-  }
-}
-</style>
+<style scoped lang="scss"></style>

@@ -8,16 +8,7 @@
     @hide="clickIconMenu = !clickIconMenu"
   >
     <template #reference>
-      <el-icon
-        :size="20"
-        class="cursor-pointer w-4.5 h-4.5 text-slate-50 hover:text-slate-300"
-        :class="{
-          'text-slate-300': clickIconMenu,
-          'text-dark-lighter hover:text-indigo-410': route.meta.isDarkBackground,
-        }"
-      >
-        <Menu />
-      </el-icon>
+      <Button :text="text" round />
     </template>
     <div class="w-full m-0">
       <div class="flex flex-wrap w-full m-0">
@@ -106,6 +97,7 @@
 import { defineComponent, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { GoodsFilled, List, LocationFilled, Menu } from '@element-plus/icons-vue'
+import Button from 'components/Button/index.vue'
 
 export default defineComponent({
   name: 'PopoverMenu',
@@ -114,6 +106,24 @@ export default defineComponent({
     List,
     LocationFilled,
     Menu,
+    Button,
+  },
+  props: {
+    text: {
+      type: String,
+      default: 'Click',
+      required: true,
+    },
+    round: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
+    tabs: {
+      type: Boolean,
+      default: true,
+      required: true,
+    },
   },
   setup() {
     const clickIconMenu = ref(false)
