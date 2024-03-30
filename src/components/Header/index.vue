@@ -28,9 +28,9 @@
       <p class="text-inherit">
         Polkadot:
         <template v-if="polkadot">
-          <span v-if="polkadot.price_change_percentage_24h >= 0" class="text-apple"
-            >{{ polkadot.price_change_percentage_24h }} %</span
-          >
+          <span v-if="polkadot.price_change_percentage_24h >= 0" class="text-apple">
+            {{ polkadot.price_change_percentage_24h }} %
+          </span>
           <span v-else class="text-red">{{ polkadot.price_change_percentage_24h }} %</span>
         </template>
       </p>
@@ -110,5 +110,4 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
