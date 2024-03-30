@@ -35,37 +35,21 @@
         </template>
       </p>
     </div>
-    <div class="controls flex justify-between">
-      <button
-        class="bg-blackOlive px-2 border border-gradient-apple-to-lust border-b border-b-3 hover"
-      >
-        <BrillianceIcon class="bg-blackOlive" />
-      </button>
-      <button
-        class="bg-blackOlive px-2 border border-gradient-apple-to-lust ml-1 border-b border-b-3 hover"
-      >
-        <span class="bg-transparent" :class="{ 'active-text': isActive }" @click="toggleActive"
-          >EN</span
-        >
-      </button>
-      <button
-        class="bg-blackOlive px-2 border border-gradient-apple-to-lust ml-1 border-b border-b-3 hover"
-      >
-        <span class="bg-transparent" :class="{ 'active-text': isActive }" @click="toggleActive"
-          >USD</span
-        >
-      </button>
+    <div class="controls flex justify-between items-center al">
+      <Button :is-round="false" :is-button="true" is-icon="true" />
+      <Button :text="'EN'" :is-round="false" :is-button="true" is-text-white="true" />
+      <Button :text="'USD'" :is-round="false" :is-button="true" is-text-white="true" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import BrillianceIcon from '@/components/Icons/brilliance.vue'
 import { defineComponent, ref, inject, onMounted } from 'vue'
+import Button from 'components/Button/index.vue'
 export default defineComponent({
   name: 'Header',
   components: {
-    BrillianceIcon,
+    Button,
   },
   setup() {
     const isActive = ref(false)
@@ -110,5 +94,4 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

@@ -95,6 +95,13 @@ export const useState = defineStore({
               isRichText: true,
               richTextContent: '',
             },
+            {
+              title: 'Our Manifesto',
+              isModal: true,
+              textButton: 'Learn More',
+              isRichText: true,
+              richTextContent: '',
+            },
           ],
         },
       },

@@ -14,6 +14,7 @@ import CentralLogo from './CentralLogo/index.vue'
 import Dropdown from 'components/Dropdown/index.vue'
 import PopoverMenu from 'components/PopOverMenu/index.vue'
 import MenuUserAccount from 'components/MenuUserAccount/index.vue'
+import Button from 'components/Button/index.vue'
 export default {
   install: (app: App) => {
     // Register it globally
@@ -30,6 +31,7 @@ export default {
     app.component('Dropdown', Dropdown)
     app.component('PopoverMenu', PopoverMenu)
     app.component('MenuUserAccount', MenuUserAccount)
+    app.component('Button', Button)
 
     // Element Plus
     useElementPlus(app)
