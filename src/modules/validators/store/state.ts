@@ -10,8 +10,14 @@ export const useState = defineStore({
           id: 'validator-one',
           name: "Validator One",
           supportedAssets: [
+            { name: "Bitcoin", url: "https://bitcoin.org", logoUrl: "https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=029" },
+            { name: "Cardano", url: "https://cardano.org", logoUrl: "https://cryptologos.cc/logos/cardano-ada-logo.png?v=029" },
+            { name: "Dogecoin", url: "https://dogecoin.com/", logoUrl: "https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=029" },
             { name: "Ethereum", url: "https://ethereum.org", logoUrl: "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=029" },
-            { name: "Polkadot", url: "https://polkadot.network", logoUrl: "https://app.osmosis.zone/tokens/generated/dot.svg" }
+            { name: "Shiba Inu", url: "https://shibatoken.com/", logoUrl: "https://cryptologos.cc/logos/shiba-inu-shib-logo.png?v=029" },
+            { name: "Polkadot", url: "https://polkadot.network", logoUrl: "https://app.osmosis.zone/tokens/generated/dot.svg" },
+            { name: "Binance Smart Chain", url: "https://bscscan.com", logoUrl: "https://app.osmosis.zone/tokens/generated/bnb.svg" },
+            { name: "Avalanche", url: "https://avax.network", logoUrl: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=029" }
           ],
           batteryLevel: 75,
           tvl: [0.7, 0.3],
@@ -28,8 +34,14 @@ export const useState = defineStore({
           id: 'validator-two',
           name: "Validator Two",
           supportedAssets: [
+            { name: "Dogecoin", url: "https://dogecoin.com/", logoUrl: "https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=029" },
+            { name: "Ethereum", url: "https://ethereum.org", logoUrl: "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=029" },
+            { name: "Shiba Inu", url: "https://shibatoken.com/", logoUrl: "https://cryptologos.cc/logos/shiba-inu-shib-logo.png?v=029" },
+            { name: "Polkadot", url: "https://polkadot.network", logoUrl: "https://app.osmosis.zone/tokens/generated/dot.svg" },
+            { name: "Binance Smart Chain", url: "https://bscscan.com", logoUrl: "https://app.osmosis.zone/tokens/generated/bnb.svg" },
+            { name: "Avalanche", url: "https://avax.network", logoUrl: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=029" },
             { name: "Cosmos", url: "https://cosmos.network", logoUrl: "https://app.osmosis.zone/tokens/generated/atom.svg" },
-            { name: "Osmosis", url: "https://osmosis.zone", logoUrl: "https://app.osmosis.zone/tokens/generated/osmo.svg" }
+            { name: "Osmosis", url: "https://osmosis.zone", logoUrl: "https://app.osmosis.zone/tokens/generated/osmo.svg" },
           ],
           batteryLevel: 60,
           tvl: [0.2, 0.8],
@@ -48,8 +60,14 @@ export const useState = defineStore({
           id: 'validator-three',
           name: "Validator Three",
           supportedAssets: [
+            { name: "Cosmos", url: "https://cosmos.network", logoUrl: "https://app.osmosis.zone/tokens/generated/atom.svg" },
+            { name: "Osmosis", url: "https://osmosis.zone", logoUrl: "https://app.osmosis.zone/tokens/generated/osmo.svg" },
+            { name: "Dogecoin", url: "https://dogecoin.com/", logoUrl: "https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=029" },
+            { name: "Ethereum", url: "https://ethereum.org", logoUrl: "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=029" },
+            { name: "Shiba Inu", url: "https://shibatoken.com/", logoUrl: "https://cryptologos.cc/logos/shiba-inu-shib-logo.png?v=029" },
+            { name: "Polkadot", url: "https://polkadot.network", logoUrl: "https://app.osmosis.zone/tokens/generated/dot.svg" },
             { name: "Binance Smart Chain", url: "https://bscscan.com", logoUrl: "https://app.osmosis.zone/tokens/generated/bnb.svg" },
-            { name: "Avalanche", url: "https://avax.network", logoUrl: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=029" }
+            { name: "Avalanche", url: "https://avax.network", logoUrl: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=029" },
           ],
           batteryLevel: 85,
           tvl: [0.5, 0.5],

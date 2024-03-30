@@ -5,27 +5,18 @@
   <p
     v-for="(item, indexDescription) in data.data.description"
     :key="indexDescription"
-    class="text-white pt-6"
+    class="text-white pt-6 text-4"
   >
     {{ item }}
   </p>
-  <div class="contentWrapper mt-4">
-    <div
-      v-for="(item, indexSection) in data.data.section"
-      :key="indexSection"
-      class="contentItem mt-5"
-    >
-      <p class="text-americanYellow text-base font-semibold">{{ item.title }}</p>
-      <div class="my-5">
-        <div class="border-gradient-apple-to-lust px-40 m-1 bg-blackOlive w-full h-5 relative">
-          <button
-            class="text-americanYellow bg-eerieBlack border-2 absolute w-full bottom-1.5 rounded-md left-0 border-gradient-apple-to-lust hover:border-gradient-apple-to-lust hover:border-b-3"
-          >
-            {{ item.textButton }}
-          </button>
-        </div>
+  <div class="mt-4 wrapper">
+    <div v-for="(item, indexSection) in data.data.section" :key="indexSection" class="mt-5 mr-5.5">
+      <p class="text-americanYellow text-base font-semibold text-h3 pb-15 border-bottom w-fit">
+        {{ item.title }}
+      </p>
+      <div class="item mt-15 ml-5.5">
+        <PopoverMenu :text="item.textButton" :round="true" />
       </div>
-      <!--      <ContentItem :label="item.title" :content="item.content" />-->
     </div>
   </div>
 </template>
@@ -35,11 +26,13 @@ import { defineComponent } from 'vue'
 import useStore from 'store'
 import { GeneralInfo } from 'modules/aboutUs/store/types'
 import ContentItem from 'modules/aboutUs/components/ContentItem.vue'
+import Button from 'components/Button/index.vue'
 const store = useStore()
 
 export default defineComponent({
   name: 'AboutUsGeneral',
   components: {
+    Button,
     ContentItem,
   },
   props: {
@@ -65,27 +58,12 @@ export default defineComponent({
   border-bottom: 1px solid theme('colors.blackOlive');
   width: fit-content;
 }
-.contentItem {
-  border: none;
-
-  &:not(:first-of-type) {
-    border-top: 1px solid theme('colors.blackOlive');
-  }
+.wrapper {
+  display: flex;
+  flex-direction: row;
 }
-.border-gradient-apple-to-lust {
-  border-image-slice: 1;
-  border-image-source: linear-gradient(180deg, theme('colors.lust'), theme('colors.apple'));
-  border-radius: 10px;
-}
-
-.hover {
-  transition: text-shadow 0.3s ease;
-
-  &:hover {
-    text-shadow: 0px 0 10px theme('colors.americanYellow');
-  }
-}
-.active-text:active {
-  color: theme('colors.americanYellow');
+.item {
+  height: 30px;
+  width: 144px;
 }
 </style>

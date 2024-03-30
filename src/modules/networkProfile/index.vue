@@ -1,39 +1,73 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-const router = useRoute()
+import { useRoute, useRouter } from 'vue-router'
+import Button from 'components/Button/index.vue'
+const route = useRoute()
 
-const networkId = router.params.id
+const networkId = route.params.id
+const router = useRouter()
+
+const activeButtonIndex = ref(2)
+const handleClick = (index: number) => {
+  activeButtonIndex.value = index
+}
 </script>
 
 <template>
   <div>
-    <div class='title'><span class='text-white'>Network: </span><span class='capitalize'>{{networkId}}</span></div>
-    <div class='flex center-items flex-row justify-space-between'>
-      <div class='flex flex-col text-white w-1/3 font-size'>
-        <div class='title title-secondary text-yellow border-none'>Cosmos</div>
-        <div>
-          Build a blockchain using the best-in class open source libraries and services.
-        </div>
+    <div class="title">
+      <span class="text-white">Network: </span><span class="capitalize">{{ networkId }}</span>
+    </div>
+    <div class="flex center-items flex-row justify-space-between">
+      <div class="flex flex-col text-white w-1/3 font-size">
+        <div class="title title-secondary text-yellow border-none">Cosmos</div>
+        <div>Build a blockchain using the best-in class open source libraries and services.</div>
       </div>
-      <div class='w-1/3 text-white mx-auto text-center'>
-        <img src='@/assets/screenshots/cosmos_logo.png' />
+      <div class="w-1/3 text-white mx-auto text-center">
+        <img src="@/assets/screenshots/cosmos_logo.png" />
       </div>
-      <div class='flex flex-col center-items w-1/5 mr-9'>
-        <button
-          class="bg-blackOlive px-2 border border-gradient-apple-to-lust border-b border-b-3 hover w-auto"
-        >
-          <span class="bg-transparent text-white">Show latest transactions</span>
-        </button>
+      <div class="flex flex-col center-items w-1/5 mr-9">
+        <Button text="Show latest transactions" round />
       </div>
     </div>
   </div>
-  <div class="tabs-routes tabs el-tabs is-top is-stretch mt-5" >
-    <router-link class="el-tabs__item" :to="{name: 'NetworkGovernance'}">Governance</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'NetworkStatistics'}">Statistics</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'NetworkInfo'}">Useful info</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'NetworkDevInfo'}">Dev info</router-link>
-    <router-link class="el-tabs__item" :to="{name: 'NetworkLiveliness'}">Liveliness</router-link>
+
+  <div class="flex justify-between">
+    <router-link :to="{ name: 'NetworkGovernance' }" @click.prevent.native="handleClick(0)">
+      <Button
+        :text="'Governance'"
+        :tabs="true"
+        :index="0"
+        :active-button-index="activeButtonIndex"
+      />
+    </router-link>
+    <router-link :to="{ name: 'NetworkStatistics' }" @click.prevent.native="handleClick(1)">
+      <Button
+        :text="'Statistics'"
+        :tabs="true"
+        :index="1"
+        :active-button-index="activeButtonIndex"
+      />
+    </router-link>
+    <router-link :to="{ name: 'NetworkInfo' }" @click.prevent.native="handleClick(2)">
+      <Button
+        :text="'Useful info'"
+        :tabs="true"
+        :index="2"
+        :active-button-index="activeButtonIndex"
+      />
+    </router-link>
+    <router-link :to="{ name: 'NetworkDevInfo' }" @click.prevent.native="handleClick(3)">
+      <Button :text="'Dev info'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
+    </router-link>
+    <router-link :to="{ name: 'NetworkLiveliness' }" @click.prevent.native="handleClick(4)">
+      <Button
+        :text="'Liveliness'"
+        :tabs="true"
+        :index="4"
+        :active-button-index="activeButtonIndex"
+      />
+    </router-link>
   </div>
   <router-view></router-view>
 </template>
