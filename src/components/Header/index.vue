@@ -1,14 +1,14 @@
 <template>
   <div class="dark-theme-header header flex justify-between items-center p-8">
     <div class="navigations flex space-x-20">
-      <p class="text-inherit">Validators: XXX</p>
-      <p class="text-inherit">Ecosystems: XXX</p>
-      <p class="text-inherit">TVL: XXX</p>
-      <p class="text-inherit">Domicance: XXX</p>
+      <p class="text-inherit">Validators: <span class="text-main">1277</span></p>
+      <p class="text-inherit">Ecosystems: <span class="text-main">200</span></p>
+      <p class="text-inherit">TVL: <span class="text-main">$74.6B</span></p>
+
 
       <!-- Prices -->
       <p class="text-inherit">
-        Cosmos:
+        Dominance: Cosmos:
         <template v-if="cosmos">
           <span v-if="cosmos.price_change_percentage_24h >= 0" class="text-apple"
             >{{ cosmos.price_change_percentage_24h }} %</span
@@ -109,5 +109,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style scoped lang="scss"></style>

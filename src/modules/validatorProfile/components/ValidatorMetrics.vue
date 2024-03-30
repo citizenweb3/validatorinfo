@@ -42,7 +42,11 @@
         </div>
       </div>
 
-      <LineChart class='mx-auto w-2/3' :data='{ data: [{ data: [1,2,3,4], color: "red"}, { data: [11,12,23,34], color: "green"}] }'  :labels='["May 1", "May 2", "May 3", "May 4"]'/>
+      <LineChart class='mx-auto w-2/3' 
+          :data='{ data: [{ data: [1,2,3,4], color: "red"}, { data: [11,12,23,34], color: "green"}] }'  
+          :labels='["May 1", "May 2", "May 3", "May 4"]'
+          width="400"
+      />
     </div>
   </div>
 </template>

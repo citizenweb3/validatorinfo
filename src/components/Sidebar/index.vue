@@ -26,8 +26,12 @@
           <div class="lg:col-span-10 xl:col-span-10 flex">
             <div class="hidden lg:block flex-grow">
               <div class="flex items-center space-x-2 2xl:space-x-4 text-white px-6">
-                <MenuIcon v-if="!isSBPin" class="cursor-pointer h-6 w-5" @click="handleMenuClick" />
-                <MenuAlt1Icon v-else class="cursor-pointer h-6 w-5" @click="handleMenuClick" />
+                <img src="/icons/ArrowsIcon.svg" class="cursor-pointer h-6 w-5" @click="handleMenuClick">
+
+                <!-- Template Icons 
+                  <MenuIcon v-if="!isSBPin" class="cursor-pointer h-6 w-5" @click="handleMenuClick" />
+                  <MenuAlt1Icon v-else class="cursor-pointer h-6 w-5" @click="handleMenuClick" /> 
+                -->
               </div>
             </div>
           </div>
