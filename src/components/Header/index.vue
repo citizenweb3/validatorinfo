@@ -36,9 +36,9 @@
       </p>
     </div>
     <div class="controls flex justify-between items-center al">
-      <Button :is-round="false" :is-button="true" is-icon="true" />
-      <Button :text="'EN'" :is-round="false" :is-button="true" is-text-white="true" />
-      <Button :text="'USD'" :is-round="false" :is-button="true" is-text-white="true" />
+      <Button class="mr-1" is-icon="true" />
+      <Button class="mr-1" :text="'EN'" is-text-white />
+      <Button :text="'USD'" is-text-white />
     </div>
   </div>
 </template>
@@ -94,4 +94,9 @@ export default defineComponent({
 })
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.controls {
+  align-items: stretch !important;
+  align-content: stretch !important;
+}
+</style>

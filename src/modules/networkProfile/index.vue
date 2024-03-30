@@ -27,11 +27,7 @@ const handleClick = (index: number) => {
         <img src="@/assets/screenshots/cosmos_logo.png" />
       </div>
       <div class="flex flex-col center-items w-1/5 mr-9">
-        <button
-          class="bg-blackOlive px-2 border border-gradient-apple-to-lust border-b border-b-3 hover w-auto"
-        >
-          <span class="bg-transparent text-white">Show latest transactions</span>
-        </button>
+        <Button text="Show latest transactions" round />
       </div>
     </div>
   </div>
@@ -40,9 +36,7 @@ const handleClick = (index: number) => {
     <router-link :to="{ name: 'NetworkGovernance' }" @click.prevent.native="handleClick(0)">
       <Button
         :text="'Governance'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="0"
         :active-button-index="activeButtonIndex"
       />
@@ -50,9 +44,7 @@ const handleClick = (index: number) => {
     <router-link :to="{ name: 'NetworkStatistics' }" @click.prevent.native="handleClick(1)">
       <Button
         :text="'Statistics'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="1"
         :active-button-index="activeButtonIndex"
       />
@@ -60,29 +52,18 @@ const handleClick = (index: number) => {
     <router-link :to="{ name: 'NetworkInfo' }" @click.prevent.native="handleClick(2)">
       <Button
         :text="'Useful info'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="2"
         :active-button-index="activeButtonIndex"
       />
     </router-link>
     <router-link :to="{ name: 'NetworkDevInfo' }" @click.prevent.native="handleClick(3)">
-      <Button
-        :text="'Dev info'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
-        :index="3"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'Dev info'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
     </router-link>
     <router-link :to="{ name: 'NetworkLiveliness' }" @click.prevent.native="handleClick(4)">
       <Button
         :text="'Liveliness'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="4"
         :active-button-index="activeButtonIndex"
       />

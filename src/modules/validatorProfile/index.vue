@@ -27,42 +27,22 @@ const handleClick = (index: number) => {
       <div class="flex w-1/3 text-white">Validator graph</div>
       <div class="flex flex-col center-items w-1/3">
         <h2 class="block">Merits:</h2>
-        <button
-          class="bg-blackOlive px-2 border border-gradient-apple-to-lust border-b border-b-3 hover w-40"
-        >
-          <span class="bg-transparent text-white">Claimed</span>
-        </button>
+        <Button :text="'Claimed'" :round="true" />
       </div>
     </div>
   </div>
 
   <div class="flex justify-between" v-if="!validatorNetworkId">
     <router-link :to="{ name: 'ValidatorRevenue' }" @click.prevent.native="handleClick(0)">
-      <Button
-        :text="'Revenue'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
-        :index="0"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'Revenue'" :tabs="true" :index="0" :active-button-index="activeButtonIndex" />
     </router-link>
     <router-link :to="{ name: 'ValidatorMetrics' }" @click.prevent.native="handleClick(1)">
-      <Button
-        :text="'Metrics'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
-        :index="1"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'Metrics'" :tabs="true" :index="1" :active-button-index="activeButtonIndex" />
     </router-link>
     <router-link :to="{ name: 'ValidatorNetworksTable' }" @click.prevent.native="handleClick(2)">
       <Button
         :text="'Network Table'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="2"
         :active-button-index="activeButtonIndex"
       />
@@ -70,9 +50,7 @@ const handleClick = (index: number) => {
     <router-link :to="{ name: 'ValidatorPublic' }" @click.prevent.native="handleClick(3)">
       <Button
         :text="'Public Good'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="3"
         :active-button-index="activeButtonIndex"
       />
@@ -80,9 +58,7 @@ const handleClick = (index: number) => {
     <router-link :to="{ name: 'ValidatorGovernance' }" @click.prevent.native="handleClick(4)">
       <Button
         :text="'Governance'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="4"
         :active-button-index="activeButtonIndex"
       />

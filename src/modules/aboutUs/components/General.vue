@@ -15,7 +15,7 @@
         {{ item.title }}
       </p>
       <div class="item mt-15 ml-5.5">
-        <PopoverMenu :text="item.textButton" :is-round="true" :is-button="true" />
+        <PopoverMenu :text="item.textButton" :round="true" />
       </div>
     </div>
   </div>

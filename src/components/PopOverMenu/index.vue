@@ -8,7 +8,7 @@
     @hide="clickIconMenu = !clickIconMenu"
   >
     <template #reference>
-      <Button :text="text" :is-round="isRound" :is-button="isButton" />
+      <Button :text="text" round />
     </template>
     <div class="w-full m-0">
       <div class="flex flex-wrap w-full m-0">
@@ -114,12 +114,12 @@ export default defineComponent({
       default: 'Click',
       required: true,
     },
-    isRound: {
+    round: {
       type: Boolean,
       default: false,
       required: true,
     },
-    isButton: {
+    tabs: {
       type: Boolean,
       default: true,
       required: true,

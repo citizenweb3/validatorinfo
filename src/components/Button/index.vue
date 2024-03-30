@@ -10,19 +10,15 @@ export default defineComponent({
       default: 'Click',
       required: false,
     },
-    isRound: {
+    round: {
       type: Boolean,
       default: false,
       required: true,
     },
-    isButton: {
-      type: Boolean,
-      default: true,
-      required: true,
-    },
-    isTabs: {
+    tabs: {
       type: Boolean,
       default: false,
+      required: true,
     },
     isIcon: {
       type: Boolean,
@@ -36,7 +32,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const activeClass = computed(() => props.activeButtonIndex === props.index && props.isTabs)
+    const activeClass = computed(() => props.activeButtonIndex === props.index && props.tabs)
 
     return {
       activeClass,
@@ -50,32 +46,32 @@ export default defineComponent({
     <div class="backyard">
       <div
         :class="{
-          rounded: isRound,
-          'module-border-wrap': isButton,
+          rounded: round,
+          'module-border-wrap': !tabs,
           active: activeClass,
         }"
       >
-        <div class="module outer" :class="{ rounded: isRound }" />
+        <div class="module outer" :class="{ rounded: round }" />
       </div>
     </div>
     <div
       :class="{
-        rounded: isRound,
-        tabs: isTabs,
-        'module-border-wrap': isButton,
+        rounded: round,
+        tabs: tabs,
+        'module-border-wrap': !tabs,
         active: activeClass,
       }"
     >
-      <div class="module" :class="{ rounded: isRound }">
+      <div class="module" :class="{ rounded: round }">
         <div
           :class="{
-            textdecoration: isButton,
-            text: isTabs && activeClass,
+            textdecoration: !tabs,
+            text: tabs && activeClass,
             iconWrap: isIcon,
             textWhite: isTextWhite,
           }"
         >
-          <template v-if="isIcon">
+          <template v-if="isIcon" class="icon">
             <img src="/public/icons/brilliance.svg" />
           </template>
           <template v-else>
@@ -151,8 +147,9 @@ export default defineComponent({
 }
 
 .iconWrap {
-  padding-top: 5px;
-  align-self: center;
+  padding: 5px 0 0;
+  align-self: stretch !important;
+  width: 20px;
 }
 
 .textWhite {

@@ -14,54 +14,24 @@ const handleClick = (index: number) => {
 <template>
   <div class="flex justify-between">
     <router-link :to="{ name: 'AboutUsStaking' }" @click.prevent.native="handleClick(0)">
-      <Button
-        :text="'Staking'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
-        :index="0"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'Staking'" :tabs="true" :index="0" :active-button-index="activeButtonIndex" />
     </router-link>
     <router-link :to="{ name: 'AboutUsPartners' }" @click.prevent.native="handleClick(1)">
-      <Button
-        :text="'Partners'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
-        :index="1"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'Partners'" :tabs="true" :index="1" :active-button-index="activeButtonIndex" />
     </router-link>
     <router-link :to="{ name: 'AboutUsGeneral' }" @click.prevent.native="handleClick(2)">
       <Button
         :text="'General info'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
+        :tabs="true"
         :index="2"
         :active-button-index="activeButtonIndex"
       />
     </router-link>
     <router-link :to="{ name: 'AboutUsPodcast' }" @click.prevent.native="handleClick(3)">
-      <Button
-        :text="'Podcast'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
-        :index="3"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'Podcast'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
     </router-link>
     <router-link :to="{ name: 'AboutUsContacts' }" @click.prevent.native="handleClick(4)">
-      <Button
-        :text="'Contacts'"
-        :is-round="false"
-        :is-button="false"
-        :is-tabs="true"
-        :index="4"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'Contacts'" :tabs="true" :index="4" :active-button-index="activeButtonIndex" />
     </router-link>
   </div>
   <router-view></router-view>
