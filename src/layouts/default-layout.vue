@@ -17,7 +17,7 @@
         }"
       >
         <div class="flex items-center py-5 mb-0 pt-6">
-          <div class="w-full flex flex-wrap flex-row">
+          <div class="w-full flex flex-wrap flex-row" v-if="fullRoute.length <= 1">
             <div class="flex w-full flex-col">
               <div class="md:ml-7 hidden md:inline-block pt-1.5">
                 <BreadCrumb :fullRoute="fullRoute" />
