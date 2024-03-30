@@ -176,6 +176,7 @@ export default defineComponent({
     background-repeat: no-repeat;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
   }
 }
 </style>

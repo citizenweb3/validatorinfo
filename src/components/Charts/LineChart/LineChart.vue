@@ -1,5 +1,5 @@
 <template>
-    <div style="width: 400px">
+    <div :style="{width: chartWidth+'px'}">
       <LineChart v-bind="lineChartProps" />
     </div>
   </template>
@@ -8,7 +8,7 @@
   import { computed, defineComponent, ref } from "vue";
   import { LineChart, useLineChart } from "vue-chart-3";
   import { Chart, ChartData, ChartOptions, registerables } from "chart.js";
-import { withInstallDirective } from "element-plus/es/utils";
+//import { withInstallDirective } from "element-plus/es/utils";
   import { LineChartData, LineChartsData } from "./LineChartData";
 
   Chart.register(...registerables);
@@ -16,6 +16,7 @@ import { withInstallDirective } from "element-plus/es/utils";
     name: "PieChart",
     props: {
       data: { type: LineChartsData, required: true},
+      chartWidth: {type: String, required: true },
 
       labels: { type: Array, required: true },
     },

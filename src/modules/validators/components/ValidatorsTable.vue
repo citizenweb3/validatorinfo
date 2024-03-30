@@ -18,7 +18,7 @@
           <el-table-column label="Supported Assets" min-width="150">
             <template #default="scope">
               <div class="flex items-center">
-                <span class="flex mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
+                <span class="flex mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter flex-wrap">
                   <div v-for="(item, index) in scope.row.supportedAssets" :key="index" class="logo-wrapper">
                     <div class="validator-logo" :style="{ 'background-image': 'url(' + item.logoUrl + ')' }" />
                   </div>
@@ -142,8 +142,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .logo-wrapper {
   .validator-logo {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     padding: 5px;
     margin: 5px;
     background-size: contain;
@@ -151,6 +151,7 @@ export default defineComponent({
     background-repeat: no-repeat;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
   }
 }
 </style>
