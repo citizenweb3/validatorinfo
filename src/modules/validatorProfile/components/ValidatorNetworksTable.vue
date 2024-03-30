@@ -21,8 +21,9 @@
             <template #default="scope">
               <div class="flex items-center">
                 <router-link :to="`/validators/${validatorId}/${scope.row.id}`">
+                  <font-awesome-icon :icon="['fas', 'square']" v-status-color='scope.row.status' />
                   <span
-                    class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter cursor-pointer"
+                    class="ml-3 mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter cursor-pointer"
                   >
                     {{ scope.row.name }}
                   </span>

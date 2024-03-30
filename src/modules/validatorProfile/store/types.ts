@@ -1,9 +1,10 @@
 export interface ValidatorProfileState {
     networks: ValidatorNetworkInfo[]
   }
-  
+
   export interface ValidatorNetworkInfo {
     id: string,
+    status: boolean | null,
     name: string,
     apy: number, // >0 %
     fans: number, // >1

@@ -40,7 +40,8 @@
               <div class="flex items-center">
                 <div class="px-4 flex justify-center gap-1">
                   <span class="mb-0 text-0.8125 font-semibold cursor-auto text-dark-lighter">
-                    {{ scope.row.tvl }}
+                    <PieChart />
+                    <!--{{ scope.row.tvl }}-->
                   </span>
                 </div>
               </div>
@@ -111,6 +112,7 @@ import { ValidatorOverviewInfo } from 'modules/validators/store/types'
 import { ArrowNarrowDownIcon, ArrowNarrowUpIcon } from '@heroicons/vue/outline'
 import BatteryComponent from './BatteryComponent.vue'
 import useStore from 'store'
+import PieChart from '../../../components/Charts/PieChart/PieChart.vue';
 
 const store = useStore()
 
@@ -119,7 +121,8 @@ export default defineComponent({
   components: {
     ArrowNarrowDownIcon,
     ArrowNarrowUpIcon,
-    BatteryComponent
+    BatteryComponent,
+    PieChart
   },
   props: {
     title: {
