@@ -139,6 +139,7 @@ module.exports = {
         '45/100': '45%',
         '15/100': '15%',
         '85/100': '85%',
+        full: '100%',
       },
       maxWidth: {
         '.25xl': '33.75rem', //540px
@@ -319,6 +320,7 @@ module.exports = {
         card: '0 0 2rem 0 rgba(136, 152, 170, 0.15)',
         button: '0 4px 6px rgb(50, 50, 93, 0.11), 0 1px 3px rgb(0, 0, 0 , 0.08)',
         'form-input': '0 1px 3px rgb(50, 50, 93, 0.15), 0 1px 0 rgb(0, 0, 0, 0.08)',
+        gold: '0 0 10px rgb(243,177,1)',
       },
     },
     fontFamily: {

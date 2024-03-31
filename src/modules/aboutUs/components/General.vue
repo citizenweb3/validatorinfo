@@ -9,13 +9,13 @@
   >
     {{ item }}
   </p>
-  <div class="mt-4 wrapper">
+  <div class="mt-4 h-auto wrapper">
     <div v-for="(item, indexSection) in data.data.section" :key="indexSection" class="mt-5 mr-5.5">
       <p class="text-americanYellow text-base font-semibold text-h3 pb-15 border-bottom w-fit">
         {{ item.title }}
       </p>
       <div class="item mt-15 ml-5.5">
-        <PopoverMenu :text="item.textButton" :round="true" />
+        <PopoverMenu :text="item.textButton" :round="true" :html-content="item.richTextContent" />
       </div>
     </div>
   </div>
@@ -27,6 +27,7 @@ import useStore from 'store'
 import { GeneralInfo } from 'modules/aboutUs/store/types'
 import ContentItem from 'modules/aboutUs/components/ContentItem.vue'
 import Button from 'components/Button/index.vue'
+import PopoverMenu from 'components/PopOverMenu/index.vue'
 const store = useStore()
 
 export default defineComponent({
@@ -34,6 +35,7 @@ export default defineComponent({
   components: {
     Button,
     ContentItem,
+    PopoverMenu,
   },
   props: {
     title: {

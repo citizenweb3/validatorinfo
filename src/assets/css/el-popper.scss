@@ -101,3 +101,14 @@
     }
   }
 }
+
+.modal-popper {
+  color: white;
+  top:calc(10% - 30px) !important;
+  left: 90px !important;
+  height: fit-content;
+  a {
+    @apply text-white underline;
+  }
+  @apply container sm:mx-auto xl:mx-64 xl:w-full px-10 py-5 overflow-y-auto shadow-gold bg-eerieBlack #{!important};
+}
