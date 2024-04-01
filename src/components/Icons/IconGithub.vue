@@ -1,12 +1,5 @@
 <template>
-  <svg
-    width="29"
-    height="32"
-    viewBox="0 0 29 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-  >
+  <svg width="29" height="32" viewBox="0 0 29 32" fill="none">
     <ellipse cx="14.5" cy="16" rx="14.5" ry="16" fill="url(#pattern0)" />
     <defs>
       <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -24,4 +17,3 @@
     </defs>
   </svg>
 </template>
-<script setup lang="ts"></script>

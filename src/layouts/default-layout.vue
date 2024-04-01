@@ -29,7 +29,7 @@
         <router-view v-slot="{ Component }">
           <component :is="Component" :class="{ 'py-1.25 px-4 md:px-7.5 lg:px-6.2': false }" />
         </router-view>
-        <div class="w-full py-8 mx-auto px-4 md:px-7.5 lg:px-7.15">
+        <div class="w-full h-100 py-8 mx-auto px-4 md:px-7.5 lg:px-7.15">
           <Footer />
         </div>
       </div>
@@ -64,6 +64,8 @@ export default defineComponent({
 
 <style scoped>
 .main-content {
+  height: 100%;
+  margin-bottom: 40px;
   @apply transition-all duration-300;
 }
 

@@ -1,24 +1,28 @@
 <template>
-  <div class='main'>
-    <div class='container'>
-      <CentralLogo class="circle" />
-      <div
-        :class="'line line-' + index"
-        v-for='(angle, index) in angles'
-        :key='index'
-        :style="{ transform: 'rotate(' + angle + 'deg)' }"
-      >
-        <div :class="'dot dot-' + index" :style="{ transform: 'rotate(-' + angle + 'deg)' }">
-          <a :href='partners.data[index].link' target='_blankf'>
-            <img
-              v-if='partners.data[index]?.logo'
-              :src='getAssetUrl(partners.data[index].logo)'
-              height='88'
-              width='86'
-              :alt="'Logo' + partners.data[index].name"
-            />
-            <p class='text-americanYellow'>{{ partners.data[index]?.name }}</p>
-          </a>
+  <div>
+    <div class="main my-40">
+      <div class="container">
+        <div class="circle">
+          <CentralLogo class="circle" />
+        </div>
+        <div
+          :class="'line line-' + index"
+        v-for="(angle, index) in angles"
+        :key="index"
+          :style="{ transform: 'rotate(' + angle + 'deg)' }"
+        >
+          <div :class="'dot dot-' + index" :style="{ transform: 'rotate(-' + angle + 'deg)' }">
+          <a :href="partners.data[index].link" target="_blankf">
+              <img
+              v-if="partners.data[index]?.logo"
+              :src="getAssetUrl(partners.data[index].logo)"
+              height="88"
+              width="86"
+                :alt="'Logo' + partners.data[index].name"
+              />
+            <p class="text-americanYellow">{{ partners.data[index]?.name }}</p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -37,9 +41,8 @@ const partners: Ref<PartnersInfo> = computed(() => store.aboutUs.partners)
 const angles = [23, 135, 255]
 </script>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .container {
-  margin: 100px auto 0;
   position: relative;
   width: 300px;
   height: 300px;
@@ -101,7 +104,7 @@ const angles = [23, 135, 255]
 }
 
 .main {
-  height: 736px;
+  height: fit-content;
   padding: 0;
   display: flex;
   justify-content: center;
