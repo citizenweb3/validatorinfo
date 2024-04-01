@@ -16,7 +16,7 @@
 
       <div class="block overflow-x-auto w-full p-0">
         <el-table :data="tableData" style="width: 100%" class="is-light cursor-pointer">
-          <el-table-column label="Network" min-width="200">
+          <el-table-column label="Network" min-width="150">
             <!--  scope.row.pageName -->
             <template #default="scope">
               <div class="flex items-center">
@@ -42,7 +42,7 @@
               </div>
             </template>
           </el-table-column>
-          <el-table-column label="Fans" min-width="150">
+          <el-table-column label="Fans" min-width="100">
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-1 flex justify-center gap-1">
@@ -53,7 +53,7 @@
               </div>
             </template>
           </el-table-column>
-          <el-table-column label="Rank" min-width="150">
+          <el-table-column label="Rank" min-width="75">
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-1 flex justify-center gap-1">
@@ -75,7 +75,7 @@
               </div>
             </template>
           </el-table-column>
-          <el-table-column label="Commission" min-width="150">
+          <el-table-column label="Commission" min-width="100">
             <template #default="scope">
               <div class="flex items-center">
                 <div class="px-1 flex justify-center gap-1">
@@ -175,7 +175,7 @@ export default defineComponent({
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     background-color: white;
   }
 }

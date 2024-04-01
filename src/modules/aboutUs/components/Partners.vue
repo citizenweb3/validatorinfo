@@ -2,7 +2,7 @@
   <div class="main">
     <div class="container">
       <div class="circle">
-        <img src="/ValidatorInfoLogo.png" alt="" height="564" />
+        <img src="public/ValidatorInfoLogo.png" alt="" height="564" />
       </div>
       <div
         :class="'line line-' + index"

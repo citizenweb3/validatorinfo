@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center mx-0 py-2 px-3.25 pl-2.75 md:px-7.25 shadow-sm">
+  <div class="flex items-center mx-0 py-2 pl-2.75 md:px-7.25 shadow-sm">
     <div class="w-full items-center justify-between">
       <div class="w-full flex basis-auto items-center">
         <div
@@ -42,7 +42,6 @@ import { Search, UserFilled, CircleClose } from '@element-plus/icons-vue'
 import { MenuIcon, MenuAlt1Icon, SearchIcon, SearchCircleIcon } from '@heroicons/vue/outline'
 import useStore from 'store'
 import { useRoute } from 'vue-router'
-import Logo_Url from '@/assets/images/ltv_logo.png'
 import Dropdown from 'components/Dropdown/index.vue'
 import PopoverMenu from 'components/PopOverMenu/index.vue'
 import MenuUserAccount from 'components/MenuUserAccount/index.vue'
@@ -94,7 +93,6 @@ export default defineComponent({
       setSearchOpen,
       togglePagesMenu,
       closeSideMenu,
-      Logo_Url,
     }
   },
 })

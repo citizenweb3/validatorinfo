@@ -1,5 +1,5 @@
 <template>
-  <div class="dark-theme-header header flex justify-between items-center p-8">
+  <div class="w-full dark-theme-header header flex justify-between items-center p-8">
     <div class="navigations flex space-x-20">
       <p class="text-inherit">Validators: <span class="text-main">1277</span></p>
       <p class="text-inherit">Ecosystems: <span class="text-main">200</span></p>
@@ -36,9 +36,9 @@
       </p>
     </div>
     <div class="controls flex justify-between items-center al">
-      <Button class="mr-1" is-icon="true" />
-      <Button class="mr-1" :text="'EN'" is-text-white />
-      <Button :text="'USD'" is-text-white />
+      <Button class="mr-1" icon />
+      <Button class="mr-1" :text="'EN'" text-white />
+      <Button :text="'USD'" text-white />
     </div>
   </div>
 </template>

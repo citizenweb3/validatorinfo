@@ -12,7 +12,7 @@ const handleClick = (index: number) => {
 </script>
 
 <template>
-  <div class="flex justify-between">
+  <div class="flex w-full justify-between">
     <router-link :to="{ name: 'AboutUsStaking' }" @click.prevent.native="handleClick(0)">
       <Button :text="'Staking'" :tabs="true" :index="0" :active-button-index="activeButtonIndex" />
     </router-link>
