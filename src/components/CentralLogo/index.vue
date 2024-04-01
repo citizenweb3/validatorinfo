@@ -3,7 +3,7 @@
 <template>
   <div class="my-0 mx-auto">
     <img
-      src="../../../public/ValidatorInfoLogo.png"
+      src="@/assets/ValidatorInfoLogo.png"
       class="max-h-32 max-w-full align-middle"
       alt="..."
     />

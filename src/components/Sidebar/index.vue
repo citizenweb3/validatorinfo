@@ -17,7 +17,7 @@
           :to="{ name: 'ValidatorInfo' }"
         >
           <img
-            src="../../../public/ValidatorInfoLogo.png"
+            src="@/assets/ValidatorInfoLogo.png"
             class="max-h-24 max-w-full align-middle"
             alt="..."
           />
@@ -26,7 +26,7 @@
           <div class="lg:col-span-10 xl:col-span-10 flex">
             <div class="hidden lg:block flex-grow">
               <div class="flex items-center space-x-2 2xl:space-x-4 text-white px-6">
-                <img src="/public/icons/ArrowsIcon.svg" class="cursor-pointer h-6 w-5" @click="handleMenuClick" alt=''>
+                <img src="@/assets/icons/ArrowsIcon.svg" class="cursor-pointer h-6 w-5" @click="handleMenuClick" alt=''>
 
                 <!-- Template Icons
                   <MenuIcon v-if="!isSBPin" class="cursor-pointer h-6 w-5" @click="handleMenuClick" />
@@ -72,18 +72,18 @@
                         <em class="h-5 w-6 block menu-item-inner">
                             <img
                               v-if="item.name === 'ValidatorsList'"
-                              src="/public/icons/ValidatorsIcon.svg"
+                              src="@/assets/icons/ValidatorsIcon.svg"
                              alt=''/>
                             <img
                               v-if="item.name === 'NetworksList'"
-                              src="/public/icons/NetworksIcon.svg"
+                              src="@/assets/icons/NetworksIcon.svg"
                              alt=''/>
-                            <img v-if="item.name === 'Metrics'" src="/public/icons/MetricsIcon.svg"  alt=''/>
-                            <img v-if="item.name === 'Library'" src="/public/icons/LibraryIcon.svg"  alt=''/>
-                            <img v-if="item.name === 'AboutUs'" src="/public/icons/AboutUsIcon.svg"  alt=''/>
+                            <img v-if="item.name === 'Metrics'" src="@/assets/icons/MetricsIcon.svg"  alt=''/>
+                            <img v-if="item.name === 'Library'" src="@/assets/icons/LibraryIcon.svg"  alt=''/>
+                            <img v-if="item.name === 'AboutUs'" src="@/assets/icons/AboutUsIcon.svg"  alt=''/>
                             <img
                               v-if="item.name === 'StakingCalculator'"
-                              src="/public/icons/StakingIcon.svg"
+                              src="@/assets/icons/StakingIcon.svg"
                              alt=''/>
                         </em>
                       </div>

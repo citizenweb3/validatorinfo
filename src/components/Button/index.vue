@@ -1,5 +1,6 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
+import getAssetUrl from 'utils/getAssetUrl'
 
 export default defineComponent({
   name: 'Button',
@@ -19,8 +20,7 @@ export default defineComponent({
       default: false,
     },
     icon: {
-      type: Boolean,
-      default: false,
+      type: String,
     },
     activeButtonIndex: Number,
     index: Number,
@@ -33,6 +33,7 @@ export default defineComponent({
     const activeClass = computed(() => props.activeButtonIndex === props.index && props.tabs)
 
     return {
+      iconResolved: props.icon && getAssetUrl(props.icon),
       activeClass,
     }
   },
@@ -69,8 +70,8 @@ export default defineComponent({
             textWhite: textWhite,
           }"
         >
-          <template v-if="icon" class="icon">
-            <img src="/public/icons/brilliance.svg"  alt='Toggle Theme'/>
+          <template v-if="iconResolved" >
+            <img :src='iconResolved'/>
           </template>
           <template v-else>
             {{ text }}

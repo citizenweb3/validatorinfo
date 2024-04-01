@@ -103,6 +103,6 @@ export default defineComponent({
 }
 
 .lucky {
-  background-image: url( '/public/icons/random_validator_button.svg' );
+  background-image: url( '@/assets/icons/random_validator_button.svg' );
 }
 </style>

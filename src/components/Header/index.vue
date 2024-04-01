@@ -36,9 +36,9 @@
       </p>
     </div>
     <div class="controls flex justify-between items-center al">
-      <Button class="mr-1" icon />
-      <Button class="mr-1" :text="'EN'" text-white />
-      <Button :text="'USD'" text-white />
+      <Button class="mr-1" icon='@/assets/icons/brilliance.svg' />
+      <Button class="mr-1" text="EN" text-white />
+      <Button text="USD" text-white />
     </div>
   </div>
 </template>
@@ -46,6 +46,7 @@
 <script lang="ts">
 import { defineComponent, ref, inject, onMounted } from 'vue'
 import Button from 'components/Button/index.vue'
+
 export default defineComponent({
   name: 'Header',
   components: {
@@ -76,10 +77,10 @@ export default defineComponent({
               polkadot.value = item
             }
           })
-        })
+        }).catch((err: any) => console.error(err))
     }
     onMounted(() => {
-      fetchCryptoPrices()
+      fetchCryptoPrices();
     })
 
     return {
