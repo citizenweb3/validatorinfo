@@ -183,6 +183,7 @@ module.exports = {
         22: '5.5rem',
         38: '9.375rem', //150px
         83: '21.875rem', //350px
+        100: '12rem',
       },
       colors: {
         default: 'rgb(23 43 77)', //#172b4d
