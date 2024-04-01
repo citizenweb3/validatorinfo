@@ -39,6 +39,14 @@ const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 const routes = [
   {
     path: '/',
+    component: ValidatorInfo,
+    name: 'ValidatorInfo',
+    meta: {
+      requiresAuth: false,
+    },
+  },
+  {
+    path: '/',
     component: ShortcutTabs,
     name: 'ShortcutTabs',
     meta: {
@@ -73,14 +81,6 @@ const routes = [
         component: NotFound,
       }
     ]
-  },
-  {
-    path: '/',
-    component: ValidatorInfo,
-    name: 'ValidatorInfo',
-    meta: {
-      requiresAuth: false,
-    },
   },
   {
     path: '/validators/:id',
