@@ -34,9 +34,9 @@ export default defineComponent({
 .wrapper {
   width: 100%;
   height: 100px;
-
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 2rem;
 }
 .links {
   display: flex;

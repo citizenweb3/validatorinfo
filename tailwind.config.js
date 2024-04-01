@@ -276,6 +276,7 @@ module.exports = {
         apple: '#4FB848',
         americanYellow: '#F3B101',
         white: '#FFFFFF',
+        orange: '#EC9503',
       },
       fontSize: {
         0.625: ['0.625rem', '1.5'],

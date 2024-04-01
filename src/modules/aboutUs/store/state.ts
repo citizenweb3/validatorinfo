@@ -6,20 +6,15 @@ export const useState = defineStore({
   state: (): AboutUsState => {
     return {
       staking: {
-        title: 'STAKING',
-        data: [
-          {
-            label: 'STAKING',
-            content:
-              'Citizen Web3 helps to secure blockchain networks by providing infrastructure. This includes validator, testnet, and various public access nodes. \n' +
-              '\n' +
-              'We use Multi-party computation software (Horcrux) on all our nodes, to further secure funds, and protect stakers from double signing. We use Re-Stake on all of our mainnet nodes, set to restake twice per day, so users can compound their staking rewards more efficiently.\n' +
-              '\n' +
-              'Our current target is moving 95% of our infrastructure to (own) baremetal by spring 2024. We strongly believe in decentralized infrastructure, independent of the grid, and thats our end goal.\n' +
-              ' \n' +
-              'Token holders of networks we validate, can stake with us to help secure these networks and to support our activities. Their incentive for doing so, is earning staking rewards, and other, planned, incentives in the future. We are devoted to our mission, we think out of the box, and are proud to be a little crazy. We value security, decentralization, privacy and lack of enforcement.\n',
-          },
-        ],
+        title: 'Staking',
+        data: {
+          section: [
+            {
+              title: 'Dao stakes',
+              textButton: 'Learn More',
+            },
+          ],
+        },
       },
       partners: {
         title: 'PARTNERS',

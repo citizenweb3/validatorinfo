@@ -9,9 +9,11 @@ export interface AboutUsState {
 export interface StakingInfo {
   title: string
   data: {
-    label: string
-    content: string
-  }[]
+    section: {
+      title: string
+      textButton: string
+    }[]
+  }
 }
 
 export interface PartnersInfo {
