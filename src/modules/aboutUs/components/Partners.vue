@@ -1,9 +1,7 @@
 <template>
   <div class="main">
     <div class="container">
-      <div class="circle">
-        <img src="public/ValidatorInfoLogo.png" alt="" height="564" />
-      </div>
+      <CentralLogo/>
       <div
         :class="'line line-' + index"
         v-for="(angle, index) in angles"
@@ -31,9 +29,14 @@
 import { PartnersInfo } from '../store/types'
 import useStore from 'store'
 import { defineComponent } from 'vue'
+import CentralLogo from 'components/CentralLogo/index.vue'
+
 const store = useStore()
 export default defineComponent({
   name: 'AboutUsPartners',
+  components: {
+    CentralLogo
+  },
   setup() {
     const partners: PartnersInfo = store.aboutUs.partners
     return {
