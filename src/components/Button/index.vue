@@ -1,5 +1,6 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
+import getAssetUrl from 'utils/getAssetUrl'
 
 export default defineComponent({
   name: 'Button',
@@ -13,20 +14,17 @@ export default defineComponent({
     round: {
       type: Boolean,
       default: false,
-      required: true,
     },
     tabs: {
       type: Boolean,
       default: false,
-      required: true,
     },
-    isIcon: {
-      type: Boolean,
-      default: false,
+    icon: {
+      type: String,
     },
     activeButtonIndex: Number,
     index: Number,
-    isTextWhite: {
+    textWhite: {
       type: Boolean,
       default: false,
     },
@@ -35,6 +33,7 @@ export default defineComponent({
     const activeClass = computed(() => props.activeButtonIndex === props.index && props.tabs)
 
     return {
+      iconResolved: props.icon && getAssetUrl(props.icon),
       activeClass,
     }
   },
@@ -67,12 +66,12 @@ export default defineComponent({
           :class="{
             textdecoration: !tabs,
             text: tabs && activeClass,
-            iconWrap: isIcon,
-            textWhite: isTextWhite,
+            iconWrap: icon,
+            textWhite: textWhite,
           }"
         >
-          <template v-if="isIcon" class="icon">
-            <img src="/public/icons/brilliance.svg" />
+          <template v-if="iconResolved" >
+            <img :src='iconResolved'/>
           </template>
           <template v-else>
             {{ text }}
@@ -85,32 +84,30 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .textdecoration {
-  font-size: 18px;
+  font-size: 1rem;
   color: theme('colors.americanYellow');
-  text-shadow: 0 0 10px theme('colors.americanYellow'), 0 0 20px theme('colors.americanYellow'),
-    0 0 30px theme('colors.americanYellow');
+  text-shadow: 0 0 0.5rem theme('colors.americanYellow'), 0 0 0.5rem theme('colors.americanYellow'),
+    0 0 2rem theme('colors.americanYellow');
   height: 100%;
 }
 
 .text {
-  font-size: 20px;
+  font-size: 1.2rem;
   background-image: linear-gradient(to bottom, theme('colors.lust'), theme('colors.apple'));
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
   width: auto;
 }
 .backyard {
   width: 100%;
-  height: 100%;
   position: absolute;
-  top: 5px;
+  top: 0.5rem;
 }
 .module-border-wrap {
   width: 100%;
   position: relative;
   background: linear-gradient(to bottom, theme('colors.lust'), theme('colors.apple'));
-  padding: 3px;
+  padding: 0.3rem;
   height: 100%;
 }
 .outer {
@@ -119,37 +116,39 @@ export default defineComponent({
 
 .module {
   background: theme('colors.eerieBlack');
-  padding: 0 12px;
+  padding: 0 1.2rem;
   text-align: center;
   height: 100%;
 }
 .rounded {
-  border-radius: 16px !important;
+  border-radius: 1rem !important;
 }
 .wrapper {
+  width: fit-content;
   position: relative;
+  padding-bottom: 1rem;
 }
 .tabs {
-  width: 200px;
-  padding-bottom: 10px;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid theme('colors.blackOlive');
-  border-left: 1px solid theme('colors.blackOlive');
   color: white;
+  &:not(.active) {
+    padding: 0.5rem;
+  }
 }
 
 .active {
   width: 100%;
   position: relative;
   background: linear-gradient(to bottom, theme('colors.lust'), theme('colors.apple'));
-  padding: 3px;
-  height: 100%;
-  box-shadow: 0 0 10px theme('colors.americanYellow');
+  padding: 0.25rem;
+  box-shadow: 0 0 1rem theme('colors.americanYellow');
 }
 
 .iconWrap {
-  padding: 5px 0 0;
+  padding: 0.3rem 0 0;
   align-self: stretch !important;
-  width: 20px;
+  width: 1rem;
 }
 
 .textWhite {

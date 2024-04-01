@@ -6,6 +6,7 @@ const Login = () => import('modules/auth/views/login.vue')
 const NotFound = () => import('modules/pages/views/404.vue')
 
 const ValidatorInfo = () => import('modules/validators/views/ValidatorInfo.vue')
+const ShortcutTabs = () => import('modules/shortcutTabs/index.vue')
 const ValidatorsList = () => import('modules/validators/components/ValidatorsList.vue')
 const ValidatorProfilePage = () => import('modules/validatorProfile/index.vue')
 
@@ -38,20 +39,46 @@ const ComponentLayout = () => import('components/ComponentLayout/index.vue')
 const routes = [
   {
     path: '/',
-    component: ValidatorInfo,
-    name: 'ValidatorInfo',
+    component: ShortcutTabs,
+    name: 'ShortcutTabs',
     meta: {
       requiresAuth: false,
     },
+    children: [
+      {
+        name: 'ValidatorsList',
+        path: 'validators',
+        meta: {
+          icon: HomeIcon,
+          title: 'Validators'
+        },
+        component: ValidatorsList,
+      },
+      {
+        name: 'NetworksList',
+        path: 'networks',
+        meta: {
+          icon: HomeIcon,
+          title: 'Networks'
+        },
+        component: NetworksList,
+      },
+      {
+        name: 'Metrics',
+        path: 'metrics',
+        meta: {
+          icon: HomeIcon,
+          title: 'Metrics'
+        },
+        component: NotFound,
+      }
+    ]
   },
   {
-    path: '/validators',
-    component: ValidatorsList,
-    name: 'Validators',
+    path: '/',
+    component: ValidatorInfo,
+    name: 'ValidatorInfo',
     meta: {
-      icon: HomeIcon,
-      title: 'Validators',
-      color: 'text-indigo-410',
       requiresAuth: false,
     },
   },
@@ -107,18 +134,6 @@ const routes = [
     ],
   },
   {
-    path: '/networks',
-    component: NetworksList,
-    name: 'NetworksList',
-    meta: {
-      title: 'Networks',
-      icon: HomeIcon,
-      color: 'text-indigo-410',
-      requiresAuth: false,
-      parentPath: 'Networks',
-    },
-  },
-  {
     path: '/networks/:id',
     name: 'NetworkProfile',
     component: NetworkProfile,
@@ -162,16 +177,6 @@ const routes = [
     ],
   },
   {
-    name: 'Metrics',
-    path: '/metrics',
-    component: ComponentLayout,
-    meta: {
-      title: 'Metrics',
-      icon: ColorSwatchIcon,
-      color: 'text-info',
-    },
-  },
-  {
     path: '/staking-calculator',
     name: 'StakingCalculator',
     component: ComponentLayout,
@@ -200,7 +205,7 @@ const routes = [
     component: AboutUs,
     name: 'AboutUs',
     meta: {
-      title: 'About us',
+      title: 'About',
       icon: UserIcon,
       requiresAuth: false,
       parentPath: 'AboutUs',

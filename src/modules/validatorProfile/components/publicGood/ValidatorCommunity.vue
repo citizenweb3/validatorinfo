@@ -1,11 +1,9 @@
 <template>
-  404
+  <NotFound/>
 </template>
 
-<script>
-export default {
-  name: 'ValidatorCommunity',
-}
+<script setup lang='ts'>
+import NotFound from 'modules/pages/views/404.vue'
 </script>
 
 <style scoped>

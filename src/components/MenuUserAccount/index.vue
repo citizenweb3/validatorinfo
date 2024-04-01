@@ -60,7 +60,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { CircleClose, UserFilled } from '@element-plus/icons-vue'
-import Logo_Url from '@/assets/images/ltv_logo.png'
 import useStore from 'store'
 export default defineComponent({
   name: 'MenuUserAccount',
@@ -74,7 +73,6 @@ export default defineComponent({
       store.auth.actLogout()
     }
     return {
-      Logo_Url,
       handleLogoutClick,
     }
   },
