@@ -27,17 +27,10 @@
   </div>
   <hr class="solidline" />
   <div class="flex justify-center">
-    <button class="button mr-10" @click="handleKnokKnokButtonClick">
-      <img src="@/assets/images/ai%20button.png" width="60px" height="60px" alt="Ai button" />
+    <button class="button mr-10 px-2 py-2" @click="handleKnokKnokButtonClick">
+      <img src="@/assets/images/ai%20button.png" alt="Ai button" />
     </button>
-    <button class="button" @click="handleLuckyButtonClick">
-      <img
-        src="/src/assets/images/random_validator_button.svg"
-        width="60px"
-        height="60px"
-        alt="Random validator button"
-      />
-    </button>
+    <button class="button lucky" @click="handleLuckyButtonClick" />
   </div>
 </template>
 <script lang="ts">
@@ -80,6 +73,8 @@ export default defineComponent({
     &:focus {
       @apply w-full bg-transparent text-black  #{!important};
     }
+
+    //noinspection CssUnknownTarget
     cursor: url('@/assets/images/cursor.svg') 0 0, auto #{!important};
   }
   ::v-deep(.el-input__wrapper) {
@@ -103,5 +98,11 @@ export default defineComponent({
 }
 .button {
   border-bottom: 1px solid theme('colors.americanYellow');
+  height: 30px;
+  width: 30px;
+}
+
+.lucky {
+  background-image: url( '@/assets/icons/random_validator_button.svg' );
 }
 </style>

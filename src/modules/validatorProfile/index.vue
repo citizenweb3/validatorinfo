@@ -32,7 +32,7 @@ const handleClick = (index: number) => {
     </div>
   </div>
 
-  <div class="flex justify-between" v-if="!validatorNetworkId">
+  <div class="flex justify-between px-5" v-if="!validatorNetworkId">
     <router-link :to="{ name: 'ValidatorRevenue' }" @click.prevent.native="handleClick(0)">
       <Button :text="'Revenue'" :tabs="true" :index="0" :active-button-index="activeButtonIndex" />
     </router-link>
@@ -64,6 +64,7 @@ const handleClick = (index: number) => {
       />
     </router-link>
   </div>
+  <router-view></router-view>
 </template>
 
 <style lang="scss">

@@ -32,7 +32,7 @@ const handleClick = (index: number) => {
     </div>
   </div>
 
-  <div class="flex justify-between">
+  <div class="flex justify-between px-5">
     <router-link :to="{ name: 'NetworkGovernance' }" @click.prevent.native="handleClick(0)">
       <Button
         :text="'Governance'"

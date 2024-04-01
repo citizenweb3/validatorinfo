@@ -1,19 +1,6 @@
 <template>
   <div class="w-full">
     <div class="flex flex-wrap flex-col bg-dark shadow mb-7 mx-auto">
-      <div class="flex flex-wrap items-center py-2 px-6 mb-0 border-b-dark-4">
-        <div class="max-w-full basis-0 grow">
-          <h3 class="mb-0 cursor-auto text-primary-light">{{ title }}</h3>
-        </div>
-        <div class="max-w-full basis-0 grow">
-          <div class="flex flex-wrap mb-0 pl-0 justify-end gap-x-3">
-            <div>
-              <el-button type="primary" size="small"> See all </el-button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="block overflow-x-auto w-full p-0">
         <el-table v-if="tableData" :data="tableData" style="width: 100%" class="is-light cursor-pointer">
           <el-table-column label="Network Name" min-width="200">
@@ -64,17 +51,5 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-.logo-wrapper {
-  .validator-logo {
-    height: 30px;
-    width: 30px;
-    padding: 5px;
-    margin: 5px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-}
+
 </style>

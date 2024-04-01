@@ -26,17 +26,17 @@ export const useState = defineStore({
         data: [
           {
             name: 'Bostrom',
-            logo: '/public/logos/cyberLogo.svg',
+            logo: '@/assets/logos/cyberLogo.svg',
             link: 'https://cyb.ai/',
           },
           {
             name: 'Posthuman',
-            logo: '/public/logos/posthumanLogo.svg',
+            logo: '@/assets/logos/posthumanLogo.svg',
             link: 'https://posthuman.digital/',
           },
           {
             name: 'Bro_n_Bro',
-            logo: '/public/logos/broNbroLogo.svg',
+            logo: '@/assets/logos/broNbroLogo.svg',
             link: 'https://bronbro.io/',
           },
         ],
