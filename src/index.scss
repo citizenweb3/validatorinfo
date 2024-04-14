@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 html {
-  font-size: 11px
+  font-size: 16px;
+  //font-size: 11px;
+  body {
+    font-size: 62.5%;
+  }
+  
 }
 
 @layer base {

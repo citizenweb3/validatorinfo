@@ -92,7 +92,7 @@ export default defineComponent({
 }
 
 .text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background-image: linear-gradient(to bottom, theme('colors.lust'), theme('colors.apple'));
   -webkit-background-clip: text;
   color: transparent;
@@ -131,7 +131,9 @@ export default defineComponent({
 .tabs {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid theme('colors.blackOlive');
+  border-left: 1px solid theme('colors.blackOlive');
   color: white;
+  font-size: 1rem;
   &:not(.active) {
     padding: 0.5rem;
   }
