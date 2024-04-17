@@ -4,7 +4,7 @@
     @mouseover="hoverLeftBar(true)"
     @mouseleave="hoverLeftBar(false)"
     aria-labelledby="primary-heading"
-    class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center shadow-card"
+    class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center"
     :class="{ ' hidden-aside w-17 ': !isSBOpen && !isSBPin }"
   >
     <div class="flex flex-col mx-auto items-stretch h-full">

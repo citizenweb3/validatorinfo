@@ -97,6 +97,6 @@ export default defineComponent({
 
 /** Dark Theme **/
 .main-content-dark {
-  background-color: #1e1e1e !important;
+  background-color: #1E1E1E!important;
 }
 </style>
