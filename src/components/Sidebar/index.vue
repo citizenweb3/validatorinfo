@@ -4,7 +4,7 @@
     @mouseover="hoverLeftBar(true)"
     @mouseleave="hoverLeftBar(false)"
     aria-labelledby="primary-heading"
-    class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center shadow-card"
+    class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center"
     :class="{ ' hidden-aside w-17 ': !isSBOpen && !isSBPin }"
   >
     <div class="flex flex-col mx-auto items-stretch h-full">
@@ -47,20 +47,20 @@
           >
             <template v-for="(item, index) in menuItems" :key="index">
                 <el-menu-item
-                  class="relative rounded-lg mx-2"
+                  class="relative mx-2"
                   :class="{
-                    ' bg-slate-100/50 ': route.name === item.name,
+                    'item-active': route.name === item.name,
                   }"
                   :index="`${index}`"
                 >
                   <template #title>
                     <span
                       v-if="route.name === item.name"
-                      class="absolute inset-y-1 -left-2 w-0.5 h-5/6 rounded-tr-lg rounded-br-lg bg-indigo-410"
+                      class="absolute inset-y-1 -left-2 w-0.5 h-5/6 bg-indigo-410"
                       aria-hidden="true"
                     />
                     <router-link
-                      class="inline-flex pl-1.5 items-center w-full h-full text-sm my-0.5 font-normal transition-colors duration-150 hover:text-gray-500/100 focus:text-gray-800"
+                      class="items-center w-full h-full text-sm my-0.5 font-normal transition-colors duration-150"
                       :class="{
                         ' text-gray-800 ': route.name === item.name,
                         ' ml-4.5 ': item.subOffset,
@@ -97,7 +97,6 @@
                 </el-menu-item>
               </template>
           </el-menu>
-          <el-divider />
         </el-scrollbar>
       </div>
     </div>
@@ -199,5 +198,31 @@ export default defineComponent({
 .menu-item-inner {
   display: flex;
   align-items: center;
+}
+.el-menu {
+  .is-active {
+    background-color: #3E3E3E;
+    border-radius: 0!important;
+  }
+}
+.el-menu-item {
+    border-left: 1px solid #3E3E3E;
+    border-bottom: 1px solid #3E3E3E;
+    margin: 1rem 0;
+    &:hover {
+      background-color: #3E3E3E!important;
+      border-radius: 0!important;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+      &:hover {
+        color: white!important;
+      }
+    }
+    a.router-link-exact-active {
+      color: white!important;
+    }
 }
 </style>

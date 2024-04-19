@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 html {
-  font-size: 11px
+  font-size: 16px;
+  //font-size: 11px;
+  body {
+    font-size: 62.5%;
+  }
+  
 }
 
 @layer base {
@@ -71,7 +76,7 @@ svg:hover {
 
 /** Theme Dark **/
 .dark-theme-header {
-  background-color: #202020;
+  background-color: #1E1E1E;
   color: white;
 }
 
