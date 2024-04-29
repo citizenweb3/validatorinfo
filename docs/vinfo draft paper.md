@@ -114,6 +114,7 @@ Might be outdated...
 - Token
 - Where is the money, Lebowski?
 - Incorporating knowledge graphs
+- Providing API calls
 
 1) A logged in via web 3 user can staked any? Tokens on a validator. Staking on a validator mints an NFT. For example, NFT gives cash back if staked back to citizen web 3 and merch discount, etc. This can be heavily integrated into provable reputation mechanics. To add game theory. You can create staking pools on a specific validator, which mint tradable nfts in return that can be used as game cards
 
