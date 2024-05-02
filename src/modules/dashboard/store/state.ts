@@ -6,8 +6,8 @@ export const useState = defineStore({
   state: (): DashboardState => {
     return {
       welcomeText: 'Welcome to Dashboard! ...',
-      isSidebarCollapsed: true,
-      isSidebarExpanded: true,
+      isSidebarClosed: true,
+      isSidebarOpened: true,
     }
   },
 })

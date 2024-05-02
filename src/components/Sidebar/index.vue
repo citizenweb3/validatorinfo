@@ -5,13 +5,13 @@
     @mouseleave="hoverLeftBar(false)"
     aria-labelledby="primary-heading"
     class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center"
-    :class="{ ' hidden-aside w-17 ': !isSBOpen && !isSBPin }"
+    :class="{ ' hidden-aside w-17 ': !isSidebarOpened && !isSidebarClosed }"
   >
     <div class="flex flex-col mx-auto items-stretch h-full bg-red-600">
       <div class="h-19.5 flex items-center relative">
         <router-link
-          v-if="(isSBOpen && !isSBPin) || isSBPin"
-          :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
+          v-if="(isSidebarOpened && !isSidebarClosed) || isSidebarClosed"
+          :class="{ 'opacity-0': !isSidebarOpened && !isSidebarClosed }"
           class="transition-opacity duration-300 opacity-1 p-6 block"
           :to="{ name: 'ValidatorInfo' }"
         >
@@ -103,7 +103,7 @@
                     </div>
                     <span
                       class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
-                      :class="{ 'opacity-0': !isSBOpen && !isSBPin }"
+                      :class="{ 'opacity-0': !isSidebarOpened && !isSidebarClosed }"
                       >{{ item.title }}
                     </span>
                   </router-link>
@@ -154,18 +154,18 @@ export default defineComponent({
 
     const handleOnResize = () => {
       if (window.innerWidth < 1024) {
-        store.dashboard.setIsSBOpen(false)
-        store.dashboard.setIsSBPin(false)
+        store.dashboard.setSidebarOpened(false)
+        store.dashboard.setSidebarClosed(false)
       }
     }
 
     onClickOutside(target, (_) => {
-      if (window.innerWidth < 1024) store.dashboard.setIsSBOpen(false)
+      if (window.innerWidth < 1024) store.dashboard.setSidebarOpened(false)
     })
     onBeforeMount(() => {
       if (isMobile || window.innerWidth < 1024) {
-        store.dashboard.setIsSBOpen(false)
-        store.dashboard.setIsSBPin(false)
+        store.dashboard.setSidebarOpened(false)
+        store.dashboard.setSidebarClosed(false)
       }
     })
     onMounted(() => {
@@ -176,11 +176,11 @@ export default defineComponent({
       window.removeEventListener('resize', handleOnResize)
     })
 
-    const isSBPin = computed<boolean>(() => store.dashboard.isSidebarCollapsed)
-    const isSBOpen = computed<boolean>(() => store.dashboard.isSidebarExpanded)
+    const isSidebarClosed = computed<boolean>(() => store.dashboard.isSidebarClosed)
+    const isSidebarOpened = computed<boolean>(() => store.dashboard.isSidebarOpened)
 
     const hoverLeftBar = (v: boolean) => {
-      if (!isMobile && window.innerWidth > 1023) store.dashboard.setIsSBOpen(v)
+      if (!isMobile && window.innerWidth > 1023) store.dashboard.setSidebarOpened(v)
     }
 
     const handleMenuClick = () => {
@@ -193,8 +193,8 @@ export default defineComponent({
       isSideMenuOpen,
       menuItems,
       route,
-      isSBPin,
-      isSBOpen,
+      isSidebarClosed,
+      isSidebarOpened,
       target,
       version,
       documentHref,

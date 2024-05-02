@@ -1,5 +1,5 @@
 export interface DashboardState {
-  isSidebarCollapsed: boolean
-  isSidebarExpanded: boolean
+  isSidebarClosed: boolean
+  isSidebarOpened: boolean
   welcomeText: string
 }

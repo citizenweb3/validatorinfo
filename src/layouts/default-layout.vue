@@ -7,7 +7,7 @@
     <sidebar />
     <div
       class="main-content flex flex-col flex-1 w-full overflow-auto main-content-dark"
-      :class="`${!isSBPin ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`"
+      :class="`${!isSidebarClosed ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`"
     >
       <navigation />
       <div
@@ -48,14 +48,14 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const store = useStore()
-    const isSBPin = computed<boolean>(() => store.dashboard.isSidebarCollapsed)
+    const isSidebarClosed = computed<boolean>(() => store.dashboard.isSidebarClosed)
     const loading = computed(() => store.global.loading)
     const fullRoute = computed(() => route.matched)
-    const setIsSBPin = (b: boolean) => store.dashboard.setIsSBPin(b)
+    const setSidebarClosed = (b: boolean) => store.dashboard.setSidebarClosed(b)
     return {
-      isSBPin,
+      isSidebarClosed,
       loading,
-      setIsSBPin,
+      setSidebarClosed,
       fullRoute,
     }
   },

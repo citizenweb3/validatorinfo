@@ -16,22 +16,22 @@ export const useActions = defineStore('dashboard.actions', () => {
     state.welcomeText = value
   }
 
-  const setIsSBPin = (value: boolean) => (state.isSidebarCollapsed = value)
-  const setIsSBOpen = (value: boolean) => (state.isSidebarExpanded = value)
+  const setSidebarClosed = (value: boolean) => (state.isSidebarClosed = value)
+  const setSidebarOpened = (value: boolean) => (state.isSidebarOpened = value)
 
   const toggleMenu = () => {
     if (window.innerWidth < 1024) {
-      setIsSBOpen(!state.isSidebarExpanded)
+      setSidebarOpened(!state.isSidebarOpened)
     } else {
-      setIsSBPin(!state.isSidebarCollapsed)
+      setSidebarClosed(!state.isSidebarClosed)
     }
   }
 
   return {
     showWelcomeText,
     setWelcomeText,
-    setIsSBPin,
-    setIsSBOpen,
+    setSidebarClosed,
+    setSidebarOpened,
     toggleMenu,
   }
 })

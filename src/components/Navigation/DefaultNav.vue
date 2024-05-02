@@ -14,14 +14,18 @@
         >
           <div class="relative inline-block lg:hidden text-white">
             <div class="flex items-center">
-              <MenuIcon v-if="!isSBOpen" class="cursor-pointer h-6 w-6" @click="handleMenuClick" />
+              <MenuIcon
+                v-if="!isSidebarOpened"
+                class="cursor-pointer h-6 w-6"
+                @click="handleMenuClick"
+              />
               <MenuAlt1Icon v-else class="cursor-pointer h-6 w-6" @click="handleMenuClick" />
             </div>
           </div>
           <div class="relative inline-block sm:hidden">
             <div class="flex items-center">
               <SearchCircleIcon
-                v-if="!isSBPin && isSearchOpen"
+                v-if="!isSidebarClosed && isSearchOpen"
                 class="cursor-pointer w-4.5 h-4.5 text-slate-50 hover:text-slate-300"
                 :class="{
                   'text-dark-lighter hover:text-indigo-410': route.meta.isDarkBackground,
@@ -73,8 +77,8 @@ export default defineComponent({
       isSideMenuOpen.value = false
     }
 
-    const isSBPin = computed(() => store.dashboard.isSidebarCollapsed)
-    const isSBOpen = computed(() => store.dashboard.isSidebarExpanded)
+    const isSidebarClosed = computed(() => store.dashboard.isSidebarClosed)
+    const isSidebarOpened = computed(() => store.dashboard.isSidebarOpened)
 
     const handleMenuClick = () => {
       store.dashboard.toggleMenu()
@@ -86,8 +90,8 @@ export default defineComponent({
       isPagesMenuOpen,
       isSideMenuOpen,
       isSearchOpen,
-      isSBPin,
-      isSBOpen,
+      isSidebarClosed,
+      isSidebarOpened,
       route,
       handleMenuClick,
       setSearchOpen,

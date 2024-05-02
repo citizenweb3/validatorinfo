@@ -13,7 +13,7 @@
       />
       <div
         class="flex z-10 absolute inset-y-0 right-0 pr-4 items-center lg:hidden md:hidden sm:hidden"
-        :class="{ hidden: isSBPin }"
+        :class="{ hidden: isSidebarClosed }"
       >
         <el-icon
           :size="20"
@@ -45,10 +45,10 @@ export default defineComponent({
   setup() {
     const store = useStore()
     const textInput = ref('')
-    const isSBPin = computed(() => store.dashboard.isSidebarCollapsed)
+    const isSidebarClosed = computed(() => store.dashboard.isSidebarClosed)
 
     return {
-      isSBPin,
+      isSidebarClosed,
       textInput,
     }
   },
