@@ -48,7 +48,7 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const store = useStore()
-    const isSBPin = computed<boolean>(() => store.dashboard.isSBPin)
+    const isSBPin = computed<boolean>(() => store.dashboard.isSidebarCollapsed)
     const loading = computed(() => store.global.loading)
     const fullRoute = computed(() => route.matched)
     const setIsSBPin = (b: boolean) => store.dashboard.setIsSBPin(b)
@@ -70,23 +70,19 @@ export default defineComponent({
   @apply transition-all duration-300;
 }
 
-
-.main-content::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+.main-content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
 }
 
 /** Custom Scrollbar for main content **/
-.main-content::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: #F5F5F5;
+.main-content::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
 }
 
-.main-content::-webkit-scrollbar-thumb
-{
-	background-color: #000000;
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }
 
 @media screen and (max-width: 1023px) {
@@ -97,6 +93,6 @@ export default defineComponent({
 
 /** Dark Theme **/
 .main-content-dark {
-  background-color: #1E1E1E!important;
+  background-color: #1e1e1e !important;
 }
 </style>

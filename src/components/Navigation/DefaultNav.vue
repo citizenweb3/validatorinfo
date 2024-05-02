@@ -73,8 +73,8 @@ export default defineComponent({
       isSideMenuOpen.value = false
     }
 
-    const isSBPin = computed(() => store.dashboard.isSBPin)
-    const isSBOpen = computed(() => store.dashboard.isSBOpen)
+    const isSBPin = computed(() => store.dashboard.isSidebarCollapsed)
+    const isSBOpen = computed(() => store.dashboard.isSidebarExpanded)
 
     const handleMenuClick = () => {
       store.dashboard.toggleMenu()

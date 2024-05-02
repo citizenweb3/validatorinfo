@@ -45,7 +45,7 @@ export default defineComponent({
   setup() {
     const store = useStore()
     const textInput = ref('')
-    const isSBPin = computed(() => store.dashboard.isSBPin)
+    const isSBPin = computed(() => store.dashboard.isSidebarCollapsed)
 
     return {
       isSBPin,
@@ -103,6 +103,6 @@ export default defineComponent({
 }
 
 .lucky {
-  background-image: url( '@/assets/icons/random_validator_button.svg' );
+  background-image: url('@/assets/icons/random_validator_button.svg');
 }
 </style>

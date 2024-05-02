@@ -7,7 +7,6 @@ export const useActions = defineStore('dashboard.actions', () => {
   const getters = useGetters()
 
   const showWelcomeText = () => {
-    console.log('getters value', getters.getText)
     if (state.welcomeText) {
       console.log(state.welcomeText)
     }
@@ -17,17 +16,16 @@ export const useActions = defineStore('dashboard.actions', () => {
     state.welcomeText = value
   }
 
-  const setIsSBPin = (value: boolean) => (state.isSBPin = value)
-  const setIsSBOpen = (value: boolean) => (state.isSBOpen = value)
-  
+  const setIsSBPin = (value: boolean) => (state.isSidebarCollapsed = value)
+  const setIsSBOpen = (value: boolean) => (state.isSidebarExpanded = value)
+
   const toggleMenu = () => {
     if (window.innerWidth < 1024) {
-      setIsSBOpen(!state.isSBOpen)
+      setIsSBOpen(!state.isSidebarExpanded)
     } else {
-      setIsSBPin(!state.isSBPin)
+      setIsSBPin(!state.isSidebarCollapsed)
     }
   }
-  
 
   return {
     showWelcomeText,
