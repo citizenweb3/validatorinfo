@@ -3,7 +3,7 @@
     <!-- Alerts -->
     <el-card class="mb-7.5 border-none">
       <template #header>
-        <h3 class="cursor-auto mb-0 text-primary-dark">Alerts</h3>
+        <h3 class="cursor-auto mb-0 text-white">Alerts</h3>
       </template>
       <div>
         <Alerts />
@@ -13,7 +13,7 @@
     <!-- Modals -->
     <el-card class="mb-7.5 border-none">
       <template #header>
-        <h3 class="cursor-auto mb-0 text-primary-dark">Modals</h3>
+        <h3 class="cursor-auto mb-0 text-white">Modals</h3>
       </template>
       <div>
         <Modals />
@@ -23,7 +23,7 @@
     <!-- Notifications -->
     <el-card class="mb-7.5 border-none">
       <template #header>
-        <h3 class="cursor-auto mb-0 text-primary-dark">Notifications</h3>
+        <h3 class="cursor-auto mb-0 text-white">Notifications</h3>
       </template>
       <div>
         <Notifications />

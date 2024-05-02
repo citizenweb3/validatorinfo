@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   important: true,
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
@@ -15,7 +17,7 @@ module.exports = {
         0.625: '.0625rem',
       },
       borderRadius: {
-        5: '5px'
+        5: '5px',
       },
       borderWidth: {
         0.5: '0.5px',
@@ -23,7 +25,7 @@ module.exports = {
         3: '3px',
       },
       zIndex: {
-        '100': '100',
+        100: '100',
       },
       flex: {
         4: '0 0 33.333333%',
@@ -49,7 +51,7 @@ module.exports = {
       translate: {
         0: '0px',
         0.25: '0.075rem',
-        'px': '1px',
+        px: '1px',
         '3/2': '150%',
       },
       padding: {
@@ -78,15 +80,17 @@ module.exports = {
         7.5: '1.875rem', //30px
         8.5: '34px',
         9.5: '38px',
-        10.25:'41px',
+        10.25: '41px',
         11.25: '45px',
         11.5: '46px',
         13.25: '3.125rem', //50px
         13: '3.25rem', //52px
         18.5: '4.813rem', //77px
         72: '72px',
+        15: '15px',
       },
       margin: {
+        15: '15px',
         0.25: '1.5px',
         2.75: '0.6875rem',
         3.75: '15px',
@@ -135,13 +139,14 @@ module.exports = {
         '45/100': '45%',
         '15/100': '15%',
         '85/100': '85%',
+        full: '100%',
       },
       maxWidth: {
         '.25xl': '33.75rem', //540px
         '1.5xl': '37.5rem', //600px
         '2.625xl': '45rem', //720px
         '4.5xl': '60rem', //960px
-        '5.75xl': '71.25rem', //1140px       
+        '5.75xl': '71.25rem', //1140px
         '1/3': '33.333333%',
         '5/12': '41.666667%',
         '1/2': '50%',
@@ -178,6 +183,7 @@ module.exports = {
         22: '5.5rem',
         38: '9.375rem', //150px
         83: '21.875rem', //350px
+        100: '12rem',
       },
       colors: {
         default: 'rgb(23 43 77)', //#172b4d
@@ -188,7 +194,7 @@ module.exports = {
         cyan: {
           30: 'rgb(233 236 239)',
           310: 'rgb(55 213 242)',
-          320: 'rgb(34 209 240)'
+          320: 'rgb(34 209 240)',
         },
         normal: 'rgb(82 95 127)',
         gray: {
@@ -200,10 +206,10 @@ module.exports = {
           light: 'rgb(28 52 93)',
           lighter: 'rgb(82 95 127)', //#525f7f
           4: 'rgb(0 0 0 / 0.05)', // #0000000d
-          10: 'rgb(0 0 0 / 0.2)', 
+          10: 'rgb(0 0 0 / 0.2)',
           20: 'rgb(0 0 0 / 0.6)', // #00000099
           50: 'rgb(0 0 0 / 0.95)', //#000000f2
-          100: "rgb(26 23 77)", // #1a174d
+          100: 'rgb(26 23 77)', // #1a174d
           120: 'rgb(11 21 38)', //
         },
         light: {
@@ -211,7 +217,7 @@ module.exports = {
           10: 'rgb(233 236 239)', //#e9ecef
         },
         primary: {
-          DEFAULT: 'rgb(50 76 221)', 
+          DEFAULT: 'rgb(50 76 221)',
           dark: 'rgb(50 50 93)',
           white: 'rgb(0 0 0 / 0.05)',
         },
@@ -229,7 +235,7 @@ module.exports = {
         },
         warning: {
           DEFAULT: 'rgb(251 99 64)',
-          active: 'rgb(250 58 14)',          
+          active: 'rgb(250 58 14)',
           50: 'rgb(252 124 95)', //#fc7c5f
         },
         success: {
@@ -239,7 +245,7 @@ module.exports = {
         },
         danger: {
           DEFAULT: 'rgb(245 54 92)',
-          active: 'rgb(236 12 56)',          
+          active: 'rgb(236 12 56)',
           50: 'rgb(247 86 118)', //#f75676
         },
         webkit: {
@@ -254,7 +260,7 @@ module.exports = {
         },
         red: {
           410: 'rgb(244 100 95)',
-          light: 'rgb(245 96 54)'
+          light: 'rgb(245 96 54)',
         },
         indigo: {
           210: 'rgb(50 50 93)', //#32325d
@@ -262,8 +268,15 @@ module.exports = {
           450: 'rgb(130 94 228)', //#825ee4
         },
         yellow: {
-          310: 'rgb(255 214 0)'
-        }
+          310: 'rgb(255 214 0)',
+        },
+        eerieBlack: '#1E1E1E',
+        blackOlive: '#3E3E3E',
+        lust: '#EB1616',
+        apple: '#4FB848',
+        americanYellow: '#F3B101',
+        white: '#FFFFFF',
+        orange: '#EC9503',
       },
       fontSize: {
         0.625: ['0.625rem', '1.5'],
@@ -273,7 +286,7 @@ module.exports = {
         0.9375: ['0.9375rem', '1.5'],
         0.95: ['0.95rem', '1.5'],
         1.0625: ['1.0625rem', '1.5'],
-        1.1: ['1.1rem', '1.5'], 
+        1.1: ['1.1rem', '1.5'],
         1.375: ['1.375rem', '1.5'],
         1.6: ['1.6rem', '1.5'],
         1.625: ['1.625rem', '1.5'],
@@ -289,7 +302,14 @@ module.exports = {
         sm: ['.875rem', '1.5'],
         12.8: ['12.8px', '1.5'],
         15: ['15px', '1.5'],
-        17: ['17px', '1.5']
+        17: ['17px', '1.5'],
+        20: ['20px'],
+        h1: ['34px'],
+        h2: ['24px'],
+        h3: ['19px'],
+        h4: ['16px'],
+        h5: ['13px'],
+        h6: ['11px'],
       },
       lineHeight: {
         1.6: '1.6',
@@ -297,16 +317,16 @@ module.exports = {
         7.5: '30px',
       },
       boxShadow: {
-        'light': '0 0 0 1px rgb(0 0 0 / 10%)',
-        'medium': '0 0 0 1px rgb(0 0 0 / 10%), 0 4px 16px rgb(0 0 0 / 10%)',
-        'card': '0 0 2rem 0 rgba(136, 152, 170, 0.15)',
-        'button': '0 4px 6px rgb(50, 50, 93, 0.11), 0 1px 3px rgb(0, 0, 0 , 0.08)',
-        'form-input': '0 1px 3px rgb(50, 50, 93, 0.15), 0 1px 0 rgb(0, 0, 0, 0.08)'
+        light: '0 0 0 1px rgb(0 0 0 / 10%)',
+        medium: '0 0 0 1px rgb(0 0 0 / 10%), 0 4px 16px rgb(0 0 0 / 10%)',
+        card: '0 0 2rem 0 rgba(136, 152, 170, 0.15)',
+        button: '0 4px 6px rgb(50, 50, 93, 0.11), 0 1px 3px rgb(0, 0, 0 , 0.08)',
+        'form-input': '0 1px 3px rgb(50, 50, 93, 0.15), 0 1px 0 rgb(0, 0, 0, 0.08)',
+        gold: '0 0 10px rgb(243,177,1)',
       },
     },
-    
     fontFamily: {
-      body: ['"Open Sans"'],
+      main: ['"DotGothic16"'],
     },
   },
   plugins: [require('@tailwindcss/forms')],

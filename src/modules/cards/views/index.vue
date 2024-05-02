@@ -51,12 +51,12 @@
           </SimpleCard>
 
           <div class="mt-7">
-            <ContactCard
-              :imgSrc="John_Snow_Url"
-              name="John Snow"
-              description="King of the north"
-              status="Active"
-            />
+            <!--            <ContactCard-->
+            <!--              :imgSrc="John_Snow_Url"-->
+            <!--              name="John Snow"-->
+            <!--              description="King of the north"-->
+            <!--              status="Active"-->
+            <!--            />-->
           </div>
 
           <div class="mt-7">
@@ -71,9 +71,7 @@
             <el-card class="border-slate-100" :body-style="{ padding: '0px' }">
               <img alt="..." src="@/assets/images/man_draw.jpg" />
               <div class="px-6 pt-4 pb-8">
-                <div class="text-xl font-semibold pt-2 pb-1 text-primary-dark">
-                  Get started with Argon
-                </div>
+                <div class="text-xl font-semibold pt-2 pb-1 text-white">Get started with Argon</div>
                 <div class="font-normal text-80 text-muted">
                   by John Snow on Oct 29th at 10:23 AM
                 </div>
@@ -116,7 +114,7 @@
                 <div class="table-row-group">
                   <div class="table-row h-16">
                     <div class="table-cell w-10 justify-center align-middle">
-                      <div class="w-6 h-6 rounded-full text-slate-500 bg-white">
+                      <div class="w-6 h-6 rounded-full text-slate-500 bg-dark">
                         <font-awesome-icon :icon="['fas', 'terminal']" size="xs" />
                       </div>
                     </div>
@@ -129,7 +127,7 @@
 
                   <div class="table-row h-16">
                     <div class="table-cell w-10 justify-center align-middle">
-                      <div class="w-6 h-6 rounded-full text-slate-500 bg-white">
+                      <div class="w-6 h-6 rounded-full text-slate-500 bg-dark">
                         <font-awesome-icon :icon="['fas', 'pen-fancy']" size="xs" />
                       </div>
                     </div>
@@ -142,7 +140,7 @@
 
                   <div class="table-row h-16">
                     <div class="table-cell w-10 justify-center align-middle">
-                      <div class="w-6 h-6 rounded-full text-slate-500 bg-white">
+                      <div class="w-6 h-6 rounded-full text-slate-500 bg-dark">
                         <font-awesome-icon :icon="['fas', 'hard-drive']" size="xs" />
                       </div>
                     </div>
@@ -282,7 +280,6 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue'
 // Image
-import John_Snow_Url from '@/assets/images/John_Snow.png'
 import Tyrion_Lanister_Url from '@/assets/images/tyrion_lannister.jpg'
 import Tywin_Lanister_Url from '@/assets/images/tywin_lannister.jpg'
 import Window_Image_Url from '@/assets/images/window-purple-image.jpg'
@@ -317,7 +314,6 @@ export default defineComponent({
     return {
       isHover,
       hoverCheck,
-      John_Snow_Url,
       Tyrion_Lanister_Url,
       Tywin_Lanister_Url,
       Window_Image_Url,
