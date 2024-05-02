@@ -27,9 +27,7 @@
   </div>
   <hr class="solidline" />
   <div class="flex justify-center">
-    <button class="button mr-10 px-2 py-2" @click="handleKnokKnokButtonClick">
-      <img src="@/assets/images/ai%20button.png" alt="Ai button" />
-    </button>
+    <button class="button mr-10 px-2 py-2 rabbit" @click="handleKnokKnokButtonClick"></button>
     <button class="button lucky" @click="handleLuckyButtonClick" />
   </div>
 </template>
@@ -103,6 +101,9 @@ export default defineComponent({
 }
 
 .lucky {
-  background-image: url('@/assets/icons/random_validator_button.svg');
+  background-image: url('@/assets/icons/randomValidatorButton.svg');
+}
+.rabbit {
+  background-image: url('@/assets/icons/buttonRabbit.svg');
 }
 </style>
