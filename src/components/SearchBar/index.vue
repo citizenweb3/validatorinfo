@@ -1,28 +1,12 @@
 <template>
-  <div class="relative flex-grow w-full mb-0.5 bg-transparent">
-    <div class="z-10 absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-      <font-awesome-icon class="text-americanYellow" :icon="['fas', 'search']" size="sm" />
-    </div>
+  <div class="relative flex-grow w-full mb-0.5 bg-transparent flex justify-center">
+    <div class="w-45/100 relative">
+      <div class="z-10 absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+        <font-awesome-icon class="text-americanYellow" :icon="['fas', 'search']" size="sm" />
+      </div>
 
-    <div>
-      <el-input
-        v-model="textInput"
-        type="text"
-        placeholder="Search"
-        input-style="color: red; font-weight: 400;"
-        clearable
-      />
-      <div
-        class="flex z-10 absolute inset-y-0 right-0 pr-4 items-center lg:hidden md:hidden sm:hidden"
-        :class="{ hidden: isSidebarClosed }"
-      >
-        <el-icon
-          :size="20"
-          class="w-4 h-4 text-black hover:text-slate-300"
-          @click="$emit('close-search')"
-        >
-          <Close />
-        </el-icon>
+      <div>
+        <el-input v-model="textInput" type="text" input-style="color: red; font-weight: 400; " />
       </div>
     </div>
   </div>
@@ -68,16 +52,16 @@ export default defineComponent({
 <style lang="scss" scoped>
 .el-input {
   @apply bg-transparent;
-  ::v-deep(.el-input__inner) {
-    @apply relative transition-all duration-200 pt-2 pl-10.25 placeholder:text-h6   sm:w-[291px] resize-y leading-6 font-normal shadow-none border-none bg-transparent #{!important};
-    caret-color: theme('colors.americanYellow') #{!important};
-    &:focus {
-      @apply w-full bg-transparent text-black  #{!important};
-    }
 
-    //noinspection CssUnknownTarget
-    cursor: url('@/assets/images/cursor.svg') 0 0, auto #{!important};
+  ::v-deep(.el-input__inner) {
+    @apply relative transition-all duration-200 pt-2 pl-5 placeholder:text-h6 sm:w-[291px] resize-y leading-6 font-normal shadow-none border-none bg-transparent #{!important};
+    caret-color: theme('colors.americanYellow') !important;
+    cursor: url('assets/icons/cursor.svg'), auto !important;
+    &:focus {
+      @apply w-full bg-transparent text-americanYellow #{!important};
+    }
   }
+
   ::v-deep(.el-input__wrapper) {
     background-color: transparent;
     border: none;
@@ -85,6 +69,7 @@ export default defineComponent({
     outline: none;
   }
 }
+
 .solidline {
   width: 100%; /* Ширина полосы */
   height: 2px; /* Высота полосы */

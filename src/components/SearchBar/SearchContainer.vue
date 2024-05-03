@@ -1,12 +1,12 @@
 <template>
-  <div class="flex items-center mx-0 py-2 pl-2.75 md:px-7.25 shadow-sm">
+  <div class="flex items-center mx-0 py-2 pl-2.75 md:px-7.25 shadow-sm w-full">
     <div class="w-full items-center justify-between">
       <div class="w-full flex basis-auto items-center">
         <div
           class="transition-all duration-300 mr-auto sm:mr-4 sm:transform-none sm:block overflow-hidden"
           :class="{ 'w-0 sm:w-full': isSearchOpen, 'w-full': !isSearchOpen }"
         >
-          <SearchBar @close-search="setSearchOpen(true)" />
+          <SearchBar @close-search="setSearchOpen(false)" />
         </div>
         <div
           class="transition-all duration-300 flex flex-1 flex-row ml-0 md:ml-auto items-center mt-0 text-slate-50 gap-7.25 md:gap-7.5"
@@ -74,10 +74,6 @@ export default defineComponent({
     const isSidebarClosed = computed(() => store.dashboard.isSidebarClosed)
     const isSidebarOpened = computed(() => store.dashboard.isSidebarOpened)
 
-    const handleMenuClick = () => {
-      store.dashboard.toggleMenu()
-    }
-
     const setSearchOpen = (v: boolean) => (isSearchOpen.value = v)
 
     return {
@@ -87,7 +83,6 @@ export default defineComponent({
       isSidebarClosed,
       isSidebarOpened,
       route,
-      handleMenuClick,
       setSearchOpen,
       togglePagesMenu,
       closeSideMenu,

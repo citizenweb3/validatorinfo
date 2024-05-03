@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between">
-    <router-link class="p-6" :to="{ name: 'ValidatorInfo' }">
+    <router-link :to="{ name: 'ValidatorInfo' }">
       <img
         src="@/assets/logos/validatorInfoLogo.png"
         class="max-h-24 max-w-full align-middle"
@@ -8,7 +8,7 @@
       />
     </router-link>
     <SearchContainer />
-    <router-link class="p-6" :to="{ name: 'ValidatorInfo' }">
+    <router-link :to="{ name: 'ValidatorInfo' }">
       <img
         src="@/assets/images/imageProfile.png"
         class="max-h-24 max-w-full align-middle"
