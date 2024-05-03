@@ -1,29 +1,23 @@
 <template>
-  <div class="flex justify-between relative">
+  <div class="flex justify-between relative items-center">
     <router-link :to="{ name: 'ValidatorInfo' }">
-      <img
-        src="@/assets/logos/validatorInfoLogo.png"
-        class="max-h-24 max-w-full align-middle"
-        alt="main logo"
-      />
+      <Button img="@/assets/logos/validatorInfoLogo.png" text="Home" />
     </router-link>
-    <div class="triangle left"></div>
-    <SearchContainer />
+    <div class="w-full mx-1">
+      <div class="triangle left"></div>
+      <SearchContainer />
+      <div class="triangle right"></div>
+    </div>
     <router-link :to="{ name: 'ValidatorInfo' }">
-      <img
-        src="@/assets/images/imageProfile.png"
-        class="max-h-24 max-w-full align-middle"
-        alt="profile"
-      />
+      <Button img="@/assets/images/imageProfile.png" text="You" />
     </router-link>
-    <div class="triangle right"></div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .triangle {
   position: absolute;
-  top: 34px;
+  top: 44px;
   width: 0;
   height: 0;
 
@@ -33,12 +27,12 @@
     border-top: 8px solid transparent;
     border-bottom: 0px solid theme('colors.lust');
     transform: rotate(134deg);
-    left: 85px !important;
+    left: 120px !important;
   }
 
   &.right {
-    top: 40px;
-    right: 85px !important;
+    top: 50px;
+    right: 120px !important;
     transform: rotate(314deg);
     border-left: 8px solid transparent;
     border-right: 8px solid theme('colors.apple');
@@ -51,10 +45,11 @@
 import { defineComponent } from 'vue'
 
 import SearchContainer from 'components/SearchBar/SearchContainer.vue'
+import Button from 'components/Button/index.vue'
 
 export default defineComponent({
   name: 'SubHeader',
-  components: { SearchContainer },
+  components: { Button, SearchContainer },
   setup() {
     return {}
   },

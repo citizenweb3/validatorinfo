@@ -28,12 +28,16 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    img: {
+      type: String,
+    },
   },
   setup(props) {
     const activeClass = computed(() => props.activeButtonIndex === props.index && props.tabs)
 
     return {
       iconResolved: props.icon && getAssetUrl(props.icon),
+      imgResolved: props.img && getAssetUrl(props.img),
       activeClass,
     }
   },
@@ -70,8 +74,12 @@ export default defineComponent({
             textWhite: textWhite,
           }"
         >
-          <template v-if="iconResolved" >
-            <img :src='iconResolved'/>
+          <template v-if="iconResolved">
+            <img :src="iconResolved" />
+          </template>
+          <template v-else-if="imgResolved">
+            {{ text }}
+            <img :src="imgResolved" class="max-h-24 max-w-full align-middle" />
           </template>
           <template v-else>
             {{ text }}
@@ -107,7 +115,7 @@ export default defineComponent({
   width: 100%;
   position: relative;
   background: linear-gradient(to bottom, theme('colors.lust'), theme('colors.apple'));
-  padding: 0.3rem;
+  padding: 2px;
   height: 100%;
 }
 .outer {
@@ -143,8 +151,8 @@ export default defineComponent({
   width: 100%;
   position: relative;
   background: linear-gradient(to bottom, theme('colors.lust'), theme('colors.apple'));
-  padding: 0.25rem;
-  box-shadow: 0 0 1rem theme('colors.americanYellow');
+  padding: 2px;
+  box-shadow: 0 0 10px theme('colors.americanYellow');
 }
 
 .iconWrap {
