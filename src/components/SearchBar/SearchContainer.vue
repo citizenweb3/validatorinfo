@@ -1,32 +1,16 @@
 <template>
-  <div class="flex items-center mx-0 py-2 pl-2.75 md:px-7.25 shadow-sm w-full">
+  <div class="flex items-center shadow-sm w-full">
     <div class="w-full items-center justify-between">
       <div class="w-full flex basis-auto items-center">
-        <div
-          class="transition-all duration-300 mr-auto sm:mr-4 sm:transform-none sm:block overflow-hidden"
-          :class="{ 'w-0 sm:w-full': isSearchOpen, 'w-full': !isSearchOpen }"
-        >
+        <div class="w-full overflow-hidden">
           <SearchBar @close-search="setSearchOpen(false)" />
         </div>
-        <div
-          class="transition-all duration-300 flex flex-1 flex-row ml-0 md:ml-auto items-center mt-0 text-slate-50 gap-7.25 md:gap-7.5"
-          :class="[!isSearchOpen ? 'w-0 overflow-hidden sm:flex' : 'w-full']"
-        >
-          <div class="relative inline-block lg:hidden text-white">
-            <div class="flex items-center">
-              <MenuIcon
-                v-if="!isSidebarOpened"
-                class="cursor-pointer h-6 w-6"
-                @click="handleMenuClick"
-              />
-              <MenuAlt1Icon v-else class="cursor-pointer h-6 w-6" @click="handleMenuClick" />
-            </div>
-          </div>
+        <div class="flex flex-1 items-center text-slate-50">
           <div class="relative inline-block sm:hidden">
             <div class="flex items-center">
               <SearchCircleIcon
                 v-if="!isSidebarClosed && isSearchOpen"
-                class="cursor-pointer w-4.5 h-4.5 text-slate-50 hover:text-slate-300"
+                class="cursor-pointer text-slate-50 hover:text-slate-300"
                 :class="{
                   'text-dark-lighter hover:text-indigo-410': route.meta.isDarkBackground,
                 }"
@@ -90,3 +74,12 @@ export default defineComponent({
   },
 })
 </script>
+<style lang="scss">
+.triangle {
+  width: 0;
+  height: 10px;
+  border-left: 10px solid transparent; /* Измените значение ширины, если нужно */
+  border-right: 10px solid transparent; /* Измените значение ширины, если нужно */
+  border-bottom: 10px solid red;
+}
+</style>
