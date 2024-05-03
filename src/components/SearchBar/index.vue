@@ -3,6 +3,7 @@
     <div class="z-10 absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
       <font-awesome-icon class="text-americanYellow" :icon="['fas', 'search']" size="sm" />
     </div>
+
     <div>
       <el-input
         v-model="textInput"
@@ -44,9 +45,11 @@ export default defineComponent({
     const store = useStore()
     const textInput = ref('')
     const isSidebarClosed = computed(() => store.dashboard.isSidebarClosed)
+    const isSidebarOpened = computed<boolean>(() => store.dashboard.isSidebarOpened)
 
     return {
       isSidebarClosed,
+      isSidebarOpened,
       textInput,
     }
   },

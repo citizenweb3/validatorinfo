@@ -46,15 +46,9 @@ import { Search, UserFilled, CircleClose } from '@element-plus/icons-vue'
 import { MenuIcon, MenuAlt1Icon, SearchIcon, SearchCircleIcon } from '@heroicons/vue/outline'
 import useStore from 'store'
 import { useRoute } from 'vue-router'
-import Dropdown from 'components/Dropdown/index.vue'
-import PopoverMenu from 'components/PopOverMenu/index.vue'
-import MenuUserAccount from 'components/MenuUserAccount/index.vue'
 export default defineComponent({
-  name: 'DefaultNav',
+  name: 'Search',
   components: {
-    MenuUserAccount,
-    PopoverMenu,
-    Dropdown,
     Search,
     UserFilled,
     CircleClose,

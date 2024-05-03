@@ -3,7 +3,7 @@ import { App } from 'vue'
 import { useElementPlus } from './element-plus'
 import Main from './Main/index.vue'
 import Sidebar from './Sidebar/index.vue'
-import Navigation from './Navigation/DefaultNav.vue'
+import Search from './SearchBar/SearchContainer.vue'
 import AuthNavigation from './Navigation/AuthenticationNav.vue'
 import Footer from './Footer/index.vue'
 import BreadCrumb from './BreadCrumb/index.vue'
@@ -15,12 +15,13 @@ import Dropdown from 'components/Dropdown/index.vue'
 import PopoverMenu from 'components/PopOverMenu/index.vue'
 import MenuUserAccount from 'components/MenuUserAccount/index.vue'
 import Button from 'components/Button/index.vue'
+import SubHeader from 'components/SubHeader/index.vue'
 export default {
   install: (app: App) => {
     // Register it globally
     app.component('Main', Main)
     app.component('Sidebar', Sidebar)
-    app.component('Navigation', Navigation)
+    app.component('Search', Search)
     app.component('AuthNavigation', AuthNavigation)
     app.component('Footer', Footer)
     app.component('BreadCrumb', BreadCrumb)
@@ -32,6 +33,7 @@ export default {
     app.component('PopoverMenu', PopoverMenu)
     app.component('MenuUserAccount', MenuUserAccount)
     app.component('Button', Button)
+    app.component('SubHeader', SubHeader)
 
     // Element Plus
     useElementPlus(app)

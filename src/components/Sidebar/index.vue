@@ -9,18 +9,6 @@
   >
     <div class="flex flex-col mx-auto items-stretch h-full bg-red-600">
       <div class="h-19.5 flex items-center relative">
-        <router-link
-          v-if="(isSidebarOpened && !isSidebarClosed) || isSidebarClosed"
-          :class="{ 'opacity-0': !isSidebarOpened && !isSidebarClosed }"
-          class="transition-opacity duration-300 opacity-1 p-6 block"
-          :to="{ name: 'ValidatorInfo' }"
-        >
-          <img
-            src="@/assets/logos/validatorInfoLogo.png"
-            class="max-h-24 max-w-full align-middle"
-            alt="..."
-          />
-        </router-link>
         <div class="ml-auto">
           <div class="lg:col-span-10 xl:col-span-10 flex">
             <div class="hidden lg:block flex-grow">

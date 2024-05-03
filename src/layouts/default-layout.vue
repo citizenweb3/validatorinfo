@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <SubHeader />
   <div
     class="h-screen overflow-hidden flex w-full dark-theme pr-10"
     v-loading.fullscreen.lock="loading"
@@ -9,13 +10,7 @@
       class="main-content flex flex-col flex-1 w-full overflow-auto main-content-dark"
       :class="`${!isSidebarClosed ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`"
     >
-      <navigation />
-      <div
-        class="w-full h-38 relative bg-transparent border-none"
-        :class="{
-          'bg-indigo-410': false,
-        }"
-      >
+      <div class="w-full h-38 relative bg-transparent border-none">
         <div class="flex items-center py-5 mb-0 pt-6" v-if="fullRoute.length <= 1">
           <div class="w-full flex flex-wrap flex-row">
             <div class="flex w-full flex-col">
