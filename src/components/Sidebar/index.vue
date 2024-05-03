@@ -1,51 +1,29 @@
 <template>
-  <aside
+  <div
     ref="target"
     @mouseover="hoverLeftBar(true)"
     @mouseleave="hoverLeftBar(false)"
     aria-labelledby="primary-heading"
-    class="transition-all duration-300 fixed z-20 bg-dark flex-shrink-0 overflow-hidden h-full items-center"
+    class="transition-all duration-300 fixed z-20 h-full items-center bg-dark"
     :class="{ ' hidden-aside w-17 ': !isSidebarOpened && !isSidebarClosed }"
   >
-    <div class="flex flex-col mx-auto items-stretch h-full bg-red-600">
-      <div class="h-19.5 flex items-center relative">
-        <div class="ml-auto">
-          <div class="lg:col-span-10 xl:col-span-10 flex">
-            <div class="hidden lg:block flex-grow">
-              <div class="flex items-center space-x-2 2xl:space-x-4 text-white px-6">
-                <img
-                  src="@/assets/icons/ArrowsIcon.svg"
-                  class="cursor-pointer h-6 w-5"
-                  @click="handleMenuClick"
-                  alt="Icons for toggle menu"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex-1 overflow-y-hidden">
+    <div class="flex flex-row h-full">
+      <div class="overflow-y-hidden">
         <el-scrollbar>
           <el-menu
             ref="target"
-            class="text-dark-20 before:block before:md:mt-4 mt-0"
-            default-active="0"
+            class="text-dark-20"
             :default-openeds="!leftSideBarItems.includes(route.name) ? ['1'] : ['0']"
           >
             <template v-for="(item, index) in menuItems" :key="index">
               <el-menu-item
-                class="relative mx-2"
+                class="relative"
                 :class="{
                   'item-active': route.name === item.name,
                 }"
                 :index="`${index}`"
               >
                 <template #title>
-                  <span
-                    v-if="route.name === item.name"
-                    class="absolute inset-y-1 -left-2 w-0.5 h-5/6 bg-indigo-410"
-                    aria-hidden="true"
-                  />
                   <router-link
                     class="items-center w-full h-full text-sm my-0.5 font-normal transition-colors duration-150"
                     :class="{
@@ -101,8 +79,16 @@
           </el-menu>
         </el-scrollbar>
       </div>
+      <div class="bg-blackOlive">
+        <img
+          src="@/assets/icons/ArrowsIcon.svg"
+          class="cursor-pointer"
+          @click="handleMenuClick"
+          alt="Icons for toggle menu"
+        />
+      </div>
     </div>
-  </aside>
+  </div>
 </template>
 
 <script lang="ts">
@@ -202,28 +188,29 @@ export default defineComponent({
 }
 .el-menu {
   .is-active {
-    background-color: #3e3e3e;
+    background-color: theme('colors.blackOlive');
     border-radius: 0 !important;
   }
-}
-.el-menu-item {
-  border-left: 1px solid #3e3e3e;
-  border-bottom: 1px solid #3e3e3e;
-  margin: 1rem 0;
-  &:hover {
-    background-color: #3e3e3e !important;
+
+  .el-menu-item {
+    border-left: 1px solid theme('colors.blackOlive');
+    border-bottom: 1px solid theme('colors.blackOlive');
     border-radius: 0 !important;
-  }
-  a {
-    display: flex;
-    align-items: center;
-    padding: 1rem 0;
+    margin: 1rem 0;
+
     &:hover {
-      color: white !important;
+      background-color: theme('colors.blackOlive') !important;
     }
-  }
-  a.router-link-exact-active {
-    color: white !important;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+
+      &:hover {
+        color: white !important;
+      }
+    }
   }
 }
 </style>

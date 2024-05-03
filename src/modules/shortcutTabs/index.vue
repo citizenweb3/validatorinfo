@@ -7,14 +7,16 @@ import CentralLogo from 'components/CentralLogo/index.vue'
 const router = useRouter()
 
 const activeButtonIndex = computed(() => {
- return ['Metrics', 'NetworksList', 'ValidatorsList'].indexOf(<string>router.currentRoute.value.name);
+  return ['Metrics', 'NetworksList', 'ValidatorsList'].indexOf(
+    <string>router.currentRoute.value.name,
+  )
 })
 </script>
 
 <template>
-  <div class='flex flex-col'>
-    <div class='title'>Helpful Information</div>
-    <CentralLogo class='mx-auto'/>
+  <div class="flex flex-col">
+    <div class="title">Helpful Information</div>
+    <CentralLogo class="mx-auto" />
   </div>
   <div class="flex justify-between mt-10">
     <router-link :to="{ name: 'Metrics' }">
@@ -32,20 +34,10 @@ const activeButtonIndex = computed(() => {
       />
     </router-link>
     <router-link :to="{ name: 'NotFound' }" @click.prevent.native="handleClick(3)">
-      <Button
-        :text="'...'"
-        :tabs="true"
-        :index="3"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'...'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
     </router-link>
     <router-link :to="{ name: 'NotFound' }" @click.prevent.native="handleClick(4)">
-      <Button
-        :text="'...'"
-        :tabs="true"
-        :index="4"
-        :active-button-index="activeButtonIndex"
-      />
+      <Button :text="'...'" :tabs="true" :index="4" :active-button-index="activeButtonIndex" />
     </router-link>
   </div>
   <router-view></router-view>
@@ -57,7 +49,7 @@ const activeButtonIndex = computed(() => {
 }
 
 .tabs-routes {
-  background-color: #3e3e3e;
+  background-color: theme('colors.blackOlive');
   display: flex;
   .el-tabs__item {
     display: flex;

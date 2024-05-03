@@ -21,7 +21,7 @@
       @apply min-w-0 #{!important};
     }
   }
-  
+
   .el-sub-menu {
     .el-sub-menu__title {
       @apply rounded-md px-2 pr-0 h-11.25 text-dark-20 #{!important};
@@ -41,13 +41,13 @@
       }
     }
   }
-  
+
   .el-menu-item {
     @apply rounded-md px-2 pr-0 h-11.25 text-dark-20 #{!important};
     &:hover {
       @apply bg-dark;
     }
-    
+
   }
   .el-menu-item.is-active {
     @apply text-gray-800;
