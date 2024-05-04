@@ -6,10 +6,7 @@
     v-loading.fullscreen.lock="loading"
   >
     <sidebar />
-    <div
-      class="main-content flex flex-col flex-1 w-full overflow-auto main-content-dark"
-      :class="`${!isSidebarClosed ? ' ml-17 ' : 'ml-62.5 cursor-pointer lg:cursor-default'}`"
-    >
+    <div class="main-content flex flex-col w-full overflow-auto main-content-dark">
       <div class="w-full h-38 relative bg-transparent border-none">
         <div class="flex items-center py-5 mb-0 pt-6" v-if="fullRoute.length <= 1">
           <div class="w-full flex flex-wrap flex-row">

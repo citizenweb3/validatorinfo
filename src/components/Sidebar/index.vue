@@ -1,11 +1,11 @@
 <template>
-  <div
-    ref="target"
-    aria-labelledby="primary-heading"
-    class="transition-all duration-300 fixed z-20 h-full items-center bg-dark"
-    :class="{ ' hidden-aside w-17 ': !isSidebarOpened && !isSidebarClosed }"
-  >
-    <div class="flex flex-row h-full">
+  <div class="flex flex-row">
+    <div
+      ref="target"
+      aria-labelledby="primary-heading"
+      class="transition-all duration-300 items-center bg-orange"
+      :class="{ ' hidden-aside w-17 ': !isSidebarOpened && !isSidebarClosed }"
+    >
       <div class="overflow-y-hidden">
         <el-menu
           ref="target"
@@ -75,14 +75,9 @@
           </template>
         </el-menu>
       </div>
-      <div class="bg-blackOlive">
-        <img
-          src="@/assets/icons/ArrowsIcon.svg"
-          class="cursor-pointer"
-          @click="handleMenuClick"
-          alt="Icons for toggle menu"
-        />
-      </div>
+    </div>
+    <div class="bg-blackOlive w-7" @click="handleMenuClick">
+      <img src="@/assets/icons/ArrowsIcon.svg" class="cursor-pointer" alt="Icons for toggle menu" />
     </div>
   </div>
 </template>
