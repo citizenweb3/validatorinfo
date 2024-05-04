@@ -1,83 +1,79 @@
 <template>
   <div
     ref="target"
-    @mouseover="hoverLeftBar(true)"
-    @mouseleave="hoverLeftBar(false)"
     aria-labelledby="primary-heading"
     class="transition-all duration-300 fixed z-20 h-full items-center bg-dark"
     :class="{ ' hidden-aside w-17 ': !isSidebarOpened && !isSidebarClosed }"
   >
     <div class="flex flex-row h-full">
       <div class="overflow-y-hidden">
-        <el-scrollbar>
-          <el-menu
-            ref="target"
-            class="text-dark-20"
-            :default-openeds="!leftSideBarItems.includes(route.name) ? ['1'] : ['0']"
-          >
-            <template v-for="(item, index) in menuItems" :key="index">
-              <el-menu-item
-                class="relative"
-                :class="{
-                  'item-active': route.name === item.name,
-                }"
-                :index="`${index}`"
-              >
-                <template #title>
-                  <router-link
-                    class="items-center w-full h-full text-sm my-0.5 font-normal transition-colors duration-150"
-                    :class="{
-                      ' text-gray-800 ': route.name === item.name,
-                      ' ml-4.5 ': item.subOffset,
-                    }"
-                    :to="{ name: item.name }"
-                    :title="item.title"
-                  >
-                    <div>
-                      <em class="h-5 w-6 block menu-item-inner">
-                        <img
-                          v-if="item.name === 'ValidatorsList'"
-                          src="@/assets/icons/ValidatorsIcon.svg"
-                          alt=""
-                        />
-                        <img
-                          v-if="item.name === 'NetworksList'"
-                          src="@/assets/icons/NetworksIcon.svg"
-                          alt=""
-                        />
-                        <img
-                          v-if="item.name === 'Metrics'"
-                          src="@/assets/icons/MetricsIcon.svg"
-                          alt=""
-                        />
-                        <img
-                          v-if="item.name === 'Library'"
-                          src="@/assets/icons/LibraryIcon.svg"
-                          alt=""
-                        />
-                        <img
-                          v-if="item.name === 'AboutUs'"
-                          src="@/assets/icons/AboutUsIcon.svg"
-                          alt=""
-                        />
-                        <img
-                          v-if="item.name === 'StakingCalculator'"
-                          src="@/assets/icons/StakingIcon.svg"
-                          alt=""
-                        />
-                      </em>
-                    </div>
-                    <span
-                      class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
-                      :class="{ 'opacity-0': !isSidebarOpened && !isSidebarClosed }"
-                      >{{ item.title }}
-                    </span>
-                  </router-link>
-                </template>
-              </el-menu-item>
-            </template>
-          </el-menu>
-        </el-scrollbar>
+        <el-menu
+          ref="target"
+          class="text-dark-20"
+          :default-openeds="!leftSideBarItems.includes(route.name) ? ['1'] : ['0']"
+        >
+          <template v-for="(item, index) in menuItems" :key="index">
+            <el-menu-item
+              class="relative"
+              :class="{
+                'item-active': route.name === item.name,
+              }"
+              :index="`${index}`"
+            >
+              <template #title>
+                <router-link
+                  class="items-center w-full h-full text-sm my-0.5 font-normal transition-colors duration-150"
+                  :class="{
+                    ' text-gray-800 ': route.name === item.name,
+                    ' ml-4.5 ': item.subOffset,
+                  }"
+                  :to="{ name: item.name }"
+                  :title="item.title"
+                >
+                  <div>
+                    <em class="h-5 w-6 block menu-item-inner">
+                      <img
+                        v-if="item.name === 'ValidatorsList'"
+                        src="@/assets/icons/ValidatorsIcon.svg"
+                        alt=""
+                      />
+                      <img
+                        v-if="item.name === 'NetworksList'"
+                        src="@/assets/icons/NetworksIcon.svg"
+                        alt=""
+                      />
+                      <img
+                        v-if="item.name === 'Metrics'"
+                        src="@/assets/icons/MetricsIcon.svg"
+                        alt=""
+                      />
+                      <img
+                        v-if="item.name === 'Library'"
+                        src="@/assets/icons/LibraryIcon.svg"
+                        alt=""
+                      />
+                      <img
+                        v-if="item.name === 'AboutUs'"
+                        src="@/assets/icons/AboutUsIcon.svg"
+                        alt=""
+                      />
+                      <img
+                        v-if="item.name === 'StakingCalculator'"
+                        src="@/assets/icons/StakingIcon.svg"
+                        alt=""
+                      />
+                    </em>
+                  </div>
+                  <span
+                    class="transition-opacity duration-300 opacity-1 ml-3 text-sm font-normal"
+                    :class="{ 'opacity-0': !isSidebarOpened && !isSidebarClosed }"
+                    >{{ item.title }}
+                  </span>
+                </router-link>
+              </template>
+            </el-menu-item>
+          </template>
+        </el-menu>
       </div>
       <div class="bg-blackOlive">
         <img
@@ -160,6 +156,8 @@ export default defineComponent({
     const handleMenuClick = () => {
       store.dashboard.toggleMenu()
     }
+
+    console.log(navigation)
 
     return {
       leftSideBarItems,
