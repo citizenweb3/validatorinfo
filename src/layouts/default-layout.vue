@@ -8,15 +8,7 @@
     <sidebar />
     <div class="main-content flex flex-col w-full overflow-auto main-content-dark">
       <div class="w-full h-38 relative bg-transparent border-none">
-        <div class="flex items-center py-5 mb-0 pt-6" v-if="fullRoute.length <= 1">
-          <div class="w-full flex flex-wrap flex-row">
-            <div class="flex w-full flex-col">
-              <div class="md:ml-7 hidden md:inline-block pt-1.5">
-                <BreadCrumb :fullRoute="fullRoute" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <BreadCrumb :fullRoute="fullRoute" />
 
         <router-view v-slot="{ Component }">
           <component :is="Component" :class="{ 'py-1.25 px-4 md:px-7.5 lg:px-6.2': false }" />
@@ -40,12 +32,12 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const store = useStore()
-    const isSidebarClosed = computed<boolean>(() => store.dashboard.isSidebarClosed)
+
     const loading = computed(() => store.global.loading)
     const fullRoute = computed(() => route.matched)
+
     const setSidebarClosed = (b: boolean) => store.dashboard.setSidebarClosed(b)
     return {
-      isSidebarClosed,
       loading,
       setSidebarClosed,
       fullRoute,
