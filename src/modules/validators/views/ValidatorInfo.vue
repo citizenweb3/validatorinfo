@@ -1,19 +1,19 @@
 <template>
-  <div class="w-full mx-auto">
+  <div class="w-full mx-auto tabs-validator-info">
     <el-tabs class="tabs" stretch v-model="activeName">
-      <el-tab-pane label="Global-POS">
+      <el-tab-pane label="" class="tab-0">
         <NotFound/>
       </el-tab-pane>
-      <el-tab-pane label="Staking Cal.">
+      <el-tab-pane class="tab-1">
         <NotFound/>
       </el-tab-pane>
-      <el-tab-pane label="Validator info" name="valInfo">
+      <el-tab-pane class="tab-2">
         <ValidatorsTable />
       </el-tab-pane>
-      <el-tab-pane label="Val. Comparison">
+      <el-tab-pane class="tab-3">
         <NotFound/>
       </el-tab-pane>
-      <el-tab-pane label="AI">
+      <el-tab-pane class="tab-4">
         <NotFound/>
       </el-tab-pane>
     </el-tabs>
@@ -29,4 +29,109 @@ import NotFound from 'modules/pages/views/404.vue'
 const activeName = ref('valInfo')
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.tabs-validator-info {
+  .el-tabs__active-bar {
+    display: none;
+  }
+  .el-tabs__item {
+    position: relative;
+    border-bottom: 1px solid #3E3E3E;
+    border-left: 1px solid #3E3E3E;
+    color: white;
+    font-size: 0.95rem;
+    background-color: #1e1e1e;
+  }
+  #tab-0, #tab-1, #tab-2, #tab-3, #tab-4 {
+    &::before {
+      position: absolute;
+      top: 3px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  #tab-0.is-active, #tab-1.is-active, 
+  #tab-2.is-active, #tab-3.is-active, 
+  #tab-4.is-active {
+    &::after {
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      left: 0;
+      right: 0;
+      background-color: #1e1e1e;
+      width: 98%;
+      margin: auto;
+    }
+  }
+
+  .el-tabs__active-bar {
+    background-color: transparent!important;
+  }
+
+  /** Tabs Labels **/
+  #tab-0 {
+    &::before {
+      content: "Global-POS";
+    }
+  }
+  #tab-0.is-active {
+    &::after {
+      content: "Global-POS";
+    }
+  }
+
+
+  #tab-1 {
+    &::before {
+      content: "Staking Cal.";
+    }
+  }
+  #tab-1.is-active {
+    &::after {
+      content: "Staking Cal.";
+    }
+  }
+
+
+  #tab-2 {
+    &::before {
+      content: "Validator info";
+    }
+  }
+  #tab-2.is-active {
+    &::after {
+      content: "Validator info";
+    }
+  }
+
+
+  #tab-3 {
+    &::before {
+      content: "Val. Comparison";
+    }
+  }
+  #tab-3.is-active {
+    &::after {
+      content: "Val. Comparison";
+    }
+  }
+
+
+  #tab-4 {
+    &::before {
+      content: "AI";
+    }
+  }
+  #tab-4.is-active {
+    &::after {
+      content: "AI";
+    }
+  }
+
+}
+
+
+</style>
