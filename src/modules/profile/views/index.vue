@@ -96,7 +96,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .background-url {
-  @apply bg-[url('@/assets/images/profile-cover.jpg')] #{!important};
+  @apply bg-[url('@/assets/images/imageProfile.png')] #{!important};
 }
 ::v-deep(.card-avatar-profile.el-link) .el-link--inner {
   @apply absolute;
