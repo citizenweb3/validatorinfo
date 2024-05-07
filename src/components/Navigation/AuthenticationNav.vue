@@ -15,7 +15,7 @@
             <el-dropdown-menu>
               <el-dropdown-item>
                 <a class="inline-block whitespace-nowrap w-[121.75px] pb-2.5" href="#">
-                  <img class="h-9" alt="..." src="@/assets/images/blue.png" />
+                  <img class="h-9" alt="..." src="@/assets/images/imageProfile.png" />
                 </a>
                 <div class="absolute right-0 top-1.5">
                   <XIcon class="w-6 h-6 text-default hover:text-default active:text-default" />

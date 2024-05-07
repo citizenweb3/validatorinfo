@@ -8,10 +8,6 @@
             <img src="@/assets/images/github.png" alt="" class="h-4 w-4" />
             <span class="pl-4 text-indigo-410">Github</span>
           </el-button>
-          <el-button class="bg-dark border-white ml-7" href="#">
-            <img src="@/assets/images/google.png" alt="" class="h-4 w-4" />
-            <span class="pl-4 text-indigo-410">Google</span>
-          </el-button>
         </div>
       </template>
       <div class="content-center items-center w-full lg:p-6">

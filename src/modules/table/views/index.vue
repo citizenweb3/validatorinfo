@@ -25,10 +25,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import Team_2_Url from '@/assets/images/team-2.jpg'
-import Team_3_Url from '@/assets/images/team-3.jpg'
-import Team_4_Url from '@/assets/images/team-4.jpg'
-import Logo_Url from '@/assets/images/ltv_logo.png'
+import Team_2_Url from '@/assets/images/imageProfile.jpg'
+import Team_3_Url from '@/assets/images/imageProfile.jpg'
+import Team_4_Url from '@/assets/images/imageProfile.jpg'
+import Logo_Url from '@/assets/images/imageProfile.jpg'
 import ProjectTable from './components/ProjectTable.vue'
 
 interface User {
