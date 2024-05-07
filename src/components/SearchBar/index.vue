@@ -94,4 +94,9 @@ export default defineComponent({
 .rabbit {
   background-image: url('@/assets/icons/buttonRabbit.svg');
 }
+
+.text-americanYellow {
+  font-size: 1rem;
+  opacity: 0.55;
+}
 </style>
