@@ -32,3 +32,4 @@ COPY --from=builder /builder/dist/ /usr/share/nginx/html
 
 COPY --from=builder /builder/src/assets/logos /usr/share/nginx/html/assets
 COPY --from=builder /builder/src/assets/icons /usr/share/nginx/html/assets
+COPY --from=builder /builder/src/assets/images /usr/share/nginx/html/assets

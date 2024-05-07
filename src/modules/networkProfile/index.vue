@@ -86,7 +86,7 @@ const handleClick = (index: number) => {
 }
 
 .tabs-routes {
-  background-color: #3e3e3e;
+  background-color: theme('colors.blackOlive');
   display: flex;
   .el-tabs__item {
     display: flex;

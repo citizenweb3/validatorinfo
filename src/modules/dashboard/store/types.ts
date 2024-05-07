@@ -1,5 +1,5 @@
 export interface DashboardState {
-  isSBPin: boolean,
-  isSBOpen: boolean,
-  welcomeText: string,
+  isSidebarClosed?: boolean
+  isSidebarOpened: boolean
+  welcomeText: string
 }
