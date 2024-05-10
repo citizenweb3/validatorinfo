@@ -5,12 +5,31 @@ import Button from 'components/Button/index.vue'
 const route = useRoute()
 const validatorId = computed(() => route.params.id)
 const validatorNetworkId = computed(() => route.params.validatorNetworkId)
-const router = useRouter()
+import RouteTabs from 'components/RouteTabs/index.vue'
+import { onUpdated } from 'vue'
+import { RouteTabsExpose } from 'components/RouteTabs/types'
+const routeTabsRef = ref<RouteTabsExpose>(null)
 
-const activeButtonIndex = ref(2)
-const handleClick = (index: number) => {
-  activeButtonIndex.value = index
-}
+const tabs = [
+  {
+    routeName: 'ValidatorRevenue',
+    text: 'Revenue'
+  },{
+    routeName: 'ValidatorMetrics',
+    text: 'Metrics'
+  },{
+    routeName: 'ValidatorNetworksTable',
+    text: 'Network'
+  },{
+    routeName: 'ValidatorPublic',
+    text: 'Public'
+  },{
+    routeName: 'ValidatorGovernance',
+    text: 'Governance'
+  }]
+onUpdated(() => {
+  routeTabsRef.value?.onUpdatedHook();
+})
 </script>
 
 <template>
@@ -31,39 +50,7 @@ const handleClick = (index: number) => {
     </div>
   </div>
 
-  <div class="flex justify-between px-5" v-if="!validatorNetworkId">
-    <router-link :to="{ name: 'ValidatorRevenue' }" @click.prevent.native="handleClick(0)">
-      <Button :text="'Revenue'" :tabs="true" :index="0" :active-button-index="activeButtonIndex" />
-    </router-link>
-    <router-link :to="{ name: 'ValidatorMetrics' }" @click.prevent.native="handleClick(1)">
-      <Button :text="'Metrics'" :tabs="true" :index="1" :active-button-index="activeButtonIndex" />
-    </router-link>
-    <router-link :to="{ name: 'ValidatorNetworksTable' }" @click.prevent.native="handleClick(2)">
-      <Button
-        :text="'Network Table'"
-        :tabs="true"
-        :index="2"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-    <router-link :to="{ name: 'ValidatorPublic' }" @click.prevent.native="handleClick(3)">
-      <Button
-        :text="'Public Good'"
-        :tabs="true"
-        :index="3"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-    <router-link :to="{ name: 'ValidatorGovernance' }" @click.prevent.native="handleClick(4)">
-      <Button
-        :text="'Governance'"
-        :tabs="true"
-        :index="4"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-  </div>
-  <router-view></router-view>
+  <RouteTabs :tabs='tabs' ref='routeTabsRef'></RouteTabs>
 </template>
 
 <style lang="scss">

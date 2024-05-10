@@ -1,16 +1,33 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import Button from 'components/Button/index.vue'
+import { useRoute } from 'vue-router'
+import RouteTabs from 'components/RouteTabs/index.vue'
+import { onUpdated, ref } from 'vue'
+import { RouteTabsExpose } from 'components/RouteTabs/types'
 const route = useRoute()
 
 const networkId = route.params.id
-const router = useRouter()
+const routeTabsRef = ref<RouteTabsExpose>(null)
 
-const activeButtonIndex = ref(2)
-const handleClick = (index: number) => {
-  activeButtonIndex.value = index
-}
+const tabs = [
+  {
+    routeName: 'NetworkGovernance',
+    text: 'Governance'
+  },{
+    routeName: 'NetworkStatistics',
+    text: 'Statistics'
+  },{
+    routeName: 'NetworkInfo',
+    text: 'Useful info'
+  },{
+    routeName: 'NetworkDevInfo',
+    text: 'Dev info'
+  },{
+    routeName: 'NetworkLiveliness',
+    text: 'Liveliness'
+  }]
+onUpdated(() => {
+  routeTabsRef.value?.onUpdatedHook();
+})
 </script>
 
 <template>
@@ -32,44 +49,7 @@ const handleClick = (index: number) => {
     </div>
   </div>
 
-  <div class="flex justify-between px-5">
-    <router-link :to="{ name: 'NetworkGovernance' }" @click.prevent.native="handleClick(0)">
-      <Button
-        :text="'Governance'"
-        :tabs="true"
-        :index="0"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-    <router-link :to="{ name: 'NetworkStatistics' }" @click.prevent.native="handleClick(1)">
-      <Button
-        :text="'Statistics'"
-        :tabs="true"
-        :index="1"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-    <router-link :to="{ name: 'NetworkInfo' }" @click.prevent.native="handleClick(2)">
-      <Button
-        :text="'Useful info'"
-        :tabs="true"
-        :index="2"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-    <router-link :to="{ name: 'NetworkDevInfo' }" @click.prevent.native="handleClick(3)">
-      <Button :text="'Dev info'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
-    </router-link>
-    <router-link :to="{ name: 'NetworkLiveliness' }" @click.prevent.native="handleClick(4)">
-      <Button
-        :text="'Liveliness'"
-        :tabs="true"
-        :index="4"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-  </div>
-  <router-view></router-view>
+  <RouteTabs :tabs='tabs' ref='routeTabsRef'/>
 </template>
 
 <style lang="scss">

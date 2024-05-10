@@ -1,52 +1,33 @@
 <template>
-  <div class="flex w-full justify-between">
-      <router-link :to="{ name: 'GlobalPOS' }" @click.prevent.native="handleClick(0)">
-        <Button
-          :text="'Global-POS'"
-          :tabs="true"
-          :index="0"
-          :active-button-index="activeButtonIndex"
-        />
-      </router-link>
-      <router-link :to="{ name: 'StakingCalculator' }" @click.prevent.native="handleClick(1)">
-        <Button
-          :text="'Staking Cal.'"
-          :tabs="true"
-          :index="1"
-          :active-button-index="activeButtonIndex"
-        />
-      </router-link>
-      <router-link :to="{ name: 'ValidatorInfoTables' }" @click.prevent.native="handleClick(2)">
-        <Button
-          :text="'Validator info'"
-          :tabs="true"
-          :index="2"
-          :active-button-index="activeButtonIndex"
-        />
-      </router-link>
-      <router-link :to="{ name: 'ValidatorComparison' }" @click.prevent.native="handleClick(3)">
-        <Button :text="'Val. Comparison'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
-      </router-link>
-      <router-link :to="{ name: 'ValidatorAI' }" @click.prevent.native="handleClick(4)">
-        <Button
-          :text="'AI'"
-          :tabs="true"
-          :index="4"
-          :active-button-index="activeButtonIndex"
-        />
-      </router-link>
-  </div>
-  <router-view></router-view>
+  <RouteTabs :tabs='tabs' ref='routeTabsRef'></RouteTabs>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import Button from 'components/Button/index.vue'
+import RouteTabs from 'components/RouteTabs/index.vue'
+import { onUpdated, ref } from 'vue'
+import { RouteTabsExpose } from 'components/RouteTabs/types'
+const routeTabsRef = ref<RouteTabsExpose>(null)
 
-const activeButtonIndex = ref(2)
-const handleClick = (index: number) => {
-  activeButtonIndex.value = index
-}
+const tabs = [
+  {
+  routeName: 'GlobalPOS',
+  text: 'Global-POS'
+},{
+  routeName: 'StakingCalculator',
+  text: 'Staking Cal.'
+},{
+  routeName: 'ValidatorInfoTables',
+  text: 'Validator info'
+},{
+  routeName: 'ValidatorComparison',
+  text: 'Val. Comparison'
+},{
+  routeName: 'ValidatorAI',
+  text: 'AI'
+}]
+onUpdated(() => {
+  routeTabsRef.value?.onUpdatedHook();
+})
 </script>
 
 <style lang="scss">

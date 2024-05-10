@@ -41,11 +41,12 @@ const AboutUsContacts = () => import('modules/aboutUs/components/Contacts.vue')
 const AboutUsPartners = () => import('modules/aboutUs/components/Partners.vue')
 const AboutUsPodcast = () => import('modules/aboutUs/components/Podcast.vue')
 
-const ComponentLayout = () => import('components/ComponentLayout/index.vue')
-
 const routes = [
   {
     path: '/',
+    redirect: () => { // default to info
+      return { name: 'ValidatorInfoTables' }
+    },
     component: ValidatorInfo,
     name: 'ValidatorInfo',
     meta: {
@@ -64,7 +65,7 @@ const routes = [
       },
       {
         name: 'ValidatorInfoTables',
-        path: '',
+        path: 'validators-info',
         component: ValidatorsTable,
       },
       {
@@ -121,7 +122,7 @@ const routes = [
     name: 'ValidatorProfilePage',
     component: ValidatorProfilePage,
     redirect: (to: any) => { // default to networks
-      return { path: 'networks', params: to.params.id }
+      return { name: 'ValidatorNetworksTable', params: to.params.id }
     },
     meta: {
       requiresAuth: false,
@@ -159,6 +160,9 @@ const routes = [
         name: 'ValidatorPublic',
         path: 'public-goods',
         component: ValidatorPublic,
+        redirect: () => { // default to info
+          return { name: 'ValidatorMedia' }
+        },
         children: [{
           name: 'ValidatorInfrastructure',
           path: 'infrastructure',
@@ -170,6 +174,7 @@ const routes = [
         },{
           name: 'ValidatorMedia',
           path: 'media',
+          default: true,
           component: ValidatorMedia,
         },{
           name: 'ValidatorTools',
@@ -201,7 +206,7 @@ const routes = [
       title: ':id',
     },
     redirect: (to: any) => { // default to info
-      return { path: 'info', params: to.params.id }
+      return { name: 'NetworkInfo', params: to.params.id }
     },
     children: [
       {
@@ -243,7 +248,7 @@ const routes = [
   },
   {
     path: '/library',
-    component: ComponentLayout,
+    component: NotFound,
     name: 'Library',
     meta: {
       title: 'Library',
@@ -256,7 +261,7 @@ const routes = [
     },
   },
   {
-    path: '/citizen-web3/info',
+    path: '/citizen-web3',
     component: AboutUs,
     name: 'AboutUs',
     meta: {
@@ -264,6 +269,9 @@ const routes = [
       icon: UserIcon,
       requiresAuth: false,
       parentPath: 'AboutUs',
+    },
+    redirect: () => { // default to info
+      return { name: 'AboutUsGeneral' }
     },
     children: [
       {
