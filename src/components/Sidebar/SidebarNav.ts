@@ -15,7 +15,7 @@ const navigation = () => {
       })
     }
     children?.forEach((child: any) => {
-      const { meta, path, name } = child
+      const { meta, path, name, children: childrenLevel3 } = child
       if(meta?.icon) {
         prev.push({
           name,
@@ -27,6 +27,20 @@ const navigation = () => {
           subOffset: meta.subOffset,
         })
       }
+      childrenLevel3?.forEach((childLevel3: any) => {
+        const { meta, path, name } = childLevel3
+        if(meta?.icon) {
+          prev.push({
+            name,
+            href: path,
+            icon: meta.icon,
+            color: meta.color,
+            title: meta.title,
+            requiresAuth: meta.requiresAuth,
+            subOffset: meta.subOffset,
+          })
+        }
+      })
     })
     return prev
   }, [])

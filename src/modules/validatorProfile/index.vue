@@ -2,7 +2,6 @@
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import Button from 'components/Button/index.vue'
-const activeName = ref('network')
 const route = useRoute()
 const validatorId = computed(() => route.params.id)
 const validatorNetworkId = computed(() => route.params.validatorNetworkId)
@@ -17,7 +16,7 @@ const handleClick = (index: number) => {
 <template>
   <div>
     <div class="title">
-      Validator Profile: <span class="capitalize">{{ validatorId }}</span>
+      <span class='text-white'>Validator Profile:</span><span class="capitalize">{{ validatorId }}</span>
     </div>
     <div class="flex center-items flex-row justify-space-between mt-5">
       <div class="flex text-white w-1/3">

@@ -1,32 +1,52 @@
 <template>
-  <div class="w-full mx-auto tabs-validator-info">
-    <el-tabs class="tabs" stretch v-model="activeName">
-      <el-tab-pane label="" class="tab-0">
-        <NotFound/>
-      </el-tab-pane>
-      <el-tab-pane class="tab-1">
-        <NotFound/>
-      </el-tab-pane>
-      <el-tab-pane class="tab-2">
-        <ValidatorsTable />
-      </el-tab-pane>
-      <el-tab-pane class="tab-3">
-        <NotFound/>
-      </el-tab-pane>
-      <el-tab-pane class="tab-4">
-        <NotFound/>
-      </el-tab-pane>
-    </el-tabs>
+  <div class="flex w-full justify-between">
+      <router-link :to="{ name: 'GlobalPOS' }" @click.prevent.native="handleClick(0)">
+        <Button
+          :text="'Global-POS'"
+          :tabs="true"
+          :index="0"
+          :active-button-index="activeButtonIndex"
+        />
+      </router-link>
+      <router-link :to="{ name: 'StakingCalculator' }" @click.prevent.native="handleClick(1)">
+        <Button
+          :text="'Staking Cal.'"
+          :tabs="true"
+          :index="1"
+          :active-button-index="activeButtonIndex"
+        />
+      </router-link>
+      <router-link :to="{ name: 'ValidatorInfoTables' }" @click.prevent.native="handleClick(2)">
+        <Button
+          :text="'Validator info'"
+          :tabs="true"
+          :index="2"
+          :active-button-index="activeButtonIndex"
+        />
+      </router-link>
+      <router-link :to="{ name: 'ValidatorComparison' }" @click.prevent.native="handleClick(3)">
+        <Button :text="'Val. Comparison'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
+      </router-link>
+      <router-link :to="{ name: 'ValidatorAI' }" @click.prevent.native="handleClick(4)">
+        <Button
+          :text="'AI'"
+          :tabs="true"
+          :index="4"
+          :active-button-index="activeButtonIndex"
+        />
+      </router-link>
   </div>
+  <router-view></router-view>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-// Table
-import ValidatorsTable from '../components/ValidatorsTable.vue'
-import NotFound from 'modules/pages/views/404.vue'
+import Button from 'components/Button/index.vue'
 
-const activeName = ref('valInfo')
+const activeButtonIndex = ref(2)
+const handleClick = (index: number) => {
+  activeButtonIndex.value = index
+}
 </script>
 
 <style lang="scss">
@@ -52,8 +72,8 @@ const activeName = ref('valInfo')
     }
   }
 
-  #tab-0.is-active, #tab-1.is-active, 
-  #tab-2.is-active, #tab-3.is-active, 
+  #tab-0.is-active, #tab-1.is-active,
+  #tab-2.is-active, #tab-3.is-active,
   #tab-4.is-active {
     &::after {
       position: absolute;

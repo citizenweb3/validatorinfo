@@ -1,4 +1,4 @@
-import { CursorClickIcon, HomeIcon, UserIcon, ColorSwatchIcon } from '@heroicons/vue/outline'
+import { CursorClickIcon, HomeIcon, UserIcon } from '@heroicons/vue/outline'
 
 const Login = () => import('modules/auth/views/login.vue')
 // const Register = () => import('modules/auth/views/register.vue')
@@ -9,12 +9,19 @@ const ValidatorInfo = () => import('modules/validators/views/ValidatorInfo.vue')
 const ShortcutTabs = () => import('modules/shortcutTabs/index.vue')
 const ValidatorsList = () => import('modules/validators/components/ValidatorsList.vue')
 const ValidatorProfilePage = () => import('modules/validatorProfile/index.vue')
-
+const ValidatorsTable = () => import('modules/validators/components/ValidatorsTable.vue')
 const ValidatorNetworksTable = () =>
   import('modules/validatorProfile/components/ValidatorNetworksTable.vue')
 const ValidatorRevenue = () => import('modules/validatorProfile/components/ValidatorRevenue.vue')
 const ValidatorMetrics = () => import('modules/validatorProfile/components/ValidatorMetrics.vue')
 const ValidatorPublic = () => import('modules/validatorProfile/components/ValidatorPublic.vue')
+
+const ValidatorInfrastructure = () => import('modules/validatorProfile/components/publicGood/ValidatorInfrastructure.vue')
+const ValidatorCommunity = () => import('modules/validatorProfile/components/publicGood/ValidatorCommunity.vue')
+const ValidatorMedia = () => import('modules/validatorProfile/components/publicGood/ValidatorMedia.vue')
+const ValidatorTools = () => import('modules/validatorProfile/components/publicGood/ValidatorTools.vue')
+const ValidatorOther = () => import('modules/validatorProfile/components/publicGood/ValidatorOther.vue')
+
 const ValidatorGovernance = () =>
   import('modules/validatorProfile/components/ValidatorGovernance.vue')
 
@@ -44,6 +51,33 @@ const routes = [
     meta: {
       requiresAuth: false,
     },
+    children: [
+      {
+        name: 'GlobalPOS',
+        path: 'proof-of-stake',
+        component: NotFound,
+      },
+      {
+        name: 'StakingCalculator',
+        path: 'staking-calculator',
+        component: NotFound,
+      },
+      {
+        name: 'ValidatorInfoTables',
+        path: '',
+        component: ValidatorsTable,
+      },
+      {
+        name: 'ValidatorComparison',
+        path: 'validator-compare',
+        component: NotFound,
+      },
+      {
+        name: 'ValidatorAI',
+        path: 'ai',
+        component: NotFound,
+      }
+    ]
   },
   {
     path: '/',
@@ -125,6 +159,27 @@ const routes = [
         name: 'ValidatorPublic',
         path: 'public-goods',
         component: ValidatorPublic,
+        children: [{
+          name: 'ValidatorInfrastructure',
+          path: 'infrastructure',
+          component: ValidatorInfrastructure,
+        },{
+          name: 'ValidatorCommunity',
+          path: 'community',
+          component: ValidatorCommunity,
+        },{
+          name: 'ValidatorMedia',
+          path: 'media',
+          component: ValidatorMedia,
+        },{
+          name: 'ValidatorTools',
+          path: 'tools',
+          component: ValidatorTools,
+        },{
+          name: 'ValidatorOther',
+          path: 'other',
+          component: ValidatorOther,
+        }]
       },
       {
         name: 'ValidatorGovernance',
@@ -178,8 +233,8 @@ const routes = [
   },
   {
     path: '/staking-calculator',
-    name: 'StakingCalculator',
-    component: ComponentLayout,
+    name: 'StakingCalculatorShortcut',
+    component: NotFound,
     meta: {
       title: 'Staking calculator',
       icon: CursorClickIcon,
