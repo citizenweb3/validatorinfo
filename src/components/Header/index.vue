@@ -10,28 +10,24 @@
         <p class="ml-1 text-inherit">
           Cosmos:
           <template v-if="cosmos">
-            <span v-if="cosmos.price_change_percentage_24h >= 0" class="text-apple no-wrap"
-              >{{ cosmos.price_change_percentage_24h }} %</span
-            >
-            <span v-else class="text-lust">{{ cosmos.price_change_percentage_24h }} %</span>
+            <span :class="{'text-apple': cosmos.price_change_percentage_24h >= 0, 'text-red': cosmos.price_change_percentage_24h <0} " class='no-wrap'
+              >{{ cosmos.price_change_percentage_24h }} %</span>
           </template>
         </p>
         <p class="text-inherit">
           ETH:
           <template v-if="eth">
-            <span v-if="eth.price_change_percentage_24h >= 0" class="text-apple no-wrap"
+            <span :class="{'text-apple': eth.price_change_percentage_24h >= 0, 'text-red': eth.price_change_percentage_24h <0} " class='no-wrap'
               >{{ eth.price_change_percentage_24h }} %</span
             >
-            <span v-else class="text-red">{{ eth.price_change_percentage_24h }} %</span>
           </template>
         </p>
         <p class="text-inherit">
           Polkadot:
           <template v-if="polkadot">
-            <span v-if="polkadot.price_change_percentage_24h >= 0" class="text-apple no-wrap">
+            <span :class="{'text-apple': polkadot.price_change_percentage_24h >= 0, 'text-red': polkadot.price_change_percentage_24h <0} " class='no-wrap'>
               {{ polkadot.price_change_percentage_24h }} %
             </span>
-            <span v-else class="text-red">{{ polkadot.price_change_percentage_24h }} %</span>
           </template>
         </p>
       </p>
