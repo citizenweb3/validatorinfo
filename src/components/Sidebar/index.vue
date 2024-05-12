@@ -60,7 +60,7 @@
                         alt=""
                       />
                       <img
-                        v-if="item.name === 'StakingCalculator'"
+                        v-if="item.name.includes('StakingCalculator')"
                         src="@/assets/icons/StakingIcon.svg"
                         alt=""
                       />

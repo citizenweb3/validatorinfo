@@ -1,32 +1,33 @@
 <template>
-  <div class="w-full mx-auto tabs-validator-info">
-    <el-tabs class="tabs" stretch v-model="activeName">
-      <el-tab-pane label="" class="tab-0">
-        <NotFound/>
-      </el-tab-pane>
-      <el-tab-pane class="tab-1">
-        <NotFound/>
-      </el-tab-pane>
-      <el-tab-pane class="tab-2">
-        <ValidatorsTable />
-      </el-tab-pane>
-      <el-tab-pane class="tab-3">
-        <NotFound/>
-      </el-tab-pane>
-      <el-tab-pane class="tab-4">
-        <NotFound/>
-      </el-tab-pane>
-    </el-tabs>
-  </div>
+  <RouteTabs :tabs='tabs' ref='routeTabsRef'></RouteTabs>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-// Table
-import ValidatorsTable from '../components/ValidatorsTable.vue'
-import NotFound from 'modules/pages/views/404.vue'
+import RouteTabs from 'components/RouteTabs/index.vue'
+import { onUpdated, ref } from 'vue'
+import { RouteTabsExpose } from 'components/RouteTabs/types'
+const routeTabsRef = ref<RouteTabsExpose>(null)
 
-const activeName = ref('valInfo')
+const tabs = [
+  {
+  routeName: 'GlobalPOS',
+  text: 'Global-POS'
+},{
+  routeName: 'StakingCalculator',
+  text: 'Staking Cal.'
+},{
+  routeName: 'ValidatorInfoTables',
+  text: 'Validator info'
+},{
+  routeName: 'ValidatorComparison',
+  text: 'Val. Comparison'
+},{
+  routeName: 'ValidatorAI',
+  text: 'AI'
+}]
+onUpdated(() => {
+  routeTabsRef.value?.onUpdatedHook();
+})
 </script>
 
 <style lang="scss">
@@ -52,8 +53,8 @@ const activeName = ref('valInfo')
     }
   }
 
-  #tab-0.is-active, #tab-1.is-active, 
-  #tab-2.is-active, #tab-3.is-active, 
+  #tab-0.is-active, #tab-1.is-active,
+  #tab-2.is-active, #tab-3.is-active,
   #tab-4.is-active {
     &::after {
       position: absolute;

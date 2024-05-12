@@ -1,4 +1,4 @@
-import { CursorClickIcon, HomeIcon, UserIcon, ColorSwatchIcon } from '@heroicons/vue/outline'
+import { CursorClickIcon, HomeIcon, UserIcon } from '@heroicons/vue/outline'
 
 const Login = () => import('modules/auth/views/login.vue')
 // const Register = () => import('modules/auth/views/register.vue')
@@ -9,12 +9,19 @@ const ValidatorInfo = () => import('modules/validators/views/ValidatorInfo.vue')
 const ShortcutTabs = () => import('modules/shortcutTabs/index.vue')
 const ValidatorsList = () => import('modules/validators/components/ValidatorsList.vue')
 const ValidatorProfilePage = () => import('modules/validatorProfile/index.vue')
-
+const ValidatorsTable = () => import('modules/validators/components/ValidatorsTable.vue')
 const ValidatorNetworksTable = () =>
   import('modules/validatorProfile/components/ValidatorNetworksTable.vue')
 const ValidatorRevenue = () => import('modules/validatorProfile/components/ValidatorRevenue.vue')
 const ValidatorMetrics = () => import('modules/validatorProfile/components/ValidatorMetrics.vue')
 const ValidatorPublic = () => import('modules/validatorProfile/components/ValidatorPublic.vue')
+
+const ValidatorInfrastructure = () => import('modules/validatorProfile/components/publicGood/ValidatorInfrastructure.vue')
+const ValidatorCommunity = () => import('modules/validatorProfile/components/publicGood/ValidatorCommunity.vue')
+const ValidatorMedia = () => import('modules/validatorProfile/components/publicGood/ValidatorMedia.vue')
+const ValidatorTools = () => import('modules/validatorProfile/components/publicGood/ValidatorTools.vue')
+const ValidatorOther = () => import('modules/validatorProfile/components/publicGood/ValidatorOther.vue')
+
 const ValidatorGovernance = () =>
   import('modules/validatorProfile/components/ValidatorGovernance.vue')
 
@@ -34,16 +41,44 @@ const AboutUsContacts = () => import('modules/aboutUs/components/Contacts.vue')
 const AboutUsPartners = () => import('modules/aboutUs/components/Partners.vue')
 const AboutUsPodcast = () => import('modules/aboutUs/components/Podcast.vue')
 
-const ComponentLayout = () => import('components/ComponentLayout/index.vue')
-
 const routes = [
   {
     path: '/',
+    redirect: () => { // default to info
+      return { name: 'ValidatorInfoTables' }
+    },
     component: ValidatorInfo,
     name: 'ValidatorInfo',
     meta: {
       requiresAuth: false,
     },
+    children: [
+      {
+        name: 'GlobalPOS',
+        path: 'proof-of-stake',
+        component: NotFound,
+      },
+      {
+        name: 'StakingCalculator',
+        path: 'staking-calculator',
+        component: NotFound,
+      },
+      {
+        name: 'ValidatorInfoTables',
+        path: 'validators-info',
+        component: ValidatorsTable,
+      },
+      {
+        name: 'ValidatorComparison',
+        path: 'validator-compare',
+        component: NotFound,
+      },
+      {
+        name: 'ValidatorAI',
+        path: 'ai',
+        component: NotFound,
+      }
+    ]
   },
   {
     path: '/',
@@ -87,7 +122,7 @@ const routes = [
     name: 'ValidatorProfilePage',
     component: ValidatorProfilePage,
     redirect: (to: any) => { // default to networks
-      return { path: 'networks', params: to.params.id }
+      return { name: 'ValidatorNetworksTable', params: to.params.id }
     },
     meta: {
       requiresAuth: false,
@@ -125,6 +160,31 @@ const routes = [
         name: 'ValidatorPublic',
         path: 'public-goods',
         component: ValidatorPublic,
+        redirect: () => { // default to info
+          return { name: 'ValidatorMedia' }
+        },
+        children: [{
+          name: 'ValidatorInfrastructure',
+          path: 'infrastructure',
+          component: ValidatorInfrastructure,
+        },{
+          name: 'ValidatorCommunity',
+          path: 'community',
+          component: ValidatorCommunity,
+        },{
+          name: 'ValidatorMedia',
+          path: 'media',
+          default: true,
+          component: ValidatorMedia,
+        },{
+          name: 'ValidatorTools',
+          path: 'tools',
+          component: ValidatorTools,
+        },{
+          name: 'ValidatorOther',
+          path: 'other',
+          component: ValidatorOther,
+        }]
       },
       {
         name: 'ValidatorGovernance',
@@ -146,7 +206,7 @@ const routes = [
       title: ':id',
     },
     redirect: (to: any) => { // default to info
-      return { path: 'info', params: to.params.id }
+      return { name: 'NetworkInfo', params: to.params.id }
     },
     children: [
       {
@@ -178,8 +238,8 @@ const routes = [
   },
   {
     path: '/staking-calculator',
-    name: 'StakingCalculator',
-    component: ComponentLayout,
+    name: 'StakingCalculatorShortcut',
+    component: NotFound,
     meta: {
       title: 'Staking calculator',
       icon: CursorClickIcon,
@@ -188,7 +248,7 @@ const routes = [
   },
   {
     path: '/library',
-    component: ComponentLayout,
+    component: NotFound,
     name: 'Library',
     meta: {
       title: 'Library',
@@ -201,7 +261,7 @@ const routes = [
     },
   },
   {
-    path: '/citizen-web3/info',
+    path: '/citizen-web3',
     component: AboutUs,
     name: 'AboutUs',
     meta: {
@@ -209,6 +269,9 @@ const routes = [
       icon: UserIcon,
       requiresAuth: false,
       parentPath: 'AboutUs',
+    },
+    redirect: () => { // default to info
+      return { name: 'AboutUsGeneral' }
     },
     children: [
       {

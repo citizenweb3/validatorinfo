@@ -1,15 +1,30 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import Button from 'components/Button/index.vue'
+import { ref, onUpdated } from 'vue'
+import { RouteTabsExpose } from 'components/RouteTabs/types'
+import RouteTabs from 'components/RouteTabs/index.vue'
 import CentralLogo from 'components/CentralLogo/index.vue'
 
-const router = useRouter()
+const routeTabsRef = ref<RouteTabsExpose>(null)
 
-const activeButtonIndex = computed(() => {
-  return ['Metrics', 'NetworksList', 'ValidatorsList'].indexOf(
-    <string>router.currentRoute.value.name,
-  )
+const tabs = [
+  {
+    routeName: 'Metrics',
+    text: 'Metrics'
+  },{
+    routeName: 'NetworksList',
+    text: 'Networks'
+  },{
+    routeName: 'ValidatorsList',
+    text: 'Validators'
+  },{
+    routeName: 'NotFound',
+    text: '...'
+  },{
+    routeName: 'NotFound',
+    text: '...'
+  }]
+onUpdated(() => {
+  routeTabsRef.value?.onUpdatedHook();
 })
 </script>
 
@@ -18,29 +33,8 @@ const activeButtonIndex = computed(() => {
     <div class="title">Helpful Information</div>
     <CentralLogo class="mx-auto" />
   </div>
-  <div class="flex justify-between mt-10">
-    <router-link :to="{ name: 'Metrics' }">
-      <Button :text="'Metrics'" :tabs="true" :index="0" :active-button-index="activeButtonIndex" />
-    </router-link>
-    <router-link :to="{ name: 'NetworksList' }">
-      <Button :text="'Networks'" :tabs="true" :index="1" :active-button-index="activeButtonIndex" />
-    </router-link>
-    <router-link :to="{ name: 'ValidatorsList' }">
-      <Button
-        :text="'Validators'"
-        :tabs="true"
-        :index="2"
-        :active-button-index="activeButtonIndex"
-      />
-    </router-link>
-    <router-link :to="{ name: 'NotFound' }" @click.prevent.native="handleClick(3)">
-      <Button :text="'...'" :tabs="true" :index="3" :active-button-index="activeButtonIndex" />
-    </router-link>
-    <router-link :to="{ name: 'NotFound' }" @click.prevent.native="handleClick(4)">
-      <Button :text="'...'" :tabs="true" :index="4" :active-button-index="activeButtonIndex" />
-    </router-link>
-  </div>
-  <router-view></router-view>
+  <RouteTabs :tabs='tabs' ref='routeTabsRef'></RouteTabs>
+
 </template>
 
 <style lang="scss">

@@ -1,11 +1,7 @@
 <template>
   <div class="w-full">
     <el-breadcrumb separator="" class="w-fit flex align-bottom items-center border-bottom">
-      <el-breadcrumb-item v-for="route in fullRouteResolved" :to="route.href" :key="route">
-        <div class="inline-block items-center cursor-pointer text-h1 text-white hover:text-white">
-          <span class="capitalize">{{ route.title }}</span>
-        </div>
-      </el-breadcrumb-item>
+      <el-breadcrumb-item v-for="route in fullRouteResolved" :to="route.href" :key="route" />
     </el-breadcrumb>
   </div>
 </template>
