@@ -1,33 +1,60 @@
+html {
+
+    font-size: 4px;
+
+    @media screen(xs) {
+        font-size: 6px;
+    }
+    @media screen(sm) {
+        font-size: 8px;
+    }
+    @media screen(md) {
+        font-size: 10px;
+    }
+    @media screen(lg) {
+        font-size: 12px;
+    }
+    @media screen(xl) {
+        font-size: 14px;
+    }
+    @media screen(2xl) {
+        font-size: 16px;
+    }
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+    --color-background: #1E1E1E;
+    --color-background-stroke: #3E3E3E;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html.light {
+    --color-background: #F6F5F2;
+    --color-background-stroke: #D9D9D9;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-shadowed {
+        text-shadow: 0 0 .5rem #F3B101,0 0 .5rem #F3B101,0 0 2rem #F3B101;
+    }
+
+    .border-hover {
+        @apply relative shadow after:absolute after:-bottom-1.5 after:left-0 after:h-1.5 after:w-full after:border after:border-t-0 after:border-secondary after:bg-bgSt after:opacity-50 hover:fill-highlight hover:stroke-highlight hover:text-highlight hover:after:block active:top-1 active:after:hidden dark:fill-white dark:stroke-white dark:hover:fill-highlight dark:hover:stroke-highlight dark:hover:text-highlight
+    }
+
+    .border-hover-secondary {
+        @apply border-hover after:border-secondary from-primary to-secondary
+    }
+
+    .border-hover-primary {
+        @apply border-hover after:border-primary from-secondary to-primary
+    }
+
+    .border-hover-highlight {
+        @apply border-hover after:border-highlight from-highlight to-highlight
+    }
 }
