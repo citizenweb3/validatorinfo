@@ -8,7 +8,7 @@
         <div class="flex gap-7 progress items-center">
           <el-link
             :underline="false"
-            class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
+            class="card-avatar-profile block flex-none h-12 w-12 border-[0.2px] rounded-full"
           >
             <!--            <el-avatar-->
             <!--              :size="!isHover ? 48 : 48"-->
@@ -27,7 +27,7 @@
         <div class="flex gap-7 progress items-center">
           <el-link
             :underline="false"
-            class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
+            class="card-avatar-profile block flex-none h-12 w-12 border-[0.2px] rounded-full"
           >
             <!--            <el-avatar-->
             <!--              :size="!isHover ? 48 : 48"-->
@@ -46,7 +46,7 @@
         <div class="flex gap-7 progress items-center">
           <el-link
             :underline="false"
-            class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
+            class="card-avatar-profile block flex-none h-12 w-12 border-[0.2px] rounded-full"
           >
             <!--            <el-avatar-->
             <!--              :size="!isHover ? 48 : 48"-->
@@ -65,7 +65,7 @@
         <div class="flex gap-7 progress items-center">
           <el-link
             :underline="false"
-            class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
+            class="card-avatar-profile block flex-none h-12 w-12 border-[0.2px] rounded-full"
           >
             <!--            <el-avatar-->
             <!--              :size="!isHover ? 48 : 48"-->
@@ -84,7 +84,7 @@
         <div class="flex gap-7 progress items-center">
           <el-link
             :underline="false"
-            class="card-avatar-profile block flex-none h-12 w-12 overflow-hidden border-[0.2px] rounded-full"
+            class="card-avatar-profile block flex-none h-12 w-12 border-[0.2px] rounded-full"
           >
             <!--            <el-avatar-->
             <!--              :size="!isHover ? 48 : 48"-->

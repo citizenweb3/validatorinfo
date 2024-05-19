@@ -1,10 +1,7 @@
 <template>
   <Header />
   <SubHeader />
-  <div
-    class="h-screen overflow-hidden flex w-full dark-theme pr-10"
-    v-loading.fullscreen.lock="loading"
-  >
+  <div class="h-screen flex w-full dark-theme pr-10" v-loading.fullscreen.lock="loading">
     <sidebar />
     <div class="main-content flex flex-col w-full overflow-auto main-content-dark">
       <div class="w-full h-38 relative bg-transparent border-none">

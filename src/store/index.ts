@@ -5,6 +5,7 @@ import { defineStore } from 'pinia'
 import { useValidatorProfileStore } from 'modules/validatorProfile/store';
 import { useNetworksStore } from 'modules/networks/store';
 import { useAboutUsStore } from 'modules/aboutUs/store'
+import { useCalculatorStore } from 'modules/stakingCalculator/store';
 
 export const globalStore = defineStore('global', {
   state: () => ({
@@ -25,6 +26,7 @@ const useStore = () => ({
   auth: useAuthStore(),
   global: globalStore(),
   aboutUs: useAboutUsStore(),
+  calculate: useCalculatorStore(),
 });
 
 export default useStore;

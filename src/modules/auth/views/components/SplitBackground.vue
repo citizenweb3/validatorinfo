@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute pointer-events-none overflow-hidden w-full top-auto bottom-0 inset-x-0">
+  <div class="absolute pointer-events-none w-full top-auto bottom-0 inset-x-0">
     <svg
       x="0"
       y="0"
