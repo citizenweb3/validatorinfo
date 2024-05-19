@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between relative items-center">
+  <div class="flex justify-between relative items-center mb-10">
     <router-link :to="{ name: 'ValidatorInfo' }">
       <Button img="@/assets/logos/validatorInfoLogo.png" text="Home" />
     </router-link>

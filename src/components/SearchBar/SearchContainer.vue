@@ -2,7 +2,7 @@
   <div class="flex items-center shadow-sm w-full">
     <div class="w-full items-center justify-between">
       <div class="w-full flex basis-auto items-center">
-        <div class="w-full overflow-hidden">
+        <div class="w-full">
           <SearchBar @close-search="setSearchOpen(false)" />
         </div>
         <div class="flex flex-1 items-center text-slate-50">

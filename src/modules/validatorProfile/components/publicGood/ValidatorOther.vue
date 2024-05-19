@@ -1,11 +1,9 @@
 <template>
-  <NotFound/>
+  <NotFound />
 </template>
 
-<script setup lang='ts'>
-import NotFound from 'modules/pages/views/404.vue'
+<script setup lang="ts">
+import NotFound from 'modules/notFound/index.vue'
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

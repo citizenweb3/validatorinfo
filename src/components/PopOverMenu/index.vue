@@ -3,7 +3,7 @@
     <template #reference>
       <Button :text="text" @click="visible = !visible" round />
     </template>
-    <div class="w-full m-0 flex h-auto" @click="closeModal">
+    <div class="m-0 flex h-auto w-auto" @click="closeModal">
       <div class="flex flex-wrap m-0 relative">
         <div v-html="htmlContent"></div>
         <div class="close-icon absolute right-1" @click.stop.prevent="closeModal">

@@ -4,9 +4,9 @@
 
 html {
   font-size: 16px;
-  //font-size: 11px;
   body {
     font-size: 62.5%;
+    min-height: 100vh;
   }
 }
 
@@ -18,7 +18,7 @@ html {
   }
 }
 .no-wrap {
-  text-wrap:nowrap;
+  text-wrap: nowrap;
 }
 
 .d-none {
@@ -35,16 +35,16 @@ html {
   transition: text-shadow 0.3s ease;
 
   &:hover {
-    text-shadow: 0 0 10px gold;
+    text-shadow: 0 0 10px theme('colors.americanYellow');
   }
 }
 
 .active-text:active {
-  color: gold;
+  color: theme('colors.americanYellow');
 }
 
 svg:hover {
-  filter: drop-shadow(0 0 5px gold);
+  filter: drop-shadow(0 0 5px theme('colors.americanYellow'));
 }
 
 .text-green {

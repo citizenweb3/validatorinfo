@@ -1,5 +1,5 @@
 <template>
-  <RouteTabs :tabs='tabs' ref='routeTabsRef'></RouteTabs>
+  <RouteTabs :tabs="tabs" ref="routeTabsRef"></RouteTabs>
 </template>
 
 <script lang="ts" setup>
@@ -10,23 +10,28 @@ const routeTabsRef = ref<RouteTabsExpose>(null)
 
 const tabs = [
   {
-  routeName: 'GlobalPOS',
-  text: 'Global-POS'
-},{
-  routeName: 'StakingCalculator',
-  text: 'Staking Cal.'
-},{
-  routeName: 'ValidatorInfoTables',
-  text: 'Validator info'
-},{
-  routeName: 'ValidatorComparison',
-  text: 'Val. Comparison'
-},{
-  routeName: 'ValidatorAI',
-  text: 'AI'
-}]
+    routeName: 'StakingCalculator',
+    text: 'Staking Cal.',
+  },
+  {
+    routeName: 'ValidatorComparison',
+    text: 'Val. Comparison',
+  },
+  {
+    routeName: 'ValidatorInfoTables',
+    text: 'Validator info',
+  },
+  {
+    routeName: 'Rumors',
+    text: 'Rumors',
+  },
+  {
+    routeName: 'GlobalPOS',
+    text: 'Global-POS',
+  },
+]
 onUpdated(() => {
-  routeTabsRef.value?.onUpdatedHook();
+  routeTabsRef.value?.onUpdatedHook()
 })
 </script>
 
@@ -37,13 +42,17 @@ onUpdated(() => {
   }
   .el-tabs__item {
     position: relative;
-    border-bottom: 1px solid #3E3E3E;
-    border-left: 1px solid #3E3E3E;
+    border-bottom: 1px solid #3e3e3e;
+    border-left: 1px solid #3e3e3e;
     color: white;
     font-size: 0.95rem;
     background-color: #1e1e1e;
   }
-  #tab-0, #tab-1, #tab-2, #tab-3, #tab-4 {
+  #tab-0,
+  #tab-1,
+  #tab-2,
+  #tab-3,
+  #tab-4 {
     &::before {
       position: absolute;
       top: 3px;
@@ -53,8 +62,10 @@ onUpdated(() => {
     }
   }
 
-  #tab-0.is-active, #tab-1.is-active,
-  #tab-2.is-active, #tab-3.is-active,
+  #tab-0.is-active,
+  #tab-1.is-active,
+  #tab-2.is-active,
+  #tab-3.is-active,
   #tab-4.is-active {
     &::after {
       position: absolute;
@@ -69,70 +80,63 @@ onUpdated(() => {
   }
 
   .el-tabs__active-bar {
-    background-color: transparent!important;
+    background-color: transparent !important;
   }
 
   /** Tabs Labels **/
   #tab-0 {
     &::before {
-      content: "Global-POS";
+      content: 'Global-POS';
     }
   }
   #tab-0.is-active {
     &::after {
-      content: "Global-POS";
+      content: 'Global-POS';
     }
   }
 
-
   #tab-1 {
     &::before {
-      content: "Staking Cal.";
+      content: 'Staking Cal.';
     }
   }
   #tab-1.is-active {
     &::after {
-      content: "Staking Cal.";
+      content: 'Staking Cal.';
     }
   }
 
-
   #tab-2 {
     &::before {
-      content: "Validator info";
+      content: 'Validator info';
     }
   }
   #tab-2.is-active {
     &::after {
-      content: "Validator info";
+      content: 'Validator info';
     }
   }
 
-
   #tab-3 {
     &::before {
-      content: "Val. Comparison";
+      content: 'Val. Comparison';
     }
   }
   #tab-3.is-active {
     &::after {
-      content: "Val. Comparison";
+      content: 'Val. Comparison';
     }
   }
 
-
   #tab-4 {
     &::before {
-      content: "AI";
+      content: 'AI';
     }
   }
   #tab-4.is-active {
     &::after {
-      content: "AI";
+      content: 'AI';
     }
   }
-
 }
-
-
 </style>

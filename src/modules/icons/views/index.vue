@@ -46,31 +46,31 @@ export default defineComponent({
 body {
   .el-button {
     @apply bg-blue-60
-    py-9 
+    py-9
     px-6
-    flex 
-    w-full 
-    text-white 
-    text-base 
-    font-normal 
-    leading-5 
-    rounded-md 
+    flex
+    w-full
+    text-white
+    text-base
+    font-normal
+    leading-5
+    rounded-md
     border-transparent
-    text-left 
-    items-center 
-    align-middle 
-    no-underline 
-    my-2 
-    hover:border-transparent 
+    text-left
+    items-center
+    align-middle
+    no-underline
+    my-2
+    hover:border-transparent
     focus:outline
     focus:outline-2
-    focus:outline-webkit 
+    focus:outline-webkit
     shadow-none
     drop-shadow-none
     translate-x-0
     translate-y-0
     hover:border-opacity-95
-    hover:bg-dark 
+    hover:bg-dark
     hover:text-white
     hover:shadow-medium
     hover:drop-shadow
@@ -80,7 +80,7 @@ body {
     @apply w-full;
   }
   .el-button [class*='el-icon'] + span {
-    @apply w-full inline-block text-sm text-left font-normal leading-6 overflow-hidden text-ellipsis whitespace-nowrap;
+    @apply w-full inline-block text-sm text-left font-normal leading-6 text-ellipsis whitespace-nowrap;
   }
   .el-button .el-icon {
     @apply text-2xl text-indigo-410 inline-block -ml-2 mr-0.5 #{!important};

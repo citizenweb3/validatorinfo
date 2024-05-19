@@ -1,26 +1,21 @@
 <template>
   <div class="wrapper">
     <div class="links">
-      <a href="https://www.citizenweb3.com/"
-        ><icon-base icon-name="citizen" width="40" height="40"><icon-citizen /></icon-base
-      ></a>
-      <a href="https://github.com/citizenweb3" class="mx-2">
-        <icon-base icon-name="github" width="40" height="40"><icon-github /></icon-base
-      ></a>
-      <a href="https://twitter.com/citizen_web3"
-        ><icon-base icon-name="x" width="40" height="40"><icon-x /></icon-base
-      ></a>
+      <a class="icon" href="https://www.citizenweb3.com/">
+        <img height="40px" width="40px" src="@/assets/logos/citizen.png" alt="" />
+      </a>
+      <a href="https://github.com/citizenweb3" class="mx-2 icon">
+        <img src="@/assets/icons/github-mark-white.svg" alt="" />
+      </a>
+      <a class="circle icon x" href="https://twitter.com/therealvalinfo">
+        <img src="@/assets/icons/x.svg" alt="" />
+      </a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
-import XIcon from 'components/Icons/IconX.vue'
-import GithubIcon from 'components/Icons/IconGithub.vue'
-import CitizenIcon from 'components/Icons/IconCitizen.vue'
-import IconCitizen from 'components/Icons/IconCitizen.vue'
 
 export default defineComponent({
   name: 'Footer',
@@ -41,5 +36,16 @@ export default defineComponent({
 .links {
   display: flex;
   flex-direction: row;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+}
+.circle {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  padding-left: 3px;
+  padding-top: 3px;
 }
 </style>
