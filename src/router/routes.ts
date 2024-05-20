@@ -128,7 +128,6 @@ const routes = [
     name: 'ValidatorProfilePage',
     component: ValidatorProfilePage,
     redirect: (to: any) => {
-      // default to networks
       return { name: 'ValidatorNetworksTable', params: to.params.id }
     },
     meta: {
