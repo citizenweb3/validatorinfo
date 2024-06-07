@@ -1,5 +1,5 @@
 <template>
-  <img class="background-container" src="src/assets/images/404.png" />
+  <img class="background-container" src="/src/assets/images/404.png" />
 </template>
 
 <script>

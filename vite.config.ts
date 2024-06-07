@@ -29,6 +29,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      external: ['src/assets/images/404.png'],
       plugins: [visualizer()],
       output: {
         manualChunks(id) {
