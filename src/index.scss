@@ -7,139 +7,16 @@ html {
   body {
     font-size: 62.5%;
     min-height: 100vh;
+    background-color: theme('colors.eerieBlack');
+  }
+  a {
+    color: theme('colors.americanYellow');
   }
 }
 
 @layer base {
   * {
-    /*font-family: 'Open Sans', sans-serif; */
     font-family: 'Kode Mono', monospace;
     font-optical-sizing: auto;
-  }
-}
-.no-wrap {
-  text-wrap: nowrap;
-}
-
-.d-none {
-  display: none;
-}
-
-.border-gradient-apple-to-lust {
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(180deg, theme('colors.lust'), theme('colors.apple'));
-}
-
-.hover {
-  transition: text-shadow 0.3s ease;
-
-  &:hover {
-    text-shadow: 0 0 10px theme('colors.americanYellow');
-  }
-}
-
-.active-text:active {
-  color: theme('colors.americanYellow');
-}
-
-svg:hover {
-  filter: drop-shadow(0 0 5px theme('colors.americanYellow'));
-}
-
-.text-green {
-  color: theme('colors.apple');
-}
-
-.text-red {
-  color: theme('colors.lust');
-}
-
-.text-yellow {
-  color: theme('colors.americanYellow');
-}
-
-.capitalize {
-  text-transform: capitalize !important;
-}
-
-.text-value-margins {
-  @apply mt-2;
-  @apply ml-5;
-}
-.text-value {
-  @apply text-white;
-  @apply text-value-margins;
-}
-
-/** Theme Dark **/
-.dark-theme-header {
-  background-color: #1e1e1e;
-  color: white;
-}
-
-.title {
-  color: theme('colors.americanYellow');
-  font-size: 24px;
-  padding-bottom: 0.25px;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
-  border-bottom: 1px solid theme('colors.blackOlive');
-  width: fit-content;
-}
-.title-secondary {
-  font-size: 18px;
-}
-.title-smallest {
-  font-size: 14px;
-}
-
-.contentItem {
-  border: none;
-
-  &:not(:first-of-type) {
-    border-top: 1px solid theme('colors.blackOlive');
-  }
-}
-
-.border-bottom {
-  border-bottom: 1px solid theme('colors.blackOlive');
-}
-
-.border-left {
-  border-left: 1px solid theme('colors.blackOlive');
-}
-
-.border-right {
-  border-right: 1px solid theme('colors.blackOlive');
-}
-
-.h-16rem {
-  height: 16rem !important;
-}
-
-.h-32rem {
-  height: 32rem !important;
-}
-
-/**
-Tabs
- */
-.tabs .el-tabs__item {
-  @apply bg-blackOlive font-main text-white p-1;
-
-  &.is-active,
-  &.router-link-active {
-    @apply bg-gradient-to-t from-green-500 to-red-500 via-yellow-500 p-1;
-  }
-}
-
-.tabs-routes {
-  background-color: theme('colors.blackOlive');
-  display: flex;
-  justify-content: space-between;
-  .el-tabs__item {
-    display: flex;
-    min-width: 257px;
   }
 }

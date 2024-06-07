@@ -1,11 +1,9 @@
-import vueEmitter from 'core/emitter'
 import { createApp, h } from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import { createPinia } from 'pinia'
 import ElementPlus from 'element-plus'
 import App from './App.vue'
-import AppComponents from './components'
 import VueSweetAlert2 from 'vue-sweetalert2'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,16 +23,6 @@ const createNewApp = () => {
   })
   library.add(fas, fab)
 
-  app.component('font-awesome-icon', FontAwesomeIcon)
-  app.provide('eventHub', vueEmitter)
-  app.use(router)
-  app.use(ElementPlus)
-  app.use(AppComponents)
-  app.use(createPinia())
-  app.use(VueSweetAlert2)
-  app.use(VueAxios, axios)
-  app.provide('axios', app.config.globalProperties.axios)
-  app.directive('status-color', statusColorDirective);
   app.mount('#app')
   app.config.performance = true
 }
