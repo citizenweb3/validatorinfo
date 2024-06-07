@@ -28,6 +28,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "assets/*": [
+        "src/assets/*"
+      ],
       "core/*": [
         "src/core/*"
       ],

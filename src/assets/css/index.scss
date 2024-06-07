@@ -1,4 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
 body {
   margin: 0;
-  overflow: hidden;
+  height: 100%;
+  padding: 0;
+  overflow-x: hidden;
 }

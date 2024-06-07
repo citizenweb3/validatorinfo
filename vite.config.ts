@@ -5,9 +5,10 @@ const { visualizer } = require('rollup-plugin-visualizer')
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import { fileURLToPath } from 'url'
 
 const resolvePath = (dir: string) => {
-  return path.resolve(__dirname, 'src', dir)
+  return fileURLToPath(new URL(`./src/${dir}`, import.meta.url))
 }
 
 export default defineConfig({
@@ -23,22 +24,7 @@ export default defineConfig({
   resolve: {
     alias: {
       assets: resolvePath('assets'),
-      core: resolvePath('core'),
-      store: resolvePath('store'),
-      modules: resolvePath('modules'),
-      layouts: resolvePath('layouts'),
-      router: resolvePath('router'),
-      components: resolvePath('components'),
-      utils: resolvePath('utils'),
-      mixins: resolvePath('mixins'),
       '@': path.resolve(__dirname, './src'),
-    },
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use "assets/css/element/index.scss" as *;`,
-      },
     },
   },
   build: {
@@ -66,5 +52,5 @@ export default defineConfig({
     },
     sourcemap: true,
   },
-  optimizeDeps: {}
+  optimizeDeps: {},
 })

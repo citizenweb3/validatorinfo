@@ -110,3 +110,4 @@ stats.html
 *.env.*
 !default.env
 components.d.ts
+.idea/
