@@ -27,11 +27,9 @@ export default {
 <style>
 .app {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: fit-content(70%) fit-content(80%);
   gap: 20px;
   position: relative;
-  /* width: 100%; */
   align-items: center;
 }
 
