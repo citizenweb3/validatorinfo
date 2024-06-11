@@ -1,23 +1,14 @@
-import { StaticImageData } from 'next/image';
 import { FC } from 'react';
 
+import mainTabs from '@/components/common/tabs/main-tabs';
 import TabListItem from '@/components/common/tabs/tab-list-item';
 
-export interface TabOptions {
-  name: string;
-  href: string;
-  icon?: StaticImageData;
-  isSelected?: boolean;
-}
+interface OwnProps {}
 
-interface OwnProps {
-  list: TabOptions[];
-}
-
-const TabList: FC<OwnProps> = ({ list }) => {
+const TabList: FC<OwnProps> = () => {
   return (
     <div className="flex flex-row space-x-6">
-      {list.map((item) => (
+      {mainTabs.map((item) => (
         <TabListItem key={item.href} item={item} />
       ))}
     </div>

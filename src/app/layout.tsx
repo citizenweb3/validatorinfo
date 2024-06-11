@@ -3,6 +3,8 @@ import { ThemeProvider } from 'next-themes';
 import { DotGothic16 } from 'next/font/google';
 import localFont from 'next/font/local';
 
+import TabList from '@/components/common/tabs/tab-list';
+import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
 
@@ -39,12 +41,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${squarified.variable} ${retroGaming.variable} ${dotGothic.variable}`}>
-      <body className={`${squarified.className} mx-10 bg-background text-xs tracking-widest`}>
+      <body className={`${squarified.className} mx-10 min-h-screen bg-background text-xs tracking-widest`}>
         <ThemeProvider defaultTheme="dark" attribute="class">
-          <Header />
-          <div className="mt-4 flex flex-row">
-            <NavigationBar />
-            <div className="ml-8 flex flex-grow">{children}</div>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <div className="mt-4 flex flex-grow flex-row">
+              <NavigationBar />
+              <div className="ml-8 flex flex-grow">
+                <div className="w-full">
+                  <TabList />
+                  <div className="mt-6">{children}</div>
+                </div>
+              </div>
+            </div>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

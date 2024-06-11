@@ -7,7 +7,7 @@ interface OwnProps {}
 
 const HeaderActionButtons: FC<OwnProps> = ({}) => {
   return (
-    <div className="mt-3 flex h-6 flex-row items-center space-x-8">
+    <div className="mt-3 flex h-6 flex-row items-center justify-center space-x-8">
       <Button className="border-hover-highlight bg-gradient-to-b !from-highlight !to-highlight">
         <Image src="/img/icons/rabbit.png" alt="AI" width={24} height={24} className="h-6 w-6" />
       </Button>
