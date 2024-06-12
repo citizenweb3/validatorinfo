@@ -1,10 +1,11 @@
+import Calculator from '@/app/calculator/calculator';
 import PageTitle from '@/components/common/page-title';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       <PageTitle text="Staking Calculator" />
-      <div className="mt-6 pl-4 pr-20 text-base">
+      <div className="mt-6 border-b border-bgSt pb-5 pl-4 pr-20 text-base">
         What is Lorem Ipsum?
         <br />
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
@@ -12,6 +13,7 @@ export default function Home() {
         a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
         remaining essentially unchanged.
       </div>
+      <Calculator />
     </div>
   );
 }

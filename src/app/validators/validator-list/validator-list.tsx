@@ -8,34 +8,9 @@ import ValidatorListFilters from '@/app/validators/validator-list/validator-list
 import ValidatorListHeaderItem from '@/app/validators/validator-list/validator-list-header-item';
 import ValidatorListItem from '@/app/validators/validator-list/validator-list-item/validator-list-item';
 import ValidatorListPagination from '@/app/validators/validator-list/validator-list-pagination';
+import { ValidatorItem } from '@/types';
 
 interface OwnProps {}
-
-export interface ValidatorChain {
-  id: number;
-  name: string;
-  icon: string;
-}
-
-export interface ValidatorLinks {
-  github?: string;
-  x?: string;
-}
-
-export interface ValidatorItem {
-  id: number;
-  icon?: string;
-  name: string;
-  isFavorite?: boolean;
-  ecosystems: string[];
-  links: ValidatorLinks;
-  battery?: number;
-  scores: { technical?: number; social?: number; governance?: number; user?: number };
-  tvs: {
-    number: number;
-  };
-  chains: ValidatorChain[];
-}
 
 const ValidatorList: FC<OwnProps> = ({}) => {
   const [validators, setValidators] = useState<ValidatorItem[]>([]);

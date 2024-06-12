@@ -1,6 +1,6 @@
-import { ValidatorItem } from '@/app/validators/validator-list/validator-list';
+import { ValidatorItem } from '@/types';
 
-export const getValidators = async (chains: string[]): Promise<ValidatorItem[]> => {
+export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]> => {
   const vals = [
     {
       id: 0,
@@ -58,7 +58,7 @@ export const getValidators = async (chains: string[]): Promise<ValidatorItem[]> 
     },
   ];
 
-  if (chains.length) {
+  if (chains?.length) {
     return vals.filter((v) => v.ecosystems.some((e: string) => chains.indexOf(e) !== -1));
   }
 
