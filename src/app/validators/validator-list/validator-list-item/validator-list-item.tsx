@@ -2,13 +2,13 @@
 
 import { FC } from 'react';
 
-import { ValidatorItem } from '@/app/validators/validator-list/validator-list';
 import ValidatorListItemAvatar from '@/app/validators/validator-list/validator-list-item/validator-list-item-avatar';
 import ValidatorListItemBattery from '@/app/validators/validator-list/validator-list-item/validator-list-item-battery';
 import ValidatorListItemChains from '@/app/validators/validator-list/validator-list-item/validator-list-item-chains';
 import ValidatorListItemFavorite from '@/app/validators/validator-list/validator-list-item/validator-list-item-favorite';
 import ValidatorListItemLinks from '@/app/validators/validator-list/validator-list-item/validator-list-item-links';
 import ValidatorListItemTVS from '@/app/validators/validator-list/validator-list-item/validator-list-item-tvs';
+import { ValidatorItem } from '@/types';
 
 interface OwnProps {
   validator: ValidatorItem;

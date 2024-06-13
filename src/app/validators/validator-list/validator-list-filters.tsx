@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import { FC } from 'react';
 
 import icons from '@/components/icons';
 
-interface OwnProps {}
+interface OwnProps {
+  chains: string[];
+}
 
 const filterItems = [
   { value: 'cosmos', title: 'Cosmos' },
@@ -15,10 +16,7 @@ const filterItems = [
   { value: 'avalanche', title: 'Avalanche' },
 ];
 
-const ValidatorListFilters: FC<OwnProps> = ({}) => {
-  const searchParams = useSearchParams();
-  const chains = searchParams.getAll('chains') ?? [];
-
+const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
   return (
     <div className="flex space-x-2">
       <div className="flex flex-row items-center space-x-1  border-b border-bgSt px-4">

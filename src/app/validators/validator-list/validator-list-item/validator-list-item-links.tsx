@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { ValidatorLinks } from '@/app/validators/validator-list/validator-list';
 import icons from '@/components/icons';
+import { ValidatorLinks } from '@/types';
 
 interface OwnProps {
   validatorId: number;

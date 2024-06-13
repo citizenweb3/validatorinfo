@@ -2,8 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
-import { ValidatorChain } from '@/app/validators/validator-list/validator-list';
 import BaseModal from '@/components/common/modal/base-modal';
+import { ValidatorChain } from '@/types';
 
 interface OwnProps {
   chains: ValidatorChain[];

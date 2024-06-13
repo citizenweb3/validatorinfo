@@ -32,6 +32,7 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange }) => {
         <div className="space-y-1 text-nowrap text-base">
           {list.map((item) => (
             <div
+              key={item.value}
               onClick={() => handleChange(item.value)}
               className={`${item.value === selected ? 'text-highlight' : ''} cursor-pointer hover:text-highlight`}
             >

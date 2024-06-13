@@ -1,32 +1,21 @@
-'use client';
-
-import { useSearchParams } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 
 import { getValidators } from '@/actions/validators';
 import ValidatorListFilters from '@/app/validators/validator-list/validator-list-filters';
 import ValidatorListHeaderItem from '@/app/validators/validator-list/validator-list-header-item';
 import ValidatorListItem from '@/app/validators/validator-list/validator-list-item/validator-list-item';
 import ValidatorListPagination from '@/app/validators/validator-list/validator-list-pagination';
-import { ValidatorItem } from '@/types';
 
-interface OwnProps {}
+interface OwnProps {
+  chains: string[];
+}
 
-const ValidatorList: FC<OwnProps> = ({}) => {
-  const [validators, setValidators] = useState<ValidatorItem[]>([]);
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const init = async () => {
-      const val = await getValidators(searchParams.getAll('chains') ?? []);
-      setValidators(val);
-    };
-    init();
-  }, [searchParams]);
+const ValidatorList: FC<OwnProps> = async ({ chains = [] }) => {
+  const validators = await getValidators(chains);
 
   return (
     <div>
-      <ValidatorListFilters />
+      <ValidatorListFilters chains={chains} />
       {validators.length === 0 ? (
         <div className="mt-6 text-base">No validators found, try to change filters!</div>
       ) : (
