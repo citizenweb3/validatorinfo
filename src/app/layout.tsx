@@ -3,7 +3,6 @@ import { ThemeProvider } from 'next-themes';
 import { DotGothic16 } from 'next/font/google';
 import localFont from 'next/font/local';
 
-import TabList from '@/components/common/tabs/tab-list';
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
@@ -49,8 +48,7 @@ export default function RootLayout({
               <NavigationBar />
               <div className="ml-8 flex flex-grow">
                 <div className="w-full">
-                  <TabList />
-                  <div className="mt-6">{children}</div>
+                  <div>{children}</div>
                 </div>
               </div>
             </div>

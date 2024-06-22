@@ -1,14 +1,16 @@
 import { FC } from 'react';
 
-import mainTabs from '@/components/common/tabs/main-tabs';
 import TabListItem from '@/components/common/tabs/tab-list-item';
+import { TabOptions } from '@/components/common/tabs/tabs-data';
 
-interface OwnProps {}
+interface OwnProps {
+  tabs: TabOptions[];
+}
 
-const TabList: FC<OwnProps> = () => {
+const TabList: FC<OwnProps> = ({ tabs }) => {
   return (
-    <div className="flex flex-row space-x-6">
-      {mainTabs.map((item) => (
+    <div className="mb-6 flex flex-row space-x-6">
+      {tabs.map((item) => (
         <TabListItem key={item.href} item={item} />
       ))}
     </div>

@@ -14,7 +14,8 @@
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.4",
-    "tailwind-scrollbar": "^3.1.0"
+    "tailwind-scrollbar": "^3.1.0",
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

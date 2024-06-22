@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { FC } from 'react';
 
-import { TabOptions } from '@/components/common/tabs/main-tabs';
+import { TabOptions } from '@/components/common/tabs/tabs-data';
 
 interface OwnProps {
   item: TabOptions;

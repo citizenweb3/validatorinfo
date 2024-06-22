@@ -1,4 +1,6 @@
 import ValidatorList from '@/app/validators/validator-list/validator-list';
+import TabList from '@/components/common/tabs/tab-list';
+import { validatorTabs } from '@/components/common/tabs/tabs-data';
 
 export default function Home({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
   const chains: string[] = !searchParams.chains
@@ -8,6 +10,7 @@ export default function Home({ searchParams }: { searchParams: { [key: string]: 
       : searchParams.chains;
   return (
     <div>
+      <TabList tabs={validatorTabs} />
       <ValidatorList chains={chains} />
     </div>
   );

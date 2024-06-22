@@ -28,7 +28,7 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange }) => {
         onClick={() => setIsModalOpened(true)}
         className="-mt-1 h-8 min-h-8 w-8 min-w-8 cursor-pointer bg-[url('/img/icons/plus.svg')] bg-contain hover:bg-[url('/img/icons/plus-h.svg')]"
       />
-      <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)}>
+      <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="right-0 top-0">
         <div className="space-y-1 text-nowrap text-base">
           {list.map((item) => (
             <div

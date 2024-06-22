@@ -2,17 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
-import { TabOptions } from '@/components/common/tabs/main-tabs';
+import { TabOptions } from '@/components/common/tabs/tabs-data';
 
 interface OwnProps {
   item: TabOptions;
 }
 const TabListItem: FC<OwnProps> = ({ item: { name, href, icon } }) => {
-  const segment = useSelectedLayoutSegment();
-  const isActive = `/${segment}` === href;
+  const isActive = usePathname() === href;
   return (
     <Link
       href={href}

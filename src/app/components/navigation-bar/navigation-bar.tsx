@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { FC, useState } from 'react';
 
 import icons from '@/app/components/icons';
-import { TabOptions } from '@/components/common/tabs/main-tabs';
+import { TabOptions } from '@/components/common/tabs/tabs-data';
 import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
 
 interface OwnProps {}

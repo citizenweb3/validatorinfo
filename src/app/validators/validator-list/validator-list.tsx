@@ -14,7 +14,7 @@ const ValidatorList: FC<OwnProps> = async ({ chains = [] }) => {
   const validators = await getValidators(chains);
 
   return (
-    <div>
+    <div className="mt-6">
       <ValidatorListFilters chains={chains} />
       {validators.length === 0 ? (
         <div className="mt-6 text-base">No validators found, try to change filters!</div>

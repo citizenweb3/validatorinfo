@@ -1,19 +1,35 @@
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, useRef } from 'react';
+import { useOnClickOutside } from 'usehooks-ts';
 
 interface OwnProps {
+  title?: string;
   opened: boolean;
   onClose: () => void;
+  className?: string;
+  isRelative?: boolean;
 }
 
-const BaseModal: FC<PropsWithChildren<OwnProps>> = ({ opened, children, onClose }) => {
+const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
+  opened,
+  children,
+  onClose,
+  className = '',
+  isRelative = true,
+  title = '',
+}) => {
+  const ref = useRef(null);
+  useOnClickOutside(ref, () => onClose());
   return (
-    <div className={`${opened ? 'block' : 'hidden'} relative`}>
-      <div
-        className="absolute -right-1 -top-2 z-50 h-9 w-9 bg-[url('/img/icons/close.svg')] hover:bg-[url('/img/icons/close-h.svg')]"
-        onClick={onClose}
-      ></div>
-      <div className="absolute right-0 top-0 z-40 bg-background p-3 pt-6 shadow-3xl">
-        <div>{children}</div>
+    <div className={`${opened ? 'block' : 'hidden'} ${isRelative ? 'relative' : ''}`}>
+      <div className={`${className} absolute z-40 bg-background shadow-3xl`}>
+        <div className="relative p-3 pt-6">
+          <div
+            className={`absolute right-0 top-0 z-50 h-9 w-9 bg-[url('/img/icons/close.svg')] bg-contain hover:bg-[url('/img/icons/close-h.svg')]`}
+            onClick={onClose}
+          />
+          {title && <div className="ml-9 text-lg text-highlight">{title}</div>}
+          {children}
+        </div>
       </div>
     </div>
   );
