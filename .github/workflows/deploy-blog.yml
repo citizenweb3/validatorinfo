@@ -1,4 +1,4 @@
-    - name: Deploy to server
+     name: Deploy to server
       env:
         SSHPASS: ${{ secrets.SSH_PASSWORD }}
         SSH_HOST: ${{ secrets.SSH_HOST }}
