@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: Install sshpass
-      run: sudo apt-get update && sudo apt-get install -y sshpass
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y sshpass openssh-client rsync
 
     - name: Checkout code
       uses: actions/checkout@v3
@@ -43,5 +43,5 @@ jobs:
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       run: |
-        sshpass -p ${SSH_PASSWORD} ssh ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
-        sshpass -p ${SSH_PASSWORD} rsync -avz --delete ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
+        sshpass -p ${SSH_PASSWORD} ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
+        sshpass -p ${SSH_PASSWORD} rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
