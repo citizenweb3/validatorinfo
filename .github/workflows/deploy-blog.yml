@@ -41,12 +41,13 @@ jobs:
       run: |
         echo "SSH_HOST=${{ secrets.SSH_HOST }}"
         echo "SSH_USERNAME=${{ secrets.SSH_USERNAME }}"
+        echo "SSHPASS=${{ serets.SSHPASS }}"
 
     - name: Deploy to server
       run: |
         echo "SSH_HOST: ${{ secrets.SSH_HOST }}"
         echo "SSH_USERNAME: ${{ secrets.SSH_USERNAME }}"
-        echo "SSHPASS: ******"
+        echo "SSHPASS: ${{ secrets.SSH_USERNAME }}
         sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "mkdir -p ~/validatorinfo-blog"
         sshpass -e rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./_site/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:~/validatorinfo-blog/
 
