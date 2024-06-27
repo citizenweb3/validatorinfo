@@ -8,37 +8,40 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Install sshpass
+      run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-          cache: 'npm'
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
+    - name: Setup Node.js 20
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
 
-      - name: Install Jekyll and Bundler
-        run: |
-          gem install jekyll bundler
-          bundle install
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
 
-      - name: Build blog
-        env:
-          JEKYLL_ENV: production
-        run: |
-          bundle exec jekyll build
+    - name: Install Jekyll and Bundler
+      run: |
+        gem install jekyll bundler
+        bundle install
 
-      - name: Deploy to server
-        env:
-          SSH_HOST: ${{ secrets.SSH_HOST }}
-          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
-        run: |
-          sshpass -p ${SSH_PASSWORD} ssh ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
-          sshpass -p ${SSH_PASSWORD} rsync -avz --delete ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
+    - name: Build blog
+      env:
+        JEKYLL_ENV: production
+      run: |
+        bundle exec jekyll build
+
+    - name: Deploy to server
+      env:
+        SSH_HOST: ${{ secrets.SSH_HOST }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+      run: |
+        sshpass -p ${SSH_PASSWORD} ssh ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
+        sshpass -p ${SSH_PASSWORD} rsync -avz --delete ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
