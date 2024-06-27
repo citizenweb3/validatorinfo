@@ -8,9 +8,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    node: 20
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      # ... rest of the workflow ...
+
 
       - name: Install dependencies
         run: |
