@@ -39,9 +39,9 @@ jobs:
 
     - name: Deploy to server
       env:
+        SSHPASS: ${{ secrets.SSH_PASSWORD }}
         SSH_HOST: ${{ secrets.SSH_HOST }}
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       run: |
-        sshpass -p ${SSH_PASSWORD} ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
-        sshpass -p ${SSH_PASSWORD} rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
+        sshpass -e ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
+        sshpass -e rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
