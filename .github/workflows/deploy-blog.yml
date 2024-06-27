@@ -9,22 +9,23 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Setup Node.js 20
         uses: actions/setup-node@v3
         with:
           node-version: '20'
           cache: 'npm'
-        continue-on-error: true
 
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          node-version: '20'
+          ruby-version: '3.1'
 
-      # ... rest of the workflow ...
-
-      - name: Install dependencies
+      - name: Install Jekyll and Bundler
         run: |
+          gem install jekyll bundler
           bundle install
 
       - name: Build blog
@@ -39,5 +40,5 @@ jobs:
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          ssh ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
-          rsync -avz --delete ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
+          sshpass -p ${SSH_PASSWORD} ssh ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
+          sshpass -p ${SSH_PASSWORD} rsync -avz --delete ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
