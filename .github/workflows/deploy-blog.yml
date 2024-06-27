@@ -7,14 +7,17 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    node: 20
+    runs-on: ubuntu-20.04
     steps:
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
       - name: Checkout code
         uses: actions/checkout@v3
 
       # ... rest of the workflow ...
-
 
       - name: Install dependencies
         run: |
