@@ -1,0 +1,32 @@
+name: Deploy Blog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          bundle install
+
+      - name: Build blog
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build
+
+      - name: Deploy to server
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          ssh ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
+          rsync -avz --delete ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
