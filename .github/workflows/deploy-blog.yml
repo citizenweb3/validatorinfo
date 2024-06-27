@@ -37,6 +37,11 @@ jobs:
       run: |
         bundle exec jekyll build
 
+    - name: Debug variables
+      run: |
+        echo "SSH_HOST=${{ secrets.SSH_HOST }}"
+        echo "SSH_USERNAME=${{ secrets.SSH_USERNAME }}"
+
     - name: Deploy to server
       env:
         SSHPASS: ${{ secrets.SSH_PASSWORD }}
