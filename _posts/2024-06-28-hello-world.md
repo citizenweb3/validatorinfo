@@ -1,6 +1,6 @@
 ---
 layout: post
-title: hello World
+title: Hello World
 ---
 
 ### TL;DR
