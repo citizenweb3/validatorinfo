@@ -33,7 +33,7 @@ export default function Home() {
       <SubTitle text="Network" size="h3" />
       <div className="border-b border-bgSt py-4">
         {Object.keys(data).map((title) => (
-          <div key={title} className="mx-6 text-base">
+          <div key={title} className="mx-6 my-4 text-base">
             <SubTitle text={title} size="h4" />
             <ul className="ml-4 mt-6 list-disc">
               {data[title].map(({ name, link, stake, info, rpc, additional }) => (
