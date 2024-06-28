@@ -35,11 +35,14 @@ jobs:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       run: |
         sshpass -p ${SSH_PASSWORD} ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "
+          sudo apt-get update
+          sudo apt-get install -y ruby-full build-essential zlib1g-dev
+          gem install jekyll bundler
           cd ~
           rm -rf validatorinfo-blog
-          git clone https://github.com/citizenweb3/validatorinfo-blog.git
+          git clone https://github.com/your-username/validatorinfo-blog.git
           cd validatorinfo-blog
           bundle install
           bundle exec jekyll build
-          nohup bundle exec jekyll serve &> jekyll.log &
+          nohup bundle exec jekyll serve --host 0.0.0.0 --port 4000 &> jekyll.log &
         "
