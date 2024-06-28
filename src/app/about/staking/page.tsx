@@ -39,7 +39,7 @@ export default function Home() {
               {data[title].map(({ name, link, stake, info, rpc, additional }) => (
                 <li key={name}>
                   {link ? (
-                    <Link href={link} className="border-b border-bgSt hover:border-white">
+                    <Link href={link} target="_blank" className="border-b border-bgSt hover:border-white">
                       {name}
                     </Link>
                   ) : (
@@ -48,7 +48,7 @@ export default function Home() {
                   {stake && (
                     <>
                       <span className="px-2">|</span>
-                      <Link href={stake} className="border-b border-bgSt hover:border-white">
+                      <Link href={stake} target="_blank" className="border-b border-bgSt hover:border-white">
                         Stake
                       </Link>
                     </>
@@ -56,7 +56,7 @@ export default function Home() {
                   {info && (
                     <>
                       <span className="px-2">|</span>
-                      <Link href={info} className="border-b border-bgSt hover:border-white">
+                      <Link href={info} target="_blank" className="border-b border-bgSt hover:border-white">
                         Info
                       </Link>
                     </>
@@ -65,7 +65,7 @@ export default function Home() {
                   {rpc && (
                     <>
                       <span className="px-2">|</span>
-                      <Link href={rpc} className="border-b border-bgSt hover:border-white">
+                      <Link href={rpc} target="_blank" className="border-b border-bgSt hover:border-white">
                         RPC
                       </Link>
                     </>
@@ -93,13 +93,40 @@ const data: Record<
   { name: string; link?: string; stake?: string; info?: string; additional?: string; rpc?: string }[]
 > = {
   Mainnet: [
-    { name: 'Cosmos hub', stake: '/', info: '/' },
+    {
+      name: 'Cosmos hub',
+      stake:
+        'https://wallet.keplr.app/chains/cosmos-hub?modal=staking&chain=cosmoshub-4&validator_address=cosmosvaloper1e859xaue4k2jzqw20cv6l7p3tmc378pc3k8g2u&step_id=3&action_id=stake',
+      info: '/',
+    },
     { name: 'Celestia', stake: '/', info: '/' },
-    { name: 'Evmos', stake: '/', info: '/', additional: 'Genesis Validator' },
-    { name: 'LikeCoin', stake: '/', info: '/' },
+    {
+      name: 'Evmos',
+      stake:
+        'https://wallet.keplr.app/chains/evmos?modal=staking&chain=evmos_9001-2&validator_address=evmosvaloper1mtwvpdd57gpkyejd566s24afr9zm5ryq8gwpvj&step_id=3&action_id=stake',
+      info: '/',
+      additional: 'Genesis Validator',
+    },
+    {
+      name: 'LikeCoin',
+      stake:
+        'https://wallet.keplr.app/chains/likecoin?modal=staking&chain=likecoin-mainnet-2&validator_address=likevaloper136r5phdpc02gmtmyampl9qkv0mdq385xxsaadu&step_id=3&action_id=stake',
+      info: '/',
+    },
     { name: 'BitCanna', stake: '/', info: '/' },
-    { name: 'Cyber/Bostrom', stake: '/', info: '/', additional: 'Pre-Genesis & Genesis Validator' },
-    { name: 'Gravity Bridge', stake: '/', info: '/' },
+    {
+      name: 'Cyber/Bostrom',
+      stake:
+        'https://wallet.keplr.app/chains/bostrom?modal=staking&chain=bostrom&validator_address=bostromvaloper1f7nx65pmayfenpfwzwaamwas4ygmvalqj6dz5r&step_id=3&action_id=stake',
+      info: '/',
+      additional: 'Pre-Genesis & Genesis Validator',
+    },
+    {
+      name: 'Gravity Bridge',
+      stake:
+        'https://wallet.keplr.app/chains/gravity-bridge?modal=staking&chain=gravity-bridge-3&validator_address=gravityvaloper1a00v3m5sthed82267gvdp2qt9czhjngg2djy8m&step_id=3&action_id=stake',
+      info: '/',
+    },
     { name: 'Composable', stake: '/', info: '/' },
     { name: 'Dymension', stake: '/', info: '/', additional: 'Pre-Genesis & Genesis Validator' },
   ],
