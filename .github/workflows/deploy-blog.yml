@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: Install dependencies
-      run: sudo apt-get update && sudo apt-get install -y sshpass openssh-client rsync
-
     - name: Checkout code
       uses: actions/checkout@v3
 
@@ -31,22 +28,18 @@ jobs:
         gem install jekyll bundler
         bundle install
 
-    - name: Build blog
-      env:
-        JEKYLL_ENV: production
-      run: |
-        bundle exec jekyll build
-
-    - name: Debug variables
-      run: |
-        echo "SSH_HOST=${{ secrets.SSH_HOST }}"
-        echo "SSH_USERNAME=${{ secrets.SSH_USERNAME }}"
-
     - name: Deploy to server
       env:
-        SSHPASS: ${{ secrets.SSH_PASSWORD }}
         SSH_HOST: ${{ secrets.SSH_HOST }}
         SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       run: |
-        sshpass -e ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "mkdir -p ~/validatorinfo-blog"
-        sshpass -e rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./_site/ ${SSH_USERNAME}@${SSH_HOST}:~/validatorinfo-blog/
+        sshpass -p ${SSH_PASSWORD} ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "
+          cd ~
+          rm -rf validatorinfo-blog
+          git clone https://github.com/citizenweb3/validatorinfo-blog.git
+          cd validatorinfo-blog
+          bundle install
+          bundle exec jekyll build
+          nohup bundle exec jekyll serve &> jekyll.log &
+        "
