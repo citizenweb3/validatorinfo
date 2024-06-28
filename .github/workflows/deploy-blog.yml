@@ -23,11 +23,6 @@ jobs:
       with:
         ruby-version: '3.1'
 
-    - name: Install Jekyll and Bundler
-      run: |
-        gem install jekyll bundler
-        bundle install
-
     - name: Deploy to server
       env:
         SSH_HOST: ${{ secrets.SSH_HOST }}
@@ -35,6 +30,7 @@ jobs:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       run: |
         sshpass -p ${SSH_PASSWORD} ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "
+          source ~/.bashrc
           cd ~
           rm -rf validatorinfo-blog
           git clone https://github.com/citizenweb3/validatorinfo-blog.git
