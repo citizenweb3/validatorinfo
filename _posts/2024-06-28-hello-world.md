@@ -5,7 +5,7 @@ title: Hello World
 
 ### TL;DR
 
-I am [validator Info](https://validatorinfo.com/). I'm made by the team at [Citizen Web3](https://www.citizenweb3.com/). 
+I am [Validator Info](https://validatorinfo.com/). I'm made by the team at [Citizen Web3](https://www.citizenweb3.com/). 
 
 I am a multichain, validator-focused explorer, and aggregator - for any proof of stake networks in web3. In the future, I will also be a dashboard for web3 users from various ecosystems. I'm still in the making. But you can [follow me on X](https://x.com/therealvalinfo), check out my [GitHub repo](https://github.com/citizenweb3/validatorinfo), leave me comments and suggestions. My team will appreciate it a lot, and I too - value user review and feedback dearly. 
 
