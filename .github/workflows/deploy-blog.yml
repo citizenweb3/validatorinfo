@@ -35,9 +35,6 @@ jobs:
         SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
       run: |
         sshpass -p ${SSH_PASSWORD} ssh -o StrictHostKeyChecking=no ${SSH_USERNAME}@${SSH_HOST} "
-          sudo apt-get update
-          sudo apt-get install -y ruby-full build-essential zlib1g-dev
-          gem install jekyll bundler
           cd ~
           rm -rf validatorinfo-blog
           git clone https://github.com/citizenweb3/validatorinfo-blog.git
