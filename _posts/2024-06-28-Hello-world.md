@@ -3,8 +3,6 @@ layout: post
 title: Hello World
 ---
 
-# Hello World!
-
 ### TL;DR
 
 I am [validator Info](https://validatorinfo.com/). I'm made by the team at [Citizen Web3](https://www.citizenweb3.com/). 
