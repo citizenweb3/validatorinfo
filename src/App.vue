@@ -2,12 +2,13 @@
   <div class="app">
     <ImageComponent class="column-left" />
     <div class="content column-right">
-      <p class="title">Validator Info: The return of the Explorer... Soon-ish!</p>
+      <p class="title">Validator Info: The return of the Explorer... Soon-ish!</p><br>
       <p class="subtitle">
+        Please keep calm, we are validating the situation! <br>
         We are working hard to ship you the alpha ASAP. In the meantime, please feel welcome to
         visit our
-        <a href="https://github.com/citizenweb3/validatorinfo">GitHub repo</a> for the project and
-        give us a <a href="https://x.com/therealvalinfo"> follow on X 🚀</a>
+        <a href="https://github.com/citizenweb3/validatorinfo">GitHub repo,</a> <a href="https://github.com/citizenweb3/validatorinfo"> read the blog </a>, and
+        <a href="https://x.com/therealvalinfo"> follow us on X 🚀</a>
       </p>
     </div>
   </div>
