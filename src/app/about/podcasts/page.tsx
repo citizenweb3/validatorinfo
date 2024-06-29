@@ -16,16 +16,20 @@ export default function Podcasts() {
         our interviews with founders, validators, VCs, researches, CTOs, and many other great people that have been
         building this space.
       </div>
-      <div className="flex items-center justify-center">
-        <Image src="/img/icons/tmp/podcast.png" alt="tmp" width={652} height={176} />
+      <div className="my-4 flex items-center justify-center">
+        <iframe src="https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark" width="740" height="200"></iframe>
       </div>
-      <div className="mt-4 border-b border-bgSt py-4 text-base">
+      <div className="my-4 border-b border-bgSt py-4 text-base">
         Subscribe
         <br />
         <br />
         Get the latest episodes of Citizen Web3 automatically using the links above, or by copying and pasting the URL
         below into your favorite podcast app:
-        <Button className="my-8 block">Citizen Web3 RSS Feed</Button>
+        <div className="my-8 flex">
+          <Button className="block" component="link" href="https://www.citizenweb3.com/rss">
+            Citizen Web3 RSS Feed
+          </Button>
+        </div>
         You can also subscribe with your favorite app directly, using the buttons below:
         <div className="mt-4 flex flex-row flex-wrap space-y-2">
           <Image
