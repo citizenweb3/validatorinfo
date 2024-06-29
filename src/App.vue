@@ -7,7 +7,7 @@
         Please keep calm, we are validating the situation! <br>
         We are working hard to ship you the alpha ASAP. In the meantime, please feel welcome to
         visit our
-        <a href="https://github.com/citizenweb3/validatorinfo">GitHub repo,</a> <a href="https://github.com/citizenweb3/validatorinfo"> read the blog </a>, and
+        <a href="https://github.com/citizenweb3/validatorinfo">GitHub repo,</a> <a href="https://validatorinfo.com/blog/">read the blog </a>, and
         <a href="https://x.com/therealvalinfo"> follow us on X 🚀</a>
       </p>
     </div>
