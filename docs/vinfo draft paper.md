@@ -3,9 +3,11 @@ DRAFT - DANGER
 # Validator info: the return of the explorer
 
 ### TL;DR
-This document is an attempt to create a mixture of a white paper / user documentation for validatorinfo.com: a validator centric, multichain explorer, dashboard and aggregator. It is a web application that offers unique insights into validator data. Attempting to mix onchain data, user interaction, social data, public good information, and visualization, such as graphs, unique staking calculators, comparison tools, etc. All to help the user navigate their landscape across the developing multichain world of validators.
+This document is an attempt to create a mixture of a white paper / user documentation for validatorinfo.com: validator-focused, multichain explorer, dashboard and aggregator for POS token holders. It is a web application that offers unique insights into validator data. Attempting to mix onchain data, user interaction, social data, public good information, and visualization, such as graphs, unique staking calculators, comparison tools, etc. 
 
-Interested target audiences, may include: any stakers, delegators, holders of proof of stake tokens, validators, researchers, data analytics and web3 enthusiasts. The application will attempt to maximize retention tools and remain open source. Further, are the collection of ideas, calculations, and other `under the hood` detail, that may improve user experience
+With an aim to help the user navigate their landscape across the developing multichain world of validators. Interested target audiences, may include: any stakers, delegators, holders of proof of stake tokens, validators, researchers, data analytics and web3 enthusiasts. 
+
+The application will attempt to maximize retention tools and remain open source. Further, are a collection of ideas, calculations, and other `under the hood` detail, that may improve user experience
 
 ### Introduction and product description
 - What will it do and why
@@ -165,6 +167,6 @@ E) (1)Drops / (2)Bubbles (dao)
 - stake E to receive voting rights
 - Staking c3 should be on favorite validators. Wrap any value into E1 or E2 to receive fav NFT. Stake fav NFT?
 
-### Summary
-- is it needed?
+### Summary / Conclusion
+- description of what is offered to whom and why its needed
   
