@@ -98,11 +98,41 @@ Might be outdated...
 - If value of E over a period of time, D is larger than sole value of staking rewards. We have something to work with
 
 5) Technical score, Social score, Governance score, User score (TS, SS, GS, US) are metrics we calculate on our side
-- Final result are calculation as a score based out of a 100 or 10 to make it easy
-- Technical score. To include in calculations: Total amount of networks, total amount of known nodes?, total voting power per network?, supported assets by validator, participation rate, uptime, amount of missed blocks per period, amount of status (active, etc), A reading of ISP providers and locations of nodes compares to others, Stakebar technical data
-- Social score. To include in calculations: has Twitter, has website, has logo, has description, twitter followers?, twitter lunarcrush or similar score?, has telegram, done interview with us, done other interviews, has info on profile page about their public goods, has revenue info on profile page, has keplr web3 reviews, has reviews on our site, other ratings: bro n bro and stakignrewards, public pgp keys?, twitter # reading?, rss hashtag readings?, other links?
-- Governance score. To include in calculations: average commission per network compares to others?, amount of delegators, self stake ratios?, fans (account that delegate to them), amount of created proposals, amount of voted proposals, governance forum activity, social network administration
-- User score. At start will be NA for all validators. To include in calculations: additions to favorites, amount staked on validator, minted nfts/poaps of validator, review score of validator, additions of users to validator page
+5A) Technical score:
+- Uptime using median compares to other validators on each network, then use an average or a sum of 
+a) Paramters that we will count per each chain and increment the score
+- RPC / LCD/  Indexer / Archive node
+- provable GH activity per network?
+
+5B) Social score :
+- Average(?) sum of existing indexes / scores
+a) Paramters that we will count per each chain and increment the score
+- amount staked on validator per chain compares to average % of VP per validator
+- #X network interaction per chain (rss?)
+b) Overall paramnets that can increment the score
+- Website / Twitter / GH / CW3 interview
+
+5C) Governance score
+- sum of voted on by a valdiator props in USD (devision factor?)
+a ) Paramters that we will count per each chain and increment the score
+- Created prop 
+- Ambassadors (how to calculate?)
+
+5D) User score
+- per iteraction 
+i.e.
+- by how many people val added to favourites
+- other reviews?
+- minted nfts / poaps per val (future)
+
+5E) battery
+- user score
+- badges
+- % of other scores
+
+6E) chain health calculation:
+- use own?
+- include health meter on each chain profile page?
 
 ### Multichain reputation: a possible hope
 - Reputation
