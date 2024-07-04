@@ -9,7 +9,7 @@ interface OwnProps {}
 const Header: FC<OwnProps> = ({}) => {
   const size = 'h-9 w-9 min-w-9 min-h-9';
   return (
-    <div className="mb-4 flex justify-end space-x-1">
+    <div className="my-4 flex justify-end space-x-1">
       <Link href={`/validator/1`} className={size}>
         <Image src={icons.CW3Icon} alt="control" className={size} />
       </Link>

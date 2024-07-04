@@ -9,7 +9,7 @@ interface OwnProps {
 
 const TabList: FC<OwnProps> = ({ tabs }) => {
   return (
-    <div className="mb-6 flex flex-row space-x-6">
+    <div className="mb-6 flex flex-row space-x-4">
       {tabs.map((item) => (
         <TabListItem key={item.href} item={item} />
       ))}

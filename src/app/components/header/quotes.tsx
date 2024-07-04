@@ -1,35 +1,35 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import QuoteItem from "@/app/components/header/quote-item";
+import QuoteItem from '@/app/components/header/quote-item';
 
 interface OwnProps {}
 
 const data = {
-  validators: "1277",
-  ecosystems: "200",
-  tvl: "$74.6B",
+  validators: '1277',
+  ecosystems: '200',
+  tvl: '$74.6B',
   list: [
     {
-      name: "Dominance: Cosmos",
+      name: 'Dominance: Cosmos',
       grow: false,
-      value: "24.7%",
+      value: '24.7%',
     },
     {
-      name: "Eth",
+      name: 'Eth',
       grow: true,
-      value: "42.5%",
+      value: '42.5%',
     },
     {
-      name: "Polkadot",
+      name: 'Polkadot',
       grow: true,
-      value: "21.9%",
+      value: '21.9%',
     },
   ],
 };
 
 const Quotes: FC<OwnProps> = ({}) => {
   return (
-    <div className="flex flex-grow flex-row space-x-7 overflow-auto p-3 scrollbar-none">
+    <div className="flex flex-grow flex-row space-x-12 overflow-auto p-3 scrollbar-none">
       <QuoteItem name="Validators" value={data.validators} />
       <QuoteItem name="Ecosystems" value={data.ecosystems} />
       <QuoteItem name="TVL" value={data.tvl} />

@@ -40,7 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${squarified.variable} ${retroGaming.variable} ${dotGothic.variable}`}>
-      <body className={`${squarified.className} mx-10 min-h-screen bg-background text-xs tracking-widest`}>
+      <body
+        className={`${squarified.className} min-h-screen w-screen overflow-x-hidden bg-background px-4 text-xs tracking-normal`}
+      >
         <ThemeProvider defaultTheme="dark" attribute="class">
           <div className="flex min-h-screen flex-col">
             <Header />

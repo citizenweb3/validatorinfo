@@ -1,4 +1,4 @@
-import BatteryIcon from '@/public/img/icons/battery.png';
+import BatteryIcon from '@/public/img/icons/battery.svg';
 import BatteryRedIcon from '@/public/img/icons/batteryred.png';
 import CW3Icon from '@/public/img/icons/cw3.svg';
 import GithubIcon from '@/public/img/icons/github.svg';
@@ -16,12 +16,14 @@ import MetricsIconHovered from '@/public/img/icons/navbar/metrics-hovered.png';
 import MetricsIcon from '@/public/img/icons/navbar/metrics.png';
 import NetworksIconHovered from '@/public/img/icons/navbar/networks-hovered.png';
 import NetworksIcon from '@/public/img/icons/navbar/networks.png';
+import RumorsIconHovered from '@/public/img/icons/navbar/rumors-hovered.png';
+import RumorsIcon from '@/public/img/icons/navbar/rumors.png';
 import ValidatorsIconHovered from '@/public/img/icons/navbar/validators-hovered.png';
 import ValidatorsIcon from '@/public/img/icons/navbar/validators.png';
 import QuestionIconHovered from '@/public/img/icons/question-h.svg';
 import QuestionIcon from '@/public/img/icons/question.svg';
-import StarIcon from '@/public/img/icons/star.png';
-import StarIconHighlighted from '@/public/img/icons/star_h.png';
+import StarIcon from '@/public/img/icons/star.svg';
+import StarIconHighlighted from '@/public/img/icons/star_h.svg';
 import TriangleIconHovered from '@/public/img/icons/triangle-h.svg';
 import TriangleIcon from '@/public/img/icons/triangle.svg';
 import XIcon from '@/public/img/icons/x.svg';
@@ -43,6 +45,8 @@ const icons = {
   LibraryIconHovered,
   CalculatorIconHovered,
   ComparisonIconHovered,
+  RumorsIcon,
+  RumorsIconHovered,
   StarIcon,
   StarIconHighlighted,
   BatteryIcon,

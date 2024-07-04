@@ -1,24 +1,27 @@
 html {
 
-    font-size: 6px;
+    font-size: 4px;
 
+    @media screen(2xs) {
+        font-size: 5px;
+    }
     @media screen(xs) {
-        font-size: 8px;
+        font-size: 6px;
     }
     @media screen(sm) {
-        font-size: 10px;
+        font-size: 8px;
     }
     @media screen(md) {
-        font-size: 12px;
+        font-size: 10px;
     }
     @media screen(lg) {
-        font-size: 14px;
+        font-size: 12px;
     }
     @media screen(xl) {
-        font-size: 16px;
+        font-size: 14px;
     }
     @media screen(2xl) {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -33,13 +36,13 @@ html {
 }
 
 html.light {
-    --color-background: #F6F5F2;
-    --color-background-stroke: #D9D9D9;
+    --color-background: #5a6c76;
+    --color-background-stroke: #005f94;
 }
 
 @layer utilities {
     .text-shadowed {
-        text-shadow: 0 0 .5rem #F3B101,0 0 .5rem #F3B101,0 0 2rem #F3B101;
+        text-shadow: 0 0 .5rem #E5C46B,0 0 .5rem #E5C46B,0 0 2rem #E5C46B;
     }
 
     .border-hover {

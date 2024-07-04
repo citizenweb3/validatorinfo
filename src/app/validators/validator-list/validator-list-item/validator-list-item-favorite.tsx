@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { FC } from 'react';
 
+import Button from '@/components/common/button';
 import icons from '@/components/icons';
 
 interface OwnProps {
@@ -9,12 +10,14 @@ interface OwnProps {
 
 const ValidatorListItemFavorite: FC<OwnProps> = ({ isFavorite }) => {
   return (
-    <div className="flex items-center justify-center">
-      {isFavorite ? (
-        <Image src={icons.StarIconHighlighted} alt="Favorite" className="w-12 min-w-12" />
-      ) : (
-        <Image src={icons.StarIcon} alt="Favorite" className="w-7 min-w-7" />
-      )}
+    <div className="-mb-2.5 max-h-16 max-w-7">
+      <Button className="h-16 w-7">
+        {isFavorite ? (
+          <Image src={icons.StarIconHighlighted} alt="Favorite" className="w-9 min-w-9" />
+        ) : (
+          <Image src={icons.StarIcon} alt="Favorite" className="w-6 min-w-6" />
+        )}
+      </Button>
     </div>
   );
 };

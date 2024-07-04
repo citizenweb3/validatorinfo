@@ -9,9 +9,11 @@ const OurManifestoModal = () => {
   const [isToolsOpened, setIsToolsOpened] = useState<boolean>(false);
   return (
     <>
-      <Button className="mt- ml-10 mt-5 text-lg" onClick={() => setIsToolsOpened(true)}>
-        Learn More
-      </Button>
+      <div className="ml-10 mt-5">
+        <Button className="text-lg" onClick={() => setIsToolsOpened(true)}>
+          Learn More
+        </Button>
+      </div>
       <BaseModal
         title="Our Manifesto"
         isRelative={false}

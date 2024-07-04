@@ -9,26 +9,29 @@ import { TabOptions } from '@/components/common/tabs/tabs-data';
 
 interface OwnProps {
   item: TabOptions;
+  isOpened: boolean;
 }
 
-const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered } }) => {
+const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered }, isOpened }) => {
   const segment = useSelectedLayoutSegment();
   const isActive = `/${segment}` === href;
 
   return (
     <Link
       href={href}
-      className="group relative flex min-h-14 min-w-10 cursor-pointer flex-row items-center border-b border-l border-bgSt text-sm"
+      className={`${isOpened ? 'min-h-10 w-[15.5rem]' : 'h-10 w-10'} shadow-button transition-width !active:max-h-7 group relative flex cursor-pointer flex-row items-center overflow-hidden border-r border-t border-bgSt text-sm duration-300 hover:bg-bgSt active:top-1 active:border-transparent active:bg-background active:shadow-none`}
     >
-      <div className="absolute left-6 top-7 -translate-x-1/2 -translate-y-1/2 transform">
-        {icon && <Image src={icon} alt={name} width={26} height={26} className="w-8" />}
+      <div className="absolute left-5 top-[1.15rem] -translate-x-1/2 -translate-y-1/2 transform">
+        {icon && <Image src={icon} alt={name} width={28} height={28} className="min-w-7 max-w-7" />}
       </div>
       <div
-        className={`${isActive ? 'block' : 'hidden group-hover:block'} absolute left-6 top-7 -translate-x-1/2 -translate-y-1/2 transform`}
+        className={`${isActive ? 'block' : 'hidden group-hover:block'} absolute left-5 top-[1.15rem] -translate-x-1/2 -translate-y-1/2 transform`}
       >
-        {iconHovered && <Image src={iconHovered} alt={name} width={46} height={46} className="w-14" />}
+        {iconHovered && <Image src={iconHovered} alt={name} width={40} height={40} className="min-w-10 max-w-10" />}
       </div>
-      <div className={`${isActive && 'text-highlight'} ml-14 text-nowrap group-hover:text-highlight`}>{name}</div>
+      <div className={`${isActive && 'text-highlight'} ml-14 text-nowrap text-base group-hover:text-highlight`}>
+        {name}
+      </div>
     </Link>
   );
 };

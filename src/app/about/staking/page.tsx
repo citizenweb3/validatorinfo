@@ -83,7 +83,9 @@ export default function Home() {
         ))}
       </div>
       <SubTitle text="Dao Stakes" size="h3" />
-      <Button className="ml-12 mt-4 text-lg">Learn more</Button>
+      <div className="ml-12 mt-4">
+        <Button className="text-lg">Learn more</Button>
+      </div>
     </div>
   );
 }

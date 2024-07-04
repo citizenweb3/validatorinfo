@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { FC, useState } from 'react';
 
 import icons from '@/app/components/icons';
@@ -25,7 +24,7 @@ const data: TabOptions[] = [
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
-  { name: 'Rumors', href: '/rumors', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
+  { name: 'Rumors', href: '/rumors', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
   { name: 'Library', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
   { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
 ];
@@ -34,17 +33,19 @@ const NavigationBar: FC<OwnProps> = ({}) => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   return (
     <div
-      className={`${isOpened ? 'w-56' : 'w-16'} transition-300 relative mt-2 h-[75vh] border-r-[1.5rem] border-transparent pt-6 transition-all`}
+      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} relative mt-2 h-[26rem] border-r-[1.5rem] border-transparent pt-6 transition-all duration-300`}
     >
-      <Image
-        src={icons.HideIcon}
-        alt="hide"
-        className={`${!isOpened && 'rotate-180'} absolute -right-6 top-0 w-6`}
+      <div
+        className="group absolute -right-12 top-0 h-full w-6 cursor-pointer bg-opacity-30 from-transparent to-bgSt hover:bg-gradient-to-b"
         onClick={() => setIsOpened(!isOpened)}
-      />
-      <div className="relative space-y-2.5 overflow-hidden">
+      >
+        <div
+          className={`${!isOpened && 'rotate-180'} absolute -left-1 -top-4 min-h-8 min-w-8 bg-[url('/img/icons/navbar/hide.png')] bg-contain group-hover:bg-[url('/img/icons/navbar/hide-hovered.png')]`}
+        />
+      </div>
+      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>
         {data.map((item) => (
-          <NavigationBarItem key={item.name} item={item} />
+          <NavigationBarItem key={item.name} item={item} isOpened={isOpened} />
         ))}
       </div>
     </div>

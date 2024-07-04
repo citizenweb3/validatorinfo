@@ -1,8 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FC } from 'react';
+'use client';
 
-import icons from '@/components/icons';
+import { FC, useState } from 'react';
+
+import Button from '@/components/common/button';
+import InfoButton from '@/components/common/info-button';
 
 interface OwnProps {
   chains: string[];
@@ -17,27 +18,36 @@ const filterItems = [
 ];
 
 const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
+  const [isOpened, setIsOpened] = useState<boolean>(false);
   return (
-    <div className="flex space-x-2">
-      <div className="flex flex-row items-center space-x-1  border-b border-bgSt px-4">
-        <Image src={icons.QuestionIcon} alt="control" className="-mt-1 w-3" />
-        <div className="text-base">Filters:</div>
+    <div className="flex h-9 justify-end space-x-2">
+      {isOpened &&
+        filterItems.map((item) => (
+          <Button
+            component="link"
+            href={{
+              pathname: '/validators',
+              query: {
+                chains:
+                  chains.indexOf(item.value) === -1 ? [...chains, item.value] : chains.filter((c) => c !== item.value),
+              },
+            }}
+            key={item.value}
+            isActive={chains.indexOf(item.value) !== -1}
+            className="text-sm"
+          >
+            {item.title}
+          </Button>
+        ))}
+      <div className="flex flex-row items-center">
+        <Button onClick={() => setIsOpened(!isOpened)} isActive={isOpened}>
+          <div className="flex flex-row items-center justify-center space-x-2 text-sm">
+            <InfoButton />
+            <div>Filters:</div>
+            <div className="h-1.5 w-2 cursor-pointer bg-[url('/img/icons/triangle.svg')] bg-contain hover:bg-[url('/img/icons/triangle-h.svg')]" />
+          </div>
+        </Button>
       </div>
-      {filterItems.map((item) => (
-        <Link
-          href={{
-            pathname: '/validators',
-            query: {
-              chains:
-                chains.indexOf(item.value) === -1 ? [...chains, item.value] : chains.filter((c) => c !== item.value),
-            },
-          }}
-          key={item.value}
-          className={`${chains.indexOf(item.value) !== -1 ? 'border border-highlight text-highlight' : 'border-b border-transparent border-b-bgSt'} px-4 text-base`}
-        >
-          {item.title}
-        </Link>
-      ))}
     </div>
   );
 };
