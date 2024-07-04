@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['dev.validatorinfo.com'],
+    domains: ['dev.validatorinfo.com', 's3.amazonaws.com'],
     remotePatterns: [
       {
         protocol: 'https',
