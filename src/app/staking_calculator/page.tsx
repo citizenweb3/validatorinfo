@@ -1,4 +1,4 @@
-import Calculator from '@/app/calculator/calculator';
+import Calculator from '@/app/staking_calculator/calculator';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorTabs } from '@/components/common/tabs/tabs-data';

@@ -2,7 +2,7 @@
 
 import { FC, useState } from 'react';
 
-import StakingResultsItem from '@/app/calculator/staking-results-item';
+import StakingResultsItem from '@/app/staking_calculator/staking-results-item';
 import Switch from '@/components/common/switch';
 import { ChainItem } from '@/types';
 

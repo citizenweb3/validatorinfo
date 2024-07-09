@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { FC } from 'react';
 
 import ValidatorListItemAvatar from '@/app/validators/validator-list/validator-list-item/validator-list-item-avatar';
@@ -22,28 +23,36 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
           <ValidatorListItemFavorite isFavorite={validator.isFavorite} />
         </td>
         <td className="py-2 pr-2">
-          <ValidatorListItemAvatar icon={validator.icon} name={validator.name} />
+          <ValidatorListItemAvatar icon={validator.icon} name={validator.name} id={validator.id} />
         </td>
         <td className="px-2 py-2">
           <ValidatorListItemLinks links={validator.links} validatorId={validator.id} />
         </td>
         <td className="px-2 py-2">
-          <ValidatorListItemBattery battery={validator.battery} />
+          <ValidatorListItemBattery battery={validator.battery} id={validator.id} />
         </td>
         <td className="px-2 py-2">
-          <div className="flex items-center justify-center text-sm">{validator.scores.technical ?? '-'}</div>
+          <Link href={`validators/${validator.id}/metrics`} className="flex items-center justify-center text-sm">
+            {validator.scores.technical ?? '-'}
+          </Link>
         </td>
         <td className="px-2 py-2">
-          <div className="flex items-center justify-center text-sm">{validator.scores.social ?? '-'}</div>
+          <Link href={`validators/${validator.id}/metrics`} className="flex items-center justify-center text-sm">
+            {validator.scores.social ?? '-'}
+          </Link>
         </td>
         <td className="px-2 py-2">
-          <div className="flex items-center justify-center text-sm">{validator.scores.governance ?? '-'}</div>
+          <Link href={`validators/${validator.id}/metrics`} className="flex items-center justify-center text-sm">
+            {validator.scores.governance ?? '-'}
+          </Link>
         </td>
         <td className="px-2 py-2">
-          <div className="flex items-center justify-center text-sm">{validator.scores.user ?? '-'}</div>
+          <Link href={`validators/${validator.id}/metrics`} className="flex items-center justify-center text-sm">
+            {validator.scores.user ?? '-'}
+          </Link>
         </td>
         <td className="px-2 py-2">
-          <ValidatorListItemTVS number={validator.tvs.number} />
+          <ValidatorListItemTVS number={validator.tvs.number} id={validator.id} />
         </td>
         <td className="px-2 py-2">
           <ValidatorListItemChains chains={validator.chains} />

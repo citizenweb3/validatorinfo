@@ -1,7 +1,16 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { FC } from 'react';
 
-const QuoteItem = ({ name, value, grow }: { name: string; value: string | number; grow?: boolean }) => (
-  <div className="flex flex-row items-center text-sm">
+interface OwnProps {
+  name: string;
+  value: string | number;
+  href: string;
+  grow?: boolean;
+}
+
+const QuoteItem: FC<OwnProps> = ({ name, value, grow, href }) => (
+  <Link href={href} className="flex flex-row items-center text-sm">
     <span className="text-nowrap">{name}:</span>
     {typeof grow !== 'undefined' &&
       (grow ? (
@@ -14,7 +23,7 @@ const QuoteItem = ({ name, value, grow }: { name: string; value: string | number
     >
       {value}
     </span>
-  </div>
+  </Link>
 );
 
 export default QuoteItem;

@@ -15,7 +15,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains }) => {
     <div className="flex items-center justify-center space-x-0.5">
       <div className="mr-2 font-retro text-sm">{chains.length}:</div>
       {chains.slice(0, 3).map((chain) => (
-        <Link key={chain.id} href={`/chains/${chain.id}`}>
+        <Link key={chain.id} href={`/networks/${chain.id}`}>
           <Image
             src={chain.icon}
             alt={chain.name}
@@ -34,7 +34,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains }) => {
           <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="right-0 top-0">
             <div className="flex w-32 min-w-32 max-w-24 flex-row flex-wrap">
               {chains.map((chain) => (
-                <Link key={chain.id} href={`/chains/${chain.id}`} className="m-1">
+                <Link key={chain.id} href={`/networks/${chain.id}`} className="m-1">
                   <Image
                     src={chain.icon}
                     alt={chain.name}

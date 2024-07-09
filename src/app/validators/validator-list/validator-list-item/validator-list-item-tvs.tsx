@@ -1,15 +1,17 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 interface OwnProps {
+  id: number;
   number?: number;
 }
 
-const ValidatorListItemTVS: FC<OwnProps> = () => {
+const ValidatorListItemTVS: FC<OwnProps> = ({ id }) => {
   return (
-    <div className="relative flex items-center justify-center text-sm">
+    <Link href={`/validators/${id}/metrics`} className="relative flex items-center justify-center text-sm">
       <Image src={'/img/icons/tmp/tvs-chart.svg'} alt="chart" width={178} height={49} className="max-h-16 min-w-16" />
-    </div>
+    </Link>
   );
 };
 

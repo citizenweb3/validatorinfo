@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import HeaderActionButtons from '@/app/components/header/header-action-buttons';
@@ -11,13 +12,16 @@ interface OwnProps {}
 const HeaderControls: FC<OwnProps> = ({}) => {
   return (
     <div className="mx-11 flex h-24 flex-row items-center">
-      <div className="shadow-button hover:shadow-button-highlight group border-r border-t border-bgSt hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
+      <Link
+        href="/"
+        className="group border-r border-t border-bgSt shadow-button hover:bg-[#272727] hover:text-highlight hover:shadow-button-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
+      >
         <div className="flex flex-col items-center px-2 py-1">
           <div className="group-hover:text-shadowed text-sm text-highlight">Home</div>
           <Image src="/img/logo.svg" alt="logo" width={62} height={58} className="w-16" />
         </div>
-      </div>
-      <div className="shadow-line relative mx-1 flex h-0.5 flex-grow justify-center border-white bg-gradient-to-r from-primary to-secondary">
+      </Link>
+      <div className="relative mx-1 flex h-0.5 flex-grow justify-center border-white bg-gradient-to-r from-primary to-secondary shadow-line">
         <svg
           width="6"
           height="10"
@@ -45,7 +49,7 @@ const HeaderControls: FC<OwnProps> = ({}) => {
           <path d="M-2.18557e-07 5L6 0.669872L6 9.33013L-2.18557e-07 5Z" />
         </svg>
       </div>
-      <div className="shadow-button hover:shadow-button-greenlight group border border-transparent border-r-bgSt border-t-bgSt hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
+      <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight hover:shadow-button-greenlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
         <div className="flex flex-col items-center">
           <div className="text-shadowed text-highlight">You</div>
           <Image src="/img/avatars/default.png" alt="avatar" width={62} height={58} className="mx-2 my-1.5 w-16" />

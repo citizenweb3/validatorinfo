@@ -10,16 +10,21 @@ export interface TabOptions {
 }
 
 export const validatorTabs: TabOptions[] = [
-  { name: 'Staking Calc', href: '/calculator', icon: icons.CalculatorIcon, iconHovered: icons.CalculatorIconHovered },
+  {
+    name: 'Staking Calc',
+    href: '/staking_calculator',
+    icon: icons.CalculatorIcon,
+    iconHovered: icons.CalculatorIconHovered,
+  },
   {
     name: 'Val. Comparison',
-    href: '/comparison',
+    href: '/validator_comparison',
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
   { name: 'ValidatorInfo', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   { name: 'Rumors', href: '/rumors', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Global POS', href: '/pos' },
+  { name: 'Global POS', href: '/global_pos' },
 ];
 
 export const aboutTabs: TabOptions[] = [

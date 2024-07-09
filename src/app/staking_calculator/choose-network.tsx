@@ -3,7 +3,7 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 
 import { getChains } from '@/actions/chains';
-import ChooseDropdown from '@/app/calculator/choose-dropdown';
+import ChooseDropdown from '@/app/staking_calculator/choose-dropdown';
 import { ChainItem } from '@/types';
 
 interface OwnProps {

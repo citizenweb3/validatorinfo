@@ -3,7 +3,7 @@
 import { FC, useEffect, useMemo, useState } from 'react';
 
 import { getValidators } from '@/actions/validators';
-import ChooseDropdown from '@/app/calculator/choose-dropdown';
+import ChooseDropdown from '@/app/staking_calculator/choose-dropdown';
 import { ValidatorItem } from '@/types';
 
 interface OwnProps {

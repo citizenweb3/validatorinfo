@@ -3,9 +3,9 @@
 import { FC, useEffect, useState } from 'react';
 
 import { getStakingRates } from '@/actions/staking';
-import ChooseNetwork from '@/app/calculator/choose-network';
-import ChooseValidator from '@/app/calculator/choose-validator';
-import StakingResults from '@/app/calculator/staking-results';
+import ChooseNetwork from '@/app/staking_calculator/choose-network';
+import ChooseValidator from '@/app/staking_calculator/choose-validator';
+import StakingResults from '@/app/staking_calculator/staking-results';
 import { ChainItem, StakingRates, ValidatorItem } from '@/types';
 
 interface OwnProps {}

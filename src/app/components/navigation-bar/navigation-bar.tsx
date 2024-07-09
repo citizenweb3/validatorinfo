@@ -14,13 +14,13 @@ const data: TabOptions[] = [
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
   {
     name: 'Staking Calculator',
-    href: '/calculator',
+    href: '/staking_calculator',
     icon: icons.CalculatorIcon,
     iconHovered: icons.CalculatorIconHovered,
   },
   {
     name: 'Validator Comparison',
-    href: '/comparison',
+    href: '/validator_comparison',
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },

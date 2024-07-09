@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import TotalsListItem from '@/app/pos/totals/totals-list-item';
+import TotalsListItem from '@/app/global_pos/totals/totals-list-item';
 
 const getData = () => [
   { title: 'Total amount of validators', data: '2345' },

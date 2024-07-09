@@ -70,7 +70,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
     },
     {
-      id: 0,
+      id: 3,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/c1bfe4c1d4f6c8f8d66baa152d50e805_360_360.jpg',
       name: 'Allnodes',
       isFavorite: false,
@@ -98,7 +98,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       ],
     },
     {
-      id: 1,
+      id: 4,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/909034c1d36c1d1f3e9191f668007805_360_360.jpeg',
       name: 'Cosmostation',
       ecosystems: ['cosmos'],
@@ -118,7 +118,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
     },
     {
-      id: 2,
+      id: 5,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/fa01e6109b3fd4579c4bdd445d75ad05_360_360.jpg',
       name: 'Everstake',
       ecosystems: ['cosmos', 'ethereum'],
@@ -130,7 +130,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
     },
     {
-      id: 2,
+      id: 6,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/d56ce0bdda17f73d4aa895d1626e2505_360_360.jpg',
       name: 'Polkachu',
       ecosystems: ['cosmos', 'ethereum'],
@@ -148,7 +148,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
     },
     {
-      id: 0,
+      id: 7,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/c1bfe4c1d4f6c8f8d66baa152d50e805_360_360.jpg',
       name: 'Allnodes',
       isFavorite: false,
@@ -176,7 +176,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       ],
     },
     {
-      id: 1,
+      id: 8,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/909034c1d36c1d1f3e9191f668007805_360_360.jpeg',
       name: 'Cosmostation',
       ecosystems: ['cosmos'],
@@ -196,7 +196,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
     },
     {
-      id: 2,
+      id: 9,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/fa01e6109b3fd4579c4bdd445d75ad05_360_360.jpg',
       name: 'Everstake',
       ecosystems: ['cosmos', 'ethereum'],
