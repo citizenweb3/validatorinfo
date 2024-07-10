@@ -12,7 +12,7 @@ const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
     <div className="flex flex-row items-center justify-end space-x-2">
       {currentPage > 1 && (
         <Link href={`?p=${currentPage - 1}`}>
-          <div className="h-1.5 w-2 rotate-90 cursor-pointer bg-[url('/img/icons/triangle.svg')] bg-contain hover:bg-[url('/img/icons/triangle-h.svg')]" />
+          <div className="bg-triangle hover:bg-triangle_h active:bg-triangle_a h-1.5 w-2 rotate-90 cursor-pointer bg-contain" />
         </Link>
       )}
       {pages.map((page, index) => (
@@ -24,7 +24,7 @@ const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
       ))}
       {currentPage > 1 && (
         <Link href={`?p=${currentPage + 1}`}>
-          <div className="h-1.5 w-2 -rotate-90 cursor-pointer bg-[url('/img/icons/triangle.svg')] bg-contain hover:bg-[url('/img/icons/triangle-h.svg')]" />
+          <div className="bg-triangle hover:bg-triangle_h active:triangle_a h-1.5 w-2 -rotate-90 cursor-pointer bg-contain" />
         </Link>
       )}
     </div>

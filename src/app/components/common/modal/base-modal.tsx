@@ -24,7 +24,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
       <div className={`${className} absolute z-40 bg-background shadow-3xl`}>
         <div className="relative p-3 pt-6">
           <div
-            className={`absolute right-0 top-0 z-50 h-9 w-9 bg-[url('/img/icons/close.svg')] bg-contain hover:bg-[url('/img/icons/close-h.svg')]`}
+            className={`bg-close hover:bg-close_h active:bg-close_a absolute right-0 top-0 z-50 h-9 w-9 bg-contain`}
             onClick={onClose}
           />
           {title && <div className="ml-9 text-lg text-highlight">{title}</div>}

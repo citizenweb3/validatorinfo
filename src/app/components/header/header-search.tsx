@@ -14,7 +14,7 @@ const HeaderSearch: FC<OwnProps> = ({}) => {
           onChange={(e) => (e.target.style.width = (e.target.value.length || 1) * 0.6 + 'rem')}
         />
         <div
-          className={`absolute left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-text bg-[url('/img/icons/search.svg')] bg-contain peer-focus:hidden hover:bg-[url('/img/icons/search-h.svg')]`}
+          className={`bg-search hover:bg-search_h absolute left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 transform cursor-text bg-contain peer-focus:hidden`}
         />
       </div>
     </label>

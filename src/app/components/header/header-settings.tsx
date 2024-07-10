@@ -11,7 +11,7 @@ const HeaderSettings: FC<OwnProps> = ({}) => {
   const { resolvedTheme, setTheme } = useTheme();
   return (
     <div className="flex flex-row items-center space-x-1">
-      <Button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className="">
+      <Button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className="min-h-7">
         {resolvedTheme === 'dark' ? (
           <svg className="-my-0.5 h-4" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -33,10 +33,10 @@ const HeaderSettings: FC<OwnProps> = ({}) => {
           </svg>
         )}
       </Button>
-      <Button className="text-base">
+      <Button className="min-h-7 text-base">
         <div className="-my-1.5">EN</div>
       </Button>
-      <Button className="text-base">
+      <Button className="min-h-7 text-base">
         <div className="-my-1.5">USD</div>
       </Button>
     </div>

@@ -18,7 +18,7 @@ const TriangleButton: FC<OwnProps> = ({ direction, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className={`${directions[direction]} h-6 w-6 cursor-pointer bg-[url('/img/icons/triangle.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/triangle-h.svg')] active:bg-[url('/img/icons/triangle-a.svg')]`}
+      className={`${directions[direction]} bg-triangle hover:bg-triangle_h active:bg-triangle_a h-6 w-6 cursor-pointer bg-contain bg-no-repeat`}
     />
   );
 };

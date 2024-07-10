@@ -10,19 +10,13 @@ export default function Home() {
       <SubTitle text="Contacts" />
       <div className="my-4 flex w-3/4 justify-around">
         <Link href="https://www.citizenweb3.com/about" className={`${size}`} target="_blank">
-          <div
-            className={`${size} bg-[url('/img/icons/cw3.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/cw3-h.svg')]`}
-          />
+          <div className={`${size} bg-cw3 hover:bg-cw3_h bg-contain bg-no-repeat`} />
         </Link>
         <Link href="https://github.com/citizenweb3/validatorinfo" className={size} target="_blank">
-          <div
-            className={`${size} bg-[url('/img/icons/github.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/github-h.svg')]`}
-          />
+          <div className={`${size} bg-github hover:bg-github_h bg-contain bg-no-repeat`} />
         </Link>
         <Link href="https://www.citizenweb3.com/about" className={size} target="_blank">
-          <div
-            className={`${size} bg-[url('/img/icons/x.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/x-h.svg')]`}
-          />
+          <div className={`${size} bg-x hover:bg-x_h bg-contain bg-no-repeat`} />
         </Link>
       </div>
       <div className="mt-8 flex flex-row items-center">

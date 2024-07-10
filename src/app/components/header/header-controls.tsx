@@ -52,7 +52,14 @@ const HeaderControls: FC<OwnProps> = ({}) => {
       <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight hover:shadow-button-greenlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
         <div className="flex flex-col items-center">
           <div className="group-hover:text-shadowed text-sm text-highlight">You</div>
-          <Image src="/img/avatars/default.png" alt="avatar" width={62} height={58} className="mx-2 my-1.5 w-16" />
+          <Image
+            src="/img/avatars/default.png"
+            alt="avatar"
+            width={62}
+            height={58}
+            className="mx-2 my-1.5 w-16"
+            priority
+          />
         </div>
       </div>
     </div>

@@ -3,9 +3,7 @@ import { FC } from 'react';
 interface OwnProps {}
 
 const InfoButton: FC<OwnProps> = ({}) => {
-  return (
-    <div className="h-[1.375rem] w-[1.375rem] bg-[url('/img/icons/info.svg')] bg-contain hover:bg-[url('/img/icons/info-h.svg')] active:bg-[url('/img/icons/info-a.svg')]" />
-  );
+  return <div className="bg-info hover:bg-info_h active:bg-info_a h-[1.375rem] w-[1.375rem] bg-contain" />;
 };
 
 export default InfoButton;

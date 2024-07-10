@@ -17,7 +17,7 @@ const PlusButton: FC<OwnProps> = ({ isOpened, onClick, size = 'base' }) => {
   return (
     <div
       onClick={onClick}
-      className={`${isOpened ? `bg-[url('/img/icons/close.svg')] group-hover/button:bg-[url('/img/icons/close-h.svg')] group-active/button:bg-[url('/img/icons/close-a.svg')] hover:bg-[url('/img/icons/close-h.svg')] active:bg-[url('/img/icons/close-a.svg')]` : `bg-[url('/img/icons/plus.svg')] group-hover/button:bg-[url('/img/icons/plus-h.svg')] group-active/button:bg-[url('/img/icons/plus-a.svg')] hover:bg-[url('/img/icons/plus-h.svg')] active:bg-[url('/img/icons/plus-a.svg')]`} ml-2 ${sizes[size]} cursor-pointer bg-contain bg-no-repeat`}
+      className={`${isOpened ? `bg-close group-hover/button:bg-close_h group-active/button:bg-close_a hover:bg-close_h active:close_a` : `bg-plus group-hover/button:bg-plus_h group-active/button:bg-plus_a hover:bg-plus_h active:bg-plus_a`} ml-2 ${sizes[size]} cursor-pointer bg-contain bg-no-repeat`}
     />
   );
 };
