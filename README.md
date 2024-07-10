@@ -3,7 +3,7 @@
 
 ## Socials: [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo)
 
-## [Docs](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md)
+## Helpful info: [Docs](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md) | [Design Assets](https://github.com/citizenweb3/validatorinfo/tree/main/src/assets)
 
 ## License: [BE GOOD](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG)
 
