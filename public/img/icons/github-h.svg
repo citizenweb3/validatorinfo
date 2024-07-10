@@ -3,6 +3,28 @@
 <ellipse cx="17.5" cy="17" rx="11.5" ry="11" fill="url(#pattern0_3333_281303)"/>
 </g>
 <defs>
+<filter id="filter0_ddd_3333_281303" x="0" y="0" width="35" height="34" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.898039 0 0 0 0 0.768627 0 0 0 0 0.419608 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3333_281303"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.898039 0 0 0 0 0.768627 0 0 0 0 0.419608 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_3333_281303" result="effect2_dropShadow_3333_281303"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="3"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.898039 0 0 0 0 0.768627 0 0 0 0 0.419608 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect2_dropShadow_3333_281303" result="effect3_dropShadow_3333_281303"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow_3333_281303" result="shape"/>
+</filter>
 <pattern id="pattern0_3333_281303" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_3333_281303" transform="matrix(0.00186094 0 0 0.00194553 0.0217391 0)"/>
 </pattern>

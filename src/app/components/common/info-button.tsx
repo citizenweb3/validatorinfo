@@ -4,9 +4,7 @@ interface OwnProps {}
 
 const InfoButton: FC<OwnProps> = ({}) => {
   return (
-    <div className="flex h-4 w-4 items-center justify-center rounded-full border-2 border-bgSt pl-[0.125rem] font-retro text-xs text-bgSt">
-      i
-    </div>
+    <div className="h-[1.375rem] w-[1.375rem] bg-[url('/img/icons/info.svg')] bg-contain hover:bg-[url('/img/icons/info-h.svg')] active:bg-[url('/img/icons/info-a.svg')]" />
   );
 };
 

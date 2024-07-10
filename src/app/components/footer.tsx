@@ -1,23 +1,26 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-
-import icons from '@/components/icons';
 
 interface OwnProps {}
 
 const Header: FC<OwnProps> = ({}) => {
-  const size = 'h-9 w-9 min-w-9 min-h-9';
+  const size = 'h-12 w-12 min-w-12 min-h-12';
   return (
-    <div className="my-4 flex justify-end space-x-1">
-      <Link href="https://www.citizenweb3.com/about" className={size} target="_blank">
-        <Image src={icons.CW3Icon} alt="control" className={size} />
+    <div className="my-4 flex items-center justify-end space-x-1">
+      <Link href="https://www.citizenweb3.com/about" className={`${size}`} target="_blank">
+        <div
+          className={`${size} bg-[url('/img/icons/cw3.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/cw3-h.svg')]`}
+        />
       </Link>
       <Link href="https://github.com/citizenweb3/validatorinfo" className={size} target="_blank">
-        <Image src={icons.GithubIcon} alt="Citizen Web 3 github" className={size} />
+        <div
+          className={`${size} bg-[url('/img/icons/github.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/github-h.svg')]`}
+        />
       </Link>
-      <Link href="https://twitter.com/therealvalidatorinfo" className={size} target="_blank">
-        <Image src={icons.XIcon} alt="Citizen Web 3 X" className={size} />
+      <Link href="https://www.citizenweb3.com/about" className={size} target="_blank">
+        <div
+          className={`${size} bg-[url('/img/icons/x.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/x-h.svg')]`}
+        />
       </Link>
     </div>
   );

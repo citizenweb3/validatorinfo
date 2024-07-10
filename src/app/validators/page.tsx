@@ -1,8 +1,13 @@
+import { FC } from 'react';
+
 import ValidatorList from '@/app/validators/validator-list/validator-list';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorTabs } from '@/components/common/tabs/tabs-data';
 
-export default function Home({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
+interface OwnProps {
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+const Home: FC<OwnProps> = ({ searchParams }) => {
   const chains: string[] = !searchParams.chains
     ? []
     : typeof searchParams.chains === 'string'
@@ -14,4 +19,6 @@ export default function Home({ searchParams }: { searchParams: { [key: string]: 
       <ValidatorList chains={chains} />
     </div>
   );
-}
+};
+
+export default Home;

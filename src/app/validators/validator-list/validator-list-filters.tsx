@@ -4,6 +4,7 @@ import { FC, useState } from 'react';
 
 import Button from '@/components/common/button';
 import InfoButton from '@/components/common/info-button';
+import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
   chains: string[];
@@ -40,11 +41,12 @@ const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
           </Button>
         ))}
       <div className="flex flex-row items-center">
-        <Button onClick={() => setIsOpened(!isOpened)} isActive={isOpened}>
-          <div className="flex flex-row items-center justify-center space-x-2 text-sm">
+        <Button onClick={() => setIsOpened(!isOpened)} isActive={isOpened} className="hover:!bg-background">
+          <div className="absolute inset-0 z-10 bg-background" />
+          <div className="z-20 -my-1 flex flex-row items-center justify-center text-sm group-hover/button:bg-background">
             <InfoButton />
             <div>Filters:</div>
-            <div className="h-1.5 w-2 cursor-pointer bg-[url('/img/icons/triangle.svg')] bg-contain hover:bg-[url('/img/icons/triangle-h.svg')]" />
+            <PlusButton size="sm" isOpened={isOpened} />
           </div>
         </Button>
       </div>

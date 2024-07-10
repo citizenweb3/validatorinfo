@@ -1,8 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import icons from '@/components/icons';
 import { ValidatorLinks } from '@/types';
 
 interface OwnProps {
@@ -11,24 +9,27 @@ interface OwnProps {
 }
 
 const ValidatorListItemLinks: FC<OwnProps> = ({ validatorId, links }) => {
-  const size = 'h-6 w-6 min-w-6 min-h-6';
+  const size = 'h-8 w-8 min-w-8 min-h-8';
   return (
     <div className="flex items-center justify-center">
-      <div className="flex min-w-14 max-w-14 flex-wrap items-center justify-center">
-        <Link
-          href={`/validator/${validatorId}`}
-          className={`${links.github && links.x ? 'flex basis-full items-center justify-center' : ''} ${size}`}
-        >
-          <Image src={icons.CW3Icon} alt="control" className={size} />
+      <div className="flex items-center justify-center -space-x-1">
+        <Link href={`/validator/${validatorId}`} className={`${size}`}>
+          <div
+            className={`${size} bg-[url('/img/icons/cw3.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/cw3-h.svg')]`}
+          />
         </Link>
         {links.github && (
           <Link href={links.github} className={size} target="_blank">
-            <Image src={icons.GithubIcon} alt={links.github} />
+            <div
+              className={`${size} bg-[url('/img/icons/github.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/github-h.svg')]`}
+            />
           </Link>
         )}
         {links.x && (
           <Link href={links.x} className={size} target="_blank">
-            <Image src={icons.XIcon} alt={links.x} className={size} />
+            <div
+              className={`${size} bg-[url('/img/icons/x.svg')] bg-contain bg-no-repeat hover:bg-[url('/img/icons/x-h.svg')]`}
+            />
           </Link>
         )}
       </div>

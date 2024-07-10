@@ -12,7 +12,7 @@ const ValidatorListHeaderItem: FC<OwnProps> = ({ name }) => {
     <th>
       <div className="flex flex-row items-center justify-center">
         <ValidatorListSortItems />
-        <div className="w-fit text-wrap px-2 text-sm">
+        <div className="w-fit text-wrap pl-2 text-sm">
           {name.split(' ').map((word) => (
             <div key={word} className="break-words">
               {word}

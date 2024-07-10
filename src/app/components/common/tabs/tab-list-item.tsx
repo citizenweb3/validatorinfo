@@ -15,7 +15,7 @@ const TabListItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered } }) 
   return (
     <Link
       href={href}
-      className={`${isActive ? 'bg-gradient-to-r from-primary to-secondary' : ''} shadow-button transition-width !active:max-h-7 group relative flex min-h-10 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden border-r border-t border-bgSt p-px text-sm duration-300 hover:bg-bgSt active:top-1 active:border-transparent active:bg-background active:shadow-none`}
+      className={`${isActive ? 'bg-gradient-to-r from-primary to-secondary text-highlight' : ''} !active:max-h-7 group relative flex min-h-10 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden border-r border-t border-bgSt p-px text-sm shadow-button transition-width duration-300 hover:bg-bgSt active:top-1 active:border-transparent active:bg-background active:shadow-none`}
     >
       <div className="flex h-full w-full flex-row flex-nowrap items-center justify-center bg-background text-lg group-hover:text-highlight hover:bg-bgSt active:bg-background">
         <div className="relative">

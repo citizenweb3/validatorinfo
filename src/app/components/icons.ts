@@ -1,3 +1,6 @@
+import AvatarIconHovered from '@/public/img/icons/avatar-h.svg';
+import AvatarIcon from '@/public/img/icons/avatar.svg';
+import BatteryIconActive from '@/public/img/icons/battery-a.svg';
 import BatteryIcon from '@/public/img/icons/battery.svg';
 import BatteryRedIcon from '@/public/img/icons/batteryred.png';
 import CW3Icon from '@/public/img/icons/cw3.svg';
@@ -20,6 +23,7 @@ import RumorsIconHovered from '@/public/img/icons/navbar/rumors-hovered.png';
 import RumorsIcon from '@/public/img/icons/navbar/rumors.png';
 import ValidatorsIconHovered from '@/public/img/icons/navbar/validators-hovered.png';
 import ValidatorsIcon from '@/public/img/icons/navbar/validators.png';
+import NotToday from '@/public/img/icons/not-today.svg';
 import QuestionIconHovered from '@/public/img/icons/question-h.svg';
 import QuestionIcon from '@/public/img/icons/question.svg';
 import StarIcon from '@/public/img/icons/star.svg';
@@ -50,6 +54,7 @@ const icons = {
   StarIcon,
   StarIconHighlighted,
   BatteryIcon,
+  BatteryIconActive,
   BatteryRedIcon,
   GithubIcon,
   XIcon,
@@ -58,6 +63,9 @@ const icons = {
   QuestionIconHovered,
   TriangleIcon,
   TriangleIconHovered,
+  AvatarIcon,
+  AvatarIconHovered,
+  NotToday,
 };
 
 export default icons;

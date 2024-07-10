@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FC, useState } from 'react';
 
 import BaseModal from '@/components/common/modal/base-modal';
+import PlusButton from '@/components/common/plus-button';
 import { ValidatorChain } from '@/types';
 
 interface OwnProps {
@@ -27,11 +28,8 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains }) => {
       ))}
       {chains.length > 3 && (
         <>
-          <div
-            onClick={() => setIsModalOpened(true)}
-            className="h-8 min-h-8 w-8 min-w-8 cursor-pointer bg-[url('/img/icons/plus.svg')] bg-contain hover:bg-[url('/img/icons/plus-h.svg')]"
-          ></div>
-          <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="right-0 top-0">
+          <PlusButton isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
+          <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="-right-2 -top-5">
             <div className="flex w-32 min-w-32 max-w-24 flex-row flex-wrap">
               {chains.map((chain) => (
                 <Link key={chain.id} href={`/networks/${chain.id}`} className="m-1">

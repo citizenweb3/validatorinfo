@@ -55,6 +55,7 @@ const config: Config = {
       },
       boxShadow: {
         '3xl': '0 0 .5rem #E5C46B,0 0 .5rem #E5C46B,0 0 2rem #E5C46B',
+        '2xl': '0 0 .25rem #E5C46B,0 0 .25rem #E5C46B,0 0 1rem #E5C46B',
         button: '0 0 .125rem #000,0 0 .125rem #000,0 .5rem .5rem #000',
         'button-highlight': '0 0 .125rem #3E3E3E,0 0 .125rem #3E3E3E,0 .5rem .5rem #3E3E3E',
         'button-greenlight': '0 0 .125rem #4FB848,0 0 .125rem #4FB848,0 .5rem .5rem #4FB848',

@@ -99,7 +99,6 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
     },
     {
       id: 4,
-      icon: 'https://s3.amazonaws.com/keybase_processed_uploads/909034c1d36c1d1f3e9191f668007805_360_360.jpeg',
       name: 'Cosmostation',
       ecosystems: ['cosmos'],
       scores: {

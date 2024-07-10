@@ -40,11 +40,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${squarified.variable} ${retroGaming.variable} ${dotGothic.variable}`}>
-      <body
-        className={`${squarified.className} min-h-screen w-screen overflow-x-hidden bg-background px-4 text-xs tracking-normal`}
-      >
-        <ThemeProvider defaultTheme="dark" attribute="class">
-          <div className="flex min-h-screen flex-col">
+      <ThemeProvider defaultTheme="dark" attribute="class">
+        <body
+          className={`${squarified.className} min-h-screen overflow-x-hidden bg-background text-xs tracking-normal`}
+        >
+          <div className="flex min-h-screen flex-col px-4">
             <Header />
             <div className="mt-4 flex flex-grow flex-row">
               <NavigationBar />
@@ -56,8 +56,8 @@ export default function RootLayout({
             </div>
             <Footer />
           </div>
-        </ThemeProvider>
-      </body>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -11,7 +11,7 @@ interface OwnProps {
 const ValidatorListItemFavorite: FC<OwnProps> = ({ isFavorite }) => {
   return (
     <div className="-mb-2.5 max-h-16 max-w-7">
-      <Button className="h-16 w-7">
+      <Button className="relative z-20 h-16 w-7">
         {isFavorite ? (
           <Image src={icons.StarIconHighlighted} alt="Favorite" className="w-9 min-w-9" />
         ) : (

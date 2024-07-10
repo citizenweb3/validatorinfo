@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 
 import BaseModal from '@/components/common/modal/base-modal';
+import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
   name: string;
@@ -24,10 +25,7 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange }) => {
       <div onClick={() => setIsModalOpened(true)} className="ml-4 h-8 min-w-24 cursor-pointer text-highlight">
         {selectedTitle}
       </div>
-      <div
-        onClick={() => setIsModalOpened(true)}
-        className="-mt-1 h-8 min-h-8 w-8 min-w-8 cursor-pointer bg-[url('/img/icons/plus.svg')] bg-contain hover:bg-[url('/img/icons/plus-h.svg')]"
-      />
+      <PlusButton isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
       <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="right-0 top-0">
         <div className="space-y-1 text-nowrap text-base">
           {list.map((item) => (

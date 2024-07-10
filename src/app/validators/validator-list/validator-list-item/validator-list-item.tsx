@@ -18,7 +18,7 @@ interface OwnProps {
 const ValidatorList: FC<OwnProps> = ({ validator }) => {
   return (
     <>
-      <tr className="border-b border-black">
+      <tr className="group border-b border-black hover:border-bgSt hover:text-highlight">
         <td className="py-2">
           <ValidatorListItemFavorite isFavorite={validator.isFavorite} />
         </td>
