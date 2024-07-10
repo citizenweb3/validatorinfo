@@ -8,8 +8,8 @@ const PreloadedIcons = () => (
     <link rel="preload" href={'/img/icons/x-h.svg'} as="image" />
     <link rel="preload" href={'/img/icons/search.svg'} as="image" />
     <link rel="preload" href={'/img/icons/search-h.svg'} as="image" />
-    <link rel="preload" href={'/img/icons/hide.svg'} as="image" />
-    <link rel="preload" href={'/img/icons/hide-h.svg'} as="image" />
+    <link rel="preload" href={'/img/icons/navbar/hide.png'} as="image" />
+    <link rel="preload" href={'/img/icons/navbar/hide-h.png'} as="image" />
     <link rel="preload" href={'/img/icons/info.svg'} as="image" />
     <link rel="preload" href={'/img/icons/info-h.svg'} as="image" />
     <link rel="preload" href={'/img/icons/info-a.svg'} as="image" />
