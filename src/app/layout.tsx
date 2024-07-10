@@ -6,6 +6,7 @@ import localFont from 'next/font/local';
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
+import PreloadedIcons from '@/components/preloaded-icons';
 
 import './globals.css';
 
@@ -40,6 +41,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${squarified.variable} ${retroGaming.variable} ${dotGothic.variable}`}>
+      <PreloadedIcons />
+
       <ThemeProvider defaultTheme="dark" attribute="class">
         <body
           className={`${squarified.className} min-h-screen overflow-x-hidden bg-background text-xs tracking-normal`}

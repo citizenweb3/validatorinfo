@@ -2,8 +2,8 @@
 
 import { FC, useState } from 'react';
 
-import icons from '@/app/components/icons';
 import { TabOptions } from '@/components/common/tabs/tabs-data';
+import icons from '@/components/icons';
 import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
 
 interface OwnProps {}
