@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Chain {
+  chainId             String @id
+  name                String
+  coinType            Int
+  denom               String
+  minimalDenom        String
+  coinDecimals        Int
+  logoUrl             String
+  walletUrlForStaking String
+  coinGeckoId         String
+  bech32Prefix        String
+
+  lcdNodes       LcdNode[]
+  rpcNodes       RpcNode[]
+}
+
+model RpcNode {
+  chainId String
+  chain   Chain  @relation(fields: [chainId], references: [chainId])
+  url     String
+
+  @@id([chainId, url])
+}
+
+model LcdNode {
+  chainId String
+  chain   Chain  @relation(fields: [chainId], references: [chainId])
+  url     String
+
+  @@id([chainId, url])
+}
