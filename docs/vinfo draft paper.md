@@ -30,7 +30,13 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 **[4. Metrics](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#calculations-of-internal-metrics)**
 
-  * [4.1. New Terminology](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#reasoning-for-new-ish-terminology-and-the-latter)
+  * [4.1. Average metrics](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#validator-metrics-that-are-compared-as-averages-to-a-network)
+  * [4.2. Validator revenue](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#validator-revenue)
+  * [4.3. TS, SS, GS, US](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ts-ss-gs-us)
+  * [4.4. Battery](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#battery)
+  * [4.5. Chain Health](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#chain-health)
+  * [4.6. Others](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#others-research)
+  * [4.7. New Terminology](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#reasoning-for-new-ish-terminology-and-the-latter)
 
 **[5. Super Panckake]()**
 
