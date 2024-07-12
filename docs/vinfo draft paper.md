@@ -105,60 +105,67 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 - battery
 - other ranking providers in TS, etc
 
-1) Validator Metrics that are compared as averages to a network
-- Rather than showing normal `uptime`, we can show uptime compares to the average uptime on the network in question
-- Same goes for `missed blocks` - we need to calculate the average missed blocks per validator per round of time and show it in comparison + amount of missed blocks. So it will be the normal amount + % out of 100 or similar
-- Any other such metrics? That can be shown using medians/averages?
+#### Validator Metrics that are compared as averages to a network
+1) `uptime`: Caluculate uptime over epoch. Compare to other validators in network. Show uptime as comparison to other validators on netowrk over N period of time
+2) `missed blocks`: Caluculate missed blocks over epoch. Compare to other validators in network. Show missed blocks as comparison to other validators on netowrk over N period of time
+
+Research:
 - TVL can also be compared to the rest of the network. That is already shown in power of total network. i.e. percent of total stake. Maybe they should be shown together somehow
 
-2) Ranking and sorting
-- i.e. At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
-- Random (added to ip address call)
-
-3) Extra metrics 
-- ratios (i.e. self stake / stake) (median of delegated tokens on a given network in comparison to other vals)
-
-4) Validator revenue
+#### Validator revenue
 - On a val profile page, there is a revenue tab, going further we can try to develop a basic metric to be later on used in calculations
 - We can show this and calculate easily a metric, such as: user A stakes amount B for period of time C, during period of time D. For that he receives Cashback (if provided) or validator token + staking rewards, that's E 
 - If value of E over a period of time, D is larger than sole value of staking rewards. We have something to work with
 
-5) Technical score, Social score, Governance score, User score (TS, SS, GS, US) are metrics we calculate on our side
-5A) Technical score:
-- Uptime using median compares to other validators on each network, then use an average or a sum of 
-a) Paramters that we will count per each chain and increment the score
-- RPC / LCD/  Indexer / Archive node
+#### TS, SS, GS, US
+- The scores must meet the following criteria:
+  - Be multichain aplicable
+  - Be verifiable
+  - Determenistic
+  - Easily calculated
+  - Have as less bias as possible
+- To achieve that, we shall apply a health rank to any chain N. Where, for example, Technical score for validator X would be calculated as his technical score on chains N + N1 + N2... then added together to provide a score. The same goes for most of the following scores. Chain health is subjective, yet will be public and based on verifiable chain perforamnce metrics. 
+
+1) Technical score:
+  1A) Uptime is the only primamry metric possible to verify and cross chain. we will calculate uptime as a median on each particualr chain in comparison to other valdiators, assign a score to each chain, and then sum the uptime scores.   Uptime, in this case should be calculated as average over period of time, in comparison to other valdiators.
+  1B) Variables that we will count per each chain and increment the score for eadch validator:
+- RPC / LCD / API / ARCVHIVE / INDEXER / LIGHT NODE
 - provable GH activity per network?
 
-5B) Social score :
-- Average(?) sum of existing indexes / scores
-a) Paramters that we will count per each chain and increment the score
-- amount staked on validator per chain compares to average % of VP per validator
-- #X network interaction per chain (rss?)
-b) Overall paramnets that can increment the score
-- Website / Twitter / GH / CW3 interview
+2) Social score :
+  2A) Not a full onchain metric. Sum of all other existing ratings, such as staking rewords, etc (once again we will need to smoothen the numbers and find some average devisive factor).
+  2B) Variables (global):
+   - Website / Twiiter / GH / CW3 interview  
+   3B) Variables that we will count per each chain and increment the score for eadch validator:
+   - Amount of delegators per network (to add an onchain touch to this)
+   - RESEARCH: % for # interaction per network (rss feeds?)
 
-5C) Governance score
-- sum of voted on by a valdiator props in USD (devision factor?)
-a ) Paramters that we will count per each chain and increment the score
-- Created prop 
-- Ambassadors (how to calculate?)
+3) Governance score:
+  3A) Sum of voted on by a valdiator props in USD (bang) on their networks. This will need to be further smoothened (the number). Possibly some devidign factor introduced, such as sum of prop value / amount of networks or by something average. Once again, this seems to be the only governance metric is a) cross chain b) open source c) verifiable
+   3B) Variables that we will count per each chain and increment the score for eadch validator:
+   - Craeted props on a network
+   - RESEARCH: network ambassadros (how to check this?)
 
-5D) User score
+4) User score:
 - per iteraction 
 i.e.
 - by how many people val added to favourites
 - other reviews?
 - minted nfts / poaps per val (future)
 
-5E) battery
-- user score
-- badges
-- % of other scores
+#### Battery
+- user score and interactions (50%)
+- badges and other web3 actions (15%)
+- % of other scores (35%: TS - 20%, GS - 10%, SS - 5%) 
 
-6E) chain health calculation:
+#### Chain health:
 - use own?
 - include health meter on each chain profile page?
+
+#### Others, research:
+- At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
+- Random (added to ip address call)
+- ratios (i.e. self stake / stake) (median of delegated tokens on a given network in comparison to other vals)
 
 #### Reasoning for new(-ish) terminology and the latter
 - uptime
