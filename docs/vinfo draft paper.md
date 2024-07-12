@@ -18,19 +18,23 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 ## Content 
 ### [TL;DR](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#tldr)
-### []()
-### []()
-### []()
-### []()
-### []()
-### []()
+### [Product description](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#introduction-and-product-description)
+  #### [User Story](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#a-user-story)
+### [Web3 Application](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#a-journey-towards-web3-applications)
+  #### [Tools](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+### [Metrics](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#reasoning-for-new-ish-terminology-and-the-latter)
+  #### [New Terminology](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#reasoning-for-new-ish-terminology-and-the-latter)
+### [Super Panckake]()
+  #### [Multichain reputation](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#multichain-reputation-a-possible-hope)
+  #### [NFT's and bubbles](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#nfts-validator-wars-and-bubbles)
+### [Summary](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#summary--conclusion)
+
+-----------------------------------------------
 
 ### Introduction and product description
 - What will it do and why in detail
 
------------------------------------------------
-
-### A user story
+#### A user story
 1) A staker of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. 
 
 2) They either search for or find the website validatorinfo.com
@@ -57,6 +61,8 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 13) A user clicks on tx XYZ in that list, and gets to /validators/citizenweb3/cosmos/tx/123456789 they see tx info and can expand tx detail on same page or get a JSON format of the tx
 
+-----------------------------------------------
+
 ### A journey towards web3 applications
 - no email logins
 - wallet and Web3 actions
@@ -64,7 +70,7 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 - self-hosting, green energy: decentralized infra
 - own llm model
 
-### AI and other tools
+#### AI and other tools
 - staking calculator. Unique. Include slashing own token, etc
 - val comparison: uptime, revenue over time (leading to capital efficiency flow)
 - val revenue: own tokens, slashing parameters, compare against network
@@ -81,15 +87,7 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 - AI data. On chain data. Social data feed
 - Token swap in platform
 
-### Reasoning for new(-ish) terminology and the latter
-- uptime
-- jailed / inactive validators
-- TVL -> TVS (total value secured)
-- Stakers / Delegators -> Followers or fans 
-
-1) Active and inactive validators
-- In inactive list, a validator can be working for X time, but with no delegations. Most explorers today show only search by default the active set, there is a feeling that if you are not in the active set, then you simply do not exist. Against decentralization
-- Naming inactive is incorrect. Validator can be active, just not signing blocks
+-----------------------------------------------
 
 ### Calculations of internal metrics
 - New metrics / Metrics changes
@@ -151,6 +149,18 @@ i.e.
 6E) chain health calculation:
 - use own?
 - include health meter on each chain profile page?
+
+#### Reasoning for new(-ish) terminology and the latter
+- uptime
+- jailed / inactive validators
+- TVL -> TVS (total value secured)
+- Stakers / Delegators -> Followers or fans 
+
+1) Active and inactive validators
+- In inactive list, a validator can be working for X time, but with no delegations. Most explorers today show only search by default the active set, there is a feeling that if you are not in the active set, then you simply do not exist. Against decentralization
+- Naming inactive is incorrect. Validator can be active, just not signing blocks
+
+----------------------------------------------------------
 
 ### Multichain reputation: a possible hope
 - Reputation
