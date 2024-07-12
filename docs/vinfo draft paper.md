@@ -1,20 +1,36 @@
 DRAFT - DANGER
 
+-----------------------------------------------
+
 # Validator info: the return of the explorer
 
 ### TL;DR
-This document is an attempt to create a mixture of a white paper / user documentation for validatorinfo.com: validator-focused, multichain explorer, dashboard and aggregator for POS token holders. It is a web application that offers unique insights into validator data. Attempting to mix onchain data, user interaction, social data, public good information, and visualization, such as graphs, unique staking calculators, comparison tools, etc. 
+This document is a mixture of a white paper / user documentation for validatorinfo.com: validator-focused, multichain explorer, dashboard and aggregator for POS token holders and delegators. ValidatoriInfo offers unique insights into validator data. It utilizes a mixture of user interaction, onchain data, social data, public good information, and visualizations - such as graphs, unique staking calculators, comparison tools, etc. 
 
 With an aim to help the user navigate their landscape across the developing multichain world of validators. Interested target audiences, may include: any stakers, delegators, holders of proof of stake tokens, validators, researchers, data analytics and web3 enthusiasts. 
 
-The application will attempt to maximize retention tools and remain open source. Further, are a collection of ideas, calculations, and other `under the hood` detail, that may improve user experience
+The application will attempt to maximize retention tools and remain open source. Further, are a collection of ideas, calculations, and other `under the hood` detail, that may improve user experience. 
+
+If you would like to contribute, please leave us any feedabck, and look out for `under the hood` labeleed isuues.
+
+
+-----------------------------------------------
+
+## Content 
+### [TL;DR](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#tldr)
+### []()
+### []()
+### []()
+### []()
+### []()
+### []()
 
 ### Introduction and product description
-- What will it do and why
+- What will it do and why in detail
+
+-----------------------------------------------
 
 ### A user story
-Might be outdated...
-
 1) A staker of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. 
 
 2) They either search for or find the website validatorinfo.com
@@ -81,7 +97,7 @@ Might be outdated...
 - battery
 - other ranking providers in TS, etc
 
-1) Metrics calculation that can be calculated as averages to a network
+1) Validator Metrics that are compared as averages to a network
 - Rather than showing normal `uptime`, we can show uptime compares to the average uptime on the network in question
 - Same goes for `missed blocks` - we need to calculate the average missed blocks per validator per round of time and show it in comparison + amount of missed blocks. So it will be the normal amount + % out of 100 or similar
 - Any other such metrics? That can be shown using medians/averages?
