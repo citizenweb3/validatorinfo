@@ -17,17 +17,27 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 -----------------------------------------------
 
 ## Content 
-### [TL;DR](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#tldr)
-### [Product description](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#introduction-and-product-description)
-  #### [User Story](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#a-user-story)
-### [Web3 Application](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#a-journey-towards-web3-applications)
-  #### [Tools](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
-### [Metrics](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#reasoning-for-new-ish-terminology-and-the-latter)
-  #### [New Terminology](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#reasoning-for-new-ish-terminology-and-the-latter)
-### [Super Panckake]()
-  #### [Multichain reputation](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#multichain-reputation-a-possible-hope)
-  #### [NFT's and bubbles](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#nfts-validator-wars-and-bubbles)
-### [Summary](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#summary--conclusion)
+
+**[1. TL;DR](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#tldr)**
+
+**[2. Product description](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#introduction-and-product-description)**
+
+  * [2.1. User Story](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#a-user-story)
+
+**[3. Web3 Application](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#a-journey-towards-web3-applications)**
+
+  * [3.1. Tools](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+
+**[4. Metrics](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#calculations-of-internal-metrics)**
+
+  * [4.1. New Terminology](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#reasoning-for-new-ish-terminology-and-the-latter)
+
+**[5. Super Panckake]()**
+
+  * [5.1. Multichain reputation](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#multichain-reputation-a-possible-hope)
+  * [5.2. NFT's and bubbles](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#nfts-validator-wars-and-bubbles)
+
+**[6. Summary](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#summary--conclusion)**
 
 -----------------------------------------------
 
