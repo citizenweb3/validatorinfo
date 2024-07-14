@@ -18,9 +18,20 @@ model Chain {
   walletUrlForStaking String
   coinGeckoId         String
   bech32Prefix        String
+  twitterUrl          String
+  docs                String?
 
+  github         Github?
   lcdNodes       LcdNode[]
   rpcNodes       RpcNode[]
+  grpc           GrpcNode[]
+}
+
+model Github {
+  chainId  String @id
+  chain    Chain  @relation(fields: [chainId], references: [chainId])
+  url      String
+  mainRepo String
 }
 
 model RpcNode {
@@ -32,6 +43,14 @@ model RpcNode {
 }
 
 model LcdNode {
+  chainId String
+  chain   Chain  @relation(fields: [chainId], references: [chainId])
+  url     String
+
+  @@id([chainId, url])
+}
+
+model GrpcNode {
   chainId String
   chain   Chain  @relation(fields: [chainId], references: [chainId])
   url     String
