@@ -15,7 +15,6 @@ model Chain {
   minimalDenom        String
   coinDecimals        Int
   logoUrl             String
-  walletUrlForStaking String
   coinGeckoId         String
   bech32Prefix        String
   twitterUrl          String
@@ -24,6 +23,7 @@ model Chain {
   github         Github?
   lcdNodes       LcdNode[]
   rpcNodes       RpcNode[]
+  wsNodes        WsNode[]
   grpc           GrpcNode[]
 }
 
@@ -32,6 +32,14 @@ model Github {
   chain    Chain  @relation(fields: [chainId], references: [chainId])
   url      String
   mainRepo String
+}
+
+model WsNode {
+  chainId String
+  chain   Chain  @relation(fields: [chainId], references: [chainId])
+  url     String
+
+  @@id([chainId, url])
 }
 
 model RpcNode {
