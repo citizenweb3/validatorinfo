@@ -9,7 +9,7 @@ deploy-migrations:
 	npx prisma migrate deploy
 
 init-chains:
-	yarn ts-node tools/chains/init-chains.ts
+	yarn ts-node-esm src/tools/chains/init-chains.ts
 
 generate-schema:
 	npx prisma migrate dev
