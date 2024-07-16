@@ -10,6 +10,7 @@ datasource db {
 model Chain {
   chainId             String @id
   name                String
+  prettyName          String
   coinType            Int
   denom               String
   minimalDenom        String

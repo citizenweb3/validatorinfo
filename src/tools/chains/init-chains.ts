@@ -1,11 +1,11 @@
 import { PrismaClient } from '@prisma/client';
 
-
 const prisma = new PrismaClient();
 
 type Chain = {
   chainId: string;
   name: string;
+  prettyName: string;
   denom: string;
   minimalDenom: string;
   logoUrl: string;
@@ -30,6 +30,7 @@ async function addNetwork(chain: Chain): Promise<void> {
     create: {
       chainId: chain.chainId,
       name: chain.name,
+      prettyName: chain.prettyName,
       denom: chain.denom,
       minimalDenom: chain.minimalDenom,
       coinDecimals: chain.coinDecimals,
@@ -71,7 +72,8 @@ async function addNetwork(chain: Chain): Promise<void> {
 
 async function main() {
   await addNetwork({
-    name: 'CosmosHub',
+    name: 'cosmoshub',
+    prettyName: 'CosmosHub',
     chainId: 'cosmoshub-4',
     bech32Prefix: 'cosmos',
     coinDecimals: 6,
@@ -91,7 +93,8 @@ async function main() {
   });
 
   await addNetwork({
-    name: 'Celestia',
+    name: 'celestia',
+    prettyName: 'Celestia',
     chainId: 'celestia',
     bech32Prefix: 'tia',
     coinDecimals: 6,
@@ -111,7 +114,8 @@ async function main() {
   });
 
   await addNetwork({
-    name: 'Picasso',
+    name: 'picasso',
+    prettyName: 'Picasso',
     chainId: 'centauri-1',
     bech32Prefix: 'pica',
     coinDecimals: 6,
@@ -131,7 +135,8 @@ async function main() {
   });
 
   await addNetwork({
-    name: 'Evmos',
+    name: 'evmos',
+    prettyName: 'Evmos',
     chainId: 'evmos_9001-2',
     bech32Prefix: 'evmos',
     coinDecimals: 18,
@@ -151,7 +156,8 @@ async function main() {
   });
 
   await addNetwork({
-    name: 'BitCanna',
+    name: 'bitcanna',
+    prettyName: 'BitCanna',
     chainId: 'bitcanna-1',
     bech32Prefix: 'bcna',
     coinDecimals: 6,
@@ -170,9 +176,9 @@ async function main() {
     twitterUrl: '123',
   });
 
-
   await addNetwork({
-    name: 'Likecoin',
+    name: 'likecoin',
+    prettyName: 'LikeCoin',
     chainId: 'likecoin-mainnet-2',
     bech32Prefix: 'bcna',
     coinDecimals: 6,
@@ -191,25 +197,26 @@ async function main() {
     twitterUrl: '123',
   });
 
-   await addNetwork({
-     name: 'Stride',
-     chainId: 'stride-1',
-     bech32Prefix: 'stride',
-     coinDecimals: 6,
-     coinGeckoId: '123',
-     coinType: 118,
-     denom: 'STRD',
-     minimalDenom: 'ustrd',
-     grpcNodeUrl: 'grpc.stride.citizenweb3.com/',
-     lcdNodeUrl: 'https://api.stride.citizenweb3.com/',
-     rpcNodeUrl: 'https://rpc.stride.citizenweb3.com/',
-     wsNodeUrl: 'wss://rpc.stride.citizenweb3.com/websocket',
-     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
-     mainRepo: '123',
-     docs: '123',
-     githubUrl: '123',
-     twitterUrl: '123',
-   });
+  await addNetwork({
+    name: 'stride',
+    prettyName: 'Stride',
+    chainId: 'stride-1',
+    bech32Prefix: 'stride',
+    coinDecimals: 6,
+    coinGeckoId: '123',
+    coinType: 118,
+    denom: 'STRD',
+    minimalDenom: 'ustrd',
+    grpcNodeUrl: 'grpc.stride.citizenweb3.com/',
+    lcdNodeUrl: 'https://api.stride.citizenweb3.com/',
+    rpcNodeUrl: 'https://rpc.stride.citizenweb3.com/',
+    wsNodeUrl: 'wss://rpc.stride.citizenweb3.com/websocket',
+    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
+    mainRepo: '123',
+    docs: '123',
+    githubUrl: '123',
+    twitterUrl: '123',
+  });
 }
 
-main()
+main();
