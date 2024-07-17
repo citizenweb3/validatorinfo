@@ -13,3 +13,6 @@ init-chains:
 
 generate-schema:
 	npx prisma migrate dev
+
+start-indexer:
+	yarn ts-node-esm server/server.ts
