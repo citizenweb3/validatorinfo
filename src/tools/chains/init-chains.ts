@@ -113,26 +113,26 @@ async function main() {
     twitterUrl: '123',
   });
 
-  await addNetwork({
-    name: 'picasso',
-    prettyName: 'Picasso',
-    chainId: 'centauri-1',
-    bech32Prefix: 'pica',
-    coinDecimals: 6,
-    coinGeckoId: '123',
-    coinType: 118,
-    denom: 'PICA',
-    minimalDenom: 'ppica',
-    grpcNodeUrl: 'grpc.celestia.citizenweb3.com/',
-    lcdNodeUrl: 'https://api.composable.citizenweb3.com/',
-    rpcNodeUrl: 'https://rpc.composable.citizenweb3.com/',
-    wsNodeUrl: 'wss://rpc.composable.com/websocket',
-    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
-    mainRepo: '123',
-    docs: '123',
-    githubUrl: '123',
-    twitterUrl: '123',
-  });
+  // await addNetwork({
+  //   name: 'picasso',
+  //   prettyName: 'Picasso',
+  //   chainId: 'centauri-1',
+  //   bech32Prefix: 'pica',
+  //   coinDecimals: 6,
+  //   coinGeckoId: '123',
+  //   coinType: 118,
+  //   denom: 'PICA',
+  //   minimalDenom: 'ppica',
+  //   grpcNodeUrl: 'grpc.celestia.citizenweb3.com/',
+  //   lcdNodeUrl: 'https://api.composable.citizenweb3.com/',
+  //   rpcNodeUrl: 'https://rpc.composable.citizenweb3.com/',
+  //   wsNodeUrl: 'wss://rpc.composable.com/websocket',
+  //   logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
+  //   mainRepo: '123',
+  //   docs: '123',
+  //   githubUrl: '123',
+  //   twitterUrl: '123',
+  // });
 
   await addNetwork({
     name: 'evmos',
