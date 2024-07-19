@@ -132,29 +132,28 @@ Research:
   - Have as less bias as possible
 - To achieve that, we shall apply a health rank to any chain N. Where, for example, Technical score for validator X would be calculated as his technical score on chains N + N1 + N2... then added together to provide a score. The same goes for most of the following scores. Chain health is subjective, yet will be public and based on verifiable chain perforamnce metrics. 
 
-1) Technical score:
-  1A) Uptime is the only primamry metric possible to verify and cross chain. we will calculate uptime as a median on each particualr chain in comparison to other valdiators, assign a score to each chain, and then sum the uptime scores.   Uptime, in this case should be calculated as average over period of time, in comparison to other valdiators.
-  1B) Variables that we will count per each chain and increment the score for eadch validator:
-- RPC / LCD / API / ARCVHIVE / INDEXER / LIGHT NODE
-- provable GH activity per network?
+##### Technical score:
+- Uptime is the only primamry metric possible to verify and cross chain. we will calculate uptime as a median on each particualr chain in comparison to other valdiators, assign a score to each chain, and then sum the uptime scores.   Uptime, in this case should be calculated as average over period of time, in comparison to other valdiators.
+- Variables that we will count per each chain and increment the score for eadch validator:
+    - RPC / LCD / API / ARCVHIVE / INDEXER / LIGHT NODE
+    - Provable GH activity per network?
 
-2) Social score :
-  2A) Not a full onchain metric. Sum of all other existing ratings, such as staking rewords, etc (once again we will need to smoothen the numbers and find some average devisive factor).
-  2B) Variables (global):
+##### Social score :
+- Not a full onchain metric. Sum of all other existing ratings, such as staking rewords, etc (once again we will need to smoothen the numbers and find some average devisive factor)
+- Variables (global):
    - Website / Twiiter / GH / CW3 interview  
-   3B) Variables that we will count per each chain and increment the score for eadch validator:
+- Variables that we will count per each chain and increment the score for eadch validator:
    - Amount of delegators per network (to add an onchain touch to this)
    - RESEARCH: % for # interaction per network (rss feeds?)
 
-3) Governance score:
-  3A) Sum of voted on by a valdiator props in USD (bang) on their networks. This will need to be further smoothened (the number). Possibly some devidign factor introduced, such as sum of prop value / amount of networks or by something average. Once again, this seems to be the only governance metric is a) cross chain b) open source c) verifiable
-   3B) Variables that we will count per each chain and increment the score for eadch validator:
+##### Governance score:
+- Sum of voted on by a valdiator props in USD (bang) on their networks. This will need to be further smoothened (the number). Possibly some devidign factor introduced, such as sum of prop value / amount of networks or by something average. Once again, this seems to be the only governance metric is a)cross chain, b)open source, c)verifiable
+- Variables that we will count per each chain and increment the score for eadch validator:
    - Craeted props on a network
    - RESEARCH: network ambassadros (how to check this?)
 
-4) User score:
-- per iteraction 
-i.e.
+##### User score:
+- per iteraction
 - by how many people val added to favourites
 - other reviews?
 - minted nfts / poaps per val (future)
