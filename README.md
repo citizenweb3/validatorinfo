@@ -1,5 +1,5 @@
 # Validator Info
-[Validator Info](https://validatorinfo.com/): validator focused, multichain explorer, dashboard and aggregator. 
+[Validator Info](https://validatorinfo.com/): validator focused, multichain POW and POS explorer, dashboard and aggregator. 
 
 ## Socials: [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo)
 
