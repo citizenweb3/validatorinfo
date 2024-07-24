@@ -5,9 +5,11 @@ DRAFT - DANGER
 # Validator info: the return of the explorer
 
 ### TL;DR
-This document is a mixture of a white paper / user documentation for validatorinfo.com: validator-focused, multichain explorer, dashboard and aggregator for POS token holders and delegators. ValidatoriInfo offers unique insights into validator data. It utilizes a mixture of user interaction, onchain data, social data, public good information, and visualizations - such as graphs, unique staking calculators, comparison tools, etc. 
+This document is a mixture of a white paper / user documentation for validatorinfo.com: validator-focused, multichain POW and POS explorer, dashboard and aggregator for token holders, miners and delegators. ValidatoriInfo offers unique insights into validator and minign pools data. It utilizes a mixture of user interaction, onchain data, social data, public good information, and visualizations - such as graphs, unique staking calculators, comparison tools, etc. 
 
-With an aim to help the user navigate their landscape across the developing multichain world of validators. Interested target audiences, may include: any stakers, delegators, holders of proof of stake tokens, validators, researchers, data analytics and web3 enthusiasts. 
+Our an aim to help the user navigate their landscape across the developing multichain world of validators and mining pools. And to make epxlorers an adoption tool, not a technical/analytical webiste. 
+
+Interested target audiences, may include: any stakers, delegators, miners, holders of proof of stake tokens, holders of proof of work tokens, validators, minign pools, researchers, data analytics and web3 enthusiasts. 
 
 The application will attempt to maximize retention tools and remain open source. Further, are a collection of ideas, calculations, and other `under the hood` detail, that may improve user experience. 
 
@@ -51,11 +53,13 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 - What will it do and why in detail
 
 #### A user story
-1) A staker of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. 
+***For the correct understadnign of the description below, the reader shoudl from here and onwards, take into accoutn the fact that the text will refer to validators and mining pools as a synonim AKA validators=mining pools"***
 
-2) They either search for or find the website validatorinfo.com
+1) A staker of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. Alternativle a miner wants to see the ratings or the status of a mining pool, or just find out overview information about a pool
 
-3) They arrive at the main page, which present them with a list of validators, written alphabetically, without being broken down by ecosystem. They may also use some of the filters presented to narrow the search down
+2) They either search for, or find the website https://validatorinfo.com
+
+3) They arrive at the main page, which present them with a list of validators and mining pools, written alphabetically, without being broken down by ecosystem. They may also use some of the filters and customization options presented to narrow the search down
 
 4) The main page contains not just a validator list, but the validators are presented with metrics and some basic links. Each validator is clickable
 
