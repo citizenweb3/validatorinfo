@@ -7,8 +7,8 @@ interface OwnProps {}
 
 const HeaderActionButtons: FC<OwnProps> = () => {
   return (
-    <div className="mt-2 flex flex-row items-center justify-center space-x-8">
-      <Button className="w-36 text-base" component="link" href="/ai">
+    <div className="mt-2 flex flex-row items-center justify-center space-x-8 text-base">
+      <Button className="w-44" component="link" href="/ai">
         <Image
           src="/img/icons/rabbit.svg"
           alt="AI"
@@ -25,9 +25,9 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           priority
           className="absolute left-0 top-1/2 hidden min-w-10 -translate-y-1/2 transform group-hover/button:block"
         />
-        <span className="-my-1.5 pl-8 font-squarified">Hi, World!</span>
+        <span className="-my-1.5 pl-8">Hi, World!</span>
       </Button>
-      <Button className="w-36 text-base" component="link" href={`/validators/${Math.floor(Math.random() * 1000) + 1}`}>
+      <Button className="w-44" component="link" href={`/validators/${Math.floor(Math.random() * 1000) + 1}`}>
         <Image
           src="/img/icons/lucky.svg"
           alt="AI"
@@ -44,7 +44,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           priority
           className="absolute left-2 top-1/2 hidden min-w-9 -translate-y-1/2 transform group-hover/button:block"
         />
-        <span className="-my-1.5 pl-6 font-squarified">Lucky!?</span>
+        <span className="-my-1.5 pl-6">Lucky!?</span>
       </Button>
     </div>
   );

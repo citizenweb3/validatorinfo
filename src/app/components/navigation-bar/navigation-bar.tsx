@@ -9,17 +9,17 @@ import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
 interface OwnProps {}
 
 const data: TabOptions[] = [
-  { name: 'Validators', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
-  { name: 'Networks', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
-  { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
+  { name: 'Validator A-Z', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
+  { name: 'Networks A-Z', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
+  { name: 'Metrics A-Z', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
   {
-    name: 'Staking Calculator',
+    name: 'Calculate',
     href: '/staking_calculator',
     icon: icons.CalculatorIcon,
     iconHovered: icons.CalculatorIconHovered,
   },
   {
-    name: 'Validator Comparison',
+    name: 'Compare',
     href: '/validator_comparison',
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
@@ -40,7 +40,7 @@ const NavigationBar: FC<OwnProps> = () => {
         onClick={() => setIsOpened(!isOpened)}
       >
         <div
-          className={`${!isOpened && 'rotate-180'} bg-hide group-hover:bg-hide_h absolute -left-1 -top-4 min-h-8 min-w-8 bg-contain`}
+          className={`${!isOpened && 'rotate-180'} absolute -left-1 -top-4 min-h-8 min-w-8 bg-hide bg-contain group-hover:bg-hide_h`}
         />
       </div>
       <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>

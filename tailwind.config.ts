@@ -12,6 +12,7 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     fontFamily: {
+      source: ['var(--font-source)', 'Arial', 'sans-serif'],
       squarified: ['var(--font-squarified)', 'Arial', 'sans-serif'],
       retro: ['var(--font-retro)', 'Arial', 'sans-serif'],
       gothic: ['var(--font-gothic)', 'Arial', 'sans-serif'],
@@ -46,6 +47,7 @@ const config: Config = {
       primary: '#3E3E3E',
       secondary: '#4FB848',
       highlight: '#E5C46B',
+      table_header: '#272727',
       background: 'var(--color-background)',
       bgSt: 'var(--color-background-stroke)',
     },
@@ -73,6 +75,9 @@ const config: Config = {
         triangle: `url('/img/icons/triangle.svg')`,
         triangle_h: `url('/img/icons/triangle-h.svg')`,
         triangle_a: `url('/img/icons/triangle-a.svg')`,
+        triangle_w: `url('/img/icons/triangle_w.svg')`,
+        triangle_w_h: `url('/img/icons/triangle_w-h.svg')`,
+        triangle_w_a: `url('/img/icons/triangle_w-a.svg')`,
       },
       transitionProperty: {
         width: 'width',

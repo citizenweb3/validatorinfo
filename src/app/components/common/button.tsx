@@ -19,8 +19,8 @@ const Button: FC<PropsWithChildren<OwnProps>> = ({
   isActive = false,
 }) => {
   const cn =
-    (isActive ? 'bg-gradient-to-r from-primary to-secondary ' : '') +
-    `${className} group/button border-r border-t border-bgSt shadow-button hover:bg-bgSt hover:text-highlight hover:fill-highlight min-w-9 fill-black stroke-black p-px font-gothic active:mt-1 active:border-transparent active:bg-background active:shadow-none`;
+    (isActive ? 'bg-gradient-to-r from-primary to-secondary active:from-transparent active:to-transparent' : '') +
+    `${className} group/button border-r border-t border-bgSt shadow-button hover:bg-bgSt hover:text-highlight hover:fill-highlight min-w-9 fill-black stroke-black p-px active:mt-1 active:border-transparent active:bg-background active:shadow-none`;
   const content = (
     <div className="relative flex h-full items-center justify-center bg-background px-2 py-1.5 group-hover/button:bg-bgSt group-active/button:bg-background">
       {children}

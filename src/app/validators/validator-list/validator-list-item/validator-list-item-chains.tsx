@@ -14,8 +14,8 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
   return (
     <div className="flex items-center justify-center space-x-0.5">
-      <div className="mr-2 font-retro text-sm">{chains.length}:</div>
-      {chains.slice(0, 3).map((chain) => (
+      {chains.length > 4 && <div className="mr-2 font-retro text-sm">{chains.length}:</div>}
+      {chains.slice(0, 4).map((chain) => (
         <Link key={chain.id} href={`/networks/${chain.id}`}>
           <Image
             src={chain.icon}
@@ -26,7 +26,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains }) => {
           />
         </Link>
       ))}
-      {chains.length > 3 && (
+      {chains.length > 4 && (
         <>
           <PlusButton isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
           <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="-right-2 -top-5">

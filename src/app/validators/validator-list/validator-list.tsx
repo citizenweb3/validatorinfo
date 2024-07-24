@@ -20,19 +20,19 @@ const ValidatorList: FC<OwnProps> = async ({ chains = [] }) => {
         <div className="mt-6 text-base">No validators found, try to change filters!</div>
       ) : (
         <div>
-          <table className="my-4 w-full table-auto border-collapse font-retro">
+          <table className="my-4 w-full table-auto border-collapse">
             <thead>
-              <tr className="border-b border-black">
+              <tr className="bg-table_header">
                 <th />
-                <ValidatorListHeaderItem name="Validator" />
+                <ValidatorListHeaderItem name="Validator" sortable />
                 <ValidatorListHeaderItem name="Links" />
-                <ValidatorListHeaderItem name="Battery" />
-                <ValidatorListHeaderItem name="Technical Score" />
-                <ValidatorListHeaderItem name="Social Score" />
-                <ValidatorListHeaderItem name="Governance Score" />
-                <ValidatorListHeaderItem name="User Score" />
-                <ValidatorListHeaderItem name="TVS" />
-                <ValidatorListHeaderItem name="Supported Assets" />
+                <ValidatorListHeaderItem name="Battery" sortable />
+                <ValidatorListHeaderItem name="Technical S." sortable />
+                <ValidatorListHeaderItem name="Social S." sortable />
+                <ValidatorListHeaderItem name="Governance S." sortable />
+                <ValidatorListHeaderItem name="User S." sortable />
+                <ValidatorListHeaderItem name="TVS" sortable />
+                <ValidatorListHeaderItem name="Supported Assets" sortable />
               </tr>
             </thead>
             <tbody>

@@ -1,14 +1,13 @@
 import { FC } from 'react';
 
-import TriangleButton from '@/components/common/triangle-button';
+import SortButton from '@/components/common/sort-button';
 
 interface OwnProps {}
 
 const ValidatorListSortItems: FC<OwnProps> = () => {
   return (
-    <div className="flex flex-col items-center justify-center -space-y-2">
-      <TriangleButton direction="t" />
-      <TriangleButton direction="b" />
+    <div className="flex flex-col items-center justify-center">
+      <SortButton direction="t" />
     </div>
   );
 };

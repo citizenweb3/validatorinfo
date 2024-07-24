@@ -12,7 +12,7 @@ interface OwnProps {
 
 const ValidatorListItemAvatar: FC<OwnProps> = ({ icon, name, id }) => {
   return (
-    <Link href={`/validators/${id}`} className="flex flex-col items-center justify-center">
+    <Link href={`/validators/${id}`} className="flex items-center">
       <div className="relative h-[3.3125rem] w-[3.3125rem]">
         {icon ? (
           <Image
@@ -32,7 +32,7 @@ const ValidatorListItemAvatar: FC<OwnProps> = ({ icon, name, id }) => {
           />
         )}
       </div>
-      <div className="text-nowrap text-center text-sm">{name}</div>
+      <div className="ml-1 text-nowrap text-center text-base">{name}</div>
     </Link>
   );
 };

@@ -5,19 +5,16 @@ import InfoButton from '@/components/common/info-button';
 
 interface OwnProps {
   name: string;
+  sortable?: boolean;
 }
 
-const ValidatorListHeaderItem: FC<OwnProps> = ({ name }) => {
+const ValidatorListHeaderItem: FC<OwnProps> = ({ name, sortable = false }) => {
   return (
     <th>
       <div className="flex flex-row items-center justify-center">
-        <ValidatorListSortItems />
-        <div className="w-fit text-wrap pl-2 text-sm">
-          {name.split(' ').map((word) => (
-            <div key={word} className="break-words">
-              {word}
-            </div>
-          ))}
+        {sortable && <ValidatorListSortItems />}
+        <div className="w-fit text-wrap text-sm">
+          <div className="text-nowrap font-normal">{name}</div>
         </div>
         <InfoButton />
       </div>

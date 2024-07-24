@@ -29,6 +29,12 @@ const retroGaming = localFont({
   variable: '--font-retro',
 });
 
+const sourceCodePro = localFont({
+  src: '../../public/fonts/SourceCodePro.ttf',
+  display: 'swap',
+  variable: '--font-source',
+});
+
 export const metadata: Metadata = {
   title: 'ValidatorInfo',
   description: 'Validator info',
@@ -40,10 +46,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${squarified.variable} ${retroGaming.variable} ${dotGothic.variable}`}>
+    <html
+      lang="en"
+      className={`${squarified.variable} ${retroGaming.variable} ${dotGothic.variable} ${sourceCodePro.variable}`}
+    >
       <ThemeProvider defaultTheme="dark" attribute="class">
         <body
-          className={`${squarified.className} min-h-screen overflow-x-hidden bg-background text-xs tracking-normal`}
+          className={`${sourceCodePro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
         >
           <PreloadedIcons />
           <div className="flex min-h-screen flex-col px-4">
