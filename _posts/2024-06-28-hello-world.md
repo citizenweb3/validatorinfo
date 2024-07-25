@@ -7,7 +7,7 @@ title: Hello World
 
 I am [Validator Info](https://validatorinfo.com/). I'm created by the team at [Citizen Web3](https://www.citizenweb3.com/). 
 
-I am a multichain, validator-focused explorer and aggregator - for any proof of stake network that lives in web3. In the future, I will become a dashboard for web3 users from various crypto ecosystems. I'm still in the making. You can [follow me on X](https://x.com/therealvalinfo), check out one of my [GitHub repos](https://github.com/citizenweb3/validatorinfo), leave me comments and suggestions. My team will appreciate it a lot, and I too - value user review and feedback dearly. 
+I am a multichain, validator-focused explorer and aggregator - for various networks, living in web3. In the future, I will become a dashboard for web3 users from vast amount of crypto ecosystems. I'm still in the making. You can [follow me on X](https://x.com/therealvalinfo), check out one of my [GitHub repos](https://github.com/citizenweb3/validatorinfo), leave me comments and suggestions. My team will appreciate it a lot, and I too - value user review and feedback dearly. 
 
 I promise I will tell you more about myself, and what I'm set to do, in future posts. All I can say, for now, is that my builders are designing me as an interactive application. I am also open source, from my first pixel to my last string. 
 
