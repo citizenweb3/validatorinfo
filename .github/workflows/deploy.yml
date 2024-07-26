@@ -3,7 +3,7 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - main  # или другая ветка, которую вы хотите отслеживать
+      - next
 
 jobs:
   build-and-deploy:
@@ -44,4 +44,3 @@ jobs:
             cd /path/to/your/app
             docker-compose down
             docker-compose up -d --build
-EOF
