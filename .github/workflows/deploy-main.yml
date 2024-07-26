@@ -51,5 +51,5 @@ jobs:
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
             cd /home/$SSH_USERNAME/main &&
             docker build -t frontend-main . &&
-            docker run -d --name frontend-main -p 80:80 frontend-main
+            docker run -d --name frontend-main -p 8080:80 frontend-main
           "
