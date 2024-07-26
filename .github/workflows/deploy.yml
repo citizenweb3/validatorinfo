@@ -1,4 +1,4 @@
-name: Deploy to Server
+name: Deploy Next Branch to Server
 
 on:
   push:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          ref: next
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -48,6 +50,19 @@ jobs:
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
             cd /home/$SSH_USERNAME/next &&
+            # Останавливаем старый контейнер, если он существует
+            if [ \$(docker ps -q -f name=frontend-next) ]; then
+              docker stop frontend-next
+              docker rm frontend-next
+            fi &&
+            
+            # Stop old
+            if [ \$(docker ps -q -f name=frontend-next) ]; then
+              docker stop frontend-next
+              docker rm frontend-next
+            fi &&
+            
+            # Start new
             docker-compose down &&
             docker-compose up -d --build
           "
