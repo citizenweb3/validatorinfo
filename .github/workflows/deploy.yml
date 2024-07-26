@@ -1,0 +1,47 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # или другая ветка, которую вы хотите отслеживать
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build the app
+        run: yarn build
+
+      - name: Copy files via SSH
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+          sshpass -p "$SSH_PASSWORD" rsync -avz -e "sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no" --exclude='node_modules' --exclude='.git' ./ $SSH_USERNAME@$SSH_HOST:/path/to/your/app
+
+      - name: Deploy application
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST << 'EOF'
+            cd /path/to/your/app
+            docker-compose down
+            docker-compose up -d --build
+EOF
