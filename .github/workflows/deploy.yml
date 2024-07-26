@@ -32,7 +32,13 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y sshpass
-          sshpass -p "$SSH_PASSWORD" rsync -avz -e "sshpass -p $SSH_PASSWORD ssh -o StrictHostKeyChecking=no" --exclude='node_modules' --exclude='.git' ./ $SSH_USERNAME@$SSH_HOST:/path/to/your/app
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
+            if [ ! -d /home/$SSH_USERNAME/next ]; then
+              git clone -b next https://github.com/citizenweb3/validatorinfo.git /home/$SSH_USERNAME/next
+            else
+              cd /home/$SSH_USERNAME/next && git pull origin next
+            fi
+          "
 
       - name: Deploy application
         env:
@@ -40,7 +46,8 @@ jobs:
           SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST << 'EOF'
-            cd /path/to/your/app
-            docker-compose down
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
+            cd /home/$SSH_USERNAME/next &&
+            docker-compose down &&
             docker-compose up -d --build
+          "
