@@ -42,7 +42,7 @@ const Doughnut = () => {
         },
       },
     },
-    cutout: 200,
+    cutout: 50,
   };
   // TODO fix colors
   // useEffect(() => {
@@ -74,10 +74,8 @@ const Doughnut = () => {
   // }, []);
 
   return (
-    <div className="flex h-1/4 w-1/2">
-      <div className="flex h-full w-full flex-col items-center justify-center">
-        <RDoughnut data={data} options={options} />
-      </div>
+    <div style={{ width: '273px' }}>
+      <RDoughnut data={data} options={options} />
     </div>
   );
 };
