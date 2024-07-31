@@ -50,6 +50,9 @@ const config: Config = {
       table_header: '#272727',
       background: 'var(--color-background)',
       bgSt: 'var(--color-background-stroke)',
+      yellow: {
+        DEFAULT: '#F3B101',
+      },
     },
     extend: {
       backgroundImage: {
