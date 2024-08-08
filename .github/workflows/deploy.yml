@@ -35,10 +35,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y sshpass
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
-            if [ ! -d /home/$SSH_USERNAME/next ]; then
+            if [ ! -d /home/$SSH_USERNAME/validatorinfo-next ]; then
               git clone -b next https://github.com/citizenweb3/validatorinfo.git /home/$SSH_USERNAME/next
             else
-              cd /home/$SSH_USERNAME/next && git pull origin next
+              cd /home/$SSH_USERNAME/validatorinfo-next && git pull origin next
             fi
           "
 
@@ -49,7 +49,7 @@ jobs:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
-            cd /home/$SSH_USERNAME/next &&
+            cd /home/$SSH_USERNAME/validatorinfo-next &&
             # Останавливаем старый контейнер, если он существует
             if [ \$(docker ps -q -f name=next-app) ]; then
               docker stop next-app
@@ -58,7 +58,7 @@ jobs:
             
             # Stop old
             if [ \$(docker ps -q -f name=frontend-next) ]; then
-              docker stop nest-app
+              docker stop next-app
               docker rm next-app
             fi &&
             
