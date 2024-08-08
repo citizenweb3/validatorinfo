@@ -32,6 +32,28 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
     },
     {
       id: 1,
+      icon: '/img/icons/vals/f2pool.svg',
+      isFavorite: true,
+      name: 'f2pool',
+      ecosystems: ['pow'],
+      battery: 94,
+      links: {
+        x: 'https://twitter.com/F2Pool_Official',
+        github: 'https://github.com/f2pool',
+      },
+      scores: {
+        technical: 82,
+        social: 96,
+        governance: 84,
+        user: 76,
+      },
+      tvs: {
+        number: 8600000,
+      },
+      chains: [{ id: 1, name: 'Bitcoin', icon: '/img/icons/assets/btc.svg' }],
+    },
+    {
+      id: 2,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/a36cb442d15672ecd180b29c698a2505_360_360.jpg',
       isFavorite: true,
       name: 'Posthuman',
@@ -52,7 +74,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
-      id: 2,
+      id: 3,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/d56ce0bdda17f73d4aa895d1626e2505_360_360.jpg',
       name: 'Polkachu',
       ecosystems: ['cosmos', 'ethereum'],
@@ -70,7 +92,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
-      id: 3,
+      id: 4,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/c1bfe4c1d4f6c8f8d66baa152d50e805_360_360.jpg',
       name: 'Allnodes',
       isFavorite: false,
@@ -98,7 +120,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       ],
     },
     {
-      id: 4,
+      id: 5,
       name: 'Cosmostation',
       ecosystems: ['cosmos'],
       scores: {
@@ -117,7 +139,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
-      id: 5,
+      id: 6,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/fa01e6109b3fd4579c4bdd445d75ad05_360_360.jpg',
       name: 'Everstake',
       ecosystems: ['cosmos', 'ethereum'],
@@ -129,7 +151,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
-      id: 6,
+      id: 7,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/d56ce0bdda17f73d4aa895d1626e2505_360_360.jpg',
       name: 'Polkachu',
       ecosystems: ['cosmos', 'ethereum'],
@@ -147,7 +169,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
-      id: 7,
+      id: 8,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/c1bfe4c1d4f6c8f8d66baa152d50e805_360_360.jpg',
       name: 'Allnodes',
       isFavorite: false,
@@ -175,7 +197,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       ],
     },
     {
-      id: 8,
+      id: 9,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/909034c1d36c1d1f3e9191f668007805_360_360.jpeg',
       name: 'Cosmostation',
       ecosystems: ['cosmos'],
@@ -195,7 +217,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
-      id: 9,
+      id: 10,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/fa01e6109b3fd4579c4bdd445d75ad05_360_360.jpg',
       name: 'Everstake',
       ecosystems: ['cosmos', 'ethereum'],
