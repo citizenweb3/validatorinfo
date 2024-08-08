@@ -50,15 +50,15 @@ jobs:
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
             cd /home/$SSH_USERNAME/next &&
-            if [ \$(docker ps -q -f name=next_app) ]; then
-              docker stop next_app
-              docker rm next_app
+            if [ \$(docker ps -q -f name=next_app_1) ]; then
+              docker stop next_app_1
+              docker rm next_app_1
             fi &&
             
             # Stop old
-            if [ \$(docker ps -q -f name=next_app) ]; then
-              docker stop next_app
-              docker rm next_app
+            if [ \$(docker ps -q -f name=next_app_1) ]; then
+              docker stop next_app_1
+              docker rm next_app_1
             fi &&
             
             # Start new
