@@ -35,10 +35,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y sshpass
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
-            if [ ! -d /validatorinfo-next ]; then
-              git clone -b next https://github.com/citizenweb3/validatorinfo.git validatorinfo-next
+            if [ -d /validatorinfo-next ]; then
+              cd /validatorinfo-next && git pull origin next
             else
-              cd validatorinfo-next && git pull origin next
+              git clone -b next https://github.com/citizenweb3/validatorinfo.git validatorinfo-next
             fi
           "
 
