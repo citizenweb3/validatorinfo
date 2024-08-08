@@ -35,7 +35,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y sshpass
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
-            cd /validatorinfo-next
+            cd $HOME/validatorinfo-next
             git pull origin next
           "
 
@@ -46,7 +46,7 @@ jobs:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
-            cd validatorinfo-next &&
+            cd $HOME/validatorinfo-next &&
             docker stop next-app
             docker rm next-app
             docker-compose down &&
