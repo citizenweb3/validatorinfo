@@ -35,8 +35,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y sshpass
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
-            cd $SSH_USERNAME/validatorinfo-next
-            git pull origin next
+            if [ ! -d /home/$SSH_USERNAME/next ]; then
+              git clone -b next https://github.com/citizenweb3/validatorinfo.git /home/$SSH_USERNAME/next
+            else
+              cd /home/$SSH_USERNAME/next && git pull origin next
+            fi
           "
 
       - name: Deploy application
@@ -46,9 +49,20 @@ jobs:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
-            cd $SSH_USERNAME/validatorinfo-next &&
-            docker stop next-app
-            docker rm next-app
+            cd /home/$SSH_USERNAME/next &&
+            # Останавливаем старый контейнер, если он существует
+            if [ \$(docker ps -q -f name=frontend-next) ]; then
+              docker stop frontend-next
+              docker rm frontend-next
+            fi &&
+            
+            # Stop old
+            if [ \$(docker ps -q -f name=frontend-next) ]; then
+              docker stop frontend-next
+              docker rm frontend-next
+            fi &&
+            
+            # Start new
             docker-compose down &&
             docker-compose up -d --build
           "
