@@ -1,0 +1,107 @@
+{
+  "common": {
+    "locale": "en"
+  },
+  "Header": {
+    "Quotes": {
+      "Validators": "Validators",
+      "Ecosystems": "Ecosystems",
+      "Dominance POW": "Dominance POW",
+      "ETH": "ETH",
+      "Polkadot": "Polkadot",
+      "Cosmos": "Cosmos",
+      "TVL": "TVL"
+    },
+    "Home": "Home",
+    "You": "You",
+    "Hi, World!": "Hi, World!",
+    "Lucky!?": "Lucky!?"
+  },
+  "Navbar": {
+    "Validators": "Validators",
+    "Networks": "Networks",
+    "Metrics": "Metrics",
+    "Calculate": "Calculate",
+    "Compare": "Compare",
+    "Rumors": "Rumors",
+    "Global": "Global",
+    "About Us": "About Us",
+    "Library": "Library"
+  },
+  "Common": {
+    "Learn More": "Learn More"
+  },
+  "HomePage": {
+    "Table": {
+      "Validator": "Validator",
+      "Links": "Links",
+      "Battery": "Battery",
+      "Technical": "Technical",
+      "Social": "Social",
+      "Governance": "Governance",
+      "User": "User",
+      "TVS": "TVS",
+      "Supported Assets": "Supported Assets",
+      "Customize": "Customize"
+    },
+    "Tabs": {
+      "Calculate": "Calculate",
+      "Compare": "Compare",
+      "ValidatorInfo": "ValidatorInfo",
+      "Rumors": "Rumors",
+      "Global": "Global"
+    }
+  },
+  "GlobalPosPage": {
+    "Metadata": {
+      "title": "Global"
+    },
+    "title": "Global",
+    "Footer": {
+      "total validators": "Total amount of validators",
+      "total networks": "Total amount of networks",
+      "total pages": "Total Amount of Claimed Val. Pages",
+      "total ecosystems": "Total Amount of Ecosystems",
+      "unknown": "..."
+    }
+  },
+  "CalculatorPage": {
+    "Metadata": {
+      "title": "Staking Calculator"
+    },
+    "title": "Staking Calculator",
+    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "Choose a Network": "Choose a Network",
+    "Choose a Validator": "Choose a Validator",
+    "Please select": "Please select validator and chain!",
+    "Token": "Token",
+    "Enter Staking Amount": "Enter Staking Amount",
+    "Wrong amount": "Wrong amount",
+    "earnings": "d Earnings"
+  },
+  "AboutPage": {
+    "Metadata": {
+      "title": "About"
+    },
+    "Tabs": {
+      "Staking": "Staking",
+      "Partners": "Partners",
+      "General Info": "General Info",
+      "Podcasts": "Podcasts",
+      "Contacts": "Contacts"
+    },
+    "Contacts": "Contacts",
+    "description": "ValidatorInfo is a multichain, validator-centric aggregator and explorer, and a future dashboard, that will\n        allow users and validators to use their web3 wallets to login and interact with the application.\n        \n        Our goal is to help stakers, web3 users and any holder of a POS token to discover more information about the\n        validators that are securing their favourite network, or - use our explorer to find the most relevent\n        information one needs.\n        \n        \n        Validator info is created by Citizen Web3.\n        \n        \n        Citizen Web3, as a project started in 2020, finding roots in ancap vibes, personal values of building a better\n        society, ecosystem development and networking. Today, Citizen Web3 is an active member of the web3 galaxy. We\n        provide, non-custodial, infrastructure as a validator across the blockchain space, which allows us to work on\n        various public goods projects and contribute to the development of web3.",
+    "Useful Info": "Useful Info",
+    "Tools": [
+      "Web3-focused podcast, dedicated to the stories of the people that make dreams reality",
+      "validatorinfo.com: a dashboard and an explorer that helps you to discover validators across the web3 galaxy (in the making)",
+      "Web3 Society: a community that helps, learns and resents tribalism. Including various incentoves (NA at the moment)",
+      "Public infrastructure, including validator nodes, public RPC endpoints, various testnets. We are currently migrating to bare metal",
+      "(NA at the moment) Bazaar: NFTs (old collection), Merchandise, Decentraland"
+    ],
+    "Our tools": "Our tools",
+    "Our Manifesto": "Our Manifesto",
+    "Manifesto": "From this distant vantage point, the Earth might not seem of any particular interest. But for us, it's different. Consider again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every \"superstar,\" every \"supreme leader,\" every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam... Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves...\n\nFrom 'A Pale Blue Dot', by Carl Sagan.\n\n\nWe believe in freedom above needs. We believe in possibilities above enforcement. We believe in values above desires. We believe that censorship has killed more people than anything else together combined. We value honesty and we value the truth. We value love and cherish all existing creatures. We value intelligence and we value decentralization.\n\nWe believe in communication, which allows participants to think, make their mind up and cast personal votes on any topic and subject. We think that content should strive to lack subjective opinions and help its consumers to form an opinion, which will result in better discussion, and in turn in a more efficient consensus.\n\nWe believe that blockchains are not simply a form of digital nations. But, open and verifiable blockchains are somewhat similar to natural hives, forests, patterns in the nature that allow us to communicate better. Without communication, we are doomed, and decentralized consensus is a tool that can and will help those who desire to make our pale blue dot a slightly better place.\n\nAND MAY THE CODE BE WITH YOU!"
+  }
+}

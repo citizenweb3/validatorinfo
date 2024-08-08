@@ -1,0 +1,47 @@
+html {
+
+    --color-background: #1E1E1E;
+    --color-background-stroke: #3E3E3E;
+    --color-background-hover: #272727;
+
+    font-size: 0.9vw;
+
+    @media screen(2xl) {
+        font-size: 16px;
+    }
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html.light {
+    --color-background: #5a6c76;
+    --color-background-stroke: #005f94;
+    --color-background-hover: #008dd7;
+
+}
+
+@layer utilities {
+    .text-shadowed {
+        text-shadow: 0 0 .5rem #E5C46B,0 0 .5rem #E5C46B,0 0 2rem #E5C46B;
+    }
+
+    .border-hover {
+        @apply relative shadow after:absolute after:-bottom-1.5 after:left-0 after:h-1.5 after:w-full after:border after:border-t-0 after:border-secondary after:bg-bgSt after:opacity-50 hover:fill-highlight hover:stroke-highlight hover:text-highlight hover:after:block active:top-1 active:after:hidden dark:fill-white dark:stroke-white dark:hover:fill-highlight dark:hover:stroke-highlight dark:hover:text-highlight
+    }
+
+    .border-hover-secondary {
+        @apply border-hover after:border-secondary from-primary to-secondary
+    }
+
+    .border-hover-primary {
+        @apply border-hover after:border-primary from-secondary to-primary
+    }
+
+    .border-hover-highlight {
+        @apply border-hover after:border-highlight from-highlight to-highlight
+    }
+}

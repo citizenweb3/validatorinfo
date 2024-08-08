@@ -1,0 +1,107 @@
+{
+  "common": {
+    "locale": "pt"
+  },
+  "Header": {
+    "Quotes": {
+      "Validators": "Validadores",
+      "Ecosystems": "Ecossistemas",
+      "Dominance POW": "Domínio POW",
+      "ETH": "ETH",
+      "Polkadot": "Polkadot",
+      "Cosmos": "Cosmos",
+      "TVL": "TVL"
+    },
+    "Home": "Lar",
+    "You": "Você",
+    "Hi, World!": "Olá mundo!",
+    "Lucky!?": "Sortudo!?"
+  },
+  "Navbar": {
+    "Validators": "Validadores",
+    "Networks": "Redes",
+    "Metrics": "Métricos",
+    "Calculate": "Calcular",
+    "Compare": "Comparar",
+    "Rumors": "Rumores",
+    "Global": "Global",
+    "About Us": "Sobre nós",
+    "Library": "Biblioteca"
+  },
+  "Common": {
+    "Learn More": "Saber mais"
+  },
+  "HomePage": {
+    "Table": {
+      "Validator": "Validador",
+      "Links": "Links",
+      "Battery": "Bateria",
+      "Technical": "Técnico",
+      "Social": "Social",
+      "Governance": "Governança",
+      "User": "Usuário",
+      "TVS": "TVS",
+      "Supported Assets": "Ativos Suportados",
+      "Customize": "Customizar"
+    },
+    "Tabs": {
+      "Calculate": "Calcular",
+      "Compare": "Comparar",
+      "ValidatorInfo": "ValidatorInfo",
+      "Rumors": "Rumores",
+      "Global": "Global"
+    }
+  },
+  "GlobalPosPage": {
+    "Metadata": {
+      "title": "Global"
+    },
+    "title": "Global",
+    "Footer": {
+      "total validators": "Quantidade total de validadores",
+      "total networks": "Quantidade total de redes",
+      "total pages": "Quantidade total de páginas Claimed",
+      "total ecosystems": "Quantidade total de ecossistemas",
+      "unknown": "..."
+    }
+  },
+  "CalculatorPage": {
+    "Metadata": {
+      "title": "Calculadora de Estacamento"
+    },
+    "title": "Calculadora de Estacamento",
+    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "Choose a Network": "Escolha uma rede",
+    "Choose a Validator": "Escolha um validador",
+    "Please select": "Por favor selecione validador e cadeia!",
+    "Token": "Token",
+    "Enter Staking Amount": "Insira o valor da aposta",
+    "Wrong amount": "Quantidade errada",
+    "earnings": "d Ganhos"
+  },
+  "AboutPage": {
+    "Metadata": {
+      "title": "Sobre nós"
+    },
+    "Tabs": {
+      "Staking": "Staking",
+      "Partners": "Parceiros",
+      "General Info": "Info gerais",
+      "Podcasts": "Podcasts",
+      "Contacts": "Contatos"
+    },
+    "Contacts": "Contatos",
+    "description": "ValidatorInfo é um agregador e explorador multichain centrado em validador, e um painel futuro, que irá\n permitir que usuários e validadores usem suas carteiras web3 para fazer login e interagir com o aplicativo.\n\n Nosso objetivo é ajudar os stakers, usuários da web3 e qualquer detentor de um token POS a descobrir mais informações sobre o\n validadores que estão protegendo sua rede favorita ou - use nosso explorador para encontrar os mais relevantes\n informações que alguém precisa.\n\n\n As informações do validador são criadas pelo Citizen Web3.\n\n\n Citizen Web3, como projeto iniciado em 2020, encontrando raízes nas vibrações ancap, valores pessoais de construção de um mundo melhor\n sociedade, desenvolvimento de ecossistemas e networking. Hoje, Citizen Web3 é um membro ativo da galáxia web3. Nós\n fornecer infraestrutura sem custódia como um validador em todo o espaço blockchain, o que nos permite trabalhar em\n vários projetos de bens públicos e contribuir para o desenvolvimento da web3.",
+    "Useful Info": "Informações úteis",
+    "Tools": [
+      "Podcast focado na Web3, dedicado às histórias de pessoas que tornam sonhos realidade",
+      "validatorinfo.com: um painel e um explorador que ajuda você a descobrir validadores em toda a galáxia da web3 (em formação)",
+      "Sociedade Web3: uma comunidade que ajuda, aprende e se ressente do tribalismo. Incluindo vários incentivos (NA no momento)",
+      "Infraestrutura pública, incluindo nós validadores, endpoints RPC públicos e diversas redes de teste. No momento, estamos migrando para bare metal",
+      "(NA no momento) Bazaar: NFTs (old collection), Merchandise, Decentraland"
+    ],
+    "Our tools": "Nossas ferramentas",
+    "Our Manifesto": "Nosso Manifesto",
+    "Manifesto": "Deste ponto de vista distante, a Terra pode não parecer ter nenhum interesse particular. Mas para nós é diferente. Considere novamente naquele ponto. Isso está aqui. Essa é a casa. Somos nós. Nele, todos que você ama, todos que você conhece, todos de quem você já ouviu falar, todos os seres humanos que já existiram, viveram suas vidas. O conjunto de nossa alegria e sofrimento, milhares de religiões, ideologias e doutrinas econômicas confiantes, cada caçador e coletor, cada herói e covarde, cada criador e destruidor de civilização, cada rei e camponês, cada jovem casal apaixonado, cada mãe e cada pai, filho esperançoso, inventor e explorador, todo professor de moral, todo político corrupto, todo “superstar”, todo “líder supremo”, todo santo e pecador na história de nossa espécie viveram lá – em um grão de poeira suspenso em um raio de sol... Nossas posturas, nossa auto-importância imaginada, a ilusão de que temos alguma posição privilegiada no Universo, são desafiadas por este ponto de luz pálida. Nosso planeta é um pontinho solitário na grande escuridão cósmica envolvente. Na nossa obscuridade, em toda esta vastidão, não há indícios de que a ajuda virá de outro lugar para nos salvar de nós mesmos...\n\nExtraído de 'Um Pálido Ponto Azul', de Carl Sagan.\n\n\nAcreditamos na liberdade acima das necessidades. Acreditamos em possibilidades acima da aplicação. Acreditamos em valores acima dos desejos. Acreditamos que a censura matou mais pessoas do que qualquer outra coisa combinada. Valorizamos a honestidade e valorizamos a verdade. Valorizamos o amor e valorizamos todas as criaturas existentes. Valorizamos a inteligência e valorizamos a descentralização.\n\nAcreditamos na comunicação, que permite aos participantes pensar, decidir e votar pessoalmente sobre qualquer tema e assunto. Pensamos que o conteúdo deve esforçar-se por não ter opiniões subjetivas e ajudar os seus consumidores a formar uma opinião, o que resultará numa melhor discussão e, por sua vez, num consenso mais eficiente.\n\nAcreditamos que as blockchains não são simplesmente uma forma de nações digitais. Mas, blockchains abertos e verificáveis \u200B\u200Bsão um tanto semelhantes a colmeias naturais, florestas, padrões da natureza que nos permitem comunicar melhor. Sem comunicação, estamos condenados, e o consenso descentralizado é uma ferramenta que pode e irá ajudar aqueles que desejam fazer do nosso pálido ponto azul um lugar um pouco melhor.\n\nE QUE O CÓDIGO ESTEJA COM VOCÊ!"
+  }
+}

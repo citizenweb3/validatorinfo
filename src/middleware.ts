@@ -1,13 +1,9 @@
-import type { NextRequest } from 'next/server';
-import { NextResponse } from 'next/server';
+import { chain } from '@/middlewares/chain';
+import withHeaders from '@/middlewares/withHeaders';
+import withLocale from '@/middlewares/withLocale';
 
-export function middleware(request: NextRequest) {
-  const headers = new Headers(request.headers);
-  headers.set('x-current-path', request.nextUrl.pathname);
-  headers.set('x-current-search', request.nextUrl.search);
-  return NextResponse.next({ headers });
-}
+export default chain([withHeaders, withLocale]);
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|img).*)'],
 };

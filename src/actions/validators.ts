@@ -5,7 +5,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
     {
       id: 0,
       icon: 'https://s3.amazonaws.com/keybase_processed_uploads/7b27f515e1c483b57de8b78f235fed05_360_360.jpg',
-      name: 'Citizen Web 3',
+      name: 'Citizen Web3',
       isFavorite: true,
       ecosystems: ['cosmos', 'polkadot'],
       battery: 100,
@@ -23,11 +23,11 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
         number: 15000000,
       },
       chains: [
-        { id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' },
-        { id: 2, name: 'Evmos', icon: 'https://votingpower.org/logos/evmos.svg' },
-        { id: 3, name: 'LikeCoin', icon: 'https://votingpower.org/logos/likecoin.svg' },
-        { id: 4, name: 'BitCanna', icon: 'https://votingpower.org/logos/bitcanna.svg' },
-        { id: 5, name: 'Gravity Bridge', icon: 'https://votingpower.org/logos/gravitybridge.svg' },
+        { id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' },
+        { id: 2, name: 'Evmos', icon: '/img/icons/assets/evmos.svg' },
+        { id: 3, name: 'LikeCoin', icon: '/img/icons/assets/likecoin.svg' },
+        { id: 4, name: 'BitCanna', icon: '/img/icons/assets/bitcanna.svg' },
+        { id: 5, name: 'Gravity Bridge', icon: '/img/icons/assets/gravitybridge.svg' },
       ],
     },
     {
@@ -49,7 +49,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 9000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
+      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
       id: 2,
@@ -67,7 +67,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 7000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
+      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
       id: 3,
@@ -90,11 +90,11 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
         number: 15000000,
       },
       chains: [
-        { id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' },
-        { id: 2, name: 'Evmos', icon: 'https://votingpower.org/logos/evmos.svg' },
-        { id: 3, name: 'LikeCoin', icon: 'https://votingpower.org/logos/likecoin.svg' },
-        { id: 4, name: 'BitCanna', icon: 'https://votingpower.org/logos/bitcanna.svg' },
-        { id: 5, name: 'Gravity Bridge', icon: 'https://votingpower.org/logos/gravitybridge.svg' },
+        { id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' },
+        { id: 2, name: 'Evmos', icon: '/img/icons/assets/evmos.svg' },
+        { id: 3, name: 'LikeCoin', icon: '/img/icons/assets/likecoin.svg' },
+        { id: 4, name: 'BitCanna', icon: '/img/icons/assets/bitcanna.svg' },
+        { id: 5, name: 'Gravity Bridge', icon: '/img/icons/assets/gravitybridge.svg' },
       ],
     },
     {
@@ -114,7 +114,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 9000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
+      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
       id: 5,
@@ -126,7 +126,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 7000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
+      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
       id: 6,
@@ -144,7 +144,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 7000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
+      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
       id: 7,
@@ -167,11 +167,11 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
         number: 15000000,
       },
       chains: [
-        { id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' },
-        { id: 2, name: 'Evmos', icon: 'https://votingpower.org/logos/evmos.svg' },
-        { id: 3, name: 'LikeCoin', icon: 'https://votingpower.org/logos/likecoin.svg' },
-        { id: 4, name: 'BitCanna', icon: 'https://votingpower.org/logos/bitcanna.svg' },
-        { id: 5, name: 'Gravity Bridge', icon: 'https://votingpower.org/logos/gravitybridge.svg' },
+        { id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' },
+        { id: 2, name: 'Evmos', icon: '/img/icons/assets/evmos.svg' },
+        { id: 3, name: 'LikeCoin', icon: '/img/icons/assets/likecoin.svg' },
+        { id: 4, name: 'BitCanna', icon: '/img/icons/assets/bitcanna.svg' },
+        { id: 5, name: 'Gravity Bridge', icon: '/img/icons/assets/gravitybridge.svg' },
       ],
     },
     {
@@ -192,7 +192,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 9000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
+      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
     {
       id: 9,
@@ -204,7 +204,7 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 7000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: 'https://votingpower.org/logos/cosmoshub.svg' }],
+      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
     },
   ];
 
