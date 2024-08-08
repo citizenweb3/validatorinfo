@@ -24,7 +24,7 @@ jobs:
         run: yarn install
 
       - name: Build the app
-        run: yarn build
+        run: yarn build --verbose
 
       - name: Copy files via SSH
         env:
@@ -51,15 +51,15 @@ jobs:
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
             cd /home/$SSH_USERNAME/next &&
             # Останавливаем старый контейнер, если он существует
-            if [ \$(docker ps -q -f name=frontend-next) ]; then
-              docker stop frontend-next
-              docker rm frontend-next
+            if [ \$(docker ps -q -f name=next-app) ]; then
+              docker stop next-app
+              docker rm next-app
             fi &&
             
             # Stop old
             if [ \$(docker ps -q -f name=frontend-next) ]; then
-              docker stop frontend-next
-              docker rm frontend-next
+              docker stop nest-app
+              docker rm next-app
             fi &&
             
             # Start new
