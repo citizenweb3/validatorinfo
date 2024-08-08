@@ -24,7 +24,7 @@ jobs:
         run: yarn install
 
       - name: Build the app
-        run: yarn build --verbose
+        run: yarn build
 
       - name: Copy files via SSH
         env:
