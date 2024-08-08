@@ -50,16 +50,15 @@ jobs:
         run: |
           sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST "
             cd /home/$SSH_USERNAME/next &&
-            # Останавливаем старый контейнер, если он существует
-            if [ \$(docker ps -q -f name=frontend-next) ]; then
-              docker stop frontend-next
-              docker rm frontend-next
+            if [ \$(docker ps -q -f name=next_app) ]; then
+              docker stop next_app
+              docker rm next_app
             fi &&
             
             # Stop old
-            if [ \$(docker ps -q -f name=frontend-next) ]; then
-              docker stop frontend-next
-              docker rm frontend-next
+            if [ \$(docker ps -q -f name=next_app) ]; then
+              docker stop next_app
+              docker rm next_app
             fi &&
             
             # Start new
