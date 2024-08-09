@@ -18,7 +18,7 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <Button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className="h-7">
+    <Button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')} className="h-7 max-h-7">
       {resolvedTheme === 'dark' ? (
         <svg className="-my-0.5 h-4" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path

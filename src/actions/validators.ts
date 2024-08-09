@@ -71,7 +71,11 @@ export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]>
       tvs: {
         number: 9000000,
       },
-      chains: [{ id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' }],
+      chains: [
+        { id: 1, name: 'Cosmos Hub', icon: '/img/icons/assets/cosmoshub.svg' },
+        { id: 2, name: 'Evmos', icon: '/img/icons/assets/evmos.svg' },
+        { id: 3, name: 'LikeCoin', icon: '/img/icons/assets/likecoin.svg' },
+      ],
     },
     {
       id: 3,

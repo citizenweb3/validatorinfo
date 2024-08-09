@@ -7,7 +7,7 @@ import Button from '@/components/common/button';
 const ValidatorListFiltersPorPage: FC = () => {
   const [perPage, setPerPage] = useState(25);
   return (
-    <div className="border-r border-t border-bgSt px-2 py-0.5 text-base shadow-button">
+    <div className="px-2 py-0.5 text-base">
       <div className="flex min-w-9 flex-row items-center space-x-2 py-px">
         <div>Rows:</div>
         <Button

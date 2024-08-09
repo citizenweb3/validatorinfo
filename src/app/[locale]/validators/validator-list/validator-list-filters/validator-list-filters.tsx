@@ -22,12 +22,12 @@ const filterItems = [
 
 const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
-  const [perPage, setPerPage] = useState(25);
   const t = useTranslations('HomePage.Table');
   return (
     <div className="flex h-9 items-center justify-end space-x-2">
       {isOpened && (
         <>
+          <ValidatorListFiltersPorPage />
           {filterItems.map((item) => (
             <Button
               component="link"
@@ -50,7 +50,6 @@ const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
               </div>
             </Button>
           ))}
-          <ValidatorListFiltersPorPage />
         </>
       )}
       <div className="flex flex-row items-center">
