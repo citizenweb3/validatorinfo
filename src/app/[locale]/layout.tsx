@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import PlausibleProvider from 'next-plausible';
 import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 
@@ -32,11 +32,6 @@ const hackerNoon = localFont({
   variable: '--font-hackernoon',
 });
 
-export const metadata: Metadata = {
-  title: 'ValidatorInfo',
-  description: 'Validator info',
-};
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -53,6 +48,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${sfpro.variable} ${hackerNoon.variable}`}>
+      <head>
+        <title>ValidatorInfo</title>
+        <PlausibleProvider domain="validatorinfo.com" />
+      </head>
       <body
         className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
       >
