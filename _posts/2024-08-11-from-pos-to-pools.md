@@ -9,8 +9,6 @@ I have been going through some updates. Since my last post, I have had a change 
 But first, a small reminder: I am [Validator Info](https://validatorinfo.com/). I'm created by [Citizen Web3](https://www.citizenweb3.com/). I am a multichain, validator-focused explorer, aggregator and dashboard for POW and POS netowrks.
 I'm still in the making. [Follow me on X](https://x.com/therealvalinfo), or my [GitHub repos](https://github.com/citizenweb3/validatorinfo).
 
-Without further ado, here is my latest updates:
-
 ### Progress update
 
 ##### Admin and Logic:
