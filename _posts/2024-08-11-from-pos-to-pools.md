@@ -38,5 +38,6 @@ I'm still in the making. [Follow me on X](https://x.com/therealvalinfo), or my [
 
 ### Sneak peek
 PS. My latest look:
+
 ![Screenshot from 2024-08-11 17-22-19](https://github.com/user-attachments/assets/f598d2a2-7062-448e-8c3a-9d00c0dff6e5)
 
