@@ -11,7 +11,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
 
   return (
     <div className="mt-2 flex flex-row items-center justify-center space-x-8 text-base">
-      <Button component="link" href="/ai">
+      <Button component="link" href="/ai" tooltip={t('Explore the AI Rabbit whole')}>
         <Image
           src="/img/icons/rabbit.svg"
           alt="AI"

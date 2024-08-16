@@ -15,6 +15,9 @@
     "Home": "Lar",
     "You": "Você",
     "Hi, World!": "Olá mundo!",
+    "Explore the AI Rabbit whole": "Explore o AI Rabbit inteiro",
+    "Click to login": "Clique para login",
+    "Search for a validator, pool, tx, address, network, etc": "Pesquise um validador, pool, transação, endereço, rede, etc.",
     "Lucky!?": "Sortudo!?"
   },
   "Navbar": {
@@ -33,16 +36,44 @@
   },
   "HomePage": {
     "Table": {
-      "Validator": "Validador",
-      "Links": "Links",
-      "Battery": "Bateria",
-      "Technical": "Técnico",
-      "Social": "Social",
-      "Governance": "Governança",
-      "User": "Usuário",
-      "TVS": "TVS",
-      "Supported Assets": "Ativos Suportados",
-      "Customize": "Customizar"
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Bateria",
+        "hint": "O estado geral de saúde abrange ações de validadores verificáveis on-chain e off-chain e redes sociais"
+      },
+      "Technical": {
+        "name": "Técnico",
+        "hint": "Oferecer segurança de rede robusta e infraestrutura adicional aumenta a pontuação"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "Uma forte presença digital e numerosos fãs na rede aumentam a pontuação"
+      },
+      "Governance": {
+        "name": "Governança",
+        "hint": "A participação em eventos e iniciativas da vida de chaveiro aumenta a pontuação"
+      },
+      "User": {
+        "name": "Usuário",
+        "hint": "As interações usuário-validador na rede, como avaliações, elevam a pontuação"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": ""
+      },
+      "Supported Assets": {
+        "name": "Ativos Suportados",
+        "hint": ""
+      },
+      "Customize": "Customizar",
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros"
     },
     "Tabs": {
       "Calculate": "Calcular",

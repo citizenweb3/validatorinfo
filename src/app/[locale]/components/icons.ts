@@ -1,7 +1,11 @@
 import AvatarIconHovered from '@/public/img/icons/avatar-h.svg';
 import AvatarIcon from '@/public/img/icons/avatar.svg';
 import BatteryIconActive from '@/public/img/icons/battery-a.svg';
+import BatterySmallIcon from '@/public/img/icons/battery-small.svg';
 import BatteryIcon from '@/public/img/icons/battery.svg';
+import BttActiveIcon from '@/public/img/icons/btt-a.svg';
+import BttHoveredIcon from '@/public/img/icons/btt-h.svg';
+import BttIcon from '@/public/img/icons/btt.svg';
 import AboutIconHovered from '@/public/img/icons/navbar/about-hovered.png';
 import AboutIcon from '@/public/img/icons/navbar/about.png';
 import CalculatorIconHovered from '@/public/img/icons/navbar/calculator-hovered.png';
@@ -26,6 +30,10 @@ import StarIconHighlighted from '@/public/img/icons/star_h.svg';
 
 const icons = {
   AboutIcon,
+  BatterySmallIcon,
+  BttIcon,
+  BttHoveredIcon,
+  BttActiveIcon,
   NetworksIcon,
   ValidatorsIcon,
   MetricsIcon,

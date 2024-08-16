@@ -13,6 +13,11 @@ import { locales } from '@/i18n';
 const sfpro = localFont({
   src: [
     {
+      path: '../../../public/fonts/SFPRODISPLAYLIGHT.otf',
+      weight: '300',
+      style: 'light',
+    },
+    {
       path: '../../../public/fonts/SFPRODISPLAYREGULAR.otf',
       weight: '400',
       style: 'normal',
@@ -65,10 +70,10 @@ export default async function LocaleLayout({
                 <div className="ml-8 flex flex-grow">
                   <div className="w-full">
                     <div>{children}</div>
+                    <Footer />
                   </div>
                 </div>
               </div>
-              <Footer />
             </div>
           </NextIntlClientProvider>
         </ThemeProvider>

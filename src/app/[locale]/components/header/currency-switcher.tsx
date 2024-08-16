@@ -16,12 +16,12 @@ export default function CurrencySwitcher() {
   });
 
   return (
-    <div ref={ref} className="font-sfpro relative max-h-7 text-base">
+    <div ref={ref} className="relative max-h-7 font-sfpro text-base">
       <Button onClick={() => setIsOpened(!isOpened)} className="h-7 w-14 uppercase">
         {currency}
       </Button>
       {isOpened && (
-        <div className="absolute top-7 flex-col">
+        <div className="absolute top-7 z-20 flex-col">
           {currencies
             .filter((cur) => cur !== currency)
             .map((cur) => (

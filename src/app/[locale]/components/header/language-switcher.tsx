@@ -23,12 +23,12 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div ref={ref} className="font-sfpro relative max-h-7 text-base">
+    <div ref={ref} className="relative max-h-7 font-sfpro text-base">
       <Button onClick={() => setIsOpened(!isOpened)} className="h-7 w-10 uppercase">
         {locale}
       </Button>
       {isOpened && (
-        <div className="absolute top-7 flex-col">
+        <div className="absolute top-7 z-20 flex-col">
           {locales
             .filter((ln) => ln !== locale)
             .map((ln) => (

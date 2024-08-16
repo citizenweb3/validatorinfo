@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import Tooltip from '@/components/common/tooltip';
 import HeaderActionButtons from '@/components/header/header-action-buttons';
 import HeaderSearch from '@/components/header/header-search';
 
@@ -52,17 +53,19 @@ const HeaderControls: FC<OwnProps> = () => {
         </svg>
       </div>
       <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight hover:shadow-button-greenlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
-        <div className="flex flex-col items-center">
-          <div className="group-hover:text-shadowed font-hackernoon text-sm uppercase text-highlight">{t('You')}</div>
-          <Image
-            src="/img/avatars/default.png"
-            alt="avatar"
-            width={62}
-            height={58}
-            className="mx-2 my-1.5 w-16"
-            priority
-          />
-        </div>
+        <Tooltip tooltip={t('Click to login')}>
+          <div className="flex flex-col items-center">
+            <div className="group-hover:text-shadowed font-hackernoon text-sm uppercase text-highlight">{t('You')}</div>
+            <Image
+              src="/img/avatars/default.png"
+              alt="avatar"
+              width={62}
+              height={58}
+              className="mx-2 my-1.5 w-16"
+              priority
+            />
+          </div>
+        </Tooltip>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ const ValidatorListFiltersPorPage: FC = () => {
           isActive={perPage === 25}
           onClick={() => setPerPage(25)}
           contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon hover:text-highlight"
+          activeType="switcher"
         >
           25
         </Button>
@@ -21,6 +22,7 @@ const ValidatorListFiltersPorPage: FC = () => {
           isActive={perPage === 50}
           onClick={() => setPerPage(50)}
           contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon"
+          activeType="switcher"
         >
           50
         </Button>
@@ -28,6 +30,7 @@ const ValidatorListFiltersPorPage: FC = () => {
           isActive={perPage === 100}
           onClick={() => setPerPage(100)}
           contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon"
+          activeType="switcher"
         >
           100
         </Button>

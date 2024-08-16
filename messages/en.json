@@ -15,6 +15,9 @@
     "Home": "Home",
     "You": "You",
     "Hi, World!": "Hi, World!",
+    "Explore the AI Rabbit whole": "Explore the AI Rabbit whole",
+    "Click to login": "Click to login",
+    "Search for a validator, pool, tx, address, network, etc": "Search for a validator, pool, tx, address, network, etc",
     "Lucky!?": "Lucky!?"
   },
   "Navbar": {
@@ -33,16 +36,44 @@
   },
   "HomePage": {
     "Table": {
-      "Validator": "Validator",
-      "Links": "Links",
-      "Battery": "Battery",
-      "Technical": "Technical",
-      "Social": "Social",
-      "Governance": "Governance",
-      "User": "User",
-      "TVS": "TVS",
-      "Supported Assets": "Supported Assets",
-      "Customize": "Customize"
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Battery",
+        "hint": "General health status, encomprasses on-chain off-chain verifiable validator actions and social networks"
+      },
+      "Technical": {
+        "name": "Technical",
+        "hint": "Offering robust network security and additional infrastructure increases the score"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "A strong digital presence and numerous on-chain fans raise the score"
+      },
+      "Governance": {
+        "name": "Governance",
+        "hint": "Participation in keychain life events and initiative boost the score"
+      },
+      "User": {
+        "name": "User",
+        "hint": "On-chain user-validator interactions, like reviews, elevate the score"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": ""
+      },
+      "Supported Assets": {
+        "name": "Supported Assets",
+        "hint": ""
+      },
+      "Customize": "Customize",
+      "Click 3 times to reset all filters": "Click 3 times to reset all filters"
     },
     "Tabs": {
       "Calculate": "Calculate",

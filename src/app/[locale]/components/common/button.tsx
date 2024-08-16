@@ -2,6 +2,15 @@ import Link from 'next/link';
 import { FC, PropsWithChildren } from 'react';
 import type { UrlObject } from 'url';
 
+import Tooltip from '@/components/common/tooltip';
+
+const activeClasses = {
+  default: 'from-primary to-secondary',
+  switcher: 'from-primary to-primary',
+};
+
+type TActiveType = keyof typeof activeClasses;
+
 interface OwnProps {
   component?: 'button' | 'link';
   href?: string | UrlObject;
@@ -9,6 +18,8 @@ interface OwnProps {
   className?: string;
   contentClassName?: string;
   isActive?: boolean;
+  activeType?: TActiveType;
+  tooltip?: string;
 }
 
 const Button: FC<PropsWithChildren<OwnProps>> = ({
@@ -19,19 +30,25 @@ const Button: FC<PropsWithChildren<OwnProps>> = ({
   contentClassName = '',
   href,
   isActive = false,
+  activeType = 'default',
+  tooltip,
 }) => {
   const cn =
     (isActive
-      ? 'bg-gradient-to-r from-primary to-secondary active:from-transparent active:to-transparent border-none text-highlight'
+      ? `bg-gradient-to-r ${activeClasses[activeType]} active:from-transparent active:to-transparent border-none text-highlight`
       : 'bg-background') +
     ` ${className} group/button border-r border-t border-bgSt shadow-button hover:bg-bgHover hover:text-highlight hover:fill-highlight min-w-9 fill-black stroke-black p-px active:mt-1 active:border-transparent active:bg-background active:shadow-none`;
-  const content = (
+  let content = (
     <div
-      className={`${contentClassName} group-hover/button:bg-bgHover relative flex h-full items-center justify-center bg-background px-2 py-1.5 group-active/button:bg-background`}
+      className={`${contentClassName} relative flex h-full items-center justify-center bg-background px-2 py-1.5 group-hover/button:bg-bgHover group-active/button:bg-background`}
     >
       {children}
     </div>
   );
+
+  if (tooltip) {
+    content = <Tooltip tooltip={tooltip}>{content}</Tooltip>;
+  }
 
   return component === 'link' ? (
     <Link href={href ?? '#'} className={cn}>
