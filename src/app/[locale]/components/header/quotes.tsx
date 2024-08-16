@@ -34,7 +34,7 @@ const data = {
 
 const Quotes: FC<OwnProps> = () => {
   return (
-    <div className="flex flex-grow flex-row space-x-12 overflow-auto scrollbar-none">
+    <div className="flex flex-grow flex-row space-x-10 scrollbar-none">
       <QuoteItem name="Validators" value={data.validators} href="/validators" />
       <QuoteItem name="Ecosystems" value={data.ecosystems} href="/networks" />
       <QuoteItem name="TVL" value={data.tvl} href="/global_pos" />

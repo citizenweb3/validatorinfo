@@ -4,13 +4,17 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": "Validators",
-      "Ecosystems": "Ecosystems",
-      "Dominance POW": "Dominance POW",
-      "ETH": "ETH",
-      "Polkadot": "Polkadot",
-      "Cosmos": "Cosmos",
-      "TVL": "TVL"
+      "Validators": { "name": "Validators", "hint": "" },
+      "Ecosystems": { "name": "Ecosystems", "hint": "" },
+      "Dominance POW": { "name": "Dominance POW", "hint": "Global staking, mining pools and validator statistics" },
+      "ETH": { "name": "ETH", "hint": "" },
+      "Polkadot": { "name": "Polkadot", "hint": "" },
+      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "Dominance POW-hint": "Global staking, mining pools and validator statistics",
+      "TVL": {
+        "name": "TVL",
+        "hint": ""
+      }
     },
     "Home": "Home",
     "You": "You",
@@ -66,7 +70,7 @@
       },
       "TVS": {
         "name": "TVS",
-        "hint": ""
+        "hint": "Total Secured Value. Total amount of assets staked to validator"
       },
       "Supported Assets": {
         "name": "Supported Assets",

@@ -37,7 +37,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           width={24}
           height={24}
           priority
-          className="absolute left-0 top-1/2 min-w-10 -translate-y-1/2 transform bg-contain group-hover/button:hidden"
+          className="absolute left-0 top-1/2 min-w-9 -translate-y-1/2 transform bg-contain group-hover/button:hidden"
         />
         <Image
           src="/img/icons/lucky-h.svg"
@@ -45,7 +45,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           width={24}
           height={24}
           priority
-          className="absolute left-2 top-1/2 hidden min-w-9 -translate-y-1/2 transform group-hover/button:block"
+          className="absolute left-0 top-1/2 hidden min-w-9 -translate-y-1/2 transform group-hover/button:block"
         />
         <span className="-my-1.5 pl-8">{t('Lucky!?')}</span>
       </Button>

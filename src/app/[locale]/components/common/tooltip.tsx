@@ -18,12 +18,14 @@ const ToolTip: FC<Props> = ({ children, tooltip, direction = 'bottom', className
   return (
     <div
       ref={container}
-      onMouseEnter={({ clientX }) => {
+      onMouseEnter={() => {
         if (!tooltipRef.current || !container.current) return;
         const { width, height } = container.current.getBoundingClientRect();
         const { width: tWidth, height: tHeight } = tooltipRef.current.getBoundingClientRect();
 
         tooltipRef.current.style.left = -(tWidth - width) / 2 + 'px';
+
+        console.log('[SSA] di: ', direction, tooltip);
 
         switch (direction) {
           case 'bottom':
