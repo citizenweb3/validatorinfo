@@ -28,6 +28,7 @@ async function addNetwork(chain: Chain): Promise<void> {
     where: { chainId: chain.chainId },
     update: {},
     create: {
+      type: "cosmos",
       chainId: chain.chainId,
       name: chain.name,
       prettyName: chain.prettyName,
@@ -56,7 +57,7 @@ async function addNetwork(chain: Chain): Promise<void> {
           url: chain.rpcNodeUrl,
         },
       },
-      grpc: {
+      grpcNodes: {
         create: {
           url: chain.grpcNodeUrl,
         },

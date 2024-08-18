@@ -8,6 +8,7 @@ datasource db {
 }
 
 model Chain {
+  type                String
   chainId             String @id
   name                String
   prettyName          String
@@ -25,7 +26,8 @@ model Chain {
   lcdNodes       LcdNode[]
   rpcNodes       RpcNode[]
   wsNodes        WsNode[]
-  grpc           GrpcNode[]
+  grpcNodes      GrpcNode[]
+  validators     Validator[]
 }
 
 model Github {
@@ -63,6 +65,28 @@ model GrpcNode {
   chainId String
   chain   Chain  @relation(fields: [chainId], references: [chainId])
   url     String
-
   @@id([chainId, url])
 }
+
+model Validator {
+  chain               Chain   @relation(fields: [chainId], references: [chainId])
+  chainId             String
+  operator_address    String  @id
+  consensus_pubkey    String  @unique
+  jailed              Boolean
+  tokens              String
+  delegator_shares    String
+  moniker             String
+  identity            String
+  website             String
+  security_contact    String
+  details             String
+  unbonding_height    String
+  unbonding_time      DateTime
+  update_time         DateTime
+  rate                String
+  max_rate            String
+  max_change_rate     String
+  min_self_delegation String
+}
+

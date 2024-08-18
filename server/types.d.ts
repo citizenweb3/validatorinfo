@@ -1,3 +1,5 @@
+import { Chain, GrpcNode, LcdNode, RpcNode, WsNode } from '@prisma/client';
+
 declare type NewBlock = {
   jsonrpc: '2.0';
   id: 1;
@@ -24,3 +26,50 @@ declare type NewBlock = {
     };
   };
 };
+
+export type ChainWithNodes = Chain & {
+  rpcNodes: RpcNode[];
+  grpcNodes: GrpcNode[];
+  lcdNodes: LcdNode[];
+  wsNodes: WsNode[];
+};
+
+export interface Validator {
+  operator_address: string;
+  consensus_pubkey: ConsensusPubkey;
+  jailed: boolean;
+  status: BondStatus;
+  tokens: string;
+  delegator_shares: string;
+  description: ValidatorDescription;
+  unbonding_height: string;
+  unbonding_time: string;
+  commission: ValidatorCommission;
+  min_self_delegation: string;
+}
+
+interface ConsensusPubkey {
+  '@type': string;
+  key: string;
+}
+
+interface ValidatorDescription {
+  moniker: string;
+  identity: string;
+  website: string;
+  security_contact: string;
+  details: string;
+}
+
+interface ValidatorCommission {
+  commission_rates: CommissionRates;
+  update_time: string;
+}
+
+interface CommissionRates {
+  rate: string;
+  max_rate: string;
+  max_change_rate: string;
+}
+
+type BondStatus = 'BOND_STATUS_BONDED';

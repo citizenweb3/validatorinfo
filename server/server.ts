@@ -1,17 +1,14 @@
-import { PrismaClient } from '@prisma/client';
+import { Chain, Prisma, PrismaClient } from '@prisma/client';
+import { DefaultArgs } from '@prisma/client/runtime/library';
 import { CronJob } from 'cron';
 import express, { Express } from 'express';
 import WebSocket from 'ws';
 
-const app: Express = express();
-const port = process.env.PORT || 3333;
+import { ChainWithNodes, Validator } from './types';
 
-const client = new PrismaClient();
+const getData = async (lcd: string, path: string) => await fetch(lcd + path).then((data) => data.json());
 
-async function initWss() {
-  const chains = await client.chain.findMany({
-    include: { wsNodes: true },
-  });
+async function initWss(chains: ChainWithNodes[]) {
   console.log('Connecting chains to ws');
   for (const chain of chains) {
     console.log(chain.prettyName + ' connecting...');
@@ -39,20 +36,91 @@ async function initWss() {
   }
 }
 
-initWss();
+export const getValidators = async (
+  client: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>,
+  chains: ChainWithNodes[],
+) => {
+  chains.map(async (chain) => {
+    const validators: Validator[] = (
+      await getData(
+        chain.lcdNodes[0].url,
+        '/cosmos/staking/v1beta1/validators?status=BOND_STATUS_BONDED&pagination.limit=500&pagination.count_total=false',
+      )
+    ).validators;
+    validators.map(
+      ({
+        commission,
+        consensus_pubkey,
+        delegator_shares,
+        description,
+        jailed,
+        min_self_delegation,
+        operator_address,
+        tokens,
+        unbonding_height,
+        unbonding_time,
+      }) => {
+        client.validator.upsert({
+          where: { operator_address: operator_address },
+          update: {
+            tokens: tokens,
+            moniker: description.moniker,
+            delegator_shares: delegator_shares,
+            details: description.details,
+            identity: description.identity,
+            website: description.website,
+            security_contact: description.security_contact,
+            jailed: jailed,
+            rate: commission.commission_rates.rate,
+            update_time: commission.update_time,
+          },
+          create: {
+            chainId: chain.chainId,
+            moniker: description.moniker,
+            operator_address: operator_address,
+            consensus_pubkey: consensus_pubkey.key,
+            delegator_shares: delegator_shares,
+            details: description.details,
+            identity: description.identity,
+            website: description.website,
+            security_contact: description.security_contact,
+            jailed: jailed,
+            min_self_delegation: min_self_delegation,
+            max_rate: commission.commission_rates.max_rate,
+            max_change_rate: commission.commission_rates.max_change_rate,
+            rate: commission.commission_rates.rate,
+            update_time: commission.update_time,
+            tokens: tokens,
+            unbonding_height: unbonding_height,
+            unbonding_time: unbonding_time,
+          },
+        });
+      },
+    );
+  });
+};
 
-app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
-});
+const runServer = async () => {
+  const app: Express = express();
+  const port = process.env.SERVER_PORT || 3333;
 
-const job = new CronJob(
-  '* * * * * *', // cronTime
-  function () {
-    console.log('You will see this message every second');
-  }, // onTick
-  null, // onComplete
-  true, // start
-  'America/Los_Angeles', // timeZone
-);
+  const client = new PrismaClient();
+  const chains = await client.chain.findMany({
+    include: { grpcNodes: true, lcdNodes: true, rpcNodes: true, wsNodes: true },
+  });
 
-job.start();
+  app.listen(port, () => {
+    console.log(`[server]: Server is running at http://localhost:${port}`);
+  });
+
+  const getValidatorsJob = new CronJob(
+    '* * * * * *', // cronTime
+    async () => {
+      getValidators(client, chains);
+    }, // onTick
+    null, // onComplete
+    true, // start
+  );
+};
+
+runServer();
