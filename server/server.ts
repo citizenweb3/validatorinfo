@@ -48,7 +48,7 @@ export const getValidators = async (
       )
     ).validators;
     validators.map(
-      ({
+      async ({
         commission,
         consensus_pubkey,
         delegator_shares,
@@ -60,7 +60,7 @@ export const getValidators = async (
         unbonding_height,
         unbonding_time,
       }) => {
-        client.validator.upsert({
+        await client.validator.upsert({
           where: { operator_address: operator_address },
           update: {
             tokens: tokens,
@@ -114,13 +114,16 @@ const runServer = async () => {
   });
 
   const getValidatorsJob = new CronJob(
-    '* * * * * *', // cronTime
+    '* 5 * * * *', // cronTime
     async () => {
-      getValidators(client, chains);
+      await getValidators(client, chains);
+      console.log("validators parsed")
     }, // onTick
     null, // onComplete
     true, // start
   );
+   getValidatorsJob.start()
 };
+ 
 
 runServer();

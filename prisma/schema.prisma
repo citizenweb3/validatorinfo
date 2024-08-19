@@ -72,7 +72,7 @@ model Validator {
   chain               Chain   @relation(fields: [chainId], references: [chainId])
   chainId             String
   operator_address    String  @id
-  consensus_pubkey    String  @unique
+  consensus_pubkey    String
   jailed              Boolean
   tokens              String
   delegator_shares    String
