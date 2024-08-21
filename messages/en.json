@@ -10,7 +10,6 @@
       "ETH": { "name": "ETH", "hint": "" },
       "Polkadot": { "name": "Polkadot", "hint": "" },
       "Cosmos": { "name": "Cosmos", "hint": "" },
-      "Dominance POW-hint": "Global staking, mining pools and validator statistics",
       "TVL": {
         "name": "TVL",
         "hint": ""

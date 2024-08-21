@@ -4,13 +4,19 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": "Валидаторов",
-      "Ecosystems": "Экосистем",
-      "Dominance POW": "Доминирование POW",
-      "ETH": "ETH",
-      "Polkadot": "Polkadot",
-      "Cosmos": "Cosmos",
-      "TVL": "ТВЛ"
+      "Validators": { "name": "Валидаторов", "hint": "" },
+      "Ecosystems": { "name": "Экосистем", "hint": "" },
+      "Dominance POW": {
+        "name": "Доминирование POW",
+        "hint": "Глобальный стейкинг, майнинг-пулы и статистика валидаторов"
+      },
+      "ETH": { "name": "ETH", "hint": "" },
+      "Polkadot": { "name": "Polkadot", "hint": "" },
+      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "TVL": {
+        "name": "ТВЛ",
+        "hint": ""
+      }
     },
     "Home": "Главная",
     "You": "Вы",

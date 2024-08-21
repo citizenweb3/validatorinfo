@@ -6,24 +6,27 @@ import BatteryIcon from '@/public/img/icons/battery.svg';
 import BttActiveIcon from '@/public/img/icons/btt-a.svg';
 import BttHoveredIcon from '@/public/img/icons/btt-h.svg';
 import BttIcon from '@/public/img/icons/btt.svg';
-import AboutIconHovered from '@/public/img/icons/navbar/about-hovered.png';
-import AboutIcon from '@/public/img/icons/navbar/about.png';
-import CalculatorIconHovered from '@/public/img/icons/navbar/calculator-hovered.png';
-import CalculatorIcon from '@/public/img/icons/navbar/calculator.png';
-import ComparisonIconHovered from '@/public/img/icons/navbar/comparison-hovered.png';
-import ComparisonIcon from '@/public/img/icons/navbar/comparison.png';
-import GlobalIconHovered from '@/public/img/icons/navbar/global-hovered.png';
-import GlobalIcon from '@/public/img/icons/navbar/global.png';
-import LibraryIconHovered from '@/public/img/icons/navbar/library-hovered.png';
-import LibraryIcon from '@/public/img/icons/navbar/library.png';
-import MetricsIconHovered from '@/public/img/icons/navbar/metrics-hovered.png';
-import MetricsIcon from '@/public/img/icons/navbar/metrics.png';
-import NetworksIconHovered from '@/public/img/icons/navbar/networks-hovered.png';
-import NetworksIcon from '@/public/img/icons/navbar/networks.png';
-import RumorsIconHovered from '@/public/img/icons/navbar/rumors-hovered.png';
-import RumorsIcon from '@/public/img/icons/navbar/rumors.png';
-import ValidatorsIconHovered from '@/public/img/icons/navbar/validators-hovered.png';
-import ValidatorsIcon from '@/public/img/icons/navbar/validators.png';
+import AboutIconHovered from '@/public/img/icons/navbar/about-h.svg';
+import AboutIcon from '@/public/img/icons/navbar/about.svg';
+import CalculatorIconHovered from '@/public/img/icons/navbar/calculator-h.svg';
+import CalculatorIcon from '@/public/img/icons/navbar/calculator.svg';
+import ComparisonIconHovered from '@/public/img/icons/navbar/comparison-h.svg';
+import ComparisonIcon from '@/public/img/icons/navbar/comparison.svg';
+import GlobalIconHovered from '@/public/img/icons/navbar/global-h.svg';
+import GlobalIcon from '@/public/img/icons/navbar/global.svg';
+import HideActiveIcon from '@/public/img/icons/navbar/hide-a.svg';
+import HideHoveredIcon from '@/public/img/icons/navbar/hide-h.svg';
+import HideIcon from '@/public/img/icons/navbar/hide.svg';
+import LibraryIconHovered from '@/public/img/icons/navbar/library-h.svg';
+import LibraryIcon from '@/public/img/icons/navbar/library.svg';
+import MetricsIconHovered from '@/public/img/icons/navbar/metrics-h.svg';
+import MetricsIcon from '@/public/img/icons/navbar/metrics.svg';
+import NetworksIconHovered from '@/public/img/icons/navbar/networks-h.svg';
+import NetworksIcon from '@/public/img/icons/navbar/networks.svg';
+import RumorsIconHovered from '@/public/img/icons/navbar/rumors-h.svg';
+import RumorsIcon from '@/public/img/icons/navbar/rumors.svg';
+import ValidatorsIconHovered from '@/public/img/icons/navbar/validators-h.svg';
+import ValidatorsIcon from '@/public/img/icons/navbar/validators.svg';
 import NotToday from '@/public/img/icons/not-today.svg';
 import StarIcon from '@/public/img/icons/star.svg';
 import StarIconHighlighted from '@/public/img/icons/star_h.svg';
@@ -58,6 +61,9 @@ const icons = {
   AvatarIcon,
   AvatarIconHovered,
   NotToday,
+  HideIcon,
+  HideHoveredIcon,
+  HideActiveIcon,
 };
 
 export default icons;
