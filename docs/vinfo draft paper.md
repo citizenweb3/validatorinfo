@@ -86,9 +86,11 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 ### A journey towards web3 applications
 - no email logins
 - wallet and Web3 actions
+- onchain registry
 - staking from app
 - self-hosting, green energy: decentralized infra
 - own llm model
+- dao and token?
 
 #### AI and other tools
 - staking calculator. Unique. Include slashing own token, etc
