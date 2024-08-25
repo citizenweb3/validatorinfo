@@ -19,7 +19,7 @@ const ValidatorListHeaderItem: FC<OwnProps> = ({ name, sortable = false }) => {
         {sortable && <ValidatorListSortItems />}
         <Tooltip tooltip={`${t(`${name}.hint` as 'Validator.hint')}`} direction="top">
           <div className="w-fit text-wrap text-sm">
-            <div className="text-nowrap font-bold">{t(`${name}.name` as 'Validator.name')}</div>
+            <div className="text-nowrap font-bold">&nbsp;{t(`${name}.name` as 'Validator.name')}</div>
           </div>
         </Tooltip>
       </div>

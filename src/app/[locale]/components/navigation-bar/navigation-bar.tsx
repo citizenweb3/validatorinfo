@@ -41,7 +41,7 @@ const NavigationBar: FC<OwnProps> = () => {
         onClick={() => setIsOpened(!isOpened)}
       >
         <div
-          className={`${!isOpened ? 'rotate-90' : '-rotate-90'} group-active:bg-hide_a absolute -left-1 -top-4 min-h-8 min-w-6 bg-hide bg-contain group-hover:bg-hide_h`}
+          className={`${!isOpened ? 'rotate-180' : ''} absolute -left-1 -top-0 min-h-6 min-w-8 bg-hide bg-contain group-hover:bg-hide_h group-active:bg-hide_a`}
         />
       </div>
       <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>

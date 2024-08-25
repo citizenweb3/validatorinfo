@@ -1,10 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { FC, useCallback, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
-import icons from '@/components/icons';
 
 const ScrollToTop: FC = () => {
   const [isShowing, setIsShowing] = useState(false);
@@ -34,16 +32,14 @@ const ScrollToTop: FC = () => {
           behavior: 'smooth',
         });
       }}
-      className={`${isShowing ? 'right-0' : '-right-10'} group/btt fixed bottom-4 transition delay-150 duration-1000 ease-in-out`}
-      contentClassName="!p-1 !pt-0"
+      className={`${isShowing ? 'right-0' : '-right-10'} group/btt fixed bottom-4 h-14 w-9 !min-w-6`}
+      contentClassName="!p-0"
     >
-      <Image src={icons.BttIcon} alt="btt" className="mt-1 w-7 group-hover/btt:hidden group-active/btt:hidden" />
-      <Image
-        src={icons.BttHoveredIcon}
-        alt="btt"
-        className="mt-2 hidden w-7 group-hover/btt:block group-active/btt:hidden"
-      />
-      <Image src={icons.BttActiveIcon} alt="btt" className="mt-2 hidden w-7 group-active/btt:block" />
+      <div className="relative h-14 w-9">
+        <div
+          className={`absolute left-1/2 top-1/2 min-h-7 min-w-10 -translate-x-1/2 -translate-y-1/2 rotate-90 transform bg-hide bg-contain bg-no-repeat group-hover/btt:bg-hide_h group-active/btt:bg-hide_a`}
+        />
+      </div>
     </Button>
   );
 };
