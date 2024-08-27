@@ -1,14 +1,14 @@
 'use client';
 
 import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Doughnut as RDoughnut } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+import { externalTooltipHandler } from '../tooltips/externalTooltipHandler';
 
-export const getColorFromCSS = (variable: string) => {
-  return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
-};
+const config = require('../../../../../tailwind.config.ts');
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const initialChartData = {
   labels: ['Cosmos', 'ETH', 'Polkadot'],
@@ -16,7 +16,11 @@ export const initialChartData = {
     {
       label: '# of Votes',
       data: [25, 50, 25],
-      backgroundColor: ['#4FB848', '#F3B101', '#EB1616'],
+      backgroundColor: [
+        config.default.theme.colors.oldPalette.green,
+        config.default.theme.colors.oldPalette.yellow,
+        config.default.theme.colors.oldPalette.red,
+      ],
       borderWidth: 0,
     },
   ],
@@ -33,48 +37,24 @@ const Doughnut = () => {
         display: true,
         position: 'right',
         labels: {
-          boxWidth: 25,
-          boxHeight: 25,
+          boxWidth: config.default.theme.extend.charts.doughnut.labels.width,
+          boxHeight: config.default.theme.extend.charts.doughnut.labels.height,
           font: {
-            size: 16,
+            size: config.default.theme.fontSize['16'],
             family: 'Squarified',
           },
         },
       },
+      tooltip: {
+        external: externalTooltipHandler,
+        enabled: false,
+      },
     },
     cutout: 50,
   };
-  // TODO fix colors
-  // useEffect(() => {
-  //   const updateColors = () => {
-  //     const updatedData = {
-  //       ...initialChartData,
-  //       datasets: initialChartData.datasets.map((dataset) => ({
-  //         ...dataset,
-  //         backgroundColor: [
-  //           getColorFromCSS('--tw-color-green'),
-  //           getColorFromCSS('--tw-color-yellow'),
-  //           getColorFromCSS('--tw-color-red'),
-  //         ],
-  //       })),
-  //     };
-  //     setData(updatedData);
-  //   };
-
-  //   if (typeof window !== 'undefined') {
-  //     updateColors();
-  //     window.addEventListener('resize', updateColors);
-  //   }
-
-  //   return () => {
-  //     if (typeof window !== 'undefined') {
-  //       window.removeEventListener('resize', updateColors);
-  //     }
-  //   };
-  // }, []);
-
   return (
-    <div style={{ width: '273px' }}>
+    <div className="charts-width">
+      {/* @ts-ignore */}
       <RDoughnut data={data} options={options} />
     </div>
   );
