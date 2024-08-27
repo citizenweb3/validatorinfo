@@ -13,7 +13,7 @@ const Footer = () => {
         <Link href="https://github.com/citizenweb3/validatorinfo" className={size} target="_blank">
           <div className={`${size} bg-github bg-contain bg-no-repeat hover:bg-github_h`} />
         </Link>
-        <Link href="https://www.citizenweb3.com/about" className={size} target="_blank">
+        <Link href="https://x.com/citizen_web3" className={size} target="_blank">
           <div className={`${size} bg-x bg-contain bg-no-repeat hover:bg-x_h`} />
         </Link>
       </div>
