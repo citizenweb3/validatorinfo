@@ -18,7 +18,7 @@ export default function AboutLayout({
     <div>
       <PageTitle prefix="About" text="Validator Info" />
       <div className="my-3 flex justify-center">
-        <Image src="/img/logo.svg" alt="logo" width={129} height={118} className="w-32" priority />
+        <Image src="/img/logo.png" alt="logo" width={186} height={174} className="w-32" priority />
       </div>
       <TabList page="AboutPage" tabs={aboutTabs} />
       {children}

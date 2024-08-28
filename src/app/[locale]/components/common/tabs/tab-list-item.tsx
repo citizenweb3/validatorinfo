@@ -27,8 +27,8 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
             <Image
               src={icon}
               alt={name}
-              width={26}
-              height={26}
+              width={120}
+              height={120}
               className={`${isActive && 'hidden'} absolute -left-1 -top-2 w-10 group-hover:hidden`}
             />
           )}
@@ -36,8 +36,8 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
             <Image
               src={iconHovered}
               alt={name}
-              width={40}
-              height={40}
+              width={120}
+              height={120}
               className={`${isActive ? 'block' : 'hidden'} absolute -left-1 -top-2 w-10 group-hover:block`}
             />
           )}
