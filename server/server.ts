@@ -4,7 +4,10 @@ import { CronJob } from 'cron';
 import express, { Express } from 'express';
 import WebSocket from 'ws';
 
+
+
 import { ChainWithNodes, Validator } from './types';
+
 
 const getData = async (lcd: string, path: string) => await fetch(lcd + path).then((data) => data.json());
 
@@ -112,7 +115,7 @@ const runServer = async () => {
   app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
   });
-
+  getValidators(client, chains);
   const getValidatorsJob = new CronJob(
     '* 5 * * * *', // cronTime
     async () => {
