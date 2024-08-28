@@ -26,7 +26,13 @@ const Line = () => {
         data={data}
         options={{
           responsive: true,
-          plugins: { legend: { display: false } },
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              enabled: false,
+            },
+          },
           scales: {
             x: {
               grid: { display: false },
