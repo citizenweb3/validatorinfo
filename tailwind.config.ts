@@ -36,6 +36,7 @@ const config: Config = {
       '2xl': '2.125rem',
       '3xl': '2.75rem',
       '4xl': '4rem',
+      '16': '16px',
     },
     colors: {
       transparent: colors.transparent,
@@ -49,6 +50,12 @@ const config: Config = {
       background: 'var(--color-background)',
       bgSt: 'var(--color-background-stroke)',
       bgHover: 'var(--color-background-hover)',
+      oldPalette: {
+        yellow: '#F3B101',
+        red: '#EB1616',
+        green: '#4FB848',
+        white: '#FFFFFFE5',
+      },
     },
     extend: {
       backgroundImage: {
@@ -90,6 +97,15 @@ const config: Config = {
         'button-highlight': '0 0 .125rem #3E3E3E,0 0 .125rem #3E3E3E,0 .5rem .5rem #3E3E3E',
         'button-greenlight': '0 0 .125rem #4FB848,0 0 .125rem #4FB848,0 .5rem .5rem #4FB848',
         line: '0 0 .125rem #000,0 .25rem .125rem #000,0 .5rem .5rem #000',
+      },
+      charts: {
+        width: '290px',
+        doughnut: {
+          labels: {
+            width: 25,
+            height: 25,
+          },
+        },
       },
     },
   },

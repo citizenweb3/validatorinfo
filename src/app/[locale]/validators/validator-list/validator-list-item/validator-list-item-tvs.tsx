@@ -1,6 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
+
+import Line from '../../../../components/charts/line/line-chart';
 
 interface OwnProps {
   id: number;
@@ -8,21 +9,10 @@ interface OwnProps {
 
 const ValidatorListItemTVS: FC<OwnProps> = ({ id }) => {
   return (
-    <Link href={`/validators/${id}/metrics`} className="relative flex items-center justify-center text-sm">
-      <Image
-        src={'/img/icons/tmp/tvs-chart.svg'}
-        alt="chart"
-        width={178}
-        height={49}
-        className="max-h-12 min-w-12 group-hover/tvs:hidden"
-      />
-      <Image
-        src={'/img/icons/tmp/tvs-chart-h.svg'}
-        alt="chart"
-        width={178}
-        height={49}
-        className="hidden max-h-12 min-w-12 group-hover/tvs:block"
-      />
+    <Link href={`/validators/${id}/metrics`} className="flexitems-center relative justify-center text-sm">
+      <div className="h-[49px] w-[179px]">
+        <Line />
+      </div>
     </Link>
   );
 };
