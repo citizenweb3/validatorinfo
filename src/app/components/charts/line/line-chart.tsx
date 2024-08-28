@@ -21,14 +21,33 @@ const Line = () => {
   const [data] = useState(initialLineData);
 
   return (
-    <div>
+    <div style={{ height: '5vh', width: '80vw' }}>
       <RLine
         data={data}
         options={{
           responsive: true,
-          spanGaps: false,
-          plugins: { legend: { position: 'bottom' } },
-          scales: { x: { grid: { display: false } }, y: { grid: { display: false }, beginAtZero: true } },
+          plugins: { legend: { display: false } },
+          scales: {
+            x: {
+              grid: { display: false },
+              border: {
+                display: false,
+              },
+              ticks: {
+                display: false,
+              },
+            },
+            y: {
+              grid: { display: false },
+              beginAtZero: true,
+              border: {
+                display: false,
+              },
+              ticks: {
+                display: false,
+              },
+            },
+          },
         }}
       />
     </div>
