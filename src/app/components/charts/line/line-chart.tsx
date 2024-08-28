@@ -21,7 +21,7 @@ const Line = () => {
   const [data] = useState(initialLineData);
 
   return (
-    <div style={{ height: '5vh', width: '80vw' }}>
+    <div>
       <RLine
         data={data}
         options={{

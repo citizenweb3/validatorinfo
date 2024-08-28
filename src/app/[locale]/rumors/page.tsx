@@ -1,0 +1,18 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
+
+import NotToday from '@/components/common/not-today';
+import TabList from '@/components/common/tabs/tab-list';
+import { validatorTabs } from '@/components/common/tabs/tabs-data';
+import { NextPageWithLocale } from '@/i18n';
+
+const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
+  unstable_setRequestLocale(locale);
+  return (
+    <div>
+      <TabList page="HomePage" tabs={validatorTabs} />
+      <NotToday />
+    </div>
+  );
+};
+
+export default RumorsPage;
