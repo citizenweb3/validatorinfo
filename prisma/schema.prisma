@@ -23,6 +23,8 @@ model Chain {
   docs                String?
 
   github         Github?
+  priceChart     Price[]
+  apr            Apr[]
   lcdNodes       LcdNode[]
   rpcNodes       RpcNode[]
   wsNodes        WsNode[]
@@ -88,4 +90,27 @@ model Validator {
   max_rate            String
   max_change_rate     String
   min_self_delegation String
+  logo                ValidatorLogo? @relation(fields: [identity], references: [identity])
+}
+
+model Price {
+  chain               Chain     @relation(fields: [chainId], references: [chainId])
+  chainId             String
+  id                  Int       @id @default(autoincrement())
+  value               Float
+  date                DateTime  @default(now())
+}
+
+model Apr {
+  chain               Chain     @relation(fields: [chainId], references: [chainId])
+  chainId             String
+  id                  Int       @id @default(autoincrement())
+  value               Float
+  date                DateTime  @default(now())
+}
+
+model ValidatorLogo {
+  identity  String @id
+  validator Validator[]
+  url       String?
 }

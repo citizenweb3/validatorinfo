@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 
+
 const prisma = new PrismaClient();
 
 type Chain = {
@@ -78,7 +79,7 @@ async function main() {
     chainId: 'cosmoshub-4',
     bech32Prefix: 'cosmos',
     coinDecimals: 6,
-    coinGeckoId: 'cosmoshub',
+    coinGeckoId: 'cosmos',
     coinType: 118,
     denom: 'ATOM',
     minimalDenom: 'uatom',
@@ -135,26 +136,26 @@ async function main() {
   //   twitterUrl: '123',
   // });
 
-  await addNetwork({
-    name: 'evmos',
-    prettyName: 'Evmos',
-    chainId: 'evmos_9001-2',
-    bech32Prefix: 'evmos',
-    coinDecimals: 18,
-    coinGeckoId: '123',
-    coinType: 60,
-    denom: 'EVMOS',
-    minimalDenom: 'aevmos',
-    grpcNodeUrl: 'grpc.evmos.citizenweb3.com/',
-    lcdNodeUrl: 'https://api.evmos.citizenweb3.com/',
-    rpcNodeUrl: 'https://rpc.evmos.citizenweb3.com/',
-    wsNodeUrl: 'wss://rpc.evmos.citizenweb3.com/websocket',
-    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
-    mainRepo: '123',
-    docs: '123',
-    githubUrl: '11223',
-    twitterUrl: '123',
-  });
+  // await addNetwork({
+  //   name: 'evmos',
+  //   prettyName: 'Evmos',
+  //   chainId: 'evmos_9001-2',
+  //   bech32Prefix: 'evmos',
+  //   coinDecimals: 18,
+  //   coinGeckoId: '123',
+  //   coinType: 60,
+  //   denom: 'EVMOS',
+  //   minimalDenom: 'aevmos',
+  //   grpcNodeUrl: 'grpc.evmos.citizenweb3.com/',
+  //   lcdNodeUrl: 'https://api.evmos.citizenweb3.com/',
+  //   rpcNodeUrl: 'https://rpc.evmos.citizenweb3.com/',
+  //   wsNodeUrl: 'wss://rpc.evmos.citizenweb3.com/websocket',
+  //   logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
+  //   mainRepo: '123',
+  //   docs: '123',
+  //   githubUrl: '11223',
+  //   twitterUrl: '123',
+  // });
 
   await addNetwork({
     name: 'bitcanna',
@@ -162,7 +163,7 @@ async function main() {
     chainId: 'bitcanna-1',
     bech32Prefix: 'bcna',
     coinDecimals: 6,
-    coinGeckoId: '123',
+    coinGeckoId: 'bitcanna',
     coinType: 118,
     denom: 'BCNA',
     minimalDenom: 'ubcna',
@@ -183,7 +184,7 @@ async function main() {
     chainId: 'likecoin-mainnet-2',
     bech32Prefix: 'bcna',
     coinDecimals: 6,
-    coinGeckoId: '123',
+    coinGeckoId: 'likecoin',
     coinType: 118,
     denom: 'LIKE',
     minimalDenom: 'nanolike',
@@ -204,7 +205,7 @@ async function main() {
     chainId: 'stride-1',
     bech32Prefix: 'stride',
     coinDecimals: 6,
-    coinGeckoId: '123',
+    coinGeckoId: 'stride',
     coinType: 118,
     denom: 'STRD',
     minimalDenom: 'ustrd',

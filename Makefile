@@ -16,3 +16,9 @@ generate-schema:
 
 start-indexer:
 	yarn ts-node-esm server/server.ts
+
+start-db: 
+	make destroy-deps
+	make create-deps
+	make deploy-migrations
+	make init-chains
