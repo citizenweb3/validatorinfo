@@ -16,6 +16,8 @@ interface OwnProps {
 const ValidatorsPage: FC<OwnProps> = ({ searchParams, params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
+  const currentPage = parseInt((searchParams?.p as string) ?? '1');
+
   const chains: string[] = !searchParams.chains
     ? []
     : typeof searchParams.chains === 'string'
@@ -24,7 +26,7 @@ const ValidatorsPage: FC<OwnProps> = ({ searchParams, params: { locale } }) => {
   return (
     <div>
       <TabList page="HomePage" tabs={validatorTabs} />
-      <ValidatorList chains={chains} />
+      <ValidatorList chains={chains} currentPage={currentPage} />
     </div>
   );
 };

@@ -4,13 +4,19 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": "Validadores",
-      "Ecosystems": "Ecossistemas",
-      "Dominance POW": "Domínio POW",
-      "ETH": "ETH",
-      "Polkadot": "Polkadot",
-      "Cosmos": "Cosmos",
-      "TVL": "TVL"
+      "Validators": { "name": "Validadores", "hint": "" },
+      "Ecosystems": { "name": "Ecossistemas", "hint": "" },
+      "Dominance POW": {
+        "name": "Domínio POW",
+        "hint": "Estacamento global, pools de mineração e estatísticas de validadores"
+      },
+      "ETH": { "name": "ETH", "hint": "" },
+      "Polkadot": { "name": "Polkadot", "hint": "" },
+      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "TVL": {
+        "name": "TVL",
+        "hint": ""
+      }
     },
     "Home": "Lar",
     "You": "Você",

@@ -17,11 +17,11 @@ interface OwnProps {
 
 const ValidatorList: FC<OwnProps> = ({ validator }) => {
   return (
-    <tr className="font-hackernoon hover:bg-bgHover group ">
+    <tr className="group font-hackernoon hover:bg-bgHover ">
       <td className="border-b border-black py-2 active:border-bgSt">
         <ValidatorListItemFavorite isFavorite={validator.isFavorite} />
       </td>
-      <td className="group/avatar font-sfpro border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      <td className="group/avatar border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <ValidatorListItemAvatar icon={validator.icon} name={validator.name} id={validator.id} />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
@@ -33,7 +33,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="font-hackernoon flex items-center justify-center text-sm"
+          className="flex items-center justify-center font-hackernoon text-sm"
         >
           {validator.scores.technical ?? '-'}
         </Link>
@@ -41,7 +41,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="font-hackernoon flex items-center justify-center text-sm"
+          className="flex items-center justify-center font-hackernoon text-sm"
         >
           {validator.scores.social ?? '-'}
         </Link>
@@ -49,7 +49,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="font-hackernoon flex items-center justify-center text-sm"
+          className="flex items-center justify-center font-hackernoon text-sm"
         >
           {validator.scores.governance ?? '-'}
         </Link>
@@ -57,7 +57,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="font-hackernoon flex items-center justify-center text-sm"
+          className="flex items-center justify-center font-hackernoon text-sm"
         >
           {validator.scores.user ?? '-'}
         </Link>

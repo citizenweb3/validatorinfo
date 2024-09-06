@@ -8,9 +8,10 @@ import ValidatorListPagination from '@/app/validators/validator-list/validator-l
 
 interface OwnProps {
   chains: string[];
+  currentPage?: number;
 }
 
-const ValidatorList: FC<OwnProps> = async ({ chains = [] }) => {
+const ValidatorList: FC<OwnProps> = async ({ chains = [], currentPage = 1 }) => {
   const validators = await getValidators(chains);
 
   return (
@@ -41,7 +42,7 @@ const ValidatorList: FC<OwnProps> = async ({ chains = [] }) => {
               ))}
             </tbody>
           </table>
-          <ValidatorListPagination />
+          <ValidatorListPagination currentPage={currentPage} />
         </div>
       )}
     </div>

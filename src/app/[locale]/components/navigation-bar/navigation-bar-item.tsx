@@ -25,13 +25,13 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
     >
       <div className="relative flex h-full w-full flex-grow flex-row flex-nowrap items-center overflow-hidden bg-background text-base font-semibold group-hover:text-highlight hover:bg-bgHover active:bg-background">
         <div className="absolute left-5 top-[1.15rem] -translate-x-1/2 -translate-y-1/2 transform">
-          {icon && <Image src={icon} alt={name} width={28} height={28} priority className="min-w-7 max-w-7" />}
+          {icon && <Image src={icon} alt={name} width={120} height={120} priority className="min-w-10 max-w-10" />}
         </div>
         <div
           className={`${isActive ? 'block' : 'hidden group-hover:block'} absolute left-5 top-[1.15rem] -translate-x-1/2 -translate-y-1/2 transform`}
         >
           {iconHovered && (
-            <Image src={iconHovered} alt={name} width={40} height={40} priority className="min-w-10 max-w-10" />
+            <Image src={iconHovered} alt={name} width={120} height={120} priority className="min-w-10 max-w-10" />
           )}
         </div>
         <div

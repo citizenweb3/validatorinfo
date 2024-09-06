@@ -19,26 +19,26 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
   return (
     <Link
       href={href}
-      className={`${isActive ? 'border-none bg-gradient-to-r from-primary to-secondary text-highlight' : 'border-r border-t border-bgSt'} !active:max-h-7 hover:bg-bgHover group relative flex min-h-10 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-px text-sm shadow-button transition-width duration-300 active:top-1 active:border-transparent active:bg-background active:shadow-none`}
+      className={`${isActive ? 'border-none bg-gradient-to-r from-primary to-secondary text-highlight' : 'border-r border-t border-bgSt'} !active:max-h-7 group relative flex min-h-10 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-px text-sm shadow-button transition-width duration-300 hover:bg-bgHover active:top-1 active:border-transparent active:bg-background active:shadow-none`}
     >
-      <div className="hover:bg-bgHover flex h-full w-full flex-row flex-nowrap items-center justify-center bg-background text-base font-semibold group-hover:text-highlight active:bg-background">
+      <div className="flex h-full w-full flex-row flex-nowrap items-center justify-center bg-background text-base font-semibold group-hover:text-highlight hover:bg-bgHover active:bg-background">
         <div className="relative">
           {icon && (
             <Image
               src={icon}
               alt={name}
-              width={26}
-              height={26}
-              className={`${isActive && 'hidden'} absolute -top-0.5 left-0 mr-2 w-7 group-hover:hidden`}
+              width={120}
+              height={120}
+              className={`${isActive && 'hidden'} absolute -left-1 -top-2 w-10 group-hover:hidden`}
             />
           )}
           {iconHovered && (
             <Image
               src={iconHovered}
               alt={name}
-              width={40}
-              height={40}
-              className={`${isActive ? 'block' : 'hidden'} absolute -left-1.5 -top-2 w-10 group-hover:block`}
+              width={120}
+              height={120}
+              className={`${isActive ? 'block' : 'hidden'} absolute -left-1 -top-2 w-10 group-hover:block`}
             />
           )}
           <div

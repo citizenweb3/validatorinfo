@@ -1,8 +1,15 @@
-import Image from 'next/image';
 import { FC } from 'react';
 
+import Doughnut from '../../../components/charts/doughnut/doughnut-chart';
+
 const PosTvsGrow: FC = () => {
-  return <Image src={'/img/charts/pos-chart-2.svg'} width={1195} height={424} alt="tem chart 2" />;
+  return (
+    <div>
+      <div className="flex justify-center">
+        <Doughnut />
+      </div>
+    </div>
+  );
 };
 
 export default PosTvsGrow;

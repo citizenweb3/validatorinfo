@@ -17,11 +17,11 @@ const HeaderControls: FC<OwnProps> = () => {
     <div className="mx-11 mt-3 flex h-24 flex-row items-start">
       <Link
         href="/"
-        className="group border-r border-t border-bgSt shadow-button hover:bg-[#272727] hover:text-highlight hover:shadow-button-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
+        className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
       >
         <div className="flex flex-col items-center px-2 py-1">
           <div className="group-hover:text-shadowed font-hackernoon text-sm uppercase text-highlight">{t('Home')}</div>
-          <Image src="/img/logo.svg" alt="logo" width={62} height={58} className="w-16" priority />
+          <Image src="/img/logo.png" alt="logo" width={186} height={174} className="w-16" priority />
         </div>
       </Link>
       <div className="relative mx-1 mt-7 flex h-0.5 flex-grow justify-center border-white bg-gradient-to-r from-primary to-secondary shadow-line">

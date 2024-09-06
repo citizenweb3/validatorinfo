@@ -1,20 +1,13 @@
-import { headers } from 'next/headers';
 import Link from 'next/link';
 import { FC } from 'react';
 
 import TriangleButton from '@/components/common/triangle-button';
 
-interface OwnProps {}
+interface OwnProps {
+  currentPage: number;
+}
 
-const ValidatorListPagination: FC<OwnProps> = () => {
-  const headersList = headers();
-  // read the custom x-url header
-  const search = headersList.get('x-current-search') ?? '';
-  let currentPage = 1;
-  if (search) {
-    currentPage = parseInt(new URLSearchParams(search).get('p') ?? '1');
-  }
-
+const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
   const pageLength = 100;
 
   const pages: (number | undefined)[] = [];
@@ -52,7 +45,7 @@ const ValidatorListPagination: FC<OwnProps> = () => {
       {pages.map((page) => (
         <Link key={page} href={page ? `?p=${page}` : ''}>
           <div
-            className={`${currentPage === page ? 'border-highlight text-highlight' : 'border-bgSt'} ${page && 'hover:text-shadowed hover:text-highlight active:border-none'}  font-hackernoon border-b px-2`}
+            className={`${currentPage === page ? 'border-highlight text-highlight' : 'border-bgSt'} ${page && 'hover:text-shadowed hover:text-highlight active:border-none'}  border-b px-2 font-hackernoon`}
           >
             {page ?? '...'}
           </div>
