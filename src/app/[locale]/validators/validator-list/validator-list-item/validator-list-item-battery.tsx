@@ -14,7 +14,7 @@ const ValidatorListItemBattery: FC<OwnProps> = ({ id, battery }) => {
     <Link href={`/validators/${id}`} className="group/battery flex h-full items-center justify-center">
       <div className="relative max-h-12 w-32">
         <div
-          className={`absolute mt-4 w-full text-center text-highlight group-hover/battery:text-white group-active/battery:mt-5`}
+          className={`absolute mt-3 w-full text-center font-handjet text-lg text-highlight group-hover/battery:text-white group-active/battery:mt-5`}
         >
           {battery ? `${battery}%` : '?'}
         </div>

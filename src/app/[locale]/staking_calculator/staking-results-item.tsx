@@ -16,10 +16,10 @@ const StakingResultsItem: FC<OwnProps> = ({ title, value, asset }) => {
   return (
     <div>
       <div>
-        <span className="font-hackernoon">{title}</span>
+        <span className="font-handjet">{title}</span>
         {t('earnings')}
       </div>
-      <div className="font-hackernoon text-highlight">
+      <div className="font-handjet text-highlight">
         {asset.isSymbolFirst && asset.symbol}
         {value.toFixed(asset.isSymbolFirst ? 2 : 6)}
         {!asset.isSymbolFirst && ' ' + asset.symbol}

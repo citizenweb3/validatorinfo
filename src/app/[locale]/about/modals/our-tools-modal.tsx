@@ -8,7 +8,7 @@ import BaseModal from '@/components/common/modal/base-modal';
 
 const ListNumber = ({ number, text }: { number: number; text: string }) => (
   <li className="list-none text-base">
-    <span className="font-hackernoon text-highlight">{number}) </span>
+    <span className="font-handjet text-highlight">{number}) </span>
     <span className="text-justify">{text}</span>
   </li>
 );

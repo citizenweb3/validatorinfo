@@ -17,7 +17,7 @@ interface OwnProps {
 
 const ValidatorList: FC<OwnProps> = ({ validator }) => {
   return (
-    <tr className="group font-hackernoon hover:bg-bgHover ">
+    <tr className="group font-handjet hover:bg-bgHover ">
       <td className="border-b border-black py-2 active:border-bgSt">
         <ValidatorListItemFavorite isFavorite={validator.isFavorite} />
       </td>
@@ -33,7 +33,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="flex items-center justify-center font-hackernoon text-sm"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           {validator.scores.technical ?? '-'}
         </Link>
@@ -41,7 +41,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="flex items-center justify-center font-hackernoon text-sm"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           {validator.scores.social ?? '-'}
         </Link>
@@ -49,7 +49,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="flex items-center justify-center font-hackernoon text-sm"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           {validator.scores.governance ?? '-'}
         </Link>
@@ -57,7 +57,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.id}/metrics`}
-          className="flex items-center justify-center font-hackernoon text-sm"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           {validator.scores.user ?? '-'}
         </Link>

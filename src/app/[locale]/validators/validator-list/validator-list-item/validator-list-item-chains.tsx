@@ -15,7 +15,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
   return (
     <div className="flex items-center justify-center space-x-0.5">
-      {chains.length > 4 && <div className="mr-2 font-hackernoon text-sm">{chains.length}:</div>}
+      {chains.length > 4 && <div className="mr-2 font-handjet text-sm">{chains.length}:</div>}
       {chains.slice(0, 4).map((chain) => (
         <Link key={chain.id} href={`/networks/${chain.id}`}>
           <Tooltip direction="top" tooltip={chain.name}>

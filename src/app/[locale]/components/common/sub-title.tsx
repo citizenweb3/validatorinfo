@@ -13,7 +13,9 @@ interface OwnProps {
 }
 
 const SubTitle: FC<OwnProps> = ({ text, size = 'h2' }) => {
-  return <h1 className={`${sizeItems[size]} flex w-fit border-b border-bgSt text-highlight`}>{text}</h1>;
+  return (
+    <h1 className={`${sizeItems[size]} flex w-fit border-b border-bgSt pb-1 font-handjet text-highlight`}>{text}</h1>
+  );
 };
 
 export default SubTitle;
