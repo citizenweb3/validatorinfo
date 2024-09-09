@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "cron": "^3.1.7",
+    "express": "^4.19.2",
     "chart.js": "^4.4.3",
     "i18next": "^23.12.2",
     "next": "14.2.3",
@@ -22,19 +25,23 @@
     "react-i18next": "^15.0.0",
     "sharp": "^0.33.4",
     "tailwind-scrollbar": "^3.1.0",
-    "usehooks-ts": "^3.1.0"
+    "usehooks-ts": "^3.1.0",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/express": "^4.17.21",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/ws": "^8.5.11",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

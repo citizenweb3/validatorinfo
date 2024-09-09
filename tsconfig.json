@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "CommonJS",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -18,14 +21,34 @@
       }
     ],
     "paths": {
-      "@/components/*": ["./src/app/[locale]/components/*"],
-      "@/app/*": ["./src/app/[locale]/*"],
-      "@/actions/*": ["./src/actions/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"]
-    }
+      "@/components/*": [
+        "./src/app/[locale]/components/*"
+      ],
+      "@/app/*": [
+        "./src/app/[locale]/*"
+      ],
+      "@/actions/*": [
+        "./src/actions/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ]
+    },
+    "moduleResolution": "node"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
