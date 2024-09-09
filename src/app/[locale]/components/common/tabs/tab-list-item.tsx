@@ -29,7 +29,7 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
               alt={name}
               width={120}
               height={120}
-              className={`${isActive && 'hidden'} absolute -left-1 -top-2 w-10 group-hover:hidden`}
+              className={`${isActive && 'hidden'} absolute -left-1 -top-1.5 w-10 group-hover:hidden`}
             />
           )}
           {iconHovered && (
@@ -38,11 +38,11 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
               alt={name}
               width={120}
               height={120}
-              className={`${isActive ? 'block' : 'hidden'} absolute -left-1 -top-2 w-10 group-hover:block`}
+              className={`${isActive ? 'block' : 'hidden'} absolute -left-1 -top-1.5 w-10 group-hover:block`}
             />
           )}
           <div
-            className={`${icon && 'pl-10'} overflow-hidden overflow-ellipsis text-nowrap uppercase xs:max-w-32 lg:max-w-full`}
+            className={`${icon && 'pl-10'} tracking-wide overflow-hidden overflow-ellipsis text-nowrap font-handjet text-lg xs:max-w-32 lg:max-w-full`}
           >
             {t(name as 'ValidatorInfo')}
           </div>

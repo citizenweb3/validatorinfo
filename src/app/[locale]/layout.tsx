@@ -31,10 +31,10 @@ const sfpro = localFont({
   variable: '--font-sfpro',
 });
 
-const hackerNoon = localFont({
-  src: '../../../public/fonts/HackerNoonV1-Regular.ttf',
+const handjet = localFont({
+  src: '../../../public/fonts/handjet-medium.ttf',
   display: 'swap',
-  variable: '--font-hackernoon',
+  variable: '--font-handjet',
 });
 
 export function generateStaticParams() {
@@ -52,7 +52,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${sfpro.variable} ${hackerNoon.variable}`}>
+    <html lang={locale} className={`${sfpro.variable} ${handjet.variable}`}>
       <head>
         <title>ValidatorInfo</title>
         <PlausibleProvider domain="validatorinfo.com" />

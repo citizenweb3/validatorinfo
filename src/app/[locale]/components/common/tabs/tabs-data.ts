@@ -28,9 +28,9 @@ export const validatorTabs: TabOptions[] = [
 ];
 
 export const aboutTabs: TabOptions[] = [
-  { name: 'Staking', href: '/about/staking' },
-  { name: 'Partners', href: '/about/partners' },
-  { name: 'General Info', href: '/about' },
-  { name: 'Podcasts', href: '/about/podcasts' },
-  { name: 'Contacts', href: '/about/contacts' },
+  { name: 'Staking', href: '/about/staking', icon: icons.StakingIcon, iconHovered: icons.StakingIconHovered },
+  { name: 'Partners', href: '/about/partners', icon: icons.PartnersIcon, iconHovered: icons.PartnersIconHovered },
+  { name: 'General Info', href: '/about', icon: icons.GeneralIcon, iconHovered: icons.GeneralIconHovered },
+  { name: 'Podcasts', href: '/about/podcasts', icon: icons.PodcastIcon, iconHovered: icons.PodcastIconHovered },
+  { name: 'Contacts', href: '/about/contacts', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered },
 ];

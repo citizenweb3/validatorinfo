@@ -16,9 +16,14 @@ export default function AboutLayout({
   unstable_setRequestLocale(params.locale);
   return (
     <div>
-      <PageTitle prefix="About" text="Validator Info" />
-      <div className="my-3 flex justify-center">
-        <Image src="/img/logo.png" alt="logo" width={186} height={174} className="w-32" priority />
+      <div className="flex flex-shrink">
+        <div className="flex flex-col items-center">
+          <PageTitle prefix="About" text="Validator Info" />
+          <div className="my-3 flex">
+            <Image src="/img/logo2.png" alt="logo" width={327} height={327} className="w-32" priority />
+          </div>
+        </div>
+        <div className="flex-grow" />
       </div>
       <TabList page="AboutPage" tabs={aboutTabs} />
       {children}

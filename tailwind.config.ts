@@ -13,10 +13,11 @@ const config: Config = {
   theme: {
     fontFamily: {
       sfpro: ['var(--font-sfpro)', 'Arial', 'sans-serif'],
-      hackernoon: ['var(--font-hackernoon)', 'Arial', 'sans-serif'],
+      handjet: ['var(--font-handjet)', 'Arial', 'sans-serif'],
     },
     letterSpacing: {
       normal: '.2em',
+      wide: '.3em',
     },
     screens: {
       '2xs': '480px',

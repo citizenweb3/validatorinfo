@@ -27,7 +27,7 @@ const ValidatorListFiltersBattery: FC = () => {
         <div className="relative">
           <Button
             onClick={() => setIsFromOpened(!isFromOpened)}
-            contentClassName={`py-0 px-2 max-h-4 text-base font-hackernoon hover:text-highlight`}
+            contentClassName={`py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight`}
             className={`${isFromOpened && 'w-16'}`}
             activeType="switcher"
           >
@@ -44,7 +44,7 @@ const ValidatorListFiltersBattery: FC = () => {
                   key={p}
                   isActive={p === from}
                   activeType="switcher"
-                  contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon hover:text-highlight"
+                  contentClassName="py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight"
                   onClick={() => {
                     setFrom(p);
                     setIsFromOpened(false);
@@ -59,7 +59,7 @@ const ValidatorListFiltersBattery: FC = () => {
         <div className="relative">
           <Button
             onClick={() => setIsToOpened(!isToOpened)}
-            contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon"
+            contentClassName="py-0 px-2 max-h-4 text-base font-handjet"
             activeType="switcher"
           >
             {to}%
@@ -75,7 +75,7 @@ const ValidatorListFiltersBattery: FC = () => {
                   key={p}
                   isActive={p === to}
                   activeType="switcher"
-                  contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon hover:text-highlight"
+                  contentClassName="py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight"
                   onClick={() => {
                     setTo(p);
                     setIsToOpened(false);

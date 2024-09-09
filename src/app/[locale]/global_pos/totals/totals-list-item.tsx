@@ -9,7 +9,7 @@ const TotalsListItem: FC<OwnProps> = ({ title, data }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="text-center text-base text-highlight">{title}</div>
-      <div className="font-hackernoon mt-5 text-lg">{data}</div>
+      <div className="mt-5 font-handjet text-lg">{data}</div>
     </div>
   );
 };

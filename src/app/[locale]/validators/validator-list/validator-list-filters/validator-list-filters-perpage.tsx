@@ -13,7 +13,7 @@ const ValidatorListFiltersPorPage: FC = () => {
         <Button
           isActive={perPage === 25}
           onClick={() => setPerPage(25)}
-          contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon hover:text-highlight"
+          contentClassName="py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight"
           activeType="switcher"
         >
           25
@@ -21,7 +21,7 @@ const ValidatorListFiltersPorPage: FC = () => {
         <Button
           isActive={perPage === 50}
           onClick={() => setPerPage(50)}
-          contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon"
+          contentClassName="py-0 px-2 max-h-4 text-base font-handjet"
           activeType="switcher"
         >
           50
@@ -29,7 +29,7 @@ const ValidatorListFiltersPorPage: FC = () => {
         <Button
           isActive={perPage === 100}
           onClick={() => setPerPage(100)}
-          contentClassName="py-0 px-2 max-h-4 text-base font-hackernoon"
+          contentClassName="py-0 px-2 max-h-4 text-base font-handjet"
           activeType="switcher"
         >
           100

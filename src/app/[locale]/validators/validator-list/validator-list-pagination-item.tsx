@@ -18,7 +18,7 @@ const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
       {pages.map((page) => (
         <Link key={page} href={page ? `?p=${page}` : '#'}>
           <div
-            className={`${currentPage === page && 'text-highlight'} hover:text-shadowed font-hackernoon border-b border-bgSt px-2 hover:text-highlight active:border-transparent`}
+            className={`${currentPage === page && 'text-highlight'} hover:text-shadowed border-b border-bgSt px-2 font-handjet text-sm hover:text-highlight active:border-transparent`}
           />
         </Link>
       ))}
