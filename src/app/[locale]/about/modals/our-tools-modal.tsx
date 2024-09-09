@@ -6,10 +6,17 @@ import { useState } from 'react';
 import Button from '@/components/common/button';
 import BaseModal from '@/components/common/modal/base-modal';
 
-const ListNumber = ({ number, text }: { number: number; text: string }) => (
+const ListNumber = ({ number, text, link, title }: { number: number; text: string; link: string; title?: string }) => (
   <li className="list-none text-base">
-    <span className="font-handjet text-highlight">{number}) </span>
-    <span className="text-justify">{text}</span>
+    <span className="font-hackernoon text-highlight">{number}) </span>
+    <span className="text-justify">
+      {link && (
+        <a className="underline" href={link}>
+          {title}
+        </a>
+      )}
+      {text}
+    </span>
   </li>
 );
 
@@ -34,7 +41,13 @@ const OurToolsModal = () => {
           {Array(5)
             .fill('')
             .map((_, index) => (
-              <ListNumber key={index + 1} number={index + 1} text={t(`AboutPage.Tools.${index}`)} />
+              <ListNumber
+                key={index + 1}
+                number={index + 1}
+                link={index !== 4 ? t(`AboutPage.Tools.${index}.link`) : ''}
+                title={t(`AboutPage.Tools.${index}.title`)}
+                text={t(`AboutPage.Tools.${index}.text`)}
+              />
             ))}
         </div>
       </BaseModal>
