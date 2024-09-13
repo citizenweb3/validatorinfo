@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FC } from 'react';
+import { FC, useCallback, useState } from 'react';
 
 import ValidatorListItemAvatar from '@/app/validators/validator-list/validator-list-item/validator-list-item-avatar';
 import ValidatorListItemBattery from '@/app/validators/validator-list/validator-list-item/validator-list-item-battery';
@@ -16,6 +16,19 @@ interface OwnProps {
 }
 
 const ValidatorList: FC<OwnProps> = ({ validator }) => {
+  const [activeId, setActiveId] = useState<number | null>(null);
+
+  const handleHover = useCallback(
+    (id: number, isHovered: boolean) => {
+      if (isHovered) {
+        setActiveId(id);
+      } else if (activeId === id) {
+        setActiveId(null);
+      }
+    },
+    [activeId],
+  );
+
   return (
     <tr className="group font-handjet hover:bg-bgHover ">
       <td className="border-b border-black py-2 active:border-bgSt">
@@ -63,7 +76,7 @@ const ValidatorList: FC<OwnProps> = ({ validator }) => {
         </Link>
       </td>
       <td className="group/tvs border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemTVS id={validator.id} />
+        <ValidatorListItemTVS id={validator.id} activeId={activeId} setActiveId={setActiveId} />
       </td>
       <td className="border-b border-black px-2 py-2">
         <ValidatorListItemChains chains={validator.chains} />

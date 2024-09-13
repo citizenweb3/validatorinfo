@@ -3,58 +3,39 @@
 import {
   CategoryScale,
   Chart as ChartJS,
+  ChartOptions,
   Legend,
   LineElement,
   LinearScale,
+  PluginOptionsByType,
   PointElement,
   Title,
   Tooltip,
 } from 'chart.js';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { Line as RLine } from 'react-chartjs-2';
 
 import { initialLineData } from './initialData';
+import { lineHoverEffect } from './plugins';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+interface LineProps {
+  id: number;
+  config: ChartOptions<'line'>;
+  isActive: boolean;
+  onHover: (id: number, isHovered: boolean) => void;
+}
 
-const Line = () => {
-  const [data] = useState(initialLineData);
-
+const Line: FC<LineProps> = ({ id, config, isActive, onHover }) => {
+  const [hoverEffect] = useState(() => lineHoverEffect(id, isActive, onHover));
   return (
     <div>
       <RLine
-        data={data}
+        data={initialLineData}
         options={{
-          responsive: true,
-          maintainAspectRatio: true,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              enabled: false,
-            },
-          },
-          scales: {
-            x: {
-              grid: { display: false },
-              border: {
-                display: false,
-              },
-              ticks: {
-                display: false,
-              },
-            },
-            y: {
-              grid: { display: false },
-              beginAtZero: true,
-              border: {
-                display: false,
-              },
-              ticks: {
-                display: false,
-              },
-            },
-          },
+          ...config,
         }}
+        plugins={[hoverEffect]}
       />
     </div>
   );
