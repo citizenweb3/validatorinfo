@@ -23,7 +23,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
   useOnClickOutside(ref, () => onClose());
   return (
     <div ref={ref} className={`${opened ? 'block' : 'hidden'} ${isRelative ? 'relative' : ''}`}>
-      <div className={`${className} absolute z-40 bg-background shadow-3xl`}>
+      <div className={`${className} fixed z-40 bg-background shadow-3xl`}>
         <div className={`${!hideClose && 'pt-6'} relative p-3`}>
           {!hideClose && (
             <div
@@ -32,7 +32,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
             />
           )}
           {title && <div className="ml-9 text-lg text-highlight">{title}</div>}
-          {children}
+          <div className="max-h-[80vh] overflow-y-auto">{children}</div>
         </div>
       </div>
     </div>

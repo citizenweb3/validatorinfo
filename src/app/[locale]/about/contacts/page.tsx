@@ -9,11 +9,14 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'AboutPage' });
   unstable_setRequestLocale(locale);
 
-  const size = 'h-16 w-16 min-w-16 min-h-16';
+  const size = 'h-24 w-24 min-w-24 min-h-24';
   return (
     <div className="border-b border-bgSt py-4">
       <SubTitle text={t('Contacts')} />
-      <div className="my-4 flex w-3/4 justify-around">
+      <div className="my-4 flex justify-around">
+        <Link href="https://validatorinfo.com/blog/" className={`${size}`} target="_blank">
+          <div className={`${size} bg-blog hover:bg-blog_h bg-contain bg-no-repeat`} />
+        </Link>
         <Link href="https://www.citizenweb3.com/about" className={`${size}`} target="_blank">
           <div className={`${size} bg-cw3 bg-contain bg-no-repeat hover:bg-cw3_h`} />
         </Link>

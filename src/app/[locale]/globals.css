@@ -28,6 +28,9 @@ html.light {
     .text-shadowed {
         text-shadow: 0 0 .5rem #E5C46B,0 0 .5rem #E5C46B,0 0 2rem #E5C46B;
     }
+    .text-black-shadowed {
+        text-shadow: 0 0 .5rem #000000,0 0 .5rem #000000,0 0 2rem #000000;
+    }
 
     .border-hover {
         @apply relative shadow after:absolute after:-bottom-1.5 after:left-0 after:h-1.5 after:w-full after:border after:border-t-0 after:border-secondary after:bg-bgSt after:opacity-50 hover:fill-highlight hover:stroke-highlight hover:text-highlight hover:after:block active:top-1 active:after:hidden dark:fill-white dark:stroke-white dark:hover:fill-highlight dark:hover:stroke-highlight dark:hover:text-highlight

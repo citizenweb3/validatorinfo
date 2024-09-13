@@ -1,42 +1,39 @@
+import { useTranslations } from 'next-intl';
+import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Button from '@/components/common/button';
+import SpreadModal from '@/app/about/modals/spread-modal';
+import Player from '@/app/about/podcasts/player';
+import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
+import TextLink from '@/components/common/text-link';
+import { Locale } from '@/i18n';
 
-export default function Podcasts() {
+export default function PodcastPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
+  unstable_setRequestLocale(locale);
+  const t = useTranslations('AboutPage');
+
   return (
     <div>
-      <SubTitle text="Citizen Web3 Podcast" />
-      <div className="mt-4 border-b border-bgSt py-4 text-base">
-        Citizen Web3 runs one of the oldest web3-focused podcasts. Our show is focused on those that contribute to
-        building the web3 space.
-        <br />
-        <br />
-        We have been on air for 4 years, and are eager to invite you to listen to the fascinating stories, collected in
-        our interviews with founders, validators, VCs, researches, CTOs, and many other great people that have been
-        building this space.
-      </div>
-      <div className="my-4 flex items-center justify-center">
-        <iframe
-          title="Citizen Web3"
-          src="https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark"
-          width="740"
-          height="200"
-        ></iframe>
+      <SubTitle text={t('Podcast.title')} />
+      <div className="relative">
+        <div className="mr-[420px] mt-4 whitespace-pre-line border-b border-bgSt py-4 text-base">
+          {t.rich('Podcast.description', {
+            link: (link) => <TextLink href="https://www.citizenweb3.com/episodes" target="_blank" content={link} />,
+          })}
+        </div>
+        <div className="absolute right-0 top-0 my-4 h-[100px] w-[370px]">
+          <Player />
+        </div>
       </div>
       <div className="my-4 border-b border-bgSt py-4 text-base">
-        Subscribe
-        <br />
-        <br />
-        Get the latest episodes of Citizen Web3 automatically using the links above, or by copying and pasting the URL
-        below into your favorite podcast app:
-        <div className="my-8 flex">
-          <Button className="block" component="link" href="https://www.citizenweb3.com/rss">
-            Citizen Web3 RSS Feed
-          </Button>
+        <SubTitle text={t('Podcast.Subscribe')} />
+        <div className="my-8 flex space-x-14">
+          <RoundedButton href="https://www.citizenweb3.com/rss">CW3 RSS Feed</RoundedButton>
+          <SpreadModal />
         </div>
-        You can also subscribe with your favorite app directly, using the buttons below:
+        {t('Podcast.SubscribeOtherHint')}
         <div className="mt-4 flex flex-row flex-wrap space-y-2">
           <Link href="https://podcasters.amazon.com/podcasts/bbdd140b-db4a-443d-bac4-680e57d2dcd5" target="_blank">
             <Image

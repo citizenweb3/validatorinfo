@@ -9,21 +9,21 @@ interface OwnProps {
 }
 
 const ValidatorListItemLinks: FC<OwnProps> = ({ validatorId, links }) => {
-  const size = 'h-8 w-8 min-w-8 min-h-8';
+  const size = 'h-12 w-12 min-w-12 min-h-12';
   return (
     <div className="flex items-center justify-center">
-      <div className="flex items-center justify-center -space-x-1">
+      <div className="flex items-center justify-center -space-x-3">
         <Link href={`/validator/${validatorId}`} className={`${size}`}>
-          <div className={`${size} bg-cw3 hover:bg-cw3_h bg-contain bg-no-repeat`} />
+          <div className={`${size} bg-cw3 bg-contain bg-no-repeat hover:bg-cw3_h`} />
         </Link>
         {links.github && (
           <Link href={links.github} className={size} target="_blank">
-            <div className={`${size} bg-github hover:bg-github_h bg-contain bg-no-repeat`} />
+            <div className={`${size} bg-github bg-contain bg-no-repeat hover:bg-github_h`} />
           </Link>
         )}
         {links.x && (
           <Link href={links.x} className={size} target="_blank">
-            <div className={`${size} bg-x hover:bg-x_h bg-contain bg-no-repeat`} />
+            <div className={`${size} bg-x bg-contain bg-no-repeat hover:bg-x_h`} />
           </Link>
         )}
       </div>
