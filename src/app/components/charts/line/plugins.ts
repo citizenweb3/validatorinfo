@@ -5,6 +5,7 @@ export const lineHoverEffect = (
 ) => ({
   id: 'lineHoverEffect',
   isHovered: false,
+  // @ts-ignore
   afterEvent(chart, args) {
     const { x, y } = args.event;
     const chartArea = chart.chartArea;
@@ -13,7 +14,7 @@ export const lineHoverEffect = (
     const isWithinChartArea =
       x >= chartArea.left && x <= chartArea.right && y >= chartArea.top && y <= chartArea.bottom;
 
-    const isNearLine = datasetMeta.some((element) => {
+    const isNearLine = datasetMeta.some((element: any) => {
       const { x: pointX, y: pointY } = element.getCenterPoint();
       const radius = 5;
 
@@ -30,7 +31,7 @@ export const lineHoverEffect = (
 
     onHover(activeId, this.isHovered);
   },
-  beforeDraw(chart) {
+  beforeDraw(chart: any) {
     if (!this.isHovered && !isActive) return;
 
     const { ctx } = chart;
@@ -41,7 +42,7 @@ export const lineHoverEffect = (
     ctx.strokeStyle = '#363636';
     ctx.beginPath();
 
-    datasetMeta.forEach((element, index) => {
+    datasetMeta.forEach((element: any, index: number) => {
       const { x, y } = element.getCenterPoint();
       const yOffset = y + 2;
 
