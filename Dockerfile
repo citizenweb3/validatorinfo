@@ -8,10 +8,7 @@ WORKDIR /app
 # Install dependencies
 COPY package.json yarn.lock ./
 RUN yarn install
-RUN make create-deps
-RUN make generate-schema
-RUN make make deploy-migrations
-RUN make start-indexer
+
 # Install sharp for image optimization
 RUN apk add --no-cache libc6-compat
 RUN yarn add sharp
@@ -33,10 +30,6 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/next.config.mjs ./
-
-# Set environment variables
-ENV DATABASE_URL="postgresql://validatorinfo:password@localhost:5432/mydb?schema=public"
-ENV SERVER_PORT="6666"
 
 # Expose the port the app runs on
 EXPOSE 3000
