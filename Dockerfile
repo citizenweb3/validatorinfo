@@ -8,7 +8,7 @@ WORKDIR /app
 # Install dependencies
 COPY package.json yarn.lock ./
 RUN yarn install
-RUN make start-indexer
+
 # Install sharp for image optimization
 RUN apk add --no-cache libc6-compat
 RUN yarn add sharp
