@@ -62,8 +62,6 @@ jobs:
             fi &&
             
             # Start new
-            echo -e 'DATABASE_URL="postgresql://validatorinfo:password@localhost:5432/mydb?schema=public"\nSERVER_PORT="6666"' > .env
-            make start-db
             docker compose down &&
             docker compose up -d --build
           "
