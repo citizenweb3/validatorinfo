@@ -5,9 +5,9 @@ import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
   name: string;
-  list: { value: number; title: string }[];
-  selected?: number;
-  onChange: (value: number) => void;
+  list: { value: string | number; title: string }[];
+  selected?: string | number;
+  onChange: (value: string | number) => void;
 }
 
 const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange }) => {
@@ -15,7 +15,7 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange }) => {
   const selectedTitle =
     typeof selected !== 'undefined' ? list.find((item) => item.value === selected)?.title ?? '' : '';
 
-  const handleChange = (value: number) => {
+  const handleChange = (value: string | number) => {
     setIsModalOpened(false);
     onChange(value);
   };
