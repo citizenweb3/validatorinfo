@@ -5,7 +5,7 @@ import { FC } from 'react';
 import icons from '@/components/icons';
 
 interface OwnProps {
-  id: number;
+  id: string;
   battery?: number;
 }
 

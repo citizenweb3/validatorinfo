@@ -30,7 +30,7 @@ const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
 
   useEffect(() => {
     if (resetClicks >= 3) {
-      router.push('/validators');
+      router.push('/');
       setIsOpened(false);
     }
     const tm = setTimeout(() => {
@@ -57,7 +57,7 @@ const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
             <Button
               component="link"
               href={{
-                pathname: '/validators',
+                pathname: '/',
                 query: {
                   chains:
                     chains.indexOf(item.value) === -1

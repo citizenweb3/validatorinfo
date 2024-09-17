@@ -2,12 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
 
 interface OwnProps {
-  icon?: string;
+  icon: string | null;
   name: string;
-  id: number;
+  id: string;
 }
 
 const ValidatorListItemAvatar: FC<OwnProps> = ({ icon, name, id }) => {
@@ -32,7 +33,9 @@ const ValidatorListItemAvatar: FC<OwnProps> = ({ icon, name, id }) => {
           />
         )}
       </div>
-      <div className="ml-1 text-nowrap text-center text-base">{name}</div>
+      <Tooltip tooltip={name} direction="top">
+        <div className="ml-1 max-w-64 overflow-x-hidden text-ellipsis text-nowrap text-center text-base">{name}</div>
+      </Tooltip>
     </Link>
   );
 };

@@ -1,7 +1,7 @@
 export const lineHoverEffect = (
-  activeId: number,
+  activeId: string,
   isActive: boolean,
-  onHover: (id: number, isHovered: boolean) => void,
+  onHover: (id: string, isHovered: boolean) => void,
 ) => ({
   id: 'lineHoverEffect',
   isHovered: false,

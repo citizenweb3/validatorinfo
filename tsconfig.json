@@ -24,6 +24,9 @@
       "@/components/*": [
         "./src/app/[locale]/components/*"
       ],
+      "@/services/*": [
+        "./src/app/services/*"
+      ],
       "@/app/*": [
         "./src/app/[locale]/*"
       ],

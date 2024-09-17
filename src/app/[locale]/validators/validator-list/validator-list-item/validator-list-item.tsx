@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FC, useCallback, useState } from 'react';
+import { FC, useMemo, useState } from 'react';
 
 import ValidatorListItemAvatar from '@/app/validators/validator-list/validator-list-item/validator-list-item-avatar';
 import ValidatorListItemBattery from '@/app/validators/validator-list/validator-list-item/validator-list-item-battery';
@@ -9,80 +9,75 @@ import ValidatorListItemChains from '@/app/validators/validator-list/validator-l
 import ValidatorListItemFavorite from '@/app/validators/validator-list/validator-list-item/validator-list-item-favorite';
 import ValidatorListItemLinks from '@/app/validators/validator-list/validator-list-item/validator-list-item-links';
 import ValidatorListItemTVS from '@/app/validators/validator-list/validator-list-item/validator-list-item-tvs';
-import { ValidatorItem } from '@/types';
+import { Chain, ValidatorItem } from '@/types';
 
 interface OwnProps {
   validator: ValidatorItem;
+  chains: Chain[];
 }
 
-const ValidatorList: FC<OwnProps> = ({ validator }) => {
-  const [activeId, setActiveId] = useState<number | null>(null);
+const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
+  const [activeId, setActiveId] = useState<string | null>(null);
 
-  const handleHover = useCallback(
-    (id: number, isHovered: boolean) => {
-      if (isHovered) {
-        setActiveId(id);
-      } else if (activeId === id) {
-        setActiveId(null);
-      }
-    },
-    [activeId],
+  const validatorChains = useMemo(
+    () => validator.chainNames.map((cn) => chains.find((c) => c.name === cn) || cn),
+    [chains, validator],
   );
 
   return (
     <tr className="group font-handjet hover:bg-bgHover ">
       <td className="border-b border-black py-2 active:border-bgSt">
-        <ValidatorListItemFavorite isFavorite={validator.isFavorite} />
+        <ValidatorListItemFavorite isFavorite={false} />
       </td>
       <td className="group/avatar border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <ValidatorListItemAvatar icon={validator.icon} name={validator.name} id={validator.id} />
+        <ValidatorListItemAvatar icon={validator.logoUrl} name={validator.moniker} id={validator.operatorAddress} />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemLinks links={validator.links} validatorId={validator.id} />
+        <ValidatorListItemLinks links={validator?.links} id={validator.operatorAddress} />
       </td>
       <td className="border-b border-black px-2 py-2">
-        <ValidatorListItemBattery battery={validator.battery} id={validator.id} />
+        <ValidatorListItemBattery battery={99} id={validator.operatorAddress} />
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.id}/metrics`}
+          href={`validators/${validator.operatorAddress}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
-          {validator.scores.technical ?? '-'}
+          -
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.id}/metrics`}
+          href={`validators/${validator.operatorAddress}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
-          {validator.scores.social ?? '-'}
+          -
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.id}/metrics`}
+          href={`validators/${validator.operatorAddress}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
-          {validator.scores.governance ?? '-'}
+          -
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.id}/metrics`}
+          href={`validators/${validator.operatorAddress}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
-          {validator.scores.user ?? '-'}
+          -
         </Link>
       </td>
       <td className="group/tvs border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemTVS id={validator.id} activeId={activeId} setActiveId={setActiveId} />
+        <ValidatorListItemTVS id={validator.operatorAddress} activeId={activeId} setActiveId={setActiveId} />
       </td>
       <td className="border-b border-black px-2 py-2">
-        <ValidatorListItemChains chains={validator.chains} />
+        <ValidatorListItemChains chains={validatorChains} />
       </td>
     </tr>
   );
 };
 
-export default ValidatorList;
+export default ValidatorListItem;
