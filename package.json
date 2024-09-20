@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",
+    "chart.js": "^4.4.3",
     "cron": "^3.1.7",
     "express": "^4.19.2",
-    "chart.js": "^4.4.3",
     "i18next": "^23.12.2",
     "next": "14.2.3",
     "next-i18next": "^15.3.0",
@@ -24,6 +24,7 @@
     "react-dom": "^18",
     "react-i18next": "^15.0.0",
     "sharp": "^0.33.4",
+    "swr": "^2.2.5",
     "tailwind-scrollbar": "^3.1.0",
     "usehooks-ts": "^3.1.0",
     "ws": "^8.18.0"

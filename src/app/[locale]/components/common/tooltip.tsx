@@ -25,8 +25,6 @@ const ToolTip: FC<Props> = ({ children, tooltip, direction = 'bottom', className
 
         tooltipRef.current.style.left = -(tWidth - width) / 2 + 'px';
 
-        console.log('[SSA] di: ', direction, tooltip);
-
         switch (direction) {
           case 'bottom':
             tooltipRef.current.style.top = `calc(${height}px + 0.5rem)`;

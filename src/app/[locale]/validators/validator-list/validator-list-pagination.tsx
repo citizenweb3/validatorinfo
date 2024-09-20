@@ -5,12 +5,13 @@ import TriangleButton from '@/components/common/triangle-button';
 
 interface OwnProps {
   currentPage: number;
+  pageLength: number;
+  baseUrl: string;
 }
 
-const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
-  const pageLength = 100;
-
+const ValidatorListPagination: FC<OwnProps> = ({ baseUrl, currentPage, pageLength }) => {
   const pages: (number | undefined)[] = [];
+  const url = baseUrl.replace(/p=\d+/, '').indexOf('?') !== -1 ? baseUrl + '&' : '?';
 
   if (currentPage > 1) {
     pages.push(1);
@@ -38,12 +39,12 @@ const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
   return (
     <div className="flex flex-row items-center justify-end space-x-2">
       {currentPage > 1 && (
-        <Link href={`?p=${currentPage - 1}`}>
+        <Link href={`${url}p=${currentPage - 1}`}>
           <TriangleButton direction="l" />
         </Link>
       )}
       {pages.map((page) => (
-        <Link key={page} href={page ? `?p=${page}` : ''}>
+        <Link key={page} href={page ? `${url}p=${page}` : ''}>
           <div
             className={`${currentPage === page ? 'border-highlight text-highlight' : 'border-bgSt'} ${page && 'hover:text-shadowed hover:text-highlight active:border-none'}  border-b px-2 font-handjet text-base`}
           >
@@ -52,7 +53,7 @@ const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
         </Link>
       ))}
       {currentPage < pageLength && (
-        <Link href={`?p=${currentPage + 1}`}>
+        <Link href={`${url}p=${currentPage + 1}`}>
           <TriangleButton direction="r" />
         </Link>
       )}

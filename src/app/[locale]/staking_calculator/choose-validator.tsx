@@ -8,7 +8,7 @@ import ChooseDropdown from '@/app/staking_calculator/choose-dropdown';
 import { ValidatorItem } from '@/types';
 
 interface OwnProps {
-  value?: number;
+  value?: string | number;
   onChange: (value?: ValidatorItem) => void;
 }
 
@@ -24,7 +24,7 @@ const ChooseValidator: FC<OwnProps> = ({ value, onChange }) => {
   }, []);
 
   const validatorList = useMemo(() => {
-    return validators.map((v) => ({ value: v.id, title: v.name }));
+    return validators.map((v) => ({ value: v.operatorAddress, title: v.moniker }));
   }, [validators]);
 
   return (
@@ -32,7 +32,7 @@ const ChooseValidator: FC<OwnProps> = ({ value, onChange }) => {
       name={t('Choose a Validator')}
       list={validatorList}
       selected={value}
-      onChange={(value) => onChange(validators.find((v) => v.id === value))}
+      onChange={(value) => onChange(validators.find((v) => v.operatorAddress === value))}
     />
   );
 };

@@ -1,6 +1,4 @@
-import { ValidatorItem } from '@/types';
-
-export const getValidators = async (chains?: string[]): Promise<ValidatorItem[]> => {
+export const getValidators = async (chains?: string[]): Promise<any[]> => {
   const vals = [
     {
       id: 0,

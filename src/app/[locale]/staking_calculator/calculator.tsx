@@ -18,7 +18,7 @@ const Calculator: FC<OwnProps> = () => {
   useEffect(() => {
     const init = async () => {
       if (chain && validator) {
-        const r = await getStakingRates(chain.id, validator.id);
+        const r = await getStakingRates(chain.id, validator.operatorAddress);
         setStakingRates(r);
       }
     };
@@ -29,7 +29,7 @@ const Calculator: FC<OwnProps> = () => {
     <div>
       <div className="mt-4 flex flex-row space-x-24 text-lg">
         <ChooseNetwork value={chain?.id} onChange={setChain} />
-        <ChooseValidator value={validator?.id} onChange={setValidator} />
+        <ChooseValidator value={validator?.operatorAddress} onChange={setValidator} />
       </div>
       <div className="mt-4 flex">{chain && <StakingResults values={stakingRates} chain={chain} />}</div>
     </div>

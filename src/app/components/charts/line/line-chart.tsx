@@ -19,13 +19,13 @@ import { lineHoverEffect } from './plugins';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 interface LineProps {
-  id?: number;
+  id?: string;
   config?: ChartOptions<'line'>;
   isActive?: boolean;
-  onHover?: (id: number, isHovered: boolean) => void;
+  onHover?: (id: string, isHovered: boolean) => void;
 }
 
-const Line: FC<LineProps> = ({ id = 0, config, isActive = true, onHover = () => {} }) => {
+const Line: FC<LineProps> = ({ id = '', config, isActive = true, onHover = () => {} }) => {
   const [hoverEffect] = useState(() => lineHoverEffect(id, isActive, onHover));
   return (
     <div>

@@ -1,8 +1,8 @@
 import { StakingRates } from '@/types';
 
-export const getStakingRates = (chainId: number, validatorId: number): Promise<StakingRates | undefined> => {
+export const getStakingRates = (chainId: number, validatorAddress: string): Promise<StakingRates | undefined> => {
   const rates: StakingRates | undefined =
-    chainId && validatorId
+    chainId && validatorAddress
       ? {
           d1: 0.00101,
           d7: 0.007,

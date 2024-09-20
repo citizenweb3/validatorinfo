@@ -1,12 +1,9 @@
-import { PrismaClient } from '@prisma/client';
 import { NextResponse } from 'next/server';
 
-const client = new PrismaClient();
+import ChainService from '@/services/chain-service';
 
 export async function GET(req: Request, ctx: any) {
-  const chains = await client.chain.findMany({
-    include: { github: true, apr: true, priceChart: { orderBy: { date: 'desc' }, take: 1 } },
-  });
+  const chains = await ChainService.getAll();
 
   return NextResponse.json(chains);
 }
