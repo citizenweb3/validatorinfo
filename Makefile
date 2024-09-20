@@ -18,7 +18,7 @@ generate-schema:
         npx prisma migrate dev
 
 start-indexer:
-        yarn ts-node-esm server/server.ts
+        yarn tsx server/server.ts
 
 start-db:
         make destroy-deps
