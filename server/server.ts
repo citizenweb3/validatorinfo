@@ -2,18 +2,15 @@ import { PrismaClient } from '@prisma/client';
 import { CronJob } from 'cron';
 import express, { Express } from 'express';
 
-
-
 import { getPrices } from './jobs/getPrices';
 import { getValidators } from './jobs/getValidators';
 import { getValidatorLogos } from './jobs/getValidatorsLogo';
-
 
 const getData = async (lcd: string, path: string) => await fetch(lcd + path).then((data) => data.json());
 
 const runServer = async () => {
   const app: Express = express();
-  const port = process.env.SERVER_PORT || 3333;
+  const port = process.env.INDEXER_PORT ?? 3333;
 
   const client = new PrismaClient();
   const chains = await client.chain.findMany({
