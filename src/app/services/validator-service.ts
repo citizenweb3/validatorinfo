@@ -1,7 +1,8 @@
 import db from '@/db';
 import { ValidatorItem } from '@/types';
 
-const getAll = async (skip: number, take: number): Promise<{ validators: ValidatorItem[]; count: number }> => {
+const getAll = async (skip: number, take: number): Promise<{ validators: ValidatorItem[]; pages: number }> => {
+  console.log('[SSA] getAll: ');
   const validators = (await db.$queryRaw`
   WITH LatestPrice AS (
     SELECT 
@@ -40,7 +41,7 @@ const getAll = async (skip: number, take: number): Promise<{ validators: Validat
 
   const count = await db.validator.count();
 
-  return { validators, count };
+  return { validators, pages: Math.ceil(count / take) };
 };
 
 const ValidatorService = {

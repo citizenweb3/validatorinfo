@@ -1,39 +1,31 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
-import { unstable_cache } from 'next/cache';
-import { FC } from 'react';
+import { NextPage } from 'next';
 
 import ValidatorList from '@/app/validators/validator-list/validator-list';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorTabs } from '@/components/common/tabs/tabs-data';
-import { Locale } from '@/i18n';
 import ChainService from '@/services/chain-service';
+import ValidatorService from '@/services/validator-service';
+import { Chain } from '@/types';
 
-interface OwnProps {
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
-  params: { locale: Locale };
 }
 
-const getChainList = unstable_cache(ChainService.getAll, ['chains'], {
-  revalidate: 3600,
-  tags: ['chains'],
-});
+const validatorsPerPage = 10;
 
-const Home: FC<OwnProps> = async ({ searchParams, params: { locale } }) => {
-  unstable_setRequestLocale(locale);
-
-  const currentPage = parseInt((searchParams.p as string) || '1');
-  const chains = await getChainList();
-
-  const filterChains: string[] = !searchParams.chains
-    ? []
-    : typeof searchParams.chains === 'string'
-      ? [searchParams.chains]
-      : searchParams.chains;
+const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
+  const currentPage = parseInt((q.p as string) || '1');
+  const chains: Chain[] = await ChainService.getAll();
+  const validators = await ValidatorService.getAll(validatorsPerPage * (currentPage - 1), validatorsPerPage);
+  const filterChains: string[] = !q.chains ? [] : typeof q.chains === 'string' ? [q.chains] : q.chains;
 
   return (
     <div>
       <TabList page="HomePage" tabs={validatorTabs} />
-      <ValidatorList chains={chains} filterChains={filterChains} currentPage={currentPage} />
+      <ValidatorList validators={validators} chains={chains} filterChains={filterChains} currentPage={currentPage} />
     </div>
   );
 };
