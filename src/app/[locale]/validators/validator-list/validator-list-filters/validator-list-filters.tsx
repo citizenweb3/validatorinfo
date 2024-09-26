@@ -1,16 +1,17 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
 import ValidatorListFiltersBattery from '@/app/validators/validator-list/validator-list-filters/validator-list-filters-battery';
 import ValidatorListFiltersPorPage from '@/app/validators/validator-list/validator-list-filters/validator-list-filters-perpage';
 import Button from '@/components/common/button';
 import PlusButton from '@/components/common/plus-button';
-import { useRouter } from '@/i18n';
 
 interface OwnProps {
   chains: string[];
+  perPage: number;
 }
 
 const filterItems = [
@@ -22,7 +23,7 @@ const filterItems = [
   { value: 'pow', title: 'POW' },
 ];
 
-const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
+const ValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
   const router = useRouter();
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [resetClicks, setResetClicks] = useState<number>(0);
@@ -47,24 +48,26 @@ const ValidatorListFilters: FC<OwnProps> = ({ chains = [] }) => {
     setResetClicks(resetClicks + 1);
   };
 
+  const onPerPageChanged = (pp: number) => {
+    const chainParam = chains.length ? `&chains=${chains.join('&chains=')}` : '';
+    router.push(`/?pp=${pp}${chainParam}`);
+  };
+
+  const onChainsChanged = (value: string) => {
+    const chainParam = chains.indexOf(value) === -1 ? [...chains, value] : chains.filter((c) => c !== value);
+    router.push(`/?pp=${perPage}&chains=${chainParam.join('&chains=')}`);
+  };
+
   return (
     <div className="flex h-9 items-center justify-end space-x-2">
       {isOpened && (
         <>
           <ValidatorListFiltersBattery />
-          <ValidatorListFiltersPorPage />
+          <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
           {filterItems.map((item) => (
             <Button
-              component="link"
-              href={{
-                pathname: '/',
-                query: {
-                  chains:
-                    chains.indexOf(item.value) === -1
-                      ? [...chains, item.value]
-                      : chains.filter((c) => c !== item.value),
-                },
-              }}
+              component="button"
+              onClick={() => onChainsChanged(item.value)}
               key={item.value}
               isActive={chains.indexOf(item.value) !== -1}
               className="text-sm"

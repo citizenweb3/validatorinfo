@@ -9,15 +9,16 @@ import { Chain, ValidatorItem } from '@/types';
 interface OwnProps {
   chains: Chain[];
   filterChains: string[];
-  currentPage?: number;
   validators: { validators: ValidatorItem[]; pages: number };
+  currentPage?: number;
+  perPage: number;
 }
 
-const ValidatorList: FC<OwnProps> = async ({ validators, filterChains, chains = [], currentPage = 1 }) => {
+const ValidatorList: FC<OwnProps> = async ({ perPage, validators, filterChains, chains = [], currentPage = 1 }) => {
   const { validators: list, pages } = validators;
   return (
     <div>
-      <ValidatorListFilters chains={filterChains} />
+      <ValidatorListFilters perPage={perPage} chains={filterChains} />
       {list.length === 0 ? (
         <div className="mt-6 text-base">No validators found, try to change filters!</div>
       ) : (

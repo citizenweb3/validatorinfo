@@ -14,18 +14,25 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const validatorsPerPage = 10;
+const defaultPerPage = 25;
 
 const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
   const currentPage = parseInt((q.p as string) || '1');
   const chains: Chain[] = await ChainService.getAll();
+  const validatorsPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const validators = await ValidatorService.getAll(validatorsPerPage * (currentPage - 1), validatorsPerPage);
   const filterChains: string[] = !q.chains ? [] : typeof q.chains === 'string' ? [q.chains] : q.chains;
 
   return (
     <div>
       <TabList page="HomePage" tabs={validatorTabs} />
-      <ValidatorList validators={validators} chains={chains} filterChains={filterChains} currentPage={currentPage} />
+      <ValidatorList
+        perPage={validatorsPerPage}
+        validators={validators}
+        chains={chains}
+        filterChains={filterChains}
+        currentPage={currentPage}
+      />
     </div>
   );
 };

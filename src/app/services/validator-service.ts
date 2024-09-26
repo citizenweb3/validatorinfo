@@ -2,7 +2,6 @@ import db from '@/db';
 import { ValidatorItem } from '@/types';
 
 const getAll = async (skip: number, take: number): Promise<{ validators: ValidatorItem[]; pages: number }> => {
-  console.log('[SSA] getAll: ');
   const validators = (await db.$queryRaw`
   WITH LatestPrice AS (
     SELECT 
