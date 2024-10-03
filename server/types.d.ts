@@ -72,4 +72,4 @@ interface CommissionRates {
   max_change_rate: string;
 }
 
-type BondStatus = 'BOND_STATUS_BONDED';
+type BondStatus = 'BOND_STATUS_BONDED' | 'BOND_STATUS_UNBONDED';

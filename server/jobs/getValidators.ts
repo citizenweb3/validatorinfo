@@ -38,7 +38,7 @@ export const getValidators = async (
           if (!identity) {
             await client.validatorLogo.upsert({
               where: { identity: description.identity },
-              update: {}, // Оставляем пустым, так как не нужно обновлять существующую запись
+              update: { identity: description.identity }, // Оставляем пустым, так как не нужно обновлять существующую запись
               create: { identity: description.identity }, // Создаем запись, если её нет
             });
           }
