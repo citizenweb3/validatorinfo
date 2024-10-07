@@ -42,25 +42,21 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains }) => {
             onClose={() => setIsModalOpened(false)}
             className="bottom-4 right-0"
           >
-            <div className="flex w-40 min-w-40 max-w-40 flex-row flex-wrap items-center justify-center">
+            <div className="flex w-40 flex-row flex-wrap items-center justify-center">
               {chains.map((chain) =>
                 typeof chain === 'string' ? (
                   chain
                 ) : (
-                  <Link
-                    key={chain.chainId}
-                    href={`/networks/${chain.chainId}`}
-                    className="flex h-7 w-7 items-center justify-center"
-                  >
-                    <Tooltip direction="top" tooltip={chain.prettyName}>
-                      <Image
-                        src={chain.logoUrl}
-                        alt={chain.prettyName}
-                        width={24}
-                        height={24}
-                        className="h-6 min-h-6 w-6 min-w-6 rounded-full grayscale transition-all duration-300 hover:grayscale-0"
-                      />
-                    </Tooltip>
+                  <Link key={chain.chainId} href={`/networks/${chain.chainId}`} className="h-7 w-7">
+                    {/*<Tooltip direction="top" tooltip={chain.prettyName}>*/}
+                    <Image
+                      src={chain.logoUrl}
+                      alt={chain.prettyName}
+                      width={24}
+                      height={24}
+                      className="h-6 min-h-6 w-6 min-w-6 rounded-full grayscale transition-all duration-300 hover:grayscale-0"
+                    />
+                    {/*</Tooltip>*/}
                   </Link>
                 ),
               )}

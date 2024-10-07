@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import QuoteItem from '@/components/header/quote-item';
+import HeaderInfoService from '@/services/headerInfo-service';
 
 interface OwnProps {}
 
@@ -32,10 +33,11 @@ const data = {
   ],
 };
 
-const Quotes: FC<OwnProps> = () => {
+const Quotes: FC<OwnProps> = async () => {
+  const headerInfo = await HeaderInfoService.getValidatorsAndChains();
   return (
     <div className="flex flex-grow flex-row space-x-10 scrollbar-none">
-      <QuoteItem name="Validators" value={data.validators} href="/validators" />
+      <QuoteItem name="Validators" value={headerInfo.validators} href="/validators" />
       <QuoteItem name="Ecosystems" value={data.ecosystems} href="/networks" />
       <QuoteItem name="TVL" value={data.tvl} href="/global_pos" />
       {data.list.map((item) => (

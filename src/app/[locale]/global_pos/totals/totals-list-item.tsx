@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 interface OwnProps {
   title: string;
-  data: string;
+  data: number;
 }
 
 const TotalsListItem: FC<OwnProps> = ({ title, data }) => {
