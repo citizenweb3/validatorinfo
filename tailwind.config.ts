@@ -95,6 +95,8 @@ const config: Config = {
         sort_h: `url('/img/icons/sort-icon-h.png')`,
         star: `url('/img/icons/star.png')`,
         star_h: `url('/img/icons/star-h.png')`,
+        web: `url('/img/icons/web.png')`,
+        web_h: `url('/img/icons/web-h.png')`,
       },
       transitionProperty: {
         width: 'width',

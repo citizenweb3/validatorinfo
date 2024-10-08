@@ -5,6 +5,7 @@ export interface ValidatorChain {
 }
 
 export interface ValidatorLinks {
+  website?: string;
   github?: string;
   x?: string;
 }
