@@ -1,9 +1,54 @@
-version: '3.7'
-
+version: "3.9"
 services:
+  postgres:
+    image: postgres:14-bullseye
+    container_name: postgres
+    restart: until-stopped
+    environment:
+      POSTGRES_USER: validatorinfo
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: validatorinfo
+      POSTGRES_PASSWORD: password
+      DATABASE_URL: ${DATABASE_URL}
+    depends_on:
+      - postgres
+      - migrate
     ports:
       - "3000:3000"
+    networks:
+      - app-network
+    command: yarn start
+
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
-      - NODE_ENV=production
+      DATABASE_URL: ${DATABASE_URL}
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    command: >
+      sh -c "while ! nc -z postgres 5432; do sleep 1; done && yarn build && npx prisma migrate deploy && npx prisma generate"
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
