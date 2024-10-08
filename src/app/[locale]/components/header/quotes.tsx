@@ -36,10 +36,12 @@ const data = {
 const Quotes: FC<OwnProps> = async () => {
   const headerInfo = await HeaderInfoService.getValidatorsAndChains();
   return (
-    <div className="flex flex-grow flex-row space-x-10 scrollbar-none">
+    <div className="flex flex-grow flex-row items-center space-x-10 scrollbar-none">
       <QuoteItem name="Validators" value={headerInfo.validators} href="/validators" />
       <QuoteItem name="Ecosystems" value={data.ecosystems} href="/networks" />
-      <QuoteItem name="TVL" value={data.tvl} href="/global_pos" />
+      <div className="flex items-center active:h-16">
+        <QuoteItem name="TVL" value={data.tvl} href="#" />
+      </div>
       {data.list.map((item) => (
         <QuoteItem key={item.name} name={item.name} value={item.value} grow={item.grow} href="/global_pos" />
       ))}
