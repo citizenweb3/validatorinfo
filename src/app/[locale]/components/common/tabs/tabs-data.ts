@@ -22,7 +22,7 @@ export const validatorTabs: TabOptions[] = [
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
-  { name: 'ValidatorInfo', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
+  { name: 'ValidatorInfo', href: '/', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   { name: 'Rumors', href: '/rumors', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
   { name: 'Global', href: '/global_pos', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
 ];
