@@ -131,6 +131,10 @@
   "NetworksPage": {
     "title": "Rede"
   },
+  "AIPage": {
+    "title": "AI",
+    "text": "Então você quer encontrar um validador, pool de mineração ou um provedor que atenda aos seus valores? Ótimo.\n\nVocê está no lugar certo. Meus construtores me forneceram a incrível habilidade de fazer isso com prompts aleatórios (pesquisas)! Por exemplo, tente procurar um validador com uma certa comissão e opiniões políticas liberais. É incrível, certo? Como sempre, lembre-se de que meus recursos são experimentais.\n\nSe você acha que não estou cumprindo minha tarefa corretamente, abra um problema para minha equipe <issue>[aqui]</issue>"
+  },
   "ValidatorsPage": {
     "title": "Validadores",
     "Tabs": {

@@ -128,6 +128,10 @@
   "NetworksPage": {
     "title": "Networks"
   },
+  "AIPage": {
+    "title": "AI",
+    "text": "So you want to find a validator, mining pool or a provider that meets your values? Good. \n\nYou're in the right place. My builders have supplied me with the amazing ability to do so with random prompts (searches)! For example, try searching for a validator with a certain commission and liberal political opinions. Its amazing, right? As always, please remember that my features are experimental.\n\nIf you feel like I'm not fulfilling my task properly, please open an issue for my team <issue>[here]</issue>"
+  },
   "ValidatorsPage": {
     "title": "Validators",
     "Tabs": {
