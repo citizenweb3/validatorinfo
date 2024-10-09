@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import { FC, useMemo, useState } from 'react';
 
-import ValidatorListItemAvatar from '@/app/validators/validator-list/validator-list-item/validator-list-item-avatar';
-import ValidatorListItemBattery from '@/app/validators/validator-list/validator-list-item/validator-list-item-battery';
-import ValidatorListItemChains from '@/app/validators/validator-list/validator-list-item/validator-list-item-chains';
-import ValidatorListItemFavorite from '@/app/validators/validator-list/validator-list-item/validator-list-item-favorite';
-import ValidatorListItemLinks from '@/app/validators/validator-list/validator-list-item/validator-list-item-links';
-import ValidatorListItemTVS from '@/app/validators/validator-list/validator-list-item/validator-list-item-tvs';
+import ValidatorListItemAvatar from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-avatar';
+import ValidatorListItemBattery from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-battery';
+import ValidatorListItemChains from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-chains';
+import ValidatorListItemFavorite from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-favorite';
+import ValidatorListItemLinks from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-links';
+import ValidatorListItemTVS from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-tvs';
 import { Chain, ValidatorItem } from '@/types';
 
 interface OwnProps {

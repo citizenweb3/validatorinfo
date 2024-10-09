@@ -3,18 +3,19 @@
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import ValidatorListSortItems from '@/app/validators/validator-list/validator-list-sort-items';
+import ValidatorListSortItems from '@/app/main-validators/validator-list/validator-list-sort-items';
 import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
   name: string;
   sortable?: boolean;
+  colspan?: number;
 }
 
-const ValidatorListHeaderItem: FC<OwnProps> = ({ name, sortable = false }) => {
+const ValidatorListHeaderItem: FC<OwnProps> = ({ name, sortable = false, colspan = 1 }) => {
   const t = useTranslations('HomePage.Table');
   return (
-    <th>
+    <th colSpan={colspan}>
       <div className="flex flex-row items-center justify-center py-3">
         {sortable && <ValidatorListSortItems />}
         <Tooltip tooltip={`${t(`${name}.hint` as 'Validator.hint')}`} direction="top">

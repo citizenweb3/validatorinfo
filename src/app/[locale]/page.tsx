@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 
-import ValidatorList from '@/app/validators/validator-list/validator-list';
+import ValidatorList from '@/app/main-validators/validator-list/validator-list';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorTabs } from '@/components/common/tabs/tabs-data';
 import ChainService from '@/services/chain-service';

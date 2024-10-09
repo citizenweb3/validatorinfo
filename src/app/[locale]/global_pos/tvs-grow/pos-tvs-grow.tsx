@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import Doughnut from '../../../components/charts/doughnut/doughnut-chart';
+import Doughnut from '@/components/charts/doughnut/doughnut-chart';
 
 const PosTvsGrow: FC = () => {
   return (

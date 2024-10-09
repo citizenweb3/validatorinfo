@@ -9,7 +9,12 @@ import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
 interface OwnProps {}
 
 const data: TabOptions[] = [
-  { name: 'Validators', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
+  {
+    name: 'Validators',
+    href: '/validators',
+    icon: icons.ValidatorsIcon,
+    iconHovered: icons.ValidatorsIconHovered,
+  },
   { name: 'Networks', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
   {

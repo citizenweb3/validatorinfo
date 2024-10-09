@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 
-import ValidatorList from '@/app/validators/validator-list/validator-list';
+import SimpleValidatorList from '@/app/validators/simple-validator-list/simple-validator-list';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorTabs } from '@/components/common/tabs/tabs-data';
 import ChainService from '@/services/chain-service';
@@ -16,7 +16,7 @@ interface PageProps {
 
 const defaultPerPage = 25;
 
-const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
+const ValidatorsPage: NextPage<PageProps> = async ({ searchParams: q }) => {
   const currentPage = parseInt((q.p as string) || '1');
   const chains: Chain[] = await ChainService.getAll();
   const validatorsPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
@@ -26,7 +26,7 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
   return (
     <div>
       <TabList page="HomePage" tabs={validatorTabs} />
-      <ValidatorList
+      <SimpleValidatorList
         perPage={validatorsPerPage}
         validators={validators}
         chains={chains}
@@ -37,4 +37,4 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
   );
 };
 
-export default Home;
+export default ValidatorsPage;

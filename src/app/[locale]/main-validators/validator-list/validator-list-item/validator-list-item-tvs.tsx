@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { lineMainTable } from '../../../../components/charts/line/configs';
-import Line from '../../../../components/charts/line/line-chart';
+import { lineMainTable } from '@/app/components/charts/line/configs';
+import Line from '@/components/charts/line/line-chart';
 
 interface OwnProps {
   id: string;

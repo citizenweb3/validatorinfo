@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import ValidatorListFilters from '@/app/validators/validator-list/validator-list-filters/validator-list-filters';
-import ValidatorListHeaderItem from '@/app/validators/validator-list/validator-list-header-item';
-import ValidatorListItem from '@/app/validators/validator-list/validator-list-item/validator-list-item';
-import ValidatorListPagination from '@/app/validators/validator-list/validator-list-pagination';
+import ValidatorListFilters from '@/app/main-validators/validator-list/validator-list-filters/validator-list-filters';
+import ValidatorListHeaderItem from '@/app/main-validators/validator-list/validator-list-header-item';
+import ValidatorListItem from '@/app/main-validators/validator-list/validator-list-item/validator-list-item';
+import ValidatorListPagination from '@/app/main-validators/validator-list/validator-list-pagination';
 import { Chain, ValidatorItem } from '@/types';
 
 interface OwnProps {

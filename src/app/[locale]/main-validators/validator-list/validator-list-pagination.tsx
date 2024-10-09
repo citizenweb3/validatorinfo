@@ -11,7 +11,7 @@ interface OwnProps {
 
 const ValidatorListPagination: FC<OwnProps> = ({ baseUrl, currentPage, pageLength }) => {
   const pages: (number | undefined)[] = [];
-  const url = baseUrl.replace(/p=\d+/, '').indexOf('?') !== -1 ? baseUrl + '&' : '?';
+  const url = baseUrl.replace(/[?&]p=\d+/, '').indexOf('?') !== -1 ? baseUrl + '&' : '?';
 
   if (currentPage > 1) {
     pages.push(1);

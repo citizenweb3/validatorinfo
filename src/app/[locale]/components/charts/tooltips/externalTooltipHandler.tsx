@@ -1,6 +1,6 @@
 import { getOrCreateTooltip } from './getOrCreateTooltip';
 
-const config = require('../../../../../tailwind.config.ts');
+const config = require('../../../../../../tailwind.config.ts');
 export const externalTooltipHandler = (context: { chart: any; tooltip: any }) => {
   // Tooltip Element
   const { chart, tooltip } = context;

@@ -6,7 +6,7 @@ import { Doughnut as RDoughnut } from 'react-chartjs-2';
 
 import { externalTooltipHandler } from '../tooltips/externalTooltipHandler';
 
-const config = require('../../../../../tailwind.config.ts');
+const config = require('../../../../../../tailwind.config.ts');
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 

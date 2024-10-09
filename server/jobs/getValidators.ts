@@ -1,10 +1,7 @@
 import { Prisma, PrismaClient } from '@prisma/client';
 import { DefaultArgs } from '@prisma/client/runtime/library';
 
-
-
 import { ChainWithNodes, Validator } from '../types';
-
 
 const getData = async (lcd: string, path: string) => await fetch(lcd + path).then((data) => data.json());
 

@@ -4,8 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
-import ValidatorListFiltersBattery from '@/app/validators/validator-list/validator-list-filters/validator-list-filters-battery';
-import ValidatorListFiltersPorPage from '@/app/validators/validator-list/validator-list-filters/validator-list-filters-perpage';
+import ValidatorListFiltersPorPage from '@/app/main-validators/validator-list/validator-list-filters/validator-list-filters-perpage';
 import Button from '@/components/common/button';
 import PlusButton from '@/components/common/plus-button';
 
@@ -23,7 +22,7 @@ const filterItems = [
   { value: 'pow', title: 'POW' },
 ];
 
-const ValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
+const SimpleValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
   const router = useRouter();
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [resetClicks, setResetClicks] = useState<number>(0);
@@ -31,7 +30,7 @@ const ValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
 
   useEffect(() => {
     if (resetClicks >= 3) {
-      router.push('/');
+      router.push('/validators');
       setIsOpened(false);
     }
     const tm = setTimeout(() => {
@@ -50,19 +49,18 @@ const ValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
 
   const onPerPageChanged = (pp: number) => {
     const chainParam = chains.length ? `&chains=${chains.join('&chains=')}` : '';
-    router.push(`/?pp=${pp}${chainParam}`);
+    router.push(`/validators/?pp=${pp}${chainParam}`);
   };
 
   const onChainsChanged = (value: string) => {
     const chainParam = chains.indexOf(value) === -1 ? [...chains, value] : chains.filter((c) => c !== value);
-    router.push(`/?pp=${perPage}&chains=${chainParam.join('&chains=')}`);
+    router.push(`/validators/?pp=${perPage}&chains=${chainParam.join('&chains=')}`);
   };
 
   return (
     <div className="flex h-9 items-center justify-end space-x-2">
       {isOpened && (
         <>
-          <ValidatorListFiltersBattery />
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
           {filterItems.map((item) => (
             <Button
@@ -98,4 +96,4 @@ const ValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
   );
 };
 
-export default ValidatorListFilters;
+export default SimpleValidatorListFilters;
