@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 
 import ValidatorList from '@/app/main-validators/validator-list/validator-list';
 import TabList from '@/components/common/tabs/tab-list';
-import { validatorTabs } from '@/components/common/tabs/tabs-data';
+import { mainTabs } from '@/components/common/tabs/tabs-data';
 import ChainService from '@/services/chain-service';
 import ValidatorService from '@/services/validator-service';
 import { Chain } from '@/types';
@@ -25,7 +25,7 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
 
   return (
     <div>
-      <TabList page="HomePage" tabs={validatorTabs} />
+      <TabList page="HomePage" tabs={mainTabs} />
       <ValidatorList
         perPage={validatorsPerPage}
         validators={validators}

@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
 import ValidatorListFilters from '@/app/main-validators/validator-list/validator-list-filters/validator-list-filters';
-import ValidatorListHeaderItem from '@/app/main-validators/validator-list/validator-list-header-item';
 import ValidatorListItem from '@/app/main-validators/validator-list/validator-list-item/validator-list-item';
-import ValidatorListPagination from '@/app/main-validators/validator-list/validator-list-pagination';
+import TableHeaderItem from '@/components/common/table/table-header-item';
+import TablePagination from '@/components/common/table/table-pagination';
 import { Chain, ValidatorItem } from '@/types';
 
 interface OwnProps {
@@ -27,15 +27,15 @@ const ValidatorList: FC<OwnProps> = async ({ perPage, validators, filterChains, 
             <thead>
               <tr className="bg-table_header">
                 <th />
-                <ValidatorListHeaderItem name="Validator" sortable />
-                <ValidatorListHeaderItem name="Links" />
-                <ValidatorListHeaderItem name="Battery" sortable />
-                <ValidatorListHeaderItem name="Technical" sortable />
-                <ValidatorListHeaderItem name="Social" sortable />
-                <ValidatorListHeaderItem name="Governance" sortable />
-                <ValidatorListHeaderItem name="User" sortable />
-                <ValidatorListHeaderItem name="TVS" sortable />
-                <ValidatorListHeaderItem name="Supported Assets" sortable />
+                <TableHeaderItem name="Validator" sortable />
+                <TableHeaderItem name="Links" />
+                <TableHeaderItem name="Battery" sortable />
+                <TableHeaderItem name="Technical" sortable />
+                <TableHeaderItem name="Social" sortable />
+                <TableHeaderItem name="Governance" sortable />
+                <TableHeaderItem name="User" sortable />
+                <TableHeaderItem name="TVS" sortable />
+                <TableHeaderItem name="Supported Assets" sortable />
               </tr>
             </thead>
             <tbody>
@@ -44,7 +44,7 @@ const ValidatorList: FC<OwnProps> = async ({ perPage, validators, filterChains, 
               ))}
             </tbody>
           </table>
-          <ValidatorListPagination
+          <TablePagination
             baseUrl={filterChains.length ? `?chains=${filterChains.join('&chains=')}` : ''}
             currentPage={currentPage}
             pageLength={pages}

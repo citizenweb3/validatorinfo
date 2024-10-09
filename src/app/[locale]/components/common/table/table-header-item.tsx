@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import ValidatorListSortItems from '@/app/main-validators/validator-list/validator-list-sort-items';
+import TableSortItems from '@/components/common/table/table-sort-items';
 import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
@@ -12,12 +12,12 @@ interface OwnProps {
   colspan?: number;
 }
 
-const ValidatorListHeaderItem: FC<OwnProps> = ({ name, sortable = false, colspan = 1 }) => {
+const TableHeaderItem: FC<OwnProps> = ({ name, sortable = false, colspan = 1 }) => {
   const t = useTranslations('HomePage.Table');
   return (
     <th colSpan={colspan}>
       <div className="flex flex-row items-center justify-center py-3">
-        {sortable && <ValidatorListSortItems />}
+        {sortable && <TableSortItems />}
         <Tooltip tooltip={`${t(`${name}.hint` as 'Validator.hint')}`} direction="top">
           <div className="w-fit text-wrap text-sm">
             <div className="text-nowrap font-bold">&nbsp;{t(`${name}.name` as 'Validator.name')}</div>
@@ -28,4 +28,4 @@ const ValidatorListHeaderItem: FC<OwnProps> = ({ name, sortable = false, colspan
   );
 };
 
-export default ValidatorListHeaderItem;
+export default TableHeaderItem;

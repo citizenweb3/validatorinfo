@@ -43,6 +43,18 @@
         "name": "Validator",
         "hint": ""
       },
+      "Network": {
+        "name": "Network",
+        "hint": ""
+      },
+      "Token": {
+        "name": "Token name",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V",
+        "hint": ""
+      },
       "Links": {
         "name": "Links",
         "hint": ""
@@ -112,6 +124,18 @@
     "Enter Staking Amount": "Enter Staking Amount",
     "Wrong amount": "Wrong amount",
     "earnings": "d Earnings"
+  },
+  "NetworksPage": {
+    "title": "Networks"
+  },
+  "ValidatorsPage": {
+    "title": "Validators",
+    "Tabs": {
+      "Validators": "Validators",
+      "Networks": "Networks",
+      "Metrics": "Metrics",
+      "AI": "AI"
+    }
   },
   "AboutPage": {
     "Metadata": {

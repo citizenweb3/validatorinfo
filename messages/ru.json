@@ -46,6 +46,18 @@
         "name": "Валидатор",
         "hint": ""
       },
+      "Network": {
+        "name": "Сеть",
+        "hint": ""
+      },
+      "Token": {
+        "name": "Токен",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V",
+        "hint": ""
+      },
       "Links": {
         "name": "Ссылки",
         "hint": ""
@@ -115,6 +127,18 @@
     "Enter Staking Amount": "Введите сумму стейкинга",
     "Wrong amount": "Некоректное значение",
     "earnings": "д заработка"
+  },
+  "NetworksPage": {
+    "title": "Сети"
+  },
+  "ValidatorsPage": {
+    "title": "Валидаторы",
+    "Tabs": {
+      "Validators": "Валидаторы",
+      "Networks": "Сети",
+      "Metrics": "Метрики",
+      "AI": "ИИ"
+    }
   },
   "AboutPage": {
     "Metadata": {

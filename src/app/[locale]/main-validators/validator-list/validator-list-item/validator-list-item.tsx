@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import { FC, useMemo, useState } from 'react';
 
-import ValidatorListItemAvatar from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-avatar';
 import ValidatorListItemBattery from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-battery';
 import ValidatorListItemChains from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-chains';
 import ValidatorListItemFavorite from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-favorite';
 import ValidatorListItemLinks from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-links';
 import ValidatorListItemTVS from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-tvs';
+import TableAvatar from '@/components/common/table/table-avatar';
 import { Chain, ValidatorItem } from '@/types';
 
 interface OwnProps {
@@ -30,7 +30,12 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
         <ValidatorListItemFavorite isFavorite={false} />
       </td>
       <td className="group/avatar border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <ValidatorListItemAvatar icon={validator.logoUrl} name={validator.moniker} id={validator.operatorAddress} />
+        <TableAvatar
+          textClassName="max-w-36"
+          icon={validator.logoUrl}
+          name={validator.moniker}
+          href={`/validators/${validator.operatorAddress}`}
+        />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
         <ValidatorListItemLinks links={validator?.links} id={validator.operatorAddress} />

@@ -9,7 +9,7 @@ export interface TabOptions {
   iconHovered?: StaticImageData;
 }
 
-export const validatorTabs: TabOptions[] = [
+export const mainTabs: TabOptions[] = [
   {
     name: 'Calculate',
     href: '/staking_calculator',
@@ -25,6 +25,23 @@ export const validatorTabs: TabOptions[] = [
   { name: 'ValidatorInfo', href: '/', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   { name: 'Rumors', href: '/rumors', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
   { name: 'Global', href: '/global_pos', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
+];
+
+export const validatorsTabs: TabOptions[] = [
+  {
+    name: 'Validators',
+    href: '/validators',
+    icon: icons.ValidatorsIcon,
+    iconHovered: icons.ValidatorsIconHovered,
+  },
+  {
+    name: 'Networks',
+    href: '/networks',
+    icon: icons.NetworksIcon,
+    iconHovered: icons.NetworksIconHovered,
+  },
+  { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
+  { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
 ];
 
 export const aboutTabs: TabOptions[] = [

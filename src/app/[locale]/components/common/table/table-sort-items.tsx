@@ -6,7 +6,7 @@ import SortButton from '@/components/common/sort-button';
 
 interface OwnProps {}
 
-const ValidatorListSortItems: FC<OwnProps> = () => {
+const TableSortItems: FC<OwnProps> = () => {
   const [direction, setDirection] = useState<'t' | 'b'>('b');
   return (
     <div className="flex flex-col items-center justify-center">
@@ -15,4 +15,4 @@ const ValidatorListSortItems: FC<OwnProps> = () => {
   );
 };
 
-export default ValidatorListSortItems;
+export default TableSortItems;

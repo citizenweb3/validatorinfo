@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-import ValidatorListHeaderItem from '@/app/main-validators/validator-list/validator-list-header-item';
-import ValidatorListPagination from '@/app/main-validators/validator-list/validator-list-pagination';
 import SimpleValidatorListFilters from '@/app/validators/simple-validator-list/simple-validator-list-filters';
 import SimpleValidatorListItem from '@/app/validators/simple-validator-list/simple-validator-list-item';
+import TableHeaderItem from '@/components/common/table/table-header-item';
+import TablePagination from '@/components/common/table/table-pagination';
 import { Chain, ValidatorItem } from '@/types';
 
 interface OwnProps {
@@ -25,8 +25,6 @@ const SimpleValidatorList: FC<OwnProps> = async ({
 
   const baseUrl = `/validators?pp=${perPage}${filterChains.length ? `&chains=${filterChains.join('&chains=')}` : ''}`;
 
-  console.log('[SSA] bu: ', baseUrl);
-
   return (
     <div>
       <SimpleValidatorListFilters perPage={perPage} chains={filterChains} />
@@ -37,8 +35,8 @@ const SimpleValidatorList: FC<OwnProps> = async ({
           <table className="my-4 w-full table-auto border-collapse">
             <thead>
               <tr className="bg-table_header">
-                <ValidatorListHeaderItem name="Validator" sortable />
-                <ValidatorListHeaderItem name="Links" colspan={3} />
+                <TableHeaderItem name="Validator" sortable />
+                <TableHeaderItem name="Links" colspan={3} />
               </tr>
             </thead>
             <tbody>
@@ -47,7 +45,7 @@ const SimpleValidatorList: FC<OwnProps> = async ({
               ))}
             </tbody>
           </table>
-          <ValidatorListPagination baseUrl={baseUrl} currentPage={currentPage} pageLength={pages} />
+          <TablePagination baseUrl={baseUrl} currentPage={currentPage} pageLength={pages} />
         </div>
       )}
     </div>

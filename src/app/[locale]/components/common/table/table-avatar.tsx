@@ -8,12 +8,13 @@ import icons from '@/components/icons';
 interface OwnProps {
   icon: string | null;
   name: string;
-  id: string;
+  href: string;
+  textClassName?: string;
 }
 
-const ValidatorListItemAvatar: FC<OwnProps> = ({ icon, name, id }) => {
+const TableAvatar: FC<OwnProps> = ({ icon, name, href, textClassName = '' }) => {
   return (
-    <Link href={`/validators/${id}`} className="flex items-center hover:text-highlight">
+    <Link href={href} className="flex items-center hover:text-highlight">
       <div className="relative h-[3.3125rem] w-[3.3125rem]">
         {icon ? (
           <Image
@@ -34,10 +35,12 @@ const ValidatorListItemAvatar: FC<OwnProps> = ({ icon, name, id }) => {
         )}
       </div>
       <Tooltip tooltip={name} direction="top">
-        <div className="ml-1 max-w-64 overflow-x-hidden text-ellipsis text-nowrap text-center text-base">{name}</div>
+        <div className={`${textClassName} ml-1 overflow-x-hidden text-ellipsis text-nowrap text-center text-base`}>
+          {name}
+        </div>
       </Tooltip>
     </Link>
   );
 };
 
-export default ValidatorListItemAvatar;
+export default TableAvatar;

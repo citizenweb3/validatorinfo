@@ -46,6 +46,18 @@
         "name": "Validador",
         "hint": ""
       },
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Token": {
+        "name": "Nome de token",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V",
+        "hint": ""
+      },
       "Links": {
         "name": "Links",
         "hint": ""
@@ -115,6 +127,18 @@
     "Enter Staking Amount": "Insira o valor da aposta",
     "Wrong amount": "Quantidade errada",
     "earnings": "d Ganhos"
+  },
+  "NetworksPage": {
+    "title": "Rede"
+  },
+  "ValidatorsPage": {
+    "title": "Validadores",
+    "Tabs": {
+      "Validators": "Validadores",
+      "Networks": "Redes",
+      "Metrics": "Métricos",
+      "AI": "AI"
+    }
   },
   "AboutPage": {
     "Metadata": {

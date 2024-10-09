@@ -2,14 +2,14 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 
 import NotToday from '@/components/common/not-today';
 import TabList from '@/components/common/tabs/tab-list';
-import { validatorTabs } from '@/components/common/tabs/tabs-data';
+import { mainTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 
 const ValidatorComparisonPage: NextPageWithLocale = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   return (
     <div>
-      <TabList page="HomePage" tabs={validatorTabs} />
+      <TabList page="HomePage" tabs={mainTabs} />
       <NotToday />
     </div>
   );

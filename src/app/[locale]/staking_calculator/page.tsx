@@ -4,7 +4,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Calculator from '@/app/staking_calculator/calculator';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { validatorTabs } from '@/components/common/tabs/tabs-data';
+import { mainTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
@@ -22,7 +22,7 @@ export default function StakingCalculatorPage({ params: { locale } }: Readonly<{
 
   return (
     <div className="flex flex-col">
-      <TabList page="HomePage" tabs={validatorTabs} />
+      <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <div className="mt-6 border-b border-bgSt pb-5 pl-4 pr-20 text-base">{t('description')}</div>
       <Calculator />

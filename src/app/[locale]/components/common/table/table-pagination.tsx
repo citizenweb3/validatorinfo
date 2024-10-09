@@ -9,9 +9,13 @@ interface OwnProps {
   baseUrl: string;
 }
 
-const ValidatorListPagination: FC<OwnProps> = ({ baseUrl, currentPage, pageLength }) => {
+const TablePagination: FC<OwnProps> = ({ baseUrl, currentPage, pageLength }) => {
   const pages: (number | undefined)[] = [];
   const url = baseUrl.replace(/[?&]p=\d+/, '').indexOf('?') !== -1 ? baseUrl + '&' : '?';
+
+  if (pageLength < 2) {
+    return <div className="h-8" />;
+  }
 
   if (currentPage > 1) {
     pages.push(1);
@@ -61,4 +65,4 @@ const ValidatorListPagination: FC<OwnProps> = ({ baseUrl, currentPage, pageLengt
   );
 };
 
-export default ValidatorListPagination;
+export default TablePagination;

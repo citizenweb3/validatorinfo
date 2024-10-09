@@ -5,7 +5,7 @@ import TotalsList from '@/app/global_pos/totals/totals-list';
 import PosTvsGrow from '@/app/global_pos/tvs-grow/pos-tvs-grow';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { validatorTabs } from '@/components/common/tabs/tabs-data';
+import { mainTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 import HeaderInfoService from '@/services/headerInfo-service';
 
@@ -31,7 +31,7 @@ export default async function GlobalPosPage({ params: { locale } }: Readonly<{ p
 
   return (
     <div className="flex flex-col">
-      <TabList page="HomePage" tabs={validatorTabs} />
+      <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <div>
         <PosGlobalMetrics />

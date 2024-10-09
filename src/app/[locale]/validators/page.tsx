@@ -1,8 +1,10 @@
-import { NextPage } from 'next';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import SimpleValidatorList from '@/app/validators/simple-validator-list/simple-validator-list';
+import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { validatorTabs } from '@/components/common/tabs/tabs-data';
+import { validatorsTabs } from '@/components/common/tabs/tabs-data';
+import { NextPageWithLocale } from '@/i18n';
 import ChainService from '@/services/chain-service';
 import ValidatorService from '@/services/validator-service';
 import { Chain } from '@/types';
@@ -16,7 +18,9 @@ interface PageProps {
 
 const defaultPerPage = 25;
 
-const ValidatorsPage: NextPage<PageProps> = async ({ searchParams: q }) => {
+const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchParams: q }) => {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'ValidatorsPage' });
   const currentPage = parseInt((q.p as string) || '1');
   const chains: Chain[] = await ChainService.getAll();
   const validatorsPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
@@ -25,7 +29,8 @@ const ValidatorsPage: NextPage<PageProps> = async ({ searchParams: q }) => {
 
   return (
     <div>
-      <TabList page="HomePage" tabs={validatorTabs} />
+      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <SubTitle text={t('title')} />
       <SimpleValidatorList
         perPage={validatorsPerPage}
         validators={validators}

@@ -7,7 +7,7 @@ interface OwnProps {
 
 const pages = [1, 2, undefined, 15];
 
-const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
+const TablePaginationItem: FC<OwnProps> = ({ currentPage = 1 }) => {
   return (
     <div className="flex flex-row items-center justify-end space-x-2">
       {currentPage > 1 && (
@@ -31,4 +31,4 @@ const ValidatorListPagination: FC<OwnProps> = ({ currentPage = 1 }) => {
   );
 };
 
-export default ValidatorListPagination;
+export default TablePaginationItem;
