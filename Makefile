@@ -12,7 +12,7 @@ generate-client:
 		npx prisma generate
 
 init-chains:
-		npx ts-node src/tools/chains/init-chains
+		npx ts-node server/chains/init-chains.ts
 
 generate-schema:
 		npx prisma migrate dev
