@@ -3,12 +3,12 @@ import { DefaultArgs } from '@prisma/client/runtime/library';
 
 import { ChainWithNodes } from '../types';
 
-export const getValidatorLogos = async (client: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>) => {
+export const getValidator = async (client: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>) => {
   try {
-    const validatorsIdentity = await (
-      await client.validatorLogo.findMany({ where: { url: null } })
+    const validators = (
+      await client.validator.findMany({ where: { url: null } })
     ).filter((data) => data.identity !== '');
-    validatorsIdentity.forEach(async ({ identity }) => {
+    validators.forEach(async ({ identity, moniker }) => {
       try {
         const keybaseUser = (
           await fetch(`https://keybase.io/_/api/1.0/key/fetch.json?pgp_key_ids=${identity}`).then((data) => data.json())
@@ -20,8 +20,8 @@ export const getValidatorLogos = async (client: PrismaClient<Prisma.PrismaClient
               (data) => data.json(),
             )
           ).them[0].pictures.primary.url;
-          await client.validatorLogo.upsert({
-            create: { identity: identity, url: logo },
+          await client.validator.upsert({
+            create: { identity: identity, url: logo, moniker: moniker },
             update: { identity: identity, url: logo },
             where: { identity: identity },
           });
@@ -29,6 +29,6 @@ export const getValidatorLogos = async (client: PrismaClient<Prisma.PrismaClient
       } catch (e) {}
     });
   } catch (e) {
-    console.log("Can't fetch prices: ", e);
+    console.log("Can't fetch data: ", e);
   }
 };

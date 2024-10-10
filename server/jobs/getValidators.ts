@@ -31,15 +31,15 @@ export const getValidators = async (
           unbonding_height,
           unbonding_time,
         }) => {
-          const identity = await client.validatorLogo.findUnique({ where: { identity: description.identity } });
+          const identity = await client.validator.findUnique({ where: { identity: description.identity } });
           if (!identity) {
-            await client.validatorLogo.upsert({
-              where: { identity: description.identity },
-              update: { identity: description.identity }, // Оставляем пустым, так как не нужно обновлять существующую запись
-              create: { identity: description.identity }, // Создаем запись, если её нет
+            await client.validator.upsert({
+              where: { identity: description.identity, moniker: description.moniker },
+              update: { identity: description.identity, moniker: description.moniker }, // Оставляем пустым, так как не нужно обновлять существующую запись
+              create: { identity: description.identity, moniker: description.moniker }, // Создаем запись, если её нет
             });
           }
-          await client.validator.upsert({
+          await client.node.upsert({
             where: { operator_address: operator_address },
             update: {
               tokens: tokens,
