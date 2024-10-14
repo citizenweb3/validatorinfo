@@ -1,4 +1,5 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { Suspense } from 'react';
 
 import PosGlobalMetrics from '@/app/global_pos/global-metrics/pos-global-metrics';
 import TotalsList from '@/app/global_pos/totals/totals-list';
@@ -7,7 +8,9 @@ import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
-import HeaderInfoService from '@/services/headerInfo-service';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'GlobalPosPage' });
@@ -16,18 +19,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default async function GlobalPosPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
-  unstable_setRequestLocale(locale);
+export default async function GlobalPosPage() {
   const t = await getTranslations('GlobalPosPage');
-
-  const headerInfo = await HeaderInfoService.getValidatorsAndChains();
-  const data = [
-    { title: 'total validators', data: headerInfo.validators },
-    { title: 'total networks', data: headerInfo.chains },
-    { title: 'total pages', data: 234 },
-    { title: 'total ecosystems', data: 23 },
-    { title: 'unknown', data: 0 },
-  ];
 
   return (
     <div className="flex flex-col">
@@ -36,7 +29,9 @@ export default async function GlobalPosPage({ params: { locale } }: Readonly<{ p
       <div>
         <PosGlobalMetrics />
         <PosTvsGrow />
-        <TotalsList data={data} />
+        <Suspense fallback={<div />}>
+          <TotalsList />
+        </Suspense>
       </div>
     </div>
   );

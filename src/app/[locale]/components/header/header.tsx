@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 
 import HeaderControls from '@/components/header/header-controls';
 import HeaderSettings from '@/components/header/header-settings';
@@ -10,7 +10,9 @@ const Header: FC<OwnProps> = async () => {
   return (
     <div>
       <div className="flex flex-row space-x-7 pt-1">
-        <Quotes />
+        <Suspense fallback={<div />}>
+          <Quotes />
+        </Suspense>
         <HeaderSettings />
       </div>
       <HeaderControls />
