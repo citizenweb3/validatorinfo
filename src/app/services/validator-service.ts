@@ -9,12 +9,18 @@ export type ValidatorWithNodes = Validator & {
   nodes: Node[];
 };
 
-const getAll = async (skip: number, take: number): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
+const getAll = async (skip: number, take: number, sortBy: 'moniker' | 'nodes', order: 'asc' | 'desc'): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
   const validators = (await db.validator.findMany({
     skip: skip,
     take: take,
     include: { nodes: true },
-  })) as ValidatorWithNodes[];
+    orderBy: sortBy === 'moniker'
+      ? { moniker: order }
+      : {
+        nodes: {
+          _count: order,  // Sort by the number of nodes
+        }
+  }})) as ValidatorWithNodes[];
 
   const count = await db.validator.count();
 
