@@ -1,7 +1,5 @@
 import { Node, Validator } from '@prisma/client';
 
-
-
 import db from '@/db';
 
 

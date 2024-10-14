@@ -10,19 +10,19 @@ export interface ValidatorLinks {
   x?: string;
 }
 
-export interface ValidatorItem {
-  operatorAddress: string;
-  moniker: string;
-  identity: string;
-  chainIds: string[];
-  chainNames: string[];
-  chainPrettyNames: string[];
-  chainLogoUrls: string[];
-  chainTypes: string[];
-  logoUrl: string | null;
-  tvs: number[];
-  links?: ValidatorLinks;
-}
+// export interface ValidatorItem {
+//   operatorAddress: string;
+//   moniker: string;
+//   identity: string;
+//   chainIds: string[];
+//   chainNames: string[];
+//   chainPrettyNames: string[];
+//   chainLogoUrls: string[];
+//   chainTypes: string[];
+//   logoUrl: string | null;
+//   tvs: number[];
+//   links?: ValidatorLinks;
+// }
 
 // export interface ValidatorItem {
 //   id: number;
