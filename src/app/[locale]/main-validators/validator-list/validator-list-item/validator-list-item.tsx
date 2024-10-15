@@ -1,7 +1,8 @@
 'use client';
 
+import { Chain } from '@prisma/client';
 import Link from 'next/link';
-import { FC, useMemo, useState } from 'react';
+import { FC, useState } from 'react';
 
 import ValidatorListItemBattery from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-battery';
 import ValidatorListItemChains from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-chains';
@@ -9,20 +10,20 @@ import ValidatorListItemFavorite from '@/app/main-validators/validator-list/vali
 import ValidatorListItemLinks from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-links';
 import ValidatorListItemTVS from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-tvs';
 import TableAvatar from '@/components/common/table/table-avatar';
-import { Chain, ValidatorItem } from '@/types';
+import { ValidatorWithNodes } from '@/services/validator-service';
 
 interface OwnProps {
-  validator: ValidatorItem;
+  validator: ValidatorWithNodes;
   chains: Chain[];
 }
 
 const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
   const [activeId, setActiveId] = useState<string | null>(null);
 
-  const validatorChains = useMemo(
-    () => validator.chainNames.map((cn) => chains.find((c) => c.name === cn) || cn),
-    [chains, validator],
-  );
+  // @ts-ignore I don't know why, but it doesn't understand that filter removes undefined items
+  const validatorChains: Chain[] = validator.nodes
+    .map((n) => chains.find((c) => c.chainId === n.chainId))
+    .filter((c) => typeof c !== 'undefined');
 
   return (
     <tr className="group font-handjet hover:bg-bgHover ">
@@ -32,20 +33,20 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       <td className="group/avatar border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <TableAvatar
           textClassName="max-w-36"
-          icon={validator.logoUrl}
+          icon={validator.url}
           name={validator.moniker}
-          href={`/validators/${validator.operatorAddress}`}
+          href={`/validators/${validator.identity}`}
         />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemLinks links={validator?.links} id={validator.operatorAddress} />
+        <ValidatorListItemLinks links={undefined} id={validator.identity} />
       </td>
       <td className="border-b border-black px-2 py-2">
-        <ValidatorListItemBattery battery={99} id={validator.operatorAddress} />
+        <ValidatorListItemBattery battery={99} id={validator.identity} />
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.operatorAddress}/metrics`}
+          href={`validators/${validator.identity}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
@@ -53,7 +54,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.operatorAddress}/metrics`}
+          href={`validators/${validator.identity}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
@@ -61,7 +62,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.operatorAddress}/metrics`}
+          href={`validators/${validator.identity}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
@@ -69,14 +70,14 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.operatorAddress}/metrics`}
+          href={`validators/${validator.identity}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
       </td>
       <td className="group/tvs border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemTVS id={validator.operatorAddress} activeId={activeId} setActiveId={setActiveId} />
+        <ValidatorListItemTVS id={validator.identity} activeId={activeId} setActiveId={setActiveId} />
       </td>
       <td className="border-b border-black px-2 py-2">
         <ValidatorListItemChains chains={validatorChains} />

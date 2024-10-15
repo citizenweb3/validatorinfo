@@ -1,10 +1,10 @@
+import { Chain } from '@prisma/client';
 import { FC } from 'react';
 
 import NetworksListFilters from '@/app/networks/networks-list/networks-list-filters';
 import NetworksListItem from '@/app/networks/networks-list/networks-list-item';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import TablePagination from '@/components/common/table/table-pagination';
-import { Chain } from '@/types';
 
 interface OwnProps {
   chains: Chain[];

@@ -4,6 +4,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 type Chain = {
+  rang: number;
   chainId: string;
   name: string;
   prettyName: string;
@@ -29,6 +30,7 @@ async function addNetwork(chain: Chain): Promise<void> {
     where: { chainId: chain.chainId },
     update: {},
     create: {
+      rang: chain.rang,
       type: 'cosmos',
       chainId: chain.chainId,
       name: chain.name,
@@ -74,6 +76,7 @@ async function addNetwork(chain: Chain): Promise<void> {
 
 async function main() {
   await addNetwork({
+    rang: 1,
     name: 'cosmoshub',
     prettyName: 'CosmosHub',
     chainId: 'cosmoshub-4',
@@ -95,6 +98,7 @@ async function main() {
   });
 
   await addNetwork({
+    rang: 1,
     name: 'celestia',
     prettyName: 'Celestia',
     chainId: 'celestia',
@@ -158,6 +162,7 @@ async function main() {
   // });
 
   await addNetwork({
+    rang: 4,
     name: 'bitcanna',
     prettyName: 'BitCanna',
     chainId: 'bitcanna-1',
@@ -179,6 +184,7 @@ async function main() {
   });
 
   await addNetwork({
+    rang: 4,
     name: 'likecoin',
     prettyName: 'LikeCoin',
     chainId: 'likecoin-mainnet-2',
@@ -200,6 +206,7 @@ async function main() {
   });
 
   await addNetwork({
+    rang: 2,
     name: 'stride',
     prettyName: 'Stride',
     chainId: 'stride-1',

@@ -27,7 +27,7 @@ export const initialChartData = {
 };
 
 const Doughnut = () => {
-  const [data, setData] = useState(initialChartData);
+  const [data] = useState(initialChartData);
 
   const options = {
     responsive: true,

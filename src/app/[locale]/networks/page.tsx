@@ -6,7 +6,6 @@ import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 import ChainService from '@/services/chain-service';
-import { Chain } from '@/types';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -21,7 +20,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'NetworksPage' });
   const currentPage = parseInt((q.p as string) || '1');
-  const chains: Chain[] = await ChainService.getAll();
+  const chains = await ChainService.getAll(0, 1000);
   const networksPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
 
   return (

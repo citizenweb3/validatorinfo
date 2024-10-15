@@ -1,5 +1,6 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
+import { ReactNode } from 'react';
 
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
@@ -10,7 +11,7 @@ export default function AboutLayout({
   children,
   params,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: Locale };
 }>) {
   unstable_setRequestLocale(params.locale);

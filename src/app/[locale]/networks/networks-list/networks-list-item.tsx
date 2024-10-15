@@ -1,10 +1,10 @@
 'use client';
 
+import { Chain } from '@prisma/client';
 import Link from 'next/link';
 import { FC } from 'react';
 
 import TableAvatar from '@/components/common/table/table-avatar';
-import { Chain } from '@/types';
 
 interface OwnProps {
   item: Chain;
@@ -25,12 +25,12 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
         <div className="text-center">-</div>
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <Link href={item.github?.url ?? ''} className={`${size}`}>
-          <div className={`${size} bg-web hover:bg-web_h bg-contain bg-no-repeat`} />
+        <Link href={''} className={`${size}`}>
+          <div className={`${size} bg-web bg-contain bg-no-repeat hover:bg-web_h`} />
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <Link href={item.github?.url ?? ''} className={size} target="_blank">
+        <Link href={''} className={size} target="_blank">
           <div className={`${size} bg-github bg-contain bg-no-repeat hover:bg-github_h`} />
         </Link>
       </td>

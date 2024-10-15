@@ -1,15 +1,16 @@
+import { Chain } from '@prisma/client';
 import { FC } from 'react';
 
 import ValidatorListFilters from '@/app/main-validators/validator-list/validator-list-filters/validator-list-filters';
 import ValidatorListItem from '@/app/main-validators/validator-list/validator-list-item/validator-list-item';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import TablePagination from '@/components/common/table/table-pagination';
-import { Chain, ValidatorItem } from '@/types';
+import { ValidatorWithNodes } from '@/services/validator-service';
 
 interface OwnProps {
   chains: Chain[];
   filterChains: string[];
-  validators: { validators: ValidatorItem[]; pages: number };
+  validators: { validators: ValidatorWithNodes[]; pages: number };
   currentPage?: number;
   perPage: number;
 }
@@ -40,7 +41,7 @@ const ValidatorList: FC<OwnProps> = async ({ perPage, validators, filterChains, 
             </thead>
             <tbody>
               {list.map((item) => (
-                <ValidatorListItem key={item.operatorAddress} validator={item} chains={chains} />
+                <ValidatorListItem key={item.identity} validator={item} chains={chains} />
               ))}
             </tbody>
           </table>
