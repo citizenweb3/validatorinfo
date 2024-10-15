@@ -2,24 +2,29 @@ import { Node, Validator } from '@prisma/client';
 
 import db from '@/db';
 
-
 export type ValidatorWithNodes = Validator & {
   nodes: Node[];
 };
 
-const getAll = async (skip: number, take: number, sortBy: 'moniker' | 'nodes', order: 'asc' | 'desc'): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
+const getAll = async (
+  skip: number,
+  take: number,
+  sortBy: 'moniker' | 'nodes' = 'moniker',
+  order: 'asc' | 'desc' = 'asc',
+): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
   const validators = (await db.validator.findMany({
     skip: skip,
     take: take,
     include: { nodes: true },
-    orderBy: sortBy === 'moniker'
-      ? { moniker: order }
-      : {
-        nodes: {
-          _count: order,  // Sort by the number of nodes
-        }
-  }})) as ValidatorWithNodes[];
-
+    orderBy:
+      sortBy === 'moniker'
+        ? { moniker: order }
+        : {
+            nodes: {
+              _count: order, // Sort by the number of nodes
+            },
+          },
+  })) as ValidatorWithNodes[];
   const count = await db.validator.count();
 
   return { validators, pages: Math.ceil(count / take) };
@@ -29,7 +34,7 @@ const getLite = async (skip: number, take: number): Promise<{ validators: Valida
   const validators = (await db.validator.findMany({
     skip: skip,
     take: take,
-    select: {moniker: true, url: true}
+    select: { moniker: true, url: true },
   })) as ValidatorWithNodes[];
 
   const count = await db.validator.count();
@@ -39,7 +44,7 @@ const getLite = async (skip: number, take: number): Promise<{ validators: Valida
 
 const ValidatorService = {
   getAll,
-  getLite
+  getLite,
 };
 
 export default ValidatorService;

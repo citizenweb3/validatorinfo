@@ -3,6 +3,7 @@ import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import PlausibleProvider from 'next-plausible';
 import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
+import { ReactNode } from 'react';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
@@ -45,7 +46,7 @@ export default async function LocaleLayout({
   children,
   params: { locale },
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: string };
 }>) {
   unstable_setRequestLocale(locale);

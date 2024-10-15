@@ -7,7 +7,6 @@ import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 import ChainService from '@/services/chain-service';
 import ValidatorService from '@/services/validator-service';
-import { Chain } from '@/types';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -22,7 +21,7 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'ValidatorsPage' });
   const currentPage = parseInt((q.p as string) || '1');
-  const chains: Chain[] = await ChainService.getAll();
+  const chains = await ChainService.getAll(0, 10000);
   const validatorsPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const validators = await ValidatorService.getAll(validatorsPerPage * (currentPage - 1), validatorsPerPage);
   const filterChains: string[] = !q.chains ? [] : typeof q.chains === 'string' ? [q.chains] : q.chains;

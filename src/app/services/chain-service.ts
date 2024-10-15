@@ -1,5 +1,6 @@
+import { Chain } from '@prisma/client';
+
 import db from '@/db';
-import { Chain } from '@/types';
 
 const getAll = async (skip: number, take: number): Promise<Chain[]> =>
   db.chain.findMany({
