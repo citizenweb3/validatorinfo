@@ -1,57 +1,79 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
     "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "CommonJS",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "esnext",
+      "dom"
     ],
+    "types": [
+      "vite/client",
+      "node",
+      "vue-sweetalert2",
+      "element-plus/global"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules"
+    ],
+    "baseUrl": ".",
     "paths": {
-      "@/components/*": [
-        "./src/app/[locale]/components/*"
+      "assets/*": [
+        "src/assets/*"
       ],
-      "@/services/*": [
-        "./src/app/services/*"
+      "core/*": [
+        "src/core/*"
       ],
-      "@/app/*": [
-        "./src/app/[locale]/*"
+      "components": [
+        "src/components/index.ts"
       ],
-      "@/actions/*": [
-        "./src/actions/*"
+      "components/*": [
+        "src/components/*"
       ],
-      "@/utils/*": [
-        "./src/utils/*"
+      "layouts/*": [
+        "src/layouts/*"
       ],
-      "@/*": [
-        "./src/*"
+      "store/*": [
+        "src/store/*"
       ],
-      "@/public/*": [
-        "./public/*"
+      "store": [
+        "src/store/index"
+      ],
+      "modules/*": [
+        "src/modules/*"
+      ],
+      "router/*": [
+        "src/router/*"
+      ],
+      "router": [
+        "src/router/index"
+      ],
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "mixins": [
+        "src/mixins/index.ts"
       ]
-    },
-    "moduleResolution": "node"
+    }
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "node_modules/**"
   ]
 }

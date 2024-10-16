@@ -1,38 +1,35 @@
-# syntax=docker/dockerfile:1.4
-
-# Stage 1: Build the app
+# syntax=docker.io/docker/dockerfile:1.7-labs
 FROM node:18-alpine AS builder
 
-WORKDIR /app
+RUN apk --no-cache add \
+  g++ make python3 git \
+  && yarn global add node-gyp \
+  && rm -rf /var/cache/apk/*
+
+WORKDIR /builder/
+
+# Cache frontend's package
+ADD package.json          .
+# ADD yarn.lock             .
 
 # Install dependencies
-COPY package.json yarn.lock ./
-RUN yarn install
+RUN yarn install --immutable --immutable-cache --check-cache
 
-# Install sharp for image optimization
-RUN apk add --no-cache libc6-compat
-RUN yarn add sharp
+# Cache frontend's src
+ADD --exclude=Dockerfile . .
 
-# Copy source code
-COPY . .
+# Build
+ADD prod.env src/.env.production
 
-# Build the app
-RUN yarn build
+ENV NODE_OPTIONS="--max-old-space-size=5632"
+RUN yarn build --mode production
+# ===== Image =====
+# ==================
+## frontend Image
+FROM nginx:alpine AS frontend
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /builder/dist/ /usr/share/nginx/html
 
-# Stage 2: Serve the app
-FROM node:18-alpine
-
-WORKDIR /app
-
-# Copy build files from builder stage
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/next.config.mjs ./
-
-# Expose the port the app runs on
-EXPOSE 3000
-
-# Command to run the app
-CMD ["yarn", "start"]
+COPY --from=builder /builder/src/assets/logos /usr/share/nginx/html/assets
+COPY --from=builder /builder/src/assets/icons /usr/share/nginx/html/assets
+COPY --from=builder /builder/src/assets/images /usr/share/nginx/html/assets
