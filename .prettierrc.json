@@ -1,0 +1,11 @@
+{
+  "singleQuote": true,
+  "semi": true,
+  "printWidth": 120,
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "importOrder": ["<THIRD_PARTY_MODULES>","^@/(.*)$", "^[../]", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "tailwindConfig": "./tailwind.config.ts",
+  "trailingComma": "all"
+}

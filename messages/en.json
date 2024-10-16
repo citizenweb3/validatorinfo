@@ -1,0 +1,181 @@
+{
+  "common": {
+    "locale": "en"
+  },
+  "Header": {
+    "Quotes": {
+      "Validators": { "name": "Validators", "hint": "" },
+      "Ecosystems": { "name": "Ecosystems", "hint": "" },
+      "Dominance POW": { "name": "Dominance POW", "hint": "Global staking, mining pools and validator statistics" },
+      "ETH": { "name": "ETH", "hint": "" },
+      "Polkadot": { "name": "Polkadot", "hint": "" },
+      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "TVL": {
+        "name": "TVL",
+        "hint": "Jump Around"
+      }
+    },
+    "Home": "Home",
+    "You": "You",
+    "Hi, World!": "Hi, World!",
+    "Explore the AI Rabbit whole": "Explore the AI Rabbit whole",
+    "Click to login": "Click to login",
+    "Search for a validator, pool, tx, address, network, etc": "Search for a validator, pool, tx, address, network, etc",
+    "Lucky!?": "Lucky!?"
+  },
+  "Navbar": {
+    "Validators": "Validators",
+    "Networks": "Networks",
+    "Metrics": "Metrics",
+    "Calculate": "Calculate",
+    "Compare": "Compare",
+    "Rumors": "Rumors",
+    "Global": "Global",
+    "About Us": "About Us",
+    "Library": "Library"
+  },
+  "Common": {
+    "Learn More": "Learn More"
+  },
+  "HomePage": {
+    "Table": {
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Network",
+        "hint": ""
+      },
+      "Token": {
+        "name": "Token name",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Battery",
+        "hint": "General health status, encomprasses on-chain off-chain verifiable validator actions and social networks"
+      },
+      "Technical": {
+        "name": "Technical",
+        "hint": "Offering robust network security and additional infrastructure increases the score"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "A strong digital presence and numerous on-chain fans raise the score"
+      },
+      "Governance": {
+        "name": "Governance",
+        "hint": "Participation in keychain life events and initiative boost the score"
+      },
+      "User": {
+        "name": "User",
+        "hint": "On-chain user-validator interactions, like reviews, elevate the score"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": "Total Secured Value. Total amount of assets staked to validator"
+      },
+      "Supported Assets": {
+        "name": "Supported Assets",
+        "hint": ""
+      },
+      "Customize": "Customize",
+      "Click 3 times to reset all filters": "Click 3 times to reset all filters"
+    },
+    "Tabs": {
+      "Calculate": "Calculate",
+      "Compare": "Compare",
+      "ValidatorInfo": "ValidatorInfo",
+      "Rumors": "Rumors",
+      "Global": "Global"
+    }
+  },
+  "GlobalPosPage": {
+    "Metadata": {
+      "title": "Global"
+    },
+    "title": "Global",
+    "Footer": {
+      "total validators": "Total amount of validators",
+      "total networks": "Total amount of networks",
+      "total pages": "Total Amount of Claimed Val. Pages",
+      "total ecosystems": "Total Amount of Ecosystems",
+      "unknown": "..."
+    }
+  },
+  "CalculatorPage": {
+    "Metadata": {
+      "title": "Staking Calculator"
+    },
+    "title": "Staking Calculator",
+    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "Choose a Network": "Choose a Network",
+    "Choose a Validator": "Choose a Validator",
+    "Please select": "Please select validator and chain!",
+    "Token": "Token",
+    "Enter Staking Amount": "Enter Staking Amount",
+    "Wrong amount": "Wrong amount",
+    "earnings": "d Earnings"
+  },
+  "NetworksPage": {
+    "title": "Networks"
+  },
+  "AIPage": {
+    "title": "AI",
+    "text": "So you want to find a validator, mining pool or a provider that meets your values? Good. \n\nYou're in the right place. My builders have supplied me with the amazing ability to do so with random prompts (searches)! For example, try searching for a validator with a certain commission and liberal political opinions. Its amazing, right? As always, please remember that my features are experimental.\n\nIf you feel like I'm not fulfilling my task properly, please open an issue for my team <issue>[here]</issue>"
+  },
+  "ValidatorsPage": {
+    "title": "Validators",
+    "Tabs": {
+      "Validators": "Validators",
+      "Networks": "Networks",
+      "Metrics": "Metrics",
+      "AI": "AI"
+    }
+  },
+  "AboutPage": {
+    "Metadata": {
+      "title": "About"
+    },
+    "Tabs": {
+      "Staking": "Staking",
+      "Partners": "Partners",
+      "General Info": "General Info",
+      "Podcast": "Podcast",
+      "Contacts": "Contacts"
+    },
+    "Contacts": "Contacts",
+    "description": "I am <homeLink>Validator Info</homeLink>. I’m created by the team at <citizenLink>Citizen Web3</citizenLink>. \n\nI am a multichain, validator-focused explorer and aggregator - for various networks, living in web3. I am able to read and understand both: Proof of Work and Proof of Stake chains. This means I will show information about validators, mining pools and the networks themselves. \n\nMy goal is to help web3 users to discover more information about validators and mining pools, that are securing their favorite networks, or - use my explorer to find the most relevant information you need. \n\nI’m still in the making. You can <xLink>follow me on X</xLink>, check out one of my <ghLink>GitHub repos</ghLink>, leave me comments and suggestions. \n\nCitizen Web3, as a project started in 2020, finding roots in ancap vibes, personal values of building a better society, ecosystem development and networking. CW3 is an active member of the web3 galaxy. <stakingLink>Staking with our self-hosted</stakingLink> baremetal infrastructure allows CW3 to work on various public good projects and contribute to the development of web3.",
+    "title": "What is Validator Info?",
+    "Tools": [
+      "<link>Citizen Web3 Podcast</link>: discovering the people that contribute to building the decentralized world and turn code into decentralized applications",
+      "<link>ValidatorInfo.com</link>: multichain, POW and POS, validator-focused, explorer / dashboard that helps to discover information across the web3 galaxy",
+      "<link>Web3 Society</link>: a community that helps, learns and resents tribalism. Including future DAO incentives (NA at the moment)",
+      "<link>Validator Infra</link>: self-hosted, bare-metal infrastructure. Independent off the grid infra, including public endpoints, testnets, archive nodes and relaying",
+      "(NA at the moment) Bazaar: NFTs, Merchandise, Decentraland"
+    ],
+    "Our tools": "Our Tools",
+    "Our Manifesto": "Our Manifesto",
+    "Manifesto": "From this distant vantage point, the Earth might not seem of any particular interest. But for us, it's different. Consider again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every \"superstar,\" every \"supreme leader,\" every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam... Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves...\n\nFrom 'A Pale Blue Dot', by Carl Sagan.\n\n\nWe believe in freedom above needs. We believe in possibilities above enforcement. We believe in values above desires. We believe that censorship has killed more people than anything else together combined. We value honesty and we value the truth. We value love and cherish all existing creatures. We value intelligence and we value decentralization.\n\nWe believe in communication, which allows participants to think, make their mind up and cast personal votes on any topic and subject. We think that content should strive to lack subjective opinions and help its consumers to form an opinion, which will result in better discussion, and in turn in a more efficient consensus.\n\nWe believe that blockchains are not simply a form of digital nations. But, open and verifiable blockchains are somewhat similar to natural hives, forests, patterns in the nature that allow us to communicate better. Without communication, we are doomed, and decentralized consensus is a tool that can and will help those who desire to make our pale blue dot a slightly better place.\n\nAND MAY THE CODE BE WITH YOU!",
+    "Podcast": {
+      "title": "Podcast",
+      "description": "Citizen Web3 hosts one of the oldest <link>web3-focused podcasts</link>. The show is focused on discovering the people that contribute to building the decentralized world and turn code into decentralized applications. \n\nThe show is a collection of interviews, airing for over 4.5 years, and focuses on a wide range of audiences, in particular those that work in web3, validators, founders, researchers, privacy enthusiasts and others.",
+      "Subscribe": "Subscribe",
+      "Spread the word": "Spread the word",
+      "SubscribeOtherHint": "You can also subscribe with your favorite app directly, using the buttons below",
+      "spreadText": "Every sharing helps to spread web3 values across the universe!"
+    },
+    "Staking": {
+      "title": "Staking with CW3",
+      "description": "Validator info is a public good project, and is fully sponsored by the Citizen Web3 validator. CW3 monetizes via staking. Token holders can stake with us to help secure these networks. Their incentive for doing so, is earning staking rewards, and other, planned, incentives in the future.\n\nCitizen Web3 is a self-hosted, independent off the grid, baremetal validator. Our infrastructure works on a mixture of broadband and Starlink internet connections, and partially runs off solar energy. We use Multi-party computation software (<horcrux>Horcrux</horcrux>) on our nodes, to further secure funds, and <restake>Re-Stake</restake> on our mainnet nodes, to maximize user rewards efficiency.\n\nWe strongly believe in decentralized infrastructure, independent of the grid, and that's our end goal. We think out of the box and are proud to be a little crazy. We value security, decentralization, privacy and lack of enforcement."
+    }
+  }
+}

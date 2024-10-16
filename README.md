@@ -7,5 +7,6 @@
 
 ## License: [BE GOOD](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG)
 
-![image](https://github.com/citizenweb3/validatorinfo/assets/7550961/6a7d6673-32be-4a31-895c-2793fde91ce4)
+![image](https://github.com/user-attachments/assets/0611528c-4dc7-4fd3-bf84-d3c2a0b4592e)
+
 
