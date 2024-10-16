@@ -364,6 +364,7 @@ const data: {
   {
     name: 'Testnet Soarchain',
     icon: '/img/icons/chains/soarchain.png',
+    delegate: 'https://explorer.soarchain.com/soar/staking/soarvaloper1z66ujcpjxppue2u4pflwhakh0he4qup63586cx',
     endpoints: [
       { name: 'rpc', href: 'https://rpc.soar-testnet.citizenweb3.com' },
       { name: 'api', href: 'https://api.soar-testnet.citizenweb3.com' },
