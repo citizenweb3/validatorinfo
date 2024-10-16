@@ -4,6 +4,8 @@ import PlausibleProvider from 'next-plausible';
 import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
@@ -77,6 +79,21 @@ export default async function LocaleLayout({
               </div>
             </div>
           </NextIntlClientProvider>
+          <ToastContainer
+            className="!-right-1.5"
+            toastClassName={'!bg-bgHover !border-r !border-t !border-bgSt !shadow-button !rounded-none'}
+            bodyClassName={'text-base font-sfpro !px-2 !py-0 !m-0 text-white'}
+            position="top-right"
+            autoClose={2000}
+            hideProgressBar
+            newestOnTop
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
         </ThemeProvider>
       </body>
     </html>

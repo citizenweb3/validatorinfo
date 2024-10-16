@@ -23,6 +23,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-i18next": "^15.0.0",
+    "react-toastify": "^10.0.6",
     "sharp": "^0.33.4",
     "swr": "^2.2.5",
     "tailwind-scrollbar": "^3.1.0",
