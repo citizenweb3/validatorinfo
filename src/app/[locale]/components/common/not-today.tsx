@@ -5,9 +5,12 @@ import icons from '@/components/icons';
 
 const NotToday: FC = () => {
   return (
-    <div className="relative mr-60 mt-5">
-      <Image src={icons.NotToday} alt={'Error'} className="h-full w-full" />
-    </div>
+    <>
+      <div className="relative mr-60 mt-5">
+        <Image src={icons.NotToday} alt={'Error'} className="h-full w-full" />
+      </div>
+      <div className="-mt-9 h-12 bg-bgSt" />
+    </>
   );
 };
 

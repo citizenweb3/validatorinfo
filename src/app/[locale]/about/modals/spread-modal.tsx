@@ -29,17 +29,17 @@ const SpreadModal = () => {
       >
         <div className="w-max max-w-[80vw] whitespace-pre-line px-10 pt-5 text-base">{t('Podcast.spreadText')}</div>
         <div className="my-4 flex justify-around">
-          <Link href="https://www.citizenweb3.com/about" className={`${size}`} target="_blank">
-            <div className={`${size} bg-facebook hover:bg-facebook_h bg-contain bg-no-repeat`} />
+          <Link href="#" className={`${size}`} target="_blank">
+            <div className={`${size} bg-facebook bg-contain bg-no-repeat hover:bg-facebook_h`} />
           </Link>
-          <Link href="https://twitter.com/therealvalinfo" className={size} target="_blank">
-            <div className={`${size} bg-reddit hover:bg-reddit_h bg-contain bg-no-repeat`} />
+          <Link href="#" className={size} target="_blank">
+            <div className={`${size} bg-reddit bg-contain bg-no-repeat hover:bg-reddit_h`} />
           </Link>
-          <Link href="https://twitter.com/therealvalinfo" className={size} target="_blank">
+          <Link href="#" className={size} target="_blank">
             <div className={`${size} bg-x bg-contain bg-no-repeat hover:bg-x_h`} />
           </Link>
-          <Link href="https://github.com/citizenweb3/validatorinfo" className={size} target="_blank">
-            <div className={`${size} bg-tg hover:bg-tg_h bg-contain bg-no-repeat`} />
+          <Link href="#" className={size} target="_blank">
+            <div className={`${size} bg-tg bg-contain bg-no-repeat hover:bg-tg_h`} />
           </Link>
         </div>
       </BaseModal>

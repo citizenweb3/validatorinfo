@@ -1,11 +1,51 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-import NotToday from '@/components/common/not-today';
+import Letter from '@/app/metrics/letter';
+import Letters from '@/app/metrics/letters';
+import Switcher from '@/app/metrics/switcher';
+import PlusButton from '@/components/common/plus-button';
+import SubTitle from '@/components/common/sub-title';
+import TabList from '@/components/common/tabs/tab-list';
+import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 
-const MetricsPage: NextPageWithLocale = async ({ params: { locale } }) => {
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+interface PageProps {}
+
+const MetricsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
-  return <NotToday />;
+  const t = await getTranslations({ locale, namespace: 'MetricsPage' });
+
+  return (
+    <div>
+      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <SubTitle text={t('title')} />
+      <Switcher />
+      <Letters />
+      <Letter letter="T" />
+
+      <div className="mt-6">
+        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+          <div>{t('Token')}</div>
+          <PlusButton size="sm" isOpened={false} />
+        </div>
+        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+          <div>{t('Total Supply')}</div>
+          <PlusButton size="sm" isOpened={false} />
+        </div>
+        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+          <div>{t('TVL')}</div>
+          <PlusButton size="sm" isOpened={false} />
+        </div>
+        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+          <div>{t('TVS')}</div>
+          <PlusButton size="sm" isOpened={false} />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default MetricsPage;

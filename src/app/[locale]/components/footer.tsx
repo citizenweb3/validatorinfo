@@ -6,7 +6,7 @@ const Footer = () => {
   const size = 'h-12 w-12 min-w-12 min-h-12';
   return (
     <>
-      <div className="my-4 flex items-center -space-x-2">
+      <div className="my-4 flex items-center -space-x-2 border-t border-primary pt-4">
         <Link href="https://www.citizenweb3.com/about" className={size} target="_blank">
           <div className={`${size} bg-cw3 bg-contain bg-no-repeat hover:bg-cw3_h`} />
         </Link>

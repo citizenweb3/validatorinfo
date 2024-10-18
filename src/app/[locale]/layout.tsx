@@ -71,8 +71,8 @@ export default async function LocaleLayout({
               <div className="mt-4 flex flex-grow flex-row">
                 <NavigationBar />
                 <div className="ml-8 flex flex-grow">
-                  <div className="w-full">
-                    <div>{children}</div>
+                  <div className="flex w-full flex-col">
+                    <div className="flex-grow">{children}</div>
                     <Footer />
                   </div>
                 </div>

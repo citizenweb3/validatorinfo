@@ -17,20 +17,20 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
   return (
     <div>
       <SubTitle text={t('Podcast.title')} />
-      <div className="relative">
-        <div className="mr-[420px] mt-4 whitespace-pre-line border-b border-bgSt py-4 text-base">
+      <div className="grid grid-cols-2 gap-2">
+        <div className="mr-8 mt-4 whitespace-pre-line border-b border-bgSt py-4 text-base">
           {t.rich('Podcast.description', {
             link: (link) => <TextLink href="https://www.citizenweb3.com/episodes" target="_blank" content={link} />,
           })}
         </div>
-        <div className="absolute right-0 top-0 my-4 h-[100px] w-[370px]">
-          <Player />
-        </div>
+        <Player />
       </div>
-      <div className="my-4 border-b border-bgSt py-4 text-base">
+      <div className="mt-4 pt-2 text-base">
         <SubTitle text={t('Podcast.Subscribe')} />
         <div className="my-8 flex space-x-14">
-          <RoundedButton href="https://www.citizenweb3.com/rss">CW3 RSS Feed</RoundedButton>
+          <RoundedButton href="https://www.citizenweb3.com/rss" target="_blank">
+            CW3 RSS Feed
+          </RoundedButton>
           <SpreadModal />
         </div>
         {t('Podcast.SubscribeOtherHint')}

@@ -1,4 +1,5 @@
-import { FC, PropsWithChildren } from 'react';
+import Link from 'next/link';
+import { FC, HTMLAttributeAnchorTarget, PropsWithChildren } from 'react';
 import type { UrlObject } from 'url';
 
 import Tooltip from '@/components/common/tooltip';
@@ -11,6 +12,7 @@ interface OwnProps {
   contentClassName?: string;
   isActive?: boolean;
   tooltip?: string;
+  target?: HTMLAttributeAnchorTarget;
 }
 
 const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
@@ -19,6 +21,8 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
   className = '',
   contentClassName = '',
   tooltip,
+  href,
+  target,
 }) => {
   let content = (
     <div
@@ -32,7 +36,15 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
     content = <Tooltip tooltip={tooltip}>{content}</Tooltip>;
   }
 
-  return (
+  return href ? (
+    <Link
+      href={href}
+      target={target}
+      className={`${className} group/button min-w-9 rounded-bl-full rounded-tr-full border-r border-t border-none border-bgSt bg-gradient-to-r from-primary to-secondary fill-black stroke-black p-px text-highlight shadow-button hover:bg-bgHover hover:fill-highlight hover:text-white active:-mb-1 active:mt-1 active:shadow-none`}
+    >
+      {content}
+    </Link>
+  ) : (
     <button
       onClick={onClick}
       className={`${className} group/button min-w-9 rounded-bl-full rounded-tr-full border-r border-t border-none border-bgSt bg-gradient-to-r from-primary to-secondary fill-black stroke-black p-px text-highlight shadow-button hover:bg-bgHover hover:fill-highlight hover:text-white active:-mb-1 active:mt-1 active:shadow-none`}

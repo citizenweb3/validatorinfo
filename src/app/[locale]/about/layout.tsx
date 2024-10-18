@@ -18,10 +18,10 @@ export default function AboutLayout({
   return (
     <div>
       <div className="flex flex-shrink">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col">
           <PageTitle prefix="About" text="Validator Info" />
-          <div className="my-3 flex">
-            <Image src="/img/logo2.png" alt="logo" width={327} height={327} className="w-32" priority />
+          <div className="my-2">
+            <Image src="/img/stories/about.png" alt="logo" width={3010} height={208} className="w-full" priority />
           </div>
         </div>
         <div className="flex-grow" />

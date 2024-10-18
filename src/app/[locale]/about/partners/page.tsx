@@ -26,7 +26,7 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
   return (
     <div className="">
       <SubTitle text={t('Tabs.Partners')} />
-      <div className="mb-40 mt-20">
+      <div className="mt-20">
         {partners.map((partnerList, index) => (
           <div className={`${index % 2 ? 'ml-[10%]' : ''} flex w-full items-center justify-start`} key={index}>
             {partnerList.map((partner) => (

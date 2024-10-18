@@ -131,6 +131,15 @@
   "NetworksPage": {
     "title": "Rede"
   },
+  "MetricsPage": {
+    "title": "Métricas / Glossário",
+    "All Metrics": "Todas as métricas",
+    "Our Metrics": "Nossas Métricas",
+    "Token": "Token",
+    "Total Supply": "Fornecimento total",
+    "TVL": "T.V.L. or Valor Total Bloqueado",
+    "TVS": "T.V.S. ou Valor Total Garantido"
+  },
   "AIPage": {
     "title": "AI",
     "text": "Então você quer encontrar um validador, pool de mineração ou um provedor que atenda aos seus valores? Ótimo.\n\nVocê está no lugar certo. Meus construtores me forneceram a incrível habilidade de fazer isso com prompts aleatórios (pesquisas)! Por exemplo, tente procurar um validador com uma certa comissão e opiniões políticas liberais. É incrível, certo? Como sempre, lembre-se de que meus recursos são experimentais.\n\nSe você acha que não estou cumprindo minha tarefa corretamente, abra um problema para minha equipe <issue>[aqui]</issue>"
