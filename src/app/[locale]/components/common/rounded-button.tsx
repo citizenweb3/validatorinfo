@@ -40,7 +40,7 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
     <Link
       href={href}
       target={target}
-      className={`${className} group/button min-w-9 rounded-bl-full rounded-tr-full border-r border-t border-none border-bgSt bg-gradient-to-r from-primary to-secondary fill-black stroke-black p-px text-highlight shadow-button hover:bg-bgHover hover:fill-highlight hover:text-white active:-mb-1 active:mt-1 active:shadow-none`}
+      className={`${className} group/button block min-w-9 rounded-bl-full rounded-tr-full border-r border-t border-none border-bgSt bg-gradient-to-r from-primary to-secondary fill-black stroke-black p-px text-highlight shadow-button hover:bg-bgHover hover:fill-highlight hover:text-white active:-mb-1 active:mt-1 active:shadow-none`}
     >
       {content}
     </Link>
