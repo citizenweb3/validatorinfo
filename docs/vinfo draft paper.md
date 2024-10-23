@@ -222,8 +222,26 @@ Research:
 - % of other scores (35%: TS - 20%, GS - 10%, SS - 5%) 
 
 #### Chain health:
-- use own?
+Chain health index:
 - include health meter on each chain profile page?
+- live explorer: https://openchains.info/status
+- code commits - too difficult to calculate (branches, etc) - can take existing rating
+- twitter mentions?
+- other ratings
+- user value: m.cap/accounts
+- gini cooeficient
+- tx volume 
+- Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed.
+- How many L2s… or rather, how many network extensions are building on top of your L1
+- active wallets
+- builders
+- gh starts
+- tvl
+- uptime?
+- C.P.  / M. cap?
+- hashrate?
+- revenue
+- include for chain health / rating: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating + others + https://cer.live/token
 
 #### Others, research:
 - At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
