@@ -4,7 +4,7 @@ DRAFT - DANGER
 
 # Validator info: the return of the explorer
 
-### TL;DR
+### 1. TL;DR
 validatorinfo.com: A multichain Proof of Work and Pproof of Stake explorer, with a focus on validators and minign pools. A dashboard and an aggregator for token holders, miners, delegators and validators alike. ValidatoriInfo offers unique insights into validator and minign pools data. Utilizing a mixture of data, such as: user interaction, onchain metrics, social data, public good information, visual data, and numerous retention tools.
 
 Our goals are:
@@ -56,7 +56,7 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 -----------------------------------------------
 
-### Introduction and product description
+### 2. Product description
 - What will it do and why in detail
 
 #### A user story
@@ -90,7 +90,7 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 -----------------------------------------------
 
-### A journey towards web3 applications
+### 3. A journey towards web3 applications
 - no email logins
 - wallet and Web3 actions
 - onchain registry
@@ -100,8 +100,13 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 - dao and token?
 
 #### AI and other tools
-- staking calculator. Unique. Include slashing own token, etc
-- val comparison: uptime, revenue over time (leading to capital efficiency flow)
+1) Staking calculator:
+Existing stakign calculators do not offer real time information and are inaccurate. They exclude various data from calculations, such as slashing and revenue, hence misleading users by providign wrong information. We have developed our stakign caluclator to include the following:
+- Allow a user to calculate income from staking in: currency `X`, over `Y` amount of time, in `Z` network from `P` operator or `XYZP`
+- Allow a user to calculate returns from either mining or staking (no scattering)
+- Include validator revenue and slashing params, hence providing a realtime, more precise answer
+
+2) val comparison: uptime, revenue over time (leading to capital efficiency flow)
 - val revenue: own tokens, slashing parameters, compare against network
 - Rumors. Matrix style. Leading to tx memo
 - Reviews / announcements. Leading to governance forum or bazaar
@@ -118,7 +123,7 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 -----------------------------------------------
 
-### Calculations of internal metrics
+### 4. Calculations of internal metrics
 - New metrics / Metrics changes
 - US, GS, SC, TS
 - battery
@@ -140,7 +145,8 @@ Research:
 - In other words, validators that provide own tokens can provide higher revenue over same period of time
 - Equaly, slashing events shoudl be included in calculations, as they can influence overall payouts  
 - Self stake ratios shoudl be somehow included after calculating the revenue, as to show payout risks
-- Previous slashing cases should also be included in risk calculations 
+- Previous slashing cases should also be included in risk calculations
+- Slashign boards: https://services.kjnodes.com/cosmos-tools/validator-slashboard/
 
 #### TS, SS, GS, US
 - The scores must meet the following criteria:
@@ -203,10 +209,10 @@ Research:
 
 ----------------------------------------------------------
 
-### Multichain reputation: a possible hope
+### 5. Multichain reputation: a possible hope
 - Reputation
 
-### NFTs, validator wars and Bubbles
+#### NFTs, validator wars and Bubbles
 - NFTs: many ideas. nft pools. 
 - Staking on validators: creating unique NFTs with value
 - Where is the money, Lebowski?: Providing API calls. Ads to foundations. cw3 retail and foundation delegations
@@ -234,6 +240,6 @@ E) (1)Drops / (2)Bubbles (dao)
 - stake E to receive voting rights
 - Staking c3 should be on favorite validators. Wrap any value into E1 or E2 to receive fav NFT. Stake fav NFT?
 
-### Summary / Conclusion
+### 6. Summary / Conclusion
 - description of what is offered to whom and why its needed
   
