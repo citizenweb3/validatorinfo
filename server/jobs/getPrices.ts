@@ -17,11 +17,11 @@ export const getPrices = async (
       '&vs_currencies=usd';
     const prices = await fetch(req).then((data) => data.json());
     const date = new Date();
-    chains.forEach(async (chain) => {
+    for (const chain of chains) {
       await client.price.create({
         data: { chainId: chain.chainId, date: date, value: prices[chain.coinGeckoId].usd },
       });
-    });
+    }
   } catch (e) {
     console.log("Can't fetch prices: ", e);
   }

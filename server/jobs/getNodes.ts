@@ -33,6 +33,7 @@ export const getNodes = async (
         }) => {
           const identity = await client.validator.findUnique({ where: { identity: description.identity } });
           if (!identity) {
+            try {
             await client.validator.create({
               data: {
                 identity: description.identity,
@@ -41,7 +42,10 @@ export const getNodes = async (
                 website: description.website,
                 security_contact: description.security_contact,
               },
-            });
+
+            }) } catch (err) {
+              console.log(err)
+            }
           }
           await client.node.upsert({
             where: { operator_address: operator_address },

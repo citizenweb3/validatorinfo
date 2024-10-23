@@ -7,7 +7,7 @@ export const getValidatorsLogos = async (client: PrismaClient<Prisma.PrismaClien
     const validators = (
       await client.validator.findMany({ where: { url: null } })
     ).filter((data) => data.identity !== '');
-    validators.forEach(async ({ identity, moniker }) => {
+    for (const { identity, moniker } of validators) {
       try {
         const keybaseUser = (
           await fetch(`https://keybase.io/_/api/1.0/key/fetch.json?pgp_key_ids=${identity}`).then((data) => data.json())
@@ -26,7 +26,7 @@ export const getValidatorsLogos = async (client: PrismaClient<Prisma.PrismaClien
           });
         }
       } catch (e) {}
-    });
+    }
   } catch (e) {
     console.log("Can't fetch data: ", e);
   }
