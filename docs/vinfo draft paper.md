@@ -132,9 +132,15 @@ Research:
 - TVL can also be compared to the rest of the network. That is already shown in power of total network. i.e. percent of total stake. Maybe they should be shown together somehow
 
 #### Validator revenue
-- On a val profile page, there is a revenue tab, going further we can try to develop a basic metric to be later on used in calculations
-- We can show this and calculate easily a metric, such as: user A stakes amount B for period of time C, during period of time D. For that he receives Cashback (if provided) or validator token + staking rewards, that's E 
-- If value of E over a period of time, D is larger than sole value of staking rewards. We have something to work with
+- The validator profile page cotains a revenue tab, whcih dispalys total validator revenue across his activities
+- Induvidual revenue is still shown for each network, but on val on X pages
+- User `A` stakes amount `B` for period of time `C` = ABC
+- Validator `V` does not offer cashback and has not been slashed. Validator `V1` offers cashback (has own token) + slashed over period `C`
+- Hence `ABC`*`V` != `A1BC` *`V1`
+- In other words, validators that provide own tokens can provide higher revenue over same period of time
+- Equaly, slashing events shoudl be included in calculations, as they can influence overall payouts  
+- Self stake ratios shoudl be somehow included after calculating the revenue, as to show payout risks
+- Previous slashing cases should also be included in risk calculations 
 
 #### TS, SS, GS, US
 - The scores must meet the following criteria:
