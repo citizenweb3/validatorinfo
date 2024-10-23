@@ -112,6 +112,15 @@ M) A user clicks on tx XYZ in that list, and gets to /validators/citizenweb3/cos
 - own llm model
 - dao and token?
 
+##### User interaction flow with the app
+- User logs in via web3 wallet
+- Users can add info about validators, such as links to interviews, public goods, other links
+- Users can add info to library page
+- Users can add or propose info to network page
+- Users receive badges for adding info 
+- Adding info is signing tx
+- Signed tx -> mint poap / nft 
+
 #### AI and other tools
 
 ##### Staking calculator 
