@@ -5,11 +5,18 @@ DRAFT - DANGER
 # Validator info: the return of the explorer
 
 ### TL;DR
-This document is a mixture of a white paper / user documentation for validatorinfo.com: validator-focused, multichain POW and POS explorer, dashboard and aggregator for token holders, miners and delegators. ValidatoriInfo offers unique insights into validator and minign pools data. It utilizes a mixture of user interaction, onchain data, social data, public good information, and visualizations - such as graphs, unique staking calculators, comparison tools, etc. 
+validatorinfo.com: A multichain Proof of Work and Pproof of Stake explorer, with a focus on validators and minign pools. A dashboard and an aggregator for token holders, miners, delegators and validators alike. ValidatoriInfo offers unique insights into validator and minign pools data. Utilizing a mixture of data, such as: user interaction, onchain metrics, social data, public good information, visual data, and numerous retention tools.
 
-Our an aim to help the user navigate their landscape across the developing multichain world of validators and mining pools. And to make epxlorers an adoption tool, not a technical/analytical webiste. 
+Our goals are:
 
-Interested target audiences, may include: any stakers, delegators, miners, holders of proof of stake tokens, holders of proof of work tokens, validators, minign pools, researchers, data analytics and web3 enthusiasts. 
+1) Help users navigate the developing multichain landscape of validators and mining pools
+2) Make epxlorers an adoption tool. Beyond a technical/analytical webiste
+3) Help users find more efficeint ways to park their capital with operators
+4) Improve querying on chain databases by introducing random prompts
+5) Decrease the gap between operators and their delegators via gamified and meaningful UX and UI
+6) Create a verifiable point of reference (the battery) for operator health status in real-time, for the web3 landscape
+
+Interested target audiences, may include: stakers, delegators, miners, holders of proof of stake tokens, holders of proof of work tokens, validators, minign pools, researchers, data analytics and web3 enthusiasts. 
 
 The application will attempt to maximize retention tools and remain open source. Further, are a collection of ideas, calculations, and other `under the hood` detail, that may improve user experience. 
 
