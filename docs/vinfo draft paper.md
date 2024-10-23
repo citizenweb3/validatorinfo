@@ -100,8 +100,7 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 - dao and token?
 
 #### AI and other tools
-1) Staking calculator:
-Existing stakign calculators do not offer real time information and are inaccurate. They exclude various data from calculations, such as slashing and revenue, hence misleading users by providign wrong information. We have developed our stakign caluclator to include the following:
+1) **Staking calculator:** Existing stakign calculators do not offer real time information and are inaccurate. They exclude various data from calculations, such as slashing and revenue, hence misleading users by providign wrong information. We have developed our stakign caluclator to include the following:
 - Allow a user to calculate income from staking in: currency `X`, over `Y` amount of time, in `Z` network from `P` operator or `XYZP`
 - Allow a user to calculate returns from either mining or staking (no scattering)
 - Include validator revenue and slashing params, hence providing a realtime, more precise answer
