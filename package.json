@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cosmjs/proto-signing": "^0.32.4",
+    "@cosmjs/stargate": "^0.32.4",
+    "@cosmostation/cosmos-client": "^0.0.5",
+    "@cosmostation/extension-client": "^0.1.15",
+    "@keplr-wallet/types": "^0.12.144",
     "@prisma/client": "^5.18.0",
     "chart.js": "^4.4.3",
     "cron": "^3.1.7",
