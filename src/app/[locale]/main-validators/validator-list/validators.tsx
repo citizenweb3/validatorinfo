@@ -21,7 +21,7 @@ const Validators: FC<OwnProps> = async ({ sort, perPage, filterChains = [], curr
           <thead>
             <tr className="bg-table_header">
               <th />
-              <TableHeaderItem name="Validator" sortField="moniker" />
+              <TableHeaderItem name="Validator" sortField="moniker" defaultSelected />
               <TableHeaderItem name="Links" />
               <TableHeaderItem name="Battery" />
               <TableHeaderItem name="Technical" />

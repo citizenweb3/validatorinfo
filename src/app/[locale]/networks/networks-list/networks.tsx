@@ -19,7 +19,7 @@ const Networks: FC<OwnProps> = async ({ perPage, sort, currentPage }) => {
         <table className="my-4 w-full table-auto border-collapse">
           <thead>
             <tr className="bg-table_header">
-              <TableHeaderItem name="Network" sortField="name" />
+              <TableHeaderItem name="Network" sortField="name" defaultSelected />
               <TableHeaderItem name="Token" />
               <TableHeaderItem name="FDV" />
               <TableHeaderItem name="Links" colspan={3} />
