@@ -21,8 +21,11 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
   const [activeId, setActiveId] = useState<string | null>(null);
 
   // @ts-ignore I don't know why, but it doesn't understand that filter removes undefined items
-  const validatorChains: Chain[] = validator.nodes
-    .map((n) => chains.find((c) => c.chainId === n.chainId))
+  const validatorChains: (Chain & { valoper: string })[] = validator.nodes
+    .map((n) => {
+      const el = chains.find((c) => c.chainId === n.chainId);
+      return { ...el, valoper: n.operator_address };
+    })
     .filter((c) => typeof c !== 'undefined');
 
   return (

@@ -1,9 +1,8 @@
 import { FC } from 'react';
 
-import NetworksListItem from '@/app/networks/networks-list/networks-list-item';
+import SimpleValidatorListItem from '@/app/validators/simple-validators/simple-validator-list-item';
 import TablePagination from '@/components/common/table/table-pagination';
-import ChainService from '@/services/chain-service';
-import { SortDirection } from '@/services/validator-service';
+import ValidatorService, { SortDirection } from '@/services/validator-service';
 
 interface OwnProps {
   currentPage?: number;
@@ -11,8 +10,8 @@ interface OwnProps {
   sort: { sortBy: string; order: SortDirection };
 }
 
-const NetworksList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
-  const { chains: list, pages } = await ChainService.getAll(
+const SimpleValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
+  const { validators: list, pages } = await ValidatorService.getLite(
     perPage * (currentPage - 1),
     perPage,
     sort.sortBy,
@@ -22,7 +21,7 @@ const NetworksList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) =>
   return (
     <tbody>
       {list.map((item) => (
-        <NetworksListItem key={item.chainId} item={item} />
+        <SimpleValidatorListItem key={item.identity} validator={item} />
       ))}
       <tr>
         <td colSpan={5} className="pt-4">
@@ -33,4 +32,4 @@ const NetworksList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) =>
   );
 };
 
-export default NetworksList;
+export default SimpleValidatorsList;

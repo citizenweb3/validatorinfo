@@ -1,19 +1,21 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
-import ValidatorListFiltersPorPage from '@/app/main-validators/validator-list/validator-list-filters/validator-list-filters-perpage';
 import Button from '@/components/common/button';
+import ValidatorListFiltersBattery from '@/components/common/list-filters/validator-list-filters-battery';
+import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
 import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
-  chains: string[];
+  selectedEcosystems?: string[];
   perPage: number;
+  battery?: boolean;
 }
 
-const filterItems = [
+const ecosystems = [
   { value: 'cosmos', title: 'Cosmos' },
   { value: 'polkadot', title: 'Polkadot' },
   { value: 'ethereum', title: 'Ethereum' },
@@ -22,15 +24,16 @@ const filterItems = [
   { value: 'pow', title: 'POW' },
 ];
 
-const SimpleValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
+const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery = false }) => {
   const router = useRouter();
+  const pathname = usePathname();
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [resetClicks, setResetClicks] = useState<number>(0);
   const t = useTranslations('HomePage.Table');
 
   useEffect(() => {
     if (resetClicks >= 3) {
-      router.push('/validators');
+      router.push(`${pathname}`);
       setIsOpened(false);
     }
     const tm = setTimeout(() => {
@@ -48,26 +51,34 @@ const SimpleValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
   };
 
   const onPerPageChanged = (pp: number) => {
-    const chainParam = chains.length ? `&chains=${chains.join('&chains=')}` : '';
-    router.push(`/validators/?pp=${pp}${chainParam}`);
+    const newSp = new URL(location.href).searchParams;
+    newSp.set('pp', pp.toString());
+    router.push(`${pathname}?${newSp.toString()}`);
   };
 
   const onChainsChanged = (value: string) => {
-    const chainParam = chains.indexOf(value) === -1 ? [...chains, value] : chains.filter((c) => c !== value);
-    router.push(`/validators/?pp=${perPage}&chains=${chainParam.join('&chains=')}`);
+    const newSp = new URL(location.href).searchParams;
+    newSp.delete('selectedEcosystems');
+    const chainParam =
+      selectedEcosystems.indexOf(value) === -1
+        ? [...selectedEcosystems, value]
+        : selectedEcosystems.filter((c) => c !== value);
+    chainParam.forEach((c) => newSp.append('selectedEcosystems', c));
+    router.push(`${pathname}?${newSp.toString()}`);
   };
 
   return (
     <div className="flex h-9 items-center justify-end space-x-2">
       {isOpened && (
         <>
+          {battery && <ValidatorListFiltersBattery />}
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
-          {filterItems.map((item) => (
+          {ecosystems.map((item) => (
             <Button
               component="button"
               onClick={() => onChainsChanged(item.value)}
               key={item.value}
-              isActive={chains.indexOf(item.value) !== -1}
+              isActive={selectedEcosystems.indexOf(item.value) !== -1}
               className="text-sm"
               contentClassName="max-h-7"
               activeType="switcher"
@@ -96,4 +107,4 @@ const SimpleValidatorListFilters: FC<OwnProps> = ({ perPage, chains = [] }) => {
   );
 };
 
-export default SimpleValidatorListFilters;
+export default ListFilters;

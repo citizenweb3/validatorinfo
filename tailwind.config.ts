@@ -92,6 +92,7 @@ const config: Config = {
         triangle_w_h: `url('/img/icons/triangle_w-h.svg')`,
         triangle_w_a: `url('/img/icons/triangle_w-a.svg')`,
         sort: `url('/img/icons/sort-icon.png')`,
+        sort_a: `url('/img/icons/sort-icon-a.png')`,
         sort_h: `url('/img/icons/sort-icon-h.png')`,
         star: `url('/img/icons/star.png')`,
         star_h: `url('/img/icons/star-h.png')`,
