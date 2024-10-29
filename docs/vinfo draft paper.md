@@ -243,6 +243,7 @@ Chain health index:
 - hashrate?
 - revenue
 - include for chain health / rating: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating + others + https://cer.live/token
+- include possible medians - comparisons to other netowrks 
 
 #### Others, research:
 - At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
