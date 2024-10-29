@@ -165,6 +165,7 @@ Existing stakign calculators do not offer real time information and are inaccura
 #### Validator Metrics that are compared as averages to a network
 1) `uptime`: Caluculate uptime over epoch. Compare to other validators in network. Show uptime as comparison to other validators on netowrk over N period of time
 2) `missed blocks`: Caluculate missed blocks over epoch. Compare to other validators in network. Show missed blocks as comparison to other validators on netowrk over N period of time
+3) `self delegation`: Self Delegation shoudl be calculated as ratio and comapred to other valdiators on network, with 3 states: high / medeium / low
 
 Research:
 - TVL can also be compared to the rest of the network. That is already shown in power of total network. i.e. percent of total stake. Maybe they should be shown together somehow
