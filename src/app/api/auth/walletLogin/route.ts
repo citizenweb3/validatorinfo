@@ -2,7 +2,7 @@ import { fromBase64, fromBech32 } from "@cosmjs/encoding";
 import { verifyADR36Amino } from "@keplr-wallet/cosmos";
 import { StdSignature } from "@keplr-wallet/types";
 import db from '@/db';
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiResponse } from "next";
 import crypto from "crypto";
 import base64url from "base64url";
 
@@ -16,26 +16,25 @@ export interface WalletProof {
 }
 
 export  async function POST(
-  req: NextApiRequest,
-  res: NextApiResponse<string>,
+  req: Request,
 ) {
   if (req.method !== "POST")
-    res.status(405).send("Only POST requests are supported");
+    return new Response("Only POST requests are supported", {status: 401});
 
   const { address, chainId, signature, key, extension, walletName } =
-    JSON.parse(req.body) as WalletProof;
+    JSON.parse(await req.json()) as WalletProof;
 
   const supportedWallets = ["keplr", "cosmostation", "leap"];
 
   if (!supportedWallets.find((wallet) => extension === wallet))
-    res.status(401).send("Extension not vaild");
+    return new Response("Extension not valid", {status: 401});
 
-  if (chainId !== "cosmoshub-4") res.status(401).send("Chain-id not vaild");
+  if (chainId !== "cosmoshub-4") new Response("Chain-id not valid", {status: 401});
 
   try {
     fromBech32(address);
   } catch (e) {
-    res.status(401).send("Address not valid");
+    return new Response("Address not valid", {status: 401});
   }
 
   const verification = verifyADR36Amino(
@@ -47,7 +46,7 @@ export  async function POST(
     "secp256k1",
   );
 
-  if (!verification) res.status(401).send("Signature not valid");
+  if (!verification)  new Response("Signature not valid", {status: 401});
 
   const account = await db.account.findUnique({
     where: {mainAddress: address },
@@ -85,10 +84,11 @@ export  async function POST(
   const hmac = crypto.createHmac("sha256", `${process.env.NEXTAUTH_SECRET}`);
   const jwtSignature = hmac.update(header + "." + payload).digest("base64url");
 
-  return res.status(200).json(
+  return new Response(
     JSON.stringify({
       message: "JWT token generated successfully",
       jwt: header + "." + payload + "." + jwtSignature,
     }),
+    {status: 200},
   );
 }
