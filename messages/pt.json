@@ -131,6 +131,12 @@
   "NetworksPage": {
     "title": "Rede"
   },
+  "RumorsPage": {
+    "title": "Espalhe os rumores",
+    "description": "Anon, como vai? Escolha um nome de usuário e \"comece a espalhar a notícia, estou saindo hoje...\".\n\nDesculpe Anon, problemas de IA. Onde estávamos? Ah sim, escolha um nome de usuário e comece a espalhar boatos. Simples assim. Não há histórico de bate-papo nem identidades. Traga de volta os velhos tempos!",
+    "Start": "Começar",
+    "noNameError": "Por favor, digite o nome de usuário para começar"
+  },
   "MetricsPage": {
     "title": "Métricas / Glossário",
     "All Metrics": "Todas as métricas",

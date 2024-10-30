@@ -21,3 +21,9 @@ export interface StakingRates {
   d30: number;
   d365: number;
 }
+
+interface ChatMessage {
+  name: string;
+  text: string;
+  date: Date;
+}

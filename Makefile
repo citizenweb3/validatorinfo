@@ -20,6 +20,9 @@ generate-schema:
 start-indexer:
 		npx tsx server/server.ts
 
+start-chat:
+		npx tsx server/chat-server.ts
+
 start-db:
 		make destroy-deps
 		make create-deps

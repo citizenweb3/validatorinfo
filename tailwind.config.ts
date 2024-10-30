@@ -103,6 +103,7 @@ const config: Config = {
         width: 'width',
       },
       boxShadow: {
+        chat: '0 0 .125rem #000,0 0 .125rem #000,0 .125rem 0.25rem #000',
         '3xl': '0 0 .5rem #000,0 0 .5rem #000,0 0 2rem #000',
         '2xl': '0 0 .25rem #E5C46B,0 0 .25rem #E5C46B,0 0 1rem #E5C46B',
         button: '0 0 .125rem #000,0 0 .125rem #000,0 .5rem .5rem #000',

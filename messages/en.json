@@ -128,6 +128,12 @@
   "NetworksPage": {
     "title": "Networks"
   },
+  "RumorsPage": {
+    "title": "Spread the Rumors",
+    "description": "Anon, how are ya? Pick yaself a username and \"start spreading the news, I'm leaving today...\". \n\nSorry Anon, AI issues. Where were we? Ah yes, Pick a username and start rumoring. As simple as that.  There is no chat history and no identities. Bring back the old days!",
+    "Start": "Start",
+    "noNameError": "Please enter username to start"
+  },
   "MetricsPage": {
     "title": "Metrics / Glossary",
     "All Metrics": "All Metrics",
