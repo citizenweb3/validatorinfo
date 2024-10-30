@@ -11,7 +11,7 @@ const server = http.createServer();
 
 const io = new Server(server, {
   cors: {
-    origin: process.env.PUBLIC_URL,
+    origin: '*', // process.env.PUBLIC_URL,
     methods: ['GET', 'POST'],
   },
 });
