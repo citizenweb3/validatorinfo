@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import express from 'express';
 import https from 'https';
 import { Server } from 'socket.io';
 
@@ -8,12 +8,13 @@ require('dotenv').config();
 
 const PORT = parseInt(process.env.CHAT_PORT ?? '3002');
 
-const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/dev.validatorinfo.com-0001/fullchain.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/dev.validatorinfo.com-0001/privkey.pem'),
-};
+const app = express();
 
-const server = https.createServer(options);
+const server = https.createServer(app);
+
+app.get('/', function (req, res) {
+  res.send('Welcome to io server');
+});
 
 const io = new Server(server, {
   cors: {
