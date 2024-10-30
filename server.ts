@@ -1,5 +1,5 @@
 import next from 'next';
-import { createServer } from 'node:http';
+import { createServer } from 'node:https';
 import { Server } from 'socket.io';
 
 import { ChatMessage } from '@/types';
