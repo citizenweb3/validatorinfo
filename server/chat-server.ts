@@ -1,4 +1,3 @@
-import express from 'express';
 import https from 'https';
 import { Server } from 'socket.io';
 
@@ -8,13 +7,7 @@ require('dotenv').config();
 
 const PORT = parseInt(process.env.CHAT_PORT ?? '3002');
 
-const app = express();
-
-const server = https.createServer(app);
-
-app.get('/', function (req, res) {
-  res.send('Welcome to io server');
-});
+const server = https.createServer();
 
 const io = new Server(server, {
   cors: {
