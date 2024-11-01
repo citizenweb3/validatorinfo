@@ -48,6 +48,7 @@ const config: Config = {
       secondary: '#4FB848',
       highlight: '#E5C46B',
       table_header: '#272727',
+      card: '#272727',
       background: 'var(--color-background)',
       bgSt: 'var(--color-background-stroke)',
       bgHover: 'var(--color-background-hover)',

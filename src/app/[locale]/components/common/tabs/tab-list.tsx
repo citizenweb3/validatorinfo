@@ -5,7 +5,7 @@ import { TabOptions } from '@/components/common/tabs/tabs-data';
 
 interface OwnProps {
   tabs: TabOptions[];
-  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage';
+  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage' | 'ProfilePage';
 }
 
 const TabList: FC<OwnProps> = ({ page, tabs }) => {
