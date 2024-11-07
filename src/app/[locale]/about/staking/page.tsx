@@ -3,8 +3,12 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 
 import CheckMark from '@/app/about/staking/check-mark';
+import Story from '@/components/Story';
+import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
+import TabList from '@/components/common/tabs/tab-list';
+import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
 import { Locale } from '@/i18n';
 
@@ -14,58 +18,68 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <SubTitle text={t('Staking.title')} />
-      <div className="flex flex-row items-center border-b border-bgSt py-4">
-        <div className="mt-4 whitespace-pre-line text-base">
-          {t.rich('Staking.description', {
-            horcrux: (text) => (
-              <TextLink target="_blank" href="https://github.com/strangelove-ventures/horcrux" content={text} />
-            ),
-            restake: (text) => <TextLink target="_blank" href="https://restake.app/" content={text} />,
-          })}
+      <div className="flex flex-shrink">
+        <div className="flex flex-col">
+          <PageTitle prefix="About" text="Validator Info" />
+          <Story src="staking" />
         </div>
+        <div className="flex-grow" />
       </div>
-      <SubTitle text="Networks" size="h2" />
-      <div className="flex flex-row py-4">
-        <table className="w-full">
-          <thead>
-            <tr className="bg-table_header text-sm">
-              <th className="py-3">Network</th>
-              <th>Delegate</th>
-              <th>Endpoints</th>
-              <th>Seeds</th>
-              <th>Relayers</th>
-              <th>Snapshot</th>
-              <th>Archive</th>
-              <th>Others</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item, index) => (
-              <tr key={index} className="border-b border-black">
-                <td className="h-16 text-base">
-                  <div className="flex h-full items-center px-2.5">
-                    <div className="mr-2 w-10">
-                      {item.icon && (
-                        <Image src={item.icon} alt={item.name} width={40} height={40} className="h-10 w-auto" />
-                      )}
-                    </div>
-                    <div>{item.name}</div>
-                  </div>
-                </td>
-                <td className="pb-3.5 pt-6 text-center">
-                  {item.delegate && <RoundedButton href={item.delegate}>Stake</RoundedButton>}
-                </td>
-                <td className="text-center">{!!item.endpoints.length && <CheckMark data={item.endpoints} />}</td>
-                <td className="text-center">{!!item.seeds.length && <CheckMark data={item.seeds} copy />}</td>
-                <td className="text-center">{item.relayers}</td>
-                <td className="text-center">{item.snapshot && <CheckMark />}</td>
-                <td className="text-center">{item.archive && <CheckMark />}</td>
-                <td className="text-center">{item.additions?.join(', ')}</td>
+      <TabList page="AboutPage" tabs={aboutTabs} />
+      <div>
+        <SubTitle text={t('Staking.title')} />
+        <div className="flex flex-row items-center border-b border-bgSt py-4">
+          <div className="mt-4 whitespace-pre-line text-base">
+            {t.rich('Staking.description', {
+              horcrux: (text) => (
+                <TextLink target="_blank" href="https://github.com/strangelove-ventures/horcrux" content={text} />
+              ),
+              restake: (text) => <TextLink target="_blank" href="https://restake.app/" content={text} />,
+            })}
+          </div>
+        </div>
+        <SubTitle text="Networks" size="h2" />
+        <div className="flex flex-row py-4">
+          <table className="w-full">
+            <thead>
+              <tr className="bg-table_header text-sm">
+                <th className="py-3">Network</th>
+                <th>Delegate</th>
+                <th>Endpoints</th>
+                <th>Seeds</th>
+                <th>Relayers</th>
+                <th>Snapshot</th>
+                <th>Archive</th>
+                <th>Others</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {data.map((item, index) => (
+                <tr key={index} className="border-b border-black">
+                  <td className="h-16 text-base">
+                    <div className="flex h-full items-center px-2.5">
+                      <div className="mr-2 w-10">
+                        {item.icon && (
+                          <Image src={item.icon} alt={item.name} width={40} height={40} className="h-10 w-auto" />
+                        )}
+                      </div>
+                      <div>{item.name}</div>
+                    </div>
+                  </td>
+                  <td className="pb-3.5 pt-6 text-center">
+                    {item.delegate && <RoundedButton href={item.delegate}>Stake</RoundedButton>}
+                  </td>
+                  <td className="text-center">{!!item.endpoints.length && <CheckMark data={item.endpoints} />}</td>
+                  <td className="text-center">{!!item.seeds.length && <CheckMark data={item.seeds} copy />}</td>
+                  <td className="text-center">{item.relayers}</td>
+                  <td className="text-center">{item.snapshot && <CheckMark />}</td>
+                  <td className="text-center">{item.archive && <CheckMark />}</td>
+                  <td className="text-center">{item.additions?.join(', ')}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

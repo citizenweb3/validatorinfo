@@ -156,6 +156,31 @@
       "AI": "AI"
     }
   },
+  "ComparisonPage": {
+    "Metadata": {
+      "title": "Comparison"
+    },
+    "title": "Comparison",
+    "description": "I have build the comparison tool, for those that decided to park their capital in staking and mining. It can help you to find the most efficient scenario for your parked capital.\n\nLets say you have 0.1 or 100 ETH, or maybe 0.1 or 1 BTC. You may use my tool, to see which provider will offer the best return over time. My comparison includes such metrics as: additional revenues, slashing, uptime, etc. To learn more, please read here.\n\nAnd do remember one thing anon. My tools provide a picture in real time. The comparison of provider A vs B, might show different results, at different times, depending on the health state of the providers themselves in a taken moment.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
+    "Share result": "Share result",
+    "Show Charts": "Show Charts",
+    "Daily": "Daily",
+    "Weekly": "Weekly",
+    "Monthly": "Monthly",
+    "Choose Providers": "Choose Providers",
+    "Profile": "Profile",
+    "Health Change": "Health Change",
+    "Technical Score Changes": "Technical Score Changes",
+    "TVS Governance Score Changes": "TVS Governance Score Changes",
+    "User Score Changes": "User Score Changes",
+    "Social Score Changes": "Social Score Changes",
+    "Badges": "Badges",
+    "Reviews": "Reviews",
+    "Tags # in the Wild": "Tags # in the Wild",
+    "TVS Growth": "TVS Growth",
+    "Fan Growth": "Fan Growth",
+    "Add": "Add"
+  },
   "ProfilePage": {
     "Metadata": {
       "title": "Profile page"

@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import PosGlobalMetrics from '@/app/global_pos/global-metrics/pos-global-metrics';
 import TotalsList from '@/app/global_pos/totals/totals-list';
 import PosTvsGrow from '@/app/global_pos/tvs-grow/pos-tvs-grow';
+import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
@@ -24,6 +25,7 @@ export default async function GlobalPosPage() {
 
   return (
     <div className="flex flex-col">
+      <Story src={'global'} />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <div>
