@@ -1,5 +1,5 @@
-import { useTranslations } from 'next-intl';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
+import { Suspense } from 'react';
 
 import Calculator from '@/app/staking_calculator/calculator';
 import Story from '@/components/Story';
@@ -7,6 +7,7 @@ import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
+import validatorService from '@/services/validator-service';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'CalculatorPage' });
@@ -16,18 +17,22 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function StakingCalculatorPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
-  unstable_setRequestLocale(locale);
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
-  const t = useTranslations('CalculatorPage');
+export default async function StakingCalculatorPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
+  const t = await getTranslations('CalculatorPage');
+  const validatorsList = await validatorService.getList();
 
   return (
     <div className="flex flex-col">
       <Story src={'calculator'} />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
-      <div className="mt-6 border-b border-bgSt pb-5 pl-4 pr-20 text-base">{t('description')}</div>
-      <Calculator />
+      <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Calculator validatorsList={validatorsList} />
+      </Suspense>
     </div>
   );
 }

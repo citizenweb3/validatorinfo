@@ -3,9 +3,11 @@ import { FC, useState } from 'react';
 import BaseModal from '@/components/common/modal/base-modal';
 import PlusButton from '@/components/common/plus-button';
 
+export type DropdownListItem = { value: string | number; title: string };
+
 interface OwnProps {
   name?: string;
-  list: { value: string | number; title: string }[];
+  list: DropdownListItem[];
   selected?: string | number;
   onChange: (value: string | number) => void;
   className?: string;
@@ -21,9 +23,14 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, classNam
     onChange(value);
   };
   return (
-    <div className={`${className} flex h-8 flex-row items-center justify-between border-b border-bgSt pl-4 text-lg`}>
-      {name && <div>{name}:</div>}
-      <div onClick={() => setIsModalOpened(true)} className="ml-4 h-8 min-w-6 cursor-pointer text-highlight">
+    <div
+      className={`${className} flex h-8 flex-grow flex-row items-center justify-between border-b border-bgSt pl-4 text-lg`}
+    >
+      <div className="text-nowrap">{name && <div>{name}:</div>}</div>
+      <div
+        onClick={() => setIsModalOpened(true)}
+        className="ml-4 h-8 min-w-6 max-w-full cursor-pointer overflow-x-hidden text-highlight"
+      >
         {selectedTitle}
       </div>
       <PlusButton isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />

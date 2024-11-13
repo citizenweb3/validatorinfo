@@ -1,38 +1,26 @@
 'use client';
 
-import { Validator } from '@prisma/client';
 import { useTranslations } from 'next-intl';
-import { FC, useEffect, useMemo, useState } from 'react';
+import { FC } from 'react';
 
-import { getValidators } from '@/actions/validators';
-import ChooseDropdown from '@/app/staking_calculator/choose-dropdown';
+import ChooseDropdown, { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
 
 interface OwnProps {
   value?: string | number;
-  onChange: (value?: Validator) => void;
+  onChange: (value?: string) => void;
+  list: DropdownListItem[];
 }
 
-const ChooseValidator: FC<OwnProps> = ({ value, onChange }) => {
+const ChooseValidator: FC<OwnProps> = ({ value, onChange, list }) => {
   const t = useTranslations('CalculatorPage');
-  const [validators, setValidators] = useState<Validator[]>([]);
-  useEffect(() => {
-    const init = async () => {
-      const vals = await getValidators();
-      setValidators(vals);
-    };
-    init();
-  }, []);
-
-  const validatorList = useMemo(() => {
-    return validators.map((v) => ({ value: v.identity, title: v.moniker }));
-  }, [validators]);
 
   return (
     <ChooseDropdown
       name={t('Choose a Validator')}
-      list={validatorList}
+      list={list}
       selected={value}
-      onChange={(value) => onChange(validators.find((v) => v.identity === value))}
+      onChange={(value) => onChange(value.toString())}
+      className="flex-grow"
     />
   );
 };

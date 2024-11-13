@@ -113,10 +113,10 @@
   },
   "CalculatorPage": {
     "Metadata": {
-      "title": "Staking Calculator"
+      "title": "Reward Calculator"
     },
-    "title": "Staking Calculator",
-    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "title": "Reward Calculator",
+    "description": "My reward calculator allows you to calculate the amount of rewards you may earn, over a specified period of time, from staking to a validator on a proof of stake network, or - the rewards you may get from joining a mining pool on a proof of work network.\n\nMy reward calculator is unique and different from others. Apart from APR, APY and commissions, my calculation include such parameters as: slashing events, jail time, additional provider revenue, and so on. If you would like to learn more, please read on the full description here.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
     "Choose a Network": "Choose a Network",
     "Choose a Validator": "Choose a Validator",
     "Please select": "Please select validator and chain!",

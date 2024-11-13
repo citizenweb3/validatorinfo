@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { FC } from 'react';
 
 import { ValidatorDataFilled } from '@/app/validator_comparison/get-validator-data';
 import ValidatorItemRow from '@/app/validator_comparison/validator-item-row';
+import LineChart from '@/components/charts/line-chart';
 import Button from '@/components/common/button';
 import RoundedButton from '@/components/common/rounded-button';
 
@@ -43,10 +43,34 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
       <ValidatorItemRow className={`text-${item.reviews.color}`}>{item.reviews.value}</ValidatorItemRow>
       <ValidatorItemRow className={`text-${item.tagsInTheWild.color}`}>{item.tagsInTheWild.value}</ValidatorItemRow>
       <ValidatorItemRow>
-        {chartType ? <Image src="/img/charts/comparison.png" alt="chart" width={356} height={97} /> : '00'}
+        {chartType ? (
+          <LineChart
+            data={item.TVSGrowthChartData}
+            width={320}
+            height={64}
+            startColor="#414141"
+            endColor="#52B550"
+            shadowColor="rgba(0, 0, 0, 0.3)"
+            className="h-16 w-80"
+          />
+        ) : (
+          '00'
+        )}
       </ValidatorItemRow>
       <ValidatorItemRow>
-        {chartType ? <Image src="/img/charts/comparison.png" alt="chart" width={356} height={97} /> : '00'}
+        {chartType ? (
+          <LineChart
+            data={item.fanGrowthChartData}
+            width={320}
+            height={64}
+            startColor="#414141"
+            endColor="#52B550"
+            shadowColor="rgba(0, 0, 0, 0.3)"
+            className="h-16 w-80"
+          />
+        ) : (
+          '00'
+        )}
       </ValidatorItemRow>
     </div>
   );
