@@ -46,12 +46,12 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
         {chartType ? (
           <LineChart
             data={item.TVSGrowthChartData}
-            width={320}
-            height={64}
+            width={192}
+            height={48}
             startColor="#414141"
             endColor="#52B550"
             shadowColor="rgba(0, 0, 0, 0.3)"
-            className="h-16 w-80"
+            className="h-12 w-48"
           />
         ) : (
           '00'
@@ -61,12 +61,12 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
         {chartType ? (
           <LineChart
             data={item.fanGrowthChartData}
-            width={320}
-            height={64}
+            width={192}
+            height={48}
             startColor="#414141"
             endColor="#52B550"
             shadowColor="rgba(0, 0, 0, 0.3)"
-            className="h-16 w-80"
+            className="h-12 w-48"
           />
         ) : (
           '00'

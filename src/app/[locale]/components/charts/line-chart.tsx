@@ -91,7 +91,7 @@ const LineChart: React.FC<LineChartProps> = ({
       .datum(data)
       .attr('fill', 'none')
       .attr('stroke', 'url(#lineGradient)') // Use the gradient as the stroke color
-      .attr('stroke-width', 5)
+      .attr('stroke-width', 4)
       .attr('d', lineGenerator);
 
     // Apply outer shadow to line
@@ -100,7 +100,7 @@ const LineChart: React.FC<LineChartProps> = ({
       .datum(data)
       .attr('fill', 'none')
       .attr('stroke', shadowColor)
-      .attr('stroke-width', 6)
+      .attr('stroke-width', 5)
       .attr('opacity', 0.2)
       .attr('d', lineGenerator);
   }, [data, width, height, shadowColor, startColor, endColor]);
