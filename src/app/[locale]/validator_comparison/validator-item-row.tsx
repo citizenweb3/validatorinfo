@@ -7,7 +7,7 @@ interface OwnProps {
 
 const ValidatorItemRow: FC<PropsWithChildren<OwnProps>> = ({ children, left = false, className = '' }) => (
   <div
-    className={`${className} ${left ? 'justify-start' : 'justify-center'} flex max-h-20 min-h-20 flex-grow items-center px-8`}
+    className={`${className} ${left ? 'justify-start' : 'justify-center'} flex max-h-20 min-h-20 flex-grow items-center px-8 py-3`}
   >
     {children}
   </div>

@@ -11,6 +11,8 @@ export interface ValidatorData {
   tagsInTheWild: number;
   TVSGrowth: number;
   fanGrowth: number;
+  TVSGrowthChartData: { x: number; y: number }[];
+  fanGrowthChartData: { x: number; y: number }[];
 }
 export interface ValidatorDataFilled {
   id: number;
@@ -25,6 +27,8 @@ export interface ValidatorDataFilled {
   tagsInTheWild: { value: number; color: string };
   TVSGrowth: number;
   fanGrowth: number;
+  TVSGrowthChartData: { x: number; y: number }[];
+  fanGrowthChartData: { x: number; y: number }[];
 }
 
 const generateTestData = (id: number, name: string): ValidatorData => {
@@ -41,6 +45,8 @@ const generateTestData = (id: number, name: string): ValidatorData => {
     tagsInTheWild: Math.ceil(Math.random() * 1000),
     TVSGrowth: 0,
     fanGrowth: 0,
+    TVSGrowthChartData: Array.from({ length: 20 }, (_, i) => ({ x: i, y: +(Math.random() * 100).toFixed(0) })),
+    fanGrowthChartData: Array.from({ length: 20 }, (_, i) => ({ x: i, y: +(Math.random() * 100).toFixed(0) })),
   };
 };
 

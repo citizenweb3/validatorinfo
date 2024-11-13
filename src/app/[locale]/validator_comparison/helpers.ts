@@ -41,6 +41,8 @@ export const fillColors = (validators: ValidatorData[]) => {
       id: validator.id,
       TVSGrowth: validator.TVSGrowth,
       fanGrowth: validator.fanGrowth,
+      TVSGrowthChartData: validator.TVSGrowthChartData,
+      fanGrowthChartData: validator.fanGrowthChartData,
       ...filledFields,
     });
   }
