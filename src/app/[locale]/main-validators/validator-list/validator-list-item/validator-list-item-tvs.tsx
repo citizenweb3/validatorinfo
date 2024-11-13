@@ -22,7 +22,7 @@ const ValidatorListItemTVS: FC<OwnProps> = ({ id, activeId, setActiveId }) => {
 
   return (
     <Link href={`/validators/${id}/metrics`} className="relative flex items-center justify-center text-sm">
-      <div className="h-[49px] w-[179px] overflow-hidden">
+      <div className="">
         <LineChart
           data={chartData}
           width={320}
