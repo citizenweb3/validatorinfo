@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import ValidatorList from '@/app/main-validators/validator-list/validator-list';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
+import WalletButton from '@/components/wallet-connect/WalletButton';
 import ChainService from '@/services/chain-service';
 import ValidatorService from '@/services/validator-service';
 
@@ -22,8 +23,11 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
   const validators = await ValidatorService.getAll(validatorsPerPage * (currentPage - 1), validatorsPerPage);
   const filterChains: string[] = !q.chains ? [] : typeof q.chains === 'string' ? [q.chains] : q.chains;
 
+  // const wallet = useWallet();
+
   return (
     <div>
+      <WalletButton />
       <TabList page="HomePage" tabs={mainTabs} />
       <ValidatorList
         perPage={validatorsPerPage}

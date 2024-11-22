@@ -1,4 +1,4 @@
-import { OfflineAminoSigner, OfflineDirectSigner } from "@keplr-wallet/types";
+import { OfflineAminoSigner, OfflineDirectSigner, StdSignature } from '@keplr-wallet/types';
 
 export type ConnectionResult = {
   wallet: { chainId: string; address: string };
@@ -12,4 +12,10 @@ export abstract class WalletProvider {
   abstract enable(chainId: string): Promise<void>;
   abstract connect(chainId: string): Promise<ConnectionResult>;
   abstract getOfflineSigner(chainId: string): Promise<OfflineSignerT>;
+  abstract signProof(
+    chainId: string,
+  ): Promise<{
+    signature: StdSignature | string;
+    key: string;
+  }>;
 }

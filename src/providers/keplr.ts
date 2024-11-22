@@ -82,6 +82,22 @@ class KeplrProvider extends WalletProvider {
       preferNoSetMemo: false,
     });
   }
+
+  async signProof(
+    chainId: string,
+  ) {
+    const { cryptoRandomStringAsync } = await import("crypto-random-string");
+    const keyHash = await cryptoRandomStringAsync({
+      length: 32,
+      type: "base64",
+    });
+    const wallet = this.getWallet();
+    const { bech32Address } = await wallet.getKey(chainId);
+    return {
+      signature: await wallet.signArbitrary(chainId, bech32Address, keyHash),
+      key: keyHash,
+    };
+  }
 }
 
 export const keplrWalletProvider = new KeplrProvider();

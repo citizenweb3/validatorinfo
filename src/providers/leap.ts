@@ -188,6 +188,20 @@ class LeapProvider extends WalletProvider {
     const wallet = this.getWallet();
     return wallet.getOfflineSignerAuto(chainId) as unknown as OfflineSignerT;
   }
+
+  async signProof(
+    chainId: string,
+  ) {
+    const { cryptoRandomStringAsync } = await import("crypto-random-string");
+    const wallet = this.getWallet();
+    const { bech32Address } = await wallet.getKey(chainId);
+    const key = await cryptoRandomStringAsync({ length: 32, type: "base64" });
+    return {
+      signature: await wallet.signArbitrary(chainId, bech32Address, key),
+      key: key,
+    };
+  }
+
 }
 
 export const leapWalletProvider = new LeapProvider();
