@@ -32,6 +32,7 @@
     "socket.io-client": "^4.8.1",
     "swr": "^2.2.5",
     "tailwind-scrollbar": "^3.1.0",
+    "tsx": "^4.19.2",
     "usehooks-ts": "^3.1.0",
     "ws": "^8.18.0"
   },

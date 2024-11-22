@@ -26,7 +26,7 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
       <TabList page="AboutPage" tabs={aboutTabs} />
       <div className="py-4">
         <SubTitle text={t('Contacts')} />
-        <div className="my-4 flex justify-around">
+        <div className="mb-4 mt-12 flex justify-around">
           <Link href="https://validatorinfo.com/blog/" className={`${size}`} target="_blank">
             <div className={`${size} bg-blog bg-contain bg-no-repeat hover:bg-blog_h`} />
           </Link>

@@ -5,7 +5,6 @@ import { ValidatorDataFilled } from '@/app/validator_comparison/get-validator-da
 import ValidatorItemRow from '@/app/validator_comparison/validator-item-row';
 import LineChart from '@/components/charts/line-chart';
 import Button from '@/components/common/button';
-import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
   item: ValidatorDataFilled;
@@ -23,9 +22,9 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
         </Button>
         <div className="overflow-x-hidden text-ellipsis text-nowrap">{item.moniker}</div>
       </ValidatorItemRow>
-      <div className="flex max-h-20 min-h-14 flex-grow items-center justify-center">
-        <RoundedButton contentClassName="text-lg px-16">{t('Profile')}</RoundedButton>
-      </div>
+      {/*<div className="flex max-h-20 min-h-14 flex-grow items-center justify-center">*/}
+      {/*  <RoundedButton contentClassName="text-lg px-16">{t('Profile')}</RoundedButton>*/}
+      {/*</div>*/}
       <ValidatorItemRow className={`text-${item.healthChange.color}`}>{item.healthChange.value}%</ValidatorItemRow>
       <ValidatorItemRow className={`text-${item.technicalScoreChanges.color}`}>
         {item.technicalScoreChanges.value}%

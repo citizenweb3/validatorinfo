@@ -8,8 +8,8 @@ import Switch from '@/components/common/switch';
 import { ChainItem } from '@/types';
 
 interface OwnProps {
-  chain: ChainItem;
-  values?: {
+  chain?: ChainItem;
+  values: {
     d1: number;
     d7: number;
     d30: number;
@@ -29,11 +29,7 @@ const StakingResults: FC<OwnProps> = ({ values, chain }) => {
   const [amount, setAmount] = useState<string>('');
   const [isToken, setIsToken] = useState<boolean>(false);
 
-  if (!values) {
-    return <div className="mt-2.5 text-base">{t('Please select')}</div>;
-  }
-
-  const asset = isToken ? chain.asset : usdtAsset;
+  const asset = isToken && chain ? chain.asset : usdtAsset;
   const price = +amount / asset.price;
 
   return (

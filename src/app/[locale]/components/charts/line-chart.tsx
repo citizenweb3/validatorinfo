@@ -91,17 +91,7 @@ const LineChart: React.FC<LineChartProps> = ({
       .datum(data)
       .attr('fill', 'none')
       .attr('stroke', 'url(#lineGradient)') // Use the gradient as the stroke color
-      .attr('stroke-width', 4)
-      .attr('d', lineGenerator);
-
-    // Apply outer shadow to line
-    svg
-      .append('path')
-      .datum(data)
-      .attr('fill', 'none')
-      .attr('stroke', shadowColor)
-      .attr('stroke-width', 5)
-      .attr('opacity', 0.2)
+      .attr('stroke-width', 3)
       .attr('d', lineGenerator);
   }, [data, width, height, shadowColor, startColor, endColor]);
 
@@ -110,7 +100,7 @@ const LineChart: React.FC<LineChartProps> = ({
       viewBox={`0 0 ${width} ${height}`}
       className={className}
       style={{
-        filter: 'drop-shadow(0 0.625rem 0.25rem #000)',
+        filter: 'drop-shadow(0 0.525rem 0.25rem #000)',
       }}
       ref={svgRef}
     ></svg>

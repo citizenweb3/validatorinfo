@@ -17,11 +17,11 @@ const Validators: FC<OwnProps> = async ({ sort, perPage, filterChains = [], curr
     <div>
       <ListFilters perPage={perPage} selectedEcosystems={filterChains} battery />
       <div>
-        <table className="my-4 w-full table-auto border-collapse">
+        <table className="relative my-4 w-full table-auto border-collapse">
           <thead>
-            <tr className="bg-table_header">
+            <tr className="sticky top-0 z-30 w-full bg-table_header">
               <th />
-              <TableHeaderItem name="Validator" sortField="moniker" defaultSelected />
+              <TableHeaderItem className="w-[20%]" name="Validator" sortField="moniker" defaultSelected />
               <TableHeaderItem name="Links" />
               <TableHeaderItem name="Battery" />
               <TableHeaderItem name="Technical" />

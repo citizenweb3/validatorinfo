@@ -60,7 +60,7 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
         {filledData.map((item) => (
           <ValidatorListItem key={item.id} item={item} chartType={chartType} />
         ))}
-        {filledData.length < 6 && <ValidatorEmptyItem exists={data.map((v) => v.moniker)} onAdd={handleAdd} />}
+        {filledData.length < 5 && <ValidatorEmptyItem exists={data.map((v) => v.moniker)} onAdd={handleAdd} />}
       </div>
     </>
   );

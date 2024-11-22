@@ -105,13 +105,16 @@
     "Metadata": {
       "title": "Глобальный POS"
     },
-    "title": "Глобальный POS",
+    "title": "Глобальные показатели и статистика Web3",
+    "dominance": "Доминирование Web3 T.V.S",
+    "total": "Общая сумма T.V.S. против выплат по глобальным вознаграждениям",
+    "cap": "Общая капитализация криптовалют против общей обеспеченной стоимости",
+    "status": "Статус Web 3",
     "Footer": {
-      "total validators": "Общее колличество валидаторов",
-      "total networks": "Общее колличество сетей",
-      "total pages": "Общее колличество страниц",
-      "total ecosystems": "Общее колличество экосистем",
-      "unknown": "..."
+      "total validators": "Валидаторов",
+      "total networks": "Сетей",
+      "total pages": "Страниц",
+      "total ecosystems": "Экосистем"
     }
   },
   "CalculatorPage": {

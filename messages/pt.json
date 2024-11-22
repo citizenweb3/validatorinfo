@@ -105,13 +105,16 @@
     "Metadata": {
       "title": "Global"
     },
-    "title": "Global",
+    "title": "Métricas e estatísticas globais da Web3",
+    "dominance": "Dominância da Web3 T.V.S",
+    "total": "Total T.V.S. VS Pagamento de recompensas globais.",
+    "cap": "Total de capitalização de criptomoedas VS Valor total garantido",
+    "status": "Status da Web 3",
     "Footer": {
-      "total validators": "Quantidade total de validadores",
-      "total networks": "Quantidade total de redes",
-      "total pages": "Quantidade total de páginas Claimed",
-      "total ecosystems": "Quantidade total de ecossistemas",
-      "unknown": "..."
+      "total validators": "Validadores",
+      "total networks": "Redes",
+      "total pages": "Páginas Claimed",
+      "total ecosystems": "Ecossistemas"
     }
   },
   "CalculatorPage": {

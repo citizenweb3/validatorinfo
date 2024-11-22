@@ -30,10 +30,10 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
 
   return (
     <tr className="group font-handjet hover:bg-bgHover ">
-      <td className="border-b border-black py-2 active:border-bgSt">
+      <td className="w-9 border-b border-black py-2 active:border-bgSt">
         <ValidatorListItemFavorite isFavorite={false} />
       </td>
-      <td className="group/avatar border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+      <td className="group/avatar w-[20%] border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <TableAvatar
           textClassName="max-w-36"
           icon={validator.url}

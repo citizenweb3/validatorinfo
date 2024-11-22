@@ -9,11 +9,12 @@ interface OwnProps {
   sortField?: string;
   colspan?: number;
   defaultSelected?: boolean;
+  className?: string;
 }
 
-const TableHeaderItem: FC<OwnProps> = ({ sortField, name, colspan = 1, defaultSelected = false }) => {
+const TableHeaderItem: FC<OwnProps> = ({ sortField, name, className, colspan = 1, defaultSelected = false }) => {
   return (
-    <th colSpan={colspan}>
+    <th className={className} colSpan={colspan}>
       <TableSortItems name={name} field={sortField} defaultSelected={defaultSelected} />
     </th>
   );

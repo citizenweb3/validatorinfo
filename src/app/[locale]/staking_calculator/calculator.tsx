@@ -21,10 +21,10 @@ const Calculator: FC<OwnProps> = ({ validatorsList }) => {
 
   useEffect(() => {
     (async () => {
-      if (chain && validator) {
-        const r = await getStakingRates(chain.id, validator);
-        setStakingRates(r);
-      }
+      // if (chain && validator) {
+      const r = await getStakingRates(chain?.id, validator);
+      setStakingRates(r);
+      // }
     })();
   }, [chain, validator]);
 
@@ -32,22 +32,30 @@ const Calculator: FC<OwnProps> = ({ validatorsList }) => {
     setValidator(value?.toString() ?? '');
   };
 
+  console.log(stakingRates);
+
   return (
     <div>
       <div className="mt-4 flex flex-row space-x-12 text-lg">
         <div className="flex-[2]">
           <ChooseNetwork value={chain?.id} onChange={setChain} />
         </div>
-        <div className="mt-4 flex flex-[3]">{chain && <StakingResults values={stakingRates} chain={chain} />}</div>
+        <div className="mt-4 flex flex-[3]">
+          {stakingRates && <StakingResults values={stakingRates} chain={chain} />}
+        </div>
         <div className="flex-[2] text-lg">
           <ChooseValidator value={validator} onChange={handleValidatorChange} list={validatorsList} />
-          <div className="mt-3.5 flex flex-row justify-between">
-            <RoundedButton>Compare</RoundedButton>
-            <RoundedButton>Profile</RoundedButton>
-          </div>
-          <div className="mt-7 flex justify-center">
-            <RoundedButton>Spread the world</RoundedButton>
-          </div>
+          {validator && (
+            <>
+              <div className="mt-3.5 flex flex-row justify-between">
+                <RoundedButton>Compare</RoundedButton>
+                <RoundedButton>Profile</RoundedButton>
+              </div>
+              <div className="mt-7 flex justify-center">
+                <RoundedButton>Spread the world</RoundedButton>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

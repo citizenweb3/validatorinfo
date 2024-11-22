@@ -18,7 +18,7 @@ const partners = [
   ],
   [
     { title: 'Cyber Academy', icon: '/img/icons/partners/ca.png', link: 'https://cyberacademy.dev/' },
-    { title: 'BVC', icon: '/img/icons/partners/bvc.png', link: 'https://t.me/web_3_society' },
+    { title: 'BVC', icon: '/img/icons/partners/bvc.png', link: 'https://bvc.citizenweb3.com' },
     { title: 'White Hacker', icon: '/img/icons/partners/wh.png', link: 'https://t.me/WhiteHackerRu' },
     { title: 'Voting Power', icon: '/img/icons/partners/vp.png', link: 'https://votingpower.org/' },
   ],

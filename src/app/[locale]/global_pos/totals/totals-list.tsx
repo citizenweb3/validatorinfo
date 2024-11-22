@@ -14,14 +14,13 @@ const TotalsList: FC<OwnProps> = async () => {
     { title: 'total validators', data: headerInfo.validators },
     { title: 'total networks', data: headerInfo.chains },
     { title: 'total pages', data: 234 },
-    { title: 'total ecosystems', data: 23 },
-    { title: 'unknown', data: 0 },
+    { title: 'total ecosystems', data: 1 },
   ];
 
   return (
-    <div className="mt-9 flex flex-row space-x-16">
+    <div className="mt-24 flex w-full flex-row justify-between space-x-16 px-36">
       {data.map((item) => (
-        <TotalsListItem key={item.title} title={t(item.title as 'unknown')} data={item.data} />
+        <TotalsListItem key={item.title} title={t(item.title as 'total validators')} data={item.data} />
       ))}
     </div>
   );

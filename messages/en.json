@@ -100,15 +100,18 @@
   },
   "GlobalPosPage": {
     "Metadata": {
-      "title": "Global"
+      "title": "Web3 Global Metrics and Statistics"
     },
-    "title": "Global",
+    "title": "Web3 Global Metrics and Statistics",
+    "dominance": "Web3 T.V.S Dominance",
+    "total": "Total T.V.S. VS Global Rewards Payout.",
+    "cap": "Total Crypto Capitalization VS Total Value Secured",
+    "status": "Web 3 Status",
     "Footer": {
-      "total validators": "Total amount of validators",
-      "total networks": "Total amount of networks",
-      "total pages": "Total Amount of Claimed Val. Pages",
-      "total ecosystems": "Total Amount of Ecosystems",
-      "unknown": "..."
+      "total validators": "Validators",
+      "total networks": "Networks",
+      "total pages": "Claimed Val. Pages",
+      "total ecosystems": "Ecosystems"
     }
   },
   "CalculatorPage": {
