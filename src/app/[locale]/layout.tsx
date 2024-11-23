@@ -11,6 +11,7 @@ import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
 import PreloadedIcons from '@/components/preloaded-icons';
+import { WalletProviderComponent } from '@/context/WalletContext';
 import { locales } from '@/i18n';
 
 const sfpro = localFont({
@@ -63,38 +64,40 @@ export default async function LocaleLayout({
       <body
         className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
       >
-        <ThemeProvider defaultTheme="dark" attribute="class">
-          <PreloadedIcons />
-          <NextIntlClientProvider messages={messages} locale={locale}>
-            <div className="flex min-h-screen flex-col px-4">
-              <Header />
-              <div className="mt-4 flex flex-grow flex-row">
-                <NavigationBar />
-                <div className="ml-8 flex flex-grow">
-                  <div className="flex w-full flex-col">
-                    <div className="flex-grow">{children}</div>
-                    <Footer />
+        <WalletProviderComponent>
+          <ThemeProvider defaultTheme="dark" attribute="class">
+            <PreloadedIcons />
+            <NextIntlClientProvider messages={messages} locale={locale}>
+              <div className="flex min-h-screen flex-col px-4">
+                <Header />
+                <div className="mt-4 flex flex-grow flex-row">
+                  <NavigationBar />
+                  <div className="ml-8 flex flex-grow">
+                    <div className="flex w-full flex-col">
+                      <div className="flex-grow">{children}</div>
+                      <Footer />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </NextIntlClientProvider>
-          <ToastContainer
-            className="!-right-1.5"
-            toastClassName={'!bg-bgHover !border-r !border-t !border-bgSt !shadow-button !rounded-none'}
-            bodyClassName={'text-base font-sfpro !px-2 !py-0 !m-0 text-white'}
-            position="top-right"
-            autoClose={2000}
-            hideProgressBar
-            newestOnTop
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-          />
-        </ThemeProvider>
+            </NextIntlClientProvider>
+            <ToastContainer
+              className="!-right-1.5"
+              toastClassName={'!bg-bgHover !border-r !border-t !border-bgSt !shadow-button !rounded-none'}
+              bodyClassName={'text-base font-sfpro !px-2 !py-0 !m-0 text-white'}
+              position="top-right"
+              autoClose={2000}
+              hideProgressBar
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
+          </ThemeProvider>
+        </WalletProviderComponent>
       </body>
     </html>
   );

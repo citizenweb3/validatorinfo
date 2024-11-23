@@ -14,6 +14,7 @@ export interface WalletProof {
   key: string;
   extension: string;
   walletName: string;
+  expiration: string;
 }
 
 export async function POST(req: Request) {
@@ -32,7 +33,6 @@ export async function POST(req: Request) {
   } catch (e) {
     return new NextResponse('Address not valid', { status: 401 });
   }
-  console.log('23');
   const verification = verifyADR36Amino(
     fromBech32(address).prefix,
     address,
@@ -74,6 +74,7 @@ export async function POST(req: Request) {
       extension: extension,
       chainId: 'cosmoshub-4',
       walletName: walletName,
+      expiration: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toLocaleDateString(),
     }),
   );
 

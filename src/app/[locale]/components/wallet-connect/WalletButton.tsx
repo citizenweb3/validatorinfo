@@ -2,16 +2,19 @@
 
 import React from 'react';
 
-import { WalletProof } from '@/api/auth/wallet/route';
 import { WALLETS } from '@/constants';
+import { useWallet } from '@/context/WalletContext';
 
 const WalletButton: React.FC = () => {
+  const { walletData, refreshWallet } = useWallet();
+  console.log(walletData);
+
   const handleClick = async () => {
     const provider = WALLETS[0].provider;
     const { wallet, walletName } = await provider.connect('cosmoshub-4');
     const { signature, key } = await provider.signProof('cosmoshub-4');
 
-    const body: WalletProof = {
+    const body = {
       key,
       signature,
       address: wallet.address,
@@ -25,7 +28,10 @@ const WalletButton: React.FC = () => {
       body: JSON.stringify(body),
       headers: { 'Content-Type': 'application/json' },
     }).then((res) => res.json());
-    localStorage.setItem('validatorinfo', JSON.stringify(response));
+
+    localStorage.setItem('validatorinfo.com', JSON.stringify(response.jwt));
+
+    refreshWallet();
   };
 
   return (
@@ -41,7 +47,7 @@ const WalletButton: React.FC = () => {
       }}
       onClick={handleClick}
     >
-      Connect
+      {walletData ? walletData.name : 'Connect'}
     </button>
   );
 };
