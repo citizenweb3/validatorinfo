@@ -11,6 +11,7 @@ const WalletButton: React.FC = () => {
 
   const handleClick = async () => {
     const provider = WALLETS[0].provider;
+    await provider.enable('cosmoshub-4');
     const { wallet, walletName } = await provider.connect('cosmoshub-4');
     const { signature, key } = await provider.signProof('cosmoshub-4');
 

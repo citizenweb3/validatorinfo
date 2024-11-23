@@ -1,4 +1,4 @@
-// import { cosmostationWalletProvider } from '@/providers/cosmostation';
+import { cosmostationWalletProvider } from '@/providers/cosmostation';
 import { keplrWalletProvider } from '@/providers/keplr';
 import { leapWalletProvider } from '@/providers/leap';
 
@@ -8,11 +8,11 @@ export const WALLETS = [
     logo: 'KeplrIcon',
     provider: keplrWalletProvider,
   },
-  // {
-  //   label: 'cosmostation',
-  //   logo: 'CosmostationIcon',
-  //   provider: cosmostationWalletProvider,
-  // },
+  {
+    label: 'cosmostation',
+    logo: 'CosmostationIcon',
+    provider: cosmostationWalletProvider,
+  },
   {
     label: 'leap',
     logo: 'LeapIcon',
