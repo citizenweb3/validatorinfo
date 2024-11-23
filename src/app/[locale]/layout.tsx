@@ -70,18 +70,19 @@ export default async function LocaleLayout({
       <body
         className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
       >
-                    <WalletProviderComponent>
-        <ThemeProvider defaultTheme="dark" attribute="class">
-          <PreloadedIcons />
-          <NextIntlClientProvider messages={messages} locale={locale}>
-            <div className="flex min-h-screen flex-col px-4">
-              <Header />
-              <div className="mt-4 flex flex-grow flex-row">
-                <NavigationBar />
-                <div className="ml-8 flex flex-grow">
-                  <div className="flex w-full flex-col">
-                    <div className="flex flex-grow flex-col">{children}</div>
-                    <Footer />
+        <WalletProviderComponent>
+          <ThemeProvider defaultTheme="dark" attribute="class">
+            <PreloadedIcons />
+            <NextIntlClientProvider messages={messages} locale={locale}>
+              <div className="flex min-h-screen flex-col px-4">
+                <Header />
+                <div className="mt-4 flex flex-grow flex-row">
+                  <NavigationBar />
+                  <div className="ml-8 flex flex-grow">
+                    <div className="flex w-full flex-col">
+                      <div className="flex flex-grow flex-col">{children}</div>
+                      <Footer />
+                    </div>
                   </div>
                 </div>
               </div>
