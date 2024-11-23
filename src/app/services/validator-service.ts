@@ -1,6 +1,9 @@
 import { Node, Validator } from '@prisma/client';
 
+import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
 import db from '@/db';
+
+export type SortDirection = 'asc' | 'desc';
 
 export type ValidatorWithNodes = Validator & {
   nodes: Node[];
@@ -9,8 +12,8 @@ export type ValidatorWithNodes = Validator & {
 const getAll = async (
   skip: number,
   take: number,
-  sortBy: 'moniker' | 'nodes' = 'moniker',
-  order: 'asc' | 'desc' = 'asc',
+  sortBy: string = 'moniker',
+  order: SortDirection = 'asc',
 ): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
   const validators = (await db.validator.findMany({
     skip: skip,
@@ -30,11 +33,17 @@ const getAll = async (
   return { validators, pages: Math.ceil(count / take) };
 };
 
-const getLite = async (skip: number, take: number): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
+const getLite = async (
+  skip: number,
+  take: number,
+  sortBy: string = 'moniker',
+  order: SortDirection = 'asc',
+): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
   const validators = (await db.validator.findMany({
     skip: skip,
     take: take,
-    select: { moniker: true, url: true },
+    select: { moniker: true, url: true, identity: true },
+    orderBy: { [sortBy]: order },
   })) as ValidatorWithNodes[];
 
   const count = await db.validator.count();
@@ -42,9 +51,19 @@ const getLite = async (skip: number, take: number): Promise<{ validators: Valida
   return { validators, pages: Math.ceil(count / take) };
 };
 
+const getList = async (): Promise<DropdownListItem[]> => {
+  return (
+    await db.validator.findMany({
+      select: { moniker: true, identity: true },
+      orderBy: { moniker: 'asc' },
+    })
+  ).map((e) => ({ title: e.moniker, value: e.identity })) as DropdownListItem[];
+};
+
 const ValidatorService = {
   getAll,
   getLite,
+  getList,
 };
 
 export default ValidatorService;

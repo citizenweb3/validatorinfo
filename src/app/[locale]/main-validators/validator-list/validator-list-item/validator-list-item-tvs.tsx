@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { lineMainTable } from '@/app/components/charts/line/configs';
-import Line from '@/components/charts/line/line-chart';
+import LineChart from '@/components/charts/line-chart';
 
 interface OwnProps {
   id: string;
@@ -19,10 +18,20 @@ const ValidatorListItemTVS: FC<OwnProps> = ({ id, activeId, setActiveId }) => {
     }
   };
 
+  const chartData = Array.from({ length: 20 }, (_, i) => ({ x: i, y: +(Math.random() * 100).toFixed(0) }));
+
   return (
     <Link href={`/validators/${id}/metrics`} className="relative flex items-center justify-center text-sm">
-      <div className="h-[49px] w-[179px] overflow-hidden">
-        <Line config={lineMainTable} id={id} isActive={activeId === id} onHover={handleHover} />
+      <div className="">
+        <LineChart
+          data={chartData}
+          width={192}
+          height={48}
+          startColor="#414141"
+          endColor="#52B550"
+          shadowColor="rgba(0, 0, 0, 0.3)"
+          className="h-12 w-48"
+        />
       </div>
     </Link>
   );

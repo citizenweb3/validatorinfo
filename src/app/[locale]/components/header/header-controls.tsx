@@ -21,7 +21,7 @@ const HeaderControls: FC<OwnProps> = () => {
       >
         <div className="flex flex-col items-center px-2 py-1">
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('Home')}</div>
-          <Image src="/img/logo.png" alt="logo" width={186} height={174} className="w-16" priority />
+          <Image src="/img/logo.svg" alt="logo" width={186} height={174} className="w-16" priority />
         </div>
       </Link>
       <div className="relative mx-1 mt-7 flex h-0.5 flex-grow justify-center border-white bg-gradient-to-r from-primary to-secondary shadow-line">
@@ -54,7 +54,7 @@ const HeaderControls: FC<OwnProps> = () => {
       </div>
       <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
         <Tooltip tooltip={t('Click to login')}>
-          <div className="flex flex-col items-center">
+          <Link href="/profile" className="flex flex-col items-center">
             <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('You')}</div>
             <Image
               src="/img/avatars/default.png"
@@ -64,7 +64,7 @@ const HeaderControls: FC<OwnProps> = () => {
               className="mx-1.5 my-0.5 w-[4.2rem]"
               priority
             />
-          </div>
+          </Link>
         </Tooltip>
       </div>
     </div>

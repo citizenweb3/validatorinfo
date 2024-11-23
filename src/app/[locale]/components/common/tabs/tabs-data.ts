@@ -51,3 +51,11 @@ export const aboutTabs: TabOptions[] = [
   { name: 'Podcast', href: '/about/podcasts', icon: icons.PodcastIcon, iconHovered: icons.PodcastIconHovered },
   { name: 'Contacts', href: '/about/contacts', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered },
 ];
+
+export const profileTabs: TabOptions[] = [
+  { name: 'Tools', href: '/profile/tools' },
+  { name: 'Rewards', href: '/profile/rewards' },
+  { name: 'Dashboard', href: '/profile' },
+  { name: 'Messages', href: '/profile/messages' },
+  { name: 'Wallet', href: '/profile/wallet' },
+];

@@ -9,7 +9,7 @@ import { FC } from 'react';
 import { TabOptions } from '@/components/common/tabs/tabs-data';
 
 interface OwnProps {
-  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage';
+  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage' | 'ProfilePage';
   item: TabOptions;
 }
 const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered } }) => {

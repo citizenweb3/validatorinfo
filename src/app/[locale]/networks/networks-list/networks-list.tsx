@@ -1,47 +1,35 @@
-import { Chain } from '@prisma/client';
 import { FC } from 'react';
 
-import NetworksListFilters from '@/app/networks/networks-list/networks-list-filters';
 import NetworksListItem from '@/app/networks/networks-list/networks-list-item';
-import TableHeaderItem from '@/components/common/table/table-header-item';
 import TablePagination from '@/components/common/table/table-pagination';
+import ChainService from '@/services/chain-service';
+import { SortDirection } from '@/services/validator-service';
 
 interface OwnProps {
-  chains: Chain[];
   currentPage?: number;
   perPage: number;
+  sort: { sortBy: string; order: SortDirection };
 }
 
-const NetworksList: FC<OwnProps> = async ({ perPage, chains = [], currentPage = 1 }) => {
-  const baseUrl = `/networks?pp=${perPage}`;
-  const pages = 1;
+const NetworksList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
+  const { chains: list, pages } = await ChainService.getAll(
+    perPage * (currentPage - 1),
+    perPage,
+    sort.sortBy,
+    sort.order,
+  );
 
   return (
-    <div>
-      <NetworksListFilters perPage={perPage} />
-      {chains.length === 0 ? (
-        <div className="mt-6 text-base">No networks found, try to change filters!</div>
-      ) : (
-        <div>
-          <table className="my-4 w-full table-auto border-collapse">
-            <thead>
-              <tr className="bg-table_header">
-                <TableHeaderItem name="Network" sortable />
-                <TableHeaderItem name="Token" sortable />
-                <TableHeaderItem name="FDV" sortable />
-                <TableHeaderItem name="Links" colspan={3} />
-              </tr>
-            </thead>
-            <tbody>
-              {chains.map((item) => (
-                <NetworksListItem key={item.chainId} item={item} />
-              ))}
-            </tbody>
-          </table>
-          <TablePagination baseUrl={baseUrl} currentPage={currentPage} pageLength={pages} />
-        </div>
-      )}
-    </div>
+    <tbody>
+      {list.map((item) => (
+        <NetworksListItem key={item.chainId} item={item} />
+      ))}
+      <tr>
+        <td colSpan={5} className="pt-4">
+          <TablePagination pageLength={pages} />
+        </td>
+      </tr>
+    </tbody>
   );
 };
 

@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "tsx server.ts",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production tsx server.ts",
     "lint": "next lint"
   },
   "dependencies": {
@@ -19,7 +19,13 @@
     "base64url": "^3.0.1",
     "chart.js": "^4.4.3",
     "cron": "^3.1.7",
+
     "crypto-random-string": "^5.0.0",
+
+    "d3": "^7.9.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+
     "express": "^4.19.2",
     "i18next": "^23.12.2",
     "next": "14.2.3",
@@ -34,13 +40,17 @@
     "react-redux": "^9.1.2",
     "react-toastify": "^10.0.6",
     "sharp": "^0.33.4",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "swr": "^2.2.5",
     "tailwind-scrollbar": "^3.1.0",
+    "tsx": "^4.19.2",
     "usehooks-ts": "^3.1.0",
     "ws": "^8.18.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/d3": "^7.4.3",
     "@types/express": "^5.0.0",
     "@types/node": "^20",
     "@types/react": "^18",

@@ -100,23 +100,26 @@
   },
   "GlobalPosPage": {
     "Metadata": {
-      "title": "Global"
+      "title": "Web3 Global Metrics and Statistics"
     },
-    "title": "Global",
+    "title": "Web3 Global Metrics and Statistics",
+    "dominance": "Web3 T.V.S Dominance",
+    "total": "Total T.V.S. VS Global Rewards Payout.",
+    "cap": "Total Crypto Capitalization VS Total Value Secured",
+    "status": "Web 3 Status",
     "Footer": {
-      "total validators": "Total amount of validators",
-      "total networks": "Total amount of networks",
-      "total pages": "Total Amount of Claimed Val. Pages",
-      "total ecosystems": "Total Amount of Ecosystems",
-      "unknown": "..."
+      "total validators": "Validators",
+      "total networks": "Networks",
+      "total pages": "Claimed Val. Pages",
+      "total ecosystems": "Ecosystems"
     }
   },
   "CalculatorPage": {
     "Metadata": {
-      "title": "Staking Calculator"
+      "title": "Reward Calculator"
     },
-    "title": "Staking Calculator",
-    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "title": "Reward Calculator",
+    "description": "My reward calculator allows you to calculate the amount of rewards you may earn, over a specified period of time, from staking to a validator on a proof of stake network, or - the rewards you may get from joining a mining pool on a proof of work network.\n\nMy reward calculator is unique and different from others. Apart from APR, APY and commissions, my calculation include such parameters as: slashing events, jail time, additional provider revenue, and so on. If you would like to learn more, please read on the full description here.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
     "Choose a Network": "Choose a Network",
     "Choose a Validator": "Choose a Validator",
     "Please select": "Please select validator and chain!",
@@ -127,6 +130,12 @@
   },
   "NetworksPage": {
     "title": "Networks"
+  },
+  "RumorsPage": {
+    "title": "Spread the Rumors",
+    "description": "Anon, how are ya? Pick yaself a username and \"start spreading the news, I'm leaving today...\". \n\nSorry Anon, AI issues. Where were we? Ah yes, Pick a username and start rumoring. As simple as that.  There is no chat history and no identities. Bring back the old days!",
+    "Start": "Start",
+    "noNameError": "Please enter username to start"
   },
   "MetricsPage": {
     "title": "Metrics / Glossary",
@@ -148,6 +157,58 @@
       "Networks": "Networks",
       "Metrics": "Metrics",
       "AI": "AI"
+    }
+  },
+  "ComparisonPage": {
+    "Metadata": {
+      "title": "Comparison"
+    },
+    "title": "Comparison",
+    "description": "I have build the comparison tool, for those that decided to park their capital in staking and mining. It can help you to find the most efficient scenario for your parked capital.\n\nLets say you have 0.1 or 100 ETH, or maybe 0.1 or 1 BTC. You may use my tool, to see which provider will offer the best return over time. My comparison includes such metrics as: additional revenues, slashing, uptime, etc. To learn more, please read here.\n\nAnd do remember one thing anon. My tools provide a picture in real time. The comparison of provider A vs B, might show different results, at different times, depending on the health state of the providers themselves in a taken moment.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
+    "Share result": "Share result",
+    "Show Charts": "Show Charts",
+    "Daily": "Daily",
+    "Weekly": "Weekly",
+    "Monthly": "Monthly",
+    "Choose Providers": "Choose Providers",
+    "Profile": "Profile",
+    "Health Change": "Health Change",
+    "Technical Score Changes": "Technical Score Changes",
+    "TVS Governance Score Changes": "TVS Governance Score Changes",
+    "User Score Changes": "User Score Changes",
+    "Social Score Changes": "Social Score Changes",
+    "Badges": "Badges",
+    "Reviews": "Reviews",
+    "Tags # in the Wild": "Tags # in the Wild",
+    "TVS Growth": "TVS Growth",
+    "Fan Growth": "Fan Growth",
+    "Add": "Add"
+  },
+  "ProfilePage": {
+    "Metadata": {
+      "title": "Profile page"
+    },
+    "title": "Welcome",
+    "info": "Info",
+    "validatorBtn": "Are you a validator?",
+    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    "nick": "Nick",
+    "additionalInfo": "Additional Info",
+    "activitySummary": "Activity Summary",
+    "throneRoom": "Throne Room",
+    "upload": "Upload",
+    "submit": "Submit",
+    "daysVisited": "Days visited",
+    "badgesReceived": "Badges Received",
+    "missionsCompleted": "Missions Completed",
+    "rewardEarned": "Reward Earned",
+    "yoursFAv": "Your´s FAv",
+    "Tabs": {
+      "Tools": "Tools",
+      "Rewards": "Rewards",
+      "Dashboard": "Dashboard",
+      "Messages": "Messages",
+      "Wallet": "Wallet"
     }
   },
   "AboutPage": {

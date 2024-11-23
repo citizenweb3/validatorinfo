@@ -7,7 +7,7 @@ interface OwnProps {}
 
 const data = {
   validators: '1277',
-  ecosystems: '200',
+  ecosystems: '1',
   tvl: '$74.6B',
   list: [
     {

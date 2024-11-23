@@ -1,10 +1,16 @@
 import { getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
 
-import PosGlobalMetrics from '@/app/global_pos/global-metrics/pos-global-metrics';
+import DecentralizationBar from '@/app/global_pos/bars/decentralization-bar';
+import ScalabilityBar from '@/app/global_pos/bars/scalability-bar';
+import SecurityBar from '@/app/global_pos/bars/security-bar';
+import PosCapitalizationBar from '@/app/global_pos/pos-capitalization-bar/pos-capitalization-bar';
+import PosDominanceLine from '@/app/global_pos/pos-dominance-line/pos-dominance-line';
+import PosTotalLine from '@/app/global_pos/pos-total-line/pos-total-line';
 import TotalsList from '@/app/global_pos/totals/totals-list';
-import PosTvsGrow from '@/app/global_pos/tvs-grow/pos-tvs-grow';
+import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
+import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
@@ -24,14 +30,35 @@ export default async function GlobalPosPage() {
 
   return (
     <div className="flex flex-col">
+      <Story src={'global'} />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
+      <Suspense fallback={<div />}>
+        <TotalsList />
+      </Suspense>
+      <div className="mt-20">
+        <SubTitle text={t('status')} />
+      </div>
+      <div className="mt-16 flex justify-between px-36">
+        <DecentralizationBar />
+        <ScalabilityBar />
+        <SecurityBar />
+      </div>
       <div>
-        <PosGlobalMetrics />
-        <PosTvsGrow />
-        <Suspense fallback={<div />}>
-          <TotalsList />
-        </Suspense>
+        <div className="mb-16 mt-20">
+          <SubTitle text={t('dominance')} />
+        </div>
+        <div className="flex w-full flex-row space-x-14">
+          <PosDominanceLine />
+        </div>
+        <div className="mb-16 mt-20">
+          <SubTitle text={t('total')} />
+        </div>
+        <PosTotalLine />
+        <div className="mb-16 mt-20">
+          <SubTitle text={t('cap')} />
+        </div>
+        <PosCapitalizationBar />
       </div>
     </div>
   );

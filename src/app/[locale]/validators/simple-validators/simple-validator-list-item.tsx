@@ -1,6 +1,6 @@
 'use client';
 
-import { Chain, Validator } from '@prisma/client';
+import { Validator } from '@prisma/client';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -8,7 +8,6 @@ import TableAvatar from '@/components/common/table/table-avatar';
 
 interface OwnProps {
   validator: Validator;
-  chains: Chain[];
 }
 
 const SimpleValidatorListItem: FC<OwnProps> = ({ validator }) => {

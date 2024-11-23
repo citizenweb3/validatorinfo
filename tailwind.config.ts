@@ -48,6 +48,7 @@ const config: Config = {
       secondary: '#4FB848',
       highlight: '#E5C46B',
       table_header: '#272727',
+      card: '#272727',
       background: 'var(--color-background)',
       bgSt: 'var(--color-background-stroke)',
       bgHover: 'var(--color-background-hover)',
@@ -92,6 +93,7 @@ const config: Config = {
         triangle_w_h: `url('/img/icons/triangle_w-h.svg')`,
         triangle_w_a: `url('/img/icons/triangle_w-a.svg')`,
         sort: `url('/img/icons/sort-icon.png')`,
+        sort_a: `url('/img/icons/sort-icon-a.png')`,
         sort_h: `url('/img/icons/sort-icon-h.png')`,
         star: `url('/img/icons/star.png')`,
         star_h: `url('/img/icons/star-h.png')`,
@@ -102,6 +104,7 @@ const config: Config = {
         width: 'width',
       },
       boxShadow: {
+        chat: '0 0 .125rem #000,0 0 .125rem #000,0 .125rem 0.25rem #000',
         '3xl': '0 0 .5rem #000,0 0 .5rem #000,0 0 2rem #000',
         '2xl': '0 0 .25rem #E5C46B,0 0 .25rem #E5C46B,0 0 1rem #E5C46B',
         button: '0 0 .125rem #000,0 0 .125rem #000,0 .5rem .5rem #000',

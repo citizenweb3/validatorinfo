@@ -33,6 +33,7 @@ const ChooseNetwork: FC<OwnProps> = ({ value, onChange }) => {
       list={validatorList}
       selected={value}
       onChange={(value) => onChange(chains.find((v) => v.id === value))}
+      className="flex-grow"
     />
   );
 };
