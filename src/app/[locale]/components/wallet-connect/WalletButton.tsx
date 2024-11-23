@@ -1,21 +1,9 @@
-// components/WalletButton.tsx
 'use client';
 
-// Указываем, что это клиентский компонент
 import React from 'react';
 
 import { WalletProof } from '@/api/auth/wallet/route';
 import { WALLETS } from '@/constants';
-
-// components/WalletButton.tsx
-
-// components/WalletButton.tsx
-
-// components/WalletButton.tsx
-
-// components/WalletButton.tsx
-
-// components/WalletButton.tsx
 
 const WalletButton: React.FC = () => {
   const handleClick = async () => {
@@ -36,9 +24,8 @@ const WalletButton: React.FC = () => {
       method: 'POST',
       body: JSON.stringify(body),
       headers: { 'Content-Type': 'application/json' },
-    });
-
-    console.log(response);
+    }).then((res) => res.json());
+    localStorage.setItem('validatorinfo', JSON.stringify(response));
   };
 
   return (
