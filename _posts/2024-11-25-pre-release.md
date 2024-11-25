@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ValidatorInfo.com: Alpha is near
+title: VaidatrInfo.com - Alpha is near
 ---
 
 ### TL;DR
