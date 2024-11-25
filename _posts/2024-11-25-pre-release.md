@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ValidatorInfo: Alpha is near
+title: ValidatorInfo.com: Alpha is near
 ---
 
 ### TL;DR
@@ -19,20 +19,20 @@ Let's get you up to speed with the latest updates on my development.
 ##### Front-end:
 - UI updates on some of the pages to correlate with design updates
 - Implement P2P chat
-- Devolop user dashnboard
+- Develop user dashboard
 - Calculate and compare tools
 
 ##### Back-end and DevOps:
 - Develop web3 login
 - Implement sorting and indexing
-- Prepare selfhosting 
+- Prepare self-hosting 
 - Researching further data parameters 
 
 ##### Design
 - Progress on design of paged and elements
 - Internal UX work
 - Multiple fixes
-- Mobile verison development
+- Mobile version development
 
 ### Sneak peek
 Don't be a stranger, please [follow me on X](https://x.com/therealvalinfo) and [GitHub](https://github.com/citizenweb3/validatorinfo).
@@ -40,4 +40,3 @@ Don't be a stranger, please [follow me on X](https://x.com/therealvalinfo) and [
 My latest look:
 
 ![Screenshot from 2024-11-25 18-42-38](https://github.com/user-attachments/assets/6fe3c590-9fb7-46f8-b162-1a46dff0aed6)
-
