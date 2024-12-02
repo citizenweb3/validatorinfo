@@ -41,6 +41,9 @@
       ],
       "@/public/*": [
         "./public/*"
+      ],
+      "@/api/*": [
+        "./src/app/api/*"
       ]
     },
     "moduleResolution": "node"

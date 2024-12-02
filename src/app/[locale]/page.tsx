@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import Validators from '@/app/main-validators/validator-list/validators';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
+import WalletButton from '@/components/wallet-connect/WalletButton';
 import { SortDirection } from '@/services/validator-service';
 
 export const dynamic = 'force-dynamic';
@@ -23,6 +24,7 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
 
   return (
     <div>
+      <WalletButton />
       <TabList page="HomePage" tabs={mainTabs} />
       <Validators
         sort={{ sortBy, order }}

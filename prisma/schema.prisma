@@ -31,7 +31,8 @@ model Chain {
   wsNodes    WsNode[]
   grpcNodes  GrpcNode[]
   validators Validator[]
-  Node       Node[]
+  node       Node[]
+  addresses  Address[]
 }
 
 model Github {
@@ -126,4 +127,19 @@ model Validator {
   url              String?
   Chain            Chain?  @relation(fields: [chainChainId], references: [chainId])
   chainChainId     String?
+}
+
+model Account {
+  username         String?       @unique
+  mainAddress      String        @id
+  addresses        Address[]
+  coreTeam         Boolean       @default(false)
+}
+
+model Address {
+  wallet           Account @relation(fields: [mainAddress], references: [mainAddress])
+  mainAddress      String
+  address          String @id
+  chainId          String
+  chain            Chain  @relation(fields: [chainId], references: [chainId])
 }
