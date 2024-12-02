@@ -24,7 +24,10 @@ export default function LanguageSwitcher() {
 
   return (
     <div ref={ref} className="relative max-h-7 font-sfpro text-base">
-      <Button onClick={() => setIsOpened(!isOpened)} className="h-7 w-10 uppercase">
+      <Button
+        onClick={() => setIsOpened(!isOpened)}
+        className="tracking-none flex h-7 w-10 items-center justify-center uppercase"
+      >
         {locale}
       </Button>
       {isOpened && (
@@ -32,7 +35,7 @@ export default function LanguageSwitcher() {
           {locales
             .filter((ln) => ln !== locale)
             .map((ln) => (
-              <Button key={ln} className="h-7 w-10 uppercase" onClick={() => changeLocale(ln)}>
+              <Button key={ln} className="tracking-none h-7 w-10 uppercase" onClick={() => changeLocale(ln)}>
                 {ln}
               </Button>
             ))}

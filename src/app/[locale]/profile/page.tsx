@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
+import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import { NextPageWithLocale } from '@/i18n';
@@ -15,7 +16,16 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale } 
 
   return (
     <div>
+      <PageTitle prefix="Welcome" text="User1" />
       <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>
+      <div className="my-4 flex items-center justify-end space-x-8">
+        <RoundedButton className="text-xl" contentClassName="px-16">
+          {t('feedback')}
+        </RoundedButton>
+        <RoundedButton className="text-xl" contentClassName="px-16">
+          {t('validatorBtn')}
+        </RoundedButton>
+      </div>
       <div className="flex gap-8 border-b border-bgSt pb-2">
         <div className="">
           <SubTitle text={t('info')} />
@@ -44,21 +54,21 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale } 
         <div className="flex-grow">
           <SubTitle text={t('activitySummary')} />
           <div className="mt-4 flex justify-between">
-            <div className="bg-card mx-4 h-28 w-1/3">
+            <div className="mx-4 h-28 w-1/3 bg-card">
               <div className="p-2.5 text-center text-base text-highlight">{t('daysVisited')}</div>
             </div>
-            <div className="bg-card mx-4 h-28 w-1/3">
+            <div className="mx-4 h-28 w-1/3 bg-card">
               <div className="p-2.5 text-center text-base text-highlight">{t('yoursFAv')}</div>
             </div>
-            <div className="bg-card mx-4 h-28 w-1/3">
+            <div className="mx-4 h-28 w-1/3 bg-card">
               <div className="p-2.5 text-center text-base text-highlight">{t('badgesReceived')}</div>
             </div>
           </div>
           <div className="mt-4 flex justify-center">
-            <div className="bg-card mx-4 h-28 w-1/3">
+            <div className="mx-4 h-28 w-1/3 bg-card">
               <div className="p-2.5 text-center text-base text-highlight">{t('missionsCompleted')}</div>
             </div>
-            <div className="bg-card mx-4 h-28 w-1/3">
+            <div className="mx-4 h-28 w-1/3 bg-card">
               <div className="p-2.5 text-center text-base text-highlight">{t('rewardEarned')}</div>
             </div>
           </div>

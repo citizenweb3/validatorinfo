@@ -2,6 +2,7 @@
 import tailwindScrollbar from 'tailwind-scrollbar';
 import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
+import defaultConfig from 'tailwindcss/defaultConfig';
 
 const config: Config = {
   content: [
@@ -16,6 +17,7 @@ const config: Config = {
       handjet: ['var(--font-handjet)', 'Arial', 'sans-serif'],
     },
     letterSpacing: {
+      none: '0',
       normal: '.2em',
       wide: '.3em',
     },
@@ -29,15 +31,11 @@ const config: Config = {
       '2xl': '1515px',
     },
     fontSize: {
+      ...defaultConfig.theme?.fontSize,
       xs: '0.672rem',
       sm: '0.83rem',
-      base: '1rem',
       lg: '1.172rem',
       xl: '1.5rem',
-      '2xl': '2.125rem',
-      '3xl': '2.75rem',
-      '4xl': '4rem',
-      '16': '16px',
     },
     colors: {
       transparent: colors.transparent,
@@ -46,7 +44,7 @@ const config: Config = {
       red: '#EB1616',
       primary: '#3E3E3E',
       secondary: '#4FB848',
-      highlight: '#E5C46B',
+      highlight: 'var(--color-background-highlight)',
       table_header: '#272727',
       card: '#272727',
       background: 'var(--color-background)',

@@ -11,7 +11,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
   const t = useTranslations('Header');
 
   return (
-    <div className="mt-2 flex flex-row items-center justify-center space-x-8 text-base">
+    <div className="mt-2 grid grid-cols-2 gap-8 text-base">
       <Button component="link" href="/ai" tooltip={t('Explore the AI Rabbit whole')}>
         <Image
           src={icons.RabbitIcon}
@@ -29,7 +29,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           priority
           className="absolute left-1 top-1/2 hidden w-9 -translate-y-1/2 transform group-hover/button:block"
         />
-        <span className="-my-1.5 pl-8">{t('Hi, World!')}</span>
+        <span className="-my-1.5 pl-8 font-handjet">{t('Hi, World!')}</span>
       </Button>
       <Button component="link" href={`/validators/lucky`}>
         <Image
@@ -48,7 +48,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           priority
           className="absolute left-2 top-1/2 hidden w-7 -translate-y-1/2 transform group-hover/button:block"
         />
-        <span className="-my-1.5 pl-8">{t('Lucky!?')}</span>
+        <span className="-my-1.5 pl-8 font-handjet">{t('Lucky!?')}</span>
       </Button>
     </div>
   );

@@ -3,7 +3,6 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import PartnerItem from '@/app/about/partners/partner-item';
 import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
-import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
@@ -29,19 +28,13 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   return (
     <div>
-      <div className="flex flex-shrink">
-        <div className="flex flex-col">
-          <PageTitle prefix="About" text="Validator Info" />
-          <Story src="partners" />
-        </div>
-        <div className="flex-grow" />
-      </div>
+      <Story src="partners" />
       <TabList page="AboutPage" tabs={aboutTabs} />
+      <PageTitle text={t('Partners.title')} />
       <div className="">
-        <SubTitle text={t('Tabs.Partners')} />
         <div className="mt-20">
           {partners.map((partnerList, index) => (
-            <div className={`${index % 2 ? 'ml-[10%]' : ''} flex w-full items-center justify-start`} key={index}>
+            <div className={`${index % 2 ? 'ml-[10%]' : ''} mt-20 flex w-full items-center justify-start`} key={index}>
               {partnerList.map((partner) => (
                 <div key={partner.link} className="mx-[5%] flex w-[10%] items-center justify-center">
                   <PartnerItem title={partner.title} link={partner.link} icon={partner.icon} />

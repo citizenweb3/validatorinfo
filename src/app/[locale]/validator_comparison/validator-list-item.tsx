@@ -1,18 +1,19 @@
-import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
 import { ValidatorDataFilled } from '@/app/validator_comparison/get-validator-data';
 import ValidatorItemRow from '@/app/validator_comparison/validator-item-row';
 import LineChart from '@/components/charts/line-chart';
 import Button from '@/components/common/button';
+import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
   item: ValidatorDataFilled;
   chartType: string | undefined;
+  isChart: boolean;
+  onRemove: () => void;
 }
 
-const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
-  const t = useTranslations('ComparisonPage');
+const ValidatorListItem: FC<OwnProps> = ({ item, onRemove, isChart }) => {
   return (
     <div className="flex max-w-96 flex-grow flex-col">
       <ValidatorItemRow className="!min-h-20 border-b border-bgSt text-highlight">
@@ -21,10 +22,10 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
           <div className={`min-h-8 min-w-8 bg-star bg-contain`} />
         </Button>
         <div className="overflow-x-hidden text-ellipsis text-nowrap">{item.moniker}</div>
+        <div className="-mt-20">
+          <PlusButton size="sm" isOpened={true} onClick={onRemove} />
+        </div>
       </ValidatorItemRow>
-      {/*<div className="flex max-h-20 min-h-14 flex-grow items-center justify-center">*/}
-      {/*  <RoundedButton contentClassName="text-lg px-16">{t('Profile')}</RoundedButton>*/}
-      {/*</div>*/}
       <ValidatorItemRow className={`text-${item.healthChange.color}`}>{item.healthChange.value}%</ValidatorItemRow>
       <ValidatorItemRow className={`text-${item.technicalScoreChanges.color}`}>
         {item.technicalScoreChanges.value}%
@@ -42,7 +43,7 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
       <ValidatorItemRow className={`text-${item.reviews.color}`}>{item.reviews.value}</ValidatorItemRow>
       <ValidatorItemRow className={`text-${item.tagsInTheWild.color}`}>{item.tagsInTheWild.value}</ValidatorItemRow>
       <ValidatorItemRow>
-        {chartType ? (
+        {isChart && (
           <LineChart
             data={item.TVSGrowthChartData}
             width={192}
@@ -52,12 +53,10 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
             shadowColor="rgba(0, 0, 0, 0.3)"
             className="h-12 w-48"
           />
-        ) : (
-          '00'
         )}
       </ValidatorItemRow>
       <ValidatorItemRow>
-        {chartType ? (
+        {isChart && (
           <LineChart
             data={item.fanGrowthChartData}
             width={192}
@@ -67,8 +66,6 @@ const ValidatorListItem: FC<OwnProps> = ({ item, chartType }) => {
             shadowColor="rgba(0, 0, 0, 0.3)"
             className="h-12 w-48"
           />
-        ) : (
-          '00'
         )}
       </ValidatorItemRow>
     </div>

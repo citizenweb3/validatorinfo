@@ -16,7 +16,6 @@ const PreloadedIcons = () => (
     <link rel="preload" href={'/img/icons/close.svg'} as="image" />
     <link rel="preload" href={'/img/icons/close-h.svg'} as="image" />
     <link rel="preload" href={'/img/icons/close-a.svg'} as="image" />
-    <link rel="preload" href={'/img/icons/plus.svg'} as="image" />
     <link rel="preload" href={'/img/icons/plus-h.svg'} as="image" />
     <link rel="preload" href={'/img/icons/plus-a.svg'} as="image" />
     <link rel="preload" href={'/img/icons/triangle.svg'} as="image" />

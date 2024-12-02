@@ -8,6 +8,7 @@ import Button from '@/components/common/button';
 import icons from '@/components/icons';
 
 const ranges = [1, 10, 25, 50, 75, 100];
+const rangesTo = [...ranges].reverse();
 
 const ValidatorListFiltersBattery: FC = () => {
   const [from, setFrom] = useState<number>(1);
@@ -20,14 +21,14 @@ const ValidatorListFiltersBattery: FC = () => {
   useOnClickOutside(refTo, () => setIsToOpened(false));
 
   return (
-    <div className="px-2 py-0.5 text-base">
+    <div className="px-2 py-0.5 text-lg">
       <div className="flex min-w-9 flex-row items-center space-x-2 py-px">
         <Image src={icons.BatterySmallIcon} className="-mr-1 mt-3.5 w-14" alt="battery" />
         <div>Range:</div>
         <div className="relative">
           <Button
             onClick={() => setIsFromOpened(!isFromOpened)}
-            contentClassName={`py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight`}
+            contentClassName={`py-0 px-2 max-h-6 text-lg font-handjet text-highlight`}
             className={`${isFromOpened && 'w-16'}`}
             activeType="switcher"
           >
@@ -35,7 +36,7 @@ const ValidatorListFiltersBattery: FC = () => {
           </Button>
           <div
             ref={refFrom}
-            className={`${isFromOpened ? 'block' : 'hidden'} absolute left-0 top-5 z-10 flex w-16 flex-col`}
+            className={`${isFromOpened ? 'block' : 'hidden'} absolute left-0 top-6 z-40 flex w-16 flex-col`}
           >
             {ranges
               .filter((p) => p <= to)
@@ -44,7 +45,7 @@ const ValidatorListFiltersBattery: FC = () => {
                   key={p}
                   isActive={p === from}
                   activeType="switcher"
-                  contentClassName="py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight"
+                  contentClassName="py-0 px-2 max-h-6 text-lg font-handjet hover:text-highlight"
                   onClick={() => {
                     setFrom(p);
                     setIsFromOpened(false);
@@ -59,23 +60,23 @@ const ValidatorListFiltersBattery: FC = () => {
         <div className="relative">
           <Button
             onClick={() => setIsToOpened(!isToOpened)}
-            contentClassName="py-0 px-2 max-h-4 text-base font-handjet"
+            contentClassName="py-0 px-2 max-h-6 text-lg font-handjet text-highlight"
             activeType="switcher"
           >
             {to}%
           </Button>
           <div
             ref={refTo}
-            className={`${isToOpened ? 'block' : 'hidden'} absolute left-0 top-5 z-10 flex w-16 flex-col`}
+            className={`${isToOpened ? 'block' : 'hidden'} absolute left-0 top-6 z-40 flex w-16 flex-col`}
           >
-            {ranges
+            {rangesTo
               .filter((p) => p >= from)
               .map((p) => (
                 <Button
                   key={p}
                   isActive={p === to}
                   activeType="switcher"
-                  contentClassName="py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight"
+                  contentClassName="py-0 px-2 max-h-6 text-lg font-handjet hover:text-highlight"
                   onClick={() => {
                     setTo(p);
                     setIsToOpened(false);

@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 import ChatWrapper from '@/app/rumors/chat-wrapper';
 import Story from '@/components/Story';
-import SubTitle from '@/components/common/sub-title';
+import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
@@ -16,7 +16,7 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
     <div className="flex flex-grow flex-col">
       <Story src="rumors" />
       <TabList page="HomePage" tabs={mainTabs} />
-      <SubTitle text={t('title')} />
+      <PageTitle text={t('title')} />
       <ChatWrapper />
     </div>
   );

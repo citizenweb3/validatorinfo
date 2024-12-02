@@ -72,7 +72,6 @@ export default async function LocaleLayout({
       >
         <WalletProviderComponent>
           <ThemeProvider defaultTheme="dark" attribute="class">
-            <PreloadedIcons />
             <NextIntlClientProvider messages={messages} locale={locale}>
               <div className="flex min-h-screen flex-col px-4">
                 <Header />

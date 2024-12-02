@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
 import BaseModal from '@/components/common/modal/base-modal';
-import PlusButton from '@/components/common/plus-button';
+import TriangleButton from '@/components/common/triangle-button';
 
 export type DropdownListItem = { value: string | number; title: string };
 
@@ -33,7 +33,7 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, classNam
       >
         {selectedTitle}
       </div>
-      <PlusButton isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
+      <TriangleButton direction={isModalOpened ? 't' : 'b'} onClick={() => setIsModalOpened(true)} />
       <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="right-0 top-0">
         <div className="space-y-1 text-nowrap text-base">
           {list.map((item) => (

@@ -10,13 +10,13 @@ interface OwnProps {
 }
 
 const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
-  <div className="px-2 py-0.5 text-base">
+  <div className="text-lg">
     <div className="flex min-w-9 flex-row items-center space-x-2 py-px">
       <div>Rows:</div>
       <Button
         isActive={value === 25}
         onClick={() => onChange(25)}
-        contentClassName="py-0 px-2 max-h-4 text-base font-handjet hover:text-highlight"
+        contentClassName="py-0 px-2 max-h-4 text-lg font-handjet hover:text-highlight"
         activeType="switcher"
       >
         25
@@ -24,7 +24,7 @@ const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
       <Button
         isActive={value === 50}
         onClick={() => onChange(50)}
-        contentClassName="py-0 px-2 max-h-4 text-base font-handjet"
+        contentClassName="py-0 px-2 max-h-4 text-lg font-handjet"
         activeType="switcher"
       >
         50
@@ -32,7 +32,7 @@ const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
       <Button
         isActive={value === 100}
         onClick={() => onChange(100)}
-        contentClassName="py-0 px-2 max-h-4 text-base font-handjet"
+        contentClassName="py-0 px-2 max-h-4 text-lg font-handjet"
         activeType="switcher"
       >
         100
