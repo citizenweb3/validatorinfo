@@ -1,7 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
 import Networks from '@/app/networks/networks-list/networks';
-import SubTitle from '@/components/common/sub-title';
+import Story from '@/components/Story';
+import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
@@ -25,8 +26,9 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
 
   return (
     <div>
+      <Story src="networks" />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
-      <SubTitle text={t('title')} />
+      <PageTitle text={t('title')} />
       <Networks perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage} />
     </div>
   );

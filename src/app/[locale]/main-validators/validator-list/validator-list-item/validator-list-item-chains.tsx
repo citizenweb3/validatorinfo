@@ -34,7 +34,9 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
       ))}
       {chains.length > 4 && (
         <>
-          <PlusButton isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
+          <div className="-mt-2.5">
+            <PlusButton size="md" isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
+          </div>
           <BaseModal
             opened={isModalOpened}
             hideClose

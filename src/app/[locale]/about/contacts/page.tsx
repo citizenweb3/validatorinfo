@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
-import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
@@ -16,16 +15,10 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const size = 'h-24 w-24 min-w-24 min-h-24';
   return (
     <div>
-      <div className="flex flex-shrink">
-        <div className="flex flex-col">
-          <PageTitle prefix="About" text="Validator Info" />
-          <Story src="contacts" />
-        </div>
-        <div className="flex-grow" />
-      </div>
+      <Story src="contacts" />
       <TabList page="AboutPage" tabs={aboutTabs} />
+      <PageTitle text={t('Contacts')} />
       <div className="py-4">
-        <SubTitle text={t('Contacts')} />
         <div className="mb-4 mt-12 flex justify-around">
           <Link href="https://validatorinfo.com/blog/" className={`${size}`} target="_blank">
             <div className={`${size} bg-blog bg-contain bg-no-repeat hover:bg-blog_h`} />

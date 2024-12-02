@@ -104,8 +104,8 @@
     },
     "title": "Web3 Global Metrics and Statistics",
     "dominance": "Web3 T.V.S Dominance",
-    "total": "Total T.V.S. VS Global Rewards Payout.",
-    "cap": "Total Crypto Capitalization VS Total Value Secured",
+    "total": "Total T.V.S. and Rewards Payout",
+    "cap": "Crypto Capitalization and Value Secured",
     "status": "Web 3 Status",
     "Footer": {
       "total validators": "Validators",
@@ -129,16 +129,16 @@
     "earnings": "d Earnings"
   },
   "NetworksPage": {
-    "title": "Networks"
+    "title": "P.O.W. and P.O.S. Network List A-Z"
   },
   "RumorsPage": {
-    "title": "Spread the Rumors",
+    "title": "P2P Chat: Spread the Rumors",
     "description": "Anon, how are ya? Pick yaself a username and \"start spreading the news, I'm leaving today...\". \n\nSorry Anon, AI issues. Where were we? Ah yes, Pick a username and start rumoring. As simple as that.  There is no chat history and no identities. Bring back the old days!",
     "Start": "Start",
     "noNameError": "Please enter username to start"
   },
   "MetricsPage": {
-    "title": "Metrics / Glossary",
+    "title": "Web3 Metrics / Glossary List A-Z",
     "All Metrics": "All Metrics",
     "Our Metrics": "Our Metrics",
     "Token": "Token",
@@ -147,11 +147,11 @@
     "TVS": "T.V.S. or Total Value Secured"
   },
   "AIPage": {
-    "title": "AI",
+    "title": "Web3 Operator AI Search",
     "text": "So you want to find a validator, mining pool or a provider that meets your values? Good. \n\nYou're in the right place. My builders have supplied me with the amazing ability to do so with random prompts (searches)! For example, try searching for a validator with a certain commission and liberal political opinions. Its amazing, right? As always, please remember that my features are experimental.\n\nIf you feel like I'm not fulfilling my task properly, please open an issue for my team <issue>[here]</issue>"
   },
   "ValidatorsPage": {
-    "title": "Validators",
+    "title": "Validator and Mining Pool List A-Z",
     "Tabs": {
       "Validators": "Validators",
       "Networks": "Networks",
@@ -161,22 +161,25 @@
   },
   "ComparisonPage": {
     "Metadata": {
-      "title": "Comparison"
+      "title": "Compare Validators"
     },
-    "title": "Comparison",
-    "description": "I have build the comparison tool, for those that decided to park their capital in staking and mining. It can help you to find the most efficient scenario for your parked capital.\n\nLets say you have 0.1 or 100 ETH, or maybe 0.1 or 1 BTC. You may use my tool, to see which provider will offer the best return over time. My comparison includes such metrics as: additional revenues, slashing, uptime, etc. To learn more, please read here.\n\nAnd do remember one thing anon. My tools provide a picture in real time. The comparison of provider A vs B, might show different results, at different times, depending on the health state of the providers themselves in a taken moment.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
+    "title": "Compare Validators",
+    "description": "I have build a comparison tool for those that decided to try out staking or mining. It will help you to find the most efficient operator for your parked capital. Lets say you have 0.1 or 100 ETH, or maybe 0.1 or 1 BTC. Use the comparison, to see which provider shows better metrics over time, then use the Calculate option to see the return over time.",
+    "descriptionExtended": "Do remember one thing anon. My tools provide a picture in real time. The comparison of provider A vs B, might show different results, when performed over or at different times, depending on the health status of the providers themselves in a given moment.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
     "Share result": "Share result",
     "Show Charts": "Show Charts",
+    "Hide Charts": "Hide Charts",
+    "Reset": "Reset",
     "Daily": "Daily",
     "Weekly": "Weekly",
     "Monthly": "Monthly",
     "Choose Providers": "Choose Providers",
     "Profile": "Profile",
-    "Health Change": "Health Change",
-    "Technical Score Changes": "Technical Score Changes",
-    "TVS Governance Score Changes": "TVS Governance Score Changes",
-    "User Score Changes": "User Score Changes",
-    "Social Score Changes": "Social Score Changes",
+    "Health Change": "Health",
+    "Technical Score Changes": "Technical Score ",
+    "TVS Governance Score Changes": "Governance Score ",
+    "User Score Changes": "User Score",
+    "Social Score Changes": "Social Score",
     "Badges": "Badges",
     "Reviews": "Reviews",
     "Tags # in the Wild": "Tags # in the Wild",
@@ -191,6 +194,7 @@
     "title": "Welcome",
     "info": "Info",
     "validatorBtn": "Are you a validator?",
+    "feedback": "Feedback",
     "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     "nick": "Nick",
     "additionalInfo": "Additional Info",
@@ -222,7 +226,7 @@
       "Podcast": "Podcast",
       "Contacts": "Contacts"
     },
-    "Contacts": "Contacts",
+    "Contacts": "Validator Info Contacts",
     "description": "I am <homeLink>Validator Info</homeLink>. I’m created by the team at <citizenLink>Citizen Web3</citizenLink>. \n\nI am a multichain, validator-focused explorer and aggregator - for various networks, living in web3. I am able to read and understand both: Proof of Work and Proof of Stake chains. This means I will show information about validators, mining pools and the networks themselves. \n\nMy goal is to help web3 users to discover more information about validators and mining pools, that are securing their favorite networks, or - use my explorer to find the most relevant information you need. \n\nI’m still in the making. You can <xLink>follow me on X</xLink>, check out one of my <ghLink>GitHub repos</ghLink>, leave me comments and suggestions. \n\nCitizen Web3, as a project started in 2020, finding roots in ancap vibes, personal values of building a better society, ecosystem development and networking. CW3 is an active member of the web3 galaxy. <stakingLink>Staking with our self-hosted</stakingLink> baremetal infrastructure allows CW3 to work on various public good projects and contribute to the development of web3.",
     "title": "What is Validator Info?",
     "Tools": [
@@ -236,7 +240,7 @@
     "Our Manifesto": "Our Manifesto",
     "Manifesto": "From this distant vantage point, the Earth might not seem of any particular interest. But for us, it's different. Consider again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every \"superstar,\" every \"supreme leader,\" every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam... Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves...\n\nFrom 'A Pale Blue Dot', by Carl Sagan.\n\n\nWe believe in freedom above needs. We believe in possibilities above enforcement. We believe in values above desires. We believe that censorship has killed more people than anything else together combined. We value honesty and we value the truth. We value love and cherish all existing creatures. We value intelligence and we value decentralization.\n\nWe believe in communication, which allows participants to think, make their mind up and cast personal votes on any topic and subject. We think that content should strive to lack subjective opinions and help its consumers to form an opinion, which will result in better discussion, and in turn in a more efficient consensus.\n\nWe believe that blockchains are not simply a form of digital nations. But, open and verifiable blockchains are somewhat similar to natural hives, forests, patterns in the nature that allow us to communicate better. Without communication, we are doomed, and decentralized consensus is a tool that can and will help those who desire to make our pale blue dot a slightly better place.\n\nAND MAY THE CODE BE WITH YOU!",
     "Podcast": {
-      "title": "Podcast",
+      "title": "Citizen Web3 Podcast",
       "description": "Citizen Web3 hosts one of the oldest <link>web3-focused podcasts</link>. The show is focused on discovering the people that contribute to building the decentralized world and turn code into decentralized applications. \n\nThe show is a collection of interviews, airing for over 4.5 years, and focuses on a wide range of audiences, in particular those that work in web3, validators, founders, researchers, privacy enthusiasts and others.",
       "Subscribe": "Subscribe",
       "Spread the word": "Spread the word",
@@ -244,8 +248,12 @@
       "spreadText": "Every sharing helps to spread web3 values across the universe!"
     },
     "Staking": {
-      "title": "Staking with CW3",
-      "description": "Validator info is a public good project, and is fully sponsored by the Citizen Web3 validator. CW3 monetizes via staking. Token holders can stake with us to help secure these networks. Their incentive for doing so, is earning staking rewards, and other, planned, incentives in the future.\n\nCitizen Web3 is a self-hosted, independent off the grid, baremetal validator. Our infrastructure works on a mixture of broadband and Starlink internet connections, and partially runs off solar energy. We use Multi-party computation software (<horcrux>Horcrux</horcrux>) on our nodes, to further secure funds, and <restake>Re-Stake</restake> on our mainnet nodes, to maximize user rewards efficiency.\n\nWe strongly believe in decentralized infrastructure, independent of the grid, and that's our end goal. We think out of the box and are proud to be a little crazy. We value security, decentralization, privacy and lack of enforcement."
+      "title": "Staking with Citizen Web3 Validator",
+      "description": "Validator info is a public good project, developed and run by Citizen Web3 validator. Our ability to develop is fully endorsed by delegations and staking we receive.\n\nCitizen Web3 is a self-hosted, independent, off the grid, baremetal validator. Our infrastructure runs partially of solar energy and we try to maximize the re-use of existing hardware and minimize consumerism. We use Multi-party computation software (Horcrux) to further secure user funds, and Re-Stake on our mainnet nodes, to maximize user reward efficiency.",
+      "descriptionExtended": "Token holders are incentivized to stake to help secure networks by earning inflation rewards, and often - other perks provided by individual validators.\n\nWe strongly believe in decentralized infrastructure, independent of the grid, and that's our end goal. We think out of the box and are proud to be a little crazy. We value security, decentralization, privacy and lack of enforcement."
+    },
+    "Partners": {
+      "title": "Our Friends and Partners"
     }
   }
 }

@@ -6,7 +6,6 @@ import OurManifestoModal from '@/app/about/modals/our-manifesto-modal';
 import OurToolsModal from '@/app/about/modals/our-tools-modal';
 import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
-import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
@@ -26,16 +25,10 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
 
   return (
     <div>
-      <div className="flex flex-shrink">
-        <div className="flex flex-col">
-          <PageTitle prefix="About" text="Validator Info" />
-          <Story src="about" />
-        </div>
-        <div className="flex-grow" />
-      </div>
+      <Story src="about" />
       <TabList page="AboutPage" tabs={aboutTabs} />
+      <PageTitle text={t('title')} />
       <div>
-        <SubTitle text={t('title')} />
         <div className="m-4 w-2/3 whitespace-pre-line pt-2 text-base">
           {t.rich('description', {
             homeLink: (chunks) => <TextLink content={chunks} href="/" />,

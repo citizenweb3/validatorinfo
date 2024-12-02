@@ -22,6 +22,7 @@ const PosDominanceLine: FC = () => {
       <div className="flex items-center justify-center">
         <ChartButtons
           onlyDays
+          ecosystems
           isChart={isChart}
           onChartChanged={handleChartChanged}
           chartType={chartType}

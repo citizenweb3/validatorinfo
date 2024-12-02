@@ -10,6 +10,7 @@ import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
+import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
 
 export default function StakingPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
@@ -18,18 +19,12 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <div className="flex flex-shrink">
-        <div className="flex flex-col">
-          <PageTitle prefix="About" text="Validator Info" />
-          <Story src="staking" />
-        </div>
-        <div className="flex-grow" />
-      </div>
+      <Story src="staking" />
       <TabList page="AboutPage" tabs={aboutTabs} />
+      <PageTitle text={t('Staking.title')} />
       <div>
-        <SubTitle text={t('Staking.title')} />
-        <div className="flex flex-row items-center border-b border-bgSt py-4">
-          <div className="mt-4 whitespace-pre-line text-base">
+        <div className="flex flex-col items-center border-b border-bgSt py-4">
+          <div className="m-4 whitespace-pre-line text-base">
             {t.rich('Staking.description', {
               horcrux: (text) => (
                 <TextLink target="_blank" href="https://github.com/strangelove-ventures/horcrux" content={text} />
@@ -37,6 +32,7 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
               restake: (text) => <TextLink target="_blank" href="https://restake.app/" content={text} />,
             })}
           </div>
+          <SubDescription text={t('Staking.descriptionExtended')} />
         </div>
         <SubTitle text="Networks" size="h2" />
         <div className="flex flex-row py-4">

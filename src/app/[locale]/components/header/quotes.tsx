@@ -36,7 +36,7 @@ const data = {
 const Quotes: FC<OwnProps> = async () => {
   const headerInfo = await HeaderInfoService.getValidatorsAndChains();
   return (
-    <div className="flex flex-grow flex-row items-center space-x-10 scrollbar-none">
+    <div className="flex flex-grow flex-row items-center space-x-20 scrollbar-none">
       <QuoteItem name="Validators" value={headerInfo.validators} href="/validators" />
       <QuoteItem name="Ecosystems" value={data.ecosystems} href="/networks" />
       <div className="flex items-center active:h-16">

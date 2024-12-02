@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
+import EcosystemDropdown from '@/components/common/list-filters/ecosystem-dropdown';
 import ValidatorListFiltersBattery from '@/components/common/list-filters/validator-list-filters-battery';
 import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
 import PlusButton from '@/components/common/plus-button';
@@ -14,15 +15,6 @@ interface OwnProps {
   perPage: number;
   battery?: boolean;
 }
-
-const ecosystems = [
-  { value: 'cosmos', title: 'Cosmos' },
-  { value: 'polkadot', title: 'Polkadot' },
-  { value: 'ethereum', title: 'Ethereum' },
-  { value: 'near', title: 'Near' },
-  { value: 'avalanche', title: 'Avalanche' },
-  { value: 'pow', title: 'POW' },
-];
 
 const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery = false }) => {
   const router = useRouter();
@@ -58,36 +50,22 @@ const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery =
 
   const onChainsChanged = (value: string) => {
     const newSp = new URL(location.href).searchParams;
-    newSp.delete('selectedEcosystems');
+    newSp.delete('ecosystems');
     const chainParam =
       selectedEcosystems.indexOf(value) === -1
         ? [...selectedEcosystems, value]
         : selectedEcosystems.filter((c) => c !== value);
-    chainParam.forEach((c) => newSp.append('selectedEcosystems', c));
+    chainParam.forEach((c) => newSp.append('ecosystems', c));
     router.push(`${pathname}?${newSp.toString()}`);
   };
 
   return (
-    <div className="flex h-9 items-center justify-end space-x-2">
+    <div className="flex h-8 items-center justify-end space-x-10">
       {isOpened && (
         <>
-          {battery && <ValidatorListFiltersBattery />}
+          <EcosystemDropdown selectedEcosystems={selectedEcosystems} onChainsChanged={onChainsChanged} />
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
-          {ecosystems.map((item) => (
-            <Button
-              component="button"
-              onClick={() => onChainsChanged(item.value)}
-              key={item.value}
-              isActive={selectedEcosystems.indexOf(item.value) !== -1}
-              className="text-sm"
-              contentClassName="max-h-7"
-              activeType="switcher"
-            >
-              <div className="z-20 -my-1 flex flex-row items-center justify-center text-base font-medium">
-                {item.title}
-              </div>
-            </Button>
-          ))}
+          {battery && <ValidatorListFiltersBattery />}
         </>
       )}
       <div className="flex flex-row items-center">

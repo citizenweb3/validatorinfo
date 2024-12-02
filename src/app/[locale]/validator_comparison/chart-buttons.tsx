@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
 import Button from '@/components/common/button';
+import EcosystemDropdown from '@/components/common/list-filters/ecosystem-dropdown';
 
 interface OwnProps {
   isChart: boolean;
@@ -11,14 +12,23 @@ interface OwnProps {
   onChartChanged: (isChart: boolean) => void;
   onTypeChanged: (name: string) => void;
   onlyDays?: boolean;
+  ecosystems?: boolean;
 }
 
 const buttons = ['Daily', 'Weekly', 'Monthly'];
 
-const ChartButtons: FC<OwnProps> = ({ isChart, onChartChanged, chartType, onTypeChanged, onlyDays = false }) => {
+const ChartButtons: FC<OwnProps> = ({
+  isChart,
+  onChartChanged,
+  chartType,
+  onTypeChanged,
+  onlyDays = false,
+  ecosystems = false,
+}) => {
   const t = useTranslations('ComparisonPage');
   return (
-    <div className="space-x-4">
+    <div className="flex space-x-4">
+      {ecosystems && <EcosystemDropdown selectedEcosystems={[]} onChainsChanged={() => {}} />}
       {!onlyDays && (
         <Button
           isActive={isChart}

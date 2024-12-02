@@ -7,6 +7,7 @@ import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
 import ChooseNetwork from '@/app/staking_calculator/choose-network';
 import ChooseValidator from '@/app/staking_calculator/choose-validator';
 import StakingResults from '@/app/staking_calculator/staking-results';
+import Button from '@/components/common/button';
 import RoundedButton from '@/components/common/rounded-button';
 import { ChainItem, StakingRates } from '@/types';
 
@@ -21,18 +22,14 @@ const Calculator: FC<OwnProps> = ({ validatorsList }) => {
 
   useEffect(() => {
     (async () => {
-      // if (chain && validator) {
       const r = await getStakingRates(chain?.id, validator);
       setStakingRates(r);
-      // }
     })();
   }, [chain, validator]);
 
   const handleValidatorChange = (value?: string) => {
     setValidator(value?.toString() ?? '');
   };
-
-  console.log(stakingRates);
 
   return (
     <div>
@@ -46,15 +43,15 @@ const Calculator: FC<OwnProps> = ({ validatorsList }) => {
         <div className="flex-[2] text-lg">
           <ChooseValidator value={validator} onChange={handleValidatorChange} list={validatorsList} />
           {validator && (
-            <>
-              <div className="mt-3.5 flex flex-row justify-between">
+            <div className="flex flex-row justify-between">
+              <Button className="relative z-20 h-16 w-9">
+                <div className="min-h-8 min-w-8 bg-star bg-contain" />
+              </Button>
+              <div className="mt-4 flex flex-col items-end justify-end space-y-4">
                 <RoundedButton>Compare</RoundedButton>
-                <RoundedButton>Profile</RoundedButton>
-              </div>
-              <div className="mt-7 flex justify-center">
                 <RoundedButton>Spread the world</RoundedButton>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>

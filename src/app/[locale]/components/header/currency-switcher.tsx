@@ -17,7 +17,11 @@ export default function CurrencySwitcher() {
 
   return (
     <div ref={ref} className="relative max-h-7 font-sfpro text-base">
-      <Button onClick={() => setIsOpened(!isOpened)} className="h-7 w-14 uppercase">
+      <Button
+        onClick={() => setIsOpened(!isOpened)}
+        className="tracking-none flex h-7 w-10 items-center justify-center uppercase"
+        contentClassName="!px-0"
+      >
         {currency}
       </Button>
       {isOpened && (
@@ -27,7 +31,7 @@ export default function CurrencySwitcher() {
             .map((cur) => (
               <Button
                 key={cur}
-                className="h-7 w-14 uppercase"
+                className="tracking-none h-7 w-14 uppercase"
                 onClick={() => {
                   setCurrency(cur);
                   setIsOpened(false);

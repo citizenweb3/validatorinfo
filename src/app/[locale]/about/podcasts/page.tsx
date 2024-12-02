@@ -20,16 +20,10 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <div className="flex flex-shrink">
-        <div className="flex flex-col">
-          <PageTitle prefix="About" text="Validator Info" />
-          <Story src="podcast" />
-        </div>
-        <div className="flex-grow" />
-      </div>
+      <Story src="podcast" />
       <TabList page="AboutPage" tabs={aboutTabs} />
+      <PageTitle text={t('Podcast.title')} />
       <div>
-        <SubTitle text={t('Podcast.title')} />
         <div className="grid grid-cols-2 gap-2">
           <div className="mr-8 mt-4 whitespace-pre-line border-b border-bgSt py-4 text-base">
             {t.rich('Podcast.description', {

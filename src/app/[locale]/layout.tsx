@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
-import PreloadedIcons from '@/components/preloaded-icons';
 import { locales } from '@/i18n';
 
 const sfpro = localFont({
@@ -70,7 +69,6 @@ export default async function LocaleLayout({
         className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
       >
         <ThemeProvider defaultTheme="dark" attribute="class">
-          <PreloadedIcons />
           <NextIntlClientProvider messages={messages} locale={locale}>
             <div className="flex min-h-screen flex-col px-4">
               <Header />

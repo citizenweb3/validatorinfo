@@ -1,7 +1,8 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
+import Story from '@/components/Story';
 import NotToday from '@/components/common/not-today';
-import SubTitle from '@/components/common/sub-title';
+import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
@@ -12,8 +13,9 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'AIPage' });
   return (
     <div>
+      <Story src="ai" />
       <TabList page="HomePage" tabs={mainTabs} />
-      <SubTitle text={t('title')} />
+      <PageTitle text={t('title')} />
       <div className="mt-6 whitespace-pre-line text-base">
         {t.rich('text', {
           issue: (text) => (
