@@ -62,14 +62,6 @@ const LineChart: React.FC<LineChartProps> = ({
       .y1((d) => yScale(d.y))
       .curve(d3.curveLinear); // Match the line style (jagged)
 
-    // Draw the shadow area (background gradient)
-    svg
-      .append('path')
-      .datum(data)
-      .attr('d', shadowAreaGenerator)
-      .attr('fill', `url(#shadowGradient)`)
-      .attr('opacity', 0.5);
-
     const defs = svg.append('defs');
 
     // Define a gradient for the line stroke
