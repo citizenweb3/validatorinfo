@@ -15,6 +15,7 @@ interface WalletContextType {
     providerName: string;
   } | null;
   refreshWallet: () => void;
+  logout: () => void;
 }
 
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
@@ -22,6 +23,11 @@ const WalletContext = createContext<WalletContextType | undefined>(undefined);
 export const WalletProviderComponent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [verification, setVerification] = useState<WalletVerificationResponse | null>(null);
   const [walletData, setWalletData] = useState<WalletContextType['walletData']>(null);
+
+  const logout = () => {
+    localStorage.removeItem('validatorinfo.com');
+    setWalletData(null);
+  };
 
   const refreshWallet = () => {
     const currentJwt = localStorage.getItem('validatorinfo.com');
@@ -72,7 +78,7 @@ export const WalletProviderComponent: React.FC<{ children: React.ReactNode }> = 
     }
   }, [verification]);
 
-  const value = useMemo(() => ({ walletData, refreshWallet }), [walletData]);
+  const value = useMemo(() => ({ walletData, refreshWallet, logout }), [walletData]);
 
   return <WalletContext.Provider value={value}>{children}</WalletContext.Provider>;
 };

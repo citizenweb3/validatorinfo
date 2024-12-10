@@ -1,55 +1,46 @@
 'use client';
 
-import React from 'react';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
 
-import { WALLETS } from '@/constants';
+import Tooltip from '@/components/common/tooltip';
+import WalletModal from '@/components/wallet-connect/wallet-modal';
 import { useWallet } from '@/context/WalletContext';
 
 const WalletButton: React.FC = () => {
-  const { walletData, refreshWallet } = useWallet();
-  console.log(walletData);
+  const t = useTranslations('Header');
+  const router = useRouter();
+  const [isOpened, setIsOpened] = useState<boolean>(false);
+  const { walletData, logout } = useWallet();
 
   const handleClick = async () => {
-    const provider = WALLETS[0].provider;
-    await provider.enable('cosmoshub-4');
-    const { wallet, walletName } = await provider.connect('cosmoshub-4');
-    const { signature, key } = await provider.signProof('cosmoshub-4');
-
-    const body = {
-      key,
-      signature,
-      address: wallet.address,
-      walletName,
-      chainId: 'cosmoshub-4',
-      extension: WALLETS[0].label,
-    };
-
-    const response = await fetch('/api/auth/wallet/', {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: { 'Content-Type': 'application/json' },
-    }).then((res) => res.json());
-
-    localStorage.setItem('validatorinfo.com', JSON.stringify(response.jwt));
-
-    refreshWallet();
+    if (walletData) {
+      logout();
+      router.push('/');
+    } else {
+      setIsOpened(true);
+    }
   };
 
   return (
-    <button
-      style={{
-        margin: '10px',
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: 'white',
-        color: 'black',
-        fontSize: '16px',
-      }}
-      onClick={handleClick}
-    >
-      {walletData ? walletData.name : 'Connect'}
-    </button>
+    <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
+      <Tooltip tooltip={t('Click to login')}>
+        <div onClick={handleClick} className="flex flex-col items-center">
+          <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('You')}</div>
+          <Image
+            src="/img/avatars/default.png"
+            alt="avatar"
+            width={62}
+            height={58}
+            className="mx-1.5 my-0.5 w-[4.2rem]"
+            priority
+          />
+        </div>
+      </Tooltip>
+      <WalletModal isOpened={isOpened} onClose={() => setIsOpened(false)} />
+    </div>
   );
 };
 

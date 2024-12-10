@@ -5,17 +5,17 @@ import { leapWalletProvider } from '@/providers/leap';
 export const WALLETS = [
   {
     label: 'keplr',
-    logo: 'KeplrIcon',
+    logo: 'keplr',
     provider: keplrWalletProvider,
   },
   {
     label: 'cosmostation',
-    logo: 'CosmostationIcon',
+    logo: 'cosmostation',
     provider: cosmostationWalletProvider,
   },
   {
     label: 'leap',
-    logo: 'LeapIcon',
+    logo: 'leap',
     provider: leapWalletProvider,
   },
 ];
