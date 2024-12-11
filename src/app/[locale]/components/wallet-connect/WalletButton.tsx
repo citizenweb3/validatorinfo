@@ -26,7 +26,7 @@ const WalletButton: React.FC = () => {
 
   return (
     <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
-      <Tooltip tooltip={t('Click to login')}>
+      <Tooltip tooltip={walletData ? t('Click to logout') : t('Click to login')}>
         <div onClick={handleClick} className="flex flex-col items-center">
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('You')}</div>
           <Image
