@@ -6,8 +6,9 @@
     "Quotes": {
       "Validators": { "name": "Validadores", "hint": "" },
       "Ecosystems": { "name": "Ecossistemas", "hint": "" },
-      "Dominance POW": {
-        "name": "Domínio POW",
+      "Dominance": { "name": "Domínio", "hint": "" },
+      "POW": {
+        "name": "POW",
         "hint": "Estacamento global, pools de mineração e estatísticas de validadores"
       },
       "ETH": { "name": "ETH", "hint": "" },
@@ -178,6 +179,8 @@
     "Monthly": "Mensal",
     "Choose Providers": "Escolher provedores",
     "Profile": "Perfil",
+    "Token": "Token",
+    "Compare": "Comparar",
     "Health Change": "Mudança de saúde",
     "Technical Score Changes": "Pontuação técnica",
     "TVS Governance Score Changes": "Pontuação de governança da TVS",
@@ -239,8 +242,8 @@
       "<link>Validator Infra</link>: infraestrutura bare-metal auto-hospedada. Infra independente off the grid, incluindo endpoints públicos, testnets, nós de arquivo e retransmissão",
       "(NA no momento) Bazaar: NFTs, Merchandise, Decentraland"
     ],
-    "Our tools": "Nossas ferramentas",
-    "Our Manifesto": "Nosso Manifesto",
+    "Our tools": "Ferramentas",
+    "Our Manifesto": "Manifesto",
     "Manifesto": "Deste ponto de vista distante, a Terra pode não parecer ter nenhum interesse particular. Mas para nós é diferente. Considere novamente naquele ponto. Isso está aqui. Essa é a casa. Somos nós. Nele, todos que você ama, todos que você conhece, todos de quem você já ouviu falar, todos os seres humanos que já existiram, viveram suas vidas. O conjunto de nossa alegria e sofrimento, milhares de religiões, ideologias e doutrinas econômicas confiantes, cada caçador e coletor, cada herói e covarde, cada criador e destruidor de civilização, cada rei e camponês, cada jovem casal apaixonado, cada mãe e cada pai, filho esperançoso, inventor e explorador, todo professor de moral, todo político corrupto, todo “superstar”, todo “líder supremo”, todo santo e pecador na história de nossa espécie viveram lá – em um grão de poeira suspenso em um raio de sol... Nossas posturas, nossa auto-importância imaginada, a ilusão de que temos alguma posição privilegiada no Universo, são desafiadas por este ponto de luz pálida. Nosso planeta é um pontinho solitário na grande escuridão cósmica envolvente. Na nossa obscuridade, em toda esta vastidão, não há indícios de que a ajuda virá de outro lugar para nos salvar de nós mesmos...\n\nExtraído de 'Um Pálido Ponto Azul', de Carl Sagan.\n\n\nAcreditamos na liberdade acima das necessidades. Acreditamos em possibilidades acima da aplicação. Acreditamos em valores acima dos desejos. Acreditamos que a censura matou mais pessoas do que qualquer outra coisa combinada. Valorizamos a honestidade e valorizamos a verdade. Valorizamos o amor e valorizamos todas as criaturas existentes. Valorizamos a inteligência e valorizamos a descentralização.\n\nAcreditamos na comunicação, que permite aos participantes pensar, decidir e votar pessoalmente sobre qualquer tema e assunto. Pensamos que o conteúdo deve esforçar-se por não ter opiniões subjetivas e ajudar os seus consumidores a formar uma opinião, o que resultará numa melhor discussão e, por sua vez, num consenso mais eficiente.\n\nAcreditamos que as blockchains não são simplesmente uma forma de nações digitais. Mas, blockchains abertos e verificáveis \u200B\u200Bsão um tanto semelhantes a colmeias naturais, florestas, padrões da natureza que nos permitem comunicar melhor. Sem comunicação, estamos condenados, e o consenso descentralizado é uma ferramenta que pode e irá ajudar aqueles que desejam fazer do nosso pálido ponto azul um lugar um pouco melhor.\n\nE QUE O CÓDIGO ESTEJA COM VOCÊ!",
     "Podcast": {
       "title": "Citizen Web3 Podcast",

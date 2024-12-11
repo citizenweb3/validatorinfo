@@ -20,6 +20,7 @@ const ChooseValidator: FC<OwnProps> = ({ value, onChange, list }) => {
       list={list}
       selected={value}
       onChange={(value) => onChange(value.toString())}
+      modalClassName="min-w-40 max-w-96"
       className="flex-grow"
     />
   );

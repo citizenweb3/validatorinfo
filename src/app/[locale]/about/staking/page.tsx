@@ -23,7 +23,7 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Staking.title')} />
       <div>
-        <div className="flex flex-col items-center border-b border-bgSt py-4">
+        <div className="flex flex-col items-center py-4">
           <div className="m-4 whitespace-pre-line text-base">
             {t.rich('Staking.description', {
               horcrux: (text) => (

@@ -25,7 +25,7 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
       <PageTitle text={t('Podcast.title')} />
       <div>
         <div className="grid grid-cols-2 gap-2">
-          <div className="mr-8 mt-4 whitespace-pre-line border-b border-bgSt py-4 text-base">
+          <div className="mr-8 mt-4 whitespace-pre-line py-4 text-base">
             {t.rich('Podcast.description', {
               link: (link) => <TextLink href="https://www.citizenweb3.com/episodes" target="_blank" content={link} />,
             })}

@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
-import PreloadedIcons from '@/components/preloaded-icons';
 import { WalletProviderComponent } from '@/context/WalletContext';
 import { locales } from '@/i18n';
 
@@ -38,7 +37,7 @@ const sfpro = localFont({
 const handjet = localFont({
   src: [
     {
-      path: '../../../public/fonts/handjet-regular.ttf',
+      path: '../../../public/fonts/handjet-regular2.ttf',
       weight: '400',
       style: 'normal',
     },

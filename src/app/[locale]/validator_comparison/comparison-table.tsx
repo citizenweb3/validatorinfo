@@ -5,6 +5,7 @@ import { FC, useEffect, useState } from 'react';
 
 import ValidatorEmptyItem from '@/app/validator_comparison/ValidatorEmptyItem';
 import ChartButtons from '@/app/validator_comparison/chart-buttons';
+import ComparisonPanel from '@/app/validator_comparison/comparison-panel';
 import getValidatorData, { ValidatorData, ValidatorDataFilled } from '@/app/validator_comparison/get-validator-data';
 import { fillColors } from '@/app/validator_comparison/helpers';
 import ValidatorLeftPanel from '@/app/validator_comparison/validator-left-panel';
@@ -13,13 +14,24 @@ import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {}
 
+const validatorList = [
+  { value: 'POSTHUMAN', title: 'POSTHUMAN' },
+  { value: 'Bro_n_Bro', title: 'Bro_n_Bro' },
+  { value: 'Imperator', title: 'Imperator' },
+  { value: '01node', title: '01node' },
+  { value: 'Stakeflow', title: 'Stakeflow' },
+  { value: 'PUPMØS', title: 'PUPMØS' },
+  { value: 'Citadel.one', title: 'Citadel.one' },
+];
+
 const ComparisonTable: FC<OwnProps> = ({}) => {
   const t = useTranslations('ComparisonPage');
   const [data, setData] = useState<ValidatorData[]>([]);
   const [filledData, setFilledData] = useState<ValidatorDataFilled[]>([]);
-  const [isChart, setIsChart] = useState<boolean>(true);
+  const [isChart, setIsChart] = useState<boolean>(false);
   const [chartType, setChartType] = useState<string | undefined>('Daily');
   const [isChanged, setIsChanged] = useState<boolean>(false);
+  const [isComparing, setIsComparing] = useState<boolean>(false);
 
   useEffect(() => {
     const first = [getValidatorData(0, 'Citizen Web 3')];
@@ -35,6 +47,11 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
     setIsChanged(true);
   };
 
+  const handleChange = (index: number, name: string) => {
+    setData([...data.slice(0, index), getValidatorData(index, name), ...data.slice(index + 1)]);
+    setIsChanged(true);
+  };
+
   const handleRemove = (id: number) => {
     setData((state) => state.filter((v) => v.id !== id));
     setIsChanged(true);
@@ -44,6 +61,7 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
     setData([getValidatorData(0, 'Citizen Web 3')]);
     setChartType('Daily');
     setIsChanged(false);
+    setIsComparing(false);
   };
 
   const handleChartChanged = (value: boolean) => {
@@ -72,32 +90,49 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
       </div>
       <div className="mt-10 flex flex-grow flex-row text-base">
         <ValidatorLeftPanel isChart={isChart} />
-        {filledData.map((item) => (
+        {filledData.map((item, index) => (
           <ValidatorListItem
             onRemove={() => handleRemove(item.id)}
+            list={validatorList}
+            exists={data.map((v) => v.moniker)}
+            onChange={(name: string) => handleChange(index, name)}
             key={item.id}
             item={item}
             chartType={chartType}
             isChart={isChart}
           />
         ))}
-        {filledData.length < 3 && <ValidatorEmptyItem exists={data.map((v) => v.moniker)} onAdd={handleAdd} />}
+        {filledData.length < 3 && (
+          <div className="max-w-60">
+            <ValidatorEmptyItem
+              name={t('Add')}
+              list={validatorList}
+              exists={data.map((v) => v.moniker)}
+              onAdd={handleAdd}
+            />
+          </div>
+        )}
         <div className="flex-grow"></div>
-        <div className="flex flex-col items-end justify-end space-y-6">
-          {isChanged && (
-            <RoundedButton contentClassName="px-20 text-lg" onClick={handleReset}>
-              {t('Reset')}
-            </RoundedButton>
-          )}
-          {filledData.length > 0 && (
-            <RoundedButton contentClassName="px-20 text-lg" onClick={() => setIsChart(!isChart)}>
-              {t(isChart ? 'Hide Charts' : 'Show Charts')}
-            </RoundedButton>
-          )}
-          {filledData.length > 1 && (
-            <RoundedButton contentClassName="px-20 text-2xl">{t('Share result')}</RoundedButton>
-          )}
-        </div>
+        {filledData.length > 1 && (
+          <div className="flex flex-col items-end space-y-6 text-lg">
+            <ComparisonPanel
+              validator={filledData[0]?.moniker}
+              isComparing={isComparing}
+              onCompare={() => setIsComparing(!isComparing)}
+            />
+            {isChanged && (
+              <RoundedButton contentClassName="px-20 text-lg" onClick={handleReset}>
+                {t('Reset')}
+              </RoundedButton>
+            )}
+            {isComparing && <RoundedButton contentClassName="px-20 text-lg">{t('Share result')}</RoundedButton>}
+            {filledData.length > 0 && (
+              <RoundedButton contentClassName="px-20 text-2xl" onClick={() => setIsChart(!isChart)}>
+                {t(isChart ? 'Hide Charts' : 'Show Charts')}
+              </RoundedButton>
+            )}
+          </div>
+        )}
       </div>
     </>
   );

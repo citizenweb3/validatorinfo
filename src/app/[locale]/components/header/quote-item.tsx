@@ -7,7 +7,7 @@ import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
   name: string;
-  value: string | number;
+  value?: string | number;
   href: string;
   grow?: boolean;
 }
@@ -25,11 +25,13 @@ const QuoteItem: FC<OwnProps> = ({ name, value, grow, href }) => {
           ) : (
             <Image src="/img/icons/fall.svg" alt="fall" className="w-3" width={8} height={6} />
           ))}
-        <span
-          className={`ml-1 font-handjet text-sm ${typeof grow === 'undefined' ? 'text-highlight' : grow ? 'text-secondary' : 'text-red'}`}
-        >
-          {value}
-        </span>
+        {value && (
+          <span
+            className={`ml-1 font-handjet text-sm ${typeof grow === 'undefined' ? 'text-highlight' : grow ? 'text-secondary' : 'text-red'}`}
+          >
+            {value}
+          </span>
+        )}
       </Link>
     </Tooltip>
   );

@@ -11,9 +11,10 @@ interface OwnProps {
   selected?: string | number;
   onChange: (value: string | number) => void;
   className?: string;
+  modalClassName?: string;
 }
 
-const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, className }) => {
+const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, className = '', modalClassName = '' }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
   const selectedTitle =
     typeof selected !== 'undefined' ? list.find((item) => item.value === selected)?.title ?? '' : '';
@@ -35,7 +36,7 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, classNam
       </div>
       <TriangleButton direction={isModalOpened ? 't' : 'b'} onClick={() => setIsModalOpened(true)} />
       <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="right-0 top-0">
-        <div className="space-y-1 text-nowrap text-base">
+        <div className={`${modalClassName} space-y-1 text-nowrap text-base`}>
           {list.map((item) => (
             <div
               key={item.value}

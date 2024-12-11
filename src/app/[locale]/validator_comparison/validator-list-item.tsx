@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
+import ValidatorEmptyItem from '@/app/validator_comparison/ValidatorEmptyItem';
 import { ValidatorDataFilled } from '@/app/validator_comparison/get-validator-data';
 import ValidatorItemRow from '@/app/validator_comparison/validator-item-row';
 import LineChart from '@/components/charts/line-chart';
-import Button from '@/components/common/button';
 import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
@@ -11,17 +11,19 @@ interface OwnProps {
   chartType: string | undefined;
   isChart: boolean;
   onRemove: () => void;
+  list: { value: string; title: string }[];
+  exists: string[];
+  onChange: (name: string) => void;
 }
 
-const ValidatorListItem: FC<OwnProps> = ({ item, onRemove, isChart }) => {
+const ValidatorListItem: FC<OwnProps> = ({ item, onRemove, isChart, onChange, list, exists }) => {
   return (
     <div className="flex max-w-96 flex-grow flex-col">
       <ValidatorItemRow className="!min-h-20 border-b border-bgSt text-highlight">
-        {' '}
-        <Button className="relative z-20 mr-4 h-16 w-7">
-          <div className={`min-h-8 min-w-8 bg-star bg-contain`} />
-        </Button>
         <div className="overflow-x-hidden text-ellipsis text-nowrap">{item.moniker}</div>
+        <div className="text-white">
+          <ValidatorEmptyItem onAdd={onChange} list={list} exists={exists} />
+        </div>
         <div className="-mt-20">
           <PlusButton size="sm" isOpened={true} onClick={onRemove} />
         </div>

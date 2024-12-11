@@ -3,6 +3,8 @@
 import { useTranslations } from 'next-intl';
 import { FC, useState } from 'react';
 
+import Switch from '@/components/common/switch';
+
 interface OwnProps {}
 
 const Switcher: FC<OwnProps> = () => {
@@ -12,14 +14,7 @@ const Switcher: FC<OwnProps> = () => {
   return (
     <div className="mt-6 flex items-center">
       <div className="border-b border-primary px-2 pb-px font-handjet text-lg">{t('All Metrics')}</div>
-      <div
-        onClick={() => setValue(!value)}
-        className="relative mx-2 h-[1.25rem] w-8 cursor-pointer rounded-[0.3125rem] bg-highlight"
-      >
-        <div
-          className={`${value ? 'left-0.5' : 'right-0.5'} absolute bottom-0.5 top-0.5 w-4 rounded-[0.1875rem] bg-background`}
-        />
-      </div>
+      <Switch value={value} onChange={(v) => setValue(v)} />
       <div className="border-b border-primary px-2 pb-px font-handjet text-lg">{t('Our Metrics')}</div>
     </div>
   );

@@ -33,6 +33,7 @@ const ChooseNetwork: FC<OwnProps> = ({ value, onChange }) => {
       list={validatorList}
       selected={value}
       onChange={(value) => onChange(chains.find((v) => v.id === value))}
+      modalClassName="min-w-56 max-w-96"
       className="flex-grow"
     />
   );

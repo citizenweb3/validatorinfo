@@ -35,8 +35,8 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
         </div>
         <div className="mt-12 flex justify-center">
           <div className="flex flex-row items-center">
-            <Image src="/img/icons/email.svg" alt="email" width={16} height={16} className="mr-1 h-4 w-4" />
-            <Link href="mailto:ping@validatorinfo.com" className="text-base hover:text-highlight hover:underline">
+            <Image src="/img/icons/email.svg" alt="email" width={32} height={32} className="mr-5 mt-2 h-9 w-9" />
+            <Link href="mailto:ping@validatorinfo.com" className="text-4xl hover:text-highlight hover:underline">
               ping@validatorinfo.com
             </Link>
           </div>

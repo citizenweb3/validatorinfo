@@ -19,9 +19,17 @@ const HeaderControls: FC<OwnProps> = () => {
         href="/"
         className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-bgSt hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
       >
-        <div className="flex flex-col items-center px-2 py-1">
+        <div className="relative flex flex-col items-center px-2 py-1">
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('Home')}</div>
           <Image src="/img/logo.svg" alt="logo" width={186} height={174} className="w-16" priority />
+          <Image
+            src="/img/icons/alpha.svg"
+            alt="logo"
+            width={68}
+            height={55}
+            className="absolute -bottom-6 -right-7 w-[4.5rem]"
+            priority
+          />
         </div>
       </Link>
       <div className="relative mx-1 mt-7 flex h-0.5 flex-grow justify-center border-white bg-gradient-to-r from-primary to-secondary shadow-line">
