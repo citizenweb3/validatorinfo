@@ -68,22 +68,24 @@ The application will attempt to maximize retention tools, remain open source and
 -----------------------------------------------
 
 ### 2. Product Description
-Validator info is a free web3 application. It allows users to browse extensive information about networks, validators, mining pools, tokens, and offers a wider range of retention tools for the user, as well as a gamified experience. The idea of validator info is to rethink the explorer. This means from the UX to the logic, yet without reinventing the wheel. 
+Validator info is a free to use, web3 application. It allows users to browse extensive information about networks, validators, mining pools, tokens, and offers a wider range of retention tools for the user, as well as a gamified experience. The idea of validator info is to rethink the explorer. From the UX to the logic, yet without reinventing the wheel. 
 
-The application tries to keep the already accepted, fashion style of UI, adds a twist of gamification to it and tries to make it simpler to all types of users. If explorers are meant to be points of access to the blockchain, then they should be multichain, blockchain agnostic, promote decentralization and be easy and cool to use. 
+The application design hast kept the widely accepted, fashion-style of UI explorers and web3 apps. With a twist of gamification, and a simpler user experience to all types of target audiences. If explorers are meant to be points of access to the blockchain, then they should be multichain, blockchain agnostic, promote decentralization. Be easy and cool to use. 
 
 #### A user story
-***For the correct understadnign of the description below, the reader shoudl from here and onwards, take into accoutn the fact that the text will refer to validators and mining pools as a synonim AKA validators=mining pools"***
+***For the correct understanding of the description below, the reader should from here and onwards, take into account the fact that the text will refer to validators and mining pools as a synonym AKA validators=mining pools"***
 
-A) A staker/miner/holder, of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. Alternativle a miner wants to see the ratings or the status of a mining pool, or just find out overview information about a pool
+A) A staker/miner/holder, of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. Alternative a miner wants to see the ratings or the status of a mining pool, or just find out overview information about a pool
 
 B) They either search for, or find the website https://validatorinfo.com
 
 C) They arrive at the main page, which present them with a list of validators and mining pools, written alphabetically, without being broken down by ecosystem. They may also use some of the filters and customization options presented to narrow the search down
 
-D) The main page contains not just a validator list, but the validators are presented with metrics and some basic links. Each validator is clickable
+D) The main page contains not just a validator list, but the validators are presented with metrics and some basic links. Each validator and most metrics are clickable
 
-E) Upon clicking any of the validators, the user arrives at a validator profile page. The validator profile page presents the user with a various info, such as a visualization of the validators nodes. Various metrics and visualizations about the validator. A table of the validated networks with various metrics. Governance summary, etc
+D1) The main page contains other tools, such as a browser-based rumors chat, global web3 metrics, comparison and staking calculator tools
+
+E) Upon clicking any of the validators, the user arrives at a validator profile page. The validator profile page presents the user with a various info, such as a visualization of the validators nodes. Various metrics and visualizations about the validator. A table of the validated networks with various metrics. Governance summary, etc. This page presents a validator entity, not a specific node
 
 F) A user may also access a left menu from any of the pages of the website. The menu includes links to a more simple a-z validator list, a network a-z page and a metrics a-z page. Each takes the user to the desired page with alphabetical lists. Each item in the list is clickable and takes the user to the appropriate page with the description of the metric. In the case of the validator, it takes the user to the validator profile page. In the case of a network, i.e. cosmos, the user is:
 
@@ -93,13 +95,17 @@ H) Bottom of each page contains a sub-menu with our social links
 
 I) The left menu also contains links to such pages as about us, etc. 
 
-J) When a user clicks on a network from the validator profile page, he arrives at the network summary page. From here he can see transactions like on a normal explorer
+J) When a user clicks on a network from the validator profile page, he arrives at a `passport` type page of a validator on a specific network. The validator profile contains a list of all the validators nodes, including info about public goods, and revenue. 
 
-K) A user can see a table with networks A given validator validates. And other info
+K) When a user opens the passport page, they see a detailed description of a validators' activity on a specific network, broken down into categories, for easier understanding. This page represents the more typical validator as a node, rather than the whole entity
 
-L) A user clicks on CosmosHub inside citizenweb3 validator page and gets to /validators/citizenweb3/cosmos - Here they will find info related to that validator on that network, such as governance summary, tx summary etc
+L) A user is presented with numerous tools, such as AI search, favorites, dashboard page, etc. The tools are only accessible after a web3 login is performed
 
-M) A user clicks on tx XYZ in that list, and gets to /validators/citizenweb3/cosmos/tx/123456789 they see tx info and can expand tx detail on same page or get a JSON format of the tx
+M) The application contains numerous retention tools, such as reward collection, library resources, ability to interact - approve, add and disprove info, etc
+
+N) A user has access to all network related information, such as governance summary, tx summary etc
+
+O) A user clicks on tx XYZ in, and gets to /validators/citizenweb3/cosmos/tx/123456789 they see tx info and can expand tx detail on same page or get a JSON format of the tx
 
 -----------------------------------------------
 
