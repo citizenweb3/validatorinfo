@@ -65,7 +65,7 @@ app.prepare().then(() => {
       console.error(err);
       process.exit(1);
     })
-    .listen(port, () => {
+    .listen(port, '0.0.0.0', () => {
       console.log(`> Ready on ${hostname}:${port}`);
     });
 });

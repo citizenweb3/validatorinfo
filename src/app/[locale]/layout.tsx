@@ -3,6 +3,7 @@ import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import PlausibleProvider from 'next-plausible';
 import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
+import Image from 'next/image';
 import { ReactNode } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -69,6 +70,13 @@ export default async function LocaleLayout({
       <body
         className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
       >
+        <Image
+          src="/img/christmas.png"
+          alt="christmas light"
+          width={5635}
+          height={435}
+          className="pointer-events-none fixed -top-16 left-0 right-0 z-[9999]"
+        />
         <WalletProviderComponent>
           <ThemeProvider defaultTheme="dark" attribute="class">
             <NextIntlClientProvider messages={messages} locale={locale}>
