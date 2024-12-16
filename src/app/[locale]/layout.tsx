@@ -71,7 +71,7 @@ export default async function LocaleLayout({
         className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
       >
         <Image
-          src="/img/christmas.png"
+          src="/img/christmas.svg"
           alt="christmas light"
           width={5635}
           height={435}
