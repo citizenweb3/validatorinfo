@@ -53,11 +53,15 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center px-8 pb-3.5  pt-6 text-lg">
-                {item.delegate && <RoundedButton href={item.delegate}>Stake</RoundedButton>}
+              <div className="flex flex-col items-center justify-center px-8 pb-3.5 pt-6">
+                {item.delegate && (
+                  <RoundedButton href={item.delegate} contentClassName="text-lg">
+                    Stake
+                  </RoundedButton>
+                )}
                 <RoundedButton
                   href={`https://staking.citizenweb3.com/chains/${item.name}`}
-                  contentClassName="text-nowrap"
+                  contentClassName="text-nowrap text-base"
                   className="mt-4"
                 >
                   Infra & Tools
