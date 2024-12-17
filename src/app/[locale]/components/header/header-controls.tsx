@@ -59,6 +59,13 @@ const HeaderControls: FC<OwnProps> = () => {
         >
           <path d="M-2.18557e-07 5L6 0.669872L6 9.33013L-2.18557e-07 5Z" />
         </svg>
+        <Image
+          src="/img/christmas.svg"
+          alt="christmas light"
+          width={5635}
+          height={435}
+          className="pointer-events-none absolute -top-14 left-0 right-0 z-[9999]"
+        />
       </div>
       <WalletButton />
     </div>

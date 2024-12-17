@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 
-import CheckMark from '@/app/about/staking/check-mark';
 import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
@@ -35,46 +34,33 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
           <SubDescription text={t('Staking.descriptionExtended')} />
         </div>
         <SubTitle text="Networks" size="h2" />
-        <div className="flex flex-row py-4">
-          <table className="w-full">
-            <thead>
-              <tr className="bg-table_header text-sm">
-                <th className="py-3">Network</th>
-                <th>Delegate</th>
-                <th>Endpoints</th>
-                <th>Seeds</th>
-                <th>Relayers</th>
-                <th>Snapshot</th>
-                <th>Archive</th>
-                <th>Others</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((item, index) => (
-                <tr key={index} className="border-b border-black">
-                  <td className="h-16 text-base">
-                    <div className="flex h-full items-center px-2.5">
-                      <div className="mr-2 w-10">
-                        {item.icon && (
-                          <Image src={item.icon} alt={item.name} width={40} height={40} className="h-10 w-auto" />
-                        )}
-                      </div>
-                      <div>{item.name}</div>
-                    </div>
-                  </td>
-                  <td className="pb-3.5 pt-6 text-center">
-                    {item.delegate && <RoundedButton href={item.delegate}>Stake</RoundedButton>}
-                  </td>
-                  <td className="text-center">{!!item.endpoints.length && <CheckMark data={item.endpoints} />}</td>
-                  <td className="text-center">{!!item.seeds.length && <CheckMark data={item.seeds} copy />}</td>
-                  <td className="text-center">{item.relayers}</td>
-                  <td className="text-center">{item.snapshot && <CheckMark />}</td>
-                  <td className="text-center">{item.archive && <CheckMark />}</td>
-                  <td className="text-center">{item.additions?.join(', ')}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="flex flex-row flex-wrap py-4">
+          {data.map((item, index) => (
+            <div key={index} className="m-4 w-60 border-b border-black bg-card">
+              <div>
+                <div className="relative">
+                  <div className="flex h-40 w-60 items-center justify-center bg-[url('/img/staking-bg.png')] bg-cover">
+                    {item.icon && (
+                      <Image src={item.icon} alt={item.name} width={40} height={40} className="-mt-8 h-24 w-24" />
+                    )}
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#1B1D23] bg-opacity-70 px-3 py-1 text-lg">
+                    {item.name}
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center px-8 pb-3.5  pt-6 text-lg">
+                {item.delegate && <RoundedButton href={item.delegate}>Stake</RoundedButton>}
+                <RoundedButton
+                  href={`https://staking.citizenweb3.com/chains/${item.name}`}
+                  contentClassName="text-nowrap"
+                  className="mt-4"
+                >
+                  Infra & Tools
+                </RoundedButton>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -85,401 +71,179 @@ const data: {
   name: string;
   icon?: string;
   delegate?: string;
-  endpoints: { name: string; href: string }[];
-  seeds: { name: string; href: string }[];
-  relayers: string;
-  snapshot: boolean;
-  archive: boolean;
-  additions?: string[];
+  stakingName?: string;
 }[] = [
   {
     name: 'Cosmos hub',
     icon: '/img/icons/chains/atom.png',
     delegate:
       'https://wallet.keplr.app/chains/cosmos-hub?modal=validator&chain=cosmoshub-4&validator_address=cosmosvaloper1e859xaue4k2jzqw20cv6l7p3tmc378pc3k8g2u&referral=true',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.cosmoshub-4.citizenweb3.com' },
-      { name: 'api', href: 'https://api.cosmoshub-4.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.cosmoshub-4.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://api.cosmoshub-4.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: 'd567c93fa5b646c8cca8ba0a2d7499bca6aeba52@mainnet.seednode.citizenweb3.com:26656' },
-      { name: 'peer', href: 'd567c93fa5b646c8cca8ba0a2d7499bca6aeba52@78.46.79.242:26656' },
-    ],
-    relayers: 'CosmosHub <-> Stride',
-    snapshot: false,
-    archive: false,
-    additions: ['Running since 2019', 'Running Testnet'],
+    stakingName: 'cosmoshub',
+  },
+  {
+    name: 'Atom One',
+    icon: '/img/icons/chains/atomone.svg',
+    delegate: 'https://explorer.allinbits.services/atomone/staking/atonevaloper1e859xaue4k2jzqw20cv6l7p3tmc378pcclyn60',
+    stakingName: 'atomone',
   },
   {
     name: 'Celestia',
     icon: '/img/icons/chains/celestia.png',
     delegate:
       'https://wallet.keplr.app/chains/celestia?modal=validator&chain=celestia&validator_address=celestiavaloper1m77eksxfz9q50qejnqf720sns7q0xtx8uzxnhs',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.celestia.citizenweb3.com' },
-      { name: 'api', href: 'https://api.celestia.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.celestia.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.celestia.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '7066852273cf94ec60003b40428010a4eac86f5b@mainnet.seednode.citizenweb3.com:27656' },
-      { name: 'peer', href: '7066852273cf94ec60003b40428010a4eac86f5b@78.46.79.242:27656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis RPC Provider', 'Running Testnet'],
+    stakingName: 'celestia',
   },
   {
     name: 'Evmos',
     icon: '/img/icons/chains/evmos.png',
     delegate:
       'https://wallet.keplr.app/chains/evmos?modal=validator&chain=evmos_9001-2&validator_address=evmosvaloper1mtwvpdd57gpkyejd566s24afr9zm5ryq8gwpvj&referral=true',
-    endpoints: [],
-    seeds: [],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Genesis Validator'],
+    stakingName: 'evmos',
   },
   {
     name: 'LikeCoin',
     icon: '/img/icons/chains/like.png',
     delegate:
-      'https://wallet.keplr.app/chains/likecoin?modal=validator&chain=likecoin-mainnet-2&validator_address=likevaloper136r5phdpc02gmtmyampl9qkv0mdq385xxsaadu',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.likecoin.citizenweb3.com' },
-      { name: 'api', href: 'https://api.likecoin.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.likecoin.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.likecoin.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: 'c46842036cfd8b956f0969e25f0a6599ad98e2a9@mainnet.seednode.citizenweb3.com:33656' },
-      { name: 'peer', href: 'c46842036cfd8b956f0969e25f0a6599ad98e2a9@78.46.79.242:33656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
+      'https://wallet.keplr.app/?modal=staking&chain=likecoin-mainnet-2&validator_address=likevaloper136r5phdpc02gmtmyampl9qkv0mdq385xxsaadu&step_id=3&action_id=stake',
+    stakingName: 'likecoin',
   },
   {
     name: 'BitCanna',
     icon: '/img/icons/chains/bcna.png',
     delegate: 'https://wallet.bitcanna.io/validators/bcnavaloper1ngt4atd3qlgcwfv7fkjdjxhz7k0vl2rejrvzye',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.bitcanna.citizenweb3.com' },
-      { name: 'api', href: 'https://api.bitcanna.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.bitcanna.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.bitcanna.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: 'c098c53e76d204cd843cec99855cf7febe4277bf@mainnet.seednode.citizenweb3.com:32656' },
-      { name: 'peer', href: 'c098c53e76d204cd843cec99855cf7febe4277bf@78.46.79.242:32656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
+    stakingName: 'bitcanna',
   },
   {
     name: 'Cyber/Bostrom',
     icon: '/img/icons/chains/boot.png',
     delegate:
       'https://wallet.keplr.app/chains/bostrom?modal=validator&chain=bostrom&validator_address=bostromvaloper1f7nx65pmayfenpfwzwaamwas4ygmvalqj6dz5r&referral=true',
-    endpoints: [],
-    seeds: [],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis & Genesis Validator'],
+    stakingName: 'bostrom',
   },
   {
     name: 'Gravity Bridge',
     icon: '/img/icons/chains/grav.png',
     delegate:
       'https://wallet.keplr.app/chains/bostrom?modal=validator&chain=bostrom&validator_address=bostromvaloper1f7nx65pmayfenpfwzwaamwas4ygmvalqj6dz5r&referral=true',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.gravity.citizenweb3.com' },
-      { name: 'api', href: 'https://api.gravity.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.gravity.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.gravity.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: 'cba79db1bb3a5438fb293da0a627a8450f053941@mainnet.seednode.citizenweb3.com:34656' },
-      { name: 'peer', href: 'cba79db1bb3a5438fb293da0a627a8450f053941@78.46.79.242:34656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
+    stakingName: 'gravitybridge',
   },
   {
     name: 'Dymension',
     icon: '/img/icons/chains/dymension-logo.png',
     delegate: 'https://portal.dymension.xyz/dymension/staking',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.dym.citizenweb3.com' },
-      { name: 'api', href: 'https://api.dym.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.dym.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.dym.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '8679333e027be05116c388c040d7c45ca1aeeeeb@mainnet.seednode.citizenweb3.com:14656' },
-      { name: 'peer', href: '8679333e027be05116c388c040d7c45ca1aeeeeb@78.46.79.242:14656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis & Genesis Validator'],
+    stakingName: 'dymension',
   },
   {
     name: 'QuickSilver',
     icon: '/img/icons/chains/qck.png',
     delegate: 'https://quicksilver.explorers.guru/validator/quickvaloper1m77eksxfz9q50qejnqf720sns7q0xtx8a7t9vq',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.quicksilver.citizenweb3.com' },
-      { name: 'api', href: 'https://api.quicksilver.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.quicksilver.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.quicksilver.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '719ddc260d5bbd17a7c6ed4219bdbad60d423d96@mainnet.seednode.citizenweb3.com:28656' },
-      { name: 'peer', href: '719ddc260d5bbd17a7c6ed4219bdbad60d423d96@78.46.79.242:28656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
+    stakingName: 'quicksilver',
   },
   {
     name: 'GoVGen',
     icon: '/img/icons/chains/govgen.png',
     delegate: 'https://explorer.govgen.io/govgen/staking/govgenvaloper1m77eksxfz9q50qejnqf720sns7q0xtx8pv6wce',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.govgen.citizenweb3.com' },
-      { name: 'api', href: 'https://api.govgen.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.govgen.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.govgen.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '75bb6414e108294ea185bf499552112c6d7c076f@mainnet.seednode.citizenweb3.com:35656' },
-      { name: 'peer', href: '75bb6414e108294ea185bf499552112c6d7c076f@78.46.79.242:35656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis Validator. Governance-only chain'],
+    stakingName: 'govgen',
   },
   {
     name: 'Uptick',
     icon: '/img/icons/chains/uptick.png',
     delegate: 'https://uptick.explorers.guru/validator/uptickvaloper1ke3qlvuhcn537m47l3y3hj0v7jm48ka47nkduu',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.uptick.citizenweb3.com' },
-      { name: 'api', href: 'https://api.uptick.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.uptick.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.uptick.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: 'bddaa78825892bde04b5aa8f28b95a072a50eaf9@mainnet.seednode.citizenweb3.com:29656' },
-      { name: 'peer', href: 'bddaa78825892bde04b5aa8f28b95a072a50eaf9@78.46.79.242:29656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
+    stakingName: 'uptick',
   },
   {
     name: 'Neutron',
     icon: '/img/icons/chains/neutron.png',
     // delegate: 'https://app.interlay.io/vaults/wd7mvsKzX8QaGh268wiqCpu8j7z5pAZhw1VUkcJPxwtNY14jb/DOT/IBTC',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.neutron.citizenweb3.com' },
-      { name: 'api', href: 'https://api.neutron.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.neutron.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.neutron.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '1020d1490712fe3e669658e506b46a5974a430fc@mainnet.seednode.citizenweb3.com:31656' },
-      { name: 'peer', href: '1020d1490712fe3e669658e506b46a5974a430fc@78.46.79.242:31656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Genesis Validator', 'Running Testnet'],
+    stakingName: 'neutron',
   },
   {
     name: 'Stride',
     icon: '/img/icons/chains/strd.png',
     delegate: 'https://explorer.stride.zone/stride/staking/stridevaloper1m77eksxfz9q50qejnqf720sns7q0xtx8gf36rj',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.stride.citizenweb3.com' },
-      { name: 'api', href: 'https://api.stride.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.stride.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.strdie.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: 'aab3f03bfb030244e018f20681b2ac6b9ad0d0f7@mainnet.seednode.citizenweb3.com:30656' },
-      { name: 'peer', href: 'aab3f03bfb030244e018f20681b2ac6b9ad0d0f7@78.46.79.242:30656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Genesis Validator', 'Running Governor'],
+    stakingName: 'stride',
+  },
+  {
+    name: 'Interlay',
+    icon: '/img/icons/chains/interlay.svg',
+    delegate: 'https://app.interlay.io/vaults/wd7mvsKzX8QaGh268wiqCpu8j7z5pAZhw1VUkcJPxwtNY14jb/DOT/IBTC',
+    stakingName: 'interlay',
   },
   {
     name: 'Althea',
     icon: '/img/icons/chains/althea.png',
-    // delegate: 'https://explorers.l0vd.com/union-testnet/staking/unionvaloper1kvr0mlfevhgrxvsxj8h4c9xrf9f90lmhgnpurg',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.althea.citizenweb3.com' },
-      { name: 'api', href: 'https://api.althea.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.althea.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.althea.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '7955b5233d4efe3506900422f1bcd58521be1377@mainnet.seednode.citizenweb3.com:36656' },
-      { name: 'peer', href: '7955b5233d4efe3506900422f1bcd58521be1377@78.46.79.242:36656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis validator - HALTED', 'Test Network'],
+    delegate: 'https://www.mintscan.io/althea/validators/altheavaloper1m77eksxfz9q50qejnqf720sns7q0xtx8c4r6fm',
+    stakingName: 'althea',
   },
   {
     name: 'Stakenet Nomic',
     icon: '/img/icons/chains/nom.png',
     delegate: 'https://app.nomic.io/staking?validator=nomic1mk05ju8jq0mxzx3kfr0wcct8an2htjh53m4yk5&modal=info',
-    endpoints: [],
-    seeds: [],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Stakenet'],
+    stakingName: 'nomic',
+  },
+  {
+    name: 'Namada',
+    icon: '/img/icons/chains/nam.png',
+    delegate: 'https://shielded.live/validators/D4ADFBD41E607C7ADFEDE6DDAB53383A9D525EF9C7E70A742F48803A6D1EA4F8',
+    stakingName: 'namada',
   },
   {
     name: 'Testnet Namada',
     icon: '/img/icons/chains/nam.png',
     delegate: 'https://shielded.live/validators/D4ADFBD41E607C7ADFEDE6DDAB53383A9D525EF9C7E70A742F48803A6D1EA4F8',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.namada-housefire.citizenweb3.com/' },
-      { name: 'indexer', href: 'https://indexer.namada-housefire.citizenweb3.com/v3' },
-    ],
-    seeds: [
-      { name: 'seed', href: 'tcp://fb6f004f247913b248e71f405f11f2e1c785ce08@@testnet.seednode:31656' },
-      { name: 'peer', href: 'tcp://fb6f004f247913b248e71f405f11f2e1c785ce08@168.119.37.164:31656' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis validator (Shielded Expedition)', 'Test Network'],
+    stakingName: 'namadatestnet',
   },
   {
     name: 'Testnet Soarchain',
     icon: '/img/icons/chains/soarchain.png',
     delegate: 'https://explorer.soarchain.com/soar/staking/soarvaloper1z66ujcpjxppue2u4pflwhakh0he4qup63586cx',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.soar-testnet.citizenweb3.com' },
-      { name: 'api', href: 'https://api.soar-testnet.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.soar-testnet.citizenweb3.com' },
-      { name: 'webrpc', href: 'https://api.soar-testnet.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '9d32c4a13a64f1a77c0f6b32138a3b745580cd8a@testnet.seednode.citizenweb3.com:17256' },
-      { name: 'peer', href: '9d32c4a13a64f1a77c0f6b32138a3b745580cd8a@78.46.79.242:17256' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis validator', 'Test Network'],
+    stakingName: 'soarchain',
   },
   {
     name: 'Testnet SpacePussy',
     icon: '/img/icons/chains/spacepussy.png',
     delegate: 'https://spacepussy.ai/network/bostrom/hero/pussyvaloper1f7nx65pmayfenpfwzwaamwas4ygmvalqhfj9et',
-    endpoints: [],
-    seeds: [],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Test Network'],
+    stakingName: 'pussy',
   },
   {
     name: 'Testnet Union',
     icon: '/img/icons/chains/union.svg',
     delegate: 'https://explorers.l0vd.com/union-testnet/staking/unionvaloper1kvr0mlfevhgrxvsxj8h4c9xrf9f90lmhgnpurg',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.union-testnet.citizenweb3.com' },
-      { name: 'api', href: 'https://api.union-testnet.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.union-testnet.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://api.union-testnet.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '6638ffb8127647f02c5df37079a6dd5593659149@testnet.seednode:17156' },
-      { name: 'peer', href: '6638ffb8127647f02c5df37079a6dd5593659149@168.119.37.164:17156' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Test Network'],
+    stakingName: 'union',
   },
   {
     name: 'Testnet Symphony',
     icon: '/img/icons/chains/symphony.png',
     delegate: 'https://testnet.ping.pub/symphony/staking/symphonyvaloper1wpzkum4902l3978qyl24469ktlmt58u9yy9nsa',
-    endpoints: [
-      { name: 'rpc', href: 'https://rpc.symphony-testnet.citizenweb3.com' },
-      { name: 'api', href: 'https://api.symphony-testnet.citizenweb3.com' },
-      { name: 'grpc', href: 'https://grpc.symphony-testnet.citizenweb3.com' },
-      { name: 'grpcweb', href: 'https://grpcweb.symphony-testnet.citizenweb3.com' },
-    ],
-    seeds: [
-      { name: 'seed', href: '3bad680d3eebdf0e9168ad5802e2611c95eab124@testnet.seednode:27056' },
-      { name: 'peer', href: '3bad680d3eebdf0e9168ad5802e2611c95eab124@168.119.37.164:27056' },
-    ],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Pre-Genesis Validator', 'Test Network'],
+    stakingName: 'symphony',
   },
   {
     name: 'Testnet Neutron',
     icon: '/img/icons/chains/neutron.png',
-    endpoints: [],
-    seeds: [],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Test Network'],
+    stakingName: 'neutrontestnet',
+  },
+  {
+    name: 'Testnet Axone',
+    icon: '/img/icons/chains/axone.svg',
+    delegate: 'https://explore.axone.xyz/Axone%20testnet/staking/axonevaloper1c3yfkydn9quv9ns6mkfrcgg489nrlwxd88yu9s',
+    stakingName: 'axone',
+  },
+  {
+    name: 'Testnet Nillion',
+    icon: '/img/icons/chains/nillion.svg',
+    delegate: 'https://testnet.nillion.explorers.guru/validator/nillionvaloper1xhk9ux9y6w0gc3rtc8ksx2gf37mageegadjrp6',
+    stakingName: 'nillion',
+  },
+  {
+    name: 'Testnet Artela',
+    icon: '/img/icons/chains/artela.svg',
+    delegate: 'https://testnet.artela.explorers.guru/validator/artvaloper1mtmuvpra48uwgdht6wj4pnwp5d89xsc9aadfup',
+    stakingName: 'artela',
   },
   {
     name: 'Testnet Cosmos',
     icon: '/img/icons/chains/atom.png',
     delegate: 'https://explorer.polypore.xyz/provider/staking/cosmosvaloper18lz3nz3nyhtewm35npaccnc7javzmyvfake7j7',
-    endpoints: [],
-    seeds: [],
-    relayers: '',
-    snapshot: false,
-    archive: false,
-    additions: ['Test Network'],
+    stakingName: 'cosmostestnet',
   },
 ];
-
-/*
-
-
-  { name: 'BitCanna', rpc: 'https://rpc.bitcanna.citizenweb3.com/', api: 'https://api.bitcanna.citizenweb3.com/' },
-  { name: 'LikeCoin', rpc: 'https://rpc.likecoin.citizenweb3.com/', api: 'https://api.likecoin.citizenweb3.com/' },
-  {
-    name: 'CosmosHub',
-    rpc: 'https://rpc.cosmoshub-4.citizenweb3.com/',
-    api: 'https://api.cosmoshub-4.citizenweb3.com/',
-  },
-  { name: 'Evmos', rpc: 'https://rpc.evmos.citizenweb3.com/', api: 'https://api.evmos.citizenweb3.com/' },
-  { name: 'Celestia', rpc: 'https://rpc.celestia.citizenweb3.com/', api: 'https://api.celestia.citizenweb3.com/' },
-  {
-    name: 'Composable',
-    rpc: 'https://rpc.composable.citizenweb3.com/',
-    api: 'https://api.composable.citizenweb3.com/',
-  },
-  { name: 'Stride', rpc: 'https://rpc.stride.citizenweb3.com/', api: 'https://api.stride.citizenweb3.com/' },
-  { name: 'Neutron', rpc: 'https://rpc.neutron.citizenweb3.com/', api: 'https://api.neutron.citizenweb3.com/' },
-
-* */
