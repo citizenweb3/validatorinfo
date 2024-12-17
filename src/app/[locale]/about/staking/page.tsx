@@ -36,19 +36,13 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
         <SubTitle text="Networks" size="h2" />
         <div className="flex flex-row flex-wrap py-4">
           {data.map((item, index) => (
-            <div key={index} className="m-4 w-60 bg-card">
+            <div key={index} className="m-4 w-60 bg-[url('/img/staking-bg.png')] bg-cover">
               <div>
                 <div className="relative">
                   <div className="absolute left-0 right-0 top-0 px-3 py-1 text-center text-lg">{item.name}</div>
-                  <div className="flex h-40 w-60 items-center justify-center bg-[url('/img/staking-bg.png')] bg-cover">
+                  <div className="flex h-44 w-60 items-center justify-center">
                     {item.icon && (
-                      <Image
-                        src={item.icon}
-                        alt={item.name}
-                        width={40}
-                        height={40}
-                        className="mt-8 h-[6.5rem] w-[6.5rem]"
-                      />
+                      <Image src={item.icon} alt={item.name} width={40} height={40} className="mt-12 h-28 w-28" />
                     )}
                   </div>
                 </div>
