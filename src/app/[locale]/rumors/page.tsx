@@ -14,7 +14,10 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'RumorsPage' });
   return (
     <div className="flex flex-grow flex-col">
-      <Story src="rumors" />
+      <Story
+        src="rumors"
+        alt="Pixelated, 90s game-style characters spreading rumors outside entrance to the p2p chat"
+      />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <ChatWrapper />

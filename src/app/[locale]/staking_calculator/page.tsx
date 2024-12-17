@@ -26,7 +26,10 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
 
   return (
     <div className="flex flex-col">
-      <Story src={'calculator'} />
+      <Story
+        src={'calculator'}
+        alt="Pixelated, 90s game-style characters inside a calculator helping to select best validator"
+      />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>

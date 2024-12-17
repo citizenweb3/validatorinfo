@@ -28,7 +28,7 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   return (
     <div>
-      <Story src="partners" />
+      <Story src="partners" alt="Pixelated, 90s game-style characters partner up and exchanging consensus" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Partners.title')} />
       <div className="">

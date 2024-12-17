@@ -20,7 +20,7 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <Story src="podcast" />
+      <Story src="podcast" alt="Pixelated, 90s game-style characters recording the Citizen Web3 podcast together" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Podcast.title')} />
       <div>
@@ -33,7 +33,7 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
           <Player />
         </div>
         <div className="mt-4 pt-2 text-base">
-          <SubTitle text={t('Podcast.Subscribe')} />
+          <SubTitle text={t('Podcast.Subscribe')} size="h2" />
           <div className="my-8 flex space-x-14">
             <RoundedButton href="https://www.citizenweb3.com/rss" target="_blank">
               CW3 RSS Feed

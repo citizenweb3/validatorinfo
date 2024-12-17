@@ -63,7 +63,17 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${sfpro.variable} ${handjet.variable}`}>
       <head>
-        <title>ValidatorInfo</title>
+        <title>
+          ValidatorInfo: Validator & Mining Pool Information - Explore the Multichain Network Landscape of Web3
+        </title>
+        <meta
+          name="description"
+          content="ValidatorInfo - a multichain explorer and dashboard, with simple UI and gamification. Free web3 application, providing analytics and real-time metrics on networks, validators, mining pools and tokens."
+        />
+        <meta
+          name="keywords"
+          content="validator info, multichain, validator, mining pool, explorer, staking, crypto, Web3, PoS, PoW, staking portfolio, delegators, miners, Proof of work, Proof of stake, Network governance, Blockchain networks, Token Information, Validator Comparison, Network Metrics, Validator Performance, Mining Pool Performance, Web3 Data, Blockchain Data, Staking rewards, Total value secured, Total value locked, Validator public good, Validator voting, Developer activity"
+        />
         <PlausibleProvider domain="validatorinfo.com" />
       </head>
       <body

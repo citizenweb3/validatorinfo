@@ -26,7 +26,10 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
 
   return (
     <div>
-      <Story src="networks" />
+      <Story
+        src="networks"
+        alt="Pixelated, 90s game-style characters connecting web cables of web3 blockchain networks"
+      />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
       <Networks perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage} />

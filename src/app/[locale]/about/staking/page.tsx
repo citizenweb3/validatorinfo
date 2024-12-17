@@ -18,7 +18,7 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <Story src="staking" />
+      <Story src="staking" alt="Pixelated, 90s game-style characters stake on validator and mining pool rewards" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Staking.title')} />
       <div>
@@ -36,16 +36,20 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
         <SubTitle text="Networks" size="h2" />
         <div className="flex flex-row flex-wrap py-4">
           {data.map((item, index) => (
-            <div key={index} className="m-4 w-60 border-b border-black bg-card">
+            <div key={index} className="m-4 w-60 bg-card">
               <div>
                 <div className="relative">
+                  <div className="absolute left-0 right-0 top-0 px-3 py-1 text-center text-lg">{item.name}</div>
                   <div className="flex h-40 w-60 items-center justify-center bg-[url('/img/staking-bg.png')] bg-cover">
                     {item.icon && (
-                      <Image src={item.icon} alt={item.name} width={40} height={40} className="-mt-8 h-24 w-24" />
+                      <Image
+                        src={item.icon}
+                        alt={item.name}
+                        width={40}
+                        height={40}
+                        className="mt-8 h-[6.5rem] w-[6.5rem]"
+                      />
                     )}
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#1B1D23] bg-opacity-70 px-3 py-1 text-lg">
-                    {item.name}
                   </div>
                 </div>
               </div>

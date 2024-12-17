@@ -21,7 +21,14 @@ const HeaderControls: FC<OwnProps> = () => {
       >
         <div className="relative flex flex-col items-center px-2 py-1">
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('Home')}</div>
-          <Image src="/img/logo.svg" alt="logo" width={186} height={174} className="w-16" priority />
+          <Image
+            src="/img/logo.svg"
+            alt="validatorinfo.com logo. Futuristic robot head with a V-style tick symbol"
+            width={186}
+            height={174}
+            className="w-16"
+            priority
+          />
           <Image
             src="/img/icons/alpha.svg"
             alt="logo"

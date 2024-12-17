@@ -13,7 +13,7 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'AIPage' });
   return (
     <div>
-      <Story src="ai" />
+      <Story src="ai" alt="Pixelated, 90s game-style characters talking with a GPT-style AI caht bot" />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <div className="mt-6 whitespace-pre-line text-base">

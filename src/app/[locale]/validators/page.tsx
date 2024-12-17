@@ -26,7 +26,10 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
 
   return (
     <div>
-      <Story src="validators" />
+      <Story
+        src="validators"
+        alt="Pixelated, 90s game-style characters carrying gold to and out to represent total value secured"
+      />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
       <SimpleValidators perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />

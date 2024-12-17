@@ -16,7 +16,10 @@ const ValidatorComparisonPage: NextPageWithLocale = async ({ params: { locale } 
 
   return (
     <div className="flex flex-grow flex-col">
-      <Story src="compare" />
+      <Story
+        src="compare"
+        alt="Pixelated, 90s game-style characters playing amongst numbers helping comparing validators"
+      />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>

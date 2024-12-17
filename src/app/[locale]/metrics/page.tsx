@@ -21,7 +21,7 @@ const MetricsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
 
   return (
     <div>
-      <Story src="metrics" />
+      <Story src="metrics" alt="Pixelated, 90s game-style characters next to web3 charts, looking out for analytics" />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
       <Switcher />

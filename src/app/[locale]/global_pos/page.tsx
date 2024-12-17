@@ -30,14 +30,17 @@ export default async function GlobalPosPage() {
 
   return (
     <div className="flex flex-col">
-      <Story src={'global'} />
+      <Story
+        src="global"
+        alt="Pixelated, 90s game-style characters riding roller coaster of web3 charts and statistics"
+      />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <Suspense fallback={<div />}>
         <TotalsList />
       </Suspense>
       <div className="mt-20">
-        <SubTitle text={t('status')} />
+        <SubTitle text={t('status')} size="h2" />
       </div>
       <div className="mt-16 flex justify-between px-36">
         <DecentralizationBar />
@@ -46,17 +49,17 @@ export default async function GlobalPosPage() {
       </div>
       <div>
         <div className="mb-16 mt-20">
-          <SubTitle text={t('dominance')} />
+          <SubTitle text={t('dominance')} size="h2" />
         </div>
         <div className="flex w-full flex-row space-x-14">
           <PosDominanceLine />
         </div>
         <div className="mb-16 mt-20">
-          <SubTitle text={t('total')} />
+          <SubTitle text={t('total')} size="h2" />
         </div>
         <PosTotalLine />
         <div className="mb-16 mt-20">
-          <SubTitle text={t('cap')} />
+          <SubTitle text={t('cap')} size="h2" />
         </div>
         <PosCapitalizationBar />
       </div>

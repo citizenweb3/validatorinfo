@@ -15,7 +15,7 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const size = 'h-24 w-24 min-w-24 min-h-24';
   return (
     <div>
-      <Story src="contacts" />
+      <Story src="contacts" alt="Pixelated, 90s game-style characters giving contact info to validatorinfo.com logo" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Contacts')} />
       <div className="py-4">

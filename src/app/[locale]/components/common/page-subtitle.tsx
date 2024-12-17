@@ -7,10 +7,10 @@ interface OwnProps {
 
 const PageSubTitle: FC<OwnProps> = ({ prefix, text }) => {
   return (
-    <h1 className="my-3 flex w-fit border-b border-bgSt px-4 py-3 text-xl text-highlight">
+    <h2 className="my-3 flex w-fit border-b border-bgSt px-4 py-3 text-xl text-highlight">
       <span className="mr-3 text-white">{prefix}</span>
       {text}
-    </h1>
+    </h2>
   );
 };
 

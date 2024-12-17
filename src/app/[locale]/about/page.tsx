@@ -25,7 +25,10 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
 
   return (
     <div>
-      <Story src="about" />
+      <Story
+        src="about"
+        alt="Pixelated, 90s game-style characters are discussing the explorer with the validatorinfo head logo"
+      />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('title')} />
       <div>
@@ -53,7 +56,7 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
         <div className="relative mt-9 h-10 bg-bgSt">
           <Image
             src="/img/icons/green-man.png"
-            alt="green man"
+            alt="Pixelated, 90s game-style character, robin hood styled, explaining about validatorinfo.com"
             width={780}
             height={1104}
             className="absolute bottom-3 right-10 w-60"

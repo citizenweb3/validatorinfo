@@ -31,7 +31,7 @@ const WalletButton: React.FC = () => {
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('You')}</div>
           <Image
             src="/img/avatars/default.png"
-            alt="avatar"
+            alt="validatorinfo.com web3 login button. User personalized avatar"
             width={62}
             height={58}
             className="mx-1.5 my-0.5 w-[4.2rem]"
