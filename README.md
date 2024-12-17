@@ -29,13 +29,13 @@ git clone https://github.com/citizenweb3/validatorinfo.git validatorinfo
 cd validatorinfo
 ```
 
-### Prepare your .env file
+### Prepare your `.env` file
 
 ```bash
 cp .env.example .env
 ```
 
-### Example of .env
+### Example of `.env`
 
 ```bash
 POSTGRES_DB=validatorinfo
