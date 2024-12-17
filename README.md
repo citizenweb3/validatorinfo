@@ -11,6 +11,17 @@
 
 ## Installing
 
+### Prerequisites
+
+```bash
+sudo apt install cmdtest
+sudo apt install nodejs
+sudo apt install npm
+sudo apt install build-essential
+npm install --global yarn
+yarn global add pm2
+```
+
 ### Clone repo
 
 ```bash
@@ -35,17 +46,6 @@ DATABASE_URL="postgresql://validatorinfo:password@localhost:5432/mydb?schema=pub
 SERVER_PORT="3000"
 INDEXER_PORT="3001"
 PUBLIC_URL="localhost"
-```
-
-### Prerequisites
-
-```bash
-sudo apt install cmdtest
-sudo apt install nodejs
-sudo apt install npm
-sudo apt install build-essential
-npm install --global yarn
-yarn global add pm2
 ```
 
 ### Install dependencies
