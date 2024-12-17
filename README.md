@@ -11,20 +11,20 @@
 
 ## Installing
 
-# Clone repo
+### Clone repo
 
 ```bash
 git clone https://github.com/citizenweb3/validatorinfo.git validatorinfo
 cd validatorinfo
 ```
 
-# Prepare your .env file
+### Prepare your .env file
 
 ```bash
 cp .env.example .env
 ```
 
-# Example of .env
+### Example of .env
 
 ```bash
 POSTGRES_DB=validatorinfo
@@ -37,7 +37,7 @@ INDEXER_PORT="3001"
 PUBLIC_URL="localhost"
 ```
 
-# Prerequisites
+### Prerequisites
 
 ```bash
 sudo apt install cmdtest
@@ -48,13 +48,13 @@ npm install --global yarn
 yarn global add pm2
 ```
 
-# Install dependencies
+### Install dependencies
 
 ```bash
 yarn
 ```
 
-# Build
+### Build
 
 ```bash
 make create-deps
@@ -65,7 +65,7 @@ make generate-schema
 yarn build
 ```
 
-# Start
+### Start
 
 ```bash
 pm2 start "yarn start" --name next
