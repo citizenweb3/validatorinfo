@@ -4,19 +4,34 @@ DRAFT - DANGER
 
 # Validator info: the return of the explorer
 
-### TL;DR
-This document is a mixture of a white paper / user documentation for validatorinfo.com: validator-focused, multichain explorer, dashboard and aggregator for POS token holders and delegators. ValidatoriInfo offers unique insights into validator data. It utilizes a mixture of user interaction, onchain data, social data, public good information, and visualizations - such as graphs, unique staking calculators, comparison tools, etc. 
+### 1. TL;DR
+> validatorinfo.com: A multichain Proof of Work and Pproof of Stake explorer, with a focus on validators and minign pools. A dashboard and an aggregator for token holders, miners, delegators and validators alike. ValidatoriInfo offers unique insights into validator and minign pools data. Utilizing a mixture of data, such as: user interaction, onchain metrics, social data, public good information, visual data, and numerous retention tools.
 
-With an aim to help the user navigate their landscape across the developing multichain world of validators. Interested target audiences, may include: any stakers, delegators, holders of proof of stake tokens, validators, researchers, data analytics and web3 enthusiasts. 
+Our goals:
+- Help users navigate the developing multichain landscape of validators and mining pools
+- Make epxlorers an adoption tool. Beyond a technical/analytical webiste
+- Help users find more efficeint ways to park their capital with operators
+- Improve querying on chain databases by introducing random prompts
+- Decrease the gap between operators and their delegators via gamified and meaningful UX and UI
+- Create a verifiable point of reference (the battery) for operator health status in real-time, for the web3 landscape
 
-The application will attempt to maximize retention tools and remain open source. Further, are a collection of ideas, calculations, and other `under the hood` detail, that may improve user experience. 
+Interested target audiences: 
+- Stakers
+- Delegators
+- Miners
+- Proof of stake token holders
+- Proof of work token holders
+- Validators
+- Minign pools
+- Researchers
+- Data analytics
+- Web3 enthusiasts 
 
-If you would like to contribute, please leave us any feedabck, and look out for `under the hood` labeleed isuues.
-
+The application will attempt to maximize retention tools, remain open source and free. If you would like to contribute, please leave us any feedabck, and look out for `under the hood` labeleed issues.
 
 -----------------------------------------------
 
-## Content 
+### Content 
 
 **[1. TL;DR](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#tldr)**
 
@@ -26,7 +41,12 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 **[3. Web3 Application](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#a-journey-towards-web3-applications)**
 
-  * [3.1. Tools](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+  * [3.1. Staking Calculator](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+  * [3.2. Validator comparison](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+  * [3.3. Rumors](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+  * [3.4. LLM](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+  * [3.5. Dashboards and Operator-User interaction](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
+  * [3.6. UI and UX](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#ai-and-other-tools)
 
 **[4. Metrics](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md#calculations-of-internal-metrics)**
 
@@ -47,65 +67,102 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 
 -----------------------------------------------
 
-### Introduction and product description
-- What will it do and why in detail
+### 2. Product Description
+Validator info is a free to use, web3 application. It allows users to browse extensive information about networks, validators, mining pools, tokens, and offers a wider range of retention tools for the user, as well as a gamified experience. The idea of validator info is to rethink the explorer. From the UX to the logic, yet without reinventing the wheel. 
+
+The application design hast kept the widely accepted, fashion-style of UI explorers and web3 apps. With a twist of gamification, and a simpler user experience to all types of target audiences. If explorers are meant to be points of access to the blockchain, then they should be multichain, blockchain agnostic, promote decentralization. Be easy and cool to use. 
 
 #### A user story
-1) A staker of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. 
+***For the correct understanding of the description below, the reader should from here and onwards, take into account the fact that the text will refer to validators and mining pools as a synonym AKA validators=mining pools"***
 
-2) They either search for or find the website validatorinfo.com
+A) A staker/miner/holder, of any token wants to find out information about whom to stake tokens with, or simply wanting to find out info about the validator they are already delegating to. Alternative a miner wants to see the ratings or the status of a mining pool, or just find out overview information about a pool
 
-3) They arrive at the main page, which present them with a list of validators, written alphabetically, without being broken down by ecosystem. They may also use some of the filters presented to narrow the search down
+B) They either search for, or find the website https://validatorinfo.com
 
-4) The main page contains not just a validator list, but the validators are presented with metrics and some basic links. Each validator is clickable
+C) They arrive at the main page, which present them with a list of validators and mining pools, written alphabetically, without being broken down by ecosystem. They may also use some of the filters and customization options presented to narrow the search down
 
-5) Upon clicking any of the validators, the user arrives at a validator profile page. The validator profile page presents the user with a various info, such as a visualization of the validators nodes. Various metrics and visualizations about the validator. A table of the validated networks with various metrics. Governance summary, etc
+D) The main page contains not just a validator list, but the validators are presented with metrics and some basic links. Each validator and most metrics are clickable
 
-6) A user may also access a left menu from any of the pages of the website. The menu includes links to a more simple a-z validator list, a network a-z page and a metrics a-z page. Each takes the user to the desired page with alphabetical lists. Each item in the list is clickable and takes the user to the appropriate page with the description of the metric. In the case of the validator, it takes the user to the validator profile page. In the case of a network, i.e. cosmos, the user is:
+D1) The main page contains other tools, such as a browser-based rumors chat, global web3 metrics, comparison and staking calculator tools
 
-7) Taken to the network summary page. A similar page to the validator profile page, in which they are presented with various metrics and visualizations
+E) Upon clicking any of the validators, the user arrives at a validator profile page. The validator profile page presents the user with a various info, such as a visualization of the validators nodes. Various metrics and visualizations about the validator. A table of the validated networks with various metrics. Governance summary, etc. This page presents a validator entity, not a specific node
 
-8) Bottom of each page contains a sub-menu with our social links
+F) A user may also access a left menu from any of the pages of the website. The menu includes links to a more simple a-z validator list, a network a-z page and a metrics a-z page. Each takes the user to the desired page with alphabetical lists. Each item in the list is clickable and takes the user to the appropriate page with the description of the metric. In the case of the validator, it takes the user to the validator profile page. In the case of a network, i.e. cosmos, the user is:
 
-9) The left menu also contains links to such pages as about us, etc. 
+G) Taken to the network summary page. A similar page to the validator profile page, in which they are presented with various metrics and visualizations
 
-10) When a user clicks on a network from the validator profile page, he arrives at the network summary page. From here he can see transactions like on a normal explorer
+H) Bottom of each page contains a sub-menu with our social links
 
-11) A user can see a table with networks A given validator validates. And other info
+I) The left menu also contains links to such pages as about us, etc. 
 
-12) A user clicks on CosmosHub inside citizenweb3 validator page and gets to /validators/citizenweb3/cosmos - Here they will find info related to that validator on that network, such as governance summary, tx summary etc
+J) When a user clicks on a network from the validator profile page, he arrives at a `passport` type page of a validator on a specific network. The validator profile contains a list of all the validators nodes, including info about public goods, and revenue. 
 
-13) A user clicks on tx XYZ in that list, and gets to /validators/citizenweb3/cosmos/tx/123456789 they see tx info and can expand tx detail on same page or get a JSON format of the tx
+K) When a user opens the passport page, they see a detailed description of a validators' activity on a specific network, broken down into categories, for easier understanding. This page represents the more typical validator as a node, rather than the whole entity
+
+L) A user is presented with numerous tools, such as AI search, favorites, dashboard page, etc. The tools are only accessible after a web3 login is performed
+
+M) The application contains numerous retention tools, such as reward collection, library resources, ability to interact - approve, add and disprove info, etc
+
+N) A user has access to all network related information, such as governance summary, tx summary etc
+
+O) A user clicks on tx XYZ in, and gets to /validators/citizenweb3/cosmos/tx/123456789 they see tx info and can expand tx detail on same page or get a JSON format of the tx
 
 -----------------------------------------------
 
-### A journey towards web3 applications
+### 3. A journey towards web3 applications
 - no email logins
 - wallet and Web3 actions
+- onchain registry
 - staking from app
 - self-hosting, green energy: decentralized infra
 - own llm model
+- dao and token?
+
+##### User interaction flow with the app
+- User logs in via web3 wallet
+- Users can add info about validators, such as links to interviews, public goods, other links
+- Users can add info to library page
+- Users can add or propose info to network page
+- Users receive badges for adding info 
+- Adding info is signing tx
+- Signed tx -> mint poap / nft 
 
 #### AI and other tools
-- staking calculator. Unique. Include slashing own token, etc
-- val comparison: uptime, revenue over time (leading to capital efficiency flow)
+
+##### Staking calculator 
+Existing stakign calculators do not offer real time information and are inaccurate. They exclude various data from calculations, such as slashing and revenue, hence misleading users by providign wrong information. We have developed our stakign caluclator to include the following:
+- Allow a user to calculate income from staking in: currency `X`, over `Y` amount of time, in `Z` network from `P` operator or `XYZP`
+- Allow a user to calculate returns from either mining or staking (no scattering)
+- Include validator revenue and slashing params, hence providing a realtime, more precise answer
+
+##### Validator comparison 
+- uptime, revenue over time (leading to capital efficiency flow)
 - val revenue: own tokens, slashing parameters, compare against network
-- Rumors. Matrix style. Leading to tx memo
-- Reviews / announcements. Leading to governance forum or bazaar
 - capital flow efficiency. Which val would i best put 1 100 USD for period X
+
+##### Rumours 
+- Rumors. Matrix style. Leading to tx memo
+
+##### LLM / Random prompts
+- AI data. On chain data. Social data feed
+
+##### Dashboards, reviews and interactions
+- Reviews / announcements. Leading to governance forum or bazaar
+- Dashboards: logged-in users and validators via gaming styles (Throne room)
+
+##### UI and UX
+- stylistics: pixelated gaming. Easy info feed
+- pixeled characters
+- gamification
+- badges. Retention for actions
 - visual comparisons: uptime, etc
 - Poaps, token collection
-- web browser game. Simple in browser. 80s style
-- stylistics: pixelated gaming. Easy info feed
-- dashboards: logged-in users and validators via gaming styles (Throne room)
-- pixeled characters
-- badges. Retention for actions
-- AI data. On chain data. Social data feed
 - Token swap in platform
+- web browser game. Simple in browser. 80s style
 
 -----------------------------------------------
 
-### Calculations of internal metrics
+### 4. Calculations of internal metrics
 - New metrics / Metrics changes
 - US, GS, SC, TS
 - battery
@@ -114,14 +171,22 @@ If you would like to contribute, please leave us any feedabck, and look out for 
 #### Validator Metrics that are compared as averages to a network
 1) `uptime`: Caluculate uptime over epoch. Compare to other validators in network. Show uptime as comparison to other validators on netowrk over N period of time
 2) `missed blocks`: Caluculate missed blocks over epoch. Compare to other validators in network. Show missed blocks as comparison to other validators on netowrk over N period of time
+3) `self delegation`: Self Delegation shoudl be calculated as ratio and comapred to other valdiators on network, with 3 states: high / medeium / low
 
 Research:
 - TVL can also be compared to the rest of the network. That is already shown in power of total network. i.e. percent of total stake. Maybe they should be shown together somehow
 
 #### Validator revenue
-- On a val profile page, there is a revenue tab, going further we can try to develop a basic metric to be later on used in calculations
-- We can show this and calculate easily a metric, such as: user A stakes amount B for period of time C, during period of time D. For that he receives Cashback (if provided) or validator token + staking rewards, that's E 
-- If value of E over a period of time, D is larger than sole value of staking rewards. We have something to work with
+- The validator profile page cotains a revenue tab, whcih dispalys total validator revenue across his activities
+- Induvidual revenue is still shown for each network, but on val on X pages
+- User `A` stakes amount `B` for period of time `C` = ABC
+- Validator `V` does not offer cashback and has not been slashed. Validator `V1` offers cashback (has own token) + slashed over period `C`
+- Hence `ABC`*`V` != `A1BC` *`V1`
+- In other words, validators that provide own tokens can provide higher revenue over same period of time
+- Equaly, slashing events shoudl be included in calculations, as they can influence overall payouts  
+- Self stake ratios shoudl be somehow included after calculating the revenue, as to show payout risks
+- Previous slashing cases should also be included in risk calculations
+- Slashign boards: https://services.kjnodes.com/cosmos-tools/validator-slashboard/
 
 #### TS, SS, GS, US
 - The scores must meet the following criteria:
@@ -164,8 +229,27 @@ Research:
 - % of other scores (35%: TS - 20%, GS - 10%, SS - 5%) 
 
 #### Chain health:
-- use own?
+Chain health index:
 - include health meter on each chain profile page?
+- live explorer: https://openchains.info/status
+- code commits - too difficult to calculate (branches, etc) - can take existing rating
+- twitter mentions?
+- other ratings
+- user value: m.cap/accounts
+- gini cooeficient
+- tx volume 
+- Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed.
+- How many L2s… or rather, how many network extensions are building on top of your L1
+- active wallets
+- builders
+- gh starts
+- tvl
+- uptime?
+- C.P.  / M. cap?
+- hashrate?
+- revenue
+- include for chain health / rating: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating + others + https://cer.live/token
+- include possible medians - comparisons to other netowrks 
 
 #### Others, research:
 - At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
@@ -184,10 +268,10 @@ Research:
 
 ----------------------------------------------------------
 
-### Multichain reputation: a possible hope
+### 5. Multichain reputation: a possible hope
 - Reputation
 
-### NFTs, validator wars and Bubbles
+#### NFTs, validator wars and Bubbles
 - NFTs: many ideas. nft pools. 
 - Staking on validators: creating unique NFTs with value
 - Where is the money, Lebowski?: Providing API calls. Ads to foundations. cw3 retail and foundation delegations
@@ -215,6 +299,6 @@ E) (1)Drops / (2)Bubbles (dao)
 - stake E to receive voting rights
 - Staking c3 should be on favorite validators. Wrap any value into E1 or E2 to receive fav NFT. Stake fav NFT?
 
-### Summary / Conclusion
+### 6. Summary / Conclusion
 - description of what is offered to whom and why its needed
   
