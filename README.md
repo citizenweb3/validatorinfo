@@ -1,5 +1,5 @@
 # Validator Info
-[Validator Info](https://validatorinfo.com/): multichain POW and POS explorer, dashboard and aggregator, focused on validators and mining pools. 
+[Validator Info](https://validatorinfo.com/): validator focused, multichain explorer, dashboard and aggregator. 
 
 ## Socials: [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo)
 
@@ -7,5 +7,6 @@
 
 ## License: [BE GOOD](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG)
 
-![image](https://github.com/citizenweb3/validatorinfo/assets/7550961/6a7d6673-32be-4a31-895c-2793fde91ce4)
+![image](https://github.com/user-attachments/assets/0611528c-4dc7-4fd3-bf84-d3c2a0b4592e)
+
 
