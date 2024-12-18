@@ -1,0 +1,266 @@
+{
+  "common": {
+    "locale": "pt"
+  },
+  "Header": {
+    "Quotes": {
+      "Validators": { "name": "Validadores", "hint": "" },
+      "Ecosystems": { "name": "Ecossistemas", "hint": "" },
+      "Dominance": { "name": "Domínio", "hint": "" },
+      "POW": {
+        "name": "POW",
+        "hint": "Estacamento global, pools de mineração e estatísticas de validadores"
+      },
+      "ETH": { "name": "ETH", "hint": "" },
+      "Polkadot": { "name": "Polkadot", "hint": "" },
+      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "TVL": {
+        "name": "TVL",
+        "hint": ""
+      }
+    },
+    "Home": "Lar",
+    "You": "Você",
+    "Hi, World!": "Olá mundo!",
+    "Explore the AI Rabbit whole": "Explore o AI Rabbit inteiro",
+    "Click to login": "Clique para login",
+    "Click to logout": "Clique para logout",
+    "Search for a validator, pool, tx, address, network, etc": "Pesquise um validador, pool, transação, endereço, rede, etc.",
+    "Lucky!?": "Sortudo!?"
+  },
+  "Navbar": {
+    "Validators": "Validadores",
+    "Networks": "Redes",
+    "Metrics": "Métricos",
+    "Calculate": "Calcular",
+    "Compare": "Comparar",
+    "Rumors": "Rumores",
+    "Global": "Global",
+    "About Us": "Sobre nós",
+    "Library": "Biblioteca"
+  },
+  "Common": {
+    "Learn More": "Saber mais"
+  },
+  "HomePage": {
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Token": {
+        "name": "Nome de token",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Bateria",
+        "hint": "O estado geral de saúde abrange ações de validadores verificáveis on-chain e off-chain e redes sociais"
+      },
+      "Technical": {
+        "name": "Técnico",
+        "hint": "Oferecer segurança de rede robusta e infraestrutura adicional aumenta a pontuação"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "Uma forte presença digital e numerosos fãs na rede aumentam a pontuação"
+      },
+      "Governance": {
+        "name": "Governança",
+        "hint": "A participação em eventos e iniciativas da vida de chaveiro aumenta a pontuação"
+      },
+      "User": {
+        "name": "Usuário",
+        "hint": "As interações usuário-validador na rede, como avaliações, elevam a pontuação"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": "Valor total garantido. Quantidade total de ativos apostados no validador"
+      },
+      "Supported Assets": {
+        "name": "Ativos Suportados",
+        "hint": ""
+      },
+      "Customize": "Customizar",
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros"
+    },
+    "Tabs": {
+      "Calculate": "Calcular",
+      "Compare": "Comparar",
+      "ValidatorInfo": "ValidatorInfo",
+      "Rumors": "Rumores",
+      "Global": "Global"
+    }
+  },
+  "GlobalPosPage": {
+    "Metadata": {
+      "title": "Global"
+    },
+    "title": "Métricas e estatísticas globais da Web3",
+    "dominance": "Dominância da Web3 T.V.S",
+    "total": "Total T.V.S. VS Pagamento de recompensas globais.",
+    "cap": "Total de capitalização de criptomoedas VS Valor total garantido",
+    "status": "Status da Web 3",
+    "Footer": {
+      "total validators": "Validadores",
+      "total networks": "Redes",
+      "total pages": "Páginas Claimed",
+      "total ecosystems": "Ecossistemas"
+    }
+  },
+  "CalculatorPage": {
+    "Metadata": {
+      "title": "Calculadora de Estacamento"
+    },
+    "title": "Calculadora de Estacamento",
+    "description": "Minha calculadora de recompensas permite que você calcule a quantidade de recompensas que você pode ganhar, ao longo de um período de tempo especificado, de apostar em um validador em uma rede de prova de aposta, ou - as recompensas que você pode obter ao ingressar em um pool de mineração em uma rede de prova de trabalho.\n\nMinha calculadora de recompensas é única e diferente das outras. Além de APR, APY e comissões, meu cálculo inclui parâmetros como: eventos de corte, tempo de prisão, receita adicional do provedor e assim por diante. Se você quiser saber mais, leia a descrição completa aqui.\n\nMinhas ferramentas são experimentais, então, use-as por sua conta e risco. Se você gosta do que vê, compartilhe com o resto do mundo.",
+    "Choose a Network": "Escolha uma rede",
+    "Choose a Validator": "Escolha um validador",
+    "Please select": "Por favor selecione validador e cadeia!",
+    "Token": "Token",
+    "Enter Staking Amount": "Insira o valor da aposta",
+    "Wrong amount": "Quantidade errada",
+    "earnings": "d Ganhos"
+  },
+  "NetworksPage": {
+    "title": "Lista de rede P.O.W. e P.O.S. A-Z"
+  },
+  "RumorsPage": {
+    "title": "Bate-papo P2P: Espalhe os rumores",
+    "description": "Anon, como vai? Escolha um nome de usuário e \"comece a espalhar a notícia, estou saindo hoje...\".\n\nDesculpe Anon, problemas de IA. Onde estávamos? Ah sim, escolha um nome de usuário e comece a espalhar boatos. Simples assim. Não há histórico de bate-papo nem identidades. Traga de volta os velhos tempos!",
+    "Start": "Começar",
+    "noNameError": "Por favor, digite o nome de usuário para começar"
+  },
+  "MetricsPage": {
+    "title": "Métricas Web3 / Lista de Glossário A-Z",
+    "All Metrics": "Todas as métricas",
+    "Our Metrics": "Nossas Métricas",
+    "Token": "Token",
+    "Total Supply": "Fornecimento total",
+    "TVL": "T.V.L. or Valor Total Bloqueado",
+    "TVS": "T.V.S. ou Valor Total Garantido"
+  },
+  "AIPage": {
+    "title": "Pesquisa de IA do operador Web3",
+    "text": "Então você quer encontrar um validador, pool de mineração ou um provedor que atenda aos seus valores? Ótimo.\n\nVocê está no lugar certo. Meus construtores me forneceram a incrível habilidade de fazer isso com prompts aleatórios (pesquisas)! Por exemplo, tente procurar um validador com uma certa comissão e opiniões políticas liberais. É incrível, certo? Como sempre, lembre-se de que meus recursos são experimentais.\n\nSe você acha que não estou cumprindo minha tarefa corretamente, abra um problema para minha equipe <issue>[aqui]</issue>"
+  },
+  "ValidatorsPage": {
+    "title": "Lista de pools de validação e mineração de A a Z",
+    "Tabs": {
+      "Validators": "Validadores",
+      "Networks": "Redes",
+      "Metrics": "Métricos",
+      "AI": "AI"
+    }
+  },
+  "ComparisonPage": {
+    "Metadata": {
+      "title": "Comparar validadores"
+    },
+    "title": "Comparar validadores",
+    "description": "Criei uma ferramenta de comparação para aqueles que decidiram experimentar staking ou mineração. Ela ajudará você a encontrar o operador mais eficiente para seu capital estacionado. Digamos que você tenha 0,1 ou 100 ETH, ou talvez 0,1 ou 1 BTC. Use a comparação para ver qual provedor mostra melhores métricas ao longo do tempo e, em seguida, use a opção Calcular para ver o retorno ao longo do tempo.",
+    "descriptionExtended": "Lembre-se de uma coisa anon. Minhas ferramentas fornecem uma imagem em tempo real. A comparação do provedor A vs B pode mostrar resultados diferentes, quando realizada em momentos diferentes, dependendo do estado de saúde dos próprios provedores em um determinado momento.\n\nMinhas ferramentas são experimentais, então, use-as por sua conta e risco. Se você gosta do que vê, compartilhe com o resto do mundo.",
+    "Share result": "Compartilhar resultado",
+    "Show Charts": "Mostrar Gráficos",
+    "Hide Charts": "Esconder Gráficos",
+    "Reset": "Reiniciar",
+    "Daily": "Diário",
+    "Weekly": "Semanal",
+    "Monthly": "Mensal",
+    "Choose Providers": "Escolher provedores",
+    "Profile": "Perfil",
+    "Token": "Token",
+    "Compare": "Comparar",
+    "Health Change": "Mudança de saúde",
+    "Technical Score Changes": "Pontuação técnica",
+    "TVS Governance Score Changes": "Pontuação de governança da TVS",
+    "User Score Changes": "Pontuação do usuário",
+    "Social Score Changes": "Pontuação social",
+    "Badges": "Emblemas",
+    "Reviews": "Avaliações",
+    "Tags # in the Wild": "Tags # in the Wild",
+    "TVS Growth": "Crescimento da TVS",
+    "Fan Growth": "Crescimento de fãs",
+    "Add": "Adicionar"
+  },
+  "ProfilePage": {
+    "Metadata": {
+      "title": "Página de perfil"
+    },
+    "title": "Bem-vindo",
+    "info": "Informações",
+    "validatorBtn": "Você é um validador?",
+    "feedback": "Opinião",
+    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    "nick": "Nick",
+    "additionalInfo": "Informações adicionais",
+    "activitySummary": "Resumo da atividade",
+    "throneRoom": "Sala do trono",
+    "upload": "Upload",
+    "submit": "Submit",
+    "daysVisited": "Dias visitados",
+    "badgesReceived": "Emblemas recebidos",
+    "missionsCompleted": "Missões concluídas",
+    "rewardEarned": "Recompensa conquistada",
+    "yoursFAv": "Seu FAv",
+    "Tabs": {
+      "Tools": "Ferramentas",
+      "Rewards": "Recompensas",
+      "Dashboard": "Painel",
+      "Messages": "Mensagens",
+      "Wallet": "Carteira"
+    }
+  },
+  "AboutPage": {
+    "Metadata": {
+      "title": "Sobre nós"
+    },
+    "Tabs": {
+      "Staking": "Staking",
+      "Partners": "Parceiros",
+      "General Info": "Info gerais",
+      "Podcast": "Podcast",
+      "Contacts": "Contatos"
+    },
+    "Contacts": "Contatos do Validatorinfo",
+    "description": "Eu sou <homeLink>Validator Info</homeLink>. Fui criado pela equipe da <citizenLink>Citizen Web3</citizenLink>.\n\nEu sou um explorador e agregador multichain focado em validadores - para várias redes, vivendo na web3. Eu sou capaz de ler e entender ambas: cadeias de Prova de Trabalho e Prova de Participação. Isso significa que mostrarei informações sobre validadores, pools de mineração e as próprias redes.\n\nMeu objetivo é ajudar os usuários da web3 a descobrir mais informações sobre validadores e pools de mineração, que estão protegendo suas redes favoritas, ou - usar meu explorador para encontrar as informações mais relevantes que você precisa.\n\nEu ainda estou em construção. Você pode <xLink>me seguir no X</xLink>, conferir um dos meus <ghLink>repositórios do GitHub</ghLink>, deixar comentários e sugestões.\n\nCitizen Web3, como um projeto iniciado em 2020, encontrando raízes em vibrações ancap, valores pessoais de construção de uma sociedade melhor, desenvolvimento de ecossistema e networking. CW3 é um membro ativo da galáxia web3. <stakingLink>Staking com nossa infraestrutura baremetal auto-hospedada</stakingLink> permite que CW3 trabalhe em vários projetos de bem público e contribua para o desenvolvimento da web3.",
+    "title": "O que é o Validator Info?",
+    "Tools": [
+      "<link>Citizen Web3 Podcast</link>: descobrindo as pessoas que contribuem para a construção do mundo descentralizado e transformam código em aplicativos descentralizados",
+      "<link>ValidatorInfo.com</link>: multichain, POW e POS, focado em validadores, explorador/painel que ajuda a descobrir informações na galáxia web3",
+      "<link>Web3 Society</link>: uma comunidade que ajuda, aprende e se ressente do tribalismo. Incluindo futuros incentivos DAO (NA no momento)",
+      "<link>Validator Infra</link>: infraestrutura bare-metal auto-hospedada. Infra independente off the grid, incluindo endpoints públicos, testnets, nós de arquivo e retransmissão",
+      "(NA no momento) Bazaar: NFTs, Merchandise, Decentraland"
+    ],
+    "Our tools": "Ferramentas",
+    "Our Manifesto": "Manifesto",
+    "Manifesto": "Deste ponto de vista distante, a Terra pode não parecer ter nenhum interesse particular. Mas para nós é diferente. Considere novamente naquele ponto. Isso está aqui. Essa é a casa. Somos nós. Nele, todos que você ama, todos que você conhece, todos de quem você já ouviu falar, todos os seres humanos que já existiram, viveram suas vidas. O conjunto de nossa alegria e sofrimento, milhares de religiões, ideologias e doutrinas econômicas confiantes, cada caçador e coletor, cada herói e covarde, cada criador e destruidor de civilização, cada rei e camponês, cada jovem casal apaixonado, cada mãe e cada pai, filho esperançoso, inventor e explorador, todo professor de moral, todo político corrupto, todo “superstar”, todo “líder supremo”, todo santo e pecador na história de nossa espécie viveram lá – em um grão de poeira suspenso em um raio de sol... Nossas posturas, nossa auto-importância imaginada, a ilusão de que temos alguma posição privilegiada no Universo, são desafiadas por este ponto de luz pálida. Nosso planeta é um pontinho solitário na grande escuridão cósmica envolvente. Na nossa obscuridade, em toda esta vastidão, não há indícios de que a ajuda virá de outro lugar para nos salvar de nós mesmos...\n\nExtraído de 'Um Pálido Ponto Azul', de Carl Sagan.\n\n\nAcreditamos na liberdade acima das necessidades. Acreditamos em possibilidades acima da aplicação. Acreditamos em valores acima dos desejos. Acreditamos que a censura matou mais pessoas do que qualquer outra coisa combinada. Valorizamos a honestidade e valorizamos a verdade. Valorizamos o amor e valorizamos todas as criaturas existentes. Valorizamos a inteligência e valorizamos a descentralização.\n\nAcreditamos na comunicação, que permite aos participantes pensar, decidir e votar pessoalmente sobre qualquer tema e assunto. Pensamos que o conteúdo deve esforçar-se por não ter opiniões subjetivas e ajudar os seus consumidores a formar uma opinião, o que resultará numa melhor discussão e, por sua vez, num consenso mais eficiente.\n\nAcreditamos que as blockchains não são simplesmente uma forma de nações digitais. Mas, blockchains abertos e verificáveis \u200B\u200Bsão um tanto semelhantes a colmeias naturais, florestas, padrões da natureza que nos permitem comunicar melhor. Sem comunicação, estamos condenados, e o consenso descentralizado é uma ferramenta que pode e irá ajudar aqueles que desejam fazer do nosso pálido ponto azul um lugar um pouco melhor.\n\nE QUE O CÓDIGO ESTEJA COM VOCÊ!",
+    "Podcast": {
+      "title": "Citizen Web3 Podcast",
+      "description": "O Citizen Web3 hospeda um dos mais antigos <link>podcasts focados em web3</link>. O programa é focado em descobrir as pessoas que contribuem para construir o mundo descentralizado e transformam código em aplicativos descentralizados.\n\nO programa é uma coleção de entrevistas, no ar há mais de 4,5 anos, e foca em uma ampla gama de públicos, em particular aqueles que trabalham em web3, validadores, fundadores, pesquisadores, entusiastas de privacidade e outros.",
+      "Subscribe": "Inscrever-se",
+      "Spread the word": "Espalhe a palavra",
+      "SubscribeOtherHint": "Você também pode assinar diretamente com seu aplicativo favorito, usando os botões abaixo",
+      "spreadText": "Cada compartilhamento ajuda a espalhar os valores da web3 pelo universo!"
+    },
+    "Staking": {
+      "title": "Staking com Citizen Web3 Validador",
+      "description": "Validator info é um projeto de bem público, desenvolvido e executado pelo validador Citizen Web3. Nossa capacidade de desenvolvimento é totalmente endossada pelas delegações e staking que recebemos.\n\nO Citizen Web3 é um validador baremetal, independente, auto-hospedado e off-the-grid. Nossa infraestrutura funciona parcialmente com energia solar e tentamos maximizar a reutilização do hardware existente e minimizar o consumismo. Usamos software de computação multipartidária (Horcrux) para proteger ainda mais os fundos do usuário e Re-Stake em nossos nós da mainnet para maximizar a eficiência da recompensa do usuário.",
+      "descriptionExtended": "Os detentores de tokens são incentivados a apostar para ajudar a proteger as redes, ganhando recompensas de inflação e, frequentemente, outras vantagens fornecidas por validadores individuais.\n\nAcreditamos fortemente na infraestrutura descentralizada, independente da grade, e esse é o nosso objetivo final. Pensamos fora da caixa e temos orgulho de ser um pouco loucos. Valorizamos a segurança, a descentralização, a privacidade e a ausência de fiscalização."
+    },
+    "Partners": {
+      "title": "Nossos amigos e parceiros"
+    }
+  }
+}
