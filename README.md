@@ -29,7 +29,7 @@ git clone https://github.com/citizenweb3/validatorinfo.git validatorinfo
 cd validatorinfo
 ```
 
-### Prepare your `.env` and `Mkaefile` files
+### Prepare your `.env` and `Makefile` files
 
 ```bash
 cp .env.example .env
