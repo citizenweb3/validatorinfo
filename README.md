@@ -1,5 +1,5 @@
 # [Validator Info](https://validatorinfo.com/)
-> Multichain explorer, for Proof of Work and Proof of Stake blockchain networks. Dashboard and aggregator. Focused on validators and mining pools. 
+> Multichain explorer, for Proof of Work and Proof of Stake blockchain networks. Dashboard and aggregator. Focused on зroviding real-time metrics on networks, validators, mining pools and tokens.
 
 #### Links: [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo) | [Docs](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md) | [Design Assets](https://github.com/citizenweb3/validatorinfo/tree/main/public) | [`BE GOOD` License](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG) |
 
