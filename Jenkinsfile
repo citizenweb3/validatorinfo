@@ -6,6 +6,10 @@ pipeline {
         PM2_SERVICE_INDEXER = "${env.BRANCH_NAME == 'main' ? 'main-indexer' : 'indexer'}"
     }
 
+    triggers {
+        githubPush() // Trigger
+    }
+
     stages {
         stage('Checkout code') {
             steps {
