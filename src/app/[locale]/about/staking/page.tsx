@@ -38,7 +38,7 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
           {data.map((item, index) => (
             <div key={index} className="flex justify-between bg-card bg-left">
               <div className="relative flex h-40 w-48 flex-col bg-[url('/img/staking-bg.png')] bg-cover">
-                <div className="-ml-1 -mt-4 flex flex-grow items-center justify-center">
+                <div className="-ml-1 -mt-7 flex flex-grow items-center justify-center">
                   {item.icon && (
                     <Image src={item.icon} alt={item.name} width={80} height={80} className="h-20 w-20 rounded-full" />
                   )}
