@@ -29,23 +29,11 @@ git clone https://github.com/citizenweb3/validatorinfo.git validatorinfo
 cd validatorinfo
 ```
 
-### Prepare your `.env` file
+### Prepare your `.env` and `Mkaefile` files
 
 ```bash
 cp .env.example .env
-```
-
-### Example of `.env`
-
-```bash
-POSTGRES_DB=validatorinfo
-POSTGRES_USER=user
-POSTGRES_PASSWORD=password
-NODE_ENV=production
-DATABASE_URL="postgresql://validatorinfo:password@localhost:5432/mydb?schema=public"
-SERVER_PORT="3000"
-INDEXER_PORT="3001"
-PUBLIC_URL="localhost"
+cp Makefile.example Makefile
 ```
 
 ### Install dependencies
