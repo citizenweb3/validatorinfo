@@ -8,3 +8,54 @@
 ## License: [BE GOOD](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG)
 
 ![image](https://github.com/citizenweb3/validatorinfo/assets/7550961/6a7d6673-32be-4a31-895c-2793fde91ce4)
+
+## Installing
+
+### Prerequisites
+
+```bash
+sudo apt install cmdtest
+sudo apt install nodejs
+sudo apt install npm
+sudo apt install build-essential
+npm install --global yarn
+yarn global add pm2
+```
+
+### Clone repo
+
+```bash
+git clone https://github.com/citizenweb3/validatorinfo.git validatorinfo
+cd validatorinfo
+```
+
+### Prepare your `.env` and `Mkaefile` files
+
+```bash
+cp .env.example .env
+cp Makefile.example Makefile
+```
+
+### Install dependencies
+
+```bash
+yarn
+```
+
+### Build
+
+```bash
+make create-deps
+make generate-client
+make deploy-migrations
+make init-chains
+make generate-schema
+yarn build
+```
+
+### Start
+
+```bash
+pm2 start "yarn start" --name next
+pm2 start "make start-indexer" --name indexer
+```
