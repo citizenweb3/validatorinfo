@@ -3,6 +3,7 @@ import tailwindScrollbar from 'tailwind-scrollbar';
 import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 import defaultConfig from 'tailwindcss/defaultConfig';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -98,6 +99,11 @@ const config: Config = {
         web: `url('/img/icons/web.png')`,
         web_h: `url('/img/icons/web-h.png')`,
       },
+      textShadow: {
+        sm: '1px 1px 0 var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      },
       transitionProperty: {
         width: 'width',
       },
@@ -121,6 +127,18 @@ const config: Config = {
       },
     },
   },
-  plugins: [tailwindScrollbar({})],
+  plugins: [
+    tailwindScrollbar({}),
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') },
+      );
+    }),
+  ],
 };
 export default config;

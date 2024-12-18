@@ -4,6 +4,7 @@ html {
     --color-background-stroke: #3E3E3E;
     --color-background-hover: #272727;
     --color-background-highlight: #E5C46B;
+    --tw-shadow-color: #000000;
 
     font-size: 0.9vw;
 
@@ -23,6 +24,7 @@ html.light {
     --color-background-stroke: #272727;
     --color-background-hover: #3E3E3E;
     --color-background-highlight: #E5C46B;
+    --tw-shadow-color: #000000;
 }
 
 @layer utilities {

@@ -34,29 +34,29 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
           <SubDescription text={t('Staking.descriptionExtended')} />
         </div>
         <SubTitle text="Networks" size="h2" />
-        <div className="flex flex-row flex-wrap py-4">
+        <div className="grid grid-cols-4 gap-4 py-4">
           {data.map((item, index) => (
-            <div key={index} className="m-4 w-60 bg-[url('/img/staking-bg.png')] bg-cover">
-              <div>
-                <div className="relative">
-                  <div className="absolute left-0 right-0 top-0 px-3 py-1 text-center text-lg">{item.name}</div>
-                  <div className="flex h-44 w-60 items-center justify-center">
-                    {item.icon && (
-                      <Image src={item.icon} alt={item.name} width={40} height={40} className="mt-12 h-28 w-28" />
-                    )}
-                  </div>
+            <div key={index} className="flex justify-between bg-card bg-left">
+              <div className="relative flex h-40 w-48 flex-col bg-[url('/img/staking-bg.png')] bg-cover">
+                <div className="-ml-1 -mt-4 flex flex-grow items-center justify-center">
+                  {item.icon && (
+                    <Image src={item.icon} alt={item.name} width={80} height={80} className="h-20 w-20 rounded-full" />
+                  )}
+                </div>
+                <div className="text-shadow-sm absolute bottom-1 left-2 text-nowrap text-lg tracking-[0.25rem]">
+                  {item.name}
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center px-8 pb-3.5 pt-6">
+              <div className="flex flex-col items-end justify-center pr-4">
                 {item.delegate && (
-                  <RoundedButton href={item.delegate} contentClassName="text-lg">
+                  <RoundedButton href={item.delegate} contentClassName="text-xl font-bold">
                     Stake
                   </RoundedButton>
                 )}
                 <RoundedButton
                   href={`https://staking.citizenweb3.com/chains/${item.name}`}
-                  contentClassName="text-nowrap text-base"
-                  className="mt-4"
+                  contentClassName="text-nowrap"
+                  className="mt-4 text-base"
                 >
                   Infra & Tools
                 </RoundedButton>
