@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: "${BRANCH_NAME}", url: 'https://github.com/citizenweb3/validatorinfo-blog.git'
+                git branch: "${BRANCH_NAME}", url: 'https://github.com/citizenweb3/validatorinfo.git'
             }
         }
 
