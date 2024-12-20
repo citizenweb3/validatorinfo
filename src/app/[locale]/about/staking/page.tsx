@@ -43,7 +43,7 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
                     <Image src={item.icon} alt={item.name} width={80} height={80} className="h-20 w-20 rounded-full" />
                   )}
                 </div>
-                <div className="text-shadow-sm absolute bottom-1 left-2 text-nowrap text-lg tracking-[0.25rem]">
+                <div className="absolute bottom-1 left-2 text-nowrap text-lg tracking-[0.25rem] text-shadow-sm">
                   {item.name}
                 </div>
               </div>
@@ -54,7 +54,7 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
                   </RoundedButton>
                 )}
                 <RoundedButton
-                  href={`https://staking.citizenweb3.com/chains/${item.name}`}
+                  href={`https://staking.citizenweb3.com/chains/${item.stakingName}`}
                   contentClassName="text-nowrap"
                   className="mt-4 text-base"
                 >
