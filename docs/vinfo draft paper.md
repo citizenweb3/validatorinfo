@@ -230,6 +230,7 @@ Research:
 
 #### Chain health:
 Chain health index:
+(break into several categories for ewasier calculations: security, social, financial, privacy, tech?)
 - include health meter on each chain profile page?
 - live explorer: https://openchains.info/status
 - code commits - too difficult to calculate (branches, etc) - can take existing rating
