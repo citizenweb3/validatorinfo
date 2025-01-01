@@ -40,6 +40,17 @@ cp Makefile.example Makefile
 yarn
 ```
 
+### Develop
+
+```bash
+make create-deps
+make generate-client
+make deploy-migrations
+make init-chains
+make generate-schema
+yarn dev
+```
+
 ### Build
 
 ```bash
@@ -51,7 +62,7 @@ make generate-schema
 yarn build
 ```
 
-### Start
+### Start built project
 
 ```bash
 pm2 start "yarn start" --name next
