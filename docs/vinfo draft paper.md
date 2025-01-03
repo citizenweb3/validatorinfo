@@ -234,11 +234,10 @@ Research:
 - Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric
 
  1) Security:
-   - live explorer: https://openchains.info/status
    - code commits: if too difficult to calculate (branches, etc) - can take existing rating
    - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed
    - Total value locked on chain
-   - Uptiem of network
+   - Uptime of network
    - C.P.  / M. cap?
    - Hashrate
    - Median of validator health
@@ -247,7 +246,8 @@ Research:
    - Consensus algo?
  2) Scalability:
    - twitter mentions?
-   - Othe ratings
+   - live explorer: https://openchains.info/status
+   - Othe ratingsL https://cer.live/token | stakign rewards | bro n bro | observatory | substrate scan | solscan | etc
    - L'2s and L'3 or rather, how many network extensions are building on top of your L1
    - active wallets
    - tx volume
@@ -268,8 +268,8 @@ Research:
    - governance + influence on users
    - token concentration / distribution
 4) Other things to consider:
-   - include for chain health / rating: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating + others + https://cer.live/token
-   - include possible medians - comparisons to other netowrks
+   - some other methodologies: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating
+   - use medians: comparisons to other netowrks in ecosystem. this makes the whole difference
 
 #### Others, research:
 - At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
