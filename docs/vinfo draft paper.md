@@ -229,31 +229,47 @@ Research:
 - % of other scores (35%: TS - 20%, GS - 10%, SS - 5%) 
 
 #### Chain health:
-Chain health index:
-(break into several categories for ewasier calculations: security, social, financial, privacy, tech?)
-- include health meter on each chain profile page?
-- live explorer: https://openchains.info/status
-- code commits - too difficult to calculate (branches, etc) - can take existing rating
-- twitter mentions?
-- other ratings
-- user value: m.cap/accounts
-- gini cooeficient
-- tx volume 
-- Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed.
-- How many L2s… or rather, how many network extensions are building on top of your L1
-- active wallets
-- builders
-- gh starts
-- tvl
-- uptime?
-- C.P.  / M. cap?
-- hashrate?
-- revenue
-- include for chain health / rating: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating + others + https://cer.live/token
-- include possible medians - comparisons to other netowrks
-- distribution params in comaprison to others. for example: holders with 1K compares to others chains.
-- tvl/fdv
-- cost to run a node comnapres to others / cost to mine compares to others
+- Chain health index is a public metric that clearly shows the current status of its liveliness, based on 3 separate and commonly known pillars: security, scalability, decentralization (for easier calculations, further blocks might be added, such as: financial, privacy, technological, social, etc)
+- Display: include health meter on each chain profile page, as shown on [global tab now](https://validatorinfo.com/global_pos) - in the form of 3 meters
+- Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric
+
+ 1) Security:
+   - live explorer: https://openchains.info/status
+   - code commits: if too difficult to calculate (branches, etc) - can take existing rating
+   - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed
+   - Total value locked on chain
+   - Uptiem of network
+   - C.P.  / M. cap?
+   - Hashrate
+   - Median of validator health
+   - nodes/clients?
+   - Mining / staking growth
+   - Consensus algo?
+ 2) Scalability:
+   - twitter mentions?
+   - Othe ratings
+   - L'2s and L'3 or rather, how many network extensions are building on top of your L1
+   - active wallets
+   - tx volume
+   - amount of builders compares to others?
+   - revenue / fees?
+   - account growth over time in comparison to others
+   - T.P.S.
+   - gh starts?
+   - user value: m.cap/accounts
+   - tvl/fdv?
+ 3) Decentralization:
+   - cost to run a node comnapres to others / cost to mine compares to others
+   - gini cooeficient
+   - nakomoto cooficeint
+   - distribution params in comaprison to others. for example: holders with 1K compares to others chains
+   - geography of nodes / services
+   - active user cost
+   - governance + influence on users
+   - token concentration / distribution
+4) Other things to consider:
+   - include for chain health / rating: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating + others + https://cer.live/token
+   - include possible medians - comparisons to other netowrks
 
 #### Others, research:
 - At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
