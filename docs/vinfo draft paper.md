@@ -231,56 +231,65 @@ Research:
 #### Chain health:
 - Chain health index is a public metric that clearly shows the current status of its liveliness, based on 3 separate and commonly known pillars: security, scalability, decentralization (for easier calculations, further blocks might be added, such as: financial, privacy, technological, social, etc)
 - Display: include health meter on each chain profile page, as shown on [global tab now](https://validatorinfo.com/global_pos) - in the form of 3 meters
-- Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric
-- Metrics weight: the most obvious suggestion is award 33% to each of the meters. Where each meter is further adjusted, depending on maount of metrics. I.E. scalability is 33.33%, it has 10 params, so each param is 10% of weight. Another sugegstins is to have most params have an equal weight, depending on their amount. i.e. we have 40 params. each has 2%. and some other ones are outlines, such as user reviews, to have a larger weight.
+- Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric. In the future logged in users can adjust settings / params
+- NA means that the metric cannot be calculated now. rather than removing it altogether from calculations, i suggest setting 0 score to it, to show that no one is perfect =)
 
- 1) Security:
+ 1) Security (32.5%):
+ 1A) Onchain (20%):
    - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed (can also be scalability)
-   - Total value locked on chain
    - Uptime of network
-   - C.P.  / M. cap?
-   - Hashrate
-   - Median of validator health
+   - Hashrate (POW) or TVL in terms of token % out of supply (POS)
+ 1B) Offchain (5%):
+   - Consensus algo? (how to measure?)
+   - security audits? (what to include?)
+   - bug bounty program existance
+ 1C) Mixed (7.5%): 
    - Mining / staking growth over time
-   - Consensus algo?
-   - security audits?
-   - bug bounty program existance 
- 2) Scalability:
-   - twitter mentions?
-   - code commits: if too difficult to calculate (branches, etc) - can take existing rating
-   - live explorer: https://openchains.info/status
-   - Othe ratingsL https://cer.live/token | stakign rewards | bro n bro | observatory | substrate scan | solscan | etc
-   - L'2s and L'3 or rather, how many network extensions are building on top of your L1
+   - C.P. / M. cap?
+   - Median of validator health (NA)
+ 2) Scalability (32.5%):
+ 2A) Onchain (20%):
+   - Total value locked on chain (how much money inflow there is)
    - active wallets
    - tx volume
-   - amount of builders compares to others?
-   - revenue / fees?
-   - account growth over time in comparison to others
+   - revenue / fees
+   - account growth over time in comparison to others (NA)
    - T.P.S.
-   - gh starts?
-   - user value: m.cap/accounts
-   - tvl/fdv?
-   - smart contract existance / complexity and usage
+ 2B) Offchain (5%):
+   - twitter mentions (is it possible to use now?)
+   - code commits: if too difficult to calculate (branches, etc) - can take existing rating
+   - amount of builders compares to others (NA)
+   - gh starts (which repo?)
+   - gh active forks? (active: 1 commit over last month)
    - dev docs existance
- 3) Decentralization:
-   - cost to run a node comnapres to others / cost to mine compares to others (can be scalability too)
+ 3C) Mixed (7.5%): 
+   - live explorer: https://openchains.info/status
+   - Other ratings https://cer.live/token | stakign rewards | bro n bro | observatory | substrate scan | solscan | etc 
+   - L'2s and L'3 or rather, how many network extensions are building on top of your L1
+   - user value: m.cap/accounts
+   - tvl/fdv (total value locked on chain - capital / fully diluted valuation) 
+   - smart contract existance / complexity and usage (how to calculate compelxity?)
+ 3) Decentralization (32.5%):
+ 3A) Onchain (20%):
+   - cost to run a node comnapres to others / cost to mine compares to others (can be scalability too) (NA)
    - gini cooeficient: distribution of wealth on a network
    - nakomoto cooficeint: distribution of mining power or validator stake on a network
-   - distribution params in comaprison to others. for example: holders with 1K compares to others chains
-   - geography of nodes / services
-   - active user cost
-   - governance + influence on users
-   - token concentration / distribution
+   - distribution params in comaprison to others. for example: holders with 1K compares to others chains (NA)
+   - active user cost (how to calcualte?) (NA)
+   - token concentration / distribution (how much of stake is held by top 100 accounts, top 1000, etc)
+ 3B) Offchain (5%):
    - nodes/clients: how many are run on top of it
-4) Other things to consider:
-   - some other methodologies: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating
-   - use medians: comparisons to other netowrks in ecosystem. this makes the whole difference
-   - uaser reviews (rumors section)
+ 3C) Mixed (7.5%): 
+   - geography of nodes / services
+   - governance + influence on users
+4) User Sentiment: 2.5% (NA)
+  
 
 #### Others, research:
 - At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
 - Random (added to ip address call)
 - ratios (i.e. self stake / stake) (median of delegated tokens on a given network in comparison to other vals)
+ - some other methodologies: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating
 
 #### Reasoning for new(-ish) terminology and the latter
 - uptime
