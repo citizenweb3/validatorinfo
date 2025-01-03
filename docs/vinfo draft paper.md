@@ -232,6 +232,7 @@ Research:
 - Chain health index is a public metric that clearly shows the current status of its liveliness, based on 3 separate and commonly known pillars: security, scalability, decentralization (for easier calculations, further blocks might be added, such as: financial, privacy, technological, social, etc)
 - Display: include health meter on each chain profile page, as shown on [global tab now](https://validatorinfo.com/global_pos) - in the form of 3 meters
 - Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric
+- Metrics weight: the most obvious suggestion is award 33% to each of the meters. Where each meter is further adjusted, depending on maount of metrics. I.E. scalability is 33.33%, it has 10 params, so each param is 10% of weight. Another sugegstins is to have most params have an equal weight, depending on their amount. i.e. we have 40 params. each has 2%. and some other ones are outlines, such as user reviews, to have a larger weight.
 
  1) Security:
    - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed (can also be scalability)
