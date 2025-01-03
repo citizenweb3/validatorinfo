@@ -234,20 +234,25 @@ Research:
 - Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric. In the future logged in users can adjust settings / params
 - NA means that the metric cannot be calculated now. rather than removing it altogether from calculations, i suggest setting 0 score to it, to show that no one is perfect =)
 
- 1) Security (32.5%):
+ 1) Security (32.5%)
+
  1A) Onchain (20%):
    - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed (can also be scalability)
    - Uptime of network
    - Hashrate (POW) or TVL in terms of token % out of supply (POS)
+
  1B) Offchain (5%):
    - Consensus algo? (how to measure?)
    - security audits? (what to include?)
    - bug bounty program existance
+
  1C) Mixed (7.5%): 
    - Mining / staking growth over time
    - C.P. / M. cap?
    - Median of validator health (NA)
- 2) Scalability (32.5%):
+
+ 2) Scalability (32.5%)
+
  2A) Onchain (20%):
    - Total value locked on chain (how much money inflow there is)
    - active wallets
@@ -255,6 +260,7 @@ Research:
    - revenue / fees
    - account growth over time in comparison to others (NA)
    - T.P.S.
+
  2B) Offchain (5%):
    - twitter mentions (is it possible to use now?)
    - code commits: if too difficult to calculate (branches, etc) - can take existing rating
@@ -262,6 +268,7 @@ Research:
    - gh starts (which repo?)
    - gh active forks? (active: 1 commit over last month)
    - dev docs existance
+
  3C) Mixed (7.5%): 
    - live explorer: https://openchains.info/status
    - Other ratings https://cer.live/token | stakign rewards | bro n bro | observatory | substrate scan | solscan | etc 
@@ -269,7 +276,9 @@ Research:
    - user value: m.cap/accounts
    - tvl/fdv (total value locked on chain - capital / fully diluted valuation) 
    - smart contract existance / complexity and usage (how to calculate compelxity?)
- 3) Decentralization (32.5%):
+
+ 3) Decentralization (32.5%)
+
  3A) Onchain (20%):
    - cost to run a node comnapres to others / cost to mine compares to others (can be scalability too) (NA)
    - gini cooeficient: distribution of wealth on a network
@@ -277,11 +286,14 @@ Research:
    - distribution params in comaprison to others. for example: holders with 1K compares to others chains (NA)
    - active user cost (how to calcualte?) (NA)
    - token concentration / distribution (how much of stake is held by top 100 accounts, top 1000, etc)
+
  3B) Offchain (5%):
    - nodes/clients: how many are run on top of it
- 3C) Mixed (7.5%): 
+ 
+3C) Mixed (7.5%): 
    - geography of nodes / services
    - governance + influence on users
+
 4) User Sentiment: 2.5% (NA)
   
 
