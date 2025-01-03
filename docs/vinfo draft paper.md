@@ -234,7 +234,6 @@ Research:
 - Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric
 
  1) Security:
-   - code commits: if too difficult to calculate (branches, etc) - can take existing rating
    - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed
    - Total value locked on chain
    - Uptime of network
@@ -246,6 +245,7 @@ Research:
    - Consensus algo?
  2) Scalability:
    - twitter mentions?
+   - code commits: if too difficult to calculate (branches, etc) - can take existing rating
    - live explorer: https://openchains.info/status
    - Othe ratingsL https://cer.live/token | stakign rewards | bro n bro | observatory | substrate scan | solscan | etc
    - L'2s and L'3 or rather, how many network extensions are building on top of your L1
