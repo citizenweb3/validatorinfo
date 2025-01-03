@@ -234,15 +234,16 @@ Research:
 - Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric
 
  1) Security:
-   - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed
+   - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed (can also be scalability)
    - Total value locked on chain
    - Uptime of network
    - C.P.  / M. cap?
    - Hashrate
    - Median of validator health
-   - nodes/clients?
-   - Mining / staking growth
+   - Mining / staking growth over time
    - Consensus algo?
+   - security audits?
+   - bug bounty program existance 
  2) Scalability:
    - twitter mentions?
    - code commits: if too difficult to calculate (branches, etc) - can take existing rating
@@ -258,18 +259,22 @@ Research:
    - gh starts?
    - user value: m.cap/accounts
    - tvl/fdv?
+   - smart contract existance / complexity and usage
+   - dev docs existance
  3) Decentralization:
-   - cost to run a node comnapres to others / cost to mine compares to others
-   - gini cooeficient
-   - nakomoto cooficeint
+   - cost to run a node comnapres to others / cost to mine compares to others (can be scalability too)
+   - gini cooeficient: distribution of wealth on a network
+   - nakomoto cooficeint: distribution of mining power or validator stake on a network
    - distribution params in comaprison to others. for example: holders with 1K compares to others chains
    - geography of nodes / services
    - active user cost
    - governance + influence on users
    - token concentration / distribution
+   - nodes/clients: how many are run on top of it
 4) Other things to consider:
    - some other methodologies: https://tokeninsight.gitbook.io/support/methodologies/rating/token-rating
    - use medians: comparisons to other netowrks in ecosystem. this makes the whole difference
+   - uaser reviews (rumors section)
 
 #### Others, research:
 - At start there are 100 validators, each has 100 tokens or, 10000 units staked total or 100 per validator. After 3 months, validator X has 60 units. Assuming the average still remains 100. Our validators TVl would be 0.6 out of 1. It would be more important to delegate to him in terms of decentralization 
