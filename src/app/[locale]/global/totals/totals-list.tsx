@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import TotalsListItem from '@/app/global_pos/totals/totals-list-item';
+import TotalsListItem from '@/app/global/totals/totals-list-item';
 import HeaderInfoService from '@/services/headerInfo-service';
 
 interface OwnProps {}

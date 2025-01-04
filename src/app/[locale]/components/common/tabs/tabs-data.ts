@@ -24,7 +24,7 @@ export const mainTabs: TabOptions[] = [
   },
   { name: 'ValidatorInfo', href: '/', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   { name: 'Rumors', href: '/rumors', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Global', href: '/global_pos', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
+  { name: 'Global', href: '/global', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
 ];
 
 export const validatorsTabs: TabOptions[] = [
@@ -59,3 +59,31 @@ export const profileTabs: TabOptions[] = [
   { name: 'Messages', href: '/profile/messages' },
   { name: 'Wallet', href: '/profile/wallet' },
 ];
+
+export const getValidatorProfileTabs = (validatorIdentity: string): TabOptions[] => {
+  return [
+    {
+      name: 'Revenue',
+      href: `/validators/${validatorIdentity}/revenue`
+    },
+    {
+      name: 'Metrics',
+      href: `/validators/${validatorIdentity}/metrics`,
+      icon: icons.MetricsIcon,
+      iconHovered: icons.MetricsIconHovered
+    },
+    {
+      name: 'Network Table',
+      href: `/validators/${validatorIdentity}/validator_networks`,
+      icon: icons.NetworksIcon,
+      iconHovered: icons.NetworksIconHovered
+    },
+    {
+      name: 'Public Good',
+      href: `/validators/${validatorIdentity}/public_good`
+    },
+    { name: 'Governance',
+      href: `/validators/${validatorIdentity}/governance`
+    },
+  ];
+};
