@@ -1,5 +1,5 @@
 create-deps:
-		docker run --rm --name postgres -p "5432:5432" -e POSTGRES_DB=validatorinfo -e POSTGRES_USER=validatorinfo -e POSTGRES_PASSWORD=password -d "postgres:14-bullseye"
+		docker run --name postgres -p "5432:5432" -e POSTGRES_DB=validatorinfo -e POSTGRES_USER=validatorinfo -e POSTGRES_PASSWORD=password -d "postgres:14-bullseye"
 		@sleep 5
 
 destroy-deps:
