@@ -22,15 +22,31 @@ type Chain = {
   docs: string | null;
   mainRepo: string;
   githubUrl: string;
+  ecosystem?: string;
 };
 
 async function addNetwork(chain: Chain): Promise<void> {
   await prisma.chain.upsert({
     where: { chainId: chain.chainId },
-    update: {},
+    update: {
+      rang: chain.rang,
+      type: chain.ecosystem || 'cosmos',
+      chainId: chain.chainId,
+      name: chain.name,
+      prettyName: chain.prettyName,
+      denom: chain.denom,
+      minimalDenom: chain.minimalDenom,
+      coinDecimals: chain.coinDecimals,
+      coinType: chain.coinType,
+      logoUrl: chain.logoUrl,
+      coinGeckoId: chain.coinGeckoId,
+      bech32Prefix: chain.bech32Prefix,
+      twitterUrl: chain.twitterUrl,
+      docs: chain.docs,
+    },
     create: {
       rang: chain.rang,
-      type: 'cosmos',
+      type: chain.ecosystem || 'cosmos',
       chainId: chain.chainId,
       name: chain.name,
       prettyName: chain.prettyName,
@@ -118,48 +134,6 @@ async function main() {
       githubUrl: '123',
       twitterUrl: '123',
     });
-
-    // await addNetwork({
-    //   name: 'picasso',
-    //   prettyName: 'Picasso',
-    //   chainId: 'centauri-1',
-    //   bech32Prefix: 'pica',
-    //   coinDecimals: 6,
-    //   coinGeckoId: '123',
-    //   coinType: 118,
-    //   denom: 'PICA',
-    //   minimalDenom: 'ppica',
-    //   grpcNodeUrl: 'grpc.celestia.citizenweb3.com/',
-    //   lcdNodeUrl: 'https://api.composable.citizenweb3.com/',
-    //   rpcNodeUrl: 'https://rpc.composable.citizenweb3.com/',
-    //   wsNodeUrl: 'wss://rpc.composable.com/websocket',
-    //   logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
-    //   mainRepo: '123',
-    //   docs: '123',
-    //   githubUrl: '123',
-    //   twitterUrl: '123',
-    // });
-
-    // await addNetwork({
-    //   name: 'evmos',
-    //   prettyName: 'Evmos',
-    //   chainId: 'evmos_9001-2',
-    //   bech32Prefix: 'evmos',
-    //   coinDecimals: 18,
-    //   coinGeckoId: '123',
-    //   coinType: 60,
-    //   denom: 'EVMOS',
-    //   minimalDenom: 'aevmos',
-    //   grpcNodeUrl: 'grpc.evmos.citizenweb3.com/',
-    //   lcdNodeUrl: 'https://api.evmos.citizenweb3.com/',
-    //   rpcNodeUrl: 'https://rpc.evmos.citizenweb3.com/',
-    //   wsNodeUrl: 'wss://rpc.evmos.citizenweb3.com/websocket',
-    //   logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
-    //   mainRepo: '123',
-    //   docs: '123',
-    //   githubUrl: '11223',
-    //   twitterUrl: '123',
-    // });
 
     await addNetwork({
       rang: 4,
@@ -330,7 +304,8 @@ async function main() {
       lcdNodeUrl: 'https://api.neutron.citizenweb3.com',
       rpcNodeUrl: 'https://rpc.neutron.citizenweb3.com',
       wsNodeUrl: 'wss://rpc.neutron.citizenweb3.com/websocket',
-      logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron-black-logo.svg',
+      logoUrl:
+        'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -352,7 +327,8 @@ async function main() {
       lcdNodeUrl: 'https://api.pion-1-testnet.citizenweb3.com',
       rpcNodeUrl: 'https://rpc.pion-1-testnet.citizenweb3.com',
       wsNodeUrl: 'wss://rpc.pion-1-testnet.citizenweb3.com/websocket',
-      logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron-black-logo.svg',
+      logoUrl:
+        'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -440,7 +416,8 @@ async function main() {
       lcdNodeUrl: 'https://api.union-testnet.citizenweb3.com',
       rpcNodeUrl: 'https://rpc.union-testnet.citizenweb3.com',
       wsNodeUrl: 'wss://rpc.union-testnet.citizenweb3.com/websocket',
-      logoUrl: 'https://raw.githubusercontent.com/citizenweb3/chain-images/refs/heads/main/union-testnet/union.svg',
+      logoUrl:
+        'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/union-testnet/union.svg',
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -462,13 +439,16 @@ async function main() {
       lcdNodeUrl: 'https://api.axone-testnet.citizenweb3.com',
       rpcNodeUrl: 'https://rpc.axone-testnet.citizenweb3.com',
       wsNodeUrl: 'wss://rpc.axone-testnet.citizenweb3/websocket',
-      logoUrl: 'https://raw.githubusercontent.com/citizenweb3/chain-images/refs/heads/main/axone-testnet/axone.svg',
+      logoUrl:
+        'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/axone-testnet/axone.svg',
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
       twitterUrl: '123',
     });
-  } catch (e) {}
+  } catch (e) {
+    console.error(e);
+  }
 }
 
 main();
