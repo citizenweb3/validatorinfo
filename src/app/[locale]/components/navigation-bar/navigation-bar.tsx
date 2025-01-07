@@ -30,7 +30,7 @@ const data: TabOptions[] = [
     iconHovered: icons.ComparisonIconHovered,
   },
   { name: 'Rumors', href: '/rumors', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Global', href: '/global_pos', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
+  { name: 'Global', href: '/global', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
   // { name: 'Library', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
   { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
 ];
