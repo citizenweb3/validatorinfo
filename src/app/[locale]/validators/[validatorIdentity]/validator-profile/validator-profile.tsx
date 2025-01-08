@@ -22,7 +22,7 @@ const ValidatorProfile: FC<OwnProps> = async (identity, locale) => {
           <h1>
             Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.
           </h1>
-          <div className="relative w-full h-[50px] 2xl:h-[80px] xl:h-[65px] lg:h-[60px] overflow-hidden my-4">
+          <div className="relative w-full h-[50px] 2xl:h-[80px] xl:h-[65px] lg:h-[60px]  overflow-hidden my-4">
             <iframe
               src="https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark"
               className="origin-top-left m-0 p-0 scale-[0.25] 2xl:scale-[0.43] xl:scale-[0.32] lg:scale-[0.28]"

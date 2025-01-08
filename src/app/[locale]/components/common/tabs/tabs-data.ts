@@ -80,7 +80,7 @@ export const getValidatorProfileTabs = (validatorIdentity: string): TabOptions[]
     },
     {
       name: 'Public Good',
-      href: `/validators/${validatorIdentity}/public_good`
+      href: `/validators/${validatorIdentity}/public_good/tools`
     },
     { name: 'Governance',
       href: `/validators/${validatorIdentity}/governance`

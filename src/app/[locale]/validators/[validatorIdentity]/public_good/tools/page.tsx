@@ -1,36 +1,30 @@
-// import { getTranslations } from 'next-intl/server';
-//
-// import GlobalRevenue from '@/app/validators/[validatorIdentity]/revenue/global-revenue';
-// import RewardsGeneratedChart from '@/app/validators/[validatorIdentity]/revenue/rewards-generated-chart';
-// import RumorsLink from '@/app/validators/[validatorIdentity]/revenue/rumors-link';
-// import { validatorExample } from '@/app/validators/[validatorIdentity]/validatorExample';
-// import PageTitle from '@/components/common/page-title';
-// import SubTitle from '@/components/common/sub-title';
-// import { NextPageWithLocale } from '@/i18n';
-//
-// interface PageProps {
-//   params: NextPageWithLocale & { validatorIdentity: string };
-// }
-//
-// const PublicGoodToolsPage: NextPageWithLocale<PageProps> = async ({ params }) => {
-//   const { locale, validatorIdentity } = params;
-//   const t = await getTranslations({ locale, namespace: 'ValidatorRevenuePage' });
-//
-//   return (
-//     <div>
-//       <PageTitle prefix={`${validatorExample.name}:`} text={t('title')} />
-//       <div className="flex flex-row items-center justify-between">
-//         <GlobalRevenue identity={validatorIdentity} />
-//         <RumorsLink identity={validatorIdentity} locale={locale} />
-//       </div>
-//       <div className="mb-28 mt-5">
-//         <SubTitle text={t('rewards generated')} size="h2" />
-//         <div className="mt-6 flex justify-center">
-//           <RewardsGeneratedChart />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-//
-// export default PublicGoodToolsPage;
+import { getTranslations } from 'next-intl/server';
+
+import SubTitle from '@/components/common/sub-title';
+import { NextPageWithLocale } from '@/i18n';
+import RoundedButton from '@/components/common/rounded-button';
+import ValidatorToolList from '@/app/validators/[validatorIdentity]/public_good/tools/validator-tool-list';
+
+interface PageProps {
+  params: NextPageWithLocale & { validatorIdentity: string };
+}
+
+const PublicGoodToolsPage: NextPageWithLocale<PageProps> = async ({ params }) => {
+  const { locale, validatorIdentity } = params;
+  const t = await getTranslations({ locale, namespace: 'PublicGoodToolsPage' });
+
+  return (
+    <div>
+      <div className="font-sfpro text-base mt-12 mb-7 ml-4">{t('description')}</div>
+      <div className="flex justify-end my-4">
+        <RoundedButton href={''} className="font-handjet text-base">
+          {t('submit new info')}
+        </RoundedButton>
+      </div>
+      <SubTitle text={t('tool list')} size="h2" />
+      <ValidatorToolList />
+    </div>
+  );
+};
+
+export default PublicGoodToolsPage;
