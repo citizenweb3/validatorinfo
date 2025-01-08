@@ -8,7 +8,7 @@ interface NamadaNode {
   votingPower: string;
   maxCommission: string;
   commission: string;
-  state: 'consensus' | 'inactive';
+  state: 'consensus' | 'inactive' | 'belowThreshold' | 'jailed';
   name: string;
   email: string;
   website: string;
@@ -72,7 +72,7 @@ const getNamadaNodes = async (
         details: node.description ?? '',
         website: node.website ?? '',
         security_contact: node.email,
-        jailed: node.state === 'inactive',
+        jailed: node.state === 'inactive' || node.state === 'jailed',
         rate: node.commission,
         update_time: new Date().toISOString(),
       },
@@ -84,7 +84,7 @@ const getNamadaNodes = async (
         details: node.description ?? '',
         website: node.website ?? '',
         security_contact: node.email,
-        jailed: node.state === 'inactive',
+        jailed: node.state === 'inactive' || node.state === 'jailed',
         min_self_delegation: '0',
         max_rate: node.maxCommission,
         max_change_rate: '100',
