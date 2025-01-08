@@ -4,16 +4,34 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": { "name": "Validadores", "hint": "" },
-      "Ecosystems": { "name": "Ecossistemas", "hint": "" },
-      "Dominance": { "name": "Domínio", "hint": "" },
+      "Validators": {
+        "name": "Validadores",
+        "hint": ""
+      },
+      "Ecosystems": {
+        "name": "Ecossistemas",
+        "hint": ""
+      },
+      "Dominance": {
+        "name": "Domínio",
+        "hint": ""
+      },
       "POW": {
         "name": "POW",
         "hint": "Estacamento global, pools de mineração e estatísticas de validadores"
       },
-      "ETH": { "name": "ETH", "hint": "" },
-      "Polkadot": { "name": "Polkadot", "hint": "" },
-      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "ETH": {
+        "name": "ETH",
+        "hint": ""
+      },
+      "Polkadot": {
+        "name": "Polkadot",
+        "hint": ""
+      },
+      "Cosmos": {
+        "name": "Cosmos",
+        "hint": ""
+      },
       "TVL": {
         "name": "TVL",
         "hint": ""
@@ -178,6 +196,7 @@
     "Daily": "Diário",
     "Weekly": "Semanal",
     "Monthly": "Mensal",
+    "Yearly": "Anual",
     "Choose Providers": "Escolher provedores",
     "Profile": "Perfil",
     "Token": "Token",
@@ -262,5 +281,121 @@
     "Partners": {
       "title": "Nossos amigos e parceiros"
     }
+  },
+  "ValidatorProfileHeader": {
+    "Tabs": {
+      "Revenue": "Receitas",
+      "Metrics": "Métricas",
+      "Network Table": "Tabela de Rede",
+      "Public Good": "Bem Público",
+      "Governance": "Governação"
+    },
+    "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
+    "Others Links": "Outras ligações",
+    "Merits": "Méritos"
+  },
+  "ValidatorNetworksPage": {
+    "title": "Redes Suportadas",
+    "Table": {
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Expected APR": {
+        "name": "APR Esperada",
+        "hint": ""
+      },
+      "Fans": {
+        "name": "Adeptos",
+        "hint": ""
+      },
+      "Rank": {
+        "name": "Classificação",
+        "hint": ""
+      },
+      "Voting Power": {
+        "name": "Poder de Voto",
+        "hint": ""
+      },
+      "Commission": {
+        "name": "Comissão",
+        "hint": ""
+      },
+      "Self Delegation": {
+        "name": "Auto-delegação",
+        "hint": ""
+      },
+      "Uptime": {
+        "name": "Tempo de Funcionamento",
+        "hint": ""
+      },
+      "Missed Blocks": {
+        "name": "Bloqueios Falhados",
+        "hint": ""
+      },
+      "Infrastructure": {
+        "name": "Infraestrutura",
+        "hint": ""
+      },
+      "Governance": {
+        "name": "Governação",
+        "hint": ""
+      }
+    }
+  },
+  "ValidatorMetricsPage": {
+    "title": "Pontuações e Métricas de Vaidade",
+    "technical score": "Pontuação Técnica",
+    "social score": "Social Score",
+    "governance score": "Pontuação Social",
+    "user score": "Pontuação do Utilizador",
+    "TVS": "TVS",
+    "fans": "Adeptos",
+    "amount of assets": "Montante dos Activos",
+    "explanation": "Explicação"
+  },
+  "ValidatorRevenuePage": {
+    "title": "Receitas de Prémios",
+    "global revenue": "Receita Global",
+    "rumors": "Rumores",
+    "claim date": "Data do Pedido",
+    "read more": "Ler mais",
+    "rewards generated": "Prémios Gerados"
+  },
+  "ValidatorGovernancePage": {
+    "title": "Feed de Resumo da Governação",
+    "proposals": "Propostas Criadas pelo Validador",
+    "news feed": "Feed de Notícias da Governação",
+    "similar options": "Opções Similares",
+    "Table": {
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Title": {
+        "name": "I.D./Título",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Votar",
+        "hint": ""
+      }
+    }
+  },
+  "ValidatorPublicGoodPage": {
+    "title": "Perfil de Validador",
+    "description": "Os utilizadores que validam dados fora da cadeia são validadores de blocos. Depois de iniciar sessão, o utilizador pode enviar informações sobre um validador específico. Por exemplo, o seu validador favorito ou pool de mineração está a realizar um podcast ou construiu uma carteira? Clique no botão Enviar e adicione os detalhes necessários. Ganhe prémios. Aprovar ou refutar informações. Tenha em atenção que cada envio é uma transação!",
+    "Tabs": {
+      "Infrastructure": "Infraestrutura",
+      "Community": "Comunidade",
+      "Media": "Media",
+      "Tools": "Instrumentos",
+      "Others": "Outros"
+    }
+  },
+  "PublicGoodToolsPage": {
+    "description": "Submeter aqui quaisquer exploradores, carteiras, painéis de controlo, interfaces de staking e ferramentas semelhantes que os operadores criem.",
+    "submit new info": "Enviar Novas Informações",
+    "tool list": "Lista de Instrumentos"
   }
 }

@@ -4,13 +4,34 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": { "name": "Валидаторов", "hint": "" },
-      "Ecosystems": { "name": "Экосистем", "hint": "" },
-      "Dominance": { "name": "Доминирование", "hint": "" },
-      "POW": { "name": "POW", "hint": "Глобальный стейкинг, майнинг-пулы и статистика валидаторов" },
-      "ETH": { "name": "ETH", "hint": "" },
-      "Polkadot": { "name": "Polkadot", "hint": "" },
-      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "Validators": {
+        "name": "Валидаторов",
+        "hint": ""
+      },
+      "Ecosystems": {
+        "name": "Экосистем",
+        "hint": ""
+      },
+      "Dominance": {
+        "name": "Доминирование",
+        "hint": ""
+      },
+      "POW": {
+        "name": "POW",
+        "hint": "Глобальный стейкинг, майнинг-пулы и статистика валидаторов"
+      },
+      "ETH": {
+        "name": "ETH",
+        "hint": ""
+      },
+      "Polkadot": {
+        "name": "Polkadot",
+        "hint": ""
+      },
+      "Cosmos": {
+        "name": "Cosmos",
+        "hint": ""
+      },
       "TVL": {
         "name": "ТВЛ",
         "hint": "Jump Around"
@@ -175,6 +196,7 @@
     "Daily": "Дневной",
     "Weekly": "Недельный",
     "Monthly": "Месячный",
+    "Yearly": "Годовой",
     "Choose Providers": "Выберите провайдеров",
     "Profile": "Профиль",
     "Token": "Токен",
@@ -259,5 +281,122 @@
     "Partners": {
       "title": "Наши друзья и партнёры"
     }
+  },
+  "ValidatorProfileHeader": {
+    "Tabs": {
+      "Revenue": "Доходы",
+      "Metrics": "Мертрики",
+      "Network Table": "Список сетей",
+      "Public Good": "Общественное благо",
+      "Governance": "Управление"
+    },
+    "description": "Децентрализация, расширение возможностей сообществ. Голос Web3 и некастодиальный сервис стейкинга.",
+    "Others Links": "Другие ссылки",
+    "Merits": "Заслуги"
+  },
+  "ValidatorNetworksPage": {
+    "title": "Поддерживаемые сети",
+    "Table": {
+      "Network": {
+        "name": "Сеть",
+        "hint": ""
+      },
+      "Expected APR": {
+        "name": "Ожидаемый APR",
+        "hint": ""
+      },
+      "Fans": {
+        "name": "Пользователи",
+        "hint": ""
+      },
+      "Rank": {
+        "name": "Рейтинг",
+        "hint": ""
+      },
+      "Voting Power": {
+        "name": "Сила голоса",
+        "hint": ""
+      },
+      "Commission": {
+        "name": "Комиссия",
+        "hint": ""
+      },
+      "Self Delegation": {
+        "name": "Делегировал себе",
+        "hint": ""
+      },
+      "Uptime": {
+        "name": "Uptime",
+        "hint": ""
+      },
+      "Missed Blocks": {
+        "name": "Пропущено блоков",
+        "hint": ""
+      },
+      "Infrastructure": {
+        "name": "Инфраструктура",
+        "hint": ""
+      },
+      "Governance": {
+        "name": "Упр р.",
+        "hint": "Участие в событиях кейчеин и инициатива повышают балл"
+      }
+    }
+  },
+  "ValidatorMetricsPage": {
+    "title": "Оценка и социальные показатели",
+    "technical score": "Техническая Оценка",
+    "social score": "Социальная Оценка",
+    "governance score": "Оценка Управления",
+    "user score": "Оценка Пользователей",
+    "TVS": "TVS",
+    "fans": "Пользователи",
+    "amount of assets": "Количество активов",
+    "explanation": "Объяснение"
+  },
+  "ValidatorRevenuePage": {
+    "title": "Доходы валидатора",
+    "global revenue": "Глобальный доход",
+    "rumors": "Слухи",
+    "claim date": "Дата снимка",
+    "read more": "Подробнее",
+    "rewards generated": "Полученные Вознаграждения"
+  },
+  "ValidatorGovernancePage": {
+    "title": "Сводная Информация по Управлению",
+    "proposals": "Предложения, Созданные Валидатором",
+    "news feed": "Лента Новостей по Управлению",
+    "similar options": "Похожие Варианты",
+    "Table": {
+      "Network": {
+        "name": "Сеть",
+        "hint": ""
+      },
+      "Title": {
+        "name": "I.D./Название",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Голос",
+        "hint": ""
+      }
+    }
+  },
+  "ValidatorPublicGoodPage": {
+    "title": "Профиль Валидатора",
+    "description": "Пользователи валидатора вне цепочки данных, являются валидаторами блоков. После входа в систему вы можете предоставить информацию о конкретном валидаторе. Например, ваш любимый валидатор или майнинг-пул ведет подкаст или создал кошелек? Нажмите кнопку «Отправить» и добавьте необходимые данные. Получите вознаграждение. Одобрите или опровергните информацию. Обратите внимание, что каждая отправка - это транзакция!",
+    "Tabs": {
+      "Infrastructure": "Инфраструктура",
+      "Community": "Сообщество",
+      "Media": "Медиа",
+      "Tools": "Инструменты",
+      "Others": "Другое"
+    }
+  },
+  "PublicGoodToolsPage": {
+    "description": "Представляйте здесь любые эксплореры, кошельки, приборные панели, интерфейсы стейкинга и подобные инструменты, которые создают операторы.",
+    "submit new info": "Добавить новую информацию",
+    "tool list": "Список инструментов"
   }
 }
+

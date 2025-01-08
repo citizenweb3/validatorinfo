@@ -74,7 +74,7 @@ export const getValidatorProfileTabs = (validatorIdentity: string): TabOptions[]
     },
     {
       name: 'Network Table',
-      href: `/validators/${validatorIdentity}/validator_networks`,
+      href: `/validators/${validatorIdentity}/networks`,
       icon: icons.NetworksIcon,
       iconHovered: icons.NetworksIconHovered
     },
@@ -84,6 +84,30 @@ export const getValidatorProfileTabs = (validatorIdentity: string): TabOptions[]
     },
     { name: 'Governance',
       href: `/validators/${validatorIdentity}/governance`
+    },
+  ];
+};
+
+export const getValidatorPublicGoodTabs = (validatorIdentity: string): TabOptions[] => {
+  return [
+    {
+      name: 'Infrastructure',
+      href: `/validators/${validatorIdentity}/public_good/infrastructure`
+    },
+    {
+      name: 'Community',
+      href: `/validators/${validatorIdentity}/public_good/community`,
+    },
+    {
+      name: 'Media',
+      href: `/validators/${validatorIdentity}/public_good/media`,
+    },
+    {
+      name: 'Tools',
+      href: `/validators/${validatorIdentity}/public_good/tools`
+    },
+    { name: 'Others',
+      href: `/validators/${validatorIdentity}/public_good/others`
     },
   ];
 };

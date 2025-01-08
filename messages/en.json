@@ -4,13 +4,34 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": { "name": "Validators", "hint": "" },
-      "Ecosystems": { "name": "Ecosystems", "hint": "" },
-      "Dominance": { "name": "Dominance", "hint": "" },
-      "POW": { "name": "POW", "hint": "Global staking, mining pools and validator statistics" },
-      "ETH": { "name": "ETH", "hint": "" },
-      "Polkadot": { "name": "Polkadot", "hint": "" },
-      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "Validators": {
+        "name": "Validators",
+        "hint": ""
+      },
+      "Ecosystems": {
+        "name": "Ecosystems",
+        "hint": ""
+      },
+      "Dominance": {
+        "name": "Dominance",
+        "hint": ""
+      },
+      "POW": {
+        "name": "POW",
+        "hint": "Global staking, mining pools and validator statistics"
+      },
+      "ETH": {
+        "name": "ETH",
+        "hint": ""
+      },
+      "Polkadot": {
+        "name": "Polkadot",
+        "hint": ""
+      },
+      "Cosmos": {
+        "name": "Cosmos",
+        "hint": ""
+      },
       "TVL": {
         "name": "TVL",
         "hint": "Jump Around"
@@ -175,6 +196,7 @@
     "Daily": "Daily",
     "Weekly": "Weekly",
     "Monthly": "Monthly",
+    "Yearly": "Yearly",
     "Choose Providers": "Choose Providers",
     "Profile": "Profile",
     "Token": "Token",
@@ -259,5 +281,122 @@
     "Partners": {
       "title": "Our Friends and Partners"
     }
+  },
+  "ValidatorProfileHeader": {
+    "Tabs": {
+      "Revenue": "Revenue",
+      "Metrics": "Metrics",
+      "Network Table": "Network Table",
+      "Public Good": "Public Good",
+      "Governance": "Governance"
+    },
+    "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
+    "Others Links": "Others Links",
+    "Merits": "Merits"
+  },
+  "ValidatorNetworksPage": {
+    "title": "Supported Networks",
+    "Table": {
+      "Network": {
+        "name": "Network",
+        "hint": ""
+      },
+      "Expected APR": {
+        "name": "Expected APR",
+        "hint": ""
+      },
+      "Fans": {
+        "name": "Fans",
+        "hint": ""
+      },
+      "Rank": {
+        "name": "Rank",
+        "hint": ""
+      },
+      "Voting Power": {
+        "name": "Voting Power",
+        "hint": ""
+      },
+      "Commission": {
+        "name": "Commission",
+        "hint": ""
+      },
+      "Self Delegation": {
+        "name": "Self Delegation",
+        "hint": ""
+      },
+      "Uptime": {
+        "name": "Uptime",
+        "hint": ""
+      },
+      "Missed Blocks": {
+        "name": "Missed Blocks",
+        "hint": ""
+      },
+      "Infrastructure": {
+        "name": "Infrastructure",
+        "hint": ""
+      },
+      "Governance": {
+        "name": "Governance",
+        "hint": ""
+      }
+    }
+  },
+  "ValidatorMetricsPage": {
+    "title": "Scores and Vanity Metrics",
+    "technical score": "Technical Score",
+    "social score": "Social Score",
+    "governance score": "Governance Score",
+    "user score": "User Score",
+    "TVS": "TVS",
+    "fans": "Fans",
+    "amount of assets": "Amount of Assets",
+    "explanation": "Explanation"
+  },
+  "ValidatorRevenuePage": {
+    "title": "Reward Revenue",
+    "global revenue": "Global Revenue",
+    "rumors": "Rumors",
+    "claim date": "Claim Date",
+    "read more": "Read More",
+    "rewards generated": "Rewards Generated"
+  },
+  "ValidatorGovernancePage": {
+    "title": "Governance Summary Feed",
+    "proposals": "Validator Created Proposals",
+    "news feed": "Governance News Feed",
+    "similar options": "Similar Options",
+    "Table": {
+      "Network": {
+        "name": "Network",
+        "hint": ""
+      },
+      "Title": {
+        "name": "I.D./Title",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Vote",
+        "hint": ""
+      }
+    }
+  },
+  "ValidatorPublicGoodPage": {
+    "title": "Validator Profile",
+    "description": "Users to validator off-chain data, are validators to blocks. After you login, you may submit information about a specific validator. For example your favorite validator or mining pool is running a podcast or have built a wallet? Click the Submit button and add the required details. Earn rewards. Approve or disprove information. Please note that each submission is a transaction!",
+    "Tabs": {
+      "Infrastructure": "Infrastructure",
+      "Community": "Community",
+      "Media": "Media",
+      "Tools": "Tools",
+      "Others": "Others"
+    }
+  },
+  "PublicGoodToolsPage": {
+    "description": "Submit here any explorers, wallets, dashboards, staking interfaces and similar tools operators create.",
+    "submit new info": "Submit New Info",
+    "tool list": "Tool List"
   }
 }
+

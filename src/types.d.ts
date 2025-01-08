@@ -27,3 +27,14 @@ interface ChatMessage {
   text: string;
   date: Date;
 }
+
+export interface PagesProps {
+  page:
+    | 'HomePage'
+    | 'AboutPage'
+    | 'ValidatorsPage'
+    | 'ValidatorProfileHeader'
+    | 'ValidatorNetworksPage'
+    | 'ValidatorGovernancePage'
+    | 'ValidatorPublicGoodPage';
+}

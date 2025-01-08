@@ -3,6 +3,8 @@ import AvatarIcon from '@/public/img/icons/avatar.svg';
 import BatteryIconActive from '@/public/img/icons/battery-a.svg';
 import BatterySmallIcon from '@/public/img/icons/battery-small.svg';
 import BatteryIcon from '@/public/img/icons/battery.svg';
+import CheckmarkIcon from '@/public/img/icons/checkmark.svg';
+import GreenSquareIcon from '@/public/img/icons/green-square.svg';
 import LuckyIconHovered from '@/public/img/icons/lucky-h.png';
 import LuckyIcon from '@/public/img/icons/lucky.png';
 import AboutIconHovered from '@/public/img/icons/navbar/about-h.png';
@@ -36,6 +38,8 @@ import ValidatorsIcon from '@/public/img/icons/navbar/validators.png';
 import NotToday from '@/public/img/icons/not-today.svg';
 import RabbitIconHovered from '@/public/img/icons/rabbit-h.png';
 import RabbitIcon from '@/public/img/icons/rabbit.png';
+import RedSquareIcon from '@/public/img/icons/red-square.svg';
+import YellowSquareIcon from '@/public/img/icons/yellow-square.svg';
 
 const icons = {
   AboutIcon,
@@ -76,6 +80,10 @@ const icons = {
   RabbitIconHovered,
   LuckyIcon,
   LuckyIconHovered,
+  CheckmarkIcon,
+  GreenSquareIcon,
+  RedSquareIcon,
+  YellowSquareIcon,
 };
 
 export default icons;

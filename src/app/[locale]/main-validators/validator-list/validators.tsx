@@ -10,9 +10,11 @@ interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
+  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage' | 'ProfilePage' | 'ValidatorNetworksPage';
+
 }
 
-const Validators: FC<OwnProps> = async ({ sort, perPage, filterChains = [], currentPage = 1 }) => {
+const Validators: FC<OwnProps> = async ({ page, sort, perPage, filterChains = [], currentPage = 1 }) => {
   return (
     <div>
       <ListFilters perPage={perPage} selectedEcosystems={filterChains} battery />
@@ -21,15 +23,15 @@ const Validators: FC<OwnProps> = async ({ sort, perPage, filterChains = [], curr
           <thead>
             <tr className="sticky top-0 z-30 w-full bg-table_header">
               <th />
-              <TableHeaderItem className="w-[20%]" name="Validator" sortField="moniker" defaultSelected />
-              <TableHeaderItem name="Links" />
-              <TableHeaderItem name="Battery" />
-              <TableHeaderItem name="Technical" />
-              <TableHeaderItem name="Social" />
-              <TableHeaderItem name="Governance" />
-              <TableHeaderItem name="User" />
-              <TableHeaderItem name="TVS" />
-              <TableHeaderItem name="Supported Assets" sortField="nodes" />
+              <TableHeaderItem page={page} className="w-[20%]" name="Validator" sortField="moniker" defaultSelected />
+              <TableHeaderItem page={page} name="Links" />
+              <TableHeaderItem page={page} name="Battery" />
+              <TableHeaderItem page={page} name="Technical" />
+              <TableHeaderItem page={page} name="Social" />
+              <TableHeaderItem page={page} name="Governance" />
+              <TableHeaderItem page={page} name="User" />
+              <TableHeaderItem page={page} name="TVS" />
+              <TableHeaderItem page={page} name="Supported Assets" sortField="nodes" />
             </tr>
           </thead>
           <Suspense

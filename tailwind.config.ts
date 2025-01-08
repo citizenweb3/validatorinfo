@@ -98,6 +98,10 @@ const config: Config = {
         star_h: `url('/img/icons/star-h.png')`,
         web: `url('/img/icons/web.png')`,
         web_h: `url('/img/icons/web-h.png')`,
+        go_big: `url('/img/icons/go-big.svg')`,
+        eco: `url('/img/icons/eco.svg')`,
+        keyhole: `url('/img/icons/keyhole.svg')`,
+        github_y: `url('/img/icons/github_yellow.svg')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',

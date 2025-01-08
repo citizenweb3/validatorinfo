@@ -15,7 +15,7 @@ interface OwnProps {
   ecosystems?: boolean;
 }
 
-const buttons = ['Daily', 'Weekly', 'Monthly'];
+const buttons = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
 
 const ChartButtons: FC<OwnProps> = ({
   isChart,
