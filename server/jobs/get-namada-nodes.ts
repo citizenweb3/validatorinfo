@@ -38,17 +38,12 @@ const getNamadaNodes = async (
 ) => {
   console.log('chainName:', chain.name);
 
-  console.log('[SSA] ', `server/jobs/get-namada-nodes.ts:14 chain:`, chain);
-
   const path = chain.grpcNodes[0].url + '/api/v1/pos/validator/all';
-  console.log('[SSA] ', `server/jobs/get-namada-nodes.ts:17 path:`, path);
   const validators = await getData(path);
-  console.log('[SSA] ', `server/jobs/get-namada-nodes.ts:17 validators:`, validators);
 
   if (!validators) return;
 
   for (const node of validators) {
-    console.log('[SSA] ', `server/jobs/get-namada-nodes.ts:51 node.name:`, node.name);
     if (!node.name) continue;
 
     let validator = await client.validator.findFirst({
