@@ -446,6 +446,29 @@ async function main() {
       githubUrl: '123',
       twitterUrl: '123',
     });
+
+    await addNetwork({
+      rang: 4,
+      ecosystem: 'namada',
+      name: 'namada',
+      prettyName: 'Namada',
+      chainId: 'namada.5f5de2dd1b88cba30586420',
+      bech32Prefix: 'tnam',
+      coinDecimals: 6,
+      coinGeckoId: '',
+      coinType: 877,
+      denom: 'NAM',
+      minimalDenom: 'unam',
+      grpcNodeUrl: 'https://indexer.namada.citizenweb3.com/',
+      lcdNodeUrl: 'rpc.namada.citizenweb3.com',
+      rpcNodeUrl: 'https://rpc.namada.citizenweb3.com',
+      wsNodeUrl: 'wss://rpc.namada.citizenweb3.com/websocket',
+      logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
+      mainRepo: 'https://github.com/anoma/namada',
+      docs: 'https://docs.namada.net/',
+      githubUrl: 'https://github.com/anoma',
+      twitterUrl: 'https://x.com/namada',
+    });
   } catch (e) {
     console.error(e);
   }
