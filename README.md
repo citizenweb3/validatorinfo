@@ -1,13 +1,13 @@
 # [Validator Info](https://validatorinfo.com/)
 > Multichain explorer, for Proof of Work and Proof of Stake blockchain networks. Dashboard and aggregator. Focused on providing real-time metrics on networks, validators, mining pools and tokens.
 
-#### Links: [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo) | [Docs](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md) | [Design Assets](https://github.com/citizenweb3/validatorinfo/tree/main/public) | [`BE GOOD` License](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG) |
+![Logo Validator info-8](https://github.com/user-attachments/assets/e41edba0-37a9-4db5-bbe9-94908dc38c3b) 
 
-![image](https://github.com/citizenweb3/validatorinfo/assets/7550961/6a7d6673-32be-4a31-895c-2793fde91ce4)
+### | [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo) | [Docs](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md) | [Design Assets](https://github.com/citizenweb3/validatorinfo/tree/main/public) | [`BE GOOD` License](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG) |
 
 -----------------------------------------
 
-## Installing
+# Installing
 
 ### Prerequisites
 
@@ -68,3 +68,5 @@ yarn build
 pm2 start "yarn start" --name next
 pm2 start "make start-indexer" --name indexer
 ```
+---------------------------------------
+
