@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import { validatorExample } from '@/app/validators/[validatorIdentity]/validatorExample';
+import { validatorExample } from '@/app/validators/[identity]/validatorExample';
 import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {

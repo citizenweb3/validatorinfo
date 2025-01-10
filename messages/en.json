@@ -111,7 +111,8 @@
         "hint": ""
       },
       "Customize": "Customize",
-      "Click 3 times to reset all filters": "Click 3 times to reset all filters"
+      "Click 3 times to reset all filters": "Click 3 times to reset all filters",
+      "Ecosystems": "Ecosystems"
     },
     "Tabs": {
       "Calculate": "Calculate",
@@ -340,7 +341,13 @@
       "Governance": {
         "name": "Governance",
         "hint": ""
-      }
+      },
+      "Customize": "Customize",
+      "Click 3 times to reset all filters": "Click 3 times to reset all filters",
+      "Network Stage": "Network Stage",
+      "Set Position": "Set Position",
+      "Node Status": "Node Status",
+      "Ecosystems": "Ecosystems"
     }
   },
   "ValidatorMetricsPage": {
@@ -397,6 +404,9 @@
     "description": "Submit here any explorers, wallets, dashboards, staking interfaces and similar tools operators create.",
     "submit new info": "Submit New Info",
     "tool list": "Tool List"
+  },
+  "PublicGoodInfrastructurePage": {
+    "description": "Validators run a lot of infrastructure. This info is verified automatically and doesn't need submitting. Although validator does NOT equal node, all validator nodes are public goods and run by the same entity. Hence, they are listed as entity goods, rather than network specific goods."
   }
 }
 

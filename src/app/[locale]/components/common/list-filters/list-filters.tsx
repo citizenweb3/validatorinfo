@@ -63,7 +63,7 @@ const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery =
     <div className="flex h-8 items-center justify-end space-x-10">
       {isOpened && (
         <>
-          <EcosystemDropdown selectedEcosystems={selectedEcosystems} onChainsChanged={onChainsChanged} />
+          <EcosystemDropdown title={t('Ecosystems')} selectedEcosystems={selectedEcosystems} onChainsChanged={onChainsChanged} />
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
           {battery && <ValidatorListFiltersBattery />}
         </>

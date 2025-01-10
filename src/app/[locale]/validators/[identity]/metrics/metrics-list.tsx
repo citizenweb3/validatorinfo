@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import MetricsListModal from '@/app/validators/[validatorIdentity]/metrics/metrics-list-modal';
-import { validatorExample } from '@/app/validators/[validatorIdentity]/validatorExample';
+import MetricsListModal from '@/app/validators/[identity]/metrics/metrics-list-modal';
+import { validatorExample } from '@/app/validators/[identity]/validatorExample';
 
 interface OwnProps {}
 

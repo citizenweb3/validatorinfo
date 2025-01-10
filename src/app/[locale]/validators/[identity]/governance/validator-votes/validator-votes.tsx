@@ -1,8 +1,6 @@
 import { FC } from 'react';
 
-import ValidatorVotesList from '@/app/validators/[validatorIdentity]/governance/validator-votes/validator-votes-list';
-import ValidatorNetworksList from '@/app/validators/[validatorIdentity]/networks/validator-networks/validator-networks-list';
-import ListFilters from '@/components/common/list-filters/list-filters';
+import ValidatorVotesList from '@/app/validators/[identity]/governance/validator-votes/validator-votes-list';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/services/validator-service';
 import { PagesProps } from '@/types';

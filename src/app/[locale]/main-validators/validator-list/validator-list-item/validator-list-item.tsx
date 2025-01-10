@@ -38,7 +38,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
           textClassName="max-w-36"
           icon={validator.url}
           name={validator.moniker}
-          href={`/validators/${validator.identity}`}
+          href={`/validators/${validator.identity}/networks`}
         />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">

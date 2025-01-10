@@ -1,13 +1,9 @@
 'use client';
 
-import { Chain } from '@prisma/client';
-import { router } from 'next/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import SubTitle from '@/components/common/sub-title';
-import TableAvatar from '@/components/common/table/table-avatar';
 import icons from '@/components/icons';
 
 interface OwnProps {

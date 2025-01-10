@@ -16,7 +16,7 @@ const SimpleValidatorListItem: FC<OwnProps> = ({ validator }) => {
   return (
     <tr className="group font-handjet hover:bg-bgHover ">
       <td className="group/avatar w-1/3 border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <TableAvatar icon={validator.url} name={validator.moniker} href={`/validators/${validator.identity}/network_table`} />
+        <TableAvatar icon={validator.url} name={validator.moniker} href={`/validators/${validator.identity}/networks`} />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
         <Link href={''} className={`${size}`}>

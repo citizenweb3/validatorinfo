@@ -1,18 +1,24 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import NetworksCircle from '@/app/validators/[validatorIdentity]/validator-profile/validator-networks-circle';
-import { validatorExample } from '@/app/validators/[validatorIdentity]/validatorExample';
+import NetworksCircle from '@/app/validators/[identity]/validator-profile/validator-networks-circle';
 import PlusButton from '@/components/common/plus-button';
+import ValidatorService from '@/services/validator-service';
 
 interface OwnProps {
   identity: string;
   locale: string;
 }
 
-const ValidatorProfile: FC<OwnProps> = async (identity, locale) => {
+const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorProfileHeader' });
-  const logos = validatorExample.chains.map((chain) => chain.logoUrl);
+
+  const validator = await ValidatorService.getValidatorByIdentity(identity);
+  const validatorLogoUrl = validator?.url || "/logos/Logo_1.svg";
+
+  const { validatorNodesWithChainData } = await ValidatorService.getValidatorNodesWithChains(identity);
+  const chainsLogos = validatorNodesWithChainData.map((chain) => chain?.logoUrl || "/logos/Logo_1.svg");
+
   const iconsSize = 'h-8 min-h-8 w-8 min-w-8';
 
   return (
@@ -20,9 +26,9 @@ const ValidatorProfile: FC<OwnProps> = async (identity, locale) => {
       <div className="col-span-2 max-w-xs border-b border-bgSt">
         <div className="font-sfpro text-base">
           <h1>
-            Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.
+            {t('description')}
           </h1>
-          <div className="relative w-full h-[50px] 2xl:h-[80px] xl:h-[65px] lg:h-[60px]  overflow-hidden my-4">
+          <div className="relative w-full h-[50px] 2xl:h-[85px] xl:h-[65px] lg:h-[60px] overflow-hidden my-4">
             <iframe
               src="https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark"
               className="origin-top-left m-0 p-0 scale-[0.25] 2xl:scale-[0.43] xl:scale-[0.32] lg:scale-[0.28]"
@@ -38,7 +44,7 @@ const ValidatorProfile: FC<OwnProps> = async (identity, locale) => {
         </div>
       </div>
       <div className="col-span-3 h-full shadow-button">
-        <NetworksCircle centerLogo={validatorExample.icon} logos={logos} />
+        <NetworksCircle centerLogo={validatorLogoUrl} logos={chainsLogos} />
       </div>
       <div className="col-span-2 ml-28 h-full border-b border-bgSt">
         <h1>

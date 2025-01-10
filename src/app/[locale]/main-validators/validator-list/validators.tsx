@@ -4,14 +4,13 @@ import ValidatorsList from '@/app/main-validators/validator-list/validators-list
 import ListFilters from '@/components/common/list-filters/list-filters';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/services/validator-service';
+import { PagesProps } from '@/types';
 
-interface OwnProps {
+interface OwnProps extends PagesProps {
   filterChains: string[];
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
-  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage' | 'ProfilePage' | 'ValidatorNetworksPage';
-
 }
 
 const Validators: FC<OwnProps> = async ({ page, sort, perPage, filterChains = [], currentPage = 1 }) => {

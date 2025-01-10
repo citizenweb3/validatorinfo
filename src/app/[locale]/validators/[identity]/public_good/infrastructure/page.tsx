@@ -1,34 +1,34 @@
 import { getTranslations } from 'next-intl/server';
 
-import ValidatorCreatedProposalsBar from '@/app/validators/[validatorIdentity]/governance/created-proposals-bar';
-import ValidatorVotes from '@/app/validators/[validatorIdentity]/governance/validator-votes/validator-votes';
-import MetricsChartLine from '@/app/validators/[validatorIdentity]/metrics/metrics-chart';
-import MetricsList from '@/app/validators/[validatorIdentity]/metrics/metrics-list';
-import RewardsGeneratedChart from '@/app/validators/[validatorIdentity]/revenue/rewards-generated-chart';
-import { validatorExample } from '@/app/validators/[validatorIdentity]/validatorExample';
+import ValidatorCreatedProposalsBar from '@/app/validators/[identity]/governance/created-proposals-bar';
+import ValidatorVotes from '@/app/validators/[identity]/governance/validator-votes/validator-votes';
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import { NextPageWithLocale } from '@/i18n';
-import { SortDirection } from '@/services/validator-service';
+import ValidatorService, { SortDirection } from '@/services/validator-service';
 
 interface PageProps {
-  params: NextPageWithLocale & { validatorIdentyty: string };
+  params: NextPageWithLocale & { identity: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const defaultPerPage = 1;
 
-const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchParams: q }) => {
-  const t = await getTranslations({ locale, namespace: 'ValidatorGovernancePage' });
+const PublicGoodInfrastructurePage: NextPageWithLocale<PageProps> = async ({ params: { locale, identity }, searchParams: q }) => {
+  const t = await getTranslations({ locale, namespace: 'PublicGoodInfrastructurePage' });
+
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
 
+  const validator = await ValidatorService.getValidatorByIdentity(identity);
+  const validatorMoniker = validator ? validator.moniker : "Validator";
+
   return (
     <div>
-      <PageTitle prefix={`${validatorExample.name}:`} text={t('title')} />
+      <div className="font-sfpro text-base mt-12 mb-7 ml-4">{t('description')}</div>
       <div className="mb-20 mt-6">
         <SubTitle text={t('proposals')} size="h2" />
         <div className="mt-6 flex justify-center">
@@ -37,7 +37,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
       </div>
       <div>
         <SubTitle text={t('news feed')} size="h2" />
-        <div className="flex justify-end my-4">
+        <div className="flex justify-end mt-4 mb-3">
           <RoundedButton href={''} className="font-handjet text-base">
             {t('similar options')}
           </RoundedButton>
@@ -53,4 +53,4 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
   );
 };
 
-export default ValidatorGovernancePage;
+export default PublicGoodInfrastructurePage;

@@ -5,28 +5,18 @@ import Button from '@/components/common/button';
 import TriangleButton from '@/components/common/triangle-button';
 
 interface OwnProps {
-  selectedEcosystems: string[];
-  onChainsChanged: (value: string) => void;
+  selectedSetPosition: string[];
+  onSetPositionChanged: (value: string) => void;
   title: string;
 }
 
-const ecosystems = [
-  { value: 'pow', title: 'POW' },
-  { value: 'cosmos', title: 'Cosmos' },
-  { value: 'near', title: 'Near' },
-  { value: 'polkadot', title: 'Polkadot' },
-  { value: 'ton', title: 'Ton' },
-  { value: 'ethereum', title: 'Ethereum' },
-  { value: 'solana', title: 'Solana' },
-  { value: 'cardano', title: 'Cardano' },
-  { value: 'iota', title: 'IOTA' },
-  { value: 'icp', title: 'ICP' },
-  { value: 'tezos', title: 'Tezos' },
-  { value: 'gnosis', title: 'Gnosis' },
-  { value: 'avalanche', title: 'Avalanche' },
+const setPositions = [
+  { value: 'active_set', title: 'Active Set' },
+  { value: 'not_active_set', title: 'Not Active Set' },
+
 ];
 
-const EcosystemDropdown: FC<OwnProps> = ({ title, selectedEcosystems, onChainsChanged }) => {
+const SetPositionDropdown: FC<OwnProps> = ({ title, selectedSetPosition, onSetPositionChanged }) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const ref = useRef(null);
   useOnClickOutside(ref, () => setIsOpened(false));
@@ -37,7 +27,7 @@ const EcosystemDropdown: FC<OwnProps> = ({ title, selectedEcosystems, onChainsCh
         onClick={() => setIsOpened(!isOpened)}
         contentClassName={`w-40 max-w-40 flex justify-between`}
         className="h-8 max-h-8"
-        isActive={selectedEcosystems.length > 0}
+        isActive={selectedSetPosition.length > 0}
         activeType="switcher"
       >
         {title}
@@ -45,12 +35,12 @@ const EcosystemDropdown: FC<OwnProps> = ({ title, selectedEcosystems, onChainsCh
       </Button>
       {isOpened && (
         <div className="absolute top-8 z-40 flex-col">
-          {ecosystems.map((item) => (
+          {setPositions.map((item) => (
             <Button
               key={item.value}
               component="button"
-              onClick={() => onChainsChanged(item.value)}
-              isActive={selectedEcosystems.indexOf(item.value) !== -1}
+              onClick={() => onSetPositionChanged(item.value)}
+              isActive={selectedSetPosition.indexOf(item.value) !== -1}
               className="text-base"
               contentClassName="max-h-7 w-40 min-w-40"
               activeType="switcher"
@@ -66,4 +56,4 @@ const EcosystemDropdown: FC<OwnProps> = ({ title, selectedEcosystems, onChainsCh
   );
 };
 
-export default EcosystemDropdown;
+export default SetPositionDropdown;

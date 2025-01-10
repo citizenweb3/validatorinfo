@@ -111,7 +111,8 @@
         "hint": ""
       },
       "Customize": "Customizar",
-      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros"
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
+      "Ecosystems": "Ecossistemas"
     },
     "Tabs": {
       "Calculate": "Calcular",
@@ -340,7 +341,13 @@
       "Governance": {
         "name": "Governação",
         "hint": ""
-      }
+      },
+      "Customize": "Customizar",
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
+      "Network Stage": "Fase de Rede",
+      "Set Position": "Posição de definição",
+      "Node Status": "Estado do nó",
+      "Ecosystems": "Ecossistemas"
     }
   },
   "ValidatorMetricsPage": {
@@ -397,5 +404,8 @@
     "description": "Submeter aqui quaisquer exploradores, carteiras, painéis de controlo, interfaces de staking e ferramentas semelhantes que os operadores criem.",
     "submit new info": "Enviar Novas Informações",
     "tool list": "Lista de Instrumentos"
+  },
+  "PublicGoodInfrastructurePage": {
+    "description": "Os validadores gerem muitas infra-estruturas. Esta informação é verificada automaticamente e não necessita de ser submetida. Embora validador NÃO seja igual a nó, todos os nós validadores são bens públicos e geridos pela mesma entidade. Por isso, são listados como bens da entidade, em vez de bens específicos da rede."
   }
 }

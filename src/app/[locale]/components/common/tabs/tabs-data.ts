@@ -60,54 +60,54 @@ export const profileTabs: TabOptions[] = [
   { name: 'Wallet', href: '/profile/wallet' },
 ];
 
-export const getValidatorProfileTabs = (validatorIdentity: string): TabOptions[] => {
+export const getValidatorProfileTabs = (indetity: string): TabOptions[] => {
   return [
     {
       name: 'Revenue',
-      href: `/validators/${validatorIdentity}/revenue`
+      href: `/validators/${indetity}/revenue`
     },
     {
       name: 'Metrics',
-      href: `/validators/${validatorIdentity}/metrics`,
+      href: `/validators/${indetity}/metrics`,
       icon: icons.MetricsIcon,
       iconHovered: icons.MetricsIconHovered
     },
     {
       name: 'Network Table',
-      href: `/validators/${validatorIdentity}/networks`,
+      href: `/validators/${indetity}/networks`,
       icon: icons.NetworksIcon,
       iconHovered: icons.NetworksIconHovered
     },
     {
       name: 'Public Good',
-      href: `/validators/${validatorIdentity}/public_good/tools`
+      href: `/validators/${indetity}/public_good/tools`
     },
     { name: 'Governance',
-      href: `/validators/${validatorIdentity}/governance`
+      href: `/validators/${indetity}/governance`
     },
   ];
 };
 
-export const getValidatorPublicGoodTabs = (validatorIdentity: string): TabOptions[] => {
+export const getValidatorPublicGoodTabs = (indetity: string): TabOptions[] => {
   return [
     {
       name: 'Infrastructure',
-      href: `/validators/${validatorIdentity}/public_good/infrastructure`
+      href: `/validators/${indetity}/public_good/infrastructure`
     },
     {
       name: 'Community',
-      href: `/validators/${validatorIdentity}/public_good/community`,
+      href: `/validators/${indetity}/public_good/community`,
     },
     {
       name: 'Media',
-      href: `/validators/${validatorIdentity}/public_good/media`,
+      href: `/validators/${indetity}/public_good/media`,
     },
     {
       name: 'Tools',
-      href: `/validators/${validatorIdentity}/public_good/tools`
+      href: `/validators/${indetity}/public_good/tools`
     },
     { name: 'Others',
-      href: `/validators/${validatorIdentity}/public_good/others`
+      href: `/validators/${indetity}/public_good/others`
     },
   ];
 };

@@ -1,11 +1,9 @@
 import { FC } from 'react';
 
-import ValidatorNetworksItem from '@/app/validators/[validatorIdentity]/networks/validator-networks/validator-networks-item';
 import TablePagination from '@/components/common/table/table-pagination';
-import ChainService from '@/services/chain-service';
 import { SortDirection } from '@/services/validator-service';
-import { validatorExample } from '@/app/validators/[validatorIdentity]/validatorExample';
-import ValidatorVotesItem from '@/app/validators/[validatorIdentity]/governance/validator-votes/validator-votes-items';
+import { validatorExample } from '@/app/validators/[identity]/validatorExample';
+import ValidatorVotesItem from '@/app/validators/[identity]/governance/validator-votes/validator-votes-items';
 
 interface OwnProps {
   currentPage?: number;
@@ -14,12 +12,6 @@ interface OwnProps {
 }
 
 const ValidatorVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
-  // const { chains: list, pages } = await ChainService.getAll(
-  //   perPage * (currentPage - 1),
-  //   perPage,
-  //   sort.sortBy,
-  //   sort.order,
-  // );
   const pages = 1;
 
   return (
