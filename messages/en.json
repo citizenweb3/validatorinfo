@@ -406,7 +406,8 @@
     "tool list": "Tool List"
   },
   "PublicGoodInfrastructurePage": {
-    "description": "Validators run a lot of infrastructure. This info is verified automatically and doesn't need submitting. Although validator does NOT equal node, all validator nodes are public goods and run by the same entity. Hence, they are listed as entity goods, rather than network specific goods."
+    "description": "Validators run a lot of infrastructure. This info is verified automatically and doesn't need submitting. Although validator does NOT equal node, all validator nodes are public goods and run by the same entity. Hence, they are listed as entity goods, rather than network specific goods.",
+    "submit new info": "Submit New Info"
   }
 }
 

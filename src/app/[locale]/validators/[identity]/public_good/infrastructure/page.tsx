@@ -23,12 +23,14 @@ const PublicGoodInfrastructurePage: NextPageWithLocale<PageProps> = async ({ par
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
 
-  const validator = await ValidatorService.getValidatorByIdentity(identity);
-  const validatorMoniker = validator ? validator.moniker : "Validator";
-
   return (
     <div>
       <div className="font-sfpro text-base mt-12 mb-7 ml-4">{t('description')}</div>
+      <div className="flex justify-end mt-4 mb-3">
+        <RoundedButton href={''} className="font-handjet text-base">
+          {t('submit new info')}
+        </RoundedButton>
+      </div>
       <div className="mb-20 mt-6">
         <SubTitle text={t('proposals')} size="h2" />
         <div className="mt-6 flex justify-center">
