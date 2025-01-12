@@ -28,7 +28,7 @@ const ChartButtons: FC<OwnProps> = ({
   const t = useTranslations('ComparisonPage');
   return (
     <div className="flex space-x-4">
-      {ecosystems && <EcosystemDropdown selectedEcosystems={[]} onChainsChanged={() => {}} />}
+      {ecosystems && <EcosystemDropdown title={t('Ecosystems')} selectedEcosystems={[]} onChainsChanged={() => {}} />}
       {!onlyDays && (
         <Button
           isActive={isChart}
@@ -42,18 +42,18 @@ const ChartButtons: FC<OwnProps> = ({
         </Button>
       )}
       {buttons.map((name) => (
-        <Button
-          key={name}
-          isActive={chartType === name}
-          activeType="switcher"
-          contentClassName="py-0 px-2 max-h-6 text-base hover:text-highlight"
-          onClick={() => {
-            onTypeChanged(name);
-          }}
-        >
-          {t(name as 'Weekly' | 'Monthly' | 'Daily')}
-        </Button>
-      ))}
+          <Button
+            key={name}
+            isActive={chartType === name}
+            activeType="switcher"
+            contentClassName="py-0 px-2 max-h-6 text-base hover:text-highlight"
+            onClick={() => {
+              onTypeChanged(name);
+            }}
+          >
+            {t(name as 'Weekly' | 'Monthly' | 'Daily' | 'Yearly')}
+          </Button>
+        ))}
     </div>
   );
 };

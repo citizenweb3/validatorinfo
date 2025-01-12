@@ -85,8 +85,8 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
           );
         })}
       </div>
-      <div className="absolute bottom-2.5 right-3.5">
-        <ArrowsGoBigButton isOpened={false} size="sm" />
+      <div className="absolute bottom-0.5 right-1">
+        <ArrowsGoBigButton isOpened={false} size="md" />
       </div>
     </div>
   );

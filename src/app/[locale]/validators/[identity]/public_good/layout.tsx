@@ -23,7 +23,7 @@ export default async function AboutLayout({
 
   return (
     <div>
-      <PageTitle prefix={`${t('title')}:`} text={validatorMoniker} />
+      <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
       <div className="mb-6 ml-4 mt-8 font-sfpro text-base">{t('description')}</div>
       <TabList page="ValidatorPublicGoodPage" tabs={validatorPublicGoodTabs} />
       {children}

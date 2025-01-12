@@ -15,6 +15,7 @@ export default async function AboutLayout({
 }>) {
   unstable_setRequestLocale(locale);
   const validatorProfileTabs = getValidatorProfileTabs(identity);
+
   return (
     <div>
       <ValidatorProfile identity={identity} locale={locale} />

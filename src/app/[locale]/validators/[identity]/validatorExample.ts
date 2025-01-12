@@ -226,4 +226,81 @@ export const validatorExample = {
       vote: 'Yes',
     },
   ],
+  rpcNodes: [
+    {
+      color: 'green',
+      networks: 'Namada',
+      url: 'https://rpc.namada.citizenweb3.com',
+    },
+    {
+      color: 'red',
+      networks: 'Namada',
+      url: 'https://rpc.namada.citizenweb3.com',
+    },
+    {
+      color: 'yellow',
+      networks: 'Namada',
+      url: 'https://rpc.namada.citizenweb3.com',
+    },
+  ],
+  relayerNodes: [
+    {
+      color: 'green',
+      networks: 'Cosmos Hub <-> Osmosis',
+      url: '123456',
+    },
+    {
+      color: 'red',
+      networks: 'Cosmos Hub <-> Osmosis',
+      url: '2423423',
+    },
+    {
+      color: 'yellow',
+      networks: 'Cosmos Hub <-> Osmosis',
+      url: '4564564',
+    },
+  ],
+  archiveNodes: [
+    {
+      color: 'green',
+      networks: 'Namada',
+      url: 'https://rpc.namada.citizenweb3.com',
+    },
+    {
+      color: 'red',
+      networks: 'Namada',
+      url: 'https://rpc.namada.citizenweb3.com',
+    },
+    {
+      color: 'yellow',
+      networks: 'Namada',
+      url: 'https://rpc.namada.citizenweb3.com',
+    },
+  ],
+  othersNodes: [
+    {
+      color: 'green',
+      networks: 'IPFS Node',
+      url: '123.432.234.4',
+    },
+    {
+      color: 'red',
+      networks: 'Light Node',
+      url: '123.432.234.4',
+    },
+  ],
+  media: [
+    {
+      name: 'Citizen Web3 Podcast',
+      approved: 88,
+    },
+    {
+      name: 'Citizen Web3 Youtube Channel',
+      approved: 78,
+    },
+    {
+      name: 'Citizen Web3 Blog',
+      approved: 91,
+    }
+  ]
 };

@@ -11,7 +11,6 @@ interface OwnProps {
 const ValidatorNetworksList: FC<OwnProps> = async ({ identity, sort }) => {
   console.log('Sort parameters received:', sort);
   const { validatorNodesWithChainData: list } = await ValidatorService.getValidatorNodesWithChains(identity, sort.sortBy, sort.order);
-  console.log(list);
 
   return (
     <tbody>

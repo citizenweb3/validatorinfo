@@ -212,7 +212,8 @@
     "Tags # in the Wild": "Tags # in the Wild",
     "TVS Growth": "Crescimento da TVS",
     "Fan Growth": "Crescimento de fãs",
-    "Add": "Adicionar"
+    "Add": "Adicionar",
+    "Ecosystems": "Ecossistemas"
   },
   "ProfilePage": {
     "Metadata": {
@@ -390,7 +391,7 @@
     }
   },
   "ValidatorPublicGoodPage": {
-    "title": "Perfil de Validador",
+    "title": "Projectos de infra-estruturas, comunitários, ferramentas e outros projectos de utilidade pública",
     "description": "Os utilizadores que validam dados fora da cadeia são validadores de blocos. Depois de iniciar sessão, o utilizador pode enviar informações sobre um validador específico. Por exemplo, o seu validador favorito ou pool de mineração está a realizar um podcast ou construiu uma carteira? Clique no botão Enviar e adicione os detalhes necessários. Ganhe prémios. Aprovar ou refutar informações. Tenha em atenção que cada envio é uma transação!",
     "Tabs": {
       "Infrastructure": "Infraestrutura",
@@ -407,6 +408,25 @@
   },
   "PublicGoodInfrastructurePage": {
     "description": "Os validadores gerem muitas infra-estruturas. Esta informação é verificada automaticamente e não necessita de ser submetida. Embora validador NÃO seja igual a nó, todos os nós validadores são bens públicos e geridos pela mesma entidade. Por isso, são listados como bens da entidade, em vez de bens específicos da rede.",
-    "submit new info": "Enviar Novas Informações"
+    "submit new info": "Enviar Novas Informações",
+    "rpc nodes": "RPC / LCD Nos",
+    "relayer nodes": "Nos de retransmissão",
+    "archive nodes": "Nós de Arquivo",
+    "others nodes": "Outros Nós",
+    "Table": {
+      "Networks": {
+        "name": "Redes",
+        "hint": ""
+      },
+      "URL": {
+        "name": "URL",
+        "hint": ""
+      }
+    }
+  },
+  "PublicGoodMediaPage": {
+    "description": "Apresentar projectos mediáticos conhecidos geridos, patrocinados ou acolhidos pelo validador. Podcasts, canais do YouTube, blogues... Os projectos devem conter um público para se enquadrarem nesta categoria.",
+    "submit new info": "Enviar Novas Informações",
+    "tooltip": "Clique para aprovar ou desaprovar esta informação"
   }
 }

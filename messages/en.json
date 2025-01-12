@@ -212,7 +212,8 @@
     "Tags # in the Wild": "Tags # in the Wild",
     "TVS Growth": "TVS Growth",
     "Fan Growth": "Fan Growth",
-    "Add": "Add"
+    "Add": "Add",
+    "Ecosystems": "Ecosystems"
   },
   "ProfilePage": {
     "Metadata": {
@@ -390,7 +391,7 @@
     }
   },
   "ValidatorPublicGoodPage": {
-    "title": "Validator Profile",
+    "title": "Infrastructure, Community, Tools and Other Public Good Projects",
     "description": "Users to validator off-chain data, are validators to blocks. After you login, you may submit information about a specific validator. For example your favorite validator or mining pool is running a podcast or have built a wallet? Click the Submit button and add the required details. Earn rewards. Approve or disprove information. Please note that each submission is a transaction!",
     "Tabs": {
       "Infrastructure": "Infrastructure",
@@ -407,7 +408,26 @@
   },
   "PublicGoodInfrastructurePage": {
     "description": "Validators run a lot of infrastructure. This info is verified automatically and doesn't need submitting. Although validator does NOT equal node, all validator nodes are public goods and run by the same entity. Hence, they are listed as entity goods, rather than network specific goods.",
-    "submit new info": "Submit New Info"
+    "submit new info": "Submit New Info",
+    "rpc nodes": "RPC / LCD Nodes",
+    "relayer nodes": "Relayer Nodes",
+    "archive nodes": "Archive Nodes",
+    "others nodes": "Others Nodes",
+    "Table": {
+      "Networks": {
+        "name": "Networks",
+        "hint": ""
+      },
+      "URL": {
+        "name": "URL",
+        "hint": ""
+      }
+    }
+  },
+  "PublicGoodMediaPage": {
+    "description": "Please submit known media projects run, sponsored or hosted by the validator. Podcasts, YouTube channels, blogs... Projects should contain an audience to fall under this category.",
+    "submit new info": "Submit New Info",
+    "tooltip": "Click to approve or disapprove this information"
   }
 }
 

@@ -40,6 +40,14 @@ import RabbitIconHovered from '@/public/img/icons/rabbit-h.png';
 import RabbitIcon from '@/public/img/icons/rabbit.png';
 import RedSquareIcon from '@/public/img/icons/red-square.svg';
 import YellowSquareIcon from '@/public/img/icons/yellow-square.svg';
+import RevenueIcon from '@/public/img/icons/validator-tabs/revenue.png';
+import RevenueIconHovered from '@/public/img/icons/validator-tabs/revenue-h.png';
+import NetworkTableIcon from '@/public/img/icons/validator-tabs/network-table.png';
+import NetworkTableIconHovered from '@/public/img/icons/validator-tabs/network-table-h.png';
+import PublicGoodIcon from '@/public/img/icons/validator-tabs/public-good.png';
+import PublicGoodIconHovered from '@/public/img/icons/validator-tabs/public-good-h.png';
+import GovernanceIcon from '@/public/img/icons/validator-tabs/governance.png';
+import GovernanceIconHovered from '@/public/img/icons/validator-tabs/governance-h.png';
 
 const icons = {
   AboutIcon,
@@ -84,6 +92,14 @@ const icons = {
   GreenSquareIcon,
   RedSquareIcon,
   YellowSquareIcon,
+  RevenueIcon,
+  RevenueIconHovered,
+  NetworkTableIcon,
+  NetworkTableIconHovered,
+  PublicGoodIcon,
+  PublicGoodIconHovered,
+  GovernanceIcon,
+  GovernanceIconHovered
 };
 
 export default icons;
