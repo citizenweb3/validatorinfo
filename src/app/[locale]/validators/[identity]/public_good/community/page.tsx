@@ -1,10 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
-import ValidatorToolList from '@/app/validators/[identity]/public_good/tools/validator-tool-list';
-import RoundedButton from '@/components/common/rounded-button';
-import SubTitle from '@/components/common/sub-title';
-import { NextPageWithLocale } from '@/i18n';
 import CommunitiesList from '@/app/validators/[identity]/public_good/community/communities-list';
+import RoundedButton from '@/components/common/rounded-button';
+import { NextPageWithLocale } from '@/i18n';
 
 interface PageProps {
   params: NextPageWithLocale & { identity: string };

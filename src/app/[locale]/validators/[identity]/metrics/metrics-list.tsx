@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import MetricsListModal from '@/app/validators/[identity]/metrics/metrics-list-modal';
 import { validatorExample } from '@/app/validators/[identity]/validatorExample';
+import ToolTip from '@/components/common/tooltip';
 
 interface OwnProps {}
 
@@ -44,11 +45,15 @@ const MetricsList: FC<OwnProps> = async () => {
       </div>
       <div className="flex w-full justify-center gap-8">
         <div className={cardClass}>
-          <div className="text-center text-base text-highlight">{t('TVS')}</div>
+          <ToolTip tooltip={t('tvs tooltip')} direction={'top'}>
+            <div className="text-center text-base text-highlight">{t('TVS')}</div>
+          </ToolTip>
           <div className="mt-3 font-handjet text-lg">${validatorExample.metrics.TVS}</div>
         </div>
         <div className={cardClass}>
-          <div className="text-center text-base text-highlight">{t('fans')}</div>
+          <ToolTip tooltip={t('fans tooltip')} direction={'top'}>
+            <div className="text-center text-base text-highlight">{t('fans')}</div>
+          </ToolTip>
           <div className="mt-3 font-handjet text-lg">{validatorExample.metrics.fans.toLocaleString('en-Us')}</div>
         </div>
         <div className={cardClass}>

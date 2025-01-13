@@ -5,6 +5,7 @@ import RewardsGeneratedChart from '@/app/validators/[identity]/revenue/rewards-g
 import RumorsLink from '@/app/validators/[identity]/revenue/rumors-link';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
+import ToolTip from '@/components/common/tooltip';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService from '@/services/validator-service';
 
@@ -35,7 +36,9 @@ const ValidatorRevenuePage: NextPageWithLocale<PageProps> = async ({ params }) =
         <RumorsLink identity={identity} locale={locale} />
       </div>
       <div className="mb-28 mt-5">
-        <SubTitle text={t('rewards generated')} size="h2" />
+        <ToolTip tooltip={t('tooltip rewards generated')} direction={'top'}>
+          <SubTitle text={t('rewards generated')} size="h2" />
+        </ToolTip>
         <div className="mt-6 flex justify-center">
           <RewardsGeneratedChart />
         </div>

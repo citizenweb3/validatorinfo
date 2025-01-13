@@ -5,6 +5,7 @@ import ValidatorVotes from '@/app/validators/[identity]/governance/validator-vot
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
+import ToolTip from '@/components/common/tooltip';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService, { SortDirection } from '@/services/validator-service';
 
@@ -41,13 +42,17 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({
     <div>
       <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
       <div className="mb-20 mt-6">
-        <SubTitle text={t('proposals')} size="h2" />
+        <ToolTip tooltip={t('tooltip created proposals')} direction={'top'}>
+          <SubTitle text={t('proposals')} size="h2" />
+        </ToolTip>
         <div className="mt-6 flex justify-center">
           <ValidatorCreatedProposalsBar />
         </div>
       </div>
       <div>
-        <SubTitle text={t('news feed')} size="h2" />
+        <ToolTip tooltip={t('tooltip news feed')} direction={'top'}>
+          <SubTitle text={t('news feed')} size="h2" />
+        </ToolTip>
         <div className="mb-3 mt-4 flex justify-end">
           <RoundedButton href={''} className="font-handjet text-base">
             {t('similar options')}

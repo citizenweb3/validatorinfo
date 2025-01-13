@@ -362,7 +362,9 @@
     "TVS": "TVS",
     "fans": "Adeptos",
     "amount of assets": "Montante dos Activos",
-    "explanation": "Explicação"
+    "explanation": "Explicação",
+    "tvs tooltip": "Montante total de activos apostados com o validador em todas as redes conhecidas",
+    "fans tooltip": "Quantidade total de delegados a este validador em todas as redes conhecidas"
   },
   "ValidatorRevenuePage": {
     "title": "Receitas de Prémios",
@@ -370,7 +372,9 @@
     "rumors": "Rumores",
     "claim date": "Data do Pedido",
     "read more": "Ler mais",
-    "rewards generated": "Prémios Gerados"
+    "rewards generated": "Prémios Gerados",
+    "tooltip global revenue": "As receitas geradas pela comissão de todas as redes de validador",
+    "tooltip rewards generated": "Este gráfico mostra o montante total de recompensas que este validador pagou num determinado dia, semana, mês ou ano em USD em todas as redes conhecidas. Calculado a partir de staking, mineração e recompensas de tokens próprios"
   },
   "ValidatorGovernancePage": {
     "title": "Feed de Resumo da Governação",
@@ -390,7 +394,9 @@
         "name": "Votar",
         "hint": ""
       }
-    }
+    },
+    "tooltip created proposals": "Mostra um resumo das propostas criadas pelo validador, a descrição e o seu resultado em todas as redes conhecidas. Verde significa que a proposta foi aceite",
+    "tooltip news feed": "Resumo da atividade de votação do validador em todas as redes. Clique no ID da proposta para obter mais pormenores"
   },
   "ValidatorPublicGoodPage": {
     "title": "Projectos de infra-estruturas, comunitários, ferramentas e outros projectos de utilidade pública",

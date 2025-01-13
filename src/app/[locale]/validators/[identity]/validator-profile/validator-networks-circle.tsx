@@ -34,8 +34,8 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
     const updateValues = () => {
       setResponsiveValues(getResponsiveValues());
     };
-
     updateValues();
+
     window.addEventListener('resize', updateValues);
 
     return () => {
