@@ -60,8 +60,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
-      <td
-        className="group/avatar border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt flex items-center">
+      <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <Image src={greenSquareIcon} alt={'green'} width={20} height={20} />
         <TableAvatar
           icon={item.logoUrl}
@@ -87,7 +86,9 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={`/networks/${item.chainId.toLowerCase()}`}>
           <div className="text-center">
-            {(Number(item.delegator_shares) / 10 ** item.coinDecimals).toLocaleString('en-US', { maximumFractionDigits: 0 })}
+            {(Number(item.delegator_shares) / 10 ** item.coinDecimals).toLocaleString('en-US', {
+              maximumFractionDigits: 0,
+            })}
           </div>
           <div className="text-center">{votingPowerPercents}%</div>
         </Link>

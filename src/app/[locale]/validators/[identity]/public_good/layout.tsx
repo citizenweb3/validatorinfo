@@ -7,7 +7,15 @@ import { getValidatorPublicGoodTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 import ValidatorService from '@/services/validator-service';
 
-export default async function AboutLayout({
+export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
+  const t = await getTranslations({ locale, namespace: 'ValidatorPublicGoodPage' });
+
+  return {
+    title: t('title'),
+  };
+}
+
+export default async function PublicGoodLayout({
   children,
   params: { locale, identity },
 }: Readonly<{
@@ -19,7 +27,7 @@ export default async function AboutLayout({
   const t = await getTranslations({ locale, namespace: 'ValidatorPublicGoodPage' });
 
   const validator = await ValidatorService.getValidatorByIdentity(identity);
-  const validatorMoniker = validator ? validator.moniker : "Validator";
+  const validatorMoniker = validator ? validator.moniker : 'Validator';
 
   return (
     <div>

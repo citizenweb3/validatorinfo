@@ -32,6 +32,7 @@ export interface PagesProps {
   page:
     | 'HomePage'
     | 'AboutPage'
+    | 'ProfilePage'
     | 'ValidatorsPage'
     | 'ValidatorProfileHeader'
     | 'ValidatorNetworksPage'

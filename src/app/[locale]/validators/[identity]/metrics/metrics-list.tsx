@@ -24,22 +24,22 @@ const MetricsList: FC<OwnProps> = async () => {
         <div className={cardClass}>
           <div className="text-center text-base text-highlight">{t('technical score')}</div>
           <div className="mt-3 font-handjet text-lg">{validatorExample.metrics.technicalScore}</div>
-          <MetricsListModal formulaUrl={'/img/formula.svg'} title={t('explanation')} />
+          <MetricsListModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
         </div>
         <div className={cardClass}>
           <div className="text-center text-base text-highlight">{t('social score')}</div>
           <div className="mt-3 font-handjet text-lg">{validatorExample.metrics.socialScore}</div>
-          <MetricsListModal formulaUrl={'/img/formula.svg'} title={t('explanation')} />
+          <MetricsListModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
         </div>
         <div className={cardClass}>
           <div className="text-center text-base text-highlight">{t('governance score')}</div>
           <div className="mt-3 font-handjet text-lg">{validatorExample.metrics.governanceScore}</div>
-          <MetricsListModal formulaUrl={'/img/formula.svg'} title={t('explanation')} />
+          <MetricsListModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
         </div>
         <div className={cardClass}>
           <div className="text-center text-base text-highlight">{t('user score')}</div>
           <div className="mt-3 font-handjet text-lg">{validatorExample.metrics.userScore}</div>
-          <MetricsListModal formulaUrl={'/img/formula.svg'} title={t('explanation')} />
+          <MetricsListModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
         </div>
       </div>
       <div className="flex w-full justify-center gap-8">
@@ -54,7 +54,7 @@ const MetricsList: FC<OwnProps> = async () => {
         <div className={cardClass}>
           <div className="text-center text-base text-highlight">{t('amount of assets')}</div>
           <div className="mt-3 font-handjet text-lg">{validatorExample.metrics.amountOfAssets}</div>
-          <MetricsListModal formulaUrl={'/img/formula.svg'} title={t('explanation')} />
+          <MetricsListModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
         </div>
       </div>
     </div>

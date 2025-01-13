@@ -294,54 +294,56 @@
     },
     "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
     "Others Links": "Others Links",
-    "Merits": "Merits"
+    "Merits": "Merits",
+    "eco tooltip": "text",
+    "keyhole tooltip": "text"
   },
   "ValidatorNetworksPage": {
     "title": "Supported Networks",
     "Table": {
       "Network": {
         "name": "Network",
-        "hint": ""
+        "hint": "You can narrow down the Network list by using the customize filter on the left. The green square indicates the status of the node. If the square is red, the node is jailed"
       },
       "Expected APR": {
         "name": "Expected APR",
-        "hint": ""
+        "hint": "This is the yearly return on your stake in percentage, if were to be calculated right now. It's expected, because inflation, comission, etc - can change at any moment"
       },
       "Fans": {
         "name": "Fans",
-        "hint": ""
+        "hint": "Amount of accounts delegating to this validator"
       },
       "Rank": {
         "name": "Rank",
-        "hint": ""
+        "hint": "Their rank in the active set, based on the amount of voting power"
       },
       "Voting Power": {
         "name": "Voting Power",
-        "hint": ""
+        "hint": "The total amount secured with the validator, and the amount it represents in % out of the total amount of staked tokens"
       },
       "Commission": {
         "name": "Commission",
-        "hint": ""
+        "hint": "The % from the rewards generated that the validator receives for securing the network"
       },
       "Self Delegation": {
         "name": "Self Delegation",
-        "hint": ""
+        "hint": "The amount of tokens the validator staked to their own node from the operator account. The color indicates the ratio in comparison to other nodes on the network"
       },
       "Uptime": {
         "name": "Uptime",
-        "hint": ""
+        "hint": "The amount of time the node is online over a selected period of time. The color indicates the ratio in comparison to other nodes on the network"
       },
       "Missed Blocks": {
         "name": "Missed Blocks",
-        "hint": ""
+        "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
       },
       "Infrastructure": {
         "name": "Infrastructure",
-        "hint": ""
+        "hint": "Does this validator provide public infrastructure for this network? RPC, Archive, etc. Click on the V to see details"
       },
       "Governance": {
         "name": "Governance",
-        "hint": ""
+        "hint": "Governance score of the validator out of a 100. Based on their participation in key life events"
       },
       "Customize": "Customize",
       "Click 3 times to reset all filters": "Click 3 times to reset all filters",
@@ -428,6 +430,10 @@
     "description": "Please submit known media projects run, sponsored or hosted by the validator. Podcasts, YouTube channels, blogs... Projects should contain an audience to fall under this category.",
     "submit new info": "Submit New Info",
     "tooltip": "Click to approve or disapprove this information"
+  },
+  "PublicGoodCommunityPage": {
+    "description": "Please submit links to validator created public events, administered chats and communities, twitter spaces and other similar online lives. Documentation, videos, 1 off blog posts, artistic contributions, stickers, forum participation, etc - are all examples of community contributions.",
+    "submit new info": "Submit New Info"
   }
 }
 

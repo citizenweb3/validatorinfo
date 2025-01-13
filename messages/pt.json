@@ -294,7 +294,9 @@
     },
     "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
     "Others Links": "Outras ligações",
-    "Merits": "Méritos"
+    "Merits": "Méritos",
+    "eco tooltip": "text",
+    "keyhole tooltip": "text"
   },
   "ValidatorNetworksPage": {
     "title": "Redes Suportadas",
@@ -428,5 +430,9 @@
     "description": "Apresentar projectos mediáticos conhecidos geridos, patrocinados ou acolhidos pelo validador. Podcasts, canais do YouTube, blogues... Os projectos devem conter um público para se enquadrarem nesta categoria.",
     "submit new info": "Enviar Novas Informações",
     "tooltip": "Clique para aprovar ou desaprovar esta informação"
+  },
+  "PublicGoodCommunityPage": {
+    "description": "Envie links para eventos públicos criados pelo validador, chats e comunidades administrados, espaços no Twitter e outras vidas em linha semelhantes. Documentação, vídeos, publicações únicas em blogues, contribuições artísticas, autocolantes, participação em fóruns, etc. - são exemplos de contribuições da comunidade.",
+    "submit new info": "Enviar Novas Informações"
   }
 }

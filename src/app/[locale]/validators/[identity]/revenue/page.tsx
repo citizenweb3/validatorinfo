@@ -5,11 +5,19 @@ import RewardsGeneratedChart from '@/app/validators/[identity]/revenue/rewards-g
 import RumorsLink from '@/app/validators/[identity]/revenue/rumors-link';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
-import { NextPageWithLocale } from '@/i18n';
+import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService from '@/services/validator-service';
 
 interface PageProps {
   params: NextPageWithLocale & { identity: string };
+}
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
+  const t = await getTranslations({ locale, namespace: 'ValidatorRevenuePage' });
+
+  return {
+    title: t('title'),
+  };
 }
 
 const ValidatorRevenuePage: NextPageWithLocale<PageProps> = async ({ params }) => {
@@ -17,8 +25,7 @@ const ValidatorRevenuePage: NextPageWithLocale<PageProps> = async ({ params }) =
   const t = await getTranslations({ locale, namespace: 'ValidatorRevenuePage' });
 
   const validator = await ValidatorService.getValidatorByIdentity(identity);
-  const validatorMoniker = validator ? validator.moniker : "Validator";
-
+  const validatorMoniker = validator ? validator.moniker : 'Validator';
 
   return (
     <div>

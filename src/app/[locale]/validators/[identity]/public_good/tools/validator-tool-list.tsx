@@ -2,13 +2,18 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 const ValidatorToolList: FC = () => {
+  const toolList = [
+    {key: 1, link: '/img/tmp/public-good-tool.svg'},
+    {key: 2, link: '/img/tmp/public-good-tool.svg'},
+    {key: 3, link: '/img/tmp/public-good-tool.svg'},
+    {key: 4, link: '/img/tmp/public-good-tool.svg'},
+    {key: 5, link: '/img/tmp/public-good-tool.svg'},
+  ]
   return (
-    <div className="mt-2 mb-20 grid grid-cols-5 items-center gap-9">
-      <Image src={'/img/public-good-tool.svg'} width={273} height={315} alt="tool" className="col-span-1" />
-      <Image src={'/img/public-good-tool.svg'} width={273} height={315} alt="tool" className="col-span-1" />
-      <Image src={'/img/public-good-tool.svg'} width={273} height={315} alt="tool" className="col-span-1" />
-      <Image src={'/img/public-good-tool.svg'} width={273} height={315} alt="tool" className="col-span-1" />
-      <Image src={'/img/public-good-tool.svg'} width={273} height={315} alt="tool" className="col-span-1" />
+    <div className="mt-2 grid grid-cols-5 items-center gap-9">
+      {toolList.map((tool) => (
+        <Image key={tool.key} src={tool.link} width={273} height={315} alt="tool" className="col-span-1" />
+      ))}
     </div>
   );
 };

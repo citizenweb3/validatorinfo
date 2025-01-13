@@ -5,7 +5,7 @@ import ValidatorVotes from '@/app/validators/[identity]/governance/validator-vot
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
-import { NextPageWithLocale } from '@/i18n';
+import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService, { SortDirection } from '@/services/validator-service';
 
 interface PageProps {
@@ -13,9 +13,20 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
+export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
+  const t = await getTranslations({ locale, namespace: 'ValidatorGovernancePage' });
+
+  return {
+    title: t('title'),
+  };
+}
+
 const defaultPerPage = 1;
 
-const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { locale, identity }, searchParams: q }) => {
+const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({
+  params: { locale, identity },
+  searchParams: q,
+}) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorGovernancePage' });
 
   const currentPage = parseInt((q.p as string) || '1');
@@ -24,7 +35,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
   const order = (q.order as SortDirection) ?? 'asc';
 
   const validator = await ValidatorService.getValidatorByIdentity(identity);
-  const validatorMoniker = validator ? validator.moniker : "Validator";
+  const validatorMoniker = validator ? validator.moniker : 'Validator';
 
   return (
     <div>
@@ -37,7 +48,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
       </div>
       <div>
         <SubTitle text={t('news feed')} size="h2" />
-        <div className="flex justify-end mt-4 mb-3">
+        <div className="mb-3 mt-4 flex justify-end">
           <RoundedButton href={''} className="font-handjet text-base">
             {t('similar options')}
           </RoundedButton>
