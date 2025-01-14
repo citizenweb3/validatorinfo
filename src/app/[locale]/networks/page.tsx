@@ -32,7 +32,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
-      <Networks perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage} />
+      <Networks page="HomePage" perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage} />
     </div>
   );
 };

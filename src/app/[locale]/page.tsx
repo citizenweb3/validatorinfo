@@ -25,6 +25,7 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
     <div>
       <TabList page="HomePage" tabs={mainTabs} />
       <Validators
+        page="HomePage"
         sort={{ sortBy, order }}
         perPage={validatorsPerPage}
         filterChains={filterChains}

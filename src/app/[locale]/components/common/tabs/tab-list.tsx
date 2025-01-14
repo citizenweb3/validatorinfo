@@ -2,10 +2,10 @@ import { FC } from 'react';
 
 import TabListItem from '@/components/common/tabs/tab-list-item';
 import { TabOptions } from '@/components/common/tabs/tabs-data';
+import { PagesProps } from '@/types';
 
-interface OwnProps {
+interface OwnProps extends PagesProps {
   tabs: TabOptions[];
-  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage' | 'ProfilePage';
 }
 
 const TabList: FC<OwnProps> = ({ page, tabs }) => {

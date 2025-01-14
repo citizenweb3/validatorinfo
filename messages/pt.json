@@ -4,16 +4,34 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": { "name": "Validadores", "hint": "" },
-      "Ecosystems": { "name": "Ecossistemas", "hint": "" },
-      "Dominance": { "name": "Domínio", "hint": "" },
+      "Validators": {
+        "name": "Validadores",
+        "hint": ""
+      },
+      "Ecosystems": {
+        "name": "Ecossistemas",
+        "hint": ""
+      },
+      "Dominance": {
+        "name": "Domínio",
+        "hint": ""
+      },
       "POW": {
         "name": "POW",
         "hint": "Estacamento global, pools de mineração e estatísticas de validadores"
       },
-      "ETH": { "name": "ETH", "hint": "" },
-      "Polkadot": { "name": "Polkadot", "hint": "" },
-      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "ETH": {
+        "name": "ETH",
+        "hint": ""
+      },
+      "Polkadot": {
+        "name": "Polkadot",
+        "hint": ""
+      },
+      "Cosmos": {
+        "name": "Cosmos",
+        "hint": ""
+      },
       "TVL": {
         "name": "TVL",
         "hint": ""
@@ -93,7 +111,8 @@
         "hint": ""
       },
       "Customize": "Customizar",
-      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros"
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
+      "Ecosystems": "Ecossistemas"
     },
     "Tabs": {
       "Calculate": "Calcular",
@@ -178,6 +197,7 @@
     "Daily": "Diário",
     "Weekly": "Semanal",
     "Monthly": "Mensal",
+    "Yearly": "Anual",
     "Choose Providers": "Escolher provedores",
     "Profile": "Perfil",
     "Token": "Token",
@@ -192,7 +212,8 @@
     "Tags # in the Wild": "Tags # in the Wild",
     "TVS Growth": "Crescimento da TVS",
     "Fan Growth": "Crescimento de fãs",
-    "Add": "Adicionar"
+    "Add": "Adicionar",
+    "Ecosystems": "Ecossistemas"
   },
   "ProfilePage": {
     "Metadata": {
@@ -262,5 +283,162 @@
     "Partners": {
       "title": "Nossos amigos e parceiros"
     }
+  },
+  "ValidatorProfileHeader": {
+    "Tabs": {
+      "Revenue": "Receitas",
+      "Metrics": "Métricas",
+      "Network Table": "Tabela de Rede",
+      "Public Good": "Bem Público",
+      "Governance": "Governação"
+    },
+    "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
+    "Others Links": "Outras ligações",
+    "Merits": "Méritos",
+    "eco tooltip": "text",
+    "keyhole tooltip": "text"
+  },
+  "ValidatorNetworksPage": {
+    "title": "Redes Suportadas",
+    "Table": {
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Expected APR": {
+        "name": "APR Esperada",
+        "hint": ""
+      },
+      "Fans": {
+        "name": "Adeptos",
+        "hint": ""
+      },
+      "Rank": {
+        "name": "Classificação",
+        "hint": ""
+      },
+      "Voting Power": {
+        "name": "Poder de Voto",
+        "hint": ""
+      },
+      "Commission": {
+        "name": "Comissão",
+        "hint": ""
+      },
+      "Self Delegation": {
+        "name": "Auto-delegação",
+        "hint": ""
+      },
+      "Uptime": {
+        "name": "Tempo de Funcionamento",
+        "hint": ""
+      },
+      "Missed Blocks": {
+        "name": "Bloqueios Falhados",
+        "hint": ""
+      },
+      "Infrastructure": {
+        "name": "Infraestrutura",
+        "hint": ""
+      },
+      "Governance": {
+        "name": "Governação",
+        "hint": ""
+      },
+      "Customize": "Customizar",
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
+      "Network Stage": "Fase de Rede",
+      "Set Position": "Posição de definição",
+      "Node Status": "Estado do nó",
+      "Ecosystems": "Ecossistemas"
+    }
+  },
+  "ValidatorMetricsPage": {
+    "title": "Pontuações e Métricas de Vaidade",
+    "technical score": "Pontuação Técnica",
+    "social score": "Social Score",
+    "governance score": "Pontuação Social",
+    "user score": "Pontuação do Utilizador",
+    "TVS": "TVS",
+    "fans": "Adeptos",
+    "amount of assets": "Montante dos Activos",
+    "explanation": "Explicação",
+    "tvs tooltip": "Montante total de activos apostados com o validador em todas as redes conhecidas",
+    "fans tooltip": "Quantidade total de delegados a este validador em todas as redes conhecidas"
+  },
+  "ValidatorRevenuePage": {
+    "title": "Receitas de Prémios",
+    "global revenue": "Receita Global",
+    "rumors": "Rumores",
+    "claim date": "Data do Pedido",
+    "read more": "Ler mais",
+    "rewards generated": "Prémios Gerados",
+    "tooltip global revenue": "As receitas geradas pela comissão de todas as redes de validador",
+    "tooltip rewards generated": "Este gráfico mostra o montante total de recompensas que este validador pagou num determinado dia, semana, mês ou ano em USD em todas as redes conhecidas. Calculado a partir de staking, mineração e recompensas de tokens próprios"
+  },
+  "ValidatorGovernancePage": {
+    "title": "Feed de Resumo da Governação",
+    "proposals": "Propostas Criadas pelo Validador",
+    "news feed": "Feed de Notícias da Governação",
+    "similar options": "Opções Similares",
+    "Table": {
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Title": {
+        "name": "I.D./Título",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Votar",
+        "hint": ""
+      }
+    },
+    "tooltip created proposals": "Mostra um resumo das propostas criadas pelo validador, a descrição e o seu resultado em todas as redes conhecidas. Verde significa que a proposta foi aceite",
+    "tooltip news feed": "Resumo da atividade de votação do validador em todas as redes. Clique no ID da proposta para obter mais pormenores"
+  },
+  "ValidatorPublicGoodPage": {
+    "title": "Projectos de infra-estruturas, comunitários, ferramentas e outros projectos de utilidade pública",
+    "description": "Os utilizadores que validam dados fora da cadeia são validadores de blocos. Depois de iniciar sessão, o utilizador pode enviar informações sobre um validador específico. Por exemplo, o seu validador favorito ou pool de mineração está a realizar um podcast ou construiu uma carteira? Clique no botão Enviar e adicione os detalhes necessários. Ganhe prémios. Aprovar ou refutar informações. Tenha em atenção que cada envio é uma transação!",
+    "Tabs": {
+      "Infrastructure": "Infraestrutura",
+      "Community": "Comunidade",
+      "Media": "Media",
+      "Tools": "Instrumentos",
+      "Others": "Outros"
+    }
+  },
+  "PublicGoodToolsPage": {
+    "description": "Submeter aqui quaisquer exploradores, carteiras, painéis de controlo, interfaces de staking e ferramentas semelhantes que os operadores criem.",
+    "submit new info": "Enviar Novas Informações",
+    "tool list": "Lista de Instrumentos"
+  },
+  "PublicGoodInfrastructurePage": {
+    "description": "Os validadores gerem muitas infra-estruturas. Esta informação é verificada automaticamente e não necessita de ser submetida. Embora validador NÃO seja igual a nó, todos os nós validadores são bens públicos e geridos pela mesma entidade. Por isso, são listados como bens da entidade, em vez de bens específicos da rede.",
+    "submit new info": "Enviar Novas Informações",
+    "rpc nodes": "RPC / LCD Nos",
+    "relayer nodes": "Nos de retransmissão",
+    "archive nodes": "Nós de Arquivo",
+    "others nodes": "Outros Nós",
+    "Table": {
+      "Networks": {
+        "name": "Redes",
+        "hint": ""
+      },
+      "URL": {
+        "name": "URL",
+        "hint": ""
+      }
+    }
+  },
+  "PublicGoodMediaPage": {
+    "description": "Apresentar projectos mediáticos conhecidos geridos, patrocinados ou acolhidos pelo validador. Podcasts, canais do YouTube, blogues... Os projectos devem conter um público para se enquadrarem nesta categoria.",
+    "submit new info": "Enviar Novas Informações",
+    "tooltip": "Clique para aprovar ou desaprovar esta informação"
+  },
+  "PublicGoodCommunityPage": {
+    "description": "Envie links para eventos públicos criados pelo validador, chats e comunidades administrados, espaços no Twitter e outras vidas em linha semelhantes. Documentação, vídeos, publicações únicas em blogues, contribuições artísticas, autocolantes, participação em fóruns, etc. - são exemplos de contribuições da comunidade.",
+    "submit new info": "Enviar Novas Informações"
   }
 }

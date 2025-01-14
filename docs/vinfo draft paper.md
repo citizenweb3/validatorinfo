@@ -230,7 +230,7 @@ Research:
 
 #### Chain health:
 - Chain health index is a public metric that clearly shows the current status of its liveliness, based on 3 separate and commonly known pillars: security, scalability, decentralization (for easier calculations, further blocks might be added, such as: financial, privacy, technological, social, etc)
-- Display: include health meter on each chain profile page, as shown on [global tab now](https://validatorinfo.com/global_pos) - in the form of 3 meters
+- Display: include health meter on each chain profile page, as shown on [global tab now](https://validatorinfo.com/global) - in the form of 3 meters
 - Under the hood: Under the hood, these metrics should be calculated as one, as it will be used to calculate each individual validator / pool metric. In the future logged in users can adjust settings / params
 - NA means that the metric cannot be calculated now. rather than removing it altogether from calculations, i suggest setting 0 score to it, to show that no one is perfect =)
 
