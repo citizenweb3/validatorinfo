@@ -26,7 +26,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
     <div className="mb-7 mt-4 grid grid-cols-7 items-start">
       <div className="col-span-2 max-w-xs border-b border-bgSt">
         <div className="font-sfpro text-base">
-          <h1>{t('description')}</h1>
+          <h2>{t('description')}</h2>
           <div className="relative my-4 h-[50px] w-full overflow-hidden lg:h-[60px] xl:h-[66px] 2xl:h-[86px]">
             <iframe
               src="https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark"
@@ -36,7 +36,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
             ></iframe>
           </div>
         </div>
-        <div className="flex items-center mb-2">
+        <div className="mb-2 flex items-center">
           <div className={`${iconsSize} bg-web bg-contain bg-no-repeat`} />
           <p className="text-xs">{t('Others Links')}</p>
           <PlusButton size="xs" isOpened={false} />
@@ -51,12 +51,12 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
         </h1>
         <div className="mt-7 flex items-center">
           <Tooltip className="text-nowrap" tooltip={t('eco tooltip')} direction={'bottom'}>
-            <div className={`${iconsSize} hover:bg-eco_h ml-2.5 bg-eco bg-contain bg-no-repeat`} />
+            <div className={`${iconsSize} ml-2.5 bg-eco bg-contain bg-no-repeat hover:bg-eco_h`} />
           </Tooltip>
           <Tooltip className="text-nowrap" tooltip={t('eco tooltip')} direction={'bottom'}>
-            <div className={`${iconsSize} hover:bg-keyhole_h ml-2.5 bg-keyhole bg-contain bg-no-repeat`} />
+            <div className={`${iconsSize} ml-2.5 bg-keyhole bg-contain bg-no-repeat hover:bg-keyhole_h`} />
           </Tooltip>
-          <div className={`${iconsSize} bg-github_g ml-2.5 bg-contain bg-no-repeat`} />
+          <div className={`${iconsSize} ml-2.5 bg-github_g bg-contain bg-no-repeat`} />
         </div>
       </div>
     </div>

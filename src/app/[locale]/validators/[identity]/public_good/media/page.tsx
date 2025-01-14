@@ -1,10 +1,9 @@
 import { getTranslations } from 'next-intl/server';
 
-import ValidatorNodes from '@/app/validators/[identity]/public_good/infrastructure/validator-nodes/validator-nodes';
+import ValidatorMediasList from '@/app/validators/[identity]/public_good/media/validator-medias-list';
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/services/validator-service';
-import ValidatorMedias from '@/app/validators/[identity]/public_good/media/validator-medias';
 
 interface PageProps {
   params: NextPageWithLocale & { identity: string };
@@ -32,11 +31,7 @@ const PublicGoodMediaPage: NextPageWithLocale<PageProps> = async ({
           {t('submit new info')}
         </RoundedButton>
       </div>
-      <ValidatorMedias
-        perPage={perPage}
-        currentPage={currentPage}
-        sort={{ sortBy, order }}
-      />
+      <ValidatorMediasList perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
     </div>
   );
 };

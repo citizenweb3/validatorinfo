@@ -32,7 +32,7 @@ export default async function PublicGoodLayout({
   return (
     <div>
       <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
-      <div className="mb-6 ml-4 mt-8 font-sfpro text-base">{t('description')}</div>
+      <div className="my-8 ml-4 font-sfpro text-base">{t('description')}</div>
       <TabList page="ValidatorPublicGoodPage" tabs={validatorPublicGoodTabs} />
       {children}
     </div>

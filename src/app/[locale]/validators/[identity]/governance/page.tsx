@@ -39,7 +39,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({
   const validatorMoniker = validator ? validator.moniker : 'Validator';
 
   return (
-    <div>
+    <div className="mb-10">
       <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
       <div className="mb-20 mt-6">
         <ToolTip tooltip={t('tooltip created proposals')} direction={'top'}>
@@ -53,7 +53,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({
         <ToolTip tooltip={t('tooltip news feed')} direction={'top'}>
           <SubTitle text={t('news feed')} size="h2" />
         </ToolTip>
-        <div className="mb-3 mt-4 flex justify-end">
+        <div className="mb-4 mt-4 flex justify-end">
           <RoundedButton href={''} className="font-handjet text-base">
             {t('similar options')}
           </RoundedButton>

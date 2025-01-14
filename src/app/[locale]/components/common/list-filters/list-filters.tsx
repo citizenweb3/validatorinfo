@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
-import EcosystemDropdown from '@/components/common/list-filters/ecosystem-dropdown';
+import Dropdown from '@/components/common/list-filters/dropdown';
 import ValidatorListFiltersBattery from '@/components/common/list-filters/validator-list-filters-battery';
 import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
 import PlusButton from '@/components/common/plus-button';
@@ -15,6 +15,22 @@ interface OwnProps {
   perPage: number;
   battery?: boolean;
 }
+
+export const ecosystemsDropdown = [
+  { value: 'pow', title: 'POW' },
+  { value: 'cosmos', title: 'Cosmos' },
+  { value: 'near', title: 'Near' },
+  { value: 'polkadot', title: 'Polkadot' },
+  { value: 'ton', title: 'Ton' },
+  { value: 'ethereum', title: 'Ethereum' },
+  { value: 'solana', title: 'Solana' },
+  { value: 'cardano', title: 'Cardano' },
+  { value: 'iota', title: 'IOTA' },
+  { value: 'icp', title: 'ICP' },
+  { value: 'tezos', title: 'Tezos' },
+  { value: 'gnosis', title: 'Gnosis' },
+  { value: 'avalanche', title: 'Avalanche' },
+];
 
 const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery = false }) => {
   const router = useRouter();
@@ -63,7 +79,12 @@ const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery =
     <div className="flex h-8 items-center justify-end space-x-10">
       {isOpened && (
         <>
-          <EcosystemDropdown title={t('Ecosystems')} selectedEcosystems={selectedEcosystems} onChainsChanged={onChainsChanged} />
+          <Dropdown
+            filterValues={ecosystemsDropdown}
+            title={t('Ecosystems')}
+            selectedValue={selectedEcosystems}
+            onChanged={onChainsChanged}
+          />
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
           {battery && <ValidatorListFiltersBattery />}
         </>

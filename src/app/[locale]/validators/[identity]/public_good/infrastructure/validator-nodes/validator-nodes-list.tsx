@@ -2,8 +2,6 @@ import { FC } from 'react';
 
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/services/validator-service';
-import { validatorExample } from '@/app/validators/[identity]/validatorExample';
-import ValidatorVotesItem from '@/app/validators/[identity]/governance/validator-votes/validator-votes-items';
 import ValidatorNodesItem
   from '@/app/validators/[identity]/public_good/infrastructure/validator-nodes/validator-nodes-item';
 

@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 const ValidatorCreatedProposalsBar: FC = () => {
   return (
-    <Image src={'/img/charts/created-proposals-bar.svg'} width={1300} height={250} alt="proposals created" />
+    <Image src={'/img/charts/created-proposals-bar.svg'} width={1100} height={250} alt="proposals created" />
   );
 };
 

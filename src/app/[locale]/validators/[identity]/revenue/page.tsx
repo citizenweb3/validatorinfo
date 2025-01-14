@@ -29,13 +29,13 @@ const ValidatorRevenuePage: NextPageWithLocale<PageProps> = async ({ params }) =
   const validatorMoniker = validator ? validator.moniker : 'Validator';
 
   return (
-    <div>
+    <div className="mb-20">
       <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
       <div className="flex flex-row items-center justify-between">
         <GlobalRevenue identity={identity} />
         <RumorsLink identity={identity} locale={locale} />
       </div>
-      <div className="mb-28 mt-5">
+      <div className="mt-6">
         <ToolTip tooltip={t('tooltip rewards generated')} direction={'top'}>
           <SubTitle text={t('rewards generated')} size="h2" />
         </ToolTip>

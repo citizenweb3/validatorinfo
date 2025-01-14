@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import MetricsChartLine from '@/app/validators/[identity]/metrics/metrics-chart';
-import MetricsList from '@/app/validators/[identity]/metrics/metrics-list';
+import MetricsBlocks from '@/app/validators/[identity]/metrics/metrics-blocks';
 import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService from '@/services/validator-service';
@@ -26,9 +26,9 @@ const ValidatorMetricsPage: NextPageWithLocale<PageProps> = async ({ params }) =
   const validatorMoniker = validator ? validator.moniker : 'Validator';
 
   return (
-    <div>
+    <div className="mb-20">
       <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
-      <MetricsList />
+      <MetricsBlocks />
       <MetricsChartLine />
     </div>
   );

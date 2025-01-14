@@ -9,14 +9,17 @@ interface OwnProps {
 }
 
 const ValidatorNetworksList: FC<OwnProps> = async ({ identity, sort }) => {
-  console.log('Sort parameters received:', sort);
-  const { validatorNodesWithChainData: list } = await ValidatorService.getValidatorNodesWithChains(identity, sort.sortBy, sort.order);
+  const { validatorNodesWithChainData: list } = await ValidatorService.getValidatorNodesWithChains(
+    identity,
+    sort.sortBy,
+    sort.order,
+  );
 
   return (
     <tbody>
-    {list.map((item) => (
-      <ValidatorNetworksItem key={item.chainId+item.consensus_pubkey} item={item} />
-    ))}
+      {list.map((item) => (
+        <ValidatorNetworksItem key={item.chainId + item.consensus_pubkey} item={item} />
+      ))}
     </tbody>
   );
 };

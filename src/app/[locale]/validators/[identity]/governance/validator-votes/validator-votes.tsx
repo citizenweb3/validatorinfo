@@ -14,7 +14,7 @@ interface OwnProps extends PagesProps {
 const ValidatorVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
   return (
     <div>
-      <table className="my-4 w-full table-auto border-collapse">
+      <table className="w-full table-auto border-collapse">
         <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />

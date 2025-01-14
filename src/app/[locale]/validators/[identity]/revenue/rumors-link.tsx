@@ -13,18 +13,20 @@ const RumorsLink: FC<OwnProps> = async (identity, locale) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorRevenuePage' });
 
   return (
-    <div className="flex flex-col items-start shadow-button">
-      <h2 className="mb-2 self-end text-sm text-highlight">{t('rumors')}</h2>
-      <div className="flex items-center space-x-4 px-4">
+    <div className="flex flex-col items-start pb-1 shadow-button">
+      <h2 className="mb-1 self-end text-sm text-highlight">{t('rumors')}</h2>
+      <div className="flex items-center space-x-4 pl-2 pr-6">
         <img src={validatorExample.icon} alt={validatorExample.name} className="max-h-14 max-w-14 rounded-full" />
         <div>
-          <h3 className="font-sfpro text-base">CW3 NFT</h3>
-          <p className="font-sfpro text-sm">Snapshot: ???</p>
-          <p className="font-sfpro text-sm">{t('claim date')}: ???</p>
+          <h3 className="mb-1 font-sfpro text-sm">CW3 NFT</h3>
+          <p className="font-sfpro text-xs">Snapshot: ???</p>
+          <p className="font-sfpro text-xs">{t('claim date')}: ???</p>
         </div>
       </div>
-      <div className="mt-4 mb-1 flex justify-center self-stretch">
-        <RoundedButton href={'/rumors'} className="font-handjet text-base">{t('read more')}</RoundedButton>
+      <div className="mb-1 mt-4 flex justify-center self-stretch">
+        <RoundedButton href={'/rumors'} className="font-handjet text-base">
+          {t('read more')}
+        </RoundedButton>
       </div>
     </div>
   );

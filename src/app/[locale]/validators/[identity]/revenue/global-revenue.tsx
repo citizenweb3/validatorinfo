@@ -10,7 +10,7 @@ interface OwnProps {
   identity: string;
 }
 
-const GlobalRevenue: FC<OwnProps> = ({identity}) => {
+const GlobalRevenue: FC<OwnProps> = ({ identity }) => {
   const t = useTranslations('ValidatorRevenuePage');
   const [isChart, setIsChart] = useState<boolean>(true);
   const [chartType, setChartType] = useState<string | undefined>('Daily');
@@ -24,7 +24,7 @@ const GlobalRevenue: FC<OwnProps> = ({identity}) => {
     }
   };
   return (
-    <div className="mt-8">
+    <div className="mt-6">
       <div className="flex justify-center space-x-4">
         <ChartButtons
           onlyDays
@@ -36,9 +36,9 @@ const GlobalRevenue: FC<OwnProps> = ({identity}) => {
         />
       </div>
       <Tooltip tooltip={t('tooltip global revenue')} direction={'top'}>
-        <div className="mt-7 flex shadow-button justify-between items-center px-4 py-1">
+        <div className="mt-7 flex items-center justify-between px-4 py-1 shadow-button">
           <div className="font-sfpro text-lg">{t('global revenue')}:</div>
-          <div className="font-handjet text-xl text-highlight px-20 mx-auto">$12.43K</div>
+          <div className="mx-auto px-20 font-handjet text-xl text-highlight">$12.43K</div>
         </div>
       </Tooltip>
     </div>

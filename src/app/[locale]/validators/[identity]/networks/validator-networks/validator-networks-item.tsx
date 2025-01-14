@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
@@ -20,13 +18,23 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const rank: number = 15;
   const expectedApr: number = 12;
   const votingPowerPercents: number = 20;
-  const greenSquareIcon = icons.GreenSquareIcon;
+  const tokenDelegatorShares = Number(item.delegator_shares) / 10 ** item.coinDecimals;
 
   const redTextLayout: string = '#EB1616';
   const greenTextLayout: string = '#4FB848';
   const yellowTextLayout: string = '#E5C46B';
 
   const selfDelegation: number = Number(item.min_self_delegation) / 10 ** item.coinDecimals;
+
+  const checkSquareIcon = () => {
+    if (tokenDelegatorShares < 1000) {
+      return icons.RedSquareIcon;
+    } else if (tokenDelegatorShares < 100000) {
+      return icons.YellowSquareIcon;
+    } else {
+      return icons.GreenSquareIcon;
+    }
+  };
 
   const checkDelegationColor = () => {
     if (Number(selfDelegation) < 1000) {
@@ -61,7 +69,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <Image src={greenSquareIcon} alt={'green'} width={20} height={20} />
+        <Image src={checkSquareIcon()} alt={'green'} width={20} height={20} />
         <TableAvatar
           icon={item.logoUrl}
           name={item?.prettyName || 'No name'}
@@ -86,7 +94,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={`/networks/${item.chainId.toLowerCase()}`}>
           <div className="text-center">
-            {(Number(item.delegator_shares) / 10 ** item.coinDecimals).toLocaleString('en-US', {
+            {tokenDelegatorShares.toLocaleString('en-US', {
               maximumFractionDigits: 0,
             })}
           </div>

@@ -18,7 +18,7 @@ const MetricsChartLine: FC = () => {
     }
   };
   return (
-    <div className="my-20">
+    <div className="mt-20">
       <div className="flex items-center justify-center">
         <ChartButtons
           onlyDays

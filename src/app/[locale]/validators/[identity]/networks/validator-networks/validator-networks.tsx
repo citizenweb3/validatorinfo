@@ -1,11 +1,10 @@
 import { FC } from 'react';
 
+import ValidatorNetworksListFilters from '@/app/validators/[identity]/networks/validator-networks/validator-networks-list-filters';
 import ValidatorNetworksList from '@/app/validators/[identity]/networks/validator-networks/validator-networks-list';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/services/validator-service';
 import { PagesProps } from '@/types';
-import ValidatorNetworksListFilters
-  from '@/app/validators/[identity]/networks/validator-networks/validator-networks-filters/validator-networks-list-filters';
 
 interface OwnProps extends PagesProps {
   identity: string;
@@ -17,7 +16,7 @@ const ValidatorNetworks: FC<OwnProps> = async ({ identity, page, sort }) => {
     <div>
       <ValidatorNetworksListFilters />
       <div>
-        <table className="my-4 w-full table-auto border-collapse">
+        <table className="mt-4 w-full table-auto border-collapse">
           <thead>
             <tr className="bg-table_header">
               <TableHeaderItem page={page} name="Network" sortField="prettyName" defaultSelected />

@@ -5,14 +5,9 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
-import EcosystemDropdown from '@/components/common/list-filters/ecosystem-dropdown';
+import Dropdown from '@/components/common/list-filters/dropdown';
+import { ecosystemsDropdown } from '@/components/common/list-filters/list-filters';
 import PlusButton from '@/components/common/plus-button';
-import NodeStatusDropdown
-  from '@/app/validators/[identity]/networks/validator-networks/validator-networks-filters/node-status-dropdown';
-import SetPositionDropdown
-  from '@/app/validators/[identity]/networks/validator-networks/validator-networks-filters/set-position-dropdown';
-import NetworkStageDropdown
-  from '@/app/validators/[identity]/networks/validator-networks/validator-networks-filters/network-stage-dropdown';
 
 interface OwnProps {
   selectedEcosystems?: string[];
@@ -20,6 +15,21 @@ interface OwnProps {
   selectedSetPosition?: string[];
   selectedNetworkStage?: string[];
 }
+
+export const stages = [
+  { value: 'mainnet', title: 'Mainnet' },
+  { value: 'testnet', title: 'Testnet' },
+];
+
+export const nodeStatus = [
+  { value: 'jailed', title: 'Jailed' },
+  { value: 'all', title: 'All' },
+];
+
+export const setPositions = [
+  { value: 'active_set', title: 'Active Set' },
+  { value: 'not_active_set', title: 'Not Active Set' },
+];
 
 const ValidatorNetworksListFilters: FC<OwnProps> = ({
   selectedEcosystems = [],
@@ -100,10 +110,30 @@ const ValidatorNetworksListFilters: FC<OwnProps> = ({
     <div className="flex h-8 items-center justify-end space-x-6">
       {isOpened && (
         <>
-          <EcosystemDropdown title={t('Ecosystems')} selectedEcosystems={selectedEcosystems} onChainsChanged={onEcosystemChanged} />
-          <NodeStatusDropdown title={t('Node Status')} selectedNodeStatus={selectedNodeStatus} onNodeStatusChanged={onNodeStatusChanged} />
-          <SetPositionDropdown title={t('Set Position')} selectedSetPosition={selectedSetPosition} onSetPositionChanged={onSetPositionChanged} />
-          <NetworkStageDropdown title={t('Network Stage')} selectedNetworkStage={selectedNetworkStage} onNetworkStageChanged={onNetworkStageChanged} />
+          <Dropdown
+            filterValues={ecosystemsDropdown}
+            title={t('Ecosystems')}
+            selectedValue={selectedEcosystems}
+            onChanged={onEcosystemChanged}
+          />
+          <Dropdown
+            filterValues={nodeStatus}
+            title={t('Node Status')}
+            selectedValue={selectedNodeStatus}
+            onChanged={onNodeStatusChanged}
+          />
+          <Dropdown
+            filterValues={setPositions}
+            title={t('Set Position')}
+            selectedValue={selectedSetPosition}
+            onChanged={onSetPositionChanged}
+          />
+          <Dropdown
+            filterValues={stages}
+            title={t('Network Stage')}
+            selectedValue={selectedNetworkStage}
+            onChanged={onNetworkStageChanged}
+          />
         </>
       )}
       <div className="flex flex-row items-center">

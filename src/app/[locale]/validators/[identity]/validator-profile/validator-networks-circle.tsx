@@ -13,7 +13,7 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
   const [responsiveValues, setResponsiveValues] = useState({
     circleRadius: 90,
     logoSize: 50,
-    centerLogoSize: 70,
+    centerLogoSize: 80,
   });
 
   useEffect(() => {

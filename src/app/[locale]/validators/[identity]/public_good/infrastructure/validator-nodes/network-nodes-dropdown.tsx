@@ -2,8 +2,9 @@
 
 import { FC } from 'react';
 
-import EcosystemDropdown from '@/components/common/list-filters/ecosystem-dropdown';
 import { useTranslations } from 'next-intl';
+import Dropdown from '@/components/common/list-filters/dropdown';
+import { ecosystemsDropdown } from '@/components/common/list-filters/list-filters';
 
 interface OwnProps {}
 
@@ -12,7 +13,7 @@ const NetworkNodesDropdown: FC<OwnProps> = () => {
 
   return (
     <div>
-        <EcosystemDropdown title={t('name')} selectedEcosystems={[]} onChainsChanged={() => {}} />
+        <Dropdown filterValues={ecosystemsDropdown} title={t('name')} selectedValue={[]} onChanged={() => {}} />
     </div>
   );
 };
