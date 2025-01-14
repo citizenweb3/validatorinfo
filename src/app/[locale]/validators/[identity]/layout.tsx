@@ -6,7 +6,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { getValidatorProfileTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 
-export default async function AboutLayout({
+export default async function ValidatorProfileLayout({
   children,
   params: { locale, identity },
 }: Readonly<{
