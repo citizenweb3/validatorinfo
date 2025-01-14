@@ -1,8 +1,15 @@
 'use client';
 
+import Image from 'next/image';
 import { FC, useEffect, useState } from 'react';
 
 import ArrowsGoBigButton from '@/components/common/arrows-go-big-button';
+
+interface circleValuesTypes {
+  circleRadius: number;
+  logoSize: number;
+  centerLogoSize: number;
+}
 
 interface OwnProps {
   centerLogo: string;
@@ -10,40 +17,41 @@ interface OwnProps {
 }
 
 const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
-  const [responsiveValues, setResponsiveValues] = useState({
-    circleRadius: 90,
-    logoSize: 50,
-    centerLogoSize: 80,
-  });
+  const [circleValues, setCircleValues] = useState<circleValuesTypes | null>(null);
 
   useEffect(() => {
-    const getResponsiveValues = () => {
-      if (window.innerWidth >= 1515) {
-        return { circleRadius: 90, logoSize: 50, centerLogoSize: 80 };
-      } else if (window.innerWidth >= 1330) {
-        return { circleRadius: 72, logoSize: 40, centerLogoSize: 65 };
-      } else if (window.innerWidth >= 1140) {
-        return { circleRadius: 64, logoSize: 37, centerLogoSize: 57 };
-      } else if (window.innerWidth >= 768) {
-        return { circleRadius: 57, logoSize: 32, centerLogoSize: 53 };
-      } else {
-        return { circleRadius: 40, logoSize: 20, centerLogoSize: 30 };
-      }
-    };
+    const queries = [
+      { query: '(min-width: 1515px)', values: { circleRadius: 90, logoSize: 50, centerLogoSize: 80 } },
+      { query: '(min-width: 1330px)', values: { circleRadius: 72, logoSize: 40, centerLogoSize: 65 } },
+      { query: '(min-width: 1140px)', values: { circleRadius: 64, logoSize: 37, centerLogoSize: 57 } },
+      { query: '(min-width: 935px)', values: { circleRadius: 57, logoSize: 32, centerLogoSize: 53 } },
+    ];
+
+    const mediaQueries = queries.map(({ query, values }) => ({
+      media: window.matchMedia(query),
+      values,
+    }));
 
     const updateValues = () => {
-      setResponsiveValues(getResponsiveValues());
+      const matched = mediaQueries.find(({ media }) => media.matches);
+      const defaultValues: circleValuesTypes = { circleRadius: 40, logoSize: 25, centerLogoSize: 35 };
+      setCircleValues(matched ? matched.values : defaultValues);
     };
+
     updateValues();
 
-    window.addEventListener('resize', updateValues);
+    mediaQueries.forEach(({ media }) => media.addEventListener('change', updateValues));
 
     return () => {
-      window.removeEventListener('resize', updateValues);
+      mediaQueries.forEach(({ media }) => media.removeEventListener('change', updateValues));
     };
   }, []);
 
-  const { circleRadius, logoSize, centerLogoSize } = responsiveValues;
+  if (!circleValues) {
+    return null;
+  }
+
+  const { circleRadius, logoSize, centerLogoSize } = circleValues;
 
   return (
     <div className="relative flex h-full w-full items-center justify-center">
@@ -54,7 +62,13 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
           height: `${centerLogoSize}px`,
         }}
       >
-        <img src={centerLogo} alt="Center Logo" className="h-full w-full rounded-full" />
+        <Image
+          src={centerLogo}
+          alt="Center Logo"
+          width={centerLogoSize}
+          height={centerLogoSize}
+          className="rounded-full"
+        />
       </div>
       <div className="relative h-full w-full">
         {logos.map((logo, index) => {
@@ -72,13 +86,11 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
               }}
               className="absolute flex items-center justify-center"
             >
-              <img
+              <Image
                 src={logo}
                 alt={`Logo ${index}`}
-                style={{
-                  width: `${logoSize * 0.9}px`,
-                  height: `${logoSize * 0.9}px`,
-                }}
+                width={logoSize * 0.9}
+                height={logoSize * 0.9}
                 className="rounded-full"
               />
             </div>

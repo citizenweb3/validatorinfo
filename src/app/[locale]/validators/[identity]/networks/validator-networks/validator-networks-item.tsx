@@ -14,11 +14,15 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const fans: number = 23234;
   const uptime: number = 80;
   const missedBlocks: number = 500;
-  const infrastructure: boolean = true;
+  let infrastructure: boolean = true;
   const rank: number = 15;
   const expectedApr: number = 12;
   const votingPowerPercents: number = 20;
   const tokenDelegatorShares = Number(item.delegator_shares) / 10 ** item.coinDecimals;
+
+  if (tokenDelegatorShares < 1000) {
+    infrastructure = false;
+  }
 
   const redTextLayout: string = '#EB1616';
   const greenTextLayout: string = '#4FB848';
@@ -103,7 +107,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={`/networks/${item.chainId.toLowerCase()}`}>
-          <div className="text-center">{Number(item.rate) * 100}%</div>
+          <div className="text-center">{Math.trunc(Number(item.rate) * 100)}%</div>
         </Link>
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
