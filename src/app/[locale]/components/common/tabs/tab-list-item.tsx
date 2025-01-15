@@ -7,9 +7,9 @@ import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
 import { TabOptions } from '@/components/common/tabs/tabs-data';
+import { PagesProps } from '@/types';
 
-interface OwnProps {
-  page: 'HomePage' | 'AboutPage' | 'ValidatorsPage' | 'ProfilePage';
+interface OwnProps extends PagesProps {
   item: TabOptions;
 }
 const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered } }) => {

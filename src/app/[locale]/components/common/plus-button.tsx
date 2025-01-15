@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
-type Size = 'sm' | 'base' | 'md';
+type Size = 'xs' | 'sm' | 'base' | 'md';
 
 const sizes: Record<Size, string> = {
+  xs: 'h-5 w-5 min-h-5 min-w-5',
   sm: 'h-6 w-6 min-h-6 min-w-6',
   base: 'h-8 w-8 min-h-8 min-w-8',
   md: 'h-10 w-10 min-h-10 min-w-10',
