@@ -459,7 +459,7 @@ async function main() {
       coinType: 877,
       denom: 'NAM',
       minimalDenom: 'unam',
-      grpcNodeUrl: 'https://indexer.namada.citizenweb3.com/',
+      grpcNodeUrl: 'https://indexer.namada.citizenweb3.com',
       lcdNodeUrl: 'rpc.namada.citizenweb3.com',
       rpcNodeUrl: 'https://rpc.namada.citizenweb3.com',
       wsNodeUrl: 'wss://rpc.namada.citizenweb3.com/websocket',
