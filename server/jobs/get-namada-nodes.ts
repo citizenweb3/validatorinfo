@@ -39,6 +39,7 @@ const getNamadaNodes = async (
   console.log('chainName:', chain.name);
 
   const path = chain.grpcNodes[0].url + '/api/v1/pos/validator/all';
+  console.log('get namada validators by url: ', path);
   const validators = await getData(path);
 
   if (!validators) return;
