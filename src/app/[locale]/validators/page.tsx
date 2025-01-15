@@ -32,7 +32,7 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
-      <SimpleValidators perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
+      <SimpleValidators page='HomePage' perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
     </div>
   );
 };

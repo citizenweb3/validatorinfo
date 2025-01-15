@@ -4,13 +4,34 @@
   },
   "Header": {
     "Quotes": {
-      "Validators": { "name": "Validators", "hint": "" },
-      "Ecosystems": { "name": "Ecosystems", "hint": "" },
-      "Dominance": { "name": "Dominance", "hint": "" },
-      "POW": { "name": "POW", "hint": "Global staking, mining pools and validator statistics" },
-      "ETH": { "name": "ETH", "hint": "" },
-      "Polkadot": { "name": "Polkadot", "hint": "" },
-      "Cosmos": { "name": "Cosmos", "hint": "" },
+      "Validators": {
+        "name": "Validators",
+        "hint": ""
+      },
+      "Ecosystems": {
+        "name": "Ecosystems",
+        "hint": ""
+      },
+      "Dominance": {
+        "name": "Dominance",
+        "hint": ""
+      },
+      "POW": {
+        "name": "POW",
+        "hint": "Global staking, mining pools and validator statistics"
+      },
+      "ETH": {
+        "name": "ETH",
+        "hint": ""
+      },
+      "Polkadot": {
+        "name": "Polkadot",
+        "hint": ""
+      },
+      "Cosmos": {
+        "name": "Cosmos",
+        "hint": ""
+      },
       "TVL": {
         "name": "TVL",
         "hint": "Jump Around"
@@ -90,7 +111,8 @@
         "hint": ""
       },
       "Customize": "Customize",
-      "Click 3 times to reset all filters": "Click 3 times to reset all filters"
+      "Click 3 times to reset all filters": "Click 3 times to reset all filters",
+      "Ecosystems": "Ecosystems"
     },
     "Tabs": {
       "Calculate": "Calculate",
@@ -175,6 +197,7 @@
     "Daily": "Daily",
     "Weekly": "Weekly",
     "Monthly": "Monthly",
+    "Yearly": "Yearly",
     "Choose Providers": "Choose Providers",
     "Profile": "Profile",
     "Token": "Token",
@@ -189,7 +212,8 @@
     "Tags # in the Wild": "Tags # in the Wild",
     "TVS Growth": "TVS Growth",
     "Fan Growth": "Fan Growth",
-    "Add": "Add"
+    "Add": "Add",
+    "Ecosystems": "Ecosystems"
   },
   "ProfilePage": {
     "Metadata": {
@@ -259,5 +283,163 @@
     "Partners": {
       "title": "Our Friends and Partners"
     }
+  },
+  "ValidatorProfileHeader": {
+    "Tabs": {
+      "Revenue": "Revenue",
+      "Metrics": "Metrics",
+      "Network Table": "Network Table",
+      "Public Good": "Public Good",
+      "Governance": "Governance"
+    },
+    "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
+    "Others Links": "Others Links",
+    "Merits": "Merits",
+    "eco tooltip": "text",
+    "keyhole tooltip": "text"
+  },
+  "ValidatorNetworksPage": {
+    "title": "Supported Networks",
+    "Table": {
+      "Network": {
+        "name": "Network",
+        "hint": "You can narrow down the Network list by using the customize filter on the left. The green square indicates the status of the node. If the square is red, the node is jailed"
+      },
+      "Expected APR": {
+        "name": "Expected APR",
+        "hint": "This is the yearly return on your stake in percentage, if were to be calculated right now. It's expected, because inflation, comission, etc - can change at any moment"
+      },
+      "Fans": {
+        "name": "Fans",
+        "hint": "Amount of accounts delegating to this validator"
+      },
+      "Rank": {
+        "name": "Rank",
+        "hint": "Their rank in the active set, based on the amount of voting power"
+      },
+      "Voting Power": {
+        "name": "Voting Power",
+        "hint": "The total amount secured with the validator, and the amount it represents in % out of the total amount of staked tokens"
+      },
+      "Commission": {
+        "name": "Commission",
+        "hint": "The % from the rewards generated that the validator receives for securing the network"
+      },
+      "Self Delegation": {
+        "name": "Self Delegation",
+        "hint": "The amount of tokens the validator staked to their own node from the operator account. The color indicates the ratio in comparison to other nodes on the network"
+      },
+      "Uptime": {
+        "name": "Uptime",
+        "hint": "The amount of time the node is online over a selected period of time. The color indicates the ratio in comparison to other nodes on the network"
+      },
+      "Missed Blocks": {
+        "name": "Missed Blocks",
+        "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
+      },
+      "Infrastructure": {
+        "name": "Infrastructure",
+        "hint": "Does this validator provide public infrastructure for this network? RPC, Archive, etc. Click on the V to see details"
+      },
+      "Governance": {
+        "name": "Governance",
+        "hint": "Governance score of the validator out of a 100. Based on their participation in key life events"
+      },
+      "Customize": "Customize",
+      "Click 3 times to reset all filters": "Click 3 times to reset all filters",
+      "Network Stage": "Network Stage",
+      "Set Position": "Set Position",
+      "Node Status": "Node Status",
+      "Ecosystems": "Ecosystems"
+    }
+  },
+  "ValidatorMetricsPage": {
+    "title": "Scores and Vanity Metrics",
+    "technical score": "Technical Score",
+    "social score": "Social Score",
+    "governance score": "Governance Score",
+    "user score": "User Score",
+    "TVS": "TVS",
+    "fans": "Fans",
+    "amount of assets": "Amount of Assets",
+    "explanation": "Explanation",
+    "tvs tooltip": "Total amount of assets staked with the validator across all known networks",
+    "fans tooltip": "Total amount of delegators to this validator across all known networks"
+  },
+  "ValidatorRevenuePage": {
+    "title": "Reward Revenue",
+    "global revenue": "Global Revenue",
+    "rumors": "Rumors",
+    "claim date": "Claim Date",
+    "read more": "Read More",
+    "rewards generated": "Rewards Generated",
+    "tooltip global revenue": "The revenue generated by commission from all of the validator networks",
+    "tooltip rewards generated": "This chart shows the total amount of rewards this validator paid out on any particular day, week, month or year in USD across all known networks. Calculated from staking, mining and rewards from own tokens"
+  },
+  "ValidatorGovernancePage": {
+    "title": "Governance Summary Feed",
+    "proposals": "Validator Created Proposals",
+    "news feed": "Governance News Feed",
+    "similar options": "Similar Options",
+    "Table": {
+      "Network": {
+        "name": "Network",
+        "hint": ""
+      },
+      "Title": {
+        "name": "I.D./Title",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Vote",
+        "hint": ""
+      }
+    },
+    "tooltip created proposals": "Shows a summary of validator created proposals, the description, and their result across all known networks. Green means proposal was accepted",
+    "tooltip news feed": "Summary of the voting activity of the validator across all networks. Click the proposal ID for more detail"
+  },
+  "ValidatorPublicGoodPage": {
+    "title": "Infrastructure, Community, Tools and Other Public Good Projects",
+    "description": "Users to validator off-chain data, are validators to blocks. After you login, you may submit information about a specific validator. For example your favorite validator or mining pool is running a podcast or have built a wallet? Click the Submit button and add the required details. Earn rewards. Approve or disprove information. Please note that each submission is a transaction!",
+    "Tabs": {
+      "Infrastructure": "Infrastructure",
+      "Community": "Community",
+      "Media": "Media",
+      "Tools": "Tools",
+      "Others": "Others"
+    }
+  },
+  "PublicGoodToolsPage": {
+    "description": "Submit here any explorers, wallets, dashboards, staking interfaces and similar tools operators create.",
+    "submit new info": "Submit New Info",
+    "tool list": "Tool List"
+  },
+  "PublicGoodInfrastructurePage": {
+    "description": "Validators run a lot of infrastructure. This info is verified automatically and doesn't need submitting. Although validator does NOT equal node, all validator nodes are public goods and run by the same entity. Hence, they are listed as entity goods, rather than network specific goods.",
+    "submit new info": "Submit New Info",
+    "rpc nodes": "RPC / LCD Nodes",
+    "relayer nodes": "Relayer Nodes",
+    "archive nodes": "Archive Nodes",
+    "others nodes": "Others Nodes",
+    "Table": {
+      "Networks": {
+        "name": "Networks",
+        "hint": ""
+      },
+      "URL": {
+        "name": "URL",
+        "hint": ""
+      }
+    }
+  },
+  "PublicGoodMediaPage": {
+    "description": "Please submit known media projects run, sponsored or hosted by the validator. Podcasts, YouTube channels, blogs... Projects should contain an audience to fall under this category.",
+    "submit new info": "Submit New Info",
+    "tooltip": "Click to approve or disapprove this information"
+  },
+  "PublicGoodCommunityPage": {
+    "description": "Please submit links to validator created public events, administered chats and communities, twitter spaces and other similar online lives. Documentation, videos, 1 off blog posts, artistic contributions, stickers, forum participation, etc - are all examples of community contributions.",
+    "submit new info": "Submit New Info"
   }
 }
+

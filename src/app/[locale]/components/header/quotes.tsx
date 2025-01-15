@@ -48,7 +48,7 @@ const Quotes: FC<OwnProps> = async () => {
         <QuoteItem name="Dominance" href="" />
       </div>
       {data.list.map((item) => (
-        <QuoteItem key={item.name} name={item.name} value={item.value} grow={item.grow} href="/global_pos" />
+        <QuoteItem key={item.name} name={item.name} value={item.value} grow={item.grow} href="/global" />
       ))}
     </div>
   );
