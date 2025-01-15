@@ -1,21 +1,22 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { NamespaceKeys, useTranslations } from 'next-intl';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { FC } from 'react';
 
 import SortButton from '@/components/common/sort-button';
 import Tooltip from '@/components/common/tooltip';
 import { SortDirection } from '@/services/validator-service';
+import { PagesProps } from '@/types';
 
-interface OwnProps {
+interface OwnProps extends PagesProps {
   name: string;
   field?: string;
   defaultSelected?: boolean;
 }
 
-const TableSortItems: FC<OwnProps> = ({ name, field, defaultSelected = false }) => {
-  const t = useTranslations('HomePage.Table');
+const TableSortItems: FC<OwnProps> = ({ page, name, field, defaultSelected = false }) => {
+  const t = useTranslations(`${page}.Table` as NamespaceKeys<IntlMessages, 'HomePage.Table'>);
 
   const router = useRouter();
   const pathname = usePathname();
