@@ -70,7 +70,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td
         className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <Image src={checkSquareIcon()} alt={'Now'} width={20} height={20} />
+        <Image src={checkSquareIcon()} alt={'node status'} width={20} height={20} />
         <TableAvatar
           icon={item.logoUrl}
           name={item?.prettyName || 'No name'}
