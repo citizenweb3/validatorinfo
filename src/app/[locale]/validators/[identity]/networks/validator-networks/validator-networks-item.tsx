@@ -19,8 +19,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const expectedApr: number = 12;
   const votingPowerPercents: number = 20;
   const tokenDelegatorShares = Number(item.delegator_shares) / 10 ** item.coinDecimals;
-
-  if (tokenDelegatorShares < 1000) {
+  if (item.jailed) {
     infrastructure = false;
   }
 
@@ -31,13 +30,10 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const selfDelegation: number = Number(item.min_self_delegation) / 10 ** item.coinDecimals;
 
   const checkSquareIcon = () => {
-    if (tokenDelegatorShares < 1000) {
+    if (item.jailed) {
       return icons.RedSquareIcon;
-    } else if (tokenDelegatorShares < 100000) {
-      return icons.YellowSquareIcon;
-    } else {
-      return icons.GreenSquareIcon;
     }
+    return icons.GreenSquareIcon;
   };
 
   const checkDelegationColor = () => {
@@ -72,8 +68,9 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
-      <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <Image src={checkSquareIcon()} alt={'green'} width={20} height={20} />
+      <td
+        className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+        <Image src={checkSquareIcon()} alt={'Now'} width={20} height={20} />
         <TableAvatar
           icon={item.logoUrl}
           name={item?.prettyName || 'No name'}
