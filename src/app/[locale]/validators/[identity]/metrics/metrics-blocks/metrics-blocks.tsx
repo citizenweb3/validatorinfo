@@ -1,14 +1,26 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import MetricBlocksModal from '@/app/validators/[identity]/metrics/metrics-blocks-modal';
+import MetricsAssetsModal from '@/app/validators/[identity]/metrics/metrics-blocks/metrics-assets-modal';
+import MetricsBlocksModal from '@/app/validators/[identity]/metrics/metrics-blocks/metrics-blocks-modal';
 import { validatorExample } from '@/app/validators/[identity]/validatorExample';
 import ToolTip from '@/components/common/tooltip';
+import ValidatorService, { SortDirection } from '@/services/validator-service';
 
-interface OwnProps {}
+interface OwnProps {
+  identity: string;
+}
 
-const MetricsBlocks: FC<OwnProps> = async () => {
+const MetricsBlocks: FC<OwnProps> = async ({ identity }) => {
   const t = await getTranslations('ValidatorMetricsPage');
+
+  const sortBy: string = 'prettyName';
+  const order: SortDirection = 'asc';
+  const { validatorNodesWithChainData: list } = await ValidatorService.getValidatorNodesWithChains(
+    identity,
+    sortBy,
+    order,
+  );
 
   const cardClass = `
   flex flex-col items-center bg-card pt-2.5 
@@ -20,6 +32,7 @@ const MetricsBlocks: FC<OwnProps> = async () => {
 `;
   const cardTitleClass = 'text-center text-base text-highlight';
   const cardValueClass = 'mt-3 font-handjet text-lg';
+  const formulaUrl = '/img/tmp/formula.svg';
 
   return (
     <div className="mt-12 flex flex-col items-center gap-8">
@@ -27,22 +40,22 @@ const MetricsBlocks: FC<OwnProps> = async () => {
         <div className={cardClass}>
           <div className={cardTitleClass}>{t('technical score')}</div>
           <div className={cardValueClass}>{validatorExample.metrics.technicalScore}</div>
-          <MetricBlocksModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
+          <MetricsBlocksModal formulaUrl={formulaUrl} title={t('explanation')} />
         </div>
         <div className={cardClass}>
           <div className={cardTitleClass}>{t('social score')}</div>
           <div className={cardValueClass}>{validatorExample.metrics.socialScore}</div>
-          <MetricBlocksModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
+          <MetricsBlocksModal formulaUrl={formulaUrl} title={t('explanation')} />
         </div>
         <div className={cardClass}>
           <div className={cardTitleClass}>{t('governance score')}</div>
           <div className={cardValueClass}>{validatorExample.metrics.governanceScore}</div>
-          <MetricBlocksModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
+          <MetricsBlocksModal formulaUrl={formulaUrl} title={t('explanation')} />
         </div>
         <div className={cardClass}>
           <div className={cardTitleClass}>{t('user score')}</div>
           <div className={cardValueClass}>{validatorExample.metrics.userScore}</div>
-          <MetricBlocksModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
+          <MetricsBlocksModal formulaUrl={formulaUrl} title={t('explanation')} />
         </div>
       </div>
       <div className="flex w-full justify-center gap-8">
@@ -60,8 +73,8 @@ const MetricsBlocks: FC<OwnProps> = async () => {
         </div>
         <div className={cardClass}>
           <div className={cardTitleClass}>{t('amount of assets')}</div>
-          <div className={cardValueClass}>{validatorExample.metrics.amountOfAssets}</div>
-          <MetricBlocksModal formulaUrl={'/img/tmp/formula.svg'} title={t('explanation')} />
+          <div className={cardValueClass}>{list.length}</div>
+          <MetricsAssetsModal list={list} />
         </div>
       </div>
     </div>

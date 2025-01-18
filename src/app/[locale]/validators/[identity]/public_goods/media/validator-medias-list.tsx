@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import ValidatorMediaItem from '@/app/validators/[identity]/public_good/media/validator-media-item';
+import ValidatorMediaItem from '@/app/validators/[identity]/public_goods/media/validator-media-item';
 import { validatorExample } from '@/app/validators/[identity]/validatorExample';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/services/validator-service';

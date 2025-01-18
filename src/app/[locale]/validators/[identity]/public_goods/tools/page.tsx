@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
-import ValidatorToolList from '@/app/validators/[identity]/public_good/tools/validator-tool-list';
+import ValidatorToolList from '@/app/validators/[identity]/public_goods/tools/validator-tool-list';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import { NextPageWithLocale } from '@/i18n';
@@ -9,9 +9,9 @@ interface PageProps {
   params: NextPageWithLocale & { identity: string };
 }
 
-const PublicGoodToolsPage: NextPageWithLocale<PageProps> = async ({ params }) => {
+const PublicGoodsToolsPage: NextPageWithLocale<PageProps> = async ({ params }) => {
   const { locale, identity } = params;
-  const t = await getTranslations({ locale, namespace: 'PublicGoodToolsPage' });
+  const t = await getTranslations({ locale, namespace: 'PublicGoodsToolsPage' });
 
   return (
     <div className="mb-20">
@@ -27,4 +27,4 @@ const PublicGoodToolsPage: NextPageWithLocale<PageProps> = async ({ params }) =>
   );
 };
 
-export default PublicGoodToolsPage;
+export default PublicGoodsToolsPage;

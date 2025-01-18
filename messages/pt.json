@@ -289,61 +289,62 @@
       "Revenue": "Receitas",
       "Metrics": "Métricas",
       "Network Table": "Tabela de Rede",
-      "Public Good": "Bem Público",
+      "Public Goods": "Bens Público",
       "Governance": "Governação"
     },
     "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
     "Others Links": "Outras ligações",
     "Merits": "Méritos",
     "eco tooltip": "text",
-    "keyhole tooltip": "text"
+    "keyhole tooltip": "text",
+    "github tooltip": "text"
   },
   "ValidatorNetworksPage": {
     "title": "Redes Suportadas",
     "Table": {
       "Network": {
         "name": "Rede",
-        "hint": ""
+        "hint": "Pode limitar a lista de Redes utilizando o filtro de personalização à esquerda. O quadrado verde indica o estado do nó. Se o quadrado for vermelho, o nó está preso"
       },
       "Expected APR": {
         "name": "APR Esperada",
-        "hint": ""
+        "hint": "Este é o rendimento anual da sua participação em percentagem, se fosse calculado neste momento. É expetável, porque a inflação, as comissões, etc - podem mudar a qualquer momento"
       },
       "Fans": {
         "name": "Adeptos",
-        "hint": ""
+        "hint": "Quantidade de contas que delegam neste validador"
       },
       "Rank": {
         "name": "Classificação",
-        "hint": ""
+        "hint": "A sua posição no conjunto ativo, com base na quantidade de poder de voto"
       },
       "Voting Power": {
         "name": "Poder de Voto",
-        "hint": ""
+        "hint": "O montante total garantido com o validador e o montante que representa em % do montante total de tokens em jogo"
       },
       "Commission": {
         "name": "Comissão",
-        "hint": ""
+        "hint": "A % das recompensas geradas que o validador recebe para proteger a rede"
       },
       "Self Delegation": {
         "name": "Auto-delegação",
-        "hint": ""
+        "hint": "A quantidade de tokens que o validador apostou no seu próprio nó a partir da conta do operador. A cor indica o rácio em comparação com outros nós da rede"
       },
       "Uptime": {
         "name": "Tempo de Funcionamento",
-        "hint": ""
+        "hint": "A quantidade de tempo que o nó está online durante um período de tempo selecionado. A cor indica o rácio em comparação com outros nós na rede"
       },
       "Missed Blocks": {
         "name": "Bloqueios Falhados",
-        "hint": ""
+        "hint": "A quantidade total de blocos falhados por este validador desde o início do nó. A cor indica o rácio em comparação com outros nós da rede"
       },
       "Infrastructure": {
         "name": "Infraestrutura",
-        "hint": ""
+        "hint": "Este validador fornece infra-estruturas públicas para esta rede? RPC, Arquivo, etc. Clique no V para ver os pormenores"
       },
       "Governance": {
         "name": "Governação",
-        "hint": ""
+        "hint": "Pontuação de governação do validador numa escala de 100. Com base na sua participação em eventos-chave da vida"
       },
       "Customize": "Customizar",
       "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
@@ -380,7 +381,7 @@
     "title": "Feed de Resumo da Governação",
     "proposals": "Propostas Criadas pelo Validador",
     "news feed": "Feed de Notícias da Governação",
-    "similar options": "Opções Similares",
+    "similar opinions": "Opiniões Similares",
     "Table": {
       "Network": {
         "name": "Rede",
@@ -398,7 +399,7 @@
     "tooltip created proposals": "Mostra um resumo das propostas criadas pelo validador, a descrição e o seu resultado em todas as redes conhecidas. Verde significa que a proposta foi aceite",
     "tooltip news feed": "Resumo da atividade de votação do validador em todas as redes. Clique no ID da proposta para obter mais pormenores"
   },
-  "ValidatorPublicGoodPage": {
+  "ValidatorPublicGoodsPage": {
     "title": "Projectos de infra-estruturas, comunitários, ferramentas e outros projectos de utilidade pública",
     "description": "Os utilizadores que validam dados fora da cadeia são validadores de blocos. Depois de iniciar sessão, o utilizador pode enviar informações sobre um validador específico. Por exemplo, o seu validador favorito ou pool de mineração está a realizar um podcast ou construiu uma carteira? Clique no botão Enviar e adicione os detalhes necessários. Ganhe prémios. Aprovar ou refutar informações. Tenha em atenção que cada envio é uma transação!",
     "Tabs": {
@@ -409,12 +410,12 @@
       "Others": "Outros"
     }
   },
-  "PublicGoodToolsPage": {
+  "PublicGoodsToolsPage": {
     "description": "Submeter aqui quaisquer exploradores, carteiras, painéis de controlo, interfaces de staking e ferramentas semelhantes que os operadores criem.",
     "submit new info": "Enviar Novas Informações",
     "tool list": "Lista de Instrumentos"
   },
-  "PublicGoodInfrastructurePage": {
+  "PublicGoodsInfrastructurePage": {
     "description": "Os validadores gerem muitas infra-estruturas. Esta informação é verificada automaticamente e não necessita de ser submetida. Embora validador NÃO seja igual a nó, todos os nós validadores são bens públicos e geridos pela mesma entidade. Por isso, são listados como bens da entidade, em vez de bens específicos da rede.",
     "submit new info": "Enviar Novas Informações",
     "rpc nodes": "RPC / LCD Nos",
@@ -432,12 +433,12 @@
       }
     }
   },
-  "PublicGoodMediaPage": {
+  "PublicGoodsMediaPage": {
     "description": "Apresentar projectos mediáticos conhecidos geridos, patrocinados ou acolhidos pelo validador. Podcasts, canais do YouTube, blogues... Os projectos devem conter um público para se enquadrarem nesta categoria.",
     "submit new info": "Enviar Novas Informações",
     "tooltip": "Clique para aprovar ou desaprovar esta informação"
   },
-  "PublicGoodCommunityPage": {
+  "PublicGoodsCommunityPage": {
     "description": "Envie links para eventos públicos criados pelo validador, chats e comunidades administrados, espaços no Twitter e outras vidas em linha semelhantes. Documentação, vídeos, publicações únicas em blogues, contribuições artísticas, autocolantes, participação em fóruns, etc. - são exemplos de contribuições da comunidade.",
     "submit new info": "Enviar Novas Informações"
   }

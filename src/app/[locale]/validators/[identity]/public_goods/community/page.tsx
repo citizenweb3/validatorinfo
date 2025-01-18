@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
-import CommunitiesList from '@/app/validators/[identity]/public_good/community/communities-list';
+import CommunitiesList from '@/app/validators/[identity]/public_goods/community/communities-list';
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 
@@ -8,9 +8,9 @@ interface PageProps {
   params: NextPageWithLocale & { identity: string };
 }
 
-const PublicGoodCommunityPage: NextPageWithLocale<PageProps> = async ({ params }) => {
+const PublicGoodsCommunityPage: NextPageWithLocale<PageProps> = async ({ params }) => {
   const { locale, identity } = params;
-  const t = await getTranslations({ locale, namespace: 'PublicGoodCommunityPage' });
+  const t = await getTranslations({ locale, namespace: 'PublicGoodsCommunityPage' });
 
   return (
     <div className="mb-64">
@@ -25,4 +25,4 @@ const PublicGoodCommunityPage: NextPageWithLocale<PageProps> = async ({ params }
   );
 };
 
-export default PublicGoodCommunityPage;
+export default PublicGoodsCommunityPage;

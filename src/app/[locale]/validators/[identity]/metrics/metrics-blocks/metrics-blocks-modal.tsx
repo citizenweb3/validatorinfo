@@ -11,7 +11,7 @@ interface OwnProps {
   title: string;
 }
 
-const MetricBlocksModal: FC<OwnProps> = ({ formulaUrl, title }) => {
+const MetricsBlocksModal: FC<OwnProps> = ({ formulaUrl, title }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
 
   return (
@@ -38,4 +38,4 @@ const MetricBlocksModal: FC<OwnProps> = ({ formulaUrl, title }) => {
   );
 };
 
-export default MetricBlocksModal;
+export default MetricsBlocksModal;
