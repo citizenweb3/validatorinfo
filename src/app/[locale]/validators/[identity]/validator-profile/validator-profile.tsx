@@ -4,8 +4,8 @@ import { FC } from 'react';
 import NetworksCircle from '@/app/validators/[identity]/validator-profile/validator-networks-circle';
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
-import icons from '@/components/icons';
 import ValidatorService from '@/services/validator-service';
+import icons from '@/components/icons';
 
 interface OwnProps {
   identity: string;
