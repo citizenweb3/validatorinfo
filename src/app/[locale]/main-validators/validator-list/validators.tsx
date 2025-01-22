@@ -7,16 +7,16 @@ import { SortDirection } from '@/services/validator-service';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {
-  filterChains: string[];
+  ecosystems: string[];
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const Validators: FC<OwnProps> = async ({ page, sort, perPage, filterChains = [], currentPage = 1 }) => {
+const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], currentPage = 1 }) => {
   return (
     <div>
-      <ListFilters perPage={perPage} selectedEcosystems={filterChains} battery />
+      <ListFilters perPage={perPage} selectedEcosystems={ecosystems} battery />
       <div>
         <table className="relative my-4 w-full table-auto border-collapse">
           <thead>
@@ -42,7 +42,7 @@ const Validators: FC<OwnProps> = async ({ page, sort, perPage, filterChains = []
               </tbody>
             }
           >
-            <ValidatorsList perPage={perPage} currentPage={currentPage} filterChains={filterChains} sort={sort} />
+            <ValidatorsList perPage={perPage} currentPage={currentPage} ecosystems={ecosystems} sort={sort} />
           </Suspense>
         </table>
       </div>
