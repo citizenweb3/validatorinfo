@@ -1,57 +1,49 @@
 'use client';
 
-import { FC, ReactNode, useRef } from 'react';
-
-type TDirection = 'top' | 'bottom';
+import { Placement } from '@popperjs/core';
+import { FC, ReactNode, useState } from 'react';
+import { usePopper } from 'react-popper';
 
 interface Props {
   children: ReactNode;
   tooltip: string;
-  direction?: TDirection;
-  className?: string;
+  direction?: Placement;
+  noWrap?: boolean;
 }
 
-const ToolTip: FC<Props> = ({ children, tooltip, direction = 'bottom', className }): JSX.Element => {
-  const tooltipRef = useRef<HTMLDivElement>(null);
-  const container = useRef<HTMLDivElement>(null);
+const ToolTip: FC<Props> = ({ children, tooltip, direction = 'bottom', noWrap = false }) => {
+  const [referenceElement, setReferenceElement] = useState<HTMLDivElement | null>(null);
+  const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
+  const { styles, attributes } = usePopper(referenceElement, popperElement, { placement: direction });
+  const [isOpened, setIsOpened] = useState<boolean>(false);
+
+  let timeout: NodeJS.Timeout | null = null;
+  const handleMouseEnter = () => {
+    timeout = setTimeout(() => setIsOpened(true), 700);
+  };
 
   return (
     <div
-      ref={container}
-      onMouseEnter={() => {
-        if (!tooltipRef.current || !container.current) return;
-        const { width, height } = container.current.getBoundingClientRect();
-        const { width: tWidth, height: tHeight } = tooltipRef.current.getBoundingClientRect();
-
-        tooltipRef.current.style.left = -(tWidth - width) / 2 + 'px';
-
-        switch (direction) {
-          case 'bottom':
-            tooltipRef.current.style.top = `calc(${height}px + 0.5rem)`;
-            break;
-          case 'top':
-            tooltipRef.current.style.top = `calc(-${tHeight}px - 0.5rem)`;
+      ref={setReferenceElement}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={() => {
+        if (timeout) {
+          clearTimeout(timeout);
         }
+        setIsOpened(false);
       }}
-      className="group/tooltip relative inline-block"
     >
-      {tooltip && direction === 'top' ? (
+      {tooltip && isOpened ? (
         <div
-          ref={tooltipRef}
-          className={`${className} pointer-events-none absolute z-[999] mx-auto min-w-32 bg-primary px-3 py-2 text-center font-light text-white opacity-0 shadow-button transition-all duration-300 ease-in-out before:absolute before:-bottom-1 before:left-0 before:right-0 before:z-[-1] before:mx-auto before:h-4 before:w-4 before:rotate-45 before:bg-primary group-hover/tooltip:block group-hover/tooltip:opacity-100 group-hover/tooltip:delay-500`}
+          ref={setPopperElement}
+          style={styles.popper}
+          {...attributes.popper}
+          className={`${noWrap ? 'text-nowrap' : ''} ${direction === 'top' ? 'mb-3 before:-bottom-1' : 'mt-3 before:-top-1'} pointer-events-none z-[999] min-w-32 bg-primary px-3 py-2 text-center font-light text-white shadow-button before:absolute before:left-0 before:right-0 before:z-[-1] before:mx-auto before:h-4 before:w-4 before:rotate-45 before:bg-primary`}
         >
           {tooltip}
         </div>
       ) : null}
       {children}
-      {tooltip && direction === 'bottom' ? (
-        <div
-          ref={tooltipRef}
-          className={`${className} pointer-events-none absolute z-[999] mx-auto min-w-32 bg-primary px-3 py-2 text-center text-[13px] font-light text-white opacity-0 shadow-button transition-all duration-300 ease-in-out before:absolute before:-top-1 before:left-0 before:right-0 before:z-[-1] before:mx-auto before:h-4 before:w-4 before:rotate-45 before:bg-primary group-hover/tooltip:block group-hover/tooltip:opacity-100 group-hover/tooltip:delay-500`}
-        >
-          {tooltip}
-        </div>
-      ) : null}
     </div>
   );
 };

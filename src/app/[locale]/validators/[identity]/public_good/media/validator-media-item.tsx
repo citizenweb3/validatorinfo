@@ -23,12 +23,12 @@ const ValidatorMediaItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="w-1/3 border-b border-black py-3 font-sfpro text-base">
         <div className="flex h-full items-stretch justify-center gap-4">
-          <Tooltip className="text-nowrap" tooltip={t('tooltip')} direction={'top'}>
+          <Tooltip noWrap tooltip={t('tooltip')} direction={'top'}>
             <div
               className={`${iconsSize} self-end bg-approved bg-contain bg-no-repeat hover:bg-approved_h active:bg-approved_a`}
             />
           </Tooltip>
-          <Tooltip className="text-nowrap" tooltip={t('tooltip')} direction={'top'}>
+          <Tooltip noWrap tooltip={t('tooltip')} direction={'top'}>
             <div
               className={`${iconsSize} self-start bg-disapproved bg-contain bg-no-repeat hover:bg-disapproved_h active:bg-disapproved_a`}
             />

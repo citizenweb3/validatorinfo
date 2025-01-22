@@ -16,7 +16,7 @@ const QuoteItem: FC<OwnProps> = ({ name, value, grow, href }) => {
   const t = useTranslations('Header.Quotes');
 
   return (
-    <Tooltip className="text-nowrap" tooltip={t(`${name}.hint` as 'Validators.hint')}>
+    <Tooltip noWrap tooltip={t(`${name}.hint` as 'Validators.hint')}>
       <Link href={href} className="flex flex-row items-center text-sm">
         <span className="text-nowrap">{t(`${name}.name` as 'Validators.name')}:</span>
         {typeof grow !== 'undefined' &&

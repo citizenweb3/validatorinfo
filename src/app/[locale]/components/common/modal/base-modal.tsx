@@ -32,7 +32,11 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
           {!hideClose && (
             <div
               className={`absolute right-0 top-0 z-50 h-9 w-9 bg-close bg-contain hover:bg-close_h active:bg-close_a`}
-              onClick={onClose}
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                onClose();
+              }}
             />
           )}
           {title && <div className="ml-9 text-lg text-highlight">{title}</div>}

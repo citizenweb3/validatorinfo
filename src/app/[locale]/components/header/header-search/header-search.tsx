@@ -115,7 +115,7 @@ const HeaderSearch: FC<OwnProps> = () => {
   return (
     <label className="-mt-6 ml-4 flex h-6 flex-row items-center justify-center">
       <div className="relative flex">
-        <Tooltip className="text-nowrap" tooltip={t('Search for a validator, pool, tx, address, network, etc')}>
+        <Tooltip noWrap tooltip={t('Search for a validator, pool, tx, address, network, etc')}>
           <div className={`h-6 w-6 cursor-text bg-search bg-contain peer-focus:hidden hover:bg-search_h`} />
         </Tooltip>
         <div>
