@@ -1,4 +1,4 @@
-import { Node, Validator, Chain } from '@prisma/client';
+import { Node, Validator } from '@prisma/client';
 
 import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
 import db from '@/db';
@@ -11,17 +11,33 @@ export type ValidatorWithNodes = Validator & {
 
 export type validatorNodesWithChainData = Node & {
   prettyName: string | null;
+  name: string;
   logoUrl: string | null;
   coinDecimals: number;
 };
 
 const getAll = async (
+  ecosystems: string[],
   skip: number,
   take: number,
   sortBy: string = 'moniker',
   order: SortDirection = 'asc',
 ): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
+  const where = ecosystems.length
+    ? {
+        nodes: {
+          some: {
+            chain: {
+              type: {
+                in: ecosystems,
+              },
+            },
+          },
+        },
+      }
+    : undefined;
   const validators = (await db.validator.findMany({
+    where,
     skip: skip,
     take: take,
     include: { nodes: true },
@@ -34,7 +50,7 @@ const getAll = async (
             },
           },
   })) as ValidatorWithNodes[];
-  const count = await db.validator.count();
+  const count = await db.validator.count({ where });
 
   return { validators, pages: Math.ceil(count / take) };
 };
@@ -77,7 +93,6 @@ const getValidatorNodesWithChains = async (
   sortBy: string = 'prettyName',
   order: SortDirection = 'asc',
 ): Promise<{ validatorNodesWithChainData: validatorNodesWithChainData[] }> => {
-
   const validator = await db.validator.findUnique({
     where: { identity },
     include: { nodes: true },
@@ -95,18 +110,20 @@ const getValidatorNodesWithChains = async (
     (map, chain) => {
       map[chain.chainId] = {
         logoUrl: chain.logoUrl,
+        name: chain.name,
         prettyName: chain.prettyName,
         coinDecimals: chain.coinDecimals,
       };
       return map;
     },
-    {} as Record<string, { logoUrl: string; prettyName: string; coinDecimals: number }>,
+    {} as Record<string, { logoUrl: string; name: string; prettyName: string; coinDecimals: number }>,
   );
 
   const mergedNodes = validator.nodes.map((node) => ({
     ...node,
     logoUrl: chainMap[node.chainId]?.logoUrl || null,
     prettyName: chainMap[node.chainId]?.prettyName || null,
+    name: chainMap[node.chainId].name,
     coinDecimals: chainMap[node.chainId]?.coinDecimals || 6,
   }));
 
@@ -115,9 +132,7 @@ const getValidatorNodesWithChains = async (
     if (sortBy === 'prettyName') {
       aValue = a.prettyName || '';
       bValue = b.prettyName || '';
-      return order === 'asc'
-        ? aValue.localeCompare(bValue)
-        : bValue.localeCompare(aValue);
+      return order === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
     } else if (sortBy === 'delegator_shares' || sortBy === 'rate' || sortBy === 'min_self_delegation') {
       aValue = parseFloat(a[sortBy] || '0');
       bValue = parseFloat(b[sortBy] || '0');

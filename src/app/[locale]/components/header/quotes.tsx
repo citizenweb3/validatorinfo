@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 
 const data = {
   validators: '1277',
-  ecosystems: '1',
+  ecosystems: '2',
   tvl: '$74.6B',
   list: [
     {
