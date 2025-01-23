@@ -32,7 +32,7 @@ const TableSortItems: FC<OwnProps> = ({ page, name, field, defaultSelected = fal
       'order',
       (currentSortBy === field && currentOrder === 'asc') || (!currentSortBy && defaultSelected) ? 'desc' : 'asc',
     );
-    router.push(`${pathname}?${newSp.toString()}`);
+    router.push(`${pathname}?${newSp.toString()}`, { scroll: false });
   };
 
   return (

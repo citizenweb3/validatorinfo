@@ -3,7 +3,7 @@ import { FC } from 'react';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/services/validator-service';
 import ValidatorNodesItem
-  from '@/app/validators/[identity]/public_good/infrastructure/validator-nodes/validator-nodes-item';
+  from '@/app/validators/[identity]/public_goods/infrastructure/validator-nodes/validator-nodes-item';
 
 interface OwnProps {
   currentPage?: number;
