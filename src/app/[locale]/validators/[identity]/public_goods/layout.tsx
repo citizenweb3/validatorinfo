@@ -8,14 +8,14 @@ import { Locale } from '@/i18n';
 import ValidatorService from '@/services/validator-service';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
-  const t = await getTranslations({ locale, namespace: 'ValidatorPublicGoodPage' });
+  const t = await getTranslations({ locale, namespace: 'ValidatorPublicGoodsPage' });
 
   return {
     title: t('title'),
   };
 }
 
-export default async function PublicGoodLayout({
+export default async function PublicGoodsLayout({
   children,
   params: { locale, identity },
 }: Readonly<{
@@ -24,7 +24,7 @@ export default async function PublicGoodLayout({
 }>) {
   unstable_setRequestLocale(locale);
   const validatorPublicGoodTabs = getValidatorPublicGoodTabs(identity);
-  const t = await getTranslations({ locale, namespace: 'ValidatorPublicGoodPage' });
+  const t = await getTranslations({ locale, namespace: 'ValidatorPublicGoodsPage' });
 
   const validator = await ValidatorService.getValidatorByIdentity(identity);
   const validatorMoniker = validator ? validator.moniker : 'Validator';
@@ -33,7 +33,7 @@ export default async function PublicGoodLayout({
     <div>
       <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
       <div className="my-8 ml-4 font-sfpro text-base">{t('description')}</div>
-      <TabList page="ValidatorPublicGoodPage" tabs={validatorPublicGoodTabs} />
+      <TabList page="ValidatorPublicGoodsPage" tabs={validatorPublicGoodTabs} />
       {children}
     </div>
   );

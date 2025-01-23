@@ -97,7 +97,7 @@ const getValidatorNodesWithChains = async (
     where: { identity },
     include: { nodes: true },
   });
-  if (!validator) throw new Error('Validator not found');
+  if (!validator) return {validatorNodesWithChainData: []};
 
   const allChainIds = validator.nodes.map((node) => node.chainId);
   const allChains = await db.chain.findMany({

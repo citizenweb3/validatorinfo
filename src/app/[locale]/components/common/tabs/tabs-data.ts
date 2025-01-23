@@ -1,7 +1,6 @@
 import { StaticImageData } from 'next/image';
 
 import icons from '@/components/icons';
-import PublicGoodIcon from '@/public/img/icons/validator-tabs/public-good.png';
 
 export interface TabOptions {
   name: string;
@@ -82,10 +81,10 @@ export const getValidatorProfileTabs = (identity: string): TabOptions[] => {
       iconHovered: icons.NetworkTableIconHovered
     },
     {
-      name: 'Public Good',
-      href: `/validators/${identity}/public_good/tools`,
-      icon: icons.PublicGoodIcon,
-      iconHovered: icons.PublicGoodIconHovered
+      name: 'Public Goods',
+      href: `/validators/${identity}/public_goods/tools`,
+      icon: icons.PublicGoodsIcon,
+      iconHovered: icons.PublicGoodsIconHovered
     },
     { name: 'Governance',
       href: `/validators/${identity}/governance`,
@@ -99,22 +98,22 @@ export const getValidatorPublicGoodTabs = (identity: string): TabOptions[] => {
   return [
     {
       name: 'Infrastructure',
-      href: `/validators/${identity}/public_good/infrastructure`
+      href: `/validators/${identity}/public_goods/infrastructure`
     },
     {
       name: 'Community',
-      href: `/validators/${identity}/public_good/community`,
+      href: `/validators/${identity}/public_goods/community`,
     },
     {
       name: 'Media',
-      href: `/validators/${identity}/public_good/media`,
+      href: `/validators/${identity}/public_goods/media`,
     },
     {
       name: 'Tools',
-      href: `/validators/${identity}/public_good/tools`
+      href: `/validators/${identity}/public_goods/tools`
     },
     { name: 'Others',
-      href: `/validators/${identity}/public_good/others`
+      href: `/validators/${identity}/public_goods/others`
     },
   ];
 };
