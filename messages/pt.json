@@ -441,5 +441,32 @@
   "PublicGoodsCommunityPage": {
     "description": "Envie links para eventos públicos criados pelo validador, chats e comunidades administrados, espaços no Twitter e outras vidas em linha semelhantes. Documentação, vídeos, publicações únicas em blogues, contribuições artísticas, autocolantes, participação em fóruns, etc. - são exemplos de contribuições da comunidade.",
     "submit new info": "Enviar Novas Informações"
+  },
+  "NodeProfileHeader": {
+    "Tabs": {
+      "Revenue": "Receitas",
+      "TX Summary": "Resumo TX",
+      "Voting Summary": "Resumo da Votação",
+      "Validator Passport": "Passaporte de Validação",
+      "Rich List": "Lista Rica"
+    }
+  },
+  "ValidatorPassportPage": {
+    "title": "Passaporte da Rede de Validadores",
+    "pretext in prefix": "em",
+    "commission": "Comissão",
+    "tokens delegated": "Tokens Delegados",
+    "expected APR": "APR prevista",
+    "outstanding reward": "Recompensa Excecional",
+    "voting power": "Poder de Voto",
+    "validator rank": "Classificação do Validador",
+    "proposals created": "Propostas Criadas",
+    "Medals": "Medalhas",
+    "hash txs tooltip": "text",
+    "horcrux tooltip": "text",
+    "restake tooltip": "text",
+    "reward reinvesting tooltip": "text",
+    "slashed tooltip": "text",
+    "Vanity Chart": "Tabela de Vaidade"
   }
 }

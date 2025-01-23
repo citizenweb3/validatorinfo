@@ -117,3 +117,37 @@ export const getValidatorPublicGoodTabs = (identity: string): TabOptions[] => {
     },
   ];
 };
+
+export const getNodeProfileTabs = (identity: string, valoper: string): TabOptions[] => {
+  return [
+    {
+      name: 'TX Summary',
+      href: `/validators/${identity}/${valoper}/tx_summary`,
+      icon: icons.TxSummary,
+      iconHovered: icons.TxSummaryHovered
+    },
+    {
+      name: 'Voting Summary',
+      href: `/validators/${identity}/${valoper}/voting_summary`,
+      icon: icons.VotingSummary,
+      iconHovered: icons.VotingSummaryHovered
+    },
+    {
+      name: 'Validator Passport',
+      href: `/validators/${identity}/${valoper}/validator_passport`,
+      icon: icons.ValidatorPassport,
+      iconHovered: icons.ValidatorPassportHovered
+    },
+    {
+      name: 'Rich List',
+      href: `/validators/${identity}/${valoper}/rich_list`,
+      icon: icons.RichList,
+      iconHovered: icons.RichListHovered
+    },
+    { name: 'Revenue',
+      href: `/validators/${identity}/${valoper}/revenue`,
+      icon: icons.RevenueIcon,
+      iconHovered: icons.RevenueIconHovered
+    },
+  ];
+};

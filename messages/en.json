@@ -441,6 +441,33 @@
   "PublicGoodsCommunityPage": {
     "description": "Please submit links to validator created public events, administered chats and communities, twitter spaces and other similar online lives. Documentation, videos, 1 off blog posts, artistic contributions, stickers, forum participation, etc - are all examples of community contributions.",
     "submit new info": "Submit New Info"
+  },
+  "NodeProfileHeader": {
+    "Tabs": {
+      "Revenue": "Revenue",
+      "TX Summary": "TX Summary",
+      "Voting Summary": "Voting Summary",
+      "Validator Passport": "Validator Passport",
+      "Rich List": "Rich List"
+    }
+  },
+  "ValidatorPassportPage": {
+    "title": "Validator Network Passport",
+    "pretext in prefix": "on",
+    "commission": "Commission",
+    "tokens delegated": "Tokens Delegated",
+    "expected APR": "Expected APR",
+    "outstanding reward": "Outstanding Reward",
+    "voting power": "Voting Power",
+    "validator rank": "Validator Rank",
+    "proposals created": "Proposal Created",
+    "Medals": "Medals",
+    "hash txs tooltip": "text",
+    "horcrux tooltip": "text",
+    "restake tooltip": "text",
+    "reward reinvesting tooltip": "text",
+    "slashed tooltip": "text",
+    "Vanity Chart": "Vanity Chart"
   }
 }
 

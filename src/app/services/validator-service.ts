@@ -13,6 +13,7 @@ export type validatorNodesWithChainData = Node & {
   prettyName: string | null;
   logoUrl: string | null;
   coinDecimals: number;
+  denom: string | null;
 };
 
 const getAll = async (
@@ -97,10 +98,11 @@ const getValidatorNodesWithChains = async (
         logoUrl: chain.logoUrl,
         prettyName: chain.prettyName,
         coinDecimals: chain.coinDecimals,
+        denom: chain.denom,
       };
       return map;
     },
-    {} as Record<string, { logoUrl: string; prettyName: string; coinDecimals: number }>,
+    {} as Record<string, { logoUrl: string; prettyName: string; coinDecimals: number; denom: string }>,
   );
 
   const mergedNodes = validator.nodes.map((node) => ({
@@ -108,6 +110,7 @@ const getValidatorNodesWithChains = async (
     logoUrl: chainMap[node.chainId]?.logoUrl || null,
     prettyName: chainMap[node.chainId]?.prettyName || null,
     coinDecimals: chainMap[node.chainId]?.coinDecimals || 6,
+    denom: chainMap[node.chainId]?.denom || null
   }));
 
   const sortedNodes = mergedNodes.sort((a, b) => {
@@ -132,12 +135,19 @@ const getValidatorNodesWithChains = async (
   };
 };
 
+const getNodeByOperatorAddress = async (operator_address: string): Promise<Node | null> => {
+  return db.node.findUnique({
+    where: { operator_address },
+  });
+};
+
 const ValidatorService = {
   getAll,
   getLite,
   getList,
   getValidatorByIdentity,
   getValidatorNodesWithChains,
+  getNodeByOperatorAddress,
 };
 
 export default ValidatorService;

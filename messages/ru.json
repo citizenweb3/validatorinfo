@@ -441,6 +441,33 @@
   "PublicGoodsCommunityPage": {
     "description": "Пожалуйста, присылайте ссылки на созданные валидатором публичные мероприятия, управляемые чаты и сообщества, твиттер-пространства и другие подобные онлайн-мероприятия. Документация, видео, отдельные посты в блогах, художественные работы, стикеры, участие в форумах и т. д. - все это примеры вклада в сообщество.",
     "submit new info": "Добавить новую информацию"
+  },
+  "NodeProfileHeader": {
+    "Tabs": {
+      "Revenue": "Доходы",
+      "TX Summary": "Транзакции",
+      "Voting Summary": "Голосования",
+      "Validator Passport": "Паспорт Валидатора",
+      "Rich List": "Список богачей"
+    }
+  },
+  "ValidatorPassportPage": {
+    "title": "Паспорт Валидатора Сети",
+    "pretext in prefix": "в",
+    "commission": "Комиссия",
+    "tokens delegated": "Делегировано токенов",
+    "expected APR": "Ожидаемый APR",
+    "outstanding reward": "Выдающееся Вознаграждение",
+    "voting power": "Сила Голоса",
+    "validator rank": "Рейтинг Валидатора",
+    "proposals created": "Создано Предложений",
+    "Medals": "Медали",
+    "hash txs tooltip": "text",
+    "horcrux tooltip": "text",
+    "restake tooltip": "text",
+    "reward reinvesting tooltip": "text",
+    "slashed tooltip": "text",
+    "Vanity Chart": "График Тщеславия"
   }
 }
 

@@ -39,5 +39,6 @@ export interface PagesProps {
     | 'ValidatorGovernancePage'
     | 'ValidatorPublicGoodsPage'
     | 'PublicGoodsInfrastructurePage'
-    | 'PublicGoodsMediaPage';
+    | 'PublicGoodsMediaPage'
+    | 'NodeProfileHeader';
 }
