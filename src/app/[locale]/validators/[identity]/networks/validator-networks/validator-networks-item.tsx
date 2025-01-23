@@ -20,7 +20,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const votingPowerPercents: number = 20;
   const tokenDelegatorShares = Number(item.delegator_shares) / 10 ** item.coinDecimals;
 
-  if (item.jailed) {
+  if (tokenDelegatorShares < 1000) {
     infrastructure = false;
   }
 
@@ -31,10 +31,13 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const selfDelegation: number = Number(item.min_self_delegation) / 10 ** item.coinDecimals;
 
   const checkSquareIcon = () => {
-    if (item.jailed) {
+    if (tokenDelegatorShares < 1000) {
       return icons.RedSquareIcon;
+    } else if (tokenDelegatorShares < 100000) {
+      return icons.YellowSquareIcon;
+    } else {
+      return icons.GreenSquareIcon;
     }
-    return icons.GreenSquareIcon;
   };
 
   const checkDelegationColor = () => {
@@ -70,30 +73,26 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <Image src={checkSquareIcon()} alt={'node status'} width={20} height={20} />
-        <TableAvatar
-          icon={item.logoUrl}
-          name={item?.prettyName || 'No name'}
-          href={`/networks/${item.chainId.toLowerCase()}`}
-        />
+        <Image src={checkSquareIcon()} alt={'green'} width={20} height={20} />
+        <TableAvatar icon={item.logoUrl} name={item?.prettyName || 'No name'} href={`/networks/${item.name}`} />
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center">{expectedApr}%</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center">{fans.toLocaleString('en-US')}</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center">{rank}</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center">
             {tokenDelegatorShares.toLocaleString('en-US', {
               maximumFractionDigits: 0,
@@ -103,33 +102,33 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center">{Math.trunc(Number(item.rate) * 100)}%</div>
         </Link>
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center" style={{ color: checkDelegationColor() }}>
             {selfDelegation.toLocaleString('en-US', { maximumFractionDigits: 0 })}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center" style={{ color: checkUptime() }}>
             {uptime}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center" style={{ color: checkMissedBlocks() }}>
             {missedBlocks}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="flex items-center justify-center text-center">
             {infrastructure && (
               <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />
@@ -138,7 +137,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/networks/${item.chainId.toLowerCase()}`}>
+        <Link href={`/networks/${item.name}`}>
           <div className="text-center">80</div>
         </Link>
       </td>

@@ -23,6 +23,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
+  const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
 
   return (
     <div>
@@ -32,7 +33,13 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
-      <Networks page="HomePage" perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage} />
+      <Networks
+        page="HomePage"
+        ecosystems={ecosystems}
+        perPage={perPage}
+        sort={{ sortBy, order }}
+        currentPage={currentPage}
+      />
     </div>
   );
 };

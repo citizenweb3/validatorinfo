@@ -6,13 +6,15 @@ import ChainService from '@/services/chain-service';
 import { SortDirection } from '@/services/validator-service';
 
 interface OwnProps {
+  ecosystems: string[];
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const NetworksList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
+const NetworksList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1 }) => {
   const { chains: list, pages } = await ChainService.getAll(
+    ecosystems,
     perPage * (currentPage - 1),
     perPage,
     sort.sortBy,

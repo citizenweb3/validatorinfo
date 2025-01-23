@@ -44,7 +44,13 @@
     "Click to login": "Нажмите чтобы войти",
     "Click to logout": "Нажмите чтобы выйти",
     "Search for a validator, pool, tx, address, network, etc": "Поиск валидатора, пула, транзакции, адреса, сети и т.д.",
-    "Lucky!?": "Повезёт!?"
+    "Lucky!?": "Повезёт!?",
+    "search": {
+      "Validators": "Валидаторы",
+      "Networks": "Сети",
+      "Tokens": "Токены",
+      "noResults": "Нет результатов по вашему запросу, попробуйте другой запрос"
+    }
   },
   "Navbar": {
     "Validators": "Валидаторы",
