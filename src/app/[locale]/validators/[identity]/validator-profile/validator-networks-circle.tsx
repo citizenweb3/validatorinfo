@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FC, useEffect, useState } from 'react';
 
 import ArrowsGoBigButton from '@/components/common/arrows-go-big-button';
+import icons from '@/components/icons';
 
 interface circleValuesTypes {
   circleRadius: number;
@@ -18,6 +19,7 @@ interface OwnProps {
 
 const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
   const [circleValues, setCircleValues] = useState<circleValuesTypes | null>(null);
+  const [centerLogoSrc, setCenterLogoSrc] = useState(centerLogo);
 
   useEffect(() => {
     const queries = [
@@ -63,11 +65,12 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
         }}
       >
         <Image
-          src={centerLogo}
+          src={centerLogoSrc}
           alt="Center Logo"
           width={centerLogoSize}
           height={centerLogoSize}
           className="rounded-full"
+          onError={() => setCenterLogoSrc(icons.AvatarIcon)}
         />
       </div>
       <div className="relative h-full w-full">

@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import NetworkNodesDropdown from '@/app/validators/[identity]/public_good/infrastructure/validator-nodes/network-nodes-dropdown';
-import ValidatorNodesTable from '@/app/validators/[identity]/public_good/infrastructure/validator-nodes/validator-nodes-table';
+import NetworkNodesDropdown from '@/app/validators/[identity]/public_goods/infrastructure/validator-nodes/network-nodes-dropdown';
+import ValidatorNodesTable from '@/app/validators/[identity]/public_goods/infrastructure/validator-nodes/validator-nodes-table';
 import { validatorExample } from '@/app/validators/[identity]/validatorExample';
 import SubTitle from '@/components/common/sub-title';
 import { SortDirection } from '@/services/validator-service';

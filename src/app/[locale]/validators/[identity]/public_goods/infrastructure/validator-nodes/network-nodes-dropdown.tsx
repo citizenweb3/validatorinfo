@@ -9,7 +9,7 @@ import { ecosystemsDropdown } from '@/components/common/list-filters/list-filter
 interface OwnProps {}
 
 const NetworkNodesDropdown: FC<OwnProps> = () => {
-  const t = useTranslations('PublicGoodInfrastructurePage.Table.Networks');
+  const t = useTranslations('PublicGoodsInfrastructurePage.Table.Networks');
 
   return (
     <div>

@@ -12,7 +12,7 @@ interface OwnProps {
 }
 
 const ValidatorMediaItem: FC<OwnProps> = ({ item }) => {
-  const t = useTranslations('PublicGoodMediaPage');
+  const t = useTranslations('PublicGoodsMediaPage');
   const iconsSize = 'h-10 w-10';
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">

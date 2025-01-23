@@ -44,8 +44,8 @@ import RevenueIcon from '@/public/img/icons/validator-tabs/revenue.png';
 import RevenueIconHovered from '@/public/img/icons/validator-tabs/revenue-h.png';
 import NetworkTableIcon from '@/public/img/icons/validator-tabs/network-table.png';
 import NetworkTableIconHovered from '@/public/img/icons/validator-tabs/network-table-h.png';
-import PublicGoodIcon from '@/public/img/icons/validator-tabs/public-good.png';
-import PublicGoodIconHovered from '@/public/img/icons/validator-tabs/public-good-h.png';
+import PublicGoodsIcon from '@/public/img/icons/validator-tabs/public-goods.png';
+import PublicGoodsIconHovered from '@/public/img/icons/validator-tabs/public-goods-h.png';
 import GovernanceIcon from '@/public/img/icons/validator-tabs/governance.png';
 import GovernanceIconHovered from '@/public/img/icons/validator-tabs/governance-h.png';
 
@@ -96,8 +96,8 @@ const icons = {
   RevenueIconHovered,
   NetworkTableIcon,
   NetworkTableIconHovered,
-  PublicGoodIcon,
-  PublicGoodIconHovered,
+  PublicGoodsIcon,
+  PublicGoodsIconHovered,
   GovernanceIcon,
   GovernanceIconHovered
 };

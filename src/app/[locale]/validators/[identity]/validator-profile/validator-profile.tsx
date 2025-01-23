@@ -5,6 +5,7 @@ import NetworksCircle from '@/app/validators/[identity]/validator-profile/valida
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
 import ValidatorService from '@/services/validator-service';
+import icons from '@/components/icons';
 
 interface OwnProps {
   identity: string;
@@ -15,10 +16,10 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorProfileHeader' });
 
   const validator = await ValidatorService.getValidatorByIdentity(identity);
-  const validatorLogoUrl = validator?.url || '/logos/Logo_1.svg';
+  const validatorLogoUrl = validator?.url || icons.AvatarIcon;
 
   const { validatorNodesWithChainData } = await ValidatorService.getValidatorNodesWithChains(identity);
-  const chainsLogos = validatorNodesWithChainData.map((chain) => chain?.logoUrl || '/logos/Logo_1.svg');
+  const chainsLogos = validatorNodesWithChainData.map((chain) => chain?.logoUrl || icons.AvatarIcon);
 
   const iconsSize = 'h-10 min-h-10 w-10 min-w-10';
 
@@ -27,10 +28,10 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
       <div className="col-span-2 max-w-xs border-b border-bgSt">
         <div className="font-sfpro text-base">
           <h2>{t('description')}</h2>
-          <div className="relative my-4 h-[50px] w-full overflow-hidden lg:h-[60px] xl:h-[66px] 2xl:h-[86px]">
+          <div className="relative my-4 h-[40px] w-full overflow-hidden md:h-[50px] lg:h-[60px] xl:h-[66px] 2xl:h-[86px]">
             <iframe
               src="https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark"
-              className="m-0 origin-top-left scale-[0.25] p-0 lg:scale-[0.28] xl:scale-[0.32] 2xl:scale-[0.43]"
+              className="m-0 origin-top-left scale-[0.20] p-0 md:scale-[0.23] lg:scale-[0.28] xl:scale-[0.32] 2xl:scale-[0.43]"
               width="740"
               height="200"
             ></iframe>
@@ -56,7 +57,9 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
           <Tooltip noWrap tooltip={t('eco tooltip')} direction={'bottom'}>
             <div className={`${iconsSize} ml-2.5 bg-keyhole bg-contain bg-no-repeat hover:bg-keyhole_h`} />
           </Tooltip>
-          <div className={`${iconsSize} ml-2.5 bg-github_g bg-contain bg-no-repeat`} />
+          <Tooltip noWrap tooltip={t('github tooltip')} direction={'bottom'}>
+            <div className={`${iconsSize} hover:bg-github_g_h ml-2.5 bg-github_g bg-contain bg-no-repeat`} />
+          </Tooltip>
         </div>
       </div>
     </div>

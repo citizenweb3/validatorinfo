@@ -11,7 +11,7 @@ interface OwnProps {
   title: string;
 }
 
-const MetricBlocksModal: FC<OwnProps> = ({ formulaUrl, title }) => {
+const MetricsBlocksModal: FC<OwnProps> = ({ formulaUrl, title }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
 
   return (
@@ -23,6 +23,7 @@ const MetricBlocksModal: FC<OwnProps> = ({ formulaUrl, title }) => {
         opened={isModalOpened}
         hideClose
         onClose={() => setIsModalOpened(false)}
+        isRelative
         className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-4 transform"
       >
         <div className="flex w-40 flex-row flex-wrap">
@@ -38,4 +39,4 @@ const MetricBlocksModal: FC<OwnProps> = ({ formulaUrl, title }) => {
   );
 };
 
-export default MetricBlocksModal;
+export default MetricsBlocksModal;

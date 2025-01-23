@@ -1,6 +1,6 @@
 export const validatorExample = {
   id: 0,
-  icon: 'https://s3.amazonaws.com/keybase_processed_uploads/7b27f515e1c483b57de8b78f235fed05_360_360.jpg',
+  icon: 'https://s3.amazonaws.com/keybase_processed_uploads/558a3c554fecd6b0f9ff06e7ee6cc005_360_360.jpg',
   name: 'Citizen Web3',
   isFavorite: true,
   ecosystems: ['cosmos', 'polkadot'],
