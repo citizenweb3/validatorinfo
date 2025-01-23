@@ -13,7 +13,7 @@ const getCosmosNodes = async (
   const validators: Validator[] = (
     await getData(
       chain.lcdNodes[0].url,
-      '/cosmos/staking/v1beta1/validators?pagination.limit=1000&pagination.count_total=false',
+      '/cosmos/staking/v1beta1/validators?pagination.limit=10000&pagination.count_total=false',
     )
   ).validators;
   validators.map(
