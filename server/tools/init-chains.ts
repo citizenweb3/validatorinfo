@@ -469,6 +469,120 @@ async function main() {
       githubUrl: 'https://github.com/anoma',
       twitterUrl: 'https://x.com/namada',
     });
+
+    await addNetwork({
+      rang: 4,
+      name: 'bostrom',
+      prettyName: 'Bostrom',
+      chainId: 'bostrom',
+      bech32Prefix: 'bostrom',
+      coinDecimals: 6,
+      coinGeckoId: 'bostrom',
+      coinType: 118,
+      denom: 'BOOT',
+      minimalDenom: 'uboot',
+      grpcNodeUrl: 'grpc.bostrom.cybernode.ai',
+      lcdNodeUrl: 'https://lcd.bostrom.cybernode.ai',
+      rpcNodeUrl: 'https://rpc.bostrom.cybernode.ai',
+      wsNodeUrl: 'wss://rpc.bostrom.cybernode.ai/websocket',
+      logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.png',
+      mainRepo: '',
+      docs: 'https://cybercongress.ai/docs/',
+      githubUrl: 'https://github.com/cybercongress/cyberd',
+      twitterUrl: 'https://twitter.com/cyber_devs',
+    });
+
+    await addNetwork({
+      rang: 5,
+      name: 'symphony-testnet',
+      prettyName: 'Symphony Testnet',
+      chainId: 'symphony-testnet-4',
+      bech32Prefix: 'symphony',
+      coinDecimals: 6,
+      coinGeckoId: 'bostrom',
+      coinType: 118,
+      denom: 'MLD',
+      minimalDenom: 'note',
+      logoUrl:
+        'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/symphony-testnet/melody.png',
+      rpcNodeUrl: 'https://rpc.symphony-testnet.citizenweb3.com/',
+      grpcNodeUrl: 'grpc.symphony-testnet.citizenweb3.com',
+      lcdNodeUrl: 'https://api.symphony-testnet.citizenweb3.com/',
+      wsNodeUrl: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket',
+      mainRepo: 'https://github.com/Orchestra-Labs/symphony',
+      docs: '',
+      githubUrl: 'https://github.com/Orchestra-Labs',
+      twitterUrl: 'https://x.com/orchestra_labs',
+    });
+
+    await addNetwork({
+      rang: 5,
+      name: 'nillion-testnet',
+      prettyName: 'Nillion Testnet',
+      chainId: 'nillion-chain-testnet-1',
+      bech32Prefix: 'nillion',
+      coinDecimals: 6,
+      coinGeckoId: 'nillion',
+      coinType: 118,
+      denom: 'NIL',
+      minimalDenom: 'unil',
+      logoUrl:
+        'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/nillion-chain-testnet/nil.png',
+      rpcNodeUrl: 'https://rpc.nillion-testnet.citizenweb3.com/',
+      grpcNodeUrl: 'grpc.nillion-testnet.citizenweb3.com',
+      lcdNodeUrl: 'https://api.nillion-testnet.citizenweb3.com/',
+      wsNodeUrl: 'wss://rpc.nillion-testnet.citizenweb3.com/websocket',
+      mainRepo: 'https://github.com/NillionNetwork/nilchain',
+      docs: '',
+      githubUrl: 'https://github.com/NillionNetwork',
+      twitterUrl: 'https://twitter.com/nillionnetwork',
+    });
+
+    await addNetwork({
+      rang: 5,
+      name: 'artela-testnet',
+      prettyName: 'Artela Testnet',
+      chainId: 'artela_11822-1',
+
+      bech32Prefix: 'art',
+      coinDecimals: 6,
+      coinGeckoId: '',
+      coinType: 118,
+      denom: 'ART',
+      minimalDenom: 'uart',
+      logoUrl:
+        'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/artela-testnet/artela.svg',
+      rpcNodeUrl: 'https://rpc.artela-testnet.citizenweb3.com',
+      grpcNodeUrl: 'grpc.artela-testnet.citizenweb3.com',
+      lcdNodeUrl: 'https://api.artela-testnet.citizenweb3.com',
+      wsNodeUrl: 'wss://rpc.artela-testnet.citizenweb3.com/websocket',
+      mainRepo: 'https://github.com/artela-network/artela',
+      docs: '',
+      githubUrl: 'https://github.com/artela-network',
+      twitterUrl: 'https://x.com/artela_network',
+    });
+
+    await addNetwork({
+      rang: 5,
+      name: 'space-pussy',
+      prettyName: 'Pussy',
+      chainId: 'space-pussy',
+      bech32Prefix: 'pussy',
+      coinDecimals: 0,
+      coinGeckoId: 'pussy',
+      coinType: 118,
+      denom: 'PUSSY',
+      minimalDenom: 'pussy',
+      logoUrl: 'https://raw.githubusercontent.com/greatweb/pussy-landing/master/src/images/spacepussy.png',
+      rpcNodeUrl: 'https://rpc.space-pussy.cybernode.ai/',
+      grpcNodeUrl: 'grpc.space-pussy.cybernode.ai',
+      lcdNodeUrl: 'https://lcd.space-pussy.cybernode.ai/',
+      wsNodeUrl: 'wss://rpc.space-pussy.cybernode.ai/websocket',
+      mainRepo: 'https://github.com/greatweb/space-pussy/tree/main',
+      docs: '',
+      githubUrl: 'https://github.com/greatweb',
+      twitterUrl: 'https://x.com/SpacePussy_ai',
+    });
   } catch (e) {
     console.error(e);
   }
