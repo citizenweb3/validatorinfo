@@ -1,4 +1,4 @@
-import { Node, Validator, Chain } from '@prisma/client';
+import { Node, Validator } from '@prisma/client';
 
 import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
 import db from '@/db';
@@ -11,18 +11,34 @@ export type ValidatorWithNodes = Validator & {
 
 export type validatorNodesWithChainData = Node & {
   prettyName: string | null;
+  name: string;
   logoUrl: string | null;
   coinDecimals: number;
   denom: string | null;
 };
 
 const getAll = async (
+  ecosystems: string[],
   skip: number,
   take: number,
   sortBy: string = 'moniker',
   order: SortDirection = 'asc',
 ): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
+  const where = ecosystems.length
+    ? {
+      nodes: {
+        some: {
+          chain: {
+            type: {
+              in: ecosystems,
+            },
+          },
+        },
+      },
+    }
+    : undefined;
   const validators = (await db.validator.findMany({
+    where,
     skip: skip,
     take: take,
     include: { nodes: true },
@@ -30,12 +46,12 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-            nodes: {
-              _count: order, // Sort by the number of nodes
-            },
+          nodes: {
+            _count: order, // Sort by the number of nodes
           },
+        },
   })) as ValidatorWithNodes[];
-  const count = await db.validator.count();
+  const count = await db.validator.count({ where });
 
   return { validators, pages: Math.ceil(count / take) };
 };
@@ -83,7 +99,7 @@ const getValidatorNodesWithChains = async (
     where: { identity },
     include: { nodes: true },
   });
-  if (!validator) return {validatorNodesWithChainData: []};
+  if (!validator) return { validatorNodesWithChainData: [] };
 
   const allChainIds = validator.nodes.map((node) => node.chainId);
   const allChains = await db.chain.findMany({
@@ -96,21 +112,23 @@ const getValidatorNodesWithChains = async (
     (map, chain) => {
       map[chain.chainId] = {
         logoUrl: chain.logoUrl,
+        name: chain.name,
         prettyName: chain.prettyName,
         coinDecimals: chain.coinDecimals,
         denom: chain.denom,
       };
       return map;
     },
-    {} as Record<string, { logoUrl: string; prettyName: string; coinDecimals: number; denom: string }>,
+    {} as Record<string, { logoUrl: string; name: string; prettyName: string; coinDecimals: number; denom: string }>,
   );
 
   const mergedNodes = validator.nodes.map((node) => ({
     ...node,
     logoUrl: chainMap[node.chainId]?.logoUrl || null,
     prettyName: chainMap[node.chainId]?.prettyName || null,
+    name: chainMap[node.chainId].name,
     coinDecimals: chainMap[node.chainId]?.coinDecimals || 6,
-    denom: chainMap[node.chainId]?.denom || null
+    denom: chainMap[node.chainId]?.denom,
   }));
 
   const sortedNodes = mergedNodes.sort((a, b) => {
@@ -118,9 +136,7 @@ const getValidatorNodesWithChains = async (
     if (sortBy === 'prettyName') {
       aValue = a.prettyName || '';
       bValue = b.prettyName || '';
-      return order === 'asc'
-        ? aValue.localeCompare(bValue)
-        : bValue.localeCompare(aValue);
+      return order === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
     } else if (sortBy === 'delegator_shares' || sortBy === 'rate' || sortBy === 'min_self_delegation') {
       aValue = parseFloat(a[sortBy] || '0');
       bValue = parseFloat(b[sortBy] || '0');
@@ -135,19 +151,12 @@ const getValidatorNodesWithChains = async (
   };
 };
 
-const getNodeByOperatorAddress = async (operator_address: string): Promise<Node | null> => {
-  return db.node.findUnique({
-    where: { operator_address },
-  });
-};
-
 const ValidatorService = {
   getAll,
   getLite,
   getList,
   getValidatorByIdentity,
   getValidatorNodesWithChains,
-  getNodeByOperatorAddress,
 };
 
 export default ValidatorService;

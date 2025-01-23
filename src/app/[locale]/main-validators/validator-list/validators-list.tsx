@@ -6,15 +6,16 @@ import ChainService from '@/services/chain-service';
 import ValidatorService, { SortDirection } from '@/services/validator-service';
 
 interface OwnProps {
-  filterChains: string[];
+  ecosystems: string[];
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
-  const chains = await ChainService.getAll(0, 1000);
+const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1 }) => {
+  const chains = await ChainService.getAll(ecosystems, 0, 1000);
   const { validators: list, pages } = await ValidatorService.getAll(
+    ecosystems,
     perPage * (currentPage - 1),
     perPage,
     sort.sortBy,

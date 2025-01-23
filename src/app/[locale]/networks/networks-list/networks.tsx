@@ -7,15 +7,16 @@ import { SortDirection } from '@/services/validator-service';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {
+  ecosystems: string[];
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const Networks: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
+const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, currentPage }) => {
   return (
     <div>
-      <ListFilters perPage={perPage} />
+      <ListFilters perPage={perPage} selectedEcosystems={ecosystems} />
       <div>
         <table className="my-4 w-full table-auto border-collapse">
           <thead>
@@ -26,7 +27,7 @@ const Networks: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
               <TableHeaderItem page={page} name="Links" colspan={3} />
             </tr>
           </thead>
-          <NetworksList perPage={perPage} sort={sort} currentPage={currentPage} />
+          <NetworksList ecosystems={ecosystems} perPage={perPage} sort={sort} currentPage={currentPage} />
         </table>
       </div>
     </div>

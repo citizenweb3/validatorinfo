@@ -17,19 +17,8 @@ interface OwnProps {
 }
 
 export const ecosystemsDropdown = [
-  { value: 'pow', title: 'POW' },
   { value: 'cosmos', title: 'Cosmos' },
-  { value: 'near', title: 'Near' },
-  { value: 'polkadot', title: 'Polkadot' },
-  { value: 'ton', title: 'Ton' },
-  { value: 'ethereum', title: 'Ethereum' },
-  { value: 'solana', title: 'Solana' },
-  { value: 'cardano', title: 'Cardano' },
-  { value: 'iota', title: 'IOTA' },
-  { value: 'icp', title: 'ICP' },
-  { value: 'tezos', title: 'Tezos' },
-  { value: 'gnosis', title: 'Gnosis' },
-  { value: 'avalanche', title: 'Avalanche' },
+  { value: 'namada', title: 'Namada' },
 ];
 
 const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery = false }) => {
@@ -71,6 +60,7 @@ const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery =
       selectedEcosystems.indexOf(value) === -1
         ? [...selectedEcosystems, value]
         : selectedEcosystems.filter((c) => c !== value);
+    newSp.set('p', '1');
     chainParam.forEach((c) => newSp.append('ecosystems', c));
     router.push(`${pathname}?${newSp.toString()}`);
   };

@@ -16,19 +16,19 @@ const Medals: FC<OwnProps> = async ({ locale }) => {
     <>
       <SubTitle text={t('Medals')} />
       <div className="mt-7 flex items-center gap-10">
-        <Tooltip className="text-nowrap" tooltip={t('restake tooltip')} direction={'bottom'}>
+        <Tooltip noWrap tooltip={t('restake tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} hover:bg-restake_h bg-restake ml-2.5 bg-contain bg-no-repeat`} />
         </Tooltip>
-        <Tooltip className="text-nowrap" tooltip={t('horcrux tooltip')} direction={'bottom'}>
+        <Tooltip noWrap tooltip={t('horcrux tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} bg-horcrux hover:bg-horcrux_h ml-2.5 bg-contain bg-no-repeat`} />
         </Tooltip>
-        <Tooltip className="text-nowrap" tooltip={t('slashed tooltip')} direction={'bottom'}>
+        <Tooltip noWrap tooltip={t('slashed tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} hover:bg-slashed_h bg-slashed ml-2.5 bg-contain bg-no-repeat`} />
         </Tooltip>
-        <Tooltip className="text-nowrap" tooltip={t('hash txs tooltip')} direction={'bottom'}>
+        <Tooltip noWrap tooltip={t('hash txs tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} bg-hash_txs hover:bg-hash_txs_h ml-2.5 bg-contain bg-no-repeat`} />
         </Tooltip>
-        <Tooltip className="text-nowrap" tooltip={t('reward reinvesting tooltip')} direction={'bottom'}>
+        <Tooltip noWrap tooltip={t('reward reinvesting tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} hover:bg-reward_re_h bg-reward_re ml-2.5 bg-contain bg-no-repeat`} />
         </Tooltip>
       </div>

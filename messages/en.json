@@ -44,7 +44,13 @@
     "Click to login": "Click to login",
     "Click to logout": "Click to logout",
     "Search for a validator, pool, tx, address, network, etc": "Search for a validator, pool, tx, address, network, etc",
-    "Lucky!?": "Lucky!?"
+    "Lucky!?": "Lucky!?",
+    "search": {
+        "Validators": "Validators",
+        "Networks": "Networks",
+        "Tokens": "Tokens",
+        "noResults": "No results found, try to search for something else"
+    }
   },
   "Navbar": {
     "Validators": "Validators",

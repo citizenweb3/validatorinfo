@@ -44,7 +44,13 @@
     "Click to login": "Clique para login",
     "Click to logout": "Clique para logout",
     "Search for a validator, pool, tx, address, network, etc": "Pesquise um validador, pool, transação, endereço, rede, etc.",
-    "Lucky!?": "Sortudo!?"
+    "Lucky!?": "Sortudo!?",
+    "search": {
+      "Validators": "Validadores",
+      "Networks": "Redes",
+      "Tokens": "Tokens",
+      "noResults": "Nenhum resultado encontrado, tente novamente"
+    }
   },
   "Navbar": {
     "Validators": "Validadores",

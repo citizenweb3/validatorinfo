@@ -14,7 +14,7 @@ const TotalsList: FC<OwnProps> = async () => {
     { title: 'total validators', data: headerInfo.validators },
     { title: 'total networks', data: headerInfo.chains },
     { title: 'total pages', data: 234 },
-    { title: 'total ecosystems', data: 1 },
+    { title: 'total ecosystems', data: 2 },
   ];
 
   return (
