@@ -124,6 +124,9 @@ const config: Config = {
         reward_re_h: `url('/img/icons/medals/reward-reinvesting-h.png')`,
         slashed: `url('/img/icons/medals/slashed.png')`,
         slashed_h: `url('/img/icons/medals/slashed-h.png')`,
+        copy: `url('/img/icons/copy-button.png')`,
+        copy_h: `url('/img/icons/copy-button-h.png')`,
+        copy_a: `url('/img/icons/copy-button-a.png')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',

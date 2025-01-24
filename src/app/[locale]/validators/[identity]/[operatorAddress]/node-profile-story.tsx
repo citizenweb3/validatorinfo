@@ -26,8 +26,8 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         className="
           border-dottedLine
           absolute
-          left-[33%]
-          right-[33%]
+          left-[35%]
+          right-[35%]
           top-1/2
           -translate-y-1/2
           border-t-[3px]
@@ -39,13 +39,14 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         className="
           absolute
           left-[31%]
-          2xl:left-[31.5%]
           top-1/2
           -translate-y-1/2
+          bg-background
+          rounded-full
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <Image src={leftIconUrl ?? icons.AvatarIcon} alt="Left icon" fill className="rounded-full object-cover" />
+          <Image src={leftIconUrl ?? icons.AvatarIcon} alt="Validator" fill className="rounded-full" />
         </div>
       </div>
 
@@ -53,13 +54,14 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         className="
           absolute
           right-[31%]
-          2xl:right-[31%]
           top-1/2
           -translate-y-1/2
+          bg-background
+          rounded-full
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <Image src={rightIconUrl ?? icons.AvatarIcon} alt="Right icon" fill className="rounded-full object-cover" />
+          <Image src={rightIconUrl ?? icons.AvatarIcon} alt="Network" fill className="rounded-full" />
         </div>
       </div>
     </div>

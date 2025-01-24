@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import TabList from '@/components/common/tabs/tab-list';
 import { getNodeProfileTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
-import NodeProfileStory from '@/app/validators/[identity]/[operatorAddress]/NodeProfileStory';
+import NodeProfileStory from '@/app/validators/[identity]/[operatorAddress]/node-profile-story';
 import ValidatorService from '@/services/validator-service';
 
 export default async function NodeProfileLayout({

@@ -16,12 +16,12 @@ const NodeDetails: FC<OwnProps> = async ({ locale }) => {
       <div>
         <SubTitle text={t('Validator Node Details')} />
         <div className="mb-6 grid grid-cols-2 gap-6">
-          <NodeDetailsItem label="Validator Name" value="Citizen Web3" />
-          <NodeDetailsItem label="Public Key" value="31223" />
-          <NodeDetailsItem label="Account Address" value="...1234" />
-          <NodeDetailsItem label="Identity" value="2493423" />
-          <NodeDetailsItem label="Validator Address" value="...314" />
-          <NodeDetailsItem label="Reward Address" value="...314" />
+          <NodeDetailsItem label="Validator Name" value="Citizen Web3" isCopy />
+          <NodeDetailsItem label="Public Key" value="31223" isCopy />
+          <NodeDetailsItem label="Account Address" value="...1234" isCopy />
+          <NodeDetailsItem label="Identity" value="2493423" isCopy />
+          <NodeDetailsItem label="Validator Address" value="...314" isCopy />
+          <NodeDetailsItem label="Reward Address" value="...314" isCopy />
         </div>
         <div className="mb-6">
           <h2 className="mb-2">Authz Permissions</h2>
