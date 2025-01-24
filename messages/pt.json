@@ -473,6 +473,8 @@
     "restake tooltip": "text",
     "reward reinvesting tooltip": "text",
     "slashed tooltip": "text",
-    "Vanity Chart": "Tabela de Vaidade"
+    "Vanity Chart": "Tabela de Vaidade",
+    "Validator Node Details": "Detalhes do nó validador"
+
   }
 }

@@ -16,10 +16,10 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorProfileHeader' });
 
   const validator = await ValidatorService.getValidatorByIdentity(identity);
-  const validatorLogoUrl = validator?.url || icons.AvatarIcon;
+  const validatorLogoUrl = validator?.url ?? icons.AvatarIcon;
 
   const { validatorNodesWithChainData } = await ValidatorService.getValidatorNodesWithChains(identity);
-  const chainsLogos = validatorNodesWithChainData.map((chain) => chain?.logoUrl || icons.AvatarIcon);
+  const chainsLogos = validatorNodesWithChainData.map((chain) => chain?.logoUrl ?? icons.AvatarIcon);
 
   const iconsSize = 'h-10 min-h-10 w-10 min-w-10';
 

@@ -24,6 +24,7 @@ const MetricsAssetsModal: FC<OwnProps> = ({ list }) => {
       <BaseModal
         opened={isModalOpened}
         hideClose
+        isRelative
         onClose={() => setIsModalOpened(false)}
         className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-4 transform"
       >
@@ -37,7 +38,7 @@ const MetricsAssetsModal: FC<OwnProps> = ({ list }) => {
           {list.map((chain) => (
             <Link key={chain.operator_address} href={`/networks/${chain.chainId}`} className="h-7 w-7">
               <Image
-                src={chain.logoUrl || icons.AvatarIcon}
+                src={chain.logoUrl ?? icons.AvatarIcon}
                 alt={chain.prettyName || 'chain'}
                 width={24}
                 height={24}

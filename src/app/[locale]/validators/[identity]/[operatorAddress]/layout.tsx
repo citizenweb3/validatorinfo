@@ -4,22 +4,21 @@ import { ReactNode } from 'react';
 import TabList from '@/components/common/tabs/tab-list';
 import { getNodeProfileTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
-import Story from '@/components/Story';
-import NodeProfileStory from '@/app/validators/[identity]/[valoper]/NodeProfileStory';
+import NodeProfileStory from '@/app/validators/[identity]/[operatorAddress]/NodeProfileStory';
 import ValidatorService from '@/services/validator-service';
 
 export default async function NodeProfileLayout({
   children,
-  params: { locale, identity, valoper },
+  params: { locale, identity, operatorAddress },
 }: Readonly<{
   children: ReactNode;
-  params: { locale: Locale; identity: string; valoper: string };
+  params: { locale: Locale; identity: string; operatorAddress: string };
 }>) {
   unstable_setRequestLocale(locale);
-  const nodeProfileTabs = getNodeProfileTabs(identity, valoper);
+  const nodeProfileTabs = getNodeProfileTabs(identity, operatorAddress);
   const nodeData = await ValidatorService.getValidatorNodesWithChains(identity);
   const node = nodeData.validatorNodesWithChainData.find(
-    (item) => item.operator_address === valoper
+    (item) => item.operator_address === operatorAddress
   );
   const validator = await ValidatorService.getValidatorByIdentity(identity);
 

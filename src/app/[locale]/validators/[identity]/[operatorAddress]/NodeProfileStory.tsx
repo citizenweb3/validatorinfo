@@ -45,7 +45,7 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <Image src={leftIconUrl || icons.AvatarIcon} alt="Left icon" fill className="rounded-full object-cover" />
+          <Image src={leftIconUrl ?? icons.AvatarIcon} alt="Left icon" fill className="rounded-full object-cover" />
         </div>
       </div>
 
@@ -59,7 +59,7 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <Image src={rightIconUrl || icons.AvatarIcon} alt="Right icon" fill className="rounded-full object-cover" />
+          <Image src={rightIconUrl ?? icons.AvatarIcon} alt="Right icon" fill className="rounded-full object-cover" />
         </div>
       </div>
     </div>
