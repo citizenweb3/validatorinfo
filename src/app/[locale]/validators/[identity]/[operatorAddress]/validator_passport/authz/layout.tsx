@@ -1,21 +1,15 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
+import { ReactNode } from 'react';
 
-import Medals from '@/app/validators/[identity]/[operatorAddress]/validator_passport/medals';
-import PassportMetricsBlocks from '@/app/validators/[identity]/[operatorAddress]/validator_passport/passport-metrics-blocks';
-import VanityChart from '@/app/validators/[identity]/[operatorAddress]/validator_passport/vanity-chart';
+import Medals from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/medals';
+import NodeDetails from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/node-details/node-details';
+import PassportMetricsBlocks from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/passport-metrics-blocks';
+import VanityChart from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/vanity-chart';
 import PageTitle from '@/components/common/page-title';
 import icons from '@/components/icons';
-import { Locale, NextPageWithLocale } from '@/i18n';
+import { Locale } from '@/i18n';
 import ValidatorService from '@/services/validator-service';
-import NodeDetails from '@/app/validators/[identity]/[operatorAddress]/validator_passport/node-details/node-details';
-
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
-interface PageProps {
-  params: NextPageWithLocale & { identity: string; operatorAddress: string };
-}
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
@@ -25,9 +19,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const ValidatorPassportPage: NextPageWithLocale<PageProps> = async ({
+export default async function ValidatorPassportLayout({
+  children,
   params: { locale, identity, operatorAddress },
-}) => {
+}: Readonly<{
+  children: ReactNode;
+  params: { locale: Locale; identity: string; operatorAddress: string };
+}>) {
+  unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
   const { validatorNodesWithChainData: list } = await ValidatorService.getValidatorNodesWithChains(identity);
   const node = list.find((item) => item.operator_address === operatorAddress);
@@ -50,17 +49,13 @@ const ValidatorPassportPage: NextPageWithLocale<PageProps> = async ({
         <PageTitle prefix={`${node?.moniker} ${t('pretext in prefix')} ${node?.prettyName}:`} text={t('title')} />
       </div>
       <PassportMetricsBlocks node={node} />
-      <div className="mb-7 mt-4 grid grid-cols-2">
-        <div className="col-span-1">
-          <Medals locale={locale} />
-        </div>
-        <div className="col-span-1">
-          <VanityChart />
-        </div>
+      <div className="mt-16 flex justify-between gap-6">
+        <Medals locale={locale} />
+        <VanityChart />
       </div>
-      <NodeDetails locale={locale} />
+      <NodeDetails identity={identity} operatorAddress={operatorAddress} node={node}>
+        {children}
+      </NodeDetails>
     </div>
   );
-};
-
-export default ValidatorPassportPage;
+}

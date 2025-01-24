@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import Tooltip from '@/components/common/tooltip';
 import SubTitle from '@/components/common/sub-title';
+import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
   locale: string;
@@ -10,29 +10,29 @@ interface OwnProps {
 
 const Medals: FC<OwnProps> = async ({ locale }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
-  const iconsSize = 'h-20 min-h-20 w-20 min-w-20';
+  const iconsSize = 'h-24 min-h-24 w-24 min-w-24 bg-contain bg-no-repeat ml-3';
 
   return (
-    <>
+    <div>
       <SubTitle text={t('Medals')} />
-      <div className="mt-7 flex items-center gap-10">
+      <div className="mt-6 flex items-center gap-10">
         <Tooltip noWrap tooltip={t('restake tooltip')} direction={'bottom'}>
-          <div className={`${iconsSize} hover:bg-restake_h bg-restake ml-2.5 bg-contain bg-no-repeat`} />
+          <div className={`${iconsSize} hover:bg-restake_h bg-restake `} />
         </Tooltip>
         <Tooltip noWrap tooltip={t('horcrux tooltip')} direction={'bottom'}>
-          <div className={`${iconsSize} bg-horcrux hover:bg-horcrux_h ml-2.5 bg-contain bg-no-repeat`} />
+          <div className={`${iconsSize} bg-horcrux hover:bg-horcrux_h`} />
         </Tooltip>
         <Tooltip noWrap tooltip={t('slashed tooltip')} direction={'bottom'}>
-          <div className={`${iconsSize} hover:bg-slashed_h bg-slashed ml-2.5 bg-contain bg-no-repeat`} />
+          <div className={`${iconsSize} hover:bg-slashed_h bg-slashed`} />
         </Tooltip>
         <Tooltip noWrap tooltip={t('hash txs tooltip')} direction={'bottom'}>
-          <div className={`${iconsSize} bg-hash_txs hover:bg-hash_txs_h ml-2.5 bg-contain bg-no-repeat`} />
+          <div className={`${iconsSize} bg-hash_txs hover:bg-hash_txs_h`} />
         </Tooltip>
         <Tooltip noWrap tooltip={t('reward reinvesting tooltip')} direction={'bottom'}>
-          <div className={`${iconsSize} hover:bg-reward_re_h bg-reward_re ml-2.5 bg-contain bg-no-repeat`} />
+          <div className={`${iconsSize} hover:bg-reward_re_h bg-reward_re`} />
         </Tooltip>
       </div>
-    </>
+    </div>
   );
 };
 

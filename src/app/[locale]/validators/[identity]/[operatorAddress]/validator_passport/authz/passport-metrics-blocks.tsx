@@ -17,18 +17,20 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
   const tokenDelegatorShares = Number(node.delegator_shares) / 10 ** node.coinDecimals;
 
   const cardClass = `
-  flex flex-col items-center bg-card pt-2.5 
-  min-w-[200px] max-w-[280px] flex-1 
-  md:max-w-[200px] 
-  lg:max-w-[200px] 
-  xl:max-w-[230px] 
+  flex flex-col items-center bg-card pt-2.5 pb-3 
+  flex-1
+  xs:max-w-[100px]
+  sm:max-w-[130px]
+  md:max-w-[150px] 
+  lg:max-w-[180px] 
+  xl:max-w-[200px] 
   2xl:max-w-[250px]
 `;
   const cardTitleClass = 'text-center text-base text-highlight';
   const cardValueClass = 'my-3 font-handjet text-lg';
 
   return (
-    <div className="mt-12 flex flex-col items-center gap-8">
+    <div className="mt-16 flex flex-col items-center gap-8">
       <div className="flex w-full justify-center gap-8">
         <div className={cardClass}>
           <div className={cardTitleClass}>{t('commission')}</div>

@@ -23,7 +23,7 @@ export default async function NodeProfileLayout({
   const validator = await ValidatorService.getValidatorByIdentity(identity);
 
   return (
-    <div>
+    <div className="mb-24">
       <NodeProfileStory leftIconUrl={validator?.url} rightIconUrl={node?.logoUrl} />
       <TabList page="NodeProfileHeader" tabs={nodeProfileTabs} />
       {children}

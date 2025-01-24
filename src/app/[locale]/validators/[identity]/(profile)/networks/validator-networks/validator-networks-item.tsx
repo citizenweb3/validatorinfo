@@ -25,6 +25,8 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
 
   const selfDelegation: number = Number(item.min_self_delegation) / 10 ** item.coinDecimals;
 
+  const nodeLink = `/validators/${item.identity}/${item.operator_address}/validator_passport/authz/withdraw_rewards`
+
   const checkDelegationColor = () => {
     if (Number(selfDelegation) < 1000) {
       return greenTextLayout;
@@ -67,26 +69,26 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         <TableAvatar
           icon={item.logoUrl}
           name={item?.prettyName || 'No name'}
-          href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}
+          href={nodeLink}
         />
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center">{expectedApr}%</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center">{fans.toLocaleString('en-US')}</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center">{rank}</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center">
             {tokenDelegatorShares.toLocaleString('en-US', {
               maximumFractionDigits: 0,
@@ -96,40 +98,40 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center">{Math.trunc(Number(item.rate) * 100)}%</div>
         </Link>
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center" style={{ color: checkDelegationColor() }}>
             {selfDelegation.toLocaleString('en-US', { maximumFractionDigits: 0 })}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center" style={{ color: checkUptime() }}>
             {uptime}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center" style={{ color: checkMissedBlocks() }}>
             {missedBlocks}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="flex items-center justify-center text-center">
             {!item.jailed && <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={`/validators/${item.identity}/${item.operator_address}/validator_passport`}>
+        <Link href={nodeLink}>
           <div className="text-center">80</div>
         </Link>
       </td>

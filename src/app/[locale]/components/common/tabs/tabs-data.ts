@@ -134,7 +134,7 @@ export const getNodeProfileTabs = (identity: string, valoper: string): TabOption
     },
     {
       name: 'Validator Passport',
-      href: `/validators/${identity}/${valoper}/validator_passport`,
+      href: `/validators/${identity}/${valoper}/validator_passport/authz/withdraw_rewards`,
       icon: icons.ValidatorPassport,
       iconHovered: icons.ValidatorPassportHovered
     },
@@ -148,6 +148,28 @@ export const getNodeProfileTabs = (identity: string, valoper: string): TabOption
       href: `/validators/${identity}/${valoper}/revenue`,
       icon: icons.RevenueIcon,
       iconHovered: icons.RevenueIconHovered
+    },
+  ];
+};
+
+
+export const getNodeAuthzTabs = (identity: string, valoper: string): TabOptions[] => {
+  return [
+    {
+      name: 'Withdraw Rewards',
+      href: `/validators/${identity}/${valoper}/validator_passport/authz/withdraw_rewards`,
+    },
+    {
+      name: 'Unjail',
+      href: `/validators/${identity}/${valoper}/validator_passport/authz/unjail`,
+    },
+    {
+      name: 'Transact',
+      href: `/validators/${identity}/${valoper}/validator_passport/authz/transact`,
+    },
+    {
+      name: 'Vote',
+      href: `/validators/${identity}/${valoper}/validator_passport/authz/vote`,
     },
   ];
 };

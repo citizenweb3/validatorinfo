@@ -474,7 +474,24 @@
     "reward reinvesting tooltip": "text",
     "slashed tooltip": "text",
     "Vanity Chart": "Tabela de Vaidade",
-    "Validator Node Details": "Detalhes do nó validador"
-
+    "Validator Node Details": "Detalhes do nó validador",
+    "validator name": "Nome do Validador",
+    "public key": "Chave Pública",
+    "account address": "Endereço da Conta",
+    "identity": "Identidade",
+    "validator address": "Endereço do Validador",
+    "reward address": "Endereço do Prémio",
+    "jail status": "Estado da Jail",
+    "voting": "Votar",
+    "send tx": "Enviar Tx",
+    "withdraw commission": "Retirada da Comissão",
+    "withdraw rewards": "Levantar Prémios",
+    "token": "TOKEN",
+    "Tabs": {
+      "Withdraw Rewards": "Retirar Prémios",
+      "Unjail": "Unjail",
+      "Transact": "Transacionar",
+      "Vote": "Votar"
+    }
   }
 }

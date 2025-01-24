@@ -23,7 +23,7 @@ const VanityChartLine: FC = () => {
   return (
     <div>
       <SubTitle text={t('Vanity Chart')} />
-      <div className="flex items-center justify-center">
+      <div className="mt-4 flex items-center justify-center">
         <ChartButtons
           onlyDays
           ecosystems={false}
@@ -38,7 +38,7 @@ const VanityChartLine: FC = () => {
         width={700}
         height={300}
         alt="vanity chart"
-        className="mt-8 w-full px-16"
+        className="mt-2 pl-16"
       />
     </div>
   );

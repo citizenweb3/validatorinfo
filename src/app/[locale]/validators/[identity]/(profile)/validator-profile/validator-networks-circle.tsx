@@ -93,7 +93,7 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
                 src={logo}
                 alt={`Logo ${index}`}
                 fill
-                className={`rounded-full h-[${logoSize}]`} />
+                className={`rounded-full h-[${logoSize}] object-contain`} />
             </div>
           );
         })}

@@ -474,7 +474,25 @@
     "reward reinvesting tooltip": "text",
     "slashed tooltip": "text",
     "Vanity Chart": "График Тщеславия",
-    "Validator Node Details": "Детали Ноды Валидатора"
+    "Validator Node Details": "Детали Ноды Валидатора",
+    "validator name": "Имя Валидатора",
+    "public key": "Публичный Ключ",
+    "account address": "Адрес Аккаунта",
+    "identity": "Идентификатор",
+    "validator address": "Адрес Валидатора",
+    "reward address": "Адрес для Вознаграждений",
+    "jail status": "Jail Статус",
+    "voting": "Голосование",
+    "send tx": "Отправка Tx",
+    "withdraw commission": "Вывод Комиссий",
+    "withdraw rewards": "Вывод Вознаграждений",
+    "token": "ТОКЕН",
+    "Tabs": {
+      "Withdraw Rewards": "Вывод вознаграждений",
+      "Unjail": "Unjail",
+      "Transact": "Транзакции",
+      "Vote": "Голосование"
+    }
   }
 }
 

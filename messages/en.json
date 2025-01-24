@@ -474,7 +474,25 @@
     "reward reinvesting tooltip": "text",
     "slashed tooltip": "text",
     "Vanity Chart": "Vanity Chart",
-    "Validator Node Details": "Validator Node Details"
+    "Validator Node Details": "Validator Node Details",
+    "validator name": "Validator Name",
+    "public key": "Public Key",
+    "account address": "Account Address",
+    "identity": "Identity",
+    "validator address": "Validator Address",
+    "reward address": "Reward Address",
+    "jail status": "Jail Status",
+    "voting": "Voting",
+    "send tx": "Send Tx",
+    "withdraw commission": "Withdraw Commission",
+    "withdraw rewards": "Withdraw Rewards",
+    "token": "TOKEN",
+    "Tabs": {
+      "Withdraw Rewards": "Withdraw Rewards",
+      "Unjail": "Unjail",
+      "Transact": "Transact",
+      "Vote": "Vote"
+    }
   }
 }
 
