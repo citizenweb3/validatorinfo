@@ -493,6 +493,29 @@
       "Transact": "Transact",
       "Vote": "Vote"
     }
+  },
+  "VotingSummaryPage": {
+    "title": "Validator Voting Summary",
+    "pretext in prefix": "on",
+    "show same opinion": "Show Validators With Same Opinions",
+    "Table": {
+      "Title": {
+        "name": "#I.D./Title",
+        "hint": ""
+      },
+      "Type": {
+        "name": "Type",
+        "hint": "Types of proposals depend on the network. They can indicate changes to the code, sentiment-type questions, fund requests and so on. Check out our Metrics section to learn more"
+      },
+      "Vote": {
+        "name": "Vote",
+        "hint": ""
+      },
+      "Voting Ended": {
+        "name": "Voting Ended",
+        "hint": ""
+      }
+    }
   }
 }
 

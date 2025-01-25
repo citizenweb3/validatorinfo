@@ -493,5 +493,28 @@
       "Transact": "Transacionar",
       "Vote": "Votar"
     }
+  },
+  "VotingSummaryPage": {
+    "title": "Resumo da Votação do Validador",
+    "pretext in prefix": "em",
+    "show same opinion": "Mostrar Validadores Com as Mesmas Opiniões",
+    "Table": {
+      "Title": {
+        "name": "#I.D./Título",
+        "hint": ""
+      },
+      "Type": {
+        "name": "Tipo",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Votação",
+        "hint": ""
+      },
+      "Voting Ended": {
+        "name": "Votação Terminado",
+        "hint": ""
+      }
+    }
   }
 }

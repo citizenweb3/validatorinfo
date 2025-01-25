@@ -1,25 +1,23 @@
-'use client';
+import { getTranslations } from 'next-intl/server';
+import { FC, ReactNode } from 'react';
 
-import { useTranslations } from 'next-intl';
-import { FC, ReactNode, useState } from 'react';
-
+import CurrencyRewards from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/node-details/currency-rewards';
 import NodeDetailsItem from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/node-details/node-details-item';
 import SubTitle from '@/components/common/sub-title';
-import Switch from '@/components/common/switch';
 import TabList from '@/components/common/tabs/tab-list';
 import { getNodeAuthzTabs } from '@/components/common/tabs/tabs-data';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 
 interface OwnProps {
+  locale: string;
   children: ReactNode;
   identity: string;
   operatorAddress: string;
   node?: validatorNodesWithChainData | undefined;
 }
 
-const NodeDetails: FC<OwnProps> = ({ children, identity, operatorAddress, node }) => {
-  const t = useTranslations('ValidatorPassportPage');
-  const [isToken, setIsToken] = useState<boolean>(false);
+const NodeDetails: FC<OwnProps> = async ({ locale, children, identity, operatorAddress, node }) => {
+  const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
 
   if (!node) {
     return null;
@@ -27,9 +25,9 @@ const NodeDetails: FC<OwnProps> = ({ children, identity, operatorAddress, node }
   const nodeAuthzTabs = getNodeAuthzTabs(identity, operatorAddress);
 
   return (
-    <div className="mt-12">
+    <div className="mt-6">
       <SubTitle text={t('Validator Node Details')} />
-      <div className="mt-8 grid grid-cols-2 gap-x-10">
+      <div className="mt-6 grid grid-cols-2 gap-x-10">
         <NodeDetailsItem label={t('validator name')} value={node.moniker} isCopy />
         <NodeDetailsItem label={t('public key')} value={node.consensus_pubkey} isCopy />
         <NodeDetailsItem label={t('account address')} value={node.operator_address} isCopy />
@@ -52,15 +50,7 @@ const NodeDetails: FC<OwnProps> = ({ children, identity, operatorAddress, node }
           <NodeDetailsItem label={t('voting')} isCheckmark={!node.jailed} />
           <NodeDetailsItem label={t('send tx')} isCheckmark={!node.jailed} />
         </div>
-        <div>
-          <div className="mt-4 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-            <div className="border-b border-bgSt px-2 font-handjet font-light">USD</div>
-            <Switch value={isToken} onChange={(value) => setIsToken(value)} />
-            <div className="border-b border-bgSt px-2 font-handjet font-light">{t('token')}</div>
-          </div>
-          <NodeDetailsItem label="Withdrawn Commission" value="$5.6K" />
-          <NodeDetailsItem label="Withdrawn Rewards" value="$60.6K" />
-        </div>
+        <CurrencyRewards />
       </div>
     </div>
   );

@@ -33,13 +33,7 @@ const VanityChartLine: FC = () => {
           onTypeChanged={(name) => setChartType(name)}
         />
       </div>
-      <Image
-        src={'/img/charts/vanity-chart.svg'}
-        width={700}
-        height={300}
-        alt="vanity chart"
-        className="mt-2 pl-16"
-      />
+      <Image src={'/img/charts/vanity-chart.svg'} width={700} height={300} alt="vanity chart" className="mt-2 pl-16" />
     </div>
   );
 };

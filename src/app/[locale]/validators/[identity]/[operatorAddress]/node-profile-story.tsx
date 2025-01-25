@@ -24,7 +24,6 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
 
       <div
         className="
-          border-dottedLine
           absolute
           left-[35%]
           right-[35%]
@@ -32,6 +31,7 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
           -translate-y-1/2
           border-t-[3px]
           border-dashed
+          border-dottedLine
         "
       />
 
@@ -41,8 +41,8 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
           left-[31%]
           top-1/2
           -translate-y-1/2
-          bg-background
           rounded-full
+          bg-background
         "
       >
         <div className={`relative ${iconSizes}`}>
@@ -56,8 +56,8 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
           right-[31%]
           top-1/2
           -translate-y-1/2
-          bg-background
           rounded-full
+          bg-background
         "
       >
         <div className={`relative ${iconSizes}`}>

@@ -293,7 +293,7 @@
   "ValidatorProfileHeader": {
     "Tabs": {
       "Revenue": "Доходы",
-      "Metrics": "Мертрики",
+      "Metrics": "Метрики",
       "Network Table": "Список сетей",
       "Public Goods": "Польза",
       "Governance": "Управление"
@@ -492,6 +492,29 @@
       "Unjail": "Unjail",
       "Transact": "Транзакции",
       "Vote": "Голосование"
+    }
+  },
+  "VotingSummaryPage": {
+    "title": "Голосования Валидатора",
+    "pretext in prefix": "в",
+    "show same opinion": "Показать Валидаторов c Таким же Мнением",
+    "Table": {
+      "Title": {
+        "name": "#I.D./Название",
+        "hint": ""
+      },
+      "Type": {
+        "name": "Тип",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Голос",
+        "hint": ""
+      },
+      "Voting Ended": {
+        "name": "Окончание Голосования",
+        "hint": ""
+      }
     }
   }
 }
