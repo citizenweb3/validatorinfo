@@ -516,5 +516,54 @@
         "hint": ""
       }
     }
+  },
+  "TxSummaryPage": {
+    "title": "Síntese da Transação do Validador",
+    "pretext in prefix": "em",
+    "Table": {
+      "Type of Tx": {
+        "name": "Tipo de Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "ID da transação. Clique para obter detalhes"
+      },
+      "Timestamp": {
+        "name": "Marca de tempo",
+        "hint": "Hora e data em que a transação teve lugar em UTC"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "RichListPage": {
+    "title": "Validador Delegadores Principais e Eventos de Potência",
+    "pretext in prefix": "em",
+    "token": "TOKEN",
+    "Table": {
+      "Address": {
+        "name": "Endereço",
+        "hint": ""
+      },
+      "Amount": {
+        "name": "Montante",
+        "hint": ""
+      },
+      "Happened": {
+        "name": "Aconteceu",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": ""
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": ""
+      }
+    }
   }
 }

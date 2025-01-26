@@ -46,10 +46,10 @@
     "Search for a validator, pool, tx, address, network, etc": "Search for a validator, pool, tx, address, network, etc",
     "Lucky!?": "Lucky!?",
     "search": {
-        "Validators": "Validators",
-        "Networks": "Networks",
-        "Tokens": "Tokens",
-        "noResults": "No results found, try to search for something else"
+      "Validators": "Validators",
+      "Networks": "Networks",
+      "Tokens": "Tokens",
+      "noResults": "No results found, try to search for something else"
     }
   },
   "Navbar": {
@@ -513,6 +513,55 @@
       },
       "Voting Ended": {
         "name": "Voting Ended",
+        "hint": ""
+      }
+    }
+  },
+  "TxSummaryPage": {
+    "title": "Validator Transaction Overview",
+    "pretext in prefix": "on",
+    "Table": {
+      "Type of Tx": {
+        "name": "Type of Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "Transaction ID. Click for details"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Time and date the transaction took place in UTC"
+      },
+      "Block Height": {
+        "name": "Block Height",
+        "hint": "The number of block the transaction took place"
+      }
+    }
+  },
+  "RichListPage": {
+    "title": "Validator Top Delegators and Power Events",
+    "pretext in prefix": "on",
+    "token": "TOKEN",
+    "Table": {
+      "Address": {
+        "name": "Address",
+        "hint": ""
+      },
+      "Amount": {
+        "name": "Amount",
+        "hint": ""
+      },
+      "Happened": {
+        "name": "Happened",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": ""
+      },
+      "Block Height": {
+        "name": "Block Height",
         "hint": ""
       }
     }

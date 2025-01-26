@@ -42,5 +42,7 @@ export interface PagesProps {
     | 'PublicGoodsMediaPage'
     | 'NodeProfileHeader'
     | 'ValidatorPassportPage'
-    | 'VotingSummaryPage';
+    | 'VotingSummaryPage'
+    | 'TxSummaryPage'
+    | 'RichListPage';
 }

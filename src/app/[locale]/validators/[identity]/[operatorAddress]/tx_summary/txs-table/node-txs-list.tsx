@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import NodeVotesItems from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes/node-votes-items';
-import { votes } from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes/nodeVotesExample';
+import NodeTxsItem from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/node-txs-items';
+import { txs } from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/nodeTxsExample';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/services/validator-service';
 
@@ -11,13 +11,13 @@ interface OwnProps {
   sort: { sortBy: string; order: SortDirection };
 }
 
-const NodeVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
+const NodeTxsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
   const pages = 1;
 
   return (
     <tbody>
-      {votes.map((item) => (
-        <NodeVotesItems key={item.proposalId} item={item} />
+      {txs.map((item) => (
+        <NodeTxsItem key={item.txHash} item={item} />
       ))}
       <tr>
         <td colSpan={5} className="pt-4">
@@ -28,4 +28,4 @@ const NodeVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) =
   );
 };
 
-export default NodeVotesList;
+export default NodeTxsList;

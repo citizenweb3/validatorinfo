@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import CopyButton from '@/components/common/copy-button';
 import icons from '@/components/icons';
+import cutHash from '@/utils/cut-hash';
 
 interface OwnProps {
   label: string;
@@ -12,24 +13,15 @@ interface OwnProps {
 }
 
 const NodeDetailsItem: FC<OwnProps> = ({ label, value, isCopy = false, isCheckmark = false }) => {
-  const cutValue = (value: string, maxLength: number): string => {
-    if (value.length <= maxLength) {
-      return value;
-    }
-    const start = value.slice(0, 7);
-    const end = value.slice(-7);
-    return `${start}...${end}`;
-  };
-
   return (
-    <div className="flex w-full flex-wrap mt-2">
-      <div className="w-7/12 border-b border-r border-bgSt pl-8 py-4 font-sfpro text-lg items-center">{label}</div>
-      <div className="flex w-5/12 justify-between gap-2 border-b border-bgSt pl-6 py-4 pr-4 font-handjet text-lg items-center">
+    <div className="mt-2 flex w-full flex-wrap">
+      <div className="w-7/12 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">{label}</div>
+      <div className="flex w-5/12 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg">
         {isCheckmark ? (
           <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />
         ) : value ? (
           <>
-            {cutValue(value, 20)}
+            {cutHash(value, 20)}
             {isCopy && <CopyButton value={value} size="md" />}
           </>
         ) : null}

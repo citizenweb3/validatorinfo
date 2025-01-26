@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import NodePagesTitle from '@/app/validators/[identity]/[operatorAddress]/node-pages-title';
+import NodeTxs from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/node-txs';
 import NodeVotes from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes-table/node-votes';
 import RoundedButton from '@/components/common/rounded-button';
 import { Locale, NextPageWithLocale } from '@/i18n';
@@ -12,7 +13,7 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
-  const t = await getTranslations({ locale, namespace: 'VotingSummaryPage' });
+  const t = await getTranslations({ locale, namespace: 'TxSummaryPage' });
 
   return {
     title: t('title'),
@@ -21,11 +22,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 const defaultPerPage = 1;
 
-const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
+const TxSummaryPage: NextPageWithLocale<PageProps> = async ({
   params: { locale, identity, operatorAddress },
   searchParams: q,
 }) => {
-  const t = await getTranslations({ locale, namespace: 'VotingSummaryPage' });
 
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
@@ -37,17 +37,10 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <div className="mb-14">
-      <NodePagesTitle page={'VotingSummaryPage'} locale={locale} node={node} />
-      <div>
-        <div className="my-4 flex justify-end">
-          <RoundedButton href={''} className="font-handjet text-base">
-            {t('show same opinion')}
-          </RoundedButton>
-        </div>
-        <NodeVotes page={'VotingSummaryPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
-      </div>
+      <NodePagesTitle page={'TxSummaryPage'} locale={locale} node={node} />
+      <NodeTxs page={'TxSummaryPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
     </div>
   );
 };
 
-export default VotingSummaryPage;
+export default TxSummaryPage;
