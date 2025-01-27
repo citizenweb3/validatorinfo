@@ -10,11 +10,11 @@ export type ValidatorWithNodes = Validator & {
 };
 
 export type validatorNodesWithChainData = Node & {
-  prettyName: string | null;
+  prettyName: string;
   name: string;
-  logoUrl: string | null;
+  logoUrl: string;
   coinDecimals: number;
-  denom: string | null;
+  denom: string;
 };
 
 const getAll = async (
@@ -26,16 +26,16 @@ const getAll = async (
 ): Promise<{ validators: ValidatorWithNodes[]; pages: number }> => {
   const where = ecosystems.length
     ? {
-      nodes: {
-        some: {
-          chain: {
-            type: {
-              in: ecosystems,
+        nodes: {
+          some: {
+            chain: {
+              type: {
+                in: ecosystems,
+              },
             },
           },
         },
-      },
-    }
+      }
     : undefined;
   const validators = (await db.validator.findMany({
     where,
@@ -46,10 +46,10 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-          nodes: {
-            _count: order, // Sort by the number of nodes
+            nodes: {
+              _count: order, // Sort by the number of nodes
+            },
           },
-        },
   })) as ValidatorWithNodes[];
   const count = await db.validator.count({ where });
 
@@ -94,7 +94,6 @@ const getValidatorNodesWithChains = async (
   sortBy: string = 'prettyName',
   order: SortDirection = 'asc',
 ): Promise<{ validatorNodesWithChainData: validatorNodesWithChainData[] }> => {
-
   const validator = await db.validator.findUnique({
     where: { identity },
     include: { nodes: true },
@@ -124,10 +123,10 @@ const getValidatorNodesWithChains = async (
 
   const mergedNodes = validator.nodes.map((node) => ({
     ...node,
-    logoUrl: chainMap[node.chainId]?.logoUrl || null,
-    prettyName: chainMap[node.chainId]?.prettyName || null,
+    logoUrl: chainMap[node.chainId]?.logoUrl,
+    prettyName: chainMap[node.chainId]?.prettyName,
     name: chainMap[node.chainId].name,
-    coinDecimals: chainMap[node.chainId]?.coinDecimals || 6,
+    coinDecimals: chainMap[node.chainId]?.coinDecimals,
     denom: chainMap[node.chainId]?.denom,
   }));
 

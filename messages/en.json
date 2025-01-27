@@ -481,6 +481,7 @@
     "identity": "Identity",
     "validator address": "Validator Address",
     "reward address": "Reward Address",
+    "authz permissions": "Authz Permissions",
     "jail status": "Jail Status",
     "voting": "Voting",
     "send tx": "Send Tx",
@@ -565,6 +566,51 @@
         "hint": ""
       }
     }
+  },
+  "NodeRevenuePage": {
+    "title": "Validator Revenue Breakdown",
+    "pretext in prefix": "on",
+    "Staking Calculator": "Staking Calculator",
+    "Token": "Token",
+    "Enter Staking Amount": "Enter Staking Amount",
+    "Wrong amount": "Wrong amount",
+    "earnings": "d Earnings",
+    "Staking Stats": "Staking Stats",
+    "Table": {
+      "Yesterday": {
+        "name": "Yesterday",
+        "hint": ""
+      },
+      "Last Week": {
+        "name": "Last Week",
+        "hint": ""
+      },
+      "Last Month": {
+        "name": "Last Month",
+        "hint": ""
+      },
+      "Last Year": {
+        "name": "Last Year",
+        "hint": ""
+      },
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Network",
+        "hint": ""
+      },
+      "Retro Name": {
+        "name": "Retro Name",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Commits",
+        "hint": ""
+      }
+    },
+    "show slashing event": "Show Slashing Event"
   }
 }
 

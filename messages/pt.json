@@ -481,6 +481,7 @@
     "identity": "Identidade",
     "validator address": "Endereço do Validador",
     "reward address": "Endereço do Prémio",
+    "authz permissions": "Authz Permissões",
     "jail status": "Estado da Jail",
     "voting": "Votar",
     "send tx": "Enviar Tx",
@@ -565,5 +566,50 @@
         "hint": ""
       }
     }
+  },
+  "NodeRevenuePage": {
+    "title": "Repartição das Receitas do Validador",
+    "pretext in prefix": "em",
+    "Staking Calculator": "Calculadora de Piquetagem",
+    "Token": "Token",
+    "Enter Staking Amount": "Insira o valor da aposta",
+    "Wrong amount": "Quantidade errada",
+    "earnings": "d Ganhos",
+    "Staking Stats": "Estatísticas de Apostas",
+    "Table": {
+      "Yesterday": {
+        "name": "Ontem",
+        "hint": ""
+      },
+      "Last Week": {
+        "name": "Última semana",
+        "hint": ""
+      },
+      "Last Month": {
+        "name": "Último mês",
+        "hint": ""
+      },
+      "Last Year": {
+        "name": "Ano passado",
+        "hint": ""
+      },
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Retro Name": {
+        "name": "Nome Retro",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Compromissos",
+        "hint": ""
+      }
+    },
+    "show slashing event": "Evento de Corte de Espetáculo"
   }
 }

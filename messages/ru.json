@@ -481,6 +481,7 @@
     "identity": "Идентификатор",
     "validator address": "Адрес Валидатора",
     "reward address": "Адрес для Вознаграждений",
+    "authz permissions": "Разрешения Authz",
     "jail status": "Jail Статус",
     "voting": "Голосование",
     "send tx": "Отправка Tx",
@@ -565,6 +566,51 @@
         "hint": ""
       }
     }
+  },
+  "NodeRevenuePage": {
+    "title": "Распределение Доходов от Валидатора",
+    "pretext in prefix": "в",
+    "Staking Calculator": "Калькулятор Стэйкинга",
+    "Token": "Токен",
+    "Enter Staking Amount": "Введите сумму стейкинга",
+    "Wrong amount": "Некоректное значение",
+    "earnings": "д заработка",
+    "Staking Stats": "Статистика Стэйкинга",
+    "Table": {
+      "Yesterday": {
+        "name": "Вчера",
+        "hint": ""
+      },
+      "Last Week": {
+        "name": "Прошлая неделя",
+        "hint": ""
+      },
+      "Last Month": {
+        "name": "Прошлый месяц",
+        "hint": ""
+      },
+      "Last Year": {
+        "name": "Прошлый год",
+        "hint": ""
+      },
+      "Validator": {
+        "name": "Валидатор",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Сеть",
+        "hint": ""
+      },
+      "Retro Name": {
+        "name": "Ретро название",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Коммиты",
+        "hint": ""
+      }
+    },
+    "show slashing event": "Показать события слэшинга"
   }
 }
 

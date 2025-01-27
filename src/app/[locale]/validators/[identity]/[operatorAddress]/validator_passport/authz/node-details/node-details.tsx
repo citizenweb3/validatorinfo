@@ -36,7 +36,7 @@ const NodeDetails: FC<OwnProps> = async ({ locale, children, identity, operatorA
         <NodeDetailsItem label={t('reward address')} value={node.operator_address} isCopy />
       </div>
       <div className="mt-2 flex border-b border-bgSt">
-        <div className="w-[28.5%] border-r border-bgSt py-4 pl-8 font-sfpro text-lg">Authz Permissions</div>
+        <div className="w-[28.5%] border-r border-bgSt py-4 pl-8 font-sfpro text-lg">{t('authz permissions')}</div>
         <div className="ml-5 w-[70%] items-center justify-center">
           <div className="my-2 w-full">
             <TabList page="ValidatorPassportPage" tabs={nodeAuthzTabs} />

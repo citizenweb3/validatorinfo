@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
 import NodeTxsList from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/node-txs-list';
-import NodeVotesList from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes-table/node-votes-list';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/services/validator-service';
 import { PagesProps } from '@/types';

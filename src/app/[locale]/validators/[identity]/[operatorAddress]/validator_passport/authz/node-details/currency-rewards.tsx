@@ -21,8 +21,8 @@ const CurrencyRewards: FC<OwnProps> = () => {
         <Switch value={isToken} onChange={(value) => setIsToken(value)} />
         <div className="border-b border-bgSt px-2 font-handjet font-light">{t('token')}</div>
       </div>
-      <NodeDetailsItem label="Withdrawn Commission" value="$5.6K" />
-      <NodeDetailsItem label="Withdrawn Rewards" value="$60.6K" />
+      <NodeDetailsItem label={t('withdraw commission')} value="$5.6K" />
+      <NodeDetailsItem label={t('withdraw rewards')} value="$60.6K" />
     </div>
   );
 };

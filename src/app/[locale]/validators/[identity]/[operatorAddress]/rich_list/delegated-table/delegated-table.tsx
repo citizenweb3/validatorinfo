@@ -1,8 +1,6 @@
-import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import DelegatedEventsList from '@/app/validators/[identity]/[operatorAddress]/rich_list/delegated-table/delegated-events-list';
-import SwitchClient from '@/components/common/switch-client';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/services/validator-service';
 import { PagesProps } from '@/types';

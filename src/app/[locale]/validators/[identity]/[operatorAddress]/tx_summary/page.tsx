@@ -2,8 +2,6 @@ import { getTranslations } from 'next-intl/server';
 
 import NodePagesTitle from '@/app/validators/[identity]/[operatorAddress]/node-pages-title';
 import NodeTxs from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/node-txs';
-import NodeVotes from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes-table/node-votes';
-import RoundedButton from '@/components/common/rounded-button';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService, { SortDirection } from '@/services/validator-service';
 
