@@ -595,8 +595,7 @@ async function main() {
       coinType: 118,
       denom: 'NOM',
       minimalDenom: 'unom',
-      logoUrl:
-        'https://raw.githubusercontent.com/nomic-io/nomic-app/37d685db63d1193126e9d11ecfaa14d30cb6a1c4/apps/app/public/logo.svg',
+      logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/nomic/images/nom.svg',
       rpcNodeUrl: 'https://nomic-rpc.polkachu.com',
       grpcNodeUrl: '',
       lcdNodeUrl: 'https://api.nomic.quokkastake.io',
