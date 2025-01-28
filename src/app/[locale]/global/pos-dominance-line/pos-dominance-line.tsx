@@ -1,41 +1,43 @@
 'use client';
-
-import Image from 'next/image';
 import { FC, useState } from 'react';
-
+import ChartWidget from './chartWidget';
+import EcosystemSelector from './ecosystemSelector';
+import SelectedEcosystems from './selectedEcosystem';
 import ChartButtons from '@/app/validator_comparison/chart-buttons';
+import { ECOSYSTEMS_CONFIG } from './ecosystemConfig'; // Import centralized ecosystem config
 
 const PosDominanceLine: FC = () => {
-  const [isChart, setIsChart] = useState<boolean>(true);
-  const [chartType, setChartType] = useState<string | undefined>('Daily');
+  // Extract all ecosystems from the config (keys of ECOSYSTEMS_CONFIG)
+  const allChains = Object.keys(ECOSYSTEMS_CONFIG);
 
-  const handleChartChanged = (value: boolean) => {
-    setIsChart(value);
-    if (!value) {
-      setChartType(undefined);
-    } else {
-      setChartType('Daily');
-    }
-  };
+  // State for the chart type, and the selected ecosystems
+  const [chartType, setChartType] = useState<string>('Daily');
+  const [selectedEcosystems, setSelectedEcosystems] = useState<string[]>(['POW', 'Cosmos', 'Polkadot', 'Ethereum']);
+
   return (
-    <div>
-      <div className="flex items-center justify-center">
+    <div className="flex flex-col w-full p-4 bg-gray-900">
+      <div className="flex justify-between">
+        {/* Chart Type Buttons */}
         <ChartButtons
-          onlyDays
-          ecosystems
-          isChart={isChart}
-          onChartChanged={handleChartChanged}
+          isChart={false} // Add this line to pass the isChart prop
+          onChartChanged={() => { }} // Add this line to pass the onChartChanged prop
           chartType={chartType}
-          onTypeChanged={(name) => setChartType(name)}
+          onTypeChanged={setChartType}
+        />
+        {/* Ecosystem Selector */}
+        <EcosystemSelector 
+          ecosystems={allChains} 
+          selected={selectedEcosystems} 
+          onChange={setSelectedEcosystems} 
         />
       </div>
-      <Image
-        src={'/img/charts/pos-chart-1.svg'}
-        width={1342}
-        height={317}
-        alt="tem chart 1"
-        className="mt-8 w-full px-16"
+      {/* Chart Widget - Displays the chart based on selected ecosystems */}
+      <ChartWidget 
+        chartType={chartType} 
+        ecosystems={selectedEcosystems} 
       />
+      {/* Selected Ecosystems - Displays selected ecosystems with their colors */}
+      <SelectedEcosystems ecosystems={selectedEcosystems} />
     </div>
   );
 };
