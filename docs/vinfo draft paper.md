@@ -254,12 +254,13 @@ Research:
  2) Scalability (32.5%)
 
  2A) Onchain (20%):
-   - Total value locked on chain (how much money inflow there is)
+   - Total value locked on chain (how much money inflow there is) 
    - active wallets
    - tx volume
    - revenue / fees
    - account growth over time in comparison to others (NA)
    - T.P.S.
+   - % of completed transactions?
 
  2B) Offchain (5%):
    - twitter mentions (is it possible to use now?)
