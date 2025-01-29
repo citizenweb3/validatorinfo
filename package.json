@@ -34,6 +34,7 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
+    "react-datepicker": "^7.6.0",
     "react-dom": "^18",
     "react-i18next": "^15.0.0",
     "react-popper": "^2.3.0",

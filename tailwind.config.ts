@@ -127,6 +127,10 @@ const config: Config = {
         copy: `url('/img/icons/copy-button.png')`,
         copy_h: `url('/img/icons/copy-button-h.png')`,
         copy_a: `url('/img/icons/copy-button-a.png')`,
+        calendar: `url('/img/icons/calendar.png')`,
+        reset: `url('/img/icons/reset-button.png')`,
+        reset_h: `url('/img/icons/reset-button-h.png')`,
+        reset_a: `url('/img/icons/reset-button-a.png')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',

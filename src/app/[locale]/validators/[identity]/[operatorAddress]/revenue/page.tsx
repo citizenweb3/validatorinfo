@@ -43,6 +43,8 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
           {node && price ? <NodeStakingCalculator node={node} price={price} /> : <NodeStakingCalculator />}
         </Suspense>
       </div>
+      <SubTitle text={t('Staking Stats')} />
+
     </div>
   );
 };

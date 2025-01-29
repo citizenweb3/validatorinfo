@@ -15,7 +15,7 @@ const StakingResultsItem: FC<OwnProps> = ({ title, value, asset }) => {
   const t = useTranslations('CalculatorPage');
   return (
     <div>
-      <div className="text-nowrap text-base">
+      <div className="text-nowrap text-lg">
         <span className="font-handjet">{title}</span>
         {t('earnings')}
       </div>
