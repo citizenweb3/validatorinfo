@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 
 const data = {
   validators: '1277',
-  ecosystems: '1',
+  ecosystems: '2',
   tvl: '$74.6B',
   list: [
     {
@@ -48,7 +48,7 @@ const Quotes: FC<OwnProps> = async () => {
         <QuoteItem name="Dominance" href="" />
       </div>
       {data.list.map((item) => (
-        <QuoteItem key={item.name} name={item.name} value={item.value} grow={item.grow} href="/global_pos" />
+        <QuoteItem key={item.name} name={item.name} value={item.value} grow={item.grow} href="/global" />
       ))}
     </div>
   );

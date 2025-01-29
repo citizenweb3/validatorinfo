@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
-import EcosystemDropdown from '@/components/common/list-filters/ecosystem-dropdown';
+import Dropdown from '@/components/common/list-filters/dropdown';
 import ValidatorListFiltersBattery from '@/components/common/list-filters/validator-list-filters-battery';
 import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
 import PlusButton from '@/components/common/plus-button';
@@ -15,6 +15,11 @@ interface OwnProps {
   perPage: number;
   battery?: boolean;
 }
+
+export const ecosystemsDropdown = [
+  { value: 'cosmos', title: 'Cosmos' },
+  { value: 'namada', title: 'Namada' },
+];
 
 const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery = false }) => {
   const router = useRouter();
@@ -55,6 +60,7 @@ const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery =
       selectedEcosystems.indexOf(value) === -1
         ? [...selectedEcosystems, value]
         : selectedEcosystems.filter((c) => c !== value);
+    newSp.set('p', '1');
     chainParam.forEach((c) => newSp.append('ecosystems', c));
     router.push(`${pathname}?${newSp.toString()}`);
   };
@@ -63,7 +69,12 @@ const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery =
     <div className="flex h-8 items-center justify-end space-x-10">
       {isOpened && (
         <>
-          <EcosystemDropdown selectedEcosystems={selectedEcosystems} onChainsChanged={onChainsChanged} />
+          <Dropdown
+            filterValues={ecosystemsDropdown}
+            title={t('Ecosystems')}
+            selectedValue={selectedEcosystems}
+            onChanged={onChainsChanged}
+          />
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
           {battery && <ValidatorListFiltersBattery />}
         </>

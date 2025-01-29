@@ -20,7 +20,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
     <div className="flex items-center justify-center space-x-0.5">
       {chains.length > 4 && <div className="mr-2 font-handjet text-sm">{chains.length}:</div>}
       {chains.slice(0, 4).map((chain) => (
-        <Link key={chain.valoper} href={`/networks/${chain.chainId}}`}>
+        <Link key={chain.valoper} href={`/networks/${chain.name}`}>
           <Tooltip direction="top" tooltip={chain.prettyName}>
             <Image
               src={chain.logoUrl}
@@ -35,30 +35,38 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
       {chains.length > 4 && (
         <>
           <div className="-mt-2.5">
-            <PlusButton size="md" isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
+            <PlusButton
+              size="md"
+              isOpened={isModalOpened}
+              onClick={() => {
+                setIsModalOpened(!isModalOpened);
+              }}
+            />
           </div>
-          <BaseModal
-            opened={isModalOpened}
-            hideClose
-            onClose={() => setIsModalOpened(false)}
-            className="bottom-4 right-0"
-          >
-            <div className="flex w-40 flex-row flex-wrap items-center justify-center">
-              {chains.map((chain) => (
-                <Link key={chain.valoper} href={`/networks/${chain.chainId}`} className="h-7 w-7">
-                  {/*<Tooltip direction="top" tooltip={chain.prettyName}>*/}
-                  <Image
-                    src={chain.logoUrl}
-                    alt={chain.prettyName}
-                    width={24}
-                    height={24}
-                    className="h-6 min-h-6 w-6 min-w-6 rounded-full grayscale transition-all duration-300 hover:grayscale-0"
-                  />
-                  {/*</Tooltip>*/}
-                </Link>
-              ))}
-            </div>
-          </BaseModal>
+          {isModalOpened && (
+            <BaseModal
+              opened={true}
+              onClose={() => setIsModalOpened(false)}
+              isRelative
+              className="absolute -top-6 right-0 z-40"
+            >
+              <div className="flex max-h-96 w-40 flex-row flex-wrap items-center justify-center">
+                {chains.map((chain) => (
+                  <Link key={chain.valoper} href={`/networks/${chain.name}`} className="h-7 w-7">
+                    <Tooltip direction="top" tooltip={chain.prettyName}>
+                      <Image
+                        src={chain.logoUrl}
+                        alt={chain.prettyName}
+                        width={24}
+                        height={24}
+                        className="h-6 min-h-6 w-6 min-w-6 rounded-full grayscale transition-all duration-300 hover:grayscale-0"
+                      />
+                    </Tooltip>
+                  </Link>
+                ))}
+              </div>
+            </BaseModal>
+          )}
         </>
       )}
     </div>

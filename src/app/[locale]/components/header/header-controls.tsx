@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import HeaderActionButtons from '@/components/header/header-action-buttons';
-import HeaderSearch from '@/components/header/header-search';
+import HeaderSearch from '@/components/header/header-search/header-search';
 import WalletButton from '@/components/wallet-connect/WalletButton';
 
 interface OwnProps {}

@@ -17,7 +17,7 @@ const defaultPerPage = 25;
 const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
   const currentPage = parseInt((q.p as string) || '1');
   const validatorsPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const filterChains: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
+  const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
   const sortBy = (q.sortBy as 'moniker' | 'nodes') ?? 'moniker';
   const order = (q.order as SortDirection) ?? 'asc';
 
@@ -25,9 +25,10 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
     <div>
       <TabList page="HomePage" tabs={mainTabs} />
       <Validators
+        page="HomePage"
         sort={{ sortBy, order }}
         perPage={validatorsPerPage}
-        filterChains={filterChains}
+        ecosystems={ecosystems}
         currentPage={currentPage}
       />
     </div>
