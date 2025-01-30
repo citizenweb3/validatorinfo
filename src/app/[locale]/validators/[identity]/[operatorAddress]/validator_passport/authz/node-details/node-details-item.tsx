@@ -22,7 +22,7 @@ const NodeDetailsItem: FC<OwnProps> = ({ label, value, isCopy = false, isCheckma
         ) : value ? (
           <>
             {cutHash(value, 20)}
-            {isCopy && <CopyButton value={value} size="md" />}
+            {isCopy && <CopyButton value={value} size="base" />}
           </>
         ) : null}
       </div>

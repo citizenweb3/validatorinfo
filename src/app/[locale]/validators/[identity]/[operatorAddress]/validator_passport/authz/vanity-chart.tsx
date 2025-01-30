@@ -23,7 +23,7 @@ const VanityChartLine: FC = () => {
   return (
     <div>
       <SubTitle text={t('Vanity Chart')} />
-      <div className="mt-4 flex items-center justify-center">
+      <div className="mt-10 flex items-center justify-center">
         <ChartButtons
           onlyDays
           ecosystems={false}
@@ -33,7 +33,7 @@ const VanityChartLine: FC = () => {
           onTypeChanged={(name) => setChartType(name)}
         />
       </div>
-      <Image src={'/img/charts/vanity-chart.svg'} width={700} height={300} alt="vanity chart" className="mt-2 pl-16" />
+      <Image src={'/img/charts/vanity-chart.svg'} width={650} height={300} alt="vanity chart" className="mt-2 pl-10" />
     </div>
   );
 };

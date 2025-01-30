@@ -44,5 +44,6 @@ export interface PagesProps {
     | 'ValidatorPassportPage'
     | 'VotingSummaryPage'
     | 'TxSummaryPage'
-    | 'RichListPage';
+    | 'RichListPage'
+    | 'NodeRevenuePage';
 }

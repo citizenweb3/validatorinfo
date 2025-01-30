@@ -1,33 +1,35 @@
 import { getTranslations } from 'next-intl/server';
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
+import AuthzPermissionsDetails from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/node-details/authz-permissions-details';
 import CurrencyRewards from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/node-details/currency-rewards';
 import NodeDetailsItem from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/node-details/node-details-item';
+import { permissions } from '@/app/validators/[identity]/[operatorAddress]/validator_passport/authz/node-details/permissionsExample';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { getNodeAuthzTabs } from '@/components/common/tabs/tabs-data';
+import { getPassportAuthzTabs } from '@/components/common/tabs/tabs-data';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 
 interface OwnProps {
   locale: string;
-  children: ReactNode;
   identity: string;
   operatorAddress: string;
   node?: validatorNodesWithChainData | undefined;
 }
 
-const NodeDetails: FC<OwnProps> = async ({ locale, children, identity, operatorAddress, node }) => {
+const NodeDetails: FC<OwnProps> = async ({ locale, identity, operatorAddress, node }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
 
   if (!node) {
     return null;
   }
-  const nodeAuthzTabs = getNodeAuthzTabs(identity, operatorAddress);
+
+  const nodeAuthzTabs = getPassportAuthzTabs(identity, operatorAddress);
 
   return (
-    <div className="mt-6">
+    <div className="mt-16">
       <SubTitle text={t('Validator Node Details')} />
-      <div className="mt-6 grid grid-cols-2 gap-x-10">
+      <div className="mt-7 grid grid-cols-2 gap-x-10">
         <NodeDetailsItem label={t('validator name')} value={node.moniker} isCopy />
         <NodeDetailsItem label={t('public key')} value={node.consensus_pubkey} isCopy />
         <NodeDetailsItem label={t('account address')} value={node.operator_address} isCopy />
@@ -40,7 +42,7 @@ const NodeDetails: FC<OwnProps> = async ({ locale, children, identity, operatorA
         <div className="ml-5 w-[70%] items-center justify-center">
           <div className="my-2 w-full">
             <TabList page="ValidatorPassportPage" tabs={nodeAuthzTabs} />
-            {children}
+            <AuthzPermissionsDetails permissions={permissions} />
           </div>
         </div>
       </div>

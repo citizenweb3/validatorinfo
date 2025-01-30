@@ -576,6 +576,8 @@
     "Wrong amount": "Quantidade errada",
     "earnings": "d Ganhos",
     "Staking Stats": "Estatísticas de Apostas",
+    "validator": "Validador",
+    "network": "Rede",
     "Table": {
       "Yesterday": {
         "name": "Ontem",
@@ -593,14 +595,6 @@
         "name": "Ano passado",
         "hint": ""
       },
-      "Validator": {
-        "name": "Validador",
-        "hint": ""
-      },
-      "Network": {
-        "name": "Rede",
-        "hint": ""
-      },
       "Retro Name": {
         "name": "Nome Retro",
         "hint": ""
@@ -610,6 +604,7 @@
         "hint": ""
       }
     },
-    "show slashing event": "Evento de Corte de Espetáculo"
+    "Show Slashing Event": "Evento de Corte de Espetáculo",
+    "Hide Slashing Event": "Evento de Corte de Couro"
   }
 }

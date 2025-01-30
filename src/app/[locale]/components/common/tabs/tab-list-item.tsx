@@ -12,7 +12,7 @@ import { PagesProps } from '@/types';
 interface OwnProps extends PagesProps {
   item: TabOptions;
 }
-const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered } }) => {
+const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered, isScroll=true } }) => {
   const isActive = usePathname() === href;
   const t = useTranslations(`${page}.Tabs` as NamespaceKeys<IntlMessages, 'HomePage.Tabs'>);
 
@@ -20,6 +20,7 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
     <Link
       href={href}
       className={`${isActive ? 'border-none bg-gradient-to-r from-primary to-secondary text-highlight' : 'border-r border-t border-bgSt'} !active:max-h-7 group relative flex min-h-10 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-px text-sm shadow-button transition-width duration-300 hover:bg-bgHover active:top-1 active:border-transparent active:bg-background active:shadow-none`}
+      scroll={isScroll}
     >
       <div className="flex h-full w-full flex-row flex-nowrap items-center justify-center bg-background text-base font-semibold group-hover:text-highlight hover:bg-bgHover active:bg-background">
         <div className="relative">

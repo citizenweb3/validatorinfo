@@ -15,7 +15,7 @@ interface OwnProps {
   size?: Size;
 }
 
-const CopyButton: FC<OwnProps> = ({ value, size='md' }) => {
+const CopyButton: FC<OwnProps> = ({ value, size='base' }) => {
   const handleCopy = async () => {
     await navigator.clipboard.writeText(value);
   };

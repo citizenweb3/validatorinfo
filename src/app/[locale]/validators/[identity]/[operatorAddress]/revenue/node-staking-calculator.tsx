@@ -53,13 +53,15 @@ const NodeStakingCalculator: FC<OwnProps> = ({ node, price }) => {
     );
   }
 
+  const iconSize = 'h-10 min-h-10 w-10 min-w-10';
+
   return (
     <div className="relative w-[600px]">
       <StakingResults values={stakingRates} chain={chain} />
       <div className="mt-3 flex items-center justify-between border-b border-bgSt">
         <div className="flex items-center">
           <div className="border-r border-bgSt">
-            <div className="bg-calendar mx-6 my-2 h-10 min-h-10 w-10 min-w-10 bg-contain" />
+            <div className={`${iconSize} mx-6 my-2 bg-calendar bg-contain`} />
           </div>
           <DatePicker
             selected={selectedDate}
@@ -70,12 +72,12 @@ const NodeStakingCalculator: FC<OwnProps> = ({ node, price }) => {
             }}
             dateFormat="dd/MM/yyyy"
             popperClassName="custom-popper"
-            className="ml-14 bg-background font-handjet text-lg hover:text-highlight focus:outline-none active:text-base"
+            className="ml-14 cursor-pointer bg-background font-handjet text-lg hover:text-highlight focus:outline-none active:text-base"
           />
         </div>
         <div
           onClick={handleResetDate}
-          className="bg-reset hover:bg-reset_h active:bg-reset_a h-10 min-h-10 w-10 min-w-10 bg-contain"
+          className={`${iconSize} cursor-pointer bg-reset bg-contain  hover:bg-reset_h active:bg-reset_a`}
         />
       </div>
     </div>

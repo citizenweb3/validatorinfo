@@ -10,7 +10,7 @@ interface OwnProps {
 
 const Medals: FC<OwnProps> = async ({ locale }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
-  const iconsSize = 'h-24 min-h-24 w-24 min-w-24 bg-contain bg-no-repeat ml-3';
+  const iconsSize = 'h-20 min-h-20 w-20 min-w-20 bg-contain bg-no-repeat ml-3';
 
   return (
     <div>

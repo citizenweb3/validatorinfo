@@ -576,6 +576,8 @@
     "Wrong amount": "Wrong amount",
     "earnings": "d Earnings",
     "Staking Stats": "Staking Stats",
+    "validator": "Validator",
+    "network": "Network",
     "Table": {
       "Yesterday": {
         "name": "Yesterday",
@@ -593,14 +595,6 @@
         "name": "Last Year",
         "hint": ""
       },
-      "Validator": {
-        "name": "Validator",
-        "hint": ""
-      },
-      "Network": {
-        "name": "Network",
-        "hint": ""
-      },
       "Retro Name": {
         "name": "Retro Name",
         "hint": ""
@@ -610,7 +604,8 @@
         "hint": ""
       }
     },
-    "show slashing event": "Show Slashing Event"
+    "Show Slashing Event": "Show Slashing Event",
+    "Hide Slashing Event": "Hide Slashing Event"
   }
 }
 

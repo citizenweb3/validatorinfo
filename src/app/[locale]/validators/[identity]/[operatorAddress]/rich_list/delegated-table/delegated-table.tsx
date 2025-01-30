@@ -19,8 +19,8 @@ const DelegatedTable: FC<OwnProps> = async ({ page, perPage, sort, currentPage }
           <thead>
             <tr className="bg-table_header">
               <TableHeaderItem page={page} name="Address" />
-              <TableHeaderItem page={page} name="Amount" sortField="amount" defaultSelected />
-              <TableHeaderItem page={page} name="Happened" sortField="happened" />
+              <TableHeaderItem page={page} name="Amount" sortField="amount" />
+              <TableHeaderItem page={page} name="Happened" sortField="happened" defaultSelected />
               <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
               <TableHeaderItem page={page} name="Block Height" sortField="tx" />
             </tr>

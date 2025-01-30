@@ -541,7 +541,7 @@
     }
   },
   "RichListPage": {
-    "title": "Топ Делегаторов и Делегации",
+    "title": "Топ Делегаторов и Делегаций",
     "pretext in prefix": "в",
     "token": "ТОКЕН",
     "Table": {
@@ -576,6 +576,8 @@
     "Wrong amount": "Некоректное значение",
     "earnings": "д заработка",
     "Staking Stats": "Статистика Стэйкинга",
+    "validator": "Валидатор",
+    "network": "Сеть",
     "Table": {
       "Yesterday": {
         "name": "Вчера",
@@ -593,14 +595,6 @@
         "name": "Прошлый год",
         "hint": ""
       },
-      "Validator": {
-        "name": "Валидатор",
-        "hint": ""
-      },
-      "Network": {
-        "name": "Сеть",
-        "hint": ""
-      },
       "Retro Name": {
         "name": "Ретро название",
         "hint": ""
@@ -610,7 +604,8 @@
         "hint": ""
       }
     },
-    "show slashing event": "Показать события слэшинга"
+    "Show Slashing Event": "Показать События Слэшинга",
+    "Hide Slashing Event": "Скрыть События Слэшинга"
   }
 }
 

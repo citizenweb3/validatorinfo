@@ -1,9 +1,6 @@
-'use client';
-
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
 interface OwnProps {
-  url: string | null;
   permissions: {
     granter: string;
     grantee: string;
@@ -14,15 +11,7 @@ interface OwnProps {
   };
 }
 
-const AuthzPermissionsDetails: FC<OwnProps> = ({ url, permissions }) => {
-  useEffect(() => {
-    if (url && !url.includes('/validator_passport/authz/')) {
-      window.scrollTo({
-        top: 0,
-      });
-    }
-  }, [url]);
-
+const AuthzPermissionsDetails: FC<OwnProps> = ({ permissions }) => {
   const labelStyle = 'text-base text-highlight';
   const valueStyle = 'text-base pb-3';
   const linkStyle = 'text-base pb-3 underline underline-offset-2 cursor-pointer';

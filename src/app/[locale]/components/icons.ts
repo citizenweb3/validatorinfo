@@ -55,6 +55,7 @@ import PublicGoodsIconHovered from '@/public/img/icons/validator-tabs/public-goo
 import PublicGoodsIcon from '@/public/img/icons/validator-tabs/public-goods.png';
 import RevenueIconHovered from '@/public/img/icons/validator-tabs/revenue-h.png';
 import RevenueIcon from '@/public/img/icons/validator-tabs/revenue.png';
+import Warning from '@/public/img/icons/warning.png';
 import YellowSquareIcon from '@/public/img/icons/yellow-square.svg';
 
 const icons = {
@@ -116,6 +117,7 @@ const icons = {
   TxSummaryHovered,
   ValidatorPassportHovered,
   VotingSummaryHovered,
+  Warning,
 };
 
 export default icons;

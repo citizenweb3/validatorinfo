@@ -43,7 +43,7 @@ const NodeTxsItem: FC<OwnProps> = ({ item }) => {
           <div className="text-center font-handjet underline underline-offset-2">{cutHash(item.txHash, 20)}</div>
         </Link>
       </td>
-      <td className="w-1/4 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
+      <td className="w-1/4 border-b border-black px-2 py-2 text-sm hover:text-highlight active:border-bgSt">
         <Link href={''} className="flex justify-center">
           <div className="text-center">{item.timeStamp}</div>
         </Link>
