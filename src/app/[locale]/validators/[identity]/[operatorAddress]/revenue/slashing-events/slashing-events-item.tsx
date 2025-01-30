@@ -26,7 +26,7 @@ const SlashingEventsItem: FC<OwnProps> = ({ item }) => {
       <td className="w-1/2 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={''} className="flex items-center justify-center">
           <div className="flex items-center justify-center">
-            {item.commits.token} [${item.commits.usd}]
+            {item.commits.token.toFixed(1)} [${item.commits.usd.toFixed(1)}]
           </div>
         </Link>
       </td>
