@@ -29,7 +29,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
     .filter((c) => typeof c !== 'undefined');
 
   return (
-    <tr className="group font-handjet font-light hover:bg-bgHover ">
+    <tr className="group font-handjet hover:bg-bgHover ">
       <td className="w-9 border-b border-black py-2 active:border-bgSt">
         <ValidatorListItemFavorite isFavorite={false} />
       </td>
@@ -50,7 +50,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.identity}/metrics`}
-          className="flex items-center justify-center font-handjet text-lg font-light"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
@@ -58,7 +58,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.identity}/metrics`}
-          className="flex items-center justify-center font-handjet text-lg font-light"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
@@ -66,7 +66,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.identity}/metrics`}
-          className="flex items-center justify-center font-handjet text-lg font-light"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
@@ -74,7 +74,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
           href={`validators/${validator.identity}/metrics`}
-          className="flex items-center justify-center font-handjet text-lg font-light"
+          className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>

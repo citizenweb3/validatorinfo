@@ -56,7 +56,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   };
 
   return (
-    <tr className="group cursor-pointer font-handjet font-light hover:bg-bgHover">
+    <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <Image src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon} alt={'green'} width={20} height={20} />
         <TableAvatar icon={item.logoUrl} name={item?.prettyName || 'No name'} href={`/networks/${item.name}`} />

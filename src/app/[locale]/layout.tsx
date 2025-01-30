@@ -37,8 +37,8 @@ const sfpro = localFont({
 const handjet = localFont({
   src: [
     {
-      path: '../../../public/fonts/Handjet-Light.ttf',
-      weight: '300',
+      path: '../../../public/fonts/Handjet-Regular.ttf',
+      weight: '400',
       style: 'normal',
     },
   ],

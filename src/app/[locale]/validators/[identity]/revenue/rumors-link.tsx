@@ -24,7 +24,7 @@ const RumorsLink: FC<OwnProps> = async (identity, locale) => {
         </div>
       </div>
       <div className="mb-1 mt-4 flex justify-center self-stretch">
-        <RoundedButton href={'/rumors'} className="font-handjet text-base font-light">
+        <RoundedButton href={'/rumors'} className="font-handjet text-base">
           {t('read more')}
         </RoundedButton>
       </div>

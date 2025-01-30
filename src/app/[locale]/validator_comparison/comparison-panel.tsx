@@ -27,14 +27,14 @@ const ComparisonPanel: FC<OwnProps> = ({ validator, isComparing, onCompare }) =>
       </div>
       <div className="border-b border-primary pb-9 pt-6">
         <div className="flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-          <div className="border-b border-bgSt px-2 font-handjet font-light">USD</div>
+          <div className="border-b border-bgSt px-2 font-handjet">USD</div>
           <Switch value={isToken} onChange={(value) => setIsToken(value)} />
-          <div className="border-b border-bgSt px-2 font-handjet font-light">{t('Token')}</div>
+          <div className="border-b border-bgSt px-2 font-handjet">{t('Token')}</div>
         </div>
         <div className="relative mt-4">
-          <div className="absolute left-2 top-2 font-handjet text-xl font-light text-highlight">$</div>
+          <div className="absolute left-2 top-2 font-handjet text-xl text-highlight">$</div>
           <input
-            className="w-full bg-bgSt py-2 pl-5 pr-1 text-right font-handjet text-lg font-light outline-white"
+            className="w-full bg-bgSt py-2 pl-5 pr-1 text-right font-handjet text-lg outline-white"
             defaultValue={1000}
             placeholder="1000"
             value={0}
@@ -58,13 +58,13 @@ const ComparisonPanel: FC<OwnProps> = ({ validator, isComparing, onCompare }) =>
           )}
         </div>
         <div>
-          {t('Daily')}: {isComparing && <span className="ml-2 font-handjet font-light">123</span>}
+          {t('Daily')}: {isComparing && <span className="ml-2 font-handjet">123</span>}
         </div>
         <div>
-          {t('Weekly')}: {isComparing && <span className="ml-2 font-handjet font-light">123</span>}
+          {t('Weekly')}: {isComparing && <span className="ml-2 font-handjet">123</span>}
         </div>
         <div>
-          {t('Monthly')}: {isComparing && <span className="ml-2 font-handjet font-light">123</span>}
+          {t('Monthly')}: {isComparing && <span className="ml-2 font-handjet">123</span>}
         </div>
       </div>
     </div>

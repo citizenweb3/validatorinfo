@@ -37,13 +37,13 @@ const StakingResults: FC<OwnProps> = ({ values, chain }) => {
       <div className="flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
         <div className="border-b border-bgSt px-2 font-handjet font-light">USD</div>
         <Switch value={isToken} onChange={(value) => setIsToken(value)} />
-        <div className="border-b border-bgSt px-2 font-handjet font-light">{t('Token')}</div>
+        <div className="border-b border-bgSt px-2 font-handjet">{t('Token')}</div>
       </div>
       <div className="mt-3 font-bold">{t('Enter Staking Amount')}</div>
       <div className="relative mt-1">
-        <div className="absolute left-2 top-1 font-handjet text-xl font-light text-highlight">$</div>
+        <div className="absolute left-2 top-1 font-handjet text-xl text-highlight">$</div>
         <input
-          className="w-full bg-bgSt py-2 pl-5 pr-1 text-right font-handjet text-lg font-light outline-white"
+          className="w-full bg-bgSt py-2 pl-5 pr-1 text-right font-handjet text-lg outline-white"
           defaultValue={1000}
           placeholder="1000"
           value={amount}
