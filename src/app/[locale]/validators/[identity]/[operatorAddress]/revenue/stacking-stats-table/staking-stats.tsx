@@ -14,7 +14,7 @@ const StakingStats: FC<OwnProps> = async ({ page, locale }) => {
   const t = await getTranslations({ locale, namespace: 'NodeRevenuePage' });
 
   return (
-    <div className="mt-2 mb-4">
+    <div className="mb-4 mt-2">
       <table className="w-full table-auto border-separate border-spacing-y-2">
         <thead>
           <tr className="bg-table_header">

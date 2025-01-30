@@ -121,61 +121,61 @@ export const getValidatorPublicGoodTabs = (identity: string): TabOptions[] => {
   ];
 };
 
-export const getNodeProfileTabs = (identity: string, valoper: string): TabOptions[] => {
+export const getNodeProfileTabs = (identity: string, operatorAddress: string): TabOptions[] => {
   return [
     {
       name: 'TX Summary',
-      href: `/validators/${identity}/${valoper}/tx_summary`,
+      href: `/validators/${identity}/${operatorAddress}/tx_summary`,
       icon: icons.TxSummary,
       iconHovered: icons.TxSummaryHovered,
     },
     {
       name: 'Voting Summary',
-      href: `/validators/${identity}/${valoper}/voting_summary`,
+      href: `/validators/${identity}/${operatorAddress}/voting_summary`,
       icon: icons.VotingSummary,
       iconHovered: icons.VotingSummaryHovered,
     },
     {
       name: 'Validator Passport',
-      href: `/validators/${identity}/${valoper}/validator_passport/authz/withdraw_rewards`,
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
       icon: icons.ValidatorPassport,
       iconHovered: icons.ValidatorPassportHovered,
     },
     {
       name: 'Rich List',
-      href: `/validators/${identity}/${valoper}/rich_list`,
+      href: `/validators/${identity}/${operatorAddress}/rich_list`,
       icon: icons.RichList,
       iconHovered: icons.RichListHovered,
     },
     {
       name: 'Revenue',
-      href: `/validators/${identity}/${valoper}/revenue`,
+      href: `/validators/${identity}/${operatorAddress}/revenue`,
       icon: icons.RevenueIcon,
       iconHovered: icons.RevenueIconHovered,
     },
   ];
 };
 
-export const getPassportAuthzTabs = (identity: string, valoper: string): TabOptions[] => {
+export const getPassportAuthzTabs = (identity: string, operatorAddress: string): TabOptions[] => {
   return [
     {
       name: 'Withdraw Rewards',
-      href: `/validators/${identity}/${valoper}/validator_passport/authz/withdraw_rewards`,
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
       isScroll: false,
     },
     {
       name: 'Unjail',
-      href: `/validators/${identity}/${valoper}/validator_passport/authz/unjail`,
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/unjail`,
       isScroll: false,
     },
     {
       name: 'Transact',
-      href: `/validators/${identity}/${valoper}/validator_passport/authz/transact`,
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/transact`,
       isScroll: false,
     },
     {
       name: 'Vote',
-      href: `/validators/${identity}/${valoper}/validator_passport/authz/vote`,
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/vote`,
       isScroll: false,
     },
   ];

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import NodeVotesItems from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes-table/node-votes-items';
-import { votes } from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes-table/nodeVotesExample';
+import { nodeVotesExample } from '@/app/validators/[identity]/[operatorAddress]/voting_summary/node-votes-table/nodeVotesExample';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/services/validator-service';
 
@@ -16,7 +16,7 @@ const NodeVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) =
 
   return (
     <tbody>
-      {votes.map((item) => (
+      {nodeVotesExample.map((item) => (
         <NodeVotesItems key={item.proposalId} item={item} />
       ))}
       <tr>

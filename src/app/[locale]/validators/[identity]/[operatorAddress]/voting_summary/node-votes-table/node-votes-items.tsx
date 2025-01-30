@@ -37,12 +37,12 @@ const NodeVotesItem: FC<OwnProps> = ({ item }) => {
           <div className="text-sm">{item.proposalTitle}</div>
         </Link>
       </td>
-      <td className="w-1/6 border-b border-black px-2 py-2 text-sm hover:text-highlight active:border-bgSt">
+      <td className="w-1/6 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
         <Link href={''} className="flex justify-center">
           <div className="text-center">{item.proposalType}</div>
         </Link>
       </td>
-      <td className="w-1/6 border-b border-black px-2 py-2 text-sm hover:text-highlight active:border-bgSt">
+      <td className="w-1/6 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
         <Link href={''} className="flex justify-center">
           <div className="text-center">{item.vote}</div>
         </Link>

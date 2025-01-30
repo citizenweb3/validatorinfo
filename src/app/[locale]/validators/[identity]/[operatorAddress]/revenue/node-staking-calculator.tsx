@@ -18,7 +18,6 @@ interface OwnProps {
 const NodeStakingCalculator: FC<OwnProps> = ({ node, price }) => {
   const [chain, setChain] = useState<ChainItem | undefined>(undefined);
   const [stakingRates, setStakingRates] = useState<StakingRates | undefined>(undefined);
-
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
   useEffect(() => {

@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
@@ -16,7 +14,7 @@ const SlashingEventsItem: FC<OwnProps> = ({ item }) => {
   return (
     <tr className="group cursor-pointer font-handjet text-base hover:bg-bgHover">
       <td className="w-1/2 border-b border-black py-4 hover:text-highlight active:border-bgSt">
-        <Link href={''} className="flex w-full items-center gap-1">
+        <Link href={''} className="flex w-full items-center">
           <Tooltip tooltip={'text'} direction={'top'}>
             <Image src={icons.Warning} alt="warning" width={35} height={35} className="shrink-0" />
           </Tooltip>
@@ -26,7 +24,7 @@ const SlashingEventsItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="w-1/2 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
-        <Link href={''} className="flex items-center justify-center gap-1">
+        <Link href={''} className="flex items-center justify-center">
           <div className="flex items-center justify-center">
             {item.commits.token} [${item.commits.usd}]
           </div>

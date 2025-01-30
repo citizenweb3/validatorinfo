@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import NodeTxsItem from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/node-txs-items';
-import { txs } from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/nodeTxsExample';
+import { nodeTxsExample } from '@/app/validators/[identity]/[operatorAddress]/tx_summary/txs-table/nodeTxsExample';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/services/validator-service';
 
@@ -16,7 +16,7 @@ const NodeTxsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => 
 
   return (
     <tbody>
-      {txs.map((item) => (
+      {nodeTxsExample.map((item) => (
         <NodeTxsItem key={item.txHash} item={item} />
       ))}
       <tr>

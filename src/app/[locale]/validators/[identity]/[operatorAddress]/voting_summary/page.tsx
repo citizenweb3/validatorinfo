@@ -6,6 +6,9 @@ import RoundedButton from '@/components/common/rounded-button';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService, { SortDirection } from '@/services/validator-service';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface PageProps {
   params: NextPageWithLocale & { identity: string; operatorAddress: string };
   searchParams: { [key: string]: string | string[] | undefined };
@@ -40,7 +43,7 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
       <NodePagesTitle page={'VotingSummaryPage'} locale={locale} node={node} />
       <div>
         <div className="my-4 flex justify-end">
-          <RoundedButton href={''} className="font-handjet text-base">
+          <RoundedButton href={''} className="font-handjet text-lg">
             {t('show same opinion')}
           </RoundedButton>
         </div>

@@ -5,6 +5,9 @@ import NodeTxs from '@/app/validators/[identity]/[operatorAddress]/tx_summary/tx
 import { Locale, NextPageWithLocale } from '@/i18n';
 import ValidatorService, { SortDirection } from '@/services/validator-service';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface PageProps {
   params: NextPageWithLocale & { identity: string; operatorAddress: string };
   searchParams: { [key: string]: string | string[] | undefined };
@@ -24,7 +27,6 @@ const TxSummaryPage: NextPageWithLocale<PageProps> = async ({
   params: { locale, identity, operatorAddress },
   searchParams: q,
 }) => {
-
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const sortBy = (q.sortBy as 'name') ?? 'name';

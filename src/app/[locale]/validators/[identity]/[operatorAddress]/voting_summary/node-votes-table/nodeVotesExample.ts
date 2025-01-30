@@ -1,4 +1,4 @@
-export const votes = [
+export const nodeVotesExample = [
   {
     proposalId: 21,
     proposalTitle: 'Citizen Cosmos Podcast Sponsorship',

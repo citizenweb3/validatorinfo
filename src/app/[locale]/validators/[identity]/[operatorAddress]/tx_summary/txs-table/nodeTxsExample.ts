@@ -1,4 +1,4 @@
-export const txs = [
+export const nodeTxsExample = [
   {
     typeOfTx: 'Send',
     txHash: 'D3DD629470947D318DFCC1D66F8FA8534B0A14164761852D782BB33BEA495660',

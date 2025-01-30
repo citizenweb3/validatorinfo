@@ -1,4 +1,4 @@
-export function formatMoneyAmount(num: number): string {
+export function formatMoneyView(num: number): string {
   const absNum = Math.abs(num);
 
   if (absNum >= 1000000) {

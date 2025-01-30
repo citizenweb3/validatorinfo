@@ -16,19 +16,19 @@ const Medals: FC<OwnProps> = async ({ locale }) => {
     <div>
       <SubTitle text={t('Medals')} />
       <div className="mt-6 flex items-center gap-10">
-        <Tooltip noWrap tooltip={t('restake tooltip')} direction={'bottom'}>
+        <Tooltip tooltip={t('restake tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} bg-restake hover:bg-restake_h `} />
         </Tooltip>
-        <Tooltip noWrap tooltip={t('horcrux tooltip')} direction={'bottom'}>
+        <Tooltip tooltip={t('horcrux tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} bg-horcrux hover:bg-horcrux_h`} />
         </Tooltip>
-        <Tooltip noWrap tooltip={t('slashed tooltip')} direction={'bottom'}>
+        <Tooltip tooltip={t('slashed tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} bg-slashed hover:bg-slashed_h`} />
         </Tooltip>
-        <Tooltip noWrap tooltip={t('hash txs tooltip')} direction={'bottom'}>
+        <Tooltip tooltip={t('hash txs tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} bg-hash_txs hover:bg-hash_txs_h`} />
         </Tooltip>
-        <Tooltip noWrap tooltip={t('reward reinvesting tooltip')} direction={'bottom'}>
+        <Tooltip tooltip={t('reward reinvesting tooltip')} direction={'bottom'}>
           <div className={`${iconsSize} bg-reward_re hover:bg-reward_re_h`} />
         </Tooltip>
       </div>
