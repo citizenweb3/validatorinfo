@@ -1,5 +1,4 @@
-import { Prisma, PrismaClient } from '@prisma/client';
-import { DefaultArgs } from '@prisma/client/runtime/library';
+import db from '@/db';
 
 import { ChainWithNodes } from '../types';
 
@@ -32,14 +31,10 @@ const getData = async (url: string): Promise<NamadaNode[] | undefined> => {
   }
 };
 
-const getNamadaNodes = async (
-  client: PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>,
-  chain: ChainWithNodes,
-) => {
+const getNamadaNodes = async (chain: ChainWithNodes) => {
   console.log('chainName:', chain.name);
 
   const path = chain.grpcNodes[0].url + '/api/v1/pos/validator/all';
-  console.log('get namada validators by url: ', path);
   const validators = await getData(path);
 
   if (!validators) return;
@@ -47,12 +42,12 @@ const getNamadaNodes = async (
   for (const node of validators) {
     if (!node.name) continue;
 
-    let validator = await client.validator.findFirst({
+    let validator = await db.validator.findFirst({
       where: { OR: [{ security_contact: node.email }, { website: node.website }, { moniker: node.name }] },
     });
 
     if (!validator) {
-      validator = await client.validator.create({
+      validator = await db.validator.create({
         data: {
           identity: node.name,
           moniker: node.name,
@@ -64,7 +59,7 @@ const getNamadaNodes = async (
       });
     }
 
-    await client.node.upsert({
+    await db.node.upsert({
       where: { operator_address: node.address },
       update: {
         tokens: node.votingPower,

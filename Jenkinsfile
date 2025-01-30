@@ -35,6 +35,14 @@ pipeline {
                 }
             }
         }
+        
+        stage('Init chains') {
+            steps {
+                script {
+                    sh "make init-chains"
+                }
+            }
+        }
     }
 
     post {

@@ -15,11 +15,11 @@ const StakingResultsItem: FC<OwnProps> = ({ title, value, asset }) => {
   const t = useTranslations('CalculatorPage');
   return (
     <div>
-      <div className="text-nowrap text-lg">
-        <span className="font-handjet">{title}</span>
+      <div className="text-nowrap text-base">
+        <span className="font-handjet font-light">{title}</span>
         {t('earnings')}
       </div>
-      <div className="font-handjet text-lg text-highlight">
+      <div className="font-handjet text-lg font-light text-highlight">
         {asset.isSymbolFirst && asset.symbol}
         {value.toFixed(asset.isSymbolFirst ? 2 : 6)}
         {!asset.isSymbolFirst && ' ' + asset.symbol}

@@ -43,7 +43,7 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
             />
           )}
           <div
-            className={`${icon && 'pl-10'} overflow-hidden overflow-ellipsis text-nowrap font-handjet text-lg tracking-wide xs:max-w-32 lg:max-w-full`}
+            className={`${icon && 'pl-10'} overflow-hidden overflow-ellipsis text-nowrap font-handjet text-lg font-light tracking-wide xs:max-w-32 lg:max-w-full`}
           >
             {t(name as 'ValidatorInfo')}
           </div>

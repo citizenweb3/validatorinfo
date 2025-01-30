@@ -41,9 +41,9 @@ const StakingResults: FC<OwnProps> = ({ values, chain }) => {
       </div>
       <div className="mt-3 font-bold">{t('Enter Staking Amount')}</div>
       <div className="relative mt-1">
-        <div className="absolute left-2 top-1 font-handjet text-xl text-highlight">$</div>
+        <div className="absolute left-2 top-1 font-handjet text-xl font-light text-highlight">$</div>
         <input
-          className="w-full bg-bgSt py-2 pl-5 pr-1 text-right font-handjet text-lg outline-white"
+          className="w-full bg-bgSt py-2 pl-5 pr-1 text-right font-handjet text-lg font-light outline-white"
           defaultValue={1000}
           placeholder="1000"
           value={amount}

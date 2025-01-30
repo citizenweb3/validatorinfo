@@ -26,7 +26,7 @@ const MetricsBlocks: FC<OwnProps> = async ({ identity }) => {
   2xl:max-w-[250px]
 `;
   const cardTitleClass = 'text-center text-base text-highlight';
-  const cardValueClass = 'mt-3 font-handjet text-lg';
+  const cardValueClass = 'mt-3 font-handjet font-light text-lg';
   const formulaUrl = '/img/tmp/formula.svg';
 
   return (

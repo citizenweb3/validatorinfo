@@ -22,7 +22,7 @@ const TableAvatar: FC<OwnProps> = ({ icon, name, href, textClassName = '' }) => 
             alt={name}
             width={40}
             height={40}
-            className="absolute left-1/2 top-1/2 z-10 h-10 w-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full object-contain group-hover/avatar:shadow-2xl"
+            className="absolute left-1/2 top-1/2 z-10 h-10 w-10 -translate-x-1/2 -translate-y-1/2 transform rounded-full object-contain group-hover/avatar:shadow-2xl object-contain"
           />
         ) : (
           <Image
