@@ -29,7 +29,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           priority
           className="absolute left-1 top-1/2 hidden w-9 -translate-y-1/2 transform group-hover/button:block"
         />
-        <span className="-my-1.5 pl-8 font-handjet">{t('Hi, World!')}</span>
+        <span className="-my-1.5 pl-8 font-handjet font-light">{t('Hi, World!')}</span>
       </Button>
       <Button component="link" href={`/validators/lucky`}>
         <Image
@@ -48,7 +48,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
           priority
           className="absolute left-2 top-1/2 hidden w-7 -translate-y-1/2 transform group-hover/button:block"
         />
-        <span className="-my-1.5 pl-8 font-handjet">{t('Lucky!?')}</span>
+        <span className="-my-1.5 pl-8 font-handjet font-light">{t('Lucky!?')}</span>
       </Button>
     </div>
   );

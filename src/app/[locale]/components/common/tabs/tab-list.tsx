@@ -10,7 +10,7 @@ interface OwnProps extends PagesProps {
 
 const TabList: FC<OwnProps> = ({ page, tabs }) => {
   return (
-    <div className="mb-3 flex flex-row space-x-4 font-handjet">
+    <div className="mb-3 flex flex-row space-x-4 font-handjet font-light">
       {tabs.map((item) => (
         <TabListItem page={page} key={item.href} item={item} />
       ))}

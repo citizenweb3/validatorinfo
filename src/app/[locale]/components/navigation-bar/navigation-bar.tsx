@@ -39,7 +39,7 @@ const NavigationBar: FC<OwnProps> = () => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   return (
     <div
-      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} relative mt-2 border-r-[1.5rem] border-transparent pt-6 font-handjet transition-all duration-300`}
+      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} relative mt-2 border-r-[1.5rem] border-transparent pt-6 font-handjet font-light transition-all duration-300`}
     >
       <div
         className="group absolute -right-12 top-0 z-20 h-full w-6 cursor-pointer bg-opacity-30 from-transparent to-bgSt hover:bg-gradient-to-b"

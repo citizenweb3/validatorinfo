@@ -26,7 +26,7 @@ const WalletButton: React.FC = () => {
     <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
       <Tooltip tooltip={walletData ? t('Profile') : t('Click to login')}>
         <Link href="/profile" onClick={handleClick} className="flex flex-col items-center">
-          <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('You')}</div>
+          <div className="group-hover:text-shadowed font-handjet text-lg font-light text-highlight">{t('You')}</div>
           <Image
             src="/img/avatars/default.png"
             alt="validatorinfo.com web3 login button. User personalized avatar"

@@ -54,7 +54,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({
           <SubTitle text={t('news feed')} size="h2" />
         </ToolTip>
         <div className="mb-4 mt-4 flex justify-end">
-          <RoundedButton href={''} className="font-handjet text-base">
+          <RoundedButton href={''} className="font-handjet text-base font-light">
             {t('similar opinions')}
           </RoundedButton>
         </div>

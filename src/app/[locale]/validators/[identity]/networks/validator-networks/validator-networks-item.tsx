@@ -56,7 +56,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   };
 
   return (
-    <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
+    <tr className="group cursor-pointer font-handjet font-light hover:bg-bgHover">
       <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <Image src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon} alt={'green'} width={20} height={20} />
         <TableAvatar icon={item.logoUrl} name={item?.prettyName || 'No name'} href={`/networks/${item.name}`} />
@@ -115,9 +115,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <Link href={`/networks/${item.name}`}>
           <div className="flex items-center justify-center text-center">
-            {!item.jailed && (
-              <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />
-            )}
+            {!item.jailed && <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />}
           </div>
         </Link>
       </td>
