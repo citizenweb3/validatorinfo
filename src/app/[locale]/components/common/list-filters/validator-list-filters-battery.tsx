@@ -28,7 +28,7 @@ const ValidatorListFiltersBattery: FC = () => {
         <div className="relative">
           <Button
             onClick={() => setIsFromOpened(!isFromOpened)}
-            contentClassName={`py-0 px-2 max-h-6 text-lg font-handjet text-highlight`}
+            contentClassName={`py-0 px-2 max-h-6 text-lg font-handjet font-normal text-highlight`}
             className={`${isFromOpened && 'w-16'}`}
             activeType="switcher"
           >

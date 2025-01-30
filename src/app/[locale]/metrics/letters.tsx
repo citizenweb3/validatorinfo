@@ -7,7 +7,7 @@ import TriangleButton from '@/components/common/triangle-button';
 interface OwnProps {}
 
 const Letter: FC<{ letter: string }> = ({ letter }) => (
-  <div className="cursor-pointer border-b border-primary px-2 pb-px font-handjet text-lg font-light hover:border-highlight hover:text-highlight">
+  <div className="cursor-pointer border-b border-primary px-2 pb-px font-handjet text-lg hover:border-highlight hover:text-highlight">
     {letter}
   </div>
 );
