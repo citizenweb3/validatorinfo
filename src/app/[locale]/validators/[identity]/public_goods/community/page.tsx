@@ -16,7 +16,7 @@ const PublicGoodsCommunityPage: NextPageWithLocale<PageProps> = async ({ params 
     <div className="mb-64">
       <div className="mb-4 ml-4 mt-12 font-sfpro text-base">{t('description')}</div>
       <div className="flex justify-end">
-        <RoundedButton href={''} className="font-handjet text-base">
+        <RoundedButton href={''} className="font-handjet text-base font-light">
           {t('submit new info')}
         </RoundedButton>
       </div>

@@ -18,7 +18,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
 
   return (
     <div className="flex items-center justify-center space-x-0.5">
-      {chains.length > 4 && <div className="mr-2 font-handjet text-sm">{chains.length}:</div>}
+      {chains.length > 4 && <div className="mr-2 font-handjet text-sm font-light">{chains.length}:</div>}
       {chains.slice(0, 4).map((chain) => (
         <Link key={chain.valoper} href={`/networks/${chain.name}`}>
           <Tooltip direction="top" tooltip={chain.prettyName}>

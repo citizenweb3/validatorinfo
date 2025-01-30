@@ -20,7 +20,7 @@ const HeaderControls: FC<OwnProps> = () => {
         className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-bgSt hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
       >
         <div className="relative flex flex-col items-center px-2 py-1">
-          <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('Home')}</div>
+          <div className="group-hover:text-shadowed font-handjet text-lg font-light text-highlight">{t('Home')}</div>
           <Image
             src="/img/logo.svg"
             alt="validatorinfo.com logo. Futuristic robot head with a V-style tick symbol"

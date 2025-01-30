@@ -15,7 +15,7 @@ const ValidatorMediaItem: FC<OwnProps> = ({ item }) => {
   const t = useTranslations('PublicGoodsMediaPage');
   const iconsSize = 'h-10 w-10';
   return (
-    <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
+    <tr className="group cursor-pointer font-handjet font-light hover:bg-bgHover">
       <td className="w-1/3 border-b border-black py-4 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={''} className="">
           <div className="ml-2.5">{item.name}</div>
@@ -38,7 +38,7 @@ const ValidatorMediaItem: FC<OwnProps> = ({ item }) => {
       <td className="w-1/3 border-b border-black px-2 py-2 font-sfpro text-base">
         <div className="flex justify-end">
           <div>
-            Approved by: <span className="font-handjet text-lg text-highlight">{item.approved}%</span>
+            Approved by: <span className="font-handjet text-lg font-light text-highlight">{item.approved}%</span>
           </div>
         </div>
       </td>
