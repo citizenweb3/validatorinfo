@@ -14,7 +14,7 @@ const SimpleValidatorListItem: FC<OwnProps> = ({ validator }) => {
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
 
   return (
-    <tr className="group font-handjet font-light hover:bg-bgHover ">
+    <tr className="group font-handjet hover:bg-bgHover ">
       <td className="group/avatar w-1/3 border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <TableAvatar
           icon={validator.url}

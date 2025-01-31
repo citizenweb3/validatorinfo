@@ -13,9 +13,9 @@ const Switcher: FC<OwnProps> = () => {
 
   return (
     <div className="mt-6 flex items-center">
-      <div className="border-b border-primary px-2 pb-px font-handjet text-lg font-light">{t('All Metrics')}</div>
+      <div className="border-b border-primary px-2 pb-px font-handjet text-lg">{t('All Metrics')}</div>
       <Switch value={value} onChange={(v) => setValue(v)} />
-      <div className="border-b border-primary px-2 pb-px font-handjet text-lg font-light">{t('Our Metrics')}</div>
+      <div className="border-b border-primary px-2 pb-px font-handjet text-lg">{t('Our Metrics')}</div>
     </div>
   );
 };

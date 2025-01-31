@@ -23,7 +23,7 @@ const ValidatorNodesItem: FC<OwnProps> = ({ item }) => {
   };
 
   return (
-    <tr className="group cursor-pointer font-handjet font-light hover:bg-bgHover">
+    <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td className="w-1/3 border-b border-black py-4 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={''} className="flex items-center gap-1">
           <Image src={getSquareIcon()} alt={`${item.color}`} width={20} height={20} />

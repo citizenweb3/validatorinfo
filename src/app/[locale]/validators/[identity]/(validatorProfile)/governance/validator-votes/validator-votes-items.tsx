@@ -26,7 +26,7 @@ const ValidatorVotesItem: FC<OwnProps> = ({ item }) => {
   };
 
   return (
-    <tr className="group cursor-pointer font-handjet font-light hover:bg-bgHover">
+    <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td className="w-1/3 border-b border-black py-4 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={''} className="flex items-center gap-1">
           <Image src={getSquareIcon()} alt={`${item.vote}`} width={20} height={20} />
@@ -35,7 +35,7 @@ const ValidatorVotesItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="w-1/3 border-b border-black py-4 text-base active:border-bgSt">
         <Link href={''} className="flex justify-center gap-2">
-          <div className="font-handjet text-xl font-light text-highlight">{`#${item.proposalId}`}</div>
+          <div className="font-handjet text-xl text-highlight">{`#${item.proposalId}`}</div>
           <div className="self-end text-center">{item.proposalTitle}</div>
         </Link>
       </td>

@@ -37,6 +37,7 @@ const config: Config = {
       sm: '0.83rem',
       lg: '1.172rem',
       xl: '1.5rem',
+      '4xl': '2.31rem',
     },
     colors: {
       transparent: colors.transparent,
