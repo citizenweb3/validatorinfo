@@ -41,9 +41,9 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
     <div className="mb-14">
       <NodePagesTitle page={'RichListPage'} locale={locale} node={node} />
       <div className="mb-4 mt-7 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-        <div className="border-b border-bgSt px-2 font-handjet font-light">USD</div>
+        <div className="border-b border-bgSt px-2 font-handjet">USD</div>
         <SwitchClient value={true} />
-        <div className="border-b border-bgSt px-2 font-handjet font-light">{t('token')}</div>
+        <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
       </div>
       <DelegatedTable page={'RichListPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
     </div>

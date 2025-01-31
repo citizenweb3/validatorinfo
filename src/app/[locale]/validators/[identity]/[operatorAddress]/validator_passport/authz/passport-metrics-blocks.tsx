@@ -27,7 +27,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
   2xl:max-w-[250px]
 `;
   const cardTitleClass = 'text-center text-base text-highlight';
-  const cardValueClass = 'my-3 font-handjet font-light text-lg';
+  const cardValueClass = 'my-3 font-handjet text-lg';
 
   return (
     <div className="mt-16 flex flex-col items-center gap-8">

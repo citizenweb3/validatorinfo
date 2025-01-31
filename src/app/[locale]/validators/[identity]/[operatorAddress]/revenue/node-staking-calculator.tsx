@@ -71,7 +71,7 @@ const NodeStakingCalculator: FC<OwnProps> = ({ node, price }) => {
             }}
             dateFormat="dd/MM/yyyy"
             popperClassName="custom-popper"
-            className="ml-14 cursor-pointer bg-background font-handjet font-light text-lg hover:text-highlight focus:outline-none active:text-base"
+            className="ml-14 cursor-pointer bg-background font-handjet text-lg hover:text-highlight focus:outline-none active:text-base"
           />
         </div>
         <div

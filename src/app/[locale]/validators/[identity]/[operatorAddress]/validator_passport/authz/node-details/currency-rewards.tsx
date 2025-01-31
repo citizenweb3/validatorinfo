@@ -17,9 +17,9 @@ const CurrencyRewards: FC<OwnProps> = () => {
   return (
     <div>
       <div className="mt-4 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-        <div className="border-b border-bgSt px-2 font-handjet font-light">USD</div>
+        <div className="border-b border-bgSt px-2 font-handjet">USD</div>
         <Switch value={isToken} onChange={(value) => setIsToken(value)} />
-        <div className="border-b border-bgSt px-2 font-handjet font-light">{t('token')}</div>
+        <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
       </div>
       <NodeDetailsItem label={t('withdraw commission')} value="$5.6K" />
       <NodeDetailsItem label={t('withdraw rewards')} value="$60.6K" />
