@@ -119,7 +119,10 @@
       },
       "Customize": "Customize",
       "Click 3 times to reset all filters": "Click 3 times to reset all filters",
-      "Ecosystems": "Ecosystems"
+      "Ecosystems": "Ecosystems",
+      "Network Stage": "Network Stage",
+      "Set Position": "Set Position",
+      "Node Status": "Node Status"
     },
     "Tabs": {
       "Calculate": "Calculate",
