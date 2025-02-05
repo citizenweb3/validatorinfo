@@ -448,5 +448,164 @@
   "PublicGoodsCommunityPage": {
     "description": "Envie links para eventos públicos criados pelo validador, chats e comunidades administrados, espaços no Twitter e outras vidas em linha semelhantes. Documentação, vídeos, publicações únicas em blogues, contribuições artísticas, autocolantes, participação em fóruns, etc. - são exemplos de contribuições da comunidade.",
     "submit new info": "Enviar Novas Informações"
+  },
+  "NodeProfileHeader": {
+    "Tabs": {
+      "Revenue": "Receitas",
+      "TX Summary": "Resumo TX",
+      "Voting Summary": "Resumo da Votação",
+      "Validator Passport": "Passaporte de Validação",
+      "Rich List": "Lista Rica"
+    }
+  },
+  "ValidatorPassportPage": {
+    "title": "Passaporte da Rede de Validadores",
+    "pretext in prefix": "em",
+    "commission": "Comissão",
+    "tokens delegated": "Tokens Delegados",
+    "expected APR": "APR prevista",
+    "outstanding reward": "Recompensa Excecional",
+    "voting power": "Poder de Voto",
+    "validator rank": "Classificação do Validador",
+    "proposals created": "Propostas Criadas",
+    "Medals": "Medalhas",
+    "hash txs tooltip": "text",
+    "horcrux tooltip": "text",
+    "restake tooltip": "text",
+    "reward reinvesting tooltip": "text",
+    "slashed tooltip": "text",
+    "Vanity Chart": "Tabela de Vaidade",
+    "Validator Node Details": "Detalhes do nó validador",
+    "validator name": "Nome do Validador",
+    "public key": "Chave Pública",
+    "account address": "Endereço da Conta",
+    "identity": "Identidade",
+    "validator address": "Endereço do Validador",
+    "reward address": "Endereço do Prémio",
+    "authz permissions": "Authz Permissões",
+    "jail status": "Estado da Jail",
+    "voting": "Votar",
+    "send tx": "Enviar Tx",
+    "withdraw commission": "Retirada da Comissão",
+    "withdraw rewards": "Levantar Prémios",
+    "token": "TOKEN",
+    "Tabs": {
+      "Withdraw Rewards": "Retirar Prémios",
+      "Unjail": "Unjail",
+      "Transact": "Transacionar",
+      "Vote": "Votar"
+    }
+  },
+  "VotingSummaryPage": {
+    "title": "Resumo da Votação do Validador",
+    "pretext in prefix": "em",
+    "show same opinion": "Mostrar Validadores Com as Mesmas Opiniões",
+    "Table": {
+      "Title": {
+        "name": "#I.D./Título",
+        "hint": ""
+      },
+      "Type": {
+        "name": "Tipo",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Votação",
+        "hint": ""
+      },
+      "Voting Ended": {
+        "name": "Votação Terminado",
+        "hint": ""
+      }
+    }
+  },
+  "TxSummaryPage": {
+    "title": "Síntese da Transação do Validador",
+    "pretext in prefix": "em",
+    "Table": {
+      "Type of Tx": {
+        "name": "Tipo de Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "ID da transação. Clique para obter detalhes"
+      },
+      "Timestamp": {
+        "name": "Marca de tempo",
+        "hint": "Hora e data em que a transação teve lugar em UTC"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "RichListPage": {
+    "title": "Validador Delegadores Principais e Eventos de Potência",
+    "pretext in prefix": "em",
+    "token": "TOKEN",
+    "Table": {
+      "Address": {
+        "name": "Endereço",
+        "hint": ""
+      },
+      "Amount": {
+        "name": "Montante",
+        "hint": ""
+      },
+      "Happened": {
+        "name": "Aconteceu",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": ""
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": ""
+      }
+    }
+  },
+  "NodeRevenuePage": {
+    "title": "Repartição das Receitas do Validador",
+    "pretext in prefix": "em",
+    "Staking Calculator": "Calculadora de Piquetagem",
+    "Token": "Token",
+    "Enter Staking Amount": "Insira o valor da aposta",
+    "Wrong amount": "Quantidade errada",
+    "earnings": "d Ganhos",
+    "Staking Stats": "Estatísticas de Apostas",
+    "validator": "Validador",
+    "network": "Rede",
+    "Table": {
+      "Yesterday": {
+        "name": "Ontem",
+        "hint": ""
+      },
+      "Last Week": {
+        "name": "Última semana",
+        "hint": ""
+      },
+      "Last Month": {
+        "name": "Último mês",
+        "hint": ""
+      },
+      "Last Year": {
+        "name": "Ano passado",
+        "hint": ""
+      },
+      "Retro Name": {
+        "name": "Nome Retro",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Compromissos",
+        "hint": ""
+      }
+    },
+    "Show Slashing Event": "Evento de Corte de Espetáculo",
+    "Hide Slashing Event": "Evento de Corte de Couro"
   }
 }

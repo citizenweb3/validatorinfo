@@ -294,7 +294,7 @@
   "ValidatorProfileHeader": {
     "Tabs": {
       "Revenue": "Доходы",
-      "Metrics": "Мертрики",
+      "Metrics": "Метрики",
       "Network Table": "Список сетей",
       "Public Goods": "Польза",
       "Governance": "Управление"
@@ -448,6 +448,165 @@
   "PublicGoodsCommunityPage": {
     "description": "Пожалуйста, присылайте ссылки на созданные валидатором публичные мероприятия, управляемые чаты и сообщества, твиттер-пространства и другие подобные онлайн-мероприятия. Документация, видео, отдельные посты в блогах, художественные работы, стикеры, участие в форумах и т. д. - все это примеры вклада в сообщество.",
     "submit new info": "Добавить новую информацию"
+  },
+  "NodeProfileHeader": {
+    "Tabs": {
+      "Revenue": "Доходы",
+      "TX Summary": "Транзакции",
+      "Voting Summary": "Голосования",
+      "Validator Passport": "Паспорт Валидатора",
+      "Rich List": "Список богачей"
+    }
+  },
+  "ValidatorPassportPage": {
+    "title": "Паспорт Валидатора Сети",
+    "pretext in prefix": "в",
+    "commission": "Комиссия",
+    "tokens delegated": "Делегировано токенов",
+    "expected APR": "Ожидаемый APR",
+    "outstanding reward": "Выдающееся Вознаграждение",
+    "voting power": "Сила Голоса",
+    "validator rank": "Рейтинг Валидатора",
+    "proposals created": "Создано Предложений",
+    "Medals": "Медали",
+    "hash txs tooltip": "text",
+    "horcrux tooltip": "text",
+    "restake tooltip": "text",
+    "reward reinvesting tooltip": "text",
+    "slashed tooltip": "text",
+    "Vanity Chart": "График Тщеславия",
+    "Validator Node Details": "Детали Ноды Валидатора",
+    "validator name": "Имя Валидатора",
+    "public key": "Публичный Ключ",
+    "account address": "Адрес Аккаунта",
+    "identity": "Идентификатор",
+    "validator address": "Адрес Валидатора",
+    "reward address": "Адрес для Вознаграждений",
+    "authz permissions": "Разрешения Authz",
+    "jail status": "Jail Статус",
+    "voting": "Голосование",
+    "send tx": "Отправка Tx",
+    "withdraw commission": "Вывод Комиссий",
+    "withdraw rewards": "Вывод Вознаграждений",
+    "token": "ТОКЕН",
+    "Tabs": {
+      "Withdraw Rewards": "Вывод вознаграждений",
+      "Unjail": "Unjail",
+      "Transact": "Транзакции",
+      "Vote": "Голосование"
+    }
+  },
+  "VotingSummaryPage": {
+    "title": "Голосования Валидатора",
+    "pretext in prefix": "в",
+    "show same opinion": "Показать Валидаторов c Таким же Мнением",
+    "Table": {
+      "Title": {
+        "name": "#I.D./Название",
+        "hint": ""
+      },
+      "Type": {
+        "name": "Тип",
+        "hint": ""
+      },
+      "Vote": {
+        "name": "Голос",
+        "hint": ""
+      },
+      "Voting Ended": {
+        "name": "Окончание Голосования",
+        "hint": ""
+      }
+    }
+  },
+  "TxSummaryPage": {
+    "title": "Обзор Транзакций Валидатора",
+    "pretext in prefix": "в",
+    "Table": {
+      "Type of Tx": {
+        "name": "Тип Транзакции",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Хэш Транзакции",
+        "hint": "ID транзакции. Нажмите, чтобы получить детали"
+      },
+      "Timestamp": {
+        "name": "Временная Метка",
+        "hint": "Время и дата проведения транзакции в UTC"
+      },
+      "Block Height": {
+        "name": "Высота Блока",
+        "hint": "Номер блока, в котором была проведена транзакция"
+      }
+    }
+  },
+  "RichListPage": {
+    "title": "Топ Делегаторов и События Делегации",
+    "pretext in prefix": "в",
+    "token": "ТОКЕН",
+    "Table": {
+      "Address": {
+        "name": "Адрес",
+        "hint": ""
+      },
+      "Amount": {
+        "name": "Количество",
+        "hint": ""
+      },
+      "Happened": {
+        "name": "Когда произошло",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Хэш Транзакции",
+        "hint": ""
+      },
+      "Block Height": {
+        "name": "Высота Блока",
+        "hint": ""
+      }
+    }
+  },
+  "NodeRevenuePage": {
+    "title": "Распределение Доходов от Валидатора",
+    "pretext in prefix": "в",
+    "Staking Calculator": "Калькулятор Стэйкинга",
+    "Token": "Токен",
+    "Enter Staking Amount": "Введите сумму стейкинга",
+    "Wrong amount": "Некоректное значение",
+    "earnings": "д заработка",
+    "Staking Stats": "Статистика Стэйкинга",
+    "validator": "Валидатор",
+    "network": "Сеть",
+    "Table": {
+      "Yesterday": {
+        "name": "Вчера",
+        "hint": ""
+      },
+      "Last Week": {
+        "name": "Прошлая неделя",
+        "hint": ""
+      },
+      "Last Month": {
+        "name": "Прошлый месяц",
+        "hint": ""
+      },
+      "Last Year": {
+        "name": "Прошлый год",
+        "hint": ""
+      },
+      "Retro Name": {
+        "name": "Ретро название",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Коммиты",
+        "hint": ""
+      }
+    },
+    "Show Slashing Event": "Показать События Слэшинга",
+    "Hide Slashing Event": "Скрыть События Слэшинга"
   }
 }
 

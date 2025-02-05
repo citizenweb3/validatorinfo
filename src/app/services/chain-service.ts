@@ -1,4 +1,4 @@
-import { Chain } from '@prisma/client';
+import { Chain, Price } from '@prisma/client';
 
 import db from '@/db';
 import { SortDirection } from '@/services/validator-service';
@@ -21,8 +21,18 @@ const getAll = async (
   const count = await db.chain.count({ where });
   return { chains, pages: Math.ceil(count / take) };
 };
+
+const getTokenPriceByChainId = async (chainId: string): Promise<Price | null> => {
+  const price = await db.price.findFirst({
+    where: { chainId },
+    orderBy: { date: 'desc' },
+  });
+  return price ?? null;
+};
+
 const ChainService = {
   getAll,
+  getTokenPriceByChainId,
 };
 
 export default ChainService;

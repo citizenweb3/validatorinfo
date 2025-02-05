@@ -7,6 +7,7 @@ export interface TabOptions {
   href: string;
   icon?: StaticImageData;
   iconHovered?: StaticImageData;
+  isScroll?: boolean;
 }
 
 export const mainTabs: TabOptions[] = [
@@ -66,30 +67,31 @@ export const getValidatorProfileTabs = (identity: string): TabOptions[] => {
       name: 'Revenue',
       href: `/validators/${identity}/revenue`,
       icon: icons.RevenueIcon,
-      iconHovered: icons.RevenueIconHovered
+      iconHovered: icons.RevenueIconHovered,
     },
     {
       name: 'Metrics',
       href: `/validators/${identity}/metrics`,
       icon: icons.MetricsIcon,
-      iconHovered: icons.MetricsIconHovered
+      iconHovered: icons.MetricsIconHovered,
     },
     {
       name: 'Network Table',
       href: `/validators/${identity}/networks`,
       icon: icons.NetworkTableIcon,
-      iconHovered: icons.NetworkTableIconHovered
+      iconHovered: icons.NetworkTableIconHovered,
     },
     {
       name: 'Public Goods',
       href: `/validators/${identity}/public_goods/tools`,
       icon: icons.PublicGoodsIcon,
-      iconHovered: icons.PublicGoodsIconHovered
+      iconHovered: icons.PublicGoodsIconHovered,
     },
-    { name: 'Governance',
+    {
+      name: 'Governance',
       href: `/validators/${identity}/governance`,
       icon: icons.GovernanceIcon,
-      iconHovered: icons.GovernanceIconHovered
+      iconHovered: icons.GovernanceIconHovered,
     },
   ];
 };
@@ -98,7 +100,7 @@ export const getValidatorPublicGoodTabs = (identity: string): TabOptions[] => {
   return [
     {
       name: 'Infrastructure',
-      href: `/validators/${identity}/public_goods/infrastructure`
+      href: `/validators/${identity}/public_goods/infrastructure`,
     },
     {
       name: 'Community',
@@ -110,10 +112,71 @@ export const getValidatorPublicGoodTabs = (identity: string): TabOptions[] => {
     },
     {
       name: 'Tools',
-      href: `/validators/${identity}/public_goods/tools`
+      href: `/validators/${identity}/public_goods/tools`,
     },
-    { name: 'Others',
-      href: `/validators/${identity}/public_goods/others`
+    {
+      name: 'Others',
+      href: `/validators/${identity}/public_goods/others`,
+    },
+  ];
+};
+
+export const getNodeProfileTabs = (identity: string, operatorAddress: string): TabOptions[] => {
+  return [
+    {
+      name: 'TX Summary',
+      href: `/validators/${identity}/${operatorAddress}/tx_summary`,
+      icon: icons.TxSummary,
+      iconHovered: icons.TxSummaryHovered,
+    },
+    {
+      name: 'Voting Summary',
+      href: `/validators/${identity}/${operatorAddress}/voting_summary`,
+      icon: icons.VotingSummary,
+      iconHovered: icons.VotingSummaryHovered,
+    },
+    {
+      name: 'Validator Passport',
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
+      icon: icons.ValidatorPassport,
+      iconHovered: icons.ValidatorPassportHovered,
+    },
+    {
+      name: 'Rich List',
+      href: `/validators/${identity}/${operatorAddress}/rich_list`,
+      icon: icons.RichList,
+      iconHovered: icons.RichListHovered,
+    },
+    {
+      name: 'Revenue',
+      href: `/validators/${identity}/${operatorAddress}/revenue`,
+      icon: icons.RevenueIcon,
+      iconHovered: icons.RevenueIconHovered,
+    },
+  ];
+};
+
+export const getPassportAuthzTabs = (identity: string, operatorAddress: string): TabOptions[] => {
+  return [
+    {
+      name: 'Withdraw Rewards',
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
+      isScroll: false,
+    },
+    {
+      name: 'Unjail',
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/unjail`,
+      isScroll: false,
+    },
+    {
+      name: 'Transact',
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/transact`,
+      isScroll: false,
+    },
+    {
+      name: 'Vote',
+      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/vote`,
+      isScroll: false,
     },
   ];
 };

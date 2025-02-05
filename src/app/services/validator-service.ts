@@ -10,10 +10,11 @@ export type ValidatorWithNodes = Validator & {
 };
 
 export type validatorNodesWithChainData = Node & {
-  prettyName: string | null;
+  prettyName: string;
   name: string;
-  logoUrl: string | null;
+  logoUrl: string;
   coinDecimals: number;
+  denom: string;
 };
 
 const getAll = async (
@@ -97,7 +98,7 @@ const getValidatorNodesWithChains = async (
     where: { identity },
     include: { nodes: true },
   });
-  if (!validator) return {validatorNodesWithChainData: []};
+  if (!validator) return { validatorNodesWithChainData: [] };
 
   const allChainIds = validator.nodes.map((node) => node.chainId);
   const allChains = await db.chain.findMany({
@@ -113,18 +114,20 @@ const getValidatorNodesWithChains = async (
         name: chain.name,
         prettyName: chain.prettyName,
         coinDecimals: chain.coinDecimals,
+        denom: chain.denom,
       };
       return map;
     },
-    {} as Record<string, { logoUrl: string; name: string; prettyName: string; coinDecimals: number }>,
+    {} as Record<string, { logoUrl: string; name: string; prettyName: string; coinDecimals: number; denom: string }>,
   );
 
   const mergedNodes = validator.nodes.map((node) => ({
     ...node,
-    logoUrl: chainMap[node.chainId]?.logoUrl || null,
-    prettyName: chainMap[node.chainId]?.prettyName || null,
+    logoUrl: chainMap[node.chainId]?.logoUrl,
+    prettyName: chainMap[node.chainId]?.prettyName,
     name: chainMap[node.chainId].name,
-    coinDecimals: chainMap[node.chainId]?.coinDecimals || 6,
+    coinDecimals: chainMap[node.chainId]?.coinDecimals,
+    denom: chainMap[node.chainId]?.denom,
   }));
 
   const sortedNodes = mergedNodes.sort((a, b) => {

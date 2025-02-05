@@ -35,7 +35,7 @@ const StakingResults: FC<OwnProps> = ({ values, chain }) => {
   return (
     <div className="group/button w-full min-w-9 border-r border-t border-bgSt fill-black stroke-black p-6 pt-4 shadow-button">
       <div className="flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-        <div className="border-b border-bgSt px-2 font-handjet font-light">USD</div>
+        <div className="border-b border-bgSt px-2 font-handjet">USD</div>
         <Switch value={isToken} onChange={(value) => setIsToken(value)} />
         <div className="border-b border-bgSt px-2 font-handjet">{t('Token')}</div>
       </div>
