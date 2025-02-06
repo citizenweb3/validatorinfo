@@ -237,7 +237,11 @@ Research:
  1) Security (32.5%)
 
  1A) Onchain (20%):
-   - Network latency: The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed (can also be scalability)
+   - <b>Network latency:</b>
+      - The delay between the initiation of a transaction and its confirmation, affecting user experience and transaction speed (can also be scalability)
+      - Time it takes from the moment of a tx registration by a node OR tx registration in mempool - up to - the time the tx is finalized in a block (the timestamp)
+      - Should native and non native tokens e coutned seperatly?
+      - Averages p/network - count per time/epoch  
    - Uptime of network
    - Hashrate (POW) or TVL in terms of token % out of supply (POS)
 
@@ -259,7 +263,7 @@ Research:
    - tx volume
    - revenue / fees
    - account growth over time in comparison to others (NA)
-   - T.P.S.
+   - T.P.S. or througphput
    - % of completed transactions?
 
  2B) Offchain (5%):

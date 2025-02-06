@@ -605,6 +605,28 @@ async function main() {
       githubUrl: 'https://github.com/nomic-io',
       twitterUrl: 'https://x.com/nomicbtc',
     });
+
+    await addNetwork({
+      rang: 1,
+      name: 'osmosis',
+      prettyName: 'Osmosis',
+      chainId: 'osmosis-1',
+      bech32Prefix: 'osmo',
+      coinDecimals: 6,
+      coinGeckoId: 'osmosis',
+      coinType: 118,
+      denom: 'OSMO',
+      minimalDenom: 'uosmo',
+      grpcNodeUrl: 'grpc.osmosis.citizenweb3.com',
+      lcdNodeUrl: 'https://api.osmosis.citizenweb3.com',
+      rpcNodeUrl: 'https://rpc.osmosis.citizenweb3.com',
+      wsNodeUrl: 'wss://rpc.osmosis.citizenweb3.com/websocket',
+      logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
+      mainRepo: 'https://github.com/osmosis-labs/osmosis',
+      docs: 'https://docs.osmosis.zone',
+      githubUrl: 'https://github.com/osmosis-labs',
+      twitterUrl: 'https://twitter.com/osmosiszone',
+    });
   } catch (e) {
     console.error(e);
   }
