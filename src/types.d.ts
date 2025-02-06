@@ -39,5 +39,11 @@ export interface PagesProps {
     | 'ValidatorGovernancePage'
     | 'ValidatorPublicGoodsPage'
     | 'PublicGoodsInfrastructurePage'
-    | 'PublicGoodsMediaPage';
+    | 'PublicGoodsMediaPage'
+    | 'NodeProfileHeader'
+    | 'ValidatorPassportPage'
+    | 'VotingSummaryPage'
+    | 'TxSummaryPage'
+    | 'RichListPage'
+    | 'NodeRevenuePage';
 }

@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 import NetworksListItem from '@/app/networks/networks-list/networks-list-item';
 import TablePagination from '@/components/common/table/table-pagination';
+import { SortDirection } from '@/server/types';
 import ChainService from '@/services/chain-service';
-import { SortDirection } from '@/services/validator-service';
 
 interface OwnProps {
   ecosystems: string[];

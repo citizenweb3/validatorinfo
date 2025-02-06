@@ -39,15 +39,24 @@ import NotToday from '@/public/img/icons/not-today.svg';
 import RabbitIconHovered from '@/public/img/icons/rabbit-h.png';
 import RabbitIcon from '@/public/img/icons/rabbit.png';
 import RedSquareIcon from '@/public/img/icons/red-square.svg';
-import YellowSquareIcon from '@/public/img/icons/yellow-square.svg';
-import RevenueIcon from '@/public/img/icons/validator-tabs/revenue.png';
-import RevenueIconHovered from '@/public/img/icons/validator-tabs/revenue-h.png';
-import NetworkTableIcon from '@/public/img/icons/validator-tabs/network-table.png';
-import NetworkTableIconHovered from '@/public/img/icons/validator-tabs/network-table-h.png';
-import PublicGoodsIcon from '@/public/img/icons/validator-tabs/public-goods.png';
-import PublicGoodsIconHovered from '@/public/img/icons/validator-tabs/public-goods-h.png';
-import GovernanceIcon from '@/public/img/icons/validator-tabs/governance.png';
+import RichListHovered from '@/public/img/icons/validator-on-network-tabs/rich-list-h.png';
+import RichList from '@/public/img/icons/validator-on-network-tabs/rich-list.png';
+import TxSummaryHovered from '@/public/img/icons/validator-on-network-tabs/tx-summary-h.png';
+import TxSummary from '@/public/img/icons/validator-on-network-tabs/tx-summary.png';
+import ValidatorPassportHovered from '@/public/img/icons/validator-on-network-tabs/validator-passport-h.png';
+import ValidatorPassport from '@/public/img/icons/validator-on-network-tabs/validator-passport.png';
+import VotingSummaryHovered from '@/public/img/icons/validator-on-network-tabs/voting-summary-h.png';
+import VotingSummary from '@/public/img/icons/validator-on-network-tabs/voting-summary.png';
 import GovernanceIconHovered from '@/public/img/icons/validator-tabs/governance-h.png';
+import GovernanceIcon from '@/public/img/icons/validator-tabs/governance.png';
+import NetworkTableIconHovered from '@/public/img/icons/validator-tabs/network-table-h.png';
+import NetworkTableIcon from '@/public/img/icons/validator-tabs/network-table.png';
+import PublicGoodsIconHovered from '@/public/img/icons/validator-tabs/public-goods-h.png';
+import PublicGoodsIcon from '@/public/img/icons/validator-tabs/public-goods.png';
+import RevenueIconHovered from '@/public/img/icons/validator-tabs/revenue-h.png';
+import RevenueIcon from '@/public/img/icons/validator-tabs/revenue.png';
+import Warning from '@/public/img/icons/warning.png';
+import YellowSquareIcon from '@/public/img/icons/yellow-square.svg';
 
 const icons = {
   AboutIcon,
@@ -99,7 +108,16 @@ const icons = {
   PublicGoodsIcon,
   PublicGoodsIconHovered,
   GovernanceIcon,
-  GovernanceIconHovered
+  GovernanceIconHovered,
+  RichList,
+  TxSummary,
+  ValidatorPassport,
+  VotingSummary,
+  RichListHovered,
+  TxSummaryHovered,
+  ValidatorPassportHovered,
+  VotingSummaryHovered,
+  Warning,
 };
 
 export default icons;

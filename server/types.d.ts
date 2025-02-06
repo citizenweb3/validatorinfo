@@ -70,3 +70,5 @@ interface CommissionRates {
 }
 
 type BondStatus = 'BOND_STATUS_BONDED' | 'BOND_STATUS_UNBONDED';
+
+export type SortDirection = 'asc' | 'desc';

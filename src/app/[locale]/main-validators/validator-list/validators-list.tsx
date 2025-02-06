@@ -2,8 +2,9 @@ import { FC } from 'react';
 
 import ValidatorListItem from '@/app/main-validators/validator-list/validator-list-item/validator-list-item';
 import TablePagination from '@/components/common/table/table-pagination';
+import { SortDirection } from '@/server/types';
 import ChainService from '@/services/chain-service';
-import validatorService, { SortDirection } from '@/services/validator-service';
+import validatorService from '@/services/validator-service';
 
 interface OwnProps {
   ecosystems: string[];

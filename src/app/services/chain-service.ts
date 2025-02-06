@@ -1,7 +1,7 @@
-import { Chain, Prisma } from '@prisma/client';
+import { Chain, Price, Prisma } from '@prisma/client';
 
 import db from '@/db';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 
 import ChainWhereInput = Prisma.ChainWhereInput;
 
@@ -24,8 +24,17 @@ const getAll = async (
   return { chains, pages: Math.ceil(count / take) };
 };
 
+const getTokenPriceByChainId = async (chainId: number): Promise<Price | null> => {
+  const price = await db.price.findFirst({
+    where: { chainId },
+    orderBy: { createdAt: 'desc' },
+  });
+  return price ?? null;
+};
+
 const ChainService = {
   getAll,
+  getTokenPriceByChainId,
 };
 
 export default ChainService;

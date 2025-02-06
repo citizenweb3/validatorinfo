@@ -7,6 +7,7 @@ export interface TabOptions {
   href: string;
   icon?: StaticImageData;
   iconHovered?: StaticImageData;
+  isScroll?: boolean;
 }
 
 export const mainTabs: TabOptions[] = [
@@ -113,6 +114,69 @@ export const getValidatorPublicGoodTabs = (id: number): TabOptions[] => {
       name: 'Tools',
       href: `/validators/${id}/public_goods/tools`,
     },
-    { name: 'Others', href: `/validators/${id}/public_goods/others` },
+    {
+      name: 'Others',
+      href: `/validators/${id}/public_goods/others`,
+    },
+  ];
+};
+
+export const getNodeProfileTabs = (id: number, operatorAddress: string): TabOptions[] => {
+  return [
+    {
+      name: 'TX Summary',
+      href: `/validators/${id}/${operatorAddress}/tx_summary`,
+      icon: icons.TxSummary,
+      iconHovered: icons.TxSummaryHovered,
+    },
+    {
+      name: 'Voting Summary',
+      href: `/validators/${id}/${operatorAddress}/voting_summary`,
+      icon: icons.VotingSummary,
+      iconHovered: icons.VotingSummaryHovered,
+    },
+    {
+      name: 'Validator Passport',
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
+      icon: icons.ValidatorPassport,
+      iconHovered: icons.ValidatorPassportHovered,
+    },
+    {
+      name: 'Rich List',
+      href: `/validators/${id}/${operatorAddress}/rich_list`,
+      icon: icons.RichList,
+      iconHovered: icons.RichListHovered,
+    },
+    {
+      name: 'Revenue',
+      href: `/validators/${id}/${operatorAddress}/revenue`,
+      icon: icons.RevenueIcon,
+      iconHovered: icons.RevenueIconHovered,
+    },
+  ];
+};
+
+export const getPassportAuthzTabs = (id: number, operatorAddress: string): TabOptions[] => {
+  return [
+    {
+      name: 'Withdraw Rewards',
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
+      isScroll: false,
+    },
+    {
+      name: 'Unjail',
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/unjail`,
+      isScroll: false,
+    },
+    {
+      name: 'Transact',
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/transact`,
+      isScroll: false,
+    },
+    {
+      name: 'Vote',
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/vote`,
+      isScroll: false,
+    },
   ];
 };

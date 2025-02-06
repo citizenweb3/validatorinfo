@@ -7,10 +7,6 @@ html {
     --tw-shadow-color: #000000;
 
     font-size: 0.9vw;
-
-    @media screen(2xl) {
-        font-size: 16px;
-    }
 }
 
 
@@ -29,10 +25,11 @@ html.light {
 
 @layer utilities {
     .text-shadowed {
-        text-shadow: 0 0 .5rem #E5C46B,0 0 .5rem #E5C46B,0 0 2rem #E5C46B;
+        text-shadow: 0 0 .5rem #E5C46B, 0 0 .5rem #E5C46B, 0 0 2rem #E5C46B;
     }
+
     .text-black-shadowed {
-        text-shadow: 0 0 .5rem #000000,0 0 .5rem #000000,0 0 2rem #000000;
+        text-shadow: 0 0 .5rem #000000, 0 0 .5rem #000000, 0 0 2rem #000000;
     }
 
     .border-hover {
@@ -49,5 +46,39 @@ html.light {
 
     .border-hover-highlight {
         @apply border-hover after:border-highlight from-highlight to-highlight
+    }
+}
+
+@layer components {
+    .custom-popper .react-datepicker {
+        @apply bg-background rounded border-bgSt;
+    }
+
+    .custom-popper .react-datepicker__header {
+        @apply bg-background border-bgSt;
+    }
+
+    .custom-popper .react-datepicker__current-month {
+        @apply text-white;
+    }
+
+    .custom-popper .react-datepicker__day {
+        @apply text-white;
+    }
+
+    .custom-popper .react-datepicker__day-name {
+        @apply text-white;
+    }
+
+    .custom-popper .react-datepicker__day--selected {
+        @apply bg-primary text-white;
+    }
+
+    .custom-popper .react-datepicker__day--keyboard-selected {
+        @apply bg-background text-white;
+    }
+
+    .custom-popper .react-datepicker__day:not([aria-disabled=true]):hover {
+        @apply bg-primary;
     }
 }

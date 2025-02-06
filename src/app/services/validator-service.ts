@@ -3,20 +3,20 @@ import { Node, Prisma, Validator } from '@prisma/client';
 import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
 import db from '@/db';
 import logger from '@/logger';
+import { SortDirection } from '@/server/types';
 
-const { logInfo, logError, logDebug } = logger('validator-service');
-
-export type SortDirection = 'asc' | 'desc';
+const { logDebug } = logger('validator-service');
 
 export type ValidatorWithNodes = Validator & {
   nodes: Node[];
 };
 
 export type validatorNodesWithChainData = Node & {
-  prettyName: string | null;
+  prettyName: string;
   name: string;
-  logoUrl: string | null;
+  logoUrl: string;
   coinDecimals: number;
+  denom: string;
 };
 
 const getById = async (id: number): Promise<Validator | null> => {
@@ -178,18 +178,20 @@ const getValidatorNodesWithChains = async (
         name: chain.name,
         prettyName: chain.prettyName,
         coinDecimals: chain.coinDecimals,
+        denom: chain.denom,
       };
       return map;
     },
-    {} as Record<string, { logoUrl: string; name: string; prettyName: string; coinDecimals: number }>,
+    {} as Record<string, { logoUrl: string; name: string; prettyName: string; coinDecimals: number; denom: string }>,
   );
 
   const mergedNodes = validator.nodes.map((node) => ({
     ...node,
-    logoUrl: chainMap[node.chainId]?.logoUrl ?? null,
-    prettyName: chainMap[node.chainId]?.prettyName ?? null,
-    name: chainMap[node.chainId]?.name ?? '',
-    coinDecimals: chainMap[node.chainId]?.coinDecimals ?? 6,
+    logoUrl: chainMap[node.chainId]?.logoUrl,
+    prettyName: chainMap[node.chainId]?.prettyName,
+    name: chainMap[node.chainId].name,
+    coinDecimals: chainMap[node.chainId]?.coinDecimals,
+    denom: chainMap[node.chainId]?.denom,
   }));
 
   const sortedNodes = mergedNodes.sort((a, b) => {
@@ -243,7 +245,7 @@ const getRandom = async (ecosystems: string[], take: number): Promise<{ validato
   return { validators };
 };
 
-const ValidatorService = {
+const validatorService = {
   getByIdentity,
   getById,
   getAll,
@@ -255,4 +257,4 @@ const ValidatorService = {
   getRandom,
 };
 
-export default ValidatorService;
+export default validatorService;

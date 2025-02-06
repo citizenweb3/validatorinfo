@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import Validators from '@/app/main-validators/validator-list/validators';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;

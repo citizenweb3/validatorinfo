@@ -3,7 +3,7 @@ import { FC, Suspense } from 'react';
 import ValidatorsList from '@/app/main-validators/validator-list/validators-list';
 import ListFilters from '@/components/common/list-filters/list-filters';
 import TableHeaderItem from '@/components/common/table/table-header-item';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {

@@ -6,7 +6,7 @@ import { FC } from 'react';
 
 import SortButton from '@/components/common/sort-button';
 import Tooltip from '@/components/common/tooltip';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {

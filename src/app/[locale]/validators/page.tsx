@@ -6,7 +6,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;

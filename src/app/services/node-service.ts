@@ -6,8 +6,6 @@ import { Validator as ParsedValidator } from '@/server/types';
 
 const { logDebug } = logger('validator-service');
 
-export type SortDirection = 'asc' | 'desc';
-
 const upsertNode = async (chain: Chain, val: ParsedValidator & { validatorId?: number }): Promise<Node> => {
   const node = await db.node.upsert({
     where: { operatorAddress: val.operator_address },
@@ -49,8 +47,8 @@ const upsertNode = async (chain: Chain, val: ParsedValidator & { validatorId?: n
   return node;
 };
 
-const ValidatorService = {
+const nodeService = {
   upsertNode,
 };
 
-export default ValidatorService;
+export default nodeService;
