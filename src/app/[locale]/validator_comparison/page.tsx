@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 
 import ComparisonTable from '@/app/validator_comparison/comparison-table';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
+import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 

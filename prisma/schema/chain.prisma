@@ -1,0 +1,30 @@
+model Chain {
+  id             Int     @id @default(autoincrement())
+  ecosystem      String  @db.VarChar(256)
+  chainId        String  @unique @map("chain_id") @db.VarChar(256)
+  rang           Int
+  name           String  @db.VarChar(256)
+  prettyName     String  @map("pretty_name") @db.VarChar(256)
+  coinType       Int     @map("coin_type")
+  denom          String  @db.VarChar(256)
+  minimalDenom   String  @map("minimal_denom") @db.VarChar(256)
+  coinDecimals   Int     @map("coin_decimals")
+  logoUrl        String  @map("logo_url")
+  coinGeckoId    String  @map("coingecko_id") @db.VarChar(64)
+  bech32Prefix   String  @map("bech32_prefix") @db.VarChar(32)
+  twitterUrl     String  @map("twitter_url") @db.VarChar(256)
+  docs           String?
+  githubUrl      String  @map("github_url")
+  githubMainRepo String  @map("github_main_repo")
+  hasValidators  Boolean @default(true) @map("has_validators")
+
+  chainNodes ChainNode[] @relation("chain_node")
+  aprs       Apr[]       @relation("chain_apr")
+  prices     Price[]     @relation("chain_price")
+  nodes      Node[]      @relation("chain_validator_node")
+
+  validators Validator[] @relation("chain_validators")
+  addresses  Address[]   @relation("chain_addresses")
+
+  @@map("chains")
+}

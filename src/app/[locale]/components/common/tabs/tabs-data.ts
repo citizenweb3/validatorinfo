@@ -61,121 +61,121 @@ export const profileTabs: TabOptions[] = [
   { name: 'Wallet', href: '/profile/wallet' },
 ];
 
-export const getValidatorProfileTabs = (identity: string): TabOptions[] => {
+export const getValidatorProfileTabs = (id: number): TabOptions[] => {
   return [
     {
       name: 'Revenue',
-      href: `/validators/${identity}/revenue`,
+      href: `/validators/${id}/revenue`,
       icon: icons.RevenueIcon,
       iconHovered: icons.RevenueIconHovered,
     },
     {
       name: 'Metrics',
-      href: `/validators/${identity}/metrics`,
+      href: `/validators/${id}/metrics`,
       icon: icons.MetricsIcon,
       iconHovered: icons.MetricsIconHovered,
     },
     {
       name: 'Network Table',
-      href: `/validators/${identity}/networks`,
+      href: `/validators/${id}/networks`,
       icon: icons.NetworkTableIcon,
       iconHovered: icons.NetworkTableIconHovered,
     },
     {
       name: 'Public Goods',
-      href: `/validators/${identity}/public_goods/tools`,
+      href: `/validators/${id}/public_goods/tools`,
       icon: icons.PublicGoodsIcon,
       iconHovered: icons.PublicGoodsIconHovered,
     },
     {
       name: 'Governance',
-      href: `/validators/${identity}/governance`,
+      href: `/validators/${id}/governance`,
       icon: icons.GovernanceIcon,
       iconHovered: icons.GovernanceIconHovered,
     },
   ];
 };
 
-export const getValidatorPublicGoodTabs = (identity: string): TabOptions[] => {
+export const getValidatorPublicGoodTabs = (id: number): TabOptions[] => {
   return [
     {
       name: 'Infrastructure',
-      href: `/validators/${identity}/public_goods/infrastructure`,
+      href: `/validators/${id}/public_goods/infrastructure`,
     },
     {
       name: 'Community',
-      href: `/validators/${identity}/public_goods/community`,
+      href: `/validators/${id}/public_goods/community`,
     },
     {
       name: 'Media',
-      href: `/validators/${identity}/public_goods/media`,
+      href: `/validators/${id}/public_goods/media`,
     },
     {
       name: 'Tools',
-      href: `/validators/${identity}/public_goods/tools`,
+      href: `/validators/${id}/public_goods/tools`,
     },
     {
       name: 'Others',
-      href: `/validators/${identity}/public_goods/others`,
+      href: `/validators/${id}/public_goods/others`,
     },
   ];
 };
 
-export const getNodeProfileTabs = (identity: string, operatorAddress: string): TabOptions[] => {
+export const getNodeProfileTabs = (id: number, operatorAddress: string): TabOptions[] => {
   return [
     {
       name: 'TX Summary',
-      href: `/validators/${identity}/${operatorAddress}/tx_summary`,
+      href: `/validators/${id}/${operatorAddress}/tx_summary`,
       icon: icons.TxSummary,
       iconHovered: icons.TxSummaryHovered,
     },
     {
       name: 'Voting Summary',
-      href: `/validators/${identity}/${operatorAddress}/voting_summary`,
+      href: `/validators/${id}/${operatorAddress}/voting_summary`,
       icon: icons.VotingSummary,
       iconHovered: icons.VotingSummaryHovered,
     },
     {
       name: 'Validator Passport',
-      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
       icon: icons.ValidatorPassport,
       iconHovered: icons.ValidatorPassportHovered,
     },
     {
       name: 'Rich List',
-      href: `/validators/${identity}/${operatorAddress}/rich_list`,
+      href: `/validators/${id}/${operatorAddress}/rich_list`,
       icon: icons.RichList,
       iconHovered: icons.RichListHovered,
     },
     {
       name: 'Revenue',
-      href: `/validators/${identity}/${operatorAddress}/revenue`,
+      href: `/validators/${id}/${operatorAddress}/revenue`,
       icon: icons.RevenueIcon,
       iconHovered: icons.RevenueIconHovered,
     },
   ];
 };
 
-export const getPassportAuthzTabs = (identity: string, operatorAddress: string): TabOptions[] => {
+export const getPassportAuthzTabs = (id: number, operatorAddress: string): TabOptions[] => {
   return [
     {
       name: 'Withdraw Rewards',
-      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/withdraw_rewards`,
       isScroll: false,
     },
     {
       name: 'Unjail',
-      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/unjail`,
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/unjail`,
       isScroll: false,
     },
     {
       name: 'Transact',
-      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/transact`,
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/transact`,
       isScroll: false,
     },
     {
       name: 'Vote',
-      href: `/validators/${identity}/${operatorAddress}/validator_passport/authz/vote`,
+      href: `/validators/${id}/${operatorAddress}/validator_passport/authz/vote`,
       isScroll: false,
     },
   ];

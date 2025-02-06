@@ -7,10 +7,6 @@ html {
     --tw-shadow-color: #000000;
 
     font-size: 0.9vw;
-
-    @media screen(2xl) {
-        font-size: 16px;
-    }
 }
 
 

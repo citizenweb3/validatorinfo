@@ -3,21 +3,29 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
 import HeaderActionButtons from '@/components/header/header-action-buttons';
 import HeaderSearch from '@/components/header/header-search/header-search';
-import WalletButton from '@/components/wallet-connect/WalletButton';
+import WalletButton from '@/components/wallet-connect/wallet-button';
 
 interface OwnProps {}
 
 const HeaderControls: FC<OwnProps> = () => {
   const t = useTranslations('Header');
+  const pathname = usePathname();
+
   return (
     <div className="mx-11 mt-3 flex h-24 flex-row items-start">
       <Link
         href="/"
-        className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-bgSt hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
+        onClick={() => {
+          if (pathname === '/') {
+            window.location.reload();
+          }
+        }}
+        className="group cursor-pointer border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-bgSt hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
       >
         <div className="relative flex flex-col items-center px-2 py-1">
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('Home')}</div>

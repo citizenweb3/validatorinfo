@@ -3,11 +3,11 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Letter from '@/app/metrics/letter';
 import Letters from '@/app/metrics/letters';
 import Switcher from '@/app/metrics/switcher';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import PlusButton from '@/components/common/plus-button';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
+import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';

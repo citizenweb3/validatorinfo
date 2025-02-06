@@ -8,7 +8,7 @@ import {
   nodeStatus,
   setPositions,
   stages,
-} from '@/app/validators/[identity]/(validatorProfile)/networks/validator-networks/validator-networks-list-filters';
+} from '@/app/validators/[id]/(validatorProfile)/networks/validator-networks/validator-networks-list-filters';
 import Button from '@/components/common/button';
 import Dropdown from '@/components/common/list-filters/dropdown';
 import ValidatorListFiltersBattery from '@/components/common/list-filters/validator-list-filters-battery';

@@ -1,12 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 
 import Networks from '@/app/networks/networks-list/networks';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
+import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;

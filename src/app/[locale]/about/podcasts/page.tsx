@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 import SpreadModal from '@/app/about/modals/spread-modal';
 import Player from '@/app/about/podcasts/player';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
+import Story from '@/components/story';
 import { Locale } from '@/i18n';
 
 export default function PodcastPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
