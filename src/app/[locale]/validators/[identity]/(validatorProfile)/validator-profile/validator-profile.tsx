@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import NetworksCircle from '@/app/validators/[identity]/(validatorProfile)/validator-profile/validator-networks-circle';
 import PlusButton from '@/components/common/plus-button';
+import RoundedButton from '@/components/common/rounded-button';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
 import ValidatorService from '@/services/validator-service';
@@ -43,6 +44,11 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
               height="200"
             ></iframe>
           </div>
+          {!foundEpisode?.player_url && (
+            <RoundedButton href={''} contentClassName="font-handjet text-sm px-5 pt-0 pb-0" className="mb-4">
+              {t('place your interview here')}
+            </RoundedButton>
+          )}
         </div>
         <div className="mb-2 flex items-center">
           <div className={`${iconsSize} bg-web bg-contain bg-no-repeat`} />

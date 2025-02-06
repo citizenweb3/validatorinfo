@@ -307,7 +307,9 @@
     "Merits": "Méritos",
     "eco tooltip": "text",
     "keyhole tooltip": "text",
-    "github tooltip": "text"
+    "github tooltip": "text",
+    "place your interview here": "Coloque Aqui a Sua Entrevista"
+
   },
   "ValidatorNetworksPage": {
     "title": "Redes Suportadas",
