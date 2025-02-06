@@ -4,7 +4,6 @@ import { FC } from 'react';
 import { ValidatorLinks } from '@/types';
 
 interface OwnProps {
-  id: string;
   links?: ValidatorLinks;
 }
 

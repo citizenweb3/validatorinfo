@@ -23,8 +23,8 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
   // @ts-ignore I don't know why, but it doesn't understand that filter removes undefined items
   const validatorChains: (Chain & { valoper: string })[] = validator.nodes
     .map((n) => {
-      const el = chains.find((c) => c.chainId === n.chainId);
-      return { ...el, valoper: n.operator_address };
+      const el = chains.find((c) => c.id === n.chainId);
+      return { ...el, valoper: n.operatorAddress };
     })
     .filter((c) => typeof c !== 'undefined');
 
@@ -38,18 +38,18 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
           textClassName="max-w-36"
           icon={validator.url}
           name={validator.moniker}
-          href={`/validators/${validator.identity}/networks`}
+          href={`/validators/${validator.id}/networks`}
         />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemLinks links={undefined} id={validator.identity} />
+        <ValidatorListItemLinks links={undefined} />
       </td>
       <td className="border-b border-black px-2 py-2">
-        <ValidatorListItemBattery battery={99} id={validator.identity} />
+        <ValidatorListItemBattery battery={99} id={validator.id} />
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.identity}/metrics`}
+          href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
@@ -57,7 +57,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.identity}/metrics`}
+          href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
@@ -65,7 +65,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.identity}/metrics`}
+          href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
@@ -73,14 +73,14 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
       </td>
       <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link
-          href={`validators/${validator.identity}/metrics`}
+          href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
       </td>
       <td className="group/tvs border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemTVS id={validator.identity} activeId={activeId} setActiveId={setActiveId} />
+        <ValidatorListItemTVS id={validator.id} activeId={activeId} setActiveId={setActiveId} />
       </td>
       <td className="border-b border-black px-2 py-2">
         <ValidatorListItemChains chains={validatorChains} />

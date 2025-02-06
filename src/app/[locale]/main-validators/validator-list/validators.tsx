@@ -10,7 +10,7 @@ interface OwnProps extends PagesProps {
   ecosystems: string[];
   currentPage?: number;
   perPage: number;
-  sort: { sortBy: string; order: SortDirection };
+  sort: { sortBy?: string; order: SortDirection };
 }
 
 const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], currentPage = 1 }) => {
@@ -22,7 +22,7 @@ const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], 
           <thead>
             <tr className="sticky top-0 z-30 w-full bg-table_header">
               <th />
-              <TableHeaderItem page={page} className="w-[20%]" name="Validator" sortField="moniker" defaultSelected />
+              <TableHeaderItem page={page} className="w-[20%]" name="Validator" sortField="moniker" />
               <TableHeaderItem page={page} name="Links" />
               <TableHeaderItem page={page} name="Battery" />
               <TableHeaderItem page={page} name="Technical" />

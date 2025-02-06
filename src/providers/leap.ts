@@ -1,4 +1,4 @@
-import { OfflineSignerT, WalletProvider } from ".";
+import { SignOptions } from '@cosmostation/extension-client/types/message';
 import {
   AminoSignResponse,
   BroadcastMode,
@@ -6,9 +6,10 @@ import {
   OfflineDirectSigner,
   StdSignDoc,
   StdSignature,
-} from "@keplr-wallet/types";
-import { SignOptions } from "@cosmostation/extension-client/types/message";
-import { Chain, LcdNode, RpcNode } from '@prisma/client';
+} from '@keplr-wallet/types';
+import { Chain } from '@prisma/client';
+
+import { OfflineSignerT, WalletProvider } from '.';
 
 interface Key {
   name: string;
@@ -48,7 +49,7 @@ interface ChainInfo {
       coinMinimalDenom: string;
       coinDecimals: number;
       coinGeckoId: string;
-    }
+    },
   ];
   readonly feeCurrencies: [
     {
@@ -57,7 +58,7 @@ interface ChainInfo {
       coinDecimals: number;
       coinGeckoId: string;
       gasPriceStep: { low: number; avergage: number; high: number };
-    }
+    },
   ];
   readonly features?: string[];
   theme: {
@@ -75,27 +76,15 @@ declare global {
       experimentalSuggestChain(chain: ChainInfo): Promise<void>;
       enable(chainId: string | Array<string>): Promise<void>;
       getSupportedChains(): Promise<string>;
-      getOfflineSignerAuto(
-        chainId: string
-      ): Promise<OfflineAminoSigner | OfflineDirectSigner> | undefined;
-      getOfflineSignerOnlyAmino(
-        chainId: string
-      ): Promise<OfflineAminoSigner> | undefined;
-      signArbitrary(
-        chainId: string,
-        signerAddress: string,
-        data: string | Uint8Array
-      ): Promise<StdSignature>;
-      sendTx(
-        chainId: string,
-        tx: Uint8Array,
-        mode: BroadcastMode
-      ): Promise<Uint8Array>;
+      getOfflineSignerAuto(chainId: string): Promise<OfflineAminoSigner | OfflineDirectSigner> | undefined;
+      getOfflineSignerOnlyAmino(chainId: string): Promise<OfflineAminoSigner> | undefined;
+      signArbitrary(chainId: string, signerAddress: string, data: string | Uint8Array): Promise<StdSignature>;
+      sendTx(chainId: string, tx: Uint8Array, mode: BroadcastMode): Promise<Uint8Array>;
       signAmino(
         chainId: string,
         signer: string,
         signDoc: StdSignDoc,
-        signOptions?: SignOptions
+        signOptions?: SignOptions,
       ): Promise<AminoSignResponse>;
     };
   }
@@ -103,7 +92,7 @@ declare global {
 
 class LeapProvider extends WalletProvider {
   getWallet() {
-    if (!window.leap) throw Error("Leap not found.");
+    if (!window.leap) throw Error('Leap not found.');
     return window.leap;
   }
 
@@ -112,24 +101,24 @@ class LeapProvider extends WalletProvider {
     wallet.enable(chainId);
   }
 
-  async suggestChain(chain: Chain & {rpcNodes: RpcNode[], lcdNodes: LcdNode[]}) {
+  async suggestChain(chain: Chain & { rpcNode: string; lcdNode: string }) {
     const chainConfig: ChainInfo = {
       chainId: chain.chainId,
       chainName: chain.name,
       bech32Config: {
         bech32PrefixAccAddr: chain.bech32Prefix,
-        bech32PrefixAccPub: chain.bech32Prefix + "pub",
-        bech32PrefixValAddr: chain.bech32Prefix + "valoper",
-        bech32PrefixValPub: chain.bech32Prefix + "valoperpub",
-        bech32PrefixConsAddr: chain.bech32Prefix + "valcons",
-        bech32PrefixConsPub: chain.bech32Prefix + "valconspub",
+        bech32PrefixAccPub: chain.bech32Prefix + 'pub',
+        bech32PrefixValAddr: chain.bech32Prefix + 'valoper',
+        bech32PrefixValPub: chain.bech32Prefix + 'valoperpub',
+        bech32PrefixConsAddr: chain.bech32Prefix + 'valcons',
+        bech32PrefixConsPub: chain.bech32Prefix + 'valconspub',
       },
-      rest: chain.lcdNodes[0].url,
-      rpc: chain.rpcNodes[0].url,
+      rest: chain.lcdNode,
+      rpc: chain.rpcNode,
       bip44: {
         coinType: chain.coinType,
       },
-      image: "",
+      image: '',
       currencies: [
         {
           coinMinimalDenom: chain.minimalDenom,
@@ -157,11 +146,10 @@ class LeapProvider extends WalletProvider {
           },
         },
       ],
-      walletUrlForStaking: "",
+      walletUrlForStaking: '',
       theme: {
-        primaryColor: "#fff",
-        gradient:
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0) 100%)",
+        primaryColor: '#fff',
+        gradient: 'linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0) 100%)',
       },
     };
 
@@ -189,19 +177,16 @@ class LeapProvider extends WalletProvider {
     return wallet.getOfflineSignerAuto(chainId) as unknown as OfflineSignerT;
   }
 
-  async signProof(
-    chainId: string,
-  ) {
-    const { cryptoRandomStringAsync } = await import("crypto-random-string");
+  async signProof(chainId: string) {
+    const { cryptoRandomStringAsync } = await import('crypto-random-string');
     const wallet = this.getWallet();
     const { bech32Address } = await wallet.getKey(chainId);
-    const key = await cryptoRandomStringAsync({ length: 32, type: "base64" });
+    const key = await cryptoRandomStringAsync({ length: 32, type: 'base64' });
     return {
       signature: await wallet.signArbitrary(chainId, bech32Address, key),
       key: key,
     };
   }
-
 }
 
 export const leapWalletProvider = new LeapProvider();

@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 
 import ChatWrapper from '@/app/rumors/chat-wrapper';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
+import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';

@@ -22,7 +22,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
             {results?.validators.map((validator, index) => (
               <SearchItem
                 name={validator.moniker}
-                link={`/validators/${validator.identity}/networks`}
+                link={`/validators/${validator.id}/networks`}
                 icon={validator.url?.indexOf('http') === 0 ? validator.url : `https://${validator.url}`}
                 isSelected={activeIndex === index}
                 onClick={onSelect}

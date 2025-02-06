@@ -1,8 +1,16 @@
-import { PrismaClient } from '@prisma/client';
+import { Prisma } from '@prisma/client';
 
-const prisma = new PrismaClient();
+import db from '@/db';
+import logger from '@/logger';
 
-type Chain = {
+const { logInfo, logError } = logger('init-chains');
+
+import ChainCreateInput = Prisma.ChainCreateInput;
+
+type ChainNodeType = 'indexer' | 'lcd' | 'rpc' | 'grpc' | 'ws';
+
+type AddChainProps = {
+  ecosystem?: string;
   rang: number;
   chainId: string;
   name: string;
@@ -12,81 +20,87 @@ type Chain = {
   logoUrl: string;
   coinGeckoId: string;
   bech32Prefix: string;
-  lcdNodeUrl: string;
-  rpcNodeUrl: string;
-  grpcNodeUrl: string;
-  wsNodeUrl: string;
+  nodes: { type: ChainNodeType; url: string }[];
   coinDecimals: number;
   coinType: number;
   twitterUrl: string;
   docs: string | null;
   mainRepo: string;
   githubUrl: string;
-  ecosystem?: string;
+  hasValidators?: boolean;
 };
 
-async function addNetwork(chain: Chain): Promise<void> {
-  await prisma.chain.upsert({
+async function addNetwork(chain: AddChainProps): Promise<void> {
+  const chainFields: ChainCreateInput = {
+    rang: chain.rang,
+    ecosystem: chain.ecosystem ?? 'cosmos',
+    chainId: chain.chainId,
+    name: chain.name,
+    prettyName: chain.prettyName,
+    denom: chain.denom,
+    minimalDenom: chain.minimalDenom,
+    coinDecimals: chain.coinDecimals,
+    coinType: chain.coinType,
+    logoUrl: chain.logoUrl,
+    coinGeckoId: chain.coinGeckoId,
+    bech32Prefix: chain.bech32Prefix,
+    twitterUrl: chain.twitterUrl,
+    docs: chain.docs,
+    githubMainRepo: chain.mainRepo,
+    githubUrl: chain.githubUrl,
+    hasValidators: chain.hasValidators,
+  };
+
+  const existingChain = await db.chain.findUnique({
     where: { chainId: chain.chainId },
-    update: {
-      rang: chain.rang,
-      type: chain.ecosystem || 'cosmos',
-      chainId: chain.chainId,
-      name: chain.name,
-      prettyName: chain.prettyName,
-      denom: chain.denom,
-      minimalDenom: chain.minimalDenom,
-      coinDecimals: chain.coinDecimals,
-      coinType: chain.coinType,
-      logoUrl: chain.logoUrl,
-      coinGeckoId: chain.coinGeckoId,
-      bech32Prefix: chain.bech32Prefix,
-      twitterUrl: chain.twitterUrl,
-      docs: chain.docs,
-    },
-    create: {
-      rang: chain.rang,
-      type: chain.ecosystem || 'cosmos',
-      chainId: chain.chainId,
-      name: chain.name,
-      prettyName: chain.prettyName,
-      denom: chain.denom,
-      minimalDenom: chain.minimalDenom,
-      coinDecimals: chain.coinDecimals,
-      coinType: chain.coinType,
-      logoUrl: chain.logoUrl,
-      coinGeckoId: chain.coinGeckoId,
-      bech32Prefix: chain.bech32Prefix,
-      twitterUrl: chain.twitterUrl,
-      docs: chain.docs,
-      github: {
-        create: {
-          url: chain.githubUrl,
-          mainRepo: chain.mainRepo,
-        },
-      },
-      lcdNodes: {
-        create: {
-          url: chain.lcdNodeUrl,
-        },
-      },
-      rpcNodes: {
-        create: {
-          url: chain.rpcNodeUrl,
-        },
-      },
-      grpcNodes: {
-        create: {
-          url: chain.grpcNodeUrl,
-        },
-      },
-      wsNodes: {
-        create: {
-          url: chain.wsNodeUrl,
-        },
-      },
+    include: {
+      chainNodes: true,
     },
   });
+
+  if (!existingChain) {
+    await db.chain.create({
+      data: {
+        ...chainFields,
+        chainNodes: {
+          create: chain.nodes.map((node) => ({ url: node.url, type: node.type })),
+        },
+      },
+    });
+    logInfo(`${chain.prettyName} #${chain.chainId} chain created`);
+    return;
+  }
+
+  await db.chain.update({
+    where: { chainId: chain.chainId },
+    data: {
+      ...chainFields,
+    },
+  });
+
+  const existingNodes = existingChain.chainNodes;
+  const newNodes = chain.nodes;
+  nodesLoop: for (const newNode of newNodes) {
+    for (const existingNode of existingNodes) {
+      if (existingNode.type === newNode.type && existingNode.url !== newNode.url) {
+        await db.chainNode.update({
+          where: { id: existingNode.id },
+          data: { url: newNode.url },
+        });
+        continue nodesLoop;
+      }
+    }
+
+    await db.chainNode.create({
+      data: {
+        url: newNode.url,
+        type: newNode.type,
+        chainId: existingChain.id,
+      },
+    });
+  }
+
+  logInfo(`Chain #${chain.chainId} ${chain.prettyName} updated`);
 }
 
 async function main() {
@@ -102,11 +116,13 @@ async function main() {
       coinType: 118,
       denom: 'ATOM',
       minimalDenom: 'uatom',
-      grpcNodeUrl: 'grpc.cosmoshub-4.citizenweb3.com',
-      lcdNodeUrl: 'https://api.cosmoshub-4.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.cosmoshub-4.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.cosmoshub-4.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.cosmoshub-4.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.cosmoshub-4.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.cosmoshub-4.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.cosmoshub-4.citizenweb3.com/websocket' },
+      ],
       mainRepo: 'https://github.com/cosmos/gaia',
       docs: 'https://cosmos.network',
       githubUrl: 'https://github.com/cosmos',
@@ -124,11 +140,13 @@ async function main() {
       coinType: 118,
       denom: 'TIA',
       minimalDenom: 'utia',
-      grpcNodeUrl: 'grpc.celestia.citizenweb3.com',
-      lcdNodeUrl: 'https://api.celestia.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.celestia.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.celestia.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.celestia.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.celestia.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.celestia.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.celestia.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -146,11 +164,13 @@ async function main() {
       coinType: 118,
       denom: 'BCNA',
       minimalDenom: 'ubcna',
-      grpcNodeUrl: 'grpc.bitcanna.citizenweb3.com',
-      lcdNodeUrl: 'https://api.bitcanna.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.bitcanna.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.bitcanna.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bitcanna/images/bcna.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.bitcanna.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.bitcanna.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.bitcanna.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.bitcanna.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -168,11 +188,13 @@ async function main() {
       coinType: 118,
       denom: 'LIKE',
       minimalDenom: 'nanolike',
-      grpcNodeUrl: 'grpc.likecoin.citizenweb3.com',
-      lcdNodeUrl: 'https://api.likecoin.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.likecoin.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.likecoin.citizenweb3.com/websocket',
-      logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/likecoin/images/likecoin-chain-logo.svg',
+      logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/likecoin/images/like.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.likecoin.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.likecoin.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.likecoin.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.likecoin.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -190,11 +212,13 @@ async function main() {
       coinType: 118,
       denom: 'STRD',
       minimalDenom: 'ustrd',
-      grpcNodeUrl: 'grpc.stride.citizenweb3.com',
-      lcdNodeUrl: 'https://api.stride.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.stride.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.stride.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.stride.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.stride.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.stride.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.stride.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -212,11 +236,13 @@ async function main() {
       coinType: 118,
       denom: 'QCK',
       minimalDenom: 'uqck',
-      grpcNodeUrl: 'grpc.quicksilver.citizenweb3.com',
-      lcdNodeUrl: 'https://api.quicksilver.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.quicksilver.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.quicksilver.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/quicksilver/images/qck.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.quicksilver.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.quicksilver.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.quicksilver.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.quicksilver.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -234,11 +260,13 @@ async function main() {
       coinType: 118,
       denom: 'GOVGEN',
       minimalDenom: 'ugovgen',
-      grpcNodeUrl: 'grpc.govgen.citizenweb3.com',
-      lcdNodeUrl: 'https://api.govgen.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.govgen.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.govgen.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/govgen/images/govgen.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.govgen.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.govgen.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.govgen.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.govgen.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -256,11 +284,13 @@ async function main() {
       coinType: 60,
       denom: 'UPTICK',
       minimalDenom: 'auptick',
-      grpcNodeUrl: 'grpc.uptick.citizenweb3.com',
-      lcdNodeUrl: 'https://api.uptick.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.uptick.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.uptick.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/uptick/images/uptick.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.uptick.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.uptick.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.uptick.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.uptick.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -278,11 +308,13 @@ async function main() {
       coinType: 118,
       denom: 'GRAV',
       minimalDenom: 'ugraviton',
-      grpcNodeUrl: 'grpc.gravity.citizenweb3.com',
-      lcdNodeUrl: 'https://api.gravity.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.gravity.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.gravity.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.gravity.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.gravity.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.gravity.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.gravity.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -300,12 +332,15 @@ async function main() {
       coinType: 118,
       denom: 'NTRN',
       minimalDenom: 'untrn',
-      grpcNodeUrl: 'grpc.neutron.citizenweb3.com',
-      lcdNodeUrl: 'https://api.neutron.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.neutron.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.neutron.citizenweb3.com/websocket',
+      hasValidators: false,
       logoUrl:
         'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.neutron.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.neutron.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.neutron.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.neutron.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -323,12 +358,15 @@ async function main() {
       coinType: 118,
       denom: 'NTRN',
       minimalDenom: 'untrn',
-      grpcNodeUrl: 'grpc.neutron.citizenweb3.com',
-      lcdNodeUrl: 'https://api.pion-1.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.pion-1-testnet.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.pion-1-testnet.citizenweb3.com/websocket',
+      hasValidators: false,
       logoUrl:
         'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.neutron.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.pion-1.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.pion-1-testnet.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.pion-1-testnet.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -346,11 +384,13 @@ async function main() {
       coinType: 60,
       denom: 'DYM',
       minimalDenom: 'adym',
-      grpcNodeUrl: 'dymension-grpc.polkachu.com',
-      lcdNodeUrl: 'https://dymension-api.polkachu.com',
-      rpcNodeUrl: 'https://dymension-rpc.polkachu.com',
-      wsNodeUrl: 'wss://dymension-rpc.polkachu.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.svg',
+      nodes: [
+        { type: 'grpc', url: 'dymension-grpc.polkachu.com' },
+        { type: 'lcd', url: 'https://dymension-api.polkachu.com' },
+        { type: 'rpc', url: 'https://dymension-rpc.polkachu.com' },
+        { type: 'ws', url: 'wss://dymension-rpc.polkachu.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -368,11 +408,13 @@ async function main() {
       coinType: 118,
       denom: 'ALTHEA',
       minimalDenom: 'aalthea',
-      grpcNodeUrl: 'grpc.dym.citizenweb3.com',
-      lcdNodeUrl: 'https://api.althea.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.althea.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.althea.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/althea/images/althea.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.althea.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.althea.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.althea.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.althea.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -390,11 +432,13 @@ async function main() {
       coinType: 118,
       denom: 'ATONE',
       minimalDenom: 'uatone',
-      grpcNodeUrl: 'grpc.atomone.citizenweb3.com',
-      lcdNodeUrl: 'https://api.atomone.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.atomone.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.atomone.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/atomone/images/atomone.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.atomone.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.atomone.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.atomone.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.atomone.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -412,12 +456,14 @@ async function main() {
       coinType: 118,
       denom: 'UNO',
       minimalDenom: 'uuno',
-      grpcNodeUrl: 'grpc.union-testnet.citizenweb3.com',
-      lcdNodeUrl: 'https://api.union-testnet.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.union-testnet.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.union-testnet.citizenweb3.com/websocket',
       logoUrl:
         'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/union-testnet/union.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.union-testnet.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.union-testnet.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.union-testnet.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.union-testnet.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -435,12 +481,14 @@ async function main() {
       coinType: 118,
       denom: 'AXONE',
       minimalDenom: 'uaxone',
-      grpcNodeUrl: 'grpc.union-testnet.citizenweb3.com',
-      lcdNodeUrl: 'https://api.axone-testnet.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.axone-testnet.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.axone-testnet.citizenweb3/websocket',
       logoUrl:
         'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/axone-testnet/axone.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.axone-testnet.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.axone-testnet.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.axone-testnet.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.axone-testnet.citizenweb3.com/websocket' },
+      ],
       mainRepo: '123',
       docs: '123',
       githubUrl: '123',
@@ -459,11 +507,11 @@ async function main() {
       coinType: 877,
       denom: 'NAM',
       minimalDenom: 'unam',
-      grpcNodeUrl: 'https://indexer.namada.citizenweb3.com',
-      lcdNodeUrl: 'https://rpc.namada.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.namada.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.namada.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
+      nodes: [
+        { type: 'indexer', url: 'https://indexer.namada.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.namada.citizenweb3.com' },
+      ],
       mainRepo: 'https://github.com/anoma/namada',
       docs: 'https://docs.namada.net',
       githubUrl: 'https://github.com/anoma',
@@ -481,11 +529,13 @@ async function main() {
       coinType: 118,
       denom: 'BOOT',
       minimalDenom: 'uboot',
-      grpcNodeUrl: 'grpc.bostrom.cybernode.ai',
-      lcdNodeUrl: 'https://lcd.bostrom.cybernode.ai',
-      rpcNodeUrl: 'https://rpc.bostrom.cybernode.ai',
-      wsNodeUrl: 'wss://rpc.bostrom.cybernode.ai/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.png',
+      nodes: [
+        { type: 'grpc', url: 'grpc.bostrom.cybernode.ai' },
+        { type: 'lcd', url: 'https://lcd.bostrom.cybernode.ai' },
+        { type: 'rpc', url: 'https://rpc.bostrom.cybernode.ai' },
+        { type: 'ws', url: 'wss://rpc.bostrom.cybernode.ai/websocket' },
+      ],
       mainRepo: '',
       docs: 'https://cybercongress.ai/docs/',
       githubUrl: 'https://github.com/cybercongress/cyberd',
@@ -505,10 +555,12 @@ async function main() {
       minimalDenom: 'note',
       logoUrl:
         'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/symphony-testnet/melody.png',
-      rpcNodeUrl: 'https://rpc.symphony-testnet.citizenweb3.com',
-      grpcNodeUrl: 'grpc.symphony-testnet.citizenweb3.com',
-      lcdNodeUrl: 'https://api.symphony-testnet.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket',
+      nodes: [
+        { type: 'grpc', url: 'grpc.symphony-testnet.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.symphony-testnet.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.symphony-testnet.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket' },
+      ],
       mainRepo: 'https://github.com/Orchestra-Labs/symphony',
       docs: '',
       githubUrl: 'https://github.com/Orchestra-Labs',
@@ -528,10 +580,12 @@ async function main() {
       minimalDenom: 'unil',
       logoUrl:
         'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/nillion-chain-testnet/nil.png',
-      rpcNodeUrl: 'https://rpc.nillion-testnet.citizenweb3.com',
-      grpcNodeUrl: 'grpc.nillion-testnet.citizenweb3.com',
-      lcdNodeUrl: 'https://api.nillion-testnet.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.nillion-testnet.citizenweb3.com/websocket',
+      nodes: [
+        { type: 'grpc', url: 'grpc.nillion-testnet.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.nillion-testnet.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.nillion-testnet.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.nillion-testnet.citizenweb3.com/websocket' },
+      ],
       mainRepo: 'https://github.com/NillionNetwork/nilchain',
       docs: '',
       githubUrl: 'https://github.com/NillionNetwork',
@@ -552,10 +606,12 @@ async function main() {
       minimalDenom: 'uart',
       logoUrl:
         'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/artela-testnet/artela.svg',
-      rpcNodeUrl: 'https://rpc.artela-testnet.citizenweb3.com',
-      grpcNodeUrl: 'grpc.artela-testnet.citizenweb3.com',
-      lcdNodeUrl: 'https://api.artela-testnet.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.artela-testnet.citizenweb3.com/websocket',
+      nodes: [
+        { type: 'grpc', url: 'grpc.artela-testnet.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.artela-testnet.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.artela-testnet.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.artela-testnet.citizenweb3.com/websocket' },
+      ],
       mainRepo: 'https://github.com/artela-network/artela',
       docs: '',
       githubUrl: 'https://github.com/artela-network',
@@ -574,10 +630,12 @@ async function main() {
       denom: 'PUSSY',
       minimalDenom: 'pussy',
       logoUrl: 'https://raw.githubusercontent.com/greatweb/pussy-landing/master/src/images/spacepussy.png',
-      rpcNodeUrl: 'https://rpc.space-pussy.cybernode.ai',
-      grpcNodeUrl: 'grpc.space-pussy.cybernode.ai',
-      lcdNodeUrl: 'https://lcd.space-pussy.cybernode.ai',
-      wsNodeUrl: 'wss://rpc.space-pussy.cybernode.ai/websocket',
+      nodes: [
+        { type: 'grpc', url: 'grpc.space-pussy.cybernode.ai' },
+        { type: 'lcd', url: 'https://lcd.space-pussy.cybernode.ai' },
+        { type: 'rpc', url: 'https://rpc.space-pussy.cybernode.ai' },
+        { type: 'ws', url: 'wss://rpc.space-pussy.cybernode.ai/websocket' },
+      ],
       mainRepo: 'https://github.com/greatweb/space-pussy/tree/main',
       docs: '',
       githubUrl: 'https://github.com/greatweb',
@@ -596,10 +654,12 @@ async function main() {
       denom: 'NOM',
       minimalDenom: 'unom',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/nomic/images/nom.svg',
-      rpcNodeUrl: 'https://nomic-rpc.polkachu.com',
-      grpcNodeUrl: '',
-      lcdNodeUrl: 'https://api.nomic.quokkastake.io',
-      wsNodeUrl: 'wss://nomic-rpc.polkachu.com/websocket',
+      nodes: [
+        { type: 'grpc', url: 'grpc.nomic.polkachu.com' },
+        { type: 'lcd', url: 'https://api.nomic.quokkastake.io' },
+        { type: 'rpc', url: 'https://nomic-rpc.polkachu.com' },
+        { type: 'ws', url: 'wss://nomic-rpc.polkachu.com/websocket' },
+      ],
       mainRepo: 'https://github.com/nomic-io/nomic',
       docs: '',
       githubUrl: 'https://github.com/nomic-io',
@@ -617,19 +677,23 @@ async function main() {
       coinType: 118,
       denom: 'OSMO',
       minimalDenom: 'uosmo',
-      grpcNodeUrl: 'grpc.osmosis.citizenweb3.com',
-      lcdNodeUrl: 'https://api.osmosis.citizenweb3.com',
-      rpcNodeUrl: 'https://rpc.osmosis.citizenweb3.com',
-      wsNodeUrl: 'wss://rpc.osmosis.citizenweb3.com/websocket',
       logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
+      nodes: [
+        { type: 'grpc', url: 'grpc.osmosis.citizenweb3.com' },
+        { type: 'lcd', url: 'https://api.osmosis.citizenweb3.com' },
+        { type: 'rpc', url: 'https://rpc.osmosis.citizenweb3.com' },
+        { type: 'ws', url: 'wss://rpc.osmosis.citizenweb3.com/websocket' },
+      ],
       mainRepo: 'https://github.com/osmosis-labs/osmosis',
       docs: 'https://docs.osmosis.zone',
       githubUrl: 'https://github.com/osmosis-labs',
       twitterUrl: 'https://twitter.com/osmosiszone',
     });
   } catch (e) {
-    console.error(e);
+    logError('Error: ', e);
   }
+
+  logInfo(`Finished adding chains`);
 }
 
 main();

@@ -21,7 +21,7 @@ const SimpleValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage =
   return (
     <tbody>
       {list.map((item) => (
-        <SimpleValidatorListItem key={item.identity} validator={item} />
+        <SimpleValidatorListItem key={item.id} validator={item} />
       ))}
       <tr>
         <td colSpan={5} className="pt-4">

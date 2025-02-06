@@ -18,7 +18,7 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
   const currentPage = parseInt((q.p as string) || '1');
   const validatorsPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
-  const sortBy = (q.sortBy as 'moniker' | 'nodes') ?? 'moniker';
+  const sortBy = (q.sortBy as 'moniker' | 'nodes' | undefined) ?? undefined;
   const order = (q.order as SortDirection) ?? 'asc';
 
   return (

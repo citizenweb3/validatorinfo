@@ -1,10 +1,10 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import PartnerItem from '@/app/about/partners/partner-item';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
+import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 
 const partners = [

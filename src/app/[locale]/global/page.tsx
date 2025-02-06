@@ -8,11 +8,11 @@ import PosCapitalizationBar from '@/app/global/pos-capitalization-bar/pos-capita
 import PosDominanceLine from '@/app/global/pos-dominance-line/pos-dominance-line';
 import PosTotalLine from '@/app/global/pos-total-line/pos-total-line';
 import TotalsList from '@/app/global/totals/totals-list';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
+import Story from '@/components/story';
 import { Locale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';

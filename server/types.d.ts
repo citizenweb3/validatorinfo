@@ -1,4 +1,4 @@
-import { Chain, GrpcNode, LcdNode, RpcNode, WsNode } from '@prisma/client';
+import { Chain, ChainNode } from '@prisma/client';
 
 declare type NewBlock = {
   jsonrpc: '2.0';
@@ -28,10 +28,7 @@ declare type NewBlock = {
 };
 
 export type ChainWithNodes = Chain & {
-  rpcNodes: RpcNode[];
-  grpcNodes: GrpcNode[];
-  lcdNodes: LcdNode[];
-  wsNodes: WsNode[];
+  chainNodes: ChainNode[];
 };
 
 export interface Validator {
