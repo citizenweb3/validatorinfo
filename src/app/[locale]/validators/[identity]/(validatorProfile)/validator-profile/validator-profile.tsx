@@ -4,8 +4,10 @@ import { FC } from 'react';
 import NetworksCircle from '@/app/validators/[identity]/(validatorProfile)/validator-profile/validator-networks-circle';
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
-import ValidatorService from '@/services/validator-service';
 import icons from '@/components/icons';
+import ValidatorService from '@/services/validator-service';
+
+import episodes from './validators_episodes.json';
 
 interface OwnProps {
   identity: string;
@@ -21,6 +23,11 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
   const { validatorNodesWithChainData } = await ValidatorService.getValidatorNodesWithChains(identity);
   const chainsLogos = validatorNodesWithChainData.map((chain) => chain?.logoUrl ?? icons.AvatarIcon);
 
+  const foundEpisode = episodes.find((ep) => ep.identity === identity);
+  const playerUrl = foundEpisode?.player_url
+    ? `${foundEpisode.player_url}?theme=dark`
+    : 'https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark';
+
   const iconsSize = 'h-10 min-h-10 w-10 min-w-10';
 
   return (
@@ -30,7 +37,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
           <h2>{t('description')}</h2>
           <div className="relative my-4 h-[40px] w-full overflow-hidden md:h-[50px] lg:h-[60px] xl:h-[66px] 2xl:h-[86px]">
             <iframe
-              src="https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark"
+              src={playerUrl}
               className="m-0 origin-top-left scale-[0.20] p-0 md:scale-[0.23] lg:scale-[0.28] xl:scale-[0.32] 2xl:scale-[0.43]"
               width="740"
               height="200"
@@ -58,7 +65,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ identity, locale }) => {
             <div className={`${iconsSize} ml-2.5 bg-keyhole bg-contain bg-no-repeat hover:bg-keyhole_h`} />
           </Tooltip>
           <Tooltip tooltip={t('github tooltip')} direction={'bottom'}>
-            <div className={`${iconsSize} hover:bg-github_g_h ml-2.5 bg-github_g bg-contain bg-no-repeat`} />
+            <div className={`${iconsSize} ml-2.5 bg-github_g bg-contain bg-no-repeat hover:bg-github_g_h`} />
           </Tooltip>
         </div>
       </div>
