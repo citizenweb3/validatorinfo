@@ -119,7 +119,10 @@
       },
       "Customize": "Customize",
       "Click 3 times to reset all filters": "Click 3 times to reset all filters",
-      "Ecosystems": "Ecosystems"
+      "Ecosystems": "Ecosystems",
+      "Network Stage": "Network Stage",
+      "Set Position": "Set Position",
+      "Node Status": "Node Status"
     },
     "Tabs": {
       "Calculate": "Calculate",
@@ -304,7 +307,8 @@
     "Merits": "Merits",
     "eco tooltip": "text",
     "keyhole tooltip": "text",
-    "github tooltip": "text"
+    "github tooltip": "text",
+    "place your interview here": "Place Your Interview Here"
   },
   "ValidatorNetworksPage": {
     "title": "Supported Networks",

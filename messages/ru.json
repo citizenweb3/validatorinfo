@@ -119,7 +119,10 @@
       },
       "Customize": "Настроить",
       "Click 3 times to reset all filters": "Нажмите 3 раза чтобы сбросить все фильтры",
-      "Ecosystems": "Экосистемы"
+      "Ecosystems": "Экосистемы",
+      "Network Stage": "Этап сети",
+      "Set Position": "Cэт",
+      "Node Status": "Статус ноды"
     },
     "Tabs": {
       "Calculate": "Калькулятор",
@@ -304,7 +307,9 @@
     "Merits": "Заслуги",
     "eco tooltip": "text",
     "keyhole tooltip": "text",
-    "github tooltip": "text"
+    "github tooltip": "text",
+    "place your interview here": "Разместите Cвое Интервью Здесь"
+
   },
   "ValidatorNetworksPage": {
     "title": "Поддерживаемые сети",
