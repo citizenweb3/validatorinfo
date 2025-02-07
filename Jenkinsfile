@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        PM2_SERVICE_APP = "${env.BRANCH_NAME == 'main' ? 'main-app' : 'next'}"
-        PM2_SERVICE_INDEXER = "${env.BRANCH_NAME == 'main' ? 'main-indexer' : 'indexer'}"
+        PM2_SERVICE_APP = "${env.BRANCH_NAME == 'main' ? 'main-app' : (env.BRANCH_NAME == 'dev' ? 'dev-app' : 'next')}"
+        PM2_SERVICE_INDEXER = "${env.BRANCH_NAME == 'main' ? 'main-indexer' : (env.BRANCH_NAME == 'dev' ? 'dev-indexer' : 'indexer')}"
     }
 
     triggers {
