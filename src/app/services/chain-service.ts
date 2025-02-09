@@ -6,11 +6,11 @@ import { SortDirection } from '@/server/types';
 import ChainWhereInput = Prisma.ChainWhereInput;
 
 const getAll = async (
-  ecosystems: string[],
-  skip: number,
-  take: number,
-  sortBy: string = 'name',
-  order: SortDirection = 'asc',
+    ecosystems: string[],
+    skip: number,
+    take: number,
+    sortBy: string = 'name',
+    order: SortDirection = 'asc',
 ): Promise<{ chains: Chain[]; pages: number }> => {
   const where: ChainWhereInput | undefined = ecosystems.length ? { ecosystem: { in: ecosystems } } : undefined;
   const chains = await db.chain.findMany({
@@ -24,17 +24,24 @@ const getAll = async (
   return { chains, pages: Math.ceil(count / take) };
 };
 
-const getTokenPriceByChainId = async (chainId: number): Promise<Price | null> => {
+const getTokenPriceByChainId = async (id: number): Promise<Price | null> => {
   const price = await db.price.findFirst({
-    where: { chainId },
+    where: { id },
     orderBy: { createdAt: 'desc' },
   });
   return price ?? null;
 };
 
+const getById = async (id: number): Promise<Chain | null> => {
+  return db.chain.findUnique({
+    where: { id },
+  });
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
+  getById
 };
 
 export default ChainService;

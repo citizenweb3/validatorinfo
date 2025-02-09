@@ -14,25 +14,12 @@ interface OwnProps {
     };
 }
 
-const NodeVotesItem: FC<OwnProps> = ({item}) => {
-    const getSquareIcon = () => {
-        switch (item.vote) {
-            case 'Yes':
-                return icons.GreenSquareIcon;
-            case 'No':
-                return icons.RedSquareIcon;
-            case 'Abstain':
-                return icons.YellowSquareIcon;
-            default:
-                return icons.GreenSquareIcon;
-        }
-    };
+const NetworkProposalItem: FC<OwnProps> = ({item}) => {
 
     return (
         <tr className="group cursor-pointer hover:bg-bgHover">
             <td className="w-2/6 border-b border-black py-4 hover:text-highlight active:border-bgSt">
                 <Link href={''} className="flex items-center gap-1">
-                    <Image src={getSquareIcon()} alt={`${item.vote}`} width={30} height={30}/>
                     <div className="font-handjet text-xl text-highlight">{`#${item.proposalId}`}</div>
                     <div className="text-sm">{item.proposalTitle}</div>
                 </Link>
@@ -56,4 +43,4 @@ const NodeVotesItem: FC<OwnProps> = ({item}) => {
     );
 };
 
-export default NodeVotesItem;
+export default NetworkProposalItem;

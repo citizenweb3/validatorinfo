@@ -115,16 +115,16 @@ const config: Config = {
         disapproved: `url('/img/icons/disapproved.png')`,
         disapproved_h: `url('/img/icons/disapproved-h.png')`,
         disapproved_a: `url('/img/icons/disapproved-a.png')`,
-        hash_txs: `url('/img/icons/medals/hash-txs.png')`,
-        hash_txs_h: `url('/img/icons/medals/hash-txs-h.png')`,
-        horcrux: `url('/img/icons/medals/horcrux.png')`,
-        horcrux_h: `url('/img/icons/medals/horcrux-h.png')`,
-        restake: `url('/img/icons/medals/restake.png')`,
-        restake_h: `url('/img/icons/medals/restake-h.png')`,
-        reward_re: `url('/img/icons/medals/reward-reinvesting.png')`,
-        reward_re_h: `url('/img/icons/medals/reward-reinvesting-h.png')`,
-        slashed: `url('/img/icons/medals/slashed.png')`,
-        slashed_h: `url('/img/icons/medals/slashed-h.png')`,
+        hash_txs: `url('/img/icons/medals-node-passport/hash-txs.png')`,
+        hash_txs_h: `url('/img/icons/medals-node-passport/hash-txs-h.png')`,
+        horcrux: `url('/img/icons/medals-node-passport/horcrux.png')`,
+        horcrux_h: `url('/img/icons/medals-node-passport/horcrux-h.png')`,
+        restake: `url('/img/icons/medals-node-passport/restake.png')`,
+        restake_h: `url('/img/icons/medals-node-passport/restake-h.png')`,
+        reward_re: `url('/img/icons/medals-node-passport/reward-reinvesting.png')`,
+        reward_re_h: `url('/img/icons/medals-node-passport/reward-reinvesting-h.png')`,
+        slashed: `url('/img/icons/medals-node-passport/slashed.png')`,
+        slashed_h: `url('/img/icons/medals-node-passport/slashed-h.png')`,
         copy: `url('/img/icons/copy-button.png')`,
         copy_h: `url('/img/icons/copy-button-h.png')`,
         copy_a: `url('/img/icons/copy-button-a.png')`,
@@ -132,6 +132,10 @@ const config: Config = {
         reset: `url('/img/icons/reset-button.png')`,
         reset_h: `url('/img/icons/reset-button-h.png')`,
         reset_a: `url('/img/icons/reset-button-a.png')`,
+        rich_list: `url('/img/icons/medals-network-profile/medal-rich-list.png')`,
+        rich_list_h: `url('/img/icons/medals-network-profile/medal-rich-list-h.png')`,
+        distribution: `url('/img/icons/medals-network-profile/medal-distribution.png')`,
+        distribution_h: `url('/img/icons/medals-network-profile/medal-distribution-h.png')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',
@@ -165,12 +169,12 @@ const config: Config = {
     tailwindScrollbar({}),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
-        {
-          'text-shadow': (value) => ({
-            textShadow: value,
-          }),
-        },
-        { values: theme('textShadow') },
+          {
+            'text-shadow': (value) => ({
+              textShadow: value,
+            }),
+          },
+          { values: theme('textShadow') },
       );
     }),
   ],

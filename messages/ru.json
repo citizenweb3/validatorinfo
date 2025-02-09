@@ -165,6 +165,68 @@
   "NetworksPage": {
     "title": "Список сетей P.O.W. и P.O.S. от A до Z"
   },
+  "NetworkProfileHeader": {
+    "Tabs": {
+      "Governance": "Управление",
+      "Statistics": "Статистика",
+      "Passport": "Паспорт",
+      "Dev Info": "Разработка",
+      "Tokenomics": "Токеномика"
+    },
+    "description": "Создайте блокчейн, используя лучшие в своем классе библиотеки и сервисы с открытым исходным кодом.",
+    "Others Links": "Другие ссылки",
+    "Show Transactions": "Показать Транзакции",
+    "temperature tooltip": "Показывает состояние здоровья цепи на основе различных измеряемых показателей",
+    "Revenue": "Доход",
+    "Validator Cost": "Стоимость Валидатора",
+    "tvl tooltip": "Общая стоимость активов, заблокированных в сети, без учета инфляции / домашние активы",
+    "revenue tooltip": "Размер комиссий, полученных вчера от сети",
+    "validator cost tooltip": "Стоимость в долларах США узла валидатора, который получает доход",
+    "rich list tooltip": "Список Богачей",
+    "distribution tooltip": "Распределение"
+  },
+  "NetworkPassport": {
+    "title": "Паспорт Сети",
+    "amount of wallets": "Количество Кошельков",
+    "total amount of tx": "Общее Количество Транзакций",
+    "total supply": "Общее предложение",
+    "Network APR and TVS": "APR и TVS Сети",
+    "Network Overview": "Обзор Сети",
+    "active validators": "Активные Валидаторы",
+    "unbonding time": "Время Анбондинга",
+    "community tax": "Общественные Налоги",
+    "proposal creation cost": "Стоимость Создания Пропозала",
+    "voting period": "Период Голосования",
+    "slashing": "Слэшинг",
+    "comm pool value in usd": "Комьюнити пул в USD",
+    "% of comm pool to total supply": "% Коммьюнити Пула от Общего Объема Предложения",
+    "average block time": "Среднее время блока"
+  },
+  "NetworkStatistics": {
+    "title": "Статистика Сети",
+    "community pool total": "Комьюнити Пул Всего",
+    "total staked": "Застейкано Всего",
+    "average delegations": "Среднее Количество Делегаций",
+    "% staked": "% Стейка",
+    "pending delegations": "Делегации на Рассмотрении",
+    "healthy validators": "Здоровые Валидаторы",
+    "Operator Distributions": "Распределение Операторов",
+    "active": "Активные",
+    "jailed": "Джэйл",
+    "inactive": "Не активные"
+  },
+  "NetworkGovernance": {
+    "title": "Управление",
+    "total": "Всего",
+    "passed": "Принято",
+    "rejected": "Отклонено",
+    "Live Proposals": "Действующие Предложения",
+    "Past Proposals List": "Список Предыдущих Предложений",
+    "proposer": "Предложивший",
+    "voting start": "Начало Голосования",
+    "voting end": "Окончание Голосования",
+    "remaining time": "Оставшееся Время"
+  },
   "RumorsPage": {
     "title": "P2P-чат: распространяйте слухи",
     "description": "Аноним, как дела? Выбери себе имя пользователя и `начни распространять слухи, я ухожу сегодня...`.\n\nИзвини, Anon, проблемы с ИИ. На чем мы остановились? Ах да, выбери имя пользователя и начинай распространять слухи. Вот и все. Нет истории чата и нет идентификаций. Верните старые времена!",
@@ -309,7 +371,6 @@
     "keyhole tooltip": "text",
     "github tooltip": "text",
     "place your interview here": "Разместите Cвое Интервью Здесь"
-
   },
   "ValidatorNetworksPage": {
     "title": "Поддерживаемые сети",
