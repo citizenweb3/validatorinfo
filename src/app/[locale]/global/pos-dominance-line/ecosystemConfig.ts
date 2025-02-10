@@ -1,10 +1,10 @@
 interface EcosystemConfig {
-  readonly POW: { readonly name: "POW"; readonly color: "#ff6347"; };
-  readonly Cosmos: { readonly name: "Cosmos"; readonly color: "#32cd32"; };
+  readonly POW: { readonly name: "POW"; readonly color: "#B85F32"; };
+  readonly Cosmos: { readonly name: "Cosmos"; readonly color: "#4FB848"; };
   readonly Near: { readonly name: "Near"; readonly color: "#4682b4"; };
-  readonly Polkadot: { readonly name: "Polkadot"; readonly color: "#ff4500"; };
+  readonly Polkadot: { readonly name: "Polkadot"; readonly color: "#2077E0"; };
   readonly Ton: { readonly name: "Ton"; readonly color: "#6a5acd"; };
-  readonly Ethereum: { readonly name: "Ethereum"; readonly color: "#3b9c9c"; };
+  readonly Ethereum: { readonly name: "Ethereum"; readonly color: "#E5C46B"; };
   readonly Solana: { readonly name: "Solana"; readonly color: "#f4a300"; };
   readonly Cardano: { readonly name: "Cardano"; readonly color: "#a1c4fc"; };
   readonly IOTA: { readonly name: "IOTA"; readonly color: "#f1f1f1"; };
@@ -16,12 +16,12 @@ interface EcosystemConfig {
 
 // Centralized chains and color scheme configuration
 export const ECOSYSTEMS_CONFIG = {
-  POW: { name: 'POW', color: '#ff6347' },
-  Cosmos: { name: 'Cosmos', color: '#32cd32' },
+  POW: { name: 'POW', color: '#B85F32' },
+  Cosmos: { name: 'Cosmos', color: '#4FB848' },
   Near: { name: 'Near', color: '#4682b4' },
-  Polkadot: { name: 'Polkadot', color: '#ff4500' },
+  Polkadot: { name: 'Polkadot', color: '#2077E0' },
   Ton: { name: 'Ton', color: '#6a5acd' },
-  Ethereum: { name: 'Ethereum', color: '#3b9c9c' },
+  Ethereum: { name: 'Ethereum', color: '#E5C46B' },
   Solana: { name: 'Solana', color: '#f4a300' },
   Cardano: { name: 'Cardano', color: '#a1c4fc' },
   IOTA: { name: 'IOTA', color: '#f1f1f1' },

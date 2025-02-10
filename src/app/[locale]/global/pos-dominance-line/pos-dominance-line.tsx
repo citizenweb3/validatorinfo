@@ -16,20 +16,20 @@ const PosDominanceLine: FC = () => {
 
   return (
     <div className="flex flex-col w-full p-4 bg-gray-900">
-      <div className="flex justify-between">
-        {/* Chart Type Buttons */}
-        <ChartButtons
-          isChart={false} // Add this line to pass the isChart prop
-          onChartChanged={() => { }} // Add this line to pass the onChartChanged prop
-          chartType={chartType}
-          onTypeChanged={setChartType}
-        />
+      <div className="flex justify-center mb-4"> 
         {/* Ecosystem Selector */}
         <EcosystemSelector 
           ecosystems={allChains} 
           selected={selectedEcosystems} 
           onChange={setSelectedEcosystems} 
         />
+        {/* Chart Type Buttons */}
+        <ChartButtons
+          isChart={false} // Add this line to pass the isChart prop
+          onChartChanged={() => { }} // Add this line to pass the onChartChanged prop
+          chartType={chartType}
+          onTypeChanged={setChartType}
+        />     
       </div>
       {/* Chart Widget - Displays the chart based on selected ecosystems */}
       <ChartWidget 
