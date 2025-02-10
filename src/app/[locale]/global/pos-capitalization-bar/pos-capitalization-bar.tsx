@@ -1,10 +1,30 @@
-import Image from 'next/image';
-import { FC } from 'react';
+'use client';
+import { FC, useState } from 'react';
+import PosCapitalizationBarChartWidget from './posCapitalizationBarChartWidget';
+import ChartButtons from '@/app/validator_comparison/chart-buttons';
 
-const PosCapitalizationBar: FC = () => {
+const PosCapitlizationBar: FC = () => {
+    // State for the chart type, and the selected ecosystems
+    const [chartType, setChartType] = useState<string>('Daily');
+
   return (
-    <Image src={'/img/charts/pos-chart-4.svg'} width={1315} height={316} alt="tem chart 1" className="w-full px-16" />
+    <div className="flex flex-col w-full p-4 bg-gray-900">
+      <div className="flex justify-center mb-4">
+        {/* Chart Type Buttons */}
+        <ChartButtons
+          isChart={false} // Add this line to pass the isChart prop
+          onChartChanged={() => { }} // Add this line to pass the onChartChanged prop
+          chartType={chartType}
+          onTypeChanged={setChartType}
+        />   
+      </div>
+      <div className="flex justify-center mb-4">  
+      <PosCapitalizationBarChartWidget 
+        chartType={chartType} 
+      />
+      </div>
+    </div>
   );
 };
 
-export default PosCapitalizationBar;
+export default PosCapitlizationBar;
