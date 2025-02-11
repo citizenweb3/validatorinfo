@@ -42,7 +42,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
         />
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <ValidatorListItemLinks links={undefined} />
+        <ValidatorListItemLinks validator={validator} />
       </td>
       <td className="border-b border-black px-2 py-2">
         <ValidatorListItemBattery battery={99} id={validator.id} />
