@@ -4,7 +4,7 @@ import { ChainWithNodes } from '../types';
 import getCosmosNodes from './get-cosmos-nodes';
 import getNamadaNodes from './get-namada-nodes';
 
-const { logInfo, logError } = logger('get-nodes');
+const { logError } = logger('get-nodes');
 
 const getNodes = async (chains: ChainWithNodes[]) => {
   for (const chain of chains) {
@@ -12,11 +12,9 @@ const getNodes = async (chains: ChainWithNodes[]) => {
       try {
         switch (chain.ecosystem) {
           case 'namada':
-            logInfo(`Get namada validators for ${chain.name}`);
             await getNamadaNodes(chain);
             break;
           default:
-            logInfo(`Get cosmos validators for ${chain.name}`);
             await getCosmosNodes(chain);
         }
       } catch (e) {

@@ -1,7 +1,7 @@
 export interface ValidatorLinks {
   website?: string;
   github?: string;
-  x?: string;
+  twitter?: string;
 }
 
 export interface ChainItem {

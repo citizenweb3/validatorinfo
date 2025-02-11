@@ -1,6 +1,9 @@
 {
   "common": {
-    "locale": "ru"
+    "locale": "ru",
+    "noGitLink": "Github не указан",
+    "noWebLink": "Вебсайт не указан",
+    "noTwitterLink": "Твиттер не указан"
   },
   "Header": {
     "Quotes": {

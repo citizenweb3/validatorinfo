@@ -22,7 +22,10 @@ const getCosmosNodes = async (chain: ChainWithNodes) => {
       if (val.description.identity && val.description.identity.length === 16) {
         const validator = await validatorService.upsertValidator(val.description.identity, {
           moniker: val.description.moniker,
-          website: val.description.website,
+          website:
+            val.description.website.indexOf('http') === 0
+              ? val.description.website
+              : `https://${val.description.website}`,
           securityContact: val.description.security_contact,
           details: val.description.details,
         });

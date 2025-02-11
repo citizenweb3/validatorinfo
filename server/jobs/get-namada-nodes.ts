@@ -44,14 +44,14 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
   }
 
   const path = indexerUrl + '/api/v1/pos/validator/all';
-  const validators = await getData(path);
+  const nodes = await getData(path);
 
-  if (!validators) {
-    logError(`No validators found for ${chain.name}`);
+  if (!nodes) {
+    logError(`No nodes found for ${chain.name}`);
     return;
   }
 
-  for (const node of validators) {
+  for (const node of nodes) {
     try {
       if (!node.name) continue;
 
@@ -80,8 +80,8 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
         description: {
           identity: node.name,
           moniker: node.name,
-          details: node.description,
-          website: node.website,
+          details: node.description ?? '',
+          website: node.website ?? '',
           security_contact: node.email,
         },
         validatorId: validator.id,
