@@ -1,0 +1,10 @@
+model Price {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  value     Float    @default(0)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_price", fields: [chainId], references: [id])
+
+  @@map("prices")
+}

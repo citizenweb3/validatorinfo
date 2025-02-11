@@ -1,6 +1,9 @@
 {
   "common": {
-    "locale": "en"
+    "locale": "en",
+    "noGitLink": "GitHub not provided",
+    "noWebLink": "Website not provided",
+    "noTwitterLink": "Twitter not provided"
   },
   "Header": {
     "Quotes": {
@@ -47,10 +50,10 @@
     "Search for a validator, pool, tx, address, network, etc": "Search for a validator, pool, tx, address, network, etc",
     "Lucky!?": "Lucky!?",
     "search": {
-        "Validators": "Validators",
-        "Networks": "Networks",
-        "Tokens": "Tokens",
-        "noResults": "No results found, try to search for something else"
+      "Validators": "Validators",
+      "Networks": "Networks",
+      "Tokens": "Tokens",
+      "noResults": "No results found, try to search for something else"
     }
   },
   "Navbar": {
@@ -119,7 +122,10 @@
       },
       "Customize": "Customize",
       "Click 3 times to reset all filters": "Click 3 times to reset all filters",
-      "Ecosystems": "Ecosystems"
+      "Ecosystems": "Ecosystems",
+      "Network Stage": "Network Stage",
+      "Set Position": "Set Position",
+      "Node Status": "Node Status"
     },
     "Tabs": {
       "Calculate": "Calculate",
@@ -304,7 +310,8 @@
     "Merits": "Merits",
     "eco tooltip": "text",
     "keyhole tooltip": "text",
-    "github tooltip": "text"
+    "github tooltip": "text",
+    "place your interview here": "Place Your Interview Here"
   },
   "ValidatorNetworksPage": {
     "title": "Supported Networks",
@@ -448,6 +455,165 @@
   "PublicGoodsCommunityPage": {
     "description": "Please submit links to validator created public events, administered chats and communities, twitter spaces and other similar online lives. Documentation, videos, 1 off blog posts, artistic contributions, stickers, forum participation, etc - are all examples of community contributions.",
     "submit new info": "Submit New Info"
+  },
+  "NodeProfileHeader": {
+    "Tabs": {
+      "Revenue": "Revenue",
+      "TX Summary": "TX Summary",
+      "Voting Summary": "Voting Summary",
+      "Validator Passport": "Validator Passport",
+      "Rich List": "Rich List"
+    }
+  },
+  "ValidatorPassportPage": {
+    "title": "Validator Network Passport",
+    "pretext in prefix": "on",
+    "commission": "Commission",
+    "tokens delegated": "Tokens Delegated",
+    "expected APR": "Expected APR",
+    "outstanding reward": "Outstanding Reward",
+    "voting power": "Voting Power",
+    "validator rank": "Validator Rank",
+    "proposals created": "Proposal Created",
+    "Medals": "Medals",
+    "hash txs tooltip": "text",
+    "horcrux tooltip": "text",
+    "restake tooltip": "text",
+    "reward reinvesting tooltip": "text",
+    "slashed tooltip": "text",
+    "Vanity Chart": "Vanity Chart",
+    "Validator Node Details": "Validator Node Details",
+    "validator name": "Validator Name",
+    "public key": "Public Key",
+    "account address": "Account Address",
+    "identity": "Identity",
+    "validator address": "Validator Address",
+    "reward address": "Reward Address",
+    "authz permissions": "Authz Permissions",
+    "jail status": "Jail Status",
+    "voting": "Voting",
+    "send tx": "Send Tx",
+    "withdraw commission": "Withdraw Commission",
+    "withdraw rewards": "Withdraw Rewards",
+    "token": "TOKEN",
+    "Tabs": {
+      "Withdraw Rewards": "Withdraw Rewards",
+      "Unjail": "Unjail",
+      "Transact": "Transact",
+      "Vote": "Vote"
+    }
+  },
+  "VotingSummaryPage": {
+    "title": "Validator Voting Summary",
+    "pretext in prefix": "on",
+    "show same opinion": "Show Validators With Same Opinions",
+    "Table": {
+      "Title": {
+        "name": "#I.D./Title",
+        "hint": ""
+      },
+      "Type": {
+        "name": "Type",
+        "hint": "Types of proposals depend on the network. They can indicate changes to the code, sentiment-type questions, fund requests and so on. Check out our Metrics section to learn more"
+      },
+      "Vote": {
+        "name": "Vote",
+        "hint": ""
+      },
+      "Voting Ended": {
+        "name": "Voting Ended",
+        "hint": ""
+      }
+    }
+  },
+  "TxSummaryPage": {
+    "title": "Validator Transaction Overview",
+    "pretext in prefix": "on",
+    "Table": {
+      "Type of Tx": {
+        "name": "Type of Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "Transaction ID. Click for details"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Time and date the transaction took place in UTC"
+      },
+      "Block Height": {
+        "name": "Block Height",
+        "hint": "The number of block the transaction took place"
+      }
+    }
+  },
+  "RichListPage": {
+    "title": "Validator Top Delegators and Power Events",
+    "pretext in prefix": "on",
+    "token": "TOKEN",
+    "Table": {
+      "Address": {
+        "name": "Address",
+        "hint": ""
+      },
+      "Amount": {
+        "name": "Amount",
+        "hint": ""
+      },
+      "Happened": {
+        "name": "Happened",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": ""
+      },
+      "Block Height": {
+        "name": "Block Height",
+        "hint": ""
+      }
+    }
+  },
+  "NodeRevenuePage": {
+    "title": "Validator Revenue Breakdown",
+    "pretext in prefix": "on",
+    "Staking Calculator": "Staking Calculator",
+    "Token": "Token",
+    "Enter Staking Amount": "Enter Staking Amount",
+    "Wrong amount": "Wrong amount",
+    "earnings": "d Earnings",
+    "Staking Stats": "Staking Stats",
+    "validator": "Validator",
+    "network": "Network",
+    "Table": {
+      "Yesterday": {
+        "name": "Yesterday",
+        "hint": ""
+      },
+      "Last Week": {
+        "name": "Last Week",
+        "hint": ""
+      },
+      "Last Month": {
+        "name": "Last Month",
+        "hint": ""
+      },
+      "Last Year": {
+        "name": "Last Year",
+        "hint": ""
+      },
+      "Retro Name": {
+        "name": "Retro Name",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Commits",
+        "hint": ""
+      }
+    },
+    "Show Slashing Event": "Show Slashing Event",
+    "Hide Slashing Event": "Hide Slashing Event"
   }
 }
 

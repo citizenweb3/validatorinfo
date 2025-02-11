@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 
 const directions: Record<SortDirection, string> = {
   asc: '-mt-2.5 -mb-2',

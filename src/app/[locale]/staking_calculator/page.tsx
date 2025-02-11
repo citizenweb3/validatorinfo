@@ -2,10 +2,10 @@ import { getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
 
 import Calculator from '@/app/staking_calculator/calculator';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
+import Story from '@/components/story';
 import { Locale } from '@/i18n';
 import validatorService from '@/services/validator-service';
 

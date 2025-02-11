@@ -1,0 +1,21 @@
+model Validator {
+  id              Int     @id @default(autoincrement())
+  identity        String  @unique
+  keybaseName     String? @map("keybase_name")
+  moniker         String
+  details         String?
+  website         String?
+  github          String?
+  telegram        String?
+  discord         String?
+  twitter         String?
+  securityContact String? @map("security_contact")
+  url             String?
+  wrongKey        Boolean @default(false) @map("wrong_key")
+  chainId         Int?    @map("chain_id")
+
+  chain Chain? @relation("chain_validators", fields: [chainId], references: [id])
+  nodes Node[] @relation("validator_node")
+
+  @@map("validators")
+}

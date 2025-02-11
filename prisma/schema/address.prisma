@@ -1,0 +1,11 @@
+model Address {
+  id          Int    @id @default(autoincrement())
+  mainAddress String @unique @map("main_address") @db.VarChar(256)
+  address     String
+  chainId     Int    @map("chain_id")
+
+  chain  Chain   @relation("chain_addresses", fields: [chainId], references: [id])
+  wallet Account @relation("account_addresses", fields: [mainAddress], references: [mainAddress])
+
+  @@map("addresses")
+}

@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 import OurManifestoModal from '@/app/about/modals/our-manifesto-modal';
 import OurToolsModal from '@/app/about/modals/our-tools-modal';
-import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
+import Story from '@/components/story';
 import { Locale } from '@/i18n';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {

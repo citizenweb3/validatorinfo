@@ -1,7 +1,7 @@
 export interface ValidatorLinks {
   website?: string;
   github?: string;
-  x?: string;
+  twitter?: string;
 }
 
 export interface ChainItem {
@@ -39,5 +39,11 @@ export interface PagesProps {
     | 'ValidatorGovernancePage'
     | 'ValidatorPublicGoodsPage'
     | 'PublicGoodsInfrastructurePage'
-    | 'PublicGoodsMediaPage';
+    | 'PublicGoodsMediaPage'
+    | 'NodeProfileHeader'
+    | 'ValidatorPassportPage'
+    | 'VotingSummaryPage'
+    | 'TxSummaryPage'
+    | 'RichListPage'
+    | 'NodeRevenuePage';
 }

@@ -3,7 +3,7 @@ import { FC } from 'react';
 import SimpleValidatorsList from '@/app/validators/simple-validators/simple-validators-list';
 import ListFilters from '@/components/common/list-filters/list-filters';
 import TableHeaderItem from '@/components/common/table/table-header-item';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {
@@ -12,7 +12,7 @@ interface OwnProps extends PagesProps {
   sort: { sortBy: string; order: SortDirection };
 }
 
-const SimpleValidators: FC<OwnProps> = async ({page, perPage, sort, currentPage }) => {
+const SimpleValidators: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
   return (
     <div>
       <ListFilters perPage={perPage} />

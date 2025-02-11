@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import Validators from '@/app/main-validators/validator-list/validators';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
-import { SortDirection } from '@/services/validator-service';
+import { SortDirection } from '@/server/types';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -18,7 +18,7 @@ const Home: NextPage<PageProps> = async ({ searchParams: q }) => {
   const currentPage = parseInt((q.p as string) || '1');
   const validatorsPerPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
-  const sortBy = (q.sortBy as 'moniker' | 'nodes') ?? 'moniker';
+  const sortBy = (q.sortBy as 'moniker' | 'nodes' | undefined) ?? undefined;
   const order = (q.order as SortDirection) ?? 'asc';
 
   return (

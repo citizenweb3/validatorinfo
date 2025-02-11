@@ -1,7 +1,7 @@
 import { getOfflineSigner } from '@cosmostation/cosmos-client';
 import { cosmos } from '@cosmostation/extension-client';
 import { AddChainParams } from '@cosmostation/extension-client/types/message';
-import { Chain, LcdNode, RpcNode } from '@prisma/client';
+import { Chain } from '@prisma/client';
 
 import { WalletProvider } from '.';
 
@@ -17,7 +17,7 @@ class CosmostationProvider extends WalletProvider {
     client.getAccount(chainId);
   }
 
-  async suggestChain(chain: Chain & { rpcNodes: RpcNode[]; lcdNodes: LcdNode[] }) {
+  async suggestChain(chain: Chain & { rpcNode: string; lcdNode: string }) {
     const client = await this.getWallet();
     const activeChains = await client.getActivatedChainIds();
     if (activeChains && activeChains.find((activeChain) => chain.chainId === activeChain)) return;
@@ -28,7 +28,7 @@ class CosmostationProvider extends WalletProvider {
       addressPrefix: chain.bech32Prefix,
       baseDenom: chain.minimalDenom,
       displayDenom: chain.denom,
-      restURL: chain.lcdNodes[0].url,
+      restURL: chain.lcdNode,
       coinGeckoId: chain.coinGeckoId,
       coinType: chain.coinType.toString(),
       decimals: chain.coinDecimals,

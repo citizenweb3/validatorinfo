@@ -1,11 +1,11 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
-import Story from '@/components/Story';
 import NotToday from '@/components/common/not-today';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
+import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 
 const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {

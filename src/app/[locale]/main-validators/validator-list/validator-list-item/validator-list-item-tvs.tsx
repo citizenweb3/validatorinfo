@@ -4,7 +4,7 @@ import { FC } from 'react';
 import LineChart from '@/components/charts/line-chart';
 
 interface OwnProps {
-  id: string;
+  id: number;
   activeId: string | null;
   setActiveId: (id: string | null) => void;
 }
