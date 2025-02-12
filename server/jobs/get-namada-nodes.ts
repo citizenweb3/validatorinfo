@@ -1,5 +1,6 @@
 import db from '@/db';
 import logger from '@/logger';
+import isUrlValid from '@/server/utils/is-url-valid';
 import nodeService from '@/services/node-service';
 import validatorService from '@/services/validator-service';
 
@@ -62,6 +63,8 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
       let website = node.website ?? '';
       if (website) {
         website = node.website.indexOf('http') === 0 ? node.website : `https://${node.website}`;
+
+        website = isUrlValid(website) ? website : '';
       }
 
       if (!validator) {

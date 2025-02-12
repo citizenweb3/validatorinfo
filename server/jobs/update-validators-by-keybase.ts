@@ -3,6 +3,7 @@ import { Validator } from '@prisma/client';
 
 import db from '@/db';
 import logger from '@/logger';
+import isUrlValid from '@/server/utils/is-url-valid';
 
 const { logInfo, logError, logDebug } = logger('keychain');
 
@@ -64,17 +65,26 @@ const updateValidatorLogo = async (validator: Validator) => {
   if (keybaseName) {
     const info = await getInfoFromKeybase(keybaseName);
     logDebug(`Info for ${keybaseName} - ${validator.identity}: ${JSON.stringify(info)}`);
+
+    let twitter = info.twitter;
+    if (twitter) {
+      twitter = twitter.indexOf('http') !== 0 ? `https://x.com/${twitter}` : twitter;
+      twitter = isUrlValid(twitter) ? twitter : '';
+    }
+
+    let github = info.github;
+    if (github) {
+      github = github.indexOf('http') !== 0 ? `https://github.com/${info.github}` : github;
+      github = isUrlValid(github) ? github : '';
+    }
+
     try {
       await db.validator.update({
         where: { id: validator.id },
         data: {
           url: info.picture,
-          twitter:
-            validator.twitter ||
-            (info.twitter && info.twitter.indexOf('http') !== 0 ? `https://x.com/${info.twitter}` : info.twitter),
-          github:
-            validator.github ||
-            (info.github && info.github.indexOf('http') !== 0 ? `https://github.com/${info.github}` : info.github),
+          twitter: twitter || validator.twitter,
+          github: github || validator.github,
         },
       });
     } catch (e) {
