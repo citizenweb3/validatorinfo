@@ -59,11 +59,16 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
         where: { OR: [{ securityContact: node.email }, { website: node.website }, { moniker: node.name }] },
       });
 
+      let website = node.website ?? '';
+      if (website) {
+        website = node.website.indexOf('http') === 0 ? node.website : `https://${node.website}`;
+      }
+
       if (!validator) {
         validator = await validatorService.upsertValidator(node.name, {
           moniker: node.name,
           details: node.description,
-          website: node.website,
+          website,
           securityContact: node.email,
           url: node.avatar,
         });
@@ -81,7 +86,7 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
           identity: node.name,
           moniker: node.name,
           details: node.description ?? '',
-          website: node.website ?? '',
+          website,
           security_contact: node.email,
         },
         validatorId: validator.id,
