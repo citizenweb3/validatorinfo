@@ -61,7 +61,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${sfpro.variable} ${handjet.variable}`}>
+    <html lang={locale} className={`${sfpro.variable} ${handjet.variable}`} suppressHydrationWarning>
       <head>
         <title>
           ValidatorInfo: Validator & Mining Pool Information - Explore the Multichain Network Landscape of Web3
