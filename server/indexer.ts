@@ -25,9 +25,6 @@ const runServer = async () => {
     logInfo(`Indexer is running at http://localhost:${port}`);
   });
 
-  await updateValidatorsBySite();
-  await updateValidatorsByKeybase();
-
   await getPrices(chains);
   await getNodes(chains);
   await updateValidatorsByKeybase();
