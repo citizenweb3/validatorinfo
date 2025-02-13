@@ -1,19 +1,25 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import TotalsListItem from '@/app/global/totals/totals-list-item';
 import { networkProfileExample } from '@/app/networks/[id]/networkProfileExample';
+import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 
-interface OwnProps {}
+interface OwnProps {
+}
 
 const TotalsListNetworkPassport: FC<OwnProps> = async () => {
   const t = await getTranslations('NetworkPassport');
 
 
   return (
-    <div className="mt-24 flex w-full flex-row justify-between space-x-16 px-64">
+    <div className="mt-24 flex w-full flex-row justify-center gap-6">
       {networkProfileExample.totalsMetrics.map((item) => (
-        <TotalsListItem key={item.title} title={t(item.title as 'amount of wallets')} data={item.data} isPercents />
+        <MetricsCardItem key={item.title}
+                         title={t(item.title as 'amount of wallets')}
+                         data={item.data}
+                         isPercents
+                         className={'pb-6 pt-2.5'}
+                         dataClassName={'mt-5'} />
       ))}
     </div>
   );

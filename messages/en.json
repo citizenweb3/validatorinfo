@@ -216,7 +216,7 @@
     "inactive": "Inactive"
   },
   "NetworkGovernance": {
-    "title": "Governance",
+    "title": "Network Governance",
     "total": "Total",
     "passed": "Passed",
     "rejected": "Rejected",
@@ -226,6 +226,55 @@
     "voting start": "Voting Start",
     "voting end": "Voting End",
     "remaining time": "Remaining Time"
+  },
+  "NetworkDevInfo": {
+    "title": "Dev Info",
+    "pre-vote": "Pre-Vote",
+    "pre-commit": "Pre-Commit",
+    "pre vote synchronized": "Validator has submitted pre-vote with synchronized block hash",
+    "pre vote different": "Validator has submitted pre-vote with different block hash",
+    "pre vote not submitted": "Validator has not submitted pre-vote yet",
+    "pre commit synchronized": "Validator has submitted pre-commit with synchronized block hash",
+    "pre commit different": "Validator has submitted pre-commit with different block hash",
+    "pre commit not submitted": "Validator has not submitted pre-commit yet",
+    "peers": "Peers",
+    "seeds": "Seeds",
+    "binary versions": "Binary Versions",
+    "Parameters": "Parameters",
+    "bech32 prefix": "Bech32 Prefix",
+    "daemon name": "Daemon Name",
+    "node home": "Node Home",
+    "slip44": "Slip44",
+    "key algosz": "Key Algosz",
+    "genesis url": "Genesis URL",
+    "chain id": "Chain ID",
+    "denom": "Denom",
+    "Developer Activity": "Developer Activity",
+    "github stars": "Github Stars",
+    "github forks": "Github Forks",
+    "show dropdown": "Show Repositories",
+    "hide dropdown": "Hide Repositories",
+    "Table": {
+      "Block Height": {
+        "name": "Block Height",
+        "hint": ""
+      },
+      "Coins Slashed": {
+        "name": "Coins Slashed",
+        "hint": ""
+      }
+    }
+  },
+  "NetworkTokenomics": {
+    "title": "Liveliness",
+    "Token Price": "Token Price",
+    "Distribution": "Distribution",
+    "Gini Coefficient": "Gini Coefficient",
+    "number of validators": "Number of Validators",
+    "community pool tvl": "Community Pool TVL",
+    "% of tokens staked": "% of Tokens Staked",
+    "reward to payout": "Reward to Payout",
+    "Revenue vs Capital Flow": "Revenue VS Capital Flow"
   },
   "RumorsPage": {
     "title": "P2P Chat: Spread the Rumors",
@@ -671,8 +720,8 @@
         "hint": ""
       }
     },
-    "Show Slashing Event": "Show Slashing Event",
-    "Hide Slashing Event": "Hide Slashing Event"
+    "show dropdown": "Show Slashing Event",
+    "hide dropdown": "Hide Slashing Event"
   }
 }
 

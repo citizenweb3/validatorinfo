@@ -216,7 +216,7 @@
     "inactive": "Не активные"
   },
   "NetworkGovernance": {
-    "title": "Управление",
+    "title": "Управление Сети",
     "total": "Всего",
     "passed": "Принято",
     "rejected": "Отклонено",
@@ -226,6 +226,55 @@
     "voting start": "Начало Голосования",
     "voting end": "Окончание Голосования",
     "remaining time": "Оставшееся Время"
+  },
+  "NetworkDevInfo": {
+    "title": "Разработка",
+    "pre-vote": "Предварительное голосование",
+    "pre-commit": "Предварительный коммит",
+    "pre vote synchronized": "Валидатор подал предварительное голосование с синхронизированным хэшем блока",
+    "pre vote different": "Валидатор подал предварительное голосование с другим хэшем блока",
+    "pre vote not submitted": "Валидатор еще не подал предварительное голосование",
+    "pre commit synchronized": "Валидатор подал предварительный коммит с синхронизированным хэшем блока",
+    "pre commit different": "Валидатор подал предварительный коммит с другим хэшем блока",
+    "pre commit not submitted": "Валидатор еще не подал предварительный коммит",
+    "peers": "Пиры",
+    "seeds": "Сиды",
+    "binary versions": "Версия бинарника",
+    "Parameters": "Параметры",
+    "bech32 prefix": "Bech32 Префикс",
+    "daemon name": "Имя Сервиса",
+    "node home": "Папка Ноды",
+    "slip44": "Slip44",
+    "key algosz": "Ключ Алго",
+    "genesis url": "Генезис URL",
+    "chain id": "ID сети",
+    "denom": "Деном",
+    "Developer Activity": "Активность Разработчиков",
+    "github stars": "Github Звезд",
+    "github forks": "Github Форков",
+    "show dropdown": "Показать Репозитории",
+    "hide dropdown": "Скрыть Репозитории",
+    "Table": {
+      "Block Height": {
+        "name": "Высота Блока",
+        "hint": ""
+      },
+      "Coins Slashed": {
+        "name": "Заслэшенные Монеты",
+        "hint": ""
+      }
+    }
+  },
+  "NetworkTokenomics": {
+    "title": "Жизнерадостность",
+    "Token Price": "Цена Токена",
+    "Distribution": "Распределение",
+    "Gini Coefficient": "Коэффициент Gini",
+    "number of validators": "Число Валидаторов",
+    "community pool tvl": "TVL Комьюнити Пула",
+    "% of tokens staked": "% Застейканных Токенов",
+    "reward to payout": "Вознаграждения к Выплате",
+    "Revenue vs Capital Flow": "Выручка VS Движение капитала"
   },
   "RumorsPage": {
     "title": "P2P-чат: распространяйте слухи",
@@ -671,8 +720,8 @@
         "hint": ""
       }
     },
-    "Show Slashing Event": "Показать События Слэшинга",
-    "Hide Slashing Event": "Скрыть События Слэшинга"
+    "show dropdown": "Показать События Слэшинга",
+    "hide dropdown": "Скрыть События Слэшинга"
   }
 }
 

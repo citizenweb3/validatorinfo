@@ -5,7 +5,8 @@ import { FC } from 'react';
 import { networkProfileExample } from '@/app/networks/[id]/networkProfileExample';
 import SubTitle from '@/components/common/sub-title';
 
-interface OwnProps {}
+interface OwnProps {
+}
 
 const NetworkAprTvs: FC<OwnProps> = async () => {
   const t = await getTranslations('NetworkPassport');

@@ -40,16 +40,18 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
       <div className="col-span-2 max-w-xs border-b border-bgSt">
         <div className="font-sfpro text-base">
           <h2>{t('description')}</h2>
-          <div className="relative my-4 h-[40px] w-full overflow-hidden md:h-[50px] lg:h-[60px] xl:h-[66px] 2xl:h-[86px]">
+          <div
+            className="relative my-4 h-[40px] w-full overflow-hidden md:h-[50px] lg:h-[60px] xl:h-[66px] 2xl:h-[86px]">
             <iframe
               src={playerUrl}
-              className="m-0 origin-top-left scale-[0.20] p-0 md:scale-[0.23] lg:scale-[0.28] xl:scale-[0.32] 2xl:scale-[0.43]"
+              className="m-0 origin-top-left scale-[0.20] p-0 md:scale-[0.23] lg:scale-[0.28] xl:scale-[0.32] 2xl:scale-[0.41]"
               width="740"
               height="200"
-            ></iframe>
+            >
+            </iframe>
           </div>
           {!foundEpisode?.player_url && (
-            <RoundedButton href={''} contentClassName="font-handjet text-sm px-5 pt-0 pb-0" className="mb-4">
+            <RoundedButton href={''} contentClassName="font-handjet text-sm px-5 pt-0 pb-0" className="mb-4 active:mb-3">
               {t('place your interview here')}
             </RoundedButton>
           )}

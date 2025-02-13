@@ -4,6 +4,8 @@ import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[id]/networkProfileExample';
 import SubTitle from '@/components/common/sub-title';
+import NodeDetailsItem
+  from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/node-details/node-details-item';
 
 interface OwnProps {
   chain: Chain;
@@ -40,10 +42,12 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base ">
             {t(`${item.title as 'active validators'}`)}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-base hover:text-highlight">
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-base hover:text-highlight">
             {formatData(item.title, item.data)}
           </div>
         </div>
+
       ))}
     </>
   );
