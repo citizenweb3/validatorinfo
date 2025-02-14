@@ -1,6 +1,9 @@
 {
   "common": {
-    "locale": "pt"
+    "locale": "pt",
+    "noGitLink": "Github não oferecido",
+    "noWebLink": "Website não oferecido",
+    "noTwitterLink": "Twitter não oferecido"
   },
   "Header": {
     "Quotes": {

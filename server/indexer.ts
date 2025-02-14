@@ -3,8 +3,9 @@ import express, { Express } from 'express';
 
 import db from '@/db';
 import logger from '@/logger';
+import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
+import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 
-import createUpdateValidatorsLogos from './jobs/create-update-validators-logos';
 import getNodes from './jobs/get-nodes';
 import { getPrices } from './jobs/get-prices';
 import { ChainWithNodes } from './types';
@@ -23,9 +24,11 @@ const runServer = async () => {
   app.listen(port, () => {
     logInfo(`Indexer is running at http://localhost:${port}`);
   });
+
   await getPrices(chains);
   await getNodes(chains);
-  await createUpdateValidatorsLogos();
+  await updateValidatorsByKeybase();
+  await updateValidatorsBySite();
 
   const getPricesJob = new CronJob(
     '* 5 * * * *',
@@ -50,9 +53,10 @@ const runServer = async () => {
   const getValidatorLogosJob = new CronJob(
     '* 5 * * * *',
     async () => {
-      logInfo('validator logos parsing');
-      await createUpdateValidatorsLogos();
-      logInfo('validator logos parsed');
+      logInfo('validator info parsing');
+      await updateValidatorsByKeybase();
+      await updateValidatorsBySite();
+      logInfo('validator info parsed');
     },
     null,
     true,

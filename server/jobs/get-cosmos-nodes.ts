@@ -1,10 +1,11 @@
 import logger from '@/logger';
+import isUrlValid from '@/server/utils/is-url-valid';
 import nodeService from '@/services/node-service';
 import validatorService from '@/services/validator-service';
 
 import { ChainWithNodes, Validator } from '../types';
 
-const { logInfo, logError, logDebug } = logger('cosmos-nodes');
+const { logInfo, logError } = logger('cosmos-nodes');
 
 const getData = async (url: string) => await fetch(url).then((data) => data.json());
 
@@ -20,9 +21,18 @@ const getCosmosNodes = async (chain: ChainWithNodes) => {
     validators.map(async (val: Validator) => {
       let validatorId: number | undefined;
       if (val.description.identity && val.description.identity.length === 16) {
+        let website = val.description.website;
+        if (website) {
+          website =
+            val.description.website.indexOf('http') === 0
+              ? val.description.website
+              : `https://${val.description.website}`;
+
+          website = isUrlValid(website) ? website : '';
+        }
         const validator = await validatorService.upsertValidator(val.description.identity, {
           moniker: val.description.moniker,
-          website: val.description.website,
+          website,
           securityContact: val.description.security_contact,
           details: val.description.details,
         });

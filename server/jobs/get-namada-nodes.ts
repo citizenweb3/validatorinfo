@@ -1,5 +1,6 @@
 import db from '@/db';
 import logger from '@/logger';
+import isUrlValid from '@/server/utils/is-url-valid';
 import nodeService from '@/services/node-service';
 import validatorService from '@/services/validator-service';
 
@@ -44,14 +45,14 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
   }
 
   const path = indexerUrl + '/api/v1/pos/validator/all';
-  const validators = await getData(path);
+  const nodes = await getData(path);
 
-  if (!validators) {
-    logError(`No validators found for ${chain.name}`);
+  if (!nodes) {
+    logError(`No nodes found for ${chain.name}`);
     return;
   }
 
-  for (const node of validators) {
+  for (const node of nodes) {
     try {
       if (!node.name) continue;
 
@@ -59,11 +60,18 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
         where: { OR: [{ securityContact: node.email }, { website: node.website }, { moniker: node.name }] },
       });
 
+      let website = node.website ?? '';
+      if (website) {
+        website = node.website.indexOf('http') === 0 ? node.website : `https://${node.website}`;
+
+        website = isUrlValid(website) ? website : '';
+      }
+
       if (!validator) {
         validator = await validatorService.upsertValidator(node.name, {
           moniker: node.name,
           details: node.description,
-          website: node.website,
+          website,
           securityContact: node.email,
           url: node.avatar,
         });
@@ -80,8 +88,8 @@ const getNamadaNodes = async (chain: ChainWithNodes) => {
         description: {
           identity: node.name,
           moniker: node.name,
-          details: node.description,
-          website: node.website,
+          details: node.description ?? '',
+          website,
           security_contact: node.email,
         },
         validatorId: validator.id,

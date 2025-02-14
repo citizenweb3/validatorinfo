@@ -45,14 +45,19 @@ const upsertValidator = async (
 ): Promise<Validator> => {
   logDebug(`Upsert validator: ${identity}`);
 
+  let website = desc.website || '';
+  if (website) {
+    website = website.startsWith('http') ? website : `https://${website}`;
+  }
+
   if (desc.url) {
     desc.url = desc.url?.startsWith('http') ? desc.url : `https://${desc.url}`;
   }
 
   return db.validator.upsert({
     where: { identity },
-    update: { ...desc },
-    create: { ...desc, identity },
+    update: { ...desc, website },
+    create: { ...desc, website, identity },
   });
 };
 
@@ -124,7 +129,7 @@ const getLite = async (
   const validators = (await db.validator.findMany({
     skip: skip,
     take: take,
-    select: { id: true, moniker: true, url: true, identity: true },
+    select: { id: true, moniker: true, url: true, identity: true, twitter: true, github: true, website: true },
     orderBy: { [sortBy]: order },
   })) as ValidatorWithNodes[];
 

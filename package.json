@@ -19,6 +19,7 @@
     "@prisma/client": "^5.18.0",
     "base64url": "^3.0.1",
     "chart.js": "^4.4.3",
+    "cheerio": "^1.0.0",
     "cron": "^3.1.7",
     "crypto-random-string": "^5.0.0",
     "d3": "^7.9.0",

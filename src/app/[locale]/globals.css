@@ -7,6 +7,19 @@ html {
     --tw-shadow-color: #000000;
 
     font-size: 0.9vw;
+
+
+        @media screen(lg) {
+            font-size: 12px;
+        }
+        @media screen(xl) {
+            font-size: 14px;
+        }
+
+        * {
+            scrollbar-color: unset;
+            scrollbar-width: unset;
+        }
 }
 
 
