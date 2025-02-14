@@ -26,7 +26,7 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
       { query: '(min-width: 1515px)', values: { circleRadius: 90, logoSize: 50, centerLogoSize: 80 } },
       { query: '(min-width: 1330px)', values: { circleRadius: 72, logoSize: 40, centerLogoSize: 65 } },
       { query: '(min-width: 1140px)', values: { circleRadius: 64, logoSize: 37, centerLogoSize: 57 } },
-      { query: '(min-width: 935px)', values: { circleRadius: 57, logoSize: 32, centerLogoSize: 53 } },
+      { query: '(min-width: 950px)', values: { circleRadius: 57, logoSize: 32, centerLogoSize: 53 } },
     ];
 
     const mediaQueries = queries.map(({ query, values }) => ({
