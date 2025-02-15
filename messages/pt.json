@@ -180,8 +180,9 @@
     "Others Links": "Outras ligações",
     "Show Transactions": "Mostrar Transacções",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
-    "Revenue": "Receitas",
-    "Validator Cost": "Custo do Validador",
+    "tvl": "TVL",
+    "revenue": "Receitas",
+    "validator cost": "Custo do Validador",
     "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
     "revenue tooltip": "O montante das taxas geradas pela rede ontem",
     "validator cost tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
@@ -258,12 +259,12 @@
     "show dropdown": "Mostrar Repositórios",
     "hide dropdown": "Ocultar Repositórios",
     "Table": {
-      "Block Height": {
-        "name": "Altura do Bloco",
+      "Repository Name": {
+        "name": "Nome do Repositório",
         "hint": ""
       },
-      "Coins Slashed": {
-        "name": "Moedas Cortadas",
+      "Commits": {
+        "name": "Commits",
         "hint": ""
       }
     }

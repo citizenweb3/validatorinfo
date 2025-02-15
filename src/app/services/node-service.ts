@@ -52,8 +52,17 @@ const upsertNode = async (chain: Chain, val: ParsedValidator & { validatorId?: n
   return node;
 };
 
+const getNodesByChainId = async (chainId: number): Promise<Node[] | null> => {
+  return db.node.findMany({
+    where: {
+      chainId: chainId,
+    },
+  });
+};
+
 const nodeService = {
   upsertNode,
+  getNodesByChainId
 };
 
 export default nodeService;

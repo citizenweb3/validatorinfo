@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { FC, useState } from 'react';
 
 import BaseModal from '@/components/common/modal/base-modal';
-import PlusButton from '@/components/common/plus-button';
+import PlusButton, { Size } from '@/components/common/plus-button';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 import Link from 'next/link';
 import icons from '@/components/icons';
@@ -13,16 +13,16 @@ interface OwnProps {
   item?: string;
   title?: string;
   list?: validatorNodesWithChainData[];
-
+  plusButtonSize?: Size;
 }
 
-const MetricsCardsModal: FC<OwnProps> = ({ item, title, list }) => {
+const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = 'sm' }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
 
   return (
     <div>
       <div>
-        <PlusButton size="sm" isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
+        <PlusButton size={plusButtonSize} isOpened={isModalOpened} onClick={() => setIsModalOpened(true)} />
       </div>
       <BaseModal
         opened={isModalOpened}

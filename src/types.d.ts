@@ -46,6 +46,7 @@ export interface PagesProps {
     | 'TxSummaryPage'
     | 'RichListPage'
     | 'NodeRevenuePage'
+    | 'NetworkProfileHeader'
     | 'NetworkGovernance'
     | 'NetworkDevInfo';
 }

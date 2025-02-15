@@ -19,7 +19,7 @@ function TableDropdown<T>({ page, items, Table }: OwnProps<T>) {
   return (
     <div>
       <div className="mb-8 flex items-center justify-end">
-        <RoundedButton onClick={handleToggle} className="text-base">
+        <RoundedButton onClick={handleToggle} className="text-lg">
           {isOpened ? t('hide dropdown') : t('show dropdown')}
         </RoundedButton>
       </div>
