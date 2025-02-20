@@ -143,10 +143,10 @@ const getList = async (): Promise<DropdownListItem[]> => {
 
   return (
     await db.validator.findMany({
-      select: { moniker: true, identity: true },
+      select: { moniker: true, id: true },
       orderBy: { moniker: 'asc' },
     })
-  ).map((e) => ({ title: e.moniker, value: e.identity })) as DropdownListItem[];
+  ).map((e) => ({ title: e.moniker, value: e.id })) as DropdownListItem[];
 };
 
 const getValidatorByIdentity = async (identity: string): Promise<Validator | null> => {
