@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import { validatorExample } from '@/app/validators/[id]/(validatorProfile)/validatorExample';
+import { validatorExample } from '@/app/validators/[id]/(validator-profile)/validatorExample';
 import ToolTip from '@/components/common/tooltip';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
@@ -32,32 +32,28 @@ const MetricsBlocks: FC<OwnProps> = async ({ id }) => {
   return (
     <div className="mt-12 flex flex-col items-center gap-8">
       <div className="flex w-full justify-center gap-8">
-        <MetricsCardItem key={validatorExample.metrics.technicalScore}
-                         title={t('technical score')}
+        <MetricsCardItem title={t('technical score')}
                          data={validatorExample.metrics.technicalScore}
                          isModal
                          modalTitle={t('explanation')}
                          modalItem={formulaUrl}
                          className={cardClass}
                          dataClassName={cardValueClass} />
-        <MetricsCardItem key={validatorExample.metrics.socialScore}
-                         title={t('social score')}
+        <MetricsCardItem title={t('social score')}
                          data={validatorExample.metrics.socialScore}
                          isModal
                          modalTitle={t('explanation')}
                          modalItem={formulaUrl}
                          className={cardClass}
                          dataClassName={cardValueClass} />
-        <MetricsCardItem key={validatorExample.metrics.governanceScore}
-                         title={t('governance score')}
+        <MetricsCardItem title={t('governance score')}
                          data={validatorExample.metrics.governanceScore}
                          isModal
                          modalTitle={t('explanation')}
                          modalItem={formulaUrl}
                          className={cardClass}
                          dataClassName={cardValueClass} />
-        <MetricsCardItem key={validatorExample.metrics.userScore}
-                         title={t('user score')}
+        <MetricsCardItem title={t('user score')}
                          data={validatorExample.metrics.userScore}
                          isModal
                          modalTitle={t('explanation')}

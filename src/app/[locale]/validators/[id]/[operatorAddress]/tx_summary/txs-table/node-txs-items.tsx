@@ -38,20 +38,19 @@ const NodeTxsItem: FC<OwnProps> = ({item}) => {
                     <div className="flex-grow text-center">{item.typeOfTx}</div>
                 </Link>
             </td>
-            <td className="w-1/4 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
+            <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
                 <Link href={''} className="flex justify-center">
-                    <div
-                        className="text-center font-handjet underline underline-offset-4">{cutHash({value: item.txHash})}</div>
+                    <div className="text-center font-handjet text-lg underline underline-offset-3">{cutHash({value: item.txHash})}</div>
                 </Link>
             </td>
-            <td className="w-1/4 border-b border-black px-2 py-2 text-sm hover:text-highlight active:border-bgSt">
+            <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
                 <Link href={''} className="flex justify-center">
-                    <div className="text-center">{item.timeStamp}</div>
+                    <div className="text-center text-base">{item.timeStamp}</div>
                 </Link>
             </td>
-            <td className="w-1/4 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
+            <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
                 <Link href={''} className="flex justify-center">
-                    <div className="font-handjet text-center">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
+                    <div className="font-handjet text-lg text-center">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
                 </Link>
             </td>
         </tr>

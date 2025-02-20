@@ -45,7 +45,7 @@ const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = '
           {list && (
             <div className="mt-6 flex w-40 flex-row flex-wrap items-center justify-center">
               {list.map((chain) => (
-                <Link key={chain.operatorAddress} href={`/networks/${chain.chainId}`} className="h-7 w-7">
+                <Link key={chain.operatorAddress} href={`/networks/${chain.chainId}/passport`} className="h-7 w-7">
                   <Image
                     src={chain.logoUrl ?? icons.AvatarIcon}
                     alt={chain.prettyName || 'chain'}

@@ -34,7 +34,7 @@ const NodeVotesItem: FC<OwnProps> = ({item}) => {
                 <Link href={''} className="flex items-center gap-1">
                     <Image src={getSquareIcon()} alt={`${item.vote}`} width={30} height={30}/>
                     <div className="font-handjet text-xl text-highlight">{`#${item.proposalId}`}</div>
-                    <div className="text-sm">{item.proposalTitle}</div>
+                    <div className="font-sfpro text-base">{item.proposalTitle}</div>
                 </Link>
             </td>
             <td className="w-1/6 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
@@ -49,7 +49,7 @@ const NodeVotesItem: FC<OwnProps> = ({item}) => {
             </td>
             <td className="w-2/6 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
                 <Link href={''} className="flex justify-center">
-                    <div className="font-handjet text-center">{item.votingEnded}</div>
+                    <div className="font-handjet text-lg text-center">{item.votingEnded}</div>
                 </Link>
             </td>
         </tr>
