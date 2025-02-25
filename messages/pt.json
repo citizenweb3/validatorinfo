@@ -755,6 +755,7 @@
   "TxInformationPage": {
     "title": "Informações Sobre a Transação",
     "show all transactions": "Mostrar Todas as Transacções",
+    "hash txs tooltip": "text",
     "claim reward": "Solicitar Recompensa",
     "accepted": "Aceite",
     "chain": "Rede",
@@ -766,6 +767,10 @@
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"
-    }
+    },
+    "delegate address": "Endereço do Delegado",
+    "validator address": "Endereço do Validador",
+    "amount": "Quantidade",
+    "auto claim reward": "Reivindicação Automática de Recompensa"
   }
 }

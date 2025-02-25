@@ -755,6 +755,7 @@
   "TxInformationPage": {
     "title": "Информация о Транзакции",
     "show all transactions": "Показать Все Транзакции",
+    "hash txs tooltip": "text",
     "claim reward": "Получение Вознаграждения",
     "accepted": "Принято",
     "chain": "Сеть",
@@ -766,7 +767,11 @@
     "Tabs": {
       "Expand": "Развернуть",
       "JSON": "JSON"
-    }
+    },
+    "delegate address": "Адрес Делегатора",
+    "validator address": "Адрес Валидатора",
+    "amount": "Количество",
+    "auto claim reward": "Автоматически полученные вознаграждения"
   }
 }
 

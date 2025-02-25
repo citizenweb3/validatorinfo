@@ -221,12 +221,10 @@ export const getTxInformationTabs = (id: number, txHash: string): TabOptions[] =
     {
       name: 'Expand',
       href: `/networks/${id}/tx/${txHash}/expand`,
-      isScroll: false,
     },
     {
       name: 'JSON',
       href: `/networks/${id}/tx/${txHash}/json`,
-      isScroll: false,
     },
   ];
 };

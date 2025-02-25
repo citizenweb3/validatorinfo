@@ -9,7 +9,7 @@ interface OwnProps {
   id: string;
   item: {
     typeOfTx: string;
-    txHash: string;
+    hash: string;
     timeStamp: string;
     blockHeight: string;
   };
@@ -25,7 +25,7 @@ const NetworkTxsItem: FC<OwnProps> = ({ id, item }) => {
     }
   };
 
-  const link = `/networks/${id}/tx/${item.txHash}`;
+  const link = `/networks/${id}/tx/${item.hash}`;
 
   return (
     <tr className="group cursor-pointer hover:bg-bgHover">
@@ -34,7 +34,7 @@ const NetworkTxsItem: FC<OwnProps> = ({ id, item }) => {
           <div className="flex-shrink-0">
             <Image src={getSquareIcon()} alt={`${item.typeOfTx}`} width={30} height={30} />
           </div>
-          <div className="flex-grow text-center underline underline-offset-3">{cutHash({ value: item.txHash })}</div>
+          <div className="flex-grow text-center underline underline-offset-3">{cutHash({ value: item.hash })}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">

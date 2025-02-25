@@ -767,7 +767,11 @@
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"
-    }
+    },
+    "delegate address": "Delegate Address",
+    "validator address": "Validator Address",
+    "amount": "Amount",
+    "auto claim reward": "Auto Claim Reward"
   }
 }
 

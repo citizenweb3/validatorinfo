@@ -17,7 +17,7 @@ const NetworkTxsList: FC<OwnProps> = async ({ id, sort, perPage, currentPage = 1
   return (
     <tbody>
     {networkTxsExample.map((item) => (
-      <NetworkTxsItem key={item.txHash} id={id} item={item} />
+      <NetworkTxsItem key={item.hash} id={id} item={item} />
     ))}
     <tr>
       <td colSpan={5} className="pt-4">
