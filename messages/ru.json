@@ -168,6 +168,118 @@
   "NetworksPage": {
     "title": "Список сетей P.O.W. и P.O.S. от A до Z"
   },
+  "NetworkProfileHeader": {
+    "Tabs": {
+      "Governance": "Управление",
+      "Statistics": "Статистика",
+      "Passport": "Паспорт",
+      "Dev Info": "Разработка",
+      "Tokenomics": "Токеномика"
+    },
+    "description": "Создайте блокчейн, используя лучшие в своем классе библиотеки и сервисы с открытым исходным кодом.",
+    "Others Links": "Другие ссылки",
+    "Show Transactions": "Показать Транзакции",
+    "temperature tooltip": "Показывает состояние здоровья цепи на основе различных измеряемых показателей",
+    "tvl": "TVL",
+    "revenue": "Доход",
+    "validator cost": "Стоимость Валидатора",
+    "tvl tooltip": "Общая стоимость активов, заблокированных в сети, без учета инфляции / домашние активы",
+    "revenue tooltip": "Размер комиссий, полученных вчера от сети",
+    "validator cost tooltip": "Стоимость в долларах США узла валидатора, который получает доход",
+    "rich list tooltip": "Список Богачей",
+    "distribution tooltip": "Распределение"
+  },
+  "NetworkPassport": {
+    "title": "Паспорт Сети",
+    "amount of wallets": "Количество Кошельков",
+    "total amount of tx": "Общее Количество Транзакций",
+    "total supply": "Общее предложение",
+    "Network APR and TVS": "APR и TVS Сети",
+    "Network Overview": "Обзор Сети",
+    "active validators": "Активные Валидаторы",
+    "unbonding time": "Время Анбондинга",
+    "community tax": "Общественные Налоги",
+    "proposal creation cost": "Стоимость Создания Пропозала",
+    "voting period": "Период Голосования",
+    "slashing": "Слэшинг",
+    "comm pool value in usd": "Комьюнити пул в USD",
+    "% of comm pool to total supply": "% Коммьюнити Пула от Общего Объема Предложения",
+    "average block time": "Среднее время блока"
+  },
+  "NetworkStatistics": {
+    "title": "Статистика Сети",
+    "community pool total": "Комьюнити Пул Всего",
+    "total staked": "Застейкано Всего",
+    "average delegations": "Среднее Количество Делегаций",
+    "% staked": "% Стейка",
+    "pending delegations": "Делегации на Рассмотрении",
+    "healthy validators": "Здоровые Валидаторы",
+    "Operator Distributions": "Распределение Операторов",
+    "active": "Активные",
+    "jailed": "Джэйл",
+    "inactive": "Не активные"
+  },
+  "NetworkGovernance": {
+    "title": "Управление Сети",
+    "total": "Всего",
+    "passed": "Принято",
+    "rejected": "Отклонено",
+    "Live Proposals": "Действующие Предложения",
+    "Past Proposals List": "Список Предыдущих Предложений",
+    "proposer": "Предложивший",
+    "voting start": "Начало Голосования",
+    "voting end": "Окончание Голосования",
+    "remaining time": "Оставшееся Время"
+  },
+  "NetworkDevInfo": {
+    "title": "Разработка",
+    "pre-vote": "Предварительное голосование",
+    "pre-commit": "Предварительный коммит",
+    "pre vote synchronized": "Валидатор подал предварительное голосование с синхронизированным хэшем блока",
+    "pre vote different": "Валидатор подал предварительное голосование с другим хэшем блока",
+    "pre vote not submitted": "Валидатор еще не подал предварительное голосование",
+    "pre commit synchronized": "Валидатор подал предварительный коммит с синхронизированным хэшем блока",
+    "pre commit different": "Валидатор подал предварительный коммит с другим хэшем блока",
+    "pre commit not submitted": "Валидатор еще не подал предварительный коммит",
+    "peers": "Пиры",
+    "seeds": "Сиды",
+    "binary versions": "Версия бинарника",
+    "Parameters": "Параметры",
+    "bech32 prefix": "Bech32 Префикс",
+    "daemon name": "Имя Сервиса",
+    "node home": "Папка Ноды",
+    "slip44": "Slip44",
+    "key algosz": "Ключ Алго",
+    "genesis url": "Генезис URL",
+    "chain id": "ID сети",
+    "denom": "Деном",
+    "Developer Activity": "Активность Разработчиков",
+    "github stars": "Github Звезд",
+    "github forks": "Github Форков",
+    "show dropdown": "Показать Репозитории",
+    "hide dropdown": "Скрыть Репозитории",
+    "Table": {
+      "Repository Name": {
+        "name": "Название Репозитория",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Коммиты",
+        "hint": ""
+      }
+    }
+  },
+  "NetworkTokenomics": {
+    "title": "Жизнерадостность",
+    "Token Price": "Цена Токена",
+    "Distribution": "Распределение",
+    "Gini Coefficient": "Коэффициент Gini",
+    "number of validators": "Число Валидаторов",
+    "community pool tvl": "TVL Комьюнити Пула",
+    "% of tokens staked": "% Застейканных Токенов",
+    "reward to payout": "Вознаграждения к Выплате",
+    "Revenue vs Capital Flow": "Выручка VS Движение капитала"
+  },
   "RumorsPage": {
     "title": "P2P-чат: распространяйте слухи",
     "description": "Аноним, как дела? Выбери себе имя пользователя и `начни распространять слухи, я ухожу сегодня...`.\n\nИзвини, Anon, проблемы с ИИ. На чем мы остановились? Ах да, выбери имя пользователя и начинай распространять слухи. Вот и все. Нет истории чата и нет идентификаций. Верните старые времена!",
@@ -312,7 +424,6 @@
     "keyhole tooltip": "text",
     "github tooltip": "text",
     "place your interview here": "Разместите Cвое Интервью Здесь"
-
   },
   "ValidatorNetworksPage": {
     "title": "Поддерживаемые сети",
@@ -613,8 +724,8 @@
         "hint": ""
       }
     },
-    "Show Slashing Event": "Показать События Слэшинга",
-    "Hide Slashing Event": "Скрыть События Слэшинга"
+    "show dropdown": "Показать События Слэшинга",
+    "hide dropdown": "Скрыть События Слэшинга"
   }
 }
 

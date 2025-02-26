@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
-import MetricsBlocks from '@/app/validators/[id]/(validator-profile)/metrics/metrics-blocks/metrics-blocks';
+import MetricsBlocks from '@/app/validators/[id]/(validator-profile)/metrics/metrics-blocks';
 import MetricsChartLine from '@/app/validators/[id]/(validator-profile)/metrics/metrics-chart';
 import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';

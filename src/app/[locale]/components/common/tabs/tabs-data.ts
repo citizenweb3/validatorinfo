@@ -180,3 +180,38 @@ export const getPassportAuthzTabs = (id: number, operatorAddress: string): TabOp
     },
   ];
 };
+
+export const getNetworkProfileTabs = (id: number): TabOptions[] => {
+  return [
+    {
+      name: 'Governance',
+      href: `/networks/${id}/governance`,
+      icon: icons.GovernanceIcon,
+      iconHovered: icons.GovernanceIconHovered,
+    },
+    {
+      name: 'Statistics',
+      href: `/networks/${id}/statistics`,
+      icon: icons.StatisticsIcon,
+      iconHovered: icons.StatisticsIconHovered,
+    },
+    {
+      name: 'Passport',
+      href: `/networks/${id}/passport`,
+      icon: icons.NetworkPassportIcon,
+      iconHovered: icons.NetworkPassportIconHovered,
+    },
+    {
+      name: 'Dev Info',
+      href: `/networks/${id}/dev_info`,
+      icon: icons.DevInfoIcon,
+      iconHovered: icons.DevInfoIconHovered,
+    },
+    {
+      name: 'Tokenomics',
+      href: `/networks/${id}/tokenomics`,
+      icon: icons.TokenomicsIcon,
+      iconHovered: icons.TokenomicsIconHovered,
+    },
+  ];
+};

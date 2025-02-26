@@ -168,6 +168,118 @@
   "NetworksPage": {
     "title": "Lista de rede P.O.W. e P.O.S. A-Z"
   },
+  "NetworkProfileHeader": {
+    "Tabs": {
+      "Governance": "Governação",
+      "Statistics": "Estatísticas",
+      "Passport": "Passaporte",
+      "Dev Info": "Dev Info",
+      "Tokenomics": "Tokenomics"
+    },
+    "description": "Construa uma blockchain usando as melhores bibliotecas e serviços de código aberto da categoria.",
+    "Others Links": "Outras ligações",
+    "Show Transactions": "Mostrar Transacções",
+    "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
+    "tvl": "TVL",
+    "revenue": "Receitas",
+    "validator cost": "Custo do Validador",
+    "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
+    "revenue tooltip": "O montante das taxas geradas pela rede ontem",
+    "validator cost tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
+    "rich list tooltip": "Lista Rica",
+    "distribution tooltip": "Distribuição"
+  },
+  "NetworkPassport": {
+    "title": "Passaporte de Rede",
+    "amount of wallets": "Quantidade de Carteiras",
+    "total amount of tx": "Montante Total de Tx",
+    "total supply": "Fornecimento Total",
+    "Network APR and TVS": "APR e TVS de Rede",
+    "Network Overview": "Visão Geral da Rede",
+    "active validators": "Validadores Activos",
+    "unbonding time": "Tempo de Unbonding",
+    "community tax": "Taxa Comunitária",
+    "proposal creation cost": "Custo de Criação da Proposta",
+    "voting period": "Período de Votação",
+    "slashing": "Cortar",
+    "comm pool value in usd": "Valor da Piscina Comunitária em USD",
+    "% of comm pool to total supply": "% da Reserva Comunitária em Relação à Oferta Total",
+    "average block time": "Tempo Médio de Bloqueio"
+  },
+  "NetworkStatistics": {
+    "title": "Estatísticas da Rede",
+    "community pool total": "Piscina Comunitária Total",
+    "total staked": "Total Staked",
+    "average delegations": "Delegações Médias",
+    "% staked": "% Staked",
+    "pending delegations": "Delegações Pendentes",
+    "healthy validators": "Validadores Saudáveis",
+    "Operator Distributions": "Distribuições de Operadores",
+    "active": "Ativo",
+    "jailed": "Jailed",
+    "inactive": "Inativo"
+  },
+  "NetworkGovernance": {
+    "title": "Governação da Rede",
+    "total": "Total",
+    "passed": "Aprovado",
+    "rejected": "Rejeitado",
+    "Live Proposals": "Propostas em Direto",
+    "Past Proposals List": "Lista de Propostas Anteriores",
+    "proposer": "Proponente",
+    "voting start": "Início da Votação",
+    "voting end": "Fim da Votação",
+    "remaining time": "Tempo Restante"
+  },
+  "NetworkDevInfo": {
+    "title": "Dev Info",
+    "pre-vote": "Pré-Voto",
+    "pre-commit": "Pre-Commit",
+    "pre vote synchronized": "O validador submeteu um pré-voto com um hash de bloco sincronizado",
+    "pre vote different": "O validador submeteu o pré-voto com um hash de bloco diferente",
+    "pre vote not submitted": "O validador ainda não apresentou o pré-voto",
+    "pre commit synchronized": "O validador submeteu um pré-commit com um hash de bloco sincronizado",
+    "pre commit different": "O validador submeteu o pré-commit com um hash de bloco diferente",
+    "pre commit not submitted": "O validador ainda não apresentou o pré-commit",
+    "peers": "Peers",
+    "seeds": "Seeds",
+    "binary versions": "Versões binárias",
+    "Parameters": "Parâmetros",
+    "bech32 prefix": "Bech32 Prefixo",
+    "daemon name": "Nome do Demónio",
+    "node home": "Página Inicial do Nó",
+    "slip44": "Slip44",
+    "key algosz": "Chave Algosz",
+    "genesis url": "Génesis URL",
+    "chain id": "Rede ID",
+    "denom": "Denom",
+    "Developer Activity": "Atividade do Promotor",
+    "github stars": "Github Estrelas",
+    "github forks": "Github Garfos",
+    "show dropdown": "Mostrar Repositórios",
+    "hide dropdown": "Ocultar Repositórios",
+    "Table": {
+      "Repository Name": {
+        "name": "Nome do Repositório",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Commits",
+        "hint": ""
+      }
+    }
+  },
+  "NetworkTokenomics": {
+    "title": "Vivacidade",
+    "Token Price": "Preço do Token",
+    "Distribution": "Distribuição",
+    "Gini Coefficient": "Coeficiente de Gini",
+    "number of validators": "Número de Validadores",
+    "community pool tvl": "Piscina Comunitária TVL",
+    "% of tokens staked": "% de Fichas Apostadas",
+    "reward to payout": "Recompensa para Pagamento",
+    "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
+  },
   "RumorsPage": {
     "title": "Bate-papo P2P: Espalhe os rumores",
     "description": "Anon, como vai? Escolha um nome de usuário e \"comece a espalhar a notícia, estou saindo hoje...\".\n\nDesculpe Anon, problemas de IA. Onde estávamos? Ah sim, escolha um nome de usuário e comece a espalhar boatos. Simples assim. Não há histórico de bate-papo nem identidades. Traga de volta os velhos tempos!",
@@ -312,7 +424,6 @@
     "keyhole tooltip": "text",
     "github tooltip": "text",
     "place your interview here": "Coloque Aqui a Sua Entrevista"
-
   },
   "ValidatorNetworksPage": {
     "title": "Redes Suportadas",
@@ -613,7 +724,7 @@
         "hint": ""
       }
     },
-    "Show Slashing Event": "Evento de Corte de Espetáculo",
-    "Hide Slashing Event": "Evento de Corte de Couro"
+    "show dropdown": "Evento de Corte de Espetáculo",
+    "hide dropdown": "Evento de Corte de Couro"
   }
 }

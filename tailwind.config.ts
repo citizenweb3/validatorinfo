@@ -132,6 +132,10 @@ const config: Config = {
         reset: `url('/img/icons/reset-button.png')`,
         reset_h: `url('/img/icons/reset-button-h.png')`,
         reset_a: `url('/img/icons/reset-button-a.png')`,
+        rich_list: `url('/img/icons/medals-network-profile/medal-rich-list.png')`,
+        rich_list_h: `url('/img/icons/medals-network-profile/medal-rich-list-h.png')`,
+        distribution: `url('/img/icons/medals-network-profile/medal-distribution.png')`,
+        distribution_h: `url('/img/icons/medals-network-profile/medal-distribution-h.png')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',
@@ -163,7 +167,7 @@ const config: Config = {
   },
   plugins: [
     tailwindScrollbar({}),
-    plugin(function ({ matchUtilities, theme }) {
+    plugin(function({ matchUtilities, theme }) {
       matchUtilities(
         {
           'text-shadow': (value) => ({

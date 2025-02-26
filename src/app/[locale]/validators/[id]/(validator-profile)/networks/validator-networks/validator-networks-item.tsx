@@ -25,7 +25,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
 
   const selfDelegation: number = Number(item.minSelfDelegation) / 10 ** item.coinDecimals;
 
-  const nodeLink = `/validators/${item.id}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
+  const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
   const checkDelegationColor = () => {
     if (Number(selfDelegation) < 1000) {
