@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { FC, useEffect, useMemo, useState } from 'react';
 
 import { getChains } from '@/actions/chains';
-import ChooseDropdown from '@/app/staking_calculator/choose-dropdown';
+import ChooseDropdown from '@/app/stakingcalculator/choose-dropdown';
 import { ChainItem } from '@/types';
 
 interface OwnProps {
