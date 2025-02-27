@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { FC, useState } from 'react';
 
-import ChartButtons from '@/app/validator_comparison/chart-buttons';
+import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
