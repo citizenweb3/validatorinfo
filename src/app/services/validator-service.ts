@@ -1,6 +1,6 @@
 import { Node, Prisma, Validator } from '@prisma/client';
 
-import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
+import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import db from '@/db';
 import logger from '@/logger';
 import { SortDirection } from '@/server/types';

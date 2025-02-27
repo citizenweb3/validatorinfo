@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import ChooseDropdown, { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
+import ChooseDropdown, { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 
 interface OwnProps {
   value?: string | number;
