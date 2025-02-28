@@ -6,8 +6,8 @@ const JsonTxInformation: FC = async () => {
   const formatData = (data: any) => {
     return (
       <pre className="whitespace-pre-wrap break-all font-handjet text-lg w-full">
-      {JSON.stringify(data, null, 2)}
-    </pre>
+        {JSON.stringify(data, null, 4)}
+      </pre>
     );
   };
 
@@ -18,7 +18,7 @@ const JsonTxInformation: FC = async () => {
           <div className="ml-20">
             {formatData(item)}
           </div>
-          <div><CopyButton value={JSON.stringify(item, null, 2)} size="md" /></div>
+          <div><CopyButton value={JSON.stringify(item, null, 4)} size="md" /></div>
         </div>
       ))}
     </div>

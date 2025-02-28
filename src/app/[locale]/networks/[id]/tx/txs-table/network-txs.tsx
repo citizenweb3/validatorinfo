@@ -13,7 +13,7 @@ interface OwnProps extends PagesProps {
 
 const NetworkTxs: FC<OwnProps> = async ({ id, page, perPage, sort, currentPage }) => {
   return (
-    <div className="pt-10">
+    <div className="mt-12">
       <table className="w-full table-auto border-collapse">
         <thead>
         <tr className="bg-table_header">

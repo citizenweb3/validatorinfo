@@ -17,12 +17,8 @@ const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
         return <div className="font-handjet text-lg hover:text-highlight">{data} {chain?.denom ?? 'ATOM'}</div>;
       case 'delegate address':
         return (
-          <div>
-            {typeof data === 'string' ? (
-              <div className="flex flex-row justify-center items-center hover:text-highlight">
-                {data} <CopyButton value={data} size={'md'} />
-              </div>
-            ) : null}
+          <div className="flex flex-row justify-center items-center hover:text-highlight">
+            {data} <CopyButton value={data} size={'md'} />
           </div>
         );
       case 'validator address':

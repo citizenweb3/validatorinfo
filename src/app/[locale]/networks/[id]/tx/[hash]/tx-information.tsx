@@ -51,7 +51,7 @@ const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
           </div>
         </div>
         <div className="flex items-center">
-          <RoundedButton href={`/networks/${chain?.id}/tx`} className="font-handjet text-base mb-4 active:mb-3">
+          <RoundedButton href={`/networks/${chain?.id}/tx`} className="font-handjet text-lg mb-4 active:mb-3">
             {t('show all transactions')}
           </RoundedButton>
         </div>

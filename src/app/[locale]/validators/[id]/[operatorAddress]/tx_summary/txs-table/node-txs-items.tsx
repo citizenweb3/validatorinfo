@@ -29,9 +29,7 @@ const NodeTxsItem: FC<OwnProps> = ({ item, chainId }) => {
         return icons.GreenSquareIcon;
     }
   };
-
-  console.log(chainId);
-
+  
   const link = `/networks/${chainId}/tx/${item.txHash}`;
 
   return (

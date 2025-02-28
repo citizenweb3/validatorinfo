@@ -19,7 +19,7 @@ const TotalTxsMetrics: FC<OwnProps> = async () => {
   };
 
   return (
-    <div className="mt-12 flex w-full flex-row justify-center gap-6">
+    <div className="mt-12 flex w-full flex-row justify-center gap-9">
       {txExample.totalTxsMetrics.map((item) => (
         <MetricsCardItem key={item.title}
                          title={t(item.title as 'total transactions')}

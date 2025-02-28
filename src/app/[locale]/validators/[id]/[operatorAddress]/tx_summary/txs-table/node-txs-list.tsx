@@ -14,7 +14,6 @@ interface OwnProps {
 
 const NodeTxsList: FC<OwnProps> = async ({ chainId, sort, perPage, currentPage = 1 }) => {
   const pages = 1;
-  console.log(chainId);
 
   return (
     <tbody>

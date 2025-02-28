@@ -34,22 +34,22 @@ const NetworkTxsItem: FC<OwnProps> = ({ id, item }) => {
           <div className="flex-shrink-0">
             <Image src={getSquareIcon()} alt={`${item.typeOfTx}`} width={30} height={30} />
           </div>
-          <div className="flex-grow text-center underline underline-offset-3">{cutHash({ value: item.hash })}</div>
+          <div className="flex-grow font-handjet text-lg text-center underline underline-offset-3">{cutHash({ value: item.hash })}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
-          <div className="text-center font-handjet text-lg">{item.typeOfTx}</div>
+          <div className="text-center font-sfpro text-base">{item.typeOfTx}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
-          <div className="text-center text-base">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
+          <div className="text-center font-handjet text-lg">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
-          <div className="font-handjet text-lg text-center">{item.timeStamp}</div>
+          <div className="font-sfpro text-base text-center">{item.timeStamp}</div>
         </Link>
       </td>
     </tr>

@@ -36,7 +36,6 @@ const TxSummaryPage: NextPageWithLocale<PageProps> = async ({
 
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
   const node = list.find((item) => item.operatorAddress === operatorAddress);
-  console.log(node?.chainId);
 
   return (
     <div className="mb-14">
