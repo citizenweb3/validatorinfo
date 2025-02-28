@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
-import ComparisonTable from '@/app/validator_comparison/comparison-table';
+import ComparisonTable from '@/app/comparevalidators/comparison-table';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';

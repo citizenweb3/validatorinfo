@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FC, useState } from 'react';
 
-import ChartButtons from '@/app/validator_comparison/chart-buttons';
+import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import SubTitle from '@/components/common/sub-title';
 
 const VanityChartLine: FC = () => {

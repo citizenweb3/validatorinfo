@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import ChooseDropdown from '@/app/staking_calculator/choose-dropdown';
+import ChooseDropdown from '@/app/stakingcalculator/choose-dropdown';
 
 interface OwnProps {
   name?: string;

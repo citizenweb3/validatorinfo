@@ -726,5 +726,51 @@
     },
     "show dropdown": "Evento de Corte de Espetáculo",
     "hide dropdown": "Evento de Corte de Couro"
+  },
+  "TotalTxsPage": {
+    "title": "Resumo das Transacções",
+    "total transactions": "Total das Transacções",
+    "transactions 30d": "Transacções (30d)",
+    "transactions yesterday": "Transacções (Ontem)",
+    "tps": "TPS (Últimos 20 Bloqueios)",
+    "Table": {
+      "Type of Tx": {
+        "name": "Tipo de Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "ID da transação. Clique para obter detalhes"
+      },
+      "Timestamp": {
+        "name": "Marca de tempo",
+        "hint": "Hora e data em que a transação teve lugar em UTC"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "TxInformationPage": {
+    "title": "Informações Sobre a Transação",
+    "show all transactions": "Mostrar Todas as Transacções",
+    "hash txs tooltip": "text",
+    "claim reward": "Solicitar Recompensa",
+    "accepted": "Aceite",
+    "chain": "Rede",
+    "chain id": "ID da Rede",
+    "block height": "Altura do Bloco",
+    "timestamp": "Marca de Tempo",
+    "fees": "Taxas",
+    "memo": "Memo",
+    "Tabs": {
+      "Expand": "Expandir",
+      "JSON": "JSON"
+    },
+    "delegate address": "Endereço do Delegado",
+    "validator address": "Endereço do Validador",
+    "amount": "Quantidade",
+    "auto claim reward": "Reivindicação Automática de Recompensa"
   }
 }
