@@ -13,13 +13,13 @@ export interface TabOptions {
 export const mainTabs: TabOptions[] = [
   {
     name: 'Calculate',
-    href: '/staking_calculator',
+    href: '/stakingcalculator',
     icon: icons.CalculatorIcon,
     iconHovered: icons.CalculatorIconHovered,
   },
   {
     name: 'Compare',
-    href: '/validator_comparison',
+    href: '/comparevalidators',
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
@@ -212,6 +212,19 @@ export const getNetworkProfileTabs = (id: number): TabOptions[] => {
       href: `/networks/${id}/tokenomics`,
       icon: icons.TokenomicsIcon,
       iconHovered: icons.TokenomicsIconHovered,
+    },
+  ];
+};
+
+export const getTxInformationTabs = (id: number, txHash: string): TabOptions[] => {
+  return [
+    {
+      name: 'Expand',
+      href: `/networks/${id}/tx/${txHash}/expand`,
+    },
+    {
+      name: 'JSON',
+      href: `/networks/${id}/tx/${txHash}/json`,
     },
   ];
 };

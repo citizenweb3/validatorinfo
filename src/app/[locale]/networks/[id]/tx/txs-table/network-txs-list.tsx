@@ -1,24 +1,23 @@
 import { FC } from 'react';
-
-import NodeTxsItem from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/node-txs-items';
-import { nodeTxsExample } from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/nodeTxsExample';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/server/types';
+import NetworkTxsItem from '@/app/networks/[id]/tx/txs-table/network-txs-items';
+import { networkTxsExample } from '@/app/networks/[id]/tx/txs-table/networkTxsExample';
 
 interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
-  chainId: number;
+  id: string;
 }
 
-const NodeTxsList: FC<OwnProps> = async ({ chainId, sort, perPage, currentPage = 1 }) => {
+const NetworkTxsList: FC<OwnProps> = async ({ id, sort, perPage, currentPage = 1 }) => {
   const pages = 1;
 
   return (
     <tbody>
-    {nodeTxsExample.map((item) => (
-      <NodeTxsItem key={item.txHash} item={item} chainId={chainId} />
+    {networkTxsExample.map((item) => (
+      <NetworkTxsItem key={item.hash} id={id} item={item} />
     ))}
     <tr>
       <td colSpan={5} className="pt-4">
@@ -29,4 +28,4 @@ const NodeTxsList: FC<OwnProps> = async ({ chainId, sort, perPage, currentPage =
   );
 };
 
-export default NodeTxsList;
+export default NetworkTxsList;

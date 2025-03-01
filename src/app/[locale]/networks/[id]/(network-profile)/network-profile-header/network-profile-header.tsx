@@ -64,7 +64,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
             <div className={`${iconsSize} bg-distribution hover:bg-distribution_h mx-2`} />
           </Tooltip>
         </div>
-        <RoundedButton href={''} className="font-handjet text-base mb-4 active:mb-3">
+        <RoundedButton href={`/networks/${id}/tx`} className="font-handjet text-base mb-4 active:mb-3">
           {t('Show Transactions')}
         </RoundedButton>
       </div>

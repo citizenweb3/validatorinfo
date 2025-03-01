@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import { FC } from 'react';
-
-import icons from '@/components/icons';
+import FallbackImage from '@/components/common/image-downloader-fallback';
 
 interface OwnProps {
-  leftIconUrl: string | null | undefined;
-  rightIconUrl: string | null | undefined;
+  leftIconUrl: string;
+  rightIconUrl: string;
 }
 
 const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
@@ -46,7 +45,7 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <Image src={leftIconUrl ?? icons.AvatarIcon} alt="Validator" fill className="rounded-full object-contain" />
+          <FallbackImage src={leftIconUrl} alt="Validator" fill className="rounded-full object-contain" />
         </div>
       </div>
 
@@ -61,7 +60,7 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <Image src={rightIconUrl ?? icons.AvatarIcon} alt="Network" fill className="rounded-full object-contain" />
+          <FallbackImage src={rightIconUrl} alt="Validator" fill className="rounded-full object-contain" />
         </div>
       </div>
     </div>

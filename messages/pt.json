@@ -571,15 +571,15 @@
   "NodeProfileHeader": {
     "Tabs": {
       "Revenue": "Receitas",
-      "TX Summary": "Resumo TX",
-      "Voting Summary": "Resumo da Votação",
-      "Validator Passport": "Passaporte de Validação",
-      "Rich List": "Lista Rica"
+      "TX Summary": "Transacções",
+      "Voting Summary": "Votos",
+      "Validator Passport": "Passaporte",
+      "Rich List": "Lista-Rica"
     }
   },
   "ValidatorPassportPage": {
     "title": "Passaporte da Rede de Validadores",
-    "pretext in prefix": "em",
+    "pretext in prefix": "em ",
     "commission": "Comissão",
     "tokens delegated": "Tokens Delegados",
     "expected APR": "APR prevista",
@@ -616,8 +616,6 @@
     }
   },
   "VotingSummaryPage": {
-    "title": "Resumo da Votação do Validador",
-    "pretext in prefix": "em",
     "show same opinion": "Mostrar Validadores Com as Mesmas Opiniões",
     "Table": {
       "Title": {
@@ -639,8 +637,6 @@
     }
   },
   "TxSummaryPage": {
-    "title": "Síntese da Transação do Validador",
-    "pretext in prefix": "em",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",
@@ -661,8 +657,6 @@
     }
   },
   "RichListPage": {
-    "title": "Validador Delegadores Principais e Eventos de Potência",
-    "pretext in prefix": "em",
     "token": "TOKEN",
     "Table": {
       "Address": {
@@ -688,8 +682,6 @@
     }
   },
   "NodeRevenuePage": {
-    "title": "Repartição das Receitas do Validador",
-    "pretext in prefix": "em",
     "Staking Calculator": "Calculadora de Piquetagem",
     "Token": "Token",
     "Enter Staking Amount": "Insira o valor da aposta",
@@ -726,5 +718,51 @@
     },
     "show dropdown": "Evento de Corte de Espetáculo",
     "hide dropdown": "Evento de Corte de Couro"
+  },
+  "TotalTxsPage": {
+    "title": "Resumo das Transacções",
+    "total transactions": "Total das Transacções",
+    "transactions 30d": "Transacções (30d)",
+    "transactions yesterday": "Transacções (Ontem)",
+    "tps": "TPS (Últimos 20 Bloqueios)",
+    "Table": {
+      "Type of Tx": {
+        "name": "Tipo de Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "ID da transação. Clique para obter detalhes"
+      },
+      "Timestamp": {
+        "name": "Marca de tempo",
+        "hint": "Hora e data em que a transação teve lugar em UTC"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "TxInformationPage": {
+    "title": "Informações Sobre a Transação",
+    "show all transactions": "Mostrar Todas as Transacções",
+    "hash txs tooltip": "text",
+    "claim reward": "Solicitar Recompensa",
+    "accepted": "Aceite",
+    "chain": "Rede",
+    "chain id": "ID da Rede",
+    "block height": "Altura do Bloco",
+    "timestamp": "Marca de Tempo",
+    "fees": "Taxas",
+    "memo": "Memo",
+    "Tabs": {
+      "Expand": "Expandir",
+      "JSON": "JSON"
+    },
+    "delegate address": "Endereço do Delegado",
+    "validator address": "Endereço do Validador",
+    "amount": "Quantidade",
+    "auto claim reward": "Reivindicação Automática de Recompensa"
   }
 }

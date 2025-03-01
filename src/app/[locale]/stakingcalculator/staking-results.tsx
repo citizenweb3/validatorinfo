@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { FC, useState } from 'react';
 
-import StakingResultsItem from '@/app/staking_calculator/staking-results-item';
+import StakingResultsItem from '@/app/stakingcalculator/staking-results-item';
 import Switch from '@/components/common/switch';
 import { ChainItem } from '@/types';
 

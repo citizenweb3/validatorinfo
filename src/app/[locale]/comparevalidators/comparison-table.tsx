@@ -3,13 +3,13 @@
 import { useTranslations } from 'next-intl';
 import { FC, useEffect, useState } from 'react';
 
-import ValidatorEmptyItem from '@/app/validator_comparison/ValidatorEmptyItem';
-import ChartButtons from '@/app/validator_comparison/chart-buttons';
-import ComparisonPanel from '@/app/validator_comparison/comparison-panel';
-import getValidatorData, { ValidatorData, ValidatorDataFilled } from '@/app/validator_comparison/get-validator-data';
-import { fillColors } from '@/app/validator_comparison/helpers';
-import ValidatorLeftPanel from '@/app/validator_comparison/validator-left-panel';
-import ValidatorListItem from '@/app/validator_comparison/validator-list-item';
+import ValidatorEmptyItem from '@/app/comparevalidators/ValidatorEmptyItem';
+import ChartButtons from '@/app/comparevalidators/chart-buttons';
+import ComparisonPanel from '@/app/comparevalidators/comparison-panel';
+import getValidatorData, { ValidatorData, ValidatorDataFilled } from '@/app/comparevalidators/get-validator-data';
+import { fillColors } from '@/app/comparevalidators/helpers';
+import ValidatorLeftPanel from '@/app/comparevalidators/validator-left-panel';
+import ValidatorListItem from '@/app/comparevalidators/validator-list-item';
 import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {}
