@@ -1,5 +1,5 @@
 # [Validator Info](https://validatorinfo.com/)
-> Multichain explorer, for Proof of Work and Proof of Stake blockchain networks. Dashboard and aggregator. Focused on providing real-time metrics on networks, validators, mining pools and tokens.
+> Web3 Explorer. Blockchain Validator, Mining Pool and Network Interactive Dashboard, Real-Time Token Analytics and Metrics
 
 ![Telegram-Storie](https://github.com/user-attachments/assets/65689ccc-e5a4-4ee2-8ee7-ffb86bde4233)
 
