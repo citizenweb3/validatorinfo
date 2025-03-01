@@ -573,13 +573,13 @@
       "Revenue": "Доходы",
       "TX Summary": "Транзакции",
       "Voting Summary": "Голосования",
-      "Validator Passport": "Паспорт Валидатора",
+      "Validator Passport": "Паспорт",
       "Rich List": "Список богачей"
     }
   },
   "ValidatorPassportPage": {
     "title": "Паспорт Валидатора Сети",
-    "pretext in prefix": "в",
+    "pretext in prefix": "в ",
     "commission": "Комиссия",
     "tokens delegated": "Делегировано токенов",
     "expected APR": "Ожидаемый APR",
@@ -616,8 +616,6 @@
     }
   },
   "VotingSummaryPage": {
-    "title": "Голосования Валидатора",
-    "pretext in prefix": "в",
     "show same opinion": "Показать Валидаторов c Таким же Мнением",
     "Table": {
       "Title": {
@@ -639,8 +637,6 @@
     }
   },
   "TxSummaryPage": {
-    "title": "Обзор Транзакций Валидатора",
-    "pretext in prefix": "в",
     "Table": {
       "Type of Tx": {
         "name": "Тип Транзакции",
@@ -661,8 +657,6 @@
     }
   },
   "RichListPage": {
-    "title": "Топ Делегаторов и События Делегации",
-    "pretext in prefix": "в",
     "token": "ТОКЕН",
     "Table": {
       "Address": {
@@ -688,8 +682,6 @@
     }
   },
   "NodeRevenuePage": {
-    "title": "Распределение Доходов от Валидатора",
-    "pretext in prefix": "в",
     "Staking Calculator": "Калькулятор Стэйкинга",
     "Token": "Токен",
     "Enter Staking Amount": "Введите сумму стейкинга",
