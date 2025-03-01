@@ -5,7 +5,7 @@ DRAFT - DANGER
 # Validator info: the return of the explorer
 
 ### 1. TL;DR
-> validatorinfo.com: Web3 Explorer. Blockchain Validator, Mining Pool and Network Interactive Dashboard, Real-Time Token Analytics and Metrics. We analyze a mixture of data, such as: user interaction, onchain metrics, social data, public good information, visual data, for both - Proof of Work and Proof of Stake chains. 
+> validatorinfo.com: Web3 Explorer. Blockchain Validator, Mining Pool and Network Interactive Dashboard, Real-Time Token Analytics and Metrics. We analyze: user interaction, onchain metrics, social data, public good information, visual data, and a lot more. For both: Proof of Work and Proof of Stake chains. 
 
 Our goals:
 - Help users navigate the developing multichain landscape of validators and mining pools
