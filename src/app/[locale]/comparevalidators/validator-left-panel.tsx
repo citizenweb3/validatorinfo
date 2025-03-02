@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import ValidatorItemRow from '@/app/validator_comparison/validator-item-row';
+import ValidatorItemRow from '@/app/comparevalidators/validator-item-row';
 
 interface OwnProps {
   isChart: boolean;

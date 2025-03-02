@@ -413,8 +413,8 @@
     "Tabs": {
       "Revenue": "Revenue",
       "Metrics": "Metrics",
-      "Network Table": "Network Table",
-      "Public Goods": "Public Goods",
+      "Network Table": "Networks",
+      "Public Goods": "Projects",
       "Governance": "Governance"
     },
     "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
@@ -426,7 +426,7 @@
     "place your interview here": "Place Your Interview Here"
   },
   "ValidatorNetworksPage": {
-    "title": "Supported Networks",
+    "title": "Validator Profile: Supported Networks",
     "Table": {
       "Network": {
         "name": "Network",
@@ -481,7 +481,7 @@
     }
   },
   "ValidatorMetricsPage": {
-    "title": "Scores and Vanity Metrics",
+    "title": "Validator Profile: Scores and Vanity Metrics",
     "technical score": "Technical Score",
     "social score": "Social Score",
     "governance score": "Governance Score",
@@ -494,7 +494,7 @@
     "fans tooltip": "Total amount of delegators to this validator across all known networks"
   },
   "ValidatorRevenuePage": {
-    "title": "Reward Revenue",
+    "title": "Validator Profile: Reward Revenue",
     "global revenue": "Global Revenue",
     "rumors": "Rumors",
     "claim date": "Claim Date",
@@ -504,7 +504,7 @@
     "tooltip rewards generated": "This chart shows the total amount of rewards this validator paid out on any particular day, week, month or year in USD across all known networks. Calculated from staking, mining and rewards from own tokens"
   },
   "ValidatorGovernancePage": {
-    "title": "Governance Summary Feed",
+    "title": "Validator Profile: Governance Summary Feed",
     "proposals": "Validator Created Proposals",
     "news feed": "Governance News Feed",
     "similar opinions": "Similar Opinions",
@@ -526,7 +526,7 @@
     "tooltip news feed": "Summary of the voting activity of the validator across all networks. Click the proposal ID for more detail"
   },
   "ValidatorPublicGoodsPage": {
-    "title": "Infrastructure, Community, Tools and Other Public Good Projects",
+    "title": "Validator Profile: Public Good Projects. Infrastructure, Community, Tools and Others",
     "description": "Users to validator off-chain data, are validators to blocks. After you login, you may submit information about a specific validator. For example your favorite validator or mining pool is running a podcast or have built a wallet? Click the Submit button and add the required details. Earn rewards. Approve or disprove information. Please note that each submission is a transaction!",
     "Tabs": {
       "Infrastructure": "Infrastructure",
@@ -571,15 +571,15 @@
   "NodeProfileHeader": {
     "Tabs": {
       "Revenue": "Revenue",
-      "TX Summary": "TX Summary",
-      "Voting Summary": "Voting Summary",
-      "Validator Passport": "Validator Passport",
-      "Rich List": "Rich List"
+      "TX Summary": "Transactions",
+      "Voting Summary": "Votes",
+      "Validator Passport": "Passport",
+      "Rich List": "Rich-List"
     }
   },
   "ValidatorPassportPage": {
-    "title": "Validator Network Passport",
-    "pretext in prefix": "on",
+    "title": "Validator Node Passport",
+    "pretext in prefix": "on ",
     "commission": "Commission",
     "tokens delegated": "Tokens Delegated",
     "expected APR": "Expected APR",
@@ -616,8 +616,6 @@
     }
   },
   "VotingSummaryPage": {
-    "title": "Validator Voting Summary",
-    "pretext in prefix": "on",
     "show same opinion": "Show Validators With Same Opinions",
     "Table": {
       "Title": {
@@ -639,8 +637,6 @@
     }
   },
   "TxSummaryPage": {
-    "title": "Validator Transaction Overview",
-    "pretext in prefix": "on",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",
@@ -661,8 +657,6 @@
     }
   },
   "RichListPage": {
-    "title": "Validator Top Delegators and Power Events",
-    "pretext in prefix": "on",
     "token": "TOKEN",
     "Table": {
       "Address": {
@@ -688,8 +682,6 @@
     }
   },
   "NodeRevenuePage": {
-    "title": "Validator Revenue Breakdown",
-    "pretext in prefix": "on",
     "Staking Calculator": "Staking Calculator",
     "Token": "Token",
     "Enter Staking Amount": "Enter Staking Amount",
@@ -726,6 +718,52 @@
     },
     "show dropdown": "Show Slashing Event",
     "hide dropdown": "Hide Slashing Event"
+  },
+  "TotalTxsPage": {
+    "title": "Transactions Summary",
+    "total transactions": "Total Transactions",
+    "transactions 30d": "Transactions (30d)",
+    "transactions yesterday": "Transactions (Yesterday)",
+    "tps": "TPS (Last 20 Blocks)",
+    "Table": {
+      "Type of Tx": {
+        "name": "Type of Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "Transaction ID. Click for details"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Time and date the transaction took place in UTC"
+      },
+      "Block Height": {
+        "name": "Block Height",
+        "hint": "The number of block the transaction took place"
+      }
+    }
+  },
+  "TxInformationPage": {
+    "title": "Transaction Information",
+    "show all transactions": "Show All Transactions",
+    "hash txs tooltip": "text",
+    "claim reward": "Claim Reward",
+    "accepted": "Accepted",
+    "chain": "Chain",
+    "chain id": "Chain ID",
+    "block height": "Block Height",
+    "timestamp": "Timestamp",
+    "fees": "Fees",
+    "memo": "Memo",
+    "Tabs": {
+      "Expand": "Expand",
+      "JSON": "JSON"
+    },
+    "delegate address": "Delegate Address",
+    "validator address": "Validator Address",
+    "amount": "Amount",
+    "auto claim reward": "Auto Claim Reward"
   }
 }
 

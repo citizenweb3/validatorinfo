@@ -33,7 +33,7 @@ const ValidatorNetworksPage: NextPageWithLocale<PageProps> = async ({ params: { 
 
   return (
     <div>
-      <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
+      <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
       <ValidatorNetworks id={validatorId} page="ValidatorNetworksPage" sort={{ sortBy, order }} />
     </div>
   );

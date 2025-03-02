@@ -1,29 +1,20 @@
 import { getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
-
-import NodePagesTitle from '@/app/validators/[id]/[operatorAddress]/node-pages-title';
 import NodeStakingCalculator from '@/app/validators/[id]/[operatorAddress]/revenue/node-staking-calculator';
 import StakingStats from '@/app/validators/[id]/[operatorAddress]/revenue/stacking-stats-table/staking-stats';
 import SubTitle from '@/components/common/sub-title';
-import { Locale, NextPageWithLocale } from '@/i18n';
+import { NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import validatorService from '@/services/validator-service';
 import TableDropdown from '@/components/common/table-dropdown';
 import SlashingEventsTable from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashing-events-table';
 import {
-  slashingEventsExample, SlashingEventsExampleInterface,
+  slashingEventsExample,
+  SlashingEventsExampleInterface,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashingEventsExample';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string; operatorAddress: string };
-}
-
-export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
-  const t = await getTranslations({ locale, namespace: 'NodeRevenuePage' });
-
-  return {
-    title: t('title'),
-  };
 }
 
 const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale, id, operatorAddress } }) => {
@@ -40,7 +31,6 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
 
   return (
     <div>
-      <NodePagesTitle page={'NodeRevenuePage'} locale={locale} node={node} />
       <div className="mt-4">
         <SubTitle text={t('Staking Calculator')} />
       </div>

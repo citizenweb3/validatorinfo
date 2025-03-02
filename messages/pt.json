@@ -413,8 +413,8 @@
     "Tabs": {
       "Revenue": "Receitas",
       "Metrics": "Métricas",
-      "Network Table": "Tabela de Rede",
-      "Public Goods": "Bens Público",
+      "Network Table": "Redes",
+      "Public Goods": "Projectos",
       "Governance": "Governação"
     },
     "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
@@ -426,7 +426,7 @@
     "place your interview here": "Coloque Aqui a Sua Entrevista"
   },
   "ValidatorNetworksPage": {
-    "title": "Redes Suportadas",
+    "title": "Perfil de validador: Redes Suportadas",
     "Table": {
       "Network": {
         "name": "Rede",
@@ -481,7 +481,7 @@
     }
   },
   "ValidatorMetricsPage": {
-    "title": "Pontuações e Métricas de Vaidade",
+    "title": "Perfil de validador: Pontuações e Métricas de Vaidade",
     "technical score": "Pontuação Técnica",
     "social score": "Social Score",
     "governance score": "Pontuação Social",
@@ -494,7 +494,7 @@
     "fans tooltip": "Quantidade total de delegados a este validador em todas as redes conhecidas"
   },
   "ValidatorRevenuePage": {
-    "title": "Receitas de Prémios",
+    "title": "Perfil de validador: Receitas de Prémios",
     "global revenue": "Receita Global",
     "rumors": "Rumores",
     "claim date": "Data do Pedido",
@@ -504,7 +504,7 @@
     "tooltip rewards generated": "Este gráfico mostra o montante total de recompensas que este validador pagou num determinado dia, semana, mês ou ano em USD em todas as redes conhecidas. Calculado a partir de staking, mineração e recompensas de tokens próprios"
   },
   "ValidatorGovernancePage": {
-    "title": "Feed de Resumo da Governação",
+    "title": "Perfil de validador: Feed de Resumo da Governação",
     "proposals": "Propostas Criadas pelo Validador",
     "news feed": "Feed de Notícias da Governação",
     "similar opinions": "Opiniões Similares",
@@ -526,7 +526,7 @@
     "tooltip news feed": "Resumo da atividade de votação do validador em todas as redes. Clique no ID da proposta para obter mais pormenores"
   },
   "ValidatorPublicGoodsPage": {
-    "title": "Projectos de infra-estruturas, comunitários, ferramentas e outros projectos de utilidade pública",
+    "title": "Perfil de validador: Projectos de utilidade pública. Infra-estruturas, Comunidade, Ferramentas e Outros",
     "description": "Os utilizadores que validam dados fora da cadeia são validadores de blocos. Depois de iniciar sessão, o utilizador pode enviar informações sobre um validador específico. Por exemplo, o seu validador favorito ou pool de mineração está a realizar um podcast ou construiu uma carteira? Clique no botão Enviar e adicione os detalhes necessários. Ganhe prémios. Aprovar ou refutar informações. Tenha em atenção que cada envio é uma transação!",
     "Tabs": {
       "Infrastructure": "Infraestrutura",
@@ -571,15 +571,15 @@
   "NodeProfileHeader": {
     "Tabs": {
       "Revenue": "Receitas",
-      "TX Summary": "Resumo TX",
-      "Voting Summary": "Resumo da Votação",
-      "Validator Passport": "Passaporte de Validação",
-      "Rich List": "Lista Rica"
+      "TX Summary": "Transacções",
+      "Voting Summary": "Votos",
+      "Validator Passport": "Passaporte",
+      "Rich List": "Lista-Rica"
     }
   },
   "ValidatorPassportPage": {
     "title": "Passaporte da Rede de Validadores",
-    "pretext in prefix": "em",
+    "pretext in prefix": "em ",
     "commission": "Comissão",
     "tokens delegated": "Tokens Delegados",
     "expected APR": "APR prevista",
@@ -616,8 +616,6 @@
     }
   },
   "VotingSummaryPage": {
-    "title": "Resumo da Votação do Validador",
-    "pretext in prefix": "em",
     "show same opinion": "Mostrar Validadores Com as Mesmas Opiniões",
     "Table": {
       "Title": {
@@ -639,8 +637,6 @@
     }
   },
   "TxSummaryPage": {
-    "title": "Síntese da Transação do Validador",
-    "pretext in prefix": "em",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",
@@ -661,8 +657,6 @@
     }
   },
   "RichListPage": {
-    "title": "Validador Delegadores Principais e Eventos de Potência",
-    "pretext in prefix": "em",
     "token": "TOKEN",
     "Table": {
       "Address": {
@@ -688,8 +682,6 @@
     }
   },
   "NodeRevenuePage": {
-    "title": "Repartição das Receitas do Validador",
-    "pretext in prefix": "em",
     "Staking Calculator": "Calculadora de Piquetagem",
     "Token": "Token",
     "Enter Staking Amount": "Insira o valor da aposta",
@@ -726,5 +718,51 @@
     },
     "show dropdown": "Evento de Corte de Espetáculo",
     "hide dropdown": "Evento de Corte de Couro"
+  },
+  "TotalTxsPage": {
+    "title": "Resumo das Transacções",
+    "total transactions": "Total das Transacções",
+    "transactions 30d": "Transacções (30d)",
+    "transactions yesterday": "Transacções (Ontem)",
+    "tps": "TPS (Últimos 20 Bloqueios)",
+    "Table": {
+      "Type of Tx": {
+        "name": "Tipo de Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "ID da transação. Clique para obter detalhes"
+      },
+      "Timestamp": {
+        "name": "Marca de tempo",
+        "hint": "Hora e data em que a transação teve lugar em UTC"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "TxInformationPage": {
+    "title": "Informações Sobre a Transação",
+    "show all transactions": "Mostrar Todas as Transacções",
+    "hash txs tooltip": "text",
+    "claim reward": "Solicitar Recompensa",
+    "accepted": "Aceite",
+    "chain": "Rede",
+    "chain id": "ID da Rede",
+    "block height": "Altura do Bloco",
+    "timestamp": "Marca de Tempo",
+    "fees": "Taxas",
+    "memo": "Memo",
+    "Tabs": {
+      "Expand": "Expandir",
+      "JSON": "JSON"
+    },
+    "delegate address": "Endereço do Delegado",
+    "validator address": "Endereço do Validador",
+    "amount": "Quantidade",
+    "auto claim reward": "Reivindicação Automática de Recompensa"
   }
 }

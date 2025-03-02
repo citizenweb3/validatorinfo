@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
 
-import Calculator from '@/app/staking_calculator/calculator';
+import Calculator from '@/app/stakingcalculator/calculator';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';

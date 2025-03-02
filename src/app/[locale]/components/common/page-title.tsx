@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface OwnProps {
-  prefix?: string;
+  prefix?: ReactNode;
   text: string;
 }
 
