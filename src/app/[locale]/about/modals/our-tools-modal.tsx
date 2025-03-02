@@ -52,7 +52,12 @@ const OurToolsModal = () => {
               link: (text) => <TextLink content={text} href="https://www.citizenweb3.com/staking" target="_blank" />,
             })}
           />
-          <ListItem text={t(`Tools.4`)} />
+          <ListItem
+            text={t.rich(`Tools.4`, {
+              link: (text) => <TextLink content={text} href="https://bvc.citizenweb3.com/" target="_blank" />,
+            })}
+          />
+          <ListItem text={t(`Tools.5`)} />
         </div>
       </BaseModal>
     </>
