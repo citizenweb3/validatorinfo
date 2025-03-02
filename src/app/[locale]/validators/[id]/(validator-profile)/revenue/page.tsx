@@ -31,9 +31,9 @@ const ValidatorRevenuePage: NextPageWithLocale<PageProps> = async ({ params }) =
 
   return (
     <div className="mb-20">
-      <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
+      <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
       <div className="flex flex-row items-center justify-between">
-        <GlobalRevenue id={validatorId} />
+        <GlobalRevenue />
         <RumorsLink id={validatorId} locale={locale} />
       </div>
       <div className="mt-6">
