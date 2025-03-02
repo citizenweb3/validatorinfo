@@ -6,31 +6,26 @@ import icons from '@/components/icons';
 import cutHash from '@/utils/cut-hash';
 
 interface OwnProps {
+  id: string;
   item: {
     typeOfTx: string;
-    txHash: string;
+    hash: string;
     timeStamp: string;
     blockHeight: string;
   };
-  chainId: number;
 }
 
-
-const NodeTxsItem: FC<OwnProps> = ({ item, chainId }) => {
+const NetworkTxsItem: FC<OwnProps> = ({ id, item }) => {
   const getSquareIcon = () => {
     switch (item.typeOfTx) {
       case 'Send':
         return icons.GreenSquareIcon;
-      case 'Unjail':
-        return icons.RedSquareIcon;
-      case 'Claim Rewards':
-        return icons.YellowSquareIcon;
       default:
-        return icons.GreenSquareIcon;
+        return icons.RedSquareIcon;
     }
   };
-  
-  const link = `/networks/${chainId}/tx/${item.txHash}`;
+
+  const link = `/networks/${id}/tx/${item.hash}`;
 
   return (
     <tr className="group cursor-pointer hover:bg-bgHover">
@@ -39,27 +34,26 @@ const NodeTxsItem: FC<OwnProps> = ({ item, chainId }) => {
           <div className="flex-shrink-0">
             <Image src={getSquareIcon()} alt={`${item.typeOfTx}`} width={30} height={30} />
           </div>
-          <div className="flex-grow text-center">{item.typeOfTx}</div>
+          <div className="flex-grow font-handjet text-lg text-center underline underline-offset-3">{cutHash({ value: item.hash })}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
-          <div
-            className="text-center font-handjet text-lg underline underline-offset-3">{cutHash({ value: item.txHash })}</div>
+          <div className="text-center font-sfpro text-base">{item.typeOfTx}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
-          <div className="text-center text-base">{item.timeStamp}</div>
+          <div className="text-center font-handjet text-lg">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
-          <div className="font-handjet text-lg text-center">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
+          <div className="font-sfpro text-base text-center">{item.timeStamp}</div>
         </Link>
       </td>
     </tr>
   );
 };
 
-export default NodeTxsItem;
+export default NetworkTxsItem;

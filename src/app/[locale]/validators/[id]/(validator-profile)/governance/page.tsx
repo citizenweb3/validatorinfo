@@ -39,7 +39,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
 
   return (
     <div className="mb-10">
-      <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
+      <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
       <div className="mb-20 mt-6">
         <ToolTip tooltip={t('tooltip created proposals')} direction={'top'}>
           <SubTitle text={t('proposals')} size="h2" />
