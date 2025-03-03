@@ -11,6 +11,7 @@ import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
+import Link from 'next/link';
 
 export default function StakingPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
@@ -40,7 +41,10 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
               <div className="relative flex h-40 w-48 flex-col bg-[url('/img/staking-bg.png')] bg-cover">
                 <div className="-ml-1 -mt-7 flex flex-grow items-center justify-center">
                   {item.icon && (
-                    <Image src={item.icon} alt={item.name} width={80} height={80} className="h-20 w-20 rounded-full" />
+                    <Link href={`https://staking.citizenweb3.com/chains/${item.stakingName}`} target={`_blank`}>
+                      <Image src={item.icon} alt={item.name} width={80} height={80}
+                             className="h-20 w-20 rounded-full" />
+                    </Link>
                   )}
                 </div>
                 <div className="absolute bottom-1 left-2 text-nowrap text-lg tracking-[0.25rem] text-shadow-sm">
