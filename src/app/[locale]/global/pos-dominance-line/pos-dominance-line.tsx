@@ -1,6 +1,6 @@
 'use client';
 import { FC, useState } from 'react';
-import ChartWidget from './chartWidget';
+import TotalDominanceChart from './chartWidget';
 import EcosystemSelector from './ecosystemSelector';
 import SelectedEcosystems from './selectedEcosystem';
 import ChartButtons from '@/app/validator_comparison/chart-buttons';
@@ -32,12 +32,12 @@ const PosDominanceLine: FC = () => {
         />     
       </div>
       {/* Chart Widget - Displays the chart based on selected ecosystems */}
-      <ChartWidget 
+      <TotalDominanceChart
         chartType={chartType} 
         ecosystems={selectedEcosystems} 
       />
       {/* Selected Ecosystems - Displays selected ecosystems with their colors */}
-      <SelectedEcosystems ecosystems={selectedEcosystems} />
+      {/* <SelectedEcosystems ecosystems={selectedEcosystems} /> */}
     </div>
   );
 };
