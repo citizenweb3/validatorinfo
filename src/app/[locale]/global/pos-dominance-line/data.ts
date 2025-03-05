@@ -1,20 +1,37 @@
-export const generateDataForDays = (startDate: Date, endDate: Date) => {
-  const getRandomValue = () => Math.floor(Math.random() * 60) + 20; // Values between 20 and 80
+type DataPoint = {
+  date: Date;
+  value: number;
+};
 
-  // Helper function to generate dataset with random values for each day between start and end dates
-  const generateDataset = (startDate: Date, endDate: Date) => {
-    const dataset = [];
-    let currentDate = new Date(startDate);
+export const generateDataForDays = (startDate: Date, endDate: Date, chartType: string): DataPoint[] => {
+  const dataset: DataPoint[] = [];
+  const oneDay = 24 * 60 * 60 * 1000;
+  let currentDate = new Date(startDate);
+  let previousValue = 50; // Starting with a mid-range value
 
-    while (currentDate <= endDate) {
-      const value = getRandomValue();
-      dataset.push({ date: new Date(currentDate), value }); // Save each day's date and the random value
-      currentDate.setDate(currentDate.getDate() + 1); // Move to the next day
+  while (currentDate <= endDate) {
+    // Generate a new value that is close to the previous value
+    const fluctuation = (Math.random() - 0.5) * 20; // Fluctuation between -10 and 10
+    const value = Math.max(0, Math.min(100, previousValue + fluctuation));
+
+    dataset.push({ date: new Date(currentDate), value });
+
+    // Update the previous value
+    previousValue = value;
+
+    // Increment the date based on the chart type
+    if (chartType === 'Daily') {
+      currentDate = new Date(currentDate.getTime() + oneDay);
+    } else if (chartType === 'Weekly') {
+      currentDate = new Date(currentDate.getTime() + oneDay * 7);
+    } else if (chartType === 'Monthly') {
+      currentDate = new Date(currentDate.getTime() + oneDay * 30);
+    } else if (chartType === 'Yearly') {
+      currentDate = new Date(currentDate.getTime() + oneDay * 365);
     }
+  }
 
-    return dataset;
-  };
+  console.log('Generated Data:', dataset);
 
-  // Generate data for the given date range
-  return generateDataset(startDate, endDate);
+  return dataset;
 };
