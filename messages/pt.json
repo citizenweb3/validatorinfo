@@ -375,18 +375,18 @@
     "Tabs": {
       "Staking": "Staking",
       "Partners": "Parceiros",
-      "General Info": "Info gerais",
+      "General Info": "Info",
       "Podcast": "Podcast",
       "Contacts": "Contatos"
     },
     "Contacts": "Contatos do Validatorinfo",
-    "description": "Eu sou <homeLink>Validator Info</homeLink>. Fui criado pela equipe da <citizenLink>Citizen Web3</citizenLink>.\n\nEu sou um explorador e agregador multichain focado em validadores - para várias redes, vivendo na web3. Eu sou capaz de ler e entender ambas: cadeias de Prova de Trabalho e Prova de Participação. Isso significa que mostrarei informações sobre validadores, pools de mineração e as próprias redes.\n\nMeu objetivo é ajudar os usuários da web3 a descobrir mais informações sobre validadores e pools de mineração, que estão protegendo suas redes favoritas, ou - usar meu explorador para encontrar as informações mais relevantes que você precisa.\n\nEu ainda estou em construção. Você pode <xLink>me seguir no X</xLink>, conferir um dos meus <ghLink>repositórios do GitHub</ghLink>, deixar comentários e sugestões.\n\nCitizen Web3, como um projeto iniciado em 2020, encontrando raízes em vibrações ancap, valores pessoais de construção de uma sociedade melhor, desenvolvimento de ecossistema e networking. CW3 é um membro ativo da galáxia web3. <stakingLink>Staking com nossa infraestrutura baremetal auto-hospedada</stakingLink> permite que CW3 trabalhe em vários projetos de bem público e contribua para o desenvolvimento da web3.",
+    "description": "Eu sou <homeLink>Validator Info</homeLink>. Eu respondo e fui criado por <citizenLink>Citizen Web3</citizenLink>. \n\nEu sou um explorador Web3. Eu forneço dados verificáveis sobre validadores de blockchain, pools de mineração e redes. Fui construído como um painel interativo, com análises de token em tempo real, métricas e insights sobre o cenário descentralizado multichain. Sou capaz de compreender cadeias de Prova de Trabalho e Prova de Participação. \n\nMeu objetivo é tornar os exploradores incríveis novamente, guiando detentores de tokens, mineradores, stakers, delegadores e operadores através de informações e dados complexos por meio da minha interface intuitiva e experiência gamificada. \n\nAinda estou em desenvolvimento. Você pode <xLink>me seguir no X</xLink>, conferir um dos meus <ghLink>repositórios GitHub</ghLink>, deixar seus comentários e sugestões. \n\nConsidere fazer staking para os meus criadores, Citizen Web3, para apoiar o trabalho deles em projetos de interesse público. Um <stakingLink>self-hosted</stakingLink> validador bare-metal.",
     "title": "O que é o Validator Info?",
     "Tools": [
-      "<link>Citizen Web3 Podcast</link>: descobrindo as pessoas que contribuem para a construção do mundo descentralizado e transformam código em aplicativos descentralizados",
-      "<link>ValidatorInfo.com</link>: multichain, POW e POS, focado em validadores, explorador/painel que ajuda a descobrir informações na galáxia web3",
-      "<link>Web3 Society</link>: uma comunidade que ajuda, aprende e se ressente do tribalismo. Incluindo futuros incentivos DAO (NA no momento)",
-      "<link>Validator Infra</link>: infraestrutura bare-metal auto-hospedada. Infra independente off the grid, incluindo endpoints públicos, testnets, nós de arquivo e retransmissão",
+      "<link>Citizen Web3 Podcast</link>: Descobrir os contribuidores da Web3 para a descentralização da cadeia de blocos, a segurança da rede e a escalabilidade das aplicações",
+      "<link>Web3 Society</link>: Comunidade Web3 Baseada em Valores de Descentralização. Aprendendo a esquecer o tribalismo e a amar a tecnologia. Futuro DAO",
+      "<link>Validator Infra</link>: Infraestrutura de validação bare-metal auto-hospedada. Capacidade fora da grelha. Oferta de pontos finais, arquivo, instantâneos e retransmissão",
+      "<link>B.V.C.</link>: Baremetal Valdiator Coven. Comunidade de Operadores de Redes Blockcahin Auto-hospedadas e Baremetal",
       "(NA no momento) Bazaar: NFTs, Merchandise, Decentraland"
     ],
     "Our tools": "Ferramentas",
