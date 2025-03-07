@@ -45,17 +45,6 @@ const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
               {jailedNodes?.length ?? '423'}
             </div>
           </div>
-          <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
-            <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">
-              {t('inactive')}
-            </div>
-            <div
-              style={{ color: fontColors['inactive'] }}
-              className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg"
-            >
-              {jailedNodes?.length ?? '636'}
-            </div>
-          </div>
         </div>
         <div className="w-4/5">
           <Image

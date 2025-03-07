@@ -210,14 +210,13 @@
     "title": "Network Statistics",
     "community pool total": "Community Pool Total",
     "total staked": "Total Staked",
-    "average delegations": "Average Delegations",
+    "average delegations": "Average Delegation",
     "% staked": "% Staked",
-    "pending delegations": "Pending Delegations",
+    "pending delegations": "Pending Undelegations",
     "healthy validators": "Healthy Validators",
-    "Operator Distributions": "Operator Distributions",
+    "Operator Distributions": "Operator Distribution",
     "active": "Active",
-    "jailed": "Jailed",
-    "inactive": "Inactive"
+    "jailed": "Jailed"
   },
   "NetworkGovernance": {
     "title": "Network Governance",
