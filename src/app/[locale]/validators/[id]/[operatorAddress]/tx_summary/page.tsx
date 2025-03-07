@@ -1,8 +1,5 @@
-import { getTranslations } from 'next-intl/server';
-
-import NodePagesTitle from '@/app/validators/[id]/[operatorAddress]/node-pages-title';
 import NodeTxs from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/node-txs';
-import { Locale, NextPageWithLocale } from '@/i18n';
+import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
 
@@ -12,14 +9,6 @@ export const revalidate = 0;
 interface PageProps {
   params: NextPageWithLocale & { id: string; operatorAddress: string };
   searchParams: { [key: string]: string | string[] | undefined };
-}
-
-export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
-  const t = await getTranslations({ locale, namespace: 'TxSummaryPage' });
-
-  return {
-    title: t('title'),
-  };
 }
 
 const defaultPerPage = 1;
@@ -39,7 +28,6 @@ const TxSummaryPage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <div className="mb-14">
-      <NodePagesTitle page={'TxSummaryPage'} locale={locale} node={node} />
       <NodeTxs chainId={node?.chainId ?? 1} page={'TxSummaryPage'} perPage={perPage} currentPage={currentPage}
                sort={{ sortBy, order }} />
     </div>

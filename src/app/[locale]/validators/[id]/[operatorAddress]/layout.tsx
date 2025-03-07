@@ -1,4 +1,4 @@
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 
 import NodeProfileStory from '@/app/validators/[id]/[operatorAddress]/node-profile-story';
@@ -7,6 +7,15 @@ import { getNodeProfileTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 import validatorService from '@/services/validator-service';
 import icons from '@/components/icons';
+import NodePagesTitle from '@/app/validators/[id]/[operatorAddress]/node-pages-title';
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
+  const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
+
+  return {
+    title: t('title'),
+  };
+}
 
 export default async function NodeProfileLayout({
                                                   children,
@@ -29,6 +38,7 @@ export default async function NodeProfileLayout({
     <div>
       <NodeProfileStory leftIconUrl={leftIconUrl} rightIconUrl={rightIconUrl} />
       <TabList page="NodeProfileHeader" tabs={nodeProfileTabs} />
+      <NodePagesTitle page={'ValidatorPassportPage'} locale={locale} node={node} />
       {children}
     </div>
   );

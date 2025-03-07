@@ -571,15 +571,15 @@
   "NodeProfileHeader": {
     "Tabs": {
       "Revenue": "Revenue",
-      "TX Summary": "TX Summary",
-      "Voting Summary": "Voting Summary",
-      "Validator Passport": "Validator Passport",
-      "Rich List": "Rich List"
+      "TX Summary": "Transactions",
+      "Voting Summary": "Votes",
+      "Validator Passport": "Passport",
+      "Rich List": "Rich-List"
     }
   },
   "ValidatorPassportPage": {
-    "title": "Validator Network Passport",
-    "pretext in prefix": "on",
+    "title": "Validator Node Passport",
+    "pretext in prefix": "on ",
     "commission": "Commission",
     "tokens delegated": "Tokens Delegated",
     "expected APR": "Expected APR",
@@ -616,8 +616,6 @@
     }
   },
   "VotingSummaryPage": {
-    "title": "Validator Voting Summary",
-    "pretext in prefix": "on",
     "show same opinion": "Show Validators With Same Opinions",
     "Table": {
       "Title": {
@@ -639,8 +637,6 @@
     }
   },
   "TxSummaryPage": {
-    "title": "Validator Transaction Overview",
-    "pretext in prefix": "on",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",
@@ -661,8 +657,6 @@
     }
   },
   "RichListPage": {
-    "title": "Validator Top Delegators and Power Events",
-    "pretext in prefix": "on",
     "token": "TOKEN",
     "Table": {
       "Address": {
@@ -688,8 +682,6 @@
     }
   },
   "NodeRevenuePage": {
-    "title": "Validator Revenue Breakdown",
-    "pretext in prefix": "on",
     "Staking Calculator": "Staking Calculator",
     "Token": "Token",
     "Enter Staking Amount": "Enter Staking Amount",

@@ -571,15 +571,15 @@
   "NodeProfileHeader": {
     "Tabs": {
       "Revenue": "Receitas",
-      "TX Summary": "Resumo TX",
-      "Voting Summary": "Resumo da Votação",
-      "Validator Passport": "Passaporte de Validação",
-      "Rich List": "Lista Rica"
+      "TX Summary": "Transacções",
+      "Voting Summary": "Votos",
+      "Validator Passport": "Passaporte",
+      "Rich List": "Lista-Rica"
     }
   },
   "ValidatorPassportPage": {
     "title": "Passaporte da Rede de Validadores",
-    "pretext in prefix": "em",
+    "pretext in prefix": "em ",
     "commission": "Comissão",
     "tokens delegated": "Tokens Delegados",
     "expected APR": "APR prevista",
@@ -616,8 +616,6 @@
     }
   },
   "VotingSummaryPage": {
-    "title": "Resumo da Votação do Validador",
-    "pretext in prefix": "em",
     "show same opinion": "Mostrar Validadores Com as Mesmas Opiniões",
     "Table": {
       "Title": {
@@ -639,8 +637,6 @@
     }
   },
   "TxSummaryPage": {
-    "title": "Síntese da Transação do Validador",
-    "pretext in prefix": "em",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",
@@ -661,8 +657,6 @@
     }
   },
   "RichListPage": {
-    "title": "Validador Delegadores Principais e Eventos de Potência",
-    "pretext in prefix": "em",
     "token": "TOKEN",
     "Table": {
       "Address": {
@@ -688,8 +682,6 @@
     }
   },
   "NodeRevenuePage": {
-    "title": "Repartição das Receitas do Validador",
-    "pretext in prefix": "em",
     "Staking Calculator": "Calculadora de Piquetagem",
     "Token": "Token",
     "Enter Staking Amount": "Insira o valor da aposta",
