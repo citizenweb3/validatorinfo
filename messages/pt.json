@@ -210,14 +210,13 @@
     "title": "Estatísticas da Rede",
     "community pool total": "Piscina Comunitária Total",
     "total staked": "Total Staked",
-    "average delegations": "Delegações Médias",
+    "average delegations": "Delegação Médias",
     "% staked": "% Staked",
-    "pending delegations": "Delegações Pendentes",
+    "pending delegations": "Subdelegações Pendentes",
     "healthy validators": "Validadores Saudáveis",
-    "Operator Distributions": "Distribuições de Operadores",
+    "Operator Distributions": "Distribuição de Operadores",
     "active": "Ativo",
-    "jailed": "Jailed",
-    "inactive": "Inativo"
+    "jailed": "Jailed"
   },
   "NetworkGovernance": {
     "title": "Governação da Rede",

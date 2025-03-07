@@ -210,14 +210,13 @@
     "title": "Статистика Сети",
     "community pool total": "Комьюнити Пул Всего",
     "total staked": "Застейкано Всего",
-    "average delegations": "Среднее Количество Делегаций",
+    "average delegations": "Среднее Количество Делегации",
     "% staked": "% Стейка",
-    "pending delegations": "Делегации на Рассмотрении",
+    "pending delegations": "Отложенное Делегирование",
     "healthy validators": "Здоровые Валидаторы",
     "Operator Distributions": "Распределение Операторов",
     "active": "Активные",
-    "jailed": "Джэйл",
-    "inactive": "Не активные"
+    "jailed": "Джэйл"
   },
   "NetworkGovernance": {
     "title": "Управление Сети",
