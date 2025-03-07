@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { FC, useState } from 'react';
 
-import ChartButtons from '@/app/validator_comparison/chart-buttons';
+import ChartButtons from '@/app/comparevalidators/chart-buttons';
 
 const MetricsChartLine: FC = () => {
   const [isChart, setIsChart] = useState<boolean>(true);

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import ValidatorEmptyItem from '@/app/validator_comparison/ValidatorEmptyItem';
-import { ValidatorDataFilled } from '@/app/validator_comparison/get-validator-data';
-import ValidatorItemRow from '@/app/validator_comparison/validator-item-row';
+import ValidatorEmptyItem from '@/app/comparevalidators/ValidatorEmptyItem';
+import { ValidatorDataFilled } from '@/app/comparevalidators/get-validator-data';
+import ValidatorItemRow from '@/app/comparevalidators/validator-item-row';
 import LineChart from '@/components/charts/line-chart';
 import PlusButton from '@/components/common/plus-button';
 

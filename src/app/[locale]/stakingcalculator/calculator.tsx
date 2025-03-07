@@ -3,10 +3,10 @@
 import { FC, useEffect, useState } from 'react';
 
 import { getStakingRates } from '@/actions/staking';
-import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
-import ChooseNetwork from '@/app/staking_calculator/choose-network';
-import ChooseValidator from '@/app/staking_calculator/choose-validator';
-import StakingResults from '@/app/staking_calculator/staking-results';
+import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
+import ChooseNetwork from '@/app/stakingcalculator/choose-network';
+import ChooseValidator from '@/app/stakingcalculator/choose-validator';
+import StakingResults from '@/app/stakingcalculator/staking-results';
 import Button from '@/components/common/button';
 import RoundedButton from '@/components/common/rounded-button';
 import { ChainItem, StakingRates } from '@/types';

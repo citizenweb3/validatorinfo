@@ -1,4 +1,4 @@
-import { ValidatorData, ValidatorDataFilled } from '@/app/validator_comparison/get-validator-data';
+import { ValidatorData, ValidatorDataFilled } from '@/app/comparevalidators/get-validator-data';
 
 const fieldsToChange: (keyof ValidatorData)[] = [
   'healthChange',
