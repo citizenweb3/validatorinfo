@@ -28,7 +28,7 @@ const ValidatorMetricsPage: NextPageWithLocale<PageProps> = async ({ params }) =
 
   return (
     <div className="mb-20">
-      <PageTitle prefix={`${validatorMoniker}:`} text={t('title')} />
+      <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
       <MetricsBlocks id={validatorId} />
       <MetricsChartLine />
     </div>

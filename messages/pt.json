@@ -413,8 +413,8 @@
     "Tabs": {
       "Revenue": "Receitas",
       "Metrics": "Métricas",
-      "Network Table": "Tabela de Rede",
-      "Public Goods": "Bens Público",
+      "Network Table": "Redes",
+      "Public Goods": "Projectos",
       "Governance": "Governação"
     },
     "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
@@ -426,7 +426,7 @@
     "place your interview here": "Coloque Aqui a Sua Entrevista"
   },
   "ValidatorNetworksPage": {
-    "title": "Redes Suportadas",
+    "title": "Perfil de validador: Redes Suportadas",
     "Table": {
       "Network": {
         "name": "Rede",
@@ -481,7 +481,7 @@
     }
   },
   "ValidatorMetricsPage": {
-    "title": "Pontuações e Métricas de Vaidade",
+    "title": "Perfil de validador: Pontuações e Métricas de Vaidade",
     "technical score": "Pontuação Técnica",
     "social score": "Social Score",
     "governance score": "Pontuação Social",
@@ -494,7 +494,7 @@
     "fans tooltip": "Quantidade total de delegados a este validador em todas as redes conhecidas"
   },
   "ValidatorRevenuePage": {
-    "title": "Receitas de Prémios",
+    "title": "Perfil de validador: Receitas de Prémios",
     "global revenue": "Receita Global",
     "rumors": "Rumores",
     "claim date": "Data do Pedido",
@@ -504,7 +504,7 @@
     "tooltip rewards generated": "Este gráfico mostra o montante total de recompensas que este validador pagou num determinado dia, semana, mês ou ano em USD em todas as redes conhecidas. Calculado a partir de staking, mineração e recompensas de tokens próprios"
   },
   "ValidatorGovernancePage": {
-    "title": "Feed de Resumo da Governação",
+    "title": "Perfil de validador: Feed de Resumo da Governação",
     "proposals": "Propostas Criadas pelo Validador",
     "news feed": "Feed de Notícias da Governação",
     "similar opinions": "Opiniões Similares",
@@ -526,7 +526,7 @@
     "tooltip news feed": "Resumo da atividade de votação do validador em todas as redes. Clique no ID da proposta para obter mais pormenores"
   },
   "ValidatorPublicGoodsPage": {
-    "title": "Projectos de infra-estruturas, comunitários, ferramentas e outros projectos de utilidade pública",
+    "title": "Perfil de validador: Projectos de utilidade pública. Infra-estruturas, Comunidade, Ferramentas e Outros",
     "description": "Os utilizadores que validam dados fora da cadeia são validadores de blocos. Depois de iniciar sessão, o utilizador pode enviar informações sobre um validador específico. Por exemplo, o seu validador favorito ou pool de mineração está a realizar um podcast ou construiu uma carteira? Clique no botão Enviar e adicione os detalhes necessários. Ganhe prémios. Aprovar ou refutar informações. Tenha em atenção que cada envio é uma transação!",
     "Tabs": {
       "Infrastructure": "Infraestrutura",

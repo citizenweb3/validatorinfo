@@ -413,8 +413,8 @@
     "Tabs": {
       "Revenue": "Revenue",
       "Metrics": "Metrics",
-      "Network Table": "Network Table",
-      "Public Goods": "Public Goods",
+      "Network Table": "Networks",
+      "Public Goods": "Projects",
       "Governance": "Governance"
     },
     "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
@@ -426,7 +426,7 @@
     "place your interview here": "Place Your Interview Here"
   },
   "ValidatorNetworksPage": {
-    "title": "Supported Networks",
+    "title": "Validator Profile: Supported Networks",
     "Table": {
       "Network": {
         "name": "Network",
@@ -481,7 +481,7 @@
     }
   },
   "ValidatorMetricsPage": {
-    "title": "Scores and Vanity Metrics",
+    "title": "Validator Profile: Scores and Vanity Metrics",
     "technical score": "Technical Score",
     "social score": "Social Score",
     "governance score": "Governance Score",
@@ -494,7 +494,7 @@
     "fans tooltip": "Total amount of delegators to this validator across all known networks"
   },
   "ValidatorRevenuePage": {
-    "title": "Reward Revenue",
+    "title": "Validator Profile: Reward Revenue",
     "global revenue": "Global Revenue",
     "rumors": "Rumors",
     "claim date": "Claim Date",
@@ -504,7 +504,7 @@
     "tooltip rewards generated": "This chart shows the total amount of rewards this validator paid out on any particular day, week, month or year in USD across all known networks. Calculated from staking, mining and rewards from own tokens"
   },
   "ValidatorGovernancePage": {
-    "title": "Governance Summary Feed",
+    "title": "Validator Profile: Governance Summary Feed",
     "proposals": "Validator Created Proposals",
     "news feed": "Governance News Feed",
     "similar opinions": "Similar Opinions",
@@ -526,7 +526,7 @@
     "tooltip news feed": "Summary of the voting activity of the validator across all networks. Click the proposal ID for more detail"
   },
   "ValidatorPublicGoodsPage": {
-    "title": "Infrastructure, Community, Tools and Other Public Good Projects",
+    "title": "Validator Profile: Public Good Projects. Infrastructure, Community, Tools and Others",
     "description": "Users to validator off-chain data, are validators to blocks. After you login, you may submit information about a specific validator. For example your favorite validator or mining pool is running a podcast or have built a wallet? Click the Submit button and add the required details. Earn rewards. Approve or disprove information. Please note that each submission is a transaction!",
     "Tabs": {
       "Infrastructure": "Infrastructure",
