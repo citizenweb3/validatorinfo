@@ -726,6 +726,52 @@
     },
     "show dropdown": "Показать События Слэшинга",
     "hide dropdown": "Скрыть События Слэшинга"
+  },
+  "TotalTxsPage": {
+    "title": "Сводка по Транзакциям",
+    "total transactions": "Всего Транзакций",
+    "transactions 30d": "Транзакции (30д)",
+    "transactions yesterday": "Транзакции (Вчера)",
+    "tps": "TPS (Последние 20 Блоков)",
+    "Table": {
+      "Type of Tx": {
+        "name": "Тип Транзакции",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Хэш Транзакции",
+        "hint": "ID транзакции. Нажмите, чтобы получить детали"
+      },
+      "Timestamp": {
+        "name": "Временная Метка",
+        "hint": "Время и дата проведения транзакции в UTC"
+      },
+      "Block Height": {
+        "name": "Высота Блока",
+        "hint": "Номер блока, в котором была проведена транзакция"
+      }
+    }
+  },
+  "TxInformationPage": {
+    "title": "Информация о Транзакции",
+    "show all transactions": "Показать Все Транзакции",
+    "hash txs tooltip": "text",
+    "claim reward": "Получение Вознаграждения",
+    "accepted": "Принято",
+    "chain": "Сеть",
+    "chain id": "ID Сети",
+    "block height": "Высота Блока",
+    "timestamp": "Временная метка",
+    "fees": "Комиссия",
+    "memo": "Мемо",
+    "Tabs": {
+      "Expand": "Развернуть",
+      "JSON": "JSON"
+    },
+    "delegate address": "Адрес Делегатора",
+    "validator address": "Адрес Валидатора",
+    "amount": "Количество",
+    "auto claim reward": "Автоматически полученные вознаграждения"
   }
 }
 

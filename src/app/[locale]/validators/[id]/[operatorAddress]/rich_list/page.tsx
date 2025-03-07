@@ -26,9 +26,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 const defaultPerPage = 1;
 
 const RichListPage: NextPageWithLocale<PageProps> = async ({
-  params: { locale, id, operatorAddress },
-  searchParams: q,
-}) => {
+                                                             params: { locale, id, operatorAddress },
+                                                             searchParams: q,
+                                                           }) => {
   const t = await getTranslations({ locale, namespace: 'RichListPage' });
 
   const validatorId = parseInt(id);
@@ -48,7 +48,8 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
         <SwitchClient value={true} />
         <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
       </div>
-      <DelegatedTable page={'RichListPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
+      <DelegatedTable chainId={node?.chainId ?? 1} page={'RichListPage'} perPage={perPage} currentPage={currentPage}
+                      sort={{ sortBy, order }} />
     </div>
   );
 };

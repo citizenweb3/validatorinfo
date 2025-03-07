@@ -18,13 +18,13 @@ const NodeDetailsItem: FC<OwnProps> = ({label, value, isCopy = false, isCheckmar
             <div
                 className="w-7/12 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">{label}</div>
             <div
-                className="flex w-5/12 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-base">
+                className="flex w-5/12 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg">
                 {isCheckmark ? (
                     <Image src={icons.CheckmarkIcon} alt="Positive" width={30} height={30}/>
                 ) : value ? (
                     <>
                         {cutHash({value: value})}
-                        {isCopy && <CopyButton value={value} size="base"/>}
+                        {isCopy && <CopyButton value={value} size="md"/>}
                     </>
                 ) : null}
             </div>

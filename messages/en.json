@@ -726,6 +726,52 @@
     },
     "show dropdown": "Show Slashing Event",
     "hide dropdown": "Hide Slashing Event"
+  },
+  "TotalTxsPage": {
+    "title": "Transactions Summary",
+    "total transactions": "Total Transactions",
+    "transactions 30d": "Transactions (30d)",
+    "transactions yesterday": "Transactions (Yesterday)",
+    "tps": "TPS (Last 20 Blocks)",
+    "Table": {
+      "Type of Tx": {
+        "name": "Type of Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "Transaction ID. Click for details"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Time and date the transaction took place in UTC"
+      },
+      "Block Height": {
+        "name": "Block Height",
+        "hint": "The number of block the transaction took place"
+      }
+    }
+  },
+  "TxInformationPage": {
+    "title": "Transaction Information",
+    "show all transactions": "Show All Transactions",
+    "hash txs tooltip": "text",
+    "claim reward": "Claim Reward",
+    "accepted": "Accepted",
+    "chain": "Chain",
+    "chain id": "Chain ID",
+    "block height": "Block Height",
+    "timestamp": "Timestamp",
+    "fees": "Fees",
+    "memo": "Memo",
+    "Tabs": {
+      "Expand": "Expand",
+      "JSON": "JSON"
+    },
+    "delegate address": "Delegate Address",
+    "validator address": "Validator Address",
+    "amount": "Amount",
+    "auto claim reward": "Auto Claim Reward"
   }
 }
 

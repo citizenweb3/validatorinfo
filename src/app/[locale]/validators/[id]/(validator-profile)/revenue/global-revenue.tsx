@@ -7,10 +7,9 @@ import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
-  id: number;
 }
 
-const GlobalRevenue: FC<OwnProps> = ({ id }) => {
+const GlobalRevenue: FC<OwnProps> = () => {
   const t = useTranslations('ValidatorRevenuePage');
   const [isChart, setIsChart] = useState<boolean>(true);
   const [chartType, setChartType] = useState<string | undefined>('Daily');

@@ -215,3 +215,16 @@ export const getNetworkProfileTabs = (id: number): TabOptions[] => {
     },
   ];
 };
+
+export const getTxInformationTabs = (id: number, txHash: string): TabOptions[] => {
+  return [
+    {
+      name: 'Expand',
+      href: `/networks/${id}/tx/${txHash}/expand`,
+    },
+    {
+      name: 'JSON',
+      href: `/networks/${id}/tx/${txHash}/json`,
+    },
+  ];
+};
