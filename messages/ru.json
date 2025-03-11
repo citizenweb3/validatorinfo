@@ -8,11 +8,11 @@
   "Header": {
     "Quotes": {
       "Validators": {
-        "name": "Валидаторов",
+        "name": "Валидаторов:",
         "hint": ""
       },
       "Ecosystems": {
-        "name": "Экосистем",
+        "name": "Экосистем:",
         "hint": ""
       },
       "Dominance": {
@@ -20,23 +20,23 @@
         "hint": ""
       },
       "POW": {
-        "name": "POW",
+        "name": "POW:",
         "hint": "Глобальный стейкинг, майнинг-пулы и статистика валидаторов"
       },
       "ETH": {
-        "name": "ETH",
+        "name": "ETH:",
         "hint": ""
       },
       "Polkadot": {
-        "name": "Polkadot",
+        "name": "Polkadot:",
         "hint": ""
       },
       "Cosmos": {
-        "name": "Cosmos",
+        "name": "Cosmos:",
         "hint": ""
       },
       "TVL": {
-        "name": "ТВЛ",
+        "name": "Т.В.C.:",
         "hint": "Jump Around"
       }
     },
@@ -65,7 +65,9 @@
     "Rumors": "Слухи",
     "Global": "Общий",
     "Library": "Библиотека",
-    "About Us": "О нас"
+    "About Us": "О нас",
+    "Ecosystems": "Экосистемы",
+    "Nodes": "Ноды"
   },
   "Common": {
     "Learn More": "Подробнее"
@@ -279,6 +281,63 @@
     "reward to payout": "Вознаграждения к Выплате",
     "Revenue vs Capital Flow": "Выручка VS Движение капитала"
   },
+  "NodesPage": {
+    "title": "Неопределённые узлы",
+    "show world node map": "Показать мировую карту узлов",
+    "customize": "настроить",
+    "Table": {
+      "Node Moniker": {
+        "name": "Имя узла",
+        "hint": ""
+      },
+      "Ecosystem": {
+        "name": "Экосистема",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Сеть",
+        "hint": ""
+      },
+      "Stake": {
+        "name": "Доля",
+        "hint": ""
+      }
+    }
+  },
+  "EcosystemsPage": {
+    "title": "Исследователь экосистем блокчейнов Web3",
+    "customize": "настроить",
+    "Table": {
+      "Ecosystems": {
+        "name": "Экосистемы",
+        "hint": ""
+      },
+      "TVL": {
+        "name": "TVL",
+        "hint": ""
+      },
+      "Market Cap": {
+        "name": "Рыночная капитализация",
+        "hint": ""
+      },
+      "Project": {
+        "name": "Проект",
+        "hint": ""
+      },
+      "MAA": {
+        "name": "M.A.A.",
+        "hint": "Количество ежемесячно активных аккаунтов в сети"
+      },
+      "Revenue": {
+        "name": "Доход",
+        "hint": ""
+      },
+      "Tags": {
+        "name": "Теги",
+        "hint": ""
+      }
+    }
+  },
   "RumorsPage": {
     "title": "P2P-чат: распространяйте слухи",
     "description": "Аноним, как дела? Выбери себе имя пользователя и `начни распространять слухи, я ухожу сегодня...`.\n\nИзвини, Anon, проблемы с ИИ. На чем мы остановились? Ах да, выбери имя пользователя и начинай распространять слухи. Вот и все. Нет истории чата и нет идентификаций. Верните старые времена!",
@@ -304,7 +363,8 @@
       "Validators": "Валидаторы",
       "Networks": "Сети",
       "Metrics": "Метрики",
-      "AI": "ИИ"
+      "Ecosystems": "Экосистемы",
+      "Nodes": "Ноды"
     }
   },
   "ComparisonPage": {

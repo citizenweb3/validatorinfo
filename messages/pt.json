@@ -8,11 +8,11 @@
   "Header": {
     "Quotes": {
       "Validators": {
-        "name": "Validadores",
+        "name": "Validadores:",
         "hint": ""
       },
       "Ecosystems": {
-        "name": "Ecossistemas",
+        "name": "Ecossistemas:",
         "hint": ""
       },
       "Dominance": {
@@ -20,23 +20,23 @@
         "hint": ""
       },
       "POW": {
-        "name": "POW",
+        "name": "POW:",
         "hint": "Estacamento global, pools de mineração e estatísticas de validadores"
       },
       "ETH": {
-        "name": "ETH",
+        "name": "ETH:",
         "hint": ""
       },
       "Polkadot": {
-        "name": "Polkadot",
+        "name": "Polkadot:",
         "hint": ""
       },
       "Cosmos": {
-        "name": "Cosmos",
+        "name": "Cosmos:",
         "hint": ""
       },
       "TVL": {
-        "name": "TVL",
+        "name": "T.V.S.:",
         "hint": ""
       }
     },
@@ -65,7 +65,9 @@
     "Rumors": "Rumores",
     "Global": "Global",
     "About Us": "Sobre nós",
-    "Library": "Biblioteca"
+    "Library": "Biblioteca",
+    "Ecosystems": "Ecossistemas",
+    "Nodes": "Nodes"
   },
   "Common": {
     "Learn More": "Saber mais"
@@ -279,6 +281,63 @@
     "reward to payout": "Recompensa para Pagamento",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
   },
+  "NodesPage": {
+    "title": "Nós Não Identificados",
+    "show world node map": "Mostrar Mapa Mundial de Nós",
+    "customize": "Customizar",
+    "Table": {
+      "Node Moniker": {
+        "name": "Moniker de nó",
+        "hint": ""
+      },
+      "Ecosystem": {
+        "name": "Ecossistema",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Stake": {
+        "name": "Stake",
+        "hint": ""
+      }
+    }
+  },
+  "EcosystemsPage": {
+    "title": "Explorador de Ecossistemas de Blockchain Web3",
+    "customize": "Customizar",
+    "Table": {
+      "Ecosystems": {
+        "name": "Ecossistemas",
+        "hint": ""
+      },
+      "TVL": {
+        "name": "TVL",
+        "hint": ""
+      },
+      "Market Cap": {
+        "name": "Capitalização de Mercado",
+        "hint": ""
+      },
+      "Project": {
+        "name": "Projeto",
+        "hint": ""
+      },
+      "MAA": {
+        "name": "M.A.A.",
+        "hint": "Quantidade de contas ativas mensais na cadeia"
+      },
+      "Revenue": {
+        "name": "Receita",
+        "hint": ""
+      },
+      "Tags": {
+        "name": "Etiquetas",
+        "hint": ""
+      }
+    }
+  },
   "RumorsPage": {
     "title": "Bate-papo P2P: Espalhe os rumores",
     "description": "Anon, como vai? Escolha um nome de usuário e \"comece a espalhar a notícia, estou saindo hoje...\".\n\nDesculpe Anon, problemas de IA. Onde estávamos? Ah sim, escolha um nome de usuário e comece a espalhar boatos. Simples assim. Não há histórico de bate-papo nem identidades. Traga de volta os velhos tempos!",
@@ -304,7 +363,8 @@
       "Validators": "Validadores",
       "Networks": "Redes",
       "Metrics": "Métricos",
-      "AI": "AI"
+      "Ecosystems": "Ecossistemas",
+      "Nodes": "Nodes"
     }
   },
   "ComparisonPage": {

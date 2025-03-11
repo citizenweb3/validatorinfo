@@ -35,14 +35,15 @@ export const validatorsTabs: TabOptions[] = [
     icon: icons.ValidatorsIcon,
     iconHovered: icons.ValidatorsIconHovered,
   },
+  { name: 'Nodes', href: '/nodes', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
   {
     name: 'Networks',
     href: '/networks',
     icon: icons.NetworksIcon,
     iconHovered: icons.NetworksIconHovered,
   },
+  { name: 'Ecosystems', href: '/ecosystems', icon: icons.EcosystemsIcon, iconHovered: icons.EcosystemsIconHovered },
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
-  { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
 ];
 
 export const aboutTabs: TabOptions[] = [

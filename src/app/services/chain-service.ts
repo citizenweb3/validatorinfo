@@ -2,7 +2,6 @@ import { Chain, Price, Prisma } from '@prisma/client';
 
 import db from '@/db';
 import { SortDirection } from '@/server/types';
-
 import ChainWhereInput = Prisma.ChainWhereInput;
 
 const getAll = async (
@@ -38,10 +37,17 @@ const getById = async (id: number): Promise<Chain | null> => {
   });
 };
 
+const getEcosystemsChains = async (): Promise<Chain[]> => {
+  return db.chain.findMany({
+    distinct: ['ecosystem'],
+  });
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
   getById,
+  getEcosystemsChains,
 };
 
 export default ChainService;

@@ -16,10 +16,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default async function TxInformationLayout({
-                                                    children,
-                                                    params: { locale, id, hash },
-                                                  }: Readonly<{
+export default async function TxInformationLayout({ children, params: { locale, id, hash } }: Readonly<{
   children: ReactNode;
   params: { locale: Locale; id: string, hash: string };
 }>) {
@@ -28,14 +25,12 @@ export default async function TxInformationLayout({
   const chain = await chainService.getById(chainId);
   const txInformationTabs = getTxInformationTabs(chainId, hash);
 
-  return (
-    <div className="">
-      <PageTitle text={t('title')} />
-      <TxInformation chain={chain ?? undefined} hash={hash} />
-      <div className="w-1/3 mt-5">
-        <TabList tabs={txInformationTabs} page={'TxInformationPage'} />
-      </div>
-      {children}
+  return (<div className="">
+    <PageTitle text={t('title')} />
+    <TxInformation chain={chain ?? undefined} hash={hash} />
+    <div className="w-1/3 mt-5">
+      <TabList tabs={txInformationTabs} page={'TxInformationPage'} />
     </div>
-  );
+    {children}
+  </div>);
 };
