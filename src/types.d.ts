@@ -51,5 +51,6 @@ export interface PagesProps {
     | 'NetworkDevInfo'
     | 'TotalTxsPage'
     | 'TxInformationPage'
-    | 'EcosystemsPage';
+    | 'EcosystemsPage'
+    | 'NodesPage';
 }

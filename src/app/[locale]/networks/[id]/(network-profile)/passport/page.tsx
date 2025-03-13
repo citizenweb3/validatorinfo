@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
-import DecentralizationBar from '@/app/global/bars/decentralization-bar';
-import ScalabilityBar from '@/app/global/bars/scalability-bar';
-import SecurityBar from '@/app/global/bars/security-bar';
+import DecentralizationBar from '@/app/web3stats/bars/decentralization-bar';
+import ScalabilityBar from '@/app/web3stats/bars/scalability-bar';
+import SecurityBar from '@/app/web3stats/bars/security-bar';
 import NetworkAprTvs from '@/app/networks/[id]/(network-profile)/passport/network-apr-tvs';
 import NetworkOverview from '@/app/networks/[id]/(network-profile)/passport/network-overview';
 import TotalsListNetworkPassport from '@/app/networks/[id]/(network-profile)/passport/total-list';

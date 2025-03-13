@@ -13,7 +13,7 @@ interface OwnProps extends PagesProps {
 
 const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
   return (
-    <div>
+    <div className="mt-2">
       <EcosystemsListFilters perPage={perPage} />
       <div>
         <table className="my-4 w-full border-collapse table-fixed">

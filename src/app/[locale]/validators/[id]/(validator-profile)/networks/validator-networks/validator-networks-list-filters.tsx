@@ -23,6 +23,7 @@ export const stages = [
 
 export const nodeStatus = [
   { value: 'jailed', title: 'Jailed' },
+  { value: 'unjailed', title: 'Unjailed' },
   { value: 'all', title: 'All' },
 ];
 

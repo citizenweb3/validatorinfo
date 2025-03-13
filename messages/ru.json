@@ -63,7 +63,7 @@
     "Calculate": "Калькулятор",
     "Compare": "Сравнение",
     "Rumors": "Слухи",
-    "Global": "Общий",
+    "Global": "Анализ",
     "Library": "Библиотека",
     "About Us": "О нас",
     "Ecosystems": "Экосистемы",
@@ -134,12 +134,12 @@
       "Compare": "Сравнение",
       "ValidatorInfo": "ВалидаторИнфо",
       "Rumors": "Слухи",
-      "Global": "Общий"
+      "Global": "Анализ"
     }
   },
   "GlobalPosPage": {
     "Metadata": {
-      "title": "Глобальный POS"
+      "title": "Глобальные показатели и статистика Web3"
     },
     "title": "Глобальные показатели и статистика Web3",
     "dominance": "Доминирование Web3 T.V.S",
@@ -282,12 +282,12 @@
     "Revenue vs Capital Flow": "Выручка VS Движение капитала"
   },
   "NodesPage": {
-    "title": "Неопределённые узлы",
-    "show world node map": "Показать мировую карту узлов",
-    "customize": "настроить",
+    "title": "Неопределённые ноды",
+    "show world node map": "Показать Мировую Карту Нод",
+    "customize": "Настроить",
     "Table": {
       "Node Moniker": {
-        "name": "Имя узла",
+        "name": "Имя Ноды",
         "hint": ""
       },
       "Ecosystem": {
@@ -320,8 +320,8 @@
         "name": "Рыночная капитализация",
         "hint": ""
       },
-      "Project": {
-        "name": "Проект",
+      "Projects": {
+        "name": "Проекты",
         "hint": ""
       },
       "MAA": {
@@ -555,7 +555,7 @@
   "ValidatorRevenuePage": {
     "title": "Профиль Валидатора: Доходы валидатора",
     "global revenue": "Глобальный доход",
-    "rumors": "Слухи",
+    "p2pchat": "Слухи",
     "claim date": "Дата снимка",
     "read more": "Подробнее",
     "rewards generated": "Полученные Вознаграждения",

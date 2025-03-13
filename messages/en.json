@@ -62,8 +62,8 @@
     "Metrics": "Metrics",
     "Calculate": "Calculate",
     "Compare": "Compare",
-    "Rumors": "Rumors",
-    "Global": "Global",
+    "Rumors": "Rumor",
+    "Global": "Analyze",
     "About Us": "About Us",
     "Library": "Library",
     "Ecosystems": "Ecosystems",
@@ -133,8 +133,8 @@
       "Calculate": "Calculate",
       "Compare": "Compare",
       "ValidatorInfo": "ValidatorInfo",
-      "Rumors": "Rumors",
-      "Global": "Global"
+      "Rumors": "Rumor",
+      "Global": "Analyze"
     }
   },
   "GlobalPosPage": {
@@ -555,7 +555,7 @@
   "ValidatorRevenuePage": {
     "title": "Validator Profile: Reward Revenue",
     "global revenue": "Global Revenue",
-    "rumors": "Rumors",
+    "p2pchat": "Rumor",
     "claim date": "Claim Date",
     "read more": "Read More",
     "rewards generated": "Rewards Generated",

@@ -62,8 +62,8 @@
     "Metrics": "Métricos",
     "Calculate": "Calcular",
     "Compare": "Comparar",
-    "Rumors": "Rumores",
-    "Global": "Global",
+    "Rumors": "Rumor",
+    "Global": "Analise",
     "About Us": "Sobre nós",
     "Library": "Biblioteca",
     "Ecosystems": "Ecossistemas",
@@ -133,13 +133,13 @@
       "Calculate": "Calcular",
       "Compare": "Comparar",
       "ValidatorInfo": "ValidatorInfo",
-      "Rumors": "Rumores",
-      "Global": "Global"
+      "Rumors": "Rumor",
+      "Global": "Analise"
     }
   },
   "GlobalPosPage": {
     "Metadata": {
-      "title": "Global"
+      "title": "Métricas e estatísticas globais da Web3"
     },
     "title": "Métricas e estatísticas globais da Web3",
     "dominance": "Dominância da Web3 T.V.S",
@@ -320,8 +320,8 @@
         "name": "Capitalização de Mercado",
         "hint": ""
       },
-      "Project": {
-        "name": "Projeto",
+      "Projects": {
+        "name": "Projectos",
         "hint": ""
       },
       "MAA": {
@@ -333,7 +333,7 @@
         "hint": ""
       },
       "Tags": {
-        "name": "Etiquetas",
+        "name": "Tags",
         "hint": ""
       }
     }
@@ -555,7 +555,7 @@
   "ValidatorRevenuePage": {
     "title": "Perfil de validador: Receitas de Prémios",
     "global revenue": "Receita Global",
-    "rumors": "Rumores",
+    "p2pchat": "Rumor",
     "claim date": "Data do Pedido",
     "read more": "Ler mais",
     "rewards generated": "Prémios Gerados",

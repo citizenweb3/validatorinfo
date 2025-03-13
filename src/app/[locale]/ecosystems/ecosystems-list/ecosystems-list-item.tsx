@@ -13,7 +13,7 @@ const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
   return (
     <tr className="group font-handjet hover:bg-bgHover hover:text-highlight">
       <td
-        className="group/avatar border-b w-2/12 border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+        className="group/avatar border-b w-2/12 border-black px-2 py-2 font-sfpro active:border-bgSt">
         <TableAvatar icon={item.logoUrl}
                      name={_.capitalize(item.ecosystem)}
                      href={`/networks/${item.id}/passport`} />
@@ -42,7 +42,6 @@ const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
             <div className="rounded-full bg-primary shadow-button px-6 mt-1 mr-2">Tag2</div>
             <div className="rounded-full bg-primary shadow-button px-6 mt-1 mr-2">Tag3</div>
           </div>
-
         </Link>
       </td>
     </tr>
