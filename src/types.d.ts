@@ -45,5 +45,10 @@ export interface PagesProps {
     | 'VotingSummaryPage'
     | 'TxSummaryPage'
     | 'RichListPage'
-    | 'NodeRevenuePage';
+    | 'NodeRevenuePage'
+    | 'NetworkProfileHeader'
+    | 'NetworkGovernance'
+    | 'NetworkDevInfo'
+    | 'TotalTxsPage'
+    | 'TxInformationPage';
 }

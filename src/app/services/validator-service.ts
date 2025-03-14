@@ -1,6 +1,6 @@
 import { Node, Prisma, Validator } from '@prisma/client';
 
-import { DropdownListItem } from '@/app/staking_calculator/choose-dropdown';
+import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import db from '@/db';
 import logger from '@/logger';
 import { SortDirection } from '@/server/types';
@@ -143,10 +143,10 @@ const getList = async (): Promise<DropdownListItem[]> => {
 
   return (
     await db.validator.findMany({
-      select: { moniker: true, identity: true },
+      select: { moniker: true, id: true },
       orderBy: { moniker: 'asc' },
     })
-  ).map((e) => ({ title: e.moniker, value: e.identity })) as DropdownListItem[];
+  ).map((e) => ({ title: e.moniker, value: e.id })) as DropdownListItem[];
 };
 
 const getValidatorByIdentity = async (identity: string): Promise<Validator | null> => {

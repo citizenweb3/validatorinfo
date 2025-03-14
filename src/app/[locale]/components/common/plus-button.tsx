@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-type Size = 'xs' | 'sm' | 'base' | 'md';
+export type Size = 'xs' | 'sm' | 'base' | 'md';
 
 const sizes: Record<Size, string> = {
   xs: 'h-5 w-5 min-h-5 min-w-5',
