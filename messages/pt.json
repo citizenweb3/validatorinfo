@@ -181,6 +181,7 @@
     "description": "Construa uma blockchain usando as melhores bibliotecas e serviços de código aberto da categoria.",
     "Others Links": "Outras ligações",
     "Show Transactions": "Mostrar Transacções",
+    "Show Validators": "Mostrar Validadores",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
     "tvl": "TVL",
     "revenue": "Receitas",
@@ -280,6 +281,51 @@
     "% of tokens staked": "% de Fichas Apostadas",
     "reward to payout": "Recompensa para Pagamento",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
+  },
+  "NetworkValidatorsPage": {
+    "title": "Resumo dos Validadores",
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Expected APR": {
+        "name": "APR Esperado",
+        "hint": "Este é o retorno anual do seu investimento em porcentagem, se fosse calculado agora. É esperado, pois inflação, comissão, etc. podem mudar a qualquer momento"
+      },
+      "Voting Power": {
+        "name": "Poder de Voto",
+        "hint": "A quantidade total assegurada pelo validador, e a porcentagem que representa do total de tokens apostados"
+      },
+      "Commission": {
+        "name": "Comissão",
+        "hint": "A porcentagem das recompensas geradas que o validador recebe por proteger a rede"
+      },
+      "Self Delegation": {
+        "name": "Auto Delegação",
+        "hint": "A quantidade de tokens que o validador delegou para o seu próprio nó a partir da conta do operador. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Uptime": {
+        "name": "Tempo de Atividade",
+        "hint": "O tempo durante o qual o nó está online em um período selecionado. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Missed Blocks": {
+        "name": "Blocos Perdidos",
+        "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Infrastructure": {
+        "name": "Infraestrutura",
+        "hint": "Este validador fornece infraestrutura pública para esta rede? RPC, Arquivo, etc. Clique no V para ver detalhes"
+      },
+      "Governance": {
+        "name": "Governança",
+        "hint": "Pontuação de governança do validador em 100. Baseado em sua participação em eventos importantes"
+      },
+      "Customize": "Personalizar",
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
+      "Network Stage": "Estágio da Rede",
+      "Set Position": "Definir Posição"
+    }
   },
   "NodesPage": {
     "title": "Nós Não Identificados",
