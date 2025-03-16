@@ -56,7 +56,11 @@ const getNodesByChainId = async (chainId: number): Promise<Node[] | null> => {
   return db.node.findMany({
     where: {
       chainId: chainId,
+      validatorId: { not: null },
     },
+    orderBy: [
+      { moniker: 'asc' },
+    ],
   });
 };
 

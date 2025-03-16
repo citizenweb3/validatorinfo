@@ -16,36 +16,64 @@ interface OwnProps {
 
 const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, className = '', modalClassName = '' }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
   const selectedTitle =
-    typeof selected !== 'undefined' ? list.find((item) => item.value === selected)?.title ?? '' : '';
+    typeof selected !== 'undefined'
+      ? list.find((item) => item.value.toString() === selected.toString())?.title ?? ''
+      : '';
 
   const handleChange = (value: string | number) => {
     setIsModalOpened(false);
     onChange(value);
+    setSearchQuery('');
   };
+
+  const filteredList = list.filter((item) =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+
   return (
-    <div
-      className={`${className} flex h-8 flex-grow flex-row items-center justify-between border-b border-bgSt pl-4 text-lg`}
+    <div className={`${className} flex h-8 flex-col border-b border-bgSt pl-4 text-lg`}
     >
-      <div className="text-nowrap">{name && <div>{name}:</div>}</div>
-      <div
-        onClick={() => setIsModalOpened(true)}
-        className="ml-4 h-8 min-w-6 max-w-full cursor-pointer overflow-x-hidden text-highlight"
-      >
-        {selectedTitle}
+      <div className="flex flex-row justify-between items-center">
+        <div className="text-nowrap">{name && <div>{name}:</div>}</div>
+        <div
+          onClick={() => setIsModalOpened(true)}
+          className="h-8 min-w-6 max-w-full cursor-pointer overflow-x-hidden text-highlight"
+        >
+          {selectedTitle}
+        </div>
+        <TriangleButton direction={isModalOpened ? 't' : 'b'} onClick={() => setIsModalOpened(true)} />
       </div>
-      <TriangleButton direction={isModalOpened ? 't' : 'b'} onClick={() => setIsModalOpened(true)} />
-      <BaseModal opened={isModalOpened} onClose={() => setIsModalOpened(false)} className="right-0 top-0">
-        <div className={`${modalClassName} space-y-1 text-nowrap text-base`}>
-          {list.map((item) => (
-            <div
-              key={item.value}
-              onClick={() => handleChange(item.value)}
-              className={`${item.value === selected ? 'text-highlight' : ''} cursor-pointer hover:text-highlight`}
-            >
-              {item.title}
-            </div>
-          ))}
+      <BaseModal maxHeight={'max-h-[25vh]'} opened={isModalOpened} onClose={() => setIsModalOpened(false)}>
+        <div className={`${modalClassName} space-y-1 text-nowrap text-base items-center`}>
+          <div className="sticky top-0 z-10 bg-background">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder=""
+              className="w-full mx-2 py-2 my-2 pl-8 border-b border-b-primary font-sfpro text-base bg-background h-6 cursor-text bg-search bg-no-repeat bg-contain focus:outline-none focus:ring-0 peer-focus:hidden hover:bg-search_h"
+            />
+          </div>
+          <div className="overflow-y-auto">
+            {filteredList.length > 0 ? (
+              filteredList.map((item) => (
+                <div
+                  key={item.value}
+                  onClick={() => handleChange(item.value)}
+                  className={`cursor-pointer px-4 py-2 ${
+                    item.value.toString() === selected?.toString() ? 'text-highlight' : ''
+                  }`}
+                >
+                  {item.title}
+                </div>
+              ))
+            ) : (
+              <div className="px-4 py-2">No results found</div>
+            )}
+          </div>
         </div>
       </BaseModal>
     </div>

@@ -165,7 +165,9 @@
     "Token": "Token",
     "Enter Staking Amount": "Enter Staking Amount",
     "Wrong amount": "Wrong amount",
-    "earnings": "d Earnings"
+    "earnings": "d Earnings",
+    "downloading validators": "Downloading Validators...",
+    "please choose network": "Please Choose a Network"
   },
   "NetworksPage": {
     "title": "P.O.W. and P.O.S. Network List A-Z"
