@@ -1,5 +1,5 @@
 # [Validator Info](https://validatorinfo.com/)
-> Web3 Explorer. Blockchain Validator, Mining Pool and Network Interactive Dashboard, Real-Time Token Analytics and Metrics
+> Web3 Blockchain Explorer. Validator, Mining Pool, Token and Network Real-time Metrics. Interactive Onchain Dashboard.  
 
 ![Telegram-Storie](https://github.com/user-attachments/assets/65689ccc-e5a4-4ee2-8ee7-ffb86bde4233)
 
