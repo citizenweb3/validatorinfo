@@ -23,6 +23,7 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const sortBy = (q.sortBy as 'moniker') ?? 'moniker';
   const order = (q.order as SortDirection) ?? 'asc';
+  const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
 
   return (
     <div>
@@ -32,7 +33,7 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
-      <SimpleValidators page="HomePage" perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
+      <SimpleValidators page="HomePage" perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} ecosystems={ecosystems} />
     </div>
   );
 };

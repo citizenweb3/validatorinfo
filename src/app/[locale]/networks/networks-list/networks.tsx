@@ -16,16 +16,20 @@ interface OwnProps extends PagesProps {
 const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, currentPage }) => {
   return (
     <div>
-      <ListFilters perPage={perPage} selectedEcosystems={ecosystems} />
+      <ListFilters
+        perPage={perPage}
+        selectedEcosystems={ecosystems}
+        isEcosystems
+        isNetworkStage />
       <div>
         <table className="my-4 w-full table-auto border-collapse">
           <thead>
-            <tr className="bg-table_header">
-              <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
-              <TableHeaderItem page={page} name="Token" />
-              <TableHeaderItem page={page} name="FDV" />
-              <TableHeaderItem page={page} name="Links" colspan={3} />
-            </tr>
+          <tr className="bg-table_header">
+            <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
+            <TableHeaderItem page={page} name="Token" />
+            <TableHeaderItem page={page} name="FDV" />
+            <TableHeaderItem page={page} name="Links" colspan={3} />
+          </tr>
           </thead>
           <NetworksList ecosystems={ecosystems} perPage={perPage} sort={sort} currentPage={currentPage} />
         </table>

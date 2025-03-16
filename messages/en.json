@@ -832,6 +832,7 @@
     "transactions 30d": "Transactions (30d)",
     "transactions yesterday": "Transactions (Yesterday)",
     "tps": "TPS (Last 20 Blocks)",
+    "average fee": "Average Fee",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",
