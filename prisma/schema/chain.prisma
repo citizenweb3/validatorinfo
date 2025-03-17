@@ -26,5 +26,17 @@ model Chain {
   validators Validator[] @relation("chain_validators")
   addresses  Address[]   @relation("chain_addresses")
 
+  // calculated
+  totalSupply String @map("total_supply") @default("")
+  bondedTokens String @map("bonded_tokens") @default("")
+  unbondedTokens String @map("not_bonded_tokens") @default("")
+  unbondedTokensRatio Int @map("unbonded_tokens_ratio") @default(0)
+  uptimeHeight Int @map("uptime_height") @default(0)
+  lastUptimeUpdated DateTime @map("last_uptime_updated") @db.Timestamptz(6) @default(now())
+  avgTxInterval Float @map("avg_tx_interval") @default(0)
+  tvl Int @default(0)
+  apr Float @default(0)
+
+
   @@map("chains")
 }

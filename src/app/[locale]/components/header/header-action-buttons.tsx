@@ -31,7 +31,7 @@ const HeaderActionButtons: FC<OwnProps> = () => {
         />
         <span className="-my-1.5 pl-8 font-handjet">{t('Hi, World!')}</span>
       </Button>
-      <Button component="link" href={`/validators/lucky`}>
+      <Button component="link" href={`/lucky`}>
         <Image
           src={icons.LuckyIcon}
           alt="AI"
