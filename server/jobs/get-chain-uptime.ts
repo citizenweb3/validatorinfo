@@ -23,7 +23,7 @@ export const getChainUptime = async (chains: ChainWithNodes[]) => {
       const blockHeight = +data.result.sync_info.latest_block_height;
 
       const txCount = blockHeight - chain.uptimeHeight;
-      const avgTxInterval = txCount ? (currentTime - chain.lastUptimeUpdated) / txCount : 0;
+      const avgTxInterval = txCount ? (currentTime - +chain.lastUptimeUpdated) / txCount : 0;
 
       if (!avgTxInterval) {
         console.log(
