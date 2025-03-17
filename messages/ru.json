@@ -165,7 +165,9 @@
     "Token": "Токен",
     "Enter Staking Amount": "Введите сумму стейкинга",
     "Wrong amount": "Некоректное значение",
-    "earnings": "д заработка"
+    "earnings": "д заработка",
+    "downloading validators": "Загрузка Валидаторов...",
+    "please choose network": "Пожалуйста Выберете Сеть"
   },
   "NetworksPage": {
     "title": "Список сетей P.O.W. и P.O.S. от A до Z"

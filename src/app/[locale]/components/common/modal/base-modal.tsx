@@ -10,19 +10,21 @@ interface OwnProps {
   isRelative?: boolean;
   hideClose?: boolean;
   style?: CSSProperties;
+  maxHeight?: string;
 }
 
 const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
-  ref,
-  opened,
-  children,
-  onClose,
-  className = '',
-  isRelative = false,
-  title = '',
-  style,
-  hideClose = false,
-}) => {
+    ref,
+    opened,
+    children,
+    onClose,
+    className = '',
+    isRelative = false,
+    title = '',
+    style,
+    hideClose = false,
+    maxHeight = 'max-h-[80vh]',
+  }) => {
   const modalRef = ref || useRef(null);
   useOnClickOutside(modalRef, () => onClose());
   return (
@@ -40,7 +42,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
             />
           )}
           {title && <div className="ml-9 text-lg text-highlight">{title}</div>}
-          <div className="max-h-[80vh] overflow-y-auto overflow-x-hidden">{children}</div>
+          <div className={`${maxHeight} overflow-y-auto overflow-x-hidden`}>{children}</div>
         </div>
       </div>
     </div>
