@@ -50,5 +50,8 @@ export interface PagesProps {
     | 'NetworkGovernance'
     | 'NetworkDevInfo'
     | 'TotalTxsPage'
-    | 'TxInformationPage';
+    | 'TxInformationPage'
+    | 'EcosystemsPage'
+    | 'NodesPage'
+    | 'NetworkValidatorsPage';
 }

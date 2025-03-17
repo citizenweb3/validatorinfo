@@ -18,7 +18,7 @@
 
 # misc
 .DS_Store
-/logs
+logs
 *.pem
 .idea
 

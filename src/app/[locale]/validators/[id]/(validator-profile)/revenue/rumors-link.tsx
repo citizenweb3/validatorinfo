@@ -14,7 +14,7 @@ const RumorsLink: FC<OwnProps> = async (id, locale) => {
 
   return (
     <div className="flex flex-col items-start pb-1 shadow-button">
-      <h2 className="mb-1 self-end text-sm text-highlight">{t('rumors')}</h2>
+      <h2 className="mb-1 self-end text-sm text-highlight">{t('p2pchat')}</h2>
       <div className="flex items-center space-x-4 pl-2 pr-6">
         <img src={validatorExample.icon} alt={validatorExample.name} className="max-h-14 max-w-14 rounded-full" />
         <div>
@@ -24,7 +24,7 @@ const RumorsLink: FC<OwnProps> = async (id, locale) => {
         </div>
       </div>
       <div className="mb-1 mt-4 flex justify-center self-stretch">
-        <RoundedButton href={'/rumors'} className="font-handjet text-base">
+        <RoundedButton href={'/p2pchat'} className="font-handjet text-base">
           {t('read more')}
         </RoundedButton>
       </div>

@@ -9,10 +9,12 @@ interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
+  ecosystems: string[];
 }
 
-const SimpleValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
-  const { validators: list, pages } = await validatorService.getLite(
+const SimpleValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, ecosystems }) => {
+  const { validators: list, pages } = await validatorService.getAll(
+    ecosystems,
     perPage * (currentPage - 1),
     perPage,
     sort.sortBy,

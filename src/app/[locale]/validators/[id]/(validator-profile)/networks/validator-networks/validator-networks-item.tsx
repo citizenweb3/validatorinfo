@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import TableAvatar from '@/components/common/table/table-avatar';
+import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
 import { validatorNodesWithChainData } from '@/services/validator-service';
+import formatCash from '@/utils/format-cash';
 
 interface OwnProps {
   item: validatorNodesWithChainData;
@@ -86,9 +88,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
           <div className="text-center">
-            {tokenDelegatorShares.toLocaleString('en-US', {
-              maximumFractionDigits: 0,
-            })}
+            <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>{formatCash(tokenDelegatorShares)}</Tooltip>
           </div>
           <div className="text-center">{votingPowerPercents}%</div>
         </Link>
@@ -100,9 +100,11 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <Link href={nodeLink}>
-          <div className="text-center" style={{ color: checkDelegationColor() }}>
-            {selfDelegation.toLocaleString('en-US', { maximumFractionDigits: 0 })}
-          </div>
+          <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
+            <div className="text-center" style={{ color: checkDelegationColor() }}>
+              {formatCash(tokenDelegatorShares)}
+            </div>
+          </Tooltip>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">

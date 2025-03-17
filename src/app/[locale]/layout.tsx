@@ -51,9 +51,9 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({
-                                             children,
-                                             params: { locale },
-                                           }: Readonly<{
+  children,
+  params: { locale },
+}: Readonly<{
   children: ReactNode;
   params: { locale: string };
 }>) {
@@ -62,61 +62,58 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${sfpro.variable} ${handjet.variable}`} suppressHydrationWarning>
-    <head>
-      <title>
-        ValidatorInfo: Validator & Mining Pool Information - Explore the Multichain Network Landscape of Web3
-      </title>
-      <meta
-        name="description"
-        content="ValidatorInfo - a multichain explorer and dashboard, with simple UI and gamification. Free web3 application, providing analytics and real-time metrics on networks, validators, mining pools and tokens."
-      />
-      <meta
-        name="keywords"
-        content="validator info, multichain, validator, mining pool, explorer, staking, crypto, Web3, PoS, PoW, staking portfolio, delegators, miners, Proof of work, Proof of stake, Network governance, Blockchain networks, Token Information, Validator Comparison, Network Metrics, Validator Performance, Mining Pool Performance, Web3 Data, Blockchain Data, Staking rewards, Total value secured, Total value locked, Validator public good, Validator voting, Developer activity"
-      />
-      <PlausibleProvider domain="validatorinfo.com" />
-      <link
-        rel="canonical"
-        href={'https://validatorinfo.com/'}
-      />
-    </head>
-    <body
-      className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
-    >
-    <WalletProviderComponent>
-      <ThemeProvider defaultTheme="dark" attribute="class">
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <div className="flex min-h-screen flex-col px-4">
-            <Header />
-            <div className="mt-4 flex flex-grow flex-row">
-              <NavigationBar />
-              <div className="ml-8 flex flex-grow">
-                <div className="flex w-full flex-col">
-                  <div className="flex flex-grow flex-col">{children}</div>
-                  <Footer />
+      <head>
+        <title>Web3 Blockchain Validator, Mining Pool and Network Explorer</title>
+        <meta
+          name="description"
+          content="Web3 Explorer. Blockchain Validator, Mining Pool and Network Interactive Dashboard, Real-Time Token Analytics and Metrics"
+        />
+        <meta
+          name="keywords"
+          content="validator info, multichain, validator, mining pool, explorer, staking, crypto, Web3, PoS, PoW, staking portfolio, delegators, miners, Proof of work, Proof of stake, Network governance, Blockchain networks, Token Information, Validator Comparison, Network Metrics, Validator Performance, Mining Pool Performance, Web3 Data, Blockchain Data, Staking rewards, Total value secured, Total value locked, Validator public good, Validator voting, Developer activity"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@therealvalinfo" />
+        <PlausibleProvider domain="validatorinfo.com" />
+        <link rel="canonical" href={'https://validatorinfo.com/'} />
+      </head>
+      <body
+        className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
+      >
+        <WalletProviderComponent>
+          <ThemeProvider defaultTheme="dark" attribute="class">
+            <NextIntlClientProvider messages={messages} locale={locale}>
+              <div className="flex min-h-screen flex-col px-4">
+                <Header />
+                <div className="mt-4 flex flex-grow flex-row">
+                  <NavigationBar />
+                  <div className="ml-8 flex flex-grow">
+                    <div className="flex w-full flex-col">
+                      <div className="flex flex-grow flex-col">{children}</div>
+                      <Footer />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </NextIntlClientProvider>
-        <ToastContainer
-          className="!-right-1.5"
-          toastClassName={'!bg-bgHover !border-r !border-t !border-bgSt !shadow-button !rounded-none'}
-          bodyClassName={'text-base font-sfpro !px-2 !py-0 !m-0 text-white'}
-          position="top-right"
-          autoClose={2000}
-          hideProgressBar
-          newestOnTop
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-      </ThemeProvider>
-    </WalletProviderComponent>
-    </body>
+            </NextIntlClientProvider>
+            <ToastContainer
+              className="!-right-1.5"
+              toastClassName={'!bg-bgHover !border-r !border-t !border-bgSt !shadow-button !rounded-none'}
+              bodyClassName={'text-base font-sfpro !px-2 !py-0 !m-0 text-white'}
+              position="top-right"
+              autoClose={2000}
+              hideProgressBar
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
+          </ThemeProvider>
+        </WalletProviderComponent>
+      </body>
     </html>
   );
 }

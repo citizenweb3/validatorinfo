@@ -66,6 +66,11 @@ import RevenueIconHovered from '@/public/img/icons/validator-tabs/revenue-h.png'
 import RevenueIcon from '@/public/img/icons/validator-tabs/revenue.png';
 import Warning from '@/public/img/icons/warning.png';
 import YellowSquareIcon from '@/public/img/icons/yellow-square.svg';
+import EcosystemsIcon from '@/public/img/icons/navbar/ecosystems.png';
+import EcosystemsIconHovered from '@/public/img/icons/navbar/ecosystems-h.png';
+import NodesIcon from '@/public/img/icons/navbar/nodes.png';
+import NodesIconHovered from '@/public/img/icons/navbar/nodes-h.png';
+
 
 const icons = {
   AboutIcon,
@@ -136,6 +141,10 @@ const icons = {
   DevInfoIconHovered,
   TokenomicsIcon,
   TokenomicsIconHovered,
+  EcosystemsIcon,
+  EcosystemsIconHovered,
+  NodesIcon,
+  NodesIconHovered,
 };
 
 export default icons;

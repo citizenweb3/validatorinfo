@@ -8,11 +8,11 @@
   "Header": {
     "Quotes": {
       "Validators": {
-        "name": "Validadores",
+        "name": "Validadores:",
         "hint": ""
       },
       "Ecosystems": {
-        "name": "Ecossistemas",
+        "name": "Ecossistemas:",
         "hint": ""
       },
       "Dominance": {
@@ -20,23 +20,23 @@
         "hint": ""
       },
       "POW": {
-        "name": "POW",
+        "name": "POW:",
         "hint": "Estacamento global, pools de mineração e estatísticas de validadores"
       },
       "ETH": {
-        "name": "ETH",
+        "name": "ETH:",
         "hint": ""
       },
       "Polkadot": {
-        "name": "Polkadot",
+        "name": "Polkadot:",
         "hint": ""
       },
       "Cosmos": {
-        "name": "Cosmos",
+        "name": "Cosmos:",
         "hint": ""
       },
       "TVL": {
-        "name": "TVL",
+        "name": "T.V.S.:",
         "hint": ""
       }
     },
@@ -62,10 +62,12 @@
     "Metrics": "Métricos",
     "Calculate": "Calcular",
     "Compare": "Comparar",
-    "Rumors": "Rumores",
-    "Global": "Global",
+    "Rumors": "Rumor",
+    "Global": "Analise",
     "About Us": "Sobre nós",
-    "Library": "Biblioteca"
+    "Library": "Biblioteca",
+    "Ecosystems": "Ecossistemas",
+    "Nodes": "Nodes"
   },
   "Common": {
     "Learn More": "Saber mais"
@@ -131,13 +133,13 @@
       "Calculate": "Calcular",
       "Compare": "Comparar",
       "ValidatorInfo": "ValidatorInfo",
-      "Rumors": "Rumores",
-      "Global": "Global"
+      "Rumors": "Rumor",
+      "Global": "Analise"
     }
   },
   "GlobalPosPage": {
     "Metadata": {
-      "title": "Global"
+      "title": "Métricas e estatísticas globais da Web3"
     },
     "title": "Métricas e estatísticas globais da Web3",
     "dominance": "Dominância da Web3 T.V.S",
@@ -163,7 +165,9 @@
     "Token": "Token",
     "Enter Staking Amount": "Insira o valor da aposta",
     "Wrong amount": "Quantidade errada",
-    "earnings": "d Ganhos"
+    "earnings": "d Ganhos",
+    "downloading validators": "Descarregamento de validadores...",
+    "please choose network": "Escolha uma Rede"
   },
   "NetworksPage": {
     "title": "Lista de rede P.O.W. e P.O.S. A-Z"
@@ -179,6 +183,7 @@
     "description": "Construa uma blockchain usando as melhores bibliotecas e serviços de código aberto da categoria.",
     "Others Links": "Outras ligações",
     "Show Transactions": "Mostrar Transacções",
+    "Show Validators": "Mostrar Validadores",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
     "tvl": "TVL",
     "revenue": "Receitas",
@@ -279,6 +284,108 @@
     "reward to payout": "Recompensa para Pagamento",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
   },
+  "NetworkValidatorsPage": {
+    "title": "Resumo dos Validadores",
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Expected APR": {
+        "name": "APR Esperado",
+        "hint": "Este é o retorno anual do seu investimento em porcentagem, se fosse calculado agora. É esperado, pois inflação, comissão, etc. podem mudar a qualquer momento"
+      },
+      "Voting Power": {
+        "name": "Poder de Voto",
+        "hint": "A quantidade total assegurada pelo validador, e a porcentagem que representa do total de tokens apostados"
+      },
+      "Commission": {
+        "name": "Comissão",
+        "hint": "A porcentagem das recompensas geradas que o validador recebe por proteger a rede"
+      },
+      "Self Delegation": {
+        "name": "Auto Delegação",
+        "hint": "A quantidade de tokens que o validador delegou para o seu próprio nó a partir da conta do operador. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Uptime": {
+        "name": "Tempo de Atividade",
+        "hint": "O tempo durante o qual o nó está online em um período selecionado. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Missed Blocks": {
+        "name": "Blocos Perdidos",
+        "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Infrastructure": {
+        "name": "Infraestrutura",
+        "hint": "Este validador fornece infraestrutura pública para esta rede? RPC, Arquivo, etc. Clique no V para ver detalhes"
+      },
+      "Governance": {
+        "name": "Governança",
+        "hint": "Pontuação de governança do validador em 100. Baseado em sua participação em eventos importantes"
+      },
+      "Customize": "Personalizar",
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
+      "Network Stage": "Estágio da Rede",
+      "Set Position": "Definir Posição"
+    }
+  },
+  "NodesPage": {
+    "title": "Nós Não Identificados",
+    "show world node map": "Mostrar Mapa Mundial de Nós",
+    "customize": "Customizar",
+    "Table": {
+      "Node Moniker": {
+        "name": "Moniker de nó",
+        "hint": ""
+      },
+      "Ecosystem": {
+        "name": "Ecossistema",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Rede",
+        "hint": ""
+      },
+      "Stake": {
+        "name": "Stake",
+        "hint": ""
+      }
+    }
+  },
+  "EcosystemsPage": {
+    "title": "Explorador de Ecossistemas de Blockchain Web3",
+    "customize": "Customizar",
+    "Table": {
+      "Ecosystems": {
+        "name": "Ecossistemas",
+        "hint": ""
+      },
+      "TVL": {
+        "name": "TVL",
+        "hint": ""
+      },
+      "Market Cap": {
+        "name": "Capitalização de Mercado",
+        "hint": ""
+      },
+      "Projects": {
+        "name": "Projectos",
+        "hint": ""
+      },
+      "MAA": {
+        "name": "M.A.A.",
+        "hint": "Quantidade de contas ativas mensais na cadeia"
+      },
+      "Revenue": {
+        "name": "Receita",
+        "hint": ""
+      },
+      "Tags": {
+        "name": "Tags",
+        "hint": ""
+      }
+    }
+  },
   "RumorsPage": {
     "title": "Bate-papo P2P: Espalhe os rumores",
     "description": "Anon, como vai? Escolha um nome de usuário e \"comece a espalhar a notícia, estou saindo hoje...\".\n\nDesculpe Anon, problemas de IA. Onde estávamos? Ah sim, escolha um nome de usuário e comece a espalhar boatos. Simples assim. Não há histórico de bate-papo nem identidades. Traga de volta os velhos tempos!",
@@ -304,7 +411,8 @@
       "Validators": "Validadores",
       "Networks": "Redes",
       "Metrics": "Métricos",
-      "AI": "AI"
+      "Ecosystems": "Ecossistemas",
+      "Nodes": "Nodes"
     }
   },
   "ComparisonPage": {
@@ -495,7 +603,7 @@
   "ValidatorRevenuePage": {
     "title": "Perfil de validador: Receitas de Prémios",
     "global revenue": "Receita Global",
-    "rumors": "Rumores",
+    "p2pchat": "Rumor",
     "claim date": "Data do Pedido",
     "read more": "Ler mais",
     "rewards generated": "Prémios Gerados",
@@ -724,6 +832,7 @@
     "transactions 30d": "Transacções (30d)",
     "transactions yesterday": "Transacções (Ontem)",
     "tps": "TPS (Últimos 20 Bloqueios)",
+    "average fee": "Taxa média",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",

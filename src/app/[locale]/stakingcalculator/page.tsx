@@ -7,7 +7,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
-import validatorService from '@/services/validator-service';
+import { getChains } from '@/actions/chains';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'CalculatorPage' });
@@ -22,7 +22,7 @@ export const revalidate = 0;
 
 export default async function StakingCalculatorPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   const t = await getTranslations('CalculatorPage');
-  const validatorsList = await validatorService.getList();
+  const chainsWithPrices = await getChains();
 
   return (
     <div className="flex flex-col">
@@ -34,7 +34,7 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
       <PageTitle text={t('title')} />
       <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>
       <Suspense fallback={<div>Loading...</div>}>
-        <Calculator validatorsList={validatorsList} />
+        <Calculator chainList={chainsWithPrices} />
       </Suspense>
     </div>
   );

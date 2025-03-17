@@ -1,58 +1,22 @@
 import { ChainItem } from '@/types';
+import chainService from '@/services/chain-service';
 
 export const getChains = async (): Promise<ChainItem[]> => {
-  const chains: ChainItem[] = [
-    {
-      id: 0,
-      name: 'Cosmos',
-      asset: {
-        name: 'ATOM',
-        symbol: 'ATOM',
-        isSymbolFirst: false,
-        price: 9.9,
-      },
-    },
-    {
-      id: 1,
-      name: 'Polkadot',
-      asset: {
-        name: 'DOT',
-        symbol: 'DOT',
-        isSymbolFirst: false,
-        price: 6.5,
-      },
-    },
-    {
-      id: 2,
-      name: 'Ethereum',
-      asset: {
-        name: 'ETH',
-        symbol: 'ETH',
-        isSymbolFirst: false,
-        price: 2600.9,
-      },
-    },
-    {
-      id: 3,
-      name: 'Bitcoin',
-      asset: {
-        name: 'BTC',
-        symbol: 'BTC',
-        isSymbolFirst: false,
-        price: 71000,
-      },
-    },
-    {
-      id: 4,
-      name: 'Avalanche',
-      asset: {
-        name: 'AVAX',
-        symbol: 'AVAX',
-        isSymbolFirst: false,
-        price: 31.9,
-      },
-    },
-  ];
-
-  return Promise.resolve(chains);
+  const { chains } = await chainService.getAll([], 0, 100, 'name', 'asc');
+  const chainsWithPrices = await Promise.all(
+    chains.map(async (chain) => {
+      const price = await chainService.getTokenPriceByChainId(chain.id);
+      return {
+        id: chain.id,
+        name: chain.prettyName,
+        asset: {
+          name: chain.prettyName,
+          symbol: chain.denom,
+          isSymbolFirst: false,
+          price: price?.value ?? 1,
+        },
+      };
+    }),
+  );
+  return Promise.resolve(chainsWithPrices);
 };

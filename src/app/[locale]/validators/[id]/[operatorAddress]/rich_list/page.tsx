@@ -30,17 +30,15 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
   const node = list.find((item) => item.operatorAddress === operatorAddress);
 
-  return (
-    <div className="mb-14">
-      <div className="mb-4 mt-7 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-        <div className="border-b border-bgSt px-2 font-handjet">USD</div>
-        <SwitchClient value={true} />
-        <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
-      </div>
-      <DelegatedTable chainId={node?.chainId ?? 1} page={'RichListPage'} perPage={perPage} currentPage={currentPage}
-                      sort={{ sortBy, order }} />
+  return (<div className="mb-14">
+    <div className="mb-4 mt-7 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
+      <div className="border-b border-bgSt px-2 font-handjet">USD</div>
+      <SwitchClient value={true} />
+      <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
     </div>
-  );
+    <DelegatedTable chainId={node?.chainId ?? 1} page={'RichListPage'} perPage={perPage} currentPage={currentPage}
+                    sort={{ sortBy, order }} />
+  </div>);
 };
 
 export default RichListPage;
