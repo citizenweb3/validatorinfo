@@ -8,11 +8,11 @@
   "Header": {
     "Quotes": {
       "Validators": {
-        "name": "Validators",
+        "name": "Validators:",
         "hint": ""
       },
       "Ecosystems": {
-        "name": "Ecosystems",
+        "name": "Ecosystems:",
         "hint": ""
       },
       "Dominance": {
@@ -20,23 +20,23 @@
         "hint": ""
       },
       "POW": {
-        "name": "POW",
+        "name": "POW:",
         "hint": "Global staking, mining pools and validator statistics"
       },
       "ETH": {
-        "name": "ETH",
+        "name": "ETH:",
         "hint": ""
       },
       "Polkadot": {
-        "name": "Polkadot",
+        "name": "Polkadot:",
         "hint": ""
       },
       "Cosmos": {
-        "name": "Cosmos",
+        "name": "Cosmos:",
         "hint": ""
       },
       "TVL": {
-        "name": "TVL",
+        "name": "T.V.S:",
         "hint": "Jump Around"
       }
     },
@@ -62,10 +62,12 @@
     "Metrics": "Metrics",
     "Calculate": "Calculate",
     "Compare": "Compare",
-    "Rumors": "Rumors",
-    "Global": "Global",
+    "Rumors": "Rumor",
+    "Global": "Analyze",
     "About Us": "About Us",
-    "Library": "Library"
+    "Library": "Library",
+    "Ecosystems": "Ecosystems",
+    "Nodes": "Nodes"
   },
   "Common": {
     "Learn More": "Learn More"
@@ -131,8 +133,8 @@
       "Calculate": "Calculate",
       "Compare": "Compare",
       "ValidatorInfo": "ValidatorInfo",
-      "Rumors": "Rumors",
-      "Global": "Global"
+      "Rumors": "Rumor",
+      "Global": "Analyze"
     }
   },
   "GlobalPosPage": {
@@ -279,6 +281,63 @@
     "reward to payout": "Reward to Payout",
     "Revenue vs Capital Flow": "Revenue VS Capital Flow"
   },
+  "NodesPage": {
+    "title": "Unidentified Nodes",
+    "show world node map": "Show World Node Map",
+    "customize": "customize",
+    "Table": {
+      "Node Moniker": {
+        "name": "Node Moniker",
+        "hint": ""
+      },
+      "Ecosystem": {
+        "name": "Ecosystem",
+        "hint": ""
+      },
+      "Network": {
+        "name": "Network",
+        "hint": ""
+      },
+      "Stake": {
+        "name": "Stake",
+        "hint": ""
+      }
+    }
+  },
+  "EcosystemsPage": {
+    "title": "Web3 Blockchain Ecosystem Explorer",
+    "customize": "customize",
+    "Table": {
+      "Ecosystems": {
+        "name": "Ecosystems",
+        "hint": ""
+      },
+      "TVL": {
+        "name": "TVL",
+        "hint": ""
+      },
+      "Market Cap": {
+        "name": "Market Cap",
+        "hint": ""
+      },
+      "Projects": {
+        "name": "Projects",
+        "hint": ""
+      },
+      "MAA": {
+        "name": "M.A.A.",
+        "hint": "Amount of monthly active accounts in chain"
+      },
+      "Revenue": {
+        "name": "Revenue",
+        "hint": ""
+      },
+      "Tags": {
+        "name": "Tags",
+        "hint": ""
+      }
+    }
+  },
   "RumorsPage": {
     "title": "P2P Chat: Spread the Rumors",
     "description": "Anon, how are ya? Pick yaself a username and \"start spreading the news, I'm leaving today...\". \n\nSorry Anon, AI issues. Where were we? Ah yes, Pick a username and start rumoring. As simple as that.  There is no chat history and no identities. Bring back the old days!",
@@ -302,9 +361,10 @@
     "title": "Validator and Mining Pool List A-Z",
     "Tabs": {
       "Validators": "Validators",
+      "Nodes": "Nodes",
       "Networks": "Networks",
-      "Metrics": "Metrics",
-      "AI": "AI"
+      "Ecosystems": "Ecosystems",
+      "Metrics": "Metrics"
     }
   },
   "ComparisonPage": {
@@ -495,7 +555,7 @@
   "ValidatorRevenuePage": {
     "title": "Validator Profile: Reward Revenue",
     "global revenue": "Global Revenue",
-    "rumors": "Rumors",
+    "p2pchat": "Rumor",
     "claim date": "Claim Date",
     "read more": "Read More",
     "rewards generated": "Rewards Generated",

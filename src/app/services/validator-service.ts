@@ -73,16 +73,16 @@ const getAll = async (
   );
   const where = ecosystems.length
     ? {
-        nodes: {
-          some: {
-            chain: {
-              ecosystem: {
-                in: ecosystems,
-              },
+      nodes: {
+        some: {
+          chain: {
+            ecosystem: {
+              in: ecosystems,
             },
           },
         },
-      }
+      },
+    }
     : undefined;
   const validators = (await db.validator.findMany({
     where,
@@ -92,10 +92,10 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-            nodes: {
-              _count: order,
-            },
+          nodes: {
+            _count: order,
           },
+        },
   })) as Validator[];
 
   const validatorsWithNodes = (await db.validator.findMany({
@@ -107,10 +107,10 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-            nodes: {
-              _count: order,
-            },
+          nodes: {
+            _count: order,
           },
+        },
   })) as ValidatorWithNodes[];
 
   const count = await db.validator.count({ where });
@@ -157,6 +157,8 @@ const getValidatorByIdentity = async (identity: string): Promise<Validator | nul
 
 const getValidatorNodesWithChains = async (
   id: number,
+  ecosystems: string[] = [],
+  nodeStatus: string[] = [],
   sortBy: string = 'prettyName',
   order: SortDirection = 'asc',
 ): Promise<{ validatorNodesWithChainData: validatorNodesWithChainData[] }> => {
@@ -184,22 +186,49 @@ const getValidatorNodesWithChains = async (
         prettyName: chain.prettyName,
         coinDecimals: chain.coinDecimals,
         denom: chain.denom,
+        ecosystem: chain.ecosystem,
       };
       return map;
     },
-    {} as Record<string, { logoUrl: string; name: string; prettyName: string; coinDecimals: number; denom: string }>,
+    {} as Record<
+      string,
+      { logoUrl: string;
+        name: string;
+        prettyName: string;
+        coinDecimals: number;
+        denom: string;
+        ecosystem: string }
+    >,
   );
 
   const mergedNodes = validator.nodes.map((node) => ({
     ...node,
     logoUrl: chainMap[node.chainId]?.logoUrl,
     prettyName: chainMap[node.chainId]?.prettyName,
-    name: chainMap[node.chainId].name,
+    name: chainMap[node.chainId]?.name,
     coinDecimals: chainMap[node.chainId]?.coinDecimals,
     denom: chainMap[node.chainId]?.denom,
+    ecosystem: chainMap[node.chainId]?.ecosystem,
   }));
 
-  const sortedNodes = mergedNodes.sort((a, b) => {
+  let filteredNodes = mergedNodes;
+  if (ecosystems.length > 0) {
+    filteredNodes = filteredNodes.filter((node) => {
+      return node.ecosystem && ecosystems.includes(node.ecosystem);
+    });
+  }
+
+  if (nodeStatus && nodeStatus.length > 0 && !nodeStatus.includes('all')) {
+    const jailedSelected = nodeStatus.includes('jailed');
+    const unjailedSelected = nodeStatus.includes('unjailed');
+    if (jailedSelected && !unjailedSelected) {
+      filteredNodes = filteredNodes.filter((node) => node.jailed === true);
+    } else if (unjailedSelected && !jailedSelected) {
+      filteredNodes = filteredNodes.filter((node) => node.jailed === false);
+    }
+  }
+
+  const sortedNodes = filteredNodes.sort((a, b) => {
     let aValue, bValue;
     if (sortBy === 'prettyName') {
       aValue = a.prettyName || '';
@@ -223,7 +252,7 @@ const getRandom = async (ecosystems: string[], take: number): Promise<{ validato
   logDebug(`Get random validators ecosystems: ${ecosystems}, take: ${take}`);
 
   const sql = Prisma.sql`
-    SELECT v.id, COALESCE(json_agg(n.*) FILTER (WHERE n.id IS NOT NULL), '[]'::json) AS nodes
+    SELECT v.id, COALESCE(json_agg(n.*) FILTER(WHERE n.id IS NOT NULL), '[]'::json) AS nodes
     FROM "validators" v
     LEFT JOIN "nodes" n ON v.id = n.validator_id
     ${

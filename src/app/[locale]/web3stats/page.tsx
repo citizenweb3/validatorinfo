@@ -1,13 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
 
-import DecentralizationBar from '@/app/global/bars/decentralization-bar';
-import ScalabilityBar from '@/app/global/bars/scalability-bar';
-import SecurityBar from '@/app/global/bars/security-bar';
-import PosCapitalizationBar from '@/app/global/pos-capitalization-bar/pos-capitalization-bar';
-import PosDominanceLine from '@/app/global/pos-dominance-line/pos-dominance-line';
-import PosTotalLine from '@/app/global/pos-total-line/pos-total-line';
-import TotalsList from '@/app/global/totals/totals-list';
+import DecentralizationBar from '@/app/web3stats/bars/decentralization-bar';
+import ScalabilityBar from '@/app/web3stats/bars/scalability-bar';
+import SecurityBar from '@/app/web3stats/bars/security-bar';
+import PosCapitalizationBar from '@/app/web3stats/pos-capitalization-bar/pos-capitalization-bar';
+import PosDominanceLine from '@/app/web3stats/pos-dominance-line/pos-dominance-line';
+import PosTotalLine from '@/app/web3stats/pos-total-line/pos-total-line';
+import TotalsList from '@/app/web3stats/totals/totals-list';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';

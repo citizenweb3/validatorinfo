@@ -18,7 +18,7 @@ const QuoteItem: FC<OwnProps> = ({ name, value, grow, href }) => {
   return (
     <Tooltip noWrap tooltip={t(`${name}.hint` as 'Validators.hint')}>
       <Link href={href} className="flex flex-row items-center text-sm">
-        <span className="text-nowrap">{t(`${name}.name` as 'Validators.name')}:</span>
+        <span className="text-nowrap">{t(`${name}.name` as 'Validators.name')}</span>
         {typeof grow !== 'undefined' &&
           (grow ? (
             <Image src="/img/icons/grow.svg" alt="grow" className="w-3" width={8} height={6} />

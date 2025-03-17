@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { FC, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import Chat from '@/app/rumors/chat';
+import Chat from '@/app/p2pchat/chat';
 import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {}

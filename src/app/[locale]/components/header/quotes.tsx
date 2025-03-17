@@ -2,8 +2,10 @@ import { FC } from 'react';
 
 import QuoteItem from '@/components/header/quote-item';
 import HeaderInfoService from '@/services/headerInfo-service';
+import chainService from '@/services/chain-service';
 
-interface OwnProps {}
+interface OwnProps {
+}
 
 export const dynamic = 'force-dynamic';
 
@@ -35,12 +37,15 @@ const data = {
   ],
 };
 
+
 const Quotes: FC<OwnProps> = async () => {
   const headerInfo = await HeaderInfoService.getValidatorsAndChains();
+  const ecosystems = await chainService.getEcosystemsChains();
+
   return (
     <div className="flex flex-grow flex-row items-center space-x-20 scrollbar-none">
       <QuoteItem name="Validators" value={headerInfo.validators} href="/validators" />
-      <QuoteItem name="Ecosystems" value={data.ecosystems} href="/networks" />
+      <QuoteItem name="Ecosystems" value={ecosystems.length} href="/ecosystems" />
       <div className="flex items-center active:h-16">
         <QuoteItem name="TVL" value={data.tvl} href="#" />
       </div>
@@ -48,7 +53,7 @@ const Quotes: FC<OwnProps> = async () => {
         <QuoteItem name="Dominance" href="" />
       </div>
       {data.list.map((item) => (
-        <QuoteItem key={item.name} name={item.name} value={item.value} grow={item.grow} href="/global" />
+        <QuoteItem key={item.name} name={item.name} value={item.value} grow={item.grow} href="/web3stats" />
       ))}
     </div>
   );
