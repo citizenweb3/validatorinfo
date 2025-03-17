@@ -832,6 +832,7 @@
     "transactions 30d": "Transacções (30d)",
     "transactions yesterday": "Transacções (Ontem)",
     "tps": "TPS (Últimos 20 Bloqueios)",
+    "average fee": "Taxa média",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",

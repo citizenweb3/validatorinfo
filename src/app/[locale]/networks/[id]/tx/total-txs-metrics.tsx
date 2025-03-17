@@ -13,13 +13,15 @@ const TotalTxsMetrics: FC<OwnProps> = async () => {
     switch (title) {
       case 'tps':
         return `${data} txs/s`;
+      case 'average fee':
+        return `${data} USD/tx`;
       default:
         return `${data.toLocaleString('en-En')}`;
     }
   };
 
   return (
-    <div className="mt-12 flex w-full flex-row justify-center gap-9">
+    <div className="mt-12 flex w-full flex-row justify-center gap-3">
       {txExample.totalTxsMetrics.map((item) => (
         <MetricsCardItem key={item.title}
                          title={t(item.title as 'total transactions')}

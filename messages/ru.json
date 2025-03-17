@@ -832,6 +832,7 @@
     "transactions 30d": "Транзакции (30д)",
     "transactions yesterday": "Транзакции (Вчера)",
     "tps": "TPS (Последние 20 Блоков)",
+    "average fee": "Средняя Комиссия",
     "Table": {
       "Type of Tx": {
         "name": "Тип Транзакции",

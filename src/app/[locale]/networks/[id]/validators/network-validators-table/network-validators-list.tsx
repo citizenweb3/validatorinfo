@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import chainService from '@/services/chain-service';
-import NetworkValidatorsItem from '@/app/networks/[id]/validators/network-validator-table/network-validators-item';
+import NetworkValidatorsItem from '@/app/networks/[id]/validators/network-validators-table/network-validators-item';
 import { SortDirection } from '@/server/types';
 import TablePagination from '@/components/common/table/table-pagination';
 

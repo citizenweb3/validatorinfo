@@ -16,6 +16,10 @@ export const txExample = {
       title: 'tps',
       data: 3.406,
     },
+    {
+      title: 'average fee',
+      data: 0.01,
+    },
   ],
   transaction: [
     {

@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { PagesProps } from '@/types';
-import NetworkValidatorsList from '@/app/networks/[id]/validators/network-validator-table/network-validators-list';
-import NetworkValidatorsListFilters
-  from '@/app/networks/[id]/validators/network-validator-table/network-validators-list-filters';
+import NetworkValidatorsList from '@/app/networks/[id]/validators/network-validators-table/network-validators-list';
 import { SortDirection } from '@/server/types';
+import ListFilters from '@/components/common/list-filters/list-filters';
 
 
 interface OwnProps extends PagesProps {
@@ -18,7 +17,10 @@ interface OwnProps extends PagesProps {
 const NetworkValidators: FC<OwnProps> = async ({ chainId, nodeStatus, page, perPage, sort, currentPage }) => {
   return (
     <div>
-      <NetworkValidatorsListFilters selectedNodeStatus={nodeStatus} />
+      <ListFilters selectedNodeStatus={nodeStatus}
+                   perPage={perPage}
+                   isNodeStatus
+                   isSetPositions />
       <div>
         <table className="my-4 border-collapse w-full table-auto">
           <thead>

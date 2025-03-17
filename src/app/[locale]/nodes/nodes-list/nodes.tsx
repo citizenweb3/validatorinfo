@@ -16,7 +16,13 @@ interface OwnProps extends PagesProps {
 const Nodes: FC<OwnProps> = async ({ ecosystems, nodeStatus, page, perPage, sort, currentPage }) => {
   return (
     <div>
-      <ListFilters perPage={perPage} selectedEcosystems={ecosystems} selectedNodeStatus={nodeStatus} />
+      <ListFilters perPage={perPage}
+                   selectedEcosystems={ecosystems}
+                   selectedNodeStatus={nodeStatus}
+                   isSetPositions
+                   isNetworkStage
+                   isEcosystems
+                   isNodeStatus />
       <div>
         <table className="my-4 w-full table-auto border-collapse">
           <thead>

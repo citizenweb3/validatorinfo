@@ -2,23 +2,30 @@ import { FC } from 'react';
 
 import ValidatorNetworksList
   from '@/app/validators/[id]/(validator-profile)/networks/validator-networks/validator-networks-list';
-import ValidatorNetworksListFilters
-  from '@/app/validators/[id]/(validator-profile)/networks/validator-networks/validator-networks-list-filters';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
+import ListFilters from '@/components/common/list-filters/list-filters';
 
 interface OwnProps extends PagesProps {
   id: number;
+  perPage: number;
   ecosystems: string[];
   nodeStatus: string[];
+  currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const ValidatorNetworks: FC<OwnProps> = async ({ id, ecosystems, nodeStatus, page, sort }) => {
+const ValidatorNetworks: FC<OwnProps> = async ({ id, perPage, currentPage, ecosystems, nodeStatus, page, sort }) => {
   return (
     <div>
-      <ValidatorNetworksListFilters selectedNodeStatus={nodeStatus} selectedEcosystems={ecosystems} />
+      <ListFilters perPage={perPage}
+                   selectedNodeStatus={nodeStatus}
+                   selectedEcosystems={ecosystems}
+                   isEcosystems
+                   isNodeStatus
+                   isNetworkStage
+                   isSetPositions />
       <div>
         <table className="mt-4 w-full table-auto border-collapse">
           <thead>
