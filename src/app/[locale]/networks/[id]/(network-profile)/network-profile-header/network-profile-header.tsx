@@ -25,19 +25,26 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
 
   return (
     <div className="mb-7 mt-4 grid grid-cols-5 items-start">
-      <div className="col-span-1 h-full border-b border-bgSt">
-        <div className="font-sfpro text-base">
-          <h2>{t('description')}</h2>
+      <div className="col-span-1 h-full border-b border-bgSt flex flex-col">
+        <div>
+          <div className="font-sfpro text-base mb-2">
+            <h2>{t('description')}</h2>
+          </div>
+          <div className="flex items-center">
+            <div className="h-10 min-h-10 w-10 min-w-10 bg-web bg-contain bg-no-repeat" />
+            <p className="text-xs">{t('Others Links')}</p>
+            <PlusButton size="xs" isOpened={false} />
+          </div>
+          <div className="mt-4 mb-4 grid grid-cols-[repeat(2,auto)] gap-x-2 gap-y-4 font-handjet text-lg text-center">
+            <div className="whitespace-nowrap rounded-full bg-primary shadow-button">DeFi</div>
+            <div className="whitespace-nowrap rounded-full bg-primary shadow-button">Cosmos Ecosystem</div>
+            <div className="whitespace-nowrap rounded-full bg-primary shadow-button">L1</div>
+          </div>
         </div>
-        <div className="mb-2 flex items-center">
-          <div className="h-10 min-h-10 w-10 min-w-10 bg-web bg-contain bg-no-repeat" />
-          <p className="text-xs">{t('Others Links')}</p>
-          <PlusButton size="xs" isOpened={false} />
-        </div>
-        <div className="mt-2 grid grid-cols-[repeat(2,auto)] gap-x-2 gap-y-4 font-handjet text-lg text-center">
-          <div className="whitespace-nowrap rounded-full bg-primary shadow-button">DeFi</div>
-          <div className="whitespace-nowrap rounded-full bg-primary shadow-button">Cosmos Ecosystem</div>
-          <div className="whitespace-nowrap rounded-full bg-primary shadow-button">L1</div>
+        <div className="flex mt-auto">
+          <RoundedButton href={`/networks/${id}/validators`} className="font-handjet text-lg mb-3 active:mb-2">
+            {t('Show Validators')}
+          </RoundedButton>
         </div>
       </div>
       <div className="col-span-3 flex flex-col items-center justify-center">
@@ -64,7 +71,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
             <div className={`${iconsSize} bg-distribution hover:bg-distribution_h mx-2`} />
           </Tooltip>
         </div>
-        <RoundedButton href={`/networks/${id}/tx`} className="font-handjet text-base mb-4 active:mb-3">
+        <RoundedButton href={`/networks/${id}/tx`} className="font-handjet text-lg mb-3 active:mb-2">
           {t('Show Transactions')}
         </RoundedButton>
       </div>

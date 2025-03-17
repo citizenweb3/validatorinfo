@@ -181,6 +181,7 @@
     "description": "Build a blockchain using the best-in-class open source libraries and services.",
     "Others Links": "Others Links",
     "Show Transactions": "Show Transactions",
+    "Show Validators": "Show Validators",
     "temperature tooltip": "Shows the chain health status based on various verifiable metrics",
     "tvl": "TVL",
     "revenue": "Revenue",
@@ -280,6 +281,51 @@
     "% of tokens staked": "% of Tokens Staked",
     "reward to payout": "Reward to Payout",
     "Revenue vs Capital Flow": "Revenue VS Capital Flow"
+  },
+  "NetworkValidatorsPage": {
+    "title": "Validators Summary",
+    "Table": {
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Expected APR": {
+        "name": "Expected APR",
+        "hint": "This is the yearly return on your stake in percentage, if were to be calculated right now. It's expected, because inflation, comission, etc - can change at any moment"
+      },
+      "Voting Power": {
+        "name": "Voting Power",
+        "hint": "The total amount secured with the validator, and the amount it represents in % out of the total amount of staked tokens"
+      },
+      "Commission": {
+        "name": "Commission",
+        "hint": "The % from the rewards generated that the validator receives for securing the network"
+      },
+      "Self Delegation": {
+        "name": "Self Delegation",
+        "hint": "The amount of tokens the validator staked to their own node from the operator account. The color indicates the ratio in comparison to other nodes on the network"
+      },
+      "Uptime": {
+        "name": "Uptime",
+        "hint": "The amount of time the node is online over a selected period of time. The color indicates the ratio in comparison to other nodes on the network"
+      },
+      "Missed Blocks": {
+        "name": "Missed Blocks",
+        "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
+      },
+      "Infrastructure": {
+        "name": "Infrastructure",
+        "hint": "Does this validator provide public infrastructure for this network? RPC, Archive, etc. Click on the V to see details"
+      },
+      "Governance": {
+        "name": "Governance",
+        "hint": "Governance score of the validator out of a 100. Based on their participation in key life events"
+      },
+      "Customize": "Customize",
+      "Click 3 times to reset all filters": "Click 3 times to reset all filters",
+      "Network Stage": "Network Stage",
+      "Set Position": "Set Position"
+    }
   },
   "NodesPage": {
     "title": "Unidentified Nodes",
