@@ -168,6 +168,117 @@
   "NetworksPage": {
     "title": "Lista de rede P.O.W. e P.O.S. A-Z"
   },
+  "NetworkProfileHeader": {
+    "Tabs": {
+      "Governance": "Governação",
+      "Statistics": "Estatísticas",
+      "Passport": "Passaporte",
+      "Dev Info": "Dev Info",
+      "Tokenomics": "Tokenomics"
+    },
+    "description": "Construa uma blockchain usando as melhores bibliotecas e serviços de código aberto da categoria.",
+    "Others Links": "Outras ligações",
+    "Show Transactions": "Mostrar Transacções",
+    "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
+    "tvl": "TVL",
+    "revenue": "Receitas",
+    "validator cost": "Custo do Validador",
+    "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
+    "revenue tooltip": "O montante das taxas geradas pela rede ontem",
+    "validator cost tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
+    "rich list tooltip": "Lista Rica",
+    "distribution tooltip": "Distribuição"
+  },
+  "NetworkPassport": {
+    "title": "Passaporte de Rede",
+    "amount of wallets": "Quantidade de Carteiras",
+    "total amount of tx": "Montante Total de Tx",
+    "total supply": "Fornecimento Total",
+    "Network APR and TVS": "APR e TVS de Rede",
+    "Network Overview": "Visão Geral da Rede",
+    "active validators": "Validadores Activos",
+    "unbonding time": "Tempo de Unbonding",
+    "community tax": "Taxa Comunitária",
+    "proposal creation cost": "Custo de Criação da Proposta",
+    "voting period": "Período de Votação",
+    "slashing": "Cortar",
+    "comm pool value in usd": "Valor da Piscina Comunitária em USD",
+    "% of comm pool to total supply": "% da Reserva Comunitária em Relação à Oferta Total",
+    "average block time": "Tempo Médio de Bloqueio"
+  },
+  "NetworkStatistics": {
+    "title": "Estatísticas da Rede",
+    "community pool total": "Piscina Comunitária Total",
+    "total staked": "Total Staked",
+    "average delegations": "Delegação Médias",
+    "% staked": "% Staked",
+    "pending delegations": "Subdelegações Pendentes",
+    "healthy validators": "Validadores Saudáveis",
+    "Operator Distributions": "Distribuição de Operadores",
+    "active": "Ativo",
+    "jailed": "Jailed"
+  },
+  "NetworkGovernance": {
+    "title": "Governação da Rede",
+    "total": "Total",
+    "passed": "Aprovado",
+    "rejected": "Rejeitado",
+    "Live Proposals": "Propostas em Direto",
+    "Past Proposals List": "Lista de Propostas Anteriores",
+    "proposer": "Proponente",
+    "voting start": "Início da Votação",
+    "voting end": "Fim da Votação",
+    "remaining time": "Tempo Restante"
+  },
+  "NetworkDevInfo": {
+    "title": "Dev Info",
+    "pre-vote": "Pré-Voto",
+    "pre-commit": "Pre-Commit",
+    "pre vote synchronized": "O validador submeteu um pré-voto com um hash de bloco sincronizado",
+    "pre vote different": "O validador submeteu o pré-voto com um hash de bloco diferente",
+    "pre vote not submitted": "O validador ainda não apresentou o pré-voto",
+    "pre commit synchronized": "O validador submeteu um pré-commit com um hash de bloco sincronizado",
+    "pre commit different": "O validador submeteu o pré-commit com um hash de bloco diferente",
+    "pre commit not submitted": "O validador ainda não apresentou o pré-commit",
+    "peers": "Peers",
+    "seeds": "Seeds",
+    "binary versions": "Versões binárias",
+    "Parameters": "Parâmetros",
+    "bech32 prefix": "Bech32 Prefixo",
+    "daemon name": "Nome do Demónio",
+    "node home": "Página Inicial do Nó",
+    "slip44": "Slip44",
+    "key algosz": "Chave Algosz",
+    "genesis url": "Génesis URL",
+    "chain id": "Rede ID",
+    "denom": "Denom",
+    "Developer Activity": "Atividade do Promotor",
+    "github stars": "Github Estrelas",
+    "github forks": "Github Garfos",
+    "show dropdown": "Mostrar Repositórios",
+    "hide dropdown": "Ocultar Repositórios",
+    "Table": {
+      "Repository Name": {
+        "name": "Nome do Repositório",
+        "hint": ""
+      },
+      "Commits": {
+        "name": "Commits",
+        "hint": ""
+      }
+    }
+  },
+  "NetworkTokenomics": {
+    "title": "Vivacidade",
+    "Token Price": "Preço do Token",
+    "Distribution": "Distribuição",
+    "Gini Coefficient": "Coeficiente de Gini",
+    "number of validators": "Número de Validadores",
+    "community pool tvl": "Piscina Comunitária TVL",
+    "% of tokens staked": "% de Fichas Apostadas",
+    "reward to payout": "Recompensa para Pagamento",
+    "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
+  },
   "RumorsPage": {
     "title": "Bate-papo P2P: Espalhe os rumores",
     "description": "Anon, como vai? Escolha um nome de usuário e \"comece a espalhar a notícia, estou saindo hoje...\".\n\nDesculpe Anon, problemas de IA. Onde estávamos? Ah sim, escolha um nome de usuário e comece a espalhar boatos. Simples assim. Não há histórico de bate-papo nem identidades. Traga de volta os velhos tempos!",
@@ -263,18 +374,18 @@
     "Tabs": {
       "Staking": "Staking",
       "Partners": "Parceiros",
-      "General Info": "Info gerais",
+      "General Info": "Info",
       "Podcast": "Podcast",
       "Contacts": "Contatos"
     },
     "Contacts": "Contatos do Validatorinfo",
-    "description": "Eu sou <homeLink>Validator Info</homeLink>. Fui criado pela equipe da <citizenLink>Citizen Web3</citizenLink>.\n\nEu sou um explorador e agregador multichain focado em validadores - para várias redes, vivendo na web3. Eu sou capaz de ler e entender ambas: cadeias de Prova de Trabalho e Prova de Participação. Isso significa que mostrarei informações sobre validadores, pools de mineração e as próprias redes.\n\nMeu objetivo é ajudar os usuários da web3 a descobrir mais informações sobre validadores e pools de mineração, que estão protegendo suas redes favoritas, ou - usar meu explorador para encontrar as informações mais relevantes que você precisa.\n\nEu ainda estou em construção. Você pode <xLink>me seguir no X</xLink>, conferir um dos meus <ghLink>repositórios do GitHub</ghLink>, deixar comentários e sugestões.\n\nCitizen Web3, como um projeto iniciado em 2020, encontrando raízes em vibrações ancap, valores pessoais de construção de uma sociedade melhor, desenvolvimento de ecossistema e networking. CW3 é um membro ativo da galáxia web3. <stakingLink>Staking com nossa infraestrutura baremetal auto-hospedada</stakingLink> permite que CW3 trabalhe em vários projetos de bem público e contribua para o desenvolvimento da web3.",
+    "description": "Eu sou <homeLink>Validator Info</homeLink>. Eu respondo e fui criado por <citizenLink>Citizen Web3</citizenLink>. \n\nEu sou um explorador Web3. Eu forneço dados verificáveis sobre validadores de blockchain, pools de mineração e redes. Fui construído como um painel interativo, com análises de token em tempo real, métricas e insights sobre o cenário descentralizado multichain. Sou capaz de compreender cadeias de Prova de Trabalho e Prova de Participação. \n\nMeu objetivo é tornar os exploradores incríveis novamente, guiando detentores de tokens, mineradores, stakers, delegadores e operadores através de informações e dados complexos por meio da minha interface intuitiva e experiência gamificada. \n\nAinda estou em desenvolvimento. Você pode <xLink>me seguir no X</xLink>, conferir um dos meus <ghLink>repositórios GitHub</ghLink>, deixar seus comentários e sugestões. \n\nConsidere fazer staking para os meus criadores, Citizen Web3, para apoiar o trabalho deles em projetos de interesse público. Um <stakingLink>self-hosted</stakingLink> validador bare-metal.",
     "title": "O que é o Validator Info?",
     "Tools": [
-      "<link>Citizen Web3 Podcast</link>: descobrindo as pessoas que contribuem para a construção do mundo descentralizado e transformam código em aplicativos descentralizados",
-      "<link>ValidatorInfo.com</link>: multichain, POW e POS, focado em validadores, explorador/painel que ajuda a descobrir informações na galáxia web3",
-      "<link>Web3 Society</link>: uma comunidade que ajuda, aprende e se ressente do tribalismo. Incluindo futuros incentivos DAO (NA no momento)",
-      "<link>Validator Infra</link>: infraestrutura bare-metal auto-hospedada. Infra independente off the grid, incluindo endpoints públicos, testnets, nós de arquivo e retransmissão",
+      "<link>Citizen Web3 Podcast</link>: Descobrir os contribuidores da Web3 para a descentralização da cadeia de blocos, a segurança da rede e a escalabilidade das aplicações",
+      "<link>Web3 Society</link>: Comunidade Web3 Baseada em Valores de Descentralização. Aprendendo a esquecer o tribalismo e a amar a tecnologia. Futuro DAO",
+      "<link>Validator Infra</link>: Infraestrutura de validação bare-metal auto-hospedada. Capacidade fora da grelha. Oferta de pontos finais, arquivo, instantâneos e retransmissão",
+      "<link>B.V.C.</link>: Baremetal Valdiator Coven. Comunidade de Operadores de Redes Blockcahin Auto-hospedadas e Baremetal",
       "(NA no momento) Bazaar: NFTs, Merchandise, Decentraland"
     ],
     "Our tools": "Ferramentas",
@@ -301,8 +412,8 @@
     "Tabs": {
       "Revenue": "Receitas",
       "Metrics": "Métricas",
-      "Network Table": "Tabela de Rede",
-      "Public Goods": "Bens Público",
+      "Network Table": "Redes",
+      "Public Goods": "Projectos",
       "Governance": "Governação"
     },
     "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
@@ -312,10 +423,9 @@
     "keyhole tooltip": "text",
     "github tooltip": "text",
     "place your interview here": "Coloque Aqui a Sua Entrevista"
-
   },
   "ValidatorNetworksPage": {
-    "title": "Redes Suportadas",
+    "title": "Perfil de validador: Redes Suportadas",
     "Table": {
       "Network": {
         "name": "Rede",
@@ -370,7 +480,7 @@
     }
   },
   "ValidatorMetricsPage": {
-    "title": "Pontuações e Métricas de Vaidade",
+    "title": "Perfil de validador: Pontuações e Métricas de Vaidade",
     "technical score": "Pontuação Técnica",
     "social score": "Social Score",
     "governance score": "Pontuação Social",
@@ -383,7 +493,7 @@
     "fans tooltip": "Quantidade total de delegados a este validador em todas as redes conhecidas"
   },
   "ValidatorRevenuePage": {
-    "title": "Receitas de Prémios",
+    "title": "Perfil de validador: Receitas de Prémios",
     "global revenue": "Receita Global",
     "rumors": "Rumores",
     "claim date": "Data do Pedido",
@@ -393,7 +503,7 @@
     "tooltip rewards generated": "Este gráfico mostra o montante total de recompensas que este validador pagou num determinado dia, semana, mês ou ano em USD em todas as redes conhecidas. Calculado a partir de staking, mineração e recompensas de tokens próprios"
   },
   "ValidatorGovernancePage": {
-    "title": "Feed de Resumo da Governação",
+    "title": "Perfil de validador: Feed de Resumo da Governação",
     "proposals": "Propostas Criadas pelo Validador",
     "news feed": "Feed de Notícias da Governação",
     "similar opinions": "Opiniões Similares",
@@ -415,7 +525,7 @@
     "tooltip news feed": "Resumo da atividade de votação do validador em todas as redes. Clique no ID da proposta para obter mais pormenores"
   },
   "ValidatorPublicGoodsPage": {
-    "title": "Projectos de infra-estruturas, comunitários, ferramentas e outros projectos de utilidade pública",
+    "title": "Perfil de validador: Projectos de utilidade pública. Infra-estruturas, Comunidade, Ferramentas e Outros",
     "description": "Os utilizadores que validam dados fora da cadeia são validadores de blocos. Depois de iniciar sessão, o utilizador pode enviar informações sobre um validador específico. Por exemplo, o seu validador favorito ou pool de mineração está a realizar um podcast ou construiu uma carteira? Clique no botão Enviar e adicione os detalhes necessários. Ganhe prémios. Aprovar ou refutar informações. Tenha em atenção que cada envio é uma transação!",
     "Tabs": {
       "Infrastructure": "Infraestrutura",
@@ -460,15 +570,15 @@
   "NodeProfileHeader": {
     "Tabs": {
       "Revenue": "Receitas",
-      "TX Summary": "Resumo TX",
-      "Voting Summary": "Resumo da Votação",
-      "Validator Passport": "Passaporte de Validação",
-      "Rich List": "Lista Rica"
+      "TX Summary": "Transacções",
+      "Voting Summary": "Votos",
+      "Validator Passport": "Passaporte",
+      "Rich List": "Lista-Rica"
     }
   },
   "ValidatorPassportPage": {
     "title": "Passaporte da Rede de Validadores",
-    "pretext in prefix": "em",
+    "pretext in prefix": "em ",
     "commission": "Comissão",
     "tokens delegated": "Tokens Delegados",
     "expected APR": "APR prevista",
@@ -505,8 +615,6 @@
     }
   },
   "VotingSummaryPage": {
-    "title": "Resumo da Votação do Validador",
-    "pretext in prefix": "em",
     "show same opinion": "Mostrar Validadores Com as Mesmas Opiniões",
     "Table": {
       "Title": {
@@ -528,8 +636,6 @@
     }
   },
   "TxSummaryPage": {
-    "title": "Síntese da Transação do Validador",
-    "pretext in prefix": "em",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",
@@ -550,8 +656,6 @@
     }
   },
   "RichListPage": {
-    "title": "Validador Delegadores Principais e Eventos de Potência",
-    "pretext in prefix": "em",
     "token": "TOKEN",
     "Table": {
       "Address": {
@@ -577,8 +681,6 @@
     }
   },
   "NodeRevenuePage": {
-    "title": "Repartição das Receitas do Validador",
-    "pretext in prefix": "em",
     "Staking Calculator": "Calculadora de Piquetagem",
     "Token": "Token",
     "Enter Staking Amount": "Insira o valor da aposta",
@@ -613,7 +715,53 @@
         "hint": ""
       }
     },
-    "Show Slashing Event": "Evento de Corte de Espetáculo",
-    "Hide Slashing Event": "Evento de Corte de Couro"
+    "show dropdown": "Evento de Corte de Espetáculo",
+    "hide dropdown": "Evento de Corte de Couro"
+  },
+  "TotalTxsPage": {
+    "title": "Resumo das Transacções",
+    "total transactions": "Total das Transacções",
+    "transactions 30d": "Transacções (30d)",
+    "transactions yesterday": "Transacções (Ontem)",
+    "tps": "TPS (Últimos 20 Bloqueios)",
+    "Table": {
+      "Type of Tx": {
+        "name": "Tipo de Tx",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "ID da transação. Clique para obter detalhes"
+      },
+      "Timestamp": {
+        "name": "Marca de tempo",
+        "hint": "Hora e data em que a transação teve lugar em UTC"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "TxInformationPage": {
+    "title": "Informações Sobre a Transação",
+    "show all transactions": "Mostrar Todas as Transacções",
+    "hash txs tooltip": "text",
+    "claim reward": "Solicitar Recompensa",
+    "accepted": "Aceite",
+    "chain": "Rede",
+    "chain id": "ID da Rede",
+    "block height": "Altura do Bloco",
+    "timestamp": "Marca de Tempo",
+    "fees": "Taxas",
+    "memo": "Memo",
+    "Tabs": {
+      "Expand": "Expandir",
+      "JSON": "JSON"
+    },
+    "delegate address": "Endereço do Delegado",
+    "validator address": "Endereço do Validador",
+    "amount": "Quantidade",
+    "auto claim reward": "Reivindicação Automática de Recompensa"
   }
 }

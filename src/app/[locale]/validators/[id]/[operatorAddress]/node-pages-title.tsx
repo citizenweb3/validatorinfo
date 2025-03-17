@@ -6,6 +6,7 @@ import { FC } from 'react';
 import PageTitle from '@/components/common/page-title';
 import icons from '@/components/icons';
 import { validatorNodesWithChainData } from '@/services/validator-service';
+import Link from 'next/link';
 
 interface OwnProps {
   locale: string;
@@ -30,8 +31,18 @@ const NodePagesTitle: FC<OwnProps> = async ({ locale, page, node }) => {
           />
         </div>
       </div>
-      <PageTitle prefix={`${node?.moniker} ${t('pretext in prefix')} ${node?.prettyName}:`} text={t('title')} />
-    </div>
+      <PageTitle
+        prefix={
+          <>
+            {node?.moniker} {t('pretext in prefix')}
+            <Link href={`/networks/${node?.chainId}/passport`}>
+              {node?.prettyName}
+            </Link>
+            :
+          </>
+        }
+        text={t('title')}
+      /></div>
   );
 };
 

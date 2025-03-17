@@ -11,11 +11,11 @@ const sizes: Record<Size, string> = {
 };
 
 interface OwnProps {
-  value: string;
+  value: any;
   size?: Size;
 }
 
-const CopyButton: FC<OwnProps> = ({ value, size='base' }) => {
+const CopyButton: FC<OwnProps> = ({ value, size = 'base' }) => {
   const handleCopy = async () => {
     await navigator.clipboard.writeText(value);
   };

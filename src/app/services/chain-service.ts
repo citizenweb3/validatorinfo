@@ -32,9 +32,16 @@ const getTokenPriceByChainId = async (chainId: number): Promise<Price | null> =>
   return price ?? null;
 };
 
+const getById = async (id: number): Promise<Chain | null> => {
+  return db.chain.findUnique({
+    where: { id },
+  });
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
+  getById,
 };
 
 export default ChainService;

@@ -11,12 +11,10 @@ const partners = [
   [
     { title: 'Citizen Web3', icon: '/img/icons/partners/cw3.png', link: 'https://www.citizenweb3.com/' },
     { title: 'Web3 Society', icon: '/img/icons/partners/web3c.png', link: 'https://t.me/web_3_society' },
-    { title: 'Posthuman', icon: '/img/icons/partners/posthuman.png', link: 'https://posthuman.digital/' },
     { title: 'Bro n Bro', icon: '/img/icons/partners/bro-n-bro.png', link: 'https://bronbro.io/' },
-    { title: 'Cyber', icon: '/img/icons/partners/cyber.png', link: 'https://cyb.ai/' },
+    { title: 'Cyber Academy', icon: '/img/icons/partners/ca.png', link: 'https://cyberacademy.dev/' },
   ],
   [
-    { title: 'Cyber Academy', icon: '/img/icons/partners/ca.png', link: 'https://cyberacademy.dev/' },
     { title: 'BVC', icon: '/img/icons/partners/bvc.png', link: 'https://bvc.citizenweb3.com' },
     { title: 'White Hacker', icon: '/img/icons/partners/wh.png', link: 'https://t.me/WhiteHackerRu' },
     { title: 'Voting Power', icon: '/img/icons/partners/vp.png', link: 'https://votingpower.org/' },
@@ -34,7 +32,7 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
       <div className="">
         <div className="mt-20">
           {partners.map((partnerList, index) => (
-            <div className={`${index % 2 ? 'ml-[10%]' : ''} mt-20 flex w-full items-center justify-start`} key={index}>
+            <div className="mt-20 flex w-full items-center justify-center" key={index}>
               {partnerList.map((partner) => (
                 <div key={partner.link} className="mx-[5%] flex w-[10%] items-center justify-center">
                   <PartnerItem title={partner.title} link={partner.link} icon={partner.icon} />

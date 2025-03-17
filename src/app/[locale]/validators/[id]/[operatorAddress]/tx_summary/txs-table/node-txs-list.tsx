@@ -9,21 +9,22 @@ interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
+  chainId: number;
 }
 
-const NodeTxsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
+const NodeTxsList: FC<OwnProps> = async ({ chainId, sort, perPage, currentPage = 1 }) => {
   const pages = 1;
 
   return (
     <tbody>
-      {nodeTxsExample.map((item) => (
-        <NodeTxsItem key={item.txHash} item={item} />
-      ))}
-      <tr>
-        <td colSpan={5} className="pt-4">
-          <TablePagination pageLength={pages} />
-        </td>
-      </tr>
+    {nodeTxsExample.map((item) => (
+      <NodeTxsItem key={item.txHash} item={item} chainId={chainId} />
+    ))}
+    <tr>
+      <td colSpan={5} className="pt-4">
+        <TablePagination pageLength={pages} />
+      </td>
+    </tr>
     </tbody>
   );
 };

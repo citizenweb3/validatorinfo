@@ -19,7 +19,7 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
   return (
     <tr className="group font-handjet hover:bg-bgHover ">
       <td className="group/avatar w-1/3 border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}`} />
+        <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.id}/passport`} />
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <div className="text-center">{item.denom}</div>
