@@ -39,17 +39,17 @@ const OurToolsModal = () => {
           />
           <ListItem
             text={t.rich(`Tools.1`, {
-              link: (text) => <TextLink content={text} href="/" />,
-            })}
-          />
-          <ListItem
-            text={t.rich(`Tools.2`, {
               link: (text) => <TextLink content={text} href="https://t.me/web_3_society" target="_blank" />,
             })}
           />
           <ListItem
-            text={t.rich(`Tools.3`, {
+            text={t.rich(`Tools.2`, {
               link: (text) => <TextLink content={text} href="https://www.citizenweb3.com/staking" target="_blank" />,
+            })}
+          />
+          <ListItem
+            text={t.rich(`Tools.3`, {
+              link: (text) => <TextLink content={text} href="https://bvc.citizenweb3.com/" target="_blank" />,
             })}
           />
           <ListItem text={t(`Tools.4`)} />

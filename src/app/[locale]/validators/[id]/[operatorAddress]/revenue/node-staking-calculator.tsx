@@ -6,7 +6,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import { getStakingRates } from '@/actions/staking';
-import StakingResults from '@/app/staking_calculator/staking-results';
+import StakingResults from '@/app/stakingcalculator/staking-results';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 import { ChainItem, StakingRates } from '@/types';
 

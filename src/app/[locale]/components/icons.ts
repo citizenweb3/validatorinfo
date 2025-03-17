@@ -35,10 +35,19 @@ import StakingIconHovered from '@/public/img/icons/navbar/staking-h.png';
 import StakingIcon from '@/public/img/icons/navbar/staking.png';
 import ValidatorsIconHovered from '@/public/img/icons/navbar/validators-h.png';
 import ValidatorsIcon from '@/public/img/icons/navbar/validators.png';
+import DevInfoIconHovered from '@/public/img/icons/network-profile-tabs/dev-info-h.png';
+import DevInfoIcon from '@/public/img/icons/network-profile-tabs/dev-info.png';
+import NetworkPassportIconHovered from '@/public/img/icons/network-profile-tabs/network-passport-h.png';
+import NetworkPassportIcon from '@/public/img/icons/network-profile-tabs/network-passport.png';
+import StatisticsIconHovered from '@/public/img/icons/network-profile-tabs/statistics-h.png';
+import StatisticsIcon from '@/public/img/icons/network-profile-tabs/statistics.png';
+import TokenomicsIconHovered from '@/public/img/icons/network-profile-tabs/tokenomics-h.png';
+import TokenomicsIcon from '@/public/img/icons/network-profile-tabs/tokenomics.png';
 import NotToday from '@/public/img/icons/not-today.svg';
 import RabbitIconHovered from '@/public/img/icons/rabbit-h.png';
 import RabbitIcon from '@/public/img/icons/rabbit.png';
 import RedSquareIcon from '@/public/img/icons/red-square.svg';
+import Thermometer from '@/public/img/icons/thermometer.png';
 import RichListHovered from '@/public/img/icons/validator-on-network-tabs/rich-list-h.png';
 import RichList from '@/public/img/icons/validator-on-network-tabs/rich-list.png';
 import TxSummaryHovered from '@/public/img/icons/validator-on-network-tabs/tx-summary-h.png';
@@ -57,6 +66,11 @@ import RevenueIconHovered from '@/public/img/icons/validator-tabs/revenue-h.png'
 import RevenueIcon from '@/public/img/icons/validator-tabs/revenue.png';
 import Warning from '@/public/img/icons/warning.png';
 import YellowSquareIcon from '@/public/img/icons/yellow-square.svg';
+import EcosystemsIcon from '@/public/img/icons/navbar/ecosystems.png';
+import EcosystemsIconHovered from '@/public/img/icons/navbar/ecosystems-h.png';
+import NodesIcon from '@/public/img/icons/navbar/nodes.png';
+import NodesIconHovered from '@/public/img/icons/navbar/nodes-h.png';
+
 
 const icons = {
   AboutIcon,
@@ -118,6 +132,19 @@ const icons = {
   ValidatorPassportHovered,
   VotingSummaryHovered,
   Warning,
+  Thermometer,
+  NetworkPassportIcon,
+  NetworkPassportIconHovered,
+  StatisticsIcon,
+  StatisticsIconHovered,
+  DevInfoIcon,
+  DevInfoIconHovered,
+  TokenomicsIcon,
+  TokenomicsIconHovered,
+  EcosystemsIcon,
+  EcosystemsIconHovered,
+  NodesIcon,
+  NodesIconHovered,
 };
 
 export default icons;

@@ -1,0 +1,36 @@
+import { getTranslations } from 'next-intl/server';
+import { ReactNode } from 'react';
+import TabList from '@/components/common/tabs/tab-list';
+import { getTxInformationTabs } from '@/components/common/tabs/tabs-data';
+import { Locale } from '@/i18n';
+import chainService from '@/services/chain-service';
+import PageTitle from '@/components/common/page-title';
+import TxInformation from '@/app/networks/[id]/tx/[hash]/tx-information';
+
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
+  const t = await getTranslations({ locale, namespace: 'TxInformationPage' });
+
+  return {
+    title: t('title'),
+  };
+}
+
+export default async function TxInformationLayout({ children, params: { locale, id, hash } }: Readonly<{
+  children: ReactNode;
+  params: { locale: Locale; id: string, hash: string };
+}>) {
+  const t = await getTranslations({ locale, namespace: 'TxInformationPage' });
+  const chainId = parseInt(id);
+  const chain = await chainService.getById(chainId);
+  const txInformationTabs = getTxInformationTabs(chainId, hash);
+
+  return (<div className="">
+    <PageTitle text={t('title')} />
+    <TxInformation chain={chain ?? undefined} hash={hash} />
+    <div className="w-1/3 mt-5">
+      <TabList tabs={txInformationTabs} page={'TxInformationPage'} />
+    </div>
+    {children}
+  </div>);
+};

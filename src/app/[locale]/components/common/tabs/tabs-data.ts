@@ -13,19 +13,19 @@ export interface TabOptions {
 export const mainTabs: TabOptions[] = [
   {
     name: 'Calculate',
-    href: '/staking_calculator',
+    href: '/stakingcalculator',
     icon: icons.CalculatorIcon,
     iconHovered: icons.CalculatorIconHovered,
   },
   {
     name: 'Compare',
-    href: '/validator_comparison',
+    href: '/comparevalidators',
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
   { name: 'ValidatorInfo', href: '/', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
-  { name: 'Rumors', href: '/rumors', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Global', href: '/global', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
+  { name: 'Rumors', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
+  { name: 'Global', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
 ];
 
 export const validatorsTabs: TabOptions[] = [
@@ -35,14 +35,15 @@ export const validatorsTabs: TabOptions[] = [
     icon: icons.ValidatorsIcon,
     iconHovered: icons.ValidatorsIconHovered,
   },
+  { name: 'Nodes', href: '/nodes', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
   {
     name: 'Networks',
     href: '/networks',
     icon: icons.NetworksIcon,
     iconHovered: icons.NetworksIconHovered,
   },
+  { name: 'Ecosystems', href: '/ecosystems', icon: icons.EcosystemsIcon, iconHovered: icons.EcosystemsIconHovered },
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
-  { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
 ];
 
 export const aboutTabs: TabOptions[] = [
@@ -177,6 +178,54 @@ export const getPassportAuthzTabs = (id: number, operatorAddress: string): TabOp
       name: 'Vote',
       href: `/validators/${id}/${operatorAddress}/validator_passport/authz/vote`,
       isScroll: false,
+    },
+  ];
+};
+
+export const getNetworkProfileTabs = (id: number): TabOptions[] => {
+  return [
+    {
+      name: 'Governance',
+      href: `/networks/${id}/governance`,
+      icon: icons.GovernanceIcon,
+      iconHovered: icons.GovernanceIconHovered,
+    },
+    {
+      name: 'Statistics',
+      href: `/networks/${id}/statistics`,
+      icon: icons.StatisticsIcon,
+      iconHovered: icons.StatisticsIconHovered,
+    },
+    {
+      name: 'Passport',
+      href: `/networks/${id}/passport`,
+      icon: icons.NetworkPassportIcon,
+      iconHovered: icons.NetworkPassportIconHovered,
+    },
+    {
+      name: 'Dev Info',
+      href: `/networks/${id}/dev_info`,
+      icon: icons.DevInfoIcon,
+      iconHovered: icons.DevInfoIconHovered,
+    },
+    {
+      name: 'Tokenomics',
+      href: `/networks/${id}/tokenomics`,
+      icon: icons.TokenomicsIcon,
+      iconHovered: icons.TokenomicsIconHovered,
+    },
+  ];
+};
+
+export const getTxInformationTabs = (id: number, txHash: string): TabOptions[] => {
+  return [
+    {
+      name: 'Expand',
+      href: `/networks/${id}/tx/${txHash}/expand`,
+    },
+    {
+      name: 'JSON',
+      href: `/networks/${id}/tx/${txHash}/json`,
     },
   ];
 };

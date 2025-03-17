@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import ValidatorListItem from '@/app/main-validators/validator-list/validator-list-item/validator-list-item';
+import ValidatorsNextPagination from '@/app/main-validators/validator-list/validators-next-pagination';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/server/types';
 import ChainService from '@/services/chain-service';
@@ -45,6 +46,7 @@ const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, ecosystems, current
       {list.map((item) => (
         <ValidatorListItem key={item.id} validator={item} chains={chains.chains} />
       ))}
+      <ValidatorsNextPagination />
     </tbody>
   );
 };

@@ -11,6 +11,7 @@ import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
+import Link from 'next/link';
 
 export default function StakingPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
@@ -40,7 +41,10 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
               <div className="relative flex h-40 w-48 flex-col bg-[url('/img/staking-bg.png')] bg-cover">
                 <div className="-ml-1 -mt-7 flex flex-grow items-center justify-center">
                   {item.icon && (
-                    <Image src={item.icon} alt={item.name} width={80} height={80} className="h-20 w-20 rounded-full" />
+                    <Link href={`https://staking.citizenweb3.com/chains/${item.stakingName}`} target={`_blank`}>
+                      <Image src={item.icon} alt={item.name} width={80} height={80}
+                             className="h-20 w-20 rounded-full" />
+                    </Link>
                   )}
                 </div>
                 <div className="absolute bottom-1 left-2 text-nowrap text-lg tracking-[0.25rem] text-shadow-sm">
@@ -53,14 +57,6 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
                     Stake
                   </RoundedButton>
                 )}
-                <RoundedButton
-                  href={`https://staking.citizenweb3.com/chains/${item.stakingName}`}
-                  target="_blank"
-                  contentClassName="text-nowrap"
-                  className="mt-4 text-base"
-                >
-                  Infra & Tools
-                </RoundedButton>
               </div>
             </div>
           ))}
@@ -97,24 +93,11 @@ const data: {
     stakingName: 'celestia',
   },
   {
-    name: 'Evmos',
-    icon: '/img/icons/chains/evmos.png',
-    delegate:
-      'https://wallet.keplr.app/chains/evmos?modal=validator&chain=evmos_9001-2&validator_address=evmosvaloper1mtwvpdd57gpkyejd566s24afr9zm5ryq8gwpvj&referral=true',
-    stakingName: 'evmos',
-  },
-  {
     name: 'LikeCoin',
     icon: '/img/icons/chains/like.png',
     delegate:
       'https://wallet.keplr.app/?modal=staking&chain=likecoin-mainnet-2&validator_address=likevaloper136r5phdpc02gmtmyampl9qkv0mdq385xxsaadu&step_id=3&action_id=stake',
     stakingName: 'likecoin',
-  },
-  {
-    name: 'BitCanna',
-    icon: '/img/icons/chains/bcna.png',
-    delegate: 'https://wallet.bitcanna.io/validators/bcnavaloper1ngt4atd3qlgcwfv7fkjdjxhz7k0vl2rejrvzye',
-    stakingName: 'bitcanna',
   },
   {
     name: 'Cyber/Bostrom',
@@ -129,12 +112,6 @@ const data: {
     delegate:
       'https://wallet.keplr.app/chains/bostrom?modal=validator&chain=bostrom&validator_address=bostromvaloper1f7nx65pmayfenpfwzwaamwas4ygmvalqj6dz5r&referral=true',
     stakingName: 'gravitybridge',
-  },
-  {
-    name: 'Dymension',
-    icon: '/img/icons/chains/dymension-logo.png',
-    delegate: 'https://portal.dymension.xyz/dymension/staking',
-    stakingName: 'dymension',
   },
   {
     name: 'QuickSilver',
@@ -157,7 +134,6 @@ const data: {
   {
     name: 'Neutron',
     icon: '/img/icons/chains/neutron.png',
-    // delegate: 'https://app.interlay.io/vaults/wd7mvsKzX8QaGh268wiqCpu8j7z5pAZhw1VUkcJPxwtNY14jb/DOT/IBTC',
     stakingName: 'neutron',
   },
   {
@@ -181,32 +157,20 @@ const data: {
   {
     name: 'Stakenet Nomic',
     icon: '/img/icons/chains/nom.png',
-    delegate: 'https://app.nomic.io/staking?validator=nomic1mk05ju8jq0mxzx3kfr0wcct8an2htjh53m4yk5&modal=info',
+    delegate: 'https://nomic-explorer.quokkastake.io/nomic/staking/nomic1mk05ju8jq0mxzx3kfr0wcct8an2htjh53m4yk5',
     stakingName: 'nomic',
   },
   {
     name: 'Namada',
     icon: '/img/icons/chains/nam.png',
-    delegate: 'https://shielded.live/validators/D4ADFBD41E607C7ADFEDE6DDAB53383A9D525EF9C7E70A742F48803A6D1EA4F8',
+    delegate: 'https://namadillo.citizenweb3.com/staking',
     stakingName: 'namada',
   },
   {
     name: 'Testnet Namada',
     icon: '/img/icons/chains/nam.png',
-    delegate: 'https://shielded.live/validators/D4ADFBD41E607C7ADFEDE6DDAB53383A9D525EF9C7E70A742F48803A6D1EA4F8',
+    delegate: 'https://namadillo-housefire.citizenweb3.com/',
     stakingName: 'namadatestnet',
-  },
-  {
-    name: 'Testnet Soarchain',
-    icon: '/img/icons/chains/soarchain.png',
-    delegate: 'https://explorer.soarchain.com/soar/staking/soarvaloper1z66ujcpjxppue2u4pflwhakh0he4qup63586cx',
-    stakingName: 'soarchain',
-  },
-  {
-    name: 'Testnet SpacePussy',
-    icon: '/img/icons/chains/spacepussy.png',
-    delegate: 'https://spacepussy.ai/network/bostrom/hero/pussyvaloper1f7nx65pmayfenpfwzwaamwas4ygmvalqhfj9et',
-    stakingName: 'pussy',
   },
   {
     name: 'Testnet Union',
@@ -248,5 +212,21 @@ const data: {
     icon: '/img/icons/chains/atom.png',
     delegate: 'https://explorer.polypore.xyz/provider/staking/cosmosvaloper18lz3nz3nyhtewm35npaccnc7javzmyvfake7j7',
     stakingName: 'cosmostestnet',
+  },
+  {
+    name: 'Bitcoin',
+    icon: '/img/icons/chains/bitcoin.svg',
+    stakingName: 'bitcoin',
+  },
+  {
+    name: 'Citrea',
+    icon: '/img/icons/chains/citrea.svg',
+    stakingName: 'citrea',
+  },
+  {
+    name: 'Testnet Quicksilver',
+    icon: '/img/icons/chains/qck.png',
+    delegate: 'https://testnet-explorer.konsortech.xyz/quicksilver/staking/quickvaloper1pd6yhpkt557d85mwdmvgt0mxpcc24kv7w0xh8n',
+    stakingName: 'quicksilvertestnet',
   },
 ];

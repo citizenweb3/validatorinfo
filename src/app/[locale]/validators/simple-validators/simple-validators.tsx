@@ -10,21 +10,26 @@ interface OwnProps extends PagesProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
+  ecosystems: string[];
 }
 
-const SimpleValidators: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
+const SimpleValidators: FC<OwnProps> = async ({ page, perPage, sort, currentPage, ecosystems }) => {
   return (
     <div>
-      <ListFilters perPage={perPage} />
+      <ListFilters perPage={perPage} selectedEcosystems={ecosystems} isEcosystems />
       <div>
         <table className="my-4 w-full table-auto border-collapse">
           <thead>
-            <tr className="bg-table_header">
-              <TableHeaderItem page={page} name="Validator" sortField="moniker" defaultSelected />
-              <TableHeaderItem page={page} name="Links" colspan={3} />
-            </tr>
+          <tr className="bg-table_header">
+            <TableHeaderItem page={page} name="Validator" sortField="moniker" defaultSelected />
+            <TableHeaderItem page={page} name="Links" colspan={3} />
+          </tr>
           </thead>
-          <SimpleValidatorsList perPage={perPage} sort={sort} currentPage={currentPage} />
+          <SimpleValidatorsList
+            perPage={perPage}
+            sort={sort}
+            currentPage={currentPage}
+            ecosystems={ecosystems} />
         </table>
       </div>
     </div>
