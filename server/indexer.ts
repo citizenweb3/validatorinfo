@@ -25,7 +25,7 @@ const runServer = async () => {
   const port = process.env.INDEXER_PORT ?? 3333;
 
   const chains: ChainWithNodes[] = await db.chain.findMany({
-    where: { name: 'nomic' },
+    // where: { name: 'nomic' },
     include: { chainNodes: true },
     orderBy: { name: 'asc' },
   });
