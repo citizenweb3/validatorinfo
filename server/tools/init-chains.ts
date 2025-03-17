@@ -227,7 +227,7 @@ async function main() {
 
     await addNetwork({
       rang: 3,
-      name: 'Quicksilver',
+      name: 'quicksilver',
       prettyName: 'Quicksilver',
       chainId: 'quicksilver-2',
       bech32Prefix: 'quick',
@@ -455,7 +455,7 @@ async function main() {
       coinGeckoId: '',
       coinType: 118,
       denom: 'UNO',
-      minimalDenom: 'uuno',
+      minimalDenom: 'muno',
       logoUrl:
         'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/union-testnet/union.svg',
       nodes: [

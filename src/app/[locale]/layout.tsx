@@ -63,12 +63,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${sfpro.variable} ${handjet.variable}`} suppressHydrationWarning>
       <head>
-        <title>
-          ValidatorInfo: Validator & Mining Pool Information - Explore the Multichain Network Landscape of Web3
-        </title>
+        <title>Web3 Blockchain Validator, Mining Pool and Network Explorer</title>
         <meta
           name="description"
-          content="ValidatorInfo - a multichain explorer and dashboard, with simple UI and gamification. Free web3 application, providing analytics and real-time metrics on networks, validators, mining pools and tokens."
+          content="Web3 Explorer. Blockchain Validator, Mining Pool and Network Interactive Dashboard, Real-Time Token Analytics and Metrics"
         />
         <meta
           name="keywords"
