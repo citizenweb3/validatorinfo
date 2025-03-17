@@ -4,9 +4,7 @@ import { Suspense } from 'react';
 import DecentralizationBar from '@/app/global/bars/decentralization-bar';
 import ScalabilityBar from '@/app/global/bars/scalability-bar';
 import SecurityBar from '@/app/global/bars/security-bar';
-import PosCapitalizationBar from '@/app/global/pos-capitalization-bar/pos-capitalization-bar';
-import PosDominanceLine from '@/app/global/pos-dominance-line/pos-dominance-line';
-import PosTotalLine from '@/app/global/pos-total-line/pos-total-line';
+import GlobalCharts from './charts';
 import TotalsList from '@/app/global/totals/totals-list';
 import Story from '@/components/Story';
 import PageTitle from '@/components/common/page-title';
@@ -28,6 +26,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 export default async function GlobalPosPage() {
   const t = await getTranslations('GlobalPosPage');
 
+  // Call the translation function and pass the results as props
+  const translations = {
+    title: t('title'),
+    status: t('status'),
+    dominance: t('dominance'),
+    total: t('total'),
+    cap: t('cap'),
+  };
+
   return (
     <div className="flex flex-col">
       <Story
@@ -35,12 +42,12 @@ export default async function GlobalPosPage() {
         alt="Pixelated, 90s game-style characters riding roller coaster of web3 charts and statistics"
       />
       <TabList page="HomePage" tabs={mainTabs} />
-      <PageTitle text={t('title')} />
+      <PageTitle text={translations.title} />
       <Suspense fallback={<div />}>
         <TotalsList />
       </Suspense>
       <div className="mt-20">
-        <SubTitle text={t('status')} size="h2" />
+        <SubTitle text={translations.status} size="h2" />
       </div>
       <div className="mt-16 flex justify-between px-36">
         <DecentralizationBar />
@@ -48,20 +55,7 @@ export default async function GlobalPosPage() {
         <SecurityBar />
       </div>
       <div>
-        <div className="mb-16 mt-20">
-          <SubTitle text={t('dominance')} size="h2" />
-        </div>
-        <div className="flex w-full flex-row space-x-14">
-          <PosDominanceLine />
-        </div>
-        <div className="mb-16 mt-20">
-          <SubTitle text={t('total')} size="h2" />
-        </div>
-        <PosTotalLine />
-        <div className="mb-16 mt-20">
-          <SubTitle text={t('cap')} size="h2" />
-        </div>
-        <PosCapitalizationBar />
+        <GlobalCharts translations={translations} />
       </div>
     </div>
   );
