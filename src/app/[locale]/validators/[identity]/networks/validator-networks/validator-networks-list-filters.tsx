@@ -62,50 +62,29 @@ const ValidatorNetworksListFilters: FC<OwnProps> = ({
     setResetClicks(resetClicks + 1);
   };
 
-  const onEcosystemChanged = (value: string) => {
+  const updateQueryParam = (paramName: string, selectedValues: string[]) => {
     const newSp = new URL(location.href).searchParams;
-    newSp.delete('ecosystems');
-    const chainParam =
-      selectedEcosystems.indexOf(value) === -1
-        ? [...selectedEcosystems, value]
-        : selectedEcosystems.filter((c) => c !== value);
-    chainParam.forEach((c) => newSp.append('ecosystems', c));
+    newSp.delete(paramName);
+    selectedValues.forEach((value) => newSp.append(paramName, value));
     router.push(`${pathname}?${newSp.toString()}`);
   };
-
-  const onNodeStatusChanged = (value: string) => {
-    const newSp = new URL(location.href).searchParams;
-    newSp.delete('node_status');
-    const nodeStatusParam =
-      selectedNodeStatus.indexOf(value) === -1
-        ? [...selectedNodeStatus, value]
-        : selectedNodeStatus.filter((c) => c !== value);
-    nodeStatusParam.forEach((c) => newSp.append('node_status', c));
-    router.push(`${pathname}?${newSp.toString()}`);
+  
+  const onEcosystemChanged = (value: string[]) => {
+    updateQueryParam('ecosystems', value);
   };
-
-  const onSetPositionChanged = (value: string) => {
-    const newSp = new URL(location.href).searchParams;
-    newSp.delete('set_position');
-    const selectedSetPositionParam =
-      selectedSetPosition.indexOf(value) === -1
-        ? [...selectedSetPosition, value]
-        : selectedSetPosition.filter((c) => c !== value);
-    selectedSetPositionParam.forEach((c) => newSp.append('set_position', c));
-    router.push(`${pathname}?${newSp.toString()}`);
+  
+  const onNodeStatusChanged = (value: string[]) => {
+    updateQueryParam('node_status', value);
   };
-
-  const onNetworkStageChanged = (value: string) => {
-    const newSp = new URL(location.href).searchParams;
-    newSp.delete('network_stage');
-    const networkStageParam =
-      selectedNetworkStage.indexOf(value) === -1
-        ? [...selectedNetworkStage, value]
-        : selectedNetworkStage.filter((c) => c !== value);
-    networkStageParam.forEach((c) => newSp.append('network_stage', c));
-    router.push(`${pathname}?${newSp.toString()}`);
+  
+  const onSetPositionChanged = (value: string[]) => {
+    updateQueryParam('set_position', value);
   };
-
+  
+  const onNetworkStageChanged = (value: string[]) => {
+    updateQueryParam('network_stage', value);
+  };
+  
   return (
     <div className="flex h-8 items-center justify-end space-x-6">
       {isOpened && (

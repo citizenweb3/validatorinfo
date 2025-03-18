@@ -53,17 +53,22 @@ const ListFilters: FC<OwnProps> = ({ perPage, selectedEcosystems = [], battery =
     router.push(`${pathname}?${newSp.toString()}`);
   };
 
-  const onChainsChanged = (value: string) => {
+  const onChainsChanged = (values: string[]) => {
     const newSp = new URL(location.href).searchParams;
     newSp.delete('ecosystems');
-    const chainParam =
-      selectedEcosystems.indexOf(value) === -1
-        ? [...selectedEcosystems, value]
-        : selectedEcosystems.filter((c) => c !== value);
-    newSp.set('p', '1');
-    chainParam.forEach((c) => newSp.append('ecosystems', c));
+    values.forEach((value) => {
+      const chainParam =
+        selectedEcosystems.indexOf(value) === -1
+          ? [...selectedEcosystems, value]
+          : selectedEcosystems.filter((c) => c !== value);
+  
+      newSp.set('p', '1');
+      chainParam.forEach((c) => newSp.append('ecosystems', c));
+    });
+  
     router.push(`${pathname}?${newSp.toString()}`);
   };
+  
 
   return (
     <div className="flex h-8 items-center justify-end space-x-10">
