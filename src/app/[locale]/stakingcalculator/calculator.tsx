@@ -42,7 +42,7 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
     setSelectedDate(new Date());
   };
 
-  const iconSize = 'h-10 min-h-10 w-10 min-w-10';
+  const iconSize = 'h-10 min-h-10 w-10 min-w-10'; 
   
   const handleChainChange = (chain?: ChainItem) => {
     if (!chain) return;
@@ -71,7 +71,7 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
         <div className="flex-[2]">
           <ChooseNetwork value={chain?.id} onChange={handleChainChange} chains={chainList} />
         </div>
-        <div className="relative w-[600px]">
+        <div className="relative w-[37.5rem]">
           {stakingRates && <StakingResults values={stakingRates} chain={chain} />}
           <div className="mt-3 flex items-center justify-between border-b border-gray-300">
             <div className="flex items-center">
@@ -87,7 +87,7 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
                 }}
                 dateFormat="dd/MM/yyyy"
                 popperClassName="custom-popper"
-                className="ml-14 cursor-pointer bg-background font-handjet text-lg hover:text-highlight focus:outline-none active:text-base"
+                className="ml-3.5 cursor-pointer bg-background font-handjet text-lg hover:text-highlight focus:outline-none active:text-base" 
               />
             </div>
             <div
