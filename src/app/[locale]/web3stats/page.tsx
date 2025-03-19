@@ -4,15 +4,13 @@ import { Suspense } from 'react';
 import DecentralizationBar from '@/app/web3stats/bars/decentralization-bar';
 import ScalabilityBar from '@/app/web3stats/bars/scalability-bar';
 import SecurityBar from '@/app/web3stats/bars/security-bar';
-import PosCapitalizationBar from '@/app/web3stats/pos-capitalization-bar/pos-capitalization-bar';
-import PosDominanceLine from '@/app/web3stats/pos-dominance-line/pos-dominance-line';
-import PosTotalLine from '@/app/web3stats/pos-total-line/pos-total-line';
+import Web3statsCharts from './charts';
 import TotalsList from '@/app/web3stats/totals/totals-list';
+import Story from '@/components/story';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
-import Story from '@/components/story';
 import { Locale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';
@@ -28,6 +26,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 export default async function GlobalPosPage() {
   const t = await getTranslations('GlobalPosPage');
 
+  // Call the translation function and pass the results as props
+  const translations = {
+    title: t('title'),
+    status: t('status'),
+    dominance: t('dominance'),
+    total: t('total'),
+    cap: t('cap'),
+  };
+
   return (
     <div className="flex flex-col">
       <Story
@@ -35,12 +42,12 @@ export default async function GlobalPosPage() {
         alt="Pixelated, 90s game-style characters riding roller coaster of web3 charts and statistics"
       />
       <TabList page="HomePage" tabs={mainTabs} />
-      <PageTitle text={t('title')} />
+      <PageTitle text={translations.title} />
       <Suspense fallback={<div />}>
         <TotalsList />
       </Suspense>
       <div className="mt-20">
-        <SubTitle text={t('status')} size="h2" />
+        <SubTitle text={translations.status} size="h2" />
       </div>
       <div className="mt-16 flex justify-between px-36">
         <DecentralizationBar />
@@ -48,20 +55,7 @@ export default async function GlobalPosPage() {
         <SecurityBar />
       </div>
       <div>
-        <div className="mb-16 mt-20">
-          <SubTitle text={t('dominance')} size="h2" />
-        </div>
-        <div className="flex w-full flex-row space-x-14">
-          <PosDominanceLine />
-        </div>
-        <div className="mb-16 mt-20">
-          <SubTitle text={t('total')} size="h2" />
-        </div>
-        <PosTotalLine />
-        <div className="mb-16 mt-20">
-          <SubTitle text={t('cap')} size="h2" />
-        </div>
-        <PosCapitalizationBar />
+        <Web3statsCharts translations={translations} />
       </div>
     </div>
   );

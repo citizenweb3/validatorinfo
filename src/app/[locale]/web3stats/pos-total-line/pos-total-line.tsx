@@ -1,10 +1,182 @@
-import Image from 'next/image';
+import * as d3 from 'd3';
+import { useEffect, useRef, useState, useMemo } from 'react';
+import { generateDataForTotalLine, formatNumber } from './generateDataForTotalLine';
 import { FC } from 'react';
+import {
+  drawLine,
+  handleTooltip,
+  drawLegend,
+  setupChartArea,
+  setupXScale,
+  setupYScale,
+  drawXAxis,
+  drawYAxis,
+  handleWheel,
+  ChartConfig,
+  TooltipConfig,
+  DataPoint,
+} from '../chartUtils';
 
-const PosTotalLine: FC = () => {
-  return (
-    <Image src={'/img/charts/pos-chart-2.svg'} width={1342} height={317} alt="tem chart 2" className="w-full px-16" />
+interface ChartWidgetProps {
+  chartType: string;
+}
+
+const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
+  const [datasets, setDatasets] = useState<{ tvs: DataPoint[]; rewards: DataPoint[] }>({ tvs: [], rewards: [] });
+  const chartRef = useRef<HTMLDivElement>(null);
+  const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
+  const [width, setWidth] = useState(0);
+
+  // Define chartConfig with dynamic width using useMemo to optimize performance
+  const chartConfig: ChartConfig = useMemo(
+    () => ({
+      width,
+      height: 300,
+      margin: { top: 5, right: 70, bottom: 40, left: 70 }, // Increased right margin
+      leftOffset: 30,
+      rightOffset: 30,
+      xScalePadding: 60,
+      legendOffset: 20,
+    }),
+    [width]
   );
+
+  const tooltipConfig: TooltipConfig = {
+    width: 180,
+    rowHeight: 22,
+    baseHeight: 30,
+    squareSize: 10,
+    squareOffset: 6,
+    xOffset: 10,
+    yOffset: 20,
+    boundaryPadding: 10,
+    rightBoundaryOffset: 50,
+  };
+
+  // Fetch data for the specified date range
+  const fetchDataForRange = (startDate: Date, endDate: Date) => {
+    setTimeout(() => {
+      const newDatasets = generateDataForTotalLine(startDate, endDate, chartType);
+      setDatasets(newDatasets);
+    }, 1);
+  };
+
+  // Draw the chart with the current width
+  const drawChart = () => {
+    const { svg, chartArea } = setupChartArea(chartRef, chartConfig);
+
+    // Define the clipping region
+    const clipPathId = 'chart-clip-path';
+    const clipPath = svg.select(`#${clipPathId}`);
+    if (clipPath.empty()) {
+      svg.append('defs')
+        .append('clipPath')
+        .attr('id', clipPathId)
+        .append('rect')
+        .attr('x', chartConfig.margin.left)
+        .attr('y', chartConfig.margin.top)
+        .attr('width', chartConfig.width - chartConfig.margin.left - chartConfig.margin.right - chartConfig.xScalePadding)
+        .attr('height', chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom);
+    } else {
+      clipPath.select('rect')
+        .attr('x', chartConfig.margin.left)
+        .attr('y', chartConfig.margin.top)
+        .attr('width', chartConfig.width - chartConfig.margin.left - chartConfig.margin.right - chartConfig.xScalePadding)
+        .attr('height', chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom);
+    }
+
+    // Apply the clipping region to the chart area
+    chartArea.attr('clip-path', `url(#${clipPathId})`);
+
+    const xScale = setupXScale(xDomain, chartConfig);
+    const yScale = setupYScale([0, 1 * 10 ** 11], chartConfig);
+
+    drawXAxis(svg, xScale, chartConfig);
+    drawYAxis(svg, yScale, chartConfig, (d) => formatNumber(d));
+
+    const lineGenerator = d3.line<DataPoint>().x((d) => xScale(d.date)).y((d) => yScale(d.value));
+    drawLine(chartArea, datasets.tvs, '#4FB848', lineGenerator, 50);
+    drawLine(chartArea, datasets.rewards, '#E5C46B', lineGenerator, 50);
+
+    drawLegend(
+      svg,
+      [
+        { label: 'T.VS.', color: '#4FB848' },
+        { label: 'Rewards', color: '#E5C46B' },
+      ],
+      chartConfig,
+      tooltipConfig
+    );
+
+    handleTooltip(
+      svg,
+      chartArea,
+      { tvs: datasets.tvs, rewards: datasets.rewards },
+      xScale,
+      yScale,
+      chartConfig,
+      tooltipConfig,
+      (value) => formatNumber(value),
+      { tvs: '#4FB848', rewards: '#E5C46B' }
+    );
+
+    svg.on('wheel', (event) =>
+      handleWheel(event, xDomain, setXDomain, fetchDataForRange, new Date('2010-01-01'), new Date())
+    );
+  };
+
+  // Set up responsiveness by tracking container width
+  useEffect(() => {
+    const handleResize = () => {
+      if (chartRef.current) {
+        setWidth(chartRef.current.clientWidth);
+      }
+    };
+
+    handleResize(); // Set initial width
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Set the xDomain based on chartType
+  useEffect(() => {
+    const now = new Date();
+    let startDate: Date;
+
+    switch (chartType) {
+      case 'Daily':
+        startDate = new Date(now);
+        startDate.setDate(now.getDate() - 65); // Last 65 days
+        break;
+      case 'Weekly':
+        startDate = new Date(now);
+        startDate.setDate(now.getDate() - 25 * 7); // Last 25 weeks (175 days)
+        break;
+      case 'Monthly':
+        startDate = new Date(now);
+        startDate.setMonth(now.getMonth() - 12); // Last 12 months
+        break;
+      case 'Yearly':
+        startDate = new Date(now);
+        startDate.setFullYear(now.getFullYear() - 5); // Last 5 years
+        break;
+      default:
+        startDate = new Date('2010-01-01');
+    }
+
+    const endDate = now;
+    setXDomain([startDate, endDate]);
+    fetchDataForRange(startDate, endDate);
+  }, [chartType]);
+
+  // Redraw chart when datasets, xDomain, or width changes
+  useEffect(() => {
+    if (datasets.tvs.length > 0 && datasets.rewards.length > 0 && width > 0) {
+      drawChart();
+    }
+  }, [datasets, xDomain, width]);
+
+  return <div ref={chartRef} style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: '#1E1E1E' }} />;
 };
 
-export default PosTotalLine;
+export default PosTotalChartWidget;
