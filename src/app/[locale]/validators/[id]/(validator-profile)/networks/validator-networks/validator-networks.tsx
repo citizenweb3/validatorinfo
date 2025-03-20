@@ -34,9 +34,9 @@ const ValidatorNetworks: FC<OwnProps> = async ({ id, perPage, currentPage, ecosy
             <TableHeaderItem page={page} name="Expected APR" sortField="apr" />
             <TableHeaderItem page={page} name="Fans" sortField="fans" />
             <TableHeaderItem page={page} name="Rank" sortField="rank" />
-            <TableHeaderItem page={page} name="Voting Power" sortField="delegator_shares" />
+            <TableHeaderItem page={page} name="Voting Power" sortField="delegatorShares" />
             <TableHeaderItem page={page} name="Commission" sortField="rate" />
-            <TableHeaderItem page={page} name="Self Delegation" sortField="min_self_delegation" />
+            <TableHeaderItem page={page} name="Self Delegation" sortField="minSelfDelegation" />
             <TableHeaderItem page={page} name="Uptime" sortField="uptime" />
             <TableHeaderItem page={page} name="Missed Blocks" sortField="blocks" />
             <TableHeaderItem page={page} name="Infrastructure" />

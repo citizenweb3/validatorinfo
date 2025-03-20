@@ -34,9 +34,9 @@ const NetworkPassportPage: NextPageWithLocale<PageProps> = async ({ params: { id
         <ScalabilityBar />
         <SecurityBar />
       </div>
-      <TotalsListNetworkPassport />
-      <NetworkAprTvs />
-      <NetworkOverview chain={chain ?? undefined} />
+      <TotalsListNetworkPassport chain={chain} />
+      <NetworkAprTvs chain={chain} />
+      <NetworkOverview chain={chain} />
     </div>
   );
 };

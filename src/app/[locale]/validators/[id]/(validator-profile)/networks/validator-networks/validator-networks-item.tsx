@@ -17,15 +17,14 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const uptime: number = 80;
   const missedBlocks: number = 500;
   const rank: number = 15;
-  const expectedApr: number = 12;
   const votingPowerPercents: number = 20;
-  const tokenDelegatorShares = Number(item.delegatorShares) / 10 ** item.coinDecimals;
+  const tokenDelegatorShares = +item.delegatorShares / 10 ** item.chain.coinDecimals;
 
   const redTextLayout: string = '#EB1616';
   const greenTextLayout: string = '#4FB848';
   const yellowTextLayout: string = '#E5C46B';
 
-  const selfDelegation: number = Number(item.minSelfDelegation) / 10 ** item.coinDecimals;
+  const selfDelegation: number = +item.minSelfDelegation / 10 ** item.chain.coinDecimals;
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
@@ -68,11 +67,11 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
           width={20}
           height={20}
         />
-        <TableAvatar icon={item.logoUrl} name={item?.prettyName || 'No name'} href={nodeLink} />
+        <TableAvatar icon={item.chain.logoUrl} name={item.chain.prettyName || 'No name'} href={nodeLink} />
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
-          <div className="text-center">{expectedApr}%</div>
+          <div className="text-center">{(item.chain.apr * 100).toFixed(2)}%</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
@@ -102,7 +101,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         <Link href={nodeLink}>
           <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
             <div className="text-center" style={{ color: checkDelegationColor() }}>
-              {formatCash(tokenDelegatorShares)}
+              {formatCash(selfDelegation)}
             </div>
           </Tooltip>
         </Link>

@@ -10,7 +10,7 @@ interface OwnProps {
 }
 
 const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
-  const ecosystemLink = `https://validatorinfo.com/validators?p=1&ecosystems=${item.ecosystem}`
+  const ecosystemLink = `/validators?p=1&ecosystems=${item.ecosystem}`
 
   return (
     <tr className="group font-handjet hover:bg-bgHover hover:text-highlight">
