@@ -15,7 +15,8 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
     return null;
   }
 
-  const tokenDelegatorShares = Number(node.delegatorShares) / 10 ** node.chain.coinDecimals;
+  const tokensDelegated = +node.delegatorShares / 10 ** node.chain.coinDecimals;
+  const tokenDelegatedMetric = `${tokensDelegated.toLocaleString('en-US', { maximumFractionDigits: 2 })} ${node.chain.denom}`;
 
   const cardClass = 'pt-3 pb-3';
   const cardValueClass = 'my-5';
@@ -30,7 +31,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
                          isPercents
         />
         <MetricsCardItem title={t('tokens delegated')}
-                         data={`${tokenDelegatorShares.toLocaleString('en-US', { maximumFractionDigits: 0 })} ${node.chain.denom}`}
+                         data={tokenDelegatedMetric}
                          className={cardClass}
                          dataClassName={cardValueClass}
         />

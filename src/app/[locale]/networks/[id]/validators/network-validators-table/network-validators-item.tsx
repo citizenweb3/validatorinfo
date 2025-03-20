@@ -76,7 +76,7 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
               {formatCash(tokenDelegatorShares)}
             </div>
           </Tooltip>
-          <div className="text-center">{votingPowerPercents}%</div>
+          <div className="text-center">{item.votingPower.toFixed(2)}%</div>
         </Link>
       </td>
       <td

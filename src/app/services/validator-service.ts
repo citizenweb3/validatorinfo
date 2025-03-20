@@ -13,6 +13,7 @@ export type ValidatorWithNodes = Validator & {
 
 export type validatorNodesWithChainData = Node & {
   chain: Chain;
+  votingPower: number;
 };
 
 const getById = async (id: number): Promise<Validator | null> => {
@@ -185,7 +186,17 @@ const getValidatorNodesWithChains = async (
     }
   }
 
-  const sortedNodes = filteredNodes.sort((a, b) => {
+  const nodesWithComputed = filteredNodes.map((node) => {
+    const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+    const delegatorShares = parseFloat(node.delegatorShares || '0');
+    const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
+    return {
+      ...node,
+      votingPower,
+    };
+  });
+
+  const sortedNodes = nodesWithComputed.sort((a, b) => {
     let aValue, bValue;
     if (sortBy === 'prettyName') {
       aValue = a.chain?.prettyName || '';
@@ -194,6 +205,10 @@ const getValidatorNodesWithChains = async (
     } else if (sortBy === 'apr') {
       aValue = a.chain?.apr || 0;
       bValue = b.chain?.apr || 0;
+      return order === 'asc' ? aValue - bValue : bValue - aValue;
+    } else if (sortBy === 'votingPower') {
+      aValue = a.votingPower;
+      bValue = b.votingPower;
       return order === 'asc' ? aValue - bValue : bValue - aValue;
     } else if (sortBy === 'delegatorShares' || sortBy === 'rate' || sortBy === 'minSelfDelegation') {
       aValue = parseFloat(a[sortBy] || '0');

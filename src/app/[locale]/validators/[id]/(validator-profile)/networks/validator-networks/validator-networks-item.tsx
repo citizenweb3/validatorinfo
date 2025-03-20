@@ -89,7 +89,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
           <div className="text-center">
             <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>{formatCash(tokenDelegatorShares)}</Tooltip>
           </div>
-          <div className="text-center">{votingPowerPercents}%</div>
+          <div className="text-center">{item.votingPower.toFixed(2)}%</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
