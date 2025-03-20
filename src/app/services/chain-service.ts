@@ -49,6 +49,7 @@ const getById = async (id: number): Promise<Chain | null> => {
 const getEcosystemsChains = async (): Promise<Chain[]> => {
   return db.chain.findMany({
     distinct: ['ecosystem'],
+    orderBy: { id: 'asc' },
   });
 };
 
