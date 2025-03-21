@@ -80,15 +80,7 @@ export const networkProfileExample = {
       data: '...1234',
     },
     {
-      title: 'total staked',
-      data: '2433423',
-    },
-    {
       title: 'average delegations',
-      data: '...314',
-    },
-    {
-      title: '% staked',
       data: '...314',
     },
     {

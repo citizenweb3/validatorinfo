@@ -113,6 +113,7 @@ const getChainValidatorsWithNodes = async (
     const paginated = computedNodes.slice(skip, skip + take);
 
     return { validators: paginated, pages };
+
   } else {
 
     const totalCount = await db.node.count({ where });

@@ -17,14 +17,14 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const uptime: number = 80;
   const missedBlocks: number = 500;
   const rank: number = 15;
-  const votingPowerPercents: number = 20;
-  const tokenDelegatorShares = +item.delegatorShares / 10 ** item.chain.coinDecimals;
 
   const redTextLayout: string = '#EB1616';
   const greenTextLayout: string = '#4FB848';
   const yellowTextLayout: string = '#E5C46B';
 
   const selfDelegation: number = +item.minSelfDelegation / 10 ** item.chain.coinDecimals;
+  const tokenDelegatorShares = +item.delegatorShares / 10 ** item.chain.coinDecimals;
+  const expectedApr = (+item.chain.apr - (+item.chain.apr * +item.rate)) * 100;
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
@@ -60,7 +60,8 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
-      <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+      <td
+        className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
         <Image
           src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon}
           alt={'node status'}
@@ -71,7 +72,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
-          <div className="text-center">{(item.chain.apr * 100).toFixed(2)}%</div>
+          <div className="text-center">{expectedApr.toFixed(2)}%</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">

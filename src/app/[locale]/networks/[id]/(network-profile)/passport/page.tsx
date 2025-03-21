@@ -10,6 +10,9 @@ import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface PageProps {
   params: NextPageWithLocale & { id: string };
 }
