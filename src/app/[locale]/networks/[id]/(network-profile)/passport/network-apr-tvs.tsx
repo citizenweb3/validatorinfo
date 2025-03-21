@@ -4,16 +4,18 @@ import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import SubTitle from '@/components/common/sub-title';
+import { Chain } from '@prisma/client';
 
 interface OwnProps {
+  chain: Chain | null;
 }
 
-const NetworkAprTvs: FC<OwnProps> = async () => {
+const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
   const fontColors = {
     APR: '#4FB848',
     APY: '#E5C46B',
-    TVL: '#2077E0',
+    TVS: '#2077E0',
   };
 
   return (
@@ -21,6 +23,17 @@ const NetworkAprTvs: FC<OwnProps> = async () => {
       <SubTitle text={t('Network APR and TVS')} />
       <div className="flex flex-row mt-12">
         <div className="w-1/5">
+          <div className="mt-2 flex w-full flex-wrap">
+            <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">
+              APR
+            </div>
+            <div
+              style={{ color: fontColors['APR'] }}
+              className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
+            >
+              {((chain?.apr ?? 0.15) * 100).toFixed(2)}%
+            </div>
+          </div>
           {networkProfileExample.aprAndTvs.map((item) => (
             <div key={item.title} className="mt-2 flex w-full flex-wrap">
               <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">

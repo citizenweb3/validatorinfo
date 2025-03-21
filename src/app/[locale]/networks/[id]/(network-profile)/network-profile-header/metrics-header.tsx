@@ -4,15 +4,23 @@ import { FC } from 'react';
 import ToolTip from '@/components/common/tooltip';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
+import { Chain } from '@prisma/client';
 
 interface OwnProps {
+  chain: Chain | null;
 }
 
-const MetricsHeader: FC<OwnProps> = async ({}) => {
+const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkProfileHeader');
 
   return (
     <div className="mt-16 flex w-full justify-center gap-6">
+      <ToolTip tooltip={t('tvl tooltip')} direction={'top'}>
+        <MetricsCardItem title={t('tvl')}
+                         data={chain?.tvl ?? 90}
+                         titleClassName="my-1"
+                         isModal />
+      </ToolTip>
       {networkProfileExample.headerMetrics.map((item) => (
         <ToolTip key={item.title} tooltip={t('tvl tooltip')} direction={'top'}>
           <MetricsCardItem key={item.title}

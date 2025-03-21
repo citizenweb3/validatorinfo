@@ -18,9 +18,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 export default async function NodeProfileLayout({
-                                                  children,
-                                                  params: { locale, id, operatorAddress },
-                                                }: Readonly<{
+    children,
+    params: { locale, id, operatorAddress },
+  }: Readonly<{
   children: ReactNode;
   params: { locale: Locale; id: string; operatorAddress: string };
 }>) {
@@ -32,7 +32,7 @@ export default async function NodeProfileLayout({
   const validator = await validatorService.getById(validatorId);
 
   const leftIconUrl = validator?.url ?? icons.AvatarIcon;
-  const rightIconUrl = node?.logoUrl ?? icons.AvatarIcon;
+  const rightIconUrl = node?.chain.logoUrl ?? icons.AvatarIcon;
 
   return (
     <div>

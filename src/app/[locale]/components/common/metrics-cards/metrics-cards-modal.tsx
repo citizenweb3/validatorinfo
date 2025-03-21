@@ -44,11 +44,11 @@ const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = '
           )}
           {list && (
             <div className="mt-6 flex w-40 flex-row flex-wrap items-center justify-center">
-              {list.map((chain) => (
-                <Link key={chain.operatorAddress} href={`/networks/${chain.chainId}/passport`} className="h-7 w-7">
+              {list.map((node) => (
+                <Link key={node.operatorAddress} href={`/networks/${node.chainId}/passport`} className="h-7 w-7">
                   <Image
-                    src={chain.logoUrl ?? icons.AvatarIcon}
-                    alt={chain.prettyName || 'chain'}
+                    src={node.chain.logoUrl ?? icons.AvatarIcon}
+                    alt={node.chain.prettyName || 'chain'}
                     width={24}
                     height={24}
                     className="h-6 min-h-6 w-6 min-w-6 rounded-full grayscale transition-all duration-300 hover:grayscale-0"

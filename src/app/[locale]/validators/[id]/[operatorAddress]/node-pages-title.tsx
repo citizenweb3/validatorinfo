@@ -36,13 +36,14 @@ const NodePagesTitle: FC<OwnProps> = async ({ locale, page, node }) => {
           <>
             {node?.moniker} {t('pretext in prefix')}
             <Link href={`/networks/${node?.chainId}/passport`}>
-              {node?.prettyName}
+              {node?.chain.prettyName}
             </Link>
             :
           </>
         }
         text={t('title')}
-      /></div>
+      />
+    </div>
   );
 };
 
