@@ -1,10 +1,9 @@
 import { readFile } from 'fs/promises';
 import mime from 'mime';
-import type { NextApiRequest } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { join } from 'path';
 
-export async function GET(_: NextApiRequest, ctx: any) {
+export async function GET(_: NextRequest, ctx: any) {
   try {
     const path = (ctx.params.path as string[]).join('/');
     if (path.indexOf('..') !== -1) {
