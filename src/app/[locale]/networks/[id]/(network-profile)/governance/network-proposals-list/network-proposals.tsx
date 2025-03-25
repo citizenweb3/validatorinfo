@@ -11,9 +11,10 @@ interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
+  chainId: string;
 }
 
-const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
+const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage, chainId }) => {
   const t = await getTranslations('NetworkGovernance');
 
   return (
@@ -28,7 +29,7 @@ const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage
           <TableHeaderItem page={page} name="Voting Ended" sortField="date" defaultSelected />
         </tr>
         </thead>
-        <NetworkProposalsList perPage={perPage} sort={sort} currentPage={currentPage} />
+        <NetworkProposalsList perPage={perPage} sort={sort} currentPage={currentPage} chainId={chainId} />
       </table>
     </div>
   );

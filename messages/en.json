@@ -872,6 +872,44 @@
     "validator address": "Validator Address",
     "amount": "Amount",
     "auto claim reward": "Auto Claim Reward"
+  },
+  "ProposalPage": {
+    "proposal tooltip": "text",
+    "signaling": "Signaling",
+    "on going": "On Going",
+    "link to full proposal": "Link to full Proposal",
+    "voting period": "Voting Period",
+    "show all proposals": "Show All Proposals",
+    "votes": "Votes",
+    "show dropdown": "Show Validator Votes",
+    "hide dropdown": "Hide Validator Votes",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "veto": "Veto",
+    "did not vote": "Did Not Vote",
+    "abstain": "Abstain",
+    "weighted": "Weighted",
+    "Search by validator name and tx hash": "Search by validator name and tx hash",
+    "Table": {
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Tx Hash",
+        "hint": "Transaction ID. Click for details"
+      },
+      "Answer": {
+        "name": "Answer",
+        "hint": ""
+      },
+      "Time": {
+        "name": "Time",
+        "hint": ""
+      }
+    },
+    "ai generated summary": "AI Generated Summary"
   }
 }
 

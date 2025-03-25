@@ -46,6 +46,18 @@ const handjet = localFont({
   variable: '--font-handjet',
 });
 
+const handjetLight = localFont({
+  src: [
+    {
+      path: '../../../public/fonts/Handjet-Light.ttf',
+      weight: '100',
+      style: 'light',
+    },
+  ],
+  display: 'swap',
+  variable: '--font-handjet-light',
+});
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -61,7 +73,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${sfpro.variable} ${handjet.variable}`} suppressHydrationWarning>
+    <html lang={locale} className={`${sfpro.variable} ${handjet.variable} ${handjetLight.variable}`} suppressHydrationWarning>
       <head>
         <title>Web3 Blockchain Validator, Mining Pool and Network Explorer</title>
         <meta

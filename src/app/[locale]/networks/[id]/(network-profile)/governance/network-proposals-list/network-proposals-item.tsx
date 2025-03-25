@@ -9,30 +9,32 @@ interface OwnProps {
     vote: string;
     votingEnded: string;
   };
+  chainId: string;
 }
 
-const NetworkProposalItem: FC<OwnProps> = ({ item }) => {
+const NetworkProposalItem: FC<OwnProps> = ({ item, chainId }) => {
+  const proposalLink = `/networks/${chainId}/proposal/${item.proposalId}`;
 
   return (
     <tr className="cursor-pointer hover:bg-bgHover">
       <td className="w-1/4 border-b border-black py-4 hover:text-highlight active:border-bgSt pl-7">
-        <Link href={''} className="flex items-center gap-1">
+        <Link href={proposalLink} className="flex items-center gap-1">
           <div className="font-handjet text-xl text-highlight">{`#${item.proposalId}`}</div>
           <div className="text-base">{item.proposalTitle}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
-        <Link href={''} className="flex justify-center">
+        <Link href={proposalLink} className="flex justify-center">
           <div className="text-center">{item.proposalType}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
-        <Link href={''} className="flex justify-center">
+        <Link href={proposalLink} className="flex justify-center">
           <div className="text-center">{item.vote}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
-        <Link href={''} className="flex justify-center">
+        <Link href={proposalLink} className="flex justify-center">
           <div className="font-handjet text-lg text-center">{item.votingEnded}</div>
         </Link>
       </td>

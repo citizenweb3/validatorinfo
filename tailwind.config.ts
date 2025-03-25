@@ -16,6 +16,7 @@ const config: Config = {
     fontFamily: {
       sfpro: ['var(--font-sfpro)', 'Arial', 'sans-serif'],
       handjet: ['var(--font-handjet)', 'Arial', 'sans-serif'],
+      handjet_light: ['var(--font-handjet-light)', 'Arial', 'sans-serif'],
     },
     letterSpacing: {
       none: '0',
@@ -59,6 +60,7 @@ const config: Config = {
         green: '#4FB848',
         white: '#FFFFFFE5',
       },
+      proposalLabel: '#B39B58'
     },
     extend: {
       backgroundImage: {
@@ -136,6 +138,8 @@ const config: Config = {
         rich_list_h: `url('/img/icons/medals-network-profile/medal-rich-list-h.png')`,
         distribution: `url('/img/icons/medals-network-profile/medal-distribution.png')`,
         distribution_h: `url('/img/icons/medals-network-profile/medal-distribution-h.png')`,
+        proposal: `url('/img/icons/medals/proposal.png')`,
+        proposal_h: `url('/img/icons/medals/proposal-h.png')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',
