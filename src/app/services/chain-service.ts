@@ -11,6 +11,7 @@ export type NetworkValidatorsWithNodes = Node & {
   chain: {
     coinDecimals: number;
   };
+  votingPower: number;
 }
 
 const getAll = async (
@@ -49,6 +50,7 @@ const getById = async (id: number): Promise<Chain | null> => {
 const getEcosystemsChains = async (): Promise<Chain[]> => {
   return db.chain.findMany({
     distinct: ['ecosystem'],
+    orderBy: { id: 'asc' },
   });
 };
 
@@ -75,35 +77,77 @@ const getChainValidatorsWithNodes = async (
     }
   }
 
-  const orderBy =
-    sortBy === 'moniker' ? { moniker: order } : { [sortBy]: order };
-
-  const totalCount = await db.node.count({ where });
-  const pages = Math.ceil(totalCount / take);
-
-  const validators = await db.node.findMany({
-    where,
-    skip,
-    take,
-    orderBy: [
-      { jailed: 'asc' },
-      orderBy,
-    ],
-    include: {
-      validator: {
-        select: {
-          url: true,
+  if (sortBy === 'votingPower') {
+    const allValidators = await db.node.findMany({
+      where,
+      include: {
+        validator: {
+          select: {
+            url: true,
+          },
+        },
+        chain: {
+          select: {
+            coinDecimals: true,
+            bondedTokens: true,
+          },
         },
       },
-      chain: {
-        select: {
-          coinDecimals: true,
+    });
+
+    const computedNodes = allValidators.map((node) => {
+      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const delegatorShares = parseFloat(node.delegatorShares || '0');
+      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
+      return { ...node, votingPower };
+    });
+
+    computedNodes.sort((a, b) => {
+      const aVal = a.votingPower;
+      const bVal = b.votingPower;
+      return order === 'asc' ? aVal - bVal : bVal - aVal;
+    });
+
+    const totalCount = computedNodes.length;
+    const pages = Math.ceil(totalCount / take);
+    const paginated = computedNodes.slice(skip, skip + take);
+
+    return { validators: paginated, pages };
+
+  } else {
+
+    const totalCount = await db.node.count({ where });
+    const pages = Math.ceil(totalCount / take);
+
+    const validators = await db.node.findMany({
+      where,
+      skip,
+      take,
+      orderBy: [{ jailed: 'asc' }, { [sortBy]: order }],
+      include: {
+        validator: {
+          select: {
+            url: true,
+          },
+        },
+        chain: {
+          select: {
+            coinDecimals: true,
+            bondedTokens: true,
+          },
         },
       },
-    },
-  });
+    });
 
-  return { validators, pages };
+    const computedValidators = validators.map((node) => {
+      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const delegatorShares = parseFloat(node.delegatorShares || '0');
+      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
+      return { ...node, votingPower };
+    });
+
+    return { validators: computedValidators, pages };
+  }
 };
 
 

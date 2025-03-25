@@ -1,19 +1,17 @@
 import { QueryClient, setupBankExtension, setupStakingExtension } from '@cosmjs/stargate';
 import { Tendermint34Client } from '@cosmjs/tendermint-rpc';
 
-import db from '@/db';
 import logger from '@/logger';
-import { ChainWithNodes } from '@/server/types';
+import { GetTvlFunction } from '@/server/tools/chains/chain-indexer';
 
-const { logInfo, logError, logDebug } = logger('get-chain-tvl');
+const { logError, logDebug } = logger('get-tvl');
 
-const getCosmosTVL = async (chain: ChainWithNodes) => {
+const getTvl: GetTvlFunction = async (chain) => {
   try {
-    logInfo(`${chain.prettyName.toUpperCase()} updating`);
-    const rpcEndpoint = chain.chainNodes.find((node) => node.type === 'rpc')?.url;
+    const rpcEndpoint = chain.nodes.find((node) => node.type === 'rpc')?.url;
     if (!rpcEndpoint) {
       logError(`RPC node for ${chain.name} chain not found`);
-      return;
+      return null;
     }
 
     const tmClient = await Tendermint34Client.connect(rpcEndpoint);
@@ -42,7 +40,7 @@ const getCosmosTVL = async (chain: ChainWithNodes) => {
           logError(`Total supply for ${chain.name} chain not found again`, {
             message: JSON.stringify(supplyDataFromTotal),
           });
-          return;
+          return null;
         }
       } catch (e) {
         logError(`Total supply for ${chain.name} chain not found again`, e);
@@ -59,8 +57,8 @@ const getCosmosTVL = async (chain: ChainWithNodes) => {
       bondedTokens = stakingPool.pool?.bondedTokens || '0';
       unbondedTokens = stakingPool.pool?.notBondedTokens || '0';
 
-      tvl = (+bondedTokens / +totalSupply) * 100;
-      unbondedTokensRatio = +((+unbondedTokens / +totalSupply) * 100);
+      tvl = +bondedTokens / +totalSupply;
+      unbondedTokensRatio = +(+unbondedTokens / +totalSupply);
     } catch (e) {
       logError(`Staking pool for ${chain.name} chain not found`, e);
     }
@@ -69,20 +67,17 @@ const getCosmosTVL = async (chain: ChainWithNodes) => {
       `TVL for [${chain.name}]: ${JSON.stringify({ totalSupply, bondedTokens, unbondedTokens, tvl, unbondedTokensRatio })}`,
     );
 
-    await db.chain.update({
-      where: { id: chain.id },
-      data: {
-        totalSupply: totalSupply.toString(),
-        bondedTokens: bondedTokens.toString(),
-        unbondedTokens: unbondedTokens.toString(),
-        unbondedTokensRatio,
-        tvl,
-      },
-    });
-    logDebug(`TVL for [${chain.name}] updated`);
+    return {
+      totalSupply: totalSupply.toString(),
+      bondedTokens: bondedTokens.toString(),
+      unbondedTokens: unbondedTokens.toString(),
+      unbondedTokensRatio,
+      tvl,
+    };
   } catch (error: any) {
     logError(`Get TVL for [${chain.name}] error: `, error);
+    return null;
   }
 };
 
-export default getCosmosTVL;
+export default getTvl;

@@ -7,7 +7,7 @@ import SubTitle from '@/components/common/sub-title';
 import nodeService from '@/services/node-service';
 
 interface OwnProps {
-  chain?: Chain;
+  chain: Chain | null;
 }
 
 const NetworkOverview: FC<OwnProps> = async ({ chain }) => {

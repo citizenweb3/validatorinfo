@@ -22,7 +22,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
   const validatorLogoUrl = validator?.url || icons.AvatarIcon;
 
   const { validatorNodesWithChainData } = await validatorService.getValidatorNodesWithChains(id);
-  const chainsLogos = validatorNodesWithChainData.map((chain) => chain?.logoUrl || icons.AvatarIcon);
+  const chainsLogos = validatorNodesWithChainData.map((node) => node?.chain.logoUrl || icons.AvatarIcon);
 
   if (!validator) {
     return null;

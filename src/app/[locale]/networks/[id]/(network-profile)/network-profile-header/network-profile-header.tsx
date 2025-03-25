@@ -60,7 +60,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
             <div className="block w-full text-center font-handjet text-lg leading-none">30%</div>
           </div>
         </div>
-        <MetricsHeader />
+        <MetricsHeader chain={chain} />
       </div>
       <div className="col-span-1 flex h-full flex-col items-end justify-end border-b border-bgSt">
         <div className="flex items-center mb-4">

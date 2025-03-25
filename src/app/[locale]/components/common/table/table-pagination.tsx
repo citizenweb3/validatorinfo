@@ -23,7 +23,7 @@ const TablePagination: FC<OwnProps> = ({ pageLength }) => {
 
   if (currentPage > 1) {
     if (currentPage === 2) {
-      sp.delete('p');
+      sp.set('p', '1');
     } else {
       sp.set('p', (currentPage - 1).toString());
     }
@@ -31,7 +31,7 @@ const TablePagination: FC<OwnProps> = ({ pageLength }) => {
   }
 
   if (currentPage > 1) {
-    sp.delete('p');
+    sp.set('p', '1');
     pages.push({ href: sp.toString(), name: 1 });
   }
 
