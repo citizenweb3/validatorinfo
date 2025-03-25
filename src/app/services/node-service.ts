@@ -2,11 +2,11 @@ import { Chain, Node } from '@prisma/client';
 
 import db from '@/db';
 import logger from '@/logger';
-import { SortDirection, Validator as ParsedValidator } from '@/server/types';
+import { NodeResult, SortDirection } from '@/server/types';
 
 const { logDebug } = logger('validator-service');
 
-const upsertNode = async (chain: Chain, val: ParsedValidator & { validatorId?: number }): Promise<Node> => {
+const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number }): Promise<Node> => {
   let website = val.description.website || '';
   if (website) {
     website = website.startsWith('http') ? website : `https://${website}`;
@@ -58,9 +58,7 @@ const getNodesByChainId = async (chainId: number): Promise<Node[] | null> => {
       chainId: chainId,
       validatorId: { not: null },
     },
-    orderBy: [
-      { moniker: 'asc' },
-    ],
+    orderBy: [{ moniker: 'asc' }],
   });
 };
 

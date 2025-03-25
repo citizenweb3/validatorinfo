@@ -1,19 +1,15 @@
-import db from '@/db';
 import logger from '@/logger';
+import { GetAprFunction } from '@/server/tools/chains/chain-indexer';
 
-import { ChainWithNodes } from '../../types';
+const { logError } = logger('get-apr');
 
-const { logError, logInfo } = logger('get-chain-apr');
-
-export const getQuicksilverChainApr = async (chain: ChainWithNodes) => {
+export const getApr: GetAprFunction = async (chain) => {
   try {
-    const lcdEndpoint = chain.chainNodes.find((node) => node.type === 'lcd')?.url;
+    const lcdEndpoint = chain.nodes.find((node) => node.type === 'lcd')?.url;
     if (!lcdEndpoint) {
       logError(`LCD node for ${chain.name} chain not found`);
       return 0;
     }
-
-    let apr = 0;
 
     const epochProvisionsResponse = await fetch(`${lcdEndpoint}/quicksilver/mint/v1beta1/epoch_provisions`).then(
       (data) => data.json(),
@@ -37,17 +33,11 @@ export const getQuicksilverChainApr = async (chain: ChainWithNodes) => {
 
     const annualProvisions = currentEpochProvisions * stakingProportion * 365;
 
-    apr = (annualProvisions * (1 - communityTax)) / bondedTokens;
-
-    logInfo(`${chain.prettyName} APR: ${apr}`);
-
-    await db.chain.update({
-      where: { id: chain.id },
-      data: { apr },
-    });
+    return (annualProvisions * (1 - communityTax)) / bondedTokens || 0;
   } catch (e) {
     logError(`${chain.name} Can't fetch APR: `, e);
+    return 0;
   }
 };
 
-export default getQuicksilverChainApr;
+export default getApr;
