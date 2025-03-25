@@ -83,7 +83,7 @@ const runServer = async () => {
     () => {
       spawnTask('validatorInfo', chains).catch((e) => logError(`Initial run error for task validatorInfo:`, e));
     },
-    2 * 60 * 1000,
+    5 * 60 * 1000,
   );
 };
 
