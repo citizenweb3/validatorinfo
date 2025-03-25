@@ -1,5 +1,4 @@
 import { CronJob } from 'cron';
-import express, { Express } from 'express';
 import { Worker } from 'worker_threads';
 
 import logger from '@/logger';
@@ -14,13 +13,7 @@ const timers = {
 const { logInfo, logError } = logger('indexer');
 
 const runServer = async () => {
-  const app: Express = express();
-  const port = process.env.INDEXER_PORT ?? 3333;
-
-  app.listen(port, () => {
-    logInfo(`Indexer is running at http://localhost:${port}`);
-  });
-
+  logInfo('Starting indexer server');
   const tasksRunning: Record<string, boolean> = {};
 
   function spawnTask(taskName: string, chains: string[]) {
