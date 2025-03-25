@@ -3,6 +3,7 @@ import logger from '@/logger';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import chainNames from '@/server/tools/chains/chains';
 import { ecosystemParams, getChainParams } from '@/server/tools/chains/params';
+import downloadImage from '@/server/utils/download-image';
 
 import { Prisma } from '.prisma/client';
 
@@ -90,11 +91,17 @@ async function main() {
         where: { name: ecosystem.name },
       });
 
+      let url = '';
+      if (ecosystem.logoUrl) {
+        url = await downloadImage('ecos', ecosystem.name, ecosystem.logoUrl);
+      }
+
       if (!existingEcosystem) {
         await db.ecosystem.create({
           data: {
             name: ecosystem.name,
             prettyName: ecosystem.prettyName,
+            logoUrl: url,
           },
         });
         logInfo(`Ecosystem ${ecosystem.prettyName} created`);

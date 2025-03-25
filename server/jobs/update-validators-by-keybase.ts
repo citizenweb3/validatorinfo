@@ -68,7 +68,7 @@ const updateValidatorLogo = async (validator: Validator) => {
     logDebug(`Info for ${keybaseName} - ${validator.identity}: ${JSON.stringify(info)}`);
 
     if (info.picture) {
-      info.picture = await downloadImage(validator.id, info.picture);
+      info.picture = await downloadImage('vals', validator.id, info.picture);
     }
 
     let twitter = info.twitter;

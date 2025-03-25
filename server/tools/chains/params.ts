@@ -1,8 +1,16 @@
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 
 export const ecosystemParams = [
-  { name: 'cosmos', prettyName: 'Cosmos Hub' },
-  { name: 'namada', prettyName: 'Namada' },
+  {
+    name: 'cosmos',
+    prettyName: 'Cosmos Hub',
+    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+  },
+  {
+    name: 'namada',
+    prettyName: 'Namada',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {

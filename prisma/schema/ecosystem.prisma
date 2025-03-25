@@ -1,6 +1,7 @@
 model Ecosystem {
   name       String   @id @db.VarChar(256)
   prettyName String   @map("pretty_name") @db.VarChar(256)
+  logoUrl    String   @map("logo_url") @db.VarChar(256)
   tvl        Float    @default(0)
   createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
