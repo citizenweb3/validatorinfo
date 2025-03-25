@@ -1,8 +1,8 @@
-import db from '@/db';
 import logger from '@/logger';
-import { ChainWithNodes } from '@/server/types';
+import { ChainTVLResult, GetTvlFunction } from '@/server/tools/chains/chain-indexer';
+import fetchData from '@/server/utils/fetch-data';
 
-const { logInfo, logError, logDebug } = logger('get-chain-tvl');
+const { logError, logDebug } = logger('get-tvl');
 
 interface StakingData {
   amount: {
@@ -11,13 +11,12 @@ interface StakingData {
   };
 }
 
-const getNomicTVL = async (chain: ChainWithNodes) => {
+const getTvl: GetTvlFunction = async (chain) => {
   try {
-    logInfo(`${chain.prettyName.toUpperCase()}`);
-    const indexerEndpoint = chain.chainNodes.find((node) => node.type === 'lcd')?.url;
+    const indexerEndpoint = chain.nodes.find((node) => node.type === 'lcd')?.url;
     if (!indexerEndpoint) {
       logError(`RPC node for ${chain.name} chain not found`);
-      return;
+      return null;
     }
 
     let totalSupply = '0';
@@ -27,8 +26,8 @@ const getNomicTVL = async (chain: ChainWithNodes) => {
     let tvl = 0;
 
     try {
-      const stakingData: StakingData = await fetch(`${indexerEndpoint}/cosmos/bank/v1beta1/supply/unom`).then((res) =>
-        res.json(),
+      const stakingData: StakingData = await fetchData<StakingData>(
+        `${indexerEndpoint}/cosmos/bank/v1beta1/supply/unom`,
       );
       totalSupply = stakingData.amount.amount;
     } catch (error: any) {
@@ -36,16 +35,18 @@ const getNomicTVL = async (chain: ChainWithNodes) => {
     }
 
     try {
-      const pool = await fetch(`${indexerEndpoint}/cosmos/staking/v1beta1/pool`).then((res) => res.json());
+      const pool = await fetchData<{ pool: { bonded_tokens: string; not_bonded_tokens: string } }>(
+        `${indexerEndpoint}/cosmos/staking/v1beta1/pool`,
+      );
       bondedTokens = (+pool.pool.bonded_tokens).toString();
       unbondedTokens = (+pool.pool.not_bonded_tokens).toString();
-      tvl = (+bondedTokens / +totalSupply) * 100;
-      unbondedTokensRatio = (+unbondedTokens / +totalSupply) * 100;
+      tvl = +bondedTokens / +totalSupply;
+      unbondedTokensRatio = +unbondedTokens / +totalSupply;
     } catch (error: any) {
       logError(`Get TVL for [${chain.name}] error: `, error);
     }
 
-    const data = {
+    const result: ChainTVLResult = {
       totalSupply: totalSupply.toString(),
       bondedTokens: bondedTokens.toString(),
       unbondedTokens: unbondedTokens.toString(),
@@ -53,15 +54,13 @@ const getNomicTVL = async (chain: ChainWithNodes) => {
       tvl,
     };
 
-    logDebug(`TVL for [${chain.name}]: ${JSON.stringify(data)}`);
+    logDebug(`TVL for [${chain.name}]: ${JSON.stringify(result)}`);
 
-    await db.chain.update({
-      where: { id: chain.id },
-      data,
-    });
+    return result;
   } catch (error: any) {
     logError(`Get TVL for [${chain.name}] error: `, error);
+    return null;
   }
 };
 
-export default getNomicTVL;
+export default getTvl;

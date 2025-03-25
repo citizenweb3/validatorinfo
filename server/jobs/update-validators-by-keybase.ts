@@ -3,11 +3,12 @@ import { Validator } from '@prisma/client';
 
 import db from '@/db';
 import logger from '@/logger';
+import downloadImage from '@/server/utils/download-image';
 import isUrlValid from '@/server/utils/is-url-valid';
 
 const { logInfo, logError, logDebug } = logger('keychain');
 
-const isIdentityValid = (identity: string): boolean => !!(identity && identity.match(/^[0-9A-Z]{16}$/));
+export const isIdentityValid = (identity: string): boolean => !!(identity && identity.match(/^[0-9A-Z]{16}$/));
 
 interface KeybaseInfo {
   picture: string;
@@ -66,6 +67,10 @@ const updateValidatorLogo = async (validator: Validator) => {
     const info = await getInfoFromKeybase(keybaseName);
     logDebug(`Info for ${keybaseName} - ${validator.identity}: ${JSON.stringify(info)}`);
 
+    if (info.picture) {
+      info.picture = await downloadImage(validator.id, info.picture);
+    }
+
     let twitter = info.twitter;
     if (twitter) {
       twitter = twitter.indexOf('http') !== 0 ? `https://x.com/${twitter}` : twitter;
@@ -79,6 +84,7 @@ const updateValidatorLogo = async (validator: Validator) => {
     }
 
     try {
+      logInfo(`Updating validator ${validator.moniker} - ${validator.identity} with logo: ${info.picture}`);
       await db.validator.update({
         where: { id: validator.id },
         data: {
