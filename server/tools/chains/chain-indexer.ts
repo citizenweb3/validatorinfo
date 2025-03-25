@@ -46,5 +46,3 @@ export interface ChainMethods {
   getTvl: GetTvlFunction;
   getMainParams: GetMainParamsFunction;
 }
-
-export type ChainIndexer = AddChainProps & ChainMethods;

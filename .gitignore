@@ -29,6 +29,7 @@ yarn-error.log*
 
 # validator icons
 /public/img/vals/*
+/public/img/ecos/*
 
 # local env files
 .env*.local
