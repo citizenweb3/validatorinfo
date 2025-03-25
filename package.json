@@ -29,6 +29,7 @@
     "i18next": "^23.12.2",
     "lodash.debounce": "^4.0.8",
     "logform": "^2.7.0",
+    "mime": "^4.0.6",
     "next": "14.2.3",
     "next-i18next": "^15.3.0",
     "next-intl": "^3.17.2",

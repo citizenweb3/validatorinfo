@@ -28,8 +28,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # validator icons
-/public/img/vals/*
-/public/img/ecos/*
+/uploads/*
 
 # local env files
 .env*.local
