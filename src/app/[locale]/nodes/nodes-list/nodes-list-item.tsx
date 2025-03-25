@@ -3,6 +3,7 @@ import { Chain, Node } from '@prisma/client';
 import _ from 'lodash';
 import formatCash from '@/utils/format-cash';
 import Link from 'next/link';
+import Tooltip from '@/components/common/tooltip';
 
 
 interface OwnProps {
@@ -31,7 +32,9 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 w-1/5 font-handjet text-lg active:border-bgSt">
         <Link href={``}>
-          <div className="text-center">{formatCash(tokenDelegatorShares)}</div>
+          <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
+            <div className="text-center">{formatCash(tokenDelegatorShares)}</div>
+          </Tooltip>
         </Link>
       </td>
     </tr>

@@ -15,7 +15,10 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
     return null;
   }
 
-  const tokenDelegatorShares = Number(node.delegatorShares) / 10 ** node.coinDecimals;
+  const tokensDelegated = +node.delegatorShares / 10 ** node.chain.coinDecimals;
+  const tokenDelegatedMetric = `${tokensDelegated.toLocaleString('en-US', { maximumFractionDigits: 2 })} ${node.chain.denom}`;
+  const votingPower = +node.delegatorShares / +node.chain.bondedTokens * 100;
+  const expectedApr = (+node.chain.apr - (+node.chain.apr * +node.rate)) * 100;
 
   const cardClass = 'pt-3 pb-3';
   const cardValueClass = 'my-5';
@@ -30,12 +33,12 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
                          isPercents
         />
         <MetricsCardItem title={t('tokens delegated')}
-                         data={`${tokenDelegatorShares.toLocaleString('en-US', { maximumFractionDigits: 0 })} ${node.denom}`}
+                         data={tokenDelegatedMetric}
                          className={cardClass}
                          dataClassName={cardValueClass}
         />
         <MetricsCardItem title={t('expected APR')}
-                         data="12.5"
+                         data={expectedApr.toFixed(2)}
                          className={cardClass}
                          dataClassName={cardValueClass}
                          isPercents
@@ -48,7 +51,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
       </div>
       <div className="flex gap-8">
         <MetricsCardItem title={t('voting power')}
-                         data="4"
+                         data={votingPower.toFixed(2)}
                          className={cardClass}
                          dataClassName={cardValueClass}
                          isPercents
