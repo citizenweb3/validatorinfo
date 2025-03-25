@@ -1,17 +1,26 @@
 import db from '@/db';
 import logger from '@/logger';
+import { getChainParams } from '@/server/tools/chains/params';
 
-import { ChainWithNodes } from '../types';
+const { logError, logInfo } = logger('get-uptime');
 
-const { logError, logInfo } = logger('get-chain-uptime');
+export const getChainUptime = async (chainNames: string[]) => {
+  for (const chainName of chainNames) {
+    const chainParams = getChainParams(chainName);
 
-export const getChainUptime = async (chains: ChainWithNodes[]) => {
-  for (const chain of chains) {
     try {
+      const dbChain = await db.chain.findFirst({
+        where: { chainId: chainParams.chainId },
+      });
+      if (!dbChain) {
+        logError(`Chain ${chainParams.chainId} not found in database`);
+        return;
+      }
+
       const currentTime = Date.now();
-      const rpcEndpoint = chain.chainNodes.find((node) => node.type === 'rpc')?.url;
+      const rpcEndpoint = chainParams.nodes.find((node) => node.type === 'rpc')?.url;
       if (!rpcEndpoint) {
-        logError(`RPC node for ${chain.name} chain not found`);
+        logError(`RPC node for ${chainName} chain not found`);
         return;
       }
 
@@ -22,33 +31,30 @@ export const getChainUptime = async (chains: ChainWithNodes[]) => {
       const data = await response.json();
       const blockHeight = +data.result.sync_info.latest_block_height;
 
-      const txCount = blockHeight - chain.uptimeHeight;
-      const avgTxInterval = txCount ? (currentTime - +chain.lastUptimeUpdated) / txCount : 0;
+      const txCount = blockHeight - dbChain.uptimeHeight;
+      const avgTxInterval = txCount ? (currentTime - +dbChain.lastUptimeUpdated) / txCount : 0;
 
       if (!avgTxInterval) {
-        console.log(
-          '[SSA] ',
-          `server/jobs/get-chain-uptime.ts:29 chain.lastUptimeUpdated, txCount, currentTime, blockHeight:`,
-          chain.uptimeHeight,
-          chain.lastUptimeUpdated,
+        logError(`${chainName} - avgTxInterval is 0`, {
+          uptimeHeight: dbChain.uptimeHeight,
+          lastUptimeUpdated: dbChain.lastUptimeUpdated,
           txCount,
           currentTime,
           blockHeight,
-        );
-        logError(`${chain.name} - avgTxInterval is 0`);
+        });
       }
 
       await db.chain.update({
-        where: { id: chain.id },
+        where: { id: dbChain.id },
         data: {
           lastUptimeUpdated: new Date(currentTime),
           uptimeHeight: blockHeight,
           avgTxInterval,
         },
       });
-      logInfo(`${chain.name} - uptime updated`);
+      logInfo(`${chainName} - uptime updated`);
     } catch (e) {
-      logError(`${chain.name} - can't fetch Uptime`, e);
+      logError(`${chainName} - can't fetch Uptime`, e);
     }
   }
 };

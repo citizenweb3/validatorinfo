@@ -59,34 +59,28 @@ const normalizeUrl = (url: string): string => {
 };
 
 async function checkUrl(url: string): Promise<{ twitter?: string; github?: string }> {
+  url = normalizeUrl(url);
   try {
-    url = normalizeUrl(url);
-    try {
-      new URL(url);
-    } catch (err) {
-      logError(`Invalid website URL: ${url}`);
-      return {};
-    }
-
-    const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-    if (!response.ok) {
-      logError(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
-      return {};
-    }
-    const html = await response.text();
-    const $ = cheerio.load(html);
-
-    const twitterHandle = extractHandle($, 'twitter.com') || extractHandle($, 'x.com');
-    const githubLink = $('a[href*="github.com"]').attr('href');
-
-    return {
-      twitter: twitterHandle ? `https://x.com/${twitterHandle}` : undefined,
-      github: githubLink ? checkAndUpdateGitHubUrl(githubLink) : undefined,
-    };
-  } catch (error) {
-    logError(`Error fetching URL ${url}: ${error instanceof Error ? error.message : error}`);
+    new URL(url);
+  } catch (err) {
+    logError(`Invalid website URL: ${url}`);
     return {};
   }
+
+  const response = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+  }
+  const html = await response.text();
+  const $ = cheerio.load(html);
+
+  const twitterHandle = extractHandle($, 'twitter.com') || extractHandle($, 'x.com');
+  const githubLink = $('a[href*="github.com"]').attr('href');
+
+  return {
+    twitter: twitterHandle ? `https://x.com/${twitterHandle}` : undefined,
+    github: githubLink ? checkAndUpdateGitHubUrl(githubLink) : undefined,
+  };
 }
 
 const updateValidatorsBySite = async () => {
@@ -98,21 +92,39 @@ const updateValidatorsBySite = async () => {
     },
   });
 
+  let validatorsCount = validators.length;
   for (const validator of validators) {
+    validatorsCount--;
     if (validator.website) {
-      const { twitter, github } = await checkUrl(validator.website);
+      try {
+        const { twitter, github } = await checkUrl(validator.website);
 
-      const updateData: Partial<Validator> = {};
-      if (twitter && !validator.twitter) {
-        updateData.twitter = twitter;
+        const updateData: Partial<Validator> = {};
+        if (twitter && !validator.twitter) {
+          updateData.twitter = twitter;
+        }
+        if (github && !validator.github) {
+          updateData.github = github;
+        }
+        if (Object.keys(updateData).length > 0) {
+          await db.validator.update({ where: { id: validator.id }, data: updateData });
+          logInfo(
+            `${validatorsCount}/${validators.length} Updated validator ${validator.moniker} with ${JSON.stringify(updateData)}`,
+          );
+        } else {
+          logInfo(
+            `${validatorsCount}/${validators.length} No updates found for validator ${validator.moniker} - ${validator.identity}`,
+          );
+        }
+      } catch (error) {
+        logError(
+          `${validatorsCount}/${validators.length} Error fetching URL ${validator.website}: ${error instanceof Error ? error.message : error}`,
+        );
       }
-      if (github && !validator.github) {
-        updateData.github = github;
-      }
-      if (Object.keys(updateData).length > 0) {
-        await db.validator.update({ where: { id: validator.id }, data: updateData });
-        logInfo(`Updated validator ${validator.moniker} with ${JSON.stringify(updateData)}`);
-      }
+    } else {
+      logError(
+        `${validatorsCount}/${validators.length} No website for validator ${validator.moniker} - ${validator.identity}`,
+      );
     }
   }
 };

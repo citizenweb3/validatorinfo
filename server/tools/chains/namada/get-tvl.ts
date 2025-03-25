@@ -1,8 +1,8 @@
-import db from '@/db';
 import logger from '@/logger';
-import { ChainWithNodes } from '@/server/types';
+import { ChainTVLResult, GetTvlFunction } from '@/server/tools/chains/chain-indexer';
+import fetchData from '@/server/utils/fetch-data';
 
-const { logInfo, logError, logDebug } = logger('get-chain-tvl');
+const { logError, logDebug } = logger('get-tvl');
 
 interface StakingData {
   address: string;
@@ -10,13 +10,12 @@ interface StakingData {
   effectiveSupply: string;
 }
 
-const getNamadaTVL = async (chain: ChainWithNodes) => {
+const getTvl: GetTvlFunction = async (chain) => {
   try {
-    logInfo(`${chain.prettyName.toUpperCase()}`);
-    const indexerEndpoint = chain.chainNodes.find((node) => node.type === 'indexer')?.url;
+    const indexerEndpoint = chain.nodes.find((node) => node.type === 'indexer')?.url;
     if (!indexerEndpoint) {
       logError(`RPC node for ${chain.name} chain not found`);
-      return;
+      return null;
     }
 
     let totalSupply = '0';
@@ -24,37 +23,37 @@ const getNamadaTVL = async (chain: ChainWithNodes) => {
     let tvl = 0;
 
     try {
-      const stakingData: StakingData = await fetch(
+      const stakingData: StakingData = await fetchData<StakingData>(
         `${indexerEndpoint}/api/v1/chain/token-supply?address=tnam1q9gr66cvu4hrzm0sd5kmlnjje82gs3xlfg3v6nu7`,
-      ).then((res) => res.json());
+      );
       totalSupply = stakingData.totalSupply;
     } catch (error: any) {
       logError(`Get stakingData for [${chain.name}] error: `, error);
     }
 
     try {
-      const votingPower = await fetch(`${indexerEndpoint}/api/v1/pos/voting-power`).then((res) => res.json());
+      const votingPower = await fetchData<{ totalVotingPower: string }>(`${indexerEndpoint}/api/v1/pos/voting-power`);
       bondedTokens = (+votingPower.totalVotingPower * 1e6).toString();
-      tvl = (+bondedTokens / +totalSupply) * 100;
+      tvl = +bondedTokens / +totalSupply;
     } catch (error: any) {
       logError(`Get TVL for [${chain.name}] error: `, error);
     }
 
-    const data = {
+    const data: ChainTVLResult = {
       totalSupply: totalSupply.toString(),
       bondedTokens: bondedTokens.toString(),
       tvl,
+      unbondedTokens: '0',
+      unbondedTokensRatio: 0,
     };
 
     logDebug(`TVL for [${chain.name}]: ${JSON.stringify(data)}`);
 
-    await db.chain.update({
-      where: { id: chain.id },
-      data,
-    });
+    return data;
   } catch (error: any) {
     logError(`Get TVL for [${chain.name}] error: `, error);
+    return null;
   }
 };
 
-export default getNamadaTVL;
+export default getTvl;
