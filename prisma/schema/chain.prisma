@@ -18,6 +18,8 @@ model Chain {
   githubMainRepo String  @map("github_main_repo")
   hasValidators  Boolean @default(true) @map("has_validators")
 
+  chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
+
   chainNodes ChainNode[] @relation("chain_node")
   aprs       Apr[]       @relation("chain_apr")
   prices     Price[]     @relation("chain_price")
@@ -27,16 +29,16 @@ model Chain {
   addresses  Address[]   @relation("chain_addresses")
 
   // calculated
-  totalSupply String @map("total_supply") @default("")
-  bondedTokens String @map("bonded_tokens") @default("")
-  unbondedTokens String @map("not_bonded_tokens") @default("")
-  unbondedTokensRatio Float @map("unbonded_tokens_ratio") @default(0)
-  uptimeHeight Int @map("uptime_height") @default(0)
-  lastUptimeUpdated DateTime @map("last_uptime_updated") @db.Timestamptz(6) @default(now())
-  avgTxInterval Float @map("avg_tx_interval") @default(0)
-  tvl Float @default(0)
-  apr Float @default(0)
-  unbondingTime Int? @map("unbonding_time")
+  totalSupply         String   @default("") @map("total_supply")
+  bondedTokens        String   @default("") @map("bonded_tokens")
+  unbondedTokens      String   @default("") @map("not_bonded_tokens")
+  unbondedTokensRatio Float    @default(0) @map("unbonded_tokens_ratio")
+  uptimeHeight        Int      @default(0) @map("uptime_height")
+  lastUptimeUpdated   DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
+  avgTxInterval       Float    @default(0) @map("avg_tx_interval")
+  tvl                 Float    @default(0)
+  apr                 Float    @default(0)
+  unbondingTime       Int?     @map("unbonding_time")
 
   @@map("chains")
 }

@@ -1,17 +1,17 @@
-import { Prisma } from '@prisma/client';
-
 import db from '@/db';
 import logger from '@/logger';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import chainNames from '@/server/tools/chains/chains';
-import { getChainParams } from '@/server/tools/chains/params';
+import { ecosystemParams, getChainParams } from '@/server/tools/chains/params';
+
+import { Prisma } from '.prisma/client';
+
+import ChainUncheckedCreateInput = Prisma.ChainUncheckedCreateInput;
 
 const { logInfo, logError } = logger('init-chains');
 
-import ChainCreateInput = Prisma.ChainCreateInput;
-
 async function addNetwork(chain: AddChainProps): Promise<void> {
-  const chainFields: ChainCreateInput = {
+  const chainFields: ChainUncheckedCreateInput = {
     rang: chain.rang,
     ecosystem: chain.ecosystem ?? 'cosmos',
     chainId: chain.chainId,
@@ -85,6 +85,21 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
 
 async function main() {
   try {
+    for (const ecosystem of ecosystemParams) {
+      const existingEcosystem = await db.ecosystem.findUnique({
+        where: { name: ecosystem.name },
+      });
+
+      if (!existingEcosystem) {
+        await db.ecosystem.create({
+          data: {
+            name: ecosystem.name,
+            prettyName: ecosystem.prettyName,
+          },
+        });
+        logInfo(`Ecosystem ${ecosystem.prettyName} created`);
+      }
+    }
     for (const chainName of chainNames) {
       const chainParams = getChainParams(chainName);
       await addNetwork(chainParams);

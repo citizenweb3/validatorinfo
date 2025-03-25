@@ -1,5 +1,10 @@
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 
+export const ecosystemParams = [
+  { name: 'cosmos', prettyName: 'Cosmos Hub' },
+  { name: 'namada', prettyName: 'Namada' },
+];
+
 const chainParams: Record<string, AddChainProps> = {
   cosmoshub: {
     rang: 1,
