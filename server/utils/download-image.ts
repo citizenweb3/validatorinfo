@@ -5,7 +5,7 @@ export default async function downloadImage(logoType: string, id: number | strin
   try {
     const ext = url.split('.').pop() || '';
     const filename = `${id.toString()}.${ext}`;
-    const imagePath = path.join(process.cwd(), 'public', 'img', logoType);
+    const imagePath = path.join(process.cwd(), 'uploads', logoType);
 
     if (!fs.existsSync(imagePath)) {
       fs.mkdirSync(imagePath, { recursive: true });
@@ -16,7 +16,7 @@ export default async function downloadImage(logoType: string, id: number | strin
     if (buffer) {
       fs.writeFileSync(imagePath + `/${filename}`, Buffer.from(buffer));
     }
-    return buffer ? `/img/${logoType}/${filename}` : '';
+    return buffer ? `/api/uploads/${logoType}/${filename}` : '';
   } catch {
     return '';
   }
