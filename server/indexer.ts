@@ -55,6 +55,7 @@ const runServer = async () => {
     { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.everyHour },
+    { name: 'chain-staking-params', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {

@@ -2,8 +2,9 @@ import { NodeResult } from '@/server/types';
 
 export type ChainNodeType = 'indexer' | 'lcd' | 'rpc' | 'grpc' | 'ws';
 
-export interface MainParams {
+export interface StakingParams {
   unbondingTime: number | null;
+  maxValidators: number | null;
 }
 
 export interface ChainTVLResult {
@@ -38,11 +39,11 @@ export interface AddChainProps {
 export type GetTvlFunction = (chain: AddChainProps) => Promise<ChainTVLResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
-export type GetMainParamsFunction = (chain: AddChainProps) => Promise<MainParams>;
+export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<StakingParams>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
   getApr: GetAprFunction;
   getTvl: GetTvlFunction;
-  getMainParams: GetMainParamsFunction;
+  getStakingParams: GetStakingParamsFunction;
 }
