@@ -1,4 +1,6 @@
 import * as d3 from 'd3';
+import { NumberValue } from 'd3';
+import { formatXAxisTick } from './chartHelper';
 
 // Interface for chart configuration
 export interface ChartConfig {
@@ -126,7 +128,7 @@ export function handleTooltip(
       const closest = dataset.reduce((a, b) =>
         Math.abs(a.date.getTime() - mouseDate.getTime()) < Math.abs(b.date.getTime() - mouseDate.getTime()) ? a : b
       );
-      return { name, value: formatValue(closest.value, name) };
+      return { name, value: closest.formattedValue || formatValue(closest.value, name) };
     });
 
     const chartLeft = chartConfig.margin.left;
@@ -255,37 +257,74 @@ export function drawLegend(
   chartConfig: ChartConfig,
   tooltipConfig: TooltipConfig
 ): void {
+  // Remove any existing legend to avoid duplication
+  svg.select('.legend').remove();
+
+  const squareSize = tooltipConfig.squareSize;
+  const padding = 5; // Space between the square and text
+  const spacing = 20; // Space between legend items
+
+  // Append the legend group at a temporary position
   const legend = svg
     .append('g')
-    .attr(
-      'transform',
-      `translate(${chartConfig.width / 2}, ${chartConfig.height - chartConfig.margin.bottom + chartConfig.legendOffset + 20})`
-    );
+    .attr('class', 'legend')
+    .attr('transform', `translate(0, ${chartConfig.height - chartConfig.margin.bottom + chartConfig.legendOffset + 20})`);
 
-  const totalWidth = legendItems.length * 100;
-  const startX = -totalWidth / 2;
+  // Create subgroups for each legend item
+  const itemGroups = legend
+    .selectAll('.legend-item')
+    .data(legendItems)
+    .enter()
+    .append('g')
+    .attr('class', 'legend-item');
 
-  legendItems.forEach((item, index) => {
-    const itemX = startX + index * 100;
-
-    legend
+  // Append rectangles and texts to each subgroup
+  itemGroups.each(function (d) {
+    const group = d3.select(this);
+    group
       .append('rect')
-      .attr('x', itemX)
+      .attr('x', 0)
       .attr('y', 0)
-      .attr('width', tooltipConfig.squareSize)
-      .attr('height', tooltipConfig.squareSize)
-      .attr('fill', item.color)
+      .attr('width', squareSize)
+      .attr('height', squareSize)
+      .attr('fill', d.color)
       .attr('stroke', 'white')
       .attr('stroke-width', 1);
 
-    legend
+    group
       .append('text')
-      .attr('x', itemX + 20)
-      .attr('y', tooltipConfig.squareSize)
+      .attr('x', squareSize + padding)
+      .attr('y', squareSize / 2) // Center text vertically with the square
       .attr('fill', '#FFFFFF')
       .attr('font-size', '10px')
-      .text(item.label);
+      .attr('dominant-baseline', 'middle') // Ensures vertical centering
+      .text(d.label);
   });
+
+  // Calculate the width of each item
+  const itemWidths = itemGroups.nodes().map((node) => {
+    const text = d3.select(node).select('text');
+    const textWidth = (text.node() as SVGTextElement)?.getComputedTextLength();
+    return squareSize + padding + textWidth;
+  });
+
+  // Position each subgroup dynamically
+  let currentX = 0;
+  itemGroups.each(function (d, i) {
+    const group = d3.select(this);
+    group.attr('transform', `translate(${currentX}, 0)`);
+    currentX += itemWidths[i] + spacing;
+  });
+
+  // Calculate total width (excluding the last spacing)
+  const totalWidth = currentX - spacing;
+
+  // Center the legend horizontally
+  const legendX = (chartConfig.width - totalWidth) / 2;
+  legend.attr(
+    'transform',
+    `translate(${legendX}, ${chartConfig.height - chartConfig.margin.bottom + chartConfig.legendOffset + 20})`
+  );
 }
 
 
@@ -310,17 +349,24 @@ export function handleWheel(
   zoomStep: number = 1
 ): void {
   event.preventDefault();
-  const delta = event.deltaY > 0 ? zoomStep : -zoomStep;
+  const delta = event.deltaY;
+  
+  // Zoom in or out based on the scroll direction
+  const zoomDelta = delta > 0 ? zoomStep : -zoomStep;
   const [start, end] = xDomain;
   const newStart = new Date(start);
   const newEnd = new Date(end);
-  newStart.setMonth(newStart.getMonth() + delta);
-  newEnd.setMonth(newEnd.getMonth() + delta);
+
+  newStart.setMonth(newStart.getMonth() + zoomDelta);
+  newEnd.setMonth(newEnd.getMonth() + zoomDelta);
+
   if (newStart >= minDate && newEnd <= maxDate) {
     setXDomain([newStart, newEnd]);
     fetchDataForRange(newStart, newEnd);
   }
 }
+
+
 
 
 
@@ -403,6 +449,8 @@ export function setupYScale(
 }
 
 
+
+
 /**
  * Draws the x-axis.
  * @param svg D3 selection of the SVG
@@ -412,14 +460,65 @@ export function setupYScale(
 export function drawXAxis(
   svg: d3.Selection<SVGSVGElement, unknown, null, undefined>,
   xScale: d3.ScaleTime<number, number>,
-  chartConfig: ChartConfig
+  chartConfig: ChartConfig,
+  chartType: string
 ): void {
+  let xAxis;
+
+  switch (chartType) {
+    case 'Daily':
+      xAxis = d3.axisBottom(xScale)
+        .ticks(d3.timeWeek.every(1))
+        .tickFormat((domainValue: Date | NumberValue) => {
+          const date = domainValue as Date;
+          const fullMonthName = date.toLocaleString('default', { month: 'short' });
+          const day = date.getDate();
+          return `${fullMonthName} ${day}`;
+        });
+      break;
+
+    case 'Weekly':
+      xAxis = d3.axisBottom(xScale)
+        .ticks(d3.timeWeek.every(1))
+        .tickFormat((domainValue: Date | NumberValue) => formatXAxisTick(domainValue as Date, chartType));
+      break;
+
+    case 'Monthly':
+      xAxis = d3.axisBottom(xScale)
+        .ticks(d3.timeMonth.every(1))
+        .tickFormat((domainValue: Date | NumberValue) => formatXAxisTick(domainValue as Date, chartType));
+      break;
+
+    case 'Yearly':
+      xAxis = d3.axisBottom(xScale)
+        .ticks(d3.timeYear.every(1))
+        .tickFormat((domainValue: Date | NumberValue) => formatXAxisTick(domainValue as Date, chartType));
+      break;
+
+    default:
+      xAxis = d3.axisBottom(xScale)
+        .ticks(d3.timeMonth.every(1))
+        .tickFormat((domainValue: Date | NumberValue) => formatXAxisTick(domainValue as Date, chartType));
+  }
+
   svg.append('g')
     .attr('transform', `translate(0,${chartConfig.height - chartConfig.margin.bottom})`)
-    .call(d3.axisBottom(xScale).tickSizeOuter(0))
+    .call(xAxis.tickSizeOuter(0))
     .selectAll('path, line')
     .attr('stroke', '#3E3E3E');
+
+  // Optional label rotation for readability
+  svg.selectAll('.x-axis text')
+    .style('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .attr('transform', 'rotate(-45)') // Rotate labels for better readability
+    .attr('dx', '-0.5em') // Adjust position
+    .attr('dy', '0.5em');
 }
+
+
+
+
 
 /**
  * Draws the y-axis with customizable tick format.
@@ -444,7 +543,12 @@ export function drawYAxis(
     .selectAll('.tick text')
     .attr('fill', '#FFFFFF')
     .attr('x', -20);
+
+  // Optional: Percentage formatting if not already included in tickFormat
+  svg.selectAll('.y-axis text')
+    .text((d) => `${d}%`);
 }
+
 
 
 
@@ -490,7 +594,8 @@ export function handleBarTooltip(
   barWidth: number
 ): void {
   svg.on('mousemove', (event) => {
-    chartArea.selectAll('.dotted-line, .intersection-square, .ecosystem-square, .tooltip-text').remove();
+    // Remove existing tooltip elements
+    chartArea.selectAll('.tooltip-text').remove();
 
     const [mouseX] = d3.pointer(event, svg.node());
     const mouseDate = xScale.invert(mouseX);
@@ -514,32 +619,29 @@ export function handleBarTooltip(
     const adjustedMouseX = mouseX - offsetX;
     const clampedMouseX = Math.max(chartLeft, Math.min(adjustedMouseX, chartRight));
 
-    // Highlight the closest bars
+    // Highlight the closest bars with a white stroke (boundary around the bars)
     yValues.forEach((data) => {
       const dataset = datasets[data.name];
       if (dataset) {
         const closestDataPoint = dataset.reduce((a, b) =>
           Math.abs(xScale(a.date) - clampedMouseX) < Math.abs(xScale(b.date) - clampedMouseX) ? a : b
         );
+
+        // Select bars and add a white stroke around the closest ones
         chartArea
-          .selectAll(`.bar-${data.name === 'Total Crypto Capitalization' ? 'left' : 'right'}`)
-          .each(function (d) {
-            const dataPoint = d as DataPoint;
-            d3.select(this).attr('stroke', dataPoint.date === closestDataPoint.date ? 'white' : 'none');
-          })
-          .attr('stroke-width', 1);
+  .selectAll(`.bar-${data.name === 'Total Crypto Capitalization' ? 'left' : 'right'}`)
+  .each(function (d) {
+    const dataPoint = d as DataPoint;
+    if (dataPoint.date.getTime() === closestDataPoint.date.getTime()) {
+      d3.select(this)
+        .attr('stroke', 'white')
+        .attr('stroke-width', 2);
+    } else {
+      d3.select(this).attr('stroke', 'none');
+    }
+  });
       }
     });
-
-    chartArea
-      .append('line')
-      .attr('class', 'dotted-line')
-      .attr('x1', clampedMouseX)
-      .attr('y1', chartConfig.margin.top)
-      .attr('x2', clampedMouseX)
-      .attr('y2', chartConfig.height - chartConfig.margin.bottom)
-      .attr('stroke', '#E5C46B')
-      .attr('stroke-dasharray', '2, 2');
 
     const tooltipHeight = tooltipConfig.baseHeight + yValues.length * tooltipConfig.rowHeight;
     let tooltipX = clampedMouseX + tooltipConfig.xOffset;
@@ -581,17 +683,6 @@ export function handleBarTooltip(
       const yPosition = tooltipY + 40 + i * tooltipConfig.rowHeight;
 
       chartArea
-        .append('rect')
-        .attr('class', 'ecosystem-square')
-        .attr('x', tooltipX + tooltipConfig.xOffset)
-        .attr('y', yPosition - 5)
-        .attr('width', tooltipConfig.squareSize)
-        .attr('height', tooltipConfig.squareSize)
-        .attr('fill', color)
-        .attr('stroke', 'white')
-        .attr('stroke-width', 1);
-
-      chartArea
         .append('text')
         .attr('class', 'tooltip-text')
         .attr('x', tooltipX + 30)
@@ -613,3 +704,5 @@ export function handleBarTooltip(
     });
   });
 }
+
+
