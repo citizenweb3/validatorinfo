@@ -50,7 +50,7 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     xOffset: 10,
     yOffset: 20,
     boundaryPadding: 10,
-    rightBoundaryOffset: 50,
+    rightBoundaryOffset: 100,
   };
 
   // Fetch data for the specified date range
@@ -65,38 +65,15 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
   const drawChart = () => {
     const { svg, chartArea } = setupChartArea(chartRef, chartConfig);
 
-    // Define the clipping region
-    const clipPathId = 'chart-clip-path';
-    const clipPath = svg.select(`#${clipPathId}`);
-    if (clipPath.empty()) {
-      svg.append('defs')
-        .append('clipPath')
-        .attr('id', clipPathId)
-        .append('rect')
-        .attr('x', chartConfig.margin.left)
-        .attr('y', chartConfig.margin.top)
-        .attr('width', chartConfig.width - chartConfig.margin.left - chartConfig.margin.right - chartConfig.xScalePadding)
-        .attr('height', chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom);
-    } else {
-      clipPath.select('rect')
-        .attr('x', chartConfig.margin.left)
-        .attr('y', chartConfig.margin.top)
-        .attr('width', chartConfig.width - chartConfig.margin.left - chartConfig.margin.right - chartConfig.xScalePadding)
-        .attr('height', chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom);
-    }
-
-    // Apply the clipping region to the chart area
-    chartArea.attr('clip-path', `url(#${clipPathId})`);
-
     const xScale = setupXScale(xDomain, chartConfig);
-    const yScale = setupYScale([0, 1 * 10 ** 11], chartConfig);
+    const yScale = setupYScale([0, 2 * 10 ** 11], chartConfig);
 
-    drawXAxis(svg, xScale, chartConfig);
+    drawXAxis(svg, xScale, chartConfig, chartType);
     drawYAxis(svg, yScale, chartConfig, (d) => formatNumber(d));
 
     const lineGenerator = d3.line<DataPoint>().x((d) => xScale(d.date)).y((d) => yScale(d.value));
-    drawLine(chartArea, datasets.tvs, '#4FB848', lineGenerator, 50);
-    drawLine(chartArea, datasets.rewards, '#E5C46B', lineGenerator, 50);
+    drawLine(chartArea, datasets.tvs, '#4FB848', lineGenerator, 0);
+    drawLine(chartArea, datasets.rewards, '#E5C46B', lineGenerator, 0);
 
     drawLegend(
       svg,
@@ -150,7 +127,7 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
         break;
       case 'Weekly':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 25 * 7); // Last 25 weeks (175 days)
+        startDate.setDate(now.getDate() - 12 * 7); // Last 25 weeks (175 days)
         break;
       case 'Monthly':
         startDate = new Date(now);
@@ -165,7 +142,7 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     }
 
     const endDate = now;
-    setXDomain([startDate, endDate]);
+    setXDomain([startDate, new Date(endDate.setDate(endDate.getDate() +0))]);
     fetchDataForRange(startDate, endDate);
   }, [chartType]);
 

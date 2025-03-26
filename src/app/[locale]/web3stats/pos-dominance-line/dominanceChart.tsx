@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { generateDataForDominanceLine } from './generateDataForDominanceLine';
 import { FC } from 'react';
 import { ECOSYSTEMS_CONFIG } from '../ecosystemConfig';
-import { drawLine, handleTooltip, drawLegend, ChartConfig, TooltipConfig, DataPoint, handleWheel } from '../chartUtils';
+import { drawLine, handleTooltip, drawLegend, ChartConfig, TooltipConfig, DataPoint, handleWheel, drawXAxis, drawYAxis } from '../chartUtils';
 
 interface ChartWidgetProps {
   chartType: string;
@@ -35,7 +35,7 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
     xOffset: 10,
     yOffset: 20,
     boundaryPadding: 10,
-    rightBoundaryOffset: 50,
+    rightBoundaryOffset: 100,
   };
 
   const xScale = d3.scaleUtc().domain(xDomain).range([chartConfig.margin.left, chartConfig.width - chartConfig.margin.right + chartConfig.xScalePadding]);
@@ -43,11 +43,21 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
 
   const drawChart = () => {
     if (!chartRef.current) return;
+  
+    // Clear any previous SVG (in case of re-rendering)
     d3.select(chartRef.current).select('svg').remove();
-
-    const svg = d3.select(chartRef.current).append('svg').attr('width', chartConfig.width).attr('height', chartConfig.height + 20);
-    const chartArea = svg.append('g').attr('clip-path', 'url(#chart-clip)').attr('transform', `translate(${chartConfig.leftOffset}, 0)`);
-
+  
+    // Create the new SVG and chart area
+    const svg = d3.select(chartRef.current)
+      .append('svg')
+      .attr('width', chartConfig.width)
+      .attr('height', chartConfig.height + 20);
+  
+    const chartArea = svg.append('g')
+      .attr('clip-path', 'url(#chart-clip)')
+      .attr('transform', `translate(${chartConfig.leftOffset}, 0)`);
+  
+    // Add clipping path
     svg.append('defs')
       .append('clipPath')
       .attr('id', 'chart-clip')
@@ -56,46 +66,41 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
       .attr('y', chartConfig.margin.top)
       .attr('width', chartConfig.width - chartConfig.margin.left - chartConfig.margin.right - chartConfig.leftOffset - chartConfig.rightOffset + 35)
       .attr('height', chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom);
-
-    xScale.domain(xDomain);
-    yScale.domain([0, 100]);
-
-    svg.append('g')
-      .attr('transform', `translate(0,${chartConfig.height - chartConfig.margin.bottom})`)
-      .call(d3.axisBottom(xScale).tickSizeOuter(0))
-      .selectAll('path, line')
-      .attr('stroke', '#3E3E3E');
-
-    svg.append('g')
-      .attr('transform', `translate(${chartConfig.margin.left},0)`)
-      .call(d3.axisLeft(yScale).ticks(5).tickSizeOuter(0).tickSizeInner(0).tickFormat(d => `${d}%`))
-      .select('.domain')
-      .attr('stroke', '#3E3E3E')
-      .selectAll('.tick text')
-      .attr('fill', '#FFFFFF')
-      .attr('x', -20);
-
+  
+    // Set scales for the axes
+    const xScale = d3.scaleUtc().domain(xDomain).range([chartConfig.margin.left, chartConfig.width - chartConfig.margin.right + chartConfig.xScalePadding]);
+    const yScale = d3.scaleLinear().domain([0, 100]).range([chartConfig.height - chartConfig.margin.bottom, chartConfig.margin.top]);
+  
+    // Draw the x-axis
+    drawXAxis(svg, xScale, chartConfig, chartType);
+  
+    // Draw the y-axis
+    drawYAxis(svg, yScale, chartConfig, (d) => `${Number(d).toFixed(2)}%`, 5);
+  
+    // Draw lines and legends for ecosystems (same logic as before)
     const lineGenerator = d3.line<DataPoint>().x(d => xScale(d.date)).y(d => yScale(d.value));
+  
     const colors = ecosystems.reduce((acc, eco) => {
       acc[eco] = (ECOSYSTEMS_CONFIG as any)[eco]?.color || 'gray';
       return acc;
     }, {} as { [key: string]: string });
-
+  
     ecosystems.forEach((ecosystem) => {
       if (datasets[ecosystem]) drawLine(chartArea, datasets[ecosystem], colors[ecosystem], lineGenerator);
     });
-
+  
     const legendItems = ecosystems.map(ecosystem => ({
       label: ecosystem,
       color: colors[ecosystem]
     }));
+  
     drawLegend(svg, legendItems, chartConfig, tooltipConfig);
-
+  
     handleTooltip(svg, chartArea, datasets, xScale, yScale, chartConfig, tooltipConfig,
       (value) => `${value.toFixed(2)}%`,
       colors
     );
-
+  
     svg.on('wheel', (event) => handleWheel(
       event,
       xDomain,
@@ -106,6 +111,7 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
       1 // zoomStep
     ));
   };
+  
 
   const fetchDataForRange = (startDate: Date, endDate: Date) => {
     setTimeout(() => {
@@ -140,7 +146,7 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
         break;
       case 'Weekly':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 25 * 7); // Last 25 weeks (175 days)
+        startDate.setDate(now.getDate() - 12 * 7); // Last 25 weeks (175 days)
         break;
       case 'Monthly':
         startDate = new Date(now);
