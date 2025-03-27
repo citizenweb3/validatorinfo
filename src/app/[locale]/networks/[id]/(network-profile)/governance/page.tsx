@@ -25,8 +25,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 const defaultPerPage = 1;
 
 const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({
-                                                                      params: { locale, id }, searchParams: q,
-                                                                    }) => {
+    params: { locale, id }, searchParams: q,
+  }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkGovernance' });
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
@@ -40,11 +40,12 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({
     <div className="mb-6">
       <PageTitle prefix={`${chain?.prettyName}:` ?? 'Network:'} text={t('title')} />
       <TotalsListProposals />
-      <LiveProposals />
+      <LiveProposals chainId={id} />
       <NetworkProposals page={'VotingSummaryPage'}
                         perPage={perPage}
                         currentPage={currentPage}
-                        sort={{ sortBy, order }} />
+                        sort={{ sortBy, order }}
+                        chainId={id} />
     </div>
   );
 };

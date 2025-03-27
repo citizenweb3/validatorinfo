@@ -22,8 +22,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
-                                                             params: { id, locale }, searchParams: q,
-                                                           }) => {
+    params: { id, locale }, searchParams: q,
+  }) => {
   const t = await getTranslations({ locale, namespace: 'TotalTxsPage' });
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;

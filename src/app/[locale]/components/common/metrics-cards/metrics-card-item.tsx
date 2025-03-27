@@ -14,20 +14,24 @@ interface OwnProps {
   className?: string;
   titleClassName?: string;
   dataClassName?: string;
+  addLineData?: string;
+  addLineClassName?: string;
 }
 
 const MetricsCardItem: FC<OwnProps> = ({
-                                         title,
-                                         data,
-                                         isPercents = false,
-                                         isModal = false,
-                                         modalTitle = '',
-                                         modalItem = '',
-                                         plusButtonSize = 'sm',
-                                         className = '',
-                                         titleClassName = '',
-                                         dataClassName = '',
-                                       }) => {
+    title,
+    data,
+    isPercents = false,
+    isModal = false,
+    modalTitle = '',
+    modalItem = '',
+    plusButtonSize = 'sm',
+    className = '',
+    titleClassName = '',
+    dataClassName = '',
+    addLineData = '',
+    addLineClassName = '',
+  }) => {
   return (
     <div className={`${className}     
       flex flex-col items-center bg-card mx-1
@@ -40,6 +44,7 @@ const MetricsCardItem: FC<OwnProps> = ({
     }>
       <div className={`${titleClassName} text-center text-base text-highlight`}>{title}</div>
       <div className={`${dataClassName} font-handjet text-lg`}>{isPercents ? `${data}%` : data}</div>
+      {addLineData && <div className={`${addLineClassName}`}>{addLineData}</div>}
       {isModal && (
         <MetricsCardsModal
           title={modalTitle}

@@ -871,6 +871,44 @@
     "delegate address": "Endereço do Delegado",
     "validator address": "Endereço do Validador",
     "amount": "Quantidade",
-    "auto claim reward": "Reivindicação Automática de Recompensa"
+    "auto claim reward": "Reivindicação Automática de Recompensa",
+    "Search by validator name and tx hash": "Pesquisa por nome do validador e hash tx"
+  },
+  "ProposalPage": {
+    "proposal tooltip": "text",
+    "signaling": "Sinalização",
+    "on going": "Em andamento",
+    "link to full proposal": "link para a proposta completa",
+    "voting period": "Período de votação",
+    "show all proposals": "Mostrar todas as propostas",
+    "votes": "Votos",
+    "show dropdown": "Mostrar votos do validador",
+    "hide dropdown": "Ocultar votos do validador",
+    "all": "Todos",
+    "yes": "Sim",
+    "no": "Não",
+    "veto": "Veto",
+    "did not vote": "Não Votou",
+    "weighted": "Ponderado",
+    "abstain": "Abstenção",
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Hash da Transação",
+        "hint": "ID da Transação. Clique para detalhes"
+      },
+      "Answer": {
+        "name": "Resposta",
+        "hint": ""
+      },
+      "Time": {
+        "name": "Hora",
+        "hint": ""
+      }
+    },
+    "ai generated summary": "Resumo gerado por IA"
   }
 }

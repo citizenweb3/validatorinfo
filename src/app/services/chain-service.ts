@@ -47,13 +47,6 @@ const getById = async (id: number): Promise<Chain | null> => {
   });
 };
 
-const getEcosystemsChains = async (): Promise<Chain[]> => {
-  return db.chain.findMany({
-    distinct: ['ecosystem'],
-    orderBy: { id: 'asc' },
-  });
-};
-
 const getChainValidatorsWithNodes = async (
   id: number,
   nodeStatus: string[],
@@ -155,7 +148,6 @@ const ChainService = {
   getAll,
   getTokenPriceByChainId,
   getById,
-  getEcosystemsChains,
   getChainValidatorsWithNodes,
 };
 
