@@ -6,6 +6,11 @@ export interface devActivityTableExampleInterface {
 export const networkProfileExample = {
   headerMetrics: [
     {
+      title: 'tvl',
+      data: 90,
+      tooltip: 'tvl',
+    },
+    {
       title: 'revenue',
       data: 90,
       tooltip: 'revenue',
@@ -24,16 +29,6 @@ export const networkProfileExample = {
     {
       title: 'total amount of tx',
       data: 0.71,
-    },
-  ],
-  aprAndTvs: [
-    {
-      title: 'APY',
-      data: 2433423,
-    },
-    {
-      title: 'TVS',
-      data: 2433423,
     },
   ],
   networkOverview: [

@@ -24,7 +24,7 @@ const ProposalMetrics: FC<OwnProps> = async ({ chain }) => {
                            addLineData={`${item.data.toLocaleString()} ${chain?.denom}`}
                            className={'pb-4 pt-2.5'}
                            dataClassName={'mt-2'}
-                           addLineClassName={'font-handjet_light font-thin text-base'}
+                           addLineClassName={'font-handjet font-thin text-lg -mt-1'}
           />
         ))}
       </div>

@@ -16,7 +16,6 @@ const config: Config = {
     fontFamily: {
       sfpro: ['var(--font-sfpro)', 'Arial', 'sans-serif'],
       handjet: ['var(--font-handjet)', 'Arial', 'sans-serif'],
-      handjet_light: ['var(--font-handjet-light)', 'Arial', 'sans-serif'],
     },
     letterSpacing: {
       none: '0',

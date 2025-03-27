@@ -1,8 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { FC } from 'react';
-
-import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import SubTitle from '@/components/common/sub-title';
 import { Chain } from '@prisma/client';
 
@@ -12,11 +10,6 @@ interface OwnProps {
 
 const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
-  const fontColors = {
-    APR: '#4FB848',
-    APY: '#E5C46B',
-    TVS: '#2077E0',
-  };
 
   return (
     <div className="mt-16">
@@ -28,25 +21,34 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
               APR
             </div>
             <div
-              style={{ color: fontColors['APR'] }}
+              style={{ color: '#4FB848' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
               {((chain?.apr ?? 0.15) * 100).toFixed(2)}%
             </div>
           </div>
-          {networkProfileExample.aprAndTvs.map((item) => (
-            <div key={item.title} className="mt-2 flex w-full flex-wrap">
-              <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">
-                {item.title}
-              </div>
-              <div
-                style={{ color: fontColors[item.title as 'APR'] }}
-                className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
-              >
-                {item.data}
-              </div>
+          <div className="mt-2 flex w-full flex-wrap">
+            <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">
+              APY
             </div>
-          ))}
+            <div
+              style={{ color: '#E5C46B' }}
+              className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
+            >
+              {((chain?.apr ?? 0.15) * 100).toFixed(2)}%
+            </div>
+          </div>
+          <div className="mt-2 flex w-full flex-wrap">
+            <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">
+              TVS
+            </div>
+            <div
+              style={{ color: '#2077E0' }}
+              className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
+            >
+              {((chain?.tvl ?? 0.50) * 100).toFixed(2)}
+            </div>
+          </div>
         </div>
         <div className="w-4/5">
           <Image
