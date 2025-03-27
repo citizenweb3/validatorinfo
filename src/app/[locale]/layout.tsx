@@ -87,7 +87,20 @@ export default async function LocaleLayout({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@therealvalinfo" />
         <PlausibleProvider domain="validatorinfo.com" />
-        <link rel="canonical" href={'https://validatorinfo.com/'} />
+        <link rel="canonical" href={'https://validatorinfo.com'} />
+        <meta name="og:title" content="Web3 Blockchain Validator, Mining Pool and Network Explorer" />
+        <meta
+          name="og:description"
+          content="Web3 Explorer. Blockchain Validator, Mining Pool and Network Interactive Dashboard, Real-Time Token Analytics and Metrics"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={'https://validatorinfo.com'} />
+        <meta property="og:image" content={'https://validatorinfo.com/img/logo.png'} />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+        <meta property="og:image:alt" content="Validator Info" />
+        <meta property="og:site_name" content="Validator Info" />
+        <meta property="og:locale" content={locale} />
       </head>
       <body
         className={`${sfpro.className} min-h-screen overflow-x-hidden bg-background text-xs font-normal tracking-normal`}
