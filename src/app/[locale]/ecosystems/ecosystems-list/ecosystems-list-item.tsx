@@ -2,22 +2,21 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import TableAvatar from '@/components/common/table/table-avatar';
-import _ from 'lodash';
-import { Chain } from '@prisma/client';
+import { Ecosystem } from '@prisma/client';
 
 interface OwnProps {
-  item: Chain;
+  item: Ecosystem;
 }
 
 const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
-  const ecosystemLink = `/validators?p=1&ecosystems=${item.ecosystem}`
+  const ecosystemLink = `/validators?p=1&ecosystems=${item.name}`;
 
   return (
     <tr className="group font-handjet hover:bg-bgHover hover:text-highlight">
       <td
         className="group/avatar border-b w-2/12 border-black px-2 py-2 font-sfpro active:border-bgSt">
         <TableAvatar icon={item.logoUrl}
-                     name={_.capitalize(item.ecosystem)}
+                     name={item.prettyName}
                      href={ecosystemLink} />
       </td>
       <td className="border-b border-black px-2 py-2 font-handjet text-lg text-center active:border-bgSt">

@@ -64,10 +64,6 @@ export const networkProfileExample = {
       title: '% of comm pool to total supply',
       data: 10,
     },
-    {
-      title: 'average block time',
-      data: 5,
-    },
   ],
   totalStatistics: [
     {
