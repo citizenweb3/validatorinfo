@@ -8,6 +8,8 @@ import RoundedButton from '@/components/common/rounded-button';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
 import chainService from '@/services/chain-service';
+import Link from 'next/link';
+import _ from 'lodash';
 
 interface OwnProps {
   id: string;
@@ -36,9 +38,21 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
             <PlusButton size="xs" isOpened={false} />
           </div>
           <div className="mt-4 mb-4 grid grid-cols-[repeat(2,auto)] gap-x-2 gap-y-4 font-handjet text-lg text-center">
-            <div className="whitespace-nowrap rounded-full bg-primary shadow-button">DeFi</div>
-            <div className="whitespace-nowrap rounded-full bg-primary shadow-button">Cosmos Ecosystem</div>
-            <div className="whitespace-nowrap rounded-full bg-primary shadow-button">L1</div>
+            <Link href={``}>
+              <div className="whitespace-nowrap rounded-full bg-primary shadow-button hover:text-highlight active:text-base">
+                DeFi
+              </div>
+            </Link>
+            <Link href={`/networks?p=1&ecosystems=${chain?.ecosystem}`}>
+              <div className="whitespace-nowrap rounded-full bg-primary shadow-button hover:text-highlight active:text-base">
+                {_.capitalize(chain?.ecosystem)} Ecosystem
+              </div>
+            </Link>
+            <Link href={``}>
+              <div className="whitespace-nowrap rounded-full bg-primary shadow-button hover:text-highlight active:text-base">
+                L1
+              </div>
+            </Link>
           </div>
         </div>
         <div className="flex mt-auto">

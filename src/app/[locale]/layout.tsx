@@ -41,6 +41,11 @@ const handjet = localFont({
       weight: '400',
       style: 'normal',
     },
+    {
+      path: '../../../public/fonts/Handjet-Thin.ttf',
+      weight: '100',
+      style: 'thin',
+    },
   ],
   display: 'swap',
   variable: '--font-handjet',

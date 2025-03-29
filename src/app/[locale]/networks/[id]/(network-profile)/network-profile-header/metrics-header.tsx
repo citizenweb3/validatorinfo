@@ -15,12 +15,6 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
 
   return (
     <div className="mt-16 flex w-full justify-center gap-6">
-      <ToolTip tooltip={t('tvl tooltip')} direction={'top'}>
-        <MetricsCardItem title={t('tvl')}
-                         data={chain?.tvl ?? 90}
-                         titleClassName="my-1"
-                         isModal />
-      </ToolTip>
       {networkProfileExample.headerMetrics.map((item) => (
         <ToolTip key={item.title} tooltip={t('tvl tooltip')} direction={'top'}>
           <MetricsCardItem key={item.title}
