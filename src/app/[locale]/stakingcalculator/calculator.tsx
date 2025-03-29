@@ -73,9 +73,9 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
         </div>
         <div className="relative w-[37.5rem]">
           {stakingRates && <StakingResults values={stakingRates} chain={chain} />}
-          <div className="mt-3 flex items-center justify-between border-b border-gray-300">
+          <div className="mt-3 flex items-center justify-between border-b border-bgSt">
             <div className="flex items-center">
-              <div className="border-r border-gray-300">
+              <div className="border-r border-bgSt">
                 <div className={`${iconSize} mx-6 my-2 bg-calendar bg-contain`} />
               </div>
               <DatePicker
