@@ -911,6 +911,24 @@
       }
     },
     "ai generated summary": "Сгенерированное ИИ Резюме"
+  },
+  "LibraryPage": {
+    "Tabs": {
+      "Library": "Библиотека",
+      "Validators": "Валидаторы",
+      "Developers": "Разработчики",
+      "Delegators": "Делегаторы",
+      "Curious": "Любопытные"
+    },
+    "title": "Библиотека",
+    "description": "Библиотека здесь, чтобы помочь вам найти свой путь!",
+    "Validators": "Валидаторы",
+    "Developers": "Разработчики",
+    "Delegators": "Делегаторы",
+    "Curious": "Любопытные",
+    "customize": "Настроить",
+    "Submit New Info": "Отправить Новую Информацию",
+    "how to run a node on cosmos": "Как запустить ноду в Cosmos"
   }
 }
 

@@ -156,8 +156,8 @@ const getValidatorNodesWithChains = async (
   id: number,
   ecosystems: string[] = [],
   nodeStatus: string[] = [],
-  skip: number,
-  take: number,
+  skip: number = 0,
+  take: number = Number.MAX_SAFE_INTEGER,
   sortBy: string = 'prettyName',
   order: SortDirection = 'asc',
 ): Promise<{

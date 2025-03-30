@@ -229,3 +229,11 @@ export const getTxInformationTabs = (id: number, txHash: string): TabOptions[] =
     },
   ];
 };
+
+export const libraryTabs: TabOptions[] = [
+  { name: 'Developers', href: `/library/developers`, icon: icons.DevInfoIcon, iconHovered: icons.DevInfoIconHovered, },
+  { name: 'Validators', href: '/library/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
+  { name: 'Library', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
+  { name: 'Delegators', href: '/library/delegators', icon: icons.StakingIcon, iconHovered: icons.StakingIconHovered },
+  { name: 'Curious', href: '/library/curious', icon: icons.CuriousIcon, iconHovered: icons.CuriousIconHovered },
+];
