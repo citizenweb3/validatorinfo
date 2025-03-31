@@ -5,7 +5,6 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 import Button from '@/components/common/button';
 import PlusButton from '@/components/common/plus-button';
-import EcosystemListFiltersTags from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters-tags';
 
 interface OwnProps {
 }
@@ -52,13 +51,12 @@ const LibraryTagsFilter: FC<OwnProps> = ({}) => {
       : [...currentTags, value];
     searchParams.delete('tags');
     newTags.forEach((tag) => searchParams.append('tags', tag));
-    searchParams.set('p', '1');
     router.push(`${pathname}?${searchParams.toString()}`);
   };
 
   return (
     <div className="flex h-6 mt-5 items-center justify-start">
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row items-center mr-1">
         <Button
           activeType="switcher"
           onClick={onCustomiseClick}
@@ -73,11 +71,21 @@ const LibraryTagsFilter: FC<OwnProps> = ({}) => {
       </div>
       {isOpened && (
         <>
-          <EcosystemListFiltersTags
-            filterValues={tags}
-            selectedValue={selectedTagsFromUrl}
-            onChanged={onTagsChanged}
-          />
+          {tags.map((item) => (
+            <Button
+              key={item.value}
+              component="button"
+              onClick={() => onTagsChanged(item.value)}
+              isActive={selectedTagsFromUrl.indexOf(item.value) !== -1}
+              className="text-base mx-2"
+              contentClassName=""
+              activeType="switcher"
+            >
+              <div className="-my-1 px-10 flex flex-row items-center justify-center text-base font-medium">
+                {item.title}
+              </div>
+            </Button>
+          ))}
         </>
       )}
     </div>

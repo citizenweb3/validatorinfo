@@ -11,13 +11,13 @@ import RoundedButton from '@/components/common/rounded-button';
 interface PageProps {
 }
 
-const LibraryValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
+const LibraryDelegatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'LibraryPage' });
 
   return (
     <div>
-      <PageTitle text={t('Validators')} />
+      <PageTitle text={t('Delegators')} />
       <LibraryTagsFilter />
       <Letters />
       <div className="flex flex-row justify-between items-center">
@@ -48,4 +48,4 @@ const LibraryValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { 
   );
 };
 
-export default LibraryValidatorsPage;
+export default LibraryDelegatorsPage;

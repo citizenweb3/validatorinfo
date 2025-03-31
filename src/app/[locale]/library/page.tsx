@@ -2,9 +2,6 @@ import { getTranslations } from 'next-intl/server';
 import PageTitle from '@/components/common/page-title';
 import { NextPageWithLocale } from '@/i18n';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
 interface PageProps {
 }
 
