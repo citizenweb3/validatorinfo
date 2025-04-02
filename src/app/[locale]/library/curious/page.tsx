@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import LibraryTagsFilter from '@/app/library/library-tags-filter';
 import Letter from '@/app/metrics/letter';
@@ -14,6 +14,7 @@ export const revalidate = 0;
 interface PageProps {}
 
 const LibraryCuriousPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
+  unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'LibraryPage' });
 
   return (
