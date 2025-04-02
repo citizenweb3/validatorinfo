@@ -871,7 +871,45 @@
     "delegate address": "Адрес Делегатора",
     "validator address": "Адрес Валидатора",
     "amount": "Количество",
-    "auto claim reward": "Автоматически полученные вознаграждения"
+    "auto claim reward": "Автоматически полученные вознаграждения",
+    "Search by validator name and tx hash": "Поиск по имени валидатора и хэшу транзакции"
+  },
+  "ProposalPage": {
+    "proposal tooltip": "text",
+    "signaling": "Сигнал",
+    "on going": "В процессе",
+    "link to full proposal": "Ссылка на Полное Предложение",
+    "voting period": "Период Голосования",
+    "show all proposals": "Показать Все Предложения",
+    "votes": "Голосование",
+    "show dropdown": "Показать Голоса Валидаторов",
+    "hide dropdown": "Скрыть Голоса Валидаторов",
+    "all": "Все",
+    "yes": "Да",
+    "no": "Нет",
+    "veto": "Вето",
+    "did not vote": "Не проголосовал",
+    "weighted": "Взвешенный",
+    "abstain": "Воздержался",
+    "Table": {
+      "Validator": {
+        "name": "Валидатор",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Хэш Транзакции",
+        "hint": "Идентификатор транзакции. Нажмите для подробностей"
+      },
+      "Answer": {
+        "name": "Ответ",
+        "hint": ""
+      },
+      "Time": {
+        "name": "Время",
+        "hint": ""
+      }
+    },
+    "ai generated summary": "Сгенерированное ИИ Резюме"
   }
 }
 

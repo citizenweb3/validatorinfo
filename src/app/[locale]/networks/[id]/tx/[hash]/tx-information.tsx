@@ -7,7 +7,7 @@ import CopyButton from '@/components/common/copy-button';
 import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
-  chain?: Chain;
+  chain: Chain | null;
   hash: string;
 }
 
