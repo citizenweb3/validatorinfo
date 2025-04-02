@@ -70,6 +70,8 @@ import EcosystemsIcon from '@/public/img/icons/navbar/ecosystems.png';
 import EcosystemsIconHovered from '@/public/img/icons/navbar/ecosystems-h.png';
 import NodesIcon from '@/public/img/icons/navbar/nodes.png';
 import NodesIconHovered from '@/public/img/icons/navbar/nodes-h.png';
+import CuriousIcon from '@/public/img/icons/library/curious.png';
+import CuriousIconHovered from '@/public/img/icons/library/curious-h.png';
 
 
 const icons = {
@@ -145,6 +147,8 @@ const icons = {
   EcosystemsIconHovered,
   NodesIcon,
   NodesIconHovered,
+  CuriousIcon,
+  CuriousIconHovered,
 };
 
 export default icons;

@@ -54,5 +54,6 @@ export interface PagesProps {
     | 'EcosystemsPage'
     | 'NodesPage'
     | 'NetworkValidatorsPage'
-    | 'ProposalPage';
+    | 'ProposalPage'
+    | 'LibraryPage';
 }

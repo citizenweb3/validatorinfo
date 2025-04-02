@@ -911,6 +911,24 @@
       }
     },
     "ai generated summary": "AI Generated Summary"
+  },
+  "LibraryPage": {
+    "Tabs": {
+      "Library": "Library",
+      "Validators": "Validators",
+      "Developers": "Developers",
+      "Delegators": "Delegators",
+      "Curious": "Curious"
+    },
+    "title": "Library",
+    "description": "Library is here to help you find your path!",
+    "Validators": "Validators",
+    "Developers": "Developers",
+    "Delegators": "Delegators",
+    "Curious": "Curious",
+    "customize": "Customize",
+    "Submit New Info": "Submit New Info",
+    "how to run a node on cosmos": "How to run a node on Cosmos"
   }
 }
 
