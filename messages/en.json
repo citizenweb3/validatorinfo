@@ -686,7 +686,8 @@
   },
   "ValidatorPassportPage": {
     "title": "Validator Node Passport",
-    "pretext in prefix": "on ",
+    "pretext in prefix": "on",
+    "this is my node": "This is my node",
     "commission": "Commission",
     "tokens delegated": "Tokens Delegated",
     "expected APR": "Expected APR",

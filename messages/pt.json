@@ -686,7 +686,8 @@
   },
   "ValidatorPassportPage": {
     "title": "Passaporte da Rede de Validadores",
-    "pretext in prefix": "em ",
+    "pretext in prefix": "em",
+    "this is my node": "Este é o meu nó",
     "commission": "Comissão",
     "tokens delegated": "Tokens Delegados",
     "expected APR": "APR prevista",

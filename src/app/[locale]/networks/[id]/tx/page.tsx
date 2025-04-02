@@ -5,6 +5,7 @@ import chainService from '@/services/chain-service';
 import TotalTxsMetrics from '@/app/networks/[id]/tx/total-txs-metrics';
 import { SortDirection } from '@/server/types';
 import NetworkTxs from '@/app/networks/[id]/tx/txs-table/network-txs';
+import Link from 'next/link';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string };
@@ -34,7 +35,19 @@ const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <div className="mb-24">
-      <PageTitle text={t('title')} prefix={chain?.prettyName ?? 'Network'} />
+      <PageTitle
+        text={t('title')}
+        prefix={
+          <Link href={`/networks/${chainId}/passport`} className="group">
+            <div className="flex flex-row">
+              <span className="group-hover:text-oldPalette-white group-active:text-3xl">
+                {chain?.prettyName}
+              </span>
+              <div className="h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a" />
+            </div>
+          </Link>
+        }
+      />
       <TotalTxsMetrics />
       <NetworkTxs id={id} page={'TotalTxsPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
     </div>

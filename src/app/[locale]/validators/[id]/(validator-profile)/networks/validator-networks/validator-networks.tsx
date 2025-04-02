@@ -46,8 +46,11 @@ const ValidatorNetworks: FC<OwnProps> = async ({ id, perPage, currentPage, ecosy
           <ValidatorNetworksList
             id={id}
             sort={sort}
+            perPage={perPage}
             ecosystems={ecosystems}
-            nodeStatus={nodeStatus} />
+            nodeStatus={nodeStatus}
+            currentPage={currentPage}
+          />
         </table>
       </div>
     </div>

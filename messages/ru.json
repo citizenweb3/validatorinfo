@@ -686,7 +686,8 @@
   },
   "ValidatorPassportPage": {
     "title": "Паспорт Валидатора Сети",
-    "pretext in prefix": "в ",
+    "pretext in prefix": "в",
+    "this is my node": "Это моя нода",
     "commission": "Комиссия",
     "tokens delegated": "Делегировано токенов",
     "expected APR": "Ожидаемый APR",
