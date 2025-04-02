@@ -16,7 +16,7 @@ model Chain {
   docs           String?
   githubUrl      String  @map("github_url")
   githubMainRepo String  @map("github_main_repo")
-  maxValidators  Int?     @map("max_validators")
+  maxValidators  Int?    @map("max_validators")
   hasValidators  Boolean @default(true) @map("has_validators")
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
@@ -29,6 +29,12 @@ model Chain {
   validators Validator[] @relation("chain_validators")
   addresses  Address[]   @relation("chain_addresses")
 
+  // gov
+  proposals       Proposal[] @relation("chain_proposals")
+  proposalsTotal  Int        @default(0) @map("proposals_total")
+  proposalsLive   Int        @default(0) @map("proposals_live")
+  proposalsPassed Int        @default(0) @map("proposals_passed")
+
   // calculated
   totalSupply         String   @default("") @map("total_supply")
   bondedTokens        String   @default("") @map("bonded_tokens")
@@ -38,6 +44,7 @@ model Chain {
   lastUptimeUpdated   DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
   avgTxInterval       Float    @default(0) @map("avg_tx_interval")
   tvl                 Float    @default(0)
+  tvs                 Float    @default(0)
   apr                 Float    @default(0)
   unbondingTime       Int?     @map("unbonding_time")
 

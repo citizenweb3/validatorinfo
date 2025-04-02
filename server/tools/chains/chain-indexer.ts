@@ -1,5 +1,9 @@
 import { NodeResult } from '@/server/types';
 
+import { Prisma } from '.prisma/client';
+
+import ProposalCreateInput = Prisma.ProposalCreateInput;
+
 export type ChainNodeType = 'indexer' | 'lcd' | 'rpc' | 'grpc' | 'ws';
 
 export interface StakingParams {
@@ -36,9 +40,19 @@ export interface AddChainProps {
   hasValidators?: boolean;
 }
 
+export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;
+
+export type ProposalsResult = {
+  proposals: ResultProposalItem[];
+  total: number;
+  live: number;
+  passed: number;
+};
+
 export type GetTvlFunction = (chain: AddChainProps) => Promise<ChainTVLResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
+export type GetProposalsFunction = (chain: AddChainProps) => Promise<ProposalsResult>;
 export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<StakingParams>;
 
 export interface ChainMethods {
@@ -46,4 +60,5 @@ export interface ChainMethods {
   getApr: GetAprFunction;
   getTvl: GetTvlFunction;
   getStakingParams: GetStakingParamsFunction;
+  getProposals: GetProposalsFunction;
 }
