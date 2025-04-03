@@ -425,7 +425,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.png',
     nodes: [
       { type: 'grpc', url: 'grpc.bostrom.cybernode.ai' },
-      { type: 'lcd', url: 'https://lcd.bostrom.cybernode.ai' },
+      { type: 'lcd', url: 'https://lcd.cyber.bronbro.io' },
       { type: 'rpc', url: 'https://rpc.bostrom.cybernode.ai' },
       { type: 'ws', url: 'wss://rpc.bostrom.cybernode.ai/websocket' },
     ],
@@ -472,10 +472,10 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl:
       'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/nillion-chain-testnet/nil.png',
     nodes: [
-      { type: 'grpc', url: 'grpc.nillion-testnet.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.nillion-testnet.citizenweb3.com' },
-      { type: 'rpc', url: 'https://rpc.nillion-testnet.citizenweb3.com' },
-      { type: 'ws', url: 'wss://rpc.nillion-testnet.citizenweb3.com/websocket' },
+      { type: 'grpc', url: 'grpc.nillion.citizenweb3.com' },
+      { type: 'lcd', url: 'https://api.nillion.citizenweb3.com' },
+      { type: 'rpc', url: 'https://rpc.nillion.citizenweb3.com' },
+      { type: 'ws', url: 'wss://rpc.nillion.citizenweb3.com/websocket' },
     ],
     mainRepo: 'https://github.com/NillionNetwork/nilchain',
     docs: '',
