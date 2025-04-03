@@ -73,6 +73,8 @@
     "Learn More": "Learn More"
   },
   "HomePage": {
+    "title": "Web3 Blockchain Validator and Mining Pool Explorer",
+    "sub description": "This page is your one-stop explorer for comparing top validators across multiple blockchain networks. The table provides real-time data on validator and mining pool performance, summarized into easy to read metrics. You can sort and filter based on what matters most to you. The goal is to help you make smart staking choices by providing a clear and user-friendly overview of validator profiles across web3.",
     "Table": {
       "Validator": {
         "name": "Validator",

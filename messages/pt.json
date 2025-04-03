@@ -73,6 +73,8 @@
     "Learn More": "Saber mais"
   },
   "HomePage": {
+    "title": "Validador de Cadeia de Blocos Web3 e Explorador de Pools de Mineração",
+    "sub description": "Esta página é o seu explorador único para comparar os principais validadores em várias redes de blockchain. A tabela fornece dados em tempo real sobre o desempenho do validador e do pool de mineração, resumidos em métricas fáceis de ler. Pode ordenar e filtrar com base no que é mais importante para si. O objetivo é ajudá-lo a fazer escolhas inteligentes de staking, fornecendo uma visão geral clara e fácil de usar dos perfis de validadores na web3.",
     "Table": {
       "Validator": {
         "name": "Validador",
