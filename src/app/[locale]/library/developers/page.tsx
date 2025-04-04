@@ -1,4 +1,4 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
 import LibraryTagsFilter from '@/app/library/library-tags-filter';
 import Letter from '@/app/metrics/letter';
@@ -8,19 +8,19 @@ import PlusButton from '@/components/common/plus-button';
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+interface PageProps {
+  params: NextPageWithLocale;
+  searchParams: { [key: string]: string | string[] | undefined };
+}
 
-interface PageProps {}
-
-const LibraryDevelopersPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+const LibraryDevelopersPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchParams: q }) => {
   const t = await getTranslations({ locale, namespace: 'LibraryPage' });
+  const tags: string[] = !q.tags ? [] : typeof q.tags === 'string' ? [q.tags] : q.tags;
 
   return (
     <div>
-      <PageTitle text={t('Developers')} />
-      <LibraryTagsFilter />
+      <PageTitle text={t('Curious')} />
+      <LibraryTagsFilter selectedTags={tags} />
       <Letters />
       <div className="flex flex-row items-center justify-between">
         <Letter letter="H" />

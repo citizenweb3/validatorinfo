@@ -22,8 +22,7 @@ const ValidatorComparisonPage: NextPageWithLocale = async ({ params: { locale } 
       />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
-      <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>
-      <SubDescription text={t('descriptionExtended')} contentClassName={'m-4'} plusClassName={'my-4'} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-6'} />
       <ComparisonTable />
     </div>
   );

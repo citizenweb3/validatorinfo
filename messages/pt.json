@@ -141,9 +141,10 @@
   },
   "GlobalPosPage": {
     "Metadata": {
-      "title": "Métricas e estatísticas globais da Web3"
+      "title": "Estatísticas Globais da Web3: Explore o Cenário de Multichain"
     },
-    "title": "Métricas e estatísticas globais da Web3",
+    "title": "Estatísticas Globais da Web3: Explore o Cenário de Multichain",
+    "description": "Explore a minha página de Estatísticas Globais de Blockchain para obter uma visão abrangente do panorama da web3, com estatísticas de segurança, descentralização e estado de escalabilidade da web3. Descubra as tendências de dominância de staking, recompensas e capitalização de criptomoedas através de tabelas e gráficos interactivos, e utilize estes conhecimentos para informar as suas decisões de staking e o crescimento do seu portfólio de criptomoedas, tornando-o um recurso valioso para a exploração e análise da web3 que também pode discutir com outras pessoas no Chat P2P.",
     "dominance": "Dominância da Web3 T.V.S",
     "total": "Total T.V.S. VS Pagamento de recompensas globais.",
     "cap": "Total de capitalização de criptomoedas VS Valor total garantido",
@@ -157,10 +158,10 @@
   },
   "CalculatorPage": {
     "Metadata": {
-      "title": "Calculadora de Estacamento"
+      "title": "Calculadora de Recompensas de Estaca e Mineração"
     },
-    "title": "Calculadora de Estacamento",
-    "description": "Minha calculadora de recompensas permite que você calcule a quantidade de recompensas que você pode ganhar, ao longo de um período de tempo especificado, de apostar em um validador em uma rede de prova de aposta, ou - as recompensas que você pode obter ao ingressar em um pool de mineração em uma rede de prova de trabalho.\n\nMinha calculadora de recompensas é única e diferente das outras. Além de APR, APY e comissões, meu cálculo inclui parâmetros como: eventos de corte, tempo de prisão, receita adicional do provedor e assim por diante. Se você quiser saber mais, leia a descrição completa aqui.\n\nMinhas ferramentas são experimentais, então, use-as por sua conta e risco. Se você gosta do que vê, compartilhe com o resto do mundo.",
+    "title": "Calculadora de Recompensas de Estaca e Mineração",
+    "description": "Я создал этот инструмент, чтобы помочь вам оценить потенциальное вознаграждение за ставки для токенов proof of stake (PoS) и proof of work (PoW). Просто выберите сеть блокчейна, выберите валидатор и введите сумму ставки, чтобы увидеть предполагаемое ежедневное, еженедельное, ежемесячное или ежегодное вознаграждение. Мой калькулятор вознаграждений уникален и отличается от других. Помимо APR, APY и комиссий, в мои расчеты включены такие параметры, как: слэшеры, тюремное заключение, дополнительный доход провайдера и так далее.",
     "Choose a Network": "Escolha uma rede",
     "Choose a Validator": "Escolha um validador",
     "Please select": "Por favor selecione validador e cadeia!",
@@ -389,8 +390,8 @@
     }
   },
   "RumorsPage": {
-    "title": "Bate-papo P2P: Espalhe os rumores",
-    "description": "Anon, como vai? Escolha um nome de usuário e \"comece a espalhar a notícia, estou saindo hoje...\".\n\nDesculpe Anon, problemas de IA. Onde estávamos? Ah sim, escolha um nome de usuário e comece a espalhar boatos. Simples assim. Não há histórico de bate-papo nem identidades. Traga de volta os velhos tempos!",
+    "title": "Chat P2P: Conecte-se com Stakers e Mineradores Web3",
+    "description": "Junte-se ao nosso chat P2P anon, um centro seguro e fácil de usar para os entusiastas da web3 discutirem redes de blockchain, pools de mineração e rumores de validadores. Ligue-se a outros delegados e mineiros, partilhe ideias sobre estratégias de staking e educação sobre criptomoedas, ou simplesmente - converse. É o seu ponto de referência para recursos de staking e mineração, onde você pode perguntar \"com quem apostar\" e obter respostas de pessoas que já passaram por isso",
     "Start": "Começar",
     "noNameError": "Por favor, digite o nome de usuário para começar"
   },
@@ -419,10 +420,10 @@
   },
   "ComparisonPage": {
     "Metadata": {
-      "title": "Comparar validadores"
+      "title": "Comparar Validadores de Blockchain e Pools de Mineração"
     },
-    "title": "Comparar validadores",
-    "description": "Criei uma ferramenta de comparação para aqueles que decidiram experimentar staking ou mineração. Ela ajudará você a encontrar o operador mais eficiente para seu capital estacionado. Digamos que você tenha 0,1 ou 100 ETH, ou talvez 0,1 ou 1 BTC. Use a comparação para ver qual provedor mostra melhores métricas ao longo do tempo e, em seguida, use a opção Calcular para ver o retorno ao longo do tempo.",
+    "title": "Comparar Validadores de Blockchain e Pools de Mineração",
+    "description": "Criei a ferramenta Comparar validadores para o ajudar a decidir com quem apostar. Permite-lhe comparar vários validadores lado a lado, com métricas como recompensas de apostas, desempenho e estado de saúde. Escolha os seus validadores e eu crio uma tabela de comparação com os principais detalhes, incluindo imagens para realçar os destaques. Isto ajuda-o a tomar uma decisão informada e a descobrir qual o fornecedor que apresenta melhores métricas ao longo do tempo. As minhas ferramentas fornecem uma imagem em tempo real. A comparação entre o prestador A e B pode apresentar resultados diferentes, quando efectuada em momentos diferentes, dependendo do estado de saúde dos próprios prestadores num determinado momento.",
     "descriptionExtended": "Lembre-se de uma coisa anon. Minhas ferramentas fornecem uma imagem em tempo real. A comparação do provedor A vs B pode mostrar resultados diferentes, quando realizada em momentos diferentes, dependendo do estado de saúde dos próprios provedores em um determinado momento.\n\nMinhas ferramentas são experimentais, então, use-as por sua conta e risco. Se você gosta do que vê, compartilhe com o resto do mundo.",
     "Share result": "Compartilhar resultado",
     "Show Charts": "Mostrar Gráficos",

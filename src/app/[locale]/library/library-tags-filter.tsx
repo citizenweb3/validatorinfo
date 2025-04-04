@@ -1,26 +1,26 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
+
 import Button from '@/components/common/button';
 import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
+  selectedTags: string[];
 }
 
-const tags = [
+const tagsFilters = [
   { value: 'tag1', title: 'Tag1' },
   { value: 'tag2', title: 'Tag2' },
   { value: 'tag3', title: 'Tag3' },
 ];
 
-const LibraryTagsFilter: FC<OwnProps> = ({}) => {
+const LibraryTagsFilter: FC<OwnProps> = ({ selectedTags }) => {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParamsHook = useSearchParams();
   const t = useTranslations('HomePage.Table');
-  const selectedTagsFromUrl = searchParamsHook.getAll('tags');
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [resetClicks, setResetClicks] = useState<number>(0);
 
@@ -44,19 +44,17 @@ const LibraryTagsFilter: FC<OwnProps> = ({}) => {
   };
 
   const onTagsChanged = (value: string) => {
-    const searchParams = new URLSearchParams(location.search);
-    const currentTags = searchParams.getAll('tags');
-    const newTags = currentTags.includes(value)
-      ? currentTags.filter((tag) => tag !== value)
-      : [...currentTags, value];
-    searchParams.delete('tags');
-    newTags.forEach((tag) => searchParams.append('tags', tag));
-    router.push(`${pathname}?${searchParams.toString()}`);
+    const newSp = new URL(location.href).searchParams;
+    newSp.delete('tags');
+    const tagsParam =
+      selectedTags.indexOf(value) === -1 ? [...selectedTags, value] : selectedTags.filter((c) => c !== value);
+    tagsParam.forEach((c) => newSp.append('tags', c));
+    router.push(`${pathname}?${newSp.toString()}`);
   };
 
   return (
-    <div className="flex h-6 mt-5 items-center justify-start">
-      <div className="flex flex-row items-center mr-1">
+    <div className="mt-5 flex h-6 items-center justify-start">
+      <div className="mr-1 flex flex-row items-center">
         <Button
           activeType="switcher"
           onClick={onCustomiseClick}
@@ -71,17 +69,17 @@ const LibraryTagsFilter: FC<OwnProps> = ({}) => {
       </div>
       {isOpened && (
         <>
-          {tags.map((item) => (
+          {tagsFilters.map((item) => (
             <Button
               key={item.value}
               component="button"
               onClick={() => onTagsChanged(item.value)}
-              isActive={selectedTagsFromUrl.indexOf(item.value) !== -1}
-              className="text-base mx-2"
+              isActive={selectedTags.indexOf(item.value) !== -1}
+              className="mx-2 text-base"
               contentClassName=""
               activeType="switcher"
             >
-              <div className="-my-1 px-10 flex flex-row items-center justify-center text-base font-medium">
+              <div className="-my-1 flex flex-row items-center justify-center px-10 text-base font-medium">
                 {item.title}
               </div>
             </Button>

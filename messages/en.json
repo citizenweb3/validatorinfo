@@ -141,9 +141,10 @@
   },
   "GlobalPosPage": {
     "Metadata": {
-      "title": "Web3 Global Metrics and Statistics"
+      "title": "Global Web3 Statistics: Explore the Multichain Landscape"
     },
-    "title": "Web3 Global Metrics and Statistics",
+    "title": "Global Web3 Statistics: Explore the Multichain Landscape",
+    "description": "Explore my Global Blockchain Statistics page for a comprehensive overview of the web3 landscape, featuring stats of web3 security, decentralization and scalability status. Discover trends in staking dominance, rewards and crypto capitalization through interactive charts and graphs, and use these insights to inform your staking decisions and crypto portfolio growth, making it a valuable resource for web3 exploration and analytics that you can also discuss with others in the P2P Chat.",
     "dominance": "Web3 T.V.S Dominance",
     "total": "Total T.V.S. and Rewards Payout",
     "cap": "Crypto Capitalization and Value Secured",
@@ -157,10 +158,10 @@
   },
   "CalculatorPage": {
     "Metadata": {
-      "title": "Reward Calculator"
+      "title": "Staking and Mining Rewards Calculator"
     },
-    "title": "Reward Calculator",
-    "description": "My reward calculator allows you to calculate the amount of rewards you may earn, over a specified period of time, from staking to a validator on a proof of stake network, or - the rewards you may get from joining a mining pool on a proof of work network.\n\nMy reward calculator is unique and different from others. Apart from APR, APY and commissions, my calculation include such parameters as: slashing events, jail time, additional provider revenue, and so on. If you would like to learn more, please read on the full description here.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
+    "title": "Staking and Mining Rewards Calculator",
+    "description": "I've created a Reward Calculator Tool to help you estimate your potential staking rewards for proof of stake (PoS) and proof of work (PoW) tokens. Simply pick a blockchain network, select a validator, and enter your stake amount to see your estimated daily, weekly, monthly, or yearly rewards. My reward calculator is unique and different from others. Apart from APR, APY and commissions, my calculation include such parameters as: slashing events, jail time, additional provider revenue, and so on.",
     "Choose a Network": "Choose a Network",
     "Choose a Validator": "Choose a Validator",
     "Please select": "Please select validator and chain!",
@@ -389,8 +390,8 @@
     }
   },
   "RumorsPage": {
-    "title": "P2P Chat: Spread the Rumors",
-    "description": "Anon, how are ya? Pick yaself a username and \"start spreading the news, I'm leaving today...\". \n\nSorry Anon, AI issues. Where were we? Ah yes, Pick a username and start rumoring. As simple as that.  There is no chat history and no identities. Bring back the old days!",
+    "title": "P2P Chat: Connect with Web3 Stakers and Miners",
+    "description": "Join our anon P2P Chat, a secure and easy-to-use hub for web3 enthusiasts to discuss blockchain networks, mining pools, and validator rumors. Connect with other delegators and miners, share insights on staking strategies and crypto education, or simply - chat. It’s your go-to for staking and mining resources, where you can ask \"who to stake with\" and get answers from people who’ve been there.",
     "Start": "Start",
     "noNameError": "Please enter username to start"
   },
@@ -419,10 +420,10 @@
   },
   "ComparisonPage": {
     "Metadata": {
-      "title": "Compare Validators"
+      "title": "Compare Blockchain Validators and Mining Pools"
     },
-    "title": "Compare Validators",
-    "description": "I have build a comparison tool for those that decided to try out staking or mining. It will help you to find the most efficient operator for your parked capital. Lets say you have 0.1 or 100 ETH, or maybe 0.1 or 1 BTC. Use the comparison, to see which provider shows better metrics over time, then use the Calculate option to see the return over time.",
+    "title": "Compare Blockchain Validators and Mining Pools",
+    "description": "I built the Compare Validators Tool to help you decide who to stake with. It lets you compare multiple validators side-by-side, with metrics like staking rewards, performance, and health status. Choose your validators and I'll create a comparison table with key details, including visuals to highlight standouts. This helps you make an informed decision and find which provider shows better metrics over time. My tools provide a picture in real time. The comparison of provider A vs B, might show different results, when performed over or at different times, depending on the health status of the providers themselves in a given moment.",
     "descriptionExtended": "Do remember one thing anon. My tools provide a picture in real time. The comparison of provider A vs B, might show different results, when performed over or at different times, depending on the health status of the providers themselves in a given moment.\n\nMy tools are experimental, so please use me at your own risk. If you like what you see, please share it with the rest of the world.",
     "Share result": "Share result",
     "Show Charts": "Show Charts",
