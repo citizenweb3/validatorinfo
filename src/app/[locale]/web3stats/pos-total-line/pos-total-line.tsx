@@ -1,46 +1,44 @@
 import * as d3 from 'd3';
 import { useEffect, useRef, useState, useMemo } from 'react';
-import { generateDataForTotalLine, formatNumber } from './generateDataForTotalLine';
+import { generateDataForTotalLine} from './generateDataForTotalLine';
+import { formatNumber } from '../chartUtils/chartHelper';
 import { FC } from 'react';
+import { ChartConfig,setupChartArea, setupYScale, setupXScale, drawYAxis,drawXAxis,handleTooltip, drawLine } from '../chartUtils/lineChartUtils';
 import {
-  drawLine,
-  handleTooltip,
   drawLegend,
-  setupChartArea,
-  setupXScale,
-  setupYScale,
-  drawXAxis,
-  drawYAxis,
   handleWheel,
-  ChartConfig,
   TooltipConfig,
   DataPoint,
-} from '../chartUtils';
+} from '../chartUtils/barChartUtils';
 
 interface ChartWidgetProps {
   chartType: string;
 }
 
-const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
+const PosTotalTVSAndRewardsPayout: FC<ChartWidgetProps> = ({ chartType }) => {
   const [datasets, setDatasets] = useState<{ tvs: DataPoint[]; rewards: DataPoint[] }>({ tvs: [], rewards: [] });
   const chartRef = useRef<HTMLDivElement>(null);
-  const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
+  const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2020-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
 
-  // Define chartConfig with dynamic width using useMemo to optimize performance
+  // Chart configuration with dynamic width
   const chartConfig: ChartConfig = useMemo(
     () => ({
       width,
-      height: 300,
-      margin: { top: 5, right: 70, bottom: 40, left: 70 }, // Increased right margin
-      leftOffset: 30,
-      rightOffset: 30,
+      height: 400,
+      margin: { top: 30, right: 0, bottom: 50, left: 0 }, // Adjusted top margin for Y-axis labels
+      padding: { left: 60, right: 0, top: 50, bottom: 50 }, // Adjusted padding inside chart area
+      gapLeft: 60, // Maintain the original gap between y-axis and lines
+      gapRight: 120,
+      leftOffset: 0,
+      rightOffset: 0,
       xScalePadding: 60,
-      legendOffset: 20,
+      legendOffset: 10, // Reduced legend offset
     }),
     [width]
   );
 
+  // Tooltip configuration
   const tooltipConfig: TooltipConfig = {
     width: 180,
     rowHeight: 22,
@@ -50,10 +48,10 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     xOffset: 10,
     yOffset: 20,
     boundaryPadding: 10,
-    rightBoundaryOffset: 100,
+    rightBoundaryOffset: 165,
   };
 
-  // Fetch data for the specified date range
+  // Fetch data based on date range
   const fetchDataForRange = (startDate: Date, endDate: Date) => {
     setTimeout(() => {
       const newDatasets = generateDataForTotalLine(startDate, endDate, chartType);
@@ -61,24 +59,39 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     }, 1);
   };
 
-  // Draw the chart with the current width
+  // Function to draw the chart
   const drawChart = () => {
-    const { svg, chartArea } = setupChartArea(chartRef, chartConfig);
+    const { svg, plotArea} = setupChartArea(chartRef, chartConfig);
 
-    const xScale = setupXScale(xDomain, chartConfig);
-    const yScale = setupYScale([0, 2 * 10 ** 11], chartConfig);
+    const { padding, gapLeft, margin, gapRight } = chartConfig;
+    const chartWidth = chartConfig.width - margin.left - margin.right;
+    const chartHeight = chartConfig.height - margin.top - margin.bottom;
 
-    drawXAxis(svg, xScale, chartConfig, chartType);
-    drawYAxis(svg, yScale, chartConfig, (d) => formatNumber(d));
+    const plotLeft = padding.left + gapLeft;
+    const plotRight = chartWidth - gapRight;
+    const plotWidth = chartConfig.width - chartConfig.padding.left - chartConfig.padding.right -100;
+    const plotHeight = chartConfig.height - chartConfig.padding.top - chartConfig.padding.bottom ;
+    
+    // setup scales
+    const xScale = setupXScale(xDomain, plotWidth);
+    const yScale = setupYScale([0, 2 * 10 ** 11], chartHeight, 'linear');
+    
+    // draw y-axis
+    drawYAxis(svg, yScale, padding.left,padding.bottom, (d) => formatNumber(d, 2));
 
+    // X-axis 
+    drawXAxis(plotArea, xScale, plotHeight, chartConfig, chartType);
+
+    // draw lines
     const lineGenerator = d3.line<DataPoint>().x((d) => xScale(d.date)).y((d) => yScale(d.value));
-    drawLine(chartArea, datasets.tvs, '#4FB848', lineGenerator, 0);
-    drawLine(chartArea, datasets.rewards, '#E5C46B', lineGenerator, 0);
+    
+    drawLine(plotArea, datasets.tvs,chartType, '#4FB848', lineGenerator);
+    drawLine(plotArea, datasets.rewards,chartType, '#E5C46B', lineGenerator);
 
     drawLegend(
       svg,
       [
-        { label: 'T.VS.', color: '#4FB848' },
+        { label: 'T.V.S.', color: '#4FB848' },
         { label: 'Rewards', color: '#E5C46B' },
       ],
       chartConfig,
@@ -87,14 +100,19 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
 
     handleTooltip(
       svg,
-      chartArea,
-      { tvs: datasets.tvs, rewards: datasets.rewards },
+      plotArea,
+      { 'T.V.S': datasets.tvs, "Rewards": datasets.rewards },
       xScale,
       yScale,
       chartConfig,
       tooltipConfig,
       (value) => formatNumber(value),
-      { tvs: '#4FB848', rewards: '#E5C46B' }
+      { 'T.V.S': '#4FB848', 'Rewards': '#E5C46B' },
+      plotLeft,
+      plotRight,
+      chartWidth,
+      chartHeight,
+      chartType
     );
 
     svg.on('wheel', (event) =>
@@ -102,7 +120,7 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     );
   };
 
-  // Set up responsiveness by tracking container width
+  // Handle responsiveness by tracking container width
   useEffect(() => {
     const handleResize = () => {
       if (chartRef.current) {
@@ -115,7 +133,7 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Set the xDomain based on chartType
+  // Set xDomain and fetch data based on chartType
   useEffect(() => {
     const now = new Date();
     let startDate: Date;
@@ -127,7 +145,7 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
         break;
       case 'Weekly':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 12 * 7); // Last 25 weeks (175 days)
+        startDate.setDate(now.getDate() - 15 * 7); // Last 12 weeks (84 days)
         break;
       case 'Monthly':
         startDate = new Date(now);
@@ -135,14 +153,14 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
         break;
       case 'Yearly':
         startDate = new Date(now);
-        startDate.setFullYear(now.getFullYear() - 5); // Last 5 years
+        startDate.setFullYear(now.getFullYear() - 12); // Last 5 years
         break;
       default:
-        startDate = new Date('2010-01-01');
+        startDate = new Date('2020-01-01');
     }
 
-    const endDate = now;
-    setXDomain([startDate, new Date(endDate.setDate(endDate.getDate() +0))]);
+    const endDate = new Date(now);
+    setXDomain([startDate, endDate]);
     fetchDataForRange(startDate, endDate);
   }, [chartType]);
 
@@ -153,7 +171,12 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     }
   }, [datasets, xDomain, width]);
 
-  return <div ref={chartRef} style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: '#1E1E1E' }} />;
+  return (
+    <div
+      ref={chartRef}
+      style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: '#1E1E1E' }}
+    />
+  );
 };
 
-export default PosTotalChartWidget;
+export default PosTotalTVSAndRewardsPayout;

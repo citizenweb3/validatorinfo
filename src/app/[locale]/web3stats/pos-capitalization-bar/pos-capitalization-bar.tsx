@@ -1,46 +1,38 @@
 import * as d3 from 'd3';
 import { useEffect, useRef, useState, useMemo } from 'react';
-import { generateDataForBarChart, formatNumber } from './generateDataForTotalBar';
+import { generateDataForTotalLine} from './generateDataForTotalBar';
+import { formatNumber } from '../chartUtils/chartHelper';
 import { FC } from 'react';
-import {
-  handleBarTooltip,
-  drawLegend,
-  setupChartArea,
-  setupXScale,
-  setupYScale,
-  drawXAxis,
-  drawYAxis,
-  handleWheel,
-  ChartConfig,
-  TooltipConfig,
-  DataPoint,
-  drawBars,
-} from '../chartUtils';
+import { ChartConfig,TooltipConfig,DataPoint,setupChartArea, setupYScale, setupXScale, drawYAxis,drawXAxis,drawLegend, drawBars, handleBarTooltip,handleWheel } from '../chartUtils//barChartUtils';
 
 interface ChartWidgetProps {
   chartType: string;
 }
 
-const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
-  const [datasets, setDatasets] = useState<{ cryptoCapitalization: DataPoint[]; valueSecured: DataPoint[] }>({ cryptoCapitalization: [], valueSecured: [] });
+const PosCryptoCapitalizationAndValueSecured: FC<ChartWidgetProps> = ({ chartType }) => {
+  const [datasets, setDatasets] = useState<{ tvs: DataPoint[]; rewards: DataPoint[] }>({ tvs: [], rewards: [] });
   const chartRef = useRef<HTMLDivElement>(null);
-  const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
+  const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2020-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
 
-  // Define chartConfig with dynamic width using useMemo to optimize performance
+  // Chart configuration with dynamic width
   const chartConfig: ChartConfig = useMemo(
     () => ({
       width,
-      height: 300,
-      margin: { top: 5, right: 70, bottom: 40, left: 70 }, // Increased right margin
-      leftOffset: 30,
-      rightOffset: 30,
+      height: 400,
+      margin: { top: 30, right: 0, bottom: 50, left: 0 }, // Adjusted top margin for Y-axis labels
+      padding: { left: 60, right: 0, top: 50, bottom: 50 }, // Adjusted padding inside chart area
+      gapLeft: 60, // Maintain the original gap between y-axis and lines
+      gapRight: 100,
+      leftOffset: 0,
+      rightOffset: 0,
       xScalePadding: 60,
-      legendOffset: 20,
+      legendOffset: 10, // Reduced legend offset
     }),
     [width]
   );
 
+  // Tooltip configuration
   const tooltipConfig: TooltipConfig = {
     width: 280,
     rowHeight: 22,
@@ -50,39 +42,47 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     xOffset: 10,
     yOffset: 20,
     boundaryPadding: 10,
-    rightBoundaryOffset: 100,
+    rightBoundaryOffset: 165,
   };
 
-  // Fetch data for the specified date range
+  // Fetch data based on date range
   const fetchDataForRange = (startDate: Date, endDate: Date) => {
     setTimeout(() => {
-      const newDatasets = generateDataForBarChart(startDate, endDate, chartType);
-      setDatasets({ cryptoCapitalization: newDatasets.cryptpCapitlization, valueSecured: newDatasets.valueSecured });
+      const newDatasets = generateDataForTotalLine(startDate, endDate, chartType);
+      setDatasets(newDatasets);
     }, 1);
   };
 
-  // Draw the chart with the current width
+  // Function to draw the chart
   const drawChart = () => {
     const { svg, chartArea } = setupChartArea(chartRef, chartConfig);
 
-    const xScale = setupXScale(xDomain, chartConfig);
-    const yScale = setupYScale([0, 2 * 10 ** 11], chartConfig);
+    const { padding, gapLeft, margin, gapRight } = chartConfig;
+    const chartWidth = chartConfig.width - margin.left - margin.right;
+    const chartHeight = chartConfig.height - margin.top - margin.bottom;
 
+    const plotLeft = padding.left + gapLeft;
+    const plotRight = chartWidth - gapRight;
+    
+    // setup scales
+    const xScale = setupXScale(xDomain, plotLeft, plotRight);
+    const yScale = setupYScale([0, 2 * 10 ** 11], chartHeight, 'linear');
+    
+    // draw y-axis
+    drawYAxis(svg, yScale, padding.left,padding.bottom, (d) => formatNumber(d, 2));
+
+    // X-axis 
     drawXAxis(svg, xScale, chartConfig, chartType);
-    drawYAxis(svg, yScale, chartConfig, (d) => formatNumber(d));
 
-    const totalBars = datasets.cryptoCapitalization.length + datasets.valueSecured.length;
-    const availableWidth = chartConfig.width - chartConfig.margin.left - chartConfig.margin.right - chartConfig.leftOffset - chartConfig.rightOffset;
-    const barWidth = availableWidth / totalBars;
-
-
-    drawBars(chartArea, datasets.cryptoCapitalization, '#4FB848', xScale, yScale, barWidth, 'left');
-    drawBars(chartArea, datasets.valueSecured, '#E5C46B', xScale, yScale, barWidth, 'right');
+    // draw Bars
+    
+    drawBars(chartArea, datasets.tvs, '#4FB848', xScale, yScale, 30, 'left',chartConfig.padding.left, chartConfig.padding.bottom);
+    drawBars(chartArea, datasets.rewards, '#E5C46B', xScale, yScale, 30, 'right',chartConfig.padding.left, chartConfig.padding.bottom);
 
     drawLegend(
       svg,
       [
-        { label: 'Crypto Capitalization.', color: '#4FB848' },
+        { label: 'Total Crypto Capitalization', color: '#4FB848' },
         { label: 'Value Secured', color: '#E5C46B' },
       ],
       chartConfig,
@@ -92,14 +92,14 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     handleBarTooltip(
       svg,
       chartArea,
-      { 'Total Crypto Capitalization': datasets.cryptoCapitalization, 'Value Secured': datasets.valueSecured },
+      { 'Crypto Capitalization': datasets.tvs, 'Value Secured': datasets.rewards },
       xScale,
       yScale,
       chartConfig,
       tooltipConfig,
       (value) => formatNumber(value),
-      { 'Total Crypto Capitalization': '#4FB848', 'Value Secured': '#E5C46B' },
-      barWidth
+      { 'Crypto Capitalization': '#4FB848', 'Value Secured': '#E5C46B' },
+      chartType,
     );
 
     svg.on('wheel', (event) =>
@@ -107,7 +107,7 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     );
   };
 
-  // Set up responsiveness by tracking container width
+  // Handle responsiveness by tracking container width
   useEffect(() => {
     const handleResize = () => {
       if (chartRef.current) {
@@ -120,45 +120,55 @@ const PosTotalChartWidget: FC<ChartWidgetProps> = ({ chartType }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Set the xDomain based on chartType
+  // Set xDomain and fetch data based on chartType
   useEffect(() => {
     const now = new Date();
     let startDate: Date;
-
+    let endDate: Date;
+  
     switch (chartType) {
       case 'Daily':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 30); // Last 65 days
+        startDate.setDate(now.getDate() - 30);
+        endDate = d3.timeDay.floor(now); // Last completed day
         break;
       case 'Weekly':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 12 * 7); // Last 25 weeks (175 days)
+        startDate.setDate(now.getDate() - 12 * 7);
+        endDate = d3.timeWeek.floor(now); // Last completed week
         break;
       case 'Monthly':
         startDate = new Date(now);
-        startDate.setMonth(now.getMonth() - 12); // Last 12 months
+        startDate.setMonth(now.getMonth() - 12);
+        endDate = d3.timeMonth.floor(now); // Last completed month
         break;
       case 'Yearly':
         startDate = new Date(now);
-        startDate.setFullYear(now.getFullYear() - 5); // Last 5 years
+        startDate.setFullYear(now.getFullYear() - 5);
+        endDate = d3.timeYear.floor(now); // Last completed year
         break;
       default:
-        startDate = new Date('2010-01-01');
+        startDate = new Date('2020-01-01');
+        endDate = new Date(now);
     }
-
-    const endDate = now;
-    setXDomain([startDate, new Date(endDate.setDate(endDate.getDate() +0))]);
+  
+    setXDomain([startDate, endDate]);
     fetchDataForRange(startDate, endDate);
   }, [chartType]);
 
   // Redraw chart when datasets, xDomain, or width changes
   useEffect(() => {
-    if (datasets.cryptoCapitalization.length > 0 && datasets.valueSecured.length > 0 && width > 0) {
+    if (datasets.tvs.length > 0 && datasets.rewards.length > 0 && width > 0) {
       drawChart();
     }
   }, [datasets, xDomain, width]);
 
-  return <div ref={chartRef} style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: '#1E1E1E' }} />;
+  return (
+    <div
+      ref={chartRef}
+      style={{ position: 'relative', width: '100%', height: '100%', backgroundColor: '#1E1E1E' }}
+    />
+  );
 };
 
-export default PosTotalChartWidget;
+export default PosCryptoCapitalizationAndValueSecured;

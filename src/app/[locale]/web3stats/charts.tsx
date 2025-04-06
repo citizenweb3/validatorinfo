@@ -2,7 +2,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import PosDominanceLine from '@/app/web3stats/pos-dominance-line/pos-dominance-line';
 import SubTitle from '@/components/common/sub-title';
-import PosTotalChartWidget from '@/app/web3stats/pos-total-line/pos-total-line';
+import PosTotalTVSAndRewardsPayout from '@/app/web3stats/pos-total-line/pos-total-line';
 import PosCapitalizationBarChartWidget from '@/app/web3stats/pos-capitalization-bar/pos-capitalization-bar';
 
 interface Web3statsChartsProps {
@@ -29,7 +29,7 @@ const Web3statsCharts: FC<Web3statsChartsProps> = ({ translations }) => {
       </div>
       <div className="flex flex-col w-full p-4 bg-gray-900">
       <div className="flex justify-center mb-4">  
-      <PosTotalChartWidget 
+      <PosTotalTVSAndRewardsPayout
         chartType={chartType} 
       />
       </div>

@@ -1,9 +1,11 @@
 import * as d3 from 'd3';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { generateDataForDominanceLine } from './generateDataForDominanceLine';
 import { FC } from 'react';
 import { ECOSYSTEMS_CONFIG } from '../ecosystemConfig';
-import { drawLine, handleTooltip, drawLegend, ChartConfig, TooltipConfig, DataPoint, handleWheel, drawXAxis, drawYAxis } from '../chartUtils';
+import { ChartConfig, setupChartArea, setupYScale, setupXScale, drawYAxis, drawXAxis, handleTooltip, drawLine } from '../chartUtils/lineChartUtils';
+import { drawLegend, handleWheel, TooltipConfig, DataPoint } from '../chartUtils/barChartUtils';
+import { formatNumber } from '../chartUtils/chartHelper';
 
 interface ChartWidgetProps {
   chartType: string;
@@ -16,16 +18,24 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
   const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
 
-  const chartConfig: ChartConfig = {
-    width,
-    height: 300,
-    margin: { top: 5, right: 70, bottom: 40, left: 70 },
-    leftOffset: 30,
-    rightOffset: 30,
-    xScalePadding: 60,
-    legendOffset: 20,
-  };
+  // Chart configuration with dynamic width
+  const chartConfig: ChartConfig = useMemo(
+    () => ({
+      width,
+      height: 400,
+      margin: { top: 30, right: 0, bottom: 50, left: 0 },
+      padding: { left: 60, right: 0, top: 50, bottom: 50 },
+      gapLeft: 60,
+      gapRight: 120,
+      leftOffset: 0,
+      rightOffset: 0,
+      xScalePadding: 60,
+      legendOffset: 10,
+    }),
+    [width]
+  );
 
+  // Tooltip configuration
   const tooltipConfig: TooltipConfig = {
     width: 180,
     rowHeight: 22,
@@ -35,90 +45,81 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
     xOffset: 10,
     yOffset: 20,
     boundaryPadding: 10,
-    rightBoundaryOffset: 100,
+    rightBoundaryOffset: 165,
   };
-
-  const xScale = d3.scaleUtc().domain(xDomain).range([chartConfig.margin.left, chartConfig.width - chartConfig.margin.right + chartConfig.xScalePadding]);
-  const yScale = d3.scaleLinear().domain([0, 100]).range([chartConfig.height - chartConfig.margin.bottom, chartConfig.margin.top]);
 
   const drawChart = () => {
     if (!chartRef.current) return;
-  
-    // Clear any previous SVG (in case of re-rendering)
+
+    // Clear any previous SVG
     d3.select(chartRef.current).select('svg').remove();
-  
-    // Create the new SVG and chart area
-    const svg = d3.select(chartRef.current)
-      .append('svg')
-      .attr('width', chartConfig.width)
-      .attr('height', chartConfig.height + 20);
-  
-    const chartArea = svg.append('g')
-      .attr('clip-path', 'url(#chart-clip)')
-      .attr('transform', `translate(${chartConfig.leftOffset}, 0)`);
-  
-    // Add clipping path
-    svg.append('defs')
-      .append('clipPath')
-      .attr('id', 'chart-clip')
-      .append('rect')
-      .attr('x', chartConfig.margin.left)
-      .attr('y', chartConfig.margin.top)
-      .attr('width', chartConfig.width - chartConfig.margin.left - chartConfig.margin.right - chartConfig.leftOffset - chartConfig.rightOffset + 35)
-      .attr('height', chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom);
-  
-    // Set scales for the axes
-    const xScale = d3.scaleUtc().domain(xDomain).range([chartConfig.margin.left, chartConfig.width - chartConfig.margin.right + chartConfig.xScalePadding]);
-    const yScale = d3.scaleLinear().domain([0, 100]).range([chartConfig.height - chartConfig.margin.bottom, chartConfig.margin.top]);
-  
-    // Draw the x-axis
-    drawXAxis(svg, xScale, chartConfig, chartType);
-  
-    // Draw the y-axis
-    drawYAxis(svg, yScale, chartConfig, (d) => `${Number(d).toFixed(2)}%`, 5);
-  
-    // Draw lines and legends for ecosystems (same logic as before)
-    const lineGenerator = d3.line<DataPoint>().x(d => xScale(d.date)).y(d => yScale(d.value));
-  
+
+    const { svg, plotArea } = setupChartArea(chartRef, chartConfig);
+
+    const { padding, gapLeft, margin, gapRight } = chartConfig;
+    const chartWidth = chartConfig.width - margin.left - margin.right;
+    const chartHeight = chartConfig.height - margin.top - margin.bottom;
+
+    const plotLeft = padding.left + gapLeft;
+    const plotRight = chartWidth - gapRight;
+    const plotWidth = chartConfig.width - chartConfig.padding.left - chartConfig.padding.right - 100;
+    const plotHeight = chartConfig.height - chartConfig.padding.top - chartConfig.padding.bottom;
+
+    // Setup scales
+    const xScale = setupXScale(xDomain, plotWidth);
+    const yScale = setupYScale([0, 100], chartHeight, 'linear');
+
+    // Draw axes
+    drawYAxis(svg, yScale, padding.left, padding.bottom, (d) => `${Number(d).toFixed(2)}%`);
+    drawXAxis(plotArea, xScale, plotHeight, chartConfig, chartType);
+
+    // Draw lines
+    const lineGenerator = d3.line<DataPoint>().x((d) => xScale(d.date)).y((d) => yScale(d.value));
     const colors = ecosystems.reduce((acc, eco) => {
       acc[eco] = (ECOSYSTEMS_CONFIG as any)[eco]?.color || 'gray';
       return acc;
     }, {} as { [key: string]: string });
-  
+
     ecosystems.forEach((ecosystem) => {
-      if (datasets[ecosystem]) drawLine(chartArea, datasets[ecosystem], colors[ecosystem], lineGenerator);
+      if (datasets[ecosystem]) {
+        drawLine(plotArea, datasets[ecosystem], chartType, colors[ecosystem], lineGenerator);
+      }
     });
-  
+
+    // Dynamic legend items based on ecosystems
     const legendItems = ecosystems.map(ecosystem => ({
       label: ecosystem,
       color: colors[ecosystem]
     }));
-  
+
     drawLegend(svg, legendItems, chartConfig, tooltipConfig);
-  
-    handleTooltip(svg, chartArea, datasets, xScale, yScale, chartConfig, tooltipConfig,
-      (value) => `${value.toFixed(2)}%`,
-      colors
+
+    // Tooltip with ecosystem datasets and colors
+    handleTooltip(
+      svg,
+      plotArea,
+      datasets, // Pass all ecosystem datasets
+      xScale,
+      yScale,
+      chartConfig,
+      tooltipConfig,
+      (value, name) => formatNumber(value), // Include name parameter for flexibility
+      colors, // Pass ecosystem colors
+      plotLeft,
+      plotRight,
+      chartWidth,
+      chartHeight,
+      chartType
     );
-  
-    svg.on('wheel', (event) => handleWheel(
-      event,
-      xDomain,
-      setXDomain,
-      fetchDataForRange,
-      new Date('2010-01-01'),
-      new Date(),
-      1 // zoomStep
-    ));
+
+    svg.on('wheel', (event) =>
+      handleWheel(event, xDomain, setXDomain, fetchDataForRange, new Date('2010-01-01'), new Date())
+    );
   };
-  
 
   const fetchDataForRange = (startDate: Date, endDate: Date) => {
     setTimeout(() => {
-      const newDatasets: { [key: string]: DataPoint[] } = {};
-      ecosystems.forEach((ecosystem) => {
-        newDatasets[ecosystem] = generateDataForDominanceLine(startDate, endDate, chartType);
-      });
+      const newDatasets = generateDataForDominanceLine(startDate, endDate, chartType, ecosystems);
       setDatasets(newDatasets);
     }, 1);
   };
@@ -130,7 +131,7 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
       }
     };
 
-    handleResize(); // Set initial width
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -142,19 +143,19 @@ const TotalDominanceChart: FC<ChartWidgetProps> = ({ chartType, ecosystems }) =>
     switch (chartType) {
       case 'Daily':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 65); // Last 65 days
+        startDate.setDate(now.getDate() - 65);
         break;
       case 'Weekly':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 12 * 7); // Last 25 weeks (175 days)
+        startDate.setDate(now.getDate() - 13 * 7);
         break;
       case 'Monthly':
         startDate = new Date(now);
-        startDate.setMonth(now.getMonth() - 12); // Last 12 months
+        startDate.setMonth(now.getMonth() - 12);
         break;
       case 'Yearly':
         startDate = new Date(now);
-        startDate.setFullYear(now.getFullYear() - 5); // Last 5 years
+        startDate.setFullYear(now.getFullYear() - 10);
         break;
       default:
         startDate = new Date('2010-01-01');
