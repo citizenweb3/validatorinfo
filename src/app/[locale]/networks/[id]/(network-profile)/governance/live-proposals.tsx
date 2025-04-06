@@ -8,9 +8,10 @@ import SubTitle from '@/components/common/sub-title';
 import Link from 'next/link';
 
 interface OwnProps {
+  chainId: string;
 }
 
-const LiveProposals: FC<OwnProps> = async ({}) => {
+const LiveProposals: FC<OwnProps> = async ({ chainId }) => {
   const t = await getTranslations('NetworkGovernance');
 
   return (
@@ -20,11 +21,13 @@ const LiveProposals: FC<OwnProps> = async ({}) => {
         {networkProfileExample.liveProposals.map((item) => (
           <div key={item.proposalNumber} className="mt-2 flex border-bgSt border-b pb-9">
             <div className="w-3/5 text-base ml-4">
-              <div className="mb-5">
-                <span className="font-handjet text-highlight text-lg">
-                  #{item.proposalNumber}&nbsp;
-                </span>
-                - {item.proposalTitle}
+              <div className="mb-5 hover:underline hover:underline-offset-2">
+                <Link href={`/networks/${chainId}/proposal/${item.proposalNumber}`}>
+                  <span className="font-handjet text-highlight text-lg">
+                    #{item.proposalNumber}&nbsp;
+                  </span>
+                  - {item.proposalTitle}
+                </Link>
               </div>
               <div>
                 {t(`${item.proposer.title as 'proposer'}`)}:&nbsp;

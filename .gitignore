@@ -27,6 +27,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# validator icons
+/uploads/*
+
 # local env files
 .env*.local
 Makefile

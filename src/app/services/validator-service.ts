@@ -1,4 +1,4 @@
-import { Node, Prisma, Validator } from '@prisma/client';
+import { Chain, Node, Prisma, Validator } from '@prisma/client';
 
 import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import db from '@/db';
@@ -12,11 +12,8 @@ export type ValidatorWithNodes = Validator & {
 };
 
 export type validatorNodesWithChainData = Node & {
-  prettyName: string;
-  name: string;
-  logoUrl: string;
-  coinDecimals: number;
-  denom: string;
+  chain: Chain;
+  votingPower: number;
 };
 
 const getById = async (id: number): Promise<Validator | null> => {
@@ -159,93 +156,80 @@ const getValidatorNodesWithChains = async (
   id: number,
   ecosystems: string[] = [],
   nodeStatus: string[] = [],
+  skip: number = 0,
+  take: number = Number.MAX_SAFE_INTEGER,
   sortBy: string = 'prettyName',
   order: SortDirection = 'asc',
-): Promise<{ validatorNodesWithChainData: validatorNodesWithChainData[] }> => {
-  logDebug(`Get validator nodes with chain data: ${id}, sortBy: ${sortBy} - ${order}`);
-
-  const validator = await db.validator.findUnique({
-    where: { id },
-    include: { nodes: { include: { chain: true } } },
-  });
-
-  if (!validator) return { validatorNodesWithChainData: [] };
-
-  const allChainIds = validator.nodes.map((node) => node.chainId);
-  const allChains = await db.chain.findMany({
-    where: {
-      id: { in: allChainIds },
-    },
-  });
-
-  const chainMap = allChains.reduce(
-    (map, chain) => {
-      map[chain.id] = {
-        logoUrl: chain.logoUrl,
-        name: chain.name,
-        prettyName: chain.prettyName,
-        coinDecimals: chain.coinDecimals,
-        denom: chain.denom,
-        ecosystem: chain.ecosystem,
-      };
-      return map;
-    },
-    {} as Record<
-      string,
-      { logoUrl: string;
-        name: string;
-        prettyName: string;
-        coinDecimals: number;
-        denom: string;
-        ecosystem: string }
-    >,
-  );
-
-  const mergedNodes = validator.nodes.map((node) => ({
-    ...node,
-    logoUrl: chainMap[node.chainId]?.logoUrl,
-    prettyName: chainMap[node.chainId]?.prettyName,
-    name: chainMap[node.chainId]?.name,
-    coinDecimals: chainMap[node.chainId]?.coinDecimals,
-    denom: chainMap[node.chainId]?.denom,
-    ecosystem: chainMap[node.chainId]?.ecosystem,
-  }));
-
-  let filteredNodes = mergedNodes;
+): Promise<{
+  validatorNodesWithChainData: validatorNodesWithChainData[];
+  pages: number;
+}> => {
+  const where: any = { validatorId: id };
   if (ecosystems.length > 0) {
-    filteredNodes = filteredNodes.filter((node) => {
-      return node.ecosystem && ecosystems.includes(node.ecosystem);
-    });
+    where.chain = { ecosystem: { in: ecosystems } };
   }
-
   if (nodeStatus && nodeStatus.length > 0 && !nodeStatus.includes('all')) {
-    const jailedSelected = nodeStatus.includes('jailed');
-    const unjailedSelected = nodeStatus.includes('unjailed');
-    if (jailedSelected && !unjailedSelected) {
-      filteredNodes = filteredNodes.filter((node) => node.jailed === true);
-    } else if (unjailedSelected && !jailedSelected) {
-      filteredNodes = filteredNodes.filter((node) => node.jailed === false);
+    if (nodeStatus.includes('jailed') && !nodeStatus.includes('unjailed')) {
+      where.jailed = true;
+    } else if (nodeStatus.includes('unjailed') && !nodeStatus.includes('jailed')) {
+      where.jailed = false;
     }
   }
 
-  const sortedNodes = filteredNodes.sort((a, b) => {
-    let aValue, bValue;
-    if (sortBy === 'prettyName') {
-      aValue = a.prettyName || '';
-      bValue = b.prettyName || '';
-      return order === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
-    } else if (sortBy === 'delegatorShares' || sortBy === 'rate' || sortBy === 'minSelfDelegation') {
-      aValue = parseFloat(a[sortBy] || '0');
-      bValue = parseFloat(b[sortBy] || '0');
-      return order === 'asc' ? aValue - bValue : bValue - aValue;
-    } else {
-      return 0;
-    }
-  });
+  if (sortBy === 'votingPower') {
+    const allNodes = await db.node.findMany({
+      where,
+      include: { chain: true },
+    });
+    const computedNodes = allNodes.map((node) => {
+      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const delegatorShares = parseFloat(node.delegatorShares || '0');
+      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
+      return { ...node, votingPower };
+    });
 
-  return {
-    validatorNodesWithChainData: sortedNodes,
-  };
+    computedNodes.sort((a, b) => order === 'asc'
+      ? a.votingPower - b.votingPower
+      : b.votingPower - a.votingPower);
+
+    const totalCount = computedNodes.length;
+    const pages = Math.ceil(totalCount / take);
+    const paginatedNodes = computedNodes.slice(skip, skip + take);
+
+    return { validatorNodesWithChainData: paginatedNodes, pages };
+
+  } else {
+    const totalCount = await db.node.count({ where });
+    const pages = Math.ceil(totalCount / take);
+
+    let orderBy;
+    if (sortBy === 'prettyName') {
+      orderBy = [{ chain: { prettyName: order } }];
+    } else if (sortBy === 'apr') {
+      orderBy = [{ chain: { apr: order } }];
+    } else if (['delegatorShares', 'rate', 'minSelfDelegation'].includes(sortBy)) {
+      orderBy = [{ [sortBy]: order }];
+    } else {
+      orderBy = [{ id: order }];
+    }
+
+    const nodes = await db.node.findMany({
+      where,
+      skip,
+      take,
+      orderBy: orderBy,
+      include: { chain: true },
+    });
+
+    const computedNodes = nodes.map((node) => {
+      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const delegatorShares = parseFloat(node.delegatorShares || '0');
+      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
+      return { ...node, votingPower };
+    });
+
+    return { validatorNodesWithChainData: computedNodes, pages };
+  }
 };
 
 const getRandom = async (ecosystems: string[], take: number): Promise<{ validators: ValidatorWithNodes[] }> => {

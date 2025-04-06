@@ -20,6 +20,8 @@ const MetricsBlocks: FC<OwnProps> = async ({ id }) => {
     id,
     [],
     [],
+    0,
+    Number.MAX_SAFE_INTEGER,
     sortBy,
     order,
   );

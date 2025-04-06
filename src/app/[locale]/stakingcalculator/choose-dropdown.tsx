@@ -63,9 +63,8 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, classNam
                 <div
                   key={item.value}
                   onClick={() => handleChange(item.value)}
-                  className={`cursor-pointer px-4 py-2 ${
-                    item.value.toString() === selected?.toString() ? 'text-highlight' : ''
-                  }`}
+                  className={`cursor-pointer px-4 py-2 
+                  ${item.value.toString() === selected?.toString() ? 'text-highlight' : ''}`}
                 >
                   {item.title}
                 </div>

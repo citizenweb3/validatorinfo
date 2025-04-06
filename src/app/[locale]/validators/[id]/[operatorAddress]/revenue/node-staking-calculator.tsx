@@ -29,11 +29,11 @@ const NodeStakingCalculator: FC<OwnProps> = ({ node, price }) => {
     if (node && price) {
       setChain({
         id: 1,
-        name: node.prettyName,
+        name: node.chain.prettyName,
         asset: {
-          name: node.prettyName,
+          name: node.chain.prettyName,
           price: price.value,
-          symbol: node.denom,
+          symbol: node.chain.denom,
           isSymbolFirst: false,
         },
       });

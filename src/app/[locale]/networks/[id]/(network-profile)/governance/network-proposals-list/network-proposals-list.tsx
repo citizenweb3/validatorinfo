@@ -3,21 +3,23 @@ import { FC } from 'react';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/server/types';
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
-import NetworkProposalsItem from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals-item';
+import NetworkProposalsItem
+  from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals-item';
 
 interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
+  chainId: string;
 }
 
-const NetworkProposalsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1 }) => {
+const NetworkProposalsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, chainId }) => {
   const pages = 1;
 
   return (
     <tbody>
     {networkProfileExample.proposalsList.map((item) => (
-      <NetworkProposalsItem key={item.proposalId} item={item} />
+      <NetworkProposalsItem key={item.proposalId} item={item} chainId={chainId} />
     ))}
     <tr>
       <td colSpan={5} className="pt-4">

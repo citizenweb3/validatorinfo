@@ -4,11 +4,13 @@ import { FC } from 'react';
 import ToolTip from '@/components/common/tooltip';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
+import { Chain } from '@prisma/client';
 
 interface OwnProps {
+  chain: Chain | null;
 }
 
-const MetricsHeader: FC<OwnProps> = async ({}) => {
+const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkProfileHeader');
 
   return (

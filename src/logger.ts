@@ -19,7 +19,24 @@ const getLogFormat = (customLabel: string): Format => {
     label({ label: customLabel.toUpperCase() }),
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
     printf(({ level, message, label, timestamp }) => {
-      return `${timestamp} [${label}] ${level}: ${message}`;
+      let color = '\x1b[0m';
+      switch (level) {
+        case 'info':
+          color = '\x1b[32m';
+          break;
+        case 'error':
+          color = '\x1b[31m';
+          break;
+        case 'warn':
+          color = '\x1b[33m';
+          break;
+        case 'debug':
+          color = '\x1b[34m';
+          break;
+        default:
+          break;
+      }
+      return `${color}${timestamp} ${level.toUpperCase()}\t[${label}]\t${message}\x1b[0m`;
     }),
   );
 };

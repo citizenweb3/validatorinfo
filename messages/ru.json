@@ -163,7 +163,7 @@
     "Choose a Validator": "Выбрать валидатора",
     "Please select": "Пожалуйста выберите валидатора и сеть!",
     "Token": "Токен",
-    "Enter Staking Amount": "Введите сумму стейкинга",
+    "Enter Stake Amount": "Введите сумму стейкинга",
     "Wrong amount": "Некоректное значение",
     "earnings": "д заработка",
     "downloading validators": "Загрузка Валидаторов...",
@@ -686,7 +686,8 @@
   },
   "ValidatorPassportPage": {
     "title": "Паспорт Валидатора Сети",
-    "pretext in prefix": "в ",
+    "pretext in prefix": "в",
+    "this is my node": "Это моя нода",
     "commission": "Комиссия",
     "tokens delegated": "Делегировано токенов",
     "expected APR": "Ожидаемый APR",
@@ -871,7 +872,63 @@
     "delegate address": "Адрес Делегатора",
     "validator address": "Адрес Валидатора",
     "amount": "Количество",
-    "auto claim reward": "Автоматически полученные вознаграждения"
+    "auto claim reward": "Автоматически полученные вознаграждения",
+    "Search by validator name and tx hash": "Поиск по имени валидатора и хэшу транзакции"
+  },
+  "ProposalPage": {
+    "proposal tooltip": "text",
+    "signaling": "Сигнал",
+    "on going": "В процессе",
+    "link to full proposal": "Ссылка на Полное Предложение",
+    "voting period": "Период Голосования",
+    "show all proposals": "Показать Все Предложения",
+    "votes": "Голосование",
+    "show dropdown": "Показать Голоса Валидаторов",
+    "hide dropdown": "Скрыть Голоса Валидаторов",
+    "all": "Все",
+    "yes": "Да",
+    "no": "Нет",
+    "veto": "Вето",
+    "did not vote": "Не проголосовал",
+    "weighted": "Взвешенный",
+    "abstain": "Воздержался",
+    "Table": {
+      "Validator": {
+        "name": "Валидатор",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Хэш Транзакции",
+        "hint": "Идентификатор транзакции. Нажмите для подробностей"
+      },
+      "Answer": {
+        "name": "Ответ",
+        "hint": ""
+      },
+      "Time": {
+        "name": "Время",
+        "hint": ""
+      }
+    },
+    "ai generated summary": "Сгенерированное ИИ Резюме"
+  },
+  "LibraryPage": {
+    "Tabs": {
+      "Library": "Библиотека",
+      "Validators": "Валидаторы",
+      "Developers": "Разработчики",
+      "Delegators": "Делегаторы",
+      "Curious": "Любопытные"
+    },
+    "title": "Библиотека",
+    "description": "Библиотека здесь, чтобы помочь вам найти свой путь!",
+    "Validators": "Валидаторы",
+    "Developers": "Разработчики",
+    "Delegators": "Делегаторы",
+    "Curious": "Любопытные",
+    "customize": "Настроить",
+    "Submit New Info": "Отправить Новую Информацию",
+    "how to run a node on cosmos": "Как запустить ноду в Cosmos"
   }
 }
 

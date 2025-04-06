@@ -31,7 +31,7 @@ export type ChainWithNodes = Chain & {
   chainNodes: ChainNode[];
 };
 
-export interface Validator {
+export interface NodeResult {
   operator_address: string;
   consensus_pubkey: ConsensusPubkey;
   jailed: boolean;

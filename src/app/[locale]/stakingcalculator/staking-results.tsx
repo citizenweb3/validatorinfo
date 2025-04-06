@@ -39,7 +39,7 @@ const StakingResults: FC<OwnProps> = ({ values, chain }) => {
         <Switch value={isToken} onChange={(value) => setIsToken(value)} />
         <div className="border-b border-bgSt px-2 font-handjet">{t('Token')}</div>
       </div>
-      <div className="mt-3 font-bold">{t('Enter Staking Amount')}</div>
+      <div className="mt-3 font-bold">{t('Enter Stake Amount')}</div>
       <div className="relative mt-1">
         <div className="absolute left-2 top-1 font-handjet text-xl text-highlight">$</div>
         <input

@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import { validatorNodesWithChainData } from '@/services/validator-service';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
+import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
   node?: validatorNodesWithChainData | undefined;
@@ -15,56 +16,67 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
     return null;
   }
 
-  const tokenDelegatorShares = Number(node.delegatorShares) / 10 ** node.coinDecimals;
+  const tokensDelegated = +node.delegatorShares / 10 ** node.chain.coinDecimals;
+  const tokenDelegatedMetric = `${tokensDelegated.toLocaleString('en-US', { maximumFractionDigits: 2 })} ${node.chain.denom}`;
+  const votingPower = +node.delegatorShares / +node.chain.bondedTokens * 100;
+  const expectedApr = (+node.chain.apr - (+node.chain.apr * +node.rate)) * 100;
 
   const cardClass = 'pt-3 pb-3';
   const cardValueClass = 'my-5';
 
   return (
-    <div className="mt-12 flex flex-col items-center gap-8">
-      <div className="flex gap-8">
-        <MetricsCardItem title={t('commission')}
-                         data={Math.trunc(Number(node.rate) * 100)}
-                         className="pt-2.5 pb-3"
-                         dataClassName={cardValueClass}
-                         isPercents
-        />
-        <MetricsCardItem title={t('tokens delegated')}
-                         data={`${tokenDelegatorShares.toLocaleString('en-US', { maximumFractionDigits: 0 })} ${node.denom}`}
-                         className={cardClass}
-                         dataClassName={cardValueClass}
-        />
-        <MetricsCardItem title={t('expected APR')}
-                         data="12.5"
-                         className={cardClass}
-                         dataClassName={cardValueClass}
-                         isPercents
-        />
-        <MetricsCardItem title={t('outstanding reward')}
-                         data="12.56K"
-                         className={cardClass}
-                         dataClassName={cardValueClass}
-        />
+    <div>
+      <div className="flex justify-end">
+        <RoundedButton className="font-handjet text-lg">
+          {t('this is my node')}
+        </RoundedButton>
       </div>
-      <div className="flex gap-8">
-        <MetricsCardItem title={t('voting power')}
-                         data="4"
-                         className={cardClass}
-                         dataClassName={cardValueClass}
-                         isPercents
-        />
-        <MetricsCardItem title={t('validator rank')}
-                         data="17"
-                         className={cardClass}
-                         dataClassName={cardValueClass}
-        />
-        <MetricsCardItem title={t('proposals created')}
-                         data="2"
-                         className={cardClass}
-                         dataClassName={cardValueClass}
-        />
+      <div className="mt-6 flex flex-col items-center gap-8">
+        <div className="flex gap-8">
+          <MetricsCardItem title={t('commission')}
+                           data={Math.trunc(Number(node.rate) * 100)}
+                           className="pt-2.5 pb-3"
+                           dataClassName={cardValueClass}
+                           isPercents
+          />
+          <MetricsCardItem title={t('tokens delegated')}
+                           data={tokenDelegatedMetric}
+                           className={cardClass}
+                           dataClassName={cardValueClass}
+          />
+          <MetricsCardItem title={t('expected APR')}
+                           data={expectedApr.toFixed(2)}
+                           className={cardClass}
+                           dataClassName={cardValueClass}
+                           isPercents
+          />
+          <MetricsCardItem title={t('outstanding reward')}
+                           data="12.56K"
+                           className={cardClass}
+                           dataClassName={cardValueClass}
+          />
+        </div>
+        <div className="flex gap-8">
+          <MetricsCardItem title={t('voting power')}
+                           data={votingPower.toFixed(2)}
+                           className={cardClass}
+                           dataClassName={cardValueClass}
+                           isPercents
+          />
+          <MetricsCardItem title={t('validator rank')}
+                           data="17"
+                           className={cardClass}
+                           dataClassName={cardValueClass}
+          />
+          <MetricsCardItem title={t('proposals created')}
+                           data="2"
+                           className={cardClass}
+                           dataClassName={cardValueClass}
+          />
+        </div>
       </div>
     </div>
+
   );
 };
 

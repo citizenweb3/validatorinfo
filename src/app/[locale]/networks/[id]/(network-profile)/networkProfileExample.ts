@@ -8,17 +8,17 @@ export const networkProfileExample = {
     {
       title: 'tvl',
       data: 90,
-      tooltip: 'tvl'
+      tooltip: 'tvl',
     },
     {
       title: 'revenue',
       data: 90,
-      tooltip: 'revenue'
+      tooltip: 'revenue',
     },
     {
       title: 'validator cost',
       data: 90,
-      tooltip: 'validator cost'
+      tooltip: 'validator cost',
     },
   ],
   totalsMetrics: [
@@ -29,24 +29,6 @@ export const networkProfileExample = {
     {
       title: 'total amount of tx',
       data: 0.71,
-    },
-    {
-      title: 'total supply',
-      data: 0.01,
-    },
-  ],
-  aprAndTvs: [
-    {
-      title: 'APR',
-      data: 31223,
-    },
-    {
-      title: 'APY',
-      data: 2433423,
-    },
-    {
-      title: 'TVL',
-      data: 2433423,
     },
   ],
   networkOverview: [
@@ -82,10 +64,6 @@ export const networkProfileExample = {
       title: '% of comm pool to total supply',
       data: 10,
     },
-    {
-      title: 'average block time',
-      data: 5,
-    },
   ],
   totalStatistics: [
     {
@@ -93,15 +71,7 @@ export const networkProfileExample = {
       data: '...1234',
     },
     {
-      title: 'total staked',
-      data: '2433423',
-    },
-    {
       title: 'average delegations',
-      data: '...314',
-    },
-    {
-      title: '% staked',
       data: '...314',
     },
     {

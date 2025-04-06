@@ -58,7 +58,7 @@ const NavigationBar: FC<OwnProps> = () => {
         ))}
       </div>
 
-      <div className="border-b border-dashed border-b-primary mt-5 mb-4" />
+      <div className="mt-7 mb-5" />
 
       <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>
         {additionalTabs.map((item) => (
@@ -66,7 +66,7 @@ const NavigationBar: FC<OwnProps> = () => {
         ))}
       </div>
 
-      <div className="border-b border-dashed border-b-primary mt-5 mb-4" />
+      <div className="mt-7 mb-5" />
 
       <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>
         {aboutTabs.map((item) => (

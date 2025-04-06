@@ -1,13 +1,13 @@
+import db from '@/db';
 import logger from '@/logger';
+import { chainParamsArray } from '@/server/tools/chains/params';
 import priceService from '@/services/price-service';
 
-import { ChainWithNodes } from '../types';
+const { logInfo, logError } = logger('get-prices');
 
-const { logInfo, logError, logDebug } = logger('get-prices');
-
-export const getPrices = async (chains: ChainWithNodes[]) => {
+export const getPrices = async () => {
   try {
-    const chainsForPrices = chains.filter((c) => c.coinGeckoId);
+    const chainsForPrices = chainParamsArray.filter((c) => c.coinGeckoId);
     const req =
       'https://api.coingecko.com/api/v3/simple/price?ids=' +
       chainsForPrices.map((chain) => chain.coinGeckoId).join(',') +
@@ -16,9 +16,16 @@ export const getPrices = async (chains: ChainWithNodes[]) => {
     logInfo(`Get prices from Coingecko by ${req}`);
 
     const prices = await fetch(req).then((data) => data.json());
-    for (const chain of chains) {
+    for (const chain of chainParamsArray) {
+      const dbChain = await db.chain.findFirst({
+        where: { chainId: chain.chainId },
+      });
+      if (!dbChain) {
+        logError(`Chain ${chain.chainId} not found in database`);
+        continue;
+      }
       if (prices[chain.coinGeckoId]?.usd) {
-        await priceService.addPrice(chain, prices[chain.coinGeckoId].usd);
+        await priceService.addPrice(dbChain, prices[chain.coinGeckoId].usd);
       }
     }
   } catch (e) {

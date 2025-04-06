@@ -163,7 +163,7 @@
     "Choose a Validator": "Escolha um validador",
     "Please select": "Por favor selecione validador e cadeia!",
     "Token": "Token",
-    "Enter Staking Amount": "Insira o valor da aposta",
+    "Enter Stake Amount": "Insira o valor da aposta",
     "Wrong amount": "Quantidade errada",
     "earnings": "d Ganhos",
     "downloading validators": "Descarregamento de validadores...",
@@ -686,7 +686,8 @@
   },
   "ValidatorPassportPage": {
     "title": "Passaporte da Rede de Validadores",
-    "pretext in prefix": "em ",
+    "pretext in prefix": "em",
+    "this is my node": "Este é o meu nó",
     "commission": "Comissão",
     "tokens delegated": "Tokens Delegados",
     "expected APR": "APR prevista",
@@ -871,6 +872,62 @@
     "delegate address": "Endereço do Delegado",
     "validator address": "Endereço do Validador",
     "amount": "Quantidade",
-    "auto claim reward": "Reivindicação Automática de Recompensa"
+    "auto claim reward": "Reivindicação Automática de Recompensa",
+    "Search by validator name and tx hash": "Pesquisa por nome do validador e hash tx"
+  },
+  "ProposalPage": {
+    "proposal tooltip": "text",
+    "signaling": "Sinalização",
+    "on going": "Em andamento",
+    "link to full proposal": "link para a proposta completa",
+    "voting period": "Período de votação",
+    "show all proposals": "Mostrar todas as propostas",
+    "votes": "Votos",
+    "show dropdown": "Mostrar votos do validador",
+    "hide dropdown": "Ocultar votos do validador",
+    "all": "Todos",
+    "yes": "Sim",
+    "no": "Não",
+    "veto": "Veto",
+    "did not vote": "Não Votou",
+    "weighted": "Ponderado",
+    "abstain": "Abstenção",
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Tx Hash": {
+        "name": "Hash da Transação",
+        "hint": "ID da Transação. Clique para detalhes"
+      },
+      "Answer": {
+        "name": "Resposta",
+        "hint": ""
+      },
+      "Time": {
+        "name": "Hora",
+        "hint": ""
+      }
+    },
+    "ai generated summary": "Resumo gerado por IA"
+  },
+  "LibraryPage": {
+    "Tabs": {
+      "Library": "Biblioteca",
+      "Validators": "Validadores",
+      "Developers": "Desenvolvedores",
+      "Delegators": "Delegadores",
+      "Curious": "Curiosos"
+    },
+    "title": "Biblioteca",
+    "description": "A biblioteca está aqui para ajudar você a encontrar seu caminho!",
+    "Validators": "Validadores",
+    "Developers": "Desenvolvedores",
+    "Delegators": "Delegadores",
+    "Curious": "Curiosos",
+    "customize": "Personalizar",
+    "Submit New Info": "Enviar Novas Informações",
+    "how to run a node on cosmos": "Como executar um nó na Cosmos"
   }
 }

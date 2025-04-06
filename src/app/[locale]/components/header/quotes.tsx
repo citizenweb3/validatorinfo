@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import QuoteItem from '@/components/header/quote-item';
 import HeaderInfoService from '@/services/headerInfo-service';
-import chainService from '@/services/chain-service';
+import ecosystemService from '@/services/ecosystem-service';
 
 interface OwnProps {
 }
@@ -40,7 +40,7 @@ const data = {
 
 const Quotes: FC<OwnProps> = async () => {
   const headerInfo = await HeaderInfoService.getValidatorsAndChains();
-  const ecosystems = await chainService.getEcosystemsChains();
+  const ecosystems = await ecosystemService.getAll();
 
   return (
     <div className="flex flex-grow flex-row items-center space-x-20 scrollbar-none">
