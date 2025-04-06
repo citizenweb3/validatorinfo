@@ -1,69 +1,100 @@
-import { DataPoint } from '../chartUtils'; // Adjust path as needed
+import * as d3 from 'd3';
+import { DataPoint } from '../chartUtils/barChartUtils';
+import { formatNumber } from '../chartUtils/chartHelper';
+
+class SeededRandom {
+  private seed: number;
+
+  constructor(seed: number) {
+    this.seed = seed;
+  }
+
+  next(): number {
+    const a = 1664525;
+    const c = 1013904223;
+    const m = Math.pow(2, 32);
+    this.seed = (a * this.seed + c) % m;
+    return this.seed / m;
+  }
+}
+
+const dataCache: Map<string, { tvs: DataPoint[]; rewards: DataPoint[] }> = new Map();
 
 export const generateDataForTotalLine = (
   startDate: Date,
   endDate: Date,
-  chartType: string
+  chartType: string,
+  regenerate: boolean = false
 ): { tvs: DataPoint[]; rewards: DataPoint[] } => {
-  const baseValue = 5 * 10**10;  // Base value to center the fluctuations around
+  const baseValue = 5 * 10 ** 10;
+  const MAX_VALUE = 1e12;
+  const MAX_FLUCTUATION = 1e10;
 
-  // Function to generate a random value with both up and down fluctuations
-  const getFluctuatingValue = (prevValue: number, maxFluctuation: number) => {
-    // Generate a random fluctuation between -maxFluctuation and +maxFluctuation
-    const fluctuation = (Math.random() - 0.5) * 2 * maxFluctuation; // Random number between -maxFluctuation and +maxFluctuation
-    return Math.max(0, prevValue + fluctuation); // Ensure value is not negative
+  const cacheKey = `${startDate.getTime()}-${endDate.getTime()}-${chartType}`;
+  if (!regenerate && dataCache.has(cacheKey)) {
+    return dataCache.get(cacheKey)!;
+  }
+
+  const generateSeed = (startDate: Date, endDate: Date): number => {
+    return startDate.getTime() + endDate.getTime();
   };
 
-  const generateDataset = (startDate: Date, endDate: Date, interval: number) => {
-    const dataset = [];
-    let currentDate = new Date(startDate);
-    let prevTvsValue = baseValue;
-    let prevRewardsValue = baseValue;
-
-    while (currentDate <= endDate) {
-      // Generate stable values with fluctuations in both directions
-      const tvsValue = getFluctuatingValue(prevTvsValue, 1e10); // Max fluctuation of 1 billion
-      const rewardsValue = getFluctuatingValue(prevRewardsValue, 1e10); // Max fluctuation of 1 billion
-
-      // Ensure values are not fluctuating too wildly and remain positive
-      prevTvsValue = tvsValue;
-      prevRewardsValue = rewardsValue;
-
-      const formattedTvsValue = formatNumber(tvsValue);
-      const formattedRewardsValue = formatNumber(rewardsValue);
-      
-      dataset.push({ date: new Date(currentDate), tvs: tvsValue, rewards: rewardsValue, formattedTvsValue, formattedRewardsValue });
-      currentDate.setDate(currentDate.getDate() + interval);
-    }
-
-    return dataset;
+  const getFluctuatingValue = (prevValue: number, maxFluctuation: number, rng: SeededRandom) => {
+    const fluctuation = (rng.next() - 0.5) * 2 * maxFluctuation;
+    const newValue = prevValue + fluctuation;
+    return Math.min(Math.max(newValue, 1), MAX_VALUE);
   };
 
-  // Determine the interval based on chartType
-  let interval = 1;
-  if (chartType === 'Weekly') interval = 7;
-  else if (chartType === 'Monthly') interval = 30;
-  else if (chartType === 'Yearly') interval = 365;
+  // Determine dates based on chart type
+  let dates: Date[];
 
-  const generatedData = generateDataset(startDate, endDate, interval);
+  switch (chartType) {
+    case 'Daily':
+      dates = d3.timeDay.range(startDate, d3.timeDay.offset(endDate, 1)); // Daily range
+      break;
+    case 'Weekly':
+      // Adjust endDate to the start of the next week to avoid partial week at the end
+      const adjustedEndDate = d3.timeWeek.offset(d3.timeWeek.floor(endDate), 1);
+      dates = d3.timeWeek.range(startDate, adjustedEndDate); // Weekly range
+      break;
+    case 'Monthly':
+      // Adjust to the next month's start
+      dates = d3.timeMonth.range(startDate, d3.timeMonth.offset(endDate, 1)); // Monthly range
+      break;
+    case 'Yearly':
+      // Adjust to the next year's start
+      dates = d3.timeYear.range(startDate, d3.timeYear.offset(endDate, 1)); // Yearly range
+      break;
+    default:
+      dates = d3.timeMonth.range(startDate, d3.timeMonth.offset(endDate, 1)); // Default to monthly
+  }
 
-  return {
-    tvs: generatedData.map(d => ({ date: d.date, value: d.tvs, formattedValue: d.formattedTvsValue })),
-    rewards: generatedData.map(d => ({ date: d.date, value: d.rewards, formattedValue: d.formattedRewardsValue })),
+  const seed = generateSeed(startDate, endDate);
+  const rng = new SeededRandom(seed);
+  let prevTvsValue = baseValue;
+  let prevRewardsValue = baseValue;
+
+  const dataset: { date: Date; tvs: number; rewards: number; formattedTvsValue: string; formattedRewardsValue: string }[] = [];
+  for (const date of dates) {
+    const tvsValue = getFluctuatingValue(prevTvsValue, MAX_FLUCTUATION, rng);
+    const rewardsValue = getFluctuatingValue(prevRewardsValue, MAX_FLUCTUATION, rng);
+    prevTvsValue = tvsValue;
+    prevRewardsValue = rewardsValue;
+    dataset.push({
+      date: new Date(date),
+      tvs: tvsValue,
+      rewards: rewardsValue,
+      formattedTvsValue: formatNumber(tvsValue),
+      formattedRewardsValue: formatNumber(rewardsValue),
+    });
+  }
+
+  const result = {
+    tvs: dataset.map(d => ({ date: d.date, value: d.tvs, formattedValue: d.formattedTvsValue })),
+    rewards: dataset.map(d => ({ date: d.date, value: d.rewards, formattedValue: d.formattedRewardsValue })),
   };
+
+  dataCache.set(cacheKey, result);
+  return result;
 };
 
-// Function to format number with appropriate suffix (K, M, B, T)
-export function formatNumber(num: any): string {
-  if (num >= 1e12) {
-    return (num / 1e12).toFixed(1) + 'T'; // Trillions (T)
-  } else if (num >= 1e9) {
-    return (num / 1e9).toFixed(1) + 'B'; // Billions (B)
-  } else if (num >= 1e6) {
-    return (num / 1e6).toFixed(1) + 'M'; // Millions (M)
-  } else if (num >= 1e3) {
-    return (num / 1e3).toFixed(1) + 'K'; // Thousands (K)
-  } else {
-    return num.toString(); // Less than 1000
-  }
-}
