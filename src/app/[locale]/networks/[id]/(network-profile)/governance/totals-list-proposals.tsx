@@ -11,7 +11,7 @@ const TotalsListProposals: FC<OwnProps> = async () => {
   const t = await getTranslations('NetworkGovernance');
 
   return (
-    <div className="mt-12 flex w-full flex-row justify-center gap-6">
+    <div className="mt-8 flex w-full flex-row justify-center gap-6">
       {networkProfileExample.totalsListProposals.map((item) => (
         <MetricsCardItem key={item.title}
                          title={t(item.title as 'total')}

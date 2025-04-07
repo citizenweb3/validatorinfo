@@ -7,6 +7,7 @@ import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import RoundedButton from '@/components/common/rounded-button';
 import Nodes from '@/app/nodes/nodes-list/nodes';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -42,7 +43,8 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
-      <div className="mb-3 mt-2 flex justify-end">
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <div className="mb-3 flex justify-end">
         <RoundedButton href={''} className="font-handjet text-lg">
           {t('show world node map')}
         </RoundedButton>

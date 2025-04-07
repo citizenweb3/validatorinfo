@@ -4,6 +4,7 @@ import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -32,7 +33,8 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <div className="mb-14">
-      <div className="my-4 flex justify-end">
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <div className="mb-4 flex justify-end">
         <RoundedButton href={''} className="font-handjet text-lg">
           {t('show same opinion')}
         </RoundedButton>

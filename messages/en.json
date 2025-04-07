@@ -74,7 +74,7 @@
   },
   "HomePage": {
     "title": "Web3 Blockchain Validator and Mining Pool Explorer",
-    "sub description": "This page is your one-stop explorer for comparing top validators across multiple blockchain networks. The table provides real-time data on validator and mining pool performance, summarized into easy to read metrics. You can sort and filter based on what matters most to you. The goal is to help you make smart staking choices by providing a clear and user-friendly overview of validator profiles across web3.",
+    "description": "This page is your one-stop explorer for comparing top validators across multiple blockchain networks. The table provides real-time data on validator and mining pool performance, summarized into easy to read metrics. You can sort and filter based on what matters most to you. The goal is to help you make smart staking choices by providing a clear and user-friendly overview of validator profiles across web3.",
     "Table": {
       "Validator": {
         "name": "Validator",
@@ -173,14 +173,15 @@
     "please choose network": "Please Choose a Network"
   },
   "NetworksPage": {
-    "title": "P.O.W. and P.O.S. Network List A-Z"
+    "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",
+    "description": "I’ve created this Network A-Z Directory to showcase blockchain networks, including key statistics like fully diluted valuation, important links and token symbol. This list is perfect for developers, stakers, and multichain explorers, allowing you to find networks that match your interests and then study their profiles to explore staking potential. With direct links you'll get a clear snapshot of each chain, helping you navigate the web3 landscape and make informed decisions."
   },
   "NetworkProfileHeader": {
     "Tabs": {
       "Governance": "Governance",
-      "Statistics": "Statistics",
-      "Passport": "Passport",
-      "Dev Info": "Dev Info",
+      "Stats": "Stats",
+      "Overview": "Overview",
+      "Dev": "Dev",
       "Tokenomics": "Tokenomics"
     },
     "description": "Build a blockchain using the best-in-class open source libraries and services.",
@@ -198,7 +199,8 @@
     "distribution tooltip": "Distribution"
   },
   "NetworkPassport": {
-    "title": "Network Passport",
+    "title": "Blockchain Network Overview: A Web3 Starting Point",
+    "description": "I’ve crafted this Overview tab to give you the lowdown on this blockchain network—its mission, its health status, APR, TVL and more. Whether you’re new to decentralized networks or a pro, this is your gateway to understanding it the decentralization, scalability and security level of this network. Want more? Dive into the other tabs or check out our Ecosystem A-Z Directory!",
     "amount of wallets": "Amount of Wallets",
     "total amount of tx": "Total Amount of Tx",
     "total supply": "Total Supply",
@@ -215,7 +217,8 @@
     "average block time": "Average Block Time"
   },
   "NetworkStatistics": {
-    "title": "Network Statistics",
+    "title": "Blockchain Statistics Dashboard: Live Network Metrics",
+    "description": "Numbers time! The Statistics tab delivers live blockchain metrics—total value staked, transaction volume, healthy validators, operator distribution, all with slick charts. Perfect for tracking network health or digging into web3 data trends. Want the big picture? Compare it with our Global Blockchain Stats!",
     "community pool total": "Community Pool Total",
     "total staked": "Total Staked",
     "average delegations": "Average Delegation",
@@ -227,7 +230,8 @@
     "jailed": "Jailed"
   },
   "NetworkGovernance": {
-    "title": "Network Governance",
+    "title": "Governance Portal: Network Voting",
+    "description": "The Governance tab uncovers how this network’s decentralized governance works—active proposals, proposal voting records, delegator votes, and community input. It’s all about seeing the blockchain’s decision-making in action. Ready to join in? Explore our Validator A-Z List to meet the key players!",
     "total": "Total",
     "passed": "Passed",
     "rejected": "Rejected",
@@ -239,7 +243,8 @@
     "remaining time": "Remaining Time"
   },
   "NetworkDevInfo": {
-    "title": "Dev Info",
+    "title": "Developer Activity: Web3 Contributors",
+    "description": "The Dev Info tab shines a light on the developer activity powering this blockchain. I’ve pulled details on the contributors—how many coders are active, what decentralized apps they’re building, and the consensus details.",
     "pre-vote": "Pre-Vote",
     "pre-commit": "Pre-Commit",
     "pre vote synchronized": "Validator has submitted pre-vote with synchronized block hash",
@@ -277,7 +282,8 @@
     }
   },
   "NetworkTokenomics": {
-    "title": "Liveliness",
+    "title": "Tokenomics: Analysis of the Network’s Crypto Economy",
+    "description": "Let’s dive into tokens! The Tokenomics tab breaks down this network’s crypto economy—think token staking rewards, supply stats, distribution details and Gini Coefficient. Slick charts to show Revenue flows and Capital moves in real time. Need a deeper look? Pair it with our Staking Reward Calculator!",
     "Token Price": "Token Price",
     "Distribution": "Distribution",
     "Gini Coefficient": "Gini Coefficient",
@@ -288,7 +294,8 @@
     "Revenue vs Capital Flow": "Revenue VS Capital Flow"
   },
   "NetworkValidatorsPage": {
-    "title": "Validators Summary",
+    "title": "Blockchain Validator Summary",
+    "description": "The Validator Summary Table gives you a clear, at-a-glance view of all the validators securing {networkName}. Packed with key network staking stats—like total value staked, commission rates, uptime, and governance participation—this table makes it easy to compare and pick your favorites. Whether you’re a delegator looking to optimize staking rewards or just curious about blockchain validator performance, you’ll find everything you need right here. Sort, filter, and dive into each validator’s profile for more details—let’s find the perfect match for your web3 journey!",
     "Table": {
       "Validator": {
         "name": "Validator",
@@ -333,7 +340,8 @@
     }
   },
   "NodesPage": {
-    "title": "Unidentified Nodes",
+    "title": "Nodes A-Z Directory: Explore Nodes with Staking Data",
+    "description": "Welcome to the Nodes A-Z Directory, a comprehensive list of nodes from various blockchain validators, featuring basic performance data, such as stake size and ecosystem. This directory is your one-stop shop for understanding the infrastructure behind the networks, allowing you to search for a specific node or browse the list to learn more. It is often, that validator nodes are mixed with validator profiles. No more. Making it valuable for both techies and stakers, and can be used for a broader understanding of the web3 space.",
     "show world node map": "Show World Node Map",
     "customize": "customize",
     "Table": {
@@ -356,7 +364,8 @@
     }
   },
   "EcosystemsPage": {
-    "title": "Web3 Blockchain Ecosystem Explorer",
+    "title": "Ecosystem A-Z Directory: Explore Web3 Projects",
+    "description": "The Ecosystem A-Z Directory is your gateway to web3, featuring a list of projects and communities, including decentralized apps and governance platforms, with additional information like revenue and projects included in that ecosystem. This directory helps you discover new projects, with stats highlighting each project's momentum and influence, and you can use it to find your next favorite project, then join our P2P Chat to discuss and share ideas with other web3 enthusiasts, connecting you to the people and platforms shaping the future of web3.",
     "customize": "customize",
     "Table": {
       "Ecosystems": {
@@ -396,7 +405,8 @@
     "noNameError": "Please enter username to start"
   },
   "MetricsPage": {
-    "title": "Web3 Metrics / Glossary List A-Z",
+    "title": "Metric A-Z Glossary: Understand Key Web3 Metrics",
+    "description": "I’ve created the Metric A-Z Glossary to explain essential web3 metrics, from Annual Percentage Yield to Validator Uptime, covering what each means, why it's important, and how it's calculated. This glossary is designed for both newcomers and experienced users, helping you understand the numbers and make informed decisions. Use it to get up to speed before exploring tools like the Compare Validators Tool or Global Space Statistics page, and consider it your cheat sheet for smarter web3 decisions, making it easier to navigate and master the data driving validatorinfo.com",
     "All Metrics": "All Metrics",
     "Our Metrics": "Our Metrics",
     "Token": "Token",
@@ -405,11 +415,12 @@
     "TVS": "T.V.S. or Total Value Secured"
   },
   "AIPage": {
-    "title": "Web3 Operator AI Search",
-    "text": "So you want to find a validator, mining pool or a provider that meets your values? Good. \n\nYou're in the right place. My builders have supplied me with the amazing ability to do so with random prompts (searches)! For example, try searching for a validator with a certain commission and liberal political opinions. Its amazing, right? As always, please remember that my features are experimental.\n\nIf you feel like I'm not fulfilling my task properly, please open an issue for my team <issue>[here]</issue>"
+    "title": "AI-Powered Web3 Validator Search: Tailored Results for Unique Criteria",
+    "description": "Welcome to our AI Search page—your personal web3 detective. This tool handles specific validator and mining pool queries, like finding validators with certain commission rates, network support, or political leanings. Our AI delivers precise, actionable results in seconds, making your search fast and efficient. Whether you're a staking newbie or pro, I’m here to help. Ready to see what I can do? Enter your criteria and watch the magic unfold!"
   },
   "ValidatorsPage": {
-    "title": "Validator and Mining Pool List A-Z",
+    "title": "Validator A-Z Directory: Comprehensive List with Social Links",
+    "description": "I’ve put together this Validator A-Z Directory to give you a full rundown of validators across various blockchain networks, including their key links. This directory allows you to search for a specific validator by customizing the search by network stage, set position or node status. You can use the Compare Validators Tool for side-by-side analysis to make smart staking choices, with real-time information on governance participation and performance stats all in one spot.",
     "Tabs": {
       "Validators": "Validators",
       "Nodes": "Nodes",
@@ -480,7 +491,7 @@
   },
   "AboutPage": {
     "Metadata": {
-      "title": "About"
+      "title": "About Validator Info: Your Guide to Web3 Validators and Mining Pools"
     },
     "Tabs": {
       "Staking": "Staking",
@@ -489,9 +500,12 @@
       "Podcast": "Podcast",
       "Contacts": "Contacts"
     },
-    "Contacts": "Validator Info Contacts",
-    "description": "I am <homeLink>Validator Info</homeLink>. I report to, and created by <citizenLink>Citizen Web3</citizenLink>. \n\nI am a Web3 explorer. I provide verifiable data on blockchain validators, mining pools and networks. Im build as an interactive dashboard, with real-time token analytics, metrics and insights into the decentralized multichain landscape. I am able to understand Proof of Work and Proof of Stake chains. \n\nMy goal is to make explorers great again by guiding token holders, miners, stakers, delegators and operators through complex information and data via my easy UI and gamified user experience. \n\nI’m still in the making. You can <xLink>follow me on X</xLink>, check out one of my <ghLink>GitHub repos</ghLink>, leave me comments and suggestions. \n\nConsider staking to my creators, Citizen Web3, to support their work of public good projects. A <stakingLink>self-hosted</stakingLink> bare-metal validator.",
-    "title": "What is Validator Info?",
+    "Contacts": {
+      "title": "Validator Info Contacts",
+      "description": "I’d love to hear from you! Whether you’ve got questions about validator information, want to explore staking with Citizen Web3, or have ideas for the podcast, this is your spot to connect. Fill out the form below, ping me on X, or check out our GitHub—I’m just a message away. Your feedback fuels our growth, so don’t hold back. Let’s team up to make web3 even better!"
+    },
+    "description": "I’m Validator Info, brought to life by the <citizenLink>Citizen Web3</citizenLink> team. I’m a multichain, validator-focused explorer and aggregator for various networks thriving in web3. Whether it’s Proof of Work or Proof of Stake chains, I’ve got the details you need about validators, mining pools, and the networks themselves.\n\nMy goal? To empower you with the best validator information and mining pool data so you can navigate the web3 space with confidence. I’m here to simplify your web3 journey. With real-time metrics and an easy-to-use interface, I help you find the validator or mining pool that fits your needs.\n\nI’m still a work in progress, and I’d love your input as I grow. Follow me <xLink>on X</xLink>, explore my <ghLink>GitHub repos</ghLink>, or drop me a comment with your ideas—I’m all ears! Together, we can make this a go-to resource for web3 enthusiasts like you.\n\nCitizen Web3 is an active member of the web3 galaxy. <stakingLink>Staking with our self-hosted</stakingLink> baremetal infrastructure allows CW3 to work on various public good projects and contribute to the development of web3.",
+    "title": "About Validator Info: Your Guide to Web3 Validators and Mining Pools",
     "Tools": [
       "<link>Citizen Web3 Podcast</link>: Discovering Web3 Contributors to Blockchain Decentralization, Network Security and App Scalability",
       "<link>Web3 Society</link>: Web3 Community Based on Values of Decentralization. Learning to Forget Tribalism and Love the Tech. Future DAO",
@@ -503,20 +517,20 @@
     "Our Manifesto": "Manifesto",
     "Manifesto": "From this distant vantage point, the Earth might not seem of any particular interest. But for us, it's different. Consider again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every \"superstar,\" every \"supreme leader,\" every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam... Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves...\n\nFrom 'A Pale Blue Dot', by Carl Sagan.\n\n\nWe believe in freedom above needs. We believe in possibilities above enforcement. We believe in values above desires. We believe that censorship has killed more people than anything else together combined. We value honesty and we value the truth. We value love and cherish all existing creatures. We value intelligence and we value decentralization.\n\nWe believe in communication, which allows participants to think, make their mind up and cast personal votes on any topic and subject. We think that content should strive to lack subjective opinions and help its consumers to form an opinion, which will result in better discussion, and in turn in a more efficient consensus.\n\nWe believe that blockchains are not simply a form of digital nations. But, open and verifiable blockchains are somewhat similar to natural hives, forests, patterns in the nature that allow us to communicate better. Without communication, we are doomed, and decentralized consensus is a tool that can and will help those who desire to make our pale blue dot a slightly better place.\n\nAND MAY THE CODE BE WITH YOU!",
     "Podcast": {
-      "title": "Citizen Web3 Podcast",
-      "description": "Citizen Web3 hosts one of the oldest <link>web3-focused podcasts</link>. The show is focused on discovering the people that contribute to building the decentralized world and turn code into decentralized applications. \n\nThe show is a collection of interviews, airing for over 4.5 years, and focuses on a wide range of audiences, in particular those that work in web3, validators, founders, researchers, privacy enthusiasts and others.",
+      "title": "Citizen Web3 Podcast: Conversations with those that Build Web3",
+      "description": "Welcome to the Citizen Web3 Podcast! We interview the builders, thinkers, and visionaries driving the decentralized future, covering validator insights, staking tips, and big ideas in web3. Whether you’re a staking pro or just starting out, there’s something here to spark your curiosity. Check out our latest episodes and subscribe to stay updated.",
       "Subscribe": "Subscribe",
       "Spread the word": "Spread the word",
       "SubscribeOtherHint": "You can also subscribe with your favorite app directly, using the buttons below",
       "spreadText": "Every sharing helps to spread web3 values across the universe!"
     },
     "Staking": {
-      "title": "Staking with Citizen Web3 Validator",
-      "description": "Validator info is a public good project, developed and run by Citizen Web3 validator. Our ability to develop is fully endorsed by delegations and staking we receive.\n\nCitizen Web3 is a self-hosted, independent, off the grid, baremetal validator. Our infrastructure runs partially of solar energy and we try to maximize the re-use of existing hardware and minimize consumerism. We use Multi-party computation software (Horcrux) to further secure user funds, and Re-Stake on our mainnet nodes, to maximize user reward efficiency.",
-      "descriptionExtended": "Token holders are incentivized to stake to help secure networks by earning inflation rewards, and often - other perks provided by individual validators.\n\nWe strongly believe in decentralized infrastructure, independent of the grid, and that's our end goal. We think out of the box and are proud to be a little crazy. We value security, decentralization, privacy and lack of enforcement."
+      "title": "Staking with Citizen Web3: Secure, Reliable, and Value-Focused",
+      "description": "At Citizen Web3, we offer secure staking across multiple blockchain networks, using self-hosted, baremetal infrastructure. By staking with us, you're supporting a team that values decentralization, transparency, and community, and contributing to the public good. We prioritize reliability and openness, ensuring your stake is secure and impactful. Check out our staking options and start earning rewards."
     },
     "Partners": {
-      "title": "Our Friends and Partners"
+      "title": "Partners of Citizen Web3: Collaborating for a Better Web3",
+      "description": "At Citizen Web3, we partner with innovative projects to deliver top-notch validator information and staking solutions, making web3 more transparent and accessible. Check out our partners, each bringing unique expertise, and reach out via our contact page to discuss potential collaborations."
     }
   },
   "ValidatorProfileHeader": {
@@ -537,6 +551,7 @@
   },
   "ValidatorNetworksPage": {
     "title": "Validator Profile: Supported Networks",
+    "description": "The Networks tab provides a comprehensive view of all the blockchain networks supported by this validator, featuring a table with key stats like expected APR, commissions, total value secured, uptime, and active delegators. This is ideal for stakers looking for the best network or those curious about the validator's reach, allowing you to compare performance across chains and choose the best spot for your staking goals. For more detailed information, check out our Network A-Z Directory. These stats are crucial for understanding the validator's performance across ecosystems, helping you make informed decisions in the multichain world.",
     "Table": {
       "Network": {
         "name": "Network",
@@ -592,6 +607,7 @@
   },
   "ValidatorMetricsPage": {
     "title": "Validator Profile: Scores and Vanity Metrics",
+    "description": "The Metrics tab offers detailed performance data for this validator, including governance, technical, social and user scores and total value secured. Presented with real-time updates and clear charts. This makes it easy to assess reliability and efficiency, aiding in confident staking decisions. Pair this with our Reward Calculator Tool to see how these numbers impact your earnings.",
     "technical score": "Technical Score",
     "social score": "Social Score",
     "governance score": "Governance Score",
@@ -605,6 +621,7 @@
   },
   "ValidatorRevenuePage": {
     "title": "Validator Profile: Reward Revenue",
+    "description": "The Revenue tab details how much this validator earns and what it means for your staking rewards. This provides a full financial picture, helping you understand the validator's health and your potential returns. Including past slashing events and possible own tokens. This information shows how the validator's revenue model ties into your earnings, allowing you to choose a validator that fits your goals.",
     "global revenue": "Global Revenue",
     "p2pchat": "Rumor",
     "claim date": "Claim Date",
@@ -615,6 +632,7 @@
   },
   "ValidatorGovernancePage": {
     "title": "Validator Profile: Governance Summary Feed",
+    "description": "The Governance tab tracks this validator's activity in shaping their networks, logging their votes on proposals and any they’ve submitted, demonstrating their influence and dedication. This goes beyond staking, as it's about steering the chain's future. For specifics on proposals, check out our Network A-Z Directory. Their role in network decisions can affect protocol upgrades and reward structures, which directly impact you.",
     "proposals": "Validator Created Proposals",
     "news feed": "Governance News Feed",
     "similar opinions": "Similar Opinions",
@@ -637,7 +655,7 @@
   },
   "ValidatorPublicGoodsPage": {
     "title": "Validator Profile: Public Good Projects. Infrastructure, Community, Tools and Others",
-    "description": "Users to validator off-chain data, are validators to blocks. After you login, you may submit information about a specific validator. For example your favorite validator or mining pool is running a podcast or have built a wallet? Click the Submit button and add the required details. Earn rewards. Approve or disprove information. Please note that each submission is a transaction!",
+    "description": "The Projects tab showcases how this validator gives back, listing initiatives like running infrastructure, funding open-source tools, or educational efforts, along with details on their impact. This allows you to support a validator whose values align with yours, contributing to a stronger, decentralized web3. These projects highlight their commitment, making staking with them feel rewarding as you know they’re making a difference.",
     "Tabs": {
       "Infrastructure": "Infrastructure",
       "Community": "Community",
@@ -689,6 +707,7 @@
   },
   "ValidatorPassportPage": {
     "title": "Validator Node Passport",
+    "description": "This tab serves as your node’s personal ID card, providing essential details like the network it operates on, its operator address, and unique identifiers. Whether you’re a node operator or just exploring, this is your starting point to verify and understand the node. Knowing these details helps you track performance and confirm alignment with your staking or monitoring goals, serving as the foundation for further exploration.",
     "pretext in prefix": "on",
     "this is my node": "This is my node",
     "commission": "Commission",
@@ -727,6 +746,7 @@
     }
   },
   "VotingSummaryPage": {
+    "description": "The Votes tab shows how this node engages with network governance, listing every proposal it has voted on and its stance on each. This reveals the node's influence on the network’s direction. You can compare its voting habits with other nodes. A node that votes actively signals its dedication to the network, which could sway your decision on who to stake with.",
     "show same opinion": "Show Validators With Same Opinions",
     "Table": {
       "Title": {
@@ -748,6 +768,7 @@
     }
   },
   "TxSummaryPage": {
+    "description": "The Transactions tab tracks every action this node takes on the network, including staking moves and reward payouts, all logged with timestamps and specifics. It’s ideal for monitoring the node’s activity and spotting behavior trends, ensuring it’s running smoothly. Monitoring these logs helps you check the node’s health and reliability, which is crucial for making smart staking choices.",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",
@@ -768,6 +789,7 @@
     }
   },
   "RichListPage": {
+    "description": "This tab shows power events and node delegators. It highlight significant moments like major delegations or shifts in the validator set. This gives you an insider peek at the node’s clout and potential impact on the network’s balance of power. Seeing the node’s position helps you judge its stability and growth potential, which is super handy for long-term planning.",
     "token": "TOKEN",
     "Table": {
       "Address": {
@@ -793,6 +815,7 @@
     }
   },
   "NodeRevenuePage": {
+    "description": "The Revenue tab reveals how much you can earn with this node over time. This gives you a clear picture of its financial performance, helping you determine if it’s profitable and how it could boost your staking returns. A node’s revenue shows its efficiency and success against the network itself, key information whether you’re staking now or planning ahead.",
     "Staking Calculator": "Staking Calculator",
     "Token": "Token",
     "Enter Staking Amount": "Enter Staking Amount",
@@ -831,7 +854,8 @@
     "hide dropdown": "Hide Slashing Event"
   },
   "TotalTxsPage": {
-    "title": "Transactions Summary",
+    "title": "Blockchain: Transaction Activity",
+    "description": "I’ve put together this Transaction Summary Table to give you a quick, clear view of what’s happening across the network. It’s packed with real-time data on transaction volume, average fees, tps and the total number of transactions. Want to dig deeper? Just click any transaction to see its full details!",
     "total transactions": "Total Transactions",
     "transactions 30d": "Transactions (30d)",
     "transactions yesterday": "Transactions (Yesterday)",
@@ -857,7 +881,8 @@
     }
   },
   "TxInformationPage": {
-    "title": "Transaction Information",
+    "title": "Blockchain Transaction Details: In-Depth Information of the Transaction",
+    "description": "The Transaction Details page is laid out with everything you need to know about this specific transaction—its unique hash, JSON data, sender and receiver addresses, amount transferred, status, timestamp, and fees. It’s like a detailed receipt for your blockchain activity, giving you full transparency and peace of mind. Need to explore more? Check out our Transaction History Explorer for advanced insights!",
     "show all transactions": "Show All Transactions",
     "hash txs tooltip": "text",
     "claim reward": "Claim Reward",
@@ -878,6 +903,8 @@
     "auto claim reward": "Auto Claim Reward"
   },
   "ProposalPage": {
+    "title": "Governance Proposal",
+    "description": "All the key details of this blockchain governance proposal you need. This page delivers real-time voting stats—yes, no, abstain, and veto percentages—plus validator votes to show who’s driving the decision. Our AI summary breaks down the proposal’s essentials for quick understanding, while links to the full text and forums offer deeper exploration. Check the timestamp to stay on top of the voting deadline and make your voice heard!",
     "proposal tooltip": "text",
     "signaling": "Signaling",
     "on going": "On Going",
@@ -923,12 +950,24 @@
       "Delegators": "Delegators",
       "Curious": "Curious"
     },
-    "title": "Library",
-    "description": "Library is here to help you find your path!",
-    "Validators": "Validators",
-    "Developers": "Developers",
-    "Delegators": "Delegators",
-    "Curious": "Curious",
+    "title": "Gamified Learning Library: Choose Your Web3 Journey",
+    "description": "Welcome to the Gamified Learning Library, your knowledge aggregator for mastering web3! This is where your adventure begins—choose your path from the next four tabs: Developer, Validator, Delegator, or Curious. Each path offers tailored resources to boost your skills, and as you complete readings, you’ll answer questions to earn internal points. It’s a fun, interactive way to explore the world of blockchain and level up your expertise. Pick your path and let’s get started!",
+    "Validators": {
+      "title": "Validator and Miner Resources: Secure Networks and Earn Rewards",
+      "description": "Validators and Miners, this one’s for you! The Validator and Miner Resources tab offers filtered links to guides on network security, staking rewards, mining materials and governance participation. As you read through, you’ll answer questions to earn internal points, sharpening your skills while contributing to blockchain networks. It’s the perfect spot to deepen your expertise and maximize your impact. Check out the resources and take your game to the next level!"
+    },
+    "Developers": {
+      "title": "Developer Hub: Blockchain Coding and Smart Contract Resources",
+      "description": "The Developer Hub is built for coders ready to dive into blockchain development! Here, you’ll find filtered links to resources on smart contracts, coding tutorials, and decentralized app creation. After each reading, you’ll tackle questions to earn internal points, making learning both rewarding and engaging. Whether you’re a beginner or a seasoned dev, this tab has everything you need to build the future of web3. Start exploring now!"
+    },
+    "Delegators": {
+      "title": "Delegator Guide: Optimize Staking or Mining and Select Top Validators and Pools",
+      "description": "Delegators, welcome to your go-to resource hub! The Delegator Guide provides filtered links to info on staking strategies, validator selection, and reward optimization. After each reading, you’ll answer questions to earn internal points, helping you become a staking pro. Whether you’re new to delegating or refining your approach, this tab has the tools you need to succeed. Start exploring and boost your staking rewards today!"
+    },
+    "Curious": {
+      "title": "Curious Explorer: Learn Blockchain Basics and Web3 Essentials",
+      "description": "New to web3 or just curious? The Curious Explorer tab is your starting line! Discover filtered links to resources on blockchain basics, crypto education, and decentralized applications. As you read, you’ll answer questions to earn internal points, turning your curiosity into knowledge the gamified way. It’s a fun, approachable entry into the world of web3—jump in and see where your journey takes you!"
+    },
     "customize": "Customize",
     "Submit New Info": "Submit New Info",
     "how to run a node on cosmos": "How to run a node on Cosmos"

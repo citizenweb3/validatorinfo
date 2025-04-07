@@ -7,6 +7,7 @@ import PageTitle from '@/components/common/page-title';
 import PlusButton from '@/components/common/plus-button';
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
   params: NextPageWithLocale;
@@ -19,7 +20,8 @@ const LibraryCuriousPage: NextPageWithLocale<PageProps> = async ({ params: { loc
 
   return (
     <div>
-      <PageTitle text={t('Curious')} />
+      <PageTitle text={t('Curious.title')} />
+      <SubDescription text={t('Curious.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <LibraryTagsFilter selectedTags={tags} />
       <Letters />
       <div className="flex flex-row items-center justify-between">

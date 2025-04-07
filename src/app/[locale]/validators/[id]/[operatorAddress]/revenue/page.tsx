@@ -12,6 +12,7 @@ import {
   slashingEventsExample,
   SlashingEventsExampleInterface,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashingEventsExample';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string; operatorAddress: string };
@@ -30,10 +31,9 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
   }
 
   return (
-    <div>
-      <div className="mt-4">
-        <SubTitle text={t('Staking Calculator')} />
-      </div>
+    <>
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <SubTitle text={t('Staking Calculator')} />
       <div className="mb-8 mt-4 flex justify-center text-lg">
         <Suspense fallback={<div>Loading...</div>}>
           <NodeStakingCalculator node={node} price={price ?? undefined} />
@@ -46,7 +46,7 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
         Table={SlashingEventsTable}
         items={slashingEventsExample}
       />
-    </div>
+    </>
   );
 };
 

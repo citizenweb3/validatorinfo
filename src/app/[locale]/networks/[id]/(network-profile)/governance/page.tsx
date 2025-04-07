@@ -8,6 +8,7 @@ import LiveProposals from '@/app/networks/[id]/(network-profile)/governance/live
 import { SortDirection } from '@/server/types';
 import NetworkProposals
   from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string };
@@ -38,7 +39,8 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <div className="mb-6">
-      <PageTitle prefix={`${chain?.prettyName}:` ?? 'Network:'} text={t('title')} />
+      <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <TotalsListProposals />
       <LiveProposals chainId={id} />
       <NetworkProposals page={'VotingSummaryPage'}

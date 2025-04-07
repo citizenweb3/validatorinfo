@@ -28,7 +28,7 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
     <div>
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
-      <SubDescription text={t('sub description')} contentClassName={'mx-4 my-2'} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2 mb-2'} />
       <Validators
         page="HomePage"
         sort={{ sortBy, order }}

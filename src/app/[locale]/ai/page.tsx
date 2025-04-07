@@ -7,6 +7,7 @@ import { mainTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
@@ -16,13 +17,7 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
       <Story src="ai" alt="Pixelated, 90s game-style characters talking with a GPT-style AI caht bot" />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
-      <div className="mt-6 whitespace-pre-line text-base">
-        {t.rich('text', {
-          issue: (text) => (
-            <TextLink target="_blank" href="https://github.com/citizenweb3/validatorinfo/issues" content={text} />
-          ),
-        })}
-      </div>
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <NotToday />
     </div>
   );

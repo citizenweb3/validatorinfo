@@ -21,7 +21,7 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
       />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-6'} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-4 mt-2'} />
       <ChatWrapper />
     </div>
   );

@@ -13,7 +13,7 @@ const ProposalInformation: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('ProposalPage');
 
   return (
-    <div className="mt-8">
+    <div className="mt-2">
       <div className="flex justify-between mb-8 ml-5">
         <div className="flex flex-row">
           <div className="flex mr-5">

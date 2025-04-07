@@ -37,7 +37,7 @@ export default async function GlobalPosPage() {
       />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-6'} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <Suspense fallback={<div />}>
         <TotalsList />
       </Suspense>
