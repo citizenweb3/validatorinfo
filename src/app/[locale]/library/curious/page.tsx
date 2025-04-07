@@ -1,4 +1,4 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
 import LibraryTagsFilter from '@/app/library/library-tags-filter';
 import Letter from '@/app/metrics/letter';
@@ -20,6 +20,9 @@ const LibraryCuriousPage: NextPageWithLocale<PageProps> = async ({ params: { loc
 
   return (
     <div>
+      <PageTitle text={t('Curious.title')} />
+      <SubDescription text={t('Curious.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <LibraryTagsFilter selectedTags={tags} />
       <PageTitle text={t('Curious.title')} />
       <SubDescription text={t('Curious.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <LibraryTagsFilter selectedTags={tags} />
