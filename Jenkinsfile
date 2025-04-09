@@ -20,7 +20,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 script {
-                    sh 'yarn'
+                    sh 'yarn install --frozen-lockfile'
                     sh 'make generate-schema'
                     sh 'yarn build'
                     sh "pm2 restart ${PM2_SERVICE_APP}"
