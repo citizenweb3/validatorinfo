@@ -16,7 +16,7 @@
     "@keplr-wallet/cosmos": "0.12.76",
     "@keplr-wallet/types": "^0.12.144",
     "@popperjs/core": "^2.11.8",
-    "@prisma/client": "^5.18.0",
+    "@prisma/client": "^6.6.0",
     "base64url": "^3.0.1",
     "chart.js": "^4.4.3",
     "cheerio": "^1.0.0",

@@ -1,9 +1,0 @@
-model Account {
-  id          Int       @id @default(autoincrement())
-  username    String?   @unique
-  mainAddress String    @unique @map("main_address") @db.VarChar(256)
-  addresses   Address[] @relation("account_addresses")
-  coreTeam    Boolean   @default(false) @map("core_team")
-
-  @@map("accounts")
-}
