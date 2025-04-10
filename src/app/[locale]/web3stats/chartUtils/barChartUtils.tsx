@@ -551,7 +551,7 @@ export function handleBarTooltip(
         chartArea
           .append('text')
           .attr('class', 'tooltip-text')
-          .attr('x', tooltipX + (tooltipConfig.width * (2/3)))
+          .attr('x', tooltipX + (tooltipConfig.width * (5/6)))
           .attr('y', yPosition)
           .attr('fill', color)
           .attr('font-size', '13.75px')

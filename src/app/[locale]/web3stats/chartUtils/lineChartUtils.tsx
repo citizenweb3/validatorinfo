@@ -547,7 +547,7 @@ export function handleTooltip(
           .append('rect')
           .attr('class', 'tooltip-text')
           .attr('x', tooltipX + 10)
-          .attr('y', yPosition - 5)
+          .attr('y', yPosition - 10)
           .attr('width', tooltipConfig.squareSize)
           .attr('height', tooltipConfig.squareSize)
           .attr('fill', color)
