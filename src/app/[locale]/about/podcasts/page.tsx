@@ -14,6 +14,9 @@ import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function PodcastPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('AboutPage');

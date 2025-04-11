@@ -35,11 +35,13 @@ const chainMethods: Record<string, ChainMethods> = {
   union: cosmosChainMethods,
   axone: cosmosChainMethods,
   bostrom: cosmosChainMethods,
+  nillion: cosmosChainMethods,
+  nym: cosmosChainMethods,
 
   'neutron-testnet': neutronChainMethods,
-  'nillion-testnet': cosmosChainMethods,
   'artela-testnet': cosmosChainMethods,
   'space-pussy': spacePussyChainMethods,
+  'warden-testnet': cosmosChainMethods,
 };
 
 const getChainMethods = (chainName: string): ChainMethods => {
