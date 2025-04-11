@@ -9,6 +9,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -24,10 +25,10 @@ const MetricsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
       <Story src="metrics" alt="Pixelated, 90s game-style characters next to web3 charts, looking out for analytics" />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-4'} />
       <Switcher />
       <Letters />
       <Letter letter="T" />
-
       <div className="mt-6">
         <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
           <div>{t('Token')}</div>

@@ -53,7 +53,7 @@ const LibraryTagsFilter: FC<OwnProps> = ({ selectedTags }) => {
   };
 
   return (
-    <div className="mt-5 flex h-6 items-center justify-start">
+    <div className="flex h-6 items-center justify-start">
       <div className="mr-1 flex flex-row items-center">
         <Button
           activeType="switcher"

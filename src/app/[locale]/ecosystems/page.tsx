@@ -6,6 +6,7 @@ import Story from '@/components/story';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import Ecosystems from '@/app/ecosystems/ecosystems-list/ecosystems';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -39,6 +40,7 @@ const EcosystemsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'pb-2'} />
       <Ecosystems
         page="EcosystemsPage"
         perPage={perPage}

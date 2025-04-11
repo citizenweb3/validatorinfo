@@ -5,7 +5,7 @@ import { FC } from 'react';
 
 import { devActivityTableExampleInterface } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import DeveloperActivityTableItem
-  from '@/app/networks/[id]/(network-profile)/dev_info/developer-activity/developer-activity-table-item';
+  from '@/app/networks/[id]/(network-profile)/dev/developer-activity/developer-activity-table-item';
 
 interface OwnProps {
   items: devActivityTableExampleInterface[];

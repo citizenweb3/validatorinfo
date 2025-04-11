@@ -25,7 +25,7 @@ const ValidatorVotesItem: FC<OwnProps> = ({ item }) => {
     }
   };
 
-  const proposalLink = `/networks/18/proposal/${item.proposalId}`;
+  const proposalLink = `/networks/1/proposal/${item.proposalId}`;
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">

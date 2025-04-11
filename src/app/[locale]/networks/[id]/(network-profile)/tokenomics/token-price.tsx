@@ -30,7 +30,7 @@ const NetworkTokenPrice: FC<OwnProps> = async ({ denom, price }) => {
   ];
 
   return (
-    <div className="mt-4">
+    <div>
       <SubTitle text={t('Token Price')} />
       <div className="flex flex-row justify-between gap-x-5 mt-5">
         <div className="flex flex-row w-2/3 gap-x-10 items-start mt-6">

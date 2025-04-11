@@ -6,6 +6,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -20,6 +21,7 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
       />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-4 mt-2'} />
       <ChatWrapper />
     </div>
   );

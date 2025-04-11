@@ -13,7 +13,7 @@ const PeersSeedsBlocks: FC<OwnProps> = async () => {
   const t = await getTranslations('NetworkDevInfo');
 
   return (
-    <div className="mt-9">
+    <div className="mt-4">
       <div className="grid grid-cols-2 gap-x-10 text-base mb-7">
         <div className="border-b border-bgSt pl-1 pb-4">
           <div className="text-highlight text-lg mb-2 ml-2">{t('pre-vote')}</div>

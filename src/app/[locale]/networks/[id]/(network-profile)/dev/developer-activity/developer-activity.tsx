@@ -9,7 +9,7 @@ import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item
 import SubTitle from '@/components/common/sub-title';
 import TableDropdown from '@/components/common/table-dropdown';
 import DeveloperActivityTable
-  from '@/app/networks/[id]/(network-profile)/dev_info/developer-activity/developer-activity-table';
+  from '@/app/networks/[id]/(network-profile)/dev/developer-activity/developer-activity-table';
 
 interface OwnProps {
 }

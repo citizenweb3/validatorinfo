@@ -16,7 +16,6 @@ const ChatWrapper: FC<OwnProps> = ({}) => {
 
   return (
     <>
-      {!isChatOpened && <div className="mr-8 mt-4 whitespace-pre-line py-4 text-base">{t('description')}</div>}
       <div className="flex flex-grow flex-col">
         {isChatOpened ? (
           <Chat username={username} />

@@ -9,6 +9,7 @@ import SubTitle from '@/components/common/sub-title';
 import TokenPriceChart from '@/app/networks/[id]/(network-profile)/tokenomics/charts/token-price-chart';
 import RevenueCapitalFlowChart
   from '@/app/networks/[id]/(network-profile)/tokenomics/charts/revenue-capital-flow-chart';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string };
@@ -24,8 +25,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 
 const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({
-                                                                      params: { locale, id },
-                                                                    }) => {
+    params: { locale, id },
+  }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkTokenomics' });
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
@@ -33,7 +34,8 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <div>
-      <PageTitle prefix={`${chain?.prettyName}:` ?? 'Network:'} text={t('title')} />
+      <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <TokenPrice denom={chain?.denom} price={tokenPrice ? tokenPrice.value : 12.43} />
       <DistributionGiniParameters chainId={chainId} />
       <SubTitle text={t('Token Price')} />

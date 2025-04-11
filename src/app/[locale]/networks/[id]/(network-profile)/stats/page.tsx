@@ -1,10 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 
-import OperatorDistribution from '@/app/networks/[id]/(network-profile)/statistics/operator-distribution';
-import NetworkStatistics from '@/app/networks/[id]/(network-profile)/statistics/network-statistics';
+import OperatorDistribution from '@/app/networks/[id]/(network-profile)/stats/operator-distribution';
+import NetworkStatistics from '@/app/networks/[id]/(network-profile)/stats/network-statistics';
 import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -21,13 +22,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({ params: { id } }) => {
+const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({ params: { locale, id } }) => {
+  const t = await getTranslations({ locale, namespace: 'NetworkStatistics' });
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
 
   return (
     <div className="mb-16">
-      <PageTitle text={chain?.prettyName ?? 'Network'} />
+      <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <NetworkStatistics chain={chain} />
       <OperatorDistribution chainId={chainId} />
     </div>

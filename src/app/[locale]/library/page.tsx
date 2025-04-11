@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import PageTitle from '@/components/common/page-title';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
 }
@@ -11,7 +12,7 @@ const LibraryPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
   return (
     <div>
       <PageTitle text={t('title')} />
-      <div className="ml-8 mt-3 font-sfpro text-base">{t('description')}</div>
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
     </div>
   );
 };

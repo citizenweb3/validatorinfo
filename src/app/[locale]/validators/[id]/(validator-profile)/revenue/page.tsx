@@ -8,6 +8,7 @@ import SubTitle from '@/components/common/sub-title';
 import ToolTip from '@/components/common/tooltip';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string };
@@ -32,6 +33,7 @@ const ValidatorRevenuePage: NextPageWithLocale<PageProps> = async ({ params }) =
   return (
     <div className="mb-20">
       <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="flex flex-row items-center justify-between">
         <GlobalRevenue />
         <RumorsLink id={validatorId} locale={locale} />

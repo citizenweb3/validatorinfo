@@ -6,6 +6,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 const partners = [
   [
@@ -29,18 +30,17 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
       <Story src="partners" alt="Pixelated, 90s game-style characters partner up and exchanging consensus" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Partners.title')} />
-      <div className="">
-        <div className="mt-20">
-          {partners.map((partnerList, index) => (
-            <div className="mt-20 flex w-full items-center justify-center" key={index}>
-              {partnerList.map((partner) => (
-                <div key={partner.link} className="mx-[5%] flex w-[10%] items-center justify-center">
-                  <PartnerItem title={partner.title} link={partner.link} icon={partner.icon} />
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+      <SubDescription text={t('Partners.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <div className="mt-10">
+        {partners.map((partnerList, index) => (
+          <div className="flex mb-20 w-full items-center justify-center" key={index}>
+            {partnerList.map((partner) => (
+              <div key={partner.link} className="mx-[5%] flex w-[10%] items-center justify-center">
+                <PartnerItem title={partner.title} link={partner.link} icon={partner.icon} />
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

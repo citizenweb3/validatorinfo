@@ -41,7 +41,7 @@ const NodePagesTitle: FC<OwnProps> = async ({ locale, page, node }) => {
               </div>
             </Link>
             <span className="mx-2">{t('pretext in prefix')}</span>
-            <Link href={`/networks/${node?.chainId}/passport`} className="group">
+            <Link href={`/networks/${node?.chainId}/overview`} className="group">
               <div className="flex flex-row">
                 <span className="group-hover:text-oldPalette-white group-active:text-3xl">{node?.chain.prettyName}</span>
                 <div className={`${cursor} mr-1`} />

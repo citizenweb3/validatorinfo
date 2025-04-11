@@ -9,6 +9,7 @@ import ToolTip from '@/components/common/tooltip';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string };
@@ -40,6 +41,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
   return (
     <div className="mb-10">
       <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="mb-20 mt-6">
         <ToolTip tooltip={t('tooltip created proposals')} direction={'top'}>
           <SubTitle text={t('proposals')} size="h2" />

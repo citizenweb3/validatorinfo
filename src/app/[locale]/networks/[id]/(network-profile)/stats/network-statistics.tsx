@@ -15,7 +15,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
   const totalStaked = Number(chain?.bondedTokens) / 10 ** Number(chain?.coinDecimals);
 
   return (
-    <div className="mt-4 grid grid-cols-2 gap-x-10">
+    <div className="grid grid-cols-2 gap-x-10">
       <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
         <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
           {t('total staked')}

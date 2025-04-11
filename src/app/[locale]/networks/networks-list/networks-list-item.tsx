@@ -21,13 +21,13 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
   return (
     <tr className="group font-handjet hover:bg-bgHover ">
       <td className="group/avatar w-1/3 border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.id}/passport`} />
+        <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.id}/overview`} />
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <div className="text-center">{item.denom}</div>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Tooltip tooltip={totalSupply.toLocaleString()}>
+        <Tooltip tooltip={fdv.toLocaleString()}>
           <div className="text-center">{formatCash(fdv)}</div>
         </Tooltip>
       </td>

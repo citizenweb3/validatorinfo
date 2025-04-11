@@ -7,6 +7,7 @@ import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -33,6 +34,7 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       <PageTitle text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <SimpleValidators page="HomePage" perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} ecosystems={ecosystems} />
     </div>
   );

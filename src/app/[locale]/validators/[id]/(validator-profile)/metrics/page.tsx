@@ -5,6 +5,7 @@ import MetricsChartLine from '@/app/validators/[id]/(validator-profile)/metrics/
 import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string };
@@ -29,6 +30,7 @@ const ValidatorMetricsPage: NextPageWithLocale<PageProps> = async ({ params }) =
   return (
     <div className="mb-20">
       <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <MetricsBlocks id={validatorId} />
       <MetricsChartLine />
     </div>

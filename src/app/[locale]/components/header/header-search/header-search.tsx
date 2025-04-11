@@ -95,7 +95,7 @@ const HeaderSearch: FC<OwnProps> = () => {
             if (isItemIsValidator(selectedItem)) {
               router.push(`/validators/${selectedItem.id}/networks`);
             } else {
-              router.push(`/networks/${selectedItem.name}`);
+              router.push(`/networks/${selectedItem.id}/overview`);
             }
             onSelect();
           }

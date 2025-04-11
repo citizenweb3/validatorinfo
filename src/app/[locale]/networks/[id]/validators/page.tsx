@@ -5,6 +5,7 @@ import chainService from '@/services/chain-service';
 import { SortDirection } from '@/server/types';
 import NetworkValidators from '@/app/networks/[id]/validators/network-validators-table/network-validators';
 import Link from 'next/link';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -45,7 +46,7 @@ const NetworkValidatorsPage: NextPageWithLocale<PageProps> = async (
       <PageTitle
         text={t('title')}
         prefix={
-          <Link href={`/networks/${chainId}/passport`} className="group">
+          <Link href={`/networks/${chainId}/overview`} className="group">
             <div className="flex flex-row">
               <span className="group-hover:text-oldPalette-white group-active:text-3xl">
                 {chain?.prettyName}
@@ -55,6 +56,7 @@ const NetworkValidatorsPage: NextPageWithLocale<PageProps> = async (
           </Link>
         }
       />
+      <SubDescription text={t('description', { networkName: chain?.prettyName })} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <NetworkValidators
         chainId={chainId}
         page={'NetworkValidatorsPage'}
