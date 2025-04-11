@@ -11,12 +11,12 @@ export interface StakingParams {
   maxValidators: number | null;
 }
 
-export interface ChainTVLResult {
+export interface ChainTVSResult {
   totalSupply: string;
   bondedTokens: string;
   unbondedTokens: string;
   unbondedTokensRatio: number;
-  tvl: number;
+  tvs: number;
 }
 
 export interface AddChainProps {
@@ -49,7 +49,7 @@ export type ProposalsResult = {
   passed: number;
 };
 
-export type GetTvlFunction = (chain: AddChainProps) => Promise<ChainTVLResult | null>;
+export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
 export type GetProposalsFunction = (chain: AddChainProps) => Promise<ProposalsResult>;
@@ -58,7 +58,7 @@ export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<Staking
 export interface ChainMethods {
   getNodes: GetNodesFunction;
   getApr: GetAprFunction;
-  getTvl: GetTvlFunction;
+  getTvs: GetTvsFunction;
   getStakingParams: GetStakingParamsFunction;
   getProposals: GetProposalsFunction;
 }

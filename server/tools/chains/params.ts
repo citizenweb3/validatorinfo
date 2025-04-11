@@ -586,7 +586,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinGeckoId: '',
     coinType: 118,
     denom: 'NYM',
-    minimalDenom: 'unom',
+    minimalDenom: 'unym',
     logoUrl:
       'https://raw.githubusercontent.com/nymtech/nym/257e36ddcb408d301307b8ddf542b5275704e7d9/assets/logo/logo-bw.svg',
     nodes: [

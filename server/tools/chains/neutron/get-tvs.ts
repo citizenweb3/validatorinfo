@@ -1,8 +1,8 @@
 import logger from '@/logger';
-import { GetTvlFunction } from '@/server/tools/chains/chain-indexer';
+import { GetTvsFunction } from '@/server/tools/chains/chain-indexer';
 import fetchData from '@/server/utils/fetch-data';
 
-const { logError } = logger('get-tvl');
+const { logError } = logger('get-tvs');
 
 interface BankBalancesResponse {
   balances: {
@@ -11,12 +11,12 @@ interface BankBalancesResponse {
   }[];
 }
 
-const getTvl: GetTvlFunction = async (chain) => {
+const getTvs: GetTvsFunction = async (chain) => {
   try {
     let totalSupply = '0';
     let bondedTokens = '0';
     let unbondedTokens = '0';
-    let tvl = 0;
+    let tvs = 0;
     let unbondedTokensRatio = 0;
 
     const lcdEndpoint = chain.nodes.find((node) => node.type === 'lcd')?.url;
@@ -45,14 +45,14 @@ const getTvl: GetTvlFunction = async (chain) => {
       console.error('Error querying locked tokens:', error);
     }
 
-    tvl = +bondedTokens / +totalSupply;
+    tvs = +bondedTokens / +totalSupply;
 
     return {
       totalSupply,
       bondedTokens,
       unbondedTokens,
       unbondedTokensRatio,
-      tvl,
+      tvs,
     };
   } catch (error: any) {
     logError(`Get TVL for [${chain.name}] error: `, error);
@@ -60,4 +60,4 @@ const getTvl: GetTvlFunction = async (chain) => {
   }
 };
 
-export default getTvl;
+export default getTvs;

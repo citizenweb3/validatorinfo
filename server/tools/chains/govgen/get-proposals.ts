@@ -128,7 +128,7 @@ const getGovgenProposals: GetProposalsFunction = async (chain) => {
             page += 1;
           }
         } catch (error) {
-          console.error('Error fetching proposals', error);
+          console.error(`Error fetching proposals ${chain.name}`, error);
           break;
         }
       }
