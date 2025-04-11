@@ -38,7 +38,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
             {results?.chains.map((chain, index) => (
               <SearchItem
                 name={chain.prettyName}
-                link={`/networks/${chain.name}`}
+                link={`/networks/${chain.id}/overview`}
                 icon={chain.logoUrl?.indexOf('http') === 0 ? chain.logoUrl : `https://${chain.logoUrl}`}
                 isSelected={activeIndex === (results.validators.length ?? 0) + index}
                 onClick={onSelect}

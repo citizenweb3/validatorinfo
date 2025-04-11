@@ -38,7 +38,7 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
   return (
     <div>
       <Story
-        src="networks"
+        src="nodes"
         alt="Pixelated, 90s game-style characters connecting web cables of web3 blockchain networks"
       />
       <TabList page="ValidatorsPage" tabs={validatorsTabs} />

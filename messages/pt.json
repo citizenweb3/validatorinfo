@@ -240,7 +240,10 @@
     "proposer": "Proponente",
     "voting start": "Início da Votação",
     "voting end": "Fim da Votação",
-    "remaining time": "Tempo Restante"
+    "remaining time": "Tempo Restante",
+    "no live proposals": "Sem Propostas em Direto",
+    "more live proposals": "Mais Propostas em Direto",
+    "less live proposals": "Menos Propostas em Direto"
   },
   "NetworkDevInfo": {
     "title": "Atividade de Desenvolvedores: Contribuidores Web3",
@@ -909,6 +912,7 @@
     "proposal tooltip": "text",
     "signaling": "Sinalização",
     "on going": "Em andamento",
+    "past": "Passado",
     "link to full proposal": "link para a proposta completa",
     "voting period": "Período de votação",
     "show all proposals": "Mostrar todas as propostas",

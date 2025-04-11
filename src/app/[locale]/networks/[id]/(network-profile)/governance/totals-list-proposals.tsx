@@ -19,11 +19,11 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals }) => {
                        className={'pb-6 pt-2.5'}
                        dataClassName={'mt-5'} />
       <MetricsCardItem title={t('passed')}
-                       data={proposalsPassed?.length}
+                       data={proposalsPassed.length}
                        className={'pb-6 pt-2.5'}
                        dataClassName={'mt-5'} />
       <MetricsCardItem title={t('rejected')}
-                       data={proposalsRejected?.length}
+                       data={proposalsRejected.length}
                        className={'pb-6 pt-2.5'}
                        dataClassName={'mt-5'} />
     </div>

@@ -7,6 +7,7 @@ import ProposalMetrics from '@/app/networks/[id]/proposal/[proposalId]/proposal-
 import AiGeneratedSummary from '@/app/networks/[id]/proposal/[proposalId]/ai-generated-summary';
 import { getTranslations } from 'next-intl/server';
 import SubDescription from '@/components/sub-description';
+import ProposalService from '@/services/proposal-service';
 
 export default async function ProposalLayout({ children, params: { locale, id, proposalId } }: Readonly<{
   children: ReactNode;
@@ -15,13 +16,14 @@ export default async function ProposalLayout({ children, params: { locale, id, p
   const t = await getTranslations({ locale, namespace: 'ProposalPage' });
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
+  const proposal = await ProposalService.getProposalById(chainId, proposalId);
 
   return (
     <>
-      <PageTitle text={`#${proposalId} Gaia v15 Software Upgrade`} prefix={`${t('title')}:`} />
+      <PageTitle text={`#${proposalId} ${proposal?.title}`} prefix={`${t('title')}:`} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <ProposalInformation chain={chain} />
-      <ProposalMetrics chain={chain} />
+      <ProposalInformation proposal={proposal} />
+      <ProposalMetrics proposal={proposal} chain={chain} />
       {children}
       <AiGeneratedSummary />
     </>

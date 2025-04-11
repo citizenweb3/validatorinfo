@@ -240,7 +240,10 @@
     "proposer": "Предложивший",
     "voting start": "Начало Голосования",
     "voting end": "Окончание Голосования",
-    "remaining time": "Оставшееся Время"
+    "remaining time": "Оставшееся Время",
+    "no live proposals": "Нет действующих предложений",
+    "more live proposals": "Больше действующих предложений",
+    "less live proposals": "Меньше действующих предложений"
   },
   "NetworkDevInfo": {
     "title": "Активность разработчиков: Контрибьюторы Web3",
@@ -909,6 +912,7 @@
     "proposal tooltip": "text",
     "signaling": "Сигнал",
     "on going": "В процессе",
+    "past": "Закончилось",
     "link to full proposal": "Ссылка на Полное Предложение",
     "voting period": "Период Голосования",
     "show all proposals": "Показать Все Предложения",

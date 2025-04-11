@@ -54,7 +54,7 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async (
                         perPage={perPage}
                         currentPage={currentPage}
                         sort={{ sortBy, order }}
-                        chainId={id} />
+                        chainId={chainId} />
     </div>
   );
 };
