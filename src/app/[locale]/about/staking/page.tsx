@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
@@ -11,7 +12,9 @@ import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
-import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default function StakingPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
@@ -42,8 +45,13 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
                 <div className="-ml-1 -mt-7 flex flex-grow items-center justify-center">
                   {item.icon && (
                     <Link href={`https://staking.citizenweb3.com/chains/${item.stakingName}`} target={`_blank`}>
-                      <Image src={item.icon} alt={item.name} width={80} height={80}
-                             className="h-20 w-20 rounded-full" />
+                      <Image
+                        src={item.icon}
+                        alt={item.name}
+                        width={80}
+                        height={80}
+                        className="h-20 w-20 rounded-full"
+                      />
                     </Link>
                   )}
                 </div>
@@ -226,7 +234,8 @@ const data: {
   {
     name: 'Testnet Quicksilver',
     icon: '/img/icons/chains/qck.png',
-    delegate: 'https://testnet-explorer.konsortech.xyz/quicksilver/staking/quickvaloper1pd6yhpkt557d85mwdmvgt0mxpcc24kv7w0xh8n',
+    delegate:
+      'https://testnet-explorer.konsortech.xyz/quicksilver/staking/quickvaloper1pd6yhpkt557d85mwdmvgt0mxpcc24kv7w0xh8n',
     stakingName: 'quicksilvertestnet',
   },
 ];

@@ -8,6 +8,9 @@ import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'AIPage' });

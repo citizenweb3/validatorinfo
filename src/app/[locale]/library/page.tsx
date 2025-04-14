@@ -1,9 +1,12 @@
 import { getTranslations } from 'next-intl/server';
+
 import PageTitle from '@/components/common/page-title';
 import { NextPageWithLocale } from '@/i18n';
 
-interface PageProps {
-}
+interface PageProps {}
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const LibraryPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'LibraryPage' });

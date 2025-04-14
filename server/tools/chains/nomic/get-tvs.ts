@@ -1,5 +1,5 @@
 import logger from '@/logger';
-import { ChainTVLResult, GetTvlFunction } from '@/server/tools/chains/chain-indexer';
+import { ChainTVSResult, GetTvsFunction } from '@/server/tools/chains/chain-indexer';
 import fetchData from '@/server/utils/fetch-data';
 
 const { logError, logDebug } = logger('get-tvl');
@@ -11,7 +11,7 @@ interface StakingData {
   };
 }
 
-const getTvl: GetTvlFunction = async (chain) => {
+const getTvs: GetTvsFunction = async (chain) => {
   try {
     const indexerEndpoint = chain.nodes.find((node) => node.type === 'lcd')?.url;
     if (!indexerEndpoint) {
@@ -23,7 +23,7 @@ const getTvl: GetTvlFunction = async (chain) => {
     let bondedTokens = '0';
     let unbondedTokens = '0';
     let unbondedTokensRatio = 0;
-    let tvl = 0;
+    let tvs = 0;
 
     try {
       const stakingData: StakingData = await fetchData<StakingData>(
@@ -40,27 +40,27 @@ const getTvl: GetTvlFunction = async (chain) => {
       );
       bondedTokens = (+pool.pool.bonded_tokens).toString();
       unbondedTokens = (+pool.pool.not_bonded_tokens).toString();
-      tvl = +bondedTokens / +totalSupply;
+      tvs = +bondedTokens / +totalSupply;
       unbondedTokensRatio = +unbondedTokens / +totalSupply;
     } catch (error: any) {
       logError(`Get TVL for [${chain.name}] error: `, error);
     }
 
-    const result: ChainTVLResult = {
+    const result: ChainTVSResult = {
       totalSupply: totalSupply.toString(),
       bondedTokens: bondedTokens.toString(),
       unbondedTokens: unbondedTokens.toString(),
       unbondedTokensRatio,
-      tvl,
+      tvs,
     };
 
-    logDebug(`TVL for [${chain.name}]: ${JSON.stringify(result)}`);
+    logDebug(`TVS for [${chain.name}]: ${JSON.stringify(result)}`);
 
     return result;
   } catch (error: any) {
-    logError(`Get TVL for [${chain.name}] error: `, error);
+    logError(`Get TVS for [${chain.name}] error: `, error);
     return null;
   }
 };
 
-export default getTvl;
+export default getTvs;

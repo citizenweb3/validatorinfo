@@ -5,7 +5,7 @@ import { getChainParams } from '@/server/tools/chains/params';
 
 const { logInfo, logError } = logger('get-tvl');
 
-export const updateChainTvl = async (chainNames: string[]) => {
+export const updateChainTvs = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
     const chainMethods = getChainMethods(chainName);
@@ -19,22 +19,22 @@ export const updateChainTvl = async (chainNames: string[]) => {
         return null;
       }
       logInfo(`${chainName} updating`);
-      const tvl = await chainMethods.getTvl(chainParams);
+      const tvs = await chainMethods.getTvs(chainParams);
 
-      if (tvl) {
+      if (tvs) {
         await db.chain.update({
           where: { id: dbChain.id },
           data: {
-            ...tvl,
+            ...tvs,
           },
         });
       } else {
-        logError(`Can't fetch TVL for ${chainParams.name}`);
+        logError(`Can't fetch TVS for ${chainParams.name}`);
       }
     } catch (e) {
-      logError("Can't fetch TVL's: ", e);
+      logError("Can't fetch TVS's: ", e);
     }
   }
 };
 
-export default updateChainTvl;
+export default updateChainTvs;

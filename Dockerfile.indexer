@@ -1,0 +1,23 @@
+# Используем официальный образ Node.js 20
+FROM node:20
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем package.json и yarn.lock
+COPY package.json yarn.lock ./
+
+# Устанавливаем зависимости
+RUN yarn install
+
+# Копируем весь код проекта
+COPY . .
+
+# Генерируем Prisma-клиент
+RUN npx prisma generate
+
+# Указываем порт (если индексер предоставляет сервер)
+EXPOSE 3001
+
+# Команда для запуска
+CMD ["npx", "tsx", "server/indexer.ts"]

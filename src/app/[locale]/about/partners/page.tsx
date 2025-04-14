@@ -7,6 +7,9 @@ import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const partners = [
   [
     { title: 'Citizen Web3', icon: '/img/icons/partners/cw3.png', link: 'https://www.citizenweb3.com/' },
