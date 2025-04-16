@@ -1,55 +1,50 @@
 pipeline {
     agent any
-
     environment {
-        PM2_SERVICE_APP = "${env.BRANCH_NAME == 'main' ? 'main-app' : (env.BRANCH_NAME == 'dev' ? 'dev-app' : 'next')}"
-        PM2_SERVICE_INDEXER = "${env.BRANCH_NAME == 'main' ? 'main-indexer' : (env.BRANCH_NAME == 'dev' ? 'dev-indexer' : 'indexer')}"
+        // Определяем переменные окружения для портов (для документации или будущих расширений)
+        DEV_PORT_FRONTEND = '3000'
+        DEV_PORT_INDEXER = '3001'
+        MAIN_PORT_FRONTEND = '4000'
+        MAIN_PORT_INDEXER = '4001'
+        // Переменная для секрета базы данных (будет подтягиваться из Jenkins Credentials)
+        //POSTGRES_PASSWORD = credentials('postgres-password')
     }
-
-    triggers {
-        githubPush() // Trigger
-    }
-
     stages {
-        stage('Checkout code') {
-            steps {
-                git branch: "${env.BRANCH_NAME}", url: 'https://github.com/citizenweb3/validatorinfo.git'
-            }
-        }
-
-        stage('Install dependencies') {
+        stage('Build') {
             steps {
                 script {
-                    sh 'yarn install --frozen-lockfile'
-                    sh 'make generate-schema'
-                    sh 'yarn build'
-                    sh "pm2 restart ${PM2_SERVICE_APP}"
+                    if (env.BRANCH_NAME == 'dev') {
+                        sh 'docker-compose -f docker-compose.dev.yml build'
+                    } else if (env.BRANCH_NAME == 'main') {
+                        sh 'docker-compose -f docker-compose.main.yml build'
+                    }
                 }
             }
         }
-
-        stage('Indexer') {
+        stage('Test') {
             steps {
                 script {
-                    sh "pm2 restart ${PM2_SERVICE_INDEXER}"
+                    if (env.BRANCH_NAME == 'dev') {
+                        sh 'docker-compose -f docker-compose.dev.yml run --rm frontend yarn test || true'
+                        sh 'docker-compose -f docker-compose.dev.yml run --rm indexer yarn test || true'
+                    } else if (env.BRANCH_NAME == 'main') {
+                        sh 'docker-compose -f docker-compose.main.yml run --rm frontend yarn test || true'
+                        sh 'docker-compose -f docker-compose.main.yml run --rm indexer yarn test || true'
+                    }
                 }
             }
         }
-        
-        stage('Init chains') {
+        stage('Deploy') {
             steps {
                 script {
-                    sh "make init-chains"
+                    if (env.BRANCH_NAME == 'dev') {
+                        sh 'docker-compose -f docker-compose.dev.yml down'
+                        //sh 'POSTGRES_PASSWORD=$POSTGRES_PASSWORD docker-compose -f docker-compose.dev.yml up -d'
+                    } else if (env.BRANCH_NAME == 'main') {
+                        sh 'docker-compose -f docker-compose.main.yml down'
+                        //sh 'POSTGRES_PASSWORD=$POSTGRES_PASSWORD docker-compose -f docker-compose.main.yml up -d'
+                    }
                 }
-            }
-        }
-    }
-
-    post {
-        always {
-            script {
-                sh 'pm2 save'
-                sh 'pm2 list'
             }
         }
     }
