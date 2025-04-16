@@ -39,7 +39,7 @@ pipeline {
                 script {
                     if (env.BRANCH_NAME == 'dev') {
                         sh 'docker compose -f docker-compose.dev.yml down'
-                        sh 'dockercompose -f docker-compose.dev.yml up -d'
+                        sh 'docker compose -f docker-compose.dev.yml up -d'
                     } else if (env.BRANCH_NAME == 'main') {
                         sh 'docker compose -f docker-compose.main.yml down'
                         sh 'docker compose -f docker-compose.main.yml up -d'
