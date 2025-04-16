@@ -41,7 +41,8 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
       </div>
       <DelegatedTable chainId={node?.chainId ?? 1} page={'RichListPage'} perPage={perPage} currentPage={currentPage}
                       sort={{ sortBy, order }} />
-    </div>);
+    </div>
+  );
 };
 
 export default RichListPage;

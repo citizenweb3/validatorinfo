@@ -12,20 +12,15 @@ const sizes: Record<Size, string> = {
 };
 
 interface OwnProps {
-  value: any;
   size?: Size;
 }
 
-const CopyButton: FC<OwnProps> = ({ value, size = 'base' }) => {
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(value);
-  };
+const QrCodeButton: FC<OwnProps> = ({ size = 'base' }) => {
   return (
     <div
-      onClick={handleCopy}
-      className={`${sizes[size]} bg-copy hover:bg-copy_h active:bg-copy_a cursor-pointer bg-contain bg-no-repeat`}
+      className={`${sizes[size]} bg-qrcode hover:bg-qrcode_h active:bg-qrcode_a cursor-pointer bg-contain bg-no-repeat`}
     />
   );
 };
 
-export default CopyButton;
+export default QrCodeButton;

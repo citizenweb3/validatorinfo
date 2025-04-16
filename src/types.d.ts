@@ -55,5 +55,8 @@ export interface PagesProps {
     | 'NodesPage'
     | 'NetworkValidatorsPage'
     | 'ProposalPage'
-    | 'LibraryPage';
+    | 'LibraryPage'
+    | 'AccountPage'
+    | 'AccountPage.Passport'
+    | 'AccountPage.Transactions';
 }

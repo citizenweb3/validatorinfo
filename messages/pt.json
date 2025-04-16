@@ -975,5 +975,58 @@
     "customize": "Personalizar",
     "Submit New Info": "Enviar Novas Informações",
     "how to run a node on cosmos": "Como executar um nó na Cosmos"
+  },
+  "AccountPage": {
+    "Tabs": {
+      "Passport": "Passaporte",
+      "Tokens": "Tokens",
+      "Transactions": "Transações",
+      "Governance": "Governança",
+      "Analytics": "Análises"
+    },
+    "Passport": {
+      "title": "Passaporte da Conta Blockchain: Visão Essencial",
+      "description": "Bem-vindo ao passaporte da conta! Reuni os detalhes principais sobre este endereço de blockchain — identificador único, data de adesão, valor da conta e um resumo das delegações. É uma referência rápida para tudo o que diz respeito à conta, proporcionando um ponto de partida claro para explorar o web3.",
+      "Multichain Portfolio": "Carteira Multichain",
+      "Claim Address": "Endereço do Pedido",
+      "account value": "Valor da Conta",
+      "token": "Token",
+      "Merits": "Méritos",
+      "Delegations": "Delegações",
+      "Table": {
+        "Validator": {
+          "name": "Validador",
+          "hint": ""
+        },
+        "Staked Amount": {
+          "name": "Montante Apostado",
+          "hint": ""
+        },
+        "Reward Amount": {
+          "name": "Montante do Prémio",
+          "hint": ""
+        },
+        "Reward Value": {
+          "name": "Valor da Recompensa",
+          "hint": ""
+        }
+      }
+    },
+    "Tokens": {
+      "title": "Portfólio de Tokens e Posse de Ativos",
+      "description": ""
+    },
+    "Transactions": {
+      "title": "Histórico de Transações da Conta Blockchain",
+      "description": ""
+    },
+    "Governance": {
+      "title": "Participação em Governança: Votos e Impacto na Rede",
+      "description": ""
+    },
+    "Analytics": {
+      "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",
+      "description": ""
+    }
   }
 }

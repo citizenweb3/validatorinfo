@@ -975,6 +975,59 @@
     "customize": "Customize",
     "Submit New Info": "Submit New Info",
     "how to run a node on cosmos": "How to run a node on Cosmos"
+  },
+  "AccountPage": {
+    "Tabs": {
+      "Passport": "Passport",
+      "Tokens": "Tokens",
+      "Transactions": "Transactions",
+      "Governance": "Governance",
+      "Analytics": "Analytics"
+    },
+    "Passport": {
+      "title": "Blockchain Account Passport: Essential Overview",
+      "description": "Welcome to the account passport! I’ve gathered the key details about this blockchain address— unique identifier, join date, account value and delegations snapshot. It’s a quick reference for all things account-related, giving a clear starting point to explore web3.",
+      "Multichain Portfolio": "Multichain Portfolio",
+      "Claim Address": "Claim Address",
+      "account value": "Account Value",
+      "token": "Token",
+      "Merits": "Merits",
+      "Delegations": "Delegations",
+      "Table": {
+        "Validator": {
+          "name": "Validator",
+          "hint": ""
+        },
+        "Staked Amount": {
+          "name": "Staked Amount",
+          "hint": ""
+        },
+        "Reward Amount": {
+          "name": "Reward Amount",
+          "hint": ""
+        },
+        "Reward Value": {
+          "name": "Reward Value",
+          "hint": ""
+        }
+      }
+    },
+    "Tokens": {
+      "title": "Token Portfolio and Assets Holdings",
+      "description": ""
+    },
+    "Transactions": {
+      "title": "Blockchain Account Transaction History",
+      "description": ""
+    },
+    "Governance": {
+      "title": "Governance Participation: Votes and Network Impact",
+      "description": ""
+    },
+    "Analytics": {
+      "title": "Account Analytics Dashboard: Insights into Blockchain Activity",
+      "description": ""
+    }
   }
 }
 

@@ -34,7 +34,7 @@ const additionalTabs: TabOptions[] = [
 
 const aboutTabs = [
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
-  { name: 'Library', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
+  { name: 'Library', href: '/library-tabs', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
   { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
 ];
 

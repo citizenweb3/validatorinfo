@@ -4,7 +4,6 @@ import NotToday from '@/components/common/not-today';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
-import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';

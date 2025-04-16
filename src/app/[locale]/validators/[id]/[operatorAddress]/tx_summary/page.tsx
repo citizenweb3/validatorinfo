@@ -43,7 +43,8 @@ const TxSummaryPage: NextPageWithLocale<PageProps> = async ({ params: { locale, 
                perPage={perPage}
                currentPage={currentPage}
                sort={{ sortBy, order }} />
-    </div>);
+    </div>
+  );
 };
 
 export default TxSummaryPage;

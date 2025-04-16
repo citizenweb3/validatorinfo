@@ -40,7 +40,7 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
                          isCopy />
         <NodeDetailsItem label={t('account address')}
                          value={node.operatorAddress}
-                         link={`/validators/${node.validatorId}/networks`}
+                         link={`/networks/${node.chain.id}/address/${node.operatorAddress}/passport`}
                          isCopy />
         <NodeDetailsItem label={t('identity')}
                          value={node.identity}
