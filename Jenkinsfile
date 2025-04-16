@@ -14,9 +14,9 @@ pipeline {
             steps {
                 script {
                     if (env.BRANCH_NAME == 'dev') {
-                        sh 'docker-compose -f docker-compose.dev.yml build'
+                        sh 'docker compose -f docker-compose.dev.yml build'
                     } else if (env.BRANCH_NAME == 'main') {
-                        sh 'docker-compose -f docker-compose.main.yml build'
+                        sh 'docker compose -f docker-compose.main.yml build'
                     }
                 }
             }
@@ -25,11 +25,11 @@ pipeline {
             steps {
                 script {
                     if (env.BRANCH_NAME == 'dev') {
-                        sh 'docker-compose -f docker-compose.dev.yml run --rm frontend yarn test || true'
-                        sh 'docker-compose -f docker-compose.dev.yml run --rm indexer yarn test || true'
+                        sh 'docker compose -f docker-compose.dev.yml run --rm frontend yarn test || true'
+                        sh 'docker compose -f docker-compose.dev.yml run --rm indexer yarn test || true'
                     } else if (env.BRANCH_NAME == 'main') {
-                        sh 'docker-compose -f docker-compose.main.yml run --rm frontend yarn test || true'
-                        sh 'docker-compose -f docker-compose.main.yml run --rm indexer yarn test || true'
+                        sh 'docker compose -f docker-compose.main.yml run --rm frontend yarn test || true'
+                        sh 'docker compose -f docker-compose.main.yml run --rm indexer yarn test || true'
                     }
                 }
             }
@@ -38,10 +38,10 @@ pipeline {
             steps {
                 script {
                     if (env.BRANCH_NAME == 'dev') {
-                        sh 'docker-compose -f docker-compose.dev.yml down'
+                        sh 'docker compose -f docker-compose.dev.yml down'
                         //sh 'POSTGRES_PASSWORD=$POSTGRES_PASSWORD docker-compose -f docker-compose.dev.yml up -d'
                     } else if (env.BRANCH_NAME == 'main') {
-                        sh 'docker-compose -f docker-compose.main.yml down'
+                        sh 'docker compose -f docker-compose.main.yml down'
                         //sh 'POSTGRES_PASSWORD=$POSTGRES_PASSWORD docker-compose -f docker-compose.main.yml up -d'
                     }
                 }
