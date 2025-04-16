@@ -95,10 +95,10 @@ const getProposals: GetProposalsFunction = async (chain) => {
           status === $Enums.ProposalStatus.PROPOSAL_STATUS_REJECTED
             ? tallyResult
             : {
-                yes: '0',
-                no: '0',
-                no_with_veto: '0',
-                abstain: '0',
+                yes_count: '0',
+                no_count: '0',
+                no_with_veto_count: '0',
+                abstain_count: '0',
               };
 
         return {
