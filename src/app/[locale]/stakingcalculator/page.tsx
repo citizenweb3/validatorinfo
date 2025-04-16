@@ -8,6 +8,7 @@ import { mainTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
 import { getChains } from '@/actions/chains';
+import SpreadModal from '@/app/about/modals/spread-modal';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'CalculatorPage' });
@@ -36,6 +37,7 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
       <Suspense fallback={<div>Loading...</div>}>
         <Calculator chainList={chainsWithPrices} />
       </Suspense>
+      <SpreadModal />
     </div>
   );
 }
