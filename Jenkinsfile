@@ -39,10 +39,10 @@ pipeline {
                 script {
                     if (env.BRANCH_NAME == 'dev') {
                         sh 'docker compose -f docker-compose.dev.yml down'
-                        //sh 'POSTGRES_PASSWORD=$POSTGRES_PASSWORD docker-compose -f docker-compose.dev.yml up -d'
+                        sh 'docker-compose -f docker-compose.dev.yml up -d'
                     } else if (env.BRANCH_NAME == 'main') {
                         sh 'docker compose -f docker-compose.main.yml down'
-                        //sh 'POSTGRES_PASSWORD=$POSTGRES_PASSWORD docker-compose -f docker-compose.main.yml up -d'
+                        sh 'docker-compose -f docker-compose.main.yml up -d'
                     }
                 }
             }
