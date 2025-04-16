@@ -33,7 +33,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
         </div>
         <div
           className="flex w-1/2 cursor-pointer items-center py-5 pl-6 font-handjet text-lg hover:text-highlight">
-          {(Number(chain?.tvl) * 100).toFixed(2)}%
+          {(Number(chain?.tvs) * 100).toFixed(2)}%
         </div>
       </div>
       {networkProfileExample.totalStatistics.map((item) => (
