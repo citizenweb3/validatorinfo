@@ -1,54 +1,52 @@
-version: "3.9"
 services:
-  postgres:
+  db:
     image: postgres:14-bullseye
-    container_name: postgres
-    restart: until-stopped
     environment:
-      POSTGRES_USER: validatorinfo
+      POSTGRES_DB: validatorinfo_db
+      POSTGRES_USER: validatorinfo_user
       POSTGRES_PASSWORD: password
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    networks:
-      - app-network
 
-  app:
+  migrations:
     build:
       context: .
-      dockerfile: Dockerfile
-    environment:
-      POSTGRES_HOST: postgres
-      POSTGRES_PORT: 5432
-      POSTGRES_USER: validatorinfo
-      POSTGRES_PASSWORD: password
-      DATABASE_URL: ${DATABASE_URL}
+      dockerfile: Dockerfile.frontend
+    command: >
+      sh -c "npx prisma migrate deploy &&
+             npx tsx server/tools/init-chains.ts &&
+             npx prisma migrate dev"
     depends_on:
-      - postgres
-      - migrate
+      - db
+    environment:
+      DATABASE_URL: postgresql://validatorinfo_user:password@db:5432/validatorinfo_db?schema=public
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
     ports:
       - "3000:3000"
-    networks:
-      - app-network
-    command: yarn start
+    depends_on:
+      - migrations
+    environment:
+      DATABASE_URL: postgresql://validatorinfo_user:password@db:5432/validatorinfo_db?schema=public
+      SERVER_PORT: "3000"
+      PUBLIC_URL: "localhost"
 
-  migrate:
+  indexer:
     build:
       context: .
-      dockerfile: Dockerfile
-    environment:
-      DATABASE_URL: ${DATABASE_URL}
+      dockerfile: Dockerfile.indexer
+    ports:
+      - "3001:3001"
     depends_on:
-      - postgres
-    networks:
-      - app-network
-    command: >
-      sh -c "while ! nc -z postgres 5432; do sleep 1; done && yarn build && npx prisma migrate deploy && npx prisma generate"
+      - migrations
+    environment:
+      DATABASE_URL: postgresql://validatorinfo_user:password@db:5432/validatorinfo_db?schema=public
+      INDEXER_PORT: "3001"
 
 volumes:
   postgres_data:
-
-networks:
-  app-network:
-    driver: bridge

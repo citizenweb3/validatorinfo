@@ -2,11 +2,11 @@ import { QueryClient, setupBankExtension, setupStakingExtension } from '@cosmjs/
 import { Tendermint34Client } from '@cosmjs/tendermint-rpc';
 
 import logger from '@/logger';
-import { GetTvlFunction } from '@/server/tools/chains/chain-indexer';
+import { GetTvsFunction } from '@/server/tools/chains/chain-indexer';
 
-const { logError, logDebug } = logger('get-tvl');
+const { logError, logDebug } = logger('get-tvs');
 
-const getTvl: GetTvlFunction = async (chain) => {
+const getTvs: GetTvsFunction = async (chain) => {
   try {
     const rpcEndpoint = chain.nodes.find((node) => node.type === 'rpc')?.url;
     if (!rpcEndpoint) {
@@ -49,7 +49,7 @@ const getTvl: GetTvlFunction = async (chain) => {
 
     let bondedTokens = '0';
     let unbondedTokens = '0';
-    let tvl = 0;
+    let tvs = 0;
     let unbondedTokensRatio = 0;
 
     try {
@@ -57,14 +57,14 @@ const getTvl: GetTvlFunction = async (chain) => {
       bondedTokens = stakingPool.pool?.bondedTokens || '0';
       unbondedTokens = stakingPool.pool?.notBondedTokens || '0';
 
-      tvl = +bondedTokens / +totalSupply;
+      tvs = +bondedTokens / +totalSupply;
       unbondedTokensRatio = +(+unbondedTokens / +totalSupply);
     } catch (e) {
       logError(`Staking pool for ${chain.name} chain not found`, e);
     }
 
     logDebug(
-      `TVL for [${chain.name}]: ${JSON.stringify({ totalSupply, bondedTokens, unbondedTokens, tvl, unbondedTokensRatio })}`,
+      `TVS for [${chain.name}]: ${JSON.stringify({ totalSupply, bondedTokens, unbondedTokens, tvs, unbondedTokensRatio })}`,
     );
 
     return {
@@ -72,12 +72,12 @@ const getTvl: GetTvlFunction = async (chain) => {
       bondedTokens: bondedTokens.toString(),
       unbondedTokens: unbondedTokens.toString(),
       unbondedTokensRatio,
-      tvl,
+      tvs,
     };
   } catch (error: any) {
-    logError(`Get TVL for [${chain.name}] error: `, error);
+    logError(`Get TVS for [${chain.name}] error: `, error);
     return null;
   }
 };
 
-export default getTvl;
+export default getTvs;

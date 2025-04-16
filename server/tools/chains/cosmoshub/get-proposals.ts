@@ -138,7 +138,7 @@ const getProposals: GetProposalsFunction = async (chain) => {
             break;
           }
         } catch (error) {
-          console.error('Error fetching proposals', error);
+          console.error(`Error fetching proposals ${chain.name}`, error);
           break;
         }
       }
@@ -149,7 +149,7 @@ const getProposals: GetProposalsFunction = async (chain) => {
         total: allProposals.length,
       };
     } catch (e) {
-      logError(`Error fetching staking params for ${chain.name}`, e);
+      logError(`Error fetching proposals for ${chain.name}`, e);
     }
   }
 

@@ -3,12 +3,12 @@ import getApr from '@/server/tools/chains/cosmoshub/get-apr';
 import getNodes from '@/server/tools/chains/cosmoshub/get-nodes';
 import getProposals from '@/server/tools/chains/cosmoshub/get-proposals';
 import getStakingParams from '@/server/tools/chains/cosmoshub/get-staking-params';
-import getTvl from '@/server/tools/chains/cosmoshub/get-tvl';
+import getTvs from '@/server/tools/chains/cosmoshub/get-tvs';
 
 const chainMethods: ChainMethods = {
   getNodes,
   getApr,
-  getTvl,
+  getTvs,
   getStakingParams,
   getProposals,
 };

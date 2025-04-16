@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
@@ -10,7 +11,9 @@ import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
-import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default function StakingPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
@@ -49,7 +52,6 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
           </div>
         ))}
       </div>
-
     </div>
   );
 }

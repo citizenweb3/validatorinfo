@@ -27,7 +27,23 @@ const updateChainProposals = async (chainNames: string[]) => {
       });
       logInfo(`${chainName} proposalsCount: ${proposals.proposals.length}/${dbProposals.length}`);
 
+      let proposalsLive = 0;
+      let proposalsPassed = 0;
+      let proposalsTotal = 0;
+
       for (const proposal of proposals.proposals) {
+        proposalsTotal++;
+
+        if (proposal.status === $Enums.ProposalStatus.PROPOSAL_STATUS_PASSED) {
+          proposalsPassed++;
+        }
+        if (
+          proposal.status === $Enums.ProposalStatus.PROPOSAL_STATUS_VOTING_PERIOD ||
+          proposal.status === $Enums.ProposalStatus.PROPOSAL_STATUS_DEPOSIT_PERIOD
+        ) {
+          proposalsLive++;
+        }
+
         const dbProposal = dbProposals.find((p) => p.proposalId === proposal.proposalId);
         if (
           dbProposal?.status === $Enums.ProposalStatus.PROPOSAL_STATUS_PASSED ||
@@ -74,6 +90,15 @@ const updateChainProposals = async (chainNames: string[]) => {
           logInfo(`Proposal ${proposal.proposalId} ${proposal.title} created successfully`);
         }
       }
+
+      await db.chain.update({
+        where: { id: dbChain.id },
+        data: {
+          proposalsLive,
+          proposalsPassed,
+          proposalsTotal,
+        },
+      });
     } catch (e) {
       logError("Can't fetch proposal's: ", e);
     }

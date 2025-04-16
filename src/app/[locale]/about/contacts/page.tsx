@@ -9,6 +9,9 @@ import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'AboutPage' });
   unstable_setRequestLocale(locale);
