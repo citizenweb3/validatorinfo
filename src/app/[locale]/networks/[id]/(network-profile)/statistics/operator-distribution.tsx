@@ -3,16 +3,29 @@ import Image from 'next/image';
 import { FC } from 'react';
 import SubTitle from '@/components/common/sub-title';
 import nodeService from '@/services/node-service';
+import BorrowedBarChart from './Vp';
 
 interface OwnProps {
   chainId: number;
 }
+const generateData = () => {
+  const names = Array.from({ length: 50 }, (_, i) => `Validator ${i + 1}`);
+  const randomPercents = Array(50).fill(0).map(() => Math.random());
+  const total = randomPercents.reduce((sum, val) => sum + val, 0);
+  const normalized = randomPercents.map(val => (val / total) * 100);
+
+  return names.map((name, i) => ({
+    name,
+    percent: normalized[i]
+  }));
+};
 
 const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
   const t = await getTranslations('NetworkStatistics');
   const fontColors = {
     active: '#4FB848', jailed: '#AD1818', inactive: '#E5C46B',
   };
+  const data = generateData();
 
   const nodes = await nodeService.getNodesByChainId(chainId);
   const activeNodes = nodes?.filter(node => node.jailed === false);
@@ -57,10 +70,11 @@ const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
         </div>
       </div>
       <div className="flex ml-16 mt-24">
-        <Image src={'/img/charts/operator-distribution-vp.svg'}
+        {/* <Image src={'/img/charts/operator-distribution-vp.svg'}
                width={1325}
                height={275} alt="vp"
-               className="" />
+               className="" /> */}
+        <BorrowedBarChart  data={data} />
       </div>
     </div>
   );
