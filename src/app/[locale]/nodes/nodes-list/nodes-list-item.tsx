@@ -26,7 +26,7 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 w-1/5 font-sfpro text-base active:border-bgSt">
-        <Link href={`/networks/${item.chainId}/passport`}>
+        <Link href={`/networks/${item.chainId}/overview`}>
           <div className="text-center">{item.chain.prettyName}</div>
         </Link>
       </td>

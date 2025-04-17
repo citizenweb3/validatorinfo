@@ -10,9 +10,12 @@ import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
-import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default function PodcastPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
@@ -24,12 +27,8 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Podcast.title')} />
       <div>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="mr-8 mt-4 whitespace-pre-line py-4 text-base">
-            {t.rich('Podcast.description', {
-              link: (link) => <TextLink href="https://www.citizenweb3.com/episodes" target="_blank" content={link} />,
-            })}
-          </div>
+        <SubDescription text={t('Staking.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+        <div className="m-4">
           <Player />
         </div>
         <div className="mt-4 pt-2 text-base">

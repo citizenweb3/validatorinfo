@@ -9,6 +9,7 @@ import Story from '@/components/story';
 import { Locale } from '@/i18n';
 import { getChains } from '@/actions/chains';
 import SpreadModal from '@/app/about/modals/spread-modal';
+import SubDescription from '@/components/sub-description';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'CalculatorPage' });
@@ -33,7 +34,7 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
       />
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
-      <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-6'} />
       <Suspense fallback={<div>Loading...</div>}>
         <Calculator chainList={chainsWithPrices} />
       </Suspense>

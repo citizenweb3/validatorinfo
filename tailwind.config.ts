@@ -143,6 +143,9 @@ const config: Config = {
         cursor: `url('/img/icons/cursor.svg')`,
         cursor_h: `url('/img/icons/cursor-h.svg')`,
         cursor_a: `url('/img/icons/cursor-a.svg')`,
+        qrcode: `url('/img/icons/qrcode-button.png')`,
+        qrcode_h: `url('/img/icons/qrcode-button-h.png')`,
+        qrcode_a: `url('/img/icons/qrcode-button-a.png')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',

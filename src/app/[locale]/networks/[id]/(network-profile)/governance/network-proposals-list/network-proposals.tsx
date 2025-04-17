@@ -11,7 +11,7 @@ interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
-  chainId: string;
+  chainId: number;
 }
 
 const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage, chainId }) => {
@@ -23,10 +23,10 @@ const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage
       <table className="w-full table-auto border-collapse mt-4">
         <thead>
         <tr className="bg-table_header">
-          <TableHeaderItem page={page} name="Title" sortField="id" />
+          <TableHeaderItem page={page} name="Title" sortField="proposalId" />
           <TableHeaderItem page={page} name="Type" sortField="type" />
-          <TableHeaderItem page={page} name="Vote" sortField="vote" />
-          <TableHeaderItem page={page} name="Voting Ended" sortField="date" defaultSelected />
+          <TableHeaderItem page={page} name="Vote" sortField="finalTallyResult" />
+          <TableHeaderItem page={page} name="Voting Ended" sortField="votingEndTime" defaultSelected />
         </tr>
         </thead>
         <NetworkProposalsList perPage={perPage} sort={sort} currentPage={currentPage} chainId={chainId} />

@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
 import QuoteItem from '@/components/header/quote-item';
-import HeaderInfoService from '@/services/headerInfo-service';
 import ecosystemService from '@/services/ecosystem-service';
+import HeaderInfoService from '@/services/headerInfo-service';
 
-interface OwnProps {
-}
+interface OwnProps {}
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const data = {
   validators: '1277',
@@ -36,7 +36,6 @@ const data = {
     },
   ],
 };
-
 
 const Quotes: FC<OwnProps> = async () => {
   const headerInfo = await HeaderInfoService.getValidatorsAndChains();
