@@ -7,6 +7,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
+import SpreadModal from '@/app/about/modals/spread-modal';
 import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';

@@ -7,6 +7,7 @@ import { mainTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
+import SpreadModal from '@/app/about/modals/spread-modal';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -24,6 +25,9 @@ const ValidatorComparisonPage: NextPageWithLocale = async ({ params: { locale } 
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-4 mt-2'} />
       <ComparisonTable />
+      <div className="flex flex-col items-center justify-center">
+        <SpreadModal />
+      </div>
     </div>
   );
 };
