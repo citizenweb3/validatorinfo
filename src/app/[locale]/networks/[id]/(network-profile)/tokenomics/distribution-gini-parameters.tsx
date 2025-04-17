@@ -6,6 +6,8 @@ import Image from 'next/image';
 import nodeService from '@/services/node-service';
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
+import TokenDistributionSVG from './charts/tokendistribution';
+import GiniCoefficientSVG from './charts/giniCoefficient';
 
 interface OwnProps {
   chainId: number;
@@ -20,25 +22,27 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chainId }) => {
       <div className="grid grid-cols-2">
         <div className="flex flex-col">
           <SubTitle text={t('Distribution')} />
-          <div className="flex mt-5 ml-40">
-            <Image
+          <div className="flex mt-5 ml-20">
+            {/* <Image
               src={'/img/charts/distribution-circle-chart.svg'}
               width={350}
               height={250}
               alt="distribution"
-            />
+            /> */}
+            <TokenDistributionSVG veto={100} yes={100} no={30} abstain={40} />
           </div>
         </div>
         <div>
           <SubTitle text={t('Gini Coefficient')} />
           <div className="flex flex-row mt-9 ml-20">
-            <Image
+            {/* <Image
               src={'/img/charts/gini-coefficient.svg'}
               width={190}
               height={200}
               alt="distribution"
               className="mr-5"
-            />
+            /> */}
+            <GiniCoefficientSVG value={69} />
             <div className="flex flex-col justify-center">
               <div className="font-sfpro text-base">{t('number of validators')}</div>
               <div className="font-handjet text-lg text-highlight">{nodes?.length ?? '234'}</div>
