@@ -1,17 +1,19 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
-import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
-import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default function StakingPage({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) {
   unstable_setRequestLocale(locale);
@@ -22,45 +24,33 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
       <Story src="staking" alt="Pixelated, 90s game-style characters stake on validator and mining pool rewards" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Staking.title')} />
-      <div>
-        <div className="flex flex-col items-center py-4">
-          <div className="m-4 whitespace-pre-line text-base">
-            {t.rich('Staking.description', {
-              horcrux: (text) => (
-                <TextLink target="_blank" href="https://github.com/strangelove-ventures/horcrux" content={text} />
-              ),
-              restake: (text) => <TextLink target="_blank" href="https://restake.app/" content={text} />,
-            })}
-          </div>
-          <SubDescription text={t('Staking.descriptionExtended')} />
-        </div>
-        <SubTitle text="Networks" size="h2" />
-        <div className="grid grid-cols-4 gap-4 py-4">
-          {data.map((item, index) => (
-            <div key={index} className="flex justify-between bg-card bg-left">
-              <div className="relative flex h-40 w-48 flex-col bg-[url('/img/staking-bg.png')] bg-cover">
-                <div className="-ml-1 -mt-7 flex flex-grow items-center justify-center">
-                  {item.icon && (
-                    <Link href={`https://staking.citizenweb3.com/chains/${item.stakingName}`} target={`_blank`}>
-                      <Image src={item.icon} alt={item.name} width={80} height={80}
-                             className="h-20 w-20 rounded-full" />
-                    </Link>
-                  )}
-                </div>
-                <div className="absolute bottom-1 left-2 text-nowrap text-lg tracking-[0.25rem] text-shadow-sm">
-                  {item.name}
-                </div>
-              </div>
-              <div className="flex flex-col items-end justify-center pr-4">
-                {item.delegate && (
-                  <RoundedButton href={item.delegate} contentClassName="text-xl font-bold" target="_blank">
-                    Stake
-                  </RoundedButton>
+      <SubDescription text={t('Staking.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <SubTitle text="Networks" size="h2" />
+      <div className="grid grid-cols-4 gap-4 py-4">
+        {data.map((item, index) => (
+          <div key={index} className="flex justify-between bg-card bg-left">
+            <div className="relative flex h-40 w-48 flex-col bg-[url('/img/staking-bg.png')] bg-cover">
+              <div className="-ml-1 -mt-7 flex flex-grow items-center justify-center">
+                {item.icon && (
+                  <Link href={`https://staking.citizenweb3.com/chains/${item.stakingName}`} target={`_blank`}>
+                    <Image src={item.icon} alt={item.name} width={80} height={80}
+                           className="h-20 w-20 rounded-full" />
+                  </Link>
                 )}
               </div>
+              <div className="absolute bottom-1 left-2 text-nowrap text-lg tracking-[0.25rem] text-shadow-sm">
+                {item.name}
+              </div>
             </div>
-          ))}
-        </div>
+            <div className="flex flex-col items-end justify-center pr-4">
+              {item.delegate && (
+                <RoundedButton href={item.delegate} contentClassName="text-xl font-bold" target="_blank">
+                  Stake
+                </RoundedButton>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

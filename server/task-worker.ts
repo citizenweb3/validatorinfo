@@ -5,8 +5,9 @@ import getChainUptime from '@/server/jobs/get-chain-uptime';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
 import updateChainApr from '@/server/jobs/update-chain-apr';
+import updateChainProposals from '@/server/jobs/update-chain-proposals';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
-import { updateChainTvl } from '@/server/jobs/update-chain-tvl';
+import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 
@@ -29,13 +30,16 @@ async function runTask() {
         break;
       case 'chain-tvls':
         await getChainUptime(chains);
-        await updateChainTvl(chains);
+        await updateChainTvs(chains);
         break;
       case 'chain-aprs':
         await updateChainApr(chains);
         break;
       case 'chain-staking-params':
         await updateChainStakingParams(chains);
+        break;
+      case 'chain-proposals':
+        await updateChainProposals(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

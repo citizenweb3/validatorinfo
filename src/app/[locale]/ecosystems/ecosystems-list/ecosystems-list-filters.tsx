@@ -22,7 +22,7 @@ const tags = [
 const ListFilters: FC<OwnProps> = ({ perPage }) => {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParamsHook = useSearchParams(); // получаем актуальные параметры URL
+  const searchParamsHook = useSearchParams();
   const t = useTranslations('HomePage.Table');
   const selectedTagsFromUrl = searchParamsHook.getAll('tags');
   const [isOpened, setIsOpened] = useState<boolean>(false);

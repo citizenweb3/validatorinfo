@@ -11,6 +11,9 @@ import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'AboutPage' });
 

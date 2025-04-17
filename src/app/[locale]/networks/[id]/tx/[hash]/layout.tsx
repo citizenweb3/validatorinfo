@@ -6,6 +6,7 @@ import { Locale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import PageTitle from '@/components/common/page-title';
 import TxInformation from '@/app/networks/[id]/tx/[hash]/tx-information';
+import SubDescription from '@/components/sub-description';
 
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
@@ -27,7 +28,8 @@ export default async function TxInformationLayout({ children, params: { locale, 
 
   return (<div className="">
     <PageTitle text={t('title')} />
-    <TxInformation chain={chain ?? undefined} hash={hash} />
+    <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+    <TxInformation chain={chain} hash={hash} />
     <div className="w-1/3 mt-5">
       <TabList tabs={txInformationTabs} page={'TxInformationPage'} />
     </div>

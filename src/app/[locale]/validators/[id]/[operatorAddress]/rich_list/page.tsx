@@ -4,6 +4,7 @@ import SwitchClient from '@/components/common/switch-client';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -16,9 +17,9 @@ interface PageProps {
 const defaultPerPage = 1;
 
 const RichListPage: NextPageWithLocale<PageProps> = async ({
-                                                             params: { locale, id, operatorAddress },
-                                                             searchParams: q,
-                                                           }) => {
+    params: { locale, id, operatorAddress },
+    searchParams: q,
+  }) => {
   const t = await getTranslations({ locale, namespace: 'RichListPage' });
 
   const validatorId = parseInt(id);
@@ -30,15 +31,18 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
   const node = list.find((item) => item.operatorAddress === operatorAddress);
 
-  return (<div className="mb-14">
-    <div className="mb-4 mt-7 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-      <div className="border-b border-bgSt px-2 font-handjet">USD</div>
-      <SwitchClient value={true} />
-      <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
+  return (
+    <div className="mb-14">
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <div className="mb-4 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
+        <div className="border-b border-bgSt px-2 font-handjet">USD</div>
+        <SwitchClient value={true} />
+        <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
+      </div>
+      <DelegatedTable chainId={node?.chainId ?? 1} page={'RichListPage'} perPage={perPage} currentPage={currentPage}
+                      sort={{ sortBy, order }} />
     </div>
-    <DelegatedTable chainId={node?.chainId ?? 1} page={'RichListPage'} perPage={perPage} currentPage={currentPage}
-                    sort={{ sortBy, order }} />
-  </div>);
+  );
 };
 
 export default RichListPage;

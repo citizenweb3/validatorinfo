@@ -13,6 +13,9 @@ import NavigationBar from '@/components/navigation-bar/navigation-bar';
 import { WalletProviderComponent } from '@/context/WalletContext';
 import { locales } from '@/i18n';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const sfpro = localFont({
   src: [
     {
@@ -40,6 +43,11 @@ const handjet = localFont({
       path: '../../../public/fonts/Handjet-Regular.ttf',
       weight: '400',
       style: 'normal',
+    },
+    {
+      path: '../../../public/fonts/Handjet-Thin.ttf',
+      weight: '100',
+      style: 'thin',
     },
   ],
   display: 'swap',

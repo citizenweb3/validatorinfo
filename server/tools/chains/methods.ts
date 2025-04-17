@@ -1,3 +1,4 @@
+import atomoneChainMethods from '@/server/tools/chains/atomone/methods';
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import cosmosChainMethods from '@/server/tools/chains/cosmoshub/methods';
 import govgenChainMethods from '@/server/tools/chains/govgen/methods';
@@ -6,6 +7,7 @@ import neutronChainMethods from '@/server/tools/chains/neutron/methods';
 import nomicChainMethods from '@/server/tools/chains/nomic/methods';
 import osmosisChainMethods from '@/server/tools/chains/osmosis/methods';
 import quicksilverChainMethods from '@/server/tools/chains/quicksilver/methods';
+import spacePussyChainMethods from '@/server/tools/chains/space-pussy/methods';
 import strideChainMethods from '@/server/tools/chains/stride/methods';
 import symphonyChainMethods from '@/server/tools/chains/symphony-testnet/methods';
 
@@ -29,15 +31,17 @@ const chainMethods: Record<string, ChainMethods> = {
   gravitybridge: cosmosChainMethods,
   dymension: cosmosChainMethods,
   althea: cosmosChainMethods,
-  atomone: cosmosChainMethods,
+  atomone: atomoneChainMethods,
   union: cosmosChainMethods,
   axone: cosmosChainMethods,
   bostrom: cosmosChainMethods,
+  nillion: cosmosChainMethods,
+  nym: cosmosChainMethods,
 
   'neutron-testnet': neutronChainMethods,
-  'nillion-testnet': cosmosChainMethods,
   'artela-testnet': cosmosChainMethods,
-  'space-pussy': cosmosChainMethods,
+  'space-pussy': spacePussyChainMethods,
+  'warden-testnet': cosmosChainMethods,
 };
 
 const getChainMethods = (chainName: string): ChainMethods => {

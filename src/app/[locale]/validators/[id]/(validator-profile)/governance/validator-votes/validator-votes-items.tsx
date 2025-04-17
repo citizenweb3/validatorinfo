@@ -25,22 +25,24 @@ const ValidatorVotesItem: FC<OwnProps> = ({ item }) => {
     }
   };
 
+  const proposalLink = `/networks/1/proposal/${item.proposalId}`;
+
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td className="w-1/3 border-b border-black py-4 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={''} className="flex items-center gap-1">
+        <Link href={proposalLink} className="flex items-center gap-1">
           <Image src={getSquareIcon()} alt={`${item.vote}`} width={20} height={20} />
           <div className="text-center">{item.networkName}</div>
         </Link>
       </td>
       <td className="w-1/3 border-b border-black py-4 text-base active:border-bgSt">
-        <Link href={''} className="flex justify-center gap-2">
+        <Link href={proposalLink} className="flex justify-center gap-2">
           <div className="font-handjet text-xl text-highlight">{`#${item.proposalId}`}</div>
           <div className="self-end text-center">{item.proposalTitle}</div>
         </Link>
       </td>
       <td className="w-1/3 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
-        <Link href={''} className="flex justify-center">
+        <Link href={proposalLink} className="flex justify-center">
           <div className="text-center">{item.vote}</div>
         </Link>
       </td>

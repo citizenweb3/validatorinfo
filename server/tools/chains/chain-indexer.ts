@@ -1,5 +1,9 @@
 import { NodeResult } from '@/server/types';
 
+import { Prisma } from '.prisma/client';
+
+import ProposalCreateInput = Prisma.ProposalCreateInput;
+
 export type ChainNodeType = 'indexer' | 'lcd' | 'rpc' | 'grpc' | 'ws';
 
 export interface StakingParams {
@@ -7,12 +11,12 @@ export interface StakingParams {
   maxValidators: number | null;
 }
 
-export interface ChainTVLResult {
+export interface ChainTVSResult {
   totalSupply: string;
   bondedTokens: string;
   unbondedTokens: string;
   unbondedTokensRatio: number;
-  tvl: number;
+  tvs: number;
 }
 
 export interface AddChainProps {
@@ -36,14 +40,25 @@ export interface AddChainProps {
   hasValidators?: boolean;
 }
 
-export type GetTvlFunction = (chain: AddChainProps) => Promise<ChainTVLResult | null>;
+export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;
+
+export type ProposalsResult = {
+  proposals: ResultProposalItem[];
+  total: number;
+  live: number;
+  passed: number;
+};
+
+export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
+export type GetProposalsFunction = (chain: AddChainProps) => Promise<ProposalsResult>;
 export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<StakingParams>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
   getApr: GetAprFunction;
-  getTvl: GetTvlFunction;
+  getTvs: GetTvsFunction;
   getStakingParams: GetStakingParamsFunction;
+  getProposals: GetProposalsFunction;
 }

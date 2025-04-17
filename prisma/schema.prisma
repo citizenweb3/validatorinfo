@@ -1,0 +1,213 @@
+generator client {
+  provider        = "prisma-client-js"
+  output   = "../node_modules/.prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id          Int       @id @default(autoincrement())
+  username    String?   @unique
+  mainAddress String    @unique @map("main_address") @db.VarChar(256)
+  addresses   Address[] @relation("account_addresses")
+  coreTeam    Boolean   @default(false) @map("core_team")
+
+  @@map("accounts")
+}
+
+model Address {
+  id          Int    @id @default(autoincrement())
+  mainAddress String @unique @map("main_address") @db.VarChar(256)
+  address     String
+  chainId     Int    @map("chain_id")
+
+  chain  Chain   @relation("chain_addresses", fields: [chainId], references: [id])
+  wallet Account @relation("account_addresses", fields: [mainAddress], references: [mainAddress])
+
+  @@map("addresses")
+}
+
+model Apr {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  value     Float    @default(0)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_apr", fields: [chainId], references: [id])
+
+  @@map("aprs")
+}
+
+model Chain {
+  id             Int     @id @default(autoincrement())
+  ecosystem      String  @db.VarChar(256)
+  chainId        String  @unique @map("chain_id") @db.VarChar(256)
+  rang           Int
+  name           String  @db.VarChar(256)
+  prettyName     String  @map("pretty_name") @db.VarChar(256)
+  coinType       Int     @map("coin_type")
+  denom          String  @db.VarChar(256)
+  minimalDenom   String  @map("minimal_denom") @db.VarChar(256)
+  coinDecimals   Int     @map("coin_decimals")
+  logoUrl        String  @map("logo_url")
+  coinGeckoId    String  @map("coingecko_id") @db.VarChar(64)
+  bech32Prefix   String  @map("bech32_prefix") @db.VarChar(32)
+  twitterUrl     String  @map("twitter_url") @db.VarChar(256)
+  docs           String?
+  githubUrl      String  @map("github_url")
+  githubMainRepo String  @map("github_main_repo")
+  maxValidators  Int?    @map("max_validators")
+  hasValidators  Boolean @default(true) @map("has_validators")
+
+  chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
+
+  chainNodes ChainNode[] @relation("chain_node")
+  aprs       Apr[]       @relation("chain_apr")
+  prices     Price[]     @relation("chain_price")
+  nodes      Node[]      @relation("chain_validator_node")
+
+  validators Validator[] @relation("chain_validators")
+  addresses  Address[]   @relation("chain_addresses")
+
+  // gov
+  proposals       Proposal[] @relation("chain_proposals")
+  proposalsTotal  Int        @default(0) @map("proposals_total")
+  proposalsLive   Int        @default(0) @map("proposals_live")
+  proposalsPassed Int        @default(0) @map("proposals_passed")
+
+  // calculated
+  totalSupply         String   @default("") @map("total_supply")
+  bondedTokens        String   @default("") @map("bonded_tokens")
+  unbondedTokens      String   @default("") @map("not_bonded_tokens")
+  unbondedTokensRatio Float    @default(0) @map("unbonded_tokens_ratio")
+  uptimeHeight        Int      @default(0) @map("uptime_height")
+  lastUptimeUpdated   DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
+  avgTxInterval       Float    @default(0) @map("avg_tx_interval")
+  tvl                 Float    @default(0)
+  tvs                 Float    @default(0)
+  apr                 Float    @default(0)
+  unbondingTime       Int?     @map("unbonding_time")
+
+  @@map("chains")
+}
+
+model ChainNode {
+  id      Int    @id @default(autoincrement())
+  type    String @db.VarChar(256) // lcd, rpc, ws, grpc
+  chainId Int    @map("chain_id")
+  url     String
+
+  chain Chain @relation("chain_node", fields: [chainId], references: [id])
+
+  @@map("chain_nodes")
+}
+
+model Ecosystem {
+  name       String   @id @db.VarChar(256)
+  prettyName String   @map("pretty_name") @db.VarChar(256)
+  logoUrl    String   @map("logo_url") @db.VarChar(256)
+  tvl        Float    @default(0)
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chains Chain[] @relation("chain_ecosystem")
+
+  @@map("ecosystems")
+}
+
+model Node {
+  id                Int      @id @default(autoincrement())
+  chainId           Int      @map("chain_id")
+  validatorId       Int?     @map("validator_id")
+  operatorAddress   String   @unique @map("operator_address") @db.VarChar(256)
+  consensusPubkey   String   @map("consensus_pubkey") @db.VarChar(256)
+  jailed            Boolean  @default(false)
+  tokens            String   @db.VarChar(256)
+  delegatorShares   String   @map("delegator_shares") @db.VarChar(256)
+  moniker           String
+  identity          String
+  website           String
+  securityContact   String   @map("security_contact")
+  details           String   @db.Text
+  unbondingHeight   String   @map("unbonding_height") @db.VarChar(256)
+  unbondingTime     DateTime @map("unbonding_time") @db.Timestamptz(6)
+  updateTime        DateTime @map("update_time") @db.Timestamptz(6)
+  rate              String   @db.VarChar(256)
+  maxRate           String   @map("max_rate") @db.VarChar(256)
+  maxChangeRate     String   @map("max_change_rate") @db.VarChar(256)
+  minSelfDelegation String   @map("min_self_delegation") @db.VarChar(256)
+
+  chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
+  validator Validator? @relation("validator_node", fields: [validatorId], references: [id])
+
+  @@map("nodes")
+}
+
+model Price {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  value     Float    @default(0)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_price", fields: [chainId], references: [id])
+
+  @@map("prices")
+}
+
+enum ProposalStatus {
+  PROPOSAL_STATUS_UNSPECIFIED
+  PROPOSAL_STATUS_DEPOSIT_PERIOD
+  PROPOSAL_STATUS_VOTING_PERIOD
+  PROPOSAL_STATUS_PASSED
+  PROPOSAL_STATUS_REJECTED
+  PROPOSAL_STATUS_FAILED
+}
+
+model Proposal {
+  id               Int            @id @default(autoincrement())
+  type             String         @map("type") @db.VarChar(256)
+  chainId          Int            @map("chain_id")
+  proposalId       String         @map("proposal_id")
+  status           ProposalStatus @default(PROPOSAL_STATUS_UNSPECIFIED)
+  submitTime       DateTime       @map("submit_time") @db.Timestamptz(6)
+  depositEndTime   DateTime       @map("deposit_end_time") @db.Timestamptz(6)
+  votingStartTime  DateTime       @map("voting_start_time") @db.Timestamptz(6)
+  votingEndTime    DateTime       @map("voting_end_time") @db.Timestamptz(6)
+  tallyResult      Json?          @map("tally_result")
+  finalTallyResult Json?          @map("final_tally_result")
+  content          Json
+  title            String
+  description      String
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, proposalId], map: "proposal_chain_id_proposal_id")
+
+  chain Chain @relation("chain_proposals", fields: [chainId], references: [id])
+
+  @@map("proposals")
+}
+
+model Validator {
+  id              Int     @id @default(autoincrement())
+  identity        String  @unique
+  keybaseName     String? @map("keybase_name")
+  moniker         String
+  details         String?
+  website         String?
+  github          String?
+  telegram        String?
+  discord         String?
+  twitter         String?
+  securityContact String? @map("security_contact")
+  url             String?
+  wrongKey        Boolean @default(false) @map("wrong_key")
+  chainId         Int?    @map("chain_id")
+
+  chain Chain? @relation("chain_validators", fields: [chainId], references: [id])
+  nodes Node[] @relation("validator_node")
+
+  @@map("validators")
+}

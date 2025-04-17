@@ -6,6 +6,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { getValidatorPublicGoodTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'ValidatorPublicGoodsPage' });
@@ -33,7 +34,7 @@ export default async function PublicGoodsLayout({
   return (
     <div>
       <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
-      <div className="my-8 ml-4 font-sfpro text-base">{t('description')}</div>
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-4 mt-4'} />
       <TabList page="ValidatorPublicGoodsPage" tabs={validatorPublicGoodTabs} />
       {children}
     </div>

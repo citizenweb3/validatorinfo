@@ -4,6 +4,8 @@ import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import { SortDirection } from '@/server/types';
 import NetworkValidators from '@/app/networks/[id]/validators/network-validators-table/network-validators';
+import Link from 'next/link';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -41,7 +43,20 @@ const NetworkValidatorsPage: NextPageWithLocale<PageProps> = async (
 
   return (
     <div className="mb-12">
-      <PageTitle text={t('title')} prefix={chain?.prettyName ?? 'Network'} />
+      <PageTitle
+        text={t('title')}
+        prefix={
+          <Link href={`/networks/${chainId}/overview`} className="group">
+            <div className="flex flex-row">
+              <span className="group-hover:text-oldPalette-white group-active:text-3xl">
+                {chain?.prettyName}
+              </span>
+              <div className="h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a" />
+            </div>
+          </Link>
+        }
+      />
+      <SubDescription text={t('description', { networkName: chain?.prettyName })} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <NetworkValidators
         chainId={chainId}
         page={'NetworkValidatorsPage'}

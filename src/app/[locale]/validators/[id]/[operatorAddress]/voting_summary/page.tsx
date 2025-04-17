@@ -3,19 +3,21 @@ import NodeVotes from '@/app/validators/[id]/[operatorAddress]/voting_summary/no
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
+import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 interface PageProps {
-  params: NextPageWithLocale;
+  params: NextPageWithLocale & { id: string; operatorAddress: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const defaultPerPage = 1;
 
 const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
-    params: { locale },
+    params: { locale, id, operatorAddress },
     searchParams: q,
   }) => {
   const t = await getTranslations({ locale, namespace: 'VotingSummaryPage' });
@@ -25,14 +27,19 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
 
+  const validatorId = parseInt(id);
+  const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
+  const node = list.find((item) => item.operatorAddress === operatorAddress);
+
   return (
     <div className="mb-14">
-      <div className="my-4 flex justify-end">
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <div className="mb-4 flex justify-end">
         <RoundedButton href={''} className="font-handjet text-lg">
           {t('show same opinion')}
         </RoundedButton>
       </div>
-      <NodeVotes page={'VotingSummaryPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
+      <NodeVotes page={'VotingSummaryPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} chainId={node?.chain.id ?? 1} />
     </div>
   );
 };

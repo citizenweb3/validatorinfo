@@ -9,9 +9,10 @@ interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
+  chainId: number;
 }
 
-const NodeVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
+const NodeVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage, chainId }) => {
   return (
     <div>
       <table className="w-full table-auto border-collapse">
@@ -23,7 +24,7 @@ const NodeVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => 
             <TableHeaderItem page={page} name="Voting Ended" sortField="date" defaultSelected />
           </tr>
         </thead>
-        <NodeVotesList perPage={perPage} sort={sort} currentPage={currentPage} />
+        <NodeVotesList perPage={perPage} sort={sort} currentPage={currentPage} chainId={chainId} />
       </table>
     </div>
   );

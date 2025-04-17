@@ -30,12 +30,30 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
     <div className="mt-16">
       <SubTitle text={t('Validator Node Details')} />
       <div className="mt-7 grid grid-cols-2 gap-x-10">
-        <NodeDetailsItem label={t('validator name')} value={node.moniker} isCopy />
-        <NodeDetailsItem label={t('public key')} value={node.consensusPubkey} isCopy />
-        <NodeDetailsItem label={t('account address')} value={node.operatorAddress} isCopy />
-        <NodeDetailsItem label={t('identity')} value={node.identity} isCopy />
-        <NodeDetailsItem label={t('validator address')} value={node.operatorAddress} isCopy />
-        <NodeDetailsItem label={t('reward address')} value={node.operatorAddress} isCopy />
+        <NodeDetailsItem label={t('validator name')}
+                         value={node.moniker}
+                         link={`/validators/${node.validatorId}/networks`}
+                         isCopy />
+        <NodeDetailsItem label={t('public key')}
+                         value={node.consensusPubkey}
+                         link={`/validators/${node.validatorId}/networks`}
+                         isCopy />
+        <NodeDetailsItem label={t('account address')}
+                         value={node.operatorAddress}
+                         link={`/networks/${node.chain.id}/address/${node.operatorAddress}/passport`}
+                         isCopy />
+        <NodeDetailsItem label={t('identity')}
+                         value={node.identity}
+                         link={`/validators/${node.validatorId}/networks`}
+                         isCopy />
+        <NodeDetailsItem label={t('validator address')}
+                         value={node.operatorAddress}
+                         link={`/validators/${node.validatorId}/networks`}
+                         isCopy />
+        <NodeDetailsItem label={t('reward address')}
+                         value={node.operatorAddress}
+                         link={`/validators/${node.validatorId}/networks`}
+                         isCopy />
       </div>
       <div className="mt-2 flex border-b border-bgSt">
         <div className="w-[28.5%] border-r border-bgSt py-4 pl-8 font-sfpro text-lg">{t('authz permissions')}</div>

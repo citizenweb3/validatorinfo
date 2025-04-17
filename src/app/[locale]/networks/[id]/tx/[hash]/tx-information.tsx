@@ -5,9 +5,10 @@ import { txExample } from '@/app/networks/[id]/tx/txExample';
 import Tooltip from '@/components/common/tooltip';
 import CopyButton from '@/components/common/copy-button';
 import RoundedButton from '@/components/common/rounded-button';
+import Link from 'next/link';
 
 interface OwnProps {
-  chain?: Chain;
+  chain: Chain | null;
   hash: string;
 }
 
@@ -17,9 +18,17 @@ const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const formatData = (title: string, data: number | string) => {
     switch (title) {
       case 'chain':
-        return chain?.prettyName ?? data;
+        return (
+          <Link href={`/networks/${chain?.id}/overview`}>
+            {chain?.prettyName ?? data}
+          </Link>
+        );
       case 'chain id':
-        return chain?.chainId ?? data;
+        return (
+          <Link href={`/networks/${chain?.id}/overview`}>
+            {chain?.chainId ?? data}
+          </Link>
+        );
       case 'fees':
         return <div className="font-handjet text-lg">{data} {chain?.denom ?? 'ATOM'}</div>;
       case 'block height':
@@ -30,13 +39,12 @@ const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
   };
 
   return (
-    <div className="mt-8">
+    <div className="mt-2">
       <div className="flex justify-between mb-8 ml-5">
         <div className="flex flex-row">
           <div className="flex mr-5">
             <Tooltip tooltip={t('hash txs tooltip')} direction={'bottom'}>
-              <div
-                className="h-24 min-h-24 w-24 min-w-24 bg-contain bg-no-repeat bg-hash_txs hover:bg-hash_txs_h" />
+              <div className="h-24 min-h-24 w-24 min-w-24 bg-contain bg-no-repeat bg-hash_txs hover:bg-hash_txs_h" />
             </Tooltip>
           </div>
           <div className="flex flex-col justify-center">

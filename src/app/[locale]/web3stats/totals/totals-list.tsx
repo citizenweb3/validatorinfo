@@ -1,11 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import HeaderInfoService from '@/services/headerInfo-service';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
+import HeaderInfoService from '@/services/headerInfo-service';
 
-interface OwnProps {
-}
+interface OwnProps {}
 
 const TotalsList: FC<OwnProps> = async () => {
   const t = await getTranslations('GlobalPosPage.Footer');
@@ -19,14 +18,16 @@ const TotalsList: FC<OwnProps> = async () => {
   ];
 
   return (
-    <div className="mt-24 flex w-full flex-row justify-between space-x-16 px-36">
+    <div className="mt-10 flex w-full flex-row justify-between px-20">
       {data.map((item) => (
         <div key={item.title}>
-          <MetricsCardItem key={item.title}
-                           title={t(item.title as 'total validators')}
-                           data={item.data}
-                           className={'pb-6 pt-2.5'}
-                           dataClassName={'mt-5'} />
+          <MetricsCardItem
+            key={item.title}
+            title={t(item.title as 'total validators')}
+            data={item.data}
+            className={'pb-6 pt-2.5'}
+            dataClassName={'mt-5'}
+          />
         </div>
       ))}
     </div>
