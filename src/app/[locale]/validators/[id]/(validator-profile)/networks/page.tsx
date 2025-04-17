@@ -6,6 +6,7 @@ import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -41,6 +42,7 @@ const ValidatorNetworksPage: NextPageWithLocale<PageProps> = async ({ params: { 
   return (
     <div>
       <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-2'} />
       <ValidatorNetworks
         id={validatorId}
         page="ValidatorNetworksPage"

@@ -70,8 +70,10 @@ import EcosystemsIcon from '@/public/img/icons/navbar/ecosystems.png';
 import EcosystemsIconHovered from '@/public/img/icons/navbar/ecosystems-h.png';
 import NodesIcon from '@/public/img/icons/navbar/nodes.png';
 import NodesIconHovered from '@/public/img/icons/navbar/nodes-h.png';
-import CuriousIcon from '@/public/img/icons/library/curious.png';
-import CuriousIconHovered from '@/public/img/icons/library/curious-h.png';
+import CuriousIcon from '@/public/img/icons/library-tabs/curious.png';
+import CuriousIconHovered from '@/public/img/icons/library-tabs/curious-h.png';
+import WalletIcon from '@/public/img/icons/account-tabs/wallet.png';
+import WalletIconHovered from '@/public/img/icons/account-tabs/wallet-h.png';
 
 
 const icons = {
@@ -149,6 +151,8 @@ const icons = {
   NodesIconHovered,
   CuriousIcon,
   CuriousIconHovered,
+  WalletIcon,
+  WalletIconHovered,
 };
 
 export default icons;

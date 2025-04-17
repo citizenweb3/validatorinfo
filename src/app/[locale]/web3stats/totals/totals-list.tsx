@@ -18,7 +18,7 @@ const TotalsList: FC<OwnProps> = async () => {
   ];
 
   return (
-    <div className="mt-24 flex w-full flex-row justify-between space-x-16 px-36">
+    <div className="mt-10 flex w-full flex-row justify-between px-20">
       {data.map((item) => (
         <div key={item.title}>
           <MetricsCardItem

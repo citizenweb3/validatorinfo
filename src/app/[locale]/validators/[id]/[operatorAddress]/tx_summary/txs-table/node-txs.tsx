@@ -14,7 +14,7 @@ interface OwnProps extends PagesProps {
 
 const NodeTxs: FC<OwnProps> = async ({ chainId, page, perPage, sort, currentPage }) => {
   return (
-    <div className="pt-10">
+    <div className="pt-8">
       <table className="w-full table-auto border-collapse">
         <thead>
         <tr className="bg-table_header">

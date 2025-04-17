@@ -19,13 +19,13 @@ const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
     switch (title) {
       case 'chain':
         return (
-          <Link href={`/networks/${chain?.id}/passport`}>
+          <Link href={`/networks/${chain?.id}/overview`}>
             {chain?.prettyName ?? data}
           </Link>
         );
       case 'chain id':
         return (
-          <Link href={`/networks/${chain?.id}/passport`}>
+          <Link href={`/networks/${chain?.id}/overview`}>
             {chain?.chainId ?? data}
           </Link>
         );
@@ -39,7 +39,7 @@ const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
   };
 
   return (
-    <div className="mt-8">
+    <div className="mt-2">
       <div className="flex justify-between mb-8 ml-5">
         <div className="flex flex-row">
           <div className="flex mr-5">

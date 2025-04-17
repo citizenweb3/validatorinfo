@@ -191,20 +191,20 @@ export const getNetworkProfileTabs = (id: number): TabOptions[] => {
       iconHovered: icons.GovernanceIconHovered,
     },
     {
-      name: 'Statistics',
-      href: `/networks/${id}/statistics`,
+      name: 'Stats',
+      href: `/networks/${id}/stats`,
       icon: icons.StatisticsIcon,
       iconHovered: icons.StatisticsIconHovered,
     },
     {
-      name: 'Passport',
-      href: `/networks/${id}/passport`,
+      name: 'Overview',
+      href: `/networks/${id}/overview`,
       icon: icons.NetworkPassportIcon,
       iconHovered: icons.NetworkPassportIconHovered,
     },
     {
-      name: 'Dev Info',
-      href: `/networks/${id}/dev_info`,
+      name: 'Dev',
+      href: `/networks/${id}/dev`,
       icon: icons.DevInfoIcon,
       iconHovered: icons.DevInfoIconHovered,
     },
@@ -231,9 +231,44 @@ export const getTxInformationTabs = (id: number, txHash: string): TabOptions[] =
 };
 
 export const libraryTabs: TabOptions[] = [
-  { name: 'Developers', href: `/library/developers`, icon: icons.DevInfoIcon, iconHovered: icons.DevInfoIconHovered, },
-  { name: 'Validators', href: '/library/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
+  { name: 'Developers', href: `/library/developers`, icon: icons.DevInfoIcon, iconHovered: icons.DevInfoIconHovered },
+  { name: 'Validators', href: '/library/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered, },
   { name: 'Library', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
   { name: 'Delegators', href: '/library/delegators', icon: icons.StakingIcon, iconHovered: icons.StakingIconHovered },
   { name: 'Curious', href: '/library/curious', icon: icons.CuriousIcon, iconHovered: icons.CuriousIconHovered },
 ];
+
+export const getAccountTabs = (id: number, accountAddress: string): TabOptions[] => {
+  return [
+    {
+      name: 'Transactions',
+      href: `/networks/${id}/address/${accountAddress}/transactions`,
+      icon: icons.TxSummary,
+      iconHovered: icons.TxSummaryHovered,
+    },
+    {
+      name: 'Tokens',
+      href: `/networks/${id}/address/${accountAddress}/tokens`,
+      icon: icons.WalletIcon,
+      iconHovered: icons.WalletIconHovered,
+    },
+    {
+      name: 'Passport',
+      href: `/networks/${id}/address/${accountAddress}/passport`,
+      icon: icons.NetworkPassportIcon,
+      iconHovered: icons.NetworkPassportIcon,
+    },
+    {
+      name: 'Governance',
+      href: `/networks/${id}/address/${accountAddress}/governance`,
+      icon: icons.GovernanceIcon,
+      iconHovered: icons.GovernanceIconHovered,
+    },
+    {
+      name: 'Analytics',
+      href: `/networks/${id}/address/${accountAddress}/analytics`,
+      icon: icons.StatisticsIcon,
+      iconHovered: icons.StatisticsIconHovered,
+    },
+  ];
+};

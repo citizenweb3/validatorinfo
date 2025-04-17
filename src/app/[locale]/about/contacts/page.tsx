@@ -7,6 +7,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -20,8 +21,9 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
     <div>
       <Story src="contacts" alt="Pixelated, 90s game-style characters giving contact info to validatorinfo.com logo" />
       <TabList page="AboutPage" tabs={aboutTabs} />
-      <PageTitle text={t('Contacts')} />
-      <div className="py-4">
+      <PageTitle text={t('Contacts.title')} />
+      <SubDescription text={t('Contacts.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <div>
         <div className="mb-4 mt-12 flex justify-around">
           <Link href="https://validatorinfo.com/blog/" className={`${size}`} target="_blank">
             <div className={`${size} bg-blog bg-contain bg-no-repeat hover:bg-blog_h`} />

@@ -46,7 +46,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
               style={{ color: '#2077E0' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
-              {((chain?.tvl ?? 0.50) * 100).toFixed(2)}
+              {((chain?.tvs ?? 0.50) * 100).toFixed(2)}
             </div>
           </div>
         </div>
