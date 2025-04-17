@@ -6,6 +6,7 @@ import Image from 'next/image';
 import cutHash from '@/utils/cut-hash';
 import SubTitle from '@/components/common/sub-title';
 import Link from 'next/link';
+import VotingPowerCirclesSSR from './network-proposals-list/live-prposal-graph';
 
 interface OwnProps {
   chainId: string;
@@ -57,13 +58,8 @@ const LiveProposals: FC<OwnProps> = async ({ chainId }) => {
                 </span>
               </div>
             </div>
-            <div className="w-2/5">
-              <Image
-                src={'/img/charts/voting-period-circle.svg'}
-                width={300}
-                height={300}
-                alt="voting period"
-              />
+            <div className="w-2/5 ">
+              <VotingPowerCirclesSSR yes={60} no={40} veto={65} abstain={45} />
             </div>
           </div>
         ))}
