@@ -33,19 +33,23 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
   return (
     <>
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <SubTitle text={t('Staking Calculator')} />
-      <div className="mb-8 mt-4 flex justify-center text-lg">
-        <Suspense fallback={<div>Loading...</div>}>
-          <NodeStakingCalculator node={node} price={price ?? undefined} />
-        </Suspense>
+      <div className="mb-12 mt-4 grid grid-cols-2 text-lg">
+        <div>
+          <SubTitle text={t('Staking Calculator')} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <NodeStakingCalculator node={node} price={price ?? undefined} />
+          </Suspense>
+        </div>
+        <div>
+          <TableDropdown<SlashingEventsExampleInterface[]>
+            page="NodeRevenuePage"
+            Table={SlashingEventsTable}
+            items={slashingEventsExample}
+          />
+        </div>
       </div>
       <SubTitle text={t('Staking Stats')} />
       <StakingStats locale={locale} page={'NodeRevenuePage'} />
-      <TableDropdown<SlashingEventsExampleInterface[]>
-        page="NodeRevenuePage"
-        Table={SlashingEventsTable}
-        items={slashingEventsExample}
-      />
     </>
   );
 };

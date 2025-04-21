@@ -55,7 +55,7 @@ const NodeStakingCalculator: FC<OwnProps> = ({ node, price }) => {
   const iconSize = 'h-10 min-h-10 w-10 min-w-10';
 
   return (
-    <div className="relative w-[600px]">
+    <div className="relative w-[600px] mt-6">
       <StakingResults values={stakingRates} chain={chain} />
       <div className="mt-3 flex items-center justify-between border-b border-bgSt">
         <div className="flex items-center">

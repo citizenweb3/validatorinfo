@@ -27,7 +27,7 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Podcast.title')} />
       <div>
-        <SubDescription text={t('Staking.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+        <SubDescription text={t('Podcast.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
         <div className="m-4">
           <Player />
         </div>

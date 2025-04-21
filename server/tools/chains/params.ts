@@ -603,7 +603,7 @@ const chainParams: Record<string, AddChainProps> = {
   'warden-testnet': {
     rang: 5,
     name: 'warden-testnet',
-    prettyName: 'Warden',
+    prettyName: 'Warden Testnet',
     chainId: 'chiado_10010-1',
     bech32Prefix: 'warden',
     coinDecimals: 18,
@@ -612,7 +612,7 @@ const chainParams: Record<string, AddChainProps> = {
     denom: 'WARD',
     minimalDenom: 'award',
     logoUrl:
-      'https://raw.githubusercontent.com/nymtech/nym/257e36ddcb408d301307b8ddf542b5275704e7d9/assets/logo/logo-bw.svg',
+      'https://raw.githubusercontent.com/warden-protocol/networks/87e9f8b03f38da9b2abf2155dec0a097692c4039/assets/Warden%20Icon%20Black%20back.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.warden-testnet.citizenweb3.com' },
       { type: 'lcd', url: 'https://api.warden-testnet.citizenweb3.com/' },

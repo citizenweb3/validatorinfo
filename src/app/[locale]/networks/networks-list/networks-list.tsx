@@ -27,7 +27,7 @@ const NetworksList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPa
         <NetworksListItem key={item.chainId} item={item} />
       ))}
       <tr>
-        <td colSpan={5} className="pt-4">
+        <td colSpan={6} className="pt-4">
           <TablePagination pageLength={pages} />
         </td>
       </tr>
