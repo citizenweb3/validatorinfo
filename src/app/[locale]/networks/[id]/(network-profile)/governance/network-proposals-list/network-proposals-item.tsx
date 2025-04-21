@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { FC } from 'react';
 import { Proposal } from '@prisma/client';
+import { parseMessage } from '@/utils/parse-proposal-message';
+import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
   proposal: Proposal;
@@ -44,9 +46,11 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal }) => {
         </Link>
       </td>
       <td className="w-1/4 border-b border-black py-4 px-5 text-base hover:text-highlight active:border-bgSt">
-        <Link href={proposalLink} className="flex justify-center">
-          <div className="text-center break-all">{proposal.type}</div>
-        </Link>
+        <Tooltip tooltip={proposal.type} direction='top'>
+          <Link href={proposalLink} className="flex justify-center">
+            <div className="text-center break-all">{parseMessage(proposal.type)}</div>
+          </Link>
+        </Tooltip>
       </td>
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
         <Link href={proposalLink} className="flex justify-center">

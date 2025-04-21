@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import { SearchResult } from '@/api/search/route';
 import SearchItem from '@/components/header/header-search/search-item';
+import icons from '@/components/icons';
 
 interface OwnProps {
   results: SearchResult | null;
@@ -21,9 +22,10 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
           <div>
             {results?.validators.map((validator, index) => (
               <SearchItem
+                key={validator.id}
                 name={validator.moniker}
                 link={`/validators/${validator.id}/networks`}
-                icon={validator.url?.indexOf('http') === 0 ? validator.url : `https://${validator.url}`}
+                icon={validator.url ?? icons.AvatarIcon}
                 isSelected={activeIndex === index}
                 onClick={onSelect}
               />
@@ -37,9 +39,10 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
           <div>
             {results?.chains.map((chain, index) => (
               <SearchItem
+                key={chain.id}
                 name={chain.prettyName}
                 link={`/networks/${chain.id}/overview`}
-                icon={chain.logoUrl?.indexOf('http') === 0 ? chain.logoUrl : `https://${chain.logoUrl}`}
+                icon={chain.logoUrl ?? icons.AvatarIcon}
                 isSelected={activeIndex === (results.validators.length ?? 0) + index}
                 onClick={onSelect}
               />
@@ -53,9 +56,10 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
           <div>
             {results?.tokens.map((chain, index) => (
               <SearchItem
+                key={chain.id}
                 name={chain.denom}
-                link={`/networks/${chain.name}`}
-                icon={chain.logoUrl?.indexOf('http') === 0 ? chain.logoUrl : `https://${chain.logoUrl}`}
+                link={`/networks/${chain.id}/tokenomics`}
+                icon={chain.logoUrl ?? icons.AvatarIcon}
                 isSelected={activeIndex === (results.validators.length ?? 0) + (results.chains.length ?? 0) + index}
                 onClick={onSelect}
               />

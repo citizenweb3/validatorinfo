@@ -17,7 +17,7 @@ const SlashingEventsTable: FC<OwnProps> = ({ items }) => {
 
   return (
     <div>
-      <table className="mt-4 w-full table-auto border-collapse">
+      <table className="mt-11 w-full table-auto border-collapse">
         <thead>
         <tr className="bg-table_header text-sm font-bold">
           <th className="py-3">{t('Table.Retro Name.name')}</th>
