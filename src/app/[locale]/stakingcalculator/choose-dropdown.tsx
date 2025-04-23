@@ -34,8 +34,7 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, classNam
   );
 
   return (
-    <div className={`${className} flex h-8 flex-col border-b border-bgSt pl-4 text-lg`}
-    >
+    <div className={`${className} flex h-8 flex-col border-b border-bgSt pl-4 text-lg`}>
       <div className="flex flex-row justify-between items-center">
         <div className="text-nowrap">{name && <div>{name}:</div>}</div>
         <div
