@@ -25,9 +25,6 @@ const ValidatorComparisonPage: NextPageWithLocale = async ({ params: { locale } 
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-4 mt-2'} />
       <ComparisonTable />
-      <div className="flex flex-col items-center justify-center">
-        <SpreadModal />
-      </div>
     </div>
   );
 };

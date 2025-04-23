@@ -11,6 +11,7 @@ import { fillColors } from '@/app/comparevalidators/helpers';
 import ValidatorLeftPanel from '@/app/comparevalidators/validator-left-panel';
 import ValidatorListItem from '@/app/comparevalidators/validator-list-item';
 import RoundedButton from '@/components/common/rounded-button';
+import SpreadModal from '@/app/about/modals/spread-modal';
 
 interface OwnProps {}
 
@@ -130,6 +131,11 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
               <RoundedButton contentClassName="px-20 text-2xl" onClick={() => setIsChart(!isChart)}>
                 {t(isChart ? 'Hide Charts' : 'Show Charts')}
               </RoundedButton>
+            )}
+            {filledData.length > 0 && (
+              <div className="flex flex-col items-center justify-center my-5">
+                <SpreadModal />
+              </div>
             )}
           </div>
         )}

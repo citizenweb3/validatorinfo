@@ -14,6 +14,7 @@ import Button from '@/components/common/button';
 import RoundedButton from '@/components/common/rounded-button';
 import { Node } from '@prisma/client';
 import { useTranslations } from 'next-intl';
+import SpreadModal from '@/app/about/modals/spread-modal';
 
 interface OwnProps {
   chainList: ChainItem[];
@@ -112,7 +113,7 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
                     </Button>
                     <div className="mt-4 flex flex-col items-end justify-end space-y-4">
                       <RoundedButton>Compare</RoundedButton>
-                      <RoundedButton>Spread the world</RoundedButton>
+                      <SpreadModal />
                     </div>
                   </div>
                 )}
