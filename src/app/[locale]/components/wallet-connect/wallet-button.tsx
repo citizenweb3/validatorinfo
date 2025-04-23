@@ -8,11 +8,14 @@ import React, { useState } from 'react';
 import Tooltip from '@/components/common/tooltip';
 import WalletModal from '@/components/wallet-connect/wallet-modal';
 import { useWallet } from '@/context/WalletContext';
+import { usePathname } from 'next/navigation';
 
 const WalletButton: React.FC = () => {
   const t = useTranslations('Header');
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const { walletData } = useWallet();
+  const pathname = usePathname();
+  const isActive = pathname === '/profile' || pathname.startsWith('/profile/');
 
   const handleClick = async (e: any) => {
     if (!walletData) {
@@ -23,7 +26,13 @@ const WalletButton: React.FC = () => {
   };
 
   return (
-    <div className="group border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-secondary hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none">
+    <div className={`
+    group border shadow-button
+    ${isActive
+        ? 'border-secondary'
+        : 'border-transparent border-r-bgSt border-t-bgSt hover:border hover:border-secondary'}
+    hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none`}
+    >
       <Tooltip tooltip={walletData ? t('Profile') : t('Click to login')}>
         <Link href="/profile" onClick={handleClick} className="flex flex-col items-center">
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('You')}</div>
