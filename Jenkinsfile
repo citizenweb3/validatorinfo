@@ -1,12 +1,20 @@
 pipeline {
     agent {
-        label (
-            env.BRANCH_NAME == 'main' ? 'Heracles' :
-            env.BRANCH_NAME == 'dev' ? 'valinfo' :
-            env.BRANCH_NAME == 'charts' ? 'cloud' : ''
-        )
+        label {
+            // Определяем агент на основе ветки
+            script {
+                if (env.BRANCH_NAME == 'main') {
+                    return 'Heracles'
+                } else if (env.BRANCH_NAME == 'dev') {
+                    return 'valinfo'
+                } else if (env.BRANCH_NAME == 'charts') {
+                    return 'cloud'
+                } else {
+                    error "Unknown branch: ${env.BRANCH_NAME}. Supported branches: main, dev, charts."
+                }
+            }
+        }
     }
-
     environment {
         DEV_PORT_FRONTEND = '3000'
         DEV_PORT_INDEXER = '3001'
@@ -14,41 +22,37 @@ pipeline {
         MAIN_PORT_INDEXER = '4001'
         CHARTS_PORT_FRONTEND = '5000'
         CHARTS_PORT_INDEXER = '5001'
-
-        COMPOSE_FILE = (
-            env.BRANCH_NAME == 'main' ? 'docker-compose.main.yml' :
-            env.BRANCH_NAME == 'dev' ? 'docker-compose.dev.yml' :
-            env.BRANCH_NAME == 'charts' ? 'docker-compose.charts.yml' : ''
-        )
+        // Определяем файл Docker Compose на основе ветки
+        COMPOSE_FILE = "${env.BRANCH_NAME == 'main' ? 'docker-compose.main.yml' : env.BRANCH_NAME == 'dev' ? 'docker-compose.dev.yml' : 'docker-compose.charts.yml'}"
     }
-
     stages {
         stage('Build') {
             steps {
                 script {
-                    if (!COMPOSE_FILE) {
-                        error "Unknown branch: ${env.BRANCH_NAME}"
+                    // Проверка на случай, если COMPOSE_FILE не установлен (хотя это уже проверено в agent)
+                    if (!env.COMPOSE_FILE) {
+                        error "COMPOSE_FILE is not defined for branch: ${env.BRANCH_NAME}"
                     }
-                    sh "docker-compose -f ${COMPOSE_FILE} build"
+                    // Используем docker compose v2
+                    sh "docker compose -f ${env.COMPOSE_FILE} build"
                 }
             }
         }
-
         stage('Deploy') {
             steps {
                 script {
-                    sh "docker-compose -f ${COMPOSE_FILE} up -d --build"
+                    // Запускаем контейнеры с пересборкой, если нужно
+                    sh "docker compose -f ${env.COMPOSE_FILE} up -d --build"
                 }
             }
         }
     }
-
     post {
         failure {
-            echo "❌ Something went wrong."
+            echo "❌ Pipeline failed for branch ${env.BRANCH_NAME}. Check logs for details."
         }
         success {
-            echo "✅ Deploy finished successfully on branch ${env.BRANCH_NAME}"
+            echo "✅ Deploy completed successfully for branch ${env.BRANCH_NAME}"
         }
     }
 }
