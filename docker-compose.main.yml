@@ -6,7 +6,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "5433:5432" # Разный порт для main, чтобы не конфликтовать с dev
+      - "5455:5432" # Разный порт для main, чтобы не конфликтовать с dev
     volumes:
       - postgres_data_main:/var/lib/postgresql/data
 
