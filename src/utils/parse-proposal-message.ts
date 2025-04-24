@@ -9,7 +9,7 @@ export function parseMessage(message: string): string {
     if (!lastPart.startsWith(prefix)) {
       return message;
     }
-    return lastPart.slice(prefix.length);
+    return lastPart.slice(prefix.length).replace(/([a-z])([A-Z])/g, '$1 $2');
   } catch (e) {
     return message;
   }

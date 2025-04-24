@@ -9,6 +9,7 @@ import Tooltip from '@/components/common/tooltip';
 import WalletModal from '@/components/wallet-connect/wallet-modal';
 import { useWallet } from '@/context/WalletContext';
 import { usePathname } from 'next/navigation';
+import { twMerge } from 'tailwind-merge';
 
 const WalletButton: React.FC = () => {
   const t = useTranslations('Header');
@@ -25,14 +26,13 @@ const WalletButton: React.FC = () => {
     }
   };
 
+  const baseButtonStyle = "group shadow-button hover:bg-[#272727] hover:text-highlight active:mt-1 active:bg-background active:shadow-none";
+  const activeButtonStyle = "border border-secondary active:border-transparent";
+  const inactiveButtonStyle = "border border-transparent border-r-bgSt border-t-bgSt hover:border hover:border-secondary active:border-transparent";
+  const buttonClassName = twMerge(baseButtonStyle, isActive ? activeButtonStyle : inactiveButtonStyle);
+
   return (
-    <div className={`
-    group border shadow-button
-    ${isActive
-        ? 'border-secondary'
-        : 'border-transparent border-r-bgSt border-t-bgSt hover:border hover:border-secondary'}
-    hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none`}
-    >
+    <div className={buttonClassName}>
       <Tooltip tooltip={walletData ? t('Profile') : t('Click to login')}>
         <Link href="/profile" onClick={handleClick} className="flex flex-col items-center">
           <div className="group-hover:text-shadowed font-handjet text-lg text-highlight">{t('You')}</div>

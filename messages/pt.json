@@ -192,9 +192,11 @@
     "tvl": "TVL",
     "revenue": "Receitas",
     "validator cost": "Custo do Validador",
+    "mau": "MAU",
     "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
     "revenue tooltip": "O montante das taxas geradas pela rede ontem",
     "validator cost tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
+    "mau tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
     "rich list tooltip": "Lista Rica",
     "distribution tooltip": "Distribuição"
   },
@@ -227,7 +229,13 @@
     "healthy validators": "Validadores Saudáveis",
     "Operator Distributions": "Distribuição de Operadores",
     "active": "Ativo",
-    "jailed": "Jailed"
+    "jailed": "Jailed",
+    "Social": "Social",
+    "price of active user": "Preço do usuário ativo",
+    "believers": "Entusiastas",
+    "followers": "Seguidores",
+    "members": "Membros",
+    "Transaction Volume": "Volume de transações + MAU"
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",

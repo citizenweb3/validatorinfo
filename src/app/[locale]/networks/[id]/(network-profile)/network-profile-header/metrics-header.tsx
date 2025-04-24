@@ -14,13 +14,20 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkProfileHeader');
 
   return (
-    <div className="mt-16 flex w-full justify-center gap-6">
+    <div className="mt-16 flex w-full justify-center gap-5">
       {networkProfileExample.headerMetrics.map((item) => (
         <ToolTip key={item.title} tooltip={t('tvl tooltip')} direction={'top'}>
           <MetricsCardItem key={item.title}
                            title={t(item.title as 'tvl')}
                            data={item.data}
                            titleClassName="my-1"
+                           className="
+                           xs:w-[70px]
+                           sm:w-[80px]
+                           md:w-[120px]
+                           lg:w-[140px]
+                           xl:w-[150px]
+                           2xl:w-[190px]"
                            isModal />
         </ToolTip>
       ))}

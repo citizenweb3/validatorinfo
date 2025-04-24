@@ -56,7 +56,7 @@ const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
           />
         </div>
       </div>
-      <div className="flex ml-16 mt-24">
+      <div className="flex ml-16 mt-20">
         <Image src={'/img/charts/operator-distribution-vp.svg'}
                width={1325}
                height={275} alt="vp"

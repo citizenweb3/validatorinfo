@@ -20,6 +20,28 @@ export const networkProfileExample = {
       data: 90,
       tooltip: 'validator cost',
     },
+    {
+      title: 'mau',
+      data: 90,
+      tooltip: 'mau',
+    },
+  ],
+  socialMetrics: [
+    {
+      title: 'believers',
+      data: 90,
+      tooltip: '',
+    },
+    {
+      title: 'followers',
+      data: 90,
+      tooltip: '',
+    },
+    {
+      title: 'members',
+      data: 90,
+      tooltip: '',
+    },
   ],
   totalsMetrics: [
     {
