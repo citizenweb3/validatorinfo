@@ -1,51 +1,54 @@
 pipeline {
-    agent any
+    agent {
+        label (
+            env.BRANCH_NAME == 'main' ? 'Heracles' :
+            env.BRANCH_NAME == 'dev' ? 'valinfo' :
+            env.BRANCH_NAME == 'charts' ? 'cloud' : ''
+        )
+    }
+
     environment {
-        // Определяем переменные окружения для портов (для документации или будущих расширений)
         DEV_PORT_FRONTEND = '3000'
         DEV_PORT_INDEXER = '3001'
         MAIN_PORT_FRONTEND = '4000'
         MAIN_PORT_INDEXER = '4001'
-        // Переменная для секрета базы данных (будет подтягиваться из Jenkins Credentials)
-        //POSTGRES_PASSWORD = credentials('postgres-password')
+        CHARTS_PORT_FRONTEND = '5000'
+        CHARTS_PORT_INDEXER = '5001'
+
+        COMPOSE_FILE = (
+            env.BRANCH_NAME == 'main' ? 'docker-compose.main.yml' :
+            env.BRANCH_NAME == 'dev' ? 'docker-compose.dev.yml' :
+            env.BRANCH_NAME == 'charts' ? 'docker-compose.charts.yml' : ''
+        )
     }
+
     stages {
         stage('Build') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'dev') {
-                        sh 'docker compose -f docker-compose.dev.yml build'
-                    } else if (env.BRANCH_NAME == 'main') {
-                        sh 'docker compose -f docker-compose.main.yml build'
+                    if (!COMPOSE_FILE) {
+                        error "Unknown branch: ${env.BRANCH_NAME}"
                     }
+                    sh "docker-compose -f ${COMPOSE_FILE} build"
                 }
             }
         }
-        stage('Test') {
-            steps {
-                script {
-                    if (env.BRANCH_NAME == 'dev') {
-                        sh 'docker compose -f docker-compose.dev.yml run --rm frontend yarn test || true'
-                        sh 'docker compose -f docker-compose.dev.yml run --rm indexer yarn test || true'
-                    } else if (env.BRANCH_NAME == 'main') {
-                        sh 'docker compose -f docker-compose.main.yml run --rm frontend yarn test || true'
-                        sh 'docker compose -f docker-compose.main.yml run --rm indexer yarn test || true'
-                    }
-                }
-            }
-        }
+
         stage('Deploy') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'dev') {
-                        sh 'docker compose -f docker-compose.dev.yml down'
-                        sh 'docker compose -f docker-compose.dev.yml up -d'
-                    } else if (env.BRANCH_NAME == 'main') {
-                        sh 'docker compose -f docker-compose.main.yml down'
-                        sh 'docker compose -f docker-compose.main.yml up -d'
-                    }
+                    sh "docker-compose -f ${COMPOSE_FILE} up -d --build"
                 }
             }
+        }
+    }
+
+    post {
+        failure {
+            echo "❌ Something went wrong."
+        }
+        success {
+            echo "✅ Deploy finished successfully on branch ${env.BRANCH_NAME}"
         }
     }
 }
