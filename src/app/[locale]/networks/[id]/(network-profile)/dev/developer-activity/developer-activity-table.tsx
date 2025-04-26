@@ -12,7 +12,7 @@ interface OwnProps {
 }
 
 const DeveloperActivityTable: FC<OwnProps> = ({ items }) => {
-  const t = useTranslations('NetworkDevInfo');
+  const t = useTranslations('NetworkDevInfo.DeveloperActivity');
 
   return (
     <div>

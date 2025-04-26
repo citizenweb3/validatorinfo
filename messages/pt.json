@@ -268,9 +268,11 @@
     "pre commit synchronized": "O validador submeteu um pré-commit com um hash de bloco sincronizado",
     "pre commit different": "O validador submeteu o pré-commit com um hash de bloco diferente",
     "pre commit not submitted": "O validador ainda não apresentou o pré-commit",
+    "commits p/month": "Autorizações/mês",
     "peers": "Peers",
     "seeds": "Seeds",
     "binary versions": "Versões binárias",
+    "Submit App Info": "Enviar informações sobre a aplicação",
     "Parameters": "Parâmetros",
     "bech32 prefix": "Bech32 Prefixo",
     "daemon name": "Nome do Demónio",
@@ -280,19 +282,48 @@
     "genesis url": "Génesis URL",
     "chain id": "Rede ID",
     "denom": "Denom",
-    "Developer Activity": "Atividade do Promotor",
-    "github stars": "Github Estrelas",
-    "github forks": "Github Garfos",
-    "show dropdown": "Mostrar Repositórios",
-    "hide dropdown": "Ocultar Repositórios",
-    "Table": {
-      "Repository Name": {
-        "name": "Nome do Repositório",
-        "hint": ""
-      },
-      "Commits": {
-        "name": "Commits",
-        "hint": ""
+    "Apps": {
+      "Subtitle": "Aplicativos",
+      "Table": {
+        "Name": {
+          "name": "Nome",
+          "hint": ""
+        },
+        "Links": {
+          "name": "Links",
+          "hint": ""
+        },
+        "Users": {
+          "name": "Usuários",
+          "hint": ""
+        },
+        "WAU": {
+          "name": "WAU",
+          "hint": ""
+        },
+        "Capital": {
+          "name": "Capital",
+          "hint": ""
+        }
+      }
+    },
+    "DeveloperActivity": {
+      "Subtitle": "Atividade do Desenvolvedor",
+      "show dropdown": "Mostrar Repositórios",
+      "hide dropdown": "Ocultar Repositórios",
+      "star": "Estrela",
+      "forked": "Bifurcado",
+      "repositories": "Repositórios",
+      "most active repo": "Repositório Mais Ativo",
+      "Table": {
+        "Repository Name": {
+          "name": "Nome do Repositório",
+          "hint": ""
+        },
+        "Commits": {
+          "name": "Commits",
+          "hint": ""
+        }
       }
     }
   },

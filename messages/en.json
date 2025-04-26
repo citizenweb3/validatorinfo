@@ -268,9 +268,11 @@
     "pre commit synchronized": "Validator has submitted pre-commit with synchronized block hash",
     "pre commit different": "Validator has submitted pre-commit with different block hash",
     "pre commit not submitted": "Validator has not submitted pre-commit yet",
+    "commits p/month": "Commits p/month",
     "peers": "Peers",
     "seeds": "Seeds",
     "binary versions": "Binary Versions",
+    "Submit App Info": "Submit App Info",
     "Parameters": "Parameters",
     "bech32 prefix": "Bech32 Prefix",
     "daemon name": "Daemon Name",
@@ -280,19 +282,48 @@
     "genesis url": "Genesis URL",
     "chain id": "Chain ID",
     "denom": "Denom",
-    "Developer Activity": "Developer Activity",
-    "github stars": "Github Stars",
-    "github forks": "Github Forks",
-    "show dropdown": "Show Repositories",
-    "hide dropdown": "Hide Repositories",
-    "Table": {
-      "Repository Name": {
-        "name": "Repository Name",
-        "hint": ""
-      },
-      "Commits": {
-        "name": "Commits",
-        "hint": ""
+    "Apps": {
+      "Subtitle": "Apps",
+      "Table": {
+        "Name": {
+          "name": "Name",
+          "hint": ""
+        },
+        "Links": {
+          "name": "Links",
+          "hint": ""
+        },
+        "Users": {
+          "name": "Users",
+          "hint": ""
+        },
+        "WAU": {
+          "name": "WAU",
+          "hint": ""
+        },
+        "Capital": {
+          "name": "Capital",
+          "hint": ""
+        }
+      }
+    },
+    "DeveloperActivity": {
+      "Subtitle": "Developer Activity",
+      "show dropdown": "Show Repositories",
+      "hide dropdown": "Hide Repositories",
+      "star": "Star",
+      "forked": "Forked",
+      "repositories": "Repositories",
+      "most active repo": "Most Active Repo",
+      "Table": {
+        "Repository Name": {
+          "name": "Repository Name",
+          "hint": ""
+        },
+        "Commits": {
+          "name": "Commits",
+          "hint": ""
+        }
       }
     }
   },
