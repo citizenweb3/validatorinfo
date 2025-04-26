@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
 import { FC } from 'react';
 import SubTitle from '@/components/common/sub-title';
 import { Chain } from '@prisma/client';
+import NetworkAprTvsChartServer from './network-apr-tvsServer';
 
 interface OwnProps {
   chain: Chain | null;
@@ -46,18 +46,14 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
               style={{ color: '#2077E0' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
-              {((chain?.tvs ?? 0.50) * 100).toFixed(2)}
+              {((chain?.tvl ?? 0.5) * 100).toFixed(2)}
             </div>
           </div>
         </div>
         <div className="w-4/5">
-          <Image
-            src={'/img/charts/network-apr-tvs-chart.svg'}
-            width={1100}
-            height={250}
-            alt="apr tvs chart"
-            className="ml-16"
-          />
+          <div className="ml-16">
+            <NetworkAprTvsChartServer />
+          </div>
         </div>
       </div>
     </div>

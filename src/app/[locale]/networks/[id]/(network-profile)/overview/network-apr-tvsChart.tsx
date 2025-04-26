@@ -18,19 +18,18 @@ import {
 } from '@/app/components/chart/chartUtils';
 import { formatNumber } from '@/app/components/chart/chartHelper';
 import { generateSampleData} from '@/app/components/chart/sampleData';
+import { t } from 'i18next';
 
-const RevenueCapitalFlowChart: FC = () => {
+const NetworkAprTvsChart: FC = () => {
   // Define ecosystems and their colors (can be extended as needed)
-  const Labels = ['Capital Out', 'Capital In', 'Revenue'];
-  const colorMap = {
-    'Capital Out': '#E5C46B',
-    'Capital In': '#4FB848',
-    'Revenue': '#2077E0',
-  };
+  const LegendLabels = ['APY (Compounded Interest)', 'APR (Simple Interest)', 'TVL']; 
+  const colorMapLegends = { 'APY (Compounded Interest)': '#E5C46B', 'APR (Simple Interest)': '#4FB848', 'TVL': '#2077E0', };
+  const Labels = [ 'APY', 'APR', 'TVL' , ];
+  const colorMap = { 'APY': '#E5C46B', 'APR': '#4FB848', 'TVL': '#2077E0', };
   const startingPrices = {
-    'Capital Out': 50000000,
-    'Capital In': 30000000,
-    'Revenue': 10000000,
+    'APY': 90,
+    'APR': 70,
+    'TVL': 80,
   };
   
 
@@ -103,9 +102,9 @@ const RevenueCapitalFlowChart: FC = () => {
       return;
     }
   
-    const yMax = d3.max(allValues) ?? 100;
-    const yMinValue = - 10000000; // Actual minimum from data
-    const yScale = setupYScale([yMinValue * 0.95, yMax * 1.05], chartHeight, 'linear');
+    const yMax = 100;
+    const yMinValue = 0; // Actual minimum from data
+    const yScale = setupYScale([yMinValue , yMax * 1.05], chartHeight, 'linear');
   
     drawYAxis(svg, yScale, padding.left, padding.bottom, {
       tickFormat: (d) => `$${Number(d).toFixed(2)}`,
@@ -133,17 +132,6 @@ const RevenueCapitalFlowChart: FC = () => {
       }
     });
   
-    // Draw the white line at the minimum value
-    const minLineDataset: DataPoint[] = [
-      { date: xScale.invert(0), value: yMinValue },
-      { date: xScale.invert(plotWidth), value: yMinValue },
-    ];
-    svg.append('path')
-      .attr('fill', 'none')
-      .attr('stroke', '#ffffff')
-      .attr('stroke-width', 1.5)
-      .attr('stroke-linecap', 'round')
-      .attr('d', lineGenerator(minLineDataset));
   
     // Tooltip for all ecosystems
     handleTooltip(
@@ -161,13 +149,13 @@ const RevenueCapitalFlowChart: FC = () => {
       plotWidth,
       plotHeight,
       chartType,
-      false
+      true
     );
   
     // Dynamic legend
-    const legendItems = Labels.map(label => ({
+    const legendItems = LegendLabels.map(label => ({
       label: label,
-      color: colorMap[label as keyof typeof colorMap],
+      color: colorMapLegends[label as keyof typeof colorMapLegends],
     }));
     drawLegend(svg, legendItems, chartConfig, tooltipConfig);
   
@@ -281,4 +269,4 @@ const RevenueCapitalFlowChart: FC = () => {
   );
 };
 
-export default RevenueCapitalFlowChart;
+export default NetworkAprTvsChart;
