@@ -1,7 +1,6 @@
 'use client';
 import * as d3 from 'd3';
 import { FC, useEffect, useRef, useState, useMemo } from 'react';
-import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import {
   ChartConfig,
   setupChartArea,
@@ -19,9 +18,11 @@ import {
 import { formatNumber } from '@/app/components/chart/chartHelper';
 import { generateSampleData} from '@/app/components/chart/sampleData';
 import { t } from 'i18next';
+interface PosRewardsAndTvsLineProps {
+  chartType: "Daily" | "Weekly" | "Monthly" | "Yearly";
+}
 
-const NetworkAprTvsChart: FC = () => {
-  // Define ecosystems and their colors (can be extended as needed)
+const PosRewardsAndTvsLine: FC<PosRewardsAndTvsLineProps> = ({ chartType }) => {
   const Labels = [ 'Rewards', 'T.V.S'];
   const colorMap = { 'Rewards': '#E5C46B', 'T.V.S': '#4FB848' };
   const startingPrices = {
@@ -31,7 +32,7 @@ const NetworkAprTvsChart: FC = () => {
   
 
   const [isChart, setIsChart] = useState<boolean>(true);
-  const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>('Daily');
+  // const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>('Daily');
   const [datasets, setDatasets] = useState<{ [Labels: string]: DataPoint[] }>({});
   const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
@@ -82,7 +83,7 @@ const NetworkAprTvsChart: FC = () => {
       .append('clipPath')
       .attr('id', 'clip-revenue')
       .append('rect')
-      .attr('x', 100)
+      .attr('x', 10)
       .attr('y', 0)
       .attr('width', plotWidth - 10)
       .attr('height', chartConfig.height);
@@ -223,47 +224,25 @@ const NetworkAprTvsChart: FC = () => {
     }
   }, [datasets, width, isChart]);
 
-  const handleChartChanged = (value: boolean) => {
-    setIsChart(value);
-    if (!value) {
-      setChartType(undefined as any);
-    } else {
-      setChartType('Daily');
+  useEffect(() => {
+    if (isChart) {
+      drawChart();
     }
-  };
+  }, [isChart]);
 
   return (
-    <div className="mt-3 mb-12">
-      <div className="flex items-center justify-center">
-        <ChartButtons
-          onlyDays
-          ecosystems={false}
-          isChart={isChart}
-          onChartChanged={handleChartChanged}
-          chartType={chartType}
-          onTypeChanged={(name) => setChartType(name as any)}
-        />
-      </div>
-
-      {isChart ? (
         <div
           ref={chartRef}
           style={{
             position: 'relative',
             width: '90%',
-            minWidth: '300px',
+            minWidth: '1300px',
             height: '300px',
             backgroundColor: '#1E1E1E',
           }}
-          className="mt-3 px-4 sm:px-10 md:px-20 w-full"
+          className="mt-3 w-full"
         />
-      ) : (
-        <div className="mt-3 px-14 text-center text-white text-lg">
-          Chart is disabled. Toggle to view chart.
-        </div>
-      )}
-    </div>
   );
 };
 
-export default NetworkAprTvsChart;
+export default PosRewardsAndTvsLine;

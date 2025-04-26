@@ -20,7 +20,12 @@ import { formatNumber } from '@/app/components/chart/chartHelper';
 import { generateSampleData } from '@/app/components/chart/sampleData';
 import { drawBars, handleBarTooltip } from '@/components/chart/barChartUtils';
 
-const NetworkAprTvsChart: FC = () => {
+interface PosCapitalizationBarChartWidget  {
+  chartType: "Daily" | "Weekly" | "Monthly" | "Yearly";
+}
+
+
+const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = ({ chartType }) => {
   // Define ecosystems and their colors (can be extended as needed)
   const LegendLabels = ['Total Crypto Capitalization', 'Value Secured'];
   const colorMapLegends = { 'Total Crypto Capitalization': '#E5C46B', 'Value Secured': '#4FB848' };
@@ -33,7 +38,6 @@ const NetworkAprTvsChart: FC = () => {
 
 
   const [isChart, setIsChart] = useState<boolean>(true);
-  const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>('Daily');
   const [datasets, setDatasets] = useState<{ [Labels: string]: DataPoint[] }>({});
   const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
@@ -82,9 +86,9 @@ const NetworkAprTvsChart: FC = () => {
 
     svg.append('defs')
       .append('clipPath')
-      .attr('id', 'clip-revenue')
+      .attr('id', 'clipBar')
       .append('rect')
-      .attr('x', 100)
+      .attr('x', 60)
       .attr('y', 0)
       .attr('width', plotWidth - 10)
       .attr('height', chartConfig.height);
@@ -213,47 +217,25 @@ const NetworkAprTvsChart: FC = () => {
     }
   }, [datasets, width, isChart]);
 
-  const handleChartChanged = (value: boolean) => {
-    setIsChart(value);
-    if (!value) {
-      setChartType(undefined as any);
-    } else {
-      setChartType('Daily');
+  useEffect(() => {
+    if (isChart) {
+      drawChart();
     }
-  };
+  }, [isChart]);
 
   return (
-    <div className="mt-3 mb-12">
-      <div className="flex items-center justify-center">
-        <ChartButtons
-          onlyDays
-          ecosystems={false}
-          isChart={isChart}
-          onChartChanged={handleChartChanged}
-          chartType={chartType}
-          onTypeChanged={(name) => setChartType(name as any)}
-        />
-      </div>
-
-      {isChart ? (
         <div
           ref={chartRef}
           style={{
             position: 'relative',
             width: '90%',
-            minWidth: '300px',
+            minWidth: '1300px',
             height: '300px',
             backgroundColor: '#1E1E1E',
           }}
-          className="mt-3 px-4 sm:px-10 md:px-20 w-full"
+          className="mt-3 w-full"
         />
-      ) : (
-        <div className="mt-3 px-14 text-center text-white text-lg">
-          Chart is disabled. Toggle to view chart.
-        </div>
-      )}
-    </div>
   );
 };
 
-export default NetworkAprTvsChart;
+export default PosCapitalizationBarChartWidget;

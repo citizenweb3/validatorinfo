@@ -20,12 +20,11 @@ import { generateDataForDominanceLine } from './generateSampleDominance';
 import { ECOSYSTEMS_CONFIG } from './ecosystemConfig';
 
 interface TotalDominanceChartProps {
-  chartType?: string;
+  chartType: string;
   ecosystems: string[];
 }
 
-const TotalDominanceChart: FC<TotalDominanceChartProps> = ({ chartType: initialChartType = 'Monthly', ecosystems }) => {
-  const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>(initialChartType as 'Daily' | 'Weekly' | 'Monthly' | 'Yearly');
+const TotalDominanceChart: FC<TotalDominanceChartProps> = ({ chartType, ecosystems }) => {
   const [datasets, setDatasets] = useState<{ [key: string]: DataPoint[] }>({});
   const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
@@ -81,12 +80,11 @@ const TotalDominanceChart: FC<TotalDominanceChartProps> = ({ chartType: initialC
     const plotWidth = chartWidth - chartConfig.padding.left - chartConfig.padding.right - 100;
     const plotHeight = chartHeight - chartConfig.padding.top - chartConfig.padding.bottom;
 
-    svg
-      .append('defs')
+    svg.append('defs')
       .append('clipPath')
-      .attr('id', 'clip-dominance')
+      .attr('id', 'clip')
       .append('rect')
-      .attr('x', 100)
+      .attr('x', 10)
       .attr('y', 0)
       .attr('width', plotWidth - 10)
       .attr('height', chartConfig.height);
@@ -195,26 +193,26 @@ const TotalDominanceChart: FC<TotalDominanceChartProps> = ({ chartType: initialC
   }, [chartType, ecosystems]);
 
   useEffect(() => {
-    if (Object.values(datasets).some((data) => data.length > 0) && width > 0 ) {
+    if (Object.values(datasets).some((data) => data.length > 0) && width > 0) {
       drawChart();
     }
   }, [datasets, xDomain, width]);
 
- 
+
 
   return (
     <div className="mt-3 mb-12">
-        <div
-          ref={chartRef}
-          style={{
-            position: 'relative',
-            width: '90%',
-            minWidth: '300px',
-            height: '300px',
-            backgroundColor: '#1E1E1E',
-          }}
-          className="mt-3 px-4 sm:px-10 md:px-20 w-full"
-        />
+      <div
+        ref={chartRef}
+        style={{
+          position: 'relative',
+          width: '90%',
+          minWidth: '300px',
+          height: '300px',
+          backgroundColor: '#1E1E1E',
+        }}
+        className="mt-3 px-4 sm:px-10 md:px-20 w-full"
+      />
     </div>
   );
 };

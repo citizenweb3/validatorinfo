@@ -83,7 +83,7 @@ export function drawBars(
       'transform',
       `translate(${xOffset + paddingLeft}, ${yOffset + paddingBottom})`
     )
-    .attr('clip-path', 'url(#clip-revenue)');
+    .attr('clip-path', 'url(#clipBar)');
 
   barsGroup
     .selectAll(`.bar-${section}`)

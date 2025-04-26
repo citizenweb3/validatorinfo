@@ -26,7 +26,11 @@ const PosDominanceLine: FC<PosDominanceLineProps> = ({ chartType, setChartType }
     title: ECOSYSTEMS_CONFIG[ecosystem]?.name || ecosystem, // Use the ecosystem name
     color: ECOSYSTEMS_CONFIG[ecosystem]?.color, // Add color from the config
   }));
-
+  const handleTypeChange = (newType: string) => {
+    if (["Daily", "Weekly", "Monthly", "Yearly"].includes(newType)) {
+      setChartType(newType);
+    }
+  };
   // Handle the ecosystem selection change
   const handleSelectionChange = (value: string[]) => {
     setSelectedEcosystems(value); // Update selected ecosystems
@@ -51,15 +55,15 @@ const PosDominanceLine: FC<PosDominanceLineProps> = ({ chartType, setChartType }
           isChart={true}
           onChartChanged={() => { }}
           chartType={chartType}
-          onTypeChanged={setChartType}
+          onTypeChanged={handleTypeChange}
           ecosystems={false}
         />
       </div>
       {/* Chart Widget - Displays the chart based on selected ecosystems */}
-        <TotalDominanceChart
-          chartType={chartType}
-          ecosystems={selectedEcosystems}
-        />
+      <TotalDominanceChart
+        chartType={chartType}
+        ecosystems={selectedEcosystems} // Pass selected ecosystems to the chart widget
+      />
     </div>
   );
 };
