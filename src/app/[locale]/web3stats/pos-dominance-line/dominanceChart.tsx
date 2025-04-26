@@ -1,7 +1,6 @@
 'use client';
 import * as d3 from 'd3';
 import { FC, useEffect, useRef, useState, useMemo } from 'react';
-import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import {
   ChartConfig,
   setupChartArea,
@@ -14,27 +13,20 @@ import {
   TooltipConfig,
   DataPoint,
   drawLegend,
-  handleTooltip
+  handleTooltip,
 } from '@/app/components/chart/chartUtils';
 import { formatNumber } from '@/app/components/chart/chartHelper';
-import { generateSampleData } from '@/app/components/chart/sampleData';
-import { drawBars, handleBarTooltip } from '@/components/chart/barChartUtils';
+import { generateDataForDominanceLine } from './generateSampleDominance';
+import { ECOSYSTEMS_CONFIG } from './ecosystemConfig';
 
-const NetworkAprTvsChart: FC = () => {
-  // Define ecosystems and their colors (can be extended as needed)
-  const LegendLabels = ['Total Crypto Capitalization', 'Value Secured'];
-  const colorMapLegends = { 'Total Crypto Capitalization': '#E5C46B', 'Value Secured': '#4FB848' };
-  const Labels = ['Crypto Capitalization', 'Value Secured'];
-  const colorMap = { 'Crypto Capitalization': '#E5C46B', 'Value Secured': '#4FB848', };
-  const startingPrices = {
-    'Crypto Capitalization': 9000000,
-    'Value Secured': 7000000,
-  };
+interface TotalDominanceChartProps {
+  chartType?: string;
+  ecosystems: string[];
+}
 
-
-  const [isChart, setIsChart] = useState<boolean>(true);
-  const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>('Daily');
-  const [datasets, setDatasets] = useState<{ [Labels: string]: DataPoint[] }>({});
+const TotalDominanceChart: FC<TotalDominanceChartProps> = ({ chartType: initialChartType = 'Monthly', ecosystems }) => {
+  const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>(initialChartType as 'Daily' | 'Weekly' | 'Monthly' | 'Yearly');
+  const [datasets, setDatasets] = useState<{ [key: string]: DataPoint[] }>({});
   const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
   const chartRef = useRef<HTMLDivElement>(null);
@@ -56,7 +48,7 @@ const NetworkAprTvsChart: FC = () => {
   );
 
   const tooltipConfig: TooltipConfig = {
-    width: 280,
+    width: 180,
     rowHeight: 22,
     baseHeight: 30,
     squareSize: 10,
@@ -67,22 +59,32 @@ const NetworkAprTvsChart: FC = () => {
     rightBoundaryOffset: 165,
   };
 
+  const colors = useMemo(
+    () =>
+      ecosystems.reduce((acc, eco) => {
+        acc[eco] = (ECOSYSTEMS_CONFIG as any)[eco]?.color || 'gray';
+        return acc;
+      }, {} as { [key: string]: string }),
+    [ecosystems]
+  );
+
   const drawChart = () => {
-    if (!chartRef.current || !Object.values(datasets).some(data => data.length > 0)) return;
+    if (!chartRef.current || !Object.values(datasets).some((data) => data.length > 0)) return;
 
     d3.select(chartRef.current).select('svg').remove();
 
     const { svg, plotArea } = setupChartArea(chartRef, chartConfig);
-    const { padding } = chartConfig;
+    const { padding, gapLeft, gapRight } = chartConfig;
 
     const chartWidth = chartConfig.width - chartConfig.margin.left - chartConfig.margin.right;
     const chartHeight = chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom;
     const plotWidth = chartWidth - chartConfig.padding.left - chartConfig.padding.right - 100;
     const plotHeight = chartHeight - chartConfig.padding.top - chartConfig.padding.bottom;
 
-    svg.append('defs')
+    svg
+      .append('defs')
       .append('clipPath')
-      .attr('id', 'clip-revenue')
+      .attr('id', 'clip-dominance')
       .append('rect')
       .attr('x', 100)
       .attr('y', 0)
@@ -90,43 +92,38 @@ const NetworkAprTvsChart: FC = () => {
       .attr('height', chartConfig.height);
 
     const xScale = setupXScale(xDomain, plotWidth);
-
-    // Collect all valid values for y-domain calculation
-    const allValues: number[] = Labels.flatMap(label =>
-      datasets[label]?.map(d => d.value).filter(v => v !== null && v !== undefined) || []
-    );
-
-    if (allValues.length === 0) {
-      console.warn('No valid data available to draw the chart');
-      return;
-    }
-
-    const yMax = Math.max(...allValues);
-    const yMinValue =0; // Actual minimum from data
-    const yScale = setupYScale([yMinValue, yMax * 1.2], chartHeight, 'linear');
+    const yScale = setupYScale([0, 100], chartHeight, 'linear');
 
     drawYAxis(svg, yScale, padding.left, padding.bottom, {
-      tickFormat: (d) => `$${Number(d).toFixed(2)}`,
-      usePercentage: false,
+      tickFormat: (d) => `${Number(d).toFixed(2)}%`,
+      usePercentage: true,
       fontFamily: 'Handjet',
       fontSize: '13.75px',
-      labelOffset: -30
+      labelOffset: -20,
     });
     drawXAxis(plotArea, xScale, plotHeight, chartConfig, chartType);
 
-    const lineGenerator = d3.line<DataPoint>()
+    const lineGenerator = d3
+      .line<DataPoint>()
       .x((d) => xScale(d.date))
       .y((d) => yScale(d.value))
       .curve(d3.curveMonotoneX);
 
-    // Draw a line for each ecosystem
-    drawBars(plotArea, datasets['Value Secured'], '#4FB848', xScale, yScale, 30, 'left', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
-    drawBars(plotArea, datasets['Crypto Capitalization'], '#E5C46B', xScale, yScale, 30, 'right', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
+    ecosystems.forEach((ecosystem) => {
+      if (datasets[ecosystem]) {
+        drawLine(plotArea, datasets[ecosystem], chartType, colors[ecosystem], lineGenerator);
+      } else {
+        console.warn('Missing dataset for ecosystem:', ecosystem);
+      }
+    });
 
+    const legendItems = ecosystems.map((ecosystem) => ({
+      label: ecosystem,
+      color: colors[ecosystem],
+    }));
+    drawLegend(svg, legendItems, chartConfig, tooltipConfig);
 
-
-    // Tooltip for all ecosystems
-    handleBarTooltip(
+    handleTooltip(
       svg,
       plotArea,
       datasets,
@@ -134,17 +131,15 @@ const NetworkAprTvsChart: FC = () => {
       yScale,
       chartConfig,
       tooltipConfig,
-      (value) => `$${formatNumber(value)}`,
-      colorMap,
-      chartType
+      (value) => `${formatNumber(value)}%`,
+      colors,
+      padding.left,
+      chartWidth - padding.right,
+      plotWidth,
+      plotHeight,
+      chartType,
+      true
     );
-
-    // Dynamic legend
-    const legendItems = LegendLabels.map(label => ({
-      label: label,
-      color: colorMapLegends[label as keyof typeof colorMapLegends],
-    }));
-    drawLegend(svg, legendItems, chartConfig, tooltipConfig);
 
     svg.on('wheel', (event) =>
       handleWheel(event, xDomain, setXDomain, fetchDataForRange, new Date('2010-01-01'), new Date())
@@ -153,18 +148,10 @@ const NetworkAprTvsChart: FC = () => {
 
   const fetchDataForRange = (startDate: Date, endDate: Date) => {
     setTimeout(() => {
-      const data = Labels.reduce((acc, label, index) => {
-        const labelData = generateSampleData(startDate, endDate, chartType, [label], {
-          startingPrice: Object.values(startingPrices)[index], // Access startingPrices with numeric index
-          volatility: 0.1,
-          regenerate: true,
-        });
-        return { ...acc, [label]: labelData[label] };
-      }, {});
-      setDatasets(data);
+      const newDatasets = generateDataForDominanceLine(startDate, endDate, chartType, ecosystems);
+      setDatasets(newDatasets);
     }, 1);
   };
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -184,7 +171,7 @@ const NetworkAprTvsChart: FC = () => {
     switch (chartType) {
       case 'Daily':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 30);
+        startDate.setDate(now.getDate() - 65);
         break;
       case 'Weekly':
         startDate = new Date(now);
@@ -205,37 +192,18 @@ const NetworkAprTvsChart: FC = () => {
     const endDate = now;
     setXDomain([startDate, endDate]);
     fetchDataForRange(startDate, endDate);
-  }, [chartType]);
+  }, [chartType, ecosystems]);
 
   useEffect(() => {
-    if (Object.values(datasets).some(data => data.length > 0) && width > 0 && isChart) {
+    if (Object.values(datasets).some((data) => data.length > 0) && width > 0 ) {
       drawChart();
     }
-  }, [datasets, width, isChart]);
+  }, [datasets, xDomain, width]);
 
-  const handleChartChanged = (value: boolean) => {
-    setIsChart(value);
-    if (!value) {
-      setChartType(undefined as any);
-    } else {
-      setChartType('Daily');
-    }
-  };
+ 
 
   return (
     <div className="mt-3 mb-12">
-      <div className="flex items-center justify-center">
-        <ChartButtons
-          onlyDays
-          ecosystems={false}
-          isChart={isChart}
-          onChartChanged={handleChartChanged}
-          chartType={chartType}
-          onTypeChanged={(name) => setChartType(name as any)}
-        />
-      </div>
-
-      {isChart ? (
         <div
           ref={chartRef}
           style={{
@@ -247,13 +215,8 @@ const NetworkAprTvsChart: FC = () => {
           }}
           className="mt-3 px-4 sm:px-10 md:px-20 w-full"
         />
-      ) : (
-        <div className="mt-3 px-14 text-center text-white text-lg">
-          Chart is disabled. Toggle to view chart.
-        </div>
-      )}
     </div>
   );
 };
 
-export default NetworkAprTvsChart;
+export default TotalDominanceChart;
