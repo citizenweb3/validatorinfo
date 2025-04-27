@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
+import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
   denom?: string;
@@ -30,28 +31,31 @@ const NetworkTokenPrice: FC<OwnProps> = async ({ denom, price }) => {
   ];
 
   return (
-    <div>
-      <SubTitle text={t('Token Price')} />
-      <div className="flex flex-row justify-between gap-x-5 mt-5">
-        <div className="flex flex-row w-2/3 gap-x-10 items-start mt-6">
-          <div className="flex items-center justify-between shadow-button basis-1/3 py-1">
-            <div className="font-sfpro text-lg ml-2">{`${denom} / USD:`}</div>
-            <div className="font-handjet text-xl text-highlight justify-end mr-8">{`$${price}`}</div>
+    <div className="mb-20">
+      <div className="flex flex-row justify-between items-end">
+        <SubTitle text={t('Token Price')} />
+        <RoundedButton className="flex text-lg" contentClassName="px-12">{t('Supply Concentration')}</RoundedButton>
+      </div>
+      <div className="flex flex-col mt-8">
+        <div className="flex flex-row space-x-10 mt-6 mx-auto">
+          <div className="flex items-center justify-between shadow-button space-x-24 py-1 pr-7 pl-2">
+            <div className="font-sfpro text-lg">{`${denom} / USD:`}</div>
+            <div className="font-handjet text-xl text-highlight justify-end">{`$${price}`}</div>
           </div>
-          <div className="flex items-center justify-between shadow-button basis-1/3 py-1">
-            <div className="font-sfpro text-lg ml-2">ATH:</div>
-            <div className="font-handjet text-xl text-highlight justify-end mr-8">$12.43K</div>
+          <div className="flex items-center justify-between shadow-button space-x-40 py-1 pr-7 pl-2">
+            <div className="font-sfpro text-lg">ATH:</div>
+            <div className="font-handjet text-xl text-highlight justify-end">$12.43K</div>
           </div>
-          <div className="flex items-center justify-between shadow-button basis-1/3 py-1">
-            <div className="font-sfpro text-lg ml-2">ATL:</div>
-            <div className="font-handjet text-xl text-highlight justify-end mr-8">$12.43K</div>
+          <div className="flex items-center justify-between shadow-button space-x-40 py-1 pr-7 pl-2">
+            <div className="font-sfpro text-lg">ATL:</div>
+            <div className="font-handjet text-xl text-highlight justify-end">$12.43K</div>
           </div>
         </div>
-        <div className="flex flex-row w-1/3 ml-3">
+        <div className="flex flex-row mx-auto mt-8">
           {tableItems.map((item) => (
-            <div key={item.title} className="basis-1/3 border-bgSt border-b border-r mx-6 font-handjet text-lg py-5">
-              <div className="flex items-center justify-center">{item.title}</div>
-              <div className="flex items-center justify-center" style={{ color: item.color }}>{item.data}%</div>
+            <div key={item.title} className="flex flex-col justify-center items-center border-bgSt border-b border-r mx-8 px-6 font-handjet text-lg py-3">
+              <div>{item.title}</div>
+              <div style={{ color: item.color }}>{item.data}%</div>
             </div>
           ))}
         </div>

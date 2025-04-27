@@ -331,12 +331,16 @@
     "title": "Tokenomics: Análise da Economia Cripto da Rede",
     "description": "Vamos mergulhar nos tokens! A aba de Tokenomics detalha a economia cripto desta rede — pense nas recompensas de staking de tokens, estatísticas de oferta, detalhes de distribuição e no Coeficiente de Gini. Gráficos modernos mostram os fluxos de receita e os movimentos de capital em tempo real. Precisa de uma análise mais aprofundada? Combine com nossa Calculadora de Recompensas de Staking!",
     "Token Price": "Preço do Token",
+    "Supply Concentration": "Concentração da oferta",
     "Distribution": "Distribuição",
     "Gini Coefficient": "Coeficiente de Gini",
     "number of validators": "Número de Validadores",
     "community pool tvl": "Piscina Comunitária TVL",
     "% of tokens staked": "% de Fichas Apostadas",
     "reward to payout": "Recompensa para Pagamento",
+    "fdv": "F.D.V.",
+    "circulating tokens": "Tokens de circulação %",
+    "inflation rate": "Taxa de inflação",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
   },
   "NetworkValidatorsPage": {

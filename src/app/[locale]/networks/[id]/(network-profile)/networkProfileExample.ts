@@ -305,6 +305,18 @@ export const networkProfileExample = {
       title: 'reward to payout',
       data: 12,
     },
+    {
+      title: 'fdv',
+      data: 90,
+    },
+    {
+      title: 'circulating tokens',
+      data: 12,
+    },
+    {
+      title: 'inflation rate',
+      data: 12,
+    }
   ],
   apps: [
     {
