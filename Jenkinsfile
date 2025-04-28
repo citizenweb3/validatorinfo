@@ -10,7 +10,7 @@ pipeline {
         CHARTS_PORT_INDEXER = '5001'
 
         // Определяем файл Docker Compose в зависимости от ветки
-        COMPOSE_FILE = "${env.BRANCH_NAME == 'main' ? 'docker-compose.main.yml' : env.BRANCH_NAME == 'dev' ? 'docker-compose.dev.yml' : env.BRANCH_NAME == 'charts' ? 'docker-compose.charts.yml' : ''}"
+        COMPOSE_FILE = "${env.BRANCH_NAME == 'main' ? 'docker-compose.main.yml' : env.BRANCH_NAME == 'dev' ? 'docker-compose.dev.yml' : env.BRANCH_NAME == 'networkProfile' ? 'docker-compose.branch.yml' : ''}"
     }
 
     stages {
@@ -56,7 +56,7 @@ def getAgentLabel(String branchName) {
         return 'Heracles'
     } else if (branchName == 'dev') {
         return 'valinfo'
-    } else if (branchName == 'charts') {
+    } else if (branchName == 'networkProfile') {
         return 'cloud'
     } else {
         error "Unknown branch: ${branchName}. Supported branches: main, dev, charts."
