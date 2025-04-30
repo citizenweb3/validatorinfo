@@ -192,9 +192,11 @@
     "tvl": "TVL",
     "revenue": "Receitas",
     "validator cost": "Custo do Validador",
+    "mau": "MAU",
     "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
     "revenue tooltip": "O montante das taxas geradas pela rede ontem",
     "validator cost tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
+    "mau tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
     "rich list tooltip": "Lista Rica",
     "distribution tooltip": "Distribuição"
   },
@@ -227,14 +229,24 @@
     "healthy validators": "Validadores Saudáveis",
     "Operator Distributions": "Distribuição de Operadores",
     "active": "Ativo",
-    "jailed": "Jailed"
+    "jailed": "Jailed",
+    "Social": "Social",
+    "price of active user": "Preço do usuário ativo",
+    "believers": "Entusiastas",
+    "followers": "Seguidores",
+    "members": "Membros",
+    "Transaction Volume": "Volume de transações + MAU"
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",
     "description": "A aba de Governança revela como funciona a governança descentralizada desta rede — propostas ativas, registros de votação das propostas, votos dos delegadores e contribuições da comunidade. Tudo se resume a ver o processo de tomada de decisão do blockchain em ação. Pronto para participar? Explore nossa lista de validadores de A a Z para conhecer os principais atores!",
     "total": "Total",
+    "total tooltip": "O montante combinado das propostas que a rede tinha, incluindo propostas falhadas, em direto, etc.",
     "passed": "Aprovado",
     "rejected": "Rejeitado",
+    "voting participation rate": "Taxa de participação na votação",
+    "quorum threshold": "Limiar de Quorum",
+    "governance token distribution": "Distribuição de tokens de governação",
     "Live Proposals": "Propostas em Direto",
     "Past Proposals List": "Lista de Propostas Anteriores",
     "proposer": "Proponente",
@@ -256,9 +268,11 @@
     "pre commit synchronized": "O validador submeteu um pré-commit com um hash de bloco sincronizado",
     "pre commit different": "O validador submeteu o pré-commit com um hash de bloco diferente",
     "pre commit not submitted": "O validador ainda não apresentou o pré-commit",
+    "commits p/month": "Autorizações/mês",
     "peers": "Peers",
     "seeds": "Seeds",
     "binary versions": "Versões binárias",
+    "Submit App Info": "Enviar informações sobre a aplicação",
     "Parameters": "Parâmetros",
     "bech32 prefix": "Bech32 Prefixo",
     "daemon name": "Nome do Demónio",
@@ -268,19 +282,48 @@
     "genesis url": "Génesis URL",
     "chain id": "Rede ID",
     "denom": "Denom",
-    "Developer Activity": "Atividade do Promotor",
-    "github stars": "Github Estrelas",
-    "github forks": "Github Garfos",
-    "show dropdown": "Mostrar Repositórios",
-    "hide dropdown": "Ocultar Repositórios",
-    "Table": {
-      "Repository Name": {
-        "name": "Nome do Repositório",
-        "hint": ""
-      },
-      "Commits": {
-        "name": "Commits",
-        "hint": ""
+    "Apps": {
+      "Subtitle": "Aplicativos",
+      "Table": {
+        "Name": {
+          "name": "Nome",
+          "hint": ""
+        },
+        "Links": {
+          "name": "Links",
+          "hint": ""
+        },
+        "Users": {
+          "name": "Usuários",
+          "hint": ""
+        },
+        "WAU": {
+          "name": "WAU",
+          "hint": ""
+        },
+        "Capital": {
+          "name": "Capital",
+          "hint": ""
+        }
+      }
+    },
+    "DeveloperActivity": {
+      "Subtitle": "Atividade do Desenvolvedor",
+      "show dropdown": "Mostrar Repositórios",
+      "hide dropdown": "Ocultar Repositórios",
+      "star": "Estrela",
+      "forked": "Bifurcado",
+      "repositories": "Repositórios",
+      "most active repo": "Repositório Mais Ativo",
+      "Table": {
+        "Repository Name": {
+          "name": "Nome do Repositório",
+          "hint": ""
+        },
+        "Commits": {
+          "name": "Commits",
+          "hint": ""
+        }
       }
     }
   },
@@ -288,12 +331,16 @@
     "title": "Tokenomics: Análise da Economia Cripto da Rede",
     "description": "Vamos mergulhar nos tokens! A aba de Tokenomics detalha a economia cripto desta rede — pense nas recompensas de staking de tokens, estatísticas de oferta, detalhes de distribuição e no Coeficiente de Gini. Gráficos modernos mostram os fluxos de receita e os movimentos de capital em tempo real. Precisa de uma análise mais aprofundada? Combine com nossa Calculadora de Recompensas de Staking!",
     "Token Price": "Preço do Token",
+    "Supply Concentration": "Concentração da oferta",
     "Distribution": "Distribuição",
     "Gini Coefficient": "Coeficiente de Gini",
     "number of validators": "Número de Validadores",
     "community pool tvl": "Piscina Comunitária TVL",
     "% of tokens staked": "% de Fichas Apostadas",
     "reward to payout": "Recompensa para Pagamento",
+    "fdv": "F.D.V.",
+    "circulating tokens": "Tokens de circulação %",
+    "inflation rate": "Taxa de inflação",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
   },
   "NetworkValidatorsPage": {

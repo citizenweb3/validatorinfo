@@ -5,6 +5,7 @@ import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/net
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import Image from 'next/image';
 import icons from '@/components/icons';
+import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
 }
@@ -14,7 +15,7 @@ const PeersSeedsBlocks: FC<OwnProps> = async () => {
 
   return (
     <div className="mt-4">
-      <div className="grid grid-cols-2 gap-x-10 text-base mb-7">
+      <div className="grid grid-cols-2 gap-x-10 text-base mb-8">
         <div className="border-b border-bgSt pl-1 pb-4">
           <div className="text-highlight text-lg mb-2 ml-2">{t('pre-vote')}</div>
           <div className="flex items-center">
@@ -55,6 +56,18 @@ const PeersSeedsBlocks: FC<OwnProps> = async () => {
                            dataClassName={'mt-5'}
                            isModal />
         ))}
+      </div>
+      <div className="flex w-full flex-row justify-center gap-6 mt-8">
+        <MetricsCardItem title={t('binary versions')}
+                         data={'12'}
+                         className={'pt-2.5'}
+                         dataClassName={'mt-5'}
+                         isModal />
+      </div>
+      <div className="flex justify-end -mt-11">
+        <RoundedButton className="text-lg" contentClassName="px-14">
+          {t('Submit App Info')}
+        </RoundedButton>
       </div>
     </div>
 

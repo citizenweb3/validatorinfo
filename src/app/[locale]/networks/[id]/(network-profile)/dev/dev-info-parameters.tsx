@@ -39,7 +39,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
   };
 
   return (
-    <div className="mt-14">
+    <div className="mt-12">
       <SubTitle text={t('Parameters')} />
       {networkProfileExample.parameters.map((item) => (
         <div key={item.title} className="mt-4 flex w-full hover:bg-bgHover">

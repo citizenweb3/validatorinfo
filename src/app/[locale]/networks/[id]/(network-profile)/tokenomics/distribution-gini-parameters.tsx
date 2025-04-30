@@ -16,7 +16,7 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chainId }) => {
   const nodes = await nodeService.getNodesByChainId(chainId);
 
   return (
-    <div className="mt-6 mb-12">
+    <div className="mt-6 mb-16">
       <div className="grid grid-cols-2">
         <div className="flex flex-col">
           <SubTitle text={t('Distribution')} />
@@ -46,10 +46,19 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chainId }) => {
           </div>
         </div>
       </div>
-      <div className="mt-24 flex w-full flex-row justify-center gap-6">
-        {networkProfileExample.distributionParameters.map((item) => (
+      <div className="mt-24 flex w-full flex-row justify-center gap-8">
+        {networkProfileExample.distributionParameters.slice(0, 4).map((item) => (
           <MetricsCardItem key={item.title}
                            title={t(item.title as 'community pool tvl')}
+                           data={item.data}
+                           className={'pb-8 pt-2.5'}
+                           dataClassName={'mt-6'} />
+        ))}
+      </div>
+      <div className="mt-8 flex w-full flex-row justify-center gap-8">
+        {networkProfileExample.distributionParameters.slice(4, 6).map((item) => (
+          <MetricsCardItem key={item.title}
+                           title={t(item.title as 'circulating tokens')}
                            data={item.data}
                            className={'pb-8 pt-2.5'}
                            dataClassName={'mt-6'} />

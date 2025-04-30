@@ -20,6 +20,28 @@ export const networkProfileExample = {
       data: 90,
       tooltip: 'validator cost',
     },
+    {
+      title: 'mau',
+      data: 90,
+      tooltip: 'mau',
+    },
+  ],
+  socialMetrics: [
+    {
+      title: 'believers',
+      data: 90,
+      tooltip: '',
+    },
+    {
+      title: 'followers',
+      data: 90,
+      tooltip: '',
+    },
+    {
+      title: 'members',
+      data: 90,
+      tooltip: '',
+    },
   ],
   totalsMetrics: [
     {
@@ -192,15 +214,15 @@ export const networkProfileExample = {
   ],
   peersAndSeeds: [
     {
+      title: 'commits p/month',
+      data: 12,
+    },
+    {
       title: 'peers',
       data: 12,
     },
     {
       title: 'seeds',
-      data: 12,
-    },
-    {
-      title: 'binary versions',
       data: 12,
     },
   ],
@@ -282,6 +304,55 @@ export const networkProfileExample = {
     {
       title: 'reward to payout',
       data: 12,
+    },
+    {
+      title: 'fdv',
+      data: 90,
+    },
+    {
+      title: 'circulating tokens',
+      data: 12,
+    },
+    {
+      title: 'inflation rate',
+      data: 12,
+    }
+  ],
+  apps: [
+    {
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
+    },
+    {
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
+    },
+    {
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
+    },
+    {
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
+    },
+    {
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
     },
   ],
 };
