@@ -38,7 +38,6 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
       <Suspense fallback={<div>Loading...</div>}>
         <Calculator chainList={chainsWithPrices} />
       </Suspense>
-      <SpreadModal />
     </div>
   );
 }
