@@ -125,8 +125,8 @@ const heightStyle = {
 };
 
 const messagesHeightStyle = {
-  height: 'calc(100vh - 34rem)',
-  minHeight: 'calc(100vh - 34rem)',
-  maxnHeight: 'calc(100vh - 34rem)',
+  height: 'calc(100vh - 38rem)',
+  minHeight: 'calc(100vh - 38rem)',
+  maxnHeight: 'calc(100vh - 38rem)',
   overflow: 'hidden auto',
 };
