@@ -4,7 +4,7 @@ interface OwnProps {}
 
 const SearchSkeleton: FC<OwnProps> = ({}) => {
   return Array.from({ length: 3 }, (_, i) => (
-    <div>
+    <div key={i}>
       <div className="h-4 w-40 animate-pulse rounded-full bg-bgSt" />
       <div className="">
         {Array.from({ length: 5 }, (_, i) => (

@@ -12,6 +12,7 @@ import BaseModal from '@/components/common/modal/base-modal';
 import Tooltip from '@/components/common/tooltip';
 import SearchList from '@/components/header/header-search/search-list';
 import SearchSkeleton from '@/components/header/header-search/search-skeleton';
+import useIsMobile from '@/hooks/useIsMobile';
 
 interface OwnProps {}
 
@@ -30,11 +31,13 @@ const HeaderSearch: FC<OwnProps> = () => {
   const [results, setResults] = useState<SearchResult | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<number>(-1);
+  const isMobile = useIsMobile();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearch(value);
-    e.target.style.width = (value.length || 1) * 0.7 + 'rem';
+    const coef = isMobile ? 3 : 0.7;
+    e.target.style.width = ((value.length || 1) * coef) + 'rem';
     update && update();
   };
 
@@ -113,28 +116,30 @@ const HeaderSearch: FC<OwnProps> = () => {
   }, [search]);
 
   return (
-    <label className="-mt-6 ml-4 flex h-6 flex-row items-center justify-center">
+    <label className="sm:-mt-6 -mt-10 ml-4 flex h-6 flex-row items-center justify-center">
       <div className="relative flex">
-        <Tooltip noWrap tooltip={t('Search for a validator, pool, tx, address, network, etc')}>
-          <div className={`h-6 w-6 cursor-text bg-search bg-contain peer-focus:hidden hover:bg-search_h`} />
-        </Tooltip>
+        {!search && (
+          <Tooltip className="sm:block hidden" noWrap tooltip={t('Search for a validator, pool, tx, address, network, etc')}>
+            <div className={`sm:h-6 sm:w-6 h-12 w-12 cursor-text bg-search bg-contain peer-focus:hidden hover:bg-search_h`} />
+          </Tooltip>
+        )}
         <div>
           <input
             value={search}
             ref={setReferenceElement}
             style={{ width: '1rem' }}
-            className="w-min-0 peer max-w-[50vw] bg-transparent text-center text-base text-highlight focus:outline-0 focus:ring-0"
+            className="w-min-0 peer max-w-[50vw] bg-transparent text-center sm:text-base text-5xl text-highlight focus:outline-0 focus:ring-0"
             onChange={handleChange}
             onFocus={() => results && setIsOpened(true)}
             onKeyDown={handleKeyDown}
           />
           {isOpened && (
-            <div ref={setPopperElement} style={styles.popper} {...attributes.popper} className="z-40 w-[30rem]">
-              <BaseModal opened={true} onClose={() => setIsOpened(false)} className="mt-1 w-[30rem]">
+            <div ref={setPopperElement} style={styles.popper} {...attributes.popper} className="z-40 sm:w-[30rem] w-[50rem]">
+              <BaseModal opened={true} onClose={() => setIsOpened(false)} className="mt-1 sm:w-[30rem] w-[50rem]">
                 <div className="space-y-6" onClick={() => setIsOpened(false)}>
                   {loading && <SearchSkeleton />}
                   {!results?.validators.length && !results?.chains.length && !results?.tokens.length && (
-                    <div className="mt-4 text-center text-lg">{t('search.noResults')}</div>
+                    <div className="mt-4 text-center sm:text-lg text-4xl">{t('search.noResults')}</div>
                   )}
                 </div>
                 <SearchList results={results} activeIndex={activeIndex} onSelect={onSelect} />

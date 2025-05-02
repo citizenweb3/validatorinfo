@@ -22,8 +22,8 @@ const SearchItem: FC<OwnProps> = ({ link, name, isSelected, icon, onClick }) => 
                      alt="Validator"
                      width={40}
                      height={40}
-                     className="h-7 w-7 rounded-full" />
-      <div className="ml-4 flex-grow">{name}</div>
+                     className="sm:h-7 sm:w-7 h-20 w-20 rounded-full my-4 sm:my-0" />
+      <div className="ml-4 flex-grow sm:text-base text-4xl">{name}</div>
     </Link>
   );
 };

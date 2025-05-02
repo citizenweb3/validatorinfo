@@ -19,7 +19,7 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
   return (
     <Link
       href={href}
-      className={`${isActive ? 'border-none bg-gradient-to-r from-primary to-secondary text-highlight' : 'border-r border-t border-bgSt'} !active:max-h-7 group relative flex min-h-10 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-px text-sm shadow-button transition-width duration-300 hover:bg-bgHover active:top-1 active:border-transparent active:bg-background active:shadow-none`}
+      className={`${isActive ? 'border-none bg-gradient-to-r from-primary to-secondary text-highlight' : 'border-r border-t border-bgSt'} sm:mt-0 mt-12 !active:max-h-7 group relative flex sm:min-h-10 min-h-36 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-px text-sm shadow-button transition-width duration-300 hover:bg-bgHover active:top-1 active:border-transparent active:bg-background active:shadow-none`}
       scroll={isScroll}
     >
       <div className="flex h-full w-full flex-row flex-nowrap items-center justify-center bg-background text-base font-semibold group-hover:text-highlight hover:bg-bgHover active:bg-background">
@@ -30,7 +30,7 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
               alt={name}
               width={120}
               height={120}
-              className={`${isActive && 'hidden'} absolute -left-1 -top-1.5 w-10 group-hover:hidden`}
+              className={`${isActive && 'hidden'} sm:absolute sm:-left-1 sm:-top-1.5 sm:w-10 w-36 group-hover:hidden`}
             />
           )}
           {iconHovered && (
@@ -39,13 +39,15 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
               alt={name}
               width={120}
               height={120}
-              className={`${isActive ? 'block' : 'hidden'} absolute -left-1 -top-1.5 w-10 group-hover:block`}
+              className={`${isActive ? 'block' : 'hidden'} sm:absolute sm:-left-1 sm:-top-1.5 sm:w-10 w-36 group-hover:block`}
             />
           )}
           <div
             className={`${icon && 'pl-10'} overflow-hidden overflow-ellipsis text-nowrap font-handjet text-lg tracking-wide xs:max-w-32 lg:max-w-full`}
           >
-            {t(name as 'ValidatorInfo')}
+            <div className="sm:block hidden">
+              {t(name as 'ValidatorInfo')}
+            </div>
           </div>
         </div>
       </div>
