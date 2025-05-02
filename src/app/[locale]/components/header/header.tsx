@@ -9,7 +9,7 @@ interface OwnProps {}
 const Header: FC<OwnProps> = async () => {
   return (
     <div>
-      <div className="flex flex-row space-x-7 pt-1">
+      <div className="hidden flex-row space-x-7 pt-1 md:flex">
         <Suspense fallback={<div />}>
           <Quotes />
         </Suspense>

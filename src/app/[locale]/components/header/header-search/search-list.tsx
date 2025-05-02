@@ -18,7 +18,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
     <div className="space-y-4 text-sm">
       {!!results?.validators.length && (
         <div>
-          <div className="text-lg text-highlight">{t('search.Validators')}</div>
+          <div className="md:text-lg sm:text-2xl text-4xl text-highlight">{t('search.Validators')}</div>
           <div>
             {results?.validators.map((validator, index) => (
               <SearchItem
@@ -35,7 +35,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
       )}
       {!!results?.chains.length && (
         <div>
-          <div className="text-lg text-highlight">{t('search.Networks')}</div>
+          <div className="md:text-lg sm:text-2xl text-4xl text-highlight">{t('search.Networks')}</div>
           <div>
             {results?.chains.map((chain, index) => (
               <SearchItem
@@ -52,7 +52,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
       )}
       {!!results?.tokens.length && (
         <div>
-          <div className="text-lg text-highlight">{t('search.Tokens')}</div>
+          <div className="md:text-lg sm:text-2xl text-4xl text-highlight">{t('search.Tokens')}</div>
           <div>
             {results?.tokens.map((chain, index) => (
               <SearchItem
