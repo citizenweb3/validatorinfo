@@ -25,7 +25,12 @@ const ToolTip: FC<Props> = ({ children, tooltip, direction = 'bottom', noWrap = 
   };
 
   const baseStyle = 'pointer-events-none z-[999] min-w-32 bg-primary px-3 py-2 text-center font-light text-white shadow-button before:absolute before:left-0 before:right-0 before:z-[-1] before:mx-auto before:h-4 before:w-4 before:rotate-45 before:bg-primary';
-  const tooltipClassName = twMerge(baseStyle, noWrap ? 'text-nowrap' : '', direction === 'top' ? 'mb-3 before:-bottom-1' : 'mt-3 before:-top-1', className);
+  const tooltipClassName = twMerge(
+    baseStyle,
+    noWrap && 'text-nowrap',
+    direction === 'top' ? 'mb-3 before:-bottom-1' : 'mt-3 before:-top-1',
+    className
+  );
 
   return (
     <div

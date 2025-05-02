@@ -21,7 +21,7 @@ const MenuBurgerButton: React.FC = () => {
         alt="Burger Menu Button"
         width={50}
         height={50}
-        className="w-60"
+        className="sm:w-32 md:w-16 w-60"
         priority
       />
     </div>

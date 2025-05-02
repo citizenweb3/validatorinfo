@@ -119,8 +119,8 @@ const HeaderSearch: FC<OwnProps> = () => {
     <label className="sm:-mt-6 -mt-10 ml-4 flex h-6 flex-row items-center justify-center">
       <div className="relative flex">
         {!search && (
-          <Tooltip className="sm:block hidden" noWrap tooltip={t('Search for a validator, pool, tx, address, network, etc')}>
-            <div className={`sm:h-6 sm:w-6 h-12 w-12 cursor-text bg-search bg-contain peer-focus:hidden hover:bg-search_h`} />
+          <Tooltip className="md:block hidden" noWrap tooltip={t('Search for a validator, pool, tx, address, network, etc')}>
+            <div className={`md:h-6 md:w-6 sm:h-8 sm:w-8 h-12 w-12 cursor-text bg-search bg-contain peer-focus:hidden hover:bg-search_h`} />
           </Tooltip>
         )}
         <div>
@@ -128,18 +128,18 @@ const HeaderSearch: FC<OwnProps> = () => {
             value={search}
             ref={setReferenceElement}
             style={{ width: '1rem' }}
-            className="w-min-0 peer max-w-[50vw] bg-transparent text-center sm:text-base text-5xl text-highlight focus:outline-0 focus:ring-0"
+            className="w-min-0 peer max-w-[50vw] bg-transparent text-center md:text-base sm:text-2xl text-5xl text-highlight focus:outline-0 focus:ring-0"
             onChange={handleChange}
             onFocus={() => results && setIsOpened(true)}
             onKeyDown={handleKeyDown}
           />
           {isOpened && (
-            <div ref={setPopperElement} style={styles.popper} {...attributes.popper} className="z-40 sm:w-[30rem] w-[50rem]">
-              <BaseModal opened={true} onClose={() => setIsOpened(false)} className="mt-1 sm:w-[30rem] w-[50rem]">
+            <div ref={setPopperElement} style={styles.popper} {...attributes.popper} className="z-40 md:w-[30rem] sm:w-[40rem] w-[50rem]">
+              <BaseModal opened={true} onClose={() => setIsOpened(false)} className="mt-1 md:w-[30rem] sm:w-[40rem] w-[50rem]">
                 <div className="space-y-6" onClick={() => setIsOpened(false)}>
                   {loading && <SearchSkeleton />}
                   {!results?.validators.length && !results?.chains.length && !results?.tokens.length && (
-                    <div className="mt-4 text-center sm:text-lg text-4xl">{t('search.noResults')}</div>
+                    <div className="mt-4 text-center md:text-lg sm:text-2xl text-4xl">{t('search.noResults')}</div>
                   )}
                 </div>
                 <SearchList results={results} activeIndex={activeIndex} onSelect={onSelect} />

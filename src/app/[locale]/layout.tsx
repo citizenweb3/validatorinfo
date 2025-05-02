@@ -107,7 +107,7 @@ export default async function LocaleLayout({
               <div className="flex min-h-screen flex-col px-4">
                 <Header />
                 <div className="mt-4 flex flex-grow flex-row">
-                  <div className="sm:block hidden">
+                  <div className="hidden md:block">
                     <NavigationBar />
                   </div>
                   <div className="ml-8 flex flex-grow">
