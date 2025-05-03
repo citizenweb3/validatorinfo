@@ -9,14 +9,14 @@ import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
 interface OwnProps {
 }
 
-const mainTabs: TabOptions[] = [
+export const mainTabs: TabOptions[] = [
   { name: 'Validators', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   { name: 'Nodes', href: '/nodes', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
   { name: 'Networks', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
   { name: 'Ecosystems', href: '/ecosystems', icon: icons.EcosystemsIcon, iconHovered: icons.EcosystemsIconHovered },
 ];
 
-const additionalTabs: TabOptions[] = [
+export const additionalTabs: TabOptions[] = [
   {
     name: 'Calculate',
     href: '/stakingcalculator',
@@ -32,7 +32,7 @@ const additionalTabs: TabOptions[] = [
   { name: 'Rumors', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
   { name: 'Global', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered }];
 
-const aboutTabs = [
+export const aboutTabs = [
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
   { name: 'Library', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
   { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
@@ -42,7 +42,7 @@ const NavigationBar: FC<OwnProps> = () => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   return (
     <div
-      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} relative mt-2 border-transparent pt-6 font-handjet transition-all duration-300`}
+      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} hidden md:block relative mt-2 border-transparent pt-6 font-handjet transition-all duration-300`}
     >
       <div
         className="group absolute -right-6 top-0 z-20 h-full w-6 cursor-pointer bg-opacity-30 from-transparent to-bgSt hover:bg-gradient-to-b"
