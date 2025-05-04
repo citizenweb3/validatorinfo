@@ -4,18 +4,20 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import HeaderActionButtons from '@/components/header/header-action-buttons';
 import HeaderSearch from '@/components/header/header-search/header-search';
 import MenuBurgerButton from '@/components/navigation-bar/menu-burger-button';
 import WalletButton from '@/components/wallet-connect/wallet-button';
+import MobileNavigationBar from '@/components/navigation-bar/mobile-navigation-bar';
 
 interface OwnProps {}
 
 const HeaderControls: FC<OwnProps> = () => {
   const t = useTranslations('Header');
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="ml-7 mt-3 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24">
@@ -84,8 +86,15 @@ const HeaderControls: FC<OwnProps> = () => {
         <WalletButton />
       </div>
       <div className="block md:hidden">
-        <MenuBurgerButton />
+        <MenuBurgerButton
+          isOpened={mobileOpen}
+          onToggle={() => setMobileOpen(o => !o)}
+        />
       </div>
+      <MobileNavigationBar
+        isOpened={mobileOpen}
+        onClose={() => setMobileOpen(false)}
+      />
     </div>
   );
 };
