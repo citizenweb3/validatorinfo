@@ -3,6 +3,8 @@ import { FC } from 'react';
 
 import TableAvatar from '@/components/common/table/table-avatar';
 import { Ecosystem } from '@prisma/client';
+import chainService from '@/services/chain-service';
+import EcosystemListItemChains from '@/app/ecosystems/ecosystems-list/ecosystems-list-item-chains';
 
 interface OwnProps {
   item: Ecosystem;
@@ -10,6 +12,7 @@ interface OwnProps {
 
 const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
   const ecosystemLink = `/validators?p=1&ecosystems=${item.name}`;
+  const ecosystemChains = await chainService.getListByEcosystem(item.name);
 
   return (
     <tr className="group font-handjet hover:bg-bgHover hover:text-highlight">
@@ -44,6 +47,9 @@ const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
             <div className="rounded-full bg-primary shadow-button px-6 mt-1 mr-2">Tag3</div>
           </div>
         </Link>
+      </td>
+      <td className="border-b border-black px-2 py-2">
+        <EcosystemListItemChains chains={ecosystemChains} />
       </td>
     </tr>
   );

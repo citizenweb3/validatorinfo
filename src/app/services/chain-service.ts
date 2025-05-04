@@ -143,12 +143,18 @@ const getChainValidatorsWithNodes = async (
   }
 };
 
+const getListByEcosystem = async (ecosystem: string) => {
+  return db.chain.findMany({
+    where: { ecosystem },
+  })
+}
 
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
   getById,
   getChainValidatorsWithNodes,
+  getListByEcosystem
 };
 
 export default ChainService;

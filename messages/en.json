@@ -445,6 +445,10 @@
       "Tags": {
         "name": "Tags",
         "hint": ""
+      },
+      "Show TX": {
+        "name": "Show TX",
+        "hint": ""
       }
     }
   },
