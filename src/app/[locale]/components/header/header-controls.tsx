@@ -20,7 +20,7 @@ const HeaderControls: FC<OwnProps> = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="ml-7 mt-3 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24">
+    <div className="mx-6 mt-4 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24">
       <Link
         href="/"
         onClick={() => {
