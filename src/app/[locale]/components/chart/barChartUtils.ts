@@ -236,7 +236,7 @@ export function handleBarTooltip(
         .attr('y', tooltipY + 20)
         .attr('fill', '#E5C46B')
         .attr('font-size', '13.75px')
-        .attr('class', 'tooltip-text font-sfpro')
+        .attr('class', 'tooltip-text font-handjet')
         .text(formattedDate);
 
       // Add dataset names and values with colored squares
