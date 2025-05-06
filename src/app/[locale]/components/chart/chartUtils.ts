@@ -173,7 +173,7 @@ export function drawYAxis(
   svg.selectAll('.y-axis .tick text')
     .attr('fill', color)
     .attr('x', labelOffset)
-    .attr('class', `tooltip-text font-${fontFamily}`) 
+    .attr('class', `tooltip-text font-handjet`) 
     .style('font-size', fontSize);
 }
 
@@ -630,9 +630,6 @@ export function handleTooltip(
           .attr('stroke-width', 1);
       }
       intersectionSquare
-        .transition()
-        .duration(200)
-        .ease(d3.easeLinear)
         .attr('x', clampedMouseX - xAxisOffSetValue - tooltipConfig.squareOffset)
         .attr('y', data.y - tooltipConfig.squareOffset - 20);
     });
