@@ -173,7 +173,7 @@ export function drawYAxis(
   svg.selectAll('.y-axis .tick text')
     .attr('fill', color)
     .attr('x', labelOffset)
-    .attr('class', `tooltip-text font-handjet`) 
+    .attr('class', `tooltip-text font-handjet`)
     .style('font-size', fontSize);
 }
 
@@ -249,7 +249,7 @@ export function drawXAxis(
   }
 
 
-  const yAxisOffset = plotHeight+80;
+  const yAxisOffset = plotHeight + 80;
   let xAxisOffset = 0;
 
   switch (chartType) {
@@ -279,7 +279,7 @@ export function drawXAxis(
   plotArea.selectAll('.x-axis text')
     .style('text-anchor', 'middle')
     .style('font-size', '13.75px')   // Set font size to 13.75px (as per your request)
-    .style('font-family', 'SF Pro Display, Arial, sans-serif') 
+    .style('font-family', 'SF Pro Display, Arial, sans-serif')
     .style('fill', '#FFFFFF')
     .attr('dy', '0.5em');
 
@@ -289,9 +289,9 @@ export function drawXAxis(
   // Draw a baseline for the x-axis across the full plot width.
   plotArea.append('line')
     .attr('x1', 0)
-    .attr('y1', plotHeight +80)
+    .attr('y1', plotHeight + 80)
     .attr('x2', chartConfig.width - chartConfig.padding.left - chartConfig.padding.right)
-    .attr('y2', plotHeight+80)
+    .attr('y2', plotHeight + 80)
     .attr('stroke', '#3E3E3E')
     .attr('stroke-width', 1);
 }
@@ -334,9 +334,32 @@ export function drawLine(
     return;
   }
 
-  const transform = `translate(${-xAxisOffset}, ${yAxisOffset})`;
+  // Define SVG filters for shadows
+  const svgNode = plotArea.node()?.ownerSVGElement;
+  if (!svgNode) {
+    console.error('No parent SVG element found.');
+    return;
+  }
+  const svg = d3.select<SVGSVGElement, unknown>(svgNode);
+  const defs = svg.select('defs').empty() ? svg.append('defs') : svg.select('defs');
 
-  // Shadow (blurred, thicker path behind)
+  // Filter for dark shadow (4px blur)
+  defs.append('filter')
+    .attr('id', 'dark-shadow-blur')
+    .append('feGaussianBlur')
+    .attr('stdDeviation', 4); // 4px blur radius
+
+  // Filter for less dark shadow (6px blur)
+  defs.append('filter')
+    .attr('id', 'less-dark-shadow-blur')
+    .append('feGaussianBlur')
+    .attr('stdDeviation', 6); // 6px blur radius
+
+  const transform = `translate(${-xAxisOffset}, ${yAxisOffset})`;
+  const darkShadowTransform = `translate(${-xAxisOffset}, ${yAxisOffset + 4})`; // 4px offset
+  const lessDarkShadowTransform = `translate(${-xAxisOffset}, ${yAxisOffset + 6})`; // 6px offset
+
+  // Existing shadow (blurred, thicker path behind)
   plotArea.append('path')
     .attr('transform', transform)
     .attr('fill', 'none')
@@ -344,6 +367,28 @@ export function drawLine(
     .attr('stroke-width', 4)
     .attr('stroke-linecap', 'round')
     .style('filter', 'blur(2px)')
+    .attr('d', fullLine)
+    .attr('clip-path', 'url(#clip)');
+
+  // Dark shadow line (mimics box-shadow: 0px 4px 4px 0px #000000)
+  plotArea.append('path')
+    .attr('transform', darkShadowTransform)
+    .attr('fill', 'none')
+    .attr('stroke', '#000000')
+    .attr('stroke-width', 3)
+    .attr('stroke-linecap', 'round')
+    .style('filter', 'url(#dark-shadow-blur)')
+    .attr('d', fullLine)
+    .attr('clip-path', 'url(#clip)');
+
+  // Less dark shadow line (mimics box-shadow: 0px 6px 6px 0px #00000040)
+  plotArea.append('path')
+    .attr('transform', lessDarkShadowTransform)
+    .attr('fill', 'none')
+    .attr('stroke', 'rgba(0, 0, 0, 0.25)')
+    .attr('stroke-width', 2)
+    .attr('stroke-linecap', 'round')
+    .style('filter', 'url(#less-dark-shadow-blur)')
     .attr('d', fullLine)
     .attr('clip-path', 'url(#clip)');
 
