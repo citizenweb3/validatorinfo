@@ -1,14 +1,15 @@
 'use client';
 
+import { Proposal } from '@prisma/client';
+import { formatDuration, intervalToDuration } from 'date-fns';
 import { useTranslations } from 'next-intl';
-import { FC, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Proposal } from '@prisma/client';
-import cutHash from '@/utils/cut-hash';
-import SubTitle from '@/components/common/sub-title';
-import { formatDuration, intervalToDuration } from 'date-fns';
+import { FC, useState } from 'react';
+
 import RoundedButton from '@/components/common/rounded-button';
+import SubTitle from '@/components/common/sub-title';
+import cutHash from '@/utils/cut-hash';
 
 interface OwnProps {
   proposals: Proposal[];
@@ -28,9 +29,7 @@ const LiveProposals: FC<OwnProps> = ({ proposals }) => {
     });
   };
 
-  const liveProposals = proposals.filter(
-    proposal => proposal.status === 'PROPOSAL_STATUS_VOTING_PERIOD',
-  );
+  const liveProposals = proposals.filter((proposal) => proposal.status === 'PROPOSAL_STATUS_VOTING_PERIOD');
 
   const proposalsToShow = showAll ? liveProposals : liveProposals.slice(0, 2);
 
@@ -39,21 +38,19 @@ const LiveProposals: FC<OwnProps> = ({ proposals }) => {
       <SubTitle text={t('Live Proposals')} />
       {liveProposals.length > 0 ? (
         <>
-          <div className="grid grid-cols-2 gap-x-10 mt-8">
+          <div className="mt-8 grid grid-cols-2 gap-x-10">
             {proposalsToShow.map((proposal) => (
-              <div key={proposal.proposalId} className="mt-2 flex border-bgSt border-b pb-9">
-                <div className="w-3/5 text-base ml-4">
+              <div key={proposal.proposalId} className="mt-2 flex border-b border-bgSt pb-9">
+                <div className="ml-4 w-3/5 text-base">
                   <div className="mb-5 hover:underline hover:underline-offset-2">
                     <Link href={`/networks/${proposal.chainId}/proposal/${proposal.proposalId}`}>
-                      <span className="font-handjet text-highlight text-lg">
-                        #{proposal.proposalId}&nbsp;
-                      </span>
-                      - {proposal.title}
+                      <span className="font-handjet text-lg text-highlight">#{proposal.proposalId}&nbsp;</span>-{' '}
+                      {proposal.title}
                     </Link>
                   </div>
                   <div>
                     {t('proposer')}:&nbsp;
-                    <Link href="" className="underline underline-offset-3 font-handjet text-lg">
+                    <Link href="" className="underline-offset-3 font-handjet text-lg underline">
                       {cutHash({
                         value: 'cosmosvaloper1e859xaue4k2jzqw20cv6l7p3tmc378pc3k8g2u',
                         cutLength: 10,
@@ -62,56 +59,45 @@ const LiveProposals: FC<OwnProps> = ({ proposals }) => {
                   </div>
                   <div className="mt-1">
                     {t('voting start')}:&nbsp;
-                    <span className="font-handjet text-lg">
-                      {new Date(proposal.votingStartTime).toDateString()} -{' '}
-                      {new Date(proposal.votingStartTime)
-                        .toTimeString()
-                        .split(' ')
-                        .slice(0, 2)
-                        .join(' ')}
-                    </span>
+                    {proposal.votingStartTime && (
+                      <span className="font-handjet text-lg">
+                        {new Date(proposal.votingStartTime).toDateString()} -{' '}
+                        {new Date(proposal.votingStartTime).toTimeString().split(' ').slice(0, 2).join(' ')}
+                      </span>
+                    )}
                   </div>
                   <div className="mt-1">
                     {t('voting end')}:&nbsp;
-                    <span className="font-handjet text-lg">
-                      {new Date(proposal.votingEndTime).toDateString()} -{' '}
-                      {new Date(proposal.votingEndTime)
-                        .toTimeString()
-                        .split(' ')
-                        .slice(0, 2)
-                        .join(' ')}
-                    </span>
+                    {proposal.votingEndTime && (
+                      <span className="font-handjet text-lg">
+                        {new Date(proposal.votingEndTime).toDateString()} -{' '}
+                        {new Date(proposal.votingEndTime).toTimeString().split(' ').slice(0, 2).join(' ')}
+                      </span>
+                    )}
                   </div>
                   <div className="mt-1">
                     {t('remaining time')}:&nbsp;
-                    <span className="font-handjet text-lg">
-                      {getProposalDuration(proposal.votingEndTime)}
-                    </span>
+                    {proposal.votingEndTime && (
+                      <span className="font-handjet text-lg">{getProposalDuration(proposal.votingEndTime)}</span>
+                    )}
                   </div>
                 </div>
                 <div className="w-2/5">
-                  <Image
-                    src={'/img/charts/voting-period-circle.svg'}
-                    width={300}
-                    height={300}
-                    alt="voting period"
-                  />
+                  <Image src={'/img/charts/voting-period-circle.svg'} width={300} height={300} alt="voting period" />
                 </div>
               </div>
             ))}
           </div>
           {liveProposals.length > 2 && (
-            <div className="flex flex-row mt-4 justify-end">
-              <RoundedButton className="text-lg font-handjet" onClick={() => setShowAll(!showAll)}>
+            <div className="mt-4 flex flex-row justify-end">
+              <RoundedButton className="font-handjet text-lg" onClick={() => setShowAll(!showAll)}>
                 {showAll ? t('less live proposals') : t('more live proposals')}
               </RoundedButton>
             </div>
           )}
         </>
       ) : (
-        <div className="my-8 font-handjet text-lg text-center">
-          {t('no live proposals')}
-        </div>
+        <div className="my-8 text-center font-handjet text-lg">{t('no live proposals')}</div>
       )}
     </div>
   );

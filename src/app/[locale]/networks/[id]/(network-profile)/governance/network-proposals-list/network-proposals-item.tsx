@@ -1,8 +1,9 @@
+import { Proposal } from '@prisma/client';
 import Link from 'next/link';
 import { FC } from 'react';
-import { Proposal } from '@prisma/client';
-import { parseMessage } from '@/utils/parse-proposal-message';
+
 import Tooltip from '@/components/common/tooltip';
+import { parseMessage } from '@/utils/parse-proposal-message';
 
 interface OwnProps {
   proposal: Proposal;
@@ -39,16 +40,16 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal }) => {
 
   return (
     <tr className="cursor-pointer hover:bg-bgHover">
-      <td className="w-1/4 border-b border-black py-4 hover:text-highlight active:border-bgSt pl-7">
+      <td className="w-1/4 border-b border-black py-4 pl-7 hover:text-highlight active:border-bgSt">
         <Link href={proposalLink} className="flex items-center gap-1">
-          <div className="font-handjet text-xl text-highlight mr-2 ml-1">{`#${proposal.proposalId}`}</div>
+          <div className="ml-1 mr-2 font-handjet text-xl text-highlight">{`#${proposal.proposalId}`}</div>
           <div className="text-base">{proposal.title}</div>
         </Link>
       </td>
-      <td className="w-1/4 border-b border-black py-4 px-5 text-base hover:text-highlight active:border-bgSt">
-        <Tooltip tooltip={proposal.type} direction='top'>
+      <td className="w-1/4 border-b border-black px-5 py-4 text-base hover:text-highlight active:border-bgSt">
+        <Tooltip tooltip={proposal.type} direction="top">
           <Link href={proposalLink} className="flex justify-center">
-            <div className="text-center break-all">{parseMessage(proposal.type)}</div>
+            <div className="break-all text-center">{parseMessage(proposal.type)}</div>
           </Link>
         </Tooltip>
       </td>
@@ -59,11 +60,12 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal }) => {
       </td>
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
         <Link href={proposalLink} className="flex justify-center">
-          <div className="font-handjet text-lg text-center">
-            {new Date(proposal.votingEndTime).toDateString().split(' ').slice(1, 4).join(' ')},
-            {' '}
-            {new Date(proposal.votingEndTime).toTimeString().split(' ').slice(0, 2).join(' ')}
-          </div>
+          {proposal.votingEndTime && (
+            <div className="text-center font-handjet text-lg">
+              {new Date(proposal.votingEndTime).toDateString().split(' ').slice(1, 4).join(' ')},{' '}
+              {new Date(proposal.votingEndTime).toTimeString().split(' ').slice(0, 2).join(' ')}
+            </div>
+          )}
         </Link>
       </td>
     </tr>
