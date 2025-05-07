@@ -124,8 +124,8 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
       .curve(d3.curveMonotoneX);
 
     // Draw a line for each ecosystem
-    drawBars(plotArea, datasets['Value Secured'], '#4FB848', xScale, yScale, 30, 'left', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
-    drawBars(plotArea, datasets['Crypto Capitalization'], '#E5C46B', xScale, yScale, 30, 'right', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
+    drawBars(plotArea, datasets['Value Secured'], '#4FB848', xScale, yScale, 35, 'left', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
+    drawBars(plotArea, datasets['Crypto Capitalization'], '#E5C46B', xScale, yScale, 35, 'right', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
 
 
 
@@ -188,7 +188,7 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
     switch (chartType) {
       case 'Daily':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 30);
+        startDate.setDate(now.getDate() - 25);
         break;
       case 'Weekly':
         startDate = new Date(now);
