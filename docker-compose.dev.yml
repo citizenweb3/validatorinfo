@@ -10,16 +10,26 @@ services:
     volumes:
       - postgres_data_dev:/var/lib/postgresql/data
 
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+
   migrations:
     build:
       context: .
       dockerfile: Dockerfile.frontend
     command: >
-      sh -c "npx prisma migrate deploy &&
-             npx tsx server/tools/init-chains.ts &&
-             npx prisma migrate dev"
+      sh -c "
+        npx prisma migrate deploy &&
+        redis-cli -h redis flushall &&
+        npx tsx server/tools/init-chains.ts &&
+        npx prisma migrate dev
+      "
     depends_on:
       - db
+      - redis
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
 
@@ -35,6 +45,9 @@ services:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
       SERVER_PORT: "3000"
       PUBLIC_URL: ${PUBLIC_URL}
+    volumes:
+      - uploads_data:/app/uploads  # 👈 теперь frontend имеет доступ к изображениям
+
 
   indexer:
     build:
@@ -44,9 +57,13 @@ services:
       - "3001:3001"
     depends_on:
       - migrations
+      - redis
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
       INDEXER_PORT: "3001"
+    volumes:
+      - uploads_data:/app/uploads  # 👈 общий volume для сохранения файлов
 
 volumes:
   postgres_data_dev:
+  uploads_data:  # 👈 именованный volume для изображений

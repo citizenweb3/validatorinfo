@@ -4,6 +4,11 @@ FROM node:20
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
+# Устанавливаем redis-cli
+RUN apt-get update && \
+    apt-get install -y redis-tools && \
+    rm -rf /var/lib/apt/lists/*
+
 # Копируем package.json и yarn.lock
 COPY package.json yarn.lock ./
 
@@ -13,11 +18,14 @@ RUN yarn install
 # Копируем весь код проекта
 COPY . .
 
+# Создаём папку uploads на всякий случай
+RUN mkdir -p /app/uploads
+
 # Генерируем Prisma-клиент
 RUN npx prisma generate
 
 # Указываем порт (если индексер предоставляет сервер)
 EXPOSE 3001
 
-# Команда для запуска
-CMD ["npx", "tsx", "server/indexer.ts"]
+# Точка входа с flushall и запуском индексера
+ENTRYPOINT ["sh", "-c", "redis-cli -h redis flushall && exec npx tsx server/indexer.ts"]
