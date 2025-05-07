@@ -75,6 +75,7 @@ import CuriousIconHovered from '@/public/img/icons/library-tabs/curious-h.png';
 import WalletIcon from '@/public/img/icons/account-tabs/wallet.png';
 import WalletIconHovered from '@/public/img/icons/account-tabs/wallet-h.png';
 import Cosmonaut from '@/public/img/icons/cosmonaut.svg';
+import NotTodayMobileIcon from '@/public/img/icons/not-today-mobile.svg';
 
 const icons = {
   AboutIcon,
@@ -154,6 +155,7 @@ const icons = {
   WalletIcon,
   WalletIconHovered,
   Cosmonaut,
+  NotTodayMobileIcon,
 };
 
 export default icons;
