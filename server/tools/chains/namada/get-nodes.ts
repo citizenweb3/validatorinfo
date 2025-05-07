@@ -1,7 +1,7 @@
 import logger from '@/logger';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
+import fetchChainData from '@/server/tools/get-chain-data';
 import { NodeResult } from '@/server/types';
-import fetchData from '@/server/utils/fetch-data';
 import isUrlValid from '@/server/utils/is-url-valid';
 
 const { logError } = logger('namada-nodes');
@@ -23,15 +23,8 @@ interface NamadaNode {
 }
 
 const getNodes: GetNodesFunction = async (chain) => {
-  const indexerUrl = chain.nodes.find((node) => node.type === 'indexer')?.url;
-  if (!indexerUrl) {
-    logError(`Indexer node for ${chain.name} chain not found`);
-    return [];
-  }
-
   try {
-    const path = indexerUrl + '/api/v1/pos/validator/all';
-    const nodes = await fetchData<NamadaNode[] | undefined>(path);
+    const nodes = await fetchChainData<NamadaNode[] | undefined>(chain.name, 'indexer', '/api/v1/pos/validator/all');
 
     if (!nodes) {
       logError(`No nodes found for ${chain.name}`);

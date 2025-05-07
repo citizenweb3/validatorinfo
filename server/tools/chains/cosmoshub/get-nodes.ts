@@ -1,22 +1,16 @@
 import logger from '@/logger';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
+import fetchChainData from '@/server/tools/get-chain-data';
 import { NodeResult } from '@/server/types';
-import fetchData from '@/server/utils/fetch-data';
 import isUrlValid from '@/server/utils/is-url-valid';
 
-const { logInfo, logError } = logger('ch-nodes');
+const { logError } = logger('ch-nodes');
 
 const getNodes: GetNodesFunction = async (chain) => {
-  const lcdUrl = chain.nodes.find((node) => node.type === 'lcd')?.url;
-  if (!lcdUrl) {
-    logError(`lcd node for ${chain.name} chain not found`);
-    return [];
-  }
-  const validatorsUrl = `${lcdUrl}/cosmos/staking/v1beta1/validators?pagination.limit=10000&pagination.count_total=false`;
+  const validatorsUrl = `/cosmos/staking/v1beta1/validators?pagination.limit=10000&pagination.count_total=false`;
 
   try {
-    logInfo(`${chain.name} validators - ${validatorsUrl}`);
-    const nodes = (await fetchData<{ validators: NodeResult[] }>(validatorsUrl)).validators;
+    const nodes = (await fetchChainData<{ validators: NodeResult[] }>(chain.name, 'rest', validatorsUrl)).validators;
 
     for (const val of nodes) {
       if (val.description.identity && val.description.identity.length === 16) {

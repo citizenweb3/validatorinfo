@@ -55,6 +55,7 @@ const updateChainProposals = async (chainNames: string[]) => {
           );
           continue;
         }
+
         await db.proposal.upsert({
           where: {
             chainId_proposalId: {
@@ -70,7 +71,6 @@ const updateChainProposals = async (chainNames: string[]) => {
             finalTallyResult: proposal.finalTallyResult,
           },
           create: {
-            chainId: dbChain.id,
             proposalId: proposal.proposalId,
             status: proposal.status,
             submitTime: proposal.submitTime,
@@ -83,6 +83,9 @@ const updateChainProposals = async (chainNames: string[]) => {
             title: proposal.title,
             description: proposal.description,
             type: proposal.type,
+            chain: {
+              connect: { id: dbChain.id },
+            },
           },
         });
 

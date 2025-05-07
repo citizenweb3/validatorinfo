@@ -57,6 +57,7 @@ const runServer = async () => {
     { name: 'chain-aprs', schedule: timers.everyHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
     { name: 'chain-proposals', schedule: timers.everyDay },
+    { name: 'chain-node-params', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {

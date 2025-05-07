@@ -4,11 +4,29 @@ import { Prisma } from '.prisma/client';
 
 import ProposalCreateInput = Prisma.ProposalCreateInput;
 
-export type ChainNodeType = 'indexer' | 'lcd' | 'rpc' | 'grpc' | 'ws';
+export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
 
 export interface StakingParams {
   unbondingTime: number | null;
   maxValidators: number | null;
+}
+
+export interface NodeParams {
+  peers: string | null;
+  seeds: string | null;
+  daemonName: string | null;
+  nodeHome: string | null;
+  keyAlgos: string | null;
+  binaries: string | null;
+  genesis: string | null;
+}
+
+export interface GovParams {
+  proposalDeposit: string | null;
+  votingPeriod: number | null;
+  minDeposit: string | null;
+  quorum: number | null;
+  threshold: number | null;
 }
 
 export interface ChainTVSResult {
@@ -38,6 +56,10 @@ export interface AddChainProps {
   mainRepo: string;
   githubUrl: string;
   hasValidators?: boolean;
+  genesis?: string;
+  chainRegistry?: string;
+  peers?: string[];
+  seeds?: string[];
 }
 
 export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;
@@ -54,11 +76,14 @@ export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
 export type GetProposalsFunction = (chain: AddChainProps) => Promise<ProposalsResult>;
 export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<StakingParams>;
+export type GetNodeParamsFunction = (chain: AddChainProps) => Promise<NodeParams>;
+export type GetGovParamsFunction = (chain: AddChainProps) => Promise<GovParams>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
   getApr: GetAprFunction;
   getTvs: GetTvsFunction;
   getStakingParams: GetStakingParamsFunction;
+  getNodeParams: GetNodeParamsFunction;
   getProposals: GetProposalsFunction;
 }

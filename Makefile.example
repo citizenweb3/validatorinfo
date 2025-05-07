@@ -1,9 +1,11 @@
 create-deps:
 		docker run --name validatorinfo -p "5432:5432" -e POSTGRES_DB=validatorinfo_db -e POSTGRES_USER=validatorinfo_user -e POSTGRES_PASSWORD=password -d "postgres:14-bullseye"
+		docker run -d --name redis -p "6379:6379" "redis:latest"
 		@sleep 5
 
 destroy-deps:
 		docker rm -f validatorinfo
+		docker rm -f redis
 
 deploy-migrations:
 		npx prisma migrate deploy
@@ -12,13 +14,16 @@ generate-client:
 		npx prisma generate
 
 init-chains:
-		npx tsx server/tools/init-chains.ts
+		redis-cli flushall && npx tsx server/tools/init-chains.ts
 
 generate-schema:
 		npx prisma migrate dev
 
 start-indexer:
-		npx tsx server/indexer.ts
+		redis-cli flushall && npx tsx server/indexer.ts
+
+update-params:
+		npx tsx server/update-chain-params.ts
 
 start-db:
 		make destroy-deps

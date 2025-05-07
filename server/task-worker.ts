@@ -5,6 +5,7 @@ import getChainUptime from '@/server/jobs/get-chain-uptime';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
 import updateChainApr from '@/server/jobs/update-chain-apr';
+import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
@@ -37,6 +38,9 @@ async function runTask() {
         break;
       case 'chain-staking-params':
         await updateChainStakingParams(chains);
+        break;
+      case 'chain-node-params':
+        await updateChainNodeParams(chains);
         break;
       case 'chain-proposals':
         await updateChainProposals(chains);

@@ -1,4 +1,13 @@
-import { AddChainProps } from '@/server/tools/chains/chain-indexer';
+import logger from '@/logger';
+import { AddChainProps, ChainNodeType } from '@/server/tools/chains/chain-indexer';
+import fetchData from '@/server/utils/fetch-data';
+
+interface APIItem {
+  address: string;
+  provider: string;
+}
+
+const { logInfo, logError, logWarn } = logger('init-chains');
 
 export const ecosystemParams = [
   {
@@ -28,7 +37,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.cosmoshub-4.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.cosmoshub-4.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.cosmoshub-4.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.cosmoshub-4.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.cosmoshub-4.citizenweb3.com/websocket' },
     ],
@@ -52,7 +61,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.celestia.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.celestia.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.celestia.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.celestia.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.celestia.citizenweb3.com/websocket' },
     ],
@@ -76,7 +85,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bitcanna/images/bcna.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.bitcanna.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.bitcanna.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.bitcanna.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.bitcanna.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.bitcanna.citizenweb3.com/websocket' },
     ],
@@ -99,7 +108,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/likecoin/images/like.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.likecoin.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.likecoin.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.likecoin.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.likecoin.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.likecoin.citizenweb3.com/websocket' },
     ],
@@ -122,7 +131,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.stride.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.stride.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.stride.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.stride.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.stride.citizenweb3.com/websocket' },
     ],
@@ -145,7 +154,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/quicksilver/images/qck.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.quicksilver.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.quicksilver.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.quicksilver.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.quicksilver.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.quicksilver.citizenweb3.com/websocket' },
     ],
@@ -168,7 +177,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/govgen/images/govgen.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.govgen.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.govgen.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.govgen.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.govgen.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.govgen.citizenweb3.com/websocket' },
     ],
@@ -191,7 +200,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/uptick/images/uptick.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.uptick.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.uptick.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.uptick.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.uptick.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.uptick.citizenweb3.com/websocket' },
     ],
@@ -214,7 +223,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.gravity.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.gravity.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.gravity.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.gravity.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.gravity.citizenweb3.com/websocket' },
     ],
@@ -238,8 +247,8 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.neutron.citizenweb3.com' },
-      { type: 'lcd', url: 'https://rest.lavenderfive.com:443/neutron' },
-      // { type: 'lcd', url: 'https://api.neutron.citizenweb3.com' },
+      { type: 'rest', url: 'https://rest.lavenderfive.com:443/neutron' },
+      // { type: 'rest', url: 'https://api.neutron.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.neutron.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.neutron.citizenweb3.com/websocket' },
     ],
@@ -261,9 +270,10 @@ const chainParams: Record<string, AddChainProps> = {
     minimalDenom: 'untrn',
     hasValidators: false,
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
+    chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/testnets/neutrontestnet',
     nodes: [
       { type: 'grpc', url: 'grpc.neutron.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.pion-1.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.pion-1.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.pion-1.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.pion-1-testnet.citizenweb3.com/websocket' },
     ],
@@ -286,7 +296,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.svg',
     nodes: [
       { type: 'grpc', url: 'dymension-grpc.polkachu.com' },
-      { type: 'lcd', url: 'https://dymension-api.polkachu.com' },
+      { type: 'rest', url: 'https://dymension-api.polkachu.com' },
       { type: 'rpc', url: 'https://dymension-rpc.polkachu.com' },
       { type: 'ws', url: 'wss://dymension-rpc.polkachu.com/websocket' },
     ],
@@ -309,7 +319,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/althea/images/althea.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.althea.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.althea.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.althea.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.althea.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.althea.citizenweb3.com/websocket' },
     ],
@@ -332,7 +342,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/atomone/images/atomone.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.atomone.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.atomone.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.atomone.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.atomone.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.atomone.citizenweb3.com/websocket' },
     ],
@@ -354,11 +364,17 @@ const chainParams: Record<string, AddChainProps> = {
     minimalDenom: 'muno',
     logoUrl:
       'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/union-testnet/union.svg',
+    chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/testnets/uniontestnet',
     nodes: [
       { type: 'grpc', url: 'grpc.union-testnet.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.union-testnet.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.union-testnet.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.union-testnet.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.union-testnet.citizenweb3.com/websocket' },
+
+      { type: 'grpc', url: 'union-testnet.grpc.kjnodes.com:443' },
+      { type: 'rest', url: 'https://union-testnet.api.kjnodes.com' },
+      { type: 'rpc', url: 'https://union-testnet.rpc.kjnodes.com' },
+      { type: 'ws', url: 'wss://union-testnet.rpc.kjnodes.com/websocket' },
     ],
     mainRepo: '123',
     docs: '123',
@@ -380,9 +396,18 @@ const chainParams: Record<string, AddChainProps> = {
       'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/axone-testnet/axone.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.axone-testnet.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.axone-testnet.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.axone-testnet.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.axone-testnet.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.axone-testnet.citizenweb3.com/websocket' },
+
+      { type: 'grpc', url: 'axone-testnet.grpc.kjnodes.com:443' },
+      { type: 'rest', url: 'https://axone-testnet.api.kjnodes.com' },
+      { type: 'rpc', url: 'https://axone-testnet.rpc.kjnodes.com' },
+      { type: 'ws', url: 'wss://axone-testnet.rpc.kjnodes.com/websocket' },
+
+      { type: 'rest', url: 'https://rest.nodejumper.io/axonetestnet' },
+      { type: 'rpc', url: 'https://rpc.nodejumper.io:443/axonetestnet' },
+      { type: 'ws', url: 'wss://rpc.nodejumper.io:443/axonetestnet/websocket' },
     ],
     mainRepo: '123',
     docs: '123',
@@ -403,8 +428,146 @@ const chainParams: Record<string, AddChainProps> = {
     minimalDenom: 'unam',
     logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
     nodes: [
-      { type: 'indexer', url: 'https://indexer.namada.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.namada.citizenweb3.com' },
+      { type: 'rpc', url: 'https://namada.liquify.com' },
+      { type: 'rpc', url: 'https://rpc.namada.tududes.com' },
+      { type: 'rpc', url: 'https://namada-rpc.mandragora.io' },
+      { type: 'rpc', url: 'https://namadam.powerstaking.tech' },
+      { type: 'rpc', url: 'https://namada-main.stakesystems.io' },
+      { type: 'rpc', url: 'https://rpc-namada.5elementsnodes.com' },
+      { type: 'rpc', url: 'https://namada-rpc.hadesguard.tech' },
+      { type: 'rpc', url: 'https://namada-mainnet-rpc.itrocket.net' },
+      { type: 'rpc', url: 'https://namada-rpc.sproutstake.space' },
+      { type: 'rpc', url: 'https://rpc.papadritta.com' },
+      { type: 'rpc', url: 'https://namada.rpc.decentrio.ventures' },
+      { type: 'rpc', url: 'https://rpc.namada.stakepool.dev.br' },
+      { type: 'rpc', url: 'https://rpc.namadascan.io' },
+      { type: 'rpc', url: 'https://namada-rpc.synergynodes.com' },
+      { type: 'rpc', url: 'https://namada-mainnet.rpc.l0vd.com' },
+      { type: 'rpc', url: 'https://namada.loserboy.xyz' },
+      { type: 'rpc', url: 'https://namada-mainnet-rpc.itudou.xyz' },
+      { type: 'rpc', url: 'https://rpc.namada.validatus.com' },
+      { type: 'rpc', url: 'https://namada-rpc.0xcryptovestor.com' },
+      { type: 'rpc', url: 'https://namada-rpc.0xwave.com' },
+      { type: 'rpc', url: 'https://namada-mainnet-rpc.mellifera.network' },
+      { type: 'rpc', url: 'https://rpc.namada.max-02.xyz' },
+      { type: 'rpc', url: 'https://namada-mainnet-rpc.denodes.xyz' },
+      { type: 'rpc', url: 'https://namada.rpc.decentrio.ventures' },
+      { type: 'rpc', url: 'https://namada.rpc.liveraven.net' },
+      { type: 'rpc', url: 'https://namada-rpc.palamar.io' },
+      { type: 'rpc', url: 'https://namada-rpc.validatorvn.com' },
+      { type: 'rpc', url: 'https://rpc.namada.stakeup.tech' },
+      { type: 'rpc', url: 'https://rpc.namada-archive.citizenweb3.com' },
+      { type: 'rpc', url: 'https://lightnode-rpc-mainnet-namada.grandvalleys.com' },
+      { type: 'rpc', url: 'https://manada-rpc.stakeandrelax.net' },
+      { type: 'rpc', url: 'https://mainnet-namada-rpc.konsortech.xyz' },
+      { type: 'rpc', url: 'https://namada-rpc.contributiondao.com' },
+      { type: 'rpc', url: 'https://namada-mainnet-rpc.crouton.digital' },
+      { type: 'rpc', url: 'https://namada-rpc.emberstake.xyz' },
+      { type: 'rpc', url: 'https://rpc-1.namada.nodes.guru' },
+      { type: 'rpc', url: 'https://namada-public-rpc.shield-crypto.com' },
+      { type: 'rpc', url: 'https://namada.tdrsys.com' },
+      { type: 'rpc', url: 'https://rpc-namada.architectnodes.com' },
+      { type: 'rpc', url: 'https://namada-rpc.murphynode.net' },
+      { type: 'rpc', url: 'https://namada-mainnet-rpc.itrocket.net' },
+      { type: 'rpc', url: 'https://namada-archive.tm.p2p.org' },
+      { type: 'rpc', url: 'https://namada-rpc.ibs.team' },
+      { type: 'rpc', url: 'https://rpc.namada.coverlet.io' },
+      { type: 'rpc', url: 'https://namada-rpc.noders.services' },
+
+      { type: 'indexer', url: 'https://indexer.namada.citizenweb3.com' },
+      { type: 'indexer', url: 'https://index-namada.5elementsnodes.com' },
+      { type: 'indexer', url: 'https://namada-indexer.denodes.xyz' },
+      { type: 'indexer', url: 'https://namada-indexer.0xcryptovestor.com' },
+      { type: 'indexer', url: 'https://undexer.hack.bg/v4' },
+      { type: 'indexer', url: 'https://namada-api.sproutstake.space' },
+      { type: 'indexer', url: 'https://namada-mainnet-indexer.mellifera.network' },
+      { type: 'indexer', url: 'https://namada-indexer.palamar.io' },
+      { type: 'indexer', url: 'https://namada-indexer.validatorvn.com' },
+      { type: 'indexer', url: 'https://indexer.namada.stakeup.tech' },
+      { type: 'indexer', url: 'https://indexer.namada.citizenweb3.com' },
+      { type: 'indexer', url: 'https://namada-indexer.stakeandrelax.net' },
+      { type: 'indexer', url: 'https://namada-mainnet-indexer.crouton.digital' },
+      { type: 'indexer', url: 'https://indexer-mainnet-namada.grandvalleys.com' },
+      { type: 'indexer', url: 'https://namada-idx.emberstake.xyz' },
+      { type: 'indexer', url: 'https://namada-indexer.nodes.guru' },
+      { type: 'indexer', url: 'https://namada-indexer.shield-crypto.com' },
+      { type: 'indexer', url: 'https://namada-mainnet-indexer.rpc.l0vd.com' },
+      { type: 'indexer', url: 'https://indexer.namada.validatus.com' },
+      { type: 'indexer', url: 'https://namada-indexer-01.originstake.com' },
+      { type: 'indexer', url: 'https://indexer-namada.architectnodes.com' },
+      { type: 'indexer', url: 'https://namada-indexer.konsortech.xyz' },
+      { type: 'indexer', url: 'https://indexer.namada.murphynode.net' },
+      { type: 'indexer', url: 'https://namada-mainnet-indexer.itrocket.net' },
+      { type: 'indexer', url: 'https://api-namada-mainnet-indexer.tm.p2p.org' },
+      { type: 'indexer', url: 'https://indexer.namada.coverlet.io' },
+      { type: 'indexer', url: 'https://indexer.namada.tududes.com' },
+      { type: 'indexer', url: 'https://indexer-mainnet-namada.grandvalleys.com' },
+      { type: 'indexer', url: 'https://namada-indexer.noders.services' },
+    ],
+    seeds: [
+      '72bed9ece709f2d4bc534629146592ef1cd0c459@14.243.91.37:16656',
+      '509f1e843cf881650a4151aa804ddd7a7188e88f@195.201.197.246:32656',
+      '04affb50117ef548cbf7d1ddb1e6416dec0645ae@namada-mainnet-seed.itrocket.net:14656',
+      '4ea9acb8ef3b55147a38513829c20fc8681983af@namada-mainnet.seed.l0vd.com:26056',
+      'd882a10dec0da40b045aeb13175a6d4f97194888@62.3.101.89:26656',
+      '3b03b50708d334529888eb4ea35606dcb460c8cf@namada-seed.mandragora.io:21656',
+      '796ec24b09599dd38033e2a24390ec0cdee7ed26@34.88.25.91:26656',
+      '6b0ffcce9b59b91ceb8eea5d4599e27707e3604a@seeds.stakeup.tech:10224',
+      'e461529f0cfc2520dbad23d402906924fef602f9@65.109.26.242:26656',
+      'd105f5b0d075c090d7d1b1d533651a804dab352c@mainnet-seed.konsortech.xyz:26165',
+      '59df4b3832446cd0f9c369da01f2aa5fe9647248@135.181.220.61:26756',
+      '65882ea69f4146d8cc83564257252f4711d3e05e@seed-mainnet-namada.grandvalleys.com:56656',
+      'eaa6bda69dc3281186b5f150c21e62e6e4325d34@152.53.104.210:26656',
+      '04affb50117ef548cbf7d1ddb1e6416dec0645ae@namada-mainnet-seed.itrocket.net:14656',
+      'd64ecd5f52c2a525f29b3f26b4dfc7613904a674@p2p.namada.newton.zone:26656',
+      '10ed1e176d874c8bb3c7c065685d2da6a4b86475@seed-namada.ibs.team:16690',
+      '77015c62605bcfd22011faf532678ee71797156e@namada-seed.noders.services:26633',
+      'df949a46ae6529ae1e09b034b49716468d5cc7e9@seeds.stakerhouse.com:14756',
+    ],
+    peers: [
+      '05309c2cce2d163027a47c662066907e89cd6b99@104.251.123.123:26656',
+      '54386c1252ecabe5ba1fae2f083b37ca5ebd57dc@192.64.82.62:26656',
+      '2bf5cdd25975c239e8feb68153d69c5eec004fdb@64.118.250.82:46656',
+      '509f1e843cf881650a4151aa804ddd7a7188e88f@195.201.197.246:32656',
+      '3879583b9c6b1ac29d38fefb5a14815dd79282d6@peer-mainnet-namada.grandvalleys.com:38656',
+      '96f7945f9470faacce66888d798bf1f131913b6c@namada-mainnet-peer.denodes.xyz:26656',
+      '6ed935577cf30c63f39cebba39e8dc7fe3a39317@namada-mainnet-peer2.denodes.xyz:26656',
+      'ac1976c8d2b6fcd75643e0e17e44cb7b00b203d3@139.45.205.58:26656',
+      'e75f49448703666b26eb6f414e044fdb6842dd9a@37.27.56.233:26656',
+      '2583e978c1d267a5a22975a3aa2b5f7a0e9f9b2a@0xcryptovestor.com:28656',
+      '805ba1297ee4e4d64e2d5ec17423365b0489dafb@namada-mainnet-peer.itrocket.net:14656',
+      '1deac802af491449c6461a693b34bc8c1f0f2a12@45.63.2.161:26656',
+      '5a7f398e1517fd661689449971a4ec26dd0bea5e@namada-mainnet-ps.mellifera.network:26656',
+      'd5a2383cdcdde08149f809e7e98ab37b03f5444d@namada-mainnet.peers.l0vd.com:26656',
+      'c1410f11db5522e176e69100816ea5bbe8c99e36@188.214.130.102:26670',
+      '2291abd220086ebe0fe104e899ebbe215d80478d@216.158.67.230:26656',
+      '56f1fbafe099e723ea4e37d02ea93413d836386c@64.140.171.42:26601',
+      'e30f970d6629582b9f63a2200efb3a9c2de985b0@157.245.200.161:26656',
+      'e558141bb8bdf6364a03bf591c580f98b7c344a7@157.245.206.61:26656',
+      'd882a10dec0da40b045aeb13175a6d4f97194888@62.3.101.89:26656',
+      'e81ec735fcb635ff4703ad3ae9348b5ce160189a@193.34.212.24:46656',
+      'f777450cf546a8a58574f76fd4c1f773ac0ad451@144.76.30.134:26656',
+      'e055101fc58397cd4e740403807e2250a60c9cb0@namada-peer.mandragora.io:26656',
+      '5693bc227b4307026300d764a831496c85c1cc35@peer-namada.5elementsnodes.com:26655',
+      '4c22830f5bd6784a52572ade7b035ce30f0a8bbf@35.246.167.255:26656',
+      'd83cd082b8973644e381fad9421ca29fb50fe059@namada-peer.emberstake.xyz:20400',
+      '69c9bd8491c55b59aabc4c7c8007e30378b7c2b5@5.9.115.9:33656',
+      '2dd4a3d6f44f2514041171d0efe7525cd29ade4b@mainnet-namada.konsortech.xyz:26656',
+      'd86c6c8bc56781fd93794ca7af6f0c0e90e34584@namada-peer.palamar.io:16656',
+      '11d23ba849851e33add18f566ac1a3ea431f516b@190.2.141.78:16656',
+      'b255fea6067e70387b11f1e246a483a81ef0451f@peer-namada.stakeup.tech:12356',
+      '2f32fc015e29e942ccefca600a8ec8bf828ba848@65.108.201.106:26656',
+      'be51c2fc3cc386aa3a1f0b25f077385b17090eb2@rpc-1.namada.nodes.guru:26656',
+      'af99610063d2fb0f5974d026da0521ab5d21c44e@74.50.74.186:15659',
+      'eaa6bda69dc3281186b5f150c21e62e6e4325d34@152.53.104.210:26656',
+      '36aca9d686f4e2278f04c8fe4d1985285b269064@namada-peer.originstake.com:12656',
+      'b3ecb2072b9a470ec06851027191c49f17603036@65.109.32.148:26906',
+      'f3d0c73dc99ec60630574ce62f415c9d457771b4@namada-peer.murphynode.net:26656',
+      '805ba1297ee4e4d64e2d5ec17423365b0489dafb@namada-mainnet-peer.itrocket.net:14656',
+      '6051d1f03906d7b96b6e8cc99125b7bc019aeabd@namada-mainnet-peer.itudou.xyz:26656',
+      'b51b7ee8304b4c8e59195435eed2727c9c23c760@namada-peer.dominodes.io:26656',
+      '94b60575033a7bb366101cb57ccb78073d97a446@95.216.78.215:26656',
     ],
     mainRepo: 'https://github.com/anoma/namada',
     docs: 'https://docs.namada.net',
@@ -425,7 +588,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.png',
     nodes: [
       { type: 'grpc', url: 'grpc.bostrom.cybernode.ai' },
-      { type: 'lcd', url: 'https://lcd.cyber.bronbro.io' },
+      { type: 'rest', url: 'https://lcd.cyber.bronbro.io' },
       { type: 'rpc', url: 'https://rpc.bostrom.cybernode.ai' },
       { type: 'ws', url: 'wss://rpc.bostrom.cybernode.ai/websocket' },
     ],
@@ -449,9 +612,18 @@ const chainParams: Record<string, AddChainProps> = {
       'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/symphony-testnet/melody.png',
     nodes: [
       { type: 'grpc', url: 'grpc.symphony-testnet.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.symphony-testnet.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.symphony-testnet.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.symphony-testnet.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket' },
+
+      { type: 'grpc', url: 'symphony-testnet-grpc.crouton.digital:29290' },
+      { type: 'rest', url: 'https://symphony-testnet-api.crouton.digital' },
+      { type: 'rpc', url: 'https://symphony-testnet-rpc.crouton.digital' },
+      { type: 'ws', url: 'wss://symphony-testnet-rpc.crouton.digital/websocket' },
+
+      { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
+      { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
+      { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
     ],
     mainRepo: 'https://github.com/Orchestra-Labs/symphony',
     docs: '',
@@ -474,9 +646,13 @@ const chainParams: Record<string, AddChainProps> = {
       'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/artela-testnet/artela.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.artela-testnet.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.artela-testnet.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.artela-testnet.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.artela-testnet.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.artela-testnet.citizenweb3.com/websocket' },
+
+      { type: 'rest', url: 'https://artela-testnet-api.polkachu.com' },
+      { type: 'rpc', url: 'https://artela-testnet-rpc.polkachu.comm' },
+      { type: 'ws', url: 'wss://artela-testnet-rpc.polkachu.com/websocket' },
     ],
     mainRepo: 'https://github.com/artela-network/artela',
     docs: '',
@@ -497,7 +673,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/greatweb/pussy-landing/master/src/images/spacepussy.png',
     nodes: [
       { type: 'grpc', url: 'grpc.space-pussy.cybernode.ai' },
-      { type: 'lcd', url: 'https://lcd.space-pussy.cybernode.ai' },
+      { type: 'rest', url: 'https://lcd.space-pussy.cybernode.ai' },
       { type: 'rpc', url: 'https://rpc.space-pussy.cybernode.ai' },
       { type: 'ws', url: 'wss://rpc.space-pussy.cybernode.ai/websocket' },
     ],
@@ -520,7 +696,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.osmosis.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.osmosis.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.osmosis.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.osmosis.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.osmosis.citizenweb3.com/websocket' },
     ],
@@ -543,7 +719,7 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/nomic/images/nom.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.nomic.polkachu.com' },
-      { type: 'lcd', url: 'https://api.nomic.quokkastake.io' },
+      { type: 'rest', url: 'https://api.nomic.quokkastake.io' },
       { type: 'rpc', url: 'https://nomic-rpc.polkachu.com' },
       { type: 'ws', url: 'wss://nomic-rpc.polkachu.com/websocket' },
     ],
@@ -567,7 +743,7 @@ const chainParams: Record<string, AddChainProps> = {
       'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/nillion-chain-testnet/nil.png',
     nodes: [
       { type: 'grpc', url: 'grpc.nillion.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.nillion.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.nillion.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.nillion.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.nillion.citizenweb3.com/websocket' },
     ],
@@ -589,9 +765,12 @@ const chainParams: Record<string, AddChainProps> = {
     minimalDenom: 'unym',
     logoUrl:
       'https://raw.githubusercontent.com/nymtech/nym/257e36ddcb408d301307b8ddf542b5275704e7d9/assets/logo/logo-bw.svg',
+    chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/nyx',
     nodes: [
+      { type: 'exit', url: 'nym-exit.citizenweb3.com' },
+      { type: 'entry', url: 'nym-entry.citizenweb3.com' },
       { type: 'grpc', url: 'grpc.nym.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.nym.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.nym.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.nym.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.nym.citizenweb3.com/websocket' },
     ],
@@ -599,6 +778,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '',
     githubUrl: 'https://github.com/nymtech/nym',
     twitterUrl: 'https://x.com/nymproject',
+    genesis: 'https://nymtech.net/genesis/genesis.json',
   },
   'warden-testnet': {
     rang: 5,
@@ -615,14 +795,86 @@ const chainParams: Record<string, AddChainProps> = {
       'https://raw.githubusercontent.com/warden-protocol/networks/87e9f8b03f38da9b2abf2155dec0a097692c4039/assets/Warden%20Icon%20Black%20back.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.warden-testnet.citizenweb3.com' },
-      { type: 'lcd', url: 'https://api.warden-testnet.citizenweb3.com/' },
-      { type: 'rpc', url: 'https://rpc.warden-testnet.citizenweb3.com/' },
+      { type: 'rest', url: 'https://api.warden-testnet.citizenweb3.com' },
+      { type: 'rpc', url: 'https://rpc.warden-testnet.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.warden-testnet.citizenweb3.com/websocket' },
+
+      { type: 'grpc', url: 'warden-testnet.grpc.kjnodes.com:443' },
+      { type: 'rest', url: 'https://warden-testnet.api.kjnodes.com' },
+      { type: 'rpc', url: 'https://warden-testnet.rpc.kjnodes.com' },
+      { type: 'ws', url: 'wss://warden-testnet.rpc.kjnodes.com/websocket' },
+
+      { type: 'rest', url: 'https://rest.nodejumper.io/wardenprotocoltestnet' },
+      { type: 'rpc', url: 'https://rpc.nodejumper.io:443/wardenprotocoltestnet' },
+      { type: 'ws', url: 'wss://rpc.nodejumper.io:443/wardenprotocoltestnet/websocket' },
     ],
     mainRepo: 'https://github.com/warden-protocol/wardenprotocol',
     docs: '',
     githubUrl: 'https://github.com/warden-protocol',
     twitterUrl: 'https://x.com/wardenprotocol',
+  },
+  'namada-testnet': {
+    rang: 4,
+    ecosystem: 'namada',
+    name: 'namada-testnet',
+    prettyName: 'Namada Testnet',
+    chainId: 'housefire-alpaca.cc0d3e0c033be',
+    bech32Prefix: 'tnam',
+    coinDecimals: 6,
+    coinGeckoId: '',
+    coinType: 877,
+    denom: 'NAM',
+    minimalDenom: 'unam',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
+    nodes: [
+      { type: 'indexer', url: 'https://indexer.namada-housefire.citizenweb3.com' },
+      { type: 'indexer', url: 'https://namada-housefire-idx.emberstake.xyz' },
+      { type: 'indexer', url: 'https://namada-housefire-indexer.validatorvn.com' },
+      { type: 'indexer', url: 'https://namada-indexer-housefire.originstake.com' },
+      { type: 'indexer', url: 'https://housefire-api.sproutstake.space' },
+      { type: 'indexer', url: 'https://indexer.namada-housefire.citizenweb3.com' },
+      { type: 'indexer', url: 'https://namada-housefire-indexer.denodes.xyz' },
+      { type: 'indexer', url: 'https://indexer.testnet.namada.coverlet.io' },
+      { type: 'indexer', url: 'https://indexer.housefire.max-03.xyz' },
+      { type: 'indexer', url: 'https://housefire.indexer.papadritta.com' },
+      { type: 'indexer', url: 'https://indexer.housefire.tududes.com' },
+      { type: 'indexer', url: 'https://indexer.housefire.natsai.xyz' },
+
+      { type: 'rpc', url: 'https://rpc.namada-housefire.citizenweb3.com' },
+      { type: 'rpc', url: 'https://namada-housefire-rpc.emberstake.xyz' },
+      { type: 'rpc', url: 'https://namada-housefire-rpc.validatorvn.com' },
+      { type: 'rpc', url: 'https://namada-housefire-rpc.originstake.com' },
+      { type: 'rpc', url: 'https://housefire-rpc.sproutstake.space' },
+      { type: 'rpc', url: 'https://namada-testnet-rpc.itrocket.net' },
+      { type: 'rpc', url: 'https://rpc.namada-housefire.citizenweb3.com' },
+      { type: 'rpc', url: 'https://namada-housefire-rpc.denodes.xyz' },
+      { type: 'rpc', url: 'https://rpc.testnet.namada.coverlet.io/' },
+      { type: 'rpc', url: 'https://rpc.housefire.max-03.xyz' },
+      { type: 'rpc', url: 'https://housefire.rpc.papadritta.com' },
+      { type: 'rpc', url: 'https://rpc.housefire.tududes.com' },
+      { type: 'rpc', url: 'https://rpc.housefire.natsai.xyz' },
+      { type: 'rpc', url: 'https://namada-rpc-housefire.mandragora.io' },
+    ],
+    seeds: [
+      '1803ff35153f49ecc6b877aa37183b577b1d3207@213.239.198.181:17656',
+      '17fa2356db14420ec0ce2b1542c1f86993366286@65.21.237.124:46656',
+      'a9d56e824a5d84955dcaaccd71ad489b1901f253@namada-testnet-seed.itrocket.net:33656',
+      '1dae6535bf5e4663ccb7c7294c129221b6018d22@168.119.37.164:26656',
+      'c7dcabd4ea55c3f00a8dddaae04c71cfe620b709@p2p-testnet.namada.newton.zone:36656',
+    ],
+    peers: [
+      'a26e06ea312c6c5612b38aafc45cbec300b6a43b@b3.emberstake.xyz:14200',
+      '9a8b49025b395b356d8b76591ab84134bbb435fd@138.197.133.118:26656',
+      'e3d64ac69ebb09cc05e2966db2943dbc386ba955@namada-testnet-peer.itrocket.net:33656',
+      '1dae6535bf5e4663ccb7c7294c129221b6018d22@168.119.37.164:26656',
+      'a118ec7551a264789c3b07d00fc848e6988e2328@namada-housefire-peer.denodes.xyz:56656',
+      '7e2069e6bf93a23b611ec9551d1a9427603f5792@88.99.67.38:26656',
+      '7e2069e6bf93a23b611ec9551d1a9427603f5792@88.99.67.38:26656',
+    ],
+    mainRepo: 'https://github.com/anoma/namada',
+    docs: 'https://docs.namada.net',
+    githubUrl: 'https://github.com/anoma',
+    twitterUrl: 'https://x.com/namada',
   },
 };
 
@@ -635,4 +887,36 @@ export const getChainParams = (chainName: string): AddChainProps => {
     throw new Error(`Chain ${chainName} not found`);
   }
   return chain;
+};
+
+export const updateChainParamsUpdated = async (chainName: string) => {
+  const params = getChainParams(chainName);
+  const chainRegistryUrl = params.chainRegistry
+    ? `${params.chainRegistry}/chain.json`
+    : `https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/${chainName}/chain.json`;
+
+  try {
+    const chainRegistry = await fetchData<{ apis: Record<ChainNodeType, APIItem[]> }>(chainRegistryUrl);
+
+    params.nodes = [
+      ...(params.nodes ?? []),
+      ...chainRegistry.apis.rpc.map((item: APIItem): { type: ChainNodeType; url: string } => ({
+        type: 'rpc',
+        url: item.address,
+      })),
+      ...(chainRegistry.apis.rest?.map((item: APIItem): { type: ChainNodeType; url: string } => ({
+        type: 'rest',
+        url: item.address,
+      })) ?? []),
+      ...(chainRegistry.apis.grpc?.map((item: APIItem): { type: ChainNodeType; url: string } => ({
+        type: 'grpc',
+        url: item.address,
+      })) ?? []),
+    ];
+
+    return params;
+  } catch (error: any) {
+    logWarn(`Failed to update chain urls for ${chainName} - ${error.message}`);
+    return params;
+  }
 };

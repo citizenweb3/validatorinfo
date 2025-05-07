@@ -1,6 +1,7 @@
 import db from '@/db';
 import logger from '@/logger';
 import { getChainParams } from '@/server/tools/chains/params';
+import fetchChainData from '@/server/tools/get-chain-data';
 
 const { logError, logInfo } = logger('get-uptime');
 
@@ -18,18 +19,12 @@ export const getChainUptime = async (chainNames: string[]) => {
       }
 
       const currentTime = Date.now();
-      const rpcEndpoint = chainParams.nodes.find((node) => node.type === 'rpc')?.url;
-      if (!rpcEndpoint) {
-        logError(`RPC node for ${chainName} chain not found`);
-        return;
-      }
-
-      const response = await fetch(`${rpcEndpoint}/status`);
-      if (!response.ok) {
-        throw new Error(`Ошибка запроса: ${response.status}`);
-      }
-      const data = await response.json();
-      const blockHeight = +data.result.sync_info.latest_block_height;
+      const response = await fetchChainData<{ result: { sync_info: { latest_block_height: string } } }>(
+        chainName,
+        'rpc',
+        `/status`,
+      );
+      const blockHeight = parseInt(response.result.sync_info.latest_block_height);
 
       const txCount = blockHeight - dbChain.uptimeHeight;
       const avgTxInterval = txCount ? (currentTime - +dbChain.lastUptimeUpdated) / txCount : 0;

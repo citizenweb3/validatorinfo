@@ -1,0 +1,8 @@
+-- AlterTable
+ALTER TABLE "chains" ADD COLUMN     "binaries" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "daemon_name" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "genesis" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "key_algos" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "node_home" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "peers" TEXT NOT NULL DEFAULT '',
+ADD COLUMN     "seeds" TEXT NOT NULL DEFAULT '';

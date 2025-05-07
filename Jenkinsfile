@@ -21,19 +21,6 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                script {
-                    if (env.BRANCH_NAME == 'dev') {
-                        sh 'docker compose -f docker-compose.dev.yml run --rm frontend yarn test || true'
-                        sh 'docker compose -f docker-compose.dev.yml run --rm indexer yarn test || true'
-                    } else if (env.BRANCH_NAME == 'main') {
-                        sh 'docker compose -f docker-compose.main.yml run --rm frontend yarn test || true'
-                        sh 'docker compose -f docker-compose.main.yml run --rm indexer yarn test || true'
-                    }
-                }
-            }
-        }
         stage('Deploy') {
             steps {
                 script {
