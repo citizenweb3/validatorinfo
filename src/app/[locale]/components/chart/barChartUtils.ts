@@ -102,6 +102,7 @@ export function drawBars(
     .attr('height', (d) => yScale(0) - yScale(d.value))
     .attr('fill', color)
     .attr('stroke', 'none')
+    .attr('opacity', 0.7)
     .style(
       'filter',
       'drop-shadow(0px 2px 2px rgb(0, 0, 0)) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.81)) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.62))'
@@ -177,12 +178,16 @@ export function handleBarTooltip(
       chartArea.selectAll('.bar-left, .bar-right').each(function (d) {
         const dataPoint = d as DataPoint;
         if (dataPoint.date.getTime() === closestDate.getTime()) {
-          d3.select(this).attr('stroke', 'white').attr('stroke-width', 2);
+          d3.select(this)
+            .attr('stroke', 'white')
+            .attr('stroke-width', 2)
+            .attr('opacity', 1); 
         } else {
-          d3.select(this).attr('stroke', 'none');
+          d3.select(this)
+            .attr('stroke', 'none')
+            .attr('opacity', 0.7);
         }
       });
-
       // Calculate tooltip dimensions and position
       const tooltipHeight = tooltipConfig.baseHeight + yValues.length * tooltipConfig.rowHeight;
       let tooltipX = clampedMouseX + tooltipConfig.xOffset;
