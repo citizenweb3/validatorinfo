@@ -12,7 +12,7 @@ interface EndpointCache {
 const MAX_RETRIES = 2;
 
 const redis = new Redis({
-  host: 'localhost',
+  host: process.env.REDIS_HOST ?? 'localhost',
   port: process.env.REDIS_PORT ? parseInt(process.env.REDIS_PORT, 10) : 6379,
   // password: 'your_secure_password',
 });
