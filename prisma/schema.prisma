@@ -77,6 +77,16 @@ model Chain {
   proposalsTotal  Int        @default(0) @map("proposals_total")
   proposalsLive   Int        @default(0) @map("proposals_live")
   proposalsPassed Int        @default(0) @map("proposals_passed")
+  votingPeriod    Int        @default(0) @map("voting_period")
+
+  //node
+  peers String @default("")
+  seeds String @default("")
+  binaries String @default("")
+  genesis String @default("")
+  keyAlgos String @default("") @map("key_algos")
+  daemonName String @default("") @map("daemon_name")
+  nodeHome String @default("") @map("node_home")
 
   // calculated
   totalSupply         String   @default("") @map("total_supply")
@@ -172,9 +182,9 @@ model Proposal {
   proposalId       String         @map("proposal_id")
   status           ProposalStatus @default(PROPOSAL_STATUS_UNSPECIFIED)
   submitTime       DateTime       @map("submit_time") @db.Timestamptz(6)
-  depositEndTime   DateTime       @map("deposit_end_time") @db.Timestamptz(6)
-  votingStartTime  DateTime       @map("voting_start_time") @db.Timestamptz(6)
-  votingEndTime    DateTime       @map("voting_end_time") @db.Timestamptz(6)
+  depositEndTime   DateTime?      @map("deposit_end_time") @db.Timestamptz(6)
+  votingStartTime  DateTime?      @map("voting_start_time") @db.Timestamptz(6)
+  votingEndTime    DateTime?      @map("voting_end_time") @db.Timestamptz(6)
   tallyResult      Json?          @map("tally_result")
   finalTallyResult Json?          @map("final_tally_result")
   content          Json

@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { GetProposalsFunction, ProposalsResult, ResultProposalItem } from '@/server/tools/chains/chain-indexer';
-import fetchData from '@/server/utils/fetch-data';
+import fetchChainData from '@/server/tools/get-chain-data';
 
 import { $Enums } from '.prisma/client';
 
@@ -29,7 +29,6 @@ interface ProposalContent {
 }
 
 const getProposals: GetProposalsFunction = async (chain) => {
-  const indexerEndpoint = chain.nodes.find((node) => node.type === 'indexer')?.url;
   const result: ProposalsResult = {
     proposals: [],
     total: 0,
@@ -37,24 +36,19 @@ const getProposals: GetProposalsFunction = async (chain) => {
     passed: 0,
   };
 
-  if (!indexerEndpoint) {
-    logError(`No REST endpoint found for ${chain.name}`);
-    return result;
-  }
-
   try {
     let allProposals: ResultProposalItem[] = [];
     let currentPage = 1;
     let totalPages = 1;
 
     while (currentPage <= totalPages) {
-      const url = `${indexerEndpoint}/api/v1/gov/proposal?page=${currentPage}`;
+      const url = `/api/v1/gov/proposal?page=${currentPage}`;
       logInfo(url);
 
-      const response = await fetchData<{
+      const response = await fetchChainData<{
         results: NamadaProposal[];
         pagination: { totalPages: string };
-      }>(url);
+      }>(chain.name, 'indexer', url);
 
       const proposals: ResultProposalItem[] = response.results.map((proposal) => {
         let content: ProposalContent;

@@ -1,10 +1,14 @@
 import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 
+import logger from '@/logger';
 import { GetProposalsFunction } from '@/server/tools/chains/chain-indexer';
+import getCosmWasmClient from '@/server/tools/get-chain-client';
 
 import { $Enums } from '.prisma/client';
 
 import ProposalStatus = $Enums.ProposalStatus;
+
+const { logInfo, logError, logWarn } = logger('get-proposals');
 
 const NEUTRON_DAO_CORE_CONTRACT = 'neutron1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrstdxvff';
 const AVERAGE_BLOCK_TIME_MS = 5500; // 5.5 seconds, average block time for Neutron
@@ -82,11 +86,11 @@ function normalizeTally(votes: Vote[]): NormalizedTally {
           result.no_with_veto_count += power;
           break;
         default:
-          console.warn(`Unknown vote type: ${vote.vote}`);
+          logWarn(`Unknown vote type: ${vote.vote}`);
       }
     }
   } catch (error) {
-    console.error('Error parsing tally data:', error);
+    logError('Error parsing tally data:', error);
   }
 
   return result;
@@ -105,7 +109,7 @@ async function getModuleConfig(client: CosmWasmClient, moduleAddress: string): P
     moduleConfigCache[moduleAddress] = config;
     return config;
   } catch (error) {
-    console.error(`Error fetching config for module ${moduleAddress}:`, error);
+    logError(`Error fetching config for module ${moduleAddress}:`, error);
     return { max_voting_period: { time: 604800 } }; // Fallback: 7 days in seconds
   }
 }
@@ -120,8 +124,8 @@ async function getBlockTimestamp(client: CosmWasmClient, height: number): Promis
     const timestamp = new Date(+block.header.time).toISOString();
     blockCache[height] = timestamp;
     return timestamp;
-  } catch (error) {
-    console.warn(`Block ${height} not available, estimating timestamp:`, error);
+  } catch (error: any) {
+    logWarn(`Block ${height} not available, estimating timestamp: ${error.message}`);
     try {
       const currentBlock = await client.getBlock();
       const currentHeight = currentBlock.header.height;
@@ -134,14 +138,14 @@ async function getBlockTimestamp(client: CosmWasmClient, height: number): Promis
       blockCache[height] = estimatedTime;
       return estimatedTime;
     } catch (estimateError) {
-      console.error(`Error estimating timestamp for block ${height}:`, estimateError);
+      logError(`Error estimating timestamp for block ${height}:`, estimateError);
       return new Date().toISOString();
     }
   }
 }
 
 const getProposals: GetProposalsFunction = async (chain) => {
-  const rpcEndpoint = chain.nodes.find((node) => node.type === 'rpc')?.url;
+  const client = await getCosmWasmClient(chain.name);
 
   const result: ProposalsResult = {
     proposals: [],
@@ -150,14 +154,12 @@ const getProposals: GetProposalsFunction = async (chain) => {
     passed: 0,
   };
 
-  if (!rpcEndpoint) {
-    console.error(`No RPC endpoint found for ${chain.name}`);
+  if (!client) {
+    logError(`No client available for chain ${chain.name}`);
     return result;
   }
 
   try {
-    const client = await CosmWasmClient.connect(rpcEndpoint);
-
     const daoResponse = await client.queryContractSmart(NEUTRON_DAO_CORE_CONTRACT, {
       proposal_modules: {},
     });
@@ -183,7 +185,7 @@ const getProposals: GetProposalsFunction = async (chain) => {
             proposalType = 'overrule';
             break;
           default:
-            console.warn(`Unknown prefix ${mod.prefix} for mod ${mod.address}`);
+            logWarn(`Unknown prefix ${mod.prefix} for mod ${mod.address}`);
         }
 
         const config = await getModuleConfig(client, mod.address);
@@ -246,7 +248,7 @@ const getProposals: GetProposalsFunction = async (chain) => {
                 const normalizedTally = normalizeTally(tallyResponse.votes || []);
                 tallyResult = JSON.stringify(normalizedTally);
               } catch (tallyError) {
-                console.error(`Error fetching tally for proposal ${proposalId} in mod ${mod.address}:`, tallyError);
+                logError(`Error fetching tally for proposal ${proposalId} in mod ${mod.address}:`, tallyError);
               }
             } else {
               finalTallyResult = JSON.stringify({
@@ -272,7 +274,7 @@ const getProposals: GetProposalsFunction = async (chain) => {
               content: 'No content provided',
             };
 
-            console.log(
+            logInfo(
               `Proposal ${proposalId} ${proposal.title} submitTime: ${submitTime}, votingEndTime: ${votingEndTime}`,
             );
 
@@ -285,14 +287,14 @@ const getProposals: GetProposalsFunction = async (chain) => {
           }
         }
       } catch (moduleError) {
-        console.error(`Error processing mod ${mod.address}:`, moduleError);
+        logError(`Error processing mod ${mod.address}:`, moduleError);
       }
     }
 
     result.total = result.proposals.length;
-    console.log(`Fetched ${result.total} proposals for Neutron`);
+    logInfo(`Fetched ${result.total} proposals for Neutron`);
   } catch (error) {
-    console.error('Error fetching proposals:', error);
+    logError('Error fetching proposals:', error);
   }
 
   return result;

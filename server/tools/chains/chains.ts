@@ -20,6 +20,8 @@ const excludeChains: string[] = [
   // 'govgen',
   // 'bostrom',
   // 'nillion-testnet',
+  // 'neutron',
+  // 'neutron-testnet',
 ];
 
 const includeChains: string[] = [];

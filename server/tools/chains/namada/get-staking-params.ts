@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { GetStakingParamsFunction, StakingParams } from '@/server/tools/chains/chain-indexer';
-import fetchData from '@/server/utils/fetch-data';
+import fetchChainData from '@/server/tools/get-chain-data';
 
 interface ChainStakingParams {
   unbondingLength: string;
@@ -27,22 +27,21 @@ const getStakingParams: GetStakingParamsFunction = async (chain) => {
     maxValidators: null,
   };
 
-  const indexerEndpoint = chain.nodes.find((node) => node.type === 'indexer')?.url;
+  try {
+    const unbondingTimeResult = await fetchChainData<ChainStakingParams>(
+      chain.name,
+      'indexer',
+      `/api/v1/chain/parameters`,
+    );
 
-  if (indexerEndpoint) {
-    try {
-      const url = `${indexerEndpoint}/api/v1/chain/parameters`;
-      const unbondingTimeResult = await fetchData<ChainStakingParams>(url);
+    const unbondingEpochs = Number(unbondingTimeResult.unbondingLength);
+    const epochDurationSeconds = Number(unbondingTimeResult.minDuration);
+    result.unbondingTime = unbondingEpochs * epochDurationSeconds;
 
-      const unbondingEpochs = Number(unbondingTimeResult.unbondingLength);
-      const epochDurationSeconds = Number(unbondingTimeResult.minDuration);
-      result.unbondingTime = unbondingEpochs * epochDurationSeconds;
-
-      logInfo(`Staking params for ${chain.name}: ${JSON.stringify(result)}`);
-      return result;
-    } catch (e) {
-      logError(`Error fetching staking params for ${chain.name}`, e);
-    }
+    logInfo(`Staking params for ${chain.name}: ${JSON.stringify(result)}`);
+    return result;
+  } catch (e) {
+    logError(`Error fetching staking params for ${chain.name}`, e);
   }
 
   return result;

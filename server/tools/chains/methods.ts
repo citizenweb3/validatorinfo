@@ -38,6 +38,7 @@ const chainMethods: Record<string, ChainMethods> = {
   nillion: cosmosChainMethods,
   nym: cosmosChainMethods,
 
+  'namada-testnet': namadaChainMethods,
   'neutron-testnet': neutronChainMethods,
   'artela-testnet': cosmosChainMethods,
   'space-pussy': spacePussyChainMethods,
