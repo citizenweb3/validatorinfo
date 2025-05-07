@@ -26,6 +26,7 @@ const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) =>
             <TableHeaderItem page={page} name="MAA" sortField="MAA" />
             <TableHeaderItem page={page} name="Revenue" sortField="Revenue" />
             <TableHeaderItem page={page} name="Tags" sortField="Tags" />
+            <TableHeaderItem page={page} name="Show TX" />
           </tr>
           </thead>
           <EcosystemsList perPage={perPage} sort={sort} currentPage={currentPage} />
