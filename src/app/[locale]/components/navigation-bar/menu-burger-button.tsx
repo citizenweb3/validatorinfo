@@ -24,7 +24,7 @@ const MenuBurgerButton: FC<OwnProps> = ({ isOpened, onToggle }) => {
         alt="Burger Menu Button"
         width={50}
         height={50}
-        className="sm:w-32 md:w-16 w-60"
+        className="sm:w-44 md:w-16 w-60"
         priority
       />
     </div>

@@ -20,7 +20,7 @@ const HeaderControls: FC<OwnProps> = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="ml-7 mt-3 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24">
+    <div className="mx-6 mt-4 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24">
       <Link
         href="/"
         onClick={() => {
@@ -39,7 +39,7 @@ const HeaderControls: FC<OwnProps> = () => {
             alt="validatorinfo.com logo. Futuristic robot head with a V-style tick symbol"
             width={186}
             height={174}
-            className="w-64 sm:w-32 md:w-16"
+            className="w-64 sm:w-44 md:w-16"
             priority
           />
           <Image

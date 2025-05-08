@@ -35,7 +35,7 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
           )}
         </div>
         <div
-          className={`${isActive && 'text-highlight'} md:ml-14 sm:ml-20 ml-36 text-nowrap font-handjet md:text-lg sm:text-4xl text-7xl tracking-wide group-hover:text-highlight`}
+          className={`${isActive && 'text-highlight'} md:ml-14 sm:ml-20 ml-36 text-nowrap font-handjet md:text-lg sm:text-5xl text-7xl tracking-wide group-hover:text-highlight`}
         >
           {t(name as 'Validators')}
         </div>
