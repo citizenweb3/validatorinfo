@@ -1,6 +1,7 @@
 'use client';
 import * as d3 from 'd3';
 import { FC, useEffect, useRef, useState, useMemo } from 'react';
+import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import {
   ChartConfig,
   setupChartArea,
@@ -16,27 +17,24 @@ import {
   handleTooltip
 } from '@/app/components/chart/chartUtils';
 import { formatNumber } from '@/app/components/chart/chartHelper';
-import { generateSampleData } from '@/app/components/chart/sampleData';
-import { drawBars, handleBarTooltip } from '@/components/chart/barChartUtils';
+import { generateSampleData} from '@/app/components/chart/sampleData';
+import { t } from 'i18next';
 
-interface PosCapitalizationBarChartWidget  {
-  chartType: "Daily" | "Weekly" | "Monthly" | "Yearly";
-}
-
-
-const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = ({ chartType }) => {
+const NetworkAprTvsChart: FC = () => {
   // Define ecosystems and their colors (can be extended as needed)
-  const LegendLabels = ['Total Crypto Capitalization', 'Value Secured'];
-  const colorMapLegends = { 'Total Crypto Capitalization': '#E5C46B', 'Value Secured': '#4FB848' };
-  const Labels = ['Crypto Capitalization', 'Value Secured'];
-  const colorMap = { 'Crypto Capitalization': '#E5C46B', 'Value Secured': '#4FB848', };
+  const LegendLabels = ['APY (Compounded Interest)', 'APR (Simple Interest)', 'TVL']; 
+  const colorMapLegends = { 'APY (Compounded Interest)': '#E5C46B', 'APR (Simple Interest)': '#4FB848', 'TVL': '#2077E0', };
+  const Labels = [ 'APY', 'APR', 'TVL' , ];
+  const colorMap = { 'APY': '#E5C46B', 'APR': '#4FB848', 'TVL': '#2077E0', };
   const startingPrices = {
-    'Crypto Capitalization': 9000000,
-    'Value Secured': 7000000,
+    'APY': 90,
+    'APR': 70,
+    'TVL': 80,
   };
-
+  
 
   const [isChart, setIsChart] = useState<boolean>(true);
+  const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>('Daily');
   const [datasets, setDatasets] = useState<{ [Labels: string]: DataPoint[] }>({});
   const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
   const [width, setWidth] = useState(0);
@@ -59,7 +57,7 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
   );
 
   const tooltipConfig: TooltipConfig = {
-    width: 280,
+    width: 180,
     rowHeight: 22,
     baseHeight: 30,
     squareSize: 10,
@@ -72,42 +70,42 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
 
   const drawChart = () => {
     if (!chartRef.current || !Object.values(datasets).some(data => data.length > 0)) return;
-
+  
     d3.select(chartRef.current).select('svg').remove();
-
+  
     const { svg, plotArea } = setupChartArea(chartRef, chartConfig);
     const { padding } = chartConfig;
-
+  
     const chartWidth = chartConfig.width - chartConfig.margin.left - chartConfig.margin.right;
     const chartHeight = chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom;
     const plotWidth = chartWidth - chartConfig.padding.left - chartConfig.padding.right - 100;
     const plotHeight = chartHeight - chartConfig.padding.top - chartConfig.padding.bottom;
-
+  
     svg.append('defs')
       .append('clipPath')
-      .attr('id', 'clipBar')
+      .attr('id', 'clip-revenue')
       .append('rect')
-      .attr('x', 60)
+      .attr('x', 100)
       .attr('y', 0)
       .attr('width', plotWidth - 10)
       .attr('height', chartConfig.height);
-
+  
     const xScale = setupXScale(xDomain, plotWidth);
-
+  
     // Collect all valid values for y-domain calculation
     const allValues: number[] = Labels.flatMap(label =>
       datasets[label]?.map(d => d.value).filter(v => v !== null && v !== undefined) || []
     );
-
+  
     if (allValues.length === 0) {
       console.warn('No valid data available to draw the chart');
       return;
     }
-
-    const yMax = Math.max(...allValues);
-    const yMinValue =0; // Actual minimum from data
-    const yScale = setupYScale([yMinValue, yMax * 1.2], chartHeight, 'linear');
-
+  
+    const yMax = 100;
+    const yMinValue = 0; // Actual minimum from data
+    const yScale = setupYScale([yMinValue , yMax * 1.05], chartHeight, 'linear');
+  
     drawYAxis(svg, yScale, padding.left, padding.bottom, {
       tickFormat: (d) => `$${Number(d).toFixed(2)}`,
       usePercentage: false,
@@ -116,20 +114,27 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
       labelOffset: -30
     });
     drawXAxis(plotArea, xScale, plotHeight, chartConfig, chartType);
-
+  
     const lineGenerator = d3.line<DataPoint>()
       .x((d) => xScale(d.date))
       .y((d) => yScale(d.value))
       .curve(d3.curveMonotoneX);
-
+  
     // Draw a line for each ecosystem
-    drawBars(plotArea, datasets['Value Secured'], '#4FB848', xScale, yScale, 35, 'left', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
-    drawBars(plotArea, datasets['Crypto Capitalization'], '#E5C46B', xScale, yScale, 35, 'right', chartConfig.padding.left, chartConfig.padding.bottom,chartType);
-
-
-
+    Labels.forEach((label) => {
+      if (datasets[label]) {
+        const pathData = lineGenerator(datasets[label]);
+        if (pathData) {
+          drawLine(plotArea, datasets[label], chartType, colorMap[label as keyof typeof colorMap], lineGenerator);
+        } else {
+          console.warn(`Skipping drawing for ${label} because path is null`);
+        }
+      }
+    });
+  
+  
     // Tooltip for all ecosystems
-    handleBarTooltip(
+    handleTooltip(
       svg,
       plotArea,
       datasets,
@@ -139,16 +144,21 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
       tooltipConfig,
       (value) => `$${formatNumber(value)}`,
       colorMap,
-      chartType
+      padding.left,
+      padding.top,
+      plotWidth,
+      plotHeight,
+      chartType,
+      true
     );
-
+  
     // Dynamic legend
     const legendItems = LegendLabels.map(label => ({
       label: label,
       color: colorMapLegends[label as keyof typeof colorMapLegends],
     }));
     drawLegend(svg, legendItems, chartConfig, tooltipConfig);
-
+  
     svg.on('wheel', (event) =>
       handleWheel(event, xDomain, setXDomain, fetchDataForRange, new Date('2010-01-01'), new Date())
     );
@@ -159,7 +169,7 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
       const data = Labels.reduce((acc, label, index) => {
         const labelData = generateSampleData(startDate, endDate, chartType, [label], {
           startingPrice: Object.values(startingPrices)[index], // Access startingPrices with numeric index
-          volatility: 0.1,
+          volatility: 0.03,
           regenerate: true,
         });
         return { ...acc, [label]: labelData[label] };
@@ -167,7 +177,7 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
       setDatasets(data);
     }, 1);
   };
-
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -187,7 +197,7 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
     switch (chartType) {
       case 'Daily':
         startDate = new Date(now);
-        startDate.setDate(now.getDate() - 25);
+        startDate.setDate(now.getDate() - 65);
         break;
       case 'Weekly':
         startDate = new Date(now);
@@ -216,25 +226,47 @@ const PosCapitalizationBarChartWidget : FC<PosCapitalizationBarChartWidget > = (
     }
   }, [datasets, width, isChart]);
 
-  useEffect(() => {
-    if (isChart) {
-      drawChart();
+  const handleChartChanged = (value: boolean) => {
+    setIsChart(value);
+    if (!value) {
+      setChartType(undefined as any);
+    } else {
+      setChartType('Daily');
     }
-  }, [isChart]);
+  };
 
   return (
+    <div className="mt-3 mb-12">
+      <div className="flex items-center justify-center">
+        <ChartButtons
+          onlyDays
+          ecosystems={false}
+          isChart={isChart}
+          onChartChanged={handleChartChanged}
+          chartType={chartType}
+          onTypeChanged={(name) => setChartType(name as any)}
+        />
+      </div>
+
+      {isChart ? (
         <div
           ref={chartRef}
           style={{
             position: 'relative',
             width: '90%',
-            minWidth: '1300px',
+            minWidth: '300px',
             height: '300px',
             backgroundColor: '#1E1E1E',
           }}
-          className="mt-3 w-full"
+          className="mt-3 px-4 sm:px-10 md:px-20 w-full"
         />
+      ) : (
+        <div className="mt-3 px-14 text-center text-white text-lg">
+          Chart is disabled. Toggle to view chart.
+        </div>
+      )}
+    </div>
   );
 };
 
-export default PosCapitalizationBarChartWidget;
+export default NetworkAprTvsChart;
