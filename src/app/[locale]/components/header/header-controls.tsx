@@ -39,7 +39,7 @@ const HeaderControls: FC<OwnProps> = () => {
             alt="validatorinfo.com logo. Futuristic robot head with a V-style tick symbol"
             width={186}
             height={174}
-            className="w-64 sm:w-32 md:w-16"
+            className="w-64 sm:w-44 md:w-16"
             priority
           />
           <Image

@@ -26,10 +26,8 @@ const MobileNavigationBar: FC<OwnProps> = ({ isOpened, onClose }) => {
   return (
     <div
       className={`
-        mx-6
-        fixed inset-x-0
-        top-72 sm:top-40
-        h-[calc(100vh-15rem)] sm:h-full
+        fixed inset-0
+        top-72 sm:top-52
         z-50
         bg-background pt-6
         transition-transform duration-300 md:hidden
@@ -37,7 +35,7 @@ const MobileNavigationBar: FC<OwnProps> = ({ isOpened, onClose }) => {
         ${isOpened ? 'translate-x-0' : '-translate-x-full'}
       `}
     >
-      <div className="overflow-y-auto flex-grow">
+      <div className="overflow-y-auto flex-grow mx-6">
         <div className="space-y-3 px-4">
           {mainTabs.map(item => (
             <div key={item.name} onClick={onClose}>
@@ -49,7 +47,7 @@ const MobileNavigationBar: FC<OwnProps> = ({ isOpened, onClose }) => {
               <NavigationBarItem item={item} isOpened />
             </div>
           ))}
-          {aboutTabs.map(item => (
+          {aboutTabs.slice(3).map(item => (
             <div key={item.name} onClick={onClose}>
               <NavigationBarItem item={item} isOpened />
             </div>
@@ -62,7 +60,7 @@ const MobileNavigationBar: FC<OwnProps> = ({ isOpened, onClose }) => {
           <div className="flex justify-end mr-52">
             <Image src={icons.Cosmonaut} alt={'Error'} className="min-w-64 max-w-64 sm:min-w-40 sm:max-w-40" />
           </div>
-          <div className="-mt-16 h-32 bg-bgSt" />
+          <div className="-mt-16 h-32 sm:h-24 bg-bgSt" />
         </div>
       </div>
       <div className="mb-7">
