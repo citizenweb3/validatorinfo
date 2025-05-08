@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
+import NetworkAprTvsChartClient from './network-apr-tvsChart';
 import { FC } from 'react';
 import SubTitle from '@/components/common/sub-title';
 import { Chain } from '@prisma/client';
@@ -51,13 +51,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
         <div className="w-4/5">
-          <Image
-            src={'/img/charts/network-apr-tvs-chart.svg'}
-            width={1100}
-            height={250}
-            alt="apr tvs chart"
-            className="ml-16"
-          />
+          <NetworkAprTvsChartClient  />
         </div>
       </div>
     </div>
