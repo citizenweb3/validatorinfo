@@ -3,6 +3,7 @@ import { Chain, Node } from '@prisma/client';
 import db from '@/db';
 import logger from '@/logger';
 import { NodeResult, SortDirection } from '@/server/types';
+import { fromPubkeyToValcons } from '@/utils/from-pubkey-to-valcons';
 
 const { logDebug } = logger('validator-service');
 
@@ -31,6 +32,7 @@ const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number
       moniker: val.description.moniker,
       operatorAddress: val.operator_address,
       consensusPubkey: val.consensus_pubkey.key,
+      consensusAddress: fromPubkeyToValcons(val.consensus_pubkey.key, chain.bech32Prefix),
       delegatorShares: val.delegator_shares,
       details: val.description.details,
       identity: val.description.identity,

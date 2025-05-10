@@ -133,6 +133,7 @@ model Node {
   validatorId       Int?     @map("validator_id")
   operatorAddress   String   @unique @map("operator_address") @db.VarChar(256)
   consensusPubkey   String   @map("consensus_pubkey") @db.VarChar(256)
+  consensusAddress  String  @default("")
   jailed            Boolean  @default(false)
   tokens            String   @db.VarChar(256)
   delegatorShares   String   @map("delegator_shares") @db.VarChar(256)
