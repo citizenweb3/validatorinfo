@@ -83,10 +83,11 @@ const runServer = async () => {
     spawnTask(task.name, chains).catch((e) => logError(`Initial run error for task ${task.name}:`, e));
   });
 
-  // Initial run for validatorInfo task after 5 minutes for wait validators updated
+  // Initial run for validatorInfo and slashing-nodes-infos tasks after 5 minutes for wait validators updated
   setTimeout(
     () => {
       spawnTask('validatorInfo', chains).catch((e) => logError(`Initial run error for task validatorInfo:`, e));
+      spawnTask('slashing-nodes-infos', chains).catch((e) => logError(`Initial run error for task slashing-nodes-infos:`, e));
     },
     5 * 60 * 1000,
   );
