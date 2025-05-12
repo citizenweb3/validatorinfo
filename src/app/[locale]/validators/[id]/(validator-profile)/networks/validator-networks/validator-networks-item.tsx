@@ -14,8 +14,6 @@ interface OwnProps {
 
 const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   const fans: number = 23234;
-  const uptime: number = 80;
-  const missedBlocks: number = 500;
   const rank: number = 15;
 
   const redTextLayout: string = '#EB1616';
@@ -39,22 +37,26 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
   };
 
   const checkUptime = () => {
-    if (uptime <= 90) {
-      return redTextLayout;
-    } else if (uptime >= 90 && uptime <= 98) {
-      return yellowTextLayout;
-    } else {
-      return greenTextLayout;
+    if (item.uptime != null) {
+      if (item.uptime <= 90) {
+        return redTextLayout;
+      } else if (item.uptime >= 90 && item.uptime <= 98) {
+        return yellowTextLayout;
+      } else {
+        return greenTextLayout;
+      }
     }
   };
 
   const checkMissedBlocks = () => {
-    if (missedBlocks < 200) {
-      return greenTextLayout;
-    } else if (missedBlocks >= 200 && missedBlocks <= 2000) {
-      return yellowTextLayout;
-    } else {
-      return redTextLayout;
+    if (item.missedBlocks != null) {
+      if (item.missedBlocks < 200) {
+        return greenTextLayout;
+      } else if (item.missedBlocks >= 200 && item.missedBlocks <= 1000) {
+        return yellowTextLayout;
+      } else {
+        return redTextLayout;
+      }
     }
   };
 
@@ -110,14 +112,14 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
           <div className="text-center" style={{ color: checkUptime() }}>
-            {uptime}
+            {item.uptime ? item.uptime.toFixed(2) : '-'}
           </div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
           <div className="text-center" style={{ color: checkMissedBlocks() }}>
-            {missedBlocks}
+            {item.missedBlocks ?? '-'}
           </div>
         </Link>
       </td>

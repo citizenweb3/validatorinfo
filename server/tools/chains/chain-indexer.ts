@@ -1,4 +1,4 @@
-import { NodeResult } from '@/server/types';
+import { NodeResult, SlashingSigningInfos } from '@/server/types';
 
 import { Prisma } from '.prisma/client';
 
@@ -9,6 +9,11 @@ export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' 
 export interface StakingParams {
   unbondingTime: number | null;
   maxValidators: number | null;
+}
+
+export interface SlashingChainParams {
+  blocksWindow: number | null;
+  jailedDuration: string | null;
 }
 
 export interface NodeParams {
@@ -76,8 +81,10 @@ export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
 export type GetProposalsFunction = (chain: AddChainProps) => Promise<ProposalsResult>;
 export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<StakingParams>;
+export type GetSlashingParamsFunction = (chain: AddChainProps) => Promise<SlashingChainParams>;
 export type GetNodeParamsFunction = (chain: AddChainProps) => Promise<NodeParams>;
 export type GetGovParamsFunction = (chain: AddChainProps) => Promise<GovParams>;
+export type GetSlashingNodesInfos = (chain: AddChainProps) => Promise<SlashingSigningInfos[]>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -86,4 +93,6 @@ export interface ChainMethods {
   getStakingParams: GetStakingParamsFunction;
   getNodeParams: GetNodeParamsFunction;
   getProposals: GetProposalsFunction;
+  getSlashingParams: GetSlashingParamsFunction;
+  getSlashingNodesInfos: GetSlashingNodesInfos;
 }

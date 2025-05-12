@@ -11,6 +11,8 @@ import updateChainStakingParams from '@/server/jobs/update-chain-staking-params'
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
+import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
+import updateSlashingNodesInfos from '@/server/jobs/update-slashing-nodes-infos';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -38,6 +40,12 @@ async function runTask() {
         break;
       case 'chain-staking-params':
         await updateChainStakingParams(chains);
+        break;
+      case 'chain-slashing-params':
+        await updateChainSlashingParams(chains);
+        break;
+      case 'slashing-nodes-infos':
+        await updateSlashingNodesInfos(chains);
         break;
       case 'chain-node-params':
         await updateChainNodeParams(chains);

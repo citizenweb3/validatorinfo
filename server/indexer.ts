@@ -56,8 +56,10 @@ const runServer = async () => {
     { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.everyHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
+    { name: 'chain-slashing-params', schedule: timers.everyDay },
     { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-node-params', schedule: timers.everyDay },
+    { name: 'slashing-nodes-infos', schedule: timers.every5mins },
   ];
 
   tasks.forEach((task) => {
