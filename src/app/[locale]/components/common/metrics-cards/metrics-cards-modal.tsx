@@ -12,9 +12,12 @@ import icons from '@/components/icons';
 interface OwnProps {
   item?: string;
   title?: string;
-  list?: validatorNodesWithChainData[];
+  list?: validatorNodesWithChainData[] | string[];
   plusButtonSize?: Size;
 }
+
+const isStringArray = (list: readonly unknown[]): list is readonly string[] =>
+  typeof list[0] === 'string';
 
 const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = 'sm' }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
@@ -31,7 +34,7 @@ const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = '
         isRelative
         className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-4 transform"
       >
-        <div className="flex w-40 flex-row flex-wrap">
+        <div className="flex w-fit max-w-[90vw] flex-row flex-wrap">
           <div
             className={`absolute right-0 top-0 z-50 h-8 w-8 bg-close bg-contain hover:bg-close_h active:bg-close_a`}
             onClick={() => setIsModalOpened(false)}
@@ -39,24 +42,37 @@ const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = '
           {item && title && (
             <div>
               <h2 className="my-2 text-sm">{title}...</h2>
-              <Image src={item} alt="modal" width={170} height={28} className="h-50 w-50 mx-auto mt-6" />
+              <Image src={item} alt="modal" width={170} height={50} className="min-w-44 mx-auto mt-6" />
             </div>
           )}
           {list && (
-            <div className="mt-6 flex w-40 flex-row flex-wrap items-center justify-center">
-              {list.map((node) => (
-                <Link key={node.operatorAddress} href={`/networks/${node.chainId}/overview`} className="h-7 w-7">
-                  <Image
-                    src={node.chain.logoUrl ?? icons.AvatarIcon}
-                    alt={node.chain.prettyName || 'chain'}
-                    width={24}
-                    height={24}
-                    className="h-6 min-h-6 w-6 min-w-6 rounded-full grayscale transition-all duration-300 hover:grayscale-0"
-                  />
-                </Link>
-              ))}
-            </div>
-          )}
+            isStringArray(list) ? (
+              <div className="mt-6 flex flex-col gap-1 whitespace-nowrap">
+                {list.map((text, idx) => (
+                  <div key={idx} className="text-sm leading-4">
+                    {text}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-6 flex w-40 flex-row flex-wrap items-center justify-center">
+                {list.map((node) => (
+                  <Link
+                    key={node.operatorAddress}
+                    href={`/networks/${node.chainId}/overview`}
+                    className="h-7 w-7"
+                  >
+                    <Image
+                      src={node.chain.logoUrl ?? icons.AvatarIcon}
+                      alt={node.chain.prettyName || 'chain'}
+                      width={24}
+                      height={24}
+                      className="h-6 min-h-6 w-6 min-w-6 rounded-full grayscale transition-all duration-300 hover:grayscale-0"
+                    />
+                  </Link>
+                ))}
+              </div>
+            ))}
         </div>
       </BaseModal>
     </div>

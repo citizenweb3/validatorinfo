@@ -10,7 +10,7 @@ interface OwnProps {
   isPercents?: boolean;
   isModal?: boolean;
   modalTitle?: string;
-  modalItem?: string | validatorNodesWithChainData[];
+  modalItem?: string | validatorNodesWithChainData[] | string[];
   plusButtonSize?: Size;
   className?: string;
   titleClassName?: string;
