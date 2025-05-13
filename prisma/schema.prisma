@@ -101,6 +101,10 @@ model Chain {
   apr                 Float    @default(0)
   unbondingTime       Int?     @map("unbonding_time")
 
+  //slashing
+  jailedDuration      String?   @map("downtime_jail_duration")
+  blocksWindow        Int?      @map("signed_blocks_window")
+
   @@map("chains")
 }
 
@@ -148,9 +152,14 @@ model Node {
   maxRate           String   @map("max_rate") @db.VarChar(256)
   maxChangeRate     String   @map("max_change_rate") @db.VarChar(256)
   minSelfDelegation String   @map("min_self_delegation") @db.VarChar(256)
+  missedBlocks      Int?     @map("missed_blocks")
 
   chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
   validator Validator? @relation("validator_node", fields: [validatorId], references: [id])
+
+  //calculated
+  consensusAddress  String  @default("") @map("consensus_address")
+  uptime            Float?
 
   @@map("nodes")
 }

@@ -75,10 +75,6 @@ export const networkProfileExample = {
       data: 5,
     },
     {
-      title: 'slashing',
-      data: 10,
-    },
-    {
       title: 'comm pool value in usd',
       data: 23657591,
     },
