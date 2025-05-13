@@ -1,17 +1,24 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
-
-import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import Image from 'next/image';
 import icons from '@/components/icons';
 import RoundedButton from '@/components/common/rounded-button';
+import { Chain } from '@prisma/client';
+import { parseCommaList } from '@/utils/parse-comma-list';
+import { parseJsonDict } from '@/utils/parse-json-dict';
 
 interface OwnProps {
+  chain?: Chain;
 }
 
-const PeersSeedsBlocks: FC<OwnProps> = async () => {
+const PeersSeedsBlocks: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkDevInfo');
+
+  const peersList = parseCommaList(chain?.peers);
+  const seedsList = parseCommaList(chain?.seeds);
+  const binariesDict = parseJsonDict(chain?.binaries);
+  const binariesList = Object.values(binariesDict);
 
   return (
     <div className="mt-4">
@@ -48,21 +55,31 @@ const PeersSeedsBlocks: FC<OwnProps> = async () => {
         </div>
       </div>
       <div className="flex w-full flex-row justify-center gap-6">
-        {networkProfileExample.peersAndSeeds.map((item) => (
-          <MetricsCardItem key={item.title}
-                           title={t(item.title as 'peers')}
-                           data={item.data}
-                           className={'pt-2.5'}
-                           dataClassName={'mt-5'}
-                           isModal />
-        ))}
-      </div>
-      <div className="flex w-full flex-row justify-center gap-6 mt-8">
-        <MetricsCardItem title={t('binary versions')}
-                         data={'12'}
+        <MetricsCardItem title={t('commits p/month')}
+                         data={12}
                          className={'pt-2.5'}
                          dataClassName={'mt-5'}
                          isModal />
+        <MetricsCardItem title={t('peers')}
+                         data={peersList?.length ?? 12}
+                         className={'pt-2.5'}
+                         dataClassName={'mt-5'}
+                         isModal
+                         modalItem={peersList} />
+        <MetricsCardItem title={t('seeds')}
+                         data={seedsList?.length ?? 12}
+                         className={'pt-2.5'}
+                         dataClassName={'mt-5'}
+                         isModal
+                         modalItem={seedsList} />
+      </div>
+      <div className="flex w-full flex-row justify-center gap-6 mt-8">
+        <MetricsCardItem title={t('binary versions')}
+                         data={binariesList?.length ?? 12}
+                         className={'pt-2.5'}
+                         dataClassName={'mt-5'}
+                         isModal
+                         modalItem={binariesList} />
       </div>
       <div className="flex justify-end -mt-11">
         <RoundedButton className="text-lg" contentClassName="px-14">
