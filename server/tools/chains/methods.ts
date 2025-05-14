@@ -7,6 +7,7 @@ import neutronChainMethods from '@/server/tools/chains/neutron/methods';
 import nomicChainMethods from '@/server/tools/chains/nomic/methods';
 import osmosisChainMethods from '@/server/tools/chains/osmosis/methods';
 import quicksilverChainMethods from '@/server/tools/chains/quicksilver/methods';
+import solanaChainMethods from '@/server/tools/chains/solana/methods';
 import spacePussyChainMethods from '@/server/tools/chains/space-pussy/methods';
 import strideChainMethods from '@/server/tools/chains/stride/methods';
 import symphonyChainMethods from '@/server/tools/chains/symphony-testnet/methods';
@@ -37,6 +38,8 @@ const chainMethods: Record<string, ChainMethods> = {
   bostrom: cosmosChainMethods,
   nillion: cosmosChainMethods,
   nym: cosmosChainMethods,
+
+  solana: solanaChainMethods,
 
   'namada-testnet': namadaChainMethods,
   'neutron-testnet': neutronChainMethods,

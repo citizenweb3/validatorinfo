@@ -20,6 +20,12 @@ export const ecosystemParams = [
     prettyName: 'Namada',
     logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
   },
+  {
+    name: 'solana',
+    prettyName: 'Solana',
+    logoUrl:
+      'https://raw.githubusercontent.com/github/explore/14191328e15689ba52d5c10e18b43417bf79b2ef/topics/solana/solana.png',
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {
@@ -362,8 +368,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 118,
     denom: 'UNO',
     minimalDenom: 'muno',
-    logoUrl:
-      'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/union-testnet/union.svg',
+    logoUrl: 'https://union.build/apple-touch-icon.png',
     chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/testnets/uniontestnet',
     nodes: [
       { type: 'grpc', url: 'grpc.union-testnet.citizenweb3.com' },
@@ -392,8 +397,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 118,
     denom: 'AXONE',
     minimalDenom: 'uaxone',
-    logoUrl:
-      'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/axone-testnet/axone.svg',
+    logoUrl: 'https://cdn.prod.website-files.com/66e87bb3554705da8e66377e/66e885b7670eed3a322a4d21_webclip.png',
     nodes: [
       { type: 'grpc', url: 'grpc.axone-testnet.citizenweb3.com' },
       { type: 'rest', url: 'https://api.axone-testnet.citizenweb3.com' },
@@ -426,7 +430,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 877,
     denom: 'NAM',
     minimalDenom: 'unam',
-    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
+    logoUrl: 'https://github.com/cosmos/chain-registry/blob/master/namada/images/nam.png?raw=true',
     nodes: [
       { type: 'rpc', url: 'https://rpc.namada.citizenweb3.com' },
       { type: 'rpc', url: 'https://namada.liquify.com' },
@@ -642,8 +646,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 118,
     denom: 'ART',
     minimalDenom: 'uart',
-    logoUrl:
-      'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/artela-testnet/artela.svg',
+    logoUrl: 'https://framerusercontent.com/images/WIlhglkiRHYZY3qc6CmQy5bbCM.png',
     nodes: [
       { type: 'grpc', url: 'grpc.artela-testnet.citizenweb3.com' },
       { type: 'rest', url: 'https://api.artela-testnet.citizenweb3.com' },
@@ -825,7 +828,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 877,
     denom: 'NAM',
     minimalDenom: 'unam',
-    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking-page/refs/heads/chain-images/namada/namada.svg',
+    logoUrl: 'https://github.com/cosmos/chain-registry/blob/master/namada/images/nam.png?raw=true',
     nodes: [
       { type: 'indexer', url: 'https://indexer.namada-housefire.citizenweb3.com' },
       { type: 'indexer', url: 'https://namada-housefire-idx.emberstake.xyz' },
@@ -875,6 +878,36 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.namada.net',
     githubUrl: 'https://github.com/anoma',
     twitterUrl: 'https://x.com/namada',
+  },
+  solana: {
+    rang: 1,
+    ecosystem: 'solana',
+    hasValidators: true,
+    name: 'solana',
+    prettyName: 'Solana',
+    chainId: 'solana-mainnet',
+    bech32Prefix: '',
+    coinDecimals: 9,
+    coinGeckoId: 'solana',
+    coinType: 501,
+    denom: 'SOL',
+    minimalDenom: 'lamports',
+    logoUrl:
+      'https://raw.githubusercontent.com/github/explore/14191328e15689ba52d5c10e18b43417bf79b2ef/topics/solana/solana.png',
+    nodes: [
+      {
+        type: 'rest',
+        url: 'https://api.mainnet-beta.solana.com',
+      },
+      {
+        type: 'ws',
+        url: 'wss://api.mainnet-beta.solana.com',
+      },
+    ],
+    mainRepo: 'https://github.com/solana-labs/solana',
+    docs: 'https://docs.solana.com',
+    githubUrl: 'https://github.com/solana-labs',
+    twitterUrl: 'solana',
   },
 };
 

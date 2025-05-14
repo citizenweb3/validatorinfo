@@ -4,13 +4,14 @@ import db from '@/db';
 import logger from '@/logger';
 import { NodeResult, SortDirection } from '@/server/types';
 import { fromPubkeyToValcons } from '@/utils/from-pubkey-to-valcons';
+import isUrlValid from '@/server/utils/is-url-valid';
 
 const { logDebug } = logger('validator-service');
 
 const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number }): Promise<Node> => {
   let website = val.description.website || '';
-  if (website) {
-    website = website.startsWith('http') ? website : `https://${website}`;
+  if (website && !website.startsWith('http')) {
+    website = isUrlValid(`https://${website}`) ? `https://${website}` : '';
   }
 
   const node = await db.node.upsert({

@@ -55,11 +55,7 @@ const getNodes = async (chainNames: string[]) => {
             if (orWhere.length > 0) {
               let validator = await db.validator.findFirst({
                 where: {
-                  OR: [
-                    { securityContact: node.description.security_contact },
-                    { website: node.description.website },
-                    { moniker: node.description.moniker },
-                  ],
+                  OR: orWhere,
                 },
               });
               validatorId = validator?.id;
