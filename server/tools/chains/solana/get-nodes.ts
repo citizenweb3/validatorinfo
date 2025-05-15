@@ -44,7 +44,7 @@ const getSolanaNodes: GetNodesFunction = async (chain) => {
       const response = await fetch(apiUrl, {
         headers: {
           'Content-Type': 'application/json',
-          Token: 'o3WXesBrY5TaDDy1sLy6v1jE',
+          Token: process.env.VALIDATORS_APP_TOKEN || '',
         },
       });
       apiData = await response.json();
@@ -66,7 +66,7 @@ const getSolanaNodes: GetNodesFunction = async (chain) => {
       let identity = vote.nodePubkey;
       if (apiValidator.keybase_id) {
         identity = (await getIdentityByName(apiValidator.keybase_id)) ?? identity;
-        await sleep(1000);
+        await sleep(100);
       }
 
       nodes.push({
@@ -95,8 +95,6 @@ const getSolanaNodes: GetNodesFunction = async (chain) => {
         },
       });
     }
-
-    console.log('[SSA] ', `server/tools/chains/solana/get-nodes.ts:86 nodes:`, nodes.length);
 
     return nodes;
   } catch (e) {
