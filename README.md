@@ -1,5 +1,5 @@
 # [Validator Info](https://validatorinfo.com/)
-> Multichain explorer, for Proof of Work and Proof of Stake blockchain networks. Dashboard and aggregator. Focused on providing real-time metrics on networks, validators, mining pools and tokens.
+> Web3 Blockchain Explorer. Validator, Mining Pool, Token and Network Real-time Metrics. Interactive Onchain Dashboard.  
 
 ![Telegram-Storie](https://github.com/user-attachments/assets/65689ccc-e5a4-4ee2-8ee7-ffb86bde4233)
 
@@ -8,9 +8,11 @@
 
 -----------------------------------------
 
-# Installing
+## Getting Started
 
 ### Prerequisites
+
+Make sure you have the following installed on your system:
 
 ```bash
 sudo apt install cmdtest
@@ -28,7 +30,7 @@ git clone https://github.com/citizenweb3/validatorinfo.git validatorinfo
 cd validatorinfo
 ```
 
-### Prepare your `.env` and `Makefile` files
+### Prepare Environment and Makefile
 
 ```bash
 cp .env.example .env
@@ -41,7 +43,7 @@ cp Makefile.example Makefile
 yarn
 ```
 
-### Develop
+### Development
 
 ```bash
 make create-deps
@@ -63,7 +65,7 @@ make generate-schema
 yarn build
 ```
 
-### Start built project
+### Start Built Project
 
 ```bash
 pm2 start "yarn start" --name next
