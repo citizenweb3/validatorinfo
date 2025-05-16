@@ -35,15 +35,15 @@ const ChooseDropdown: FC<OwnProps> = ({ name, list, selected, onChange, classNam
 
   return (
     <div className={`${className} flex h-8 flex-col border-b border-bgSt pl-4 text-lg`}>
-      <div className="flex flex-row justify-between items-center">
+      <div
+        className="flex flex-row justify-between items-center cursor-pointer"
+        onClick={() => setIsModalOpened(true)}
+      >
         <div className="text-nowrap">{name && <div>{name}:</div>}</div>
-        <div
-          onClick={() => setIsModalOpened(true)}
-          className="h-8 min-w-6 max-w-full cursor-pointer overflow-x-hidden text-highlight"
-        >
+        <div className="h-8 min-w-6 max-w-full overflow-x-hidden text-highlight">
           {selectedTitle}
         </div>
-        <TriangleButton direction={isModalOpened ? 't' : 'b'} onClick={() => setIsModalOpened(true)} />
+        <TriangleButton direction={isModalOpened ? 't' : 'b'} />
       </div>
       <BaseModal maxHeight={'max-h-[25vh]'} opened={isModalOpened} onClose={() => setIsModalOpened(false)}>
         <div className={`${modalClassName} space-y-1 text-nowrap text-base items-center`}>

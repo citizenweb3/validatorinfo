@@ -13,7 +13,9 @@ import ValidatorListItem from '@/app/comparevalidators/validator-list-item';
 import RoundedButton from '@/components/common/rounded-button';
 import SpreadModal from '@/app/about/modals/spread-modal';
 
-interface OwnProps {}
+interface ComparisonTableProps {
+  initialNodeId?: string;
+}
 
 const validatorList = [
   { value: 'POSTHUMAN', title: 'POSTHUMAN' },
@@ -25,7 +27,7 @@ const validatorList = [
   { value: 'Citadel.one', title: 'Citadel.one' },
 ];
 
-const ComparisonTable: FC<OwnProps> = ({}) => {
+const ComparisonTable: FC<ComparisonTableProps> = ({ initialNodeId }) => {
   const t = useTranslations('ComparisonPage');
   const [data, setData] = useState<ValidatorData[]>([]);
   const [filledData, setFilledData] = useState<ValidatorDataFilled[]>([]);
@@ -35,9 +37,16 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
   const [isComparing, setIsComparing] = useState<boolean>(false);
 
   useEffect(() => {
-    const first = [getValidatorData(0, 'Citizen Web 3')];
+    const id = initialNodeId;
+    let moniker = 'Citizen Web 3';
+
+    if (id) {
+      const found = validatorList.find((v) => v.value === id);
+      if (found) moniker = found.title;
+    }
+    const first = [getValidatorData(0, moniker)];
     setData(first);
-  }, []);
+  }, [initialNodeId]);
 
   useEffect(() => {
     setFilledData(fillColors(data));
