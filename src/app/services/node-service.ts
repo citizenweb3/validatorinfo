@@ -1,4 +1,4 @@
-import { Chain, Node } from '@prisma/client';
+import { Chain, Node, Validator } from '@prisma/client';
 
 import db from '@/db';
 import logger from '@/logger';
@@ -117,10 +117,19 @@ const getAll = async (
   return { nodes, pages: Math.ceil(count / take) };
 };
 
+const getValidatorByNodeId = async (nodeId: number): Promise<Validator | null> => {
+  const node = await db.node.findUnique({
+    where: { id: nodeId },
+    include: { validator: true },
+  });
+  return node?.validator || null;
+};
+
 const nodeService = {
   upsertNode,
   getNodesByChainId,
   getAll,
+  getValidatorByNodeId,
 };
 
 export default nodeService;

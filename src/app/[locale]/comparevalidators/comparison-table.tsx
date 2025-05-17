@@ -12,9 +12,10 @@ import ValidatorLeftPanel from '@/app/comparevalidators/validator-left-panel';
 import ValidatorListItem from '@/app/comparevalidators/validator-list-item';
 import RoundedButton from '@/components/common/rounded-button';
 import SpreadModal from '@/app/about/modals/spread-modal';
+import { Validator } from '@prisma/client';
 
-interface ComparisonTableProps {
-  initialNodeId?: string;
+interface OwnProps {
+  validator: Validator | null;
 }
 
 const validatorList = [
@@ -27,7 +28,7 @@ const validatorList = [
   { value: 'Citadel.one', title: 'Citadel.one' },
 ];
 
-const ComparisonTable: FC<ComparisonTableProps> = ({ initialNodeId }) => {
+const ComparisonTable: FC<OwnProps> = ({ validator }) => {
   const t = useTranslations('ComparisonPage');
   const [data, setData] = useState<ValidatorData[]>([]);
   const [filledData, setFilledData] = useState<ValidatorDataFilled[]>([]);
@@ -35,18 +36,15 @@ const ComparisonTable: FC<ComparisonTableProps> = ({ initialNodeId }) => {
   const [chartType, setChartType] = useState<string | undefined>('Daily');
   const [isChanged, setIsChanged] = useState<boolean>(false);
   const [isComparing, setIsComparing] = useState<boolean>(false);
+  const [moniker, setMoniker] = useState<string>('Citizen Web 3');
 
   useEffect(() => {
-    const id = initialNodeId;
-    let moniker = 'Citizen Web 3';
-
-    if (id) {
-      const found = validatorList.find((v) => v.value === id);
-      if (found) moniker = found.title;
+    if (validator) {
+      setMoniker(validator.moniker);
     }
     const first = [getValidatorData(0, moniker)];
     setData(first);
-  }, [initialNodeId]);
+  }, [validator, moniker]);
 
   useEffect(() => {
     setFilledData(fillColors(data));
@@ -68,7 +66,7 @@ const ComparisonTable: FC<ComparisonTableProps> = ({ initialNodeId }) => {
   };
 
   const handleReset = () => {
-    setData([getValidatorData(0, 'Citizen Web 3')]);
+    setData([getValidatorData(0, moniker)]);
     setChartType('Daily');
     setIsChanged(false);
     setIsComparing(false);
