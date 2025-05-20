@@ -3,8 +3,12 @@ import { FC } from 'react';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import { Chain, Proposal } from '@prisma/client';
 import SubTitle from '@/components/common/sub-title';
+import {
+  ecosystemsProposalsResults,
+} from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals-item';
 
 type VoteType = 'yes' | 'no' | 'veto' | 'abstain';
+type Ecosystem = keyof typeof ecosystemsProposalsResults;
 
 interface OwnProps {
   proposal: Proposal | null;
@@ -14,15 +18,21 @@ interface OwnProps {
 const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
   const t = await getTranslations('ProposalPage');
 
-  const getTallyResults = (finalTallyResult: any, decimals: number, voteType: VoteType) => {
+  const getTallyResults = <T extends Ecosystem>(
+    tallyResult: any,
+    decimals: number,
+    voteType: VoteType,
+    ecosystem: T,
+  ) => {
     try {
-      const tally = JSON.parse(finalTallyResult);
+      const fields = ecosystemsProposalsResults[ecosystem];
+      const tally = JSON.parse(tallyResult);
 
       const votes: Record<VoteType, number> = {
-        yes: Number(tally.yes_count),
-        no: Number(tally.no_count),
-        abstain: Number(tally.abstain_count),
-        veto: Number(tally.no_with_veto_count),
+        yes: Number(tally[fields.yes]),
+        no: Number(tally[fields.no]),
+        abstain: Number(tally[fields.abstain]),
+        veto: Number(tally[fields.veto]),
       };
 
       const totalVotes = Object.values(votes).reduce((sum, count) => sum + count, 0);
@@ -33,7 +43,7 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
         percents: (votes[voteType] / divisor) * 100,
         amount: votes[voteType] / 10 ** decimals,
       };
-    } catch (error) {
+    } catch {
       return {
         title: 'unknown',
         percents: 0,
@@ -42,10 +52,35 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
     }
   };
 
-  const yesResults = getTallyResults(proposal?.finalTallyResult, chain?.coinDecimals ?? 6, 'yes');
-  const noResults = getTallyResults(proposal?.finalTallyResult, chain?.coinDecimals ?? 6, 'no');
-  const abstainResults = getTallyResults(proposal?.finalTallyResult, chain?.coinDecimals ?? 6, 'abstain');
-  const vetoResults = getTallyResults(proposal?.finalTallyResult, chain?.coinDecimals ?? 6, 'veto');
+  const rawTally =
+    chain?.ecosystem === 'namada'
+      ? proposal?.tallyResult
+      : proposal?.finalTallyResult;
+
+  const yesResults = getTallyResults(
+    rawTally,
+    chain?.coinDecimals ?? 6,
+    'yes',
+    chain?.ecosystem as 'cosmos',
+  );
+  const noResults = getTallyResults(
+    rawTally,
+    chain?.coinDecimals ?? 6,
+    'no',
+    chain?.ecosystem as 'cosmos',
+  );
+  const abstainResults = getTallyResults(
+    rawTally,
+    chain?.coinDecimals ?? 6,
+    'abstain',
+    chain?.ecosystem as 'cosmos',
+  );
+  const vetoResults = getTallyResults(
+    rawTally,
+    chain?.coinDecimals ?? 6,
+    'veto',
+    chain?.ecosystem as 'cosmos',
+  );
 
   const totalList = [yesResults, noResults, abstainResults, vetoResults];
 
@@ -54,19 +89,19 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
       <SubTitle text={t('votes')} />
       <div className="mt-8 flex w-full flex-row justify-center gap-7">
         {totalList.map((item) => (
-          <MetricsCardItem key={item.title}
-                           title={t(item.title as VoteType)}
-                           data={item.percents.toFixed(2)}
-                           isPercents
-                           addLineData={`${item.amount.toFixed(2).toLocaleString()} ${chain?.denom}`}
-                           className={'pb-4 pt-2.5'}
-                           dataClassName={'mt-2'}
-                           addLineClassName={'font-handjet font-thin text-lg -mt-1'}
+          <MetricsCardItem
+            key={item.title}
+            title={t(item.title as VoteType)}
+            data={item.percents.toFixed(2)}
+            isPercents
+            addLineData={`${item.amount.toFixed(2).toLocaleString()} ${chain?.denom}`}
+            className="pb-4 pt-2.5"
+            dataClassName="mt-2"
+            addLineClassName="font-handjet font-thin text-lg -mt-1"
           />
         ))}
       </div>
     </div>
-
   );
 };
 

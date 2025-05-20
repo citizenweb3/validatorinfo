@@ -13,6 +13,7 @@ import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybas
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateSlashingNodesInfos from '@/server/jobs/update-slashing-nodes-infos';
+import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -52,6 +53,9 @@ async function runTask() {
         break;
       case 'chain-proposals':
         await updateChainProposals(chains);
+        break;
+      case 'update-nodes-votes':
+        await updateNodesVotes(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

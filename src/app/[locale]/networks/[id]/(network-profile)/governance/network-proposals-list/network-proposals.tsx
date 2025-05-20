@@ -6,15 +6,16 @@ import { PagesProps } from '@/types';
 import NetworkProposalsList from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals-list';
 import { getTranslations } from 'next-intl/server';
 import SubTitle from '@/components/common/sub-title';
+import { Chain } from '@prisma/client';
 
 interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
-  chainId: number;
+  chain: Chain | null;
 }
 
-const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage, chainId }) => {
+const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage, chain }) => {
   const t = await getTranslations('NetworkGovernance');
 
   return (
@@ -29,7 +30,7 @@ const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage
           <TableHeaderItem page={page} name="Voting Ended" sortField="votingEndTime" defaultSelected />
         </tr>
         </thead>
-        <NetworkProposalsList perPage={perPage} sort={sort} currentPage={currentPage} chainId={chainId} />
+        <NetworkProposalsList perPage={perPage} sort={sort} currentPage={currentPage} chain={chain} />
       </table>
     </div>
   );

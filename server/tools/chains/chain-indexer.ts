@@ -76,6 +76,12 @@ export type ProposalsResult = {
   passed: number;
 };
 
+export interface NodeVote {
+  address: string;
+  proposalId: string;
+  vote: string;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -85,6 +91,7 @@ export type GetSlashingParamsFunction = (chain: AddChainProps) => Promise<Slashi
 export type GetNodeParamsFunction = (chain: AddChainProps) => Promise<NodeParams>;
 export type GetGovParamsFunction = (chain: AddChainProps) => Promise<GovParams>;
 export type GetSlashingNodesInfos = (chain: AddChainProps) => Promise<SlashingSigningInfos[]>;
+export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<NodeVote[]>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -95,4 +102,5 @@ export interface ChainMethods {
   getProposals: GetProposalsFunction;
   getSlashingParams: GetSlashingParamsFunction;
   getSlashingNodesInfos: GetSlashingNodesInfos;
+  getNodesVotes: GetNodesVotes;
 }

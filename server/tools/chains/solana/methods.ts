@@ -25,6 +25,7 @@ const chainMethods: ChainMethods = {
     live: 0,
     passed: 0,
   }),
+  getNodesVotes: () => Promise.resolve([]),
 };
 
 export default chainMethods;

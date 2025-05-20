@@ -5,6 +5,7 @@ import getNodes from '@/server/tools/chains/namada/get-nodes';
 import getProposals from '@/server/tools/chains/namada/get-proposals';
 import getStakingParams from '@/server/tools/chains/namada/get-staking-params';
 import getTvs from '@/server/tools/chains/namada/get-tvs';
+import getNodesVotes from '@/server/tools/chains/namada/get-nodes-votes';
 
 const chainMethods: ChainMethods = {
   ...cosmosChainMethods,
@@ -13,6 +14,7 @@ const chainMethods: ChainMethods = {
   getApr,
   getStakingParams,
   getProposals,
+  getNodesVotes,
 };
 
 export default chainMethods;
