@@ -1,5 +1,5 @@
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
   output   = "../node_modules/.prisma/client"
 }
 
@@ -71,6 +71,7 @@ model Chain {
 
   validators Validator[] @relation("chain_validators")
   addresses  Address[]   @relation("chain_addresses")
+  nodeVotes  NodeVote[]  @relation("node_vote_chain")
 
   // gov
   proposals       Proposal[] @relation("chain_proposals")
@@ -80,13 +81,13 @@ model Chain {
   votingPeriod    Int        @default(0) @map("voting_period")
 
   //node
-  peers String @default("")
-  seeds String @default("")
-  binaries String @default("")
-  genesis String @default("")
-  keyAlgos String @default("") @map("key_algos")
+  peers      String @default("")
+  seeds      String @default("")
+  binaries   String @default("")
+  genesis    String @default("")
+  keyAlgos   String @default("") @map("key_algos")
   daemonName String @default("") @map("daemon_name")
-  nodeHome String @default("") @map("node_home")
+  nodeHome   String @default("") @map("node_home")
 
   // calculated
   totalSupply         String   @default("") @map("total_supply")
@@ -102,8 +103,8 @@ model Chain {
   unbondingTime       Int?     @map("unbonding_time")
 
   //slashing
-  jailedDuration      String?   @map("downtime_jail_duration")
-  blocksWindow        Int?      @map("signed_blocks_window")
+  jailedDuration String? @map("downtime_jail_duration")
+  blocksWindow   Int?    @map("signed_blocks_window")
 
   @@map("chains")
 }
@@ -156,10 +157,11 @@ model Node {
 
   chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
   validator Validator? @relation("validator_node", fields: [validatorId], references: [id])
+  votes     NodeVote[] @relation("node_vote_node")
 
   //calculated
-  consensusAddress  String  @default("") @map("consensus_address")
-  uptime            Float?
+  consensusAddress String @default("") @map("consensus_address")
+  uptime           Float?
 
   @@map("nodes")
 }
@@ -202,10 +204,10 @@ model Proposal {
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
+  chain     Chain      @relation("chain_proposals", fields: [chainId], references: [id])
+  nodeVotes NodeVote[] @relation("node_vote_proposal")
+
   @@unique([chainId, proposalId], map: "proposal_chain_id_proposal_id")
-
-  chain Chain @relation("chain_proposals", fields: [chainId], references: [id])
-
   @@map("proposals")
 }
 
@@ -229,4 +231,29 @@ model Validator {
   nodes Node[] @relation("validator_node")
 
   @@map("validators")
+}
+
+enum VoteOption {
+  YES
+  NO
+  ABSTAIN
+  VETO
+  UNSPECIFIED
+}
+
+model NodeVote {
+  id         Int       @id @default(autoincrement())
+  nodeId     Int        @map("node_id")
+  proposalId Int        @map("proposal_id")
+  chainId    Int        @map("chain_id")
+
+  vote       VoteOption @default(UNSPECIFIED)
+  txHash     String?    @map("tx_hash") @db.VarChar(256)
+
+  node       Node       @relation("node_vote_node", fields: [nodeId], references: [id])
+  proposal   Proposal   @relation("node_vote_proposal", fields: [proposalId], references: [id])
+  chain      Chain      @relation("node_vote_chain", fields: [chainId], references: [id])
+
+  @@unique([nodeId, proposalId], map: "node_id_proposal_id")
+  @@map("node_votes")
 }

@@ -1,4 +1,4 @@
-import { Proposal } from '@prisma/client';
+import { Chain, Proposal } from '@prisma/client';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -7,16 +7,37 @@ import { parseMessage } from '@/utils/parse-proposal-message';
 
 interface OwnProps {
   proposal: Proposal;
+  chain: Chain | null;
 }
 
-const NetworkProposalItem: FC<OwnProps> = ({ proposal }) => {
-  const getFinalResult = (finalTallyResult: any): string => {
+export const ecosystemsProposalsResults = {
+  cosmos: {
+    yes: 'yes_count',
+    no: 'no_count',
+    abstain: 'abstain_count',
+    veto: 'no_with_veto_count',
+  },
+  namada: {
+    yes: 'yes',
+    no: 'no',
+    abstain: 'abstain',
+    veto: 'no_with_veto',
+  },
+} as const;
+
+type Ecosystem = keyof typeof ecosystemsProposalsResults;
+
+
+const NetworkProposalItem: FC<OwnProps> = ({ proposal, chain }) => {
+  const getFinalResult = <T extends Ecosystem>(tallyResult: any, ecosystem: T): string => {
     try {
-      const tally = JSON.parse(finalTallyResult);
-      const yesCount = Number(tally.yes_count);
-      const noCount = Number(tally.no_count);
-      const abstainCount = Number(tally.abstain_count);
-      const noWithVetoCount = Number(tally.no_with_veto_count);
+      const fields = ecosystemsProposalsResults[ecosystem];
+
+      const tally = JSON.parse(tallyResult);
+      const yesCount = Number(tally[fields.yes]);
+      const noCount = Number(tally[fields.no]);
+      const abstainCount = Number(tally[fields.abstain]);
+      const noWithVetoCount = Number(tally[fields.veto]);
 
       const maxValue = Math.max(yesCount, noCount, abstainCount, noWithVetoCount);
 
@@ -35,6 +56,10 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal }) => {
       return 'unknown';
     }
   };
+
+  const results = chain?.ecosystem === 'namada'
+    ? getFinalResult(proposal.tallyResult, chain.ecosystem)
+    : getFinalResult(proposal.finalTallyResult, chain?.ecosystem as 'cosmos');
 
   const proposalLink = `/networks/${proposal.chainId}/proposal/${proposal.proposalId}`;
 
@@ -55,7 +80,7 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal }) => {
       </td>
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
         <Link href={proposalLink} className="flex justify-center">
-          <div className="text-center">{getFinalResult(proposal.finalTallyResult)}</div>
+          <div className="text-center">{results}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">

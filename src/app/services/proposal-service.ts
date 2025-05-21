@@ -20,6 +20,7 @@ const getPastProposalsByChainId = async (
         ProposalStatus.PROPOSAL_STATUS_REJECTED,
         ProposalStatus.PROPOSAL_STATUS_PASSED,
         ProposalStatus.PROPOSAL_STATUS_FAILED,
+        ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED,
       ],
     },
   };

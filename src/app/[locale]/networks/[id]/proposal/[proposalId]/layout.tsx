@@ -9,6 +9,9 @@ import { getTranslations } from 'next-intl/server';
 import SubDescription from '@/components/sub-description';
 import ProposalService from '@/services/proposal-service';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function ProposalLayout({ children, params: { locale, id, proposalId } }: Readonly<{
   children: ReactNode;
   params: { locale: Locale; id: string, proposalId: string };

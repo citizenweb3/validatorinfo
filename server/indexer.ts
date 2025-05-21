@@ -60,6 +60,7 @@ const runServer = async () => {
     { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-node-params', schedule: timers.everyDay },
     { name: 'slashing-nodes-infos', schedule: timers.every5mins },
+    { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {
@@ -88,6 +89,7 @@ const runServer = async () => {
     () => {
       spawnTask('validatorInfo', chains).catch((e) => logError(`Initial run error for task validatorInfo:`, e));
       spawnTask('slashing-nodes-infos', chains).catch((e) => logError(`Initial run error for task slashing-nodes-infos:`, e));
+      spawnTask('update-nodes-votes', chains).catch((e) => logError(`Initial run error for update-nodes-votes:`, e));
     },
     5 * 60 * 1000,
   );

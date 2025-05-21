@@ -17,6 +17,7 @@ const chainMethods: ChainMethods = {
   getProposals,
   getSlashingParams,
   getSlashingNodesInfos,
+  getNodesVotes: () => Promise.resolve([]),
 };
 
 export default chainMethods;

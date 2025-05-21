@@ -6,18 +6,19 @@ import NetworkProposalsItem
   from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals-item';
 import proposalService from '@/services/proposal-service';
 import { getTranslations } from 'next-intl/server';
+import { Chain } from '@prisma/client';
 
 interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
-  chainId: number;
+  chain: Chain | null;
 }
 
-const NetworkProposalsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, chainId }) => {
+const NetworkProposalsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, chain }) => {
   const t = await getTranslations('NetworkGovernance');
   const { proposals: list, pages } = await proposalService.getPastProposalsByChainId(
-    chainId,
+    chain?.id ?? 1,
     perPage * (currentPage - 1),
     perPage,
     sort.sortBy,
@@ -29,7 +30,7 @@ const NetworkProposalsList: FC<OwnProps> = async ({ sort, perPage, currentPage =
       {list.length > 0 ? (
         <tbody>
         {list.map((item) => (
-          <NetworkProposalsItem key={item.proposalId} proposal={item} />
+          <NetworkProposalsItem key={item.proposalId} proposal={item} chain={chain} />
         ))}
         <tr>
           <td colSpan={5} className="pt-4">
