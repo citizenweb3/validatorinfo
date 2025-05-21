@@ -15,6 +15,7 @@ import RoundedButton from '@/components/common/rounded-button';
 import { Node } from '@prisma/client';
 import { useTranslations } from 'next-intl';
 import SpreadModal from '@/app/about/modals/spread-modal';
+import { useRouter } from 'next/navigation';
 
 interface OwnProps {
   chainList: ChainItem[];
@@ -27,6 +28,8 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
   const [stakingRates, setStakingRates] = useState<StakingRates | undefined>(undefined);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [validatorsList, setValidatorsList] = useState<DropdownListItem[] | undefined>(undefined);
+
+  const router = useRouter();
 
   useEffect(() => {
     (async () => {
@@ -112,7 +115,14 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
                       <div className="min-h-8 min-w-8 bg-star bg-contain" />
                     </Button>
                     <div className="mt-4 flex flex-col items-end justify-end space-y-4">
-                      <RoundedButton>Compare</RoundedButton>
+                      <RoundedButton onClick={() => {
+                        if (validator) {
+                          router.push(`/comparevalidators?validator=${validator}`);
+                        }
+                      }}
+                      >
+                        Compare
+                      </RoundedButton>
                       <SpreadModal />
                     </div>
                   </div>
