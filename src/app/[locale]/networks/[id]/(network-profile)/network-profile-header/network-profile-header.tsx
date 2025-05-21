@@ -10,6 +10,7 @@ import icons from '@/components/icons';
 import chainService from '@/services/chain-service';
 import Link from 'next/link';
 import _ from 'lodash';
+import { Thermometer } from '@/components/customSVG/temperatureSVG';
 
 interface OwnProps {
   id: string;
@@ -21,6 +22,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
   const chainLogo = chain?.logoUrl ?? icons.AvatarIcon;
+  const chainHealth = 40;
 
   const iconsSize = 'h-20 min-h-20 w-20 min-w-20 bg-contain bg-no-repeat';
   const centerLogoSizes = 'sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] 2xl:w-[124px] 2xl:h-[124px]';
@@ -73,10 +75,10 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
             className="absolute bottom-[-30%] right-[-30%] flex h-[80%] w-[80%] flex-col items-center hover:text-highlight">
             <div className="relative h-full w-full">
               <Tooltip tooltip={t('temperature tooltip')} direction={'top'}>
-                <Image src={icons.Thermometer} alt="Thermometer" fill className="object-contain" />
+                <Thermometer percent={chainHealth} />
               </Tooltip>
             </div>
-            <div className="block w-full text-center font-handjet text-lg leading-none">30%</div>
+            <div className="block w-full text-center font-handjet text-lg leading-none">{chainHealth}%</div>
           </div>
         </div>
         <MetricsHeader chain={chain} />
