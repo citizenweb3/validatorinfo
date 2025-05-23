@@ -4,12 +4,15 @@ import { SortDirection } from '@/server/types';
 import ValidatorsVotes from '@/app/networks/[id]/proposal/[proposalId]/votes/validators-votes-table/validators-votes';
 import { getTranslations } from 'next-intl/server';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface PageProps {
   params: NextPageWithLocale & { id: string; proposalId: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const defaultPerPage = 1;
+const defaultPerPage = 10;
 
 const ProposalVotesPage: NextPageWithLocale<PageProps> = async ({
     params: { locale, id, proposalId }, searchParams: q,
@@ -17,8 +20,12 @@ const ProposalVotesPage: NextPageWithLocale<PageProps> = async ({
   const t = await getTranslations({ locale, namespace: 'ProposalPage' });
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'name') ?? 'name';
+  const sortBy = (q.sortBy as 'moniker') ?? 'moniker';
   const order = (q.order as SortDirection) ?? 'asc';
+  const vote = (q.vote as 'all') ?? 'all';
+  const search = (q.search as string);
+
+  const chanId = parseInt(id);
 
   return (
     <>
@@ -27,7 +34,16 @@ const ProposalVotesPage: NextPageWithLocale<PageProps> = async ({
           {t('hide dropdown')}
         </RoundedButton>
       </div>
-      <ValidatorsVotes page={'ProposalPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
+      <ValidatorsVotes
+        page={'ProposalPage'}
+        perPage={perPage}
+        currentPage={currentPage}
+        sort={{ sortBy, order }}
+        chainId={chanId}
+        proposalId={proposalId}
+        vote={vote}
+        search={search}
+      />
     </>
   );
 };

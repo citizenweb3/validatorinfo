@@ -987,6 +987,7 @@
     "did not vote": "Не проголосовал",
     "weighted": "Взвешенный",
     "abstain": "Воздержался",
+    "search by validator name": "Искать по имени валидатора",
     "Table": {
       "Validator": {
         "name": "Валидатор",

@@ -9,20 +9,25 @@ interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
+  validatorId: number | undefined;
 }
 
-const ValidatorVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
+const ValidatorVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage, validatorId }) => {
   return (
     <div>
       <table className="w-full table-auto border-collapse">
         <thead>
           <tr className="bg-table_header">
-            <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
+            <TableHeaderItem page={page} name="Network" sortField="chain" defaultSelected />
             <TableHeaderItem page={page} name="Title" />
-            <TableHeaderItem page={page} name="Vote" sortField="name" />
+            <TableHeaderItem page={page} name="Vote" sortField="vote" />
           </tr>
         </thead>
-        <ValidatorVotesList perPage={perPage} sort={sort} currentPage={currentPage} />
+        <ValidatorVotesList
+          perPage={perPage}
+          sort={sort}
+          currentPage={currentPage}
+          validatorId={validatorId} />
       </table>
     </div>
   );

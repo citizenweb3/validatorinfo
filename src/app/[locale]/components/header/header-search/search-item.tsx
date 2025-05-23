@@ -9,14 +9,16 @@ interface OwnProps {
   icon?: string;
   isSelected: boolean;
   onClick: () => void;
+  isScroll?: boolean;
 }
 
-const SearchItem: FC<OwnProps> = ({ link, name, isSelected, icon, onClick }) => {
+const SearchItem: FC<OwnProps> = ({ link, name, isSelected, icon, onClick, isScroll=true }) => {
   return (
     <Link
       href={link}
       onClick={onClick}
       className={`${isSelected ? 'bg-bgHover' : ''} flex cursor-pointer items-center justify-between rounded-md px-4 py-2 hover:bg-bgHover`}
+      scroll={isScroll}
     >
       <FallbackImage src={icon ?? icons.AvatarIcon}
                      alt="Validator"

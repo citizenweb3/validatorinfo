@@ -985,6 +985,7 @@
     "did not vote": "Não Votou",
     "weighted": "Ponderado",
     "abstain": "Abstenção",
+    "search by validator name": "Pesquisa por nome de validador",
     "Table": {
       "Validator": {
         "name": "Validador",

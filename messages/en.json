@@ -984,7 +984,7 @@
     "did not vote": "Did Not Vote",
     "abstain": "Abstain",
     "weighted": "Weighted",
-    "Search by validator name and tx hash": "Search by validator name and tx hash",
+    "search by validator name": "Search by validator name",
     "Table": {
       "Validator": {
         "name": "Validator",

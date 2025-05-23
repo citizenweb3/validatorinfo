@@ -26,29 +26,26 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
   ) => {
     try {
       const fields = ecosystemsProposalsResults[ecosystem];
-      const tally = JSON.parse(tallyResult);
+      const tally = JSON.parse(tallyResult ?? '{}');
+
+      if (tally[fields[voteType]] === undefined) return null;
 
       const votes: Record<VoteType, number> = {
-        yes: Number(tally[fields.yes]),
-        no: Number(tally[fields.no]),
-        abstain: Number(tally[fields.abstain]),
-        veto: Number(tally[fields.veto]),
+        yes: Number(tally[fields.yes] ?? 0),
+        no: Number(tally[fields.no] ?? 0),
+        abstain: Number(tally[fields.abstain] ?? 0),
+        veto: Number(tally[fields.veto] ?? 0),
       };
 
-      const totalVotes = Object.values(votes).reduce((sum, count) => sum + count, 0);
-      const divisor = totalVotes === 0 ? 1 : totalVotes;
+      const total = Object.values(votes).reduce((s, n) => s + n, 0) || 1;
 
       return {
         title: voteType,
-        percents: (votes[voteType] / divisor) * 100,
+        percents: (votes[voteType] / total) * 100,
         amount: votes[voteType] / 10 ** decimals,
       };
     } catch {
-      return {
-        title: 'unknown',
-        percents: 0,
-        amount: 0,
-      };
+      return null;
     }
   };
 
@@ -57,38 +54,17 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
       ? proposal?.tallyResult
       : proposal?.finalTallyResult;
 
-  const yesResults = getTallyResults(
-    rawTally,
-    chain?.coinDecimals ?? 6,
-    'yes',
-    chain?.ecosystem as 'cosmos',
-  );
-  const noResults = getTallyResults(
-    rawTally,
-    chain?.coinDecimals ?? 6,
-    'no',
-    chain?.ecosystem as 'cosmos',
-  );
-  const abstainResults = getTallyResults(
-    rawTally,
-    chain?.coinDecimals ?? 6,
-    'abstain',
-    chain?.ecosystem as 'cosmos',
-  );
-  const vetoResults = getTallyResults(
-    rawTally,
-    chain?.coinDecimals ?? 6,
-    'veto',
-    chain?.ecosystem as 'cosmos',
-  );
+  const results = (['yes', 'no', 'abstain', 'veto'] as VoteType[])
+    .map((vt) =>
+      getTallyResults(rawTally, chain?.coinDecimals ?? 6, vt, chain?.ecosystem as Ecosystem),
+    ).filter(Boolean) as Exclude<ReturnType<typeof getTallyResults>, null>[];
 
-  const totalList = [yesResults, noResults, abstainResults, vetoResults];
 
   return (
     <div className="mt-4 mb-6">
       <SubTitle text={t('votes')} />
       <div className="mt-8 flex w-full flex-row justify-center gap-7">
-        {totalList.map((item) => (
+        {results.map((item) => (
           <MetricsCardItem
             key={item.title}
             title={t(item.title as VoteType)}
