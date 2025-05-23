@@ -1,3 +1,78 @@
+import { ValidatorVote } from '@/services/vote-service';
+
+export const votesExample = [
+  {
+    chain: { id: 1, prettyName: 'Bostrom', ecosystem: 'Cosmos' },
+    proposalDbId: 1,
+    proposalId: '1',
+    title: 'Proposal Title',
+    vote: 'YES',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 2,
+    proposalId: '2',
+    title: 'Proposal Title',
+    vote: 'NO',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 3,
+    proposalId: '3',
+    title: 'Proposal Title',
+    vote: 'YES',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 4,
+    proposalId: '4',
+    title: 'Proposal Title',
+    vote: 'NO',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 5,
+    proposalId: '5',
+    title: 'Proposal Title',
+    vote: 'YES',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 1,
+    proposalId: '1',
+    title: 'Proposal Title',
+    vote: 'ABSTAIN',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 2,
+    proposalId: '2',
+    title: 'Proposal Title',
+    vote: 'VETO',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 3,
+    proposalId: '3',
+    title: 'Proposal Title',
+    vote: 'NO',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 4,
+    proposalId: '4',
+    title: 'Proposal Title',
+    vote: 'YES',
+  },
+  {
+    chain: { id: 1, prettyName: 'Network', ecosystem: 'Cosmos' },
+    proposalDbId: 5,
+    proposalId: '5',
+    title: 'Proposal Title',
+    vote: 'NO',
+  },
+] as ValidatorVote[];
+
 export const validatorExample = {
   id: 0,
   icon: 'https://s3.amazonaws.com/keybase_processed_uploads/558a3c554fecd6b0f9ff06e7ee6cc005_360_360.jpg',
@@ -18,68 +93,6 @@ export const validatorExample = {
     fans: 55000,
     amountOfAssets: 12,
   },
-  votes: [
-    {
-      networkName: 'Bostrom',
-      proposalId: 1,
-      proposalTitle: 'Proposal Title',
-      vote: 'Yes',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 2,
-      proposalTitle: 'Proposal Title',
-      vote: 'No',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 5,
-      proposalTitle: 'Proposal Title',
-      vote: 'Yes',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 1,
-      proposalTitle: 'Proposal Title',
-      vote: 'Yes',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 2,
-      proposalTitle: 'Proposal Title',
-      vote: 'No',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 2,
-      proposalTitle: 'Proposal Title',
-      vote: 'Yes',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 2,
-      proposalTitle: 'Proposal Title',
-      vote: 'No',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 2,
-      proposalTitle: 'Proposal Title',
-      vote: 'Yes',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 2,
-      proposalTitle: 'Proposal Title',
-      vote: 'No',
-    },
-    {
-      networkName: 'Network Name',
-      proposalId: 2,
-      proposalTitle: 'Proposal Title',
-      vote: 'Yes',
-    },
-  ],
   rpcNodes: [
     {
       color: 'green',
@@ -155,6 +168,6 @@ export const validatorExample = {
     {
       name: 'Citizen Web3 Blog',
       approved: 91,
-    }
-  ]
+    },
+  ],
 };

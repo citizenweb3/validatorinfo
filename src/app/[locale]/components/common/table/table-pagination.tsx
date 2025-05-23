@@ -6,6 +6,7 @@ import TriangleButton from '@/components/common/triangle-button';
 
 interface OwnProps {
   pageLength: number;
+  isScroll?: boolean;
 }
 
 interface PageElement {
@@ -13,7 +14,7 @@ interface PageElement {
   name: string | number | ReactNode;
 }
 
-const TablePagination: FC<OwnProps> = ({ pageLength }) => {
+const TablePagination: FC<OwnProps> = ({ pageLength, isScroll=true }) => {
   const searchString = headers().get('x-current-search');
   const sp = new URLSearchParams(searchString ?? '');
 
@@ -79,7 +80,7 @@ const TablePagination: FC<OwnProps> = ({ pageLength }) => {
         );
 
         return page.href ? (
-          <Link key={page.href + page.name} href={`?${page.href}`}>
+          <Link key={page.href + page.name} href={`?${page.href}`} scroll={isScroll}>
             {content}
           </Link>
         ) : (
