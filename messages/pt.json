@@ -396,8 +396,8 @@
     "show world node map": "Mostrar Mapa Mundial de Nós",
     "customize": "Customizar",
     "Table": {
-      "Node Moniker": {
-        "name": "Moniker de nó",
+      "Node Address": {
+        "name": "Endereço de nó",
         "hint": ""
       },
       "Ecosystem": {

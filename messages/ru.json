@@ -398,8 +398,8 @@
     "show world node map": "Показать Мировую Карту Нод",
     "customize": "Настроить",
     "Table": {
-      "Node Moniker": {
-        "name": "Имя Ноды",
+      "Node Address": {
+        "name": "Адрес Ноды",
         "hint": ""
       },
       "Ecosystem": {

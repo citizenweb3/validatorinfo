@@ -396,8 +396,8 @@
     "show world node map": "Show World Node Map",
     "customize": "customize",
     "Table": {
-      "Node Moniker": {
-        "name": "Node Moniker",
+      "Node Address": {
+        "name": "Node Address",
         "hint": ""
       },
       "Ecosystem": {

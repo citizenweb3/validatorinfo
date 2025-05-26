@@ -42,6 +42,8 @@ export const setPositions = [
 export const ecosystemsDropdown = [
   { value: 'cosmos', title: 'Cosmos' },
   { value: 'namada', title: 'Namada' },
+  { value: 'solana', title: 'Solana' },
+  { value: 'ethereum', title: 'Ethereum' },
 ];
 
 const ListFilters: FC<OwnProps> = ({

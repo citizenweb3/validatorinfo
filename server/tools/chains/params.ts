@@ -26,6 +26,12 @@ export const ecosystemParams = [
     logoUrl:
       'https://raw.githubusercontent.com/github/explore/14191328e15689ba52d5c10e18b43417bf79b2ef/topics/solana/solana.png',
   },
+  {
+    name: 'ethereum',
+    prettyName: 'Ethereum',
+    logoUrl:
+      'https://raw.githubusercontent.com/ethereum/ethereum-org-website/refs/heads/dev/public/images/eth-logo-grey.png',
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {
@@ -908,6 +914,36 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.solana.com',
     githubUrl: 'https://github.com/solana-labs',
     twitterUrl: 'solana',
+  },
+  'ethereum-sepolia': {
+    rang: 1,
+    ecosystem: 'ethereum',
+    hasValidators: true,
+    name: 'ethereum-sepolia',
+    prettyName: 'Ethereum Sepolia',
+    chainId: '11155111',
+    bech32Prefix: '',
+    coinDecimals: 18,
+    coinGeckoId: '',
+    coinType: 60,
+    denom: 'ETH',
+    minimalDenom: 'wei',
+    logoUrl:
+      'https://raw.githubusercontent.com/ethereum/ethereum-org-website/refs/heads/dev/public/images/eth-logo-grey.png',
+    nodes: [
+      {
+        type: 'rest',
+        url: 'http://168.119.37.164:5152',
+      },
+      {
+        type: 'rpc',
+        url: 'http://168.119.37.164:8645',
+      },
+    ],
+    mainRepo: 'https://github.com/ethereum/go-ethereum',
+    docs: 'https://ethereum.org/en/developers/docs/',
+    githubUrl: 'https://github.com/ethereum',
+    twitterUrl: 'https://x.com/ethdotorg',
   },
 };
 
