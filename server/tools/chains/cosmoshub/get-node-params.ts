@@ -14,7 +14,7 @@ interface ChainNodeParams {
   };
 }
 
-const { logInfo, logError } = logger('get-node-params');
+const { logError } = logger('get-node-params');
 
 const getNodeParams: GetNodeParamsFunction = async (chain) => {
   const result: NodeParams = {
@@ -37,7 +37,8 @@ const getNodeParams: GetNodeParamsFunction = async (chain) => {
 
   // chain-registry
   try {
-    const chainRegistryUrl = `https://raw.githubusercontent.com/cosmos/chain-registry/master/${chain.name}/chain.json`;
+    const chainRegistryUrl =
+      chain.chainRegistry ?? `https://raw.githubusercontent.com/cosmos/chain-registry/master/${chain.name}/chain.json`;
     const chainRegistry: any = await fetchData(chainRegistryUrl);
 
     if (!result.peers) {

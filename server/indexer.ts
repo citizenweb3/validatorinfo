@@ -52,15 +52,15 @@ const runServer = async () => {
   const tasks = [
     { name: 'prices', schedule: timers.every5mins },
     { name: 'validators', schedule: timers.everyHour },
-    { name: 'validatorInfo', schedule: timers.everyDay },
+    // { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.everyHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
     { name: 'chain-slashing-params', schedule: timers.everyDay },
     { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-node-params', schedule: timers.everyDay },
-    { name: 'slashing-nodes-infos', schedule: timers.every5mins },
-    { name: 'update-nodes-votes', schedule: timers.everyDay },
+    // { name: 'slashing-nodes-infos', schedule: timers.every5mins },
+    // { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {

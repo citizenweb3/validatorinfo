@@ -7,7 +7,7 @@ interface APIItem {
   provider: string;
 }
 
-const { logInfo, logError, logWarn } = logger('init-chains');
+const { logWarn } = logger('init-chains');
 
 export const ecosystemParams = [
   {
@@ -18,7 +18,7 @@ export const ecosystemParams = [
   {
     name: 'namada',
     prettyName: 'Namada',
-    logoUrl: 'https://github.com/cosmos/chain-registry/blob/master/namada/images/nam.png?raw=true',
+    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/namada/images/nam.png',
   },
   {
     name: 'solana',

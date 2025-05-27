@@ -47,17 +47,17 @@ export const ecosystemsDropdown = [
 ];
 
 const ListFilters: FC<OwnProps> = ({
-    perPage,
-    selectedEcosystems = [],
-    selectedNodeStatus = [],
-    selectedSetPosition = [],
-    selectedNetworkStage = [],
-    isBattery = false,
-    isEcosystems = false,
-    isNodeStatus = false,
-    isSetPositions = false,
-    isNetworkStage = false,
-  }) => {
+  perPage,
+  selectedEcosystems = [],
+  selectedNodeStatus = [],
+  selectedSetPosition = [],
+  selectedNetworkStage = [],
+  isBattery = false,
+  isEcosystems = false,
+  isNodeStatus = false,
+  isSetPositions = false,
+  isNetworkStage = false,
+}) => {
   const router = useRouter();
   const pathname = usePathname();
   const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -141,38 +141,38 @@ const ListFilters: FC<OwnProps> = ({
     <div className="flex h-8 items-center justify-end space-x-10">
       {isOpened && (
         <>
-          {isEcosystems &&
+          {isEcosystems && (
             <Dropdown
               filterValues={ecosystemsDropdown}
               title={t('Ecosystems')}
               selectedValue={selectedEcosystems}
               onChanged={onChainsChanged}
             />
-          }
-          {isNodeStatus &&
+          )}
+          {isNodeStatus && (
             <Dropdown
               filterValues={nodeStatus}
               title={t('Node Status')}
               selectedValue={selectedNodeStatus}
               onChanged={onNodeStatusChanged}
             />
-          }
-          {isSetPositions &&
+          )}
+          {isSetPositions && (
             <Dropdown
               filterValues={setPositions}
               title={t('Set Position')}
               selectedValue={selectedSetPosition}
               onChanged={onSetPositionChanged}
             />
-          }
-          {isNetworkStage &&
+          )}
+          {isNetworkStage && (
             <Dropdown
               filterValues={stages}
               title={t('Network Stage')}
               selectedValue={selectedNetworkStage}
               onChanged={onNetworkStageChanged}
             />
-          }
+          )}
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
           {isBattery && <ValidatorListFiltersBattery />}
         </>
