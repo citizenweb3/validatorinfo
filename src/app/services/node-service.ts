@@ -14,6 +14,18 @@ const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number
     website = isUrlValid(`https://${website}`) ? `https://${website}` : '';
   }
 
+  let consensusAddress = '';
+  switch (chain.ecosystem) {
+    case 'cosmos':
+      consensusAddress = fromPubkeyToValcons(val.consensus_pubkey.key, chain.bech32Prefix);
+      break;
+    case 'ethereum':
+      consensusAddress = val.operator_address;
+      break;
+    default:
+      consensusAddress = '';
+  }
+
   const node = await db.node.upsert({
     where: { operatorAddress: val.operator_address },
     update: {
@@ -33,7 +45,7 @@ const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number
       moniker: val.description.moniker,
       operatorAddress: val.operator_address,
       consensusPubkey: val.consensus_pubkey.key,
-      consensusAddress: fromPubkeyToValcons(val.consensus_pubkey.key, chain.bech32Prefix),
+      consensusAddress: consensusAddress,
       delegatorShares: val.delegator_shares,
       details: val.description.details,
       identity: val.description.identity,

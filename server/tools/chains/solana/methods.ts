@@ -7,7 +7,7 @@ const chainMethods: ChainMethods = {
   getNodes,
   getStakingParams,
   getTvs,
-  getSlashingNodesInfos: () => Promise.resolve([]),
+  getMissedBlocks: () => Promise.resolve([]),
   getSlashingParams: () => Promise.resolve({ blocksWindow: null, jailedDuration: null }),
   getApr: async () => 0,
   getNodeParams: async () => ({

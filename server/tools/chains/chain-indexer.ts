@@ -90,7 +90,7 @@ export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<Staking
 export type GetSlashingParamsFunction = (chain: AddChainProps) => Promise<SlashingChainParams>;
 export type GetNodeParamsFunction = (chain: AddChainProps) => Promise<NodeParams>;
 export type GetGovParamsFunction = (chain: AddChainProps) => Promise<GovParams>;
-export type GetSlashingNodesInfos = (chain: AddChainProps) => Promise<SlashingSigningInfos[]>;
+export type GetMissedBlocks = (chain: AddChainProps, blocksWindow?: number) => Promise<SlashingSigningInfos[]>;
 export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<NodeVote[]>;
 
 export interface ChainMethods {
@@ -101,6 +101,6 @@ export interface ChainMethods {
   getNodeParams: GetNodeParamsFunction;
   getProposals: GetProposalsFunction;
   getSlashingParams: GetSlashingParamsFunction;
-  getSlashingNodesInfos: GetSlashingNodesInfos;
+  getMissedBlocks: GetMissedBlocks;
   getNodesVotes: GetNodesVotes;
 }

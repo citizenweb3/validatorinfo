@@ -71,10 +71,6 @@ interface CommissionRates {
 
 export interface SlashingSigningInfos {
   address: string;
-  start_height: string;
-  index_offset: string;
-  jailed_until: string;
-  tombstone: string;
   missed_blocks_counter: string;
 }
 

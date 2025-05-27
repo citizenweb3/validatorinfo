@@ -19,10 +19,10 @@ const updateSlashingNodesInfos = async (chainNames: string[]) => {
     }
     if (dbChain.hasValidators && dbChain.blocksWindow && dbChain.blocksWindow != 0) {
       try {
-        const slashingNodesInfos = await chainMethods.getSlashingNodesInfos(chainParams);
+        const slashingNodesInfos = await chainMethods.getMissedBlocks(chainParams, dbChain.blocksWindow);
         if (slashingNodesInfos.length > 0) {
           for (const info of slashingNodesInfos) {
-            let uptime = ((dbChain.blocksWindow - parseInt(info.missed_blocks_counter)) / dbChain.blocksWindow) * 100
+            let uptime = ((dbChain.blocksWindow - parseInt(info.missed_blocks_counter)) / dbChain.blocksWindow) * 100;
 
             await db.node.updateMany({
               where: { consensusAddress: info.address },

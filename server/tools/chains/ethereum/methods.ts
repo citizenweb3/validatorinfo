@@ -3,13 +3,15 @@ import getNodes from '@/server/tools/chains/ethereum/get-nodes';
 import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
 import getTvs from '@/server/tools/chains/ethereum/get-tvs';
 import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
+import getMissedBlocks from '@/server/tools/chains/ethereum/get-missed-blocks';
+import getSlashingParams from '@/server/tools/chains/ethereum/get-slashing-params';
 
 const chainMethods: ChainMethods = {
   getNodes,
   getStakingParams,
   getTvs,
-  getSlashingNodesInfos: () => Promise.resolve([]),
-  getSlashingParams: () => Promise.resolve({ blocksWindow: null, jailedDuration: null }),
+  getMissedBlocks,
+  getSlashingParams,
   getApr: async () => 0,
   getNodeParams,
   getProposals: async () => ({
