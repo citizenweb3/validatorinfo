@@ -5,7 +5,6 @@ import { SortDirection } from '@/server/types';
 import NetworkProposalsItem
   from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals-item';
 import proposalService from '@/services/proposal-service';
-import { getTranslations } from 'next-intl/server';
 import { Chain } from '@prisma/client';
 
 interface OwnProps {
@@ -16,7 +15,6 @@ interface OwnProps {
 }
 
 const NetworkProposalsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, chain }) => {
-  const t = await getTranslations('NetworkGovernance');
   const { proposals: list, pages } = await proposalService.getPastProposalsByChainId(
     chain?.id ?? 1,
     perPage * (currentPage - 1),

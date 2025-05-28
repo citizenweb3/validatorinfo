@@ -24,7 +24,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const defaultPerPage = 1;
+const defaultPerPage = 10;
 
 const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { locale, id }, searchParams: q }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorGovernancePage' });
@@ -32,7 +32,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
   const validatorId = parseInt(id);
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'name') ?? 'name';
+  const sortBy = (q.sortBy as 'chain') ?? 'chain';
   const order = (q.order as SortDirection) ?? 'asc';
 
   const validator = await validatorService.getById(validatorId);
@@ -64,6 +64,7 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
           perPage={perPage}
           currentPage={currentPage}
           sort={{ sortBy, order }}
+          validatorId={validator?.id}
         />
       </div>
     </div>
