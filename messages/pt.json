@@ -400,6 +400,10 @@
         "name": "Endereço de nó",
         "hint": ""
       },
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
       "Ecosystem": {
         "name": "Ecossistema",
         "hint": ""
@@ -411,6 +415,14 @@
       "Stake": {
         "name": "Stake",
         "hint": ""
+      },
+      "Uptime": {
+        "name": "Tempo de Atividade",
+        "hint": "O tempo durante o qual o nó está online em um período selecionado. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Missed Blocks": {
+        "name": "Blocos Perdidos",
+        "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
       }
     }
   },

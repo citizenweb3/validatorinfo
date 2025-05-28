@@ -400,6 +400,10 @@
         "name": "Node Address",
         "hint": ""
       },
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
       "Ecosystem": {
         "name": "Ecosystem",
         "hint": ""
@@ -411,6 +415,14 @@
       "Stake": {
         "name": "Stake",
         "hint": ""
+      },
+      "Uptime": {
+        "name": "Uptime",
+        "hint": "The amount of time the node is online over a selected period of time. The color indicates the ratio in comparison to other nodes on the network"
+      },
+      "Missed Blocks": {
+        "name": "Missed Blocks",
+        "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
       }
     }
   },

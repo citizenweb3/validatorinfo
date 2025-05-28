@@ -5,6 +5,10 @@ import formatCash from '@/utils/format-cash';
 import Link from 'next/link';
 import Tooltip from '@/components/common/tooltip';
 import cutHash from '@/utils/cut-hash';
+import Image from 'next/image';
+import icons from '@/components/icons';
+import colorStylization from '@/utils/color-stylization';
+import CopyButton from '@/components/common/copy-button';
 
 
 interface OwnProps {
@@ -20,13 +24,25 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
 
   return (
     <tr className="group font-handjet hover:bg-bgHover hover:text-highlight">
-      <td className="border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt">
+      <td className="flex border-b border-black py-2 font-handjet text-lg active:border-bgSt">
+        <Image
+          src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon}
+          alt={'node status'}
+          width={20}
+          height={20}
+        />
+        <Tooltip tooltip={item.operatorAddress} className={'font-normal text-base'}>
+          <div className="ml-4">{
+            cutHash({ value: item.operatorAddress, cutLength: 10 })}
+          </div>
+        </Tooltip>
+        <div className="pl-4">
+          <CopyButton value={item.operatorAddress} />
+        </div>
+      </td>
+      <td className="border-b border-black py-2 font-sfpro text-base active:border-bgSt">
         <Link href={validatorLink}>
-          <Tooltip tooltip={item.operatorAddress}>
-            <div className="ml-4">{item.operatorAddress.startsWith('0x') ?
-              cutHash({ value: item.operatorAddress, cutLength: 14 })
-              : item.operatorAddress}</div>
-          </Tooltip>
+          <div className="text-center">{item.validatorId ? item.moniker : '-'}</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
@@ -43,6 +59,32 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
         <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
           <div className="text-center">{formatCash(tokenDelegatorShares)}</div>
         </Tooltip>
+      </td>
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+        {item.uptime ? (
+          <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
+            <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
+              {item.uptime.toFixed(2)}
+            </div>
+          </Tooltip>
+        ) : (
+          <div className="text-center">
+            -
+          </div>
+        )}
+      </td>
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+        {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
+          <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
+            <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
+              {item.missedBlocks}
+            </div>
+          </Tooltip>
+        ) : (
+          <div className="text-center">
+            -
+          </div>
+        )}
       </td>
     </tr>
   );
