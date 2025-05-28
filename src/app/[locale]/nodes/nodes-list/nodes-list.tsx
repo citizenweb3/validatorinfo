@@ -28,7 +28,7 @@ const NodesList: FC<OwnProps> = async ({ sort, perPage, ecosystems, nodeStatus, 
       <NodesListItem key={item.id} item={item} />
     ))}
     <tr>
-      <td colSpan={5} className="pt-4">
+      <td colSpan={7} className="pt-4">
         <TablePagination pageLength={pages} />
       </td>
     </tr>

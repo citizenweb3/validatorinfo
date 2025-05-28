@@ -10,6 +10,7 @@ export type NetworkValidatorsWithNodes = Node & {
   } | null;
   chain: {
     coinDecimals: number;
+    blocksWindow: number | null;
   };
   votingPower: number;
 }
@@ -83,6 +84,7 @@ const getChainValidatorsWithNodes = async (
           select: {
             coinDecimals: true,
             bondedTokens: true,
+            blocksWindow: true,
           },
         },
       },
@@ -127,6 +129,7 @@ const getChainValidatorsWithNodes = async (
           select: {
             coinDecimals: true,
             bondedTokens: true,
+            blocksWindow: true,
           },
         },
       },
