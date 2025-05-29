@@ -1,3 +1,6 @@
+import icons from '@/components/icons';
+import { VoteOption } from '@prisma/client';
+
 const redTextLayout: string = '#EB1616';
 const greenTextLayout: string = '#4FB848';
 const yellowTextLayout: string = '#E5C46B';
@@ -36,10 +39,24 @@ const missedBlocks = (missedBlocks: number | null) => {
   }
 };
 
+const getVotesIcon = (vote: VoteOption) => {
+  switch (vote) {
+    case 'YES':
+      return icons.GreenSquareIcon;
+    case 'NO':
+      return icons.RedSquareIcon;
+    case 'ABSTAIN':
+      return icons.YellowSquareIcon;
+    default:
+      return icons.GreenSquareIcon;
+  }
+};
+
 const colorStylization = {
   delegation,
   uptime,
   missedBlocks,
+  getVotesIcon,
 };
 
 export default colorStylization;

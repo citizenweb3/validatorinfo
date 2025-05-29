@@ -23,6 +23,15 @@ export interface ProposalValidatorsVotes {
   vote: VoteOption | null;
 }
 
+export interface ChainNodeVote {
+  chainDbId: number;
+  proposalId: string;
+  proposalType: string;
+  votingEndTime: Date | null;
+  title: string;
+  vote: VoteOption;
+}
+
 const getValidatorVotes = async (
   validatorId: number,
   skip: number,
@@ -159,10 +168,80 @@ export const getProposalValidatorsVotes = async (
   return { votes, pages };
 };
 
+const getChainNodeVotes = async (
+  operatorAddress: string,
+  skip: number,
+  take: number,
+  sortBy: string = 'date',
+  order: SortDirection = 'desc',
+): Promise<{ votes: ChainNodeVote[]; pages: number }> => {
+
+  const node = await db.node.findUnique({
+    where: { operatorAddress },
+    select: { id: true, chainId: true },
+  });
+
+  if (!node) {
+    return { votes: [], pages: 0 };
+  }
+
+  const where = {
+    nodeId: node.id,
+    chainId: node.chainId,
+  };
+
+  const total = await db.nodeVote.count({ where });
+  const pages = Math.ceil(total / take);
+
+  const orderBy =
+    sortBy === 'vote'
+      ? [{ vote: order }]
+      : sortBy === 'type'
+        ? [{ proposal: { type: order } }]
+        : sortBy === 'proposal'
+          ? [{ proposal: { proposalId: order } }]
+          : [{ proposal: { votingEndTime: order } }];
+
+  const voteRows = await db.nodeVote.findMany({
+    where,
+    skip,
+    take,
+    orderBy,
+    select: {
+      vote: true,
+      chain: { select: { id: true, prettyName: true, ecosystem: true } },
+      proposal: {
+        select: {
+          id: true,
+          proposalId: true,
+          type: true,
+          votingEndTime: true,
+          title: true,
+        },
+      },
+    },
+  });
+
+  if (voteRows.length === 0) {
+    return { votes: [], pages: 0 };
+  }
+
+  const votes: ChainNodeVote[] = voteRows.map((vote) => ({
+    chainDbId: vote.chain.id,
+    proposalId: vote.proposal.proposalId,
+    proposalType: vote.proposal.type,
+    votingEndTime: vote.proposal.votingEndTime,
+    title: vote.proposal.title,
+    vote: vote.vote,
+  }));
+
+  return { votes, pages };
+};
 
 const voteService = {
   getValidatorVotes,
   getProposalValidatorsVotes,
+  getChainNodeVotes,
 };
 
 export default voteService;
