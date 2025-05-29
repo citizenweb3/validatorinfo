@@ -367,7 +367,7 @@ const chainParams: Record<string, AddChainProps> = {
     rang: 4,
     name: 'union',
     prettyName: 'Union',
-    chainId: 'union-testnet-8',
+    chainId: 'union-testnet-10',
     bech32Prefix: 'cosmos',
     coinDecimals: 6,
     coinGeckoId: '',
