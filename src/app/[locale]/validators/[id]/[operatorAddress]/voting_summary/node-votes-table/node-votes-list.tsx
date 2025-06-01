@@ -27,7 +27,7 @@ const NodeVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, ope
     sort.order,
   );
 
-  if (result.votes.length !== 0) {
+  if (result.votes.length === 0) {
     votesList = nodeVotesExample;
   } else {
     votesList = result.votes;
