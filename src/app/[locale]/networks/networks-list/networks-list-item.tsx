@@ -27,8 +27,8 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
         <div className="text-center">{item.denom}</div>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Tooltip tooltip={fdv.toLocaleString()}>
-          <div className="text-center">{formatCash(fdv)}</div>
+        <Tooltip tooltip={`$${fdv.toLocaleString()}`}>
+          <div className="text-center">${formatCash(fdv)}</div>
         </Tooltip>
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
