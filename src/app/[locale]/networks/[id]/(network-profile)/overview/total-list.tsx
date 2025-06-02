@@ -17,6 +17,10 @@ const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
 
   return (
     <div className="mt-20 flex w-full flex-row justify-center gap-6">
+      <MetricsCardItem title={t('amount of wallets')}
+                       data={chain?.walletsAmount?.toLocaleString() ?? '3 500 000'}
+                       className={'pb-6 pt-2.5'}
+                       dataClassName={'mt-5'} />
       {networkProfileExample.totalsMetrics.map((item) => (
         <MetricsCardItem key={item.title}
                          title={t(item.title as 'amount of wallets')}

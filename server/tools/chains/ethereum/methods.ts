@@ -21,6 +21,8 @@ const chainMethods: ChainMethods = {
     passed: 0,
   }),
   getNodesVotes: () => Promise.resolve([]),
+  getCommTax: async () => null,
+  getWalletsAmount: async () => null,
 };
 
 export default chainMethods;

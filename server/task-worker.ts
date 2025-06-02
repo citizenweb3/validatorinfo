@@ -14,6 +14,8 @@ import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateSlashingNodesInfos from '@/server/jobs/update-slashing-nodes-infos';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
+import updateCommTax from '@/server/jobs/update-community-tax';
+import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -56,6 +58,12 @@ async function runTask() {
         break;
       case 'update-nodes-votes':
         await updateNodesVotes(chains);
+        break;
+      case 'community-tax':
+        await updateCommTax(chains);
+        break;
+      case 'wallets-amount':
+        await updateWalletsAmount(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

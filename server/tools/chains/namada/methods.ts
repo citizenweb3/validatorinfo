@@ -15,6 +15,8 @@ const chainMethods: ChainMethods = {
   getStakingParams,
   getProposals,
   getNodesVotes,
+  getCommTax: async () => null,
+  getWalletsAmount: async () => null,
 };
 
 export default chainMethods;
