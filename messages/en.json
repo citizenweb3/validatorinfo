@@ -105,6 +105,10 @@
         "name": "Technical",
         "hint": "Offering robust network security and additional infrastructure increases the score"
       },
+      "Tech": {
+        "name": "Tech",
+        "hint": ""
+      },
       "Social": {
         "name": "Social",
         "hint": "A strong digital presence and numerous on-chain fans raise the score"
@@ -112,6 +116,10 @@
       "Governance": {
         "name": "Governance",
         "hint": "Participation in keychain life events and initiative boost the score"
+      },
+      "Gov": {
+        "name": "Gov.",
+        "hint": ""
       },
       "User": {
         "name": "User",

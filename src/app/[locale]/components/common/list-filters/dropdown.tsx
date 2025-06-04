@@ -20,11 +20,11 @@ const Dropdown: FC<OwnProps> = ({filterValues, title, selectedValue, onChanged }
   useOnClickOutside(ref, () => setIsOpened(false));
 
   return (
-    <div className="relative max-h-8 font-sfpro text-base" ref={ref}>
+    <div className="relative md:max-h-8 max-h-44 md:max-w-20 max-w-200 font-sfpro md:text-base text-6xl mt-14 mb-6 md:mt-0 md:mb-6" ref={ref}>
       <Button
         onClick={() => setIsOpened(!isOpened)}
-        contentClassName={`w-40 max-w-40 flex justify-between`}
-        className="h-8 max-h-8"
+        contentClassName={`md:w-40 md:max-w-40 max-w-200 flex justify-between mx-4 md:mx-0`}
+        className="md:h-8 md:max-h-8 h-24 max-h-24"
         isActive={selectedValue.length > 0}
         activeType="switcher"
       >
@@ -32,18 +32,18 @@ const Dropdown: FC<OwnProps> = ({filterValues, title, selectedValue, onChanged }
         <TriangleButton direction={isOpened ? 't' : 'b'} />
       </Button>
       {isOpened && (
-        <div className="absolute top-8 z-40 flex-col">
+        <div className="absolute flex top-8 md:z-40 z-[60] flex-col">
           {filterValues.map((item) => (
             <Button
               key={item.value}
               component="button"
               onClick={() => onChanged(item.value)}
               isActive={selectedValue.indexOf(item.value) !== -1}
-              className="text-base"
-              contentClassName="max-h-7 w-40 min-w-40"
+              className="md:text-base text-6xl"
+              contentClassName="md:max-h-7 md:w-40 md:min-w-40 max-h-20 w-96 min-w-96 my-3 md:my-0"
               activeType="switcher"
             >
-              <div className="z-20 -my-1 flex flex-row items-center justify-center text-base font-medium">
+              <div className="z-20 -my-1 flex flex-row items-center justify-center md:text-base text-6xl font-medium">
                 {item.title}
               </div>
             </Button>

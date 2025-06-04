@@ -21,14 +21,14 @@ const ValidatorListFiltersBattery: FC = () => {
   useOnClickOutside(refTo, () => setIsToOpened(false));
 
   return (
-    <div className="px-2 py-0.5 text-lg">
-      <div className="flex min-w-9 flex-row items-center space-x-2 py-px">
-        <Image src={icons.BatterySmallIcon} className="-mr-1 mt-3.5 w-14" alt="battery" />
-        <div>Range:</div>
+    <div className="px-2 py-0.5 md:text-lg text-4xl">
+      <div className="flex min-w-9 flex-row items-center md:space-x-2 space-x-7 py-px">
+        <Image src={icons.BatterySmallIcon} className="md:-mr-1 md:mt-3.5 mt-9 md:w-14 w-56" alt="battery" />
+        <div className="hidden md:block">Range:</div>
         <div className="relative">
           <Button
             onClick={() => setIsFromOpened(!isFromOpened)}
-            contentClassName={`py-0 px-2 max-h-6 text-lg font-handjet font-normal text-highlight`}
+            contentClassName={`py-0 md:px-2 mx-10 my-2 md:my-0 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl font-handjet font-normal text-highlight`}
             className={`${isFromOpened && 'w-16'}`}
             activeType="switcher"
           >
@@ -36,7 +36,7 @@ const ValidatorListFiltersBattery: FC = () => {
           </Button>
           <div
             ref={refFrom}
-            className={`${isFromOpened ? 'block' : 'hidden'} absolute left-0 top-6 z-40 flex w-16 flex-col`}
+            className={`${isFromOpened ? 'block' : 'hidden'} absolute left-0 top-6 z-40 flex md:w-16 w-44 flex-col`}
           >
             {ranges
               .filter((p) => p <= to)
@@ -45,7 +45,7 @@ const ValidatorListFiltersBattery: FC = () => {
                   key={p}
                   isActive={p === from}
                   activeType="switcher"
-                  contentClassName="py-0 px-2 max-h-6 text-lg font-handjet hover:text-highlight"
+                  contentClassName="py-0 my-4 md:my-0 px-2 mx-8 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl font-handjet font-normal hover:text-highlight"
                   onClick={() => {
                     setFrom(p);
                     setIsFromOpened(false);
@@ -56,18 +56,18 @@ const ValidatorListFiltersBattery: FC = () => {
               ))}
           </div>
         </div>
-        <div className="pl-1">to</div>
+        <div className="pl-1 text-6xl md:text-lg">to</div>
         <div className="relative">
           <Button
             onClick={() => setIsToOpened(!isToOpened)}
-            contentClassName="py-0 px-2 max-h-6 text-lg font-handjet text-highlight"
+            contentClassName="py-0 md:px-2 mx-10 my-2 md:my-0 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl font-handjet font-normal text-highlight"
             activeType="switcher"
           >
             {to}%
           </Button>
           <div
             ref={refTo}
-            className={`${isToOpened ? 'block' : 'hidden'} absolute left-0 top-6 z-40 flex w-16 flex-col`}
+            className={`${isToOpened ? 'block' : 'hidden'} absolute left-0 top-6 z-40 flex md:w-16 w-44 flex-col`}
           >
             {rangesTo
               .filter((p) => p >= from)
@@ -76,7 +76,7 @@ const ValidatorListFiltersBattery: FC = () => {
                   key={p}
                   isActive={p === to}
                   activeType="switcher"
-                  contentClassName="py-0 px-2 max-h-6 text-lg font-handjet hover:text-highlight"
+                  contentClassName="py-0 my-4 md:my-0 md:px-2 mx-10 md:mx-0 max-h-14 md:max-h-6 md:text-lg text-7xl font-handjet font-normal hover:text-highlight"
                   onClick={() => {
                     setTo(p);
                     setIsToOpened(false);

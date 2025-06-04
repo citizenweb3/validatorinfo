@@ -33,7 +33,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
       <div className={`${!hideClose && 'pt-6'} relative p-3`}>
           {!hideClose && (
             <div
-              className={`absolute right-0 top-0 z-50 h-9 w-9 bg-close bg-contain hover:bg-close_h active:bg-close_a`}
+              className={`absolute right-0 top-0 z-50 md:h-9 md:w-9 w-24 h-24 bg-close bg-contain hover:bg-close_h active:bg-close_a`}
               onClick={(e) => {
                 e.stopPropagation();
                 e.preventDefault();
@@ -42,7 +42,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
             />
           )}
           {title && <div className="ml-9 text-lg text-highlight">{title}</div>}
-          <div className={`${maxHeight} overflow-y-auto overflow-x-hidden`}>{children}</div>
+          <div className={`${maxHeight} md:overflow-y-auto md:overflow-x-hidden`}>{children}</div>
         </div>
       </div>
     </div>
