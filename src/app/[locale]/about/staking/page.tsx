@@ -11,6 +11,8 @@ import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
+import TextLink from '@/components/common/text-link';
+import RichPageTitle from '@/components/common/rich-page-title';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -23,7 +25,13 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
     <div>
       <Story src="staking" alt="Pixelated, 90s game-style characters stake on validator and mining pool rewards" />
       <TabList page="AboutPage" tabs={aboutTabs} />
-      <PageTitle text={t('Staking.title')} />
+      <RichPageTitle>
+        <div className="m-4">
+          {t.rich('Staking.title', {
+            stakingCitizen: (chunks) => <TextLink content={chunks} href="https://staking.citizenweb3.com/" target="_blank"/>,
+          })}
+        </div>
+      </RichPageTitle>
       <SubDescription text={t('Staking.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <SubTitle text="Networks" size="h2" />
       <div className="grid grid-cols-4 gap-4 py-4">
