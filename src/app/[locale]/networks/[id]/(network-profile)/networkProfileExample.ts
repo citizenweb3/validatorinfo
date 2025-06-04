@@ -45,27 +45,11 @@ export const networkProfileExample = {
   ],
   totalsMetrics: [
     {
-      title: 'amount of wallets',
-      data: 85.98,
-    },
-    {
       title: 'total amount of tx',
       data: 0.71,
     },
   ],
   networkOverview: [
-    {
-      title: 'active validators',
-      data: 234,
-    },
-    {
-      title: 'unbonding time',
-      data: 21,
-    },
-    {
-      title: 'community tax',
-      data: 10,
-    },
     {
       title: 'proposal creation cost',
       data: 50,
@@ -246,16 +230,8 @@ export const networkProfileExample = {
       data: 12,
     },
     {
-      title: '% of tokens staked',
-      data: 12,
-    },
-    {
       title: 'reward to payout',
       data: 12,
-    },
-    {
-      title: 'fdv',
-      data: 90,
     },
     {
       title: 'circulating tokens',

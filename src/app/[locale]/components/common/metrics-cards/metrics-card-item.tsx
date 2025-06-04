@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 import MetricsCardsModal from '@/components/common/metrics-cards/metrics-cards-modal';
 import { Size } from '@/components/common/plus-button';
@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 
 interface OwnProps {
   title: string;
-  data: number | string;
+  data: number | string | ReactNode;
   isPercents?: boolean;
   isModal?: boolean;
   modalTitle?: string;
