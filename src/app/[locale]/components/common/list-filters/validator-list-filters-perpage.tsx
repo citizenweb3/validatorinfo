@@ -10,13 +10,13 @@ interface OwnProps {
 }
 
 const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
-  <div className="md:text-lg text-7xl">
+  <div className="md:text-lg text-6xl sm:text-5xl">
     <div className="flex min-w-9 flex-row items-center md:space-x-2 space-x-6 py-px">
       <div>Rows:</div>
         <Button
           isActive={value === 25}
           onClick={() => onChange(25)}
-          contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl font-handjet hover:text-highlight"
+          contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl sm:text-6xl font-handjet hover:text-highlight"
           activeType="switcher"
         >
           25
@@ -24,7 +24,7 @@ const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
       <Button
         isActive={value === 50}
         onClick={() => onChange(50)}
-        contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl font-handjet hover:text-highlight"
+        contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl sm:text-6xl font-handjet hover:text-highlight"
         activeType="switcher"
       >
         50
@@ -32,7 +32,7 @@ const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
       <Button
         isActive={value === 100}
         onClick={() => onChange(100)}
-        contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl font-handjet hover:text-highlight"
+        contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl sm:text-6xl font-handjet hover:text-highlight"
         activeType="switcher"
       >
         100

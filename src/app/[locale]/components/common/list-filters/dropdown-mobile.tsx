@@ -20,7 +20,7 @@ const DropdownMobile: FC<OwnProps> = ({filterValues, title, selectedValue, onCha
   useOnClickOutside(ref, () => setIsOpened(false));
 
   return (
-    <div className="relative max-h-44 font-sfpro text-6xl mt-14 mb-6" ref={ref}>
+    <div className="relative max-h-44 font-sfpro text-6xl sm:text-5xl mt-14 mb-6" ref={ref}>
       <Button
         onClick={() => setIsOpened(!isOpened)}
         contentClassName={`flex justify-between mx-4`}
@@ -43,7 +43,7 @@ const DropdownMobile: FC<OwnProps> = ({filterValues, title, selectedValue, onCha
               contentClassName="max-h-20 w-96 min-w-96 my-3"
               activeType="switcher"
             >
-              <div className="z-20 -my-1 flex flex-row items-center justify-center text-6xl font-medium">
+              <div className="z-20 -my-1 flex flex-row items-center justify-center text-6xl sm:text-5xl font-medium">
                 {item.title}
               </div>
             </Button>

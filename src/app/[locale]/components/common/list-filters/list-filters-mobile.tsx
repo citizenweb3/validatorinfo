@@ -102,13 +102,13 @@ const ListFiltersMobile: FC<OwnProps> = ({
   };
 
   return (
-    <div ref={wrapperRef} className="relative flex items-center justify-end mt-20 mb-14">
+    <div ref={wrapperRef} className="relative flex items-center justify-end mt-20 mb-14 sm:mt-12 sm:mb-6">
       <Button
         activeType="switcher"
         onClick={() => setIsModalOpened((p) => !p)}
         isActive={isModalOpened}
       >
-        <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-6xl font-medium mx-10">
+        <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-6xl sm:text-5xl font-medium mx-10">
           <div>{t('Customize')}</div>
           <PlusButton size="lg" isOpened={isModalOpened} />
         </div>

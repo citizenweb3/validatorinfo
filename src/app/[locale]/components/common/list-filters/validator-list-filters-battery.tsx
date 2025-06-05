@@ -21,14 +21,14 @@ const ValidatorListFiltersBattery: FC = () => {
   useOnClickOutside(refTo, () => setIsToOpened(false));
 
   return (
-    <div className="px-2 py-0.5 md:text-lg text-4xl">
+    <div className="px-2 py-0.5">
       <div className="flex min-w-9 flex-row items-center md:space-x-2 space-x-7 py-px">
-        <Image src={icons.BatterySmallIcon} className="md:-mr-1 md:mt-3.5 mt-9 md:w-14 w-56" alt="battery" />
-        <div className="hidden md:block">Range:</div>
+        <Image src={icons.BatterySmallIcon} className="md:-mr-1 md:mt-3.5 mt-9 md:w-14 w-56 sm:w-48" alt="battery" />
+        <div className="hidden md:block md:text-lg">Range:</div>
         <div className="relative">
           <Button
             onClick={() => setIsFromOpened(!isFromOpened)}
-            contentClassName={`py-0 md:px-2 mx-10 my-2 md:my-0 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl font-handjet font-normal text-highlight`}
+            contentClassName={`py-0 md:px-2 mx-10 my-2 md:my-0 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl sm:text-6xl font-handjet font-normal text-highlight`}
             className={`${isFromOpened && 'w-16'}`}
             activeType="switcher"
           >
@@ -45,7 +45,7 @@ const ValidatorListFiltersBattery: FC = () => {
                   key={p}
                   isActive={p === from}
                   activeType="switcher"
-                  contentClassName="py-0 my-4 md:my-0 px-2 mx-8 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl font-handjet font-normal hover:text-highlight"
+                  contentClassName="py-0 my-4 md:my-0 px-2 mx-8 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl sm:text-6xl font-handjet font-normal hover:text-highlight"
                   onClick={() => {
                     setFrom(p);
                     setIsFromOpened(false);
@@ -60,7 +60,7 @@ const ValidatorListFiltersBattery: FC = () => {
         <div className="relative">
           <Button
             onClick={() => setIsToOpened(!isToOpened)}
-            contentClassName="py-0 md:px-2 mx-10 my-2 md:my-0 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl font-handjet font-normal text-highlight"
+            contentClassName="py-0 md:px-2 mx-10 my-2 md:my-0 md:mx-0 max-h-12 md:max-h-6 md:text-lg text-7xl sm:text-6xl font-handjet font-normal text-highlight"
             activeType="switcher"
           >
             {to}%
@@ -76,7 +76,7 @@ const ValidatorListFiltersBattery: FC = () => {
                   key={p}
                   isActive={p === to}
                   activeType="switcher"
-                  contentClassName="py-0 my-4 md:my-0 md:px-2 mx-10 md:mx-0 max-h-14 md:max-h-6 md:text-lg text-7xl font-handjet font-normal hover:text-highlight"
+                  contentClassName="py-0 my-4 md:my-0 md:px-2 mx-10 md:mx-0 max-h-14 md:max-h-6 md:text-lg text-7xl sm:text-6xl font-handjet font-normal hover:text-highlight"
                   onClick={() => {
                     setTo(p);
                     setIsToOpened(false);

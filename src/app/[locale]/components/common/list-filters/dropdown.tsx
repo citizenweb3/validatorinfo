@@ -32,7 +32,7 @@ const Dropdown: FC<OwnProps> = ({filterValues, title, selectedValue, onChanged }
         <TriangleButton direction={isOpened ? 't' : 'b'} />
       </Button>
       {isOpened && (
-        <div className="absolute top-8 z-40">
+        <div className="absolute top-8 z-40 flex-col">
           {filterValues.map((item) => (
             <Button
               key={item.value}

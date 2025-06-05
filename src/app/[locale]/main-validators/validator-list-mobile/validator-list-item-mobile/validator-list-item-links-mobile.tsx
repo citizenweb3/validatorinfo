@@ -14,7 +14,7 @@ const ValidatorListItemLinksMobile: FC<OwnProps> = ({ validator }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
   const t = useTranslations('common');
 
-  let size = 'h-40 w-40 min-w-40 min-h-40';
+  let size = 'h-40 w-40 min-w-40 min-h-40 sm:h-32 sm:w-32 sm:min-w-32 sm:min-h-32';
 
   return (
     <div className="flex items-center justify-center space-x-0.5">
@@ -36,7 +36,7 @@ const ValidatorListItemLinksMobile: FC<OwnProps> = ({ validator }) => {
             className="absolute -top-6 right-0 z-40"
           >
             <div
-              className="flex max-h-96 w-[30rem] flex-row flex-wrap items-center justify-center mt-14 mb-10 md:mt-0 md:mb-0">
+              className="flex max-h-96 w-[30rem] sm:w-[25rem] flex-row flex-wrap items-center justify-center mt-14 mb-10 md:mt-0 md:mb-0">
               {validator?.website ? (
                 <Link href={validator.website} className={`${size}`} target="_blank">
                   <div className={`${size} bg-web bg-contain bg-no-repeat hover:bg-web_h`} />
