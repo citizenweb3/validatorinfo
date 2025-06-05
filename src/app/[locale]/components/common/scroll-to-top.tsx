@@ -32,12 +32,12 @@ const ScrollToTop: FC = () => {
           behavior: 'smooth',
         });
       }}
-      className={`${isShowing ? 'right-0' : '-right-10'} group/btt fixed bottom-4 h-14 w-9 !min-w-6`}
+      className={`${isShowing ? 'right-0' : '-right-10'} hidden md:block group/btt fixed bottom-4 h-14 w-9 !min-w-6`}
       contentClassName="!p-0"
     >
       <div className="relative h-14 w-9">
         <div
-          className={`hidden md:block absolute left-1/2 top-1/2 min-h-7 min-w-10 -translate-x-1/2 -translate-y-1/2 rotate-90 transform bg-hide bg-contain bg-no-repeat group-hover/btt:bg-hide_h group-active/btt:bg-hide_a`}
+          className={`absolute left-1/2 top-1/2 min-h-7 min-w-10 -translate-x-1/2 -translate-y-1/2 rotate-90 transform bg-hide bg-contain bg-no-repeat group-hover/btt:bg-hide_h group-active/btt:bg-hide_a`}
         />
       </div>
     </Button>
