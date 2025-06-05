@@ -18,17 +18,13 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
 
   const formatData = (title: string, data: number | string) => {
     switch (title) {
-      case 'unbonding time':
       case 'voting period':
-      case 'community tax':
       case '% of comm pool to total supply':
         return `${data}%`;
       case 'proposal creation cost':
         return `${data} ${chain?.denom ?? 'ATOM'}`;
       case 'comm pool value in usd':
         return `$${data.toLocaleString('en-En')}`;
-      case 'active validators':
-        return `${activeNodes?.length ?? data}`;
       default:
         return data;
     }
@@ -37,6 +33,34 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   return (
     <div className="mt-5">
       <SubTitle text={t('Network Overview')} />
+      <div className="mt-2 flex w-full hover:bg-bgHover">
+        <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
+          {t('active validators')}
+        </div>
+        <div
+          className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+          {activeNodes?.length ?? '234'}
+        </div>
+      </div>
+      <div className="mt-2 flex w-full hover:bg-bgHover">
+        <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
+          {t('unbonding time')}
+        </div>
+        <div
+          className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+          {chain?.unbondingTime ?? 600}s
+        </div>
+      </div>
+      {chain?.communityTax && (
+        <div className="mt-2 flex w-full hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
+            {t('community tax')}
+          </div>
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {chain?.communityTax}%
+          </div>
+        </div>)}
       {networkProfileExample.networkOverview.map((item) => (
         <div key={item.title} className="mt-2 flex w-full hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">

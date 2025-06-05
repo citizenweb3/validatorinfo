@@ -43,7 +43,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('slip44')}
         </div>
         <div className="font-handjet text-lg flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 hover:text-highlight">
-          118
+          {chain?.coinType}
         </div>
       </div>
       <div className="mt-4 flex w-full hover:bg-bgHover">

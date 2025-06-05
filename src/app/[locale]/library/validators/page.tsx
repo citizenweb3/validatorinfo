@@ -8,6 +8,8 @@ import PlusButton from '@/components/common/plus-button';
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
+import TextLink from '@/components/common/text-link';
+import RichPageTitle from '@/components/common/rich-page-title';
 
 interface PageProps {
   params: NextPageWithLocale;
@@ -20,7 +22,13 @@ const LibraryValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { 
 
   return (
     <div>
-      <PageTitle text={t('Validators.title')} />
+      <RichPageTitle>
+        <div className="m-4">
+          {t.rich('Validators.title', {
+            validatorInfoLink: (chunks) => <TextLink content={chunks} href="/" />,
+          })}
+        </div>
+      </RichPageTitle>
       <SubDescription text={t('Validators.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <LibraryTagsFilter selectedTags={tags} />
       <Letters />

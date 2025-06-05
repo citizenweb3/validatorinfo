@@ -37,7 +37,7 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <TokenPrice denom={chain?.denom} price={tokenPrice ? tokenPrice.value : 12.43} />
-      <DistributionGiniParameters chainId={chainId} />
+      <DistributionGiniParameters chain={chain} />
       <SubTitle text={t('Token Price')} />
       <TokenPriceChart />
       <SubTitle text={t('Revenue vs Capital Flow')} />

@@ -12,7 +12,7 @@ const { logWarn } = logger('init-chains');
 export const ecosystemParams = [
   {
     name: 'cosmos',
-    prettyName: 'Cosmos Hub',
+    prettyName: 'Cosmos',
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
   },
   {

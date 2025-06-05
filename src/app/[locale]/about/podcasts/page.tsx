@@ -13,6 +13,8 @@ import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
+import TextLink from '@/components/common/text-link';
+import RichPageTitle from '@/components/common/rich-page-title';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -25,7 +27,13 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
     <div>
       <Story src="podcast" alt="Pixelated, 90s game-style characters recording the Citizen Web3 podcast together" />
       <TabList page="AboutPage" tabs={aboutTabs} />
-      <PageTitle text={t('Podcast.title')} />
+      <RichPageTitle>
+        <div className="m-4">
+          {t.rich('Podcast.title', {
+            citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/"/>,
+          })}
+        </div>
+      </RichPageTitle>
       <div>
         <SubDescription text={t('Podcast.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
         <div className="m-4">

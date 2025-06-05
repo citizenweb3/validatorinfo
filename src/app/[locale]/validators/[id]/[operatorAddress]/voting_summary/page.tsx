@@ -3,7 +3,6 @@ import NodeVotes from '@/app/validators/[id]/[operatorAddress]/voting_summary/no
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
-import validatorService from '@/services/validator-service';
 import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
@@ -14,7 +13,7 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const defaultPerPage = 1;
+const defaultPerPage = 10;
 
 const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
     params: { locale, id, operatorAddress },
@@ -24,12 +23,8 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
 
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'name') ?? 'name';
-  const order = (q.order as SortDirection) ?? 'asc';
-
-  const validatorId = parseInt(id);
-  const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
-  const node = list.find((item) => item.operatorAddress === operatorAddress);
+  const sortBy = (q.sortBy as 'date') ?? 'date';
+  const order = (q.order as SortDirection) ?? 'desc';
 
   return (
     <div className="mb-14">
@@ -39,7 +34,7 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
           {t('show same opinion')}
         </RoundedButton>
       </div>
-      <NodeVotes page={'VotingSummaryPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} chainId={node?.chain.id ?? 1} />
+      <NodeVotes page={'VotingSummaryPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} operatorAddress={operatorAddress} />
     </div>
   );
 };
