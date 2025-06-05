@@ -22,8 +22,7 @@ const ValidatorsMobile: FC<OwnProps> = async ({ page, sort, perPage, ecosystems 
         perPage={perPage}
         selectedEcosystems={ecosystems}
         isBattery
-        isEcosystems
-        isNetworkStage />
+        isEcosystems />
       <table className="relative my-4 w-full table-auto border-collapse">
         <thead>
         <tr className="sticky top-0 z-30 w-full bg-table_header">

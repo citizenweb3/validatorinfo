@@ -5,12 +5,13 @@ import { usePathname, useRouter } from 'next/navigation';
 import { FC, useRef, useState } from 'react';
 
 import Button from '@/components/common/button';
-import Dropdown from '@/components/common/list-filters/dropdown';
 import ValidatorListFiltersBattery from '@/components/common/list-filters/validator-list-filters-battery';
 import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
 import PlusButton from '@/components/common/plus-button';
-import BaseModal from '@/components/common/modal/base-modal';
 import { useOnClickOutside } from 'usehooks-ts';
+import BaseModalMobile from '@/components/common/modal/base-modal-mobile';
+import { ecosystemsDropdown, nodeStatus, setPositions, stages } from '@/components/common/list-filters/list-filters';
+import DropdownMobile from '@/components/common/list-filters/dropdown-mobile';
 
 interface OwnProps {
   selectedEcosystems?: string[];
@@ -25,56 +26,27 @@ interface OwnProps {
   isNetworkStage?: boolean;
 }
 
-export const stages = [
-  { value: 'mainnet', title: 'Mainnet' },
-  { value: 'testnet', title: 'Testnet' },
-];
-
-export const nodeStatus = [
-  { value: 'jailed', title: 'Jailed' },
-  { value: 'unjailed', title: 'Unjailed' },
-  { value: 'all', title: 'All' },
-];
-
-export const setPositions = [
-  { value: 'active_set', title: 'Active Set' },
-  { value: 'not_active_set', title: 'Not Active Set' },
-];
-
-export const ecosystemsDropdown = [
-  { value: 'cosmos', title: 'Cosmos' },
-  { value: 'namada', title: 'Namada' },
-  { value: 'solana', title: 'Solana' },
-  { value: 'ethereum', title: 'Ethereum' },
-];
-
 const ListFiltersMobile: FC<OwnProps> = ({
-                                           perPage,
-                                           selectedEcosystems = [],
-                                           selectedNodeStatus = [],
-                                           selectedSetPosition = [],
-                                           selectedNetworkStage = [],
-                                           isBattery = false,
-                                           isEcosystems = false,
-                                           isNodeStatus = false,
-                                           isSetPositions = false,
-                                           isNetworkStage = false,
-                                         }) => {
+    perPage,
+    selectedEcosystems = [],
+    selectedNodeStatus = [],
+    selectedSetPosition = [],
+    selectedNetworkStage = [],
+    isBattery = false,
+    isEcosystems = false,
+    isNodeStatus = false,
+    isSetPositions = false,
+    isNetworkStage = false,
+  }) => {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations('HomePage.Table');
 
-  /**
-   * Модал теперь является dropdown‑ом, привязанным к кнопке.
-   * Делается через относительный контейнер + BaseModal с isRelative.
-   */
   const [isModalOpened, setIsModalOpened] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  // Закрывать при клике вне области фильтров
   useOnClickOutside(wrapperRef, () => setIsModalOpened(false));
 
-  /* ----------------------- handlers ----------------------- */
   const onPerPageChanged = (pp: number) => {
     const newSp = new URL(location.href).searchParams;
     newSp.set('pp', pp.toString());
@@ -141,8 +113,7 @@ const ListFiltersMobile: FC<OwnProps> = ({
           <PlusButton size="lg" isOpened={isModalOpened} />
         </div>
       </Button>
-
-      <BaseModal
+      <BaseModalMobile
         opened={isModalOpened}
         onClose={() => setIsModalOpened(false)}
         isRelative
@@ -152,15 +123,39 @@ const ListFiltersMobile: FC<OwnProps> = ({
           {isBattery && <ValidatorListFiltersBattery />}
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
           {isEcosystems && (
-            <Dropdown
+            <DropdownMobile
               filterValues={ecosystemsDropdown}
               title={t('Ecosystems')}
               selectedValue={selectedEcosystems}
               onChanged={onChainsChanged}
             />
           )}
+          {isNodeStatus && (
+            <DropdownMobile
+              filterValues={nodeStatus}
+              title={t('Node Status')}
+              selectedValue={selectedNodeStatus}
+              onChanged={onNodeStatusChanged}
+            />
+          )}
+          {isSetPositions && (
+            <DropdownMobile
+              filterValues={setPositions}
+              title={t('Set Position')}
+              selectedValue={selectedSetPosition}
+              onChanged={onSetPositionChanged}
+            />
+          )}
+          {isNetworkStage && (
+            <DropdownMobile
+              filterValues={stages}
+              title={t('Network Stage')}
+              selectedValue={selectedNetworkStage}
+              onChanged={onNetworkStageChanged}
+            />
+          )}
         </div>
-      </BaseModal>
+      </BaseModalMobile>
     </div>
   );
 };

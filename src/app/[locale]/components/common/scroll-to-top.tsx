@@ -37,7 +37,7 @@ const ScrollToTop: FC = () => {
     >
       <div className="relative h-14 w-9">
         <div
-          className={`absolute left-1/2 top-1/2 min-h-7 min-w-10 -translate-x-1/2 -translate-y-1/2 rotate-90 transform bg-hide bg-contain bg-no-repeat group-hover/btt:bg-hide_h group-active/btt:bg-hide_a`}
+          className={`hidden md:block absolute left-1/2 top-1/2 min-h-7 min-w-10 -translate-x-1/2 -translate-y-1/2 rotate-90 transform bg-hide bg-contain bg-no-repeat group-hover/btt:bg-hide_h group-active/btt:bg-hide_a`}
         />
       </div>
     </Button>

@@ -1,11 +1,10 @@
 import { Validator } from '@prisma/client';
 import Link from 'next/link';
 import { FC, useState } from 'react';
-
-import BaseModal from '@/components/common/modal/base-modal';
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
 import { useTranslations } from 'next-intl';
+import BaseModalMobile from '@/components/common/modal/base-modal-mobile';
 
 interface OwnProps {
   validator: Validator;
@@ -30,13 +29,14 @@ const ValidatorListItemLinksMobile: FC<OwnProps> = ({ validator }) => {
           />
         </div>
         {isModalOpened && (
-          <BaseModal
+          <BaseModalMobile
             opened={true}
             onClose={() => setIsModalOpened(false)}
             isRelative
             className="absolute -top-6 right-0 z-40"
           >
-            <div className="flex max-h-96 w-[30rem] flex-row flex-wrap items-center justify-center mt-14 mb-10 md:mt-0 md:mb-0">
+            <div
+              className="flex max-h-96 w-[30rem] flex-row flex-wrap items-center justify-center mt-14 mb-10 md:mt-0 md:mb-0">
               {validator?.website ? (
                 <Link href={validator.website} className={`${size}`} target="_blank">
                   <div className={`${size} bg-web bg-contain bg-no-repeat hover:bg-web_h`} />
@@ -71,7 +71,7 @@ const ValidatorListItemLinksMobile: FC<OwnProps> = ({ validator }) => {
                 </Tooltip>
               )}
             </div>
-          </BaseModal>
+          </BaseModalMobile>
         )}
       </>
     </div>
