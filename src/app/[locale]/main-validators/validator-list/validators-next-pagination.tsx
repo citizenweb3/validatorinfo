@@ -19,7 +19,7 @@ const ValidatorsNextPagination: FC = ({}) => {
                 window.location.reload();
               }
             }}
-            className="hover:text-shadowed group flex items-center border-b border-bgSt px-2 font-handjet text-base hover:text-highlight active:border-none"
+            className="mt-2 md:mt-0 hover:text-shadowed group flex items-center border-b border-bgSt px-2 font-handjet md:text-base text-6xl sm:text-5xl hover:text-highlight active:border-none"
           >
             <div className="mr-2">NEXT</div> <TriangleButton direction="r" />
           </Link>

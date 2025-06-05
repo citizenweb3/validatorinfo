@@ -6,6 +6,7 @@ import { NextPageWithLocale } from '@/i18n';
 import { getTranslations } from 'next-intl/server';
 import PageTitle from '@/components/common/page-title';
 import SubDescription from '@/components/sub-description';
+import ValidatorsMobile from '@/app/main-validators/validator-list-mobile/validators-mobile';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -27,15 +28,28 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
   return (
     <div>
       <TabList page="HomePage" tabs={mainTabs} />
-      <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2 mb-2'} />
-      <Validators
-        page="HomePage"
-        sort={{ sortBy, order }}
-        perPage={validatorsPerPage}
-        ecosystems={ecosystems}
-        currentPage={currentPage}
-      />
+      <div className="hidden md:block">
+        <PageTitle text={t('title')} />
+        <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2 mb-2'} />
+      </div>
+      <div className="hidden md:block">
+        <Validators
+          page="HomePage"
+          sort={{ sortBy, order }}
+          perPage={validatorsPerPage}
+          ecosystems={ecosystems}
+          currentPage={currentPage}
+        />
+      </div>
+      <div className="block md:hidden">
+        <ValidatorsMobile
+          page="HomePage"
+          sort={{ sortBy, order }}
+          perPage={validatorsPerPage}
+          ecosystems={ecosystems}
+          currentPage={currentPage}
+        />
+      </div>
     </div>
   );
 };
