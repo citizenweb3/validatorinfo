@@ -23,8 +23,8 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
     : '';
 
   return (
-    <tr className="group font-handjet hover:bg-bgHover hover:text-highlight">
-      <td className="flex border-b border-black py-2 font-handjet text-lg active:border-bgSt">
+    <tr className="font-handjet">
+      <td className="flex border-b border-black py-2 font-handjet text-lg active:border-bgSt hover:bg-bgHover hover:text-highlight">
         <Image
           src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon}
           alt={'node status'}
@@ -40,27 +40,27 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
           <CopyButton value={item.operatorAddress} />
         </div>
       </td>
-      <td className="border-b border-black py-2 font-sfpro text-base active:border-bgSt">
+      <td className="border-b border-black py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
         <Link href={validatorLink}>
           <div className="text-center">{item.validatorId ? item.moniker : '-'}</div>
         </Link>
       </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
         <Link href={`/validators?p=1&ecosystems=${item.chain.ecosystem}`}>
           <div className="text-center">{_.capitalize(item.chain.ecosystem)}</div>
         </Link>
       </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
         <Link href={`/networks/${item.chainId}/overview`}>
           <div className="text-center">{item.chain.prettyName}</div>
         </Link>
       </td>
-      <td className="border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt">
+      <td className="border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt hover:bg-bgHover hover:text-highlight">
         <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
           <div className="text-center">{formatCash(tokenDelegatorShares)}</div>
         </Tooltip>
       </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
         {item.uptime ? (
           <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
@@ -73,7 +73,7 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
           </div>
         )}
       </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
           <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
             <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>

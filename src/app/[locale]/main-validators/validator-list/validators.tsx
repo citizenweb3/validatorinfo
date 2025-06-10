@@ -20,8 +20,7 @@ const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], 
         perPage={perPage}
         selectedEcosystems={ecosystems}
         isBattery
-        isEcosystems
-        isNetworkStage />
+        isEcosystems />
       <div>
         <table className="relative my-4 w-full table-auto border-collapse">
           <thead>
