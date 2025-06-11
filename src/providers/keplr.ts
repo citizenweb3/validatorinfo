@@ -2,6 +2,7 @@ import { Window as KeplrWindow } from '@keplr-wallet/types';
 import { Chain } from '@prisma/client';
 
 import { WalletProvider } from '.';
+import { ChainWithParams } from '@/services/chain-service';
 
 declare global {
   interface Window extends KeplrWindow {}
@@ -18,7 +19,7 @@ class KeplrProvider extends WalletProvider {
     wallet.enable(chainId);
   }
 
-  async suggestChain(chain: Chain & { rpcNode: string; lcdNode: string }): Promise<void> {
+  async suggestChain(chain: ChainWithParams & { rpcNode: string; lcdNode: string }): Promise<void> {
     const wallet = this.getWallet();
     await wallet.experimentalSuggestChain({
       chainId: chain.chainId,
@@ -26,29 +27,29 @@ class KeplrProvider extends WalletProvider {
       rpc: chain.rpcNode,
       rest: chain.lcdNode,
       bip44: {
-        coinType: chain.coinType,
+        coinType: chain.params?.coinType ?? 0,
       },
       bech32Config: {
-        bech32PrefixAccAddr: chain.bech32Prefix,
-        bech32PrefixAccPub: chain.bech32Prefix + 'pub',
-        bech32PrefixValAddr: chain.bech32Prefix + 'valoper',
-        bech32PrefixValPub: chain.bech32Prefix + 'valoperpub',
-        bech32PrefixConsAddr: chain.bech32Prefix + 'valcons',
-        bech32PrefixConsPub: chain.bech32Prefix + 'valconspub',
+        bech32PrefixAccAddr: chain.params?.bech32Prefix ?? '',
+        bech32PrefixAccPub: chain.params?.bech32Prefix + 'pub',
+        bech32PrefixValAddr: chain.params?.bech32Prefix + 'valoper',
+        bech32PrefixValPub: chain.params?.bech32Prefix + 'valoperpub',
+        bech32PrefixConsAddr: chain.params?.bech32Prefix + 'valcons',
+        bech32PrefixConsPub: chain.params?.bech32Prefix + 'valconspub',
       },
       currencies: [
         {
-          coinDenom: chain.denom,
-          coinMinimalDenom: chain.minimalDenom,
-          coinDecimals: chain.coinDecimals,
+          coinDenom: chain.params?.denom ?? '',
+          coinMinimalDenom: chain.params?.minimalDenom ?? '',
+          coinDecimals: chain.params?.coinDecimals ?? 0,
           coinGeckoId: chain.coinGeckoId,
         },
       ],
       feeCurrencies: [
         {
-          coinDenom: chain.denom,
-          coinMinimalDenom: chain.minimalDenom,
-          coinDecimals: chain.coinDecimals,
+          coinDenom: chain.params?.denom ?? '',
+          coinMinimalDenom: chain.params?.minimalDenom ?? '',
+          coinDecimals: chain.params?.coinDecimals ?? 0,
           coinGeckoId: chain.coinGeckoId,
           gasPriceStep: {
             low: 100000,
@@ -58,9 +59,9 @@ class KeplrProvider extends WalletProvider {
         },
       ],
       stakeCurrency: {
-        coinDenom: chain.denom,
-        coinMinimalDenom: chain.minimalDenom,
-        coinDecimals: chain.coinDecimals,
+        coinDenom: chain.params?.denom ?? '',
+        coinMinimalDenom: chain.params?.minimalDenom ?? '',
+        coinDecimals: chain.params?.coinDecimals ?? 0,
         coinGeckoId: chain.coinGeckoId,
       },
     });

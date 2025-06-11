@@ -25,19 +25,24 @@ const updateChainNodeParams = async (chainNames: string[]) => {
 
       const existingChain = await db.chain.findUnique({
         where: { id: dbChain.id },
+        include: { params: true },
       });
 
       if (existingChain) {
         await db.chain.update({
           where: { id: dbChain.id },
           data: {
-            peers: params.peers ? params.peers : existingChain.peers,
-            seeds: params.seeds ? params.seeds : existingChain.seeds,
-            binaries: params.binaries ? params.binaries : existingChain.binaries,
-            genesis: params.genesis ? params.genesis : existingChain.genesis,
-            keyAlgos: params.keyAlgos ? params.keyAlgos : existingChain.keyAlgos,
-            daemonName: params.daemonName ? params.daemonName : existingChain.daemonName,
-            nodeHome: params.nodeHome ? params.nodeHome : existingChain.nodeHome,
+            params: {
+              update: {
+                peers: params.peers ? params.peers : existingChain.params?.peers,
+                seeds: params.seeds ? params.seeds : existingChain?.params?.seeds,
+                binaries: params.binaries ? params.binaries : existingChain.params?.binaries,
+                genesis: params.genesis ? params.genesis : existingChain.params?.genesis,
+                keyAlgos: params.keyAlgos ? params.keyAlgos : existingChain.params?.keyAlgos,
+                daemonName: params.daemonName ? params.daemonName : existingChain.params?.daemonName,
+                nodeHome: params.nodeHome ? params.nodeHome : existingChain.params?.nodeHome,
+              },
+            },
           },
         });
       }

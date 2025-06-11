@@ -2,17 +2,17 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
-import { Chain } from '@prisma/client';
 import formatCash from '@/utils/format-cash';
 import Tooltip from '@/components/common/tooltip';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
-  chain: Chain | null;
+  chain: ChainWithParams | null;
 }
 
 const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkStatistics');
-  const totalStaked = Number(chain?.bondedTokens) / 10 ** Number(chain?.coinDecimals);
+  const totalStaked = Number(chain?.bondedTokens) / 10 ** Number(chain?.params?.coinDecimals);
 
   return (
     <div className="grid grid-cols-2 gap-x-10">
@@ -23,7 +23,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
         <div
           className="flex w-1/2 cursor-pointer items-center py-5 pl-6 font-handjet text-lg hover:text-highlight">
           <Tooltip tooltip={totalStaked.toLocaleString()}>
-            {`${formatCash(totalStaked)} ${chain?.denom}`}
+            {`${formatCash(totalStaked)} ${chain?.params?.denom}`}
           </Tooltip>
         </div>
       </div>
