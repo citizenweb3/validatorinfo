@@ -34,12 +34,12 @@ const DelegationsItem: FC<OwnProps> = async ({ item, chainId }) => {
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt hover:text-highlight">
         <Link href={validatorLink}>
-          <div className="text-center">{item.stakedAmount.toFixed(6)} {chain?.denom}</div>
+          <div className="text-center">{item.stakedAmount.toFixed(6)} {chain?.params?.denom}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt hover:text-highlight">
         <Link href={validatorLink}>
-          <div className="text-center">{item.rewardAmount.toFixed(6)} {chain?.denom}</div>
+          <div className="text-center">{item.rewardAmount.toFixed(6)} {chain?.params?.denom}</div>
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt hover:text-highlight">

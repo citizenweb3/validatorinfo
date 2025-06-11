@@ -57,7 +57,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
             {results?.tokens.map((chain, index) => (
               <SearchItem
                 key={chain.id}
-                name={chain.denom}
+                name={chain.params?.denom ?? ''}
                 link={`/networks/${chain.id}/tokenomics`}
                 icon={chain.logoUrl ?? icons.AvatarIcon}
                 isSelected={activeIndex === (results.validators.length ?? 0) + (results.chains.length ?? 0) + index}

@@ -1,7 +1,6 @@
 import logger from '@/logger';
 import { GetNodeParamsFunction, NodeParams } from '@/server/tools/chains/chain-indexer';
 import fetchChainData from '@/server/tools/get-chain-data';
-import { bootNodes } from '@/server/tools/chains/ethereum/seeds/boot-nodes';
 
 interface ChainNodeParams {
   data: {
@@ -27,7 +26,7 @@ const getNodeParams: GetNodeParamsFunction = async (chain) => {
     const netInfo = await fetchChainData<ChainNodeParams>(chain.name, 'rest', `/eth/v1/node/peers`);
     result.peers = netInfo.data.map((peer) => `${peer.peer_id}@${peer.last_seen_p2p_address}`).join(',');
 
-    const seeds = bootNodes[chain.name] ?? [];
+    const seeds = chain.seeds ?? [];
     result.seeds = seeds.join(',');
 
   } catch (e) {
