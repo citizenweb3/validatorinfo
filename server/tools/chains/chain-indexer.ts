@@ -82,6 +82,13 @@ export interface NodeVote {
   vote: string;
 }
 
+export interface ProposalParams {
+  creationCost: number | null;
+  votingPeriod: string | null;
+  participationRate: number | null;
+  quorumThreshold: number | null;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -94,6 +101,7 @@ export type GetMissedBlocks = (chain: AddChainProps, blocksWindow?: number) => P
 export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<NodeVote[]>;
 export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
+export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -107,4 +115,5 @@ export interface ChainMethods {
   getNodesVotes: GetNodesVotes;
   getCommTax: GetCommTaxFunction;
   getWalletsAmount: GetWalletsAmount;
+  getProposalParams: GetProposalParams;
 }

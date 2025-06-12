@@ -5,10 +5,16 @@ import logger from '@/logger';
 import { NodeResult, SortDirection } from '@/server/types';
 import { fromPubkeyToValcons } from '@/utils/from-pubkey-to-valcons';
 import isUrlValid from '@/server/utils/is-url-valid';
+import { ChainWithParams } from '@/services/chain-service';
 
 const { logDebug } = logger('validator-service');
 
-const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number }): Promise<Node> => {
+const upsertNode = async (
+  chain: Chain,
+  bech32Prefix: string | undefined,
+  val: NodeResult & { validatorId?: number },
+): Promise<Node | null> => {
+
   let website = val.description.website || '';
   if (website && !website.startsWith('http')) {
     website = isUrlValid(`https://${website}`) ? `https://${website}` : '';
@@ -17,7 +23,9 @@ const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number
   let consensusAddress = '';
   switch (chain.ecosystem) {
     case 'cosmos':
-      consensusAddress = fromPubkeyToValcons(val.consensus_pubkey.key, chain.bech32Prefix);
+      consensusAddress = bech32Prefix
+        ? fromPubkeyToValcons(val.consensus_pubkey.key, bech32Prefix)
+        : '';
       break;
     case 'ethereum':
       consensusAddress = val.operator_address;
@@ -84,7 +92,7 @@ const getAll = async (
   take: number,
   sortBy: string = 'operatorAddress',
   order: SortDirection = 'asc',
-): Promise<{ nodes: (Node & { chain: Chain })[]; pages: number }> => {
+): Promise<{ nodes: (Node & { chain: ChainWithParams })[]; pages: number }> => {
   logDebug(
     `Get all nodes with ecosystems: ${ecosystems}, nodeStatus: ${nodeStatus}, skip: ${skip}, take: ${take}, sortBy: ${sortBy} - ${order}`,
   );
@@ -122,7 +130,9 @@ const getAll = async (
     take,
     orderBy,
     include: {
-      chain: true,
+      chain: {
+        include: { params: true },
+      },
     },
   });
 

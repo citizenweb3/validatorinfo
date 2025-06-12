@@ -1,18 +1,19 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
-import { Chain, Proposal } from '@prisma/client';
+import { Proposal } from '@prisma/client';
 import SubTitle from '@/components/common/sub-title';
 import {
   ecosystemsProposalsResults,
 } from '@/app/networks/[id]/(network-profile)/governance/network-proposals-list/network-proposals-item';
+import { ChainWithParams } from '@/services/chain-service';
 
 type VoteType = 'yes' | 'no' | 'veto' | 'abstain';
 type Ecosystem = keyof typeof ecosystemsProposalsResults;
 
 interface OwnProps {
   proposal: Proposal | null;
-  chain: Chain | null;
+  chain: ChainWithParams | null;
 }
 
 const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
@@ -56,7 +57,7 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
 
   const results = (['yes', 'no', 'abstain', 'veto'] as VoteType[])
     .map((vt) =>
-      getTallyResults(rawTally, chain?.coinDecimals ?? 6, vt, chain?.ecosystem as Ecosystem),
+      getTallyResults(rawTally, chain?.params?.coinDecimals ?? 6, vt, chain?.ecosystem as Ecosystem),
     ).filter(Boolean) as Exclude<ReturnType<typeof getTallyResults>, null>[];
 
 
@@ -70,7 +71,7 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
             title={t(item.title as VoteType)}
             data={item.percents.toFixed(2)}
             isPercents
-            addLineData={`${item.amount.toFixed(2).toLocaleString()} ${chain?.denom}`}
+            addLineData={`${item.amount.toFixed(2).toLocaleString()} ${chain?.params?.denom}`}
             className="pb-4 pt-2.5"
             dataClassName="mt-2"
             addLineClassName="font-handjet font-thin text-lg -mt-1"

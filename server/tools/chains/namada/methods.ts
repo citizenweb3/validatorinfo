@@ -17,6 +17,12 @@ const chainMethods: ChainMethods = {
   getNodesVotes,
   getCommTax: async () => null,
   getWalletsAmount: async () => null,
+  getProposalParams: async () => ({
+    creationCost: null,
+    votingPeriod: null,
+    participationRate: null,
+    quorumThreshold: null,
+  }),
 };
 
 export default chainMethods;

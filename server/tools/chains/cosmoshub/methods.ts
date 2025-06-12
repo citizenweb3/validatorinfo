@@ -9,6 +9,7 @@ import getSlashingParams from '@/server/tools/chains/cosmoshub/get-slashing-para
 import getMissedBlocks from '@/server/tools/chains/cosmoshub/get-missed-blocks';
 import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
+import getProposalParams from '@/server/tools/chains/cosmoshub/get-proposal-params';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -22,6 +23,7 @@ const chainMethods: ChainMethods = {
   getNodesVotes: () => Promise.resolve([]),
   getCommTax,
   getWalletsAmount,
+  getProposalParams,
 };
 
 export default chainMethods;

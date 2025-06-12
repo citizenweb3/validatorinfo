@@ -3,9 +3,9 @@ import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 
-const { logError, logInfo } = logger('get-staking-params');
+const { logError, logInfo } = logger('update-proposal-params');
 
-const updateChainStakingParams = async (chainNames: string[]) => {
+const updateProposalParams = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
     const chainMethods = getChainMethods(chainName);
@@ -20,24 +20,29 @@ const updateChainStakingParams = async (chainNames: string[]) => {
       }
       if (dbChain.hasValidators) {
         logInfo(`${chainName} updating`);
-        const params = await chainMethods.getStakingParams(chainParams);
-        logInfo(`${chainName} Staking params: ${JSON.stringify(params)}`);
+        const params = await chainMethods.getProposalParams(chainParams);
 
         await db.chain.update({
           where: { id: dbChain.id },
           data: {
             params: {
-              update: { ...params },
+              update: {
+                votingPeriod: params.votingPeriod ?? null,
+                proposalCreationCost: params.creationCost ?? null,
+                votingParticipationRate: params.participationRate ?? null,
+                quorumThreshold: params.quorumThreshold ?? null,
+              },
             },
           },
         });
+
       } else {
         logInfo(`${chainName} has no validators`);
       }
     } catch (e) {
-      logError("Can't fetch staking params: ", e);
+      logError(`'Can't fetch proposal params for chain ${chainParams.name}: ${e}`);
     }
   }
 };
 
-export default updateChainStakingParams;
+export default updateProposalParams;

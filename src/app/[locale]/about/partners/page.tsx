@@ -1,7 +1,6 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import PartnerItem from '@/app/about/partners/partner-item';
-import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
@@ -36,9 +35,9 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
       <TabList page="AboutPage" tabs={aboutTabs} />
       <RichPageTitle>
         <div className="m-4">
-            {t.rich('Partners.title', {
-              citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/" target="_blank"/>,
-            })}
+          {t.rich('Partners.title', {
+            citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/" target="_blank" />,
+          })}
         </div>
       </RichPageTitle>
       <SubDescription text={t('Partners.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />

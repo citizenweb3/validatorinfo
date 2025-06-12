@@ -1,7 +1,7 @@
 import { getOfflineSigner } from '@cosmostation/cosmos-client';
 import { cosmos } from '@cosmostation/extension-client';
 import { AddChainParams } from '@cosmostation/extension-client/types/message';
-import { Chain } from '@prisma/client';
+import { ChainWithParams } from '@/services/chain-service';
 
 import { WalletProvider } from '.';
 
@@ -17,7 +17,7 @@ class CosmostationProvider extends WalletProvider {
     client.getAccount(chainId);
   }
 
-  async suggestChain(chain: Chain & { rpcNode: string; lcdNode: string }) {
+  async suggestChain(chain: ChainWithParams & { rpcNode: string; lcdNode: string }) {
     const client = await this.getWallet();
     const activeChains = await client.getActivatedChainIds();
     if (activeChains && activeChains.find((activeChain) => chain.chainId === activeChain)) return;
@@ -25,13 +25,13 @@ class CosmostationProvider extends WalletProvider {
     const chainConfig: AddChainParams = {
       chainId: chain.chainId,
       chainName: chain.name,
-      addressPrefix: chain.bech32Prefix,
-      baseDenom: chain.minimalDenom,
-      displayDenom: chain.denom,
+      addressPrefix: chain.params?.bech32Prefix ?? '',
+      baseDenom: chain.params?.minimalDenom ?? '',
+      displayDenom: chain.params?.denom ?? '',
       restURL: chain.lcdNode,
       coinGeckoId: chain.coinGeckoId,
-      coinType: chain.coinType.toString(),
-      decimals: chain.coinDecimals,
+      coinType: chain.params?.coinType.toString(),
+      decimals: chain.params?.coinDecimals,
       gasRate: {
         average: '200000',
         low: '100000',

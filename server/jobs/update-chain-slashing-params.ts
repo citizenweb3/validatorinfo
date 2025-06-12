@@ -26,8 +26,12 @@ const updateChainSlashingParams = async (chainNames: string[]) => {
         await db.chain.update({
           where: { id: dbChain.id },
           data: {
-            blocksWindow: params.blocksWindow ?? null,
-            jailedDuration: params.jailedDuration ?? null,
+            params: {
+              update: {
+                blocksWindow: params.blocksWindow ?? null,
+                jailedDuration: params.jailedDuration ?? null,
+              },
+            },
           },
         });
 

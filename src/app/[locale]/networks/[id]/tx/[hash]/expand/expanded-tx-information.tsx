@@ -1,11 +1,11 @@
-import { Chain } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import { txExample } from '@/app/networks/[id]/tx/txExample';
 import CopyButton from '@/components/common/copy-button';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
-  chain?: Chain;
+  chain: ChainWithParams | null;
 }
 
 const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
@@ -14,7 +14,7 @@ const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
   const formatData = (title: string, data: number | string | string[]) => {
     switch (title) {
       case 'amount':
-        return <div className="font-handjet text-lg hover:text-highlight">{data} {chain?.denom ?? 'ATOM'}</div>;
+        return <div className="font-handjet text-lg hover:text-highlight">{data} {chain?.params?.denom ?? 'ATOM'}</div>;
       case 'delegate address':
         return (
           <div className="flex flex-row justify-center items-center hover:text-highlight">
@@ -26,7 +26,9 @@ const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
           <div>
             {Array.isArray(data)
               ? data.map((item, index) =>
-                <div className="hover:text-highlight" key={index}>{item}</div>)
+                <div className="hover:text-highlight" key={index}>
+                  {item}
+                </div>)
               : data}
           </div>
         );
@@ -35,7 +37,9 @@ const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
           <div>
             {Array.isArray(data)
               ? data.map((item, index) =>
-                <div className="text-lg font-handjet hover:text-highlight" key={index}>{item}</div>)
+                <div className="text-lg font-handjet hover:text-highlight" key={index}>
+                  {item}
+                </div>)
               : data}
           </div>
         );

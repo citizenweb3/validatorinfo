@@ -51,14 +51,6 @@ export const networkProfileExample = {
   ],
   networkOverview: [
     {
-      title: 'proposal creation cost',
-      data: 50,
-    },
-    {
-      title: 'voting period',
-      data: 5,
-    },
-    {
       title: 'comm pool value in usd',
       data: 23657591,
     },
