@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Chain, Node } from '@prisma/client';
+import { Node } from '@prisma/client';
 import _ from 'lodash';
 import formatCash from '@/utils/format-cash';
 import Link from 'next/link';
@@ -9,14 +9,17 @@ import Image from 'next/image';
 import icons from '@/components/icons';
 import colorStylization from '@/utils/color-stylization';
 import CopyButton from '@/components/common/copy-button';
+import { ChainWithParams } from '@/services/chain-service';
 
 
 interface OwnProps {
-  item: Node & { chain: Chain };
+  item: Node & { chain: ChainWithParams };
 }
 
 const NetworksListItem: FC<OwnProps> = ({ item }) => {
-  const tokenDelegatorShares = Number(item.delegatorShares) / 10 ** item.chain.coinDecimals;
+  const tokenDelegatorShares = item.chain.params?.coinDecimals
+    ? Number(item.delegatorShares) / 10 ** item.chain.params?.coinDecimals
+    : undefined;
 
   const validatorLink = item.validatorId
     ? `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`
@@ -56,13 +59,15 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt">
-        <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
-          <div className="text-center">{formatCash(tokenDelegatorShares)}</div>
+        <Tooltip tooltip={tokenDelegatorShares?.toLocaleString() ?? ''}>
+          <div className="text-center">
+            {tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}
+          </div>
         </Tooltip>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        {item.uptime ? (
-          <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
+        {item.uptime !== undefined && item.uptime !== null ? (
+          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}
             </div>
@@ -75,7 +80,7 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
+          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
             <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
               {item.missedBlocks}
             </div>

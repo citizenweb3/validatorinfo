@@ -26,7 +26,9 @@ const updateCommTax = async (chainNames: string[]) => {
         await db.chain.update({
           where: { id: dbChain.id },
           data: {
-            communityTax,
+            params: {
+              update: { communityTax },
+            },
           },
         });
       }

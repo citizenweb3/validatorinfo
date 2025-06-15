@@ -16,16 +16,19 @@ const findAll = async (query: string): Promise<SearchResult> => {
 
     db.chain.findMany({
       where: {
-        OR: [{ name: searchOptions }, { prettyName: searchOptions }, { denom: searchOptions }],
+        OR: [{ name: searchOptions }, { prettyName: searchOptions }, { params: { denom: searchOptions } }],
       },
       take: 10,
     }),
 
     db.chain.findMany({
       where: {
-        denom: searchOptions,
+        params: {
+          denom: searchOptions,
+        },
       },
       take: 10,
+      include: { params: true },
     }),
   ]);
 

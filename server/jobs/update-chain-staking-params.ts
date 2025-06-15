@@ -26,7 +26,9 @@ const updateChainStakingParams = async (chainNames: string[]) => {
         await db.chain.update({
           where: { id: dbChain.id },
           data: {
-            ...params,
+            params: {
+              update: { ...params },
+            },
           },
         });
       } else {

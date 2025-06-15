@@ -11,7 +11,7 @@ export const getChains = async (): Promise<ChainItem[]> => {
         name: chain.prettyName,
         asset: {
           name: chain.prettyName,
-          symbol: chain.denom,
+          symbol: chain.params?.denom ?? '',
           isSymbolFirst: false,
           price: price?.value ?? 1,
         },

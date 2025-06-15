@@ -7,20 +7,23 @@ import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/net
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import TokenDistributionSVG from '@/components/customSVG/tokenDistribution';
 import GiniCoefficientSVG from '@/components/customSVG/giniCoefficient';
-import chainService from '@/services/chain-service';
-import { Chain } from '@prisma/client';
+import chainService, { ChainWithParams } from '@/services/chain-service';
 import formatCash from '@/utils/format-cash';
 import Tooltip from '@/components/common/tooltip';
 
 interface OwnProps {
-  chain: Chain | null;
+  chain: ChainWithParams | null;
 }
 
 const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkTokenomics');
 
   const nodes = await nodeService.getNodesByChainId(chain?.id ?? 1);
-  const totalSupply = chain ? (+chain.totalSupply / 10 ** chain.coinDecimals) : 0;
+
+  const totalSupply = chain?.params?.coinDecimals
+    ? (+chain.totalSupply / 10 ** chain.params?.coinDecimals)
+    : 0;
+
   const tokenPrice = chain ? (await chainService.getTokenPriceByChainId(chain.id)) : null;
   const fdv = tokenPrice?.value ? totalSupply * tokenPrice.value : 90;
 

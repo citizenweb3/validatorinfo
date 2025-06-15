@@ -1,13 +1,13 @@
-import { Chain } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import SubTitle from '@/components/common/sub-title';
 import nodeService from '@/services/node-service';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
-  chain: Chain | null;
+  chain: ChainWithParams | null;
 }
 
 const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
@@ -22,7 +22,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
       case '% of comm pool to total supply':
         return `${data}%`;
       case 'proposal creation cost':
-        return `${data} ${chain?.denom ?? 'ATOM'}`;
+        return `${data} ${chain?.params?.denom ?? 'ATOM'}`;
       case 'comm pool value in usd':
         return `$${data.toLocaleString('en-En')}`;
       default:
@@ -48,17 +48,17 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
         </div>
         <div
           className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-          {chain?.unbondingTime ?? 600}s
+          {chain?.params?.unbondingTime ?? 600}s
         </div>
       </div>
-      {chain?.communityTax && (
+      {chain?.params?.communityTax && (
         <div className="mt-2 flex w-full hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
             {t('community tax')}
           </div>
           <div
             className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-            {chain?.communityTax}%
+            {chain?.params?.communityTax}%
           </div>
         </div>)}
       {networkProfileExample.networkOverview.map((item) => (
@@ -78,7 +78,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
         </div>
         <div
           className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-          {chain?.jailedDuration}
+          {chain?.params?.jailedDuration}
         </div>
       </div>
       <div className="mt-2 flex w-full hover:bg-bgHover">
