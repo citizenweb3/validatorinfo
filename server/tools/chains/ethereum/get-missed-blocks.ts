@@ -9,15 +9,15 @@ interface ProposerDuty {
   slot: number;
 }
 
-const getMissedBlocks: GetMissedBlocks = async (chain, blocksWindow) => {
+const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
   const restUrl = chain.nodes.find((n: any) => n.type === 'rest')?.url ?? '';
   if (!restUrl) {
     logError(`Chain ${chain.name}: REST (Beacon) URL not provided`);
     return [];
   }
 
-  if (!blocksWindow || blocksWindow <= 0) {
-    logError(`Invalid blocksWindow (${blocksWindow}) for chain ${chain.name}`);
+  if (!dbChain.params?.blocksWindow || dbChain.params.blocksWindow <= 0) {
+    logError(`Invalid blocksWindow (${dbChain.params?.blocksWindow}) for chain ${chain.name}`);
     return [];
   }
 
@@ -44,7 +44,7 @@ const getMissedBlocks: GetMissedBlocks = async (chain, blocksWindow) => {
       return [];
     }
 
-    const startSlot = headSlot - blocksWindow + 1;
+    const startSlot = headSlot - dbChain.params.blocksWindow + 1;
     const slotsPerEpoch = 32;
     const currentEpoch = Math.floor(headSlot / slotsPerEpoch);
     const startEpoch = Math.max(0, Math.floor(startSlot / slotsPerEpoch));

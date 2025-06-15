@@ -76,7 +76,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         <Link href={nodeLink}>
           <Tooltip tooltip={selfDelegation?.toLocaleString() ?? ''}>
             <div className="text-center" style={{ color: colorStylization.delegation(selfDelegation ?? null) }}>
-              {selfDelegation ? formatCash(selfDelegation) : ''}
+              {selfDelegation != null || selfDelegation != undefined ? formatCash(selfDelegation) : '-'}
             </div>
           </Tooltip>
         </Link>
