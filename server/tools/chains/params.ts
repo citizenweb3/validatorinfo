@@ -251,7 +251,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'neutron-1',
     bech32Prefix: 'neutron',
     coinDecimals: 6,
-    coinGeckoId: 'neutron',
+    coinGeckoId: 'neutron-3',
     coinType: 118,
     denom: 'NTRN',
     minimalDenom: 'untrn',

@@ -52,11 +52,22 @@ const getVotesIcon = (vote: VoteOption) => {
   }
 };
 
+const priceChanges = (value: number | null) => {
+  if (value != null) {
+    if (value < 0) {
+      return redTextLayout;
+    } else if (value > 0) {
+      return greenTextLayout;
+    }
+  }
+};
+
 const colorStylization = {
   delegation,
   uptime,
   missedBlocks,
   getVotesIcon,
+  priceChanges,
 };
 
 export default colorStylization;
