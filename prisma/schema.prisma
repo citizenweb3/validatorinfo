@@ -66,10 +66,11 @@ model Chain {
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
-  chainNodes ChainNode[] @relation("chain_node")
-  aprs       Apr[]       @relation("chain_apr")
-  prices     Price[]     @relation("chain_price")
-  nodes      Node[]      @relation("chain_validator_node")
+  chainNodes ChainNode[]  @relation("chain_node")
+  aprs       Apr[]        @relation("chain_apr")
+  prices     Price[]      @relation("chain_price")
+  tokenomics Tokenomics[] @relation("chain_tokenomics")
+  nodes      Node[]       @relation("chain_validator_node")
 
   validators Validator[] @relation("chain_validators")
   addresses  Address[]   @relation("chain_addresses")
@@ -179,6 +180,21 @@ model Price {
   @@map("prices")
 }
 
+model Tokenomics {
+  id              Int   @id @default(autoincrement())
+  chainId         Int   @map("chain_id")
+  ath             Float @default(0)
+  atl             Float @default(0)
+  changesPerDay   Float @default(0) @map("changes_per_day")
+  changesPerMonth Float @default(0) @map("changes_per_month")
+  changesPerYear  Float @default(0) @map("changes_per_year")
+
+  chain Chain @relation("chain_tokenomics", fields: [chainId], references: [id])
+
+  @@unique([chainId])
+  @@map("tokenomics")
+}
+
 enum ProposalStatus {
   PROPOSAL_STATUS_UNSPECIFIED
   PROPOSAL_STATUS_DEPOSIT_PERIOD
@@ -244,17 +260,17 @@ enum VoteOption {
 }
 
 model NodeVote {
-  id         Int       @id @default(autoincrement())
-  nodeId     Int        @map("node_id")
-  proposalId Int        @map("proposal_id")
-  chainId    Int        @map("chain_id")
+  id         Int @id @default(autoincrement())
+  nodeId     Int @map("node_id")
+  proposalId Int @map("proposal_id")
+  chainId    Int @map("chain_id")
 
-  vote       VoteOption @default(UNSPECIFIED)
-  txHash     String?    @map("tx_hash") @db.VarChar(256)
+  vote   VoteOption @default(UNSPECIFIED)
+  txHash String?    @map("tx_hash") @db.VarChar(256)
 
-  node       Node       @relation("node_vote_node", fields: [nodeId], references: [id])
-  proposal   Proposal   @relation("node_vote_proposal", fields: [proposalId], references: [id])
-  chain      Chain      @relation("node_vote_chain", fields: [chainId], references: [id])
+  node     Node     @relation("node_vote_node", fields: [nodeId], references: [id])
+  proposal Proposal @relation("node_vote_proposal", fields: [proposalId], references: [id])
+  chain    Chain    @relation("node_vote_chain", fields: [chainId], references: [id])
 
   @@unique([nodeId, proposalId], map: "node_id_proposal_id")
   @@map("node_votes")
