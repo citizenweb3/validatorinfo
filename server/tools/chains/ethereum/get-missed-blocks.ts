@@ -1,8 +1,9 @@
 import logger from '@/logger';
 import { GetMissedBlocks } from '@/server/tools/chains/chain-indexer';
 import { SlashingSigningInfos } from '@/server/types';
+import fetchChainData from '@/server/tools/get-chain-data';
 
-const { logError } = logger('eth-missed-blocks');
+const { logError, logInfo } = logger('eth-missed-blocks');
 
 interface ProposerDuty {
   pubkey: string;
@@ -10,32 +11,21 @@ interface ProposerDuty {
 }
 
 const getMissedBlocks: GetMissedBlocks = async (chain, blocksWindow) => {
-  const restUrl = chain.nodes.find((n: any) => n.type === 'rest')?.url ?? '';
-  if (!restUrl) {
-    logError(`Chain ${chain.name}: REST (Beacon) URL not provided`);
-    return [];
-  }
-
   if (!blocksWindow || blocksWindow <= 0) {
     logError(`Invalid blocksWindow (${blocksWindow}) for chain ${chain.name}`);
     return [];
   }
 
   try {
-    const headerUrl = `${restUrl}/eth/v1/beacon/headers/head`;
-    const headerResponse = await fetch(headerUrl);
-
-    let headerJson: any = null;
-    try {
-      headerJson = await headerResponse.clone().json();
-    } catch(e) {
-      logError(`Error with header JSON for chain ${chain.name}: ${e}`);
-    }
-    if (!headerResponse.ok) throw new Error(`HTTP ${headerResponse.status} ${headerResponse.statusText}`);
+    const headerSlot = await fetchChainData<any>(
+      chain.name,
+      'rest',
+      '/eth/v1/beacon/headers/head',
+    );
 
     const slotStr =
-      headerJson?.data?.header?.message?.slot ??
-      headerJson?.data?.header?.slot ??
+      headerSlot?.data?.header?.message?.slot ??
+      headerSlot?.data?.header?.slot ??
       '';
 
     const headSlot = parseInt(slotStr);
@@ -50,19 +40,37 @@ const getMissedBlocks: GetMissedBlocks = async (chain, blocksWindow) => {
     const startEpoch = Math.max(0, Math.floor(startSlot / slotsPerEpoch));
 
     const duties: ProposerDuty[] = [];
-    for (let epoch = startEpoch; epoch <= currentEpoch; epoch++) {
-      const url = `${restUrl}/eth/v1/validator/duties/proposer/${epoch}`;
-      const dutiesResponse = await fetch(url);
 
-      if (dutiesResponse.status === 404) {
-        logError(`Epoch ${epoch} not available (404), skipping`);
+    let epochsFetched = 0;
+    let epochsFailed = 0;
+
+    for (let epoch = startEpoch; epoch <= currentEpoch; epoch++) {
+      try {
+        const dutiesJson = await fetchChainData<any>(
+          chain.name,
+          'rest',
+          `/eth/v1/validator/duties/proposer/${epoch}`,
+        );
+        if (Array.isArray(dutiesJson?.data)) {
+          duties.push(...dutiesJson.data);
+          epochsFetched++;
+        } else {
+          logError(`No proposer duties data for epoch ${epoch}`);
+          epochsFailed++;
+        }
+      } catch (e: any) {
+        if (typeof e?.message === 'string' && e.message.includes('404')) {
+          logError(`Epoch ${epoch} not available (404), skipping`);
+          epochsFailed++;
+          continue;
+        }
+        logError(`Error fetching proposer duties for epoch ${epoch}:`, e);
+        epochsFailed++;
         continue;
       }
-      if (!dutiesResponse.ok) throw new Error(`HTTP ${dutiesResponse.status} ${dutiesResponse.statusText}`);
-
-      const dutiesJson = await dutiesResponse.json();
-      duties.push(...dutiesJson.data);
     }
+
+    logInfo(`Fetched proposer duties for ${epochsFetched} epochs; ${epochsFailed} epochs failed/skipped`);
 
     const filtered = duties.filter(d => d.slot >= startSlot && d.slot <= headSlot);
 
@@ -70,15 +78,20 @@ const getMissedBlocks: GetMissedBlocks = async (chain, blocksWindow) => {
 
     for (const { pubkey, slot } of filtered) {
       missedMap.set(pubkey, missedMap.get(pubkey) ?? 0);
-
-      const blockUrl = `${restUrl}/eth/v1/beacon/blocks/${slot}`;
-      const blockResponse = await fetch(blockUrl);
-
-      if (blockResponse.status === 404) {
-        missedMap.set(pubkey, missedMap.get(pubkey)! + 1);
+      try {
+        await fetchChainData<any>(
+          chain.name,
+          'rest',
+          `/eth/v1/beacon/blocks/${slot}`,
+        );
+      } catch (e: any) {
+        if (typeof e?.message === 'string' && e.message.includes('404')) {
+          missedMap.set(pubkey, missedMap.get(pubkey)! + 1);
+          continue;
+        }
+        logError(`Error fetching block ${slot} for pubkey ${pubkey}:`, e);
         continue;
       }
-      if (!blockResponse.ok) throw new Error(`HTTP ${blockResponse.status} ${blockResponse.statusText}`);
     }
 
     return Array.from(missedMap.entries()).map(([address, missed]) => ({
