@@ -22,7 +22,11 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
   const validatorLogoUrl = validator?.url || icons.AvatarIcon;
 
   const { validatorNodesWithChainData } = await validatorService.getValidatorNodesWithChains(id);
-  const chainsLogos = validatorNodesWithChainData.map((node) => node?.chain.logoUrl || icons.AvatarIcon);
+  const chains = validatorNodesWithChainData.map((node) => ({
+    id: node.chain.id,
+    logoUrl: node.chain.logoUrl || icons.AvatarIcon,
+    prettyName: node.chain.prettyName,
+  }));
 
   if (!validator) {
     return null;
@@ -63,7 +67,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
         </div>
       </div>
       <div className="col-span-3 h-full shadow-button">
-        <NetworksCircle centerLogo={validatorLogoUrl} logos={chainsLogos} />
+        <NetworksCircle centerLogo={validatorLogoUrl} logos={chains} />
       </div>
       <div className="col-span-2 ml-8 2xl:ml-20 xl:ml-18 lg:ml-14 md:ml-10 h-full border-b border-bgSt">
         <h1>

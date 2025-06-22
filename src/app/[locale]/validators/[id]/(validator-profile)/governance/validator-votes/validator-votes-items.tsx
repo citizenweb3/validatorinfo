@@ -6,9 +6,10 @@ import colorStylization from '@/utils/color-stylization';
 
 interface OwnProps {
   item: ValidatorVote;
+  validatorId: number;
 }
 
-const ValidatorVotesItem: FC<OwnProps> = ({ item }) => {
+const ValidatorVotesItem: FC<OwnProps> = ({ item, validatorId }) => {
   const proposalLink = `/networks/${item.chain.id}/proposal/${item.proposalId}`;
   const chainLink = `/networks/${item.chain.id}/overview`;
 
@@ -27,7 +28,7 @@ const ValidatorVotesItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 text-base hover:text-highlight active:border-bgSt">
-        <Link href={proposalLink} className="flex justify-center">
+        <Link href={`/networks/${item.chain.id}/address/${item.operatorAddress}/passport`} className="flex justify-center">
           <div className="text-center">{item.vote}</div>
         </Link>
       </td>

@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC, useEffect, useState } from 'react';
 
 import ArrowsGoBigButton from '@/components/common/arrows-go-big-button';
 import icons from '@/components/icons';
+import Tooltip from '@/components/common/tooltip';
 
 interface circleValuesTypes {
   circleRadius: number;
@@ -14,7 +16,7 @@ interface circleValuesTypes {
 
 interface OwnProps {
   centerLogo: string;
-  logos: string[];
+  logos: { id: number; logoUrl: string; prettyName: string }[];
 }
 
 const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
@@ -74,13 +76,13 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
         />
       </div>
       <div className="relative h-full w-full">
-        {logos.map((logo, index) => {
+        {logos.map((chain, index) => {
           const angle = (index / logos.length) * 2 * Math.PI;
           const x = circleRadius * Math.cos(angle) - logoSize / 2;
           const y = circleRadius * Math.sin(angle) - logoSize / 2;
           return (
             <div
-              key={index}
+              key={chain.id}
               style={{
                 top: `calc(50% + ${y}px)`,
                 left: `calc(50% + ${x}px)`,
@@ -89,11 +91,15 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
               }}
               className="absolute flex items-center justify-center"
             >
-              <Image
-                src={logo}
-                alt={`Logo ${index}`}
-                fill
-                className={`rounded-full h-[${logoSize}] object-contain`} />
+              <Tooltip tooltip={chain.prettyName} direction="top">
+                <Link href={`/networks/${chain.id}/overview`}>
+                  <Image
+                    src={chain.logoUrl}
+                    alt={chain.prettyName}
+                    fill
+                    className={`rounded-full h-[${logoSize}] object-contain`} />
+                </Link>
+              </Tooltip>
             </div>
           );
         })}
