@@ -12,6 +12,7 @@ export interface ValidatorVote {
   proposalId: string;
   title: string;
   vote: VoteOption;
+  operatorAddress: string;
 }
 
 export interface ProposalValidatorsVotes {
@@ -64,6 +65,7 @@ const getValidatorVotes = async (
           title: true,
         },
       },
+      node: { select: { operatorAddress: true } },
     },
   });
 
@@ -73,6 +75,7 @@ const getValidatorVotes = async (
     proposalId: vote.proposal.proposalId,
     title: vote.proposal.title,
     vote: vote.vote,
+    operatorAddress: vote.node.operatorAddress,
   }));
 
   return { votes, pages };

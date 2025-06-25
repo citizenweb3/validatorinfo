@@ -34,17 +34,17 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
         </Tooltip>
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <Link href={''} className={`${size}`}>
+        <Link href={'https://www.citizenweb3.com/about'} className={`${size}`} target="_blank">
           <div className={`${size} bg-web bg-contain bg-no-repeat hover:bg-web_h`} />
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <Link href={''} className={size} target="_blank">
+        <Link href={'https://github.com/citizenweb3/validatorinfo'} className={size} target="_blank">
           <div className={`${size} bg-github bg-contain bg-no-repeat hover:bg-github_h`} />
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">
-        <Link href={item.twitterUrl ?? ''} className={size} target="_blank">
+        <Link href={'https://x.com/therealvalinfo'} className={size} target="_blank">
           <div className={`${size} bg-x bg-contain bg-no-repeat hover:bg-x_h`} />
         </Link>
       </td>

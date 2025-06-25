@@ -18,7 +18,7 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
     <div>
       <div className="flex flex-row justify-between">
         <PageTitle prefix="Welcome" text="User1" />
-        <RoundedButton className="flex self-end text-xl" contentClassName="px-16">{t('Logout')}</RoundedButton>
+        <RoundedButton className="flex self-end text-xl" contentClassName="px-16" href={"/"}>{t('Logout')}</RoundedButton>
       </div>
       <div className="m-4 whitespace-pre-line text-base">{t('description')}</div>
       <div className="my-4 flex items-center justify-end space-x-8">

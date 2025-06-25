@@ -1,12 +1,11 @@
 import { FC } from 'react';
-
-import ValidatorListItem from '@/app/main-validators/validator-list/validator-list-item/validator-list-item';
 import ValidatorsNextPagination from '@/app/main-validators/validator-list/validators-next-pagination';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/server/types';
 import ChainService from '@/services/chain-service';
 import validatorService from '@/services/validator-service';
-import ValidatorListItemMobile from '@/app/main-validators/validator-list-mobile/validator-list-item-mobile/validator-list-item-moblie';
+import ValidatorListItemMobile
+  from '@/app/main-validators/validator-list-mobile/validator-list-item-mobile/validator-list-item-moblie';
 
 interface OwnProps {
   ecosystems: string[];
