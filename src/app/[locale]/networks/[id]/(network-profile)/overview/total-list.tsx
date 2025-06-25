@@ -3,17 +3,17 @@ import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
-import { Chain } from '@prisma/client';
 import formatCash from '@/utils/format-cash';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
-  chain: Chain | null;
+  chain: ChainWithParams | null;
 }
 
 const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
-  const totalSupply = Number(chain?.totalSupply) / Number(10 ** (chain?.coinDecimals ?? 6));
-  const totalSupplyMetric = `${formatCash(totalSupply)} ${chain?.denom ?? ''}`;
+  const totalSupply = Number(chain?.totalSupply) / Number(10 ** (chain?.params?.coinDecimals ?? 6));
+  const totalSupplyMetric = `${formatCash(totalSupply)} ${chain?.params?.denom ?? ''}`;
 
   return (
     <div className="mt-20 flex w-full flex-row justify-center gap-6">

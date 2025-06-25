@@ -13,7 +13,7 @@ const TxInformationExpand: NextPageWithLocale<PageProps> = async ({ params: { id
 
   return (
     <div>
-      <ExpandedTxInformation chain={chain ?? undefined} />
+      <ExpandedTxInformation chain={chain} />
     </div>
   );
 };

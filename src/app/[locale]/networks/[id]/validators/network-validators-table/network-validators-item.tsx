@@ -14,8 +14,14 @@ interface OwnProps {
 }
 
 const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
-  const tokenDelegatorShares = +item.delegatorShares / 10 ** item.chain.coinDecimals;
-  const selfDelegation: number = +item.minSelfDelegation / 10 ** item.chain.coinDecimals;
+  const tokenDelegatorShares = item.chain.params?.coinDecimals
+    ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals
+    : undefined;
+
+  const selfDelegation = item.chain.params?.coinDecimals
+    ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
+    : undefined;
+
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
   return (
@@ -33,9 +39,9 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       <td
         className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
-          <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
+          <Tooltip tooltip={tokenDelegatorShares?.toLocaleString() ?? ''}>
             <div className="text-center">
-              {formatCash(tokenDelegatorShares)}
+              {tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}
             </div>
           </Tooltip>
           <div className="text-center">{item.votingPower.toFixed(2)}%</div>
@@ -49,16 +55,16 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <Link href={nodeLink}>
-          <Tooltip tooltip={selfDelegation.toLocaleString()}>
-            <div className="text-center" style={{ color: colorStylization.delegation(selfDelegation) }}>
-              {formatCash(selfDelegation)}
+          <Tooltip tooltip={selfDelegation?.toLocaleString() ?? ''}>
+            <div className="text-center" style={{ color: colorStylization.delegation(selfDelegation ?? null) }}>
+              {selfDelegation ? formatCash(selfDelegation) : ''}
             </div>
           </Tooltip>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         {item.uptime ? (
-          <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
+          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}
             </div>
@@ -71,7 +77,7 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.blocksWindow?.toLocaleString()} blocks`}>
+          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
             <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
               {item.missedBlocks}
             </div>

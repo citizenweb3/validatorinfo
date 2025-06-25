@@ -7,7 +7,7 @@ import {
   StdSignDoc,
   StdSignature,
 } from '@keplr-wallet/types';
-import { Chain } from '@prisma/client';
+import { ChainWithParams } from '@/services/chain-service';
 
 import { OfflineSignerT, WalletProvider } from '.';
 
@@ -101,43 +101,43 @@ class LeapProvider extends WalletProvider {
     wallet.enable(chainId);
   }
 
-  async suggestChain(chain: Chain & { rpcNode: string; lcdNode: string }) {
+  async suggestChain(chain: ChainWithParams & { rpcNode: string; lcdNode: string }) {
     const chainConfig: ChainInfo = {
       chainId: chain.chainId,
       chainName: chain.name,
       bech32Config: {
-        bech32PrefixAccAddr: chain.bech32Prefix,
-        bech32PrefixAccPub: chain.bech32Prefix + 'pub',
-        bech32PrefixValAddr: chain.bech32Prefix + 'valoper',
-        bech32PrefixValPub: chain.bech32Prefix + 'valoperpub',
-        bech32PrefixConsAddr: chain.bech32Prefix + 'valcons',
-        bech32PrefixConsPub: chain.bech32Prefix + 'valconspub',
+        bech32PrefixAccAddr: chain.params?.bech32Prefix ?? '',
+        bech32PrefixAccPub: chain.params?.bech32Prefix + 'pub',
+        bech32PrefixValAddr: chain.params?.bech32Prefix + 'valoper',
+        bech32PrefixValPub: chain.params?.bech32Prefix + 'valoperpub',
+        bech32PrefixConsAddr: chain.params?.bech32Prefix + 'valcons',
+        bech32PrefixConsPub: chain.params?.bech32Prefix + 'valconspub',
       },
       rest: chain.lcdNode,
       rpc: chain.rpcNode,
       bip44: {
-        coinType: chain.coinType,
+        coinType: chain.params?.coinType ?? 0,
       },
       image: '',
       currencies: [
         {
-          coinMinimalDenom: chain.minimalDenom,
-          coinDenom: chain.denom,
-          coinDecimals: chain.coinDecimals,
+          coinMinimalDenom: chain.params?.minimalDenom ?? '',
+          coinDenom: chain.params?.denom ?? '',
+          coinDecimals: chain.params?.coinDecimals ?? 0,
           coinGeckoId: chain.coinGeckoId,
         },
       ],
       stakeCurrency: {
-        coinMinimalDenom: chain.minimalDenom,
-        coinDenom: chain.denom,
-        coinDecimals: chain.coinDecimals,
+        coinMinimalDenom: chain.params?.minimalDenom ?? '',
+        coinDenom: chain.params?.denom ?? '',
+        coinDecimals: chain.params?.coinDecimals ?? 0,
         coinGeckoId: chain.coinGeckoId,
       },
       feeCurrencies: [
         {
-          coinMinimalDenom: chain.minimalDenom,
-          coinDenom: chain.denom,
-          coinDecimals: chain.coinDecimals,
+          coinMinimalDenom: chain.params?.minimalDenom ?? '',
+          coinDenom: chain.params?.denom ?? '',
+          coinDecimals: chain.params?.coinDecimals ?? 0,
           coinGeckoId: chain.coinGeckoId,
           gasPriceStep: {
             low: 100000,
