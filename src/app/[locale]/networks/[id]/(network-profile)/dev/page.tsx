@@ -42,8 +42,8 @@ const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
     <div>
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <PeersSeedsBlocks chain={chain ?? undefined} />
-      <DevInfoParameters chain={chain ?? undefined} />
+      <PeersSeedsBlocks chain={chain} />
+      <DevInfoParameters chain={chain} />
       <NetworkApps page={'NetworkDevInfo.Apps'}
                    perPage={perPage}
                    currentPage={currentPage}

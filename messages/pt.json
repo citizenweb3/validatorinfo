@@ -105,6 +105,10 @@
         "name": "Técnico",
         "hint": "Oferecer segurança de rede robusta e infraestrutura adicional aumenta a pontuação"
       },
+      "Tech": {
+        "name": "Tech",
+        "hint": ""
+      },
       "Social": {
         "name": "Social",
         "hint": "Uma forte presença digital e numerosos fãs na rede aumentam a pontuação"
@@ -112,6 +116,10 @@
       "Governance": {
         "name": "Governança",
         "hint": "A participação em eventos e iniciativas da vida de chaveiro aumenta a pontuação"
+      },
+      "Gov": {
+        "name": "Gov.",
+        "hint": ""
       },
       "User": {
         "name": "Usuário",

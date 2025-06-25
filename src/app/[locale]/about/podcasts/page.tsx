@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 import SpreadModal from '@/app/about/modals/spread-modal';
 import Player from '@/app/about/podcasts/player';
-import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
@@ -30,7 +29,7 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
       <RichPageTitle>
         <div className="m-4">
           {t.rich('Podcast.title', {
-            citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/"/>,
+            citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/" />,
           })}
         </div>
       </RichPageTitle>

@@ -12,11 +12,13 @@ import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
-import updateSlashingNodesInfos from '@/server/jobs/update-slashing-nodes-infos';
+import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateCommTax from '@/server/jobs/update-community-tax';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
 import { getTokenomics } from '@/server/jobs/get-tokenomics';
+import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
+import updateProposalParams from '@/server/jobs/update-proposal-params';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -48,8 +50,11 @@ async function runTask() {
       case 'chain-slashing-params':
         await updateChainSlashingParams(chains);
         break;
-      case 'slashing-nodes-infos':
-        await updateSlashingNodesInfos(chains);
+      case 'slashing-infos':
+        await updateSlashingInfos(chains);
+        break;
+      case 'slashing-infos-namada':
+        await updateSlashingInfosNamada(chains);
         break;
       case 'chain-node-params':
         await updateChainNodeParams(chains);
@@ -68,6 +73,9 @@ async function runTask() {
         break;
       case 'tokenomics':
         await getTokenomics();
+        break;
+      case 'proposal-params':
+        await updateProposalParams(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

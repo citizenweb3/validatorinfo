@@ -41,6 +41,44 @@ model Apr {
   @@map("aprs")
 }
 
+model ChainParams {
+  id      Int @id @default(autoincrement())
+  chainId Int @unique @map("chain_id")
+
+  // token base params
+  coinType     Int    @map("coin_type")
+  denom        String @db.VarChar(256)
+  minimalDenom String @map("minimal_denom") @db.VarChar(256)
+  coinDecimals Int    @map("coin_decimals")
+  bech32Prefix String @map("bech32_prefix") @db.VarChar(32)
+
+  // staking params
+  maxValidators  Int?    @map("max_validators")
+  communityTax   Float?  @map("community_tax")
+  unbondingTime  Int?    @map("unbonding_time")
+  jailedDuration String? @map("downtime_jail_duration")
+  blocksWindow   Int?    @map("signed_blocks_window")
+
+  // node params
+  keyAlgos   String @default("") @map("key_algos")
+  daemonName String @default("") @map("daemon_name")
+  nodeHome   String @default("") @map("node_home")
+  peers      String @default("")
+  seeds      String @default("")
+  binaries   String @default("")
+  genesis    String @default("")
+
+  // proposal params
+  proposalCreationCost    Int?    @map("proposal_creation_cost")
+  votingPeriod            String? @map("voting_period")
+  votingParticipationRate Float?  @map("voting_participation_rate")
+  quorumThreshold         Float?  @map("quorum_threshold")
+
+  chain Chain @relation("chain_params", fields: [chainId], references: [id])
+
+  @@map("chain_params")
+}
+
 model Chain {
   id             Int     @id @default(autoincrement())
   ecosystem      String  @db.VarChar(256)
@@ -48,20 +86,13 @@ model Chain {
   rang           Int
   name           String  @db.VarChar(256)
   prettyName     String  @map("pretty_name") @db.VarChar(256)
-  coinType       Int     @map("coin_type")
-  denom          String  @db.VarChar(256)
-  minimalDenom   String  @map("minimal_denom") @db.VarChar(256)
-  coinDecimals   Int     @map("coin_decimals")
   logoUrl        String  @map("logo_url")
   coinGeckoId    String  @map("coingecko_id") @db.VarChar(64)
-  bech32Prefix   String  @map("bech32_prefix") @db.VarChar(32)
   twitterUrl     String  @map("twitter_url") @db.VarChar(256)
   docs           String?
   githubUrl      String  @map("github_url")
   githubMainRepo String  @map("github_main_repo")
-  maxValidators  Int?    @map("max_validators")
   hasValidators  Boolean @default(true) @map("has_validators")
-  communityTax   Float?  @map("community_tax")
   walletsAmount  Int?    @map("wallets_amount")
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
@@ -72,25 +103,16 @@ model Chain {
   tokenomics Tokenomics[] @relation("chain_tokenomics")
   nodes      Node[]       @relation("chain_validator_node")
 
+  params ChainParams? @relation("chain_params")
+
   validators Validator[] @relation("chain_validators")
   addresses  Address[]   @relation("chain_addresses")
   nodeVotes  NodeVote[]  @relation("node_vote_chain")
+  proposals  Proposal[]  @relation("chain_proposals")
 
-  // gov
-  proposals       Proposal[] @relation("chain_proposals")
-  proposalsTotal  Int        @default(0) @map("proposals_total")
-  proposalsLive   Int        @default(0) @map("proposals_live")
-  proposalsPassed Int        @default(0) @map("proposals_passed")
-  votingPeriod    Int        @default(0) @map("voting_period")
-
-  //node
-  peers      String @default("")
-  seeds      String @default("")
-  binaries   String @default("")
-  genesis    String @default("")
-  keyAlgos   String @default("") @map("key_algos")
-  daemonName String @default("") @map("daemon_name")
-  nodeHome   String @default("") @map("node_home")
+  proposalsTotal  Int @default(0) @map("proposals_total")
+  proposalsLive   Int @default(0) @map("proposals_live")
+  proposalsPassed Int @default(0) @map("proposals_passed")
 
   // calculated
   totalSupply         String   @default("") @map("total_supply")
@@ -103,11 +125,6 @@ model Chain {
   tvl                 Float    @default(0)
   tvs                 Float    @default(0)
   apr                 Float    @default(0)
-  unbondingTime       Int?     @map("unbonding_time")
-
-  //slashing
-  jailedDuration String? @map("downtime_jail_duration")
-  blocksWindow   Int?    @map("signed_blocks_window")
 
   @@map("chains")
 }

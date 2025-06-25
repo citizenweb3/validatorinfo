@@ -2,10 +2,10 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import SubTitle from '@/components/common/sub-title';
 import CopyButton from '@/components/common/copy-button';
-import { Chain } from '@prisma/client';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
-  chain?: Chain;
+  chain: ChainWithParams | null;
 }
 
 const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
@@ -19,7 +19,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('bech32 prefix')}
         </div>
         <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
-          {chain?.bech32Prefix}
+          {chain?.params?.bech32Prefix}
         </div>
       </div>
       <div className="mt-4 flex w-full hover:bg-bgHover">
@@ -27,7 +27,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('daemon name')}
         </div>
         <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
-          {chain?.daemonName}
+          {chain?.params?.daemonName}
         </div>
       </div>
       <div className="mt-4 flex w-full hover:bg-bgHover">
@@ -35,7 +35,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('node home')}
         </div>
         <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
-          {chain?.nodeHome}
+          {chain?.params?.nodeHome}
         </div>
       </div>
       <div className="mt-4 flex w-full hover:bg-bgHover">
@@ -43,7 +43,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('slip44')}
         </div>
         <div className="font-handjet text-lg flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 hover:text-highlight">
-          {chain?.coinType}
+          {chain?.params?.coinType}
         </div>
       </div>
       <div className="mt-4 flex w-full hover:bg-bgHover">
@@ -51,7 +51,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('key algosz')}
         </div>
         <div className="font-handjet text-lg flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 hover:text-highlight">
-          {chain?.keyAlgos ? JSON.parse(chain?.keyAlgos)[0] : ''}
+          {chain?.params?.keyAlgos ? JSON.parse(chain?.params?.keyAlgos)[0] : ''}
         </div>
       </div>
       <div className="mt-4 flex w-full hover:bg-bgHover">
@@ -59,7 +59,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('genesis url')}
         </div>
         <div className="underline underline-offset-4 flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
-          {chain?.genesis ? JSON.parse(chain?.genesis) : ''}
+          {chain?.params?.genesis ? JSON.parse(chain?.params?.genesis) : ''}
         </div>
       </div>
       <div className="mt-4 flex w-full hover:bg-bgHover">
@@ -75,7 +75,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           {t('denom')}
         </div>
         <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
-          {chain?.denom}<CopyButton value={String(chain?.denom)} size="md" />
+          {chain?.params?.denom}<CopyButton value={String(chain?.params?.denom)} size="md" />
         </div>
       </div>
     </div>
