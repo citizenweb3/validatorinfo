@@ -936,8 +936,40 @@ const chainParams: Record<string, AddChainProps> = {
         url: 'http://168.119.37.164:5152',
       },
       {
+        type: 'rest',
+        url: 'https://ethereum-sepolia.core.chainstack.com/9599780fdf3a0a2d1203b2614695f975',
+      },
+      {
+        type: 'rest',
+        url: 'https://sepolia.infura.io/v3/0d98a14d4886428bbe5b927b678159b3',
+      },
+      {
+        type: 'rest',
+        url: 'https://eth-sepolia.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG',
+      },
+      {
+        type: 'rest',
+        url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      },
+      {
+        type: 'rest',
+        url: 'https://rpc.ankr.com/eth_sepolia/424ac266675ed3c8a9c8bfd421722137a6eb7c9bf94c02f8701deb879704eecc',
+      },
+      {
         type: 'rpc',
         url: 'http://168.119.37.164:8645',
+      },
+      {
+        type: 'rpc',
+        url: 'https://ethereum-sepolia.core.chainstack.com/beacon/9599780fdf3a0a2d1203b2614695f975',
+      },
+      {
+        type: 'rpc',
+        url: 'https://lb.drpc.org/rest/Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ/eth-beacon-chain-sepolia',
+      },
+      {
+        type: 'rpc',
+        url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
       },
     ],
     mainRepo: 'https://github.com/ethereum/go-ethereum',

@@ -49,8 +49,8 @@ const TableSortItems: FC<OwnProps> = ({ page, name, field, defaultSelected = fal
         </div>
       )}
       <Tooltip tooltip={`${t(`${name}.hint` as 'Validator.hint')}`} direction="top">
-        <div className="w-fit text-wrap text-sm">
-          <div className="text-nowrap font-bold">&nbsp;{t(`${name}.name` as 'Validator.name')}</div>
+        <div className="w-fit text-wrap md:text-sm sm:text-4xl text-6xl">
+          <div className="text-nowrap font-normal">&nbsp;{t(`${name}.name` as 'Validator.name')}</div>
         </div>
       </Tooltip>
     </div>

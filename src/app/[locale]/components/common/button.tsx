@@ -5,8 +5,8 @@ import type { UrlObject } from 'url';
 import Tooltip from '@/components/common/tooltip';
 
 const activeClasses = {
-  default: 'from-primary to-secondary',
-  switcher: 'from-primary to-primary',
+  default: 'md:from-primary md:to-secondary',
+  switcher: 'md:from-primary md:to-primary',
 };
 
 type TActiveType = keyof typeof activeClasses;

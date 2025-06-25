@@ -17,6 +17,7 @@ import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateCommTax from '@/server/jobs/update-community-tax';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
 import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
+import updateProposalParams from '@/server/jobs/update-proposal-params';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -68,6 +69,9 @@ async function runTask() {
         break;
       case 'wallets-amount':
         await updateWalletsAmount(chains);
+        break;
+      case 'proposal-params':
+        await updateProposalParams(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
