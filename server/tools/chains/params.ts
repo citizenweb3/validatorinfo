@@ -32,6 +32,11 @@ export const ecosystemParams = [
     logoUrl:
       'https://raw.githubusercontent.com/ethereum/ethereum-org-website/refs/heads/dev/public/images/eth-logo-grey.png',
   },
+  {
+    name: 'polkadot',
+    prettyName: 'Polkadot',
+    logoUrl: 'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {
@@ -944,6 +949,44 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://ethereum.org/en/developers/docs/',
     githubUrl: 'https://github.com/ethereum',
     twitterUrl: 'https://x.com/ethdotorg',
+  },
+  polkadot: {
+    rang: 1,
+    ecosystem: 'polkadot',
+    hasValidators: true,
+    name: 'polkadot',
+    prettyName: 'Polkadot',
+    chainId: 'polkadot',
+    bech32Prefix: '',
+    coinDecimals: 10,
+    coinGeckoId: 'polkadot',
+    coinType: 354,
+    denom: 'DOT',
+    minimalDenom: 'planck',
+    logoUrl:
+      'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
+    nodes: [
+      {
+        type: 'rest',
+        url: 'https://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      },
+      {
+        type: 'ws',
+        url: 'wss://lb.drpc.org/ogws?network=polkadot&dkey=Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ',
+      },
+      {
+        type: 'ws',
+        url: 'wss://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      },
+      {
+        type: 'ws',
+        url: 'wss://polkadot-rpc.publicnode.com',
+      },
+    ],
+    mainRepo: 'https://github.com/paritytech/polkadot-sdk',
+    docs: 'https://docs.polkadot.com/',
+    githubUrl: 'https://github.com/paritytech',
+    twitterUrl: 'https://x.com/Polkadot',
   },
 };
 
