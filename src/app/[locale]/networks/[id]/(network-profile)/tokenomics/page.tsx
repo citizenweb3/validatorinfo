@@ -39,7 +39,7 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <TokenPrice
-        denom={chain?.denom ?? null}
+        denom={chain?.params?.denom ?? null}
         price={tokenPrice ? tokenPrice.value : 12.43}
         tokenomics={tokenomics}
       />
