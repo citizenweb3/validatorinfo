@@ -66,7 +66,7 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
         </Tooltip>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        {item.uptime ? (
+        {item.uptime !== undefined && item.uptime !== null ? (
           <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}

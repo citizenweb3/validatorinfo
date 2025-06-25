@@ -6,6 +6,7 @@ import chains from '@/server/tools/chains/chains';
 
 const timers = {
   every5mins: '*/5 * * * *',
+  every10mins: '*/10 * * * *',
   everyHour: '0 * * * *',
   everyDay: '0 0 * * *',
 };
@@ -52,7 +53,6 @@ const runServer = async () => {
   const tasks = [
     { name: 'prices', schedule: timers.every5mins },
     { name: 'validators', schedule: timers.everyHour },
-    // { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.everyHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
@@ -87,15 +87,38 @@ const runServer = async () => {
     spawnTask(task.name, chains).catch((e) => logError(`Initial run error for task ${task.name}:`, e));
   });
 
-  // Initial run for validatorInfo and slashing-nodes-infos tasks after 5 minutes for wait validators updated
-  setTimeout(
-    () => {
-      spawnTask('validatorInfo', chains).catch((e) => logError(`Initial run error for task validatorInfo:`, e));
-      spawnTask('slashing-nodes-infos', chains).catch((e) => logError(`Initial run error for task slashing-nodes-infos:`, e));
-      spawnTask('update-nodes-votes', chains).catch((e) => logError(`Initial run error for update-nodes-votes:`, e));
-    },
-    5 * 60 * 1000,
-  );
+  const specialTasks = [
+    { name: 'validatorInfo', schedule: timers.everyDay },
+    { name: 'slashing-infos', schedule: timers.everyHour },
+    { name: 'slashing-infos-namada', schedule: timers.every10mins },
+    { name: 'update-nodes-votes', schedule: timers.everyDay },
+  ];
+
+  specialTasks.forEach(({ name, schedule }) => {
+    const job = new CronJob(
+      schedule,
+      async () => {
+        logInfo(`Scheduled run for task ${name}`);
+        try {
+          await spawnTask(name, chains);
+        } catch (e) {
+          logError(`Error in task ${name}: ${e}`);
+        }
+      },
+      null,
+      true,
+    );
+    job.start();
+  });
+
+  // Initial run for specialTasks after 5 minutes for wait validators updated
+  setTimeout(() => {
+    specialTasks.forEach(({ name }) => {
+      spawnTask(name, chains).catch((e) =>
+        logError(`Initial run error for task ${name}:`, e),
+      );
+    });
+  }, 5 * 60 * 1000);
 };
 
 runServer();

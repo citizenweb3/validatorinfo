@@ -3,6 +3,7 @@ import { NodeResult, SlashingSigningInfos } from '@/server/types';
 import { Prisma } from '.prisma/client';
 
 import ProposalCreateInput = Prisma.ProposalCreateInput;
+import { ChainWithParams } from '@/services/chain-service';
 
 export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
 
@@ -97,7 +98,7 @@ export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<Staking
 export type GetSlashingParamsFunction = (chain: AddChainProps) => Promise<SlashingChainParams>;
 export type GetNodeParamsFunction = (chain: AddChainProps) => Promise<NodeParams>;
 export type GetGovParamsFunction = (chain: AddChainProps) => Promise<GovParams>;
-export type GetMissedBlocks = (chain: AddChainProps, blocksWindow?: number) => Promise<SlashingSigningInfos[]>;
+export type GetMissedBlocks = (chain: AddChainProps, dbChain: ChainWithParams) => Promise<SlashingSigningInfos[]>;
 export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<NodeVote[]>;
 export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
