@@ -8,7 +8,6 @@ import { ecosystemParams, updateChainParamsUpdated } from '@/server/tools/chains
 import downloadImage from '@/server/utils/download-image';
 
 import { Prisma } from '.prisma/client';
-
 import ChainUncheckedCreateInput = Prisma.ChainUncheckedCreateInput;
 
 const { logInfo, logError } = logger('init-chains');
@@ -20,20 +19,13 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     chainId: chain.chainId,
     name: chain.name,
     prettyName: chain.prettyName,
-    denom: chain.denom,
-    minimalDenom: chain.minimalDenom,
-    coinDecimals: chain.coinDecimals,
-    coinType: chain.coinType,
     logoUrl: chain.logoUrl,
     coinGeckoId: chain.coinGeckoId,
-    bech32Prefix: chain.bech32Prefix,
     twitterUrl: chain.twitterUrl,
     docs: chain.docs,
     githubMainRepo: chain.mainRepo,
     githubUrl: chain.githubUrl,
     hasValidators: chain.hasValidators,
-    peers: chain.peers ? chain.peers.join(',') : undefined,
-    seeds: chain.seeds ? chain.seeds.join(',') : undefined,
   };
 
   const existingChain = await db.chain.findUnique({
@@ -55,6 +47,17 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
             return { url: node.url, type: node.type };
           }),
         },
+        params: {
+          create: {
+            denom: chain.denom,
+            minimalDenom: chain.minimalDenom,
+            coinDecimals: chain.coinDecimals,
+            coinType: chain.coinType,
+            bech32Prefix: chain.bech32Prefix,
+            peers: chain.peers ? chain.peers.join(',') : undefined,
+            seeds: chain.seeds ? chain.seeds.join(',') : undefined,
+          },
+        },
       },
     });
     logInfo(`${chain.prettyName} #${chain.chainId} chain created`);
@@ -65,6 +68,17 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     where: { chainId: chain.chainId },
     data: {
       ...chainFields,
+      params: {
+        update: {
+          denom: chain.denom,
+          minimalDenom: chain.minimalDenom,
+          coinDecimals: chain.coinDecimals,
+          coinType: chain.coinType,
+          bech32Prefix: chain.bech32Prefix,
+          peers: chain.peers ? chain.peers.join(',') : undefined,
+          seeds: chain.seeds ? chain.seeds.join(',') : undefined,
+        },
+      },
     },
   });
 

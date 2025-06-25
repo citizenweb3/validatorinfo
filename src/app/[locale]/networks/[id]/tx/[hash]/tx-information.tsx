@@ -1,4 +1,3 @@
-import { Chain } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import { txExample } from '@/app/networks/[id]/tx/txExample';
@@ -6,9 +5,10 @@ import Tooltip from '@/components/common/tooltip';
 import CopyButton from '@/components/common/copy-button';
 import RoundedButton from '@/components/common/rounded-button';
 import Link from 'next/link';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
-  chain: Chain | null;
+  chain: ChainWithParams | null;
   hash: string;
 }
 
@@ -31,7 +31,9 @@ const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
           </div>
         );
       case 'fees':
-        return <div className="font-handjet text-lg">{data} {chain?.denom ?? 'ATOM'}</div>;
+        return <div className="font-handjet text-lg">
+          {data} {chain?.params?.denom ?? 'ATOM'}
+        </div>;
       case 'block height':
         return (
           <Link href={`/networks/${chain?.id}/block/${data}`} className="font-handjet text-lg text-highlight hover:underline">

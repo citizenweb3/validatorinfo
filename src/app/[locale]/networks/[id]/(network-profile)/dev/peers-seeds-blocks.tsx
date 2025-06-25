@@ -4,20 +4,20 @@ import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item
 import Image from 'next/image';
 import icons from '@/components/icons';
 import RoundedButton from '@/components/common/rounded-button';
-import { Chain } from '@prisma/client';
 import { parseCommaList } from '@/utils/parse-comma-list';
 import { parseJsonDict } from '@/utils/parse-json-dict';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
-  chain?: Chain;
+  chain: ChainWithParams | null;
 }
 
 const PeersSeedsBlocks: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkDevInfo');
 
-  const peersList = parseCommaList(chain?.peers);
-  const seedsList = parseCommaList(chain?.seeds);
-  const binariesDict = parseJsonDict(chain?.binaries);
+  const peersList = parseCommaList(chain?.params?.peers);
+  const seedsList = parseCommaList(chain?.params?.seeds);
+  const binariesDict = parseJsonDict(chain?.params?.binaries);
   const binariesList = Object.values(binariesDict);
 
   return (

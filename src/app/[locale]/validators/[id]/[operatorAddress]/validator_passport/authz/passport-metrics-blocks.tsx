@@ -16,8 +16,14 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
     return null;
   }
 
-  const tokensDelegated = +node.delegatorShares / 10 ** node.chain.coinDecimals;
-  const tokenDelegatedMetric = `${tokensDelegated.toLocaleString('en-US', { maximumFractionDigits: 2 })} ${node.chain.denom}`;
+  const tokensDelegated = node.chain.params?.coinDecimals
+    ? +node.delegatorShares / 10 ** node.chain.params?.coinDecimals
+    : undefined;
+
+  const tokenDelegatedMetric = tokensDelegated
+    ? `${tokensDelegated.toLocaleString('en-US', { maximumFractionDigits: 2 })} ${node.chain.params?.denom}`
+    : '';
+
   const votingPower = +node.delegatorShares / +node.chain.bondedTokens * 100;
   const expectedApr = (+node.chain.apr - (+node.chain.apr * +node.rate)) * 100;
 

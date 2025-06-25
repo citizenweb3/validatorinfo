@@ -251,7 +251,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'neutron-1',
     bech32Prefix: 'neutron',
     coinDecimals: 6,
-    coinGeckoId: 'neutron',
+    coinGeckoId: 'neutron-3',
     coinType: 118,
     denom: 'NTRN',
     minimalDenom: 'untrn',
@@ -936,14 +936,53 @@ const chainParams: Record<string, AddChainProps> = {
         url: 'http://168.119.37.164:5152',
       },
       {
+        type: 'rest',
+        url: 'https://ethereum-sepolia.core.chainstack.com/9599780fdf3a0a2d1203b2614695f975',
+      },
+      {
+        type: 'rest',
+        url: 'https://sepolia.infura.io/v3/0d98a14d4886428bbe5b927b678159b3',
+      },
+      {
+        type: 'rest',
+        url: 'https://eth-sepolia.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG',
+      },
+      {
+        type: 'rest',
+        url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      },
+      {
+        type: 'rest',
+        url: 'https://rpc.ankr.com/eth_sepolia/424ac266675ed3c8a9c8bfd421722137a6eb7c9bf94c02f8701deb879704eecc',
+      },
+      {
         type: 'rpc',
         url: 'http://168.119.37.164:8645',
+      },
+      {
+        type: 'rpc',
+        url: 'https://ethereum-sepolia.core.chainstack.com/beacon/9599780fdf3a0a2d1203b2614695f975',
+      },
+      {
+        type: 'rpc',
+        url: 'https://lb.drpc.org/rest/Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ/eth-beacon-chain-sepolia',
+      },
+      {
+        type: 'rpc',
+        url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
       },
     ],
     mainRepo: 'https://github.com/ethereum/go-ethereum',
     docs: 'https://ethereum.org/en/developers/docs/',
     githubUrl: 'https://github.com/ethereum',
     twitterUrl: 'https://x.com/ethdotorg',
+    seeds: [
+      'enode://4e5e92199ee224a01932a377160aa432f31d0b351f84ab413a8e0a42f4f36476f8fb1cbe914af0d9aef0d51665c214cf653c651c4bbd9d5550a934f241f1682b@138.197.51.181:30303',
+      'enode://143e11fb766781d22d92a2e33f8f104cddae4411a122295ed1fdb6638de96a6ce65f5b7c964ba3763bba27961738fef7d3ecc739268f3e5e771fb4c87b6234ba@146.190.1.103:30303',
+      'enode://8b61dc2d06c3f96fddcbebb0efb29d60d3598650275dc469c22229d3e5620369b0d3dedafd929835fe7f489618f19f456fe7c0df572bf2d914a9f4e006f783a9@170.64.250.88:30303',
+      'enode://10d62eff032205fcef19497f35ca8477bea0eadfff6d769a147e895d8b2b8f8ae6341630c645c30f5df6e67547c03494ced3d9c5764e8622a26587b083b028e8@139.59.49.206:30303',
+      'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
+    ],
   },
 };
 

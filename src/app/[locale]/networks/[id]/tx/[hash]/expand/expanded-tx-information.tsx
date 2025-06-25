@@ -1,12 +1,12 @@
-import { Chain } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import { txExample } from '@/app/networks/[id]/tx/txExample';
 import CopyButton from '@/components/common/copy-button';
+import { ChainWithParams } from '@/services/chain-service';
 import Link from 'next/link';
 
 interface OwnProps {
-  chain?: Chain;
+  chain: ChainWithParams | null;
 }
 
 const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
@@ -15,7 +15,7 @@ const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
   const formatData = (title: string, data: number | string | string[]) => {
     switch (title) {
       case 'amount':
-        return <div className="font-handjet text-lg hover:text-highlight">{data} {chain?.denom ?? 'ATOM'}</div>;
+        return <div className="font-handjet text-lg hover:text-highlight">{data} {chain?.params?.denom ?? 'ATOM'}</div>;
       case 'delegate address':
         return (
           <div className="flex flex-row items-center gap-2 hover:text-highlight">
@@ -32,12 +32,14 @@ const ExpandedTxInformation: FC<OwnProps> = async ({ chain }) => {
           return (
             <div className="flex flex-col gap-1">
               <div className="flex flex-row items-center gap-2">
-                <Link href={`/networks/${chain?.id}/address/${address}/passport`} className="text-highlight hover:underline">
+                <Link href={`/networks/${chain?.id}/address/${address}/passport`}
+                      className="text-highlight hover:underline">
                   {address}
                 </Link>
                 <CopyButton value={address} size={'md'} />
               </div>
-              <Link href={`/validators?search=${encodeURIComponent(valName)}`} className="text-highlight hover:underline">
+              <Link href={`/validators?search=${encodeURIComponent(valName)}`}
+                    className="text-highlight hover:underline">
                 {valName}
               </Link>
             </div>

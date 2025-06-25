@@ -52,11 +52,11 @@ const updateNodesVotes = async (chainNames: string[]) => {
 
         await db.nodeVote.create({
           data: {
-            nodeId:     node.id,
+            nodeId: node.id,
             proposalId: proposal.id,
-            chainId:    dbChain.id,
-            vote:       unifyVotes(vote.vote),
-            txHash:     null,
+            chainId: dbChain.id,
+            vote: unifyVotes(vote.vote),
+            txHash: null,
           },
         });
       }

@@ -3,15 +3,25 @@ import { FC } from 'react';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import { Proposal } from '@prisma/client';
 import ToolTip from '@/components/common/tooltip';
+import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
   proposals: Proposal[];
+  chain: ChainWithParams | null;
 }
 
-const TotalsListProposals: FC<OwnProps> = async ({ proposals }) => {
+const TotalsListProposals: FC<OwnProps> = async ({ proposals, chain }) => {
   const t = await getTranslations('NetworkGovernance');
   const proposalsPassed = proposals?.filter(proposal => proposal.status === 'PROPOSAL_STATUS_PASSED');
   const proposalsRejected = proposals?.filter(proposal => proposal.status === 'PROPOSAL_STATUS_REJECTED');
+
+  const participationRate = chain?.params?.votingParticipationRate
+    ? `${chain.params?.votingParticipationRate * 100}%`
+    : undefined;
+
+  const quorumThreshold = chain?.params?.quorumThreshold
+    ? `${chain.params?.quorumThreshold * 100}%`
+    : undefined;
 
   return (
     <div>
@@ -32,17 +42,18 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals }) => {
                          dataClassName={'mt-5'} />
       </div>
       <div className="mt-8 flex w-full flex-row justify-center gap-6">
-        <MetricsCardItem title={t('voting participation rate')}
-                         data="80"
-                         className={'pb-6 pt-2.5'}
-                         dataClassName={'mt-5'}
-                         isPercents
-        />
-        <MetricsCardItem title={t('quorum threshold')}
-                         data="40"
-                         className={'pb-6 pt-2.5'}
-                         dataClassName={'mt-5'}
-                         isPercents />
+        {participationRate && (
+          <MetricsCardItem title={t('voting participation rate')}
+                           data={participationRate}
+                           className={'pb-6 pt-2.5'}
+                           dataClassName={'mt-5'} />
+        )}
+        {quorumThreshold && (
+          <MetricsCardItem title={t('quorum threshold')}
+                           data={quorumThreshold}
+                           className={'pb-6 pt-2.5'}
+                           dataClassName={'mt-5'} />
+        )}
       </div>
       <div className="mt-20 flex items-center justify-between px-4 py-1 shadow-button mx-auto w-fit">
         <div className="font-sfpro text-lg">{t('governance token distribution')}:</div>

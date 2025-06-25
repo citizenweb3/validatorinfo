@@ -1,12 +1,14 @@
 import { FC } from 'react';
 
-export type Size = 'xs' | 'sm' | 'base' | 'md';
+export type Size = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl';
 
 const sizes: Record<Size, string> = {
   xs: 'h-5 w-5 min-h-5 min-w-5',
   sm: 'h-6 w-6 min-h-6 min-w-6',
   base: 'h-8 w-8 min-h-8 min-w-8',
   md: 'h-10 w-10 min-h-10 min-w-10',
+  lg: 'h-20 w-20 min-h-20 min-w-20',
+  xl: 'h-24 w-24 min-h-24 min-w-24',
 };
 
 interface OwnProps {
