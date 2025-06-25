@@ -61,6 +61,7 @@ const runServer = async () => {
     { name: 'chain-node-params', schedule: timers.everyDay },
     { name: 'community-tax', schedule: timers.everyDay },
     { name: 'wallets-amount', schedule: timers.everyDay },
+    { name: 'tokenomics', schedule: timers.everyHour },
     { name: 'proposal-params', schedule: timers.everyDay },
     // { name: 'slashing-nodes-infos', schedule: timers.every5mins },
     // { name: 'update-nodes-votes', schedule: timers.everyDay },

@@ -97,10 +97,11 @@ model Chain {
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
-  chainNodes ChainNode[] @relation("chain_node")
-  aprs       Apr[]       @relation("chain_apr")
-  prices     Price[]     @relation("chain_price")
-  nodes      Node[]      @relation("chain_validator_node")
+  chainNodes ChainNode[]  @relation("chain_node")
+  aprs       Apr[]        @relation("chain_apr")
+  prices     Price[]      @relation("chain_price")
+  tokenomics Tokenomics[] @relation("chain_tokenomics")
+  nodes      Node[]       @relation("chain_validator_node")
 
   params ChainParams? @relation("chain_params")
 
@@ -194,6 +195,21 @@ model Price {
   chain Chain @relation("chain_price", fields: [chainId], references: [id])
 
   @@map("prices")
+}
+
+model Tokenomics {
+  id              Int   @id @default(autoincrement())
+  chainId         Int   @map("chain_id")
+  ath             Float @default(0)
+  atl             Float @default(0)
+  changesPerDay   Float @default(0) @map("changes_per_day")
+  changesPerMonth Float @default(0) @map("changes_per_month")
+  changesPerYear  Float @default(0) @map("changes_per_year")
+
+  chain Chain @relation("chain_tokenomics", fields: [chainId], references: [id])
+
+  @@unique([chainId])
+  @@map("tokenomics")
 }
 
 enum ProposalStatus {

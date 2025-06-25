@@ -16,6 +16,7 @@ import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateCommTax from '@/server/jobs/update-community-tax';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
+import { getTokenomics } from '@/server/jobs/get-tokenomics';
 import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
 
@@ -69,6 +70,9 @@ async function runTask() {
         break;
       case 'wallets-amount':
         await updateWalletsAmount(chains);
+        break;
+      case 'tokenomics':
+        await getTokenomics();
         break;
       case 'proposal-params':
         await updateProposalParams(chains);
