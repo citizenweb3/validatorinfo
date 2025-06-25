@@ -17,7 +17,7 @@ const SortButton: FC<OwnProps> = ({ isActive, direction, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className={`${directions[direction]} ${isActive ? 'bg-sort_a' : 'bg-sort'} min-h-6 min-w-5 cursor-pointer bg-sort bg-contain bg-center bg-no-repeat group-hover:bg-sort_h`}
+      className={`${directions[direction]} ${isActive ? 'bg-sort_a' : 'bg-sort'} md:min-h-6 md:min-w-5 sm:min-h-20 sm:min-w-12 min-h-24 min-w-16 cursor-pointer bg-sort bg-contain bg-center bg-no-repeat group-hover:bg-sort_h`}
     />
   );
 };
