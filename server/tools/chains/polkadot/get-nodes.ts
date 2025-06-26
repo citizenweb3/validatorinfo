@@ -23,7 +23,7 @@ const getNodes: GetNodesFunction = async (chain) => {
     await fetchChainData<ValidatorsList>(
       chain.name,
       'rest',
-      `/pallets/staking/storage/validators`,
+      `/pallets/staking/validators`,
     )
   ).validators;
 
