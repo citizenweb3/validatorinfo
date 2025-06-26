@@ -1,78 +1,56 @@
-import { ApiPromise, WsProvider } from '@polkadot/api';
 import { Option } from '@polkadot/types';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import logger from '@/logger';
+import { Exposure } from '@polkadot/types/interfaces';
+import { connectWsApi } from '@/server/tools/chains/polkadot/utils/connect-ws-api';
 
 const { logError } = logger('polkadot-validator-stake');
-
-const connectWsApi = async (wsUrls: string[]): Promise<ApiPromise> => {
-  let lastError: any = null;
-
-  for (const url of wsUrls) {
-    let provider: WsProvider | null = null;
-    try {
-      provider = new WsProvider(url, 10000);
-      const api = await ApiPromise.create({ provider });
-      await api.isReadyOrError;
-      return api;
-    } catch (e) {
-      lastError = e;
-      if (provider) {
-        try {
-          provider.disconnect();
-        } catch (e) {
-          logError(`Can't disconnect with url ${url}`);
-        }
-      }
-    }
-  }
-  throw lastError || new Error(`Can't connect to every url`);
-};
 
 export const getValidatorStake = async (chain: AddChainProps) => {
   const wsList = chain.nodes.filter((n: any) => n.type === 'ws').map((n: any) => n.url);
   if (!wsList.length) {
     logError(`No ws url for chain '${chain.name}'`);
+    return [];
   }
 
-  const api = await connectWsApi(wsList);
+  const api = await connectWsApi(wsList, 3);
 
-  const activeEra = (await api.query.staking.activeEra()).toJSON();
-  const eraIndex = typeof activeEra === 'object' && activeEra !== null
-    ? (activeEra as any).index ?? activeEra
-    : activeEra;
+  try {
+    const activeEraRaw = await api.query.staking.activeEra();
+    const activeEra = activeEraRaw.toJSON();
+    const eraIndex = typeof activeEra === 'object' && activeEra !== null
+      ? (activeEra as any).index ?? activeEra
+      : activeEra;
 
-  const validators = await api.query.staking.erasStakersOverview.entries(Number(eraIndex));
-
-  const decoded: {
-    stash: string;
-    total: string;
-    own: string;
-  }[] = [];
-
-  for (const [key, opt] of validators) {
-    const [, stash] = key.args;
-
-    const exposureOption = opt as Option<any>;
-    if (exposureOption.isNone) {
-      decoded.push({
-        stash: stash.toString(),
-        total: '0',
-        own: '0',
-      });
-      continue;
+    if (typeof eraIndex !== 'number') {
+      logError(`Invalid activeEra: ${JSON.stringify(activeEra)}`);
+      return [];
     }
 
-    const exposure = exposureOption.unwrap();
-    const human = exposure.toHuman?.() || {};
+    const validators = await api.query.staking.erasStakersOverview.entries(eraIndex);
 
-    decoded.push({
-      stash: stash.toString(),
-      total: human.total ?? '0',
-      own: human.own ?? '0',
+    const decoded = validators.map(([key, opt]) => {
+      const [, stash] = key.args;
+      const exposureOption = opt as Option<Exposure>;
+
+      if (exposureOption.isNone) {
+        return { address: stash.toString(), total: '0', own: '0' };
+      }
+
+      const exposure = exposureOption.unwrap();
+      const human = typeof exposure.toHuman === 'function'
+        ? exposure.toHuman()
+        : exposure.toJSON();
+
+      return {
+        address: stash.toString(),
+        total: human?.total != null ? human.total.toString() : '0',
+        own: human?.own != null ? human.own.toString() : '0',
+      };
     });
-  }
 
-  await api.disconnect();
-  return decoded;
+    return decoded;
+  } finally {
+    await api.disconnect();
+  }
 };
