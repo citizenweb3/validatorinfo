@@ -26,13 +26,25 @@ export default async function TxInformationLayout({ children, params: { locale, 
   const chain = await chainService.getById(chainId);
   const txInformationTabs = getTxInformationTabs(chainId, hash);
 
-  return (<div className="">
-    <PageTitle text={t('title')} />
-    <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-    <TxInformation chain={chain} hash={hash} />
-    <div className="w-1/3 mt-5">
-      <TabList tabs={txInformationTabs} page={'TxInformationPage'} />
+  return (
+    <div className="">
+      <PageTitle
+        prefix={
+          <a
+            href={`/networks/${chain?.id}/overview`}
+            className="text-highlight hover:underline"
+          >
+            {chain?.prettyName ?? 'Network'}
+          </a>
+        }
+        text={t('title').replace(/^.*?Blockchain /, 'Blockchain ')}
+      />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <TxInformation chain={chain} hash={hash} />
+      {children}
+      <div className="w-1/3 mt-5">
+        <TabList tabs={txInformationTabs} page={'TxInformationPage'} />
+      </div>
     </div>
-    {children}
-  </div>);
+  );
 };

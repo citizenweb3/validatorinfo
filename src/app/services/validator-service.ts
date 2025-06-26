@@ -1,9 +1,10 @@
-import { Chain, Node, Prisma, Validator } from '@prisma/client';
+import { Node, Prisma, Validator } from '@prisma/client';
 
 import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import db from '@/db';
 import logger from '@/logger';
 import { SortDirection } from '@/server/types';
+import { ChainWithParams } from '@/services/chain-service';
 
 const { logDebug } = logger('validator-service');
 
@@ -12,7 +13,7 @@ export type ValidatorWithNodes = Validator & {
 };
 
 export type validatorNodesWithChainData = Node & {
-  chain: Chain;
+  chain: ChainWithParams;
   votingPower: number;
 };
 
@@ -179,8 +180,13 @@ const getValidatorNodesWithChains = async (
   if (sortBy === 'votingPower') {
     const allNodes = await db.node.findMany({
       where,
-      include: { chain: true },
+      include: {
+        chain: {
+          include: { params: true },
+        },
+      },
     });
+
     const computedNodes = allNodes.map((node) => {
       const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
       const delegatorShares = parseFloat(node.delegatorShares || '0');
@@ -218,7 +224,11 @@ const getValidatorNodesWithChains = async (
       skip,
       take,
       orderBy: orderBy,
-      include: { chain: true },
+      include: {
+        chain: {
+          include: { params: true },
+        },
+      },
     });
 
     const computedNodes = nodes.map((node) => {

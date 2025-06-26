@@ -33,7 +33,7 @@ const NodeStakingCalculator: FC<OwnProps> = ({ node, price }) => {
         asset: {
           name: node.chain.prettyName,
           price: price.value,
-          symbol: node.chain.denom,
+          symbol: node.chain.params?.denom ?? '',
           isSymbolFirst: false,
         },
       });

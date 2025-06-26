@@ -38,16 +38,15 @@ const ValidatorVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1
     }
   }
 
+  if (validatorId === undefined) return null;
   return (
     <tbody>
-    {votesList.map((item) => (
-      <ValidatorVotesItem key={item.proposalDbId} item={item} />
-    ))}
-    <tr>
-      <td colSpan={5} className="pt-4">
-        <TablePagination pageLength={pages} isScroll={false} />
-      </td>
-    </tr>
+      {votesList.map((item) => <ValidatorVotesItem key={item.proposalDbId} item={item} validatorId={validatorId} />)}
+      <tr>
+        <td colSpan={5} className="pt-4">
+          <TablePagination pageLength={pages} isScroll={false} />
+        </td>
+      </tr>
     </tbody>
   );
 };

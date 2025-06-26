@@ -15,6 +15,7 @@ const getNodes = async (chainNames: string[]) => {
 
     const dbChain = await db.chain.findFirst({
       where: { chainId: chainParams.chainId },
+      include: { params: true }
     });
     if (!dbChain) {
       logError(`${chainParams.chainId} chain not found in database`);
@@ -64,7 +65,11 @@ const getNodes = async (chainNames: string[]) => {
             }
           }
 
-          await nodeService.upsertNode(dbChain, { ...node, validatorId: validatorId });
+          const bech32Prefix = dbChain.ecosystem === 'cosmos'
+            ? dbChain?.params?.bech32Prefix
+            : undefined;
+
+          await nodeService.upsertNode(dbChain, bech32Prefix, { ...node, validatorId: validatorId });
         }
       } catch (e) {
         logError(`Can't fetch nodes for ${chainParams.name}:`, e);
