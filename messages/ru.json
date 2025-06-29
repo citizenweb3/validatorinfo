@@ -197,6 +197,7 @@
     "Others Links": "Другие ссылки",
     "Show Transactions": "Показать Транзакции",
     "Show Validators": "Показать Валидаторов",
+    "Show Nodes": "Показать Ноды",
     "temperature tooltip": "Показывает состояние здоровья цепи на основе различных измеряемых показателей",
     "tvl": "TVL",
     "revenue": "Доход",
@@ -406,6 +407,10 @@
     "Table": {
       "Node Address": {
         "name": "Адрес Ноды",
+        "hint": ""
+      },
+      "Node Moniker": {
+        "name": "Моникер Ноды",
         "hint": ""
       },
       "Validator": {

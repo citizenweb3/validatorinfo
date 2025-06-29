@@ -12,6 +12,7 @@ import spacePussyChainMethods from '@/server/tools/chains/space-pussy/methods';
 import strideChainMethods from '@/server/tools/chains/stride/methods';
 import symphonyChainMethods from '@/server/tools/chains/symphony-testnet/methods';
 import ethereumChainMethods from '@/server/tools/chains/ethereum/methods';
+import polkadotChainMethods from '@/server/tools/chains/polkadot/methods';
 
 const chainMethods: Record<string, ChainMethods> = {
   namada: namadaChainMethods,
@@ -41,6 +42,7 @@ const chainMethods: Record<string, ChainMethods> = {
   nym: cosmosChainMethods,
 
   solana: solanaChainMethods,
+  polkadot: polkadotChainMethods,
 
   'namada-testnet': namadaChainMethods,
   'neutron-testnet': neutronChainMethods,

@@ -197,6 +197,7 @@
     "Others Links": "Others Links",
     "Show Transactions": "Show Transactions",
     "Show Validators": "Show Validators",
+    "Show Nodes": "Show Nodes",
     "temperature tooltip": "Shows the chain health status based on various verifiable metrics",
     "tvl": "TVL",
     "revenue": "Revenue",
@@ -406,6 +407,10 @@
     "Table": {
       "Node Address": {
         "name": "Node Address",
+        "hint": ""
+      },
+      "Node Moniker": {
+        "name": "Node Moniker",
         "hint": ""
       },
       "Validator": {

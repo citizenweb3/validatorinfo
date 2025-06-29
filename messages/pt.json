@@ -197,6 +197,7 @@
     "Others Links": "Outras ligações",
     "Show Transactions": "Mostrar Transacções",
     "Show Validators": "Mostrar Validadores",
+    "Show Nodes": "Mostrar nós",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
     "tvl": "TVL",
     "revenue": "Receitas",
@@ -406,6 +407,10 @@
     "Table": {
       "Node Address": {
         "name": "Endereço de nó",
+        "hint": ""
+      },
+      "Node Moniker": {
+        "name": "Nó Moniker",
         "hint": ""
       },
       "Validator": {
