@@ -437,7 +437,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'namada.5f5de2dd1b88cba30586420',
     bech32Prefix: 'tnam',
     coinDecimals: 6,
-    coinGeckoId: '',
+    coinGeckoId: 'namada',
     coinType: 877,
     denom: 'NAM',
     minimalDenom: 'unam',
@@ -1008,10 +1008,6 @@ const chainParams: Record<string, AddChainProps> = {
       {
         type: 'rest',
         url: 'https://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
-      },
-      {
-        type: 'ws',
-        url: 'wss://lb.drpc.org/ogws?network=polkadot&dkey=Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ',
       },
       {
         type: 'ws',

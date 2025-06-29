@@ -34,18 +34,15 @@ export const getValidatorStake = async (chain: AddChainProps) => {
       const exposureOption = opt as Option<Exposure>;
 
       if (exposureOption.isNone) {
-        return { address: stash.toString(), total: '0', own: '0' };
+        return { address: stash.toString(), total: '', own: '' };
       }
 
       const exposure = exposureOption.unwrap();
-      const human = typeof exposure.toHuman === 'function'
-        ? exposure.toHuman()
-        : exposure.toJSON();
 
       return {
         address: stash.toString(),
-        total: human?.total != null ? human.total.toString() : '0',
-        own: human?.own != null ? human.own.toString() : '0',
+        total: exposure?.total ? exposure.total.toString() : '',
+        own: exposure?.own ? exposure.own.toString() : '',
       };
     });
 

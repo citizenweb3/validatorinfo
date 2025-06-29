@@ -25,9 +25,6 @@ const getNodes = async (chainNames: string[]) => {
     if (dbChain.hasValidators) {
       try {
         const nodes = await chainMethods.getNodes(chainParams);
-
-        logError(`${chainParams.chainId} chain ${JSON.stringify(nodes)}`);
-
         for (const node of nodes) {
           let validatorId: number | undefined;
           if (isIdentityValid(node.description.identity)) {
