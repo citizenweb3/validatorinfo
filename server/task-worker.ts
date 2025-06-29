@@ -82,6 +82,7 @@ async function runTask() {
     }
     logInfo(`${taskName} completed successfully`);
     parentPort?.postMessage(`${taskName} completed successfully`);
+    process.exit(0);
   } catch (err) {
     logError(`${taskName} failed`, err);
     process.exit(2);
