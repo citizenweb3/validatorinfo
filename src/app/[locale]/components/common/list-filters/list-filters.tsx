@@ -44,6 +44,7 @@ export const ecosystemsDropdown = [
   { value: 'namada', title: 'Namada' },
   { value: 'solana', title: 'Solana' },
   { value: 'ethereum', title: 'Ethereum' },
+  { value: 'polkadot', title: 'Polkadot' },
 ];
 
 const ListFilters: FC<OwnProps> = ({

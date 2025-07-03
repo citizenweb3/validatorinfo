@@ -32,6 +32,11 @@ export const ecosystemParams = [
     logoUrl:
       'https://raw.githubusercontent.com/ethereum/ethereum-org-website/refs/heads/dev/public/images/eth-logo-grey.png',
   },
+  {
+    name: 'polkadot',
+    prettyName: 'Polkadot',
+    logoUrl: 'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {
@@ -432,7 +437,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'namada.5f5de2dd1b88cba30586420',
     bech32Prefix: 'tnam',
     coinDecimals: 6,
-    coinGeckoId: '',
+    coinGeckoId: 'namada',
     coinType: 877,
     denom: 'NAM',
     minimalDenom: 'unam',
@@ -982,6 +987,40 @@ const chainParams: Record<string, AddChainProps> = {
       'enode://10d62eff032205fcef19497f35ca8477bea0eadfff6d769a147e895d8b2b8f8ae6341630c645c30f5df6e67547c03494ced3d9c5764e8622a26587b083b028e8@139.59.49.206:30303',
       'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
     ],
+  },
+  polkadot: {
+    rang: 1,
+    ecosystem: 'polkadot',
+    hasValidators: true,
+    name: 'polkadot',
+    prettyName: 'Polkadot',
+    chainId: 'polkadot',
+    bech32Prefix: '',
+    coinDecimals: 10,
+    coinGeckoId: 'polkadot',
+    coinType: 354,
+    denom: 'DOT',
+    minimalDenom: 'planck',
+    logoUrl:
+      'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
+    nodes: [
+      {
+        type: 'rest',
+        url: 'https://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      },
+      {
+        type: 'ws',
+        url: 'wss://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      },
+      {
+        type: 'ws',
+        url: 'wss://polkadot-rpc.publicnode.com',
+      },
+    ],
+    mainRepo: 'https://github.com/paritytech/polkadot-sdk',
+    docs: 'https://docs.polkadot.com/',
+    githubUrl: 'https://github.com/paritytech',
+    twitterUrl: 'https://x.com/Polkadot',
   },
 };
 
