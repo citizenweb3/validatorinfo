@@ -3,9 +3,9 @@ import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 
-const { logInfo, logError } = logger('get-tvl');
+const { logError, logInfo } = logger('get-community-pool');
 
-export const updateChainTvs = async (chainNames: string[]) => {
+const updateCommPool = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
     const chainMethods = getChainMethods(chainName);
@@ -19,22 +19,20 @@ export const updateChainTvs = async (chainNames: string[]) => {
         return null;
       }
       logInfo(`${chainName} updating`);
-      const tvs = await chainMethods.getTvs(chainParams);
+      const communityPool = await chainMethods.getCommPool(chainParams);
+      logInfo(`${chainName} community pool: ${communityPool}`);
 
-      if (tvs) {
+      if (communityPool !== undefined && communityPool !== null) {
         await db.tokenomics.upsert({
           where: { chainId: dbChain.id },
-          update: { ...tvs },
-          create: { chainId: dbChain.id, ...tvs },
+          update: { communityPool },
+          create: { chainId: dbChain.id, communityPool },
         });
-
-      } else {
-        logError(`Can't fetch TVS for ${chainParams.name}`);
       }
     } catch (e) {
-      logError(`'Can't fetch TVS: ', ${e}`);
+      logError("Can't fetch community pool: ", e);
     }
   }
 };
 
-export default updateChainTvs;
+export default updateCommPool;

@@ -29,6 +29,7 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
+  getCommPool: async () => null,
 };
 
 export default chainMethods;

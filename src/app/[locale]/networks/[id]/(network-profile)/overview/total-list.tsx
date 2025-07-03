@@ -4,15 +4,15 @@ import { FC } from 'react';
 import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import formatCash from '@/utils/format-cash';
-import { ChainWithParams } from '@/services/chain-service';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 interface OwnProps {
-  chain: ChainWithParams | null;
+  chain: ChainWithParamsAndTokenomics | null;
 }
 
 const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
-  const totalSupply = Number(chain?.totalSupply) / Number(10 ** (chain?.params?.coinDecimals ?? 6));
+  const totalSupply = Number(chain?.tokenomics?.totalSupply) / Number(10 ** (chain?.params?.coinDecimals ?? 6));
   const totalSupplyMetric = `${formatCash(totalSupply)} ${chain?.params?.denom ?? ''}`;
 
   return (

@@ -645,10 +645,9 @@ const chainParams: Record<string, AddChainProps> = {
     name: 'artela-testnet',
     prettyName: 'Artela Testnet',
     chainId: 'artela_11822-1',
-
     bech32Prefix: 'art',
     coinDecimals: 6,
-    coinGeckoId: 'artela-network',
+    coinGeckoId: '',
     coinType: 118,
     denom: 'ART',
     minimalDenom: 'uart',

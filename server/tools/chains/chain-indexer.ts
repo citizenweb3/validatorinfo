@@ -103,6 +103,7 @@ export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<N
 export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
+export type GetCommPoolFunction = (chain: AddChainProps) => Promise<string | null>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -117,4 +118,5 @@ export interface ChainMethods {
   getCommTax: GetCommTaxFunction;
   getWalletsAmount: GetWalletsAmount;
   getProposalParams: GetProposalParams;
+  getCommPool: GetCommPoolFunction;
 }

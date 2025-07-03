@@ -19,6 +19,7 @@ import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
 import { getTokenomics } from '@/server/jobs/get-tokenomics';
 import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
+import updateCommPool from '@/server/jobs/update-community-pool';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -77,11 +78,15 @@ async function runTask() {
       case 'proposal-params':
         await updateProposalParams(chains);
         break;
+      case 'community-pool':
+        await updateCommPool(chains);
+        break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
     }
     logInfo(`${taskName} completed successfully`);
     parentPort?.postMessage(`${taskName} completed successfully`);
+    process.exit(0);
   } catch (err) {
     logError(`${taskName} failed`, err);
     process.exit(2);
