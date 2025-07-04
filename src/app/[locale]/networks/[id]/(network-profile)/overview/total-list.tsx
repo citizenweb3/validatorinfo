@@ -13,8 +13,10 @@ interface OwnProps {
 
 const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
-  const totalSupply = Number(chain?.tokenomics?.totalSupply) / Number(10 ** (chain?.params?.coinDecimals ?? 6));
-  const totalSupplyMetric = `${formatCash(totalSupply)} ${chain?.params?.denom ?? ''}`;
+  const totalSupply =
+    chain?.tokenomics?.totalSupply && chain?.params?.coinDecimals
+      ? Number(chain?.tokenomics?.totalSupply) / Number(10 ** chain?.params?.coinDecimals)
+      : 0;
 
   return (
     <div className="mt-20 flex w-full flex-row justify-center gap-6">
