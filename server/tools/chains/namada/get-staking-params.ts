@@ -1,5 +1,6 @@
 import logger from '@/logger';
 import { GetStakingParamsFunction, StakingParams } from '@/server/tools/chains/chain-indexer';
+import { getPosParams } from '@/server/tools/chains/namada/utils/get-pos-params';
 import fetchChainData from '@/server/tools/get-chain-data';
 
 interface ChainStakingParams {
@@ -37,6 +38,9 @@ const getStakingParams: GetStakingParamsFunction = async (chain) => {
     const unbondingEpochs = Number(unbondingTimeResult.unbondingLength);
     const epochDurationSeconds = Number(unbondingTimeResult.minDuration);
     result.unbondingTime = unbondingEpochs * epochDurationSeconds;
+
+    const posParams = await getPosParams(chain.name);
+    result.maxValidators = posParams ? posParams.max_validator_slots : null;
 
     logInfo(`Staking params for ${chain.name}: ${JSON.stringify(result)}`);
     return result;

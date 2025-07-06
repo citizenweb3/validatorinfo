@@ -64,6 +64,7 @@ const runServer = async () => {
     { name: 'tokenomics', schedule: timers.everyHour },
     { name: 'proposal-params', schedule: timers.everyDay },
     { name: 'community-pool', schedule: timers.everyDay },
+    { name: 'active-set-min-amount', schedule: timers.everyHour },
     // { name: 'slashing-nodes-infos', schedule: timers.every5mins },
     // { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
@@ -114,13 +115,14 @@ const runServer = async () => {
   });
 
   // Initial run for specialTasks after 5 minutes for wait validators updated
-  setTimeout(() => {
-    specialTasks.forEach(({ name }) => {
-      spawnTask(name, chains).catch((e) =>
-        logError(`Initial run error for task ${name}:`, e),
-      );
-    });
-  }, 5 * 60 * 1000);
+  setTimeout(
+    () => {
+      specialTasks.forEach(({ name }) => {
+        spawnTask(name, chains).catch((e) => logError(`Initial run error for task ${name}:`, e));
+      });
+    },
+    5 * 60 * 1000,
+  );
 };
 
 runServer();

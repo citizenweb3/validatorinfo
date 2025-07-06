@@ -35,6 +35,7 @@ const chainMethods: ChainMethods = {
     quorumThreshold: null,
   }),
   getCommPool: async () => null,
+  getActiveSetMinAmount: async () => null,
 };
 
 export default chainMethods;

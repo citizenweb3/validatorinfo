@@ -1,9 +1,9 @@
 import { NodeResult, SlashingSigningInfos } from '@/server/types';
+import { ChainWithParams } from '@/services/chain-service';
 
 import { Prisma } from '.prisma/client';
 
 import ProposalCreateInput = Prisma.ProposalCreateInput;
-import { ChainWithParams } from '@/services/chain-service';
 
 export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
 
@@ -104,6 +104,7 @@ export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
 export type GetCommPoolFunction = (chain: AddChainProps) => Promise<string | null>;
+export type GetActiveSetMinAmount = (chain: AddChainProps) => Promise<string | null>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -119,4 +120,5 @@ export interface ChainMethods {
   getWalletsAmount: GetWalletsAmount;
   getProposalParams: GetProposalParams;
   getCommPool: GetCommPoolFunction;
+  getActiveSetMinAmount: GetActiveSetMinAmount;
 }
