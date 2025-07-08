@@ -14,6 +14,7 @@ import updateChainStakingParams from '@/server/jobs/update-chain-staking-params'
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
 import updateCommPool from '@/server/jobs/update-community-pool';
 import updateCommTax from '@/server/jobs/update-community-tax';
+import updateInflationRate from '@/server/jobs/update-inflation-rate';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
 import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
@@ -84,6 +85,9 @@ async function runTask() {
         break;
       case 'active-set-min-amount':
         await updateActiveSetMinAmount(chains);
+        break;
+      case 'inflation-rate':
+        await updateInflationRate(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

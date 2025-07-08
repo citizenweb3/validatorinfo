@@ -2,6 +2,7 @@ import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import cosmosChainMethods from '@/server/tools/chains/cosmoshub/methods';
 import getActiveSetMinAmount from '@/server/tools/chains/namada/get-active-set-min-amount';
 import getApr from '@/server/tools/chains/namada/get-apr';
+import getInflationRate from '@/server/tools/chains/namada/get-inflation-rate';
 import getMissedBlocks from '@/server/tools/chains/namada/get-missed-blocks';
 import getNodes from '@/server/tools/chains/namada/get-nodes';
 import getNodesVotes from '@/server/tools/chains/namada/get-nodes-votes';
@@ -29,6 +30,7 @@ const chainMethods: ChainMethods = {
     quorumThreshold: null,
   }),
   getActiveSetMinAmount,
+  getInflationRate,
 };
 
 export default chainMethods;

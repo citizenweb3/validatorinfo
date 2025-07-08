@@ -77,6 +77,12 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
           className="pb-8 pt-2.5"
           dataClassName="mt-6"
         />
+        <MetricsCardItem
+          title={t('inflation rate')}
+          data={`${(Number(chain?.tokenomics?.inflation) * 100).toFixed(2)}%`}
+          className="pb-8 pt-2.5"
+          dataClassName="mt-6"
+        />
         {networkProfileExample.distributionParameters.map((item) => (
           <MetricsCardItem
             key={item.title}
