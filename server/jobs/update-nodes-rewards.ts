@@ -20,7 +20,6 @@ const updateNodesRewards = async (chainNames: string[]) => {
       }
       logInfo(`${chainName} updating`);
       const nodesRewards = await chainMethods.getNodeRewards(chainParams);
-      logInfo(`${chainName} nodes rewards: ${nodesRewards}`);
 
       for (const node of nodesRewards) {
         if (node.rewards && node.address) {

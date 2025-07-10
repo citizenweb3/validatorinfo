@@ -199,10 +199,6 @@ export const networkProfileExample = {
   ],
   distributionParameters: [
     {
-      title: 'reward to payout',
-      data: 12,
-    },
-    {
       title: 'circulating tokens',
       data: 12,
     },

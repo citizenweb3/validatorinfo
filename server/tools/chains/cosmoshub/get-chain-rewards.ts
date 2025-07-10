@@ -24,7 +24,7 @@ const getChainRewards: GetChainRewards = async (chain: AddChainProps) => {
     try {
       const rewards = await fetchNodeRewards(chain, node.operator_address);
       if (rewards !== null && rewards !== undefined) {
-        chainRewards += BigInt(rewards);
+        chainRewards += BigInt(String(rewards).split('.')[0]);
         atLeastOneRewardFetched = true;
       }
     } catch (e) {
