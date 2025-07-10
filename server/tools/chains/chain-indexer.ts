@@ -1,9 +1,9 @@
 import { NodeResult, SlashingSigningInfos } from '@/server/types';
+import { ChainWithParams } from '@/services/chain-service';
 
 import { Prisma } from '.prisma/client';
 
 import ProposalCreateInput = Prisma.ProposalCreateInput;
-import { ChainWithParams } from '@/services/chain-service';
 
 export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
 
@@ -90,6 +90,11 @@ export interface ProposalParams {
   quorumThreshold: number | null;
 }
 
+export interface NodesRewards {
+  address: string | null;
+  rewards: string | null;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -103,6 +108,8 @@ export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<N
 export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
+export type GetNodeRewards = (chain: AddChainProps) => Promise<NodesRewards[]>;
+export type GetChainRewards = (chain: AddChainProps) => Promise<string | null>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -117,4 +124,6 @@ export interface ChainMethods {
   getCommTax: GetCommTaxFunction;
   getWalletsAmount: GetWalletsAmount;
   getProposalParams: GetProposalParams;
+  getNodeRewards: GetNodeRewards;
+  getChainRewards: GetChainRewards;
 }

@@ -34,6 +34,8 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
+  getNodeRewards: async () => [],
+  getChainRewards: async () => null,
 };
 
 export default chainMethods;
