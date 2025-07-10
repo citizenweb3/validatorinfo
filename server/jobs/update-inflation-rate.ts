@@ -3,9 +3,9 @@ import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 
-const { logInfo, logError } = logger('get-tvl');
+const { logError, logInfo } = logger('update-inflation-rate');
 
-export const updateChainTvs = async (chainNames: string[]) => {
+const updateInflationRate = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
     const chainMethods = getChainMethods(chainName);
@@ -19,22 +19,20 @@ export const updateChainTvs = async (chainNames: string[]) => {
         return null;
       }
       logInfo(`${chainName} updating`);
-      const tvs = await chainMethods.getTvs(chainParams);
+      const inflation = await chainMethods.getInflationRate(chainParams);
+      logInfo(`${chainName} inflation rate: ${inflation}`);
 
-      if (tvs) {
+      if (inflation !== undefined && inflation !== null) {
         await db.tokenomics.upsert({
           where: { chainId: dbChain.id },
-          update: { ...tvs },
-          create: { chainId: dbChain.id, ...tvs },
+          update: { inflation },
+          create: { chainId: dbChain.id, inflation },
         });
-
-      } else {
-        logError(`Can't fetch TVS for ${chainParams.name}`);
       }
     } catch (e) {
-      logError(`'Can't fetch TVS: ', ${e}`);
+      logError("Can't fetch inflation rate: ", e);
     }
   }
 };
 
-export default updateChainTvs;
+export default updateInflationRate;

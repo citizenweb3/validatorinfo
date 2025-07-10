@@ -16,11 +16,6 @@ export const networkProfileExample = {
       tooltip: 'revenue',
     },
     {
-      title: 'validator cost',
-      data: 90,
-      tooltip: 'validator cost',
-    },
-    {
       title: 'mau',
       data: 90,
       tooltip: 'mau',
@@ -49,21 +44,7 @@ export const networkProfileExample = {
       data: 0.71,
     },
   ],
-  networkOverview: [
-    {
-      title: 'comm pool value in usd',
-      data: 23657591,
-    },
-    {
-      title: '% of comm pool to total supply',
-      data: 10,
-    },
-  ],
   totalStatistics: [
-    {
-      title: 'community pool total',
-      data: '...1234',
-    },
     {
       title: 'average delegations',
       data: '...314',
@@ -218,19 +199,11 @@ export const networkProfileExample = {
   ],
   distributionParameters: [
     {
-      title: 'community pool tvl',
-      data: 12,
-    },
-    {
       title: 'reward to payout',
       data: 12,
     },
     {
       title: 'circulating tokens',
-      data: 12,
-    },
-    {
-      title: 'inflation rate',
       data: 12,
     },
   ],

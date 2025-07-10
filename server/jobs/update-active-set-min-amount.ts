@@ -3,9 +3,9 @@ import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 
-const { logInfo, logError } = logger('get-tvl');
+const { logError, logInfo } = logger('update-active-set-min-amount');
 
-export const updateChainTvs = async (chainNames: string[]) => {
+const updateCommPool = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
     const chainMethods = getChainMethods(chainName);
@@ -19,22 +19,20 @@ export const updateChainTvs = async (chainNames: string[]) => {
         return null;
       }
       logInfo(`${chainName} updating`);
-      const tvs = await chainMethods.getTvs(chainParams);
+      const activeSetMinAmount = await chainMethods.getActiveSetMinAmount(chainParams);
+      logInfo(`${chainName} active set min amount: ${activeSetMinAmount}`);
 
-      if (tvs) {
+      if (activeSetMinAmount !== undefined && activeSetMinAmount !== null) {
         await db.tokenomics.upsert({
           where: { chainId: dbChain.id },
-          update: { ...tvs },
-          create: { chainId: dbChain.id, ...tvs },
+          update: { activeSetMinAmount },
+          create: { chainId: dbChain.id, activeSetMinAmount },
         });
-
-      } else {
-        logError(`Can't fetch TVS for ${chainParams.name}`);
       }
     } catch (e) {
-      logError(`'Can't fetch TVS: ', ${e}`);
+      logError("Can't fetch active set: ", e);
     }
   }
 };
 
-export default updateChainTvs;
+export default updateCommPool;

@@ -1,19 +1,24 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
-import getMissedBlocks from '@/server/tools/chains/ethereum/get-missed-blocks';
-import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
-import getNodes from '@/server/tools/chains/ethereum/get-nodes';
-import getSlashingParams from '@/server/tools/chains/ethereum/get-slashing-params';
-import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
-import getTvs from '@/server/tools/chains/ethereum/get-tvs';
+import getNodes from '@/server/tools/chains/polkadot/get-nodes';
+import getStakingParams from '@/server/tools/chains/polkadot/get-staking-params';
+import getTvs from '@/server/tools/chains/polkadot/get-tvs';
 
 const chainMethods: ChainMethods = {
   getNodes,
   getStakingParams,
   getTvs,
-  getMissedBlocks,
-  getSlashingParams,
+  getMissedBlocks: () => Promise.resolve([]),
+  getSlashingParams: () => Promise.resolve({ blocksWindow: null, jailedDuration: null }),
   getApr: async () => 0,
-  getNodeParams,
+  getNodeParams: async () => ({
+    peers: null,
+    seeds: null,
+    daemonName: null,
+    nodeHome: null,
+    keyAlgos: null,
+    binaries: null,
+    genesis: null,
+  }),
   getProposals: async () => ({
     proposals: [],
     total: 0,
@@ -29,8 +34,6 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
-  getNodeRewards: async () => [],
-  getChainRewards: async () => null,
   getCommPool: async () => null,
   getActiveSetMinAmount: async () => null,
   getInflationRate: async () => null,

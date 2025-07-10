@@ -30,8 +30,14 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
       ${node.chain.params.denom}`
       : '-';
 
-  const votingPower = (+node.delegatorShares / +node.chain.bondedTokens) * 100;
-  const expectedApr = (+node.chain.apr - +node.chain.apr * +node.rate) * 100;
+  const votingPower =
+    node.delegatorShares && node.chain?.tokenomics?.bondedTokens
+      ? (+node.delegatorShares / +node.chain.tokenomics?.bondedTokens) * 100
+      : undefined;
+
+  const expectedApr = node.chain?.tokenomics?.apr
+    ? (+node.chain.tokenomics.apr - +node.chain.tokenomics.apr * +node.rate) * 100
+    : undefined;
 
   const cardClass = 'pt-3 pb-3';
   const cardValueClass = 'my-5';
@@ -58,7 +64,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
           />
           <MetricsCardItem
             title={t('expected APR')}
-            data={expectedApr.toFixed(2)}
+            data={expectedApr?.toFixed(2) ?? '-'}
             className={cardClass}
             dataClassName={cardValueClass}
             isPercents
@@ -73,7 +79,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
         <div className="flex gap-8">
           <MetricsCardItem
             title={t('voting power')}
-            data={votingPower.toFixed(2)}
+            data={votingPower?.toFixed(2) ?? '-'}
             className={cardClass}
             dataClassName={cardValueClass}
             isPercents

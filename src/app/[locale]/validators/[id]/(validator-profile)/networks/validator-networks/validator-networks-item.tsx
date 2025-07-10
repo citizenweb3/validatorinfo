@@ -25,7 +25,9 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
     ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals
     : undefined;
 
-  const expectedApr = (+item.chain.apr - (+item.chain.apr * +item.rate)) * 100;
+  const expectedApr = item?.chain?.tokenomics?.apr
+    ? (+item.chain?.tokenomics?.apr - (+item.chain.tokenomics.apr * +item.rate)) * 100
+    : undefined;
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
@@ -43,9 +45,12 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         <TableAvatar icon={item.chain.logoUrl} name={item.chain.prettyName || 'No name'} href={nodeLink} />
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={nodeLink}>
-          <div className="text-center">{expectedApr.toFixed(2)}%</div>
-        </Link>
+        {expectedApr ? (
+            <Link href={nodeLink}>
+              <div className="text-center">{expectedApr.toFixed(2)}%</div>
+            </Link>
+          )
+          : (<div className="text-center">-</div>)}
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>

@@ -1,7 +1,10 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import getActiveSetMinAmount from '@/server/tools/chains/cosmoshub/get-active-set-min-amount';
 import getApr from '@/server/tools/chains/cosmoshub/get-apr';
 import getChainRewards from '@/server/tools/chains/cosmoshub/get-chain-rewards';
+import getCommPool from '@/server/tools/chains/cosmoshub/get-community-pool';
 import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
+import getInflationRate from '@/server/tools/chains/cosmoshub/get-inflation-rate';
 import getMissedBlocks from '@/server/tools/chains/cosmoshub/get-missed-blocks';
 import getNodeParams from '@/server/tools/chains/cosmoshub/get-node-params';
 import getNodeRewards from '@/server/tools/chains/cosmoshub/get-node-rewards';
@@ -28,6 +31,9 @@ const chainMethods: ChainMethods = {
   getProposalParams,
   getNodeRewards,
   getChainRewards,
+  getCommPool,
+  getActiveSetMinAmount,
+  getInflationRate,
 };
 
 export default chainMethods;
