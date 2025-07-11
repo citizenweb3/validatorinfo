@@ -21,7 +21,12 @@ const redis = new Redis({
   // password: process.env.REDIS_PASSWORD,
 });
 
-const fetchChainData = async <T>(chainName: string, urlType: ChainNodeType, url: string): Promise<T> => {
+const fetchChainData = async <T>(
+  chainName: string,
+  urlType: ChainNodeType,
+  url: string,
+  sleepTime: number = 1000,
+): Promise<T> => {
   const cacheKey = `endpoints:${chainName}:${urlType}`;
 
   let cache: EndpointCache | null = null;
@@ -70,7 +75,7 @@ const fetchChainData = async <T>(chainName: string, urlType: ChainNodeType, url:
     const fullUrl = endpoint + url;
 
     try {
-      const data = await fetchData<T>(fullUrl);
+      const data = await fetchData<T>(fullUrl, sleepTime);
       if (data) {
         logDebug(`Data fetched from ${fullUrl}: ${JSON.stringify(data)}`);
         return data;

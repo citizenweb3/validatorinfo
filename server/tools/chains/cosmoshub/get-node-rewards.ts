@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { AddChainProps, GetNodeRewards, NodesRewards } from '@/server/tools/chains/chain-indexer';
-import fetchNodeRewards from '@/server/tools/chains/cosmoshub/utils/fetch-node-rewards';
+import fetchCosmosNodeRewards from '@/server/tools/chains/cosmoshub/utils/fetch-cosmos-node-rewards';
 import fetchChainData from '@/server/tools/get-chain-data';
 import { NodeResult } from '@/server/types';
 
@@ -21,8 +21,8 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
 
   for (const node of nodes) {
     try {
-      const rewards = await fetchNodeRewards(chain, node.operator_address);
-      if (rewards) {
+      const rewards = await fetchCosmosNodeRewards(chain, node.operator_address);
+      if (rewards !== null && rewards !== undefined) {
         nodesRewards.push({
           address: node.operator_address,
           rewards: rewards,

@@ -23,7 +23,7 @@ const updateNodesRewards = async (chainNames: string[]) => {
 
       for (const node of nodesRewards) {
         if (node.rewards && node.address) {
-          await db.node.update({
+          await db.node.updateMany({
             where: { operatorAddress: node.address },
             data: { outstandingRewards: node.rewards },
           });
