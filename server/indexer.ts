@@ -63,6 +63,7 @@ const runServer = async () => {
     { name: 'wallets-amount', schedule: timers.everyDay },
     { name: 'tokenomics', schedule: timers.everyHour },
     { name: 'proposal-params', schedule: timers.everyDay },
+    { name: 'update-staking-page-json', schedule: timers.everyDay },
     // { name: 'slashing-nodes-infos', schedule: timers.every5mins },
     // { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
@@ -113,13 +114,14 @@ const runServer = async () => {
   });
 
   // Initial run for specialTasks after 5 minutes for wait validators updated
-  setTimeout(() => {
-    specialTasks.forEach(({ name }) => {
-      spawnTask(name, chains).catch((e) =>
-        logError(`Initial run error for task ${name}:`, e),
-      );
-    });
-  }, 5 * 60 * 1000);
+  setTimeout(
+    () => {
+      specialTasks.forEach(({ name }) => {
+        spawnTask(name, chains).catch((e) => logError(`Initial run error for task ${name}:`, e));
+      });
+    },
+    5 * 60 * 1000,
+  );
 };
 
 runServer();

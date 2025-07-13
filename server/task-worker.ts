@@ -4,21 +4,22 @@ import logger from '@/logger';
 import getChainUptime from '@/server/jobs/get-chain-uptime';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
+import { getTokenomics } from '@/server/jobs/get-tokenomics';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
+import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
+import updateCommTax from '@/server/jobs/update-community-tax';
+import updateNodesVotes from '@/server/jobs/update-nodes-votes';
+import updateProposalParams from '@/server/jobs/update-proposal-params';
+import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
+import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
+import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
-import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
-import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
-import updateNodesVotes from '@/server/jobs/update-nodes-votes';
-import updateCommTax from '@/server/jobs/update-community-tax';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
-import { getTokenomics } from '@/server/jobs/get-tokenomics';
-import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
-import updateProposalParams from '@/server/jobs/update-proposal-params';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -76,6 +77,9 @@ async function runTask() {
         break;
       case 'proposal-params':
         await updateProposalParams(chains);
+        break;
+      case 'update-staking-page-json':
+        await updateStakingPageJson();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
