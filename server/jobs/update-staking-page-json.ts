@@ -19,8 +19,8 @@ const updateStakingPageJson = async () => {
 
     try {
       JSON.parse(text);
-    } catch {
-      logError('Fetched staking networks.json is not valid JSON!');
+    } catch (e) {
+      logError(`Fetched staking networks.json is not valid JSON: ${e}`);
       return;
     }
 
@@ -28,9 +28,9 @@ const updateStakingPageJson = async () => {
       await mkdir(dirname(LOCAL_PATH), { recursive: true });
       await writeFile(LOCAL_PATH, text);
     } catch (e) {
-      console.error('Write error:', e);
+      logError(`Can't write staking networks json: ${e}`);
+      return;
     }
-
     logInfo(`Staking networks json updated`);
   } catch (e) {
     logError(`Error getting and writing new networks json: ${e}`);
