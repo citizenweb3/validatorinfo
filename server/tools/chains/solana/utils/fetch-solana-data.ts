@@ -22,11 +22,27 @@ const fetchSolanaData = async <T>(method: string, params?: any[]): Promise<T> =>
         jsonrpc: '2.0',
         id: 1,
         method,
-        params,
+        params: params ?? [],
       }),
     });
 
-    const data = await res.json();
+    if (!res.ok) {
+      logError(`HTTP error for method ${method}: status ${res.status}`);
+      throw new Error(`HTTP error: ${res.status}`);
+    }
+
+    let data;
+    try {
+      data = await res.json();
+    } catch (e) {
+      logError(`Response is not valid JSON for method ${method}:`, e);
+      throw e;
+    }
+
+    if (!data || typeof data !== 'object') {
+      logError(`Unexpected response for method ${method}: ${JSON.stringify(data)}`);
+      throw new Error(`Unexpected response format`);
+    }
 
     if ('error' in data) {
       logError(`Solana RPC error: ${JSON.stringify(data.error)}`);
