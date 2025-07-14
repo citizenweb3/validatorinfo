@@ -1,3 +1,5 @@
+import logger from '@/logger';
+
 export interface SolanaChainNode {
   activatedStake: number;
   commission: number;
@@ -9,21 +11,38 @@ export interface SolanaChainNode {
   votePubkey: string;
 }
 
-const fetchSolanaData = async <T>(method: string): Promise<T> => {
-  const result = await fetch('https://api.mainnet-beta.solana.com', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      jsonrpc: '2.0',
-      id: 1,
-      method,
-      params: [],
-    }),
-  }).then((res) => res.json());
+const { logError } = logger('fetch-solana-data');
 
-  return result.result as T;
+const fetchSolanaData = async <T>(method: string, params?: any[]): Promise<T> => {
+  try {
+    const res = await fetch('https://api.mainnet-beta.solana.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        jsonrpc: '2.0',
+        id: 1,
+        method,
+        params,
+      }),
+    });
+
+    const data = await res.json();
+
+    if ('error' in data) {
+      logError(`Solana RPC error: ${JSON.stringify(data.error)}`);
+      throw new Error(`Solana RPC error: ${JSON.stringify(data.error)}`);
+    }
+
+    if (!('result' in data)) {
+      logError(`No result in Solana RPC response: ${JSON.stringify(data)}`);
+      throw new Error(`No result in Solana RPC response`);
+    }
+
+    return data.result as T;
+  } catch (e) {
+    logError(`Can't fetch solanaData with method ${method}: ${e}`);
+    throw e;
+  }
 };
 
 export default fetchSolanaData;

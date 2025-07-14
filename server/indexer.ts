@@ -7,6 +7,7 @@ import chains from '@/server/tools/chains/chains';
 const timers = {
   every5mins: '*/5 * * * *',
   every10mins: '*/10 * * * *',
+  every30mins: '*/30 * * * *',
   everyHour: '0 * * * *',
   everyDay: '0 0 * * *',
 };
@@ -92,6 +93,7 @@ const runServer = async () => {
     { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'slashing-infos', schedule: timers.everyHour },
     { name: 'slashing-infos-namada', schedule: timers.every10mins },
+    { name: 'slashing-infos-solana', schedule: timers.every30mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
 
@@ -113,13 +115,14 @@ const runServer = async () => {
   });
 
   // Initial run for specialTasks after 5 minutes for wait validators updated
-  setTimeout(() => {
-    specialTasks.forEach(({ name }) => {
-      spawnTask(name, chains).catch((e) =>
-        logError(`Initial run error for task ${name}:`, e),
-      );
-    });
-  }, 5 * 60 * 1000);
+  setTimeout(
+    () => {
+      specialTasks.forEach(({ name }) => {
+        spawnTask(name, chains).catch((e) => logError(`Initial run error for task ${name}:`, e));
+      });
+    },
+    5 * 60 * 1000,
+  );
 };
 
 runServer();

@@ -4,21 +4,22 @@ import logger from '@/logger';
 import getChainUptime from '@/server/jobs/get-chain-uptime';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
+import { getTokenomics } from '@/server/jobs/get-tokenomics';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
+import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
+import updateCommTax from '@/server/jobs/update-community-tax';
+import updateNodesVotes from '@/server/jobs/update-nodes-votes';
+import updateProposalParams from '@/server/jobs/update-proposal-params';
+import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
+import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
+import updateSlashingInfosSolana from '@/server/jobs/update-slashing-infos-solana';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
-import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
-import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
-import updateNodesVotes from '@/server/jobs/update-nodes-votes';
-import updateCommTax from '@/server/jobs/update-community-tax';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
-import { getTokenomics } from '@/server/jobs/get-tokenomics';
-import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
-import updateProposalParams from '@/server/jobs/update-proposal-params';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -56,6 +57,9 @@ async function runTask() {
       case 'slashing-infos-namada':
         await updateSlashingInfosNamada(chains);
         break;
+      case 'slashing-infos-solana':
+        await updateSlashingInfosSolana(chains);
+        break;
       case 'chain-node-params':
         await updateChainNodeParams(chains);
         break;
@@ -82,6 +86,7 @@ async function runTask() {
     }
     logInfo(`${taskName} completed successfully`);
     parentPort?.postMessage(`${taskName} completed successfully`);
+    process.exit(0);
   } catch (err) {
     logError(`${taskName} failed`, err);
     process.exit(2);
