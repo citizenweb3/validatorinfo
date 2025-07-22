@@ -2,6 +2,7 @@ import logger from '@/logger';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
 import fetchChainData from '@/server/tools/get-chain-data';
 import { NodeResult } from '@/server/types';
+import { bigIntPow } from '@/server/utils/bigint-pow';
 import isUrlValid from '@/server/utils/is-url-valid';
 
 const { logError } = logger('namada-nodes');
@@ -47,8 +48,8 @@ const getNodes: GetNodesFunction = async (chain) => {
         consensus_pubkey: { '@type': '', key: '' },
         jailed: node.state === 'inactive' || node.state === 'jailed',
         status: node.state === 'inactive' || node.state === 'jailed' ? 'BOND_STATUS_UNBONDED' : 'BOND_STATUS_BONDED',
-        tokens: node.votingPower,
-        delegator_shares: node.votingPower,
+        tokens: String(BigInt(node.votingPower) * bigIntPow(BigInt(10), BigInt(chain.coinDecimals))),
+        delegator_shares: String(BigInt(node.votingPower) * bigIntPow(BigInt(10), BigInt(chain.coinDecimals))),
         description: {
           identity: '',
           moniker: node.name,

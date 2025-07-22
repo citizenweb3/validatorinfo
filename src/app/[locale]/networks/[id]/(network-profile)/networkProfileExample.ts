@@ -16,11 +16,6 @@ export const networkProfileExample = {
       tooltip: 'revenue',
     },
     {
-      title: 'validator cost',
-      data: 90,
-      tooltip: 'validator cost',
-    },
-    {
       title: 'mau',
       data: 90,
       tooltip: 'mau',
