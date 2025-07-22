@@ -1,7 +1,7 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
-import getNodes from '@/server/tools/chains/solana/get-nodes';
-import getStakingParams from '@/server/tools/chains/solana/get-staking-params';
-import getTvs from '@/server/tools/chains/solana/get-tvs';
+import getNodes from '@/server/tools/chains/polkadot/get-nodes';
+import getStakingParams from '@/server/tools/chains/polkadot/get-staking-params';
+import getTvs from '@/server/tools/chains/polkadot/get-tvs';
 
 const chainMethods: ChainMethods = {
   getNodes,

@@ -3,9 +3,10 @@ import NetworkAprTvsChartClient from './network-apr-tvsChart';
 import { FC } from 'react';
 import SubTitle from '@/components/common/sub-title';
 import { Chain } from '@prisma/client';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 interface OwnProps {
-  chain: Chain | null;
+  chain: ChainWithParamsAndTokenomics | null;
 }
 
 const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
@@ -24,7 +25,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
               style={{ color: '#4FB848' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
-              {((chain?.apr ?? 0.15) * 100).toFixed(2)}%
+              {((chain?.tokenomics?.apr ?? 0.15) * 100).toFixed(2)}%
             </div>
           </div>
           <div className="mt-2 flex w-full flex-wrap">
@@ -35,7 +36,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
               style={{ color: '#E5C46B' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
-              {((chain?.apr ?? 0.15) * 100).toFixed(2)}%
+              {((chain?.tokenomics?.apr ?? 0.15) * 100).toFixed(2)}%
             </div>
           </div>
           <div className="mt-2 flex w-full flex-wrap">
@@ -46,7 +47,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
               style={{ color: '#2077E0' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
-              {((chain?.tvs ?? 0.50) * 100).toFixed(2)}
+              {((chain?.tokenomics?.tvs ?? 0.50) * 100).toFixed(2)}
             </div>
           </div>
         </div>

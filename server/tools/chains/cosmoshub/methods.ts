@@ -10,6 +10,7 @@ import getMissedBlocks from '@/server/tools/chains/cosmoshub/get-missed-blocks';
 import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
 import getProposalParams from '@/server/tools/chains/cosmoshub/get-proposal-params';
+import getCommPool from '@/server/tools/chains/cosmoshub/get-community-pool';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -24,6 +25,7 @@ const chainMethods: ChainMethods = {
   getCommTax,
   getWalletsAmount,
   getProposalParams,
+  getCommPool,
 };
 
 export default chainMethods;
