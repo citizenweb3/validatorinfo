@@ -65,6 +65,7 @@ const runServer = async () => {
     { name: 'proposal-params', schedule: timers.everyDay },
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.everyHour },
+    { name: 'inflation-rate', schedule: timers.everyDay },
     // { name: 'slashing-nodes-infos', schedule: timers.every5mins },
     // { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];

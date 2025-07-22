@@ -3,6 +3,7 @@ import getActiveSetMinAmount from '@/server/tools/chains/cosmoshub/get-active-se
 import getApr from '@/server/tools/chains/cosmoshub/get-apr';
 import getCommPool from '@/server/tools/chains/cosmoshub/get-community-pool';
 import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
+import getInflationRate from '@/server/tools/chains/cosmoshub/get-inflation-rate';
 import getMissedBlocks from '@/server/tools/chains/cosmoshub/get-missed-blocks';
 import getNodeParams from '@/server/tools/chains/cosmoshub/get-node-params';
 import getNodes from '@/server/tools/chains/cosmoshub/get-nodes';
@@ -28,6 +29,7 @@ const chainMethods: ChainMethods = {
   getProposalParams,
   getCommPool,
   getActiveSetMinAmount,
+  getInflationRate,
 };
 
 export default chainMethods;

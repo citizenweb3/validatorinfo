@@ -104,6 +104,7 @@ export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
 export type GetCommPoolFunction = (chain: AddChainProps) => Promise<string | null>;
+export type GetInflationRate = (chain: AddChainProps) => Promise<number | null>;
 export type GetActiveSetMinAmount = (chain: AddChainProps) => Promise<string | null>;
 
 export interface ChainMethods {
@@ -121,4 +122,5 @@ export interface ChainMethods {
   getProposalParams: GetProposalParams;
   getCommPool: GetCommPoolFunction;
   getActiveSetMinAmount: GetActiveSetMinAmount;
+  getInflationRate: GetInflationRate;
 }

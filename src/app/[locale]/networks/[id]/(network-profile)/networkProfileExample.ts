@@ -206,10 +206,6 @@ export const networkProfileExample = {
       title: 'circulating tokens',
       data: 12,
     },
-    {
-      title: 'inflation rate',
-      data: 12,
-    },
   ],
   apps: [
     {
