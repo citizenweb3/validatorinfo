@@ -63,6 +63,7 @@ const runServer = async () => {
     { name: 'wallets-amount', schedule: timers.everyDay },
     { name: 'tokenomics', schedule: timers.everyHour },
     { name: 'proposal-params', schedule: timers.everyDay },
+    { name: 'update-chain-rewards', schedule: timers.everyDay },
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.everyHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
@@ -96,6 +97,7 @@ const runServer = async () => {
     { name: 'slashing-infos', schedule: timers.everyHour },
     { name: 'slashing-infos-namada', schedule: timers.every10mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
+    { name: 'update-nodes-rewards', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

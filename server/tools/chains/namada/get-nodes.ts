@@ -7,7 +7,7 @@ import isUrlValid from '@/server/utils/is-url-valid';
 
 const { logError } = logger('namada-nodes');
 
-interface NamadaNode {
+export interface NamadaNode {
   address: string;
   votingPower: string;
   maxCommission: string;

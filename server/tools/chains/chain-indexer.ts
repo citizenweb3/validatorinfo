@@ -90,6 +90,11 @@ export interface ProposalParams {
   quorumThreshold: number | null;
 }
 
+export interface NodesRewards {
+  address: string | null;
+  rewards: string | null;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -103,6 +108,8 @@ export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<N
 export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
+export type GetNodeRewards = (chain: AddChainProps) => Promise<NodesRewards[]>;
+export type GetChainRewards = (chain: AddChainProps) => Promise<string | null>;
 export type GetCommPoolFunction = (chain: AddChainProps) => Promise<string | null>;
 export type GetInflationRate = (chain: AddChainProps) => Promise<number | null>;
 export type GetActiveSetMinAmount = (chain: AddChainProps) => Promise<string | null>;
@@ -120,6 +127,8 @@ export interface ChainMethods {
   getCommTax: GetCommTaxFunction;
   getWalletsAmount: GetWalletsAmount;
   getProposalParams: GetProposalParams;
+  getNodeRewards: GetNodeRewards;
+  getChainRewards: GetChainRewards;
   getCommPool: GetCommPoolFunction;
   getActiveSetMinAmount: GetActiveSetMinAmount;
   getInflationRate: GetInflationRate;

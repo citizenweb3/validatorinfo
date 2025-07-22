@@ -146,27 +146,28 @@ model Ecosystem {
 }
 
 model Node {
-  id                Int      @id @default(autoincrement())
-  chainId           Int      @map("chain_id")
-  validatorId       Int?     @map("validator_id")
-  operatorAddress   String   @unique @map("operator_address") @db.VarChar(256)
-  consensusPubkey   String   @map("consensus_pubkey") @db.VarChar(256)
-  jailed            Boolean  @default(false)
-  tokens            String   @db.VarChar(256)
-  delegatorShares   String   @map("delegator_shares") @db.VarChar(256)
-  moniker           String
-  identity          String
-  website           String
-  securityContact   String   @map("security_contact")
-  details           String   @db.Text
-  unbondingHeight   String   @map("unbonding_height") @db.VarChar(256)
-  unbondingTime     DateTime @map("unbonding_time") @db.Timestamptz(6)
-  updateTime        DateTime @map("update_time") @db.Timestamptz(6)
-  rate              String   @db.VarChar(256)
-  maxRate           String   @map("max_rate") @db.VarChar(256)
-  maxChangeRate     String   @map("max_change_rate") @db.VarChar(256)
-  minSelfDelegation String   @map("min_self_delegation") @db.VarChar(256)
-  missedBlocks      Int?     @map("missed_blocks")
+  id                 Int      @id @default(autoincrement())
+  chainId            Int      @map("chain_id")
+  validatorId        Int?     @map("validator_id")
+  operatorAddress    String   @unique @map("operator_address") @db.VarChar(256)
+  consensusPubkey    String   @map("consensus_pubkey") @db.VarChar(256)
+  jailed             Boolean  @default(false)
+  tokens             String   @db.VarChar(256)
+  delegatorShares    String   @map("delegator_shares") @db.VarChar(256)
+  moniker            String
+  identity           String
+  website            String
+  securityContact    String   @map("security_contact")
+  details            String   @db.Text
+  unbondingHeight    String   @map("unbonding_height") @db.VarChar(256)
+  unbondingTime      DateTime @map("unbonding_time") @db.Timestamptz(6)
+  updateTime         DateTime @map("update_time") @db.Timestamptz(6)
+  rate               String   @db.VarChar(256)
+  maxRate            String   @map("max_rate") @db.VarChar(256)
+  maxChangeRate      String   @map("max_change_rate") @db.VarChar(256)
+  minSelfDelegation  String   @map("min_self_delegation") @db.VarChar(256)
+  missedBlocks       Int?     @map("missed_blocks")
+  outstandingRewards String?  @map("outstanding_rewards")
 
   chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
   validator Validator? @relation("validator_node", fields: [validatorId], references: [id])

@@ -6,9 +6,12 @@ const { logError } = logger('cosmos-inflation-rate');
 
 const getInflationRate: GetInflationRate = async (chain) => {
   try {
-    return await fetchChainData<{ inflation: string }>(chain.name, 'rest', `/cosmos/mint/v1beta1/inflation`).then(
-      (data) => Number(data.inflation),
-    );
+    const response = await fetchChainData<{ inflation: string }>(chain.name, 'rest', `/cosmos/mint/v1beta1/inflation`);
+    if (response.inflation !== undefined && response.inflation !== null) {
+      return Number(response.inflation);
+    } else {
+      return null;
+    }
   } catch (e) {
     logError(`${chain.name} Can't fetch inflation rate: `, e);
     return null;

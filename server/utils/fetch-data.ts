@@ -4,7 +4,11 @@ import logger from '@/logger';
 
 const { logInfo, logDebug, logWarn } = logger('fetch-data');
 
-const fetchData: <T>(url: string) => Promise<T> = async (url) => {
+const fetchData: <T>(url: string, sleepTime?: number, attempt?: number) => Promise<T> = async (
+  url,
+  sleepTime = 1000,
+  attempt = 0,
+) => {
   logInfo(`Fetching data from ${url}`);
   const result = await fetch(url);
   try {
@@ -22,8 +26,12 @@ const fetchData: <T>(url: string) => Promise<T> = async (url) => {
     }
 
     if (result.status === 429) {
-      await sleep(1000);
-      return fetchData(url);
+      if (attempt < 5) {
+        await sleep(sleepTime);
+        return fetchData(url, sleepTime, attempt + 1);
+      } else {
+        throw new Error(`Can't resolve 429 error for ${url} after attempts: ${attempt + 1}`);
+      }
     }
 
     throw new Error(`Fetch Error: ${result.status} ${result.statusText} ${url}`);

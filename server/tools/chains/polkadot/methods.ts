@@ -37,6 +37,8 @@ const chainMethods: ChainMethods = {
   getCommPool: async () => null,
   getActiveSetMinAmount: async () => null,
   getInflationRate: async () => null,
+  getNodeRewards: async () => [],
+  getChainRewards: async () => null,
 };
 
 export default chainMethods;

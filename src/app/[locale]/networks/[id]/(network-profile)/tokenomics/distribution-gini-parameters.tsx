@@ -23,12 +23,17 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   const totalSupply =
     chain?.params?.coinDecimals && chain?.tokenomics?.totalSupply
       ? +chain?.tokenomics?.totalSupply / 10 ** chain.params?.coinDecimals
-      : 0;
+      : undefined;
 
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain.id) : null;
-  const fdv = tokenPrice?.value ? totalSupply * tokenPrice.value : 90;
+  const fdv = tokenPrice?.value && totalSupply ? totalSupply * tokenPrice.value : undefined;
 
   const communityPool = Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain?.params?.coinDecimals);
+
+  const rewardsToPayout =
+    chain?.tokenomics?.rewardsToPayout && tokenPrice && chain?.params?.coinDecimals
+      ? Number(chain?.tokenomics?.rewardsToPayout) / 10 ** Number(chain.params.coinDecimals) / Number(tokenPrice.value)
+      : undefined;
 
   return (
     <div className="mb-12 mt-6">
@@ -54,9 +59,13 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
         <MetricsCardItem
           title={t('fdv')}
           data={
-            <Tooltip tooltip={`$${fdv.toLocaleString()}`}>
-              <div className="text-center">${formatCash(fdv)}</div>
-            </Tooltip>
+            fdv ? (
+              <Tooltip tooltip={`$${fdv.toLocaleString()}`}>
+                <div className="text-center">${formatCash(fdv)}</div>
+              </Tooltip>
+            ) : (
+              '-'
+            )
           }
           className="pb-8 pt-2.5"
           dataClassName="mt-6"
@@ -80,6 +89,20 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
         <MetricsCardItem
           title={t('inflation rate')}
           data={`${(Number(chain?.tokenomics?.inflation) * 100).toFixed(2)}%`}
+          className="pb-8 pt-2.5"
+          dataClassName="mt-6"
+        />
+        <MetricsCardItem
+          title={t('reward to payout')}
+          data={
+            rewardsToPayout ? (
+              <Tooltip tooltip={`$${rewardsToPayout.toLocaleString()}`}>
+                <div className="text-center">${formatCash(rewardsToPayout)}</div>
+              </Tooltip>
+            ) : (
+              '-'
+            )
+          }
           className="pb-8 pt-2.5"
           dataClassName="mt-6"
         />
