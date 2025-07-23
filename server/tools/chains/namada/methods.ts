@@ -1,13 +1,17 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import cosmosChainMethods from '@/server/tools/chains/cosmoshub/methods';
+import getActiveSetMinAmount from '@/server/tools/chains/namada/get-active-set-min-amount';
 import getApr from '@/server/tools/chains/namada/get-apr';
+import getChainRewards from '@/server/tools/chains/namada/get-chain-rewards';
+import getInflationRate from '@/server/tools/chains/namada/get-inflation-rate';
+import getMissedBlocks from '@/server/tools/chains/namada/get-missed-blocks';
+import getNodeRewards from '@/server/tools/chains/namada/get-node-rewards';
 import getNodes from '@/server/tools/chains/namada/get-nodes';
+import getNodesVotes from '@/server/tools/chains/namada/get-nodes-votes';
 import getProposals from '@/server/tools/chains/namada/get-proposals';
+import getSlashingParams from '@/server/tools/chains/namada/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/namada/get-staking-params';
 import getTvs from '@/server/tools/chains/namada/get-tvs';
-import getNodesVotes from '@/server/tools/chains/namada/get-nodes-votes';
-import getSlashingParams from '@/server/tools/chains/namada/get-slashing-params';
-import getMissedBlocks from '@/server/tools/chains/namada/get-missed-blocks';
 
 const chainMethods: ChainMethods = {
   ...cosmosChainMethods,
@@ -27,6 +31,10 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
+  getActiveSetMinAmount,
+  getInflationRate,
+  getChainRewards,
+  getNodeRewards,
 };
 
 export default chainMethods;

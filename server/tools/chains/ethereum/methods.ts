@@ -1,10 +1,10 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import getMissedBlocks from '@/server/tools/chains/ethereum/get-missed-blocks';
+import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
 import getNodes from '@/server/tools/chains/ethereum/get-nodes';
+import getSlashingParams from '@/server/tools/chains/ethereum/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
 import getTvs from '@/server/tools/chains/ethereum/get-tvs';
-import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
-import getMissedBlocks from '@/server/tools/chains/ethereum/get-missed-blocks';
-import getSlashingParams from '@/server/tools/chains/ethereum/get-slashing-params';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -29,6 +29,11 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
+  getNodeRewards: async () => [],
+  getChainRewards: async () => null,
+  getCommPool: async () => null,
+  getActiveSetMinAmount: async () => null,
+  getInflationRate: async () => null,
 };
 
 export default chainMethods;

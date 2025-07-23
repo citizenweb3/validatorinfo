@@ -4,16 +4,16 @@ import { FC } from 'react';
 import TableAvatar from '@/components/common/table/table-avatar';
 import Tooltip from '@/components/common/tooltip';
 import formatCash from '@/utils/format-cash';
-import chainService, { ChainWithParams } from '@/services/chain-service';
+import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 interface OwnProps {
-  item: ChainWithParams;
+  item: ChainWithParamsAndTokenomics;
 }
 
 const NetworksListItem: FC<OwnProps> = async ({ item }) => {
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
-  const totalSupply = item.params?.coinDecimals
-    ? +item.totalSupply / 10 ** item.params?.coinDecimals
+  const totalSupply = item.params?.coinDecimals && item.tokenomics?.totalSupply
+    ? +item.tokenomics?.totalSupply / 10 ** item.params?.coinDecimals
     : undefined;
 
   const tokenPrice = await chainService.getTokenPriceByChainId(item.id);

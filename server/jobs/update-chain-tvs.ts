@@ -22,17 +22,17 @@ export const updateChainTvs = async (chainNames: string[]) => {
       const tvs = await chainMethods.getTvs(chainParams);
 
       if (tvs) {
-        await db.chain.update({
-          where: { id: dbChain.id },
-          data: {
-            ...tvs,
-          },
+        await db.tokenomics.upsert({
+          where: { chainId: dbChain.id },
+          update: { ...tvs },
+          create: { chainId: dbChain.id, ...tvs },
         });
+
       } else {
         logError(`Can't fetch TVS for ${chainParams.name}`);
       }
     } catch (e) {
-      logError("Can't fetch TVS's: ", e);
+      logError(`'Can't fetch TVS: ', ${e}`);
     }
   }
 };

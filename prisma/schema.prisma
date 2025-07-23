@@ -97,13 +97,13 @@ model Chain {
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
-  chainNodes ChainNode[]  @relation("chain_node")
-  aprs       Apr[]        @relation("chain_apr")
-  prices     Price[]      @relation("chain_price")
-  tokenomics Tokenomics[] @relation("chain_tokenomics")
-  nodes      Node[]       @relation("chain_validator_node")
+  chainNodes ChainNode[] @relation("chain_node")
+  aprs       Apr[]       @relation("chain_apr")
+  prices     Price[]     @relation("chain_price")
+  nodes      Node[]      @relation("chain_validator_node")
 
-  params ChainParams? @relation("chain_params")
+  tokenomics Tokenomics?  @relation("chain_tokenomics")
+  params     ChainParams? @relation("chain_params")
 
   validators Validator[] @relation("chain_validators")
   addresses  Address[]   @relation("chain_addresses")
@@ -115,16 +115,9 @@ model Chain {
   proposalsPassed Int @default(0) @map("proposals_passed")
 
   // calculated
-  totalSupply         String   @default("") @map("total_supply")
-  bondedTokens        String   @default("") @map("bonded_tokens")
-  unbondedTokens      String   @default("") @map("not_bonded_tokens")
-  unbondedTokensRatio Float    @default(0) @map("unbonded_tokens_ratio")
-  uptimeHeight        Int      @default(0) @map("uptime_height")
-  lastUptimeUpdated   DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
-  avgTxInterval       Float    @default(0) @map("avg_tx_interval")
-  tvl                 Float    @default(0)
-  tvs                 Float    @default(0)
-  apr                 Float    @default(0)
+  uptimeHeight      Int      @default(0) @map("uptime_height")
+  lastUptimeUpdated DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
+  avgTxInterval     Float    @default(0) @map("avg_tx_interval")
 
   @@map("chains")
 }
@@ -153,27 +146,28 @@ model Ecosystem {
 }
 
 model Node {
-  id                Int      @id @default(autoincrement())
-  chainId           Int      @map("chain_id")
-  validatorId       Int?     @map("validator_id")
-  operatorAddress   String   @unique @map("operator_address") @db.VarChar(256)
-  consensusPubkey   String   @map("consensus_pubkey") @db.VarChar(256)
-  jailed            Boolean  @default(false)
-  tokens            String   @db.VarChar(256)
-  delegatorShares   String   @map("delegator_shares") @db.VarChar(256)
-  moniker           String
-  identity          String
-  website           String
-  securityContact   String   @map("security_contact")
-  details           String   @db.Text
-  unbondingHeight   String   @map("unbonding_height") @db.VarChar(256)
-  unbondingTime     DateTime @map("unbonding_time") @db.Timestamptz(6)
-  updateTime        DateTime @map("update_time") @db.Timestamptz(6)
-  rate              String   @db.VarChar(256)
-  maxRate           String   @map("max_rate") @db.VarChar(256)
-  maxChangeRate     String   @map("max_change_rate") @db.VarChar(256)
-  minSelfDelegation String   @map("min_self_delegation") @db.VarChar(256)
-  missedBlocks      Int?     @map("missed_blocks")
+  id                 Int      @id @default(autoincrement())
+  chainId            Int      @map("chain_id")
+  validatorId        Int?     @map("validator_id")
+  operatorAddress    String   @unique @map("operator_address") @db.VarChar(256)
+  consensusPubkey    String   @map("consensus_pubkey") @db.VarChar(256)
+  jailed             Boolean  @default(false)
+  tokens             String   @db.VarChar(256)
+  delegatorShares    String   @map("delegator_shares") @db.VarChar(256)
+  moniker            String
+  identity           String
+  website            String
+  securityContact    String   @map("security_contact")
+  details            String   @db.Text
+  unbondingHeight    String   @map("unbonding_height") @db.VarChar(256)
+  unbondingTime      DateTime @map("unbonding_time") @db.Timestamptz(6)
+  updateTime         DateTime @map("update_time") @db.Timestamptz(6)
+  rate               String   @db.VarChar(256)
+  maxRate            String   @map("max_rate") @db.VarChar(256)
+  maxChangeRate      String   @map("max_change_rate") @db.VarChar(256)
+  minSelfDelegation  String   @map("min_self_delegation") @db.VarChar(256)
+  missedBlocks       Int?     @map("missed_blocks")
+  outstandingRewards String?  @map("outstanding_rewards")
 
   chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
   validator Validator? @relation("validator_node", fields: [validatorId], references: [id])
@@ -198,13 +192,27 @@ model Price {
 }
 
 model Tokenomics {
-  id              Int   @id @default(autoincrement())
-  chainId         Int   @map("chain_id")
-  ath             Float @default(0)
-  atl             Float @default(0)
-  changesPerDay   Float @default(0) @map("changes_per_day")
-  changesPerMonth Float @default(0) @map("changes_per_month")
-  changesPerYear  Float @default(0) @map("changes_per_year")
+  id                 Int    @id @default(autoincrement())
+  chainId            Int    @map("chain_id")
+  ath                Float  @default(0)
+  atl                Float  @default(0)
+  changesPerDay      Float  @default(0) @map("changes_per_day")
+  changesPerMonth    Float  @default(0) @map("changes_per_month")
+  changesPerYear     Float  @default(0) @map("changes_per_year")
+  communityPool      String @default("") @map("community_pool")
+  inflation          Float  @default(0) @map("inflation")
+  activeSetMinAmount String @default("") @map("active_set_min_amount")
+  rewardsToPayout    String @default("") @map("rewards_to_payout")
+  feesRevenue        String @default("") @map("fees_revenue")
+
+  // calculated
+  totalSupply         String @default("") @map("total_supply")
+  bondedTokens        String @default("") @map("bonded_tokens")
+  unbondedTokens      String @default("") @map("not_bonded_tokens")
+  unbondedTokensRatio Float  @default(0) @map("unbonded_tokens_ratio")
+  tvl                 Float  @default(0)
+  tvs                 Float  @default(0)
+  apr                 Float  @default(0)
 
   chain Chain @relation("chain_tokenomics", fields: [chainId], references: [id])
 
