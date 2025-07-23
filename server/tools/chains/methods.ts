@@ -1,18 +1,20 @@
 import atomoneChainMethods from '@/server/tools/chains/atomone/methods';
+import celestiaChainMethods from '@/server/tools/chains/celestia/methods';
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import cosmosChainMethods from '@/server/tools/chains/cosmoshub/methods';
+import dymensionChainMethods from '@/server/tools/chains/dymension/methods';
+import ethereumChainMethods from '@/server/tools/chains/ethereum/methods';
 import govgenChainMethods from '@/server/tools/chains/govgen/methods';
 import namadaChainMethods from '@/server/tools/chains/namada/methods';
 import neutronChainMethods from '@/server/tools/chains/neutron/methods';
 import nomicChainMethods from '@/server/tools/chains/nomic/methods';
 import osmosisChainMethods from '@/server/tools/chains/osmosis/methods';
+import polkadotChainMethods from '@/server/tools/chains/polkadot/methods';
 import quicksilverChainMethods from '@/server/tools/chains/quicksilver/methods';
 import solanaChainMethods from '@/server/tools/chains/solana/methods';
 import spacePussyChainMethods from '@/server/tools/chains/space-pussy/methods';
 import strideChainMethods from '@/server/tools/chains/stride/methods';
 import symphonyChainMethods from '@/server/tools/chains/symphony-testnet/methods';
-import ethereumChainMethods from '@/server/tools/chains/ethereum/methods';
-import polkadotChainMethods from '@/server/tools/chains/polkadot/methods';
 
 const chainMethods: Record<string, ChainMethods> = {
   namada: namadaChainMethods,
@@ -20,6 +22,8 @@ const chainMethods: Record<string, ChainMethods> = {
   osmosis: osmosisChainMethods,
   quicksilver: quicksilverChainMethods,
   cosmoshub: cosmosChainMethods,
+  celestia: celestiaChainMethods,
+  dymension: dymensionChainMethods,
 
   // returns 0
   stride: strideChainMethods,
@@ -27,12 +31,10 @@ const chainMethods: Record<string, ChainMethods> = {
   neutron: neutronChainMethods,
   'symphony-testnet': symphonyChainMethods,
 
-  celestia: cosmosChainMethods,
   bitcanna: cosmosChainMethods,
   likecoin: cosmosChainMethods,
   uptick: cosmosChainMethods,
   gravitybridge: cosmosChainMethods,
-  dymension: cosmosChainMethods,
   althea: cosmosChainMethods,
   atomone: atomoneChainMethods,
   union: cosmosChainMethods,

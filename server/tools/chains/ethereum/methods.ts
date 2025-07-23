@@ -34,6 +34,7 @@ const chainMethods: ChainMethods = {
   getCommPool: async () => null,
   getActiveSetMinAmount: async () => null,
   getInflationRate: async () => null,
+  getCirculatingTokens: async () => null,
 };
 
 export default chainMethods;
