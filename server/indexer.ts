@@ -64,6 +64,10 @@ const runServer = async () => {
     { name: 'tokenomics', schedule: timers.everyHour },
     { name: 'proposal-params', schedule: timers.everyDay },
     { name: 'update-staking-page-json', schedule: timers.everyDay },
+    { name: 'update-chain-rewards', schedule: timers.everyDay },
+    { name: 'community-pool', schedule: timers.everyDay },
+    { name: 'active-set-min-amount', schedule: timers.everyHour },
+    { name: 'inflation-rate', schedule: timers.everyDay },
     // { name: 'slashing-nodes-infos', schedule: timers.every5mins },
     // { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
@@ -94,6 +98,7 @@ const runServer = async () => {
     { name: 'slashing-infos', schedule: timers.everyHour },
     { name: 'slashing-infos-namada', schedule: timers.every10mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
+    { name: 'update-nodes-rewards', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

@@ -5,13 +5,18 @@ import getChainUptime from '@/server/jobs/get-chain-uptime';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
 import { getTokenomics } from '@/server/jobs/get-tokenomics';
+import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
+import updateChainRewards from '@/server/jobs/update-chain-rewards';
 import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
+import updateCommPool from '@/server/jobs/update-community-pool';
 import updateCommTax from '@/server/jobs/update-community-tax';
+import updateInflationRate from '@/server/jobs/update-inflation-rate';
+import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
 import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
@@ -81,11 +86,27 @@ async function runTask() {
       case 'update-staking-page-json':
         await updateStakingPageJson();
         break;
+      case 'update-nodes-rewards':
+        await updateNodesRewards(chains);
+        break;
+      case 'update-chain-rewards':
+        await updateChainRewards(chains);
+        break;
+      case 'community-pool':
+        await updateCommPool(chains);
+        break;
+      case 'active-set-min-amount':
+        await updateActiveSetMinAmount(chains);
+        break;
+      case 'inflation-rate':
+        await updateInflationRate(chains);
+        break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
     }
     logInfo(`${taskName} completed successfully`);
     parentPort?.postMessage(`${taskName} completed successfully`);
+    process.exit(0);
   } catch (err) {
     logError(`${taskName} failed`, err);
     process.exit(2);

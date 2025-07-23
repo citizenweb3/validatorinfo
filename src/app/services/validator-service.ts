@@ -4,7 +4,7 @@ import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import db from '@/db';
 import logger from '@/logger';
 import { SortDirection } from '@/server/types';
-import { ChainWithParams } from '@/services/chain-service';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 const { logDebug } = logger('validator-service');
 
@@ -13,7 +13,7 @@ export type ValidatorWithNodes = Validator & {
 };
 
 export type validatorNodesWithChainData = Node & {
-  chain: ChainWithParams;
+  chain: ChainWithParamsAndTokenomics;
   votingPower: number;
 };
 
@@ -182,13 +182,16 @@ const getValidatorNodesWithChains = async (
       where,
       include: {
         chain: {
-          include: { params: true },
+          include: {
+            tokenomics: true,
+            params: true,
+          },
         },
       },
     });
 
     const computedNodes = allNodes.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
       const delegatorShares = parseFloat(node.delegatorShares || '0');
       const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
       return { ...node, votingPower };
@@ -212,7 +215,7 @@ const getValidatorNodesWithChains = async (
     if (sortBy === 'prettyName') {
       orderBy = [{ chain: { prettyName: order } }];
     } else if (sortBy === 'apr') {
-      orderBy = [{ chain: { apr: order } }];
+      orderBy = [{ chain: { tokenomics: { apr: order } } }];
     } else if (['delegatorShares', 'rate', 'minSelfDelegation'].includes(sortBy)) {
       orderBy = [{ [sortBy]: order }];
     } else {
@@ -226,13 +229,16 @@ const getValidatorNodesWithChains = async (
       orderBy: orderBy,
       include: {
         chain: {
-          include: { params: true },
+          include: {
+            tokenomics: true,
+            params: true,
+          },
         },
       },
     });
 
     const computedNodes = nodes.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
       const delegatorShares = parseFloat(node.delegatorShares || '0');
       const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
       return { ...node, votingPower };

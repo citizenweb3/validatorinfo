@@ -34,6 +34,11 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
+  getNodeRewards: async () => [],
+  getChainRewards: async () => null,
+  getCommPool: async () => null,
+  getActiveSetMinAmount: async () => null,
+  getInflationRate: async () => null,
 };
 
 export default chainMethods;
