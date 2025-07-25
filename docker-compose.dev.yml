@@ -1,3 +1,4 @@
+name: validatorinfo
 services:
   db:
     image: postgres:14-bullseye
@@ -63,6 +64,7 @@ services:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
       SERVER_PORT: "3000"
       PUBLIC_URL: ${PUBLIC_URL}
+      NODE_OPTIONS: "--require /app/server/instrumentation.ts"
     volumes:
       - uploads_data:/app/uploads
 
@@ -82,6 +84,7 @@ services:
       INDEXER_PORT: "3001"
       REDIS_HOST: redis
       REDIS_PORT: "6379"
+      NODE_OPTIONS: "--require /app/server/instrumentation.ts"
     volumes:
       - uploads_data:/app/uploads
 
