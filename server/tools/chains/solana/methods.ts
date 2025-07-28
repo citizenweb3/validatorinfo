@@ -1,5 +1,7 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import getMissedBlocks from '@/server/tools/chains/solana/get-missed-blocks';
 import getNodes from '@/server/tools/chains/solana/get-nodes';
+import getSlashingParams from '@/server/tools/chains/solana/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/solana/get-staking-params';
 import getTvs from '@/server/tools/chains/solana/get-tvs';
 
@@ -7,8 +9,8 @@ const chainMethods: ChainMethods = {
   getNodes,
   getStakingParams,
   getTvs,
-  getMissedBlocks: () => Promise.resolve([]),
-  getSlashingParams: () => Promise.resolve({ blocksWindow: null, jailedDuration: null }),
+  getSlashingParams,
+  getMissedBlocks,
   getApr: async () => 0,
   getNodeParams: async () => ({
     peers: null,

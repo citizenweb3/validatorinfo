@@ -3,14 +3,14 @@ import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 
-const { logError, logInfo } = logger('slashing-nodes-infos-namada');
+const { logError, logInfo } = logger('slashing-nodes-infos-solana');
 
-const updateSlashingInfosNamada = async (chainNames: string[]) => {
+const updateSlashingInfosSolana = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
     const chainMethods = getChainMethods(chainName);
 
-    if (chainParams.ecosystem?.toLowerCase() !== 'namada') {
+    if (chainParams.ecosystem?.toLowerCase() !== 'solana') {
       continue;
     }
 
@@ -33,7 +33,7 @@ const updateSlashingInfosNamada = async (chainNames: string[]) => {
               ((dbChain.params.blocksWindow - parseInt(info.missed_blocks_counter)) / dbChain.params.blocksWindow) *
               100;
             await db.node.updateMany({
-              where: { operatorAddress: info.address },
+              where: { consensusPubkey: info.address },
               data: {
                 missedBlocks: parseInt(info.missed_blocks_counter),
                 uptime: uptime,
@@ -50,4 +50,4 @@ const updateSlashingInfosNamada = async (chainNames: string[]) => {
     logInfo(`${chainParams.chainId}: infos updated`);
   }
 };
-export default updateSlashingInfosNamada;
+export default updateSlashingInfosSolana;

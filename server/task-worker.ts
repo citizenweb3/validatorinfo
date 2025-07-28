@@ -21,6 +21,7 @@ import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
 import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
+import updateSlashingInfosSolana from '@/server/jobs/update-slashing-infos-solana';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
@@ -61,6 +62,9 @@ async function runTask() {
         break;
       case 'slashing-infos-namada':
         await updateSlashingInfosNamada(chains);
+        break;
+      case 'slashing-infos-solana':
+        await updateSlashingInfosSolana(chains);
         break;
       case 'chain-node-params':
         await updateChainNodeParams(chains);
