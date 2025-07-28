@@ -64,6 +64,7 @@ const runServer = async () => {
     { name: 'wallets-amount', schedule: timers.everyDay },
     { name: 'tokenomics', schedule: timers.everyHour },
     { name: 'proposal-params', schedule: timers.everyDay },
+    { name: 'update-staking-page-json', schedule: timers.everyDay },
     { name: 'update-chain-rewards', schedule: timers.everyDay },
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.everyHour },
