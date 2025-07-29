@@ -113,11 +113,12 @@ export type GetChainRewards = (chain: AddChainProps) => Promise<string | null>;
 export type GetCommPoolFunction = (chain: AddChainProps) => Promise<string | null>;
 export type GetInflationRate = (chain: AddChainProps) => Promise<number | null>;
 export type GetActiveSetMinAmount = (chain: AddChainProps) => Promise<string | null>;
-export type GetCirculatingTokens = (
+export type GetCirculatingTokensOnchain = (
   chain: AddChainProps,
   totalSupply?: string,
   communityPool?: string,
 ) => Promise<string | null>;
+export type GetCirculatingTokensPublic = (chain: AddChainProps) => Promise<string | null>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -137,5 +138,6 @@ export interface ChainMethods {
   getCommPool: GetCommPoolFunction;
   getActiveSetMinAmount: GetActiveSetMinAmount;
   getInflationRate: GetInflationRate;
-  getCirculatingTokens: GetCirculatingTokens;
+  getCirculatingTokensOnchain: GetCirculatingTokensOnchain;
+  getCirculatingTokensPublic: GetCirculatingTokensPublic;
 }

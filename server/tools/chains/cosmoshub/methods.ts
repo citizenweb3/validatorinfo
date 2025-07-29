@@ -2,7 +2,8 @@ import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import getActiveSetMinAmount from '@/server/tools/chains/cosmoshub/get-active-set-min-amount';
 import getApr from '@/server/tools/chains/cosmoshub/get-apr';
 import getChainRewards from '@/server/tools/chains/cosmoshub/get-chain-rewards';
-import getCirculatingTokens from '@/server/tools/chains/cosmoshub/get-circulating-tokens';
+import getCirculatingTokensOnchain from '@/server/tools/chains/cosmoshub/get-circulating-tokens-onchain';
+import getCirculatingTokensPublic from '@/server/tools/chains/cosmoshub/get-circulating-tokens-public';
 import getCommPool from '@/server/tools/chains/cosmoshub/get-community-pool';
 import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
 import getInflationRate from '@/server/tools/chains/cosmoshub/get-inflation-rate';
@@ -35,7 +36,8 @@ const chainMethods: ChainMethods = {
   getCommPool,
   getActiveSetMinAmount,
   getInflationRate,
-  getCirculatingTokens,
+  getCirculatingTokensOnchain,
+  getCirculatingTokensPublic,
 };
 
 export default chainMethods;

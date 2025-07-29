@@ -24,6 +24,9 @@ export const fetchAccountBalance = async (
     }
     return BigInt(String(response.balance.amount).split('.')[0]);
   } catch (e) {
+    if (e instanceof Error && e.message && e.message.includes('No working endpoints available')) {
+      throw e;
+    }
     logError(`Can't fetch amount for account ${address} with error: ${e}.`);
     return null;
   }

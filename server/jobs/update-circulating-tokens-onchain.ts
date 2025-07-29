@@ -3,9 +3,9 @@ import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 
-const { logError, logInfo } = logger('update-circulating-tokens');
+const { logError, logInfo } = logger('update-circulating-tokens-onchain');
 
-const updateCirculatingTokens = async (chainNames: string[]) => {
+const updateCirculatingTokensOnchain = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
     const chainMethods = getChainMethods(chainName);
@@ -22,7 +22,7 @@ const updateCirculatingTokens = async (chainNames: string[]) => {
         continue;
       }
       logInfo(`${chainName} updating`);
-      const circulatingTokens = await chainMethods.getCirculatingTokens(
+      const circulatingTokens = await chainMethods.getCirculatingTokensOnchain(
         chainParams,
         dbChain?.tokenomics?.totalSupply,
         dbChain?.tokenomics?.communityPool,
@@ -32,8 +32,8 @@ const updateCirculatingTokens = async (chainNames: string[]) => {
       if (circulatingTokens !== undefined && circulatingTokens !== null) {
         await db.tokenomics.upsert({
           where: { chainId: dbChain.id },
-          update: { circulatingTokens },
-          create: { chainId: dbChain.id, circulatingTokens },
+          update: { circulatingTokensOnchain: circulatingTokens },
+          create: { chainId: dbChain.id, circulatingTokensOnchain: circulatingTokens },
         });
       }
     } catch (e) {
@@ -42,4 +42,4 @@ const updateCirculatingTokens = async (chainNames: string[]) => {
   }
 };
 
-export default updateCirculatingTokens;
+export default updateCirculatingTokensOnchain;

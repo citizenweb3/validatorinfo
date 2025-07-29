@@ -27,7 +27,11 @@ const getChainRewards: GetChainRewards = async (chain: AddChainProps) => {
         chainRewards += BigInt(String(rewards).split('.')[0]);
         atLeastOneRewardFetched = true;
       }
-    } catch (e) {
+    } catch (e: any) {
+      if (e instanceof Error && e.message && e.message.includes('No working endpoints available')) {
+        logError(`No working endpoints for chain ${chain.name}, terminating chain rewards calculation`, e);
+        return null;
+      }
       logError(`Can't get rewards for node ${node.operator_address} in chain ${chain.name}`, e);
       continue;
     }

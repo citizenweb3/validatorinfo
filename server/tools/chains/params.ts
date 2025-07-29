@@ -35,7 +35,8 @@ export const ecosystemParams = [
   {
     name: 'polkadot',
     prettyName: 'Polkadot',
-    logoUrl: 'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
+    logoUrl:
+      'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
   },
 ];
 
@@ -772,7 +773,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'nyx',
     bech32Prefix: 'n',
     coinDecimals: 6,
-    coinGeckoId: '',
+    coinGeckoId: 'nym',
     coinType: 118,
     denom: 'NYM',
     minimalDenom: 'unym',

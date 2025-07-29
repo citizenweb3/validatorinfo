@@ -1,4 +1,6 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import getCirculatingTokensOnchain from '@/server/tools/chains/solana/get-circulating-tokens-onchain';
+import getCirculatingTokensPublic from '@/server/tools/chains/solana/get-circulating-tokens-public';
 import getNodes from '@/server/tools/chains/solana/get-nodes';
 import getStakingParams from '@/server/tools/chains/solana/get-staking-params';
 import getTvs from '@/server/tools/chains/solana/get-tvs';
@@ -39,7 +41,8 @@ const chainMethods: ChainMethods = {
   getCommPool: async () => null,
   getActiveSetMinAmount: async () => null,
   getInflationRate: async () => null,
-  getCirculatingTokens: async () => null,
+  getCirculatingTokensOnchain,
+  getCirculatingTokensPublic,
 };
 
 export default chainMethods;

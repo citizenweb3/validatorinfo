@@ -28,8 +28,12 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
           rewards: rewards,
         });
       }
-    } catch (err) {
-      logError(`Can't fetch rewards for node ${node.operator_address}`, err);
+    } catch (e) {
+      if (e instanceof Error && e.message && e.message.includes('No working endpoints available')) {
+        logError(`No working endpoints for chain ${chain.name}, terminating nodes rewards calculation`, e);
+        return [];
+      }
+      logError(`Can't fetch rewards for node ${node.operator_address}`, e);
       continue;
     }
   }
