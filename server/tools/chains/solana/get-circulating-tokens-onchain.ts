@@ -7,7 +7,6 @@ const { logError } = logger('solana-circulating-tokens-onchain');
 const getCirculatingTokensOnchain: GetCirculatingTokensOnchain = async (chain: AddChainProps) => {
   try {
     const supplyData = await fetchSolanaData<{ value: { circulating: string } }>('getSupply');
-    logError(`SOLANA SUPPLY DATA ${JSON.stringify(supplyData)}`);
     return supplyData.value.circulating ? String(supplyData.value.circulating) : null;
   } catch (e) {
     logError(`Can't fetch circulating tokens for ${chain.name} error: ${e} `);

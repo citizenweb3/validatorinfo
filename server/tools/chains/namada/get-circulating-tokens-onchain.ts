@@ -2,9 +2,9 @@ import logger from '@/logger';
 import { AddChainProps, GetCirculatingTokensPublic } from '@/server/tools/chains/chain-indexer';
 import fetchChainData from '@/server/tools/get-chain-data';
 
-const { logError } = logger('namada-circulating-tokens');
+const { logError } = logger('namada-circulating-tokens-onchain');
 
-const getCirculatingTokensPublic: GetCirculatingTokensPublic = async (chain: AddChainProps) => {
+const getCirculatingTokensOnchain: GetCirculatingTokensPublic = async (chain: AddChainProps) => {
   const response = await fetchChainData<{ circulatingSupply: string }>(
     chain.name,
     'indexer',
@@ -17,4 +17,4 @@ const getCirculatingTokensPublic: GetCirculatingTokensPublic = async (chain: Add
   return String(response.circulatingSupply);
 };
 
-export default getCirculatingTokensPublic;
+export default getCirculatingTokensOnchain;
