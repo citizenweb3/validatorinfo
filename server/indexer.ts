@@ -69,8 +69,7 @@ const runServer = async () => {
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.everyHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
-    // { name: 'slashing-nodes-infos', schedule: timers.every5mins },
-    // { name: 'update-nodes-votes', schedule: timers.everyDay },
+    { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {
@@ -101,6 +100,8 @@ const runServer = async () => {
     { name: 'slashing-infos-solana', schedule: timers.every30mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
     { name: 'update-nodes-rewards', schedule: timers.everyDay },
+    { name: 'circulating-tokens-onchain', schedule: timers.everyDay },
+    { name: 'circulating-tokens-public', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

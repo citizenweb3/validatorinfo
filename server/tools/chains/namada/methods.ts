@@ -3,6 +3,7 @@ import cosmosChainMethods from '@/server/tools/chains/cosmoshub/methods';
 import getActiveSetMinAmount from '@/server/tools/chains/namada/get-active-set-min-amount';
 import getApr from '@/server/tools/chains/namada/get-apr';
 import getChainRewards from '@/server/tools/chains/namada/get-chain-rewards';
+import getCirculatingTokensOnchain from '@/server/tools/chains/namada/get-circulating-tokens-onchain';
 import getInflationRate from '@/server/tools/chains/namada/get-inflation-rate';
 import getMissedBlocks from '@/server/tools/chains/namada/get-missed-blocks';
 import getNodeRewards from '@/server/tools/chains/namada/get-node-rewards';
@@ -35,6 +36,8 @@ const chainMethods: ChainMethods = {
   getInflationRate,
   getChainRewards,
   getNodeRewards,
+  getCirculatingTokensOnchain,
+  getCirculatingTokensPublic: async () => null,
 };
 
 export default chainMethods;

@@ -13,6 +13,8 @@ import updateChainRewards from '@/server/jobs/update-chain-rewards';
 import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
+import updateCirculatingTokensOnchain from '@/server/jobs/update-circulating-tokens-onchain';
+import updateCirculatingTokensPublic from '@/server/jobs/update-circulating-tokens-public';
 import updateCommPool from '@/server/jobs/update-community-pool';
 import updateCommTax from '@/server/jobs/update-community-tax';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
@@ -104,6 +106,12 @@ async function runTask() {
         break;
       case 'inflation-rate':
         await updateInflationRate(chains);
+        break;
+      case 'circulating-tokens-onchain':
+        await updateCirculatingTokensOnchain(chains);
+        break;
+      case 'circulating-tokens-public':
+        await updateCirculatingTokensPublic(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

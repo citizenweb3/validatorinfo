@@ -197,12 +197,6 @@ export const networkProfileExample = {
       data: 353,
     },
   ],
-  distributionParameters: [
-    {
-      title: 'circulating tokens',
-      data: 12,
-    },
-  ],
   apps: [
     {
       name: 'Name',

@@ -204,15 +204,17 @@ model Tokenomics {
   activeSetMinAmount String @default("") @map("active_set_min_amount")
   rewardsToPayout    String @default("") @map("rewards_to_payout")
   feesRevenue        String @default("") @map("fees_revenue")
+  circulatingTokensPublic  String @default("") @map("circulating_tokens_public")
 
   // calculated
-  totalSupply         String @default("") @map("total_supply")
-  bondedTokens        String @default("") @map("bonded_tokens")
-  unbondedTokens      String @default("") @map("not_bonded_tokens")
-  unbondedTokensRatio Float  @default(0) @map("unbonded_tokens_ratio")
-  tvl                 Float  @default(0)
-  tvs                 Float  @default(0)
-  apr                 Float  @default(0)
+  totalSupply              String @default("") @map("total_supply")
+  bondedTokens             String @default("") @map("bonded_tokens")
+  unbondedTokens           String @default("") @map("not_bonded_tokens")
+  unbondedTokensRatio      Float  @default(0) @map("unbonded_tokens_ratio")
+  tvl                      Float  @default(0)
+  tvs                      Float  @default(0)
+  apr                      Float  @default(0)
+  circulatingTokensOnchain String @default("") @map("circulating_tokens_onchain")
 
   chain Chain @relation("chain_tokenomics", fields: [chainId], references: [id])
 

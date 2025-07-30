@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import { networkProfileExample } from '@/app/networks/[id]/(network-profile)/networkProfileExample';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
 import Tooltip from '@/components/common/tooltip';
@@ -33,6 +32,16 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   const rewardsToPayout =
     chain?.tokenomics?.rewardsToPayout && tokenPrice && chain?.params?.coinDecimals
       ? Number(chain?.tokenomics?.rewardsToPayout) / 10 ** Number(chain.params.coinDecimals) / Number(tokenPrice.value)
+      : undefined;
+
+  const circulatingTokensPublicPercents =
+    chain?.tokenomics?.circulatingTokensPublic && chain?.tokenomics?.totalSupply
+      ? (+chain?.tokenomics?.circulatingTokensPublic / +chain?.tokenomics?.totalSupply) * 100
+      : undefined;
+
+  const circulatingTokensOnchainPercents =
+    chain?.tokenomics?.circulatingTokensOnchain && chain?.tokenomics?.totalSupply
+      ? (+chain?.tokenomics?.circulatingTokensOnchain / +chain?.tokenomics?.totalSupply) * 100
       : undefined;
 
   return (
@@ -106,15 +115,30 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
           className="pb-8 pt-2.5"
           dataClassName="mt-6"
         />
-        {networkProfileExample.distributionParameters.map((item) => (
+        {circulatingTokensPublicPercents && (
           <MetricsCardItem
-            key={item.title}
-            title={t(item.title as 'community pool tvl')}
-            data={item.data}
+            title={t('circulating tokens public')}
+            data={
+              <Tooltip className={'font-sfpro text-base'} tooltip={`${t('circulating tokens public tooltip')}`}>
+                <div className="text-center">{circulatingTokensPublicPercents.toFixed(2)}%</div>
+              </Tooltip>
+            }
             className="pb-8 pt-2.5"
             dataClassName="mt-6"
           />
-        ))}
+        )}
+        {circulatingTokensOnchainPercents && (
+          <MetricsCardItem
+            title={t('circulating tokens oncain')}
+            data={
+              <Tooltip className={'font-sfpro text-base'} tooltip={`${t('circulating tokens onchain tooltip')}`}>
+                <div className="text-center">{circulatingTokensOnchainPercents.toFixed(2)}%</div>
+              </Tooltip>
+            }
+            className="pb-8 pt-2.5"
+            dataClassName="mt-6"
+          />
+        )}
       </div>
     </div>
   );

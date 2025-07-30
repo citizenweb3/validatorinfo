@@ -39,6 +39,8 @@ const chainMethods: ChainMethods = {
   getInflationRate: async () => null,
   getNodeRewards: async () => [],
   getChainRewards: async () => null,
+  getCirculatingTokensOnchain: async () => null,
+  getCirculatingTokensPublic: async () => null,
 };
 
 export default chainMethods;

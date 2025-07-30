@@ -349,7 +349,10 @@
     "% of tokens staked": "% Застейканных Токенов",
     "reward to payout": "Вознаграждения к Выплате",
     "fdv": "F.D.V.",
-    "circulating tokens": "% Циркулирующих Токенов",
+    "circulating tokens oncain": "Токены в обращении (On-chain данные) %",
+    "circulating tokens public": "Токены в обращении (публичные данные) %",
+    "circulating tokens public tooltip": "Получено и рассчитано на основе публичных данных блокчейна",
+    "circulating tokens onchain tooltip": "Получено и рассчитано на основе ончейн-данных",
     "inflation rate": "Уровень Инфляции",
     "Revenue vs Capital Flow": "Выручка VS Движение капитала"
   },

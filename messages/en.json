@@ -348,10 +348,14 @@
     "community pool tvl": "Community Pool TVL",
     "% of tokens staked": "% of Tokens Staked",
     "fdv": "F.D.V.",
-    "circulating tokens": "Circulating Tokens %",
+    "circulating tokens oncain": "Circulating Tokens (Onchain) %",
+    "circulating tokens public": "Circulating Tokens (Public) %",
     "inflation rate": "Inflation Rate",
     "reward to payout": "Reward to Payout",
-    "Revenue vs Capital Flow": "Revenue VS Capital Flow"
+    "Revenue vs Capital Flow": "Revenue VS Capital Flow",
+    "circulating tokens public tooltip": "Received and calculated by public chain data",
+    "circulating tokens onchain tooltip": "Received and calculated by onchain data"
+
   },
   "NetworkValidatorsPage": {
     "title": "Blockchain Validator Summary",

@@ -349,7 +349,10 @@
     "% of tokens staked": "% de Fichas Apostadas",
     "reward to payout": "Recompensa para Pagamento",
     "fdv": "F.D.V.",
-    "circulating tokens": "Tokens de circulação %",
+    "circulating tokens oncain": "Tokens em Circulação (On-chain) %",
+    "circulating tokens public": "Tokens em Circulação (Públicos) %",
+    "circulating tokens public tooltip": "Recebido e calculado com base em dados públicos da blockchain",
+    "circulating tokens onchain tooltip": "Recebido e calculado com base em dados on-chain",
     "inflation rate": "Taxa de inflação",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
   },
