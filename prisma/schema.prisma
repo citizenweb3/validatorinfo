@@ -192,19 +192,19 @@ model Price {
 }
 
 model Tokenomics {
-  id                 Int    @id @default(autoincrement())
-  chainId            Int    @map("chain_id")
-  ath                Float  @default(0)
-  atl                Float  @default(0)
-  changesPerDay      Float  @default(0) @map("changes_per_day")
-  changesPerMonth    Float  @default(0) @map("changes_per_month")
-  changesPerYear     Float  @default(0) @map("changes_per_year")
-  communityPool      String @default("") @map("community_pool")
-  inflation          Float  @default(0) @map("inflation")
-  activeSetMinAmount String @default("") @map("active_set_min_amount")
-  rewardsToPayout    String @default("") @map("rewards_to_payout")
-  feesRevenue        String @default("") @map("fees_revenue")
-  circulatingTokensPublic  String @default("") @map("circulating_tokens_public")
+  id                      Int    @id @default(autoincrement())
+  chainId                 Int    @map("chain_id")
+  ath                     Float  @default(0)
+  atl                     Float  @default(0)
+  changesPerDay           Float  @default(0) @map("changes_per_day")
+  changesPerMonth         Float  @default(0) @map("changes_per_month")
+  changesPerYear          Float  @default(0) @map("changes_per_year")
+  communityPool           String @default("") @map("community_pool")
+  inflation               Float  @default(0) @map("inflation")
+  activeSetMinAmount      String @default("") @map("active_set_min_amount")
+  rewardsToPayout         String @default("") @map("rewards_to_payout")
+  feesRevenue             String @default("") @map("fees_revenue")
+  circulatingTokensPublic String @default("") @map("circulating_tokens_public")
 
   // calculated
   totalSupply              String @default("") @map("total_supply")
