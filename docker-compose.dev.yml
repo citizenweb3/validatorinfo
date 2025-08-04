@@ -49,6 +49,16 @@ services:
     volumes:
       - uploads_data:/app/uploads
 
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    ports:
+      - "4317:4317"   # OTLP gRPC receiver
+      - "4318:4318"   # OTLP HTTP receiver
+    restart: unless-stopped
+    volumes:
+      - ./collector-config.yml:/etc/otelcol/config.yaml
+    command: --config /etc/otelcol/config.yaml
+
   frontend:
     build:
       context: .
@@ -65,6 +75,7 @@ services:
       SERVER_PORT: "3000"
       PUBLIC_URL: ${PUBLIC_URL}
       NODE_OPTIONS: "--require /app/server/instrumentation.ts"
+      NODE_ENV: "development"
     volumes:
       - uploads_data:/app/uploads
 
@@ -85,6 +96,7 @@ services:
       REDIS_HOST: redis
       REDIS_PORT: "6379"
       NODE_OPTIONS: "--require /app/server/instrumentation.ts"
+      NODE_ENV: "development"
     volumes:
       - uploads_data:/app/uploads
 
