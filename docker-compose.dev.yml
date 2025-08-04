@@ -75,7 +75,6 @@ services:
       SERVER_PORT: "3000"
       PUBLIC_URL: ${PUBLIC_URL}
       NODE_OPTIONS: "--require /app/server/instrumentation.ts"
-      NODE_ENV: "development"
     volumes:
       - uploads_data:/app/uploads
 
@@ -96,7 +95,6 @@ services:
       REDIS_HOST: redis
       REDIS_PORT: "6379"
       NODE_OPTIONS: "--require /app/server/instrumentation.ts"
-      NODE_ENV: "development"
     volumes:
       - uploads_data:/app/uploads
 
