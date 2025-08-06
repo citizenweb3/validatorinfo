@@ -10,6 +10,9 @@ const timers = {
   every30mins: '*/30 * * * *',
   everyHour: '0 * * * *',
   everyDay: '0 0 * * *',
+  in15MinEveryHour: '15 * * * *',
+  in30MinEveryHour: '30 * * * *',
+  in45MinEveryHour: '45 * * * *',
 };
 
 const { logInfo, logError } = logger('indexer');
@@ -55,19 +58,19 @@ const runServer = async () => {
     { name: 'prices', schedule: timers.every5mins },
     { name: 'validators', schedule: timers.everyHour },
     { name: 'chain-tvls', schedule: timers.everyHour },
-    { name: 'chain-aprs', schedule: timers.everyHour },
+    { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
     { name: 'chain-slashing-params', schedule: timers.everyDay },
     { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-node-params', schedule: timers.everyDay },
     { name: 'community-tax', schedule: timers.everyDay },
     { name: 'wallets-amount', schedule: timers.everyDay },
-    { name: 'tokenomics', schedule: timers.everyHour },
+    { name: 'tokenomics', schedule: timers.in30MinEveryHour },
     { name: 'proposal-params', schedule: timers.everyDay },
     { name: 'update-staking-page-json', schedule: timers.everyDay },
     { name: 'update-chain-rewards', schedule: timers.everyDay },
     { name: 'community-pool', schedule: timers.everyDay },
-    { name: 'active-set-min-amount', schedule: timers.everyHour },
+    { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
