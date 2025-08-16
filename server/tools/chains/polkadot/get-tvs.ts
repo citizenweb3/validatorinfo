@@ -55,7 +55,9 @@ const getTvs: GetTvsFunction = async (chain) => {
   } finally {
     try {
       await api.disconnect();
-    } catch {}
+    } catch (e) {
+      logError(`Could not disconnect websocket for ${chain.name}: `, e);
+    }
   }
 };
 
