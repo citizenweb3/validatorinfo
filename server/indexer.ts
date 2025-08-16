@@ -6,8 +6,13 @@ import chains from '@/server/tools/chains/chains';
 
 const timers = {
   every5mins: '*/5 * * * *',
+  every10mins: '*/10 * * * *',
+  every30mins: '*/30 * * * *',
   everyHour: '0 * * * *',
   everyDay: '0 0 * * *',
+  in15MinEveryHour: '15 * * * *',
+  in30MinEveryHour: '30 * * * *',
+  in45MinEveryHour: '45 * * * *',
 };
 
 const { logInfo, logError } = logger('indexer');
@@ -52,11 +57,22 @@ const runServer = async () => {
   const tasks = [
     { name: 'prices', schedule: timers.every5mins },
     { name: 'validators', schedule: timers.everyHour },
-    { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'chain-tvls', schedule: timers.everyHour },
-    { name: 'chain-aprs', schedule: timers.everyHour },
+    { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
+    { name: 'chain-slashing-params', schedule: timers.everyDay },
     { name: 'chain-proposals', schedule: timers.everyDay },
+    { name: 'chain-node-params', schedule: timers.everyDay },
+    { name: 'community-tax', schedule: timers.everyDay },
+    { name: 'wallets-amount', schedule: timers.everyDay },
+    { name: 'tokenomics', schedule: timers.in30MinEveryHour },
+    { name: 'proposal-params', schedule: timers.everyDay },
+    { name: 'update-staking-page-json', schedule: timers.everyDay },
+    { name: 'update-chain-rewards', schedule: timers.everyDay },
+    { name: 'community-pool', schedule: timers.everyDay },
+    { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
+    { name: 'inflation-rate', schedule: timers.everyDay },
+    { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {
@@ -80,10 +96,40 @@ const runServer = async () => {
     spawnTask(task.name, chains).catch((e) => logError(`Initial run error for task ${task.name}:`, e));
   });
 
-  // Initial run for validatorInfo task after 5 minutes for wait validators updated
+  const specialTasks = [
+    { name: 'validatorInfo', schedule: timers.everyDay },
+    { name: 'slashing-infos', schedule: timers.everyHour },
+    { name: 'slashing-infos-namada', schedule: timers.every10mins },
+    { name: 'slashing-infos-solana', schedule: timers.every30mins },
+    { name: 'update-nodes-votes', schedule: timers.everyDay },
+    { name: 'update-nodes-rewards', schedule: timers.everyDay },
+    { name: 'circulating-tokens-onchain', schedule: timers.everyDay },
+    { name: 'circulating-tokens-public', schedule: timers.everyDay },
+  ];
+
+  specialTasks.forEach(({ name, schedule }) => {
+    const job = new CronJob(
+      schedule,
+      async () => {
+        logInfo(`Scheduled run for task ${name}`);
+        try {
+          await spawnTask(name, chains);
+        } catch (e) {
+          logError(`Error in task ${name}: ${e}`);
+        }
+      },
+      null,
+      true,
+    );
+    job.start();
+  });
+
+  // Initial run for specialTasks after 5 minutes for wait validators updated
   setTimeout(
     () => {
-      spawnTask('validatorInfo', chains).catch((e) => logError(`Initial run error for task validatorInfo:`, e));
+      specialTasks.forEach(({ name }) => {
+        spawnTask(name, chains).catch((e) => logError(`Initial run error for task ${name}:`, e));
+      });
     },
     5 * 60 * 1000,
   );

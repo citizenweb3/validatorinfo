@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import { SearchResult } from '@/api/search/route';
 import SearchItem from '@/components/header/header-search/search-item';
+import icons from '@/components/icons';
 
 interface OwnProps {
   results: SearchResult | null;
@@ -17,13 +18,14 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
     <div className="space-y-4 text-sm">
       {!!results?.validators.length && (
         <div>
-          <div className="text-lg text-highlight">{t('search.Validators')}</div>
+          <div className="md:text-lg sm:text-2xl text-4xl text-highlight">{t('search.Validators')}</div>
           <div>
             {results?.validators.map((validator, index) => (
               <SearchItem
+                key={validator.id}
                 name={validator.moniker}
                 link={`/validators/${validator.id}/networks`}
-                icon={validator.url?.indexOf('http') === 0 ? validator.url : `https://${validator.url}`}
+                icon={validator.url ?? icons.AvatarIcon}
                 isSelected={activeIndex === index}
                 onClick={onSelect}
               />
@@ -33,13 +35,14 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
       )}
       {!!results?.chains.length && (
         <div>
-          <div className="text-lg text-highlight">{t('search.Networks')}</div>
+          <div className="md:text-lg sm:text-2xl text-4xl text-highlight">{t('search.Networks')}</div>
           <div>
             {results?.chains.map((chain, index) => (
               <SearchItem
+                key={chain.id}
                 name={chain.prettyName}
                 link={`/networks/${chain.id}/overview`}
-                icon={chain.logoUrl?.indexOf('http') === 0 ? chain.logoUrl : `https://${chain.logoUrl}`}
+                icon={chain.logoUrl ?? icons.AvatarIcon}
                 isSelected={activeIndex === (results.validators.length ?? 0) + index}
                 onClick={onSelect}
               />
@@ -49,13 +52,14 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
       )}
       {!!results?.tokens.length && (
         <div>
-          <div className="text-lg text-highlight">{t('search.Tokens')}</div>
+          <div className="md:text-lg sm:text-2xl text-4xl text-highlight">{t('search.Tokens')}</div>
           <div>
             {results?.tokens.map((chain, index) => (
               <SearchItem
-                name={chain.denom}
-                link={`/networks/${chain.name}`}
-                icon={chain.logoUrl?.indexOf('http') === 0 ? chain.logoUrl : `https://${chain.logoUrl}`}
+                key={chain.id}
+                name={chain.params?.denom ?? ''}
+                link={`/networks/${chain.id}/tokenomics`}
+                icon={chain.logoUrl ?? icons.AvatarIcon}
                 isSelected={activeIndex === (results.validators.length ?? 0) + (results.chains.length ?? 0) + index}
                 onClick={onSelect}
               />

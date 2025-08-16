@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { GetTvsFunction } from '@/server/tools/chains/chain-indexer';
-import fetchData from '@/server/utils/fetch-data';
+import fetchChainData from '@/server/tools/get-chain-data';
 
 const { logError } = logger('get-tvs');
 
@@ -19,15 +19,11 @@ const getTvs: GetTvsFunction = async (chain) => {
     let tvs = 0;
     let unbondedTokensRatio = 0;
 
-    const lcdEndpoint = chain.nodes.find((node) => node.type === 'lcd')?.url;
-    if (!lcdEndpoint) {
-      logError(`LCD node for ${chain.name} chain not found`);
-      return null;
-    }
-
     try {
-      const response = await fetchData<{ supply: { denom: string; amount: string }[] }>(
-        `${lcdEndpoint}/cosmos/bank/v1beta1/supply?pagination.limit=100000`,
+      const response = await fetchChainData<{ supply: { denom: string; amount: string }[] }>(
+        chain.name,
+        'rest',
+        `/cosmos/bank/v1beta1/supply?pagination.limit=100000`,
       );
 
       totalSupply = response.supply.find((supply) => supply.denom === chain.minimalDenom)?.amount || '0';
@@ -38,8 +34,8 @@ const getTvs: GetTvsFunction = async (chain) => {
     const contractAddress = 'neutron1qeyjez6a9dwlghf9d6cy44fxmsajztw257586akk6xn6k88x0gus5djz4e';
 
     try {
-      const url = `${lcdEndpoint}/cosmos/bank/v1beta1/balances/${contractAddress}`;
-      const response = await fetchData<BankBalancesResponse>(url);
+      const url = `/cosmos/bank/v1beta1/balances/${contractAddress}`;
+      const response = await fetchChainData<BankBalancesResponse>(chain.name, 'rest', url);
       bondedTokens = response.balances.find((b) => b.denom === chain.minimalDenom)?.amount || '0';
     } catch (error) {
       console.error('Error querying locked tokens:', error);

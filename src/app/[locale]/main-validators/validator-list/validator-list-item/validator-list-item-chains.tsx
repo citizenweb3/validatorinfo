@@ -21,7 +21,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
       {chains.length > 4 && <div className="mr-2 font-handjet text-sm">{chains.length}:</div>}
       {chains.slice(0, 4).map((chain) => (
         <Link key={chain.valoper} href={`/networks/${chain.id}/overview`}>
-          <Tooltip direction="top" tooltip={chain.prettyName}>
+          <Tooltip direction="top" tooltip={chain.prettyName} className="font-bold text-sm">
             <Image
               src={chain.logoUrl}
               alt={chain.prettyName}
@@ -53,7 +53,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
               <div className="flex max-h-96 w-40 flex-row flex-wrap items-center justify-center">
                 {chains.map((chain) => (
                   <Link key={chain.valoper} href={`/networks/${chain.id}/overview`} className="h-7 w-7">
-                    <Tooltip direction="top" tooltip={chain.prettyName}>
+                    <Tooltip direction="top" tooltip={chain.prettyName} className="font-bold text-sm">
                       <Image
                         src={chain.logoUrl}
                         alt={chain.prettyName}

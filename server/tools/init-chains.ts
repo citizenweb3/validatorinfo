@@ -1,12 +1,13 @@
+import { sleep } from '@cosmjs/utils';
+
 import db from '@/db';
 import logger from '@/logger';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import chainNames from '@/server/tools/chains/chains';
-import { ecosystemParams, getChainParams } from '@/server/tools/chains/params';
+import { ecosystemParams, updateChainParamsUpdated } from '@/server/tools/chains/params';
 import downloadImage from '@/server/utils/download-image';
 
 import { Prisma } from '.prisma/client';
-
 import ChainUncheckedCreateInput = Prisma.ChainUncheckedCreateInput;
 
 const { logInfo, logError } = logger('init-chains');
@@ -18,13 +19,8 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     chainId: chain.chainId,
     name: chain.name,
     prettyName: chain.prettyName,
-    denom: chain.denom,
-    minimalDenom: chain.minimalDenom,
-    coinDecimals: chain.coinDecimals,
-    coinType: chain.coinType,
     logoUrl: chain.logoUrl,
     coinGeckoId: chain.coinGeckoId,
-    bech32Prefix: chain.bech32Prefix,
     twitterUrl: chain.twitterUrl,
     docs: chain.docs,
     githubMainRepo: chain.mainRepo,
@@ -44,7 +40,23 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
       data: {
         ...chainFields,
         chainNodes: {
-          create: chain.nodes.map((node) => ({ url: node.url, type: node.type })),
+          create: chain.nodes.map((node) => {
+            if (node.url[node.url.length - 1] === '/') {
+              node.url = node.url.slice(0, -1);
+            }
+            return { url: node.url, type: node.type };
+          }),
+        },
+        params: {
+          create: {
+            denom: chain.denom,
+            minimalDenom: chain.minimalDenom,
+            coinDecimals: chain.coinDecimals,
+            coinType: chain.coinType,
+            bech32Prefix: chain.bech32Prefix,
+            peers: chain.peers ? chain.peers.join(',') : undefined,
+            seeds: chain.seeds ? chain.seeds.join(',') : undefined,
+          },
         },
       },
     });
@@ -56,29 +68,36 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     where: { chainId: chain.chainId },
     data: {
       ...chainFields,
+      params: {
+        update: {
+          denom: chain.denom,
+          minimalDenom: chain.minimalDenom,
+          coinDecimals: chain.coinDecimals,
+          coinType: chain.coinType,
+          bech32Prefix: chain.bech32Prefix,
+          peers: chain.peers ? chain.peers.join(',') : undefined,
+          seeds: chain.seeds ? chain.seeds.join(',') : undefined,
+        },
+      },
     },
   });
 
-  const existingNodes = existingChain.chainNodes;
+  const existingNodes = existingChain.chainNodes || [];
   const newNodes = chain.nodes;
-  nodesLoop: for (const newNode of newNodes) {
-    for (const existingNode of existingNodes) {
-      if (existingNode.type === newNode.type && existingNode.url !== newNode.url) {
-        await db.chainNode.update({
-          where: { id: existingNode.id },
-          data: { url: newNode.url },
-        });
-        continue nodesLoop;
-      }
-    }
 
-    await db.chainNode.create({
-      data: {
-        url: newNode.url,
-        type: newNode.type,
-        chainId: existingChain.id,
-      },
-    });
+  for (const newNode of newNodes) {
+    if (newNode.url[newNode.url.length - 1] === '/') {
+      newNode.url = newNode.url.slice(0, -1);
+    }
+    if (!existingNodes.some((node) => node.url === newNode.url && node.type === newNode.type)) {
+      await db.chainNode.create({
+        data: {
+          url: newNode.url,
+          type: newNode.type,
+          chainId: existingChain.id,
+        },
+      });
+    }
   }
 
   logInfo(`Chain #${chain.chainId} ${chain.prettyName} updated`);
@@ -108,8 +127,9 @@ async function main() {
       }
     }
     for (const chainName of chainNames) {
-      const chainParams = getChainParams(chainName);
-      await addNetwork(chainParams);
+      const chainParamsUpdated = await updateChainParamsUpdated(chainName);
+      await addNetwork(chainParamsUpdated);
+      await sleep(3000);
     }
   } catch (e) {
     logError('Error: ', e);

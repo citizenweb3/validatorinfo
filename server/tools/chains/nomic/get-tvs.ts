@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { ChainTVSResult, GetTvsFunction } from '@/server/tools/chains/chain-indexer';
-import fetchData from '@/server/utils/fetch-data';
+import fetchChainData from '@/server/tools/get-chain-data';
 
 const { logError, logDebug } = logger('get-tvl');
 
@@ -13,12 +13,6 @@ interface StakingData {
 
 const getTvs: GetTvsFunction = async (chain) => {
   try {
-    const indexerEndpoint = chain.nodes.find((node) => node.type === 'lcd')?.url;
-    if (!indexerEndpoint) {
-      logError(`RPC node for ${chain.name} chain not found`);
-      return null;
-    }
-
     let totalSupply = '0';
     let bondedTokens = '0';
     let unbondedTokens = '0';
@@ -26,8 +20,10 @@ const getTvs: GetTvsFunction = async (chain) => {
     let tvs = 0;
 
     try {
-      const stakingData: StakingData = await fetchData<StakingData>(
-        `${indexerEndpoint}/cosmos/bank/v1beta1/supply/unom`,
+      const stakingData: StakingData = await fetchChainData<StakingData>(
+        chain.name,
+        'rest',
+        `/cosmos/bank/v1beta1/supply/unom`,
       );
       totalSupply = stakingData.amount.amount;
     } catch (error: any) {
@@ -35,8 +31,10 @@ const getTvs: GetTvsFunction = async (chain) => {
     }
 
     try {
-      const pool = await fetchData<{ pool: { bonded_tokens: string; not_bonded_tokens: string } }>(
-        `${indexerEndpoint}/cosmos/staking/v1beta1/pool`,
+      const pool = await fetchChainData<{ pool: { bonded_tokens: string; not_bonded_tokens: string } }>(
+        chain.name,
+        'rest',
+        `/cosmos/staking/v1beta1/pool`,
       );
       bondedTokens = (+pool.pool.bonded_tokens).toString();
       unbondedTokens = (+pool.pool.not_bonded_tokens).toString();

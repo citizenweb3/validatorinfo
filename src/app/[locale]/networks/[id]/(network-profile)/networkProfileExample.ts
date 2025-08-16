@@ -16,60 +16,35 @@ export const networkProfileExample = {
       tooltip: 'revenue',
     },
     {
-      title: 'validator cost',
+      title: 'mau',
       data: 90,
-      tooltip: 'validator cost',
+      tooltip: 'mau',
+    },
+  ],
+  socialMetrics: [
+    {
+      title: 'believers',
+      data: 90,
+      tooltip: '',
+    },
+    {
+      title: 'followers',
+      data: 90,
+      tooltip: '',
+    },
+    {
+      title: 'members',
+      data: 90,
+      tooltip: '',
     },
   ],
   totalsMetrics: [
-    {
-      title: 'amount of wallets',
-      data: 85.98,
-    },
     {
       title: 'total amount of tx',
       data: 0.71,
     },
   ],
-  networkOverview: [
-    {
-      title: 'active validators',
-      data: 234,
-    },
-    {
-      title: 'unbonding time',
-      data: 21,
-    },
-    {
-      title: 'community tax',
-      data: 10,
-    },
-    {
-      title: 'proposal creation cost',
-      data: 50,
-    },
-    {
-      title: 'voting period',
-      data: 5,
-    },
-    {
-      title: 'slashing',
-      data: 10,
-    },
-    {
-      title: 'comm pool value in usd',
-      data: 23657591,
-    },
-    {
-      title: '% of comm pool to total supply',
-      data: 10,
-    },
-  ],
   totalStatistics: [
-    {
-      title: 'community pool total',
-      data: '...1234',
-    },
     {
       title: 'average delegations',
       data: '...314',
@@ -190,54 +165,6 @@ export const networkProfileExample = {
       votingEnded: '21/02/2024, 22:01:15',
     },
   ],
-  peersAndSeeds: [
-    {
-      title: 'peers',
-      data: 12,
-    },
-    {
-      title: 'seeds',
-      data: 12,
-    },
-    {
-      title: 'binary versions',
-      data: 12,
-    },
-  ],
-  parameters: [
-    {
-      title: 'bech32 prefix',
-      data: 'Cosmos',
-    },
-    {
-      title: 'daemon name',
-      data: 'Gaiad',
-    },
-    {
-      title: 'node home',
-      data: '$HOME/.gaia',
-    },
-    {
-      title: 'slip44',
-      data: 118,
-    },
-    {
-      title: 'key algosz',
-      data: 'secp256k1',
-    },
-    {
-      title: 'genesis url',
-      data: 'https://github.com/cosmos/mainnet/raw/master/genesis/genesis.cosmoshub-4.json.gz',
-    },
-    {
-      title: 'chain id',
-      data: 'Cosmoshub-4',
-    },
-    {
-      title: 'denom',
-      data: 'Uatom',
-    },
-  ],
   developerActivity: [
     {
       title: 'github stars',
@@ -270,18 +197,41 @@ export const networkProfileExample = {
       data: 353,
     },
   ],
-  distributionParameters: [
+  apps: [
     {
-      title: 'community pool tvl',
-      data: 12,
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
     },
     {
-      title: '% of tokens staked',
-      data: 12,
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
     },
     {
-      title: 'reward to payout',
-      data: 12,
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
+    },
+    {
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
+    },
+    {
+      name: 'Name',
+      links: '',
+      users: '90',
+      wau: '23',
+      capital: '$200.123M',
     },
   ],
 };

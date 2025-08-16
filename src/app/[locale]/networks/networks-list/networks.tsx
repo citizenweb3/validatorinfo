@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import NetworksList from '@/app/networks/networks-list/networks-list';
 import ListFilters from '@/components/common/list-filters/list-filters';
+import Tooltip from '@/components/common/tooltip';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -26,8 +27,14 @@ const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, current
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
-            <TableHeaderItem page={page} name="Token" />
-            <TableHeaderItem page={page} name="FDV" />
+            <TableHeaderItem page={page} name="Token" sortField="name" defaultSelected />
+            <TableHeaderItem
+              page={page}
+              name="FDV"
+              sortField="name"
+              defaultSelected
+              tooltip="Fully Diluted Valuation"
+            />
             <TableHeaderItem page={page} name="Links" colspan={3} />
           </tr>
           </thead>

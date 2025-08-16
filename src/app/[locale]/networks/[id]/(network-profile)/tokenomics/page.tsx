@@ -10,6 +10,7 @@ import TokenPriceChart from '@/app/networks/[id]/(network-profile)/tokenomics/ch
 import RevenueCapitalFlowChart
   from '@/app/networks/[id]/(network-profile)/tokenomics/charts/revenue-capital-flow-chart';
 import SubDescription from '@/components/sub-description';
+import TokenomicsService from '@/services/tokenomics-service';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string };
@@ -31,13 +32,18 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
   const tokenPrice = await chainService.getTokenPriceByChainId(chainId);
+  const tokenomics = await TokenomicsService.getTokenomicsByChainId(chainId);
 
   return (
     <div>
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <TokenPrice denom={chain?.denom} price={tokenPrice ? tokenPrice.value : 12.43} />
-      <DistributionGiniParameters chainId={chainId} />
+      <TokenPrice
+        denom={chain?.params?.denom ?? null}
+        price={tokenPrice ? tokenPrice.value : 12.43}
+        tokenomics={tokenomics}
+      />
+      <DistributionGiniParameters chain={chain} />
       <SubTitle text={t('Token Price')} />
       <TokenPriceChart />
       <SubTitle text={t('Revenue vs Capital Flow')} />

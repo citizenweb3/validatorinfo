@@ -11,8 +11,12 @@ import { fillColors } from '@/app/comparevalidators/helpers';
 import ValidatorLeftPanel from '@/app/comparevalidators/validator-left-panel';
 import ValidatorListItem from '@/app/comparevalidators/validator-list-item';
 import RoundedButton from '@/components/common/rounded-button';
+import SpreadModal from '@/app/about/modals/spread-modal';
+import { Validator } from '@prisma/client';
 
-interface OwnProps {}
+interface OwnProps {
+  validator: Validator | null;
+}
 
 const validatorList = [
   { value: 'POSTHUMAN', title: 'POSTHUMAN' },
@@ -24,7 +28,7 @@ const validatorList = [
   { value: 'Citadel.one', title: 'Citadel.one' },
 ];
 
-const ComparisonTable: FC<OwnProps> = ({}) => {
+const ComparisonTable: FC<OwnProps> = ({ validator }) => {
   const t = useTranslations('ComparisonPage');
   const [data, setData] = useState<ValidatorData[]>([]);
   const [filledData, setFilledData] = useState<ValidatorDataFilled[]>([]);
@@ -32,11 +36,15 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
   const [chartType, setChartType] = useState<string | undefined>('Daily');
   const [isChanged, setIsChanged] = useState<boolean>(false);
   const [isComparing, setIsComparing] = useState<boolean>(false);
+  const [moniker, setMoniker] = useState<string>('Citizen Web 3');
 
   useEffect(() => {
-    const first = [getValidatorData(0, 'Citizen Web 3')];
+    if (validator) {
+      setMoniker(validator.moniker);
+    }
+    const first = [getValidatorData(0, moniker)];
     setData(first);
-  }, []);
+  }, [validator, moniker]);
 
   useEffect(() => {
     setFilledData(fillColors(data));
@@ -58,7 +66,7 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
   };
 
   const handleReset = () => {
-    setData([getValidatorData(0, 'Citizen Web 3')]);
+    setData([getValidatorData(0, moniker)]);
     setChartType('Daily');
     setIsChanged(false);
     setIsComparing(false);
@@ -130,6 +138,11 @@ const ComparisonTable: FC<OwnProps> = ({}) => {
               <RoundedButton contentClassName="px-20 text-2xl" onClick={() => setIsChart(!isChart)}>
                 {t(isChart ? 'Hide Charts' : 'Show Charts')}
               </RoundedButton>
+            )}
+            {filledData.length > 0 && (
+              <div className="flex flex-col items-center justify-center my-5">
+                <SpreadModal />
+              </div>
             )}
           </div>
         )}

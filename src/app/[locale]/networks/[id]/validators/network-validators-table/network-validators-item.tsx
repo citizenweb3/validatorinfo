@@ -7,54 +7,22 @@ import icons from '@/components/icons';
 import { NetworkValidatorsWithNodes } from '@/services/chain-service';
 import formatCash from '@/utils/format-cash';
 import Tooltip from '@/components/common/tooltip';
+import colorStylization from '@/utils/color-stylization';
 
 interface OwnProps {
   item: NetworkValidatorsWithNodes;
 }
 
 const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
-  const uptime: number = 80;
-  const missedBlocks: number = 500;
-  const votingPowerPercents: number = 20;
-  const tokenDelegatorShares = +item.delegatorShares / 10 ** item.chain.coinDecimals;
+  const tokenDelegatorShares = item.chain.params?.coinDecimals
+    ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals
+    : undefined;
 
-  const redTextLayout: string = '#EB1616';
-  const greenTextLayout: string = '#4FB848';
-  const yellowTextLayout: string = '#E5C46B';
-
-  const selfDelegation: number = +item.minSelfDelegation / 10 ** item.chain.coinDecimals;
+  const selfDelegation = item.chain.params?.coinDecimals
+    ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
+    : undefined;
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
-
-  const checkDelegationColor = () => {
-    if (Number(selfDelegation) < 1000) {
-      return greenTextLayout;
-    } else if (Number(selfDelegation) < 2000 && Number(selfDelegation) >= 1000) {
-      return yellowTextLayout;
-    } else {
-      return redTextLayout;
-    }
-  };
-
-  const checkUptime = () => {
-    if (uptime <= 90) {
-      return redTextLayout;
-    } else if (uptime >= 90 && uptime <= 98) {
-      return yellowTextLayout;
-    } else {
-      return greenTextLayout;
-    }
-  };
-
-  const checkMissedBlocks = () => {
-    if (missedBlocks < 200) {
-      return greenTextLayout;
-    } else if (missedBlocks >= 200 && missedBlocks <= 2000) {
-      return yellowTextLayout;
-    } else {
-      return redTextLayout;
-    }
-  };
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
@@ -71,9 +39,9 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       <td
         className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
-          <Tooltip tooltip={tokenDelegatorShares.toLocaleString()}>
+          <Tooltip tooltip={tokenDelegatorShares?.toLocaleString() ?? ''}>
             <div className="text-center">
-              {formatCash(tokenDelegatorShares)}
+              {tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}
             </div>
           </Tooltip>
           <div className="text-center">{item.votingPower.toFixed(2)}%</div>
@@ -87,28 +55,38 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <Link href={nodeLink}>
-          <Tooltip tooltip={selfDelegation.toLocaleString()}>
-            <div className="text-center" style={{ color: checkDelegationColor() }}>
-              {formatCash(selfDelegation)}
+          <Tooltip tooltip={selfDelegation?.toLocaleString() ?? ''}>
+            <div className="text-center" style={{ color: colorStylization.delegation(selfDelegation ?? null) }}>
+              {selfDelegation !== undefined && selfDelegation !== null ? formatCash(selfDelegation) : '-'}
             </div>
           </Tooltip>
         </Link>
       </td>
-      <td
-        className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={nodeLink}>
-          <div className="text-center" style={{ color: checkUptime() }}>
-            {uptime}
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+        {item.uptime !== undefined && item.uptime !== null ? (
+          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
+            <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
+              {item.uptime.toFixed(2)}
+            </div>
+          </Tooltip>
+        ) : (
+          <div className="text-center">
+            -
           </div>
-        </Link>
+        )}
       </td>
-      <td
-        className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
-        <Link href={nodeLink}>
-          <div className="text-center" style={{ color: checkMissedBlocks() }}>
-            {missedBlocks}
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+        {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
+          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
+            <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
+              {item.missedBlocks}
+            </div>
+          </Tooltip>
+        ) : (
+          <div className="text-center">
+            -
           </div>
-        </Link>
+        )}
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <Link href={nodeLink}>

@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { GetStakingParamsFunction, StakingParams } from '@/server/tools/chains/chain-indexer';
-import fetchData from '@/server/utils/fetch-data';
+import fetchChainData from '@/server/tools/get-chain-data';
 
 interface ChainStakingParams {
   params: {
@@ -17,21 +17,20 @@ const getStakingParams: GetStakingParamsFunction = async (chain) => {
     maxValidators: null,
   };
 
-  const restEndpoint = chain.nodes.find((node) => node.type === 'lcd')?.url;
-
-  if (restEndpoint) {
-    try {
-      const url = `${restEndpoint}/cosmos/staking/v1beta1/params`;
-      const unbondingTimeResult = await fetchData<ChainStakingParams>(url);
-      if (unbondingTimeResult?.params?.unbonding_time) {
-        result.unbondingTime = parseInt(unbondingTimeResult.params.unbonding_time);
-        result.maxValidators = unbondingTimeResult.params.max_validators;
-        logInfo(`Staking params for ${chain.name}: ${JSON.stringify(result)}`);
-      }
-      return result;
-    } catch (e) {
-      logError(`Error fetching staking params for ${chain.name}`, e);
+  try {
+    const unbondingTimeResult = await fetchChainData<ChainStakingParams>(
+      chain.name,
+      'rest',
+      '/cosmos/staking/v1beta1/params',
+    );
+    if (unbondingTimeResult?.params?.unbonding_time) {
+      result.unbondingTime = parseInt(unbondingTimeResult.params.unbonding_time);
+      result.maxValidators = unbondingTimeResult.params.max_validators;
+      logInfo(`Staking params for ${chain.name}: ${JSON.stringify(result)}`);
     }
+    return result;
+  } catch (e) {
+    logError(`Error fetching staking params for ${chain.name}`, e);
   }
 
   return result;

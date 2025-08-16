@@ -35,4 +35,18 @@ export const stakingStatsExample = {
       percents: 2.26
     }
   },
+  apy: {
+    yesterday: {
+      percents: 0.03
+    },
+    lastWeek: {
+      percents: 0.95
+    },
+    lastMonth: {
+      percents: 2.98
+    },
+    lastYear: {
+      percents: 3.26
+    }
+  },
 }

@@ -75,3 +75,41 @@ pm2 start "make start-indexer" --name indexer
 ```
 ---------------------------------------
 
+## Docker Development Environment
+
+### Using Docker Compose (Recommended)
+
+Docker Compose provides a fully isolated development environment with all required services.
+
+1. Ensure Docker and Docker Compose are installed on your system.
+
+2. Set up environment variables:
+```bash
+cp .env.example .env
+```
+
+Required variables in .env file:
+```
+# Database
+POSTGRES_DB=validatorinfo_db
+POSTGRES_USER=validatorinfo_user
+POSTGRES_PASSWORD=mysecretpassword
+
+# Front and indexer environment
+PUBLIC_URL=localhost
+REDIS_HOST=redis
+VALIDATORS_APP_TOKEN="<your_token>"
+```
+
+3. Start the project:
+```bash
+docker compose -f docker-compose.dev.yml up -d --build
+```
+
+This will start:
+- PostgreSQL (port 5432)
+- Redis (port 6379)
+- Migrations service (automatic database setup)
+- Frontend application (port 3000)
+- Indexer service (port 3001)
+

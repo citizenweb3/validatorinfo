@@ -7,13 +7,28 @@ import { mainTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
-import SpreadModal from '@/app/about/modals/spread-modal';
+import nodeService from '@/services/node-service';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-const ValidatorComparisonPage: NextPageWithLocale = async ({ params: { locale } }) => {
+interface PageProps {
+  params: { locale: string };
+  searchParams: { validator?: string };
+}
+
+const ValidatorComparisonPage: NextPageWithLocale<PageProps> = async ({
+    params: { locale },
+    searchParams: q,
+  }) => {
   const t = await getTranslations({ locale, namespace: 'ComparisonPage' });
+
+  let validator = null;
+
+  const nodeId = q.validator;
+  if (nodeId) {
+    validator = await nodeService.getValidatorByNodeId(parseInt(nodeId));
+  }
 
   return (
     <div className="flex flex-grow flex-col">
@@ -24,10 +39,7 @@ const ValidatorComparisonPage: NextPageWithLocale = async ({ params: { locale } 
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-4 mt-2'} />
-      <ComparisonTable />
-      <div className="flex flex-col items-center justify-center">
-        <SpreadModal />
-      </div>
+      <ComparisonTable validator={validator} />
     </div>
   );
 };

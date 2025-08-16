@@ -49,6 +49,8 @@ export interface PagesProps {
     | 'NetworkProfileHeader'
     | 'NetworkGovernance'
     | 'NetworkDevInfo'
+    | 'NetworkDevInfo.Apps'
+    | 'NetworkDevInfo.DeveloperActivity'
     | 'TotalTxsPage'
     | 'TxInformationPage'
     | 'EcosystemsPage'

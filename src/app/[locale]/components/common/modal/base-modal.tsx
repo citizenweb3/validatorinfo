@@ -29,7 +29,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
   useOnClickOutside(modalRef, () => onClose());
   return (
     <div ref={modalRef} className={`${opened ? 'block' : 'hidden'} ${isRelative ? 'relative' : ''}`}>
-      <div className={`${className} absolute z-40 bg-background shadow-3xl`} style={style}>
+      <div className={`${className} ${isRelative ? 'absolute' : 'fixed'} z-40 bg-background shadow-3xl`} style={style}>
         <div className={`${!hideClose && 'pt-6'} relative p-3`}>
           {!hideClose && (
             <div

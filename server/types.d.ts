@@ -69,6 +69,11 @@ interface CommissionRates {
   max_change_rate: string;
 }
 
+export interface SlashingSigningInfos {
+  address: string;
+  missed_blocks_counter: string;
+}
+
 type BondStatus = 'BOND_STATUS_BONDED' | 'BOND_STATUS_UNBONDED';
 
 export type SortDirection = 'asc' | 'desc';

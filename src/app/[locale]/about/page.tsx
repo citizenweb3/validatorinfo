@@ -10,6 +10,7 @@ import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
+import RichPageTitle from '@/components/common/rich-page-title';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -33,7 +34,15 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
         alt="Pixelated, 90s game-style characters are discussing the explorer with the validatorinfo head logo"
       />
       <TabList page="AboutPage" tabs={aboutTabs} />
-      <PageTitle text={t('title')} />
+      <RichPageTitle>
+        <div className="m-4">
+            {t.rich('title', {
+              validatorInfoLink: (chunks) => <TextLink content={chunks} href="/" />,
+              validatorsAndMiningPoolsLink: (chunks) => <TextLink content={chunks} href="/validators" />
+            })}
+        </div>
+      </RichPageTitle>
+
       <div>
         <div className="m-4 w-2/3 whitespace-pre-line pt-2 text-base">
           {t.rich('description', {

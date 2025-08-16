@@ -23,9 +23,6 @@ const LibraryCuriousPage: NextPageWithLocale<PageProps> = async ({ params: { loc
       <PageTitle text={t('Curious.title')} />
       <SubDescription text={t('Curious.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <LibraryTagsFilter selectedTags={tags} />
-      <PageTitle text={t('Curious.title')} />
-      <SubDescription text={t('Curious.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <LibraryTagsFilter selectedTags={tags} />
       <Letters />
       <div className="flex flex-row items-center justify-between">
         <Letter letter="H" />

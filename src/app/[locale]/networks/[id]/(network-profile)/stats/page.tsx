@@ -6,6 +6,9 @@ import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import SubDescription from '@/components/sub-description';
+import SocialStatistics from '@/app/networks/[id]/(network-profile)/stats/social-statistics';
+import SubTitle from '@/components/common/sub-title';
+import TransactionVolumeChart from '@/app/networks/[id]/(network-profile)/stats/transaction-volume-chart';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -32,6 +35,9 @@ const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({ params: { 
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <NetworkStatistics chain={chain} />
+      <SocialStatistics />
+      <SubTitle text={t('Transaction Volume')} />
+      <TransactionVolumeChart />
       <OperatorDistribution chainId={chainId} />
     </div>
   );

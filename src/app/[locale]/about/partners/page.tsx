@@ -1,12 +1,13 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import PartnerItem from '@/app/about/partners/partner-item';
-import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
+import TextLink from '@/components/common/text-link';
+import RichPageTitle from '@/components/common/rich-page-title';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -32,7 +33,13 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
     <div>
       <Story src="partners" alt="Pixelated, 90s game-style characters partner up and exchanging consensus" />
       <TabList page="AboutPage" tabs={aboutTabs} />
-      <PageTitle text={t('Partners.title')} />
+      <RichPageTitle>
+        <div className="m-4">
+          {t.rich('Partners.title', {
+            citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/" target="_blank" />,
+          })}
+        </div>
+      </RichPageTitle>
       <SubDescription text={t('Partners.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="mt-10">
         {partners.map((partnerList, index) => (

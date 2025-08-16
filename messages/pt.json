@@ -67,14 +67,15 @@
     "About Us": "Sobre nós",
     "Library": "Biblioteca",
     "Ecosystems": "Ecossistemas",
-    "Nodes": "Nodes"
+    "Nodes": "Nodes",
+    "mobile description": "Anon, note que a minha versão móvel tem funcionalidades limitadas. Para usufruir de todas as minhas vantagens e iniciar sessão na sua conta, visite a minha versão para computador."
   },
   "Common": {
     "Learn More": "Saber mais"
   },
   "HomePage": {
     "title": "Validador de Cadeia de Blocos Web3 e Explorador de Pools de Mineração",
-    "description": "Esta página é o seu explorador único para comparar os principais validadores em várias redes de blockchain. A tabela fornece dados em tempo real sobre o desempenho do validador e do pool de mineração, resumidos em métricas fáceis de ler. Pode ordenar e filtrar com base no que é mais importante para si. O objetivo é ajudá-lo a fazer escolhas inteligentes de staking, fornecendo uma visão geral clara e fácil de usar dos perfis de validadores na web3.",
+    "description": "A minha página de destino é o seu explorador único para comparar os principais validadores em várias redes de blockchain web3. A tabela fornece dados em tempo real sobre o desempenho do validador e do pool de mineração, resumidos em métricas fáceis de ler. Pode ordenar e filtrar com base no que é mais importante para si. O objetivo é ajudá-lo a fazer escolhas inteligentes de staking, fornecendo uma visão geral clara e fácil de usar dos perfis de validadores na web3. A tabela é carregada aleatoriamente sempre que visita a página. Para criar uma vista permanente, é necessário ligar a sua carteira e criar uma lista de favoritos.",
     "Table": {
       "Validator": {
         "name": "Validador",
@@ -104,6 +105,10 @@
         "name": "Técnico",
         "hint": "Oferecer segurança de rede robusta e infraestrutura adicional aumenta a pontuação"
       },
+      "Tech": {
+        "name": "Tech",
+        "hint": ""
+      },
       "Social": {
         "name": "Social",
         "hint": "Uma forte presença digital e numerosos fãs na rede aumentam a pontuação"
@@ -111,6 +116,10 @@
       "Governance": {
         "name": "Governança",
         "hint": "A participação em eventos e iniciativas da vida de chaveiro aumenta a pontuação"
+      },
+      "Gov": {
+        "name": "Gov.",
+        "hint": ""
       },
       "User": {
         "name": "Usuário",
@@ -188,13 +197,16 @@
     "Others Links": "Outras ligações",
     "Show Transactions": "Mostrar Transacções",
     "Show Validators": "Mostrar Validadores",
+    "Show Nodes": "Mostrar nós",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
     "tvl": "TVL",
     "revenue": "Receitas",
     "validator cost": "Custo do Validador",
+    "mau": "MAU",
     "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
     "revenue tooltip": "O montante das taxas geradas pela rede ontem",
     "validator cost tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
+    "mau tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
     "rich list tooltip": "Lista Rica",
     "distribution tooltip": "Distribuição"
   },
@@ -227,14 +239,24 @@
     "healthy validators": "Validadores Saudáveis",
     "Operator Distributions": "Distribuição de Operadores",
     "active": "Ativo",
-    "jailed": "Jailed"
+    "jailed": "Jailed",
+    "Social": "Social",
+    "price of active user": "Preço do usuário ativo",
+    "believers": "Entusiastas",
+    "followers": "Seguidores",
+    "members": "Membros",
+    "Transaction Volume": "Volume de transações + MAU"
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",
     "description": "A aba de Governança revela como funciona a governança descentralizada desta rede — propostas ativas, registros de votação das propostas, votos dos delegadores e contribuições da comunidade. Tudo se resume a ver o processo de tomada de decisão do blockchain em ação. Pronto para participar? Explore nossa lista de validadores de A a Z para conhecer os principais atores!",
     "total": "Total",
+    "total tooltip": "O montante combinado das propostas que a rede tinha, incluindo propostas falhadas, em direto, etc.",
     "passed": "Aprovado",
     "rejected": "Rejeitado",
+    "voting participation rate": "Taxa de participação na votação",
+    "quorum threshold": "Limiar de Quorum",
+    "governance token distribution": "Distribuição de tokens de governação",
     "Live Proposals": "Propostas em Direto",
     "Past Proposals List": "Lista de Propostas Anteriores",
     "proposer": "Proponente",
@@ -256,9 +278,11 @@
     "pre commit synchronized": "O validador submeteu um pré-commit com um hash de bloco sincronizado",
     "pre commit different": "O validador submeteu o pré-commit com um hash de bloco diferente",
     "pre commit not submitted": "O validador ainda não apresentou o pré-commit",
+    "commits p/month": "Autorizações/mês",
     "peers": "Peers",
     "seeds": "Seeds",
     "binary versions": "Versões binárias",
+    "Submit App Info": "Enviar informações sobre a aplicação",
     "Parameters": "Parâmetros",
     "bech32 prefix": "Bech32 Prefixo",
     "daemon name": "Nome do Demónio",
@@ -268,19 +292,48 @@
     "genesis url": "Génesis URL",
     "chain id": "Rede ID",
     "denom": "Denom",
-    "Developer Activity": "Atividade do Promotor",
-    "github stars": "Github Estrelas",
-    "github forks": "Github Garfos",
-    "show dropdown": "Mostrar Repositórios",
-    "hide dropdown": "Ocultar Repositórios",
-    "Table": {
-      "Repository Name": {
-        "name": "Nome do Repositório",
-        "hint": ""
-      },
-      "Commits": {
-        "name": "Commits",
-        "hint": ""
+    "Apps": {
+      "Subtitle": "Aplicativos",
+      "Table": {
+        "Name": {
+          "name": "Nome",
+          "hint": ""
+        },
+        "Links": {
+          "name": "Links",
+          "hint": ""
+        },
+        "Users": {
+          "name": "Usuários",
+          "hint": ""
+        },
+        "WAU": {
+          "name": "WAU",
+          "hint": ""
+        },
+        "Capital": {
+          "name": "Capital",
+          "hint": ""
+        }
+      }
+    },
+    "DeveloperActivity": {
+      "Subtitle": "Atividade do Desenvolvedor",
+      "show dropdown": "Mostrar Repositórios",
+      "hide dropdown": "Ocultar Repositórios",
+      "star": "Estrela",
+      "forked": "Bifurcado",
+      "repositories": "Repositórios",
+      "most active repo": "Repositório Mais Ativo",
+      "Table": {
+        "Repository Name": {
+          "name": "Nome do Repositório",
+          "hint": ""
+        },
+        "Commits": {
+          "name": "Commits",
+          "hint": ""
+        }
       }
     }
   },
@@ -288,12 +341,19 @@
     "title": "Tokenomics: Análise da Economia Cripto da Rede",
     "description": "Vamos mergulhar nos tokens! A aba de Tokenomics detalha a economia cripto desta rede — pense nas recompensas de staking de tokens, estatísticas de oferta, detalhes de distribuição e no Coeficiente de Gini. Gráficos modernos mostram os fluxos de receita e os movimentos de capital em tempo real. Precisa de uma análise mais aprofundada? Combine com nossa Calculadora de Recompensas de Staking!",
     "Token Price": "Preço do Token",
+    "Supply Concentration": "Concentração da oferta",
     "Distribution": "Distribuição",
     "Gini Coefficient": "Coeficiente de Gini",
     "number of validators": "Número de Validadores",
     "community pool tvl": "Piscina Comunitária TVL",
     "% of tokens staked": "% de Fichas Apostadas",
     "reward to payout": "Recompensa para Pagamento",
+    "fdv": "F.D.V.",
+    "circulating tokens oncain": "Tokens em Circulação (On-chain) %",
+    "circulating tokens public": "Tokens em Circulação (Públicos) %",
+    "circulating tokens public tooltip": "Recebido e calculado com base em dados públicos da blockchain",
+    "circulating tokens onchain tooltip": "Recebido e calculado com base em dados on-chain",
+    "inflation rate": "Taxa de inflação",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
   },
   "NetworkValidatorsPage": {
@@ -348,8 +408,16 @@
     "show world node map": "Mostrar Mapa Mundial de Nós",
     "customize": "Customizar",
     "Table": {
+      "Node Address": {
+        "name": "Endereço de nó",
+        "hint": ""
+      },
       "Node Moniker": {
-        "name": "Moniker de nó",
+        "name": "Nó Moniker",
+        "hint": ""
+      },
+      "Validator": {
+        "name": "Validador",
         "hint": ""
       },
       "Ecosystem": {
@@ -363,6 +431,14 @@
       "Stake": {
         "name": "Stake",
         "hint": ""
+      },
+      "Uptime": {
+        "name": "Tempo de Atividade",
+        "hint": "O tempo durante o qual o nó está online em um período selecionado. A cor indica a proporção em comparação com outros nós da rede"
+      },
+      "Missed Blocks": {
+        "name": "Blocos Perdidos",
+        "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
       }
     }
   },
@@ -397,6 +473,10 @@
       },
       "Tags": {
         "name": "Tags",
+        "hint": ""
+      },
+      "Show TX": {
+        "name": "Mostrar TX",
         "hint": ""
       }
     }
@@ -472,6 +552,7 @@
     "info": "Informações",
     "validatorBtn": "Você é um validador?",
     "feedback": "Opinião",
+    "Logout": "Terminar sessão",
     "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
     "nick": "Nick",
     "additionalInfo": "Informações adicionais",
@@ -490,6 +571,12 @@
       "Dashboard": "Painel",
       "Messages": "Mensagens",
       "Wallet": "Carteira"
+    },
+    "Wallet": {
+      "title": "Sua Carteira",
+      "select asset": "Selecionar Ativo",
+      "search asset": "Procurar um Ativo",
+      "Connect Wallet": "Conectar a Carteira"
     }
   },
   "AboutPage": {
@@ -926,6 +1013,7 @@
     "did not vote": "Não Votou",
     "weighted": "Ponderado",
     "abstain": "Abstenção",
+    "search by validator name": "Pesquisa por nome de validador",
     "Table": {
       "Validator": {
         "name": "Validador",

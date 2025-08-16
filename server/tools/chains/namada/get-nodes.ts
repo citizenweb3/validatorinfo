@@ -1,12 +1,13 @@
 import logger from '@/logger';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
+import fetchChainData from '@/server/tools/get-chain-data';
 import { NodeResult } from '@/server/types';
-import fetchData from '@/server/utils/fetch-data';
+import { bigIntPow } from '@/server/utils/bigint-pow';
 import isUrlValid from '@/server/utils/is-url-valid';
 
 const { logError } = logger('namada-nodes');
 
-interface NamadaNode {
+export interface NamadaNode {
   address: string;
   votingPower: string;
   maxCommission: string;
@@ -23,15 +24,8 @@ interface NamadaNode {
 }
 
 const getNodes: GetNodesFunction = async (chain) => {
-  const indexerUrl = chain.nodes.find((node) => node.type === 'indexer')?.url;
-  if (!indexerUrl) {
-    logError(`Indexer node for ${chain.name} chain not found`);
-    return [];
-  }
-
   try {
-    const path = indexerUrl + '/api/v1/pos/validator/all';
-    const nodes = await fetchData<NamadaNode[] | undefined>(path);
+    const nodes = await fetchChainData<NamadaNode[] | undefined>(chain.name, 'indexer', '/api/v1/pos/validator/all');
 
     if (!nodes) {
       logError(`No nodes found for ${chain.name}`);
@@ -54,8 +48,8 @@ const getNodes: GetNodesFunction = async (chain) => {
         consensus_pubkey: { '@type': '', key: '' },
         jailed: node.state === 'inactive' || node.state === 'jailed',
         status: node.state === 'inactive' || node.state === 'jailed' ? 'BOND_STATUS_UNBONDED' : 'BOND_STATUS_BONDED',
-        tokens: node.votingPower,
-        delegator_shares: node.votingPower,
+        tokens: String(BigInt(node.votingPower) * bigIntPow(BigInt(10), BigInt(chain.coinDecimals))),
+        delegator_shares: String(BigInt(node.votingPower) * bigIntPow(BigInt(10), BigInt(chain.coinDecimals))),
         description: {
           identity: '',
           moniker: node.name,

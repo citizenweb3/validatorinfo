@@ -10,6 +10,8 @@ import icons from '@/components/icons';
 import chainService from '@/services/chain-service';
 import Link from 'next/link';
 import _ from 'lodash';
+import { Thermometer } from '@/components/customSVG/temperatureSVG';
+import nodeService from '@/services/node-service';
 
 interface OwnProps {
   id: string;
@@ -21,8 +23,10 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
   const chainLogo = chain?.logoUrl ?? icons.AvatarIcon;
+  const chainHealth = 40;
+  const validators = await nodeService.getNodesByChainId(chainId);
 
-  const iconsSize = 'h-24 min-h-24 w-24 min-w-24 bg-contain bg-no-repeat';
+  const iconsSize = 'h-20 min-h-20 w-20 min-w-20 bg-contain bg-no-repeat';
   const centerLogoSizes = 'sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] 2xl:w-[124px] 2xl:h-[124px]';
 
   return (
@@ -37,57 +41,83 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ id, locale }) => {
             <p className="text-xs">{t('Others Links')}</p>
             <PlusButton size="xs" isOpened={false} />
           </div>
-          <div className="mt-4 mb-4 grid grid-cols-[repeat(2,auto)] gap-x-2 gap-y-4 font-handjet text-lg text-center">
+          <div className="mt-4 mb-4 flex flex-wrap gap-x-4 gap-y-4 font-handjet text-lg">
             <Link href={``}>
-              <div className="whitespace-nowrap rounded-full bg-primary shadow-button hover:text-highlight active:text-base">
+              <div
+                className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
                 DeFi
               </div>
             </Link>
             <Link href={`/networks?p=1&ecosystems=${chain?.ecosystem}`}>
-              <div className="whitespace-nowrap rounded-full bg-primary shadow-button hover:text-highlight active:text-base">
+              <div
+                className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
                 {_.capitalize(chain?.ecosystem)} Ecosystem
               </div>
             </Link>
             <Link href={``}>
-              <div className="whitespace-nowrap rounded-full bg-primary shadow-button hover:text-highlight active:text-base">
+              <div
+                className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
                 L1
+              </div>
+            </Link>
+            <Link href={``}>
+              <div
+                className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
+                Tendermint
               </div>
             </Link>
           </div>
         </div>
+        {validators?.length != 0 && (
+          <div className="flex mt-auto">
+            <RoundedButton href={`/networks/${id}/validators`}
+                           className="font-handjet text-lg mb-3 active:mb-2"
+                           contentClassName="px-16">
+              {t('Show Validators')}
+            </RoundedButton>
+          </div>
+        )}
         <div className="flex mt-auto">
-          <RoundedButton href={`/networks/${id}/validators`} className="font-handjet text-lg mb-3 active:mb-2">
-            {t('Show Validators')}
+          <RoundedButton href={`/nodes?p=1&ecosystems=${chain?.ecosystem}`}
+                         className="font-handjet text-lg mb-3 active:mb-2"
+                         contentClassName="px-20">
+            {t('Show Nodes')}
           </RoundedButton>
         </div>
       </div>
-      <div className="col-span-3 flex flex-col items-center justify-center">
+      <div className="col-span-3 flex flex-col items-center justify-center h-full">
         <div className={`${centerLogoSizes} relative inline-block`}>
           <Image src={chainLogo} alt="Chain Logo" fill className="rounded-full object-contain shadow-button" />
           <div
             className="absolute bottom-[-30%] right-[-30%] flex h-[80%] w-[80%] flex-col items-center hover:text-highlight">
             <div className="relative h-full w-full">
               <Tooltip tooltip={t('temperature tooltip')} direction={'top'}>
-                <Image src={icons.Thermometer} alt="Thermometer" fill className="object-contain" />
+                <Thermometer percent={chainHealth} />
               </Tooltip>
             </div>
-            <div className="block w-full text-center font-handjet text-lg leading-none">30%</div>
+            <div className="block w-full text-center font-handjet text-lg leading-none">{chainHealth}%</div>
           </div>
         </div>
-        <MetricsHeader chain={chain} />
+        <div className="w-full mt-auto flex justify-end">
+          <MetricsHeader chain={chain} />
+        </div>
       </div>
       <div className="col-span-1 flex h-full flex-col items-end justify-end border-b border-bgSt">
-        <div className="flex items-center mb-4">
-          <Tooltip tooltip={t('rich list tooltip')} direction={'top'}>
-            <div className={`${iconsSize} bg-rich_list hover:bg-rich_list_h mx-2`} />
-          </Tooltip>
-          <Tooltip tooltip={t('distribution tooltip')} direction={'top'}>
-            <div className={`${iconsSize} bg-distribution hover:bg-distribution_h mx-2`} />
-          </Tooltip>
-        </div>
-        <RoundedButton href={`/networks/${id}/tx`} className="font-handjet text-lg mb-3 active:mb-2">
+        <RoundedButton href={`/networks/${id}/tx`} className="font-handjet text-lg mb-3 active:mb-2"
+                       contentClassName="px-16">
           {t('Show Transactions')}
         </RoundedButton>
+        <div className="flex flex-row gap-4 mt-2">
+          <Tooltip tooltip={t('rich list tooltip')} direction={'top'}>
+            <div className={`${iconsSize} bg-rich_list hover:bg-rich_list_h active:bg-rich_list_a`} />
+          </Tooltip>
+          <Tooltip tooltip={t('rich list tooltip')} direction={'top'}>
+            <div className={`${iconsSize} bg-rich_list hover:bg-rich_list_h active:bg-rich_list_a`} />
+          </Tooltip>
+          <Tooltip tooltip={t('distribution tooltip')} direction={'top'}>
+            <div className={`${iconsSize} bg-distribution hover:bg-distribution_h active:bg-distribution_a`} />
+          </Tooltip>
+        </div>
       </div>
     </div>
   );

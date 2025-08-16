@@ -11,13 +11,16 @@ export const revalidate = 0;
 
 interface PageProps {}
 
-const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
+const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'ProfilePage' });
 
   return (
     <div>
-      <PageTitle prefix="Welcome" text="User1" />
-      <div className="m-4 whitespace-pre-line pt-2 text-base">{t('description')}</div>
+      <div className="flex flex-row justify-between">
+        <PageTitle prefix="Welcome" text="User1" />
+        <RoundedButton className="flex self-end text-xl" contentClassName="px-16" href={"/"}>{t('Logout')}</RoundedButton>
+      </div>
+      <div className="m-4 whitespace-pre-line text-base">{t('description')}</div>
       <div className="my-4 flex items-center justify-end space-x-8">
         <RoundedButton className="text-xl" contentClassName="px-16">
           {t('feedback')}
@@ -81,4 +84,4 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale } 
   );
 };
 
-export default NetworksPage;
+export default ProfilePage;

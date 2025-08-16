@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE "chains" ADD COLUMN     "apr" DOUBLE PRECISION NOT NULL DEFAULT 0;

@@ -1,15 +1,37 @@
-import { Chain, Node } from '@prisma/client';
+import { Chain, Node, Validator } from '@prisma/client';
 
 import db from '@/db';
 import logger from '@/logger';
 import { NodeResult, SortDirection } from '@/server/types';
+import { fromPubkeyToValcons } from '@/utils/from-pubkey-to-valcons';
+import isUrlValid from '@/server/utils/is-url-valid';
+import { ChainWithParams } from '@/services/chain-service';
 
 const { logDebug } = logger('validator-service');
 
-const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number }): Promise<Node> => {
+const upsertNode = async (
+  chain: Chain,
+  bech32Prefix: string | undefined,
+  val: NodeResult & { validatorId?: number },
+): Promise<Node | null> => {
+
   let website = val.description.website || '';
-  if (website) {
-    website = website.startsWith('http') ? website : `https://${website}`;
+  if (website && !website.startsWith('http')) {
+    website = isUrlValid(`https://${website}`) ? `https://${website}` : '';
+  }
+
+  let consensusAddress = '';
+  switch (chain.ecosystem) {
+    case 'cosmos':
+      consensusAddress = bech32Prefix
+        ? fromPubkeyToValcons(val.consensus_pubkey.key, bech32Prefix)
+        : '';
+      break;
+    case 'ethereum':
+      consensusAddress = val.operator_address;
+      break;
+    default:
+      consensusAddress = '';
   }
 
   const node = await db.node.upsert({
@@ -31,6 +53,7 @@ const upsertNode = async (chain: Chain, val: NodeResult & { validatorId?: number
       moniker: val.description.moniker,
       operatorAddress: val.operator_address,
       consensusPubkey: val.consensus_pubkey.key,
+      consensusAddress: consensusAddress,
       delegatorShares: val.delegator_shares,
       details: val.description.details,
       identity: val.description.identity,
@@ -69,7 +92,7 @@ const getAll = async (
   take: number,
   sortBy: string = 'operatorAddress',
   order: SortDirection = 'asc',
-): Promise<{ nodes: (Node & { chain: Chain })[]; pages: number }> => {
+): Promise<{ nodes: (Node & { chain: ChainWithParams })[]; pages: number }> => {
   logDebug(
     `Get all nodes with ecosystems: ${ecosystems}, nodeStatus: ${nodeStatus}, skip: ${skip}, take: ${take}, sortBy: ${sortBy} - ${order}`,
   );
@@ -107,7 +130,9 @@ const getAll = async (
     take,
     orderBy,
     include: {
-      chain: true,
+      chain: {
+        include: { params: true },
+      },
     },
   });
 
@@ -115,10 +140,19 @@ const getAll = async (
   return { nodes, pages: Math.ceil(count / take) };
 };
 
+const getValidatorByNodeId = async (nodeId: number): Promise<Validator | null> => {
+  const node = await db.node.findUnique({
+    where: { id: nodeId },
+    include: { validator: true },
+  });
+  return node?.validator || null;
+};
+
 const nodeService = {
   upsertNode,
   getNodesByChainId,
   getAll,
+  getValidatorByNodeId,
 };
 
 export default nodeService;

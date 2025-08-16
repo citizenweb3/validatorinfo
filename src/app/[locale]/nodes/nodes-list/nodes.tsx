@@ -27,10 +27,14 @@ const Nodes: FC<OwnProps> = async ({ ecosystems, nodeStatus, page, perPage, sort
         <table className="my-4 w-full table-auto border-collapse">
           <thead>
           <tr className="bg-table_header">
-            <TableHeaderItem page={page} name="Node Moniker" sortField="operatorAddress" defaultSelected />
+            <TableHeaderItem page={page} name="Node Address" sortField="operatorAddress" defaultSelected />
+            <TableHeaderItem page={page} name="Node Moniker" />
+            <TableHeaderItem page={page} name="Validator" />
             <TableHeaderItem page={page} name="Ecosystem" sortField="ecosystem" />
             <TableHeaderItem page={page} name="Network" sortField="prettyName" />
             <TableHeaderItem page={page} name="Stake" />
+            <TableHeaderItem page={page} name="Uptime" />
+            <TableHeaderItem page={page} name="Missed Blocks" />
           </tr>
           </thead>
           <NodesList ecosystems={ecosystems}

@@ -1,15 +1,21 @@
-import { Chain, Node, Price, Prisma } from '@prisma/client';
+import { Node, Price, Prisma } from '@prisma/client';
 
 import db from '@/db';
 import { SortDirection } from '@/server/types';
 import ChainWhereInput = Prisma.ChainWhereInput;
+
+export type ChainWithParams = Prisma.ChainGetPayload<{ include: { params: true } }>;
+export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { params: true, tokenomics: true } }>;
 
 export type NetworkValidatorsWithNodes = Node & {
   validator: {
     url: string | null;
   } | null;
   chain: {
-    coinDecimals: number;
+    params: {
+      coinDecimals: number;
+      blocksWindow: number | null;
+    } | null;
   };
   votingPower: number;
 }
@@ -20,11 +26,21 @@ const getAll = async (
   take: number,
   sortBy: string = 'name',
   order: SortDirection = 'asc',
-): Promise<{ chains: Chain[]; pages: number }> => {
+): Promise<{ chains: ChainWithParamsAndTokenomics[]; pages: number }> => {
   const where: ChainWhereInput | undefined = ecosystems.length ? { ecosystem: { in: ecosystems } } : undefined;
   const chains = await db.chain.findMany({
     where,
-    include: { aprs: true, prices: { orderBy: { createdAt: 'desc' }, take: 1 } },
+    include: {
+      aprs: true,
+      params: true,
+      tokenomics: true,
+      prices: {
+        orderBy: {
+          createdAt: 'desc',
+        },
+        take: 1,
+      },
+    },
     skip,
     take,
     orderBy: { [sortBy]: order },
@@ -41,9 +57,10 @@ const getTokenPriceByChainId = async (chainId: number): Promise<Price | null> =>
   return price ?? null;
 };
 
-const getById = async (id: number): Promise<Chain | null> => {
+const getById = async (id: number): Promise<ChainWithParamsAndTokenomics | null> => {
   return db.chain.findUnique({
     where: { id },
+    include: { params: true, tokenomics: true },
   });
 };
 
@@ -81,15 +98,24 @@ const getChainValidatorsWithNodes = async (
         },
         chain: {
           select: {
-            coinDecimals: true,
-            bondedTokens: true,
+            tokenomics: {
+              select: {
+                bondedTokens: true,
+              },
+            },
+            params: {
+              select: {
+                coinDecimals: true,
+                blocksWindow: true,
+              },
+            },
           },
         },
       },
     });
 
     const computedNodes = allValidators.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
       const delegatorShares = parseFloat(node.delegatorShares || '0');
       const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
       return { ...node, votingPower };
@@ -125,15 +151,24 @@ const getChainValidatorsWithNodes = async (
         },
         chain: {
           select: {
-            coinDecimals: true,
-            bondedTokens: true,
+            tokenomics: {
+              select: {
+                bondedTokens: true,
+              },
+            },
+            params: {
+              select: {
+                coinDecimals: true,
+                blocksWindow: true,
+              },
+            },
           },
         },
       },
     });
 
     const computedValidators = validators.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.bondedTokens || '0');
+      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
       const delegatorShares = parseFloat(node.delegatorShares || '0');
       const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
       return { ...node, votingPower };
@@ -143,12 +178,18 @@ const getChainValidatorsWithNodes = async (
   }
 };
 
+const getListByEcosystem = async (ecosystem: string) => {
+  return db.chain.findMany({
+    where: { ecosystem },
+  });
+};
 
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
   getById,
   getChainValidatorsWithNodes,
+  getListByEcosystem,
 };
 
 export default ChainService;

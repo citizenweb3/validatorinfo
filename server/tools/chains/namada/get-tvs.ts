@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { ChainTVSResult, GetTvsFunction } from '@/server/tools/chains/chain-indexer';
-import fetchData from '@/server/utils/fetch-data';
+import fetchChainData from '@/server/tools/get-chain-data';
 
 const { logError, logDebug } = logger('get-tvl');
 
@@ -12,19 +12,15 @@ interface StakingData {
 
 const getTvs: GetTvsFunction = async (chain) => {
   try {
-    const indexerEndpoint = chain.nodes.find((node) => node.type === 'indexer')?.url;
-    if (!indexerEndpoint) {
-      logError(`RPC node for ${chain.name} chain not found`);
-      return null;
-    }
-
     let totalSupply = '0';
     let bondedTokens = '0';
     let tvs = 0;
 
     try {
-      const stakingData: StakingData = await fetchData<StakingData>(
-        `${indexerEndpoint}/api/v1/chain/token-supply?address=tnam1q9gr66cvu4hrzm0sd5kmlnjje82gs3xlfg3v6nu7`,
+      const stakingData: StakingData = await fetchChainData<StakingData>(
+        chain.name,
+        'indexer',
+        `/api/v1/chain/token-supply?address=tnam1q9gr66cvu4hrzm0sd5kmlnjje82gs3xlfg3v6nu7`,
       );
       totalSupply = stakingData.totalSupply;
     } catch (error: any) {
@@ -32,7 +28,11 @@ const getTvs: GetTvsFunction = async (chain) => {
     }
 
     try {
-      const votingPower = await fetchData<{ totalVotingPower: string }>(`${indexerEndpoint}/api/v1/pos/voting-power`);
+      const votingPower = await fetchChainData<{ totalVotingPower: string }>(
+        chain.name,
+        'indexer',
+        '/api/v1/pos/voting-power',
+      );
       bondedTokens = (+votingPower.totalVotingPower * 1e6).toString();
       tvs = +bondedTokens / +totalSupply;
     } catch (error: any) {

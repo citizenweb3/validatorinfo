@@ -22,14 +22,14 @@ const updateChainApr = async (chainNames: string[]) => {
       const apr = (await chainMethods.getApr(chainParams)) || 0;
       logInfo(`${chainName} APR: ${apr}`);
 
-      await db.chain.update({
-        where: { id: dbChain.id },
-        data: {
-          apr,
-        },
+      await db.tokenomics.upsert({
+        where: { chainId: dbChain.id },
+        update: { apr },
+        create: { chainId: dbChain.id, apr },
       });
+
     } catch (e) {
-      logError("Can't fetch TVL's: ", e);
+      logError(`Can't fetch apr: ', ${e}`);
     }
   }
 };

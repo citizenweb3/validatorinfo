@@ -48,13 +48,13 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async (
     <div className="mb-6">
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <TotalsListProposals proposals={proposalsList} />
+      <TotalsListProposals proposals={proposalsList} chain={chain} />
       <LiveProposals proposals={proposalsList} />
       <NetworkProposals page={'VotingSummaryPage'}
                         perPage={perPage}
                         currentPage={currentPage}
                         sort={{ sortBy, order }}
-                        chainId={chainId} />
+                        chain={chain} />
     </div>
   );
 };
