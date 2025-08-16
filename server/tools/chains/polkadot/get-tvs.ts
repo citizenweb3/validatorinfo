@@ -1,7 +1,9 @@
+import type { Option } from '@polkadot/types';
+import type { ActiveEraInfo } from '@polkadot/types/interfaces';
+
 import logger from '@/logger';
 import { GetTvsFunction } from '@/server/tools/chains/chain-indexer';
 import { connectWsApi } from '@/server/tools/chains/polkadot/utils/connect-ws-api';
-import { getValidatorStake } from '@/server/tools/chains/polkadot/utils/get-validators-stake';
 
 
 const { logError } = logger('get-tvs-polkadot');
@@ -12,28 +14,31 @@ const getTvs: GetTvsFunction = async (chain) => {
     logError(`No ws url for chain '${chain.name}'`);
     return null;
   }
+
   const api = await connectWsApi(wsList, 3);
 
   try {
     const totalSupply = await api.query.balances.totalIssuance();
-
     if (!totalSupply) {
       logError(`No total supply for chain '${chain.name}'`);
       return null;
     }
 
-    const validatorsStake = await getValidatorStake(chain);
+    const activeEraOpt = (await api.query.staking.activeEra()) as Option<ActiveEraInfo>;
+    if (activeEraOpt.isNone) {
+      logError(`Active era not available for chain '${chain.name}'`);
+      return null;
+    }
+    const activeEra = activeEraOpt.unwrap().index;
+    const erasTotalStakeQuery = (api.query.staking as any).erasTotalStake ?? null;
 
-    if (validatorsStake.length == 0) {
-      logError(`No validators stake for chain '${chain.name}'`);
+    if (!erasTotalStakeQuery) {
+      logError(`staking.erasTotalStake is not available in this runtime for '${chain.name}'`);
       return null;
     }
 
-    let bondedTokens = BigInt(0);
-
-    for (const stake of validatorsStake) {
-      bondedTokens += BigInt(stake.total);
-    }
+    const totalStake = await erasTotalStakeQuery(activeEra);
+    const bondedTokens = BigInt(totalStake.toString());
 
     const tvs = parseFloat(bondedTokens.toString()) / parseFloat(totalSupply.toString());
 
@@ -48,7 +53,9 @@ const getTvs: GetTvsFunction = async (chain) => {
     logError(`Get TVS for [${chain.name}] error: `, e);
     return null;
   } finally {
-    await api.disconnect();
+    try {
+      await api.disconnect();
+    } catch {}
   }
 };
 
