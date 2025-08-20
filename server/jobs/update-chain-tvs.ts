@@ -3,7 +3,7 @@ import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 
-const { logInfo, logError } = logger('get-tvl');
+const { logInfo, logError } = logger('get-tvls');
 
 export const updateChainTvs = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
