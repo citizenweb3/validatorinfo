@@ -261,7 +261,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 118,
     denom: 'NTRN',
     minimalDenom: 'untrn',
-    hasValidators: false,
+    hasValidators: true,
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.neutron.citizenweb3.com' },
@@ -286,7 +286,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 118,
     denom: 'NTRN',
     minimalDenom: 'untrn',
-    hasValidators: false,
+    hasValidators: true,
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
     chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/testnets/neutrontestnet',
     nodes: [

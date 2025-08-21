@@ -27,7 +27,7 @@ const getNodes: GetNodesFunction = async (chain) => {
     }
     return nodes;
   } catch (e) {
-    logError(`Can't fetch cosmos nodes: ${validatorsUrl}`, e);
+    logError(`Can't fetch cosmos nodes: ${validatorsUrl} for chain: ${chain.name}`, e);
     return [];
   }
 };
