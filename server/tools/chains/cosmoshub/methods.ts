@@ -4,7 +4,6 @@ import getApr from '@/server/tools/chains/cosmoshub/get-apr';
 import getChainRewards from '@/server/tools/chains/cosmoshub/get-chain-rewards';
 import getCirculatingTokensOnchain from '@/server/tools/chains/cosmoshub/get-circulating-tokens-onchain';
 import getCirculatingTokensPublic from '@/server/tools/chains/cosmoshub/get-circulating-tokens-public';
-import getCommPool from '@/server/tools/chains/cosmoshub/get-community-pool';
 import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
 import getInflationRate from '@/server/tools/chains/cosmoshub/get-inflation-rate';
 import getMissedBlocks from '@/server/tools/chains/cosmoshub/get-missed-blocks';
@@ -17,6 +16,7 @@ import getSlashingParams from '@/server/tools/chains/cosmoshub/get-slashing-para
 import getStakingParams from '@/server/tools/chains/cosmoshub/get-staking-params';
 import getTvs from '@/server/tools/chains/cosmoshub/get-tvs';
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
+import getCommunityPool from '@/server/tools/chains/cosmoshub/get-community-pool';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -33,7 +33,7 @@ const chainMethods: ChainMethods = {
   getProposalParams,
   getNodeRewards,
   getChainRewards,
-  getCommPool,
+  getCommunityPool,
   getActiveSetMinAmount,
   getInflationRate,
   getCirculatingTokensOnchain,

@@ -4,7 +4,7 @@ import fetchSolanaData, { SolanaChainNode } from '@/server/tools/chains/solana/u
 
 const { logError, logDebug, logInfo } = logger('get-tvs-solana');
 
-const getTvsSolana: GetTvsFunction = async (chain) => {
+const getTvs: GetTvsFunction = async (chain) => {
   try {
     const supplyData = await fetchSolanaData<{ value: { total: string } }>('getSupply');
     const totalSupply = +supplyData.value.total;
@@ -40,4 +40,4 @@ const getTvsSolana: GetTvsFunction = async (chain) => {
   }
 };
 
-export default getTvsSolana;
+export default getTvs;

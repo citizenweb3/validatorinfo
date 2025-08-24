@@ -40,7 +40,7 @@ const chainMethods: ChainMethods = {
   }),
   getNodeRewards: async () => [],
   getChainRewards: async () => null,
-  getCommPool: async () => null,
+  getCommunityPool: async () => null,
   getActiveSetMinAmount: async () => null,
   getInflationRate: async () => null,
   getCirculatingTokensOnchain,
