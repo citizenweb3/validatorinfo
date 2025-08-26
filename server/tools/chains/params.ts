@@ -640,6 +640,15 @@ const chainParams: Record<string, AddChainProps> = {
       { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
       { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
       { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
+
+      { type: 'rest', url: 'https://symphony-api-testnet.cogwheel.zone' },
+      { type: 'rpc', url: 'https://symphony-rpc-testnet.cogwheel.zone' },
+
+      { type: 'rest', url: 'https://testnet-symphony-rpc.konsortech.xyz' },
+      { type: 'rpc', url: 'https://testnet-symphony-api.konsortech.xyz' },
+
+      { type: 'rest', url: 'https://symphony-testnet-api.kgnodes.xyz' },
+      { type: 'rpc', url: 'https://symphony-testnet-rpc.kgnodes.xyz' },
     ],
     mainRepo: 'https://github.com/Orchestra-Labs/symphony',
     docs: '',
