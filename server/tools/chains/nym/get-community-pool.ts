@@ -14,7 +14,8 @@ const getCommunityPool: GetCommPoolFunction = async (chain) => {
       )
     ).pool;
 
-    const communityPool = response.find((pool) => pool.denom === chain.minimalDenom);
+    const communityPool = response.find(
+        (pool) => pool.denom.toLowerCase() === chain.minimalDenom.toLowerCase());
 
     return communityPool ? communityPool.amount : null;
   } catch (e) {
