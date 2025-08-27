@@ -30,19 +30,18 @@ const getInflationRate: GetInflationRate = async (chain) => {
     }
     const totalSupplyFloat = parseFloat(totalSupply) / 10 ** chain.coinDecimals;
 
-    const epochs = await fetchChainData<{ epoch_provisions: string }>(
-      chain.name,
-      'rest',
-      '/osmosis/mint/v1beta1/epoch_provisions',
-    );
-    const epochProvisions = parseFloat(epochs.epoch_provisions) / 10 ** chain.coinDecimals;
+    const epochProvisionsEndpoint =
+      chain.name === 'osmosis' ? '/osmosis/mint/v1beta1/epoch_provisions' : '/mint/v1beta1/epoch_provisions';
+
+    const provision = await fetchChainData<{ epoch_provisions: string }>(chain.name, 'rest', epochProvisionsEndpoint);
+    const epochProvisions = parseFloat(provision.epoch_provisions) / 10 ** chain.coinDecimals;
 
     let epochsPerYear = 365;
     try {
       const epochsParams = await fetchChainData<{ epochs: { identifier: string; duration: string }[] }>(
         chain.name,
         'rest',
-        '/osmosis/epochs/v1beta1/epochs',
+        `/${chain.name}/epochs/v1beta1/epochs`,
       );
       const day = epochsParams.epochs.find((e) => e.identifier === 'day');
       if (day?.duration?.endsWith('s')) {
