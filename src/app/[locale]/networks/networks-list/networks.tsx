@@ -27,12 +27,11 @@ const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, current
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
-            <TableHeaderItem page={page} name="Token" sortField="name" defaultSelected />
+            <TableHeaderItem page={page} name="Token" sortField="token" />
             <TableHeaderItem
               page={page}
               name="FDV"
-              sortField="name"
-              defaultSelected
+              sortField="fdv"
               tooltip="Fully Diluted Valuation"
             />
             <TableHeaderItem page={page} name="Links" colspan={3} />

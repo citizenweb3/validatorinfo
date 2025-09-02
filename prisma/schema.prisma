@@ -215,6 +215,7 @@ model Tokenomics {
   tvs                      Float  @default(0)
   apr                      Float  @default(0)
   circulatingTokensOnchain String @default("") @map("circulating_tokens_onchain")
+  fdv                      Float  @default(0)
 
   chain Chain @relation("chain_tokenomics", fields: [chainId], references: [id])
 
