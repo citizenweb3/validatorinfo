@@ -33,7 +33,7 @@ const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, current
               name="FDV"
               sortField="name"
               defaultSelected
-              tooltip="Fully Diluted Valuation"
+              tooltip=""
             />
             <TableHeaderItem page={page} name="Links" colspan={3} />
           </tr>
