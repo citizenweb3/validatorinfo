@@ -91,7 +91,7 @@
       },
       "FDV": {
         "name": "F.D.V",
-        "hint": ""
+        "hint": "Fully Diluted Valuation. All existing supply multiplied by price in USD."
       },
       "Links": {
         "name": "Links",
