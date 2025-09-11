@@ -1,13 +1,14 @@
 'use client';
 
 import { Chain } from '@prisma/client';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
 import ValidatorListItemChains from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-chains';
 import ValidatorListItemFavorite from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-favorite';
 import ValidatorListItemLinks from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-links';
 import TableAvatar from '@/components/common/table/table-avatar';
 import { ValidatorWithNodes } from '@/services/validator-service';
+
 
 interface OwnProps {
   validator: ValidatorWithNodes;
@@ -40,7 +41,7 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
         <ValidatorListItemLinks validator={validator} />
       </td>
       <td className="border-b border-black px-2 py-2">
-        <ValidatorListItemChains chains={validatorChains} />
+        <ValidatorListItemChains chains={validatorChains} validator={validator} />
       </td>
     </tr>
   );
