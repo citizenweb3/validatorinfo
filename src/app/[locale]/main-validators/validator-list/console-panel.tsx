@@ -13,6 +13,9 @@ const ConsolePanel = () => {
   const t = useTranslations('HomePage.ConsolePanel');
   const pathname = usePathname();
 
+  const networkId = Math.floor(Math.random() * 20) + 1;
+  const validatorId = Math.floor(Math.random() * 1000) + 1;
+
   return (
     <div className="w-full">
       <div className="relative aspect-[1000/2100] h-full w-full rounded-lg">
@@ -79,6 +82,7 @@ const ConsolePanel = () => {
                             window.location.reload();
                           }
                         }}
+                        scroll={true}
                       >
                         <Image
                           src="/img/logo.svg"
@@ -283,31 +287,58 @@ const ConsolePanel = () => {
             })}
           </div>
         </div>
+
         <div className="absolute bottom-0 h-[20%] w-full">
           <div className="absolute bottom-[40%] left-[10%] h-28 w-28 bg-d_pad bg-contain bg-center bg-no-repeat" />
 
           <div className="absolute bottom-[25%] left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-[30%]">
-            <div className="flex flex-row items-end">
-              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
-              <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
-            </div>
-            <div className="flex flex-row items-end">
-              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
-              <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
-            </div>
+            <Link
+              href="/"
+              onClick={() => {
+                if (pathname === '/') {
+                  window.location.reload();
+                }
+              }}
+              scroll={true}
+            >
+              <div className="flex flex-row items-end">
+                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+                <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
+              </div>
+            </Link>
+
+            <Link
+              href="/"
+              onClick={() => {
+                if (pathname === '/') {
+                  window.location.reload();
+                }
+              }}
+              scroll={true}
+            >
+              <div className="flex flex-row items-end">
+                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+                <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
+              </div>
+            </Link>
           </div>
 
-          <div className="absolute right-[6%] bottom-[35%] flex items-center gap-[3%]">
-            <div className="flex flex-row items-end">
-              <div className="h-16 w-16 bg-gameboy_b_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_b_btn_h active:bg-gameboy_b_btn_a" />
-              <span className="-rotate-45 font-handjet text-lg -mb-5">B</span>
-            </div>
-            <div className="flex flex-row items-end pb-20">
-              <div className="h-16 w-16 bg-gameboy_a_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_a_btn_h active:bg-gameboy_a_btn_a" />
-              <span className="-rotate-45 font-handjet text-lg -mb-5">A</span>
-            </div>
+          <div className="absolute bottom-[35%] right-[6%] flex items-center gap-[3%]">
+            <Link href={`/networks/${networkId}/overview`}>
+              <div className="flex flex-row items-end">
+                <div className="h-16 w-16 bg-gameboy_b_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_b_btn_h active:bg-gameboy_b_btn_a" />
+                <span className="-mb-5 -rotate-45 font-handjet text-lg">B</span>
+              </div>
+            </Link>
+
+            <Link href={`/validators/${validatorId}/networks`}>
+              <div className="flex flex-row items-end pb-20">
+                <div className="h-16 w-16 bg-gameboy_a_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_a_btn_h active:bg-gameboy_a_btn_a" />
+                <span className="-mb-5 -rotate-45 font-handjet text-lg">A</span>
+              </div>
+            </Link>
           </div>
-          <div className="absolute right-[2%] bottom-[7%] h-36 w-36 bg-loudspeaker bg-contain bg-no-repeat" />
+          <div className="absolute bottom-[7%] right-[2%] h-36 w-36 bg-loudspeaker bg-contain bg-no-repeat" />
         </div>
       </div>
     </div>
