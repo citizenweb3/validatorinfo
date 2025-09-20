@@ -1,4 +1,8 @@
 import { FC } from 'react';
+import { validatorNodesWithChainData } from '@/services/validator-service';
+import Link from 'next/link';
+import { node } from 'prop-types';
+
 
 interface OwnProps {
   permissions: {
@@ -9,9 +13,11 @@ interface OwnProps {
     msg: string;
     expiration: string;
   };
+  node?: validatorNodesWithChainData | undefined;
 }
 
-const AuthzPermissionsDetails: FC<OwnProps> = ({ permissions }) => {
+
+const AuthzPermissionsDetails: FC<OwnProps> = ({ permissions, node }) => {
   const labelStyle = 'text-base text-highlight';
   const valueStyle = 'text-base pb-3';
   const linkStyle = 'text-base pb-3 underline underline-offset-2 cursor-pointer';
@@ -19,9 +25,13 @@ const AuthzPermissionsDetails: FC<OwnProps> = ({ permissions }) => {
   return (
     <div className="pl-2 pt-2">
       <div className={labelStyle}>Granter:</div>
-      <div className={linkStyle}>{permissions.granter}</div>
+      <Link className={linkStyle} href={`/networks/${node?.chain.id}/address/${node?.operatorAddress}/passport`}>
+        {permissions.granter}
+      </Link>
       <div className={labelStyle}>Grantee:</div>
-      <div className={linkStyle}>{permissions.grantee}</div>
+      <Link className={linkStyle} href={`/networks/${node?.chain.id}/address/${node?.operatorAddress}/passport`}>
+        {permissions.grantee}
+      </Link>
       <div className={labelStyle}>Authorization:</div>
       <div className={valueStyle}>{permissions.authorization}</div>
       <div className={labelStyle}> @Type:</div>

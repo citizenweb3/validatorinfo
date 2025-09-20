@@ -1,13 +1,20 @@
 import Image from 'next/image';
 import { FC } from 'react';
+import Link from 'next/link';
 import FallbackImage from '@/components/common/image-downloader-fallback';
+import { validatorNodesWithChainData } from '@/services/validator-service';
 
 interface OwnProps {
-  leftIconUrl: string;
-  rightIconUrl: string;
+  icons: {
+    leftIconUrl: string;
+    rightIconUrl: string;
+  };
+  node?: validatorNodesWithChainData | undefined;
+
 }
 
-const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
+
+const NodeProfileStory: FC<OwnProps> = ({ icons, node }) => {
   const iconSizes =
     'sm:w-[40px] sm:h-[40px] md:w-[45px] md:h-[45px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] 2xl:w-[63px] 2xl:h-[63px]';
 
@@ -45,7 +52,9 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <FallbackImage src={leftIconUrl} alt="Validator" fill className="rounded-full object-contain" />
+          <Link href={`/validators/${node?.validatorId}/networks`}>
+            <FallbackImage src={icons.leftIconUrl} alt="Validator" fill className="rounded-full object-contain" />
+          </Link>
         </div>
       </div>
 
@@ -60,7 +69,10 @@ const NodeProfileStory: FC<OwnProps> = ({ leftIconUrl, rightIconUrl }) => {
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <FallbackImage src={rightIconUrl} alt="Validator" fill className="rounded-full object-contain" />
+          <Link href={`/networks/${node?.chainId}/overview`}>
+            <FallbackImage src={icons.rightIconUrl} alt="Validator" fill className="rounded-full object-contain" />
+          </Link>
+
         </div>
       </div>
     </div>
