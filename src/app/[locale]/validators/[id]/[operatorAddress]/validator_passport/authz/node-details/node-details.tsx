@@ -9,7 +9,6 @@ import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { getPassportAuthzTabs } from '@/components/common/tabs/tabs-data';
 import { validatorNodesWithChainData } from '@/services/validator-service';
-import rewardsGeneratedChart from '@/app/validators/[id]/(validator-profile)/revenue/rewards-generated-chart';
 
 interface OwnProps {
   locale: string;
@@ -61,7 +60,7 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
         <div className="ml-5 w-[70%] items-center justify-center">
           <div className="my-2 w-full">
             <TabList page="ValidatorPassportPage" tabs={nodeAuthzTabs} />
-            <AuthzPermissionsDetails permissions={permissions} />
+            <AuthzPermissionsDetails permissions={permissions} node={node} />
           </div>
         </div>
       </div>
