@@ -55,7 +55,7 @@ def getAgentLabel(String branchName) {
     if (branchName == 'main') {
         return 'Heracles'
     } else if (branchName == 'dev') {
-        return 'valinfo'
+        return 'Heracles'
     } else if (branchName == 'charts') {
         return 'cloud'
     } else {
