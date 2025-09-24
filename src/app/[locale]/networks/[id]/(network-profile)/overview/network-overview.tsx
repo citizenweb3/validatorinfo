@@ -47,7 +47,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           {chain?.params?.unbondingTime ?? 600}s
         </div>
       </div>
-      {chain?.params?.communityTax !== undefined && chain?.params?.communityTax !== null && (
+      {chain?.params?.communityTax !== null && chain?.params?.communityTax !== undefined && (
         <div className="mt-2 flex w-full hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('community tax')}

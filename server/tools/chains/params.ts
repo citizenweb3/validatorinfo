@@ -1012,6 +1012,10 @@ const chainParams: Record<string, AddChainProps> = {
       },
       {
         type: 'ws',
+        url: 'wss://rpc.polkadot.io',
+      },
+      {
+        type: 'ws',
         url: 'wss://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
       },
       {
