@@ -48,11 +48,11 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
                          isCopy />
         <NodeDetailsItem label={t('validator address')}
                          value={node.operatorAddress}
-                         link={`/validators/${node.validatorId}/networks`}
+                         link={`/networks/${node.chain.id}/address/${node.operatorAddress}/passport`}
                          isCopy />
         <NodeDetailsItem label={t('reward address')}
                          value={node.operatorAddress}
-                         link={`/validators/${node.validatorId}/networks`}
+                         link={`/networks/${node.chain.id}/address/${node.operatorAddress}/passport`}
                          isCopy />
       </div>
       <div className="mt-2 flex border-b border-bgSt">
@@ -60,7 +60,7 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
         <div className="ml-5 w-[70%] items-center justify-center">
           <div className="my-2 w-full">
             <TabList page="ValidatorPassportPage" tabs={nodeAuthzTabs} />
-            <AuthzPermissionsDetails permissions={permissions} />
+            <AuthzPermissionsDetails permissions={permissions} node={node} />
           </div>
         </div>
       </div>

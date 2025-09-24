@@ -21,7 +21,7 @@
     "@polkadot/util": "^13.5.3",
     "@polkadot/util-crypto": "^13.5.3",
     "@popperjs/core": "^2.11.8",
-    "@prisma/client": "^6.9.0",
+    "@prisma/client": "^6.16.1",
     "base64url": "^3.0.1",
     "bech32": "^2.0.0",
     "chart.js": "^4.4.3",
@@ -76,6 +76,7 @@
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
+    "prisma": "^6.16.1",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"
