@@ -105,6 +105,7 @@ const runServer = async () => {
     { name: 'update-nodes-rewards', schedule: timers.everyDay },
     { name: 'circulating-tokens-onchain', schedule: timers.everyDay },
     { name: 'circulating-tokens-public', schedule: timers.everyDay },
+    { name: 'update-fdv', schedule: timers.everyHour },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

@@ -18,7 +18,7 @@ export type NetworkValidatorsWithNodes = Node & {
     } | null;
   };
   votingPower: number;
-}
+};
 
 const getAll = async (
   ecosystems: string[],
@@ -28,23 +28,22 @@ const getAll = async (
   order: SortDirection = 'asc',
 ): Promise<{ chains: ChainWithParamsAndTokenomics[]; pages: number }> => {
   const where: ChainWhereInput | undefined = ecosystems.length ? { ecosystem: { in: ecosystems } } : undefined;
+
+  const orderBy =
+    sortBy === 'fdv'
+      ? { tokenomics: { fdv: order } }
+      : sortBy === 'token'
+        ? { params: { denom: order } }
+        : { [sortBy]: order };
+
   const chains = await db.chain.findMany({
     where,
-    include: {
-      aprs: true,
-      params: true,
-      tokenomics: true,
-      prices: {
-        orderBy: {
-          createdAt: 'desc',
-        },
-        take: 1,
-      },
-    },
+    include: { aprs: true, params: true, tokenomics: true },
     skip,
     take,
-    orderBy: { [sortBy]: order },
+    orderBy,
   });
+
   const count = await db.chain.count({ where });
   return { chains, pages: Math.ceil(count / take) };
 };
@@ -132,9 +131,7 @@ const getChainValidatorsWithNodes = async (
     const paginated = computedNodes.slice(skip, skip + take);
 
     return { validators: paginated, pages };
-
   } else {
-
     const totalCount = await db.node.count({ where });
     const pages = Math.ceil(totalCount / take);
 

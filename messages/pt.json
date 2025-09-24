@@ -91,7 +91,7 @@
       },
       "FDV": {
         "name": "F.D.V",
-        "hint": ""
+        "hint": "Avaliação totalmente diluída. Toda a oferta existente multiplicada pelo preço em dólares americanos (USD)."
       },
       "Links": {
         "name": "Links",

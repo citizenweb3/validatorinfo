@@ -6,7 +6,7 @@
 
 ### | [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo) | [Docs](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md) | [Design Assets](https://github.com/citizenweb3/validatorinfo/tree/main/public) | [`BE GOOD` License](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG) |
 
-🄸 🄳 🄵 🅻 🅽 🄍 ⚀
+🄳 🄵 🅽 🄍 ⚀ 🌐 
 
 -----------------------------------------
 

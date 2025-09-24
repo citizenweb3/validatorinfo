@@ -28,6 +28,7 @@ import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
+import updateFdv from "@/server/jobs/update-fdv";
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -112,6 +113,9 @@ async function runTask() {
         break;
       case 'circulating-tokens-public':
         await updateCirculatingTokensPublic(chains);
+        break;
+      case 'update-fdv':
+        await updateFdv(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
