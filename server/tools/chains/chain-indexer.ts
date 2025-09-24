@@ -135,7 +135,7 @@ export interface ChainMethods {
   getProposalParams: GetProposalParams;
   getNodeRewards: GetNodeRewards;
   getChainRewards: GetChainRewards;
-  getCommPool: GetCommPoolFunction;
+  getCommunityPool: GetCommPoolFunction;
   getActiveSetMinAmount: GetActiveSetMinAmount;
   getInflationRate: GetInflationRate;
   getCirculatingTokensOnchain: GetCirculatingTokensOnchain;
