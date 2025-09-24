@@ -19,7 +19,7 @@ services:
   redis:
     image: redis:latest
     ports:
-      - "6379:6379"
+      - "6371:6379"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
