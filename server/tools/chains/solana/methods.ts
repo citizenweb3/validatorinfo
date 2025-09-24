@@ -6,6 +6,7 @@ import getNodes from '@/server/tools/chains/solana/get-nodes';
 import getSlashingParams from '@/server/tools/chains/solana/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/solana/get-staking-params';
 import getTvs from '@/server/tools/chains/solana/get-tvs';
+import getInflationRate from "@/server/tools/chains/solana/get-inflation-rate";
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -42,9 +43,9 @@ const chainMethods: ChainMethods = {
   getChainRewards: async () => null,
   getCommunityPool: async () => null,
   getActiveSetMinAmount: async () => null,
-  getInflationRate: async () => null,
   getCirculatingTokensOnchain,
   getCirculatingTokensPublic,
+  getInflationRate,
 };
 
 export default chainMethods;
