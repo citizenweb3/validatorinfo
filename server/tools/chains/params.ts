@@ -789,7 +789,7 @@ const chainParams: Record<string, AddChainProps> = {
     minimalDenom: 'unym',
     logoUrl:
       'https://raw.githubusercontent.com/nymtech/nym/257e36ddcb408d301307b8ddf542b5275704e7d9/assets/logo/logo-bw.svg',
-    chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/nyx',
+    chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/chain.json',
     nodes: [
       { type: 'exit', url: 'nym-exit.citizenweb3.com' },
       { type: 'entry', url: 'nym-entry.citizenweb3.com' },
