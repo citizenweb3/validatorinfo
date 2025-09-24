@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FC, Suspense } from 'react';
 
 import ValidatorsList from '@/app/main-validators/validator-list/validators-list';
@@ -6,7 +5,6 @@ import ListFilters from '@/components/common/list-filters/list-filters';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
-
 
 interface OwnProps extends PagesProps {
   ecosystems: string[];
@@ -19,8 +17,8 @@ const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], 
   return (
     <div>
       <ListFilters perPage={perPage} selectedEcosystems={ecosystems} isEcosystems />
-      <div className="mt-4 grid grid-cols-[42%_58%]">
-        <table className="relative my-4 table-auto border-collapse">
+      <div>
+        <table className="relative my-4 w-full table-auto border-collapse">
           <thead>
             <tr className="sticky top-0 z-30 w-full bg-table_header">
               <th />
@@ -41,9 +39,6 @@ const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], 
             <ValidatorsList perPage={perPage} currentPage={currentPage} ecosystems={ecosystems} sort={sort} />
           </Suspense>
         </table>
-        <div>
-          <Image src={'/img/stories/main-story.svg'} width={904} height={1856} alt="main-story" />
-        </div>
       </div>
     </div>
   );

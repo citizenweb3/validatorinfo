@@ -6,12 +6,14 @@ import { FC, useState } from 'react';
 import BaseModal from '@/components/common/modal/base-modal';
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
+import { ValidatorWithNodes } from '@/services/validator-service';
 
 interface OwnProps {
   chains: (Chain & { valoper: string })[];
+  validator: ValidatorWithNodes;
 }
 
-const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
+const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw, validator }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
 
   const chains = raw.filter((c) => typeof c !== 'undefined');
@@ -20,8 +22,11 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
     <div className="flex items-center justify-center space-x-0.5">
       {chains.length > 4 && <div className="mr-2 font-handjet text-sm">{chains.length}:</div>}
       {chains.slice(0, 4).map((chain) => (
-        <Link key={chain.valoper} href={`/networks/${chain.id}/overview`}>
-          <Tooltip direction="top" tooltip={chain.prettyName} className="font-bold text-sm">
+        <Link
+          key={chain.valoper}
+          href={`/validators/${validator.id}/${chain.valoper}/validator_passport/authz/withdraw_rewards`}
+        >
+          <Tooltip direction="top" tooltip={chain.prettyName} className="text-sm font-bold">
             <Image
               src={chain.logoUrl}
               alt={chain.prettyName}
@@ -52,8 +57,12 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
             >
               <div className="flex max-h-96 w-40 flex-row flex-wrap items-center justify-center">
                 {chains.map((chain) => (
-                  <Link key={chain.valoper} href={`/networks/${chain.id}/overview`} className="h-7 w-7">
-                    <Tooltip direction="top" tooltip={chain.prettyName} className="font-bold text-sm">
+                  <Link
+                    key={chain.valoper}
+                    href={`/validators/${validator.id}/${chain.valoper}/validator_passport/authz/withdraw_rewards`}
+                    className="h-7 w-7"
+                  >
+                    <Tooltip direction="top" tooltip={chain.prettyName} className="text-sm font-bold">
                       <Image
                         src={chain.logoUrl}
                         alt={chain.prettyName}

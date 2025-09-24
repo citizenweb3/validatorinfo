@@ -4,13 +4,14 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 
 import HeaderActionButtons from '@/components/header/header-action-buttons';
 import HeaderSearch from '@/components/header/header-search/header-search';
 import MenuBurgerButton from '@/components/navigation-bar/menu-burger-button';
 import WalletButton from '@/components/wallet-connect/wallet-button';
 import MobileNavigationBar from '@/components/navigation-bar/mobile-navigation-bar';
+import { useWindowEvent } from '@/hooks/useWindowEvent';
 
 interface OwnProps {}
 
@@ -19,8 +20,21 @@ const HeaderControls: FC<OwnProps> = () => {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const [hoverTarget, setHoverTarget] = useState<string | null>(null);
+
+  const onSectionHover = useCallback((detail: string | null) => {
+    setHoverTarget(detail);
+  }, []);
+
+  useWindowEvent<string | null>('section:hover', onSectionHover);
+
+  const highlight =
+    hoverTarget === 'header'
+      ? 'outline outline-2 outline-dottedLine outline-offset-2'
+      : 'outline-0';
+
   return (
-    <div className="mx-6 mt-4 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24">
+    <div className={`mx-6 mt-4 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24 ${highlight}`}>
       <Link
         href="/"
         onClick={() => {
