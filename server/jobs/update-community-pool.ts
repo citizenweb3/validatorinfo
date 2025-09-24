@@ -19,7 +19,7 @@ const updateCommPool = async (chainNames: string[]) => {
         return null;
       }
       logInfo(`${chainName} updating`);
-      const communityPool = await chainMethods.getCommPool(chainParams);
+      const communityPool = await chainMethods.getCommunityPool(chainParams);
       logInfo(`${chainName} community pool: ${communityPool}`);
 
       if (communityPool !== undefined && communityPool !== null) {

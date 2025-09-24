@@ -261,7 +261,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 118,
     denom: 'NTRN',
     minimalDenom: 'untrn',
-    hasValidators: false,
+    hasValidators: true,
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
     nodes: [
       { type: 'grpc', url: 'grpc.neutron.citizenweb3.com' },
@@ -286,7 +286,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 118,
     denom: 'NTRN',
     minimalDenom: 'untrn',
-    hasValidators: false,
+    hasValidators: true,
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/neutron/images/neutron-raw.svg',
     chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/testnets/neutrontestnet',
     nodes: [
@@ -640,6 +640,15 @@ const chainParams: Record<string, AddChainProps> = {
       { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
       { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
       { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
+
+      { type: 'rest', url: 'https://symphony-api-testnet.cogwheel.zone' },
+      { type: 'rpc', url: 'https://symphony-rpc-testnet.cogwheel.zone' },
+
+      { type: 'rest', url: 'https://testnet-symphony-rpc.konsortech.xyz' },
+      { type: 'rpc', url: 'https://testnet-symphony-api.konsortech.xyz' },
+
+      { type: 'rest', url: 'https://symphony-testnet-api.kgnodes.xyz' },
+      { type: 'rpc', url: 'https://symphony-testnet-rpc.kgnodes.xyz' },
     ],
     mainRepo: 'https://github.com/Orchestra-Labs/symphony',
     docs: '',
@@ -780,7 +789,7 @@ const chainParams: Record<string, AddChainProps> = {
     minimalDenom: 'unym',
     logoUrl:
       'https://raw.githubusercontent.com/nymtech/nym/257e36ddcb408d301307b8ddf542b5275704e7d9/assets/logo/logo-bw.svg',
-    chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/nyx',
+    chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/chain.json',
     nodes: [
       { type: 'exit', url: 'nym-exit.citizenweb3.com' },
       { type: 'entry', url: 'nym-entry.citizenweb3.com' },
@@ -1009,6 +1018,10 @@ const chainParams: Record<string, AddChainProps> = {
       {
         type: 'rest',
         url: 'https://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      },
+      {
+        type: 'ws',
+        url: 'wss://rpc.polkadot.io',
       },
       {
         type: 'ws',

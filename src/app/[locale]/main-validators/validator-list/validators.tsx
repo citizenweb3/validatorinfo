@@ -16,11 +16,7 @@ interface OwnProps extends PagesProps {
 const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], currentPage = 1 }) => {
   return (
     <div>
-      <ListFilters
-        perPage={perPage}
-        selectedEcosystems={ecosystems}
-        isBattery
-        isEcosystems />
+      <ListFilters perPage={perPage} selectedEcosystems={ecosystems} isEcosystems />
       <div>
         <table className="relative my-4 w-full table-auto border-collapse">
           <thead>
@@ -28,12 +24,6 @@ const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], 
               <th />
               <TableHeaderItem page={page} className="w-[20%]" name="Validator" sortField="moniker" />
               <TableHeaderItem page={page} name="Links" />
-              <TableHeaderItem page={page} name="Battery" />
-              <TableHeaderItem page={page} name="Technical" />
-              <TableHeaderItem page={page} name="Social" />
-              <TableHeaderItem page={page} name="Governance" />
-              <TableHeaderItem page={page} name="User" />
-              <TableHeaderItem page={page} name="TVS" />
               <TableHeaderItem page={page} name="Supported Assets" sortField="nodes" />
             </tr>
           </thead>

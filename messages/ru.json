@@ -146,6 +146,36 @@
       "ValidatorInfo": "ВалидаторИнфо",
       "Rumors": "Слухи",
       "Global": "Анализ"
+    },
+    "ConsolePanel": {
+      "Get started": {
+        "title": "Начнем Анон:",
+        "text": "Используй меню слева для навигации по всему приложению!"
+      },
+      "Search and navigation": {
+        "title": "Поиск и Навигация:",
+        "text": "Используйте верхнюю панель поиска - <searchImg></searchImg> - как в любом эксплорере.<br></br>Нажмите - <mainPageImg></mainPageImg> - чтобы вернуться на главную страницу, или - <logInImg></logInImg> - чтобы войти в систему."
+      },
+      "Main page": {
+        "title": "Главная страница:",
+        "text": "Проверьте вкладки <comparisonLink>Сравнение</comparisonLink>, <calculateLink>Расчет</calculateLink>, <rumorLink>Слухи</rumorLink> и <analyzeLink>Анализ</analyzeLink>.<br></br>Загружены графики и статистические данные из всего пространства Web3."
+      },
+      "Networks": {
+        "title": "<networksLink>Сети:</networksLink>",
+        "text": "Нажми Сети чтобы посмотреть сравнение сетей.<br></br>Нажми Профиль Сети чтобы посмотреть статистику: токеномику, транзакции,<br></br>управление, валидаторы и др."
+      },
+      "Validators nodes and mining pools": {
+        "title": "<validatorsLink>Валидаторы</validatorsLink>, <nodesLink>Ноды</nodesLink> и Майнинговые Пулы:",
+        "text": "Открой профиль Ноды или Валидатора чтобы посмотреть детальную статистику, доходы, проекты и др."
+      },
+      "Ecosystems and metrics": {
+        "title": "Экосистемы и Метрики:",
+        "text": "Сравни рост, активность и другие детали в пространстве Блокчейна."
+      },
+      "More features": {
+        "title": "Больше возможностей:",
+        "text": "Подключи -<logInImg></logInImg>- свой Web3 кошелек для обмена токенов, получения вознаграждений и других возможностей.<br></br>Изучи Библиотеку -<libraryImg></libraryImg>, ИИ -<aiImg></aiImg>- и поделись своим мнением в -<rumorsImg></rumorsImg>- чате."
+      }
     }
   },
   "GlobalPosPage": {

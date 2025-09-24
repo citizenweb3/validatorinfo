@@ -146,6 +146,36 @@
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
       "Global": "Analise"
+    },
+    "ConsolePanel": {
+      "Get started": {
+        "title": "Comece Agora Mesmo:",
+        "text": "Use o menu à esquerda para navegar pelo aplicativo!"
+      },
+      "Search and navigation": {
+        "title": "Pesquisa & Navegação:",
+        "text": "Use a barra de pesquisa superior - <searchImg></searchImg> - como qualquer outro explorador.<br></br>Clique em Home - <mainPageImg></mainPageImg> - para retornar à página principal ou - <logInImg></logInImg> - para fazer login."
+      },
+      "Main page": {
+        "title": "Página Principal:",
+        "text": "Verifique os separadores <comparisonLink>Comparação</comparisonLink>, <calculateLink>Calcular</calculateLink>, <rumorLink>Rumores</rumorLink> e <analyzeLink>Analisar</analyzeLink>.<br></br>Carreguei os gráficos e estatísticas de todo o espaço Web3."
+      },
+      "Networks": {
+        "title": "<networksLink>Redes:</networksLink>",
+        "text": "Clique em Redes para ver uma tabela comparativa das cadeias.<br></br>Abra um perfil de Rede para ver estatísticas, incluindo: tokenomics, transações,<br></br>governança, validadores e muito mais."
+      },
+      "Validators nodes and mining pools": {
+        "title": "<validatorsLink>Validadores</validatorsLink>, <nodesLink>Nós</nodesLink> e Pools de Mineração",
+        "text": "Abra os perfis do Validator ou Node para ver estatísticas detalhadas, ganhos, projetos e muito mais."
+      },
+      "Ecosystems and metrics": {
+        "title": "<ecosystemsLink>Ecossistemas & Métricas:</ecosystemsLink>",
+        "text": "Compare o crescimento, a atividade e outros detalhes em todo o espaço Blockchain."
+      },
+      "More features": {
+        "title": "Mais funcionalidades:",
+        "text": "Ligue -<logInImg></logInImg>- a sua carteira Web3 para trocas de tokens, recompensas e mais funcionalidades.<br></br>Explore a Biblioteca -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- e partilhe a sua opinião no chat -<rumorsImg></rumorsImg>- p2p Rumor."
+      }
     }
   },
   "GlobalPosPage": {

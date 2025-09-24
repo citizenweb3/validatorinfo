@@ -31,7 +31,7 @@ const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, ecosystems, current
           <ValidatorListItem key={item.id} validator={item} chains={chains.chains} />
         ))}
         <tr>
-          <td colSpan={10} className="pt-4">
+          <td colSpan={3} className="pt-4">
             <TablePagination pageLength={pages} />
           </td>
         </tr>

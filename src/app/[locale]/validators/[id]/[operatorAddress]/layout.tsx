@@ -36,7 +36,7 @@ export default async function NodeProfileLayout({
 
   return (
     <div>
-      <NodeProfileStory leftIconUrl={leftIconUrl} rightIconUrl={rightIconUrl} />
+      <NodeProfileStory icons={{ leftIconUrl, rightIconUrl }} node={node}/>
       <TabList page="NodeProfileHeader" tabs={nodeProfileTabs} />
       <NodePagesTitle page={'ValidatorPassportPage'} locale={locale} node={node} />
       {children}
