@@ -1,20 +1,15 @@
 import { QueryClient, setupBankExtension, setupStakingExtension } from '@cosmjs/stargate';
-import { Tendermint34Client } from '@cosmjs/tendermint-rpc';
 
 import logger from '@/logger';
 import { GetTvsFunction } from '@/server/tools/chains/chain-indexer';
+import getTendermintClient from '@/server/tools/get-tendermint-client';
+
 
 const { logError, logDebug } = logger('get-tvs');
 
 const getTvs: GetTvsFunction = async (chain) => {
   try {
-    const rpcEndpoint = chain.nodes.find((node) => node.type === 'rpc')?.url;
-    if (!rpcEndpoint) {
-      logError(`RPC node for ${chain.name} chain not found`);
-      return null;
-    }
-
-    const tmClient = await Tendermint34Client.connect(rpcEndpoint);
+    const tmClient = await getTendermintClient(chain.name);
 
     const queryClient = QueryClient.withExtensions(tmClient, setupStakingExtension, setupBankExtension);
 
@@ -64,7 +59,13 @@ const getTvs: GetTvsFunction = async (chain) => {
     }
 
     logDebug(
-      `TVS for [${chain.name}]: ${JSON.stringify({ totalSupply, bondedTokens, unbondedTokens, tvs, unbondedTokensRatio })}`,
+      `TVS for [${chain.name}]: ${JSON.stringify({
+        totalSupply,
+        bondedTokens,
+        unbondedTokens,
+        tvs,
+        unbondedTokensRatio,
+      })}`,
     );
 
     return {
