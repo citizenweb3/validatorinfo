@@ -5,6 +5,7 @@ import SubTitle from '@/components/common/sub-title';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import nodeService from '@/services/node-service';
 
+
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
 }
@@ -92,7 +93,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
             {t('comm pool value in usd')}
           </div>
           <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-            ${communityPoolUsd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            $
+            {communityPoolUsd.toLocaleString('en-US', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
           </div>
         </div>
       )}
