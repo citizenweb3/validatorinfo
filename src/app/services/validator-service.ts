@@ -279,6 +279,49 @@ const getRandom = async (ecosystems: string[], take: number): Promise<{ validato
   return { validators };
 };
 
+const getByIdentityWithDetails = async (identity: string) => {
+  return db.validator.findUnique({
+    where: { identity },
+    select: {
+      identity: true,
+      moniker: true,
+      nodes: {
+        select: {
+          operatorAddress: true,
+          jailed: true,
+          delegatorShares: true,
+          moniker: true,
+          identity: true,
+          rate: true,
+          outstandingRewards: true,
+          delegatorsAmount: true,
+          missedBlocks: true,
+          uptime: true,
+          chain: {
+            select: {
+              chainId: true,
+              name: true,
+              prettyName: true,
+              params: {
+                select: {
+                  denom: true,
+                  minimalDenom: true,
+                  coinDecimals: true,
+                },
+              },
+              prices: {
+                orderBy: { createdAt: 'desc' },
+                take: 1,
+                select: { value: true, createdAt: true },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+};
+
 const validatorService = {
   getByIdentity,
   getById,
@@ -289,6 +332,7 @@ const validatorService = {
   getValidatorNodesWithChains,
   upsertValidator,
   getRandom,
+  getByIdentityWithDetails,
 };
 
 export default validatorService;
