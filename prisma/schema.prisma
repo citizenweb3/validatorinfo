@@ -168,6 +168,7 @@ model Node {
   minSelfDelegation  String   @map("min_self_delegation") @db.VarChar(256)
   missedBlocks       Int?     @map("missed_blocks")
   outstandingRewards String?  @map("outstanding_rewards")
+  delegatorsAmount   Int?     @map("delegators_amount")
 
   chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
   validator Validator? @relation("validator_node", fields: [validatorId], references: [id])

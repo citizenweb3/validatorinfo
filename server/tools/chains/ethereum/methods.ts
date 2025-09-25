@@ -36,6 +36,7 @@ const chainMethods: ChainMethods = {
   getInflationRate: async () => null,
   getCirculatingTokensOnchain: async () => null,
   getCirculatingTokensPublic: async () => null,
+  getDelegatorsAmount: async () => [],
 };
 
 export default chainMethods;
