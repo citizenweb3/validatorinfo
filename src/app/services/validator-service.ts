@@ -299,6 +299,7 @@ const getByIdentityWithDetails = async (identity: string) => {
           uptime: true,
           chain: {
             select: {
+              id: true,
               chainId: true,
               name: true,
               prettyName: true,
@@ -313,6 +314,11 @@ const getByIdentityWithDetails = async (identity: string) => {
                 orderBy: { createdAt: 'desc' },
                 take: 1,
                 select: { value: true, createdAt: true },
+              },
+              tokenomics: {
+                select: {
+                  apr: true,
+                },
               },
             },
           },
