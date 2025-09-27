@@ -17,6 +17,8 @@ import updateCirculatingTokensOnchain from '@/server/jobs/update-circulating-tok
 import updateCirculatingTokensPublic from '@/server/jobs/update-circulating-tokens-public';
 import updateCommPool from '@/server/jobs/update-community-pool';
 import updateCommTax from '@/server/jobs/update-community-tax';
+import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
+import updateFdv from '@/server/jobs/update-fdv';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
@@ -28,7 +30,6 @@ import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
-import updateFdv from "@/server/jobs/update-fdv";
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -116,6 +117,9 @@ async function runTask() {
         break;
       case 'update-fdv':
         await updateFdv(chains);
+        break;
+      case 'update-delegators-amount':
+        await updateDelegatorsAmount(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
