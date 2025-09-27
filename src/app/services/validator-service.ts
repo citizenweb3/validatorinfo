@@ -283,6 +283,7 @@ const getByIdentityWithDetails = async (identity: string) => {
   return db.validator.findUnique({
     where: { identity },
     select: {
+      id: true,
       identity: true,
       moniker: true,
       nodes: {
