@@ -14,7 +14,7 @@ interface OwnProps {
 
 const TableAvatar: FC<OwnProps> = ({ icon, name, href, textClassName = '' }) => {
   return (
-    <Link href={href} className="flex flex-row items-center hover:text-highlight my-4 md:mb-0">
+    <Link href={href} className="flex flex-row items-center hover:text-highlight my-4 md:my-0 md:mb-0">
       <div className="relative md:h-[3.3125rem] md:w-[3.3125rem] h-72 w-72">
         {icon ? (
           <Image
