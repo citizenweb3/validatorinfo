@@ -2,6 +2,7 @@ import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import getNodes from '@/server/tools/chains/polkadot/get-nodes';
 import getStakingParams from '@/server/tools/chains/polkadot/get-staking-params';
 import getTvs from '@/server/tools/chains/polkadot/get-tvs';
+import getCommunityPool from "@/server/tools/chains/polkadot/get-community-pool";
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -34,13 +35,14 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
-  getCommPool: async () => null,
+  getCommunityPool,
   getActiveSetMinAmount: async () => null,
   getInflationRate: async () => null,
   getNodeRewards: async () => [],
   getChainRewards: async () => null,
   getCirculatingTokensOnchain: async () => null,
   getCirculatingTokensPublic: async () => null,
+  getDelegatorsAmount: async () => [],
 };
 
 export default chainMethods;

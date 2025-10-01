@@ -4,6 +4,7 @@ import { FC } from 'react';
 
 import icons from '@/components/icons';
 import cutHash from '@/utils/cut-hash';
+import CopyButton from '@/components/common/copy-button';
 
 interface OwnProps {
   item: {
@@ -12,11 +13,12 @@ interface OwnProps {
     timeStamp: string;
     blockHeight: string;
   };
-  chainId: number;
+  chainName: string;
+  isCopy?: boolean;
 }
 
 
-const NodeTxsItem: FC<OwnProps> = ({ item, chainId }) => {
+const NodeTxsItem: FC<OwnProps> = ({ item, chainName, isCopy = true }) => {
   const getSquareIcon = () => {
     switch (item.typeOfTx) {
       case 'Send':
@@ -30,17 +32,17 @@ const NodeTxsItem: FC<OwnProps> = ({ item, chainId }) => {
     }
   };
   
-  const link = `/networks/${chainId}/tx/${item.txHash}`;
+  const link = `/networks/${chainName}/tx/${item.txHash}`;
 
   return (
     <tr className="group cursor-pointer hover:bg-bgHover">
       <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
-        <Link href={link} className="flex items-center">
+        <div className="flex items-center">
           <div className="flex-shrink-0">
             <Image src={getSquareIcon()} alt={`${item.typeOfTx}`} width={30} height={30} />
           </div>
           <div className="flex-grow text-center">{item.typeOfTx}</div>
-        </Link>
+        </div>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
@@ -49,9 +51,10 @@ const NodeTxsItem: FC<OwnProps> = ({ item, chainId }) => {
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
-        <Link href={link} className="flex justify-center">
-          <div className="text-center text-base">{item.timeStamp}</div>
-        </Link>
+        <div className="flex justify-center">
+          <span className="text-center text-base">{item.timeStamp}</span>
+          {isCopy && <CopyButton value={item.timeStamp} size="sm" />}
+        </div>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">

@@ -3,6 +3,7 @@ import { ChainNodeVote } from '@/services/vote-service';
 export const nodeVotesExample: ChainNodeVote[] = [
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -11,6 +12,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -19,6 +21,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -27,6 +30,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -35,6 +39,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -43,6 +48,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -51,6 +57,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -59,6 +66,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -67,6 +75,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,
@@ -75,6 +84,7 @@ export const nodeVotesExample: ChainNodeVote[] = [
   },
   {
     chainDbId: 1,
+    chainName: 'cosmoshub',
     proposalId: '1',
     proposalType: 'text',
     votingEndTime: null,

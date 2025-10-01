@@ -84,7 +84,7 @@ model Chain {
   ecosystem      String  @db.VarChar(256)
   chainId        String  @unique @map("chain_id") @db.VarChar(256)
   rang           Int
-  name           String  @db.VarChar(256)
+  name           String  @unique @db.VarChar(256)
   prettyName     String  @map("pretty_name") @db.VarChar(256)
   logoUrl        String  @map("logo_url")
   coinGeckoId    String  @map("coingecko_id") @db.VarChar(64)
@@ -168,6 +168,7 @@ model Node {
   minSelfDelegation  String   @map("min_self_delegation") @db.VarChar(256)
   missedBlocks       Int?     @map("missed_blocks")
   outstandingRewards String?  @map("outstanding_rewards")
+  delegatorsAmount   Int?     @map("delegators_amount")
 
   chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
   validator Validator? @relation("validator_node", fields: [validatorId], references: [id])
@@ -215,6 +216,7 @@ model Tokenomics {
   tvs                      Float  @default(0)
   apr                      Float  @default(0)
   circulatingTokensOnchain String @default("") @map("circulating_tokens_onchain")
+  fdv                      Float  @default(0)
 
   chain Chain @relation("chain_tokenomics", fields: [chainId], references: [id])
 

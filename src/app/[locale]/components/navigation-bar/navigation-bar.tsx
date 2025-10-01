@@ -1,13 +1,11 @@
 'use client';
 
-import { FC, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 
 import { TabOptions } from '@/components/common/tabs/tabs-data';
 import icons from '@/components/icons';
 import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
-
-interface OwnProps {
-}
+import { useWindowEvent } from '@/hooks/useWindowEvent';
 
 export const mainTabs: TabOptions[] = [
   { name: 'Validators', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
@@ -38,18 +36,36 @@ export const aboutTabs = [
   { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
 ];
 
-const NavigationBar: FC<OwnProps> = () => {
+const NavigationBar: FC = () => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
+  const [hoverTarget, setHoverTarget] = useState<string | null>(null);
+
+  const onSectionHover = useCallback((detail: string | null) => {
+    setHoverTarget(detail);
+  }, []);
+
+  useWindowEvent<string | null>('section:hover', onSectionHover);
+
+  const highlightNavBar =
+    hoverTarget === 'navbar'
+      ? 'outline outline-2 outline-dottedLine outline-offset-2 duration-0'
+      : 'outline-0';
+
+  const highlightArrow =
+    hoverTarget === 'navbar-arrow'
+      ? 'outline outline-2 outline-dottedLine outline-offset-2'
+      : 'outline-0';
+
   return (
     <div
-      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} hidden md:block relative mt-2 border-transparent pt-6 font-handjet transition-all duration-300`}
+      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} hidden md:block relative mt-2 border-transparent pt-6 pb-2 font-handjet transition-all duration-300 ${highlightNavBar}`}
     >
       <div
         className="group absolute -right-6 top-0 z-20 h-full w-6 cursor-pointer bg-opacity-30 from-transparent to-bgSt hover:bg-gradient-to-b"
         onClick={() => setIsOpened(!isOpened)}
       >
         <div
-          className={`${!isOpened ? 'rotate-180' : ''} absolute -left-1 -top-0 min-h-6 min-w-8 bg-hide bg-contain group-hover:bg-hide_h group-active:bg-hide_a`}
+          className={`${!isOpened ? 'rotate-180' : ''} absolute -left-1 -top-0 min-h-6 min-w-8 bg-hide bg-contain group-hover:bg-hide_h group-active:bg-hide_a ${highlightArrow}`}
         />
       </div>
       <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>
@@ -73,7 +89,6 @@ const NavigationBar: FC<OwnProps> = () => {
           <NavigationBarItem key={item.name} item={item} isOpened={isOpened} />
         ))}
       </div>
-
     </div>
   );
 };

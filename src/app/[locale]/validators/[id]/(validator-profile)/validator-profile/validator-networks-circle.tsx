@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { FC, useEffect, useState } from 'react';
 
 import ArrowsGoBigButton from '@/components/common/arrows-go-big-button';
-import icons from '@/components/icons';
 import Tooltip from '@/components/common/tooltip';
+import icons from '@/components/icons';
 
 interface circleValuesTypes {
   circleRadius: number;
@@ -16,7 +16,7 @@ interface circleValuesTypes {
 
 interface OwnProps {
   centerLogo: string;
-  logos: { id: number; logoUrl: string; prettyName: string }[];
+  logos: { name: string; logoUrl: string; prettyName: string }[];
 }
 
 const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
@@ -82,7 +82,7 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
           const y = circleRadius * Math.sin(angle) - logoSize / 2;
           return (
             <div
-              key={chain.id}
+              key={chain.name}
               style={{
                 top: `calc(50% + ${y}px)`,
                 left: `calc(50% + ${x}px)`,
@@ -92,12 +92,13 @@ const NetworksCircle: FC<OwnProps> = ({ centerLogo, logos }) => {
               className="absolute flex items-center justify-center"
             >
               <Tooltip tooltip={chain.prettyName} direction="top">
-                <Link href={`/networks/${chain.id}/overview`}>
+                <Link href={`/networks/${chain.name}/overview`}>
                   <Image
                     src={chain.logoUrl}
                     alt={chain.prettyName}
                     fill
-                    className={`rounded-full h-[${logoSize}] object-contain`} />
+                    className={`rounded-full h-[${logoSize}] object-contain`}
+                  />
                 </Link>
               </Tooltip>
             </div>

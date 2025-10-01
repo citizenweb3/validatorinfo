@@ -59,7 +59,7 @@ const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = '
                 {list.map((node) => (
                   <Link
                     key={node.operatorAddress}
-                    href={`/networks/${node.chainId}/overview`}
+                    href={`/networks/${node.chain.name}/overview`}
                     className="h-7 w-7"
                   >
                     <Image

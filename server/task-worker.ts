@@ -17,6 +17,8 @@ import updateCirculatingTokensOnchain from '@/server/jobs/update-circulating-tok
 import updateCirculatingTokensPublic from '@/server/jobs/update-circulating-tokens-public';
 import updateCommPool from '@/server/jobs/update-community-pool';
 import updateCommTax from '@/server/jobs/update-community-tax';
+import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
+import updateFdv from '@/server/jobs/update-fdv';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
@@ -112,6 +114,12 @@ async function runTask() {
         break;
       case 'circulating-tokens-public':
         await updateCirculatingTokensPublic(chains);
+        break;
+      case 'update-fdv':
+        await updateFdv(chains);
+        break;
+      case 'update-delegators-amount':
+        await updateDelegatorsAmount(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

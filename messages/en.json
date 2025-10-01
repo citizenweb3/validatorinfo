@@ -91,7 +91,7 @@
       },
       "FDV": {
         "name": "F.D.V",
-        "hint": ""
+        "hint": "Fully Diluted Valuation. All existing supply multiplied by price in USD."
       },
       "Links": {
         "name": "Links",
@@ -146,6 +146,36 @@
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
       "Global": "Analyze"
+    },
+    "ConsolePanel": {
+      "Get started": {
+        "title": "Get Started anon:",
+        "text": "Use the menu on the left to navigate around the App!"
+      },
+      "Search and navigation": {
+        "title": "Search & Navigation:",
+        "text": "Use the top search bar -<searchImg></searchImg>- like any other explorer.<br></br>Click Home -<mainPageImg></mainPageImg>- to return the main page or -<logInImg></logInImg>- to log in."
+      },
+      "Main page": {
+        "title": "Main Page:",
+        "text": "Check the <comparisonLink>Comparison</comparisonLink>, <calculateLink>Calculate</calculateLink>, <rumorLink>Rumor</rumorLink> and <analyzeLink>Analyze</analyzeLink> tabs.<br></br>Loaded the graphs and statistics from around the Web3 space."
+      },
+      "Networks": {
+        "title": "<networksLink>Networks:</networksLink>",
+        "text": "Click Networks to see a comparison table of chains.<br></br>Open a Network profile to see stats including: tokenomics, transactions,<br></br>governance, validators and more."
+      },
+      "Validators nodes and mining pools": {
+        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and Mining Pools",
+        "text": "Open Validator or Node profiles to see detailed statistics, earnings, projects and more."
+      },
+      "Ecosystems and metrics": {
+        "title": "<ecosystemsLink>Ecosystems & Metrics:</ecosystemsLink>",
+        "text": "Compare growth, activity and other details across the Blockchain space."
+      },
+      "More features": {
+        "title": "More features:",
+        "text": "Connect -<logInImg></logInImg>- your Web3 wallet for token swaps, rewards and more features.<br></br>Explore Library -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- and share your opinion in the p2p Rumor -<rumorsImg></rumorsImg>- chat."
+      }
     }
   },
   "GlobalPosPage": {
@@ -355,7 +385,6 @@
     "Revenue vs Capital Flow": "Revenue VS Capital Flow",
     "circulating tokens public tooltip": "Received and calculated by public chain data",
     "circulating tokens onchain tooltip": "Received and calculated by onchain data"
-
   },
   "NetworkValidatorsPage": {
     "title": "Blockchain Validator Summary",

@@ -23,7 +23,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
 
   const { validatorNodesWithChainData } = await validatorService.getValidatorNodesWithChains(id);
   const chains = validatorNodesWithChainData.map((node) => ({
-    id: node.chain.id,
+    name: node.chain.name,
     logoUrl: node.chain.logoUrl || icons.AvatarIcon,
     prettyName: node.chain.prettyName,
   }));
@@ -41,11 +41,10 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
 
   return (
     <div className="mb-7 mt-4 grid grid-cols-7 items-start">
-      <div className="col-span-2 mr-8 2xl:mr-20 xl:mr-18 lg:mr-14 md:mr-10 border-b border-bgSt h-full flex flex-col">
+      <div className="xl:mr-18 col-span-2 mr-8 flex h-full flex-col border-b border-bgSt md:mr-10 lg:mr-14 2xl:mr-20">
         <div className="font-sfpro text-base">
           <h2>{t('description')}</h2>
-          <div
-            className="relative my-6 h-[40px] w-full md:h-[58px] lg:h-[66px] xl:h-[80px] 2xl:h-[86px]">
+          <div className="relative my-6 h-[40px] w-full md:h-[58px] lg:h-[66px] xl:h-[80px] 2xl:h-[86px]">
             <iframe
               src={playerUrl}
               className="m-0 origin-top-left scale-[0.20] p-0 md:scale-[0.30] lg:scale-[0.37] xl:scale-[0.42] 2xl:scale-[0.45]"
@@ -54,13 +53,16 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
             ></iframe>
           </div>
           {!foundEpisode?.player_url && (
-            <RoundedButton href={''} contentClassName="font-handjet text-sm px-5 pt-0 pb-0"
-                           className="mb-4 active:mb-3">
+            <RoundedButton
+              href={''}
+              contentClassName="font-handjet text-sm px-5 pt-0 pb-0"
+              className="mb-4 active:mb-3"
+            >
               {t('place your interview here')}
             </RoundedButton>
           )}
         </div>
-        <div className="mb-2 flex items-center mt-auto">
+        <div className="mb-2 mt-auto flex items-center">
           <div className={`${iconsSize} bg-web bg-contain bg-no-repeat`} />
           <p className="text-xs">{t('Others Links')}</p>
           <PlusButton size="xs" isOpened={false} />
@@ -69,7 +71,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
       <div className="col-span-3 h-full shadow-button">
         <NetworksCircle centerLogo={validatorLogoUrl} logos={chains} />
       </div>
-      <div className="col-span-2 ml-8 2xl:ml-20 xl:ml-18 lg:ml-14 md:ml-10 h-full border-b border-bgSt">
+      <div className="xl:ml-18 col-span-2 ml-8 h-full border-b border-bgSt md:ml-10 lg:ml-14 2xl:ml-20">
         <h1>
           <span className="border-b border-bgSt px-2.5 text-xl text-highlight">{t('Merits')}</span>
         </h1>

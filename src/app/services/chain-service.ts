@@ -5,7 +5,7 @@ import { SortDirection } from '@/server/types';
 import ChainWhereInput = Prisma.ChainWhereInput;
 
 export type ChainWithParams = Prisma.ChainGetPayload<{ include: { params: true } }>;
-export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { params: true, tokenomics: true } }>;
+export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { params: true; tokenomics: true } }>;
 
 export type NetworkValidatorsWithNodes = Node & {
   validator: {
@@ -18,7 +18,7 @@ export type NetworkValidatorsWithNodes = Node & {
     } | null;
   };
   votingPower: number;
-}
+};
 
 const getAll = async (
   ecosystems: string[],
@@ -28,23 +28,22 @@ const getAll = async (
   order: SortDirection = 'asc',
 ): Promise<{ chains: ChainWithParamsAndTokenomics[]; pages: number }> => {
   const where: ChainWhereInput | undefined = ecosystems.length ? { ecosystem: { in: ecosystems } } : undefined;
+
+  const orderBy =
+    sortBy === 'fdv'
+      ? { tokenomics: { fdv: order } }
+      : sortBy === 'token'
+        ? { params: { denom: order } }
+        : { [sortBy]: order };
+
   const chains = await db.chain.findMany({
     where,
-    include: {
-      aprs: true,
-      params: true,
-      tokenomics: true,
-      prices: {
-        orderBy: {
-          createdAt: 'desc',
-        },
-        take: 1,
-      },
-    },
+    include: { aprs: true, params: true, tokenomics: true },
     skip,
     take,
-    orderBy: { [sortBy]: order },
+    orderBy,
   });
+
   const count = await db.chain.count({ where });
   return { chains, pages: Math.ceil(count / take) };
 };
@@ -60,6 +59,13 @@ const getTokenPriceByChainId = async (chainId: number): Promise<Price | null> =>
 const getById = async (id: number): Promise<ChainWithParamsAndTokenomics | null> => {
   return db.chain.findUnique({
     where: { id },
+    include: { params: true, tokenomics: true },
+  });
+};
+
+const getByName = async (name: string): Promise<ChainWithParamsAndTokenomics | null> => {
+  return db.chain.findUnique({
+    where: { name },
     include: { params: true, tokenomics: true },
   });
 };
@@ -132,9 +138,7 @@ const getChainValidatorsWithNodes = async (
     const paginated = computedNodes.slice(skip, skip + take);
 
     return { validators: paginated, pages };
-
   } else {
-
     const totalCount = await db.node.count({ where });
     const pages = Math.ceil(totalCount / take);
 
@@ -184,12 +188,18 @@ const getListByEcosystem = async (ecosystem: string) => {
   });
 };
 
+const getAllLight = async () => {
+  return db.chain.findMany({});
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
   getById,
   getChainValidatorsWithNodes,
   getListByEcosystem,
+  getByName,
+  getAllLight,
 };
 
 export default ChainService;
