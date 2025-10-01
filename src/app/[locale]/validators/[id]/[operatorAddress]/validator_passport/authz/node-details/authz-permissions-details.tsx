@@ -23,11 +23,11 @@ const AuthzPermissionsDetails: FC<OwnProps> = ({ permissions, node }) => {
   return (
     <div className="pl-2 pt-2">
       <div className={labelStyle}>Granter:</div>
-      <Link className={linkStyle} href={`/networks/${node?.chain.id}/address/${permissions.granter}/passport`}>
+      <Link className={linkStyle} href={`/networks/${node?.chain.name}/address/${permissions.granter}/passport`}>
         {permissions.granter}
       </Link>
       <div className={labelStyle}>Grantee:</div>
-      <Link className={linkStyle} href={`/networks/${node?.chain.id}/address/${permissions.grantee}/passport`}>
+      <Link className={linkStyle} href={`/networks/${node?.chain.name}/address/${permissions.grantee}/passport`}>
         {permissions.grantee}
       </Link>
       <div className={labelStyle}>Authorization:</div>

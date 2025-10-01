@@ -11,13 +11,13 @@ interface OwnProps {
     txHash: string;
     blockHeight: string;
   };
-  chainId: number;
+  chainName: string;
 }
 
-const DelegatedEventsItem: FC<OwnProps> = ({ chainId, item }) => {
+const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
 
-  const txLink = `/networks/${chainId}/tx/${item.txHash}`;
-  const accountLink = `/networks/${chainId}/address/${item.address}/passport`
+  const txLink = `/networks/${chainName}/tx/${item.txHash}`;
+  const accountLink = `/networks/${chainName}/address/${item.address}/passport`
 
   return (
     <tr className="group cursor-pointer hover:bg-bgHover">

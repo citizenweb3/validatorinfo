@@ -10,8 +10,8 @@ interface OwnProps {
 }
 
 const ValidatorVotesItem: FC<OwnProps> = ({ item, validatorId }) => {
-  const proposalLink = `/networks/${item.chain.id}/proposal/${item.proposalId}`;
-  const chainLink = `/networks/${item.chain.id}/overview`;
+  const proposalLink = `/networks/${item.chain.name}/proposal/${item.proposalId}`;
+  const chainLink = `/networks/${item.chain.name}/overview`;
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">

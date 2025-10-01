@@ -10,14 +10,14 @@ interface OwnProps {
 }
 
 const NodeVotesItem: FC<OwnProps> = ({ item }) => {
-  const proposalLink = `/networks/${item.chainDbId}/proposal/${item.proposalId}`;
+  const proposalLink = `/networks/${item.chainName}/proposal/${item.proposalId}`;
 
   return (
     <tr className="group cursor-pointer hover:bg-bgHover">
       <td className="w-2/6 border-b border-black py-4 hover:text-highlight active:border-bgSt">
         <Link href={proposalLink} className="flex items-center gap-1">
           <Image src={colorStylization.getVotesIcon(item.vote)} alt={`${item.vote}`} width={30} height={30} />
-          <div className="font-handjet text-xl text-highlight mx-4">{`#${item.proposalId}`}</div>
+          <div className="mx-4 font-handjet text-xl text-highlight">{`#${item.proposalId}`}</div>
           <div className="font-sfpro text-base">{item.title}</div>
         </Link>
       </td>
