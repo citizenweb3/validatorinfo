@@ -1,6 +1,6 @@
-import { SortDirection } from '@/server/types';
 import { Proposal, ProposalStatus } from '@prisma/client';
 import db from '@/db';
+import { SortDirection } from '@/server/types';
 
 const getListByChainId = async (chainId: number): Promise<Proposal[]> => {
   return db.proposal.findMany({ where: { chainId } });
@@ -37,23 +37,27 @@ const getPastProposalsByChainId = async (
 };
 
 const getProposalById = async (chainId: number, proposalId: string): Promise<Proposal | null> => {
-  return db.proposal.findUnique(
-    {
-      where: {
-        chainId_proposalId: {
-          chainId: chainId,
-          proposalId: proposalId,
-        },
+  return db.proposal.findUnique({
+    where: {
+      chainId_proposalId: {
+        chainId: chainId,
+        proposalId: proposalId,
       },
     },
-  );
+  });
 };
 
+const getListByChainName = async (chainName: string): Promise<Proposal[]> => {
+  const chain = await db.chain.findUnique({ where: { name: chainName } });
+  if (!chain) return [];
+  return db.proposal.findMany({ where: { chainId: chain.id } });
+};
 
 const ProposalService = {
   getPastProposalsByChainId,
   getListByChainId,
   getProposalById,
+  getListByChainName,
 };
 
 export default ProposalService;

@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { FC } from 'react';
 import Link from 'next/link';
+import { FC } from 'react';
+
 import FallbackImage from '@/components/common/image-downloader-fallback';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 
@@ -10,9 +11,7 @@ interface OwnProps {
     rightIconUrl: string;
   };
   node?: validatorNodesWithChainData | undefined;
-
 }
-
 
 const NodeProfileStory: FC<OwnProps> = ({ icons, node }) => {
   const iconSizes =
@@ -69,10 +68,9 @@ const NodeProfileStory: FC<OwnProps> = ({ icons, node }) => {
         "
       >
         <div className={`relative ${iconSizes}`}>
-          <Link href={`/networks/${node?.chainId}/overview`}>
+          <Link href={`/networks/${node?.chain.name}/overview`}>
             <FallbackImage src={icons.rightIconUrl} alt="Validator" fill className="rounded-full object-contain" />
           </Link>
-
         </div>
       </div>
     </div>

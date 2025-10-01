@@ -13,12 +13,12 @@ interface OwnProps {
     timeStamp: string;
     blockHeight: string;
   };
-  chainId: number;
+  chainName: string;
   isCopy?: boolean;
 }
 
 
-const NodeTxsItem: FC<OwnProps> = ({ item, chainId, isCopy = true }) => {
+const NodeTxsItem: FC<OwnProps> = ({ item, chainName, isCopy = true }) => {
   const getSquareIcon = () => {
     switch (item.typeOfTx) {
       case 'Send':
@@ -32,7 +32,7 @@ const NodeTxsItem: FC<OwnProps> = ({ item, chainId, isCopy = true }) => {
     }
   };
   
-  const link = `/networks/${chainId}/tx/${item.txHash}`;
+  const link = `/networks/${chainName}/tx/${item.txHash}`;
 
   return (
     <tr className="group cursor-pointer hover:bg-bgHover">

@@ -34,7 +34,12 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
           {t('show same opinion')}
         </RoundedButton>
       </div>
-      <NodeVotes page={'VotingSummaryPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} operatorAddress={operatorAddress} />
+      <NodeVotes
+        page={'VotingSummaryPage'}
+        perPage={perPage}
+        currentPage={currentPage}
+        sort={{ sortBy, order }}
+        operatorAddress={operatorAddress} />
     </div>
   );
 };

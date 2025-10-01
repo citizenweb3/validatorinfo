@@ -4,16 +4,19 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import React, { FC } from 'react';
 
 import TextLink from '@/components/common/text-link';
 import { emitWindowEvent } from '@/hooks/useWindowEvent';
 
-const ConsolePanel = () => {
+interface OwnProps {
+  chainName: string;
+}
+
+const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
   const t = useTranslations('HomePage.ConsolePanel');
   const pathname = usePathname();
 
-  const networkId = Math.floor(Math.random() * 20) + 1;
   const validatorId = Math.floor(Math.random() * 1000) + 1;
 
   return (
@@ -323,7 +326,7 @@ const ConsolePanel = () => {
           </div>
 
           <div className="absolute bottom-[35%] right-[6%] flex items-center gap-[3%]">
-            <Link href={`/networks/${networkId}/overview`}>
+            <Link href={`/networks/${chainName}/overview`}>
               <div className="flex flex-row items-end">
                 <div className="h-16 w-16 bg-gameboy_b_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_b_btn_h active:bg-gameboy_b_btn_a" />
                 <span className="-mb-5 -rotate-45 font-handjet text-lg">B</span>

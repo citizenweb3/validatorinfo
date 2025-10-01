@@ -1,10 +1,11 @@
 import { getTranslations } from 'next-intl/server';
+
 import DelegatedTable from '@/app/validators/[id]/[operatorAddress]/rich_list/delegated-table/delegated-table';
 import SwitchClient from '@/components/common/switch-client';
+import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
-import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -17,9 +18,9 @@ interface PageProps {
 const defaultPerPage = 1;
 
 const RichListPage: NextPageWithLocale<PageProps> = async ({
-    params: { locale, id, operatorAddress },
-    searchParams: q,
-  }) => {
+  params: { locale, id, operatorAddress },
+  searchParams: q,
+}) => {
   const t = await getTranslations({ locale, namespace: 'RichListPage' });
 
   const validatorId = parseInt(id);
@@ -39,8 +40,13 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
         <SwitchClient value={true} />
         <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
       </div>
-      <DelegatedTable chainId={node?.chainId ?? 1} page={'RichListPage'} perPage={perPage} currentPage={currentPage}
-                      sort={{ sortBy, order }} />
+      <DelegatedTable
+        chainName={node?.chain.name ?? 'cosmoshub'}
+        page={'RichListPage'}
+        perPage={perPage}
+        currentPage={currentPage}
+        sort={{ sortBy, order }}
+      />
     </div>
   );
 };

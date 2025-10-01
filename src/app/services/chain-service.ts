@@ -5,7 +5,7 @@ import { SortDirection } from '@/server/types';
 import ChainWhereInput = Prisma.ChainWhereInput;
 
 export type ChainWithParams = Prisma.ChainGetPayload<{ include: { params: true } }>;
-export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { params: true, tokenomics: true } }>;
+export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { params: true; tokenomics: true } }>;
 
 export type NetworkValidatorsWithNodes = Node & {
   validator: {
@@ -59,6 +59,13 @@ const getTokenPriceByChainId = async (chainId: number): Promise<Price | null> =>
 const getById = async (id: number): Promise<ChainWithParamsAndTokenomics | null> => {
   return db.chain.findUnique({
     where: { id },
+    include: { params: true, tokenomics: true },
+  });
+};
+
+const getByName = async (name: string): Promise<ChainWithParamsAndTokenomics | null> => {
+  return db.chain.findUnique({
+    where: { name },
     include: { params: true, tokenomics: true },
   });
 };
@@ -181,12 +188,18 @@ const getListByEcosystem = async (ecosystem: string) => {
   });
 };
 
+const getAllLight = async () => {
+  return db.chain.findMany({});
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
   getById,
   getChainValidatorsWithNodes,
   getListByEcosystem,
+  getByName,
+  getAllLight,
 };
 
 export default ChainService;

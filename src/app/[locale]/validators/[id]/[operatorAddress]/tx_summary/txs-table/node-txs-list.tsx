@@ -9,16 +9,16 @@ interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
-  chainId: number;
+  chainName: string;
 }
 
-const NodeTxsList: FC<OwnProps> = async ({ chainId, sort, perPage, currentPage = 1 }) => {
+const NodeTxsList: FC<OwnProps> = async ({ chainName, sort, perPage, currentPage = 1 }) => {
   const pages = 1;
 
   return (
     <tbody>
     {nodeTxsExample.map((item) => (
-      <NodeTxsItem key={item.txHash} item={item} chainId={chainId} />
+      <NodeTxsItem key={item.txHash} item={item} chainName={chainName} />
     ))}
     <tr>
       <td colSpan={5} className="pt-4">

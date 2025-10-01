@@ -84,7 +84,7 @@ model Chain {
   ecosystem      String  @db.VarChar(256)
   chainId        String  @unique @map("chain_id") @db.VarChar(256)
   rang           Int
-  name           String  @db.VarChar(256)
+  name           String  @unique @db.VarChar(256)
   prettyName     String  @map("pretty_name") @db.VarChar(256)
   logoUrl        String  @map("logo_url")
   coinGeckoId    String  @map("coingecko_id") @db.VarChar(64)

@@ -41,7 +41,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
               <SearchItem
                 key={chain.id}
                 name={chain.prettyName}
-                link={`/networks/${chain.id}/overview`}
+                link={`/networks/${chain.name}/overview`}
                 icon={chain.logoUrl ?? icons.AvatarIcon}
                 isSelected={activeIndex === (results.validators.length ?? 0) + index}
                 onClick={onSelect}
@@ -58,7 +58,7 @@ const SearchList: FC<OwnProps> = ({ results, activeIndex, onSelect }) => {
               <SearchItem
                 key={chain.id}
                 name={chain.params?.denom ?? ''}
-                link={`/networks/${chain.id}/tokenomics`}
+                link={`/networks/${chain.name}/tokenomics`}
                 icon={chain.logoUrl ?? icons.AvatarIcon}
                 isSelected={activeIndex === (results.validators.length ?? 0) + (results.chains.length ?? 0) + index}
                 onClick={onSelect}
