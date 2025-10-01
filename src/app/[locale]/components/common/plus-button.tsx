@@ -8,7 +8,7 @@ const sizes: Record<Size, string> = {
   base: 'h-8 w-8 min-h-8 min-w-8',
   md: 'h-10 w-10 min-h-10 min-w-10',
   lg: 'h-20 w-20 min-h-20 min-w-20',
-  xl: 'h-24 w-24 min-h-24 min-w-24',
+  xl: 'h-28 w-28 min-h-28 min-w-28',
 };
 
 interface OwnProps {

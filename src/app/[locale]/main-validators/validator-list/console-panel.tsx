@@ -21,13 +21,12 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
 
   return (
     <div className="w-full">
-      <div className="relative aspect-[1000/2100] h-full w-full rounded-lg">
+      <div className="relative aspect-[1000/2100] w-full rounded-lg">
         <Image
           src="/img/stories/main-story.png"
-          width={904}
-          height={1856}
+          fill
           alt="main-story"
-          className="object-cover object-center"
+          className="object-contain"
           priority
         />
 
