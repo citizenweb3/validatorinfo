@@ -382,7 +382,7 @@ union: {
     coinType: 118,
     denom: 'U',
     minimalDenom: 'au',
-    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/union/images/union.png',
+    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/union/images/u.svg',
     chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/union',
     nodes: [
         // Public via Lava (primary)
