@@ -8,6 +8,7 @@ import AiGeneratedSummary from '@/app/networks/[id]/proposal/[proposalId]/ai-gen
 import { getTranslations } from 'next-intl/server';
 import SubDescription from '@/components/sub-description';
 import ProposalService from '@/services/proposal-service';
+import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -23,7 +24,14 @@ export default async function ProposalLayout({ children, params: { locale, id, p
 
   return (
     <>
-      <PageTitle text={`#${proposalId} ${proposal?.title}`} prefix={`${t('title')}:`} />
+      <PageTitle
+        text={`${t('title')}:`}
+        suffix={
+          <Link href={`/networks/${chainId}/overview/`} className="text-highlight hover:underline">
+            {chain?.prettyName}
+          </Link>
+        }
+      />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <ProposalInformation proposal={proposal} />
       <ProposalMetrics proposal={proposal} chain={chain} />

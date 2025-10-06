@@ -5,12 +5,13 @@ interface OwnProps {
   href: string;
   content: ReactNode | string;
   target?: React.HTMLAttributeAnchorTarget;
+  className?: string;
 }
 
 const TextLink: FC<OwnProps> = ({ href, content, target = '_self' }) => {
   return (
     <Link href={href} target={target} className="underline hover:no-underline">
-      {content}
+       {content}
     </Link>
   );
 };

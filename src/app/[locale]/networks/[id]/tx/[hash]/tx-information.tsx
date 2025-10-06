@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+  import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import { txExample } from '@/app/networks/[id]/tx/txExample';
 import Tooltip from '@/components/common/tooltip';

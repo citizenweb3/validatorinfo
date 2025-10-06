@@ -4,6 +4,7 @@ import { FC } from 'react';
 
 import icons from '@/components/icons';
 import cutHash from '@/utils/cut-hash';
+import CopyButton from '@/components/common/copy-button';
 
 interface OwnProps {
   item: {
@@ -13,9 +14,11 @@ interface OwnProps {
     blockHeight: string;
   };
   chainId: number;
+  isCopy?: boolean;
+
 }
 
-const AccountTransactionsItem: FC<OwnProps> = ({ item, chainId }) => {
+const AccountTransactionsItem: FC<OwnProps> = ({ item, chainId, isCopy = true}) => {
   const getSquareIcon = () => {
     switch (item.typeOfTx) {
       case 'Send':
@@ -41,11 +44,15 @@ const AccountTransactionsItem: FC<OwnProps> = ({ item, chainId }) => {
           <div className="flex-grow text-center">{item.typeOfTx}</div>
         </Link>
       </td>
-      <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
-        <Link href={link} className="flex justify-center">
-          <div
-            className="text-center font-handjet text-lg underline underline-offset-3">{cutHash({ value: item.txHash })}</div>
-        </Link>
+      <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt" >
+        <div className="flex justify-center">
+          <Link href={link} className="flex justify-center">
+            <div
+              className="text-center font-handjet text-lg underline underline-offset-3">{cutHash({ value: item.txHash })}
+            </div>
+          </Link>
+            {isCopy && <CopyButton value={item.txHash} size="md" />}
+        </div>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <Link href={link} className="flex justify-center">
@@ -53,9 +60,13 @@ const AccountTransactionsItem: FC<OwnProps> = ({ item, chainId }) => {
         </Link>
       </td>
       <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
-        <Link href={link} className="flex justify-center">
-          <div className="font-handjet text-lg text-center">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
-        </Link>
+        <div className="flex justify-center">
+          <Link href={link} className="flex justify-center">
+            <div className="font-handjet text-lg text-center">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
+          </Link>
+          {isCopy && <CopyButton value={item.blockHeight} size="md" />}
+        </div>
+
       </td>
     </tr>
   );

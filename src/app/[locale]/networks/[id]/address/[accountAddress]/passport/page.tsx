@@ -6,6 +6,8 @@ import PassportInformation from '@/app/networks/[id]/address/[accountAddress]/pa
 import Merits from '@/app/networks/[id]/address/[accountAddress]/passport/merits';
 import Delegations from '@/app/networks/[id]/address/[accountAddress]/passport/delegations-table/delegations';
 import SubTitle from '@/components/common/sub-title';
+import chainService from '@/services/chain-service';
+import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -28,10 +30,18 @@ const AccountPassportPage: NextPageWithLocale<PageProps> = async (
   }) => {
   const t = await getTranslations({ locale, namespace: 'AccountPage.Passport' });
   const chainId = parseInt(id);
+  const chain = await chainService.getById(chainId);
 
   return (
     <div className="mb-24">
-      <PageTitle text={t('title')} />
+      <PageTitle
+        text={t('title')}
+        prefix={
+          <Link href={`/networks/${chainId}/overview/`} className="text-highlight hover:underline">
+            {chain?.prettyName}
+          </Link>
+        }
+      />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <PassportInformation accountAddress={accountAddress} />
       <div className="my-12">

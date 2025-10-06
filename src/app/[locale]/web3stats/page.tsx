@@ -13,6 +13,7 @@ import { mainTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import { Locale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
+import TextLink from '@/components/common/text-link';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -41,7 +42,11 @@ export default async function GlobalPosPage() {
         alt="Pixelated, 90s game-style characters riding roller coaster of web3 charts and statistics"
       />
       <TabList page="HomePage" tabs={mainTabs} />
-      <PageTitle text={t('title')} />
+      <PageTitle
+        text={t.rich('title', {
+        link: (text) => <TextLink content={text} href="/ecosystems"  target="_blank" />,
+      })}
+      />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <Suspense fallback={<div />}>
         <TotalsList />
