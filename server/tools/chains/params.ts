@@ -72,7 +72,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'provider',
     bech32Prefix: 'cosmos',
     coinDecimals: 6,
-    coinGeckoId: 'cosmos',
+    coinGeckoId: '',
     coinType: 118,
     denom: 'ATOM',
     minimalDenom: 'uatom',
@@ -136,6 +136,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/likecoin/',
     twitterUrl: 'https://twitter.com/likecoin',
   },
+
   stride: {
     rang: 2,
     name: 'stride',
@@ -159,6 +160,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/Stride-Labs',
     twitterUrl: 'https://twitter.com/stride_zone',
   },
+
   quicksilver: {
     rang: 3,
     name: 'quicksilver',
@@ -190,7 +192,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'rhye-3',
     bech32Prefix: 'quick',
     coinDecimals: 6,
-    coinGeckoId: 'quicksilver',
+    coinGeckoId: '',
     coinType: 118,
     denom: 'QCK',
     minimalDenom: 'uqck',
@@ -230,6 +232,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/UptickNetwork',
     twitterUrl: 'https://twitter.com/Uptickproject',
   },
+
   gravitybridge: {
     rang: 4,
     name: 'gravitybridge',
@@ -253,6 +256,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/Gravity-Bridge',
     twitterUrl: 'https://twitter.com/gravity_bridge',
   },
+
   neutron: {
     rang: 4,
     name: 'neutron',
@@ -277,6 +281,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/neutron-org',
     twitterUrl: 'https://x.com/neutron_org',
   },
+
   'neutron-testnet': {
     rang: 4,
     name: 'neutron-testnet',
@@ -302,6 +307,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/neutron-org',
     twitterUrl: 'https://x.com/neutron_org',
   },
+
   dymension: {
     rang: 4,
     name: 'dymension',
@@ -325,6 +331,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/dymensionxyz',
     twitterUrl: 'https://x.com/dymension',
   },
+
   althea: {
     rang: 4,
     name: 'althea',
@@ -348,6 +355,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/althea-net',
     twitterUrl: 'https://twitter.com/AltheaNetwork',
   },
+
   atomone: {
     rang: 4,
     name: 'atomone',
@@ -371,6 +379,7 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/atomone-hub',
     twitterUrl: 'https://x.com/_atomone',
   },
+
 union: {
     rang: 4,
     name: 'union',
@@ -414,6 +423,7 @@ union: {
     githubUrl: 'https://github.com/unionlabs',
     twitterUrl: 'https://twitter.com/union_build',
 },
+
   axone: {
     rang: 4,
     name: 'axone',
@@ -640,6 +650,7 @@ union: {
     githubUrl: 'https://github.com/anoma',
     twitterUrl: 'https://x.com/namada',
   },
+
   bostrom: {
     rang: 4,
     name: 'bostrom',
@@ -663,6 +674,7 @@ union: {
     githubUrl: 'https://github.com/cybercongress/cyberd',
     twitterUrl: 'https://twitter.com/cyber_devs',
   },
+
   symphony: {
     rang: 5,
     name: 'symphony',
@@ -774,6 +786,7 @@ union: {
     githubUrl: 'https://github.com/greatweb',
     twitterUrl: 'https://x.com/SpacePussy_ai',
   },
+
   osmosis: {
     rang: 1,
     name: 'osmosis',
@@ -797,6 +810,7 @@ union: {
     githubUrl: 'https://github.com/osmosis-labs',
     twitterUrl: 'https://twitter.com/osmosiszone',
   },
+
   nomic: {
     rang: 5,
     name: 'nomic',
@@ -820,6 +834,7 @@ union: {
     githubUrl: 'https://github.com/nomic-io',
     twitterUrl: 'https://x.com/nomicbtc',
   },
+
   nillion: {
     rang: 5,
     name: 'nillion',
@@ -844,6 +859,7 @@ union: {
     githubUrl: 'https://github.com/NillionNetwork',
     twitterUrl: 'https://twitter.com/nillionnetwork',
   },
+
   nym: {
     rang: 5,
     name: 'nym',
@@ -872,6 +888,7 @@ union: {
     twitterUrl: 'https://x.com/nymproject',
     genesis: 'https://nymtech.net/genesis/genesis.json',
   },
+
   'warden-testnet': {
     rang: 5,
     name: 'warden-testnet',
@@ -905,6 +922,7 @@ union: {
     githubUrl: 'https://github.com/warden-protocol',
     twitterUrl: 'https://x.com/wardenprotocol',
   },
+
   'namada-testnet': {
     rang: 4,
     ecosystem: 'namada',
@@ -968,6 +986,7 @@ union: {
     githubUrl: 'https://github.com/anoma',
     twitterUrl: 'https://x.com/namada',
   },
+
   solana: {
     rang: 1,
     ecosystem: 'solana',
@@ -998,6 +1017,7 @@ union: {
     githubUrl: 'https://github.com/solana-labs',
     twitterUrl: 'https://x.com/namada',
   },
+
   'ethereum-sepolia': {
     rang: 1,
     ecosystem: 'ethereum',
@@ -1067,6 +1087,7 @@ union: {
       'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
     ],
   },
+
   polkadot: {
     rang: 1,
     ecosystem: 'polkadot',
