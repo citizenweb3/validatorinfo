@@ -3,10 +3,11 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React, { FC } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import React, { FC, useState } from 'react';
 
 import TextLink from '@/components/common/text-link';
+import MenuOverlay from '@/components/navigation-bar/menu-overlay';
 import { emitWindowEvent } from '@/hooks/useWindowEvent';
 
 interface OwnProps {
@@ -16,19 +17,33 @@ interface OwnProps {
 const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
   const t = useTranslations('HomePage.ConsolePanel');
   const pathname = usePathname();
+  const router = useRouter();
+
+  const onMenuClose = () => setMenuVisible(false);
+
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [selectedHref, setSelectedHref] = useState<string | null>(null);
+
+  const onStartClick = () => {
+    if (selectedHref) {
+      router.push(selectedHref);
+    }
+  };
+
+  const handleMenuClose = () => {
+    setMenuVisible(false);
+  };
+
+  const handleMenuUpdate = (href: string) => {
+    setSelectedHref(href);
+  };
 
   const validatorId = Math.floor(Math.random() * 1000) + 1;
 
   return (
     <div className="w-full">
       <div className="relative aspect-[1000/2100] w-full rounded-lg">
-        <Image
-          src="/img/stories/main-story.png"
-          fill
-          alt="main-story"
-          className="object-contain"
-          priority
-        />
+        <Image src="/img/stories/main-story.png" fill alt="main-story" className="object-contain" priority />
 
         <div
           className="absolute"
@@ -205,8 +220,6 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
             width: '100%',
             height: '11%',
           }}
-          onMouseEnter={() => emitWindowEvent('section:hover', 'navbar')}
-          onMouseLeave={() => emitWindowEvent('section:hover', null)}
         >
           <div className="h-full w-full pl-[25%] pt-[7%]">
             <h3 className="font-handjet text-lg text-highlight">
@@ -294,35 +307,17 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
           <div className="absolute bottom-[40%] left-[10%] h-28 w-28 bg-d_pad bg-contain bg-center bg-no-repeat" />
 
           <div className="absolute bottom-[25%] left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-[30%]">
-            <Link
-              href="/"
-              onClick={() => {
-                if (pathname === '/') {
-                  window.location.reload();
-                }
-              }}
-              scroll={true}
-            >
-              <div className="flex flex-row items-end">
-                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
-                <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
-              </div>
-            </Link>
-
-            <Link
-              href="/"
-              onClick={() => {
-                if (pathname === '/') {
-                  window.location.reload();
-                }
-              }}
-              scroll={true}
-            >
-              <div className="flex flex-row items-end">
-                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
-                <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
-              </div>
-            </Link>
+            <div className="flex flex-row items-end" onClick={onStartClick}>
+              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+              <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
+            </div>
+            <div className="flex flex-row items-end" onClick={onMenuClose}>
+              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+              <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
+            </div>
+          </div>
+          <div className="absolute bottom-[12%] left-[19%]">
+            <MenuOverlay visible={menuVisible} onClose={onMenuClose} onTabSelect={handleMenuUpdate} />
           </div>
 
           <div className="absolute bottom-[35%] right-[6%] flex items-center gap-[3%]">
