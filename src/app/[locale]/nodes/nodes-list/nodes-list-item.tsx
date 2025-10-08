@@ -65,7 +65,7 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td
         className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
-        <Link href={`/networks/${item.chainId}/overview`}>
+        <Link href={`/networks/${item.chain.name}/overview`}>
           <div className="text-center">{item.chain.prettyName}</div>
         </Link>
       </td>

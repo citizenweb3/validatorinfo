@@ -95,6 +95,11 @@ export interface NodesRewards {
   rewards: string | null;
 }
 
+export interface DelegatorsAmount {
+  address: string;
+  amount: number;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -119,6 +124,7 @@ export type GetCirculatingTokensOnchain = (
   communityPool?: string,
 ) => Promise<string | null>;
 export type GetCirculatingTokensPublic = (chain: AddChainProps) => Promise<string | null>;
+export type GetDelegatorsAmount = (chain: AddChainProps) => Promise<DelegatorsAmount[]>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -140,4 +146,5 @@ export interface ChainMethods {
   getInflationRate: GetInflationRate;
   getCirculatingTokensOnchain: GetCirculatingTokensOnchain;
   getCirculatingTokensPublic: GetCirculatingTokensPublic;
+  getDelegatorsAmount: GetDelegatorsAmount;
 }

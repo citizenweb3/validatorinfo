@@ -182,50 +182,50 @@ export const getPassportAuthzTabs = (id: number, operatorAddress: string): TabOp
   ];
 };
 
-export const getNetworkProfileTabs = (id: number): TabOptions[] => {
+export const getNetworkProfileTabs = (networkName: string): TabOptions[] => {
   return [
     {
       name: 'Governance',
-      href: `/networks/${id}/governance`,
+      href: `/networks/${networkName}/governance`,
       icon: icons.GovernanceIcon,
       iconHovered: icons.GovernanceIconHovered,
     },
     {
       name: 'Stats',
-      href: `/networks/${id}/stats`,
+      href: `/networks/${networkName}/stats`,
       icon: icons.StatisticsIcon,
       iconHovered: icons.StatisticsIconHovered,
     },
     {
       name: 'Overview',
-      href: `/networks/${id}/overview`,
+      href: `/networks/${networkName}/overview`,
       icon: icons.NetworkPassportIcon,
       iconHovered: icons.NetworkPassportIconHovered,
     },
     {
       name: 'Dev',
-      href: `/networks/${id}/dev`,
+      href: `/networks/${networkName}/dev`,
       icon: icons.DevInfoIcon,
       iconHovered: icons.DevInfoIconHovered,
     },
     {
       name: 'Tokenomics',
-      href: `/networks/${id}/tokenomics`,
+      href: `/networks/${networkName}/tokenomics`,
       icon: icons.TokenomicsIcon,
       iconHovered: icons.TokenomicsIconHovered,
     },
   ];
 };
 
-export const getTxInformationTabs = (id: number, txHash: string): TabOptions[] => {
+export const getTxInformationTabs = (networkName: string, txHash: string): TabOptions[] => {
   return [
     {
       name: 'Expand',
-      href: `/networks/${id}/tx/${txHash}/expand`,
+      href: `/networks/${networkName}/tx/${txHash}/expand`,
     },
     {
       name: 'JSON',
-      href: `/networks/${id}/tx/${txHash}/json`,
+      href: `/networks/${networkName}/tx/${txHash}/json`,
     },
   ];
 };
@@ -238,35 +238,35 @@ export const libraryTabs: TabOptions[] = [
   { name: 'Curious', href: '/library/curious', icon: icons.CuriousIcon, iconHovered: icons.CuriousIconHovered },
 ];
 
-export const getAccountTabs = (id: number, accountAddress: string): TabOptions[] => {
+export const getAccountTabs = (networkName: string, accountAddress: string): TabOptions[] => {
   return [
     {
       name: 'Transactions',
-      href: `/networks/${id}/address/${accountAddress}/transactions`,
+      href: `/networks/${networkName}/address/${accountAddress}/transactions`,
       icon: icons.TxSummary,
       iconHovered: icons.TxSummaryHovered,
     },
     {
       name: 'Tokens',
-      href: `/networks/${id}/address/${accountAddress}/tokens`,
+      href: `/networks/${networkName}/address/${accountAddress}/tokens`,
       icon: icons.WalletIcon,
       iconHovered: icons.WalletIconHovered,
     },
     {
       name: 'Passport',
-      href: `/networks/${id}/address/${accountAddress}/passport`,
+      href: `/networks/${networkName}/address/${accountAddress}/passport`,
       icon: icons.NetworkPassportIcon,
       iconHovered: icons.NetworkPassportIcon,
     },
     {
       name: 'Governance',
-      href: `/networks/${id}/address/${accountAddress}/governance`,
+      href: `/networks/${networkName}/address/${accountAddress}/governance`,
       icon: icons.GovernanceIcon,
       iconHovered: icons.GovernanceIconHovered,
     },
     {
       name: 'Analytics',
-      href: `/networks/${id}/address/${accountAddress}/analytics`,
+      href: `/networks/${networkName}/address/${accountAddress}/analytics`,
       icon: icons.StatisticsIcon,
       iconHovered: icons.StatisticsIconHovered,
     },

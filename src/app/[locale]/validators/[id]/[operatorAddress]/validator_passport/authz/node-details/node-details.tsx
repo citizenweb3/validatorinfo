@@ -40,7 +40,7 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
                          isCopy />
         <NodeDetailsItem label={t('account address')}
                          value={node.operatorAddress}
-                         link={`/networks/${node.chain.id}/address/${node.operatorAddress}/passport`}
+                         link={`/networks/${node.chain.name}/address/${node.operatorAddress}/passport`}
                          isCopy />
         <NodeDetailsItem label={t('identity')}
                          value={node.identity}
@@ -48,11 +48,11 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
                          isCopy />
         <NodeDetailsItem label={t('validator address')}
                          value={node.operatorAddress}
-                         link={`/networks/${node.chain.id}/address/${node.operatorAddress}/passport`}
+                         link={`/networks/${node.chain.name}/address/${node.operatorAddress}/passport`}
                          isCopy />
         <NodeDetailsItem label={t('reward address')}
                          value={node.operatorAddress}
-                         link={`/networks/${node.chain.id}/address/${node.operatorAddress}/passport`}
+                         link={`/networks/${node.chain.name}/address/${node.operatorAddress}/passport`}
                          isCopy />
       </div>
       <div className="mt-2 flex border-b border-bgSt">

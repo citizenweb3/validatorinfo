@@ -38,7 +38,7 @@ const TxSummaryPage: NextPageWithLocale<PageProps> = async ({ params: { locale, 
   return (
     <div className="mb-14">
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <NodeTxs chainId={node?.chainId ?? 1}
+      <NodeTxs chainName={node?.chain.name ?? 'cosmoshub'}
                page={'TxSummaryPage'}
                perPage={perPage}
                currentPage={currentPage}

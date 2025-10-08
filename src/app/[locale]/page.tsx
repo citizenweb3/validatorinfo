@@ -9,6 +9,7 @@ import { mainTabs } from '@/components/common/tabs/tabs-data';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
+import chainService from '@/services/chain-service';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -26,6 +27,10 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
   const sortBy = (q.sortBy as 'moniker' | 'nodes' | undefined) ?? undefined;
   const order = (q.order as SortDirection) ?? 'asc';
+
+  const chains = await chainService.getAllLight();
+  const chanId = Math.floor(Math.random() * 20);
+  const chain = chains.find((chain) => chanId === chain.id);
 
   return (
     <div>
@@ -48,7 +53,7 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
             </div>
           </div>
           <div className="ml-4 flex-[58%]">
-            <ConsolePanel />
+            <ConsolePanel chainName={chain?.name ?? 'cosmoshub'} />
           </div>
         </div>
       </div>

@@ -1,12 +1,14 @@
+import { VoteOption } from '@prisma/client';
+
 import db from '@/db';
 import { SortDirection } from '@/server/types';
-import { VoteOption } from '@prisma/client';
 
 export interface ValidatorVote {
   chain: {
     id: number;
+    name: string;
     prettyName: string;
-    ecosystem: string
+    ecosystem: string;
   };
   proposalDbId: number;
   proposalId: string;
@@ -26,6 +28,7 @@ export interface ProposalValidatorsVotes {
 
 export interface ChainNodeVote {
   chainDbId: number;
+  chainName: string;
   proposalId: string;
   proposalType: string;
   votingEndTime: Date | null;
@@ -45,10 +48,7 @@ const getValidatorVotes = async (
   const total = await db.nodeVote.count({ where });
   const pages = Math.ceil(total / take);
 
-  const orderBy =
-    sortBy === 'vote'
-      ? [{ vote: order }]
-      : [{ chain: { prettyName: order } }];
+  const orderBy = sortBy === 'vote' ? [{ vote: order }] : [{ chain: { prettyName: order } }];
 
   const rowVotes = await db.nodeVote.findMany({
     where,
@@ -57,7 +57,7 @@ const getValidatorVotes = async (
     orderBy,
     select: {
       vote: true,
-      chain: { select: { id: true, prettyName: true, ecosystem: true } },
+      chain: { select: { id: true, name: true, prettyName: true, ecosystem: true } },
       proposal: {
         select: {
           id: true,
@@ -82,7 +82,7 @@ const getValidatorVotes = async (
 };
 
 export const getProposalValidatorsVotes = async (
-  chainDbId: number,
+  chainName: string,
   proposalPublicId: string,
   skip: number,
   take: number,
@@ -91,8 +91,11 @@ export const getProposalValidatorsVotes = async (
   filter: string = 'all',
   searchValidatorId?: number,
 ): Promise<{ votes: ProposalValidatorsVotes[]; pages: number }> => {
+  const chainDbId = await db.chain.findUnique({ where: { name: chainName } });
+  if (!chainDbId) return { votes: [], pages: 0 };
+
   const proposalDb = await db.proposal.findFirst({
-    where: { chainId: chainDbId, proposalId: proposalPublicId },
+    where: { chainId: chainDbId.id, proposalId: proposalPublicId },
     select: { id: true },
   });
   if (!proposalDb) return { votes: [], pages: 0 };
@@ -113,7 +116,7 @@ export const getProposalValidatorsVotes = async (
 
   const nodeValidators = await db.node.findMany({
     where: {
-      chainId: chainDbId,
+      chainId: chainDbId.id,
       validatorId: { not: null },
     },
     distinct: ['validatorId'],
@@ -156,9 +159,7 @@ export const getProposalValidatorsVotes = async (
     if (sortBy === 'vote') {
       const av = (a.vote ?? VoteOption.UNSPECIFIED) as keyof typeof orderRank;
       const bv = (b.vote ?? VoteOption.UNSPECIFIED) as keyof typeof orderRank;
-      return order === 'asc'
-        ? orderRank[av] - orderRank[bv]
-        : orderRank[bv] - orderRank[av];
+      return order === 'asc' ? orderRank[av] - orderRank[bv] : orderRank[bv] - orderRank[av];
     }
     return order === 'asc'
       ? a.validator.moniker.localeCompare(b.validator.moniker)
@@ -212,7 +213,7 @@ const getChainNodeVotes = async (
     orderBy,
     select: {
       vote: true,
-      chain: { select: { id: true, prettyName: true, ecosystem: true } },
+      chain: { select: { id: true, name: true, prettyName: true, ecosystem: true } },
       proposal: {
         select: {
           id: true,
@@ -231,6 +232,7 @@ const getChainNodeVotes = async (
 
   const votes: ChainNodeVote[] = voteRows.map((vote) => ({
     chainDbId: vote.chain.id,
+    chainName: vote.chain.name,
     proposalId: vote.proposal.proposalId,
     proposalType: vote.proposal.type,
     votingEndTime: vote.proposal.votingEndTime,

@@ -1,12 +1,12 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
-import getMissedBlocks from '@/server/tools/chains/solana/get-missed-blocks';
 import getCirculatingTokensOnchain from '@/server/tools/chains/solana/get-circulating-tokens-onchain';
 import getCirculatingTokensPublic from '@/server/tools/chains/solana/get-circulating-tokens-public';
+import getInflationRate from '@/server/tools/chains/solana/get-inflation-rate';
+import getMissedBlocks from '@/server/tools/chains/solana/get-missed-blocks';
 import getNodes from '@/server/tools/chains/solana/get-nodes';
 import getSlashingParams from '@/server/tools/chains/solana/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/solana/get-staking-params';
 import getTvs from '@/server/tools/chains/solana/get-tvs';
-import getInflationRate from "@/server/tools/chains/solana/get-inflation-rate";
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -46,6 +46,7 @@ const chainMethods: ChainMethods = {
   getCirculatingTokensOnchain,
   getCirculatingTokensPublic,
   getInflationRate,
+  getDelegatorsAmount: async () => [],
 };
 
 export default chainMethods;

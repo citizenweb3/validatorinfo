@@ -5,7 +5,6 @@ import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import cosmosChainMethods from '@/server/tools/chains/cosmoshub/methods';
 import dymensionChainMethods from '@/server/tools/chains/dymension/methods';
 import ethereumChainMethods from '@/server/tools/chains/ethereum/methods';
-import govgenChainMethods from '@/server/tools/chains/govgen/methods';
 import likecoinChainMethods from '@/server/tools/chains/likecoin/methods';
 import namadaChainMethods from '@/server/tools/chains/namada/methods';
 import neutronChainMethods from '@/server/tools/chains/neutron/methods';
@@ -32,14 +31,12 @@ const chainMethods: Record<string, ChainMethods> = {
   bostrom: bostromChainMethods,
   nillion: nillionChainMethods,
   nym: nymChainMethods,
+  symphony: symphonyChainMethods,
 
   // returns 0
   stride: strideChainMethods,
-  govgen: govgenChainMethods,
   neutron: neutronChainMethods,
-  'symphony-testnet': symphonyChainMethods,
 
-  bitcanna: cosmosChainMethods,
   uptick: cosmosChainMethods,
   gravitybridge: cosmosChainMethods,
   althea: cosmosChainMethods,
@@ -52,10 +49,13 @@ const chainMethods: Record<string, ChainMethods> = {
 
   'namada-testnet': namadaChainMethods,
   'neutron-testnet': neutronChainMethods,
-  'artela-testnet': cosmosChainMethods,
   'space-pussy': spacePussyChainMethods,
   'warden-testnet': cosmosChainMethods,
   'ethereum-sepolia': ethereumChainMethods,
+  'cosmoshub-testnet': cosmosChainMethods,
+  'quicksilver-testnet': quicksilverChainMethods,
+  'axone-testnet': cosmosChainMethods,
+  'symphony-testnet': symphonyChainMethods,
 };
 
 const getChainMethods = (chainName: string): ChainMethods => {

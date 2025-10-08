@@ -9,10 +9,10 @@ interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
-  chainId: number;
+  chainName: string;
 }
 
-const NodeTxs: FC<OwnProps> = async ({ chainId, page, perPage, sort, currentPage }) => {
+const NodeTxs: FC<OwnProps> = async ({ chainName, page, perPage, sort, currentPage }) => {
   return (
     <div className="pt-8">
       <table className="w-full table-auto border-collapse">
@@ -24,7 +24,7 @@ const NodeTxs: FC<OwnProps> = async ({ chainId, page, perPage, sort, currentPage
           <TableHeaderItem page={page} name="Block Height" sortField="block height" />
         </tr>
         </thead>
-        <NodeTxsList chainId={chainId} perPage={perPage} sort={sort} currentPage={currentPage} />
+        <NodeTxsList chainName={chainName} perPage={perPage} sort={sort} currentPage={currentPage} />
       </table>
     </div>
   );
