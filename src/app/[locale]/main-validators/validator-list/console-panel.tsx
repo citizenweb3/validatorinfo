@@ -4,9 +4,10 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { FC } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 
 import TextLink from '@/components/common/text-link';
+import MenuOverlay from '@/components/navigation-bar/menu-overlay';
 import { emitWindowEvent } from '@/hooks/useWindowEvent';
 
 interface OwnProps {
@@ -17,29 +18,39 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
   const t = useTranslations('HomePage.ConsolePanel');
   const pathname = usePathname();
 
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [selectedHref, setSelectedHref] = useState<string | null>(null);
+  const [doSelect, setDoSelect] = useState(false);
+
+  const onStartClick = useCallback(() => {
+    if (!menuVisible) {
+      setMenuVisible(true);
+    }
+  }, [menuVisible]);
+
+  const onSelectClick = useCallback(() => {
+    if (menuVisible) {
+      setDoSelect(true);
+    }
+  }, [menuVisible]);
+
+  const onMenuClose = useCallback(() => setMenuVisible(false), []);
+  const handleMenuTabSelect = useCallback((href: string | null) => {
+    setSelectedHref(href);
+  }, []);
+
+  const handleSelectProcessed = useCallback(() => setDoSelect(false), []);
+
   const validatorId = Math.floor(Math.random() * 1000) + 1;
 
   return (
     <div className="w-full">
       <div className="relative aspect-[1000/2100] w-full rounded-lg">
-        <Image
-          src="/img/stories/main-story.png"
-          fill
-          alt="main-story"
-          className="object-contain"
-          priority
-        />
+        <Image src="/img/stories/main-story.png" fill alt="main-story" className="object-contain" priority />
 
         <div
           className="absolute"
-          style={{
-            left: 0,
-            right: 0,
-            top: '3%',
-            zIndex: 1,
-            width: '100%',
-            height: '11%',
-          }}
+          style={{ left: 0, right: 0, top: '3%', zIndex: 1, width: '100%', height: '11%' }}
           onMouseEnter={() => emitWindowEvent('section:hover', 'navbar-arrow')}
           onMouseLeave={() => emitWindowEvent('section:hover', null)}
         >
@@ -51,14 +62,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
 
         <div
           className="absolute"
-          style={{
-            left: 0,
-            right: 0,
-            top: '15%',
-            zIndex: 1,
-            width: '100%',
-            height: '10%',
-          }}
+          style={{ left: 0, right: 0, top: '15%', zIndex: 1, width: '100%', height: '10%' }}
           onMouseEnter={() => emitWindowEvent('section:hover', 'header')}
           onMouseLeave={() => emitWindowEvent('section:hover', null)}
         >
@@ -119,14 +123,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
 
         <div
           className="absolute"
-          style={{
-            left: 0,
-            right: 0,
-            top: '27%',
-            zIndex: 1,
-            width: '100%',
-            height: '10%',
-          }}
+          style={{ left: 0, right: 0, top: '27%', zIndex: 1, width: '100%', height: '10%' }}
           onMouseEnter={() => emitWindowEvent('section:hover', 'tabs')}
           onMouseLeave={() => emitWindowEvent('section:hover', null)}
         >
@@ -146,14 +143,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
 
         <div
           className="absolute"
-          style={{
-            left: 0,
-            right: 0,
-            top: '38%',
-            zIndex: 1,
-            width: '100%',
-            height: '11%',
-          }}
+          style={{ left: 0, right: 0, top: '38%', zIndex: 1, width: '100%', height: '11%' }}
           onMouseEnter={() => emitWindowEvent('section:hover', 'navbar')}
           onMouseLeave={() => emitWindowEvent('section:hover', null)}
         >
@@ -173,16 +163,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
 
         <div
           className="absolute"
-          style={{
-            left: 0,
-            right: 0,
-            top: '48%',
-            zIndex: 1,
-            width: '100%',
-            height: '11%',
-          }}
-          onMouseEnter={() => emitWindowEvent('section:hover', 'navbar')}
-          onMouseLeave={() => emitWindowEvent('section:hover', null)}
+          style={{ left: 0, right: 0, top: '48%', zIndex: 1, width: '100%', height: '11%' }}
         >
           <div className="h-full w-full pl-[9%] pt-[9%]">
             <h3 className="font-handjet text-lg text-highlight">
@@ -195,19 +176,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
           </div>
         </div>
 
-        <div
-          className="absolute"
-          style={{
-            left: 0,
-            right: 0,
-            top: '60%',
-            zIndex: 1,
-            width: '100%',
-            height: '11%',
-          }}
-          onMouseEnter={() => emitWindowEvent('section:hover', 'navbar')}
-          onMouseLeave={() => emitWindowEvent('section:hover', null)}
-        >
+        <div className="absolute" style={{ left: 0, right: 0, top: '60%', zIndex: 1, width: '100%', height: '11%' }}>
           <div className="h-full w-full pl-[25%] pt-[7%]">
             <h3 className="font-handjet text-lg text-highlight">
               {t.rich('Ecosystems and metrics.title', {
@@ -294,35 +263,37 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
           <div className="absolute bottom-[40%] left-[10%] h-28 w-28 bg-d_pad bg-contain bg-center bg-no-repeat" />
 
           <div className="absolute bottom-[25%] left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-[30%]">
-            <Link
-              href="/"
-              onClick={() => {
-                if (pathname === '/') {
-                  window.location.reload();
-                }
-              }}
-              scroll={true}
+            <div
+              className="flex cursor-pointer flex-row items-end"
+              onClick={onStartClick}
+              role="button"
+              tabIndex={0}
+              aria-label="Start"
             >
-              <div className="flex flex-row items-end">
-                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
-                <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
-              </div>
-            </Link>
+              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+              <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
+            </div>
 
-            <Link
-              href="/"
-              onClick={() => {
-                if (pathname === '/') {
-                  window.location.reload();
-                }
-              }}
-              scroll={true}
+            <div
+              className="flex cursor-pointer flex-row items-end"
+              onClick={onSelectClick}
+              role="button"
+              tabIndex={0}
+              aria-label="Close menu"
             >
-              <div className="flex flex-row items-end">
-                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
-                <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
-              </div>
-            </Link>
+              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+              <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
+            </div>
+          </div>
+
+          <div className="absolute md:bottom-[-50%] md:left-[12%] 2xl:bottom-[5%] 2xl:left-[19%]">
+            <MenuOverlay
+              visible={menuVisible}
+              onClose={onMenuClose}
+              onTabSelect={handleMenuTabSelect}
+              doSelect={doSelect}
+              onSelectProcessed={handleSelectProcessed}
+            />
           </div>
 
           <div className="absolute bottom-[35%] right-[6%] flex items-center gap-[3%]">
@@ -340,6 +311,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
               </div>
             </Link>
           </div>
+
           <div className="absolute bottom-[7%] right-[2%] h-36 w-36 bg-loudspeaker bg-contain bg-no-repeat" />
         </div>
       </div>
