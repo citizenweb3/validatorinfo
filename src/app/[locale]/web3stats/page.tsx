@@ -27,6 +27,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 export default async function GlobalPosPage() {
   const t = await getTranslations('GlobalPosPage');
+  const cursor = 'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
   const translations = {
     title: t('title'),
     status: t('status'),
@@ -44,7 +45,16 @@ export default async function GlobalPosPage() {
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle
         text={t.rich('title', {
-        link: (text) => <TextLink content={text} href="/ecosystems"  target="_blank" />,
+        link: (text) =>
+          <TextLink
+            className="ml-2 group flex"
+            content={
+            <>
+              {text}
+              <div className={cursor} />
+            </>
+            }
+            href="/ecosystems"  target="_blank" />,
       })}
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />

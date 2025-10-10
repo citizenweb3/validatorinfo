@@ -31,14 +31,17 @@ const AccountPassportPage: NextPageWithLocale<PageProps> = async (
   const t = await getTranslations({ locale, namespace: 'AccountPage.Passport' });
   const chainId = parseInt(id);
   const chain = await chainService.getById(chainId);
+  const cursor = 'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
+
 
   return (
     <div className="mb-24">
       <PageTitle
         text={t('title')}
         prefix={
-          <Link href={`/networks/${chainId}/overview/`} className="text-highlight hover:underline">
+          <Link href={`/networks/${chainId}/overview/`} className="text-highlight hover:underline group flex">
             {chain?.prettyName}
+            <div className={cursor} />
           </Link>
         }
       />
