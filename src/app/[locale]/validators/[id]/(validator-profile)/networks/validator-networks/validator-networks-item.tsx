@@ -54,7 +54,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
-          <div className="text-center">{fans.toLocaleString('en-US')}</div>
+          <div className="text-center">{item?.delegatorsAmount?.toLocaleString('en-US') ?? `N/A`}</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
