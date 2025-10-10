@@ -304,7 +304,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
               scroll={true}
             >
               <div className="flex flex-row items-end">
-                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+                <div className="h-20 w-20 bg-gameboy_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_btn_h active:bg-gameboy_btn_a" />
                 <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
               </div>
             </Link>
@@ -319,7 +319,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
               scroll={true}
             >
               <div className="flex flex-row items-end">
-                <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+                <div className="h-20 w-20 bg-gameboy_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_btn_h active:bg-gameboy_btn_a" />
                 <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
               </div>
             </Link>

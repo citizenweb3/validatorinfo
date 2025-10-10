@@ -58,7 +58,7 @@ const NavigationBar: FC = () => {
 
   return (
     <div
-      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} hidden md:block relative mt-2 border-transparent pt-6 pb-2 font-handjet transition-all duration-300 ${highlightNavBar}`}
+      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} hidden md:block relative mt-2 border-transparent pt-6 font-handjet transition-all duration-300 h-full ${highlightNavBar}`}
     >
       <div
         className="group absolute -right-6 top-0 z-20 h-full w-6 cursor-pointer bg-opacity-30 from-transparent to-bgSt hover:bg-gradient-to-b"

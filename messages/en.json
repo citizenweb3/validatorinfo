@@ -165,7 +165,7 @@
         "text": "Click Networks to see a comparison table of chains.<br></br>Open a Network profile to see stats including: tokenomics, transactions,<br></br>governance, validators and more."
       },
       "Validators nodes and mining pools": {
-        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and Mining Pools",
+        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and Mining Pools:",
         "text": "Open Validator or Node profiles to see detailed statistics, earnings, projects and more."
       },
       "Ecosystems and metrics": {
@@ -664,9 +664,9 @@
     "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
     "Others Links": "Others Links",
     "Merits": "Merits",
-    "eco tooltip": "text",
-    "keyhole tooltip": "text",
-    "github tooltip": "text",
+    "eco tooltip": "Green Energy",
+    "keyhole tooltip": "Key Sharding via Horcrux",
+    "github tooltip": "Github",
     "place your interview here": "Place Your Interview Here"
   },
   "ValidatorNetworksPage": {

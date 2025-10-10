@@ -664,9 +664,9 @@
     "description": "Децентрализация, расширение возможностей сообществ. Голос Web3 и некастодиальный сервис стейкинга.",
     "Others Links": "Другие ссылки",
     "Merits": "Заслуги",
-    "eco tooltip": "text",
-    "keyhole tooltip": "text",
-    "github tooltip": "text",
+    "eco tooltip": "Зелёная энергия",
+    "keyhole tooltip": "Шардинг ключей через Horcrux",
+    "github tooltip": "Github",
     "place your interview here": "Разместите Cвое Интервью Здесь"
   },
   "ValidatorNetworksPage": {

@@ -50,9 +50,14 @@ const NodeProfileStory: FC<OwnProps> = ({ icons, node }) => {
           bg-background
         "
       >
-        <div className={`relative ${iconSizes}`}>
-          <Link href={`/validators/${node?.validatorId}/networks`}>
-            <FallbackImage src={icons.leftIconUrl} alt="Validator" fill className="rounded-full object-contain" />
+        <div className={`relative ${iconSizes} group/validator`}>
+          <Link href={`/validators/${node?.validatorId}/networks`} className="block">
+            <FallbackImage 
+              src={icons.leftIconUrl} 
+              alt="Validator" 
+              fill 
+              className="rounded-full object-contain group-hover/validator:shadow-2xl transition-shadow duration-200" 
+            />
           </Link>
         </div>
       </div>
@@ -67,9 +72,14 @@ const NodeProfileStory: FC<OwnProps> = ({ icons, node }) => {
           bg-background
         "
       >
-        <div className={`relative ${iconSizes}`}>
-          <Link href={`/networks/${node?.chain.name}/overview`}>
-            <FallbackImage src={icons.rightIconUrl} alt="Validator" fill className="rounded-full object-contain" />
+        <div className={`relative ${iconSizes} group/chain`}>
+          <Link href={`/networks/${node?.chain.name}/overview`} className="block">
+            <FallbackImage 
+              src={icons.rightIconUrl} 
+              alt="Chain" 
+              fill 
+              className="rounded-full object-contain group-hover/chain:shadow-2xl transition-shadow duration-200" 
+            />
           </Link>
         </div>
       </div>
