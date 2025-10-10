@@ -28,7 +28,8 @@ export const additionalTabs: TabOptions[] = [
     iconHovered: icons.ComparisonIconHovered,
   },
   { name: 'Rumors', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Global', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered }];
+  { name: 'Global', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
+];
 
 export const aboutTabs = [
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
@@ -36,7 +37,13 @@ export const aboutTabs = [
   { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
 ];
 
-const NavigationBar: FC = () => {
+interface OwnProps {
+  isGameMenuMode?: boolean;
+  activeSection?: number;
+  activeItem?: number;
+}
+
+const NavigationBar: FC<OwnProps> = ({ isGameMenuMode = false, activeSection = 0, activeItem = 0 }) => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   const [hoverTarget, setHoverTarget] = useState<string | null>(null);
 
@@ -46,47 +53,70 @@ const NavigationBar: FC = () => {
 
   useWindowEvent<string | null>('section:hover', onSectionHover);
 
+  const isItemActive = useCallback(
+    (_tab: TabOptions, idx: number, block: 'main' | 'additional' | 'about'): boolean => {
+      if (!isGameMenuMode) return false;
+      const secIdx = block === 'main' ? 0 : block === 'additional' ? 1 : 2;
+      return secIdx === activeSection && idx === activeItem;
+    },
+    [isGameMenuMode, activeSection, activeItem],
+  );
+
   const highlightNavBar =
-    hoverTarget === 'navbar'
-      ? 'outline outline-2 outline-dottedLine outline-offset-2 duration-0'
-      : 'outline-0';
+    hoverTarget === 'navbar' ? 'outline outline-2 outline-dottedLine outline-offset-2 duration-0' : 'outline-0';
 
   const highlightArrow =
-    hoverTarget === 'navbar-arrow'
-      ? 'outline outline-2 outline-dottedLine outline-offset-2'
-      : 'outline-0';
+    hoverTarget === 'navbar-arrow' ? 'outline outline-2 outline-dottedLine outline-offset-2' : 'outline-0';
 
   return (
     <div
-      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} hidden md:block relative mt-2 border-transparent pt-6 font-handjet transition-all duration-300 h-full ${highlightNavBar}`}
+      tabIndex={-1}
+      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} relative mt-2 hidden h-full border-transparent pt-6 font-handjet transition-all duration-300 md:block ${highlightNavBar}`}
     >
       <div
-        className="group absolute -right-6 top-0 z-20 h-full w-6 cursor-pointer bg-opacity-30 from-transparent to-bgSt hover:bg-gradient-to-b"
+        className={`${isGameMenuMode ? 'hidden' : ''} group absolute -right-6 top-0 z-20 h-full w-6 cursor-pointer from-transparent to-bgSt hover:bg-gradient-to-b`}
         onClick={() => setIsOpened(!isOpened)}
+        aria-hidden={isGameMenuMode}
       >
         <div
           className={`${!isOpened ? 'rotate-180' : ''} absolute -left-1 -top-0 min-h-6 min-w-8 bg-hide bg-contain group-hover:bg-hide_h group-active:bg-hide_a ${highlightArrow}`}
         />
       </div>
-      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>
-        {mainTabs.map((item) => (
-          <NavigationBarItem key={item.name} item={item} isOpened={isOpened} />
+
+      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`} aria-label="Main" role="group">
+        {mainTabs.map((item, i) => (
+          <NavigationBarItem
+            key={item.name}
+            item={item}
+            isOpened={isOpened}
+            highlighted={isItemActive(item, i, 'main')}
+          />
         ))}
       </div>
 
-      <div className="mt-7 mb-5" />
+      <div className="mb-5 mt-7" />
 
-      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>
-        {additionalTabs.map((item) => (
-          <NavigationBarItem key={item.name} item={item} isOpened={isOpened} />
+      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`} aria-label="Additional" role="group">
+        {additionalTabs.map((item, i) => (
+          <NavigationBarItem
+            key={item.name}
+            item={item}
+            isOpened={isOpened}
+            highlighted={isItemActive(item, i, 'additional')}
+          />
         ))}
       </div>
 
-      <div className="mt-7 mb-5" />
+      <div className="mb-5 mt-7" />
 
-      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`}>
-        {aboutTabs.map((item) => (
-          <NavigationBarItem key={item.name} item={item} isOpened={isOpened} />
+      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`} aria-label="About" role="group">
+        {aboutTabs.map((item, i) => (
+          <NavigationBarItem
+            key={item.name}
+            item={item}
+            isOpened={isOpened}
+            highlighted={isItemActive(item, i, 'about')}
+          />
         ))}
       </div>
     </div>
