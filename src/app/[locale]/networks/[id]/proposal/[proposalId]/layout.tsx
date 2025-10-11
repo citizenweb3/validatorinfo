@@ -29,7 +29,7 @@ export default async function ProposalLayout({ children, params: { locale, id, p
     <>
       <PageTitle
         text={`${t('title')}: #${chainId}`}
-        suffix={
+        prefix={
           <Link href={`/networks/${chainId}/overview/`} className="text-highlight hover:underline group flex ">
             {chain?.prettyName}
             <div className={cursor} />
