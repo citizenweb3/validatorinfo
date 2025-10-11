@@ -24,6 +24,7 @@ export default async function TxInformationLayout({ children, params: { locale, 
   const t = await getTranslations({ locale, namespace: 'TxInformationPage' });
   const chain = await chainService.getByName(name);
   const txInformationTabs = getTxInformationTabs(name, hash);
+  const cursor = 'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
 
   return (
     <div className="">
@@ -31,9 +32,10 @@ export default async function TxInformationLayout({ children, params: { locale, 
         prefix={
           <a
             href={`/networks/${chain?.name}/overview`}
-            className="text-highlight hover:underline"
+            className="text-highlight hover:underline flex flex-row group"
           >
             {chain?.prettyName ?? 'Network'}
+            <div className={cursor} />
           </a>
         }
         text={t('title').replace(/^.*?Blockchain /, 'Blockchain ')}

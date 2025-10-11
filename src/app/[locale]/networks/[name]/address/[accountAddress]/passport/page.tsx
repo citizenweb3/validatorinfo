@@ -27,14 +27,17 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 const AccountPassportPage: NextPageWithLocale<PageProps> = async ({ params: { name, accountAddress, locale }, }) => {
   const t = await getTranslations({ locale, namespace: 'AccountPage.Passport' });
   const chain = await chainService.getByName(name);
+  const cursor = 'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
+
 
   return (
     <div className="mb-24">
       <PageTitle
         text={t('title')}
         prefix={
-          <Link href={`/networks/${name}/overview/`} className="text-highlight hover:underline">
+          <Link href={`/networks/${chain?.name}/overview/`} className="text-highlight hover:underline group flex">
             {chain?.prettyName}
+            <div className={cursor} />
           </Link>
         }
       />
