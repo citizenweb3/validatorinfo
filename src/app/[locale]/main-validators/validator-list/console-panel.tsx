@@ -161,10 +161,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
           </div>
         </div>
 
-        <div
-          className="absolute"
-          style={{ left: 0, right: 0, top: '48%', zIndex: 1, width: '100%', height: '11%' }}
-        >
+        <div className="absolute" style={{ left: 0, right: 0, top: '48%', zIndex: 1, width: '100%', height: '11%' }}>
           <div className="h-full w-full pl-[9%] pt-[9%]">
             <h3 className="font-handjet text-lg text-highlight">
               {t.rich('Validators nodes and mining pools.title', {
@@ -261,7 +258,6 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
 
         <div className="absolute bottom-0 h-[20%] w-full">
           <div className="absolute bottom-[40%] left-[10%] h-28 w-28 bg-d_pad bg-contain bg-center bg-no-repeat" />
-
           <div className="absolute bottom-[25%] left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-[30%]">
             <div
               className="flex cursor-pointer flex-row items-end"
@@ -270,7 +266,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
               tabIndex={0}
               aria-label="Start"
             >
-              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+              <div className="h-20 w-20 bg-gameboy_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_btn_h active:bg-gameboy_btn_a" />
               <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
             </div>
 
@@ -281,7 +277,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
               tabIndex={0}
               aria-label="Close menu"
             >
-              <div className="h-16 w-16 bg-gameboy_start bg-contain bg-center bg-no-repeat hover:bg-gameboy_start_h active:bg-gameboy_start_a" />
+              <div className="h-20 w-20 bg-gameboy_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_btn_h active:bg-gameboy_btn_a" />
               <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">SELECT</span>
             </div>
           </div>

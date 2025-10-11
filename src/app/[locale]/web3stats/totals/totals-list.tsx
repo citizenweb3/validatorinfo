@@ -3,18 +3,20 @@ import { FC } from 'react';
 
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import HeaderInfoService from '@/services/headerInfo-service';
+import ecosystemService from '@/services/ecosystem-service';
 
 interface OwnProps {}
 
 const TotalsList: FC<OwnProps> = async () => {
   const t = await getTranslations('GlobalPosPage.Footer');
   const headerInfo = await HeaderInfoService.getValidatorsAndChains();
+  const ecosystems = await ecosystemService.getAll();
 
   const data = [
     { title: 'total validators', data: headerInfo.validators },
     { title: 'total networks', data: headerInfo.chains },
     { title: 'total pages', data: 234 },
-    { title: 'total ecosystems', data: 2 },
+    { title: 'total ecosystems', data: ecosystems.length },
   ];
 
   return (

@@ -79,7 +79,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
           <Tooltip tooltip={t('eco tooltip')} direction={'bottom'}>
             <div className={`${iconsSize} ml-2.5 bg-eco bg-contain bg-no-repeat hover:bg-eco_h`} />
           </Tooltip>
-          <Tooltip tooltip={t('eco tooltip')} direction={'bottom'}>
+          <Tooltip tooltip={t('keyhole tooltip')} direction={'bottom'}>
             <div className={`${iconsSize} ml-2.5 bg-keyhole bg-contain bg-no-repeat hover:bg-keyhole_h`} />
           </Tooltip>
           <Tooltip noWrap tooltip={t('github tooltip')} direction={'bottom'}>
