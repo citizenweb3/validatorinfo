@@ -25,12 +25,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default async function GlobalPosPage() {
-  const t = await getTranslations('GlobalPosPage');
+export default async function GlobalPosPage({ params: { locale } }: { params: { locale: Locale } }) {
+  const t = await getTranslations({ locale, namespace: 'GlobalPosPage' });
+
   const cursor =
     'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
+
   const translations = {
-    title: t('title'),
     status: t('status'),
     dominance: t('dominance'),
     total: t('total'),
@@ -46,12 +47,12 @@ export default async function GlobalPosPage() {
       <TabList page="HomePage" tabs={mainTabs} />
       <PageTitle
         text={t.rich('title', {
-          link: (text) => (
+          ecosystemLink: (chunks) => (
             <TextLink
               className="group ml-2 flex"
               content={
                 <>
-                  {text}
+                  {chunks}
                   <div className={cursor} />
                 </>
               }
