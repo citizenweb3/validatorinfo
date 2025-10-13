@@ -31,9 +31,9 @@ export default async function ProposalLayout({
   return (
     <>
       <PageTitle
-        text={`${t('title')}: #${proposalId}`}
-        suffix={
-          <Link href={`/networks/${chain?.name}/overview/`} className="group flex text-highlight hover:underline ">
+        text={`${t('title')}: #${proposalId} ${proposal?.title}`}
+        prefix={
+          <Link href={`/networks/${name}/overview/`} className="text-highlight hover:underline group flex ">
             {chain?.prettyName}
             <div className={cursor} />
           </Link>
