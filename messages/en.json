@@ -165,7 +165,7 @@
         "text": "Click Networks to see a comparison table of chains.<br></br>Open a Network profile to see stats including: tokenomics, transactions,<br></br>governance, validators and more."
       },
       "Validators nodes and mining pools": {
-        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and Mining Pools",
+        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and Mining Pools:",
         "text": "Open Validator or Node profiles to see detailed statistics, earnings, projects and more."
       },
       "Ecosystems and metrics": {
@@ -182,7 +182,7 @@
     "Metadata": {
       "title": "Global Web3 Statistics: Explore the Multichain Landscape"
     },
-    "title": "Global Web3 Statistics: Explore the Multichain Landscape",
+    "title": "Global Web3 Statistics: Explore the <ecosystemLink>Multichain Landscape</ecosystemLink>",
     "description": "Explore my Global Blockchain Statistics page for a comprehensive overview of the web3 landscape, featuring stats of web3 security, decentralization and scalability status. Discover trends in staking dominance, rewards and crypto capitalization through interactive charts and graphs, and use these insights to inform your staking decisions and crypto portfolio growth, making it a valuable resource for web3 exploration and analytics that you can also discuss with others in the P2P Chat.",
     "dominance": "Web3 T.V.S Dominance",
     "total": "Total T.V.S. and Rewards Payout",
@@ -664,9 +664,9 @@
     "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
     "Others Links": "Others Links",
     "Merits": "Merits",
-    "eco tooltip": "text",
-    "keyhole tooltip": "text",
-    "github tooltip": "text",
+    "eco tooltip": "Green Energy",
+    "keyhole tooltip": "Key Sharding via Horcrux",
+    "github tooltip": "Github",
     "place your interview here": "Place Your Interview Here"
   },
   "ValidatorNetworksPage": {
@@ -838,11 +838,11 @@
     "validator rank": "Validator Rank",
     "proposals created": "Proposal Created",
     "Medals": "Medals",
-    "hash txs tooltip": "text",
-    "horcrux tooltip": "text",
-    "restake tooltip": "text",
-    "reward reinvesting tooltip": "text",
-    "slashed tooltip": "text",
+    "hash txs tooltip": "Has Tx",
+    "horcrux tooltip": "Key Sharding via Horcrux",
+    "restake tooltip": "Restake",
+    "reward reinvesting tooltip": "Reinvests Rewards",
+    "slashed tooltip": "Slashed",
     "Vanity Chart": "Vanity Chart",
     "Validator Node Details": "Validator Node Details",
     "validator name": "Validator Name",

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import AiGeneratedSummary from '@/app/networks/[name]/proposal/[proposalId]/ai-generated-summary';
@@ -22,13 +23,22 @@ export default async function ProposalLayout({
 }>) {
   const t = await getTranslations({ locale, namespace: 'ProposalPage' });
   const chain = await chainService.getByName(name);
-  const proposal = chain
-    ? await ProposalService.getProposalById(chain?.id, proposalId)
-    : null;
+  const proposal = chain ? await ProposalService.getProposalById(chain?.id, proposalId) : null;
+
+  const cursor =
+    'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
 
   return (
     <>
-      <PageTitle text={`#${proposalId} ${proposal?.title}`} prefix={`${t('title')}:`} />
+      <PageTitle
+        text={`${t('title')}: #${proposalId} ${proposal?.title}`}
+        prefix={
+          <Link href={`/networks/${name}/overview/`} className="group flex text-highlight hover:underline ">
+            {chain?.prettyName}
+            <div className={cursor} />
+          </Link>
+        }
+      />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <ProposalInformation proposal={proposal} chainName={name} />
       <ProposalMetrics proposal={proposal} chain={chain} />

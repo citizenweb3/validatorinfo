@@ -182,7 +182,7 @@
     "Metadata": {
       "title": "Глобальная статистика Web3: Изучите ландшафт мультичейна"
     },
-    "title": "Глобальная статистика Web3: Изучите ландшафт мультичейна",
+    "title": "Глобальная статистика Web3: Изучите <ecosystemLink>ландшафт мультичейна</ecosystemLink>",
     "description": "Изучите глобальную статистику блокчейнов, чтобы получить исчерпывающий обзор ландшафта Web3, включающий статистику безопасности, децентрализации и масштабируемости web3. Откройте для себя тенденции в доминировании ставок, вознаграждениях и капитализации криптовалют с помощью интерактивных диаграмм и графиков и используйте эти данные для принятия решений о ставках и роста криптовалютного портфеля. Это ценный ресурс для изучения и аналитики Web3, который вы также можете обсудить с другими в P2P-чате.",
     "dominance": "Доминирование Web3 T.V.S",
     "total": "Общая сумма T.V.S. против выплат по глобальным вознаграждениям",
@@ -664,9 +664,9 @@
     "description": "Децентрализация, расширение возможностей сообществ. Голос Web3 и некастодиальный сервис стейкинга.",
     "Others Links": "Другие ссылки",
     "Merits": "Заслуги",
-    "eco tooltip": "text",
-    "keyhole tooltip": "text",
-    "github tooltip": "text",
+    "eco tooltip": "Зелёная энергия",
+    "keyhole tooltip": "Шардинг ключей через Horcrux",
+    "github tooltip": "Github",
     "place your interview here": "Разместите Cвое Интервью Здесь"
   },
   "ValidatorNetworksPage": {
@@ -838,11 +838,11 @@
     "validator rank": "Рейтинг Валидатора",
     "proposals created": "Создано Предложений",
     "Medals": "Медали",
-    "hash txs tooltip": "text",
-    "horcrux tooltip": "text",
-    "restake tooltip": "text",
-    "reward reinvesting tooltip": "text",
-    "slashed tooltip": "text",
+    "hash txs tooltip": "Имет Tx",
+    "horcrux tooltip": "Обмен ключами через Horcrux",
+    "restake tooltip": "Рестэйк",
+    "reward reinvesting tooltip": "Реинвестиция вознаграждений",
+    "slashed tooltip": "Слэш",
     "Vanity Chart": "График Тщеславия",
     "Validator Node Details": "Детали Ноды Валидатора",
     "validator name": "Имя Валидатора",
