@@ -26,6 +26,15 @@ const MetricsBlocks: FC<OwnProps> = async ({ id }) => {
     order,
   );
 
+  let totalDelegators: null | number = null;
+
+  for (let node of list) {
+    if (node.delegatorsAmount) {
+      totalDelegators = totalDelegators ? totalDelegators : 0;
+      totalDelegators += node.delegatorsAmount;
+    }
+  }
+
   const cardClass = `
       pt-2.5 
       sm:min-h-[45px] 
@@ -90,9 +99,8 @@ const MetricsBlocks: FC<OwnProps> = async ({ id }) => {
 
         <ToolTip tooltip={t('fans tooltip')} direction={'top'}>
           <MetricsCardItem
-            key={validatorExample.metrics.fans}
             title={t('fans')}
-            data={validatorExample.metrics.fans.toLocaleString('en-Us')}
+            data={totalDelegators?.toLocaleString('en-Us') ?? `-`}
             className={cardClass}
             dataClassName={cardValueClass}
           />

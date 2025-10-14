@@ -10,9 +10,10 @@ import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
+import TextLink from '@/components/common/text-link';
 import Story from '@/components/story';
-import { Locale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
+import { Locale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -24,10 +25,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default async function GlobalPosPage() {
-  const t = await getTranslations('GlobalPosPage');
+export default async function GlobalPosPage({ params: { locale } }: { params: { locale: Locale } }) {
+  const t = await getTranslations({ locale, namespace: 'GlobalPosPage' });
+
+  const cursor =
+    'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
+
   const translations = {
-    title: t('title'),
     status: t('status'),
     dominance: t('dominance'),
     total: t('total'),
@@ -41,7 +45,23 @@ export default async function GlobalPosPage() {
         alt="Pixelated, 90s game-style characters riding roller coaster of web3 charts and statistics"
       />
       <TabList page="HomePage" tabs={mainTabs} />
-      <PageTitle text={t('title')} />
+      <PageTitle
+        text={t.rich('title', {
+          ecosystemLink: (chunks) => (
+            <TextLink
+              className="group ml-2 flex"
+              content={
+                <>
+                  {chunks}
+                  <div className={cursor} />
+                </>
+              }
+              href="/ecosystems"
+              target="_blank"
+            />
+          ),
+        })}
+      />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <Suspense fallback={<div />}>
         <TotalsList />
@@ -55,7 +75,7 @@ export default async function GlobalPosPage() {
         <SecurityBar />
       </div>
       <div>
-      <Web3statsCharts translations={translations} />
+        <Web3statsCharts translations={translations} />
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
               alt={name}
               width={120}
               height={120}
-              className={`${isActive && 'hidden'} w-36 group-hover:hidden sm:w-20 md:absolute md:-left-1 md:-top-1.5 md:w-10`}
+              className={`${isActive && 'hidden'} w-36 group-hover:hidden sm:w-20 md:absolute md:-left-1 md:top-1/2 md:w-10 md:-translate-y-1/2`}
             />
           )}
           {iconHovered && (
@@ -39,7 +39,7 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
               alt={name}
               width={120}
               height={120}
-              className={`${isActive ? 'block' : 'hidden'} w-36 group-hover:block sm:w-20 md:absolute md:-left-1 md:-top-1.5 md:w-10`}
+              className={`${isActive ? 'block' : 'hidden'} w-36 group-hover:block sm:w-20 md:absolute md:-left-1 md:top-1/2 md:w-10 md:-translate-y-1/2`}
             />
           )}
           <div
