@@ -657,11 +657,11 @@ union: {
     prettyName: 'Bostrom',
     chainId: 'bostrom',
     bech32Prefix: 'bostrom',
-    coinDecimals: 6,
+    coinDecimals: 0,
     coinGeckoId: 'bostrom',
     coinType: 118,
     denom: 'BOOT',
-    minimalDenom: 'uboot',
+    minimalDenom: 'boot',
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.png',
     nodes: [
       { type: 'grpc', url: 'grpc.bostrom.cybernode.ai' },
@@ -773,7 +773,7 @@ union: {
     coinGeckoId: '',
     coinType: 118,
     denom: 'PUSSY',
-    minimalDenom: 'pussy',
+    minimalDenom: '',
     logoUrl: 'https://raw.githubusercontent.com/greatweb/pussy-landing/master/src/images/spacepussy.png',
     nodes: [
       { type: 'grpc', url: 'grpc.space-pussy.cybernode.ai' },
