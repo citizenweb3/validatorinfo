@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import React, { FC, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { FC, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 import { aboutTabs, additionalTabs, mainTabs } from '@/components/navigation-bar/navigation-bar';
 
@@ -14,7 +14,7 @@ interface OwnProps {
 }
 
 const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, onSelectProcessed }) => {
-  const allTabs = [...mainTabs, ...additionalTabs, ...aboutTabs];
+  const allTabs = useMemo(() => [...mainTabs, ...additionalTabs, ...aboutTabs], []);
   const totalTabsCount = allTabs.length;
 
   const [flatItemIndex, setFlatItemIndex] = useState(0);
@@ -33,7 +33,7 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
     } else {
       onTabSelect(null);
     }
-  }, [visible]);
+  }, [visible, onTabSelect, allTabs]);
 
   useEffect(() => {
     if (visible && doSelect) {
@@ -44,7 +44,7 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
       }
       onSelectProcessed();
     }
-  }, [doSelect]);
+  }, [visible, doSelect, allTabs, flatItemIndex, router, onClose, onSelectProcessed]);
 
   const mapFlatIndexToSectionIndex = (flatIndex: number) => {
     if (flatIndex < mainTabs.length) return { section: 0, item: flatIndex };
