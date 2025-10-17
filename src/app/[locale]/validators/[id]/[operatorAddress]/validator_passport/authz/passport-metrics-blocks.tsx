@@ -16,7 +16,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
     return null;
   }
 
-  const tokensDelegated = node.chain.params?.coinDecimals
+  const tokensDelegated = node.chain.params?.coinDecimals != null
     ? +node.delegatorShares / 10 ** node.chain.params?.coinDecimals
     : undefined;
 
@@ -25,7 +25,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
     : '';
 
   const outstandingRewards =
-    node.chain.params?.coinDecimals && node.outstandingRewards
+    node.chain.params?.coinDecimals != null && node.outstandingRewards
       ? `${(+node.outstandingRewards / 10 ** node.chain.params?.coinDecimals).toLocaleString('en-US', { maximumFractionDigits: 2 })} 
       ${node.chain.params.denom}`
       : '-';

@@ -380,7 +380,7 @@ const chainParams: Record<string, AddChainProps> = {
     twitterUrl: 'https://x.com/_atomone',
   },
 
-union: {
+  union: {
     rang: 4,
     name: 'union',
     prettyName: 'Union',
@@ -394,25 +394,25 @@ union: {
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/union/images/u.svg',
     chainRegistry: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/union',
     nodes: [
-        // Public via Lava (primary)
+      // Public via Lava (primary)
       { type: 'grpc', url: 'union-mainnet.lava.build:9090' },
       { type: 'rest', url: 'https://rest.union-mainnet.lava.build' },
       { type: 'rpc', url: 'https://rpc.union-mainnet.lava.build' },
       { type: 'ws', url: 'wss://ws.union-mainnet.lava.build/websocket' },
-      
-        // Polkachu
+
+      // Polkachu
       { type: 'grpc', url: 'union-mainnet.grpc.polkachu.com:9090' },
       { type: 'rest', url: 'https://union-mainnet.api.polkachu.com' },
       { type: 'rpc', url: 'https://union-mainnet.rpc.polkachu.com' },
       { type: 'ws', url: 'wss://union-mainnet.rpc.polkachu.com/websocket' },
-        
-        // NodeHub
+
+      // NodeHub
       { type: 'grpc', url: 'grpc.union-mainnet.nodehub.cloud:9090' },
       { type: 'rest', url: 'https://union-mainnet.api.nodehub.cloud' },
       { type: 'rpc', url: 'https://union-mainnet.rpc.nodehub.cloud' },
       { type: 'ws', url: 'wss://union-mainnet.rpc.nodehub.cloud/websocket' },
-        
-        // SG-1
+
+      // SG-1
       { type: 'grpc', url: 'union-mainnet.grpc.stakin.com:443' },
       { type: 'rest', url: 'https://union-mainnet.api.stakin.com' },
       { type: 'rpc', url: 'https://union-mainnet.rpc.stakin.com' },
@@ -422,7 +422,7 @@ union: {
     docs: 'https://docs.union.build',
     githubUrl: 'https://github.com/unionlabs',
     twitterUrl: 'https://twitter.com/union_build',
-},
+  },
 
   axone: {
     rang: 4,
@@ -657,11 +657,11 @@ union: {
     prettyName: 'Bostrom',
     chainId: 'bostrom',
     bech32Prefix: 'bostrom',
-    coinDecimals: 6,
+    coinDecimals: 0,
     coinGeckoId: 'bostrom',
     coinType: 118,
     denom: 'BOOT',
-    minimalDenom: 'uboot',
+    minimalDenom: 'boot',
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.png',
     nodes: [
       { type: 'grpc', url: 'grpc.bostrom.cybernode.ai' },
@@ -702,7 +702,7 @@ union: {
       { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
       { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
       { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
-      
+
       { type: 'rest', url: 'https://symphony-api.cogwheel.zone' },
       { type: 'rpc', url: 'https://symphony-rpc.cogwheel.zone' },
 
@@ -712,7 +712,6 @@ union: {
       { type: 'rest', url: 'https://symphony-api.kgnodes.xyz' },
       { type: 'rpc', url: 'https://symphony-rpc.kgnodes.xyz' },
       { type: 'rpc', url: 'https://rpc.symphony.ravenode.xyz' },
-
     ],
     mainRepo: 'https://github.com/Orchestra-Labs/symphony',
     docs: 'https://orchestralabs.org/documentation/',
@@ -893,7 +892,7 @@ union: {
     rang: 5,
     name: 'warden-testnet',
     prettyName: 'Warden Testnet',
-    chainId: 'chiado_10010-1',
+    chainId: 'barra_9191-1',
     bech32Prefix: 'warden',
     coinDecimals: 18,
     coinGeckoId: '',
@@ -903,19 +902,16 @@ union: {
     logoUrl:
       'https://raw.githubusercontent.com/warden-protocol/networks/87e9f8b03f38da9b2abf2155dec0a097692c4039/assets/Warden%20Icon%20Black%20back.svg',
     nodes: [
-      { type: 'grpc', url: 'grpc.warden-testnet.citizenweb3.com' },
-      { type: 'rest', url: 'https://api.warden-testnet.citizenweb3.com' },
-      { type: 'rpc', url: 'https://rpc.warden-testnet.citizenweb3.com' },
-      { type: 'ws', url: 'wss://rpc.warden-testnet.citizenweb3.com/websocket' },
-
-      { type: 'grpc', url: 'warden-testnet.grpc.kjnodes.com:443' },
-      { type: 'rest', url: 'https://warden-testnet.api.kjnodes.com' },
-      { type: 'rpc', url: 'https://warden-testnet.rpc.kjnodes.com' },
-      { type: 'ws', url: 'wss://warden-testnet.rpc.kjnodes.com/websocket' },
+      { type: 'grpc', url: 'https://polkachu.com/testnet_public_grpc' },
+      { type: 'rest', url: 'https://warden-testnet-api.polkachu.com' },
+      { type: 'rpc', url: 'https://warden-testnet-rpc.polkachu.com' },
 
       { type: 'rest', url: 'https://rest.nodejumper.io/wardenprotocoltestnet' },
-      { type: 'rpc', url: 'https://rpc.nodejumper.io:443/wardenprotocoltestnet' },
-      { type: 'ws', url: 'wss://rpc.nodejumper.io:443/wardenprotocoltestnet/websocket' },
+      { type: 'rpc', url: 'https://rpc.nodejumper.io/wardenprotocoltestnet' },
+
+      { type: 'rest', url: 'https://testnet-warden-api.konsortech.xyz' },
+      { type: 'rpc', url: 'https://testnet-warden-rpc.konsortech.xyz' },
+      { type: 'ws', url: 'testnet-warden.konsortech.xyz:19090' },
     ],
     mainRepo: 'https://github.com/warden-protocol/wardenprotocol',
     docs: 'https://docs.wardenprotocol.org',

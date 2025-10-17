@@ -17,7 +17,7 @@ interface OwnProps {
 }
 
 const NetworksListItem: FC<OwnProps> = ({ item }) => {
-  const tokenDelegatorShares = item.chain.params?.coinDecimals
+  const tokenDelegatorShares = item.chain.params?.coinDecimals != null
     ? Number(item.delegatorShares) / 10 ** item.chain.params?.coinDecimals
     : undefined;
 

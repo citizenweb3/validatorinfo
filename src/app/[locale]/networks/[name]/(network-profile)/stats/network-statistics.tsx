@@ -12,8 +12,13 @@ interface OwnProps {
 
 const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkStatistics');
-  const totalStaked = Number(chain?.tokenomics?.bondedTokens) / 10 ** Number(chain?.params?.coinDecimals);
-  const communityPool = Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain?.params?.coinDecimals);
+  const totalStaked = chain?.params?.coinDecimals != null
+    ? Number(chain?.tokenomics?.bondedTokens) / 10 ** Number(chain.params.coinDecimals)
+    : 0;
+    
+  const communityPool = chain?.params?.coinDecimals != null
+    ? Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain.params.coinDecimals)
+    : 0;
 
   return (
     <div className="grid grid-cols-2 gap-x-10">
