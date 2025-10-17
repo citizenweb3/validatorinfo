@@ -61,7 +61,7 @@ const config: Config = {
         green: '#4FB848',
         white: '#FFFFFFE5',
       },
-      proposalLabel: '#B39B58'
+      proposalLabel: '#B39B58',
     },
     extend: {
       backgroundImage: {
@@ -153,6 +153,7 @@ const config: Config = {
         gameboy_btn: `url('/img/icons/gameboy-btn.svg')`,
         gameboy_btn_h: `url('/img/icons/gameboy-btn-h.svg')`,
         gameboy_btn_a: `url('/img/icons/gameboy-btn-a.svg')`,
+        gameboy_btn_f: `url('/img/icons/gameboy-btn-f.svg')`,
         gameboy_a_btn: `url('/img/icons/gameboy-a-btn.svg')`,
         gameboy_a_btn_h: `url('/img/icons/gameboy-a-btn-h.svg')`,
         gameboy_a_btn_a: `url('/img/icons/gameboy-a-btn-a.svg')`,
@@ -160,6 +161,9 @@ const config: Config = {
         gameboy_b_btn_h: `url('/img/icons/gameboy-b-btn-h.svg')`,
         gameboy_b_btn_a: `url('/img/icons/gameboy-b-btn-a.svg')`,
         loudspeaker: `url('/img/icons/loudspeaker.svg')`,
+        console_menu_arrow: `url('/img/icons/console-menu-arrow.svg')`,
+        joystick_arrow: `url('/img/icons/joystick-arrow.svg')`,
+        joystick_arrow_a: `url('/img/icons/joystick-arrow-a.svg')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',
@@ -191,7 +195,7 @@ const config: Config = {
   },
   plugins: [
     tailwindScrollbar({}),
-    plugin(function({ matchUtilities, theme }) {
+    plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
           'text-shadow': (value) => ({

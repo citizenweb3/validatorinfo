@@ -49,6 +49,11 @@ const handjet = localFont({
       weight: '100',
       style: 'thin',
     },
+    {
+      path: '../../../public/fonts/Handjet-SemiBold.ttf',
+      weight: '600',
+      style: 'semibold',
+    },
   ],
   display: 'swap',
   variable: '--font-handjet',

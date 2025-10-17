@@ -20,17 +20,19 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   const nodes = await nodeService.getNodesByChainId(chain?.id ?? 1);
 
   const totalSupply =
-    chain?.params?.coinDecimals && chain?.tokenomics?.totalSupply
+    chain?.params?.coinDecimals != null && chain?.tokenomics?.totalSupply
       ? +chain?.tokenomics?.totalSupply / 10 ** chain.params?.coinDecimals
       : undefined;
 
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain.id) : null;
   const fdv = tokenPrice?.value && totalSupply ? totalSupply * tokenPrice.value : undefined;
 
-  const communityPool = Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain?.params?.coinDecimals);
+  const communityPool = chain?.params?.coinDecimals != null
+    ? Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain.params.coinDecimals)
+    : 0;
 
   const rewardsToPayout =
-    chain?.tokenomics?.rewardsToPayout && tokenPrice && chain?.params?.coinDecimals
+    chain?.tokenomics?.rewardsToPayout && tokenPrice && chain?.params?.coinDecimals != null
       ? Number(chain?.tokenomics?.rewardsToPayout) / 10 ** Number(chain.params.coinDecimals) / Number(tokenPrice.value)
       : undefined;
 

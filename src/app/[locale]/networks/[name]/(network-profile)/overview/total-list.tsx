@@ -14,7 +14,7 @@ interface OwnProps {
 const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
   const totalSupply =
-    chain?.tokenomics?.totalSupply && chain?.params?.coinDecimals
+    chain?.tokenomics?.totalSupply && chain?.params?.coinDecimals != null
       ? Number(chain?.tokenomics?.totalSupply) / Number(10 ** chain?.params?.coinDecimals)
       : 0;
 
