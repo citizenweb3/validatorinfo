@@ -16,7 +16,7 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkProfileHeader');
   const price = chain ? await chainService.getTokenPriceByChainId(chain?.id) : undefined;
   const validatorCost =
-    chain?.tokenomics?.activeSetMinAmount && price && chain?.params?.coinDecimals
+    chain?.tokenomics?.activeSetMinAmount && price && chain?.params?.coinDecimals != null
       ? (Number(chain.tokenomics.activeSetMinAmount) / 10 ** Number(chain?.params?.coinDecimals)) * Number(price.value)
       : 0;
 

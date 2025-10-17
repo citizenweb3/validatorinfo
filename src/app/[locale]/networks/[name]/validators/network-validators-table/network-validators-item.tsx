@@ -14,11 +14,11 @@ interface OwnProps {
 }
 
 const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
-  const tokenDelegatorShares = item.chain.params?.coinDecimals
+  const tokenDelegatorShares = item.chain.params?.coinDecimals != null
     ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals
     : undefined;
 
-  const selfDelegation = item.chain.params?.coinDecimals
+  const selfDelegation = item.chain.params?.coinDecimals != null
     ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
     : undefined;
 
