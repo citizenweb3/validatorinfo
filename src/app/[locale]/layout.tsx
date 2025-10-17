@@ -50,7 +50,7 @@ const handjet = localFont({
       style: 'thin',
     },
     {
-      path: '../../../public/fonts/Handjet-Semibold.ttf',
+      path: '../../../public/fonts/Handjet-SemiBold.ttf',
       weight: '600',
       style: 'semibold',
     },
