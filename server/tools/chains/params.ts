@@ -461,7 +461,7 @@ const chainParams: Record<string, AddChainProps> = {
     rang: 4,
     name: 'axone-testnet',
     prettyName: 'Axone Testnet',
-    chainId: 'axone-dentrite-1',
+    chainId: 'axone-dendrite-2',
     bech32Prefix: 'axone',
     coinDecimals: 6,
     coinGeckoId: '',
@@ -474,15 +474,6 @@ const chainParams: Record<string, AddChainProps> = {
       { type: 'rest', url: 'https://api.axone-testnet.citizenweb3.com' },
       { type: 'rpc', url: 'https://rpc.axone-testnet.citizenweb3.com' },
       { type: 'ws', url: 'wss://rpc.axone-testnet.citizenweb3.com/websocket' },
-
-      { type: 'grpc', url: 'axone-testnet.grpc.kjnodes.com:443' },
-      { type: 'rest', url: 'https://axone-testnet.api.kjnodes.com' },
-      { type: 'rpc', url: 'https://axone-testnet.rpc.kjnodes.com' },
-      { type: 'ws', url: 'wss://axone-testnet.rpc.kjnodes.com/websocket' },
-
-      { type: 'rest', url: 'https://rest.nodejumper.io/axonetestnet' },
-      { type: 'rpc', url: 'https://rpc.nodejumper.io:443/axonetestnet' },
-      { type: 'ws', url: 'wss://rpc.nodejumper.io:443/axonetestnet/websocket' },
     ],
     mainRepo: 'https://github.com/axone-protocol/axoned',
     docs: 'https://docs.axone.xyz',
@@ -719,48 +710,48 @@ const chainParams: Record<string, AddChainProps> = {
     twitterUrl: 'https://x.com/orchestra_labs',
   },
 
-  'symphony-testnet': {
-    rang: 5,
-    name: 'symphony-testnet',
-    prettyName: 'Symphony Testnet',
-    chainId: 'symphony-testnet-4',
-    bech32Prefix: 'symphony',
-    coinDecimals: 6,
-    coinGeckoId: '',
-    coinType: 118,
-    denom: 'MLD',
-    minimalDenom: 'note',
-    logoUrl:
-      'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/symphony-testnet/melody.png',
-    nodes: [
-      { type: 'grpc', url: 'grpc.symphony-testnet.citizenweb3.com' },
-      { type: 'rest', url: 'https://api.symphony-testnet.citizenweb3.com' },
-      { type: 'rpc', url: 'https://rpc.symphony-testnet.citizenweb3.com' },
-      { type: 'ws', url: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket' },
-
-      { type: 'grpc', url: 'symphony-testnet-grpc.crouton.digital:29290' },
-      { type: 'rest', url: 'https://symphony-testnet-api.crouton.digital' },
-      { type: 'rpc', url: 'https://symphony-testnet-rpc.crouton.digital' },
-      { type: 'ws', url: 'wss://symphony-testnet-rpc.crouton.digital/websocket' },
-
-      { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
-      { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
-      { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
-
-      { type: 'rest', url: 'https://symphony-api-testnet.cogwheel.zone' },
-      { type: 'rpc', url: 'https://symphony-rpc-testnet.cogwheel.zone' },
-
-      { type: 'rest', url: 'https://testnet-symphony-rpc.konsortech.xyz' },
-      { type: 'rpc', url: 'https://testnet-symphony-api.konsortech.xyz' },
-
-      { type: 'rest', url: 'https://symphony-testnet-api.kgnodes.xyz' },
-      { type: 'rpc', url: 'https://symphony-testnet-rpc.kgnodes.xyz' },
-    ],
-    mainRepo: 'https://github.com/Orchestra-Labs/symphony',
-    docs: 'https://orchestralabs.org/documentation/',
-    githubUrl: 'https://github.com/Orchestra-Labs',
-    twitterUrl: 'https://x.com/orchestra_labs',
-  },
+  // 'symphony-testnet': {
+  //   rang: 5,
+  //   name: 'symphony-testnet',
+  //   prettyName: 'Symphony Testnet',
+  //   chainId: 'symphony-testnet-4',
+  //   bech32Prefix: 'symphony',
+  //   coinDecimals: 6,
+  //   coinGeckoId: '',
+  //   coinType: 118,
+  //   denom: 'MLD',
+  //   minimalDenom: 'note',
+  //   logoUrl:
+  //     'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/symphony-testnet/melody.png',
+  //   nodes: [
+  //     { type: 'grpc', url: 'grpc.symphony-testnet.citizenweb3.com' },
+  //     { type: 'rest', url: 'https://api.symphony-testnet.citizenweb3.com' },
+  //     { type: 'rpc', url: 'https://rpc.symphony-testnet.citizenweb3.com' },
+  //     { type: 'ws', url: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket' },
+  //
+  //     { type: 'grpc', url: 'symphony-testnet-grpc.crouton.digital:29290' },
+  //     { type: 'rest', url: 'https://symphony-testnet-api.crouton.digital' },
+  //     { type: 'rpc', url: 'https://symphony-testnet-rpc.crouton.digital' },
+  //     { type: 'ws', url: 'wss://symphony-testnet-rpc.crouton.digital/websocket' },
+  //
+  //     { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
+  //     { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
+  //     { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
+  //
+  //     { type: 'rest', url: 'https://symphony-api-testnet.cogwheel.zone' },
+  //     { type: 'rpc', url: 'https://symphony-rpc-testnet.cogwheel.zone' },
+  //
+  //     { type: 'rest', url: 'https://testnet-symphony-rpc.konsortech.xyz' },
+  //     { type: 'rpc', url: 'https://testnet-symphony-api.konsortech.xyz' },
+  //
+  //     { type: 'rest', url: 'https://symphony-testnet-api.kgnodes.xyz' },
+  //     { type: 'rpc', url: 'https://symphony-testnet-rpc.kgnodes.xyz' },
+  //   ],
+  //   mainRepo: 'https://github.com/Orchestra-Labs/symphony',
+  //   docs: 'https://orchestralabs.org/documentation/',
+  //   githubUrl: 'https://github.com/Orchestra-Labs',
+  //   twitterUrl: 'https://x.com/orchestra_labs',
+  // },
 
   'space-pussy': {
     rang: 5,

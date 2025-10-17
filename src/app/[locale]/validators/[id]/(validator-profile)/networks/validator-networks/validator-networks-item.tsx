@@ -14,7 +14,6 @@ interface OwnProps {
 }
 
 const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
-  const fans: number = 23234;
   const rank: number = 15;
 
   const selfDelegation = item.chain.params?.coinDecimals != null
