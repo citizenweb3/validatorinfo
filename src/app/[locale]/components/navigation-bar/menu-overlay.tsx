@@ -29,10 +29,8 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
     if (visible) {
       setFlatItemIndex(0);
       setTimeout(() => containerRef.current?.focus(), 0);
-      document.body.style.overflow = 'hidden';
       onTabSelect(allTabs[0]?.href || null);
     } else {
-      document.body.style.overflow = '';
       onTabSelect(null);
     }
   }, [visible]);
@@ -90,7 +88,7 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
       role="dialog"
       aria-modal="true"
       aria-label="Game menu"
-      className="z-[9999] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-dottedLine focus:duration-0"
+      className="z-[9999]"
       onKeyDown={onKeyPress}
       onMouseDown={(e) => {
         if (e.target === containerRef.current) {
@@ -99,18 +97,20 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
       }}
     >
       <div
-        className="relative aspect-[703/418] w-[min(35vw,43.9375rem)] rounded-none border-0 bg-[#9DABA0] shadow-[0_4px_4px_rgba(0,0,0,0.25),0_4px_4px_rgba(0,0,0,0.25),0_4px_6px_rgba(0,0,0,1)]"
+        className="relative rounded-none border-0 bg-[#9DABA0] font-handjet font-semibold text-black
+        shadow-[0_4px_4px_rgba(0,0,0,0.25),0_4px_4px_rgba(0,0,0,0.25),0_4px_6px_rgba(0,0,0,1)] lg:h-[25rem] lg:w-[32rem]
+        lg:text-base xl:h-[25rem] xl:w-[35rem] xl:text-lg 2xl:h-[28rem] 2xl:w-[40rem] 2xl:text-xl"
       >
-        <div className="absolute left-0 right-0 top-1 h-1 bg-[#19281C]" />
-        <div className="absolute bottom-1 left-0 right-0 h-1 bg-[#19281C]" />
+        <div className="absolute left-0 right-0 top-1 my-4 h-1 bg-[#19281C]" />
+        <div className="absolute bottom-1 left-0 right-0 my-4 h-1 bg-[#19281C]" />
 
-        <div className="px-6 pt-6">
-          <p className="font-handjet text-xl font-bold tracking-[0.05em] text-black">
-            FOR RANDOM: <span className="px-1">(A)</span> VALIDATOR <span className="px-1">(B)</span> NETWORK
+        <div className="pt-10 text-center">
+          <p className="font-handjet text-xl font-semibold ">
+            FOR RANDOM: <span className="pl-2">(A)</span> VALIDATOR <span className="pl-2">(B)</span> NETWORK
           </p>
         </div>
 
-        <div className="mt-4 px-6 pb-4" role="menu" aria-label="Menu items">
+        <div className="mt-8" role="menu" aria-label="Menu items">
           {allTabs.map((item, idx) => {
             const isActive = idx === flatItemIndex;
             const code = 100 + idx;
@@ -120,9 +120,7 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
                 role="menuitem"
                 aria-selected={isActive}
                 tabIndex={-1}
-                className={`mb-2 flex cursor-pointer items-center justify-between rounded-sm border border-transparent px-3 py-2 font-handjet text-lg tracking-[0.05em] transition-colors ${
-                  isActive ? 'bg-black text-white' : 'text-black hover:bg-[#19281C]/10'
-                }`}
+                className={`flex cursor-pointer items-center justify-center`}
                 onMouseEnter={() => setFlatItemIndex(idx)}
                 onClick={() => {
                   const href = item.href;
@@ -132,15 +130,14 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
                   }
                 }}
               >
-                <span className="uppercase">{item.name}</span>
-                <span className="ml-4 font-bold tabular-nums">{code}</span>
+                <div className="flex flex-row items-center justify-center uppercase">
+                  {isActive && <div className="mr-2 h-5 w-5 bg-console_menu_arrow bg-contain bg-center bg-no-repeat" />}
+                  <span className="">{code} -</span>
+                  <span className="">&nbsp;{item.name}</span>
+                </div>
               </div>
             );
           })}
-        </div>
-
-        <div className="px-6 pb-4">
-          <p className="font-handjet text-base font-bold tracking-[0.05em] text-black">May the code be whit you!</p>
         </div>
       </div>
     </div>

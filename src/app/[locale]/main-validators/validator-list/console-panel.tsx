@@ -254,28 +254,41 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
               ),
             })}
           </div>
-          <div className="absolute left-[15%] top-[10%] z-[10] -translate-x-1/2">
-            <MenuOverlay
-              visible={menuVisible}
-              onClose={onMenuClose}
-              onTabSelect={handleMenuTabSelect}
-              doSelect={doSelect}
-              onSelectProcessed={handleSelectProcessed}
-            />
-          </div>
+        </div>
+
+        <div className="absolute left-[50%] top-[57%] z-[10] -translate-x-1/2">
+          <MenuOverlay
+            visible={menuVisible}
+            onClose={onMenuClose}
+            onTabSelect={handleMenuTabSelect}
+            doSelect={doSelect}
+            onSelectProcessed={handleSelectProcessed}
+          />
         </div>
 
         <div className="absolute bottom-0 h-[20%] w-full">
-          <div className="absolute bottom-[40%] left-[10%] h-28 w-28 bg-d_pad bg-contain bg-center bg-no-repeat" />
+          <div className="absolute bottom-[30%] left-[10%] flex flex-col items-center justify-center gap-1">
+            <div className={`h-5 w-5 bg-joystick_arrow bg-contain bg-center bg-no-repeat ${menuVisible ? 'bg-joystick_arrow_a' : ''}`} />
+            <div className="flex flex-row items-center justify-center gap-1">
+              <div className="h-5 w-5 bg-joystick_arrow bg-contain bg-center bg-no-repeat -rotate-90" />
+              <div className="h-32 w-32 bg-d_pad bg-contain bg-center bg-no-repeat" />
+              <div className="h-5 w-5 bg-joystick_arrow bg-contain bg-center bg-no-repeat rotate-90" />
+            </div>
+            <div className={`h-5 w-5 bg-joystick_arrow bg-contain bg-center bg-no-repeat rotate-180 ${menuVisible ? 'bg-joystick_arrow_a' : ''}`} />
+          </div>
+
+
           <div className="absolute bottom-[25%] left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-[30%]">
             <div
               className="flex cursor-pointer flex-row items-end"
-              onClick={onStartClick}
+              onClick={menuVisible ? onMenuClose : onStartClick}
               role="button"
               tabIndex={0}
               aria-label="Start"
             >
-              <div className="h-20 w-20 bg-gameboy_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_btn_h active:bg-gameboy_btn_a" />
+              <div
+                className={`h-20 w-20 bg-gameboy_btn bg-contain bg-center bg-no-repeat hover:bg-gameboy_btn_h active:bg-gameboy_btn_a ${menuVisible ? 'bg-gameboy_btn_f hover:bg-gameboy_btn_f' : ''}`}
+              />
               <span className="-ml-8 mb-1 -rotate-45 font-handjet text-base">START</span>
             </div>
 
