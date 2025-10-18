@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
+import LogoutButton from '@/components/common/logout-button';
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
@@ -18,7 +19,9 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
     <div>
       <div className="flex flex-row justify-between">
         <PageTitle prefix="Welcome" text="User1" />
-        <RoundedButton className="flex self-end text-xl" contentClassName="px-16" href={"/"}>{t('Logout')}</RoundedButton>
+        <LogoutButton className="flex self-end text-xl" contentClassName="px-16">
+          {t('Logout')}
+        </LogoutButton>
       </div>
       <div className="m-4 whitespace-pre-line text-base">{t('description')}</div>
       <div className="my-4 flex items-center justify-end space-x-8">
