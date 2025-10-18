@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { FC, useCallback, useState } from 'react';
+import React, { FC, useCallback, useEffect, useState } from 'react';
 
 import TextLink from '@/components/common/text-link';
 import MenuOverlay from '@/components/navigation-bar/menu-overlay';
@@ -43,8 +43,22 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
 
   const validatorId = Math.floor(Math.random() * 1000) + 1;
 
+  useEffect(() => {
+    return () => {
+      emitWindowEvent('section:hover', null);
+    };
+  }, []);
+
   return (
-    <div className="w-full">
+    <div
+      className="w-full"
+      onMouseDown={(e) => {
+        const target = e.target as HTMLElement;
+        if (target.closest('a') || target.closest('button') || target.closest('[role="button"]')) {
+          emitWindowEvent('section:hover', null);
+        }
+      }}
+    >
       <div className="relative aspect-[1000/2100] w-full rounded-lg">
         <Image src="/img/stories/main-story.png" fill alt="main-story" className="object-contain" priority />
 
