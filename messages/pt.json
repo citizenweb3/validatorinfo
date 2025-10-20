@@ -1149,7 +1149,7 @@
     },
     "Transactions": {
       "title": "Histórico de Transações da Conta Blockchain",
-      "description": ""
+      "description": "O registo completo das transações está aqui. Detalhei todas as enviadas, recebidas e interações, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!"
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",

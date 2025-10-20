@@ -1148,7 +1148,7 @@
     },
     "Transactions": {
       "title": "Blockchain Account Transaction History",
-      "description": ""
+      "description": "The complete transaction log is here. I’ve detailed every send, receive, and interaction, with filters to help you navigate. It’s your transparent record of blockchain activity. Need to dig deeper? Use our Transaction Explorer for advanced insights!"
     },
     "Governance": {
       "title": "Governance Participation: Votes and Network Impact",
