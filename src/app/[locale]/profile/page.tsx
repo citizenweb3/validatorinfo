@@ -34,9 +34,9 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
       </div>
       <div className="flex gap-8 border-b border-bgSt pb-2">
         <div className="">
-          <SubTitle text={t('info')} size="h2" />
+          <SubTitle text={t('info')} size="h1" />
           <div className="flex w-full gap-4">
-            <Image src="/img/avatars/default.png" alt="avatar" width={62} height={58} className="mt-4 w-36" priority />
+            <Image src="/img/avatars/default.svg" alt="avatar" width={102} height={58} className="mt-2 w-44" priority />
             <div className="mt-4 flex-grow text-lg">
               <div className="grid grid-cols-2">
                 <div className="w-52 text-nowrap border-b border-r border-bgSt pb-3 pl-8 pr-4 pt-2 text-highlight">
@@ -52,13 +52,13 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
               </div>
             </div>
           </div>
-          <div className="mt-8 space-x-4 text-lg">
+          <div className="mt-4 space-x-4 text-lg">
             <RoundedButton>{t('upload')}</RoundedButton>
             <RoundedButton>{t('submit')}</RoundedButton>
           </div>
         </div>
-        <div className="flex-grow">
-          <SubTitle text={t('activitySummary')} size="h2" />
+        <div className="flex-grow mb-8">
+          <SubTitle text={t('activitySummary')} size="h1" />
           <div className="mt-4 flex justify-between">
             <div className="mx-4 h-28 w-1/3 bg-card">
               <div className="p-2.5 text-center text-base text-highlight">{t('daysVisited')}</div>
