@@ -606,7 +606,7 @@
       "title": "Your Wallet",
       "select asset": "Select Asset",
       "search asset": "Search for an Asset",
-      "Connect Wallet": "Connect Wallet"
+      "Swap": "Swap"
     }
   },
   "AboutPage": {

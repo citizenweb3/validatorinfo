@@ -21,7 +21,7 @@ const ProfileWalletPage: NextPageWithLocale<PageProps> = async ({ params: { loca
         <ChooseAsset />
       </div>
       <div className="flex justify-center">
-        <RoundedButton className="text-lg">{t('Connect Wallet')}</RoundedButton>
+        <RoundedButton className="text-lg">{t('Swap')}</RoundedButton>
       </div>
     </div>
   );
