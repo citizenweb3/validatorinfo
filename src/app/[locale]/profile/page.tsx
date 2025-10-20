@@ -6,6 +6,7 @@ import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -18,12 +19,12 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
   return (
     <div>
       <div className="flex flex-row justify-between">
-        <PageTitle prefix="Welcome" text="User1" />
+        <PageTitle text={t('title')} />
         <LogoutButton className="flex self-end text-xl" contentClassName="px-16">
           {t('Logout')}
         </LogoutButton>
       </div>
-      <div className="m-4 whitespace-pre-line text-base">{t('description')}</div>
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="my-4 flex items-center justify-end space-x-8">
         <RoundedButton className="text-xl" contentClassName="px-16">
           {t('feedback')}
