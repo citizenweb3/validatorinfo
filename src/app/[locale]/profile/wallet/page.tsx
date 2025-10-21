@@ -1,8 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
-import ChooseAsset from '@/app/profile/wallet/choose-asset';
+import SkipSwap from '@/app/profile/wallet/skip-swap';
 import PageTitle from '@/components/common/page-title';
-import RoundedButton from '@/components/common/rounded-button';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 
@@ -18,13 +17,7 @@ const ProfileWalletPage: NextPageWithLocale<PageProps> = async ({ params: { loca
     <div>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <div className="mt-24">
-        <ChooseAsset />
-        <ChooseAsset />
-      </div>
-      <div className="flex justify-center">
-        <RoundedButton className="text-lg">{t('Swap')}</RoundedButton>
-      </div>
+      <SkipSwap />
     </div>
   );
 };
