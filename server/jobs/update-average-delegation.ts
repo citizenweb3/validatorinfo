@@ -32,7 +32,6 @@ const updateAverageDelegation = async (chainNames: string[]) => {
       const nodes = await db.node.findMany({
         where: {
           chainId: dbChain.id,
-          delegatorsAmount: { gt: 0 },
         },
         select: {
           delegatorShares: true,
@@ -50,7 +49,7 @@ const updateAverageDelegation = async (chainNames: string[]) => {
 
       for (const node of nodes) {
         try {
-          const nodeTokens = BigInt(node.delegatorShares);
+          const nodeTokens = BigInt(String(node.delegatorShares).split('.')[0]);
           const nodeDelegators = node.delegatorsAmount || 0;
 
           totalTokens += nodeTokens;
