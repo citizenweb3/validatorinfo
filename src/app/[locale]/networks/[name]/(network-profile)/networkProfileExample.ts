@@ -46,10 +46,6 @@ export const networkProfileExample = {
   ],
   totalStatistics: [
     {
-      title: 'average delegations',
-      data: '...314',
-    },
-    {
       title: 'pending delegations',
       data: '...314',
     },

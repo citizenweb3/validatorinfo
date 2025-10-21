@@ -20,6 +20,7 @@ import updateCommTax from '@/server/jobs/update-community-tax';
 import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
 import updateFdv from '@/server/jobs/update-fdv';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
+import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
@@ -120,6 +121,9 @@ async function runTask() {
         break;
       case 'update-delegators-amount':
         await updateDelegatorsAmount(chains);
+        break;
+      case 'update-average-delegation':
+        await updateAverageDelegation(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
