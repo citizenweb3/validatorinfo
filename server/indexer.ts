@@ -107,6 +107,7 @@ const runServer = async () => {
     { name: 'circulating-tokens-public', schedule: timers.everyDay },
     { name: 'update-fdv', schedule: timers.everyHour },
     { name: 'update-delegators-amount', schedule: timers.everyDay },
+    { name: 'update-average-delegation', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {
