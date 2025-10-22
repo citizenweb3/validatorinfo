@@ -20,6 +20,10 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
     ? Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain.params.coinDecimals)
     : 0;
 
+  const averageDelegation = chain?.params?.coinDecimals != null
+    ? Number(chain?.tokenomics?.averageDelegation) / 10 ** Number(chain.params.coinDecimals)
+    : 0;
+
   return (
     <div className="grid grid-cols-2 gap-x-10">
       <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
@@ -50,6 +54,17 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
           className="flex w-1/2 cursor-pointer items-center py-5 pl-6 font-handjet text-lg hover:text-highlight">
           <Tooltip tooltip={communityPool.toLocaleString()}>
             {`${formatCash(communityPool)} ${chain?.params?.denom}`}
+          </Tooltip>
+        </div>
+      </div>
+      <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
+        <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
+          {t('average delegations')}
+        </div>
+        <div
+          className="flex w-1/2 cursor-pointer items-center py-5 pl-6 font-handjet text-lg hover:text-highlight">
+          <Tooltip tooltip={averageDelegation.toLocaleString()}>
+            {`${formatCash(averageDelegation)} ${chain?.params?.denom}`}
           </Tooltip>
         </div>
       </div>

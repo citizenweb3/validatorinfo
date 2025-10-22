@@ -578,12 +578,12 @@
     "Metadata": {
       "title": "Profile page"
     },
-    "title": "Welcome",
+    "title": "Your Web3 Profile: Activity Summary and Throne Room",
     "info": "Info",
     "validatorBtn": "Are you a validator?",
     "feedback": "Feedback",
     "Logout": "Logout",
-    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    "description": "Welcome to your personal hub! Check out your activity summary, manage your throne room, and customize your avatar and info. This is your web3 command center—track your journey, showcase your achievements, and keep everything organized in one spot.",
     "nick": "Nick",
     "additionalInfo": "Additional Info",
     "activitySummary": "Activity Summary",
@@ -598,15 +598,28 @@
     "Tabs": {
       "Tools": "Tools",
       "Rewards": "Rewards",
-      "Dashboard": "Dashboard",
-      "Messages": "Messages",
+      "Profile": "Profile",
+      "Board": "Board",
       "Wallet": "Wallet"
     },
     "Wallet": {
-      "title": "Your Wallet",
+      "title": "Web3 Wallet Hub: Token Swaps and NFTs",
+      "description": "Take control of your assets! With your Wallet tab, you can perform cross-chain token swaps using Skip, manage your funds, and prepare for upcoming NFT features. It’s your all-in-one spot for web3 finances and collectibles—stay ahead with more tools coming soon!",
       "select asset": "Select Asset",
       "search asset": "Search for an Asset",
-      "Connect Wallet": "Connect Wallet"
+      "Swap": "Swap"
+    },
+    "Board": {
+      "title": "My Board: Manage Favorites and Connect with the Web3 Community",
+      "description": "Manage your favorite validators and networks here! The Messages tab will soon let you send direct messages, leave notes on validator boards, and receive answers from the community. It’s your future gateway to building relationships, sharing ideas, and collaborating in the web3 space."
+    },
+    "Rewards": {
+      "title": "Rewards Center: Earn Tokens, Badges, and Track Stats",
+      "description": "Celebrate your wins! The Rewards Center lets you track internal tokens, collect badges, and view stats as you earn points through the library, games, and tools. It’s your web3 trophy room—keep engaging with the app to unlock more rewards and show off your progress!"
+    },
+    "Tools": {
+      "title": "Advanced Web3 Tools: Analytics, AI Search, and Knowledge Graphs",
+      "description": "Level up your web3 game! The Tools tab offers in-depth analytics, AI search history for validators, and on-chain knowledge graphs of your favorite validators and stats. It’s your go-to toolkit for smarter decisions, trend tracking, and exploring the blockchain like a pro. Jump in and uncover new insights!"
     }
   },
   "AboutPage": {
@@ -1135,7 +1148,7 @@
     },
     "Transactions": {
       "title": "Blockchain Account Transaction History",
-      "description": ""
+      "description": "The complete transaction log is here. I’ve detailed every send, receive, and interaction, with filters to help you navigate. It’s your transparent record of blockchain activity. Need to dig deeper? Use our Transaction Explorer for advanced insights!"
     },
     "Governance": {
       "title": "Governance Participation: Votes and Network Impact",

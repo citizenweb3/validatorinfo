@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 const sizeItems = {
-  h1: 'text-2xl py-5 px-6',
+  h1: 'text-3xl py-5 px-6',
   h2: 'text-xl py-4 px-4',
   h3: 'text-lg py-3 px-4',
   h4: 'text-base py-2 px-3',

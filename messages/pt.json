@@ -578,12 +578,12 @@
     "Metadata": {
       "title": "Página de perfil"
     },
-    "title": "Bem-vindo",
+    "title": "O seu perfil Web3: resumo de atividades e sala do trono",
     "info": "Informações",
     "validatorBtn": "Você é um validador?",
     "feedback": "Opinião",
     "Logout": "Terminar sessão",
-    "description": "What is Lorem Ipsum?\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ",
+    "description": "Bem-vindo ao seu hub pessoal! Confira o resumo das suas atividades, gerencie a sua sala do trono e personalize o seu avatar e informações. Este é o seu centro de comando web3 — acompanhe a sua jornada, mostre as suas conquistas e mantenha tudo organizado em um só lugar.",
     "nick": "Nick",
     "additionalInfo": "Informações adicionais",
     "activitySummary": "Resumo da atividade",
@@ -598,15 +598,28 @@
     "Tabs": {
       "Tools": "Ferramentas",
       "Rewards": "Recompensas",
-      "Dashboard": "Painel",
-      "Messages": "Mensagens",
+      "Profile": "Perfil",
+      "Board": "Painel",
       "Wallet": "Carteira"
     },
     "Wallet": {
-      "title": "Sua Carteira",
+      "title": "Web3 Wallet Hub: Trocas de tokens e NFTs",
+      "description": "Assuma o controlo dos seus ativos! Com o separador Carteira, pode realizar trocas de tokens entre cadeias usando o Skip, gerir os seus fundos e preparar-se para os próximos recursos NFT. É o seu local completo para finanças e colecionáveis web3 — fique à frente com mais ferramentas em breve!",
       "select asset": "Selecionar Ativo",
       "search asset": "Procurar um Ativo",
-      "Connect Wallet": "Conectar a Carteira"
+      "Swap": "Trocar"
+    },
+    "Board": {
+      "title": "Meu Painel: Gerencie Favoritos e Conecte-se com a Comunidade Web3",
+      "description": "Gerencie seus validadores e redes favoritos aqui! A guia Mensagens em breve permitirá que você envie mensagens diretas, deixe notas nos painéis dos validadores e receba respostas da comunidade. É o seu futuro portal para construir relacionamentos, compartilhar ideias e colaborar no espaço web3."
+    },
+    "Rewards": {
+      "title": "Centro de Recompensas: Ganhe Tokens, Emblemas e Acompanhe Estatísticas",
+      "description": "Comemore as suas vitórias! O Centro de Recompensas permite-lhe acompanhar tokens internos, colecionar emblemas e visualizar estatísticas à medida que ganha pontos através da biblioteca, jogos e ferramentas. É a sua sala de troféus web3 — continue a interagir com a aplicação para desbloquear mais recompensas e mostrar o seu progresso!"
+    },
+    "Tools": {
+      "title": "Ferramentas Web3 avançadas: análises, pesquisa com IA e gráficos de conhecimento",
+      "description": "Eleve o seu jogo web3 a um novo nível! A guia Ferramentas oferece análises detalhadas, histórico de pesquisa com IA para validadores e gráficos de conhecimento em cadeia dos seus validadores e estatísticas favoritos. É o seu kit de ferramentas essencial para tomar decisões mais inteligentes, acompanhar tendências e explorar a blockchain como um profissional. Entre e descubra novos insights!"
     }
   },
   "AboutPage": {
@@ -1136,7 +1149,7 @@
     },
     "Transactions": {
       "title": "Histórico de Transações da Conta Blockchain",
-      "description": ""
+      "description": "O registo completo das transações está aqui. Detalhei todas as enviadas, recebidas e interações, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!"
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",

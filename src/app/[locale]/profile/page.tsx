@@ -1,10 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
+import LogoutButton from '@/components/common/logout-button';
 import PageTitle from '@/components/common/page-title';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import { NextPageWithLocale } from '@/i18n';
+import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -17,10 +19,12 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
   return (
     <div>
       <div className="flex flex-row justify-between">
-        <PageTitle prefix="Welcome" text="User1" />
-        <RoundedButton className="flex self-end text-xl" contentClassName="px-16" href={"/"}>{t('Logout')}</RoundedButton>
+        <PageTitle text={t('title')} />
+        <LogoutButton className="flex self-end text-xl" contentClassName="px-16">
+          {t('Logout')}
+        </LogoutButton>
       </div>
-      <div className="m-4 whitespace-pre-line text-base">{t('description')}</div>
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="my-4 flex items-center justify-end space-x-8">
         <RoundedButton className="text-xl" contentClassName="px-16">
           {t('feedback')}
@@ -31,9 +35,9 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
       </div>
       <div className="flex gap-8 border-b border-bgSt pb-2">
         <div className="">
-          <SubTitle text={t('info')} size="h2" />
+          <SubTitle text={t('info')} size="h1" />
           <div className="flex w-full gap-4">
-            <Image src="/img/avatars/default.png" alt="avatar" width={62} height={58} className="mt-4 w-36" priority />
+            <Image src="/img/avatars/default.svg" alt="avatar" width={102} height={58} className="mt-2 w-44" priority />
             <div className="mt-4 flex-grow text-lg">
               <div className="grid grid-cols-2">
                 <div className="w-52 text-nowrap border-b border-r border-bgSt pb-3 pl-8 pr-4 pt-2 text-highlight">
@@ -49,13 +53,13 @@ const ProfilePage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
               </div>
             </div>
           </div>
-          <div className="mt-8 space-x-4 text-lg">
+          <div className="mt-4 space-x-4 text-lg">
             <RoundedButton>{t('upload')}</RoundedButton>
             <RoundedButton>{t('submit')}</RoundedButton>
           </div>
         </div>
-        <div className="flex-grow">
-          <SubTitle text={t('activitySummary')} size="h2" />
+        <div className="flex-grow mb-8">
+          <SubTitle text={t('activitySummary')} size="h1" />
           <div className="mt-4 flex justify-between">
             <div className="mx-4 h-28 w-1/3 bg-card">
               <div className="p-2.5 text-center text-base text-highlight">{t('daysVisited')}</div>
