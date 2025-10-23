@@ -15,7 +15,7 @@ interface OwnProps {
   chains: Chain[];
 }
 
-const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
+const ValidatorListItemGame: FC<OwnProps> = ({ chains, validator }) => {
   // @ts-ignore I don't know why, but it doesn't understand that filter removes undefined items
   const validatorChains: (Chain & { valoper: string })[] = validator.nodes
     .map((n) => {
@@ -47,4 +47,4 @@ const ValidatorListItem: FC<OwnProps> = ({ chains, validator }) => {
   );
 };
 
-export default ValidatorListItem;
+export default ValidatorListItemGame;

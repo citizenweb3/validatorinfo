@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
-import ValidatorListItem from '@/app/main-validators/validator-list/validator-list-item/validator-list-item';
+import ValidatorListItemGame from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-game';
+import ValidatorListItemDev from '@/app/main-validators/validator-list/validator-list-item/validators-list-item-dev';
 import ValidatorsNextPagination from '@/app/main-validators/validator-list/validators-next-pagination';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/server/types';
@@ -12,10 +13,14 @@ interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy?: string; order: SortDirection };
+  mode?: 'game' | 'dev';
 }
 
-const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1 }) => {
+const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1, mode = 'game' }) => {
   const chains = await ChainService.getAll([], 0, 1000);
+  const ItemComponent = mode === 'dev' ? ValidatorListItemDev : ValidatorListItemGame;
+  const colSpan = mode === 'dev' ? 10 : 3;
+
   if (sort.sortBy) {
     const { validators: list, pages } = await validatorService.getAll(
       ecosystems,
@@ -28,10 +33,10 @@ const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, ecosystems, current
     return (
       <tbody>
         {list.map((item) => (
-          <ValidatorListItem key={item.id} validator={item} chains={chains.chains} />
+          <ItemComponent key={item.id} validator={item} chains={chains.chains} />
         ))}
         <tr>
-          <td colSpan={3} className="pt-4">
+          <td colSpan={colSpan} className="pt-4">
             <TablePagination pageLength={pages} />
           </td>
         </tr>
@@ -44,7 +49,7 @@ const ValidatorsList: FC<OwnProps> = async ({ sort, perPage, ecosystems, current
   return (
     <tbody>
       {list.map((item) => (
-        <ValidatorListItem key={item.id} validator={item} chains={chains.chains} />
+        <ItemComponent key={item.id} validator={item} chains={chains.chains} />
       ))}
       <ValidatorsNextPagination />
     </tbody>

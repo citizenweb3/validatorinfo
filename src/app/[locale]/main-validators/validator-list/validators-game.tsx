@@ -13,7 +13,7 @@ interface OwnProps extends PagesProps {
   sort: { sortBy?: string; order: SortDirection };
 }
 
-const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], currentPage = 1 }) => {
+const ValidatorsGame: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], currentPage = 1 }) => {
   return (
     <div>
       <ListFilters perPage={perPage} selectedEcosystems={ecosystems} isEcosystems />
@@ -44,4 +44,4 @@ const Validators: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = [], 
   );
 };
 
-export default Validators;
+export default ValidatorsGame;

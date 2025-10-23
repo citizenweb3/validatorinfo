@@ -176,7 +176,9 @@
         "title": "More features:",
         "text": "Connect -<logInImg></logInImg>- your Web3 wallet for token swaps, rewards and more features.<br></br>Explore Library -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- and share your opinion in the p2p Rumor -<rumorsImg></rumorsImg>- chat."
       }
-    }
+    },
+    "Game": "Where am I?",
+    "Dev": "Dev Mode (WIP)"
   },
   "GlobalPosPage": {
     "Metadata": {
