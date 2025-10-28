@@ -176,7 +176,9 @@
         "title": "Больше возможностей:",
         "text": "Подключи -<logInImg></logInImg>- свой Web3 кошелек для обмена токенов, получения вознаграждений и других возможностей.<br></br>Изучи Библиотеку -<libraryImg></libraryImg>, ИИ -<aiImg></aiImg>- и поделись своим мнением в -<rumorsImg></rumorsImg>- чате."
       }
-    }
+    },
+    "Game": "Где я?",
+    "Dev": "Режим разработки (WIP)"
   },
   "GlobalPosPage": {
     "Metadata": {

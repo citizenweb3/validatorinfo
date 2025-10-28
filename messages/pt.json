@@ -176,7 +176,9 @@
         "title": "Mais funcionalidades:",
         "text": "Ligue -<logInImg></logInImg>- a sua carteira Web3 para trocas de tokens, recompensas e mais funcionalidades.<br></br>Explore a Biblioteca -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- e partilhe a sua opinião no chat -<rumorsImg></rumorsImg>- p2p Rumor."
       }
-    }
+    },
+    "Game": "Onde estou?",
+    "Dev": "Modo de desenvolvimento (WIP)"
   },
   "GlobalPosPage": {
     "Metadata": {
