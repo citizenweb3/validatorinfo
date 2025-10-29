@@ -31,6 +31,7 @@ import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
+import updateGithubRepositories from '@/server/jobs/update-github-repositories';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -124,6 +125,9 @@ async function runTask() {
         break;
       case 'update-average-delegation':
         await updateAverageDelegation(chains);
+        break;
+      case 'github-repositories':
+        await updateGithubRepositories(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

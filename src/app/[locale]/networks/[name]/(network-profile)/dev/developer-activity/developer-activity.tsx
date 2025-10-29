@@ -1,67 +1,56 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import {
-  devActivityTableExampleInterface,
-  networkProfileExample,
-} from '@/app/networks/[name]/(network-profile)/networkProfileExample';
+import DeveloperActivityChart from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-chart';
+import DeveloperActivityTable from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table';
 import SubTitle from '@/components/common/sub-title';
 import TableDropdown from '@/components/common/table-dropdown';
-import DeveloperActivityTable
-  from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table';
-import DeveloperActivityChart
-  from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-chart';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
+import githubService, { GithubRepositoryWithCommitCount } from '@/services/github-service';
 
 interface OwnProps {
+  chain: ChainWithParamsAndTokenomics | null;
 }
 
-const DeveloperActivity: FC<OwnProps> = async () => {
+const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkDevInfo.DeveloperActivity');
+
+  if (!chain) {
+    return null;
+  }
+
+  const stats = await githubService.getStats(chain.id);
+  const repositories = await githubService.getRepositoriesWithCommits(chain.id);
+  const activityData = await githubService.getActivityData(chain.id);
 
   return (
     <div className="mt-14">
       <SubTitle text={t('Subtitle')} />
-      <div className="flex flex-row mt-10 ml-12">
+      <div className="ml-12 mt-10 flex flex-row">
         <div className="flex flex-row items-center border-r border-bgSt pr-7">
-          <div className="text-highlight font-sfpro text-lg pr-2">
-            {t('star')}:
-          </div>
-          <div className="font-handjet text-xl">
-            22
-          </div>
+          <div className="pr-2 font-sfpro text-lg text-highlight">{t('star')}:</div>
+          <div className="font-handjet text-xl">{stats.totalStars}</div>
         </div>
-        <div className="flex flex-row items-center border-r border-bgSt pr-7 ml-4">
-          <div className="font-sfpro text-lg pr-2">
-            {t('forked')}:
-          </div>
-          <div className="font-handjet text-xl">
-            124
-          </div>
+        <div className="ml-4 flex flex-row items-center border-r border-bgSt pr-7">
+          <div className="pr-2 font-sfpro text-lg">{t('forked')}:</div>
+          <div className="font-handjet text-xl">{stats.totalForks}</div>
         </div>
-        <div className="flex flex-row items-center border-r border-bgSt pr-7 ml-4">
-          <div className="font-sfpro text-lg pr-2">
-            {t('repositories')}:
-          </div>
-          <div className="font-handjet text-xl">
-            4
-          </div>
+        <div className="ml-4 flex flex-row items-center border-r border-bgSt pr-7">
+          <div className="pr-2 font-sfpro text-lg">{t('repositories')}:</div>
+          <div className="font-handjet text-xl">{stats.repositoryCount}</div>
         </div>
-        <div className="flex flex-row items-center ml-4">
-          <div className="font-sfpro text-lg pr-2">
-            {t('most active repo')}:
-          </div>
-          <div className="font-handjet text-xl">
-            123
-          </div>
+        <div className="ml-4 flex flex-row items-center">
+          <div className="pr-2 font-sfpro text-lg">{t('most active repo')}:</div>
+          <div className="font-handjet text-xl">{stats.mostActiveRepoCommits}</div>
         </div>
       </div>
       <div className="mx-12 mb-20">
-        <DeveloperActivityChart />
+        <DeveloperActivityChart activityData={activityData} />
       </div>
-      <TableDropdown<devActivityTableExampleInterface[]>
+      <TableDropdown<GithubRepositoryWithCommitCount[]>
         page="NetworkDevInfo.DeveloperActivity"
         Table={DeveloperActivityTable}
-        items={networkProfileExample.developerActivityTable}
+        items={repositories}
       />
     </div>
   );
