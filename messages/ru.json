@@ -366,7 +366,8 @@
           "name": "Коммиты",
           "hint": ""
         }
-      }
+      },
+      "no repositories": "Нет Репозиториев"
     }
   },
   "NetworkTokenomics": {

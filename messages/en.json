@@ -366,7 +366,8 @@
           "name": "Commits",
           "hint": ""
         }
-      }
+      },
+      "no repositories": "No Repositories"
     }
   },
   "NetworkTokenomics": {

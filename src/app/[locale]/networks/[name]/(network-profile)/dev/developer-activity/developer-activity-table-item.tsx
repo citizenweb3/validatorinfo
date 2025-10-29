@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import { FC } from 'react';
-import { devActivityTableExampleInterface } from '@/app/networks/[name]/(network-profile)/networkProfileExample';
+
+import { GithubRepositoryWithCommitCount } from '@/services/github-service';
 
 interface OwnProps {
-  item: devActivityTableExampleInterface;
+  item: GithubRepositoryWithCommitCount;
 }
 
 const DeveloperActivityTableItem: FC<OwnProps> = ({ item }) => {
@@ -10,12 +12,19 @@ const DeveloperActivityTableItem: FC<OwnProps> = ({ item }) => {
     <tr className="group cursor-pointer hover:bg-bgHover">
       <td className="w-1/2 border-b border-black py-4 hover:text-highlight active:border-bgSt">
         <div className="flex items-center justify-center font-sfpro text-base">
-          {item.title}
+          <Link
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 transition-colors hover:text-highlight"
+          >
+            {item.name}
+          </Link>
         </div>
       </td>
       <td className="w-1/2 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
         <div className="flex items-center justify-center font-handjet text-lg">
-          {item.data}
+          {item.totalCommits.toLocaleString()}
         </div>
       </td>
     </tr>

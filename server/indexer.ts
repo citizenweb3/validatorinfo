@@ -21,7 +21,7 @@ const runServer = async () => {
   logInfo('Starting indexer server');
   const tasksRunning: Record<string, boolean> = {};
 
-  function spawnTask(taskName: string, chains: string[]) {
+  async function spawnTask(taskName: string, chains: string[]) {
     if (tasksRunning[taskName]) {
       logInfo(`${taskName} already running, skipping.`);
       return Promise.resolve();
@@ -108,6 +108,7 @@ const runServer = async () => {
     { name: 'update-fdv', schedule: timers.everyHour },
     { name: 'update-delegators-amount', schedule: timers.everyDay },
     { name: 'update-average-delegation', schedule: timers.in45MinEveryHour },
+    { name: 'github-repositories', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {
