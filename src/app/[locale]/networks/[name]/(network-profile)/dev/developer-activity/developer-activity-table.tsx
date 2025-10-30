@@ -63,6 +63,14 @@ const DeveloperActivityTable: FC<OwnProps> = ({ items }) => {
               onClick={() => handleSort('commits')}
             >
               <div className="flex items-center justify-center gap-2">
+                <span>{t('Table.Language.name')}</span>
+              </div>
+            </th>
+            <th
+              className="hover:bg-gray-100 cursor-pointer py-3 transition-colors"
+              onClick={() => handleSort('commits')}
+            >
+              <div className="flex items-center justify-center gap-2">
                 <SortButton isActive={sortBy === 'commits'} direction={sortBy === 'commits' ? sortOrder : 'asc'} />
                 <span>{t('Table.Commits.name')}</span>
               </div>

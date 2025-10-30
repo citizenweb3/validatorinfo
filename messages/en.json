@@ -365,6 +365,10 @@
         "Commits": {
           "name": "Commits",
           "hint": ""
+        },
+        "Language": {
+          "name": "Programming Language",
+          "hint": ""
         }
       },
       "no repositories": "No Repositories"
