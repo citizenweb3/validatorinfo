@@ -1,8 +1,9 @@
+import { sleep } from '@cosmjs/utils';
+
 import db from '@/db';
 import logger from '@/logger';
-import { chainParamsArray } from '@/server/tools/chains/params';
-import { sleep } from '@cosmjs/utils';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
+import { chainParamsArray } from '@/server/tools/chains/params';
 
 const { logInfo, logError } = logger('get-tokenomics');
 
@@ -17,6 +18,7 @@ interface MarketData {
 interface ApiResponse {
   id?: string;
   market_data?: MarketData;
+  description: { en: string | null };
 }
 
 const RETRIES = 5;
@@ -52,6 +54,7 @@ const processChainWithRetry = async (chain: AddChainProps, retries = RETRIES) =>
       }
 
       const marketData = data.market_data;
+
       const record = {
         changesPerDay: Number(marketData?.price_change_percentage_24h) || 0,
         changesPerMonth: Number(marketData?.price_change_percentage_30d) || 0,
@@ -64,7 +67,16 @@ const processChainWithRetry = async (chain: AddChainProps, retries = RETRIES) =>
         create: { chainId: dbChain.id, ...record },
         update: { ...record },
       });
-      logInfo(`[${chain.chainId}] Updated successfully.`);
+
+      logInfo(`[${chain.chainId}] Tokenomics updated successfully.`);
+
+      await db.chain.update({
+        where: { id: dbChain.id },
+        data: { description: data?.description?.en ?? null },
+      });
+
+      logInfo(`[${chain.chainId}] Description updated successfully.`);
+
       return;
     } catch (e) {
       logError(`[${chain.chainId}] Error:`, e);
@@ -77,7 +89,7 @@ const processChainWithRetry = async (chain: AddChainProps, retries = RETRIES) =>
   }
 };
 
-export const getTokenomics = async () => {
+export const getCoingeckoData = async () => {
   const chains = chainParamsArray.filter((c) => c.coinGeckoId);
 
   for (const chain of chains) {

@@ -94,6 +94,7 @@ model Chain {
   githubMainRepo String  @map("github_main_repo")
   hasValidators  Boolean @default(true) @map("has_validators")
   walletsAmount  Int?    @map("wallets_amount")
+  description    String?
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
