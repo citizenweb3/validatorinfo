@@ -47,7 +47,7 @@ const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
                    perPage={perPage}
                    currentPage={currentPage}
                    sort={{ sortBy, order }} />
-      <DeveloperActivity />
+      <DeveloperActivity chain={chain} />
     </div>
   );
 };

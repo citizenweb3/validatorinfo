@@ -94,6 +94,7 @@ model Chain {
   githubMainRepo String  @map("github_main_repo")
   hasValidators  Boolean @default(true) @map("has_validators")
   walletsAmount  Int?    @map("wallets_amount")
+  description    String?
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
@@ -105,10 +106,11 @@ model Chain {
   tokenomics Tokenomics?  @relation("chain_tokenomics")
   params     ChainParams? @relation("chain_params")
 
-  validators Validator[] @relation("chain_validators")
-  addresses  Address[]   @relation("chain_addresses")
-  nodeVotes  NodeVote[]  @relation("node_vote_chain")
-  proposals  Proposal[]  @relation("chain_proposals")
+  validators         Validator[]        @relation("chain_validators")
+  addresses          Address[]          @relation("chain_addresses")
+  nodeVotes          NodeVote[]         @relation("node_vote_chain")
+  proposals          Proposal[]         @relation("chain_proposals")
+  githubRepositories GithubRepository[] @relation("chain_github_repositories")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
@@ -174,7 +176,7 @@ model Node {
   validator Validator? @relation("validator_node", fields: [validatorId], references: [id])
   votes     NodeVote[] @relation("node_vote_node")
 
-  //calculated
+  // calculated
   consensusAddress String @default("") @map("consensus_address")
   uptime           Float?
 
@@ -217,6 +219,7 @@ model Tokenomics {
   apr                      Float  @default(0)
   circulatingTokensOnchain String @default("") @map("circulating_tokens_onchain")
   fdv                      Float  @default(0)
+  averageDelegation        String @default("") @map("average_delegation")
 
   chain Chain @relation("chain_tokenomics", fields: [chainId], references: [id])
 
@@ -303,4 +306,42 @@ model NodeVote {
 
   @@unique([nodeId, proposalId], map: "node_id_proposal_id")
   @@map("node_votes")
+}
+
+model GithubRepository {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  name            String
+  fullName        String   @map("full_name")
+  description     String?
+  url             String
+  homepage        String?
+  language        String?
+  starsCount      Int      @default(0) @map("stars_count")
+  forksCount      Int      @default(0) @map("forks_count")
+  watchersCount   Int      @default(0) @map("watchers_count")
+  openIssuesCount Int      @default(0) @map("open_issues_count")
+  createdAt       DateTime @map("created_at") @db.Timestamptz(6)
+  updatedAt       DateTime @map("updated_at") @db.Timestamptz(6)
+  pushedAt        DateTime @map("pushed_at") @db.Timestamptz(6)
+
+  chain      Chain            @relation("chain_github_repositories", fields: [chainId], references: [id])
+  activities GithubActivity[] @relation("repository_activities")
+
+  @@unique([chainId, fullName])
+  @@map("github_repositories")
+}
+
+model GithubActivity {
+  id           Int      @id @default(autoincrement())
+  repositoryId Int      @map("repository_id")
+  date         DateTime @db.Date
+  commitCount  Int      @default(0) @map("commit_count")
+  additions    Int      @default(0)
+  deletions    Int      @default(0)
+
+  repository GithubRepository @relation("repository_activities", fields: [repositoryId], references: [id], onDelete: Cascade)
+
+  @@unique([repositoryId, date], map: "repository_id_date")
+  @@map("github_activities")
 }

@@ -22,6 +22,8 @@
     "@polkadot/util-crypto": "^13.5.3",
     "@popperjs/core": "^2.11.8",
     "@prisma/client": "^6.16.1",
+    "@skip-go/widget": "^3.14.14",
+    "@tanstack/react-query": "^5.90.5",
     "base64url": "^3.0.1",
     "bech32": "^2.0.0",
     "chart.js": "^4.4.3",
@@ -58,6 +60,8 @@
     "tailwind-scrollbar": "^3.1.0",
     "tsx": "^4.19.2",
     "usehooks-ts": "^3.1.0",
+    "viem": "^2.38.3",
+    "wagmi": "^2.18.1",
     "winston": "^3.17.0",
     "winston-daily-rotate-file": "^5.0.0",
     "ws": "^8.18.0"

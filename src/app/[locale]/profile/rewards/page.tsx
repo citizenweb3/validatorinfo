@@ -1,10 +1,20 @@
-import NotToday from '@/components/common/not-today';
+import { getTranslations } from 'next-intl/server';
+
 import { NextPageWithLocale } from '@/i18n';
+import PageTitle from '@/components/common/page-title';
+import SubDescription from '@/components/sub-description';
 
 interface PageProps {}
 
-const ProfileRewardsPage: NextPageWithLocale<PageProps> = async () => {
-  return <NotToday />;
+const ProfileRewardsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }) => {
+  const t = await getTranslations({ locale, namespace: 'ProfilePage.Rewards' });
+
+  return (
+    <div>
+      <PageTitle text={t('title')} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+    </div>
+  );
 };
 
 export default ProfileRewardsPage;
