@@ -2,10 +2,11 @@ import { parentPort, workerData } from 'worker_threads';
 
 import logger from '@/logger';
 import getChainUptime from '@/server/jobs/get-chain-uptime';
+import { getCoingeckoData } from '@/server/jobs/get-coingecko-data';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
-import { getTokenomics } from '@/server/jobs/get-tokenomics';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
+import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
@@ -19,8 +20,8 @@ import updateCommPool from '@/server/jobs/update-community-pool';
 import updateCommTax from '@/server/jobs/update-community-tax';
 import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
 import updateFdv from '@/server/jobs/update-fdv';
+import updateGithubRepositories from '@/server/jobs/update-github-repositories';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
-import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
@@ -31,7 +32,6 @@ import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
-import updateGithubRepositories from '@/server/jobs/update-github-repositories';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -87,8 +87,8 @@ async function runTask() {
       case 'wallets-amount':
         await updateWalletsAmount(chains);
         break;
-      case 'tokenomics':
-        await getTokenomics();
+      case 'coingecko-data':
+        await getCoingeckoData();
         break;
       case 'proposal-params':
         await updateProposalParams(chains);

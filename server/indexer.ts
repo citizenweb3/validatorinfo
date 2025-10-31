@@ -65,7 +65,7 @@ const runServer = async () => {
     { name: 'chain-node-params', schedule: timers.everyDay },
     { name: 'community-tax', schedule: timers.everyDay },
     { name: 'wallets-amount', schedule: timers.everyDay },
-    { name: 'tokenomics', schedule: timers.in30MinEveryHour },
+    { name: 'coingecko-data', schedule: timers.in30MinEveryHour },
     { name: 'proposal-params', schedule: timers.everyDay },
     { name: 'update-staking-page-json', schedule: timers.everyDay },
     { name: 'update-chain-rewards', schedule: timers.everyDay },
