@@ -21,16 +21,13 @@ const updateUnbondingTokens = async (chainNames: string[]) => {
       }
 
       if (!dbChain.hasValidators) {
-        logInfo(`${chainName} has no validators, skipping`);
+        logError(`${chainName} has no validators, skipping`);
         continue;
       }
 
-      logInfo(`${chainName} updating unbonding tokens`);
       const unbondingTokens = await chainMethods.getUnbondingTokens(chainParams);
 
       if (unbondingTokens !== null && unbondingTokens !== undefined) {
-        logInfo(`${chainName} unbonding tokens: ${unbondingTokens}`);
-
         await db.tokenomics.upsert({
           where: { chainId: dbChain.id },
           update: { unbondingTokens },

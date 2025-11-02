@@ -3,7 +3,7 @@ import logger from '@/logger';
 import { GetUnbondingTokens } from '@/server/tools/chains/chain-indexer';
 import fetchChainData from '@/server/tools/get-chain-data';
 
-const { logError, logDebug, logInfo } = logger('get-unbonding-tokens');
+const { logError, logInfo } = logger('get-unbonding-tokens');
 
 interface UnbondingDelegation {
   delegator_address: string;
@@ -62,17 +62,13 @@ const getUnbondingTokens: GetUnbondingTokens = async (chain) => {
           }
           validatorCount++;
         }
-      } catch (error: any) {
+      } catch (e) {
         errorCount++;
         if (errorCount <= 3) {
-          logDebug(`Could not fetch unbonding delegations for validator ${node.operatorAddress}: ${error.message}`);
+          logError(`Could not fetch unbonding delegations for validator ${node.operatorAddress}: ${e}`);
         }
       }
     }
-
-    logInfo(
-      `${chain.name} - Processed ${validatorCount}/${dbChain.nodes.length} validators. Total unbonding: ${totalUnbonding.toString()}`,
-    );
 
     return totalUnbonding.toString();
   } catch (error: any) {
