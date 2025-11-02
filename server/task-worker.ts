@@ -29,6 +29,7 @@ import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
 import updateSlashingInfosSolana from '@/server/jobs/update-slashing-infos-solana';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
+import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
@@ -116,6 +117,9 @@ async function runTask() {
         break;
       case 'circulating-tokens-public':
         await updateCirculatingTokensPublic(chains);
+        break;
+      case 'unbonding-tokens':
+        await updateUnbondingTokens(chains);
         break;
       case 'update-fdv':
         await updateFdv(chains);

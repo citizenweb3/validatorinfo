@@ -125,6 +125,7 @@ export type GetCirculatingTokensOnchain = (
 ) => Promise<string | null>;
 export type GetCirculatingTokensPublic = (chain: AddChainProps) => Promise<string | null>;
 export type GetDelegatorsAmount = (chain: AddChainProps) => Promise<DelegatorsAmount[]>;
+export type GetUnbondingTokens = (chain: AddChainProps) => Promise<string | null>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -147,4 +148,5 @@ export interface ChainMethods {
   getCirculatingTokensOnchain: GetCirculatingTokensOnchain;
   getCirculatingTokensPublic: GetCirculatingTokensPublic;
   getDelegatorsAmount: GetDelegatorsAmount;
+  getUnbondingTokens: GetUnbondingTokens;
 }

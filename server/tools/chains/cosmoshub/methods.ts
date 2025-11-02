@@ -6,6 +6,7 @@ import getCirculatingTokensOnchain from '@/server/tools/chains/cosmoshub/get-cir
 import getCirculatingTokensPublic from '@/server/tools/chains/cosmoshub/get-circulating-tokens-public';
 import getCommunityPool from '@/server/tools/chains/cosmoshub/get-community-pool';
 import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
+import getDelegatorsAmount from '@/server/tools/chains/cosmoshub/get-delegators-amount';
 import getInflationRate from '@/server/tools/chains/cosmoshub/get-inflation-rate';
 import getMissedBlocks from '@/server/tools/chains/cosmoshub/get-missed-blocks';
 import getNodeParams from '@/server/tools/chains/cosmoshub/get-node-params';
@@ -16,8 +17,8 @@ import getProposals from '@/server/tools/chains/cosmoshub/get-proposals';
 import getSlashingParams from '@/server/tools/chains/cosmoshub/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/cosmoshub/get-staking-params';
 import getTvs from '@/server/tools/chains/cosmoshub/get-tvs';
+import getUnbondingTokens from '@/server/tools/chains/cosmoshub/get-unbonding-tokens';
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
-import getDelegatorsAmount from '@/server/tools/chains/cosmoshub/get-delegators-amount';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -40,6 +41,7 @@ const chainMethods: ChainMethods = {
   getCirculatingTokensOnchain,
   getCirculatingTokensPublic,
   getDelegatorsAmount,
+  getUnbondingTokens,
 };
 
 export default chainMethods;

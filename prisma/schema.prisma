@@ -213,6 +213,7 @@ model Tokenomics {
   totalSupply              String @default("") @map("total_supply")
   bondedTokens             String @default("") @map("bonded_tokens")
   unbondedTokens           String @default("") @map("not_bonded_tokens")
+  unbondingTokens          String @default("") @map("unbonding_tokens")
   unbondedTokensRatio      Float  @default(0) @map("unbonded_tokens_ratio")
   tvl                      Float  @default(0)
   tvs                      Float  @default(0)
