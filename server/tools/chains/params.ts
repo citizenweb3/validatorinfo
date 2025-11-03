@@ -1,7 +1,7 @@
 import logger from '@/logger';
 import { AddChainProps, ChainNodeType } from '@/server/tools/chains/chain-indexer';
 import fetchData from '@/server/utils/fetch-data';
-import fetchNamadaInfrastructure from '@/server/tools/chains/namada/fetch-infrastructure';
+import fetchNamadaInfrastructure from '@/server/tools/chains/namada/get-infrastructure';
 import { logError } from 'effect/Effect';
 import { mergeNodes } from '@/server/utils/merge-nodes';
 

@@ -110,6 +110,7 @@ const runServer = async () => {
     { name: 'update-average-delegation', schedule: timers.in45MinEveryHour },
     { name: 'github-repositories', schedule: timers.everyDay },
     { name: 'unbonding-tokens', schedule: timers.everyDay },
+    { name: 'match-chain-nodes', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

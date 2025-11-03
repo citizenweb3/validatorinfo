@@ -1,7 +1,7 @@
 import logger from '@/logger';
 import { ChainNodeType } from '@/server/tools/chains/chain-indexer';
 
-const { logInfo, logError } = logger('fetch-namada-infrastructure');
+const { logError } = logger('fetch-namada-infrastructure');
 
 interface NamadaRPCEntry {
   'RPC Address': string;
@@ -27,12 +27,12 @@ const NAMADA_REGISTRIES = {
   mainnet: {
     rpc: 'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/mainnet/rpc.json',
     indexer:
-      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/mainnet/masp-indexers.json',
+      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/mainnet/namada-indexers.json',
   },
   testnet: {
     rpc: 'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/testnet/housefire/rpc.json',
     indexer:
-      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/testnet/housefire/masp-indexers.json',
+      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/testnet/housefire/namada-indexers.json',
   },
 };
 
@@ -90,13 +90,10 @@ export const fetchNamadaInfrastructure = async (chainName: string): Promise<Nama
   const network = isTestnet ? 'testnet' : 'mainnet';
   const registries = NAMADA_REGISTRIES[network];
 
-
   const [rpcNodes, indexerNodes] = await Promise.all([
     fetchRPCEndpoints(registries.rpc),
     fetchIndexerEndpoints(registries.indexer),
   ]);
-
-  const totalNodes = rpcNodes.length + indexerNodes.length;
 
   return [...rpcNodes, ...indexerNodes];
 };

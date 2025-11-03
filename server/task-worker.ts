@@ -22,6 +22,7 @@ import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
 import updateFdv from '@/server/jobs/update-fdv';
 import updateGithubRepositories from '@/server/jobs/update-github-repositories';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
+import matchChainNodes from '@/server/jobs/match-chain-nodes';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
@@ -132,6 +133,9 @@ async function runTask() {
         break;
       case 'github-repositories':
         await updateGithubRepositories(chains);
+        break;
+      case 'match-chain-nodes':
+        await matchChainNodes();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
