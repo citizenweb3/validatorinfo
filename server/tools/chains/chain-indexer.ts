@@ -54,7 +54,7 @@ export interface AddChainProps {
   logoUrl: string;
   coinGeckoId: string;
   bech32Prefix: string;
-  nodes: { type: ChainNodeType; url: string }[];
+  nodes: { type: ChainNodeType; url: string; provider?: string }[];
   coinDecimals: number;
   coinType: number;
   twitterUrl: string;

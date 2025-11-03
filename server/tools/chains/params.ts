@@ -1137,17 +1137,20 @@ export const updateChainParamsUpdated = async (chainName: string) => {
 
     params.nodes = [
       ...(params.nodes ?? []),
-      ...chainRegistry.apis.rpc.map((item: APIItem): { type: ChainNodeType; url: string } => ({
-        type: 'rpc',
+      ...chainRegistry.apis.rpc.map((item: APIItem) => ({
+        type: 'rpc' as ChainNodeType,
         url: item.address,
+        provider: item.provider,
       })),
-      ...(chainRegistry.apis.rest?.map((item: APIItem): { type: ChainNodeType; url: string } => ({
-        type: 'rest',
+      ...(chainRegistry.apis.rest?.map((item: APIItem) => ({
+        type: 'rest' as ChainNodeType,
         url: item.address,
+        provider: item.provider,
       })) ?? []),
-      ...(chainRegistry.apis.grpc?.map((item: APIItem): { type: ChainNodeType; url: string } => ({
-        type: 'grpc',
+      ...(chainRegistry.apis.grpc?.map((item: APIItem) => ({
+        type: 'grpc' as ChainNodeType,
         url: item.address,
+        provider: item.provider,
       })) ?? []),
     ];
 

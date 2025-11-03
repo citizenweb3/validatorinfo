@@ -44,7 +44,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
             if (node.url[node.url.length - 1] === '/') {
               node.url = node.url.slice(0, -1);
             }
-            return { url: node.url, type: node.type };
+            return { url: node.url, type: node.type, provider: node.provider };
           }),
         },
         params: {
@@ -94,6 +94,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
         data: {
           url: newNode.url,
           type: newNode.type,
+          provider: newNode.provider,
           chainId: existingChain.id,
         },
       });
