@@ -10,11 +10,14 @@ const sizeItems = {
 interface OwnProps {
   text: string;
   size?: keyof typeof sizeItems;
+  className?: string;
 }
 
-const SubTitle: FC<OwnProps> = ({ text, size = 'h2' }) => {
+const SubTitle: FC<OwnProps> = ({ text, size = 'h2', className = '' }) => {
   return (
-    <h2 className={`${sizeItems[size]} flex w-fit border-b border-bgSt pb-1 font-handjet text-highlight`}>{text}</h2>
+    <h2 className={`${sizeItems[size]} ${className} flex w-fit border-b border-bgSt pb-1 font-handjet text-highlight`}>
+      {text}
+    </h2>
   );
 };
 

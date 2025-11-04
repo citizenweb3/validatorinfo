@@ -10,7 +10,7 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const defaultPerPage = 1;
+const defaultPerPage = 50;
 
 const PublicGoodsInfrastructurePage: NextPageWithLocale<PageProps> = async ({
   params: { locale, id },
@@ -18,10 +18,20 @@ const PublicGoodsInfrastructurePage: NextPageWithLocale<PageProps> = async ({
 }) => {
   const t = await getTranslations({ locale, namespace: 'PublicGoodsInfrastructurePage' });
 
+  const validatorId = parseInt(id);
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'name') ?? 'name';
+  const sortBy = (q.sortBy as 'chain' | 'type' | 'responseTime' | 'lastCheckedAt') ?? 'chain';
   const order = (q.order as SortDirection) ?? 'asc';
+
+  let ecosystems: string[] | undefined;
+  if (q.ecosystems) {
+    if (Array.isArray(q.ecosystems)) {
+      ecosystems = q.ecosystems;
+    } else {
+      ecosystems = q.ecosystems.split(',').filter(Boolean);
+    }
+  }
 
   return (
     <div className="mb-28">
@@ -33,9 +43,11 @@ const PublicGoodsInfrastructurePage: NextPageWithLocale<PageProps> = async ({
       </div>
       <ValidatorNodes
         page={'PublicGoodsInfrastructurePage'}
+        validatorId={validatorId}
         perPage={perPage}
         currentPage={currentPage}
         sort={{ sortBy, order }}
+        ecosystems={ecosystems}
         locale={locale}
       />
     </div>
