@@ -125,21 +125,19 @@ model Chain {
 }
 
 model ChainNode {
-  id                  Int       @id @default(autoincrement())
-  type                String    @db.VarChar(256) // lcd, rpc, ws, grpc
-  chainId             Int       @map("chain_id")
-  url                 String
-  provider            String?   @db.VarChar(256)
+  id       Int     @id @default(autoincrement())
+  type     String  @db.VarChar(256)
+  chainId  Int     @map("chain_id")
+  url      String
+  provider String? @db.VarChar(256)
 
-  // Health check fields
-  status              String    @default("active") @db.VarChar(50)
+  status              String?   @db.VarChar(50)
   lastCheckedAt       DateTime? @map("last_checked_at")
   responseTime        Int?      @map("response_time")
   consecutiveFailures Int       @default(0) @map("consecutive_failures")
 
-  // Optional link to validator node (for infrastructure attribution)
-  nodeId              Int?      @map("node_id")
-  node                Node?     @relation("chain_node_infrastructure", fields: [nodeId], references: [id])
+  nodeId Int?  @map("node_id")
+  node   Node? @relation("chain_node_infrastructure", fields: [nodeId], references: [id])
 
   chain Chain @relation("chain_node", fields: [chainId], references: [id])
 
@@ -183,10 +181,10 @@ model Node {
   outstandingRewards String?  @map("outstanding_rewards")
   delegatorsAmount   Int?     @map("delegators_amount")
 
-  chain            Chain       @relation("chain_validator_node", fields: [chainId], references: [id])
-  validator        Validator?  @relation("validator_node", fields: [validatorId], references: [id])
-  votes            NodeVote[]  @relation("node_vote_node")
-  chainNodes       ChainNode[] @relation("chain_node_infrastructure")
+  chain      Chain       @relation("chain_validator_node", fields: [chainId], references: [id])
+  validator  Validator?  @relation("validator_node", fields: [validatorId], references: [id])
+  votes      NodeVote[]  @relation("node_vote_node")
+  chainNodes ChainNode[] @relation("chain_node_infrastructure")
 
   // calculated
   consensusAddress String @default("") @map("consensus_address")

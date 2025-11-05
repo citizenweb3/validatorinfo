@@ -21,7 +21,7 @@ const PublicGoodsInfrastructurePage: NextPageWithLocale<PageProps> = async ({
   const validatorId = parseInt(id);
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'chain' | 'type' | 'responseTime' | 'lastCheckedAt') ?? 'chain';
+  const sortBy = (q.sortBy as 'chain') ?? 'chain';
   const order = (q.order as SortDirection) ?? 'asc';
 
   let ecosystems: string[] | undefined;

@@ -12,7 +12,7 @@ interface OwnProps extends PagesProps {
   validatorId: number;
   perPage: number;
   currentPage?: number;
-  sort: { sortBy: 'chain' | 'type' | 'responseTime' | 'lastCheckedAt'; order: SortDirection };
+  sort: { sortBy: 'chain'; order: SortDirection };
   ecosystems?: string[];
   locale: string;
 }
@@ -33,7 +33,6 @@ const ValidatorNodes: FC<OwnProps> = async ({
     ecosystems,
     currentPage,
     perPage,
-    sort.sortBy,
     sort.order,
   );
 
@@ -48,11 +47,20 @@ const ValidatorNodes: FC<OwnProps> = async ({
     lcd: 'lcd nodes',
   };
 
-  const nodesList = Object.entries(groupedByType).map(([type, typeNodes]) => ({
-    title: nodeTypeMapping[type] || `${type} nodes`,
-    type: type,
-    nodes: typeNodes as InfrastructureNode[],
-  }));
+  const nodesList = Object.entries(groupedByType)
+    .map(([type, typeNodes]) => ({
+      title: nodeTypeMapping[type] || `${type} nodes`,
+      type: type,
+      nodes: typeNodes as InfrastructureNode[],
+    }))
+    .sort((a, b) => {
+      const isALast = a.type === 'grpc' || a.type === 'ws';
+      const isBLast = b.type === 'grpc' || b.type === 'ws';
+
+      if (isALast && !isBLast) return 1;
+      if (!isALast && isBLast) return -1;
+      return 0;
+    });
 
   if (nodes.length === 0) {
     return (

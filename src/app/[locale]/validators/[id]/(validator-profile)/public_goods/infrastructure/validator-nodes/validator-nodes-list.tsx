@@ -13,7 +13,7 @@ interface OwnProps {
   nodes: InfrastructureNode[];
 }
 
-const ValidatorNodesList: FC<OwnProps> = async ({ nodes, sort, perPage, currentPage = 1, totalPages }) => {
+const ValidatorNodesList: FC<OwnProps> = async ({ nodes, totalPages }) => {
   return (
     <tbody>
       {nodes.map((node) => (

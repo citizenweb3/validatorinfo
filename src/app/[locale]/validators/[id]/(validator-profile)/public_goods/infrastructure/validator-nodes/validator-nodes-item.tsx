@@ -13,18 +13,12 @@ interface OwnProps {
 const ValidatorNodesItem: FC<OwnProps> = ({ node }) => {
   const getHealthStatus = () => {
     if (!node.status) {
-      return { color: 'gray', label: 'Unknown', icon: icons.YellowSquareIcon };
+      return { color: 'yellow', label: '-', icon: icons.YellowSquareIcon };
     }
     if (node.status === 'inactive') {
-      return { color: 'red', label: 'Offline', icon: icons.RedSquareIcon };
+      return { color: 'red', label: 'Inactive', icon: icons.RedSquareIcon };
     }
-    if (node.consecutiveFailures >= 3) {
-      return { color: 'red', label: 'Failing', icon: icons.RedSquareIcon };
-    }
-    if (node.consecutiveFailures > 0) {
-      return { color: 'yellow', label: 'Unstable', icon: icons.YellowSquareIcon };
-    }
-    return { color: 'green', label: 'Online', icon: icons.GreenSquareIcon };
+    return { color: 'green', label: 'Active', icon: icons.GreenSquareIcon };
   };
 
   const healthStatus = getHealthStatus();
@@ -35,7 +29,7 @@ const ValidatorNodesItem: FC<OwnProps> = ({ node }) => {
   };
 
   const formatLastChecked = (date: Date | null) => {
-    if (!date) return 'Never';
+    if (!date) return '—';
     const now = new Date();
     const diff = now.getTime() - new Date(date).getTime();
     const seconds = Math.floor(diff / 1000);

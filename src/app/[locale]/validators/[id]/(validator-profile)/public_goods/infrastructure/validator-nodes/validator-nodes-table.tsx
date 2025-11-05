@@ -25,8 +25,8 @@ const ValidatorNodesTable: FC<OwnProps> = async ({ nodes, page, perPage, sort, c
             </TableHeaderItem>
             <TableHeaderItem page={page} name="Network" sortField="chain" />
             <TableHeaderItem page={page} name="URL" />
-            <TableHeaderItem page={page} name="Response Time" sortField="responseTime" />
-            <TableHeaderItem page={page} name="Last Check" sortField="lastCheckedAt" />
+            <TableHeaderItem page={page} name="Response Time" />
+            <TableHeaderItem page={page} name="Last Check" />
           </tr>
         </thead>
         <ValidatorNodesList

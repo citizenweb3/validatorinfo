@@ -21,7 +21,6 @@ const getValidatorInfrastructure = async (
   ecosystems?: string[],
   page: number = 1,
   perPage: number = 50,
-  sortBy: 'chain' | 'type' | 'responseTime' | 'lastCheckedAt' = 'chain',
   order: SortDirection = 'asc',
 ): Promise<InfrastructureResponse> => {
   try {
@@ -40,20 +39,10 @@ const getValidatorInfrastructure = async (
 
     const totalCount = await db.chainNode.count({ where });
 
-    const orderBy: ChainNodeOrderByWithRelationInput[] = [];
-    if (sortBy === 'chain') {
-      orderBy.push({ chain: { name: order } });
-      orderBy.push({ type: 'asc' });
-    } else if (sortBy === 'type') {
-      orderBy.push({ type: order });
-      orderBy.push({ chain: { name: 'asc' } });
-    } else if (sortBy === 'responseTime') {
-      orderBy.push({ responseTime: order });
-      orderBy.push({ chain: { name: 'asc' } });
-    } else if (sortBy === 'lastCheckedAt') {
-      orderBy.push({ lastCheckedAt: order });
-      orderBy.push({ chain: { name: 'asc' } });
-    }
+    const orderBy: ChainNodeOrderByWithRelationInput[] = [
+      { chain: { name: order } },
+      { type: 'asc' },
+    ];
 
     const nodes = (await db.chainNode.findMany({
       where,
