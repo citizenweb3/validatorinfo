@@ -214,6 +214,34 @@ async function checkNodeHealth(
   };
 }
 
+const BATCH_SIZE = 100;
+
+async function updateNodesInBatches(updates: NodeHealthUpdate[]): Promise<void> {
+  const timestamp = new Date();
+
+  for (let i = 0; i < updates.length; i += BATCH_SIZE) {
+    const batch = updates.slice(i, i + BATCH_SIZE);
+
+    await db.$transaction(
+      batch.map((update) =>
+        db.chainNode.update({
+          where: { id: update.nodeId },
+          data: {
+            status: update.status,
+            lastCheckedAt: timestamp,
+            responseTime: update.responseTime,
+            consecutiveFailures: update.consecutiveFailures,
+          },
+        })
+      )
+    );
+
+    if (i + BATCH_SIZE < updates.length) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+  }
+}
+
 async function checkNodesHealth(): Promise<void> {
   try {
     const chainNodes = await db.chainNode.findMany({
@@ -259,22 +287,9 @@ async function checkNodesHealth(): Promise<void> {
       }
     }
 
-    logInfo(`Updating ${updates.length} nodes in database...`);
+    logInfo(`Updating ${updates.length} nodes in database (batches of ${BATCH_SIZE})...`);
 
-    const timestamp = new Date();
-    await db.$transaction(
-      updates.map((update) =>
-        db.chainNode.update({
-          where: { id: update.nodeId },
-          data: {
-            status: update.status,
-            lastCheckedAt: timestamp,
-            responseTime: update.responseTime,
-            consecutiveFailures: update.consecutiveFailures,
-          },
-        }),
-      ),
-    );
+    await updateNodesInBatches(updates);
 
     const activeCount = updates.filter((u) => u.success).length;
     const inactiveCount = updates.filter((u) => !u.success).length;
