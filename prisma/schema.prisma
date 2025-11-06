@@ -125,10 +125,19 @@ model Chain {
 }
 
 model ChainNode {
-  id      Int    @id @default(autoincrement())
-  type    String @db.VarChar(256) // lcd, rpc, ws, grpc
-  chainId Int    @map("chain_id")
-  url     String
+  id       Int     @id @default(autoincrement())
+  type     String  @db.VarChar(256)
+  chainId  Int     @map("chain_id")
+  url      String
+  provider String? @db.VarChar(256)
+
+  status              String?   @db.VarChar(50)
+  lastCheckedAt       DateTime? @map("last_checked_at")
+  responseTime        Int?      @map("response_time")
+  consecutiveFailures Int       @default(0) @map("consecutive_failures")
+
+  nodeId Int?  @map("node_id")
+  node   Node? @relation("chain_node_infrastructure", fields: [nodeId], references: [id])
 
   chain Chain @relation("chain_node", fields: [chainId], references: [id])
 
@@ -172,9 +181,10 @@ model Node {
   outstandingRewards String?  @map("outstanding_rewards")
   delegatorsAmount   Int?     @map("delegators_amount")
 
-  chain     Chain      @relation("chain_validator_node", fields: [chainId], references: [id])
-  validator Validator? @relation("validator_node", fields: [validatorId], references: [id])
-  votes     NodeVote[] @relation("node_vote_node")
+  chain      Chain       @relation("chain_validator_node", fields: [chainId], references: [id])
+  validator  Validator?  @relation("validator_node", fields: [validatorId], references: [id])
+  votes      NodeVote[]  @relation("node_vote_node")
+  chainNodes ChainNode[] @relation("chain_node_infrastructure")
 
   // calculated
   consensusAddress String @default("") @map("consensus_address")
@@ -213,6 +223,7 @@ model Tokenomics {
   totalSupply              String @default("") @map("total_supply")
   bondedTokens             String @default("") @map("bonded_tokens")
   unbondedTokens           String @default("") @map("not_bonded_tokens")
+  unbondingTokens          String @default("") @map("unbonding_tokens")
   unbondedTokensRatio      Float  @default(0) @map("unbonded_tokens_ratio")
   tvl                      Float  @default(0)
   tvs                      Float  @default(0)

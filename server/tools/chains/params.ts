@@ -1,6 +1,9 @@
 import logger from '@/logger';
 import { AddChainProps, ChainNodeType } from '@/server/tools/chains/chain-indexer';
 import fetchData from '@/server/utils/fetch-data';
+import fetchNamadaInfrastructure from '@/server/tools/chains/namada/get-infrastructure';
+import { logError } from 'effect/Effect';
+import { mergeNodes } from '@/server/utils/merge-nodes';
 
 interface APIItem {
   address: string;
@@ -240,7 +243,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'gravity-bridge-3',
     bech32Prefix: 'gravity',
     coinDecimals: 6,
-    coinGeckoId: '',
+    coinGeckoId: 'graviton',
     coinType: 118,
     denom: 'GRAV',
     minimalDenom: 'ugraviton',
@@ -1128,6 +1131,18 @@ export const getChainParams = (chainName: string): AddChainProps => {
 
 export const updateChainParamsUpdated = async (chainName: string) => {
   const params = getChainParams(chainName);
+
+  if (params.ecosystem === 'namada') {
+    try {
+      const namadaNodes = await fetchNamadaInfrastructure(chainName);
+      params.nodes = mergeNodes(params.nodes ?? [], namadaNodes);
+      return params;
+    } catch (e) {
+      logError(`Failed to fetch Namada infrastructure for ${chainName} - ${e}`);
+      return params;
+    }
+  }
+
   const chainRegistryUrl = params.chainRegistry
     ? `${params.chainRegistry}/chain.json`
     : `https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/${chainName}/chain.json`;
@@ -1135,25 +1150,29 @@ export const updateChainParamsUpdated = async (chainName: string) => {
   try {
     const chainRegistry = await fetchData<{ apis: Record<ChainNodeType, APIItem[]> }>(chainRegistryUrl);
 
-    params.nodes = [
-      ...(params.nodes ?? []),
-      ...chainRegistry.apis.rpc.map((item: APIItem): { type: ChainNodeType; url: string } => ({
-        type: 'rpc',
+    const registryNodes = [
+      ...chainRegistry.apis.rpc.map((item: APIItem) => ({
+        type: 'rpc' as ChainNodeType,
         url: item.address,
+        provider: item.provider,
       })),
-      ...(chainRegistry.apis.rest?.map((item: APIItem): { type: ChainNodeType; url: string } => ({
-        type: 'rest',
+      ...(chainRegistry.apis.rest?.map((item: APIItem) => ({
+        type: 'rest' as ChainNodeType,
         url: item.address,
+        provider: item.provider,
       })) ?? []),
-      ...(chainRegistry.apis.grpc?.map((item: APIItem): { type: ChainNodeType; url: string } => ({
-        type: 'grpc',
+      ...(chainRegistry.apis.grpc?.map((item: APIItem) => ({
+        type: 'grpc' as ChainNodeType,
         url: item.address,
+        provider: item.provider,
       })) ?? []),
     ];
 
+    params.nodes = mergeNodes(params.nodes ?? [], registryNodes);
+
     return params;
-  } catch (error: any) {
-    logWarn(`Failed to update chain urls for ${chainName} - ${error.message}`);
+  } catch (e) {
+    logError(`Failed to update chain urls for ${chainName} - ${e}`);
     return params;
   }
 };
