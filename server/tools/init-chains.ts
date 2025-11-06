@@ -1,5 +1,7 @@
 import { sleep } from '@cosmjs/utils';
 
+
+
 import db from '@/db';
 import logger from '@/logger';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
@@ -7,7 +9,10 @@ import chainNames from '@/server/tools/chains/chains';
 import { ecosystemParams, updateChainParamsUpdated } from '@/server/tools/chains/params';
 import downloadImage from '@/server/utils/download-image';
 
+
+
 import { Prisma } from '.prisma/client';
+
 import ChainUncheckedCreateInput = Prisma.ChainUncheckedCreateInput;
 
 const { logInfo, logError } = logger('init-chains');
@@ -44,7 +49,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
             if (node.url[node.url.length - 1] === '/') {
               node.url = node.url.slice(0, -1);
             }
-            return { url: node.url, type: node.type };
+            return { url: node.url, type: node.type, provider: node.provider };
           }),
         },
         params: {
@@ -83,19 +88,42 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
   });
 
   const existingNodes = existingChain.chainNodes || [];
+  const normalizeUrl = (url: string) => url.trim().toLowerCase().replace(/\/$/, '');
+  const nodeMap = new Map<string, (typeof existingNodes)[0]>();
+
+  existingNodes.forEach((node) => {
+    const key = `${normalizeUrl(node.url)}:${node.type}`;
+    if (!nodeMap.has(key)) {
+      nodeMap.set(key, node);
+    } else {
+      db.chainNode.delete({ where: { id: node.id } }).catch(() => {});
+    }
+  });
+
+  const deduplicatedNodes = Array.from(nodeMap.values());
   const newNodes = chain.nodes;
 
   for (const newNode of newNodes) {
     if (newNode.url[newNode.url.length - 1] === '/') {
       newNode.url = newNode.url.slice(0, -1);
     }
-    if (!existingNodes.some((node) => node.url === newNode.url && node.type === newNode.type)) {
+    const existingNode = deduplicatedNodes.find((node) => node.url === newNode.url && node.type === newNode.type);
+
+    if (!existingNode) {
+      // Create new node
       await db.chainNode.create({
         data: {
           url: newNode.url,
           type: newNode.type,
+          provider: newNode.provider,
           chainId: existingChain.id,
         },
+      });
+    } else if (newNode.provider && existingNode.provider !== newNode.provider) {
+      // Update existing node with provider information
+      await db.chainNode.update({
+        where: { id: existingNode.id },
+        data: { provider: newNode.provider },
       });
     }
   }

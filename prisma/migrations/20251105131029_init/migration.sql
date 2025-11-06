@@ -79,6 +79,7 @@ CREATE TABLE "chains" (
     "github_main_repo" TEXT NOT NULL,
     "has_validators" BOOLEAN NOT NULL DEFAULT true,
     "wallets_amount" INTEGER,
+    "description" TEXT,
     "proposals_total" INTEGER NOT NULL DEFAULT 0,
     "proposals_live" INTEGER NOT NULL DEFAULT 0,
     "proposals_passed" INTEGER NOT NULL DEFAULT 0,
@@ -95,6 +96,12 @@ CREATE TABLE "chain_nodes" (
     "type" VARCHAR(256) NOT NULL,
     "chain_id" INTEGER NOT NULL,
     "url" TEXT NOT NULL,
+    "provider" VARCHAR(256),
+    "status" VARCHAR(50),
+    "last_checked_at" TIMESTAMP(3),
+    "response_time" INTEGER,
+    "consecutive_failures" INTEGER NOT NULL DEFAULT 0,
+    "node_id" INTEGER,
 
     CONSTRAINT "chain_nodes_pkey" PRIMARY KEY ("id")
 );
@@ -134,6 +141,7 @@ CREATE TABLE "nodes" (
     "min_self_delegation" VARCHAR(256) NOT NULL,
     "missed_blocks" INTEGER,
     "outstanding_rewards" TEXT,
+    "delegators_amount" INTEGER,
     "consensus_address" TEXT NOT NULL DEFAULT '',
     "uptime" DOUBLE PRECISION,
 
@@ -168,11 +176,14 @@ CREATE TABLE "tokenomics" (
     "total_supply" TEXT NOT NULL DEFAULT '',
     "bonded_tokens" TEXT NOT NULL DEFAULT '',
     "not_bonded_tokens" TEXT NOT NULL DEFAULT '',
+    "unbonding_tokens" TEXT NOT NULL DEFAULT '',
     "unbonded_tokens_ratio" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "tvl" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "tvs" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "apr" DOUBLE PRECISION NOT NULL DEFAULT 0,
     "circulating_tokens_onchain" TEXT NOT NULL DEFAULT '',
+    "fdv" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "average_delegation" TEXT NOT NULL DEFAULT '',
 
     CONSTRAINT "tokenomics_pkey" PRIMARY KEY ("id")
 );
@@ -230,6 +241,39 @@ CREATE TABLE "node_votes" (
     CONSTRAINT "node_votes_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "github_repositories" (
+    "id" SERIAL NOT NULL,
+    "chain_id" INTEGER NOT NULL,
+    "name" TEXT NOT NULL,
+    "full_name" TEXT NOT NULL,
+    "description" TEXT,
+    "url" TEXT NOT NULL,
+    "homepage" TEXT,
+    "language" TEXT,
+    "stars_count" INTEGER NOT NULL DEFAULT 0,
+    "forks_count" INTEGER NOT NULL DEFAULT 0,
+    "watchers_count" INTEGER NOT NULL DEFAULT 0,
+    "open_issues_count" INTEGER NOT NULL DEFAULT 0,
+    "created_at" TIMESTAMPTZ(6) NOT NULL,
+    "updated_at" TIMESTAMPTZ(6) NOT NULL,
+    "pushed_at" TIMESTAMPTZ(6) NOT NULL,
+
+    CONSTRAINT "github_repositories_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "github_activities" (
+    "id" SERIAL NOT NULL,
+    "repository_id" INTEGER NOT NULL,
+    "date" DATE NOT NULL,
+    "commit_count" INTEGER NOT NULL DEFAULT 0,
+    "additions" INTEGER NOT NULL DEFAULT 0,
+    "deletions" INTEGER NOT NULL DEFAULT 0,
+
+    CONSTRAINT "github_activities_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "accounts_username_key" ON "accounts"("username");
 
@@ -246,6 +290,9 @@ CREATE UNIQUE INDEX "chain_params_chain_id_key" ON "chain_params"("chain_id");
 CREATE UNIQUE INDEX "chains_chain_id_key" ON "chains"("chain_id");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "chains_name_key" ON "chains"("name");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "nodes_operator_address_key" ON "nodes"("operator_address");
 
 -- CreateIndex
@@ -259,6 +306,12 @@ CREATE UNIQUE INDEX "validators_identity_key" ON "validators"("identity");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "node_id_proposal_id" ON "node_votes"("node_id", "proposal_id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "github_repositories_chain_id_full_name_key" ON "github_repositories"("chain_id", "full_name");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "repository_id_date" ON "github_activities"("repository_id", "date");
 
 -- AddForeignKey
 ALTER TABLE "addresses" ADD CONSTRAINT "addresses_chain_id_fkey" FOREIGN KEY ("chain_id") REFERENCES "chains"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
@@ -274,6 +327,9 @@ ALTER TABLE "chain_params" ADD CONSTRAINT "chain_params_chain_id_fkey" FOREIGN K
 
 -- AddForeignKey
 ALTER TABLE "chains" ADD CONSTRAINT "chains_ecosystem_fkey" FOREIGN KEY ("ecosystem") REFERENCES "ecosystems"("name") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "chain_nodes" ADD CONSTRAINT "chain_nodes_node_id_fkey" FOREIGN KEY ("node_id") REFERENCES "nodes"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "chain_nodes" ADD CONSTRAINT "chain_nodes_chain_id_fkey" FOREIGN KEY ("chain_id") REFERENCES "chains"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
@@ -304,3 +360,10 @@ ALTER TABLE "node_votes" ADD CONSTRAINT "node_votes_proposal_id_fkey" FOREIGN KE
 
 -- AddForeignKey
 ALTER TABLE "node_votes" ADD CONSTRAINT "node_votes_chain_id_fkey" FOREIGN KEY ("chain_id") REFERENCES "chains"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "github_repositories" ADD CONSTRAINT "github_repositories_chain_id_fkey" FOREIGN KEY ("chain_id") REFERENCES "chains"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "github_activities" ADD CONSTRAINT "github_activities_repository_id_fkey" FOREIGN KEY ("repository_id") REFERENCES "github_repositories"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+

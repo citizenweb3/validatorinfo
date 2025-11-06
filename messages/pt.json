@@ -812,18 +812,58 @@
   "PublicGoodsInfrastructurePage": {
     "description": "Os validadores gerem muitas infra-estruturas. Esta informação é verificada automaticamente e não necessita de ser submetida. Embora validador NÃO seja igual a nó, todos os nós validadores são bens públicos e geridos pela mesma entidade. Por isso, são listados como bens da entidade, em vez de bens específicos da rede.",
     "submit new info": "Enviar Novas Informações",
-    "rpc nodes": "RPC / LCD Nos",
+    "no infrastructure found": "Nenhuma infraestrutura encontrada para este validador",
+    "no infrastructure description": "Este validador ainda não foi correspondido com nenhum nó de infraestrutura. Os dados de infraestrutura são verificados e atualizados automaticamente.",
+    "rpc nodes": "Nós RPC",
+    "rest nodes": "Nós REST",
+    "grpc nodes": "Nós gRPC",
+    "ws nodes": "Nós WebSocket",
+    "websocket nodes": "Nós WebSocket",
+    "indexer nodes": "Nós Indexadores",
+    "lcd nodes": "Nós LCD",
     "relayer nodes": "Nos de retransmissão",
     "archive nodes": "Nós de Arquivo",
     "others nodes": "Outros Nós",
     "Table": {
       "Networks": {
         "name": "Redes",
-        "hint": ""
+        "hint": "Filtrar por redes blockchain"
+      },
+      "Network": {
+        "name": "Rede",
+        "hint": "A rede blockchain a que este nó de infraestrutura pertence"
+      },
+      "Type": {
+        "name": "Tipo",
+        "hint": "O tipo de nó de infraestrutura (RPC, REST, gRPC, Indexador, etc.)"
       },
       "URL": {
         "name": "URL",
-        "hint": ""
+        "hint": "O URL do endpoint para aceder a este nó de infraestrutura"
+      },
+      "Response Time": {
+        "name": "Tempo de Resposta",
+        "hint": "O tempo de resposta do nó de infraestrutura"
+      },
+      "Last Check": {
+        "name": "Última Verificação",
+        "hint": "A última vez que este nó de infraestrutura foi verificado"
+      },
+      "Provider": {
+        "name": "Fornecedor",
+        "hint": "O validador ou organização que fornece esta infraestrutura"
+      },
+      "Status": {
+        "name": "Estado",
+        "hint": "Estado operacional atual do nó de infraestrutura"
+      },
+      "Response Time": {
+        "name": "Tempo de Resposta",
+        "hint": "Tempo médio de resposta para pedidos a este nó"
+      },
+      "Last Checked": {
+        "name": "Última Verificação",
+        "hint": "Quando este nó foi verificado pela última vez quanto à disponibilidade"
       }
     }
   },

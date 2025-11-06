@@ -812,18 +812,58 @@
   "PublicGoodsInfrastructurePage": {
     "description": "Validators run a lot of infrastructure. This info is verified automatically and doesn't need submitting. Although validator does NOT equal node, all validator nodes are public goods and run by the same entity. Hence, they are listed as entity goods, rather than network specific goods.",
     "submit new info": "Submit New Info",
-    "rpc nodes": "RPC / LCD Nodes",
+    "no infrastructure found": "No infrastructure found for this validator",
+    "no infrastructure description": "This validator hasn't been matched with any infrastructure nodes yet. Infrastructure data is automatically verified and updated.",
+    "rpc nodes": "RPC Nodes",
+    "rest nodes": "REST Nodes",
+    "grpc nodes": "gRPC Nodes",
+    "ws nodes": "WebSocket Nodes",
+    "websocket nodes": "WebSocket Nodes",
+    "indexer nodes": "Indexer Nodes",
+    "lcd nodes": "LCD Nodes",
     "relayer nodes": "Relayer Nodes",
     "archive nodes": "Archive Nodes",
-    "others nodes": "Others Nodes",
+    "others nodes": "Other Nodes",
     "Table": {
       "Networks": {
         "name": "Networks",
-        "hint": ""
+        "hint": "Filter by blockchain networks"
+      },
+      "Network": {
+        "name": "Network",
+        "hint": "The blockchain network this infrastructure node belongs to"
+      },
+      "Type": {
+        "name": "Type",
+        "hint": "The type of infrastructure node (RPC, REST, gRPC, Indexer, etc.)"
       },
       "URL": {
         "name": "URL",
-        "hint": ""
+        "hint": "The endpoint URL for accessing this infrastructure node"
+      },
+      "Response Time": {
+        "name": "Response Time",
+        "hint": "The response time of the infrastructure node"
+      },
+      "Last Check": {
+        "name": "Last Check",
+        "hint": "The last time this infrastructure node was checked"
+      },
+      "Provider": {
+        "name": "Provider",
+        "hint": "The validator or organization providing this infrastructure"
+      },
+      "Status": {
+        "name": "Status",
+        "hint": "Current operational status of the infrastructure node"
+      },
+      "Response Time": {
+        "name": "Response Time",
+        "hint": "Average response time for requests to this node"
+      },
+      "Last Checked": {
+        "name": "Last Checked",
+        "hint": "When this node was last checked for availability"
       }
     }
   },

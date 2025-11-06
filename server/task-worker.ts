@@ -1,10 +1,12 @@
 import { parentPort, workerData } from 'worker_threads';
 
 import logger from '@/logger';
+import checkNodesHealth from '@/server/jobs/check-nodes-health';
 import getChainUptime from '@/server/jobs/get-chain-uptime';
 import { getCoingeckoData } from '@/server/jobs/get-coingecko-data';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
+import matchChainNodes from '@/server/jobs/match-chain-nodes';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateChainApr from '@/server/jobs/update-chain-apr';
@@ -29,6 +31,7 @@ import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
 import updateSlashingInfosSolana from '@/server/jobs/update-slashing-infos-solana';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
+import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
@@ -117,6 +120,9 @@ async function runTask() {
       case 'circulating-tokens-public':
         await updateCirculatingTokensPublic(chains);
         break;
+      case 'unbonding-tokens':
+        await updateUnbondingTokens(chains);
+        break;
       case 'update-fdv':
         await updateFdv(chains);
         break;
@@ -128,6 +134,12 @@ async function runTask() {
         break;
       case 'github-repositories':
         await updateGithubRepositories(chains);
+        break;
+      case 'match-chain-nodes':
+        await matchChainNodes();
+        break;
+      case 'check-nodes-health':
+        await checkNodesHealth();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
