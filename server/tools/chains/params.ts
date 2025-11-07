@@ -243,7 +243,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'gravity-bridge-3',
     bech32Prefix: 'gravity',
     coinDecimals: 6,
-    coinGeckoId: '',
+    coinGeckoId: 'graviton',
     coinType: 118,
     denom: 'GRAV',
     minimalDenom: 'ugraviton',
