@@ -7,6 +7,7 @@ import TokenPrice from '@/app/networks/[name]/(network-profile)/tokenomics/token
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import SubDescription from '@/components/sub-description';
+import { mockPriceData } from '@/app/networks/[name]/(network-profile)/tokenomics/charts/mock-token-prices-data';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import TokenomicsService from '@/services/tokenomics-service';
@@ -29,6 +30,13 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { 
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain?.id) : null;
   const tokenomics = chain ? await TokenomicsService.getTokenomicsByChainId(chain?.id) : null;
 
+  const mockDataMap: { [key: string]: any[] } = {
+    cosmoshub: mockPriceData.cosmoshub,
+    osmosis: mockPriceData.osmosis,
+  };
+
+  const priceHistory = mockDataMap[name] || mockPriceData.default;
+
   return (
     <div>
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
@@ -40,7 +48,7 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { 
       />
       <DistributionGiniParameters chain={chain} />
       <SubTitle text={t('Token Price')} />
-      <TokenPriceChart />
+      <TokenPriceChart priceHistory={priceHistory} chainName={chain?.name ?? name} />
       <SubTitle text={t('Revenue vs Capital Flow')} />
       <RevenueCapitalFlowChart />
     </div>

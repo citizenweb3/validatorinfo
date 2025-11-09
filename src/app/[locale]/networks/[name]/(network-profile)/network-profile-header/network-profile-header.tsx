@@ -35,8 +35,8 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
 
   return (
     <div className="mb-7 mt-4 grid grid-cols-5 items-start">
-      <div className="col-span-1 flex h-full flex-col justify-end gap-6 border-b border-bgSt px-2 pb-4">
-        <div>
+      <div className="col-span-1 flex h-full flex-col justify-end border-b border-bgSt px-2 pb-4">
+        <div className="gap-6">
           <div className="mb-2 font-sfpro text-base">
             <ChainDescription text={chain?.description ?? ''} readMoreLabel={t('read more')} />
           </div>
@@ -74,7 +74,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
         {validators?.length != 0 && (
           <RoundedButton
             href={`/networks/${chainName}/validators`}
-            className="mb-2 font-handjet text-lg active:mb-1 w-full"
+            className="my-4 font-handjet text-lg active:mb-1 w-full"
             contentClassName="px-16"
           >
             {t('Show Validators')}

@@ -29,24 +29,41 @@ const customBar: React.FC<customBarProps> = ({ value, color }) => {
     );
 
     return (
-        <svg
-            style={{ width: "100%", height: "auto" }}
-            viewBox="0 0 296 156"
-            role="img"
-            aria-label={`Gauge showing value ${clampedValue} out of 100`}
-        >
-            {/* Outer semicircle */}
-            <path
-                d={`M ${cx - outerR} ${cy} A ${outerR} ${outerR} 0 0 1 ${cx + outerR} ${cy}`}
-                fill="#4F483F"
-                stroke="#000"
-                strokeWidth={0.50}
-            />
-            {/* Inner semicircle */}
-            <path
-                d={`M ${cx - innerR} ${cy} A ${innerR} ${innerR} 0 0 1 ${cx + innerR} ${cy}`}
-                fill="#3E3E3E"
-            />
+      <svg
+        style={{ width: "100%", height: "auto" }}
+        viewBox="0 0 296 156"
+        role="img"
+        aria-label={`Gauge showing value ${clampedValue} out of 100`}
+      >
+        <ellipse
+          cx={cx}
+          cy={cy + 3}
+          rx={outerR - 2}
+          ry={3}
+          fill="rgba(0,0,0,0.32)"
+          style={{ filter: "blur(2px)" }}
+        />
+        <ellipse
+          cx={cx}
+          cy={cy + 18}
+          rx={outerR - 3}
+          ry={8}
+          fill="rgba(0,0,0,0.23)"
+          style={{ filter: "blur(16px)" }}
+        />
+
+          {/* Outer semicircle */}
+          <path
+            d={`M ${cx - outerR} ${cy} A ${outerR} ${outerR} 0 0 1 ${cx + outerR} ${cy}`}
+            fill="#4F483F"
+            stroke="#000"
+            strokeWidth={0.50}
+          />
+          {/* Inner semicircle */}
+          <path
+            d={`M ${cx - innerR} ${cy} A ${innerR} ${innerR} 0 0 1 ${cx + innerR} ${cy}`}
+            fill="#3E3E3E"
+          />
 
             {/* Ticks and numbers */}
             {tickAngles.map((deg, i) => {

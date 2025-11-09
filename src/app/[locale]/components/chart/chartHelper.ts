@@ -207,8 +207,8 @@ const monthNames = [
   export const formatXAxisTick = (date: Date, chartType: string): string => {
     switch (chartType) {
       case 'Weekly':
-        return `Week ${isoWeekFormat(date)}`;
-  
+        return `Week ${isoWeekFormat(date)}, Year ${yearFormat(date)}`;
+
       case 'Monthly':
         return `${monthShortNames[date.getMonth()]} ${date.getFullYear()}`;
   
