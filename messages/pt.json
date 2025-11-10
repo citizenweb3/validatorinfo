@@ -857,10 +857,6 @@
         "name": "Estado",
         "hint": "Estado operacional atual do nó de infraestrutura"
       },
-      "Response Time": {
-        "name": "Tempo de Resposta",
-        "hint": "Tempo médio de resposta para pedidos a este nó"
-      },
       "Last Checked": {
         "name": "Última Verificação",
         "hint": "Quando este nó foi verificado pela última vez quanto à disponibilidade"

@@ -857,10 +857,6 @@
         "name": "Status",
         "hint": "Current operational status of the infrastructure node"
       },
-      "Response Time": {
-        "name": "Response Time",
-        "hint": "Average response time for requests to this node"
-      },
       "Last Checked": {
         "name": "Last Checked",
         "hint": "When this node was last checked for availability"
