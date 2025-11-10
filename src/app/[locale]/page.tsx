@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { Suspense } from 'react';
 
 import ValidatorsMobile from '@/app/main-validators/validator-list-mobile/validators-mobile';
 import ConsolePanel from '@/app/main-validators/validator-list/console-panel';
@@ -44,37 +45,39 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
       </div>
       <div className="hidden md:block">
         <LayoutToggle />
-        <ValidatorLayoutContainer
-          gameMode={
-            <div className="mt-4 flex">
-              <div className="flex-[58%]">
-                <ConsolePanel chainName={chain?.name ?? 'cosmoshub'} />
-              </div>
-              <div className="min-w-0 flex-[42%] ml-4">
-                <div className="overflow-x-auto">
-                  <ValidatorsGame
-                    page="HomePage"
-                    sort={{ sortBy, order }}
-                    perPage={validatorsPerPage}
-                    ecosystems={ecosystems}
-                    currentPage={currentPage}
-                  />
+        <Suspense fallback={<div className="mt-4 text-base">Loading...</div>}>
+          <ValidatorLayoutContainer
+            gameMode={
+              <div className="mt-4 flex">
+                <div className="flex-[58%]">
+                  <ConsolePanel chainName={chain?.name ?? 'cosmoshub'} />
+                </div>
+                <div className="min-w-0 flex-[42%] ml-4">
+                  <div className="overflow-x-auto">
+                    <ValidatorsGame
+                      page="HomePage"
+                      sort={{ sortBy, order }}
+                      perPage={validatorsPerPage}
+                      ecosystems={ecosystems}
+                      currentPage={currentPage}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          }
-          devMode={
-            <div className="mt-4">
-              <ValidatorsDev
-                page="HomePage"
-                sort={{ sortBy, order }}
-                perPage={validatorsPerPage}
-                ecosystems={ecosystems}
-                currentPage={currentPage}
-              />
-            </div>
-          }
-        />
+            }
+            devMode={
+              <div className="mt-4">
+                <ValidatorsDev
+                  page="HomePage"
+                  sort={{ sortBy, order }}
+                  perPage={validatorsPerPage}
+                  ecosystems={ecosystems}
+                  currentPage={currentPage}
+                />
+              </div>
+            }
+          />
+        </Suspense>
       </div>
       <div className="block md:hidden">
         <ValidatorsMobile
