@@ -72,17 +72,19 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
         </div>
 
         {validators?.length != 0 && (
-          <RoundedButton
-            href={`/networks/${chainName}/validators`}
-            className="my-4 font-handjet text-lg active:mb-1 w-full"
-            contentClassName="px-16"
-          >
-            {t('Show Validators')}
-          </RoundedButton>
+          <div className="my-4">
+            <RoundedButton
+              href={`/networks/${chainName}/validators`}
+              className="w-full font-handjet text-lg"
+              contentClassName="px-16"
+            >
+              {t('Show Validators')}
+            </RoundedButton>
+          </div>
         )}
         <RoundedButton
           href={`/nodes?p=1&ecosystems=${chain?.ecosystem}`}
-          className="font-handjet text-lg w-full"
+          className="w-full font-handjet text-lg"
           contentClassName="px-20"
         >
           {t('Show Nodes')}

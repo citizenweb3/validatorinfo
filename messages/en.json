@@ -894,6 +894,7 @@
     "tokens delegated": "Tokens Delegated",
     "expected APR": "Expected APR",
     "outstanding reward": "Outstanding Reward",
+    "outstanding commission": "Outstanding Commission",
     "voting power": "Voting Power",
     "validator rank": "Validator Rank",
     "proposals created": "Proposal Created",

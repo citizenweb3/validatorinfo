@@ -16,17 +16,25 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
     return null;
   }
 
-  const tokensDelegated = node.chain.params?.coinDecimals != null
-    ? +node.delegatorShares / 10 ** node.chain.params?.coinDecimals
-    : undefined;
+  const tokensDelegated =
+    node.chain.params?.coinDecimals != null ? +node.delegatorShares / 10 ** node.chain.params?.coinDecimals : undefined;
 
   const tokenDelegatedMetric = tokensDelegated
     ? `${tokensDelegated.toLocaleString('en-US', { maximumFractionDigits: 2 })} ${node.chain.params?.denom}`
     : '';
 
   const outstandingRewards =
-    node.chain.params?.coinDecimals != null && node.outstandingRewards
-      ? `${(+node.outstandingRewards / 10 ** node.chain.params?.coinDecimals).toLocaleString('en-US', { maximumFractionDigits: 2 })} 
+    node.chain.params?.coinDecimals != null && node.outstandingRewards != null && node.outstandingCommissions != null
+      ? `${(
+          (+node.outstandingRewards - +node.outstandingCommissions) /
+          10 ** node.chain.params?.coinDecimals
+        ).toLocaleString('en-US', { maximumFractionDigits: 2 })} 
+      ${node.chain.params.denom}`
+      : '-';
+
+  const outstandingCommission =
+    node.chain.params?.coinDecimals != null && node.outstandingCommissions
+      ? `${(+node.outstandingCommissions / 10 ** node.chain.params?.coinDecimals).toLocaleString('en-US', { maximumFractionDigits: 2 })} 
       ${node.chain.params.denom}`
       : '-';
 
@@ -88,6 +96,12 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
           <MetricsCardItem
             title={t('proposals created')}
             data="2"
+            className={cardClass}
+            dataClassName={cardValueClass}
+          />
+          <MetricsCardItem
+            title={t('outstanding commission')}
+            data={outstandingCommission}
             className={cardClass}
             dataClassName={cardValueClass}
           />
