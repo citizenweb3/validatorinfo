@@ -8,6 +8,7 @@ import ValidatorListFiltersPorPage from '@/components/common/list-filters/valida
 import PlusButton from '@/components/common/plus-button';
 import EcosystemListFilterTvl from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters-tvl';
 import EcosystemListFiltersTags from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters-tags';
+import { checkHasActiveFilters } from '@/components/common/list-filters/list-filters';
 
 interface OwnProps {
   perPage: number;
@@ -27,6 +28,8 @@ const ListFilters: FC<OwnProps> = ({ perPage }) => {
   const selectedTagsFromUrl = searchParamsHook.getAll('tags');
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [resetClicks, setResetClicks] = useState<number>(0);
+
+  const hasActiveFilters = checkHasActiveFilters(searchParamsHook);
 
   useEffect(() => {
     if (resetClicks >= 3) {
@@ -83,6 +86,7 @@ const ListFilters: FC<OwnProps> = ({ perPage }) => {
           activeType="switcher"
           onClick={onCustomiseClick}
           isActive={isOpened}
+          hasActiveFilters={hasActiveFilters}
           tooltip={t('Click 3 times to reset all filters')}
         >
           <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-base font-medium">

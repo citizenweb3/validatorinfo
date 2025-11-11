@@ -20,6 +20,7 @@ interface OwnProps {
   isActive?: boolean;
   activeType?: TActiveType;
   tooltip?: string;
+  hasActiveFilters?: boolean;
 }
 
 const Button: FC<PropsWithChildren<OwnProps>> = ({
@@ -32,10 +33,13 @@ const Button: FC<PropsWithChildren<OwnProps>> = ({
   isActive = false,
   activeType = 'default',
   tooltip,
+  hasActiveFilters = false,
 }) => {
   const cn =
     (isActive
       ? `bg-gradient-to-r ${activeClasses[activeType]} active:from-transparent active:to-transparent border-none text-highlight`
+      : hasActiveFilters
+      ? 'border-2 border-primary/50 bg-primary/10 text-highlight'
       : 'bg-background') +
     ` ${className} group/button border-r border-t border-bgSt shadow-button hover:bg-bgHover hover:text-highlight hover:fill-highlight min-w-9 fill-black stroke-black p-px active:mt-1 active:border-transparent active:bg-background active:shadow-none`;
   let content = (

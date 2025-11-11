@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
@@ -47,6 +47,21 @@ export const ecosystemsDropdown = [
   { value: 'polkadot', title: 'Polkadot' },
 ];
 
+export const checkHasActiveFilters = (searchParams: ReturnType<typeof useSearchParams>): boolean => {
+  const params = new URLSearchParams(searchParams.toString());
+  params.delete('p');
+  params.delete('sortBy');
+  params.delete('order');
+  params.delete('mode');
+
+  const ppValue = params.get('pp');
+  if (ppValue === '25' || ppValue === null) {
+    params.delete('pp');
+  }
+
+  return params.toString().length > 0;
+};
+
 const ListFilters: FC<OwnProps> = ({
   perPage,
   selectedEcosystems = [],
@@ -61,9 +76,12 @@ const ListFilters: FC<OwnProps> = ({
 }) => {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [resetClicks, setResetClicks] = useState<number>(0);
   const t = useTranslations('HomePage.Table');
+
+  const hasActiveFilters = checkHasActiveFilters(searchParams);
 
   useEffect(() => {
     if (resetClicks >= 3) {
@@ -183,6 +201,7 @@ const ListFilters: FC<OwnProps> = ({
           activeType="switcher"
           onClick={onCustomiseClick}
           isActive={isOpened}
+          hasActiveFilters={hasActiveFilters}
           tooltip={t('Click 3 times to reset all filters')}
         >
           <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-base font-medium">
