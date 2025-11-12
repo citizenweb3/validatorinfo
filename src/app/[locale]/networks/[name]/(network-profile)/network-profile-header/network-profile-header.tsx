@@ -20,9 +20,16 @@ interface OwnProps {
   locale: string;
 }
 
+const testnetDescriptions: Record<string, string> = {
+  'cosmoshub-testnet': 'cosmoshub',
+  'namada-testnet': 'namada',
+  'neutron-testnet': 'neutron',
+};
+
 const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkProfileHeader' });
-  const chain = await chainService.getByName(chainName);
+  const effectiveChainName = testnetDescriptions[chainName] || chainName;
+  const chain = await chainService.getByName(effectiveChainName);
   const chainLogo = chain?.logoUrl ?? icons.AvatarIcon;
   const chainHealth = 40;
 

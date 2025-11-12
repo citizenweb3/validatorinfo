@@ -11,6 +11,7 @@ interface OwnProps {
 }
 
 const NetworksListItem: FC<OwnProps> = async ({ item }) => {
+  const fdv = item?.name === 'ethereum-sepolia' ? 0 : item?.tokenomics?.fdv;
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
 
   return (
@@ -22,8 +23,8 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
         <div className="text-center">{item.params?.denom}</div>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Tooltip tooltip={`$${item?.tokenomics?.fdv.toLocaleString()}`}>
-          <div className="text-center">${formatCash(item?.tokenomics?.fdv ?? 0)}</div>
+        <Tooltip tooltip={`$${fdv?.toLocaleString()}`}>
+          <div className="text-center">${formatCash(fdv ?? 0)}</div>
         </Tooltip>
       </td>
       <td className="border-b border-black px-2 py-2 active:border-bgSt">

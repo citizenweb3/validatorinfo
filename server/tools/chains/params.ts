@@ -1017,7 +1017,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: '11155111',
     bech32Prefix: '',
     coinDecimals: 18,
-    coinGeckoId: '',
+    coinGeckoId: 'ethereum',
     coinType: 60,
     denom: 'ETH',
     minimalDenom: 'wei',
