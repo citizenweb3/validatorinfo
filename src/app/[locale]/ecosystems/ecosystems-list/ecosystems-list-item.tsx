@@ -11,7 +11,7 @@ interface OwnProps {
 }
 
 const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
-  const ecosystemLink = `/validators?p=1&ecosystems=${item.name}`;
+  const ecosystemLink = `/nodes?p=1&ecosystems=${item.name}`;
   const ecosystemChains = await chainService.getListByEcosystem(item.name);
 
   return (
