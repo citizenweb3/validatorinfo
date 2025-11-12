@@ -43,7 +43,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
     <div className="mb-7 mt-4 grid grid-cols-7 items-start">
       <div className="xl:mr-18 col-span-2 mr-8 flex h-full flex-col border-b border-bgSt md:mr-10 lg:mr-14 2xl:mr-20">
         <div className="font-sfpro text-base">
-          <h2>{t('description')}</h2>
+          <h2>{validator.details ?? t('description')}</h2>
           <div className="relative my-6 h-[40px] w-full md:h-[58px] lg:h-[66px] xl:h-[80px] 2xl:h-[86px]">
             <iframe
               src={playerUrl}
