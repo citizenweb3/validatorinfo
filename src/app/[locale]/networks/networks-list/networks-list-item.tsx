@@ -11,7 +11,7 @@ interface OwnProps {
 }
 
 const NetworksListItem: FC<OwnProps> = async ({ item }) => {
-  const fdv = item?.name === 'ethereum-sepolia' ? 0 : item?.tokenomics?.fdv;
+  const fdv = item?.name === 'ethereum-sepolia' || item?.name === 'warden-testnet' ? 0 : item?.tokenomics?.fdv;
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
 
   return (
