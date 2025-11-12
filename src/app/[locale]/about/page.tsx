@@ -42,8 +42,8 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
       <RichPageTitle>
         <div className="m-4">
           {t.rich('title', {
-            validatorInfoLink: (chunks) => <TextLink content={chunks} href="/" />,
-            validatorsAndMiningPoolsLink: (chunks) => <TextLink content={chunks} href="/validators" />,
+            validatorInfoLink: (chunks) => <TextLink content={chunks} href="/" withCursor={true} />,
+            validatorsAndMiningPoolsLink: (chunks) => <TextLink content={chunks} href="/validators" withCursor={true} />,
           })}
         </div>
       </RichPageTitle>
