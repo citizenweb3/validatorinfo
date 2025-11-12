@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import NetworksCircle from '@/app/validators/[id]/(validator-profile)/validator-profile/validator-networks-circle';
@@ -82,9 +83,13 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
           <Tooltip tooltip={t('keyhole tooltip')} direction={'bottom'}>
             <div className={`${iconsSize} ml-2.5 bg-keyhole bg-contain bg-no-repeat hover:bg-keyhole_h`} />
           </Tooltip>
-          <Tooltip noWrap tooltip={t('github tooltip')} direction={'bottom'}>
-            <div className={`${iconsSize} ml-2.5 bg-github_g bg-contain bg-no-repeat hover:bg-github_g_h`} />
-          </Tooltip>
+          {validator.github && (
+            <Tooltip noWrap tooltip={validator.github} direction={'bottom'}>
+              <Link href={validator.github} target="_blank" >
+                <div className={`${iconsSize} ml-2.5 bg-github_g bg-contain bg-no-repeat hover:bg-github_g_h`} />
+              </Link>
+            </Tooltip>
+          )}
         </div>
       </div>
     </div>
