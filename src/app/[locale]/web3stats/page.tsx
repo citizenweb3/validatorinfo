@@ -63,7 +63,6 @@ export default async function GlobalPosPage({ params: { locale } }: { params: { 
                 </>
               }
               href="/ecosystems"
-              target="_blank"
             />
           ),
         })}
