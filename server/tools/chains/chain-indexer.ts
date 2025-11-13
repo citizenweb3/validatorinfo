@@ -49,6 +49,7 @@ export interface AddChainProps {
   chainId: string;
   name: string;
   prettyName: string;
+  description?: string;
   denom: string;
   minimalDenom: string;
   logoUrl: string;
