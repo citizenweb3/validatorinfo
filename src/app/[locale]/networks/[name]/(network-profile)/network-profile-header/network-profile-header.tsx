@@ -24,6 +24,8 @@ const testnetDescriptions: Record<string, string> = {
   'cosmoshub-testnet': 'cosmoshub',
   'namada-testnet': 'namada',
   'neutron-testnet': 'neutron',
+  'axone-testnet': 'axone',
+  'quicksilver-testnet': 'quicksilver'
 };
 
 const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
