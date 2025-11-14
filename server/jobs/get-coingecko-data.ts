@@ -70,12 +70,13 @@ const processChainWithRetry = async (chain: AddChainProps, retries = RETRIES) =>
 
       logInfo(`[${chain.chainId}] Tokenomics updated successfully.`);
 
-      await db.chain.update({
-        where: { id: dbChain.id },
-        data: { description: data?.description?.en ?? null },
-      });
-
-      logInfo(`[${chain.chainId}] Description updated successfully.`);
+      if (data?.description?.en) {
+        await db.chain.update({
+          where: { id: dbChain.id },
+          data: { description: data.description.en },
+        });
+        logInfo(`[${chain.chainId}] Description updated successfully.`);
+      }
 
       return;
     } catch (e) {

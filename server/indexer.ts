@@ -68,7 +68,6 @@ const runServer = async () => {
     { name: 'coingecko-data', schedule: timers.in30MinEveryHour },
     { name: 'proposal-params', schedule: timers.everyDay },
     { name: 'update-staking-page-json', schedule: timers.everyDay },
-    { name: 'update-chain-rewards', schedule: timers.everyDay },
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
@@ -102,7 +101,8 @@ const runServer = async () => {
     { name: 'slashing-infos-namada', schedule: timers.every10mins },
     { name: 'slashing-infos-solana', schedule: timers.every30mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
-    { name: 'update-nodes-rewards', schedule: timers.everyDay },
+    { name: 'update-nodes-rewards', schedule: timers.everyHour },
+    { name: 'update-nodes-commissions', schedule: timers.everyHour },
     { name: 'circulating-tokens-onchain', schedule: timers.everyDay },
     { name: 'circulating-tokens-public', schedule: timers.everyDay },
     { name: 'update-fdv', schedule: timers.everyHour },
@@ -112,6 +112,7 @@ const runServer = async () => {
     { name: 'unbonding-tokens', schedule: timers.everyDay },
     { name: 'match-chain-nodes', schedule: timers.everyDay },
     { name: 'check-nodes-health', schedule: timers.everyHour },
+    { name: 'update-chain-rewards', schedule: timers.everyHour },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

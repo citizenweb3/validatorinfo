@@ -40,7 +40,7 @@ const chainMethods: ChainMethods = {
     quorumThreshold: null,
   }),
   getNodeRewards: async () => [],
-  getChainRewards: async () => null,
+  getNodeCommissions: async () => [],
   getCommunityPool: async () => null,
   getActiveSetMinAmount: async () => null,
   getCirculatingTokensOnchain,

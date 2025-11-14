@@ -6,6 +6,8 @@ import ScalabilityBar from '@/app/web3stats/bars/scalability-bar';
 import SecurityBar from '@/app/web3stats/bars/security-bar';
 import Web3statsCharts from '@/app/web3stats/charts';
 import TotalsList from '@/app/web3stats/totals/totals-list';
+import CollapsePageHeader from '@/components/common/collapse-page-header';
+import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
@@ -40,11 +42,15 @@ export default async function GlobalPosPage({ params: { locale } }: { params: { 
 
   return (
     <div className="flex flex-col">
-      <Story
-        src="global"
-        alt="Pixelated, 90s game-style characters riding roller coaster of web3 charts and statistics"
-      />
-      <TabList page="HomePage" tabs={mainTabs} />
+      <PageHeaderVisibilityWrapper>
+        <CollapsePageHeader>
+          <Story
+            src="global"
+            alt="Pixelated, 90s game-style characters riding roller coaster of web3 charts and statistics"
+          />
+        </CollapsePageHeader>
+        <TabList page="HomePage" tabs={mainTabs} />
+      </PageHeaderVisibilityWrapper>
       <PageTitle
         text={t.rich('title', {
           ecosystemLink: (chunks) => (
@@ -57,7 +63,6 @@ export default async function GlobalPosPage({ params: { locale } }: { params: { 
                 </>
               }
               href="/ecosystems"
-              target="_blank"
             />
           ),
         })}

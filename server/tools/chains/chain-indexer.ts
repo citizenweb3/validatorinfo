@@ -49,6 +49,7 @@ export interface AddChainProps {
   chainId: string;
   name: string;
   prettyName: string;
+  description?: string;
   denom: string;
   minimalDenom: string;
   logoUrl: string;
@@ -95,6 +96,11 @@ export interface NodesRewards {
   rewards: string | null;
 }
 
+export interface NodesCommissions {
+  address: string | null;
+  commission: string | null;
+}
+
 export interface DelegatorsAmount {
   address: string;
   amount: number;
@@ -114,7 +120,7 @@ export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
 export type GetNodeRewards = (chain: AddChainProps) => Promise<NodesRewards[]>;
-export type GetChainRewards = (chain: AddChainProps) => Promise<string | null>;
+export type GetNodeCommissions = (chain: AddChainProps) => Promise<NodesCommissions[]>;
 export type GetCommPoolFunction = (chain: AddChainProps) => Promise<string | null>;
 export type GetInflationRate = (chain: AddChainProps) => Promise<number | null>;
 export type GetActiveSetMinAmount = (chain: AddChainProps) => Promise<string | null>;
@@ -141,7 +147,7 @@ export interface ChainMethods {
   getWalletsAmount: GetWalletsAmount;
   getProposalParams: GetProposalParams;
   getNodeRewards: GetNodeRewards;
-  getChainRewards: GetChainRewards;
+  getNodeCommissions: GetNodeCommissions;
   getCommunityPool: GetCommPoolFunction;
   getActiveSetMinAmount: GetActiveSetMinAmount;
   getInflationRate: GetInflationRate;

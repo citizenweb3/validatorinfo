@@ -706,6 +706,12 @@ export function handleWheel(
   maxDate: Date,
   zoomStep: number = 1
 ): [Date, Date] {  // Changed return type from void to [Date, Date]
+  // Only handle zoom when Ctrl (Windows/Linux) or Cmd (Mac) is pressed
+  // This allows normal page scrolling when hovering over the chart
+  if (!event.ctrlKey && !event.metaKey) {
+    return xDomain; // Return current domain without changes
+  }
+
   event.preventDefault();
   const delta = event.deltaY;
 

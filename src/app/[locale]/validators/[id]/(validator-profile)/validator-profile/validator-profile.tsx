@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import NetworksCircle from '@/app/validators/[id]/(validator-profile)/validator-profile/validator-networks-circle';
@@ -43,7 +44,7 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
     <div className="mb-7 mt-4 grid grid-cols-7 items-start">
       <div className="xl:mr-18 col-span-2 mr-8 flex h-full flex-col border-b border-bgSt md:mr-10 lg:mr-14 2xl:mr-20">
         <div className="font-sfpro text-base">
-          <h2>{t('description')}</h2>
+          <h2>{validator.details ?? t('description')}</h2>
           <div className="relative my-6 h-[40px] w-full md:h-[58px] lg:h-[66px] xl:h-[80px] 2xl:h-[86px]">
             <iframe
               src={playerUrl}
@@ -82,9 +83,13 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
           <Tooltip tooltip={t('keyhole tooltip')} direction={'bottom'}>
             <div className={`${iconsSize} ml-2.5 bg-keyhole bg-contain bg-no-repeat hover:bg-keyhole_h`} />
           </Tooltip>
-          <Tooltip noWrap tooltip={t('github tooltip')} direction={'bottom'}>
-            <div className={`${iconsSize} ml-2.5 bg-github_g bg-contain bg-no-repeat hover:bg-github_g_h`} />
-          </Tooltip>
+          {validator.github && (
+            <Tooltip noWrap tooltip={validator.github} direction={'bottom'}>
+              <Link href={validator.github} target="_blank" >
+                <div className={`${iconsSize} ml-2.5 bg-github_g bg-contain bg-no-repeat hover:bg-github_g_h`} />
+              </Link>
+            </Tooltip>
+          )}
         </div>
       </div>
     </div>

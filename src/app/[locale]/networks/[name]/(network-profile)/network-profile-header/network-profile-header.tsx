@@ -20,9 +20,18 @@ interface OwnProps {
   locale: string;
 }
 
+const testnetDescriptions: Record<string, string> = {
+  'cosmoshub-testnet': 'cosmoshub',
+  'namada-testnet': 'namada',
+  'neutron-testnet': 'neutron',
+  'axone-testnet': 'axone',
+  'quicksilver-testnet': 'quicksilver'
+};
+
 const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkProfileHeader' });
-  const chain = await chainService.getByName(chainName);
+  const effectiveChainName = testnetDescriptions[chainName] || chainName;
+  const chain = await chainService.getByName(effectiveChainName);
   const chainLogo = chain?.logoUrl ?? icons.AvatarIcon;
   const chainHealth = 40;
 
@@ -35,8 +44,8 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
 
   return (
     <div className="mb-7 mt-4 grid grid-cols-5 items-start">
-      <div className="col-span-1 flex h-full flex-col justify-end gap-6 border-b border-bgSt px-2 pb-4">
-        <div>
+      <div className="col-span-1 flex h-full flex-col justify-end border-b border-bgSt px-2 pb-4">
+        <div className="gap-6">
           <div className="mb-2 font-sfpro text-base">
             <ChainDescription text={chain?.description ?? ''} readMoreLabel={t('read more')} />
           </div>
@@ -72,17 +81,19 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
         </div>
 
         {validators?.length != 0 && (
-          <RoundedButton
-            href={`/networks/${chainName}/validators`}
-            className="mb-2 font-handjet text-lg active:mb-1 w-full"
-            contentClassName="px-16"
-          >
-            {t('Show Validators')}
-          </RoundedButton>
+          <div className="my-4">
+            <RoundedButton
+              href={`/networks/${chainName}/validators`}
+              className="w-full font-handjet text-lg"
+              contentClassName="px-16"
+            >
+              {t('Show Validators')}
+            </RoundedButton>
+          </div>
         )}
         <RoundedButton
           href={`/nodes?p=1&ecosystems=${chain?.ecosystem}`}
-          className="font-handjet text-lg w-full"
+          className="w-full font-handjet text-lg"
           contentClassName="px-20"
         >
           {t('Show Nodes')}

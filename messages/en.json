@@ -857,10 +857,6 @@
         "name": "Status",
         "hint": "Current operational status of the infrastructure node"
       },
-      "Response Time": {
-        "name": "Response Time",
-        "hint": "Average response time for requests to this node"
-      },
       "Last Checked": {
         "name": "Last Checked",
         "hint": "When this node was last checked for availability"
@@ -894,6 +890,7 @@
     "tokens delegated": "Tokens Delegated",
     "expected APR": "Expected APR",
     "outstanding reward": "Outstanding Reward",
+    "outstanding commission": "Outstanding Commission",
     "voting power": "Voting Power",
     "validator rank": "Validator Rank",
     "proposals created": "Proposal Created",

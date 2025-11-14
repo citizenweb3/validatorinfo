@@ -2,6 +2,8 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 
 import NetworkProfileHeader from '@/app/networks/[name]/(network-profile)/network-profile-header/network-profile-header';
+import CollapsePageHeader from '@/components/common/collapse-page-header';
+import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import TabList from '@/components/common/tabs/tab-list';
 import { getNetworkProfileTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
@@ -17,10 +19,12 @@ export default async function NetworkProfileLayout({
   const networkProfileTabs = getNetworkProfileTabs(name);
 
   return (
-    <div>
-      <NetworkProfileHeader chainName={name} locale={locale} />
+    <PageHeaderVisibilityWrapper>
+      <CollapsePageHeader>
+        <NetworkProfileHeader chainName={name} locale={locale} />
+      </CollapsePageHeader>
       <TabList page="NetworkProfileHeader" tabs={networkProfileTabs} />
       {children}
-    </div>
+    </PageHeaderVisibilityWrapper>
   );
 }

@@ -1,15 +1,11 @@
 import { sleep } from '@cosmjs/utils';
 
-
-
 import db from '@/db';
 import logger from '@/logger';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import chainNames from '@/server/tools/chains/chains';
 import { ecosystemParams, updateChainParamsUpdated } from '@/server/tools/chains/params';
 import downloadImage from '@/server/utils/download-image';
-
-
 
 import { Prisma } from '.prisma/client';
 
@@ -24,6 +20,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     chainId: chain.chainId,
     name: chain.name,
     prettyName: chain.prettyName,
+    description: chain.description,
     logoUrl: chain.logoUrl,
     coinGeckoId: chain.coinGeckoId,
     twitterUrl: chain.twitterUrl,

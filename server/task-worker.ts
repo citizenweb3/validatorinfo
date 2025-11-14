@@ -12,7 +12,6 @@ import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
-import updateChainRewards from '@/server/jobs/update-chain-rewards';
 import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
@@ -24,6 +23,7 @@ import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
 import updateFdv from '@/server/jobs/update-fdv';
 import updateGithubRepositories from '@/server/jobs/update-github-repositories';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
+import updateNodesCommissions from '@/server/jobs/update-nodes-commissions';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
@@ -35,6 +35,7 @@ import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
+import updateChainRewards from '@/server/jobs/update-chain-rewards';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -99,11 +100,14 @@ async function runTask() {
       case 'update-staking-page-json':
         await updateStakingPageJson();
         break;
+      case 'update-chain-rewards':
+        await updateChainRewards(chains);
+        break;
       case 'update-nodes-rewards':
         await updateNodesRewards(chains);
         break;
-      case 'update-chain-rewards':
-        await updateChainRewards(chains);
+      case 'update-nodes-commissions':
+        await updateNodesCommissions(chains);
         break;
       case 'community-pool':
         await updateCommPool(chains);

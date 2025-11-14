@@ -1,11 +1,12 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
 import PlusButton from '@/components/common/plus-button';
+import { checkHasActiveFilters } from '@/components/common/list-filters/list-filters';
 
 interface OwnProps {
   selectedTags: string[];
@@ -20,9 +21,12 @@ const tagsFilters = [
 const LibraryTagsFilter: FC<OwnProps> = ({ selectedTags }) => {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const t = useTranslations('HomePage.Table');
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const [resetClicks, setResetClicks] = useState<number>(0);
+
+  const hasActiveFilters = checkHasActiveFilters(searchParams);
 
   useEffect(() => {
     if (resetClicks >= 3) {
@@ -59,6 +63,7 @@ const LibraryTagsFilter: FC<OwnProps> = ({ selectedTags }) => {
           activeType="switcher"
           onClick={onCustomiseClick}
           isActive={isOpened}
+          hasActiveFilters={hasActiveFilters}
           tooltip={t('Click 3 times to reset all filters')}
         >
           <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-base font-medium">

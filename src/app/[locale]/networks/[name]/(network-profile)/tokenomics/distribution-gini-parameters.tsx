@@ -19,17 +19,13 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
 
   const nodes = await nodeService.getNodesByChainId(chain?.id ?? 1);
 
-  const totalSupply =
-    chain?.params?.coinDecimals != null && chain?.tokenomics?.totalSupply
-      ? +chain?.tokenomics?.totalSupply / 10 ** chain.params?.coinDecimals
-      : undefined;
-
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain.id) : null;
-  const fdv = tokenPrice?.value && totalSupply ? totalSupply * tokenPrice.value : undefined;
+  const fdv = chain?.name === 'ethereum-sepolia' || chain?.name === 'warden-testnet' ? 0 : chain?.tokenomics?.fdv;
 
-  const communityPool = chain?.params?.coinDecimals != null
-    ? Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain.params.coinDecimals)
-    : 0;
+  const communityPool =
+    chain?.params?.coinDecimals != null
+      ? Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain.params.coinDecimals)
+      : 0;
 
   const rewardsToPayout =
     chain?.tokenomics?.rewardsToPayout && tokenPrice && chain?.params?.coinDecimals != null

@@ -8,8 +8,10 @@ import PlusButton from '@/components/common/plus-button';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
-import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
+import { NextPageWithLocale } from '@/i18n';
+import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
+import CollapsePageHeader from '@/components/common/collapse-page-header';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -22,8 +24,15 @@ const MetricsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
 
   return (
     <div>
-      <Story src="metrics" alt="Pixelated, 90s game-style characters next to web3 charts, looking out for analytics" />
-      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <PageHeaderVisibilityWrapper>
+        <CollapsePageHeader>
+          <Story
+            src="metrics"
+            alt="Pixelated, 90s game-style characters next to web3 charts, looking out for analytics"
+          />
+        </CollapsePageHeader>
+        <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-4'} />
       <Switcher />
