@@ -63,7 +63,7 @@
     "Calculate": "Calcular",
     "Compare": "Comparar",
     "Rumors": "Rumor",
-    "Global": "Analise",
+    "Analyze": "Analise",
     "About Us": "Sobre nós",
     "Library": "Biblioteca",
     "Ecosystems": "Ecossistemas",
@@ -145,7 +145,7 @@
       "Compare": "Comparar",
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
-      "Global": "Analise"
+      "Analyze": "Analise"
     },
     "ConsolePanel": {
       "Get started": {

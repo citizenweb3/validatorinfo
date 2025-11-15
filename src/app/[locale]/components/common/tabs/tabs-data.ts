@@ -11,21 +11,21 @@ export interface TabOptions {
 }
 
 export const mainTabs: TabOptions[] = [
+  { name: 'Analyze', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
   {
     name: 'Calculate',
     href: '/stakingcalculator',
     icon: icons.CalculatorIcon,
     iconHovered: icons.CalculatorIconHovered,
   },
+  { name: 'ValidatorInfo', href: '/', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   {
     name: 'Compare',
     href: '/comparevalidators',
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
-  { name: 'ValidatorInfo', href: '/', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   { name: 'Rumors', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Global', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
 ];
 
 export const validatorsTabs: TabOptions[] = [

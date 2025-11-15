@@ -63,7 +63,7 @@
     "Calculate": "Калькулятор",
     "Compare": "Сравнение",
     "Rumors": "Слухи",
-    "Global": "Анализ",
+    "Analyze": "Анализ",
     "Library": "Библиотека",
     "About Us": "О нас",
     "Ecosystems": "Экосистемы",
@@ -145,7 +145,7 @@
       "Compare": "Сравнение",
       "ValidatorInfo": "ВалидаторИнфо",
       "Rumors": "Слухи",
-      "Global": "Анализ"
+      "Analyze": "Анализ"
     },
     "ConsolePanel": {
       "Get started": {
