@@ -113,6 +113,7 @@ const runServer = async () => {
     { name: 'match-chain-nodes', schedule: timers.everyDay },
     { name: 'check-nodes-health', schedule: timers.everyHour },
     { name: 'update-chain-rewards', schedule: timers.everyHour },
+    { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

@@ -34,7 +34,7 @@ const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({ params: { 
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <NetworkStatistics chain={chain} />
-      <SocialStatistics />
+      <SocialStatistics chain={chain} />
       <SubTitle text={t('Transaction Volume')} />
       <TransactionVolumeChart />
       <OperatorDistribution chainId={chain?.id ?? null} />

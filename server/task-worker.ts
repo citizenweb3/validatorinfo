@@ -36,6 +36,7 @@ import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybas
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
 import updateChainRewards from '@/server/jobs/update-chain-rewards';
+import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -144,6 +145,9 @@ async function runTask() {
         break;
       case 'check-nodes-health':
         await checkNodesHealth();
+        break;
+      case 'update-twitter-followers-amount':
+        await updateTwitterFollowersAmount(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

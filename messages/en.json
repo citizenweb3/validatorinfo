@@ -276,6 +276,7 @@
     "price of active user": "Price of Active User",
     "believers": "Believers",
     "followers": "Followers",
+    "followers tooltip": "Amount of Twitter (X) followers",
     "members": "Members",
     "Transaction Volume": "Transaction Volume + MAU"
   },

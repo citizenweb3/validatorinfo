@@ -276,6 +276,7 @@
     "price of active user": "Цена активного пользователя",
     "believers": "Сторонники",
     "followers": "Подписчики",
+    "followers tooltip": "Количество подписчиков в Twitter (X)",
     "members": "Участники",
     "Transaction Volume": "Объём транзакций + MAU"
   },

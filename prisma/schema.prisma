@@ -80,21 +80,22 @@ model ChainParams {
 }
 
 model Chain {
-  id             Int     @id @default(autoincrement())
-  ecosystem      String  @db.VarChar(256)
-  chainId        String  @unique @map("chain_id") @db.VarChar(256)
-  rang           Int
-  name           String  @unique @db.VarChar(256)
-  prettyName     String  @map("pretty_name") @db.VarChar(256)
-  logoUrl        String  @map("logo_url")
-  coinGeckoId    String  @map("coingecko_id") @db.VarChar(64)
-  twitterUrl     String  @map("twitter_url") @db.VarChar(256)
-  docs           String?
-  githubUrl      String  @map("github_url")
-  githubMainRepo String  @map("github_main_repo")
-  hasValidators  Boolean @default(true) @map("has_validators")
-  walletsAmount  Int?    @map("wallets_amount")
-  description    String?
+  id               Int     @id @default(autoincrement())
+  ecosystem        String  @db.VarChar(256)
+  chainId          String  @unique @map("chain_id") @db.VarChar(256)
+  rang             Int
+  name             String  @unique @db.VarChar(256)
+  prettyName       String  @map("pretty_name") @db.VarChar(256)
+  logoUrl          String  @map("logo_url")
+  coinGeckoId      String  @map("coingecko_id") @db.VarChar(64)
+  twitterUrl       String  @map("twitter_url") @db.VarChar(256)
+  docs             String?
+  githubUrl        String  @map("github_url")
+  githubMainRepo   String  @map("github_main_repo")
+  hasValidators    Boolean @default(true) @map("has_validators")
+  walletsAmount    Int?    @map("wallets_amount")
+  description      String?
+  twitterFollowers Int?    @map("twitter_followers")
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 

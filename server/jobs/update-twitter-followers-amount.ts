@@ -1,14 +1,13 @@
 import db from '@/db';
 import logger from '@/logger';
-import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
+import { getTwitterFollowersAmount } from '@/server/tools/get-twitter-followers-amount';
 
-const { logError, logInfo } = logger('get-wallets-amount');
+const { logError, logInfo } = logger('update-twitter-followers-amount');
 
-const updateWalletsAmount = async (chainNames: string[]) => {
+const updateTwitterFollowersAmount = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
     const chainParams = getChainParams(chainName);
-    const chainMethods = getChainMethods(chainName);
 
     try {
       const dbChain = await db.chain.findFirst({
@@ -19,21 +18,21 @@ const updateWalletsAmount = async (chainNames: string[]) => {
         continue;
       }
       logInfo(`${chainName} updating`);
-      const walletsAmount = (await chainMethods.getWalletsAmount(chainParams));
-      logInfo(`${chainName} wallets amount: ${walletsAmount}`);
+      const followers = await getTwitterFollowersAmount(dbChain.twitterUrl);
+      logInfo(`${chainName} followers: ${followers}`);
 
-      if (walletsAmount !== undefined && walletsAmount !== null) {
+      if (followers !== undefined && followers !== null) {
         await db.chain.update({
           where: { id: dbChain.id },
           data: {
-            walletsAmount,
+            twitterFollowers: followers,
           },
         });
       }
     } catch (e) {
-      logError("Can't fetch wallets amount: ", e);
+      logError("Can't fetch twitter followers: ", e);
     }
   }
 };
 
-export default updateWalletsAmount;
+export default updateTwitterFollowersAmount;
