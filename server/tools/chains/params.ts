@@ -1101,21 +1101,15 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl:
       'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
     nodes: [
+      // Polkadot migrated staking functionality to Asset Hub on November 4, 2025
+      // Must use Asset Hub endpoints for staking.activeEra() and validator data
       {
-        type: 'rest',
-        url: 'https://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+        type: 'ws',
+        url: 'wss://polkadot-asset-hub-rpc.polkadot.io', // Official Asset Hub endpoint
       },
       {
         type: 'ws',
-        url: 'wss://rpc.polkadot.io',
-      },
-      {
-        type: 'ws',
-        url: 'wss://nameless-palpable-borough.dot-mainnet.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
-      },
-      {
-        type: 'ws',
-        url: 'wss://polkadot-rpc.publicnode.com',
+        url: 'wss://pas-rpc.stakeworld.io', // Alternative Asset Hub endpoint
       },
     ],
     mainRepo: 'https://github.com/paritytech/polkadot-sdk',

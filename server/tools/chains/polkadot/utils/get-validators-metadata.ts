@@ -2,7 +2,7 @@ import type { Option } from '@polkadot/types';
 import { connectWsApi } from '@/server/tools/chains/polkadot/utils/connect-ws-api';
 import logger from '@/logger';
 
-const { logError } = logger('polkadot-validator-stake');
+const { logError } = logger('polkadot-validator-metadata');
 
 type MetadataField = { Raw: string } | { Hashed: string } | 'None' | null | string;
 
@@ -52,10 +52,15 @@ export const getValidatorMetadata = async () => {
         });
       }
     }
-    await api.disconnect();
     return validatorInfo;
   } catch (error) {
-    logError(`Error fetching validator metadata for ${wsList}`);
+    logError(`Error fetching validator metadata for ${wsList}:`, error);
     return [];
+  } finally {
+    try {
+      await api.disconnect();
+    } catch (e) {
+      logError(`Could not disconnect websocket for ${wsList}:`, e);
+    }
   }
 };
