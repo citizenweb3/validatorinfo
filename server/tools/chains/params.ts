@@ -1101,8 +1101,6 @@ const chainParams: Record<string, AddChainProps> = {
     logoUrl:
       'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
     nodes: [
-      // Polkadot migrated staking functionality to Asset Hub on November 4, 2025
-      // Must use Asset Hub endpoints for staking.activeEra() and validator data
       {
         type: 'ws',
         url: 'wss://polkadot-asset-hub-rpc.polkadot.io', // Official Asset Hub endpoint
