@@ -1,4 +1,3 @@
-import { Chain } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
@@ -6,9 +5,10 @@ import { networkProfileExample } from '@/app/networks/[name]/(network-profile)/n
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
 import ToolTip from '@/components/common/tooltip';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 interface OwnProps {
-  chain: Chain;
+  chain: ChainWithParamsAndTokenomics | null;
 }
 
 const SocialStatistics: FC<OwnProps> = async ({ chain }) => {
@@ -25,7 +25,7 @@ const SocialStatistics: FC<OwnProps> = async ({ chain }) => {
         <ToolTip tooltip={t('followers tooltip')} direction={'top'}>
           <MetricsCardItem
             title={t('followers')}
-            data={chain.twitterFollowers ?? '-'}
+            data={chain?.twitterFollowers ?? '-'}
             className={'pb-2 pt-2.5'}
             dataClassName={'my-5'}
           />

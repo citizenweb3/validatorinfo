@@ -1,14 +1,14 @@
 import { getTranslations } from 'next-intl/server';
 
-import OperatorDistribution from '@/app/networks/[name]/(network-profile)/stats/operator-distribution';
 import NetworkStatistics from '@/app/networks/[name]/(network-profile)/stats/network-statistics';
+import OperatorDistribution from '@/app/networks/[name]/(network-profile)/stats/operator-distribution';
+import SocialStatistics from '@/app/networks/[name]/(network-profile)/stats/social-statistics';
+import TransactionVolumeChart from '@/app/networks/[name]/(network-profile)/stats/transaction-volume-chart';
 import PageTitle from '@/components/common/page-title';
+import SubTitle from '@/components/common/sub-title';
+import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
-import SubDescription from '@/components/sub-description';
-import SocialStatistics from '@/app/networks/[name]/(network-profile)/stats/social-statistics';
-import SubTitle from '@/components/common/sub-title';
-import TransactionVolumeChart from '@/app/networks/[name]/(network-profile)/stats/transaction-volume-chart';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
