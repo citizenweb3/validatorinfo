@@ -1,8 +1,8 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import getNodes from '@/server/tools/chains/aztec/get-nodes';
-import getMissedBlocks from '@/server/tools/chains/ethereum/get-missed-blocks';
+import getMissedBlocks from '@/server/tools/chains/aztec/get-missed-blocks';
 import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
-import getSlashingParams from '@/server/tools/chains/ethereum/get-slashing-params';
+import getSlashingParams from '@/server/tools/chains/aztec/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
 import getTvs from '@/server/tools/chains/ethereum/get-tvs';
 

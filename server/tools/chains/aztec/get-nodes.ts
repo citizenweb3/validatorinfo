@@ -36,7 +36,7 @@ interface AztecValidatorStats {
   }>;
 }
 
-interface ValidatorsStatsResponse {
+export interface ValidatorsStatsResponse {
   stats: {
     [address: string]: AztecValidatorStats;
   };

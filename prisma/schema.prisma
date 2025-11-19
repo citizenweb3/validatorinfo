@@ -358,3 +358,17 @@ model GithubActivity {
   @@unique([repositoryId, date], map: "repository_id_date")
   @@map("github_activities")
 }
+
+model NodesConsensusData {
+  id                       Int     @id @default(autoincrement())
+  nodeAddress              String  @unique @map("node_address")
+  totalSlots               Int?    @map("total_slots")
+  totalSlotsProposals      Int?    @map("total_slots_proposals")
+  totalSlotsAttestations   Int?    @map("total_slots_attestations")
+  missedSlotsProposals     Int?    @map("missed_slots_proposals")
+  missedSlotsAttestations  Int?    @map("missed_slots_attestations")
+  lastAttestationTimestamp String? @map("last_attestation_timestamp")
+  lastAttestationSlot      String? @map("last_attestation_slot")
+
+  @@map("nodes_consensus_data")
+}

@@ -25,7 +25,7 @@ const testnetDescriptions: Record<string, string> = {
   'namada-testnet': 'namada',
   'neutron-testnet': 'neutron',
   'axone-testnet': 'axone',
-  'quicksilver-testnet': 'quicksilver'
+  'quicksilver-testnet': 'quicksilver',
 };
 
 const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
@@ -81,7 +81,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
         </div>
 
         {validators?.length != 0 && (
-          <div className="my-4">
+          <div className="mt-4">
             <RoundedButton
               href={`/networks/${chainName}/validators`}
               className="w-full font-handjet text-lg"
@@ -91,13 +91,15 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
             </RoundedButton>
           </div>
         )}
-        <RoundedButton
-          href={`/nodes?p=1&ecosystems=${chain?.ecosystem}`}
-          className="w-full font-handjet text-lg"
-          contentClassName="px-20"
-        >
-          {t('Show Nodes')}
-        </RoundedButton>
+        <div className="mt-4">
+          <RoundedButton
+            href={`/nodes?p=1&ecosystems=${chain?.ecosystem}`}
+            className="w-full font-handjet text-lg"
+            contentClassName="px-20"
+          >
+            {t('Show Nodes')}
+          </RoundedButton>
+        </div>
       </div>
 
       <div className="col-span-3 flex h-full flex-col items-center justify-center">
