@@ -1001,7 +1001,7 @@ const chainParams: Record<string, AddChainProps> = {
       'https://raw.githubusercontent.com/github/explore/14191328e15689ba52d5c10e18b43417bf79b2ef/topics/solana/solana.png',
     nodes: [
       {
-        type: 'rest',
+        type: 'rpc',
         url: 'https://api.mainnet-beta.solana.com',
       },
       {
@@ -1114,6 +1114,33 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.polkadot.com/',
     githubUrl: 'https://github.com/paritytech',
     twitterUrl: 'https://x.com/Polkadot',
+  },
+
+  'aztec-testnet': {
+    rang: 2,
+    ecosystem: 'ethereum',
+    hasValidators: true,
+    name: 'aztec-testnet',
+    prettyName: 'Aztec Testnet',
+    chainId: 'TESTNET',
+    bech32Prefix: '',
+    coinDecimals: 18,
+    coinGeckoId: '',
+    coinType: 60,
+    denom: 'STK',
+    minimalDenom: 'tst',
+    logoUrl:
+      'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
+    nodes: [
+      {
+        type: 'rpc',
+        url: 'https://rpc.aztec-testnet.citizenweb3.com/',
+      },
+    ],
+    mainRepo: 'https://github.com/AztecProtocol/aztec-packages',
+    docs: 'https://docs.aztec.network/',
+    githubUrl: 'https://github.com/AztecProtocol',
+    twitterUrl: 'https://x.com/aztecnetwork',
   },
 };
 

@@ -1,6 +1,6 @@
 import logger from '@/logger';
 import { GetMissedBlocks } from '@/server/tools/chains/chain-indexer';
-import fetchSolanaData from '@/server/tools/chains/solana/utils/fetch-solana-data';
+import { jsonRpcClientWithFailover } from '@/server/utils/json-rpc-client';
 import { SlashingSigningInfos } from '@/server/types';
 
 const { logError } = logger('solana-missed-blocks');
@@ -12,7 +12,17 @@ const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
   }
 
   try {
-    const currentSlot = await fetchSolanaData<number>('getSlot');
+    const rpcUrls = chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
+    if (!rpcUrls.length) {
+      throw new Error('No RPC URLs provided in chain object');
+    }
+
+    const currentSlot = await jsonRpcClientWithFailover<number>(
+      rpcUrls,
+      'getSlot',
+      undefined,
+      'solana-missed-blocks'
+    );
 
     const startSlot = currentSlot - dbChain.params.blocksWindow;
 
@@ -26,7 +36,12 @@ const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
       return [];
     }
 
-    const filledSlots: number[] = await fetchSolanaData<number[]>('getBlocks', [startSlot, currentSlot]);
+    const filledSlots: number[] = await jsonRpcClientWithFailover<number[]>(
+      rpcUrls,
+      'getBlocks',
+      [startSlot, currentSlot],
+      'solana-missed-blocks'
+    );
 
     if (!Array.isArray(filledSlots)) {
       logError(`filledSlots is not array: ${filledSlots}`);
@@ -35,7 +50,12 @@ const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
 
     const filledSet = new Set(filledSlots);
 
-    const leaders = await fetchSolanaData<string[]>('getSlotLeaders', [startSlot, dbChain.params.blocksWindow]);
+    const leaders = await jsonRpcClientWithFailover<string[]>(
+      rpcUrls,
+      'getSlotLeaders',
+      [startSlot, dbChain.params.blocksWindow],
+      'solana-missed-blocks'
+    );
 
     if (!Array.isArray(leaders) || leaders.length === 0) {
       logError(`leaders array invalid: got ${leaders?.length}, expected ${dbChain.params.blocksWindow}`);
