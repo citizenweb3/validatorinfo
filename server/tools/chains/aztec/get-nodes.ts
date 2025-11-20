@@ -1,9 +1,11 @@
 import logger from '@/logger';
+import { getNodeStake } from '@/server/tools/chains/aztec/utils/get-node-stake';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
+import { getChainParams } from '@/server/tools/chains/params';
 import { NodeResult } from '@/server/types.d';
 import { jsonRpcClientWithFailover } from '@/server/utils/json-rpc-client';
 
-const { logError } = logger('aztec-nodes');
+const { logError, logWarn } = logger('aztec-nodes');
 
 interface AztecValidatorStats {
   address: string;
@@ -36,6 +38,11 @@ interface AztecValidatorStats {
   }>;
 }
 
+const getL1: Record<string, string> = {
+  'aztec-testnet': 'ethereum-sepolia',
+  aztec: 'ethereum',
+};
+
 export interface ValidatorsStatsResponse {
   stats: {
     [address: string]: AztecValidatorStats;
@@ -44,14 +51,21 @@ export interface ValidatorsStatsResponse {
 
 const getAztecNodes: GetNodesFunction = async (chain) => {
   try {
-    const rpcUrls = chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
+    const aztecRpcUrls = chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
 
-    if (!rpcUrls.length) {
-      throw new Error('No RPC URLs provided in chain configuration');
+    if (!aztecRpcUrls.length) {
+      throw new Error('No Aztec RPC URLs provided in chain configuration');
+    }
+
+    const l1Chain = getChainParams(getL1[chain.name]);
+    const l1RpcUrls = l1Chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
+
+    if (!l1RpcUrls.length) {
+      logWarn('No Ethereum Sepolia RPC URLs found - stake data will not be available');
     }
 
     const response = await jsonRpcClientWithFailover<ValidatorsStatsResponse>(
-      rpcUrls,
+      aztecRpcUrls,
       'node_getValidatorsStats',
       [],
       'aztec-nodes',
@@ -72,16 +86,26 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
     let nodes: NodeResult[] = [];
 
     for (const validator of validators) {
+      let nodeStake: bigint | null = null;
+
+      if (l1RpcUrls.length > 0) {
+        try {
+          nodeStake = await getNodeStake(validator.address, l1RpcUrls, chain.name as 'aztec' | 'aztec-testnet');
+        } catch (e: any) {
+          logWarn(`Failed to fetch stake for validator ${validator.address}: ${e.message}`);
+        }
+      }
+
       nodes.push({
         operator_address: validator.address,
-        delegator_shares: '0',
+        delegator_shares: nodeStake !== null ? String(nodeStake) : '',
         consensus_pubkey: {
           '@type': 'aztec/AttesterAddress',
           key: validator.address,
         },
         jailed: false,
         status: 'BOND_STATUS_BONDED',
-        tokens: '0',
+        tokens: nodeStake !== null ? String(nodeStake) : '',
         commission: {
           commission_rates: {
             rate: '0',

@@ -1,0 +1,30 @@
+export const aztecTestnet = {
+  registryAddress: '0x459498e6bf7967bad0966353b691ef4395432479',
+  feeAssetHandlerAddress: '0x36f39b866a2326a94a9ee2961008ea5ee9f04d7f',
+  rollupAddress: '0xebd99ff0ff6677205509ae73f93d0ca52ac85d67',
+  inboxAddress: '0xd7610c91d5869a40e229719d41de2ac6374789ed',
+  outboxAddress: '0x062e226f244536f5ab2b875cd28df4f5dbea8266',
+  feeJuiceAddress: '0x31785fdcbc5c5ccfb0726382132bca6343ee8652',
+  stakingAssetAddress: '0x139d2a7a0881e16332d7d1f8db383a4507e1ea7a',
+  feeJuicePortalAddress: '0x903bb16320a3ce16a9df880cfb8f2abd74261fa1',
+  coinIssuerAddress: '0xfe3dad94f934d7ec90158e4a378ad552e02e9e63',
+  rewardDistributorAddress: '0xa0122560afeec5ef45a950d5c49a3cc5c5549e2b',
+  governanceProposerAddress: '0xef1b0d8aaca52f70323cbb91b0103bce75e9c533',
+  governanceAddress: '0x1b5dad737609a548543ce32a71377900b5fd5584',
+  gseAddress: '0xfb243b9112bb65785a4a8edaf32529accf003614',
+};
+
+export const aztecMainnet = {
+  registryAddress: '0x35b22e09ee0390539439e24f06da43d83f90e298',
+  rollupAddress: '0x603bb2c05d474794ea97805e8de69bccfb3bca12',
+  inboxAddress: '0x15c718c05b8c0dbec4d648b6711d6ce8793969ee',
+  outboxAddress: '0xf006c41097861afeb18b05e586b921c081411ee9',
+  feeJuiceAddress: '0xa27ec0006e59f245217ff08cd52a7e8b169e62d2',
+  stakingAssetAddress: '0xa27ec0006e59f245217ff08cd52a7e8b169e62d2',
+  feeJuicePortalAddress: '0xe05dc9d5969272831757181fff1532b066254bf1',
+  coinIssuerAddress: '0x02fadf157d551aa6d761b2a2237d03af68e41ca6',
+  rewardDistributorAddress: '0x3d6a1b00c830c5f278fc5dfb3f6ff0b74db6dfe0',
+  governanceProposerAddress: '0x06ef1dcf87e419c48b94a331b252819fadbd63ef',
+  governanceAddress: '0x1102471eb3378fee427121c9efcea452e4b6b75e',
+  gseAddress: '0xa92ecfd0e70c9cd5e5cd76c50af0f7da93567a4f',
+};

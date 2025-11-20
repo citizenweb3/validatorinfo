@@ -12,6 +12,8 @@ interface APIItem {
 
 const { logWarn } = logger('init-chains');
 
+const ethereumRpcKey = process.env.ETHEREUM_RPC_KEY;
+
 export const ecosystemParams = [
   {
     name: 'cosmos',
@@ -1015,6 +1017,137 @@ const chainParams: Record<string, AddChainProps> = {
     twitterUrl: 'https://x.com/namada',
   },
 
+  polkadot: {
+    rang: 1,
+    ecosystem: 'polkadot',
+    hasValidators: true,
+    name: 'polkadot',
+    prettyName: 'Polkadot',
+    chainId: 'polkadot',
+    bech32Prefix: '',
+    coinDecimals: 10,
+    coinGeckoId: 'polkadot',
+    coinType: 354,
+    denom: 'DOT',
+    minimalDenom: 'planck',
+    logoUrl:
+      'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
+    nodes: [
+      {
+        type: 'ws',
+        url: 'wss://polkadot-asset-hub-rpc.polkadot.io', // Official Asset Hub endpoint
+      },
+      {
+        type: 'ws',
+        url: 'wss://pas-rpc.stakeworld.io', // Alternative Asset Hub endpoint
+      },
+    ],
+    mainRepo: 'https://github.com/paritytech/polkadot-sdk',
+    docs: 'https://docs.polkadot.com/',
+    githubUrl: 'https://github.com/paritytech',
+    twitterUrl: 'https://x.com/Polkadot',
+  },
+
+  aztec: {
+    rang: 2,
+    ecosystem: 'ethereum',
+    hasValidators: true,
+    name: 'aztec',
+    prettyName: 'Aztec',
+    chainId: 'MAINNET',
+    bech32Prefix: '',
+    coinDecimals: 18,
+    coinGeckoId: '',
+    coinType: 60,
+    denom: 'AZTEC',
+    minimalDenom: 'AZTEC',
+    logoUrl:
+      'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
+    nodes: [
+      {
+        type: 'rpc',
+        url: 'https://rpc.aztec.citizenweb3.com/',
+      },
+    ],
+    mainRepo: 'https://github.com/AztecProtocol/aztec-packages',
+    docs: 'https://docs.aztec.network/',
+    githubUrl: 'https://github.com/AztecProtocol',
+    twitterUrl: 'https://x.com/aztecnetwork',
+  },
+
+  'aztec-testnet': {
+    rang: 2,
+    ecosystem: 'ethereum',
+    hasValidators: true,
+    name: 'aztec-testnet',
+    prettyName: 'Aztec Testnet',
+    chainId: 'TESTNET',
+    bech32Prefix: '',
+    coinDecimals: 18,
+    coinGeckoId: '',
+    coinType: 60,
+    denom: 'STK',
+    minimalDenom: 'tst',
+    logoUrl:
+      'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
+    nodes: [
+      {
+        type: 'rpc',
+        url: 'https://rpc.aztec-testnet.citizenweb3.com/',
+      },
+    ],
+    mainRepo: 'https://github.com/AztecProtocol/aztec-packages',
+    docs: 'https://docs.aztec.network/',
+    githubUrl: 'https://github.com/AztecProtocol',
+    twitterUrl: 'https://x.com/aztecnetwork',
+  },
+
+  ethereum: {
+    rang: 1,
+    ecosystem: 'ethereum',
+    hasValidators: true,
+    name: 'ethereum',
+    prettyName: 'Ethereum',
+    chainId: '1',
+    bech32Prefix: '',
+    coinDecimals: 18,
+    coinGeckoId: 'ethereum',
+    coinType: 60,
+    denom: 'ETH',
+    minimalDenom: 'wei',
+    logoUrl:
+      'https://raw.githubusercontent.com/ethereum/ethereum-org-website/refs/heads/dev/public/images/eth-logo-grey.png',
+    nodes: [
+      {
+        type: 'rest',
+        url: `https://eth-mainnetbeacon.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
+      },
+      {
+        type: 'rest',
+        url: `https://beacon.ethereum.citizenweb3.com/${ethereumRpcKey}`,
+      },
+      {
+        type: 'rpc',
+        url: `https://eth-mainnet.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
+      },
+      {
+        type: 'rpc',
+        url: `https://rpc.ethereum.citizenweb3.com/${ethereumRpcKey}`,
+      },
+    ],
+    mainRepo: 'https://github.com/ethereum/go-ethereum',
+    docs: 'https://ethereum.org/en/developers/docs/',
+    githubUrl: 'https://github.com/ethereum',
+    twitterUrl: 'https://x.com/ethdotorg',
+    seeds: [
+      'enode://4e5e92199ee224a01932a377160aa432f31d0b351f84ab413a8e0a42f4f36476f8fb1cbe914af0d9aef0d51665c214cf653c651c4bbd9d5550a934f241f1682b@138.197.51.181:30303',
+      'enode://143e11fb766781d22d92a2e33f8f104cddae4411a122295ed1fdb6638de96a6ce65f5b7c964ba3763bba27961738fef7d3ecc739268f3e5e771fb4c87b6234ba@146.190.1.103:30303',
+      'enode://8b61dc2d06c3f96fddcbebb0efb29d60d3598650275dc469c22229d3e5620369b0d3dedafd929835fe7f489618f19f456fe7c0df572bf2d914a9f4e006f783a9@170.64.250.88:30303',
+      'enode://10d62eff032205fcef19497f35ca8477bea0eadfff6d769a147e895d8b2b8f8ae6341630c645c30f5df6e67547c03494ced3d9c5764e8622a26587b083b028e8@139.59.49.206:30303',
+      'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
+    ],
+  },
+
   'ethereum-sepolia': {
     rang: 1,
     ecosystem: 'ethereum',
@@ -1024,7 +1157,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: '11155111',
     bech32Prefix: '',
     coinDecimals: 18,
-    coinGeckoId: 'ethereum',
+    coinGeckoId: '',
     coinType: 60,
     denom: 'ETH',
     minimalDenom: 'wei',
@@ -1083,64 +1216,6 @@ const chainParams: Record<string, AddChainProps> = {
       'enode://10d62eff032205fcef19497f35ca8477bea0eadfff6d769a147e895d8b2b8f8ae6341630c645c30f5df6e67547c03494ced3d9c5764e8622a26587b083b028e8@139.59.49.206:30303',
       'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
     ],
-  },
-
-  polkadot: {
-    rang: 1,
-    ecosystem: 'polkadot',
-    hasValidators: true,
-    name: 'polkadot',
-    prettyName: 'Polkadot',
-    chainId: 'polkadot',
-    bech32Prefix: '',
-    coinDecimals: 10,
-    coinGeckoId: 'polkadot',
-    coinType: 354,
-    denom: 'DOT',
-    minimalDenom: 'planck',
-    logoUrl:
-      'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
-    nodes: [
-      {
-        type: 'ws',
-        url: 'wss://polkadot-asset-hub-rpc.polkadot.io', // Official Asset Hub endpoint
-      },
-      {
-        type: 'ws',
-        url: 'wss://pas-rpc.stakeworld.io', // Alternative Asset Hub endpoint
-      },
-    ],
-    mainRepo: 'https://github.com/paritytech/polkadot-sdk',
-    docs: 'https://docs.polkadot.com/',
-    githubUrl: 'https://github.com/paritytech',
-    twitterUrl: 'https://x.com/Polkadot',
-  },
-
-  'aztec-testnet': {
-    rang: 2,
-    ecosystem: 'ethereum',
-    hasValidators: true,
-    name: 'aztec-testnet',
-    prettyName: 'Aztec Testnet',
-    chainId: 'TESTNET',
-    bech32Prefix: '',
-    coinDecimals: 18,
-    coinGeckoId: '',
-    coinType: 60,
-    denom: 'STK',
-    minimalDenom: 'tst',
-    logoUrl:
-      'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
-    nodes: [
-      {
-        type: 'rpc',
-        url: 'https://rpc.aztec-testnet.citizenweb3.com/',
-      },
-    ],
-    mainRepo: 'https://github.com/AztecProtocol/aztec-packages',
-    docs: 'https://docs.aztec.network/',
-    githubUrl: 'https://github.com/AztecProtocol',
-    twitterUrl: 'https://x.com/aztecnetwork',
   },
 };
 

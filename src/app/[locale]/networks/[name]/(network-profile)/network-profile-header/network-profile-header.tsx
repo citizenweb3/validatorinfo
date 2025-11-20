@@ -26,6 +26,8 @@ const testnetDescriptions: Record<string, string> = {
   'neutron-testnet': 'neutron',
   'axone-testnet': 'axone',
   'quicksilver-testnet': 'quicksilver',
+  'ethereum-sepolia': 'ethereum',
+  'aztec-testnet': 'aztec',
 };
 
 const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
