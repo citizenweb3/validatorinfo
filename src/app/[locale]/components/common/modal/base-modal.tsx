@@ -1,6 +1,8 @@
 import { CSSProperties, FC, PropsWithChildren, useRef } from 'react';
 import { useOnClickOutside } from 'usehooks-ts';
 
+import CopyButton from '@/components/common/copy-button';
+
 interface OwnProps {
   ref?: any;
   title?: string;
@@ -11,21 +13,24 @@ interface OwnProps {
   hideClose?: boolean;
   style?: CSSProperties;
   maxHeight?: string;
+  copyText?: string;
 }
 
 const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
-    ref,
-    opened,
-    children,
-    onClose,
-    className = '',
-    isRelative = false,
-    title = '',
-    style,
-    hideClose = false,
-    maxHeight = 'max-h-[80vh]',
-  }) => {
-  const modalRef = ref || useRef(null);
+  ref,
+  opened,
+  children,
+  onClose,
+  className = '',
+  isRelative = false,
+  title = '',
+  style,
+  hideClose = false,
+  maxHeight = 'max-h-[80vh]',
+  copyText = '',
+}) => {
+  const internalRef = useRef(null);
+  const modalRef = ref || internalRef;
   useOnClickOutside(modalRef, () => onClose());
   return (
     <div ref={modalRef} className={`${opened ? 'block' : 'hidden'} ${isRelative ? 'relative' : ''}`}>
@@ -43,6 +48,11 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
           )}
           {title && <div className="ml-9 text-lg text-highlight">{title}</div>}
           <div className={`${maxHeight} overflow-y-auto overflow-x-hidden`}>{children}</div>
+          {copyText && (
+            <div className="justify-self-end">
+              <CopyButton value={copyText} size={'md'} />
+            </div>
+          )}
         </div>
       </div>
     </div>

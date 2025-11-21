@@ -28,11 +28,6 @@ export const networkProfileExample = {
       tooltip: '',
     },
     {
-      title: 'followers',
-      data: 90,
-      tooltip: '',
-    },
-    {
       title: 'members',
       data: 90,
       tooltip: '',

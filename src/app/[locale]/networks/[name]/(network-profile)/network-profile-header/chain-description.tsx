@@ -33,6 +33,7 @@ const ChainDescription: FC<OwnProps> = ({ text, readMoreLabel, className, minCha
         onClose={() => setOpen(false)}
         className="left-1/2 top-1/2 w-[min(90vw,48rem)] -translate-x-1/2 -translate-y-1/2 rounded-xl p-0"
         maxHeight="max-h-[80vh]"
+        copyText={full}
       >
         <p className="mx-8 my-6 whitespace-pre-wrap break-words">{full}</p>
       </BaseModal>

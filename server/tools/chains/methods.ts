@@ -18,6 +18,7 @@ import solanaChainMethods from '@/server/tools/chains/solana/methods';
 import spacePussyChainMethods from '@/server/tools/chains/space-pussy/methods';
 import strideChainMethods from '@/server/tools/chains/stride/methods';
 import symphonyChainMethods from '@/server/tools/chains/symphony-testnet/methods';
+import aztecChainMethods from '@/server/tools/chains/aztec/methods';
 
 const chainMethods: Record<string, ChainMethods> = {
   namada: namadaChainMethods,
@@ -46,6 +47,8 @@ const chainMethods: Record<string, ChainMethods> = {
 
   solana: solanaChainMethods,
   polkadot: polkadotChainMethods,
+  ethereum: ethereumChainMethods,
+  aztec: aztecChainMethods,
 
   'namada-testnet': namadaChainMethods,
   'neutron-testnet': neutronChainMethods,
@@ -56,6 +59,7 @@ const chainMethods: Record<string, ChainMethods> = {
   'quicksilver-testnet': quicksilverChainMethods,
   'axone-testnet': cosmosChainMethods,
   'symphony-testnet': symphonyChainMethods,
+  'aztec-testnet': aztecChainMethods,
 };
 
 const getChainMethods = (chainName: string): ChainMethods => {

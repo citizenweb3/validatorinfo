@@ -97,9 +97,7 @@ const runServer = async () => {
 
   const specialTasks = [
     { name: 'validatorInfo', schedule: timers.everyDay },
-    { name: 'slashing-infos', schedule: timers.everyHour },
-    { name: 'slashing-infos-namada', schedule: timers.every10mins },
-    { name: 'slashing-infos-solana', schedule: timers.every30mins },
+    { name: 'slashing-infos', schedule: timers.every10mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
     { name: 'update-nodes-rewards', schedule: timers.everyHour },
     { name: 'update-nodes-commissions', schedule: timers.everyHour },
@@ -113,6 +111,7 @@ const runServer = async () => {
     { name: 'match-chain-nodes', schedule: timers.everyDay },
     { name: 'check-nodes-health', schedule: timers.everyHour },
     { name: 'update-chain-rewards', schedule: timers.everyHour },
+    { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

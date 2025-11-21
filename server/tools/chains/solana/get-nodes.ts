@@ -5,6 +5,7 @@ import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
 import getIdentityByName from '@/server/tools/chains/solana/utils/get-identity-by-name';
 import { NodeResult } from '@/server/types';
 import isUrlValid from '@/server/utils/is-url-valid';
+import { jsonRpcClientWithFailover } from '@/server/utils/json-rpc-client';
 
 const { logError } = logger('sol-nodes');
 
@@ -21,25 +22,24 @@ interface ChainNode {
 
 const getSolanaNodes: GetNodesFunction = async (chain) => {
   try {
-    const response = await fetch('https://api.mainnet-beta.solana.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        jsonrpc: '2.0',
-        id: 1,
-        method: 'getVoteAccounts',
-        params: [],
-      }),
-    }).then((res) => res.json());
+    const rpcUrls = chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
+    if (!rpcUrls.length) {
+      throw new Error('No RPC URLs provided in chain object');
+    }
 
-    const voteAccounts: ChainNode[] = [...response.result.current, ...response.result.delinquent].filter(
+    const response = await jsonRpcClientWithFailover<{ current: ChainNode[]; delinquent: ChainNode[] }>(
+      rpcUrls,
+      'getVoteAccounts',
+      undefined,
+      'sol-nodes'
+    );
+
+    const voteAccounts: ChainNode[] = [...response.current, ...response.delinquent].filter(
       (acc) => acc.nodePubkey,
     );
 
     const apiUrl = 'https://www.validators.app/api/v1/validators/mainnet.json';
-    let apiData = [];
+    let apiData: any[] = [];
     try {
       const response = await fetch(apiUrl, {
         headers: {
@@ -47,13 +47,21 @@ const getSolanaNodes: GetNodesFunction = async (chain) => {
           Token: process.env.VALIDATORS_APP_TOKEN || '',
         },
       });
-      apiData = await response.json();
+      const jsonData = await response.json();
+
+      if (Array.isArray(jsonData)) {
+        apiData = jsonData;
+      } else if (jsonData && typeof jsonData === 'object' && Array.isArray(jsonData.validators)) {
+        apiData = jsonData.validators;
+      } else {
+        logError(`Unexpected validators.app response format: ${typeof jsonData}`);
+        apiData = [];
+      }
     } catch (apiError) {
       logError(`Failed to fetch data from Validators.app: ${apiUrl}`, apiError);
     }
 
     const nodes: NodeResult[] = [];
-    let count = voteAccounts.length;
     for (const vote of voteAccounts) {
       const apiValidator = apiData.find((v: any) => v.account === vote.nodePubkey) || {};
       let website = apiValidator.www_url || '';

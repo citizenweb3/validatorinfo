@@ -1,34 +1,44 @@
-import { FC } from 'react';
 import { Node } from '@prisma/client';
 import _ from 'lodash';
-import formatCash from '@/utils/format-cash';
-import Link from 'next/link';
-import Tooltip from '@/components/common/tooltip';
-import cutHash from '@/utils/cut-hash';
 import Image from 'next/image';
-import icons from '@/components/icons';
-import colorStylization from '@/utils/color-stylization';
-import CopyButton from '@/components/common/copy-button';
-import { ChainWithParams } from '@/services/chain-service';
+import Link from 'next/link';
+import { FC } from 'react';
 
+import CopyButton from '@/components/common/copy-button';
+import Tooltip from '@/components/common/tooltip';
+import icons from '@/components/icons';
+import { ChainWithParams } from '@/services/chain-service';
+import nodeConsensusService from '@/services/node-consensus-service';
+import colorStylization from '@/utils/color-stylization';
+import cutHash from '@/utils/cut-hash';
+import formatCash from '@/utils/format-cash';
 
 interface OwnProps {
   item: Node & { chain: ChainWithParams };
 }
 
-const NetworksListItem: FC<OwnProps> = ({ item }) => {
-  const tokenDelegatorShares = item.chain.params?.coinDecimals != null
-    ? Number(item.delegatorShares) / 10 ** item.chain.params?.coinDecimals
-    : undefined;
+const NetworksListItem: FC<OwnProps> = async ({ item }) => {
+  const tokenDelegatorShares =
+    item.chain.params?.coinDecimals != null
+      ? Number(item.delegatorShares) / 10 ** item.chain.params?.coinDecimals
+      : undefined;
 
   const validatorLink = item.validatorId
     ? `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`
     : '';
 
+  let totalSlots: number | null = null;
+
+  if (item.chain.name === 'aztec' || item.chain.name === 'aztec-testnet') {
+    const nodeConsensusData = await nodeConsensusService.getByAddress(item.operatorAddress);
+    totalSlots = nodeConsensusData ? nodeConsensusData.totalSlots : null;
+  }
+
+  const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
+
   return (
     <tr className="font-handjet">
-      <td
-        className="border-b border-black py-2 font-handjet text-lg active:border-bgSt hover:bg-bgHover hover:text-highlight">
+      <td className="border-b border-black py-2 font-handjet text-lg hover:bg-bgHover hover:text-highlight active:border-bgSt">
         <div className="flex">
           <Image
             src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon}
@@ -36,73 +46,67 @@ const NetworksListItem: FC<OwnProps> = ({ item }) => {
             width={20}
             height={20}
           />
-          <Tooltip tooltip={item.operatorAddress} className={'font-normal text-base'}>
-            <div className="ml-4">{
-              cutHash({ value: item.operatorAddress, cutLength: 10 })}
-            </div>
+          <Tooltip tooltip={item.operatorAddress} className={'text-base font-normal'}>
+            <div className="ml-4">{cutHash({ value: item.operatorAddress, cutLength: 10 })}</div>
           </Tooltip>
           <div className="pl-4">
             <CopyButton value={item.operatorAddress} />
           </div>
         </div>
       </td>
-      <td
-        className="w-[20%] border-b border-black py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
-        <div
-          className="text-center break-words break-all">{item.moniker && !item.moniker.startsWith('0x') ? item.moniker : '-'}</div>
+      <td className="w-[20%] border-b border-black py-2 font-sfpro text-base hover:bg-bgHover hover:text-highlight active:border-bgSt">
+        <div className="break-words break-all text-center">
+          {item.moniker && !item.moniker.startsWith('0x') ? item.moniker : '-'}
+        </div>
       </td>
-      <td
-        className="w-[20%] border-b border-black py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
+      <td className="w-[20%] border-b border-black py-2 font-sfpro text-base hover:bg-bgHover hover:text-highlight active:border-bgSt">
         <Link href={validatorLink}>
-          <div className="text-center break-words break-all">{item.validatorId ? item.moniker : '-'}</div>
+          <div className="break-words break-all text-center">{item.validatorId ? item.moniker : '-'}</div>
         </Link>
       </td>
-      <td
-        className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:bg-bgHover hover:text-highlight active:border-bgSt">
         <Link href={`/validators?p=1&ecosystems=${item.chain.ecosystem}`}>
           <div className="text-center">{_.capitalize(item.chain.ecosystem)}</div>
         </Link>
       </td>
-      <td
-        className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:bg-bgHover hover:text-highlight active:border-bgSt">
         <Link href={`/networks/${item.chain.name}/overview`}>
           <div className="text-center">{item.chain.prettyName}</div>
         </Link>
       </td>
-      <td
-        className="border-b border-black px-2 py-2 font-handjet text-lg active:border-bgSt hover:bg-bgHover hover:text-highlight">
+      <td className="border-b border-black px-2 py-2 font-handjet text-lg hover:bg-bgHover hover:text-highlight active:border-bgSt">
         <Tooltip tooltip={tokenDelegatorShares?.toLocaleString() ?? ''}>
-          <div className="text-center">
-            {tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}
-          </div>
+          <div className="text-center">{tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}</div>
         </Tooltip>
       </td>
-      <td
-        className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:bg-bgHover hover:text-highlight active:border-bgSt">
         {item.uptime !== undefined && item.uptime !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
+          <Tooltip
+            tooltip={`Per 
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'} 
+          `}
+          >
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}
             </div>
           </Tooltip>
         ) : (
-          <div className="text-center">
-            -
-          </div>
+          <div className="text-center">-</div>
         )}
       </td>
-      <td
-        className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt hover:bg-bgHover hover:text-highlight">
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:bg-bgHover hover:text-highlight active:border-bgSt">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
-            <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
-              {item.missedBlocks}
-            </div>
+          <Tooltip
+            tooltip={`Per 
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'} 
+          `}
+          >
+            <div className="text-center">{item.missedBlocks}</div>
           </Tooltip>
         ) : (
-          <div className="text-center">
-            -
-          </div>
+          <div className="text-center">-</div>
         )}
       </td>
     </tr>
