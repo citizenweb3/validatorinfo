@@ -4,7 +4,7 @@ import getMissedBlocks from '@/server/tools/chains/aztec/get-missed-blocks';
 import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
 import getSlashingParams from '@/server/tools/chains/aztec/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
-import getTvs from '@/server/tools/chains/ethereum/get-tvs';
+import getTvs from '@/server/tools/chains/aztec/get-tvs';
 
 const chainMethods: ChainMethods = {
   getNodes,

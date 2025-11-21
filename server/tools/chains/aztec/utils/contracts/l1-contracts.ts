@@ -12,6 +12,7 @@ export const aztecTestnet = {
   governanceProposerAddress: '0xef1b0d8aaca52f70323cbb91b0103bce75e9c533',
   governanceAddress: '0x1b5dad737609a548543ce32a71377900b5fd5584',
   gseAddress: '0xfb243b9112bb65785a4a8edaf32529accf003614',
+  tokenAddress: '0x139d2a7a0881e16332d7D1F8DB383A4507E1Ea7A',
 };
 
 export const aztecMainnet = {
@@ -27,4 +28,5 @@ export const aztecMainnet = {
   governanceProposerAddress: '0x06ef1dcf87e419c48b94a331b252819fadbd63ef',
   governanceAddress: '0x1102471eb3378fee427121c9efcea452e4b6b75e',
   gseAddress: '0xa92ecfd0e70c9cd5e5cd76c50af0f7da93567a4f',
+  tokenAddress: '0xA27EC0006e59f245217Ff08CD52A7E8b169E62D2',
 };

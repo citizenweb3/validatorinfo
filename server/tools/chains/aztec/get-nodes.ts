@@ -4,6 +4,7 @@ import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
 import { getChainParams } from '@/server/tools/chains/params';
 import { NodeResult } from '@/server/types.d';
 import { jsonRpcClientWithFailover } from '@/server/utils/json-rpc-client';
+import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config'
 
 const { logError, logWarn } = logger('aztec-nodes');
 
@@ -38,11 +39,6 @@ interface AztecValidatorStats {
   }>;
 }
 
-const getL1: Record<string, string> = {
-  'aztec-testnet': 'ethereum-sepolia',
-  aztec: 'ethereum',
-};
-
 export interface ValidatorsStatsResponse {
   stats: {
     [address: string]: AztecValidatorStats;
@@ -54,14 +50,14 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
     const aztecRpcUrls = chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
 
     if (!aztecRpcUrls.length) {
-      throw new Error('No Aztec RPC URLs provided in chain configuration');
+      throw new Error('No L2 RPC URLs provided in chain configuration');
     }
 
     const l1Chain = getChainParams(getL1[chain.name]);
     const l1RpcUrls = l1Chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
 
     if (!l1RpcUrls.length) {
-      logWarn('No Ethereum Sepolia RPC URLs found - stake data will not be available');
+      logError('No L1 RPC URLs found - stake data will not be available');
     }
 
     const response = await jsonRpcClientWithFailover<ValidatorsStatsResponse>(

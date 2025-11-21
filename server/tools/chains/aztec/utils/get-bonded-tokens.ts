@@ -5,25 +5,24 @@ import { readContractWithFailover } from '@/server/utils/viem-client-with-failov
 
 type AztecChainName = keyof typeof contracts;
 
-export const getNodeStake = async (attesterAddress: string, rpcUrls: string[], chainName: AztecChainName): Promise<bigint> => {
+export const getBondedTokens = async (rpcUrls: string[], chainName: AztecChainName): Promise<bigint> => {
   const contractAddress = contracts[chainName].gseAddress;
-  const instance = contracts[chainName].rollupAddress;
   const abi = gseAbis[chainName] as Abi;
 
   try {
-    const stake = await readContractWithFailover<bigint>(
+    const bondedTokens = await readContractWithFailover<bigint>(
       rpcUrls,
       {
         address: contractAddress as `0x${string}`,
         abi: abi,
-        functionName: 'effectiveBalanceOf',
-        args: [instance as `0x${string}`, attesterAddress as `0x${string}`],
+        functionName: 'totalSupply',
+        args: [],
       },
       `${chainName}-node-stake`,
     );
 
-    return stake;
+    return bondedTokens;
   } catch (e: any) {
-    throw new Error(`Failed to fetch stake for attester ${attesterAddress}: ${e.message}`);
+    throw new Error(`Failed to fetch total supply: ${e.message}`);
   }
 };
