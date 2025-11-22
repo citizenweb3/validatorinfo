@@ -87,6 +87,7 @@ const getNodesByChainId = async (chainId: number): Promise<Node[] | null> => {
 
 const getAll = async (
   ecosystems: string[],
+  networks: string[],
   nodeStatus: string[],
   skip: number,
   take: number,
@@ -99,7 +100,10 @@ const getAll = async (
 
   let chainFilter: Record<string, any> = {};
   if (ecosystems.length > 0) {
-    chainFilter = { ecosystem: { in: ecosystems } };
+    chainFilter.ecosystem = { in: ecosystems };
+  }
+  if (networks.length > 0) {
+    chainFilter.name = { in: networks };
   }
 
   const where: any = {};
