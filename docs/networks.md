@@ -1,4 +1,4 @@
-# Networks Supplies
+# Network Supplies
 
 ## Descriptions
 1) Althea
