@@ -10,6 +10,7 @@ export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { p
 export type NetworkValidatorsWithNodes = Node & {
   validator: {
     url: string | null;
+    moniker: string;
   } | null;
   chain: {
     params: {
@@ -100,6 +101,7 @@ const getChainValidatorsWithNodes = async (
         validator: {
           select: {
             url: true,
+            moniker: true,
           },
         },
         chain: {
@@ -151,6 +153,7 @@ const getChainValidatorsWithNodes = async (
         validator: {
           select: {
             url: true,
+            moniker: true,
           },
         },
         chain: {

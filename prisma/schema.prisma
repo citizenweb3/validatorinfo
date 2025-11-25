@@ -372,3 +372,21 @@ model NodesConsensusData {
 
   @@map("nodes_consensus_data")
 }
+
+model AztecAttesterEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  providerId      String   @map("provider_id") @db.VarChar(256)
+  providerAddress String?  @map("provider_address") @db.VarChar(256)
+  attesters       String[] @map("attesters")
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_attester_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_attester_event_chain_block_idx")
+  @@index([chainId, providerAddress], map: "aztec_attester_event_chain_provider_idx")
+  @@map("aztec_attester_events")
+}
