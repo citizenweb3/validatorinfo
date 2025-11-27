@@ -1,0 +1,50 @@
+multitenancy_enabled: false
+
+target: all
+
+server:
+  http_listen_port: 9009
+  grpc_listen_port: 9095
+  log_level: info
+
+common:
+  storage:
+    backend: filesystem
+    filesystem:
+      dir: /data/mimir
+
+blocks_storage:
+  backend: filesystem
+  filesystem:
+    dir: /data/mimir/blocks
+  tsdb:
+    dir: /data/mimir/tsdb
+    block_ranges_period:
+      - 2h
+
+compactor:
+  data_dir: /data/mimir/compactor
+  compaction_interval: 30m
+  retention_enabled: true
+  deletion_delay: 2h
+
+ingester:
+  ring:
+    replication_factor: 1
+
+ruler_storage:
+  backend: filesystem
+  filesystem:
+    dir: /data/mimir/rules
+
+limits:
+  ingestion_rate: 50000
+  ingestion_burst_size: 100000
+  max_global_series_per_user: 1000000
+  max_global_exemplars_per_user: 100000
+  compactor_blocks_retention_period: 30d
+
+alertmanager_storage:
+  backend: filesystem
+  filesystem:
+    dir: /data/mimir/alertmanager

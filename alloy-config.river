@@ -1,0 +1,160 @@
+// Grafana Alloy Configuration (River format)
+// Unified collector for Logs, Metrics, Traces, and Profiles
+
+// ============================================
+// OTLP Receivers (gRPC and HTTP)
+// ============================================
+
+otelcol.receiver.otlp "default" {
+  // gRPC receiver
+  grpc {
+    endpoint = "0.0.0.0:4317"
+  }
+
+  // HTTP receiver
+  http {
+    endpoint = "0.0.0.0:4318"
+  }
+
+  output {
+    metrics = [otelcol.processor.batch.default.input]
+    logs    = [otelcol.processor.batch.default.input]
+    traces  = [otelcol.processor.batch.default.input]
+  }
+}
+
+// ============================================
+// Batch Processor (for performance)
+// ============================================
+
+otelcol.processor.batch "default" {
+  timeout          = "5s"
+  send_batch_size  = 1024
+
+  output {
+    metrics = [otelcol.exporter.prometheus.mimir.input]
+    logs    = [otelcol.exporter.loki.default.input]
+    traces  = [otelcol.exporter.otlp.tempo.input]
+  }
+}
+
+// ============================================
+// Resource Processor (add common attributes)
+// ============================================
+
+otelcol.processor.resource "default" {
+  attributes {
+    key   = "deployment.environment"
+    value = env("ENVIRONMENT")
+    action = "upsert"
+  }
+
+  attributes {
+    key   = "service.instance.id"
+    value = env("HOSTNAME")
+    action = "upsert"
+  }
+
+  output {
+    metrics = [otelcol.processor.batch.default.input]
+    logs    = [otelcol.processor.batch.default.input]
+    traces  = [otelcol.processor.batch.default.input]
+  }
+}
+
+// ============================================
+// Exporters
+// ============================================
+
+// Export Logs to Loki
+otelcol.exporter.loki "default" {
+  forward_to = [loki.write.default.receiver]
+}
+
+loki.write "default" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+
+  external_labels = {
+    cluster = "validatorinfo",
+  }
+}
+
+// Export Metrics to Mimir (Prometheus)
+otelcol.exporter.prometheus "mimir" {
+  forward_to = [prometheus.remote_write.mimir.receiver]
+}
+
+prometheus.remote_write "mimir" {
+  endpoint {
+    url = "http://mimir:9009/api/v1/push"
+  }
+
+  external_labels = {
+    cluster = "validatorinfo",
+  }
+}
+
+// Export Traces to Tempo
+otelcol.exporter.otlp "tempo" {
+  client {
+    endpoint = "tempo:4317"
+    tls {
+      insecure = true
+    }
+  }
+}
+
+// ============================================
+// Pyroscope Integration
+// ============================================
+
+pyroscope.receive_http "default" {
+  http {
+    listen_address = "0.0.0.0"
+    listen_port    = 4040
+  }
+
+  forward_to = [pyroscope.write.default.receiver]
+}
+
+pyroscope.write "default" {
+  endpoint {
+    url = "http://pyroscope:4040"
+  }
+
+  external_labels = {
+    cluster = "validatorinfo",
+  }
+}
+
+// ============================================
+// Service Discovery (for auto-instrumentation)
+// ============================================
+
+discovery.docker "containers" {
+  host = "unix:///var/run/docker.sock"
+}
+
+// ============================================
+// Metrics Scraping (Self-monitoring)
+// ============================================
+
+prometheus.scrape "alloy" {
+  targets = [{
+    __address__ = "localhost:12345",
+    job         = "alloy",
+  }]
+
+  forward_to = [prometheus.remote_write.mimir.receiver]
+}
+
+// ============================================
+// Logging
+// ============================================
+
+logging {
+  level  = "info"
+  format = "json"
+}
