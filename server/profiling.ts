@@ -6,19 +6,11 @@ const pyroscopeConfig: Partial<PyroscopeConfig> = {
   serverAddress: process.env.PYROSCOPE_SERVER_URL || 'http://pyroscope:4040',
   appName: process.env.OTEL_SERVICE_NAME || 'validatorinfo',
   
-  // Enable all profiling types
-  wallProfileDuration: 10000, // 10 seconds
-  
   // Add environment tags
   tags: {
     environment: process.env.NODE_ENV || 'development',
     version: process.env.npm_package_version || '1.0.0',
   },
-  
-  // Correlation with OpenTelemetry traces
-  // This adds trace_id and span_id to profiles for correlation
-  // @ts-ignore - Pyroscope types may not include this yet
-  enableTraceCorrelation: true,
 };
 
 // Custom wrapper to correlate profiles with OpenTelemetry spans
@@ -70,7 +62,7 @@ export const stopProfiling = async () => {
 
 // Helper function to profile a specific function with OpenTelemetry correlation
 export const profileFunction = <T>(name: string, fn: () => T): T => {
-  return Pyroscope.wrapWithLabels({ function: name }, fn);
+  return Pyroscope.wrapWithLabels({ function: name }, fn) as T;
 };
 
 export default {

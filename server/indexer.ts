@@ -1,3 +1,4 @@
+import './instrumentation';
 import { CronJob } from 'cron';
 import { Worker } from 'worker_threads';
 

@@ -42,25 +42,7 @@ otelcol.processor.batch "default" {
 // Resource Processor (add common attributes)
 // ============================================
 
-otelcol.processor.resource "default" {
-  attributes {
-    key   = "deployment.environment"
-    value = env("ENVIRONMENT")
-    action = "upsert"
-  }
-
-  attributes {
-    key   = "service.instance.id"
-    value = env("HOSTNAME")
-    action = "upsert"
-  }
-
-  output {
-    metrics = [otelcol.processor.batch.default.input]
-    logs    = [otelcol.processor.batch.default.input]
-    traces  = [otelcol.processor.batch.default.input]
-  }
-}
+// Removed invalid component otelcol.processor.resource
 
 // ============================================
 // Exporters
