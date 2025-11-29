@@ -183,10 +183,11 @@ model Node {
   outstandingCommissions String?  @map("outstanding_commissions")
   delegatorsAmount       Int?     @map("delegators_amount")
 
-  chain      Chain       @relation("chain_validator_node", fields: [chainId], references: [id])
-  validator  Validator?  @relation("validator_node", fields: [validatorId], references: [id])
-  votes      NodeVote[]  @relation("node_vote_node")
-  chainNodes ChainNode[] @relation("chain_node_infrastructure")
+  chain         Chain                @relation("chain_validator_node", fields: [chainId], references: [id])
+  validator     Validator?           @relation("validator_node", fields: [validatorId], references: [id])
+  votes         NodeVote[]           @relation("node_vote_node")
+  chainNodes    ChainNode[]          @relation("chain_node_infrastructure")
+  consensusData NodesConsensusData? @relation("node_consensus_data")
 
   // calculated
   consensusAddress String @default("") @map("consensus_address")
@@ -275,20 +276,21 @@ model Proposal {
 }
 
 model Validator {
-  id              Int     @id @default(autoincrement())
-  identity        String  @unique
-  keybaseName     String? @map("keybase_name")
-  moniker         String
-  details         String?
-  website         String?
-  github          String?
-  telegram        String?
-  discord         String?
-  twitter         String?
-  securityContact String? @map("security_contact")
-  url             String?
-  wrongKey        Boolean @default(false) @map("wrong_key")
-  chainId         Int?    @map("chain_id")
+  id                Int     @id @default(autoincrement())
+  identity          String  @unique
+  keybaseName       String? @map("keybase_name")
+  moniker           String
+  details           String?
+  website           String?
+  github            String?
+  telegram          String?
+  discord           String?
+  twitter           String?
+  securityContact   String? @map("security_contact")
+  url               String?
+  wrongKey          Boolean @default(false) @map("wrong_key")
+  chainId           Int?    @map("chain_id")
+  providerAddresses Json?   @map("provider_addresses")
 
   chain Chain? @relation("chain_validators", fields: [chainId], references: [id])
   nodes Node[] @relation("validator_node")
@@ -369,6 +371,8 @@ model NodesConsensusData {
   missedSlotsAttestations  Int?    @map("missed_slots_attestations")
   lastAttestationTimestamp String? @map("last_attestation_timestamp")
   lastAttestationSlot      String? @map("last_attestation_slot")
+
+  node Node? @relation("node_consensus_data", fields: [nodeAddress], references: [operatorAddress])
 
   @@map("nodes_consensus_data")
 }

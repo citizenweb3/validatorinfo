@@ -35,7 +35,6 @@ import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
 import updateChainRewards from '@/server/jobs/update-chain-rewards';
 import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
-import updateAztecProvider from '@/server/jobs/update-aztec-provider';
 import syncAztecAttesterEvents from '@/server/jobs/sync-aztec-attester-events';
 
 const { taskName, chains } = workerData;
@@ -142,9 +141,6 @@ async function runTask() {
         break;
       case 'update-twitter-followers-amount':
         await updateTwitterFollowersAmount(chains);
-        break;
-      case 'update-aztec-providers':
-        await updateAztecProvider();
         break;
       case 'sync-aztec-attester-events':
         await syncAztecAttesterEvents();

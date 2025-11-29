@@ -13,7 +13,7 @@ interface OwnProps {
   item: NetworkValidatorsWithNodes;
 }
 
-const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
+const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
   const tokenDelegatorShares =
     item.chain.params?.coinDecimals != null ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals : undefined;
 
@@ -22,7 +22,11 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
       : undefined;
 
-  const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
+  const nodeLink = `/validators/${item.validatorId}/networks`;
+
+  const totalSlots = item.totalSlots;
+
+  const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
@@ -49,7 +53,7 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
-          <div className="text-center">{Math.trunc(Number(item.rate) * 100)}%</div>
+          <div className="text-center">{(Number(item.rate) * 100).toFixed(2)}%</div>
         </Link>
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
@@ -63,7 +67,12 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         {item.uptime !== undefined && item.uptime !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
+          <Tooltip
+            tooltip={`Per 
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'} 
+          `}
+          >
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}
             </div>
@@ -74,10 +83,13 @@ const NetworkValidatorsItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
-            <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
-              {item.missedBlocks}
-            </div>
+          <Tooltip
+            tooltip={`Per 
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'} 
+          `}
+          >
+            <div className="text-center">{item.missedBlocks}</div>
           </Tooltip>
         ) : (
           <div className="text-center">-</div>

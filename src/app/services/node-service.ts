@@ -1,4 +1,4 @@
-import { Chain, Node, Validator } from '@prisma/client';
+import { Chain, Node, NodesConsensusData, Validator } from '@prisma/client';
 
 import db from '@/db';
 import logger from '@/logger';
@@ -8,6 +8,11 @@ import isUrlValid from '@/server/utils/is-url-valid';
 import { ChainWithParams } from '@/services/chain-service';
 
 const { logDebug } = logger('validator-service');
+
+export type NodeWithChainAndConsensus = Node & {
+  chain: ChainWithParams;
+  consensusData: NodesConsensusData | null;
+};
 
 const upsertNode = async (
   chain: Chain,
@@ -93,7 +98,7 @@ const getAll = async (
   take: number,
   sortBy: string = 'operatorAddress',
   order: SortDirection = 'asc',
-): Promise<{ nodes: (Node & { chain: ChainWithParams })[]; pages: number }> => {
+): Promise<{ nodes: NodeWithChainAndConsensus[]; pages: number }> => {
   logDebug(
     `Get all nodes with ecosystems: ${ecosystems}, nodeStatus: ${nodeStatus}, skip: ${skip}, take: ${take}, sortBy: ${sortBy} - ${order}`,
   );
@@ -137,6 +142,7 @@ const getAll = async (
       chain: {
         include: { params: true },
       },
+      consensusData: true,
     },
   });
 

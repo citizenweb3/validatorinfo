@@ -23,6 +23,22 @@ export const getProviderAttesters = async (
     return new Map();
   }
 
+  let allProviders: Map<bigint, any>;
+  try {
+    allProviders = await getProviders(rpcUrls, chainName);
+    if (allProviders.size === 0) {
+      logError('No providers found');
+      return new Map();
+    }
+    logInfo(`Found ${allProviders.size} total providers`);
+  } catch (e: any) {
+    logError(`Failed to get providers: ${e.message}`);
+    return new Map();
+  }
+
+  const attesterToProvider = new Map<string, bigint>();
+  const providersWithCachedData = new Set<string>();
+
   try {
     const chainParams = getChainParams(chainName);
     const dbChain = await db.chain.findFirst({
@@ -36,12 +52,11 @@ export const getProviderAttesters = async (
       });
 
       if (events.length > 0) {
-        logInfo(`Found ${events.length} events in database, using cached data`);
-
-        const attesterToProvider = new Map<string, bigint>();
+        logInfo(`Found ${events.length} events in database, using cached data where available`);
 
         for (const event of events) {
           const providerId = BigInt(event.providerId);
+          providersWithCachedData.add(providerId.toString());
 
           for (const attester of event.attesters) {
             if (typeof attester === 'string' && attester.startsWith('0x')) {
@@ -51,15 +66,26 @@ export const getProviderAttesters = async (
           }
         }
 
-        logInfo(`Total: Mapped ${attesterToProvider.size} attesters to providers from database`);
-        return attesterToProvider;
+        logInfo(`Mapped ${attesterToProvider.size} attesters from cached data for ${providersWithCachedData.size} providers`);
       } else {
-        logError('No events found in database, falling back to blockchain query');
+        logInfo('No events found in database');
       }
     }
   } catch (e: any) {
-    logError(`Failed to read from database: ${e.message}, falling back to blockchain query`);
+    logError(`Failed to read from database: ${e.message}, will query all providers from blockchain`);
   }
+
+  const providersToQuery = Array.from(allProviders.entries()).filter(
+    ([providerId]) => !providersWithCachedData.has(providerId.toString()),
+  );
+
+  if (providersToQuery.length === 0) {
+    logInfo('All providers have cached data, no blockchain queries needed');
+    return attesterToProvider;
+  }
+
+  logInfo(`Need to query ${providersToQuery.length} providers from blockchain (missing from cache)`);
+
 
   const contractAddress = contracts[chainName].stakingRegistryAddress;
   const abi = stakingRegistryAbis[chainName] as Abi;
@@ -71,21 +97,9 @@ export const getProviderAttesters = async (
       loggerName: `${chainName}-provider-wallet-txs-events`,
     });
 
-    const providers = await getProviders(rpcUrls, chainName);
-
-    if (providers.size === 0) {
-      logError('No providers found');
-      return new Map();
-    }
-
-    logInfo(`Found ${providers.size} providers, querying transactions from their admin wallets`);
-
     const currentBlock = await client.getBlockNumber();
-    const attesterToProvider = new Map<string, bigint>();
 
-    const providerEntries = Array.from(providers.entries());
-
-    for (const [providerId, provider] of providerEntries) {
+    for (const [providerId, provider] of providersToQuery) {
       try {
         logInfo(`Fetching attesters for provider ${providerId} (${provider.providerAdmin})`);
 
