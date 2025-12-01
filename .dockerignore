@@ -1,10 +1,96 @@
+# Зависимости (будут установлены в образе)
 node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnp
+.pnp.js
+
+# Build outputs (будут созданы в образе)
+.next
+out
 dist
+build
 coverage
-.browserslistrc
+
+# Git
+.git
 .gitignore
-.prettierrc
-*.md
+.gitattributes
+
+# Docker
+Dockerfile
+Dockerfile.*
+.dockerignore
+docker-compose*.yml
+
+# IDE
+.vscode
+.idea
+.cursor
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs
+*.log.*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+.nyc_output
 cypress.json
 jest.config.js
-Dockerfile
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Временные файлы
+*.tmp
+*.temp
+.cache
+
+# Документация и markdown (не нужны в runtime)
+*.md
+docs
+README*
+CHANGELOG*
+LICENSE
+CLAUDE.md
+AI_CONTEXT.md
+ARCHITECTURE_*.md
+
+# Screenshots и изображения для документации
+*.png
+*.jpg
+*.jpeg
+*.gif
+!public/**/*.png
+!public/**/*.jpg
+!public/**/*.jpeg
+!public/**/*.gif
+
+# Makefile
+Makefile
+Makefile.example
+
+# Agent data
+.agent
+background-indexing-*.log
+
+# Config files
+.browserslistrc
+.prettierrc
+
+# Uploads (будут в volume)
+uploads

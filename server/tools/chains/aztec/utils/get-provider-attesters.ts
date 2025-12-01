@@ -1,6 +1,6 @@
 import { Abi, getAddress } from 'viem';
 
-import db from '@/db';
+import db, { eventsClient } from '@/db';
 import logger from '@/logger';
 import {
   AztecChainName,
@@ -39,6 +39,7 @@ export const getProviderAttesters = async (
   const attesterToProvider = new Map<string, bigint>();
   const providersWithCachedData = new Set<string>();
 
+  // Try to load cached events from events database with fallback to blockchain
   try {
     const chainParams = getChainParams(chainName);
     const dbChain = await db.chain.findFirst({
@@ -46,7 +47,7 @@ export const getProviderAttesters = async (
     });
 
     if (dbChain) {
-      const events = await db.aztecAttesterEvent.findMany({
+      const events = await eventsClient.aztecAttesterEvent.findMany({
         where: { chainId: dbChain.id },
         orderBy: { blockNumber: 'asc' },
       });
@@ -68,11 +69,12 @@ export const getProviderAttesters = async (
 
         logInfo(`Mapped ${attesterToProvider.size} attesters from cached data for ${providersWithCachedData.size} providers`);
       } else {
-        logInfo('No events found in database');
+        logWarn('No events found in database, querying all providers from blockchain');
       }
     }
   } catch (e: any) {
-    logError(`Failed to read from database: ${e.message}, will query all providers from blockchain`);
+    logError(`Events DB unavailable: ${e.message}, will query all providers from blockchain`);
+    // Fall through to blockchain query below
   }
 
   const providersToQuery = Array.from(allProviders.entries()).filter(

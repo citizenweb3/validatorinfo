@@ -1,6 +1,6 @@
 import { Abi } from 'viem';
 
-import db from '@/db';
+import db, { eventsClient } from '@/db';
 import logger from '@/logger';
 import {
   contracts,
@@ -50,10 +50,18 @@ const syncAztecAttesterEvents = async () => {
         loggerName: `${chainName}-attester-events-sync`,
       });
 
-      const lastEvent = await db.aztecAttesterEvent.findFirst({
-        where: { chainId: dbChain.id },
-        orderBy: { blockNumber: 'desc' },
-      });
+      // Try to get last synced event from events database with fallback
+      let lastEvent;
+      try {
+        lastEvent = await eventsClient.aztecAttesterEvent.findFirst({
+          where: { chainId: dbChain.id },
+          orderBy: { blockNumber: 'desc' },
+        });
+      } catch (error: any) {
+        logError(`${chainName}: Events DB unavailable - ${error.message}`);
+        logWarn(`${chainName}: Starting sync from deployment block (events DB inaccessible)`);
+        lastEvent = null;
+      }
 
       const startBlock = lastEvent ? BigInt(lastEvent.blockNumber) + BigInt(1) : deploymentBlock;
       const currentBlock = await client.getBlockNumber();
@@ -123,28 +131,37 @@ const syncAztecAttesterEvents = async () => {
               const args = event.args as { providerIdentifier: bigint; attesters: string[] };
               const block = await client.getBlock({ blockNumber: event.blockNumber! });
 
-              await db.aztecAttesterEvent.create({
-                data: {
-                  chainId: dbChain.id,
-                  blockNumber: event.blockNumber!.toString(),
-                  transactionHash: event.transactionHash!,
-                  logIndex: Number(event.logIndex!),
-                  providerId: args.providerIdentifier.toString(),
-                  providerAddress: provider.providerAdmin,
-                  attesters: args.attesters,
-                  timestamp: new Date(Number(block.timestamp) * 1000),
-                },
-              });
+              // Save event to events database with error handling
+              try {
+                await eventsClient.aztecAttesterEvent.create({
+                  data: {
+                    chainId: dbChain.id,
+                    blockNumber: event.blockNumber!.toString(),
+                    transactionHash: event.transactionHash!,
+                    logIndex: Number(event.logIndex!),
+                    providerId: args.providerIdentifier.toString(),
+                    providerAddress: provider.providerAdmin,
+                    attesters: args.attesters,
+                    timestamp: new Date(Number(block.timestamp) * 1000),
+                  },
+                });
 
-              newEvents++;
-              totalEvents++;
-            } catch (e: any) {
-              if (e.code === 'P2002') {
-                skippedEvents++;
+                newEvents++;
                 totalEvents++;
-              } else {
-                logError(`${chainName}: Failed to store event at block ${event.blockNumber}: ${e.message}`);
+              } catch (dbError: any) {
+                if (dbError.code === 'P2002') {
+                  // Duplicate event, skip
+                  skippedEvents++;
+                  totalEvents++;
+                } else {
+                  logError(
+                    `${chainName}: Failed to save event to events DB at block ${event.blockNumber}: ${dbError.message}`,
+                  );
+                  // Continue processing other events instead of crashing
+                }
               }
+            } catch (e: any) {
+              logError(`${chainName}: Failed to process event at block ${event.blockNumber}: ${e.message}`);
             }
           }
         } catch (e: any) {

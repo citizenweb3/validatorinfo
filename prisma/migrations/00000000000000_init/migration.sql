@@ -80,6 +80,7 @@ CREATE TABLE "chains" (
     "has_validators" BOOLEAN NOT NULL DEFAULT true,
     "wallets_amount" INTEGER,
     "description" TEXT,
+    "twitter_followers" INTEGER,
     "proposals_total" INTEGER NOT NULL DEFAULT 0,
     "proposals_live" INTEGER NOT NULL DEFAULT 0,
     "proposals_passed" INTEGER NOT NULL DEFAULT 0,
@@ -141,6 +142,7 @@ CREATE TABLE "nodes" (
     "min_self_delegation" VARCHAR(256) NOT NULL,
     "missed_blocks" INTEGER,
     "outstanding_rewards" TEXT,
+    "outstanding_commissions" TEXT,
     "delegators_amount" INTEGER,
     "consensus_address" TEXT NOT NULL DEFAULT '',
     "uptime" DOUBLE PRECISION,
@@ -225,6 +227,7 @@ CREATE TABLE "validators" (
     "url" TEXT,
     "wrong_key" BOOLEAN NOT NULL DEFAULT false,
     "chain_id" INTEGER,
+    "provider_addresses" JSONB,
 
     CONSTRAINT "validators_pkey" PRIMARY KEY ("id")
 );
@@ -274,6 +277,21 @@ CREATE TABLE "github_activities" (
     CONSTRAINT "github_activities_pkey" PRIMARY KEY ("id")
 );
 
+-- CreateTable
+CREATE TABLE "nodes_consensus_data" (
+    "id" SERIAL NOT NULL,
+    "node_address" TEXT NOT NULL,
+    "total_slots" INTEGER,
+    "total_slots_proposals" INTEGER,
+    "total_slots_attestations" INTEGER,
+    "missed_slots_proposals" INTEGER,
+    "missed_slots_attestations" INTEGER,
+    "last_attestation_timestamp" TEXT,
+    "last_attestation_slot" TEXT,
+
+    CONSTRAINT "nodes_consensus_data_pkey" PRIMARY KEY ("id")
+);
+
 -- CreateIndex
 CREATE UNIQUE INDEX "accounts_username_key" ON "accounts"("username");
 
@@ -312,6 +330,9 @@ CREATE UNIQUE INDEX "github_repositories_chain_id_full_name_key" ON "github_repo
 
 -- CreateIndex
 CREATE UNIQUE INDEX "repository_id_date" ON "github_activities"("repository_id", "date");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "nodes_consensus_data_node_address_key" ON "nodes_consensus_data"("node_address");
 
 -- AddForeignKey
 ALTER TABLE "addresses" ADD CONSTRAINT "addresses_chain_id_fkey" FOREIGN KEY ("chain_id") REFERENCES "chains"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
@@ -366,4 +387,7 @@ ALTER TABLE "github_repositories" ADD CONSTRAINT "github_repositories_chain_id_f
 
 -- AddForeignKey
 ALTER TABLE "github_activities" ADD CONSTRAINT "github_activities_repository_id_fkey" FOREIGN KEY ("repository_id") REFERENCES "github_repositories"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "nodes_consensus_data" ADD CONSTRAINT "nodes_consensus_data_node_address_fkey" FOREIGN KEY ("node_address") REFERENCES "nodes"("operator_address") ON DELETE RESTRICT ON UPDATE CASCADE;
 
