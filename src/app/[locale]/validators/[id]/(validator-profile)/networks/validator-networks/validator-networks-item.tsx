@@ -30,6 +30,10 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
+  const totalSlots = item.consensusData?.totalSlots;
+
+  const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
+
 
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
@@ -73,7 +77,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
         <Link href={nodeLink}>
-          <div className="text-center">{Math.trunc(Number(item.rate) * 100)}%</div>
+          <div className="text-center">{(Number(item.rate) * 100).toFixed(2)}%</div>
         </Link>
       </td>
       <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
@@ -86,8 +90,13 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        {item.uptime ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
+        {item.uptime !== undefined && item.uptime !== null ? (
+          <Tooltip
+            tooltip={`Per
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
+          `}
+          >
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}
             </div>
@@ -100,10 +109,13 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
-            <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
-              {item.missedBlocks}
-            </div>
+          <Tooltip
+            tooltip={`Per
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
+          `}
+          >
+            <div className="text-center">{item.missedBlocks}</div>
           </Tooltip>
         ) : (
           <div className="text-center">

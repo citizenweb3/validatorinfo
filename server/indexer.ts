@@ -10,6 +10,7 @@ const timers = {
   every10mins: '*/10 * * * *',
   every30mins: '*/30 * * * *',
   everyHour: '0 * * * *',
+  every6hours: '0 */6 * * *',
   everyDay: '0 0 * * *',
   in15MinEveryHour: '15 * * * *',
   in30MinEveryHour: '30 * * * *',
@@ -56,8 +57,9 @@ const runServer = async () => {
   }
 
   const tasks = [
+    { name: 'sync-aztec-attester-events', schedule: timers.everyHour },
     { name: 'prices', schedule: timers.every5mins },
-    { name: 'validators', schedule: timers.everyHour },
+    { name: 'validators', schedule: timers.every10mins },
     { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },

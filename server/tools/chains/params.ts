@@ -1,8 +1,9 @@
+import { logError } from 'effect/Effect';
+
 import logger from '@/logger';
 import { AddChainProps, ChainNodeType } from '@/server/tools/chains/chain-indexer';
-import fetchData from '@/server/utils/fetch-data';
 import fetchNamadaInfrastructure from '@/server/tools/chains/namada/get-infrastructure';
-import { logError } from 'effect/Effect';
+import fetchData from '@/server/utils/fetch-data';
 import { mergeNodes } from '@/server/utils/merge-nodes';
 
 interface APIItem {
@@ -1061,8 +1062,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 60,
     denom: 'AZTEC',
     minimalDenom: 'AZTEC',
-    logoUrl:
-      'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
     nodes: [
       {
         type: 'rpc',
@@ -1088,8 +1088,7 @@ const chainParams: Record<string, AddChainProps> = {
     coinType: 60,
     denom: 'STK',
     minimalDenom: 'tst',
-    logoUrl:
-      'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/aztec/Aztec_symbol.svg',
     nodes: [
       {
         type: 'rpc',
@@ -1120,20 +1119,21 @@ const chainParams: Record<string, AddChainProps> = {
     nodes: [
       {
         type: 'rest',
-        url: `https://eth-mainnetbeacon.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
-      },
-      {
-        type: 'rest',
         url: `https://beacon.ethereum.citizenweb3.com/${ethereumRpcKey}`,
       },
-      {
-        type: 'rpc',
-        url: `https://eth-mainnet.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
-      },
+      // {
+      //   type: 'rest',
+      //   url: `https://eth-mainnetbeacon.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
+      // },
+
       {
         type: 'rpc',
         url: `https://rpc.ethereum.citizenweb3.com/${ethereumRpcKey}`,
       },
+      // {
+      //   type: 'rpc',
+      //   url: `https://eth-mainnet.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
+      // },
     ],
     mainRepo: 'https://github.com/ethereum/go-ethereum',
     docs: 'https://ethereum.org/en/developers/docs/',

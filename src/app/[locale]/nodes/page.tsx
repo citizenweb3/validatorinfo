@@ -11,6 +11,7 @@ import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
+import chainService from '@/services/chain-service';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -36,11 +37,26 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
   const sortBy = (q.sortBy as 'operatorAddress') ?? 'operatorAddress';
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
+  const networks: string[] = !q.networks ? [] : typeof q.networks === 'string' ? [q.networks] : q.networks;
   const nodeStatus: string[] = !q.node_status
     ? []
     : typeof q.node_status === 'string'
       ? [q.node_status]
       : q.node_status;
+
+  const allChains = await chainService.getAllLight();
+
+  const networksDropdown = allChains
+    .filter((chain) => ecosystems.length === 0 || ecosystems.includes(chain.ecosystem))
+    .map((chain) => ({
+      value: chain.name,
+      title: chain.prettyName,
+    }));
+
+  const allowedEcosystems =
+    networks.length > 0
+      ? Array.from(new Set(allChains.filter((chain) => networks.includes(chain.name)).map((c) => c.ecosystem)))
+      : [];
 
   return (
     <div>
@@ -63,10 +79,13 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
       <Nodes
         page="NodesPage"
         ecosystems={ecosystems}
+        networks={networks}
         nodeStatus={nodeStatus}
         perPage={perPage}
         sort={{ sortBy, order }}
         currentPage={currentPage}
+        networksDropdown={networksDropdown}
+        allowedEcosystems={allowedEcosystems}
       />
     </div>
   );

@@ -95,7 +95,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
         )}
         <div className="mt-4">
           <RoundedButton
-            href={`/nodes?p=1&ecosystems=${chain?.ecosystem}`}
+            href={`/nodes?p=1&networks=${chain?.name}`}
             className="w-full font-handjet text-lg"
             contentClassName="px-20"
           >

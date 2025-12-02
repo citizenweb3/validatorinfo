@@ -10,14 +10,17 @@ export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { p
 export type NetworkValidatorsWithNodes = Node & {
   validator: {
     url: string | null;
+    moniker: string;
   } | null;
   chain: {
+    name: string;
     params: {
       coinDecimals: number;
       blocksWindow: number | null;
     } | null;
   };
   votingPower: number;
+  totalSlots: number | null;
 };
 
 const getAll = async (
@@ -93,93 +96,152 @@ const getChainValidatorsWithNodes = async (
     }
   }
 
-  if (sortBy === 'votingPower') {
-    const allValidators = await db.node.findMany({
-      where,
-      include: {
-        validator: {
-          select: {
-            url: true,
-          },
+  const allNodes = await db.node.findMany({
+    where,
+    include: {
+      validator: {
+        select: {
+          url: true,
+          moniker: true,
         },
-        chain: {
-          select: {
-            tokenomics: {
-              select: {
-                bondedTokens: true,
-              },
+      },
+      chain: {
+        select: {
+          name: true,
+          tokenomics: {
+            select: {
+              bondedTokens: true,
             },
-            params: {
-              select: {
-                coinDecimals: true,
-                blocksWindow: true,
-              },
+          },
+          params: {
+            select: {
+              coinDecimals: true,
+              blocksWindow: true,
             },
           },
         },
       },
-    });
-
-    const computedNodes = allValidators.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
-      const delegatorShares = parseFloat(node.delegatorShares || '0');
-      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
-      return { ...node, votingPower };
-    });
-
-    computedNodes.sort((a, b) => {
-      const aVal = a.votingPower;
-      const bVal = b.votingPower;
-      return order === 'asc' ? aVal - bVal : bVal - aVal;
-    });
-
-    const totalCount = computedNodes.length;
-    const pages = Math.ceil(totalCount / take);
-    const paginated = computedNodes.slice(skip, skip + take);
-
-    return { validators: paginated, pages };
-  } else {
-    const totalCount = await db.node.count({ where });
-    const pages = Math.ceil(totalCount / take);
-
-    const validators = await db.node.findMany({
-      where,
-      skip,
-      take,
-      orderBy: [{ jailed: 'asc' }, { [sortBy]: order }],
-      include: {
-        validator: {
-          select: {
-            url: true,
-          },
-        },
-        chain: {
-          select: {
-            tokenomics: {
-              select: {
-                bondedTokens: true,
-              },
-            },
-            params: {
-              select: {
-                coinDecimals: true,
-                blocksWindow: true,
-              },
-            },
-          },
+      consensusData: {
+        select: {
+          totalSlots: true,
         },
       },
-    });
+    },
+  });
 
-    const computedValidators = validators.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
-      const delegatorShares = parseFloat(node.delegatorShares || '0');
-      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
-      return { ...node, votingPower };
-    });
+  const validatorNodesMap = new Map<number, typeof allNodes>();
 
-    return { validators: computedValidators, pages };
+  for (const node of allNodes) {
+    if (!node.validatorId) continue;
+
+    if (!validatorNodesMap.has(node.validatorId)) {
+      validatorNodesMap.set(node.validatorId, []);
+    }
+    validatorNodesMap.get(node.validatorId)!.push(node);
   }
+
+  const chainName = allNodes[0]?.chain?.name;
+  const needsConsensusData = chainName && ['aztec', 'aztec-testnet', 'ethereum', 'ethereum-sepolia'].includes(chainName);
+
+  const aggregatedValidators = Array.from(validatorNodesMap.entries()).map(([validatorId, nodes]) => {
+    const firstNode = nodes[0];
+
+    const totalTokens = nodes.reduce((sum, node) => sum + BigInt(node.tokens), BigInt(0));
+    const totalDelegatorShares = nodes.reduce((sum, node) => sum + parseFloat(node.delegatorShares), 0);
+    const nodesWithMissedBlocks = nodes.filter(node => node.missedBlocks !== null && node.missedBlocks !== undefined);
+    const totalMissedBlocks = nodesWithMissedBlocks.length > 0
+      ? nodesWithMissedBlocks.reduce((sum, node) => sum + node.missedBlocks!, 0)
+      : null;
+    const totalOutstandingRewards = nodes.reduce((sum, node) => {
+      const rewards = node.outstandingRewards ? parseFloat(node.outstandingRewards) : 0;
+      return sum + rewards;
+    }, 0);
+    const totalOutstandingCommissions = nodes.reduce((sum, node) => {
+      const commissions = node.outstandingCommissions ? parseFloat(node.outstandingCommissions) : 0;
+      return sum + commissions;
+    }, 0);
+    const totalDelegatorsAmount = nodes.reduce((sum, node) => sum + (node.delegatorsAmount || 0), 0);
+
+    const nodesWithUptime = nodes.filter(node => node.uptime !== null && node.uptime !== undefined);
+    const avgUptime = nodesWithUptime.length > 0
+      ? nodesWithUptime.reduce((sum, node) => sum + node.uptime!, 0) / nodesWithUptime.length
+      : null;
+
+    const isJailed = nodes.some(node => node.jailed);
+
+    const bondedTokens = parseFloat(firstNode.chain?.tokenomics?.bondedTokens || '0');
+    const votingPower = bondedTokens !== 0 ? (totalDelegatorShares / bondedTokens) * 100 : 0;
+
+    let totalSlots: number | null = null;
+    if (needsConsensusData) {
+      let slotsSum = 0;
+      let hasSlots = false;
+
+      for (const node of nodes) {
+        const slots = node.consensusData?.totalSlots;
+        if (slots !== undefined && slots !== null) {
+          slotsSum += slots;
+          hasSlots = true;
+        }
+      }
+
+      totalSlots = hasSlots ? slotsSum : null;
+    }
+
+    return {
+      ...firstNode,
+      tokens: totalTokens.toString(),
+      delegatorShares: totalDelegatorShares.toString(),
+      missedBlocks: totalMissedBlocks,
+      outstandingRewards: totalOutstandingRewards > 0 ? totalOutstandingRewards.toString() : null,
+      outstandingCommissions: totalOutstandingCommissions > 0 ? totalOutstandingCommissions.toString() : null,
+      delegatorsAmount: totalDelegatorsAmount,
+      uptime: avgUptime,
+      jailed: isJailed,
+      votingPower,
+      totalSlots,
+    };
+  });
+
+  aggregatedValidators.sort((a, b) => {
+    if (a.jailed !== b.jailed) {
+      return a.jailed ? 1 : -1;
+    }
+
+    let aVal: any;
+    let bVal: any;
+
+    if (sortBy === 'votingPower') {
+      aVal = a.votingPower;
+      bVal = b.votingPower;
+    } else if (sortBy === 'tokens' || sortBy === 'delegatorShares') {
+      aVal = parseFloat(a[sortBy] || '0');
+      bVal = parseFloat(b[sortBy] || '0');
+    } else if (sortBy === 'missedBlocks' || sortBy === 'delegatorsAmount') {
+      aVal = a[sortBy] || 0;
+      bVal = b[sortBy] || 0;
+    } else if (sortBy === 'uptime') {
+      aVal = a.uptime || 0;
+      bVal = b.uptime || 0;
+    } else {
+      aVal = a[sortBy as keyof typeof a] || '';
+      bVal = b[sortBy as keyof typeof b] || '';
+    }
+
+    if (typeof aVal === 'string') {
+      return order === 'asc'
+        ? aVal.localeCompare(bVal)
+        : bVal.localeCompare(aVal);
+    }
+
+    return order === 'asc' ? aVal - bVal : bVal - aVal;
+  });
+
+  const totalCount = aggregatedValidators.length;
+  const pages = Math.ceil(totalCount / take);
+  const paginated = aggregatedValidators.slice(skip, skip + take);
+
+  return { validators: paginated, pages };
 };
 
 const getListByEcosystem = async (ecosystem: string) => {

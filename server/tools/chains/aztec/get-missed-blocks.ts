@@ -1,12 +1,14 @@
+import { getAddress } from 'viem';
+
 import logger from '@/logger';
+import { ValidatorsStatsResponse } from '@/server/tools/chains/aztec/get-nodes';
 import { GetMissedBlocks } from '@/server/tools/chains/chain-indexer';
 import { SlashingSigningInfos } from '@/server/types';
 import { jsonRpcClientWithFailover } from '@/server/utils/json-rpc-client';
-import { ValidatorsStatsResponse } from '@/server/tools/chains/aztec/get-nodes';
 
 const { logError, logInfo } = logger('aztec-missed-blocks');
 
-const getMissedBlocks: GetMissedBlocks = async (chain) => {
+const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
   try {
     const rpcUrls = chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
 
@@ -28,32 +30,33 @@ const getMissedBlocks: GetMissedBlocks = async (chain) => {
       return [];
     }
 
-    const validators = Object.values(response.stats);
+    const nodes = Object.values(response.stats);
 
-    if (!validators.length) {
+    if (!nodes.length) {
       logError('No validators found in response');
       return [];
     }
 
-    logInfo(`Processing ${validators.length} validators`);
+    logInfo(`Processing ${nodes.length} validators`);
 
     const slashingInfos: SlashingSigningInfos[] = [];
     let skippedCount = 0;
 
-    for (const validator of validators) {
-      if (validator.totalSlots === 0) {
+    for (const node of nodes) {
+      if (node.totalSlots === 0) {
         skippedCount++;
         continue;
       }
-      const missedProposals = validator.missedProposals.count ?? 0;
-      const missedAttestations = validator.missedAttestations.count ?? 0;
+
+      const missedProposals = node.missedProposals.count ?? 0;
+      const missedAttestations = node.missedAttestations.count ?? 0;
 
       const totalMissed = missedProposals + missedAttestations;
 
       slashingInfos.push({
-        address: validator.address,
+        address: getAddress(node.address),
         missed_blocks_counter: String(totalMissed),
-        total_slots: String(validator.totalSlots),
+        total_slots: String(node.totalSlots),
       });
     }
 

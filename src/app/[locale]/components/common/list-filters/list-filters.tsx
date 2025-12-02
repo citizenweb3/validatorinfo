@@ -12,15 +12,19 @@ import PlusButton from '@/components/common/plus-button';
 
 interface OwnProps {
   selectedEcosystems?: string[];
+  selectedNetworks?: string[];
   selectedNodeStatus?: string[];
   selectedSetPosition?: string[];
   selectedNetworkStage?: string[];
   perPage: number;
   isBattery?: boolean;
   isEcosystems?: boolean;
+  isNetworks?: boolean;
   isNodeStatus?: boolean;
   isSetPositions?: boolean;
   isNetworkStage?: boolean;
+  networksDropdown?: { value: string; title: string }[];
+  allowedEcosystems?: string[];
 }
 
 export const stages = [
@@ -65,14 +69,18 @@ export const checkHasActiveFilters = (searchParams: ReturnType<typeof useSearchP
 const ListFilters: FC<OwnProps> = ({
   perPage,
   selectedEcosystems = [],
+  selectedNetworks = [],
   selectedNodeStatus = [],
   selectedSetPosition = [],
   selectedNetworkStage = [],
   isBattery = false,
   isEcosystems = false,
+  isNetworks = false,
   isNodeStatus = false,
   isSetPositions = false,
   isNetworkStage = false,
+  networksDropdown = [],
+  allowedEcosystems = [],
 }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -156,16 +164,41 @@ const ListFilters: FC<OwnProps> = ({
     router.push(`${pathname}?${newSp.toString()}`);
   };
 
+  const onNetworksChanged = (value: string) => {
+    const newSp = new URL(location.href).searchParams;
+    newSp.delete('networks');
+    const networkParam =
+      selectedNetworks.indexOf(value) === -1
+        ? [...selectedNetworks, value]
+        : selectedNetworks.filter((n) => n !== value);
+    newSp.set('p', '1');
+    networkParam.forEach((n) => newSp.append('networks', n));
+    router.push(`${pathname}?${newSp.toString()}`);
+  };
+
+  const filteredEcosystemsDropdown =
+    allowedEcosystems.length > 0
+      ? ecosystemsDropdown.filter((eco) => allowedEcosystems.includes(eco.value))
+      : ecosystemsDropdown;
+
   return (
     <div className="flex h-8 items-center justify-end space-x-10">
       {isOpened && (
         <>
           {isEcosystems && (
             <Dropdown
-              filterValues={ecosystemsDropdown}
+              filterValues={filteredEcosystemsDropdown}
               title={t('Ecosystems')}
               selectedValue={selectedEcosystems}
               onChanged={onChainsChanged}
+            />
+          )}
+          {isNetworks && (
+            <Dropdown
+              filterValues={networksDropdown}
+              title={t('Networks')}
+              selectedValue={selectedNetworks}
+              onChanged={onNetworksChanged}
             />
           )}
           {isNodeStatus && (

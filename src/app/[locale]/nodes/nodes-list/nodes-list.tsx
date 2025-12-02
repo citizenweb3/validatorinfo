@@ -6,15 +6,17 @@ import NodesListItem from '@/app/nodes/nodes-list/nodes-list-item';
 
 interface OwnProps {
   ecosystems: string[];
+  networks: string[];
   nodeStatus: string[];
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const NodesList: FC<OwnProps> = async ({ sort, perPage, ecosystems, nodeStatus, currentPage = 1 }) => {
+const NodesList: FC<OwnProps> = async ({ sort, perPage, ecosystems, networks, nodeStatus, currentPage = 1 }) => {
   const { nodes: list, pages } = await NodeService.getAll(
     ecosystems,
+    networks,
     nodeStatus,
     perPage * (currentPage - 1),
     perPage,

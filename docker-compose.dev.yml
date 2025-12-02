@@ -17,6 +17,24 @@ services:
       timeout: 5s
       retries: 10
 
+  events-db:
+    image: postgres:14-bullseye
+    container_name: validatorinfo-events-db
+    environment:
+      POSTGRES_DB: ${EVENTS_POSTGRES_DB:-validatorinfo_events_db}
+      POSTGRES_USER: ${EVENTS_POSTGRES_USER:-validatorinfo_events_user}
+      POSTGRES_PASSWORD: ${EVENTS_POSTGRES_PASSWORD:-events_password}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_events_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${EVENTS_POSTGRES_USER:-validatorinfo_events_user} -d ${EVENTS_POSTGRES_DB:-validatorinfo_events_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
   redis:
     image: redis:latest
     ports:
@@ -28,24 +46,76 @@ services:
       timeout: 5s
       retries: 10
 
-  migrations:
+  main-migrations:
     build:
       context: .
-      dockerfile: Dockerfile.frontend
+      dockerfile: Dockerfile
+      target: migrations
     command: >
       sh -c "
+        echo 'Running main database migrations...' &&
         npx prisma migrate deploy &&
-        redis-cli -h redis flushall &&
-        npx tsx server/tools/init-chains.ts &&
-        npx prisma migrate dev
+        echo 'Generating main Prisma client...' &&
+        npx prisma generate
       "
     depends_on:
       db:
         condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      # Override with Docker-specific database connection
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
+    volumes:
+      - uploads_data:/app/uploads
+
+  events-migrations:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: migrations
+    command: >
+      sh -c "
+        echo 'Running events database migrations...' &&
+        npx prisma migrate deploy --schema=prisma/events/schema.prisma &&
+        echo 'Generating events Prisma client...' &&
+        npx prisma generate --schema=prisma/events/schema.prisma
+      "
+    depends_on:
+      events-db:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      # Override with Docker-specific database connection
+      EVENTS_DATABASE_URL: postgresql://${EVENTS_POSTGRES_USER:-validatorinfo_events_user}:${EVENTS_POSTGRES_PASSWORD:-events_password}@events-db:5432/${EVENTS_POSTGRES_DB:-validatorinfo_events_db}?schema=public
+    volumes:
+      - uploads_data:/app/uploads
+
+  init-chains:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: migrations
+    command: >
+      sh -c "
+        echo 'Flushing Redis and initializing chains...' &&
+        redis-cli -h redis flushall &&
+        npx tsx server/tools/init-chains.ts
+      "
+    depends_on:
+      main-migrations:
+        condition: service_completed_successfully
+      events-migrations:
+        condition: service_completed_successfully
       redis:
         condition: service_healthy
+    env_file:
+      - .env
     environment:
+      # Override with Docker-specific connections
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
+      EVENTS_DATABASE_URL: postgresql://${EVENTS_POSTGRES_USER:-validatorinfo_events_user}:${EVENTS_POSTGRES_PASSWORD:-events_password}@events-db:5432/${EVENTS_POSTGRES_DB:-validatorinfo_events_db}?schema=public
     volumes:
       - uploads_data:/app/uploads
 
@@ -68,16 +138,36 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: Dockerfile.frontend
+      dockerfile: Dockerfile
+      target: frontend
+      args:
+        DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
+        EVENTS_DATABASE_URL: postgresql://${EVENTS_POSTGRES_USER:-validatorinfo_events_user}:${EVENTS_POSTGRES_PASSWORD:-events_password}@events-db:5432/${EVENTS_POSTGRES_DB:-validatorinfo_events_db}?schema=public
     ports:
       - "3000:3000"
     depends_on:
-      migrations:
+      db:
+        condition: service_healthy
+      events-db:
+        condition: service_healthy
+      init-chains:
         condition: service_completed_successfully
       redis:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "sh", "-c", "pgrep -f 'node.*server.ts' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    env_file:
+      - .env
     environment:
+      # Override with Docker-specific connections
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
+      EVENTS_DATABASE_URL: postgresql://${EVENTS_POSTGRES_USER:-validatorinfo_events_user}:${EVENTS_POSTGRES_PASSWORD:-events_password}@events-db:5432/${EVENTS_POSTGRES_DB:-validatorinfo_events_db}?schema=public
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
       SERVER_PORT: "3000"
       PUBLIC_URL: ${PUBLIC_URL}
       # NODE_OPTIONS removed as instrumentation is imported in code
@@ -90,17 +180,31 @@ services:
   indexer:
     build:
       context: .
-      dockerfile: Dockerfile.indexer
+      dockerfile: Dockerfile
+      target: indexer
     ports:
       - "3001:3001"
     depends_on:
-      migrations:
+      db:
+        condition: service_healthy
+      events-db:
+        condition: service_healthy
+      init-chains:
         condition: service_completed_successfully
       redis:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "sh", "-c", "pgrep -f 'tsx.*indexer.ts' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    env_file:
+      - .env
     environment:
+      # Override with Docker-specific connections
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
-      INDEXER_PORT: "3001"
+      EVENTS_DATABASE_URL: postgresql://${EVENTS_POSTGRES_USER:-validatorinfo_events_user}:${EVENTS_POSTGRES_PASSWORD:-events_password}@events-db:5432/${EVENTS_POSTGRES_DB:-validatorinfo_events_db}?schema=public
       REDIS_HOST: redis
       REDIS_PORT: "6379"
       # NODE_OPTIONS removed as instrumentation is imported in code
@@ -112,4 +216,5 @@ services:
 
 volumes:
   postgres_data_dev:
+  postgres_events_data:
   uploads_data:
