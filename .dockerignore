@@ -1,4 +1,4 @@
-# Зависимости (будут установлены в образе)
+# Dependencies (will be installed in the image)
 node_modules
 npm-debug.log
 yarn-error.log
@@ -6,7 +6,7 @@ yarn-debug.log
 .pnp
 .pnp.js
 
-# Build outputs (будут созданы в образе)
+# Build outputs (will be created in the image)
 .next
 out
 dist
@@ -55,12 +55,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Временные файлы
+# Temporary files
 *.tmp
 *.temp
 .cache
 
-# Документация и markdown (не нужны в runtime)
+# Documentation and markdown (not needed in runtime)
 *.md
 docs
 README*
@@ -70,11 +70,11 @@ CLAUDE.md
 AI_CONTEXT.md
 ARCHITECTURE_*.md
 
-# Screenshots и изображения для документации
-*.png
-*.jpg
-*.jpeg
-*.gif
+# Screenshots and images for documentation
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
 !public/**/*.png
 !public/**/*.jpg
 !public/**/*.jpeg
@@ -92,5 +92,5 @@ background-indexing-*.log
 .browserslistrc
 .prettierrc
 
-# Uploads (будут в volume)
+# Uploads (will be in volume)
 uploads

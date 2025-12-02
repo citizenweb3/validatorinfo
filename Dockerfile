@@ -1,103 +1,105 @@
 # ==============================================
-# Stage 1: Dependencies - устанавливаем все зависимости один раз
+# Stage 1: Dependencies - install all dependencies once
+# Using Debian for compatibility with native modules
 # ==============================================
 FROM node:20 AS deps
 
 WORKDIR /app
 
-# Копируем только файлы зависимостей для лучшего кэширования
+# Copy only dependency files for better caching
 COPY package.json yarn.lock ./
 
-# Устанавливаем зависимости с retry и увеличенным таймаутом
-# --frozen-lockfile - не обновлять yarn.lock (детерминированная сборка)
-# --network-timeout - увеличенный таймаут для проблемных сетей
+# Install dependencies with retry and increased timeout
+# --frozen-lockfile - don't update yarn.lock (deterministic build)
+# --network-timeout - increased timeout for problematic networks
 RUN yarn install --frozen-lockfile --network-timeout 100000
 
-# ==============================================
-# Stage 2: Base - базовый образ с кодом и Prisma клиентами
-# ==============================================
-FROM node:20 AS base
+# Copy Prisma schemas and generate clients
+COPY prisma ./prisma
+RUN npx prisma generate && \
+    npx prisma generate --schema=prisma/events/schema.prisma
 
-# Устанавливаем redis-cli (нужен для всех сервисов)
-RUN apt-get update && \
-    apt-get install -y redis-tools && \
-    rm -rf /var/lib/apt/lists/*
+# ==============================================
+# Stage 2: Base - base image with code and Prisma clients
+# ==============================================
+FROM node:20-alpine AS base
+
+# Install redis-cli and other necessary tools
+# openssl - for Prisma
+# libc6-compat - for compatibility with some Node.js modules
+RUN apk add --no-cache redis openssl libc6-compat
 
 WORKDIR /app
 
-# Копируем node_modules из deps stage
+# Copy node_modules from deps stage (including Prisma clients)
 COPY --from=deps /app/node_modules ./node_modules
 
-# Копируем весь код проекта
+# Copy entire project code
 COPY . .
 
-# Генерируем Prisma клиенты (основной и events)
-RUN npx prisma generate
-RUN npx prisma generate --schema=prisma/events/schema.prisma
-
 # ==============================================
-# Stage 3: Builder - сборка Next.js приложения
+# Stage 3: Builder - build Next.js application
 # ==============================================
 FROM base AS builder
 
 WORKDIR /app
 
-# Принимаем DATABASE_URL как build аргументы
-# Нужны для сборки Next.js, т.к. API routes инициализируют Prisma
+# Accept DATABASE_URL as build arguments
+# Required for Next.js build, since API routes initialize Prisma
 ARG DATABASE_URL
 ARG EVENTS_DATABASE_URL
 
-# Устанавливаем как environment переменные для build процесса
+# Set as environment variables for build process
 ENV DATABASE_URL=${DATABASE_URL}
 ENV EVENTS_DATABASE_URL=${EVENTS_DATABASE_URL}
 
-# Собираем Next.js приложение
+# Build Next.js application
 RUN yarn build
 
 # ==============================================
-# Stage 4: Migrations - образ для миграций БД
+# Stage 4: Migrations - image for database migrations
 # ==============================================
 FROM base AS migrations
 
 WORKDIR /app
 
-# Создаём папку uploads
+# Create uploads directory
 RUN mkdir -p /app/uploads
 
-# Команда будет переопределена в docker-compose.yml
+# Command will be overridden in docker-compose.yml
 CMD ["echo", "Migrations service ready"]
 
 # ==============================================
-# Stage 5: Frontend - production образ для Next.js
+# Stage 5: Frontend - production image for Next.js
 # ==============================================
 FROM base AS frontend
 
 WORKDIR /app
 
-# Копируем собранное приложение из builder stage
+# Copy built application from builder stage
 COPY --from=builder /app/.next ./.next
 
-# Создаём папку uploads
+# Create uploads directory
 RUN mkdir -p /app/uploads
 
-# Указываем порт
+# Expose port
 EXPOSE 3000
 
-# Запускаем production сервер
+# Start production server
 CMD ["yarn", "start"]
 
 # ==============================================
-# Stage 6: Indexer - образ для background jobs
+# Stage 6: Indexer - image for background jobs
 # ==============================================
 FROM base AS indexer
 
 WORKDIR /app
 
-# Создаём папку uploads
+# Create uploads directory
 RUN mkdir -p /app/uploads
 
-# Указываем порт
+# Expose port
 EXPOSE 3001
 
-# Точка входа с flushall и запуском индексера
-ENTRYPOINT ["sh", "-c", "redis-cli -h redis flushall && exec npx tsx server/indexer.ts"]
+# Start indexer (flushall moved to init-chains)
+CMD ["npx", "tsx", "server/indexer.ts"]

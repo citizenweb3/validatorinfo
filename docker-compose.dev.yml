@@ -98,7 +98,7 @@ services:
       target: migrations
     command: >
       sh -c "
-        echo 'Initializing chains in Redis...' &&
+        echo 'Flushing Redis and initializing chains...' &&
         redis-cli -h redis flushall &&
         npx tsx server/tools/init-chains.ts
       "
@@ -129,10 +129,20 @@ services:
     ports:
       - "3000:3000"
     depends_on:
+      db:
+        condition: service_healthy
+      events-db:
+        condition: service_healthy
       init-chains:
         condition: service_completed_successfully
       redis:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "sh", "-c", "pgrep -f 'node.*server.ts' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
     env_file:
       - .env
     environment:
@@ -152,10 +162,20 @@ services:
     ports:
       - "3001:3001"
     depends_on:
+      db:
+        condition: service_healthy
+      events-db:
+        condition: service_healthy
       init-chains:
         condition: service_completed_successfully
       redis:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "sh", "-c", "pgrep -f 'tsx.*indexer.ts' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
     env_file:
       - .env
     environment:
