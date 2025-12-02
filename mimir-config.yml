@@ -25,7 +25,6 @@ blocks_storage:
 compactor:
   data_dir: /data/mimir/compactor
   compaction_interval: 30m
-  retention_enabled: true
   deletion_delay: 2h
 
 ingester:

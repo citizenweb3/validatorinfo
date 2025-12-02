@@ -146,7 +146,6 @@ services:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_AUTH_DISABLE_LOGIN_FORM=false
       - GF_FEATURE_TOGGLES_ENABLE=traceqlEditor,traceToMetrics,traceToLogs,correlations
-      - GF_INSTALL_PLUGINS=grafana-pyroscope-datasource
     volumes:
       - ./grafana/provisioning:/etc/grafana/provisioning
       - grafana_data:/var/lib/grafana
