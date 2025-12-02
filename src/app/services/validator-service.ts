@@ -1,4 +1,4 @@
-import { Node, Prisma, Validator } from '@prisma/client';
+import { Node, NodesConsensusData, Prisma, Validator } from '@prisma/client';
 
 import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import db from '@/db';
@@ -15,6 +15,7 @@ export type ValidatorWithNodes = Validator & {
 export type validatorNodesWithChainData = Node & {
   chain: ChainWithParamsAndTokenomics;
   votingPower: number;
+  consensusData: NodesConsensusData | null;
 };
 
 const getById = async (id: number): Promise<Validator | null> => {
@@ -165,7 +166,7 @@ const getValidatorNodesWithChains = async (
   validatorNodesWithChainData: validatorNodesWithChainData[];
   pages: number;
 }> => {
-  const where: any = { validatorId: id };
+  const where: any = { validatorId: id, NOT: { tokens: '0' } };
   if (ecosystems.length > 0) {
     where.chain = { ecosystem: { in: ecosystems } };
   }
@@ -187,6 +188,7 @@ const getValidatorNodesWithChains = async (
             params: true,
           },
         },
+        consensusData: true,
       },
     });
 
@@ -234,6 +236,7 @@ const getValidatorNodesWithChains = async (
             params: true,
           },
         },
+        consensusData: true,
       },
     });
 

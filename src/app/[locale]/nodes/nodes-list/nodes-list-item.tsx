@@ -1,4 +1,3 @@
-import { Node } from '@prisma/client';
 import _ from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,14 +6,13 @@ import { FC } from 'react';
 import CopyButton from '@/components/common/copy-button';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
-import { ChainWithParams } from '@/services/chain-service';
-import nodeConsensusService from '@/services/node-consensus-service';
+import { NodeWithChainAndConsensus } from '@/services/node-service';
 import colorStylization from '@/utils/color-stylization';
 import cutHash from '@/utils/cut-hash';
 import formatCash from '@/utils/format-cash';
 
 interface OwnProps {
-  item: Node & { chain: ChainWithParams };
+  item: NodeWithChainAndConsensus;
 }
 
 const NetworksListItem: FC<OwnProps> = async ({ item }) => {
@@ -24,15 +22,10 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
       : undefined;
 
   const validatorLink = item.validatorId
-    ? `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`
+    ? `/validators/${item.validatorId}/networks`
     : '';
 
-  let totalSlots: number | null = null;
-
-  if (item.chain.name === 'aztec' || item.chain.name === 'aztec-testnet') {
-    const nodeConsensusData = await nodeConsensusService.getByAddress(item.operatorAddress);
-    totalSlots = nodeConsensusData ? nodeConsensusData.totalSlots : null;
-  }
+  const totalSlots = item.consensusData?.totalSlots ?? null;
 
   const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
 

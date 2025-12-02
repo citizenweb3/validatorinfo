@@ -46,8 +46,12 @@ export const getSlashingConfig = (ecosystem: string): SlashingConfig => {
 };
 
 const CHAIN_SPECIFIC_OVERRIDES: Record<string, SlashingConfig> = {
+  'aztec': {
+    addressField: 'operatorAddress',
+    uptimeCalculation: 'per-validator-slots',
+  },
   'aztec-testnet': {
-    addressField: 'consensusPubkey',
+    addressField: 'operatorAddress',
     uptimeCalculation: 'per-validator-slots',
   },
 };

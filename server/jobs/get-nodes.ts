@@ -5,6 +5,7 @@ import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
 import nodeService from '@/services/node-service';
 import validatorService from '@/services/validator-service';
+import { findOrCreateAztecValidator } from '@/server/tools/chains/aztec/find-or-create-aztec-validator';
 
 const { logError } = logger('get-nodes');
 
@@ -42,23 +43,39 @@ const getNodes = async (chainNames: string[]) => {
             }
             validatorId = validator.id;
           } else {
-            const orWhere = [];
-            if (node.description.security_contact) {
-              orWhere.push({ securityContact: node.description.security_contact });
-            }
-            if (node.description.website) {
-              orWhere.push({ website: node.description.website });
-            }
-            if (node.description.moniker) {
-              orWhere.push({ moniker: node.description.moniker });
-            }
-            if (orWhere.length > 0) {
-              let validator = await db.validator.findFirst({
-                where: {
-                  OR: orWhere,
-                },
-              });
-              validatorId = validator?.id;
+            if (chainName === 'aztec' || chainName === 'aztec-testnet') {
+              try {
+                const validator = await findOrCreateAztecValidator({
+                  providerAdmin: node.description.identity,
+                  moniker: node.description.moniker,
+                  website: node.description.website,
+                  securityContact: node.description.security_contact,
+                  details: node.description.details,
+                  chainName: chainName,
+                });
+                validatorId = validator.id;
+              } catch (e: any) {
+                logError(`Failed to create Aztec validator for ${node.description.moniker}: ${e.message}`);
+              }
+            } else {
+              const orWhere = [];
+              if (node.description.security_contact) {
+                orWhere.push({ securityContact: node.description.security_contact });
+              }
+              if (node.description.website) {
+                orWhere.push({ website: node.description.website });
+              }
+              if (node.description.moniker) {
+                orWhere.push({ moniker: node.description.moniker });
+              }
+              if (orWhere.length > 0) {
+                let validator = await db.validator.findFirst({
+                  where: {
+                    OR: orWhere,
+                  },
+                });
+                validatorId = validator?.id;
+              }
             }
           }
 

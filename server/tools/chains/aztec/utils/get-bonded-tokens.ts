@@ -1,9 +1,7 @@
 import { Abi } from 'viem';
 
-import { contracts, gseAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { AztecChainName, contracts, gseAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { readContractWithFailover } from '@/server/utils/viem-client-with-failover';
-
-type AztecChainName = keyof typeof contracts;
 
 export const getBondedTokens = async (rpcUrls: string[], chainName: AztecChainName): Promise<bigint> => {
   const contractAddress = contracts[chainName].gseAddress;

@@ -104,16 +104,25 @@ const updateSlashingInfos = async (chainNames: string[]) => {
 
         if (updateResult.count === 0) {
           logWarn(`${chainParams.chainId}: No node found with ${slashingConfig.addressField} = ${info.address}`);
-        } else {
-          totalValidatorsUpdated += updateResult.count;
+          continue;
         }
 
-        if (totalSlots) {
-          await db.nodesConsensusData.upsert({
-            where: { nodeAddress: info.address },
-            update: { totalSlots: totalSlots },
-            create: { nodeAddress: info.address, totalSlots: totalSlots },
-          });
+        totalValidatorsUpdated += updateResult.count;
+
+        if (totalSlots !== undefined && totalSlots !== null) {
+          if (totalSlots > 0) {
+            // Valid slots: upsert the record
+            await db.nodesConsensusData.upsert({
+              where: { nodeAddress: info.address },
+              update: { totalSlots: totalSlots },
+              create: { nodeAddress: info.address, totalSlots: totalSlots },
+            });
+          } else {
+            await db.nodesConsensusData.deleteMany({
+              where: { nodeAddress: info.address },
+            });
+            logInfo(`${chainParams.chainId}: Deleted consensus data for ${info.address} (totalSlots = 0)`);
+          }
         }
       }
 
