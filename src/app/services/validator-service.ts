@@ -332,6 +332,36 @@ const getByIdentityWithDetails = async (identity: string) => {
   });
 };
 
+const getActiveValidatorsByChainId = async (chainId: number): Promise<ValidatorWithNodes[]> => {
+  logDebug(`Get active validators by chainId: ${chainId}`);
+
+  const validators = await db.validator.findMany({
+    where: {
+      nodes: {
+        some: {
+          chainId,
+          jailed: false,
+        },
+      },
+    },
+    include: {
+      nodes: {
+        where: { chainId },
+        include: { chain: true },
+      },
+    },
+    orderBy: { moniker: 'asc' },
+  });
+
+  return validators.filter((validator) =>
+    validator.nodes.some(
+      (node) =>
+        (node.tokens != null && node.tokens !== '0' && node.tokens !== '') ||
+        (node.delegatorShares != null && node.delegatorShares !== '0' && node.delegatorShares !== ''),
+    ),
+  ) as ValidatorWithNodes[];
+};
+
 const validatorService = {
   getByIdentity,
   getById,
@@ -343,6 +373,7 @@ const validatorService = {
   upsertValidator,
   getRandom,
   getByIdentityWithDetails,
+  getActiveValidatorsByChainId,
 };
 
 export default validatorService;
