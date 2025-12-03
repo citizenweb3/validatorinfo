@@ -4,6 +4,7 @@ import { ChainWithParams } from '@/services/chain-service';
 import { Prisma } from '.prisma/client';
 
 import ProposalCreateInput = Prisma.ProposalCreateInput;
+import { Chain } from '@prisma/client';
 
 export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
 
@@ -106,6 +107,12 @@ export interface DelegatorsAmount {
   amount: number;
 }
 
+export interface ChainUptime {
+  lastUptimeUpdated: Date;
+  uptimeHeight: number;
+  avgTxInterval: number;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -132,6 +139,7 @@ export type GetCirculatingTokensOnchain = (
 export type GetCirculatingTokensPublic = (chain: AddChainProps) => Promise<string | null>;
 export type GetDelegatorsAmount = (chain: AddChainProps) => Promise<DelegatorsAmount[]>;
 export type GetUnbondingTokens = (chain: AddChainProps) => Promise<string | null>;
+export type GetChainUptime = (dbChain: Chain) => Promise<ChainUptime | null>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -155,4 +163,5 @@ export interface ChainMethods {
   getCirculatingTokensPublic: GetCirculatingTokensPublic;
   getDelegatorsAmount: GetDelegatorsAmount;
   getUnbondingTokens: GetUnbondingTokens;
+  getChainUptime: GetChainUptime;
 }

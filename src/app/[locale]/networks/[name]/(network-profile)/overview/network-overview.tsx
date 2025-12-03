@@ -39,14 +39,16 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
       )}
-      <div className="mt-2 flex w-full hover:bg-bgHover">
-        <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
-          {t('unbonding time')}
+      {chain?.params?.unbondingTime && (
+        <div className="mt-2 flex w-full hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('unbonding time')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {chain?.params?.unbondingTime ?? '-'}s
+          </div>
         </div>
-        <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-          {chain?.params?.unbondingTime ?? '-'}s
-        </div>
-      </div>
+      )}
       {chain?.params?.communityTax !== null && chain?.params?.communityTax !== undefined && (
         <div className="mt-2 flex w-full hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
