@@ -7,7 +7,7 @@ import Tooltip from '@/components/common/tooltip';
 import GiniCoefficientSVG from '@/components/customSVG/giniCoefficient';
 import TokenDistributionSVG from '@/components/customSVG/tokenDistribution';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
-import nodeService from '@/services/node-service';
+import validatorService from '@/services/validator-service';
 import formatCash from '@/utils/format-cash';
 
 interface OwnProps {
@@ -17,8 +17,7 @@ interface OwnProps {
 const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkTokenomics');
 
-  const nodes = await nodeService.getNodesByChainId(chain?.id ?? 1);
-
+  const totalValidators = chain ? await validatorService.getValidatorsByChainId(chain?.id) : undefined;
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain.id) : null;
   const fdv = chain?.name === 'ethereum-sepolia' || chain?.name === 'warden-testnet' ? 0 : chain?.tokenomics?.fdv;
 
@@ -57,7 +56,7 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
             <GiniCoefficientSVG value={69} />
             <div className="ml-4 flex flex-col justify-center">
               <div className="font-sfpro text-base">{t('number of validators')}</div>
-              <div className="font-handjet text-lg text-highlight">{nodes?.length ?? '234'}</div>
+              <div className="font-handjet text-lg text-highlight">{totalValidators?.length ?? 'N/A'}</div>
             </div>
           </div>
         </div>

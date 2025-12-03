@@ -72,16 +72,16 @@ const getAll = async (
   );
   const where = ecosystems.length
     ? {
-      nodes: {
-        some: {
-          chain: {
-            ecosystem: {
-              in: ecosystems,
+        nodes: {
+          some: {
+            chain: {
+              ecosystem: {
+                in: ecosystems,
+              },
             },
           },
         },
-      },
-    }
+      }
     : undefined;
   const validators = (await db.validator.findMany({
     where,
@@ -91,10 +91,10 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-          nodes: {
-            _count: order,
+            nodes: {
+              _count: order,
+            },
           },
-        },
   })) as Validator[];
 
   const validatorsWithNodes = (await db.validator.findMany({
@@ -106,10 +106,10 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-          nodes: {
-            _count: order,
+            nodes: {
+              _count: order,
+            },
           },
-        },
   })) as ValidatorWithNodes[];
 
   const count = await db.validator.count({ where });
@@ -199,16 +199,13 @@ const getValidatorNodesWithChains = async (
       return { ...node, votingPower };
     });
 
-    computedNodes.sort((a, b) => order === 'asc'
-      ? a.votingPower - b.votingPower
-      : b.votingPower - a.votingPower);
+    computedNodes.sort((a, b) => (order === 'asc' ? a.votingPower - b.votingPower : b.votingPower - a.votingPower));
 
     const totalCount = computedNodes.length;
     const pages = Math.ceil(totalCount / take);
     const paginatedNodes = computedNodes.slice(skip, skip + take);
 
     return { validatorNodesWithChainData: paginatedNodes, pages };
-
   } else {
     const totalCount = await db.node.count({ where });
     const pages = Math.ceil(totalCount / take);
@@ -255,20 +252,20 @@ const getRandom = async (ecosystems: string[], take: number): Promise<{ validato
   logDebug(`Get random validators ecosystems: ${ecosystems}, take: ${take}`);
 
   const sql = Prisma.sql`
-    SELECT v.id, COALESCE(json_agg(n.*) FILTER(WHERE n.id IS NOT NULL), '[]'::json) AS nodes
-    FROM "validators" v
-    LEFT JOIN "nodes" n ON v.id = n.validator_id
-    ${
-      ecosystems.length
-        ? Prisma.sql`
+      SELECT v.id, COALESCE(json_agg(n.*) FILTER(WHERE n.id IS NOT NULL), '[]'::json) AS nodes
+      FROM "validators" v
+               LEFT JOIN "nodes" n ON v.id = n.validator_id
+          ${
+            ecosystems.length
+              ? Prisma.sql`
       LEFT JOIN "chains" c ON n.chain_id = c.id
       WHERE c.ecosystem IN (${Prisma.join(ecosystems)})`
-        : Prisma.sql``
-    }
-    GROUP BY v.id
-    ORDER BY RANDOM()
-    LIMIT ${Prisma.raw(`${take}`)}
-    `;
+              : Prisma.sql``
+          }
+      GROUP BY v.id
+      ORDER BY RANDOM()
+          LIMIT ${Prisma.raw(`${take}`)}
+  `;
 
   const validatorIds = await db.$queryRaw<{ id: number }[]>(sql);
 
@@ -362,6 +359,26 @@ const getActiveValidatorsByChainId = async (chainId: number): Promise<ValidatorW
   ) as ValidatorWithNodes[];
 };
 
+const getValidatorsByChainId = async (chainId: number): Promise<ValidatorWithNodes[]> => {
+  logDebug(`Get validators by chainId: ${chainId}`);
+  return db.validator.findMany({
+    where: {
+      nodes: {
+        some: {
+          chainId,
+        },
+      },
+    },
+    include: {
+      nodes: {
+        where: { chainId },
+        include: { chain: true },
+      },
+    },
+    orderBy: { moniker: 'asc' },
+  });
+};
+
 const validatorService = {
   getByIdentity,
   getById,
@@ -374,6 +391,7 @@ const validatorService = {
   getRandom,
   getByIdentityWithDetails,
   getActiveValidatorsByChainId,
+  getValidatorsByChainId
 };
 
 export default validatorService;
