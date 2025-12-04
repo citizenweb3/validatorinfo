@@ -1,5 +1,4 @@
 import { Node } from '@prisma/client';
-import _ from 'lodash';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,20 +19,9 @@ interface OwnProps {
   locale: string;
 }
 
-const testnetDescriptions: Record<string, string> = {
-  'cosmoshub-testnet': 'cosmoshub',
-  'namada-testnet': 'namada',
-  'neutron-testnet': 'neutron',
-  'axone-testnet': 'axone',
-  'quicksilver-testnet': 'quicksilver',
-  'ethereum-sepolia': 'ethereum',
-  'aztec-testnet': 'aztec',
-};
-
 const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkProfileHeader' });
-  const effectiveChainName = testnetDescriptions[chainName] || chainName;
-  const chain = await chainService.getByName(effectiveChainName);
+  const chain = await chainService.getByName(chainName);
   const chainLogo = chain?.logoUrl ?? icons.AvatarIcon;
   const chainHealth = 40;
 
@@ -44,12 +32,24 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
   const centerLogoSizes =
     'sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] 2xl:w-[124px] 2xl:h-[124px]';
 
+  const getTagHref = (tag: string): string => {
+    if (tag.endsWith(' Ecosystem')) {
+      const ecosystemName = tag.replace(' Ecosystem', '').toLowerCase();
+      return `/networks?p=1&ecosystems=${ecosystemName}`;
+    }
+    return '';
+  };
+
   return (
     <div className="mb-7 mt-4 grid grid-cols-5 items-start">
       <div className="col-span-1 flex h-full flex-col justify-end border-b border-bgSt px-2 pb-4">
         <div className="gap-6">
           <div className="mb-2 font-sfpro text-base">
-            <ChainDescription text={chain?.description ?? ''} readMoreLabel={t('read more')} />
+            <ChainDescription
+              shortDescription={chain?.shortDescription ?? ''}
+              description={chain?.description ?? null}
+              readMoreLabel={t('read more')}
+            />
           </div>
 
           <div className="mb-3 flex items-center gap-2">
@@ -57,28 +57,16 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
             <p className="text-xs">{t('Others Links')}</p>
             <PlusButton size="xs" isOpened={false} />
           </div>
-
-          <div className="mb-1 flex flex-wrap gap-x-4 gap-y-4 font-handjet text-lg">
-            <Link href={``}>
-              <div className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
-                DeFi
-              </div>
-            </Link>
-            <Link href={`/networks?p=1&ecosystems=${chain?.ecosystem}`}>
-              <div className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
-                {_.capitalize(chain?.ecosystem)} Ecosystem
-              </div>
-            </Link>
-            <Link href={``}>
-              <div className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
-                L1
-              </div>
-            </Link>
-            <Link href={``}>
-              <div className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:text-base">
-                Tendermint
-              </div>
-            </Link>
+          <div
+            className={`${chain && chain?.tags.length > 3 ? 'gap-x-1 gap-y-3 text-base' : 'gap-x-3 gap-y-3 text-lg'} mb-1 flex flex-wrap font-handjet `}
+          >
+            {chain?.tags.map((item) => (
+              <Link key={item} href={getTagHref(item)}>
+                <div className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-5 shadow-button hover:text-highlight active:scale-90">
+                  {item}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 

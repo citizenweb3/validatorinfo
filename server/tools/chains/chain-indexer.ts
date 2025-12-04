@@ -50,7 +50,7 @@ export interface AddChainProps {
   chainId: string;
   name: string;
   prettyName: string;
-  description?: string;
+  shortDescription?: string;
   denom: string;
   minimalDenom: string;
   logoUrl: string;
@@ -68,6 +68,7 @@ export interface AddChainProps {
   chainRegistry?: string;
   peers?: string[];
   seeds?: string[];
+  tags?: string[];
 }
 
 export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;

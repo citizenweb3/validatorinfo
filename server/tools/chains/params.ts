@@ -51,6 +51,7 @@ const chainParams: Record<string, AddChainProps> = {
     rang: 1,
     name: 'cosmoshub',
     prettyName: 'CosmosHub',
+    shortDescription: 'The central hub of the Cosmos ecosystem securing IBC and interchain governance',
     chainId: 'cosmoshub-4',
     bech32Prefix: 'cosmos',
     coinDecimals: 6,
@@ -69,12 +70,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://cosmos.network',
     githubUrl: 'https://github.com/cosmos',
     twitterUrl: 'https://x.com/cosmoshub',
+    tags: ['Cosmos Ecosystem', 'Network', 'Tendermint', 'L1', 'Staking', 'Hub', 'IBC', 'PoS'],
   },
 
   'cosmoshub-testnet': {
     rang: 1,
     name: 'cosmoshub-testnet',
     prettyName: 'CosmosHub Testnet',
+    shortDescription: 'Public testnet for Cosmos Hub upgrades and features',
     chainId: 'provider',
     bech32Prefix: 'cosmos',
     coinDecimals: 6,
@@ -93,12 +96,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://cosmos.network',
     githubUrl: 'https://github.com/cosmos',
     twitterUrl: 'https://x.com/cosmoshub',
+    tags: ['Cosmos Ecosystem', 'Testnet'],
   },
 
   celestia: {
     rang: 1,
     name: 'celestia',
     prettyName: 'Celestia',
+    shortDescription: 'The first modular Data Availability layer, enabling rollups to scale independently',
     chainId: 'celestia',
     bech32Prefix: 'celestia',
     coinDecimals: 6,
@@ -117,12 +122,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.celestia.org/',
     githubUrl: 'https://github.com/celestiaorg',
     twitterUrl: 'https://x.com/celestia',
+    tags: ['Cosmos Ecosystem', 'Data Availability', 'L1', 'Rollup', 'Modular', 'PoS'],
   },
 
   likecoin: {
     rang: 4,
     name: 'likecoin',
     prettyName: 'LikeCoin',
+    shortDescription: 'Decentralized publishing infrastructure rewarding creators with crypto',
     chainId: 'likecoin-mainnet-2',
     bech32Prefix: 'like',
     coinDecimals: 6,
@@ -141,12 +148,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://dao.like.co/LikeCoin-the-DeBook-Protocol-c6d5098081544675883a4d44d8ac1240',
     githubUrl: 'https://github.com/likecoin/',
     twitterUrl: 'https://twitter.com/likecoin',
+    tags: ['Social', 'Cosmos Ecosystem', 'Creator Economy', 'Media', 'Staking', 'PoS'],
   },
 
   stride: {
     rang: 2,
     name: 'stride',
     prettyName: 'Stride',
+    shortDescription: 'Liquid staking platform turning staked assets into tradable liquid tokens across Cosmos',
     chainId: 'stride-1',
     bech32Prefix: 'stride',
     coinDecimals: 6,
@@ -165,13 +174,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.stride.zone/docs/getting-started',
     githubUrl: 'https://github.com/Stride-Labs',
     twitterUrl: 'https://twitter.com/stride_zone',
+    tags: ['Cosmos Ecosystem', 'Tendermint', 'Liquid Staking', 'Staking Derivatives', 'Staking', 'PoS'],
   },
 
   quicksilver: {
     rang: 3,
     name: 'quicksilver',
     prettyName: 'Quicksilver',
-    description: 'The Liquid Staking Zone for Cosmos',
+    shortDescription: 'Liquid staking protocol for the Cosmos ecosystem',
     chainId: 'quicksilver-2',
     bech32Prefix: 'quick',
     coinDecimals: 6,
@@ -190,12 +200,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.quicksilver.zone',
     githubUrl: 'https://github.com/quicksilver-zone',
     twitterUrl: 'https://x.com/quicksilverzone',
+    tags: ['L1', 'Liquid Staking', 'Cosmos Ecosystem', 'Staking Derivatives', 'Staking', 'PoS'],
   },
 
   'quicksilver-testnet': {
     rang: 4,
     name: 'quicksilver-testnet',
     prettyName: 'Quicksilver Testnet',
+    shortDescription: 'Public testnet for Quicksilver Protocol',
     chainId: 'rhye-3',
     bech32Prefix: 'quick',
     coinDecimals: 6,
@@ -214,13 +226,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.quicksilver.zone',
     githubUrl: 'https://github.com/quicksilver-zone',
     twitterUrl: 'https://x.com/quicksilverzone',
+    tags: ['Quicksilver Ecosystem', 'Testnet'],
   },
 
   uptick: {
     rang: 4,
     name: 'uptick',
     prettyName: 'Uptick',
-    description: 'Web3 Infrastructure & Ecosystem for the Real Economy',
+    shortDescription: 'NFT and digital collectibles chain built on Cosmos for creators and enterprises',
     chainId: 'uptick_117-1',
     bech32Prefix: 'uptick',
     coinDecimals: 18,
@@ -239,12 +252,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.uptick.network/',
     githubUrl: 'https://github.com/UptickNetwork',
     twitterUrl: 'https://twitter.com/Uptickproject',
+    tags: ['Cosmos Ecosystem', 'NFT', 'Creator Economy', 'IBC', 'Staking', 'PoS'],
   },
 
   gravitybridge: {
     rang: 4,
     name: 'gravitybridge',
     prettyName: 'Gravity Bridge',
+    shortDescription: 'Trust-minimized bridge connecting Ethereum and Cosmos ecosystems',
     chainId: 'gravity-bridge-3',
     bech32Prefix: 'gravity',
     coinDecimals: 6,
@@ -263,12 +278,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://github.com/Gravity-Bridge/Gravity-Docs',
     githubUrl: 'https://github.com/Gravity-Bridge',
     twitterUrl: 'https://twitter.com/gravity_bridge',
+    tags: ['Bridges', 'Cosmos Ecosystem', 'Ethereum Ecosystem', 'IBC', 'Staking', 'PoS'],
   },
 
   neutron: {
     rang: 4,
     name: 'neutron',
     prettyName: 'Neutron',
+    shortDescription: 'The most permissionless smart contract platform in the Cosmos (CosmWasm + IBC everywhere)',
     chainId: 'neutron-1',
     bech32Prefix: 'neutron',
     coinDecimals: 6,
@@ -288,12 +305,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.neutron.org',
     githubUrl: 'https://github.com/neutron-org',
     twitterUrl: 'https://x.com/neutron_org',
+    tags: ['Cosmos Ecosystem', 'Smart Contracts', 'CosmWasm', 'Consumer Chains', 'Staking', 'PoS'],
   },
 
   'neutron-testnet': {
     rang: 4,
     name: 'neutron-testnet',
     prettyName: 'Neutron testnet',
+    shortDescription: 'Public testnet for Neutron and CosmWasm development',
     chainId: 'pion-1',
     bech32Prefix: 'neutron',
     coinDecimals: 6,
@@ -314,13 +333,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.neutron.org',
     githubUrl: 'https://github.com/neutron-org',
     twitterUrl: 'https://x.com/neutron_org',
+    tags: ['Neutron Ecosystem', 'Testnet'],
   },
 
   dymension: {
     rang: 4,
     name: 'dymension',
     prettyName: 'Dymension Hub',
-    description: 'Modular Blockchain for Scalable RollApps',
+    shortDescription: 'Modular rollup framework powered by RollApps and the Dymension Hub',
     chainId: 'dymension_1100-1',
     bech32Prefix: 'dym',
     coinDecimals: 18,
@@ -339,12 +359,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.dymension.xyz',
     githubUrl: 'https://github.com/dymensionxyz',
     twitterUrl: 'https://x.com/dymension',
+    tags: ['Cosmos Ecosystem', 'Rollups', 'L1', 'RollApp Framework', 'IBC', 'PoS', 'Staking'],
   },
 
   althea: {
     rang: 4,
     name: 'althea',
     prettyName: 'Althea',
+    shortDescription: 'Decentralized broadband and internet infrastructure powered by crypto payments and liquid staking',
     chainId: 'althea_258432-1',
     bech32Prefix: 'althea',
     coinDecimals: 18,
@@ -363,12 +385,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '123',
     githubUrl: 'https://github.com/althea-net',
     twitterUrl: 'https://twitter.com/AltheaNetwork',
+    tags: ['Cosmos Ecosystem', 'Tendermint', 'L1', 'Liquid Infrastructure', 'DePin', 'DeFi', 'Telecom', 'PoS', 'Staking'],
   },
 
   atomone: {
     rang: 4,
     name: 'atomone',
     prettyName: 'AtomOne',
+    shortDescription: 'The original Cosmos Hub, securing the Interchain through staking and governance',
     chainId: 'atomone-1',
     bech32Prefix: 'atone',
     coinDecimals: 6,
@@ -387,12 +411,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.atom.one',
     githubUrl: 'https://github.com/atomone-hub',
     twitterUrl: 'https://x.com/_atomone',
+    tags: ['Cosmos Ecosystem', 'Tendermint', 'L1', 'Staking', 'PoS', 'Hub'],
   },
 
   union: {
     rang: 4,
     name: 'union',
     prettyName: 'Union',
+    shortDescription: 'Zero-knowledge interoperability layer connecting Cosmos, EVM, and beyond',
     chainId: 'union-1',
     bech32Prefix: 'uion',
     coinDecimals: 18,
@@ -431,13 +457,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.union.build',
     githubUrl: 'https://github.com/unionlabs',
     twitterUrl: 'https://twitter.com/union_build',
+    tags: ['Cosmos Ecosystem', 'Zero-Knowledge', 'Interoperability', 'IBC', 'ZK Bridge', 'Staking', 'PoS'],
   },
 
   axone: {
     rang: 4,
     name: 'axone',
     prettyName: 'Axone',
-    description: 'The Semantic and Economic Orchestration Layer for AI',
+    shortDescription: 'The Semantic and Economic Orchestration Layer for AI, enabling open data markets and collaborative AI',
     chainId: 'axone-1',
     bech32Prefix: 'axone',
     coinDecimals: 6,
@@ -465,12 +492,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.axone.xyz',
     githubUrl: 'https://github.com/axone-protocol',
     twitterUrl: 'https://x.com/axonexyz',
+    tags: ['DeAI', 'Cosmos Ecosystem', 'Data Marketplace', 'AI Agents', 'OKP-404', 'PoS', 'Staking'],
   },
 
   'axone-testnet': {
     rang: 4,
     name: 'axone-testnet',
     prettyName: 'Axone Testnet',
+    shortDescription: 'Public testnet for the Axone protocol and its data/AI orchestration tools',
     chainId: 'axone-dendrite-2',
     bech32Prefix: 'axone',
     coinDecimals: 6,
@@ -489,6 +518,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.axone.xyz',
     githubUrl: 'https://github.com/axone-protocol',
     twitterUrl: 'https://x.com/axonexyz',
+    tags: ['Axone Ecosystem', 'Testnet'],
   },
 
   namada: {
@@ -496,6 +526,7 @@ const chainParams: Record<string, AddChainProps> = {
     ecosystem: 'namada',
     name: 'namada',
     prettyName: 'Namada',
+    shortDescription: 'Privacy-centric L1 with shielded assets and cross-chain privacy via IBC',
     chainId: 'namada.5f5de2dd1b88cba30586420',
     bech32Prefix: 'tnam',
     coinDecimals: 6,
@@ -650,12 +681,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.namada.net',
     githubUrl: 'https://github.com/anoma',
     twitterUrl: 'https://x.com/namada',
+    tags: ['Privacy', 'L1', 'Shielded Actions', 'IBC', 'Multi-Asset Privacy', 'Staking', 'PoS'],
   },
 
   bostrom: {
     rang: 4,
     name: 'bostrom',
     prettyName: 'Bostrom',
+    shortDescription: 'Cyberpunk AI network in the Cosmos focused on decentralized knowledge graphs and AI agents',
     chainId: 'bostrom',
     bech32Prefix: 'bostrom',
     coinDecimals: 0,
@@ -674,13 +707,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://cybercongress.ai/docs/',
     githubUrl: 'https://github.com/cybercongress/cyberd',
     twitterUrl: 'https://twitter.com/cyber_devs',
+    tags: ['DeAI', 'Cosmos Ecosystem', 'AI', 'Knowledge Graph', 'Staking', 'PoS'],
   },
 
   symphony: {
     rang: 5,
     name: 'symphony',
     prettyName: 'Symphony',
-    description: 'The AI Execution Layer for Financial Markets',
+    shortDescription: 'Cross-chain unified liquidity layer and intents-based trading network in Cosmos',
     chainId: 'symphony-1',
     bech32Prefix: 'symphony',
     coinDecimals: 6,
@@ -719,6 +753,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://orchestralabs.org/documentation/',
     githubUrl: 'https://github.com/Orchestra-Labs',
     twitterUrl: 'https://x.com/orchestra_labs',
+    tags: ['Cosmos Ecosystem', 'Intents', 'MEV', 'Cross-Chain Liquidity', 'DeFi', 'Staking', 'PoS'],
   },
 
   // 'symphony-testnet': {
@@ -768,7 +803,7 @@ const chainParams: Record<string, AddChainProps> = {
     rang: 5,
     name: 'space-pussy',
     prettyName: 'Pussy',
-    description: 'A Testing Playground for the Cyber Blockchain',
+    shortDescription: 'Meme-driven cybernetic economy and testnet token on Bostrom',
     chainId: 'space-pussy',
     bech32Prefix: 'pussy',
     coinDecimals: 0,
@@ -787,12 +822,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '',
     githubUrl: 'https://github.com/greatweb',
     twitterUrl: 'https://x.com/SpacePussy_ai',
+    tags: ['Bostrom Ecosystem', 'Testnet'],
   },
 
   osmosis: {
     rang: 1,
     name: 'osmosis',
     prettyName: 'Osmosis',
+    shortDescription: 'The premier AMM and DeFi hub of the Cosmos ecosystem',
     chainId: 'osmosis-1',
     bech32Prefix: 'osmo',
     coinDecimals: 6,
@@ -811,13 +848,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.osmosis.zone',
     githubUrl: 'https://github.com/osmosis-labs',
     twitterUrl: 'https://twitter.com/osmosiszone',
+    tags: ['DeFi', 'L1', 'Cosmos Ecosystem', 'AMM', 'DEX', 'IBC', 'Tendermint', 'Staking', 'PoS'],
   },
 
   nomic: {
     rang: 5,
     name: 'nomic',
     prettyName: 'Nomic',
-    description: 'A Proof-of-Stake custody engine, running alongside Bitcoin to securely bring native BTC to other networks',
+    shortDescription: 'A Proof-of-Stake custody engine running alongside Bitcoin to bring native BTC to Cosmos',
     chainId: 'nomic-stakenet-3',
     bech32Prefix: 'nomic',
     coinDecimals: 6,
@@ -836,12 +874,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '',
     githubUrl: 'https://github.com/nomic-io',
     twitterUrl: 'https://x.com/nomicbtc',
+    tags: ['Bridges', 'L1', 'Bitcoin DeFi', 'Cosmos Ecosystem', 'nBTC', 'Staking', 'PoS'],
   },
 
   nillion: {
     rang: 5,
     name: 'nillion',
     prettyName: 'Nillion',
+    shortDescription: 'Privacy-preserving computation layer using Multi-Party Computation (MPC) and blind computation',
     chainId: 'nillion-1',
     bech32Prefix: 'nillion',
     coinDecimals: 6,
@@ -861,12 +901,14 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '',
     githubUrl: 'https://github.com/NillionNetwork',
     twitterUrl: 'https://twitter.com/nillionnetwork',
+    tags: ['Privacy', 'Computation', 'MPC', 'Verifiable Computation', 'L1', 'Staking', 'PoS'],
   },
 
   nym: {
     rang: 5,
     name: 'nym',
     prettyName: 'Nym',
+    shortDescription: 'Decentralized mixnet providing strong network-level privacy for any traffic',
     chainId: 'nyx',
     bech32Prefix: 'n',
     coinDecimals: 6,
@@ -890,12 +932,14 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/nymtech/nym',
     twitterUrl: 'https://x.com/nymproject',
     genesis: 'https://nymtech.net/genesis/genesis.json',
+    tags: ['Privacy', 'Mixnet', 'L1', 'Cosmos Ecosystem', 'Anonymity Network', 'Staking', 'PoS'],
   },
 
   'warden-testnet': {
     rang: 5,
     name: 'warden-testnet',
     prettyName: 'Warden Testnet',
+    shortDescription: 'Intent-centric infrastructure and AI agent orchestration protocol testnet',
     chainId: 'barra_9191-1',
     bech32Prefix: 'warden',
     coinDecimals: 18,
@@ -921,6 +965,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.wardenprotocol.org',
     githubUrl: 'https://github.com/warden-protocol',
     twitterUrl: 'https://x.com/wardenprotocol',
+    tags: ['Testnet', 'DeAI', 'Intents', 'Agent Framework', 'Cosmos Ecosystem', 'Staking', 'PoS'],
   },
 
   'namada-testnet': {
@@ -928,6 +973,7 @@ const chainParams: Record<string, AddChainProps> = {
     ecosystem: 'namada',
     name: 'namada-testnet',
     prettyName: 'Namada Testnet',
+    shortDescription: 'Public testnet for Namada shielded set and privacy features',
     chainId: 'housefire-alpaca.cc0d3e0c033be',
     bech32Prefix: 'tnam',
     coinDecimals: 6,
@@ -985,6 +1031,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.namada.net',
     githubUrl: 'https://github.com/anoma',
     twitterUrl: 'https://x.com/namada',
+    tags: ['Namada Ecosystem', 'Testnet'],
   },
 
   solana: {
@@ -993,6 +1040,7 @@ const chainParams: Record<string, AddChainProps> = {
     hasValidators: true,
     name: 'solana',
     prettyName: 'Solana',
+    shortDescription: 'High-performance L1 using Proof-of-History and parallel transaction processing',
     chainId: 'solana-mainnet',
     bech32Prefix: '',
     coinDecimals: 9,
@@ -1016,6 +1064,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.solana.com',
     githubUrl: 'https://github.com/solana-labs',
     twitterUrl: 'https://x.com/namada',
+    tags: ['Network', 'L1', 'Staking', 'High Throughput', 'SVM', 'Staking', 'PoS'],
   },
 
   polkadot: {
@@ -1024,6 +1073,7 @@ const chainParams: Record<string, AddChainProps> = {
     hasValidators: true,
     name: 'polkadot',
     prettyName: 'Polkadot',
+    shortDescription: 'Heterogeneous multi-chain network with shared security via parachains',
     chainId: 'polkadot',
     bech32Prefix: '',
     coinDecimals: 10,
@@ -1047,6 +1097,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.polkadot.com/',
     githubUrl: 'https://github.com/paritytech',
     twitterUrl: 'https://x.com/Polkadot',
+    tags: ['Network', 'L1', 'Staking', 'Parachains', 'Substrate', 'PoS'],
   },
 
   aztec: {
@@ -1055,6 +1106,7 @@ const chainParams: Record<string, AddChainProps> = {
     hasValidators: true,
     name: 'aztec',
     prettyName: 'Aztec',
+    shortDescription: 'Privacy-first ZK rollup on Ethereum with fully private programmable smart contracts',
     chainId: 'MAINNET',
     bech32Prefix: '',
     coinDecimals: 18,
@@ -1073,6 +1125,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.aztec.network/',
     githubUrl: 'https://github.com/AztecProtocol',
     twitterUrl: 'https://x.com/aztecnetwork',
+    tags: ['Ethereum Ecosystem', 'L2', 'Rollup', 'Privacy', 'Smart Contract Platform', 'DeFi', 'ZK', 'Staking', 'PoS'],
   },
 
   'aztec-testnet': {
@@ -1081,6 +1134,7 @@ const chainParams: Record<string, AddChainProps> = {
     hasValidators: true,
     name: 'aztec-testnet',
     prettyName: 'Aztec Testnet',
+    shortDescription: 'Active testnet for Aztec Network and Noir language development',
     chainId: 'TESTNET',
     bech32Prefix: '',
     coinDecimals: 18,
@@ -1099,6 +1153,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.aztec.network/',
     githubUrl: 'https://github.com/AztecProtocol',
     twitterUrl: 'https://x.com/aztecnetwork',
+    tags: ['Aztec Ecosystem', 'Testnet'],
   },
 
   ethereum: {
@@ -1107,6 +1162,7 @@ const chainParams: Record<string, AddChainProps> = {
     hasValidators: true,
     name: 'ethereum',
     prettyName: 'Ethereum',
+    shortDescription: 'The original smart contract platform and largest L1 ecosystem',
     chainId: '1',
     bech32Prefix: '',
     coinDecimals: 18,
@@ -1146,6 +1202,7 @@ const chainParams: Record<string, AddChainProps> = {
       'enode://10d62eff032205fcef19497f35ca8477bea0eadfff6d769a147e895d8b2b8f8ae6341630c645c30f5df6e67547c03494ced3d9c5764e8622a26587b083b028e8@139.59.49.206:30303',
       'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
     ],
+    tags: ['Network', 'L1', 'Staking', 'Smart Contracts', 'EVM', 'PoS'],
   },
 
   'ethereum-sepolia': {
@@ -1154,6 +1211,7 @@ const chainParams: Record<string, AddChainProps> = {
     hasValidators: true,
     name: 'ethereum-sepolia',
     prettyName: 'Ethereum Sepolia',
+    shortDescription: 'Primary public testnet for Ethereum post-merge upgrades',
     chainId: '11155111',
     bech32Prefix: '',
     coinDecimals: 18,
@@ -1216,6 +1274,7 @@ const chainParams: Record<string, AddChainProps> = {
       'enode://10d62eff032205fcef19497f35ca8477bea0eadfff6d769a147e895d8b2b8f8ae6341630c645c30f5df6e67547c03494ced3d9c5764e8622a26587b083b028e8@139.59.49.206:30303',
       'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
     ],
+    tags: ['Ethereum Ecosystem', 'Testnet'],
   },
 };
 
