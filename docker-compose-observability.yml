@@ -1,16 +1,14 @@
-version: '3.8'
-
 # Full Observability Stack with Grafana Alloy
-# Includes: Logs (Loki), Metrics (Mimir), Traces (Tempo), Profiles (Pyroscope), Frontend (Grafana)
+# Includes: Logs (Loki), Traces (Tempo), Profiles (Pyroscope), Frontend (Grafana)
 
 networks:
   observability:
+    name: validatorinfo_observability
     driver: bridge
 
 volumes:
   loki_data:
   tempo_data:
-  mimir_data:
   pyroscope_data:
   grafana_data:
   alloy_data:
@@ -30,17 +28,18 @@ services:
     volumes:
       - ./alloy-config.river:/etc/alloy/config.river
       - alloy_data:/var/lib/alloy
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     command:
       - run
       - --server.http.listen-addr=0.0.0.0:12345
       - --storage.path=/var/lib/alloy
+      - --stability.level=experimental
       - /etc/alloy/config.river
     networks:
       - observability
     depends_on:
       - loki
       - tempo
-      - mimir
       - pyroscope
 
   # ============================================
@@ -87,29 +86,6 @@ services:
       retries: 5
 
   # ============================================
-  # Mimir - Metrics (Prometheus-compatible)
-  # ============================================
-  mimir:
-    image: grafana/mimir:2.11.0
-    container_name: mimir
-    restart: unless-stopped
-    ports:
-      - "9009:9009"
-    volumes:
-      - ./mimir-config.yml:/etc/mimir/config.yml
-      - mimir_data:/data
-    command:
-      - -config.file=/etc/mimir/config.yml
-      - -target=all
-    networks:
-      - observability
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9009/ready"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  # ============================================
   # Pyroscope - Continuous Profiling
   # ============================================
   pyroscope:
@@ -140,7 +116,7 @@ services:
     container_name: grafana
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3002:3000"
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
@@ -154,27 +130,9 @@ services:
     depends_on:
       - loki
       - tempo
-      - mimir
       - pyroscope
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  # ============================================
-  # Redis - For distributed caching (optional)
-  # ============================================
-  redis:
-    image: redis:7-alpine
-    container_name: redis-observability
-    restart: unless-stopped
-    ports:
-      - "6380:6379"
-    networks:
-      - observability
-    healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 5s
       retries: 5

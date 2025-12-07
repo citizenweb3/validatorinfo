@@ -32,7 +32,7 @@ otelcol.processor.batch "default" {
   send_batch_size  = 1024
 
   output {
-    metrics = [otelcol.exporter.prometheus.mimir.input]
+    metrics = [otelcol.exporter.debug.metrics.input]
     logs    = [otelcol.exporter.loki.default.input]
     traces  = [otelcol.exporter.otlp.tempo.input]
   }
@@ -63,19 +63,11 @@ loki.write "default" {
   }
 }
 
-// Export Metrics to Mimir (Prometheus)
-otelcol.exporter.prometheus "mimir" {
-  forward_to = [prometheus.remote_write.mimir.receiver]
-}
-
-prometheus.remote_write "mimir" {
-  endpoint {
-    url = "http://mimir:9009/api/v1/push"
-  }
-
-  external_labels = {
-    cluster = "validatorinfo",
-  }
+// Export Metrics to Debug (console output)
+otelcol.exporter.debug "metrics" {
+  verbosity           = "detailed"
+  sampling_initial    = 5
+  sampling_thereafter = 200
 }
 
 // Export Traces to Tempo
@@ -89,48 +81,53 @@ otelcol.exporter.otlp "tempo" {
 }
 
 // ============================================
-// Pyroscope Integration
-// ============================================
-
-pyroscope.receive_http "default" {
-  http {
-    listen_address = "0.0.0.0"
-    listen_port    = 4040
-  }
-
-  forward_to = [pyroscope.write.default.receiver]
-}
-
-pyroscope.write "default" {
-  endpoint {
-    url = "http://pyroscope:4040"
-  }
-
-  external_labels = {
-    cluster = "validatorinfo",
-  }
-}
-
-// ============================================
-// Service Discovery (for auto-instrumentation)
+// Docker Logs Discovery and Collection
 // ============================================
 
 discovery.docker "containers" {
   host = "unix:///var/run/docker.sock"
 }
 
+loki.source.docker "containers" {
+  host       = "unix:///var/run/docker.sock"
+  targets    = discovery.docker.containers.targets
+  forward_to = [loki.process.add_labels.receiver]
+}
+
+// Process and add labels to logs
+loki.process "add_labels" {
+  forward_to = [loki.write.default.receiver]
+
+  stage.json {
+    expressions = {
+      level       = "level",
+      service     = "service",
+      trace_id    = "trace_id",
+      span_id     = "span_id",
+      message     = "message",
+    }
+  }
+
+  stage.labels {
+    values = {
+      level    = "",
+      service  = "",
+      trace_id = "",
+      span_id  = "",
+    }
+  }
+}
+
+// ============================================
+// Pyroscope Integration
+// ============================================
+// Profiling data is sent directly from apps to Pyroscope
+// No need for Alloy to proxy it
+
 // ============================================
 // Metrics Scraping (Self-monitoring)
 // ============================================
-
-prometheus.scrape "alloy" {
-  targets = [{
-    __address__ = "localhost:12345",
-    job         = "alloy",
-  }]
-
-  forward_to = [prometheus.remote_write.mimir.receiver]
-}
+// Disabled: metrics go to debug exporter instead
 
 // ============================================
 // Logging

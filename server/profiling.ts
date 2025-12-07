@@ -33,6 +33,12 @@ const wrapWithTraceContext = () => {
 
 // Initialize profiling
 export const initProfiling = () => {
+  // Skip profiling if OpenTelemetry is disabled
+  if (process.env.OTEL_ENABLED !== 'true') {
+    console.log('ℹ️  Pyroscope profiling skipped (OTEL_ENABLED=false)');
+    return false;
+  }
+  
   try {
     Pyroscope.init(pyroscopeConfig);
     Pyroscope.start();
@@ -62,7 +68,17 @@ export const stopProfiling = async () => {
 
 // Helper function to profile a specific function with OpenTelemetry correlation
 export const profileFunction = <T>(name: string, fn: () => T): T => {
-  return Pyroscope.wrapWithLabels({ function: name }, fn) as T;
+  // Check if Pyroscope was successfully initialized
+  if (typeof Pyroscope.wrapWithLabels !== 'function') {
+    return fn(); // Direct call without profiling if Pyroscope unavailable
+  }
+  
+  try {
+    return Pyroscope.wrapWithLabels({ function: name }, fn) as T;
+  } catch (error) {
+    console.warn(`Failed to profile function "${name}":`, error);
+    return fn(); // Fallback to direct call
+  }
 };
 
 export default {

@@ -1,4 +1,4 @@
-target: all,alertmanager
+target: all
 
 multitenancy_enabled: false
 
@@ -20,7 +20,6 @@ ingester:
   max_block_duration: 5m
 
 compactor:
-  data_dir: /var/tempo/compactor
   compaction:
     block_retention: 720h  # 30 days
 
@@ -33,28 +32,13 @@ storage:
       path: /var/tempo/wal
     cache: none
 
-overrides:
-  defaults:
-    metrics_generator:
-      processors: [service-graphs, span-metrics]
-      storage:
-        path: /var/tempo/generator/wal
-        remote_write:
-          - url: http://mimir:9009/api/v1/push
-            send_exemplars: true
-
-metrics_generator:
-  registry:
-    external_labels:
-      source: tempo
-      cluster: validatorinfo
-  storage:
-    path: /var/tempo/generator/wal
-    remote_write:
-      - url: http://mimir:9009/api/v1/push
-        send_exemplars: true
-  traces_storage:
-    path: /var/tempo/generator/traces
+# Metrics generator disabled (no Mimir)
+# metrics_generator:
+#   registry:
+#     external_labels:
+#       source: tempo
+#   storage:
+#     path: /var/tempo/generator/wal
 
 query_frontend:
   search:

@@ -1,4 +1,12 @@
 name: validatorinfo
+
+networks:
+  default:
+    name: validatorinfo_default
+  observability:
+    external: true
+    name: validatorinfo_observability
+
 services:
   db:
     image: postgres:14-bullseye
@@ -120,20 +128,7 @@ services:
       - uploads_data:/app/uploads
 
   # Note: For full observability stack, run docker-compose-observability.yml
-  # This provides a minimal collector for development
-  alloy:
-    image: grafana/alloy:latest
-    ports:
-      - "4317:4317"   # OTLP gRPC receiver
-      - "4318:4318"   # OTLP HTTP receiver
-      - "12345:12345" # Alloy UI
-    restart: unless-stopped
-    volumes:
-      - ./alloy-config.river:/etc/alloy/config.river
-    command:
-      - run
-      - --server.http.listen-addr=0.0.0.0:12345
-      - /etc/alloy/config.river
+  # Alloy collector is in docker-compose-observability.yml
 
   frontend:
     build:
@@ -170,12 +165,16 @@ services:
       REDIS_PORT: "6379"
       SERVER_PORT: "3000"
       PUBLIC_URL: ${PUBLIC_URL}
-      # NODE_OPTIONS removed as instrumentation is imported in code
+      # OpenTelemetry Configuration
+      OTEL_ENABLED: "true"
       OTEL_SERVICE_NAME: "validatorinfo-frontend"
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://alloy:4317"
       PYROSCOPE_SERVER_URL: "http://pyroscope:4040"
     volumes:
       - uploads_data:/app/uploads
+    networks:
+      - default
+      - observability
 
   indexer:
     build:
@@ -207,12 +206,16 @@ services:
       EVENTS_DATABASE_URL: postgresql://${EVENTS_POSTGRES_USER:-validatorinfo_events_user}:${EVENTS_POSTGRES_PASSWORD:-events_password}@events-db:5432/${EVENTS_POSTGRES_DB:-validatorinfo_events_db}?schema=public
       REDIS_HOST: redis
       REDIS_PORT: "6379"
-      # NODE_OPTIONS removed as instrumentation is imported in code
+      # OpenTelemetry Configuration
+      OTEL_ENABLED: "true"
       OTEL_SERVICE_NAME: "validatorinfo-indexer"
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://alloy:4317"
       PYROSCOPE_SERVER_URL: "http://pyroscope:4040"
     volumes:
       - uploads_data:/app/uploads
+    networks:
+      - default
+      - observability
 
 volumes:
   postgres_data_dev:
