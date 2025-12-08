@@ -20,6 +20,7 @@ import getTvs from '@/server/tools/chains/cosmoshub/get-tvs';
 import getUnbondingTokens from '@/server/tools/chains/cosmoshub/get-unbonding-tokens';
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
 import getChainUptime from '@/server/tools/chains/cosmoshub/get-chain-uptime';
+import getRewardAddress from '@/server/tools/chains/cosmoshub/get-reward-address';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -44,6 +45,7 @@ const chainMethods: ChainMethods = {
   getDelegatorsAmount,
   getUnbondingTokens,
   getChainUptime,
+  getRewardAddress
 };
 
 export default chainMethods;

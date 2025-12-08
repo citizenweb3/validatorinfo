@@ -4,13 +4,14 @@ import { FC } from 'react';
 
 import FallbackImage from '@/components/common/image-downloader-fallback';
 import { validatorNodesWithChainData } from '@/services/validator-service';
+import { NodeWithValidatorAndChain } from '@/services/node-service';
 
 interface OwnProps {
   icons: {
     leftIconUrl: string;
     rightIconUrl: string;
   };
-  node?: validatorNodesWithChainData | undefined;
+  node: NodeWithValidatorAndChain | null;
 }
 
 const NodeProfileStory: FC<OwnProps> = ({ icons, node }) => {

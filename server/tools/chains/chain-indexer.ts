@@ -114,6 +114,11 @@ export interface ChainUptime {
   avgTxInterval: number;
 }
 
+export interface RewardAddress {
+  operatorAddress: string;
+  rewardAddresses: string;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -141,6 +146,7 @@ export type GetCirculatingTokensPublic = (chain: AddChainProps) => Promise<strin
 export type GetDelegatorsAmount = (chain: AddChainProps) => Promise<DelegatorsAmount[]>;
 export type GetUnbondingTokens = (chain: AddChainProps) => Promise<string | null>;
 export type GetChainUptime = (dbChain: Chain) => Promise<ChainUptime | null>;
+export type GetRewardAddress = (chain: AddChainProps, dbChainId: number) => Promise<RewardAddress[]>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -165,4 +171,5 @@ export interface ChainMethods {
   getDelegatorsAmount: GetDelegatorsAmount;
   getUnbondingTokens: GetUnbondingTokens;
   getChainUptime: GetChainUptime;
+  getRewardAddress: GetRewardAddress;
 }

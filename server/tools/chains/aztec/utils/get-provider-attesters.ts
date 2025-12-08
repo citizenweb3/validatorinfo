@@ -39,7 +39,6 @@ export const getProviderAttesters = async (
   const attesterToProvider = new Map<string, bigint>();
   const providersWithCachedData = new Set<string>();
 
-  // Try to load cached events from events database with fallback to blockchain
   try {
     const chainParams = getChainParams(chainName);
     const dbChain = await db.chain.findFirst({
@@ -74,7 +73,6 @@ export const getProviderAttesters = async (
     }
   } catch (e: any) {
     logError(`Events DB unavailable: ${e.message}, will query all providers from blockchain`);
-    // Fall through to blockchain query below
   }
 
   const providersToQuery = Array.from(allProviders.entries()).filter(

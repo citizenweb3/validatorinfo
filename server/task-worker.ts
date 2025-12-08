@@ -36,6 +36,7 @@ import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
 import updateChainRewards from '@/server/jobs/update-chain-rewards';
 import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 import syncAztecAttesterEvents from '@/server/jobs/sync-aztec-attester-events';
+import updateRewardAddress from '@/server/jobs/update-reward-address';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -144,6 +145,9 @@ async function runTask() {
         break;
       case 'sync-aztec-attester-events':
         await syncAztecAttesterEvents();
+        break;
+      case 'update-reward-address':
+        await updateRewardAddress(chains);
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

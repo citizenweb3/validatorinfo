@@ -15,7 +15,6 @@ const { logInfo, logError, logWarn } = logger('aztec-nodes');
 
 const AZTEC_PROVIDERS_API = 'https://d10cun7h2qqnvc.cloudfront.net/api/providers';
 
-// Types for RPC response (used by get-missed-blocks.ts)
 interface AztecValidatorStats {
   address: string;
   totalSlots: number;
@@ -59,7 +58,7 @@ interface AztecProviderApiResponse {
     name: string;
     commission: number;
     delegators: number;
-    currentStake: string;
+    currentStake?: string; // Optional: not present in local JSON fallback file
     totalStaked: string;
     address: string;
     description: string;
@@ -70,11 +69,7 @@ interface AztecProviderApiResponse {
   }>;
 }
 
-/**
- * Fetch provider metadata from API with fallback to local JSON file
- * Maps provider admin addresses to their display information
- */
-async function fetchProviderMetadata(): Promise<Map<string, { name: string; website: string; description: string }>> {
+const fetchProviderMetadata = async (): Promise<Map<string, { name: string; website: string; description: string }>> => {
   try {
     logInfo('Attempting to fetch provider metadata from API');
 
@@ -119,11 +114,7 @@ async function fetchProviderMetadata(): Promise<Map<string, { name: string; webs
   }
 }
 
-/**
- * Load provider metadata from local JSON file (fallback)
- * Maps provider admin addresses to their display information
- */
-function loadProviderMetadataFromFile(): Map<string, { name: string; website: string; description: string }> {
+const loadProviderMetadataFromFile = (): Map<string, { name: string; website: string; description: string }> => {
   try {
     const data = providersMonikersData as AztecProviderApiResponse;
     const providerMetadata = new Map<string, { name: string; website: string; description: string }>();
@@ -145,22 +136,10 @@ function loadProviderMetadataFromFile(): Map<string, { name: string; website: st
   }
 }
 
-/**
- * Fetches ALL Aztec nodes from providers and their attesters
- * This includes both active and inactive nodes
- *
- * Approach:
- * 1. Fetch all providers from L1 StakingRegistry contract
- * 2. Fetch attester-to-provider mappings from L1 events
- * 3. Load provider metadata (names, websites, descriptions)
- * 4. Create nodes for ALL attesters with complete metadata
- * 5. Mark removed attesters (no longer mapped to providers) as jailed
- */
 const getAztecNodes: GetNodesFunction = async (chain) => {
   try {
     const chainName = chain.name as 'aztec' | 'aztec-testnet';
 
-    // Get L1 RPC URLs for contract calls
     const l1Chain = getChainParams(getL1[chainName]);
     const l1RpcUrls = l1Chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
 
@@ -170,7 +149,6 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
 
     logInfo(`Fetching providers and attesters for ${chainName}`);
 
-    // Fetch providers, attester mappings, and metadata in parallel
     const [providers, attesterToProvider, providerMetadata] = await Promise.all([
       getProviders(l1RpcUrls, chainName),
       getProviderAttesters(l1RpcUrls, chainName),
@@ -189,20 +167,17 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
       return [];
     }
 
-    // Create nodes from ALL attesters
     const nodes: NodeResult[] = [];
     const attesterEntries = Array.from(attesterToProvider.entries());
 
     for (const [attesterAddress, providerId] of attesterEntries) {
       try {
-        // Get provider configuration
         const provider = providers.get(providerId);
         if (!provider) {
           logWarn(`Provider ${providerId} not found for attester ${attesterAddress}`);
           continue;
         }
 
-        // Get provider metadata (only for aztec mainnet, testnet uses generic names)
         const metadata = chainName === 'aztec'
           ? providerMetadata.get(getAddress(provider.providerAdmin))
           : undefined;
@@ -211,24 +186,24 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
         const website = metadata?.website || '';
         const details = metadata?.description || '';
 
-        // Fetch stake for this attester from L1
         let nodeStake: bigint | null = null;
         try {
           nodeStake = await getNodeStake(attesterAddress, l1RpcUrls, chainName);
         } catch (e: any) {
-          logWarn(`Failed to fetch stake for attester ${attesterAddress}: ${e.message}`);
+          logError(`Failed to fetch stake for attester ${attesterAddress}: ${e.message}`);
         }
 
-        // Create NodeResult with complete metadata
         nodes.push({
           operator_address: attesterAddress,
+          account_address: provider.providerAdmin,
+          reward_address: provider.providerRewardsRecipient,
           delegator_shares: nodeStake !== null ? String(nodeStake) : '0',
           tokens: nodeStake !== null ? String(nodeStake) : '0',
           consensus_pubkey: {
             '@type': 'aztec/AttesterAddress',
             key: attesterAddress,
           },
-          jailed: false, // Will be set to true for removed attesters in next step
+          jailed: false,
           status: 'BOND_STATUS_BONDED',
           commission: {
             commission_rates: {
@@ -239,10 +214,10 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
             update_time: new Date().toISOString(),
           },
           description: {
-            identity: provider.providerAdmin, // For validator linking
+            identity: provider.providerAdmin,
             moniker: moniker,
             website: website,
-            security_contact: provider.providerRewardsRecipient,
+            security_contact: '',
             details: details,
           },
           min_self_delegation: '0',
@@ -256,8 +231,6 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
 
     logInfo(`Created ${nodes.length} nodes from attesters`);
 
-    // Mark removed attesters as jailed
-    // These are nodes in the database that are no longer mapped to any provider
     try {
       const chainParams = getChainParams(chainName);
       const dbChain = await db.chain.findFirst({
@@ -291,7 +264,6 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
       }
     } catch (e: any) {
       logError(`Error marking removed attesters: ${e.message}`);
-      // Don't fail the entire job if this step fails
     }
 
     return nodes;
