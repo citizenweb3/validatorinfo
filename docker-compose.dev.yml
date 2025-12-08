@@ -213,6 +213,7 @@ services:
       PYROSCOPE_SERVER_URL: "http://pyroscope:4040"
     volumes:
       - uploads_data:/app/uploads
+      - ./logs:/app/logs
     networks:
       - default
       - observability

@@ -29,6 +29,7 @@ services:
       - ./alloy-config.river:/etc/alloy/config.river
       - alloy_data:/var/lib/alloy
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./logs:/app/logs:ro
     command:
       - run
       - --server.http.listen-addr=0.0.0.0:12345

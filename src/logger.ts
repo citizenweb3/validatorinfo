@@ -2,6 +2,7 @@ import { Format } from 'logform';
 import winston from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
 import { trace, context } from '@opentelemetry/api';
+import { OpenTelemetryTransportV3 } from '@opentelemetry/winston-transport';
 
 const { createLogger, format, transports } = winston;
 const { combine, timestamp, printf, label, json } = format;
@@ -85,6 +86,8 @@ const logger = (customLabel: string = 'default'): Logger => {
         maxFiles: '14d',
         format: getFileLogFormat(customLabel),
       }),
+      // OpenTelemetry transport - sends logs to OTLP collector
+      new OpenTelemetryTransportV3(),
     ],
   });
 
