@@ -100,8 +100,8 @@ All telemetry data (logs, traces, metrics) is collected through **Grafana Alloy*
 ```bash
 # Required
 - Docker & Docker Compose
-- 8GB+ RAM available (for local observability stack)
-- 10GB+ free disk space
+- 16GB+ RAM available (for local observability stack)
+- 30GB+ free disk space
 
 # Ports that will be used
 - 3000: Frontend application
