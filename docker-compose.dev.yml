@@ -167,9 +167,9 @@ services:
       PUBLIC_URL: ${PUBLIC_URL}
       # OpenTelemetry Configuration
       OTEL_ENABLED: ${OTEL_ENABLED:-false}
-      OTEL_SERVICE_NAME: "validatorinfo-frontend"
-      OTEL_EXPORTER_OTLP_ENDPOINT: "http://alloy:4317"
-      PYROSCOPE_SERVER_URL: "http://pyroscope:4040"
+      OTEL_SERVICE_NAME: ${OTEL_SERVICE_NAME_FRONTEND:-validatorinfo-frontend}
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-http://alloy:4317}
+      PYROSCOPE_SERVER_URL: ${PYROSCOPE_SERVER_URL:-http://pyroscope:4040}
     volumes:
       - uploads_data:/app/uploads
     networks:
@@ -208,9 +208,9 @@ services:
       REDIS_PORT: "6379"
       # OpenTelemetry Configuration
       OTEL_ENABLED: ${OTEL_ENABLED:-false}
-      OTEL_SERVICE_NAME: "validatorinfo-indexer"
-      OTEL_EXPORTER_OTLP_ENDPOINT: "http://alloy:4317"
-      PYROSCOPE_SERVER_URL: "http://pyroscope:4040"
+      OTEL_SERVICE_NAME: ${OTEL_SERVICE_NAME_INDEXER:-validatorinfo-indexer}
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-http://alloy:4317}
+      PYROSCOPE_SERVER_URL: ${PYROSCOPE_SERVER_URL:-http://pyroscope:4040}
     volumes:
       - uploads_data:/app/uploads
       - ./logs:/app/logs

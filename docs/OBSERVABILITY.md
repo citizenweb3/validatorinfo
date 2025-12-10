@@ -93,12 +93,14 @@ All telemetry data (logs, traces, metrics) is collected through **Grafana Alloy*
 
 ## 🚀 Quick Start
 
+> **📘 Production Deployment**: For deploying to production with remote monitoring server, see [PRODUCTION_DEPLOYMENT.md](./PRODUCTION_DEPLOYMENT.md)
+
 ### Prerequisites
 
 ```bash
 # Required
 - Docker & Docker Compose
-- 8GB+ RAM available
+- 8GB+ RAM available (for local observability stack)
 - 10GB+ free disk space
 
 # Ports that will be used
@@ -113,7 +115,7 @@ All telemetry data (logs, traces, metrics) is collected through **Grafana Alloy*
 - 12345: Alloy UI
 ```
 
-### Option 1: Full Observability Stack (Recommended)
+### Option 1: Local Development (Full Stack)
 
 **Step 1: Configure environment**
 
@@ -121,6 +123,9 @@ Edit `.env` file:
 ```bash
 # Enable OpenTelemetry
 OTEL_ENABLED=true
+
+# Use local observability stack (default)
+# OTEL_EXPORTER_OTLP_ENDPOINT=http://alloy:4317  # Already set by default
 ```
 
 **Step 2: Start observability stack**
