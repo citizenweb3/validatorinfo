@@ -57,7 +57,7 @@ const runServer = async () => {
   }
 
   const tasks = [
-    // { name: 'sync-aztec-attester-events', schedule: timers.everyHour },
+    { name: 'sync-aztec-attester-events', schedule: timers.everyHour },
     { name: 'prices', schedule: timers.every5mins },
     { name: 'validators', schedule: timers.every10mins },
     { name: 'chain-tvls', schedule: timers.everyHour },

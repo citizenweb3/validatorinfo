@@ -341,9 +341,10 @@
             "uid": "P214B5B846CF3925F"
           },
           "limit": 30,
+          "query": "{}",
           "queryType": "traceqlSearch",
           "refId": "A",
-          "tableType": "spans"
+          "tableType": "traces"
         }
       ],
       "title": "Recent Traces",
