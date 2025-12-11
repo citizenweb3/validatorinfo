@@ -411,6 +411,10 @@
         "name": "Poder de Voto",
         "hint": "A quantidade total assegurada pelo validador, e a porcentagem que representa do total de tokens apostados"
       },
+      "Voting Power Active": {
+        "name": "Poder de Voto Ativo",
+        "hint": "A quantidade total de tokens ativos"
+      },
       "Commission": {
         "name": "Comissão",
         "hint": "A porcentagem das recompensas geradas que o validador recebe por proteger a rede"

@@ -1188,6 +1188,26 @@ const chainParams: Record<string, AddChainProps> = {
       },
       // {
       //   type: 'rpc',
+      //   url: 'https://eth.llamarpc.com',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://ethereum-rpc.publicnode.com',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://1rpc.io/eth',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://eth.drpc.org',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://rpc.ankr.com/eth',
+      // },
+      // {
+      //   type: 'rpc',
       //   url: `https://eth-mainnet.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
       // },
     ],

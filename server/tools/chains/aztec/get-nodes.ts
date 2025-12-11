@@ -3,7 +3,6 @@ import { getAddress } from 'viem';
 import db from '@/db';
 import logger from '@/logger';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
-import { getNodeStake } from '@/server/tools/chains/aztec/utils/get-node-stake';
 import { getProviderAttesters } from '@/server/tools/chains/aztec/utils/get-provider-attesters';
 import { getProviders } from '@/server/tools/chains/aztec/utils/get-providers';
 import providersMonikersData from '@/server/tools/chains/aztec/utils/providers_monikers.json';
@@ -186,19 +185,12 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
         const website = metadata?.website || '';
         const details = metadata?.description || '';
 
-        let nodeStake: bigint | null = null;
-        try {
-          nodeStake = await getNodeStake(attesterAddress, l1RpcUrls, chainName);
-        } catch (e: any) {
-          logError(`Failed to fetch stake for attester ${attesterAddress}: ${e.message}`);
-        }
-
         nodes.push({
           operator_address: attesterAddress,
           account_address: provider.providerAdmin,
           reward_address: provider.providerRewardsRecipient,
-          delegator_shares: nodeStake !== null ? String(nodeStake) : '0',
-          tokens: nodeStake !== null ? String(nodeStake) : '0',
+          delegator_shares: '0',
+          tokens: '0',
           consensus_pubkey: {
             '@type': 'aztec/AttesterAddress',
             key: attesterAddress,
@@ -230,41 +222,6 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
     }
 
     logInfo(`Created ${nodes.length} nodes from attesters`);
-
-    try {
-      const chainParams = getChainParams(chainName);
-      const dbChain = await db.chain.findFirst({
-        where: { chainId: chainParams.chainId },
-      });
-
-      if (dbChain) {
-        const existingNodes = await db.node.findMany({
-          where: { chainId: dbChain.id },
-          select: { operatorAddress: true },
-        });
-
-        const currentAttesters = new Set(
-          Array.from(attesterToProvider.keys()).map(addr => getAddress(addr))
-        );
-
-        const removedAttesters = existingNodes
-          .filter(n => !currentAttesters.has(getAddress(n.operatorAddress)))
-          .map(n => n.operatorAddress);
-
-        if (removedAttesters.length > 0) {
-          await db.node.updateMany({
-            where: {
-              operatorAddress: { in: removedAttesters },
-              chainId: dbChain.id,
-            },
-            data: { jailed: true },
-          });
-          logInfo(`Marked ${removedAttesters.length} removed attesters as jailed`);
-        }
-      }
-    } catch (e: any) {
-      logError(`Error marking removed attesters: ${e.message}`);
-    }
 
     return nodes;
   } catch (e) {

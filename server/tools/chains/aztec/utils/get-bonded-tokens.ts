@@ -22,14 +22,12 @@ export const getBondedTokens = async (chainName: AztecChainName): Promise<bigint
 
     for (const node of nodes) {
       try {
-        if (node.delegatorShares && node.delegatorShares !== '0') {
+        if (node.delegatorShares) {
           bondedTokens += BigInt(node.delegatorShares);
-        } else if (node.tokens && node.tokens !== '0') {
-          bondedTokens += BigInt(node.tokens);
         }
       } catch (e: any) {
         logError(
-          `Invalid token value for node ${node.operatorAddress}: tokens=${node.tokens}, shares=${node.delegatorShares}`,
+          `Invalid token value for node ${node.operatorAddress}: delegatorShares=${node.delegatorShares}`,
         );
       }
     }

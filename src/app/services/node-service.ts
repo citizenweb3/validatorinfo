@@ -49,9 +49,9 @@ const upsertNode = async (
     update: {
       accountAddress: accountAddress,
       rewardAddress: val.reward_address,
-      tokens: val.tokens,
+      ...(val.tokens && val.tokens !== '0' ? { tokens: val.tokens } : {}),
+      ...(val.delegator_shares && val.delegator_shares !== '0' ? { delegatorShares: val.delegator_shares } : {}),
       moniker: val.description.moniker,
-      delegatorShares: val.delegator_shares,
       details: val.description.details,
       securityContact: val.description.security_contact,
       jailed: val.jailed,

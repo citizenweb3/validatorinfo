@@ -14,6 +14,9 @@ export type NetworkValidatorsWithNodes = Node & {
   } | null;
   chain: {
     name: string;
+    tokenomics: {
+      bondedTokens: string;
+    } | null;
     params: {
       coinDecimals: number;
       blocksWindow: number | null;
