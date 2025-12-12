@@ -35,6 +35,7 @@ import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
+import updateValidatorsAztecLogos from '@/server/jobs/update-validators-aztec-logos';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
@@ -152,6 +153,9 @@ async function runTask() {
         break;
       case 'update-aztec-sequencer-stake':
         await updateAztecSequencerStake(chains);
+        break;
+      case 'update-validators-aztec-logos':
+        await updateValidatorsAztecLogos();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

@@ -1,18 +1,15 @@
 import { getAddress } from 'viem';
 
-import db from '@/db';
 import logger from '@/logger';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { fetchProviderMetadata } from '@/server/tools/chains/aztec/utils/fetch-provider-metadata';
 import { getProviderAttesters } from '@/server/tools/chains/aztec/utils/get-provider-attesters';
 import { getProviders } from '@/server/tools/chains/aztec/utils/get-providers';
-import providersMonikersData from '@/server/tools/chains/aztec/utils/providers_monikers.json';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
 import { getChainParams } from '@/server/tools/chains/params';
 import { NodeResult } from '@/server/types.d';
 
 const { logInfo, logError, logWarn } = logger('aztec-nodes');
-
-const AZTEC_PROVIDERS_API = 'https://d10cun7h2qqnvc.cloudfront.net/api/providers';
 
 interface AztecValidatorStats {
   address: string;
@@ -49,90 +46,6 @@ export interface ValidatorsStatsResponse {
   stats: {
     [address: string]: AztecValidatorStats;
   };
-}
-
-interface AztecProviderApiResponse {
-  providers: Array<{
-    id: string;
-    name: string;
-    commission: number;
-    delegators: number;
-    currentStake?: string; // Optional: not present in local JSON fallback file
-    totalStaked: string;
-    address: string;
-    description: string;
-    website: string;
-    logo_url: string;
-    email: string;
-    discord: string;
-  }>;
-}
-
-const fetchProviderMetadata = async (): Promise<Map<string, { name: string; website: string; description: string }>> => {
-  try {
-    logInfo('Attempting to fetch provider metadata from API');
-
-    const response = await fetch(AZTEC_PROVIDERS_API, {
-      headers: {
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Encoding': 'gzip, deflate, br, zstd',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Connection': 'keep-alive',
-        'Host': 'd10cun7h2qqnvc.cloudfront.net',
-        'Sec-Fetch-Dest': 'document',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'none',
-        'Sec-Fetch-User': '?1',
-        'Upgrade-Insecure-Requests': '1',
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:145.0) Gecko/20100101 Firefox/145.0',
-      },
-    });
-
-    if (!response.ok) {
-      logWarn(`Failed to fetch provider metadata from API: ${response.statusText}, falling back to local JSON`);
-      return loadProviderMetadataFromFile();
-    }
-
-    const data: AztecProviderApiResponse = await response.json();
-    const providerMetadata = new Map<string, { name: string; website: string; description: string }>();
-
-    for (const provider of data.providers) {
-      const checksummedAddress = getAddress(provider.address);
-      providerMetadata.set(checksummedAddress, {
-        name: provider.name,
-        website: provider.website || '',
-        description: provider.description || '',
-      });
-    }
-
-    logInfo(`Fetched ${providerMetadata.size} provider metadata entries from API`);
-    return providerMetadata;
-  } catch (e: any) {
-    logWarn(`Error fetching provider metadata from API: ${e.message}, falling back to local JSON`);
-    return loadProviderMetadataFromFile();
-  }
-}
-
-const loadProviderMetadataFromFile = (): Map<string, { name: string; website: string; description: string }> => {
-  try {
-    const data = providersMonikersData as AztecProviderApiResponse;
-    const providerMetadata = new Map<string, { name: string; website: string; description: string }>();
-
-    for (const provider of data.providers) {
-      const checksummedAddress = getAddress(provider.address);
-      providerMetadata.set(checksummedAddress, {
-        name: provider.name,
-        website: provider.website || '',
-        description: provider.description || '',
-      });
-    }
-
-    logInfo(`Loaded ${providerMetadata.size} provider metadata entries from local JSON file`);
-    return providerMetadata;
-  } catch (e: any) {
-    logError(`Error loading provider metadata from local JSON file: ${e.message}`);
-    return new Map();
-  }
 }
 
 const getAztecNodes: GetNodesFunction = async (chain) => {
@@ -177,23 +90,21 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
           continue;
         }
 
-        const metadata = chainName === 'aztec'
-          ? providerMetadata.get(getAddress(provider.providerAdmin))
-          : undefined;
+        const metadata = chainName === 'aztec' ? providerMetadata.get(getAddress(provider.providerAdmin)) : undefined;
 
         const moniker = metadata?.name || `Provider ${providerId}`;
         const website = metadata?.website || '';
         const details = metadata?.description || '';
 
         nodes.push({
-          operator_address: attesterAddress,
-          account_address: provider.providerAdmin,
-          reward_address: provider.providerRewardsRecipient,
+          operator_address: getAddress(attesterAddress),
+          account_address: getAddress(provider.providerAdmin),
+          reward_address: getAddress(provider.providerRewardsRecipient),
           delegator_shares: '0',
           tokens: '0',
           consensus_pubkey: {
             '@type': 'aztec/AttesterAddress',
-            key: attesterAddress,
+            key: getAddress(attesterAddress),
           },
           jailed: false,
           status: 'BOND_STATUS_BONDED',
@@ -206,7 +117,7 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
             update_time: new Date().toISOString(),
           },
           description: {
-            identity: provider.providerAdmin,
+            identity: getAddress(provider.providerAdmin),
             moniker: moniker,
             website: website,
             security_contact: '',

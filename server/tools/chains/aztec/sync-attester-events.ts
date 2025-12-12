@@ -1,4 +1,4 @@
-import { Abi } from 'viem';
+import { Abi, getAddress } from 'viem';
 
 import { eventsClient } from '@/db';
 import logger from '@/logger';
@@ -122,8 +122,8 @@ export const syncAttesterEvents = async (
                   transactionHash: event.transactionHash!,
                   logIndex: Number(event.logIndex!),
                   providerId: args.providerIdentifier.toString(),
-                  providerAddress: provider.providerAdmin,
-                  attesters: args.attesters,
+                  providerAddress: getAddress(provider.providerAdmin),
+                  attesters: args.attesters.map(a => getAddress(a)),
                   timestamp: new Date(Number(block.timestamp) * 1000),
                 },
               });

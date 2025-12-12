@@ -1,4 +1,4 @@
-import { Abi } from 'viem';
+import { Abi, getAddress } from 'viem';
 
 import { eventsClient } from '@/db';
 import logger from '@/logger';
@@ -125,9 +125,9 @@ export const syncStakedEvents = async (
                   transactionHash: event.transactionHash!,
                   logIndex: Number(event.logIndex!),
                   providerId: args.providerIdentifier.toString(),
-                  providerAddress: provider.providerAdmin,
-                  rollupAddress: args.rollupAddress,
-                  attesterAddress: args.attester,
+                  providerAddress: getAddress(provider.providerAdmin),
+                  rollupAddress: getAddress(args.rollupAddress),
+                  attesterAddress: getAddress(args.attester),
                   timestamp: new Date(Number(block.timestamp) * 1000),
                 },
               });
