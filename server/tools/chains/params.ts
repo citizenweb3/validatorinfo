@@ -851,6 +851,43 @@ const chainParams: Record<string, AddChainProps> = {
     tags: ['DeFi', 'L1', 'Cosmos Ecosystem', 'AMM', 'DEX', 'IBC', 'Tendermint', 'Staking', 'PoS'],
   },
 
+  oraichain: {
+    rang: 4,
+    name: 'oraichain',
+    prettyName: 'Oraichain',
+    shortDescription: 'AI-powered Layer 1 for Data Economy and oracle services bringing AI to blockchain',
+    chainId: 'Oraichain',
+    bech32Prefix: 'orai',
+    coinDecimals: 6,
+    coinGeckoId: 'oraichain-token',
+    coinType: 118,
+    denom: 'ORAI',
+    minimalDenom: 'uorai',
+    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/oraichain/images/orai-white.svg',
+    nodes: [
+      { type: 'grpc', url: 'grpc.orai.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.orai.citizenweb3.com' },
+      { type: 'rpc', url: 'https://rpc.orai.citizenweb3.com' },
+      { type: 'ws', url: 'wss://rpc.orai.citizenweb3.com/websocket' },
+
+      { type: 'rest', url: 'http://lcd.orai.io' },
+      { type: 'rpc', url: 'https://rpc.orai.io' },
+
+      { type: 'grpc', url: 'oraichain-grpc.publicnode.com:443' },
+      { type: 'rest', url: 'https://oraichain-rest.publicnode.com' },
+      { type: 'rpc', url: 'https://oraichain-rpc.publicnode.com:443' },
+      { type: 'ws', url: 'wss://oraichain-rpc.publicnode.com:443/websocket' },
+
+      { type: 'grpc', url: 'oraichain-mainnet-grpc.itrocket.net:443' },
+      { type: 'rest', url: 'https://oraichain-mainnet-api.itrocket.net' },
+    ],
+    mainRepo: 'https://github.com/oraichain/orai',
+    docs: 'https://docs.orai.io',
+    githubUrl: 'https://github.com/oraichain',
+    twitterUrl: 'https://twitter.com/oraichain',
+    tags: ['DeAI', 'Cosmos Ecosystem', 'AI Oracle', 'Data Marketplace', 'L1', 'IBC', 'Staking', 'PoS'],
+  },
+
   nomic: {
     rang: 5,
     name: 'nomic',
