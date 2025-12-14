@@ -1,3 +1,4 @@
+import './instrumentation';
 import { CronJob } from 'cron';
 import { Worker } from 'worker_threads';
 
@@ -98,7 +99,7 @@ const runServer = async () => {
     spawnTask(task.name, chains).catch((e) => logError(`Initial run error for task ${task.name}:`, e));
   });
 
-  const specialTasks = [
+  const specialTasks: Array<{ name: string; schedule: string }> = [
     { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'slashing-infos', schedule: timers.every10mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },

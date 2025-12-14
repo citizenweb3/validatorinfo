@@ -1,0 +1,186 @@
+// Grafana Alloy Configuration (River format)
+// Unified collector for Logs, Metrics, Traces, and Profiles
+
+// ============================================
+// OTLP Receivers (gRPC and HTTP)
+// ============================================
+
+otelcol.receiver.otlp "default" {
+  // gRPC receiver
+  grpc {
+    endpoint = "0.0.0.0:4317"
+  }
+
+  // HTTP receiver
+  http {
+    endpoint = "0.0.0.0:4318"
+  }
+
+  output {
+    metrics = [otelcol.processor.batch.default.input]
+    logs    = [otelcol.processor.batch.default.input]
+    traces  = [otelcol.processor.batch.default.input]
+  }
+}
+
+// ============================================
+// Batch Processor (for performance)
+// ============================================
+
+otelcol.processor.batch "default" {
+  timeout          = "5s"
+  send_batch_size  = 1024
+
+  output {
+    metrics = [otelcol.exporter.debug.metrics.input]
+    logs    = [otelcol.exporter.loki.default.input]
+    traces  = [otelcol.exporter.otlp.tempo.input]
+  }
+}
+
+// ============================================
+// Resource Processor (add common attributes)
+// ============================================
+
+// Removed invalid component otelcol.processor.resource
+
+// ============================================
+// Exporters
+// ============================================
+
+// Export Logs to Loki
+otelcol.exporter.loki "default" {
+  forward_to = [loki.write.default.receiver]
+}
+
+loki.write "default" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+
+  external_labels = {
+    cluster = "validatorinfo",
+  }
+}
+
+// Export Metrics to Debug (console output)
+otelcol.exporter.debug "metrics" {
+  verbosity           = "detailed"
+  sampling_initial    = 5
+  sampling_thereafter = 200
+}
+
+// Export Traces to Tempo
+otelcol.exporter.otlp "tempo" {
+  client {
+    endpoint = "tempo:4317"
+    tls {
+      insecure = true
+    }
+  }
+}
+
+// ============================================
+// Docker Logs Discovery and Collection
+// ============================================
+
+discovery.docker "containers" {
+  host = "unix:///var/run/docker.sock"
+}
+
+loki.source.docker "containers" {
+  host       = "unix:///var/run/docker.sock"
+  targets    = discovery.docker.containers.targets
+  forward_to = [loki.process.add_labels.receiver]
+}
+
+// ============================================
+// File-based Logs Collection (for Worker threads)
+// ============================================
+
+local.file_match "worker_logs" {
+  path_targets = [{
+    __address__ = "localhost",
+    __path__    = "/app/logs/*.log",
+    job         = "worker-logs",
+  }]
+}
+
+loki.source.file "worker_logs" {
+  targets    = local.file_match.worker_logs.targets
+  forward_to = [loki.process.worker_json.receiver]
+}
+
+// Process worker logs (already in JSON format)
+loki.process "worker_json" {
+  forward_to = [loki.write.default.receiver]
+
+  stage.json {
+    expressions = {
+      level       = "level",
+      label       = "label",
+      message     = "message",
+      trace_id    = "trace_id",
+      span_id     = "span_id",
+      timestamp   = "timestamp",
+    }
+  }
+
+  stage.labels {
+    values = {
+      level    = "",
+      label    = "",
+      trace_id = "",
+      span_id  = "",
+    }
+  }
+
+  stage.timestamp {
+    source = "timestamp"
+    format = "2006-01-02 15:04:05"
+  }
+}
+
+// Process and add labels to Docker logs
+loki.process "add_labels" {
+  forward_to = [loki.write.default.receiver]
+
+  stage.json {
+    expressions = {
+      level       = "level",
+      service     = "service",
+      trace_id    = "trace_id",
+      span_id     = "span_id",
+      message     = "message",
+    }
+  }
+
+  stage.labels {
+    values = {
+      level    = "",
+      service  = "",
+      trace_id = "",
+      span_id  = "",
+    }
+  }
+}
+
+// ============================================
+// Pyroscope Integration
+// ============================================
+// Profiling data is sent directly from apps to Pyroscope
+// No need for Alloy to proxy it
+
+// ============================================
+// Metrics Scraping (Self-monitoring)
+// ============================================
+// Disabled: metrics go to debug exporter instead
+
+// ============================================
+// Logging
+// ============================================
+
+logging {
+  level  = "info"
+  format = "json"
+}

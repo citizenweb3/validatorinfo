@@ -1,6 +1,8 @@
+import './server/instrumentation';
 import next from 'next';
 import { createServer } from 'node:http';
 import { Server } from 'socket.io';
+import { logger } from './src/logger-winston';
 
 import { ChatMessage } from '@/types';
 
@@ -62,10 +64,10 @@ app.prepare().then(() => {
 
   httpServer
     .once('error', (err) => {
-      console.error(err);
+      logger.error('Server error', { error: err.message, stack: err.stack });
       process.exit(1);
     })
     .listen(port, '0.0.0.0', () => {
-      console.log(`> Ready on ${hostname}:${port}`);
+      logger.info(`Server started`, { hostname, port, environment: process.env.NODE_ENV });
     });
 });

@@ -1,6 +1,8 @@
 import { Format } from 'logform';
 import winston from 'winston';
 import DailyRotateFile from 'winston-daily-rotate-file';
+import { trace, context } from '@opentelemetry/api';
+import { OpenTelemetryTransportV3 } from '@opentelemetry/winston-transport';
 
 const { createLogger, format, transports } = winston;
 const { combine, timestamp, printf, label, json } = format;
@@ -14,11 +16,24 @@ export type Logger = {
 
 const loggers: Record<string, Logger> = {};
 
+// Custom format to add OpenTelemetry trace context
+const addTraceContext = format((info) => {
+  const span = trace.getSpan(context.active());
+  if (span) {
+    const spanContext = span.spanContext();
+    info.trace_id = spanContext.traceId;
+    info.span_id = spanContext.spanId;
+    info.trace_flags = spanContext.traceFlags;
+  }
+  return info;
+});
+
 const getLogFormat = (customLabel: string): Format => {
   return combine(
+    addTraceContext(),
     label({ label: customLabel.toUpperCase() }),
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
-    printf(({ level, message, label, timestamp }) => {
+    printf(({ level, message, label, timestamp, trace_id, span_id }) => {
       let color = '\x1b[0m';
       switch (level) {
         case 'info':
@@ -36,13 +51,19 @@ const getLogFormat = (customLabel: string): Format => {
         default:
           break;
       }
-      return `${color}${timestamp} ${level.toUpperCase()}\t[${label}]\t${message}\x1b[0m`;
+      const traceInfo = trace_id ? ` [trace_id=${trace_id} span_id=${span_id}]` : '';
+      return `${color}${timestamp} ${level.toUpperCase()}\t[${label}]${traceInfo}\t${message}\x1b[0m`;
     }),
   );
 };
 
 const getFileLogFormat = (customLabel: string): Format => {
-  return combine(label({ label: customLabel }), timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }), json());
+  return combine(
+    addTraceContext(),
+    label({ label: customLabel }),
+    timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+    json()
+  );
 };
 
 const logger = (customLabel: string = 'default'): Logger => {
@@ -65,6 +86,8 @@ const logger = (customLabel: string = 'default'): Logger => {
         maxFiles: '14d',
         format: getFileLogFormat(customLabel),
       }),
+      // OpenTelemetry transport - sends logs to OTLP collector
+      new OpenTelemetryTransportV3(),
     ],
   });
 
