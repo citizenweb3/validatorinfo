@@ -10,6 +10,7 @@ networks:
 services:
   db:
     image: postgres:14-bullseye
+    container_name: validatorinfo-dev-db
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -27,7 +28,7 @@ services:
 
   events-db:
     image: postgres:14-bullseye
-    container_name: validatorinfo-events-db
+    container_name: validatorinfo-dev-events-db
     environment:
       POSTGRES_DB: ${EVENTS_POSTGRES_DB:-validatorinfo_events_db}
       POSTGRES_USER: ${EVENTS_POSTGRES_USER:-validatorinfo_events_user}
@@ -45,6 +46,7 @@ services:
 
   redis:
     image: redis:latest
+    container_name: validatorinfo-dev-redis
     ports:
       - "6371:6379"
     restart: unless-stopped
@@ -55,6 +57,7 @@ services:
       retries: 10
 
   main-migrations:
+    container_name: validatorinfo-dev-main-migrations
     build:
       context: .
       dockerfile: Dockerfile
@@ -78,6 +81,7 @@ services:
       - uploads_data:/app/uploads
 
   events-migrations:
+    container_name: validatorinfo-dev-events-migrations
     build:
       context: .
       dockerfile: Dockerfile
@@ -101,6 +105,7 @@ services:
       - uploads_data:/app/uploads
 
   init-chains:
+    container_name: validatorinfo-dev-init-chains
     build:
       context: .
       dockerfile: Dockerfile
@@ -131,6 +136,7 @@ services:
   # Alloy collector is in docker-compose-observability.yml
 
   frontend:
+    container_name: validatorinfo-dev-frontend
     build:
       context: .
       dockerfile: Dockerfile
@@ -177,6 +183,7 @@ services:
       - observability
 
   indexer:
+    container_name: validatorinfo-dev-indexer
     build:
       context: .
       dockerfile: Dockerfile
