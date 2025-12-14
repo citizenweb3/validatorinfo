@@ -31,7 +31,7 @@ const NetworkValidatorsList: FC<OwnProps> = async ({ chainId, sort, perPage, nod
         <NetworkValidatorsItem key={item.chainId + item.consensusPubkey} item={item} />
       ))}
       <tr>
-        <td colSpan={8} className="pt-4">
+        <td colSpan={9} className="pt-4">
           <TablePagination pageLength={pages} />
         </td>
       </tr>

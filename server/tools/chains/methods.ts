@@ -44,6 +44,7 @@ const chainMethods: Record<string, ChainMethods> = {
   atomone: atomoneChainMethods,
   union: cosmosChainMethods,
   axone: cosmosChainMethods,
+  oraichain: cosmosChainMethods,
 
   solana: solanaChainMethods,
   polkadot: polkadotChainMethods,

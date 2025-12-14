@@ -38,6 +38,8 @@ const chainMethods: ChainMethods = {
   getCirculatingTokensPublic: async () => null,
   getDelegatorsAmount: async () => [],
   getUnbondingTokens: async () => null,
+  getChainUptime: async () => null,
+  getRewardAddress: async () => [],
 };
 
 export default chainMethods;

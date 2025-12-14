@@ -33,6 +33,8 @@ export type ChainWithNodes = Chain & {
 
 export interface NodeResult {
   operator_address: string;
+  account_address?: string;
+  reward_address?: string;
   consensus_pubkey: ConsensusPubkey;
   jailed: boolean;
   status: BondStatus;

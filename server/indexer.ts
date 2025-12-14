@@ -56,14 +56,15 @@ const runServer = async () => {
   }
 
   const tasks = [
-    { name: 'sync-aztec-attester-events', schedule: timers.everyHour },
+    { name: 'sync-aztec-events', schedule: timers.every10mins },
     { name: 'prices', schedule: timers.every5mins },
-    { name: 'validators', schedule: timers.every10mins },
+    { name: 'validators', schedule: timers.everyHour },
+    { name: 'update-reward-address', schedule: timers.everyDay },
+    { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
     { name: 'chain-slashing-params', schedule: timers.everyDay },
-    { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-node-params', schedule: timers.everyDay },
     { name: 'community-tax', schedule: timers.everyDay },
     { name: 'wallets-amount', schedule: timers.everyDay },
@@ -114,6 +115,7 @@ const runServer = async () => {
     { name: 'check-nodes-health', schedule: timers.everyHour },
     { name: 'update-chain-rewards', schedule: timers.everyHour },
     { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
+    { name: 'update-validators-aztec-logos', schedule: timers.everyHour },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

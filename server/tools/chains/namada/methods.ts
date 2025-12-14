@@ -38,6 +38,7 @@ const chainMethods: ChainMethods = {
   getCirculatingTokensPublic: async () => null,
   getCommunityPool: async () => null,
   getUnbondingTokens: async () => null,
+  getRewardAddress: async () => [],
 };
 
 export default chainMethods;

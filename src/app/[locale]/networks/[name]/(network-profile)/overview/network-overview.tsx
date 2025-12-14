@@ -3,8 +3,7 @@ import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
-import nodeService from '@/services/node-service';
-
+import validatorService from '@/services/validator-service';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
@@ -15,8 +14,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
 
   const price = chain ? await chainService.getTokenPriceByChainId(chain?.id) : undefined;
 
-  const nodes = await nodeService.getNodesByChainId(chain?.id ?? 1);
-  const activeNodes = nodes?.filter((node) => node.jailed === false);
+  const activeValidators = chain ? await validatorService.getActiveValidatorsByChainId(chain?.id) : undefined;
 
   const percentOfCommunityPool =
     chain?.tokenomics?.communityPool && chain?.tokenomics?.totalSupply
@@ -31,22 +29,26 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   return (
     <div className="mt-5">
       <SubTitle text={t('Network Overview')} />
-      <div className="mt-2 flex w-full hover:bg-bgHover">
-        <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
-          {t('active validators')}
+      {activeValidators && (
+        <div className="mt-2 flex w-full hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('active validators')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {activeValidators.length}
+          </div>
         </div>
-        <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-          {activeNodes && activeNodes?.length > 0 ? activeNodes?.length : '0'}
+      )}
+      {chain?.params?.unbondingTime && (
+        <div className="mt-2 flex w-full hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('unbonding time')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {chain?.params?.unbondingTime ?? '-'}s
+          </div>
         </div>
-      </div>
-      <div className="mt-2 flex w-full hover:bg-bgHover">
-        <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
-          {t('unbonding time')}
-        </div>
-        <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-          {chain?.params?.unbondingTime ?? 600}s
-        </div>
-      </div>
+      )}
       {chain?.params?.communityTax !== null && chain?.params?.communityTax !== undefined && (
         <div className="mt-2 flex w-full hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">

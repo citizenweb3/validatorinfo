@@ -29,3 +29,23 @@ model AztecAttesterEvent {
   @@index([chainId, providerAddress], map: "aztec_attester_event_chain_provider_idx")
   @@map("aztec_attester_events")
 }
+
+model AztecStakedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  providerId      String   @map("provider_id") @db.VarChar(256)
+  providerAddress String?  @map("provider_address") @db.VarChar(256)
+  rollupAddress   String   @map("rollup_address") @db.VarChar(256)
+  attesterAddress String   @map("attester_address") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_staked_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_staked_event_chain_block_idx")
+  @@index([chainId, providerAddress], map: "aztec_staked_event_chain_provider_idx")
+  @@index([chainId, attesterAddress], map: "aztec_staked_event_chain_attester_idx")
+  @@map("aztec_staked_events")
+}

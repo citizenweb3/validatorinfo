@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { validatorNodesWithChainData } from '@/services/validator-service';
+import { NodeWithValidatorAndChain } from '@/services/node-service';
 
 interface OwnProps {
   permissions: {
@@ -12,7 +12,7 @@ interface OwnProps {
     msg: string;
     expiration: string;
   };
-  node?: validatorNodesWithChainData | undefined;
+  node: NodeWithValidatorAndChain | null;
 }
 
 const AuthzPermissionsDetails: FC<OwnProps> = ({ permissions, node }) => {

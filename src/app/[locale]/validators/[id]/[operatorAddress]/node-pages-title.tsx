@@ -7,11 +7,12 @@ import PageTitle from '@/components/common/page-title';
 import icons from '@/components/icons';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 import Link from 'next/link';
+import { NodeWithValidatorAndChain } from '@/services/node-service';
 
 interface OwnProps {
   locale: string;
   page: string;
-  node?: validatorNodesWithChainData | undefined;
+  node: NodeWithValidatorAndChain | null;
 }
 
 const NodePagesTitle: FC<OwnProps> = async ({ locale, page, node }) => {

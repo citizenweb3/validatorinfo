@@ -48,6 +48,8 @@ const chainMethods: ChainMethods = {
   getInflationRate,
   getDelegatorsAmount: async () => [],
   getUnbondingTokens: async () => null,
+  getChainUptime: async () => null,
+  getRewardAddress: async () => [],
 };
 
 export default chainMethods;

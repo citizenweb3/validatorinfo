@@ -7,11 +7,14 @@ import { getCoingeckoData } from '@/server/jobs/get-coingecko-data';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
 import matchChainNodes from '@/server/jobs/match-chain-nodes';
+import syncAztecEvents from '@/server/jobs/sync-aztec-events';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateAverageDelegation from '@/server/jobs/update-average-delegation';
+import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
+import updateChainRewards from '@/server/jobs/update-chain-rewards';
 import updateChainSlashingParams from '@/server/jobs/update-chain-slashing-params';
 import updateChainStakingParams from '@/server/jobs/update-chain-staking-params';
 import { updateChainTvs } from '@/server/jobs/update-chain-tvs';
@@ -27,15 +30,15 @@ import updateNodesCommissions from '@/server/jobs/update-nodes-commissions';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
+import updateRewardAddress from '@/server/jobs/update-reward-address';
 import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
+import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
+import updateValidatorsAztecLogos from '@/server/jobs/update-validators-aztec-logos';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
-import updateChainRewards from '@/server/jobs/update-chain-rewards';
-import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
-import syncAztecAttesterEvents from '@/server/jobs/sync-aztec-attester-events';
 
 const { taskName, chains } = workerData;
 const { logInfo, logError } = logger(taskName);
@@ -142,8 +145,17 @@ async function runTask() {
       case 'update-twitter-followers-amount':
         await updateTwitterFollowersAmount(chains);
         break;
-      case 'sync-aztec-attester-events':
-        await syncAztecAttesterEvents();
+      case 'sync-aztec-events':
+        await syncAztecEvents();
+        break;
+      case 'update-reward-address':
+        await updateRewardAddress(chains);
+        break;
+      case 'update-aztec-sequencer-stake':
+        await updateAztecSequencerStake(chains);
+        break;
+      case 'update-validators-aztec-logos':
+        await updateValidatorsAztecLogos();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

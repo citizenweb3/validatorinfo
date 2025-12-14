@@ -24,12 +24,12 @@ const getTvs: GetTvsFunction = async (chain) => {
       try {
         totalSupply = await getTotalSupply(l1RpcUrls, chain.name as 'aztec' | 'aztec-testnet');
       } catch (e: any) {
-        logWarn(`Failed to fetch total supply: ${e.message}`);
+        logError(`Failed to fetch total supply: ${e.message}`);
       }
       try {
-        bondedTokens = await getBondedTokens(l1RpcUrls, chain.name as 'aztec' | 'aztec-testnet');
+        bondedTokens = await getBondedTokens(chain.name as 'aztec' | 'aztec-testnet');
       } catch (e: any) {
-        logWarn(`Failed to fetch total supply: ${e.message}`);
+        logError(`Failed to fetch total supply: ${e.message}`);
       }
 
       if (bondedTokens !== null && totalSupply !== null) {

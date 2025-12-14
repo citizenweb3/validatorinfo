@@ -20,7 +20,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     chainId: chain.chainId,
     name: chain.name,
     prettyName: chain.prettyName,
-    description: chain.description,
+    shortDescription: chain.shortDescription,
     logoUrl: chain.logoUrl,
     coinGeckoId: chain.coinGeckoId,
     twitterUrl: chain.twitterUrl,
@@ -28,6 +28,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     githubMainRepo: chain.mainRepo,
     githubUrl: chain.githubUrl,
     hasValidators: chain.hasValidators,
+    tags: chain.tags,
   };
 
   const existingChain = await db.chain.findUnique({

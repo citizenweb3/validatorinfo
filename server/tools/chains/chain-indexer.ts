@@ -4,6 +4,7 @@ import { ChainWithParams } from '@/services/chain-service';
 import { Prisma } from '.prisma/client';
 
 import ProposalCreateInput = Prisma.ProposalCreateInput;
+import { Chain } from '@prisma/client';
 
 export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
 
@@ -49,7 +50,7 @@ export interface AddChainProps {
   chainId: string;
   name: string;
   prettyName: string;
-  description?: string;
+  shortDescription?: string;
   denom: string;
   minimalDenom: string;
   logoUrl: string;
@@ -67,6 +68,7 @@ export interface AddChainProps {
   chainRegistry?: string;
   peers?: string[];
   seeds?: string[];
+  tags?: string[];
 }
 
 export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;
@@ -106,6 +108,17 @@ export interface DelegatorsAmount {
   amount: number;
 }
 
+export interface ChainUptime {
+  lastUptimeUpdated: Date;
+  uptimeHeight: number;
+  avgTxInterval: number;
+}
+
+export interface RewardAddress {
+  operatorAddress: string;
+  rewardAddresses: string;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
 export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
@@ -132,6 +145,8 @@ export type GetCirculatingTokensOnchain = (
 export type GetCirculatingTokensPublic = (chain: AddChainProps) => Promise<string | null>;
 export type GetDelegatorsAmount = (chain: AddChainProps) => Promise<DelegatorsAmount[]>;
 export type GetUnbondingTokens = (chain: AddChainProps) => Promise<string | null>;
+export type GetChainUptime = (dbChain: Chain) => Promise<ChainUptime | null>;
+export type GetRewardAddress = (chain: AddChainProps, dbChainId: number) => Promise<RewardAddress[]>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -155,4 +170,6 @@ export interface ChainMethods {
   getCirculatingTokensPublic: GetCirculatingTokensPublic;
   getDelegatorsAmount: GetDelegatorsAmount;
   getUnbondingTokens: GetUnbondingTokens;
+  getChainUptime: GetChainUptime;
+  getRewardAddress: GetRewardAddress;
 }

@@ -1,10 +1,11 @@
-import { ChainMethods } from '@/server/tools/chains/chain-indexer';
-import getNodes from '@/server/tools/chains/aztec/get-nodes';
+import getChainUptime from '@/server/tools/chains/aztec/get-chain-uptime';
 import getMissedBlocks from '@/server/tools/chains/aztec/get-missed-blocks';
-import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
+import getNodes from '@/server/tools/chains/aztec/get-nodes';
 import getSlashingParams from '@/server/tools/chains/aztec/get-slashing-params';
-import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
 import getTvs from '@/server/tools/chains/aztec/get-tvs';
+import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
+import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -38,6 +39,8 @@ const chainMethods: ChainMethods = {
   getCirculatingTokensPublic: async () => null,
   getDelegatorsAmount: async () => [],
   getUnbondingTokens: async () => null,
+  getChainUptime,
+  getRewardAddress: async () => [],
 };
 
 export default chainMethods;

@@ -17,6 +17,12 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
   const tokenDelegatorShares =
     item.chain.params?.coinDecimals != null ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals : undefined;
 
+  const activeTokens =
+    item.chain.params?.coinDecimals != null ? +item.tokens / 10 ** item.chain.params?.coinDecimals : undefined;
+
+  const bondedTokens = parseFloat(item.chain?.tokenomics?.bondedTokens || '0');
+  const votingPowerActive = bondedTokens !== 0 && activeTokens !== undefined ? (activeTokens / bondedTokens) * 100 : 0;
+
   const selfDelegation =
     item.chain.params?.coinDecimals != null
       ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
@@ -49,6 +55,14 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
             <div className="text-center">{tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}</div>
           </Tooltip>
           <div className="text-center">{item.votingPower.toFixed(2)}%</div>
+        </Link>
+      </td>
+      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+        <Link href={nodeLink}>
+          <Tooltip tooltip={activeTokens?.toLocaleString() ?? ''}>
+            <div className="text-center">{activeTokens ? formatCash(activeTokens) : ''}</div>
+          </Tooltip>
+          <div className="text-center">{votingPowerActive.toFixed(2)}%</div>
         </Link>
       </td>
       <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">

@@ -1,26 +1,39 @@
-import { Abi } from 'viem';
+import db from '@/db';
+import logger from '@/logger';
+import { AztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 
-import { AztecChainName, contracts, gseAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
-import { readContractWithFailover } from '@/server/utils/viem-client-with-failover';
+const { logError } = logger('get-tvs-aztec');
 
-export const getBondedTokens = async (rpcUrls: string[], chainName: AztecChainName): Promise<bigint> => {
-  const contractAddress = contracts[chainName].gseAddress;
-  const abi = gseAbis[chainName] as Abi;
-
+export const getBondedTokens = async (chainName: AztecChainName): Promise<bigint> => {
   try {
-    const bondedTokens = await readContractWithFailover<bigint>(
-      rpcUrls,
-      {
-        address: contractAddress as `0x${string}`,
-        abi: abi,
-        functionName: 'totalSupply',
-        args: [],
-      },
-      `${chainName}-node-stake`,
-    );
+    const dbChain = await db.chain.findUnique({
+      where: { chainId: chainName },
+    });
+
+    if (!dbChain) {
+      throw new Error(`Failed to get dbChain for ${chainName}`);
+    }
+
+    const nodes = await db.node.findMany({
+      where: { chainId: dbChain.id },
+    });
+
+    let bondedTokens = BigInt(0);
+
+    for (const node of nodes) {
+      try {
+        if (node.delegatorShares) {
+          bondedTokens += BigInt(node.delegatorShares);
+        }
+      } catch (e: any) {
+        logError(
+          `Invalid token value for node ${node.operatorAddress}: delegatorShares=${node.delegatorShares}`,
+        );
+      }
+    }
 
     return bondedTokens;
   } catch (e: any) {
-    throw new Error(`Failed to fetch total supply: ${e.message}`);
+    throw new Error(`Failed to fetch bonded tokens: ${e.message}`);
   }
 };

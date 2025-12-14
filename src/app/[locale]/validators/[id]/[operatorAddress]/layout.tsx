@@ -10,6 +10,7 @@ import { getNodeProfileTabs } from '@/components/common/tabs/tabs-data';
 import icons from '@/components/icons';
 import { Locale } from '@/i18n';
 import validatorService from '@/services/validator-service';
+import nodeService from '@/services/node-service';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
@@ -29,11 +30,9 @@ export default async function NodeProfileLayout({
   unstable_setRequestLocale(locale);
   const validatorId = parseInt(id);
   const nodeProfileTabs = getNodeProfileTabs(validatorId, operatorAddress);
-  const nodeData = await validatorService.getValidatorNodesWithChains(validatorId);
-  const node = nodeData.validatorNodesWithChainData.find((item) => item.operatorAddress === operatorAddress);
-  const validator = await validatorService.getById(validatorId);
+  const node = await nodeService.getNodeByAddressAndId(operatorAddress, validatorId);
 
-  const leftIconUrl = validator?.url ?? icons.AvatarIcon;
+  const leftIconUrl = node?.validator?.url ?? icons.AvatarIcon;
   const rightIconUrl = node?.chain.logoUrl ?? icons.AvatarIcon;
 
   return (

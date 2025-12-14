@@ -4,9 +4,10 @@ import { FC } from 'react';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import RoundedButton from '@/components/common/rounded-button';
 import { validatorNodesWithChainData } from '@/services/validator-service';
+import { NodeWithValidatorAndChain } from '@/services/node-service';
 
 interface OwnProps {
-  node?: validatorNodesWithChainData | undefined;
+  node: NodeWithValidatorAndChain | null;
 }
 
 const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {

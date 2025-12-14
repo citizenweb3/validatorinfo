@@ -16,7 +16,7 @@ const updateNodesRewards = async (chainNames: string[]) => {
       });
       if (!dbChain) {
         logError(`Chain ${chainParams.chainId} not found in database`);
-        return null;
+        continue;
       }
       logInfo(`${chainName} updating`);
       const nodesRewards = await chainMethods.getNodeRewards(chainParams);

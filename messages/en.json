@@ -411,6 +411,10 @@
         "name": "Voting Power",
         "hint": "The total amount secured with the validator, and the amount it represents in % out of the total amount of staked tokens"
       },
+      "Voting Power Active": {
+        "name": "Voting Power Active",
+        "hint": "The total amount of active tokens participation in consensus"
+      },
       "Commission": {
         "name": "Commission",
         "hint": "The % from the rewards generated that the validator receives for securing the network"
