@@ -4,6 +4,8 @@ import { Worker } from 'worker_threads';
 import logger from '@/logger';
 import chains from '@/server/tools/chains/chains';
 
+import './instrumentation';
+
 const timers = {
   every5mins: '*/5 * * * *',
   every10mins: '*/10 * * * *',
