@@ -8,6 +8,9 @@ import TabList from '@/components/common/tabs/tab-list';
 import { getNetworkProfileTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function NetworkProfileLayout({
   children,
   params: { locale, name },

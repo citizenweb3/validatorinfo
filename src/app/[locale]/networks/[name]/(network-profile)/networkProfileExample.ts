@@ -33,12 +33,6 @@ export const networkProfileExample = {
       tooltip: '',
     },
   ],
-  totalsMetrics: [
-    {
-      title: 'total amount of tx',
-      data: 0.71,
-    },
-  ],
   totalStatistics: [
     {
       title: 'healthy validators',

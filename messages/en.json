@@ -248,6 +248,9 @@
     "description": "I've crafted this Overview tab to give you the lowdown on this blockchain network—its mission, its health status, APR, TVL and more. Whether you're new to decentralized networks or a pro, this is your gateway to understanding it the decentralization, scalability and security level of this network. Want more? Dive into the other tabs or check out our Ecosystem A-Z Directory!",
     "amount of wallets": "Amount of Wallets",
     "total amount of tx": "Total Amount of Tx",
+    "total amount of blocks": "Total Amount of Blocks",
+    "total amount of slots": "Total Amount of Slots",
+    "total amount of epochs": "Total Amount of Epochs",
     "total supply": "Total Supply",
     "Network APR and TVS": "Network APR and TVS",
     "Network Overview": "Network Overview",
@@ -259,7 +262,8 @@
     "slashing": "Slashing",
     "comm pool value in usd": "Comm Pool Value in USD",
     "% of comm pool to total supply": "% of Comm Pool to Total Supply",
-    "average block time": "Average Block Time"
+    "average block time": "Average Block Time",
+    "slot duration": "Slot Duration"
   },
   "NetworkStatistics": {
     "title": "Blockchain Statistics Dashboard: Live Network Metrics",

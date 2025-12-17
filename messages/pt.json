@@ -248,6 +248,9 @@
     "description": "Criei esta aba de Visão Geral para fornecer a você todas as informações sobre esta rede blockchain — sua missão, estado, APR, TVL e muito mais. Seja você novo nas redes descentralizadas ou um profissional, esta é a sua porta de entrada para entender o nível de descentralização, escalabilidade e segurança desta rede. Quer saber mais? Explore as outras abas ou confira nosso Diretório A-Z do Ecossistema!",
     "amount of wallets": "Quantidade de Carteiras",
     "total amount of tx": "Montante Total de Tx",
+    "total amount of blocks": "Quantidade Total de Blocos",
+    "total amount of slots": "Quantidade Total de Slots",
+    "total amount of epochs": "Quantidade total de Epocas",
     "total supply": "Fornecimento Total",
     "Network APR and TVS": "APR e TVS de Rede",
     "Network Overview": "Visão Geral da Rede",
@@ -259,7 +262,8 @@
     "slashing": "Cortar",
     "comm pool value in usd": "Valor da Piscina Comunitária em USD",
     "% of comm pool to total supply": "% da Reserva Comunitária em Relação à Oferta Total",
-    "average block time": "Tempo Médio de Bloqueio"
+    "average block time": "Tempo Médio de Bloqueio",
+    "slot duration": "Duração do Slot"
   },
   "NetworkStatistics": {
     "title": "Painel de Estatísticas Blockchain: Métricas ao Vivo da Rede",
