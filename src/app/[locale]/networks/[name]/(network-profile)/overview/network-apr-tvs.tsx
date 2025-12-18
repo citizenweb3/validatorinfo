@@ -5,6 +5,7 @@ import SubTitle from '@/components/common/sub-title';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 import NetworkAprTvsChartClient from './network-apr-tvsChart';
+import NetworkTvsAztecChart from './network-tvs-aztec-chart';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
@@ -47,7 +48,11 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
         <div className="w-4/5">
-          <NetworkAprTvsChartClient />
+          {chain?.name === 'aztec' ? (
+            <NetworkTvsAztecChart chainName={chain.name} />
+          ) : (
+            <NetworkAprTvsChartClient />
+          )}
         </div>
       </div>
     </div>
