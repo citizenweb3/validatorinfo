@@ -1,17 +1,17 @@
 import db from '@/db';
 import logger from '@/logger';
-import { AztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 
 const { logError } = logger('get-tvs-aztec');
 
-export const getBondedTokens = async (chainName: AztecChainName): Promise<bigint> => {
+export const getBondedTokens = async (chain: AddChainProps): Promise<bigint> => {
   try {
     const dbChain = await db.chain.findUnique({
-      where: { chainId: chainName },
+      where: { chainId: chain.chainId },
     });
 
     if (!dbChain) {
-      throw new Error(`Failed to get dbChain for ${chainName}`);
+      throw new Error(`Failed to get dbChain for ${chain.name}`);
     }
 
     const nodes = await db.node.findMany({
@@ -26,9 +26,7 @@ export const getBondedTokens = async (chainName: AztecChainName): Promise<bigint
           bondedTokens += BigInt(node.delegatorShares);
         }
       } catch (e: any) {
-        logError(
-          `Invalid token value for node ${node.operatorAddress}: delegatorShares=${node.delegatorShares}`,
-        );
+        logError(`Invalid token value for node ${node.operatorAddress}: delegatorShares=${node.delegatorShares}`);
       }
     }
 
