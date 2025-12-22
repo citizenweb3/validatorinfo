@@ -110,6 +110,13 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
       </div>
       <div className="col-span-1 flex h-full flex-col items-end justify-end border-b border-bgSt">
         <RoundedButton
+          href={`/networks/${chainName}/blocks`}
+          className="mb-3 font-handjet text-lg active:mb-2"
+          contentClassName="px-[6rem]"
+        >
+          {t('Show Blocks')}
+        </RoundedButton>
+        <RoundedButton
           href={`/networks/${chainName}/tx`}
           className="mb-3 font-handjet text-lg active:mb-2"
           contentClassName="px-16"

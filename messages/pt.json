@@ -229,6 +229,7 @@
     "read more": "Leia Mais",
     "Others Links": "Outras ligações",
     "Show Transactions": "Mostrar Transacções",
+    "Show Blocks": "Mostrar Blocos",
     "Show Validators": "Mostrar Validadores",
     "Show Nodes": "Mostrar nós",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
@@ -1064,6 +1065,30 @@
       "Block Height": {
         "name": "Altura do Bloco",
         "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "TotalBlocksPage": {
+    "title": "Blockchain: Estatísticas de Blocos",
+    "description": "Eu preparei esta Tabela Resumo de Blocos para oferecer uma visão rápida e clara do que está acontecendo na rede. Ela traz dados em tempo real dos blocos. Quer ver mais detalhes? Basta clicar em qualquer bloco para ver as informações completas!",
+    "total blocks": "Total de Blocos",
+    "blocks duration": "Duração dos Blocos",
+    "Table": {
+      "Status": {
+        "name": "Status",
+        "hint": "Status de finalização"
+      },
+      "Block Hash": {
+        "name": "Hash do Bloco",
+        "hint": "Hash do bloco. Clique para ver detalhes"
+      },
+      "Timestamp": {
+        "name": "Data e Hora",
+        "hint": "Momento em que o bloco foi criado (UTC)"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "Número do bloco"
       }
     }
   },

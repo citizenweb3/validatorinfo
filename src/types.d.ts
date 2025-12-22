@@ -52,6 +52,7 @@ export interface PagesProps {
     | 'NetworkDevInfo.Apps'
     | 'NetworkDevInfo.DeveloperActivity'
     | 'TotalTxsPage'
+    | 'TotalBlocksPage'
     | 'TxInformationPage'
     | 'EcosystemsPage'
     | 'NodesPage'

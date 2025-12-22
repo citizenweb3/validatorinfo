@@ -228,6 +228,7 @@
     },
     "read more": "Read More",
     "Others Links": "Others Links",
+    "Show Blocks": "Show Blocks",
     "Show Transactions": "Show Transactions",
     "Show Validators": "Show Validators",
     "Show Nodes": "Show Nodes",
@@ -1088,6 +1089,30 @@
     "validator address": "Validator Address",
     "amount": "Amount",
     "auto claim reward": "Auto Claim Reward"
+  },
+  "TotalBlocksPage": {
+    "title": "Blockchain: Blocks Statistic",
+    "description": "I've put together this Blocks Summary Table to give you a quick, clear view of what's happening across the network. It's packed with real-time data of blocks. Want to dig deeper? Just click any block to see its full details!",
+    "total blocks": "Total Blocks",
+    "blocks duration": "Blocks Duration",
+    "Table": {
+      "Status": {
+        "name": "Status",
+        "hint": "Finalization Status"
+      },
+      "Block Hash": {
+        "name": "Block Hash",
+        "hint": "Block Hash. Click for details"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Time and date the block took place in UTC"
+      },
+      "Block Height": {
+        "name": "Block Height",
+        "hint": "The number of block"
+      }
+    }
   },
   "ProposalPage": {
     "title": "Governance Proposal",

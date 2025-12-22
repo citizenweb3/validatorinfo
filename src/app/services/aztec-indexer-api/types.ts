@@ -110,6 +110,7 @@ export interface AztecBlock {
   header: BlockHeader;
   /** Block body with transactions */
   body: BlockBody;
+
   /** Allow additional fields from API */
   [key: string]: unknown;
 }
@@ -186,6 +187,7 @@ export interface AztecPendingTx {
   hash: HexString;
   status: 'pending' | 'dropped';
   timestamp?: string;
+
   [key: string]: unknown;
 }
 
@@ -194,6 +196,7 @@ export interface AztecPendingTx {
  */
 export interface PendingTxsQueryParams {
   limit?: number;
+
   [key: string]: string | number | boolean | undefined;
 }
 
@@ -205,6 +208,7 @@ export interface AztecDroppedTx {
   hash: HexString;
   status: 'dropped';
   reason?: string;
+
   [key: string]: unknown;
 }
 
@@ -217,6 +221,7 @@ export interface AztecContractClass {
   artifactHash?: HexString;
   privateFunctionsRoot?: HexString;
   publicBytecodeCommitment?: HexString;
+
   [key: string]: unknown;
 }
 
@@ -232,6 +237,7 @@ export interface AztecContractInstance {
   contractClassId?: HexString;
   initializationHash?: HexString;
   publicKeysHash?: HexString;
+
   [key: string]: unknown;
 }
 
@@ -244,6 +250,7 @@ export interface AztecNetworkInfo {
   chainId?: number;
   rollupAddress?: HexString;
   l1ChainId?: number;
+
   [key: string]: unknown;
 }
 
@@ -257,6 +264,7 @@ export interface AztecNetworkErrors {
     timestamp?: string;
     [key: string]: unknown;
   }>;
+
   [key: string]: unknown;
 }
 
@@ -275,6 +283,7 @@ export interface SearchQueryParams {
 export interface AztecSearchResult {
   type?: 'block' | 'transaction' | 'contract' | 'unknown';
   result?: AztecBlock | AztecTxEffect | AztecContractInstance | unknown;
+
   [key: string]: unknown;
 }
 
@@ -294,6 +303,7 @@ export interface PublicLogsSearchParams {
 export interface AztecPublicLogsSearchResult {
   transactions?: AztecTxEffect[];
   total?: number;
+
   [key: string]: unknown;
 }
 

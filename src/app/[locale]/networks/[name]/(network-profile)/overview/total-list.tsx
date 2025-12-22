@@ -45,7 +45,7 @@ const AztecTxCardLoading: FC = () => {
 
 const AztecBlocksSlotsEpochs: FC<AztecMetricsProps> = async ({ chainName }) => {
   const t = await getTranslations('NetworkPassport');
-  const totalBlocks = await aztecIndexer.getLatestHeight();
+  const totalBlocks = await aztecIndexer.getLatestHeight({ cache: 'no-store' });
   const totalSlots = await aztecContractService.getLatestSlot(chainName);
   const totalEpochs = await aztecContractService.getLatestEpoch(chainName);
 
