@@ -1,11 +1,16 @@
-import JsonTxInformation from '@/app/networks/[name]/tx/[hash]/json/json-tx-information';
+import JsonBlockInformation from '@/app/networks/[name]/blocks/[hash]/json/json-block-information';
+import { NextPageWithLocale } from '@/i18n';
 
-const TxInformationJson = async () => {
+interface PageProps {
+  params: NextPageWithLocale & { name: string; hash: string };
+}
+
+const BlockInformationJson: NextPageWithLocale<PageProps> = async ({ params: { hash } }) => {
   return (
     <div>
-      <JsonTxInformation />
+      <JsonBlockInformation hash={hash} />
     </div>
   );
 };
 
-export default TxInformationJson;
+export default BlockInformationJson;

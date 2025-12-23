@@ -54,6 +54,7 @@ export interface PagesProps {
     | 'TotalTxsPage'
     | 'TotalBlocksPage'
     | 'TxInformationPage'
+    | 'BlockInformationPage'
     | 'EcosystemsPage'
     | 'NodesPage'
     | 'NetworkValidatorsPage'

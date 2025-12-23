@@ -1,19 +1,19 @@
-import ExpandedTxInformation from '@/app/networks/[name]/tx/[hash]/expand/expanded-tx-information';
+import ExpandedBlockInformation from '@/app/networks/[name]/blocks/[hash]/expand/expanded-block-information';
 import { NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 
 interface PageProps {
-  params: NextPageWithLocale & { name: string };
+  params: NextPageWithLocale & { name: string; hash: string };
 }
 
-const TxInformationExpand: NextPageWithLocale<PageProps> = async ({ params: { name } }) => {
+const BlockInformationExpand: NextPageWithLocale<PageProps> = async ({ params: { name, hash } }) => {
   const chain = await chainService.getByName(name);
 
   return (
     <div>
-      <ExpandedTxInformation chain={chain} />
+      <ExpandedBlockInformation chain={chain} hash={hash} />
     </div>
   );
 };
 
-export default TxInformationExpand;
+export default BlockInformationExpand;

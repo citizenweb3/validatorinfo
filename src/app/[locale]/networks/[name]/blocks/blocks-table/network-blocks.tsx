@@ -3,7 +3,6 @@ import { FC } from 'react';
 
 import NetworkBlocksList from '@/app/networks/[name]/blocks/blocks-table/network-blocks-list';
 import TableHeaderItem from '@/components/common/table/table-header-item';
-import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {

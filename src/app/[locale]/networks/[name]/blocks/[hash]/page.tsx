@@ -1,7 +1,5 @@
-const TxInformationPage = () => {
-  return (
-    <></>
-  );
+const BlockInformationPage = () => {
+  return <></>;
 };
 
-export default TxInformationPage;
+export default BlockInformationPage;

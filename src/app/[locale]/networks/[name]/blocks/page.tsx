@@ -5,7 +5,6 @@ import NetworkBlocks from '@/app/networks/[name]/blocks/blocks-table/network-blo
 import PageTitle from '@/components/common/page-title';
 import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
-import { SortDirection } from '@/server/types';
 import chainService from '@/services/chain-service';
 
 export const dynamic = 'force-dynamic';
@@ -46,12 +45,7 @@ const TotalBlocksPage: NextPageWithLocale<PageProps> = async ({ params: { name, 
         }
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <NetworkBlocks
-        name={name}
-        page={'TotalBlocksPage'}
-        perPage={perPage}
-        currentPage={currentPage}
-      />
+      <NetworkBlocks name={name} page={'TotalBlocksPage'} perPage={perPage} currentPage={currentPage} />
     </div>
   );
 };
