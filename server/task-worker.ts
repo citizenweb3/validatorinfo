@@ -10,6 +10,7 @@ import matchChainNodes from '@/server/jobs/match-chain-nodes';
 import syncAztecEvents from '@/server/jobs/sync-aztec-events';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateAverageDelegation from '@/server/jobs/update-average-delegation';
+import updateAztecCoinbaseAddress from '@/server/jobs/update-aztec-coinbase-address';
 import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
@@ -153,6 +154,9 @@ async function runTask() {
         break;
       case 'update-aztec-sequencer-stake':
         await updateAztecSequencerStake(chains);
+        break;
+      case 'update-aztec-coinbase-address':
+        await updateAztecCoinbaseAddress();
         break;
       case 'update-validators-aztec-logos':
         await updateValidatorsAztecLogos();

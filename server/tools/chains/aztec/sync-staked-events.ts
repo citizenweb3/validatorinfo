@@ -114,6 +114,8 @@ export const syncStakedEvents = async (
               providerIdentifier: bigint;
               rollupAddress: `0x${string}`;
               attester: `0x${string}`;
+              coinbaseSplitContractAddress: `0x${string}`;
+              stakerImplementation: `0x${string}`;
             };
             const block = await client.getBlock({ blockNumber: event.blockNumber! });
 
@@ -128,6 +130,10 @@ export const syncStakedEvents = async (
                   providerAddress: getAddress(provider.providerAdmin),
                   rollupAddress: getAddress(args.rollupAddress),
                   attesterAddress: getAddress(args.attester),
+                  coinbaseSplitContractAddress: args.coinbaseSplitContractAddress
+                    ? getAddress(args.coinbaseSplitContractAddress)
+                    : null,
+                  stakerImplementation: args.stakerImplementation ? getAddress(args.stakerImplementation) : null,
                   timestamp: new Date(Number(block.timestamp) * 1000),
                 },
               });
