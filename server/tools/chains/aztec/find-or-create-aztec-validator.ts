@@ -68,7 +68,14 @@ export async function findOrCreateAztecValidator(
   } else {
     const currentProviderAddresses = (validator.providerAddresses as Record<string, string>) || {};
 
-    if (currentProviderAddresses[chainName] !== checksummedAdmin) {
+    const needsUpdate =
+      currentProviderAddresses[chainName] !== checksummedAdmin ||
+      validator.moniker !== moniker ||
+      validator.website !== website ||
+      validator.details !== details ||
+      validator.securityContact !== securityContact;
+
+    if (needsUpdate) {
       const updatedProviderAddresses = {
         ...currentProviderAddresses,
         [chainName]: checksummedAdmin,
@@ -78,9 +85,13 @@ export async function findOrCreateAztecValidator(
         where: { id: validator.id },
         data: {
           providerAddresses: updatedProviderAddresses,
+          moniker: moniker,
+          website: website,
+          details: details,
+          securityContact: securityContact,
         },
       });
-      logInfo(`Updated providerAddresses for validator "${moniker}" on ${chainName}`);
+      logInfo(`Updated validator "${moniker}" on ${chainName} (moniker, website, details, securityContact, providerAddresses)`);
     }
   }
 

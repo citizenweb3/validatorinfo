@@ -132,7 +132,10 @@ export const getBlocks = async (
  * });
  * ```
  */
-export const getBlockByHeight = async (height: number, options?: AztecIndexerRequestOptions): Promise<AztecBlock | null> => {
+export const getBlockByHeight = async (
+  height: number,
+  options?: AztecIndexerRequestOptions,
+): Promise<AztecBlock | null> => {
   logDebug(`Fetching block at height ${height}`);
   return safeRequest(
     () => client.get<AztecBlock>(`/l2/blocks/${height}`, null, options),
@@ -153,7 +156,10 @@ export const getBlockByHeight = async (height: number, options?: AztecIndexerReq
  * const block = await getBlockByHash('0xabc123...');
  * ```
  */
-export const getBlockByHash = async (hash: HexString, options?: AztecIndexerRequestOptions): Promise<AztecBlock | null> => {
+export const getBlockByHash = async (
+  hash: HexString,
+  options?: AztecIndexerRequestOptions,
+): Promise<AztecBlock | null> => {
   logDebug(`Fetching block with hash ${hash}`);
   return safeRequest(
     () => client.get<AztecBlock>(`/l2/blocks/${hash}`, null, options),
@@ -505,7 +511,10 @@ export const getPendingTxs = async (
  * console.log(`Status: ${pendingTx.status}`);
  * ```
  */
-export const getPendingTx = async (hash: HexString, options?: AztecIndexerRequestOptions): Promise<AztecPendingTx | null> => {
+export const getPendingTx = async (
+  hash: HexString,
+  options?: AztecIndexerRequestOptions,
+): Promise<AztecPendingTx | null> => {
   logDebug(`Fetching pending tx with hash ${hash}`);
   return safeRequest(
     () => client.get<AztecPendingTx>(`/l2/txs/${hash}`, null, options),
@@ -527,7 +536,10 @@ export const getPendingTx = async (hash: HexString, options?: AztecIndexerReques
  * console.log(`Dropped reason: ${droppedTx.reason}`);
  * ```
  */
-export const getDroppedTx = async (hash: HexString, options?: AztecIndexerRequestOptions): Promise<AztecDroppedTx | null> => {
+export const getDroppedTx = async (
+  hash: HexString,
+  options?: AztecIndexerRequestOptions,
+): Promise<AztecDroppedTx | null> => {
   logDebug(`Fetching dropped tx with hash ${hash}`);
   return safeRequest(
     () => client.get<AztecDroppedTx>(`/l2/dropped-txs/${hash}`, null, options),
@@ -659,7 +671,9 @@ export const getAverageFees = async (options?: AztecIndexerRequestOptions): Prom
  * console.log(`Average block time: ${averageBlockTime} ${unit || 'seconds'}`);
  * ```
  */
-export const getAverageBlockTime = async (options?: AztecIndexerRequestOptions): Promise<AverageBlockTimeResponse | null> => {
+export const getAverageBlockTime = async (
+  options?: AztecIndexerRequestOptions,
+): Promise<AverageBlockTimeResponse | null> => {
   logDebug('Fetching average block time');
   return safeRequest(
     () => client.get<AverageBlockTimeResponse>('/l2/stats/average-block-time', null, options),

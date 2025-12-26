@@ -119,6 +119,7 @@ const runServer = async () => {
     { name: 'update-chain-rewards', schedule: timers.everyHour },
     { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
     { name: 'update-validators-aztec-logos', schedule: timers.everyHour },
+    { name: 'update-aztec-coinbase-address', schedule: timers.in15MinEveryHour },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

@@ -1,7 +1,7 @@
 import prisma, { eventsClient } from '@/db';
 
 const AZTEC_DELEGATION_AMOUNT = 200_000;
-const START_DATE = new Date('2025-11-01');
+const START_DATE = new Date('2025-11-10');
 
 export type PeriodType = 'day' | 'week' | 'month' | 'year';
 
@@ -53,7 +53,7 @@ const calculateDailyTvs = (events: Array<{ timestamp: Date }>, totalSupply: numb
     eventsByDate.set(dateKey, currentCount + 1);
   });
 
-  const dataPoints: TvsDataPoint[] = [];
+  const stakedByDate = new Map<string, number>();
   let cumulativeStaked = 0;
 
   const sortedDates = Array.from(eventsByDate.keys()).sort();
@@ -61,16 +61,36 @@ const calculateDailyTvs = (events: Array<{ timestamp: Date }>, totalSupply: numb
   sortedDates.forEach((date) => {
     const eventsCount = eventsByDate.get(date) || 0;
     cumulativeStaked += eventsCount * AZTEC_DELEGATION_AMOUNT;
+    stakedByDate.set(date, cumulativeStaked);
+  });
 
-    const tvs = (cumulativeStaked / totalSupply) * 100;
+  const dataPoints: TvsDataPoint[] = [];
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  let currentDate = new Date(START_DATE);
+  currentDate.setHours(0, 0, 0, 0);
+
+  let lastStakedValue = 0;
+
+  while (currentDate <= today) {
+    const dateKey = currentDate.toISOString().split('T')[0];
+
+    if (stakedByDate.has(dateKey)) {
+      lastStakedValue = stakedByDate.get(dateKey)!;
+    }
+
+    const tvs = lastStakedValue > 0 ? (lastStakedValue / totalSupply) * 100 : 0;
 
     dataPoints.push({
-      date,
+      date: dateKey,
       tvs,
-      totalStaked: cumulativeStaked,
+      totalStaked: lastStakedValue,
       totalSupply,
     });
-  });
+
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
 
   return dataPoints;
 };

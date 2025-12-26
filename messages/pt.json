@@ -229,6 +229,7 @@
     "read more": "Leia Mais",
     "Others Links": "Outras ligações",
     "Show Transactions": "Mostrar Transacções",
+    "Show Blocks": "Mostrar Blocos",
     "Show Validators": "Mostrar Validadores",
     "Show Nodes": "Mostrar nós",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
@@ -1067,6 +1068,30 @@
       }
     }
   },
+  "TotalBlocksPage": {
+    "title": "Blockchain: Estatísticas de Blocos",
+    "description": "Eu preparei esta Tabela Resumo de Blocos para oferecer uma visão rápida e clara do que está acontecendo na rede. Ela traz dados em tempo real dos blocos. Quer ver mais detalhes? Basta clicar em qualquer bloco para ver as informações completas!",
+    "total blocks": "Total de Blocos",
+    "blocks duration": "Duração dos Blocos",
+    "Table": {
+      "Status": {
+        "name": "Status",
+        "hint": "Status de finalização"
+      },
+      "Block Hash": {
+        "name": "Hash do Bloco",
+        "hint": "Hash do bloco. Clique para ver detalhes"
+      },
+      "Timestamp": {
+        "name": "Data e Hora",
+        "hint": "Momento em que o bloco foi criado (UTC)"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "Número do bloco"
+      }
+    }
+  },
   "TxInformationPage": {
     "title": "Detalhes da Transação Blockchain: Informações Detalhadas da Transação",
     "description": "A página de Detalhes da Transação apresenta tudo o que você precisa saber sobre esta transação específica — seu hash único, dados em JSON, endereços do remetente e do destinatário, valor transferido, status, timestamp e taxas. É como um recibo detalhado da sua atividade no blockchain, oferecendo total transparência e tranquilidade. Quer explorar mais? Confira nosso Explorador de Histórico de Transações para obter insights avançados!",
@@ -1089,6 +1114,48 @@
     "amount": "Quantidade",
     "auto claim reward": "Reivindicação Automática de Recompensa",
     "Search by validator name and tx hash": "Pesquisa por nome do validador e hash tx"
+  },
+  "BlockInformationPage": {
+    "title": "Detalhes do Bloco Blockchain: Informações Detalhadas do Bloco",
+    "description": "A página de Detalhes do Bloco fornece tudo o que você precisa saber sobre este bloco específico — seu hash único, altura do bloco, status de finalização, contagem de transações, taxas de gás, timestamps e árvores de estado criptográficas. É como um instantâneo detalhado do blockchain neste momento específico, oferecendo total transparência nas operações da rede.",
+    "show all blocks": "Mostrar Todos os Blocos",
+    "block icon tooltip": "Informações do Bloco",
+    "block": "Bloco",
+    "finalized": "Finalizado",
+    "pending": "Pendente",
+    "block hash": "Hash do Bloco",
+    "block height": "Altura do Bloco",
+    "timestamp": "Marca de Tempo",
+    "finalization status": "Status de Finalização",
+    "transaction count": "Contagem de Transações",
+    "slot number": "Número do Slot",
+    "total fees": "Taxas Totais",
+    "total mana used": "Mana Total Usado",
+    "chain id": "ID da Rede",
+    "protocol version": "Versão do Protocolo",
+    "block producer": "Produtor do Bloco",
+    "fee recipient": "Destinatário da Taxa",
+    "fee per da gas": "Taxa por DA Gas",
+    "fee per l2 gas": "Taxa por L2 Gas",
+    "archive root": "Raiz do Arquivo",
+    "archive next leaf index": "Próximo Índice de Folha do Arquivo",
+    "last archive root": "Raiz do Arquivo Anterior",
+    "last archive next leaf index": "Próximo Índice de Folha Anterior",
+    "note hash tree root": "Raiz da Árvore de Hash de Notas",
+    "note hash tree next index": "Próximo Índice da Árvore de Notas",
+    "nullifier tree root": "Raiz da Árvore de Anuladores",
+    "nullifier tree next index": "Próximo Índice da Árvore de Anuladores",
+    "public data tree root": "Raiz da Árvore de Dados Públicos",
+    "public data tree next index": "Próximo Índice da Árvore de Dados Públicos",
+    "l1 to l2 message tree root": "Raiz da Árvore de Mensagens L1→L2",
+    "l1 to l2 message tree next index": "Próximo Índice da Árvore de Mensagens L1→L2",
+    "blobs hash": "Hash de Blobs",
+    "in hash": "Hash de Entrada",
+    "out hash": "Hash de Saída",
+    "Tabs": {
+      "Expand": "Expandir",
+      "JSON": "JSON"
+    }
   },
   "ProposalPage": {
     "title": "Proposta de Governança",

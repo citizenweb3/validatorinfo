@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
@@ -5,7 +6,15 @@ import SubTitle from '@/components/common/sub-title';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 import NetworkAprTvsChartClient from './network-apr-tvsChart';
-import NetworkTvsAztecChart from './network-tvs-aztec-chart';
+
+const NetworkTvsAztecChart = dynamic(() => import('./network-tvs-aztec-chart'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full items-center justify-center" style={{ height: '400px', backgroundColor: '#1E1E1E', borderRadius: '4px' }}>
+      <div className="font-sfpro text-lg text-white opacity-70">Loading chart...</div>
+    </div>
+  ),
+});
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;

@@ -230,6 +230,19 @@ export const getTxInformationTabs = (networkName: string, txHash: string): TabOp
   ];
 };
 
+export const getBlockInformationTabs = (networkName: string, blockHash: string): TabOptions[] => {
+  return [
+    {
+      name: 'Expand',
+      href: `/networks/${networkName}/blocks/${blockHash}/expand`,
+    },
+    {
+      name: 'JSON',
+      href: `/networks/${networkName}/blocks/${blockHash}/json`,
+    },
+  ];
+};
+
 export const libraryTabs: TabOptions[] = [
   { name: 'Developers', href: `/library/developers`, icon: icons.DevInfoIcon, iconHovered: icons.DevInfoIconHovered },
   { name: 'Validators', href: '/library/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered, },

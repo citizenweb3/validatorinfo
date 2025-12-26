@@ -12,9 +12,7 @@ interface OwnProps {
 
 const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
-
   const price = chain ? await chainService.getTokenPriceByChainId(chain?.id) : undefined;
-
   const activeValidators = chain ? await validatorService.getActiveValidatorsByChainId(chain?.id) : undefined;
 
   const percentOfCommunityPool =
@@ -29,7 +27,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
 
   let aztecAverageBlockTime: number | null = null;
   if (chain?.name === 'aztec') {
-    const blockTime = await aztecIndexer.getAverageBlockTime();
+    const blockTime = await aztecIndexer.getAverageBlockTime({ cache: 'no-store' });
     aztecAverageBlockTime = blockTime ? Number(blockTime) / 1000 : null;
   }
 

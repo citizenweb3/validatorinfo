@@ -4,6 +4,7 @@ import logger from '@/logger';
 
 import { AztecIndexerRequestOptions } from './types';
 
+
 const { logDebug, logError } = logger('aztec-indexer-client');
 
 type QueryParamValue = string | number | boolean | undefined | null;
@@ -115,7 +116,9 @@ const safeJsonParse = async <T>(response: Response, url: string): Promise<T> => 
 
   if (contentType && !contentType.includes('application/json')) {
     const text = await response.text().catch(() => '[unable to read response]');
-    throw new Error(`Failed to parse JSON response: Expected JSON, got content-type: ${contentType} (URL: ${url}, Status: ${response.status})`);
+    throw new Error(
+      `Failed to parse JSON response: Expected JSON, got content-type: ${contentType} (URL: ${url}, Status: ${response.status})`,
+    );
   }
 
   try {

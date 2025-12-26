@@ -4,7 +4,6 @@ import ValidatorsVotes from '@/app/networks/[name]/proposal/[proposalId]/votes/v
 import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
-import chainService from '@/services/chain-service';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
