@@ -34,15 +34,20 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
 
   const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
 
+  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(item.chain.name);
+  const hasTokens = BigInt(item.tokens) > BigInt(0);
+
+  const getStatusIcon = () => {
+    if (isAztecNetwork) {
+      return hasTokens ? icons.GreenSquareIcon : icons.YellowSquareIcon;
+    }
+    return item.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon;
+  };
+
   return (
     <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
       <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <Image
-          src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon}
-          alt={'node status'}
-          width={20}
-          height={20}
-        />
+        <Image src={getStatusIcon()} alt={'node status'} width={20} height={20} />
         <TableAvatar
           icon={item.validator?.url ?? icons.AvatarIcon}
           name={item.validator?.moniker ?? item.moniker}
@@ -112,7 +117,7 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
       <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
         <Link href={nodeLink}>
           <div className="flex items-center justify-center text-center">
-            {!item.jailed && <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />}
+            <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />
           </div>
         </Link>
       </td>
