@@ -277,6 +277,7 @@
     "healthy validators": "Healthy Validators",
     "Operator Distributions": "Operator Distribution",
     "active": "Active",
+    "inactive": "Inactive",
     "jailed": "Jailed",
     "Social": "Social",
     "price of active user": "Price of Active User",

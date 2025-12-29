@@ -1,3 +1,4 @@
+import getActiveAttesterCountUtil from '@/server/tools/chains/aztec/utils/get-active-attester-count';
 import getCurrentEpoch from '@/server/tools/chains/aztec/utils/get-current-epoch';
 import getCurrentSlot from '@/server/tools/chains/aztec/utils/get-current-slot';
 
@@ -17,9 +18,18 @@ const getLatestEpoch = async (chainName: string) => {
   return String(latestEpoch);
 };
 
+const getActiveAttesterCount = async (chainName: string) => {
+  const activeAttesterCount = await getActiveAttesterCountUtil(chainName);
+  if (!activeAttesterCount) {
+    return null;
+  }
+  return Number(activeAttesterCount);
+};
+
 const aztecContractService = {
   getLatestSlot,
   getLatestEpoch,
+  getActiveAttesterCount,
 };
 
 export default aztecContractService;

@@ -1,7 +1,9 @@
 import { getTranslations } from 'next-intl/server';
+import { Suspense } from 'react';
 
 import NetworkStatistics from '@/app/networks/[name]/(network-profile)/stats/network-statistics';
 import OperatorDistribution from '@/app/networks/[name]/(network-profile)/stats/operator-distribution';
+import OperatorDistributionSkeleton from '@/app/networks/[name]/(network-profile)/stats/operator-distribution-skeleton';
 import SocialStatistics from '@/app/networks/[name]/(network-profile)/stats/social-statistics';
 import TransactionVolumeChart from '@/app/networks/[name]/(network-profile)/stats/transaction-volume-chart';
 import PageTitle from '@/components/common/page-title';
@@ -37,7 +39,9 @@ const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({ params: { 
       <SocialStatistics chain={chain} />
       <SubTitle text={t('Transaction Volume')} />
       <TransactionVolumeChart />
-      <OperatorDistribution chainId={chain?.id ?? null} />
+      <Suspense fallback={<OperatorDistributionSkeleton />}>
+        <OperatorDistribution chain={chain} />
+      </Suspense>
     </div>
   );
 };
