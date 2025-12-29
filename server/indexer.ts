@@ -103,6 +103,7 @@ const runServer = async () => {
   const specialTasks: Array<{ name: string; schedule: string }> = [
     { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'update-aztec-sequencer-stake', schedule: timers.everyHour },
+    { name: 'update-aztec-coinbase-address', schedule: timers.everyHour },
     { name: 'slashing-infos', schedule: timers.every10mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
     { name: 'update-nodes-rewards', schedule: timers.everyHour },
@@ -119,7 +120,6 @@ const runServer = async () => {
     { name: 'update-chain-rewards', schedule: timers.everyHour },
     { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
     { name: 'update-validators-aztec-logos', schedule: timers.everyHour },
-    { name: 'update-aztec-coinbase-address', schedule: timers.in15MinEveryHour },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

@@ -1,3 +1,4 @@
+import getApr from '@/server/tools/chains/aztec/get-apr';
 import getChainUptime from '@/server/tools/chains/aztec/get-chain-uptime';
 import getMissedBlocks from '@/server/tools/chains/aztec/get-missed-blocks';
 import getNodeRewards from '@/server/tools/chains/aztec/get-nodes-rewards';
@@ -14,7 +15,7 @@ const chainMethods: ChainMethods = {
   getTvs,
   getMissedBlocks,
   getSlashingParams,
-  getApr: async () => 0,
+  getApr,
   getNodeParams,
   getProposals: async () => ({
     proposals: [],

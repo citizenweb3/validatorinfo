@@ -42,7 +42,6 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
       where: { chainId: dbChain.id },
       select: {
         operatorAddress: true,
-        rewardAddress: true,
       },
     });
 
@@ -53,32 +52,19 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
 
     logInfo(`${chainName}: Fetching rewards for ${nodes.length} nodes`);
 
-    // Statistics for logging
     let rewardsViaCoinbase = 0;
-    let rewardsViaRewardsAddress = 0;
     let rewardsViaOperatorAddress = 0;
     let nodesWithZeroRewards = 0;
 
     for (const node of nodes) {
       try {
         let operatorAddress: `0x${string}`;
-        let rewardsAddress: `0x${string}` | null = null;
 
         try {
           operatorAddress = getAddress(node.operatorAddress);
         } catch (error: any) {
           logError(`${chainName}: Invalid operator address ${node.operatorAddress}: ${error.message}`);
           continue;
-        }
-
-        if (node.rewardAddress) {
-          try {
-            rewardsAddress = getAddress(node.rewardAddress);
-          } catch (error: any) {
-            logWarn(
-              `${chainName}: Invalid reward address ${node.rewardAddress} for node ${operatorAddress}: ${error.message}`,
-            );
-          }
         }
 
         let coinbaseSplitAddress: `0x${string}` | null = null;
@@ -108,15 +94,14 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
 
         const addressesToTry: Array<{
           address: `0x${string}` | null;
-          type: 'coinbase' | 'rewards' | 'operator';
+          type: 'coinbase' | 'operator';
         }> = [
           { address: coinbaseSplitAddress, type: 'coinbase' },
-          { address: rewardsAddress, type: 'rewards' },
           { address: operatorAddress, type: 'operator' },
         ];
 
         let finalRewards = '0';
-        let successfulAddressType: 'coinbase' | 'rewards' | 'operator' | null = null;
+        let successfulAddressType: 'coinbase' | 'operator' | null = null;
 
         for (const { address, type } of addressesToTry) {
           if (!address) continue;
@@ -148,16 +133,12 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
           rewards: finalRewards,
         });
 
-        // Update statistics and log
         if (successfulAddressType && finalRewards !== '0') {
           if (successfulAddressType === 'coinbase') {
             rewardsViaCoinbase++;
             logInfo(
               `${chainName}: Node ${operatorAddress} has rewards ${finalRewards} via coinbase split address`,
             );
-          } else if (successfulAddressType === 'rewards') {
-            rewardsViaRewardsAddress++;
-            logInfo(`${chainName}: Node ${operatorAddress} has rewards ${finalRewards} via rewards address`);
           } else if (successfulAddressType === 'operator') {
             rewardsViaOperatorAddress++;
             logInfo(`${chainName}: Node ${operatorAddress} has rewards ${finalRewards} via operator address`);
@@ -176,7 +157,7 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
 
     logInfo(`${chainName}: Fetched rewards for ${nodesRewards.length} nodes`);
     logInfo(
-      `${chainName}: Rewards distribution - Coinbase: ${rewardsViaCoinbase}, Rewards address: ${rewardsViaRewardsAddress}, Operator address: ${rewardsViaOperatorAddress}, Zero rewards: ${nodesWithZeroRewards}`,
+      `${chainName}: Rewards distribution - Coinbase: ${rewardsViaCoinbase}, Operator address: ${rewardsViaOperatorAddress}, Zero rewards: ${nodesWithZeroRewards}`,
     );
     return nodesRewards;
   } catch (error: any) {
