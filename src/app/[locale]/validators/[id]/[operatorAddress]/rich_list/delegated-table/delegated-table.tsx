@@ -11,9 +11,10 @@ interface OwnProps extends PagesProps {
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
   chainName: string;
+  operatorAddress: string;
 }
 
-const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, currentPage }) => {
+const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, currentPage, operatorAddress }) => {
   return (
     <div>
       <div>
@@ -27,7 +28,13 @@ const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, cu
             <TableHeaderItem page={page} name="Block Height" sortField="tx" />
           </tr>
           </thead>
-          <DelegatedEventsList chainName={chainName} perPage={perPage} sort={sort} currentPage={currentPage} />
+          <DelegatedEventsList
+            chainName={chainName}
+            perPage={perPage}
+            sort={sort}
+            currentPage={currentPage}
+            operatorAddress={operatorAddress}
+          />
         </table>
       </div>
     </div>

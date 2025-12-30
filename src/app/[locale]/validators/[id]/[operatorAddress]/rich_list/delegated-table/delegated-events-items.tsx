@@ -14,16 +14,24 @@ interface OwnProps {
   chainName: string;
 }
 
-const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
+const isAztecChain = (chainName: string): boolean => {
+  return chainName === 'aztec' || chainName === 'aztec-testnet';
+};
 
-  const txLink = `/networks/${chainName}/tx/${item.txHash}`;
-  const accountLink = `/networks/${chainName}/address/${item.address}/passport`
+const getEtherscanTxLink = (txHash: string): string => {
+  return `https://etherscan.io/tx/${txHash}`;
+};
+
+const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
+  const isAztec = isAztecChain(chainName);
+  const txLink = isAztec ? getEtherscanTxLink(item.txHash) : `/networks/${chainName}/tx/${item.txHash}`;
+  const accountLink = `/networks/${chainName}/address/${item.address}/passport`;
 
   return (
     <tr className="group cursor-pointer hover:bg-bgHover">
       <td className="w-2/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
         <Link href={accountLink} className="flex justify-center">
-          <div className="text-center text-base font-sfpro">{cutHash({ value: item.address })}</div>
+          <div className="text-center text-base font-sfpro">{cutHash({ value: item.address, cutLength: 14 })}</div>
         </Link>
       </td>
       <td className="w-1/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
@@ -37,10 +45,25 @@ const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
         </Link>
       </td>
       <td className="w-1/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
-        <Link href={txLink} className="flex justify-center">
-          <div
-            className="text-center font-handjet text-lg underline underline-offset-4">{cutHash({ value: item.txHash })}</div>
-        </Link>
+        {isAztec ? (
+          <a
+            href={txLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center"
+            aria-label="View transaction on Etherscan"
+          >
+            <div className="text-center font-handjet text-lg underline underline-offset-4">
+              {cutHash({ value: item.txHash, cutLength: 14 })}
+            </div>
+          </a>
+        ) : (
+          <Link href={txLink} className="flex justify-center">
+            <div className="text-center font-handjet text-lg underline underline-offset-4">
+              {cutHash({ value: item.txHash })}
+            </div>
+          </Link>
+        )}
       </td>
       <td className="w-1/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
         <Link href={txLink} className="flex justify-center">

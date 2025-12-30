@@ -1,3 +1,5 @@
+import { getAddress } from 'viem';
+
 import prisma, { eventsClient } from '@/db';
 
 const AZTEC_DELEGATION_AMOUNT = 200_000;
@@ -11,6 +13,33 @@ export interface TvsDataPoint {
   totalStaked: number;
   totalSupply: number;
 }
+
+export interface StakedEventItem {
+  address: string;
+  amount: number;
+  happened: string;
+  txHash: string;
+  blockHeight: string;
+}
+
+const formatTimeAgo = (timestamp: Date): string => {
+  const now = new Date();
+  const diffMs = now.getTime() - timestamp.getTime();
+  const diffMins = Math.floor(diffMs / (1000 * 60));
+  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (diffMins < 1) {
+    return 'just now';
+  }
+  if (diffMins < 60) {
+    return `${diffMins} min. ago`;
+  }
+  if (diffHours < 24) {
+    return `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+  }
+  return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+};
 
 const getTotalSupply = async (chainName: string): Promise<number> => {
   const chain = await prisma.chain.findUnique({
@@ -162,8 +191,39 @@ const getTvsData = async (chainName: string, period: PeriodType = 'day'): Promis
   }
 };
 
-const aztecTvsService = {
-  getTvsData,
+const getStakedEventByAttester = async (attesterAddress: string): Promise<StakedEventItem | null> => {
+  try {
+    const checksumAddress = getAddress(attesterAddress);
+
+    const event = await eventsClient.aztecStakedEvent.findFirst({
+      where: {
+        attesterAddress: checksumAddress,
+      },
+      orderBy: {
+        timestamp: 'desc',
+      },
+    });
+
+    if (!event) {
+      return null;
+    }
+
+    return {
+      address: event.providerAddress ?? event.attesterAddress,
+      amount: AZTEC_DELEGATION_AMOUNT,
+      happened: formatTimeAgo(event.timestamp),
+      txHash: event.transactionHash,
+      blockHeight: event.blockNumber,
+    };
+  } catch (error) {
+    console.error('Error fetching staked event by attester:', error);
+    return null;
+  }
 };
 
-export default aztecTvsService;
+const aztecDbService = {
+  getTvsData,
+  getStakedEventByAttester,
+};
+
+export default aztecDbService;
