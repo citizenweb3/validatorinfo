@@ -34,8 +34,8 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
 
   const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
 
-  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(item.chain.name);
   const hasTokens = BigInt(item.tokens) > BigInt(0);
+  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(item.chain.name);
 
   const getStatusIcon = () => {
     if (isAztecNetwork) {

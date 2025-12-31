@@ -26,7 +26,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
       : undefined;
 
   let aztecAverageBlockTime: number | null = null;
-  if (chain?.name === 'aztec') {
+  if (chain?.name === 'aztec' || chain?.name === 'aztec-testnet') {
     const blockTime = await aztecIndexer.getAverageBlockTime({ cache: 'no-store' });
     aztecAverageBlockTime = blockTime ? Number(blockTime) / 1000 : null;
   }

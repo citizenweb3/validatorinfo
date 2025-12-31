@@ -198,6 +198,11 @@ model Node {
   consensusAddress String @default("") @map("consensus_address")
   uptime           Float?
 
+  // Aztec committee tracking
+  inCommittee    Boolean @default(false) @map("in_committee")
+  committeeEpoch BigInt? @map("committee_epoch")
+
+  @@index([chainId, inCommittee])
   @@map("nodes")
 }
 

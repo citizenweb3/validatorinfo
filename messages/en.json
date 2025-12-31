@@ -264,7 +264,8 @@
     "comm pool value in usd": "Comm Pool Value in USD",
     "% of comm pool to total supply": "% of Comm Pool to Total Supply",
     "average block time": "Average Block Time",
-    "slot duration": "Slot Duration"
+    "slot duration": "Slot Duration",
+    "epoch progress": "Epoch Progress"
   },
   "NetworkStatistics": {
     "title": "Blockchain Statistics Dashboard: Live Network Metrics",
@@ -289,7 +290,9 @@
   },
   "NetworkGovernance": {
     "title": "Governance Portal: Network Voting",
+    "aztec-title": "Governance Portal: Current Epoch Committee",
     "description": "The Governance tab uncovers how this network's decentralized governance works—active proposals, proposal voting records, delegator votes, and community input. It's all about seeing the blockchain's decision-making in action. Ready to join in? Explore our Validator A-Z List to meet the key players!",
+    "aztec-description": "Validators participating in the current epoch committee. Committee members are selected to propose and attest blocks.",
     "total": "Total",
     "total tooltip": "The combined amount of the proposals the network had, including failed, live, etc",
     "passed": "Passed",
@@ -305,7 +308,27 @@
     "remaining time": "Remaining Time",
     "no live proposals": "No Live Proposals",
     "more live proposals": "More Live Proposals",
-    "less live proposals": "Less Live Proposals"
+    "less live proposals": "Less Live Proposals",
+    "current epoch committee": "Current Epoch Committee",
+    "validator": "Validator",
+    "address": "Sequencer Address",
+    "reward address": "Reward Address",
+    "no committee members": "No committee members found for current epoch",
+    "attesters in committee": "attesters in committee",
+    "Table": {
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Address": {
+        "name": "Sequencer Address",
+        "hint": ""
+      },
+      "RewardAddress": {
+        "name": "Reward Address",
+        "hint": ""
+      }
+    }
   },
   "NetworkDevInfo": {
     "title": "Developer Activity: Web3 Contributors",
@@ -440,6 +463,10 @@
       "Infrastructure": {
         "name": "Infrastructure",
         "hint": "Does this validator provide public infrastructure for this network? RPC, Archive, etc. Click on the V to see details"
+      },
+      "Committee": {
+        "name": "Committee",
+        "hint": "Is this validator part of the current epoch committee? Committee members are selected to propose and attest blocks"
       },
       "Governance": {
         "name": "Governance",

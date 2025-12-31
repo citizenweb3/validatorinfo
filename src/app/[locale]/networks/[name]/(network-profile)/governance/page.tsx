@@ -10,6 +10,7 @@ import NetworkProposals
   from '@/app/networks/[name]/(network-profile)/governance/network-proposals-list/network-proposals';
 import SubDescription from '@/components/sub-description';
 import ProposalService from '@/services/proposal-service';
+import CommitteeTable from '@/app/networks/[name]/(network-profile)/governance/aztec-committee/committee-table';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -35,6 +36,21 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async (
   }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkGovernance' });
   const chain = await chainService.getByName(name);
+
+  const isAztecNetwork = name === 'aztec' || name === 'aztec-testnet';
+
+  if (isAztecNetwork && chain) {
+    const sortBy = (q.sortBy as string) ?? 'validator';
+    const order = (q.order as SortDirection) ?? 'asc';
+
+    return (
+      <div className="mb-6">
+        <PageTitle prefix={chain.prettyName ?? 'Network'} text={t('aztec-title')} />
+        <SubDescription text={t('aztec-description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+        <CommitteeTable chain={chain} sort={{ sortBy, order }} />
+      </div>
+    );
+  }
 
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;

@@ -7,6 +7,7 @@ import { getCoingeckoData } from '@/server/jobs/get-coingecko-data';
 import getNodes from '@/server/jobs/get-nodes';
 import { getPrices } from '@/server/jobs/get-prices';
 import matchChainNodes from '@/server/jobs/match-chain-nodes';
+import syncAztecCommittee from '@/server/jobs/sync-aztec-committee';
 import syncAztecEvents from '@/server/jobs/sync-aztec-events';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateAverageDelegation from '@/server/jobs/update-average-delegation';
@@ -160,6 +161,9 @@ async function runTask() {
         break;
       case 'update-validators-aztec-logos':
         await updateValidatorsAztecLogos();
+        break;
+      case 'sync-aztec-committee':
+        await syncAztecCommittee();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
