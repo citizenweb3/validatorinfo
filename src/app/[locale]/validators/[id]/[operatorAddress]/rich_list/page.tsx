@@ -46,6 +46,7 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
         perPage={perPage}
         currentPage={currentPage}
         sort={{ sortBy, order }}
+        operatorAddress={operatorAddress}
       />
     </div>
   );

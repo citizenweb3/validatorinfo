@@ -17,7 +17,7 @@ import { FC, useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 
 import { getAztecTvsData } from '@/actions/aztec-tvs';
-import { PeriodType, TvsDataPoint } from '@/services/aztec-tvs-service';
+import { PeriodType, TvsDataPoint } from '@/services/aztec-db-service';
 
 import ChartButtons from '../../../../comparevalidators/chart-buttons';
 

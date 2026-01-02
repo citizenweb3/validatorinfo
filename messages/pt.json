@@ -264,7 +264,8 @@
     "comm pool value in usd": "Valor da Piscina Comunitária em USD",
     "% of comm pool to total supply": "% da Reserva Comunitária em Relação à Oferta Total",
     "average block time": "Tempo Médio de Bloqueio",
-    "slot duration": "Duração do Slot"
+    "slot duration": "Duração do Slot",
+    "epoch progress": "Progresso da Época"
   },
   "NetworkStatistics": {
     "title": "Painel de Estatísticas Blockchain: Métricas ao Vivo da Rede",
@@ -277,6 +278,7 @@
     "healthy validators": "Validadores Saudáveis",
     "Operator Distributions": "Distribuição de Operadores",
     "active": "Ativo",
+    "inactive": "Inativo",
     "jailed": "Jailed",
     "Social": "Social",
     "price of active user": "Preço do usuário ativo",
@@ -288,7 +290,9 @@
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",
+    "aztec-title": "Portal de Governança: Comitê da Época Atual",
     "description": "A aba de Governança revela como funciona a governança descentralizada desta rede — propostas ativas, registros de votação das propostas, votos dos delegadores e contribuições da comunidade. Tudo se resume a ver o processo de tomada de decisão do blockchain em ação. Pronto para participar? Explore nossa lista de validadores de A a Z para conhecer os principais atores!",
+    "aztec-description": "Validadores que participam do comitê da época atual. Os membros do comitê são selecionados para propor e atestar blocos.",
     "total": "Total",
     "total tooltip": "O montante combinado das propostas que a rede tinha, incluindo propostas falhadas, em direto, etc.",
     "passed": "Aprovado",
@@ -304,7 +308,27 @@
     "remaining time": "Tempo Restante",
     "no live proposals": "Sem Propostas em Direto",
     "more live proposals": "Mais Propostas em Direto",
-    "less live proposals": "Menos Propostas em Direto"
+    "less live proposals": "Menos Propostas em Direto",
+    "current epoch committee": "Comitê da Época Atual",
+    "validator": "Validador",
+    "address": "Sequencer Endereço",
+    "reward address": "Endereço de Recompensa",
+    "no committee members": "Nenhum membro do comitê encontrado para a época atual",
+    "attesters in committee": "atestadores no comitê",
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Address": {
+        "name": "Sequencer Endereço",
+        "hint": ""
+      },
+      "RewardAddress": {
+        "name": "Endereço de Recompensa",
+        "hint": ""
+      }
+    }
   },
   "NetworkDevInfo": {
     "title": "Atividade de Desenvolvedores: Contribuidores Web3",
@@ -439,6 +463,10 @@
       "Infrastructure": {
         "name": "Infraestrutura",
         "hint": "Este validador fornece infraestrutura pública para esta rede? RPC, Arquivo, etc. Clique no V para ver detalhes"
+      },
+      "Committee": {
+        "name": "Comitê",
+        "hint": "Este validador faz parte do comitê da época atual? Os membros do comitê são selecionados para propor e atestar blocos"
       },
       "Governance": {
         "name": "Governança",

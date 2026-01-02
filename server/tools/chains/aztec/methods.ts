@@ -1,5 +1,7 @@
+import getApr from '@/server/tools/chains/aztec/get-apr';
 import getChainUptime from '@/server/tools/chains/aztec/get-chain-uptime';
 import getMissedBlocks from '@/server/tools/chains/aztec/get-missed-blocks';
+import getNodeRewards from '@/server/tools/chains/aztec/get-nodes-rewards';
 import getNodes from '@/server/tools/chains/aztec/get-nodes';
 import getSlashingParams from '@/server/tools/chains/aztec/get-slashing-params';
 import getTvs from '@/server/tools/chains/aztec/get-tvs';
@@ -13,7 +15,7 @@ const chainMethods: ChainMethods = {
   getTvs,
   getMissedBlocks,
   getSlashingParams,
-  getApr: async () => 0,
+  getApr,
   getNodeParams,
   getProposals: async () => ({
     proposals: [],
@@ -30,7 +32,7 @@ const chainMethods: ChainMethods = {
     participationRate: null,
     quorumThreshold: null,
   }),
-  getNodeRewards: async () => [],
+  getNodeRewards,
   getNodeCommissions: async () => [],
   getCommunityPool: async () => null,
   getActiveSetMinAmount: async () => null,

@@ -26,6 +26,23 @@ export type NetworkValidatorsWithNodes = Node & {
   totalSlots: number | null;
 };
 
+export type CommitteeMember = {
+  operatorAddress: string;
+  rewardAddress: string | null;
+  moniker: string;
+  tokens: string;
+  validator: {
+    id: number;
+    url: string | null;
+    moniker: string;
+  } | null;
+  chain: {
+    params: {
+      coinDecimals: number;
+    } | null;
+  };
+};
+
 const getAll = async (
   ecosystems: string[],
   skip: number,
@@ -257,6 +274,53 @@ const getAllLight = async () => {
   return db.chain.findMany({});
 };
 
+const getCommitteeMembers = async (
+  chainId: number,
+  sortBy: string = 'validator',
+  order: SortDirection = 'asc',
+): Promise<CommitteeMember[]> => {
+  const orderBy =
+    sortBy === 'validator'
+      ? { validator: { moniker: order } }
+      : sortBy === 'address'
+        ? { operatorAddress: order }
+        : sortBy === 'rewardAddress'
+          ? { rewardAddress: order }
+          : { validator: { moniker: order } };
+
+  const nodes = await db.node.findMany({
+    where: {
+      chainId,
+      inCommittee: true,
+    },
+    select: {
+      operatorAddress: true,
+      rewardAddress: true,
+      moniker: true,
+      tokens: true,
+      validator: {
+        select: {
+          id: true,
+          url: true,
+          moniker: true,
+        },
+      },
+      chain: {
+        select: {
+          params: {
+            select: {
+              coinDecimals: true,
+            },
+          },
+        },
+      },
+    },
+    orderBy,
+  });
+
+  return nodes;
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
@@ -265,6 +329,7 @@ const ChainService = {
   getListByEcosystem,
   getByName,
   getAllLight,
+  getCommitteeMembers,
 };
 
 export default ChainService;

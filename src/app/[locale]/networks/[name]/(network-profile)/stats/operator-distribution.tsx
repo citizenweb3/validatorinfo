@@ -3,15 +3,17 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
+import aztecContractService from '@/services/aztec-contracts-service';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import nodeService from '@/services/node-service';
 
 import PowerBarChart from './validatorVotingPercentage';
 
 interface OwnProps {
-  chainId: number | null;
+  chain: ChainWithParamsAndTokenomics | null;
 }
 
-const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
+const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkStatistics');
   const fontColors = {
     active: '#4FB848',
@@ -19,10 +21,22 @@ const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
     inactive: '#E5C46B',
   };
 
+  const nodes = chain?.id ? await nodeService.getNodesByChainId(chain.id) : null;
+
+  let activeNodesLength: number | null;
+  let inactiveNodesLength: number | null;
+
+  if (chain?.name === 'aztec' || chain?.name === 'aztec-testnet') {
+    activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+    const allStakedNodes = nodes?.filter((node) => node.delegatorShares && node.delegatorShares !== '0');
+    inactiveNodesLength = allStakedNodes && activeNodesLength ? allStakedNodes?.length - activeNodesLength : null;
+  } else {
+    const activeNodes = nodes?.filter((node) => node.jailed === false);
+    activeNodesLength = activeNodes ? activeNodes.length : null;
+    inactiveNodesLength = nodes && activeNodesLength ? nodes?.length - activeNodesLength : null;
+  }
+
   const data = generateData();
-  const nodes = chainId ? await nodeService.getNodesByChainId(chainId) : null;
-  const activeNodes = nodes?.filter((node) => node.jailed === false);
-  const jailedNodes = nodes?.filter((node) => node.jailed === true);
 
   return (
     <div className="mt-12">
@@ -35,16 +49,23 @@ const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
               style={{ color: fontColors['active'] }}
               className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg"
             >
-              {activeNodes?.length ?? '232'}
+              {activeNodesLength ?? 'N/A'}
             </div>
           </div>
           <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
-            <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">{t('jailed')}</div>
+            <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">
+              {chain?.name === 'aztec' || chain?.name === 'aztec-testnet' ? t('inactive') : t('jailed')}
+            </div>
             <div
-              style={{ color: fontColors['jailed'] }}
+              style={{
+                color:
+                  chain?.name === 'aztec' || chain?.name === 'aztec-testnet'
+                    ? fontColors['inactive']
+                    : fontColors['jailed'],
+              }}
               className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg"
             >
-              {jailedNodes?.length ?? '423'}
+              {inactiveNodesLength ?? 'N/A'}
             </div>
           </div>
         </div>
