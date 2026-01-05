@@ -265,7 +265,8 @@
     "% of comm pool to total supply": "% of Comm Pool to Total Supply",
     "average block time": "Average Block Time",
     "slot duration": "Slot Duration",
-    "epoch progress": "Epoch Progress"
+    "epoch progress": "Epoch Progress",
+    "committee size": "Committee Size"
   },
   "NetworkStatistics": {
     "title": "Blockchain Statistics Dashboard: Live Network Metrics",

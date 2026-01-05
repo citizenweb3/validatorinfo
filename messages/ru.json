@@ -265,7 +265,8 @@
     "% of comm pool to total supply": "% Коммьюнити Пула от Общего Объема Предложения",
     "average block time": "Среднее время блока",
     "slot duration": "Время слота",
-    "epoch progress": "Прогресс эпохи"
+    "epoch progress": "Прогресс эпохи",
+    "committee size": "Размер комитета"
   },
   "NetworkStatistics": {
     "title": "Панель статистики блокчейна: Живые показатели сети",
