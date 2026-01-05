@@ -12,6 +12,7 @@ import syncAztecEvents from '@/server/jobs/sync-aztec-events';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateAztecCoinbaseAddress from '@/server/jobs/update-aztec-coinbase-address';
+import updateAztecL1Contracts from '@/server/jobs/update-aztec-l1-contracts';
 import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
@@ -164,6 +165,9 @@ async function runTask() {
         break;
       case 'sync-aztec-committee':
         await syncAztecCommittee();
+        break;
+      case 'update-aztec-l1-contracts':
+        await updateAztecL1Contracts();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
