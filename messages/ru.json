@@ -1065,6 +1065,14 @@
       "Commits": {
         "name": "Коммиты",
         "hint": ""
+      },
+      "Block": {
+        "name": "Блок [Время]",
+        "hint": ""
+      },
+      "Amount Slashed": {
+        "name": "Сумма слэша",
+        "hint": ""
       }
     },
     "show dropdown": "Показать События Слэшинга",

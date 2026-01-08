@@ -1065,10 +1065,19 @@
       "Commits": {
         "name": "Commits",
         "hint": ""
+      },
+      "Block": {
+        "name": "Block [Time]",
+        "hint": ""
+      },
+      "Amount Slashed": {
+        "name": "Amount Slashed",
+        "hint": ""
       }
     },
     "show dropdown": "Show Slashing Event",
-    "hide dropdown": "Hide Slashing Event"
+    "hide dropdown": "Hide Slashing Event",
+    "no-slashing-events": "No slashing events found for this validator"
   },
   "TotalTxsPage": {
     "title": "Blockchain: Transaction Activity",

@@ -1065,6 +1065,14 @@
       "Commits": {
         "name": "Compromissos",
         "hint": ""
+      },
+      "Block": {
+        "name": "Bloquear [Hora]",
+        "hint": ""
+      },
+      "Amount Slashed": {
+        "name": "Montante reduzido",
+        "hint": ""
       }
     },
     "show dropdown": "Evento de Corte de Espetáculo",

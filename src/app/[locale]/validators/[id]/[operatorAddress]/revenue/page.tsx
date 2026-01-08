@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Suspense } from 'react';
+import { FC, Suspense } from 'react';
 import NodeStakingCalculator from '@/app/validators/[id]/[operatorAddress]/revenue/node-staking-calculator';
 import StakingStats from '@/app/validators/[id]/[operatorAddress]/revenue/stacking-stats-table/staking-stats';
 import SubTitle from '@/components/common/sub-title';
@@ -13,6 +13,11 @@ import {
   SlashingEventsExampleInterface,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashingEventsExample';
 import SubDescription from '@/components/sub-description';
+import { getValidatorSlashingEvents } from '@/actions/get-validator-slashing-events';
+import {
+  convertToDisplayFormat,
+  AztecSlashingEventDisplay,
+} from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/aztec-slashing-types';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string; operatorAddress: string };
@@ -26,8 +31,27 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
   const node = list.find((item) => item.operatorAddress === operatorAddress);
 
   let price;
+  let slashingEvents: AztecSlashingEventDisplay[] = [];
+  let isAztecNetwork = false;
+
   if (node) {
     price = await chainService.getTokenPriceByChainId(node.chainId);
+
+    const chain = await chainService.getById(node.chainId);
+    if (chain && (chain.name === 'aztec' || chain.name === 'aztec-testnet')) {
+      isAztecNetwork = true;
+      const slashingData = await getValidatorSlashingEvents({
+        chainName: chain.name,
+        operatorAddress: operatorAddress,
+        limit: 10,
+      });
+
+      if (slashingData) {
+        slashingEvents = slashingData.events.map((event) =>
+          convertToDisplayFormat(event, slashingData.tokenPrice)
+        );
+      }
+    }
   }
 
   return (
@@ -41,11 +65,25 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
           </Suspense>
         </div>
         <div>
-          <TableDropdown<SlashingEventsExampleInterface[]>
-            page="NodeRevenuePage"
-            Table={SlashingEventsTable}
-            items={slashingEventsExample}
-          />
+          {isAztecNetwork && slashingEvents.length > 0 && (
+            <TableDropdown<AztecSlashingEventDisplay[]>
+              page="NodeRevenuePage"
+              Table={SlashingEventsTable as FC<{ items: AztecSlashingEventDisplay[] }>}
+              items={slashingEvents}
+            />
+          )}
+          {isAztecNetwork && slashingEvents.length === 0 && (
+            <div className="mt-4 rounded-lg bg-white p-6 text-center text-gray-500 dark:bg-gray-800">
+              {t('no-slashing-events')}
+            </div>
+          )}
+          {!isAztecNetwork && (
+            <TableDropdown<SlashingEventsExampleInterface[]>
+              page="NodeRevenuePage"
+              Table={SlashingEventsTable as FC<{ items: SlashingEventsExampleInterface[] }>}
+              items={slashingEventsExample}
+            />
+          )}
         </div>
       </div>
       <SubTitle text={t('Staking Stats')} />

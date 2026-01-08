@@ -1,7 +1,9 @@
 import db from '@/db';
 import logger from '@/logger';
 import { syncAttesterEvents } from '@/server/tools/chains/aztec/sync-attester-events';
+import { syncSlashingEvents } from '@/server/tools/chains/aztec/sync-slashing-events';
 import { syncStakedEvents } from '@/server/tools/chains/aztec/sync-staked-events';
+import { syncVoteEvents } from '@/server/tools/chains/aztec/sync-vote-events';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
 
@@ -10,7 +12,7 @@ const { logInfo, logError } = logger('sync-aztec-events');
 const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 
 const syncAztecEvents = async () => {
-  logInfo('Starting Aztec events sync (attester + staked)');
+  logInfo('Starting Aztec events sync (attester + staked + slashing + vote)');
 
   for (const chainName of AZTEC_CHAINS) {
     try {
@@ -33,41 +35,33 @@ const syncAztecEvents = async () => {
         continue;
       }
 
-      logInfo(`${chainName}: Syncing both event types in parallel`);
+      logInfo(`${chainName}: Syncing all event types in parallel`);
 
-      // Run both sync functions in parallel using allSettled
       const results = await Promise.allSettled([
         syncAttesterEvents(chainName, dbChain, l1RpcUrls),
         syncStakedEvents(chainName, dbChain, l1RpcUrls),
+        syncSlashingEvents(chainName, dbChain, l1RpcUrls),
+        syncVoteEvents(chainName, dbChain, l1RpcUrls),
       ]);
 
-      // Process attester events result
-      if (results[0].status === 'fulfilled') {
-        const attesterResult = results[0].value;
-        if (attesterResult.success) {
-          logInfo(
-            `${chainName}: ✓ Attester events - ${attesterResult.totalEvents} total (${attesterResult.newEvents} new, ${attesterResult.skippedEvents} duplicates)`,
-          );
-        } else {
-          logError(`${chainName}: ✗ Attester events failed - ${attesterResult.error}`);
-        }
-      } else {
-        logError(`${chainName}: ✗ Attester events crashed - ${results[0].reason?.message || results[0].reason}`);
-      }
+      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote'];
 
-      // Process staked events result
-      if (results[1].status === 'fulfilled') {
-        const stakedResult = results[1].value;
-        if (stakedResult.success) {
-          logInfo(
-            `${chainName}: ✓ Staked events - ${stakedResult.totalEvents} total (${stakedResult.newEvents} new, ${stakedResult.skippedEvents} duplicates)`,
-          );
+      results.forEach((result, index) => {
+        const eventType = eventTypes[index];
+
+        if (result.status === 'fulfilled') {
+          const syncResult = result.value;
+          if (syncResult.success) {
+            logInfo(
+              `${chainName}: ✓ ${eventType} events - ${syncResult.totalEvents} total (${syncResult.newEvents} new, ${syncResult.skippedEvents} duplicates)`,
+            );
+          } else {
+            logError(`${chainName}: ✗ ${eventType} events failed - ${syncResult.error}`);
+          }
         } else {
-          logError(`${chainName}: ✗ Staked events failed - ${stakedResult.error}`);
+          logError(`${chainName}: ✗ ${eventType} events crashed - ${result.reason?.message || result.reason}`);
         }
-      } else {
-        logError(`${chainName}: ✗ Staked events crashed - ${results[1].reason?.message || results[1].reason}`);
-      }
+      });
 
       logInfo(`${chainName}: Sync complete`);
     } catch (e: any) {

@@ -53,11 +53,54 @@ const getListByChainName = async (chainName: string): Promise<Proposal[]> => {
   return db.proposal.findMany({ where: { chainId: chain.id } });
 };
 
+const getProposalByChainNameAndId = async (
+  chainName: string,
+  proposalId: string,
+): Promise<Proposal | null> => {
+  const chain = await db.chain.findUnique({ where: { name: chainName } });
+  if (!chain) return null;
+
+  return db.proposal.findUnique({
+    where: {
+      chainId_proposalId: {
+        chainId: chain.id,
+        proposalId: proposalId,
+      },
+    },
+  });
+};
+
+const getLiveProposalsByChainId = async (chainId: number): Promise<Proposal[]> => {
+  return db.proposal.findMany({
+    where: {
+      chainId,
+      status: {
+        in: [
+          ProposalStatus.PROPOSAL_STATUS_VOTING_PERIOD,
+          ProposalStatus.PROPOSAL_STATUS_DEPOSIT_PERIOD,
+        ],
+      },
+    },
+    orderBy: { votingEndTime: 'asc' },
+  });
+};
+
+
+const getProposalsWithStats = async (chainId: number): Promise<Proposal[]> => {
+  return db.proposal.findMany({
+    where: { chainId },
+    orderBy: { submitTime: 'desc' },
+  });
+};
+
 const ProposalService = {
   getPastProposalsByChainId,
   getListByChainId,
   getProposalById,
   getListByChainName,
+  getProposalByChainNameAndId,
+  getLiveProposalsByChainId,
+  getProposalsWithStats,
 };
 
 export default ProposalService;

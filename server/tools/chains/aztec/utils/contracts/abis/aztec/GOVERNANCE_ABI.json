@@ -1,0 +1,1191 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "contract IERC20",
+        "name": "_asset",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_governanceProposer",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_beneficiary",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "Timestamp",
+                "name": "lockDelay",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lockAmount",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ProposeWithLockConfiguration",
+            "name": "proposeConfig",
+            "type": "tuple"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "votingDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "votingDuration",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "executionDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "gracePeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quorum",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "requiredYeaMargin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minimumVotes",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Configuration",
+        "name": "_configuration",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "CheckpointUnorderedInsertion",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "target",
+        "type": "address"
+      }
+    ],
+    "name": "Governance__CallFailed",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__CallerCannotBeSelf",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "governanceProposer",
+        "type": "address"
+      }
+    ],
+    "name": "Governance__CallerNotGovernanceProposer",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "self",
+        "type": "address"
+      }
+    ],
+    "name": "Governance__CallerNotSelf",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__CannotCallAsset",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__CannotWithdrawToAddressZero",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "have",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "required",
+        "type": "uint256"
+      }
+    ],
+    "name": "Governance__CheckpointedUintLib__InsufficientValue",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__CheckpointedUintLib__NotInPast",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ConfigurationLib__InvalidMinimumVotes",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ConfigurationLib__LockAmountTooBig",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ConfigurationLib__LockAmountTooSmall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ConfigurationLib__QuorumTooBig",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ConfigurationLib__QuorumTooSmall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ConfigurationLib__RequiredYeaMarginTooBig",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "name": "Governance__ConfigurationLib__TimeTooBig",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "name": "Governance__ConfigurationLib__TimeTooSmall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__DepositNotAllowed",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__GovernanceProposerCannotBeSelf",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "have",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "required",
+        "type": "uint256"
+      }
+    ],
+    "name": "Governance__InsufficientPower",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ProposalAlreadyDropped",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ProposalCannotBeDropped",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "Governance__ProposalDoesNotExists",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ProposalNotActive",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__ProposalNotExecutable",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__WithdrawalAlreadyClaimed",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "Governance__WithdrawalNotInitiated",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "Timestamp",
+        "name": "currentTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "Timestamp",
+        "name": "unlocksAt",
+        "type": "uint256"
+      }
+    ],
+    "name": "Governance__WithdrawalNotUnlockedYet",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "bits",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "SafeCastOverflowedUintDowncast",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "SafeERC20FailedOperation",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "beneficiary",
+        "type": "address"
+      }
+    ],
+    "name": "BeneficiaryAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "Timestamp",
+        "name": "time",
+        "type": "uint256"
+      }
+    ],
+    "name": "ConfigurationUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "depositor",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "onBehalfOf",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Deposit",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [],
+    "name": "FloodGatesOpened",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "governanceProposer",
+        "type": "address"
+      }
+    ],
+    "name": "GovernanceProposerUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ProposalDropped",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ProposalExecuted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "proposal",
+        "type": "address"
+      }
+    ],
+    "name": "Proposed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "support",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "VoteCast",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "withdrawalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "WithdrawFinalized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "withdrawalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "WithdrawInitiated",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "ASSET",
+    "outputs": [
+      {
+        "internalType": "contract IERC20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_beneficiary",
+        "type": "address"
+      }
+    ],
+    "name": "addBeneficiary",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_beneficiary",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "deposit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "dropProposal",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "execute",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_withdrawalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "finalizeWithdraw",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_proposalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getBallot",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "yea",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nay",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Ballot",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getConfiguration",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "Timestamp",
+                "name": "lockDelay",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lockAmount",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ProposeWithLockConfiguration",
+            "name": "proposeConfig",
+            "type": "tuple"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "votingDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "votingDuration",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "executionDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "gracePeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quorum",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "requiredYeaMargin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minimumVotes",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Configuration",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getProposal",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "Timestamp",
+                "name": "votingDelay",
+                "type": "uint256"
+              },
+              {
+                "internalType": "Timestamp",
+                "name": "votingDuration",
+                "type": "uint256"
+              },
+              {
+                "internalType": "Timestamp",
+                "name": "executionDelay",
+                "type": "uint256"
+              },
+              {
+                "internalType": "Timestamp",
+                "name": "gracePeriod",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "quorum",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "requiredYeaMargin",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "minimumVotes",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ProposalConfiguration",
+            "name": "config",
+            "type": "tuple"
+          },
+          {
+            "internalType": "enum ProposalState",
+            "name": "cachedState",
+            "type": "uint8"
+          },
+          {
+            "internalType": "contract IPayload",
+            "name": "payload",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "proposer",
+            "type": "address"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "creation",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "yea",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nay",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct Ballot",
+            "name": "summedBallot",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct Proposal",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getProposalState",
+    "outputs": [
+      {
+        "internalType": "enum ProposalState",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_withdrawalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getWithdrawal",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "unlocksAt",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "claimed",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Withdrawal",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "governanceProposer",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "initiateWithdraw",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "isAllBeneficiariesAllowed",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_beneficiary",
+        "type": "address"
+      }
+    ],
+    "name": "isPermittedInGovernance",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "openFloodgates",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      },
+      {
+        "internalType": "Timestamp",
+        "name": "_ts",
+        "type": "uint256"
+      }
+    ],
+    "name": "powerAt",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      }
+    ],
+    "name": "powerNow",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "proposalCount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract IPayload",
+        "name": "_proposal",
+        "type": "address"
+      }
+    ],
+    "name": "propose",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract IPayload",
+        "name": "_proposal",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      }
+    ],
+    "name": "proposeWithLock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "Timestamp",
+        "name": "_ts",
+        "type": "uint256"
+      }
+    ],
+    "name": "totalPowerAt",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "totalPowerNow",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "Timestamp",
+                "name": "lockDelay",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lockAmount",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct ProposeWithLockConfiguration",
+            "name": "proposeConfig",
+            "type": "tuple"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "votingDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "votingDuration",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "executionDelay",
+            "type": "uint256"
+          },
+          {
+            "internalType": "Timestamp",
+            "name": "gracePeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quorum",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "requiredYeaMargin",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minimumVotes",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Configuration",
+        "name": "_configuration",
+        "type": "tuple"
+      }
+    ],
+    "name": "updateConfiguration",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_governanceProposer",
+        "type": "address"
+      }
+    ],
+    "name": "updateGovernanceProposer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_proposalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_support",
+        "type": "bool"
+      }
+    ],
+    "name": "vote",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawalCount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
