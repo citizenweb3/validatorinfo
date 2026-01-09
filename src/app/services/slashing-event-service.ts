@@ -1,6 +1,6 @@
 import db, { eventsClient } from '@/db';
 import { SortDirection } from '@/server/types';
-import { isValidEthereumAddress } from '@/utils/chain-utils';
+import { checksumAddress } from 'viem';
 
 interface SlashingEventFilters {
   chainId?: number;
@@ -113,7 +113,7 @@ const getValidatorSlashingHistory = async (
   skip: number = 0,
   take: number = 10,
 ) => {
-  if (!isValidEthereumAddress(attesterAddress)) {
+  if (!checksumAddress(attesterAddress as `0x${string}`)) {
     throw new Error('Invalid Ethereum address format');
   }
 

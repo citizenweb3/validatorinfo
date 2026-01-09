@@ -1,4 +1,4 @@
-import { Chain, Proposal } from '@prisma/client';
+import { Proposal } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import Tooltip from '@/components/common/tooltip';
