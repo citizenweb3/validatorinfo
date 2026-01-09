@@ -55,10 +55,6 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals, chain }) => {
                            dataClassName={'mt-5'} />
         )}
       </div>
-      <div className="mt-20 flex items-center justify-between px-4 py-1 shadow-button mx-auto w-fit">
-        <div className="font-sfpro text-lg">{t('governance token distribution')}:</div>
-        <div className="ml-24 px-24 font-handjet text-xl text-highlight">$124.43K</div>
-      </div>
     </div>
   );
 };

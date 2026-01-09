@@ -51,3 +51,40 @@ model AztecStakedEvent {
   @@index([chainId, attesterAddress], map: "aztec_staked_event_chain_attester_idx")
   @@map("aztec_staked_events")
 }
+
+model AztecSlashedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  attester        String   @map("attester") @db.VarChar(256)
+  amount          String   @map("amount") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_slashed_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_slashed_event_chain_block_idx")
+  @@index([chainId, attester], map: "aztec_slashed_event_chain_attester_idx")
+  @@map("aztec_slashed_events")
+}
+
+model AztecVoteCastEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  proposalId      String   @map("proposal_id") @db.VarChar(256)
+  voter           String   @map("voter") @db.VarChar(256)
+  support         Boolean  @map("support")
+  amount          String   @map("amount") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_vote_cast_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_vote_cast_event_chain_block_idx")
+  @@index([chainId, proposalId], map: "aztec_vote_cast_event_chain_proposal_idx")
+  @@index([chainId, voter], map: "aztec_vote_cast_event_chain_voter_idx")
+  @@map("aztec_vote_cast_events")
+}

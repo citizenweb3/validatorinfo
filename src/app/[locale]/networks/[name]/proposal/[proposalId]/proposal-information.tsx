@@ -1,4 +1,4 @@
-import { Chain, Proposal } from '@prisma/client';
+import { Proposal } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import Tooltip from '@/components/common/tooltip';
@@ -23,7 +23,8 @@ const ProposalInformation: FC<OwnProps> = async ({ proposal, chainName }) => {
             </Tooltip>
           </div>
           <div className="flex flex-col justify-center">
-            {proposal?.status === 'PROPOSAL_STATUS_VOTING_PERIOD' ? (
+            {proposal?.status === 'PROPOSAL_STATUS_VOTING_PERIOD' ||
+            proposal?.status === 'PROPOSAL_STATUS_DEPOSIT_PERIOD' ? (
               <div className="flex flex-row font-handjet text-lg text-center mb-1">
                 <div className="rounded-full bg-primary shadow-button px-6 mr-6">{t('signaling')}</div>
                 <div className="rounded-full bg-proposalLabel shadow-button px-6">{t('on going')}</div>

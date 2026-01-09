@@ -75,6 +75,9 @@ model ChainParams {
   votingParticipationRate Float?  @map("voting_participation_rate")
   quorumThreshold         Float?  @map("quorum_threshold")
 
+  // L1 contracts (for Aztec networks)
+  l1ContractsAddresses String? @map("l1_contracts_addresses")
+
   chain Chain @relation("chain_params", fields: [chainId], references: [id])
 
   @@map("chain_params")

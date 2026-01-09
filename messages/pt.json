@@ -265,7 +265,8 @@
     "% of comm pool to total supply": "% da Reserva Comunitária em Relação à Oferta Total",
     "average block time": "Tempo Médio de Bloqueio",
     "slot duration": "Duração do Slot",
-    "epoch progress": "Progresso da Época"
+    "epoch progress": "Progresso da Época",
+    "committee size": "Dimensão da Comissão"
   },
   "NetworkStatistics": {
     "title": "Painel de Estatísticas Blockchain: Métricas ao Vivo da Rede",
@@ -1063,6 +1064,14 @@
       },
       "Commits": {
         "name": "Compromissos",
+        "hint": ""
+      },
+      "Block": {
+        "name": "Bloquear [Hora]",
+        "hint": ""
+      },
+      "Amount Slashed": {
+        "name": "Montante reduzido",
         "hint": ""
       }
     },

@@ -1,6 +1,8 @@
+import GOVERNANCE_ABI_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec-testnent/GOVERNANCE_ABI.json';
 import GSE_ABI_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec-testnent/GSE_ABI.json';
 import STAKING_REGISTRY_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec-testnent/STAKING_REGISTRY_ABI.json';
 import TOKEN_ABI_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec-testnent/TOKEN_ABI.json';
+import GOVERNANCE_ABI_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/GOVERNANCE_ABI.json';
 import GSE_ABI_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/GSE_ABI.json';
 import ROLLUP_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/ROLLUP_ABI.json';
 import ROLLUP_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/ROLLUP_ABI.json';
@@ -38,6 +40,11 @@ export const stakingRegistryAbis = {
 export const rollupAbis = {
   aztec: ROLLUP_AZTEC_MAINNET,
   'aztec-testnet': ROLLUP_AZTEC_TESTNET,
+};
+
+export const governanceAbis = {
+  aztec: GOVERNANCE_ABI_AZTEC_MAINNET,
+  'aztec-testnet': GOVERNANCE_ABI_AZTEC_TESTNET,
 };
 
 export const deploymentBlocks = {

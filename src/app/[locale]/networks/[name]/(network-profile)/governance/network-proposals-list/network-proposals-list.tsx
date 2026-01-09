@@ -32,7 +32,7 @@ const NetworkProposalsList: FC<OwnProps> = async ({ sort, perPage, currentPage =
         ))}
         <tr>
           <td colSpan={5} className="pt-4">
-            <TablePagination pageLength={pages} />
+            <TablePagination pageLength={pages} tableId="proposals" />
           </td>
         </tr>
         </tbody>
