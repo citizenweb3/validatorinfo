@@ -315,7 +315,12 @@
     "address": "Sequencer Address",
     "reward address": "Reward Address",
     "no committee members": "No committee members found for current epoch",
+    "show dropdown": "Show Slashing Events",
+    "hide dropdown": "Hide Slashing Events",
+    "no-slashing-events": "No slashing events found for this network",
     "attesters in committee": "attesters in committee",
+    "proposals-title": "Proposals",
+    "slashing-events-title": "Slashing Events",
     "Table": {
       "Validator": {
         "name": "Validator",
@@ -1073,6 +1078,14 @@
       "Amount Slashed": {
         "name": "Amount Slashed",
         "hint": ""
+      },
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Sequencer": {
+        "name": "Sequencer",
+        "hint": ""
       }
     },
     "show dropdown": "Show Slashing Event",
@@ -1233,7 +1246,20 @@
         "hint": ""
       }
     },
-    "ai generated summary": "AI Generated Summary"
+    "votes-title": "Votes",
+    "ai generated summary": "AI Generated Summary",
+    "voting-progress-title": "Voting Progress",
+    "for-label": "For",
+    "against-label": "Against",
+    "total-votes-label": "Total Votes",
+    "unique-voters-label": "Unique Voters",
+    "total-voting-power-label": "Total Voting Power",
+    "voter-column": "Voter",
+    "vote-column": "Vote",
+    "voting-power-column": "Voting Power",
+    "time-column": "Time",
+    "no-votes-found": "No votes found for this proposal",
+    "votes-table-caption": "List of votes cast on this proposal"
   },
   "LibraryPage": {
     "Tabs": {
@@ -1311,7 +1337,15 @@
     },
     "Governance": {
       "title": "Governance Participation: Votes and Network Impact",
-      "description": ""
+      "description": "",
+      "not-available-for-chain": "Governance information is only available for Aztec network",
+      "slashing-history-title": "Slashing History",
+      "voting-history-title": "Voting History",
+      "slashing-events-stat": "Slashing Events",
+      "total-votes-stat": "Total Votes",
+      "total-slashed-stat": "Total Slashed",
+      "no-governance-activity": "No governance activity found for this address",
+      "proposal-id-column": "Proposal ID"
     },
     "Analytics": {
       "title": "Account Analytics Dashboard: Insights into Blockchain Activity",

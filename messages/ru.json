@@ -315,7 +315,12 @@
     "address": "Адрес Сиквенсера",
     "reward address": "Адрес Вознаграждений",
     "no committee members": "Члены комитета для текущей эпохи не найдены",
+    "show dropdown": "Показать События Слэшинга",
+    "hide dropdown": "Скрыть События Слэшинга",
+    "no-slashing-events": "События слэшинга для этой сети не найдены",
     "attesters in committee": "аттестеров в комитете",
+    "proposals-title": "Предложения",
+    "slashing-events-title": "События слэшинга",
     "Table": {
       "Validator": {
         "name": "Валидатор",
@@ -1073,10 +1078,19 @@
       "Amount Slashed": {
         "name": "Сумма слэша",
         "hint": ""
+      },
+      "Validator": {
+        "name": "Валидатор",
+        "hint": ""
+      },
+      "Sequencer": {
+        "name": "Сиквенсер",
+        "hint": ""
       }
     },
     "show dropdown": "Показать События Слэшинга",
-    "hide dropdown": "Скрыть События Слэшинга"
+    "hide dropdown": "Скрыть События Слэшинга",
+    "no-slashing-events": "События слэшинга для этого валидатора не найдены"
   },
   "TotalTxsPage": {
     "title": "Блокчейн: Активность транзакций",
@@ -1233,7 +1247,20 @@
         "hint": ""
       }
     },
-    "ai generated summary": "Сгенерированное ИИ Резюме"
+    "votes-title": "Голоса",
+    "ai generated summary": "Сгенерированное ИИ Резюме",
+    "voting-progress-title": "Ход Голосования",
+    "for-label": "За",
+    "against-label": "Против",
+    "total-votes-label": "Всего Голосов",
+    "unique-voters-label": "Уникальных Голосующих",
+    "total-voting-power-label": "Общая Сила Голоса",
+    "voter-column": "Голосующий",
+    "vote-column": "Голос",
+    "voting-power-column": "Сила Голоса",
+    "time-column": "Время",
+    "no-votes-found": "Голоса по этому предложению не найдены",
+    "votes-table-caption": "Список голосов по этому предложению"
   },
   "LibraryPage": {
     "Tabs": {
@@ -1311,7 +1338,15 @@
     },
     "Governance": {
       "title": "Участие в управлении: Голоса и влияние на сеть",
-      "description": ""
+      "description": "",
+      "not-available-for-chain": "Информация об управлении доступна только для сети Aztec",
+      "slashing-history-title": "История слэшинга",
+      "voting-history-title": "История голосования",
+      "slashing-events-stat": "Случаи Слэшинга",
+      "total-votes-stat": "Всего Голосов",
+      "total-slashed-stat": "Всего Урезано",
+      "no-governance-activity": "Активность управления не найдена для этого адреса",
+      "proposal-id-column": "ID Предложения"
     },
     "Analytics": {
       "title": "Панель аналитики учетной записи: Обзор активности в блокчейне",

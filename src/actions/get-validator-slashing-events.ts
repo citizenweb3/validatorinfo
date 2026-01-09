@@ -1,10 +1,10 @@
 'use server';
 
-import SlashingEventService from '@/services/slashing-event-service';
 import chainService from '@/services/chain-service';
+import SlashingEventService from '@/services/slashing-event-service';
 
 export interface GetValidatorSlashingEventsParams {
-  chainName: string;
+  chainId: number;
   operatorAddress: string;
   limit?: number;
 }
@@ -17,6 +17,7 @@ export interface ValidatorSlashingEventsResult {
     amount: string;
     timestamp: Date;
     logIndex: number;
+    attester: string;
   }>;
   totalCount: number;
   totalSlashed: string;
@@ -26,25 +27,11 @@ export interface ValidatorSlashingEventsResult {
 export async function getValidatorSlashingEvents(
   params: GetValidatorSlashingEventsParams,
 ): Promise<ValidatorSlashingEventsResult | null> {
-  const { chainName, operatorAddress, limit = 10 } = params;
+  const { chainId, operatorAddress, limit = 10 } = params;
 
-  if (chainName !== 'aztec' && chainName !== 'aztec-testnet') {
-    return null;
-  }
+  const history = await SlashingEventService.getValidatorSlashingHistory(chainId, operatorAddress, 0, limit);
 
-  const chain = await chainService.getByName(chainName);
-  if (!chain) {
-    return null;
-  }
-
-  const history = await SlashingEventService.getValidatorSlashingHistory(
-    chain.id,
-    operatorAddress,
-    0,
-    limit,
-  );
-
-  const priceData = await chainService.getTokenPriceByChainId(chain.id);
+  const priceData = await chainService.getTokenPriceByChainId(chainId);
   const tokenPrice = priceData?.value;
 
   return {

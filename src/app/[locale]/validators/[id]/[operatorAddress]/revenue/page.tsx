@@ -1,23 +1,24 @@
 import { getTranslations } from 'next-intl/server';
 import { FC, Suspense } from 'react';
+
+import { getValidatorSlashingEvents } from '@/actions/get-validator-slashing-events';
 import NodeStakingCalculator from '@/app/validators/[id]/[operatorAddress]/revenue/node-staking-calculator';
-import StakingStats from '@/app/validators/[id]/[operatorAddress]/revenue/stacking-stats-table/staking-stats';
-import SubTitle from '@/components/common/sub-title';
-import { NextPageWithLocale } from '@/i18n';
-import chainService from '@/services/chain-service';
-import validatorService from '@/services/validator-service';
-import TableDropdown from '@/components/common/table-dropdown';
+import {
+  AztecSlashingEventDisplay,
+  convertToDisplayFormat,
+} from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/aztec-slashing-types';
 import SlashingEventsTable from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashing-events-table';
 import {
   slashingEventsExample,
   SlashingEventsExampleInterface,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashingEventsExample';
+import StakingStats from '@/app/validators/[id]/[operatorAddress]/revenue/stacking-stats-table/staking-stats';
+import SubTitle from '@/components/common/sub-title';
+import TableDropdown from '@/components/common/table-dropdown';
 import SubDescription from '@/components/sub-description';
-import { getValidatorSlashingEvents } from '@/actions/get-validator-slashing-events';
-import {
-  convertToDisplayFormat,
-  AztecSlashingEventDisplay,
-} from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/aztec-slashing-types';
+import { NextPageWithLocale } from '@/i18n';
+import chainService from '@/services/chain-service';
+import validatorService from '@/services/validator-service';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string; operatorAddress: string };
@@ -41,15 +42,13 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
     if (chain && (chain.name === 'aztec' || chain.name === 'aztec-testnet')) {
       isAztecNetwork = true;
       const slashingData = await getValidatorSlashingEvents({
-        chainName: chain.name,
+        chainId: chain.id,
         operatorAddress: operatorAddress,
         limit: 10,
       });
 
       if (slashingData) {
-        slashingEvents = slashingData.events.map((event) =>
-          convertToDisplayFormat(event, slashingData.tokenPrice)
-        );
+        slashingEvents = slashingData.events.map((event) => convertToDisplayFormat(event, slashingData.tokenPrice));
       }
     }
   }
@@ -73,7 +72,7 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
             />
           )}
           {isAztecNetwork && slashingEvents.length === 0 && (
-            <div className="mt-4 rounded-lg bg-white p-6 text-center text-gray-500 dark:bg-gray-800">
+            <div className="text-gray-500 dark:bg-gray-800 mt-4 rounded-lg bg-white p-6 text-center">
               {t('no-slashing-events')}
             </div>
           )}

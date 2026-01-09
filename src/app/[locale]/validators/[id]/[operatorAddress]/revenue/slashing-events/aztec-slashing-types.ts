@@ -5,6 +5,16 @@ export interface AztecSlashingEvent {
   amount: string;
   timestamp: Date;
   logIndex: number;
+  attester: string;
+  chainId?: number;
+  createdAt?: Date;
+  node?: {
+    operatorAddress: string;
+    validator: {
+      id: number;
+      moniker: string;
+    } | null;
+  } | null;
 }
 
 export interface AztecSlashingEventDisplay {
@@ -18,6 +28,14 @@ export interface AztecSlashingEventDisplay {
   };
   transactionHash: string;
   explorerUrl: string;
+  sequencer: {
+    address: string;
+    hasValidator: boolean;
+  };
+  validator: {
+    id: number;
+    moniker: string;
+  } | null;
 }
 
 export const convertToDisplayFormat = (event: AztecSlashingEvent, tokenPrice?: number): AztecSlashingEventDisplay => {
@@ -35,5 +53,10 @@ export const convertToDisplayFormat = (event: AztecSlashingEvent, tokenPrice?: n
     },
     transactionHash: event.transactionHash,
     explorerUrl: `https://etherscan.io/tx/${event.transactionHash}`,
+    sequencer: {
+      address: event.attester,
+      hasValidator: !!event.node?.validator,
+    },
+    validator: event.node?.validator || null,
   };
 };

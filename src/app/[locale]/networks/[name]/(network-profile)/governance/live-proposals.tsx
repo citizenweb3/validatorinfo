@@ -56,7 +56,9 @@ const LiveProposals: FC<OwnProps> = ({ proposals, chainName }) => {
   };
 
   const liveProposals = proposals.filter(
-    proposal => proposal.status === 'PROPOSAL_STATUS_VOTING_PERIOD',
+    (proposal) =>
+      proposal.status === 'PROPOSAL_STATUS_VOTING_PERIOD' ||
+      proposal.status === 'PROPOSAL_STATUS_DEPOSIT_PERIOD',
   );
 
   const proposalsToShow = showAll ? liveProposals : liveProposals.slice(0, 2);
@@ -81,15 +83,17 @@ const LiveProposals: FC<OwnProps> = ({ proposals, chainName }) => {
                         - {proposal.title}
                       </Link>
                     </div>
-                    <div>
-                      {t('proposer')}:&nbsp;
-                      <Link href="" className="underline underline-offset-3 font-handjet text-lg">
-                        {cutHash({
-                          value: 'cosmosvaloper1e859xaue4k2jzqw20cv6l7p3tmc378pc3k8g2u',
-                          cutLength: 10,
-                        })}
-                      </Link>
-                    </div>
+                    {chainName !== 'aztec' && chainName !== 'aztec-testnet' && (
+                      <div>
+                        {t('proposer')}:&nbsp;
+                        <Link href="" className="underline underline-offset-3 font-handjet text-lg">
+                          {cutHash({
+                            value: 'cosmosvaloper1e859xaue4k2jzqw20cv6l7p3tmc378pc3k8g2u',
+                            cutLength: 10,
+                          })}
+                        </Link>
+                      </div>
+                    )}
                     <div className="mt-1">
                       {t('voting start')}:&nbsp;
                       {proposal.votingStartTime && (

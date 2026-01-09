@@ -278,7 +278,9 @@ const getCommitteeMembers = async (
   chainId: number,
   sortBy: string = 'validator',
   order: SortDirection = 'asc',
-): Promise<CommitteeMember[]> => {
+  skip: number,
+  take: number,
+): Promise<{ members: CommitteeMember[]; pages: number }> => {
   const orderBy =
     sortBy === 'validator'
       ? { validator: { moniker: order } }
@@ -288,37 +290,48 @@ const getCommitteeMembers = async (
           ? { rewardAddress: order }
           : { validator: { moniker: order } };
 
-  const nodes = await db.node.findMany({
-    where: {
-      chainId,
-      inCommittee: true,
-    },
-    select: {
-      operatorAddress: true,
-      rewardAddress: true,
-      moniker: true,
-      tokens: true,
-      validator: {
-        select: {
-          id: true,
-          url: true,
-          moniker: true,
+  const where = {
+    chainId,
+    inCommittee: true,
+  };
+
+  if (skip !== undefined && take !== undefined) {
+    const nodes = await db.node.findMany({
+      where,
+      select: {
+        operatorAddress: true,
+        rewardAddress: true,
+        moniker: true,
+        tokens: true,
+        validator: {
+          select: {
+            id: true,
+            url: true,
+            moniker: true,
+          },
         },
-      },
-      chain: {
-        select: {
-          params: {
-            select: {
-              coinDecimals: true,
+        chain: {
+          select: {
+            params: {
+              select: {
+                coinDecimals: true,
+              },
             },
           },
         },
       },
-    },
-    orderBy,
-  });
+      orderBy,
+      skip,
+      take,
+    });
 
-  return nodes;
+    const count = await db.node.count({ where });
+    const pages = take ? Math.ceil(count / take) : 1;
+
+    return { members: nodes, pages };
+  } else {
+    return { members: [], pages: 0 };
+  }
 };
 
 const ChainService = {

@@ -1,5 +1,6 @@
-import { eventsClient } from '@/db';
+import db, { eventsClient } from '@/db';
 import { SortDirection } from '@/server/types';
+import { isValidEthereumAddress } from '@/utils/chain-utils';
 
 interface SlashingEventFilters {
   chainId?: number;
@@ -73,27 +74,36 @@ const getSlashingEvents = async (
 };
 
 const getSlashingStats = async (chainId: number): Promise<SlashingEventStats> => {
-  const result = await eventsClient.aztecSlashedEvent.aggregate({
-    where: { chainId },
-    _count: { id: true },
-    _min: { timestamp: true },
-    _max: { timestamp: true },
-  });
+  const [countResult, uniqueValidatorsResult, events] = await Promise.all([
+    eventsClient.aztecSlashedEvent.aggregate({
+      where: { chainId },
+      _count: { id: true },
+      _min: { timestamp: true },
+      _max: { timestamp: true },
+    }),
 
-  const events = await eventsClient.aztecSlashedEvent.findMany({
-    where: { chainId },
-    select: { attester: true, amount: true },
-  });
+    eventsClient.aztecSlashedEvent
+      .groupBy({
+        by: ['attester'],
+        where: { chainId },
+        _count: true,
+      })
+      .then((result) => result.length),
 
-  const uniqueValidators = new Set(events.map((e) => e.attester.toLowerCase())).size;
+    eventsClient.aztecSlashedEvent.findMany({
+      where: { chainId },
+      select: { amount: true },
+    }),
+  ]);
+
   const totalSlashed = events.reduce((sum, e) => sum + BigInt(e.amount), BigInt(0));
 
   return {
-    totalEvents: result._count.id,
-    uniqueValidators,
+    totalEvents: countResult._count.id,
+    uniqueValidators: uniqueValidatorsResult,
     totalSlashed,
-    firstSlash: result._min.timestamp,
-    lastSlash: result._max.timestamp,
+    firstSlash: countResult._min.timestamp,
+    lastSlash: countResult._max.timestamp,
   };
 };
 
@@ -103,6 +113,10 @@ const getValidatorSlashingHistory = async (
   skip: number = 0,
   take: number = 10,
 ) => {
+  if (!isValidEthereumAddress(attesterAddress)) {
+    throw new Error('Invalid Ethereum address format');
+  }
+
   const where = {
     chainId,
     attester: { equals: attesterAddress, mode: 'insensitive' as const },
@@ -129,11 +143,51 @@ const getValidatorSlashingHistory = async (
 };
 
 const getRecentSlashingEvents = async (chainId: number, limit: number = 10) => {
-  return eventsClient.aztecSlashedEvent.findMany({
+
+  const events = await eventsClient.aztecSlashedEvent.findMany({
     where: { chainId },
     take: limit,
     orderBy: { timestamp: 'desc' },
   });
+
+  const eventsWithValidators = await Promise.all(
+    events.map(async (event) => {
+      const node = await db.node.findFirst({
+        where: {
+          chainId: chainId,
+          operatorAddress: {
+            equals: event.attester,
+            mode: 'insensitive',
+          },
+        },
+        include: {
+          validator: {
+            select: {
+              id: true,
+              moniker: true,
+            },
+          },
+        },
+      });
+
+      return {
+        ...event,
+        node: node
+          ? {
+            operatorAddress: node.operatorAddress,
+            validator: node.validator
+              ? {
+                id: node.validator.id,
+                moniker: node.validator.moniker,
+              }
+              : null,
+          }
+          : null,
+      };
+    }),
+  );
+
+  return eventsWithValidators;
 };
 
 const getSlashingByValidator = async (chainId: number) => {

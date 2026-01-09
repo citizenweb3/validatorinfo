@@ -201,7 +201,7 @@ const getVoteDistribution = async (chainId: number) => {
   return Object.values(grouped);
 };
 
-const VoteEventService = {
+const AztecVoteEventService = {
   getVoteEvents,
   getProposalVoteStats,
   getProposalVotes,
@@ -211,4 +211,4 @@ const VoteEventService = {
   getVoteDistribution,
 };
 
-export default VoteEventService;
+export default AztecVoteEventService;
