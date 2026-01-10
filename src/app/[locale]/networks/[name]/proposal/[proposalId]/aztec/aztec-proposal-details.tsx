@@ -1,6 +1,6 @@
 import { Proposal } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
 
@@ -12,6 +12,7 @@ import {
   parseAztecProposalContent,
 } from './aztec-proposal-utils';
 import DetailRow from '@/app/networks/[name]/proposal/[proposalId]/aztec/detail-row';
+import PayloadUri from './payload-uri';
 
 interface OwnProps {
   proposal: Proposal;
@@ -45,6 +46,9 @@ const AztecProposalDetails: FC<OwnProps> = async ({ proposal, chainName }) => {
         href={getEtherscanUrl(payload, chainName)}
         isExternal
       />
+      <Suspense fallback={null}>
+        <PayloadUri payloadAddress={payload} chainName={chainName} />
+      </Suspense>
       <DetailRow
         label={t('quorum')}
         value={formatWeiAsPercentage(config.quorum)}

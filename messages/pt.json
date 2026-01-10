@@ -1256,7 +1256,8 @@
     "execution delay": "Atraso de Execução",
     "grace period": "Período de Carência",
     "required margin": "Margem Necessária",
-    "payload contract": "Contrato Payload"
+    "payload contract": "Contrato Payload",
+    "payload uri": "URI do Payload"
   },
   "LibraryPage": {
     "Tabs": {

@@ -1269,7 +1269,8 @@
     "execution delay": "Execution Delay",
     "grace period": "Grace Period",
     "required margin": "Required Margin",
-    "payload contract": "Payload Contract"
+    "payload contract": "Payload Contract",
+    "payload uri": "Payload URI"
   },
   "LibraryPage": {
     "Tabs": {

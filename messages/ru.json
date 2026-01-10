@@ -1270,7 +1270,8 @@
     "execution delay": "Задержка Исполнения",
     "grace period": "Льготный Период",
     "required margin": "Требуемый Перевес",
-    "payload contract": "Контракт Payload"
+    "payload contract": "Контракт Payload",
+    "payload uri": "URI Payload"
   },
   "LibraryPage": {
     "Tabs": {

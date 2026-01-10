@@ -3,6 +3,7 @@ import getCommitteeSizeUtil from '@/server/tools/chains/aztec/utils/get-committe
 import getCurrentEpoch from '@/server/tools/chains/aztec/utils/get-current-epoch';
 import getCurrentSlot from '@/server/tools/chains/aztec/utils/get-current-slot';
 import getEpochProgressUtil, { EpochProgress } from '@/server/tools/chains/aztec/utils/get-epoch-progress';
+import { getPayloadUriUtil } from '@/server/tools/chains/aztec/utils/get-payload-uri-util';
 
 const getLatestSlot = async (chainName: string) => {
   const latestSlot = await getCurrentSlot(chainName);
@@ -40,12 +41,17 @@ const getEpochProgress = async (chainName: string): Promise<EpochProgress | null
   return getEpochProgressUtil(chainName);
 };
 
+const getPayloadUri = async (payloadAddress: string, chainName: string): Promise<string | null> => {
+  return getPayloadUriUtil(payloadAddress, chainName);
+};
+
 const aztecContractService = {
   getLatestSlot,
   getLatestEpoch,
   getActiveAttesterCount,
   getEpochProgress,
   getCommitteeSize,
+  getPayloadUri,
 };
 
 export default aztecContractService;
