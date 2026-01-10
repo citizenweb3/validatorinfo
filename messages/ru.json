@@ -1260,7 +1260,17 @@
     "voting-power-column": "Сила Голоса",
     "time-column": "Время",
     "no-votes-found": "Голоса по этому предложению не найдены",
-    "votes-table-caption": "Список голосов по этому предложению"
+    "votes-table-caption": "Список голосов по этому предложению",
+    "proposal details": "Детали Предложения",
+    "proposer": "Заявитель",
+    "quorum": "Кворум",
+    "minimum votes": "Минимум Голосов",
+    "voting delay": "Задержка Голосования",
+    "voting duration": "Длительность Голосования",
+    "execution delay": "Задержка Исполнения",
+    "grace period": "Льготный Период",
+    "required margin": "Требуемый Перевес",
+    "payload contract": "Контракт Payload"
   },
   "LibraryPage": {
     "Tabs": {

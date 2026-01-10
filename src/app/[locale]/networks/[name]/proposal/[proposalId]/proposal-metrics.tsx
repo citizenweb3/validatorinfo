@@ -7,6 +7,7 @@ import {
   ecosystemsProposalsResults,
 } from '@/app/networks/[name]/(network-profile)/governance/network-proposals-list/network-proposals-item';
 import { ChainWithParams } from '@/services/chain-service';
+import { isAztecNetwork } from '@/utils/chain-utils';
 
 type VoteType = 'yes' | 'no' | 'veto' | 'abstain';
 type Ecosystem = keyof typeof ecosystemsProposalsResults;
@@ -19,6 +20,13 @@ interface OwnProps {
 const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
   const t = await getTranslations('ProposalPage');
 
+  const getEcosystemForChain = (chainName: string | undefined, ecosystem: string | undefined): Ecosystem => {
+    if (chainName && isAztecNetwork(chainName)) {
+      return 'ethereum';
+    }
+    return (ecosystem as Ecosystem) ?? 'cosmos';
+  };
+
   const getTallyResults = <T extends Ecosystem>(
     tallyResult: any,
     decimals: number,
@@ -27,15 +35,19 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
   ) => {
     try {
       const fields = ecosystemsProposalsResults[ecosystem];
+      const fieldKey = fields[voteType];
+
+      if (fieldKey === null) return null;
+
       const tally = JSON.parse(tallyResult ?? '{}');
 
-      if (tally[fields[voteType]] === undefined) return null;
+      if (tally[fieldKey] === undefined) return null;
 
       const votes: Record<VoteType, number> = {
-        yes: Number(tally[fields.yes] ?? 0),
-        no: Number(tally[fields.no] ?? 0),
-        abstain: Number(tally[fields.abstain] ?? 0),
-        veto: Number(tally[fields.veto] ?? 0),
+        yes: fields.yes ? Number(tally[fields.yes] ?? 0) : 0,
+        no: fields.no ? Number(tally[fields.no] ?? 0) : 0,
+        abstain: fields.abstain ? Number(tally[fields.abstain] ?? 0) : 0,
+        veto: fields.veto ? Number(tally[fields.veto] ?? 0) : 0,
       };
 
       const total = Object.values(votes).reduce((s, n) => s + n, 0) || 1;
@@ -50,16 +62,25 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
     }
   };
 
+  const ecosystem = getEcosystemForChain(chain?.name, chain?.ecosystem);
+
   const rawTally =
-    chain?.ecosystem === 'namada'
+    ecosystem === 'ethereum' || chain?.ecosystem === 'namada'
       ? proposal?.tallyResult
       : proposal?.finalTallyResult;
 
-  const results = (['yes', 'no', 'abstain', 'veto'] as VoteType[])
+  const voteTypes: VoteType[] = ecosystem === 'ethereum'
+    ? ['yes', 'no']
+    : ['yes', 'no', 'abstain', 'veto'];
+
+  const results = voteTypes
     .map((vt) =>
-      getTallyResults(rawTally, chain?.params?.coinDecimals ?? 6, vt, chain?.ecosystem as Ecosystem),
+      getTallyResults(rawTally, chain?.params?.coinDecimals ?? 18, vt, ecosystem),
     ).filter(Boolean) as Exclude<ReturnType<typeof getTallyResults>, null>[];
 
+  if (results.length === 0) {
+    return null;
+  }
 
   return (
     <div className="mt-4 mb-6">
@@ -71,7 +92,7 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
             title={t(item.title as VoteType)}
             data={item.percents.toFixed(2)}
             isPercents
-            addLineData={`${item.amount.toFixed(2).toLocaleString()} ${chain?.params?.denom}`}
+            addLineData={`${item.amount.toFixed(2).toLocaleString()} ${chain?.params?.denom ?? ''}`}
             className="pb-4 pt-2.5"
             dataClassName="mt-2"
             addLineClassName="font-handjet font-thin text-lg -mt-1"
