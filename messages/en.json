@@ -1259,7 +1259,18 @@
     "voting-power-column": "Voting Power",
     "time-column": "Time",
     "no-votes-found": "No votes found for this proposal",
-    "votes-table-caption": "List of votes cast on this proposal"
+    "votes-table-caption": "List of votes cast on this proposal",
+    "proposal details": "Proposal Details",
+    "proposer": "Proposer",
+    "quorum": "Quorum",
+    "minimum votes": "Minimum Votes",
+    "voting delay": "Voting Delay",
+    "voting duration": "Voting Duration",
+    "execution delay": "Execution Delay",
+    "grace period": "Grace Period",
+    "required margin": "Required Margin",
+    "payload contract": "Payload Contract",
+    "payload uri": "Payload URI"
   },
   "LibraryPage": {
     "Tabs": {

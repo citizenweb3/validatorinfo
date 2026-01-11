@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import AiGeneratedSummary from '@/app/networks/[name]/proposal/[proposalId]/ai-generated-summary';
+import AztecProposalDetails from '@/app/networks/[name]/proposal/[proposalId]/aztec/aztec-proposal-details';
 import ProposalInformation from '@/app/networks/[name]/proposal/[proposalId]/proposal-information';
 import ProposalMetrics from '@/app/networks/[name]/proposal/[proposalId]/proposal-metrics';
 import PageTitle from '@/components/common/page-title';
@@ -10,6 +11,7 @@ import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import ProposalService from '@/services/proposal-service';
+import { isAztecNetwork } from '@/utils/chain-utils';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -41,6 +43,11 @@ export default async function ProposalLayout({
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <ProposalInformation proposal={proposal} chainName={name} />
+
+      {isAztecNetwork(name) && proposal && (
+        <AztecProposalDetails proposal={proposal} chainName={name} />
+      )}
+
       <ProposalMetrics proposal={proposal} chain={chain} />
       {children}
       <AiGeneratedSummary />

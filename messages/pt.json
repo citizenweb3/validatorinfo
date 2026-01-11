@@ -1233,7 +1233,31 @@
         "hint": ""
       }
     },
-    "ai generated summary": "Resumo gerado por IA"
+    "ai generated summary": "Resumo gerado por IA",
+    "votes-title": "Votos",
+    "voting-progress-title": "Progresso da Votação",
+    "for-label": "A Favor",
+    "against-label": "Contra",
+    "total-votes-label": "Total de Votos",
+    "unique-voters-label": "Votantes Únicos",
+    "total-voting-power-label": "Poder de Voto Total",
+    "voter-column": "Votante",
+    "vote-column": "Voto",
+    "voting-power-column": "Poder de Voto",
+    "time-column": "Hora",
+    "no-votes-found": "Nenhum voto encontrado para esta proposta",
+    "votes-table-caption": "Lista de votos para esta proposta",
+    "proposal details": "Detalhes da Proposta",
+    "proposer": "Proponente",
+    "quorum": "Quórum",
+    "minimum votes": "Votos Mínimos",
+    "voting delay": "Atraso de Votação",
+    "voting duration": "Duração da Votação",
+    "execution delay": "Atraso de Execução",
+    "grace period": "Período de Carência",
+    "required margin": "Margem Necessária",
+    "payload contract": "Contrato Payload",
+    "payload uri": "URI do Payload"
   },
   "LibraryPage": {
     "Tabs": {

@@ -23,6 +23,12 @@ export const ecosystemsProposalsResults = {
     abstain: 'abstain',
     veto: 'no_with_veto',
   },
+  ethereum: {
+    yes: 'yea',
+    no: 'nay',
+    abstain: null,
+    veto: null,
+  },
 } as const;
 
 type Ecosystem = keyof typeof ecosystemsProposalsResults;
@@ -33,10 +39,10 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal, chain }) => {
       const fields = ecosystemsProposalsResults[ecosystem];
 
       const tally = JSON.parse(tallyResult);
-      const yesCount = Number(tally[fields.yes] ?? 0);
-      const noCount = Number(tally[fields.no] ?? 0);
-      const abstainCount = Number(tally[fields.abstain] ?? 0);
-      const noWithVetoCount = Number(tally[fields.veto] ?? 0);
+      const yesCount = fields.yes ? Number(tally[fields.yes] ?? 0) : 0;
+      const noCount = fields.no ? Number(tally[fields.no] ?? 0) : 0;
+      const abstainCount = fields.abstain ? Number(tally[fields.abstain] ?? 0) : 0;
+      const noWithVetoCount = fields.veto ? Number(tally[fields.veto] ?? 0) : 0;
 
       const maxValue = Math.max(yesCount, noCount, abstainCount, noWithVetoCount);
 
