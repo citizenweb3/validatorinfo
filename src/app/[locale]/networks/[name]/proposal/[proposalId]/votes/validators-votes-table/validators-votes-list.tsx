@@ -7,6 +7,8 @@ import {
   validatorsVotes,
 } from '@/app/networks/[name]/proposal/[proposalId]/votes/validators-votes-table/validatorsVotesExample';
 import voteService, { ProposalValidatorsVotes } from '@/services/vote-service';
+import AztecVoteEventService from '@/services/aztec-vote-event-service';
+import { isAztecNetwork } from '@/utils/chain-utils';
 
 interface OwnProps {
   currentPage?: number;
@@ -32,6 +34,19 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
       sort.order,
       vote,
       parseInt(search)
+    );
+    votesList = result.votes;
+    pages = result.pages;
+  } else if (isAztecNetwork(chainName)) {
+    const result = await AztecVoteEventService.getProposalVotersForDisplay(
+      chainName,
+      proposalId,
+      perPage * (currentPage - 1),
+      perPage,
+      sort.sortBy,
+      sort.order,
+      vote,
+      search
     );
     votesList = result.votes;
     pages = result.pages;

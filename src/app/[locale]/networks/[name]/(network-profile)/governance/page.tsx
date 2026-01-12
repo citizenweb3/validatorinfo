@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
+import AztecGovernanceConfig from '@/app/networks/[name]/(network-profile)/governance/aztec-governance-config';
 import CommitteeTable from '@/app/networks/[name]/(network-profile)/governance/aztec-committee/committee-table';
 import LiveProposals from '@/app/networks/[name]/(network-profile)/governance/live-proposals';
 import NetworkProposals
@@ -10,7 +11,8 @@ import {
   AztecSlashingEventDisplay,
   convertToDisplayFormat,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/aztec-slashing-types';
-import GovernanceSlashingEventsTable from '@/app/networks/[name]/(network-profile)/governance/slashing-events/governance-slashing-events-table';
+import GovernanceSlashingEventsTable
+  from '@/app/networks/[name]/(network-profile)/governance/slashing-events/governance-slashing-events-table';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TableDropdown from '@/components/common/table-dropdown';
@@ -111,6 +113,8 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
             </div>
           )}
         </div>
+
+        <AztecGovernanceConfig chain={chain} />
 
         <div className="mt-8">
           <SubTitle text={t('proposals-title')} />

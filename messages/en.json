@@ -321,6 +321,17 @@
     "attesters in committee": "attesters in committee",
     "proposals-title": "Proposals",
     "slashing-events-title": "Slashing Events",
+    "governance-config-title": "Governance Configuration",
+    "voting-power-title": "Total Voting Power",
+    "quorum": "Quorum",
+    "min-votes": "Minimum Votes",
+    "yea-margin": "Required Yea Margin",
+    "voting-delay": "Voting Delay",
+    "voting-duration": "Voting Duration",
+    "execution-delay": "Execution Delay",
+    "grace-period": "Grace Period",
+    "lock-amount": "Lock Amount",
+    "of-supply": "of total supply",
     "Table": {
       "Validator": {
         "name": "Validator",

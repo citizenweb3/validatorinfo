@@ -321,6 +321,17 @@
     "attesters in committee": "аттестеров в комитете",
     "proposals-title": "Предложения",
     "slashing-events-title": "События слэшинга",
+    "governance-config-title": "Конфигурация Управления",
+    "voting-power-title": "Общая Голосующая Сила",
+    "quorum": "Кворум",
+    "min-votes": "Мин. Голосов",
+    "yea-margin": "Требуемый Перевес",
+    "voting-delay": "Задержка Голосования",
+    "voting-duration": "Длительность Голосования",
+    "execution-delay": "Задержка Исполнения",
+    "grace-period": "Льготный Период",
+    "lock-amount": "Сумма Блокировки",
+    "of-supply": "от общего предложения",
     "Table": {
       "Validator": {
         "name": "Валидатор",

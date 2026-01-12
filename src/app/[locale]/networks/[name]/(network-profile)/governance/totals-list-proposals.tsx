@@ -41,20 +41,22 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals, chain }) => {
                          className={'pb-6 pt-2.5'}
                          dataClassName={'mt-5'} />
       </div>
-      <div className="mt-8 flex w-full flex-row justify-center gap-6">
-        {participationRate && (
-          <MetricsCardItem title={t('voting participation rate')}
-                           data={participationRate}
-                           className={'pb-6 pt-2.5'}
-                           dataClassName={'mt-5'} />
-        )}
-        {quorumThreshold && (
-          <MetricsCardItem title={t('quorum threshold')}
-                           data={quorumThreshold}
-                           className={'pb-6 pt-2.5'}
-                           dataClassName={'mt-5'} />
-        )}
-      </div>
+      {chain?.name !== 'aztec' && chain?.name !== 'aztec-mainnet' && (
+        <div className="mt-8 flex w-full flex-row justify-center gap-6">
+          {participationRate && (
+            <MetricsCardItem title={t('voting participation rate')}
+                             data={participationRate}
+                             className={'pb-6 pt-2.5'}
+                             dataClassName={'mt-5'} />
+          )}
+          {quorumThreshold && (
+            <MetricsCardItem title={t('quorum threshold')}
+                             data={quorumThreshold}
+                             className={'pb-6 pt-2.5'}
+                             dataClassName={'mt-5'} />
+          )}
+        </div>
+      )}
     </div>
   );
 };

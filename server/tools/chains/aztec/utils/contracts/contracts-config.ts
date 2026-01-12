@@ -12,6 +12,10 @@ import { aztecMainnet, aztecTestnet } from '@/server/tools/chains/aztec/utils/co
 
 export type AztecChainName = keyof typeof contracts;
 
+export const isAztecChainName = (chainName: string): chainName is AztecChainName => {
+  return chainName === 'aztec' || chainName === 'aztec-testnet';
+};
+
 export const getL1: Record<string, string> = {
   'aztec-testnet': 'ethereum-sepolia',
   aztec: 'ethereum',

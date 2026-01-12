@@ -86,11 +86,22 @@ export interface NodeVote {
   vote: string;
 }
 
+export interface AztecGovernanceConfigAdditional {
+  votingDelay: string;
+  executionDelay: string;
+  gracePeriod: string;
+  requiredYeaMargin: number;
+  minimumVotes: string;
+  lockDelay: string;
+  [key: string]: string | number;
+}
+
 export interface ProposalParams {
   creationCost: number | null;
   votingPeriod: string | null;
   participationRate: number | null;
   quorumThreshold: number | null;
+  aztecGovernanceConfigAdditional?: AztecGovernanceConfigAdditional | null;
 }
 
 export interface NodesRewards {

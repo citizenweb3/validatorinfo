@@ -1,5 +1,9 @@
-import { eventsClient } from '@/db';
+import { VoteOption } from '@prisma/client';
+
+import db, { eventsClient } from '@/db';
 import { SortDirection } from '@/server/types';
+import cutHash from '@/utils/cut-hash';
+import { ProposalValidatorsVotes } from '@/services/vote-service';
 
 interface VoteEventFilters {
   chainId?: number;
@@ -201,6 +205,92 @@ const getVoteDistribution = async (chainId: number) => {
   return Object.values(grouped);
 };
 
+const getProposalVotersForDisplay = async (
+  chainName: string,
+  proposalId: string,
+  skip: number = 0,
+  take: number = 10,
+  sortBy: string = 'timestamp',
+  order: SortDirection = 'desc',
+  voteFilter: string = 'all',
+  search?: string,
+): Promise<{ votes: ProposalValidatorsVotes[]; pages: number }> => {
+  const validSortFields = ['timestamp', 'voter', 'support', 'amount', 'blockNumber'];
+  const effectiveSortBy = validSortFields.includes(sortBy) ? sortBy : 'timestamp';
+  const chain = await db.chain.findUnique({ where: { name: chainName } });
+  if (!chain) return { votes: [], pages: 0 };
+
+  const where: {
+    chainId: number;
+    proposalId: string;
+    support?: boolean;
+    voter?: { contains: string; mode: 'insensitive' };
+  } = {
+    chainId: chain.id,
+    proposalId,
+  };
+
+  if (voteFilter === 'yes') where.support = true;
+  if (voteFilter === 'no') where.support = false;
+
+  if (search) {
+    where.voter = { contains: search, mode: 'insensitive' };
+  }
+
+  const [events, total] = await Promise.all([
+    eventsClient.aztecVoteCastEvent.findMany({
+      where,
+      skip,
+      take,
+      orderBy: { [effectiveSortBy]: order },
+    }),
+    eventsClient.aztecVoteCastEvent.count({ where }),
+  ]);
+
+  const nodes = await db.node.findMany({
+    where: { chainId: chain.id },
+    select: {
+      operatorAddress: true,
+      accountAddress: true,
+      validator: {
+        select: { id: true, moniker: true, url: true },
+      },
+    },
+  });
+
+  const addressToValidator = new Map<string, { id: number; moniker: string; url: string | null }>();
+  for (const node of nodes) {
+    if (node.validator) {
+      if (node.operatorAddress) {
+        addressToValidator.set(node.operatorAddress.toLowerCase(), node.validator);
+      }
+      if (node.accountAddress) {
+        addressToValidator.set(node.accountAddress.toLowerCase(), node.validator);
+      }
+    }
+  }
+
+  const votes: ProposalValidatorsVotes[] = events.map((event, index) => {
+    const validator = addressToValidator.get(event.voter.toLowerCase());
+
+    return {
+      validator: validator
+        ? { id: validator.id, moniker: validator.moniker, iconUrl: validator.url }
+        : {
+            id: -(index + skip + 1), // Negative ID for non-validator addresses
+            moniker: cutHash({ value: event.voter, cutLength: 6 }),
+            iconUrl: null,
+          },
+      vote: event.support ? VoteOption.YES : VoteOption.NO,
+    };
+  });
+
+  return {
+    votes,
+    pages: Math.ceil(total / take),
+  };
+};
+
 const AztecVoteEventService = {
   getVoteEvents,
   getProposalVoteStats,
@@ -209,6 +299,7 @@ const AztecVoteEventService = {
   getRecentVotes,
   hasVoted,
   getVoteDistribution,
+  getProposalVotersForDisplay,
 };
 
 export default AztecVoteEventService;
