@@ -78,6 +78,9 @@ model ChainParams {
   // L1 contracts (for Aztec networks)
   l1ContractsAddresses String? @map("l1_contracts_addresses")
 
+  // Aztec-specific governance configuration (JSON)
+  aztecGovernanceConfigAdditional Json? @map("aztec_governance_config_additional")
+
   chain Chain @relation("chain_params", fields: [chainId], references: [id])
 
   @@map("chain_params")

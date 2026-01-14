@@ -32,7 +32,7 @@ const CommitteeTableList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1
         ))}
         <tr>
           <td colSpan={5} className="pt-4">
-            <TablePagination pageLength={pages} tableId="committee" />
+            <TablePagination pageLength={pages} tableId="committee" isScroll={false} />
           </td>
         </tr>
         </tbody>

@@ -2,6 +2,7 @@ import db from '@/db';
 import logger from '@/logger';
 import getChainMethods from '@/server/tools/chains/methods';
 import { getChainParams } from '@/server/tools/chains/params';
+import { Prisma } from '@prisma/client';
 
 const { logError, logInfo } = logger('update-proposal-params');
 
@@ -13,6 +14,7 @@ const updateProposalParams = async (chainNames: string[]) => {
     try {
       const dbChain = await db.chain.findFirst({
         where: { chainId: chainParams.chainId },
+        include: { params: true },
       });
       if (!dbChain) {
         logError(`Chain ${chainParams.chainId} not found in database`);
@@ -26,16 +28,35 @@ const updateProposalParams = async (chainNames: string[]) => {
           where: { id: dbChain.id },
           data: {
             params: {
-              update: {
-                votingPeriod: params.votingPeriod ?? null,
-                proposalCreationCost: params.creationCost ?? null,
-                votingParticipationRate: params.participationRate ?? null,
-                quorumThreshold: params.quorumThreshold ?? null,
+              upsert: {
+                create: {
+                  denom: chainParams.denom,
+                  minimalDenom: chainParams.minimalDenom,
+                  coinDecimals: chainParams.coinDecimals,
+                  coinType: chainParams.coinType,
+                  bech32Prefix: chainParams.bech32Prefix ?? '',
+                  votingPeriod: params.votingPeriod ?? null,
+                  proposalCreationCost: params.creationCost ?? null,
+                  votingParticipationRate: params.participationRate ?? null,
+                  quorumThreshold: params.quorumThreshold ?? null,
+                  aztecGovernanceConfigAdditional: params.aztecGovernanceConfigAdditional
+                    ? (params.aztecGovernanceConfigAdditional as Prisma.InputJsonValue)
+                    : undefined,
+                },
+                update: {
+                  votingPeriod: params.votingPeriod ?? null,
+                  proposalCreationCost: params.creationCost ?? null,
+                  votingParticipationRate: params.participationRate ?? null,
+                  quorumThreshold: params.quorumThreshold ?? null,
+                  aztecGovernanceConfigAdditional: params.aztecGovernanceConfigAdditional
+                    ? (params.aztecGovernanceConfigAdditional as Prisma.InputJsonValue)
+                    : undefined,
+                },
               },
             },
           },
         });
-
+        logInfo(`${chainName} proposal params updated successfully`);
       } else {
         logInfo(`${chainName} has no validators`);
       }

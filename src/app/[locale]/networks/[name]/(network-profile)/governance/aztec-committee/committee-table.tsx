@@ -16,7 +16,12 @@ interface OwnProps {
 }
 
 const CommitteeTable: FC<OwnProps> = async ({ chain, sort, perPage, currentPage }) => {
-  const epochProgress = await aztecContractService.getEpochProgress(chain.name);
+  let epochProgress = null;
+  try {
+    epochProgress = await aztecContractService.getEpochProgress(chain.name);
+  } catch (error) {
+    console.error('Failed to fetch epoch progress:', error);
+  }
 
   return (
     <div className="mt-8">

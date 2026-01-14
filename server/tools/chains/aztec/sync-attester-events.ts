@@ -7,19 +7,13 @@ import {
   deploymentBlocks,
   stakingRegistryAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { fetchBlockTimestamps } from '@/server/tools/chains/aztec/utils/fetch-block-timestamps';
 import { getChunkSizeForRpcUrls } from '@/server/tools/chains/aztec/utils/get-chunck-size-rpc';
 import { getProviders } from '@/server/tools/chains/aztec/utils/get-providers';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
+import { SyncResult } from '@/server/tools/chains/aztec/types';
 
 const { logInfo, logError, logWarn } = logger('sync-attester-events');
-
-export interface SyncResult {
-  success: boolean;
-  totalEvents: number;
-  newEvents: number;
-  skippedEvents: number;
-  error?: string;
-}
 
 export const syncAttesterEvents = async (
   chainName: 'aztec' | 'aztec-testnet',
@@ -29,6 +23,7 @@ export const syncAttesterEvents = async (
   let totalEvents = 0;
   let newEvents = 0;
   let skippedEvents = 0;
+  const failedRanges: Array<{ start: string; end: string }> = [];
 
   try {
     const contractAddress = contracts[chainName].stakingRegistryAddress;
@@ -40,7 +35,6 @@ export const syncAttesterEvents = async (
       loggerName: `${chainName}-attester-events-sync`,
     });
 
-    // Get last synced attester event
     let lastEvent;
     try {
       lastEvent = await eventsClient.aztecAttesterEvent.findFirst({
@@ -100,6 +94,7 @@ export const syncAttesterEvents = async (
             logError(
               `${chainName}: Failed to fetch attester events for provider ${providerId}, blocks ${blockStart}-${blockEnd}: ${e.message}`,
             );
+            failedRanges.push({ start: blockStart.toString(), end: blockEnd.toString() });
           }
         }
 
@@ -109,10 +104,22 @@ export const syncAttesterEvents = async (
 
         logInfo(`${chainName}: Found ${allEvents.length} attester events for provider ${providerId}`);
 
+        const blockNumbers = allEvents.map((e) => e.blockNumber!);
+        const blockTimestamps = await fetchBlockTimestamps(client, blockNumbers);
+
         for (const event of allEvents) {
           try {
             const args = event.args as { providerIdentifier: bigint; attesters: string[] };
-            const block = await client.getBlock({ blockNumber: event.blockNumber! });
+
+            const blockKey = event.blockNumber!.toString();
+            const timestamp = blockTimestamps.get(blockKey);
+
+            if (!timestamp) {
+              logError(`${chainName}: Missing timestamp for block ${blockKey}, skipping event`);
+              skippedEvents++;
+              totalEvents++;
+              continue;
+            }
 
             try {
               await eventsClient.aztecAttesterEvent.create({
@@ -124,7 +131,7 @@ export const syncAttesterEvents = async (
                   providerId: args.providerIdentifier.toString(),
                   providerAddress: getAddress(provider.providerAdmin),
                   attesters: args.attesters.map(a => getAddress(a)),
-                  timestamp: new Date(Number(block.timestamp) * 1000),
+                  timestamp,
                 },
               });
 
@@ -153,9 +160,14 @@ export const syncAttesterEvents = async (
       `${chainName}: Attester events sync complete - ${totalEvents} total (${newEvents} new, ${skippedEvents} duplicates)`,
     );
 
-    return { success: true, totalEvents, newEvents, skippedEvents };
+    const result: SyncResult = { success: true, totalEvents, newEvents, skippedEvents };
+    if (failedRanges.length > 0) {
+      result.failedRanges = failedRanges;
+      logWarn(`${chainName}: ${failedRanges.length} block ranges failed to sync`);
+    }
+    return result;
   } catch (e: any) {
     logError(`${chainName}: Fatal error syncing attester events: ${e.message}`);
-    return { success: false, totalEvents, newEvents, skippedEvents, error: e.message };
+    return { success: false, totalEvents, newEvents, skippedEvents, failedRanges, error: e.message };
   }
 };

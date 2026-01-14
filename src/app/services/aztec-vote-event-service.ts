@@ -1,5 +1,10 @@
-import { eventsClient } from '@/db';
+import { ProposalStatus, VoteOption } from '@prisma/client';
+
+import db, { eventsClient } from '@/db';
 import { SortDirection } from '@/server/types';
+import cutHash from '@/utils/cut-hash';
+import { ProposalValidatorsVotes } from '@/services/vote-service';
+import { buildAddressToValidatorMap, ProposalVotingType } from '@/server/tools/chains/aztec/utils/build-address-to-validator-map';
 
 interface VoteEventFilters {
   chainId?: number;
@@ -17,6 +22,15 @@ interface VoteStats {
   votingPowerAgainst: bigint;
 }
 
+interface VoteEventWhereClause {
+  chainId?: number;
+  proposalId?: string;
+  voter?: { equals: string; mode: 'insensitive' };
+  support?: boolean;
+}
+
+const INITIAL_GSE_VOTE_COUNT = 2;
+
 const getVoteEvents = async (
   filters: VoteEventFilters = {},
   skip: number = 0,
@@ -24,7 +38,7 @@ const getVoteEvents = async (
   sortBy: string = 'timestamp',
   order: SortDirection = 'desc',
 ) => {
-  const where: any = {};
+  const where: VoteEventWhereClause = {};
 
   if (filters.chainId) {
     where.chainId = filters.chainId;
@@ -201,6 +215,107 @@ const getVoteDistribution = async (chainId: number) => {
   return Object.values(grouped);
 };
 
+const getProposalVotersForDisplay = async (
+  chainName: string,
+  proposalId: string,
+  skip: number = 0,
+  take: number = 10,
+  sortBy: string = 'timestamp',
+  order: SortDirection = 'desc',
+  voteFilter: string = 'all',
+  search?: string,
+): Promise<{ votes: ProposalValidatorsVotes[]; pages: number }> => {
+  const validSortFields = ['timestamp', 'voter', 'support', 'amount', 'blockNumber'];
+  const effectiveSortBy = validSortFields.includes(sortBy) ? sortBy : 'timestamp';
+  const chain = await db.chain.findUnique({ where: { name: chainName } });
+  if (!chain) return { votes: [], pages: 0 };
+
+  const where: {
+    chainId: number;
+    proposalId: string;
+    support?: boolean;
+    voter?: { contains: string; mode: 'insensitive' };
+  } = {
+    chainId: chain.id,
+    proposalId,
+  };
+
+  if (voteFilter === 'yes') where.support = true;
+  if (voteFilter === 'no') where.support = false;
+
+  if (search) {
+    where.voter = { contains: search, mode: 'insensitive' };
+  }
+
+  const [events, total, addressToValidator] = await Promise.all([
+    eventsClient.aztecVoteCastEvent.findMany({
+      where,
+      skip,
+      take,
+      orderBy: { [effectiveSortBy]: order },
+    }),
+    eventsClient.aztecVoteCastEvent.count({ where }),
+    buildAddressToValidatorMap(chain.id),
+  ]);
+
+  const votes: ProposalValidatorsVotes[] = events.map((event, index) => {
+    const validator = addressToValidator.get(event.voter.toLowerCase());
+
+    return {
+      validator: validator
+        ? { id: validator.id, moniker: validator.moniker, iconUrl: validator.url }
+        : {
+            id: -(index + skip + 1), // Negative ID for non-validator addresses
+            moniker: cutHash({ value: event.voter, cutLength: 6 }),
+            iconUrl: null,
+          },
+      vote: event.support ? VoteOption.YES : VoteOption.NO,
+    };
+  });
+
+  return {
+    votes,
+    pages: Math.ceil(total / take),
+  };
+};
+
+const getProposalVotingType = async (
+  chainName: string,
+  proposalId: string,
+): Promise<ProposalVotingType> => {
+  const chain = await db.chain.findUnique({ where: { name: chainName } });
+  if (!chain) {
+    return 'none';
+  }
+
+  const proposal = await db.proposal.findFirst({
+    where: {
+      chainId: chain.id,
+      proposalId,
+    },
+    select: {
+      status: true,
+    },
+  });
+
+  if (!proposal) {
+    return 'none';
+  }
+
+  const voteCount = await eventsClient.aztecVoteCastEvent.count({
+    where: {
+      chainId: chain.id,
+      proposalId,
+    },
+  });
+
+  if (proposal.status === ProposalStatus.PROPOSAL_STATUS_DEPOSIT_PERIOD && voteCount <= INITIAL_GSE_VOTE_COUNT) {
+    return 'signals';
+  }
+
+  return 'votes';
+};
+
 const AztecVoteEventService = {
   getVoteEvents,
   getProposalVoteStats,
@@ -209,6 +324,8 @@ const AztecVoteEventService = {
   getRecentVotes,
   hasVoted,
   getVoteDistribution,
+  getProposalVotersForDisplay,
+  getProposalVotingType,
 };
 
 export default AztecVoteEventService;

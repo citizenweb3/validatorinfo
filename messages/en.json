@@ -280,6 +280,7 @@
     "Operator Distributions": "Operator Distribution",
     "active": "Active",
     "inactive": "Inactive",
+    "active in queue": "Active in queue",
     "jailed": "Jailed",
     "Social": "Social",
     "price of active user": "Price of Active User",
@@ -294,6 +295,7 @@
     "aztec-title": "Governance Portal: Current Epoch Committee",
     "description": "The Governance tab uncovers how this network's decentralized governance works—active proposals, proposal voting records, delegator votes, and community input. It's all about seeing the blockchain's decision-making in action. Ready to join in? Explore our Validator A-Z List to meet the key players!",
     "aztec-description": "Validators participating in the current epoch committee. Committee members are selected to propose and attest blocks.",
+    "current committee": "Current Committee",
     "total": "Total",
     "total tooltip": "The combined amount of the proposals the network had, including failed, live, etc",
     "passed": "Passed",
@@ -321,6 +323,17 @@
     "attesters in committee": "attesters in committee",
     "proposals-title": "Proposals",
     "slashing-events-title": "Slashing Events",
+    "governance-config-title": "Governance Configuration",
+    "voting-power-title": "Total Voting Power",
+    "quorum": "Quorum",
+    "min-votes": "Minimum Votes",
+    "yea-margin": "Required Yea Margin",
+    "voting-delay": "Voting Delay",
+    "voting-duration": "Voting Duration",
+    "execution-delay": "Execution Delay",
+    "grace-period": "Grace Period",
+    "lock-amount": "Lock Amount",
+    "of-supply": "of total supply",
     "Table": {
       "Validator": {
         "name": "Validator",
@@ -1218,6 +1231,8 @@
     "voting period": "Voting Period",
     "show all proposals": "Show All Proposals",
     "votes": "Votes",
+    "gse deposit": "GSE Deposit",
+    "deposited gse tokens": "Deposited GSE Tokens",
     "show dropdown": "Show Validator Votes",
     "hide dropdown": "Hide Validator Votes",
     "all": "All",
@@ -1244,6 +1259,14 @@
       "Time": {
         "name": "Time",
         "hint": ""
+      },
+      "Sequencer": {
+        "name": "Sequencer",
+        "hint": "Validator who cast the signal"
+      },
+      "Round": {
+        "name": "Round",
+        "hint": "Governance round number"
       }
     },
     "votes-title": "Votes",
@@ -1270,7 +1293,21 @@
     "grace period": "Grace Period",
     "required margin": "Required Margin",
     "payload contract": "Payload Contract",
-    "payload uri": "Payload URI"
+    "payload uri": "Payload URI",
+    "Sequencer": {
+      "name": "Sequencer",
+      "hint": "Sequencer that signaled support"
+    },
+    "Round": {
+      "name": "Round",
+      "hint": "Signaling round number"
+    },
+    "payload-signaling": "Payload (Signaling)",
+    "proposal-voting": "Proposal (Voting)",
+    "no-signals": "No signals yet",
+    "view-signals": "View sequencer signals",
+    "signaling-phase-message": "This is a payload in signaling phase.",
+    "votes-aggregated-message": "Token votes are aggregated by the GSE contract. See vote totals above."
   },
   "LibraryPage": {
     "Tabs": {

@@ -2,23 +2,13 @@ import { Abi, getAddress } from 'viem';
 
 import { eventsClient } from '@/db';
 import logger from '@/logger';
-import {
-  contracts,
-  deploymentBlocks,
-  rollupAbis,
-} from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { contracts, deploymentBlocks, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { fetchBlockTimestamps } from '@/server/tools/chains/aztec/utils/fetch-block-timestamps';
 import { getChunkSizeForRpcUrls } from '@/server/tools/chains/aztec/utils/get-chunck-size-rpc';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
+import { SyncResult } from '@/server/tools/chains/aztec/types';
 
 const { logInfo, logError, logWarn } = logger('sync-slashing-events');
-
-export interface SyncResult {
-  success: boolean;
-  totalEvents: number;
-  newEvents: number;
-  skippedEvents: number;
-  error?: string;
-}
 
 export const syncSlashingEvents = async (
   chainName: 'aztec' | 'aztec-testnet',
@@ -28,6 +18,7 @@ export const syncSlashingEvents = async (
   let totalEvents = 0;
   let newEvents = 0;
   let skippedEvents = 0;
+  const failedRanges: Array<{ start: string; end: string }> = [];
 
   try {
     const contractAddress = contracts[chainName].rollupAddress;
@@ -84,15 +75,24 @@ export const syncSlashingEvents = async (
         logError(
           `${chainName}: Failed to fetch slashing events, blocks ${blockStart}-${blockEnd}: ${e.message}`,
         );
+        failedRanges.push({ start: blockStart.toString(), end: blockEnd.toString() });
       }
     }
 
     if (allEvents.length === 0) {
       logInfo(`${chainName}: No new slashing events found`);
-      return { success: true, totalEvents: 0, newEvents: 0, skippedEvents: 0 };
+      const result: SyncResult = { success: true, totalEvents: 0, newEvents: 0, skippedEvents: 0 };
+      if (failedRanges.length > 0) {
+        result.failedRanges = failedRanges;
+        logWarn(`${chainName}: ${failedRanges.length} block ranges failed to sync`);
+      }
+      return result;
     }
 
     logInfo(`${chainName}: Found ${allEvents.length} slashing events`);
+
+    const blockNumbers = allEvents.map((e) => e.blockNumber!);
+    const blockTimestamps = await fetchBlockTimestamps(client, blockNumbers);
 
     for (const event of allEvents) {
       try {
@@ -100,7 +100,16 @@ export const syncSlashingEvents = async (
           attester: `0x${string}`;
           amount: bigint;
         };
-        const block = await client.getBlock({ blockNumber: event.blockNumber! });
+
+        const blockKey = event.blockNumber!.toString();
+        const timestamp = blockTimestamps.get(blockKey);
+
+        if (!timestamp) {
+          logError(`${chainName}: Missing timestamp for block ${blockKey}, skipping event`);
+          skippedEvents++;
+          totalEvents++;
+          continue;
+        }
 
         try {
           await eventsClient.aztecSlashedEvent.create({
@@ -111,7 +120,7 @@ export const syncSlashingEvents = async (
               logIndex: Number(event.logIndex!),
               attester: getAddress(args.attester),
               amount: args.amount.toString(),
-              timestamp: new Date(Number(block.timestamp) * 1000),
+              timestamp,
             },
           });
 
@@ -136,9 +145,14 @@ export const syncSlashingEvents = async (
       `${chainName}: Slashing events sync complete - ${totalEvents} total (${newEvents} new, ${skippedEvents} duplicates)`,
     );
 
-    return { success: true, totalEvents, newEvents, skippedEvents };
+    const result: SyncResult = { success: true, totalEvents, newEvents, skippedEvents };
+    if (failedRanges.length > 0) {
+      result.failedRanges = failedRanges;
+      logWarn(`${chainName}: ${failedRanges.length} block ranges failed to sync`);
+    }
+    return result;
   } catch (e: any) {
     logError(`${chainName}: Fatal error syncing slashing events: ${e.message}`);
-    return { success: false, totalEvents, newEvents, skippedEvents, error: e.message };
+    return { success: false, totalEvents, newEvents, skippedEvents, failedRanges, error: e.message };
   }
 };

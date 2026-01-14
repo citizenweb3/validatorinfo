@@ -1,6 +1,8 @@
 import db from '@/db';
 import logger from '@/logger';
 import { syncAttesterEvents } from '@/server/tools/chains/aztec/sync-attester-events';
+import { syncPayloadSubmittedEvents } from '@/server/tools/chains/aztec/sync-payload-submitted-events';
+import { syncSignalEvents } from '@/server/tools/chains/aztec/sync-signal-events';
 import { syncSlashingEvents } from '@/server/tools/chains/aztec/sync-slashing-events';
 import { syncStakedEvents } from '@/server/tools/chains/aztec/sync-staked-events';
 import { syncVoteEvents } from '@/server/tools/chains/aztec/sync-vote-events';
@@ -12,7 +14,7 @@ const { logInfo, logError } = logger('sync-aztec-events');
 const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 
 const syncAztecEvents = async () => {
-  logInfo('Starting Aztec events sync (attester + staked + slashing + vote)');
+  logInfo('Starting Aztec events sync (attester + staked + slashing + vote + signal + payload-submitted)');
 
   for (const chainName of AZTEC_CHAINS) {
     try {
@@ -42,9 +44,11 @@ const syncAztecEvents = async () => {
         syncStakedEvents(chainName, dbChain, l1RpcUrls),
         syncSlashingEvents(chainName, dbChain, l1RpcUrls),
         syncVoteEvents(chainName, dbChain, l1RpcUrls),
+        syncSignalEvents(chainName, dbChain, l1RpcUrls),
+        syncPayloadSubmittedEvents(chainName, dbChain, l1RpcUrls),
       ]);
 
-      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote'];
+      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted'];
 
       results.forEach((result, index) => {
         const eventType = eventTypes[index];

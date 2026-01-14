@@ -27,7 +27,12 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
   let inactiveNodesLength: number | null;
 
   if (chain?.name === 'aztec' || chain?.name === 'aztec-testnet') {
-    activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+    try {
+      activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+    } catch (error) {
+      console.error('Failed to fetch active attester count:', error);
+      activeNodesLength = null;
+    }
     const allStakedNodes = nodes?.filter((node) => node.delegatorShares && node.delegatorShares !== '0');
     inactiveNodesLength = allStakedNodes && activeNodesLength ? allStakedNodes?.length - activeNodesLength : null;
   } else {
@@ -54,7 +59,7 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
           </div>
           <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
             <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">
-              {chain?.name === 'aztec' || chain?.name === 'aztec-testnet' ? t('inactive') : t('jailed')}
+              {chain?.name === 'aztec' || chain?.name === 'aztec-testnet' ? t('active in queue') : t('jailed')}
             </div>
             <div
               style={{
