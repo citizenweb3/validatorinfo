@@ -11,6 +11,46 @@ If an `AGENTS.md` file exists in the target directory:
 2. Use it to understand the module's purpose, structure, and patterns
 3. Then continue with your research/analysis
 
+## Code Search & Documentation
+
+### Finding Code (DeepContext)
+
+When you need to find code, understand relationships between files,
+or locate implementations — use DeepContext MCP tools:
+
+1. First run `index_codebase` if not indexed yet
+2. Use `search_codebase` for semantic search queries
+
+Examples:
+- "authentication logic" → search_codebase
+- "where is JWT validated" → search_codebase
+- "find all API endpoints" → search_codebase
+
+Prefer DeepContext over grep for conceptual searches.
+
+### Library Documentation (Context7)
+
+When you need current API docs, usage examples, or library-specific
+patterns — use Context7 MCP tools:
+
+1. `resolve-library-id` — find library ID by name
+2. `get-library-docs` — fetch documentation
+
+Use Context7 for:
+- Correct syntax for library APIs
+- Up-to-date code examples
+- Version-specific features
+- Setup and configuration
+
+### When to Use What
+
+| Need | Tool                               |
+|------|------------------------------------|
+| Find code in this project | DeepContext                        |
+| Library docs / examples | Context7                           |
+| Exact string match | grep                               |
+| Project architecture | Read CLAUDE.md and AGENTS.md files |
+
 ### Available Module Documentation
 
 | Module | Location | Description |

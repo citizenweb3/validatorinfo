@@ -1,18 +1,11 @@
-import {
-  AztecChainName,
-  getL1,
-  isAztecChainName,
-} from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
-import {
-  getGovernanceConfig,
-  GovernanceConfiguration,
-} from '@/server/tools/chains/aztec/utils/get-governance-config';
+import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { getGovernanceConfig, GovernanceConfiguration } from '@/server/tools/chains/aztec/utils/get-governance-config';
 import { getTotalVotingPower } from '@/server/tools/chains/aztec/utils/get-governance-power';
 import { getTotalSupply } from '@/server/tools/chains/aztec/utils/get-total-supply';
-import { getChainParams } from '@/server/tools/chains/params';
 import formatCash from '@/utils/format-cash';
 import formatDurationSeconds from '@/utils/format-duration-seconds';
 import formatWeiPercentage from '@/utils/format-wei-percentage';
+import { getL1RpcUrls } from '@/server/tools/chains/aztec/utils/get-l1-rpc-urls';
 
 export interface GovernanceConfigDisplay {
   votingDelay: string;
@@ -30,14 +23,6 @@ export interface VotingPowerDisplay {
   totalPower: string;
   percentOfSupply: number;
 }
-
-const getL1RpcUrls = (chainName: AztecChainName): string[] => {
-  const l1ChainName = getL1[chainName];
-  if (!l1ChainName) return [];
-
-  const l1Chain = getChainParams(l1ChainName);
-  return l1Chain.nodes?.filter((n) => n.type === 'rpc').map((n) => n.url) ?? [];
-};
 
 const formatTokenAmount = (wei: bigint): string => {
   const amount = Number(wei) / 1e18;

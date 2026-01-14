@@ -293,6 +293,7 @@
     "title": "Portal de Governança: Votação na Rede",
     "aztec-title": "Portal de Governança: Comitê da Época Atual",
     "description": "A aba de Governança revela como funciona a governança descentralizada desta rede — propostas ativas, registros de votação das propostas, votos dos delegadores e contribuições da comunidade. Tudo se resume a ver o processo de tomada de decisão do blockchain em ação. Pronto para participar? Explore nossa lista de validadores de A a Z para conhecer os principais atores!",
+    "current committee": "Comissão Atual",
     "aztec-description": "Validadores que participam do comitê da época atual. Os membros do comitê são selecionados para propor e atestar blocos.",
     "total": "Total",
     "total tooltip": "O montante combinado das propostas que a rede tinha, incluindo propostas falhadas, em direto, etc.",
@@ -1221,6 +1222,8 @@
     "voting period": "Período de votação",
     "show all proposals": "Mostrar todas as propostas",
     "votes": "Votos",
+    "gse deposit": "Depósito GSE",
+    "deposited gse tokens": "Tokens GSE Depositados",
     "show dropdown": "Mostrar votos do validador",
     "hide dropdown": "Ocultar votos do validador",
     "all": "Todos",
@@ -1247,6 +1250,14 @@
       "Time": {
         "name": "Hora",
         "hint": ""
+      },
+      "Sequencer": {
+        "name": "Sequenciador",
+        "hint": "Validador que emitiu o sinal"
+      },
+      "Round": {
+        "name": "Rodada",
+        "hint": "Número da rodada de governança"
       }
     },
     "ai generated summary": "Resumo gerado por IA",
@@ -1273,7 +1284,21 @@
     "grace period": "Período de Carência",
     "required margin": "Margem Necessária",
     "payload contract": "Contrato Payload",
-    "payload uri": "URI do Payload"
+    "payload uri": "URI do Payload",
+    "Sequencer": {
+      "name": "Sequenciador",
+      "hint": "Sequenciador que sinalizou apoio"
+    },
+    "Round": {
+      "name": "Rodada",
+      "hint": "Número da rodada de sinalização"
+    },
+    "payload-signaling": "Payload (Sinalização)",
+    "proposal-voting": "Proposta (Votação)",
+    "no-signals": "Nenhum sinal ainda",
+    "view-signals": "Ver sinais dos sequenciadores",
+    "signaling-phase-message": "Este é um payload em fase de sinalização.",
+    "votes-aggregated-message": "Os votos de tokens são agregados pelo contrato GSE. Veja os totais de votos acima."
   },
   "LibraryPage": {
     "Tabs": {

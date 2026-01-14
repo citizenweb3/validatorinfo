@@ -4,7 +4,7 @@ networks:
   default:
     name: validatorinfo_default
   observability:
-    external: true
+    external: false
     name: validatorinfo_observability
 
 services:

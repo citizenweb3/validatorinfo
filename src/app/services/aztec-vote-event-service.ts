@@ -1,9 +1,10 @@
-import { VoteOption } from '@prisma/client';
+import { ProposalStatus, VoteOption } from '@prisma/client';
 
 import db, { eventsClient } from '@/db';
 import { SortDirection } from '@/server/types';
 import cutHash from '@/utils/cut-hash';
 import { ProposalValidatorsVotes } from '@/services/vote-service';
+import { buildAddressToValidatorMap, ProposalVotingType } from '@/server/tools/chains/aztec/utils/build-address-to-validator-map';
 
 interface VoteEventFilters {
   chainId?: number;
@@ -21,6 +22,15 @@ interface VoteStats {
   votingPowerAgainst: bigint;
 }
 
+interface VoteEventWhereClause {
+  chainId?: number;
+  proposalId?: string;
+  voter?: { equals: string; mode: 'insensitive' };
+  support?: boolean;
+}
+
+const INITIAL_GSE_VOTE_COUNT = 2;
+
 const getVoteEvents = async (
   filters: VoteEventFilters = {},
   skip: number = 0,
@@ -28,7 +38,7 @@ const getVoteEvents = async (
   sortBy: string = 'timestamp',
   order: SortDirection = 'desc',
 ) => {
-  const where: any = {};
+  const where: VoteEventWhereClause = {};
 
   if (filters.chainId) {
     where.chainId = filters.chainId;
@@ -237,7 +247,7 @@ const getProposalVotersForDisplay = async (
     where.voter = { contains: search, mode: 'insensitive' };
   }
 
-  const [events, total] = await Promise.all([
+  const [events, total, addressToValidator] = await Promise.all([
     eventsClient.aztecVoteCastEvent.findMany({
       where,
       skip,
@@ -245,30 +255,8 @@ const getProposalVotersForDisplay = async (
       orderBy: { [effectiveSortBy]: order },
     }),
     eventsClient.aztecVoteCastEvent.count({ where }),
+    buildAddressToValidatorMap(chain.id),
   ]);
-
-  const nodes = await db.node.findMany({
-    where: { chainId: chain.id },
-    select: {
-      operatorAddress: true,
-      accountAddress: true,
-      validator: {
-        select: { id: true, moniker: true, url: true },
-      },
-    },
-  });
-
-  const addressToValidator = new Map<string, { id: number; moniker: string; url: string | null }>();
-  for (const node of nodes) {
-    if (node.validator) {
-      if (node.operatorAddress) {
-        addressToValidator.set(node.operatorAddress.toLowerCase(), node.validator);
-      }
-      if (node.accountAddress) {
-        addressToValidator.set(node.accountAddress.toLowerCase(), node.validator);
-      }
-    }
-  }
 
   const votes: ProposalValidatorsVotes[] = events.map((event, index) => {
     const validator = addressToValidator.get(event.voter.toLowerCase());
@@ -291,6 +279,43 @@ const getProposalVotersForDisplay = async (
   };
 };
 
+const getProposalVotingType = async (
+  chainName: string,
+  proposalId: string,
+): Promise<ProposalVotingType> => {
+  const chain = await db.chain.findUnique({ where: { name: chainName } });
+  if (!chain) {
+    return 'none';
+  }
+
+  const proposal = await db.proposal.findFirst({
+    where: {
+      chainId: chain.id,
+      proposalId,
+    },
+    select: {
+      status: true,
+    },
+  });
+
+  if (!proposal) {
+    return 'none';
+  }
+
+  const voteCount = await eventsClient.aztecVoteCastEvent.count({
+    where: {
+      chainId: chain.id,
+      proposalId,
+    },
+  });
+
+  if (proposal.status === ProposalStatus.PROPOSAL_STATUS_DEPOSIT_PERIOD && voteCount <= INITIAL_GSE_VOTE_COUNT) {
+    return 'signals';
+  }
+
+  return 'votes';
+};
+
 const AztecVoteEventService = {
   getVoteEvents,
   getProposalVoteStats,
@@ -300,6 +325,7 @@ const AztecVoteEventService = {
   hasVoted,
   getVoteDistribution,
   getProposalVotersForDisplay,
+  getProposalVotingType,
 };
 
 export default AztecVoteEventService;

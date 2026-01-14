@@ -88,3 +88,39 @@ model AztecVoteCastEvent {
   @@index([chainId, voter], map: "aztec_vote_cast_event_chain_voter_idx")
   @@map("aztec_vote_cast_events")
 }
+
+model AztecSignalCastEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  payload         String   @map("payload") @db.VarChar(256)
+  round           String   @map("round") @db.VarChar(256)
+  signaler        String   @map("signaler") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_signal_cast_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_signal_cast_event_chain_block_idx")
+  @@index([chainId, payload], map: "aztec_signal_cast_event_chain_payload_idx")
+  @@index([chainId, signaler], map: "aztec_signal_cast_event_chain_signaler_idx")
+  @@map("aztec_signal_cast_events")
+}
+
+model AztecPayloadSubmittedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  payload         String   @map("payload") @db.VarChar(256)
+  round           String   @map("round") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_payload_submitted_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_payload_submitted_event_chain_block_idx")
+  @@index([chainId, payload], map: "aztec_payload_submitted_event_chain_payload_idx")
+  @@map("aztec_payload_submitted_events")
+}

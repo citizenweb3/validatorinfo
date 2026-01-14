@@ -77,6 +77,14 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `sync-attester-events.ts` | Syncs `AttestersAddedToProvider` events |
 | `sync-slashing-events.ts` | Syncs `Slashed` events from Rollup contract |
 | `sync-vote-events.ts` | Syncs `VoteCast` events from Governance contract |
+| `sync-signal-events.ts` | Syncs `Signaled` events from GovernanceProposer contract |
+| `sync-payload-submitted-events.ts` | Syncs `PayloadSubmitted` events from GovernanceProposer contract |
+
+### Shared Types
+
+| File | Description |
+|------|-------------|
+| `types.ts` | Shared TypeScript interfaces (`SyncResult` for event sync results) |
 
 ### Helpers
 
@@ -105,6 +113,9 @@ server/tools/chains/aztec/
 ├── sync-attester-events.ts          # Sync AttestersAddedToProvider events
 ├── sync-slashing-events.ts          # Sync Slashed events
 ├── sync-vote-events.ts              # Sync VoteCast events
+├── sync-signal-events.ts            # Sync Signaled events from GovernanceProposer
+├── sync-payload-submitted-events.ts # Sync PayloadSubmitted events
+├── types.ts                         # Shared TypeScript interfaces (SyncResult)
 │
 ├── utils/
 │   ├── contracts/
@@ -134,9 +145,13 @@ server/tools/chains/aztec/
 │   ├── get-current-epoch-committee.ts # Get committee for current epoch
 │   ├── get-l1-contract-addresses.ts # Fetch L1 contract addresses dynamically
 │   ├── get-chunck-size-rpc.ts       # Determine chunk size for RPC providers
+│   ├── get-l1-rpc-urls.ts           # Get L1 RPC URLs for Aztec chain
 │   ├── fetch-delegated-stake.ts     # Fetch delegated stake for attester
 │   ├── fetch-node-stake.ts          # Fetch stake for specific node
 │   ├── fetch-provider-metadata.ts   # Fetch provider names from JSON/API
+│   ├── fetch-block-timestamps.ts    # Batch fetch block timestamps for events
+│   ├── fetch-events-with-retry.ts   # Adaptive retry logic for fetching events
+│   ├── build-address-to-validator-map.ts # Build map of addresses to validator info
 │   └── providers_monikers.json      # Static provider name mappings
 │
 ├── AGENTS.md                        # This documentation
@@ -334,6 +349,33 @@ model AztecVoteCastEvent {
   voter           String
   support         Boolean
   amount          String
+  timestamp       DateTime
+
+  @@unique([chainId, transactionHash, logIndex])
+}
+
+model AztecSignalCastEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int
+  blockNumber     String
+  transactionHash String
+  logIndex        Int
+  payload         String   // GSE Payload address being signaled for
+  round           String   // Signaling round number
+  signaler        String   // Sequencer address that signaled
+  timestamp       DateTime
+
+  @@unique([chainId, transactionHash, logIndex])
+}
+
+model AztecPayloadSubmittedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int
+  blockNumber     String
+  transactionHash String
+  logIndex        Int
+  payload         String   // GSE Payload address submitted
+  round           String   // Round in which payload was submitted
   timestamp       DateTime
 
   @@unique([chainId, transactionHash, logIndex])

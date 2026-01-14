@@ -78,7 +78,7 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
       <div className="mb-6">
         <PageTitle prefix={chain.prettyName ?? 'Network'} text={t('title')} />
         <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-
+        <SubTitle text={t('current committee')} />
         <CommitteeTable
           chain={chain}
           sort={{ sortBy: committeeSortBy, order: committeeOrder }}

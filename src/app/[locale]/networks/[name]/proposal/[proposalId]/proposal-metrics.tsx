@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
-import { Proposal } from '@prisma/client';
+import { Proposal, ProposalStatus } from '@prisma/client';
 import SubTitle from '@/components/common/sub-title';
 import {
   ecosystemsProposalsResults,
@@ -80,6 +80,34 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
 
   if (results.length === 0) {
     return null;
+  }
+
+  const isAztecSignalingPhase = chain?.name && isAztecNetwork(chain.name) &&
+    proposal?.status === ProposalStatus.PROPOSAL_STATUS_DEPOSIT_PERIOD;
+
+  if (isAztecSignalingPhase) {
+    try {
+      const tallyString = typeof rawTally === 'string' ? rawTally : JSON.stringify(rawTally ?? {});
+      const tally = JSON.parse(tallyString);
+      const yeaAmount = Number(tally.yea ?? 0);
+      const nayAmount = Number(tally.nay ?? 0);
+      const totalDeposit = (yeaAmount + nayAmount) / 10 ** (chain?.params?.coinDecimals ?? 18);
+
+      if (totalDeposit > 0) {
+        return (
+          <div className="mt-4 mb-6">
+            <SubTitle text={t('gse deposit')} />
+            <div className="mt-8 flex w-full flex-row justify-center gap-7">
+              <MetricsCardItem
+                title={t('deposited gse tokens')}
+                data={`${totalDeposit.toLocaleString('en-US', { maximumFractionDigits: 2 })} ${chain?.params?.denom}`}
+                className={'py-6'}
+                dataClassName={'mt-5'} />
+            </div>
+          </div>
+        );
+      }
+    } catch {}
   }
 
   return (

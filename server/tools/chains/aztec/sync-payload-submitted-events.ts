@@ -5,16 +5,17 @@ import logger from '@/logger';
 import {
   contracts,
   deploymentBlocks,
-  governanceAbis,
+  governanceProposerAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { fetchBlockTimestamps } from '@/server/tools/chains/aztec/utils/fetch-block-timestamps';
+import { fetchEventsWithAdaptiveRetry } from '@/server/tools/chains/aztec/utils/fetch-events-with-retry';
 import { getChunkSizeForRpcUrls } from '@/server/tools/chains/aztec/utils/get-chunck-size-rpc';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
 import { SyncResult } from '@/server/tools/chains/aztec/types';
 
-const { logInfo, logError, logWarn } = logger('sync-vote-events');
+const { logInfo, logError, logWarn } = logger('sync-payload-submitted-events');
 
-export const syncVoteEvents = async (
+export const syncPayloadSubmittedEvents = async (
   chainName: 'aztec' | 'aztec-testnet',
   dbChain: { id: number },
   l1RpcUrls: string[],
@@ -25,24 +26,24 @@ export const syncVoteEvents = async (
   const failedRanges: Array<{ start: string; end: string }> = [];
 
   try {
-    const contractAddress = contracts[chainName].governanceAddress;
-    const abi = governanceAbis[chainName] as Abi;
+    const contractAddress = contracts[chainName].governanceProposerAddress;
+    const abi = governanceProposerAbis[chainName] as Abi;
     const deploymentBlock = BigInt(deploymentBlocks[chainName]);
     const chunkSize = getChunkSizeForRpcUrls(l1RpcUrls);
 
     const client = createViemClientWithFailover(l1RpcUrls, {
-      loggerName: `${chainName}-vote-events-sync`,
+      loggerName: `${chainName}-payload-submitted-events-sync`,
     });
 
     let lastEvent;
     try {
-      lastEvent = await eventsClient.aztecVoteCastEvent.findFirst({
+      lastEvent = await eventsClient.aztecPayloadSubmittedEvent.findFirst({
         where: { chainId: dbChain.id },
         orderBy: { blockNumber: 'desc' },
       });
     } catch (error: any) {
-      logError(`${chainName}: Events DB unavailable for vote events - ${error.message}`);
-      logWarn(`${chainName}: Starting vote events sync from deployment block`);
+      logError(`${chainName}: Events DB unavailable for payload submitted events - ${error.message}`);
+      logWarn(`${chainName}: Starting payload submitted events sync from deployment block`);
       lastEvent = null;
     }
 
@@ -50,37 +51,31 @@ export const syncVoteEvents = async (
     const currentBlock = await client.getBlockNumber();
 
     if (startBlock > currentBlock) {
-      logInfo(`${chainName}: Vote events already up to date (last: ${startBlock}, current: ${currentBlock})`);
+      logInfo(
+        `${chainName}: Payload submitted events already up to date (last: ${startBlock}, current: ${currentBlock})`,
+      );
       return { success: true, totalEvents: 0, newEvents: 0, skippedEvents: 0 };
     }
 
     logInfo(
-      `${chainName}: Syncing vote events from block ${startBlock} to ${currentBlock} (${currentBlock - startBlock} blocks)`,
+      `${chainName}: Syncing payload submitted events from block ${startBlock} to ${currentBlock} (${currentBlock - startBlock} blocks)`,
     );
 
-    const allEvents = [];
-    for (let blockStart = startBlock; blockStart < currentBlock; blockStart += BigInt(chunkSize)) {
-      const blockEnd =
-        blockStart + BigInt(chunkSize) > currentBlock ? currentBlock : blockStart + BigInt(chunkSize);
+    const { events: allEvents, failedRanges: fetchFailedRanges } = await fetchEventsWithAdaptiveRetry({
+      client,
+      contractAddress: contractAddress as `0x${string}`,
+      abi,
+      eventName: 'PayloadSubmitted',
+      fromBlock: startBlock,
+      toBlock: currentBlock,
+      initialChunkSize: chunkSize,
+      chainName,
+    });
 
-      try {
-        const chunkEvents = await client.getContractEvents({
-          address: contractAddress as `0x${string}`,
-          abi: abi,
-          eventName: 'VoteCast',
-          fromBlock: blockStart,
-          toBlock: blockEnd,
-        });
-
-        allEvents.push(...chunkEvents);
-      } catch (e: any) {
-        logError(`${chainName}: Failed to fetch vote events, blocks ${blockStart}-${blockEnd}: ${e.message}`);
-        failedRanges.push({ start: blockStart.toString(), end: blockEnd.toString() });
-      }
-    }
+    failedRanges.push(...fetchFailedRanges);
 
     if (allEvents.length === 0) {
-      logInfo(`${chainName}: No new vote events found`);
+      logInfo(`${chainName}: No new payload submitted events found`);
       const result: SyncResult = { success: true, totalEvents: 0, newEvents: 0, skippedEvents: 0 };
       if (failedRanges.length > 0) {
         result.failedRanges = failedRanges;
@@ -89,7 +84,7 @@ export const syncVoteEvents = async (
       return result;
     }
 
-    logInfo(`${chainName}: Found ${allEvents.length} vote events`);
+    logInfo(`${chainName}: Found ${allEvents.length} payload submitted events`);
 
     const blockNumbers = allEvents.map((e) => e.blockNumber!);
     const blockTimestamps = await fetchBlockTimestamps(client, blockNumbers);
@@ -97,10 +92,8 @@ export const syncVoteEvents = async (
     for (const event of allEvents) {
       try {
         const args = event.args as {
-          proposalId: bigint;
-          voter: `0x${string}`;
-          support: boolean;
-          amount: bigint;
+          payload: `0x${string}`;
+          round: bigint;
         };
 
         const blockKey = event.blockNumber!.toString();
@@ -114,16 +107,14 @@ export const syncVoteEvents = async (
         }
 
         try {
-          await eventsClient.aztecVoteCastEvent.create({
+          await eventsClient.aztecPayloadSubmittedEvent.create({
             data: {
               chainId: dbChain.id,
               blockNumber: event.blockNumber!.toString(),
               transactionHash: event.transactionHash!,
               logIndex: Number(event.logIndex!),
-              proposalId: args.proposalId.toString(),
-              voter: getAddress(args.voter),
-              support: args.support,
-              amount: args.amount.toString(),
+              payload: getAddress(args.payload),
+              round: args.round.toString(),
               timestamp,
             },
           });
@@ -135,16 +126,20 @@ export const syncVoteEvents = async (
             skippedEvents++;
             totalEvents++;
           } else {
-            logError(`${chainName}: Failed to save vote event at block ${event.blockNumber}: ${dbError.message}`);
+            logError(
+              `${chainName}: Failed to save payload submitted event at block ${event.blockNumber}: ${dbError.message}`,
+            );
           }
         }
       } catch (e: any) {
-        logError(`${chainName}: Failed to process vote event at block ${event.blockNumber}: ${e.message}`);
+        logError(
+          `${chainName}: Failed to process payload submitted event at block ${event.blockNumber}: ${e.message}`,
+        );
       }
     }
 
     logInfo(
-      `${chainName}: Vote events sync complete - ${totalEvents} total (${newEvents} new, ${skippedEvents} duplicates)`,
+      `${chainName}: Payload submitted events sync complete - ${totalEvents} total (${newEvents} new, ${skippedEvents} duplicates)`,
     );
 
     const result: SyncResult = { success: true, totalEvents, newEvents, skippedEvents };
@@ -154,7 +149,7 @@ export const syncVoteEvents = async (
     }
     return result;
   } catch (e: any) {
-    logError(`${chainName}: Fatal error syncing vote events: ${e.message}`);
+    logError(`${chainName}: Fatal error syncing payload submitted events: ${e.message}`);
     return { success: false, totalEvents, newEvents, skippedEvents, failedRanges, error: e.message };
   }
 };

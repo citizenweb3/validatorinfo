@@ -24,6 +24,8 @@
 | `aztec-db-service.ts` | Aztec database operations |
 | `aztec-contracts-service.ts` | Aztec L1 contracts data |
 | `aztec-vote-event-service.ts` | Aztec vote events |
+| `aztec-signal-service.ts` | Aztec signal events (getPayloadSignals, getPayloadSignalStats, getPayloadSignalers, getSignalerStats, getOriginalPayload) |
+| `aztec-governance-service.ts` | Aztec governance data (proposals, voting types) |
 
 ## Dependencies
 
@@ -63,7 +65,9 @@ src/app/services/
 │   └── *.ts                  # Aztec indexer endpoints
 ├── aztec-db-service.ts       # Aztec database operations
 ├── aztec-contracts-service.ts # Aztec L1 contracts
-└── aztec-vote-event-service.ts # Aztec vote events
+├── aztec-vote-event-service.ts # Aztec vote events
+├── aztec-signal-service.ts   # Aztec signal events for governance
+└── aztec-governance-service.ts # Aztec governance proposals
 ```
 
 ## Common Patterns
