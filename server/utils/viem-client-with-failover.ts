@@ -100,7 +100,7 @@ export const getOrCreateViemClient = (rpcUrls: string[], loggerName: string): Pu
 
   const client = createViemClientWithFailover(rpcUrls, {
     loggerName,
-    enableRanking: true,
+    enableRanking: false,
     timeout: 30000,
     retryCount: 3,
     retryDelay: 150,
