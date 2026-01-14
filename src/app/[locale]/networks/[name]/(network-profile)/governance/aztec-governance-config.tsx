@@ -12,11 +12,20 @@ interface OwnProps {
 
 const AztecGovernanceConfig: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkGovernance');
-  const config = await aztecGovernanceService.getGovernanceConfigDisplay(chain.name);
-  const power = await aztecGovernanceService.getVotingPowerDisplay(chain.name);
 
-  if (!config) return null;
-  if (!power) return null;
+  let config = null;
+  let power = null;
+
+  try {
+    [config, power] = await Promise.all([
+      aztecGovernanceService.getGovernanceConfigDisplay(chain.name),
+      aztecGovernanceService.getVotingPowerDisplay(chain.name),
+    ]);
+  } catch (error) {
+    console.error('Failed to fetch governance config:', error);
+  }
+
+  if (!config || !power) return null;
 
   return (
     <div className="mt-6 mb-4">

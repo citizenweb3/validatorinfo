@@ -27,7 +27,12 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
   let inactiveNodesLength: number | null;
 
   if (chain?.name === 'aztec' || chain?.name === 'aztec-testnet') {
-    activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+    try {
+      activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+    } catch (error) {
+      console.error('Failed to fetch active attester count:', error);
+      activeNodesLength = null;
+    }
     const allStakedNodes = nodes?.filter((node) => node.delegatorShares && node.delegatorShares !== '0');
     inactiveNodesLength = allStakedNodes && activeNodesLength ? allStakedNodes?.length - activeNodesLength : null;
   } else {

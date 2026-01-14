@@ -10,6 +10,13 @@ interface ViemClientOptions {
   loggerName?: string;
 }
 
+// Cache for viem clients to prevent creating new clients for every RPC call
+const clientCache = new Map<string, PublicClient>();
+
+const getCacheKey = (rpcUrls: string[]): string => {
+  return rpcUrls.sort().join('|');
+};
+
 const shouldThrowError = (error: any, loggerName: string): boolean => {
   const { logError, logWarn } = logger(loggerName);
   const message = error?.message?.toLowerCase() || '';
@@ -83,6 +90,26 @@ export const createViemClientWithFailover = (rpcUrls: string[], options: ViemCli
 };
 
 
+export const getOrCreateViemClient = (rpcUrls: string[], loggerName: string): PublicClient => {
+  const cacheKey = getCacheKey(rpcUrls);
+
+  const cachedClient = clientCache.get(cacheKey);
+  if (cachedClient) {
+    return cachedClient;
+  }
+
+  const client = createViemClientWithFailover(rpcUrls, {
+    loggerName,
+    enableRanking: true,
+    timeout: 30000,
+    retryCount: 3,
+    retryDelay: 150,
+  });
+
+  clientCache.set(cacheKey, client);
+  return client;
+};
+
 export const readContractWithFailover = async <T>(
   rpcUrls: string[],
   contractParams: Omit<ReadContractParameters, 'client'>,
@@ -93,13 +120,7 @@ export const readContractWithFailover = async <T>(
   try {
     logInfo(`Reading contract ${contractParams.address} function ${contractParams.functionName as string}`);
 
-    const client = createViemClientWithFailover(rpcUrls, {
-      loggerName,
-      enableRanking: true,
-      timeout: 30000,
-      retryCount: 3,
-      retryDelay: 150,
-    });
+    const client = getOrCreateViemClient(rpcUrls, loggerName);
 
     const result = await client.readContract(contractParams as any);
 
