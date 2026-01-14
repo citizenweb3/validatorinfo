@@ -280,6 +280,7 @@
     "Operator Distributions": "Распределение Операторов",
     "active": "Активные",
     "inactive": "Неактивные",
+    "active in queue": "Активные в очереди",
     "jailed": "Джэйл",
     "Social": "Социальные",
     "price of active user": "Цена активного пользователя",

@@ -280,6 +280,7 @@
     "Operator Distributions": "Operator Distribution",
     "active": "Active",
     "inactive": "Inactive",
+    "active in queue": "Active in queue",
     "jailed": "Jailed",
     "Social": "Social",
     "price of active user": "Price of Active User",

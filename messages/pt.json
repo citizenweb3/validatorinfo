@@ -281,6 +281,7 @@
     "active": "Ativo",
     "inactive": "Inativo",
     "jailed": "Jailed",
+    "active in queue": "Ativo na fila",
     "Social": "Social",
     "price of active user": "Preço do usuário ativo",
     "believers": "Entusiastas",
