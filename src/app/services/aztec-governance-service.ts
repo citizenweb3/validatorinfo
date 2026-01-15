@@ -1,11 +1,13 @@
+import logger from '@/logger';
 import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
-import { getGovernanceConfig, GovernanceConfiguration } from '@/server/tools/chains/aztec/utils/get-governance-config';
-import { getTotalVotingPower } from '@/server/tools/chains/aztec/utils/get-governance-power';
-import { getTotalSupply } from '@/server/tools/chains/aztec/utils/get-total-supply';
+import { GovernanceConfiguration } from '@/server/tools/chains/aztec/utils/get-governance-config';
 import formatCash from '@/utils/format-cash';
 import formatDurationSeconds from '@/utils/format-duration-seconds';
 import formatWeiPercentage from '@/utils/format-wei-percentage';
-import { getL1RpcUrls } from '@/server/tools/chains/aztec/utils/get-l1-rpc-urls';
+
+import { getAztecGovernanceDataFromDb, StoredGovernanceConfig } from './aztec-governance-db';
+
+const { logDebug } = logger('aztec-governance-service');
 
 export interface GovernanceConfigDisplay {
   votingDelay: string;
@@ -29,25 +31,33 @@ const formatTokenAmount = (wei: bigint): string => {
   return formatCash(amount, 2).replace(/\s/g, '');
 };
 
+const formatStoredConfig = (config: StoredGovernanceConfig): GovernanceConfigDisplay => {
+  return {
+    votingDelay: formatDurationSeconds(BigInt(config.votingDelay)),
+    votingDuration: formatDurationSeconds(BigInt(config.votingDuration)),
+    executionDelay: formatDurationSeconds(BigInt(config.executionDelay)),
+    gracePeriod: formatDurationSeconds(BigInt(config.gracePeriod)),
+    quorum: formatWeiPercentage(BigInt(config.quorum)),
+    requiredYeaMargin: formatWeiPercentage(BigInt(config.requiredYeaMargin)),
+    minimumVotes: formatTokenAmount(BigInt(config.minimumVotes)),
+    lockAmount: formatTokenAmount(BigInt(config.proposeConfig.lockAmount)),
+    lockDelay: formatDurationSeconds(BigInt(config.proposeConfig.lockDelay)),
+  };
+};
+
 const getGovernanceConfigDisplay = async (
   chainName: string,
 ): Promise<GovernanceConfigDisplay | null> => {
   if (!isAztecChainName(chainName)) return null;
 
-  const config = await getGovernanceConfig(chainName);
-  if (!config) return null;
+  const dbData = await getAztecGovernanceDataFromDb(chainName);
+  if (!dbData?.governanceConfig) {
+    logDebug(`${chainName}: governanceConfig not available in DB`);
+    return null;
+  }
 
-  return {
-    votingDelay: formatDurationSeconds(config.votingDelay),
-    votingDuration: formatDurationSeconds(config.votingDuration),
-    executionDelay: formatDurationSeconds(config.executionDelay),
-    gracePeriod: formatDurationSeconds(config.gracePeriod),
-    quorum: formatWeiPercentage(config.quorum),
-    requiredYeaMargin: formatWeiPercentage(config.requiredYeaMargin),
-    minimumVotes: formatTokenAmount(config.minimumVotes),
-    lockAmount: formatTokenAmount(config.proposeConfig.lockAmount),
-    lockDelay: formatDurationSeconds(config.proposeConfig.lockDelay),
-  };
+  logDebug(`${chainName}: governanceConfig from DB (updated: ${dbData.updatedAt})`);
+  return formatStoredConfig(dbData.governanceConfig);
 };
 
 const getVotingPowerDisplay = async (
@@ -55,21 +65,23 @@ const getVotingPowerDisplay = async (
 ): Promise<VotingPowerDisplay | null> => {
   if (!isAztecChainName(chainName)) return null;
 
-  const l1RpcUrls = getL1RpcUrls(chainName);
-  if (l1RpcUrls.length === 0) return null;
-
-  const [totalPower, totalSupply] = await Promise.all([
-    getTotalVotingPower(chainName),
-    getTotalSupply(l1RpcUrls, chainName).catch(() => null),
-  ]);
-
-  if (!totalPower) return null;
-
-  let percentOfSupply = 0;
-  if (totalSupply && totalSupply > BigInt(0)) {
-    percentOfSupply = (Number(totalPower) / Number(totalSupply)) * 100;
+  const dbData = await getAztecGovernanceDataFromDb(chainName);
+  if (!dbData?.totalVotingPower) {
+    logDebug(`${chainName}: totalVotingPower not available in DB`);
+    return null;
   }
 
+  const totalPower = BigInt(dbData.totalVotingPower);
+  let percentOfSupply = 0;
+
+  if (dbData.totalSupply) {
+    const totalSupply = BigInt(dbData.totalSupply);
+    if (totalSupply > BigInt(0)) {
+      percentOfSupply = (Number(totalPower) / Number(totalSupply)) * 100;
+    }
+  }
+
+  logDebug(`${chainName}: votingPower from DB (updated: ${dbData.updatedAt})`);
   return {
     totalPower: formatTokenAmount(totalPower),
     percentOfSupply,
@@ -80,12 +92,37 @@ const getRawGovernanceConfig = async (
   chainName: string,
 ): Promise<GovernanceConfiguration | null> => {
   if (!isAztecChainName(chainName)) return null;
-  return getGovernanceConfig(chainName);
+
+  const dbData = await getAztecGovernanceDataFromDb(chainName);
+  if (!dbData?.governanceConfig) {
+    return null;
+  }
+
+  const config = dbData.governanceConfig;
+  return {
+    proposeConfig: {
+      lockDelay: BigInt(config.proposeConfig.lockDelay),
+      lockAmount: BigInt(config.proposeConfig.lockAmount),
+    },
+    votingDelay: BigInt(config.votingDelay),
+    votingDuration: BigInt(config.votingDuration),
+    executionDelay: BigInt(config.executionDelay),
+    gracePeriod: BigInt(config.gracePeriod),
+    quorum: BigInt(config.quorum),
+    requiredYeaMargin: BigInt(config.requiredYeaMargin),
+    minimumVotes: BigInt(config.minimumVotes),
+  };
 };
 
 const getRawTotalVotingPower = async (chainName: string): Promise<bigint | null> => {
   if (!isAztecChainName(chainName)) return null;
-  return getTotalVotingPower(chainName);
+
+  const dbData = await getAztecGovernanceDataFromDb(chainName);
+  if (!dbData?.totalVotingPower) {
+    return null;
+  }
+
+  return BigInt(dbData.totalVotingPower);
 };
 
 const aztecGovernanceService = {
