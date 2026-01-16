@@ -197,6 +197,38 @@ yarn build                  # Production build (type-checks everything)
 - Uses next-intl for locale-based routing
 - Locale configuration in src/i18n.ts, localization files in messages/ folder
 
+#### Critical Rule: Localization
+
+**When adding or modifying any user-facing text, you MUST update ALL 3 localization files:**
+
+| File | Language |
+|------|----------|
+| `messages/en.json` | English |
+| `messages/pt.json` | Portuguese |
+| `messages/ru.json` | Russian |
+
+**Requirements:**
+1. NEVER hardcode user-facing strings in components - always use `useTranslations()` hook for CSR and `getTranslations()` for SSR
+2. When adding new text, add translations to ALL 3 files simultaneously
+3. Use the same key structure across all files
+4. For new features, create appropriate namespace (e.g., `Header`, `Navbar`, `HomePage`)
+
+**Example:**
+```tsx
+// Component
+const t = useTranslations('Header');
+<span>{t('Co-Create & Support')}</span>
+
+// messages/en.json
+{ "Header": { "Co-Create & Support": "Co-Create & Support" } }
+
+// messages/pt.json
+{ "Header": { "Co-Create & Support": "Co-Criar e Apoiar" } }
+
+// messages/ru.json
+{ "Header": { "Co-Create & Support": "Сотрудничество и поддержка" } }
+```
+
 ### Database Schema
 
 - Prisma models: Account, Chain, ChainParams, Apr, Validator, Proposal, Vote, InfrastructureProvider, etc.
@@ -276,6 +308,7 @@ The user asks questions about the following coding languages:
 ## Code Implementation Guidelines
 
 Follow these rules when you write code:
+- Always use vercel-react-best-practices skill
 - Use early returns whenever possible to make the code more readable
 - Always use Tailwind classes for styling HTML elements; avoid using CSS or style tags
 - For conditional stylization try to use `cn()` helper: `className={cn('text-sm', { 'bg-blue-500': isActive })}` where it is possible.

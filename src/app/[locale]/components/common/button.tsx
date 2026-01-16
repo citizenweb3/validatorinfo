@@ -39,12 +39,12 @@ const Button: FC<PropsWithChildren<OwnProps>> = ({
     (isActive
       ? `bg-gradient-to-r ${activeClasses[activeType]} active:from-transparent active:to-transparent border-none text-highlight`
       : hasActiveFilters
-      ? 'border-2 border-primary/50 bg-primary/10 text-highlight'
-      : 'bg-background') +
-    ` ${className} group/button border-r border-t border-bgSt shadow-button hover:bg-bgHover hover:text-highlight hover:fill-highlight min-w-9 fill-black stroke-black p-px active:mt-1 active:border-transparent active:bg-background active:shadow-none`;
+        ? 'border-2 border-primary/50 bg-primary/10 text-highlight'
+        : 'bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)]') +
+    ` ${className} group/button border-r border-t border-bgSt shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:bg-bgHover hover:text-highlight hover:fill-highlight min-w-9 fill-black stroke-black p-px active:mt-1 active:border-transparent active:bg-background active:shadow-none`;
   let content = (
     <div
-      className={`${contentClassName} relative flex h-full items-center justify-center bg-background px-2 py-1.5 group-hover/button:bg-bgHover group-active/button:bg-background`}
+      className={`${contentClassName} relative flex h-full items-center justify-center px-2 py-1.5 group-hover/button:text-highlight`}
     >
       {children}
     </div>

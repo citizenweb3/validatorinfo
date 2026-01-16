@@ -42,7 +42,7 @@ const HeaderControls: FC<OwnProps> = () => {
             window.location.reload();
           }
         }}
-        className="group cursor-pointer border border-transparent border-r-bgSt border-t-bgSt shadow-button hover:border hover:border-bgSt hover:bg-[#272727] hover:text-highlight active:mt-1 active:border-transparent active:bg-background active:shadow-none"
+        className="group cursor-pointer border-r border-t border-bgSt bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:bg-bgHover hover:text-highlight active:mt-1 active:border-transparent active:shadow-none"
       >
         <div className="relative flex flex-col items-center px-2 py-1">
           <div className="group-hover:text-shadowed hidden font-handjet text-lg text-highlight md:block">
