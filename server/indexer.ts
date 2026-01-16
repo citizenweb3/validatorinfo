@@ -77,6 +77,7 @@ const runServer = async () => {
     { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
+
   ];
 
   tasks.forEach((task) => {
@@ -122,6 +123,8 @@ const runServer = async () => {
     { name: 'update-validators-aztec-logos', schedule: timers.everyHour },
     { name: 'sync-aztec-committee', schedule: timers.every10mins },
     { name: 'update-aztec-l1-contracts', schedule: timers.everyDay },
+    { name: 'update-aztec-governance-data', schedule: timers.every30mins },
+
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

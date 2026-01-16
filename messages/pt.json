@@ -49,6 +49,17 @@
     "Profile": "Perfil",
     "Search for a validator, pool, tx, address, network, etc": "Pesquise um validador, pool, transação, endereço, rede, etc.",
     "Lucky!?": "Sortudo!?",
+    "Co-Create & Support": "Co-Criar & Apoiar",
+    "CoCreate": {
+      "tagline": "<github>Código aberto. Sem anúncios. Respeito à privacidade. Auto-hospedado.</github> Estamos fazendo isso de forma independente — e vai continuar assim. O Explorer que a Web3 merece!",
+      "description": "Somos um <validator>validador auto-hospedado, bare-metal</validator>, focado em redes de privacidade e construindo para a descentralização. Construímos <infrastructure>infraestrutura única, capaz de operar fora da rede</infrastructure> para redes e ferramentas que oferecem monitoramento preciso e direto de dados on-chain.",
+      "lookingFor": "Estamos procurando:",
+      "partners": "Parceiros apaixonados",
+      "interns": "Estagiários/contribuidores entusiasmados",
+      "delegators": "Delegadores que praticam a descentralização",
+      "telegram": "DM no Telegram: <link>@citizenweb3</link>",
+      "support": "Apoie o projeto fazendo staking conosco!"
+    },
     "search": {
       "Validators": "Validadores",
       "Networks": "Redes",

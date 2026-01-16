@@ -4,9 +4,12 @@ import { Chain } from '@prisma/client';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 
-import ValidatorListItemBattery from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-battery';
-import ValidatorListItemChains from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-chains';
-import ValidatorListItemFavorite from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-favorite';
+import ValidatorListItemBattery
+  from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-battery';
+import ValidatorListItemChains
+  from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-chains';
+import ValidatorListItemFavorite
+  from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-favorite';
 import ValidatorListItemLinks from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-links';
 import ValidatorListItemTVS from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-tvs';
 import TableAvatar from '@/components/common/table/table-avatar';
@@ -28,26 +31,30 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
     })
     .filter((c) => typeof c !== 'undefined');
 
+  const rowStyle = 'px-3';
+
   return (
-    <tr className="group font-handjet hover:bg-bgHover ">
-      <td className="w-9 border-b border-black py-2 active:border-bgSt">
-        <ValidatorListItemFavorite isFavorite={false} />
+    <tr className="group bg-table_row font-handjet shadow-md hover:bg-table_header">
+      <td className="group/avatar w-[20%] font-sfpro hover:text-highlight">
+        <div className="flex items-center">
+          <div className="w-9 mr-2 -py flex items-center justify-center">
+            <ValidatorListItemFavorite isFavorite={false} />
+          </div>
+          <TableAvatar
+            textClassName="max-w-36"
+            icon={validator.url}
+            name={validator.moniker}
+            href={`/validators/${validator.id}/networks`}
+          />
+        </div>
       </td>
-      <td className="group/avatar w-[20%] border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <TableAvatar
-          textClassName="max-w-36"
-          icon={validator.url}
-          name={validator.moniker}
-          href={`/validators/${validator.id}/networks`}
-        />
-      </td>
-      <td className="border-b border-black px-2 py-2 active:border-bgSt">
+      <td className={rowStyle}>
         <ValidatorListItemLinks validator={validator} />
       </td>
-      <td className="border-b border-black px-2 py-2">
+      <td className={rowStyle}>
         <ValidatorListItemBattery battery={99} id={validator.id} />
       </td>
-      <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      <td className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
@@ -55,7 +62,7 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
           -
         </Link>
       </td>
-      <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      <td className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
@@ -63,7 +70,7 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
           -
         </Link>
       </td>
-      <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      <td className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
@@ -71,7 +78,7 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
           -
         </Link>
       </td>
-      <td className="border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      <td className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
@@ -79,10 +86,10 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
           -
         </Link>
       </td>
-      <td className="group/tvs border-b border-black px-2 py-2 active:border-bgSt">
+      <td className={rowStyle}>
         <ValidatorListItemTVS id={validator.id} activeId={activeId} setActiveId={setActiveId} />
       </td>
-      <td className="border-b border-black px-2 py-2">
+      <td className={rowStyle}>
         <ValidatorListItemChains chains={validatorChains} validator={validator} />
       </td>
     </tr>
