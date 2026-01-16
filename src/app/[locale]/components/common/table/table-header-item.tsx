@@ -16,17 +16,19 @@ interface OwnProps extends PagesProps {
 }
 
 const TableHeaderItem: FC<OwnProps> = ({
-                                         page,
-                                         sortField,
-                                         name,
-                                         className,
-                                         colspan = 1,
-                                         defaultSelected = false,
-                                         tooltip,
-                                         children
-                                       }) => {
+    page,
+    sortField,
+    name,
+    className,
+    colspan = 1,
+    defaultSelected = false,
+    tooltip,
+    children,
+  }) => {
   return (
-    <th className={`text-center ${className || ''}`} colSpan={colspan}>
+    <th
+      className={`text-center bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)] border-x-2 border-transparent ${className || ''}`}
+      colSpan={colspan}>
       {children ? (
         children
       ) : tooltip ? (

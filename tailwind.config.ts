@@ -49,6 +49,7 @@ const config: Config = {
       secondary: '#4FB848',
       highlight: 'var(--color-background-highlight)',
       table_header: '#272727',
+      table_row: '#181818',
       card: '#272727',
       background: 'var(--color-background)',
       bgSt: 'var(--color-background-stroke)',
