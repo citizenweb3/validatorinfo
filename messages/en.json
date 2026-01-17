@@ -51,14 +51,15 @@
     "Lucky!?": "Lucky!?",
     "Co-Create & Support": "Co-Create & Support",
     "CoCreate": {
-      "tagline": "<github>Open-source. Ad-free. Privacy-respecting. Self-hosted.</github> We're doing this independently - and it's staying that way. The Explorer Web3 Deserves!",
+      "tagline": "<github>Open-source. Ad-free. Privacy-respecting. Self-hosted!</github>",
+      "mission": "We're doing this independently - and it's staying that way. The Explorer Web3 Deserves!",
       "description": "We are a <validator>self-hosted, baremetal validator</validator>, focused on privacy networks and building for decentralization. We build unique, <infrastructure>off-the-grid-capable infrastructure</infrastructure> for networks and tools to offer precise, no-BS, on-chain monitoring of blockchain data.",
       "lookingFor": "We are looking for:",
       "partners": "Passionate partners",
       "interns": "Eager interns/contributors",
       "delegators": "Delegators who walk the decentralization talk",
-      "telegram": "DM on Telegram: <link>@citizenweb3</link>",
-      "support": "Support the project by staking with us!"
+      "telegram": "DM on Telegram: <tgLink>@citizenweb3</tgLink>",
+      "support": "This project is funded via our nodes. Support the project now, by <stakingLink>staking with us!</stakingLink>"
     },
     "search": {
       "Validators": "Validators",
