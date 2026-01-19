@@ -18,10 +18,70 @@ import { Line } from 'react-chartjs-2';
 
 import { getAztecTvsData } from '@/actions/aztec-tvs';
 import { PeriodType, TvsDataPoint } from '@/services/aztec-db-service';
+import { shadowPlugin } from '@/components/chart/chart-shadow-plugin';
+import { crosshairPlugin } from '@/components/chart/chart-crosshair-plugin';
+import ChartButtons from '@/app/comparevalidators/chart-buttons';
 
-import ChartButtons from '../../../../comparevalidators/chart-buttons';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, zoomPlugin);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, zoomPlugin, shadowPlugin, crosshairPlugin);
+
+// Set to true to use mock data for testing
+const USE_MOCK_DATA = false;
+
+// Generate mock TVS data for testing
+const generateMockData = (period: PeriodType): TvsDataPoint[] => {
+  const now = new Date();
+  const data: TvsDataPoint[] = [];
+
+  let numPoints: number;
+  let dateStep: number; // in days
+
+  switch (period) {
+    case 'day':
+      numPoints = 30;
+      dateStep = 1;
+      break;
+    case 'week':
+      numPoints = 12;
+      dateStep = 7;
+      break;
+    case 'month':
+      numPoints = 12;
+      dateStep = 30;
+      break;
+    case 'year':
+      numPoints = 5;
+      dateStep = 365;
+      break;
+    default:
+      numPoints = 30;
+      dateStep = 1;
+  }
+
+  // Start TVS around 25% and gradually increase with some volatility
+  let tvs = 25 + Math.random() * 5;
+  const totalSupply = 1000000000; // 1 billion AZTEC
+
+  for (let i = numPoints - 1; i >= 0; i--) {
+    const date = new Date(now);
+    date.setDate(date.getDate() - i * dateStep);
+
+    // Add some realistic volatility (-2% to +3% change)
+    tvs += (Math.random() - 0.4) * 3;
+    tvs = Math.max(15, Math.min(60, tvs)); // Keep between 15% and 60%
+
+    const totalStaked = Math.round((tvs / 100) * totalSupply);
+
+    data.push({
+      date: date.toISOString(),
+      tvs: parseFloat(tvs.toFixed(2)),
+      totalStaked,
+      totalSupply,
+    });
+  }
+
+  return data;
+};
 
 interface OnwProps {
   chainName: string;
@@ -44,8 +104,13 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const tvsData = await getAztecTvsData(chainName, period);
-        setData(tvsData);
+        if (USE_MOCK_DATA) {
+          const mockData = generateMockData(period);
+          setData(mockData);
+        } else {
+          const tvsData = await getAztecTvsData(chainName, period);
+          setData(tvsData);
+        }
       } catch (error) {
         console.error('Error fetching TVS data:', error);
       } finally {
@@ -69,6 +134,16 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
     }
   };
 
+  const getAdaptiveYMax = (): number => {
+    if (data.length === 0) return 100;
+    const maxValue = Math.max(...data.map((point) => point.tvs));
+    if (maxValue <= 20) return 40;
+    if (maxValue <= 50) return 70;
+    return 100;
+  };
+
+  const yAxisMax = getAdaptiveYMax();
+
   const chartData = {
     labels: data.map((point) => formatDate(point.date)),
     datasets: [
@@ -76,12 +151,11 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
         label: 'TVS',
         data: data.map((point) => point.tvs),
         borderColor: '#4FB848',
-        backgroundColor: 'rgba(79, 184, 72, 0.15)',
-        borderWidth: 2,
+        borderWidth: 1.5,
         pointRadius: 0,
         pointHoverRadius: 0,
         tension: 0.4,
-        fill: true,
+        fill: false,
       },
     ],
   };
@@ -100,35 +174,48 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
       tooltip: {
         enabled: true,
         backgroundColor: '#1E1E1E',
-        titleColor: '#FFFFFF',
+        titleColor: '#E5C46B',
         bodyColor: '#FFFFFF',
         borderColor: '#444444',
         borderWidth: 1,
         padding: 12,
-        displayColors: false,
+        displayColors: true,
+        boxWidth: 10,
+        boxHeight: 10,
+        boxPadding: 6,
+        usePointStyle: false,
         titleFont: {
-          family: 'SF Pro, -apple-system, BlinkMacSystemFont, sans-serif',
-          size: 12,
-          weight: 600,
+          family: 'Handjet, monospace',
+          size: 14,
+          weight: 400,
         },
         bodyFont: {
           family: 'SF Pro, -apple-system, BlinkMacSystemFont, sans-serif',
           size: 13,
         },
         callbacks: {
-          label: (context) => {
-            const index = context.dataIndex;
+          title: (tooltipItems) => {
+            if (tooltipItems.length === 0) return '';
+            const index = tooltipItems[0].dataIndex;
             const dataPoint = data[index];
-
-            if (!dataPoint) {
-              return `TVS: ${context.parsed.y.toFixed(2)}%`;
-            }
-
-            return [
-              `TVS: ${dataPoint.tvs.toFixed(2)}%`,
-              `Total Staked: ${dataPoint.totalStaked.toLocaleString()} AZTEC`,
-              `Total Supply: ${dataPoint.totalSupply.toLocaleString()} AZTEC`,
-            ];
+            if (!dataPoint) return '';
+            const date = new Date(dataPoint.date);
+            return date.toLocaleDateString('en-US', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            });
+          },
+          label: (context) => {
+            const value = context.parsed.y;
+            return `  TVS    ${value.toFixed(2)}%`;
+          },
+          labelColor: (context) => {
+            return {
+              borderColor: '#FFFFFF',
+              backgroundColor: context.dataset.borderColor as string,
+              borderWidth: 1,
+            };
           },
         },
       },
@@ -151,7 +238,11 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
     scales: {
       x: {
         grid: {
-          display: false,
+          display: true,
+          drawOnChartArea: false,
+          drawTicks: true,
+          tickLength: 6,
+          tickColor: '#3E3E3E',
         },
         ticks: {
           color: '#FFFFFF',
@@ -162,9 +253,10 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
           },
           maxRotation: 0,
           minRotation: 0,
+          padding: 4,
         },
         border: {
-          color: '#444444',
+          color: '#3E3E3E',
         },
       },
       y: {
@@ -174,16 +266,16 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
         ticks: {
           color: '#FFFFFF',
           font: {
-            family: 'SF Pro, -apple-system, BlinkMacSystemFont, sans-serif',
-            size: 14,
+            family: 'Handjet, monospace',
+            size: 12,
           },
           callback: (value) => `${value}`,
         },
         border: {
-          color: '#444444',
+          color: '#3E3E3E',
         },
         beginAtZero: true,
-        max: 100,
+        max: yAxisMax,
       },
     },
   };
