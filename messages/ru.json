@@ -300,7 +300,8 @@
     "followers": "Подписчики",
     "followers tooltip": "Количество подписчиков в Twitter (X)",
     "members": "Участники",
-    "Transaction Volume": "Объём транзакций + MAU"
+    "Transaction Volume": "Объём транзакций + MAU",
+    "chart unavailable": "Данные об объёме транзакций временно недоступны. Метрики появятся после завершения технического обслуживания."
   },
   "NetworkGovernance": {
     "title": "Портал управления: Голосование в сети",

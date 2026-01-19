@@ -300,7 +300,8 @@
     "followers": "Seguidores",
     "followers tooltip": "Quantidade de seguidores no Twitter (X)",
     "members": "Membros",
-    "Transaction Volume": "Volume de transações + MAU"
+    "Transaction Volume": "Volume de transações + MAU",
+    "chart unavailable": "Os dados do volume de transações estão indisponíveis no momento. As métricas ao vivo retornarão assim que a manutenção for concluída."
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",
