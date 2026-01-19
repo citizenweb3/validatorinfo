@@ -134,6 +134,16 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
     }
   };
 
+  const getAdaptiveYMax = (): number => {
+    if (data.length === 0) return 100;
+    const maxValue = Math.max(...data.map((point) => point.tvs));
+    if (maxValue <= 20) return 40;
+    if (maxValue <= 50) return 70;
+    return 100;
+  };
+
+  const yAxisMax = getAdaptiveYMax();
+
   const chartData = {
     labels: data.map((point) => formatDate(point.date)),
     datasets: [
@@ -265,7 +275,7 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
           color: '#3E3E3E',
         },
         beginAtZero: true,
-        max: 100,
+        max: yAxisMax,
       },
     },
   };
