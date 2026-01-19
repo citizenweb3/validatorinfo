@@ -56,6 +56,7 @@ const config: Config = {
       bgHover: 'var(--color-background-hover)',
       storiesGreen: '#223124',
       dottedLine: '#E5C46B',
+      redDottedLine: '#FF0202',
       oldPalette: {
         yellow: '#F3B101',
         red: '#EB1616',

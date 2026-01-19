@@ -25,10 +25,11 @@ const ValidatorListItemGame: FC<OwnProps> = ({ chains, validator }) => {
     .filter((c) => typeof c !== 'undefined');
 
   const rowStyle = 'px-3';
+  const cellHoverStyle = 'relative hover:bg-[#272727] hover:shadow-[0_4px_12px_rgba(0,0,0,0.6),0_8px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:rounded-sm hover:z-10 hover:scale-y-[1.05]';
 
   return (
     <tr className="group bg-table_row font-handjet shadow-md hover:bg-table_header">
-      <td className="group/avatar w-[20%] font-sfpro hover:text-highlight">
+      <td className={`group/avatar w-[20%] font-sfpro hover:text-highlight ${cellHoverStyle}`}>
         <div className="flex items-center">
           <div className="w-9 mr-2 -py flex items-center justify-center">
             <ValidatorListItemFavorite isFavorite={false} />
@@ -41,10 +42,10 @@ const ValidatorListItemGame: FC<OwnProps> = ({ chains, validator }) => {
           />
         </div>
       </td>
-      <td className={rowStyle}>
+      <td className={`${rowStyle} ${cellHoverStyle}`}>
         <ValidatorListItemLinks validator={validator} />
       </td>
-      <td className={rowStyle}>
+      <td className={`${rowStyle} ${cellHoverStyle}`}>
         <ValidatorListItemChains chains={validatorChains} validator={validator} />
       </td>
     </tr>

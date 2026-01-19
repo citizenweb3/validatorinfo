@@ -31,9 +31,9 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
       } ${isHighlighted ? 'border border-[#3e3e3e]' : 'border-r border-t border-bgSt'} group relative flex cursor-pointer flex-col items-center overflow-hidden p-px text-sm shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] transition-width duration-300 hover:bg-bgHover hover:text-highlight active:border active:border-[#3e3e3e]`}
     >
       <div
-        className="relative flex h-full w-full flex-grow flex-row flex-nowrap items-center overflow-hidden bg-gradient-to-t from-[#181818] from-[26%] to-[#272727] text-base font-semibold group-hover:text-highlight group-active:bg-[#181818] group-active:from-transparent group-active:to-transparent"
+        className="relative flex h-full w-full flex-grow flex-row flex-nowrap items-center overflow-hidden bg-gradient-to-t from-[#181818] from-[26%] to-[#272727] text-base font-semibold group-hover:bg-[#272727] group-hover:from-transparent group-hover:to-transparent group-hover:text-highlight group-active:bg-[#181818] group-active:from-transparent group-active:to-transparent"
       >
-        <div className="absolute md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
+        <div className="absolute transition-transform duration-150 group-active:scale-90 md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
           {icon && (
             <Image
               src={icon}
@@ -48,7 +48,7 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
         <div
           className={`${
             isActive ? 'block' : 'hidden group-hover:block'
-          } absolute md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform`}
+          } absolute group-active:scale-90 md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform`}
         >
           {iconHovered && (
             <Image
