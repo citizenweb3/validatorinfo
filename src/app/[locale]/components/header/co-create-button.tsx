@@ -27,13 +27,21 @@ const CoCreateButton = () => {
   const handleClose = () => setIsModalOpen(false);
 
   const modalContent = (
-    <BaseModal
-      title={t('Co-Create & Support')}
-      isRelative={false}
-      opened={isModalOpen}
-      onClose={handleClose}
-      className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-    >
+    <>
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-30 bg-black/60"
+          onClick={handleClose}
+          aria-hidden="true"
+        />
+      )}
+      <BaseModal
+        title={t('Co-Create & Support')}
+        isRelative={false}
+        opened={isModalOpen}
+        onClose={handleClose}
+        className="left-1/2 top-20 -translate-x-1/2 transform"
+      >
       <div className="w-max max-w-[80vw] p-10 pt-5">
         <p className="text-base">
           {t.rich('CoCreate.tagline', {
@@ -78,6 +86,7 @@ const CoCreateButton = () => {
         </p>
       </div>
     </BaseModal>
+    </>
   );
 
   return (
