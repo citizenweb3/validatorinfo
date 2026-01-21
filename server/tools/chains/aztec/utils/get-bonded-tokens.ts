@@ -1,4 +1,4 @@
-import db from '@/db';
+import db, { eventsClient } from '@/db';
 import logger from '@/logger';
 import { getActiveSequencers } from '@/server/tools/chains/aztec/utils/get-active-sequencers';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
@@ -6,6 +6,35 @@ import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 const { logInfo, logError, logWarn } = logger('get-bonded-tokens-aztec');
 
 const STAKE_AMOUNT = BigInt('200000000000000000000000');
+
+/**
+ * Get total slashed amount from events database.
+ * Only counts slashes for attesters that are still active (not withdrawn).
+ */
+const getTotalSlashedAmount = async (
+  chainId: number,
+  activeSequencers: Map<string, string>,
+): Promise<bigint> => {
+  try {
+    const slashEvents = await eventsClient.aztecSlashedEvent.findMany({
+      where: { chainId },
+      select: { attester: true, amount: true },
+    });
+
+    let totalSlashed = BigInt(0);
+    for (const event of slashEvents) {
+      // Only count slashes for still-active sequencers
+      if (activeSequencers.has(event.attester)) {
+        totalSlashed += BigInt(event.amount);
+      }
+    }
+
+    return totalSlashed;
+  } catch (e: any) {
+    logWarn(`Failed to get slashed amounts: ${e.message}`);
+    return BigInt(0);
+  }
+};
 
 export const getBondedTokens = async (chain: AddChainProps): Promise<bigint> => {
   try {
@@ -18,11 +47,14 @@ export const getBondedTokens = async (chain: AddChainProps): Promise<bigint> => 
     }
 
     const activeSequencers = await getActiveSequencers(dbChain.id);
+    const grossStaked = BigInt(activeSequencers.size) * STAKE_AMOUNT;
 
-    const totalStaked = BigInt(activeSequencers.size) * STAKE_AMOUNT;
+    // Subtract slashed amounts from active sequencers
+    const totalSlashed = await getTotalSlashedAmount(dbChain.id, activeSequencers);
+    const totalStaked = grossStaked - totalSlashed;
 
     logInfo(
-      `Bonded tokens: ${activeSequencers.size} active sequencers × 200k AZTEC = ${totalStaked}`,
+      `Bonded tokens: ${activeSequencers.size} sequencers × 200k = ${grossStaked}, slashed = ${totalSlashed}, net = ${totalStaked}`,
     );
 
     const nodeCount = await db.node.count({
