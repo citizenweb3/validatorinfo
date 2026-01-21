@@ -137,6 +137,7 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
   const getAdaptiveYMax = (): number => {
     if (data.length === 0) return 100;
     const maxValue = Math.max(...data.map((point) => point.tvs));
+    if (maxValue <= 10) return 20;
     if (maxValue <= 20) return 40;
     if (maxValue <= 50) return 70;
     return 100;

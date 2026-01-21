@@ -1117,6 +1117,8 @@
     "transactions yesterday": "Transacções (Ontem)",
     "tps": "TPS (Últimos 20 Bloqueios)",
     "average fee": "Taxa média",
+    "noTransactionsYet": "Ainda não há transações",
+    "transactionsWillAppear": "A exibição de transações aparecerá quando as transações começarem na rede",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",

@@ -1126,6 +1126,8 @@
     "transactions yesterday": "Transactions (Yesterday)",
     "tps": "TPS (Last 20 Blocks)",
     "average fee": "Average Fee",
+    "noTransactionsYet": "No transactions yet",
+    "transactionsWillAppear": "Transaction display will appear when transactions begin on the network",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",

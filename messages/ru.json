@@ -1126,6 +1126,8 @@
     "transactions yesterday": "Транзакции (Вчера)",
     "tps": "TPS (Последние 20 Блоков)",
     "average fee": "Средняя Комиссия",
+    "noTransactionsYet": "Транзакций пока нет",
+    "transactionsWillAppear": "Отображение транзакций появится, когда в сети начнутся транзакции",
     "Table": {
       "Type of Tx": {
         "name": "Тип Транзакции",
