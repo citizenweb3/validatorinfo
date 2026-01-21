@@ -14,12 +14,6 @@ import { SyncResult } from '@/server/tools/chains/aztec/types';
 
 const { logInfo, logError, logWarn } = logger('sync-attester-events');
 
-/**
- * Sync AttestersAddedToProvider events from StakingRegistry contract.
- *
- * This function queries ALL events in a single pass (without filtering by provider),
- * which is much faster than iterating over each provider separately.
- */
 export const syncAttesterEvents = async (
   chainName: 'aztec' | 'aztec-testnet',
   dbChain: { id: number },
@@ -64,7 +58,6 @@ export const syncAttesterEvents = async (
       `${chainName}: Syncing attester events from block ${startBlock} to ${currentBlock} (${currentBlock - startBlock} blocks)`,
     );
 
-    // Process events per chunk to avoid memory accumulation
     for (let blockStart = startBlock; blockStart < currentBlock; blockStart += BigInt(chunkSize)) {
       const blockEnd =
         blockStart + BigInt(chunkSize) > currentBlock ? currentBlock : blockStart + BigInt(chunkSize);
@@ -90,13 +83,11 @@ export const syncAttesterEvents = async (
         continue;
       }
 
-      // Fetch timestamps for this chunk's events
       const blockNumbers = chunkEvents
         .map((e) => e.blockNumber)
         .filter((bn): bn is bigint => bn !== null && bn !== undefined);
       const blockTimestamps = await fetchBlockTimestamps(client, blockNumbers);
 
-      // Process and save events from this chunk immediately
       for (const event of chunkEvents) {
         if (!event.blockNumber || !event.transactionHash || event.logIndex === undefined) {
           logWarn(`${chainName}: Skipping event with missing required fields`);

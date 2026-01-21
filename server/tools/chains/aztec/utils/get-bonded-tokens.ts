@@ -7,10 +7,6 @@ const { logInfo, logError, logWarn } = logger('get-bonded-tokens-aztec');
 
 const STAKE_AMOUNT = BigInt('200000000000000000000000');
 
-/**
- * Get total slashed amount from events database.
- * Only counts slashes for attesters that are still active (not withdrawn).
- */
 const getTotalSlashedAmount = async (
   chainId: number,
   activeSequencers: Map<string, string>,
@@ -23,7 +19,6 @@ const getTotalSlashedAmount = async (
 
     let totalSlashed = BigInt(0);
     for (const event of slashEvents) {
-      // Only count slashes for still-active sequencers
       if (activeSequencers.has(event.attester)) {
         totalSlashed += BigInt(event.amount);
       }
@@ -49,7 +44,6 @@ export const getBondedTokens = async (chain: AddChainProps): Promise<bigint> => 
     const activeSequencers = await getActiveSequencers(dbChain.id);
     const grossStaked = BigInt(activeSequencers.size) * STAKE_AMOUNT;
 
-    // Subtract slashed amounts from active sequencers
     const totalSlashed = await getTotalSlashedAmount(dbChain.id, activeSequencers);
     const totalStaked = grossStaked - totalSlashed;
 

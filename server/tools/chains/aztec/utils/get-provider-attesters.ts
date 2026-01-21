@@ -5,16 +5,8 @@ import logger from '@/logger';
 import { AztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
 
-/**
- * Get mapping of attester address -> provider ID from the events database.
- *
- * This function reads from pre-synced AttestersAddedToProvider events,
- * making it fast (no blockchain queries).
- *
- * @returns Map<attesterAddress, providerId>
- */
 export const getProviderAttesters = async (
-  _rpcUrls: string[], // Kept for backwards compatibility, not used
+  _rpcUrls: string[],
   chainName: AztecChainName,
 ): Promise<Map<string, bigint>> => {
   const { logInfo, logError, logWarn } = logger(`${chainName}-get-provider-attesters`);
@@ -32,7 +24,6 @@ export const getProviderAttesters = async (
       return attesterToProvider;
     }
 
-    // Read all attester events from database
     const events = await eventsClient.aztecAttesterEvent.findMany({
       where: { chainId: dbChain.id },
       orderBy: { blockNumber: 'asc' },
@@ -45,7 +36,6 @@ export const getProviderAttesters = async (
 
     logInfo(`Found ${events.length} attester events in database`);
 
-    // Build attester -> provider mapping
     for (const event of events) {
       const providerId = BigInt(event.providerId);
 
