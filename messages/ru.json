@@ -224,7 +224,8 @@
     "Wrong amount": "Некоректное значение",
     "earnings": "д заработка",
     "downloading validators": "Загрузка Валидаторов...",
-    "please choose network": "Пожалуйста Выберете Сеть"
+    "please choose network": "Пожалуйста Выберете Сеть",
+    "not supported yet": "Пока не поддерживается"
   },
   "NetworksPage": {
     "title": "Каталог сетей A-Z: Изучайте сети и их показатели",

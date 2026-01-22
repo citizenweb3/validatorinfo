@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
 import SlashingEventsItem from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashing-events-item';
+import BaseTable from '@/components/common/table/base-table';
 import {
   SlashingEventsExampleInterface,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashingEventsExample';
@@ -17,11 +18,19 @@ interface OwnProps {
 const SlashingEventsTable: FC<OwnProps> = ({ items, showValidatorColumns = false }) => {
   const t = useTranslations('NodeRevenuePage');
 
-  const isAztecData = items.length > 0 && 'transactionHash' in items[0];
+  if (items.length === 0) {
+    return (
+      <div className="mt-4 rounded-lg p-6 text-center">
+        {t('no-slashing-events')}
+      </div>
+    );
+  }
+
+  const isAztecData = 'transactionHash' in items[0];
 
   return (
     <div>
-      <table className="mt-11 w-full table-auto border-collapse">
+      <BaseTable className="mt-11">
         <thead>
         <tr className="bg-table_header text-sm font-bold">
           <th className="py-3">
@@ -46,7 +55,7 @@ const SlashingEventsTable: FC<OwnProps> = ({ items, showValidatorColumns = false
           return <SlashingEventsItem key={key} item={item} showValidatorColumns={showValidatorColumns} />;
         })}
         </tbody>
-      </table>
+      </BaseTable>
     </div>
   );
 };

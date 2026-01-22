@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import cutHash from '@/utils/cut-hash';
 
 interface OwnProps {
@@ -28,23 +30,23 @@ const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
   const accountLink = `/networks/${chainName}/address/${item.address}/passport`;
 
   return (
-    <tr className="group cursor-pointer hover:bg-bgHover">
-      <td className="w-2/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="w-2/6 px-2 py-4 hover:text-highlight">
         <Link href={accountLink} className="flex justify-center">
           <div className="text-center text-base font-sfpro">{cutHash({ value: item.address, cutLength: 14 })}</div>
         </Link>
-      </td>
-      <td className="w-1/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/6 px-2 py-4 hover:text-highlight">
         <Link href={txLink} className="flex justify-center">
           <div className="text-center font-handjet text-lg">{item.amount}</div>
         </Link>
-      </td>
-      <td className="w-1/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/6 px-2 py-4 hover:text-highlight">
         <Link href={txLink} className="flex justify-center">
           <div className="text-center text-base font-sfpro">{item.happened}</div>
         </Link>
-      </td>
-      <td className="w-1/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/6 px-2 py-4 hover:text-highlight">
         {isAztec ? (
           <a
             href={txLink}
@@ -64,13 +66,13 @@ const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
             </div>
           </Link>
         )}
-      </td>
-      <td className="w-1/6 border-b border-black px-2 py-4 hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/6 px-2 py-4 hover:text-highlight">
         <Link href={txLink} className="flex justify-center">
           <div className="text-center font-handjet text-lg">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
         </Link>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

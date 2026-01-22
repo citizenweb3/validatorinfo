@@ -12,6 +12,8 @@ import ValidatorListItemFavorite
   from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-favorite';
 import ValidatorListItemLinks from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-links';
 import ValidatorListItemTVS from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-tvs';
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import { ValidatorWithNodes } from '@/services/validator-service';
 
@@ -32,11 +34,10 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
     .filter((c) => typeof c !== 'undefined');
 
   const rowStyle = 'px-3';
-  const cellHoverStyle = 'relative hover:bg-[#272727] hover:shadow-[0_4px_12px_rgba(0,0,0,0.6),0_8px_20px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.08)] hover:rounded-sm hover:z-10 hover:scale-y-[1.05]';
 
   return (
-    <tr className="group bg-table_row font-handjet shadow-md hover:bg-table_header">
-      <td className={`group/avatar w-[20%] font-sfpro hover:text-highlight ${cellHoverStyle}`}>
+    <BaseTableRow>
+      <BaseTableCell className="group/avatar w-[20%] font-sfpro hover:text-highlight">
         <div className="flex items-center">
           <div className="w-9 mr-2 -py flex items-center justify-center">
             <ValidatorListItemFavorite isFavorite={false} />
@@ -48,52 +49,52 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
             href={`/validators/${validator.id}/networks`}
           />
         </div>
-      </td>
-      <td className={`${rowStyle} ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={rowStyle}>
         <ValidatorListItemLinks validator={validator} />
-      </td>
-      <td className={`${rowStyle} ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={rowStyle}>
         <ValidatorListItemBattery battery={99} id={validator.id} />
-      </td>
-      <td className={`${rowStyle} hover:text-highlight ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
-      </td>
-      <td className={`${rowStyle} hover:text-highlight ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
-      </td>
-      <td className={`${rowStyle} hover:text-highlight ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
-      </td>
-      <td className={`${rowStyle} hover:text-highlight ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={`${rowStyle} hover:text-highlight`}>
         <Link
           href={`/validators/${validator.id}/metrics`}
           className="flex items-center justify-center font-handjet text-lg"
         >
           -
         </Link>
-      </td>
-      <td className={`${rowStyle} ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={rowStyle}>
         <ValidatorListItemTVS id={validator.id} activeId={activeId} setActiveId={setActiveId} />
-      </td>
-      <td className={`${rowStyle} ${cellHoverStyle}`}>
+      </BaseTableCell>
+      <BaseTableCell className={rowStyle}>
         <ValidatorListItemChains chains={validatorChains} validator={validator} />
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

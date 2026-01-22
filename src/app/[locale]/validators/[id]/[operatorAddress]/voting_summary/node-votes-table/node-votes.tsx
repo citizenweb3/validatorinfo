@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import NodeVotesList from '@/app/validators/[id]/[operatorAddress]/voting_summary/node-votes-table/node-votes-list';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -15,7 +16,7 @@ interface OwnProps extends PagesProps {
 const NodeVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage, operatorAddress }) => {
   return (
     <div>
-      <table className="w-full table-auto border-collapse">
+      <BaseTable>
         <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Title" sortField="id" />
@@ -25,7 +26,7 @@ const NodeVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage, opera
           </tr>
         </thead>
         <NodeVotesList perPage={perPage} sort={sort} currentPage={currentPage} operatorAddress={operatorAddress} />
-      </table>
+      </BaseTable>
     </div>
   );
 };

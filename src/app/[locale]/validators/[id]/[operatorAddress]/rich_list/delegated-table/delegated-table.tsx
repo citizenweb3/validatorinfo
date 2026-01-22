@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import DelegatedEventsList
   from '@/app/validators/[id]/[operatorAddress]/rich_list/delegated-table/delegated-events-list';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -18,7 +19,7 @@ const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, cu
   return (
     <div>
       <div>
-        <table className="w-full table-auto border-collapse">
+        <BaseTable>
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Address" />
@@ -35,7 +36,7 @@ const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, cu
             currentPage={currentPage}
             operatorAddress={operatorAddress}
           />
-        </table>
+        </BaseTable>
       </div>
     </div>
   );

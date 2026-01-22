@@ -1,4 +1,6 @@
 import { FC } from 'react';
+
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -51,7 +53,7 @@ const ValidatorsVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage,
           </svg>
         </div>
       </div>
-      <table className="w-full table-auto border-collapse mt-4">
+      <BaseTable className="mt-4">
         <thead>
         <tr className="bg-table_header">
           <TableHeaderItem page={page} name="Validator" sortField="moniker" defaultSelected />
@@ -69,7 +71,7 @@ const ValidatorsVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage,
           vote={vote}
           search={search}
         />
-      </table>
+      </BaseTable>
     </div>
   );
 };

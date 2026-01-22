@@ -2,6 +2,7 @@ import { FC, Suspense } from 'react';
 
 import ValidatorsListMobile from '@/app/main-validators/validator-list-mobile/validator-list-item-mobile/validator-list-mobile';
 import ListFiltersMobile from '@/components/common/list-filters/list-filters-mobile';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -17,7 +18,7 @@ const ValidatorsMobile: FC<OwnProps> = async ({ page, sort, perPage, ecosystems 
   return (
     <div className="mr-6">
       <ListFiltersMobile perPage={perPage} selectedEcosystems={ecosystems} isEcosystems />
-      <table className="relative my-4 w-full table-auto border-collapse">
+      <BaseTable className="relative my-4">
         <thead>
           <tr className="sticky top-0 z-30 w-full bg-table_header">
             <TableHeaderItem page={page} className="w-[75%]" name="Validator" sortField="moniker" />
@@ -35,7 +36,7 @@ const ValidatorsMobile: FC<OwnProps> = async ({ page, sort, perPage, ecosystems 
         >
           <ValidatorsListMobile perPage={perPage} currentPage={currentPage} ecosystems={ecosystems} sort={sort} />
         </Suspense>
-      </table>
+      </BaseTable>
     </div>
   );
 };

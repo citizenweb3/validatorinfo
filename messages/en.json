@@ -224,7 +224,8 @@
     "Wrong amount": "Wrong amount",
     "earnings": "d Earnings",
     "downloading validators": "Downloading Validators...",
-    "please choose network": "Please Choose a Network"
+    "please choose network": "Please Choose a Network",
+    "not supported yet": "Not Supported Yet"
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",

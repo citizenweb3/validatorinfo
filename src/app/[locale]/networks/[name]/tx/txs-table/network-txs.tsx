@@ -1,5 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
+
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -20,7 +22,7 @@ const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, sort, 
   if (isAztecChainName(chainName)) {
     return (
       <div className="mt-12">
-        <table className="w-full table-auto border-collapse">
+        <BaseTable>
           <thead>
             <tr className="bg-table_header">
               <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
@@ -40,14 +42,14 @@ const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, sort, 
               </td>
             </tr>
           </tbody>
-        </table>
+        </BaseTable>
       </div>
     );
   }
 
   return (
     <div className="mt-12">
-      <table className="w-full table-auto border-collapse">
+      <BaseTable>
         <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
@@ -57,7 +59,7 @@ const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, sort, 
           </tr>
         </thead>
         <NetworkTxsList name={name} perPage={perPage} sort={sort} currentPage={currentPage} />
-      </table>
+      </BaseTable>
     </div>
   );
 };

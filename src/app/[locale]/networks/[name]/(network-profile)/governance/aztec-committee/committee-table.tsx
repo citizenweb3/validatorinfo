@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import EpochProgressBar from '@/app/networks/[name]/(network-profile)/governance/aztec-committee/epoch-progress-bar';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import aztecContractService from '@/services/aztec-contracts-service';
@@ -37,7 +38,7 @@ const CommitteeTable: FC<OwnProps> = async ({ chain, sort, perPage, currentPage 
         </div>
       )}
 
-      <table className="my-4 w-full table-auto border-collapse">
+      <BaseTable className="my-4">
         <thead>
         <tr className="bg-table_header">
           <TableHeaderItem
@@ -62,7 +63,7 @@ const CommitteeTable: FC<OwnProps> = async ({ chain, sort, perPage, currentPage 
         </tr>
         </thead>
         <CommitteeTableList perPage={perPage} sort={sort} currentPage={currentPage} chain={chain} />
-      </table>
+      </BaseTable>
     </div>
   );
 };

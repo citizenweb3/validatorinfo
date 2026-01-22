@@ -2,6 +2,7 @@ import { FC, Suspense } from 'react';
 
 import ValidatorsList from '@/app/main-validators/validator-list/validators-list';
 import ListFilters from '@/components/common/list-filters/list-filters';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -18,7 +19,7 @@ const ValidatorsGame: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = 
     <div>
       <ListFilters perPage={perPage} selectedEcosystems={ecosystems} isEcosystems />
       <div>
-        <table className="relative my-4 w-full table-auto border-separate border-spacing-y-2">
+        <BaseTable className="my-4">
           <thead>
             <tr className="sticky top-0 z-30 w-full">
               <TableHeaderItem page={page} className="w-[20%]" name="Validator" sortField="moniker" />
@@ -37,7 +38,7 @@ const ValidatorsGame: FC<OwnProps> = async ({ page, sort, perPage, ecosystems = 
           >
             <ValidatorsList perPage={perPage} currentPage={currentPage} ecosystems={ecosystems} sort={sort} />
           </Suspense>
-        </table>
+        </BaseTable>
       </div>
     </div>
   );

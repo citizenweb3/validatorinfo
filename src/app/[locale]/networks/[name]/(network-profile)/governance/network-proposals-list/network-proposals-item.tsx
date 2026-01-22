@@ -2,6 +2,8 @@ import { Chain, Proposal } from '@prisma/client';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableRow from '@/components/common/table/base-table-row';
+import BaseTableCell from '@/components/common/table/base-table-cell';
 import Tooltip from '@/components/common/tooltip';
 import { parseMessage } from '@/utils/parse-proposal-message';
 
@@ -69,26 +71,26 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal, chain }) => {
   const proposalLink = `/networks/${chain?.name}/proposal/${proposal.proposalId}`;
 
   return (
-    <tr className="cursor-pointer hover:bg-bgHover">
-      <td className="w-1/4 border-b border-black py-4 pl-7 hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="w-1/4 py-4 pl-7 hover:text-highlight">
         <Link href={proposalLink} className="flex items-center gap-1">
           <div className="ml-1 mr-2 font-handjet text-xl text-highlight">{`#${proposal.proposalId}`}</div>
           <div className="text-base">{proposal.title}</div>
         </Link>
-      </td>
-      <td className="w-1/4 border-b border-black px-5 py-4 text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/4 px-5 py-4 text-base hover:text-highlight">
         <Tooltip tooltip={proposal.type} direction="top">
           <Link href={proposalLink} className="flex justify-center">
             <div className="break-all text-center">{parseMessage(proposal.type)}</div>
           </Link>
         </Tooltip>
-      </td>
-      <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/4 py-4 text-base hover:text-highlight">
         <Link href={proposalLink} className="flex justify-center">
           <div className="text-center">{results}</div>
         </Link>
-      </td>
-      <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/4 py-4 text-base hover:text-highlight">
         <Link href={proposalLink} className="flex justify-center">
           {proposal.votingEndTime && (
             <div className="text-center font-handjet text-lg">
@@ -97,8 +99,8 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal, chain }) => {
             </div>
           )}
         </Link>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 
