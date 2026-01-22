@@ -45,11 +45,11 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
       </div>
       <div className="hidden md:block">
         <LayoutToggle />
-        <Suspense fallback={<div className="mt-4 text-base">Loading...</div>}>
+        <Suspense fallback={<div className="mt-4 font-sfpro text">Loading...</div>}>
           <ValidatorLayoutContainer
             gameMode={
               <div className="mt-4 flex">
-                <div className="flex-[58%]">
+                <div className="flex-[58%] mt-12">
                   <ConsolePanel chainName={chain?.name ?? 'cosmoshub'} />
                 </div>
                 <div className="min-w-0 flex-[42%] ml-4">
