@@ -123,12 +123,15 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+
     if (period === 'day') {
-      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      return `${day}.${month}`;
     } else if (period === 'week') {
-      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      return `${day}.${month}`;
     } else if (period === 'month') {
-      return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+      return `${month}.${date.getFullYear()}`;
     } else {
       return date.getFullYear().toString();
     }
