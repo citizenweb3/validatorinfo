@@ -1,4 +1,4 @@
-import { Chain, Proposal } from '@prisma/client';
+import { Chain, Proposal, ProposalStatus } from '@prisma/client';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -64,9 +64,25 @@ const NetworkProposalItem: FC<OwnProps> = ({ proposal, chain }) => {
     }
   };
 
-  const results = chain?.ecosystem === 'namada'
-    ? getFinalResult(proposal.tallyResult, chain.ecosystem)
-    : getFinalResult(proposal.finalTallyResult, chain?.ecosystem as 'cosmos');
+  const getDisplayResult = (): string => {
+    // For rejected/failed proposals, show status instead of vote result
+    if (proposal.status === ProposalStatus.PROPOSAL_STATUS_REJECTED) {
+      return 'Rejected';
+    }
+    if (proposal.status === ProposalStatus.PROPOSAL_STATUS_FAILED) {
+      return 'Failed';
+    }
+    if (proposal.status === ProposalStatus.PROPOSAL_STATUS_PASSED) {
+      return 'Passed';
+    }
+
+    // For other statuses, show vote result
+    return chain?.ecosystem === 'namada'
+      ? getFinalResult(proposal.tallyResult, chain.ecosystem)
+      : getFinalResult(proposal.finalTallyResult, chain?.ecosystem as 'cosmos');
+  };
+
+  const results = getDisplayResult();
 
   const proposalLink = `/networks/${chain?.name}/proposal/${proposal.proposalId}`;
 

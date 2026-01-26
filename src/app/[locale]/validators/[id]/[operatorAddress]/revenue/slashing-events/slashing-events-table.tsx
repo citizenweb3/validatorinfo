@@ -8,7 +8,10 @@ import BaseTable from '@/components/common/table/base-table';
 import {
   SlashingEventsExampleInterface,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/slashingEventsExample';
-import { AztecSlashingEventDisplay } from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/aztec-slashing-types';
+import {
+  AztecSlashingEventDisplay,
+} from '@/app/validators/[id]/[operatorAddress]/revenue/slashing-events/aztec-slashing-types';
+import TableHeaderItem from '@/components/common/table/table-header-item';
 
 interface OwnProps {
   items: SlashingEventsExampleInterface[] | AztecSlashingEventDisplay[];
@@ -33,16 +36,21 @@ const SlashingEventsTable: FC<OwnProps> = ({ items, showValidatorColumns = false
       <BaseTable className="mt-11">
         <thead>
         <tr className="bg-table_header text-sm font-bold">
-          <th className="py-3">
-            {isAztecData ? t('Table.Block.name') : t('Table.Retro Name.name')}
-          </th>
-          <th className="py-3">
-            {isAztecData ? t('Table.Amount Slashed.name') : t('Table.Commits.name')}
-          </th>
+          <TableHeaderItem page={'NodeRevenuePage'}
+                           name={isAztecData ? 'Block' : 'Retro Name'}
+          />
+
+          <TableHeaderItem page={'NodeRevenuePage'}
+                           name={isAztecData ? 'Amount Slashed' : 'Commits'}
+          />
           {isAztecData && showValidatorColumns && (
             <>
-              <th className="py-3">{t('Table.Validator.name')}</th>
-              <th className="py-3">{t('Table.Sequencer.name')}</th>
+              <TableHeaderItem page={'NodeRevenuePage'}
+                               name={'Validator'}
+              />
+              <TableHeaderItem page={'NodeRevenuePage'}
+                               name={'Sequencer'}
+              />
             </>
           )}
         </tr>
@@ -57,7 +65,8 @@ const SlashingEventsTable: FC<OwnProps> = ({ items, showValidatorColumns = false
         </tbody>
       </BaseTable>
     </div>
-  );
+  )
+    ;
 };
 
 export default SlashingEventsTable;

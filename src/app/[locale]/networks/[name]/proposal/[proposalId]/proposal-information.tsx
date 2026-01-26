@@ -1,4 +1,4 @@
-import { Proposal } from '@prisma/client';
+import { Proposal, ProposalStatus } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import Tooltip from '@/components/common/tooltip';
@@ -10,8 +10,26 @@ interface OwnProps {
   chainName: string;
 }
 
+const getStatusLabel = (status: ProposalStatus | undefined) => {
+  switch (status) {
+    case ProposalStatus.PROPOSAL_STATUS_PASSED:
+      return { label: 'passed' as const, className: 'bg-secondary' };
+    case ProposalStatus.PROPOSAL_STATUS_REJECTED:
+      return { label: 'rejected' as const, className: 'bg-primary' };
+    case ProposalStatus.PROPOSAL_STATUS_FAILED:
+      return { label: 'failed' as const, className: 'bg-primary' };
+    default:
+      return null;
+  }
+};
+
 const ProposalInformation: FC<OwnProps> = async ({ proposal, chainName }) => {
   const t = await getTranslations('ProposalPage');
+
+  const isActive = proposal?.status === ProposalStatus.PROPOSAL_STATUS_VOTING_PERIOD ||
+    proposal?.status === ProposalStatus.PROPOSAL_STATUS_DEPOSIT_PERIOD;
+
+  const statusInfo = getStatusLabel(proposal?.status);
 
   return (
     <div className="mt-2">
@@ -23,15 +41,19 @@ const ProposalInformation: FC<OwnProps> = async ({ proposal, chainName }) => {
             </Tooltip>
           </div>
           <div className="flex flex-col justify-center">
-            {proposal?.status === 'PROPOSAL_STATUS_VOTING_PERIOD' ||
-            proposal?.status === 'PROPOSAL_STATUS_DEPOSIT_PERIOD' ? (
+            {isActive ? (
               <div className="flex flex-row font-handjet text-lg text-center mb-1">
                 <div className="rounded-full bg-primary shadow-button px-6 mr-6">{t('signaling')}</div>
                 <div className="rounded-full bg-proposalLabel shadow-button px-6">{t('on going')}</div>
               </div>
             ) : (
               <div className="flex flex-row font-handjet text-lg text-center mb-1">
-                <div className="rounded-full bg-secondary shadow-button px-6">{t('past')}</div>
+                <div className="rounded-full bg-secondary shadow-button px-6 mr-6">{t('past')}</div>
+                {statusInfo && (
+                  <div className={`rounded-full ${statusInfo.className} text-white shadow-button px-6`}>
+                    {t(statusInfo.label)}
+                  </div>
+                )}
               </div>
             )}
             <Link href={''}>

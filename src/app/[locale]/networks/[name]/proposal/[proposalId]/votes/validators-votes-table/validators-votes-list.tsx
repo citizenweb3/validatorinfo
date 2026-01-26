@@ -48,30 +48,20 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
       );
     }
 
-    if (votingType === 'votes') {
-      return (
-        <tbody>
-          <tr>
-            <td colSpan={4} className="pt-8 pb-4 text-center text-lg">
-              Token votes are aggregated by the GSE contract. See vote totals above.
-            </td>
-          </tr>
-        </tbody>
-      );
-    }
-
-    const result = await AztecVoteEventService.getProposalVotersForDisplay(
-      chainName,
-      proposalId,
-      perPage * (currentPage - 1),
-      perPage,
-      sort.sortBy,
-      sort.order,
-      vote,
-      search
+    // For 'votes' type (proposal stage), GSE votes aggregated - cannot show individual votes
+    return (
+      <tbody>
+        <tr>
+          <td colSpan={4} className="pt-8 pb-4 text-center text-lg">
+            <p className="mb-2">Token votes are aggregated by the GSE contract.</p>
+            <p className="text-sm text-gray-500">
+              Individual validator votes cannot be tracked during the proposal voting stage.
+              See vote totals above.
+            </p>
+          </td>
+        </tr>
+      </tbody>
     );
-    votesList = result.votes;
-    pages = result.pages;
   } else if (chainName === 'namada' || chainName === 'namada-testnet') {
     const result = await voteService.getProposalValidatorsVotes(
       chainName,
@@ -105,23 +95,13 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
       ) : (
         <tbody>
         <tr>
-          <td className="text-center text-lg pt-4">
-            -
-          </td>
-          <td className="text-center text-lg pt-4">
-            -
-          </td>
-          <td className="text-center text-lg pt-4">
-            -
-          </td>
-          <td className="text-center text-lg pt-4">
-            -
+          <td colSpan={4} className="pt-8 pb-4 text-center text-lg">
+            No votes yet
           </td>
         </tr>
         </tbody>
       )}
     </>
-
   );
 };
 

@@ -68,6 +68,7 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `get-chain-uptime.ts` | Gets slot duration and current slot from Rollup |
 | `get-slashing-params.ts` | Returns static slashing window (768 blocks) |
 | `get-node-stake.ts` | Fetches individual validator stake amounts |
+| `get-proposal-params.ts` | Fetches governance proposal parameters (quorum, voting period, etc.) |
 
 ### Event Synchronization
 
@@ -81,6 +82,7 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `sync-payload-submitted-events.ts` | Syncs `PayloadSubmitted` events from GovernanceProposer contract |
 | `sync-validator-queued-events.ts` | Syncs `ValidatorQueued` events (sequencer registration) |
 | `sync-withdraw-finalized-events.ts` | Syncs `WithdrawFinalized` events (sequencer exit) |
+| `sync-aztec-providers.ts` | Syncs Aztec providers from StakingRegistry contract |
 
 ### Shared Types
 
@@ -110,6 +112,7 @@ server/tools/chains/aztec/
 ├── get-chain-uptime.ts              # Get slot duration and current slot
 ├── get-slashing-params.ts           # Static slashing params
 ├── get-node-stake.ts                # Fetch validator stakes
+├── get-proposal-params.ts           # Fetch governance proposal params (quorum, delays)
 ├── find-or-create-aztec-validator.ts # Validator upsert helper
 ├── sync-staked-events.ts            # Sync StakedWithProvider events
 ├── sync-attester-events.ts          # Sync AttestersAddedToProvider events (single-pass)
@@ -119,6 +122,7 @@ server/tools/chains/aztec/
 ├── sync-payload-submitted-events.ts # Sync PayloadSubmitted events
 ├── sync-validator-queued-events.ts  # Sync ValidatorQueued events (sequencer registration)
 ├── sync-withdraw-finalized-events.ts # Sync WithdrawFinalized events (sequencer exit)
+├── sync-aztec-providers.ts          # Sync providers from StakingRegistry
 ├── types.ts                         # Shared TypeScript interfaces (SyncResult)
 │
 ├── utils/
@@ -128,11 +132,13 @@ server/tools/chains/aztec/
 │   │   └── abis/
 │   │       ├── aztec/               # Mainnet ABIs
 │   │       │   ├── GOVERNANCE_ABI.json
+│   │       │   ├── GOVERNANCE_PROPOSER_ABI.json
 │   │       │   ├── GSE_ABI.json
+│   │       │   ├── GSE_PAYLOAD_ABI.json
 │   │       │   ├── ROLLUP_ABI.json
 │   │       │   ├── STAKING_REGISTRY_ABI.json
 │   │       │   └── TOKEN_ABI.json
-│   │       └── aztec-testnent/      # Testnet ABIs
+│   │       └── aztec-testnent/      # Testnet ABIs (note: directory name has typo)
 │   │           └── ... (same structure)
 │   │
 │   ├── get-providers.ts             # Fetch all providers from StakingRegistry
@@ -151,6 +157,11 @@ server/tools/chains/aztec/
 │   ├── get-l1-contract-addresses.ts # Fetch L1 contract addresses dynamically
 │   ├── get-chunck-size-rpc.ts       # Determine chunk size for RPC providers
 │   ├── get-l1-rpc-urls.ts           # Get L1 RPC URLs for Aztec chain
+│   ├── get-exited-sequencers.ts     # Get sequencers that have exited (from WithdrawFinalized events)
+│   ├── get-governance-config.ts     # Get governance configuration from contract
+│   ├── get-governance-power.ts      # Get governance voting power (total, per-user, current and historical)
+│   ├── get-payload-uri-util.ts      # Utility for fetching payload URI content
+│   ├── get-proposal-ballots.ts      # Get user's vote ballot (yea/nay) for a specific proposal
 │   ├── fetch-delegated-stake.ts     # Fetch delegated stake for attester
 │   ├── fetch-node-stake.ts          # Fetch stake for specific node
 │   ├── fetch-provider-metadata.ts   # Fetch provider names from JSON/API
@@ -159,9 +170,7 @@ server/tools/chains/aztec/
 │   ├── build-address-to-validator-map.ts # Build map of addresses to validator info
 │   └── providers_monikers.json      # Static provider name mappings
 │
-├── AGENTS.md                        # This documentation
-├── AZTEC_GOVERNANCE_USAGE.md        # Governance/slashing usage guide
-└── IMPLEMENTATION_SUMMARY.md        # Implementation notes
+└── AGENTS.md                        # This documentation
 ```
 
 ---
@@ -611,7 +620,5 @@ Provider names come from `utils/providers_monikers.json` or external API. Update
 
 ## Related Documentation
 
-- `AZTEC_GOVERNANCE_USAGE.md` - Detailed governance and slashing usage guide
-- `IMPLEMENTATION_SUMMARY.md` - Implementation notes and history
 - `server/tools/chains/AGENTS.md` - Parent chains module documentation
 - `server/jobs/AGENTS.md` - Indexer jobs documentation
