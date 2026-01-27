@@ -10,7 +10,7 @@ import NetworkAprTvsChartClient from './network-apr-tvsChart';
 const NetworkTvsAztecChart = dynamic(() => import('./network-tvs-aztec-chart'), {
   ssr: false,
   loading: () => (
-    <div className="flex h-full items-center justify-center" style={{ height: '400px', backgroundColor: '#1E1E1E', borderRadius: '4px' }}>
+    <div className="flex h-full items-center justify-center" style={{ height: '400px', backgroundColor: '#181818', borderRadius: '4px' }}>
       <div className="font-sfpro text-lg text-white opacity-70">Loading chart...</div>
     </div>
   ),
@@ -26,12 +26,12 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
   return (
     <div className="mt-16">
       <SubTitle text={t('Network APR and TVS')} />
-      <div className="mt-12 flex flex-row">
-        <div className="w-1/5">
+      <div className="mt-12 flex flex-row items-center gap-6">
+        <div className="w-1/5 rounded" style={{ backgroundColor: '#181818' }}>
           <div className="mt-2 flex w-full flex-wrap">
             <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">APR</div>
             <div
-              style={{ color: '#4FB848' }}
+              style={{ color: '#2077E0' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
               {((chain?.tokenomics?.apr ?? 0.15) * 100).toFixed(2)}%
@@ -49,7 +49,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
           <div className="mt-2 flex w-full flex-wrap">
             <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">TVS</div>
             <div
-              style={{ color: '#2077E0' }}
+              style={{ color: '#4FB848' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
               {((chain?.tokenomics?.tvs ?? 0.5) * 100).toFixed(2)}

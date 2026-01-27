@@ -7,10 +7,10 @@ export const shadowPlugin: Plugin<'line'> = {
     const ctx = chart.ctx;
     ctx.save();
 
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.85)';
+    ctx.shadowColor = 'rgba(0, 0, 0, 1)';
     ctx.shadowBlur = 12;
     ctx.shadowOffsetX = 0;
-    ctx.shadowOffsetY = 8;
+    ctx.shadowOffsetY = 12;
   },
 
   afterDatasetDraw(chart) {

@@ -155,7 +155,7 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
         label: 'TVS',
         data: data.map((point) => point.tvs),
         borderColor: '#4FB848',
-        borderWidth: 1.5,
+        borderWidth: 2,
         pointRadius: 0,
         pointHoverRadius: 0,
         tension: 0.4,
@@ -294,7 +294,7 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
 
   return (
     <div className="w-full">
-      <div className="mb-1 flex justify-center">
+      <div className="mb-3 flex justify-center">
         <ChartButtons
           isChart={false}
           chartType={chartType}
@@ -308,7 +308,7 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
         className="relative"
         style={{
           height: '400px',
-          backgroundColor: '#1E1E1E',
+          backgroundColor: '#181818',
           padding: '30px 20px 20px 20px',
           borderRadius: '4px',
         }}
@@ -328,7 +328,7 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
 
       <div className="mt-1 flex justify-center">
         <div className="flex items-center space-x-3 rounded px-4 py-2" style={{ backgroundColor: '#1E1E1E' }}>
-          <div className="h-3 w-3 rounded-sm" style={{ backgroundColor: '#4FB848' }}></div>
+          <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#4FB848' }}></div>
           <span className="font-sfpro text-sm text-white">Total Value Staked (TVS %)</span>
         </div>
       </div>

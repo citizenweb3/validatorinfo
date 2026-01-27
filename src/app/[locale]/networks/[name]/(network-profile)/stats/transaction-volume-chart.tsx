@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { FC, useState } from 'react';
 
 import ChartButtons from '@/app/comparevalidators/chart-buttons';
+import UnderDevelopment from '@/components/common/under-development';
 
 const TransactionVolumeChart: FC = () => {
   const t = useTranslations('NetworkStatistics');
@@ -31,17 +32,7 @@ const TransactionVolumeChart: FC = () => {
           onTypeChanged={(name) => setChartType(name)}
         />
       </div>
-      <div
-        className="mx-20 mt-3 flex items-center justify-center rounded border border-[#3E3E3E]"
-        style={{
-          height: '300px',
-          backgroundColor: '#1E1E1E',
-        }}
-      >
-        <p className="px-8 text-center font-sfpro text-base text-white/70">
-          {t('chart unavailable')}
-        </p>
-      </div>
+      <UnderDevelopment title={t('chart unavailable')} size="md" className="mx-20 mt-3" />
     </div>
   );
 };
