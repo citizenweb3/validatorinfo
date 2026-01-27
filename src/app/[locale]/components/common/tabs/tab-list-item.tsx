@@ -20,11 +20,15 @@ const TabListItem: FC<OwnProps> = ({ page, item: { name, href, icon, iconHovered
     <Link
       href={href}
       aria-current={isActive ? 'page' : undefined}
-      className={`${isActive ? 'border border-[#3e3e3e] text-highlight' : 'border-r border-t border-bgSt'} group relative mt-12 flex min-h-36 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-px text-sm shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] transition-width duration-300 hover:bg-bgHover hover:text-highlight active:border active:border-[#3e3e3e] md:mt-0 md:min-h-10 sm:min-h-20 sm:mt-12`}
+      className={`${
+        isActive
+          ? 'border border-[#3e3e3e] text-highlight'
+          : 'bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] border-r border-t border-bgSt'
+      } group relative mt-12 flex min-h-36 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-px text-sm shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] transition-width duration-300 hover:bg-bgHover hover:text-highlight active:translate-y-1 active:border-transparent active:bg-background active:shadow-none md:mt-0 md:min-h-10 sm:min-h-20 sm:mt-12`}
       scroll={isScroll}
     >
-      <div className="flex h-full w-full flex-row flex-nowrap items-center justify-center bg-gradient-to-t from-[#181818] from-[26%] to-[#272727] text-base font-semibold group-hover:bg-[#272727] group-hover:from-transparent group-hover:to-transparent group-hover:text-highlight group-active:bg-[#181818] group-active:from-transparent group-active:to-transparent">
-        <div className="relative group-active:scale-90">
+      <div className="flex h-full w-full flex-row flex-nowrap items-center justify-center text-base font-semibold group-hover:text-highlight">
+        <div className="relative">
           {icon && (
             <Image
               src={icon}
