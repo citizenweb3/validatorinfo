@@ -1246,6 +1246,9 @@
     "deposited gse tokens": "Tokens GSE Depositados",
     "show dropdown": "Mostrar votos do validador",
     "hide dropdown": "Ocultar votos do validador",
+    "show validator votes": "Mostrar Votos dos Validadores",
+    "show validator signals": "Mostrar Sinais dos Validadores",
+    "hide validator signals": "Ocultar Sinais dos Validadores",
     "all": "Todos",
     "yes": "Sim",
     "no": "Não",
@@ -1271,9 +1274,13 @@
         "name": "Hora",
         "hint": ""
       },
+      "Provider": {
+        "name": "Provedor",
+        "hint": "Provedor de infraestrutura"
+      },
       "Sequencer": {
         "name": "Sequenciador",
-        "hint": "Validador que emitiu o sinal"
+        "hint": "Endereço do sequenciador que emitiu o sinal"
       },
       "Round": {
         "name": "Rodada",

@@ -19,8 +19,9 @@ const SignalsTable: FC<OwnProps> = async ({ chainName, payload, sort, perPage, c
       <BaseTable>
         <thead>
         <tr className="bg-table_header">
-          <TableHeaderItem page="ProposalPage" name="Sequencer" sortField="signaler" />
-          <TableHeaderItem page="ProposalPage" name="Round" sortField="round" />
+          <TableHeaderItem page="ProposalPage" name="Provider" sortField="signaler" />
+          <TableHeaderItem page="ProposalPage" name="Sequencer" />
+          <TableHeaderItem page="ProposalPage" name="Round" />
           <TableHeaderItem page="ProposalPage" name="Time" sortField="timestamp" defaultSelected />
         </tr>
         </thead>

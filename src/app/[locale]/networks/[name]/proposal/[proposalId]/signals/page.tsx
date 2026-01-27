@@ -65,7 +65,7 @@ const ProposalSignalsPage: NextPageWithLocale<PageProps> = async ({
     <>
       <div className="flex justify-end">
         <RoundedButton href={`/networks/${name}/proposal/${proposalId}`} className="font-handjet text-lg">
-          {t('hide dropdown')}
+          {t('hide validator signals')}
         </RoundedButton>
       </div>
       <SignalsTable

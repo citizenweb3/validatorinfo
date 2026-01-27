@@ -28,7 +28,7 @@ const SignalsTableList: FC<OwnProps> = async ({ chainName, payload, sort, perPag
     return (
       <tbody>
       <tr>
-        <td colSpan={3} className="pt-4 text-center text-lg">
+        <td colSpan={4} className="pt-4 text-center text-lg">
           No signals yet
         </td>
       </tr>
@@ -42,7 +42,7 @@ const SignalsTableList: FC<OwnProps> = async ({ chainName, payload, sort, perPag
       <SignalsTableItem key={`${signal.signaler.address}-${signal.round}-${index}`} signal={signal} />
     ))}
     <tr>
-      <td colSpan={3} className="pt-4">
+      <td colSpan={4} className="pt-4">
         <TablePagination pageLength={pages} isScroll={false} />
       </td>
     </tr>
