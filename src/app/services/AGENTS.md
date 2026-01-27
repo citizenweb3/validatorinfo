@@ -19,13 +19,16 @@
 | `ecosystem-service.ts` | Ecosystem groupings and filtering |
 | `stakingpage-service.ts` | Staking calculator data |
 | `tokenomics-service.ts` | Tokenomics data (supply, inflation, etc.) |
+| `headerInfo-service.ts` | Header and navigation info data |
 | `blocks-service.ts` | Block data |
 | `node-consensus-service.ts` | Consensus-specific node data |
 | `aztec-db-service.ts` | Aztec database operations |
 | `aztec-contracts-service.ts` | Aztec L1 contracts data |
 | `aztec-vote-event-service.ts` | Aztec vote events |
-| `aztec-signal-service.ts` | Aztec signal events (getPayloadSignals, getPayloadSignalStats, getPayloadSignalers, getSignalerStats, getOriginalPayload) |
-| `aztec-governance-service.ts` | Aztec governance data (proposals, voting types) |
+| `aztec-signal-service.ts` | Aztec signal events (getPayloadSignals, getPayloadSignalStats, isPayloadSubmitted, getPayloadSignalers, getSignalerStats, getOriginalPayload) |
+| `aztec-governance-service.ts` | Aztec governance display (getGovernanceConfigDisplay, getVotingPowerDisplay, getRawGovernanceConfig, getRawTotalVotingPower) |
+| `aztec-governance-db.ts` | Aztec governance data reader (getAztecGovernanceDataFromDb, StoredGovernanceConfig, AztecGovernanceData types) |
+| `redis-cache.ts` | Redis caching utilities (cacheGet, cacheSet, cacheGetOrFetch, CACHE_KEYS, CACHE_TTL) |
 
 ## Dependencies
 
@@ -33,6 +36,10 @@
 - `@prisma/client` - Generated Prisma types
 - `@/logger` - Logging utility
 - `@/server/types` - Shared type definitions
+- `ioredis` - Redis client for caching
+- `@/server/utils/*` - Server utility functions
+- `@/utils/*` - Shared utility functions
+- `@/server/tools/chains/*` - Chain-specific tools and utilities
 
 ## Used By
 
@@ -62,12 +69,17 @@ src/app/services/
 ├── node-consensus-service.ts # Consensus-specific node data
 │
 ├── aztec-indexer-api/        # Aztec-specific API client
-│   └── *.ts                  # Aztec indexer endpoints
+│   ├── index.ts              # Main exports and aztecIndexer object
+│   ├── client.ts             # HTTP client utilities (get, post, healthCheck)
+│   ├── endpoints.ts          # API endpoint implementations
+│   └── types.ts              # TypeScript types for API responses
 ├── aztec-db-service.ts       # Aztec database operations
 ├── aztec-contracts-service.ts # Aztec L1 contracts
 ├── aztec-vote-event-service.ts # Aztec vote events
 ├── aztec-signal-service.ts   # Aztec signal events for governance
-└── aztec-governance-service.ts # Aztec governance proposals
+├── aztec-governance-service.ts # Aztec governance proposals
+├── aztec-governance-db.ts    # Aztec governance DB helper
+└── redis-cache.ts            # Redis caching utilities
 ```
 
 ## Common Patterns

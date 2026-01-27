@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import NetworkValidatorsList from '@/app/networks/[name]/validators/network-validators-table/network-validators-list';
 import ListFilters from '@/components/common/list-filters/list-filters';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -19,7 +20,7 @@ const NetworkValidators: FC<OwnProps> = async ({ chainId, nodeStatus, page, perP
     <div>
       <ListFilters selectedNodeStatus={nodeStatus} perPage={perPage} isNodeStatus isSetPositions />
       <div>
-        <table className="my-4 w-full table-auto border-collapse">
+        <BaseTable className="my-4">
           <thead>
             <tr className="bg-table_header">
               <TableHeaderItem page={page} name="Validator" sortField="moniker" defaultSelected />
@@ -40,7 +41,7 @@ const NetworkValidators: FC<OwnProps> = async ({ chainId, nodeStatus, page, perP
             sort={sort}
             currentPage={currentPage}
           />
-        </table>
+        </BaseTable>
       </div>
     </div>
   );

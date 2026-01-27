@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import NetworksList from '@/app/networks/networks-list/networks-list';
 import ListFilters from '@/components/common/list-filters/list-filters';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -22,7 +23,7 @@ const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, current
         isEcosystems
         isNetworkStage />
       <div>
-        <table className="my-4 w-full table-auto border-collapse">
+        <BaseTable className="my-4">
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
@@ -32,7 +33,7 @@ const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, current
           </tr>
           </thead>
           <NetworksList ecosystems={ecosystems} perPage={perPage} sort={sort} currentPage={currentPage} />
-        </table>
+        </BaseTable>
       </div>
     </div>
   );

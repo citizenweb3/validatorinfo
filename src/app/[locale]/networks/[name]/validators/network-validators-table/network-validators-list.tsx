@@ -28,7 +28,7 @@ const NetworkValidatorsList: FC<OwnProps> = async ({ chainId, sort, perPage, nod
   return (
     <tbody>
       {list.map((item) => (
-        <NetworkValidatorsItem key={item.chainId + item.consensusPubkey} item={item} />
+        <NetworkValidatorsItem key={`${item.chainId}-${item.validatorId}`} item={item} />
       ))}
       <tr>
         <td colSpan={9} className="pt-4">

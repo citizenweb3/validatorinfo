@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableRow from '@/components/common/table/base-table-row';
+import BaseTableCell from '@/components/common/table/base-table-cell';
 import TableAvatar from '@/components/common/table/table-avatar';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
@@ -45,37 +47,37 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
   };
 
   return (
-    <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
-      <td className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="group/avatar flex items-center px-2 py-2 font-sfpro hover:text-highlight">
         <Image src={getStatusIcon()} alt={'node status'} width={20} height={20} />
         <TableAvatar
           icon={item.validator?.url ?? icons.AvatarIcon}
           name={item.validator?.moniker ?? item.moniker}
           href={nodeLink}
         />
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <Tooltip tooltip={tokenDelegatorShares?.toLocaleString() ?? ''}>
             <div className="text-center">{tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}</div>
           </Tooltip>
           <div className="text-center">{item.votingPower.toFixed(2)}%</div>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <Tooltip tooltip={activeTokens?.toLocaleString() ?? ''}>
             <div className="text-center">{activeTokens ? formatCash(activeTokens) : ''}</div>
           </Tooltip>
           <div className="text-center">{votingPowerActive.toFixed(2)}%</div>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <div className="text-center">{(Number(item.rate) * 100).toFixed(2)}%</div>
         </Link>
-      </td>
-      <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <Link href={nodeLink}>
           <Tooltip tooltip={selfDelegation?.toLocaleString() ?? ''}>
             <div className="text-center" style={{ color: colorStylization.delegation(selfDelegation ?? null) }}>
@@ -83,13 +85,13 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
             </div>
           </Tooltip>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.uptime !== undefined && item.uptime !== null ? (
           <Tooltip
-            tooltip={`Per 
+            tooltip={`Per
           ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
-          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'} 
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
           `}
           >
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
@@ -99,13 +101,13 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
         ) : (
           <div className="text-center">-</div>
         )}
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
           <Tooltip
-            tooltip={`Per 
+            tooltip={`Per
           ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
-          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'} 
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
           `}
           >
             <div className="text-center">{item.missedBlocks}</div>
@@ -113,20 +115,20 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
         ) : (
           <div className="text-center">-</div>
         )}
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <Link href={nodeLink}>
           <div className="flex items-center justify-center text-center">
             <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />
           </div>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <div className="text-center">80</div>
         </Link>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

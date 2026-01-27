@@ -22,7 +22,7 @@ const DelegatedEventsList: FC<OwnProps> = async ({ chainName, sort, perPage, cur
   const pages = 1;
 
   if (isAztecChain(chainName)) {
-    const stakedEvent = await aztecDbService.getStakedEventByAttester(operatorAddress);
+    const stakedEvent = await aztecDbService.getStakedEventByAttester(operatorAddress, chainName);
 
     return (
       <tbody>

@@ -1,8 +1,35 @@
-import db from '@/db';
+import db, { eventsClient } from '@/db';
 import logger from '@/logger';
+import { getActiveSequencers } from '@/server/tools/chains/aztec/utils/get-active-sequencers';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 
-const { logError } = logger('get-tvs-aztec');
+const { logInfo, logError, logWarn } = logger('get-bonded-tokens-aztec');
+
+const STAKE_AMOUNT = BigInt('200000000000000000000000');
+
+const getTotalSlashedAmount = async (
+  chainId: number,
+  activeSequencers: Map<string, string>,
+): Promise<bigint> => {
+  try {
+    const slashEvents = await eventsClient.aztecSlashedEvent.findMany({
+      where: { chainId },
+      select: { attester: true, amount: true },
+    });
+
+    let totalSlashed = BigInt(0);
+    for (const event of slashEvents) {
+      if (activeSequencers.has(event.attester)) {
+        totalSlashed += BigInt(event.amount);
+      }
+    }
+
+    return totalSlashed;
+  } catch (e: any) {
+    logWarn(`Failed to get slashed amounts: ${e.message}`);
+    return BigInt(0);
+  }
+};
 
 export const getBondedTokens = async (chain: AddChainProps): Promise<bigint> => {
   try {
@@ -11,27 +38,32 @@ export const getBondedTokens = async (chain: AddChainProps): Promise<bigint> => 
     });
 
     if (!dbChain) {
-      throw new Error(`Failed to get dbChain for ${chain.name}`);
+      throw new Error(`Chain ${chain.name} not found in database`);
     }
 
-    const nodes = await db.node.findMany({
+    const activeSequencers = await getActiveSequencers(dbChain.id);
+    const grossStaked = BigInt(activeSequencers.size) * STAKE_AMOUNT;
+
+    const totalSlashed = await getTotalSlashedAmount(dbChain.id, activeSequencers);
+    const totalStaked = grossStaked - totalSlashed;
+
+    logInfo(
+      `Bonded tokens: ${activeSequencers.size} sequencers × 200k = ${grossStaked}, slashed = ${totalSlashed}, net = ${totalStaked}`,
+    );
+
+    const nodeCount = await db.node.count({
       where: { chainId: dbChain.id },
     });
 
-    let bondedTokens = BigInt(0);
-
-    for (const node of nodes) {
-      try {
-        if (node.delegatorShares) {
-          bondedTokens += BigInt(node.delegatorShares);
-        }
-      } catch (e: any) {
-        logError(`Invalid token value for node ${node.operatorAddress}: delegatorShares=${node.delegatorShares}`);
-      }
+    if (nodeCount !== activeSequencers.size) {
+      logWarn(
+        `Mismatch: ${nodeCount} nodes in DB vs ${activeSequencers.size} active sequencers from events`,
+      );
     }
 
-    return bondedTokens;
+    return totalStaked;
   } catch (e: any) {
-    throw new Error(`Failed to fetch bonded tokens: ${e.message}`);
+    logError(`Failed to calculate bonded tokens: ${e.message}`);
+    throw e;
   }
 };

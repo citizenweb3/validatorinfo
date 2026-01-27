@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import NetworkBlocksList from '@/app/networks/[name]/blocks/blocks-table/network-blocks-list';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { PagesProps } from '@/types';
 
@@ -16,7 +17,7 @@ const NetworkBlocks: FC<OwnProps> = async ({ name, page, perPage, currentPage })
 
   return (
     <div className="mt-12">
-      <table className="w-full table-auto border-collapse">
+      <BaseTable>
         <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name={t('Block Hash.name')} />
@@ -26,7 +27,7 @@ const NetworkBlocks: FC<OwnProps> = async ({ name, page, perPage, currentPage })
           </tr>
         </thead>
         <NetworkBlocksList name={name} perPage={perPage} currentPage={currentPage} />
-      </table>
+      </BaseTable>
     </div>
   );
 };

@@ -67,15 +67,9 @@ export async function findOrCreateAztecValidator(
     logInfo(`Created global validator "${moniker}" with placeholder identity for ${chainName}`);
   } else {
     const currentProviderAddresses = (validator.providerAddresses as Record<string, string>) || {};
+    const needsProviderAddressUpdate = currentProviderAddresses[chainName] !== checksummedAdmin;
 
-    const needsUpdate =
-      currentProviderAddresses[chainName] !== checksummedAdmin ||
-      validator.moniker !== moniker ||
-      validator.website !== website ||
-      validator.details !== details ||
-      validator.securityContact !== securityContact;
-
-    if (needsUpdate) {
+    if (needsProviderAddressUpdate) {
       const updatedProviderAddresses = {
         ...currentProviderAddresses,
         [chainName]: checksummedAdmin,
@@ -85,13 +79,9 @@ export async function findOrCreateAztecValidator(
         where: { id: validator.id },
         data: {
           providerAddresses: updatedProviderAddresses,
-          moniker: moniker,
-          website: website,
-          details: details,
-          securityContact: securityContact,
         },
       });
-      logInfo(`Updated validator "${moniker}" on ${chainName} (moniker, website, details, securityContact, providerAddresses)`);
+      logInfo(`Linked existing validator "${validator.moniker}" to ${chainName} (${checksummedAdmin})`);
     }
   }
 

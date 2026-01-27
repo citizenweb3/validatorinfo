@@ -4,6 +4,8 @@ import { Chain } from '@prisma/client';
 import { FC } from 'react';
 
 import ValidatorListItemLinksMobile from '@/app/main-validators/validator-list-mobile/validator-list-item-mobile/validator-list-item-links-mobile';
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import { ValidatorWithNodes } from '@/services/validator-service';
 
@@ -14,19 +16,19 @@ interface OwnProps {
 
 const ValidatorListItemMobile: FC<OwnProps> = ({ chains, validator }) => {
   return (
-    <tr className="group font-handjet hover:bg-bgHover ">
-      <td className="group/avatar w-[25%] border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt sm:w-[30%]">
+    <BaseTableRow>
+      <BaseTableCell className="w-[25%] px-2 py-2 font-sfpro hover:text-highlight sm:w-[30%]">
         <TableAvatar
           textClassName="md:max-w-36 sm:max-w-30"
           icon={validator.url}
           name={validator.moniker}
           href={`/validators/${validator.id}/networks`}
         />
-      </td>
-      <td className="border-b border-black px-2 py-2 active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2">
         <ValidatorListItemLinksMobile validator={validator} />
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

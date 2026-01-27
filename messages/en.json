@@ -224,7 +224,8 @@
     "Wrong amount": "Wrong amount",
     "earnings": "d Earnings",
     "downloading validators": "Downloading Validators...",
-    "please choose network": "Please Choose a Network"
+    "please choose network": "Please Choose a Network",
+    "not supported yet": "Not Supported Yet"
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",
@@ -1126,6 +1127,8 @@
     "transactions yesterday": "Transactions (Yesterday)",
     "tps": "TPS (Last 20 Blocks)",
     "average fee": "Average Fee",
+    "noTransactionsYet": "No transactions yet",
+    "transactionsWillAppear": "Transaction display will appear when transactions begin on the network",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",
@@ -1240,6 +1243,9 @@
     "signaling": "Signaling",
     "on going": "On Going",
     "past": "Past",
+    "passed": "Passed",
+    "rejected": "Rejected",
+    "failed": "Failed",
     "link to full proposal": "Link to full Proposal",
     "voting period": "Voting Period",
     "show all proposals": "Show All Proposals",

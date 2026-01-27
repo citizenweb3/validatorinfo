@@ -28,6 +28,7 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
   const [stakingRates, setStakingRates] = useState<StakingRates | undefined>(undefined);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [validatorsList, setValidatorsList] = useState<DropdownListItem[] | undefined>(undefined);
+  const [validatorsError, setValidatorsError] = useState<boolean>(false);
 
   const router = useRouter();
 
@@ -51,10 +52,19 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
   const handleChainChange = (chain?: ChainItem) => {
     if (!chain) return;
     setChain(chain);
+    setValidatorsList(undefined);
+    setValidatorsError(false);
+    setValidator(undefined);
 
     async function getValidatorsFromAPI() {
       try {
         const response = await fetch(`/api/nodes_by_chain_id?chainId=${chain?.id}`);
+
+        if (!response.ok) {
+          setValidatorsError(true);
+          return;
+        }
+
         const data = (await response.json()) as Node[];
         const dropdownList: DropdownListItem[] = data.map((node) => ({
           value: node.id,
@@ -63,6 +73,7 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
         setValidatorsList(dropdownList);
       } catch (error) {
         console.error('Validators fetching error:', error);
+        setValidatorsError(true);
       }
     }
 
@@ -102,7 +113,9 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
         </div>
         <div className="flex-[2] text-lg">
           {chain ? (
-            validatorsList ? (
+            validatorsError ? (
+              <div className="border-b border-bgSt pl-4 text-lg">{t('not supported yet')}</div>
+            ) : validatorsList ? (
               <>
                 <ChooseValidator
                   value={validator}

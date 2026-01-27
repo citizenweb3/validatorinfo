@@ -33,32 +33,51 @@ const getApr: GetAprFunction = async (chain: AddChainProps) => {
       return 0;
     }
 
-    const firstEvent = await eventsClient.aztecStakedEvent.findFirst({
+    // Use ValidatorQueued events (includes both delegated and self-staked validators)
+    const firstQueuedEvent = await eventsClient.aztecValidatorQueuedEvent.findFirst({
       where: { chainId: dbChain.id },
       orderBy: { timestamp: 'asc' },
     });
 
-    if (!firstEvent) {
-      logWarn(`${chain.name}: No staking events found`);
+    if (!firstQueuedEvent) {
+      logWarn(`${chain.name}: No ValidatorQueued events found`);
       return 0;
     }
 
-    const startDate = new Date(firstEvent.timestamp);
+    const startDate = new Date(firstQueuedEvent.timestamp);
     startDate.setHours(0, 0, 0, 0);
 
-    const events = await eventsClient.aztecStakedEvent.findMany({
-      where: {
-        chainId: dbChain.id,
-        timestamp: { gte: startDate },
-      },
-      orderBy: { timestamp: 'asc' },
-    });
+    // Fetch both ValidatorQueued and WithdrawFinalized events
+    const [queuedEvents, withdrawEvents] = await Promise.all([
+      eventsClient.aztecValidatorQueuedEvent.findMany({
+        where: {
+          chainId: dbChain.id,
+          timestamp: { gte: startDate },
+        },
+        orderBy: { timestamp: 'asc' },
+      }),
+      eventsClient.aztecWithdrawFinalizedEvent.findMany({
+        where: {
+          chainId: dbChain.id,
+          timestamp: { gte: startDate },
+        },
+        orderBy: { timestamp: 'asc' },
+      }),
+    ]);
 
-    const eventsByDate = new Map<string, number>();
-    for (const event of events) {
+    // Track net change per day: +1 for queued, -1 for withdraw
+    const netChangeByDate = new Map<string, number>();
+
+    for (const event of queuedEvents) {
       const dateKey = event.timestamp.toISOString().split('T')[0];
-      const currentCount = eventsByDate.get(dateKey) || 0;
-      eventsByDate.set(dateKey, currentCount + 1);
+      const currentCount = netChangeByDate.get(dateKey) || 0;
+      netChangeByDate.set(dateKey, currentCount + 1);
+    }
+
+    for (const event of withdrawEvents) {
+      const dateKey = event.timestamp.toISOString().split('T')[0];
+      const currentCount = netChangeByDate.get(dateKey) || 0;
+      netChangeByDate.set(dateKey, currentCount - 1);
     }
 
     const today = new Date();
@@ -71,8 +90,11 @@ const getApr: GetAprFunction = async (chain: AddChainProps) => {
     while (currentDate <= today) {
       const dateKey = currentDate.toISOString().split('T')[0];
 
-      const eventsCount = eventsByDate.get(dateKey) || 0;
-      cumulativeStaked += eventsCount * AZTEC_DELEGATION_AMOUNT;
+      const netChange = netChangeByDate.get(dateKey) || 0;
+      cumulativeStaked += netChange * AZTEC_DELEGATION_AMOUNT;
+
+      // Ensure we don't go negative
+      if (cumulativeStaked < 0) cumulativeStaked = 0;
 
       stakeDaysSum += cumulativeStaked;
 
@@ -102,6 +124,8 @@ const getApr: GetAprFunction = async (chain: AddChainProps) => {
     logInfo(`  - Sequencer rewards: ${sequencerRewards.toLocaleString()} tokens`);
     logInfo(`  - Prover rewards: ${proverRewards.toLocaleString()} tokens`);
     logInfo(`  - Total rewards: ${totalRewards.toLocaleString()} tokens`);
+    logInfo(`  - ValidatorQueued events: ${queuedEvents.length}`);
+    logInfo(`  - WithdrawFinalized events: ${withdrawEvents.length}`);
     logInfo(`  - Stake days sum: ${stakeDaysSum.toLocaleString()} token-days`);
     logInfo(`  - Current staked: ${cumulativeStaked.toLocaleString()} tokens`);
     logInfo(`  - Days since first stake: ${totalDays}`);

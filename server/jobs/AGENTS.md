@@ -11,19 +11,41 @@
 | `get-coingecko-data.ts` | Fetches market cap, volume, and other market data |
 | `get-chain-uptime.ts` | Updates chain uptime metrics |
 | `update-chain-apr.ts` | Updates APR for all networks |
+| `update-chain-rewards.ts` | Updates chain rewards data (rewardsToPayout) |
 | `update-chain-tvs.ts` | Updates Total Value Staked |
 | `update-chain-proposals.ts` | Syncs governance proposals |
 | `update-chain-staking-params.ts` | Updates staking parameters (unbonding time, max validators) |
 | `update-chain-slashing-params.ts` | Updates slashing parameters |
+| `update-chain-node-params.ts` | Updates node configuration parameters (peers, seeds, binaries, genesis) |
 | `update-slashing-infos.ts` | Updates slashing data and missed blocks |
 | `update-nodes-votes.ts` | Updates validator voting records |
 | `update-nodes-rewards.ts` | Updates validator rewards |
 | `update-nodes-commissions.ts` | Updates validator commissions |
-| `sync-aztec-events.ts` | Syncs Aztec blockchain events |
+| `update-delegators-amount.ts` | Updates delegator count per validator node |
+| `update-reward-address.ts` | Updates validator reward distribution addresses |
+| `sync-aztec-events.ts` | Syncs Aztec blockchain events (staked, attesters, slashing, votes, signals) |
 | `sync-aztec-committee.ts` | Syncs Aztec committee members |
-| `update-aztec-*.ts` | Aztec-specific update jobs (stake, coinbase, L1 contracts) |
+| `update-aztec-sequencer-stake.ts` | Updates Aztec sequencer stake amounts |
+| `update-aztec-coinbase-address.ts` | Updates coinbaseSplitContractAddress and stakerImplementation for StakedWithProvider events |
+| `update-aztec-l1-contracts.ts` | Updates Aztec L1 contract addresses |
+| `update-aztec-governance-data.ts` | Updates Aztec governance config, committee size, attester count, voting power |
 | `update-validators-by-keybase.ts` | Updates validator metadata from Keybase |
 | `update-validators-by-site.ts` | Updates validator metadata from websites |
+| `update-validators-aztec-logos.ts` | Updates Aztec validator logos from provider metadata registry |
+| `update-proposal-params.ts` | Updates governance proposal parameters (votingPeriod, quorum, etc.) |
+| `update-twitter-followers-amount.ts` | Updates Twitter followers count for chains |
+| `update-wallets-amount.ts` | Updates total wallet/account count for chains |
+| `update-active-set-min-amount.ts` | Updates minimum stake amount for active validator set |
+| `update-circulating-tokens-onchain.ts` | Calculates circulating supply from on-chain data |
+| `update-circulating-tokens-public.ts` | Fetches circulating supply from public APIs |
+| `update-community-pool.ts` | Updates community pool balance in tokenomics |
+| `update-community-tax.ts` | Updates community tax percentage |
+| `update-inflation-rate.ts` | Updates current inflation rate for chains |
+| `update-fdv.ts` | Calculates Fully Diluted Valuation (totalSupply * price) |
+| `update-average-delegation.ts` | Calculates average delegation amount across validators |
+| `update-unbonding-tokens.ts` | Updates tokens currently in unbonding period |
+| `update-staking-page-json.ts` | Fetches networks.json from GitHub for staking page |
+| `update-github-repositories.ts` | Syncs GitHub repository data and commit activity |
 | `check-nodes-health.ts` | Health checks for nodes |
 | `match-chain-nodes.ts` | Matches nodes to validators |
 
@@ -55,24 +77,55 @@ server/jobs/
 │   ├── update-chain-tvs.ts
 │   ├── update-chain-proposals.ts
 │   ├── update-chain-staking-params.ts
-│   └── update-chain-slashing-params.ts
+│   ├── update-chain-slashing-params.ts
+│   ├── update-chain-node-params.ts
+│   └── update-chain-rewards.ts
 │
 ├── update-nodes-*.ts     # Update node/validator data
 │   ├── update-nodes-votes.ts
 │   ├── update-nodes-rewards.ts
-│   └── update-nodes-commissions.ts
+│   ├── update-nodes-commissions.ts
+│   ├── update-delegators-amount.ts
+│   └── update-reward-address.ts
+│
+├── update-tokenomics-*.ts # Tokenomics data
+│   ├── update-fdv.ts
+│   ├── update-inflation-rate.ts
+│   ├── update-community-pool.ts
+│   ├── update-community-tax.ts
+│   ├── update-circulating-tokens-onchain.ts
+│   ├── update-circulating-tokens-public.ts
+│   ├── update-unbonding-tokens.ts
+│   ├── update-average-delegation.ts
+│   └── update-active-set-min-amount.ts
+│
+├── update-governance-*.ts # Governance data
+│   └── update-proposal-params.ts
 │
 ├── sync-aztec-*.ts       # Aztec-specific syncs
 │   ├── sync-aztec-events.ts
-│   ├── sync-aztec-committee.ts
-│   └── update-aztec-*.ts
+│   └── sync-aztec-committee.ts
+│
+├── update-aztec-*.ts     # Aztec-specific updates
+│   ├── update-aztec-sequencer-stake.ts
+│   ├── update-aztec-coinbase-address.ts
+│   ├── update-aztec-l1-contracts.ts
+│   └── update-aztec-governance-data.ts
 │
 ├── update-validators-*.ts # Validator metadata
 │   ├── update-validators-by-keybase.ts
 │   ├── update-validators-by-site.ts
 │   └── update-validators-aztec-logos.ts
 │
-└── check-nodes-health.ts  # Node health checks
+├── update-external-*.ts  # External data sources
+│   ├── update-twitter-followers-amount.ts
+│   ├── update-wallets-amount.ts
+│   ├── update-staking-page-json.ts
+│   └── update-github-repositories.ts
+│
+├── check-nodes-health.ts  # Node health checks
+├── match-chain-nodes.ts   # Match nodes to validators
+└── update-slashing-infos.ts # Slashing data
 ```
 
 ## Common Patterns

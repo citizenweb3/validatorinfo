@@ -57,8 +57,8 @@ const getTotalSupply = async (chainName: string): Promise<number> => {
   return totalSupplyTokens;
 };
 
-const getStakingEvents = async (chainId: number, startDate: Date) => {
-  const events = await eventsClient.aztecStakedEvent.findMany({
+const getValidatorQueuedEvents = async (chainId: number, startDate: Date) => {
+  const events = await eventsClient.aztecValidatorQueuedEvent.findMany({
     where: {
       chainId,
       timestamp: {
@@ -73,24 +73,90 @@ const getStakingEvents = async (chainId: number, startDate: Date) => {
   return events;
 };
 
-const calculateDailyTvs = (events: Array<{ timestamp: Date }>, totalSupply: number): TvsDataPoint[] => {
-  const eventsByDate = new Map<string, number>();
-
-  events.forEach((event) => {
-    const dateKey = event.timestamp.toISOString().split('T')[0];
-    const currentCount = eventsByDate.get(dateKey) || 0;
-    eventsByDate.set(dateKey, currentCount + 1);
+const getWithdrawFinalizedEvents = async (chainId: number, startDate: Date) => {
+  const events = await eventsClient.aztecWithdrawFinalizedEvent.findMany({
+    where: {
+      chainId,
+      timestamp: {
+        gte: startDate,
+      },
+    },
+    orderBy: {
+      timestamp: 'asc',
+    },
   });
+
+  return events;
+};
+
+const getSlashedEvents = async (chainId: number, startDate: Date) => {
+  const events = await eventsClient.aztecSlashedEvent.findMany({
+    where: {
+      chainId,
+      timestamp: {
+        gte: startDate,
+      },
+    },
+    orderBy: {
+      timestamp: 'asc',
+    },
+  });
+
+  return events;
+};
+
+const calculateDailyTvs = (
+  queuedEvents: Array<{ timestamp: Date }>,
+  withdrawEvents: Array<{ timestamp: Date }>,
+  slashedEvents: Array<{ timestamp: Date; amount: string }>,
+  totalSupply: number,
+): TvsDataPoint[] => {
+  const validatorChangeByDate = new Map<string, number>();
+
+  queuedEvents.forEach((event) => {
+    const dateKey = event.timestamp.toISOString().split('T')[0];
+    const currentCount = validatorChangeByDate.get(dateKey) || 0;
+    validatorChangeByDate.set(dateKey, currentCount + 1);
+  });
+
+  withdrawEvents.forEach((event) => {
+    const dateKey = event.timestamp.toISOString().split('T')[0];
+    const currentCount = validatorChangeByDate.get(dateKey) || 0;
+    validatorChangeByDate.set(dateKey, currentCount - 1);
+  });
+
+  const slashedByDate = new Map<string, number>();
+
+  slashedEvents.forEach((event) => {
+    const dateKey = event.timestamp.toISOString().split('T')[0];
+    const currentSlashed = slashedByDate.get(dateKey) || 0;
+    const slashedTokens = Number(BigInt(event.amount)) / Math.pow(10, 18);
+    slashedByDate.set(dateKey, currentSlashed + slashedTokens);
+  });
+
+  const allDates = new Set<string>();
+  Array.from(validatorChangeByDate.keys()).forEach((date) => allDates.add(date));
+  Array.from(slashedByDate.keys()).forEach((date) => allDates.add(date));
 
   const stakedByDate = new Map<string, number>();
   let cumulativeStaked = 0;
+  let cumulativeSlashed = 0;
 
-  const sortedDates = Array.from(eventsByDate.keys()).sort();
+  const sortedDates = Array.from(allDates).sort();
 
   sortedDates.forEach((date) => {
-    const eventsCount = eventsByDate.get(date) || 0;
-    cumulativeStaked += eventsCount * AZTEC_DELEGATION_AMOUNT;
-    stakedByDate.set(date, cumulativeStaked);
+    const validatorChange = validatorChangeByDate.get(date) || 0;
+    const slashedAmount = slashedByDate.get(date) || 0;
+
+    cumulativeStaked += validatorChange * AZTEC_DELEGATION_AMOUNT;
+    cumulativeSlashed += slashedAmount;
+
+    const netStaked = cumulativeStaked - cumulativeSlashed;
+    if (netStaked < 0) {
+      stakedByDate.set(date, 0);
+    } else {
+      stakedByDate.set(date, netStaked);
+    }
   });
 
   const dataPoints: TvsDataPoint[] = [];
@@ -178,9 +244,13 @@ const getTvsData = async (chainName: string, period: PeriodType = 'day'): Promis
 
     const totalSupply = await getTotalSupply(chainName);
 
-    const events = await getStakingEvents(chain.id, START_DATE);
+    const [queuedEvents, withdrawEvents, slashedEvents] = await Promise.all([
+      getValidatorQueuedEvents(chain.id, START_DATE),
+      getWithdrawFinalizedEvents(chain.id, START_DATE),
+      getSlashedEvents(chain.id, START_DATE),
+    ]);
 
-    const dailyTvs = calculateDailyTvs(events, totalSupply);
+    const dailyTvs = calculateDailyTvs(queuedEvents, withdrawEvents, slashedEvents, totalSupply);
 
     const aggregatedData = aggregateByPeriod(dailyTvs, period);
 
@@ -191,13 +261,26 @@ const getTvsData = async (chainName: string, period: PeriodType = 'day'): Promis
   }
 };
 
-const getStakedEventByAttester = async (attesterAddress: string): Promise<StakedEventItem | null> => {
+const getStakedEventByAttester = async (
+  attesterAddress: string,
+  chainName: string,
+): Promise<StakedEventItem | null> => {
   try {
+    const chain = await prisma.chain.findUnique({
+      where: { name: chainName },
+    });
+
+    if (!chain) {
+      console.error(`Chain not found: ${chainName}`);
+      return null;
+    }
+
     const checksumAddress = getAddress(attesterAddress);
 
-    const event = await eventsClient.aztecStakedEvent.findFirst({
+    const event = await eventsClient.aztecValidatorQueuedEvent.findFirst({
       where: {
-        attesterAddress: checksumAddress,
+        chainId: chain.id,
+        attester: checksumAddress,
       },
       orderBy: {
         timestamp: 'desc',
@@ -209,7 +292,7 @@ const getStakedEventByAttester = async (attesterAddress: string): Promise<Staked
     }
 
     return {
-      address: event.providerAddress ?? event.attesterAddress,
+      address: event.attester,
       amount: AZTEC_DELEGATION_AMOUNT,
       happened: formatTimeAgo(event.timestamp),
       txHash: event.transactionHash,

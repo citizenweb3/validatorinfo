@@ -224,7 +224,8 @@
     "Wrong amount": "Некоректное значение",
     "earnings": "д заработка",
     "downloading validators": "Загрузка Валидаторов...",
-    "please choose network": "Пожалуйста Выберете Сеть"
+    "please choose network": "Пожалуйста Выберете Сеть",
+    "not supported yet": "Пока не поддерживается"
   },
   "NetworksPage": {
     "title": "Каталог сетей A-Z: Изучайте сети и их показатели",
@@ -1126,6 +1127,8 @@
     "transactions yesterday": "Транзакции (Вчера)",
     "tps": "TPS (Последние 20 Блоков)",
     "average fee": "Средняя Комиссия",
+    "noTransactionsYet": "Транзакций пока нет",
+    "transactionsWillAppear": "Отображение транзакций появится, когда в сети начнутся транзакции",
     "Table": {
       "Type of Tx": {
         "name": "Тип Транзакции",
@@ -1241,6 +1244,9 @@
     "signaling": "Сигнал",
     "on going": "В процессе",
     "past": "Закончилось",
+    "passed": "Принято",
+    "rejected": "Отклонено",
+    "failed": "Провалено",
     "link to full proposal": "Ссылка на Полное Предложение",
     "voting period": "Период Голосования",
     "show all proposals": "Показать Все Предложения",

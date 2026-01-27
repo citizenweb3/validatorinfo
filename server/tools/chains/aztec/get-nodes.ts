@@ -1,8 +1,10 @@
 import { getAddress } from 'viem';
 
+import db from '@/db';
 import logger from '@/logger';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { fetchProviderMetadata } from '@/server/tools/chains/aztec/utils/fetch-provider-metadata';
+import { getActiveSequencers } from '@/server/tools/chains/aztec/utils/get-active-sequencers';
 import { getProviderAttesters } from '@/server/tools/chains/aztec/utils/get-provider-attesters';
 import { getProviders } from '@/server/tools/chains/aztec/utils/get-providers';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
@@ -48,63 +50,116 @@ export interface ValidatorsStatsResponse {
   };
 }
 
+const createSelfStakedNode = (attester: string, withdrawer: string): NodeResult => ({
+  operator_address: getAddress(attester),
+  account_address: getAddress(withdrawer),
+  reward_address: getAddress(withdrawer),
+  delegator_shares: '0',
+  tokens: '0',
+  consensus_pubkey: {
+    '@type': 'aztec/AttesterAddress',
+    key: getAddress(attester),
+  },
+  jailed: false,
+  status: 'BOND_STATUS_BONDED',
+  commission: {
+    commission_rates: {
+      rate: '0',
+      max_rate: '1',
+      max_change_rate: '0.01',
+    },
+    update_time: new Date().toISOString(),
+  },
+  description: {
+    identity: getAddress(attester),
+    moniker: `Sequencer ${attester.slice(0, 10)}...${attester.slice(-6)}`,
+    website: '',
+    security_contact: '',
+    details: 'Self-staked sequencer',
+  },
+  min_self_delegation: '0',
+  unbonding_height: '0',
+  unbonding_time: new Date(0).toISOString(),
+});
+
 const getAztecNodes: GetNodesFunction = async (chain) => {
+  const chainName = chain.name as 'aztec' | 'aztec-testnet';
+
+  const l1Chain = getChainParams(getL1[chainName]);
+  const l1RpcUrls = l1Chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
+
+  if (!l1RpcUrls.length) {
+    throw new Error(`${chainName}: No L1 RPC URLs found - cannot fetch sequencer data`);
+  }
+
+  const dbChain = await db.chain.findFirst({
+    where: { chainId: chain.chainId },
+  });
+
+  if (!dbChain) {
+    throw new Error(`${chainName}: Chain not found in database`);
+  }
+
+  logInfo(`Fetching sequencers for ${chainName}`);
+
+  const activeSequencers = await getActiveSequencers(dbChain.id);
+
+  logInfo(`Found ${activeSequencers.size} active sequencers`);
+
+  if (activeSequencers.size === 0) {
+    logWarn(`${chainName}: No active sequencers found - this may indicate data sync issue`);
+    return [];
+  }
+
+  let providers: Map<bigint, any>;
+  let attesterToProvider: Map<string, bigint>;
+  let providerMetadata: Map<string, any>;
+
   try {
-    const chainName = chain.name as 'aztec' | 'aztec-testnet';
-
-    const l1Chain = getChainParams(getL1[chainName]);
-    const l1RpcUrls = l1Chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
-
-    if (!l1RpcUrls.length) {
-      throw new Error('No L1 RPC URLs found - cannot fetch providers');
-    }
-
-    logInfo(`Fetching providers and attesters for ${chainName}`);
-
-    const [providers, attesterToProvider, providerMetadata] = await Promise.all([
+    [providers, attesterToProvider, providerMetadata] = await Promise.all([
       getProviders(l1RpcUrls, chainName),
       getProviderAttesters(l1RpcUrls, chainName),
       fetchProviderMetadata(),
     ]);
+  } catch (e: any) {
+    throw new Error(`${chainName}: Failed to fetch provider data: ${e.message}`);
+  }
 
-    logInfo(`Found ${providers.size} providers and ${attesterToProvider.size} attesters`);
+  logInfo(`Found ${providers.size} providers and ${attesterToProvider.size} attester-to-provider mappings`);
 
-    if (providers.size === 0) {
-      logError('No providers found from L1 contract');
-      return [];
-    }
+  const nodes: NodeResult[] = [];
+  let delegatedCount = 0;
+  let selfStakedCount = 0;
+  let errorCount = 0;
 
-    if (attesterToProvider.size === 0) {
-      logWarn('No attester mappings found from L1 events');
-      return [];
-    }
+  for (const [attester, withdrawer] of Array.from(activeSequencers.entries())) {
+    try {
+      const providerId = attesterToProvider.get(attester);
 
-    const nodes: NodeResult[] = [];
-    const attesterEntries = Array.from(attesterToProvider.entries());
-
-    for (const [attesterAddress, providerId] of attesterEntries) {
-      try {
+      if (providerId) {
         const provider = providers.get(providerId);
+
         if (!provider) {
-          logWarn(`Provider ${providerId} not found for attester ${attesterAddress}`);
+          logWarn(`Provider ${providerId} not found for attester ${attester}, treating as self-staked`);
+          nodes.push(createSelfStakedNode(attester, withdrawer));
+          selfStakedCount++;
           continue;
         }
 
         const metadata = chainName === 'aztec' ? providerMetadata.get(getAddress(provider.providerAdmin)) : undefined;
-
         const moniker = metadata?.name || `Provider ${providerId}`;
         const website = metadata?.website || '';
         const details = metadata?.description || '';
 
         nodes.push({
-          operator_address: getAddress(attesterAddress),
+          operator_address: getAddress(attester),
           account_address: getAddress(provider.providerAdmin),
           reward_address: getAddress(provider.providerRewardsRecipient),
           delegator_shares: '0',
           tokens: '0',
           consensus_pubkey: {
             '@type': 'aztec/AttesterAddress',
-            key: getAddress(attesterAddress),
+            key: getAddress(attester),
           },
           jailed: false,
           status: 'BOND_STATUS_BONDED',
@@ -127,18 +182,28 @@ const getAztecNodes: GetNodesFunction = async (chain) => {
           unbonding_height: '0',
           unbonding_time: new Date(0).toISOString(),
         });
-      } catch (e: any) {
-        logError(`Error processing attester ${attesterAddress}: ${e.message}`);
+
+        delegatedCount++;
+      } else {
+        nodes.push(createSelfStakedNode(attester, withdrawer));
+        selfStakedCount++;
       }
+    } catch (e: any) {
+      logError(`Error processing attester ${attester}: ${e.message}`);
+      errorCount++;
     }
-
-    logInfo(`Created ${nodes.length} nodes from attesters`);
-
-    return nodes;
-  } catch (e) {
-    logError(`Failed to fetch Aztec nodes`, e);
-    return [];
   }
+
+  logInfo(
+    `Created ${nodes.length} nodes: ${delegatedCount} delegated, ${selfStakedCount} self-staked` +
+    (errorCount > 0 ? `, ${errorCount} errors` : '')
+  );
+
+  if (activeSequencers.size > 0 && nodes.length === 0) {
+    throw new Error(`${chainName}: All ${activeSequencers.size} sequencers failed to process`);
+  }
+
+  return nodes;
 };
 
 export default getAztecNodes;

@@ -9,7 +9,6 @@ import {
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { fetchBlockTimestamps } from '@/server/tools/chains/aztec/utils/fetch-block-timestamps';
 import { getChunkSizeForRpcUrls } from '@/server/tools/chains/aztec/utils/get-chunck-size-rpc';
-import { getProviders } from '@/server/tools/chains/aztec/utils/get-providers';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
 import { SyncResult } from '@/server/tools/chains/aztec/types';
 
@@ -59,106 +58,98 @@ export const syncAttesterEvents = async (
       `${chainName}: Syncing attester events from block ${startBlock} to ${currentBlock} (${currentBlock - startBlock} blocks)`,
     );
 
-    const providers = await getProviders(l1RpcUrls, chainName);
-    const providerIds = Array.from(providers.keys());
+    for (let blockStart = startBlock; blockStart < currentBlock; blockStart += BigInt(chunkSize)) {
+      const blockEnd =
+        blockStart + BigInt(chunkSize) > currentBlock ? currentBlock : blockStart + BigInt(chunkSize);
 
-    logInfo(`${chainName}: Found ${providerIds.length} providers for attester events`);
-
-    for (const providerId of providerIds) {
+      let chunkEvents;
       try {
-        const provider = providers.get(providerId);
-        if (!provider) {
-          logError(`${chainName}: Provider ${providerId} not found in providers map`);
+        chunkEvents = await client.getContractEvents({
+          address: contractAddress as `0x${string}`,
+          abi: abi,
+          eventName: 'AttestersAddedToProvider',
+          fromBlock: blockStart,
+          toBlock: blockEnd,
+        });
+      } catch (e: any) {
+        logError(
+          `${chainName}: Failed to fetch attester events, blocks ${blockStart}-${blockEnd}: ${e.message}`,
+        );
+        failedRanges.push({ start: blockStart.toString(), end: blockEnd.toString() });
+        continue;
+      }
+
+      if (chunkEvents.length === 0) {
+        continue;
+      }
+
+      const blockNumbers = chunkEvents
+        .map((e) => e.blockNumber)
+        .filter((bn): bn is bigint => bn !== null && bn !== undefined);
+      const blockTimestamps = await fetchBlockTimestamps(client, blockNumbers);
+
+      for (const event of chunkEvents) {
+        if (!event.blockNumber || !event.transactionHash || event.logIndex === undefined) {
+          logWarn(`${chainName}: Skipping event with missing required fields`);
+          skippedEvents++;
+          totalEvents++;
           continue;
         }
 
-        const allEvents = [];
-        for (let blockStart = startBlock; blockStart < currentBlock; blockStart += BigInt(chunkSize)) {
-          const blockEnd =
-            blockStart + BigInt(chunkSize) > currentBlock ? currentBlock : blockStart + BigInt(chunkSize);
+        try {
+          const args = event.args as { providerIdentifier: bigint; attesters: string[] };
+          const blockKey = event.blockNumber.toString();
+          const timestamp = blockTimestamps.get(blockKey);
+
+          if (!timestamp) {
+            logError(`${chainName}: Missing timestamp for block ${blockKey}, skipping event`);
+            skippedEvents++;
+            totalEvents++;
+            continue;
+          }
+
+          const providerId = args.providerIdentifier.toString();
+          const attesters = args.attesters.map((a) => getAddress(a));
 
           try {
-            const chunkEvents = await client.getContractEvents({
-              address: contractAddress as `0x${string}`,
-              abi: abi,
-              eventName: 'AttestersAddedToProvider',
-              args: {
-                providerIdentifier: providerId,
+            await eventsClient.aztecAttesterEvent.create({
+              data: {
+                chainId: dbChain.id,
+                blockNumber: event.blockNumber.toString(),
+                transactionHash: event.transactionHash,
+                logIndex: Number(event.logIndex),
+                providerId,
+                providerAddress: null,
+                attesters,
+                timestamp,
               },
-              fromBlock: blockStart,
-              toBlock: blockEnd,
             });
 
-            allEvents.push(...chunkEvents);
-          } catch (e: any) {
-            logError(
-              `${chainName}: Failed to fetch attester events for provider ${providerId}, blocks ${blockStart}-${blockEnd}: ${e.message}`,
-            );
-            failedRanges.push({ start: blockStart.toString(), end: blockEnd.toString() });
-          }
-        }
-
-        if (allEvents.length === 0) {
-          continue;
-        }
-
-        logInfo(`${chainName}: Found ${allEvents.length} attester events for provider ${providerId}`);
-
-        const blockNumbers = allEvents.map((e) => e.blockNumber!);
-        const blockTimestamps = await fetchBlockTimestamps(client, blockNumbers);
-
-        for (const event of allEvents) {
-          try {
-            const args = event.args as { providerIdentifier: bigint; attesters: string[] };
-
-            const blockKey = event.blockNumber!.toString();
-            const timestamp = blockTimestamps.get(blockKey);
-
-            if (!timestamp) {
-              logError(`${chainName}: Missing timestamp for block ${blockKey}, skipping event`);
+            newEvents++;
+            totalEvents++;
+          } catch (dbError: any) {
+            if (dbError.code === 'P2002') {
               skippedEvents++;
               totalEvents++;
-              continue;
+            } else {
+              logError(
+                `${chainName}: Failed to save attester event at block ${event.blockNumber}: ${dbError.message}`,
+              );
             }
-
-            try {
-              await eventsClient.aztecAttesterEvent.create({
-                data: {
-                  chainId: dbChain.id,
-                  blockNumber: event.blockNumber!.toString(),
-                  transactionHash: event.transactionHash!,
-                  logIndex: Number(event.logIndex!),
-                  providerId: args.providerIdentifier.toString(),
-                  providerAddress: getAddress(provider.providerAdmin),
-                  attesters: args.attesters.map(a => getAddress(a)),
-                  timestamp,
-                },
-              });
-
-              newEvents++;
-              totalEvents++;
-            } catch (dbError: any) {
-              if (dbError.code === 'P2002') {
-                skippedEvents++;
-                totalEvents++;
-              } else {
-                logError(
-                  `${chainName}: Failed to save attester event at block ${event.blockNumber}: ${dbError.message}`,
-                );
-              }
-            }
-          } catch (e: any) {
-            logError(`${chainName}: Failed to process attester event at block ${event.blockNumber}: ${e.message}`);
           }
+        } catch (e: any) {
+          logError(`${chainName}: Failed to process attester event at block ${event.blockNumber}: ${e.message}`);
         }
-      } catch (e: any) {
-        logError(`${chainName}: Error processing provider ${providerId} for attester events: ${e.message}`);
       }
     }
 
-    logInfo(
-      `${chainName}: Attester events sync complete - ${totalEvents} total (${newEvents} new, ${skippedEvents} duplicates)`,
-    );
+    if (totalEvents === 0) {
+      logInfo(`${chainName}: No new attester events found`);
+    } else {
+      logInfo(
+        `${chainName}: Attester events sync complete - ${totalEvents} total (${newEvents} new, ${skippedEvents} duplicates)`,
+      );
+    }
 
     const result: SyncResult = { success: true, totalEvents, newEvents, skippedEvents };
     if (failedRanges.length > 0) {

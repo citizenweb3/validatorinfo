@@ -64,19 +64,13 @@ const NodeRevenuePage: NextPageWithLocale<PageProps> = async ({ params: { locale
           </Suspense>
         </div>
         <div>
-          {isAztecNetwork && slashingEvents.length > 0 && (
+          {isAztecNetwork ? (
             <TableDropdown<AztecSlashingEventDisplay[]>
               page="NodeRevenuePage"
               Table={SlashingEventsTable as FC<{ items: AztecSlashingEventDisplay[] }>}
               items={slashingEvents}
             />
-          )}
-          {isAztecNetwork && slashingEvents.length === 0 && (
-            <div className="text-gray-500 dark:bg-gray-800 mt-4 rounded-lg bg-white p-6 text-center">
-              {t('no-slashing-events')}
-            </div>
-          )}
-          {!isAztecNetwork && (
+          ) : (
             <TableDropdown<SlashingEventsExampleInterface[]>
               page="NodeRevenuePage"
               Table={SlashingEventsTable as FC<{ items: SlashingEventsExampleInterface[] }>}

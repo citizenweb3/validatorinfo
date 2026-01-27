@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableRow from '@/components/common/table/base-table-row';
+import BaseTableCell from '@/components/common/table/base-table-cell';
 import icons from '@/components/icons';
 import cutHash from '@/utils/cut-hash';
 
@@ -29,8 +31,8 @@ const NetworkBlocksItem: FC<OwnProps> = ({ name, item }) => {
   const heightValue = typeof item.height === 'string' ? parseInt(item.height, 10) : item.height;
 
   return (
-    <tr className="group cursor-pointer hover:bg-bgHover">
-      <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="w-1/4 px-2 py-2 hover:text-highlight">
         <Link href={link} className="flex items-center">
           <div className="flex-shrink-0">
             <Image src={getStatusIcon()} alt={getStatus()} width={30} height={30} />
@@ -42,28 +44,28 @@ const NetworkBlocksItem: FC<OwnProps> = ({ name, item }) => {
             })}
           </div>
         </Link>
-      </td>
+      </BaseTableCell>
 
-      <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      <BaseTableCell className="w-1/4 px-2 py-2 hover:text-highlight">
         <Link href={link} className="flex justify-center">
           <div className="text-center font-handjet text-lg">{heightValue.toLocaleString('ru-RU')}</div>
         </Link>
-      </td>
+      </BaseTableCell>
 
-      <td className="w-1/4 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      <BaseTableCell className="w-1/4 px-2 py-2 hover:text-highlight">
         <Link href={link} className="flex justify-center">
           <div className="text-center font-sfpro text-base">{item.timestamp}</div>
         </Link>
-      </td>
+      </BaseTableCell>
 
-      <td className="w-1/4 border-b border-black py-4 text-base hover:text-highlight active:border-bgSt">
+      <BaseTableCell className="w-1/4 py-4 text-base hover:text-highlight">
         <Link href={link} className="flex justify-center">
           <div className="flex-shrink-0">
             <div className="underline-offset-3 text-center font-handjet text-lg">{getStatus()}</div>
           </div>
         </Link>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

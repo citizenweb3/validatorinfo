@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import ListFilters from '@/components/common/list-filters/list-filters';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -31,7 +32,7 @@ const Nodes: FC<OwnProps> = async ({ ecosystems, networks, nodeStatus, page, per
                    isNetworks
                    isNodeStatus />
       <div>
-        <table className="my-4 w-full table-auto border-collapse">
+        <BaseTable className="my-4">
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Node Address" sortField="operatorAddress" defaultSelected />
@@ -50,7 +51,7 @@ const Nodes: FC<OwnProps> = async ({ ecosystems, networks, nodeStatus, page, per
                      perPage={perPage}
                      sort={sort}
                      currentPage={currentPage} />
-        </table>
+        </BaseTable>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import ToolTip from '@/components/common/tooltip';
 import { GithubRepositoryWithCommitCount } from '@/services/github-service';
 
@@ -10,8 +12,8 @@ interface OwnProps {
 
 const DeveloperActivityTableItem: FC<OwnProps> = ({ item }) => {
   return (
-    <tr className="group cursor-pointer hover:bg-bgHover">
-      <td className="w-1/3 border-b border-black py-4 hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="w-1/3 py-4 hover:text-highlight">
         <div className="flex items-center justify-center font-sfpro text-base">
           <ToolTip tooltip={item.description ?? ''} direction={'top'}>
             <Link
@@ -24,16 +26,16 @@ const DeveloperActivityTableItem: FC<OwnProps> = ({ item }) => {
             </Link>
           </ToolTip>
         </div>
-      </td>
-      <td className="w-1/3 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/3 px-2 py-2 hover:text-highlight">
         <div className="flex items-center justify-center font-handjet text-lg">{item.language}</div>
-      </td>
-      <td className="w-1/3 border-b border-black px-2 py-2 hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/3 px-2 py-2 hover:text-highlight">
         <div className="flex items-center justify-center font-handjet text-lg">
           {item.totalCommits.toLocaleString()}
         </div>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

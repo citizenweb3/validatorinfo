@@ -49,8 +49,8 @@ const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
         }
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <TotalTxsMetrics />
-      <NetworkTxs name={name} page={'TotalTxsPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
+      <TotalTxsMetrics chainName={name} />
+      <NetworkTxs chainName={name} name={name} page={'TotalTxsPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
     </div>
   );
 };

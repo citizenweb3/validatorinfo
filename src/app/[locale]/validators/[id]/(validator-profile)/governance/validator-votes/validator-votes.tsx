@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import ValidatorVotesList from '@/app/validators/[id]/(validator-profile)/governance/validator-votes/validator-votes-list';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -15,7 +16,7 @@ interface OwnProps extends PagesProps {
 const ValidatorVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage, validatorId }) => {
   return (
     <div>
-      <table className="w-full table-auto border-collapse">
+      <BaseTable>
         <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Network" sortField="chain" defaultSelected />
@@ -28,7 +29,7 @@ const ValidatorVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage, 
           sort={sort}
           currentPage={currentPage}
           validatorId={validatorId} />
-      </table>
+      </BaseTable>
     </div>
   );
 };

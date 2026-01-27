@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import ValidatorNodesList from '@/app/validators/[id]/(validator-profile)/public_goods/infrastructure/validator-nodes/validator-nodes-list';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { InfrastructureNode } from '@/services/infrastructure-service';
@@ -17,7 +18,7 @@ interface OwnProps extends PagesProps {
 const ValidatorNodesTable: FC<OwnProps> = async ({ nodes, page, perPage, sort, currentPage, totalPages }) => {
   return (
     <div>
-      <table className="mt-4 w-full table-auto border-collapse">
+      <BaseTable className="mt-4">
         <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} className="w-8">
@@ -36,7 +37,7 @@ const ValidatorNodesTable: FC<OwnProps> = async ({ nodes, page, perPage, sort, c
           currentPage={currentPage}
           totalPages={totalPages}
         />
-      </table>
+      </BaseTable>
     </div>
   );
 };

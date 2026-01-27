@@ -59,7 +59,7 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | File | Description |
 |------|-------------|
 | `methods.ts` | Entry point - exports `ChainMethods` object with all chain functions |
-| `get-nodes.ts` | Fetches validators (providers + attesters) from L1 StakingRegistry |
+| `get-nodes.ts` | Fetches all sequencers (delegated + self-staked) from events DB |
 | `get-proposals.ts` | Fetches governance proposals from L1 Governance contract |
 | `get-apr.ts` | Calculates APR based on rewards and stake-days |
 | `get-tvs.ts` | Calculates Total Value Staked (bonded tokens / total supply) |
@@ -68,17 +68,21 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `get-chain-uptime.ts` | Gets slot duration and current slot from Rollup |
 | `get-slashing-params.ts` | Returns static slashing window (768 blocks) |
 | `get-node-stake.ts` | Fetches individual validator stake amounts |
+| `get-proposal-params.ts` | Fetches governance proposal parameters (quorum, voting period, etc.) |
 
 ### Event Synchronization
 
 | File | Description |
 |------|-------------|
 | `sync-staked-events.ts` | Syncs `StakedWithProvider` events from StakingRegistry |
-| `sync-attester-events.ts` | Syncs `AttestersAddedToProvider` events |
+| `sync-attester-events.ts` | Syncs `AttestersAddedToProvider` events (single-pass, no provider iteration) |
 | `sync-slashing-events.ts` | Syncs `Slashed` events from Rollup contract |
 | `sync-vote-events.ts` | Syncs `VoteCast` events from Governance contract |
 | `sync-signal-events.ts` | Syncs `Signaled` events from GovernanceProposer contract |
 | `sync-payload-submitted-events.ts` | Syncs `PayloadSubmitted` events from GovernanceProposer contract |
+| `sync-validator-queued-events.ts` | Syncs `ValidatorQueued` events (sequencer registration) |
+| `sync-withdraw-finalized-events.ts` | Syncs `WithdrawFinalized` events (sequencer exit) |
+| `sync-aztec-providers.ts` | Syncs Aztec providers from StakingRegistry contract |
 
 ### Shared Types
 
@@ -108,13 +112,17 @@ server/tools/chains/aztec/
 ├── get-chain-uptime.ts              # Get slot duration and current slot
 ├── get-slashing-params.ts           # Static slashing params
 ├── get-node-stake.ts                # Fetch validator stakes
+├── get-proposal-params.ts           # Fetch governance proposal params (quorum, delays)
 ├── find-or-create-aztec-validator.ts # Validator upsert helper
 ├── sync-staked-events.ts            # Sync StakedWithProvider events
-├── sync-attester-events.ts          # Sync AttestersAddedToProvider events
+├── sync-attester-events.ts          # Sync AttestersAddedToProvider events (single-pass)
 ├── sync-slashing-events.ts          # Sync Slashed events
 ├── sync-vote-events.ts              # Sync VoteCast events
 ├── sync-signal-events.ts            # Sync Signaled events from GovernanceProposer
 ├── sync-payload-submitted-events.ts # Sync PayloadSubmitted events
+├── sync-validator-queued-events.ts  # Sync ValidatorQueued events (sequencer registration)
+├── sync-withdraw-finalized-events.ts # Sync WithdrawFinalized events (sequencer exit)
+├── sync-aztec-providers.ts          # Sync providers from StakingRegistry
 ├── types.ts                         # Shared TypeScript interfaces (SyncResult)
 │
 ├── utils/
@@ -124,16 +132,19 @@ server/tools/chains/aztec/
 │   │   └── abis/
 │   │       ├── aztec/               # Mainnet ABIs
 │   │       │   ├── GOVERNANCE_ABI.json
+│   │       │   ├── GOVERNANCE_PROPOSER_ABI.json
 │   │       │   ├── GSE_ABI.json
+│   │       │   ├── GSE_PAYLOAD_ABI.json
 │   │       │   ├── ROLLUP_ABI.json
 │   │       │   ├── STAKING_REGISTRY_ABI.json
 │   │       │   └── TOKEN_ABI.json
-│   │       └── aztec-testnent/      # Testnet ABIs
+│   │       └── aztec-testnent/      # Testnet ABIs (note: directory name has typo)
 │   │           └── ... (same structure)
 │   │
 │   ├── get-providers.ts             # Fetch all providers from StakingRegistry
-│   ├── get-provider-attesters.ts    # Map attesters to providers via events
-│   ├── get-bonded-tokens.ts         # Get total bonded tokens
+│   ├── get-provider-attesters.ts    # Map attesters to providers (reads from DB only)
+│   ├── get-active-sequencers.ts     # Get active sequencers from ValidatorQueued - Withdrawals
+│   ├── get-bonded-tokens.ts         # Get total bonded tokens (minus slashed amounts)
 │   ├── get-total-supply.ts          # Get total token supply
 │   ├── get-total-prover-rewards.ts  # Get prover rewards from tokenomics
 │   ├── get-active-attester-count.ts # Count active attesters
@@ -146,6 +157,11 @@ server/tools/chains/aztec/
 │   ├── get-l1-contract-addresses.ts # Fetch L1 contract addresses dynamically
 │   ├── get-chunck-size-rpc.ts       # Determine chunk size for RPC providers
 │   ├── get-l1-rpc-urls.ts           # Get L1 RPC URLs for Aztec chain
+│   ├── get-exited-sequencers.ts     # Get sequencers that have exited (from WithdrawFinalized events)
+│   ├── get-governance-config.ts     # Get governance configuration from contract
+│   ├── get-governance-power.ts      # Get governance voting power (total, per-user, current and historical)
+│   ├── get-payload-uri-util.ts      # Utility for fetching payload URI content
+│   ├── get-proposal-ballots.ts      # Get user's vote ballot (yea/nay) for a specific proposal
 │   ├── fetch-delegated-stake.ts     # Fetch delegated stake for attester
 │   ├── fetch-node-stake.ts          # Fetch stake for specific node
 │   ├── fetch-provider-metadata.ts   # Fetch provider names from JSON/API
@@ -154,9 +170,7 @@ server/tools/chains/aztec/
 │   ├── build-address-to-validator-map.ts # Build map of addresses to validator info
 │   └── providers_monikers.json      # Static provider name mappings
 │
-├── AGENTS.md                        # This documentation
-├── AZTEC_GOVERNANCE_USAGE.md        # Governance/slashing usage guide
-└── IMPLEMENTATION_SUMMARY.md        # Implementation notes
+└── AGENTS.md                        # This documentation
 ```
 
 ---
@@ -270,22 +284,65 @@ export const syncXxxEvents = async (
 };
 ```
 
-### 4. Validator Identification
+### 4. Validator Identification (Self-Staked vs Delegated)
 
-Aztec uses providers and attesters instead of traditional validators:
+Aztec has two types of sequencers:
 
-- **Provider**: Entity that registers to run validation (has `providerAdmin` address)
-- **Attester**: Actual validator address that signs blocks (mapped to a provider)
-- **Mapping**: One provider can have multiple attesters
+- **Delegated sequencers**: Stake through a provider (infrastructure operator)
+- **Self-staked sequencers**: Stake directly without a provider
+
+**How it works:**
+
+1. `ValidatorQueued` event = sequencer registered (from Rollup contract)
+2. `WithdrawFinalized` event = sequencer exited (from Rollup contract)
+3. `AttestersAddedToProvider` event = attester delegated to provider (from StakingRegistry)
+
+**Identification logic in `get-nodes.ts`:**
 
 ```typescript
-// Node identification in get-nodes.ts
-nodes.push({
-  operator_address: getAddress(attesterAddress),      // Attester = operator
-  account_address: getAddress(provider.providerAdmin), // Provider admin = account
-  reward_address: getAddress(provider.providerRewardsRecipient),
-  // ...
-});
+// 1. Get ALL active sequencers from ValidatorQueued - WithdrawFinalized
+const activeSequencers = await getActiveSequencers(dbChain.id);
+
+// 2. Get attester->provider mapping from AttestersAddedToProvider events
+const attesterToProvider = await getProviderAttesters(l1RpcUrls, chainName);
+
+// 3. For each active sequencer:
+for (const attesterAddress of activeSequencers.keys()) {
+  const providerId = attesterToProvider.get(attesterAddress);
+
+  if (providerId) {
+    // Has provider = DELEGATED
+    delegatedCount++;
+    node.moniker = provider.name;
+  } else {
+    // No provider = SELF-STAKED
+    selfStakedCount++;
+    node.moniker = `Sequencer ${shortAddress}`;
+  }
+}
+```
+
+**Data flow:**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    get-nodes.ts                              │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────────────────┐    ┌──────────────────────────┐  │
+│  │ getActiveSequencers  │    │  getProviderAttesters    │  │
+│  │    (from DB)         │    │       (from DB)          │  │
+│  └──────────┬───────────┘    └───────────┬──────────────┘  │
+│             │                            │                  │
+│             ▼                            ▼                  │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │         Merge: active sequencers + provider mapping   │  │
+│  │                                                        │  │
+│  │  IF attester IN providerMapping → DELEGATED           │  │
+│  │  IF attester NOT IN providerMapping → SELF-STAKED     │  │
+│  └──────────────────────────────────────────────────────┘  │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -379,6 +436,34 @@ model AztecPayloadSubmittedEvent {
   timestamp       DateTime
 
   @@unique([chainId, transactionHash, logIndex])
+}
+
+model AztecValidatorQueuedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int
+  blockNumber     String
+  transactionHash String
+  logIndex        Int
+  attester        String   // Sequencer address that registered
+  timestamp       DateTime
+
+  @@unique([chainId, transactionHash, logIndex])
+  @@index([chainId, attester])
+}
+
+model AztecWithdrawFinalizedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int
+  blockNumber     String
+  transactionHash String
+  logIndex        Int
+  attester        String   // Sequencer address that exited
+  recipient       String   // Address that received the stake
+  amount          String   // Amount withdrawn
+  timestamp       DateTime
+
+  @@unique([chainId, transactionHash, logIndex])
+  @@index([chainId, attester])
 }
 ```
 
@@ -535,7 +620,5 @@ Provider names come from `utils/providers_monikers.json` or external API. Update
 
 ## Related Documentation
 
-- `AZTEC_GOVERNANCE_USAGE.md` - Detailed governance and slashing usage guide
-- `IMPLEMENTATION_SUMMARY.md` - Implementation notes and history
 - `server/tools/chains/AGENTS.md` - Parent chains module documentation
 - `server/jobs/AGENTS.md` - Indexer jobs documentation

@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import SimpleValidatorsList from '@/app/validators/simple-validators/simple-validators-list';
 import ListFilters from '@/components/common/list-filters/list-filters';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -18,7 +19,7 @@ const SimpleValidators: FC<OwnProps> = async ({ page, perPage, sort, currentPage
     <div>
       <ListFilters perPage={perPage} selectedEcosystems={ecosystems} isEcosystems />
       <div>
-        <table className="my-4 w-full table-auto border-collapse">
+        <BaseTable className="my-4">
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Validator" sortField="moniker" defaultSelected />
@@ -30,7 +31,7 @@ const SimpleValidators: FC<OwnProps> = async ({ page, perPage, sort, currentPage
             sort={sort}
             currentPage={currentPage}
             ecosystems={ecosystems} />
-        </table>
+        </BaseTable>
       </div>
     </div>
   );

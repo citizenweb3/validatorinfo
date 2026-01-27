@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import ValidatorNetworksList
   from '@/app/validators/[id]/(validator-profile)/networks/validator-networks/validator-networks-list';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -27,7 +28,7 @@ const ValidatorNetworks: FC<OwnProps> = async ({ id, perPage, currentPage, ecosy
                    isNetworkStage
                    isSetPositions />
       <div>
-        <table className="mt-4 w-full table-auto border-collapse">
+        <BaseTable className="mt-4">
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Network" sortField="prettyName" defaultSelected />
@@ -51,7 +52,7 @@ const ValidatorNetworks: FC<OwnProps> = async ({ id, perPage, currentPage, ecosy
             nodeStatus={nodeStatus}
             currentPage={currentPage}
           />
-        </table>
+        </BaseTable>
       </div>
     </div>
   );

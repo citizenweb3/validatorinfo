@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import SignalsTableList from './signals-table-list';
@@ -15,7 +16,7 @@ interface OwnProps {
 const SignalsTable: FC<OwnProps> = async ({ chainName, payload, sort, perPage, currentPage }) => {
   return (
     <div className="mt-4">
-      <table className="w-full table-auto border-collapse">
+      <BaseTable>
         <thead>
         <tr className="bg-table_header">
           <TableHeaderItem page="ProposalPage" name="Sequencer" sortField="signaler" />
@@ -30,7 +31,7 @@ const SignalsTable: FC<OwnProps> = async ({ chainName, payload, sort, perPage, c
           perPage={perPage}
           currentPage={currentPage}
         />
-      </table>
+      </BaseTable>
     </div>
   );
 };

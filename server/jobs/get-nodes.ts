@@ -6,8 +6,9 @@ import { getChainParams } from '@/server/tools/chains/params';
 import nodeService from '@/services/node-service';
 import validatorService from '@/services/validator-service';
 import { findOrCreateAztecValidator } from '@/server/tools/chains/aztec/find-or-create-aztec-validator';
+import { syncAztecProviders } from '@/server/tools/chains/aztec/sync-aztec-providers';
 
-const { logError } = logger('get-nodes');
+const { logError, logInfo } = logger('get-nodes');
 
 const getNodes = async (chainNames: string[]) => {
   for (const chainName of chainNames) {
@@ -25,6 +26,11 @@ const getNodes = async (chainNames: string[]) => {
 
     if (dbChain.hasValidators) {
       try {
+        if (chainName === 'aztec' || chainName === 'aztec-testnet') {
+          logInfo(`Syncing all Aztec providers for ${chainName}`);
+          await syncAztecProviders(chainName as 'aztec' | 'aztec-testnet');
+        }
+
         const nodes = await chainMethods.getNodes(chainParams);
         for (const node of nodes) {
           let validatorId: number | undefined;
@@ -44,18 +50,20 @@ const getNodes = async (chainNames: string[]) => {
             validatorId = validator.id;
           } else {
             if (chainName === 'aztec' || chainName === 'aztec-testnet') {
-              try {
-                const validator = await findOrCreateAztecValidator({
-                  providerAdmin: node.description.identity,
-                  moniker: node.description.moniker,
-                  website: node.description.website,
-                  securityContact: node.description.security_contact,
-                  details: node.description.details,
-                  chainName: chainName,
-                });
-                validatorId = validator.id;
-              } catch (e: any) {
-                logError(`Failed to create Aztec validator for ${node.description.moniker}: ${e.message}`);
+              if (node.description.details !== 'Self-staked sequencer') {
+                try {
+                  const validator = await findOrCreateAztecValidator({
+                    providerAdmin: node.description.identity,
+                    moniker: node.description.moniker,
+                    website: node.description.website,
+                    securityContact: node.description.security_contact,
+                    details: node.description.details,
+                    chainName: chainName,
+                  });
+                  validatorId = validator.id;
+                } catch (e: any) {
+                  logError(`Failed to create Aztec validator for ${node.description.moniker}: ${e.message}`);
+                }
               }
             } else {
               const orWhere = [];
