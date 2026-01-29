@@ -1,5 +1,6 @@
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
+import { syncTvsToTokenomics } from '@/server/tools/chains/aztec/utils/sync-tvs-to-tokenomics';
 
 const { logInfo, logError, logWarn } = logger('update-aztec-tvs-history');
 
@@ -185,6 +186,8 @@ const updateAztecTvsHistory = async () => {
       }
 
       logInfo(`${chainName}: ✓ Saved ${dailyData.length} TVS history records`);
+
+      await syncTvsToTokenomics(dbChain.id, chainName);
     } catch (e: any) {
       logError(`Error processing ${chainName}: ${e.message}`);
     }

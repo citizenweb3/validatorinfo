@@ -61,8 +61,8 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `methods.ts` | Entry point - exports `ChainMethods` object with all chain functions |
 | `get-nodes.ts` | Fetches all sequencers (delegated + self-staked) from events DB |
 | `get-proposals.ts` | Fetches governance proposals from L1 Governance contract |
-| `get-apr.ts` | Calculates APR based on rewards and stake-days |
-| `get-tvs.ts` | Calculates Total Value Staked (bonded tokens / total supply) |
+| `get-apr.ts` | **@deprecated** - APR now synced from `ChainAprHistory` by `update-aztec-apr-history` job |
+| `get-tvs.ts` | **@deprecated** - TVS now synced from `ChainTvsHistory` by `update-aztec-tvs-history` job |
 | `get-nodes-rewards.ts` | Fetches sequencer rewards per validator from Rollup contract |
 | `get-missed-blocks.ts` | Fetches missed proposals/attestations via Aztec RPC |
 | `get-chain-uptime.ts` | Gets slot duration and current slot from Rollup |
@@ -96,6 +96,22 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 |------|-------------|
 | `find-or-create-aztec-validator.ts` | Finds or creates a global Validator record by providerAdmin address |
 
+### APR/TVS Calculation Utilities
+
+| File | Description |
+|------|-------------|
+| `utils/count-blocks-for-day.ts` | Counts blocks produced on a specific day using binary search on Aztec Indexer |
+| `utils/get-reward-config.ts` | Gets reward configuration (blockReward, sequencerBps) from Rollup contract |
+| `utils/get-total-staked-for-day.ts` | Calculates total staked for a day (queued - withdrawn - slashed) |
+| `utils/get-unbonded-tokens.ts` | Calculates total unbonded tokens from WithdrawFinalized events |
+
+### Tokenomics Sync Utilities
+
+| File | Description |
+|------|-------------|
+| `utils/sync-apr-to-tokenomics.ts` | Syncs latest APR from `ChainAprHistory` to `tokenomics` table |
+| `utils/sync-tvs-to-tokenomics.ts` | Syncs latest TVS, bondedTokens, unbondedTokens from history to `tokenomics` |
+
 ---
 
 ## Directory Structure
@@ -105,8 +121,8 @@ server/tools/chains/aztec/
 ├── methods.ts                       # ChainMethods export (entry point)
 ├── get-nodes.ts                     # Fetch providers + attesters
 ├── get-proposals.ts                 # Fetch governance proposals
-├── get-apr.ts                       # Calculate APR
-├── get-tvs.ts                       # Calculate TVS ratio
+├── get-apr.ts                       # @deprecated - APR synced from history
+├── get-tvs.ts                       # @deprecated - TVS synced from history
 ├── get-nodes-rewards.ts             # Fetch sequencer rewards
 ├── get-missed-blocks.ts             # Fetch missed proposals/attestations
 ├── get-chain-uptime.ts              # Get slot duration and current slot
@@ -168,7 +184,17 @@ server/tools/chains/aztec/
 │   ├── fetch-block-timestamps.ts    # Batch fetch block timestamps for events
 │   ├── fetch-events-with-retry.ts   # Adaptive retry logic for fetching events
 │   ├── build-address-to-validator-map.ts # Build map of addresses to validator info
-│   └── providers_monikers.json      # Static provider name mappings
+│   ├── providers_monikers.json      # Static provider name mappings
+│   │
+│   │   # APR/TVS Calculation Utilities
+│   ├── count-blocks-for-day.ts      # Count blocks for a day via Aztec Indexer
+│   ├── get-reward-config.ts         # Get reward config from Rollup contract
+│   ├── get-total-staked-for-day.ts  # Calculate historical staked amount
+│   ├── get-unbonded-tokens.ts       # Sum of WithdrawFinalized amounts
+│   │
+│   │   # Tokenomics Sync Utilities
+│   ├── sync-apr-to-tokenomics.ts    # Sync APR from ChainAprHistory to tokenomics
+│   └── sync-tvs-to-tokenomics.ts    # Sync TVS + unbonded from history to tokenomics
 │
 └── AGENTS.md                        # This documentation
 ```
@@ -469,27 +495,89 @@ model AztecWithdrawFinalizedEvent {
 
 ---
 
-## APR Calculation
+## APR and TVS Data Flow
 
-APR is calculated using a stake-weighted average approach:
+**Important:** APR and TVS are now managed by dedicated history jobs, not the generic chain jobs.
+
+### Data Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    APR / TVS Data Flow (Aztec)                           │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  L1 Events (ValidatorQueued, WithdrawFinalized, Slashed)                │
+│       │                                                                  │
+│       ▼                                                                  │
+│  ┌─────────────────────────────────┐  ┌─────────────────────────────┐  │
+│  │ update-aztec-apr-history job    │  │ update-aztec-tvs-history job │  │
+│  │ (server/jobs/)                  │  │ (server/jobs/)               │  │
+│  │                                 │  │                              │  │
+│  │ - Counts blocks per day         │  │ - Calculates daily TVS       │  │
+│  │ - Calculates daily APR          │  │ - Stores in ChainTvsHistory  │  │
+│  │ - Stores in ChainAprHistory     │  │                              │  │
+│  └───────────────┬─────────────────┘  └──────────────┬───────────────┘  │
+│                  │                                   │                   │
+│                  ▼                                   ▼                   │
+│  ┌─────────────────────────────────────────────────────────────────────┐│
+│  │                    Sync Utilities (utils/)                          ││
+│  │  syncAprToTokenomics()              syncTvsToTokenomics()           ││
+│  │  - Reads latest from history        - Reads latest from history     ││
+│  │  - Writes to tokenomics.apr         - Writes to tokenomics.tvs      ││
+│  └─────────────────────────────────────────────────────────────────────┘│
+│                                   │                                      │
+│                                   ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐│
+│  │                    tokenomics table                                 ││
+│  │  (apr, tvs, bondedTokens, totalSupply, unbondedTokens)             ││
+│  └─────────────────────────────────────────────────────────────────────┘│
+│                                   │                                      │
+│                                   ▼                                      │
+│                              UI Components                               │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### Why Not Generic Jobs?
+
+The generic `update-chain-apr` and `update-chain-tvs` jobs call `methods.ts` callbacks.
+For Aztec, these return `null` to signal "skip processing" because:
+
+1. **APR** requires block count from Aztec Indexer API (not available in generic job)
+2. **TVS** is calculated from events history (more accurate than L1 calls)
+3. **History tables** provide time-series data for charts
+
+**Important:** The `getApr`/`getTvs` callbacks return `null` (not `0`) to signal skip.
+This is because `0` is a valid APR value for some chains (e.g., govgen, neutron, stride).
+The generic jobs check for `apr === null` to skip processing.
+
+### APR Calculation (in history job)
+
+The APR history job uses utilities from `utils/`:
 
 ```typescript
-// 1. Get total rewards (sequencer + prover)
-const sequencerRewards = dbChain.tokenomics?.rewardsToPayout;
-const proverRewards = await getTotalProverRewards(chain.name);
-const totalRewards = sequencerRewards + proverRewards;
+import { countBlocksForDay } from '@/server/tools/chains/aztec/utils/count-blocks-for-day';
+import { getRewardConfig } from '@/server/tools/chains/aztec/utils/get-reward-config';
+import { getTotalStakedForDay } from '@/server/tools/chains/aztec/utils/get-total-staked-for-day';
 
-// 2. Calculate stake-days sum (cumulative stake over time)
-let stakeDaysSum = 0;
-let cumulativeStaked = 0;
-for (each day since first stake event) {
-  cumulativeStaked += eventsForDay * AZTEC_DELEGATION_AMOUNT;
-  stakeDaysSum += cumulativeStaked;
-}
+// Per day:
+const rewardConfig = await getRewardConfig(chainName);  // From Rollup contract
+const blocksCount = await countBlocksForDay(date);      // Binary search in Aztec Indexer
+const totalStaked = await getTotalStakedForDay(chainId, date);  // From events
 
-// 3. Calculate APR
-const baseApr = (totalRewards / stakeDaysSum) * DAYS_IN_YEAR;
-const apr = baseApr * (1 - avgCommission);
+const rewards = blocksCount * rewardConfig.blockReward * rewardConfig.sequencerBps / 10000;
+const apr = (rewards / totalStaked) * 365;
+```
+
+**Note:** Only sequencer rewards (not prover rewards) are included in APR calculation.
+
+### TVS Sync (includes unbondedTokens)
+
+```typescript
+import { getUnbondedTokens } from '@/server/tools/chains/aztec/utils/get-unbonded-tokens';
+
+// syncTvsToTokenomics reads from ChainTvsHistory and calculates unbondedTokens:
+const unbondedTokens = await getUnbondedTokens(chainId);  // Sum of WithdrawFinalized.amount
 ```
 
 ---
@@ -559,10 +647,12 @@ interface ProposalData {
 ## Used By
 
 - `server/jobs/aztec-sync-events.ts` - Syncs all Aztec events (staked, attesters, slashing, votes)
+- `server/jobs/update-aztec-apr-history.ts` - Calculates daily APR using `count-blocks-for-day`, `get-reward-config`, `get-total-staked-for-day`
+- `server/jobs/update-aztec-tvs-history.ts` - Calculates daily TVS using `get-unbonded-tokens`
 - `server/jobs/proposals.ts` - Updates proposal data
 - `server/jobs/validators.ts` - Updates validator/node data
-- `server/jobs/chain-aprs.ts` - Updates APR calculations
-- `server/jobs/chain-tvls.ts` - Updates TVS calculations
+- `server/jobs/chain-aprs.ts` - Skipped for Aztec (returns `null`)
+- `server/jobs/chain-tvls.ts` - Skipped for Aztec (returns `null`)
 - `server/jobs/node-rewards.ts` - Updates reward data
 - `server/jobs/missed-blocks.ts` - Updates uptime/missed blocks
 

@@ -1,3 +1,12 @@
+/**
+ * @deprecated This method is no longer used for fetching current APR.
+ * Current APR data is synced from time series table (ChainAprHistory) by:
+ * - server/jobs/update-aztec-apr-history.ts
+ *
+ * The job calculates daily APR and syncs the latest value to tokenomics table.
+ * Kept for reference and potential fallback.
+ */
+
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
 import { AddChainProps, GetAprFunction } from '@/server/tools/chains/chain-indexer';

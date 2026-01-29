@@ -19,7 +19,14 @@ const updateChainApr = async (chainNames: string[]) => {
         return null;
       }
       logInfo(`${chainName} updating`);
-      const apr = (await chainMethods.getApr(chainParams)) || 0;
+      const apr = await chainMethods.getApr(chainParams);
+
+      // Skip if APR is null (chain may use separate history-based sync)
+      if (apr === null) {
+        logInfo(`${chainName} APR: skipped (handled by history job)`);
+        continue;
+      }
+
       logInfo(`${chainName} APR: ${apr}`);
 
       await db.tokenomics.upsert({

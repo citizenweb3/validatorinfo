@@ -131,7 +131,7 @@ export interface RewardAddress {
 }
 
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
-export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
+export type GetAprFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
 export type GetProposalsFunction = (chain: AddChainProps) => Promise<ProposalsResult>;
 export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<StakingParams>;
