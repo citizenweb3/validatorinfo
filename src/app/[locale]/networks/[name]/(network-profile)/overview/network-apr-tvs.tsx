@@ -4,6 +4,7 @@ import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
+import aztecDbService from '@/services/aztec-db-service';
 
 import NetworkAprTvsChartClient from './network-apr-tvsChart';
 
@@ -23,6 +24,10 @@ interface OwnProps {
 const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
 
+  const chartData = chain?.name === 'aztec'
+    ? await aztecDbService.getChartData(chain.name)
+    : [];
+
   return (
     <div className="mt-16">
       <SubTitle text={t('Network APR and TVS')} />
@@ -31,7 +36,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
           <div className="mt-2 flex w-full flex-wrap">
             <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">APR</div>
             <div
-              style={{ color: '#2077E0' }}
+              style={{ color: '#4FB848' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
               {((chain?.tokenomics?.apr ?? 0.15) * 100).toFixed(2)}%
@@ -49,7 +54,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
           <div className="mt-2 flex w-full flex-wrap">
             <div className="w-1/2 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">TVS</div>
             <div
-              style={{ color: '#4FB848' }}
+              style={{ color: '#2077E0' }}
               className="flex w-1/2 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
             >
               {((chain?.tokenomics?.tvs ?? 0.5) * 100).toFixed(2)}
@@ -58,7 +63,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
         </div>
         <div className="w-4/5">
           {chain?.name === 'aztec' ? (
-            <NetworkTvsAztecChart chainName={chain.name} />
+            <NetworkTvsAztecChart initialData={chartData} />
           ) : (
             <NetworkAprTvsChartClient />
           )}

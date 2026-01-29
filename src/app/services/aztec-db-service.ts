@@ -22,6 +22,12 @@ export interface StakedEventItem {
   blockHeight: string;
 }
 
+export interface ChartDataPoint {
+  date: string;
+  tvs: number;
+  apr: number;
+}
+
 const formatTimeAgo = (timestamp: Date): string => {
   const now = new Date();
   const diffMs = now.getTime() - timestamp.getTime();
@@ -304,9 +310,101 @@ const getStakedEventByAttester = async (
   }
 };
 
+const getTvsHistoryFromDb = async (chainId: number): Promise<Map<string, number>> => {
+  const records = await prisma.chainTvsHistory.findMany({
+    where: { chainId },
+    orderBy: { date: 'asc' },
+  });
+
+  const tvsMap = new Map<string, number>();
+  for (const r of records) {
+    const dateKey = r.date.toISOString().split('T')[0];
+    tvsMap.set(dateKey, r.tvs);
+  }
+
+  return tvsMap;
+};
+
+const getAprHistoryFromDb = async (chainId: number): Promise<Map<string, number>> => {
+  const records = await prisma.chainAprHistory.findMany({
+    where: { chainId },
+    orderBy: { date: 'asc' },
+  });
+
+  const aprMap = new Map<string, number>();
+  for (const r of records) {
+    const dateKey = r.date.toISOString().split('T')[0];
+    // APR stored as decimal (0.05 = 5%), convert to percentage
+    aprMap.set(dateKey, r.apr * 100);
+  }
+
+  return aprMap;
+};
+
+const generateDateRange = (startDate: string, endDate: string): string[] => {
+  const dates: string[] = [];
+  const current = new Date(startDate + 'T00:00:00.000Z');
+  const end = new Date(endDate + 'T00:00:00.000Z');
+
+  while (current <= end) {
+    dates.push(current.toISOString().split('T')[0]);
+    current.setDate(current.getDate() + 1);
+  }
+
+  return dates;
+};
+
+const getChartData = async (chainName: string): Promise<ChartDataPoint[]> => {
+  const chain = await prisma.chain.findUnique({
+    where: { name: chainName },
+  });
+
+  if (!chain) {
+    console.error(`Chain not found: ${chainName}`);
+    return [];
+  }
+
+  const [tvsMap, aprMap] = await Promise.all([
+    getTvsHistoryFromDb(chain.id),
+    getAprHistoryFromDb(chain.id),
+  ]);
+
+  if (tvsMap.size === 0 && aprMap.size === 0) {
+    return [];
+  }
+
+  const allDates = new Set([...Array.from(tvsMap.keys()), ...Array.from(aprMap.keys())]);
+  const sortedDates = Array.from(allDates).sort();
+
+  if (sortedDates.length === 0) {
+    return [];
+  }
+
+  const startDate = sortedDates[0];
+  const endDate = sortedDates[sortedDates.length - 1];
+  const continuousDates = generateDateRange(startDate, endDate);
+
+  const dailyData: ChartDataPoint[] = [];
+  let lastTvs = 0;
+  let lastApr = 0;
+
+  for (const date of continuousDates) {
+    const tvs = tvsMap.has(date) ? tvsMap.get(date)! : lastTvs;
+    const apr = aprMap.has(date) ? aprMap.get(date)! : lastApr;
+
+    dailyData.push({ date, tvs, apr });
+
+    lastTvs = tvs;
+    lastApr = apr;
+  }
+
+  return dailyData;
+};
+
 const aztecDbService = {
   getTvsData,
   getStakedEventByAttester,
+  getChartData,
 };
 
 export default aztecDbService;

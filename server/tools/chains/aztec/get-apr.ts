@@ -1,6 +1,5 @@
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
-import { getTotalProverRewards } from '@/server/tools/chains/aztec/utils/get-total-prover-rewards';
 import { AddChainProps, GetAprFunction } from '@/server/tools/chains/chain-indexer';
 
 const { logInfo, logError, logWarn } = logger('aztec-get-apr');
@@ -23,10 +22,8 @@ const getApr: GetAprFunction = async (chain: AddChainProps) => {
     const sequencerRewardsRaw = dbChain.tokenomics?.rewardsToPayout || '0';
     const sequencerRewards = Number(BigInt(sequencerRewardsRaw)) / Math.pow(10, chain.coinDecimals);
 
-    const proverRewardsRaw = await getTotalProverRewards(chain.name);
-    const proverRewards = Number(proverRewardsRaw) / Math.pow(10, chain.coinDecimals);
-
-    const totalRewards = sequencerRewards + proverRewards;
+    // NOTE: Only sequencer rewards go to stakers, prover rewards are separate
+    const totalRewards = sequencerRewards;
 
     if (totalRewards <= 0) {
       logWarn(`${chain.name}: Total rewards is zero or negative`);
@@ -121,9 +118,7 @@ const getApr: GetAprFunction = async (chain: AddChainProps) => {
     const totalDays = Math.ceil((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
 
     logInfo(`${chain.name}: APR calculation:`);
-    logInfo(`  - Sequencer rewards: ${sequencerRewards.toLocaleString()} tokens`);
-    logInfo(`  - Prover rewards: ${proverRewards.toLocaleString()} tokens`);
-    logInfo(`  - Total rewards: ${totalRewards.toLocaleString()} tokens`);
+    logInfo(`  - Sequencer rewards (total for stakers): ${sequencerRewards.toLocaleString()} tokens`);
     logInfo(`  - ValidatorQueued events: ${queuedEvents.length}`);
     logInfo(`  - WithdrawFinalized events: ${withdrawEvents.length}`);
     logInfo(`  - Stake days sum: ${stakeDaysSum.toLocaleString()} token-days`);

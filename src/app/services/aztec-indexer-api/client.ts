@@ -1,5 +1,3 @@
-import 'server-only';
-
 import logger from '@/logger';
 
 import { AztecIndexerRequestOptions } from './types';

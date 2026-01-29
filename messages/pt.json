@@ -1204,7 +1204,7 @@
     "total mana used": "Mana Total Usado",
     "chain id": "ID da Rede",
     "protocol version": "Versão do Protocolo",
-    "block producer": "Produtor do Bloco",
+    "block producer": "Produtor do Bloco (Coinbase)",
     "fee recipient": "Destinatário da Taxa",
     "fee per da gas": "Taxa por DA Gas",
     "fee per l2 gas": "Taxa por L2 Gas",

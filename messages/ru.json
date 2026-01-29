@@ -1189,7 +1189,7 @@
     "total mana used": "Использовано Маны",
     "chain id": "ID Сети",
     "protocol version": "Версия Протокола",
-    "block producer": "Производитель Блока",
+    "block producer": "Производитель Блока (Coinbase)",
     "fee recipient": "Получатель Комиссии",
     "fee per da gas": "Комиссия за DA Gas",
     "fee per l2 gas": "Комиссия за L2 Gas",

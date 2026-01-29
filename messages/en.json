@@ -1188,7 +1188,7 @@
     "total mana used": "Total Mana Used",
     "chain id": "Chain ID",
     "protocol version": "Protocol Version",
-    "block producer": "Block Producer",
+    "block producer": "Block Producer (Coinbase)",
     "fee recipient": "Fee Recipient",
     "fee per da gas": "Fee Per DA Gas",
     "fee per l2 gas": "Fee Per L2 Gas",
