@@ -81,7 +81,8 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `sync-signal-events.ts` | Syncs `Signaled` events from GovernanceProposer contract |
 | `sync-payload-submitted-events.ts` | Syncs `PayloadSubmitted` events from GovernanceProposer contract |
 | `sync-validator-queued-events.ts` | Syncs `ValidatorQueued` events (sequencer registration) |
-| `sync-withdraw-finalized-events.ts` | Syncs `WithdrawFinalized` events (sequencer exit) |
+| `sync-withdraw-initiated-events.ts` | Syncs `WithdrawInitiated` events (sequencer unbonding start) |
+| `sync-withdraw-finalized-events.ts` | Syncs `WithdrawFinalized` events (sequencer exit complete) |
 | `sync-aztec-providers.ts` | Syncs Aztec providers from StakingRegistry contract |
 
 ### Shared Types
@@ -104,6 +105,7 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `utils/get-reward-config.ts` | Gets reward configuration (blockReward, sequencerBps) from Rollup contract |
 | `utils/get-total-staked-for-day.ts` | Calculates total staked for a day (queued - withdrawn - slashed) |
 | `utils/get-unbonded-tokens.ts` | Calculates total unbonded tokens from WithdrawFinalized events |
+| `utils/get-unbonding-tokens.ts` | Calculates unbonding tokens (WithdrawInitiated - WithdrawFinalized) |
 
 ### Tokenomics Sync Utilities
 
@@ -137,6 +139,7 @@ server/tools/chains/aztec/
 ├── sync-signal-events.ts            # Sync Signaled events from GovernanceProposer
 ├── sync-payload-submitted-events.ts # Sync PayloadSubmitted events
 ├── sync-validator-queued-events.ts  # Sync ValidatorQueued events (sequencer registration)
+├── sync-withdraw-initiated-events.ts # Sync WithdrawInitiated events (unbonding start)
 ├── sync-withdraw-finalized-events.ts # Sync WithdrawFinalized events (sequencer exit)
 ├── sync-aztec-providers.ts          # Sync providers from StakingRegistry
 ├── types.ts                         # Shared TypeScript interfaces (SyncResult)
@@ -191,6 +194,7 @@ server/tools/chains/aztec/
 │   ├── get-reward-config.ts         # Get reward config from Rollup contract
 │   ├── get-total-staked-for-day.ts  # Calculate historical staked amount
 │   ├── get-unbonded-tokens.ts       # Sum of WithdrawFinalized amounts
+│   ├── get-unbonding-tokens.ts      # Initiated - Finalized = pending withdrawals
 │   │
 │   │   # Tokenomics Sync Utilities
 │   ├── sync-apr-to-tokenomics.ts    # Sync APR from ChainAprHistory to tokenomics
@@ -486,6 +490,21 @@ model AztecWithdrawFinalizedEvent {
   attester        String   // Sequencer address that exited
   recipient       String   // Address that received the stake
   amount          String   // Amount withdrawn
+  timestamp       DateTime
+
+  @@unique([chainId, transactionHash, logIndex])
+  @@index([chainId, attester])
+}
+
+model AztecWithdrawInitiatedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int
+  blockNumber     String
+  transactionHash String
+  logIndex        Int
+  attester        String   // Sequencer address starting unbonding
+  recipient       String   // Address that will receive the stake
+  amount          String   // Amount being unbonded
   timestamp       DateTime
 
   @@unique([chainId, transactionHash, logIndex])

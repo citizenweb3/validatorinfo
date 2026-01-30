@@ -7,6 +7,7 @@ import { syncSlashingEvents } from '@/server/tools/chains/aztec/sync-slashing-ev
 import { syncStakedEvents } from '@/server/tools/chains/aztec/sync-staked-events';
 import { syncValidatorQueuedEvents } from '@/server/tools/chains/aztec/sync-validator-queued-events';
 import { syncWithdrawFinalizedEvents } from '@/server/tools/chains/aztec/sync-withdraw-finalized-events';
+import { syncWithdrawInitiatedEvents } from '@/server/tools/chains/aztec/sync-withdraw-initiated-events';
 import { syncVoteEvents } from '@/server/tools/chains/aztec/sync-vote-events';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
@@ -16,7 +17,7 @@ const { logInfo, logError } = logger('sync-aztec-events');
 const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 
 const syncAztecEvents = async () => {
-  logInfo('Starting Aztec events sync (attester + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-finalized)');
+  logInfo('Starting Aztec events sync (attester + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-initiated + withdraw-finalized)');
 
   for (const chainName of AZTEC_CHAINS) {
     try {
@@ -49,10 +50,11 @@ const syncAztecEvents = async () => {
         syncSignalEvents(chainName, dbChain, l1RpcUrls),
         syncPayloadSubmittedEvents(chainName, dbChain, l1RpcUrls),
         syncValidatorQueuedEvents(chainName, dbChain, l1RpcUrls),
+        syncWithdrawInitiatedEvents(chainName, dbChain, l1RpcUrls),
         syncWithdrawFinalizedEvents(chainName, dbChain, l1RpcUrls),
       ]);
 
-      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawFinalized'];
+      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawInitiated', 'WithdrawFinalized'];
 
       results.forEach((result, index) => {
         const eventType = eventTypes[index];

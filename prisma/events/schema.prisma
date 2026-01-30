@@ -159,3 +159,21 @@ model AztecWithdrawFinalizedEvent {
   @@index([chainId, attester], map: "aztec_withdraw_finalized_event_chain_attester_idx")
   @@map("aztec_withdraw_finalized_events")
 }
+
+model AztecWithdrawInitiatedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  attester        String   @map("attester") @db.VarChar(256)
+  recipient       String   @map("recipient") @db.VarChar(256)
+  amount          String   @map("amount") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_withdraw_initiated_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_withdraw_initiated_event_chain_block_idx")
+  @@index([chainId, attester], map: "aztec_withdraw_initiated_event_chain_attester_idx")
+  @@map("aztec_withdraw_initiated_events")
+}

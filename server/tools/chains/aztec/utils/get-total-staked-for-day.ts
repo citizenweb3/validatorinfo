@@ -12,11 +12,12 @@ export const getTotalStakedForDay = async (chainId: number, date: Date): Promise
   const dateStr = date.toISOString().split('T')[0];
   const endOfDay = new Date(dateStr + 'T23:59:59.999Z');
 
-  const [queuedEvents, withdrawEvents, slashedEvents] = await Promise.all([
+  // bondedTokens = Queued - Initiated - Slashed
+  const [queuedEvents, withdrawInitiatedEvents, slashedEvents] = await Promise.all([
     eventsClient.aztecValidatorQueuedEvent.findMany({
       where: { chainId, timestamp: { lte: endOfDay } },
     }),
-    eventsClient.aztecWithdrawFinalizedEvent.findMany({
+    eventsClient.aztecWithdrawInitiatedEvent.findMany({
       where: { chainId, timestamp: { lte: endOfDay } },
     }),
     eventsClient.aztecSlashedEvent.findMany({
@@ -28,7 +29,9 @@ export const getTotalStakedForDay = async (chainId: number, date: Date): Promise
 
   totalStaked += BigInt(queuedEvents.length) * AZTEC_DELEGATION_AMOUNT * WEI_MULTIPLIER;
 
-  totalStaked -= BigInt(withdrawEvents.length) * AZTEC_DELEGATION_AMOUNT * WEI_MULTIPLIER;
+  for (const event of withdrawInitiatedEvents) {
+    totalStaked -= BigInt(event.amount);
+  }
 
   for (const event of slashedEvents) {
     totalStaked -= BigInt(event.amount);
@@ -36,7 +39,7 @@ export const getTotalStakedForDay = async (chainId: number, date: Date): Promise
 
   logInfo(
     `Staked for ${date.toISOString().split('T')[0]}: ` +
-    `${queuedEvents.length} queued, ${withdrawEvents.length} withdrawn, ` +
+    `${queuedEvents.length} queued, ${withdrawInitiatedEvents.length} initiated, ` +
     `${slashedEvents.length} slashed, total=${totalStaked}`,
   );
 

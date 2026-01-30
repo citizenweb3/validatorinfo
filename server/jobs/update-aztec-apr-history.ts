@@ -20,7 +20,7 @@ const getStartDate = async (chainId: number): Promise<Date> => {
 
   if (lastRecord) {
     const nextDay = new Date(lastRecord.date);
-    nextDay.setDate(nextDay.getDate() + 1);
+    nextDay.setUTCDate(nextDay.getUTCDate() + 1);
     return nextDay;
   }
 
@@ -34,7 +34,7 @@ const getStartDate = async (chainId: number): Promise<Date> => {
   }
 
   const startDate = new Date(firstEvent.timestamp);
-  startDate.setHours(0, 0, 0, 0);
+  startDate.setUTCHours(0, 0, 0, 0);
   return startDate;
 };
 
@@ -54,8 +54,8 @@ const updateAztecAprHistory = async () => {
 
       const startDate = await getStartDate(dbChain.id);
       const endDate = new Date();
-      endDate.setDate(endDate.getDate() - 1);
-      endDate.setHours(0, 0, 0, 0);
+      endDate.setUTCDate(endDate.getUTCDate() - 1);
+      endDate.setUTCHours(0, 0, 0, 0);
 
       if (startDate > endDate) {
         logInfo(`${chainName}: APR history is up to date`);
@@ -127,7 +127,7 @@ const updateAztecAprHistory = async () => {
           logError(`${chainName}: Error processing ${dateKey}: ${dayError.message}`);
         }
 
-        currentDate.setDate(currentDate.getDate() + 1);
+        currentDate.setUTCDate(currentDate.getUTCDate() + 1);
       }
 
       logInfo(`${chainName}: ✓ APR history update completed`);
