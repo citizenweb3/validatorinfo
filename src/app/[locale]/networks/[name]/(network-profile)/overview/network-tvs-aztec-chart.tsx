@@ -19,9 +19,10 @@ import { Line } from 'react-chartjs-2';
 import { ChartDataPoint, PeriodType } from '@/services/aztec-db-service';
 import { shadowPlugin } from '@/components/chart/chart-shadow-plugin';
 import { crosshairPlugin } from '@/components/chart/chart-crosshair-plugin';
+import { chartAreaBackgroundPlugin } from '@/components/chart/chart-area-background-plugin';
 import ChartButtons from '@/app/comparevalidators/chart-buttons';
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, zoomPlugin, shadowPlugin, crosshairPlugin);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, zoomPlugin, shadowPlugin, crosshairPlugin, chartAreaBackgroundPlugin);
 
 interface OwnProps {
   initialData: ChartDataPoint[];
@@ -265,17 +266,20 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
           tickColor: '#3E3E3E',
         },
         ticks: {
-          color: '#FFFFFF',
+          color: 'rgba(255, 255, 255, 0.8)',
           font: {
-            family: 'SF Pro, -apple-system, BlinkMacSystemFont, sans-serif',
-            size: 13,
-            weight: 400,
+            family: 'Handjet, monospace',
+            size: 12,
           },
           maxRotation: 0,
           minRotation: 0,
           padding: 4,
           autoSkip: true,
-          maxTicksLimit: 12,
+          maxTicksLimit: 10,
+          callback: function (value, index) {
+            if (index === 0) return '';
+            return this.getLabelForValue(value as number);
+          },
         },
         border: {
           color: '#3E3E3E',
@@ -283,15 +287,20 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
       },
       y: {
         grid: {
-          display: false,
+          display: true,
+          drawOnChartArea: false,
+          drawTicks: true,
+          tickLength: 6,
+          tickColor: '#3E3E3E',
         },
         ticks: {
-          color: '#FFFFFF',
+          color: 'rgba(255, 255, 255, 0.8)',
           font: {
             family: 'Handjet, monospace',
             size: 12,
           },
-          callback: (value) => `${value}`,
+          stepSize: 20,
+          callback: (value) => `${value}%`,
         },
         border: {
           color: '#3E3E3E',
@@ -329,9 +338,7 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
         className="relative"
         style={{
           height: '400px',
-          backgroundColor: '#181818',
           padding: '30px 20px 20px 20px',
-          borderRadius: '4px',
         }}
       >
         {data.length === 0 ? (
@@ -344,7 +351,7 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
       </div>
 
       <div className="mt-1 flex justify-center">
-        <div className="flex items-center space-x-6 rounded px-4 py-2" style={{ backgroundColor: '#1E1E1E' }}>
+        <div className="flex items-center space-x-6 rounded px-4" style={{ backgroundColor: '#1E1E1E' }}>
           <div className="flex items-center space-x-2">
             <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#2077E0' }}></div>
             <span className="font-sfpro text-sm text-white">TVS (%)</span>
