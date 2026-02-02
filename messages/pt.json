@@ -512,6 +512,27 @@
       "Set Position": "Definir Posição"
     }
   },
+  "NetworkNodesPage": {
+    "title": "Nós da Rede",
+    "description": "Lista de todos os nós na rede {networkName}",
+    "Table": {
+      "Node Address": {
+        "name": "Endereço do Nó"
+      },
+      "Node Moniker": {
+        "name": "Nome do Nó"
+      },
+      "Stake": {
+        "name": "Stake"
+      },
+      "Uptime": {
+        "name": "Tempo de Atividade"
+      },
+      "Missed Blocks": {
+        "name": "Blocos Perdidos"
+      }
+    }
+  },
   "NodesPage": {
     "title": "Nodes A-Z Directory: Explorar Nós com Dados de Piquetagem",
     "description": "Bem-vindo ao Diretório de Nodes A-Z, uma lista abrangente de nodes de diversos validadores de blockchain, com dados básicos de desempenho, como tamanho do stake e ecossistema. Este diretório é sua solução completa para compreender a infraestrutura por trás das redes, permitindo que você pesquise um node específico ou navegue pela lista para saber mais. Frequentemente, os nodes dos validadores eram misturados com os perfis dos validadores. Isso não acontece mais. Isso o torna valioso tanto para os técnicos quanto para os stakers, e pode ser utilizado para uma compreensão mais ampla do espaço web3.",

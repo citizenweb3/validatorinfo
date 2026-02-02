@@ -512,6 +512,27 @@
       "Set Position": "Set Position"
     }
   },
+  "NetworkNodesPage": {
+    "title": "Network Nodes",
+    "description": "List of all nodes in the {networkName} network",
+    "Table": {
+      "Node Address": {
+        "name": "Node Address"
+      },
+      "Node Moniker": {
+        "name": "Node Moniker"
+      },
+      "Stake": {
+        "name": "Stake"
+      },
+      "Uptime": {
+        "name": "Uptime"
+      },
+      "Missed Blocks": {
+        "name": "Missed Blocks"
+      }
+    }
+  },
   "NodesPage": {
     "title": "Nodes A-Z Directory: Explore Nodes with Staking Data",
     "description": "Welcome to the Nodes A-Z Directory, a comprehensive list of nodes from various blockchain validators, featuring basic performance data, such as stake size and ecosystem. This directory is your one-stop shop for understanding the infrastructure behind the networks, allowing you to search for a specific node or browse the list to learn more. It is often, that validator nodes are mixed with validator profiles. No more. Making it valuable for both techies and stakers, and can be used for a broader understanding of the web3 space.",
