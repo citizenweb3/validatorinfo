@@ -126,6 +126,7 @@ const runServer = async () => {
     { name: 'update-aztec-governance-data', schedule: timers.every30mins },
     { name: 'update-aztec-tvs-history', schedule: timers.every6hours },
     { name: 'update-aztec-apr-history', schedule: timers.every6hours },
+    { name: 'update-aztec-validators-history', schedule: timers.every6hours },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

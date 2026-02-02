@@ -26,6 +26,7 @@ export interface ChartDataPoint {
   date: string;
   tvs: number;
   apr: number;
+  validatorsCount: number;
 }
 
 const formatTimeAgo = (timestamp: Date): string => {
@@ -341,6 +342,21 @@ const getAprHistoryFromDb = async (chainId: number): Promise<Map<string, number>
   return aprMap;
 };
 
+const getValidatorsHistory = async (chainId: number): Promise<Map<string, number>> => {
+  const records = await prisma.chainValidatorsHistory.findMany({
+    where: { chainId },
+    orderBy: { date: 'asc' },
+  });
+
+  const validatorsMap = new Map<string, number>();
+  for (const r of records) {
+    const dateKey = r.date.toISOString().split('T')[0];
+    validatorsMap.set(dateKey, r.validatorsCount);
+  }
+
+  return validatorsMap;
+};
+
 const generateDateRange = (startDate: string, endDate: string): string[] => {
   const dates: string[] = [];
   const current = new Date(startDate + 'T00:00:00.000Z');
@@ -364,16 +380,21 @@ const getChartData = async (chainName: string): Promise<ChartDataPoint[]> => {
     return [];
   }
 
-  const [tvsMap, aprMap] = await Promise.all([
+  const [tvsMap, aprMap, validatorsMap] = await Promise.all([
     getTvsHistoryFromDb(chain.id),
     getAprHistoryFromDb(chain.id),
+    getValidatorsHistory(chain.id),
   ]);
 
-  if (tvsMap.size === 0 && aprMap.size === 0) {
+  if (tvsMap.size === 0 && aprMap.size === 0 && validatorsMap.size === 0) {
     return [];
   }
 
-  const allDates = new Set([...Array.from(tvsMap.keys()), ...Array.from(aprMap.keys())]);
+  const allDates = new Set([
+    ...Array.from(tvsMap.keys()),
+    ...Array.from(aprMap.keys()),
+    ...Array.from(validatorsMap.keys()),
+  ]);
   const sortedDates = Array.from(allDates).sort();
 
   if (sortedDates.length === 0) {
@@ -387,24 +408,46 @@ const getChartData = async (chainName: string): Promise<ChartDataPoint[]> => {
   const dailyData: ChartDataPoint[] = [];
   let lastTvs = 0;
   let lastApr = 0;
+  let lastValidatorsCount = 0;
 
   for (const date of continuousDates) {
     const tvs = tvsMap.has(date) ? tvsMap.get(date)! : lastTvs;
     const apr = aprMap.has(date) ? aprMap.get(date)! : lastApr;
+    const validatorsCount = validatorsMap.has(date) ? validatorsMap.get(date)! : lastValidatorsCount;
 
-    dailyData.push({ date, tvs, apr });
+    dailyData.push({ date, tvs, apr, validatorsCount });
 
     lastTvs = tvs;
     lastApr = apr;
+    lastValidatorsCount = validatorsCount;
   }
 
   return dailyData;
+};
+
+const getCurrentValidatorsCount = async (chainName: string): Promise<number> => {
+  const chain = await prisma.chain.findUnique({
+    where: { name: chainName },
+  });
+
+  if (!chain) {
+    console.error(`Chain not found: ${chainName}`);
+    return 0;
+  }
+
+  const latestRecord = await prisma.chainValidatorsHistory.findFirst({
+    where: { chainId: chain.id },
+    orderBy: { date: 'desc' },
+  });
+
+  return latestRecord?.validatorsCount ?? 0;
 };
 
 const aztecDbService = {
   getTvsData,
   getStakedEventByAttester,
   getChartData,
+  getCurrentValidatorsCount,
 };
 
 export default aztecDbService;

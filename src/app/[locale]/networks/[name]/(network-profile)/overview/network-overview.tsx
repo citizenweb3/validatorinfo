@@ -16,7 +16,13 @@ interface OwnProps {
 const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
   const price = chain ? await chainService.getTokenPriceByChainId(chain?.id) : undefined;
-  const activeValidators = chain ? await validatorService.getActiveValidatorsByChainId(chain?.id) : undefined;
+
+  const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
+  const activeValidators = chain
+    ? isAztec
+      ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
+      : await validatorService.getActiveValidatorsByChainId(chain.id)
+    : undefined;
 
   const percentOfCommunityPool =
     chain?.tokenomics?.communityPool && chain?.tokenomics?.totalSupply

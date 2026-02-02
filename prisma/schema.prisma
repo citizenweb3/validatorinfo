@@ -123,6 +123,7 @@ model Chain {
   githubRepositories GithubRepository[] @relation("chain_github_repositories")
   tvsHistory         ChainTvsHistory[]  @relation("chain_tvs_history")
   aprHistory         ChainAprHistory[]  @relation("chain_apr_history")
+  validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
@@ -398,6 +399,20 @@ model ChainAprHistory {
   @@unique([chainId, date])
   @@index([chainId])
   @@map("chain_apr_history")
+}
+
+model ChainValidatorsHistory {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  date            DateTime @db.Date
+  validatorsCount Int      @map("validators_count")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_validators_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId])
+  @@map("chain_validators_history")
 }
 
 model GithubActivity {

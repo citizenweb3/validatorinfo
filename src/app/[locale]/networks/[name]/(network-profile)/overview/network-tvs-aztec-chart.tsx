@@ -68,6 +68,7 @@ const aggregateByPeriod = (dailyData: ChartDataPoint[], period: PeriodType): Cha
         date: key,
         tvs: point.tvs,
         apr: point.apr,
+        validatorsCount: point.validatorsCount,
       });
     }
   });
@@ -83,6 +84,15 @@ const calculateYMax = (maxValue: number): number => {
   return 100;
 };
 
+const calculateValidatorsYMax = (maxValue: number): number => {
+  if (maxValue <= 10) return 15;
+  if (maxValue <= 25) return 30;
+  if (maxValue <= 50) return 60;
+  if (maxValue <= 75) return 90;
+  if (maxValue <= 100) return 120;
+  return Math.ceil((maxValue * 1.2) / 10) * 10;
+};
+
 const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
   const [period, setPeriod] = useState<PeriodType>('day');
   const [chartType, setChartType] = useState<string>('Daily');
@@ -90,17 +100,20 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
 
   const data = useMemo(() => aggregateByPeriod(initialData, period), [initialData, period]);
 
-  const getAdaptiveYMax = useCallback((startIndex: number, endIndex: number): number => {
-    if (data.length === 0) return 100;
+  const getAdaptiveYMax = useCallback((startIndex: number, endIndex: number): { yMax: number; y1Max: number } => {
+    if (data.length === 0) return { yMax: 100, y1Max: 10 };
 
     const visibleData = data.slice(startIndex, endIndex + 1);
-    if (visibleData.length === 0) return 100;
+    if (visibleData.length === 0) return { yMax: 100, y1Max: 10 };
 
     const maxTvs = Math.max(...visibleData.map((point) => point.tvs));
     const maxApr = Math.max(...visibleData.map((point) => point.apr));
-    const maxValue = Math.max(maxTvs, maxApr);
+    const maxValidators = Math.max(...visibleData.map((point) => point.validatorsCount));
 
-    return calculateYMax(maxValue);
+    return {
+      yMax: calculateYMax(Math.max(maxTvs, maxApr)),
+      y1Max: calculateValidatorsYMax(maxValidators),
+    };
   }, [data]);
 
   const updateYAxis = useCallback((chart: ChartJS<'line'>) => {
@@ -110,12 +123,21 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
     const minIndex = Math.max(0, Math.floor(xScale.min));
     const maxIndex = Math.min(data.length - 1, Math.ceil(xScale.max));
 
-    const newYMax = getAdaptiveYMax(minIndex, maxIndex);
+    const { yMax, y1Max } = getAdaptiveYMax(minIndex, maxIndex);
     const yScale = chart.scales.y;
+    const y1Scale = chart.scales.y1;
 
-    if (yScale && yScale.max !== newYMax) {
-      yScale.options.max = newYMax;
-      chart.update('none'); // Update without animation for smooth experience
+    let needsUpdate = false;
+    if (yScale && yScale.max !== yMax) {
+      yScale.options.max = yMax;
+      needsUpdate = true;
+    }
+    if (y1Scale && y1Scale.max !== y1Max) {
+      y1Scale.options.max = y1Max;
+      needsUpdate = true;
+    }
+    if (needsUpdate) {
+      chart.update('none');
     }
   }, [data.length, getAdaptiveYMax]);
 
@@ -135,11 +157,15 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
     }
   };
 
-  const initialYMax = useMemo(() => {
-    if (data.length === 0) return 100;
+  const { yMax: initialYMax, y1Max: initialY1Max } = useMemo(() => {
+    if (data.length === 0) return { yMax: 100, y1Max: 10 };
     const maxTvs = Math.max(...data.map((point) => point.tvs));
     const maxApr = Math.max(...data.map((point) => point.apr));
-    return calculateYMax(Math.max(maxTvs, maxApr));
+    const maxValidators = Math.max(...data.map((point) => point.validatorsCount));
+    return {
+      yMax: calculateYMax(Math.max(maxTvs, maxApr)),
+      y1Max: calculateValidatorsYMax(maxValidators),
+    };
   }, [data]);
 
   const chartData = {
@@ -148,12 +174,13 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
       {
         label: 'TVS',
         data: data.map((point) => point.tvs),
-        borderColor: '#2077E0',
+        borderColor: '#E5C46B',
         borderWidth: 2,
         pointRadius: 0,
         pointHoverRadius: 0,
         tension: 0.4,
         fill: false,
+        yAxisID: 'y',
       },
       {
         label: 'APR',
@@ -164,6 +191,18 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
         pointHoverRadius: 0,
         tension: 0.4,
         fill: false,
+        yAxisID: 'y',
+      },
+      {
+        label: 'Validators',
+        data: data.map((point) => point.validatorsCount),
+        borderColor: '#2077E0',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0.4,
+        fill: false,
+        yAxisID: 'y1',
       },
     ],
   };
@@ -217,6 +256,9 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
           label: (context) => {
             const value = context.parsed.y;
             const label = context.dataset.label;
+            if (label === 'Validators') {
+              return `  ${label}    ${value}`;
+            }
             return `  ${label}    ${value.toFixed(2)}%`;
           },
           labelColor: (context) => {
@@ -305,8 +347,29 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
         border: {
           color: '#3E3E3E',
         },
+        position: 'left',
         beginAtZero: true,
         max: initialYMax,
+      },
+      y1: {
+        grid: {
+          display: false,
+          drawOnChartArea: false,
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.8)',
+          font: {
+            family: 'Handjet, monospace',
+            size: 12,
+          },
+          callback: (value) => `${value}`,
+        },
+        border: {
+          color: '#3E3E3E',
+        },
+        position: 'right',
+        beginAtZero: true,
+        max: initialY1Max,
       },
     },
   };
@@ -353,12 +416,16 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
       <div className="mt-1 flex justify-center">
         <div className="flex items-center space-x-6 rounded px-4" style={{ backgroundColor: '#1E1E1E' }}>
           <div className="flex items-center space-x-2">
-            <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#2077E0' }}></div>
+            <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#E5C46B' }}></div>
             <span className="font-sfpro text-sm text-white">TVS (%)</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#4FB848' }}></div>
             <span className="font-sfpro text-sm text-white">APR (%)</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#2077E0' }}></div>
+            <span className="font-sfpro text-sm text-white">Validators</span>
           </div>
         </div>
       </div>

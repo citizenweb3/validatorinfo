@@ -9,6 +9,8 @@ import { syncValidatorQueuedEvents } from '@/server/tools/chains/aztec/sync-vali
 import { syncWithdrawFinalizedEvents } from '@/server/tools/chains/aztec/sync-withdraw-finalized-events';
 import { syncWithdrawInitiatedEvents } from '@/server/tools/chains/aztec/sync-withdraw-initiated-events';
 import { syncVoteEvents } from '@/server/tools/chains/aztec/sync-vote-events';
+import { syncProviderAdminUpdatedEvents } from '@/server/tools/chains/aztec/sync-provider-admin-updated-events';
+import { syncProviderRegisteredEvents } from '@/server/tools/chains/aztec/sync-provider-registered-events';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
 
@@ -17,7 +19,7 @@ const { logInfo, logError } = logger('sync-aztec-events');
 const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 
 const syncAztecEvents = async () => {
-  logInfo('Starting Aztec events sync (attester + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-initiated + withdraw-finalized)');
+  logInfo('Starting Aztec events sync (attester + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-initiated + withdraw-finalized + provider-registered + provider-admin-updated)');
 
   for (const chainName of AZTEC_CHAINS) {
     try {
@@ -52,9 +54,11 @@ const syncAztecEvents = async () => {
         syncValidatorQueuedEvents(chainName, dbChain, l1RpcUrls),
         syncWithdrawInitiatedEvents(chainName, dbChain, l1RpcUrls),
         syncWithdrawFinalizedEvents(chainName, dbChain, l1RpcUrls),
+        syncProviderRegisteredEvents(chainName, dbChain, l1RpcUrls),
+        syncProviderAdminUpdatedEvents(chainName, dbChain, l1RpcUrls),
       ]);
 
-      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawInitiated', 'WithdrawFinalized'];
+      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawInitiated', 'WithdrawFinalized', 'ProviderRegistered', 'ProviderAdminUpdated'];
 
       results.forEach((result, index) => {
         const eventType = eventTypes[index];

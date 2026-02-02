@@ -16,6 +16,7 @@ import updateAztecGovernanceData from '@/server/jobs/update-aztec-governance-dat
 import updateAztecL1Contracts from '@/server/jobs/update-aztec-l1-contracts';
 import updateAztecTvsHistory from '@/server/jobs/update-aztec-tvs-history';
 import updateAztecAprHistory from '@/server/jobs/update-aztec-apr-history';
+import { updateAztecValidatorsHistory } from '@/server/jobs/update-aztec-validators-history';
 import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
@@ -180,6 +181,10 @@ async function runTask() {
         break;
       case 'update-aztec-apr-history':
         await updateAztecAprHistory();
+        break;
+      case 'update-aztec-validators-history':
+        await updateAztecValidatorsHistory('aztec');
+        await updateAztecValidatorsHistory('aztec-testnet');
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);
