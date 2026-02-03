@@ -147,9 +147,20 @@ async function main() {
             name: ecosystem.name,
             prettyName: ecosystem.prettyName,
             logoUrl: url,
+            tags: ecosystem.tags ?? [],
           },
         });
         logInfo(`Ecosystem ${ecosystem.prettyName} created`);
+      } else {
+        await db.ecosystem.update({
+          where: { name: ecosystem.name },
+          data: {
+            prettyName: ecosystem.prettyName,
+            logoUrl: url || existingEcosystem.logoUrl,
+            tags: ecosystem.tags ?? [],
+          },
+        });
+        logInfo(`Ecosystem ${ecosystem.prettyName} updated`);
       }
     }
     for (const chainName of chainNames) {

@@ -33,7 +33,7 @@ const TabList: FC<OwnProps> = ({ page, tabs }) => {
       {tabsContext && (
         <Button
           onClick={tabsContext.toggleTabsVisibility}
-          className="group/toggle absolute -right-8 top-5 hidden h-10 w-7 !min-w-6 -translate-y-1/2 md:block"
+          className="group/toggle absolute -right-8 top-[calc(50%-2px)] hidden h-10 w-7 !min-w-6 !-translate-y-1/2 md:block"
           contentClassName="!p-0"
         >
           <div className="relative h-8 w-5">
