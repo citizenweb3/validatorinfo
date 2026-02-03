@@ -1269,6 +1269,7 @@
     "show dropdown": "Mostrar votos do validador",
     "hide dropdown": "Ocultar votos do validador",
     "show validator votes": "Mostrar Votos dos Validadores",
+    "hide validator votes": "Ocultar Votos dos Validadores",
     "show validator signals": "Mostrar Sinais dos Validadores",
     "hide validator signals": "Ocultar Sinais dos Validadores",
     "all": "Todos",

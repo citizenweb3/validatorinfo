@@ -91,7 +91,7 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
       {votesList.length > 0 ? (
         <tbody>
         {votesList.map((item) => (
-          <ValidatorsVotesItem key={item.validator.id} item={item} />
+          <ValidatorsVotesItem key={item.validator.id} item={item} chainName={chainName} />
         ))}
         <tr>
           <td colSpan={4} className="pt-4">

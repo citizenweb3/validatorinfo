@@ -76,8 +76,6 @@ const runServer = async () => {
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
-    { name: 'update-nodes-votes', schedule: timers.everyDay },
-
   ];
 
   tasks.forEach((task) => {
@@ -146,14 +144,14 @@ const runServer = async () => {
     job.start();
   });
 
-  // Initial run for specialTasks after 5 minutes for wait validators updated
+  // Initial run for specialTasks after 10 minutes for wait validators updated
   setTimeout(
     () => {
       specialTasks.forEach(({ name }) => {
         spawnTask(name, chains).catch((e) => logError(`Initial run error for task ${name}:`, e));
       });
     },
-    5 * 60 * 1000,
+    10 * 60 * 1000,
   );
 };
 

@@ -39,7 +39,7 @@ const ProposalMetrics: FC<OwnProps> = async ({ proposal, chain }) => {
 
       if (fieldKey === null) return null;
 
-      const tally = JSON.parse(tallyResult ?? '{}');
+      const tally = typeof tallyResult === 'string' ? JSON.parse(tallyResult) : (tallyResult ?? {});
 
       if (tally[fieldKey] === undefined) return null;
 

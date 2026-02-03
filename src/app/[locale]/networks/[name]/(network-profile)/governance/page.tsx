@@ -60,7 +60,7 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
     const committeeOrder = (q.order as SortDirection) ?? 'asc';
 
     // Handle separate pagination for proposals table
-    const proposalsCurrentPage = parseInt((q.p as string) || '1');
+    const proposalsCurrentPage = parseInt((q.proposals_p as string) || '1');
     const proposalsPerPage = 5; // Default for proposals table
     const proposalsSortBy = 'votingEndTime';
     const proposalsOrder = 'desc';
@@ -133,7 +133,7 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
   }
 
   // For non-AZTEC networks, use the existing pagination approach
-  const currentPage = parseInt((q.p as string) || '1');
+  const currentPage = parseInt((q.proposals_p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const sortBy = (q.sortBy as 'votingEndTime') ?? 'votingEndTime';
   const order = (q.order as SortDirection) ?? 'desc';

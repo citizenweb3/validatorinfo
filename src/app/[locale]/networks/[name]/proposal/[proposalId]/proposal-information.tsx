@@ -2,12 +2,10 @@ import { Proposal, ProposalStatus } from '@prisma/client';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import Tooltip from '@/components/common/tooltip';
-import RoundedButton from '@/components/common/rounded-button';
 import Link from 'next/link';
 
 interface OwnProps {
   proposal: Proposal | null;
-  chainName: string;
 }
 
 const getStatusLabel = (status: ProposalStatus | undefined) => {
@@ -23,7 +21,7 @@ const getStatusLabel = (status: ProposalStatus | undefined) => {
   }
 };
 
-const ProposalInformation: FC<OwnProps> = async ({ proposal, chainName }) => {
+const ProposalInformation: FC<OwnProps> = async ({ proposal }) => {
   const t = await getTranslations('ProposalPage');
 
   const isActive = proposal?.status === ProposalStatus.PROPOSAL_STATUS_VOTING_PERIOD ||
@@ -48,9 +46,8 @@ const ProposalInformation: FC<OwnProps> = async ({ proposal, chainName }) => {
               </div>
             ) : (
               <div className="flex flex-row font-handjet text-lg text-center mb-1">
-                <div className="rounded-full bg-secondary shadow-button px-6 mr-6">{t('past')}</div>
                 {statusInfo && (
-                  <div className={`rounded-full ${statusInfo.className} text-white shadow-button px-6`}>
+                  <div className={`rounded-full ${statusInfo.className} shadow-button px-6`}>
                     {t(statusInfo.label)}
                   </div>
                 )}
@@ -74,12 +71,6 @@ const ProposalInformation: FC<OwnProps> = async ({ proposal, chainName }) => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex items-center">
-          <RoundedButton href={`/networks/${chainName}/governance`}
-                         className="font-handjet text-lg mb-4 active:mb-3">
-            {t('show all proposals')}
-          </RoundedButton>
         </div>
       </div>
     </div>

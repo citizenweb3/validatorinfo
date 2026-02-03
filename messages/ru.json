@@ -1278,6 +1278,7 @@
     "show dropdown": "Показать Голоса Валидаторов",
     "hide dropdown": "Скрыть Голоса Валидаторов",
     "show validator votes": "Показать Голоса Валидаторов",
+    "hide validator votes": "Скрыть Голоса Валидаторов",
     "show validator signals": "Показать Сигналы Валидаторов",
     "hide validator signals": "Скрыть Сигналы Валидаторов",
     "all": "Все",

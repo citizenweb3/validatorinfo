@@ -13,6 +13,7 @@ interface OwnProps {
   isActive?: boolean;
   tooltip?: string;
   target?: HTMLAttributeAnchorTarget;
+  scroll?: boolean;
 }
 
 const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
@@ -23,6 +24,7 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
   tooltip,
   href,
   target,
+  scroll = true,
 }) => {
   let content = (
     <div
@@ -40,6 +42,7 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
     <Link
       href={href}
       target={target}
+      scroll={scroll}
       className={`${className} group/button block min-w-9 rounded-bl-full rounded-tr-full border-r border-t border-none border-bgSt bg-gradient-to-r from-primary to-secondary fill-black stroke-black p-px text-highlight shadow-button hover:bg-bgHover hover:fill-highlight hover:text-white active:-mb-1 active:mt-1 active:shadow-none`}
     >
       {content}

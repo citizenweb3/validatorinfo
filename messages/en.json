@@ -1277,6 +1277,7 @@
     "show dropdown": "Show Validator Votes",
     "hide dropdown": "Hide Validator Votes",
     "show validator votes": "Show Validator Votes",
+    "hide validator votes": "Hide Validator Votes",
     "show validator signals": "Show Validator Signals",
     "hide validator signals": "Hide Validator Signals",
     "all": "All",

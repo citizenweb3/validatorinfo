@@ -13,8 +13,9 @@ interface OwnProps {
 }
 
 const ValidatorVotesItem: FC<OwnProps> = ({ item, validatorId }) => {
-  const proposalLink = `/networks/${item.chain.name}/proposal/${item.proposalId}`;
-  const chainLink = `/networks/${item.chain.name}/overview`;
+  const chainName = item.chain?.name ?? '';
+  const proposalLink = chainName ? `/networks/${chainName}/proposal/${item.proposalId}` : '#';
+  const chainLink = chainName ? `/networks/${chainName}/overview` : '#';
 
   return (
     <BaseTableRow>
@@ -31,7 +32,7 @@ const ValidatorVotesItem: FC<OwnProps> = ({ item, validatorId }) => {
         </Link>
       </BaseTableCell>
       <BaseTableCell className="w-1/4 px-2 py-2 text-base hover:text-highlight">
-        <Link href={`/networks/${item.chain.id}/address/${item.operatorAddress}/passport`} className="flex justify-center">
+        <Link href={chainName ? `/networks/${chainName}/governance` : '#'} className="flex justify-center">
           <div className="text-center">{item.vote}</div>
         </Link>
       </BaseTableCell>

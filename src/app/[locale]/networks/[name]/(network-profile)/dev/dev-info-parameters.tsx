@@ -25,6 +25,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           </div>
           <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
             {chain.params.bech32Prefix}
+            <CopyButton value={chain.params.bech32Prefix} size="md" />
           </div>
         </div>
       )}
@@ -36,6 +37,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           </div>
           <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
             {chain.params.daemonName}
+            <CopyButton value={chain.params.daemonName} size="md" />
           </div>
         </div>
       )}
@@ -47,6 +49,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           </div>
           <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base hover:text-highlight">
             {chain.params.nodeHome}
+            <CopyButton value={chain.params.nodeHome} size="md" />
           </div>
         </div>
       )}
@@ -58,6 +61,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           </div>
           <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 font-handjet text-lg hover:text-highlight">
             {chain.params.coinType}
+            <CopyButton value={String(chain.params.coinType)} size="md" />
           </div>
         </div>
       )}
@@ -69,6 +73,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           </div>
           <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 font-handjet text-lg hover:text-highlight">
             {JSON.parse(chain.params.keyAlgos)[0]}
+            <CopyButton value={JSON.parse(chain.params.keyAlgos)[0]} size="md" />
           </div>
         </div>
       )}
@@ -80,6 +85,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
           </div>
           <div className="flex w-3/4 cursor-pointer items-center gap-2 border-b border-bgSt py-6 pl-6 text-base underline underline-offset-4 hover:text-highlight">
             {JSON.parse(chain.params.genesis)}
+            <CopyButton value={JSON.parse(chain.params.genesis)} size="md" />
           </div>
         </div>
       )}
