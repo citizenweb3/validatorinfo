@@ -1,6 +1,8 @@
 import db from '@/db';
 import logger from '@/logger';
 import { syncAttesterEvents } from '@/server/tools/chains/aztec/sync-attester-events';
+import { syncDepositEvents } from '@/server/tools/chains/aztec/sync-deposit-events';
+import { syncLocalEjectionThresholdEvents } from '@/server/tools/chains/aztec/sync-local-ejection-threshold-events';
 import { syncPayloadSubmittedEvents } from '@/server/tools/chains/aztec/sync-payload-submitted-events';
 import { syncSignalEvents } from '@/server/tools/chains/aztec/sync-signal-events';
 import { syncSlashingEvents } from '@/server/tools/chains/aztec/sync-slashing-events';
@@ -19,7 +21,7 @@ const { logInfo, logError } = logger('sync-aztec-events');
 const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 
 const syncAztecEvents = async () => {
-  logInfo('Starting Aztec events sync (attester + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-initiated + withdraw-finalized + provider-registered + provider-admin-updated)');
+  logInfo('Starting Aztec events sync (attester + deposit + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-initiated + withdraw-finalized + provider-registered + provider-admin-updated + local-ejection-threshold)');
 
   for (const chainName of AZTEC_CHAINS) {
     try {
@@ -46,6 +48,7 @@ const syncAztecEvents = async () => {
 
       const results = await Promise.allSettled([
         syncAttesterEvents(chainName, dbChain, l1RpcUrls),
+        syncDepositEvents(chainName, dbChain, l1RpcUrls),
         syncStakedEvents(chainName, dbChain, l1RpcUrls),
         syncSlashingEvents(chainName, dbChain, l1RpcUrls),
         syncVoteEvents(chainName, dbChain, l1RpcUrls),
@@ -56,9 +59,10 @@ const syncAztecEvents = async () => {
         syncWithdrawFinalizedEvents(chainName, dbChain, l1RpcUrls),
         syncProviderRegisteredEvents(chainName, dbChain, l1RpcUrls),
         syncProviderAdminUpdatedEvents(chainName, dbChain, l1RpcUrls),
+        syncLocalEjectionThresholdEvents(chainName, dbChain, l1RpcUrls),
       ]);
 
-      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawInitiated', 'WithdrawFinalized', 'ProviderRegistered', 'ProviderAdminUpdated'];
+      const eventTypes = ['Attester', 'Deposit', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawInitiated', 'WithdrawFinalized', 'ProviderRegistered', 'ProviderAdminUpdated', 'LocalEjectionThresholdUpdated'];
 
       results.forEach((result, index) => {
         const eventType = eventTypes[index];

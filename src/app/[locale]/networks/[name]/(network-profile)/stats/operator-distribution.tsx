@@ -1,9 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
 import aztecContractService from '@/services/aztec-contracts-service';
+import aztecDbService, { NodeDistribution } from '@/services/aztec-db-service';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import nodeService from '@/services/node-service';
 
@@ -13,32 +15,68 @@ interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
 }
 
+const fontColors = {
+  active: '#4FB848',
+  jailed: '#AD1818',
+  inactive: '#E5C46B',
+  inQueue: '#E5C46B',
+  zombie: '#F3B101',
+  exiting: '#AD1818',
+};
+
+interface DistributionRowProps {
+  label: string;
+  value: number | null;
+  color: string;
+  href?: string;
+}
+
+const DistributionRow: FC<DistributionRowProps> = ({ label, value, color, href }) => (
+  <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
+    <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">{label}</div>
+    <div style={{ color }} className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg">
+      {href ? (
+        <Link href={href} className="hover:underline">
+          {value ?? 'N/A'}
+        </Link>
+      ) : (
+        value ?? 'N/A'
+      )}
+    </div>
+  </div>
+);
+
 const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkStatistics');
-  const fontColors = {
-    active: '#4FB848',
-    jailed: '#AD1818',
-    inactive: '#E5C46B',
-  };
 
   const nodes = chain?.id ? await nodeService.getNodesByChainId(chain.id) : null;
+  const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
 
-  let activeNodesLength: number | null;
-  let inactiveNodesLength: number | null;
+  let activeNodesLength: number | null = null;
+  let inactiveNodesLength: number | null = null;
+  let nodeDistribution: NodeDistribution | null = null;
 
-  if (chain?.name === 'aztec' || chain?.name === 'aztec-testnet') {
+  if (isAztec && chain?.name) {
     try {
-      activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+      nodeDistribution = await aztecDbService.getNodeDistribution(chain.name);
+      activeNodesLength = nodeDistribution?.active ?? null;
     } catch (error) {
-      console.error('Failed to fetch active attester count:', error);
-      activeNodesLength = null;
+      console.error('Failed to fetch node distribution:', error);
+      // Fallback to old method
+      try {
+        activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+      } catch (e) {
+        console.error('Failed to fetch active attester count:', e);
+      }
     }
-    const allStakedNodes = nodes?.filter((node) => node.delegatorShares && node.delegatorShares !== '0');
-    inactiveNodesLength = allStakedNodes && activeNodesLength ? allStakedNodes?.length - activeNodesLength : null;
+    if (!nodeDistribution) {
+      const allStakedNodes = nodes?.filter((node) => node.delegatorShares && node.delegatorShares !== '0');
+      inactiveNodesLength = allStakedNodes && activeNodesLength ? allStakedNodes.length - activeNodesLength : null;
+    }
   } else {
     const activeNodes = nodes?.filter((node) => node.jailed === false);
     activeNodesLength = activeNodes ? activeNodes.length : null;
-    inactiveNodesLength = nodes && activeNodesLength ? nodes?.length - activeNodesLength : null;
+    inactiveNodesLength = nodes && activeNodesLength ? nodes.length - activeNodesLength : null;
   }
 
   const data = generateData();
@@ -47,34 +85,46 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
     <div className="mt-12">
       <SubTitle text={t('Operator Distributions')} />
       <div className="mt-12 flex flex-row">
-        <div className="w-1/5">
-          <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
-            <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">{t('active')}</div>
-            <div
-              style={{ color: fontColors['active'] }}
-              className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg"
-            >
-              {activeNodesLength ?? 'N/A'}
-            </div>
-          </div>
-          <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
-            <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">
-              {chain?.name === 'aztec' || chain?.name === 'aztec-testnet' ? t('active in queue') : t('jailed')}
-            </div>
-            <div
-              style={{
-                color:
-                  chain?.name === 'aztec' || chain?.name === 'aztec-testnet'
-                    ? fontColors['inactive']
-                    : fontColors['jailed'],
-              }}
-              className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg"
-            >
-              {inactiveNodesLength ?? 'N/A'}
-            </div>
-          </div>
+        <div className={isAztec && nodeDistribution ? 'w-1/4' : 'w-1/5'}>
+          {isAztec && nodeDistribution ? (
+            <>
+              <DistributionRow
+                label={t('active')}
+                value={nodeDistribution.active}
+                color={fontColors.active}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+              <DistributionRow
+                label={t('in queue')}
+                value={nodeDistribution.inQueue}
+                color={fontColors.inQueue}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+              <DistributionRow
+                label={t('zombie')}
+                value={nodeDistribution.zombie}
+                color={fontColors.zombie}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+              <DistributionRow
+                label={t('exiting')}
+                value={nodeDistribution.exiting}
+                color={fontColors.exiting}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+            </>
+          ) : (
+            <>
+              <DistributionRow label={t('active')} value={activeNodesLength} color={fontColors.active} />
+              <DistributionRow
+                label={isAztec ? t('active in queue') : t('jailed')}
+                value={inactiveNodesLength}
+                color={isAztec ? fontColors.inactive : fontColors.jailed}
+              />
+            </>
+          )}
         </div>
-        <div className="w-4/5">
+        <div className={isAztec && nodeDistribution ? 'w-3/4' : 'w-4/5'}>
           <Image
             src={'/img/charts/operator-distribution-coef.svg'}
             width={960}

@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
@@ -17,7 +18,12 @@ interface OwnProps {
 const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkTokenomics');
 
-  const totalValidators = chain ? await validatorService.getValidatorsByChainId(chain?.id) : undefined;
+  const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
+  const totalValidators = chain
+    ? isAztec
+      ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
+      : await validatorService.getValidatorsByChainId(chain.id)
+    : null;
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain.id) : null;
   const fdv = chain?.name === 'ethereum-sepolia' || chain?.name === 'warden-testnet' ? 0 : chain?.tokenomics?.fdv;
 
@@ -56,7 +62,9 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
             <GiniCoefficientSVG value={69} />
             <div className="ml-4 flex flex-col justify-center">
               <div className="font-sfpro text-base">{t('number of validators')}</div>
-              <div className="font-handjet text-lg text-highlight">{totalValidators?.length ?? 'N/A'}</div>
+              <Link href={`/networks/${chain?.name}/validators`} className="font-handjet text-lg text-highlight hover:underline">
+                {totalValidators?.length ?? 'N/A'}
+              </Link>
             </div>
           </div>
         </div>

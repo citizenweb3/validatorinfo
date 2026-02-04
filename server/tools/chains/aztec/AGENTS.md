@@ -83,6 +83,8 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | `sync-validator-queued-events.ts` | Syncs `ValidatorQueued` events (sequencer registration) |
 | `sync-withdraw-initiated-events.ts` | Syncs `WithdrawInitiated` events (sequencer unbonding start) |
 | `sync-withdraw-finalized-events.ts` | Syncs `WithdrawFinalized` events (sequencer exit complete) |
+| `sync-deposit-events.ts` | Syncs `Deposit` events (initial stake and top-ups with BLS keys) |
+| `sync-local-ejection-threshold-events.ts` | Syncs `LocalEjectionThresholdUpdated` events (ejection threshold changes) |
 | `sync-aztec-providers.ts` | Syncs Aztec providers from StakingRegistry contract |
 
 ### Shared Types
@@ -96,6 +98,14 @@ Aztec is an Ethereum L2 (Layer 2) that uses L1 contracts for consensus, staking,
 | File | Description |
 |------|-------------|
 | `find-or-create-aztec-validator.ts` | Finds or creates a global Validator record by providerAdmin address |
+
+### Node Distribution Utilities
+
+| File | Description |
+|------|-------------|
+| `utils/get-exiting-validators.ts` | Gets validators in EXITING status (WithdrawInitiated but not finalized) |
+| `utils/get-zombie-validators.ts` | Gets validators in ZOMBIE status (effectiveBalance < ejectionThreshold) |
+| `utils/get-entry-queue-length.ts` | Gets validators in IN_QUEUE status (Deposit but no ValidatorQueued) |
 
 ### APR/TVS Calculation Utilities
 
@@ -141,6 +151,8 @@ server/tools/chains/aztec/
 ├── sync-validator-queued-events.ts  # Sync ValidatorQueued events (sequencer registration)
 ├── sync-withdraw-initiated-events.ts # Sync WithdrawInitiated events (unbonding start)
 ├── sync-withdraw-finalized-events.ts # Sync WithdrawFinalized events (sequencer exit)
+├── sync-deposit-events.ts           # Sync Deposit events (stake with BLS keys)
+├── sync-local-ejection-threshold-events.ts # Sync ejection threshold changes
 ├── sync-aztec-providers.ts          # Sync providers from StakingRegistry
 ├── types.ts                         # Shared TypeScript interfaces (SyncResult)
 │
@@ -177,6 +189,9 @@ server/tools/chains/aztec/
 │   ├── get-chunck-size-rpc.ts       # Determine chunk size for RPC providers
 │   ├── get-l1-rpc-urls.ts           # Get L1 RPC URLs for Aztec chain
 │   ├── get-exited-sequencers.ts     # Get sequencers that have exited (from WithdrawFinalized events)
+│   ├── get-exiting-validators.ts    # Get validators in EXITING status
+│   ├── get-zombie-validators.ts     # Get validators in ZOMBIE status (below ejection threshold)
+│   ├── get-entry-queue-length.ts    # Get validators in entry queue (IN_QUEUE status)
 │   ├── get-governance-config.ts     # Get governance configuration from contract
 │   ├── get-governance-power.ts      # Get governance voting power (total, per-user, current and historical)
 │   ├── get-payload-uri-util.ts      # Utility for fetching payload URI content
@@ -510,6 +525,42 @@ model AztecWithdrawInitiatedEvent {
   @@unique([chainId, transactionHash, logIndex])
   @@index([chainId, attester])
 }
+
+model AztecDepositEvent {
+  id                 Int      @id @default(autoincrement())
+  chainId            Int
+  blockNumber        String
+  transactionHash    String
+  logIndex           Int
+  attester           String   // Validator address
+  withdrawer         String   // Address that can withdraw
+  publicKeyInG1X     String   // BLS public key G1 point X
+  publicKeyInG1Y     String   // BLS public key G1 point Y
+  publicKeyInG2X0    String   // BLS public key G2 point X0
+  publicKeyInG2X1    String   // BLS public key G2 point X1
+  publicKeyInG2Y0    String   // BLS public key G2 point Y0
+  publicKeyInG2Y1    String   // BLS public key G2 point Y1
+  proofOfPossessionX String   // Proof of possession X
+  proofOfPossessionY String   // Proof of possession Y
+  amount             String   // Deposit amount
+  timestamp          DateTime
+
+  @@unique([chainId, transactionHash, logIndex])
+  @@index([chainId, attester])
+}
+
+model AztecLocalEjectionThresholdUpdatedEvent {
+  id                        Int      @id @default(autoincrement())
+  chainId                   Int
+  blockNumber               String
+  transactionHash           String
+  logIndex                  Int
+  oldLocalEjectionThreshold String   // Previous threshold
+  newLocalEjectionThreshold String   // New threshold
+  timestamp                 DateTime
+
+  @@unique([chainId, transactionHash, logIndex])
+}
 ```
 
 ---
@@ -597,6 +648,83 @@ import { getUnbondedTokens } from '@/server/tools/chains/aztec/utils/get-unbonde
 
 // syncTvsToTokenomics reads from ChainTvsHistory and calculates unbondedTokens:
 const unbondedTokens = await getUnbondedTokens(chainId);  // Sum of WithdrawFinalized.amount
+```
+
+---
+
+## Node Distribution
+
+Aztec validators have four possible statuses:
+
+| Status | Description | Identification |
+|--------|-------------|----------------|
+| **ACTIVE** | Validator in active set with sufficient balance | ValidatorQueued + effectiveBalance >= threshold |
+| **IN_QUEUE** | Deposited but not yet activated | Deposit event exists, no ValidatorQueued |
+| **ZOMBIE** | Balance below ejection threshold | effectiveBalance < ejectionThreshold (196k AZTEC) |
+| **EXITING** | Withdrawal initiated but not finalized | WithdrawInitiated but no WithdrawFinalized |
+
+### Effective Balance Calculation
+
+```typescript
+effectiveBalance = SUM(Deposit.amount WHERE block >= lastQueuedBlock)
+                 - SUM(Slashed.amount WHERE block > lastQueuedBlock)
+```
+
+### Node Distribution Job
+
+The `update-aztec-node-distribution` job calculates and stores daily distribution snapshots:
+
+```typescript
+// server/jobs/update-aztec-node-distribution.ts
+import { getActiveSequencers } from '@/server/tools/chains/aztec/utils/get-active-sequencers';
+import { getEntryQueueValidators } from '@/server/tools/chains/aztec/utils/get-entry-queue-length';
+import { getExitingValidators } from '@/server/tools/chains/aztec/utils/get-exiting-validators';
+import { getZombieValidators } from '@/server/tools/chains/aztec/utils/get-zombie-validators';
+
+// Calculate distribution
+const activeSequencers = await getActiveSequencers(chainId);
+const inQueue = await getEntryQueueValidators(chainId);
+const exiting = await getExitingValidators(chainId);
+const zombie = await getZombieValidators(chainId);
+
+// Active = total sequencers minus exiting minus zombie
+const active = activeSequencers.size - exiting.size - zombie.size;
+```
+
+### Data Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    Node Distribution Data Flow                           │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  L1 Events (Deposit, ValidatorQueued, Slashed, Withdraw*, Threshold)    │
+│       │                                                                  │
+│       ▼                                                                  │
+│  ┌─────────────────────────────────────────────────────────────────────┐│
+│  │               update-aztec-node-distribution job                    ││
+│  │  - getActiveSequencers()     →  Active validators                   ││
+│  │  - getEntryQueueValidators() →  IN_QUEUE count                      ││
+│  │  - getZombieValidators()     →  ZOMBIE count                        ││
+│  │  - getExitingValidators()    →  EXITING count                       ││
+│  └───────────────────────────────────────────────────────────────────────│
+│                                   │                                      │
+│                                   ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐│
+│  │            AztecNodeDistributionHistory table                       ││
+│  │  (date, total, active, inQueue, zombie, exiting)                    ││
+│  └─────────────────────────────────────────────────────────────────────┘│
+│                                   │                                      │
+│                                   ▼                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐│
+│  │              aztecContractService.getNodeDistribution()             ││
+│  │  (cached via Redis for frontend display)                            ││
+│  └─────────────────────────────────────────────────────────────────────┘│
+│                                   │                                      │
+│                                   ▼                                      │
+│                   OperatorDistribution UI Component                      │
+│                                                                          │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---

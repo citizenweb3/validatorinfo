@@ -29,6 +29,14 @@ export interface ChartDataPoint {
   validatorsCount: number;
 }
 
+export interface NodeDistribution {
+  total: number;
+  active: number;
+  inQueue: number;
+  zombie: number;
+  exiting: number;
+}
+
 const formatTimeAgo = (timestamp: Date): string => {
   const now = new Date();
   const diffMs = now.getTime() - timestamp.getTime();
@@ -443,11 +451,41 @@ const getCurrentValidatorsCount = async (chainName: string): Promise<number> => 
   return latestRecord?.validatorsCount ?? 0;
 };
 
+const getNodeDistribution = async (chainName: string): Promise<NodeDistribution | null> => {
+  const chain = await prisma.chain.findUnique({
+    where: { name: chainName },
+  });
+
+  if (!chain) {
+    console.error(`Chain not found for node distribution: ${chainName}`);
+    return null;
+  }
+
+  const latest = await prisma.aztecNodeDistributionHistory.findFirst({
+    where: { chainId: chain.id },
+    orderBy: { date: 'desc' },
+  });
+
+  if (!latest) {
+    console.error(`No node distribution history found for: ${chainName}`);
+    return null;
+  }
+
+  return {
+    total: latest.total,
+    active: latest.active,
+    inQueue: latest.inQueue,
+    zombie: latest.zombie,
+    exiting: latest.exiting,
+  };
+};
+
 const aztecDbService = {
   getTvsData,
   getStakedEventByAttester,
   getChartData,
   getCurrentValidatorsCount,
+  getNodeDistribution,
 };
 
 export default aztecDbService;

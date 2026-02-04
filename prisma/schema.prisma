@@ -124,6 +124,7 @@ model Chain {
   tvsHistory         ChainTvsHistory[]  @relation("chain_tvs_history")
   aprHistory         ChainAprHistory[]  @relation("chain_apr_history")
   validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
+  aztecNodeDistributionHistory AztecNodeDistributionHistory[] @relation("chain_aztec_node_distribution_history")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
@@ -414,6 +415,24 @@ model ChainValidatorsHistory {
   @@unique([chainId, date])
   @@index([chainId])
   @@map("chain_validators_history")
+}
+
+model AztecNodeDistributionHistory {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  date      DateTime @map("date") @db.Date
+  total     Int      @map("total")
+  active    Int      @map("active")
+  inQueue   Int      @map("in_queue")
+  zombie    Int      @map("zombie")
+  exiting   Int      @map("exiting")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_aztec_node_distribution_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId, date])
+  @@map("aztec_node_distribution_history")
 }
 
 model GithubActivity {
