@@ -269,6 +269,7 @@
     "Network APR and TVS": "APR и TVS Сети",
     "Network Overview": "Обзор Сети",
     "active validators": "Активные Валидаторы",
+    "Validator Count": "Кол-во валидаторов",
     "unbonding time": "Время Анбондинга",
     "community tax": "Общественные Налоги",
     "proposal creation cost": "Стоимость Создания Пропозала",
@@ -294,6 +295,9 @@
     "active": "Активные",
     "inactive": "Неактивные",
     "active in queue": "Активные в очереди",
+    "in queue": "В очереди",
+    "zombie": "Зомби",
+    "exiting": "Выходящие",
     "jailed": "Джэйл",
     "Social": "Социальные",
     "price of active user": "Цена активного пользователя",
@@ -509,6 +513,27 @@
       "Click 3 times to reset all filters": "Кликните 3 раза, чтобы сбросить все фильтры",
       "Network Stage": "Этап сети",
       "Set Position": "Установить позицию"
+    }
+  },
+  "NetworkNodesPage": {
+    "title": "Ноды сети",
+    "description": "Список всех нод сети {networkName}",
+    "Table": {
+      "Node Address": {
+        "name": "Адрес ноды"
+      },
+      "Node Moniker": {
+        "name": "Имя ноды"
+      },
+      "Stake": {
+        "name": "Стейк"
+      },
+      "Uptime": {
+        "name": "Аптайм"
+      },
+      "Missed Blocks": {
+        "name": "Пропущенные блоки"
+      }
     }
   },
   "NodesPage": {
@@ -1189,7 +1214,7 @@
     "total mana used": "Использовано Маны",
     "chain id": "ID Сети",
     "protocol version": "Версия Протокола",
-    "block producer": "Производитель Блока",
+    "block producer": "Производитель Блока (Coinbase)",
     "fee recipient": "Получатель Комиссии",
     "fee per da gas": "Комиссия за DA Gas",
     "fee per l2 gas": "Комиссия за L2 Gas",
@@ -1255,6 +1280,10 @@
     "deposited gse tokens": "Депозит GSE Токенов",
     "show dropdown": "Показать Голоса Валидаторов",
     "hide dropdown": "Скрыть Голоса Валидаторов",
+    "show validator votes": "Показать Голоса Валидаторов",
+    "hide validator votes": "Скрыть Голоса Валидаторов",
+    "show validator signals": "Показать Сигналы Валидаторов",
+    "hide validator signals": "Скрыть Сигналы Валидаторов",
     "all": "Все",
     "yes": "Да",
     "no": "Нет",
@@ -1280,9 +1309,13 @@
         "name": "Время",
         "hint": ""
       },
+      "Provider": {
+        "name": "Провайдер",
+        "hint": "Инфраструктурный провайдер"
+      },
       "Sequencer": {
         "name": "Секвенсер",
-        "hint": "Валидатор, подавший сигнал"
+        "hint": "Адрес секвенсера, подавшего сигнал"
       },
       "Round": {
         "name": "Раунд",

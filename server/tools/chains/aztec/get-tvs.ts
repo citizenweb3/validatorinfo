@@ -1,3 +1,12 @@
+/**
+ * @deprecated This method is no longer used for fetching current TVS.
+ * Current TVS data is synced from time series table (ChainTvsHistory) by:
+ * - server/jobs/update-aztec-tvs-history.ts
+ *
+ * The job calculates daily TVS and syncs the latest value to tokenomics table.
+ * Kept for reference and potential fallback.
+ */
+
 import logger from '@/logger';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getBondedTokens } from '@/server/tools/chains/aztec/utils/get-bonded-tokens';

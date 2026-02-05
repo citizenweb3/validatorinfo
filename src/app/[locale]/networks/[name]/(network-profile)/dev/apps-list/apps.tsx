@@ -24,7 +24,7 @@ const NetworkApps: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) =
         <thead>
         <tr className="bg-table_header">
           <TableHeaderItem page={page} name="Name" sortField="name" defaultSelected />
-          <TableHeaderItem page={page} name="Links" sortField="links" />
+          <TableHeaderItem page={page} name="Links" />
           <TableHeaderItem page={page} name="Users" sortField="users" />
           <TableHeaderItem page={page} name="WAU" sortField="wau" />
           <TableHeaderItem page={page} name="Capital" sortField="capital" />

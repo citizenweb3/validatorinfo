@@ -6,17 +6,21 @@ import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 import EcosystemsListFilters from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters';
 import EcosystemsList from '@/app/ecosystems/ecosystems-list/ecosystems-list';
+import ecosystemService from '@/services/ecosystem-service';
 
 interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
+  selectedTags?: string[];
 }
 
-const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
+const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage, selectedTags = [] }) => {
+  const availableTags = await ecosystemService.getAllTags();
+
   return (
     <div className="mt-2">
-      <EcosystemsListFilters perPage={perPage} />
+      <EcosystemsListFilters perPage={perPage} availableTags={availableTags} />
       <div>
         <BaseTable className="my-4 table-fixed">
           <thead>
@@ -31,7 +35,7 @@ const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) =>
             <TableHeaderItem page={page} name="Show TX" />
           </tr>
           </thead>
-          <EcosystemsList perPage={perPage} sort={sort} currentPage={currentPage} />
+          <EcosystemsList perPage={perPage} sort={sort} currentPage={currentPage} selectedTags={selectedTags} />
         </BaseTable>
       </div>
     </div>

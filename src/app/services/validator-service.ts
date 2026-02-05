@@ -379,6 +379,25 @@ const getValidatorsByChainId = async (chainId: number): Promise<ValidatorWithNod
   });
 };
 
+const getAztecValidators = async (chainName: 'aztec' | 'aztec-testnet', chainId: number): Promise<ValidatorWithNodes[]> => {
+  logDebug(`Get Aztec validators by providerAddresses for chain: ${chainName}`);
+
+  const allValidators = await db.validator.findMany({
+    include: {
+      nodes: {
+        where: { chainId },
+        include: { chain: true },
+      },
+    },
+    orderBy: { moniker: 'asc' },
+  });
+
+  return allValidators.filter((v) => {
+    const addresses = v.providerAddresses as Record<string, string> | null;
+    return addresses && addresses[chainName];
+  }) as ValidatorWithNodes[];
+};
+
 const validatorService = {
   getByIdentity,
   getById,
@@ -391,7 +410,8 @@ const validatorService = {
   getRandom,
   getByIdentityWithDetails,
   getActiveValidatorsByChainId,
-  getValidatorsByChainId
+  getValidatorsByChainId,
+  getAztecValidators,
 };
 
 export default validatorService;

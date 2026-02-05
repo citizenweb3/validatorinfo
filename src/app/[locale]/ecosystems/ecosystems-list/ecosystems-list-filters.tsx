@@ -7,20 +7,15 @@ import Button from '@/components/common/button';
 import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
 import PlusButton from '@/components/common/plus-button';
 import EcosystemListFilterTvl from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters-tvl';
-import EcosystemListFiltersTags from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters-tags';
 import { checkHasActiveFilters } from '@/components/common/list-filters/list-filters';
+import { cn } from '@/utils/cn';
 
 interface OwnProps {
   perPage: number;
+  availableTags: string[];
 }
 
-const tags = [
-  { value: 'tag1', title: 'Tag1' },
-  { value: 'tag2', title: 'Tag2' },
-  { value: 'tag3', title: 'Tag3' },
-];
-
-const ListFilters: FC<OwnProps> = ({ perPage }) => {
+const ListFilters: FC<OwnProps> = ({ perPage, availableTags }) => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParamsHook = useSearchParams();
@@ -74,11 +69,23 @@ const ListFilters: FC<OwnProps> = ({ perPage }) => {
         <>
           <EcosystemListFilterTvl />
           <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
-          <EcosystemListFiltersTags
-            filterValues={tags}
-            selectedValue={selectedTagsFromUrl}
-            onChanged={onTagsChanged}
-          />
+          <div className="m-4 flex max-w-[700px] flex-row flex-wrap items-center justify-start gap-1">
+            {availableTags.map((tag) => {
+              const isSelected = selectedTagsFromUrl.includes(tag);
+              return (
+                <div
+                  key={tag}
+                  onClick={() => onTagsChanged(tag)}
+                  className={cn(
+                    'cursor-pointer whitespace-nowrap rounded-full bg-primary shadow-button px-2 py-0.5 text-sm hover:text-highlight active:scale-95 transition-transform',
+                    isSelected && 'text-highlight bg-bgHover'
+                  )}
+                >
+                  {tag}
+                </div>
+              );
+            })}
+          </div>
         </>
       )}
       <div className="flex flex-row items-center">

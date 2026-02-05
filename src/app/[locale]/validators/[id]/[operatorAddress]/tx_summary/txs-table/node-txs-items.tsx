@@ -34,7 +34,9 @@ const NodeTxsItem: FC<OwnProps> = ({ item, chainName, isCopy = true }) => {
     }
   };
   
-  const link = `/networks/${chainName}/tx/${item.txHash}`;
+  const isAztec = chainName === 'aztec';
+  const link = isAztec ? `/networks/${chainName}/tx/${item.txHash}` : `/networks/${chainName}/tx`;
+  const blockLink = isAztec ? `/networks/${chainName}/blocks/${item.blockHeight}` : `/networks/${chainName}/blocks`;
 
   return (
     <BaseTableRow>
@@ -59,8 +61,8 @@ const NodeTxsItem: FC<OwnProps> = ({ item, chainName, isCopy = true }) => {
         </div>
       </BaseTableCell>
       <BaseTableCell className="w-1/4 px-2 py-2 hover:text-highlight">
-        <Link href={link} className="flex justify-center">
-          <div className="font-handjet text-lg text-center">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
+        <Link href={blockLink} className="flex justify-center">
+          <div className="font-handjet text-lg text-center underline underline-offset-2">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
         </Link>
       </BaseTableCell>
     </BaseTableRow>

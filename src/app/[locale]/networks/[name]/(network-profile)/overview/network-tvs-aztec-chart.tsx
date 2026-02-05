@@ -13,78 +13,19 @@ import {
   Tooltip,
 } from 'chart.js';
 import zoomPlugin from 'chartjs-plugin-zoom';
-import { FC, useEffect, useState } from 'react';
+import { FC, useCallback, useMemo, useRef, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 
-import { getAztecTvsData } from '@/actions/aztec-tvs';
-import { PeriodType, TvsDataPoint } from '@/services/aztec-db-service';
+import { ChartDataPoint, PeriodType } from '@/services/aztec-db-service';
 import { shadowPlugin } from '@/components/chart/chart-shadow-plugin';
 import { crosshairPlugin } from '@/components/chart/chart-crosshair-plugin';
+import { chartAreaBackgroundPlugin } from '@/components/chart/chart-area-background-plugin';
 import ChartButtons from '@/app/comparevalidators/chart-buttons';
 
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, zoomPlugin, shadowPlugin, crosshairPlugin, chartAreaBackgroundPlugin);
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, zoomPlugin, shadowPlugin, crosshairPlugin);
-
-// Set to true to use mock data for testing
-const USE_MOCK_DATA = false;
-
-// Generate mock TVS data for testing
-const generateMockData = (period: PeriodType): TvsDataPoint[] => {
-  const now = new Date();
-  const data: TvsDataPoint[] = [];
-
-  let numPoints: number;
-  let dateStep: number; // in days
-
-  switch (period) {
-    case 'day':
-      numPoints = 30;
-      dateStep = 1;
-      break;
-    case 'week':
-      numPoints = 12;
-      dateStep = 7;
-      break;
-    case 'month':
-      numPoints = 12;
-      dateStep = 30;
-      break;
-    case 'year':
-      numPoints = 5;
-      dateStep = 365;
-      break;
-    default:
-      numPoints = 30;
-      dateStep = 1;
-  }
-
-  // Start TVS around 25% and gradually increase with some volatility
-  let tvs = 25 + Math.random() * 5;
-  const totalSupply = 1000000000; // 1 billion AZTEC
-
-  for (let i = numPoints - 1; i >= 0; i--) {
-    const date = new Date(now);
-    date.setDate(date.getDate() - i * dateStep);
-
-    // Add some realistic volatility (-2% to +3% change)
-    tvs += (Math.random() - 0.4) * 3;
-    tvs = Math.max(15, Math.min(60, tvs)); // Keep between 15% and 60%
-
-    const totalStaked = Math.round((tvs / 100) * totalSupply);
-
-    data.push({
-      date: date.toISOString(),
-      tvs: parseFloat(tvs.toFixed(2)),
-      totalStaked,
-      totalSupply,
-    });
-  }
-
-  return data;
-};
-
-interface OnwProps {
-  chainName: string;
+interface OwnProps {
+  initialData: ChartDataPoint[];
 }
 
 const periodMapping: Record<string, PeriodType> = {
@@ -94,59 +35,138 @@ const periodMapping: Record<string, PeriodType> = {
   Yearly: 'year',
 };
 
-const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
+const getWeekStart = (date: Date): string => {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  d.setDate(diff);
+  return d.toISOString().split('T')[0];
+};
+
+const aggregateByPeriod = (dailyData: ChartDataPoint[], period: PeriodType): ChartDataPoint[] => {
+  if (period === 'day') {
+    return dailyData;
+  }
+
+  const aggregated = new Map<string, ChartDataPoint>();
+
+  dailyData.forEach((point) => {
+    const date = new Date(point.date);
+    let key: string;
+
+    if (period === 'week') {
+      key = getWeekStart(date);
+    } else if (period === 'month') {
+      key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+    } else {
+      key = String(date.getFullYear());
+    }
+
+    const existing = aggregated.get(key);
+    if (!existing || new Date(point.date) > new Date(existing.date)) {
+      aggregated.set(key, {
+        date: key,
+        tvs: point.tvs,
+        apr: point.apr,
+        validatorsCount: point.validatorsCount,
+      });
+    }
+  });
+
+  return Array.from(aggregated.values()).sort((a, b) => a.date.localeCompare(b.date));
+};
+
+const calculateYMax = (maxValue: number): number => {
+  if (maxValue <= 5) return 10;
+  if (maxValue <= 10) return 20;
+  if (maxValue <= 20) return 40;
+  if (maxValue <= 50) return 70;
+  return 100;
+};
+
+const calculateValidatorsYMax = (maxValue: number): number => {
+  if (maxValue <= 10) return 15;
+  if (maxValue <= 25) return 30;
+  if (maxValue <= 50) return 60;
+  if (maxValue <= 75) return 90;
+  if (maxValue <= 100) return 120;
+  return Math.ceil((maxValue * 1.2) / 10) * 10;
+};
+
+const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
   const [period, setPeriod] = useState<PeriodType>('day');
   const [chartType, setChartType] = useState<string>('Daily');
-  const [data, setData] = useState<TvsDataPoint[]>([]);
-  const [loading, setLoading] = useState(true);
+  const chartRef = useRef<ChartJS<'line'>>(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        if (USE_MOCK_DATA) {
-          const mockData = generateMockData(period);
-          setData(mockData);
-        } else {
-          const tvsData = await getAztecTvsData(chainName, period);
-          setData(tvsData);
-        }
-      } catch (error) {
-        console.error('Error fetching TVS data:', error);
-      } finally {
-        setLoading(false);
-      }
+  const data = useMemo(() => aggregateByPeriod(initialData, period), [initialData, period]);
+
+  const getAdaptiveYMax = useCallback((startIndex: number, endIndex: number): { yMax: number; y1Max: number } => {
+    if (data.length === 0) return { yMax: 100, y1Max: 10 };
+
+    const visibleData = data.slice(startIndex, endIndex + 1);
+    if (visibleData.length === 0) return { yMax: 100, y1Max: 10 };
+
+    const maxTvs = Math.max(...visibleData.map((point) => point.tvs));
+    const maxApr = Math.max(...visibleData.map((point) => point.apr));
+    const maxValidators = Math.max(...visibleData.map((point) => point.validatorsCount));
+
+    return {
+      yMax: calculateYMax(Math.max(maxTvs, maxApr)),
+      y1Max: calculateValidatorsYMax(maxValidators),
     };
+  }, [data]);
 
-    fetchData();
-  }, [chainName, period]);
+  const updateYAxis = useCallback((chart: ChartJS<'line'>) => {
+    const xScale = chart.scales.x;
+    if (!xScale) return;
+
+    const minIndex = Math.max(0, Math.floor(xScale.min));
+    const maxIndex = Math.min(data.length - 1, Math.ceil(xScale.max));
+
+    const { yMax, y1Max } = getAdaptiveYMax(minIndex, maxIndex);
+    const yScale = chart.scales.y;
+    const y1Scale = chart.scales.y1;
+
+    let needsUpdate = false;
+    if (yScale && yScale.max !== yMax) {
+      yScale.options.max = yMax;
+      needsUpdate = true;
+    }
+    if (y1Scale && y1Scale.max !== y1Max) {
+      y1Scale.options.max = y1Max;
+      needsUpdate = true;
+    }
+    if (needsUpdate) {
+      chart.update('none');
+    }
+  }, [data.length, getAdaptiveYMax]);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate();
+    const monthShort = date.toLocaleDateString('en-US', { month: 'short' });
 
     if (period === 'day') {
-      return `${day}.${month}`;
+      return `${day} ${monthShort}`;
     } else if (period === 'week') {
-      return `${day}.${month}`;
+      return `${day} ${monthShort}`;
     } else if (period === 'month') {
-      return `${month}.${date.getFullYear()}`;
+      return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
     } else {
       return date.getFullYear().toString();
     }
   };
 
-  const getAdaptiveYMax = (): number => {
-    if (data.length === 0) return 100;
-    const maxValue = Math.max(...data.map((point) => point.tvs));
-    if (maxValue <= 10) return 20;
-    if (maxValue <= 20) return 40;
-    if (maxValue <= 50) return 70;
-    return 100;
-  };
-
-  const yAxisMax = getAdaptiveYMax();
+  const { yMax: initialYMax, y1Max: initialY1Max } = useMemo(() => {
+    if (data.length === 0) return { yMax: 100, y1Max: 10 };
+    const maxTvs = Math.max(...data.map((point) => point.tvs));
+    const maxApr = Math.max(...data.map((point) => point.apr));
+    const maxValidators = Math.max(...data.map((point) => point.validatorsCount));
+    return {
+      yMax: calculateYMax(Math.max(maxTvs, maxApr)),
+      y1Max: calculateValidatorsYMax(maxValidators),
+    };
+  }, [data]);
 
   const chartData = {
     labels: data.map((point) => formatDate(point.date)),
@@ -154,12 +174,35 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
       {
         label: 'TVS',
         data: data.map((point) => point.tvs),
-        borderColor: '#4FB848',
-        borderWidth: 1.5,
+        borderColor: '#E5C46B',
+        borderWidth: 2,
         pointRadius: 0,
         pointHoverRadius: 0,
         tension: 0.4,
         fill: false,
+        yAxisID: 'y',
+      },
+      {
+        label: 'APR',
+        data: data.map((point) => point.apr),
+        borderColor: '#4FB848',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0.4,
+        fill: false,
+        yAxisID: 'y',
+      },
+      {
+        label: 'Validators',
+        data: data.map((point) => point.validatorsCount),
+        borderColor: '#2077E0',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0.4,
+        fill: false,
+        yAxisID: 'y1',
       },
     ],
   };
@@ -178,7 +221,7 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
       tooltip: {
         enabled: true,
         backgroundColor: '#1E1E1E',
-        titleColor: '#E5C46B',
+        titleColor: '#2077E0',
         bodyColor: '#FFFFFF',
         borderColor: '#444444',
         borderWidth: 1,
@@ -212,7 +255,11 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
           },
           label: (context) => {
             const value = context.parsed.y;
-            return `  TVS    ${value.toFixed(2)}%`;
+            const label = context.dataset.label;
+            if (label === 'Validators') {
+              return `  ${label}    ${value}`;
+            }
+            return `  ${label}    ${value.toFixed(2)}%`;
           },
           labelColor: (context) => {
             return {
@@ -227,6 +274,12 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
         pan: {
           enabled: true,
           mode: 'x',
+          onPan: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
+          onPanComplete: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
         },
         zoom: {
           wheel: {
@@ -236,6 +289,12 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
             enabled: true,
           },
           mode: 'x',
+          onZoom: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
+          onZoomComplete: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
         },
       },
     },
@@ -249,15 +308,20 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
           tickColor: '#3E3E3E',
         },
         ticks: {
-          color: '#FFFFFF',
+          color: 'rgba(255, 255, 255, 0.8)',
           font: {
-            family: 'SF Pro, -apple-system, BlinkMacSystemFont, sans-serif',
-            size: 13,
-            weight: 400,
+            family: 'Handjet, monospace',
+            size: 12,
           },
           maxRotation: 0,
           minRotation: 0,
           padding: 4,
+          autoSkip: true,
+          maxTicksLimit: 10,
+          callback: function (value, index) {
+            if (index === 0) return '';
+            return this.getLabelForValue(value as number);
+          },
         },
         border: {
           color: '#3E3E3E',
@@ -265,10 +329,35 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
       },
       y: {
         grid: {
-          display: false,
+          display: true,
+          drawOnChartArea: false,
+          drawTicks: true,
+          tickLength: 6,
+          tickColor: '#3E3E3E',
         },
         ticks: {
-          color: '#FFFFFF',
+          color: 'rgba(255, 255, 255, 0.8)',
+          font: {
+            family: 'Handjet, monospace',
+            size: 12,
+          },
+          stepSize: 20,
+          callback: (value) => `${value}%`,
+        },
+        border: {
+          color: '#3E3E3E',
+        },
+        position: 'left',
+        beginAtZero: true,
+        max: initialYMax,
+      },
+      y1: {
+        grid: {
+          display: false,
+          drawOnChartArea: false,
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.8)',
           font: {
             family: 'Handjet, monospace',
             size: 12,
@@ -278,8 +367,9 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
         border: {
           color: '#3E3E3E',
         },
+        position: 'right',
         beginAtZero: true,
-        max: yAxisMax,
+        max: initialY1Max,
       },
     },
   };
@@ -290,11 +380,14 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
     if (mappedPeriod) {
       setPeriod(mappedPeriod);
     }
+    if (chartRef.current) {
+      chartRef.current.resetZoom();
+    }
   };
 
   return (
     <div className="w-full">
-      <div className="mb-1 flex justify-center">
+      <div className="mb-3 flex justify-center">
         <ChartButtons
           isChart={false}
           chartType={chartType}
@@ -308,28 +401,32 @@ const NetworkTvsAztecChart: FC<OnwProps> = ({ chainName }) => {
         className="relative"
         style={{
           height: '400px',
-          backgroundColor: '#1E1E1E',
           padding: '30px 20px 20px 20px',
-          borderRadius: '4px',
         }}
       >
-          {loading ? (
-            <div className="flex h-full items-center justify-center">
-              <div className="font-sfpro text-lg text-white opacity-70">Loading TVS data...</div>
-            </div>
-          ) : data.length === 0 ? (
-            <div className="flex h-full items-center justify-center">
-              <div className="font-sfpro text-lg text-white opacity-70">No TVS data available</div>
-            </div>
-          ) : (
-            <Line data={chartData} options={options} />
-          )}
+        {data.length === 0 ? (
+          <div className="flex h-full items-center justify-center">
+            <div className="font-sfpro text-lg text-white opacity-70">No chart data available</div>
+          </div>
+        ) : (
+          <Line ref={chartRef} data={chartData} options={options} />
+        )}
       </div>
 
       <div className="mt-1 flex justify-center">
-        <div className="flex items-center space-x-3 rounded px-4 py-2" style={{ backgroundColor: '#1E1E1E' }}>
-          <div className="h-3 w-3 rounded-sm" style={{ backgroundColor: '#4FB848' }}></div>
-          <span className="font-sfpro text-sm text-white">Total Value Staked (TVS %)</span>
+        <div className="flex items-center space-x-6 rounded px-4" style={{ backgroundColor: '#1E1E1E' }}>
+          <div className="flex items-center space-x-2">
+            <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#E5C46B' }}></div>
+            <span className="font-sfpro text-sm text-white">TVS (%)</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#4FB848' }}></div>
+            <span className="font-sfpro text-sm text-white">APR (%)</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#2077E0' }}></div>
+            <span className="font-sfpro text-sm text-white">Validators</span>
+          </div>
         </div>
       </div>
     </div>

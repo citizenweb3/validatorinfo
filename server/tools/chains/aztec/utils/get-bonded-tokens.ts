@@ -1,6 +1,7 @@
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
 import { getActiveSequencers } from '@/server/tools/chains/aztec/utils/get-active-sequencers';
+import { getExitingSequencers } from '@/server/tools/chains/aztec/utils/get-exiting-sequencers';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 
 const { logInfo, logError, logWarn } = logger('get-bonded-tokens-aztec');
@@ -41,14 +42,32 @@ export const getBondedTokens = async (chain: AddChainProps): Promise<bigint> => 
       throw new Error(`Chain ${chain.name} not found in database`);
     }
 
-    const activeSequencers = await getActiveSequencers(dbChain.id);
-    const grossStaked = BigInt(activeSequencers.size) * STAKE_AMOUNT;
+    const [activeSequencers, exitingValidators] = await Promise.all([
+      getActiveSequencers(dbChain.id),
+      getExitingSequencers(dbChain.id),
+    ]);
 
-    const totalSlashed = await getTotalSlashedAmount(dbChain.id, activeSequencers);
+    let bondedCount = 0;
+    for (const [attester] of Array.from(activeSequencers.entries())) {
+      if (!exitingValidators.has(attester)) {
+        bondedCount++;
+      }
+    }
+
+    const grossStaked = BigInt(bondedCount) * STAKE_AMOUNT;
+
+    const bondedSequencers = new Map<string, string>();
+    for (const [attester, withdrawer] of Array.from(activeSequencers.entries())) {
+      if (!exitingValidators.has(attester)) {
+        bondedSequencers.set(attester, withdrawer);
+      }
+    }
+
+    const totalSlashed = await getTotalSlashedAmount(dbChain.id, bondedSequencers);
     const totalStaked = grossStaked - totalSlashed;
 
     logInfo(
-      `Bonded tokens: ${activeSequencers.size} sequencers × 200k = ${grossStaked}, slashed = ${totalSlashed}, net = ${totalStaked}`,
+      `Bonded tokens: ${bondedCount} bonded (${activeSequencers.size} active - ${exitingValidators.size} exiting) × 200k = ${grossStaked}, slashed = ${totalSlashed}, net = ${totalStaked}`,
     );
 
     const nodeCount = await db.node.count({

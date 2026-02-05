@@ -269,6 +269,7 @@
     "Network APR and TVS": "APR e TVS de Rede",
     "Network Overview": "Visão Geral da Rede",
     "active validators": "Validadores Activos",
+    "Validator Count": "Contagem de Validadores",
     "unbonding time": "Tempo de Unbonding",
     "community tax": "Taxa Comunitária",
     "proposal creation cost": "Custo de Criação da Proposta",
@@ -295,6 +296,9 @@
     "inactive": "Inativo",
     "jailed": "Jailed",
     "active in queue": "Ativo na fila",
+    "in queue": "Na fila",
+    "zombie": "Zumbi",
+    "exiting": "Saindo",
     "Social": "Social",
     "price of active user": "Preço do usuário ativo",
     "believers": "Entusiastas",
@@ -509,6 +513,27 @@
       "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
       "Network Stage": "Estágio da Rede",
       "Set Position": "Definir Posição"
+    }
+  },
+  "NetworkNodesPage": {
+    "title": "Nós da Rede",
+    "description": "Lista de todos os nós na rede {networkName}",
+    "Table": {
+      "Node Address": {
+        "name": "Endereço do Nó"
+      },
+      "Node Moniker": {
+        "name": "Nome do Nó"
+      },
+      "Stake": {
+        "name": "Stake"
+      },
+      "Uptime": {
+        "name": "Tempo de Atividade"
+      },
+      "Missed Blocks": {
+        "name": "Blocos Perdidos"
+      }
     }
   },
   "NodesPage": {
@@ -1204,7 +1229,7 @@
     "total mana used": "Mana Total Usado",
     "chain id": "ID da Rede",
     "protocol version": "Versão do Protocolo",
-    "block producer": "Produtor do Bloco",
+    "block producer": "Produtor do Bloco (Coinbase)",
     "fee recipient": "Destinatário da Taxa",
     "fee per da gas": "Taxa por DA Gas",
     "fee per l2 gas": "Taxa por L2 Gas",
@@ -1246,6 +1271,10 @@
     "deposited gse tokens": "Tokens GSE Depositados",
     "show dropdown": "Mostrar votos do validador",
     "hide dropdown": "Ocultar votos do validador",
+    "show validator votes": "Mostrar Votos dos Validadores",
+    "hide validator votes": "Ocultar Votos dos Validadores",
+    "show validator signals": "Mostrar Sinais dos Validadores",
+    "hide validator signals": "Ocultar Sinais dos Validadores",
     "all": "Todos",
     "yes": "Sim",
     "no": "Não",
@@ -1271,9 +1300,13 @@
         "name": "Hora",
         "hint": ""
       },
+      "Provider": {
+        "name": "Provedor",
+        "hint": "Provedor de infraestrutura"
+      },
       "Sequencer": {
         "name": "Sequenciador",
-        "hint": "Validador que emitiu o sinal"
+        "hint": "Endereço do sequenciador que emitiu o sinal"
       },
       "Round": {
         "name": "Rodada",

@@ -34,6 +34,7 @@ const EcosystemsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
+  const selectedTags = Array.isArray(q.tags) ? q.tags : q.tags ? [q.tags] : [];
 
   return (
     <div>
@@ -44,8 +45,8 @@ const EcosystemsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
         <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'pb-2'} />
-      <Ecosystems page="EcosystemsPage" perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage} />
+      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'pb-6'} />
+      <Ecosystems page="EcosystemsPage" perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage} selectedTags={selectedTags} />
     </div>
   );
 };

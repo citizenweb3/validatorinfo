@@ -121,6 +121,10 @@ model Chain {
   nodeVotes          NodeVote[]         @relation("node_vote_chain")
   proposals          Proposal[]         @relation("chain_proposals")
   githubRepositories GithubRepository[] @relation("chain_github_repositories")
+  tvsHistory         ChainTvsHistory[]  @relation("chain_tvs_history")
+  aprHistory         ChainAprHistory[]  @relation("chain_apr_history")
+  validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
+  aztecNodeDistributionHistory AztecNodeDistributionHistory[] @relation("chain_aztec_node_distribution_history")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
@@ -159,6 +163,7 @@ model Ecosystem {
   prettyName String   @map("pretty_name") @db.VarChar(256)
   logoUrl    String   @map("logo_url") @db.VarChar(256)
   tvl        Float    @default(0)
+  tags       String[] @default([])
   createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
   chains Chain[] @relation("chain_ecosystem")
@@ -361,6 +366,73 @@ model GithubRepository {
 
   @@unique([chainId, fullName])
   @@map("github_repositories")
+}
+
+model ChainTvsHistory {
+  id          Int      @id @default(autoincrement())
+  chainId     Int      @map("chain_id")
+  date        DateTime @db.Date
+  tvs         Float
+  totalStaked String   @map("total_staked")
+  totalSupply String   @map("total_supply")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_tvs_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId])
+  @@map("chain_tvs_history")
+}
+
+model ChainAprHistory {
+  id            Int      @id @default(autoincrement())
+  chainId       Int      @map("chain_id")
+  date          DateTime @db.Date
+  apr           Float
+  blocksCount   Int?     @map("blocks_count")
+  rewards       String
+  totalStaked   String   @map("total_staked")
+  avgCommission Float?   @map("avg_commission")
+  metadata      Json?
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_apr_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId])
+  @@map("chain_apr_history")
+}
+
+model ChainValidatorsHistory {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  date            DateTime @db.Date
+  validatorsCount Int      @map("validators_count")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_validators_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId])
+  @@map("chain_validators_history")
+}
+
+model AztecNodeDistributionHistory {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  date      DateTime @map("date") @db.Date
+  total     Int      @map("total")
+  active    Int      @map("active")
+  inQueue   Int      @map("in_queue")
+  zombie    Int      @map("zombie")
+  exiting   Int      @map("exiting")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_aztec_node_distribution_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId, date])
+  @@map("aztec_node_distribution_history")
 }
 
 model GithubActivity {

@@ -62,11 +62,18 @@ const getProposals: GetProposalsFunction = async (chain) => {
         let status: $Enums.ProposalStatus;
         switch (proposal.status) {
           case 'passed':
+          case 'executedPassed':
             status = $Enums.ProposalStatus.PROPOSAL_STATUS_PASSED;
             result.passed += 1;
             break;
           case 'rejected':
+          case 'executedRejected':
             status = $Enums.ProposalStatus.PROPOSAL_STATUS_REJECTED;
+            break;
+          case 'pending':
+          case 'voting':
+            status = $Enums.ProposalStatus.PROPOSAL_STATUS_VOTING_PERIOD;
+            result.live += 1;
             break;
           default:
             status = $Enums.ProposalStatus.PROPOSAL_STATUS_UNSPECIFIED;
@@ -77,12 +84,12 @@ const getProposals: GetProposalsFunction = async (chain) => {
         const votingEndTime = new Date(parseInt(proposal.endTime) * 1000).toISOString();
         const depositEndTime = submitTime;
 
-        const tallyResult = JSON.stringify({
+        const tallyResult = {
           yes: proposal.yayVotes,
           no: proposal.nayVotes,
           no_with_veto: '0',
           abstain: proposal.abstainVotes,
-        });
+        };
 
         const finalTallyResult =
           status === $Enums.ProposalStatus.PROPOSAL_STATUS_PASSED ||
@@ -97,7 +104,7 @@ const getProposals: GetProposalsFunction = async (chain) => {
 
         return {
           type: proposal.type || 'Unknown type',
-          proposalId: proposal.id,
+          proposalId: String(proposal.id),
           status,
           submitTime,
           depositEndTime,

@@ -29,6 +29,8 @@
 | `update-aztec-coinbase-address.ts` | Updates coinbaseSplitContractAddress and stakerImplementation for StakedWithProvider events |
 | `update-aztec-l1-contracts.ts` | Updates Aztec L1 contract addresses |
 | `update-aztec-governance-data.ts` | Updates Aztec governance config, committee size, attester count, voting power |
+| `update-aztec-tvs-history.ts` | Updates historical TVS data for Aztec chains (daily aggregation) |
+| `update-aztec-apr-history.ts` | Updates historical APR data for Aztec chains (daily aggregation) |
 | `update-validators-by-keybase.ts` | Updates validator metadata from Keybase |
 | `update-validators-by-site.ts` | Updates validator metadata from websites |
 | `update-validators-aztec-logos.ts` | Updates Aztec validator logos from provider metadata registry |
@@ -110,7 +112,9 @@ server/jobs/
 │   ├── update-aztec-sequencer-stake.ts
 │   ├── update-aztec-coinbase-address.ts
 │   ├── update-aztec-l1-contracts.ts
-│   └── update-aztec-governance-data.ts
+│   ├── update-aztec-governance-data.ts
+│   ├── update-aztec-tvs-history.ts
+│   └── update-aztec-apr-history.ts
 │
 ├── update-validators-*.ts # Validator metadata
 │   ├── update-validators-by-keybase.ts

@@ -14,6 +14,10 @@ import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateAztecCoinbaseAddress from '@/server/jobs/update-aztec-coinbase-address';
 import updateAztecGovernanceData from '@/server/jobs/update-aztec-governance-data';
 import updateAztecL1Contracts from '@/server/jobs/update-aztec-l1-contracts';
+import updateAztecTvsHistory from '@/server/jobs/update-aztec-tvs-history';
+import updateAztecAprHistory from '@/server/jobs/update-aztec-apr-history';
+import { updateAztecValidatorsHistory } from '@/server/jobs/update-aztec-validators-history';
+import { updateAztecNodeDistribution } from '@/server/jobs/update-aztec-node-distribution';
 import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
@@ -172,6 +176,18 @@ async function runTask() {
         break;
       case 'update-aztec-governance-data':
         await updateAztecGovernanceData();
+        break;
+      case 'update-aztec-tvs-history':
+        await updateAztecTvsHistory();
+        break;
+      case 'update-aztec-apr-history':
+        await updateAztecAprHistory();
+        break;
+      case 'update-aztec-validators-history':
+        await updateAztecValidatorsHistory('aztec');
+        break;
+      case 'update-aztec-node-distribution':
+        await updateAztecNodeDistribution('aztec');
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

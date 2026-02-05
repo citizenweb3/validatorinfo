@@ -20,29 +20,34 @@ export const ecosystemParams = [
     name: 'cosmos',
     prettyName: 'Cosmos',
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+    tags: ['Tendermint', 'IBC', 'PoS', 'Interoperability'],
   },
   {
     name: 'namada',
     prettyName: 'Namada',
     logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/namada/images/nam.png',
+    tags: ['Privacy', 'PoS', 'Shielded Assets'],
   },
   {
     name: 'solana',
     prettyName: 'Solana',
     logoUrl:
       'https://raw.githubusercontent.com/github/explore/14191328e15689ba52d5c10e18b43417bf79b2ef/topics/solana/solana.png',
+    tags: ['High Performance', 'PoS', 'Smart Contracts'],
   },
   {
     name: 'ethereum',
     prettyName: 'Ethereum',
     logoUrl:
       'https://raw.githubusercontent.com/ethereum/ethereum-org-website/refs/heads/dev/public/images/eth-logo-grey.png',
+    tags: ['Smart Contracts', 'PoS', 'DeFi', 'EVM'],
   },
   {
     name: 'polkadot',
     prettyName: 'Polkadot',
     logoUrl:
       'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
+    tags: ['Parachains', 'PoS', 'Interoperability', 'Substrate'],
   },
 ];
 

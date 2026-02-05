@@ -1,6 +1,3 @@
-import { getTranslations } from 'next-intl/server';
-
-import RoundedButton from '@/components/common/rounded-button';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import AztecSignalService from '@/services/aztec-signal-service';
@@ -20,11 +17,9 @@ interface PageProps {
 const defaultPerPage = 10;
 
 const ProposalSignalsPage: NextPageWithLocale<PageProps> = async ({
-    params: { locale, name, proposalId },
+    params: { name, proposalId },
     searchParams: q,
   }) => {
-  const t = await getTranslations({ locale, namespace: 'ProposalPage' });
-
   if (!isAztecNetwork(name)) {
     return (
       <div className="mt-8 text-center text-lg" role="alert">
@@ -63,11 +58,6 @@ const ProposalSignalsPage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <>
-      <div className="flex justify-end">
-        <RoundedButton href={`/networks/${name}/proposal/${proposalId}`} className="font-handjet text-lg">
-          {t('hide dropdown')}
-        </RoundedButton>
-      </div>
       <SignalsTable
         chainName={name}
         payload={payload}

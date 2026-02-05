@@ -27,13 +27,17 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
       data-active={isHighlighted ? 'true' : undefined}
       aria-current={isActive ? 'page' : undefined}
       className={`${
-        isOpened ? 'min-h-44 sm:min-h-24 md:h-10 md:min-h-10 md:w-[15.5rem]' : 'h-10 w-10 hover:border-highlight'
-      } ${isHighlighted ? 'border border-[#3e3e3e]' : 'border-r border-t border-bgSt'} group relative flex cursor-pointer flex-col items-center overflow-hidden p-px text-sm shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] transition-width duration-300 hover:bg-bgHover hover:text-highlight active:border active:border-[#3e3e3e]`}
+        isOpened ? 'min-h-44 sm:min-h-24 md:h-10 md:min-h-10 md:w-[15.5rem]' : 'h-10 w-10'
+      } ${
+        isHighlighted
+          ? 'border border-[#3e3e3e] text-highlight'
+          : 'bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] border-r border-t border-bgSt'
+      } group relative flex cursor-pointer flex-col items-center overflow-hidden p-px text-sm shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] transition-width duration-300 hover:bg-bgHover hover:text-highlight active:translate-y-1 active:border-transparent active:bg-background active:shadow-none`}
     >
       <div
-        className="relative flex h-full w-full flex-grow flex-row flex-nowrap items-center overflow-hidden bg-gradient-to-t from-[#181818] from-[26%] to-[#272727] text-base font-semibold group-hover:bg-[#272727] group-hover:from-transparent group-hover:to-transparent group-hover:text-highlight group-active:bg-[#181818] group-active:from-transparent group-active:to-transparent"
+        className="relative flex h-full w-full flex-grow flex-row flex-nowrap items-center overflow-hidden text-base font-semibold group-hover:text-highlight"
       >
-        <div className="absolute transition-transform duration-150 group-active:scale-90 md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
+        <div className="absolute md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
           {icon && (
             <Image
               src={icon}
@@ -48,7 +52,7 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
         <div
           className={`${
             isActive ? 'block' : 'hidden group-hover:block'
-          } absolute group-active:scale-90 md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform`}
+          } absolute md:left-5 md:top-[1.15rem] md:-translate-x-1/2 md:-translate-y-1/2 md:transform`}
         >
           {iconHovered && (
             <Image
@@ -64,7 +68,7 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
         <div
           className={`${
             isHighlighted ? 'text-highlight' : ''
-          } ml-36 text-nowrap font-handjet text-7xl tracking-wide group-hover:text-highlight group-active:scale-95 sm:ml-20 sm:text-5xl md:ml-14 md:text-lg`}
+          } ml-36 text-nowrap font-handjet text-7xl tracking-wide group-hover:text-highlight sm:ml-20 sm:text-5xl md:ml-14 md:text-lg`}
         >
           {t(name as 'Validators')}
         </div>

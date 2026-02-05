@@ -76,8 +76,6 @@ const runServer = async () => {
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
-    { name: 'update-nodes-votes', schedule: timers.everyDay },
-
   ];
 
   tasks.forEach((task) => {
@@ -124,7 +122,10 @@ const runServer = async () => {
     { name: 'sync-aztec-committee', schedule: timers.every10mins },
     { name: 'update-aztec-l1-contracts', schedule: timers.everyDay },
     { name: 'update-aztec-governance-data', schedule: timers.every30mins },
-
+    { name: 'update-aztec-tvs-history', schedule: timers.every6hours },
+    { name: 'update-aztec-apr-history', schedule: timers.every6hours },
+    { name: 'update-aztec-validators-history', schedule: timers.every6hours },
+    { name: 'update-aztec-node-distribution', schedule: timers.every6hours },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {
@@ -144,14 +145,14 @@ const runServer = async () => {
     job.start();
   });
 
-  // Initial run for specialTasks after 5 minutes for wait validators updated
+  // Initial run for specialTasks after 10 minutes for wait validators updated
   setTimeout(
     () => {
       specialTasks.forEach(({ name }) => {
         spawnTask(name, chains).catch((e) => logError(`Initial run error for task ${name}:`, e));
       });
     },
-    5 * 60 * 1000,
+    10 * 60 * 1000,
   );
 };
 

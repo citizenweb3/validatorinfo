@@ -26,7 +26,8 @@ const getEtherscanTxLink = (txHash: string): string => {
 
 const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
   const isAztec = isAztecChain(chainName);
-  const txLink = isAztec ? getEtherscanTxLink(item.txHash) : `/networks/${chainName}/tx/${item.txHash}`;
+  const txLink = isAztec ? getEtherscanTxLink(item.txHash) : `/networks/${chainName}/tx`;
+  const blockLink = isAztec ? `/networks/${chainName}/blocks/${item.blockHeight}` : `/networks/${chainName}/blocks`;
   const accountLink = `/networks/${chainName}/address/${item.address}/passport`;
 
   return (
@@ -68,7 +69,7 @@ const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
         )}
       </BaseTableCell>
       <BaseTableCell className="w-1/6 px-2 py-4 hover:text-highlight">
-        <Link href={txLink} className="flex justify-center">
+        <Link href={blockLink} className="flex justify-center">
           <div className="text-center font-handjet text-lg">{Number(item.blockHeight).toLocaleString('ru-Ru')}</div>
         </Link>
       </BaseTableCell>

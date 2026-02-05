@@ -26,8 +26,7 @@ const NetworkProposals: FC<OwnProps> = async ({ page, perPage, sort, currentPage
         <thead>
         <tr className="bg-table_header">
           <TableHeaderItem page={page} name="Title" sortField="proposalId" />
-          <TableHeaderItem page={page} name="Type" sortField="type" />
-          <TableHeaderItem page={page} name="Vote" sortField="finalTallyResult" />
+          <TableHeaderItem page={page} name="Type" />
           <TableHeaderItem page={page} name="Voting Ended" sortField="votingEndTime" defaultSelected />
         </tr>
         </thead>

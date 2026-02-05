@@ -269,6 +269,7 @@
     "Network APR and TVS": "Network APR and TVS",
     "Network Overview": "Network Overview",
     "active validators": "Active Validators",
+    "Validator Count": "Validator Count",
     "unbonding time": "Unbonding Time",
     "community tax": "Community Tax",
     "proposal creation cost": "Proposal Creation Cost",
@@ -294,6 +295,9 @@
     "active": "Active",
     "inactive": "Inactive",
     "active in queue": "Active in queue",
+    "in queue": "In Queue",
+    "zombie": "Zombie",
+    "exiting": "Exiting",
     "jailed": "Jailed",
     "Social": "Social",
     "price of active user": "Price of Active User",
@@ -509,6 +513,27 @@
       "Click 3 times to reset all filters": "Click 3 times to reset all filters",
       "Network Stage": "Network Stage",
       "Set Position": "Set Position"
+    }
+  },
+  "NetworkNodesPage": {
+    "title": "Network Nodes",
+    "description": "List of all nodes in the {networkName} network",
+    "Table": {
+      "Node Address": {
+        "name": "Node Address"
+      },
+      "Node Moniker": {
+        "name": "Node Moniker"
+      },
+      "Stake": {
+        "name": "Stake"
+      },
+      "Uptime": {
+        "name": "Uptime"
+      },
+      "Missed Blocks": {
+        "name": "Missed Blocks"
+      }
     }
   },
   "NodesPage": {
@@ -1188,7 +1213,7 @@
     "total mana used": "Total Mana Used",
     "chain id": "Chain ID",
     "protocol version": "Protocol Version",
-    "block producer": "Block Producer",
+    "block producer": "Block Producer (Coinbase)",
     "fee recipient": "Fee Recipient",
     "fee per da gas": "Fee Per DA Gas",
     "fee per l2 gas": "Fee Per L2 Gas",
@@ -1254,6 +1279,10 @@
     "deposited gse tokens": "Deposited GSE Tokens",
     "show dropdown": "Show Validator Votes",
     "hide dropdown": "Hide Validator Votes",
+    "show validator votes": "Show Validator Votes",
+    "hide validator votes": "Hide Validator Votes",
+    "show validator signals": "Show Validator Signals",
+    "hide validator signals": "Hide Validator Signals",
     "all": "All",
     "yes": "Yes",
     "no": "No",
@@ -1279,9 +1308,13 @@
         "name": "Time",
         "hint": ""
       },
+      "Provider": {
+        "name": "Provider",
+        "hint": "Infrastructure provider"
+      },
       "Sequencer": {
         "name": "Sequencer",
-        "hint": "Validator who cast the signal"
+        "hint": "Sequencer address who cast the signal"
       },
       "Round": {
         "name": "Round",

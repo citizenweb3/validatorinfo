@@ -1,13 +1,18 @@
 import db from '@/db';
 import logger from '@/logger';
 import { syncAttesterEvents } from '@/server/tools/chains/aztec/sync-attester-events';
+import { syncDepositEvents } from '@/server/tools/chains/aztec/sync-deposit-events';
+import { syncLocalEjectionThresholdEvents } from '@/server/tools/chains/aztec/sync-local-ejection-threshold-events';
 import { syncPayloadSubmittedEvents } from '@/server/tools/chains/aztec/sync-payload-submitted-events';
 import { syncSignalEvents } from '@/server/tools/chains/aztec/sync-signal-events';
 import { syncSlashingEvents } from '@/server/tools/chains/aztec/sync-slashing-events';
 import { syncStakedEvents } from '@/server/tools/chains/aztec/sync-staked-events';
 import { syncValidatorQueuedEvents } from '@/server/tools/chains/aztec/sync-validator-queued-events';
 import { syncWithdrawFinalizedEvents } from '@/server/tools/chains/aztec/sync-withdraw-finalized-events';
+import { syncWithdrawInitiatedEvents } from '@/server/tools/chains/aztec/sync-withdraw-initiated-events';
 import { syncVoteEvents } from '@/server/tools/chains/aztec/sync-vote-events';
+import { syncProviderAdminUpdatedEvents } from '@/server/tools/chains/aztec/sync-provider-admin-updated-events';
+import { syncProviderRegisteredEvents } from '@/server/tools/chains/aztec/sync-provider-registered-events';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
 
@@ -16,7 +21,7 @@ const { logInfo, logError } = logger('sync-aztec-events');
 const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 
 const syncAztecEvents = async () => {
-  logInfo('Starting Aztec events sync (attester + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-finalized)');
+  logInfo('Starting Aztec events sync (attester + deposit + staked + slashing + vote + signal + payload-submitted + validator-queued + withdraw-initiated + withdraw-finalized + provider-registered + provider-admin-updated + local-ejection-threshold)');
 
   for (const chainName of AZTEC_CHAINS) {
     try {
@@ -43,16 +48,21 @@ const syncAztecEvents = async () => {
 
       const results = await Promise.allSettled([
         syncAttesterEvents(chainName, dbChain, l1RpcUrls),
+        syncDepositEvents(chainName, dbChain, l1RpcUrls),
         syncStakedEvents(chainName, dbChain, l1RpcUrls),
         syncSlashingEvents(chainName, dbChain, l1RpcUrls),
         syncVoteEvents(chainName, dbChain, l1RpcUrls),
         syncSignalEvents(chainName, dbChain, l1RpcUrls),
         syncPayloadSubmittedEvents(chainName, dbChain, l1RpcUrls),
         syncValidatorQueuedEvents(chainName, dbChain, l1RpcUrls),
+        syncWithdrawInitiatedEvents(chainName, dbChain, l1RpcUrls),
         syncWithdrawFinalizedEvents(chainName, dbChain, l1RpcUrls),
+        syncProviderRegisteredEvents(chainName, dbChain, l1RpcUrls),
+        syncProviderAdminUpdatedEvents(chainName, dbChain, l1RpcUrls),
+        syncLocalEjectionThresholdEvents(chainName, dbChain, l1RpcUrls),
       ]);
 
-      const eventTypes = ['Attester', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawFinalized'];
+      const eventTypes = ['Attester', 'Deposit', 'Staked', 'Slashing', 'Vote', 'Signal', 'PayloadSubmitted', 'ValidatorQueued', 'WithdrawInitiated', 'WithdrawFinalized', 'ProviderRegistered', 'ProviderAdminUpdated', 'LocalEjectionThresholdUpdated'];
 
       results.forEach((result, index) => {
         const eventType = eventTypes[index];

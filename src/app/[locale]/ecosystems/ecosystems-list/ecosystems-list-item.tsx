@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FC } from 'react';
 
 import BaseTableRow from '@/components/common/table/base-table-row';
@@ -7,6 +6,7 @@ import TableAvatar from '@/components/common/table/table-avatar';
 import { Ecosystem } from '@prisma/client';
 import chainService from '@/services/chain-service';
 import EcosystemListItemChains from '@/app/ecosystems/ecosystems-list/ecosystems-list-item-chains';
+import EcosystemListItemTags from '@/app/ecosystems/ecosystems-list/ecosystems-list-item-tags';
 
 interface OwnProps {
   item: Ecosystem;
@@ -38,14 +38,8 @@ const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
       <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center hover:text-highlight">
         <div className="select-text cursor-default">$10M</div>
       </BaseTableCell>
-      <BaseTableCell className="w-2/12 px-2 py-2 font-handjet text-lg text-center">
-        <Link href={ecosystemLink}>
-          <div className="flex flex-row flex-wrap whitespace-normal">
-            <div className="rounded-full bg-primary shadow-button px-6 mt-1 mr-2 hover:text-highlight">Tag1</div>
-            <div className="rounded-full bg-primary shadow-button px-6 mt-1 mr-2 hover:text-highlight">Tag2</div>
-            <div className="rounded-full bg-primary shadow-button px-6 mt-1 mr-2 hover:text-highlight">Tag3</div>
-          </div>
-        </Link>
+      <BaseTableCell className="w-3/12 px-2 py-2 font-handjet text-lg text-center">
+        <EcosystemListItemTags tags={item.tags} />
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2">
         <EcosystemListItemChains chains={ecosystemChains} />

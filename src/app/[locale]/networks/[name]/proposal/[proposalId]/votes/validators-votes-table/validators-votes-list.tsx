@@ -58,6 +58,13 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
               Individual validator votes cannot be tracked during the proposal voting stage.
               See vote totals above.
             </p>
+            <Link
+              href={`/networks/${chainName}/proposal/${proposalId}/signals`}
+              className="mt-3 inline-block text-highlight underline hover:text-highlight/80"
+              aria-label="View sequencer signals for this proposal"
+            >
+              Show signals
+            </Link>
           </td>
         </tr>
       </tbody>
@@ -84,7 +91,7 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
       {votesList.length > 0 ? (
         <tbody>
         {votesList.map((item) => (
-          <ValidatorsVotesItem key={item.validator.id} item={item} />
+          <ValidatorsVotesItem key={item.validator.id} item={item} chainName={chainName} />
         ))}
         <tr>
           <td colSpan={4} className="pt-4">
