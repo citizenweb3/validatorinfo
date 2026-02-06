@@ -4,7 +4,6 @@ import { AztecChainName } from '@/server/tools/chains/aztec/utils/contracts/cont
 import { getGovernanceConfig } from '@/server/tools/chains/aztec/utils/get-governance-config';
 import { getTotalVotingPower } from '@/server/tools/chains/aztec/utils/get-governance-power';
 import { getTotalSupply } from '@/server/tools/chains/aztec/utils/get-total-supply';
-import { getChainParams } from '@/server/tools/chains/params';
 
 const { logInfo, logError } = logger('get-proposal-params-aztec');
 
@@ -42,19 +41,23 @@ const getProposalParams: GetProposalParams = async (chain) => {
     };
 
     try {
-      const l1ChainName = chainName === 'aztec' ? 'ethereum' : 'ethereum-sepolia';
-      const l1Chain = getChainParams(l1ChainName);
-      const l1RpcUrls = l1Chain.nodes?.filter((n) => n.type === 'rpc').map((n) => n.url) ?? [];
+      const [totalPowerResult, totalSupplyResult] = await Promise.allSettled([
+        getTotalVotingPower(chainName),
+        getTotalSupply(chainName),
+      ]);
 
-      if (l1RpcUrls.length > 0) {
-        const [totalPower, totalSupply] = await Promise.all([
-          getTotalVotingPower(chainName),
-          getTotalSupply(l1RpcUrls, chainName),
-        ]);
+      if (totalPowerResult.status === 'rejected') {
+        logError(`${chainName}: Failed to fetch totalVotingPower: ${totalPowerResult.reason?.message}`);
+      }
+      if (totalSupplyResult.status === 'rejected') {
+        logError(`${chainName}: Failed to fetch totalSupply: ${totalSupplyResult.reason?.message}`);
+      }
 
-        if (totalPower && totalSupply && totalSupply > BigInt(0)) {
-          result.participationRate = Number(totalPower) / Number(totalSupply);
-        }
+      const totalPower = totalPowerResult.status === 'fulfilled' ? totalPowerResult.value : null;
+      const totalSupply = totalSupplyResult.status === 'fulfilled' ? totalSupplyResult.value : null;
+
+      if (totalPower && totalSupply && totalSupply > BigInt(0)) {
+        result.participationRate = Number(totalPower) / Number(totalSupply);
       }
     } catch (e: any) {
       logError(`${chainName}: Failed to calculate participation rate: ${e.message}`);
