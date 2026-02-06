@@ -1,5 +1,6 @@
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
+import { getTotalSupply } from '@/server/tools/chains/aztec/utils/get-total-supply';
 import { getTotalStakedForDay } from '@/server/tools/chains/aztec/utils/get-total-staked-for-day';
 import { syncTvsToTokenomics } from '@/server/tools/chains/aztec/utils/sync-tvs-to-tokenomics';
 
@@ -34,19 +35,6 @@ const getStartDate = async (chainId: number): Promise<Date> => {
   return startDate;
 };
 
-const getTotalSupply = async (chainId: number): Promise<bigint> => {
-  const chain = await db.chain.findFirst({
-    where: { id: chainId },
-    include: { tokenomics: true },
-  });
-
-  if (!chain?.tokenomics?.totalSupply) {
-    throw new Error('Total supply not found');
-  }
-
-  return BigInt(chain.tokenomics.totalSupply);
-};
-
 const updateAztecTvsHistory = async () => {
   logInfo('Starting Aztec TVS history update');
 
@@ -74,7 +62,7 @@ const updateAztecTvsHistory = async () => {
 
       logInfo(`${chainName}: Processing TVS from ${startDate.toISOString().split('T')[0]} to ${endDate.toISOString().split('T')[0]}`);
 
-      const totalSupply = await getTotalSupply(dbChain.id);
+      const totalSupply = await getTotalSupply(chainName);
 
       const currentDate = new Date(startDate);
       let recordsCount = 0;

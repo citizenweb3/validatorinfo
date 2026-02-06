@@ -8,42 +8,32 @@
  */
 
 import logger from '@/logger';
-import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { AztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getBondedTokens } from '@/server/tools/chains/aztec/utils/get-bonded-tokens';
 import { getTotalSupply } from '@/server/tools/chains/aztec/utils/get-total-supply';
 import { GetTvsFunction } from '@/server/tools/chains/chain-indexer';
-import { getChainParams } from '@/server/tools/chains/params';
 
-const { logError, logInfo, logWarn } = logger('get-tvs-aztec');
+const { logError, logInfo } = logger('get-tvs-aztec');
 
 const getTvs: GetTvsFunction = async (chain) => {
   try {
-    const l1Chain = getChainParams(getL1[chain.name]);
-    const l1RpcUrls = l1Chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
-
-    if (!l1RpcUrls.length) {
-      logError('No L1 RPC URLs found - stake data will not be available');
-    }
-
     let totalSupply: bigint | null = null;
     let bondedTokens: bigint | null = null;
     let tvs: number = 0;
 
-    if (l1RpcUrls.length > 0) {
-      try {
-        totalSupply = await getTotalSupply(l1RpcUrls, chain.name as 'aztec' | 'aztec-testnet');
-      } catch (e: any) {
-        logError(`Failed to fetch total supply: ${e.message}`);
-      }
-      try {
-        bondedTokens = await getBondedTokens(chain);
-      } catch (e: any) {
-        logError(`Failed to fetch total supply: ${e.message}`);
-      }
+    try {
+      totalSupply = await getTotalSupply(chain.name as AztecChainName);
+    } catch (e: any) {
+      logError(`[${chain.name}] Failed to fetch total supply: ${e.message}`);
+    }
+    try {
+      bondedTokens = await getBondedTokens(chain);
+    } catch (e: any) {
+      logError(`[${chain.name}] Failed to fetch bonded tokens: ${e.message}`);
+    }
 
-      if (bondedTokens !== null && totalSupply !== null) {
-        tvs = Number(bondedTokens) / Number(totalSupply);
-      }
+    if (bondedTokens !== null && totalSupply !== null) {
+      tvs = Number(bondedTokens) / Number(totalSupply);
     }
 
     const result = {

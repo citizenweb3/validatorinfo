@@ -5,7 +5,6 @@ import { getTotalVotingPower } from '@/server/tools/chains/aztec/utils/get-gover
 import { getTotalSupply } from '@/server/tools/chains/aztec/utils/get-total-supply';
 import getActiveAttesterCount from '@/server/tools/chains/aztec/utils/get-active-attester-count';
 import getCommitteeSize from '@/server/tools/chains/aztec/utils/get-committee-size';
-import { getL1RpcUrls } from '@/server/tools/chains/aztec/utils/get-l1-rpc-urls';
 import { getChainParams } from '@/server/tools/chains/params';
 
 const { logInfo, logError } = logger('update-aztec-governance-data');
@@ -30,8 +29,6 @@ const updateAztecGovernanceData = async () => {
 
       logInfo(`${chainName}: Fetching governance data from L1 contracts`);
 
-      const l1RpcUrls = getL1RpcUrls(chainName);
-
       const [governanceConfig, committeeSize, activeAttesterCount, totalVotingPower, totalSupply] =
         await Promise.all([
           getGovernanceConfig(chainName).catch((e) => {
@@ -50,7 +47,7 @@ const updateAztecGovernanceData = async () => {
             logError(`${chainName}: Failed to fetch totalVotingPower: ${e.message}`);
             return null;
           }),
-          getTotalSupply(l1RpcUrls, chainName).catch((e) => {
+          getTotalSupply(chainName).catch((e) => {
             logError(`${chainName}: Failed to fetch totalSupply: ${e.message}`);
             return null;
           }),
