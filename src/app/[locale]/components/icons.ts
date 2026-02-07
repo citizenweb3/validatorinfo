@@ -76,6 +76,17 @@ import WalletIcon from '@/public/img/icons/account-tabs/wallet.png';
 import WalletIconHovered from '@/public/img/icons/account-tabs/wallet-h.png';
 import Cosmonaut from '@/public/img/icons/cosmonaut.svg';
 import NotTodayMobileIcon from '@/public/img/icons/not-today-mobile.svg';
+import NetworkDistribution from '@/public/img/icons/network-profile-icons/network-distribution.png';
+import NetworkDistributionHovered from '@/public/img/icons/network-profile-icons/network-distribution-h.png'
+import NetworkBlocks from '@/public/img/icons/network-profile-icons/network-blocks.png';
+import NetworkBlocksHovered from '@/public/img/icons/network-profile-icons/network-blocks-h.png';
+import NetworkApps from '@/public/img/icons/network-profile-icons/network-apps.png';
+import NetworkAppsHovered from '@/public/img/icons/network-profile-icons/network-apps-h.png';
+import NetworkSupply from '@/public/img/icons/network-profile-icons/network-supply.png';
+import NetworkSupplyHovered from '@/public/img/icons/network-profile-icons/network-supply-h.png';
+import NetworkProfilePlanet from '@/public/img/icons/network-profile-planet.png';
+import NetworkProfilePlanetHovered from '@/public/img/icons/network-profile-planet-h.png';
+import NetworkProfilePlanetActive from '@/public/img/icons/network-profile-planet-a.png';
 
 const icons = {
   AboutIcon,
@@ -156,6 +167,17 @@ const icons = {
   WalletIconHovered,
   Cosmonaut,
   NotTodayMobileIcon,
+  NetworkDistribution,
+  NetworkDistributionHovered,
+  NetworkBlocks,
+  NetworkBlocksHovered,
+  NetworkApps,
+  NetworkAppsHovered,
+  NetworkSupply,
+  NetworkSupplyHovered,
+  NetworkProfilePlanet,
+  NetworkProfilePlanetHovered,
+  NetworkProfilePlanetActive,
 };
 
 export default icons;

@@ -1,9 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Suspense } from 'react';
 
-import DecentralizationBar from '@/app/web3stats/bars/decentralization-bar';
-import ScalabilityBar from '@/app/web3stats/bars/scalability-bar';
-import SecurityBar from '@/app/web3stats/bars/security-bar';
+import GaugeBar from '@/app/web3stats/bars/gauge-bar';
 import Web3statsCharts from '@/app/web3stats/charts';
 import TotalsList from '@/app/web3stats/totals/totals-list';
 import CollapsePageHeader from '@/components/common/collapse-page-header';
@@ -75,9 +73,9 @@ export default async function GlobalPosPage({ params: { locale } }: { params: { 
         <SubTitle text={t('status')} size="h2" />
       </div>
       <div className="mt-16 flex justify-between px-36">
-        <DecentralizationBar />
-        <ScalabilityBar />
-        <SecurityBar />
+        <GaugeBar value={20} label="Decentralization" />
+        <GaugeBar value={50} label="Scalability" />
+        <GaugeBar value={80} label="Security" />
       </div>
       <div>
         <Web3statsCharts translations={translations} />

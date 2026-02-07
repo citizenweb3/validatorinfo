@@ -13,7 +13,7 @@ const AztecBlockTimeDisplay: FC = async () => {
   }
 
   return (
-    <div className="mt-2 flex w-full hover:bg-bgHover">
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
       <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
         {t('average block time')}
       </div>
