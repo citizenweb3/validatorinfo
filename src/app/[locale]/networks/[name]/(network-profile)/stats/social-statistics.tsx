@@ -17,7 +17,7 @@ const SocialStatistics: FC<OwnProps> = async ({ chain }) => {
   return (
     <div className="mb-10 mt-10">
       <SubTitle text={t('Social')} />
-      <div className="mx-auto mt-16 flex w-fit items-center justify-between px-4 py-1 shadow-button">
+      <div className="mx-auto mt-16 flex w-fit items-center justify-between rounded border border-bgSt bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] px-4 py-1 shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black]">
         <div className="font-sfpro text-lg">{t('price of active user')}:</div>
         <div className="ml-24 px-24 font-handjet text-xl text-highlight">$124.43K</div>
       </div>

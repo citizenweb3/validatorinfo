@@ -30,7 +30,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
 
   return (
     <div className="grid grid-cols-2 gap-x-10">
-      <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
+      <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover border-b border-bgSt">
         <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
           {t('total staked')}
         </div>
@@ -41,7 +41,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
           </Tooltip>
         </div>
       </div>
-      <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
+      <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover border-b border-bgSt">
         <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
           {t('% staked')}
         </div>
@@ -50,7 +50,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
           {(Number(chain?.tokenomics?.tvs) * 100).toFixed(2)}%
         </div>
       </div>
-      <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
+      <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover border-b border-bgSt">
         <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
           {t('community pool total')}
         </div>
@@ -61,7 +61,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
           </Tooltip>
         </div>
       </div>
-      <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
+      <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover border-b border-bgSt">
         <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
           {t('average delegations')}
         </div>
@@ -72,7 +72,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
           </Tooltip>
         </div>
       </div>
-      <div className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
+      <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover border-b border-bgSt">
         <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
           {t('pending delegations')}
         </div>
@@ -84,7 +84,7 @@ const NetworkStatistics: FC<OwnProps> = async ({ chain }) => {
         </div>
       </div>
       {networkProfileExample.totalStatistics.map((item) => (
-        <div key={item.title} className="mt-2 flex w-full hover:bg-bgHover border-b border-bgSt">
+        <div key={item.title} className="mt-2 flex w-full bg-table_row hover:bg-bgHover border-b border-bgSt">
           <div className="w-1/2 items-center border-r border-bgSt py-5 pl-10 font-sfpro text-lg ">
             {t(`${item.title as 'community pool total'}`)}
           </div>

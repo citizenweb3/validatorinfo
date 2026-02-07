@@ -309,7 +309,8 @@
     "followers tooltip": "Amount of Twitter (X) followers",
     "members": "Members",
     "Transaction Volume": "Transaction Volume + MAU",
-    "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete."
+    "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete.",
+    "distribution map": "Distributrion Map"
   },
   "NetworkGovernance": {
     "title": "Governance Portal: Network Voting",

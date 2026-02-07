@@ -28,7 +28,7 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
 }) => {
   let content = (
     <div
-      className={`${contentClassName} relative flex h-full items-center justify-center rounded-bl-full rounded-tr-full bg-background px-10 py-1.5 font-handjet group-hover/button:bg-bgHover group-active/button:bg-background`}
+      className={`${contentClassName} relative flex h-full items-center justify-center px-6 py-2 font-handjet tracking-wide`}
     >
       {children}
     </div>
@@ -38,20 +38,14 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
     content = <Tooltip tooltip={tooltip}>{content}</Tooltip>;
   }
 
+  const wrapperClassName = `${className} group/button min-w-9 border border-b-0 border-bgSt bg-background text-white shadow-button [border-image:linear-gradient(to_bottom,#4FB848,transparent)_1] hover:bg-bgHover hover:text-highlight active:-mb-1 active:mt-1 active:border-0 active:text-highlight active:shadow-[inset_0_4px_6px_rgba(0,0,0,0.6),inset_4px_0_6px_rgba(0,0,0,0.3),inset_-4px_0_6px_rgba(0,0,0,0.3)] active:[border-image:none]`;
+
   return href ? (
-    <Link
-      href={href}
-      target={target}
-      scroll={scroll}
-      className={`${className} group/button block min-w-9 rounded-bl-full rounded-tr-full border-r border-t border-none border-bgSt bg-gradient-to-r from-primary to-secondary fill-black stroke-black p-px text-highlight shadow-button hover:bg-bgHover hover:fill-highlight hover:text-white active:-mb-1 active:mt-1 active:shadow-none`}
-    >
+    <Link href={href} target={target} scroll={scroll} className={wrapperClassName}>
       {content}
     </Link>
   ) : (
-    <button
-      onClick={onClick}
-      className={`${className} group/button min-w-9 rounded-bl-full rounded-tr-full border-r border-t border-none border-bgSt bg-gradient-to-r from-primary to-secondary fill-black stroke-black p-px text-highlight shadow-button hover:bg-bgHover hover:fill-highlight hover:text-white active:-mb-1 active:mt-1 active:shadow-none`}
-    >
+    <button onClick={onClick} className={wrapperClassName}>
       {content}
     </button>
   );
