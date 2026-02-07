@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
@@ -11,8 +12,7 @@ import validatorService from '@/services/validator-service';
 const NetworkTvsAztecChart = dynamic(() => import('./network-tvs-aztec-chart'), {
   ssr: false,
   loading: () => (
-    <div className="flex h-full items-center justify-center"
-         style={{ height: '400px', backgroundColor: '#181818', borderRadius: '4px' }}>
+    <div className="flex h-[400px] items-center justify-center rounded bg-table_row">
       <div className="font-sfpro text-lg text-white opacity-70">Loading chart...</div>
     </div>
   ),
@@ -39,9 +39,9 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
 
   return (
     <div className="mt-16">
-      <SubTitle text={t('Network APR and TVS')} />
+      <SubTitle text={t('Historical Trend')} />
       <div className="mt-12 flex flex-row items-center gap-6">
-        <div className="w-1/5 rounded" style={{ backgroundColor: '#181818' }}>
+        <div className="w-1/5 rounded bg-table_row">
           <div className="mt-2 flex w-full flex-wrap">
             <div className="w-2/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">APR</div>
             <div
@@ -64,12 +64,13 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
             <div className="w-2/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">
               {t('Validator Count')}
             </div>
-            <div
+            <Link
+              href={`/networks/${chain?.name}/validators`}
               style={{ color: '#2077E0' }}
-              className="flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
+              className="flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:underline"
             >
               {validatorsCount}
-            </div>
+            </Link>
           </div>
         </div>
         <div className="w-4/5">

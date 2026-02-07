@@ -26,7 +26,7 @@ const AztecTxCard: FC = async () => {
     <MetricsCardItem
       title={t('total amount of tx')}
       data={totalTxs ?? 'N/A'}
-      className={'pb-6 pt-2.5'}
+      className={'bg-table_row pb-6 pt-2.5'}
       dataClassName={'mt-5'}
     />
   );
@@ -37,7 +37,7 @@ const AztecTxCardLoading: FC = () => {
     <MetricsCardItem
       title="Total amount of tx"
       data="Loading..."
-      className={'animate-pulse pb-6 pt-2.5'}
+      className={'animate-pulse bg-table_row pb-6 pt-2.5'}
       dataClassName={'mt-5'}
     />
   );
@@ -57,7 +57,7 @@ const AztecBlocksSlotsEpochs: FC<AztecMetricsProps> = async ({ chainName }) => {
         <MetricsCardItem
           title={t('total amount of blocks')}
           data={totalBlocks}
-          className={'pb-6 pt-2.5'}
+          className={'bg-table_row pb-6 pt-2.5'}
           dataClassName={'mt-5'}
         />
       )}
@@ -65,7 +65,7 @@ const AztecBlocksSlotsEpochs: FC<AztecMetricsProps> = async ({ chainName }) => {
         <MetricsCardItem
           title={t('total amount of slots')}
           data={totalSlots}
-          className={'pb-6 pt-2.5'}
+          className={'bg-table_row pb-6 pt-2.5'}
           dataClassName={'mt-5'}
         />
       )}
@@ -73,7 +73,7 @@ const AztecBlocksSlotsEpochs: FC<AztecMetricsProps> = async ({ chainName }) => {
         <MetricsCardItem
           title={t('total amount of epochs')}
           data={totalEpochs}
-          className={'pb-6 pt-2.5'}
+          className={'bg-table_row pb-6 pt-2.5'}
           dataClassName={'mt-5'}
         />
       )}
@@ -94,7 +94,7 @@ const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
         <MetricsCardItem
           title={t('amount of wallets')}
           data={chain?.walletsAmount?.toLocaleString() ?? 'N/A'}
-          className={'pb-6 pt-2.5'}
+          className={'bg-table_row pb-6 pt-2.5'}
           dataClassName={'mt-5'}
         />
         {chain?.name === 'aztec' ? (
@@ -105,7 +105,7 @@ const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
           <MetricsCardItem
             title={t('total amount of tx')}
             data="N/A"
-            className={'pb-6 pt-2.5'}
+            className={'bg-table_row pb-6 pt-2.5'}
             dataClassName={'mt-5'}
           />
         )}
@@ -116,7 +116,7 @@ const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
               {`${formatCash(totalSupply)} ${chain?.params?.denom}`}
             </Tooltip>
           }
-          className={'pb-6 pt-2.5'}
+          className={'bg-table_row pb-6 pt-2.5'}
           dataClassName={'mt-5'}
         />
       </div>
