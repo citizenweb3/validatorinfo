@@ -88,7 +88,6 @@ const CustomBar: FC<CustomBarProps> = ({ value }) => {
                 let tickColor = "#1E1E1E";
                 if (i === 0) tickColor = "#EB1616";
                 if (i === steps) tickColor = "#4FB848";
-                if (i === Math.round(clampedValue / 10)) tickColor = color;
 
                 // Thicker ticks for 0, 5, and 10
                 const isThick = [0, 5, steps].includes(i);
@@ -121,6 +120,22 @@ const CustomBar: FC<CustomBarProps> = ({ value }) => {
                     </g>
                 );
             })}
+
+            {/* Active tick (moves with pointer) */}
+            <line
+                x1={cx}
+                y1={cy - 80}
+                x2={cx}
+                y2={cy - 105}
+                stroke={color}
+                strokeWidth={5}
+                strokeLinecap="round"
+                style={{
+                    transform: `rotate(${angle}deg)`,
+                    transformOrigin: `${cx}px ${cy}px`,
+                    transition: 'transform 0.7s ease-in-out',
+                }}
+            />
 
             {/* Pointer (smaller tick) */}
             <line
