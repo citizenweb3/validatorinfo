@@ -21,7 +21,7 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
 
   return (
     <div className="flex w-full flex-col gap-1">
-      <div className="flex items-center justify-between rounded bg-card px-10 py-2 my-1">
+      <div className="flex items-center justify-between rounded bg-card px-10 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight">
         <span className="font-sfpro text-base">{t('validator cost')}</span>
         <div className="flex items-center">
           <span className="font-handjet text-lg mr-3">
@@ -31,7 +31,10 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
         </div>
       </div>
       {networkProfileExample.headerMetrics.map((item) => (
-        <div key={item.title} className="flex items-center justify-between rounded bg-card px-10 py-2 my-1">
+        <div
+          key={item.title}
+          className="flex items-center justify-between rounded bg-card px-10 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight"
+        >
           <span className="font-sfpro text-base">{t(item.title as 'tvl')}</span>
           <div className="flex items-center">
             <span className="font-handjet text-lg mr-3">{item.data}</span>

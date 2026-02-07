@@ -130,7 +130,11 @@ const CustomBar: FC<CustomBarProps> = ({ value }) => {
                 y2={cy - (innerR - 50)} // Smaller: radius 90
                 stroke={color}
                 strokeWidth={3}
-                transform={`rotate(${angle} ${cx} ${cy})`}
+                style={{
+                    transform: `rotate(${angle}deg)`,
+                    transformOrigin: `${cx}px ${cy}px`,
+                    transition: 'transform 0.7s ease-in-out',
+                }}
             />
 
             {/* Center cap */}

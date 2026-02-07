@@ -1,4 +1,6 @@
-import { FC } from 'react';
+'use client';
+
+import { FC, useState } from 'react';
 
 import CustomBar from '@/components/customSVG/infoBar';
 
@@ -8,10 +10,19 @@ interface GaugeBarProps {
 }
 
 const GaugeBar: FC<GaugeBarProps> = ({ value, label }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
   return (
-    <div className="group flex cursor-pointer flex-col items-center justify-center space-y-6 text-lg">
+    <div
+      className="group flex cursor-pointer flex-col items-center justify-center space-y-6 text-lg"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="w-82 transition-transform duration-150 group-active:translate-y-1 group-active:scale-[0.97]">
-        <CustomBar value={value} />
+        <CustomBar value={isHovered ? 100 : value} />
       </div>
       <div>{label}</div>
     </div>
