@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 
 import CustomBar from '@/components/customSVG/infoBar';
 
@@ -11,28 +11,45 @@ interface GaugeBarProps {
 
 const GaugeBar: FC<GaugeBarProps> = ({ value, label }) => {
   const [animatedValue, setAnimatedValue] = useState(value);
+  const isAnimating = useRef(false);
+  const timersRef = useRef<NodeJS.Timeout[]>([]);
 
-  useEffect(() => {
+  const triggerAnimation = useCallback(() => {
+    if (isAnimating.current) return;
+    isAnimating.current = true;
+
     const overshootValue = Math.min(value + 10, 100);
 
     const overshootTimer = setTimeout(() => {
       setAnimatedValue(overshootValue);
-    }, 300);
+    }, 100);
 
     const returnTimer = setTimeout(() => {
       setAnimatedValue(value);
-    }, 1000);
+      isAnimating.current = false;
+    }, 700);
 
-    return () => {
-      clearTimeout(overshootTimer);
-      clearTimeout(returnTimer);
-    };
+    timersRef.current = [overshootTimer, returnTimer];
   }, [value]);
 
+  useEffect(() => {
+    triggerAnimation();
+
+    return () => {
+      timersRef.current.forEach(clearTimeout);
+      isAnimating.current = false;
+    };
+  }, [triggerAnimation]);
+
+  const handleMouseEnter = () => triggerAnimation();
+
   return (
-    <div className="group flex cursor-pointer flex-col items-center justify-center space-y-6 text-lg">
+    <div
+      className="group flex cursor-pointer flex-col items-center justify-center space-y-6 text-lg"
+      onMouseEnter={handleMouseEnter}
+    >
       <div className="w-82 transition-transform duration-150 group-active:translate-y-1 group-active:scale-[0.97]">
-        <CustomBar value={animatedValue} />
+        <CustomBar value={value} pointerValue={animatedValue} />
       </div>
       <div>{label}</div>
     </div>
