@@ -2,9 +2,10 @@ import React, { FC, useMemo } from 'react';
 
 interface CustomBarProps {
     value: number;
+    pointerValue?: number;
 }
 
-const CustomBar: FC<CustomBarProps> = ({ value }) => {
+const CustomBar: FC<CustomBarProps> = ({ value, pointerValue }) => {
     const color = "#E5C46B";
     const cx = 148;
     const cy = 148;
@@ -18,9 +19,10 @@ const CustomBar: FC<CustomBarProps> = ({ value }) => {
 
     // Clamp value between 0 and 100
     const clampedValue = Math.max(0, Math.min(100, Math.round(value)));
+    const clampedPointerValue = Math.max(0, Math.min(100, Math.round(pointerValue ?? value)));
 
     // Compute pointer angle: -70° at value 0, 70° at value 100, increment by 1.4° per value
-    const angle = -70 + (clampedValue * 1.4);
+    const angle = -70 + (clampedPointerValue * 1.4);
 
     // Memoize tick angles
     const tickAngles = useMemo(
@@ -130,7 +132,11 @@ const CustomBar: FC<CustomBarProps> = ({ value }) => {
                 y2={cy - (innerR - 50)} // Smaller: radius 90
                 stroke={color}
                 strokeWidth={3}
-                transform={`rotate(${angle} ${cx} ${cy})`}
+                style={{
+                    transform: `rotate(${angle}deg)`,
+                    transformOrigin: `${cx}px ${cy}px`,
+                    transition: 'transform 0.4s ease-in-out',
+                }}
             />
 
             {/* Center cap */}

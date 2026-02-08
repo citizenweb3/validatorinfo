@@ -10,6 +10,7 @@ import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import nodeService from '@/services/node-service';
 
 import PowerBarChart from './validatorVotingPercentage';
+import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
@@ -32,7 +33,7 @@ interface DistributionRowProps {
 }
 
 const DistributionRow: FC<DistributionRowProps> = ({ label, value, color, href }) => (
-  <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
+  <div className="mt-2 flex w-full flex-wrap bg-table_row border-b border-bgSt">
     <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">{label}</div>
     <div style={{ color }} className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg">
       {href ? (
@@ -127,14 +128,19 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
         <div className={isAztec && nodeDistribution ? 'w-3/4' : 'w-4/5'}>
           <Image
             src={'/img/charts/operator-distribution-coef.svg'}
-            width={960}
-            height={190}
+            width={990}
+            height={210}
             alt="coefficients"
-            className="ml-24 mt-1.5"
+            className="ml-20 mt-1.5"
           />
         </div>
       </div>
-      <div className="ml-16 mt-20 flex">
+      <div className="mt-10 mr-24 flex justify-end">
+        <RoundedButton contentClassName={'text-lg'}>
+          {t('distribution map')}
+        </RoundedButton>
+      </div>
+      <div className="mt-16 flex">
         <PowerBarChart data={data} />
       </div>
     </div>

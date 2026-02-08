@@ -309,7 +309,8 @@
     "followers tooltip": "Amount of Twitter (X) followers",
     "members": "Members",
     "Transaction Volume": "Transaction Volume + MAU",
-    "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete."
+    "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete.",
+    "distribution map": "Distributrion Map"
   },
   "NetworkGovernance": {
     "title": "Governance Portal: Network Voting",
@@ -443,13 +444,17 @@
         }
       },
       "no repositories": "No Repositories"
-    }
+    },
+    "distribution map": "Distributrion Map"
   },
   "NetworkTokenomics": {
     "title": "Tokenomics: Analysis of the Network's Crypto Economy",
     "description": "Let's dive into tokens! The Tokenomics tab breaks down this network's crypto economy—think token staking rewards, supply stats, distribution details and Gini Coefficient. Slick charts to show Revenue flows and Capital moves in real time. Need a deeper look? Pair it with our Staking Reward Calculator!",
     "Token Price": "Token Price",
     "Supply Concentration": "Supply Concentration",
+    "Token Flow": "Token Flow",
+    "pending undelegations": "Pending Undelegations",
+    "circulating tokens %": "Circulating Tokens %",
     "Distribution": "Distribution",
     "Gini Coefficient": "Gini Coefficient",
     "number of validators": "Number of Validators",
@@ -462,7 +467,10 @@
     "reward to payout": "Reward to Payout",
     "Revenue vs Capital Flow": "Revenue VS Capital Flow",
     "circulating tokens public tooltip": "Received and calculated by public chain data",
-    "circulating tokens onchain tooltip": "Received and calculated by onchain data"
+    "circulating tokens onchain tooltip": "Received and calculated by onchain data",
+    "Params": "Params",
+    "Token": "TOKEN",
+    "No chart data available": "No chart data available"
   },
   "NetworkValidatorsPage": {
     "title": "Blockchain Validator Summary",

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
-import RoundedButton from '@/components/common/rounded-button';
 import icons from '@/components/icons';
 import { ChainWithParams } from '@/services/chain-service';
 import githubService, { DailyActivity } from '@/services/github-service';
@@ -103,11 +102,6 @@ const PeersSeedsBlocks: FC<OwnProps> = async ({ chain }) => {
           isModal
           modalItem={binariesList}
         />
-      </div>
-      <div className="-mt-11 flex justify-end">
-        <RoundedButton className="text-lg" contentClassName="px-14">
-          {t('Submit App Info')}
-        </RoundedButton>
       </div>
     </div>
   );

@@ -2,11 +2,9 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import DeveloperActivityChart from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-chart';
-import DeveloperActivityTable from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table';
 import SubTitle from '@/components/common/sub-title';
-import TableDropdown from '@/components/common/table-dropdown';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
-import githubService, { GithubRepositoryWithCommitCount } from '@/services/github-service';
+import githubService from '@/services/github-service';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
@@ -20,7 +18,6 @@ const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
   }
 
   const stats = await githubService.getStats(chain.id);
-  const repositories = await githubService.getRepositoriesWithCommits(chain.id);
   const activityData = await githubService.getActivityData(chain.id);
 
   return (
@@ -44,14 +41,9 @@ const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
           <div className="font-handjet text-xl">{stats.mostActiveRepoCommits}</div>
         </div>
       </div>
-      <div className="mx-12 mb-20">
+      <div className="mx-12 mb-10">
         <DeveloperActivityChart activityData={activityData} />
       </div>
-      <TableDropdown<GithubRepositoryWithCommitCount[]>
-        page="NetworkDevInfo.DeveloperActivity"
-        Table={DeveloperActivityTable}
-        items={repositories}
-      />
     </div>
   );
 };

@@ -110,8 +110,9 @@ model Chain {
 
   chainNodes ChainNode[] @relation("chain_node")
   aprs       Apr[]       @relation("chain_apr")
-  prices     Price[]     @relation("chain_price")
-  nodes      Node[]      @relation("chain_validator_node")
+  prices       Price[]        @relation("chain_price")
+  priceHistory PriceHistory[] @relation("chain_price_history")
+  nodes        Node[]         @relation("chain_validator_node")
 
   tokenomics Tokenomics?  @relation("chain_tokenomics")
   params     ChainParams? @relation("chain_params")
@@ -226,6 +227,19 @@ model Price {
   chain Chain @relation("chain_price", fields: [chainId], references: [id])
 
   @@map("prices")
+}
+
+model PriceHistory {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  value     Float    @default(0)
+  date      DateTime @map("date") @db.Date
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_price_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@map("price_history")
 }
 
 model Tokenomics {

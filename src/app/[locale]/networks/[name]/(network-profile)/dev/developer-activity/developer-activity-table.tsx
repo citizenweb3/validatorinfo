@@ -45,12 +45,12 @@ const DeveloperActivityTable: FC<OwnProps> = ({ items }) => {
   }, [items, sortBy, sortOrder]);
 
   if (!items || items.length === 0) {
-    return <div className="mt-4 py-8 text-center font-sfpro text-lg">{t('no repositories')}</div>;
+    return <div className="my-20 py-8 text-center font-sfpro text-lg bg-table_row">{t('no repositories')}</div>;
   }
 
   return (
     <div>
-      <BaseTable className="mt-4">
+      <BaseTable className="my-12">
         <thead>
           <tr className="bg-table_header">
             <th
