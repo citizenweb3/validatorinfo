@@ -15,11 +15,9 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
   const isAztecChain = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
 
   return (
-    <div className="mt-12">
-      <SubTitle text={t('Parameters')} />
-
+    <div>
       {chain?.params?.bech32Prefix && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('bech32 prefix')}
           </div>
@@ -31,7 +29,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
       )}
 
       {chain?.params?.daemonName && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('daemon name')}
           </div>
@@ -43,7 +41,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
       )}
 
       {chain?.params?.nodeHome && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('node home')}
           </div>
@@ -55,7 +53,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
       )}
 
       {chain?.params?.coinType !== undefined && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('slip44')}
           </div>
@@ -67,7 +65,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
       )}
 
       {chain?.params?.keyAlgos && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('key algosz')}
           </div>
@@ -79,7 +77,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
       )}
 
       {chain?.params?.genesis && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('genesis url')}
           </div>
@@ -91,7 +89,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
       )}
 
       {chain?.chainId && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('chain id')}
           </div>
@@ -103,7 +101,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
       )}
 
       {chain?.params?.denom && (
-        <div className="mt-4 flex w-full hover:bg-bgHover">
+        <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('denom')}
           </div>

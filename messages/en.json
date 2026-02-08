@@ -444,7 +444,8 @@
         }
       },
       "no repositories": "No Repositories"
-    }
+    },
+    "distribution map": "Distributrion Map"
   },
   "NetworkTokenomics": {
     "title": "Tokenomics: Analysis of the Network's Crypto Economy",

@@ -444,7 +444,8 @@
         }
       },
       "no repositories": "Нет Репозиториев"
-    }
+    },
+    "distribution map": "Карта дистрибьюции"
   },
   "NetworkTokenomics": {
     "title": "Токеномика: Анализ криптоэкономики сети",

@@ -28,7 +28,7 @@ const RoundedButton: FC<PropsWithChildren<OwnProps>> = ({
 }) => {
   let content = (
     <div
-      className={`${contentClassName} relative flex h-full items-center justify-center px-6 py-2 font-handjet tracking-wide`}
+      className={`${contentClassName} relative flex h-full items-center justify-center px-10 py-2 font-handjet tracking-normal`}
     >
       {children}
     </div>

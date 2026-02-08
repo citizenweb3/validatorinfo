@@ -47,7 +47,7 @@ const L1ContractsSection: FC<OwnProps> = ({ contractsJson, chainName }): ReactEl
         <SubTitle text="L1 Contracts" />
       </div>
       {Object.entries(l1Contracts).map(([key, address]) => (
-        <div key={key} className="mt-4 flex w-full hover:bg-bgHover">
+        <div key={key} className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {contractNames[key] || key}
           </div>

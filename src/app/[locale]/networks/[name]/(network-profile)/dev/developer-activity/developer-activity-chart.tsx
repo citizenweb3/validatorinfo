@@ -74,7 +74,7 @@ const DeveloperActivityChart: FC<OwnProps> = ({ activityData, startWeekOn = 1 })
   const getColor = (level: number | undefined): string => {
     switch (level) {
       case 0:
-        return '#2d2d2d';
+        return '#181818';
       case 1:
         return '#0e4429';
       case 2:
@@ -84,7 +84,7 @@ const DeveloperActivityChart: FC<OwnProps> = ({ activityData, startWeekOn = 1 })
       case 4:
         return '#39d353';
       default:
-        return '#2d2d2d';
+        return '#181818';
     }
   };
 
