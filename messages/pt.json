@@ -452,6 +452,9 @@
     "description": "Vamos mergulhar nos tokens! A aba de Tokenomics detalha a economia cripto desta rede — pense nas recompensas de staking de tokens, estatísticas de oferta, detalhes de distribuição e no Coeficiente de Gini. Gráficos modernos mostram os fluxos de receita e os movimentos de capital em tempo real. Precisa de uma análise mais aprofundada? Combine com nossa Calculadora de Recompensas de Staking!",
     "Token Price": "Preço do Token",
     "Supply Concentration": "Concentração da oferta",
+    "Token Flow": "Fluxo de Tokens",
+    "pending undelegations": "Delegações Pendentes",
+    "circulating tokens %": "Tokens em Circulação %",
     "Distribution": "Distribuição",
     "Gini Coefficient": "Coeficiente de Gini",
     "number of validators": "Número de Validadores",
@@ -464,7 +467,9 @@
     "circulating tokens public tooltip": "Recebido e calculado com base em dados públicos da blockchain",
     "circulating tokens onchain tooltip": "Recebido e calculado com base em dados on-chain",
     "inflation rate": "Taxa de inflação",
-    "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
+    "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital",
+    "Params": "Params",
+    "Token": "TOKEN"
   },
   "NetworkValidatorsPage": {
     "title": "Resumo dos Validadores Blockchain",

@@ -19,9 +19,9 @@ export interface PriceData {
 const generateThreeYearsData = (chainId: number): PriceData[] => {
   const data: PriceData[] = [];
   const hoursInThreeYears = 3 * 365 * 24; // 26,280 hours
-  const averagePrice = 3;
-  const minPrice = 2;
-  const maxPrice = 4;
+  const averagePrice = 1.5;
+  const minPrice = 0.5;
+  const maxPrice = 2.5;
 
   // Start date: 3 years ago from now
   const endDate = new Date();

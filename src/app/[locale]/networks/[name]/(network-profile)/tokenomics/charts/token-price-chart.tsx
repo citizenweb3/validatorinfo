@@ -216,7 +216,7 @@ const TokenPriceChart: FC<TokenPriceChartProps> = ({ priceHistory, chainName }) 
     () => ({
       width,
       height: 330,
-      margin: { top: 30, right: 0, bottom: 30, left: 0 },
+      margin: { top: 10, right: 0, bottom: 30, left: 0 },
       padding: { left: 0, right: 0, top: 0, bottom: 0 },
       gapLeft: 0,
       gapRight: 60,
@@ -420,14 +420,14 @@ const TokenPriceChart: FC<TokenPriceChartProps> = ({ priceHistory, chainName }) 
       yScale,
       chartConfig,
       tooltipConfig,
-      (value) => `$${formatNumber(value)}`,
+      (value) => `$${value.toFixed(2)}`,
       colorMap,
       padding.left,
       padding.top,
       plotWidth,
       plotHeight,
       chartType,
-      true
+      false
     );
   };
 
@@ -559,8 +559,8 @@ const TokenPriceChart: FC<TokenPriceChartProps> = ({ priceHistory, chainName }) 
           background: #9ca3af;
         }
       `}</style>
-      <div className="mt-3 mb-12">
-        <div className="flex items-center justify-center">
+      <div>
+        <div className="flex items-start justify-start mt-2 ml-20">
           <ChartButtons
             onlyDays
             ecosystems={false}
@@ -572,10 +572,9 @@ const TokenPriceChart: FC<TokenPriceChartProps> = ({ priceHistory, chainName }) 
         </div>
 
         {isChart ? (
-          <div className="mt-5 ml-20" style={{
+          <div className="" style={{
             position: 'relative',
             width: '100%',
-            maxWidth: 'calc(100vw - 500px)',
             overflow: 'hidden',
             paddingLeft: '1rem',
             paddingRight: '1rem',
@@ -585,11 +584,11 @@ const TokenPriceChart: FC<TokenPriceChartProps> = ({ priceHistory, chainName }) 
               position: 'relative',
               width: '100%',
               height: '345px',
-              backgroundColor: '#1E1E1E',
             }}>
               {/* Fixed Y-axis container */}
               <div
                 ref={chartRef}
+                className="bg-background"
                 style={{
                   position: 'absolute',
                   left: '0',
@@ -597,7 +596,18 @@ const TokenPriceChart: FC<TokenPriceChartProps> = ({ priceHistory, chainName }) 
                   width: '60px',
                   height: '330px',
                   zIndex: 10,
-                  backgroundColor: '#1E1E1E',
+                }}
+              />
+
+              {/* Plot area background (only chart, not axes) */}
+              <div
+                className="bg-table_row"
+                style={{
+                  position: 'absolute',
+                  left: '60px',
+                  top: '10px',
+                  right: '0',
+                  height: '290px',
                 }}
               />
 

@@ -22,7 +22,7 @@ const EpochProgressBar: FC<EpochProgressBarProps> = ({
         <span className="font-handjet text-xl text-highlight">Epoch {currentEpoch}</span>
       </div>
 
-      <div className="relative h-8 w-full overflow-hidden rounded-sm bg-table_row">
+      <div className="relative h-10 w-full overflow-hidden rounded-sm bg-table_row">
         <div
           className="h-full rounded-sm transition-all duration-500"
           style={{
