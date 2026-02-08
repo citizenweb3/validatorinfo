@@ -16,13 +16,13 @@ const EpochProgressBar: FC<EpochProgressBarProps> = ({
   slotsRemaining,
 }) => {
   return (
-    <div className="w-[80%] my-20">
+    <div className="w-[80%] my-16">
       <div className="mb-3 flex items-center justify-between">
         <span className="font-sfpro text-lg">Epoch Progress</span>
         <span className="font-handjet text-xl text-highlight">Epoch {currentEpoch}</span>
       </div>
 
-      <div className="relative h-6 w-full overflow-hidden rounded-sm bg-table_row">
+      <div className="relative h-8 w-full overflow-hidden rounded-sm bg-table_row">
         <div
           className="h-full rounded-sm transition-all duration-500"
           style={{
