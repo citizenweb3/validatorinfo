@@ -73,7 +73,7 @@ const LiveProposals: FC<OwnProps> = ({ proposals, chainName }) => {
               const { yes, no, abstain, veto } = getVotingPercentages(proposal);
 
               return (
-                <div key={proposal.proposalId} className="mt-2 flex border-b border-bgSt pb-9">
+                <div key={proposal.proposalId} className="mt-2 flex border-b border-bgSt pb-9 bg-table_row">
                   <div className="ml-4 w-3/5 text-base">
                     <div className="mb-5 hover:underline hover:underline-offset-2">
                       <Link href={`/networks/${chainName}/proposal/${proposal.proposalId}`}>

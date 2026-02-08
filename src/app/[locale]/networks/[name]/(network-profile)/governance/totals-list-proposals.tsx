@@ -25,7 +25,7 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals, chain }) => {
 
   return (
     <div>
-      <div className="mt-8 flex w-full flex-row justify-center gap-6">
+      <div className="mt-8 flex w-full flex-row justify-start items-start gap-6">
         <ToolTip tooltip={t('total tooltip')} direction={'top'}>
           <MetricsCardItem title={t('total')}
                            data={proposals.length}
@@ -42,7 +42,7 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals, chain }) => {
                          dataClassName={'mt-5'} />
       </div>
       {chain?.name !== 'aztec' && chain?.name !== 'aztec-mainnet' && (
-        <div className="mt-8 flex w-full flex-row justify-center gap-6">
+        <div className="mt-8 flex w-full flex-row justify-start items-start gap-6">
           {participationRate && (
             <MetricsCardItem title={t('voting participation rate')}
                              data={participationRate}

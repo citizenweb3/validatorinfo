@@ -78,6 +78,23 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
       <div className="mb-6">
         <PageTitle prefix={chain.prettyName ?? 'Network'} text={t('title')} />
         <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+        <div className="flex flex-row gap-20">
+          <GovernanceTokenDistribution />
+          <div>
+            <TotalsListProposals proposals={proposalsList} chain={chain} />
+            <AztecGovernanceConfig chain={chain} />
+          </div>
+        </div>
+        <div className="mt-8">
+          <LiveProposals proposals={proposalsList} chainName={name} />
+          <NetworkProposals
+            page={'VotingSummaryPage'}
+            perPage={proposalsPerPage}
+            currentPage={proposalsCurrentPage}
+            sort={{ sortBy: proposalsSortBy, order: proposalsOrder }}
+            chain={chain}
+          />
+        </div>
         <SubTitle text={t('current committee')} />
         <CommitteeTable
           chain={chain}
@@ -113,21 +130,6 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
             </div>
           )}
         </div>
-
-        <AztecGovernanceConfig chain={chain} />
-
-        <div className="mt-8">
-          <SubTitle text={t('proposals-title')} />
-          <TotalsListProposals proposals={proposalsList} chain={chain} />
-          <LiveProposals proposals={proposalsList} chainName={name} />
-          <NetworkProposals
-            page={'VotingSummaryPage'}
-            perPage={proposalsPerPage}
-            currentPage={proposalsCurrentPage}
-            sort={{ sortBy: proposalsSortBy, order: proposalsOrder }}
-            chain={chain}
-          />
-        </div>
       </div>
     );
   }
@@ -142,8 +144,10 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
     <div className="mb-6">
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <TotalsListProposals proposals={proposalsList} chain={chain} />
-      <GovernanceTokenDistribution />
+      <div className="flex flex-row gap-20">
+        <GovernanceTokenDistribution />
+        <TotalsListProposals proposals={proposalsList} chain={chain} />
+      </div>
       <LiveProposals proposals={proposalsList} chainName={name} />
       <NetworkProposals
         page={'VotingSummaryPage'}

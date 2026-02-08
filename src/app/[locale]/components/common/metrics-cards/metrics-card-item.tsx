@@ -41,7 +41,7 @@ const MetricsCardItem: FC<OwnProps> = ({
       md:w-[150px] 
       lg:w-[180px] 
       xl:w-[200px] 
-      2xl:w-[270px]
+      2xl:w-[250px]
       ${className}`)
     }>
       <div className={`${titleClassName} text-center text-base text-highlight`}>{title}</div>
