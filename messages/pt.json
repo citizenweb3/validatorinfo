@@ -469,7 +469,8 @@
     "inflation rate": "Taxa de inflação",
     "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital",
     "Params": "Params",
-    "Token": "TOKEN"
+    "Token": "TOKEN",
+    "No chart data available": "Dados do gráfico indisponíveis"
   },
   "NetworkValidatorsPage": {
     "title": "Resumo dos Validadores Blockchain",

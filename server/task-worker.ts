@@ -5,6 +5,7 @@ import checkNodesHealth from '@/server/jobs/check-nodes-health';
 import getChainUptime from '@/server/jobs/get-chain-uptime';
 import { getCoingeckoData } from '@/server/jobs/get-coingecko-data';
 import getNodes from '@/server/jobs/get-nodes';
+import { getPriceHistory } from '@/server/jobs/get-price-history';
 import { getPrices } from '@/server/jobs/get-prices';
 import matchChainNodes from '@/server/jobs/match-chain-nodes';
 import syncAztecCommittee from '@/server/jobs/sync-aztec-committee';
@@ -98,6 +99,9 @@ async function runTask() {
         break;
       case 'coingecko-data':
         await getCoingeckoData();
+        break;
+      case 'price-history':
+        await getPriceHistory();
         break;
       case 'proposal-params':
         await updateProposalParams(chains);

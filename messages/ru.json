@@ -469,7 +469,8 @@
     "inflation rate": "Уровень Инфляции",
     "Revenue vs Capital Flow": "Выручка VS Движение капитала",
     "Params": "Параметры",
-    "Token": "ТОКЕН"
+    "Token": "ТОКЕН",
+    "No chart data available": "Данные графика недоступны"
   },
   "NetworkValidatorsPage": {
     "title": "Обзор валидаторов блокчейна",

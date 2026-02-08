@@ -469,7 +469,8 @@
     "circulating tokens public tooltip": "Received and calculated by public chain data",
     "circulating tokens onchain tooltip": "Received and calculated by onchain data",
     "Params": "Params",
-    "Token": "TOKEN"
+    "Token": "TOKEN",
+    "No chart data available": "No chart data available"
   },
   "NetworkValidatorsPage": {
     "title": "Blockchain Validator Summary",
