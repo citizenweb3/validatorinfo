@@ -87,6 +87,9 @@ import NetworkSupplyHovered from '@/public/img/icons/network-profile-icons/netwo
 import NetworkProfilePlanet from '@/public/img/icons/network-profile-planet.png';
 import NetworkProfilePlanetHovered from '@/public/img/icons/network-profile-planet-h.png';
 import NetworkProfilePlanetActive from '@/public/img/icons/network-profile-planet-a.png';
+import NetworkProfileHeaderTxs from '@/public/img/icons/network-profile-icons/network-profile-header-txs.png';
+import NetworkProfileHeaderTxsHovered from '@/public/img/icons/network-profile-icons/network-profile-header-txs-h.png';
+
 
 const icons = {
   AboutIcon,
@@ -178,6 +181,8 @@ const icons = {
   NetworkProfilePlanet,
   NetworkProfilePlanetHovered,
   NetworkProfilePlanetActive,
+  NetworkProfileHeaderTxs,
+  NetworkProfileHeaderTxsHovered,
 };
 
 export default icons;

@@ -83,9 +83,9 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
             <Tooltip tooltip={t('Transactions')} direction="top">
               <Link href={`/networks/${chainName}/tx`}>
                 <div className={iconBtnClass}>
-                  <Image src={icons.TxSummary} alt={t('Transactions')} width={40} height={40}
+                  <Image src={icons.NetworkProfileHeaderTxs} alt={t('Transactions')} width={40} height={40}
                          className="group-hover/btn:hidden" />
-                  <Image src={icons.TxSummaryHovered} alt={t('Transactions')} width={40} height={40}
+                  <Image src={icons.NetworkProfileHeaderTxsHovered} alt={t('Transactions')} width={40} height={40}
                          className="hidden group-hover/btn:block" />
                 </div>
               </Link>
