@@ -20,7 +20,7 @@ import { ChartDataPoint, PeriodType } from '@/services/aztec-db-service';
 import { shadowPlugin } from '@/components/chart/chart-shadow-plugin';
 import { crosshairPlugin } from '@/components/chart/chart-crosshair-plugin';
 import { chartAreaBackgroundPlugin } from '@/components/chart/chart-area-background-plugin';
-import ChartButtons from '@/app/comparevalidators/chart-buttons';
+import { cn } from '@/utils/cn';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler, zoomPlugin, shadowPlugin, crosshairPlugin, chartAreaBackgroundPlugin);
 
@@ -347,6 +347,9 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
         border: {
           color: '#3E3E3E',
         },
+        afterFit: (axis) => {
+          axis.width = 50;
+        },
         position: 'left',
         beginAtZero: true,
         max: initialYMax,
@@ -367,6 +370,9 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
         border: {
           color: '#3E3E3E',
         },
+        afterFit: (axis) => {
+          axis.width = 40;
+        },
         position: 'right',
         beginAtZero: true,
         max: initialY1Max,
@@ -385,28 +391,41 @@ const NetworkTvsAztecChart: FC<OwnProps> = ({ initialData }) => {
     }
   };
 
+  const periodButtons = ['Daily', 'Weekly', 'Monthly', 'Yearly'] as const;
+
   return (
     <div className="w-full">
-      <div className="mb-3 flex justify-center">
-        <ChartButtons
-          isChart={false}
-          chartType={chartType}
-          onChartChanged={() => {}}
-          onTypeChanged={handleTypeChanged}
-          onlyDays={true}
-        />
-      </div>
-
       <div
         className="relative"
         style={{
           height: '400px',
-          padding: '30px 20px 20px 20px',
+          padding: '10px 20px 20px 20px',
         }}
       >
+        <div className="absolute left-[70px] top-[5px] z-10 flex items-center gap-2 bg-[#181818] font-handjet">
+          {periodButtons.map((name) => (
+            <button
+              key={name}
+              type="button"
+              aria-label={`Switch to ${name} view`}
+              className={cn(
+                'min-w-9 p-px',
+                chartType === name
+                  ? 'border border-[#3e3e3e] text-highlight shadow-button'
+                  : 'hover:text-highlight',
+              )}
+              onClick={() => handleTypeChanged(name)}
+            >
+              <div className="flex items-center justify-center px-2 py-0 text-base leading-6 hover:text-highlight">
+                {name}
+              </div>
+            </button>
+          ))}
+        </div>
+
         {data.length === 0 ? (
-          <div className="flex h-full items-center justify-center">
-            <div className="font-sfpro text-lg text-white opacity-70">No chart data available</div>
+          <div className="flex h-full items-center justify-center rounded border border-[#3E3E3E] bg-table_row ml-10">
+            <p className="font-sfpro text-base text-white/70">Data is currently unavailable</p>
           </div>
         ) : (
           <Line ref={chartRef} data={chartData} options={options} />

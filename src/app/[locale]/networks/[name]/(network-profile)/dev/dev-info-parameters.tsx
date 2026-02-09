@@ -2,13 +2,48 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import CopyButton from '@/components/common/copy-button';
 import { ChainWithParams } from '@/services/chain-service';
+import { L1ContractAddresses } from '@/server/tools/chains/aztec/utils/get-l1-contract-addresses';
+import L1ContractsCollapsible from './l1-contracts-collapsible';
 
 interface OwnProps {
   chain: ChainWithParams | null;
 }
 
+const contractNames: Record<string, string> = {
+  registryAddress: 'Registry',
+  rollupAddress: 'Rollup',
+  inboxAddress: 'Inbox',
+  outboxAddress: 'Outbox',
+  feeJuiceAddress: 'Fee Juice',
+  stakingAssetAddress: 'Staking Asset',
+  feeJuicePortalAddress: 'Fee Juice Portal',
+  coinIssuerAddress: 'Coin Issuer',
+  rewardDistributorAddress: 'Reward Distributor',
+  governanceProposerAddress: 'Governance Proposer',
+  governanceAddress: 'Governance',
+  gseAddress: 'GSE',
+};
+
+const parseL1Contracts = (chain: ChainWithParams | null): [string, string][] | null => {
+  const isAztecChain = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
+  if (!isAztecChain || !chain?.params || !('l1ContractsAddresses' in chain.params) || !chain.params.l1ContractsAddresses) {
+    return null;
+  }
+  try {
+    const parsed = JSON.parse(chain.params.l1ContractsAddresses as string) as L1ContractAddresses;
+    return Object.entries(parsed);
+  } catch {
+    return null;
+  }
+};
+
 const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkDevInfo');
+
+  const l1Contracts = parseL1Contracts(chain);
+  const etherscanBaseUrl = chain?.name === 'aztec-testnet'
+    ? 'https://sepolia.etherscan.io'
+    : 'https://etherscan.io';
 
   return (
     <div>
@@ -106,6 +141,18 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
             <CopyButton value={String(chain.params.denom)} size="md" />
           </div>
         </div>
+      )}
+
+      {l1Contracts && (
+        <L1ContractsCollapsible
+          title={t('l1 contracts')}
+          contracts={l1Contracts.map(([key, address]) => ({
+            key,
+            name: contractNames[key] || key,
+            address,
+          }))}
+          etherscanBaseUrl={etherscanBaseUrl}
+        />
       )}
     </div>
   );

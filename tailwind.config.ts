@@ -166,6 +166,7 @@ const config: Config = {
         console_menu_arrow: `url('/img/icons/console-menu-arrow.svg')`,
         joystick_arrow: `url('/img/icons/joystick-arrow.svg')`,
         joystick_arrow_a: `url('/img/icons/joystick-arrow-a.svg')`,
+        joystick_arrow_light: `url('/img/icons/joystick-arrow-light.svg')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',

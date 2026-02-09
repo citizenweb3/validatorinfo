@@ -90,7 +90,7 @@ const TokenomicsParams: FC<OwnProps> = ({
         </div>
       )}
 
-      <div className="flex w-full flex-wrap justify-center gap-6 mt-6">
+      <div className="grid grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(4,auto)] gap-6 justify-center w-full mt-6">
         <MetricsCardItem
           title={t.communityPoolTvl}
           data={communityPoolData}

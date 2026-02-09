@@ -49,6 +49,7 @@ const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <SubTitle text={t('Parameters')} />
       <DevInfoParameters chain={chain} />
+      <PeersSeedsBlocks chain={chain} />
       <DevRepositoryToggle
         subtitleText={tActivity('Subtitle')}
         showLabel={tActivity('show dropdown')}
@@ -57,7 +58,6 @@ const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
       >
         <DeveloperActivity chain={chain} />
       </DevRepositoryToggle>
-      <PeersSeedsBlocks chain={chain} />
 
       {/*// will be replaced to another page*/}
       {/*<NetworkApps page={'NetworkDevInfo.Apps'}*/}
