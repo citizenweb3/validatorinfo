@@ -9,7 +9,6 @@ import DeveloperActivityTable
   from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table';
 import DevInfoParameters from '@/app/networks/[name]/(network-profile)/dev/dev-info-parameters';
 import PeersSeedsBlocks from '@/app/networks/[name]/(network-profile)/dev/peers-seeds-blocks';
-import NetworkApps from '@/app/networks/[name]/(network-profile)/dev/apps-list/apps';
 import SubDescription from '@/components/sub-description';
 import { SortDirection } from '@/server/types';
 import githubService from '@/services/github-service';
@@ -31,8 +30,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 const defaultPerPage = 5;
 
 const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
-                                                                   params: { locale, name }, searchParams: q,
-                                                                 }) => {
+    params: { locale, name }, searchParams: q,
+  }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkDevInfo' });
 
   const currentPage = parseInt((q.p as string) || '1');
@@ -49,20 +48,22 @@ const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <SubTitle text={t('Parameters')} />
+      <DevInfoParameters chain={chain} />
       <DevRepositoryToggle
-        distributionMapLabel={t('distribution map')}
+        subtitleText={tActivity('Subtitle')}
         showLabel={tActivity('show dropdown')}
         hideLabel={tActivity('hide dropdown')}
         table={<DeveloperActivityTable items={repositories} />}
       >
-        <DevInfoParameters chain={chain} />
         <DeveloperActivity chain={chain} />
       </DevRepositoryToggle>
       <PeersSeedsBlocks chain={chain} />
-      <NetworkApps page={'NetworkDevInfo.Apps'}
-                   perPage={perPage}
-                   currentPage={currentPage}
-                   sort={{ sortBy, order }} />
+
+      {/*// will be replaced to another page*/}
+      {/*<NetworkApps page={'NetworkDevInfo.Apps'}*/}
+      {/*             perPage={perPage}*/}
+      {/*             currentPage={currentPage}*/}
+      {/*             sort={{ sortBy, order }} />*/}
     </div>
   );
 };

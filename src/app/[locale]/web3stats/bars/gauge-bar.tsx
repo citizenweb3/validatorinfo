@@ -10,7 +10,7 @@ interface GaugeBarProps {
 }
 
 const GaugeBar: FC<GaugeBarProps> = ({ value, label }) => {
-  const [animatedValue, setAnimatedValue] = useState(value);
+  const [animatedValue, setAnimatedValue] = useState(0);
   const isAnimating = useRef(false);
   const timersRef = useRef<NodeJS.Timeout[]>([]);
 
@@ -18,18 +18,14 @@ const GaugeBar: FC<GaugeBarProps> = ({ value, label }) => {
     if (isAnimating.current) return;
     isAnimating.current = true;
 
-    const overshootValue = Math.min(value + 10, 100);
-
-    const overshootTimer = setTimeout(() => {
-      setAnimatedValue(overshootValue);
-    }, 100);
+    setAnimatedValue(0);
 
     const returnTimer = setTimeout(() => {
       setAnimatedValue(value);
       isAnimating.current = false;
     }, 700);
 
-    timersRef.current = [overshootTimer, returnTimer];
+    timersRef.current = [returnTimer];
   }, [value]);
 
   useEffect(() => {

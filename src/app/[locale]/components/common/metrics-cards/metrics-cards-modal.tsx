@@ -31,8 +31,7 @@ const MetricsCardsModal: FC<OwnProps> = ({ item, title, list, plusButtonSize = '
         opened={isModalOpened}
         hideClose
         onClose={() => setIsModalOpened(false)}
-        isRelative
-        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-4 transform"
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
       >
         <div className="flex w-fit max-w-[90vw] flex-row flex-wrap">
           <div

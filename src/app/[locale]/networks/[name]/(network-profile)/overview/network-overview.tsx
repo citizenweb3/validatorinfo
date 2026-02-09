@@ -43,7 +43,8 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('active validators')}
           </div>
-          <Link href={`/networks/${chain?.name}/validators`} className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline">
+          <Link href={`/networks/${chain?.name}/validators`}
+                className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline">
             {activeValidators.length}
           </Link>
         </div>
@@ -53,7 +54,8 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('unbonding time')}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
             {chain?.params?.unbondingTime ?? '-'}s
           </div>
         </div>
@@ -63,7 +65,8 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('community tax')}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
             {chain?.params?.communityTax * 100}%
           </div>
         </div>
@@ -73,8 +76,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('proposal creation cost')}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-            {chain?.params?.proposalCreationCost} {chain?.params?.denom}
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline">
+            <Link href={`/networks/${chain?.name}/governance`}>
+              {chain?.params?.proposalCreationCost} {chain?.params?.denom}
+            </Link>
           </div>
         </div>
       )}
@@ -83,8 +89,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('voting period')}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-            {chain?.params?.votingPeriod}
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline">
+            <Link href={`/networks/${chain?.name}/governance`}>
+              {chain?.params?.votingPeriod}
+            </Link>
           </div>
         </div>
       )}
@@ -93,7 +102,8 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('% of comm pool to total supply')}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
             {percentOfCommunityPool.toFixed(2)}%
           </div>
         </div>
@@ -103,7 +113,8 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('comm pool value in usd')}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
             $
             {communityPoolUsd.toLocaleString('en-US', {
               minimumFractionDigits: 2,
@@ -117,7 +128,8 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('slashing')}
           </div>
-          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
             {chain.params.jailedDuration}
           </div>
         </div>
@@ -125,15 +137,18 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
       {chain?.name === 'aztec' || chain?.name === 'aztec-testnet' ? (
         <>
           <Suspense fallback={<NetworkOverviewSkeleton />}>
-            <AztecBlockTimeDisplay />
+            <AztecBlockTimeDisplay chainName={chain.name} />
           </Suspense>
           {chain?.avgTxInterval && (
             <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
               <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
                 {t('slot duration')}
               </div>
-              <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-                {chain.avgTxInterval.toFixed(2)}s
+              <div
+                className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline">
+                <Link href={`/networks/${chain?.name}/blocks`}>
+                  {chain.avgTxInterval.toFixed(2)}s
+                </Link>
               </div>
             </div>
           )}
@@ -144,7 +159,8 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
             <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
               {t('average block time')}
             </div>
-            <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            <div
+              className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
               {chain.avgTxInterval.toFixed(2)}s
             </div>
           </div>

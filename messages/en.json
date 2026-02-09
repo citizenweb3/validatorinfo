@@ -257,6 +257,7 @@
     "mau tooltip": "The value in USD it would cost to get a node to produce rewards",
     "rich list tooltip": "Rich List",
     "distribution tooltip": "Distribution",
+    "validator map tooltip": "{chainName} Validator Map",
     "Links": "Links",
     "Tags": "Tags"
   },
@@ -386,6 +387,7 @@
     "peers": "Peers",
     "seeds": "Seeds",
     "binary versions": "Binary Versions",
+    "l1 contracts": "L1 Contracts",
     "Submit App Info": "Submit App Info",
     "Parameters": "Parameters",
     "bech32 prefix": "Bech32 Prefix",

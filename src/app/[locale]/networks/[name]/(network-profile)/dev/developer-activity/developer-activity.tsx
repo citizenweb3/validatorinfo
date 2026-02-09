@@ -2,7 +2,6 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import DeveloperActivityChart from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-chart';
-import SubTitle from '@/components/common/sub-title';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import githubService from '@/services/github-service';
 
@@ -21,8 +20,7 @@ const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
   const activityData = await githubService.getActivityData(chain.id);
 
   return (
-    <div className="mt-14">
-      <SubTitle text={t('Subtitle')} />
+    <div>
       <div className="ml-12 mt-10 flex flex-row">
         <div className="flex flex-row items-center border-r border-bgSt pr-7">
           <div className="pr-2 font-sfpro text-lg text-highlight">{t('star')}:</div>

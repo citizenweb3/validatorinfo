@@ -36,7 +36,7 @@ export const networkProfileExample = {
   totalStatistics: [
     {
       title: 'healthy validators',
-      data: '...314',
+      data: 'N/A',
     },
   ],
   operatorDistribution: [

@@ -132,12 +132,14 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
             <Image src={chainLogo} alt="Chain Logo" fill className="rounded-full object-contain shadow-button" />
             <div
               className="group/planet absolute bottom-[-40%] left-[-40%] flex h-[95%] w-[95%] cursor-pointer items-center justify-center">
-              <Image src={icons.NetworkProfilePlanet} alt="Planet" width={200} height={200}
-                     className="group-hover/planet:hidden group-active/planet:hidden" />
-              <Image src={icons.NetworkProfilePlanetHovered} alt="Planet" width={200} height={200}
-                     className="hidden group-hover/planet:block group-active/planet:hidden" />
-              <Image src={icons.NetworkProfilePlanetActive} alt="Planet" width={200} height={200}
-                     className="hidden group-active/planet:block" />
+              <Tooltip tooltip={t('validator map tooltip', { chainName: chainName.charAt(0).toUpperCase() + chainName.slice(1) })} direction="top">
+                <Image src={icons.NetworkProfilePlanet} alt="Planet" width={200} height={200}
+                       className="group-hover/planet:hidden group-active/planet:hidden" />
+                <Image src={icons.NetworkProfilePlanetHovered} alt="Planet" width={200} height={200}
+                       className="hidden group-hover/planet:block group-active/planet:hidden" />
+                <Image src={icons.NetworkProfilePlanetActive} alt="Planet" width={200} height={200}
+                       className="hidden group-active/planet:block" />
+              </Tooltip>
             </div>
             <div
               className="absolute bottom-[-30%] right-[-35%] flex h-[80%] w-[80%] flex-col items-center hover:text-highlight">

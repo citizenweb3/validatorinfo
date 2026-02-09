@@ -257,6 +257,7 @@
     "mau tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
     "rich list tooltip": "Lista Rica",
     "distribution tooltip": "Distribuição",
+    "validator map tooltip": "{chainName} Mapa de Validadores",
     "Links": "Links",
     "Tags": "Tags"
   },
@@ -386,6 +387,7 @@
     "peers": "Peers",
     "seeds": "Seeds",
     "binary versions": "Versões binárias",
+    "l1 contracts": "Contratos L1",
     "Submit App Info": "Enviar informações sobre a aplicação",
     "Parameters": "Parâmetros",
     "bech32 prefix": "Bech32 Prefixo",
