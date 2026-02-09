@@ -1,7 +1,6 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import getActiveSetMinAmount from '@/server/tools/chains/cosmoshub/get-active-set-min-amount';
 import getApr from '@/server/tools/chains/cosmoshub/get-apr';
-import getChainRewards from '@/server/tools/chains/cosmoshub/get-chain-rewards';
 import getCirculatingTokensOnchain from '@/server/tools/chains/cosmoshub/get-circulating-tokens-onchain';
 import getCirculatingTokensPublic from '@/server/tools/chains/cosmoshub/get-circulating-tokens-public';
 import getCommunityPool from '@/server/tools/chains/cosmoshub/get-community-pool';
@@ -9,6 +8,7 @@ import getCommTax from '@/server/tools/chains/cosmoshub/get-community-tax';
 import getDelegatorsAmount from '@/server/tools/chains/cosmoshub/get-delegators-amount';
 import getInflationRate from '@/server/tools/chains/cosmoshub/get-inflation-rate';
 import getMissedBlocks from '@/server/tools/chains/cosmoshub/get-missed-blocks';
+import getNodeCommissions from '@/server/tools/chains/cosmoshub/get-node-commissions';
 import getNodeParams from '@/server/tools/chains/cosmoshub/get-node-params';
 import getNodeRewards from '@/server/tools/chains/cosmoshub/get-node-rewards';
 import getNodes from '@/server/tools/chains/cosmoshub/get-nodes';
@@ -19,6 +19,8 @@ import getStakingParams from '@/server/tools/chains/cosmoshub/get-staking-params
 import getTvs from '@/server/tools/chains/cosmoshub/get-tvs';
 import getUnbondingTokens from '@/server/tools/chains/cosmoshub/get-unbonding-tokens';
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
+import getChainUptime from '@/server/tools/chains/cosmoshub/get-chain-uptime';
+import getRewardAddress from '@/server/tools/chains/cosmoshub/get-reward-address';
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -34,7 +36,7 @@ const chainMethods: ChainMethods = {
   getWalletsAmount,
   getProposalParams,
   getNodeRewards,
-  getChainRewards,
+  getNodeCommissions,
   getCommunityPool,
   getActiveSetMinAmount,
   getInflationRate,
@@ -42,6 +44,8 @@ const chainMethods: ChainMethods = {
   getCirculatingTokensPublic,
   getDelegatorsAmount,
   getUnbondingTokens,
+  getChainUptime,
+  getRewardAddress
 };
 
 export default chainMethods;

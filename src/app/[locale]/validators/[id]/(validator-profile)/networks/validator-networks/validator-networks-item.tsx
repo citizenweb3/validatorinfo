@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableRow from '@/components/common/table/base-table-row';
+import BaseTableCell from '@/components/common/table/base-table-cell';
 import TableAvatar from '@/components/common/table/table-avatar';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
@@ -30,11 +32,14 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
+  const totalSlots = item.consensusData?.totalSlots;
+
+  const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
+
 
   return (
-    <tr className="group cursor-pointer font-handjet hover:bg-bgHover">
-      <td
-        className="group/avatar flex items-center border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="group/avatar flex items-center px-2 py-2 font-sfpro hover:text-highlight">
         <Image
           src={item?.jailed ? icons.RedSquareIcon : icons.GreenSquareIcon}
           alt={'node status'}
@@ -42,26 +47,26 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
           height={20}
         />
         <TableAvatar icon={item.chain.logoUrl} name={item.chain.prettyName || 'No name'} href={nodeLink} />
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         {expectedApr ? (
             <Link href={nodeLink}>
               <div className="text-center">{expectedApr.toFixed(2)}%</div>
             </Link>
           )
           : (<div className="text-center">-</div>)}
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <div className="text-center">{item?.delegatorsAmount?.toLocaleString('en-US') ?? `N/A`}</div>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <div className="text-center">{rank}</div>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <div className="text-center">
             <Tooltip tooltip={tokenDelegatorShares?.toLocaleString() ?? ''}>
@@ -70,13 +75,13 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
           </div>
           <div className="text-center">{item.votingPower.toFixed(2)}%</div>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
-          <div className="text-center">{Math.trunc(Number(item.rate) * 100)}%</div>
+          <div className="text-center">{(Number(item.rate) * 100).toFixed(2)}%</div>
         </Link>
-      </td>
-      <td className="group border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <Link href={nodeLink}>
           <Tooltip tooltip={selfDelegation?.toLocaleString() ?? ''}>
             <div className="text-center" style={{ color: colorStylization.delegation(selfDelegation ?? null) }}>
@@ -84,10 +89,15 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
             </div>
           </Tooltip>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        {item.uptime ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+        {item.uptime !== undefined && item.uptime !== null ? (
+          <Tooltip
+            tooltip={`Per
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
+          `}
+          >
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}
             </div>
@@ -97,33 +107,36 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
             -
           </div>
         )}
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip tooltip={`Per ${item.chain.params?.blocksWindow?.toLocaleString()} blocks`}>
-            <div className="text-center" style={{ color: colorStylization.missedBlocks(item.missedBlocks) }}>
-              {item.missedBlocks}
-            </div>
+          <Tooltip
+            tooltip={`Per
+          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
+          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
+          `}
+          >
+            <div className="text-center">{item.missedBlocks}</div>
           </Tooltip>
         ) : (
           <div className="text-center">
             -
           </div>
         )}
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <Link href={nodeLink}>
           <div className="flex items-center justify-center text-center">
             {!item.jailed && <Image src={icons.CheckmarkIcon} alt="Infrastructure is active" width={30} height={30} />}
           </div>
         </Link>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <div className="text-center">80</div>
         </Link>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

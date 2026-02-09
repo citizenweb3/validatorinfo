@@ -1,230 +1,385 @@
 'use client';
 
-import * as d3 from 'd3';
-import { FC, useEffect, useRef, useState, useMemo } from 'react';
-import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import {
-  ChartConfig,
-  setupChartArea,
-  setupYScale,
-  setupXScale,
-  drawYAxis,
-  drawXAxis,
-  drawLine,
-  handleWheel,
-  TooltipConfig,
-  DataPoint,
-  drawLegend,
-  handleTooltip
-} from '@/app/components/chart/chartUtils';
-import { formatNumber } from '@/app/components/chart/chartHelper';
-import { generateSampleData } from '@/app/components/chart/sampleData';
+  CategoryScale,
+  Chart as ChartJS,
+  ChartOptions,
+  Filler,
+  Legend,
+  LineElement,
+  LinearScale,
+  PointElement,
+  Title,
+  Tooltip,
+} from 'chart.js';
+import zoomPlugin from 'chartjs-plugin-zoom';
+import { FC, useCallback, useMemo, useRef, useState } from 'react';
+import { Line } from 'react-chartjs-2';
 
-const TokenPriceChart: FC = () => {
-  // Define ecosystems and their colors (can be extended as needed)
-  const Labels = ['ETH'];
-  const colorMap = {
-    'ETH': '#4FB848',
-  };
-  const startingPrices = {
-    'ETH': 2000,
-  };
-  
+import { shadowPlugin } from '@/components/chart/chart-shadow-plugin';
+import { crosshairPlugin } from '@/components/chart/chart-crosshair-plugin';
+import { chartAreaBackgroundPlugin } from '@/components/chart/chart-area-background-plugin';
+import { formatNumber } from '@/components/chart/chartHelper';
+import { cn } from '@/utils/cn';
 
-  const [isChart, setIsChart] = useState<boolean>(true);
-  const [chartType, setChartType] = useState<'Daily' | 'Weekly' | 'Monthly' | 'Yearly'>('Daily');
-  const [datasets, setDatasets] = useState<{ [Labels: string]: DataPoint[] }>({});
-  const [xDomain, setXDomain] = useState<[Date, Date]>([new Date('2010-01-01'), new Date()]);
-  const [width, setWidth] = useState(0);
-  const chartRef = useRef<HTMLDivElement>(null);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+  zoomPlugin,
+  shadowPlugin,
+  crosshairPlugin,
+  chartAreaBackgroundPlugin,
+);
 
-  const chartConfig: ChartConfig = useMemo(
-    () => ({
-      width,
-      height: 300,
-      margin: { top: 30, right: 0, bottom: 50, left: 0 },
-      padding: { left: 60, right: 0, top: 50, bottom: 50 },
-      gapLeft: 60,
-      gapRight: 120,
-      leftOffset: 0,
-      rightOffset: 0,
-      xScalePadding: 60,
-      legendOffset: 10,
-    }),
-    [width]
+type PeriodType = 'day' | 'week' | 'month' | 'year';
+
+interface ChartDataPoint {
+  date: string;
+  value: number;
+}
+
+interface OwnProps {
+  chartData: ChartDataPoint[];
+}
+
+const periodMapping: Record<string, PeriodType> = {
+  Daily: 'day',
+  Weekly: 'week',
+  Monthly: 'month',
+  Yearly: 'year',
+};
+
+const getWeekStart = (date: Date): string => {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  d.setDate(diff);
+  return d.toISOString().split('T')[0];
+};
+
+const aggregateByPeriod = (dailyData: ChartDataPoint[], period: PeriodType): ChartDataPoint[] => {
+  if (period === 'day') {
+    return dailyData;
+  }
+
+  const aggregated = new Map<string, ChartDataPoint>();
+
+  dailyData.forEach((point) => {
+    const date = new Date(point.date);
+    let key: string;
+
+    if (period === 'week') {
+      key = getWeekStart(date);
+    } else if (period === 'month') {
+      key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+    } else {
+      key = String(date.getFullYear());
+    }
+
+    const existing = aggregated.get(key);
+    if (!existing || new Date(point.date) > new Date(existing.date)) {
+      aggregated.set(key, {
+        date: key,
+        value: point.value,
+      });
+    }
+  });
+
+  return Array.from(aggregated.values()).sort((a, b) => a.date.localeCompare(b.date));
+};
+
+const calculatePriceYMax = (maxValue: number): number => {
+  if (maxValue <= 0.01) return 0.02;
+  if (maxValue <= 0.1) return 0.2;
+  if (maxValue <= 1) return Math.ceil(maxValue * 1.3 * 10) / 10;
+  if (maxValue <= 10) return Math.ceil(maxValue * 1.3);
+  if (maxValue <= 100) return Math.ceil((maxValue * 1.3) / 10) * 10;
+  if (maxValue <= 1000) return Math.ceil((maxValue * 1.3) / 100) * 100;
+  return Math.ceil((maxValue * 1.3) / 1000) * 1000;
+};
+
+const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
+  const [period, setPeriod] = useState<PeriodType>('day');
+  const [chartType, setChartType] = useState<string>('Daily');
+  const chartRef = useRef<ChartJS<'line'>>(null);
+
+  const data = useMemo(() => aggregateByPeriod(chartData, period), [chartData, period]);
+
+  const getAdaptiveYMax = useCallback(
+    (startIndex: number, endIndex: number): number => {
+      if (data.length === 0) return 100;
+
+      const visibleData = data.slice(startIndex, endIndex + 1);
+      if (visibleData.length === 0) return 100;
+
+      const maxPrice = Math.max(...visibleData.map((point) => point.value));
+      return calculatePriceYMax(maxPrice);
+    },
+    [data],
   );
 
-  const tooltipConfig: TooltipConfig = {
-    width: 180,
-    rowHeight: 22,
-    baseHeight: 30,
-    squareSize: 10,
-    squareOffset: 6,
-    xOffset: 10,
-    yOffset: 20,
-    boundaryPadding: 10,
-    rightBoundaryOffset: 165,
-  };
+  const updateYAxis = useCallback(
+    (chart: ChartJS<'line'>) => {
+      const xScale = chart.scales.x;
+      if (!xScale) return;
 
-  const drawChart = () => {
-    if (!chartRef.current || !Object.values(datasets).some(data => data.length > 0)) return;
+      const minIndex = Math.max(0, Math.floor(xScale.min));
+      const maxIndex = Math.min(data.length - 1, Math.ceil(xScale.max));
 
-    d3.select(chartRef.current).select('svg').remove();
+      const yMax = getAdaptiveYMax(minIndex, maxIndex);
+      const yScale = chart.scales.y;
 
-    const { svg, plotArea } = setupChartArea(chartRef, chartConfig);
-    const { padding } = chartConfig;
-
-    const chartWidth = chartConfig.width - chartConfig.margin.left - chartConfig.margin.right;
-    const chartHeight = chartConfig.height - chartConfig.margin.top - chartConfig.margin.bottom;
-    const plotWidth = chartWidth - chartConfig.padding.left - chartConfig.padding.right - 100;
-    const plotHeight = chartHeight - chartConfig.padding.top - chartConfig.padding.bottom;
-
-    svg.append('defs')
-      .append('clipPath')
-      .attr('id', 'clip-revenue')
-      .append('rect')
-      .attr('x', 20)
-      .attr('y', 0)
-      .attr('width', plotWidth - 10)
-      .attr('height', chartConfig.height);
-
-    const xScale = setupXScale(xDomain, plotWidth);
-
-    // Calculate y-domain across all datasets
-    const allValues: number[] = Labels.flatMap(label =>
-      datasets[label]?.map(d => d.value) || []
-    );
-    const yMax = d3.max(allValues) ?? 100;
-    const yMin =  0;
-    const yScale = setupYScale([yMin * 0.95, yMax * 1.05], chartHeight, 'linear');
-
-    drawYAxis(svg, yScale, padding.left, padding.bottom, { tickFormat: (d) => `$${Number(d).toFixed(2)}`, usePercentage: false, fontFamily: 'Handjet', fontSize: '13.75px', labelOffset: 0 });
-    drawXAxis(plotArea, xScale, plotHeight, chartConfig, chartType);
-
-    const lineGenerator = d3.line<DataPoint>()
-      .x((d) => xScale(d.date))
-      .y((d) => yScale(d.value))
-      .curve(d3.curveMonotoneX);
-
-    // Draw a line for each ecosystem
-    Labels.forEach((label) => {
-      if (datasets[label]) {
-        const pathData = lineGenerator(datasets[label]);
-        if (pathData) {
-          drawLine(plotArea, datasets[label], chartType, colorMap[label as keyof typeof colorMap], lineGenerator);
-        } else {
-          console.warn(`Skipping drawing for ${label} because path is null`);
-        }
+      if (yScale && yScale.max !== yMax) {
+        yScale.options.max = yMax;
+        chart.update('none');
       }
-    });
-    
+    },
+    [data.length, getAdaptiveYMax],
+  );
 
-    svg.on('wheel', (event) =>
-      handleWheel(event, xDomain, setXDomain, fetchDataForRange, new Date('2010-01-01'), new Date())
-    );
-  };
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const monthShort = date.toLocaleDateString('en-US', { month: 'short' });
 
-  const fetchDataForRange = (startDate: Date, endDate: Date) => {
-    setTimeout(() => {
-      const data = Labels.reduce((acc, label, index) => {
-        const labelData = generateSampleData(startDate, endDate, chartType, [label], {
-          startingPrice: Object.values(startingPrices)[index], // Access startingPrices with numeric index
-          volatility: 0.03,
-          regenerate: true,
-        });
-        return { ...acc, [label]: labelData[label] };
-      }, {});
-      setDatasets(data);
-    }, 1);
-  };
-  
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (chartRef.current) {
-        setWidth(chartRef.current.clientWidth);
-      }
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const now = new Date();
-    let startDate: Date;
-
-    switch (chartType) {
-      case 'Daily':
-        startDate = new Date(now);
-        startDate.setDate(now.getDate() - 65);
-        break;
-      case 'Weekly':
-        startDate = new Date(now);
-        startDate.setDate(now.getDate() - 13 * 7);
-        break;
-      case 'Monthly':
-        startDate = new Date(now);
-        startDate.setMonth(now.getMonth() - 12);
-        break;
-      case 'Yearly':
-        startDate = new Date(now);
-        startDate.setFullYear(now.getFullYear() - 10);
-        break;
-      default:
-        startDate = new Date('2010-01-01');
-    }
-
-    const endDate = now;
-    setXDomain([startDate, endDate]);
-    fetchDataForRange(startDate, endDate);
-  }, [chartType]);
-
-  useEffect(() => {
-    if (Object.values(datasets).some(data => data.length > 0) && width > 0 && isChart) {
-      drawChart();
-    }
-  }, [datasets, width, isChart]);
-
-  const handleChartChanged = (value: boolean) => {
-    setIsChart(value);
-    if (!value) {
-      setChartType(undefined as any);
+    if (period === 'day') {
+      return `${day} ${monthShort}`;
+    } else if (period === 'week') {
+      return `${day} ${monthShort}`;
+    } else if (period === 'month') {
+      return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
     } else {
-      setChartType('Daily');
+      return date.getFullYear().toString();
     }
   };
+
+  const initialYMax = useMemo(() => {
+    if (data.length === 0) return 100;
+    const maxPrice = Math.max(...data.map((point) => point.value));
+    return calculatePriceYMax(maxPrice);
+  }, [data]);
+
+  const lineChartData = {
+    labels: data.map((point) => formatDate(point.date)),
+    datasets: [
+      {
+        label: 'Price',
+        data: data.map((point) => point.value),
+        borderColor: '#4FB848',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+        tension: 0.4,
+        fill: false,
+        yAxisID: 'y',
+      },
+    ],
+  };
+
+  const options: ChartOptions<'line'> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      mode: 'index',
+      intersect: false,
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: '#1E1E1E',
+        titleColor: '#2077E0',
+        bodyColor: '#FFFFFF',
+        borderColor: '#444444',
+        borderWidth: 1,
+        padding: 12,
+        displayColors: true,
+        boxWidth: 10,
+        boxHeight: 10,
+        boxPadding: 6,
+        usePointStyle: false,
+        titleFont: {
+          family: 'Handjet, monospace',
+          size: 14,
+          weight: 400,
+        },
+        bodyFont: {
+          family: 'SF Pro, -apple-system, BlinkMacSystemFont, sans-serif',
+          size: 13,
+        },
+        callbacks: {
+          title: (tooltipItems) => {
+            if (tooltipItems.length === 0) return '';
+            const index = tooltipItems[0].dataIndex;
+            const dataPoint = data[index];
+            if (!dataPoint) return '';
+            const date = new Date(dataPoint.date);
+            return date.toLocaleDateString('en-US', {
+              month: 'long',
+              day: 'numeric',
+              year: 'numeric',
+            });
+          },
+          label: (context) => {
+            const value = context.parsed.y;
+            const formatted = value < 0.01 ? value.toPrecision(4) : value.toFixed(2);
+            return `  Price    $${formatted}`;
+          },
+          labelColor: (context) => {
+            return {
+              borderColor: '#FFFFFF',
+              backgroundColor: context.dataset.borderColor as string,
+              borderWidth: 1,
+            };
+          },
+        },
+      },
+      zoom: {
+        pan: {
+          enabled: true,
+          mode: 'x',
+          onPan: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
+          onPanComplete: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
+        },
+        zoom: {
+          wheel: {
+            enabled: true,
+          },
+          pinch: {
+            enabled: true,
+          },
+          mode: 'x',
+          onZoom: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
+          onZoomComplete: ({ chart }) => {
+            updateYAxis(chart as ChartJS<'line'>);
+          },
+        },
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: true,
+          drawOnChartArea: false,
+          drawTicks: true,
+          tickLength: 6,
+          tickColor: '#3E3E3E',
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.8)',
+          font: {
+            family: 'Handjet, monospace',
+            size: 12,
+          },
+          maxRotation: 0,
+          minRotation: 0,
+          padding: 4,
+          autoSkip: true,
+          maxTicksLimit: 10,
+          callback: function (value, index) {
+            if (index === 0) return '';
+            return this.getLabelForValue(value as number);
+          },
+        },
+        border: {
+          color: '#3E3E3E',
+        },
+      },
+      y: {
+        grid: {
+          display: true,
+          drawOnChartArea: false,
+          drawTicks: true,
+          tickLength: 6,
+          tickColor: '#3E3E3E',
+        },
+        ticks: {
+          color: 'rgba(255, 255, 255, 0.8)',
+          font: {
+            family: 'Handjet, monospace',
+            size: 12,
+          },
+          callback: (value) => `$${formatNumber(Number(value))}`,
+        },
+        border: {
+          color: '#3E3E3E',
+        },
+        afterFit: (axis) => {
+          axis.width = 50;
+        },
+        position: 'left',
+        beginAtZero: false,
+        max: initialYMax,
+      },
+    },
+  };
+
+  const handleTypeChanged = (name: string) => {
+    setChartType(name);
+    const mappedPeriod = periodMapping[name];
+    if (mappedPeriod) {
+      setPeriod(mappedPeriod);
+    }
+    if (chartRef.current) {
+      chartRef.current.resetZoom();
+    }
+  };
+
+  const periodButtons = ['Daily', 'Weekly', 'Monthly', 'Yearly'] as const;
 
   return (
-    <div className="mt-3 mb-12">
-      <div className="flex items-center justify-center">
-        <ChartButtons
-          onlyDays
-          ecosystems={false}
-          isChart={isChart}
-          onChartChanged={handleChartChanged}
-          chartType={chartType}
-          onTypeChanged={(name) => setChartType(name as any)}
-        />
+    <div className="w-full">
+      <div
+        className="relative"
+        style={{
+          height: '400px',
+          padding: '10px 20px 20px 20px',
+        }}
+      >
+        <div className="absolute left-[70px] top-[5px] z-10 flex items-center gap-2 bg-[#181818] font-handjet">
+          {periodButtons.map((name) => (
+            <button
+              key={name}
+              type="button"
+              aria-label={`Switch to ${name} view`}
+              className={cn(
+                'min-w-9 p-px',
+                chartType === name
+                  ? 'border border-[#3e3e3e] text-highlight shadow-button'
+                  : 'hover:text-highlight',
+              )}
+              onClick={() => handleTypeChanged(name)}
+            >
+              <div className="flex items-center justify-center px-2 py-0 text-base leading-6 hover:text-highlight">
+                {name}
+              </div>
+            </button>
+          ))}
+        </div>
+
+        {data.length === 0 ? (
+          <div className="flex h-full items-center justify-center">
+            <div className="font-sfpro text-lg text-white opacity-70">No chart data available</div>
+          </div>
+        ) : (
+          <Line ref={chartRef} data={lineChartData} options={options} />
+        )}
       </div>
 
-      {isChart ? (
-        <div
-          ref={chartRef}
-          style={{
-            position: 'relative',
-            width: '90%',
-            minWidth: '300px',
-            height: '300px',
-            backgroundColor: '#1E1E1E',
-          }}
-          className="mt-3 px-4 sm:px-10 md:px-20 w-full"
-        />
-      ) : (
-        <div className="mt-3 px-14 text-center text-white text-lg">
-          Chart is disabled. Toggle to view chart.
-        </div>
-      )}
     </div>
   );
 };

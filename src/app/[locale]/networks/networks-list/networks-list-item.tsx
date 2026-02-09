@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableRow from '@/components/common/table/base-table-row';
+import BaseTableCell from '@/components/common/table/base-table-cell';
 import TableAvatar from '@/components/common/table/table-avatar';
 import Tooltip from '@/components/common/tooltip';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
@@ -11,22 +13,23 @@ interface OwnProps {
 }
 
 const NetworksListItem: FC<OwnProps> = async ({ item }) => {
+  const fdv = item?.name === 'ethereum-sepolia' || item?.name === 'warden-testnet' ? 0 : item?.tokenomics?.fdv;
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
 
   return (
-    <tr className="group font-handjet hover:bg-bgHover ">
-      <td className="group/avatar w-1/3 border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="group/avatar w-1/3 px-2 py-2 font-sfpro hover:text-highlight">
         <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}/overview`} />
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <div className="text-center">{item.params?.denom}</div>
-      </td>
-      <td className="border-b border-black px-2 py-2 font-sfpro text-base active:border-bgSt">
-        <Tooltip tooltip={`$${item?.tokenomics?.fdv.toLocaleString()}`}>
-          <div className="text-center">${formatCash(item?.tokenomics?.fdv ?? 0)}</div>
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+        <Tooltip tooltip={`$${fdv?.toLocaleString()}`}>
+          <div className="text-center">${formatCash(fdv ?? 0)}</div>
         </Tooltip>
-      </td>
-      <td className="border-b border-black px-2 py-2 active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2">
         <div className="flex justify-center">
           {item.docs && item?.docs.startsWith('http') ? (
             <Link href={item.docs} className={`${size}`} target="_blank">
@@ -56,8 +59,8 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
             </div>
           )}
         </div>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

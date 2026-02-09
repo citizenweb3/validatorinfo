@@ -8,13 +8,13 @@ import { permissions } from '@/app/validators/[id]/[operatorAddress]/validator_p
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { getPassportAuthzTabs } from '@/components/common/tabs/tabs-data';
-import { validatorNodesWithChainData } from '@/services/validator-service';
+import { NodeWithValidatorAndChain } from '@/services/node-service';
 
 interface OwnProps {
   locale: string;
   validatorId: number;
   operatorAddress: string;
-  node?: validatorNodesWithChainData | undefined;
+  node: NodeWithValidatorAndChain | null;
 }
 
 const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress, node }) => {
@@ -30,30 +30,48 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
     <div className="mt-16">
       <SubTitle text={t('Validator Node Details')} />
       <div className="mt-7 grid grid-cols-2 gap-x-10">
-        <NodeDetailsItem label={t('validator name')}
-                         value={node.moniker}
-                         link={`/validators/${node.validatorId}/networks`}
-                         isCopy />
-        <NodeDetailsItem label={t('public key')}
-                         value={node.consensusPubkey}
-                         link={`/validators/${node.validatorId}/networks`}
-                         isCopy />
-        <NodeDetailsItem label={t('account address')}
-                         value={node.operatorAddress}
-                         link={`/networks/${node.chain.name}/address/${node.operatorAddress}/passport`}
-                         isCopy />
-        <NodeDetailsItem label={t('identity')}
-                         value={node.identity}
-                         link={`/validators/${node.validatorId}/networks`}
-                         isCopy />
-        <NodeDetailsItem label={t('validator address')}
-                         value={node.operatorAddress}
-                         link={`/networks/${node.chain.name}/address/${node.operatorAddress}/passport`}
-                         isCopy />
-        <NodeDetailsItem label={t('reward address')}
-                         value={node.operatorAddress}
-                         link={`/networks/${node.chain.name}/address/${node.operatorAddress}/passport`}
-                         isCopy />
+        <NodeDetailsItem
+          label={t('validator name')}
+          value={node?.validator?.moniker}
+          link={`/validators/${node.validatorId}/networks`}
+          isCopy
+        />
+        <NodeDetailsItem
+          label={t('public key')}
+          value={node.consensusPubkey}
+          link={`/validators/${node.validatorId}/networks`}
+          isCopy
+        />
+        <NodeDetailsItem
+          label={t('account address')}
+          value={node.accountAddress ?? 'N/A'}
+          link={node.accountAddress ? `/networks/${node.chain.name}/address/${node.accountAddress}/passport` : ''}
+          isCopy
+        />
+        <NodeDetailsItem
+          label={t('identity')}
+          value={node.identity}
+          link={`/validators/${node.validatorId}/networks`}
+          isCopy
+        />
+        <NodeDetailsItem
+          label={t('validator address')}
+          value={node.chain.ecosystem === 'cosmos' ? node.operatorAddress : (node.accountAddress ?? 'N/A')}
+          link={
+            node.chain.ecosystem === 'cosmos'
+              ? `/networks/${node.chain.name}/address/${node.operatorAddress}/passport`
+              : node.accountAddress
+                ? `/networks/${node.chain.name}/address/${node.accountAddress}/passport`
+                : ''
+          }
+          isCopy
+        />
+        <NodeDetailsItem
+          label={t('reward address')}
+          value={node.rewardAddress ?? 'N/A'}
+          link={node.rewardAddress ? `/networks/${node.chain.name}/address/${node.operatorAddress}/passport` : ''}
+          isCopy
+        />
       </div>
       <div className="mt-2 flex border-b border-bgSt">
         <div className="w-[28.5%] border-r border-bgSt py-4 pl-8 font-sfpro text-lg">{t('authz permissions')}</div>

@@ -1,13 +1,15 @@
 import { getTranslations } from 'next-intl/server';
 
 import Networks from '@/app/networks/networks-list/networks';
+import CollapsePageHeader from '@/components/common/collapse-page-header';
+import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
+import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
-import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -28,11 +30,15 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
 
   return (
     <div>
-      <Story
-        src="networks"
-        alt="Pixelated, 90s game-style characters connecting web cables of web3 blockchain networks"
-      />
-      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <PageHeaderVisibilityWrapper>
+        <CollapsePageHeader>
+          <Story
+            src="networks"
+            alt="Pixelated, 90s game-style characters connecting web cables of web3 blockchain networks"
+          />
+        </CollapsePageHeader>
+        <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <Networks

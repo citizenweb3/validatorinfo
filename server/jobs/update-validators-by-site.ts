@@ -99,7 +99,7 @@ const updateValidatorsBySite = async () => {
       try {
         const { twitter, github } = await checkUrl(validator.website);
 
-        const updateData: Partial<Validator> = {};
+        const updateData: { twitter?: string; github?: string } = {};
         if (twitter && !validator.twitter) {
           updateData.twitter = twitter;
         }

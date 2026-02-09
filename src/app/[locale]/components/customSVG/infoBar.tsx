@@ -1,11 +1,12 @@
-import React, { useMemo } from "react";
+import React, { FC, useMemo } from 'react';
 
-interface customBarProps {
+interface CustomBarProps {
     value: number;
-    color: string;
+    pointerValue?: number;
 }
 
-const customBar: React.FC<customBarProps> = ({ value, color }) => {
+const CustomBar: FC<CustomBarProps> = ({ value, pointerValue }) => {
+    const color = "#E5C46B";
     const cx = 148;
     const cy = 148;
     const outerR = 128;
@@ -18,9 +19,10 @@ const customBar: React.FC<customBarProps> = ({ value, color }) => {
 
     // Clamp value between 0 and 100
     const clampedValue = Math.max(0, Math.min(100, Math.round(value)));
+    const clampedPointerValue = Math.max(0, Math.min(100, Math.round(pointerValue ?? value)));
 
     // Compute pointer angle: -70° at value 0, 70° at value 100, increment by 1.4° per value
-    const angle = -70 + (clampedValue * 1.4);
+    const angle = -70 + (clampedPointerValue * 1.4);
 
     // Memoize tick angles
     const tickAngles = useMemo(
@@ -29,24 +31,43 @@ const customBar: React.FC<customBarProps> = ({ value, color }) => {
     );
 
     return (
-        <svg
-            style={{ width: "100%", height: "auto" }}
-            viewBox="0 0 296 156"
-            role="img"
-            aria-label={`Gauge showing value ${clampedValue} out of 100`}
-        >
-            {/* Outer semicircle */}
-            <path
-                d={`M ${cx - outerR} ${cy} A ${outerR} ${outerR} 0 0 1 ${cx + outerR} ${cy}`}
-                fill="#4F483F"
-                stroke="#000"
-                strokeWidth={0.50}
-            />
-            {/* Inner semicircle */}
-            <path
-                d={`M ${cx - innerR} ${cy} A ${innerR} ${innerR} 0 0 1 ${cx + innerR} ${cy}`}
-                fill="#3E3E3E"
-            />
+      <svg
+        style={{ width: "100%", height: "auto" }}
+        viewBox="0 0 296 156"
+        role="img"
+        aria-label={`Gauge showing value ${clampedValue} out of 100`}
+      >
+        <ellipse
+          cx={cx}
+          cy={cy + 3}
+          rx={outerR - 2}
+          ry={3}
+          fill="rgba(0,0,0,0.32)"
+          className="transition-opacity duration-150 group-active:opacity-0"
+          style={{ filter: "blur(2px)" }}
+        />
+        <ellipse
+          cx={cx}
+          cy={cy + 18}
+          rx={outerR - 3}
+          ry={8}
+          fill="rgba(0,0,0,0.23)"
+          className="transition-opacity duration-150 group-active:opacity-0"
+          style={{ filter: "blur(16px)" }}
+        />
+
+          {/* Outer semicircle */}
+          <path
+            d={`M ${cx - outerR} ${cy} A ${outerR} ${outerR} 0 0 1 ${cx + outerR} ${cy}`}
+            className="fill-[#4F483F] transition-[fill] duration-200 group-hover:fill-[#E5C46B]"
+            stroke="#000"
+            strokeWidth={0.50}
+          />
+          {/* Inner semicircle */}
+          <path
+            d={`M ${cx - innerR} ${cy} A ${innerR} ${innerR} 0 0 1 ${cx + innerR} ${cy}`}
+            fill="#181818"
+          />
 
             {/* Ticks and numbers */}
             {tickAngles.map((deg, i) => {
@@ -111,7 +132,11 @@ const customBar: React.FC<customBarProps> = ({ value, color }) => {
                 y2={cy - (innerR - 50)} // Smaller: radius 90
                 stroke={color}
                 strokeWidth={3}
-                transform={`rotate(${angle} ${cx} ${cy})`}
+                style={{
+                    transform: `rotate(${angle}deg)`,
+                    transformOrigin: `${cx}px ${cy}px`,
+                    transition: 'transform 0.4s ease-in-out',
+                }}
             />
 
             {/* Center cap */}
@@ -120,4 +145,4 @@ const customBar: React.FC<customBarProps> = ({ value, color }) => {
     );
 };
 
-export default React.memo(customBar);
+export default React.memo(CustomBar);

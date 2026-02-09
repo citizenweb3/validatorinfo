@@ -7,6 +7,7 @@ import TriangleButton from '@/components/common/triangle-button';
 interface OwnProps {
   pageLength: number;
   isScroll?: boolean;
+  tableId?: string;
 }
 
 interface PageElement {
@@ -14,39 +15,41 @@ interface PageElement {
   name: string | number | ReactNode;
 }
 
-const TablePagination: FC<OwnProps> = ({ pageLength, isScroll=true }) => {
+const TablePagination: FC<OwnProps> = ({ pageLength, isScroll=true, tableId }) => {
   const searchString = headers().get('x-current-search');
   const sp = new URLSearchParams(searchString ?? '');
 
-  const currentPage = parseInt(sp.get('p') ?? '1');
+  // Use different parameter names based on tableId to avoid conflicts
+  const pageParam = tableId ? `${tableId}_p` : 'p';
+  const currentPage = parseInt(sp.get(pageParam) ?? '1');
 
   const pages: PageElement[] = [];
 
   if (currentPage > 1) {
     if (currentPage === 2) {
-      sp.set('p', '1');
+      sp.set(pageParam, '1');
     } else {
-      sp.set('p', (currentPage - 1).toString());
+      sp.set(pageParam, (currentPage - 1).toString());
     }
     pages.push({ href: sp.toString(), name: <TriangleButton direction="l" /> });
   }
 
   if (currentPage > 1) {
-    sp.set('p', '1');
+    sp.set(pageParam, '1');
     pages.push({ href: sp.toString(), name: 1 });
   }
 
   if (currentPage >= 3) {
     pages.push({ href: '', name: '...' });
-    sp.set('p', `${currentPage - 1}`);
+    sp.set(pageParam, `${currentPage - 1}`);
     pages.push({ href: sp.toString(), name: currentPage - 1 });
   }
 
-  sp.set('p', `${currentPage}`);
+  sp.set(pageParam, `${currentPage}`);
   pages.push({ href: '', name: currentPage });
 
   if (currentPage <= pageLength - 2) {
-    sp.set('p', `${currentPage + 1}`);
+    sp.set(pageParam, `${currentPage + 1}`);
     pages.push({ href: sp.toString(), name: currentPage + 1 });
   }
 
@@ -55,12 +58,12 @@ const TablePagination: FC<OwnProps> = ({ pageLength, isScroll=true }) => {
   }
 
   if (currentPage < pageLength) {
-    sp.set('p', `${pageLength}`);
+    sp.set(pageParam, `${pageLength}`);
     pages.push({ href: sp.toString(), name: pageLength });
   }
 
   if (currentPage < pageLength) {
-    sp.set('p', (currentPage + 1).toString());
+    sp.set(pageParam, (currentPage + 1).toString());
     pages.push({ href: sp.toString(), name: <TriangleButton direction="r" /> });
   }
 

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import icons from '@/components/icons';
 import ChainService from '@/services/chain-service';
@@ -24,34 +26,34 @@ const DelegationsItem: FC<OwnProps> = async ({ item, chainName }) => {
   const validatorNodePassportLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
   return (
-    <tr className="group font-handjet hover:bg-bgHover ">
-      <td className="group/avatar w-1/4 border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="w-1/4 px-2 py-2 font-sfpro hover:text-highlight">
         <TableAvatar
           icon={validator?.url ?? icons.AvatarIcon}
           name={validator?.moniker ?? 'Validator'}
           href={validatorNodePassportLink}
         />
-      </td>
-      <td className="w-1/4 border-b border-black px-2 py-2 font-handjet text-lg hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/4 px-2 py-2 font-handjet text-lg hover:text-highlight">
         <Link href={validatorNodePassportLink}>
           <div className="text-center">
             {item.stakedAmount.toFixed(6)} {chain?.params?.denom}
           </div>
         </Link>
-      </td>
-      <td className="w-1/4 border-b border-black px-2 py-2 font-handjet text-lg hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/4 px-2 py-2 font-handjet text-lg hover:text-highlight">
         <Link href={validatorNodePassportLink}>
           <div className="text-center">
             {item.rewardAmount.toFixed(6)} {chain?.params?.denom}
           </div>
         </Link>
-      </td>
-      <td className="w-1/4 border-b border-black px-2 py-2 font-handjet text-lg hover:text-highlight active:border-bgSt">
+      </BaseTableCell>
+      <BaseTableCell className="w-1/4 px-2 py-2 font-handjet text-lg hover:text-highlight">
         <Link href={validatorNodePassportLink}>
           <div className="text-center">${item.rewardValue.toFixed(2)}</div>
         </Link>
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

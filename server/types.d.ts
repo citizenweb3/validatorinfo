@@ -33,6 +33,8 @@ export type ChainWithNodes = Chain & {
 
 export interface NodeResult {
   operator_address: string;
+  account_address?: string;
+  reward_address?: string;
   consensus_pubkey: ConsensusPubkey;
   jailed: boolean;
   status: BondStatus;
@@ -72,6 +74,7 @@ interface CommissionRates {
 export interface SlashingSigningInfos {
   address: string;
   missed_blocks_counter: string;
+  total_slots?: string;
 }
 
 type BondStatus = 'BOND_STATUS_BONDED' | 'BOND_STATUS_UNBONDED';

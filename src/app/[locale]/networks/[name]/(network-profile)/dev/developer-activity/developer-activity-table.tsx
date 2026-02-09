@@ -5,6 +5,7 @@ import { FC, useMemo, useState } from 'react';
 
 import DeveloperActivityTableItem from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table-item';
 import SortButton from '@/components/common/sort-button';
+import BaseTable from '@/components/common/table/base-table';
 import { SortDirection } from '@/server/types';
 import { GithubRepositoryWithCommitCount } from '@/services/github-service';
 
@@ -44,22 +45,25 @@ const DeveloperActivityTable: FC<OwnProps> = ({ items }) => {
   }, [items, sortBy, sortOrder]);
 
   if (!items || items.length === 0) {
-    return <div className="mt-4 py-8 text-center font-sfpro text-lg">{t('no repositories')}</div>;
+    return <div className="my-20 py-8 text-center font-sfpro text-lg bg-table_row">{t('no repositories')}</div>;
   }
 
   return (
     <div>
-      <table className="mt-4 w-full table-auto border-collapse">
+      <BaseTable className="my-12">
         <thead>
-          <tr className="bg-table_header text-sm font-bold">
-            <th className="hover:bg-gray-100 cursor-pointer py-3 transition-colors" onClick={() => handleSort('name')}>
+          <tr className="bg-table_header">
+            <th
+              className="cursor-pointer text-center bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)] border-x-2 border-transparent"
+              onClick={() => handleSort('name')}
+            >
               <div className="flex items-center justify-center gap-2">
                 <SortButton isActive={sortBy === 'name'} direction={sortBy === 'name' ? sortOrder : 'asc'} />
                 <span>{t('Table.Repository Name.name')}</span>
               </div>
             </th>
             <th
-              className="hover:bg-gray-100 cursor-pointer py-3 transition-colors"
+              className="cursor-pointer text-center bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)] border-x-2 border-transparent"
               onClick={() => handleSort('commits')}
             >
               <div className="flex items-center justify-center gap-2">
@@ -67,7 +71,7 @@ const DeveloperActivityTable: FC<OwnProps> = ({ items }) => {
               </div>
             </th>
             <th
-              className="hover:bg-gray-100 cursor-pointer py-3 transition-colors"
+              className="cursor-pointer text-center bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)] border-x-2 border-transparent"
               onClick={() => handleSort('commits')}
             >
               <div className="flex items-center justify-center gap-2">
@@ -82,7 +86,7 @@ const DeveloperActivityTable: FC<OwnProps> = ({ items }) => {
             <DeveloperActivityTableItem key={item.id} item={item} />
           ))}
         </tbody>
-      </table>
+      </BaseTable>
     </div>
   );
 };

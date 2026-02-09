@@ -56,7 +56,9 @@ const LiveProposals: FC<OwnProps> = ({ proposals, chainName }) => {
   };
 
   const liveProposals = proposals.filter(
-    proposal => proposal.status === 'PROPOSAL_STATUS_VOTING_PERIOD',
+    (proposal) =>
+      proposal.status === 'PROPOSAL_STATUS_VOTING_PERIOD' ||
+      proposal.status === 'PROPOSAL_STATUS_DEPOSIT_PERIOD',
   );
 
   const proposalsToShow = showAll ? liveProposals : liveProposals.slice(0, 2);
@@ -71,7 +73,7 @@ const LiveProposals: FC<OwnProps> = ({ proposals, chainName }) => {
               const { yes, no, abstain, veto } = getVotingPercentages(proposal);
 
               return (
-                <div key={proposal.proposalId} className="mt-2 flex border-b border-bgSt pb-9">
+                <div key={proposal.proposalId} className="mt-2 flex border-b border-bgSt pb-9 bg-table_row">
                   <div className="ml-4 w-3/5 text-base">
                     <div className="mb-5 hover:underline hover:underline-offset-2">
                       <Link href={`/networks/${chainName}/proposal/${proposal.proposalId}`}>
@@ -81,15 +83,17 @@ const LiveProposals: FC<OwnProps> = ({ proposals, chainName }) => {
                         - {proposal.title}
                       </Link>
                     </div>
-                    <div>
-                      {t('proposer')}:&nbsp;
-                      <Link href="" className="underline underline-offset-3 font-handjet text-lg">
-                        {cutHash({
-                          value: 'cosmosvaloper1e859xaue4k2jzqw20cv6l7p3tmc378pc3k8g2u',
-                          cutLength: 10,
-                        })}
-                      </Link>
-                    </div>
+                    {chainName !== 'aztec' && chainName !== 'aztec-testnet' && (
+                      <div>
+                        {t('proposer')}:&nbsp;
+                        <Link href="" className="underline underline-offset-3 font-handjet text-lg">
+                          {cutHash({
+                            value: 'cosmosvaloper1e859xaue4k2jzqw20cv6l7p3tmc378pc3k8g2u',
+                            cutLength: 10,
+                          })}
+                        </Link>
+                      </div>
+                    )}
                     <div className="mt-1">
                       {t('voting start')}:&nbsp;
                       {proposal.votingStartTime && (

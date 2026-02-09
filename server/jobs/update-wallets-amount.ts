@@ -16,7 +16,7 @@ const updateWalletsAmount = async (chainNames: string[]) => {
       });
       if (!dbChain) {
         logError(`Chain ${chainParams.chainId} not found in database`);
-        return null;
+        continue;
       }
       logInfo(`${chainName} updating`);
       const walletsAmount = (await chainMethods.getWalletsAmount(chainParams));
@@ -31,7 +31,7 @@ const updateWalletsAmount = async (chainNames: string[]) => {
         });
       }
     } catch (e) {
-      logError("Can't fetch community tax: ", e);
+      logError("Can't fetch wallets amount: ", e);
     }
   }
 };

@@ -1,53 +1,80 @@
-import { Option } from '@polkadot/types';
-import { AddChainProps } from '@/server/tools/chains/chain-indexer';
+import type { ApiPromise } from '@polkadot/api';
+import type { Option } from '@polkadot/types';
+import type { ActiveEraInfo } from '@polkadot/types/interfaces';
+
 import logger from '@/logger';
-import { Exposure } from '@polkadot/types/interfaces';
+import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import { connectWsApi } from '@/server/tools/chains/polkadot/utils/connect-ws-api';
 
 const { logError } = logger('polkadot-validator-stake');
 
-export const getValidatorStake = async (chain: AddChainProps) => {
-  const wsList = chain.nodes.filter((n: any) => n.type === 'ws').map((n: any) => n.url);
-  if (!wsList.length) {
-    logError(`No ws url for chain '${chain.name}'`);
-    return [];
-  }
+interface ValidatorStake {
+  address: string;
+  total: string;
+  own: string;
+}
 
-  const api = await connectWsApi(wsList, 3);
+interface ChainNode {
+  type: string;
+  url: string;
+}
 
-  try {
-    const activeEraRaw = await api.query.staking.activeEra();
-    const activeEra = activeEraRaw.toJSON();
-    const eraIndex = typeof activeEra === 'object' && activeEra !== null
-      ? (activeEra as any).index ?? activeEra
-      : activeEra;
+export const getValidatorStake = async (chain: AddChainProps, providedApi?: ApiPromise): Promise<ValidatorStake[]> => {
+  let api: ApiPromise;
+  let shouldDisconnect = false;
 
-    if (typeof eraIndex !== 'number') {
-      logError(`Invalid activeEra: ${JSON.stringify(activeEra)}`);
+  if (providedApi) {
+    api = providedApi;
+  } else {
+    const wsList = chain.nodes.filter((n: ChainNode) => n.type === 'ws').map((n: ChainNode) => n.url);
+
+    if (!wsList.length) {
+      logError(`No ws url for chain '${chain.name}'`);
       return [];
     }
 
+    api = await connectWsApi(wsList, 3);
+    shouldDisconnect = true;
+  }
+
+  try {
+    const activeEraRaw = (await api.query.staking.activeEra()) as Option<ActiveEraInfo>;
+
+    if (activeEraRaw.isNone) {
+      return [];
+    }
+
+    const activeEra = activeEraRaw.unwrap();
+    const eraIndex = activeEra.index.toNumber();
+
     const validators = await api.query.staking.erasStakersOverview.entries(eraIndex);
 
-    const decoded = validators.map(([key, opt]) => {
+    return validators.map(([key, opt]) => {
       const [, stash] = key.args;
-      const exposureOption = opt as Option<Exposure>;
+      const optTyped = opt as any as Option<any>;
 
-      if (exposureOption.isNone) {
+      if (optTyped.isNone) {
         return { address: stash.toString(), total: '', own: '' };
       }
 
-      const exposure = exposureOption.unwrap();
+      const metadata = optTyped.unwrap();
 
       return {
         address: stash.toString(),
-        total: exposure?.total ? exposure.total.toString() : '',
-        own: exposure?.own ? exposure.own.toString() : '',
+        total: metadata.total.toString(),
+        own: metadata.own.toString(),
       };
     });
-
-    return decoded;
+  } catch (e) {
+    logError(`Get validator stake for [${chain.name}] error:`, e);
+    return [];
   } finally {
-    await api.disconnect();
+    if (shouldDisconnect) {
+      try {
+        await api.disconnect();
+      } catch (e) {
+        logError(`Could not disconnect websocket for ${chain.name}:`, e);
+      }
+    }
   }
 };

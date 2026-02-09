@@ -1,8 +1,8 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import getCommunityPool from '@/server/tools/chains/polkadot/get-community-pool';
 import getNodes from '@/server/tools/chains/polkadot/get-nodes';
 import getStakingParams from '@/server/tools/chains/polkadot/get-staking-params';
 import getTvs from '@/server/tools/chains/polkadot/get-tvs';
-import getCommunityPool from "@/server/tools/chains/polkadot/get-community-pool";
 
 const chainMethods: ChainMethods = {
   getNodes,
@@ -39,11 +39,13 @@ const chainMethods: ChainMethods = {
   getActiveSetMinAmount: async () => null,
   getInflationRate: async () => null,
   getNodeRewards: async () => [],
-  getChainRewards: async () => null,
+  getNodeCommissions: async () => [],
   getCirculatingTokensOnchain: async () => null,
   getCirculatingTokensPublic: async () => null,
   getDelegatorsAmount: async () => [],
   getUnbondingTokens: async () => null,
+  getChainUptime: async () => null,
+  getRewardAddress: async () => [],
 };
 
 export default chainMethods;

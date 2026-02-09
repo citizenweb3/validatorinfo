@@ -1,10 +1,12 @@
 import { getTranslations } from 'next-intl/server';
+import { Suspense } from 'react';
 
 import ValidatorsMobile from '@/app/main-validators/validator-list-mobile/validators-mobile';
 import ConsolePanel from '@/app/main-validators/validator-list/console-panel';
 import ValidatorsGame from '@/app/main-validators/validator-list/validators-game';
 import ValidatorsDev from '@/app/main-validators/validator-list/validators-dev';
 import LayoutToggle from '@/components/layout-toggle';
+import ValidatorLayoutContainer from '@/app/main-validators/validator-layout-container';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
@@ -29,7 +31,6 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
   const sortBy = (q.sortBy as 'moniker' | 'nodes' | undefined) ?? undefined;
   const order = (q.order as SortDirection) ?? 'asc';
-  const mode = (q.mode as 'game' | 'dev') ?? 'game';
 
   const chains = await chainService.getAllLight();
   const chanId = Math.floor(Math.random() * 20);
@@ -44,11 +45,29 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
       </div>
       <div className="hidden md:block">
         <LayoutToggle />
-        {mode === 'game' ? (
-          <div className="mt-4 flex">
-            <div className="min-w-0 flex-[42%]">
-              <div className="overflow-x-auto">
-                <ValidatorsGame
+        <Suspense fallback={<div className="mt-4 font-sfpro text">Loading...</div>}>
+          <ValidatorLayoutContainer
+            gameMode={
+              <div className="mt-4 flex">
+                <div className="flex-[58%] mt-12">
+                  <ConsolePanel chainName={chain?.name ?? 'cosmoshub'} />
+                </div>
+                <div className="min-w-0 flex-[42%] ml-4">
+                  <div className="overflow-x-auto">
+                    <ValidatorsGame
+                      page="HomePage"
+                      sort={{ sortBy, order }}
+                      perPage={validatorsPerPage}
+                      ecosystems={ecosystems}
+                      currentPage={currentPage}
+                    />
+                  </div>
+                </div>
+              </div>
+            }
+            devMode={
+              <div className="mt-4">
+                <ValidatorsDev
                   page="HomePage"
                   sort={{ sortBy, order }}
                   perPage={validatorsPerPage}
@@ -56,22 +75,9 @@ const Home: NextPageWithLocale<PageProps> = async ({ params: { locale }, searchP
                   currentPage={currentPage}
                 />
               </div>
-            </div>
-            <div className="ml-4 flex-[58%]">
-              <ConsolePanel chainName={chain?.name ?? 'cosmoshub'} />
-            </div>
-          </div>
-        ) : (
-          <div className="mt-4">
-            <ValidatorsDev
-              page="HomePage"
-              sort={{ sortBy, order }}
-              perPage={validatorsPerPage}
-              ecosystems={ecosystems}
-              currentPage={currentPage}
-            />
-          </div>
-        )}
+            }
+          />
+        </Suspense>
       </div>
       <div className="block md:hidden">
         <ValidatorsMobile

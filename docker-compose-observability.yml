@@ -1,0 +1,139 @@
+# Full Observability Stack with Grafana Alloy
+# Includes: Logs (Loki), Traces (Tempo), Profiles (Pyroscope), Frontend (Grafana)
+
+networks:
+  observability:
+    name: validatorinfo_observability
+    driver: bridge
+
+volumes:
+  loki_data:
+  tempo_data:
+  pyroscope_data:
+  grafana_data:
+  alloy_data:
+
+services:
+  # ============================================
+  # Grafana Alloy - Unified Telemetry Collector
+  # ============================================
+  alloy:
+    image: grafana/alloy:latest
+    container_name: alloy
+    restart: unless-stopped
+    ports:
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+      - "12345:12345" # Alloy UI
+    volumes:
+      - ./alloy-config.river:/etc/alloy/config.river
+      - alloy_data:/var/lib/alloy
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./logs:/app/logs:ro
+    command:
+      - run
+      - --server.http.listen-addr=0.0.0.0:12345
+      - --storage.path=/var/lib/alloy
+      - --stability.level=experimental
+      - /etc/alloy/config.river
+    networks:
+      - observability
+    depends_on:
+      - loki
+      - tempo
+      - pyroscope
+
+  # ============================================
+  # Loki - Log Aggregation
+  # ============================================
+  loki:
+    image: grafana/loki:3.0.0
+    container_name: loki
+    restart: unless-stopped
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki-config.yml:/etc/loki/config.yml
+      - loki_data:/loki
+    command: -config.file=/etc/loki/config.yml
+    networks:
+      - observability
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3100/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Tempo - Distributed Tracing
+  # ============================================
+  tempo:
+    image: grafana/tempo:2.4.0
+    container_name: tempo
+    restart: unless-stopped
+    ports:
+      - "3200:3200"   # Tempo HTTP
+      - "4316:4317"   # OTLP gRPC (alternative port to avoid conflicts)
+    volumes:
+      - ./tempo-config.yml:/etc/tempo/config.yml
+      - tempo_data:/var/tempo
+    command: -config.file=/etc/tempo/config.yml
+    networks:
+      - observability
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3200/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Pyroscope - Continuous Profiling
+  # ============================================
+  pyroscope:
+    image: grafana/pyroscope:1.5.0
+    container_name: pyroscope
+    restart: unless-stopped
+    ports:
+      - "4040:4040"
+    volumes:
+      - pyroscope_data:/var/lib/pyroscope
+    command:
+      - server
+    environment:
+      - PYROSCOPE_LOG_LEVEL=info
+    networks:
+      - observability
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:4040/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ============================================
+  # Grafana - Observability Frontend
+  # ============================================
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - "3002:3000"
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=false
+      - GF_FEATURE_TOGGLES_ENABLE=traceqlEditor,traceToMetrics,traceToLogs,correlations
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - grafana_data:/var/lib/grafana
+    networks:
+      - observability
+    depends_on:
+      - loki
+      - tempo
+      - pyroscope
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

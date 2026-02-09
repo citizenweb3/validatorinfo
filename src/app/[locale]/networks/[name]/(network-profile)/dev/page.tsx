@@ -3,12 +3,16 @@ import { getTranslations } from 'next-intl/server';
 import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
-import PeersSeedsBlocks from '@/app/networks/[name]/(network-profile)/dev/peers-seeds-blocks';
-import DevInfoParameters from '@/app/networks/[name]/(network-profile)/dev/dev-info-parameters';
+import DevRepositoryToggle from '@/app/networks/[name]/(network-profile)/dev/dev-repository-toggle';
 import DeveloperActivity from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity';
+import DeveloperActivityTable
+  from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table';
+import DevInfoParameters from '@/app/networks/[name]/(network-profile)/dev/dev-info-parameters';
+import PeersSeedsBlocks from '@/app/networks/[name]/(network-profile)/dev/peers-seeds-blocks';
 import SubDescription from '@/components/sub-description';
 import { SortDirection } from '@/server/types';
-import NetworkApps from '@/app/networks/[name]/(network-profile)/dev/apps-list/apps';
+import githubService from '@/services/github-service';
+import SubTitle from '@/components/common/sub-title';
 
 interface PageProps {
   params: NextPageWithLocale & { name: string };
@@ -36,18 +40,30 @@ const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
   const order = (q.order as SortDirection) ?? 'asc';
 
   const chain = await chainService.getByName(name);
+  const tActivity = await getTranslations({ locale, namespace: 'NetworkDevInfo.DeveloperActivity' });
+  const repositories = chain ? await githubService.getRepositoriesWithCommits(chain.id) : [];
 
   return (
     <div>
       <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <PeersSeedsBlocks chain={chain} />
+      <SubTitle text={t('Parameters')} />
       <DevInfoParameters chain={chain} />
-      <NetworkApps page={'NetworkDevInfo.Apps'}
-                   perPage={perPage}
-                   currentPage={currentPage}
-                   sort={{ sortBy, order }} />
-      <DeveloperActivity chain={chain} />
+      <PeersSeedsBlocks chain={chain} />
+      <DevRepositoryToggle
+        subtitleText={tActivity('Subtitle')}
+        showLabel={tActivity('show dropdown')}
+        hideLabel={tActivity('hide dropdown')}
+        table={<DeveloperActivityTable items={repositories} />}
+      >
+        <DeveloperActivity chain={chain} />
+      </DevRepositoryToggle>
+
+      {/*// will be replaced to another page*/}
+      {/*<NetworkApps page={'NetworkDevInfo.Apps'}*/}
+      {/*             perPage={perPage}*/}
+      {/*             currentPage={currentPage}*/}
+      {/*             sort={{ sortBy, order }} />*/}
     </div>
   );
 };

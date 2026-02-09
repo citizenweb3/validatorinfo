@@ -1,14 +1,11 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import { FC } from 'react';
 
-import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
-import Tooltip from '@/components/common/tooltip';
-import GiniCoefficientSVG from '@/components/customSVG/giniCoefficient';
-import TokenDistributionSVG from '@/components/customSVG/tokenDistribution';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
-import nodeService from '@/services/node-service';
-import formatCash from '@/utils/format-cash';
+import validatorService from '@/services/validator-service';
+import TokenomicsParams from '@/app/networks/[name]/(network-profile)/tokenomics/tokenomics-params';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
@@ -17,131 +14,88 @@ interface OwnProps {
 const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkTokenomics');
 
-  const nodes = await nodeService.getNodesByChainId(chain?.id ?? 1);
-
-  const totalSupply =
-    chain?.params?.coinDecimals != null && chain?.tokenomics?.totalSupply
-      ? +chain?.tokenomics?.totalSupply / 10 ** chain.params?.coinDecimals
-      : undefined;
-
+  const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
+  const totalValidators = chain
+    ? isAztec
+      ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
+      : await validatorService.getValidatorsByChainId(chain.id)
+    : null;
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain.id) : null;
-  const fdv = tokenPrice?.value && totalSupply ? totalSupply * tokenPrice.value : undefined;
+  const fdv = chain?.name === 'ethereum-sepolia' || chain?.name === 'warden-testnet' ? 0 : chain?.tokenomics?.fdv;
 
-  const communityPool = chain?.params?.coinDecimals != null
-    ? Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain.params.coinDecimals)
-    : 0;
+  const communityPool =
+    chain?.params?.coinDecimals != null
+      ? Number(chain?.tokenomics?.communityPool) / 10 ** Number(chain.params.coinDecimals)
+      : 0;
 
-  const rewardsToPayout =
-    chain?.tokenomics?.rewardsToPayout && tokenPrice && chain?.params?.coinDecimals != null
-      ? Number(chain?.tokenomics?.rewardsToPayout) / 10 ** Number(chain.params.coinDecimals) / Number(tokenPrice.value)
+  const rewardsInTokens =
+    chain?.tokenomics?.rewardsToPayout && chain?.params?.coinDecimals != null
+      ? Number(chain?.tokenomics?.rewardsToPayout) / 10 ** Number(chain.params.coinDecimals)
       : undefined;
 
-  const circulatingTokensPublicPercents =
+  const pendingUndelegations =
+    chain?.tokenomics?.unbondingTokens && chain?.params?.coinDecimals != null
+      ? Number(chain?.tokenomics?.unbondingTokens) / 10 ** Number(chain.params.coinDecimals)
+      : undefined;
+
+  const circulatingTokensPercent =
     chain?.tokenomics?.circulatingTokensPublic && chain?.tokenomics?.totalSupply
       ? (+chain?.tokenomics?.circulatingTokensPublic / +chain?.tokenomics?.totalSupply) * 100
-      : undefined;
+      : chain?.tokenomics?.circulatingTokensOnchain && chain?.tokenomics?.totalSupply
+        ? (+chain?.tokenomics?.circulatingTokensOnchain / +chain?.tokenomics?.totalSupply) * 100
+        : undefined;
 
-  const circulatingTokensOnchainPercents =
-    chain?.tokenomics?.circulatingTokensOnchain && chain?.tokenomics?.totalSupply
-      ? (+chain?.tokenomics?.circulatingTokensOnchain / +chain?.tokenomics?.totalSupply) * 100
-      : undefined;
+  const giniValue = 69;
 
   return (
-    <div className="mb-12 mt-6">
-      <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2">
-        <div className="flex flex-col">
-          <SubTitle text={t('Distribution')} />
-          <div className="mt-5 flex justify-center md:ml-20 md:justify-start">
-            <TokenDistributionSVG Community={40} Team={10} Vc={10} Inflation={40} />
-          </div>
+    <div className="mb-12">
+      <SubTitle className={"mb-20"} text={t('Gini Coefficient')} />
+      <div className="mt-6 w-[80%] mx-auto">
+        <div className="relative h-10 w-full overflow-hidden rounded-sm bg-table_row">
+          <div
+            className="h-full rounded-sm transition-all duration-500"
+            style={{
+              width: `${giniValue}%`,
+              background: 'linear-gradient(90deg, #E5C46B 0%, #4FB848 100%)',
+            }}
+          />
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 font-handjet text-xl text-highlight">
+            {(giniValue / 100).toFixed(2)}%
+          </span>
         </div>
-        <div>
-          <SubTitle text={t('Gini Coefficient')} />
-          <div className="mt-9 flex flex-row justify-center md:ml-20 md:justify-start">
-            <GiniCoefficientSVG value={69} />
-            <div className="ml-4 flex flex-col justify-center">
-              <div className="font-sfpro text-base">{t('number of validators')}</div>
-              <div className="font-handjet text-lg text-highlight">{nodes?.length ?? '234'}</div>
-            </div>
-          </div>
+        <div className="mt-2 flex flex-col items-start gap-2 font-sfpro text-base">
+          <div>{t('number of validators')}</div>
+          <Link
+            href={`/networks/${chain?.name}/validators`}
+            className="font-handjet text-lg text-highlight hover:underline"
+          >
+            {totalValidators?.length ?? 'N/A'}
+          </Link>
         </div>
       </div>
-      <div className="mt-24 flex w-full flex-wrap justify-center gap-6">
-        <MetricsCardItem
-          title={t('fdv')}
-          data={
-            fdv ? (
-              <Tooltip tooltip={`$${fdv.toLocaleString()}`}>
-                <div className="text-center">${formatCash(fdv)}</div>
-              </Tooltip>
-            ) : (
-              '-'
-            )
-          }
-          className="pb-8 pt-2.5"
-          dataClassName="mt-6"
-        />
-        <MetricsCardItem
-          title={t('% of tokens staked')}
-          data={`${(Number(chain?.tokenomics?.tvs) * 100).toFixed(2)}%`}
-          className="pb-8 pt-2.5"
-          dataClassName="mt-6"
-        />
-        <MetricsCardItem
-          title={t('community pool tvl')}
-          data={
-            <Tooltip tooltip={communityPool.toLocaleString()}>
-              {`${formatCash(communityPool)} ${chain?.params?.denom}`}
-            </Tooltip>
-          }
-          className="pb-8 pt-2.5"
-          dataClassName="mt-6"
-        />
-        <MetricsCardItem
-          title={t('inflation rate')}
-          data={`${(Number(chain?.tokenomics?.inflation) * 100).toFixed(2)}%`}
-          className="pb-8 pt-2.5"
-          dataClassName="mt-6"
-        />
-        <MetricsCardItem
-          title={t('reward to payout')}
-          data={
-            rewardsToPayout ? (
-              <Tooltip tooltip={`$${rewardsToPayout.toLocaleString()}`}>
-                <div className="text-center">${formatCash(rewardsToPayout)}</div>
-              </Tooltip>
-            ) : (
-              '-'
-            )
-          }
-          className="pb-8 pt-2.5"
-          dataClassName="mt-6"
-        />
-        {circulatingTokensPublicPercents && (
-          <MetricsCardItem
-            title={t('circulating tokens public')}
-            data={
-              <Tooltip className={'font-sfpro text-base'} tooltip={`${t('circulating tokens public tooltip')}`}>
-                <div className="text-center">{circulatingTokensPublicPercents.toFixed(2)}%</div>
-              </Tooltip>
-            }
-            className="pb-8 pt-2.5"
-            dataClassName="mt-6"
-          />
-        )}
-        {circulatingTokensOnchainPercents && (
-          <MetricsCardItem
-            title={t('circulating tokens oncain')}
-            data={
-              <Tooltip className={'font-sfpro text-base'} tooltip={`${t('circulating tokens onchain tooltip')}`}>
-                <div className="text-center">{circulatingTokensOnchainPercents.toFixed(2)}%</div>
-              </Tooltip>
-            }
-            className="pb-8 pt-2.5"
-            dataClassName="mt-6"
-          />
-        )}
-      </div>
+
+      <SubTitle className={"mt-20 mb-8"} text={t('Params')} />
+      <TokenomicsParams
+        communityPool={communityPool}
+        rewardsInTokens={rewardsInTokens}
+        pendingUndelegations={pendingUndelegations}
+        fdv={fdv}
+        tvs={Number(chain?.tokenomics?.tvs)}
+        inflation={Number(chain?.tokenomics?.inflation)}
+        circulatingTokensPercent={circulatingTokensPercent}
+        tokenPriceValue={tokenPrice ? tokenPrice.value : null}
+        denom={chain?.params?.denom ?? ''}
+        translations={{
+          communityPoolTvl: t('community pool tvl'),
+          tokensStaked: t('% of tokens staked'),
+          rewardToPayout: t('reward to payout'),
+          inflationRate: t('inflation rate'),
+          circulatingTokens: t('circulating tokens %'),
+          pendingUndelegations: t('pending undelegations'),
+          fdv: t('fdv'),
+          token: t('Token'),
+        }}
+      />
     </div>
   );
 };

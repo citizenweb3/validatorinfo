@@ -211,8 +211,9 @@ const PowerBarChart: React.FC<Props> = ({ data, height = 320 }) => {
     return (
         <div
             ref={containerRef}
+            className="bg-table_row"
             style={{
-                width: '100%',
+                width: '95%',
                 boxSizing: 'border-box',
                 position: 'relative',
                 overflow: 'visible',

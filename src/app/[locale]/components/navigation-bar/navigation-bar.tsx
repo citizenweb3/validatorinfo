@@ -15,6 +15,7 @@ export const mainTabs: TabOptions[] = [
 ];
 
 export const additionalTabs: TabOptions[] = [
+  { name: 'Analyze', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
   {
     name: 'Calculate',
     href: '/stakingcalculator',
@@ -28,7 +29,6 @@ export const additionalTabs: TabOptions[] = [
     iconHovered: icons.ComparisonIconHovered,
   },
   { name: 'Rumors', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Global', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
 ];
 
 export const aboutTabs = [

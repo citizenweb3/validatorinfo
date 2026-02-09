@@ -1,13 +1,17 @@
 import { getTranslations } from 'next-intl/server';
+
+import Nodes from '@/app/nodes/nodes-list/nodes';
+import CollapsePageHeader from '@/components/common/collapse-page-header';
+import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
+import RoundedButton from '@/components/common/rounded-button';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
+import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
-import RoundedButton from '@/components/common/rounded-button';
-import Nodes from '@/app/nodes/nodes-list/nodes';
-import SubDescription from '@/components/sub-description';
+import chainService from '@/services/chain-service';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -33,15 +37,38 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
   const sortBy = (q.sortBy as 'operatorAddress') ?? 'operatorAddress';
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
-  const nodeStatus: string[] = !q.node_status ? [] : typeof q.node_status === 'string' ? [q.node_status] : q.node_status;
+  const networks: string[] = !q.networks ? [] : typeof q.networks === 'string' ? [q.networks] : q.networks;
+  const nodeStatus: string[] = !q.node_status
+    ? []
+    : typeof q.node_status === 'string'
+      ? [q.node_status]
+      : q.node_status;
+
+  const allChains = await chainService.getAllLight();
+
+  const networksDropdown = allChains
+    .filter((chain) => ecosystems.length === 0 || ecosystems.includes(chain.ecosystem))
+    .map((chain) => ({
+      value: chain.name,
+      title: chain.prettyName,
+    }));
+
+  const allowedEcosystems =
+    networks.length > 0
+      ? Array.from(new Set(allChains.filter((chain) => networks.includes(chain.name)).map((c) => c.ecosystem)))
+      : [];
 
   return (
     <div>
-      <Story
-        src="nodes"
-        alt="Pixelated, 90s game-style characters connecting web cables of web3 blockchain networks"
-      />
-      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <PageHeaderVisibilityWrapper>
+        <CollapsePageHeader>
+          <Story
+            src="nodes"
+            alt="Pixelated, 90s game-style characters connecting web cables of web3 blockchain networks"
+          />
+        </CollapsePageHeader>
+        <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="mb-3 flex justify-end">
@@ -52,10 +79,13 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
       <Nodes
         page="NodesPage"
         ecosystems={ecosystems}
+        networks={networks}
         nodeStatus={nodeStatus}
         perPage={perPage}
         sort={{ sortBy, order }}
         currentPage={currentPage}
+        networksDropdown={networksDropdown}
+        allowedEcosystems={allowedEcosystems}
       />
     </div>
   );

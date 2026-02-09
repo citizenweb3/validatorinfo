@@ -1,4 +1,4 @@
-import { Node, Prisma, Validator } from '@prisma/client';
+import { Node, NodesConsensusData, Prisma, Validator } from '@prisma/client';
 
 import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import db from '@/db';
@@ -15,6 +15,7 @@ export type ValidatorWithNodes = Validator & {
 export type validatorNodesWithChainData = Node & {
   chain: ChainWithParamsAndTokenomics;
   votingPower: number;
+  consensusData: NodesConsensusData | null;
 };
 
 const getById = async (id: number): Promise<Validator | null> => {
@@ -71,16 +72,16 @@ const getAll = async (
   );
   const where = ecosystems.length
     ? {
-      nodes: {
-        some: {
-          chain: {
-            ecosystem: {
-              in: ecosystems,
+        nodes: {
+          some: {
+            chain: {
+              ecosystem: {
+                in: ecosystems,
+              },
             },
           },
         },
-      },
-    }
+      }
     : undefined;
   const validators = (await db.validator.findMany({
     where,
@@ -90,10 +91,10 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-          nodes: {
-            _count: order,
+            nodes: {
+              _count: order,
+            },
           },
-        },
   })) as Validator[];
 
   const validatorsWithNodes = (await db.validator.findMany({
@@ -105,10 +106,10 @@ const getAll = async (
       sortBy === 'moniker'
         ? { moniker: order }
         : {
-          nodes: {
-            _count: order,
+            nodes: {
+              _count: order,
+            },
           },
-        },
   })) as ValidatorWithNodes[];
 
   const count = await db.validator.count({ where });
@@ -165,7 +166,7 @@ const getValidatorNodesWithChains = async (
   validatorNodesWithChainData: validatorNodesWithChainData[];
   pages: number;
 }> => {
-  const where: any = { validatorId: id };
+  const where: any = { validatorId: id, NOT: { tokens: '0' } };
   if (ecosystems.length > 0) {
     where.chain = { ecosystem: { in: ecosystems } };
   }
@@ -187,6 +188,7 @@ const getValidatorNodesWithChains = async (
             params: true,
           },
         },
+        consensusData: true,
       },
     });
 
@@ -197,16 +199,13 @@ const getValidatorNodesWithChains = async (
       return { ...node, votingPower };
     });
 
-    computedNodes.sort((a, b) => order === 'asc'
-      ? a.votingPower - b.votingPower
-      : b.votingPower - a.votingPower);
+    computedNodes.sort((a, b) => (order === 'asc' ? a.votingPower - b.votingPower : b.votingPower - a.votingPower));
 
     const totalCount = computedNodes.length;
     const pages = Math.ceil(totalCount / take);
     const paginatedNodes = computedNodes.slice(skip, skip + take);
 
     return { validatorNodesWithChainData: paginatedNodes, pages };
-
   } else {
     const totalCount = await db.node.count({ where });
     const pages = Math.ceil(totalCount / take);
@@ -234,6 +233,7 @@ const getValidatorNodesWithChains = async (
             params: true,
           },
         },
+        consensusData: true,
       },
     });
 
@@ -252,20 +252,20 @@ const getRandom = async (ecosystems: string[], take: number): Promise<{ validato
   logDebug(`Get random validators ecosystems: ${ecosystems}, take: ${take}`);
 
   const sql = Prisma.sql`
-    SELECT v.id, COALESCE(json_agg(n.*) FILTER(WHERE n.id IS NOT NULL), '[]'::json) AS nodes
-    FROM "validators" v
-    LEFT JOIN "nodes" n ON v.id = n.validator_id
-    ${
-      ecosystems.length
-        ? Prisma.sql`
+      SELECT v.id, COALESCE(json_agg(n.*) FILTER(WHERE n.id IS NOT NULL), '[]'::json) AS nodes
+      FROM "validators" v
+               LEFT JOIN "nodes" n ON v.id = n.validator_id
+          ${
+            ecosystems.length
+              ? Prisma.sql`
       LEFT JOIN "chains" c ON n.chain_id = c.id
       WHERE c.ecosystem IN (${Prisma.join(ecosystems)})`
-        : Prisma.sql``
-    }
-    GROUP BY v.id
-    ORDER BY RANDOM()
-    LIMIT ${Prisma.raw(`${take}`)}
-    `;
+              : Prisma.sql``
+          }
+      GROUP BY v.id
+      ORDER BY RANDOM()
+          LIMIT ${Prisma.raw(`${take}`)}
+  `;
 
   const validatorIds = await db.$queryRaw<{ id: number }[]>(sql);
 
@@ -329,6 +329,75 @@ const getByIdentityWithDetails = async (identity: string) => {
   });
 };
 
+const getActiveValidatorsByChainId = async (chainId: number): Promise<ValidatorWithNodes[]> => {
+  logDebug(`Get active validators by chainId: ${chainId}`);
+
+  const validators = await db.validator.findMany({
+    where: {
+      nodes: {
+        some: {
+          chainId,
+          jailed: false,
+        },
+      },
+    },
+    include: {
+      nodes: {
+        where: { chainId },
+        include: { chain: true },
+      },
+    },
+    orderBy: { moniker: 'asc' },
+  });
+
+  return validators.filter((validator) =>
+    validator.nodes.some(
+      (node) =>
+        (node.tokens != null && node.tokens !== '0' && node.tokens !== '') ||
+        (node.delegatorShares != null && node.delegatorShares !== '0' && node.delegatorShares !== ''),
+    ),
+  ) as ValidatorWithNodes[];
+};
+
+const getValidatorsByChainId = async (chainId: number): Promise<ValidatorWithNodes[]> => {
+  logDebug(`Get validators by chainId: ${chainId}`);
+  return db.validator.findMany({
+    where: {
+      nodes: {
+        some: {
+          chainId,
+        },
+      },
+    },
+    include: {
+      nodes: {
+        where: { chainId },
+        include: { chain: true },
+      },
+    },
+    orderBy: { moniker: 'asc' },
+  });
+};
+
+const getAztecValidators = async (chainName: 'aztec' | 'aztec-testnet', chainId: number): Promise<ValidatorWithNodes[]> => {
+  logDebug(`Get Aztec validators by providerAddresses for chain: ${chainName}`);
+
+  const allValidators = await db.validator.findMany({
+    include: {
+      nodes: {
+        where: { chainId },
+        include: { chain: true },
+      },
+    },
+    orderBy: { moniker: 'asc' },
+  });
+
+  return allValidators.filter((v) => {
+    const addresses = v.providerAddresses as Record<string, string> | null;
+    return addresses && addresses[chainName];
+  }) as ValidatorWithNodes[];
+};
+
 const validatorService = {
   getByIdentity,
   getById,
@@ -340,6 +409,9 @@ const validatorService = {
   upsertValidator,
   getRandom,
   getByIdentityWithDetails,
+  getActiveValidatorsByChainId,
+  getValidatorsByChainId,
+  getAztecValidators,
 };
 
 export default validatorService;

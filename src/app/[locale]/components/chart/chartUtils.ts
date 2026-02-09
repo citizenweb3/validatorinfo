@@ -588,9 +588,9 @@ export function handleTooltip(
     }
     dottedLine
       .attr('x1', clampedMouseX - xAxisOffSetValue)
-      .attr('y1', chartHeight + 80)
+      .attr('y1', chartHeight)
       .attr('x2', clampedMouseX - xAxisOffSetValue)
-      .attr('y2', -20);
+      .attr('y2', 0);
 
     const tooltipHeight = tooltipConfig.baseHeight + yValues.length * tooltipConfig.rowHeight;
     let tooltipX = (clampedMouseX - xAxisOffSetValue) + tooltipConfig.xOffset;
@@ -650,10 +650,9 @@ export function handleTooltip(
         .attr('class', 'tooltip-text font-sfpro')
         .text(data.name);
 
-      // 🔥 Use percentage or formatNumber
       const formattedValue = usePercentage
         ? `${data.value.toFixed(2)}%`
-        : `$${formatNumber(data.value)}`;
+        : `$${data.value.toFixed(2)}`;
 
       chartArea.append('text')
         .attr('class', 'tooltip-text')
@@ -706,6 +705,12 @@ export function handleWheel(
   maxDate: Date,
   zoomStep: number = 1
 ): [Date, Date] {  // Changed return type from void to [Date, Date]
+  // Only handle zoom when Ctrl (Windows/Linux) or Cmd (Mac) is pressed
+  // This allows normal page scrolling when hovering over the chart
+  if (!event.ctrlKey && !event.metaKey) {
+    return xDomain; // Return current domain without changes
+  }
+
   event.preventDefault();
   const delta = event.deltaY;
 

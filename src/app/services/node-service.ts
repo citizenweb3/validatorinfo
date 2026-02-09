@@ -1,34 +1,44 @@
-import { Chain, Node, Validator } from '@prisma/client';
+import { Chain, Node, NodesConsensusData, Prisma, Validator } from '@prisma/client';
 
 import db from '@/db';
 import logger from '@/logger';
 import { NodeResult, SortDirection } from '@/server/types';
-import { fromPubkeyToValcons } from '@/utils/from-pubkey-to-valcons';
 import isUrlValid from '@/server/utils/is-url-valid';
 import { ChainWithParams } from '@/services/chain-service';
+import { fromPubkeyToValcons, fromValoperToAccount } from '@/utils/cosmos-address-converter';
 
 const { logDebug } = logger('validator-service');
+
+export type NodeWithChainAndConsensus = Node & {
+  chain: ChainWithParams;
+  consensusData: NodesConsensusData | null;
+};
+
+export type NodeWithValidatorAndChain = Prisma.NodeGetPayload<{
+  include: { validator: true; chain: { include: { params: true; tokenomics: true } } };
+}>;
 
 const upsertNode = async (
   chain: Chain,
   bech32Prefix: string | undefined,
   val: NodeResult & { validatorId?: number },
 ): Promise<Node | null> => {
-
   let website = val.description.website || '';
   if (website && !website.startsWith('http')) {
     website = isUrlValid(`https://${website}`) ? `https://${website}` : '';
   }
 
   let consensusAddress = '';
+  let accountAddress = '';
+
   switch (chain.ecosystem) {
     case 'cosmos':
-      consensusAddress = bech32Prefix
-        ? fromPubkeyToValcons(val.consensus_pubkey.key, bech32Prefix)
-        : '';
+      consensusAddress = bech32Prefix ? fromPubkeyToValcons(val.consensus_pubkey.key, bech32Prefix) : '';
+      accountAddress = bech32Prefix ? fromValoperToAccount(val.operator_address, bech32Prefix) : '';
       break;
     case 'ethereum':
       consensusAddress = val.operator_address;
+      accountAddress = val.account_address ?? val.operator_address;
       break;
     default:
       consensusAddress = '';
@@ -37,9 +47,11 @@ const upsertNode = async (
   const node = await db.node.upsert({
     where: { operatorAddress: val.operator_address },
     update: {
-      tokens: val.tokens,
+      accountAddress: accountAddress,
+      rewardAddress: val.reward_address,
+      ...(val.tokens && val.tokens !== '0' ? { tokens: val.tokens } : {}),
+      ...(val.delegator_shares && val.delegator_shares !== '0' ? { delegatorShares: val.delegator_shares } : {}),
       moniker: val.description.moniker,
-      delegatorShares: val.delegator_shares,
       details: val.description.details,
       securityContact: val.description.security_contact,
       jailed: val.jailed,
@@ -52,6 +64,8 @@ const upsertNode = async (
       validator: val.validatorId ? { connect: { id: val.validatorId } } : undefined,
       moniker: val.description.moniker,
       operatorAddress: val.operator_address,
+      accountAddress: accountAddress,
+      rewardAddress: val.reward_address,
       consensusPubkey: val.consensus_pubkey.key,
       consensusAddress: consensusAddress,
       delegatorShares: val.delegator_shares,
@@ -87,19 +101,23 @@ const getNodesByChainId = async (chainId: number): Promise<Node[] | null> => {
 
 const getAll = async (
   ecosystems: string[],
+  networks: string[],
   nodeStatus: string[],
   skip: number,
   take: number,
   sortBy: string = 'operatorAddress',
   order: SortDirection = 'asc',
-): Promise<{ nodes: (Node & { chain: ChainWithParams })[]; pages: number }> => {
+): Promise<{ nodes: NodeWithChainAndConsensus[]; pages: number }> => {
   logDebug(
     `Get all nodes with ecosystems: ${ecosystems}, nodeStatus: ${nodeStatus}, skip: ${skip}, take: ${take}, sortBy: ${sortBy} - ${order}`,
   );
 
   let chainFilter: Record<string, any> = {};
   if (ecosystems.length > 0) {
-    chainFilter = { ecosystem: { in: ecosystems } };
+    chainFilter.ecosystem = { in: ecosystems };
+  }
+  if (networks.length > 0) {
+    chainFilter.name = { in: networks };
   }
 
   const where: any = {};
@@ -133,6 +151,7 @@ const getAll = async (
       chain: {
         include: { params: true },
       },
+      consensusData: true,
     },
   });
 
@@ -148,11 +167,22 @@ const getValidatorByNodeId = async (nodeId: number): Promise<Validator | null> =
   return node?.validator || null;
 };
 
+const getNodeByAddressAndId = async (
+  address: string,
+  validatroId: number,
+): Promise<NodeWithValidatorAndChain | null> => {
+  return db.node.findUnique({
+    where: { operatorAddress: address, validatorId: validatroId },
+    include: { validator: true, chain: { include: { params: true, tokenomics: true } } },
+  });
+};
+
 const nodeService = {
   upsertNode,
   getNodesByChainId,
   getAll,
   getValidatorByNodeId,
+  getNodeByAddressAndId,
 };
 
 export default nodeService;

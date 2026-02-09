@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import ValidatorMediaItem from '@/app/validators/[id]/(validator-profile)/public_goods/media/validator-media-item';
 import { validatorExample } from '@/app/validators/[id]/(validator-profile)/validatorExample';
+import BaseTable from '@/components/common/table/base-table';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/server/types';
 
@@ -15,7 +16,7 @@ const ValidatorMediasList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
   const pages = 1;
   return (
     <div>
-      <table className="my-4 w-full table-auto border-collapse">
+      <BaseTable className="my-4">
         <tbody>
           {validatorExample.media.map((item) => (
             <ValidatorMediaItem key={item.name} item={item} />
@@ -26,7 +27,7 @@ const ValidatorMediasList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
             </td>
           </tr>
         </tbody>
-      </table>
+      </BaseTable>
     </div>
   );
 };

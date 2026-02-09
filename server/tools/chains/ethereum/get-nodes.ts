@@ -1,7 +1,8 @@
+import { setTimeout as sleep } from 'timers/promises';
+
 import logger from '@/logger';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
 import { NodeResult } from '@/server/types';
-import { setTimeout as sleep } from 'timers/promises';
 
 const { logError, logInfo } = logger('eth-nodes');
 
@@ -12,8 +13,7 @@ interface ChainNode {
   validator: { pubkey: string; slashed: boolean };
 }
 
-const nextToken = (link?: string | null) =>
-  link?.match(/page_token=([^>]+)>;\s*rel="next"/)?.[1] ?? null;
+const nextToken = (link?: string | null) => link?.match(/page_token=([^>]+)>;\s*rel="next"/)?.[1] ?? null;
 
 const getNodes: GetNodesFunction = async (chain) => {
   const restUrl = chain.nodes.find((n: any) => n.type === 'rest')?.url ?? '';
@@ -22,7 +22,10 @@ const getNodes: GetNodesFunction = async (chain) => {
     return [];
   }
 
-  const ENDPOINT = '/eth/v1/beacon/states/head/validators';
+  const ENDPOINT =
+    chain.name === 'ethereum'
+      ? '/eth/v1/beacon/states/head/validators?status=active'
+      : '/eth/v1/beacon/states/head/validators';
   const RETRIES = 3;
   const RETRY_WAIT_MS = 1_000;
 
@@ -37,7 +40,9 @@ const getNodes: GetNodesFunction = async (chain) => {
 
       while (tries < RETRIES && !nodesData) {
         try {
-          const url = new URL(ENDPOINT, restUrl);
+          const baseUrl = restUrl.endsWith('/') ? restUrl : restUrl + '/';
+          const endpoint = ENDPOINT.startsWith('/') ? ENDPOINT.slice(1) : ENDPOINT;
+          const url = new URL(endpoint, baseUrl);
           if (pageToken) url.searchParams.set('page_token', pageToken);
           logInfo(`Fetching data from ${url}`);
           const res = await fetch(url.toString());

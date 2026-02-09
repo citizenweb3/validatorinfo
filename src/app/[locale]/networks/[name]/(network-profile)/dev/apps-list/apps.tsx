@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -19,18 +20,18 @@ const NetworkApps: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) =
   return (
     <div className="mt-10">
       <SubTitle text={t('Subtitle')} />
-      <table className="w-full table-auto border-collapse mt-4">
+      <BaseTable className="mt-4">
         <thead>
         <tr className="bg-table_header">
           <TableHeaderItem page={page} name="Name" sortField="name" defaultSelected />
-          <TableHeaderItem page={page} name="Links" sortField="links" />
+          <TableHeaderItem page={page} name="Links" />
           <TableHeaderItem page={page} name="Users" sortField="users" />
           <TableHeaderItem page={page} name="WAU" sortField="wau" />
           <TableHeaderItem page={page} name="Capital" sortField="capital" />
         </tr>
         </thead>
         <NetworkAppsList perPage={perPage} sort={sort} currentPage={currentPage} />
-      </table>
+      </BaseTable>
     </div>
   );
 };

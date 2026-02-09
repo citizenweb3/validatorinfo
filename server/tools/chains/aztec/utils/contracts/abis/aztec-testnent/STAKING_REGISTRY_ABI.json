@@ -1,0 +1,813 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "contract IERC20",
+        "name": "_stakingAsset",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_pullSplitFactory",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IRegistry",
+        "name": "_rollupRegistry",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "QueueIndexOutOfBounds",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "QueueIsEmpty",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "SafeERC20FailedOperation",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "StakingRegistry__InvalidProviderIdentifier",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_takeRate",
+        "type": "uint256"
+      }
+    ],
+    "name": "StakingRegistry__InvalidTakeRate",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "StakingRegistry__NotPendingProviderAdmin",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "StakingRegistry__NotProviderAdmin",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_expectedTakeRate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_gotTakeRate",
+        "type": "uint256"
+      }
+    ],
+    "name": "StakingRegistry__UnexpectedTakeRate",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "StakingRegistry__UpdatedProviderAdminToSameAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "StakingRegistry__UpdatedProviderTakeRateToSameValue",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "StakingRegistry__ZeroAddress",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "attesters",
+        "type": "address[]"
+      }
+    ],
+    "name": "AttestersAddedToProvider",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "ProviderAdminUpdateInitiated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "ProviderAdminUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "attester",
+        "type": "address"
+      }
+    ],
+    "name": "ProviderQueueDripped",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "providerAdmin",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint16",
+        "name": "providerTakeRate",
+        "type": "uint16"
+      }
+    ],
+    "name": "ProviderRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newRewardsRecipient",
+        "type": "address"
+      }
+    ],
+    "name": "ProviderRewardsRecipientUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint16",
+        "name": "newTakeRate",
+        "type": "uint16"
+      }
+    ],
+    "name": "ProviderTakeRateUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "rollupAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "attester",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "coinbaseSplitContractAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "stakerImplementation",
+        "type": "address"
+      }
+    ],
+    "name": "StakedWithProvider",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "PULL_SPLIT_FACTORY",
+    "outputs": [
+      {
+        "internalType": "contract PullSplitFactory",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ROLLUP_REGISTRY",
+    "outputs": [
+      {
+        "internalType": "contract IRegistry",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STAKING_ASSET",
+    "outputs": [
+      {
+        "internalType": "contract IERC20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "acceptProviderAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "attester",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "x",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct BN254Lib.G1Point",
+            "name": "publicKeyG1",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "x0",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "x1",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y0",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y1",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct BN254Lib.G2Point",
+            "name": "publicKeyG2",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "x",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct BN254Lib.G1Point",
+            "name": "proofOfPossession",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct IStakingRegistry.KeyStore[]",
+        "name": "_keyStores",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "addKeysToProvider",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_numberOfKeysToDrip",
+        "type": "uint256"
+      }
+    ],
+    "name": "dripProviderQueue",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_rollupVersion",
+        "type": "uint256"
+      }
+    ],
+    "name": "getActivationThreshold",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "getFirstIndexInQueue",
+    "outputs": [
+      {
+        "internalType": "uint128",
+        "name": "",
+        "type": "uint128"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "getLastIndexInQueue",
+    "outputs": [
+      {
+        "internalType": "uint128",
+        "name": "",
+        "type": "uint128"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "getProviderQueueLength",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint128",
+        "name": "_index",
+        "type": "uint128"
+      }
+    ],
+    "name": "getValueAtIndexInQueue",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "attester",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "x",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct BN254Lib.G1Point",
+            "name": "publicKeyG1",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "x0",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "x1",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y0",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y1",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct BN254Lib.G2Point",
+            "name": "publicKeyG2",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "x",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "y",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct BN254Lib.G1Point",
+            "name": "proofOfPossession",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct IStakingRegistry.KeyStore",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "nextProviderIdentifier",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "pendingProviderAdmins",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "providerAdmin",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "providerConfigurations",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "providerAdmin",
+        "type": "address"
+      },
+      {
+        "internalType": "uint16",
+        "name": "providerTakeRate",
+        "type": "uint16"
+      },
+      {
+        "internalType": "address",
+        "name": "providerRewardsRecipient",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "providerIdentifier",
+        "type": "uint256"
+      }
+    ],
+    "name": "providerQueues",
+    "outputs": [
+      {
+        "internalType": "uint128",
+        "name": "first",
+        "type": "uint128"
+      },
+      {
+        "internalType": "uint128",
+        "name": "last",
+        "type": "uint128"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_providerAdmin",
+        "type": "address"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_providerTakeRate",
+        "type": "uint16"
+      },
+      {
+        "internalType": "address",
+        "name": "_providerRewardsRecipient",
+        "type": "address"
+      }
+    ],
+    "name": "registerProvider",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_rollupVersion",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_withdrawalAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_expectedProviderTakeRate",
+        "type": "uint16"
+      },
+      {
+        "internalType": "address",
+        "name": "_userRewardsRecipient",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_moveWithLatestRollup",
+        "type": "bool"
+      }
+    ],
+    "name": "stake",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_newAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "updateProviderAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_newRewardsRecipient",
+        "type": "address"
+      }
+    ],
+    "name": "updateProviderRewardsRecipient",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_providerIdentifier",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_newTakeRate",
+        "type": "uint16"
+      }
+    ],
+    "name": "updateProviderTakeRate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

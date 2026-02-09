@@ -4,6 +4,7 @@ import { ChainWithParams } from '@/services/chain-service';
 import { Prisma } from '.prisma/client';
 
 import ProposalCreateInput = Prisma.ProposalCreateInput;
+import { Chain } from '@prisma/client';
 
 export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
 
@@ -49,6 +50,7 @@ export interface AddChainProps {
   chainId: string;
   name: string;
   prettyName: string;
+  shortDescription?: string;
   denom: string;
   minimalDenom: string;
   logoUrl: string;
@@ -66,6 +68,7 @@ export interface AddChainProps {
   chainRegistry?: string;
   peers?: string[];
   seeds?: string[];
+  tags?: string[];
 }
 
 export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;
@@ -83,11 +86,22 @@ export interface NodeVote {
   vote: string;
 }
 
+export interface AztecGovernanceConfigAdditional {
+  votingDelay: string;
+  executionDelay: string;
+  gracePeriod: string;
+  requiredYeaMargin: number;
+  minimumVotes: string;
+  lockDelay: string;
+  [key: string]: string | number;
+}
+
 export interface ProposalParams {
   creationCost: number | null;
   votingPeriod: string | null;
   participationRate: number | null;
   quorumThreshold: number | null;
+  aztecGovernanceConfigAdditional?: AztecGovernanceConfigAdditional | null;
 }
 
 export interface NodesRewards {
@@ -95,13 +109,29 @@ export interface NodesRewards {
   rewards: string | null;
 }
 
+export interface NodesCommissions {
+  address: string | null;
+  commission: string | null;
+}
+
 export interface DelegatorsAmount {
   address: string;
   amount: number;
 }
 
+export interface ChainUptime {
+  lastUptimeUpdated: Date;
+  uptimeHeight: number;
+  avgTxInterval: number;
+}
+
+export interface RewardAddress {
+  operatorAddress: string;
+  rewardAddresses: string;
+}
+
 export type GetTvsFunction = (chain: AddChainProps) => Promise<ChainTVSResult | null>;
-export type GetAprFunction = (chain: AddChainProps) => Promise<number>;
+export type GetAprFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetNodesFunction = (chain: AddChainProps) => Promise<NodeResult[]>;
 export type GetProposalsFunction = (chain: AddChainProps) => Promise<ProposalsResult>;
 export type GetStakingParamsFunction = (chain: AddChainProps) => Promise<StakingParams>;
@@ -114,7 +144,7 @@ export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
 export type GetNodeRewards = (chain: AddChainProps) => Promise<NodesRewards[]>;
-export type GetChainRewards = (chain: AddChainProps) => Promise<string | null>;
+export type GetNodeCommissions = (chain: AddChainProps) => Promise<NodesCommissions[]>;
 export type GetCommPoolFunction = (chain: AddChainProps) => Promise<string | null>;
 export type GetInflationRate = (chain: AddChainProps) => Promise<number | null>;
 export type GetActiveSetMinAmount = (chain: AddChainProps) => Promise<string | null>;
@@ -126,6 +156,8 @@ export type GetCirculatingTokensOnchain = (
 export type GetCirculatingTokensPublic = (chain: AddChainProps) => Promise<string | null>;
 export type GetDelegatorsAmount = (chain: AddChainProps) => Promise<DelegatorsAmount[]>;
 export type GetUnbondingTokens = (chain: AddChainProps) => Promise<string | null>;
+export type GetChainUptime = (dbChain: Chain) => Promise<ChainUptime | null>;
+export type GetRewardAddress = (chain: AddChainProps, dbChainId: number) => Promise<RewardAddress[]>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -141,7 +173,7 @@ export interface ChainMethods {
   getWalletsAmount: GetWalletsAmount;
   getProposalParams: GetProposalParams;
   getNodeRewards: GetNodeRewards;
-  getChainRewards: GetChainRewards;
+  getNodeCommissions: GetNodeCommissions;
   getCommunityPool: GetCommPoolFunction;
   getActiveSetMinAmount: GetActiveSetMinAmount;
   getInflationRate: GetInflationRate;
@@ -149,4 +181,6 @@ export interface ChainMethods {
   getCirculatingTokensPublic: GetCirculatingTokensPublic;
   getDelegatorsAmount: GetDelegatorsAmount;
   getUnbondingTokens: GetUnbondingTokens;
+  getChainUptime: GetChainUptime;
+  getRewardAddress: GetRewardAddress;
 }

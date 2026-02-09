@@ -49,12 +49,14 @@ const config: Config = {
       secondary: '#4FB848',
       highlight: 'var(--color-background-highlight)',
       table_header: '#272727',
+      table_row: '#181818',
       card: '#272727',
       background: 'var(--color-background)',
       bgSt: 'var(--color-background-stroke)',
       bgHover: 'var(--color-background-hover)',
       storiesGreen: '#223124',
       dottedLine: '#E5C46B',
+      redDottedLine: '#FF0202',
       oldPalette: {
         yellow: '#F3B101',
         red: '#EB1616',
@@ -164,6 +166,7 @@ const config: Config = {
         console_menu_arrow: `url('/img/icons/console-menu-arrow.svg')`,
         joystick_arrow: `url('/img/icons/joystick-arrow.svg')`,
         joystick_arrow_a: `url('/img/icons/joystick-arrow-a.svg')`,
+        joystick_arrow_light: `url('/img/icons/joystick-arrow-light.svg')`,
       },
       textShadow: {
         sm: '1px 1px 0 var(--tw-shadow-color)',

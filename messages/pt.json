@@ -49,6 +49,18 @@
     "Profile": "Perfil",
     "Search for a validator, pool, tx, address, network, etc": "Pesquise um validador, pool, transação, endereço, rede, etc.",
     "Lucky!?": "Sortudo!?",
+    "Co-Create & Support": "Co-Criar & Apoiar",
+    "CoCreate": {
+      "tagline": "<github>Código aberto. Sem anúncios. Respeito à privacidade. Auto-hospedado!</github>",
+      "mission": "Estamos fazendo isso de forma independente — e vai continuar assim. O Explorer que a Web3 merece!",
+      "description": "Somos um <validator>validador auto-hospedado, bare-metal</validator>, focado em redes de privacidade e construindo para a descentralização. Construímos <infrastructure>infraestrutura única, capaz de operar fora da rede</infrastructure> para redes e ferramentas que oferecem monitoramento preciso e direto de dados on-chain.",
+      "lookingFor": "Estamos procurando:",
+      "partners": "Parceiros apaixonados",
+      "interns": "Estagiários/contribuidores entusiasmados",
+      "delegators": "Delegadores que praticam a descentralização",
+      "telegram": "DM no Telegram: <tgLink>@citizenweb3</tgLink>",
+      "support": "Este projeto é financiado através dos nossos nós. Apoie o projeto agora, através de <stakingLink>staking connosco!</stakingLink>"
+    },
     "search": {
       "Validators": "Validadores",
       "Networks": "Redes",
@@ -63,7 +75,7 @@
     "Calculate": "Calcular",
     "Compare": "Comparar",
     "Rumors": "Rumor",
-    "Global": "Analise",
+    "Analyze": "Analise",
     "About Us": "Sobre nós",
     "Library": "Biblioteca",
     "Ecosystems": "Ecossistemas",
@@ -136,6 +148,7 @@
       "Customize": "Customizar",
       "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
       "Ecosystems": "Ecossistemas",
+      "Networks": "Redes",
       "Network Stage": "Fase de Rede",
       "Set Position": "Posição de definição",
       "Node Status": "Estado do nó"
@@ -145,7 +158,7 @@
       "Compare": "Comparar",
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
-      "Global": "Analise"
+      "Analyze": "Analise"
     },
     "ConsolePanel": {
       "Get started": {
@@ -211,7 +224,8 @@
     "Wrong amount": "Quantidade errada",
     "earnings": "d Ganhos",
     "downloading validators": "Descarregamento de validadores...",
-    "please choose network": "Escolha uma Rede"
+    "please choose network": "Escolha uma Rede",
+    "not supported yet": "Ainda não suportado"
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Descobrir as Redes Blockchain e a sua Avaliação",
@@ -227,9 +241,11 @@
     },
     "read more": "Leia Mais",
     "Others Links": "Outras ligações",
-    "Show Transactions": "Mostrar Transacções",
-    "Show Validators": "Mostrar Validadores",
-    "Show Nodes": "Mostrar nós",
+    "Transactions": "Transacções",
+    "Blocks": "Blocos",
+    "Validators": "Validadores",
+    "Nodes": "Nós",
+    "Apps": "Apps",
     "temperature tooltip": "Mostra o estado de saúde da cadeia com base em várias métricas verificáveis",
     "tvl": "TVL",
     "revenue": "Receitas",
@@ -240,17 +256,24 @@
     "validator cost tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
     "mau tooltip": "O valor em USD que custaria para que um nó produzisse recompensas",
     "rich list tooltip": "Lista Rica",
-    "distribution tooltip": "Distribuição"
+    "distribution tooltip": "Distribuição",
+    "validator map tooltip": "{chainName} Mapa de Validadores",
+    "Links": "Links",
+    "Tags": "Tags"
   },
   "NetworkPassport": {
     "title": "Visão Geral da Rede Blockchain: Ponto de Partida para o Web3",
     "description": "Criei esta aba de Visão Geral para fornecer a você todas as informações sobre esta rede blockchain — sua missão, estado, APR, TVL e muito mais. Seja você novo nas redes descentralizadas ou um profissional, esta é a sua porta de entrada para entender o nível de descentralização, escalabilidade e segurança desta rede. Quer saber mais? Explore as outras abas ou confira nosso Diretório A-Z do Ecossistema!",
     "amount of wallets": "Quantidade de Carteiras",
     "total amount of tx": "Montante Total de Tx",
+    "total amount of blocks": "Quantidade Total de Blocos",
+    "total amount of slots": "Quantidade Total de Slots",
+    "total amount of epochs": "Quantidade total de Epocas",
     "total supply": "Fornecimento Total",
-    "Network APR and TVS": "APR e TVS de Rede",
+    "Historical Trend": "Tendência Histórica",
     "Network Overview": "Visão Geral da Rede",
     "active validators": "Validadores Activos",
+    "Validator Count": "Contagem de Validadores",
     "unbonding time": "Tempo de Unbonding",
     "community tax": "Taxa Comunitária",
     "proposal creation cost": "Custo de Criação da Proposta",
@@ -258,7 +281,10 @@
     "slashing": "Cortar",
     "comm pool value in usd": "Valor da Piscina Comunitária em USD",
     "% of comm pool to total supply": "% da Reserva Comunitária em Relação à Oferta Total",
-    "average block time": "Tempo Médio de Bloqueio"
+    "average block time": "Tempo Médio de Bloqueio",
+    "slot duration": "Duração do Slot",
+    "epoch progress": "Progresso da Época",
+    "committee size": "Dimensão da Comissão"
   },
   "NetworkStatistics": {
     "title": "Painel de Estatísticas Blockchain: Métricas ao Vivo da Rede",
@@ -271,17 +297,28 @@
     "healthy validators": "Validadores Saudáveis",
     "Operator Distributions": "Distribuição de Operadores",
     "active": "Ativo",
+    "inactive": "Inativo",
     "jailed": "Jailed",
+    "active in queue": "Ativo na fila",
+    "in queue": "Na fila",
+    "zombie": "Zumbi",
+    "exiting": "Saindo",
     "Social": "Social",
     "price of active user": "Preço do usuário ativo",
     "believers": "Entusiastas",
     "followers": "Seguidores",
+    "followers tooltip": "Quantidade de seguidores no Twitter (X)",
     "members": "Membros",
-    "Transaction Volume": "Volume de transações + MAU"
+    "Transaction Volume": "Volume de transações + MAU",
+    "chart unavailable": "Os dados do volume de transações estão indisponíveis no momento. As métricas ao vivo retornarão assim que a manutenção for concluída.",
+    "distribution map": "Mapa de Distribuição"
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",
+    "aztec-title": "Portal de Governança: Comitê da Época Atual",
     "description": "A aba de Governança revela como funciona a governança descentralizada desta rede — propostas ativas, registros de votação das propostas, votos dos delegadores e contribuições da comunidade. Tudo se resume a ver o processo de tomada de decisão do blockchain em ação. Pronto para participar? Explore nossa lista de validadores de A a Z para conhecer os principais atores!",
+    "current committee": "Comissão Atual",
+    "aztec-description": "Validadores que participam do comitê da época atual. Os membros do comitê são selecionados para propor e atestar blocos.",
     "total": "Total",
     "total tooltip": "O montante combinado das propostas que a rede tinha, incluindo propostas falhadas, em direto, etc.",
     "passed": "Aprovado",
@@ -297,7 +334,43 @@
     "remaining time": "Tempo Restante",
     "no live proposals": "Sem Propostas em Direto",
     "more live proposals": "Mais Propostas em Direto",
-    "less live proposals": "Menos Propostas em Direto"
+    "less live proposals": "Menos Propostas em Direto",
+    "current epoch committee": "Comitê da Época Atual",
+    "validator": "Validador",
+    "address": "Sequencer Endereço",
+    "reward address": "Endereço de Recompensa",
+    "no committee members": "Nenhum membro do comitê encontrado para a época atual",
+    "attesters in committee": "atestadores no comitê",
+    "proposals-title": "Propostas",
+    "slashing-events-title": "Eventos de Penalização",
+    "governance-config-title": "Configuração de Governança",
+    "voting-power-title": "Poder de Votação Total",
+    "quorum": "Quórum",
+    "min-votes": "Votos Mínimos",
+    "yea-margin": "Margem de Aprovação",
+    "voting-delay": "Atraso de Votação",
+    "voting-duration": "Duração da Votação",
+    "execution-delay": "Atraso de Execução",
+    "grace-period": "Período de Graça",
+    "lock-amount": "Valor de Bloqueio",
+    "of-supply": "do fornecimento total",
+    "show dropdown": "Mostrar Eventos de Penalização",
+    "hide dropdown": "Ocultar Eventos de Penalização",
+    "no-slashing-events": "Nenhum evento de penalização encontrado para esta rede",
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Address": {
+        "name": "Sequencer Endereço",
+        "hint": ""
+      },
+      "RewardAddress": {
+        "name": "Endereço de Recompensa",
+        "hint": ""
+      }
+    }
   },
   "NetworkDevInfo": {
     "title": "Atividade de Desenvolvedores: Contribuidores Web3",
@@ -314,6 +387,7 @@
     "peers": "Peers",
     "seeds": "Seeds",
     "binary versions": "Versões binárias",
+    "l1 contracts": "Contratos L1",
     "Submit App Info": "Enviar informações sobre a aplicação",
     "Parameters": "Parâmetros",
     "bech32 prefix": "Bech32 Prefixo",
@@ -372,13 +446,17 @@
         }
       },
       "no repositories": "No Repositórios"
-    }
+    },
+    "distribution map": "Mapa de Distribuição"
   },
   "NetworkTokenomics": {
     "title": "Tokenomics: Análise da Economia Cripto da Rede",
     "description": "Vamos mergulhar nos tokens! A aba de Tokenomics detalha a economia cripto desta rede — pense nas recompensas de staking de tokens, estatísticas de oferta, detalhes de distribuição e no Coeficiente de Gini. Gráficos modernos mostram os fluxos de receita e os movimentos de capital em tempo real. Precisa de uma análise mais aprofundada? Combine com nossa Calculadora de Recompensas de Staking!",
     "Token Price": "Preço do Token",
     "Supply Concentration": "Concentração da oferta",
+    "Token Flow": "Fluxo de Tokens",
+    "pending undelegations": "Delegações Pendentes",
+    "circulating tokens %": "Tokens em Circulação %",
     "Distribution": "Distribuição",
     "Gini Coefficient": "Coeficiente de Gini",
     "number of validators": "Número de Validadores",
@@ -391,7 +469,10 @@
     "circulating tokens public tooltip": "Recebido e calculado com base em dados públicos da blockchain",
     "circulating tokens onchain tooltip": "Recebido e calculado com base em dados on-chain",
     "inflation rate": "Taxa de inflação",
-    "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital"
+    "Revenue vs Capital Flow": "Receitas VS Fluxo de Capital",
+    "Params": "Params",
+    "Token": "TOKEN",
+    "No chart data available": "Dados do gráfico indisponíveis"
   },
   "NetworkValidatorsPage": {
     "title": "Resumo dos Validadores Blockchain",
@@ -408,6 +489,10 @@
       "Voting Power": {
         "name": "Poder de Voto",
         "hint": "A quantidade total assegurada pelo validador, e a porcentagem que representa do total de tokens apostados"
+      },
+      "Voting Power Active": {
+        "name": "Poder de Voto Ativo",
+        "hint": "A quantidade total de tokens ativos"
       },
       "Commission": {
         "name": "Comissão",
@@ -429,6 +514,10 @@
         "name": "Infraestrutura",
         "hint": "Este validador fornece infraestrutura pública para esta rede? RPC, Arquivo, etc. Clique no V para ver detalhes"
       },
+      "Committee": {
+        "name": "Comitê",
+        "hint": "Este validador faz parte do comitê da época atual? Os membros do comitê são selecionados para propor e atestar blocos"
+      },
       "Governance": {
         "name": "Governança",
         "hint": "Pontuação de governança do validador em 100. Baseado em sua participação em eventos importantes"
@@ -437,6 +526,27 @@
       "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros",
       "Network Stage": "Estágio da Rede",
       "Set Position": "Definir Posição"
+    }
+  },
+  "NetworkNodesPage": {
+    "title": "Nós da Rede",
+    "description": "Lista de todos os nós na rede {networkName}",
+    "Table": {
+      "Node Address": {
+        "name": "Endereço do Nó"
+      },
+      "Node Moniker": {
+        "name": "Nome do Nó"
+      },
+      "Stake": {
+        "name": "Stake"
+      },
+      "Uptime": {
+        "name": "Tempo de Atividade"
+      },
+      "Missed Blocks": {
+        "name": "Blocos Perdidos"
+      }
     }
   },
   "NodesPage": {
@@ -857,10 +967,6 @@
         "name": "Estado",
         "hint": "Estado operacional atual do nó de infraestrutura"
       },
-      "Response Time": {
-        "name": "Tempo de Resposta",
-        "hint": "Tempo médio de resposta para pedidos a este nó"
-      },
       "Last Checked": {
         "name": "Última Verificação",
         "hint": "Quando este nó foi verificado pela última vez quanto à disponibilidade"
@@ -894,6 +1000,7 @@
     "tokens delegated": "Tokens Delegados",
     "expected APR": "APR prevista",
     "outstanding reward": "Recompensa Excecional",
+    "outstanding commission": "Comissão Pendente",
     "voting power": "Poder de Voto",
     "validator rank": "Classificação do Validador",
     "proposals created": "Propostas Criadas",
@@ -1028,6 +1135,14 @@
       "Commits": {
         "name": "Compromissos",
         "hint": ""
+      },
+      "Block": {
+        "name": "Bloquear [Hora]",
+        "hint": ""
+      },
+      "Amount Slashed": {
+        "name": "Montante reduzido",
+        "hint": ""
       }
     },
     "show dropdown": "Evento de Corte de Espetáculo",
@@ -1041,6 +1156,8 @@
     "transactions yesterday": "Transacções (Ontem)",
     "tps": "TPS (Últimos 20 Bloqueios)",
     "average fee": "Taxa média",
+    "noTransactionsYet": "Ainda não há transações",
+    "transactionsWillAppear": "A exibição de transações aparecerá quando as transações começarem na rede",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",
@@ -1057,6 +1174,30 @@
       "Block Height": {
         "name": "Altura do Bloco",
         "hint": "O número do bloco em que a transação teve lugar"
+      }
+    }
+  },
+  "TotalBlocksPage": {
+    "title": "Blockchain: Estatísticas de Blocos",
+    "description": "Eu preparei esta Tabela Resumo de Blocos para oferecer uma visão rápida e clara do que está acontecendo na rede. Ela traz dados em tempo real dos blocos. Quer ver mais detalhes? Basta clicar em qualquer bloco para ver as informações completas!",
+    "total blocks": "Total de Blocos",
+    "blocks duration": "Duração dos Blocos",
+    "Table": {
+      "Status": {
+        "name": "Status",
+        "hint": "Status de finalização"
+      },
+      "Block Hash": {
+        "name": "Hash do Bloco",
+        "hint": "Hash do bloco. Clique para ver detalhes"
+      },
+      "Timestamp": {
+        "name": "Data e Hora",
+        "hint": "Momento em que o bloco foi criado (UTC)"
+      },
+      "Block Height": {
+        "name": "Altura do Bloco",
+        "hint": "Número do bloco"
       }
     }
   },
@@ -1083,6 +1224,48 @@
     "auto claim reward": "Reivindicação Automática de Recompensa",
     "Search by validator name and tx hash": "Pesquisa por nome do validador e hash tx"
   },
+  "BlockInformationPage": {
+    "title": "Detalhes do Bloco Blockchain: Informações Detalhadas do Bloco",
+    "description": "A página de Detalhes do Bloco fornece tudo o que você precisa saber sobre este bloco específico — seu hash único, altura do bloco, status de finalização, contagem de transações, taxas de gás, timestamps e árvores de estado criptográficas. É como um instantâneo detalhado do blockchain neste momento específico, oferecendo total transparência nas operações da rede.",
+    "show all blocks": "Mostrar Todos os Blocos",
+    "block icon tooltip": "Informações do Bloco",
+    "block": "Bloco",
+    "finalized": "Finalizado",
+    "pending": "Pendente",
+    "block hash": "Hash do Bloco",
+    "block height": "Altura do Bloco",
+    "timestamp": "Marca de Tempo",
+    "finalization status": "Status de Finalização",
+    "transaction count": "Contagem de Transações",
+    "slot number": "Número do Slot",
+    "total fees": "Taxas Totais",
+    "total mana used": "Mana Total Usado",
+    "chain id": "ID da Rede",
+    "protocol version": "Versão do Protocolo",
+    "block producer": "Produtor do Bloco (Coinbase)",
+    "fee recipient": "Destinatário da Taxa",
+    "fee per da gas": "Taxa por DA Gas",
+    "fee per l2 gas": "Taxa por L2 Gas",
+    "archive root": "Raiz do Arquivo",
+    "archive next leaf index": "Próximo Índice de Folha do Arquivo",
+    "last archive root": "Raiz do Arquivo Anterior",
+    "last archive next leaf index": "Próximo Índice de Folha Anterior",
+    "note hash tree root": "Raiz da Árvore de Hash de Notas",
+    "note hash tree next index": "Próximo Índice da Árvore de Notas",
+    "nullifier tree root": "Raiz da Árvore de Anuladores",
+    "nullifier tree next index": "Próximo Índice da Árvore de Anuladores",
+    "public data tree root": "Raiz da Árvore de Dados Públicos",
+    "public data tree next index": "Próximo Índice da Árvore de Dados Públicos",
+    "l1 to l2 message tree root": "Raiz da Árvore de Mensagens L1→L2",
+    "l1 to l2 message tree next index": "Próximo Índice da Árvore de Mensagens L1→L2",
+    "blobs hash": "Hash de Blobs",
+    "in hash": "Hash de Entrada",
+    "out hash": "Hash de Saída",
+    "Tabs": {
+      "Expand": "Expandir",
+      "JSON": "JSON"
+    }
+  },
   "ProposalPage": {
     "title": "Proposta de Governança",
     "description": "Todos os detalhes essenciais desta proposta de governança do blockchain que você precisa. Esta página apresenta estatísticas de votação em tempo real — percentuais de votos a favor, contra, abstenção e de veto — além dos votos dos validadores para mostrar quem está influenciando a decisão. Nosso resumo com IA destrincha os pontos essenciais da proposta para uma rápida compreensão, enquanto os links para o texto completo e os fóruns permitem uma exploração mais aprofundada. Verifique o timestamp para acompanhar o prazo de votação e fazer sua voz ser ouvida!",
@@ -1090,12 +1273,21 @@
     "signaling": "Sinalização",
     "on going": "Em andamento",
     "past": "Passado",
+    "passed": "Aprovado",
+    "rejected": "Rejeitado",
+    "failed": "Falhou",
     "link to full proposal": "link para a proposta completa",
     "voting period": "Período de votação",
     "show all proposals": "Mostrar todas as propostas",
     "votes": "Votos",
+    "gse deposit": "Depósito GSE",
+    "deposited gse tokens": "Tokens GSE Depositados",
     "show dropdown": "Mostrar votos do validador",
     "hide dropdown": "Ocultar votos do validador",
+    "show validator votes": "Mostrar Votos dos Validadores",
+    "hide validator votes": "Ocultar Votos dos Validadores",
+    "show validator signals": "Mostrar Sinais dos Validadores",
+    "hide validator signals": "Ocultar Sinais dos Validadores",
     "all": "Todos",
     "yes": "Sim",
     "no": "Não",
@@ -1120,9 +1312,59 @@
       "Time": {
         "name": "Hora",
         "hint": ""
+      },
+      "Provider": {
+        "name": "Provedor",
+        "hint": "Provedor de infraestrutura"
+      },
+      "Sequencer": {
+        "name": "Sequenciador",
+        "hint": "Endereço do sequenciador que emitiu o sinal"
+      },
+      "Round": {
+        "name": "Rodada",
+        "hint": "Número da rodada de governança"
       }
     },
-    "ai generated summary": "Resumo gerado por IA"
+    "ai generated summary": "Resumo gerado por IA",
+    "votes-title": "Votos",
+    "voting-progress-title": "Progresso da Votação",
+    "for-label": "A Favor",
+    "against-label": "Contra",
+    "total-votes-label": "Total de Votos",
+    "unique-voters-label": "Votantes Únicos",
+    "total-voting-power-label": "Poder de Voto Total",
+    "voter-column": "Votante",
+    "vote-column": "Voto",
+    "voting-power-column": "Poder de Voto",
+    "time-column": "Hora",
+    "no-votes-found": "Nenhum voto encontrado para esta proposta",
+    "votes-table-caption": "Lista de votos para esta proposta",
+    "proposal details": "Detalhes da Proposta",
+    "proposer": "Proponente",
+    "quorum": "Quórum",
+    "minimum votes": "Votos Mínimos",
+    "voting delay": "Atraso de Votação",
+    "voting duration": "Duração da Votação",
+    "execution delay": "Atraso de Execução",
+    "grace period": "Período de Carência",
+    "required margin": "Margem Necessária",
+    "payload contract": "Contrato Payload",
+    "payload uri": "URI do Payload",
+    "Sequencer": {
+      "name": "Sequenciador",
+      "hint": "Sequenciador que sinalizou apoio"
+    },
+    "Round": {
+      "name": "Rodada",
+      "hint": "Número da rodada de sinalização"
+    },
+    "payload-signaling": "Payload (Sinalização)",
+    "proposal-voting": "Proposta (Votação)",
+    "no-signals": "Nenhum sinal ainda",
+    "view-signals": "Ver sinais dos sequenciadores",
+    "signaling-phase-message": "Este é um payload em fase de sinalização.",
+    "votes-aggregated-message": "Os votos de tokens são agregados pelo contrato GSE. Veja os totais de votos acima."
   },
   "LibraryPage": {
     "Tabs": {

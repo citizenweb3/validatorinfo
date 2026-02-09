@@ -1,17 +1,39 @@
 import logger from '@/logger';
 import { GetTvsFunction } from '@/server/tools/chains/chain-indexer';
-import fetchSolanaData, { SolanaChainNode } from '@/server/tools/chains/solana/utils/fetch-solana-data';
+import { jsonRpcClientWithFailover } from '@/server/utils/json-rpc-client';
 
 const { logError, logDebug, logInfo } = logger('get-tvs-solana');
 
+interface SolanaChainNode {
+  activatedStake: number;
+  commission: number;
+  epochCredits: any;
+  epochVoteAccount: boolean;
+  lastVote: number;
+  nodePubkey: string;
+  rootSlot: number;
+  votePubkey: string;
+}
+
 const getTvs: GetTvsFunction = async (chain) => {
   try {
-    const supplyData = await fetchSolanaData<{ value: { total: string } }>('getSupply');
+    const rpcUrls = chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
+    if (!rpcUrls.length) {
+      throw new Error('No RPC URLs provided in chain object');
+    }
+
+    const supplyData = await jsonRpcClientWithFailover<{ value: { total: string } }>(
+      rpcUrls,
+      'getSupply',
+      undefined,
+      'get-tvs-solana'
+    );
     const totalSupply = +supplyData.value.total;
 
-    const currentVoteAccounts = await fetchSolanaData<{ current: SolanaChainNode[]; delinquent: SolanaChainNode[] }>(
-      'getVoteAccounts',
-    );
+    const currentVoteAccounts = await jsonRpcClientWithFailover<{
+      current: SolanaChainNode[];
+      delinquent: SolanaChainNode[];
+    }>(rpcUrls, 'getVoteAccounts', undefined, 'get-tvs-solana');
     const voteAccounts: SolanaChainNode[] = [...currentVoteAccounts.current, ...currentVoteAccounts.delinquent];
     let bondedTokens = 0;
     for (const va of voteAccounts) {

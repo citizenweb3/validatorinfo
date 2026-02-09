@@ -1,0 +1,255 @@
+// This is your Events Prisma schema file for aztec_attester_events table
+// This database is separate from the main database and persists across main DB resets
+
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../../node_modules/@prisma/events-client"
+  binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("EVENTS_DATABASE_URL")
+}
+
+model AztecAttesterEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  providerId      String   @map("provider_id") @db.VarChar(256)
+  providerAddress String?  @map("provider_address") @db.VarChar(256)
+  attesters       String[] @map("attesters")
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_attester_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_attester_event_chain_block_idx")
+  @@index([chainId, providerAddress], map: "aztec_attester_event_chain_provider_idx")
+  @@map("aztec_attester_events")
+}
+
+model AztecStakedEvent {
+  id                           Int      @id @default(autoincrement())
+  chainId                      Int      @map("chain_id")
+  blockNumber                  String   @map("block_number") @db.VarChar(256)
+  transactionHash              String   @map("transaction_hash") @db.VarChar(256)
+  logIndex                     Int      @map("log_index")
+  providerId                   String   @map("provider_id") @db.VarChar(256)
+  providerAddress              String?  @map("provider_address") @db.VarChar(256)
+  rollupAddress                String   @map("rollup_address") @db.VarChar(256)
+  attesterAddress              String   @map("attester_address") @db.VarChar(256)
+  coinbaseSplitContractAddress String?  @map("coinbase_split_contract_address") @db.VarChar(256)
+  stakerImplementation         String?  @map("staker_implementation") @db.VarChar(256)
+  timestamp                    DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt                    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_staked_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_staked_event_chain_block_idx")
+  @@index([chainId, providerAddress], map: "aztec_staked_event_chain_provider_idx")
+  @@index([chainId, attesterAddress], map: "aztec_staked_event_chain_attester_idx")
+  @@map("aztec_staked_events")
+}
+
+model AztecSlashedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  attester        String   @map("attester") @db.VarChar(256)
+  amount          String   @map("amount") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_slashed_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_slashed_event_chain_block_idx")
+  @@index([chainId, attester], map: "aztec_slashed_event_chain_attester_idx")
+  @@map("aztec_slashed_events")
+}
+
+model AztecVoteCastEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  proposalId      String   @map("proposal_id") @db.VarChar(256)
+  voter           String   @map("voter") @db.VarChar(256)
+  support         Boolean  @map("support")
+  amount          String   @map("amount") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_vote_cast_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_vote_cast_event_chain_block_idx")
+  @@index([chainId, proposalId], map: "aztec_vote_cast_event_chain_proposal_idx")
+  @@index([chainId, voter], map: "aztec_vote_cast_event_chain_voter_idx")
+  @@map("aztec_vote_cast_events")
+}
+
+model AztecSignalCastEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  payload         String   @map("payload") @db.VarChar(256)
+  round           String   @map("round") @db.VarChar(256)
+  signaler        String   @map("signaler") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_signal_cast_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_signal_cast_event_chain_block_idx")
+  @@index([chainId, payload], map: "aztec_signal_cast_event_chain_payload_idx")
+  @@index([chainId, signaler], map: "aztec_signal_cast_event_chain_signaler_idx")
+  @@map("aztec_signal_cast_events")
+}
+
+model AztecPayloadSubmittedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  payload         String   @map("payload") @db.VarChar(256)
+  round           String   @map("round") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_payload_submitted_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_payload_submitted_event_chain_block_idx")
+  @@index([chainId, payload], map: "aztec_payload_submitted_event_chain_payload_idx")
+  @@map("aztec_payload_submitted_events")
+}
+
+model AztecValidatorQueuedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  attester        String   @map("attester") @db.VarChar(256)
+  withdrawer      String   @map("withdrawer") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_validator_queued_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_validator_queued_event_chain_block_idx")
+  @@index([chainId, attester], map: "aztec_validator_queued_event_chain_attester_idx")
+  @@map("aztec_validator_queued_events")
+}
+
+model AztecWithdrawFinalizedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  attester        String   @map("attester") @db.VarChar(256)
+  recipient       String   @map("recipient") @db.VarChar(256)
+  amount          String   @map("amount") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_withdraw_finalized_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_withdraw_finalized_event_chain_block_idx")
+  @@index([chainId, attester], map: "aztec_withdraw_finalized_event_chain_attester_idx")
+  @@map("aztec_withdraw_finalized_events")
+}
+
+model AztecWithdrawInitiatedEvent {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  blockNumber     String   @map("block_number") @db.VarChar(256)
+  transactionHash String   @map("transaction_hash") @db.VarChar(256)
+  logIndex        Int      @map("log_index")
+  attester        String   @map("attester") @db.VarChar(256)
+  recipient       String   @map("recipient") @db.VarChar(256)
+  amount          String   @map("amount") @db.VarChar(256)
+  timestamp       DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_withdraw_initiated_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_withdraw_initiated_event_chain_block_idx")
+  @@index([chainId, attester], map: "aztec_withdraw_initiated_event_chain_attester_idx")
+  @@map("aztec_withdraw_initiated_events")
+}
+
+model AztecProviderRegisteredEvent {
+  id                 Int      @id @default(autoincrement())
+  chainId            Int      @map("chain_id")
+  blockNumber        String   @map("block_number") @db.VarChar(256)
+  transactionHash    String   @map("transaction_hash") @db.VarChar(256)
+  logIndex           Int      @map("log_index")
+  providerIdentifier String   @map("provider_identifier") @db.VarChar(256)
+  providerAdmin      String   @map("provider_admin") @db.VarChar(256)
+  timestamp          DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt          DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_provider_registered_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_provider_registered_event_chain_block_idx")
+  @@index([chainId, providerAdmin], map: "aztec_provider_registered_event_chain_admin_idx")
+  @@map("aztec_provider_registered_events")
+}
+
+model AztecProviderAdminUpdatedEvent {
+  id                 Int      @id @default(autoincrement())
+  chainId            Int      @map("chain_id")
+  blockNumber        String   @map("block_number") @db.VarChar(256)
+  transactionHash    String   @map("transaction_hash") @db.VarChar(256)
+  logIndex           Int      @map("log_index")
+  providerIdentifier String   @map("provider_identifier") @db.VarChar(256)
+  newAdmin           String   @map("new_admin") @db.VarChar(256)
+  timestamp          DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt          DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_provider_admin_updated_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_provider_admin_updated_event_chain_block_idx")
+  @@index([chainId, newAdmin], map: "aztec_provider_admin_updated_event_chain_admin_idx")
+  @@map("aztec_provider_admin_updated_events")
+}
+
+model AztecDepositEvent {
+  id                 Int      @id @default(autoincrement())
+  chainId            Int      @map("chain_id")
+  blockNumber        String   @map("block_number") @db.VarChar(256)
+  transactionHash    String   @map("transaction_hash") @db.VarChar(256)
+  logIndex           Int      @map("log_index")
+  attester           String   @map("attester") @db.VarChar(256)
+  withdrawer         String   @map("withdrawer") @db.VarChar(256)
+  publicKeyInG1X     String   @map("public_key_in_g1_x") @db.VarChar(256)
+  publicKeyInG1Y     String   @map("public_key_in_g1_y") @db.VarChar(256)
+  publicKeyInG2X0    String   @map("public_key_in_g2_x0") @db.VarChar(256)
+  publicKeyInG2X1    String   @map("public_key_in_g2_x1") @db.VarChar(256)
+  publicKeyInG2Y0    String   @map("public_key_in_g2_y0") @db.VarChar(256)
+  publicKeyInG2Y1    String   @map("public_key_in_g2_y1") @db.VarChar(256)
+  proofOfPossessionX String   @map("proof_of_possession_x") @db.VarChar(256)
+  proofOfPossessionY String   @map("proof_of_possession_y") @db.VarChar(256)
+  amount             String   @map("amount") @db.VarChar(256)
+  timestamp          DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt          DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_deposit_event_unique")
+  @@index([chainId, attester], map: "aztec_deposit_event_chain_attester_idx")
+  @@index([chainId, blockNumber], map: "aztec_deposit_event_chain_block_idx")
+  @@map("aztec_deposit_events")
+}
+
+model AztecLocalEjectionThresholdUpdatedEvent {
+  id                        Int      @id @default(autoincrement())
+  chainId                   Int      @map("chain_id")
+  blockNumber               String   @map("block_number") @db.VarChar(256)
+  transactionHash           String   @map("transaction_hash") @db.VarChar(256)
+  logIndex                  Int      @map("log_index")
+  oldLocalEjectionThreshold String   @map("old_local_ejection_threshold") @db.VarChar(256)
+  newLocalEjectionThreshold String   @map("new_local_ejection_threshold") @db.VarChar(256)
+  timestamp                 DateTime @map("timestamp") @db.Timestamptz(6)
+  createdAt                 DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@unique([chainId, transactionHash, logIndex], map: "aztec_local_ejection_threshold_updated_event_unique")
+  @@index([chainId, blockNumber], map: "aztec_local_ejection_threshold_updated_event_chain_block_idx")
+  @@map("aztec_local_ejection_threshold_updated_events")
+}

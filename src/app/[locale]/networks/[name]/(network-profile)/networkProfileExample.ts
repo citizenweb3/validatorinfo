@@ -6,6 +6,11 @@ export interface devActivityTableExampleInterface {
 export const networkProfileExample = {
   headerMetrics: [
     {
+      title: 'mau',
+      data: 90,
+      tooltip: 'mau',
+    },
+    {
       title: 'tvl',
       data: 90,
       tooltip: 'tvl',
@@ -15,20 +20,10 @@ export const networkProfileExample = {
       data: 90,
       tooltip: 'revenue',
     },
-    {
-      title: 'mau',
-      data: 90,
-      tooltip: 'mau',
-    },
   ],
   socialMetrics: [
     {
       title: 'believers',
-      data: 90,
-      tooltip: '',
-    },
-    {
-      title: 'followers',
       data: 90,
       tooltip: '',
     },
@@ -38,16 +33,10 @@ export const networkProfileExample = {
       tooltip: '',
     },
   ],
-  totalsMetrics: [
-    {
-      title: 'total amount of tx',
-      data: 0.71,
-    },
-  ],
   totalStatistics: [
     {
       title: 'healthy validators',
-      data: '...314',
+      data: 'N/A',
     },
   ],
   operatorDistribution: [

@@ -1,15 +1,11 @@
 import { sleep } from '@cosmjs/utils';
 
-
-
 import db from '@/db';
 import logger from '@/logger';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import chainNames from '@/server/tools/chains/chains';
 import { ecosystemParams, updateChainParamsUpdated } from '@/server/tools/chains/params';
 import downloadImage from '@/server/utils/download-image';
-
-
 
 import { Prisma } from '.prisma/client';
 
@@ -24,6 +20,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     chainId: chain.chainId,
     name: chain.name,
     prettyName: chain.prettyName,
+    shortDescription: chain.shortDescription,
     logoUrl: chain.logoUrl,
     coinGeckoId: chain.coinGeckoId,
     twitterUrl: chain.twitterUrl,
@@ -31,6 +28,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     githubMainRepo: chain.mainRepo,
     githubUrl: chain.githubUrl,
     hasValidators: chain.hasValidators,
+    tags: chain.tags,
   };
 
   const existingChain = await db.chain.findUnique({
@@ -149,9 +147,20 @@ async function main() {
             name: ecosystem.name,
             prettyName: ecosystem.prettyName,
             logoUrl: url,
+            tags: ecosystem.tags ?? [],
           },
         });
         logInfo(`Ecosystem ${ecosystem.prettyName} created`);
+      } else {
+        await db.ecosystem.update({
+          where: { name: ecosystem.name },
+          data: {
+            prettyName: ecosystem.prettyName,
+            logoUrl: url || existingEcosystem.logoUrl,
+            tags: ecosystem.tags ?? [],
+          },
+        });
+        logInfo(`Ecosystem ${ecosystem.prettyName} updated`);
       }
     }
     for (const chainName of chainNames) {

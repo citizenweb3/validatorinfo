@@ -5,6 +5,7 @@ import StakingStatsItem from '@/app/validators/[id]/[operatorAddress]/revenue/st
 import {
   stakingStatsExample,
 } from '@/app/validators/[id]/[operatorAddress]/revenue/stacking-stats-table/stakingStatsExample';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { PagesProps } from '@/types';
 import StakingStatsApyItem
@@ -19,7 +20,7 @@ const StakingStats: FC<OwnProps> = async ({ page, locale }) => {
 
   return (
     <div className="mb-4 mt-2">
-      <table className="w-full table-auto border-separate border-spacing-y-2">
+      <BaseTable>
         <thead>
         <tr className="bg-table_header">
           <th className="bg-background"></th>
@@ -34,7 +35,7 @@ const StakingStats: FC<OwnProps> = async ({ page, locale }) => {
         <StakingStatsItem title={t('network')} data={stakingStatsExample.network} />
         <StakingStatsApyItem title={'APY'} data={stakingStatsExample.apy} />
         </tbody>
-      </table>
+      </BaseTable>
     </div>
   );
 };

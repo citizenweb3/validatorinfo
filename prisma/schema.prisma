@@ -1,6 +1,7 @@
 generator client {
-  provider = "prisma-client-js"
-  output   = "../node_modules/.prisma/client"
+  provider      = "prisma-client-js"
+  output        = "../node_modules/.prisma/client"
+  binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x", "linux-musl-openssl-3.0.x"]
 }
 
 datasource db {
@@ -74,34 +75,44 @@ model ChainParams {
   votingParticipationRate Float?  @map("voting_participation_rate")
   quorumThreshold         Float?  @map("quorum_threshold")
 
+  // L1 contracts (for Aztec networks)
+  l1ContractsAddresses String? @map("l1_contracts_addresses")
+
+  // Aztec-specific governance configuration (JSON)
+  aztecGovernanceConfigAdditional Json? @map("aztec_governance_config_additional")
+
   chain Chain @relation("chain_params", fields: [chainId], references: [id])
 
   @@map("chain_params")
 }
 
 model Chain {
-  id             Int     @id @default(autoincrement())
-  ecosystem      String  @db.VarChar(256)
-  chainId        String  @unique @map("chain_id") @db.VarChar(256)
-  rang           Int
-  name           String  @unique @db.VarChar(256)
-  prettyName     String  @map("pretty_name") @db.VarChar(256)
-  logoUrl        String  @map("logo_url")
-  coinGeckoId    String  @map("coingecko_id") @db.VarChar(64)
-  twitterUrl     String  @map("twitter_url") @db.VarChar(256)
-  docs           String?
-  githubUrl      String  @map("github_url")
-  githubMainRepo String  @map("github_main_repo")
-  hasValidators  Boolean @default(true) @map("has_validators")
-  walletsAmount  Int?    @map("wallets_amount")
-  description    String?
+  id               Int      @id @default(autoincrement())
+  ecosystem        String   @db.VarChar(256)
+  chainId          String   @unique @map("chain_id") @db.VarChar(256)
+  rang             Int
+  name             String   @unique @db.VarChar(256)
+  prettyName       String   @map("pretty_name") @db.VarChar(256)
+  logoUrl          String   @map("logo_url")
+  coinGeckoId      String   @map("coingecko_id") @db.VarChar(64)
+  twitterUrl       String   @map("twitter_url") @db.VarChar(256)
+  docs             String?
+  githubUrl        String   @map("github_url")
+  githubMainRepo   String   @map("github_main_repo")
+  hasValidators    Boolean  @default(true) @map("has_validators")
+  walletsAmount    Int?     @map("wallets_amount")
+  shortDescription String?  @map("short_description")
+  description      String?
+  twitterFollowers Int?     @map("twitter_followers")
+  tags             String[] @default([])
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
   chainNodes ChainNode[] @relation("chain_node")
   aprs       Apr[]       @relation("chain_apr")
-  prices     Price[]     @relation("chain_price")
-  nodes      Node[]      @relation("chain_validator_node")
+  prices       Price[]        @relation("chain_price")
+  priceHistory PriceHistory[] @relation("chain_price_history")
+  nodes        Node[]         @relation("chain_validator_node")
 
   tokenomics Tokenomics?  @relation("chain_tokenomics")
   params     ChainParams? @relation("chain_params")
@@ -111,6 +122,10 @@ model Chain {
   nodeVotes          NodeVote[]         @relation("node_vote_chain")
   proposals          Proposal[]         @relation("chain_proposals")
   githubRepositories GithubRepository[] @relation("chain_github_repositories")
+  tvsHistory         ChainTvsHistory[]  @relation("chain_tvs_history")
+  aprHistory         ChainAprHistory[]  @relation("chain_apr_history")
+  validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
+  aztecNodeDistributionHistory AztecNodeDistributionHistory[] @relation("chain_aztec_node_distribution_history")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
@@ -149,6 +164,7 @@ model Ecosystem {
   prettyName String   @map("pretty_name") @db.VarChar(256)
   logoUrl    String   @map("logo_url") @db.VarChar(256)
   tvl        Float    @default(0)
+  tags       String[] @default([])
   createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
   chains Chain[] @relation("chain_ecosystem")
@@ -157,39 +173,48 @@ model Ecosystem {
 }
 
 model Node {
-  id                 Int      @id @default(autoincrement())
-  chainId            Int      @map("chain_id")
-  validatorId        Int?     @map("validator_id")
-  operatorAddress    String   @unique @map("operator_address") @db.VarChar(256)
-  consensusPubkey    String   @map("consensus_pubkey") @db.VarChar(256)
-  jailed             Boolean  @default(false)
-  tokens             String   @db.VarChar(256)
-  delegatorShares    String   @map("delegator_shares") @db.VarChar(256)
-  moniker            String
-  identity           String
-  website            String
-  securityContact    String   @map("security_contact")
-  details            String   @db.Text
-  unbondingHeight    String   @map("unbonding_height") @db.VarChar(256)
-  unbondingTime      DateTime @map("unbonding_time") @db.Timestamptz(6)
-  updateTime         DateTime @map("update_time") @db.Timestamptz(6)
-  rate               String   @db.VarChar(256)
-  maxRate            String   @map("max_rate") @db.VarChar(256)
-  maxChangeRate      String   @map("max_change_rate") @db.VarChar(256)
-  minSelfDelegation  String   @map("min_self_delegation") @db.VarChar(256)
-  missedBlocks       Int?     @map("missed_blocks")
-  outstandingRewards String?  @map("outstanding_rewards")
-  delegatorsAmount   Int?     @map("delegators_amount")
+  id                     Int      @id @default(autoincrement())
+  chainId                Int      @map("chain_id")
+  validatorId            Int?     @map("validator_id")
+  operatorAddress        String   @unique @map("operator_address") @db.VarChar(256)
+  consensusPubkey        String   @map("consensus_pubkey") @db.VarChar(256)
+  rewardAddress          String?  @map("reward_address") @db.VarChar(256)
+  accountAddress         String?  @map("account_address") @db.VarChar(256)
+  jailed                 Boolean  @default(false)
+  tokens                 String   @db.VarChar(256)
+  delegatorShares        String   @map("delegator_shares") @db.VarChar(256)
+  moniker                String
+  identity               String
+  website                String
+  securityContact        String   @map("security_contact")
+  details                String   @db.Text
+  unbondingHeight        String   @map("unbonding_height") @db.VarChar(256)
+  unbondingTime          DateTime @map("unbonding_time") @db.Timestamptz(6)
+  updateTime             DateTime @map("update_time") @db.Timestamptz(6)
+  rate                   String   @db.VarChar(256)
+  maxRate                String   @map("max_rate") @db.VarChar(256)
+  maxChangeRate          String   @map("max_change_rate") @db.VarChar(256)
+  minSelfDelegation      String   @map("min_self_delegation") @db.VarChar(256)
+  missedBlocks           Int?     @map("missed_blocks")
+  outstandingRewards     String?  @map("outstanding_rewards")
+  outstandingCommissions String?  @map("outstanding_commissions")
+  delegatorsAmount       Int?     @map("delegators_amount")
 
-  chain      Chain       @relation("chain_validator_node", fields: [chainId], references: [id])
-  validator  Validator?  @relation("validator_node", fields: [validatorId], references: [id])
-  votes      NodeVote[]  @relation("node_vote_node")
-  chainNodes ChainNode[] @relation("chain_node_infrastructure")
+  chain         Chain               @relation("chain_validator_node", fields: [chainId], references: [id])
+  validator     Validator?          @relation("validator_node", fields: [validatorId], references: [id])
+  votes         NodeVote[]          @relation("node_vote_node")
+  chainNodes    ChainNode[]         @relation("chain_node_infrastructure")
+  consensusData NodesConsensusData? @relation("node_consensus_data")
 
   // calculated
   consensusAddress String @default("") @map("consensus_address")
   uptime           Float?
 
+  // Aztec committee tracking
+  inCommittee    Boolean @default(false) @map("in_committee")
+  committeeEpoch BigInt? @map("committee_epoch")
+
+  @@index([chainId, inCommittee])
   @@map("nodes")
 }
 
@@ -202,6 +227,19 @@ model Price {
   chain Chain @relation("chain_price", fields: [chainId], references: [id])
 
   @@map("prices")
+}
+
+model PriceHistory {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  value     Float    @default(0)
+  date      DateTime @map("date") @db.Date
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_price_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@map("price_history")
 }
 
 model Tokenomics {
@@ -273,20 +311,21 @@ model Proposal {
 }
 
 model Validator {
-  id              Int     @id @default(autoincrement())
-  identity        String  @unique
-  keybaseName     String? @map("keybase_name")
-  moniker         String
-  details         String?
-  website         String?
-  github          String?
-  telegram        String?
-  discord         String?
-  twitter         String?
-  securityContact String? @map("security_contact")
-  url             String?
-  wrongKey        Boolean @default(false) @map("wrong_key")
-  chainId         Int?    @map("chain_id")
+  id                Int     @id @default(autoincrement())
+  identity          String  @unique
+  keybaseName       String? @map("keybase_name")
+  moniker           String
+  details           String?
+  website           String?
+  github            String?
+  telegram          String?
+  discord           String?
+  twitter           String?
+  securityContact   String? @map("security_contact")
+  url               String?
+  wrongKey          Boolean @default(false) @map("wrong_key")
+  chainId           Int?    @map("chain_id")
+  providerAddresses Json?   @map("provider_addresses")
 
   chain Chain? @relation("chain_validators", fields: [chainId], references: [id])
   nodes Node[] @relation("validator_node")
@@ -343,6 +382,73 @@ model GithubRepository {
   @@map("github_repositories")
 }
 
+model ChainTvsHistory {
+  id          Int      @id @default(autoincrement())
+  chainId     Int      @map("chain_id")
+  date        DateTime @db.Date
+  tvs         Float
+  totalStaked String   @map("total_staked")
+  totalSupply String   @map("total_supply")
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_tvs_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId])
+  @@map("chain_tvs_history")
+}
+
+model ChainAprHistory {
+  id            Int      @id @default(autoincrement())
+  chainId       Int      @map("chain_id")
+  date          DateTime @db.Date
+  apr           Float
+  blocksCount   Int?     @map("blocks_count")
+  rewards       String
+  totalStaked   String   @map("total_staked")
+  avgCommission Float?   @map("avg_commission")
+  metadata      Json?
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_apr_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId])
+  @@map("chain_apr_history")
+}
+
+model ChainValidatorsHistory {
+  id              Int      @id @default(autoincrement())
+  chainId         Int      @map("chain_id")
+  date            DateTime @db.Date
+  validatorsCount Int      @map("validators_count")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_validators_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId])
+  @@map("chain_validators_history")
+}
+
+model AztecNodeDistributionHistory {
+  id        Int      @id @default(autoincrement())
+  chainId   Int      @map("chain_id")
+  date      DateTime @map("date") @db.Date
+  total     Int      @map("total")
+  active    Int      @map("active")
+  inQueue   Int      @map("in_queue")
+  zombie    Int      @map("zombie")
+  exiting   Int      @map("exiting")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_aztec_node_distribution_history", fields: [chainId], references: [id])
+
+  @@unique([chainId, date])
+  @@index([chainId, date])
+  @@map("aztec_node_distribution_history")
+}
+
 model GithubActivity {
   id           Int      @id @default(autoincrement())
   repositoryId Int      @map("repository_id")
@@ -355,4 +461,20 @@ model GithubActivity {
 
   @@unique([repositoryId, date], map: "repository_id_date")
   @@map("github_activities")
+}
+
+model NodesConsensusData {
+  id                       Int     @id @default(autoincrement())
+  nodeAddress              String  @unique @map("node_address")
+  totalSlots               Int?    @map("total_slots")
+  totalSlotsProposals      Int?    @map("total_slots_proposals")
+  totalSlotsAttestations   Int?    @map("total_slots_attestations")
+  missedSlotsProposals     Int?    @map("missed_slots_proposals")
+  missedSlotsAttestations  Int?    @map("missed_slots_attestations")
+  lastAttestationTimestamp String? @map("last_attestation_timestamp")
+  lastAttestationSlot      String? @map("last_attestation_slot")
+
+  node Node? @relation("node_consensus_data", fields: [nodeAddress], references: [operatorAddress])
+
+  @@map("nodes_consensus_data")
 }

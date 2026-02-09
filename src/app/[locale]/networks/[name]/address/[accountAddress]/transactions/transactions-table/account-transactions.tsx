@@ -1,4 +1,6 @@
 import { FC } from 'react';
+
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -15,7 +17,7 @@ interface OwnProps extends PagesProps {
 const AccountTransactions: FC<OwnProps> = async ({ chainName, page, perPage, sort, currentPage }) => {
   return (
     <div className="pt-8">
-      <table className="w-full table-auto border-collapse">
+      <BaseTable>
         <thead>
         <tr className="bg-table_header">
           <TableHeaderItem page={page} name="Type of Tx" sortField="type" />
@@ -25,7 +27,7 @@ const AccountTransactions: FC<OwnProps> = async ({ chainName, page, perPage, sor
         </tr>
         </thead>
         <AccountTransactionsList chainName={chainName} perPage={perPage} sort={sort} currentPage={currentPage} />
-      </table>
+      </BaseTable>
     </div>
   );
 };

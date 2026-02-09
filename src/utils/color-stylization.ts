@@ -20,9 +20,9 @@ const delegation = (selfDelegation: number | null) => {
 
 const uptime = (uptime: number | null) => {
   if (uptime != null) {
-    if (uptime <= 90) {
+    if (uptime <= 50) {
       return redTextLayout;
-    } else if (uptime >= 90 && uptime <= 98) {
+    } else if (uptime >= 80 && uptime <= 80) {
       return yellowTextLayout;
     } else {
       return greenTextLayout;

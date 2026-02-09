@@ -1,15 +1,88 @@
 import { getTranslations } from 'next-intl/server';
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 
-import { networkProfileExample } from '@/app/networks/[name]/(network-profile)/networkProfileExample';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import Tooltip from '@/components/common/tooltip';
+import aztecContractService from '@/services/aztec-contracts-service';
+import { aztecIndexer } from '@/services/aztec-indexer-api';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import formatCash from '@/utils/format-cash';
+import Link from 'next/link';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
 }
+
+interface AztecMetricsProps {
+  chainName: string;
+}
+
+const AztecTxCard: FC = async () => {
+  const t = await getTranslations('NetworkPassport');
+  const totalTxs = await aztecIndexer.getTotalTxEffects();
+
+  console.log(`total txs - ${totalTxs}`);
+
+  return (
+    <MetricsCardItem
+      title={t('total amount of tx')}
+      data={totalTxs ?? 'N/A'}
+      className={'bg-table_row pb-6 pt-2.5'}
+      dataClassName={'mt-5'}
+    />
+  );
+};
+
+const AztecTxCardLoading: FC = () => {
+  return (
+    <MetricsCardItem
+      title="Total amount of tx"
+      data="Loading..."
+      className={'animate-pulse bg-table_row pb-6 pt-2.5'}
+      dataClassName={'mt-5'}
+    />
+  );
+};
+
+const AztecBlocksSlotsEpochs: FC<AztecMetricsProps> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const totalBlocks = await aztecIndexer.getLatestHeight({ cache: 'no-store' });
+  const totalSlots = await aztecContractService.getLatestSlot(chainName);
+  const totalEpochs = await aztecContractService.getLatestEpoch(chainName);
+
+  if (!totalSlots && !totalBlocks && !totalEpochs) return null;
+
+  return (
+    <div className="mt-6 flex w-full flex-row justify-center gap-6">
+      {totalBlocks && (
+        <Link href={`/networks/${chainName}/blocks`}>
+          <MetricsCardItem
+            title={t('total amount of blocks')}
+            data={totalBlocks}
+            className={'bg-table_row pb-6 pt-2.5'}
+            dataClassName={'mt-5'}
+          />
+        </Link>
+      )}
+      {totalSlots && (
+        <MetricsCardItem
+          title={t('total amount of slots')}
+          data={totalSlots}
+          className={'bg-table_row pb-6 pt-2.5'}
+          dataClassName={'mt-5'}
+        />
+      )}
+      {totalEpochs && (
+        <MetricsCardItem
+          title={t('total amount of epochs')}
+          data={totalEpochs}
+          className={'bg-table_row pb-6 pt-2.5'}
+          dataClassName={'mt-5'}
+        />
+      )}
+    </div>
+  );
+};
 
 const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
@@ -19,34 +92,45 @@ const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
       : 0;
 
   return (
-    <div className="mt-20 flex w-full flex-row justify-center gap-6">
-      <MetricsCardItem
-        title={t('amount of wallets')}
-        data={chain?.walletsAmount?.toLocaleString() ?? '3 500 000'}
-        className={'pb-6 pt-2.5'}
-        dataClassName={'mt-5'}
-      />
-      {networkProfileExample.totalsMetrics.map((item) => (
+    <>
+      <div className="mt-20 flex w-full flex-row justify-center gap-6">
         <MetricsCardItem
-          key={item.title}
-          title={t(item.title as 'total amount of tx')}
-          data={item.data}
-          isPercents
-          className={'pb-6 pt-2.5'}
+          title={t('amount of wallets')}
+          data={chain?.walletsAmount?.toLocaleString() ?? 'N/A'}
+          className={'bg-table_row pb-6 pt-2.5'}
           dataClassName={'mt-5'}
         />
-      ))}
-      <MetricsCardItem
-        title={t('total supply')}
-        data={
-          <Tooltip tooltip={totalSupply.toLocaleString()}>
-            {`${formatCash(totalSupply)} ${chain?.params?.denom}`}
-          </Tooltip>
-        }
-        className={'pb-6 pt-2.5'}
-        dataClassName={'mt-5'}
-      />
-    </div>
+        {chain?.name === 'aztec' ? (
+          <Suspense fallback={<AztecTxCardLoading />}>
+            <Link href={`/networks/${chain.name}/tx`}>
+              <AztecTxCard />
+            </Link>
+          </Suspense>
+        ) : (
+          <MetricsCardItem
+            title={t('total amount of tx')}
+            data="N/A"
+            className={'bg-table_row pb-6 pt-2.5'}
+            dataClassName={'mt-5'}
+          />
+        )}
+        <MetricsCardItem
+          title={t('total supply')}
+          data={
+            <Tooltip tooltip={totalSupply.toLocaleString()}>
+              {`${formatCash(totalSupply)} ${chain?.params?.denom}`}
+            </Tooltip>
+          }
+          className={'bg-table_row pb-6 pt-2.5'}
+          dataClassName={'mt-5'}
+        />
+      </div>
+      {chain?.name === 'aztec' && (
+        <Suspense fallback={null}>
+          <AztecBlocksSlotsEpochs chainName={chain.name} />
+        </Suspense>
+      )}
+    </>
   );
 };
 

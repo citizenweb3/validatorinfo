@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { FC, useRef, useState } from 'react';
 
 import Button from '@/components/common/button';
@@ -10,7 +10,13 @@ import ValidatorListFiltersPorPage from '@/components/common/list-filters/valida
 import PlusButton from '@/components/common/plus-button';
 import { useOnClickOutside } from 'usehooks-ts';
 import BaseModalMobile from '@/components/common/modal/base-modal-mobile';
-import { ecosystemsDropdown, nodeStatus, setPositions, stages } from '@/components/common/list-filters/list-filters';
+import {
+  checkHasActiveFilters,
+  ecosystemsDropdown,
+  nodeStatus,
+  setPositions,
+  stages,
+} from '@/components/common/list-filters/list-filters';
 import DropdownMobile from '@/components/common/list-filters/dropdown-mobile';
 
 interface OwnProps {
@@ -40,7 +46,10 @@ const ListFiltersMobile: FC<OwnProps> = ({
   }) => {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const t = useTranslations('HomePage.Table');
+
+  const hasActiveFilters = checkHasActiveFilters(searchParams);
 
   const [isModalOpened, setIsModalOpened] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -107,6 +116,7 @@ const ListFiltersMobile: FC<OwnProps> = ({
         activeType="switcher"
         onClick={() => setIsModalOpened((p) => !p)}
         isActive={isModalOpened}
+        hasActiveFilters={hasActiveFilters}
       >
         <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-6xl sm:text-5xl font-medium mx-10">
           <div>{t('Customize')}</div>

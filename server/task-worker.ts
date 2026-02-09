@@ -5,10 +5,21 @@ import checkNodesHealth from '@/server/jobs/check-nodes-health';
 import getChainUptime from '@/server/jobs/get-chain-uptime';
 import { getCoingeckoData } from '@/server/jobs/get-coingecko-data';
 import getNodes from '@/server/jobs/get-nodes';
+import { getPriceHistory } from '@/server/jobs/get-price-history';
 import { getPrices } from '@/server/jobs/get-prices';
 import matchChainNodes from '@/server/jobs/match-chain-nodes';
+import syncAztecCommittee from '@/server/jobs/sync-aztec-committee';
+import syncAztecEvents from '@/server/jobs/sync-aztec-events';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateAverageDelegation from '@/server/jobs/update-average-delegation';
+import updateAztecCoinbaseAddress from '@/server/jobs/update-aztec-coinbase-address';
+import updateAztecGovernanceData from '@/server/jobs/update-aztec-governance-data';
+import updateAztecL1Contracts from '@/server/jobs/update-aztec-l1-contracts';
+import updateAztecTvsHistory from '@/server/jobs/update-aztec-tvs-history';
+import updateAztecAprHistory from '@/server/jobs/update-aztec-apr-history';
+import { updateAztecValidatorsHistory } from '@/server/jobs/update-aztec-validators-history';
+import { updateAztecNodeDistribution } from '@/server/jobs/update-aztec-node-distribution';
+import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
 import updateChainApr from '@/server/jobs/update-chain-apr';
 import updateChainNodeParams from '@/server/jobs/update-chain-node-params';
 import updateChainProposals from '@/server/jobs/update-chain-proposals';
@@ -24,14 +35,16 @@ import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
 import updateFdv from '@/server/jobs/update-fdv';
 import updateGithubRepositories from '@/server/jobs/update-github-repositories';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
+import updateNodesCommissions from '@/server/jobs/update-nodes-commissions';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
 import updateProposalParams from '@/server/jobs/update-proposal-params';
+import updateRewardAddress from '@/server/jobs/update-reward-address';
 import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
-import updateSlashingInfosNamada from '@/server/jobs/update-slashing-infos-namada';
-import updateSlashingInfosSolana from '@/server/jobs/update-slashing-infos-solana';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
+import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
+import updateValidatorsAztecLogos from '@/server/jobs/update-validators-aztec-logos';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
 import updateWalletsAmount from '@/server/jobs/update-wallets-amount';
@@ -69,12 +82,6 @@ async function runTask() {
       case 'slashing-infos':
         await updateSlashingInfos(chains);
         break;
-      case 'slashing-infos-namada':
-        await updateSlashingInfosNamada(chains);
-        break;
-      case 'slashing-infos-solana':
-        await updateSlashingInfosSolana(chains);
-        break;
       case 'chain-node-params':
         await updateChainNodeParams(chains);
         break;
@@ -93,17 +100,23 @@ async function runTask() {
       case 'coingecko-data':
         await getCoingeckoData();
         break;
+      case 'price-history':
+        await getPriceHistory();
+        break;
       case 'proposal-params':
         await updateProposalParams(chains);
         break;
       case 'update-staking-page-json':
         await updateStakingPageJson();
         break;
+      case 'update-chain-rewards':
+        await updateChainRewards(chains);
+        break;
       case 'update-nodes-rewards':
         await updateNodesRewards(chains);
         break;
-      case 'update-chain-rewards':
-        await updateChainRewards(chains);
+      case 'update-nodes-commissions':
+        await updateNodesCommissions(chains);
         break;
       case 'community-pool':
         await updateCommPool(chains);
@@ -140,6 +153,45 @@ async function runTask() {
         break;
       case 'check-nodes-health':
         await checkNodesHealth();
+        break;
+      case 'update-twitter-followers-amount':
+        await updateTwitterFollowersAmount(chains);
+        break;
+      case 'sync-aztec-events':
+        await syncAztecEvents();
+        break;
+      case 'update-reward-address':
+        await updateRewardAddress(chains);
+        break;
+      case 'update-aztec-sequencer-stake':
+        await updateAztecSequencerStake(chains);
+        break;
+      case 'update-aztec-coinbase-address':
+        await updateAztecCoinbaseAddress();
+        break;
+      case 'update-validators-aztec-logos':
+        await updateValidatorsAztecLogos();
+        break;
+      case 'sync-aztec-committee':
+        await syncAztecCommittee();
+        break;
+      case 'update-aztec-l1-contracts':
+        await updateAztecL1Contracts();
+        break;
+      case 'update-aztec-governance-data':
+        await updateAztecGovernanceData();
+        break;
+      case 'update-aztec-tvs-history':
+        await updateAztecTvsHistory();
+        break;
+      case 'update-aztec-apr-history':
+        await updateAztecAprHistory();
+        break;
+      case 'update-aztec-validators-history':
+        await updateAztecValidatorsHistory('aztec');
+        break;
+      case 'update-aztec-node-distribution':
+        await updateAztecNodeDistribution('aztec');
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

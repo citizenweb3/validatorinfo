@@ -4,11 +4,14 @@ import { Worker } from 'worker_threads';
 import logger from '@/logger';
 import chains from '@/server/tools/chains/chains';
 
+import './instrumentation';
+
 const timers = {
   every5mins: '*/5 * * * *',
   every10mins: '*/10 * * * *',
   every30mins: '*/30 * * * *',
   everyHour: '0 * * * *',
+  every6hours: '0 */6 * * *',
   everyDay: '0 0 * * *',
   in15MinEveryHour: '15 * * * *',
   in30MinEveryHour: '30 * * * *',
@@ -55,24 +58,23 @@ const runServer = async () => {
   }
 
   const tasks = [
+    { name: 'sync-aztec-events', schedule: timers.every10mins },
     { name: 'prices', schedule: timers.every5mins },
     { name: 'validators', schedule: timers.everyHour },
+    { name: 'update-reward-address', schedule: timers.everyDay },
+    { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
     { name: 'chain-slashing-params', schedule: timers.everyDay },
-    { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-node-params', schedule: timers.everyDay },
     { name: 'community-tax', schedule: timers.everyDay },
     { name: 'wallets-amount', schedule: timers.everyDay },
-    { name: 'coingecko-data', schedule: timers.in30MinEveryHour },
     { name: 'proposal-params', schedule: timers.everyDay },
     { name: 'update-staking-page-json', schedule: timers.everyDay },
-    { name: 'update-chain-rewards', schedule: timers.everyDay },
     { name: 'community-pool', schedule: timers.everyDay },
     { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
     { name: 'inflation-rate', schedule: timers.everyDay },
-    { name: 'update-nodes-votes', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {
@@ -96,15 +98,18 @@ const runServer = async () => {
     spawnTask(task.name, chains).catch((e) => logError(`Initial run error for task ${task.name}:`, e));
   });
 
-  const specialTasks = [
+  const specialTasks: Array<{ name: string; schedule: string }> = [
     { name: 'validatorInfo', schedule: timers.everyDay },
-    { name: 'slashing-infos', schedule: timers.everyHour },
-    { name: 'slashing-infos-namada', schedule: timers.every10mins },
-    { name: 'slashing-infos-solana', schedule: timers.every30mins },
+    { name: 'update-aztec-sequencer-stake', schedule: timers.everyHour },
+    { name: 'update-aztec-coinbase-address', schedule: timers.everyHour },
+    { name: 'slashing-infos', schedule: timers.every10mins },
     { name: 'update-nodes-votes', schedule: timers.everyDay },
-    { name: 'update-nodes-rewards', schedule: timers.everyDay },
+    { name: 'update-nodes-rewards', schedule: timers.everyHour },
+    { name: 'update-nodes-commissions', schedule: timers.everyHour },
     { name: 'circulating-tokens-onchain', schedule: timers.everyDay },
     { name: 'circulating-tokens-public', schedule: timers.everyDay },
+    { name: 'coingecko-data', schedule: timers.in30MinEveryHour },
+    { name: 'price-history', schedule: timers.everyDay },
     { name: 'update-fdv', schedule: timers.everyHour },
     { name: 'update-delegators-amount', schedule: timers.everyDay },
     { name: 'update-average-delegation', schedule: timers.in45MinEveryHour },
@@ -112,6 +117,16 @@ const runServer = async () => {
     { name: 'unbonding-tokens', schedule: timers.everyDay },
     { name: 'match-chain-nodes', schedule: timers.everyDay },
     { name: 'check-nodes-health', schedule: timers.everyHour },
+    { name: 'update-chain-rewards', schedule: timers.everyHour },
+    { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
+    { name: 'update-validators-aztec-logos', schedule: timers.everyHour },
+    { name: 'sync-aztec-committee', schedule: timers.every10mins },
+    { name: 'update-aztec-l1-contracts', schedule: timers.everyDay },
+    { name: 'update-aztec-governance-data', schedule: timers.every30mins },
+    { name: 'update-aztec-tvs-history', schedule: timers.every6hours },
+    { name: 'update-aztec-apr-history', schedule: timers.every6hours },
+    { name: 'update-aztec-validators-history', schedule: timers.every6hours },
+    { name: 'update-aztec-node-distribution', schedule: timers.every6hours },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {
@@ -131,14 +146,14 @@ const runServer = async () => {
     job.start();
   });
 
-  // Initial run for specialTasks after 5 minutes for wait validators updated
+  // Initial run for specialTasks after 10 minutes for wait validators updated
   setTimeout(
     () => {
       specialTasks.forEach(({ name }) => {
         spawnTask(name, chains).catch((e) => logError(`Initial run error for task ${name}:`, e));
       });
     },
-    5 * 60 * 1000,
+    10 * 60 * 1000,
   );
 };
 

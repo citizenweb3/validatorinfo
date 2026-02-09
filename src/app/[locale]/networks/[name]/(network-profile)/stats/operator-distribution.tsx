@@ -1,64 +1,146 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
+import aztecContractService from '@/services/aztec-contracts-service';
+import aztecDbService, { NodeDistribution } from '@/services/aztec-db-service';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import nodeService from '@/services/node-service';
 
 import PowerBarChart from './validatorVotingPercentage';
+import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
-  chainId: number | null;
+  chain: ChainWithParamsAndTokenomics | null;
 }
 
-const OperatorDistribution: FC<OwnProps> = async ({ chainId }) => {
+const fontColors = {
+  active: '#4FB848',
+  jailed: '#AD1818',
+  inactive: '#E5C46B',
+  inQueue: '#E5C46B',
+  zombie: '#F3B101',
+  exiting: '#AD1818',
+};
+
+interface DistributionRowProps {
+  label: string;
+  value: number | null;
+  color: string;
+  href?: string;
+}
+
+const DistributionRow: FC<DistributionRowProps> = ({ label, value, color, href }) => (
+  <div className="mt-2 flex w-full flex-wrap bg-table_row border-b border-bgSt">
+    <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">{label}</div>
+    <div style={{ color }} className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg">
+      {href ? (
+        <Link href={href} className="hover:underline">
+          {value ?? 'N/A'}
+        </Link>
+      ) : (
+        value ?? 'N/A'
+      )}
+    </div>
+  </div>
+);
+
+const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkStatistics');
-  const fontColors = {
-    active: '#4FB848',
-    jailed: '#AD1818',
-    inactive: '#E5C46B',
-  };
+
+  const nodes = chain?.id ? await nodeService.getNodesByChainId(chain.id) : null;
+  const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
+
+  let activeNodesLength: number | null = null;
+  let inactiveNodesLength: number | null = null;
+  let nodeDistribution: NodeDistribution | null = null;
+
+  if (isAztec && chain?.name) {
+    try {
+      nodeDistribution = await aztecDbService.getNodeDistribution(chain.name);
+      activeNodesLength = nodeDistribution?.active ?? null;
+    } catch (error) {
+      console.error('Failed to fetch node distribution:', error);
+      // Fallback to old method
+      try {
+        activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
+      } catch (e) {
+        console.error('Failed to fetch active attester count:', e);
+      }
+    }
+    if (!nodeDistribution) {
+      const allStakedNodes = nodes?.filter((node) => node.delegatorShares && node.delegatorShares !== '0');
+      inactiveNodesLength = allStakedNodes && activeNodesLength ? allStakedNodes.length - activeNodesLength : null;
+    }
+  } else {
+    const activeNodes = nodes?.filter((node) => node.jailed === false);
+    activeNodesLength = activeNodes ? activeNodes.length : null;
+    inactiveNodesLength = nodes && activeNodesLength ? nodes.length - activeNodesLength : null;
+  }
 
   const data = generateData();
-  const nodes = chainId ? await nodeService.getNodesByChainId(chainId) : null;
-  const activeNodes = nodes?.filter((node) => node.jailed === false);
-  const jailedNodes = nodes?.filter((node) => node.jailed === true);
 
   return (
     <div className="mt-12">
       <SubTitle text={t('Operator Distributions')} />
       <div className="mt-12 flex flex-row">
-        <div className="w-1/5">
-          <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
-            <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">{t('active')}</div>
-            <div
-              style={{ color: fontColors['active'] }}
-              className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg"
-            >
-              {activeNodes?.length ?? '232'}
-            </div>
-          </div>
-          <div className="mt-2 flex w-full flex-wrap border-b border-bgSt">
-            <div className="w-1/2 items-center border-r border-bgSt py-5 pl-9 font-sfpro text-lg">{t('jailed')}</div>
-            <div
-              style={{ color: fontColors['jailed'] }}
-              className="flex w-1/2 items-center justify-between py-5 pl-7 font-handjet text-lg"
-            >
-              {jailedNodes?.length ?? '423'}
-            </div>
-          </div>
+        <div className={isAztec && nodeDistribution ? 'w-1/4' : 'w-1/5'}>
+          {isAztec && nodeDistribution ? (
+            <>
+              <DistributionRow
+                label={t('active')}
+                value={nodeDistribution.active}
+                color={fontColors.active}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+              <DistributionRow
+                label={t('in queue')}
+                value={nodeDistribution.inQueue}
+                color={fontColors.inQueue}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+              <DistributionRow
+                label={t('zombie')}
+                value={nodeDistribution.zombie}
+                color={fontColors.zombie}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+              <DistributionRow
+                label={t('exiting')}
+                value={nodeDistribution.exiting}
+                color={fontColors.exiting}
+                href={`/networks/${chain?.name}/nodes`}
+              />
+            </>
+          ) : (
+            <>
+              <DistributionRow label={t('active')} value={activeNodesLength} color={fontColors.active} />
+              <DistributionRow
+                label={isAztec ? t('active in queue') : t('jailed')}
+                value={inactiveNodesLength}
+                color={isAztec ? fontColors.inactive : fontColors.jailed}
+              />
+            </>
+          )}
         </div>
-        <div className="w-4/5">
+        <div className={isAztec && nodeDistribution ? 'w-3/4' : 'w-4/5'}>
           <Image
             src={'/img/charts/operator-distribution-coef.svg'}
-            width={960}
-            height={190}
+            width={990}
+            height={210}
             alt="coefficients"
-            className="ml-24 mt-1.5"
+            className="ml-20 mt-1.5"
           />
         </div>
       </div>
-      <div className="ml-16 mt-20 flex">
+      <div className="mt-10 mr-24 flex justify-end">
+        <RoundedButton contentClassName={'text-lg'}>
+          {t('distribution map')}
+        </RoundedButton>
+      </div>
+      <div className="mt-16 flex">
         <PowerBarChart data={data} />
       </div>
     </div>

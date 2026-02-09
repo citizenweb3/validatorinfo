@@ -2,8 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[name]/(network-profile)/networkProfileExample';
-import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
-import ToolTip from '@/components/common/tooltip';
+import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import formatCash from '@/utils/format-cash';
@@ -21,37 +20,27 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
       : 0;
 
   return (
-    <div className="mt-16 flex w-full justify-center gap-5">
-      <ToolTip tooltip={t('validator cost tooltip')} direction={'top'}>
-        <MetricsCardItem
-          title={t('validator cost')}
-          data={<Tooltip tooltip={validatorCost?.toLocaleString()}>{`$${formatCash(validatorCost)}`}</Tooltip>}
-          titleClassName="my-1"
-          className="xs:w-[70px]
-                     sm:w-[80px]
-                     md:w-[120px]
-                     lg:w-[140px]
-                     xl:w-[150px]
-                     2xl:w-[190px]"
-          isModal
-        />
-      </ToolTip>
+    <div className="flex w-full flex-col gap-1">
+      <div className="flex items-center justify-between rounded bg-card pl-10 pr-2 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight">
+        <span className="font-sfpro text-base">{t('validator cost')}</span>
+        <div className="flex items-center">
+          <span className="font-handjet text-lg mr-8">
+            <Tooltip tooltip={validatorCost?.toLocaleString()}>{`$${formatCash(validatorCost)}`}</Tooltip>
+          </span>
+          <PlusButton size="xs" isOpened={false} />
+        </div>
+      </div>
       {networkProfileExample.headerMetrics.map((item) => (
-        <ToolTip key={item.title} tooltip={t('tvl tooltip')} direction={'top'}>
-          <MetricsCardItem
-            key={item.title}
-            title={t(item.title as 'tvl')}
-            data={item.data}
-            titleClassName="my-1"
-            className="xs:w-[70px]
-                       sm:w-[80px]
-                       md:w-[120px]
-                       lg:w-[140px]
-                       xl:w-[150px]
-                       2xl:w-[190px]"
-            isModal
-          />
-        </ToolTip>
+        <div
+          key={item.title}
+          className="flex items-center justify-between rounded bg-card pl-10 pr-2 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight"
+        >
+          <span className="font-sfpro text-base">{t(item.title as 'tvl')}</span>
+          <div className="flex items-center">
+            <span className="font-handjet text-lg mr-8">{item.data}</span>
+            <PlusButton size="xs" isOpened={false} />
+          </div>
+        </div>
       ))}
     </div>
   );

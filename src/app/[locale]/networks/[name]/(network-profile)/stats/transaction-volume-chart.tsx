@@ -1,11 +1,13 @@
 'use client';
 
-import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { FC, useState } from 'react';
 
 import ChartButtons from '@/app/comparevalidators/chart-buttons';
+import UnderDevelopment from '@/components/common/under-development';
 
 const TransactionVolumeChart: FC = () => {
+  const t = useTranslations('NetworkStatistics');
   const [isChart, setIsChart] = useState<boolean>(true);
   const [chartType, setChartType] = useState<string | undefined>('Daily');
 
@@ -17,6 +19,7 @@ const TransactionVolumeChart: FC = () => {
       setChartType('Daily');
     }
   };
+
   return (
     <div className="mt-6 mb-14">
       <div className="flex items-center justify-center">
@@ -29,13 +32,7 @@ const TransactionVolumeChart: FC = () => {
           onTypeChanged={(name) => setChartType(name)}
         />
       </div>
-      <Image
-        src={'/img/charts/transaction-volume-chart.svg'}
-        width={1300}
-        height={300}
-        alt="tem chart 1"
-        className="mt-3 w-full px-20"
-      />
+      <UnderDevelopment title={t('chart unavailable')} size="md" className="mx-20 mt-3" />
     </div>
   );
 };

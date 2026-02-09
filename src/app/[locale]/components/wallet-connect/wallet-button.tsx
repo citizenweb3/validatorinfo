@@ -26,9 +26,9 @@ const WalletButton: React.FC = () => {
     }
   };
 
-  const baseButtonStyle = "group shadow-button hover:bg-[#272727] hover:text-highlight active:mt-1 active:bg-background active:shadow-none";
-  const activeButtonStyle = "border border-secondary active:border-transparent";
-  const inactiveButtonStyle = "border border-transparent border-r-bgSt border-t-bgSt hover:border hover:border-secondary active:border-transparent";
+  const baseButtonStyle = "group bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:bg-bgHover hover:text-highlight active:mt-1 active:shadow-none";
+  const activeButtonStyle = "text-highlight border-r border-t border-bgSt active:border-transparent";
+  const inactiveButtonStyle = "border-r border-t border-bgSt active:border-transparent";
   const buttonClassName = twMerge(baseButtonStyle, isActive ? activeButtonStyle : inactiveButtonStyle);
 
   return (

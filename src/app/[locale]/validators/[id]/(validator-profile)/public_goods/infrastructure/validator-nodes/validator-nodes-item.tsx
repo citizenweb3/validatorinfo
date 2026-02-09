@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 import CopyButton from '@/components/common/copy-button';
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import icons from '@/components/icons';
 import { InfrastructureNode } from '@/services/infrastructure-service';
@@ -46,32 +48,32 @@ const ValidatorNodesItem: FC<OwnProps> = ({ node }) => {
   const nodeLink = `/validators/${node.node.validatorId}/${node.node.operatorAddress}/validator_passport/authz/withdraw_rewards`;
 
   return (
-    <tr className="group hover:bg-bgHover">
-      <td className="border-b border-black px-2 py-3">
+    <BaseTableRow>
+      <BaseTableCell className="px-2 py-3">
         <div className="flex items-center">
           <Image src={healthStatus.icon} alt={healthStatus.label} width={20} height={20} className="min-w-7" />
         </div>
-      </td>
+      </BaseTableCell>
 
-      <td className="border-b border-black px-2 py-3 text-left font-sfpro text-base">
+      <BaseTableCell className="px-2 py-3 text-left font-sfpro text-base">
         <TableAvatar icon={node.chain.logoUrl} name={node.chain.prettyName} href={nodeLink} />
-      </td>
+      </BaseTableCell>
 
-      <td className="border-b border-black px-2 py-3 text-center font-sfpro text-base">
+      <BaseTableCell className="px-2 py-3 text-center font-sfpro text-base">
         <div className="flex justify-center gap-x-4">
           {node.url}
           <CopyButton value={node.url} />
         </div>
-      </td>
+      </BaseTableCell>
 
-      <td className="border-b border-black px-2 py-3 text-center font-sfpro text-base">
+      <BaseTableCell className="px-2 py-3 text-center font-sfpro text-base">
         {formatResponseTime(node.responseTime)}
-      </td>
+      </BaseTableCell>
 
-      <td className="border-b border-black px-2 py-3 text-center font-sfpro text-base">
+      <BaseTableCell className="px-2 py-3 text-center font-sfpro text-base">
         {formatLastChecked(node.lastCheckedAt)}
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

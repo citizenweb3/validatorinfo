@@ -11,8 +11,18 @@ const getAll = async (): Promise<Ecosystem[]> => {
   });
 };
 
+const getAllTags = async (): Promise<string[]> => {
+  logDebug('Get all ecosystem tags');
+  const ecosystems = await db.ecosystem.findMany({
+    select: { tags: true },
+  });
+  const allTags = ecosystems.flatMap((e) => e.tags);
+  return Array.from(new Set(allTags)).sort();
+};
+
 const ecosystemService = {
   getAll,
+  getAllTags,
 };
 
 export default ecosystemService;

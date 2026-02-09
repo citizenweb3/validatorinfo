@@ -1,22 +1,28 @@
 import { FC } from 'react';
+
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 import EcosystemsListFilters from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters';
 import EcosystemsList from '@/app/ecosystems/ecosystems-list/ecosystems-list';
+import ecosystemService from '@/services/ecosystem-service';
 
 interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
+  selectedTags?: string[];
 }
 
-const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) => {
+const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage, selectedTags = [] }) => {
+  const availableTags = await ecosystemService.getAllTags();
+
   return (
     <div className="mt-2">
-      <EcosystemsListFilters perPage={perPage} />
+      <EcosystemsListFilters perPage={perPage} availableTags={availableTags} />
       <div>
-        <table className="my-4 w-full border-collapse table-fixed">
+        <BaseTable className="my-4 table-fixed">
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Ecosystems" sortField="Ecosystems" defaultSelected />
@@ -29,8 +35,8 @@ const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage }) =>
             <TableHeaderItem page={page} name="Show TX" />
           </tr>
           </thead>
-          <EcosystemsList perPage={perPage} sort={sort} currentPage={currentPage} />
-        </table>
+          <EcosystemsList perPage={perPage} sort={sort} currentPage={currentPage} selectedTags={selectedTags} />
+        </BaseTable>
       </div>
     </div>
   );

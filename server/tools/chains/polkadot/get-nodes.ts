@@ -1,106 +1,90 @@
+import db from '@/db';
 import logger from '@/logger';
 import { GetNodesFunction } from '@/server/tools/chains/chain-indexer';
-import { NodeResult } from '@/server/types';
-import fetchChainData from '@/server/tools/get-chain-data';
-import db from '@/db';
-import { getValidatorStake } from '@/server/tools/chains/polkadot/utils/get-validators-stake';
-import { getSelfBonded } from '@/server/tools/chains/polkadot/utils/get-self-bonded';
+import { connectWsApi } from '@/server/tools/chains/polkadot/utils/connect-ws-api';
 import { getValidatorMetadata } from '@/server/tools/chains/polkadot/utils/get-validators-metadata';
+import { getValidatorStake } from '@/server/tools/chains/polkadot/utils/get-validators-stake';
+import { NodeResult } from '@/server/types';
 import isUrlValid from '@/server/utils/is-url-valid';
 
-const { logError } = logger('polkadot-nodes');
-
-interface ValidatorsList {
-  validators: {
-    address: string;
-    status: string;
-  }[];
-}
-
-interface Stakes {
-  address: string;
-  total: string;
-  own: string;
-}
+const { logError} = logger('polkadot-nodes');
 
 const getNodes: GetNodesFunction = async (chain) => {
   const dbNodes = await db.node.findMany({ where: { chain: { name: chain.name } } });
-  const dbMap = new Map(dbNodes.map(
-    (node) => [node.operatorAddress, node]));
+  const dbMap = new Map(dbNodes.map((node) => [node.operatorAddress, node]));
 
-  const validators = (
-    await fetchChainData<ValidatorsList>(
-      chain.name,
-      'rest',
-      `/pallets/staking/validators`,
-    )
-  ).validators;
-
-  if (!validators || !validators.length) {
-    logError(`No validators found. Chain: ${chain.name}`);
+  const wsList = chain.nodes.filter((n: any) => n.type === 'ws').map((n: any) => n.url);
+  if (!wsList.length) {
+    logError(`No WebSocket URLs configured for chain '${chain.name}'`);
     return [];
   }
 
-  let stakes: Stakes[] = [];
+  const api = await connectWsApi(wsList, 3);
+
+  let activeValidatorsSet: Set<string> = new Set();
+  const validatorPrefsMap = new Map<string, string>();
+  let stakeMap = new Map<string, { total: string; own: string }>();
 
   try {
-    stakes = await getValidatorStake(chain) || [];
+    const prefsEntries = await api.query.staking.validators.entries();
+    for (const [key, prefs] of prefsEntries) {
+      const address = key.args[0].toString();
+      const preferences = prefs.toJSON() as any;
+      const commission = preferences?.commission?.toString() || '0';
+      validatorPrefsMap.set(address, commission);
+    }
+
+    const stakes = (await getValidatorStake(chain, api)) || [];
+
+    for (const stake of stakes) {
+      stakeMap.set(stake.address, { total: stake.total, own: stake.own });
+      activeValidatorsSet.add(stake.address);
+    }
   } catch (e) {
-    logError(`getValidatorStake failed with error: ${e}`);
+    logError(`Failed to fetch validator data: ${e}`);
+    return [];
+  } finally {
+    await api.disconnect();
   }
-
-  if (!stakes.length) {
-    logError(`No stakes found. Chain: ${chain.name}`);
-  }
-
-  const stakesMap = new Map<string, typeof stakes[0]>(
-    stakes.map((stake) => [stake.address, stake]),
-  );
 
   const validatorsMetadata = await getValidatorMetadata();
+
+  const validators = Array.from(validatorPrefsMap.entries()).map(([address, commission]) => {
+    const isActive = activeValidatorsSet.has(address);
+    const stake = stakeMap.get(address) || { total: '0', own: '0' };
+
+    return {
+      address,
+      isActive,
+      commission,
+      total: stake.total,
+      own: stake.own,
+    };
+  });
 
   const results: NodeResult[] = [];
 
   for (const validator of validators) {
     const dbNode = dbMap.get(validator.address);
-    const stake = stakesMap.get(validator.address);
 
-    let minSelfDelegation: string | null = '';
-    let allTokens = '';
+    const minSelfDelegation =
+      validator.own !== null && validator.own !== '' ? String(validator.own) : (dbNode?.minSelfDelegation ?? '0');
+    const allTokens =
+      validator.total !== null && validator.total !== '' ? String(validator.total) : (dbNode?.tokens ?? '0');
 
-    if (stake) {
-      minSelfDelegation = stake.own !== null && stake.own !== ''
-        ? String(stake.own)
-        : (dbNode?.minSelfDelegation ?? '');
-      allTokens = stake.total !== null && stake.total !== ''
-        ? String(stake.total)
-        : (dbNode?.tokens ?? '');
-    } else {
-      let bonded: string | null = null;
-      try {
-        bonded = await getSelfBonded(chain, validator.address);
-      } catch (e) {
-        logError(`getSelfBonded failed for ${validator.address}: ${e}`);
-      }
-      minSelfDelegation = bonded !== null && bonded !== ''
-        ? String(bonded)
-        : (dbNode?.minSelfDelegation ?? '');
-      allTokens = '';
-    }
-
-    const foundValidatorMetadata = validatorsMetadata.find(
-      (val) => val.address === validator.address,
-    );
+    const foundValidatorMetadata = validatorsMetadata.find((val) => val.address === validator.address);
 
     let website = foundValidatorMetadata?.info.web ?? '';
     if (website && website !== '' && website !== 'None') {
-      website = website.startsWith('http')
-        ? website
-        : `https://${website}`;
+      website = website.startsWith('http') ? website : `https://${website}`;
       website = isUrlValid(website) ? website : '';
     } else {
       website = '';
     }
+
+    const commissionRate = validator.commission
+      ? (BigInt(validator.commission) / BigInt(1_000_000_000)).toString()
+      : (dbNode?.rate ?? '0');
 
     const node: NodeResult = {
       operator_address: validator.address,
@@ -109,17 +93,15 @@ const getNodes: GetNodesFunction = async (chain) => {
         '@type': '',
         key: '',
       },
-      jailed: validator.status
-        ? !validator.status.startsWith('active')
-        : (dbNode?.jailed ?? false),
+      jailed: !validator.isActive,
       min_self_delegation: minSelfDelegation,
       unbonding_height: dbNode?.unbondingHeight ?? '0',
       unbonding_time: dbNode?.unbondingTime?.toISOString?.() ?? new Date(0).toISOString(),
       tokens: allTokens,
-      status: validator.status.startsWith('active') ? 'BOND_STATUS_BONDED' : 'BOND_STATUS_UNBONDED',
+      status: validator.isActive ? 'BOND_STATUS_BONDED' : 'BOND_STATUS_UNBONDED',
       commission: {
         commission_rates: {
-          rate: dbNode?.rate ?? '0',
+          rate: commissionRate,
           max_rate: dbNode?.maxRate ?? '0',
           max_change_rate: dbNode?.maxChangeRate ?? '0',
         },
@@ -127,19 +109,19 @@ const getNodes: GetNodesFunction = async (chain) => {
       },
       description: {
         identity: validator.address,
-        moniker: foundValidatorMetadata?.info.display
-        && foundValidatorMetadata.info.display !== ''
-        && foundValidatorMetadata.info.display !== 'None'
-          ? foundValidatorMetadata.info.display
-          : (dbNode?.moniker ?? ''),
-        website: website && website !== ''
-          ? website
-          : (dbNode?.website ?? ''),
-        security_contact: foundValidatorMetadata?.info.email
-        && foundValidatorMetadata.info.email !== ''
-        && foundValidatorMetadata.info.email !== 'None'
-          ? foundValidatorMetadata.info.email
-          : (dbNode?.securityContact ?? ''),
+        moniker:
+          foundValidatorMetadata?.info.display &&
+          foundValidatorMetadata.info.display !== '' &&
+          foundValidatorMetadata.info.display !== 'None'
+            ? foundValidatorMetadata.info.display
+            : (dbNode?.moniker ?? ''),
+        website: website && website !== '' ? website : (dbNode?.website ?? ''),
+        security_contact:
+          foundValidatorMetadata?.info.email &&
+          foundValidatorMetadata.info.email !== '' &&
+          foundValidatorMetadata.info.email !== 'None'
+            ? foundValidatorMetadata.info.email
+            : (dbNode?.securityContact ?? ''),
         details: dbNode?.details ?? '',
       },
     };

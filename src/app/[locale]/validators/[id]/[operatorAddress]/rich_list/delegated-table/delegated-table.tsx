@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import DelegatedEventsList
   from '@/app/validators/[id]/[operatorAddress]/rich_list/delegated-table/delegated-events-list';
+import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
@@ -11,13 +12,14 @@ interface OwnProps extends PagesProps {
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
   chainName: string;
+  operatorAddress: string;
 }
 
-const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, currentPage }) => {
+const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, currentPage, operatorAddress }) => {
   return (
     <div>
       <div>
-        <table className="w-full table-auto border-collapse">
+        <BaseTable>
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Address" />
@@ -27,8 +29,14 @@ const DelegatedTable: FC<OwnProps> = async ({ chainName, page, perPage, sort, cu
             <TableHeaderItem page={page} name="Block Height" sortField="tx" />
           </tr>
           </thead>
-          <DelegatedEventsList chainName={chainName} perPage={perPage} sort={sort} currentPage={currentPage} />
-        </table>
+          <DelegatedEventsList
+            chainName={chainName}
+            perPage={perPage}
+            sort={sort}
+            currentPage={currentPage}
+            operatorAddress={operatorAddress}
+          />
+        </BaseTable>
       </div>
     </div>
   );

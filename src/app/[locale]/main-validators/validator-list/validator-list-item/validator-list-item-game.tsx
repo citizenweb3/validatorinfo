@@ -6,6 +6,8 @@ import { FC } from 'react';
 import ValidatorListItemChains from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-chains';
 import ValidatorListItemFavorite from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-favorite';
 import ValidatorListItemLinks from '@/app/main-validators/validator-list/validator-list-item/validator-list-item-links';
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import { ValidatorWithNodes } from '@/services/validator-service';
 
@@ -24,26 +26,30 @@ const ValidatorListItemGame: FC<OwnProps> = ({ chains, validator }) => {
     })
     .filter((c) => typeof c !== 'undefined');
 
+  const rowStyle = 'px-3';
+
   return (
-    <tr className="group font-handjet hover:bg-bgHover ">
-      <td className="w-9 border-b border-black py-2 active:border-bgSt">
-        <ValidatorListItemFavorite isFavorite={false} />
-      </td>
-      <td className="group/avatar w-[20%] border-b border-black px-2 py-2 font-sfpro hover:text-highlight active:border-bgSt">
-        <TableAvatar
-          textClassName="max-w-36"
-          icon={validator.url}
-          name={validator.moniker}
-          href={`/validators/${validator.id}/networks`}
-        />
-      </td>
-      <td className="border-b border-black px-2 py-2 active:border-bgSt">
+    <BaseTableRow>
+      <BaseTableCell className="group/avatar w-[20%] font-sfpro hover:text-highlight">
+        <div className="flex items-center">
+          <div className="w-9 mr-2 -py flex items-center justify-center">
+            <ValidatorListItemFavorite isFavorite={false} />
+          </div>
+          <TableAvatar
+            textClassName="max-w-36"
+            icon={validator.url}
+            name={validator.moniker}
+            href={`/validators/${validator.id}/networks`}
+          />
+        </div>
+      </BaseTableCell>
+      <BaseTableCell className={rowStyle}>
         <ValidatorListItemLinks validator={validator} />
-      </td>
-      <td className="border-b border-black px-2 py-2">
+      </BaseTableCell>
+      <BaseTableCell className={rowStyle}>
         <ValidatorListItemChains chains={validatorChains} validator={validator} />
-      </td>
-    </tr>
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 

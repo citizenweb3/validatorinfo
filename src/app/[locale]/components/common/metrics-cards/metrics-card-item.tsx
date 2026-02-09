@@ -35,13 +35,13 @@ const MetricsCardItem: FC<OwnProps> = ({
   }) => {
   return (
     <div className={twMerge(`     
-      flex flex-col items-center bg-card mx-1
+      flex flex-col items-center bg-table_row mx-1
       xs:w-[100px]
       sm:w-[130px]
       md:w-[150px] 
       lg:w-[180px] 
       xl:w-[200px] 
-      2xl:w-[270px]
+      2xl:w-[250px]
       ${className}`)
     }>
       <div className={`${titleClassName} text-center text-base text-highlight`}>{title}</div>

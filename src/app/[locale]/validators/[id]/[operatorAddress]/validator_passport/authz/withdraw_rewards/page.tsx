@@ -7,6 +7,7 @@ import { NextPageWithLocale } from '@/i18n';
 import validatorService from '@/services/validator-service';
 import SubDescription from '@/components/sub-description';
 import { getTranslations } from 'next-intl/server';
+import nodeService from '@/services/node-service';
 
 interface PageProps {
   params: NextPageWithLocale & { id: string; operatorAddress: string };
@@ -17,8 +18,7 @@ const PassportWithdrawRewardsPage: NextPageWithLocale<PageProps> = async ({
   }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
   const validatorId = parseInt(id);
-  const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
-  const node = list.find((item) => item.operatorAddress === operatorAddress);
+  const node = await nodeService.getNodeByAddressAndId(operatorAddress, validatorId);
 
   return (
     <>
