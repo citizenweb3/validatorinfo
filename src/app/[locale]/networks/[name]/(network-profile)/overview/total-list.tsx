@@ -7,6 +7,7 @@ import aztecContractService from '@/services/aztec-contracts-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import formatCash from '@/utils/format-cash';
+import Link from 'next/link';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
@@ -54,12 +55,14 @@ const AztecBlocksSlotsEpochs: FC<AztecMetricsProps> = async ({ chainName }) => {
   return (
     <div className="mt-6 flex w-full flex-row justify-center gap-6">
       {totalBlocks && (
-        <MetricsCardItem
-          title={t('total amount of blocks')}
-          data={totalBlocks}
-          className={'bg-table_row pb-6 pt-2.5'}
-          dataClassName={'mt-5'}
-        />
+        <Link href={`/networks/${chainName}/blocks`}>
+          <MetricsCardItem
+            title={t('total amount of blocks')}
+            data={totalBlocks}
+            className={'bg-table_row pb-6 pt-2.5'}
+            dataClassName={'mt-5'}
+          />
+        </Link>
       )}
       {totalSlots && (
         <MetricsCardItem
@@ -99,7 +102,9 @@ const TotalsListNetworkPassport: FC<OwnProps> = async ({ chain }) => {
         />
         {chain?.name === 'aztec' ? (
           <Suspense fallback={<AztecTxCardLoading />}>
-            <AztecTxCard />
+            <Link href={`/networks/${chain.name}/tx`}>
+              <AztecTxCard />
+            </Link>
           </Suspense>
         ) : (
           <MetricsCardItem

@@ -5,7 +5,7 @@ import { FC, ReactNode, useRef, useState } from 'react';
 import RoundedButton from '@/components/common/rounded-button';
 
 interface OwnProps {
-  distributionMapLabel: string;
+  subtitleText: string;
   showLabel: string;
   hideLabel: string;
   children: ReactNode;
@@ -13,7 +13,7 @@ interface OwnProps {
 }
 
 const DevRepositoryToggle: FC<OwnProps> = ({
-  distributionMapLabel,
+  subtitleText,
   showLabel,
   hideLabel,
   children,
@@ -34,9 +34,11 @@ const DevRepositoryToggle: FC<OwnProps> = ({
   };
 
   return (
-    <>
-      <div className="flex flex-col items-end gap-4">
-        <RoundedButton contentClassName="text-lg">{distributionMapLabel}</RoundedButton>
+    <div className="mt-14">
+      <div className="flex items-center justify-between">
+        <h2 className="flex w-fit border-b border-bgSt pb-1 px-4 py-4 font-handjet text-xl text-highlight">
+          {subtitleText}
+        </h2>
         <RoundedButton onClick={handleToggle} contentClassName="text-lg px-9">
           <span className="grid [&>*]:col-start-1 [&>*]:row-start-1">
             <span className={isOpened ? 'invisible' : ''}>{showLabel}</span>
@@ -46,7 +48,7 @@ const DevRepositoryToggle: FC<OwnProps> = ({
       </div>
       {children}
       {isOpened && <div ref={tableRef}>{table}</div>}
-    </>
+    </div>
   );
 };
 

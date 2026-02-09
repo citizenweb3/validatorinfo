@@ -1,9 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
-import SubTitle from '@/components/common/sub-title';
 import CopyButton from '@/components/common/copy-button';
 import { ChainWithParams } from '@/services/chain-service';
-import L1ContractsSection from './l1-contracts-section';
 
 interface OwnProps {
   chain: ChainWithParams | null;
@@ -11,8 +9,6 @@ interface OwnProps {
 
 const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkDevInfo');
-
-  const isAztecChain = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
 
   return (
     <div>
@@ -110,10 +106,6 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
             <CopyButton value={String(chain.params.denom)} size="md" />
           </div>
         </div>
-      )}
-
-      {isAztecChain && chain?.params && 'l1ContractsAddresses' in chain.params && chain.params.l1ContractsAddresses && (
-        <L1ContractsSection contractsJson={chain.params.l1ContractsAddresses as string} chainName={chain.name} />
       )}
     </div>
   );

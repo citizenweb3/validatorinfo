@@ -11,6 +11,7 @@ services:
   db:
     image: postgres:14-bullseye
     container_name: validatorinfo-dev-db
+    command: postgres -c max_connections=500
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -29,6 +30,7 @@ services:
   events-db:
     image: postgres:14-bullseye
     container_name: validatorinfo-dev-events-db
+    command: postgres -c max_connections=500
     environment:
       POSTGRES_DB: ${EVENTS_POSTGRES_DB:-validatorinfo_events_db}
       POSTGRES_USER: ${EVENTS_POSTGRES_USER:-validatorinfo_events_user}

@@ -257,6 +257,7 @@
     "mau tooltip": "Стоимость в долларах США узла валидатора, который получает доход",
     "rich list tooltip": "Список Богачей",
     "distribution tooltip": "Распределение",
+    "validator map tooltip": "{chainName} Карта Валидаторов",
     "Links": "Ссылки",
     "Tags": "Теги"
   },
@@ -386,6 +387,7 @@
     "peers": "Пиры",
     "seeds": "Сиды",
     "binary versions": "Версия бинарника",
+    "l1 contracts": "L1 Контракты",
     "Submit App Info": "Отправить информацию о приложении",
     "Parameters": "Параметры",
     "bech32 prefix": "Bech32 Префикс",
