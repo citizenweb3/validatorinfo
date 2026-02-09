@@ -1,6 +1,7 @@
 services:
   db:
     image: postgres:14-bullseye
+    command: postgres -c max_connections=500
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
