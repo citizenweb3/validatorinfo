@@ -52,7 +52,6 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { 
       <div className="flex flex-row justify-between items-end">
         <SubTitle text={t('Token Price')} />
         <div className="flex flex-col gap-4">
-          <RoundedButton className="text-lg" contentClassName="px-12">{t('Supply Concentration')}</RoundedButton>
           <RoundedButton className="text-lg" contentClassName="px-12">{t('Token Flow')}</RoundedButton>
         </div>
       </div>

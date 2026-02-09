@@ -29,7 +29,6 @@ const AztecGovernanceConfig: FC<OwnProps> = async ({ chain }) => {
 
   return (
     <div className="mt-6 mb-4">
-      <SubTitle text={t('governance-config-title')} />
       <div className="mt-4 flex flex-wrap justify-center gap-4">
         <MetricsCardItem title={t('quorum')}
                          data={config.quorum}

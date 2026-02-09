@@ -20,7 +20,7 @@ import { shadowPlugin } from '@/components/chart/chart-shadow-plugin';
 import { crosshairPlugin } from '@/components/chart/chart-crosshair-plugin';
 import { chartAreaBackgroundPlugin } from '@/components/chart/chart-area-background-plugin';
 import { formatNumber } from '@/components/chart/chartHelper';
-import ChartButtons from '@/app/comparevalidators/chart-buttons';
+import { cn } from '@/utils/cn';
 
 ChartJS.register(
   CategoryScale,
@@ -318,6 +318,9 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
         border: {
           color: '#3E3E3E',
         },
+        afterFit: (axis) => {
+          axis.width = 50;
+        },
         position: 'left',
         beginAtZero: false,
         max: initialYMax,
@@ -336,18 +339,10 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
     }
   };
 
+  const periodButtons = ['Daily', 'Weekly', 'Monthly', 'Yearly'] as const;
+
   return (
     <div className="w-full">
-      <div className="flex justify-start ml-20">
-        <ChartButtons
-          isChart={false}
-          chartType={chartType}
-          onChartChanged={() => {}}
-          onTypeChanged={handleTypeChanged}
-          onlyDays={true}
-        />
-      </div>
-
       <div
         className="relative"
         style={{
@@ -355,6 +350,27 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
           padding: '10px 20px 20px 20px',
         }}
       >
+        <div className="absolute left-[70px] top-[5px] z-10 flex items-center gap-2 bg-[#181818] font-handjet">
+          {periodButtons.map((name) => (
+            <button
+              key={name}
+              type="button"
+              aria-label={`Switch to ${name} view`}
+              className={cn(
+                'min-w-9 p-px',
+                chartType === name
+                  ? 'border border-[#3e3e3e] text-highlight shadow-button'
+                  : 'hover:text-highlight',
+              )}
+              onClick={() => handleTypeChanged(name)}
+            >
+              <div className="flex items-center justify-center px-2 py-0 text-base leading-6 hover:text-highlight">
+                {name}
+              </div>
+            </button>
+          ))}
+        </div>
+
         {data.length === 0 ? (
           <div className="flex h-full items-center justify-center">
             <div className="font-sfpro text-lg text-white opacity-70">No chart data available</div>
@@ -364,14 +380,6 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
         )}
       </div>
 
-      <div className="mt-1 flex justify-center">
-        <div className="flex items-center space-x-6 rounded px-4" style={{ backgroundColor: '#1E1E1E' }}>
-          <div className="flex items-center space-x-2">
-            <div className="h-3 w-3 rounded-sm border border-white" style={{ backgroundColor: '#4FB848' }}></div>
-            <span className="font-sfpro text-sm text-white">Price (USD)</span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
