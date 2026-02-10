@@ -2,8 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import { FC, useState } from 'react';
-
-import ChartButtons from '@/app/comparevalidators/chart-buttons';
 import UnderDevelopment from '@/components/common/under-development';
 
 const TransactionVolumeChart: FC = () => {
@@ -22,16 +20,6 @@ const TransactionVolumeChart: FC = () => {
 
   return (
     <div className="mt-6 mb-14">
-      <div className="flex items-center justify-center">
-        <ChartButtons
-          onlyDays
-          ecosystems={false}
-          isChart={isChart}
-          onChartChanged={handleChartChanged}
-          chartType={chartType}
-          onTypeChanged={(name) => setChartType(name)}
-        />
-      </div>
       <UnderDevelopment title={t('chart unavailable')} size="md" className="mx-20 mt-3" />
     </div>
   );

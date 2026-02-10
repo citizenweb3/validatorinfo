@@ -26,7 +26,7 @@ const DevRepositoryToggle: FC<OwnProps> = ({
     if (!isOpened) {
       setIsOpened(true);
       setTimeout(() => {
-        tableRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        tableRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 0);
     } else {
       setIsOpened(false);

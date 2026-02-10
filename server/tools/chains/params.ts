@@ -25,7 +25,7 @@ export const ecosystemParams = [
   {
     name: 'namada',
     prettyName: 'Namada',
-    logoUrl: 'https://raw.githubusercontent.com/cosmos/chain-registry/refs/heads/master/namada/images/nam.png',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/namada/namada.svg',
     tags: ['Privacy', 'PoS', 'Shielded Assets'],
   },
   {
