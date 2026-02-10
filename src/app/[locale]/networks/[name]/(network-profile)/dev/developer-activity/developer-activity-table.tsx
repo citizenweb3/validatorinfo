@@ -6,6 +6,7 @@ import { FC, useMemo, useState } from 'react';
 import DeveloperActivityTableItem from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table-item';
 import SortButton from '@/components/common/sort-button';
 import BaseTable from '@/components/common/table/base-table';
+import BaseTableHeaderCell from '@/components/common/table/base-table-header-cell';
 import { SortDirection } from '@/server/types';
 import { GithubRepositoryWithCommitCount } from '@/services/github-service';
 
@@ -53,32 +54,23 @@ const DeveloperActivityTable: FC<OwnProps> = ({ items }) => {
       <BaseTable className="my-12">
         <thead>
           <tr className="bg-table_header">
-            <th
-              className="cursor-pointer text-center bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)] border-x-2 border-transparent"
-              onClick={() => handleSort('name')}
-            >
-              <div className="flex items-center justify-center gap-2">
+            <BaseTableHeaderCell className="py-3" onClick={() => handleSort('name')}>
+              <div className="flex items-center justify-center gap-2 text-sm">
                 <SortButton isActive={sortBy === 'name'} direction={sortBy === 'name' ? sortOrder : 'asc'} />
                 <span>{t('Table.Repository Name.name')}</span>
               </div>
-            </th>
-            <th
-              className="cursor-pointer text-center bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)] border-x-2 border-transparent"
-              onClick={() => handleSort('commits')}
-            >
-              <div className="flex items-center justify-center gap-2">
+            </BaseTableHeaderCell>
+            <BaseTableHeaderCell className="py-3" onClick={() => handleSort('commits')}>
+              <div className="flex items-center justify-center gap-2 text-sm">
                 <span>{t('Table.Language.name')}</span>
               </div>
-            </th>
-            <th
-              className="cursor-pointer text-center bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)] border-x-2 border-transparent"
-              onClick={() => handleSort('commits')}
-            >
-              <div className="flex items-center justify-center gap-2">
+            </BaseTableHeaderCell>
+            <BaseTableHeaderCell className="py-3" onClick={() => handleSort('commits')}>
+              <div className="flex items-center justify-center gap-2 text-sm">
                 <SortButton isActive={sortBy === 'commits'} direction={sortBy === 'commits' ? sortOrder : 'asc'} />
                 <span>{t('Table.Commits.name')}</span>
               </div>
-            </th>
+            </BaseTableHeaderCell>
           </tr>
         </thead>
         <tbody>
