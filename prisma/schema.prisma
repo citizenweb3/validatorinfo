@@ -126,6 +126,7 @@ model Chain {
   aprHistory         ChainAprHistory[]  @relation("chain_apr_history")
   validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
   aztecNodeDistributionHistory AztecNodeDistributionHistory[] @relation("chain_aztec_node_distribution_history")
+  txMetrics  ChainTxMetrics?  @relation("chain_tx_metrics")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
@@ -477,4 +478,19 @@ model NodesConsensusData {
   node Node? @relation("node_consensus_data", fields: [nodeAddress], references: [operatorAddress])
 
   @@map("nodes_consensus_data")
+}
+
+model ChainTxMetrics {
+  id         Int      @id @default(autoincrement())
+  chainId    Int      @unique @map("chain_id")
+  totalTxs   BigInt?  @map("total_txs")
+  txsLast24h Int?     @map("txs_last_24h")
+  txs30d     Int?     @map("txs_30d")
+  tps        Float?
+  avgFee     String?  @map("avg_fee")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  chain Chain @relation("chain_tx_metrics", fields: [chainId], references: [id])
+
+  @@map("chain_tx_metrics")
 }

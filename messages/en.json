@@ -1167,6 +1167,7 @@
     "average fee": "Average Fee",
     "noTransactionsYet": "No transactions yet",
     "transactionsWillAppear": "Transaction display will appear when transactions begin on the network",
+    "txListLoadError": "Could not load transactions. Please try reloading the page.",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",
@@ -1183,6 +1184,10 @@
       "Block Height": {
         "name": "Block Height",
         "hint": "The number of block the transaction took place"
+      },
+      "Fee": {
+        "name": "Fee",
+        "hint": "Transaction fee amount"
       }
     }
   },
@@ -1199,6 +1204,23 @@
     "timestamp": "Timestamp",
     "fees": "Fees",
     "memo": "Memo",
+    "revert code": "Revert Code",
+    "index in block": "Index in Block",
+    "note hashes": "Note Hashes",
+    "nullifiers": "Nullifiers",
+    "l2 to l1 messages": "L2 to L1 Messages",
+    "public logs": "Public Logs",
+    "private logs": "Private Logs",
+    "success": "Success",
+    "reverted": "Reverted",
+    "pending": "Pending",
+    "dropped": "Dropped",
+    "status": "Status",
+    "fee payer": "Fee Payer",
+    "submitted at": "Submitted At",
+    "dropped at": "Dropped At",
+    "tx not found": "Transaction not found",
+    "tx not found hint": "The transaction may not exist or the data is temporarily unavailable. Please try reloading the page.",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"

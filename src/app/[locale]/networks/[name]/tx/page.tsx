@@ -3,17 +3,19 @@ import PageTitle from '@/components/common/page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import TotalTxsMetrics from '@/app/networks/[name]/tx/total-txs-metrics';
-import { SortDirection } from '@/server/types';
 import NetworkTxs from '@/app/networks/[name]/tx/txs-table/network-txs';
 import Link from 'next/link';
 import SubDescription from '@/components/sub-description';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 interface PageProps {
   params: NextPageWithLocale & { name: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const defaultPerPage = 1;
+const defaultPerPage = 20;
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'TotalTxsPage' });
@@ -29,8 +31,6 @@ const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
   const t = await getTranslations({ locale, namespace: 'TotalTxsPage' });
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'name') ?? 'name';
-  const order = (q.order as SortDirection) ?? 'asc';
   const chain = await chainService.getByName(name);
 
   return (
@@ -50,7 +50,7 @@ const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <TotalTxsMetrics chainName={name} />
-      <NetworkTxs chainName={name} name={name} page={'TotalTxsPage'} perPage={perPage} currentPage={currentPage} sort={{ sortBy, order }} />
+      <NetworkTxs chainName={name} name={name} page={'TotalTxsPage'} perPage={perPage} currentPage={currentPage} coinDecimals={chain?.params?.coinDecimals} />
     </div>
   );
 };

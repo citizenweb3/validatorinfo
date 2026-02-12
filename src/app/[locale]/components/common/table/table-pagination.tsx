@@ -8,6 +8,7 @@ interface OwnProps {
   pageLength: number;
   isScroll?: boolean;
   tableId?: string;
+  hideLastPage?: boolean;
 }
 
 interface PageElement {
@@ -15,7 +16,7 @@ interface PageElement {
   name: string | number | ReactNode;
 }
 
-const TablePagination: FC<OwnProps> = ({ pageLength, isScroll=true, tableId }) => {
+const TablePagination: FC<OwnProps> = ({ pageLength, isScroll=true, tableId, hideLastPage }) => {
   const searchString = headers().get('x-current-search');
   const sp = new URLSearchParams(searchString ?? '');
 
@@ -57,7 +58,7 @@ const TablePagination: FC<OwnProps> = ({ pageLength, isScroll=true, tableId }) =
     pages.push({ href: '', name: '...' });
   }
 
-  if (currentPage < pageLength) {
+  if (currentPage < pageLength && !hideLastPage) {
     sp.set(pageParam, `${pageLength}`);
     pages.push({ href: sp.toString(), name: pageLength });
   }

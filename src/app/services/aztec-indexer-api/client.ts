@@ -69,18 +69,19 @@ const buildHeaders = (customHeaders?: HeadersInit): HeadersInit => {
 
 const buildNextOptions = (options?: AztecIndexerRequestOptions): RequestInit => {
   const nextOptions: RequestInit = {};
+  const hasRevalidate = options?.revalidate !== undefined;
+  const hasTags = options?.tags && options.tags.length > 0;
 
-  if (options?.cache !== undefined) {
+  if (hasRevalidate || hasTags) {
+    // next.revalidate and cache are mutually exclusive in Next.js fetch
+    (nextOptions as any).next = {
+      ...(hasRevalidate && { revalidate: options.revalidate }),
+      ...(hasTags && { tags: options.tags }),
+    };
+  } else if (options?.cache !== undefined) {
     nextOptions.cache = options.cache;
   } else {
     nextOptions.cache = 'no-store';
-  }
-
-  if (options?.revalidate !== undefined || (options?.tags && options.tags.length > 0)) {
-    (nextOptions as any).next = {
-      ...(options.revalidate !== undefined && { revalidate: options.revalidate }),
-      ...(options.tags && options.tags.length > 0 && { tags: options.tags }),
-    };
   }
 
   return nextOptions;
