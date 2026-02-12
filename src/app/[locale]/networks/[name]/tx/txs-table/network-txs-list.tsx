@@ -59,7 +59,7 @@ const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentP
         ))}
         <tr>
           <td colSpan={4} className="pt-4">
-            <TablePagination pageLength={totalPages} />
+            <TablePagination pageLength={totalPages} hideLastPage />
           </td>
         </tr>
       </tbody>
