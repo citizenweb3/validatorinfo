@@ -26,6 +26,7 @@ import {
   TotalTxEffectsResponse,
   TxEffectsLast24hResponse,
   TxEffectsQueryParams,
+  UiTxEffectTableItem,
 } from './types';
 
 const { logDebug, logError } = logger('aztec-indexer-endpoints');
@@ -368,7 +369,7 @@ export const searchPublicLogs = async (
  * ```ts
  * const txs = await getTxEffects({ from: 0, limit: 10 });
  * txs.forEach(tx => {
- *   console.log(`TX ${tx.hash}: ${tx.revertCode === 0 ? 'Success' : 'Reverted'}`);
+ *   console.log(`TX ${tx.txHash}: ${tx.revertCode.code === 0 ? 'Success' : 'Reverted'}`);
  * });
  * ```
  */
@@ -452,7 +453,7 @@ export const getBlockTxEffectByIndex = async (
  * });
  *
  * // Check if transaction succeeded
- * if (tx.revertCode === 0) {
+ * if (tx.revertCode.code === 0) {
  *   console.log('Transaction successful!');
  * }
  * ```
@@ -466,6 +467,40 @@ export const getTxEffectByHash = async (
     () => client.get<AztecTxEffect>(`/l2/tx-effects/${hash}`, null, options),
     null,
     `Failed to fetch tx effect with hash ${hash}`,
+  );
+};
+
+// ============================================
+// UI ENDPOINTS (Lightweight for tables)
+// ============================================
+
+/**
+ * Get lightweight tx effects for table display with block-height pagination
+ *
+ * @param params - Query params (from, to) — block heights
+ * @param options - Request options
+ * @returns Array of lightweight tx effects (txHash, blockNumber, transactionFee, timestamp)
+ *
+ * @example
+ * ```ts
+ * // Get txs from blocks 66150-66170
+ * const txs = await getUiTxEffects({ from: 66150, to: 66170 });
+ * ```
+ */
+export const getUiTxEffects = async (
+  params?: BlocksQueryParams,
+  options?: AztecIndexerRequestOptions,
+): Promise<UiTxEffectTableItem[]> => {
+  logDebug(`Fetching UI tx effects with params: ${JSON.stringify(params)}`);
+  return safeRequest(
+    () =>
+      client.get<UiTxEffectTableItem[]>(
+        '/l2/ui/tx-effects-for-table',
+        params as client.QueryParams | null,
+        options,
+      ),
+    [],
+    'Failed to fetch UI tx effects',
   );
 };
 

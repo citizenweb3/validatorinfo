@@ -1158,6 +1158,7 @@
     "average fee": "Taxa média",
     "noTransactionsYet": "Ainda não há transações",
     "transactionsWillAppear": "A exibição de transações aparecerá quando as transações começarem na rede",
+    "txListLoadError": "Não foi possível carregar as transações. Tente recarregar a página.",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",
@@ -1174,6 +1175,10 @@
       "Block Height": {
         "name": "Altura do Bloco",
         "hint": "O número do bloco em que a transação teve lugar"
+      },
+      "Fee": {
+        "name": "Taxa",
+        "hint": "Valor da taxa de transação"
       }
     }
   },
@@ -1214,6 +1219,23 @@
     "timestamp": "Marca de Tempo",
     "fees": "Taxas",
     "memo": "Memo",
+    "revert code": "Código de Reversão",
+    "index in block": "Índice no Bloco",
+    "note hashes": "Hashes de Notas",
+    "nullifiers": "Anuladores",
+    "l2 to l1 messages": "Mensagens L2 para L1",
+    "public logs": "Logs Públicos",
+    "private logs": "Logs Privados",
+    "success": "Sucesso",
+    "reverted": "Revertido",
+    "pending": "Pendente",
+    "dropped": "Descartado",
+    "status": "Status",
+    "fee payer": "Pagador de Taxa",
+    "submitted at": "Enviado em",
+    "dropped at": "Descartado em",
+    "tx not found": "Transação não encontrada",
+    "tx not found hint": "A transação pode não existir ou os dados estão temporariamente indisponíveis. Tente recarregar a página.",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"

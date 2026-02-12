@@ -1,9 +1,7 @@
-import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
-import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 import NetworkTxsList from '@/app/networks/[name]/tx/txs-table/network-txs-list';
 import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
@@ -11,54 +9,30 @@ import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/co
 interface OwnProps extends PagesProps {
   perPage: number;
   currentPage?: number;
-  sort: { sortBy: string; order: SortDirection };
   name: string;
   chainName: string;
+  coinDecimals?: number;
 }
 
-const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, sort, currentPage }) => {
-  const t = await getTranslations('TotalTxsPage');
-
-  if (isAztecChainName(chainName)) {
-    return (
-      <div className="mt-12">
-        <BaseTable>
-          <thead>
-            <tr className="bg-table_header">
-              <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
-              <TableHeaderItem page={page} name="Type of Tx" sortField="type" />
-              <TableHeaderItem page={page} name="Block Height" sortField="block height" />
-              <TableHeaderItem page={page} name="Timestamp" sortField="timestamp" defaultSelected />
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colSpan={4} className="py-16 text-center">
-                <div className="flex flex-col items-center gap-2">
-                  <span className="font-sfpro text-base text-white/70">
-                    {t('transactionsWillAppear')}
-                  </span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </BaseTable>
-      </div>
-    );
-  }
+const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, currentPage, coinDecimals }) => {
+  const isAztec = isAztecChainName(chainName);
 
   return (
     <div className="mt-12">
       <BaseTable>
         <thead>
           <tr className="bg-table_header">
-            <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
-            <TableHeaderItem page={page} name="Type of Tx" sortField="type" />
-            <TableHeaderItem page={page} name="Block Height" sortField="block height" />
-            <TableHeaderItem page={page} name="Timestamp" sortField="timestamp" defaultSelected />
+            <TableHeaderItem page={page} name="Tx Hash" />
+            {isAztec ? (
+              <TableHeaderItem page={page} name="Fee" />
+            ) : (
+              <TableHeaderItem page={page} name="Type of Tx" />
+            )}
+            <TableHeaderItem page={page} name="Block Height" />
+            <TableHeaderItem page={page} name="Timestamp" />
           </tr>
         </thead>
-        <NetworkTxsList name={name} perPage={perPage} sort={sort} currentPage={currentPage} />
+        <NetworkTxsList name={name} chainName={chainName} perPage={perPage} currentPage={currentPage} coinDecimals={coinDecimals} />
       </BaseTable>
     </div>
   );

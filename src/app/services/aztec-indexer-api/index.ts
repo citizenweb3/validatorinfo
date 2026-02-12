@@ -81,6 +81,8 @@ export const aztecIndexer = {
   // ========== TX EFFECTS ==========
   /** Get all tx effects with pagination */
   getTxEffects: endpoints.getTxEffects,
+  /** Get lightweight tx effects for table (supports from/to block height pagination) */
+  getUiTxEffects: endpoints.getUiTxEffects,
   /** Get all tx effects for a specific block */
   getBlockTxEffects: endpoints.getBlockTxEffects,
   /** Get specific tx effect by index in block */
