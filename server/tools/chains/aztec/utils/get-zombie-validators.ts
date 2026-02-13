@@ -5,7 +5,7 @@ import logger from '@/logger';
 
 const { logInfo, logWarn } = logger('get-zombie-validators');
 
-const DEFAULT_EJECTION_THRESHOLD = parseEther('196000');
+const DEFAULT_EJECTION_THRESHOLD = parseEther('194000');
 
 const getCurrentEjectionThreshold = async (chainId: number): Promise<bigint> => {
   const latestThresholdEvent = await eventsClient.aztecLocalEjectionThresholdUpdatedEvent.findFirst({
