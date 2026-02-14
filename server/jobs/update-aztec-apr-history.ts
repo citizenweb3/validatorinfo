@@ -75,7 +75,7 @@ const updateAztecAprHistory = async () => {
 
         try {
           const blocksCount = await countBlocksForDay(currentDate);
-          const totalStaked = await getTotalStakedForDay(dbChain.id, currentDate);
+          const totalStaked = await getTotalStakedForDay(dbChain.id, currentDate, 'reward-earning');
 
           const rewards = BigInt(blocksCount) * rewardConfig.blockReward * rewardConfig.sequencerBps / BPS_DIVISOR;
 
