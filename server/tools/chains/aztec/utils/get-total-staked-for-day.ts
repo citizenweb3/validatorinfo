@@ -7,19 +7,30 @@ const AZTEC_DELEGATION_AMOUNT = BigInt(200_000);
 const WEI_MULTIPLIER = BigInt(10 ** 18);
 const ZERO = BigInt(0);
 
-export const getTotalStakedForDay = async (chainId: number, date: Date): Promise<bigint> => {
+export type StakeMode = 'bonded' | 'reward-earning';
+
+export const getTotalStakedForDay = async (
+  chainId: number,
+  date: Date,
+  mode: StakeMode = 'bonded',
+): Promise<bigint> => {
   // Use UTC to ensure consistent results across timezones
   const dateStr = date.toISOString().split('T')[0];
   const endOfDay = new Date(dateStr + 'T23:59:59.999Z');
 
-  // bondedTokens = Queued - Initiated - Slashed
-  const [queuedEvents, withdrawInitiatedEvents, slashedEvents] = await Promise.all([
+  // bonded: Queued × 200k - WithdrawFinalized - Slashed (tokens still locked until finalization)
+  // reward-earning: Queued × 200k - WithdrawInitiated - Slashed (exiting don't earn rewards)
+  const [queuedEvents, withdrawEvents, slashedEvents] = await Promise.all([
     eventsClient.aztecValidatorQueuedEvent.findMany({
       where: { chainId, timestamp: { lte: endOfDay } },
     }),
-    eventsClient.aztecWithdrawInitiatedEvent.findMany({
-      where: { chainId, timestamp: { lte: endOfDay } },
-    }),
+    mode === 'bonded'
+      ? eventsClient.aztecWithdrawFinalizedEvent.findMany({
+          where: { chainId, timestamp: { lte: endOfDay } },
+        })
+      : eventsClient.aztecWithdrawInitiatedEvent.findMany({
+          where: { chainId, timestamp: { lte: endOfDay } },
+        }),
     eventsClient.aztecSlashedEvent.findMany({
       where: { chainId, timestamp: { lte: endOfDay } },
     }),
@@ -29,7 +40,7 @@ export const getTotalStakedForDay = async (chainId: number, date: Date): Promise
 
   totalStaked += BigInt(queuedEvents.length) * AZTEC_DELEGATION_AMOUNT * WEI_MULTIPLIER;
 
-  for (const event of withdrawInitiatedEvents) {
+  for (const event of withdrawEvents) {
     totalStaked -= BigInt(event.amount);
   }
 
@@ -37,9 +48,10 @@ export const getTotalStakedForDay = async (chainId: number, date: Date): Promise
     totalStaked -= BigInt(event.amount);
   }
 
+  const withdrawLabel = mode === 'bonded' ? 'finalized' : 'initiated';
   logInfo(
-    `Staked for ${date.toISOString().split('T')[0]}: ` +
-    `${queuedEvents.length} queued, ${withdrawInitiatedEvents.length} initiated, ` +
+    `Staked [${mode}] for ${dateStr}: ` +
+    `${queuedEvents.length} queued, ${withdrawEvents.length} ${withdrawLabel}, ` +
     `${slashedEvents.length} slashed, total=${totalStaked}`,
   );
 

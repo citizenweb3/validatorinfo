@@ -125,22 +125,59 @@ export interface BlocksQueryParams {
 }
 
 /**
+ * Private log structure from Aztec tx-effect
+ */
+export interface AztecPrivateLog {
+  fields: HexString[];
+  emittedLength: number;
+}
+
+/**
+ * Public log structure from Aztec tx-effect
+ */
+export interface AztecPublicLog {
+  contractAddress: HexString;
+  fields: HexString[];
+  emittedLength: number;
+}
+
+/**
+ * Public data write from Aztec tx-effect
+ */
+export interface AztecPublicDataWrite {
+  leafSlot: HexString;
+  value: HexString;
+}
+
+/**
  * Transaction Effect (TX Effect)
  * In Aztec, transactions are called "tx effects"
  * Response from /l2/tx-effects/:hash, /l2/blocks/:height/tx-effects/:index
+ *
+ * IMPORTANT: Field names and types match the real chain-data-indexer API.
+ * - txHash (not "hash")
+ * - revertCode is { code: number } (not plain number)
+ * - blockHeight is string (not number)
+ * - logs are structured objects (not flat arrays)
  */
 export interface AztecTxEffect {
   /** Transaction hash (0x-prefixed hex string) */
-  hash: HexString;
+  txHash: HexString;
 
-  /** Block height containing this transaction */
-  blockHeight: number;
+  /** Block hash (0x-prefixed hex string) */
+  blockHash: HexString;
 
-  /** Index in block (0, 1, 2, ...) */
-  index: number;
+  /** Block height containing this transaction — comes as STRING from API */
+  blockHeight: string;
 
-  /** Revert code (0 = success, non-zero = reverted) */
-  revertCode: number;
+  /** Index in block (0, 1, 2, ...) — may be absent in API response */
+  index?: number;
+
+  /** Revert code object (code: 0 = success, non-zero = reverted) */
+  revertCode: { code: number };
+
+  /** Whether this tx-effect is orphaned */
+  isOrphaned: boolean;
 
   /** Transaction fee (as string for precision with large numbers) */
   transactionFee: string | number;
@@ -154,20 +191,25 @@ export interface AztecTxEffect {
   /** L2 to L1 messages */
   l2ToL1Msgs: HexString[];
 
-  /**
-   * Public logs - nested array of hex strings
-   * Each log is an array of field elements (Fr values in hex)
-   * Example: [["0x1234...", "0x5678..."], ["0xabcd..."]]
-   */
-  publicLogs: string[][];
+  /** Public logs — structured objects with contractAddress and fields */
+  publicLogs: AztecPublicLog[];
 
-  /** Private logs (encrypted) */
-  privateLogs: HexString[];
+  /** Private logs — structured objects with fields and emittedLength */
+  privateLogs: AztecPrivateLog[];
 
   /** Contract class logs */
-  contractClassLogs: unknown; // Type not fully specified in API docs
+  contractClassLogs: AztecPublicLog[];
 
-  [key: string]: unknown; // Allow additional fields
+  /** Public data writes */
+  publicDataWrites: AztecPublicDataWrite[];
+
+  /** Timestamp when tx was born (unix ms) */
+  txBirthTimestamp: number;
+
+  /** Block timestamp (unix ms) */
+  timestamp: number;
+
+  [key: string]: unknown;
 }
 
 /**
@@ -182,11 +224,13 @@ export interface TxEffectsQueryParams {
 /**
  * Pending Transaction (mempool)
  * Response from /l2/txs/:hash, /l2/txs
+ *
+ * Fields match the real chain-data-indexer API (chicmozL2PendingTxSchema)
  */
 export interface AztecPendingTx {
-  hash: HexString;
-  status: 'pending' | 'dropped';
-  timestamp?: string;
+  txHash: HexString;
+  feePayer: HexString;
+  birthTimestamp: number;
 
   [key: string]: unknown;
 }
@@ -203,11 +247,13 @@ export interface PendingTxsQueryParams {
 /**
  * Dropped Transaction
  * Response from /l2/dropped-txs/:hash
+ *
+ * Fields match the real chain-data-indexer API (chicmozL2DroppedTxSchema)
  */
 export interface AztecDroppedTx {
-  hash: HexString;
-  status: 'dropped';
-  reason?: string;
+  txHash: HexString;
+  createdAsPendingAt: number;
+  droppedAt: number;
 
   [key: string]: unknown;
 }
@@ -348,6 +394,17 @@ export type AverageFeeResponse = string | number;
  * Example: "83684" (milliseconds)
  */
 export type AverageBlockTimeResponse = string | number;
+
+/**
+ * UI: Lightweight tx-effect for table display
+ * Response from /l2/ui/tx-effects-for-table
+ */
+export interface UiTxEffectTableItem {
+  blockNumber: number | string;
+  txHash: HexString;
+  transactionFee: number | string;
+  timestamp: number;
+}
 
 /**
  * Options for fetch requests to Aztec Indexer

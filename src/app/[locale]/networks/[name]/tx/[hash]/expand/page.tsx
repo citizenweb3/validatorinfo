@@ -3,15 +3,15 @@ import { NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 
 interface PageProps {
-  params: NextPageWithLocale & { name: string };
+  params: NextPageWithLocale & { name: string; hash: string };
 }
 
-const TxInformationExpand: NextPageWithLocale<PageProps> = async ({ params: { name } }) => {
+const TxInformationExpand: NextPageWithLocale<PageProps> = async ({ params: { name, hash } }) => {
   const chain = await chainService.getByName(name);
 
   return (
     <div>
-      <ExpandedTxInformation chain={chain} />
+      <ExpandedTxInformation chain={chain} hash={hash} />
     </div>
   );
 };
