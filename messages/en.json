@@ -343,6 +343,8 @@
     "show dropdown": "Show Slashing Events",
     "hide dropdown": "Hide Slashing Events",
     "no-slashing-events": "No slashing events found for this network",
+    "Proposals VS Time": "Proposals VS Time",
+    "no proposals data": "Data not yet available",
     "attesters in committee": "attesters in committee",
     "proposals-title": "Proposals",
     "slashing-events-title": "Slashing Events",

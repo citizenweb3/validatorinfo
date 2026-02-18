@@ -357,6 +357,8 @@
     "show dropdown": "Mostrar Eventos de Penalização",
     "hide dropdown": "Ocultar Eventos de Penalização",
     "no-slashing-events": "Nenhum evento de penalização encontrado para esta rede",
+    "Proposals VS Time": "Propostas ao Longo do Tempo",
+    "no proposals data": "Dados ainda não disponíveis",
     "Table": {
       "Validator": {
         "name": "Validador",

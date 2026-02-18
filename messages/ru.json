@@ -343,6 +343,8 @@
     "show dropdown": "Показать События Слэшинга",
     "hide dropdown": "Скрыть События Слэшинга",
     "no-slashing-events": "События слэшинга для этой сети не найдены",
+    "Proposals VS Time": "Предложения во Времени",
+    "no proposals data": "Данные пока недоступны",
     "attesters in committee": "аттестеров в комитете",
     "proposals-title": "Предложения",
     "slashing-events-title": "События слэшинга",

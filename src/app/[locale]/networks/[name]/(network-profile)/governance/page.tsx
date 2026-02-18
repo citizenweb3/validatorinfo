@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import nextDynamic from 'next/dynamic';
 import { FC } from 'react';
 
 import AztecGovernanceConfig from '@/app/networks/[name]/(network-profile)/governance/aztec-governance-config';
@@ -25,6 +26,18 @@ import SlashingEventService from '@/services/slashing-event-service';
 import { isAztecNetwork } from '@/utils/chain-utils';
 import GovernanceTokenDistribution
   from '@/app/networks/[name]/(network-profile)/governance/governance-token-distribution';
+
+const ProposalsVsTimeChart = nextDynamic(
+  () => import('@/app/networks/[name]/(network-profile)/governance/charts/proposals-vs-time-chart'),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-[400px] items-center justify-center">
+        <div className="font-handjet text-lg text-white opacity-40">Loading chart...</div>
+      </div>
+    ),
+  },
+);
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -94,6 +107,10 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
             sort={{ sortBy: proposalsSortBy, order: proposalsOrder }}
             chain={chain}
           />
+          <div className="mt-8">
+            <SubTitle text={t('Proposals VS Time')} className={'mb-4'} />
+            <ProposalsVsTimeChart proposals={proposalsList} chainName={name} />
+          </div>
         </div>
         <SubTitle text={t('current committee')} />
         <CommitteeTable
@@ -156,6 +173,10 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
         sort={{ sortBy, order }}
         chain={chain}
       />
+      <div className="mt-8">
+        <SubTitle text={t('Proposals VS Time')} className={'mb-4'} />
+        <ProposalsVsTimeChart proposals={proposalsList} chainName={name} />
+      </div>
     </div>
   );
 };
