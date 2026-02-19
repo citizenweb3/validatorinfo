@@ -57,6 +57,10 @@ const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
         address: getAddress(node.address),
         missed_blocks_counter: String(totalMissed),
         total_slots: String(node.totalSlots),
+        missed_slots_proposals: String(missedProposals),
+        missed_slots_attestations: String(missedAttestations),
+        total_slots_proposals: String(node.missedProposals.total ?? 0),
+        total_slots_attestations: String(node.missedAttestations.total ?? 0),
       });
     }
 

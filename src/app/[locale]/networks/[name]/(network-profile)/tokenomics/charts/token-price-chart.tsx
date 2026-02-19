@@ -339,7 +339,7 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
     }
   };
 
-  const periodButtons = ['Daily', 'Weekly', 'Monthly', 'Yearly'] as const;
+  const periodButtons = ['Daily', 'Weekly', 'Monthly'] as const;
 
   return (
     <div className="w-full">

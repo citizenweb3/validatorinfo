@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 
 import DistributionGiniParameters
   from '@/app/networks/[name]/(network-profile)/tokenomics/distribution-gini-parameters';
@@ -52,7 +53,9 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { 
       <div className="flex flex-row justify-between items-end">
         <SubTitle text={t('Token Price')} />
         <div className="flex flex-col gap-4">
-          <RoundedButton className="text-lg" contentClassName="px-12">{t('Token Flow')}</RoundedButton>
+          <Link href={`/networks/${name}/token-flow`}>
+            <RoundedButton className="text-lg" contentClassName="px-12">{t('Token Flow')}</RoundedButton>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col xl:flex-row gap-6">

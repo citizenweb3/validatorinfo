@@ -343,6 +343,8 @@
     "show dropdown": "Show Slashing Events",
     "hide dropdown": "Hide Slashing Events",
     "no-slashing-events": "No slashing events found for this network",
+    "Proposals VS Time": "Proposals VS Time",
+    "no proposals data": "Data not yet available",
     "attesters in committee": "attesters in committee",
     "proposals-title": "Proposals",
     "slashing-events-title": "Slashing Events",
@@ -455,6 +457,9 @@
     "Token Price": "Token Price",
     "Supply Concentration": "Supply Concentration",
     "Token Flow": "Token Flow",
+    "token flow description": "Capital inflows, outflows and revenue over time",
+    "token flow chart title": "Revenue vs Capital Flow chart is under development",
+    "token flow chart description": "This chart will display token capital inflows, outflows and network revenue breakdown over time. Stay tuned!",
     "pending undelegations": "Pending Undelegations",
     "circulating tokens %": "Circulating Tokens %",
     "Distribution": "Distribution",
@@ -510,6 +515,12 @@
         "name": "Missed Blocks",
         "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
       },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Rewards",
+        "hint": "Outstanding rewards balance for this validator"
+      },
       "Infrastructure": {
         "name": "Infrastructure",
         "hint": "Does this validator provide public infrastructure for this network? RPC, Archive, etc. Click on the V to see details"
@@ -546,6 +557,12 @@
       },
       "Missed Blocks": {
         "name": "Missed Blocks"
+      },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Rewards",
+        "hint": "Outstanding rewards balance for this node"
       }
     }
   },
@@ -629,9 +646,12 @@
     }
   },
   "RumorsPage": {
-    "title": "P2P Chat: Connect with Web3 Stakers and Miners",
-    "description": "Join our anon P2P Chat, a secure and easy-to-use hub for web3 enthusiasts to discuss blockchain networks, mining pools, and validator rumors. Connect with other delegators and miners, share insights on staking strategies and crypto education, or simply - chat. It's your go-to for staking and mining resources, where you can ask \"who to stake with\" and get answers from people who've been there.",
-    "Start": "Start",
+    "title": "P2P Chat & Forum: Connect with Web3 Stakers and Miners",
+    "description": "Join our anon P2P Chat or visit the Forum — a secure and easy-to-use hub for web3 enthusiasts to discuss blockchain networks, mining pools, and validator rumors. Connect with other delegators and miners, share insights on staking strategies and crypto education, or simply - chat. Use the real-time P2P Chat for quick conversations, or head to the Forum for in-depth discussions and lasting threads.",
+    "Start": "Start Chat",
+    "Visit Forum": "Visit Forum",
+    "forumDescription": "Prefer structured discussions? Join the community forum for in-depth topics and lasting threads.",
+    "or": "or",
     "noNameError": "Please enter username to start"
   },
   "MetricsPage": {
@@ -1004,6 +1024,7 @@
     "voting power": "Voting Power",
     "validator rank": "Validator Rank",
     "proposals created": "Proposal Created",
+    "activation date": "Activation Date",
     "Medals": "Medals",
     "hash txs tooltip": "Has Tx",
     "horcrux tooltip": "Key Sharding via Horcrux",

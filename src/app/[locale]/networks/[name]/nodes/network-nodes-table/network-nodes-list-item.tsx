@@ -28,6 +28,7 @@ const NetworkNodesListItem: FC<OwnProps> = ({ item }) => {
 
   const totalSlots = item.consensusData?.totalSlots ?? null;
   const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
+  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(item.chain.name);
 
   const AddressContent = (
     <div className="flex">
@@ -68,10 +69,22 @@ const NetworkNodesListItem: FC<OwnProps> = ({ item }) => {
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         {item.uptime !== undefined && item.uptime !== null ? (
           <Tooltip
-            tooltip={`Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`}
+            tooltip={
+              isAztecNetwork
+                ? [
+                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
+                    item.consensusData?.totalSlotsAttestations != null && item.consensusData.totalSlotsAttestations > 0
+                      ? `Attested: ${(((item.consensusData.totalSlotsAttestations - (item.consensusData.missedSlotsAttestations ?? 0)) / item.consensusData.totalSlotsAttestations) * 100).toFixed(2)}%`
+                      : 'Attested: -',
+                    item.consensusData?.totalSlotsProposals != null && item.consensusData.totalSlotsProposals > 0
+                      ? `Proposed: ${(((item.consensusData.totalSlotsProposals - (item.consensusData.missedSlotsProposals ?? 0)) / item.consensusData.totalSlotsProposals) * 100).toFixed(2)}%`
+                      : 'Proposed: -',
+                  ].join('\n')
+                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
+            }
           >
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
-              {item.uptime.toFixed(2)}
+              {item.uptime.toFixed(2)}%
             </div>
           </Tooltip>
         ) : (
@@ -81,13 +94,28 @@ const NetworkNodesListItem: FC<OwnProps> = ({ item }) => {
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
           <Tooltip
-            tooltip={`Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`}
+            tooltip={
+              isAztecNetwork
+                ? [
+                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
+                    `Attested: ${item.consensusData?.missedSlotsAttestations != null ? item.consensusData.missedSlotsAttestations : '-'}`,
+                    `Proposed: ${item.consensusData?.missedSlotsProposals != null ? item.consensusData.missedSlotsProposals : '-'}`,
+                  ].join('\n')
+                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
+            }
           >
             <div className="text-center">{item.missedBlocks}</div>
           </Tooltip>
         ) : (
           <div className="text-center">-</div>
         )}
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
+        <div className="text-center">
+          {item.totalEarnedRewards && item.chain.params?.coinDecimals != null
+            ? formatCash(+item.totalEarnedRewards / 10 ** item.chain.params.coinDecimals)
+            : '-'}
+        </div>
       </BaseTableCell>
     </BaseTableRow>
   );

@@ -30,6 +30,7 @@ const NetworkValidators: FC<OwnProps> = async ({ chainId, nodeStatus, page, perP
               <TableHeaderItem page={page} name="Self Delegation" sortField="minSelfDelegation" />
               <TableHeaderItem page={page} name="Uptime" />
               <TableHeaderItem page={page} name="Missed Blocks" />
+              <TableHeaderItem page={page} name="Rewards" />
               <TableHeaderItem page={page} name="Infrastructure" />
               <TableHeaderItem page={page} name="Governance" />
             </tr>

@@ -89,13 +89,22 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.uptime !== undefined && item.uptime !== null ? (
           <Tooltip
-            tooltip={`Per
-          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
-          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
-          `}
+            tooltip={
+              isAztecNetwork
+                ? [
+                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
+                    item.totalSlotsAttestations != null && item.totalSlotsAttestations > 0
+                      ? `Attested: ${(((item.totalSlotsAttestations - (item.missedSlotsAttestations ?? 0)) / item.totalSlotsAttestations) * 100).toFixed(2)}%`
+                      : 'Attested: -',
+                    item.totalSlotsProposals != null && item.totalSlotsProposals > 0
+                      ? `Proposed: ${(((item.totalSlotsProposals - (item.missedSlotsProposals ?? 0)) / item.totalSlotsProposals) * 100).toFixed(2)}%`
+                      : 'Proposed: -',
+                  ].join('\n')
+                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
+            }
           >
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
-              {item.uptime.toFixed(2)}
+              {item.uptime.toFixed(2)}%
             </div>
           </Tooltip>
         ) : (
@@ -105,16 +114,28 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
           <Tooltip
-            tooltip={`Per
-          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
-          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
-          `}
+            tooltip={
+              isAztecNetwork
+                ? [
+                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
+                    `Attested: ${item.missedSlotsAttestations != null ? item.missedSlotsAttestations : '-'}`,
+                    `Proposed: ${item.missedSlotsProposals != null ? item.missedSlotsProposals : '-'}`,
+                  ].join('\n')
+                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
+            }
           >
             <div className="text-center">{item.missedBlocks}</div>
           </Tooltip>
         ) : (
           <div className="text-center">-</div>
         )}
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+        <div className="text-center">
+          {item.totalEarnedRewards && item.chain.params?.coinDecimals != null
+            ? formatCash(+item.totalEarnedRewards / 10 ** item.chain.params.coinDecimals)
+            : '-'}
+        </div>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <Link href={nodeLink}>
