@@ -75,6 +75,11 @@ export interface SlashingSigningInfos {
   address: string;
   missed_blocks_counter: string;
   total_slots?: string;
+  // Split fields (optional - only Aztec provides these)
+  missed_slots_proposals?: string;
+  missed_slots_attestations?: string;
+  total_slots_proposals?: string;
+  total_slots_attestations?: string;
 }
 
 type BondStatus = 'BOND_STATUS_BONDED' | 'BOND_STATUS_UNBONDED';

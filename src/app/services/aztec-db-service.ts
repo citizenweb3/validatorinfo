@@ -18,6 +18,7 @@ export interface StakedEventItem {
   address: string;
   amount: number;
   happened: string;
+  timestamp: Date;
   txHash: string;
   blockHeight: string;
 }
@@ -310,6 +311,7 @@ const getStakedEventByAttester = async (
       address: event.attester,
       amount: AZTEC_DELEGATION_AMOUNT,
       happened: formatTimeAgo(event.timestamp),
+      timestamp: event.timestamp,
       txHash: event.transactionHash,
       blockHeight: event.blockNumber,
     };

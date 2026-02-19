@@ -30,7 +30,7 @@ const NetworkNodesList: FC<OwnProps> = async ({ chainName, sort, perPage, nodeSt
         <NetworkNodesListItem key={item.id} item={item} />
       ))}
       <tr>
-        <td colSpan={5} className="pt-4">
+        <td colSpan={6} className="pt-4">
           <TablePagination pageLength={pages} />
         </td>
       </tr>

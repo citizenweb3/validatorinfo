@@ -2,8 +2,9 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
+import Tooltip from '@/components/common/tooltip';
 import RoundedButton from '@/components/common/rounded-button';
-import { validatorNodesWithChainData } from '@/services/validator-service';
+import aztecDbService from '@/services/aztec-db-service';
 import { NodeWithValidatorAndChain } from '@/services/node-service';
 
 interface OwnProps {
@@ -16,6 +17,11 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
   if (!node) {
     return null;
   }
+
+  const isAztec = ['aztec', 'aztec-testnet'].includes(node.chain.name);
+  const stakedEvent = isAztec
+    ? await aztecDbService.getStakedEventByAttester(node.operatorAddress, node.chain.name)
+    : null;
 
   const tokensDelegated =
     node.chain.params?.coinDecimals != null ? +node.delegatorShares / 10 ** node.chain.params?.coinDecimals : undefined;
@@ -73,7 +79,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
           />
           <MetricsCardItem
             title={t('expected APR')}
-            data={expectedApr?.toFixed(2) ?? '-'}
+            data={expectedApr?.toFixed(2) ?? 'N/A'}
             className={cardClass}
             dataClassName={cardValueClass}
             isPercents
@@ -88,15 +94,15 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
         <div className="flex gap-8">
           <MetricsCardItem
             title={t('voting power')}
-            data={votingPower?.toFixed(2) ?? '-'}
+            data={votingPower?.toFixed(2) ?? 'N/A'}
             className={cardClass}
             dataClassName={cardValueClass}
             isPercents
           />
-          <MetricsCardItem title={t('validator rank')} data="17" className={cardClass} dataClassName={cardValueClass} />
+          <MetricsCardItem title={t('validator rank')} data="N/A" className={cardClass} dataClassName={cardValueClass} />
           <MetricsCardItem
             title={t('proposals created')}
-            data="2"
+            data="N/A"
             className={cardClass}
             dataClassName={cardValueClass}
           />
@@ -106,6 +112,24 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
             className={cardClass}
             dataClassName={cardValueClass}
           />
+          {isAztec && (
+            <Tooltip
+              tooltip={
+                stakedEvent?.timestamp?.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                }) ?? ''
+              }
+            >
+              <MetricsCardItem
+                title={t('activation date')}
+                data={stakedEvent?.happened ?? '-'}
+                className={cardClass}
+                dataClassName={cardValueClass}
+              />
+            </Tooltip>
+          )}
         </div>
       </div>
     </div>

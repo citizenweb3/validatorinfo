@@ -24,6 +24,10 @@ export type NetworkValidatorsWithNodes = Node & {
   };
   votingPower: number;
   totalSlots: number | null;
+  totalSlotsProposals: number | null;
+  totalSlotsAttestations: number | null;
+  missedSlotsProposals: number | null;
+  missedSlotsAttestations: number | null;
 };
 
 export type CommitteeMember = {
@@ -167,6 +171,10 @@ const getAztecValidatorsWithNodes = async (
       consensusData: {
         select: {
           totalSlots: true,
+          totalSlotsProposals: true,
+          totalSlotsAttestations: true,
+          missedSlotsProposals: true,
+          missedSlotsAttestations: true,
         },
       },
     },
@@ -213,6 +221,7 @@ const getAztecValidatorsWithNodes = async (
         missedBlocks: null,
         outstandingRewards: null,
         outstandingCommissions: null,
+        totalEarnedRewards: null,
         delegatorsAmount: 0,
         consensusAddress: '',
         uptime: null,
@@ -229,6 +238,10 @@ const getAztecValidatorsWithNodes = async (
         },
         votingPower: 0,
         totalSlots: null,
+        totalSlotsProposals: null,
+        totalSlotsAttestations: null,
+        missedSlotsProposals: null,
+        missedSlotsAttestations: null,
       } as NetworkValidatorsWithNodes;
     }
 
@@ -247,6 +260,10 @@ const getAztecValidatorsWithNodes = async (
     const totalOutstandingCommissions = nodes.reduce((sum, node) => {
       const commissions = node.outstandingCommissions ? parseFloat(node.outstandingCommissions) : 0;
       return sum + commissions;
+    }, 0);
+    const totalTotalEarnedRewards = nodes.reduce((sum, node) => {
+      const rewards = node.totalEarnedRewards ? parseFloat(node.totalEarnedRewards) : 0;
+      return sum + rewards;
     }, 0);
     const totalDelegatorsAmount = nodes.reduce((sum, node) => sum + (node.delegatorsAmount || 0), 0);
 
@@ -269,6 +286,27 @@ const getAztecValidatorsWithNodes = async (
     }
     totalSlots = hasSlots ? slotsSum : null;
 
+    let totalSlotsProposals: number | null = null;
+    let totalSlotsAttestations: number | null = null;
+    let missedSlotsProposals: number | null = null;
+    let missedSlotsAttestations: number | null = null;
+
+    for (const node of nodes) {
+      const cd = node.consensusData;
+      if (cd?.totalSlotsProposals != null) {
+        totalSlotsProposals = (totalSlotsProposals ?? 0) + cd.totalSlotsProposals;
+      }
+      if (cd?.totalSlotsAttestations != null) {
+        totalSlotsAttestations = (totalSlotsAttestations ?? 0) + cd.totalSlotsAttestations;
+      }
+      if (cd?.missedSlotsProposals != null) {
+        missedSlotsProposals = (missedSlotsProposals ?? 0) + cd.missedSlotsProposals;
+      }
+      if (cd?.missedSlotsAttestations != null) {
+        missedSlotsAttestations = (missedSlotsAttestations ?? 0) + cd.missedSlotsAttestations;
+      }
+    }
+
     return {
       ...firstNode,
       tokens: totalTokens.toString(),
@@ -276,11 +314,16 @@ const getAztecValidatorsWithNodes = async (
       missedBlocks: totalMissedBlocks,
       outstandingRewards: totalOutstandingRewards > 0 ? totalOutstandingRewards.toString() : null,
       outstandingCommissions: totalOutstandingCommissions > 0 ? totalOutstandingCommissions.toString() : null,
+      totalEarnedRewards: totalTotalEarnedRewards > 0 ? totalTotalEarnedRewards.toString() : null,
       delegatorsAmount: totalDelegatorsAmount,
       uptime: avgUptime,
       jailed: isJailed,
       votingPower,
       totalSlots,
+      totalSlotsProposals,
+      totalSlotsAttestations,
+      missedSlotsProposals,
+      missedSlotsAttestations,
     } as NetworkValidatorsWithNodes;
   });
 
@@ -399,6 +442,10 @@ const getChainValidatorsWithNodes = async (
       consensusData: {
         select: {
           totalSlots: true,
+          totalSlotsProposals: true,
+          totalSlotsAttestations: true,
+          missedSlotsProposals: true,
+          missedSlotsAttestations: true,
         },
       },
     },
@@ -434,6 +481,10 @@ const getChainValidatorsWithNodes = async (
       const commissions = node.outstandingCommissions ? parseFloat(node.outstandingCommissions) : 0;
       return sum + commissions;
     }, 0);
+    const totalTotalEarnedRewards = nodes.reduce((sum, node) => {
+      const rewards = node.totalEarnedRewards ? parseFloat(node.totalEarnedRewards) : 0;
+      return sum + rewards;
+    }, 0);
     const totalDelegatorsAmount = nodes.reduce((sum, node) => sum + (node.delegatorsAmount || 0), 0);
 
     const nodesWithUptime = nodes.filter(node => node.uptime !== null && node.uptime !== undefined);
@@ -462,6 +513,29 @@ const getChainValidatorsWithNodes = async (
       totalSlots = hasSlots ? slotsSum : null;
     }
 
+    let totalSlotsProposals: number | null = null;
+    let totalSlotsAttestations: number | null = null;
+    let missedSlotsProposals: number | null = null;
+    let missedSlotsAttestations: number | null = null;
+
+    if (needsConsensusData) {
+      for (const node of nodes) {
+        const cd = node.consensusData;
+        if (cd?.totalSlotsProposals != null) {
+          totalSlotsProposals = (totalSlotsProposals ?? 0) + cd.totalSlotsProposals;
+        }
+        if (cd?.totalSlotsAttestations != null) {
+          totalSlotsAttestations = (totalSlotsAttestations ?? 0) + cd.totalSlotsAttestations;
+        }
+        if (cd?.missedSlotsProposals != null) {
+          missedSlotsProposals = (missedSlotsProposals ?? 0) + cd.missedSlotsProposals;
+        }
+        if (cd?.missedSlotsAttestations != null) {
+          missedSlotsAttestations = (missedSlotsAttestations ?? 0) + cd.missedSlotsAttestations;
+        }
+      }
+    }
+
     return {
       ...firstNode,
       tokens: totalTokens.toString(),
@@ -469,11 +543,16 @@ const getChainValidatorsWithNodes = async (
       missedBlocks: totalMissedBlocks,
       outstandingRewards: totalOutstandingRewards > 0 ? totalOutstandingRewards.toString() : null,
       outstandingCommissions: totalOutstandingCommissions > 0 ? totalOutstandingCommissions.toString() : null,
+      totalEarnedRewards: totalTotalEarnedRewards > 0 ? totalTotalEarnedRewards.toString() : null,
       delegatorsAmount: totalDelegatorsAmount,
       uptime: avgUptime,
       jailed: isJailed,
       votingPower,
       totalSlots,
+      totalSlotsProposals,
+      totalSlotsAttestations,
+      missedSlotsProposals,
+      missedSlotsAttestations,
     };
   });
 

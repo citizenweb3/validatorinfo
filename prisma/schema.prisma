@@ -133,9 +133,10 @@ model Chain {
   proposalsPassed Int @default(0) @map("proposals_passed")
 
   // calculated
-  uptimeHeight      Int      @default(0) @map("uptime_height")
-  lastUptimeUpdated DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
-  avgTxInterval     Float    @default(0) @map("avg_tx_interval")
+  uptimeHeight          Int      @default(0) @map("uptime_height")
+  lastUptimeUpdated     DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
+  avgTxInterval         Float    @default(0) @map("avg_tx_interval")
+  totalRewardsLastBlock String?  @map("total_rewards_last_block")
 
   @@map("chains")
 }
@@ -198,6 +199,7 @@ model Node {
   minSelfDelegation      String   @map("min_self_delegation") @db.VarChar(256)
   missedBlocks           Int?     @map("missed_blocks")
   outstandingRewards     String?  @map("outstanding_rewards")
+  totalEarnedRewards    String?  @map("total_earned_rewards")
   outstandingCommissions String?  @map("outstanding_commissions")
   delegatorsAmount       Int?     @map("delegators_amount")
 

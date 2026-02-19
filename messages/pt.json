@@ -515,6 +515,12 @@
         "name": "Blocos Perdidos",
         "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
       },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Recompensas",
+        "hint": "Saldo de recompensas pendentes para este validador"
+      },
       "Infrastructure": {
         "name": "Infraestrutura",
         "hint": "Este validador fornece infraestrutura pública para esta rede? RPC, Arquivo, etc. Clique no V para ver detalhes"
@@ -551,6 +557,12 @@
       },
       "Missed Blocks": {
         "name": "Blocos Perdidos"
+      },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Recompensas",
+        "hint": "Saldo de recompensas pendentes para este nó"
       }
     }
   },
@@ -634,9 +646,12 @@
     }
   },
   "RumorsPage": {
-    "title": "Chat P2P: Conecte-se com Stakers e Mineradores Web3",
-    "description": "Junte-se ao nosso chat P2P anon, um centro seguro e fácil de usar para os entusiastas da web3 discutirem redes de blockchain, pools de mineração e rumores de validadores. Ligue-se a outros delegados e mineiros, partilhe ideias sobre estratégias de staking e educação sobre criptomoedas, ou simplesmente - converse. É o seu ponto de referência para recursos de staking e mineração, onde você pode perguntar \"com quem apostar\" e obter respostas de pessoas que já passaram por isso",
-    "Start": "Começar",
+    "title": "Chat P2P e Fórum: Conecte-se com Stakers e Mineradores Web3",
+    "description": "Junte-se ao nosso chat P2P anônimo ou visite o Fórum — um centro seguro e fácil de usar para os entusiastas da web3 discutirem redes de blockchain, pools de mineração e rumores de validadores. Ligue-se a outros delegados e mineiros, partilhe ideias sobre estratégias de staking e educação sobre criptomoedas. Use o Chat P2P para conversas rápidas em tempo real, ou vá ao Fórum para discussões aprofundadas e tópicos permanentes.",
+    "Start": "Iniciar Chat",
+    "Visit Forum": "Visitar Fórum",
+    "forumDescription": "Prefere discussões estruturadas? Junte-se ao fórum da comunidade para tópicos aprofundados.",
+    "or": "ou",
     "noNameError": "Por favor, digite o nome de usuário para começar"
   },
   "MetricsPage": {
@@ -1009,6 +1024,7 @@
     "voting power": "Poder de Voto",
     "validator rank": "Classificação do Validador",
     "proposals created": "Propostas Criadas",
+    "activation date": "Data de Ativação",
     "Medals": "Medalhas",
     "hash txs tooltip": "Has Tx",
     "horcrux tooltip": "Key Sharding via Horcrux",
