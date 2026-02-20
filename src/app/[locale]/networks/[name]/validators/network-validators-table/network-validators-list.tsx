@@ -7,14 +7,17 @@ import chainService from '@/services/chain-service';
 
 interface OwnProps {
   chainId: number | null;
+  chainName: string;
   nodeStatus: string[];
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const NetworkValidatorsList: FC<OwnProps> = async ({ chainId, sort, perPage, nodeStatus, currentPage = 1 }) => {
+const NetworkValidatorsList: FC<OwnProps> = async ({ chainId, chainName, sort, perPage, nodeStatus, currentPage = 1 }) => {
   if (!chainId) return null;
+
+  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(chainName);
 
   const { validators: list, pages } = await chainService.getChainValidatorsWithNodes(
     chainId,
@@ -28,10 +31,10 @@ const NetworkValidatorsList: FC<OwnProps> = async ({ chainId, sort, perPage, nod
   return (
     <tbody>
       {list.map((item) => (
-        <NetworkValidatorsItem key={`${item.chainId}-${item.validatorId}`} item={item} />
+        <NetworkValidatorsItem key={`${item.chainId}-${item.validatorId}`} item={item} isAztec={isAztecNetwork} />
       ))}
       <tr>
-        <td colSpan={10} className="pt-4">
+        <td colSpan={isAztecNetwork ? 10 : 9} className="pt-4">
           <TablePagination pageLength={pages} />
         </td>
       </tr>

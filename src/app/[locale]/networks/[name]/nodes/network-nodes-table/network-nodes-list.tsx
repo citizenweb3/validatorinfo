@@ -14,6 +14,8 @@ interface OwnProps {
 }
 
 const NetworkNodesList: FC<OwnProps> = async ({ chainName, sort, perPage, nodeStatus, currentPage = 1 }) => {
+  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(chainName);
+
   const { nodes: list, pages } = await nodeService.getAll(
     [],
     [chainName],
@@ -30,7 +32,7 @@ const NetworkNodesList: FC<OwnProps> = async ({ chainName, sort, perPage, nodeSt
         <NetworkNodesListItem key={item.id} item={item} />
       ))}
       <tr>
-        <td colSpan={6} className="pt-4">
+        <td colSpan={isAztecNetwork ? 6 : 5} className="pt-4">
           <TablePagination pageLength={pages} />
         </td>
       </tr>

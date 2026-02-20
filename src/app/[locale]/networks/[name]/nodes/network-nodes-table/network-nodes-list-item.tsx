@@ -110,13 +110,15 @@ const NetworkNodesListItem: FC<OwnProps> = ({ item }) => {
           <div className="text-center">-</div>
         )}
       </BaseTableCell>
-      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
-        <div className="text-center">
-          {item.totalEarnedRewards && item.chain.params?.coinDecimals != null
-            ? formatCash(+item.totalEarnedRewards / 10 ** item.chain.params.coinDecimals)
-            : '-'}
-        </div>
-      </BaseTableCell>
+      {isAztecNetwork && (
+        <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
+          <div className="text-center">
+            {item.totalEarnedRewards && item.chain.params?.coinDecimals != null
+              ? formatCash(+item.totalEarnedRewards / 10 ** item.chain.params.coinDecimals)
+              : '-'}
+          </div>
+        </BaseTableCell>
+      )}
     </BaseTableRow>
   );
 };
