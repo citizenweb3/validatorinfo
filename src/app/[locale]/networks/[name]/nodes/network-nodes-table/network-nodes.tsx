@@ -16,6 +16,8 @@ interface OwnProps extends PagesProps {
 }
 
 const NetworkNodes: FC<OwnProps> = async ({ chainName, nodeStatus, page, perPage, sort, currentPage }) => {
+  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(chainName);
+
   return (
     <div>
       <ListFilters selectedNodeStatus={nodeStatus} perPage={perPage} isNodeStatus isSetPositions />
@@ -28,7 +30,7 @@ const NetworkNodes: FC<OwnProps> = async ({ chainName, nodeStatus, page, perPage
               <TableHeaderItem page={page} name="Stake" sortField="delegatorShares" />
               <TableHeaderItem page={page} name="Uptime" sortField="uptime" />
               <TableHeaderItem page={page} name="Missed Blocks" sortField="missedBlocks" />
-              <TableHeaderItem page={page} name="Rewards" />
+              {isAztecNetwork && <TableHeaderItem page={page} name="Rewards" />}
             </tr>
           </thead>
           <NetworkNodesList

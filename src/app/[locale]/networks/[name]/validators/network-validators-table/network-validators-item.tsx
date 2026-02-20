@@ -13,9 +13,10 @@ import formatCash from '@/utils/format-cash';
 
 interface OwnProps {
   item: NetworkValidatorsWithNodes;
+  isAztec: boolean;
 }
 
-const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
+const NetworkValidatorsItem: FC<OwnProps> = async ({ item, isAztec }) => {
   const tokenDelegatorShares =
     item.chain.params?.coinDecimals != null ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals : undefined;
 
@@ -130,13 +131,15 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item }) => {
           <div className="text-center">-</div>
         )}
       </BaseTableCell>
-      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
-        <div className="text-center">
-          {item.totalEarnedRewards && item.chain.params?.coinDecimals != null
-            ? formatCash(+item.totalEarnedRewards / 10 ** item.chain.params.coinDecimals)
-            : '-'}
-        </div>
-      </BaseTableCell>
+      {isAztec && (
+        <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+          <div className="text-center">
+            {item.totalEarnedRewards && item.chain.params?.coinDecimals != null
+              ? formatCash(+item.totalEarnedRewards / 10 ** item.chain.params.coinDecimals)
+              : '-'}
+          </div>
+        </BaseTableCell>
+      )}
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <Link href={nodeLink}>
           <div className="flex items-center justify-center text-center">

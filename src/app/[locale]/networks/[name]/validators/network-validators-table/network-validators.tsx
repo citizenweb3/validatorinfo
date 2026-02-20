@@ -10,12 +10,15 @@ import { PagesProps } from '@/types';
 interface OwnProps extends PagesProps {
   nodeStatus: string[];
   chainId: number | null;
+  chainName: string;
   perPage: number;
   currentPage?: number;
   sort: { sortBy: string; order: SortDirection };
 }
 
-const NetworkValidators: FC<OwnProps> = async ({ chainId, nodeStatus, page, perPage, sort, currentPage }) => {
+const NetworkValidators: FC<OwnProps> = async ({ chainId, chainName, nodeStatus, page, perPage, sort, currentPage }) => {
+  const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(chainName);
+
   return (
     <div>
       <ListFilters selectedNodeStatus={nodeStatus} perPage={perPage} isNodeStatus isSetPositions />
@@ -30,13 +33,14 @@ const NetworkValidators: FC<OwnProps> = async ({ chainId, nodeStatus, page, perP
               <TableHeaderItem page={page} name="Self Delegation" sortField="minSelfDelegation" />
               <TableHeaderItem page={page} name="Uptime" />
               <TableHeaderItem page={page} name="Missed Blocks" />
-              <TableHeaderItem page={page} name="Rewards" />
+              {isAztecNetwork && <TableHeaderItem page={page} name="Rewards" />}
               <TableHeaderItem page={page} name="Infrastructure" />
               <TableHeaderItem page={page} name="Governance" />
             </tr>
           </thead>
           <NetworkValidatorsList
             chainId={chainId}
+            chainName={chainName}
             nodeStatus={nodeStatus}
             perPage={perPage}
             sort={sort}
