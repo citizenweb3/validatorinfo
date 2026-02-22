@@ -6,13 +6,15 @@ import BaseTableCell from '@/components/common/table/base-table-cell';
 import TableAvatar from '@/components/common/table/table-avatar';
 import Tooltip from '@/components/common/tooltip';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
+import colorStylization from '@/utils/color-stylization';
 import formatCash from '@/utils/format-cash';
 
 interface OwnProps {
   item: ChainWithParamsAndTokenomics;
+  health?: number;
 }
 
-const NetworksListItem: FC<OwnProps> = async ({ item }) => {
+const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
   const fdv = item?.name === 'ethereum-sepolia' || item?.name === 'warden-testnet' ? 0 : item?.tokenomics?.fdv;
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
 
@@ -28,6 +30,15 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
         <Tooltip tooltip={`$${fdv?.toLocaleString()}`}>
           <div className="text-center">${formatCash(fdv ?? 0)}</div>
         </Tooltip>
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+        {health !== undefined && health !== null ? (
+          <div className="text-center" style={{ color: colorStylization.uptime(health) }}>
+            {health.toFixed(1)}%
+          </div>
+        ) : (
+          <div className="text-center">-</div>
+        )}
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2">
         <div className="flex justify-center">
@@ -59,6 +70,15 @@ const NetworksListItem: FC<OwnProps> = async ({ item }) => {
             </div>
           )}
         </div>
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center">
+        <Link
+          href={`/networks/${item.name}/tx`}
+          className="text-highlight hover:underline"
+          aria-label={`Show transactions for ${item.prettyName}`}
+        >
+          Show TX
+        </Link>
       </BaseTableCell>
     </BaseTableRow>
   );
