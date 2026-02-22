@@ -29,7 +29,9 @@ const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, current
             <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
             <TableHeaderItem page={page} name="Token" sortField="token" />
             <TableHeaderItem page={page} name="FDV" sortField="fdv"/>
-            <TableHeaderItem page={page} name="Links" colspan={3} />
+            <TableHeaderItem page={page} name="Health" />
+            <TableHeaderItem page={page} name="Links" />
+            <TableHeaderItem page={page} name="Show TX" />
           </tr>
           </thead>
           <NetworksList ecosystems={ecosystems} perPage={perPage} sort={sort} currentPage={currentPage} />

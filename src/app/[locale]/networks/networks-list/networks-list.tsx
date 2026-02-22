@@ -21,10 +21,13 @@ const NetworksList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPa
     sort.order,
   );
 
+  const chainIds = list.map((c) => c.id);
+  const healthMap = await ChainService.getChainHealthMap(chainIds);
+
   return (
     <tbody>
       {list.map((item) => (
-        <NetworksListItem key={item.chainId} item={item} />
+        <NetworksListItem key={item.chainId} item={item} health={healthMap.get(item.id)} />
       ))}
       <tr>
         <td colSpan={6} className="pt-4">

@@ -109,6 +109,14 @@
         "name": "Links",
         "hint": ""
       },
+      "Health": {
+        "name": "Health",
+        "hint": "Average uptime of network validators"
+      },
+      "Show TX": {
+        "name": "Show TX",
+        "hint": "View network transactions"
+      },
       "Battery": {
         "name": "Battery",
         "hint": "General health status, encomprasses on-chain off-chain verifiable validator actions and social networks"
