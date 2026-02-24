@@ -398,6 +398,42 @@ const getAztecValidators = async (chainName: 'aztec' | 'aztec-testnet', chainId:
   }) as ValidatorWithNodes[];
 };
 
+const searchByMoniker = async (query: string, take: number = 10) => {
+  return db.validator.findMany({
+    where: {
+      moniker: { contains: query, mode: 'insensitive' },
+    },
+    take,
+    select: {
+      id: true,
+      identity: true,
+      moniker: true,
+      website: true,
+      nodes: {
+        select: {
+          chain: {
+            select: {
+              name: true,
+              prettyName: true,
+              params: { select: { denom: true, coinDecimals: true } },
+              tokenomics: { select: { apr: true } },
+              prices: { orderBy: { createdAt: 'desc' }, take: 1, select: { value: true } },
+            },
+          },
+          operatorAddress: true,
+          jailed: true,
+          rate: true,
+          uptime: true,
+          missedBlocks: true,
+          tokens: true,
+          delegatorsAmount: true,
+        },
+      },
+    },
+    orderBy: { moniker: 'asc' },
+  });
+};
+
 const validatorService = {
   getByIdentity,
   getById,
@@ -412,6 +448,7 @@ const validatorService = {
   getActiveValidatorsByChainId,
   getValidatorsByChainId,
   getAztecValidators,
+  searchByMoniker,
 };
 
 export default validatorService;
