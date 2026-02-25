@@ -18,7 +18,7 @@ const createMainDb = () => {
     log: [{ emit: 'event', level: 'query' }],
     datasources: {
       db: {
-        url: process.env.DATABASE_URL + '&connection_limit=15',
+        url: process.env.DATABASE_URL + '&connection_limit=50',
       },
     },
   });
@@ -38,7 +38,7 @@ const createEventsDb = () => {
     log: [{ emit: 'event', level: 'query' }],
     datasources: {
       db: {
-        url: process.env.EVENTS_DATABASE_URL + '&connection_limit=15',
+        url: process.env.EVENTS_DATABASE_URL + '&connection_limit=50',
       },
     },
   });
