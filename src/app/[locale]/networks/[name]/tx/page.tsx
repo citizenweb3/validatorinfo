@@ -9,6 +9,7 @@ import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+export const fetchCache = 'force-no-store';
 
 interface PageProps {
   params: NextPageWithLocale & { name: string };
