@@ -43,7 +43,7 @@
     "Home": "Home",
     "You": "You",
     "Hi, World!": "Hi, World!",
-    "Explore the AI Rabbit whole": "Explore the AI Rabbit whole",
+    "Explore the AI Rabbit hole": "Explore the AI Rabbit hole",
     "Click to login": "Click to login",
     "Click to logout": "Click to logout",
     "Profile": "Profile",
@@ -108,6 +108,14 @@
       "Links": {
         "name": "Links",
         "hint": ""
+      },
+      "Health": {
+        "name": "Health",
+        "hint": "Average uptime of network validators"
+      },
+      "Show TX": {
+        "name": "Show TX",
+        "hint": "View network transactions"
       },
       "Battery": {
         "name": "Battery",
@@ -1507,6 +1515,40 @@
       "title": "Account Analytics Dashboard: Insights into Blockchain Activity",
       "description": ""
     }
+  },
+  "AiChat": {
+    "Ask AI": "Ask AI",
+    "AI Assistant": "AI Assistant",
+    "Type your question": "Type your question...",
+    "Send": "Send",
+    "AI is thinking": "AI is thinking...",
+    "Welcome": "Hi! I'm your ValidatorInfo AI assistant. Here's what I can do:\n\n• Search validators by name and show their metrics\n• Compare networks and show chain statistics\n• Explain governance proposals and voting results\n• Show tokenomics, APR, TVS and market data\n• Provide links to relevant pages\n\nAsk me anything!",
+    "Welcome Chain": "Hi! I'm your AI assistant for {chainName}. I can help with:\n\n• Validators, staking and commission info\n• Governance proposals and voting\n• Network metrics, APR and tokenomics\n• Blocks, transactions and node data\n\nWhat would you like to know?",
+    "Explain with AI": "Explain with AI",
+    "AI unavailable": "AI is temporarily unavailable. Please try again later.",
+    "Rate limited": "You're sending messages too quickly. Please wait a moment and try again.",
+    "Empty response": "I couldn't generate a response. Please try rephrasing your question.",
+    "Invalid request": "Something went wrong with your request. Please try again.",
+    "Key metrics": "Key metrics",
+    "Compare with others": "Compare with others",
+    "Top validators": "Top validators",
+    "Most reliable": "Most reliable?",
+    "Active proposals": "Active proposals",
+    "Voting stats": "Voting stats",
+    "Supply breakdown": "Supply breakdown",
+    "Inflation trend": "Inflation trend",
+    "Explain this block": "Explain this block",
+    "What happened here": "What happened here?",
+    "Network overview": "Network overview",
+    "Staking rewards": "Staking rewards",
+    "Lowest commission": "Lowest commission",
+    "Recent proposals": "Recent proposals",
+    "Token price": "Token price",
+    "Search validator": "Search validator",
+    "APR comparison": "APR comparison",
+    "Node count": "Node count",
+    "AI not configured": "AI assistant is not available at the moment",
+    "Request timed out": "Request timed out. Please try again."
   }
 }
 

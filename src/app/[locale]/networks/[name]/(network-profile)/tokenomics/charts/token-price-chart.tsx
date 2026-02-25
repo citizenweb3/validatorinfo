@@ -21,6 +21,7 @@ import { crosshairPlugin } from '@/components/chart/chart-crosshair-plugin';
 import { chartAreaBackgroundPlugin } from '@/components/chart/chart-area-background-plugin';
 import { formatNumber } from '@/components/chart/chartHelper';
 import { cn } from '@/utils/cn';
+import formatPrice from '@/utils/format-price';
 
 ChartJS.register(
   CategoryScale,
@@ -95,13 +96,33 @@ const aggregateByPeriod = (dailyData: ChartDataPoint[], period: PeriodType): Cha
 };
 
 const calculatePriceYMax = (maxValue: number): number => {
-  if (maxValue <= 0.01) return 0.02;
-  if (maxValue <= 0.1) return 0.2;
-  if (maxValue <= 1) return Math.ceil(maxValue * 1.3 * 10) / 10;
-  if (maxValue <= 10) return Math.ceil(maxValue * 1.3);
-  if (maxValue <= 100) return Math.ceil((maxValue * 1.3) / 10) * 10;
-  if (maxValue <= 1000) return Math.ceil((maxValue * 1.3) / 100) * 100;
-  return Math.ceil((maxValue * 1.3) / 1000) * 1000;
+  if (maxValue <= 0) return 0.01;
+
+  const margin = 1.3;
+  const target = maxValue * margin;
+
+  if (maxValue <= 0.001) {
+    return Math.ceil(target * 10000) / 10000;
+  }
+  if (maxValue <= 0.01) {
+    return Math.ceil(target * 1000) / 1000;
+  }
+  if (maxValue <= 0.1) {
+    return Math.ceil(target * 100) / 100;
+  }
+  if (maxValue <= 1) {
+    return Math.ceil(target * 10) / 10;
+  }
+  if (maxValue <= 10) {
+    return Math.ceil(target);
+  }
+  if (maxValue <= 100) {
+    return Math.ceil(target / 10) * 10;
+  }
+  if (maxValue <= 1000) {
+    return Math.ceil(target / 100) * 100;
+  }
+  return Math.ceil(target / 1000) * 1000;
 };
 
 const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
@@ -230,8 +251,7 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
           },
           label: (context) => {
             const value = context.parsed.y;
-            const formatted = value < 0.01 ? value.toPrecision(4) : value.toFixed(2);
-            return `  Price    $${formatted}`;
+            return `  Price    $${formatPrice(value)}`;
           },
           labelColor: (context) => {
             return {
@@ -313,13 +333,19 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
             family: 'Handjet, monospace',
             size: 12,
           },
-          callback: (value) => `$${formatNumber(Number(value))}`,
+          callback: (value) => {
+            const num = Number(value);
+            if (num >= 1) return `$${formatNumber(num)}`;
+            if (num <= 0) return '$0';
+            if (num >= 0.01) return `$${num.toFixed(2)}`;
+            return `$${num.toFixed(3)}`;
+          },
         },
         border: {
           color: '#3E3E3E',
         },
         afterFit: (axis) => {
-          axis.width = 50;
+          axis.width = 55;
         },
         position: 'left',
         beginAtZero: false,
@@ -339,7 +365,17 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
     }
   };
 
-  const periodButtons = ['Daily', 'Weekly', 'Monthly'] as const;
+  const MIN_DATA_POINTS = 3;
+
+  const periodButtons = useMemo(() => {
+    const allPeriods = ['Daily', 'Weekly', 'Monthly', 'Yearly'] as const;
+    return allPeriods.filter((label) => {
+      const periodType = periodMapping[label];
+      if (periodType === 'day') return true;
+      const aggregated = aggregateByPeriod(chartData, periodType);
+      return aggregated.length >= MIN_DATA_POINTS;
+    });
+  }, [chartData]);
 
   return (
     <div className="w-full">
@@ -350,7 +386,7 @@ const TokenPriceChart: FC<OwnProps> = ({ chartData }) => {
           padding: '10px 20px 20px 20px',
         }}
       >
-        <div className="absolute left-[70px] top-[5px] z-10 flex items-center gap-2 bg-[#181818] font-handjet">
+        <div className="absolute left-[75px] top-[5px] z-10 flex items-center gap-2 bg-[#181818] font-handjet">
           {periodButtons.map((name) => (
             <button
               key={name}

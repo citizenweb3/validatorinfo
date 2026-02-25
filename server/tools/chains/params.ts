@@ -1,5 +1,3 @@
-import { logError } from 'effect/Effect';
-
 import logger from '@/logger';
 import { AddChainProps, ChainNodeType } from '@/server/tools/chains/chain-indexer';
 import fetchNamadaInfrastructure from '@/server/tools/chains/namada/get-infrastructure';
@@ -11,7 +9,7 @@ interface APIItem {
   provider: string;
 }
 
-const { logWarn } = logger('init-chains');
+const { logWarn, logError } = logger('init-chains');
 
 const ethereumRpcKey = process.env.ETHEREUM_RPC_KEY;
 
@@ -1152,7 +1150,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'MAINNET',
     bech32Prefix: '',
     coinDecimals: 18,
-    coinGeckoId: '',
+    coinGeckoId: 'aztec',
     coinType: 60,
     denom: 'AZTEC',
     minimalDenom: 'AZTEC',

@@ -669,6 +669,21 @@ const getCommitteeMembers = async (
   }
 };
 
+const getChainHealthMap = async (chainIds: number[]): Promise<Map<number, number>> => {
+  const result = await db.node.groupBy({
+    by: ['chainId'],
+    where: { chainId: { in: chainIds }, uptime: { not: null } },
+    _avg: { uptime: true },
+  });
+  const map = new Map<number, number>();
+  for (const entry of result) {
+    if (entry._avg.uptime !== null) {
+      map.set(entry.chainId, entry._avg.uptime);
+    }
+  }
+  return map;
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
@@ -678,6 +693,7 @@ const ChainService = {
   getByName,
   getAllLight,
   getCommitteeMembers,
+  getChainHealthMap,
 };
 
 export default ChainService;

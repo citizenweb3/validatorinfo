@@ -43,7 +43,7 @@
     "Home": "Lar",
     "You": "Você",
     "Hi, World!": "Olá mundo!",
-    "Explore the AI Rabbit whole": "Explore o AI Rabbit inteiro",
+    "Explore the AI Rabbit hole": "Explore a toca do coelho AI",
     "Click to login": "Clique para login",
     "Click to logout": "Clique para logout",
     "Profile": "Perfil",
@@ -108,6 +108,14 @@
       "Links": {
         "name": "Links",
         "hint": ""
+      },
+      "Health": {
+        "name": "Saúde",
+        "hint": "Tempo médio de atividade dos validadores da rede"
+      },
+      "Show TX": {
+        "name": "Mostrar TX",
+        "hint": "Ver transações da rede"
       },
       "Battery": {
         "name": "Bateria",
@@ -1491,5 +1499,39 @@
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",
       "description": ""
     }
+  },
+  "AiChat": {
+    "Ask AI": "Perguntar à IA",
+    "AI Assistant": "Assistente IA",
+    "Type your question": "Digite sua pergunta...",
+    "Send": "Enviar",
+    "AI is thinking": "A IA está pensando...",
+    "Welcome": "Olá! Sou o assistente de IA do ValidatorInfo. Veja o que posso fazer:\n\n• Buscar validadores por nome e mostrar suas métricas\n• Comparar redes e mostrar estatísticas\n• Explicar propostas de governança e resultados de votação\n• Mostrar tokenomics, APR, TVS e dados de mercado\n• Fornecer links para páginas relevantes\n\nPergunte-me qualquer coisa!",
+    "Welcome Chain": "Olá! Sou seu assistente de IA para {chainName}. Posso ajudar com:\n\n• Validadores, staking e comissões\n• Propostas de governança e votação\n• Métricas da rede, APR e tokenomics\n• Blocos, transações e dados de nós\n\nO que você gostaria de saber?",
+    "Explain with AI": "Explicar com IA",
+    "AI unavailable": "A IA está temporariamente indisponível. Tente novamente mais tarde.",
+    "Rate limited": "Você está enviando mensagens muito rápido. Aguarde um momento e tente novamente.",
+    "Empty response": "Não consegui gerar uma resposta. Tente reformular sua pergunta.",
+    "Invalid request": "Algo deu errado com sua solicitação. Tente novamente.",
+    "Key metrics": "Métricas principais",
+    "Compare with others": "Comparar com outros",
+    "Top validators": "Principais validadores",
+    "Most reliable": "Mais confiável?",
+    "Active proposals": "Propostas ativas",
+    "Voting stats": "Estatísticas de votação",
+    "Supply breakdown": "Detalhamento do fornecimento",
+    "Inflation trend": "Tendência de inflação",
+    "Explain this block": "Explicar este bloco",
+    "What happened here": "O que aconteceu aqui?",
+    "Network overview": "Visão geral da rede",
+    "Staking rewards": "Recompensas de staking",
+    "Lowest commission": "Menor comissão",
+    "Recent proposals": "Propostas recentes",
+    "Token price": "Preço do token",
+    "Search validator": "Buscar validador",
+    "APR comparison": "Comparação de APR",
+    "Node count": "Contagem de nós",
+    "AI not configured": "Assistente AI não está disponível no momento",
+    "Request timed out": "Tempo limite excedido. Por favor, tente novamente."
   }
 }

@@ -59,6 +59,7 @@ Use Context7 for:
 | Chains | `server/tools/chains/AGENTS.md` | Chain-specific implementations (Cosmos, Aztec, etc.) |
 | Aztec Chain | `server/tools/chains/aztec/AGENTS.md` | Aztec L2 implementation (L1 contracts, events, governance) |
 | Services | `src/app/services/AGENTS.md` | Data access layer for frontend and actions |
+| AI Chat | `src/app/services/ai/AGENTS.md` | AI assistant: LLM config, tools, prompt builder |
 
 ---
 
@@ -95,6 +96,7 @@ ValidatorInfo is a Web3 blockchain explorer providing real-time metrics for vali
 |-----------|---------|---------------|
 | `src/app/[locale]/` | Next.js App Router with i18n | - |
 | `src/app/services/` | Data access services | `AGENTS.md` available |
+| `src/app/services/ai/` | AI chat: LLM config, tools, prompt | `AGENTS.md` available |
 | `src/actions/` | Server actions for data fetching/mutations | - |
 | `server/jobs/` | Cron jobs for blockchain data updates | `AGENTS.md` available |
 | `server/tools/chains/` | Chain-specific implementations | `AGENTS.md` available |
@@ -194,6 +196,16 @@ yarn build                  # Production build (type-checks everything)
 - Services interact with Prisma models and Redis cache
 - **See `src/app/services/AGENTS.md` for service patterns**
 
+### AI Chat
+
+- AI assistant powered by Google Gemini via Vercel AI SDK (`generateText`)
+- LLM has tools that query real-time data from ValidatorInfo services (chains, validators, governance, transactions, blocks)
+- Server action in `src/actions/ai-chat.ts` handles rate limiting, validation, and LLM orchestration
+- AI service config and tools in `src/app/services/ai/`
+- UI components in `src/app/[locale]/components/ai-chat/`
+- Requires `GOOGLE_GENERATIVE_AI_API_KEY` env var
+- **See `src/app/services/ai/AGENTS.md` for full architecture and tool patterns**
+
 ### Internationalization
 
 - Uses next-intl for locale-based routing
@@ -248,6 +260,7 @@ Required in `.env`:
 - `REDIS_HOST`: Redis connection (use `redis` in Docker)
 
 Optional:
+- `GOOGLE_GENERATIVE_AI_API_KEY`: For AI chat assistant (Gemini)
 - `GITHUB_API_TOKEN`: For fetching GitHub data
 - `SKIP_API_KEY`: For Skip Protocol integration
 
