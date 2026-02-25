@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
 
+const INTERNAL_PREFIXES = ['/networks', '/validators', '/stakingcalculator', '/comparevalidators', '/web3stats', '/ecosystems'];
+
 const extractPath = (href: string): string => {
   try {
     const url = new URL(href);
@@ -10,22 +12,28 @@ const extractPath = (href: string): string => {
   }
 };
 
-const isSameSiteUrl = (href: string): boolean => {
-  if (href.startsWith('/')) return true;
+const isInternalPath = (pathname: string): boolean =>
+  pathname === '/' || INTERNAL_PREFIXES.some((prefix) => pathname.startsWith(prefix));
+
+const getInternalPath = (href: string): string | null => {
+  if (href.startsWith('/')) return isInternalPath(href) ? href : null;
   try {
     const url = new URL(href);
-    return url.hostname === window.location.hostname;
+    const path = url.pathname + url.search + url.hash;
+    return isInternalPath(url.pathname) ? path : null;
   } catch {
-    return false;
+    return null;
   }
 };
 
+const isSameSiteUrl = (href: string): boolean => getInternalPath(href) !== null;
+
 const renderLink = (text: string, href: string, key: number): ReactNode => {
   const cleanHref = href.replace(/^<|>$/g, '');
-  if (isSameSiteUrl(cleanHref)) {
-    const path = cleanHref.startsWith('/') ? cleanHref : extractPath(cleanHref);
+  const internalPath = getInternalPath(cleanHref);
+  if (internalPath) {
     return (
-      <Link key={key} href={path} data-chat-link className="text-highlight underline hover:text-white">
+      <Link key={key} href={internalPath} data-chat-link className="text-highlight underline hover:text-white">
         {text}
       </Link>
     );
