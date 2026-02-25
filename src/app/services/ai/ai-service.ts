@@ -16,16 +16,7 @@ const MAX_TOKENS = 4096;
 
 const model = google('gemini-2.5-flash');
 
-const getBaseUrl = (): string => {
-  const host = process.env.PUBLIC_URL || 'localhost';
-  const port = process.env.SERVER_PORT || '3000';
-  const isLocal = host === 'localhost' || host === '127.0.0.1';
-  return isLocal ? `http://${host}:${port}` : `https://${host}`;
-};
-
 const buildSystemPrompt = (context: PageContext): string => {
-  const baseUrl = getBaseUrl();
-
   const lines: string[] = [
     'You are ValidatorInfo AI assistant, helping users understand blockchain metrics, validators, governance, and network analytics.',
     '',
@@ -70,43 +61,42 @@ const buildSystemPrompt = (context: PageContext): string => {
     lines.push('');
   }
 
-  // URL routes for linking
+  // URL routes for linking (relative paths — rendered as Next.js Links on the client)
   lines.push(
-    'Available pages (use these to provide clickable links in your responses):',
-    `Base URL: ${baseUrl}`,
+    'Available pages (use these relative paths to provide clickable links in your responses):',
     '',
     'Networks:',
-    `- Networks list: ${baseUrl}/networks`,
-    `- Network overview: ${baseUrl}/networks/{chainName}/overview`,
-    `- Network validators: ${baseUrl}/networks/{chainName}/validators`,
-    `- Network governance: ${baseUrl}/networks/{chainName}/governance`,
-    `- Network tokenomics: ${baseUrl}/networks/{chainName}/tokenomics`,
-    `- Network stats: ${baseUrl}/networks/{chainName}/stats`,
-    `- Network transactions: ${baseUrl}/networks/{chainName}/tx`,
-    `- Transaction details: ${baseUrl}/networks/{chainName}/tx/{hash}`,
-    `- Network blocks: ${baseUrl}/networks/{chainName}/blocks`,
-    `- Block details: ${baseUrl}/networks/{chainName}/blocks/{hash}`,
-    `- Proposal details: ${baseUrl}/networks/{chainName}/proposal/{proposalId}`,
-    `- Network nodes: ${baseUrl}/networks/{chainName}/nodes`,
-    `- Network dev info: ${baseUrl}/networks/{chainName}/dev`,
-    `- Token flow: ${baseUrl}/networks/{chainName}/token-flow`,
+    '- Networks list: /networks',
+    '- Network overview: /networks/{chainName}/overview',
+    '- Network validators: /networks/{chainName}/validators',
+    '- Network governance: /networks/{chainName}/governance',
+    '- Network tokenomics: /networks/{chainName}/tokenomics',
+    '- Network stats: /networks/{chainName}/stats',
+    '- Network transactions: /networks/{chainName}/tx',
+    '- Transaction details: /networks/{chainName}/tx/{hash}',
+    '- Network blocks: /networks/{chainName}/blocks',
+    '- Block details: /networks/{chainName}/blocks/{hash}',
+    '- Proposal details: /networks/{chainName}/proposal/{proposalId}',
+    '- Network nodes: /networks/{chainName}/nodes',
+    '- Network dev info: /networks/{chainName}/dev',
+    '- Token flow: /networks/{chainName}/token-flow',
     '',
     'Validators:',
-    `- Validators list: ${baseUrl}/validators`,
-    `- Validator profile: ${baseUrl}/validators/{validatorId}/networks (use numeric id from tool results)`,
-    `- Validator governance: ${baseUrl}/validators/{validatorId}/governance`,
-    `- Validator metrics: ${baseUrl}/validators/{validatorId}/metrics`,
+    '- Validators list: /validators',
+    '- Validator profile: /validators/{validatorId}/networks (use numeric id from tool results)',
+    '- Validator governance: /validators/{validatorId}/governance',
+    '- Validator metrics: /validators/{validatorId}/metrics',
     '',
     'Other pages:',
-    `- Home: ${baseUrl}`,
-    `- Staking calculator: ${baseUrl}/stakingcalculator`,
-    `- Compare validators: ${baseUrl}/comparevalidators`,
-    `- Web3 stats: ${baseUrl}/web3stats`,
-    `- Ecosystems: ${baseUrl}/ecosystems`,
+    '- Home: /',
+    '- Staking calculator: /stakingcalculator',
+    '- Compare validators: /comparevalidators',
+    '- Web3 stats: /web3stats',
+    '- Ecosystems: /ecosystems',
     '',
-    'IMPORTANT: When mentioning chains, validators, proposals, blocks or transactions, ALWAYS use markdown link syntax [text](url) with full URLs.',
-    'NEVER output bare URLs or URLs in parentheses without markdown syntax. Always wrap them as [descriptive text](full_url).',
-    `Example: [Cosmos Hub](${baseUrl}/networks/cosmoshub/overview), [proposal #123](${baseUrl}/networks/cosmoshub/proposal/123)`,
+    'IMPORTANT: When mentioning chains, validators, proposals, blocks or transactions, ALWAYS use markdown link syntax [text](relative_path) with relative paths starting with /.',
+    'NEVER output bare URLs, absolute URLs, or URLs in parentheses without markdown syntax. Always wrap them as [descriptive text](/path).',
+    'Example: [Cosmos Hub](/networks/cosmoshub/overview), [proposal #123](/networks/cosmoshub/proposal/123)',
     '',
   );
 
