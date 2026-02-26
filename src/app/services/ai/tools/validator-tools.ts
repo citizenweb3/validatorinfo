@@ -4,6 +4,7 @@ import logger from '@/logger';
 import ChainService from '@/services/chain-service';
 import ValidatorService from '@/services/validator-service';
 import { toHumanTokens, resolveChain } from './utils';
+import { getChainValidatorCount } from './ai-data-helpers';
 
 const { logError } = logger('ai-tools:validator');
 
@@ -24,7 +25,7 @@ const mapValidatorNode = (node: any) => ({
 export const validatorTools = {
   getValidators: tool({
     description:
-      'Get the list of validators for a specific blockchain network. Returns validator names, voting power, uptime, and status. Use when user asks about validators on a chain.',
+      'Get the list of validators for a specific blockchain network. Returns totalValidators (actual count in the network) and a list of top validators sorted by staked tokens (descending). Use when user asks about validators on a chain.',
     inputSchema: z.object({
         chainName: z.string().describe('The chain name identifier, e.g. cosmoshub, polkadot, aztec'),
         limit: z.number().optional().default(10).describe('Maximum number of validators to return (default 10, max 25)'),
@@ -39,12 +40,15 @@ export const validatorTools = {
         const take = Math.min(limit ?? 10, 25);
         const decimals = chain.params?.coinDecimals ?? null;
         const denom = chain.params?.denom ?? null;
-        const { validators } = await ChainService.getChainValidatorsWithNodes(chain.id, [], 0, take, 'tokens', 'desc');
+        const [{ validators }, totalValidators] = await Promise.all([
+          ChainService.getChainValidatorsWithNodes(chain.id, [], 0, take, 'tokens', 'desc'),
+          getChainValidatorCount(chain.id, chain.name),
+        ]);
 
         return {
           chainName: chain.prettyName,
           denom,
-          total: validators.length,
+          totalValidators,
           validators: validators.map((v) => ({
             validatorId: v.validatorId,
             moniker: v.validator?.moniker ?? v.moniker,
