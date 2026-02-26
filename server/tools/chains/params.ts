@@ -12,6 +12,8 @@ interface APIItem {
 const { logWarn, logError } = logger('init-chains');
 
 const ethereumRpcKey = process.env.ETHEREUM_RPC_KEY;
+const sepoliaRpcKey = process.env.SEPOLIA_RPC_KEY;
+
 
 export const ecosystemParams = [
   {
@@ -1217,15 +1219,14 @@ const chainParams: Record<string, AddChainProps> = {
         type: 'rest',
         url: `https://beacon.ethereum.citizenweb3.com/${ethereumRpcKey}`,
       },
-      // {
-      //   type: 'rest',
-      //   url: `https://eth-mainnetbeacon.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
-      // },
-
       {
         type: 'rpc',
         url: `https://rpc.ethereum.citizenweb3.com/${ethereumRpcKey}`,
       },
+      // {
+      //   type: 'rest',
+      //   url: `https://eth-mainnetbeacon.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
+      // },
       // {
       //   type: 'rpc',
       //   url: 'https://eth.llamarpc.com',
@@ -1284,40 +1285,40 @@ const chainParams: Record<string, AddChainProps> = {
     nodes: [
       {
         type: 'rest',
-        url: 'http://168.119.37.164:5152',
-      },
-      {
-        type: 'rest',
-        url: 'https://ethereum-sepolia.core.chainstack.com/9599780fdf3a0a2d1203b2614695f975',
+        url: `https://beacon.sepolia.citizenweb3.com/${sepoliaRpcKey}`,
       },
       {
         type: 'rpc',
-        url: 'https://sepolia.infura.io/v3/0d98a14d4886428bbe5b927b678159b3',
+        url: `https://rpc.sepolia.citizenweb3.com/${sepoliaRpcKey}`,
       },
-      {
-        type: 'rpc',
-        url: 'https://eth-sepolia.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG',
-      },
-      {
-        type: 'rpc',
-        url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
-      },
-      {
-        type: 'rpc',
-        url: 'https://rpc.ankr.com/eth_sepolia/424ac266675ed3c8a9c8bfd421722137a6eb7c9bf94c02f8701deb879704eecc',
-      },
-      {
-        type: 'rest',
-        url: 'http://168.119.37.164:8645',
-      },
-      {
-        type: 'rest',
-        url: 'https://ethereum-sepolia.core.chainstack.com/beacon/9599780fdf3a0a2d1203b2614695f975',
-      },
-      {
-        type: 'rest',
-        url: 'https://lb.drpc.org/rest/Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ/eth-beacon-chain-sepolia',
-      },
+      // {
+      //   type: 'rest',
+      //   url: 'https://ethereum-sepolia.core.chainstack.com/9599780fdf3a0a2d1203b2614695f975',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://eth-sepolia.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://rpc.ankr.com/eth_sepolia/424ac266675ed3c8a9c8bfd421722137a6eb7c9bf94c02f8701deb879704eecc',
+      // },
+      // {
+      //   type: 'rest',
+      //   url: 'http://168.119.37.164:8645',
+      // },
+      // {
+      //   type: 'rest',
+      //   url: 'https://ethereum-sepolia.core.chainstack.com/beacon/9599780fdf3a0a2d1203b2614695f975',
+      // },
+      // {
+      //   type: 'rest',
+      //   url: 'https://lb.drpc.org/rest/Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ/eth-beacon-chain-sepolia',
+      // },
     ],
     mainRepo: 'https://github.com/ethereum/go-ethereum',
     docs: 'https://ethereum.org/en/developers/docs/',

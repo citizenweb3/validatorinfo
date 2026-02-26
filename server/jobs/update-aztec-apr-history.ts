@@ -145,6 +145,7 @@ const updateAztecAprHistory = async () => {
 
       if (startDate > endDate) {
         logInfo(`${chainName}: APR history is up to date`);
+        await syncAprToTokenomics(dbChain.id, chainName);
         continue;
       }
 
