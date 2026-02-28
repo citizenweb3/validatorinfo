@@ -1,8 +1,9 @@
 import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 
 import logger from '@/logger';
-import { GetProposalsFunction } from '@/server/tools/chains/chain-indexer';
+import { GetProposalsFunction, ProposalsResult, ResultProposalItem } from '@/server/tools/chains/chain-indexer';
 import getCosmWasmClient from '@/server/tools/get-chain-client';
+import { extractBestUrl } from '@/server/utils/fetch-proposal-text';
 
 import { $Enums } from '.prisma/client';
 
@@ -12,28 +13,6 @@ const { logInfo, logError, logWarn } = logger('get-proposals');
 
 const NEUTRON_DAO_CORE_CONTRACT = 'neutron1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrstdxvff';
 const AVERAGE_BLOCK_TIME_MS = 5500; // 5.5 seconds, average block time for Neutron
-
-interface Proposal {
-  type: string;
-  proposalId: string;
-  status: ProposalStatus;
-  submitTime: string;
-  depositEndTime: string;
-  votingStartTime: string;
-  votingEndTime: string;
-  tallyResult: string;
-  finalTallyResult: string;
-  title: string;
-  description: string;
-  content: string;
-}
-
-interface ProposalsResult {
-  proposals: Proposal[];
-  total: number;
-  live: number;
-  passed: number;
-}
 
 interface ChainProposal {
   title: string;
@@ -148,7 +127,7 @@ const getProposals: GetProposalsFunction = async (chain) => {
   const client = await getCosmWasmClient(chain.name);
 
   const result: ProposalsResult = {
-    proposals: [],
+    proposals: [] as ResultProposalItem[],
     total: 0,
     live: 0,
     passed: 0,
@@ -259,7 +238,13 @@ const getProposals: GetProposalsFunction = async (chain) => {
               });
             }
 
-            const proposalData: Proposal = {
+            const rawDescription = proposal.description || '';
+            const fullText = rawDescription || null;
+            const description = rawDescription || 'No description provided';
+
+            const metadataUrl = extractBestUrl(rawDescription);
+
+            const proposalData = {
               type: proposalType,
               proposalId,
               status,
@@ -270,8 +255,10 @@ const getProposals: GetProposalsFunction = async (chain) => {
               tallyResult,
               finalTallyResult,
               title: proposal.title || 'Untitled Proposal',
-              description: proposal.description || 'No description provided',
+              description,
               content: 'No content provided',
+              fullText,
+              metadataUrl,
             };
 
             logInfo(

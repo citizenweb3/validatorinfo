@@ -2,8 +2,10 @@
 
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
+import { useTranslations } from 'next-intl';
 
 import RoundedButton from '@/components/common/rounded-button';
+import { useProposalText } from '@/app/networks/[name]/proposal/[proposalId]/proposal-text-context';
 
 interface OwnProps {
   chainName: string;
@@ -12,6 +14,7 @@ interface OwnProps {
   hideVotesText: string;
   showAllProposalsText: string;
   votesPath: 'votes' | 'signals';
+  hasFullText?: boolean;
 }
 
 const ProposalButtons: FC<OwnProps> = ({
@@ -21,8 +24,11 @@ const ProposalButtons: FC<OwnProps> = ({
   hideVotesText,
   showAllProposalsText,
   votesPath,
+  hasFullText,
 }) => {
   const pathname = usePathname();
+  const t = useTranslations('ProposalPage');
+  const { isExpanded, toggle } = useProposalText();
   const isOnVotesPage = pathname.endsWith('/votes') || pathname.endsWith('/signals');
 
   const votesButtonHref = isOnVotesPage
@@ -39,6 +45,11 @@ const ProposalButtons: FC<OwnProps> = ({
       <RoundedButton href={votesButtonHref} className="font-handjet text-lg" scroll={false}>
         {votesButtonText}
       </RoundedButton>
+      {hasFullText && (
+        <RoundedButton onClick={toggle} className="font-handjet text-lg">
+          {isExpanded ? t('hide proposal text') : t('show proposal text')}
+        </RoundedButton>
+      )}
     </div>
   );
 };

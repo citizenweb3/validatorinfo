@@ -2,6 +2,7 @@ import { Amount } from '@cosmostation/extension-client/types/message';
 
 import logger from '@/logger';
 import { GetProposalsFunction, ProposalsResult, ResultProposalItem } from '@/server/tools/chains/chain-indexer';
+import { extractBestUrl, isValidProposalUrl } from '@/server/utils/fetch-proposal-text';
 import fetchChainData from '@/server/tools/get-chain-data';
 
 import { $Enums } from '.prisma/client';
@@ -85,15 +86,17 @@ const getProposals: GetProposalsFunction = async (chain) => {
           const title =
             proposal.title || proposal.content?.title || proposal.messages[0]?.content?.title || 'Unknown title';
 
-          const description =
+          const rawDescription =
             proposal.summary ||
             proposal.content?.description ||
             proposal.messages[0]?.content?.description ||
-            'Unknown description';
+            '';
+
+          const fullText = rawDescription || null;
+          const description = rawDescription || 'Unknown description';
 
           let tallyResult = '';
 
-          // Получаем промежуточный tally для предложений в процессе голосования
           if (proposal.status === ProposalStatus.PROPOSAL_STATUS_VOTING_PERIOD) {
             try {
               const tallyResponse = await fetchChainData<{
@@ -104,6 +107,14 @@ const getProposals: GetProposalsFunction = async (chain) => {
               logError(`Error fetching tally for proposal ${proposal.id}`, tallyError);
               tallyResult = '';
             }
+          }
+
+          let metadataUrl: string | null = null;
+          if (proposal.metadata && isValidProposalUrl(proposal.metadata)) {
+            metadataUrl = proposal.metadata;
+          }
+          if (!metadataUrl) {
+            metadataUrl = extractBestUrl(rawDescription);
           }
 
           return {
@@ -119,6 +130,8 @@ const getProposals: GetProposalsFunction = async (chain) => {
             content: JSON.stringify(proposal.messages[0]) || (proposal.metadata as string),
             title,
             description,
+            fullText,
+            metadataUrl,
           };
         });
 
