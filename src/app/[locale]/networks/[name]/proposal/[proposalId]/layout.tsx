@@ -6,6 +6,8 @@ import { ReactNode } from 'react';
 import AiGeneratedSummary from '@/app/networks/[name]/proposal/[proposalId]/ai-generated-summary';
 import AztecProposalDetails from '@/app/networks/[name]/proposal/[proposalId]/aztec/aztec-proposal-details';
 import ProposalButtons from '@/app/networks/[name]/proposal/[proposalId]/proposal-buttons';
+import ProposalFullText from '@/app/networks/[name]/proposal/[proposalId]/proposal-full-text';
+import { ProposalTextProvider } from '@/app/networks/[name]/proposal/[proposalId]/proposal-text-context';
 import ProposalInformation from '@/app/networks/[name]/proposal/[proposalId]/proposal-information';
 import ProposalMetrics from '@/app/networks/[name]/proposal/[proposalId]/proposal-metrics';
 import PageTitle from '@/components/common/page-title';
@@ -19,12 +21,12 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default async function ProposalLayout({
-  children,
-  params: { locale, name, proposalId },
-}: Readonly<{
-  children: ReactNode;
-  params: { locale: Locale; name: string; proposalId: string };
-}>) {
+    children,
+    params: { locale, name, proposalId },
+  }: Readonly<{
+    children: ReactNode;
+    params: { locale: Locale; name: string; proposalId: string };
+  }>) {
   const t = await getTranslations({ locale, namespace: 'ProposalPage' });
   const chain = await chainService.getByName(name);
   const proposal = chain ? await ProposalService.getProposalById(chain?.id, proposalId) : null;
@@ -59,19 +61,25 @@ export default async function ProposalLayout({
       )}
 
       <ProposalMetrics proposal={proposal} chain={chain} />
-      <div className="mt-10">
-        <ProposalButtons
-          chainName={name}
-          proposalId={proposalId}
-          showVotesText={showVotesText}
-          hideVotesText={hideVotesText}
-          showAllProposalsText={t('show all proposals')}
-          votesPath={votesPath}
-        />
-      </div>
+      <ProposalTextProvider>
+        <div className="mt-10">
+          <ProposalButtons
+            chainName={name}
+            proposalId={proposalId}
+            showVotesText={showVotesText}
+            hideVotesText={hideVotesText}
+            showAllProposalsText={t('show all proposals')}
+            votesPath={votesPath}
+            hasFullText={!!proposal?.fullText}
+          />
+        </div>
 
-      {children}
-      <AiGeneratedSummary />
+        {children}
+        <ProposalFullText
+          fullText={proposal?.fullText ?? null}
+        />
+      </ProposalTextProvider>
+      <AiGeneratedSummary hasFullText={!!proposal?.fullText} chainId={chain?.id ?? null} proposalId={proposalId} />
     </>
   );
 }

@@ -10,7 +10,7 @@ export const MAX_STEPS = 5;
 export const RATE_LIMIT = 10;
 export const RATE_WINDOW = 60;
 
-const SAFE_LOCALE = /^[a-z]{2}$/;
+export const SAFE_LOCALE = /^[a-z]{2}$/;
 const SAFE_PAGE = /^[a-zA-Z0-9_\-/]{1,128}$/;
 
 const isValidRole = (role: string): role is 'user' | 'assistant' =>

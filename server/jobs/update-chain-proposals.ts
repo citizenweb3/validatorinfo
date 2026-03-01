@@ -50,6 +50,23 @@ const updateChainProposals = async (chainNames: string[]) => {
           dbProposal?.status === $Enums.ProposalStatus.PROPOSAL_STATUS_REJECTED ||
           dbProposal?.status === $Enums.ProposalStatus.PROPOSAL_STATUS_FAILED
         ) {
+          // Backfill metadataUrl and fullText for existing proposals
+          const backfillData: { metadataUrl?: string; fullText?: string } = {};
+          if (proposal.metadataUrl && dbProposal.metadataUrl !== proposal.metadataUrl) {
+            backfillData.metadataUrl = proposal.metadataUrl;
+          }
+          if (!dbProposal.fullText && proposal.fullText) {
+            backfillData.fullText = proposal.fullText;
+          }
+
+          if (Object.keys(backfillData).length > 0) {
+            await db.proposal.update({
+              where: { id: dbProposal.id },
+              data: backfillData,
+            });
+            logDebug(`Backfilled ${Object.keys(backfillData).join(', ')} for proposal ${proposal.proposalId}`);
+          }
+
           logDebug(
             `Proposal ${proposal.proposalId} ${proposal.title} already processed with status ${dbProposal.status}`,
           );
@@ -69,6 +86,8 @@ const updateChainProposals = async (chainNames: string[]) => {
             votingEndTime: proposal.votingEndTime,
             tallyResult: proposal.tallyResult,
             finalTallyResult: proposal.finalTallyResult,
+            metadataUrl: proposal.metadataUrl || undefined,
+            fullText: proposal.fullText || undefined,
           },
           create: {
             proposalId: proposal.proposalId,
@@ -83,6 +102,8 @@ const updateChainProposals = async (chainNames: string[]) => {
             title: proposal.title,
             description: proposal.description,
             type: proposal.type,
+            metadataUrl: proposal.metadataUrl || null,
+            fullText: proposal.fullText || null,
             chain: {
               connect: { id: dbChain.id },
             },

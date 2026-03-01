@@ -1,6 +1,5 @@
 'use client';
 
-import { Proposal } from '@prisma/client';
 import { formatDuration, intervalToDuration } from 'date-fns';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -10,9 +9,10 @@ import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import cutHash from '@/utils/cut-hash';
 import VotingPowerSVG from '@/components/customSVG/proposals'; // Ensure this path is correct
+import { ProposalListItem } from '@/services/proposal-service';
 
 interface OwnProps {
-  proposals: Proposal[];
+  proposals: ProposalListItem[];
   chainName: string;
 }
 
@@ -30,7 +30,7 @@ const LiveProposals: FC<OwnProps> = ({ proposals, chainName }) => {
     });
   };
 
-  const getVotingPercentages = (proposal: Proposal) => {
+  const getVotingPercentages = (proposal: ProposalListItem) => {
     try {
       if (!proposal.tallyResult) throw new Error('Missing tally result');
       const tally = JSON.parse(proposal.tallyResult.toString());

@@ -30,6 +30,9 @@ const isSameSiteUrl = (href: string): boolean => getInternalPath(href) !== null;
 
 const renderLink = (text: string, href: string, key: number): ReactNode => {
   const cleanHref = href.replace(/^<|>$/g, '');
+  if (/^(javascript|data|vbscript):/i.test(cleanHref)) {
+    return <span key={key}>{text}</span>;
+  }
   const internalPath = getInternalPath(cleanHref);
   if (internalPath) {
     return (

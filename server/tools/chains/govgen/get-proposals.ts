@@ -80,10 +80,11 @@ const getGovgenProposals: GetProposalsFunction = async (chain) => {
           }
 
           const title = proposal.content?.value?.title || 'Unknown title';
-          const description = proposal.content?.value?.description || 'Unknown description';
+          const rawDescription = proposal.content?.value?.description || '';
+          const fullText = rawDescription || null;
+          const description = rawDescription || 'Unknown description';
           let tallyResult = '';
 
-          // Получаем промежуточный tally для предложений в процессе голосования
           if (status === ProposalStatus.PROPOSAL_STATUS_VOTING_PERIOD) {
             try {
               const tallyResponse = await fetchChainData<{
@@ -105,11 +106,13 @@ const getGovgenProposals: GetProposalsFunction = async (chain) => {
             depositEndTime: proposal.deposit_end_time,
             votingStartTime: proposal.voting_start_time,
             votingEndTime: proposal.voting_end_time,
-            tallyResult, // Заполняется для предложений в процессе голосования
+            tallyResult,
             finalTallyResult: JSON.stringify(proposal.final_tally_result) || '',
             content: JSON.stringify(proposal.content) || '',
             title,
             description,
+            fullText,
+            metadataUrl: null,
           };
         });
 
@@ -118,7 +121,6 @@ const getGovgenProposals: GetProposalsFunction = async (chain) => {
 
         logInfo(`Fetched ${proposals.length} Proposals for ${chain.name}, page: ${page}`);
 
-        // Если вернулось меньше, чем limit, это последняя страница
         if (proposals.length < limit) {
           hasMore = false;
         } else {

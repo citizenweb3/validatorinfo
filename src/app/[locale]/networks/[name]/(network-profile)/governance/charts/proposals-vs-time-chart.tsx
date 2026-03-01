@@ -11,8 +11,8 @@ import {
   Title,
   Tooltip,
 } from 'chart.js';
-import { Proposal } from '@prisma/client';
 import { useRouter } from 'next/navigation';
+import { ProposalListItem } from '@/services/proposal-service';
 import { useTranslations } from 'next-intl';
 import { FC, useCallback, useMemo, useRef, useState, useTransition } from 'react';
 import { Bar } from 'react-chartjs-2';
@@ -33,16 +33,16 @@ ChartJS.register(
 type PeriodType = 'day' | 'week' | 'month' | 'year';
 
 interface OwnProps {
-  proposals: Proposal[];
+  proposals: ProposalListItem[];
   chainName: string;
 }
 
 interface ProposalGroup {
   key: string;
   label: string;
-  passed: Proposal[];
-  rejected: Proposal[];
-  failed: Proposal[];
+  passed: ProposalListItem[];
+  rejected: ProposalListItem[];
+  failed: ProposalListItem[];
 }
 
 const STATUS_COLORS = {
@@ -102,7 +102,7 @@ const formatGroupLabel = (key: string, period: PeriodType): string => {
   }
 };
 
-const groupProposals = (proposals: Proposal[], period: PeriodType): ProposalGroup[] => {
+const groupProposals = (proposals: ProposalListItem[], period: PeriodType): ProposalGroup[] => {
   const finished = proposals.filter(
     (p) =>
       p.votingEndTime &&
@@ -220,7 +220,7 @@ const ProposalsVsTimeChart: FC<OwnProps> = ({ proposals, chainName }) => {
       const group = visibleGroups[index];
       if (!group) return;
 
-      let targetProposal: Proposal | undefined;
+      let targetProposal: ProposalListItem | undefined;
       if (datasetIndex === 0) targetProposal = group.passed[0];
       else if (datasetIndex === 1) targetProposal = group.rejected[0];
       else targetProposal = group.failed[0];
@@ -304,7 +304,7 @@ const ProposalsVsTimeChart: FC<OwnProps> = ({ proposals, chainName }) => {
               const count = context.parsed.y;
               if (count === 0) return '';
 
-              let proposalsInSegment: Proposal[] = [];
+              let proposalsInSegment: ProposalListItem[] = [];
               if (context.datasetIndex === 0) proposalsInSegment = group.passed;
               else if (context.datasetIndex === 1) proposalsInSegment = group.rejected;
               else proposalsInSegment = group.failed;
