@@ -108,6 +108,7 @@ export const checkRateLimit = async (key: string, limit: number, windowSeconds: 
 export const CACHE_KEYS = {
   ai: {
     rateLimit: (ip: string) => `ai:rate:${ip}`,
+    summaryRateLimit: (ip: string) => `ai:summary:rate:${ip}`,
   },
   aztec: {
     epochProgress: (chainName: string) => `aztec:${chainName}:epoch-progress`,

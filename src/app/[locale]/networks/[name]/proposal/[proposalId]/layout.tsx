@@ -79,7 +79,7 @@ export default async function ProposalLayout({
           fullText={proposal?.fullText ?? null}
         />
       </ProposalTextProvider>
-      <AiGeneratedSummary />
+      <AiGeneratedSummary hasFullText={!!proposal?.fullText} chainId={chain?.id ?? null} proposalId={proposalId} />
     </>
   );
 }
