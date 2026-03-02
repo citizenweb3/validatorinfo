@@ -9,7 +9,7 @@ import PlusButton from '@/components/common/plus-button';
 import parseMarkdown from '@/utils/parse-ai-markdown';
 
 interface OwnProps {
-  hasFullText: boolean;
+  hasText: boolean;
   chainId: number | null;
   proposalId: string;
 }
@@ -23,7 +23,7 @@ const getErrorMessageKey = (code: string) => {
   }
 };
 
-const AiGeneratedSummary: FC<OwnProps> = ({ hasFullText, chainId, proposalId }) => {
+const AiGeneratedSummary: FC<OwnProps> = ({ hasText, chainId, proposalId }) => {
   const t = useTranslations('ProposalPage');
   const locale = useLocale();
   const isLoadingRef = useRef(false);
@@ -71,10 +71,14 @@ const AiGeneratedSummary: FC<OwnProps> = ({ hasFullText, chainId, proposalId }) 
 
   const renderedSummary = useMemo(() => {
     if (!summary) return null;
-    return parseMarkdown(summary);
+    try {
+      return parseMarkdown(summary);
+    } catch (error) {
+      return <span>{summary}</span>;
+    }
   }, [summary]);
 
-  if (!hasFullText || !chainId) return null;
+  if (!hasText || !chainId) return null;
 
   return (
     <div className="mt-4 mb-6">

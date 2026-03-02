@@ -11,10 +11,11 @@ import ProposalService from '@/services/proposal-service';
 const { logDebug, logError, logWarn } = logger('ai-summary');
 
 const FALLBACK_LENGTH = 50_000;
-const MAX_OUTPUT_TOKENS = 512;
-const LLM_TIMEOUT = 30_000;
+const MAX_OUTPUT_TOKENS = 4096;
+const LLM_TIMEOUT = 60_000;
 const RATE_LIMIT = 5;
 const RATE_WINDOW = 60;
+const SENTENCE_END = /[.!?。！？]$/;
 
 const buildSummaryPrompt = (locale: string): string =>
   [
@@ -23,7 +24,8 @@ const buildSummaryPrompt = (locale: string): string =>
     `Respond in the language matching locale "${locale}".`,
     'Provide a 2-3 sentence summary of the proposal text below.',
     'Focus on: what the proposal does, why it matters, and what changes if it passes.',
-    'Do NOT use markdown headers or bullet points. Just plain sentences.',
+    'Write in simple, plain language that anyone can understand — avoid technical jargon.',
+    'Do NOT use markdown headers or bullet points. Just plain sentences ending with a period.',
   ].join('\n');
 
 const callLLM = async (text: string, systemPrompt: string): Promise<string> => {
@@ -64,6 +66,30 @@ export const generateProposalSummary = async (
   locale: string,
 ): Promise<AskAgentResult> => {
   try {
+    const safeLocale = SAFE_LOCALE.test(locale) ? locale : 'en';
+
+    const proposal = await ProposalService.getProposalById(chainId, proposalId);
+
+    if (!proposal) {
+      logWarn(`Proposal ${proposalId} not found for chain ${chainId}`);
+      return { ok: false, error: 'invalid_request', code: 'INVALID_REQUEST' };
+    }
+
+    const description = proposal.description?.trim();
+    const hasUsableDescription = description && !description.startsWith('Payload');
+    const proposalText = (hasUsableDescription ? description : proposal.fullText?.trim()) || '';
+
+    if (!proposalText) {
+      logWarn(`Summary requested for proposal ${proposalId} without text`);
+      return { ok: false, error: 'invalid_request', code: 'INVALID_REQUEST' };
+    }
+
+    const saved = (proposal.aiSummary as Record<string, string> | null)?.[safeLocale];
+    if (saved) {
+      logDebug(`Returning saved summary for proposal ${proposalId}, locale: ${safeLocale}`);
+      return { ok: true, text: saved };
+    }
+
     const ip = await getClientIp();
     const rateLimitKey = CACHE_KEYS.ai.summaryRateLimit(ip);
     const isLimited = await checkRateLimit(rateLimitKey, RATE_LIMIT, RATE_WINDOW);
@@ -78,28 +104,44 @@ export const generateProposalSummary = async (
       return { ok: false, error: 'ai_disabled', code: 'AI_DISABLED' };
     }
 
-    const proposal = await ProposalService.getProposalById(chainId, proposalId);
+    logDebug(`Generating summary, locale: ${safeLocale}, source: ${description ? 'description' : 'fullText'}, text length: ${proposalText.length}`);
 
-    if (!proposal?.fullText?.trim()) {
-      logWarn(`Summary requested for proposal ${proposalId} without fullText`);
-      return { ok: false, error: 'invalid_request', code: 'INVALID_REQUEST' };
-    }
-
-    const safeLocale = SAFE_LOCALE.test(locale) ? locale : 'en';
     const systemPrompt = buildSummaryPrompt(safeLocale);
-    const fullText = proposal.fullText;
-
-    logDebug(`Generating summary, locale: ${safeLocale}, text length: ${fullText.length}`);
-
-    const text = await callWithRetry(fullText, systemPrompt);
+    let text = await callWithRetry(proposalText, systemPrompt);
 
     if (!text?.trim()) {
       logWarn('LLM returned empty summary');
       return { ok: false, error: 'empty_response', code: 'EMPTY_RESPONSE' };
     }
 
-    logDebug(`Summary generated, length: ${text.length}`);
-    return { ok: true, text };
+    const isComplete = SENTENCE_END.test(text.trim());
+
+    if (!isComplete) {
+      logWarn(`Summary truncated, retrying. Text: "${text.slice(-50)}"`);
+      const retryText = await callWithRetry(proposalText, systemPrompt);
+
+      if (retryText?.trim()) {
+        const isRetryComplete = SENTENCE_END.test(retryText.trim());
+        if (isRetryComplete || retryText.trim().length >= text.trim().length) {
+          text = retryText;
+        }
+      }
+    }
+
+    const finalText = text.trim();
+    const isFinalComplete = SENTENCE_END.test(finalText);
+
+    logDebug(`Summary generated, length: ${finalText.length}, complete: ${isFinalComplete}`);
+
+    if (isFinalComplete) {
+      // Fire-and-forget: save to DB without blocking the response to the user
+      ProposalService.saveAiSummary(chainId, proposalId, safeLocale, finalText)
+        .catch(err => logError(`Failed to save summary for proposal ${proposalId}: ${err instanceof Error ? err.message : String(err)}`, err));
+    } else {
+      logWarn(`Summary still truncated after retry, returning without saving to DB`);
+    }
+
+    return { ok: true, text: finalText };
   } catch (error) {
     if (error instanceof Error && error.name === 'AbortError') {
       logError('Summary request timed out');

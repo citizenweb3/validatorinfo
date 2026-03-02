@@ -14,7 +14,7 @@ interface OwnProps {
   hideVotesText: string;
   showAllProposalsText: string;
   votesPath: 'votes' | 'signals';
-  hasFullText?: boolean;
+  hasText?: boolean;
 }
 
 const ProposalButtons: FC<OwnProps> = ({
@@ -24,7 +24,7 @@ const ProposalButtons: FC<OwnProps> = ({
   hideVotesText,
   showAllProposalsText,
   votesPath,
-  hasFullText,
+  hasText,
 }) => {
   const pathname = usePathname();
   const t = useTranslations('ProposalPage');
@@ -45,7 +45,7 @@ const ProposalButtons: FC<OwnProps> = ({
       <RoundedButton href={votesButtonHref} className="font-handjet text-lg" scroll={false}>
         {votesButtonText}
       </RoundedButton>
-      {hasFullText && (
+      {hasText && (
         <RoundedButton onClick={toggle} className="font-handjet text-lg">
           {isExpanded ? t('hide proposal text') : t('show proposal text')}
         </RoundedButton>

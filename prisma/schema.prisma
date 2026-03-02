@@ -306,6 +306,7 @@ model Proposal {
   fullText         String?   @map("full_text")
   metadataUrl      String?   @map("metadata_url")
   fullTextAttempts Int       @default(0) @map("full_text_attempts")
+  aiSummary        Json?     @map("ai_summary")
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 

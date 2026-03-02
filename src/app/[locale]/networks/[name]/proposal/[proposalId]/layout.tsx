@@ -70,16 +70,17 @@ export default async function ProposalLayout({
             hideVotesText={hideVotesText}
             showAllProposalsText={t('show all proposals')}
             votesPath={votesPath}
-            hasFullText={!!proposal?.fullText}
+            hasText={!!proposal?.description?.trim() || !!proposal?.fullText?.trim()}
           />
         </div>
 
         {children}
         <ProposalFullText
+          description={proposal?.description ?? null}
           fullText={proposal?.fullText ?? null}
         />
       </ProposalTextProvider>
-      <AiGeneratedSummary hasFullText={!!proposal?.fullText} chainId={chain?.id ?? null} proposalId={proposalId} />
+      <AiGeneratedSummary hasText={!!proposal?.description?.trim() || !!proposal?.fullText?.trim()} chainId={chain?.id ?? null} proposalId={proposalId} />
     </>
   );
 }
