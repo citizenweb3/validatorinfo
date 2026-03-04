@@ -834,6 +834,8 @@
   "ValidatorNetworksPage": {
     "title": "Validator Profile: Supported Networks",
     "description": "The Networks tab provides a comprehensive view of all the blockchain networks supported by this validator, featuring a table with key stats like expected APR, commissions, total value secured, uptime, and active delegators. This is ideal for stakers looking for the best network or those curious about the validator's reach, allowing you to compare performance across chains and choose the best spot for your staking goals. For more detailed information, check out our Network A-Z Directory. These stats are crucial for understanding the validator's performance across ecosystems, helping you make informed decisions in the multichain world.",
+    "Validator": "Validator",
+    "Node": "Node",
     "Table": {
       "Network": {
         "name": "Network",

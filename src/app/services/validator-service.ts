@@ -154,6 +154,58 @@ const getValidatorByIdentity = async (identity: string): Promise<Validator | nul
   });
 };
 
+const safeParseFloat = (value: string | null | undefined): number => {
+  const parsed = parseFloat(value || '0');
+  return isNaN(parsed) ? 0 : parsed;
+};
+
+const computeVotingPower = (node: { delegatorShares: string; chain: { tokenomics: { bondedTokens: string } | null } }): number => {
+  const bondedTokens = safeParseFloat(node.chain?.tokenomics?.bondedTokens);
+  const delegatorShares = safeParseFloat(node.delegatorShares);
+  return bondedTokens === 0 ? 0 : (delegatorShares / bondedTokens) * 100;
+};
+
+const aggregateNodesByChain = (
+  nodes: validatorNodesWithChainData[],
+): validatorNodesWithChainData[] => {
+  const chainGroups = new Map<number, validatorNodesWithChainData[]>();
+
+  for (const node of nodes) {
+    const group = chainGroups.get(node.chainId) || [];
+    group.push(node);
+    chainGroups.set(node.chainId, group);
+  }
+
+  return Array.from(chainGroups.values()).map((group) => {
+    // Find primary node: max delegatorShares + tokens
+    const primaryNode = group.reduce((best, node) => {
+      const bestScore = safeParseFloat(best.delegatorShares) + safeParseFloat(best.tokens);
+      const nodeScore = safeParseFloat(node.delegatorShares) + safeParseFloat(node.tokens);
+      return nodeScore > bestScore ? node : best;
+    });
+
+    if (group.length === 1) {
+      return primaryNode;
+    }
+
+    // Sum numeric metrics across all nodes in the group
+    const totalTokens = group.reduce((sum, n) => sum + safeParseFloat(n.tokens), 0);
+    const totalDelegatorShares = group.reduce((sum, n) => sum + safeParseFloat(n.delegatorShares), 0);
+    const totalDelegators = group.reduce((sum, n) => sum + (n.delegatorsAmount || 0), 0);
+    const totalSelfDelegation = group.reduce((sum, n) => sum + safeParseFloat(n.minSelfDelegation), 0);
+    const totalVotingPower = group.reduce((sum, n) => sum + n.votingPower, 0);
+
+    return {
+      ...primaryNode,
+      tokens: totalTokens.toString(),
+      delegatorShares: totalDelegatorShares.toString(),
+      delegatorsAmount: totalDelegators,
+      minSelfDelegation: totalSelfDelegation.toString(),
+      votingPower: totalVotingPower,
+    };
+  });
+};
+
 const getValidatorNodesWithChains = async (
   id: number,
   ecosystems: string[] = [],
@@ -162,10 +214,13 @@ const getValidatorNodesWithChains = async (
   take: number = Number.MAX_SAFE_INTEGER,
   sortBy: string = 'prettyName',
   order: SortDirection = 'asc',
+  aggregated: boolean = false,
+  chainFilters: string[] = [],
 ): Promise<{
   validatorNodesWithChainData: validatorNodesWithChainData[];
   pages: number;
 }> => {
+  logDebug(`Get validator nodes with chains: id=${id}, aggregated=${aggregated}, chainFilters=${JSON.stringify(chainFilters)}`);
   const where: any = { validatorId: id, NOT: { tokens: '0' } };
   if (ecosystems.length > 0) {
     where.chain = { ecosystem: { in: ecosystems } };
@@ -176,6 +231,10 @@ const getValidatorNodesWithChains = async (
     } else if (nodeStatus.includes('unjailed') && !nodeStatus.includes('jailed')) {
       where.jailed = false;
     }
+  }
+
+  if (chainFilters.length > 0) {
+    where.chain = { ...where.chain, name: { in: chainFilters } };
   }
 
   if (sortBy === 'votingPower') {
@@ -193,23 +252,19 @@ const getValidatorNodesWithChains = async (
     });
 
     const computedNodes = allNodes.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
-      const delegatorShares = parseFloat(node.delegatorShares || '0');
-      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
+      const votingPower = computeVotingPower(node);
       return { ...node, votingPower };
     });
 
-    computedNodes.sort((a, b) => (order === 'asc' ? a.votingPower - b.votingPower : b.votingPower - a.votingPower));
+    const finalNodes = aggregated ? aggregateNodesByChain(computedNodes) : computedNodes;
+    finalNodes.sort((a, b) => (order === 'asc' ? a.votingPower - b.votingPower : b.votingPower - a.votingPower));
 
-    const totalCount = computedNodes.length;
+    const totalCount = finalNodes.length;
     const pages = Math.ceil(totalCount / take);
-    const paginatedNodes = computedNodes.slice(skip, skip + take);
+    const paginatedNodes = finalNodes.slice(skip, skip + take);
 
     return { validatorNodesWithChainData: paginatedNodes, pages };
   } else {
-    const totalCount = await db.node.count({ where });
-    const pages = Math.ceil(totalCount / take);
-
     let orderBy;
     if (sortBy === 'prettyName') {
       orderBy = [{ chain: { prettyName: order } }];
@@ -221,30 +276,75 @@ const getValidatorNodesWithChains = async (
       orderBy = [{ id: order }];
     }
 
-    const nodes = await db.node.findMany({
-      where,
-      skip,
-      take,
-      orderBy: orderBy,
-      include: {
-        chain: {
-          include: {
-            tokenomics: true,
-            params: true,
-          },
+    if (aggregated) {
+      // Fetch all nodes (no pagination at DB level), aggregate, then paginate
+      const allNodes = await db.node.findMany({
+        where,
+        orderBy,
+        include: {
+          chain: { include: { tokenomics: true, params: true } },
+          consensusData: true,
         },
-        consensusData: true,
-      },
-    });
+      });
 
-    const computedNodes = nodes.map((node) => {
-      const bondedTokens = parseFloat(node.chain?.tokenomics?.bondedTokens || '0');
-      const delegatorShares = parseFloat(node.delegatorShares || '0');
-      const votingPower = bondedTokens !== 0 ? (delegatorShares / bondedTokens) * 100 : 0;
-      return { ...node, votingPower };
-    });
+      const allComputedNodes = allNodes.map((node) => {
+        const votingPower = computeVotingPower(node);
+        return { ...node, votingPower };
+      });
 
-    return { validatorNodesWithChainData: computedNodes, pages };
+      const aggregatedNodes = aggregateNodesByChain(allComputedNodes);
+
+      // Re-sort aggregated results
+      if (sortBy === 'prettyName') {
+        aggregatedNodes.sort((a, b) => {
+          const nameA = a.chain.prettyName.toLowerCase();
+          const nameB = b.chain.prettyName.toLowerCase();
+          return order === 'asc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+        });
+      } else if (sortBy === 'apr') {
+        aggregatedNodes.sort((a, b) => {
+          const aprA = safeParseFloat(String(a.chain?.tokenomics?.apr ?? '0'));
+          const aprB = safeParseFloat(String(b.chain?.tokenomics?.apr ?? '0'));
+          return order === 'asc' ? aprA - aprB : aprB - aprA;
+        });
+      } else if (['delegatorShares', 'rate', 'minSelfDelegation', 'rank'].includes(sortBy)) {
+        aggregatedNodes.sort((a, b) => {
+          const rawA = (a as Record<string, unknown>)[sortBy];
+          const rawB = (b as Record<string, unknown>)[sortBy];
+          const valA = rawA != null ? safeParseFloat(String(rawA)) : 0;
+          const valB = rawB != null ? safeParseFloat(String(rawB)) : 0;
+          return order === 'asc' ? valA - valB : valB - valA;
+        });
+      }
+
+      const totalCount = aggregatedNodes.length;
+      const pages = Math.ceil(totalCount / take);
+      const paginatedNodes = aggregatedNodes.slice(skip, skip + take);
+
+      return { validatorNodesWithChainData: paginatedNodes, pages };
+    } else {
+      // Non-aggregated: existing logic with DB-level pagination
+      const totalCount = await db.node.count({ where });
+      const pages = Math.ceil(totalCount / take);
+
+      const nodes = await db.node.findMany({
+        where,
+        skip,
+        take,
+        orderBy,
+        include: {
+          chain: { include: { tokenomics: true, params: true } },
+          consensusData: true,
+        },
+      });
+
+      const computedNodes = nodes.map((node) => {
+        const votingPower = computeVotingPower(node);
+        return { ...node, votingPower };
+      });
+
+      return { validatorNodesWithChainData: computedNodes, pages };
+    }
   }
 };
 

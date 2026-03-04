@@ -834,6 +834,8 @@
   "ValidatorNetworksPage": {
     "title": "Perfil de validador: Redes Suportadas",
     "description": "A aba Networks oferece uma visão abrangente de todas as redes blockchain suportadas por este validador, apresentando uma tabela com estatísticas-chave, como APR esperado, comissões, valor total protegido, tempo de atividade e delegadores ativos. Isso é ideal para os stakers que buscam a melhor rede ou para aqueles curiosos sobre o alcance do validador, permitindo que você compare o desempenho entre as cadeias e escolha o melhor local para atingir seus objetivos de staking. Para informações mais detalhadas, confira nosso Diretório de Redes A-Z. Essas estatísticas são cruciais para entender o desempenho do validador em diferentes ecossistemas, ajudando você a tomar decisões informadas no mundo multichain.",
+    "Validator": "Validador",
+    "Node": "N\u00f3",
     "Table": {
       "Network": {
         "name": "Rede",

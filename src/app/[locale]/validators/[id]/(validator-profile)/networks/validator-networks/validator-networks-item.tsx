@@ -13,9 +13,10 @@ import colorStylization from '@/utils/color-stylization';
 
 interface OwnProps {
   item: validatorNodesWithChainData;
+  aggregated: boolean;
 }
 
-const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
+const ValidatorNetworksItem: FC<OwnProps> = ({ item, aggregated }) => {
   const selfDelegation = item.chain.params?.coinDecimals != null
     ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
     : undefined;
@@ -29,6 +30,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
     : undefined;
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
+  const chainFilterLink = `/validators/${item.validatorId}/networks?view=node&networks=${encodeURIComponent(item.chain.name)}`;
 
   const totalSlots = item.consensusData?.totalSlots;
 
@@ -44,7 +46,7 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
           width={20}
           height={20}
         />
-        <TableAvatar icon={item.chain.logoUrl} name={item.chain.prettyName || 'No name'} href={nodeLink} />
+        <TableAvatar icon={item.chain.logoUrl} name={item.chain.prettyName || 'No name'} href={aggregated ? chainFilterLink : nodeLink} />
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
