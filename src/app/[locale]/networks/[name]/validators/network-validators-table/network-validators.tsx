@@ -27,6 +27,7 @@ const NetworkValidators: FC<OwnProps> = async ({ chainId, chainName, nodeStatus,
           <thead>
             <tr className="bg-table_header">
               <TableHeaderItem page={page} name="Validator" sortField="moniker" defaultSelected />
+              <TableHeaderItem page={page} name="Rank" sortField="rank" />
               <TableHeaderItem page={page} name="Voting Power" sortField="votingPower" />
               <TableHeaderItem page={page} name="Voting Power Active" sortField="tokens" />
               <TableHeaderItem page={page} name="Commission" sortField="rate" />

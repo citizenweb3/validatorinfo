@@ -537,6 +537,10 @@
         "name": "Committee",
         "hint": "Is this validator part of the current epoch committee? Committee members are selected to propose and attest blocks"
       },
+      "Rank": {
+        "name": "Rank",
+        "hint": "Validator rank, based on the amount of voting power"
+      },
       "Governance": {
         "name": "Governance",
         "hint": "Governance score of the validator out of a 100. Based on their participation in key life events"

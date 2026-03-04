@@ -537,6 +537,10 @@
         "name": "Comitê",
         "hint": "Este validador faz parte do comitê da época atual? Os membros do comitê são selecionados para propor e atestar blocos"
       },
+      "Rank": {
+        "name": "Classificação",
+        "hint": "Classificação do validador, com base na quantidade de poder de voto"
+      },
       "Governance": {
         "name": "Governança",
         "hint": "Pontuação de governança do validador em 100. Baseado em sua participação em eventos importantes"

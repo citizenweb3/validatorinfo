@@ -16,8 +16,6 @@ interface OwnProps {
 }
 
 const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
-  const rank: number = 15;
-
   const selfDelegation = item.chain.params?.coinDecimals != null
     ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
     : undefined;
@@ -49,6 +47,11 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
         <TableAvatar icon={item.chain.logoUrl} name={item.chain.prettyName || 'No name'} href={nodeLink} />
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
+        <Link href={nodeLink}>
+          <div className="text-center">{item.rank ?? 'N/A'}</div>
+        </Link>
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         {expectedApr ? (
             <Link href={nodeLink}>
               <div className="text-center">{expectedApr.toFixed(2)}%</div>
@@ -59,11 +62,6 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item }) => {
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
           <div className="text-center">{item?.delegatorsAmount?.toLocaleString('en-US') ?? `N/A`}</div>
-        </Link>
-      </BaseTableCell>
-      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
-        <Link href={nodeLink}>
-          <div className="text-center">{rank}</div>
         </Link>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">

@@ -215,7 +215,7 @@ const getValidatorNodesWithChains = async (
       orderBy = [{ chain: { prettyName: order } }];
     } else if (sortBy === 'apr') {
       orderBy = [{ chain: { tokenomics: { apr: order } } }];
-    } else if (['delegatorShares', 'rate', 'minSelfDelegation'].includes(sortBy)) {
+    } else if (['delegatorShares', 'rate', 'minSelfDelegation', 'rank'].includes(sortBy)) {
       orderBy = [{ [sortBy]: order }];
     } else {
       orderBy = [{ id: order }];
@@ -298,6 +298,7 @@ const getByIdentityWithDetails = async (identity: string) => {
           delegatorsAmount: true,
           missedBlocks: true,
           uptime: true,
+          rank: true,
           chain: {
             select: {
               id: true,

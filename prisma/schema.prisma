@@ -212,6 +212,7 @@ model Node {
   // calculated
   consensusAddress String @default("") @map("consensus_address")
   uptime           Float?
+  rank             Int?
 
   // Aztec committee tracking
   inCommittee    Boolean @default(false) @map("in_committee")
