@@ -1,11 +1,12 @@
 'use client';
 
-import { FC, useCallback, useMemo, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useLocale, useTranslations } from 'next-intl';
 
 import { generateProposalSummary } from '@/actions/ai-summary';
+import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
-import PlusButton from '@/components/common/plus-button';
 import parseMarkdown from '@/utils/parse-ai-markdown';
 
 interface OwnProps {
@@ -26,26 +27,21 @@ const getErrorMessageKey = (code: string) => {
 const AiGeneratedSummary: FC<OwnProps> = ({ hasText, chainId, proposalId }) => {
   const t = useTranslations('ProposalPage');
   const locale = useLocale();
+  const sectionRef = useRef<HTMLDivElement>(null);
   const isLoadingRef = useRef(false);
-  const [summary, setSummary] = useState<string | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [summary, setSummary] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [buttonSlot, setButtonSlot] = useState<HTMLElement | null>(null);
+  const prevExpandedRef = useRef(false);
 
-  const handleToggle = useCallback(async () => {
-    if (isLoadingRef.current) return;
+  useEffect(() => {
+    setButtonSlot(document.getElementById('ai-summary-button-slot'));
+  }, []);
 
-    if (isExpanded) {
-      setIsExpanded(false);
-      return;
-    }
-
-    if (summary) {
-      setIsExpanded(true);
-      return;
-    }
-
-    if (!chainId) return;
+  const fetchSummary = useCallback(async () => {
+    if (isLoadingRef.current || summary || !chainId) return;
 
     isLoadingRef.current = true;
     setIsLoading(true);
@@ -56,24 +52,36 @@ const AiGeneratedSummary: FC<OwnProps> = ({ hasText, chainId, proposalId }) => {
 
       if (result.ok) {
         setSummary(result.text);
-        setIsExpanded(true);
       } else {
         setError(t(getErrorMessageKey(result.code)));
       }
-    } catch (err) {
-      console.error('[ai-generated-summary] generateProposalSummary threw:', err);
+    } catch {
       setError(t('ai summary error'));
     } finally {
       isLoadingRef.current = false;
       setIsLoading(false);
     }
-  }, [isExpanded, summary, chainId, proposalId, locale, t]);
+  }, [summary, chainId, proposalId, locale, t]);
+
+  const handleToggle = useCallback(() => {
+    setIsExpanded((prev) => !prev);
+  }, []);
+
+  useEffect(() => {
+    if (isExpanded && !prevExpandedRef.current) {
+      fetchSummary();
+      setTimeout(() => {
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+    prevExpandedRef.current = isExpanded;
+  }, [isExpanded, fetchSummary]);
 
   const renderedSummary = useMemo(() => {
     if (!summary) return null;
     try {
       return parseMarkdown(summary);
-    } catch (error) {
+    } catch {
       return <span>{summary}</span>;
     }
   }, [summary]);
@@ -81,49 +89,52 @@ const AiGeneratedSummary: FC<OwnProps> = ({ hasText, chainId, proposalId }) => {
   if (!hasText || !chainId) return null;
 
   return (
-    <div className="mt-4 mb-6">
-      <SubTitle text={t('ai generated summary')} />
+    <>
+      {buttonSlot && createPortal(
+        <RoundedButton onClick={handleToggle} className="font-handjet text-lg">
+          {isExpanded ? t('hide ai summary') : t('show ai summary')}
+        </RoundedButton>,
+        buttonSlot,
+      )}
 
-      {isLoading && (
-        <div className="mt-4 flex items-center justify-center gap-3">
-          <span className="inline-flex items-end gap-[3px]">
-            {Array.from({ length: 5 }, (_, i) => (
+      {(isExpanded || isLoading) && (
+        <div ref={sectionRef} className="mt-4 mb-6">
+          <SubTitle text={t('ai generated summary')} />
+
+          {isLoading && (
+            <div className="mt-4 flex items-center justify-center gap-3">
+              <span className="inline-flex items-end gap-[3px]">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <span
+                    key={i}
+                    className="w-[2px] h-4 rounded-sm bg-highlight origin-bottom"
+                    style={{ animation: `ai-bar-pulse 1.2s ease-in-out ${i * 0.12}s infinite` }}
+                  />
+                ))}
+              </span>
               <span
-                key={i}
-                className="w-[2px] h-4 rounded-sm bg-highlight origin-bottom"
-                style={{ animation: `ai-bar-pulse 1.2s ease-in-out ${i * 0.12}s infinite` }}
-              />
-            ))}
-          </span>
-          <span
-            className="font-handjet text-lg text-highlight"
-            style={{ animation: 'ai-text-glow 2s ease-in-out infinite' }}
-          >
-            {t('ai is thinking')}
-          </span>
+                className="font-handjet text-lg text-highlight"
+                style={{ animation: 'ai-text-glow 2s ease-in-out infinite' }}
+              >
+                {t('ai is thinking')}
+              </span>
+            </div>
+          )}
+
+          {error && !isLoading && (
+            <div className="mt-4 ml-4 font-sfpro text-sm text-red-400">
+              {error}
+            </div>
+          )}
+
+          {isExpanded && renderedSummary && (
+            <div className="mt-4 ml-4 font-sfpro text-base">
+              {renderedSummary}
+            </div>
+          )}
         </div>
       )}
-
-      {error && !isLoading && (
-        <div className="mt-4 ml-4 font-sfpro text-sm text-red-400">
-          {error}
-        </div>
-      )}
-
-      {isExpanded && renderedSummary && (
-        <div className="mt-4 ml-4 font-sfpro text-base">
-          {renderedSummary}
-        </div>
-      )}
-
-      <div className="mt-2 flex justify-center">
-        <PlusButton
-          size="base"
-          isOpened={isExpanded}
-          onClick={handleToggle}
-        />
-      </div>
-    </div>
+    </>
   );
 };
 
