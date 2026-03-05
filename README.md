@@ -1,8 +1,13 @@
 # [Validator Info](https://validatorinfo.com/)
-> Web3 Blockchain Explorer. Validator, Mining Pool, Token and Network Real-time Metrics. Interactive Onchain Dashboard.  
+> Web3 Blockchain Explorer. Validator, Mining Pool, Token and Network Real-time Metrics 
+
+> Interactive Onchain Dashboard.
+
+> Managed by a team of humans and AI.
+
+> Self-hosted on off the grid infrastructure in the Atlantic ocean.   
 
 ![Telegram-Storie](https://github.com/user-attachments/assets/65689ccc-e5a4-4ee2-8ee7-ffb86bde4233)
-
 
 ### | [Blog](https://validatorinfo.com/blog/) | [X](https://x.com/therealvalinfo) | [Docs](https://github.com/citizenweb3/validatorinfo/blob/main/docs/vinfo%20draft%20paper.md) | [Design Assets](https://github.com/citizenweb3/validatorinfo/tree/main/public) | [`BE GOOD` License](https://github.com/citizenweb3/validatorinfo/blob/main/LICENSE-BG) |
 
