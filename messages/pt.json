@@ -237,7 +237,11 @@
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Descobrir as Redes Blockchain e a sua Avaliação",
-    "description": "Criei este Network A-Z Directory para apresentar redes blockchain, incluindo estatísticas-chave como avaliação totalmente diluída, links importantes e símbolo do token. Esta lista é perfeita para desenvolvedores, stakers e exploradores multichain, permitindo que você encontre redes que correspondam aos seus interesses e, em seguida, estude seus perfis para explorar o potencial de staking. Com links diretos, você obterá uma visão clara de cada cadeia, ajudando a navegar no cenário web3 e a tomar decisões informadas."
+    "description": "Criei este Network A-Z Directory para apresentar redes blockchain, incluindo estatísticas-chave como avaliação totalmente diluída, links importantes e símbolo do token. Esta lista é perfeita para desenvolvedores, stakers e exploradores multichain, permitindo que você encontre redes que correspondam aos seus interesses e, em seguida, estude seus perfis para explorar o potencial de staking. Com links diretos, você obterá uma visão clara de cada cadeia, ajudando a navegar no cenário web3 e a tomar decisões informadas.",
+    "Active": "Ativas",
+    "All": "Todas",
+    "Stopped": "Parada",
+    "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós"
   },
   "NetworkProfileHeader": {
     "Tabs": {

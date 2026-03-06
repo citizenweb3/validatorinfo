@@ -10,15 +10,17 @@ interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
+  showAll?: boolean;
 }
 
-const NetworksList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1 }) => {
+const NetworksList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1, showAll }) => {
   const { chains: list, pages } = await ChainService.getAll(
     ecosystems,
     perPage * (currentPage - 1),
     perPage,
     sort.sortBy,
     sort.order,
+    showAll,
   );
 
   const chainIds = list.map((c) => c.id);

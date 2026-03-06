@@ -237,7 +237,11 @@
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",
-    "description": "I've created this Network A-Z Directory to showcase blockchain networks, including key statistics like fully diluted valuation, important links and token symbol. This list is perfect for developers, stakers, and multichain explorers, allowing you to find networks that match your interests and then study their profiles to explore staking potential. With direct links you'll get a clear snapshot of each chain, helping you navigate the web3 landscape and make informed decisions."
+    "description": "I've created this Network A-Z Directory to showcase blockchain networks, including key statistics like fully diluted valuation, important links and token symbol. This list is perfect for developers, stakers, and multichain explorers, allowing you to find networks that match your interests and then study their profiles to explore staking potential. With direct links you'll get a clear snapshot of each chain, helping you navigate the web3 landscape and make informed decisions.",
+    "Active": "Active",
+    "All": "All",
+    "Stopped": "Stopped",
+    "stoppedTooltip": "Network indexing is currently paused by us"
   },
   "NetworkProfileHeader": {
     "Tabs": {

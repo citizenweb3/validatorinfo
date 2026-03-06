@@ -1,27 +1,10 @@
 import { chainParamsArray } from '@/server/tools/chains/params';
 
 const excludeChains: string[] = [
-  // 'cosmoshub',
-  // 'celestia',
-  // 'bitcanna',
-  // 'likecoin',
-  // 'stride',
-  // 'uptick',
-  // 'gravitybridge',
-  // 'dymension',
-  // 'althea',
-  // 'union',
-  // 'axone',
-  // 'symphony-testnet',
-  // 'artela-testnet',
-  // 'quicksilver',
-  // 'osmosis',
-  // 'namada',
-  // 'govgen',
-  // 'bostrom',
-  // 'nillion-testnet',
-  // 'neutron',
-  // 'neutron-testnet',
+  'nillion',
+  'space-pussy',
+  'symphony-testnet',
+  'warden-testnet'
 ];
 
 const includeChains: string[] = [];

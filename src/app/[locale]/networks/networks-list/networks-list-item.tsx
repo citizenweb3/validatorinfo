@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import BaseTableRow from '@/components/common/table/base-table-row';
@@ -15,13 +16,21 @@ interface OwnProps {
 }
 
 const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
+  const t = await getTranslations('NetworksPage');
   const fdv = item?.name === 'ethereum-sepolia' || item?.name === 'warden-testnet' ? 0 : item?.tokenomics?.fdv;
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
 
   return (
     <BaseTableRow>
       <BaseTableCell className="group/avatar w-1/3 px-2 py-2 font-sfpro hover:text-highlight">
-        <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}/overview`} />
+        <div className="flex items-center justify-between">
+          <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}/overview`} />
+          {!item.supported && (
+            <Tooltip tooltip={t('stoppedTooltip')} direction="top">
+              <span className="font-handjet text-lg">{t('Stopped')}</span>
+            </Tooltip>
+          )}
+        </div>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         <div className="text-center">{item.params?.denom}</div>

@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import Networks from '@/app/networks/networks-list/networks';
+import NetworkSupportToggle from '@/app/networks/networks-list/network-support-toggle';
 import CollapsePageHeader from '@/components/common/collapse-page-header';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
@@ -27,6 +28,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
+  const showAll = q.show === 'all';
 
   return (
     <div>
@@ -41,12 +43,14 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
       </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <NetworkSupportToggle />
       <Networks
         page="HomePage"
         ecosystems={ecosystems}
         perPage={perPage}
         sort={{ sortBy, order }}
         currentPage={currentPage}
+        showAll={showAll}
       />
     </div>
   );

@@ -53,8 +53,12 @@ const getAll = async (
   take: number,
   sortBy: string = 'name',
   order: SortDirection = 'asc',
+  showAll: boolean = false,
 ): Promise<{ chains: ChainWithParamsAndTokenomics[]; pages: number }> => {
-  const where: ChainWhereInput | undefined = ecosystems.length ? { ecosystem: { in: ecosystems } } : undefined;
+  const where: ChainWhereInput | undefined = {
+    ...(ecosystems.length ? { ecosystem: { in: ecosystems } } : {}),
+    ...(!showAll ? { supported: true } : {}),
+  };
 
   const orderBy =
     sortBy === 'fdv'

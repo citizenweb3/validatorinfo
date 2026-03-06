@@ -105,6 +105,7 @@ model Chain {
   description      String?
   twitterFollowers Int?     @map("twitter_followers")
   tags             String[] @default([])
+  supported        Boolean  @default(true) @map("supported")
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
