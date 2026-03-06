@@ -24,7 +24,19 @@ const updateChainProposals = async (chainNames: string[]) => {
       const proposals = await chainMethods.getProposals(chainParams);
       const dbProposals = await db.proposal.findMany({
         where: { chainId: dbChain.id },
+        select: {
+          id: true,
+          proposalId: true,
+          status: true,
+          metadataUrl: true,
+        },
       });
+
+      const proposalsWithFullText = await db.proposal.findMany({
+        where: { chainId: dbChain.id, fullText: { not: null } },
+        select: { id: true },
+      });
+      const hasFullTextSet = new Set(proposalsWithFullText.map((p) => p.id));
       logInfo(`${chainName} proposalsCount: ${proposals.proposals.length}/${dbProposals.length}`);
 
       let proposalsLive = 0;
@@ -55,7 +67,7 @@ const updateChainProposals = async (chainNames: string[]) => {
           if (proposal.metadataUrl && dbProposal.metadataUrl !== proposal.metadataUrl) {
             backfillData.metadataUrl = proposal.metadataUrl;
           }
-          if (!dbProposal.fullText && proposal.fullText) {
+          if (!hasFullTextSet.has(dbProposal.id) && proposal.fullText) {
             backfillData.fullText = proposal.fullText;
           }
 
