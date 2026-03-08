@@ -39,6 +39,8 @@ export default async function ProposalLayout({
   const showVotesText = isAztecSignalingPhase ? t('show validator signals') : t('show validator votes');
   const hideVotesText = isAztecSignalingPhase ? t('hide validator signals') : t('hide validator votes');
 
+  const hasText = !!proposal?.description?.trim() || !!proposal?.fullText?.trim();
+
   const cursor =
     'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
 
@@ -54,7 +56,10 @@ export default async function ProposalLayout({
         }
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <ProposalInformation proposal={proposal} />
+      <div className="flex justify-between items-start">
+        <ProposalInformation proposal={proposal} />
+        <div id="ai-summary-button-slot" className="flex items-center mt-2 mr-5" />
+      </div>
 
       {isAztecNetwork(name) && proposal && (
         <AztecProposalDetails proposal={proposal} chainName={name} />
@@ -70,16 +75,17 @@ export default async function ProposalLayout({
             hideVotesText={hideVotesText}
             showAllProposalsText={t('show all proposals')}
             votesPath={votesPath}
-            hasFullText={!!proposal?.fullText}
+            hasText={hasText}
           />
         </div>
 
         {children}
         <ProposalFullText
+          description={proposal?.description ?? null}
           fullText={proposal?.fullText ?? null}
         />
       </ProposalTextProvider>
-      <AiGeneratedSummary hasFullText={!!proposal?.fullText} chainId={chain?.id ?? null} proposalId={proposalId} />
+      <AiGeneratedSummary hasText={hasText} chainId={chain?.id ?? null} proposalId={proposalId} />
     </>
   );
 }

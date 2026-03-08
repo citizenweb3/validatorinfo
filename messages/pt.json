@@ -237,7 +237,11 @@
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Descobrir as Redes Blockchain e a sua Avaliação",
-    "description": "Criei este Network A-Z Directory para apresentar redes blockchain, incluindo estatísticas-chave como avaliação totalmente diluída, links importantes e símbolo do token. Esta lista é perfeita para desenvolvedores, stakers e exploradores multichain, permitindo que você encontre redes que correspondam aos seus interesses e, em seguida, estude seus perfis para explorar o potencial de staking. Com links diretos, você obterá uma visão clara de cada cadeia, ajudando a navegar no cenário web3 e a tomar decisões informadas."
+    "description": "Criei este Network A-Z Directory para apresentar redes blockchain, incluindo estatísticas-chave como avaliação totalmente diluída, links importantes e símbolo do token. Esta lista é perfeita para desenvolvedores, stakers e exploradores multichain, permitindo que você encontre redes que correspondam aos seus interesses e, em seguida, estude seus perfis para explorar o potencial de staking. Com links diretos, você obterá uma visão clara de cada cadeia, ajudando a navegar no cenário web3 e a tomar decisões informadas.",
+    "Active": "Ativas",
+    "All": "Todas",
+    "Stopped": "Parada",
+    "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós"
   },
   "NetworkProfileHeader": {
     "Tabs": {
@@ -537,6 +541,10 @@
         "name": "Comitê",
         "hint": "Este validador faz parte do comitê da época atual? Os membros do comitê são selecionados para propor e atestar blocos"
       },
+      "Rank": {
+        "name": "Classificação",
+        "hint": "Classificação do validador, com base na quantidade de poder de voto"
+      },
       "Governance": {
         "name": "Governança",
         "hint": "Pontuação de governança do validador em 100. Baseado em sua participação em eventos importantes"
@@ -830,6 +838,8 @@
   "ValidatorNetworksPage": {
     "title": "Perfil de validador: Redes Suportadas",
     "description": "A aba Networks oferece uma visão abrangente de todas as redes blockchain suportadas por este validador, apresentando uma tabela com estatísticas-chave, como APR esperado, comissões, valor total protegido, tempo de atividade e delegadores ativos. Isso é ideal para os stakers que buscam a melhor rede ou para aqueles curiosos sobre o alcance do validador, permitindo que você compare o desempenho entre as cadeias e escolha o melhor local para atingir seus objetivos de staking. Para informações mais detalhadas, confira nosso Diretório de Redes A-Z. Essas estatísticas são cruciais para entender o desempenho do validador em diferentes ecossistemas, ajudando você a tomar decisões informadas no mundo multichain.",
+    "Validator": "Validador",
+    "Node": "N\u00f3",
     "Table": {
       "Network": {
         "name": "Rede",
@@ -1330,6 +1340,8 @@
     "link to full proposal": "link para a proposta completa",
     "show proposal text": "Mostrar Texto da Proposta",
     "hide proposal text": "Ocultar Texto da Proposta",
+    "show ai summary": "Mostrar Resumo IA",
+    "hide ai summary": "Ocultar Resumo IA",
     "voting period": "Período de votação",
     "show all proposals": "Mostrar todas as propostas",
     "votes": "Votos",
@@ -1379,12 +1391,15 @@
         "hint": "Número da rodada de governança"
       }
     },
+    "proposal description": "Descrição",
+    "proposal full text": "Texto Completo",
     "ai generated summary": "Resumo gerado por IA",
     "ai is thinking": "A IA está pensando",
     "ai summary error": "Falha ao gerar o resumo. Tente novamente mais tarde.",
     "ai summary rate limited": "Muitas solicitações. Aguarde um momento e tente novamente.",
     "ai summary timeout": "A geração do resumo expirou. Tente novamente.",
     "ai summary disabled": "O resumo por IA está indisponível no momento.",
+    "render error": "Não foi possível renderizar o texto da proposta",
     "votes-title": "Votos",
     "voting-progress-title": "Progresso da Votação",
     "for-label": "A Favor",

@@ -38,6 +38,8 @@ const ValidatorNetworksPage: NextPageWithLocale<PageProps> = async ({ params: { 
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
   const nodeStatus: string[] = !q.node_status ? [] : typeof q.node_status === 'string' ? [q.node_status] : q.node_status;
+  const view = (q.view as string) || '';
+  const networks: string[] = !q.networks ? [] : typeof q.networks === 'string' ? [q.networks] : q.networks;
 
   return (
     <div>
@@ -51,6 +53,8 @@ const ValidatorNetworksPage: NextPageWithLocale<PageProps> = async ({ params: { 
         nodeStatus={nodeStatus}
         perPage={perPage}
         currentPage={currentPage}
+        view={view}
+        networks={networks}
       />
     </div>
   );

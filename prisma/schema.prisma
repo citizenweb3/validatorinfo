@@ -105,6 +105,7 @@ model Chain {
   description      String?
   twitterFollowers Int?     @map("twitter_followers")
   tags             String[] @default([])
+  supported        Boolean  @default(true) @map("supported")
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
@@ -212,6 +213,7 @@ model Node {
   // calculated
   consensusAddress String @default("") @map("consensus_address")
   uptime           Float?
+  rank             Int?
 
   // Aztec committee tracking
   inCommittee    Boolean @default(false) @map("in_committee")
@@ -306,6 +308,7 @@ model Proposal {
   fullText         String?   @map("full_text")
   metadataUrl      String?   @map("metadata_url")
   fullTextAttempts Int       @default(0) @map("full_text_attempts")
+  aiSummary        Json?     @map("ai_summary")
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 

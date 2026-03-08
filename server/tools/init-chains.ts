@@ -29,6 +29,7 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     githubUrl: chain.githubUrl,
     hasValidators: chain.hasValidators,
     tags: chain.tags,
+    supported: true,
   };
 
   const existingChain = await db.chain.findUnique({
@@ -168,6 +169,12 @@ async function main() {
       await addNetwork(chainParamsUpdated);
       await sleep(3000);
     }
+
+    // Mark chains not in chainNames as unsupported
+    await db.chain.updateMany({
+      where: { name: { notIn: chainNames } },
+      data: { supported: false },
+    });
   } catch (e) {
     logError('Error: ', e);
   }

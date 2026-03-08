@@ -237,7 +237,11 @@
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",
-    "description": "I've created this Network A-Z Directory to showcase blockchain networks, including key statistics like fully diluted valuation, important links and token symbol. This list is perfect for developers, stakers, and multichain explorers, allowing you to find networks that match your interests and then study their profiles to explore staking potential. With direct links you'll get a clear snapshot of each chain, helping you navigate the web3 landscape and make informed decisions."
+    "description": "I've created this Network A-Z Directory to showcase blockchain networks, including key statistics like fully diluted valuation, important links and token symbol. This list is perfect for developers, stakers, and multichain explorers, allowing you to find networks that match your interests and then study their profiles to explore staking potential. With direct links you'll get a clear snapshot of each chain, helping you navigate the web3 landscape and make informed decisions.",
+    "Active": "Active",
+    "All": "All",
+    "Stopped": "Stopped",
+    "stoppedTooltip": "Network indexing is currently paused by us"
   },
   "NetworkProfileHeader": {
     "Tabs": {
@@ -537,6 +541,10 @@
         "name": "Committee",
         "hint": "Is this validator part of the current epoch committee? Committee members are selected to propose and attest blocks"
       },
+      "Rank": {
+        "name": "Rank",
+        "hint": "Validator rank, based on the amount of voting power"
+      },
       "Governance": {
         "name": "Governance",
         "hint": "Governance score of the validator out of a 100. Based on their participation in key life events"
@@ -830,6 +838,8 @@
   "ValidatorNetworksPage": {
     "title": "Validator Profile: Supported Networks",
     "description": "The Networks tab provides a comprehensive view of all the blockchain networks supported by this validator, featuring a table with key stats like expected APR, commissions, total value secured, uptime, and active delegators. This is ideal for stakers looking for the best network or those curious about the validator's reach, allowing you to compare performance across chains and choose the best spot for your staking goals. For more detailed information, check out our Network A-Z Directory. These stats are crucial for understanding the validator's performance across ecosystems, helping you make informed decisions in the multichain world.",
+    "Validator": "Validator",
+    "Node": "Node",
     "Table": {
       "Network": {
         "name": "Network",
@@ -1338,6 +1348,8 @@
     "link to full proposal": "Link to full Proposal",
     "show proposal text": "Show Proposal Text",
     "hide proposal text": "Hide Proposal Text",
+    "show ai summary": "Show AI Summary",
+    "hide ai summary": "Hide AI Summary",
     "voting period": "Voting Period",
     "show all proposals": "Show All Proposals",
     "votes": "Votes",
@@ -1388,12 +1400,15 @@
       }
     },
     "votes-title": "Votes",
+    "proposal description": "Description",
+    "proposal full text": "Full Text",
     "ai generated summary": "AI Generated Summary",
     "ai is thinking": "AI is thinking",
     "ai summary error": "Failed to generate summary. Please try again later.",
     "ai summary rate limited": "Too many requests. Please wait a moment and try again.",
     "ai summary timeout": "Summary generation timed out. Please try again.",
     "ai summary disabled": "AI summary is currently unavailable.",
+    "render error": "Unable to render proposal text",
     "voting-progress-title": "Voting Progress",
     "for-label": "For",
     "against-label": "Against",

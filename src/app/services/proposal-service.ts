@@ -2,10 +2,10 @@ import { Proposal, ProposalStatus } from '@prisma/client';
 import db from '@/db';
 import { SortDirection } from '@/server/types';
 
-export type ProposalListItem = Omit<Proposal, 'fullText'>;
+export type ProposalListItem = Omit<Proposal, 'fullText' | 'aiSummary'>;
 
 const getListByChainId = async (chainId: number) => {
-  return db.proposal.findMany({ where: { chainId }, omit: { fullText: true } });
+  return db.proposal.findMany({ where: { chainId }, omit: { fullText: true, aiSummary: true } });
 };
 
 const getPastProposalsByChainId = async (
@@ -32,7 +32,7 @@ const getPastProposalsByChainId = async (
     skip,
     take,
     orderBy: { [sortBy]: order },
-    omit: { fullText: true },
+    omit: { fullText: true, aiSummary: true },
   });
 
   const count = await db.proposal.count({ where: where });
@@ -53,7 +53,7 @@ const getProposalById = async (chainId: number, proposalId: string): Promise<Pro
 const getListByChainName = async (chainName: string) => {
   const chain = await db.chain.findUnique({ where: { name: chainName } });
   if (!chain) return [];
-  return db.proposal.findMany({ where: { chainId: chain.id }, omit: { fullText: true } });
+  return db.proposal.findMany({ where: { chainId: chain.id }, omit: { fullText: true, aiSummary: true } });
 };
 
 const getProposalByChainNameAndId = async (
@@ -85,7 +85,7 @@ const getLiveProposalsByChainId = async (chainId: number) => {
       },
     },
     orderBy: { votingEndTime: 'asc' },
-    omit: { fullText: true },
+    omit: { fullText: true, aiSummary: true },
   });
 };
 
@@ -94,8 +94,21 @@ const getProposalsWithStats = async (chainId: number) => {
   return db.proposal.findMany({
     where: { chainId },
     orderBy: { submitTime: 'desc' },
-    omit: { fullText: true },
+    omit: { fullText: true, aiSummary: true },
   });
+};
+
+const saveAiSummary = async (
+  chainId: number,
+  proposalId: string,
+  locale: string,
+  summary: string,
+): Promise<void> => {
+  await db.$executeRaw`
+    UPDATE proposals
+    SET ai_summary = COALESCE(ai_summary, '{}'::jsonb) || ${JSON.stringify({ [locale]: summary })}::jsonb
+    WHERE chain_id = ${chainId} AND proposal_id = ${proposalId}
+  `;
 };
 
 const ProposalService = {
@@ -106,6 +119,7 @@ const ProposalService = {
   getProposalByChainNameAndId,
   getLiveProposalsByChainId,
   getProposalsWithStats,
+  saveAiSummary,
 };
 
 export default ProposalService;

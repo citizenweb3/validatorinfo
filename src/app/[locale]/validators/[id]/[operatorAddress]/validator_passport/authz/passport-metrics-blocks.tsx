@@ -99,7 +99,7 @@ const PassportMetricsBlocks: FC<OwnProps> = async ({ node }) => {
             dataClassName={cardValueClass}
             isPercents
           />
-          <MetricsCardItem title={t('validator rank')} data="N/A" className={cardClass} dataClassName={cardValueClass} />
+          <MetricsCardItem title={t('validator rank')} data={node.rank != null ? `#${node.rank}` : 'N/A'} className={cardClass} dataClassName={cardValueClass} />
           <MetricsCardItem
             title={t('proposals created')}
             data="N/A"

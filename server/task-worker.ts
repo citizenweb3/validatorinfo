@@ -46,6 +46,7 @@ import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
 import updateProposalTexts from '@/server/jobs/update-proposal-texts';
+import updateValidatorRanks from '@/server/jobs/update-validator-ranks';
 import updateValidatorsAztecLogos from '@/server/jobs/update-validators-aztec-logos';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
@@ -143,6 +144,9 @@ async function runTask() {
         break;
       case 'update-delegators-amount':
         await updateDelegatorsAmount(chains);
+        break;
+      case 'update-validator-ranks':
+        await updateValidatorRanks();
         break;
       case 'update-average-delegation':
         await updateAverageDelegation(chains);

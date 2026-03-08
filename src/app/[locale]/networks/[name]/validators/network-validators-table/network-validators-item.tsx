@@ -59,6 +59,11 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item, isAztec }) => {
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
+          <div className="text-center">{item.rank ?? 'N/A'}</div>
+        </Link>
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
+        <Link href={nodeLink}>
           <Tooltip tooltip={tokenDelegatorShares?.toLocaleString() ?? ''}>
             <div className="text-center">{tokenDelegatorShares ? formatCash(tokenDelegatorShares) : ''}</div>
           </Tooltip>

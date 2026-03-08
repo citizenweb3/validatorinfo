@@ -53,8 +53,12 @@ const getAll = async (
   take: number,
   sortBy: string = 'name',
   order: SortDirection = 'asc',
+  showAll: boolean = false,
 ): Promise<{ chains: ChainWithParamsAndTokenomics[]; pages: number }> => {
-  const where: ChainWhereInput | undefined = ecosystems.length ? { ecosystem: { in: ecosystems } } : undefined;
+  const where: ChainWhereInput | undefined = {
+    ...(ecosystems.length ? { ecosystem: { in: ecosystems } } : {}),
+    ...(!showAll ? { supported: true } : {}),
+  };
 
   const orderBy =
     sortBy === 'fdv'
@@ -225,6 +229,7 @@ const getAztecValidatorsWithNodes = async (
         delegatorsAmount: 0,
         consensusAddress: '',
         uptime: null,
+        rank: null,
         inCommittee: false,
         committeeEpoch: null,
         validator: {
@@ -355,6 +360,9 @@ const getAztecValidatorsWithNodes = async (
     } else if (sortBy === 'uptime') {
       aVal = a.uptime || 0;
       bVal = b.uptime || 0;
+    } else if (sortBy === 'rank') {
+      aVal = a.rank ?? Number.MAX_SAFE_INTEGER;
+      bVal = b.rank ?? Number.MAX_SAFE_INTEGER;
     } else if (sortBy === 'moniker') {
       aVal = a.moniker || '';
       bVal = b.moniker || '';
@@ -578,6 +586,9 @@ const getChainValidatorsWithNodes = async (
     } else if (sortBy === 'uptime') {
       aVal = a.uptime || 0;
       bVal = b.uptime || 0;
+    } else if (sortBy === 'rank') {
+      aVal = a.rank ?? Number.MAX_SAFE_INTEGER;
+      bVal = b.rank ?? Number.MAX_SAFE_INTEGER;
     } else {
       aVal = a[sortBy as keyof typeof a] || '';
       bVal = b[sortBy as keyof typeof b] || '';
