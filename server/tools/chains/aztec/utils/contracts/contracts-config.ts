@@ -10,7 +10,12 @@ import ROLLUP_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/ab
 import ROLLUP_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/ROLLUP_ABI.json';
 import STAKING_REGISTRY_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/STAKING_REGISTRY_ABI.json';
 import TOKEN_ABI_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/TOKEN_ABI.json';
+import db from '@/db';
+import logger from '@/logger';
+import { L1ContractAddresses } from '@/server/tools/chains/aztec/utils/get-l1-contract-addresses';
 import { aztecMainnet, aztecTestnet } from '@/server/tools/chains/aztec/utils/contracts/l1-contracts';
+
+const { logWarn, logError } = logger('contracts-config');
 
 export type AztecChainName = keyof typeof contracts;
 
@@ -26,6 +31,29 @@ export const getL1: Record<string, string> = {
 export const contracts = {
   aztec: aztecMainnet,
   'aztec-testnet': aztecTestnet,
+};
+
+export const getContracts = async (chainName: AztecChainName): Promise<L1ContractAddresses> => {
+  try {
+    const chain = await db.chain.findFirst({
+      where: { name: chainName },
+      include: { params: true },
+    });
+
+    if (chain?.params?.l1ContractsAddresses) {
+      try {
+        return JSON.parse(chain.params.l1ContractsAddresses) as L1ContractAddresses;
+      } catch {
+        logError(`${chainName}: Invalid JSON in l1ContractsAddresses, using fallback`);
+      }
+    }
+
+    logWarn(`${chainName}: No L1 contract addresses in DB, using hardcoded fallback`);
+  } catch (e: any) {
+    logWarn(`${chainName}: Failed to read L1 contracts from DB (${e.message}), using hardcoded fallback`);
+  }
+
+  return contracts[chainName];
 };
 
 export const tokenAbis = {
