@@ -99,6 +99,7 @@ jobs:
         if: steps.check.outputs.blocked != 'true'
         timeout-minutes: 30
         run: |
+          rm -rf .next
           if [ -f node_modules/.yarn-integrity ]; then
             echo "node_modules cached, skipping install"
           else
