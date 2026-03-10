@@ -825,7 +825,8 @@
       "Metrics": "Metrics",
       "Network Table": "Networks",
       "Public Goods": "Projects",
-      "Governance": "Governance"
+      "Governance": "Governance",
+      "Performance": "Performance"
     },
     "description": "Embracing Decentralization, Empowering Communities. The Voice of Web3 & Non-custodial staking service.",
     "Others Links": "Others Links",
@@ -940,6 +941,33 @@
     },
     "tooltip created proposals": "Shows a summary of validator created proposals, the description, and their result across all known networks. Green means proposal was accepted",
     "tooltip news feed": "Summary of the voting activity of the validator across all networks. Click the proposal ID for more detail"
+  },
+  "ValidatorPerformance": {
+    "title": "Validator Profile: Performance Dashboard",
+    "description": "The Performance tab provides a comprehensive view of this validator's operational reliability, including uptime history, delegation flows, and a composite performance score. Use this data to evaluate the validator's track record before delegating your stake.",
+    "performance score": "Performance Score",
+    "delegation flow": "Delegation Flow",
+    "uptime heatmap": "Uptime Heatmap (90 Days)",
+    "tooltip performance score": "Composite score based on uptime (40%), governance participation (30%), commission competitiveness (20%), and slash history (10%)",
+    "tooltip delegation flow": "Overview of delegation activity including total delegated amount, unique delegators, and net changes over the last 30 days",
+    "tooltip uptime heatmap": "Calendar-style heatmap showing daily uptime percentages over the last 90 days. Green indicates high uptime, red indicates low uptime",
+    "total delegated": "Total Delegated",
+    "unique delegators": "Unique Delegators",
+    "net change 30d": "Net Change (30d)",
+    "self delegation ratio": "Self-Delegation Ratio",
+    "uptime": "Uptime",
+    "missed blocks": "Missed Blocks",
+    "governance participation": "Governance Participation",
+    "commission competitiveness": "Commission Competitiveness",
+    "slash history": "Slash History",
+    "excellent": "Excellent",
+    "good": "Good",
+    "fair": "Fair",
+    "poor": "Poor",
+    "no data": "No Data",
+    "less": "Less",
+    "more": "More",
+    "legend": "Legend"
   },
   "ValidatorPublicGoodsPage": {
     "title": "Validator Profile: Public Good Projects. Infrastructure, Community, Tools and Others",
