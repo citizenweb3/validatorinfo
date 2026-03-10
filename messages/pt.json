@@ -166,7 +166,9 @@
       "Compare": "Comparar",
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
-      "Analyze": "Analise"
+      "Analyze": "Analise",
+      "Calculator": "Calculadora",
+      "Simulator": "Simulador"
     },
     "ConsolePanel": {
       "Get started": {
@@ -234,6 +236,44 @@
     "downloading validators": "Descarregamento de validadores...",
     "please choose network": "Escolha uma Rede",
     "not supported yet": "Ainda não suportado"
+  },
+  "StakingSimulator": {
+    "Metadata": {
+      "title": "Simulador de Recompensas de Staking"
+    },
+    "title": "Simulador de Recompensas de Staking",
+    "description": "Simule recompensas de staking em várias redes. Ajuste o valor, duração e capitalização para comparar retornos projetados.",
+    "Stake Amount": "Valor do Stake",
+    "Staking Duration": "Duração do Staking",
+    "Select Networks": "Selecionar Redes",
+    "networks selected": "redes selecionadas",
+    "Search networks": "Pesquisar redes",
+    "No networks found": "Nenhuma rede encontrada",
+    "Remove": "Remover",
+    "Compounding": "Capitalização",
+    "Simple": "Simples",
+    "Compound": "Composto",
+    "Showing projections for": "Mostrando projeções para",
+    "networks over": "redes durante",
+    "compounding": "capitalização",
+    "simple": "simples",
+    "Select networks to see projections": "Selecione redes para ver projeções",
+    "Estimated Reward": "Recompensa Estimada",
+    "APR": "APR",
+    "Invalid amount": "Valor inválido",
+    "View": "Ver",
+    "30 days": "30 dias",
+    "90 days": "90 dias",
+    "180 days": "180 dias",
+    "1 year": "1 ano",
+    "2 years": "2 anos",
+    "Table": {
+      "Network": "Rede",
+      "APR": "APR Atual",
+      "Estimated Reward": "Recompensa Est.",
+      "Reward USD": "Recompensa (USD)",
+      "Total Return": "Retorno Total %"
+    }
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Descobrir as Redes Blockchain e a sua Avaliação",

@@ -46,6 +46,11 @@ export const validatorsTabs: TabOptions[] = [
   { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
 ];
 
+export const calculatorTabs: TabOptions[] = [
+  { name: 'Calculator', href: '/stakingcalculator' },
+  { name: 'Simulator', href: '/stakingcalculator/simulator' },
+];
+
 export const aboutTabs: TabOptions[] = [
   { name: 'Staking', href: '/about/staking', icon: icons.StakingIcon, iconHovered: icons.StakingIconHovered },
   { name: 'Partners', href: '/about/partners', icon: icons.PartnersIcon, iconHovered: icons.PartnersIconHovered },

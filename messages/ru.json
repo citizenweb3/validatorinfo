@@ -166,7 +166,9 @@
       "Compare": "Сравнение",
       "ValidatorInfo": "ВалидаторИнфо",
       "Rumors": "Слухи",
-      "Analyze": "Анализ"
+      "Analyze": "Анализ",
+      "Calculator": "Калькулятор",
+      "Simulator": "Симулятор"
     },
     "ConsolePanel": {
       "Get started": {
@@ -234,6 +236,44 @@
     "downloading validators": "Загрузка Валидаторов...",
     "please choose network": "Пожалуйста Выберете Сеть",
     "not supported yet": "Пока не поддерживается"
+  },
+  "StakingSimulator": {
+    "Metadata": {
+      "title": "Симулятор доходности стейкинга"
+    },
+    "title": "Симулятор доходности стейкинга",
+    "description": "Симулируйте доходность стейкинга в различных сетях. Настройте сумму, продолжительность и капитализацию для сравнения прогнозируемой доходности.",
+    "Stake Amount": "Сумма стейкинга",
+    "Staking Duration": "Продолжительность стейкинга",
+    "Select Networks": "Выбрать сети",
+    "networks selected": "сетей выбрано",
+    "Search networks": "Поиск сетей",
+    "No networks found": "Сети не найдены",
+    "Remove": "Удалить",
+    "Compounding": "Капитализация",
+    "Simple": "Простой",
+    "Compound": "Сложный",
+    "Showing projections for": "Показаны прогнозы для",
+    "networks over": "сетей за",
+    "compounding": "с капитализацией",
+    "simple": "без капитализации",
+    "Select networks to see projections": "Выберите сети для просмотра прогнозов",
+    "Estimated Reward": "Расчётная награда",
+    "APR": "APR",
+    "Invalid amount": "Некорректная сумма",
+    "View": "Просмотр",
+    "30 days": "30 дней",
+    "90 days": "90 дней",
+    "180 days": "180 дней",
+    "1 year": "1 год",
+    "2 years": "2 года",
+    "Table": {
+      "Network": "Сеть",
+      "APR": "Текущий APR",
+      "Estimated Reward": "Расч. награда",
+      "Reward USD": "Награда (USD)",
+      "Total Return": "Общий возврат %"
+    }
   },
   "NetworksPage": {
     "title": "Каталог сетей A-Z: Изучайте сети и их показатели",

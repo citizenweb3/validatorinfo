@@ -166,7 +166,9 @@
       "Compare": "Compare",
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
-      "Analyze": "Analyze"
+      "Analyze": "Analyze",
+      "Calculator": "Calculator",
+      "Simulator": "Simulator"
     },
     "ConsolePanel": {
       "Get started": {
@@ -234,6 +236,44 @@
     "downloading validators": "Downloading Validators...",
     "please choose network": "Please Choose a Network",
     "not supported yet": "Not Supported Yet"
+  },
+  "StakingSimulator": {
+    "Metadata": {
+      "title": "Staking Rewards Simulator"
+    },
+    "title": "Staking Rewards Simulator",
+    "description": "Simulate staking rewards across multiple networks. Adjust stake amount, duration, and compounding to compare projected returns.",
+    "Stake Amount": "Stake Amount",
+    "Staking Duration": "Staking Duration",
+    "Select Networks": "Select Networks",
+    "networks selected": "networks selected",
+    "Search networks": "Search networks",
+    "No networks found": "No networks found",
+    "Remove": "Remove",
+    "Compounding": "Compounding",
+    "Simple": "Simple",
+    "Compound": "Compound",
+    "Showing projections for": "Showing projections for",
+    "networks over": "networks over",
+    "compounding": "compounding",
+    "simple": "simple",
+    "Select networks to see projections": "Select networks to see projections",
+    "Estimated Reward": "Estimated Reward",
+    "APR": "APR",
+    "Invalid amount": "Invalid amount",
+    "View": "View",
+    "30 days": "30 days",
+    "90 days": "90 days",
+    "180 days": "180 days",
+    "1 year": "1 year",
+    "2 years": "2 years",
+    "Table": {
+      "Network": "Network",
+      "APR": "Current APR",
+      "Estimated Reward": "Est. Reward",
+      "Reward USD": "Reward (USD)",
+      "Total Return": "Total Return %"
+    }
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",
