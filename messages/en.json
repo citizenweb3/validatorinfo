@@ -967,7 +967,8 @@
     "no data": "No Data",
     "less": "Less",
     "more": "More",
-    "legend": "Legend"
+    "legend": "Legend",
+    "demo banner": "Demo: The data shown below is placeholder data for demonstration purposes. Real metrics will be available soon."
   },
   "ValidatorPublicGoodsPage": {
     "title": "Validator Profile: Public Good Projects. Infrastructure, Community, Tools and Others",

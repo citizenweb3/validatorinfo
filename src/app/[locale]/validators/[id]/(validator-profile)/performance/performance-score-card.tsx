@@ -14,11 +14,25 @@ interface OwnProps {
   breakdown: ScoreBreakdown;
 }
 
-const getScoreColor = (score: number): string => {
-  if (score >= 80) return '#4FB848';
-  if (score >= 60) return '#E5C46B';
-  if (score >= 40) return '#F3B101';
-  return '#EB1616';
+const getScoreColorClass = (score: number): string => {
+  if (score >= 80) return 'text-secondary';
+  if (score >= 60) return 'text-dottedLine';
+  if (score >= 40) return 'text-oldPalette-yellow';
+  return 'text-red';
+};
+
+const getScoreBgClass = (score: number): string => {
+  if (score >= 80) return 'bg-secondary';
+  if (score >= 60) return 'bg-dottedLine';
+  if (score >= 40) return 'bg-oldPalette-yellow';
+  return 'bg-red';
+};
+
+const getScoreStrokeClass = (score: number): string => {
+  if (score >= 80) return 'stroke-secondary';
+  if (score >= 60) return 'stroke-dottedLine';
+  if (score >= 40) return 'stroke-oldPalette-yellow';
+  return 'stroke-red';
 };
 
 const CircularProgress: FC<{ score: number; size?: number }> = ({ score, size = 120 }) => {
@@ -26,7 +40,8 @@ const CircularProgress: FC<{ score: number; size?: number }> = ({ score, size = 
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (score / 100) * circumference;
-  const color = getScoreColor(score);
+  const strokeClass = getScoreStrokeClass(score);
+  const textClass = getScoreColorClass(score);
 
   return (
     <div className="relative inline-flex items-center justify-center">
@@ -42,7 +57,7 @@ const CircularProgress: FC<{ score: number; size?: number }> = ({ score, size = 
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke="#272727"
+          className="stroke-table_header"
           strokeWidth={strokeWidth}
         />
         <circle
@@ -50,7 +65,7 @@ const CircularProgress: FC<{ score: number; size?: number }> = ({ score, size = 
           cy={size / 2}
           r={radius}
           fill="none"
-          stroke={color}
+          className={strokeClass}
           strokeWidth={strokeWidth}
           strokeDasharray={circumference}
           strokeDashoffset={offset}
@@ -59,7 +74,7 @@ const CircularProgress: FC<{ score: number; size?: number }> = ({ score, size = 
         />
       </svg>
       <div className="absolute flex flex-col items-center">
-        <span className="font-handjet text-3xl" style={{ color }}>{score}</span>
+        <span className={`font-handjet text-3xl ${textClass}`}>{score}</span>
         <span className="text-xs">/100</span>
       </div>
     </div>
@@ -112,11 +127,8 @@ const PerformanceScoreCard: FC<OwnProps> = ({ breakdown }) => {
                 aria-label={`${factor.label}: ${factor.score}/100`}
               >
                 <div
-                  className="h-full rounded-full transition-all"
-                  style={{
-                    width: `${factor.score}%`,
-                    backgroundColor: getScoreColor(factor.score),
-                  }}
+                  className={`h-full rounded-full transition-all ${getScoreBgClass(factor.score)}`}
+                  style={{ width: `${factor.score}%` }}
                 />
               </div>
             </div>
