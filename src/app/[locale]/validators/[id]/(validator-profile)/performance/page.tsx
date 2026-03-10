@@ -55,13 +55,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
 
   // TODO(#548): Use a dedicated service method to fetch only needed fields (commission, delegatorsAmount)
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(
-    validatorId,
-    [],
-    [],
-    0,
-    Number.MAX_SAFE_INTEGER,
-    'prettyName',
-    'asc',
+    validatorId, [], [], 0, Number.MAX_SAFE_INTEGER, 'prettyName', 'asc',
   );
 
   let totalDelegators = 0;
@@ -119,7 +113,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
             <SubTitle text={t('delegation flow')} size="h2" />
           </ToolTip>
           <div className="mt-6">
-            {/* TODO(#548): Replace placeholder delegation values with real data */}
+            {/* TODO(#548): Replace placeholder delegation values (totalDelegated, netDelegationChange, selfDelegationRatio) with real data */}
             <DelegationFlowWidget
               totalDelegated={'—'}
               uniqueDelegators={totalDelegators}

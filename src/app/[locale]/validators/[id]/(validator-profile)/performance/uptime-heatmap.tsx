@@ -87,7 +87,7 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
     <div className="relative">
       <div ref={gridRef} className="flex gap-1" role="grid" aria-label={t('uptime heatmap')}>
         {weeks.map((week, weekIdx) => (
-          <div key={weekIdx} className="flex flex-col gap-1" role="row">
+          <div key={week[0]?.date ?? weekIdx} className="flex flex-col gap-1" role="row">
             {week.map((day, dayIdx) => {
               const globalIndex = weekIdx * 7 + dayIdx;
               const level = getUptimeLevel(day.uptime);
