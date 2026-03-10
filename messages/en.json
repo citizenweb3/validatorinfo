@@ -693,6 +693,38 @@
       "Networks": "Networks",
       "Ecosystems": "Ecosystems",
       "Metrics": "Metrics"
+    },
+    "ComparisonTable": {
+      "name": "Validator",
+      "nameHint": "Validator name",
+      "totalStake": "Total Stake",
+      "totalStakeHint": "Total amount of tokens staked across all networks",
+      "commission": "Commission",
+      "commissionHint": "Average commission rate across all networks",
+      "uptime": "Uptime",
+      "uptimeHint": "Average uptime percentage across all networks",
+      "networks": "Networks",
+      "networksHint": "Number of networks the validator operates on",
+      "governance": "Governance",
+      "governanceHint": "Governance participation rate based on voted proposals",
+      "health": "Health",
+      "healthHint": "Overall validator health based on uptime and activity",
+      "noResults": "No validators match the current filters"
+    },
+    "Health": {
+      "excellent": "Excellent",
+      "good": "Good",
+      "atRisk": "At Risk",
+      "inactive": "Inactive"
+    },
+    "Filters": {
+      "ecosystems": "Ecosystems",
+      "commission": "Commission Rate",
+      "commissionMin": "Minimum commission",
+      "commissionMax": "Maximum commission",
+      "uptimeMin": "Minimum Uptime",
+      "activeOnly": "Active Only",
+      "openFilters": "Open filters"
     }
   },
   "ComparisonPage": {

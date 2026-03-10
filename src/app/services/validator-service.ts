@@ -12,6 +12,19 @@ export type ValidatorWithNodes = Validator & {
   nodes: Node[];
 };
 
+export type ValidatorWithStats = Validator & {
+  nodes: (Node & { chain: { ecosystem: string; prettyName: string }; votes: { id: number }[] })[];
+  stats: {
+    totalStake: number;
+    avgCommission: number;
+    avgUptime: number | null;
+    networkCount: number;
+    ecosystems: string[];
+    governanceRate: number;
+    isActive: boolean;
+  };
+};
+
 export type validatorNodesWithChainData = Node & {
   chain: ChainWithParamsAndTokenomics;
   votingPower: number;
@@ -115,6 +128,92 @@ const getAll = async (
   const count = await db.validator.count({ where });
 
   return { validators: validatorsWithNodes, pages: Math.ceil(count / take) };
+};
+
+const getAllWithStats = async (
+  ecosystems: string[],
+  skip: number,
+  take: number,
+  sortBy: string = 'moniker',
+  order: SortDirection = 'asc',
+): Promise<{ validators: ValidatorWithStats[]; pages: number }> => {
+  logDebug(
+    `Get all validators with stats ecosystems: ${ecosystems}, skip: ${skip}, take: ${take}, sortBy: ${sortBy} - ${order}`,
+  );
+
+  const where = ecosystems.length
+    ? {
+        nodes: {
+          some: {
+            chain: {
+              ecosystem: {
+                in: ecosystems,
+              },
+            },
+          },
+        },
+      }
+    : undefined;
+
+  const validators = await db.validator.findMany({
+    where,
+    skip,
+    take,
+    orderBy:
+      sortBy === 'moniker'
+        ? { moniker: order }
+        : {
+            nodes: {
+              _count: order,
+            },
+          },
+    include: {
+      nodes: {
+        include: {
+          chain: {
+            select: { ecosystem: true, prettyName: true },
+          },
+          votes: {
+            select: { id: true },
+          },
+        },
+      },
+    },
+  });
+
+  const count = await db.validator.count({ where });
+
+  const validatorsWithStats: ValidatorWithStats[] = validators.map((v) => {
+    const activeNodes = v.nodes.filter((n) => !n.jailed && n.tokens !== '0');
+    const allNodes = v.nodes;
+
+    const totalStake = allNodes.reduce((sum, n) => sum + safeParseFloat(n.tokens), 0);
+    const commissions = allNodes.map((n) => safeParseFloat(n.rate));
+    const avgCommission = commissions.length > 0 ? commissions.reduce((a, b) => a + b, 0) / commissions.length : 0;
+
+    const uptimes = allNodes.filter((n) => n.uptime !== null).map((n) => n.uptime!);
+    const avgUptime = uptimes.length > 0 ? uptimes.reduce((a, b) => a + b, 0) / uptimes.length : null;
+
+    const ecosystemSet = new Set(allNodes.map((n) => n.chain.ecosystem));
+    const totalVotes = allNodes.reduce((sum, n) => sum + n.votes.length, 0);
+    const totalProposalOpportunities = allNodes.length > 0 ? allNodes.length * 10 : 1;
+    const governanceRate = Math.min((totalVotes / totalProposalOpportunities) * 100, 100);
+
+    return {
+      ...v,
+      stats: {
+        totalStake,
+        avgCommission,
+        avgUptime,
+        networkCount: allNodes.length,
+        ecosystems: Array.from(ecosystemSet),
+        governanceRate,
+        isActive: activeNodes.length > 0,
+      },
+    };
+  });
+
+  return { validators: validatorsWithStats, pages: Math.ceil(count / take) };
 };
 
 const getLite = async (
@@ -539,6 +638,7 @@ const validatorService = {
   getByIdentity,
   getById,
   getAll,
+  getAllWithStats,
   getLite,
   getList,
   getValidatorByIdentity,

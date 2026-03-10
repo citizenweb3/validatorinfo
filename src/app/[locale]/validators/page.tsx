@@ -24,9 +24,13 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
   const t = await getTranslations({ locale, namespace: 'ValidatorsPage' });
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'moniker') ?? 'moniker';
+  const sortBy = (q.sortBy as string) ?? 'moniker';
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
+  const commissionMin = q.commMin ? parseInt(q.commMin as string) : 0;
+  const commissionMax = q.commMax ? parseInt(q.commMax as string) : 100;
+  const uptimeMin = q.uptimeMin ? parseInt(q.uptimeMin as string) : 0;
+  const activeOnly = q.activeOnly === 'true';
 
   return (
     <div>
@@ -47,6 +51,10 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
         currentPage={currentPage}
         sort={{ sortBy, order }}
         ecosystems={ecosystems}
+        commissionMin={commissionMin}
+        commissionMax={commissionMax}
+        uptimeMin={uptimeMin}
+        activeOnly={activeOnly}
       />
     </div>
   );

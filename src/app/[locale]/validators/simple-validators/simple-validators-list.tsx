@@ -1,19 +1,33 @@
 import { FC } from 'react';
 
-import SimpleValidatorListItem from '@/app/validators/simple-validators/simple-validator-list-item';
 import TablePagination from '@/components/common/table/table-pagination';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
+
+import ValidatorComparisonTable from './validator-comparison-table';
 
 interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
   ecosystems: string[];
+  commissionMin: number;
+  commissionMax: number;
+  uptimeMin: number;
+  activeOnly: boolean;
 }
 
-const SimpleValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, ecosystems }) => {
-  const { validators: list, pages } = await validatorService.getAll(
+const SimpleValidatorsList: FC<OwnProps> = async ({
+  sort,
+  perPage,
+  currentPage = 1,
+  ecosystems,
+  commissionMin,
+  commissionMax,
+  uptimeMin,
+  activeOnly,
+}) => {
+  const { validators: list, pages } = await validatorService.getAllWithStats(
     ecosystems,
     perPage * (currentPage - 1),
     perPage,
@@ -22,16 +36,21 @@ const SimpleValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage =
   );
 
   return (
-    <tbody>
-      {list.map((item) => (
-        <SimpleValidatorListItem key={item.id} validator={item} />
-      ))}
-      <tr>
-        <td colSpan={5} className="pt-4">
-          <TablePagination pageLength={pages} />
-        </td>
-      </tr>
-    </tbody>
+    <div>
+      <ValidatorComparisonTable
+        validators={list}
+        sortBy={sort.sortBy}
+        order={sort.order}
+        ecosystems={ecosystems}
+        commissionMin={commissionMin}
+        commissionMax={commissionMax}
+        uptimeMin={uptimeMin}
+        activeOnly={activeOnly}
+      />
+      <div className="pt-4">
+        <TablePagination pageLength={pages} />
+      </div>
+    </div>
   );
 };
 

@@ -693,6 +693,38 @@
       "Metrics": "Métricos",
       "Ecosystems": "Ecossistemas",
       "Nodes": "Nodes"
+    },
+    "ComparisonTable": {
+      "name": "Validador",
+      "nameHint": "Nome do validador",
+      "totalStake": "Stake Total",
+      "totalStakeHint": "Quantidade total de tokens em stake em todas as redes",
+      "commission": "Comissão",
+      "commissionHint": "Taxa média de comissão em todas as redes",
+      "uptime": "Tempo Ativo",
+      "uptimeHint": "Porcentagem média de tempo ativo em todas as redes",
+      "networks": "Redes",
+      "networksHint": "Número de redes em que o validador opera",
+      "governance": "Governança",
+      "governanceHint": "Taxa de participação em governança baseada em propostas votadas",
+      "health": "Saúde",
+      "healthHint": "Saúde geral do validador baseada em tempo ativo e atividade",
+      "noResults": "Nenhum validador corresponde aos filtros atuais"
+    },
+    "Health": {
+      "excellent": "Excelente",
+      "good": "Bom",
+      "atRisk": "Em Risco",
+      "inactive": "Inativo"
+    },
+    "Filters": {
+      "ecosystems": "Ecossistemas",
+      "commission": "Taxa de Comissão",
+      "commissionMin": "Comissão mínima",
+      "commissionMax": "Comissão máxima",
+      "uptimeMin": "Tempo Ativo Mínimo",
+      "activeOnly": "Apenas Ativos",
+      "openFilters": "Abrir filtros"
     }
   },
   "ComparisonPage": {
