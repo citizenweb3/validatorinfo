@@ -51,7 +51,8 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
   if (isNaN(validatorId)) return notFound();
 
   const validator = await validatorService.getById(validatorId);
-  const validatorMoniker = validator ? validator.moniker : 'Validator';
+  if (!validator) return notFound();
+  const validatorMoniker = validator.moniker ?? 'Validator';
 
   // TODO(#548): Use a dedicated service method to fetch only needed fields (commission, delegatorsAmount)
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(
