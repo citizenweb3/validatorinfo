@@ -6,7 +6,6 @@ import SubTitle from '@/components/common/sub-title';
 import ToolTip from '@/components/common/tooltip';
 import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
-import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
 
 import DelegationFlowWidget from './delegation-flow-widget';
@@ -54,8 +53,6 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
   const validator = await validatorService.getById(validatorId);
   const validatorMoniker = validator ? validator.moniker : 'Validator';
 
-  const sortBy: string = 'prettyName';
-  const order: SortDirection = 'asc';
   // TODO(#548): Use a dedicated service method to fetch only needed fields (commission, delegatorsAmount)
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(
     validatorId,
@@ -63,8 +60,8 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
     [],
     0,
     Number.MAX_SAFE_INTEGER,
-    sortBy,
-    order,
+    'prettyName',
+    'asc',
   );
 
   let totalDelegators = 0;
