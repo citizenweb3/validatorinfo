@@ -7,7 +7,7 @@
 
 > Self-hosted on off the grid infrastructure in the Atlantic ocean
 
-> 25+ chains. Decentralzied Forum. P2P chat. Token Swap. Web3 Login. Live, interactive data indexed on our own hardware
+> 25+ chains. Decentralized Forum. P2P chat. Token Swap. Web3 Login. Live, interactive data indexed on our own hardware
 
 > Unique design. Interactive UI. Private dashboards. AI chatbot and more... 
 

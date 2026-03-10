@@ -64,5 +64,5 @@ export interface PagesProps {
     | 'AccountPage'
     | 'AccountPage.Passport'
     | 'AccountPage.Transactions'
-    | 'StakingSimulatorPage';
+    | 'StakingSimulator';
 }

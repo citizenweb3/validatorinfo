@@ -695,9 +695,26 @@ const getChainHealthMap = async (chainIds: number[]): Promise<Map<number, number
   return map;
 };
 
+const getTokenPricesByChainIds = async (chainIds: number[]): Promise<Map<number, number>> => {
+  if (chainIds.length === 0) return new Map();
+
+  const prices = await db.price.findMany({
+    where: { chainId: { in: chainIds } },
+    orderBy: { createdAt: 'desc' },
+    distinct: ['chainId'],
+  });
+
+  const map = new Map<number, number>();
+  for (const price of prices) {
+    map.set(price.chainId, price.value);
+  }
+  return map;
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
+  getTokenPricesByChainIds,
   getById,
   getChainValidatorsWithNodes,
   getListByEcosystem,

@@ -23,20 +23,29 @@ done
 PROMPT_HASH=$(echo -n "$PROMPT" | sha256sum | cut -d' ' -f1)
 START_MS=$(date +%s%3N)
 
+# Escape single quotes for SQL safety
+sql_escape() { echo "$1" | sed "s/'/''/g"; }
+AGENT_ESC=$(sql_escape "$AGENT")
+ROLE_ESC=$(sql_escape "$ROLE")
+TRIGGER_ESC=$(sql_escape "$TRIGGER")
+PROMPT_FILE_ESC=$(sql_escape "${PROMPT_FILE:-}")
+
 # Record start
 sqlite3 "$DB" "INSERT INTO agent_runs
   (run_id, agent, role, trigger, issue_number, prompt_file, prompt_hash, started_at)
   VALUES
-  ('$RUN_ID', '$AGENT', '$ROLE', '$TRIGGER', ${ISSUE_NUM:-NULL},
-   '${PROMPT_FILE:-}', '$PROMPT_HASH', datetime('now'))"
+  ('$RUN_ID', '$AGENT_ESC', '$ROLE_ESC', '$TRIGGER_ESC', ${ISSUE_NUM:-NULL},
+   '$PROMPT_FILE_ESC', '$PROMPT_HASH', datetime('now'))"
 
 # Log the prompt
 sqlite3 "$DB" "INSERT INTO agent_logs (run_id, log_type, content)
   VALUES ('$RUN_ID', 'prompt', '$(echo "$PROMPT" | sed "s/'/''/g")')"
 
+WORKFLOW_NAME_ESC=$(sql_escape "${WORKFLOW_NAME:-manual}")
+
 # Record workflow event
 sqlite3 "$DB" "INSERT INTO workflow_events (run_id, workflow, event, label, issue_number)
-  VALUES ('$RUN_ID', '${WORKFLOW_NAME:-manual}', 'started', 'agent:$AGENT', ${ISSUE_NUM:-NULL})"
+  VALUES ('$RUN_ID', '$WORKFLOW_NAME_ESC', 'started', 'agent:$AGENT_ESC', ${ISSUE_NUM:-NULL})"
 
 # Run Claude CLI (foreground, no background — background + wait causes signal issues)
 # Use stream-json to capture full transcript (tool calls, results, etc.)
@@ -71,10 +80,12 @@ else
   ERROR_MSG=$(cat /tmp/agent-stderr.log | head -500 | sed "s/'/''/g")
 fi
 
+STATUS_ESC=$(sql_escape "$STATUS")
+
 # Record finish
 sqlite3 "$DB" "UPDATE agent_runs SET
   finished_at = datetime('now'),
-  status = '$STATUS',
+  status = '$STATUS_ESC',
   exit_code = $EXIT_CODE,
   tokens_in = ${TOKENS_IN:-0},
   tokens_out = ${TOKENS_OUT:-0},
@@ -130,9 +141,9 @@ sqlite3 "$DB" "INSERT INTO agent_logs (run_id, log_type, content)
 
 # Record workflow completion
 sqlite3 "$DB" "INSERT INTO workflow_events (run_id, workflow, event, label, issue_number,
-  details) VALUES ('$RUN_ID', '${WORKFLOW_NAME:-manual}',
+  details) VALUES ('$RUN_ID', '$WORKFLOW_NAME_ESC',
   '$([ $EXIT_CODE -eq 0 ] && echo completed || echo failed)',
-  'agent:$AGENT', ${ISSUE_NUM:-NULL},
+  'agent:$AGENT_ESC', ${ISSUE_NUM:-NULL},
   '{\"duration_ms\": $DURATION, \"tokens\": ${TOKENS_IN:-0}, \"exit_code\": $EXIT_CODE}')"
 
 exit $EXIT_CODE

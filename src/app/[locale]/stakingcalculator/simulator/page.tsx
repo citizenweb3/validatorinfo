@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 
 import { getSimulatorChains } from '@/actions/simulator';
@@ -24,6 +24,7 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 const StakingSimulatorPage = async ({ params: { locale } }: Readonly<{ params: { locale: Locale } }>) => {
+  unstable_setRequestLocale(locale);
   const t = await getTranslations('StakingSimulator');
   const chains = await getSimulatorChains();
 
@@ -41,7 +42,7 @@ const StakingSimulatorPage = async ({ params: { locale } }: Readonly<{ params: {
       <TabList page="HomePage" tabs={calculatorTabs} />
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-6'} />
-      <Suspense fallback={<div className="p-4 font-handjet text-lg">Loading...</div>}>
+      <Suspense fallback={<div className="p-4 font-handjet text-lg">{t('Loading')}</div>}>
         <Simulator chains={chains} />
       </Suspense>
     </div>

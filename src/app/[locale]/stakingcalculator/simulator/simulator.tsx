@@ -10,11 +10,11 @@ import SummaryCards from '@/app/stakingcalculator/simulator/summary-cards';
 import Switch from '@/components/common/switch';
 
 const DURATION_OPTIONS = [
-  { value: 30, label: '30 days' },
-  { value: 90, label: '90 days' },
-  { value: 180, label: '180 days' },
-  { value: 365, label: '1 year' },
-  { value: 730, label: '2 years' },
+  { value: 30, label: '30 days' as const },
+  { value: 90, label: '90 days' as const },
+  { value: 180, label: '180 days' as const },
+  { value: 365, label: '1 year' as const },
+  { value: 730, label: '2 years' as const },
 ];
 
 const MAX_SELECTIONS = 5;
