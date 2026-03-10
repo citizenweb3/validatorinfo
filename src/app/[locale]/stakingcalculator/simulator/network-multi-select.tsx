@@ -47,12 +47,18 @@ const NetworkMultiSelect: FC<OwnProps> = ({ chains, selected, onChange, maxSelec
     [],
   );
 
+  const handleKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape') {
+      setIsOpen(false);
+    }
+  }, []);
+
   const selectedChains = useMemo(() => {
     return selected.map((id) => chains.find((c) => c.id === id)).filter(Boolean) as SimulatorChainData[];
   }, [selected, chains]);
 
   return (
-    <div ref={containerRef} className="relative" onBlur={handleBlur}>
+    <div ref={containerRef} className="relative" onBlur={handleBlur} onKeyDown={handleKeyDown}>
       <label className="mb-1 block text-base text-highlight" id="network-selector-label">
         {t('Select Networks')}
       </label>

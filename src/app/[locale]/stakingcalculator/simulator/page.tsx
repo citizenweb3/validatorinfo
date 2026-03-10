@@ -10,7 +10,7 @@ import { calculatorTabs, mainTabs } from '@/components/common/tabs/tabs-data';
 import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
-import Simulator from '@/app/stakingcalculator/simulator/simulator';
+import Simulator from './simulator';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
   const t = await getTranslations({ locale, namespace: 'StakingSimulator' });

@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl';
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { SimulatorChainData } from '@/actions/simulator';
-import ComparisonTable from '@/app/stakingcalculator/simulator/comparison-table';
-import NetworkMultiSelect from '@/app/stakingcalculator/simulator/network-multi-select';
-import SummaryCards from '@/app/stakingcalculator/simulator/summary-cards';
+import ComparisonTable from './comparison-table';
+import NetworkMultiSelect from './network-multi-select';
+import SummaryCards from './summary-cards';
 import Switch from '@/components/common/switch';
 
 const DURATION_OPTIONS = [
@@ -42,6 +42,12 @@ const Simulator: FC<OwnProps> = ({ chains }) => {
   useEffect(() => {
     setSelectedChainIds(topChainsByApr);
   }, [topChainsByApr]);
+
+  useEffect(() => {
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, []);
 
   const handleStakeChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.replace(/[^0-9.]/g, '');

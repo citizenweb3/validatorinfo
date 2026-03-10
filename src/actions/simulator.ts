@@ -6,7 +6,7 @@ export interface SimulatorChainData {
   id: number;
   name: string;
   prettyName: string;
-  logoUrl: string;
+  logoUrl: string | null;
   apr: number;
   tokenPrice: number;
   denom: string;
