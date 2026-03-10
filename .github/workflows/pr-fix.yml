@@ -12,10 +12,12 @@ concurrency:
 
 jobs:
   auto-fix:
-    # Trigger on: (1) changes_requested review, or (2) /fix comment on a PR
+    # Trigger on: (1) changes_requested review, or (2) /fix comment on a PR from repo members
     if: >-
-      (github.event_name == 'pull_request_review' && github.event.review.state == 'changes_requested') ||
-      (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '/fix'))
+      (github.event_name == 'pull_request_review' && github.event.review.state == 'changes_requested' &&
+       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.review.author_association)) ||
+      (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '/fix') &&
+       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
     runs-on: [self-hosted, builder]
     steps:
       - name: Get PR info for comment trigger
@@ -142,7 +144,13 @@ jobs:
           # Build prompt file (avoids shell injection from review text containing quotes)
           PROMPT_FILE="/tmp/fix-prompt-${ITERATION}.txt"
           cat > "$PROMPT_FILE" <<FIXPROMPTEOF
-          Fix the review feedback on this PR.
+          You are fixing review feedback on a PR in this repository.
+
+          IMPORTANT: You have full access to the repository filesystem.
+          1. Read CLAUDE.md for project conventions and path aliases
+          2. Read tsconfig.json to verify path aliases before changing imports
+          3. Read the FULL files you need to modify to understand context
+          4. Verify your changes against existing codebase patterns
           FIXPROMPTEOF
 
           if [ "${{ github.event_name }}" = "issue_comment" ]; then
@@ -157,12 +165,16 @@ jobs:
           CONFLICT RULE: If human and automated reviews contradict each other,
           ALWAYS follow the human review. Human is the final authority.
 
-          Rules: only fix what was requested. Follow CLAUDE.md.
+          Before fixing any reported issue, verify it is actually a real problem by reading the relevant files.
+          If a review comment is wrong (e.g. claims an import path is invalid but tsconfig.json confirms it exists),
+          do NOT make that change — skip it.
+
+          Rules: only fix what was requested and verified as real. Follow CLAUDE.md.
           Commit message: fix: address review feedback (auto-fix iteration ${ITERATION})
           Do NOT add any Co-Authored-By trailer to commit messages.
           FIXRULESEOF
 
-          cat "$PROMPT_FILE" | claude -p --model claude-opus-4-6 \
+          claude -p "$(cat "$PROMPT_FILE")" --model claude-opus-4-6 \
             --dangerously-skip-permissions \
             --output-format text
           EXIT_CODE=$?
