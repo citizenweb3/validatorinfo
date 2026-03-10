@@ -825,7 +825,8 @@
       "Metrics": "Métricas",
       "Network Table": "Redes",
       "Public Goods": "Projectos",
-      "Governance": "Governação"
+      "Governance": "Governação",
+      "Performance": "Desempenho"
     },
     "description": "Abraçando a Descentralização, Capacitando as Comunidades. A Voz da Web3 & Serviço de staking sem custódia.",
     "Others Links": "Outras ligações",
@@ -940,6 +941,33 @@
     },
     "tooltip created proposals": "Mostra um resumo das propostas criadas pelo validador, a descrição e o seu resultado em todas as redes conhecidas. Verde significa que a proposta foi aceite",
     "tooltip news feed": "Resumo da atividade de votação do validador em todas as redes. Clique no ID da proposta para obter mais pormenores"
+  },
+  "ValidatorPerformance": {
+    "title": "Perfil do Validador: Painel de Desempenho",
+    "description": "A aba Desempenho oferece uma visão abrangente da confiabilidade operacional deste validador, incluindo histórico de tempo de atividade, fluxos de delegação e uma pontuação de desempenho composta. Use esses dados para avaliar o histórico do validador antes de delegar sua participação.",
+    "performance score": "Pontuação de Desempenho",
+    "delegation flow": "Fluxo de Delegação",
+    "uptime heatmap": "Mapa de Calor de Tempo Ativo (90 Dias)",
+    "tooltip performance score": "Pontuação composta baseada em tempo ativo (40%), participação na governança (30%), competitividade de comissão (20%) e histórico de penalizações (10%)",
+    "tooltip delegation flow": "Visão geral da atividade de delegação, incluindo o montante total delegado, delegadores únicos e alterações líquidas nos últimos 30 dias",
+    "tooltip uptime heatmap": "Mapa de calor estilo calendário mostrando porcentagens diárias de tempo ativo nos últimos 90 dias. Verde indica alto tempo ativo, vermelho indica baixo",
+    "total delegated": "Total Delegado",
+    "unique delegators": "Delegadores Únicos",
+    "net change 30d": "Variação Líquida (30d)",
+    "self delegation ratio": "Taxa de Auto-Delegação",
+    "uptime": "Tempo Ativo",
+    "missed blocks": "Blocos Perdidos",
+    "governance participation": "Participação na Governança",
+    "commission competitiveness": "Competitividade de Comissão",
+    "slash history": "Histórico de Penalizações",
+    "excellent": "Excelente",
+    "good": "Bom",
+    "fair": "Razoável",
+    "poor": "Fraco",
+    "no data": "Sem Dados",
+    "less": "Menos",
+    "more": "Mais",
+    "legend": "Legenda"
   },
   "ValidatorPublicGoodsPage": {
     "title": "Perfil de validador: Projectos de utilidade pública. Infra-estruturas, Comunidade, Ferramentas e Outros",

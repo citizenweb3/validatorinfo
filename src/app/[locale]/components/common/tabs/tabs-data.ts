@@ -94,6 +94,12 @@ export const getValidatorProfileTabs = (id: number): TabOptions[] => {
       icon: icons.GovernanceIcon,
       iconHovered: icons.GovernanceIconHovered,
     },
+    {
+      name: 'Performance',
+      href: `/validators/${id}/performance`,
+      icon: icons.StatisticsIcon,
+      iconHovered: icons.StatisticsIconHovered,
+    },
   ];
 };
 
