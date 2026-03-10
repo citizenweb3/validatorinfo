@@ -48,8 +48,8 @@ CREATE TABLE IF NOT EXISTS workflow_events (
 );
 SQL
 fi
-chmod 666 /data/monitoring/monitoring.db
-chmod 777 /data/monitoring
+chmod 660 /data/monitoring/monitoring.db
+chmod 770 /data/monitoring
 
 # Fix ownership for everything pwuser needs
 chown -R pwuser:pwuser /home/pwuser/actions-runner
