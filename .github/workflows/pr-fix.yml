@@ -69,10 +69,18 @@ jobs:
         id: check
         run: |
           PR_NUMBER="${{ steps.pr-info.outputs.pr_number }}"
-          REVIEWER="${{ steps.pr-info.outputs.reviewer }}"
+
+          # Detect bot vs human by review content marker (no hardcoded usernames)
+          # Bot reviews contain "## AI Review Summary", human reviews don't
           IS_HUMAN="false"
-          if [ "$REVIEWER" != "m14mgn-hash" ] && [ "$REVIEWER" != "github-actions[bot]" ]; then
+          if [ "${{ github.event_name }}" = "issue_comment" ]; then
             IS_HUMAN="true"
+          else
+            REVIEW_BODY=$(gh api "repos/${{ github.repository }}/pulls/${PR_NUMBER}/reviews" \
+              --jq "[.[] | select(.id == ${{ github.event.review.id }})] | .[0].body // \"\"")
+            if ! echo "$REVIEW_BODY" | grep -q "## AI Review Summary"; then
+              IS_HUMAN="true"
+            fi
           fi
           echo "is_human=$IS_HUMAN" >> $GITHUB_OUTPUT
 
@@ -87,7 +95,7 @@ jobs:
 
           if [ "$IS_HUMAN" = "false" ] && [ "$COUNT" -ge "2" ]; then
             gh pr comment "$PR_NUMBER" \
-              --body "Auto-fix limit (2) for automated reviews. Manual fix required."
+              --body "Auto-fix limit (2) reached for automated reviews. Manual fix required."
             echo "blocked=true" >> $GITHUB_OUTPUT
           else
             echo "blocked=false" >> $GITHUB_OUTPUT
@@ -122,14 +130,14 @@ jobs:
             (run_id, agent, role, trigger, issue_number, started_at)
             VALUES ('$RUN_ID', 'pr-fixer', 'builder', 'review', $PR_NUMBER, datetime('now'))" 2>/dev/null || true
 
-          # Separate human and bot reviews
+          # Separate human and bot reviews by content marker (no hardcoded usernames)
           HUMAN_COMMENTS=$(gh pr view "$PR_NUMBER" \
             --json reviews \
-            -q '[.reviews[] | select(.author.login != "m14mgn-hash" and .author.login != "github-actions[bot]")] | map(.body) | join("\n---\n")')
+            -q '[.reviews[] | select(.body | contains("## AI Review Summary") | not)] | map(.body) | join("\n---\n")')
 
           BOT_COMMENTS=$(gh pr view "$PR_NUMBER" \
             --json reviews \
-            -q '[.reviews[] | select(.author.login == "m14mgn-hash" or .author.login == "github-actions[bot]")] | map(.body) | join("\n---\n")')
+            -q '[.reviews[] | select(.body | contains("## AI Review Summary"))] | map(.body) | join("\n---\n")')
 
           # Build prompt file (avoids shell injection from review text containing quotes)
           PROMPT_FILE="/tmp/fix-prompt-${ITERATION}.txt"
