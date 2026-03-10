@@ -51,11 +51,20 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
 
   const gridRef = useRef<HTMLDivElement>(null);
 
+  const TOOLTIP_HEIGHT = 60;
+
   const handleTooltipShow = useCallback((day: DayData, element: HTMLElement) => {
     const gridRect = gridRef.current?.getBoundingClientRect();
     const cellRect = element.getBoundingClientRect();
     if (!gridRect) return;
-    setTooltip({ day, x: cellRect.left - gridRect.left + cellRect.width / 2, y: cellRect.top - gridRect.top });
+    const relativeX = cellRect.left - gridRect.left + cellRect.width / 2;
+    const relativeY = cellRect.top - gridRect.top;
+    const showBelow = relativeY < TOOLTIP_HEIGHT;
+    setTooltip({
+      day,
+      x: relativeX,
+      y: showBelow ? relativeY + cellRect.height + 8 : relativeY - TOOLTIP_HEIGHT,
+    });
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -105,7 +114,7 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
       {tooltip && (
         <div
           className="pointer-events-none absolute z-[999] min-w-32 bg-primary px-3 py-2 text-center font-sfpro text-sm text-white shadow-button"
-          style={{ left: tooltip.x, top: tooltip.y - 60, transform: 'translateX(-50%)' }}
+          style={{ left: tooltip.x, top: tooltip.y, transform: 'translateX(-50%)' }}
         >
           <div className="font-handjet text-highlight">{tooltip.day.date}</div>
           <div>
