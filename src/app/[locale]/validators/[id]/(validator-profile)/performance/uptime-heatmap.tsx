@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { FC, useState, useCallback } from 'react';
+import { FC, useState, useCallback, useRef, useEffect } from 'react';
 
 interface DayData {
   date: string;
@@ -17,6 +17,14 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
   const t = useTranslations('ValidatorPerformance');
   const [tooltip, setTooltip] = useState<{ day: DayData; x: number; y: number } | null>(null);
   const [focusedIndex, setFocusedIndex] = useState<number>(0);
+  const cellRefs = useRef<Map<number, HTMLDivElement>>(new Map());
+
+  useEffect(() => {
+    const cell = cellRefs.current.get(focusedIndex);
+    if (cell && document.activeElement !== cell && cell.closest('[role="grid"]')?.contains(document.activeElement)) {
+      cell.focus();
+    }
+  }, [focusedIndex]);
 
   const uptimeColors: Record<string, string> = {
     excellent: 'bg-secondary',
@@ -71,6 +79,7 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
               return (
                 <div
                   key={day.date}
+                  ref={(el) => { if (el) cellRefs.current.set(globalIndex, el); }}
                   role="gridcell"
                   aria-label={`${day.date}: ${day.uptime !== null ? `${day.uptime.toFixed(1)}%` : t('no data')}`}
                   tabIndex={focusedIndex === globalIndex ? 0 : -1}

@@ -2,12 +2,14 @@ import { FC } from 'react';
 import { getTranslations } from 'next-intl/server';
 
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
+import { cn } from '@/utils/cn';
 
 interface OwnProps {
   totalDelegated: string;
   uniqueDelegators: number;
   netDelegationChange: number;
   selfDelegationRatio: number;
+  locale?: string;
 }
 
 const DelegationFlowWidget: FC<OwnProps> = async ({
@@ -15,6 +17,7 @@ const DelegationFlowWidget: FC<OwnProps> = async ({
   uniqueDelegators,
   netDelegationChange,
   selfDelegationRatio,
+  locale,
 }) => {
   const t = await getTranslations('ValidatorPerformance');
 
@@ -22,13 +25,7 @@ const DelegationFlowWidget: FC<OwnProps> = async ({
   const changeArrow = isPositiveChange ? '▲' : '▼';
   const changeColor = isPositiveChange ? 'text-secondary' : 'text-red';
 
-  const cardClass = `
-    pt-2.5
-    sm:min-h-[55px]
-    md:min-h-[63px]
-    lg:min-h-[75px]
-    xl:min-h-[80px]
-    2xl:min-h-[94px]`;
+  const cardClass = cn('pt-2.5 sm:min-h-[55px] md:min-h-[63px] lg:min-h-[75px] xl:min-h-[80px] 2xl:min-h-[94px]');
   const cardValueClass = 'mt-3';
 
   return (
@@ -42,7 +39,7 @@ const DelegationFlowWidget: FC<OwnProps> = async ({
         />
         <MetricsCardItem
           title={t('unique delegators')}
-          data={uniqueDelegators.toLocaleString()}
+          data={uniqueDelegators.toLocaleString(locale)}
           className={cardClass}
           dataClassName={cardValueClass}
         />
@@ -50,7 +47,7 @@ const DelegationFlowWidget: FC<OwnProps> = async ({
           title={t('net change 30d')}
           data={
             <span className={changeColor}>
-              {changeArrow} {Math.abs(netDelegationChange).toLocaleString()}
+              {changeArrow} {Math.abs(netDelegationChange).toLocaleString(locale)}
             </span>
           }
           className={cardClass}
