@@ -24,7 +24,6 @@ const DelegationFlowWidget: FC<OwnProps> = async ({
 
   const cardClass = `
     pt-2.5
-    sm:min-h-[45px]
     sm:min-h-[55px]
     md:min-h-[63px]
     lg:min-h-[75px]

@@ -967,7 +967,8 @@
     "no data": "Sem Dados",
     "less": "Menos",
     "more": "Mais",
-    "legend": "Legenda"
+    "legend": "Legenda",
+    "demo banner": "Demo: Os dados mostrados abaixo são dados de exemplo para fins de demonstração. Métricas reais estarão disponíveis em breve."
   },
   "ValidatorPublicGoodsPage": {
     "title": "Perfil de validador: Projectos de utilidade pública. Infra-estruturas, Comunidade, Ferramentas e Outros",

@@ -39,8 +39,8 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
     (_, i) => data.slice(i * 7, i * 7 + 7),
   );
 
-  const handleMouseEnter = useCallback((day: DayData, e: React.MouseEvent) => {
-    const rect = (e.target as HTMLElement).getBoundingClientRect();
+  const handleTooltipShow = useCallback((day: DayData, element: HTMLElement) => {
+    const rect = element.getBoundingClientRect();
     setTooltip({ day, x: rect.left + rect.width / 2, y: rect.top });
   }, []);
 
@@ -75,9 +75,9 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
                   aria-label={`${day.date}: ${day.uptime !== null ? `${day.uptime.toFixed(1)}%` : t('no data')}`}
                   tabIndex={focusedIndex === globalIndex ? 0 : -1}
                   className={`h-3 w-3 cursor-pointer rounded-sm ${uptimeColors[level]} transition-opacity hover:opacity-80 focus:outline-none focus:ring-1 focus:ring-highlight sm:h-4 sm:w-4`}
-                  onMouseEnter={(e) => handleMouseEnter(day, e)}
+                  onMouseEnter={(e) => handleTooltipShow(day, e.currentTarget)}
                   onMouseLeave={handleMouseLeave}
-                  onFocus={(e) => handleMouseEnter(day, e as unknown as React.MouseEvent)}
+                  onFocus={(e) => handleTooltipShow(day, e.currentTarget)}
                   onBlur={handleMouseLeave}
                   onKeyDown={(e) => handleKeyDown(e, globalIndex)}
                 />

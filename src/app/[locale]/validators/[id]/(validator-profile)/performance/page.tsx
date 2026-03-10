@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 import DelegationFlowWidget from '@/app/validators/[id]/(validator-profile)/performance/delegation-flow-widget';
 import PerformanceScoreCard from '@/app/validators/[id]/(validator-profile)/performance/performance-score-card';
@@ -26,15 +27,16 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const generateUptimeData = () => {
+const generatePlaceholderUptimeData = () => {
   const data = [];
   const now = new Date();
   for (let i = 89; i >= 0; i--) {
     const date = new Date(now);
     date.setDate(date.getDate() - i);
     const dateStr = date.toISOString().split('T')[0];
-    const hasData = Math.random() > 0.1;
-    const uptime = hasData ? 85 + Math.random() * 15 : null;
+    const seed = (i * 7 + 13) % 100;
+    const hasData = seed > 10;
+    const uptime = hasData ? 85 + (seed % 16) : null;
     const missedBlocks = hasData ? Math.floor((100 - (uptime ?? 100)) * 10) : 0;
     data.push({ date: dateStr, uptime, missedBlocks });
   }
@@ -45,6 +47,8 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
   const t = await getTranslations({ locale, namespace: 'ValidatorPerformance' });
 
   const validatorId = parseInt(id);
+  if (isNaN(validatorId)) return notFound();
+
   const validator = await validatorService.getById(validatorId);
   const validatorMoniker = validator ? validator.moniker : 'Validator';
 
@@ -67,7 +71,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
     }
   }
 
-  const uptimeData = generateUptimeData();
+  const uptimeData = generatePlaceholderUptimeData();
 
   const avgUptime = uptimeData.filter((d) => d.uptime !== null);
   const uptimeScore = avgUptime.length > 0
@@ -79,12 +83,16 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
     ? list.reduce((sum, n) => sum + (n.commission ?? 0), 0) / list.length
     : 0;
   const commissionScore = Math.round(Math.max(0, 100 - avgCommission * 100));
-  const slashScore = 95;
+  const slashScore = 0;
 
   return (
     <div className="mb-20">
       <PageTitle prefix={`${validatorMoniker}`} text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+
+      <div className="mx-4 mt-4 border border-dottedLine bg-table_header px-4 py-2 text-center text-sm text-dottedLine">
+        {t('demo banner')}
+      </div>
 
       <div className="mt-12 flex flex-col gap-16">
         <div>
@@ -111,10 +119,10 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
           </ToolTip>
           <div className="mt-6">
             <DelegationFlowWidget
-              totalDelegated={`$${(list.length * 125000).toLocaleString('en-US')}`}
+              totalDelegated={'—'}
               uniqueDelegators={totalDelegators}
-              netDelegationChange={Math.round(totalDelegators * 0.05)}
-              selfDelegationRatio={list.length > 0 ? 8.5 : 0}
+              netDelegationChange={0}
+              selfDelegationRatio={0}
             />
           </div>
         </div>
