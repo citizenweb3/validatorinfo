@@ -2,7 +2,7 @@ name: AI Code Review
 on:
   pull_request:
     types: [opened, synchronize]
-    branches: [dev]
+    branches: [dev, updates/dev-update]
 
 # New push to the same PR cancels the previous review (reviewing stale code is pointless)
 concurrency:

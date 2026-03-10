@@ -134,7 +134,7 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           BRANCH="${{ steps.branch.outputs.branch }}"
-          if [ "$(git log origin/dev..$BRANCH --oneline | wc -l)" -eq 0 ]; then
+          if [ "$(git log origin/updates/dev-update..$BRANCH --oneline | wc -l)" -eq 0 ]; then
             echo "No commits to push"
             exit 1
           fi
@@ -152,5 +152,5 @@ jobs:
           gh pr create \
             --title "feat: ${ISSUE_TITLE}" \
             --body "$PR_BODY" \
-            --base dev \
+            --base updates/dev-update \
             --head "$BRANCH"
