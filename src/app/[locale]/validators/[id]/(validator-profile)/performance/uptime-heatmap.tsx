@@ -26,6 +26,8 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
     }
   }, [focusedIndex]);
 
+  const UPTIME_THRESHOLDS = { excellent: 99, good: 95, fair: 90 } as const;
+
   const uptimeColors: Record<string, string> = {
     excellent: 'bg-secondary',
     good: 'bg-dottedLine',
@@ -36,9 +38,9 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
 
   const getUptimeLevel = (uptime: number | null): string => {
     if (uptime === null) return 'none';
-    if (uptime >= 99) return 'excellent';
-    if (uptime >= 95) return 'good';
-    if (uptime >= 90) return 'fair';
+    if (uptime >= UPTIME_THRESHOLDS.excellent) return 'excellent';
+    if (uptime >= UPTIME_THRESHOLDS.good) return 'good';
+    if (uptime >= UPTIME_THRESHOLDS.fair) return 'fair';
     return 'poor';
   };
 
@@ -47,9 +49,13 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
     (_, i) => data.slice(i * 7, i * 7 + 7),
   );
 
+  const gridRef = useRef<HTMLDivElement>(null);
+
   const handleTooltipShow = useCallback((day: DayData, element: HTMLElement) => {
-    const rect = element.getBoundingClientRect();
-    setTooltip({ day, x: rect.left + rect.width / 2, y: rect.top });
+    const gridRect = gridRef.current?.getBoundingClientRect();
+    const cellRect = element.getBoundingClientRect();
+    if (!gridRect) return;
+    setTooltip({ day, x: cellRect.left - gridRect.left + cellRect.width / 2, y: cellRect.top - gridRect.top });
   }, []);
 
   const handleMouseLeave = useCallback(() => {
@@ -70,7 +76,7 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
 
   return (
     <div className="relative">
-      <div className="flex gap-1" role="grid" aria-label={t('uptime heatmap')}>
+      <div ref={gridRef} className="flex gap-1" role="grid" aria-label={t('uptime heatmap')}>
         {weeks.map((week, weekIdx) => (
           <div key={weekIdx} className="flex flex-col gap-1" role="row">
             {week.map((day, dayIdx) => {
@@ -79,7 +85,7 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
               return (
                 <div
                   key={day.date}
-                  ref={(el) => { if (el) cellRefs.current.set(globalIndex, el); }}
+                  ref={(el) => { if (el) cellRefs.current.set(globalIndex, el); else cellRefs.current.delete(globalIndex); }}
                   role="gridcell"
                   aria-label={`${day.date}: ${day.uptime !== null ? `${day.uptime.toFixed(1)}%` : t('no data')}`}
                   tabIndex={focusedIndex === globalIndex ? 0 : -1}
@@ -98,7 +104,7 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
 
       {tooltip && (
         <div
-          className="pointer-events-none fixed z-[999] min-w-32 bg-primary px-3 py-2 text-center font-sfpro text-sm text-white shadow-button"
+          className="pointer-events-none absolute z-[999] min-w-32 bg-primary px-3 py-2 text-center font-sfpro text-sm text-white shadow-button"
           style={{ left: tooltip.x, top: tooltip.y - 60, transform: 'translateX(-50%)' }}
         >
           <div className="font-handjet text-highlight">{tooltip.day.date}</div>
