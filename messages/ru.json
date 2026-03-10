@@ -243,6 +243,18 @@
     "Stopped": "Остановлена",
     "stoppedTooltip": "В данный момент индексация сети нами приостановлена"
   },
+  "NetworkHealth": {
+    "title": "Обзор состояния сетей",
+    "Active Chains": "Активные сети",
+    "Avg APR": "Средний APR",
+    "Validators": "Валидаторы",
+    "Health": "Состояние",
+    "Healthy": "Здоровая",
+    "Degraded": "Нестабильная",
+    "Unhealthy": "Нездоровая",
+    "All Ecosystems": "Все экосистемы",
+    "No data": "Нет данных"
+  },
   "NetworkProfileHeader": {
     "Tabs": {
       "Governance": "Управление",
