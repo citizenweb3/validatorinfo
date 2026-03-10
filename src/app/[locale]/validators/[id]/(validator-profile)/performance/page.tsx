@@ -28,6 +28,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
+// TODO(#548): Replace with real uptime data from chain indexer
 const generatePlaceholderUptimeData = () => {
   const data = [];
   const now = new Date();
@@ -79,6 +80,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
     ? Math.round(avgUptime.reduce((sum, d) => sum + (d.uptime ?? 0), 0) / avgUptime.length)
     : 0;
 
+  // TODO(#548): Replace with real governance participation data
   const governanceScore = Math.min(100, Math.round(list.length * 12 + 20));
   const avgCommission = list.length > 0
     ? list.reduce((sum, n) => sum + (n.commission ?? 0), 0) / list.length
@@ -124,6 +126,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
               uniqueDelegators={totalDelegators}
               netDelegationChange={0}
               selfDelegationRatio={0}
+              locale={locale}
             />
           </div>
         </div>
