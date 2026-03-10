@@ -9,7 +9,7 @@ interface OwnProps {
   uniqueDelegators: number;
   netDelegationChange: number;
   selfDelegationRatio: number;
-  locale?: string;
+  locale: string;
 }
 
 const DelegationFlowWidget: FC<OwnProps> = async ({

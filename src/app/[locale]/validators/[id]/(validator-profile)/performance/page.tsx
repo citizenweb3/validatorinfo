@@ -29,14 +29,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 // TODO(#548): Replace with real uptime data from chain indexer
-const generatePlaceholderUptimeData = () => {
+const generatePlaceholderUptimeData = (validatorId: number) => {
   const data = [];
   const now = new Date();
   for (let i = 89; i >= 0; i--) {
     const date = new Date(now);
     date.setDate(date.getDate() - i);
     const dateStr = date.toISOString().split('T')[0];
-    const seed = (i * 7 + 13) % 100;
+    const seed = (i * 7 + 13 + validatorId * 3) % 100;
     const hasData = seed > 10;
     const uptime = hasData ? 85 + (seed % 16) : null;
     const missedBlocks = hasData ? Math.floor((100 - (uptime ?? 100)) * 10) : 0;
@@ -73,7 +73,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
     }
   }
 
-  const uptimeData = generatePlaceholderUptimeData();
+  const uptimeData = generatePlaceholderUptimeData(validatorId);
 
   const avgUptime = uptimeData.filter((d) => d.uptime !== null);
   const uptimeScore = avgUptime.length > 0
@@ -81,7 +81,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
     : 0;
 
   // TODO(#548): Replace with real governance participation data
-  const governanceScore = Math.min(100, Math.round(list.length * 12 + 20));
+  const governanceScore = 50;
   const avgCommission = list.length > 0
     ? list.reduce((sum, n) => sum + (n.commission ?? 0), 0) / list.length
     : 0;
