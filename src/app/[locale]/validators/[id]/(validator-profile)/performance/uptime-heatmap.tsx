@@ -16,7 +16,7 @@ interface OwnProps {
 const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
   const t = useTranslations('ValidatorPerformance');
   const [tooltip, setTooltip] = useState<{ day: DayData; x: number; y: number } | null>(null);
-  const [focusedIndex, setFocusedIndex] = useState<number>(-1);
+  const [focusedIndex, setFocusedIndex] = useState<number>(0);
 
   const uptimeColors: Record<string, string> = {
     excellent: 'bg-secondary',
@@ -100,7 +100,7 @@ const UptimeHeatmap: FC<OwnProps> = ({ data }) => {
             {t('missed blocks')}: {tooltip.day.missedBlocks}
           </div>
           <div className="text-xs">
-            {tooltip.day.uptime === null ? t('no data') : t(getUptimeLevel(tooltip.day.uptime))}
+            {t(getUptimeLevel(tooltip.day.uptime) === 'none' ? 'no data' : getUptimeLevel(tooltip.day.uptime))}
           </div>
         </div>
       )}

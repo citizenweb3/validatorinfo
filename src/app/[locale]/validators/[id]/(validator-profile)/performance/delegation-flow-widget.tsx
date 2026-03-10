@@ -42,7 +42,7 @@ const DelegationFlowWidget: FC<OwnProps> = async ({
         />
         <MetricsCardItem
           title={t('unique delegators')}
-          data={uniqueDelegators.toLocaleString('en-US')}
+          data={uniqueDelegators.toLocaleString()}
           className={cardClass}
           dataClassName={cardValueClass}
         />
@@ -50,7 +50,7 @@ const DelegationFlowWidget: FC<OwnProps> = async ({
           title={t('net change 30d')}
           data={
             <span className={changeColor}>
-              {changeArrow} {Math.abs(netDelegationChange).toLocaleString('en-US')}
+              {changeArrow} {Math.abs(netDelegationChange).toLocaleString()}
             </span>
           }
           className={cardClass}

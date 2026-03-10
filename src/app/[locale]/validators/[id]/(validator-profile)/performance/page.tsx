@@ -1,16 +1,17 @@
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import DelegationFlowWidget from '@/app/validators/[id]/(validator-profile)/performance/delegation-flow-widget';
-import PerformanceScoreCard from '@/app/validators/[id]/(validator-profile)/performance/performance-score-card';
-import UptimeHeatmap from '@/app/validators/[id]/(validator-profile)/performance/uptime-heatmap';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import ToolTip from '@/components/common/tooltip';
+import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
-import SubDescription from '@/components/sub-description';
+
+import DelegationFlowWidget from './delegation-flow-widget';
+import PerformanceScoreCard from './performance-score-card';
+import UptimeHeatmap from './uptime-heatmap';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -83,7 +84,7 @@ const ValidatorPerformancePage: NextPageWithLocale<PageProps> = async ({ params:
     ? list.reduce((sum, n) => sum + (n.commission ?? 0), 0) / list.length
     : 0;
   const commissionScore = Math.round(Math.max(0, 100 - avgCommission * 100));
-  const slashScore = 0;
+  const slashScore = 100;
 
   return (
     <div className="mb-20">
