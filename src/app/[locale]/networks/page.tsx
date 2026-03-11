@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
+import NetworkHealthOverview from '@/app/networks/network-health/network-health-overview';
 import Networks from '@/app/networks/networks-list/networks';
 import NetworkSupportToggle from '@/app/networks/networks-list/network-support-toggle';
 import CollapsePageHeader from '@/components/common/collapse-page-header';
@@ -28,6 +29,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
+  const selectedEcosystem = (q.ecosystem as string) || undefined;
   const showAll = q.show === 'all';
 
   return (
@@ -43,6 +45,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
       </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <NetworkHealthOverview selectedEcosystem={selectedEcosystem} searchParams={q} />
       <NetworkSupportToggle />
       <Networks
         page="HomePage"

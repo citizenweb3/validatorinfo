@@ -243,6 +243,18 @@
     "Stopped": "Parada",
     "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós"
   },
+  "NetworkHealth": {
+    "title": "Visão Geral da Saúde da Rede",
+    "Active Chains": "Redes Ativas",
+    "Avg APR": "APR Médio",
+    "Validators": "Validadores",
+    "Health": "Saúde",
+    "Healthy": "Saudável",
+    "Degraded": "Degradado",
+    "Unhealthy": "Não Saudável",
+    "All Ecosystems": "Todos os Ecossistemas",
+    "No data": "Sem dados"
+  },
   "NetworkProfileHeader": {
     "Tabs": {
       "Governance": "Governação",

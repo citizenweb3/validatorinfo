@@ -30,6 +30,16 @@ export type NetworkValidatorsWithNodes = Node & {
   missedSlotsAttestations: number | null;
 };
 
+export type EcosystemHealthData = {
+  ecosystem: string;
+  prettyName: string;
+  logoUrl: string;
+  activeChains: number;
+  averageApr: number | null;
+  totalValidators: number;
+  healthPercentage: number;
+};
+
 export type CommitteeMember = {
   operatorAddress: string;
   rewardAddress: string | null;
@@ -695,6 +705,71 @@ const getChainHealthMap = async (chainIds: number[]): Promise<Map<number, number
   return map;
 };
 
+const getEcosystemHealthOverview = async (): Promise<EcosystemHealthData[]> => {
+  const ecosystems = await db.ecosystem.findMany({
+    include: {
+      chains: {
+        where: { supported: true },
+        include: {
+          aprs: {
+            orderBy: { createdAt: 'desc' },
+            take: 1,
+          },
+        },
+      },
+    },
+    orderBy: { name: 'asc' },
+  });
+
+  const allChainIds = ecosystems.flatMap((e) => e.chains.map((c) => c.id));
+
+  const healthMap = await getChainHealthMap(allChainIds);
+
+  const validatorCounts = await db.node.groupBy({
+    by: ['chainId'],
+    where: {
+      chainId: { in: allChainIds },
+      validatorId: { not: null },
+    },
+    _count: { validatorId: true },
+  });
+  const validatorCountMap = new Map<number, number>();
+  for (const entry of validatorCounts) {
+    validatorCountMap.set(entry.chainId, entry._count.validatorId);
+  }
+
+  return ecosystems
+    .map((eco) => {
+      const chains = eco.chains;
+      const activeChains = chains.length;
+
+      const aprValues = chains
+        .map((c) => c.aprs[0]?.value)
+        .filter((v): v is number => v !== undefined && v !== null);
+      const averageApr =
+        aprValues.length > 0 ? aprValues.reduce((sum, v) => sum + v, 0) / aprValues.length : null;
+
+      const totalValidators = chains.reduce(
+        (sum, c) => sum + (validatorCountMap.get(c.id) || 0),
+        0,
+      );
+
+      const chainsWithHealth = chains.filter((c) => healthMap.has(c.id)).length;
+      const healthPercentage = activeChains > 0 ? (chainsWithHealth / activeChains) * 100 : 0;
+
+      return {
+        ecosystem: eco.name,
+        prettyName: eco.prettyName,
+        logoUrl: eco.logoUrl,
+        activeChains,
+        averageApr,
+        totalValidators,
+        healthPercentage,
+      };
+    })
+    .filter((eco) => eco.activeChains > 0);
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
@@ -705,6 +780,7 @@ const ChainService = {
   getAllLight,
   getCommitteeMembers,
   getChainHealthMap,
+  getEcosystemHealthOverview,
 };
 
 export default ChainService;

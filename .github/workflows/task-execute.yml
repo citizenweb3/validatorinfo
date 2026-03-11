@@ -1,0 +1,156 @@
+name: Agent Task Execution
+on:
+  issues:
+    types: [labeled]
+
+# Each issue gets its own concurrency group — new labels on the SAME issue
+# cancel the previous run, but different issues run in parallel
+concurrency:
+  group: agent-issue-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  route:
+    if: startsWith(github.event.label.name, 'agent:')
+    runs-on: ubuntu-latest
+    outputs:
+      runner: ${{ steps.pick.outputs.runner }}
+    steps:
+      - name: Pick runner by label
+        id: pick
+        env:
+          LABEL: ${{ github.event.label.name }}
+        run: |
+          case "$LABEL" in
+            agent:seo-vi|agent:seo-cw3|agent:biz-dev)
+              echo "runner=content" >> $GITHUB_OUTPUT
+              ;;
+            *)
+              echo "runner=builder" >> $GITHUB_OUTPUT
+              ;;
+          esac
+
+  execute:
+    needs: route
+    runs-on: [self-hosted, "${{ needs.route.outputs.runner }}"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+          clean: false
+
+      - name: Create branch
+        id: branch
+        run: |
+          BRANCH="agent/issue-${{ github.event.issue.number }}"
+          git checkout -b "$BRANCH"
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+
+      - name: Install dependencies and generate Prisma
+        timeout-minutes: 30
+        run: |
+          rm -rf .next
+          if [ -f node_modules/.yarn-integrity ]; then
+            echo "node_modules cached, skipping install"
+          else
+            yarn install --frozen-lockfile || yarn install
+          fi
+          npx prisma generate 2>/dev/null || true
+          npx prisma generate --schema=prisma/events/schema.prisma 2>/dev/null || true
+          npx playwright install chromium 2>/dev/null || true
+          printf "DATABASE_URL=%s\nEVENTS_DATABASE_URL=%s\n" "$DATABASE_URL" "$EVENTS_DATABASE_URL" > .env.local
+
+      - name: Determine role and execute
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WORKFLOW_NAME: task-execute
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          LABELS=$(gh issue view $ISSUE_NUMBER --json labels -q '.labels[].name')
+          BODY=$(gh issue view $ISSUE_NUMBER --json body -q '.body')
+
+          PROMPT_FILE=".claude/agents/fullstack.md"
+          ROLE="fullstack"
+          for R in seo-vi seo-cw3 biz-dev fullstack devops; do
+            if echo "$LABELS" | grep -q "agent:$R"; then
+              PROMPT_FILE=".claude/agents/${R}.md"
+              ROLE="$R"
+              break
+            fi
+          done
+
+          SYSTEM=$(cat "$PROMPT_FILE")
+
+          ./agents-tools/run-agent.sh \
+            --agent "$ROLE" --role "${{ needs.route.outputs.runner }}" --trigger issue \
+            --issue "$ISSUE_NUMBER" \
+            --prompt-file "$PROMPT_FILE" \
+            -- "${SYSTEM}
+
+          TASK: ${ISSUE_TITLE}
+          DETAILS: ${BODY}
+
+          Instructions:
+          1. Read CLAUDE.md for project conventions
+          2. Search codebase with DeepContext (index_codebase, then search_codebase) before writing any code
+          3. Read existing files in the area you will modify — match their patterns exactly
+          4. Implement the task following acceptance criteria and Code Style Rules from your prompt
+          5. If the task touches UI: you MUST verify visually before committing:
+             a. mkdir -p screenshots/
+             b. Start dev server and save its PID: yarn dev --port 3000 & echo \$! > /tmp/next-dev.pid
+             c. Wait for it: sleep 15
+             d. Take screenshot: npx playwright screenshot --browser chromium http://localhost:3000/en/<relevant-page> screenshots/issue-${ISSUE_NUMBER}.png
+             e. View the screenshot to confirm the UI looks correct
+             f. Stop the dev server using its saved PID: kill \$(cat /tmp/next-dev.pid) 2>/dev/null
+             CRITICAL: Do NOT use pkill, killall, or any command that kills processes by name.
+             These will kill the agent process itself. Only kill by specific PID.
+             If the dev server fails to start, write in Testing: 'Dev server failed: <reason>. Visual verification skipped.'
+             Do NOT invent fake screenshot URLs. Either attach a real path or say verification was not possible.
+          6. Run yarn lint before finishing
+          7. Write a PR description to .agent-pr-body.md (this file is gitignored, do NOT commit it) with this format:
+             **What:** [1 sentence]
+             **Why:** Closes #${ISSUE_NUMBER}
+             **How:** [bullet list of changes]
+             **Testing:** [what you verified: lint, build, Playwright screenshots if UI]
+             **Screenshot:** ![screenshot](screenshots/issue-${ISSUE_NUMBER}.png)
+             (only include Screenshot section if you actually took a Playwright screenshot)
+          8. Commit source code changes AND screenshots/ directory with message: feat: ${ISSUE_TITLE} (#${ISSUE_NUMBER})
+             Do NOT add any Co-Authored-By trailer to commit messages.
+             Do NOT commit .agent-pr-body.md
+          9. Do NOT create PR, it will be created in the next step"
+
+          if [ $? -ne 0 ]; then
+            echo "Agent failed. See monitoring.db for details."
+            exit 1
+          fi
+
+      - name: Create PR
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          BRANCH="${{ steps.branch.outputs.branch }}"
+          if [ "$(git log origin/updates/dev-update..$BRANCH --oneline | wc -l)" -eq 0 ]; then
+            echo "No commits to push"
+            exit 1
+          fi
+          git push origin "$BRANCH"
+
+          # Use agent-generated PR body if available, otherwise fallback
+          if [ -f .agent-pr-body.md ]; then
+            PR_BODY=$(cat .agent-pr-body.md)
+          else
+            PR_BODY="Closes #${ISSUE_NUMBER}
+
+          Auto-generated by AI Agent."
+          fi
+
+          gh pr create \
+            --title "feat: ${ISSUE_TITLE}" \
+            --body "$PR_BODY" \
+            --base updates/dev-update \
+            --head "$BRANCH"

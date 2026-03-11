@@ -243,6 +243,18 @@
     "Stopped": "Stopped",
     "stoppedTooltip": "Network indexing is currently paused by us"
   },
+  "NetworkHealth": {
+    "title": "Network Health Overview",
+    "Active Chains": "Active Chains",
+    "Avg APR": "Avg APR",
+    "Validators": "Validators",
+    "Health": "Health",
+    "Healthy": "Healthy",
+    "Degraded": "Degraded",
+    "Unhealthy": "Unhealthy",
+    "All Ecosystems": "All Ecosystems",
+    "No data": "No data"
+  },
   "NetworkProfileHeader": {
     "Tabs": {
       "Governance": "Governance",
