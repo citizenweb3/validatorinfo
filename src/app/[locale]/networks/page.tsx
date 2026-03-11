@@ -45,7 +45,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
       </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <NetworkHealthOverview selectedEcosystem={selectedEcosystem} />
+      <NetworkHealthOverview selectedEcosystem={selectedEcosystem} searchParams={q} />
       <NetworkSupportToggle />
       <Networks
         page="HomePage"

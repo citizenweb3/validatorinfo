@@ -23,7 +23,7 @@
 20) Nillion: Privacy-preserving computation layer using Multi-Party Computation (MPC) and blind computation
 21) Nomic: A Proof-of-Stake custody engine running alongside Bitcoin to bring native BTC to Cosmos
 22) Nym: Decentralized mixnet providing strong network-level privacy for any traffic
-23) Omsosis: The premier AMM and DeFi hub of the Cosmos ecosystem
+23) Osmosis: The premier AMM and DeFi hub of the Cosmos ecosystem
 24) Polkadot: Heterogeneous multi-chain network with shared security via parachains
 25) Quicksilver: Liquid staking protocol for the Cosmos ecosystem
 26) Quicksilver Testnet: Public testnet for Quicksilver Protocol
@@ -58,7 +58,7 @@
 20) Nillion: Privacy, Computation, MPC, Verifiable Computation, L1, Staking, PoS
 21) Nomic: Bridges, L1, Bitcoin DeFi, Cosmos Ecosystem, nBTC, Staking, PoS
 22) Nym: Privacy, Mixnet, L1, Cosmos Ecosystem, Anonymity Network, Staking, PoS
-23) Omsosis: DeFi, L1, Cosmos Ecosystem, AMM, DEX, IBC, Tendermint, Staking, PoS
+23) Osmosis: DeFi, L1, Cosmos Ecosystem, AMM, DEX, IBC, Tendermint, Staking, PoS
 24) Polkadot: Network, L1, Staking, Parachains, Substrate, PoS
 25) Quicksilver: L1, Liquid Staking, Cosmos Ecosystem, Staking Derivatives, Staking, PoS
 26) Quicksilver Testnet: Quicksilver Ecosystem, Testnet

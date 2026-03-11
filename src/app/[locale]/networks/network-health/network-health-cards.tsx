@@ -1,9 +1,7 @@
-'use client';
-
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { FC, useCallback } from 'react';
+import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { FC } from 'react';
 
 import { EcosystemHealthData } from '@/services/chain-service';
 import { cn } from '@/utils/cn';
@@ -11,6 +9,7 @@ import { cn } from '@/utils/cn';
 interface OwnProps {
   ecosystems: EcosystemHealthData[];
   selectedEcosystem?: string;
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 const getHealthStatus = (percentage: number): { color: string; label: 'Healthy' | 'Degraded' | 'Unhealthy' } => {
@@ -19,39 +18,35 @@ const getHealthStatus = (percentage: number): { color: string; label: 'Healthy' 
   return { color: '#EB1616', label: 'Unhealthy' };
 };
 
-const NetworkHealthCards: FC<OwnProps> = ({ ecosystems, selectedEcosystem }) => {
-  const t = useTranslations('NetworkHealth');
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+const buildCardHref = (
+  ecosystem: string,
+  selectedEcosystem: string | undefined,
+  searchParams: { [key: string]: string | string[] | undefined },
+): string => {
+  const params = new URLSearchParams();
 
-  const handleCardClick = useCallback(
-    (ecosystem: string) => {
-      const params = new URLSearchParams(searchParams.toString());
+  for (const [key, value] of Object.entries(searchParams)) {
+    if (key === 'ecosystem' || key === 'ecosystems' || key === 'p') continue;
+    if (Array.isArray(value)) {
+      value.forEach((v) => params.append(key, v));
+    } else if (value !== undefined) {
+      params.set(key, value);
+    }
+  }
 
-      if (selectedEcosystem === ecosystem) {
-        params.delete('ecosystem');
-        params.delete('ecosystems');
-      } else {
-        params.set('ecosystem', ecosystem);
-        params.delete('ecosystems');
-        params.append('ecosystems', ecosystem);
-      }
-      params.set('p', '1');
-      router.push(`${pathname}?${params.toString()}`, { scroll: false });
-    },
-    [selectedEcosystem, searchParams, router, pathname],
-  );
+  if (selectedEcosystem !== ecosystem) {
+    params.set('ecosystem', ecosystem);
+    params.append('ecosystems', ecosystem);
+  }
 
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent, ecosystem: string) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        handleCardClick(ecosystem);
-      }
-    },
-    [handleCardClick],
-  );
+  params.set('p', '1');
+
+  const qs = params.toString();
+  return qs ? `?${qs}` : '?p=1';
+};
+
+const NetworkHealthCards: FC<OwnProps> = async ({ ecosystems, selectedEcosystem, searchParams }) => {
+  const t = await getTranslations('NetworkHealth');
 
   return (
     <div className="mb-4">
@@ -59,24 +54,20 @@ const NetworkHealthCards: FC<OwnProps> = ({ ecosystems, selectedEcosystem }) => 
         {ecosystems.map((eco) => {
           const isSelected = selectedEcosystem === eco.ecosystem;
           const health = getHealthStatus(eco.healthPercentage);
+          const href = buildCardHref(eco.ecosystem, selectedEcosystem, searchParams);
 
           return (
-            <div
+            <Link
               key={eco.ecosystem}
-              role="button"
-              tabIndex={0}
+              href={href}
+              scroll={false}
               aria-label={`${eco.prettyName} ecosystem: ${eco.activeChains} active chains, ${eco.totalValidators} validators, health status ${t(health.label)}`}
               aria-pressed={isSelected}
-              onClick={() => handleCardClick(eco.ecosystem)}
-              onKeyDown={(e) => handleKeyDown(e, eco.ecosystem)}
               className={cn(
                 'flex min-w-[160px] cursor-pointer flex-col gap-1 rounded-sm border bg-card p-3 transition-all duration-200',
                 'hover:bg-bgHover hover:shadow-md',
                 'sm:min-w-[180px] md:min-w-[200px]',
-                {
-                  'border-highlight shadow-md': isSelected,
-                  'border-transparent': !isSelected,
-                },
+                isSelected ? 'border-highlight shadow-md' : 'border-transparent',
               )}
             >
               <div className="flex items-center gap-2">
@@ -110,7 +101,7 @@ const NetworkHealthCards: FC<OwnProps> = ({ ecosystems, selectedEcosystem }) => 
                 <div className="font-sfpro text-sm text-primary">{t('Validators')}</div>
                 <div className="text-right font-handjet text-lg">{eco.totalValidators.toLocaleString()}</div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
