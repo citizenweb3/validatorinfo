@@ -1,18 +1,17 @@
 export const aztecTestnet = {
-  registryAddress: '0x459498e6bf7967bad0966353b691ef4395432479',
-  feeAssetHandlerAddress: '0x36f39b866a2326a94a9ee2961008ea5ee9f04d7f',
-  rollupAddress: '0xebd99ff0ff6677205509ae73f93d0ca52ac85d67',
-  inboxAddress: '0xd7610c91d5869a40e229719d41de2ac6374789ed',
-  outboxAddress: '0x062e226f244536f5ab2b875cd28df4f5dbea8266',
-  feeJuiceAddress: '0x31785fdcbc5c5ccfb0726382132bca6343ee8652',
-  stakingAssetAddress: '0x139d2a7a0881e16332d7d1f8db383a4507e1ea7a',
-  feeJuicePortalAddress: '0x903bb16320a3ce16a9df880cfb8f2abd74261fa1',
-  coinIssuerAddress: '0xfe3dad94f934d7ec90158e4a378ad552e02e9e63',
-  rewardDistributorAddress: '0xa0122560afeec5ef45a950d5c49a3cc5c5549e2b',
-  governanceProposerAddress: '0xef1b0d8aaca52f70323cbb91b0103bce75e9c533',
-  governanceAddress: '0x1b5dad737609a548543ce32a71377900b5fd5584',
-  gseAddress: '0xfb243b9112bb65785a4a8edaf32529accf003614',
-  tokenAddress: '0x139d2a7a0881e16332d7D1F8DB383A4507E1Ea7A',
+  registryAddress: '0xa0bfb1b494fb49041e5c6e8c2c1be09cd171c6ba',
+  feeAssetHandlerAddress: '0x5602c39a6e9c5ace589f64f754927bcda4f4bfc9',
+  rollupAddress: '0xf6d0d42ace06829becb78c74f49879528fc632c1',
+  inboxAddress: '0xf1bb424ac888aa239f1e658b5bddabc65a1c94e6',
+  outboxAddress: '0x5fe63c32b7ca20445e813bdb1019f1ffc5f52376',
+  feeJuiceAddress: '0x762c132040fda6183066fa3b14d985ee55aa3c18',
+  stakingAssetAddress: '0x5595cb9ed193cac2c0bc5393313bc6115817954b',
+  feeJuicePortalAddress: '0xd3361019e40026ce8a9745c19e67fd3acc10d596',
+  coinIssuerAddress: '0xe05d0a62045b4237556c1ec423e59eea9a24eaee',
+  rewardDistributorAddress: '0x030d2780e70f085c31d490268d3900d4cea16606',
+  governanceProposerAddress: '0x01c7d4ca153748d2377968fef22894cb162e9480',
+  governanceAddress: '0xcaf7447721447b22cd0076ac7c63877c3afd329f',
+  gseAddress: '0xb6a38a51a6c1de9012f9d8ea9745ef957212eaac',
   stakingRegistryAddress: '0xc3860c45e5F0b1eF3000dbF93149756f16928ADB'
 };
 
@@ -29,6 +28,5 @@ export const aztecMainnet = {
   governanceProposerAddress: '0x06ef1dcf87e419c48b94a331b252819fadbd63ef',
   governanceAddress: '0x1102471eb3378fee427121c9efcea452e4b6b75e',
   gseAddress: '0xa92ecfd0e70c9cd5e5cd76c50af0f7da93567a4f',
-  tokenAddress: '0xA27EC0006e59f245217Ff08CD52A7E8b169E62D2',
   stakingRegistryAddress: '0x042dF8f42790d6943F41C25C2132400fd727f452',
 };
