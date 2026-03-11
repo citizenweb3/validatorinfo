@@ -1,0 +1,64 @@
+services:
+  agent-builder:
+    build: .
+    container_name: agent-builder
+    restart: unless-stopped
+    volumes:
+      - claude-data-builder:/root/.claude
+      - runner-data-builder:/home/pwuser/actions-runner
+      - ./workspace-builder:/root/workspace
+      - monitoring-data:/data/monitoring
+    environment:
+      - GITHUB_URL=${GITHUB_URL}
+      - GITHUB_RUNNER_TOKEN=${GITHUB_RUNNER_TOKEN_BUILDER}
+      - RUNNER_LABELS=self-hosted,builder
+      - RUNNER_NAME=agent-builder
+      - GH_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN}
+      - FIGMA_ACCESS_TOKEN=${FIGMA_ACCESS_TOKEN}
+      - DATABASE_URL=${DATABASE_URL}
+      - EVENTS_DATABASE_URL=${EVENTS_DATABASE_URL}
+      - CONTAINER_ROLE=builder
+      - CLAUDE_CODE_OAUTH_TOKEN=${CLAUDE_CODE_OAUTH_TOKEN}
+      - CLAUDE_ACCOUNT_UUID=${CLAUDE_ACCOUNT_UUID}
+      - CLAUDE_EMAIL=${CLAUDE_EMAIL}
+      - CLAUDE_ORG_UUID=${CLAUDE_ORG_UUID}
+      - WILDCARD_API_KEY=${WILDCARD_API_KEY}
+
+  agent-content:
+    build: .
+    container_name: agent-content
+    restart: unless-stopped
+    volumes:
+      - claude-data-content:/root/.claude
+      - runner-data-content:/home/pwuser/actions-runner
+      - ./workspace-content:/root/workspace
+      - monitoring-data:/data/monitoring
+      - twitter-profiles:/data/twitter-profiles
+    environment:
+      - GITHUB_URL=${GITHUB_URL}
+      - GITHUB_RUNNER_TOKEN=${GITHUB_RUNNER_TOKEN_CONTENT}
+      - RUNNER_LABELS=self-hosted,content
+      - RUNNER_NAME=agent-content
+      - GH_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN}
+      - TWITTER_API_KEY=${TWITTER_API_KEY}
+      - TWITTER_API_SECRET=${TWITTER_API_SECRET}
+      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
+      - TWITTER_ACCESS_TOKEN=${TWITTER_ACCESS_TOKEN}
+      - TWITTER_ACCESS_TOKEN_SECRET=${TWITTER_ACCESS_TOKEN_SECRET}
+      - CONTAINER_ROLE=content
+      - CLAUDE_CODE_OAUTH_TOKEN=${CLAUDE_CODE_OAUTH_TOKEN}
+      - CLAUDE_ACCOUNT_UUID=${CLAUDE_ACCOUNT_UUID}
+      - CLAUDE_EMAIL=${CLAUDE_EMAIL}
+      - CLAUDE_ORG_UUID=${CLAUDE_ORG_UUID}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHANNEL_ID=${TELEGRAM_CHANNEL_ID}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+      - DATABASE_URL=${DATABASE_URL}
+
+volumes:
+  claude-data-builder:
+  claude-data-content:
+  runner-data-builder:
+  runner-data-content:
+  monitoring-data:
+  twitter-profiles:

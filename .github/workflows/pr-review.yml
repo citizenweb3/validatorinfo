@@ -1,0 +1,116 @@
+name: AI Code Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [dev, updates/dev-update]
+
+# New push to the same PR cancels the previous review (reviewing stale code is pointless)
+concurrency:
+  group: pr-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: [self-hosted, builder]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          clean: false
+
+      - name: Review PR
+        run: |
+          DB="/data/monitoring/monitoring.db"
+          RUN_ID="${GITHUB_RUN_ID}"
+          START_MS=$(date +%s%3N)
+
+          # Log start
+          sqlite3 "$DB" "INSERT INTO agent_runs
+            (run_id, agent, role, trigger, started_at)
+            VALUES ('$RUN_ID', 'pr-reviewer', 'builder', 'pull_request', datetime('now'))" 2>/dev/null || true
+
+          # Save PR diff to a file for reference
+          gh pr diff ${{ github.event.pull_request.number }} > /tmp/pr-diff.patch
+
+          # Build prompt file (avoids shell injection from diff containing quotes)
+          REVIEW_PROMPT="/tmp/review-prompt.txt"
+          cat > "$REVIEW_PROMPT" <<'REVIEWEOF'
+          You are the Lead Review Agent reviewing PR changes in this repository.
+
+          IMPORTANT: You have full access to the repository filesystem. Before flagging any issue:
+          1. Read CLAUDE.md for project conventions and path aliases
+          2. Read tsconfig.json to verify path aliases before flagging import issues
+          3. Read the FULL files being changed (not just the diff) to understand context
+          4. Check existing patterns in the codebase before claiming something is wrong
+
+          The PR diff is saved at /tmp/pr-diff.patch — read it first, then verify against actual files.
+
+          Review checklist:
+          1. ALWAYS: code quality, bugs, security, architecture violations
+          2. IF try/catch present: check for silent failures
+          3. IF new types: analyze type design
+          4. IF PR > 200 lines: check simplification opportunities
+
+          Architecture rules to check:
+          - Database queries must go through service layer (src/app/services/), NEVER directly in route.ts
+          - API routes should only parse params, call service, return response
+          - Check if existing services were reused vs duplicated logic
+
+          Do NOT flag:
+          - Import paths that are valid per tsconfig.json aliases (verify before flagging!)
+          - Missing cn()/twMerge when className is a static string with no conditions
+          - Both cn() and twMerge are acceptable for conditional classes
+
+          Format: ## AI Review Summary
+          Use severity: [HIGH] blocking, [MED] should fix, [LOW] nice-to-have.
+          HIGH or MED = REQUEST CHANGES (triggers auto-fix). LOW = approve.
+          If no issues found, write a clean summary and approve.
+          REVIEWEOF
+
+          claude -p "$(cat "$REVIEW_PROMPT")" --model claude-opus-4-6 \
+            --dangerously-skip-permissions \
+            --output-format text \
+            > review.md
+          EXIT_CODE=$?
+
+          END_MS=$(date +%s%3N)
+          DURATION=$((END_MS - START_MS))
+          STATUS=$([ $EXIT_CODE -eq 0 ] && echo "success" || echo "error")
+
+          # Log finish
+          sqlite3 "$DB" "UPDATE agent_runs SET
+            finished_at = datetime('now'), status = '$STATUS',
+            exit_code = $EXIT_CODE, duration_ms = $DURATION
+            WHERE run_id = '$RUN_ID'" 2>/dev/null || true
+
+          # Log response
+          sqlite3 "$DB" "INSERT INTO agent_logs (run_id, log_type, content)
+            VALUES ('$RUN_ID', 'response', '$(head -500 review.md | sed "s/'/''/g")')" 2>/dev/null || true
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "::error::PR review failed"
+            exit 1
+          fi
+
+          # Review from a different account (REVIEW_TOKEN) to avoid self-review issue
+          # and to ensure the review event triggers pr-fix.yml
+          # Request changes for HIGH or MED issues, approve only for LOW or clean
+          PR_NUM="${{ github.event.pull_request.number }}"
+          if grep -qE '\[(HIGH|MED)\]' review.md; then
+            DECISION="request_changes"
+            GH_TOKEN="${{ secrets.REVIEW_TOKEN }}" gh pr review "$PR_NUM" \
+              --request-changes --body-file review.md
+          else
+            DECISION="approve"
+            GH_TOKEN="${{ secrets.REVIEW_TOKEN }}" gh pr review "$PR_NUM" \
+              --approve --body-file review.md
+          fi
+
+          # Log workflow event with decision
+          sqlite3 "$DB" "INSERT INTO workflow_events
+            (run_id, workflow, event, label, issue_number, details)
+            VALUES ('$RUN_ID', 'pr-review', '$DECISION', '',
+            ${{ github.event.pull_request.number }},
+            '{\"duration_ms\": $DURATION}')" 2>/dev/null || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
