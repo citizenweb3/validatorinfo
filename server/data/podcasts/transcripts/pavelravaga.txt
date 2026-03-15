@@ -1,0 +1,484 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/pavelravaga
+
+Episode name:
+Privacy in Crypto, Memes and Distribution with Pavel Ravaga
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of a citizen web three podcast. And today I have Pavel from Zano. Pavel, hi, welcome to the show.
+
+Pavel 
+Hey, hey everyone.
+
+Citizen Web3 
+Glad to have you on, So traditional question. I know it's a very, very, very, very simple, boring question, but please, I always ask my guests to introduce themselves for myself and for the listeners in a way they want to be introduced, you know, in the way what they want people to know about them. But if I can please ask you to include in your intro, maybe a small story of how you got to Web3 and what are you working on currently, if it's possible. Thank you.
+
+Pavel
+Sure, if I can start with the Web3 part, people tend to call Web3 the programmable blockchains. I believe this is the EVM, Solana, that kind of stuff. And I've been in privacy crypto mostly, so I'm not...
+
+exactly a Web3 person, but I took some solidity courses and I became interested in such a topic. And I think since 2020, I started doing smart contracts and Web3 development as well. And now what we are trying to do here in Zano and with other projects, we are trying to merge the fields of privacy and Web3. So this is probably makes me the person in between.
+
+the original old school hardcore cryptocurrency, know, the cypher punks, people who are against the government and try to stay off the radar and the very public, very people oriented web 3 development. I'm kind of in between.
+
+Citizen Web3 
+Sorry about this. always say the unmute button is my biggest enemy. You said one very interesting sentence that I want to dig. You cypher punks stay off the radar. This is interesting. Why do you think that? Why in your opinion cypher punks stay off the radar? I I'm going to be devil's advocate right now, but...
+
+I mean, I don't know who we call, for example, McAfee. Can we call him a cypher punk? don't know. mean, he was a very public person, right? But I don't know. Question to you. OK. OK. Was.
+
+Pavel
+I wouldn't. He is very public and open about his... I don't want to talk bad about the guy, but he was chilling to shitcoins for his personal gains. So that's not a cypherpunk idea. And I could probably explain why it is important for an average person without going into extremes. And know, the tin-head foil theories, I'm not gonna go there.
+
+Citizen Web3 
+Of course. Yes. Yes.
+
+Pavel 
+But for the same reason, you don't post your bank statement online for the same reason you need to have privacy. And some people say like, I got nothing to hide, yet they don't do it because like, why?
+
+Citizen Web3 
+But do you think that privacy is only for cypherpunks? Can normal people also have privacy then?
+
+Pavel 
+They do and they should. It's just normal people normally do not appreciate it enough until they have it taken away. And right now people don't really realize that it's already been happening, that whatever you do on blockchain is going to be there forever with the AI and agencies. They can dig into your transaction and even
+
+Even if now it's sort of okay, no one tracks them and don't pay enough attention, you should realize that it's gonna be there forever and eventually it's gonna get matched with your identity. And then if you haven't paid any taxes on your unrealized capital gains, they'll get you.
+
+Citizen Web3
+That is for sure. And hopefully, you know, there will be a lot of changes to that. Of course, not. Yeah, let's see. Let's see. Let's see. Let's see where we will end up in five, 10 years. Hopefully it will. I'm also very pessimistic in that direction. But, know, I'm trying to be sometimes optimistic, you know, trying to see the light in the end of the tunnel. But I'm not sure.
+
+Pavel 
+Well, is a way to do it without being overly public. And I'm not saying you should try to hide away and break the law. That's not what I'm saying. having your bank statement posted, it basically puts a crosshair on your back. People know how much money you got. For example, if you pay someone with stable coins, it's...
+
+really easy to find your main account connected to Compound or whatever seed like the entire your entire your net worth and everything and the people you connected with like why would you do that to yourself?
+
+Citizen Web3 
+I think we were talking with Francesco Cabana from Monero about half a year ago. And I think it was him. then there was roughly around the same time I was talking with Boxer from Dune Analytics. And it's very interesting to speak to somebody like from the guy from analytics. It was very interesting from Dune Analytics because he sees a lot of that. He sees a lot of those numbers and he...
+
+His statement was something like, you wouldn't believe how easy it is for somebody like myself. Like I can in one hour, maximum one and a half hours, tell you pretty much everything about a person if I have only one transaction from them. Of course, this guy is, you know, the specialist, but it's a bit scary, you know, to come to the thing that we came to, to this stage from, especially for anybody who entered crypto before 2015, 16.
+
+maybe 2017, you know, it's very scary to see where we come. And the question I want to ask you is, do you think today there is a possibility of, let's say Web3, if, you know, let's assume that cryptocurrency is under the umbrella of Web3, you know, just for the sake of our conversation, do you think that there is a possibility that Web3 will develop not into a
+
+industry which is completely watched and do you think we have a chance of still having privacy as a right?
+
+Pavel 
+I think it could be done. just, shouldn't be used as the only ecosystem that people use to transact between themselves. I think every blockchain, well, not every, but the good ones, let's put it this way. The good ones have their own purpose. For example, if there is a Bitcoin, it's the oldest one. It has the most liquidity, no doubts about that. And some people might think that it was not intended to be a store of value.
+
+how people call it now, but this is the thing. It has the most liquidity and Ethereum and EVM like chains. They develop the global computing. You can run depths, you can borrow land, you can do all the Web3 stuff, you can do NFTs and it's a perfect blockchain for something like that. When it comes to storing your personal wealth for private transaction, you should go to privacy blockchains. This is what it's for and...
+
+The solution for something like that is fairly simple. We just need to connect them and use it for intended purposes.
+
+Citizen Web3 
+Before we go into, we will talk definitely more a little bit about privacy for sure. But I want to go back a little bit to your Web3 story first. How did you arrive in Web3? Because nobody wakes up and says, hey, I'm going to build a privacy related project or I'm going to build a project in Web3. There is a journey usually. What was your journey if, of course, you don't mind talking about it?
+
+Pavel 
+Yeah, it's not a big secret. And I think it's too like unrelated stories. I've been in privacy crypto for a while now. We started working on XANA with my colleague Andre back in 2018. Before that, I was sort of helping him out with the Boolberry project. And around the same time, Ethereum became a thing. And I was just watching and following in. At some point, I became interested in that as well. So I did a couple of...
+
+silly smart contracts, I went through a couple of courses. So now I'm like fairly confident in my solidity skills. And ever since I'm trying to find a way to merge them into something like interoperable. And the biggest mistake I think people make is that they're trying to create one blockchain to rule them all. Like we're gonna do the privacy smart contract and this is gonna be the thing that will
+
+replaced both Monero and Ethereum because it could do everything. And that's not how blockchain works. mean, the capacity of blockchain would not be enough to facilitate the number of transactions for mainstream adoption. You should have all of them working together. This is why I'm trying to kind of keep up with both.
+
+Citizen Web3 
+Do you think that most of the market today views blockchains like this, where everybody is looking for that one Pokemon to catch them all? Or do you think that the industry is divided at this stage? There is like the newcomers or the hype people who are looking for that. And then there is the developers and the privacy enthusiasts who are working on the projects. Or how do you view the industry today in relation to what you said, of course?
+
+Pavel 
+Well, depends on how you define the market. If you're talking about people specifically, people who just want to buy a meme coin and get rich right away, they don't care. They rarely can tell the blockchain and token on the blockchain apart. at some point it was even insulting for me when people called Xena token.
+
+which is not talking, it's a coin for me, it's important distinction that Ethereum is a coin, but let's say USDT is a token. So I think if you talk about retail as a market, they don't care generally. And if we are talking about teams and developers, especially in privacy, it's very tribal. mean, people try to fight each other and sometimes they don't really realize that
+
+Privacy is just a tiny speck on the market cap in general and isn't really seen by the mainstream people. They think it's just some weird crypto freaks doing something weird, who cares? So I do think it's very divided and people need to adopt something like the Cosmos approach. I really like Cosmos approach. It's an ecosystem that allows you to launch an interconnect
+
+blockchains, this is like the best thing ever to me. So I would love to see more of that instead of people fighting over who is going to be the top privacy project this year.
+
+Citizen Web3 
+I can relate a lot to that for many years. Well, and until today, mean, we had this project for about five years and for the last five years, our goal and my personal goal has been anti-tribalism. It's a very difficult mission though from what I see. But before, I'm going to relate the question to that actually from something that you said, I want to ask you.
+
+And before I ask you, I'm going to give you a small, small, small intro because it's important. so, you know, I think that we, and all of this is a question, but a very big, in, in, in the form of a very, big statement. So I think, I think, I think at least, you know, subjectively to me, you know, we change. we as humans, when you become a developer, you think of things in one way. And as you progress in your developer, let's.
+
+Pavel 
+Alright, let's hear it.
+
+Citizen Web3 
+call it career or knowledge, you know, you change opinions sometimes, right? So if you started 10 years ago developing in 10 years, your opinions about what you're doing could be different. you know, it's something like you mentioned coin talking that it was offensive to you before, and because you distinguish this
+
+Pavel 
+Yeah, I'm not there anymore. I like my piece with it, but it's been a thing at some point.
+
+Citizen Web3
+That's exactly what, so we are on the same page. Love it. Love it. So memes, I want to talk to you about memes because right now for the people who are listening to this, we're this in December, 2024 beginning. And it's about tribalism and memes. And I have to say, when I came to this industry in 2011, 12, I was, you when I first heard of memes in 2013, 14, I was mind blown. What the hell is this? You know, this is bullshit. This is not why I came to this industry.
+
+Today, I must say that, you know, the whole, you know, we're talking about tribalism and here is this, I'm going to resume now the big statement. Like, it looks to me, at least again, I'm going to play devil's advocate here, but it looks to me a little bit that today memes are at the same time acting as the whole concept of memes, not tokens by themselves, not separate tokens, but acting as a kind of anti-tribalism mechanism which helps
+
+A lot of people to unite in a community. And the question is like this. Do you think that sometimes absurd and ridiculous things like the meme culture can change so much in such a serious question as tribalism when it comes to privacy projects, when it comes to, I don't know, L1s, L2s, L27, doesn't matter. But it looks like tribalism is one of our biggest enemies and it looks like memes.
+
+can unite, you know, us as a community and say, hey, fuck everybody. All we care about is, I don't know, people, Bob, whatever dog, cat, whatever. I don't know. What do you think about all everything? I mean, this is a statement, like I said, so very argumentative statement. Sorry.
+
+Pavel 
+Well, there's some points I agree with. For example, I'm totally on board with the idea that the meme coins do not divide people and people don't really get married to their memes. They can jump from one to another and it's actually encouraged and endorsed by the meme community. So you don't get defensive about like, I should dump my mood and can buy the pepper, whatever. It's all the same thing. So I agree with that.
+
+It's anti-tribal. At the same time, I'm not a huge fan of meme coins because I believe they take away attention from something important and it's basically a gambling addiction. like, I mean, it's allowed and it's an unregulated space and I'm, I couldn't call myself libertarian, but I'm leaning towards that way. So I think if people want to entertain their addiction, they should be allowed to.
+
+So it's all fair, but it's not healthy. I mean, you could eat unhealthy food if you want to, but that's not, that's not going to be good for you. I'm not going to say it's good for you. So this is probably my opinion on meme coins. Yes, it's fun. It takes away the tribalism out of it because it doesn't matter. But also it's kind of predatory because to make money on a meme coin, you should be either insider or super.
+
+like you or one of the insiders who really knows how to bundle the Solana liquidity when you launched in and also the there's some really dark things were happening on the pump fun with the trash streams and I I wasn't happy seeing that I mean there's not a good side of humans you can you can you can see there so that's probably the bad part
+
+Citizen Web3 
+Do you see or think of other, you know, apart from, mean, again, I'm not even claiming that memes can solve this. was just something observation, but what do you think are other tools that we as a community, I mean, web three community, the developer community can introduce today to help us battle tribalism. What can be done to stop that or at least to lower it.
+
+Pavel 
+Well, this is going to be a boring answer, but I came from product development before I became a crypto person. And I think if you have a good enough product that is easy to use in solving some of the issues you're having, this is going to be enough. And we are not quite there as a Web3 community. I mean, there are some great apps there and we are even much, much
+
+further away as a privacy community because it's just unusable. The UX is terrible. So there's a room to grow in that regard. if we manage to do that, for example, I wasn't using Steam for games. I was stealing them for the majority of my young years when I was a student. But they made it so convenient for me. So I...
+
+didn't feel like I need to do it, even though I have enough money to actually afford it. It was so good. So I switched to it completely. Same happened to streaming. Streaming was unbearable, unusable, but Netflix did it. And right now it's the main way to consume media content. If I manage to create the money transfer in service, which is essentially what crypto is aiming to do, that would be enough.
+
+Citizen Web3 
+How does that money transfer and service going to look? What will be the difference between what we have today and that particular money transfer and service? UI, UX, usability, adoption?
+
+Pavel 
+All of that, I think. I mean, right now, if I need to explain my dad how to send me a USDT, this is gonna be fucking nightmare.
+
+Citizen Web3 
+All of
+
+Citizen Web3 
+You think so. This is actually a good question. This is a good point, I think, because I think that we have, at least from my guests who come to talk to, at the last year, I started to sense two different camps. Those that say that we came to the point where I can explain to my father how to send you the tea, and those like yourself that say, no, I'm sorry, but it's still a nightmare. And I don't know where your father comes from, but this is a nightmare. So
+
+You what? Do you still think that it's a nightmare today? Am I right?
+
+Pavel 
+Well, I can probably explain. If you use the custodian solution that basically works as an app, as Venmo or PayPal, it's easier. But that's not the proper VAT3. It's not like your keys, your coins. And this is the part we need to fix.
+
+Citizen Web3 
+Please.
+
+Citizen Web3 
+That makes a lot more sense. you. Just for the record, by the way, for the listeners, give me please your explanation of... I know you made peace with it, but still, please give me your explanation of coin versus token.
+
+Pavel 
+Well, token is something that doesn't have its own blockchain. For example, if you launch your C20 on Ethereum, that's not a coin. This is token, but Ethereum itself is a coin. And it doesn't really matter which coin it could be. GXO based model or it could be account based. That's the definition by me, but don't quote me on that. This is just how I see things. I don't know if it's a consensus.
+
+Citizen Web3 
+This is about your description, definitely for sure. So today's about your description. Today's everything about you.
+
+Pavel 
+Okay, okay. And this is what I sincerely believe in. That's the important and open.
+
+Citizen Web3 
+It's... Please go on, please go on. Sorry, sorry, I thought you made a post. Sorry, please go on.
+
+Pavel 
+Yeah, I did. speaking of tokens, this is one of the things we wanted to build now in Zano. we built the thing that we used to call a confidential assets. And mainly because I was super defensive on the token definition, but a lot of people told me like, don't fight it. This is what people call currency now tokens.
+
+And this is what you should do because otherwise you just like alienate them and drive them away from the project because like, what the hell is this? And privacy tokens, people tend to understand when I tell them like, this is the main thing we are doing right now. We know you're not gonna pay for your coffee with Monero or Bitcoin because who does that? Like 0.000785.
+
+coins per something, no one gonna use that. You need stable coin, you need like value, the dollar type value or something similar. This is why I believe tokens is, when we speak about adoption, people use tokens more than anything else.
+
+Citizen Web3 
+I think before I'm going to jump more into like a little bit about privacy in Zano, which I want to understand, of course, there is one interesting sentence you said that I made a note from, but I didn't ask you, but I want to ask. I think just like with coins and tokens and there's confusion a lot of the time there, I think that, you know, usually for at least for a lot of people,
+
+for a big majority of people I would say, privacy and the word libertarian usually come hand in hand. And you made a very clear distinction between them. And I actually definitely agree with you, but I'm curious as for you to hear your explanation as to why you make a distinguish between them and how are they, you know, of course they are very different, but what is, why are they different for you? Why is privacy and libertarianism? I did it.
+
+Pavel 
+Yeah, it's a... Well, I believe there is a big overlap between those two, but you cannot lump them together because it would assign certain qualities that we are essentially not trying to do in the privacy. Privacy means fungibility. This is the essential value of privacy because if one of your coins are not equal to another, that's not fungible. If one of your...
+
+Citizen Web3 
+are different for you and different camps.
+
+Pavel 
+Bitcoin outputs was used like few hundred transactions before in some drug deal or money laundering or something like that. That would mean that your Bitcoin transaction could be locked when you send it to the exchange and you as a person you do not have capacity to do the proper background check. Same applies to tokens and Ethereum coins or
+
+Some of them are centralized and could be blacklisted. And there's always a risk for that. That means one USDT will never be equal to another USDT because you do not know the implication. So essentially only privacy crypto could be fungible. You can be sure that if you purchase one thing, it will always be that one thing and nothing will ever happen to it, which is essential for cryptocurrency. I mean, it's a definition of cryptocurrency. This is why I want to separate.
+
+like fighting the government or whatever and just have fungible money. That's not the same thing. It overlaps, but it doesn't have to be the same thing.
+
+Citizen Web3
+Do you think that it would help to onboard more people to the libertarian camp if privacy was more of an accepted, I don't know what is the word to use for privacy, let's say more of an accepted term or an accepted thing because a lot of people are afraid of privacy. A lot of people are educated in a way where for them,
+
+You know, being private means they're doing something bad and it's of course it's not. But do you think it would help to have more people understanding that a lot of the things in today's world are done, you know, unfairly if privacy was not so, I don't know, witch hunted, let's call it like that.
+
+Pavel 
+Yeah, maybe. I think people... There is a misconception in cryptocurrency in general. When it was started, people assumed it's somewhat private. Like, you don't know what that address means. So they just assume if I'm not gonna reuse it, it's going to be sort of fine. And even now, they think if they maintain a proper hygiene, you swap the addresses.
+
+often you do not post it on your Reddit account or something that should be enough or if you use like CoinJoin or Mixing Services, but this is just wrong because people would see that you are doing that. And even if you are like super good, there's still a lot of metadata that could be leaked from the sources beyond your control, your counterparty exchanges, like just people around you.
+
+that could help eventually identify you over time. This is why I think people believe that cryptocurrency in general is a privacy thing, but it really isn't. If anything, it's opposite because you have entire history of your transactions stored in blockchain forever. So as soon as people realize it, how bad this is actually is,
+
+They'll know, I I already made that point earlier. You do not post your banking statement online and probably nothing bad can come out of it. Like who cares that you pay for this and that. It could probably reveal some of your spendings and maybe your location. But if you are not doing anything incriminating, you should be fine. But it isn't, people don't do that. They understand why is it a bad idea to post your transactions online.
+
+And same applies for cryptocurrency. And I do not really understand why this is such a leap. I think it should be obvious enough by now.
+
+Citizen Web3 
+I think it's a leap because of fear. this is actually like, would guess the next question that to you, you know, I speak to a lot of privacy founders and I have had, you know, libertarian authors on a podcast and a lot of validators. are self-hosted validators ourselves, you know, and we are big privacy advocates. But one thing
+
+I can see that fear people are afraid people are scared the more cases are happen. You don't believe how many guests said they would they cannot come on the show because of some of them you will know the names of course I will not say but you know because of their ongoing processes in you know real quotations right life they just said I cannot come on the show and speak because I'm too scared and I think that is the issue. Do you do you do you think that fear plays plays a role in that?
+
+Pavel 
+Yeah, of course. And it's been engineered. It's not just a random thing. People go to jail, they get sentenced for a tense or ridiculous amount of... Yeah, it's very real. I think it's wrong for what it's worth, but it's not like it's up to me.
+
+Citizen Web3
+there.
+
+Citizen Web3 
+Yes. Yes. Yes.
+
+Citizen Web3 
+Why aren't you afraid?
+
+Pavel 
+Well, I don't think I'm a significant enough person. And also in connection with Zano, we don't have like the way to extract value out of the user's privacy. We don't have like any built-in revenues. So what we are doing is writing the code and that should be fine to my understanding of the law. If you start charging fees for
+
+privacy transaction and made some gains over it. That would be the same case as the tornado cache. Like I don't remember when that exactly happened, but I think the main problem was charging fees for money laundering. As long as you don't do that and you just provide the software, you're sort of fine. And we don't have any like levers or tools, nothing that...
+
+average user don't have, we just run a wallet like you can. It's a peer to peer network. We don't have any means to control it.
+
+Citizen Web3 
+I think that the surveillance industry that has been built on top of blockchain at one point, if not already today, but it will definitely start being worth producing at least as much revenue as the industry itself because our industry doesn't produce much revenue in proportion compared to...
+
+Pavel 
+Yeah, at first we are notoriously bad in business.
+
+Citizen Web3 
+Yes, we are bad businessmen. That's true. We are. think this is our how to say, together shared quality of all the web3 people. are just bad businessmen. No, I don't know. I think that I hope that, you know, people at some places I want to say, I know it's going to sound very bold, but I want to say, you know, people need to grow balls.
+
+But in some places you are absolutely right. It is real jail terms. It is real life being put at risk. And there are a lot of people who I know personally, unfortunately, in situations like this or in similar situations. Still, on the same time, see that, how you say, fear going, especially with a lot of projects that came after 21.
+
+I feel that, I don't know about you, even when you go on the Twitter of the founders sometimes, and of course, I'm not going to single anyone out here, but I have said it publicly before that, why you people look like you're afraid? Why are you afraid? We're not going to do this. We're not going to do this. We're never going to implement this technology because we are going to get persecuted or we're not going to go and, I don't know.
+
+We have to go and do this registration in this country and we're not going to have revenue, blah, blah, blah, blah, because otherwise we're going to get persecuted. Do you think there is an end to that cycle?
+
+Pavel 
+Well, I mean, this is more of a legal question and I don't really know. don't have a strong opinion on that. And I'm trying not to touch the legal side at all, because this is just something I'm not good at. What I'm trying to do is to remove myself completely out of anything that includes legal and just write the code and people could run it. We don't have a foundation. We don't have a, like a business entity that takes fees that like issues invoices or
+
+Citizen Web3 
+course. Okay. Okay.
+
+Okay.
+
+Pavel 
+Do anything money related. So if you want to charge us, it should be something to do with the code that you write. And as far as I'm concerned, what we do is allowed. It's just math and development and it was fine. But I could certainly understand why people don't want to promote certain aspect of their project because even if you're right and you're fighting someone
+
+way more powerful than you like Reacher for example it could just drain your project because the legal battles are expensive even if you have all the means to defend yourself it's gonna be crazy expensive and you'll just cave in at some point because there's nothing you can do
+
+Citizen Web3 
+Understood. Thank you for answering those questions anyways, but I will change the topic a little bit for us to also talk about other things. one actually question I have for you is Zano has been around for a while. You've been building the project for a while and it's a difficult thing. And there are many questions I can ask here, but what has the journey like?
+
+What have you learned that you've been doing wrong or right? don't know. Like if you were right now looking at all of this, how many years have you spent now? Six, seven years, right? Even more. know, and you could give somebody, I don't know, advice on what not to do or what to do when building a crypto project. What would you say to them?
+
+Pavel 
+Well, as we established, we are notoriously bad in business. So the business model we picked for Zano was not ideal. I can only suggest not to do that, do something different because it's been a hell of a ride. And at some point we had to take a side jobs just to keep the lights on. What we did right in Zano is the consensus, like the way to secure the network.
+
+Pavel
+I believe this is the only way for a smaller crypto project to be learned because we are getting a lot of hits for our proof of stake, proof of work kind of thing. I mean, it's mathematically the best way to launch the project if it's small enough, because if you just go with pure proof of work, you're to get destroyed with the rented hash power and proof of stake has its own issues like long range attack. So if someone wants to learn from our
+
+Mistake. Well, we didn't make the mistake. We fixed it. But I mean, this is the part I am fairly confident in. Also, when we talk six years of developing Zano and you brushed over that topic already, things change. So when we started it back in 2019, was a different idea. It was a coin
+
+like people did coins and this is gonna be the best coin because we did this and that and it has certain features. Over the time we built it a couple of times and right now our idea is something that I was already sort of mentioning is the ecosystem with the tokens features and interoperability with our blockchains because this is
+
+This is what I sincerely believe is the way to scale blockchains in general, because you will never be, well, not me, maybe someone, someone way smarter than I am would, but blockchains just doesn't work that way. cannot scale it indefinitely. You need to be able to come up with the interoperability of Layal and use the strong points of different projects. So that's the direction we are moving towards right now. We have tokens.
+
+mainly because tokens are the most useful pieces of cryptocurrency, if I could put it that way. If you want to get paid in crypto, you normally expect to get stable coin transaction. That's just how things are and you can fight it or you don't have to like it, but this is the reality. So yeah, this is the current direction of Zano and it's fairly new. mean, we came up with that idea two years.
+
+Pavel
+ago and it took us a lot of time to come up with privacy focused proof of stake and anonymous staking and asset support. Now I call them tokens, but it used to be confidential assets. So it took a lot of like pivoting and figuring things out to get where we are right now.
+
+Citizen Web3 
+What is mathematically or programmably different from what you guys did with the combination of proof of stake and proof of work from other projects?
+
+Pavel 
+depends on the project. The proof of stake and what I don't really like about proof of stake conversation because people tend to take a specific implementation of proof of stake and just apply it to any other proof of stake. Like you can be a, I don't know, BFT consensus like proof of stake with the node validators and the threshold and really not centralized but kind of insider run
+
+community with just 10 to 20 validators and there's a proof of stake there. What we did is the absolutely egalitarian proof of stake. You can participate with any amount of coins. No one would know how many coins you get and you just use your output to produce the, let's call it hash power.
+
+And as long as your wallet is synced and online and has staking enabled, it participates in the network security. So it's like way different from other implementation. And it's just hard to explain sometimes that whatever you don't like about proof of stake is not applicable for us. Some people claim that proof of stake is inherently a bad coin distribution.
+
+because you pre-mint the entire supply and you just split it between a few parties, insiders, and they get the majority of stake power. And this is centralized. This is bad because they already have the majority and they even get more because they'll earn more rewards than anyone else. But that's not the proof of stake issue. It's a distribution issue. If you have a fairly distributed coins in the first place, you're good. You're fine.
+
+I could explain why it's not applicable for us, but this is like gonna be about Zano specifically. Yeah, I don't think it's important, but again, I just don't want to make it into a Zana promotion video.
+
+Citizen Web3 
+You can if you want. If you want you can, please.
+
+Citizen Web3 
+No, no, no, no, sure, It's about... Feel free. If you don't think it's important, don't explain, you know. It's up to you.
+
+Pavel 
+I don't think it's important, if there is a question, I could address it. It's fine.
+
+Citizen Web3
+Okay, fair enough. You mentioned distribution. In my opinion, I don't think blockchain has solved distribution, regardless of the consensus algorithm. I'm yet to see, since I've came to this industry, any one single project that can honestly not say for themselves that I can look at their distribution and say,
+
+This is really good. Wow. They have like, know, really, but I have not seen that. So I don't know. Have you have you seen projects that you can say, Hey, these guys have solved distribution?
+
+Pavel
+Well, you cannot solve it right now because the only way to do it is to be born back in 2011. So Bitcoin sort of did it. It was kind of random, but at the time no one knew how this is going to play out. it was, don't want to say fair, but it's not like it wasn't incentivized. If you wanted to get in, you could get in and no one like pushed you.
+
+and no one tried to keep you away. So it was fair. If you want to do it now, it's not going to be the same if you choose proof of work. Chances are your project going to get destroyed really high because it's very easy to rent hash power. And if you have smaller project, you do not have a lot of people mind. Your consensus security is kind of low and people might not care.
+
+about your project that much to actually find a way to attack it. But that's not a good security practice. It's the only way to fend off attackers is just make them not care. And proof of stake is the other thing. You have the entire supply pre-mined at some point because you need to distribute it somehow. And if you just divide it in 10 equal pieces, that's not a good distribution.
+
+like this centralization of power. So doing a little bit of both could be probably the way to address it. For example, I have to get back to our situation because like it's relevant now. When we launched Zano, we did the coin swap from the previous project called Boolberry and it was a pure proof of work. So any amount of coins acquired by Boolberry holders were mined.
+
+And then they were allowed to swap one to one to Zano. We did a bit of pre-mine to fund the project, but the rest was fairly distributed only by mining. So maybe that's the way to do it, but I'm not saying like we are, like, we need to it. It's not, it's going to be.
+
+Citizen Web3 
+What about governance? Because a lot of people who compare proof of work and proof of stake always point out that, of course, proof of work doesn't have the same or doesn't at all.
+
+Pavel 
+Yeah, and I sincerely agree. I do not think proof of work has a good way to governance. And honestly, I don't understand how people can like in proof of work, there are holders, people who own the coin, and there are miners, people who produce hash power. And being a holder means you have no means to control what happens to your project.
+
+Developers can because they push updates to the software and miners can because they produce hash power and secure the history of transaction. You as a user, you got no saying it whatsoever. And this is insane. I do not understand why people think it's fine. I honestly think switching to proof of stake is the only way for every cryptocurrency ever. It's just there are few.
+
+unsolved issues with Proof of Stake currently, like long range attacks. And it's not solved yet and we don't know how to solve it, but as soon as we learn how, we will be switching to Proof of Stake right away.
+
+Citizen Web3
+Yeah, this is a very, a lot of people analytics who compare projects, usually always, Bitcoin is always like, zero for governance, zero for governance. And it's not just that, but I think with Bitcoin specifically, a lot of people, again, I neither want to go into the place of rumoring or saying something I don't know, but there is a lot of talk from
+
+people who work with Bitcoin who come onto the show in saying that between developers over people who own repository rights over people who, because in proof of stake, it's also a relevant question. Who has access to the repositories? Who owns the code? And is the code really spread? Or can the code be changed and the sources can be changed by, I don't know, do you think that...
+
+This is related to proof of stake and proof of work debate or this is a separate debate altogether.
+
+Pavel
+Well, I think it's separate because it's applicable to both. And of course you should have the way to control and verify who pushes the updates to the GitHub repo. But this is, I don't see it as an issue because if something terrible happens, just, you do not upgrade to the new version when you're not like happy with the outcome, you can do that. I mean, not every user, but there's a educated.
+
+core communities that could tell that this is wrong in this particular update, they removed this or ended this and we are not in agreement with that. So you can sort of do it. You cannot force network to update, at least in our setup, because we need to have a consensus between all the bullets. And if something is falling out of the consensus, it's just...
+
+just create the separate sub-chain, like the weird circle of people that live in their own world and they are not connected to the other network. So I don't think it's an issue. It's just a deployment process and it could be streamlined, but it's not a big deal. But governance is important because if developers and miners are in agreement that we're going to do that.
+
+Like for example, if they decide that 21 million of Bitcoin is just not enough. Let's make 30 for whatever reason. There is nothing that Bitcoin holder can do to prevent that.
+
+Citizen Web3 
+I guess, I guess, you know, the bean devil's advocate here just to argue a little bit, you know, just not to agree on everything. But couldn't you launch a fork, your own fork? Wouldn't that be the solution?
+
+Pavel 
+You can, but who's going to mine it?
+
+Citizen Web3 
+Absolutely. No, I agree with you. I'm just curious, you know, to her.
+
+Pavel 
+If miners won't support your fork, it will be dead in the water because like how many Bitcoins forks were launched. some of them are successful enough to survive, but it's just few and I believe there were hundreds.
+
+Citizen Web3 
+Mm-hmm.
+
+Citizen Web3 
+Yeah, more, believe more. Hundreds is the ones we know. I'm sure that at one point, and I mean, it depends if you calculate only the 2000 hash wars, sorry, 18, 17 hash wars, or if you go back to Bitcoin talk and the altcoin thread in 2014 and click refresh and have 100 new coins every one minute.
+
+Pavel 
+Yeah, I don't even want to go there. mean, it's a dark time.
+
+Citizen Web3
+Yeah, we have a trauma, we don't go there. Last question before we of jump into the blitz, since you are building a project which is a lot about interoperability and a lot about, I at least it's important for you. You mentioned that being connected with other blockchains. Community, this is the last kind of questions I want to touch on. In my experience,
+
+launching projects or working with projects or validating projects or building my own projects. It's, yeah, I don't know. If not, second most difficult thing after distribution, maybe even more difficult than the distribution is having a community when you work in interchange that is attached to the token. Sorry, not so much attached to the token, but rather attached to what it is you're building, know, to what's your experience been like. And once again, since you're a person who
+
+highlighted a lot anti-tribalism, how do you focus on building such a community?
+
+Pavel 
+Well, first of all, it's not been launched yet, so we'll have to see. And the community building is not really my thing, but we have a really capable team handling that part. And I'm sincerely impressed with their efforts. And I think they did a really good job. So I believe we could make it, if not mainstream, but somewhat noticeable. Because as we spoke before,
+
+Privacy is an outsider. I think it's fair to say that. Normal people don't care about privacy and one of the narratives we are trying to get people to adopt that current Bitcoin is not broken, but it's not useful because you post your transaction history on chain, but you can fix it. can...
+
+make it private, you can wrap it on a privacy chain. It doesn't have to be Zano, it could be any other privacy chain with the confidential asset support, confidential token support. Same way as a wrapped BTC or any other wrapped Bitcoin contracts gave another utility into Bitcoin on Ethereum chain. And suddenly you can use it as a collateral for lending protocols, it became so much more useful.
+
+At some point I haven't had any Bitcoins left. I only used RAPBTC because why would I have it sitting there doing nothing if I could, I don't know, get some loan and stake my whatever. It matter. It creates a lot of utility for Bitcoin. And we could do the same thing with privacy. We can create a layer where people could have their public asset hidden on a privacy layer and then can transact.
+
+privately even trade them privately while maintaining the access to liquidity. So this is the goal for us.
+
+Citizen Web3
+And I sincerely hope for all of us that you guys succeed in your goal as soon as possible. Let me ask you three questions which are to take us out of the conversation. They still about you. They are a little bit not crypto related, but a little bit weird. but yeah. So first one, first one. Give me please.
+
+Pavel 
+We'll do my best.
+
+Citizen Web3
+or one book or one movie or one song so a movie movie sorry a book or movie or a song that has positive influence on Pavel in the last five years i don't know
+
+Pavel 
+book or movie.
+
+Citizen Web3 
+or song with positive influence for you, subjectively of course, subjectively for you.
+
+Pavel 
+It's really hard to say because when I'm working, I'm having my Spotify running all the time. So there are so many and sometimes I don't even remember. Genre. It's going to be boring again, but I like post-rock, know, there's low and suicidal. I don't like the uptempo things because it breaks my rhythm of thinking. I want it to be somewhat slow.
+
+Citizen Web3 
+Okay, genre, genre.
+
+Citizen Web3 
+Okay, good. I like.
+
+Pavel 
+preferably without any rhythm at all, ambient or something. And this is how it is flow through the process.
+
+Citizen Web3 
+I catch you.
+
+I get you. I get you. get you completely. Second one, one motivational thing again, subjectively for you that keeps you waking up every day for the last six, seven years building projects concentrated on anti-tribalism, math, privacy, and not, you know, other stupid things, not hype, not money, but you know, what is motivating for you to do what you do today? Something one.
+
+Pavel 
+one thing I don't think I'm quite there yet, but as a goal is my thing in life. I would, I would love to build something I would use daily. And I've been working in different software companies and most of the products I was working on was like, understood the audience and I could see the metrics and I know some people with would use it, but this is not me.
+
+And what I'm trying to do is to build something I will use on daily basis and be happy that I've been a part of the thing. And crypto is the closest thing ever because I basically survived crypto for at least the last five years, I think even more. I barely have a bank account. I still do to pay some subscriptions and stuff, but majority of the funds and assets I own is crypto. So it's getting closer.
+
+not crypto that was built by me, but still I kind of relate to the end.
+
+Citizen Web3 
+I'm smiling a lot because it makes a lot of sense for me. So totally understand what you say. Okay, last one. This is going to be the strangest one, but I promise it's the last one. Dead or alive, a real human being that you know or a cartoon character, it doesn't matter. It doesn't matter if it's somebody from your past or somebody that you know today or a developer or a writer or a person from a movie or from a book.
+
+some personage who is not a guru for you but a personage or a persona that when you feel stuck thinking about this persona helps you to progress. You are not looking up to them, it's not your guru but it's somebody or something, not something sorry, someone or somebody real or not that helps you progress when you are stuck.
+
+Pavel 
+Does it have to be a persona or just the way I think? Well, I don't know if you know this. I'm a gamer and I play a lot of video games, obviously. And one of the things that really changed my way of thinking is the RPG game called Disco Elysium. If you know that, you know how they play out the narrative and...
+
+Citizen Web3
+Could be anything you want.
+
+Citizen Web3
+Okay.
+
+Pavel 
+You have different skills like logic, encyclopedia, like shivers and stuff. Those are kind of your senses. And when you think of something, they chime in and explain you something from their perspective. And since I learned that way of thinking, I use it quite a lot. And I could even willingly engage some of them. Like this is the work thing. I need to engage that part of my brain. I don't care how I feel about it. This is just like a logical thing I need to solve.
+
+So that kind of entertains me because I imagine it being like a part of the game and the narrative going from one sentence to another.
+
+Citizen Web3 
+I like that a lot. That is a first, I must say. I haven't heard anything similar to that yet, so I like this. The voices in my head is a good answer, no joking.
+
+Pavel 
+Yeah.
+
+Pavel
+It's really hard to explain to people who haven't seen the game. I mean, I think I should add a short clip or something to explain what I'm actually talking about. But if you know the game, you know what I mean.
+
+Citizen Web3 
+If you want to add, please add, please for the listeners, please do if you want to add.
+
+Pavel
+Yeah, I don't know how it's like I need to like play a YouTube clip or something
+
+Citizen Web3 
+Well, let me let me let me let me say something that will help for sure. And for the listeners. So this is for you, for the listeners, guys, girls, everybody else, whoever is listening to this, everything me and Pavel mentioned is on the show notes. So this game will attach maybe a YouTube clip like of the gameplay for people who listening to see and to relate whoever wants to understand in the show notes to come.
+
+Pavel 
+Yeah, it's quite distinctive. mean, it created its own genre. They have successors. I mean, not like the same game, but they kind of invented the gameplay.
+
+Citizen Web3 
+Nice, nice. We will definitely link this to the show notes and once again for all the listeners out there, please, please check it out.
+
+Pavel 
+I'm happy to promote and advertise the game. I loved it so much.
+
+Citizen Web3 
+Nice, nice. I love it when people, you know, I like to promote what they like. It helps, think, to attach to that energy, at least for sure. Pavel, I want to thank you very, very, very much for your time, for your answers. Please don't go away. Don't hang up just yet. This is going to be a goodbye from me and from you for the listeners. For the listeners out there, thank you very much for tuning in and see you everybody or hear you everybody next week. Thank you very much, Pavel. Thank you. Bye.
+
+Pavel 
+Thanks a lot for having me. Bye everybody.
+
+Citizen Web3
+Bye Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

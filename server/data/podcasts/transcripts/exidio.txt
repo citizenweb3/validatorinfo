@@ -1,0 +1,396 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/exidio
+
+Episode name:
+VPN, Costa Rica and the sound of blockchain with Dan Edlebeck
+
+Citizen Web3: 
+In this episode of Citizen Cosmos, along with our guests, Dan Edlebeck from Exidio, we discuss such topics as decentralized VPN, security encryption and bandwidth sharing. 
+
+Anna:
+Hay, it's Citizen Cosmos we're Serge and Anna and we discover web three by chatting to awesome people from various teams and communities join us if you are curios on how dreams and ambitions become code.
+
+Citizen Web3: 
+Hay, everybody and welcome to another episode of Citizen Cosmos and we have today with us Dan Edlebeck and I'm pronouncing it correctly yay. I know that I'm he's the CEO of Exidio and it's another word I'm not sure I'm pronouncing correctly. Which are a software company that is building products and integration on top of the sentinel network and I know their also building some tools for the Cosmos ecosystem which we will defiantly talk about to Dan and Hi Dan
+
+Dan Edlebeck:
+Awesome, well I guess we picked a good name because you reading and pronouncing it correctly. Yeah, Exidio we're the software development integration partner on top of the sentinel network and for a bit of the cosmos world it's kind of easy to think about we're kind of like the Tendermint to Cosmos. 
+
+Citizen Web3: 
+That does sound good, and it is a lot of things we have to ask you about it. 
+
+Anna: 
+Yeah, but let's start from Sentinel Network. Could you describe it just by your own words? In one or two sentences, very short, what is it, what it is about, and what everyone in the community should know about it? 
+
+Dan Edlebeck: 
+Sentinel is basically a peer-to-peer network, a peer-to-peer marketplace for people to host and use bandwidth, so a decentralized VPN marketplace. Similar to Filecoin or to Akash Network, which is doing, Filecoin is doing distributed file storage or Akash Network is distributed cloud computing, we are doing distributed bandwidth or distributed networking. So it's a peer-to-peer marketplace for anyone to be able to route their traffic through a VPN, but a decentralized VPN. 
+
+Citizen Web3: 
+So is it safe to say that what you guys do with Exidio is basically building a decentralized VPN, right? 
+
+Dan Edlebeck: 
+Yeah, we build in the front-end applications. Sentinel itself is not just one VPN, it's the network, the base layer, for anyone to build different VPN solutions or VPN products on top of the Sentinel network. And if you're looking to build any of those custom interfaces, Exidio is someone you can hire to make that customization happen. 
+
+Citizen Web3: 
+We have both of us have a lot of questions about what you guys do, but we like to start with small steps and I know this is going to be a weird question, especially for a professional, but in your own words, what is a VPN? Why does somebody need a VPN? What is the benefits of using a VPN? 
+
+Dan Edlebeck: 
+This is a very demanded consumer application. This isn't some fringe thing that people are possibly using for nefarious reasons or any kind of niche activity. This is a mass adoption consumer application that's becoming pertinent as we look for our online security. A movie that came out recently in the States was The Social Dilemma and talked about how corporations are using our data against us and we're the product and our information is being leveraged against us and we're not monetizing it. 
+
+And we've seen huge data breaches and data hacks. And on top of that, people are using it because they want to be able to access geo-restricted content. So there's lots of different use cases, but the two primary ones that individuals on a daily basis are using it for is to be able to access information that they wouldn't otherwise because of geo-restrictions. Even something as simple as watching a streaming service like Netflix from a different location. So accessing geo-restricted content and then also not letting your internet service provider pry in your information and resell that. So using it to be able to obfuscate your information because it should be your own private information. 
+
+Citizen Web3: 
+A lot of people who come into the blockchain, they hear the abbreviation DVPN. For anyone who's wondering what's DVPN, it's decentralized VPN, but Dan, what is the difference between a DVPN and a normal VPN? 
+
+Dan Edlebeck: 
+The difference is really the architecture in which you're accessing the nodes on the network for the VPN. So a VPN is people that are hosting bandwidth to a network and you plug into that bandwidth to be able to route your internet traffic through that node. So big company, for example, ExpressVPN or NordVPN, these are companies that people know that people use on a more regular basis. Those are centralized players and they're in control or they're hosting their nodes through a cloud service and they're in the ones responsible for managing all those nodes. So they could be a central point of failure if their server goes down, they lose all of their nodes and they're in the control of them and they're responsible for them. So not only do they have to maintain the nodes and it's truly it's really costly, but then they're responsible for the data that's trafficked across their network. And actually because VPNs are at times considered a risk business, some of the nodes that they use from some of their traditional web hosting services like DigitalOcean or Amazon Web Services will actually kick them off. 
+
+And so it's a hard business to maintain and because they're maintaining all of the nodes, they're the ones maintaining the traffic from the servers. And then lastly, I would argue the most important thing is that we're using a VPN for one reason, right, Serge? We're using it to be able to have a more private and secure experience online. And we're using one company to trust to do that. And that's our VPN provider. And those companies, centralized VPN providers are stealing us of the one thing we're trusting them to do because they maintain all the information. And actually last year NordVPN was hacked and a huge data breach was happening and they claim they're not logging data. 
+
+There was a data breach and it was proven that they are logging user data. So you're basically saying, oh, now my internet service provider is not the one that has all my information, it's NordVPN. And it is centralized system, it's a peer to peer system and everyone's offering their bandwidth. And there is no company that can possibly control the information because it's all distributed. There is no company that has access to the nodes. 
+
+Citizen Web3: 
+What about if I have the skills to set up my own VPN server or if I have the skills to set up my own double VPN server 
+
+Anna:
+or triple VPN 
+
+Citizen Web3: 
+or a triple VPN? Yes, will I be safer than using centralized VPN server? Will I be on the same level as an essentialized VPN or no? 
+
+Dan Edlebeck: 
+The information that ultimately is trafficked through an exit node, that last hop of multi-hop architecture similar to like a Tor network, the exit node is the node that has the IP address, the last IP address that's displayed and the metadata that's being trafficked through the internet. If you're using a multi-hop architecture with centralized databases and centralized players, then they're still able to access your information. But if you're going through a truly peer to peer network, then it's encrypted and decrypted at each hop through the architecture of the system. And so the exit node will be the only one that would have the metadata. 
+
+Citizen Web3: 
+Would it be safe to say that the main advantage of a decentralized VPN is that it's a peer to peer network where no centralized server can spy on my data? 
+
+There is no exit node that can pass the data, that everything that was encrypted at one point and pass it to somebody who wants to sell it or whatever. Is that the killer feature here? 
+
+Dan Edlebeck: 
+Correct. And as the larger the network gets, the more robust it becomes and more distributed and anti-fragile it becomes. So that's absolutely true. But the exit node in any system still has the access to the metadata that's being trafficked. That's always the case. But when there's a very large distributed and especially incentivized node network, it becomes very hard for the entire network itself to be compromised. And as you build that network and you encourage more participants to join, it just becomes a stronger network overall. 
+
+Anna: 
+I have a question about VPN protocols. WireGuard and OpenVPN and so on. Is it possible to use with DVPn any kind of protocols or you have to choose one of them or you have to choose only one specific protocol that works with DVPn? Could you highlight this issue? 
+
+Dan Edlebeck: 
+Yeah, no, that's a good question. Yes, you can use any open source VPN protocol. So you could use WireGuard, you could use Sox5, you could use OpenVPN. And some of those protocols have different strengths and defense mechanisms. I think WireGuard is one of the better VPN protocols available. But for example, on the iOS store, they were using Sox5 for a while. And now we're looking to actually implement WireGuard on our iOS application. But it depends on what the nodes can be hosted on any open source VPN protocol. 
+
+Anna: 
+Cool. You have a lot of flexibility here. 
+
+Dan Edlebeck: 
+Absolutely. 
+
+Citizen Web3: 
+That's true. That's I think the beauty of peer-to-peer networks because they do offer that flexibility that centralized networks don't offer. Well, there is also the cons as well. 
+
+Anna: 
+And you can fight about which kind of protocol is better. If you go to the sound forum or any chat and say, okay, guys, what is the best solution now? 
+
+OpenVPN or WireGuard or how we can implement it into iOS and just overcome all that restriction that Apple have in their iPhone. I know that it's a big issue to get their settings and so on. You can have a lot, a lot of discussion and it's good for Reddit topics. Just small shortcut how it makes it long. 
+
+Dan Edlebeck: 
+Yeah, but Sergio, you're on point. And that's the beauty of a distributed network is that its ability to be agile and to be able to implement the newest technologies and there's no one that's in control of the network. And so if there's a new open source protocol for VPN that becomes a new best standard and has even stronger antifragility from nation states or from other actors and becomes kind of a new best in class as far as protocols go, the nodes can switch over to hosting on that open source protocol. 
+
+Citizen Web3: 
+And I guess it could be as well backed by bandwidth, which is the obvious thing, right? Which protocol is backed more by more data, by more transition data. And we can say, okay, open VPN or whatever has more value because there is more data transmitted through it or whatever. 
+
+I mean, I guess it's easier to prove with blockchains. But going back to the market question that I had and I know at least of two other projects that exist apart from Sentinel on that market, there's probably more, but I'm talking about the good ones, which is mysterium and orchid. How are they different from what Sentinel is doing? How Sentinel more advanced or better than orchid and mysterium? 
+
+Dan Edlebeck: 
+Well, absolutely. And we're actually building a DVP and Alliance industry standard organization to come together and work with the top projects that are looking to build the case for a strong decentralized VPN network. And we've partnered with Mysterium. And so our website is DVP and Alliance on GitHub. And we can link the DVP and Alliance in the description, hopefully. But yeah, we're looking to build that. And actually, as we have a strong node network, and as Mysterium grows out their node network, it'll become a more robust node network if we can tie into all of the nodes to make it even larger and more distributed network. Mysterium and orchid are both on Ethereum. And we've been on Ethereum testnet and we're moving, Sentinel is moving on to mainnet on Cosmos in the next few weeks, something we're really excited about. It's been a long time in the making. 
+
+And so we're really pumped about that transition. One thing that's good, interesting to look at is orchid, for example, it's not truly a peer to peer network. They actually work with PIA, Private Internet Access, and three other providers as their node host providers. And so they whitelist who can offer nodes, but anyone that's an individual can't offer bandwidth in the network right now. 
+
+It's a permission system. Mysterium is a peer to peer network. And they're looking and they've seen growth across their network. And that's, we're partnering with them on the decentralized virtual private network Alliance. 
+
+And we want to welcome more and more in and we definitely want to welcome orchid as well, especially if they look to offer the opportunity for individuals to host their bandwidth to the network. 
+
+Citizen Web3: 
+Well, you just cut down my portfolio by one project, like just out of nowhere. I'm sorry to interrupt you there, Dan, go on. 
+
+Dan Edlebeck: 
+Yeah, I mean, I think it's interesting what they're doing. And they are definitely a more open protocol than just using a centralized player. But I think it'll be interesting when orchid makes the transition to really offering everyone the ability to offer bandwidth to the network. Another thing is actually on orchid's network as it is currently, you're not able to select the node that you want to use on their application. 
+
+You just connect it and you can't choose the node and jurisdiction which you're looking to route your traffic through. I think that that's probably a feature they'd want to be able to incorporate because that's going to be demanded by users. And then I think we're looking at having micro payments where you can pay at a really affordable rate for a monthly service or you can pay via the amount of bandwidth that you use. And right now, at least in orchid system, I use my phone and either you have OXT tokens that you need to transfer into the application to be able to spend or you buy them in the app. And I think if you buy them in the app, it's a minimum $40 purchase. So it's kind of a pretty large hurdle for someone that just wants to use a tri VPN one time or be able to get cheap access for a specific activity. 
+
+Citizen Web3: 
+That's actually something I didn't know about orchid. And thanks for sharing that there is definitely important information to understand. I personally use the DVPN for the first time, I think in the beginning of 2018, which is almost three years ago now, I have a question like, I mean, you mentioned so many features and so on and so forth. What has changed since then in terms of like the amount of data transmitted, the amount of active users, active nodes, I mean, you mentioned features and so on and so forth. What has changed in those three years? How did that industry progress? 
+
+Dan Edlebeck: 
+ A lot. So one thing that I think Sentinel has done well is Sentinel has pivoted and continued to build applications based on the demand of their of users. When you probably first use it, the Sentinel first application came out and I believe May of 2018 and that was only a desktop application. And I think the first mobile application came out around June of 2019. 
+
+So that was a year and a half ago. And so with constant feedback from users, Sentinel has continued to pivot and make applications that are more user centric and are more intuitive and also just have a far better design. Sentinel has had almost 3000 over 2900 reviews on the Google Play Store. 
+
+And I think the rating is like 4.7 stars. But with all of that feedback and with a very active community of over 5000 members across a lot of different telegram channels in many different regions and many different languages, we're constantly taking feedback from the community and understanding what are the features they're looking for. And so the application has changed a lot, especially if you haven't used it in a couple years. And so we've just made a new push update to the Android application, the Sentinel DVPN, and we're on iOS test flight. And we just submitted for to the app store to be actually go natively onto iOS for all iPhone users. And then a big push that we have is our V3 client, which will be a desktop native client. 
+
+And that's something we're really excited about launching in the coming weeks. That'll be an application where you get kind of similar to how you can configure your router when you first get your router connected to your browser. You can configure your V3 client and the Wi-Fi that'll come out of your router. One of the signals can actually be encrypted as a VPN. So all the devices connected to that Wi-Fi signal can have an encrypted VPN connection instead of having a separate application on each device. 
+
+Anna: 
+Wow, it's quite cool, actually. 
+
+Citizen Web3: 
+Yeah, if it's out of the box, it's quite cool because right now for people who travel with their own networks, hey, I'm here, you know, and you have to get all your VPNs out, all your routers out and actually a perfect example. 
+
+Anna: 
+So no worry, all of your IoT stupid devices now it's protected by VPN by default. Your kettle is not a danger anymore. 
+
+Citizen Web3: 
+Actually, it's a good point about IoT, but I was gonna say something else. I was gonna say that a good example is I'm traveling a lot and I'm currently in Bulgaria and I came across a very weird thing which I've never came across before. I moved into a flat, like I said, I have my own network so it doesn't matter because I'm setting up my own things anyways, but I still have to use the main router as a modem that's gonna connect to my other network. And the thing that I came across was that the local provider selling those modems with very, very, very minimal amount of features available. So even to connect another router to it takes so much skills and so much knowing that in order for you to have a VPN on a modem, you either have to be a professional DevOps, right, or system administrator, or you have a solution like you're talking about where, you know, you're coming out of the box and you have a DVP and out of the box, you just connect it and that's it and then it's all plug and play, which is, which would be great, I think. 
+
+Dan Edlebeck: 
+Yeah, no, really excited about the launch of the V3 client. That'll be on Tendermint. 
+
+Anna: 
+Speaking about all these features like something from the box, who's your product manager who is in charge of all this connection with the market ecosystem and end users because I know that is one of the most difficult part probably. 
+
+Dan Edlebeck: 
+Oh, absolutely. We're lucky that we're blessed with a brilliant CTO. He goes by in the Cosmos ecosystem, he goes by Tony Stark or Ironman. His name is Srinivas. You'll see us on our website, Exidio.co. 
+
+Citizen Web3: 
+Oh that's Tony
+
+Dan Edlebeck: 
+Yeah, so
+
+Anna:
+Hey, Tony!  
+
+Citizen Web3:
+No, no, no I know Tony Stark is, but I did know that that was the guy. I did not make that connection until you said that now. 
+
+Dan Edlebeck: 
+Yeah, so a lot of people in the Cosmos world know him as Tony Stark, but yeah, he's been a brilliant product guy and a brilliant technologist and so we're really lucky to have him and he's led us in a lot of the competitions actually in Cosmos as well. We won some of the Game of Zones competitions and we also won, I think, the uptime category in Game of Stakes and a lot of his technical know-how is we're kind of all beating to his drum. 
+
+Citizen Web3: 
+Obviously, we looked at your website today when we were gathering some information about what you guys do and apart from the VPN that you guys are building, it does mention that you also do some things for the Cosmos ecosystem and as far as I understand, you did a module so far for the Cosmos SDK, right? 
+
+Dan Edlebeck: 
+Yeah, and we're also looking to build more modules connecting to that Cosmos SDK. I'm not sure exactly all the things I need to talk to Serini as far as what we can disclose or what's in progress. 
+
+I know that there's one that I can talk about is there's a really cool block explorer that he's working on building that I think will have more increased functionality and there's a few other things that are modules that are in the works that we probably can disclose in the coming weeks, but yeah, he's kind of our whiz not only with understanding internet networking and what VPN protocols to leverage and how to make those integrations with different front-end applications, but he's also our whiz and blockchain development, especially within the Cosmos ecosystem. 
+
+Citizen Web3: 
+There is one model I'm going to ask you about. Of course, you don't have to answer, but it's something I'm really interested in personally. I don't know if you know or not, but apart from Citizen and Cosmos, which is obviously the project me and Anna ran, there is one of projects in the Cosmos ecosystem which I do some work for, which is Cyber and in Cyber, Bandwidth is the heart of the protocol and I saw that you guys are building something that you called proof of Bandwidth and I'm really curious to know what it's about. I mean, of course, I understand if it's all closed information, but is there anything you could share about it? 
+
+Dan Edlebeck: 
+The concept is that you can actually prove the amount of bandwidth that is consumed across the network without having a centralized node that is taking in that information. And so this is a pretty complicated technical solution that no other VPN or decentralized VPN project has yet proved and it's something that I think we're in the testing phases and I think we're getting close to actually being able to have a bandwidth signature that can actually verify the amount of bandwidth that's transmitted across the network. And being able to do this then can also create an oracle that could actually pay out node hosts based on the bandwidth offered and it can verify that information using the bandwidth signatures. 
+
+Citizen Web3: 
+Is it in any way similar to what Filecoin is doing? I mean, it's not about VPN, of course, but proof of space and time with the storage. Is it somehow similar if you're familiar with it? 
+
+Dan Edlebeck: 
+Yeah, I'd have to look a little bit more into how Filecoin's proof of space and time functions, but I think that there's definitely parallels as far as what the protocol does. 
+
+The proof of Bandwidth via bandwidth signatures is something that I think is going to be a big innovation and I think can really open up the door for a lot more people to leverage decentralized VPN because there will be no way that you can pay just based on bandwidth used. Like I said, for Orcid right now, if you go into their app and you don't already have OXT and you didn't transfer it into the wallet, you need to have a one-time payment of at minimum $40. So there's a big hurdle for initial adoption of the application just by that price hurdle. But if someone's able to pay just for streaming one movie and they pay 50 cents for VPN based on the bandwidth that's used, that completely changes the way that individuals interact with the application. 
+
+Citizen Web3: 
+I think it's important to remember that when we build in blockchain applications that Bandwidth is well essentially one of the three main things that makes a computer, so the fact that you guys are doing that does kind of say a lot that you guys are on the right track. 
+
+I have slightly different questions. What do you think about open source VPNs which essentialize like MOLVAD for example? Now I haven't personally used MOLVAD but they really look to them because I love what they did with the registrations. 
+
+You don't need those silly outdated emails, which is absolutely silly I think in today's society, but whatever. You can pay with cryptos and they're all about privacy and apart from that, I mean it's not like I'm actually selling them because I haven't actually used them but I'm just interested in what you think. And I know that they managed with all of that and open source and all of their technology managed to go into the top of the VPNs by amount of data they're transmitting. What do you think about open source centralized VPNs? Is that something interesting or again we're in the same bucket with the data selling? 
+
+Dan Edlebeck: 
+I think open source code is going to be the future and I think that's really important. Being able to leverage and build applications based on already proven code is and even applications like no code, we're seeing that that's the direction that software development is heading. 
+
+So I think that's really That's great. But what we'd have to understand is what are the nodes that are hosting and would those be able to be shut down? And if so, what would be the players that would shut them down? That would be the big question for a centralized player that is they open source the front end applications and you can actually view that the nodes themselves are the nodes that claim to be offered. But then the nodes themselves are what would be the critical point of failure. 
+
+If that's consistent, then I think that that's at least a big positive. And then also there would have to be continual audits on how they manage the nodes and the information that's come across them because a lot of centralized VPN players say that they have third party audits to verify that they don't log data. And even after they pass these third party audits saying that they don't log user data, data breaches happen and it's proving that they are logging user data. So those would be the big concerns that would have to be able to be addressed consistently for it to be a truly anti-fragile system. 
+
+Citizen Web3: 
+Yeah, that makes perfect sense. I think another part to this is the fact that all those VPNs lack what a DVP doesn't lack, which is an economical model. And I think for a computer to have an internal economics where there is a token that represents the bandwidth or doesn't represent the bandwidth, whatever, depends how you implement that economical architecture into it does add all those incentives and is to me personally at least. And again, I would love to hear your opinion. Would you agree to the fact that apart from a P2P network, the killer feature of a DVPN is having an economic incentive? 
+
+Dan Edlebeck: 
+Absolutely, right? If the economic incentive didn't matter, then Tor would be perfect and it wouldn't be compromised and we wouldn't need to centralize VPN. Tor in and of itself is a great distributed network. But the issue with Tor is that without incentivizing nodes, there's far too many users across the system, there's millions of users, and then there's thousands of nodes. So it's not nearly enough for the amount of users. And when those thousands of nodes can be co-opted by centralized players that might have interest in taking over that network, then the network itself is no longer truly private and no longer provides the security that someone would want on a Tor network. So by incentivizing the nodes, you're able to really bootstrap a large network and make it sustainable. 
+
+Anna: 
+Let's move to a personal question. I think it's even more interesting than things about VPN because you can read about technology, but you cannot read about people behind the technology. 
+
+Citizen Web3: 
+Let me go with the first one then, if you don't mind. I mean, we looked at your history, obviously, and very impressed with your social work in the past, to be honest, that it's amazing. And something that kind of struck me was that you worked in Costa Rica for the community economic development. Tell us about it. I mean, how did that happen? How did you from that jump into blockchain? 
+
+Dan Edlebeck:
+And then your right, Serge, actually was in Costa Rica that I fell down the whole crypto rabbit hole. So I've always worked in social causes and in nonprofit work. I took one corporate job after I graduated undergrad doing sales for Nestle, and I had to sell to Walmart. And so I was going to Walmart every day, and I just I couldn't do it. 
+
+I couldn't spend another freaking hour in Walmart. I made it like 10 months and like I'm out. And I moved out of Florida for that job. And then I moved to Chicago to work at a nonprofit and I worked there for almost five years. And the nonprofit is called Cara Chicago. And they do workforce development. So they work with homeless and at risk of homeless individuals in the city of Chicago and help them with job skills and professional development and then job placement. And so I worked with a bunch of employers in the city of Chicago to bring really talented individuals into good jobs and to help them break the cycle of poverty. And that was a really rewarding job. And when I was in Chicago, I met my now wife, my girlfriend at the time. 
+
+She's amazing. And so we were thinking about what we wanted to do next with our lives. And I wanted to continue to do social impact work, but we also wanted to move abroad. And so we have a program through the government called the Peace Corps in the United States. And it's basically joining the military. 
+
+And instead of putting bullets in your guns, you put roses and flowers and down the barrels of guns. It's like the military, but opposite. So it's international development work. 
+
+And then there's different branches within the Peace Corps. So if individuals have a teaching background, they can help out with doing teaching in the schools or if people work with youth, they can do youth development or if people have a health care background, they can help out with nurses and health care development in a lot of countries around the world. And so with mostly my business background and my wife was a consultant, we both were really good fits for doing economic development work. 
+
+And that was the work I had done in Chicago. So we moved down to Costa Rica and we were on this insane island. It's called Isla de Chira and it's tiny island in the northwest of Costa Rica. There's one boat that goes to and from the island every day. And if you miss that boat, you can go to the island tomorrow. And there's no it's just a dirt road on the island. There's no paved roads. So we live there for a little over two years. 
+
+Citizen Web3: 
+That's absolutely crazy. I mean, two years in Costa Rica with no roads after the peace corpse with flowers after. 
+
+Dan Edlebeck: 
+Probably more bugs than flowers. The amount of insects that ate me alive. Stung by scorpions and jellyfish and every type of insect. But it was really, really cool work. And so we were on a small island and this is a little fishing island. And basically the entire economy, like 99 percent of the economy is based on the fishing season. 
+
+And actually three months of the year, fishing is prohibited because the areas are overfished. And so my wife and I worked on actually developing an ecotourism economy and actually broadening the entire opportunity base for individuals on the island and not just think about fish, but how can we help develop opportunities for individuals on the island and work with them? And so we actually developed an ecotourism collective and actually had 18 businesses on the island come together and share their resources and actually build a small ecotourism economy there. And it's been really cool to see. 
+
+Citizen Web3: 
+What motivated you to? I'm always interested in those things because I mean, what motivates a person not only to start doing social work, but what also motivated you to suddenly stop dedicating a part of your life? Well, I don't know if you're still obviously carry on doing some social work, but I mean, completely dedicating you going to Costa Rica and on Island with bugs is one thing. One thing is doing VPNs and sometimes, well, I'm not judging you, but I'm quite curious as to what motivated you to start and stop it. 
+
+Dan Edlebeck: 
+One of my other fellow Peace Corps volunteers when I joined in February of 2016 was already riding the Bitcoin train and was a big believer in decentralization. And he started getting me down the ideas of doing my own research. And I also, because of the Peace Corps, the way that the job functions, there are times where you spend 12 or 15 hour days working all day. And then there are times where people are canceling your meetings and you're having a tough time in your small community and you have more free time. And so actually, I took a lot of that time to do personal development work. And I started learning about investing and personal finance. And during that time, I started learning about the central banking system, a lot of the ills and how money is managed, how the Fed controls our money supply. And I started researching on what is sound money. And I started learning a lot more about decentralization and about Bitcoin. And I've always been a big interest in an early adopter in technology. So it was not only just a passion of mine to continue to be on the kind of leaning edge of new technology, but also this really aligns with my ethos. I think that actually Bitcoin is a part of the Occupy Wall Street movement. 
+
+It's really about fighting against the big banks and giving people another opportunity and another system to be able to opt out of the crop banking system that we live in. And so that kind of led me down that rabbit hole. And I actually found Sentinel pretty early on. I think it was around mid 2017 when the idea was first coming up that I started getting more involved with the project. 
+
+Anna: 
+I just curious, how did you and Tony start working together then? How that happened? 
+
+Dan Edlebeck: 
+That's exactly right. So I mean, in 2017, when I was first getting introduced to Sentinel, I've always been a big supporter and community member. So it's been pretty cool to go from someone that's been a very active in the blockchain space. And then from 2017, I've been a lot more involved in a lot of other blockchain and cryptocurrency projects. I helped build the community for salt lending and for Block Party, which Block Party is doing some really interesting stuff now with NFTs and they're building an NFT marketplace. And I was involved with MetalPay, helping them on the community and marketing side. And so through my time involving with other blockchain projects and being involved with Sentinel, I've always been just kind of a community member and supporter of the project. 
+
+And it wasn't until this year. So then after the Peace Corps, I've moved around a lot. After Costa Rica, my wife started her masters in business in Washington, DC. 
+
+And I moved to Washington, DC with her. And then I did my masters in business as well, but in Boston at Babson College, which is a school that's known for a lot of startups and entrepreneurship. And it really blended my interest in startups and technology and entrepreneurship all in one place. 
+
+And it's a one year accelerated MBA. So I moved from Costa Rica, DC to Boston. And during that time, so I graduated then in May. And it was right around that time that I started getting a lot more involved. And we started working on building out Exidio, software development provider, and the integration partner on top of the Sentinel network. So it was really around April or May of this year that Tony Stark and I started kind of mastering our evil plan to take over the world. 
+
+Citizen Web3: 
+It's interesting how you mentioned a few times in the previous question, you mentioned ethos and values. And we all know that crypto attracts all the weird no kidding It doesn't attract weird people It does attract like people. 
+
+Dan Edlebeck:
+eclectic
+
+Citizen Web3: 
+I wasn't going to say it now. I'm kidding. It does attract people with various backgrounds. And I mean, we've seen it in our podcast. 
+
+I mean, we've seen it in our own experience and I'm sure you felt the same. Now, do you think that people come to blockchain because of the values or mainly because they are gold diggers? And obviously, well, it's not as difficult to make money with crypto as it is with other financial instruments, at least that's the way I feel about it. What do you think in general, why does blockchain attract so many different people? 
+
+Dan Edlebeck: 
+So I think that's true. I think that the crypto markets are still pretty nascent, right? And so they're inefficient. And within inefficient markets, there's more opportunities and it's easier to take advantage of opportunities. So I think that there's a saying that a lot of people have talked about in crypto. I came for the money and then I stayed for the money. But you came from the gains and came for the 10 X's and the money right away. And then when people start actually sinking their teeth into what the power of decentralization and the ability to rewrite our financial institutions and rewrite a lot of organizations like centralized VPN using decentralized protocols, they stay not for the money just to make money, but they stay for the concept of sound money. 
+
+And they stay for the concepts of the value of decentralization. So right on the knocking on the door, right, of 20 K again for Bitcoin. And now we see PayPal coming out and now PayPal is partnering with Visa and so the big players are going to start getting into this space. And we're going to start to get a little bit more media attention again. And all of a sudden, you know, when we cross 20 K and now it's 22 K, 25 K, we're going to get another hype of retail FOMO. And we're probably going to get a lot of people that are coming in for the gains because they heard about their cousin. They made a bunch of money with XRP or some crap and then everyone's going to come running in. 
+
+But hopefully we can start providing better educational material that people can find the right resources and start learning about the ethos of decentralization and how we can create better systems than the systems that we have in place today. 
+
+Citizen Web3: 
+I absolutely agree with every word you said there because in my opinion, people come here because they're gold diggers. Let's be honest, most of them 90% to 80%. But it's the first industry that I've seen where people does turn people to public good. It's weird, but I've seen it so many times. I honestly have never seen it anywhere else. Maybe occasionally. 
+
+Yes, you do see it somewhere, but usually you don't see so many people who come here for the money. And then they're like, you can actually overthrow Wall Street. And then they're like, let's do that. I love that. 
+
+Anna: 
+I love how you say sound of money. 
+
+Citizen Web3: 
+Yeah, sound of money. 
+
+Anna: 
+Sound of money. Yeah, I really like this. 
+
+Dan Edlebeck: 
+Yeah, sound of money or sound money. Right. Bitcoin is a truly sound money. 
+
+Anna: 
+sound money Yeah
+
+Dan Edlebeck: 
+But well, the thing is your coins can make a ching sound, but there's no real noise when you send your Bitcoin around. Unless it's the touch of the buttons of your ledger. 
+
+Citizen Web3: 
+Actually, by the way, yes, guys, you should always use hardware wallets. 
+
+Dan Edlebeck:
+Absolutely. 
+
+Anna: 
+Yeah. And I have one more question. Speaking about good education materials, what are your favorite source of good information about decentralized environment itself now? 
+
+Dan Edlebeck: 
+There's this podcast. I think it's called 
+
+Citizen Web3: 
+Citizen Cosmos. 
+
+Dan Edlebeck: 
+Citizen Cosmos? That's the one. 
+
+Citizen Web3: 
+Sorry, I'll go. 
+
+Dan Edlebeck: 
+But actually, no, for real, I really do enjoy a lot of podcasts. You know what? What's one that I think is underrated, and it's kind of a little bit more Bitcoin centric, but I think is incredibly well done, is Nathaniel NLW. Nathaniel Whittemore, he does a daily podcast called The Breakdown, and I think it's put on by CoinDesk. But those are really good. And we're seeing a lot more just really good information coming out. So in the ether ecosystem, there's a podcast called Into the Ether. 
+
+Founders of Web 3 is put out by Outlier Ventures. Is incredible. And we're seeing a lot better information coming out in podcasts. I think even people like Laura Shin puts out really good ones. She has two podcast series Unconfirmed and Unchained. 
+
+And Delphi Digital has their own podcast, and I think some of their podcasts are really good. So we're seeing a lot better information coming out that way. I think Misari puts out really good research reports. And Jameson Lopp has a page that has a really good landing page on a ton of research around Bitcoin. So those would be some of the first places I send people. But I actually don't send people the same information each time. 
+
+It's really, I get to know every individual and what information might give them the best way to land. I know Preston Pish came up with a one-pager just on the value of Bitcoin. And it's an easy one-pager that shows the merits of it. 
+
+And that's a good way to get someone interested if they only have five minutes and they want to understand high level. But there's tons of good information out there these days. I think we're really fortunate that some of the better information has kind of risen to the top. 
+
+Citizen Web3: 
+That's a lot of mentions which we will definitely include in the description because one of the things we're kind of trying to do and more of Annas like way of pushing that information forward, but I think everybody's enjoying that. Doing that, I'm talking about myself here, is trying to give quality informational resources about blockchain, about educating those who come into the space. 
+
+Not like making a decision for it. And I'm saying don't look at that, look at that or whatever, but giving people those resources where they can look at them, read them, and then make the sober decision for themselves of what they should do and what they shouldn't do, what's centralized, what's decentralized, what's trusted, what's trustless, and so on and so forth. And thank you for sharing so many resources. 
+
+Anna: 
+And you're first of our guests who are, looks like a big fan of podcast. 
+
+Citizen Web3: 
+No, he's not the first. Let's be honest. That's the most podcast mentioned, but there was one. 
+
+Anna: 
+Yeah, yeah. Actually, everyone who is an hour guest are involved in podcast as a listeners. Yeah, because now it's kind of trendy, but still you mentioned a lot of good podcasts. 
+
+Dan Edlebeck: 
+Oh, I think I could mention about 10 or 15 more easily real quick if I wanted to. In the Cosmos ecosystem, sharing secrets by Toron Blair, those are really good too. 
+
+Citizen Web3: 
+We had Toron, he's a cool guy. We had Sunny on as well, by the way, and they do Epicenter, of course. If you're in the blockchain, you have to listen to Epicenter, right? I know. 
+
+There we go. Unfortunately for everybody who's listening to it, because it's obviously not only a podcast, unfortunately you can't see it guys, but Danny's showing his iPad with all the podcasts over there and all the things he's listening to. I'm sure I've seen some ATX rated movies as well. 
+
+Dan Edlebeck: 
+Well, it's called the FTX podcast. You're closed. Hey, that's good. Actually, that's becoming a really great one that I really highly recommend. FTX is obviously they're in exchange, and then they put out Serum and they're building on Solana, which another. Solana, I think it's yet to be told if it's going to be a really strong, decentralized protocol, but FTX and Alameda Research is all led by Sam Blankman-Fried, and he's just a frickin' genius. Some of the information they put out is some of the best out there. I'd also recommend it wasn't triple X, it was FTX. If you were close, the FTX podcast. 
+
+Citizen Web3: 
+I wasn't actually looking at anything. I was making that up to be honest with you. Yeah, guys, check it out, because I have actually checked FTX out. I'm personally myself into Solana, and I think it's one of the most interesting projects out there. 
+
+But to our traditional question, and you kind of already kicked it off, what are currently the blockchain projects out there that motivate you and excite you into what you guys are doing? 
+
+Dan Edlebeck: 
+Well, it's no question that's Cosmos. We've been working in the Cosmos ecosystem since really 2018, and that's been a lot of the work from Tony Stark. And we're seeing that that's the right blockchain for us to be able to have micro payments, to be able to verify information, and to have a secure network. And when the IBC, the Inter-Blockchain Communications layer, is rolled out, I think in the coming weeks, hopefully in the beginning of Q1, that's going to be able to make payments across a variety of different networks, seamless. That's, I think, what really differentiates Cosmos from a lot of other blockchains, is its true interoperability. And I think it's going to be interesting how Cosmos continues to evolve over time, and becomes a platform where more and more developers build on top of. 
+
+Citizen Web3: 
+Is there anything else apart from Cosmos that currently you would think you'd be exciting? 
+
+Dan Edlebeck: 
+Well, like you said, Solana, I think is interesting. I think at least at the throughput layer, Solana is just crazy fast. And Cosmos is way faster than Ethereum, but Solana has the capability of doing basically anything you could ever want at lightning speed, at the layer one solution, where that's where we're looking for higher throughput thing on Bitcoin, people building lightning network, or things of that nature to be able to improve throughput, whereas Solana will never need a layer two for data throughput. So that'll be interesting. And it'll also be interesting down the road where Polkadot and Cosmos, if they're able to communicate with one another, and if we can move forward on the ethos of decentralization versus competition. 
+
+I think if it's just JP Morgan fighting with Wells Fargo, we haven't really accomplished too much. So finding the how those are able to interoperate and communicate is going to be interesting over time. I think that there's a lot of these, you know, quote unquote, Ethereum killers that aren't probably going to end up being around for too long. 
+
+They'll probably be around for a long time just because they have a ton of funding. But if there's no real development activity on top of those protocols, they might not be as important down the road. People aren't talking about NEO as much anymore, or like Cardano, some people talk about, but I don't know who's building applications on top of Cardano. I think that Ethereum is going to be a very important player in this ecosystem for years and decades to come. And I also believe that Cosmos and Polkadot have really bright futures and we'll see what happens with Solana. 
+
+There's a lot of other players that will see what happens. Something like EOS, I'm not really sure if that's a sustainable, it's a ton of money, but I don't think that a lot of their applications are having, not the numbers of application users are probably not truly indicative of actually the usership. So hopefully over time, true decentralization and true adoption is what are going to win out in the marketplace. Some of these efforts are really interesting, but if you don't have the critical mass of development on top of these networks, you're going to have a hard time. And just because you have a lot of money and you can throw money at developers to build in your protocol, I don't think that's sustainable either if you're not actually offering the feature set that people need. 
+
+And instead of trying to kill Ethereum, why don't we try to find ways to have blockchains that if they answer a very specific niche case, be used for that. That's why I think Solana is somewhat interesting is because at least for like Serum, which is a decentralized exchange built on Solana, it's not just a swatch exchange, it's also a derivatives exchange. And so you need incredibly high throughput. 
+
+So that was why they decided to build that on Solana. So that's a very specific niche use case where you'd want a blockchain that offers that solution for that niche use case. I think that makes more sense than one blockchain saying, we're the panacea of everything and we'll throw a lot of money at developers to build on us, but ultimately we don't serve the purposes that the developers are looking for. I don't think developers are that loyal. They're going to try and use whatever protocol is serving their needs and actually delivers the best product, market fit, and solves their problems as far as the developer goes. 
+
+Citizen Web3: 
+There's nothing to argue here with you. I think it's just the basic one-on-one. And I'm glad that other people think the same way that I'm thinking. I'm sure there's more people to think like we do. There's the saying, right? I mean, you can fork the code, but you can't fork the network. And I think it totally goes for exactly what you're saying here. I mean, you could have all the money you want, but at the end of the day, if you don't have the technology and if you can't offer developers applications, if you can't offer applications, you can't have users. 
+
+If you don't have users, and then the whole cycle starts and you're back to square one where you started off, or square zero or whatever. Dan. It's been a huge pleasure from our side. And we're looking forward for you guys going on Cosmos. And I think we would gladly do another record, another episode with you in the coming future when you guys are ready. It's been a pleasure. And thanks for coming on. 
+
+Dan Edlebeck: 
+Surgeon, Nana, this has been great. And yeah, let's do another one after we cross the Rubicon and we're on May night on Cosmos. 
+
+Citizen Web3: 
+Sure. Thanks. 
+
+Anna:
+Thank you. Bye. 
+
+Dan Edlebeck: 
+Thanks. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

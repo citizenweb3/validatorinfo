@@ -1,0 +1,455 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/gabrielcoutinhodepaula
+
+Episode name:
+Decentralization, Assumptions and Honesty with Gabriel Coutinho de Paula
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 Podcast. Today, I'm glad to have Gabriel from Cartesi Ecosystem with me. He's the head of research. And let's say hi and welcome him. Gabriel, hi. Welcome to the show.
+
+Gabriel
+Hello, thank you so much for having me.
+
+Citizen Web3
+Glad to have you on. I must say, I'm sorry for the confusion that happened before the recording with Gabriel's and Cartesi's, but it's a funny story, I guess, for the listeners out there. It happens that Cartesi ecosystem has several Gabriels and we're kind of a little bit confused, but Gabriel helped us to understand, understand our mistake. And I really want to thank you for that.
+
+Before I'm going to start digging you in with questions, I'm going to start with a very traditional question. Could you please, for myself, for the listeners, introduce yourself, maybe in the intro include a little bit about your web three background, if it's okay, and what you working happen to be working on right now.
+
+Gabriel 
+Yeah, absolutely. So, well, I'm Gabriel. I am the head of research in the Cartesian ecosystem. And, you know, I did start my journey through the Web2 space, which I think is, I guess, common and also kind of positive, right? Because I had this feeling when I started doing work in Web3 that we were kind of rediscovering things that were already standard.
+
+that most people were already using in Web2. And there was this reinventing of the wheel over and over. And yeah, so my background, I actually started doing my first internship back in my undergrad was doing iOS development. I used to write applications for cell phones, which was fun. But eventually, you know I wanted to do other things.
+
+I always had this more, let's say, you know, academic flavor to the things that I like to do. So during my undergrad, I also did scientific computing, you know, like drug discovery, where you do like simulations on chemical molecules and whatever, to try to find in this specific research, like medication. And then later I...
+
+worked a bit with IOT as well, also as an undergraduate researcher. And eventually I joined a master's program you know after I finished my bachelor's.
+
+Gabriel 
+So at some point I did my another bit undergraduate research in scientific computing, to really like simulations of molecules, know, the purpose of drug discovery, where you can find new medication and so on. Later on, I also worked with IOT, also as
+
+another graduate researcher. That was also quite fun. And eventually, you know, once I finished my bachelor's degree, I joined a master's program where I my research topic was in programming languages, which is one of my passions. So I worked with programming languages, compilers, interpreters, this sort of thing. And it was through this path and journey that I eventually made my way into Web3.
+
+So I started working on that three with a few friends who are all now in the Cartesian ecosystem. They have company, they invited me to join them and it was quite fun, you know. It started as this challenging new idea, new field that, you know, I don't know if you have this, but when something's like challenging and clever, you know, you kind of want to learn more about it and you want to study it more and you want to get
+
+good at it. And so I think this is like what initially motivated me to join Web3 in general. But it eventually evolved because, you know, being a challenge is very nice, especially when you're getting into something, but it doesn't hold you there, right? You just go and find a new challenge. But what happened is that I started
+
+to get the ethos of Web3. And this like philosophical consideration, like why I'm doing this, why Web3 at all, this made me stay. And I realized that we were part of a new industry that will revolutionize, I won't say the world, but given important parts of the world, which I think.
+
+Gabriel 
+needing this new technology, which is not that new anymore, but it still feels that the technology has lots of influence.
+
+Citizen Web3
+That's actually a very cool intro, I must say. It connects a lot with myself. think like resonates a lot with myself. And I think a lot of people, at least judging, you know, like the guests that come to my show, I would argue that at least 60 to 70 % probably experience, you know, those feelings where they come for one thing and they do understand the ethos which challenge them personally or challenge them professionally. Do you think that
+
+What you are speaking is more of a personal challenge or a professional challenge.
+
+Gabriel
+So it started as like professional right? No, this is cool. Oh, this is a nice problem that I want to solve You know, I want to come up with a clever solution, but then it came like personal and I do remember to X you know pieces of text and presentations I saw that Made it click. So one of them is Meditations on Moloch. I'm not sure you yeah, that is a really nice speech, you know
+
+Gabriel 
+It describes all these situations where coordination fails and it degenerates into the tragedy of the commons, where it would be beneficial if everybody cooperated and collaborated.
+
+but instead it becomes a race to the bottom. So when you couple that, this idea of Moloch, with this ethos that Ethereum is an infinite garden, that it is a protocol for human coordination, it kind of clicked that what we're doing is trying to reduce the size of Moloch, know, like it's still gonna exist, but maybe we can mitigate in certain areas.
+
+Gabriel 
+It did start as more like this professional challenge. know, like when you get this clever problem that you want to solve, you want to get this nice solution. There is like this accomplishment you get when you solve something, right? But then it eventually evolved to a more like personal ethos, let's say. And there were two pieces that I remember that really made this ethos click.
+
+The first one is Meditations on Moloch, which I think it's a widely shared post in the ecosystem, like in web3. And in this text, it talks about coordination problems and how you these situations where it would be beneficial for everyone to coordinate, but instead it degenerates into the tragedy of the commons and it's like a race to the bottom.
+
+and the outcome is one that is worse for everyone involved and yet it still falls into the tragedy of the commons. And once I read this text and then I read about this view of Ethereum as an infinite garden, you know that Ethereum is a protocol for human coordination, I realized that we are trying to address some of the problems of the
+
+Meditations on Moloch outline, right? It's trying to not necessarily kill but mitigate the influence that Moloch can have in some problems. So I think this is when it turned to me and became like personal, right? That we are building something that a new industry that might not necessarily revolutionize the world, but will certainly change it for the better. I think
+
+Citizen Web3 
+You mentioned tragedy of the commons and it's an interesting point. I mean, for people who are listening, we are recording this in 6th of March 2025. And again, for the listeners, I'm sorry that sometimes our editing takes a while. But whenever you are listening to this, there is always some drama around Ethereum. And when you mentioned tragedy of the commons, and you know we are talking about the research of
+
+things to help expand whatever it is we building. Today, I'm looking at an L2 ecosystem. And it's hard not to argue that there is too much too much offer. why I'm trying to tie it up with trilogy of the commons is because one of the main
+
+reasons we started to build the L2 ecosystem was to solve the issues we had with the scalability down on L1s. Today, we're going to go to the point, and I mentioned the date on purpose because this conversation is very relevant for what's happening today. Do you kind of  feel that we're biting our own tail with that? I don't know if you understand what I'm getting at. I'm trying to be careful with it because it's a devil's advocate question here, of course.
+
+Be go, please.
+
+Gabriel 
+Yeah, I totally get the question, you know, like, because we're trying to build a new technology and we must also coordinate on it. So I think your question has a bit to do with, okay, we're building a protocol for coordination, but aren't we seeing failures in coordination between ourselves? So is that? Yeah, okay. Yeah, I think so. Yeah. But I think the beauty of it is that since it is a visualized, right?
+
+Citizen Web3 
+precisely.
+
+Gabriel 
+So this is the ethos of blockchain in general. We have the system which we want it to be unstoppable, right? It's impossible to, not impossible, but we want it to be possible to be censored or to be stopped, that states and nation states you know can't bring it down or make it inaccessible. And I think the ethos of the Ethereum Foundation, which is coming on-under a lot
+
+of criticism recently and I will say that I think some of this criticism is certainly warranted but I think one thing philosophically maybe not in implementation I wish the listeners decide that but in like approach is to have this like hands-off not hands-off but you know have this spheres of influence in the sense that the Ethereum is not owned by 
+
+the Ethereum Foundation, like many others in the ecosystem, such as other L2 projects as well, they are like gardeners, they tend to this ecosystem and try to make it grow. And of course, there will be, and we clearly see now currently, you we mentioned the date, that there are coordination problems. But I think this is par for the course, right? And I don't think this is fatal.
+
+And the good thing of it being permissionless is that the hope is that Ethereum blockchains will live on beyond these problems that we're currently having. So even if we can't agree, every 12 seconds, Ethereum is still building a new block and builders are still building new solutions and applications and infrastructure. and
+
+Even if some of those end up not working out, there will be new builders trying to figure out what is the best. Because I do think that if we have a project that doesn't ultimately work out, maybe it is because it's not exactly a great fit or not the right time. So I think this is expected, right? So yeah, it is ironic. I agree. But I think it's to be expected.
+
+Citizen Web3 
+I actually tend to agree with you. believe that, know, regardless of speaking about, of course, I was referring to the EF, you know, the Ethereum Foundation, but regardless of whether we're talking about the Ethereum Foundation here or any other ecosystem in blockchain space, whether it's Cosmos, Polkadot, near or whatever, on one hand, you could say the issues are the same. On the other hand, like blockchain is a communication tool. What do you expect? You expect people to communicate and to find some sort of consensus. In order to do that, you have to disagree.
+
+to an extent, if we agreed on anything, I don't think that we would probably not make as much progress, irony. So I've called it, I'm asking it from a devil's advocate perspective, but I'm always curious to kind of dive into the head of especially researchers and developers because they tend to have different views sometimes. yeah, do you think though that,
+
+Citizen Web3 
+we can sort of, because we are moving slowly, no, not even slowly, we are moving fastly quite rapidly into a kind of multi-chain world. Do you think that foundations such as whether it's Ethereum foundation or I don't know, any other ecosystem right now, do you think that they should work with one another in order to improve progress, not just in research, but also in development in the...
+
+in various ecosystems and in the space in general. Because right now I'm not actually familiar with, let's say, the Ethereum Foundation working with the Web3 Consortium or the Web3 Consortium working with the IBC, Interchain Foundation or whatever. I've never heard of foundations working collaborating.
+
+Gabriel
+Yes, yes, that is a good question. I think it starts with, at least in the Ethereum case, I don't actually know a lot about these other ecosystems, so I don't know how strongly these entities have control over the ecosystem. But what what the Ethereum Foundation, as I understand it, tries to do is to be yet another voice in the ecosystem and not own it.
+
+Gabriel 
+And I think the positive aspect of that is that if the EF fails or does something wrong or any of that, the ecosystem is more resilient because it can continue on without the foundation, you know or so we would hope. So there was this talk on the last DEF CON, which was about Maldales, which was a very interesting talk.
+
+exactly these spheres of influence and we want any blockchain, any ecosystem to be resilient beyond one specific foundation and actually we want more than that. want there to be multiple entities alongside, for example, the Ethereum Foundation that is nurturing Ethereum. So I guess that, you know, I think the difference is
+
+you're saying wouldn't it be better if they like coordinated you know like across ecosystems and I totally agree but you know taking a step back I think the first important thing is that we try to make this ecosystem resilient beyond one single foundation entity whatever and then we want also the existing entities to collaborate across ecosystems yeah so I guess like I agree and the previous point is that they should be
+
+free, like the ecosystem should be free from any single influence, right, which is in the spirit of decentralization.
+
+Citizen Web3 
+Absolutely. Agreed and understood and agreed. I totally agree. I think that it should go definitely way beyond foundations. I think the foundation was kind of what I stuck to because of what we're talking about. I absolutely, you know, I was talking the other day, let me, I'm sorry to steal the quilt a little bit here, just for a second, but I think it's important to share. was talking the other day to a friend of mine who is also an
+
+Citizen Web3 
+blockchain analysis slash developer. he's been in the industry for a long time, since pretty much the beginning. And one thing he was saying, he said, I'm kind of sick of not seeing a normal developer conference where instead of focusing on one, people just share what they know. It's a room full of developers with just whiteboard and markers. He says, I just want somebody to make this because I want to hear other developers from other.
+
+projects from other foundations, from other ecosystems, like you say, to help. They For example, somebody's working on resilience, somebody's working on decentralization, somebody's working on security. Why not share this? Why not all unify this? so I totally agree that it's not just about the foundations. It's definitely about each one of us personally trying to make that, how do you say, step, I guess, to to to seeing.
+
+blockchain technology beyond of what we are building, right? I don't know if this is what you were referring to if I took it too far.
+
+Gabriel 
+No, no, I think we are agreeing, And I think like ideally we want any single entity, you know, to be made redundant. I think that's the spirit of it. And I think that's what you kind of said as well, you know. Like we don't want one single entity to own an ecosystem that can decide what to do with this ecosystem. So I agree. and
+
+Gabriel
+Also, when you think about like, when you say about white markers and the board, you know, all of that, I did have this experience in DevCon this year in Bangkok, in Southeast Asia. You know, like, I specifically the white board with a marker, I saw a few sessions on.
+
+indistinguishability or indistinguishable obfuscation. think that is the name of the new hottest cryptography primitives that they're working on. know, and it's just starting. You people are still figuring how this works. And you know you have a bunch of like cryptographers and nerds essentially, like, who are trying to explain to other nerds what that was about.
+
+Gabriel 
+So I did have some of that experience and I do echo your friend's sentiment that that's what we really need, you know, to build stuff beyond the casinos that we kind of see today.
+
+Citizen Web3 
+Let me try to jump a little bit into before Cartesi ecosystem a little bit about research in general. somebody, it doesn't matter about the title because the title here is not a portrait. The fact is that you are focused on research and that is your field of interest. As somebody who has come from the web two world to the web three world such as yourself.
+
+So it's going to be question in a couple of parts, but I'm going to ask all of them together and feel free to answer any of them or just part of it. It doesn't matter. It's very easy. So first part of it is, you think that research approach to research is different in Web2 and Web3? And second part of the question is, do you think that the way we do research in Web3 has changed over the years that you have been in this industry?
+
+Gabriel 
+Hmm. Yeah, let me think a bit about this because like if you look at academia, you let's talk specifically about Like computer science, right? It's very different to industry, you know, you have these different beasts that work with different roles and all of that Now is there a difference between Like so I just said, you know, we have like web2 industry and you have like computer science
+
+academia, those are very different. Now is there a difference when you add in like Web 3 and research in that? I actually don't know, you know. So my co-workers are university professors, you know, they have a long-standing background in academia. So I guess the research that we are doing now, you know, we just published a paper, is
+
+I would say it's very much in line with how like the traditional academia would do it. I'm not sure if this can be extrapolated to the rest of the Web3 ecosystem. So yeah, I guess I don't know. That is my answer.
+
+Citizen Web3 
+But do you think since you have been working in this space, have you noticed personally the way you have? Let's say, I'm going to ask you, I'm going to invent things here. But for example, when you were working in Web2, your research would be looking at other papers, talking to other people, or whatever. In Web3, is it exactly the same approach in terms of when I research a
+
+question or is it more difficult for example is it more difficult to find papers is it more difficult to find people to talk to about the specific technology or is the community wide enough in order to be able to answer any question you're researching for example
+
+Gabriel 
+Yeah, you're absolutely right. You know, this paper we published, one of the grievances that one of the co-authors had is that, you know, if you look at our citations, know, like the geography, whatever, there are blog posts in there, right? We're saying, okay, our reference is a blog post. It's a medium article. You know, it's the personal website.
+
+Gabriel 
+of this guy. And yeah, this is very different. So I guess, yeah, I think that you led me to concluding something, which is... Yeah, that, you know, it's... I think, so I'm saying this, know, like when I was doing, know, like iOS applications, right, it's very different from,
+
+Citizen Web3
+Ha ha
+
+Citizen Web3
+I'm sorry
+
+Gabriel 
+deep research and deep technical challenges and all of that, there was no frontier in knowledge, right? There wasn't, I'm not sure how to implement this because nobody has ever done this before. No, I mean, there's no groundbreaking you know breakthrough in that.
+
+But in Web3, because it is very recent, you know we have breakthroughs. I'm not going to say we have breakthroughs every day, but everything is new. So my day-to-day work, we are building something that nobody has ever built before. We are encountering problems that nobody has ever encountered before. So first, you don't have this deep literature to learn from.
+
+But that's fine, you know, the job is to be in the frontier of knowledge, so that is okay. But also, the people who are working on this are perhaps not in the same spirit as the traditional academia that moves very slowly and there is the peer review and it takes a long while to get anything published, right? So I think it is understandable that, you know, we're citing Vitalik's blog.
+
+because you know it makes no sense for him to write his ideas in the form of a paper and try to get peer-reviewed and finally published. So there is this difference. Yeah, so you led me to this conclusion, which I completely agree.
+
+Citizen Web3
+No, it's actually ironic that you say that. You mentioned nobody has ever done it before, and I totally relate to that because we are ourselves builders, and currently we're building a tool. And whenever I talk to my team, we always, not whenever I talk to my team, but sorry, whenever we come to a problem in development, you know like some of the guys who work on the research part,
+
+They get kind of upset. They're like, well, I spent two months researching this and it's not even working. And I'm like, dude, nobody's ever done this before you. Like, how can you be upset? Like, man, that's like obvious that it's not working. We have to try it a hundred times before this will work. So I absolutely tend to agree with what you say that, you know, it's about being at the front of the development rather than trying to find something that was done, you know, 80 years ago here. yeah.
+
+Gabriel 
+Exactly,
+
+Citizen Web3 
+Mm If we are to talk about, you mentioned doing something first, let's kind of focus a little bit about still on research with the Cartesi ecosystem. Now, I've been personally following the project Cartesi for a while, for some time, I believe since 2017, 2018, I'm not sure. And no, maybe less. I'm not sure because I might get the date here wrong.
+
+apologize, but still, it's been a while and it's quite different. And I would like to talk, if you could talk a little bit about those differences. So for example, there is a different approach to rollups a little bit. There is the offer, the magic offer of using any stock, right? There is a slightly different approach to the VM. Could we talk a little bit about all those differences? Is that something we can mention from your side?
+
+Gabriel 
+Yes, yeah, yeah, so I think I can give like a historical perspective which is quite helpful to understand where you're coming from and also why it's so, let's say, left-field, I guess. think that expression means this, I hope. That, you know, it is really, you know, like when we were having, like I was having, like I was reading this tweet recently. about
+
+like all the terms that we have today, like alt-vs and fraud groups, know, and rollups even, and all of the terms were ideas that we didn't invent in partenza for sure, but they weren't established as terms when we began, right? So like fraud groups, when you say fraud groups, so our paper was on this topic, everybody knows...
+
+today what it is, when we started Cartesi, I don't think that term was even being used in general yet. We have something like refereed computations, verifiable computations, you know disputes, refutation games, but not exactly this sort of proprose specifically. Or maybe there was, but we weren't aware of it then. But it already existed as a concept.
+
+I just mean as a term. So to give a historical perspective, there were these two professors at a mathematical institute here in Brazil, Rio, from IMPA. IMPA is the, I don't know if you can cut this away, I would really appreciate it. But yeah, yeah, did, yeah. It's the Institute for Pure and Applied Mathematics.
+
+Citizen Web3 
+I I will, no worries.
+
+Gabriel 
+So the goal that we had is like, okay, there's blockchains, it's really slow, it's really unstable, but it only runs EVM, Solidity, whatever. We want to run AI on that. you know I want to run an inference model inside of the blockchain. That was like the initial motivation for that. So then there's something like thinking around it, like, oh, how can we solve this?
+
+And eventually, a few problems were evident. One of them is that there was not enough compute to run an inference model. So, reason from first principles, we would first need to scale computation. And secondly, we need to run software on it, like real software. I don't want to implement TensorFlow or whatever framework you want to use. I want to use TensorFlow.
+
+So we have these two problems, is Ethereum doesn't have enough compute. And even if it did, it does not run any of the mainstream software that has been implemented for the past, I don't know, four decades, right? Because we have a very deep you know set of tooling software libraries, compilers, operating systems that you have the whole computer science community implement. for
+
+past 40 years, and none of that can run in your smart contract. So we realized, OK, we need more compute. We need to allow users, like the developers, to run modern mainstream software that already exists before web 3. So then it's you know no longer about trying to run machine learning, artificial intelligence inference.
+
+the blockchain now it's just became this infrastructure project that tries to scale compute and that tries to make it possible for developers to use any stack that they want. So like this was the goal since the beginning and you know it's all about like this like I guess if you look what
+
+Gabriel
+solutions in general, know, try to solve is that, you know, they have a project product, it has a problem. This is the next step we need to take to solve this problem. And instead what we did is more like not try to solve and improve something like single step, but try to have like this broader view and the realization is, you know, no shared execution environment.
+
+is ever going to scale to what we need. So in Ethereum, if you look at the EVM, it is a shared execution environment. So you have applications being deployed to the same computer. And whenever Ethereum produces a new block, each transaction inside this block is competing for the same resources, for the same compute and block space.
+
+So if you have one application getting a lot of attention because it's DeFi and it's profitable, it's going to use a larger slice of the block space and start to consume the block space of other applications. Because in the end, have one computer that is shared across many applications. And this is not how servers, if you look at Web2, work. Like, imagine if you had one server that had to run the entire internet. So you know, they won't.
+
+We're always lose spots. Okay, so need to scale and compute. Furthermore, you can't have a shared computer for everyone. And you can't run existing software inside of that. So when you start mixing all of that and trying to see, imagine that now blockchain is widely used. It has like a perfect, it's the perfect solution for these set of problems.
+
+these set of use cases, what kinds of issues would the developers face when trying to create an application? And I guess all of that is the context in which Cartesi emerged. I can keep going, but...
+
+Citizen Web3 
+No, no, no, no, it's still good. I have a few questions in the middle, but we can keep on talking about it. So first question is going to be a bit controversial. Going to be a bit controversial. Controversial, though, I'm going to have to warn you. So it's not a question. It's more of a statement and what you think about it. Do you believe or think, or what's your opinion on the fact that if we take the three pillars of measuring
+
+Citizen Web3 
+blockchain success, the acceptable pillars. We can talk that there is more, we can talk that there are subdivisions, but there is three acceptable pillars, security, decentralization, scalability right. One of them claims that any off-chain computation is course going to lead to centralization. Now I'm not saying it is, but I'm curious, of course, because of the approach of Cartesi, what do you think about it? Do you think that in order to scale blockchains,
+
+we should sacrifice this part of decentralization and do compute off-chain? Can we achieve off-chain, you know like the same level of provability and verifiability as on-chain? Or it's not really an issue, and it's OK to sacrifice that side of decentralization in order to achieve that scalability.
+
+Gabriel 
+Yeah, so I think we shouldn't sacrifice security or decentralization. So I think that this is like a, that's a, that is the pillar of Web3, right? So we can't give it away. Otherwise we should just use, I don't know, Amazon or whatever. But we need more scalability, right? And we have this dilemma, you know, that's really hard to scale one naively without sacrificing the others.
+
+And roll-up kind of seemed like a way to escape from that, you know? So what are we sacrificing when we move to something like Cartesi? So Cartesi is an optimistic application-specific roll-up. So we can get into application-specific a bit later. It ties into what I said about you can't run the entire internet in a single server, right? And if your Ethereum is like a single computer, Solana is like...
+
+also a single computer, but very beefy. And we're trying to actually add more computers into the mix. So why I argue that it does not sacrifice on security and decentralization. So we have a proof system, which means that you can execute things off chain and then prove on chain what was the result of this execution. Now, of course, the natural question is, OK.
+
+What are the assumptions of this proof? Are you adding any additional assumptions? right So we have the basic assumptions, which is Ethereum works. If Ethereum doesn't work, our proof system becomes whatever. right So we assume that Ethereum is working. So are we adding on top of that any other assumptions? And we are adding a few assumptions.
+
+I mean, there is assumptions like it's very hard to find a hash collision, but I guess Ethereum already relies on that. So we're not adding extra assumptions, but even if we were adding this assumption, it would be quite reasonable. The other assumption we have is there is one single honest validator validating your rollup, your chain, your app-specific chain. So that is the added...
+
+Gabriel
+assumption. Now the proof system that we have, we try to make it as accessible as possible, right? We also call this decentralization, but it is decentralization in different sense of the three pillars you mentioned in your question. It's not like layer one decentralization. It is the proof system accessibility, which I guess conceptually is similar to decentralization, which is we want anyone to be able to join in the proof system.
+
+and be able to be a validator, right? Because like I said, we assume there's only, there is a single honest validator, at least a single honest validator, but only these 10 addresses, people's entities, I don't know, can validate it. Then it's not that decentralized, is it? You know, it's not one of N, it is one of 10. Or if it doesn't have to be these 10 validators, it could be anyone.
+
+But they need to have like a bond, the state to join the system like in Ethereum proof of stake, you need to have 32 ether to become faster. In a fraud proof system, you also need some sort of bonding system, right? And we want that to be quite low. And on our new paper, we've managed to get into this new mechanism, which really allow this bond to be around three ether, one to three ether.
+
+which is quite low. And I mean, it's not quite low. It's actually quite expensive, but it's not 32 Ether. Neither it is 3,600 Ether, which is the bonding requirements of other algorithms, of other fraud-prose algorithms. So I guess the additional assumption we have is there is one honest person who's really willing to run a validator, and they have three Ether to stake. And yeah.
+
+Citizen Web3
+Ca ca Can we dig this a little bit? Because validation is our our what should I call it our field right. And I want to dig this a little bit. First of all, I want you to eli5. And this is going to sound maybe a bit silly to you. But I would like you to eli5 for the listeners. What is an honest validator? And what I mean by what is an honest validator, how do we
+
+understand as a computer that somebody who is verifying data or computing data and then verifying it for our computer is honest. What are the criteria here for the for not for our computer so far, but what are the criteria for a person who is looking at that computation or verifying that computation done by an honest validator that they were honest?
+
+Gabriel 
+Yes, so first let us assume that we have a deterministic computation model, right? So I will give you a program, you know, the initial state, then you execute it, then you reach the final state, you know, so this is what we're trying to prove. You have an initial state, you run the computation for, I don't know.
+
+one billion, one trillion, I don't know, steps, you know, like state transition functions, then you reach the final state. And you're trying to prove this final state to the blockchain. Now, you and I, we can't compute it, right? We just get the initial state to run it, and we know what is the correct result of the computation. So it is verifiable already in the sense because it is deterministic, but this is not enough.
+
+Now I want to prove to someone else the result of this program without this other person having to rerun the computation. So the scenario that we think about is we have a computationally limited player, let's say, which is the blockchain. We call it the referee. So the referee, it is limited computationally. So we cannot rerun the computation, but we outside, we can do it.
+
+Because, you know, we have a laptop, right? We don't need a supercomputer. We can just run it on our normal CPU, get the final result, and then participate into this system by being the one honest validator. So maybe I can share more insight on how fraud folks work. Maybe that would help.
+
+Citizen Web3 
+Please, but by the way, I guess also what I'm trying to get at here is the devil's advocate game I'm playing here is the following. So are validators who perform sandwich attacks honest or not? Now, on one hand, according to the computer, they're honest. According to the economic entities that participate in that same computer, depending on their, how to say, personal goals,
+
+they will decide subjectively whether that validator that's performing the sandwich attacks is honest or not. because originally, sandwich attacks, for example, of course, I'm referring more to Solana here than Ethereum, to be honest with you, because it's a bit of an issue there with validators and different ways of financial, not attacks, but how to say, gaming the computer. So
+
+And the question is here, are they still being honest or not? Because according to the computer and the consensus, they are still being honest.
+
+Gabriel 
+Right, yeah, so this is honesty objectively, right? It's not subjective that we're talking about. and But it is a different, right? Because this out is validated. What we're trying to prove here is something objective. We're trying to prove the result of running a program from start to finish. So this is what we're trying to prove. And there is no subjectivity in there.
+
+Citizen Web3 
+Okay, okay.
+
+Gabriel 
+So when you go to roll up, you have these MEV problems. So either you have like a centralized sequencer that can do sandwich attacks, for example, or you have the base layer doing the sequencing for you. But in that case, the block builders of the base layer can do the sandwich attacks. So that is an issue, right?
+
+The proof system is dealing with a different issue altogether, and this other issue is fully objective. We're just trying to prove the result of the program
+
+Gabriel 
+So the inputs which could be sandwiched are not determined by these validators, one of which we assume is honest. The inputs are defined by the base layer. So the sandwich attacks rely on assumptions of the base layer. right So in any becomes subjective, which is quite hard to say, like any. It seems from the outside that
+
+specific block producer was, block builder was running another software, but you can't really know, right? Because it is subjective.
+
+Citizen Web3
+It is, yep, right. It was just, it's something that always kind of like bugged me, honest validator. And I know that I'm kind of sticking to the term there, but I wanted to dig at it because it's a question that sometimes when you look at the system and when you're part of that system, because I mean, at the end, validators are centralized entities. And this is something that is not going to change probably for a while.
+
+and more so the self-interested entities. So regardless of the system they're validating, and we are a validator, by the way, so I'm saying it openly as about ourselves, but I'm being honest here, right? So, you know, and we validate like across a lot of systems, but I noticed that, you know, regardless of what some validators, and I'm not talking here about ourselves personally, but I have noticed in some ecosystem that validators have participated before.
+
+like you say, in dishonest behavior. And it seems that it's important for this ecosystem, for the fraud proofs to be able to catch that. Is the way Cartesi designed mmm Can the way Cartesi's design help to better or more efficiently subjectively catch this dishonesty or objectively? It's a bit of difficult question that's getting lost, I guess, in semantics here.
+
+but I don't know if you're still following me. Let me know first of all.
+
+Gabriel 
+Yeah, no, no, I get it. get it. Yeah. So I mean, the first step is trying to create like different categories of validators. So you have the layer one validators, which have different roles, right? You have a testers, have builders, have proposers, all of that. And all these roles, like that we're bunching into being like L1 validator.
+
+we need to have like a majority assumption, right? And also there are behaviors which are let's call valid, but could be interpreted as also being dishonest in a way. I think you're talking about that, right? Now, when we're talking about L2 validator, it's a different category, right? Because they are not building consensus. exactly 
+
+Gabriel 
+So layer 2s, like when we say specifically rollups, know, rollups, I'm following that definition of rollup, which has the rollup inheriting all the security and decentralization and whatever guarantees of Ethereum.
+
+Gabriel
+They... How can I say this?
+
+they don't engage in consensus exactly, right? It's not like, you if you have the layer 1, Ethereum for example, consensus, and you rely on all these validators running the same software, you know, and talking to each other and all of that, and there you have those issues that you mentioned. Now, when you're talking about L2 validators, those L2 validators, they don't even communicate amongst themselves.
+
+all the communication that they partake in are done through the base layer. So it's a different kind of problem. I think what is confusing here is that we're using the same name.
+
+Gabriel 
+so like the layer one validators, are like ordering inputs, you know, and having a bit of echo, think. Okay, it's gone. I will continue. So the layer one validators, they're trying to agree on like an ordering of inputs, you know, that all these jobs, this job they're doing is on a different category from layer two validators. So I think that...
+
+The confusion that they're forgetting is that although they have the same name, they are performing in different tasks, right? In different categories, kept in a different category.
+
+Citizen Web3 
+Right. for the for the end user, But from a perspective of looking at the whole system, we still in our assumptions, looking at Ethereum validators as well, right? Or are we crossing them out? Okay, so we are. But how do we then make sure... I understood everything about the L2 validators and I kind of agree with that. Of course, this is, know, it's like basically interchange security. You bind security of somebody else.
+
+Gabriel 
+Yes, yes. No, no, yeah.
+
+Citizen Web3 
+What about the honesty of the L1 validators here? How do we still deal with it?
+
+Gabriel 
+we assume that it works, right? Yeah, so like if you are an Ethereum roller, you assume that the Ethereum blockchain is working as expected. So there is this assumption because we have it from it.
+
+Citizen Web3 
+We assume. OK, we assume. OK.
+
+Citizen Web3
+What? What? What? What? What? I'm really sorry to cut you out, just to finish off the question, because I think you're almost answered what I'm trying to get at here. So just one last time from my side, I mean, to dig at it, Assumptions, cool. But what can what can, let's kind of look at maybe not the average user here, but a user who.
+
+understands what they're looking at. Let's assume once again that we have a not a user who just came in into blockchain, but a user who you know can do research, do their own research and look up, understands consensus a little bit at least on... When when when somebody says that we have to assume that L1 validators are honest, what...
+
+Are there any criteria for a user who doesn't have verification tools in front of them, doesn't have the computation power in front of them, to kind of look at a project that is making those assumptions and say, and make and make a judgment on whether those assumptions are sane or insane? Like, how do we... Yeah, okay, yeah, understood. Yeah, yeah, sorry.
+
+Gabriel
+Yes.
+
+Gabriel 
+Yeah, no, I completely agree, you know, because in the end, have assumptions and the first step is, you know, being honest and doing the right research so that your system works under those assumptions. And then you have to analyze whether those assumptions are reasonable. or not
+
+So assuming that Ethereum works is reasonable if you are on an Ethereum roll-up. Otherwise you wouldn't be there, right? So if you don't trust Ethereum, you shouldn't trust any roll-up built on top of it. Because if Ethereum breaks, all the roll-ups on top of it will break as well. And there are of course different ways it could break. I think perhaps like the most, like the easiest example to think of.
+
+is like a data availability fault where, I don't know, the Ethereum consensus concludes that some data is available, but it's not. If that happens, all roll-ups on top of Ethereum break. So we are assuming that this one happened. And if you think there's a chance this could happen, I think I would advise you like to not use Ethereum because now you're putting into question
+
+the L1 itself and then you shouldn't be using that ecosystem if you don't trust the L1.
+
+Citizen Web3 
+Is there steps our potential user can do here? Let's say they wanna trust, but they're not sure they can trust. So let's say they have the internet in front of them and they're like, what two or three questions or one, is there such one slash two slash three questions any user can ask themself? Should I trust this computer slash ecosystem?
+
+and be able to look for the answers on top or they have to do a really thorough research and have the computation power in order to be able to answer those assumptions.
+
+Gabriel 
+It has to be thorough, right? because if the developers of, I don't know, let's say somebody launches a roll up tomorrow, let's call it roll up X, I don't
+
+Citizen Web3 
+Okay.
+
+Gabriel 
+You need to, you can't ask like three questions to yourself and be convinced that this roll up works. Like it could be a road pull like a scam, you know, like you need to be thorough of course.
+
+Now, but let's assume that there is no ill intent, right? Let's suppose that, I don't know, this new project, for example, is you know well respected, there is backing, you know all of that. So I want to better understand what risks I'm taking if I put funds on this project. And I think L2Beat does a great work of this.
+
+So if you have internet connection, go to L2Beat and check their entry and read. The description will be thorough. But I think the questions you need to ask is what added assumptions are there? So the word added is important because you already have to trust Ethereum if it's an Ethereum roll-up. So you need to know in addition to that which
+
+Gabriel 
+other assumptions exist in, let's say, the validating bridge. So for example, Cartesi, the assumption once our proof system goes online is the bridge has a one-off-end security property. This means that as long as between N validators, there is one honest, and this honest validator could be you.
+
+You could you know run the validation software on your computer. I mean, it's annoying because you need to keep it on, right? But the software is linked enough that you don't need a beefy server. So 1 of n, you can be the one in this set of n. OK, so this is the assumption of the bridge. So this is one thing you need to look at. Another thing you need to look at is
+
+whether there are upgradability concerns, you know and then if there are upgradability concerns, who holds the right to do an upgrade? And then I think the last question I would ask is under which conditions I could be censored. And if you could be censored under the same conditions that you could be censored by layer one, it's a very good spot to be in. But if you consider there's a centralized
+
+entity which can censor you, then that's really bad.
+
+Citizen Web3 
+thank you for really chewing it up because I know that I was asking pretty much the same question, digging around it, but I really wanted you to break this down because I believe that sometimes we in blockchain go really, really complex rather than answering. And I really, really want to thank you for sticking with the patience there and answering that question because it was important in my opinion. Gabriel.
+
+I would love to talk more security, but I'm going to jump to the bleats. The blitz will kind of take you out, take you and me, excuse me, out of the blockchain conversation. So I apologize for it straight away, but let's jump. Those are going to be three questions, non-related to blockchain. So kind of to finish the conversation and to, for both of us to,
+
+to say that we did it. almost managed to eli5 fraud proofs. I think you did a great job at it. Thank you very much for that. So three questions. You don't have to answer them actually quickly. I call it the Blitz, but feel free to answer them at your own pace. First question. Please, could you give me either a song or a movie or a book that in the last
+
+time of your life or during your life has a positive influence on what you do as a researcher and doesn't let you burn and you come back to that song or movie or book sometimes in your life. Or you don't come back. It doesn't have to come back to it, of course.
+
+Gabriel
+hmm 
+
+Citizen Web3
+Or maybe influenced in the past, you like, you you heard like you read a book and you were like, my god, this like, as a researcher, and like, it's kind of pivoted your thinking or something like that, you know, could be a movie doesn't have to be a book.
+
+Gabriel
+Yeah, yeah, okay, but he wanted to be like research related, right?
+
+Citizen Web3 
+Mmm not necessarily at all. It could be any, it could be Aladdin. It doesn't matter if he watched Aladdin and he was like, hey, no, I'm serious, man. It doesn't have to be research related. Like it could be, this is the whole point. Like any, any, anything that has a positive influence on you as a researcher.
+
+Gabriel 
+Can I give two answers to this? Yeah, so like one of them is a book, not a book, sorry, it's a paper, an article, outlining the history of the Lua programming language. I know it's quite technical, but it is very interesting because this is a piece of software that is really impressive to me on how well it is designed, how well it has evolved throughout the years.
+
+Citizen Web3 
+Please.
+
+Gabriel 
+how well it is implemented. So I think it's like a great example of a software, open source software development. And reading about this history and its philosophy is very interesting. And I do sometimes come back to it to like, as you're building something, it's good to take inspiration from others who have also built something really cool. And the other answer I will give is a book that I really like, you know, it's just for fun.
+
+I don't think it has influenced me as a researcher, but I think it has influenced me by making me happy, which is called Good Omens by Terry Pratchett. I really love it.
+
+Citizen Web3 
+It brings back memories for sure and just just a second for the listeners For everybody who's listening to us. So everything Gabriel is mentioning l2b books, whatever throughout the show including please find this under the show notes and if you want to go ahead and research what are we talking about, please click on the links follow them and you will of course be able to find all the information. Sorry Gabriel back to you. next question
+
+It's gonna get weirder from now on, promise you. Give me something. Give me one thing that is you personally motivational. Something that keeps you up, waking up every day, focusing on research, focusing on your ethos, focusing on the values that you mentioned in the beginning of our conversation. Something motivational, personally, subjectively to you, of course.
+
+Gabriel
+It's okay. I love weird.
+
+Citizen Web3 
+that helps you focus on those things.
+
+Gabriel 
+Yeah, so... Well, something that helps me is that getting reminded to not take things too seriously, you know, I think sometimes we suffer from this and this intensity of taking everything very seriously all the time, I think it's a very quick way to get burned, right? Because ultimately, and this might be a bit pessimistic to say, but we're all ultimately gonna die and...
+
+the universe is going to get cold and nothing will live in it. So this moment, it will pass. It isn't permanent. And I think it is nice to take a breath and be in the moment and not take everything super seriously.
+
+Citizen Web3 
+That was actually, thank you for that. That's actually very, very useful, I think, to everybody who is working in blockchain these days to remember what Gabriel is saying that I really want to thank you to myself personally included for sure. Last one, weirdest question of them all. Dead or alive, made up or a real persona, somebody from your family or it could be a book character, could be a developer, could be a songwriter, could be...
+
+It doesn't matter. And a cartoon Disney also a personage, a persona that is not a guru, because I don't personally believe in them, but a persona who when you feel stuck with something, when you cannot solve things and you're like, okay, I don't know how to proceed in order to stay myself, kind of thinking about that personage helps you to
+
+Again, it's not your guru, but it helps you to proceed when you're stuck.
+
+Gabriel 
+Hmm, me few seconds to think this out because it is a really good question.
+
+Citizen Web3 
+motivates you, inspires you.
+
+Citizen Web3 
+Take your time.
+
+Gabriel
+Well, I don't like be flying, you know, anyone. And I'm really glad that you say, not your guru. But someone whose words sometimes really make me think, you know, and feel better and motivated and all of that is Carl Sagan, I would say. would say that his humanistic view of the world really, I don't know, brings light.
+
+Citizen Web3 
+Okay.
+
+Gabriel 
+to me sometimes.
+
+Citizen Web3
+OK, perfect. I want to, Gabriel, thank you for all your answers, first of all. want to thank you, actually, first of all, I want to thank you for the patience during our little technical glitches during the recording. But I want to thank you for your answers. And please don't hang up just yet. This is going to be a goodbye for the listeners, for everybody else. I want to thank you for tuning in and listening to us. And thank you and see you next time. Thank you. And thank you, Gabriel.
+
+Gabriel 
+Thank you so much for having me. This was great.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

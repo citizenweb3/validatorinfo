@@ -1,0 +1,541 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/sheldondearr
+
+Episode name:
+A Rubber Ducky, Monetary Economies and DNA Onchain with Sheldon Dearr
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. have Sheldon Dearr with me from Omnity today, ex Octopus Network. Sheldon, hi, welcome to the show,
+
+Sheldon - Omnity 
+Thanks so much for having me. Happy to join you.
+
+Citizen Web3 
+Glad to have you on, man. Really glad. I have some questions prepared, but of course, usual boring thing. Well, it's not that boring, but it's a common thing. I do ask my guests to make a proper introduction because my interest is like, this is John from blah, blah. Yeah, it doesn't tell anything about the person. So if I can ask you to introduce yourself, tell me and the listeners everything you want us to know about you. And primarily, how did you get into Web3? What's your journey? If it's okay.
+
+Sheldon - Omnity 
+Sure, so I'm an art student. I'm wildly unqualified by a collegiate measure. I went to school for electronic music for four years. I was playing oboe and English horn and teaching percussion and teaching piano during that time. And that was great and I really enjoyed it. But also I thought I was prepared for being a starving artist. And then I started starving and said, okay, we got to do something else.
+
+And I'm really glad that that thing was network security because I happened to fall into that in Austin. Austin, Texas is a great city for music and tech. And I gave it a fair chance. I did some mastering. I tried to get some shows for electronic music artists I was working with and it was just too much. So in 2012, I started working at an MSP or an ILEC or whatever. It's a bunch of
+
+Bad acronyms for these kinds of companies but basically I work for a technology company that was responsible for other people's entire IT departments and their network departments and their ISP. And that was a good experience. I learned a lot really quickly. I moved up in that company and as I was moving up in that company I was on tier 2 I was responsible for Yum Corporation. So that's like Taco Bell, KFC, these big chains. I became responsible for their franchises and someone walked into a Taco Bell in Illinois
+
+and plugged in what's called a rubber ducky, a little USB. And that USB fried the port on that old Windows machine, because these are not modern point to sale, right? This is, you know, it's a desktop machine. So this person plugs in a worm, which then fries that physical USB port. And that worm gets coin hive running on about nine computers inside that franchise, because the way that their network security was designed with us, we didn't run their computers. And we were supposed to let their computers talk to each other on evasive ports where
+
+Citizen Web3 
+No.
+
+Sheldon - Omnity
+You know, 50 ,000, 65 ,000 port range. Bitcoin will try to communicate with its neighbors. We'll try to reach out to the network via broadcast. So Taco Bell was blaming us saying, Hey, you need to fix this. You're responsible for securing the network. You guys have to change, you know, change what you're doing. You have to solve this problem. said it's coming from the computers. We can't, you know, we can't control the computers guys. So that led to a month and a half's long research.
+
+demonstrate to them not just what bitcoin is but how it behaves in a network environment and how they could make business decisions to order us to change what we're doing but also that they needed to change the antivirus or at least you know do something for the security on these endpoints to get them to stop mining bitcoin. That research made me absolutely fall in love it was not my first time with bitcoin is my first time taking bitcoin seriously and ever since then i've just been looking for you know.
+
+What are these systems or what is this interesting way that we can have monetary economies that sort of supersede, you know, just regular governance structure, regular business structure. And yeah, it's been a good 12 years. The first year and a half, I was just kind of fumbling around in the dark. I mined on some CPUs when that was still beneficial, just barely, you know, got in there before the butterfly labs incident and a bunch of other ASIC silly things happened.
+
+But yeah, ever since then, I've been interested, you what can we do for Bitcoin? And in the block wars time period, when we were discussing, you know, how are we going to adapt after SegWit? There was a pretty long discussion about compute on Bitcoin and what it should mean to keep using Bitcoin, not just as a monetary tool.
+
+And I was a fan of elastic blocks weighted based on the last two weeks of difficulty and things like that. was trying to look for some sort of compromise that we could like, you know, burst up to 10 megabytes, but it be very expensive and things like that. I understand that's totally not ideal for infrastructure providers, indexers, you know, that that's very difficult for them. But I was in favor of that sort of structure, which probably would have been fine today with modern blobs. But either way.
+
+Sheldon - Omnity
+That just led me to look for more things that are not Bitcoin that would support distributed compute or an economic system of compute that's sort of independent from, hey, I paid my cloud bill. So yeah, I've been poking around for quite a while. And in 2021, after doing some moderating on Facebook and helping out with research papers and some small engagements and things, I got tapped on the shoulder and said, hey, would you like to work with this project? And I said, yeah.
+
+And at the time that was Octopus Network and we were looking at consumer chains for Polkadot on the year and I thought that was really cool. You know, I say for Polkadot, it's really for their chain template substrate. And I thought that was a great concept and a challenging business idea. And, you know, we took a stab at it, but that isn't going to work out. That's something we're transitioning away from. It was a consumer chain business under Octopus Network. And now because we're launching our newer series of products based on Bitcoin,
+
+that's going to be Omniti Network. So I'm proud to have stuck around that entire time because consumer chains is a really difficult business, but we stuck it through for a good three years. And now that we're moving on to Bitcoin assets, I'm going to be keeping it with Omniti for quite a while.
+
+Citizen Web3 
+Let's go back a little bit in time. Let's do time travel. Somebody sticks a rubber ducky. mean, that is a crazy story to get familiar with crypto, right? That is awesome. how did you, like, why? So, mean, most of people, you know, after such an incident would say, well, I'm not touching that shit. You know, like, I mean, why did you have the opposite effect? Why was, I mean, yeah, why did you have the opposite effect?
+
+Sheldon - Omnity 
+Well, there's two major reasons. One, the fear mongering for ransomware and things like Monero or Bitcoin itself. That was still kind of gradually picking up speed, but it was very niche at the time. It wasn't like a standard thing that you knew that if someone tried to take over and encrypt your file systems, they would ask you for a...
+
+Untraceable payment they would ask for payment. That's not a credit card or not fiat in some way not regulated You know jurisdiction pound currency so I thought there there would be some dual purpose to doing that research and after I started it I found this entity called Cato networks that was kind of already working on that sort of thing but they were working on it purely from a ransomware perspective and I thought that was great because at the time there was not a lot of ransomware research and not a lot of you know sort of
+
+enterprise grade defense for these kinds of things. And it gave me a different angle of, okay, yes, it's the, it's the bad guy's money, but is also, is this the money that someone would choose for porn? I'm not saying that I'm a supporter of porn. I'm saying that porn has directed certain markets, for example, Blu -ray instead of super DVD. You know, there is, you know, business demand there. And because those kinds of websites have asked for those payments and we used to see all these little silly casinos and things like that.
+
+I was wondering, you hey, what makes this a good choice for them? Why is this their fitment? Why is this their business use case? And it just led me to ask a bunch of questions and all of the answers were that, you know, it's a self -regulating system of sorts. It's not designed to be, you know, superseded by some authority. It's not backed by an army. You know, I thought that was wildly different from the U .S. government that I've had some disdain for well before 2012, if that wasn't obvious. But,
+
+You I thought that was a productive alternative is to have your own sort of economic structure based on code I was I was very impressed by that and there was one other thing to be fair in doing that initial research what made me really want to pull the thread more is that I saw windsocks tunnels going through the Great Firewall of China I could tell that there was these packets coming from nodes that were in Chinese IP space.
+
+Sheldon - Omnity
+And according to some tools that I was using that consume network data across the world, they were saying, these look like windsocks tunnels. And I thought that was very impressive that someone would try to get through the great firewall just to run a protocol that could supersede governments. So that also lit something in my mind that just said, wow, there's a lot of room for possibility here. Other people see it. I should give it a chance.
+
+Citizen Web3
+I'm going to stick this in. I probably shouldn't stick this sentence in, but I'm going to stick it in. Another reason I love crypto is because when you open a bank account, you just see a number. It's either a minus or a plus with crypto. As we're talking, my wallet is
+
+Sheldon - Omnity 
+Okay.
+
+Citizen Web3 
+sinking and it's appearing more coins. love it. No, I'm joking. Okay. So, so like, so just to say about porups, I had to say that, sorry guys, for the listeners, I started to sink in Monero wallet when we started this conversation and as Sheldon talking, the tip of my eye cannot help to notice that it's like it's war, it's sinking and there is the, like, yeah. No, but
+
+Sheldon - Omnity 
+99 %
+
+Citizen Web3 
+Just to say for the record, I really, I mean, I don't think, you know, we can make, of course, a conversation out of it. It's up to you. like just to say about porn, in my opinion, porn is a great, well, fucking is for pleasure. Let's start with that. And porn is an amazing industry, in my opinion. And the fact that it's been demonized, you know, we still demonize prostitution. We still demonize drugs as a society, yet we adore war.
+
+We adore murder and many other things like theft and extortion. So, you know, it's a weird thing, demonizing porn. Yes. Yes, absolutely.
+
+Sheldon - Omnity 
+And we adore prostitution on TV it's it every other night on ABC CBS these like mainstay American channels there They're still using it as a plot point. They're still using it for entertainment I mean, I don't mean to step on your words about it, but
+
+Citizen Web3 
+Absolutely.
+
+Absolutely.
+
+Sheldon - Omnity 
+To me, it comes down to almost like a data privacy thing. If I'm with another consenting adult and I'm making a video, it doesn't necessarily matter what we're doing in that video. If you need to control the content of what's in that video, that's a police dates scenario. That's a police dates goal to say, hey, here's some data that you and another person have generated in the privacy of your own home. You know, we need to control this data. I recognize there's kind of a limit to these things that people will accept and that's okay. But at the same time,
+
+Citizen Web3 
+Absolutely.
+
+Citizen Web3 
+Of course.
+
+Sheldon - Omnity 
+By default, can't stop me from making a video right now with my phone. So why would I want the government to go deeper into looking at my camera?
+
+Citizen Web3 
+Of course, of course, of course, I think like that sentence here of, you that we are too individual. I think the whole individual, I mean, like I said, it's a whole conversation. We can jump, of course, into it. But yeah, we agree here. I'm going to jump. I just wanted to get it out to say that, you know, you're talking to a person who is very open minded. So feel free to, you know, like go that way. I'm absolutely.
+
+Absolutely that way as well. man, back to your journey, you had like, I mean, the internet is a marvelous thing and you worked even for such companies as HP, for example, right? Which are big, crazy companies. And I guess you were younger. I guess we are about the same age more or less, you know, and I question, right? Why didn't you feel like when you were working for HP or for any other similar, you know, not music companies already, because I can understand, you know, young guy kind of looking music, yeah.
+
+It's a dream. And then you kind of go work in an IT and you start working for this like companies with a name, right? And then suddenly somebody taps you on the shoulder and you're like, yeah, I'm going to go work for you guys. Like, why? What was driving you? I'm trying to find what I'm trying to do here. I'm trying to find like you kind of already kind of went there a little bit, like with the, with, with the blocks and, they're not having an army and everything, but I'm really trying to find what made you not go back. Like, okay, you saw this.
+
+Sheldon - Omnity 
+So
+
+Citizen Web3
+And we all know how working in Web3 can be. know, like sometimes it's quotes and quotes here, I'll quotation sorry here, know, flipping burgers and sometimes it's, you know, earning a lot of money, but we still stick with it. And I'm trying to find what is it that made you stick and apart from the love, you know, for not having an army that back in, I'm being of course, you know, ironic here, but I'm curious really.
+
+Sheldon - Omnity
+When I was moving on to HP, I was in the middle of collective action at that workplace. So I thought that a bunch of people who worked with me were underpaid. I thought some people there were very tenured and comfortable with their pay. I didn't necessarily know what it was and I didn't need to know, but I knew that my pay was below market significantly. And I was still okay with that because like I said, I came to that business and did a lot of work. That business doesn't exist anymore. I was called the Megapath at the time. They've been
+
+reacquired and re -bundled and all kinds of stuff. But that business taught me a lot and really shaved down my rougher points a lot and helped me be positive in moments where I really didn't want to be in order to get someone's cooperation and things like that. So I spent a lot of time there enough to know, okay, we can do better than this. Let's get together as a group and align on something that we have social consensus on.
+
+And use that to make something happen. know I'm being a wild generalist here. I'm really zooming out, but that group of people that were in that room, it's one room full of cubicles. And there was about 80 of us. There was more than 50 of us that believed, Hey, if we, as a group, try to send this message to management, we can get better performance for ourselves. We'll get better pay for ourselves. Why shouldn't we do this? And at some point in those negotiations, management decided that those numbers, those
+
+Extra two dollars an hour or whatnot. We're going to come from either my role on tier three with this other guy. were sort of advising engineering and solving some weird problems. And we were both making like, I think 24 bucks an hour or a little bit more than that. And they were estimating they would still have to put up a little bit extra allocation to make that possible for all those other employees. But at some point in the negotiation, they decided that pay was going to have to come from us. So.
+
+Lucky for me, right around that time, HP calls me back and says, hey, you can work for us on this, you know, demerger or merger engagement. And I said, okay, great. I'll come along that company that I was coming from Megapath. They decided that they are not going to take the collective action forward. They're going to push down this sort of, you know, I don't want to say uprising, but you know, frustrations from their, their tenured and non -tenured employees were being played paid below market rate. And they decided they were just going to take that pay that I was accruing.
+
+Sheldon - Omnity
+and give it to this other engineer, the other person who was working on me with tier two as a sort of like, you know, hold the line person, but he was doing a lot of work and he didn't want to sort of get deeper into these social consensies. And of course he was, you know, annoyed by people like many people in a IT can be, you know, you get silly social interactions that go with business. And basically he absorbed the majority of my pay and crushed the collective action. So it taught me that even though there was a large group of us and we had a social consensus,
+
+There wasn't a financial anchor for that consensus outside of us as a group agreeing to do something. So as soon as it was clear that the other people who were in collective action weren't willing to leave the company like I did, it became almost no pressure for that entity. And my colleague, Robert, basically took the majority of my pay as part of his negotiation with management because he was trying to take that larger chunk.
+
+Now this entire time I didn't think I could get a job in Bitcoin or crypto worth a dang. I didn't think that was possible by any means. I just, I thought I wasn't qualified. I thought I wouldn't be able to do anything productive. And I was certain that I had to stay in network security as the guy who knew a little bit of something about this and it could be useful as the Bitcoin guy or whatever. And I was for a little while, but leading up to that was this experience of like watching incentives and disincentives crumble.
+
+When people aren't willing to enforce disincentives and you know, what is it conditional, non -core soft fork or, know, some of these other dips and different changes that people want to make. Now it's a very similar level of like, Hey, we, have to be socially consensus on this before we take this consensus on chain or it's not going to work. And I think that we're going to keep seeing those kinds of things in a, in a general sense, but in a really specific sense to me.
+
+It my feelings. I was sad. I got emotional about it. was, you know, I was still young and hormonal. was, I was, you know, I was thinking like, Hey, this, makes the most sense for the most people. This is beneficial to all of us. You know, people will give Robert less of a hard time if they're motivated to solve their own problems, literally by being paid and by having a little bit more structure for people are getting that pay. And I was wrong. I just, I was not correct. I was just in my idealism and, you know, hoping that making things better would make things better. And that's not how.
+
+Sheldon - Omnity
+systems of incentives and disincentives work. That's not how people work. So without going in the deep end of the psychology, should basically, that experience was enough for me to be like, you know, this is, not the thing that I think that I can balance and manage necessarily. I should get deeper on the research and tech side. You know, that'll be more comfortable for me in a business environment where I can make money. And over time I was gradually turning that leaf over of, I can make money in a business environment, but I'm not going to make progress on this.
+
+you know, concept.
+
+Citizen Web3 
+It's very interesting that you kind of came to that point because like, think that when I personally wanted to start, I mean, I've been in crypto pretty much the same time as you, we more or less, think, started at the same time. The journey is like 2011, 2012. But, you know, I feel like when I started my own project, which was about like four and a half years ago, one of my primary reasons
+
+inside me was to be able to prove to anyone in the world that anyone, doesn't matter of their skills or knowledge, because I don't consider myself smarter or better than anyone else, can earn money with Web3 for themselves from anywhere in the world by using Web3 today, not tomorrow, not in five years, it was four and a half years ago, so four and a half, sorry. And I think that that...
+
+drove me as well so i totally connect to what you say i totally understand that gone gone please
+
+Sheldon - Omnity
+It's, you know, if you recognize everybody's got to eat, you got to start somewhere just, you know, just to agree with you. Like if you see that need then, you know, that's a good baseline for these other arguments because no one's going to stand on the picket line with me who's not able to get their food.
+
+Citizen Web3
+Absolutely.
+
+Citizen Web3 
+Absolutely. Absolutely. you like, I think sometimes we are, and you said not to go deep into psychology, but, you know, to keep it on the like, level of, you know, balance of psychology, Web3 working kind of ethics. I guess that it feels at least, you know, as a person who is seen as a CEO and as a founder and as a worker, know, like Web3 projects.
+
+I don't know why people are scared to say that Web3 projects need to eat and developers need to eat. And it's not just Web3 projects need to eat, any projects need to eat, right? People are afraid. It's a bit like about porn and sex, what we talked about. People are kind of, it's like a taboo. And it's like a taboo to admit that I need money, but I do need money. In today's world, I mean, I can live in a barter system if it allows me to, but it will be very difficult. I need something, and by money I'm saying, it doesn't necessarily mean Bitcoin or dollars or anything, something.
+
+Sheldon - Omnity 
+you
+
+Citizen Web3 
+of value to exchange for other goods or services. So, yeah, I totally agree with what you're saying completely. Man, a little bit back to you, to your story, just to kind of like ask the last question about the story, if it's okay with you. You said music and I'm sorry, but I love music and my girlfriend is a DJ. Well, part of what she does is a DJ. And as you can probably see, you know, all the walls and...
+
+Sheldon - Omnity 
+Sure, sure.
+
+Citizen Web3 
+There is some DJ equipment around. So I want to ask you about your music background, like in two words, tell me, I I saw it online and you kind of mentioned it yourself, please.
+
+Sheldon - Omnity 
+So if anybody applies my name to Google Dorking, my name's moderately unique. And you can find a lot of funny pictures of me with long hair doing different things. One of them is playing a toy piano in the Vizcaya Gardens in Miami. One of them is teaching marching band. One of them is playing oboe and English horn. But I started
+
+Citizen Web3
+Wow.
+
+Sheldon - Omnity 
+playing drums when I think I was three or something. I'm not great at playing set, but my dad had a kit and we had a piano in the house. So it was just normal for me to try stuff. I was very lucky that we had musical instruments around that I could just play with. And I did that from a young age and at age six, it started being a regular thing. He would want you to take piano lessons. Please focus on the piano. It's good for your development. It's good for the future. like, I don't want to do it. This is boring.
+
+But you know, after a little while, I got used to it. I liked it a little bit more. then, somewhere around age 10 or 11, guess, middle school age. you know, I recognize that if I took piano, I would have this kind of like small bubble and I wouldn't necessarily be performing with others. And I realized I could continue with piano, but I'd have to be a soloist and it'd be more of this kind of like grind for hours a day playing the piano at school. I.
+
+I thought that wouldn't be enjoyable if I couldn't do it with somebody else. thought I needed to pick a band or an orchestra instrument to be able to sort of jam with other people. So initially I played sax. I played sax before middle school for like three months. And I had one of these music teachers that taught multiple wind instruments. And, I was really small at the time. I was like very, very early pre -growth spur. You know, I was still a tiny kid and.
+
+an alto saxophone in my hand looked like a tenor saxophone. was holding it like this. You know, just, it felt really big to me because I was still a little shrimp. And someone came in with this lunchbox size case and I said, I don't know what that is but I want to play that. Give me that one. And thank goodness it wasn't a clarinet because I would have been miserable if it was a clarinet. But it happened to be an oboe. And there's some similarity for the finger patterns that you use on oboe and sax and
+
+I practiced for three hours a day to really ramp up. I thought that I would need to catch up so that I could be, you know, worth something to be useful. And by the time I got to middle school, I was actually kind of competitive as an oboe player from practicing for three hours a day for the entire summer. And, that, that was kind of like the majority of my music career after that. don't want to say majority in the sense of dominant, but most of the time was between that month when I started competing and doing really well as an oboist.
+
+Sheldon - Omnity 
+And college when the local college in downtown Miami said, Hey, you know, please come play with us. We understand that we can't give you a full scholarship necessarily, but we can give you a little bump. You know, please come play with us. And I said, okay. And about a year into that, I was like, okay, this is what it's going to be like to be a professional oboist. I'm done. No way. I can't handle this. You know, I'm out. I got to find something else. I still love music.
+
+But I'm not going to be a performer for my entire life. It's, way too volatile of a career. I'm not going to feel stable in my own home and things like that. And, yeah, I, I kind of graduated from that to electronic music around the same time, because I wasn't interested in electronic music while playing Oboe for the most part, except for some like avant -garde weird stuff and, know, like a little bit less structured electronica. And, I think it was the.
+
+the summer before I was getting to college that I started paying attention to like a little bit more garage and a little bit more DNB. And then I fell right into dubstep just as it was becoming popular in the UK. I hit it just before it became popular in the States and then started showing everybody that stuff and going through the birth and death of the genre in its sort of like peak of popularity. It does something to you.
+
+Citizen Web3 
+Yes.
+
+Sheldon - Omnity 
+You know, it affects your development, especially if it happens to you a bit younger. think, you know, like it's, it's not a small thing to sort of fall in love, watch a progress for something that's struggling to find its definition. And then, you know, watch that definition be totally obliterated by a market that just wants you to turn the compressor up all the way. You know, I'm not mad at it, but.
+
+Citizen Web3
+You're talking about crypto? Or still music? I'm joking, I'm joking, I'm sorry, I had to say that. I had to say that, I'm sorry, go on please. Turn the blocks up, the blocks size up. I'm sorry.
+
+Sheldon - Omnity
+Turn the compression up. Yeah, for sure.
+
+No it.
+
+Just more throughput. I replied to somebody who said this the other day. was one of these college students who I met at an event or a hackathon at one point. It's like, hey, we should be maximizing throughput. We have to compete with Solana. We have to compete with all these other things. I'm like, I can buy an HPC with a credit card. I can rent a quantum computer with my debit card. I need better trust structures for these things. I don't need better throughput for these things. can always get more throughput next year, next week.
+
+That's much different from the trust structure that comes with setting up the system and custody of information and things like that. But yeah, that's a heavy dog leg left. We don't have to turn off and equate that. But yeah, it's like I'm guessing that you were popping up nodes and running for experimental Bitcoin forks or just, hey, we want to try something, but it's based on core. Here's our alternative. Here's why we like it. Here's these other things. There's a lot of reasons to
+
+to try stuff, to be there for that like birth and death also of a, know, of a, of a mentality of a sort of social consensus around a product. It, it, it doesn't change that product, but it changes the most extreme part of that market that might try to drag that product into something different. That'll have a different definition. And I don't know, I'm getting too general now. We can, we can come back from this, but yeah, blockchain is a hell of a genre.
+
+Citizen Web3 
+No, no, no, no, no, no, it was good. It was perfect. Perfect. No, no, it was perfect. You know, I was I was asking about music because well, it's it's it's something that I love and I find, you know, I find art to be very interesting and a very different, you know, of everything. Right. It's something like if we look at all our transactional relationships because humans are transactional.
+
+Sheldon - Omnity
+I see the headphones.
+
+Citizen Web3 
+Art is pretty much one of the yeah, there is a transaction day. I like it. It makes me feel good. That's my reward, but it doesn't contain greed. It's a crazy thing. Like art is one of the only industries which is non -grid driven. It's driven by some strange thing within. go on. You want to react to that? I can see that please.
+
+Sheldon - Omnity 
+I give you your piece also because I agree, but also I think it's like the perfect place for art to be an instrument for corruption and for other things that are a little bit more unsavory. It doesn't mean that art's bad. It just means that because art has this highly subjective market and just wild different details into it like
+
+Citizen Web3
+So.
+
+Citizen Web3
+Absolutely.
+
+Sheldon - Omnity
+I think a lot of Americans still know the name Pollock. They know this like funny, you know, slapping the paint on its style, but they don't know that that art was promoted by the CIA to have an impact on international art markets and to confuse art dealers in Europe and have this unintended effect. I'm not saying that it's a conspiracy by any means. This is public fact. This is documented, you know, but it's funny because art is the perfect place for the free flow of ideas, the exchange of information that isn't
+
+Citizen Web3 
+Of Of course.
+
+Sheldon - Omnity 
+Let's say easy to wait as transactionally appropriate. You know, I can trade you an orange for your art. Was that worth it to me? I don't know. Was it worth it to you? Were you that hungry? Was it that bad of a piece of art that you would trade it for just one fruit? No disrespect to your art. But you know, that kind of breaking transactionalism or sort of making it a little bit less fuzzy, it forces us to find these other definitions relative to the art. you know, sometimes that's a little more productive in the sense that, I'm going to barter with you.
+
+and I'm going to promote you as an artist because I do that for a lot of artists. I do commission pieces when I can. But, you know, there's a different level to that, which is that that artist has to eat and that they're going to be working on, you know, trying to make their art, their living if they can do that. And, you know, I'm zooming out again. We can come back. But yeah, there's a there's a lot of room in art in general for these kinds of social consensus and structures to come up.
+
+Citizen Web3
+Feel free to zoom out as much as you like. This is what I say when I have guests on, really like to see people talk about what matters to them and to see them go into their own thoughts. I have my notes here, but it doesn't have to go through them. can tell you that roughly, the better the conversation, the less of my notes I usually touch. It really is like that. The more flow it is because...
+
+Sheldon - Omnity 
+you
+
+Citizen Web3 
+Yeah, and love and anyways, but what was I going to say just to finish off the your thought and my thought was that I find like that a lot of similarities between blockchain and art. what I mean is that blockchain does have a lot of greed, of course, and it does have a lot of the normal drivers that other markets have. But it's a very interesting thing that art and blockchain are those two types of things that can be used either to create something perfectly good
+
+or perfectly evil. when I say perfect, of course, not in a good way, perfectly evil. And they are very similar in this way. You know, I mean, you have to be either a numismat, right? Can you say that in English? Somebody who collects coins as a what do call somebody who collects numismat? Yeah, OK, thank you. a coin collector, there we go. Or an artist, you know, to be crazy enough to pay one million euros for a five euro coin, you know. So.
+
+Sheldon - Omnity
+Coin collector, yeah.
+
+Citizen Web3 
+I find a lot of similarities in those things. I guess that's why... And this is a nice way actually, me to bring you though to this topic that I don't know if you were expecting this, but DNA on chain. I want to talk to you about that. I know that you had an interesting article that you wrote a piece about DNA and owning your DNA. And I'm going to give you a small like... I don't know if I'm going to make a question out of it, but I'm going to give you an opinion sort of or a sentence. And then I want to hear...
+
+Sheldon - Omnity 
+you
+
+Citizen Web3 
+I'm going to try to make a question out of it at least. So in my personal opinion, and it is not just my personal opinion, I've seen it in the Cypherpunk community, I've seen it in the WebTrick community. Every single today's, every single project that exists today that claims that we are putting DNA on chain or whatever it is they're doing, basically what they're doing is they're taking...
+
+the results of your DNA, putting it right in the information into a block and hence making it right now available to everyone to fucking see. Now, to me, that's not DNA on chain. me, that's kind of like, I mean, what, and here is, like I said, it's going to be hard for me to get a question, but what I would love to see, at least in this structure, and the reason I'm directing this at you is because you wrote this piece, which is a very interesting piece. And for the listeners, there will be an
+
+Sorry to spin off for the listeners. Everything me and Sheldon are talking about is at the show notes, including all those pieces and everything that we're mentioning. So you can see and you can go and read it. Please do. In the episode description, of course. so but what I would love to see is I don't know if it's I don't know. I know it's not possible today, but I would love to see is something crazy like actually a way
+
+of transforming DNA onto some kind of provable ledger. And I don't mean just the data. We are talking a bit of like metamorphosis here. don't know. Yeah, I'm going to stop here because I don't know what I'm trying to get at. But your piece was like, aroused me. So I want to talk about it a little bit.
+
+Sheldon - Omnity 
+You
+
+Let me start with this. I have to give credit to my co -author. She commonly goes by Decentricity on the internet, but Pandu is the co -author of that article. And the product that we were thinking about when we looking at that is ultimately one of those consumer chains on Omnidi back in the day, or sorry, on Octopus back in the day. And that was the first one to launch, which was designed to be a app chain that was a health product.
+
+It was based on this other teams work crust based, you know, saying that, you can encrypt that data before you put it on chain and then encrypt that encrypted hash and give people access to that so that they could read the hash and confirm that that information matches without looking at the actual, you know, GTACA patterning that's going to be posted or about the summary data from that review that would also be posted.
+
+So the idea ultimately to get that data on chain was to make it usable for third parties so that you wouldn't have to just straight up disclose it to the public. But of course, I know what encrypted data at rest means. It means that, you know, if you pay enough money and spend enough time, then eventually you decrypt that data. That's just, that's, know, we make these assumptions based on computer's horsepower and, you know, some assumptions in cryptography. But the, what it meant for me in that category and that article, you know, looking at
+
+the product that it worked on, what they wanted to do, what I would have done if I was in their shoes, for example. It's not very different, maybe a slight modification, but only because I'm used to seeing things that are based off of these comparative DNA data sets. The majority of DNA products that you've purchased today, they're just comparing you to other sets of DNA that they've picked up that have other points of data that come with them. I think it was only in the past few months, funny enough, if you know when this is being recorded and when this being published,
+
+Sheldon - Omnity 
+That, different sections of 23 and me now show different regions in Judea or Palestine or Israel and marks different social groups and saying, Hey, you're this percent of that that changed people's heritage, according to this definition of percentages that they were using to sort of identify themselves with. Because it was all comparative data in the first place, that's either one entity or a group of entities that are custodying that data they've received from the general public.
+
+And then using that to try to compute or estimate what others DNA might indicate. That's already a wildly assumptive system. I mean, I learned a long time ago, don't stack two maybes together. You're just going to make yourself fucking crazy at that last level. You know, it's, it's already uncertain at this point, you're accepting some assumptions here. Don't stack those assumptions together here and keep them marked down as truths. So in my opinion, the sort of.
+
+Raw way of keeping that data is that you could recompare against a new data set you could recompare against somebody else. Hey I just met you but you know we look a lot alike it sounds like our great grandparents have similar stories can we compare our genetic code. know you know a cat in the diff make a lot more sense to me to be actually reviewing each other's code and comparing it with other people instead of throwing it into these larger black boxes it's not that those black boxes can't be productive it's that because it's a business.
+
+You're not telling me what's in the black box. And even if you tell me you're not responsible to tell me whenever it changes, you know, it's, are centralized, you know, closed systems. These are for profit companies. There's not a strong way for them to convince me that that data is going to be accurate over time. Because it's based on their changing data set as, know, I was saying before that, that data has just changed for 23 and me. So I think that the article.
+
+goes into some detail about the utility of DNA on chain and a couple of things. But now that the consumer chains are kind of winding down, I can say confidently that the DeBio product was really good. And by the way, they decided that because it's difficult to get labs to participate in this kind of data compliance, they also released a product for period tracking, which I just take a quick tangent for that. Period tracking is a really difficult business in the United States because
+
+Sheldon - Omnity 
+There is custody of that data. There's people worrying that that data is being consumed by entities who want to monitor, you know, whether people are pregnant or not. And, know, has, should say women are pregnant or not, but that, that, that entire business of. I shouldn't say maybe I, maybe I should keep my mouth shut. I don't know. But.
+
+Citizen Web3
+Yeah, you have to be careful with it.
+
+Sheldon - Omnity 
+In the modern era, this kind of data, this bio data, it's not just sensitive, it's personal because it's being abstracted into these larger systems of authority and that just doesn't need to happen. It doesn't need to be done that way. So, DeBio's model was saying, hey, we're going to use that same encryption model that we were using before so that you can reference your data. You can give a third party your public key effectively and say, hey, you don't see my actual monthly routine.
+
+but you can have a hash that verifies it's me. You can know that I'm this entity, you know, because I'm not going to post it on two other addresses. Then I'll be trying to confuse you back and forth. And, you know, there's a whole thing about keeping that still permissionless without constraining people to maintaining only a singular address. But the idea of letting people get a reference for your health data and not need the actual data. I feel like we're still, we're going to see people reattempt that not necessarily with ZKPs because there's all of this
+
+You know, optimistic cryptography and sort of short throw cryptography that's supposed to be used in the moment for verifying that someone is who they say they are, that they have had an interaction with another third party that you want to trust. You know, I see that as a moderately productive way to get out of the pigeonholing of the financial system. Is that a blockchain solution? No, it's more of a proof system. It's more of a, you know, referential hash system across multiple tiers of forms of data, know, levels of access.
+
+There's a whole architecture that we could get into discussing, but I think you get my point. It's that there is no reason why we can't take some advantages for these things. But to your point also having just raw data on chain does not solve a problem. Just publishing information so that it can be accessible ultimately doesn't replace the existing functionality. It doesn't augment the existing functionality. It can be very degrading for the existing functionality. Say, oops, you know, people found out that I have cancer and it's on chain. You know, that's. That's that's.
+
+wildly difficult to maintain when you recognize that blockchains are not supposed to be short throw products. They're not sass. They're going to live for years and years if that monetary environment is successful.
+
+Citizen Web3 
+Absolutely, Let me just return to a little bit and then back to move us to the other topic from here more or less. I definitely agree. I definitely agree that putting something on the centralized ledger, I mean, we can probably now think of a case where it will go backwards. But in most cases, putting something on the centralized and a verifiable ledger will give you more
+
+superpowers will kind of add you to the Marvel list. I mean, what I was referring to, what I guess is not so much why to do it. It's more about... And this is the cypherpunk in me speaking, the anarchist in me speaking, of like when I see, especially with the theory and with the legal side of things, when they take a and they try an existing law from the real world and they go, okay, let's put it in a smart contract.
+
+What? What? Why? What? What? What do you want to do with it? Like, what do you want to achieve? You want to take a seat? We all know that our legal system in every single fucking country is a mess, right? We all know that it's a year's books like that. Nobody's ever read the whole thing. Not in a single country. Maybe the AI has, you know, but anyways, and I guess this is what I was trying to get at. It's like, it seems to me that putting law, existing law into smart contracts rather than seeing the benefits that smart contracts can give and trying to adjust.
+
+the law. It seems that Putin raw DNA data on the blockchain, not about, know, somebody found out I have cancer, but a company like corporation or the company, sorry, corporation, a monopolistic corporation with with with evil intent can can make it worse. I guess we're talking about the same thing, but I guess this is what I was trying to get at kind of thing.
+
+Sheldon - Omnity 
+Mm -hmm. Yep. When I say people, I definitely am looking out for the most malicious person in comparison with
+
+Use case i want to meet so that most malicious person would would definitely be an amazon or a microsoft door you know a large company that's trying to get into health care cuz you know goodness knows both of them are trying to bust in health care and even the public recognizes hey. you my it guy shouldn't you not be in my bloodstream what do you what do you what do want what are you doing.
+
+Citizen Web3 
+Absolutely.
+
+Citizen Web3 
+For for for the listeners... No, no, go on, please finish, please finish, please, please, please, please...
+
+Sheldon - Omnity 
+But I think if
+
+Really quickly, I think if you look at a lot of these other data systems of any type around healthcare and you look at what they're trying to achieve less the legal system, you know, a lot of that stuff is productive privacy. is privacy at a level that's functional where you can still use data that's coming from a private entity and bring it to a private entity. Does that mean that there's no room for a public system to help orchestrate that? No, not at all. Of course there can be, but doing it right doesn't necessarily require falling under the law.
+
+It requires seeing the intent and the sort of goals for that system. If that system's goal is to fractionalize privacy in a way that you can preserve your privacy publicly and still be recognized as a certain hash or as an ID and still be using that to allow data to move between two private entities. Yeah, it sounds messy because of course the law is going to be involved. These two private entities are in countries. They have their own laws to deal with.
+
+But if you summarize and try to go with just the absolute lowest common denominator and highest common values are those two companies. I say, why not have a trust network between them? That's managed by me. You know, I should be able to say, Hey, I don't want company B to use this, but they would have to get my authorization token. have to get a non reusable key for me. You know, there's, there's a whole loop, loop of, know, issuance of keys here that, that I should be talking about, but we don't have to get too deep into it. I just know that there's a.
+
+Citizen Web3
+Absolutely.
+
+Sheldon - Omnity 
+I'm a pretty good measure for what I would be willing to accept for those kinds of security orchestration platforms and at the moment it's pretty not good not just because trusted execution is not as strong as some of us had had hoped it would be by now but because even if you have trusted execution there's still people in a pipeline of operations that can screw up they can do something malicious that can you know accidentally disclose the majority of
+
+Citizen Web3 
+Hmph.
+
+Sheldon - Omnity
+Americans data onto the public internet as has happened recently for the last four their social and you know a whole bunch of PII that's easy to identify somebody and you know Pretend to open a credit card and things like that There's a lot of security parts that people get afraid of on privacy or that you know are kind of seemingly more scary or uncomfortable because things become public But it just takes a little bit of extra thought. Okay. Hey, I do want to share this information between two parties. Is that an operation? That's public
+
+No, is my ability to do that sort of thing, something that everyone should have and be universal without one person being able to say, Hey, show is not allowed to use the healthcare system anymore because he's ID number 654329 and he's done something bad. now consider Sheldon a terrorist and he's not allowed to use this health system. Like, no, that shouldn't be possible either. You know, I, I should be able to leverage the interest of these health companies to get them to keep getting my business and.
+
+They have their own compliance to manage sure, but that should be based on actions taken and data that's verified, not data that's given.
+
+Citizen Web3
+love your optimism. wish I had the same optimism. mean, no, you're totally right, to be honest. In a scenario where everything is nice, this is how it will play out, should play out. For the listeners out there, I recommend guys check out Eyal Harari. He's an Israeli crazy dude, very smart, very crazy dude. I'm not going to speak about whose advisor he is.
+
+you will find it for yourselves and when you realize that he's the advisor of the main guy from WEF, it creates a worse scenario. But do read those things about DNA and about what is possible and the data can do with it. And it's crazy, guys. It's just like, it's a bit scary, but it's a bit crazy. But let's move to measures. I want to still ask you about measures because it's something I really, really wanted to ask you about. But before that, I just want to thank you for what you explained about security because...
+
+Sheldon - Omnity 
+Hmm.
+
+Citizen Web3 
+that could be applied to anywhere. And I think it should be applied to anywhere, the understanding of private and public keepers and the understanding of the power of those things. So thank you for saying that. What I wanted to ask you about measures is I know you like your economics and, know, well, at least so one can make a judgment by looking at your internet, your digital soul, let's call it like that.
+
+Sheldon - Omnity 
+Okay.
+
+Citizen Web3
+So I want to ask you as somebody who, it's going to be a bit of selfish question. Sorry listeners, but it's going to be a bit selfish. But you know, as somebody who is building right now an explorer slash dashboard, and we're concentrating a lot on learning to measure things and to verify verifiably measure things and to, we're trying to argue that one thing is better than another or whatever, but
+
+Our opinions are our opinions. It's not for this conversation. What I want to ask you, and I think this will be useful definitely for everybody who's listening to it and definitely to me at least. When you talk about chain health, there has been so much conversation about how should somebody measure chain health, what can go into that. And I can give my own opinion, of course, but it's not about, it will be too long. I want to hear yours. I want to understand how you think
+
+We should measure chain health, what should go into that. And also maybe, I know you're more on the technical side, but if you can try and give an advice for the average user that might listen to this and want to say, how do I understand if a chain is healthy or unhealthy? And of course, yeah, let's talk about it in general. But if you could give an advice like that or what not to look at, for example.
+
+would also be useful if it's possible, of course.
+
+Sheldon - Omnity
+Well, I have to tell you that the cornerstone where I really like turned a point on this mentality was reading about the polka dot chain template years ago. It's not to say that this is all about substrate. It's just there's a point of logic where
+
+substrate at the point of compile when you're about to run that runtime, it's doing a throughput test on itself and it makes a judgment call to say, hey, this is my 70 % capacity. That's a software based judgment. That's not saying, hey, my RAM is filled up 70%. That's based on total performance at this sort of, you know, at run integration test, you could almost call it. Seeing a chain build that in as, hey, what we're targeting is 70 % or better efficiency.
+
+And above that 70 % when we're getting into the 90, 95 range, especially it's important to have an economic disincentive bound to that technical part. You know, what I, what I see in that system that I'm not explaining well for layman, I'll pull back for a second. Is that in the design of technology to have, you know, a complete decoupling from economics doesn't work, but to have a really, really deep integration with economics is frequently too heavy a constraint.
+
+And it's difficult to sort of balance those two, but in my opinion, chain health, can be looked at as an economic value because we're used to seeing chains as a sort of, you know, publicly financialized products. And I think that there's a, there's a sort of different part of this conversation that goes with that. I'm not just who's buying or who's maintaining liquidity or, know, who's doing DeFi weird things that are silly or, know, who's trying to get the asset into new people's hands. There's a whole bunch of economic theorem to go into it, but.
+
+At the point of operating and at the point of starting and running a chain, I think that health comes down to ultimately how well you can balance those resources versus those economic disincentives. Because the incentive is usually speculative, right? The incentive is usually, hey, this is cool. We can do something interesting. This is worth putting time, energy, money into. But the back burner or that people seem to not pay attention to of that.
+
+Sheldon - Omnity
+Is hey what happens when things go wrong for example there's many e -cell twos right now that have not integrated fraud proofs. Does that mean that they are potentially toxic to the l1 i'm glad that we're talking about this in public now yes we haven't been talking about this for. For quite a while i'm sure you're familiar with this but the general public isn't used to the idea that i could go from one what's a banking system to another banking system and that second banking system would just take my money and i wouldn't be able to get it back to my main bank.
+
+You know, I know it's a really crude way to sort of zoom out, but for a layman person who's just moving their money around and looking for a system of money, you know, EIP 4334 is wildly intolerable to them, or at least it should be. You know, it might be presented in this mode of, we have the compliant Ethereum and here's this easy app. You just click the pretty button and it has the two gradient shading and everything looks nice. You know, it's very easy to get wrapped up in that UX based argument, I think.
+
+But the UX based argument is always a short term one. In the long term, what's actually happening? What is the result? you mean the app's not the most pretty, but I have control over my own money? Hey, that's great. there's a really big catch that I missed out on that's not based on consensus across a group of people. Okay, I should probably know what these risks are. Like there's a part of it that is also, I think, healthy disclosure. When you talk about chain health, if you are telling people that, Bitcoin is the future of money,
+
+The coins the greatest bitcoins never going away. I feel like you're almost doing them into service you're skipping the financial literacy you're skipping the technology literacy you're skipping the privacy based data incentives you know just all kind of things that other entities might be coming to that network with if you just blindly go the future of money are you really solving a problem no you just living a problem from point a to point b which is part of why the sd has gotten way too involved.
+
+International dealings and clamping down on open sea recently like all kind of silly things But to get back closer to your question because I hear myself being a couple tangents off ultimately, I want to see a balance of dynamic adjustment in compute resources the ability for the computers that actually run that chain to you know, make updates to make changes to
+
+Sheldon - Omnity 
+You do things that are agreed by the rest of the operators without wildly risking the chain going into a hard fork or a halt and simultaneously being able to manage those economic incentives of hey if we do on board another 10 ,000 100 ,000 users right now is that going to break UX and therefore cause a problem. I'd much rather we prepare the back end for those sorts of things than try to worry about the UI being a problem because a website's a website even if it's IPFS served website that's still
+
+one endpoint, the person, the user. There's always going to be that one endpoint that we come back to unless I start carrying four HPCs in my pocket in a cluster. I don't think that's happening tomorrow. It might not happen in my lifetime. But you get my point. When it comes down to the user being an endpoint saying, hey, the user is almost a single point to failure, if you recognize that as something that you can't really change, then you can look at redundancy, high availability, all kinds of other resistance to just regular activity on the internet.
+
+You can view that as an opportunity to create resilience instead of a chance to become more pressured. Someone said they were sort of threatening to attack Bitcoin the other day. was like, go for it. Please. We need you. You have to do it. If you think there's anything worthy in this system, you've got to give it a joust. Otherwise you're just accepting Bitcoin the future. Everything good. Please. Other systems save me. Like, no, it's not. It's not productive.
+
+Citizen Web3 
+A fucking man. Really a fucking man because it's ridiculous how many people don't, in my opinion, I'm sorry to say that and people will hate me for it, but it's ridiculous how many people don't fucking understand those simple, that simple thing. I've been saying, and this is, think, a nice way for us to like wrap up and go to the Blitz, but just to like to agree with you there, like over the last, how many years? don't know now, 13, whatever years I've been in this.
+
+Industry not working of course, but working maybe almost 10 soon enough nine eight But you know, I've realized one fucking thing Don't don't don't tell people about Bitcoin if you want them to start using Bitcoin tell them how fucking ridiculous the system is Their first question after an hour. What do I do? Well, exactly. What do you do? There we go Tell them about the current system. They don't nothing about it when you start telling them like who I'm sorry. I'm getting excited
+
+But you know when you start telling people like I've realized about Bitcoin about the future of money they can buy okay Whatever tell them about what's really going on within around them today, and they will ask you how the fuck do I buy Bitcoin? You know It's a different it just works, and it's a simple thing. Yeah, so thank you for saying that man man Let me jump quickly into the bleeds. I like like I said in a good conversation. I can never keep track but Let's jump quickly into the bleeds take us out. It's gonna take us out of those questions. There's
+
+Sheldon - Omnity
+OK.
+
+Citizen Web3 
+There's going to be three questions. They're completely different from what we talked about, but it's still about you. So first one, give me or a movie or a book or a song that has a positive influence on Sheldon, either throughout your life or lately within some years. Positive influence.
+
+Sheldon - Omnity 
+If I had to pick a positive influence, it's still going to sound kind of dark for a book. It would probably be Kurt Vonnegut's Slaughterhouse Five. It's a really, really depraved book. I don't necessarily recommend it, but I think that
+
+Citizen Web3 
+I haven't read.
+
+Sheldon - Omnity 
+people, people who are being like dopamine enriched and are still below 25, I do recommend you read it, not just because it's not fun, but because there's a different level of experiencing war of experiencing sort of a drift in time and not being able to glue things as easily together in your mind and still needing to make really conscience, really critical, said the conscious, not conscience, sort of moral decisions and
+
+Citizen Web3 
+I love it.
+
+Sheldon - Omnity
+just difficult memories and making them useful to you. I feel like that book primed me a lot for being able to make the frustrations that I had with global systems, specifically US systems. That primed me for being able to accept a little bit more, try to grow a little bit more, just be in that category of almost Zen, of leaving behind the things I can't defect and maybe understand, but I'm being frustrated with. I have to focus on these things where I can make an impact.
+
+Where life happens, et cetera. There's a, a difficult way that I could or should describe that book. It's basically the equivalent of, of someone who's losing their memory, trying to recall war and also their childhood at the same time. There's a little more to it than that, but Kurt Vonnegut is a pretty famous writer and they used to ask students to read his works all the time in high school. And I don't really see that anymore. It's the same way that Ray Bradbury's Fahrenheit 451 about.
+
+You burning books and authoritative control also a very important book these kinds of things are not what we're targeting you know thinkers with anymore i say the youth under twenty five because your brain has completely. You know sort of physically aged out yet but even above that anybody can can learn who wants to maintain their neuroplasticity you can keep learning into your eighties if that's what you want to do. The people especially who are in that younger form they're gonna watch these semi authoritarian systems.
+
+Citizen Web3 
+Yes, yes, yes.
+
+Sheldon - Omnity 
+Pretend to be less authoritarian and become more authoritarian. It's, it's been a trend for years now. COVID was a good example of it in some senses, like the flexing of the authoritarianism, but it doesn't mean that it's a change or a derivation. means that by reading something like that, that helps you see authority in a more 3d form and see the impacts on regular people and see the potential impact on you. can get ahead of, no, the government did something that hurt me. What shall I do?
+
+That's a very linear way of addressing those kinds of experiences that are going to come to most of us in life. Instead of getting so hurt and frustrated at those kinds of things like I did for years, I would highly recommend to anyone who's trying to anticipate systems that don't work the best, hey, here's a human experience of someone who was in the thick of the most painful parts of these systemic failures. You know, what is it like to go through that or can I empathize with them in some way?
+
+Where do I not empathize with them and what does that mean for me? You don't have to be a goody two shoes, a good person or whatever to appreciate these books. But if you recognize that authority isn't infallible, then those kinds of books are very, very helpful. If I had to pick one other, I'd probably point out manufacturing consent. I don't remember it nearly as well.
+
+And Chomsky has since gone the other way, so I'm a little bit hesitant to summon one of the authors, you know, Edwards is still just fine. But the main theme of that story you can find online in an Al Jazeera animated short on YouTube for just five minutes. There's a couple other platforms that have it uploaded. I don't think it's on Rumble yet, but I hope someone will put it on theater or live here sometime.
+
+But there is a really healthy five minute explanation that you can find online about manufacturing consent, which is mostly that there are systems of incentives that predate any government structure in order to centralize power and increase that authoritative control over large groups of people because it's efficient, because it's necessary when you have armies as a system of government, because it's necessary when you have an issuer maintaining a currency.
+
+Sheldon - Omnity 
+And it's not that that necessarily means things are good or bad, but it'll give you a different angle at this phrase that I came across years ago called soft power, which is the way that economies of scale or, you know, G7, for example, will leverage each other in order to get what they want out of the other and still maintain their goals and incentives, even if those goals and incentives are unsavory.
+
+Do you have to zoom out all the way to macro political theory to feel comfortable in your own home and have a political discussion? No, I don't think so. But it certainly helps to have this more reasonable, larger known unknowns instead of just saying, well, I don't know if the media is going to collaborate with the government besides that you could look up Operation Mockingbird and all kinds of things that obviously have been done for collaboration that probably shouldn't have been done. There's a really good argument to say that you can.
+
+Assume some of these incentives are going to exist in systems where people don't just have to eat, but have a speculative nature on themselves, but they are ambitious in the sense that this system of incentives includes incentives to become more ambitious. It sounds super self -serving because it is.
+
+Citizen Web3 
+No, no, makes sense. Makes sense. Makes sense. think it makes sense. think that what you say is a big lack of, know, like as a joke, just to kind of level it out a little bit. I was reading this neurodivergency jokes, jokes for people who are neurodivergent, if I'm pronouncing it correctly, about the neuroplasticity of a brain.
+
+of a vampire who turned to be a vampire as 12 or 15, hence never reaching neuroplasticity and always being in that state of, am I okay? Am I not okay? But second question, I promise. Give me one motivational thing that helps Sheldon wake up every day, work on amenity, work, carry on building things, researching things.
+
+and having that drive that you of course came to the show today with.
+
+Sheldon - Omnity
+Well, it might not be what you'd expect. It's a little bit off topic,
+
+I was raised Jewish and there's a lot of things that I sort of retained and preserved from that early education. And, there's a lot of things that I reject and, you know, don't make sense for me. And I don't keep that as part of my authority based view on the world. but, Tikkun alum means repair the world. And I feel motivated that because I'm lucky and blessed, I'm, I'm sitting in a comfortable house. I, know, I got to learn on music and technology when I was young, I.
+
+I went to private school for grades one through six. You know, I had some luxuries and privileges that a lot of people don't have. I feel compelled because I got to absorb those things through no action of my own that even though I can't give those things to people, I owe the world something. I feel compelled that I have to do something to give back. Not because I need to be special or because I need to feel like I make an impact or something like that. I don't need to take a picture of me doing something good to feel like I did something good.
+
+But I do need to feel like I do something good for other people in the longer stretch of time. If I just work for corporations, I can make a lot of money. If I was just focused on making money, boy, I would have made a lot more by now. I would have not helped nearly as many people. I would have not lent money to people and done things like, of course, many times you help somebody out and they don't pay you back. Fine. It is what it is. I feel that I wouldn't have done those kinds of things.
+
+I wouldn't have gotten myself into these like over -empathetic, almost nonsensical situations if I didn't genuinely believe that every day I needed to try to do something good that wasn't just for me. And there was a period where I was kind of stuck on this, but yeah, it's something that everyone has to develop independently.
+
+Citizen Web3
+Could I?
+
+Citizen Web3 
+Could I, trying to understand this. I'm not trying to, I'm trying to understand. Could I say that your motivation is giving back?
+
+Sheldon - Omnity 
+That's a much cleaner way to say it. I think that repair the world comes with lot of judgment and, hey, you're broken. I'm going to fix you. It's not like that. Just help people and get back. It's not an authoritarian thing to say you want to help people.
+
+Citizen Web3
+Okay.
+
+Citizen Web3 
+Let the canta alarm. It is a fun fact. I served in the Israeli Air Force once upon a time. It's a fun fact for the listeners and for yourself. yeah, we have a lot in common. And please. No, no, no. You did a good thing that I have been there. Dan, I've got a T -shirt. A good thing that you didn't. Last question. And I promise this one is a crazy weird one, but I promise it's the last one. Dead or alive, real or not real. So it could be somebody you know, like your grandfather or it could be
+
+Sheldon - Omnity 
+I wanted to join when I was younger.
+
+Sheldon - Omnity 
+Okay.
+
+Citizen Web3 
+Mickey Mouse or an author, a developer, a writer, a cartoon character, a movie character, a live, dead, doesn't matter. Not a guru, because I personally just don't believe in them. But someone or somebody or a person or a real human that you know, not that you look up to them, but you kind of ask yourself the question of how would they solve a really difficult situation you are stuck in?
+
+or kind of look up to them a little bit somehow, but not worship them, definitely not. That is something I'm trying to avoid.
+
+Sheldon - Omnity
+No, I certainly don't have any heroes anymore and I was foolish a couple of times to hope that you someone's incentives would align with me or someone's motivations aligned with me. Having heroes isn't helpful.
+
+But I'll say that when I did have heroes, was certainly my dad. have to point that out that he's done a lot of great things and I do ask him for help. And, know, in the sense of mechanical, how to get through stuff, I do lean on him and he's a great guy. You could look him up if you like. And I say he's a great guy because that's a third party verifiable information. Not that I think he's the greatest thing ever. But if I had to point out a person who I'm not naming as dad.
+
+Citizen Web3
+Nice.
+
+Sheldon - Omnity 
+I would say it's probably Slavoj Zizek, who's this kind of influencer, silly philosopher guy. I'm a really big fan of his take on Hegelian philosophy. And, in a nutshell, he wants to take the learnings that informed Karl Marx without taking Karl Marx as the base of a philosophy, because he's not trying to take Marxism as the explanation for something. He's trying to use it as a contrast for the modern world.
+
+Against these teachings that Marx received before he you know started writing all his manifesto whatever the heck So first of all, the guy's really funny. I got to give him a shout out for being a comedian But second of all, he's really really logical and if you could get through the chef and all just kind of like he has this You know sort of Uzbekistani communication style It's difficult to get through sometimes if you can get through that you can hear him debate Jordan Peterson
+
+for I think it's something like three hours. It's a very, very long conversation and he's widely recognized as the winner in that sort of debate or discussion. And it's not because Peterson annoys the hell out of me because Peterson absolutely annoys the hell out of me. can't stand him, honestly. I mean, if you lose your title as a psychologist, you gotta be doing something wrong. If that board comes and revokes your title, clearly you didn't just piss them off. You've gotta be doing something that's not appropriate. But even outside of that,
+
+Citizen Web3 
+Nice. Nice.
+
+Citizen Web3 
+of everybody.
+
+Sheldon - Omnity 
+The way that those arguments come down to it, when you come to like sort of a sort of a lower level of, we believe that humans have these assumptive behaviors or we believe that humans are inherently good or inherently bad. The way that he manages those arguments, I think are much more practical than I've heard other people bring them up. They're, not always based on, well, you've seen this thing in history where in this instance, these people did this. It's, it's frequently him saying, Hey, in the modern world, if X happened to you.
+
+Would you consider why is your most likely course of action or do you think the majority of people would pick X? I think that's a really productive way to go about philosophy because then you don't have to just build on the old conventions. You don't have to just reestablish old assumptions. You can make new assumptions based on social media and dopamine being plugged in everybody all the time. You know, that can change the way you approach philosophy of demographics. So yes, that boy is a very interesting fellow.
+
+Citizen Web3 
+I think that, you know, that point of... personally haven't... I'm not familiar with Slavoj, so thank you for saying that. Once again, listeners, check out all the show notes. But, you know, on that note of not being stuck in the past, I think that that's a perfect note to finish off on because at least for me, it's always been... Yeah, traditions can be beautiful.
+
+And so can many other things, but let's be honest, traditions and yeah, they can be evil and they change, know, history, sorry, not history, but time goes on. And I just hope that, you know, more people start to realize that sometimes something new doesn't mean bad, you know, it doesn't mean that if we change traditions or something that we used to do for 500 or even 500 ,000 years,
+
+Because maybe the reality changed, we need to adapt and that's what makes us the strongest, at least today, at least we like to believe so, we are arrogant enough to believe so that we are this number one on this. But anyway, see, I'm also going off topic, but Sheldon, I want to thank you and wrap up and thank you very much for your time, for your answers. Please don't hang up just yet though. Everybody else, thank you very much for tuning in. Sheldon, bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

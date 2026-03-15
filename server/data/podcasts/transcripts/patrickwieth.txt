@@ -1,0 +1,500 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/patrickwieth
+
+Episode name:
+Gamified Gambling, Incentives and Democracy with Patrick Wieth
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 Podcast. Today I have Patrick from Crowd Control with me. Patrick, hi. How are you?
+
+Patrick 
+Hi, nice to meet you. Very good. It's a pleasure to be here.
+
+Citizen Web3 
+Nice, nice. We don't have many guests from the gaming industry, but we have had some over the years. So excited to talk not just crypto, but maybe gaming a little bit, of course. But before I start bugging you with my interesting and terrible questions at the same time, of course, please, for myself, for the listeners, be so kind to introduce yourself as much as you want. Tell us.
+
+How you got to Web3, how did you get to gaming, and anything else you want us to know about you, please.
+
+Patrick
+Yeah, I'd really like to do that. So I'm Patrick. I have started the Crowd Control project a couple of years ago. And how did I get into crypto? I was already in crypto a long time before that. think so the first things were like a friend was saying, hey, let's buy these miners from a friend of mine and because they don't like it and they're not happy with it. Bitcoin has fallen, I think from
+
+$5 to $1 back then and they were totally disappointed by mining and everything and I was like, I have no idea what this is. I don't understand anything, but I can administrate a bit Linux. We can try to run these things. Let's see what happens. So that's really long ago. I think 2011 something like that. And then we had two funny computers mining stuff. So that was like I got my feet into the door of crypto and over the time I started understanding more about this stuff and thought like
+
+Well, it's real innovation. It's not just some funny internet money, but being able to find consensus without a central entity. That's really cool. That's something that does not exist yet. And now it's possible. It's really good. then, well, I did my PhD in physics. So that was a couple of years later. And then I thought like, what would I do with my life? So it was something I had to find out because now crypto has already put
+
+a lot of money into my life. So I was no longer in like the feeling, man, I'd really need to earn some money to be able to fund my life and everything. But I could think about doing something that would not earn anything for the next years. And so I had like all the options in front of me. And then I thought like, okay, gaming, I love gaming. I played so many games in the past and I even feel like I learned from that, like browser games where we were trading, what kind of spaceships and all the stuff.
+
+So I learned like how trade works, how markets work from playing silly games online, but it helped a lot not to do all these mistakes again in crypto, like concentrating back and forth stuff like this is not good. And I learned that from games. I was kind of grateful to games. was very grateful to crypto. And I always excluded the idea of becoming a game developer for my life because I know it's a very hard business. You don't earn very much. And as a physicist, there are better options like
+
+Patrick 
+Typically you go into finance consulting or into IT that are like the two main paths you choose. But then I thought like, okay, it's possible to do that. Back at that time, I had invested into the Cosmos ICO, but Cosmos was not launched. So I had no idea what this stuff gonna be worth, if it's gonna work out. Like proof of stake was not proven back then. It was just something that might work, but the early projects were more like failures. So back at that time, I thought,
+
+Maybe I can combine gaming and crypto somehow. So this is like, I think it sparked the first idea. So I thought about how can these two things come together? Because some basic crypto things were there like CryptoKitties. But these were not real games. It was more like, how would you say, some kind of gamified gambling stuff like this, because you did not really play much. You just hit the button and then you spawned a new creature and that's it.
+
+So I was thinking about how is it possible to bring the two things together? How can we make new things in games with this consensus thing? And I thought something that's really cool is if users create content. And that's something in some games, it's really big, like Minecraft or Factorio. So these are really big games with a huge player base. And the games wouldn't even be 10 % of the content.
+
+If it was only what the studio published and like 90 % is the community they make mods they make new skins they make so many awesome things that really enhance these games and then I thought about why is it that it's only exists in some games and not in others because if you look at for example League of Legends or Magic the Gathering or Hearthstone or any kind of competitive game it's gone you no longer see that and that's something that where I thought about
+
+Why? What's the reason for that? It's something I thought about and I figured it doesn't make sense in these types of games because if you can create your own content and it's a competitive game, you have an incentive to do unfair shit and to just ruin the game experience for everyone by just making some items, some element of the game, enhancing it by something that's totally broken because you want to win. And in a single player or cooperative game like Minecraft is mostly cooperative, of course.
+
+Patrick 
+PVP exists, but let's say mostly. And if PVP exists, there's like they agree previously on what kind of extensions they add and so on. So it's mostly cooperative and these games, it works in competitive games, it's problematic. And that's where I thought, wait a second, if we have consensus mechanisms that allows to let many people across the world agree on something without having a central entity decide on it, then it's possible to have a game that evolves by the players creating new stuff, even if it's competitive.
+
+So that was the main idea. And then I thought about what type of game would make sense here. So from my personal preference, it would be RTS, I guess. Sure, makes sense, RTS for me. I think for me back then, the biggest problem with RTS is that people cannot really create stuff for that easily. You need to be a 3D modeler. You need to model a spaceship. You need to model a tank or some kind of warrior, whatever RTS it is.
+
+you need to be a really good artist to add it to the game. Whereas in Minecraft it's easier. So I thought about maybe something like Minecraft, but competitive, I don't know. And then I came onto these trading card games, which I also loved and I really played a lot and I saw some other upside there. That's once like Magic the Gathering moved onto being online.
+
+Well, this is what the game was Hearthstone that mostly made it popular online. A lot of awesome stuff was lost. So I don't know, should I explain here these games more because not everybody might know it? What do you think?
+
+Citizen Web3
+If you this is whatever whatever whatever you think if you do I mean like just a small small note here for the listeners just the but Patrick just a small note here for the listeners everything you mentioned and I mentioned is down at the show notes. So if somebody wants to click a link and do a lot more thorough research, please do. But please do explain briefly for the understanding maybe this worth it. Please do.
+
+Patrick
+Yeah, yeah, yeah. Okay, okay. So,
+
+Patrick 
+Yeah.
+
+Patrick 
+Yeah, I mean, you don't want to look up everything, but the thing is these trading card games, were an innovation in the games industry or in gaming because you no longer had a predefined set of things that you play with. Like if you play chess, then everybody has a king, a queen and so on. But then you're playing chess and everybody brings their own set of pieces at the beginning and the pieces have different mechanics and work differently. So you even make a decision how the game will unfold before you start the game by selecting your deck.
+
+That was a really cool idea and it totally made the game to be different every time you play it because someone has a bit different deck, someone focused more on late game, some more early aggression and so on. So this was a cool type of game and once it moved online and Hearthstone is like the super popular version of it.
+
+A lot of stuff was lost because people bought the booster packs, they got cards and then they met in game shops, they met in the yard of the school, they met wherever we as kids met and brought their cards and we traded them. So I had a huge 8-8 dinosaur that did trample damage, whatever, and I traded it for some kind of Phyrexian Colossus machine that is 12-12, whatever. So we made cool trades, we met, we exchanged our ideas how to build decks and change stuff and play it against each other. So it was a...
+
+thing where community was really important and once Hearthstone made it popular online This was completely lost because there's you cannot even trade cards. There's no reason to meet or to do any community kind of thing Because what would you do? The only thing where community is being formed is when people make deck lists and write down win percentages and then you see like Yeah, this type of deck currently in the meta wins 55 % so you should pick it stuff like this does the community works
+
+But when it comes to the cards, no. So this is the same kind of community that you see in every online game, like League of Legends and so on. But the whole part of having this collection and trading it with others was lost. And there's several reasons for it. I think the main reason is that Blizzard wants to get all the money for themselves. So they don't want players to trade them, but you should just buy all the cards from them. Another reason is accessibility. They wanted to make it as accessible as possible and not like...
+
+Patrick 
+make it super complex to get the cards and find somebody who has it and everything, but rather just you can, how do you say, turn the cards into dust and from the dust you can craft cards that you really need. So it was much easier to get the rare pieces or the pieces that's no longer being printed and so on. So it makes sense and Hearthstone was really good at moving it online or digital because Magic is also on a computer a bit problematic game.
+
+or maybe problematic is an overstatement, but game flow is disrupted very often. I realize this so often, I play it, and then I think like, the computer, it's not so much fun. What is the reason? And then I play Magic on a table with someone, and then it's totally fine that the game flow is like interrupted every once in a while, because you're sitting there and you're figuring out together, like, okay, you have a response to that. So, okay, then you can play this card. And so it's totally fine to figure it out together, but once you don't see the other anymore,
+
+And it's just happening on a computer. You sit there and wait. You just wanted to finish your turn, but then someone interrupted it. It's really annoying. So I totally understand that Hearthstone changed this and made the game, game flow better. That's fine. And that's something we also thought about. How can we get to the awesome complexity of magic? But the accessibility of Hearthstone is some, one of the main goals for our game.
+
+But now I'm drifting off.
+
+Citizen Web3 
+Let me bring you let me bring you let me bring a little bit back to to to the point because I think we went a little bit off. So games. Let me let me let me ask you a question in direction. Let me talk a little bit about the games and crypto and card games. So first question I have for you is like this. So it's interesting card games and card games like battle card games and crypto have been around for roughly 10 years since 2015 if I believe if I'm mistaken sorry.
+
+Citizen Web3
+The first one implementation, I think, was on Steam it or something like that. And then you had so on and so forth from 2015, 16. But I have never really seen any of them catch up beyond like a small hype wave. And either the economics doesn't work in terms of the web tree, like, know, morale, so to speak, or ethos, or either people find, I don't know,
+
+the game doesn't have enough liveliness, but there's been different reasons. So question to you is, why do you think those games until now haven't caught on? Is it really like gameplay is missing? And how will crowd control be different in this case?
+
+Patrick 
+Yes, I think the most successful one is God's Unchained. So this is game mechanics wise, it's a Hearthstone copy. So it's very, very close to Hearthstone. I think this is on the one hand makes a lot of sense, copy something that works really good and just make new content, new cards or different cards. This is one thing that's quite cool. The problem is the guys who already played Hearthstone and know it very well, for them it is experience of playing the same game again with less content.
+
+is very unsatisfying. So that's something I would be, well, I would not do it. I would be try to improve also on the gameplay. That's something we do. Another reason is these games, what they often do is they have like pay to win cards that are so much stronger than the other cards and you can buy them before the game launches and all that stuff. And that's very negative scene in the game industry.
+
+You can have games that are pay to win. It's okay in some cases, there's usually games which are small and single player or versus environment. And if games are competitive and have pay to win, it's something that's seen very negatively in the gaming industry. So you should, it was okay in crypto before 2017. then it, gamers now often hate crypto. And there's a good reason to do that because these games bring experiences the players already know are not good.
+
+And that's, think these two reasons are very important for why these games have problems. Because there's a shift already in the game industry where people realize it's okay to pay for content. It's not a problem if you pay for content. Because then we get content and no longer we're being ripped off by pay to win elements, which are frustrating often. So I think that might be one reason, but still God's Unchained is successful. People play it. It's not bad. It's around for quite some time.
+
+And it's okay. So I would not say that it's a failure. Of course, there is an initial hype that they must have a hype. So if they can't hype, then I think it would not take off at all. So I agree to your critique because many card games are just die off super fast. And I think for the others, or not God's Unchained, but other card games, I think the main reason is the game mechanics is quite dull.
+
+Patrick 
+Often you have like attack and defense on the card and that's Then sometimes you have like charge or double strike. some, some let's say minor abilities. But I think the main reason why people love these types of games is that you can build really interesting and complex interactions, synergies. So stuff happens on the board. That's a bit unexpected stuff happens on the board where like your plan finally goes.
+
+goes live and works out. It's a good feeling. So that's something we have also thought about very much. Which type of mechanics do we want to have, which are healthy and which are unhealthy, stuff like this. I can go more deeply into it, but I think we should focus more on crypto since the main focus here is crypto, I guess, and not gaming. But if you want to get back to this later, we can do it. I think... okay.
+
+Citizen Web3
+I have a couple of questions for you in that direction, but go on about the crypto part, please, if it's okay. But I do have one question, at least one question for you in that direction.
+
+Patrick 
+Yes. So that's one thing. Another thing is often that that's something I realized when I talked to other developers of card games in crypto. They told me we cannot do this because we cannot change the cards because these are NFTs. And that's something I understand because you sell something like an NFT and then you don't want to change it because people have paid money for having exactly this.
+
+But often it's a problem because the game balance suffers from it. And then I asked like, okay, Magic, they are banning cards. If a card is destroying a tournament, they just ban the card. And then would it be better for the NFT holder no longer be able to play the card? It's even worse, I think, than a balance change on a card. So that's why we have thought about a system. How can we balance cards and do it decentrally, do it like automatically? And the thing is that after a game, can...
+
+say like, this card in this game here, it was too strong. You can vote on it and tell the game or the blockchain, this card is too strong. You can tell it, this card was too weak. This is fair enough. Or you can also market as inappropriate or copyright violation. That's something different. So we can like identify cards that violate copyright since you can create your own cards. You could just upload like Superman or Lady Gaga, whatnot, whatever you like. And that would be not okay, I guess. So,
+
+We should filter these cards as well, but the balancing aspect is something where many people are like, wait, but people are buying NFTs and then they get balanced. And then, well, my argument comes again, is banning the better option or is having a tournament or like a meta completely destroyed and the game experience no longer makes sense for anybody. These are like the options you have. the pre, like the preset of, of what you do in crypto is don't change anything on the blockchain.
+
+And I think this is not a good thinking for making game experience the best. So that might be one reason.
+
+Citizen Web3 
+Let me, let me actually, let me, let, let me actually like throw in something, which I don't know if I was planning to ask this, but, this is regardless what you talk about. And I have been involved a little bit actually in, blockchain game making for, for, for, for some time. on and off, but one innovation idea that I think came with, I believe it was ava Gucci.
+
+Patrick 
+Yeah.
+
+Citizen Web3 
+I think that I were the first in 2020 something, 20 to do that. But since then, some attempted it, but not really done it. And basically, this is a question to you. What do you think about it? What it's doing is basically using user behavior as the changes to the game. it's basically like the D&D. So depending, for example, on what the user would do with their account,
+
+Let's say if they go and they stake tokens or if they take out a loan, which is an on-chain provable action by the consensus, their character in the game would change. So in that way, because no user repeats the same behavior or more or less doesn't repeat the same behavior, basically using on-chain verifiable mechanics to make the character special. Now, I don't know. I have seen a few games try to implement and implement it.
+
+I've seen a lot of discussion about it over the past like two, three years of like the next generation blockchain games kind of going that way. But I haven't seen yet anything, you know, any big, drastically changes in that. Do you think that that could introduce something new to gameplay to refresh it?
+
+Patrick
+Yes. Well, I think in many cases, the idea is to incentivize people staking and locking in the token so that the product stays valuable and high in price, which is nice for the investors. the question is, does it improve the experience in the game? Will it bring fun? So in our case, we think about everything we do on the chain is to either improve the game or to bring fun.
+
+Best is if both works. Like some people really love to see cards and tell like the engine, this is overpowered, this is underpowered. So they like to give their opinion and like to do this kind of judge work. Some people will find it annoying and that's fine. The only important part is that there's an incentivization. Yeah, think that work, words word works that is fair that everyone feel like ya the payment for judging is good but it's not like the only thing you can do to 
+
+earn in-game currency. So then you do stuff on chain and stuff that's actually not playing the game, but it's actually developing the game and bringing it forward. So And this has implication to the game because now you get maybe new cards, you participate in a council where you tell the blockchain, okay, somebody proposes a new card. I'm not a creator, but I want to be someone who tests out new game content.
+
+So then you go to the council, you get assigned some creation of someone else. And then you say like, okay, this card is balanced, it's fair. Or you give feedback and write in the council, wait, you need to change the card. It needs to be two mana more expensive to be fair. That way it will be broken. So, and then the creator updates the card. You get the update one, then you say, okay, nice. I think this is fair, I will try it. So then you need to put in some collateral, some in-game token.
+
+And then you get the card. Then you can play the card for two weeks. And if many people vote this card as overpowered, you were wrong, you lose your collateral. If you are right and the card is fair and you don't get a lot of playing the card, you don't get a lot of bad feedback. Then you get the card as permanent card and you also get a part of the fee that the creator paid for creating a new card in the game. So that way you participate in the game, but you're also doing something like, it's not a gamble. It's how would you say?
+
+Patrick
+It's like a prediction. You make a prediction about something, if you're right, you earn more. If you're wrong, you lose. So that can be fun for some kind of players. And the other part is creating new cards. So someone really loves frogs and makes like sad frog cards and makes a deck of sad frogs and so on. So this is also something people love. And I think that was the point when I thought it makes most sense with trading cards.
+
+Because in Magic there's many people who draw new cards. They paint awesome images over cards and they think about new mechanics and there's communities and websites where people share their ideas. Same for Hearthstone. But these cards can never become a real card. You will never be able to play them because Blizzard will never say like, cool, now players can create their own cards or Wizards of the Coast will also not say that.
+
+It already exists. It's not something that I need to dream about. People create stuff on the blockchain that becomes part of the game and changes the game experience. It's something that people want to do in the existing games already. But there's no way how it works so that it is fair and it makes sense. So I think yes. Of course, the bandwidth, the options where people can do stuff on chain and it changes the game experience. There's a lot of things. And I think yes, it will change games definitely.
+
+The question is what types of options change it for better and which for worse. And I think if it's just about staking and incentivizing bad investment decisions for being better in a game, it's something that might die off sometime.
+
+Citizen Web3
+Curse.
+
+Citizen Web3
+I don't think it's so much about stake and I think it's so much about having a provable action regardless. For example, if a user stake their tokens, then you will get the plus 5 XP. If you use their unstaked token, he will get minus 2 XP. It's more about, I think, using the provable actions. But I definitely agree with you that I think that if it's concentrated around
+
+purely, know, vanity metrics, of course, that will not probably won't work. And this is actually the next kind of question, like the gaming question I had for you, which is, guess, not so much to do with crypto, but I'm going to try and relate them. But, you know, feel free to unrelate them. So, like to me, gaming is in a way, in a way, like when we talk about adoption and community building, especially blockchain agnostic community building, because well,
+
+It's a well-known problem in blockchains, tribalism and segmentation. Gaming, in a way, I'm not a gamer, but it really looks like it is one of the perfect ways to unite communities that are segmentated over different blockchains because they tend to have a common interest, such as a game that can run on several different blockchains or be usable in several ecosystems. What are...
+
+The question is not going to be about crypto though, not about blockchain, not about mechanics, but so much about gameplay. What is the vision of crowd control in terms of like, what's the reason for the game? Like you mentioned the community, like, you know, some time ago about like 15 minutes ago into the conversation. And of course you mentioned, you know, something interesting that people strive to do. What are...
+
+at least for you personally, like the goals, where is this going? Like why create a game and what benefit do you see that people are getting usually by playing games or in this case, maybe specifically in the crypto world playing games?
+
+Patrick 
+Yes, that's a good question. I think I have already discussed this with my grandpa when he was still alive, like, I don't know, 15, 20 years ago, because he was always somebody who would say, yeah, games are waste of time. We should rather build bicycles and we should rather build cars and so on, you know, all this kind of stuff. We should do productive stuff.
+
+and stuff that brings us forward and which increases productivity of society. He was like a typical German guy, so to say. And then I responded to him like, okay, all good. But why did you play chess with me all the time? Whenever I came as a six year old, you play chess with me as an eight year old, as 10 year old and so on. The only time you stopped playing chess with me was when I could beat you easily. Then you were like, I no longer want to play chess. But that's also okay. I was then, I don't know, 15 already. So he was like, yeah, but with chess you learn a lot of things.
+
+I said, okay, what did I learn? And he said, you learned reasoning. You need to learn making a plan. You thought about, okay, what's my next step? What's the step afterwards? How can I get forward? Which things do I need to keep in mind? And what do I need to anticipate of you? And then I said, yeah, sometimes I realized that the patterns I've learned in chess, I apply to other things as well when I'm making plans and like this abstraction, you get the neurons in your brain straight. They are able to directly map problems onto problems you have already solved in the past.
+
+So, and then he agreed chess was really good and it really helped us all to learn things. And so he actually invalidated his own point that games are a waste of time and don't have any upside because you can learn a lot of stuff. can learn decision-making for like with my kids. I always prefer if they do some activities where they need to make decisions, where they need to be invested and think about stuff rather than just watching TV and just like consuming, consuming entertainment or like getting
+
+getting a stream of awesome explosions, whatever. That's what they love the most. But I think it's better to be like involved and have some kind of, you need to make a decision, something's at stake and then you learn stuff. You're wrong sometimes, you're right sometimes and then you see things. And that's what I initially mentioned. When you played a game and where you traded a lot, then you learned like it's not a good idea to trade all the day. It's better to just make well-informed decisions and less of them.
+
+Patrick 
+So that's something I learned from games and not by losing all my money first. The other way around was a lot better. And coming back to crowd control, I think the ultimate goal or the ultimate thing where like the game would grow over itself would be if it like, if it shows that democracy works. So that's, think the main critique I get from other game developers who are mostly not in crypto.
+
+They tell me like, wait, wait, did the players, create the cards and they think about the mechanics. And I said, yes. And they also vote about the balance. And then they said, this will be horrible. People will just be like, they will create a horrible game because players are all idiots. And then I say, I'm not so sure if that's true because the loop already exists. If some new age of empires patch, league of legends, whatnot comes out, then some heroes too strong. Some faction is too strong. People rant about it in the forum, in the boards.
+
+Developers read it and think about it. Is it really overpowered? And then they have to find out and at one point they look enough into the statistics and they solidify and then they see really this is whatever bohemians This champion is too strong and so on they are right So players have a good sense of what they are experienced. They might not have a good idea how to fix it Because they don't know the game engine everything but they have a good idea what's broken and what's wrong
+
+So, and that would be like showing that democracy works, people are able to govern themselves. And that's something where I also see insane potential of blockchain. if like democracy could work more on blockchain because people are like constantly fighting that elections are fraudulent and the will of the people is not really respected and all this stuff. it would be really good if this stuff would be automated. in beforehand, it's clear, like you guys make here a decision.
+
+And this is going to change your nation in whatever kind of way.
+
+Citizen Web3 
+Why? Why it's important for you? I'm serious. Like it's a serious question. I can tell you why I'm asking that. A lot of people, lot of founders come and we talk a lot about motivation and we talk a lot about, you know, why, what's the reason? There was this question that I used to ask founders at conferences some years ago. Like if you were to put, you know, hand, you know, remember the original mission, why you set out to do your project.
+
+Patrick 
+This could.
+
+Citizen Web3
+And they'll be like, da-da-da-da-da-da-da-da. It's the X, Y, Z. Okay. So hand on your heart five years later, four years later, do you think you achieved it? Has that been achieved for at least one person? And a lot of them were like, well, you know, and some are honest, some not, some, know, and the question is the why, why do you think that, or not rather, why do you think, why is it for you as for Patrick, it's important that we prove that it works.
+
+Patrick
+Yeah.
+
+Citizen Web3
+Is it something that is driving you personally as a passion? Or is it more like, you know, there are a lot of reasons. It could be money, could be passion, it could be self-approval, it could be, you know, the achievement on something, it could be changing the world. I don't know. So like this kind of a big, a big, a big rainbow there.
+
+Patrick 
+Very, very good question. It's like, I totally love this because it's, people can come up with all kinds of yada yada world peace. make everything better and so on. And then asking again, but why is good? I totally appreciate that. in my opinion, the main point is responsibility. So. I think the main reason why, dictatorships do not work and are really, really bad for everyone involved except the dictator and maybe the small field around them.
+
+is that people lose the feeling of responsibility. They don't think anymore, what I do matters. And this is something that drives people mad. It does a lot of harm on all levels. And once you feel responsible and once you have the feeling I can change things, my actions have impact, then you try to do good. You want to change stuff. You start to think about and stuff becomes better instantly. It's so worth to have people responsible. It's also something I've really often seen in workplaces.
+
+If people just like feel like as a big corporation here doesn't really matter. Everything is stupid here. is this really bad for everyone involved? But of course it happens in huge, huge gigantic organizations. And, so democracy here is, is, I guess I'm stretching the word already because, I'm already using it for interactive systems or interactive communities and stuff like this, but I think, hierarchies are good.
+
+But hierarchies should be flat and it should make sense. And it's something that we hope also to do in our case. So if you ask me later, did our plan work? Then I'd have to say, I constantly feel like, no, nothing is working here. So I constantly feel like, no, actually we have so many problems. We need to fix so many bugs. The game is not accessible enough. We need a tutorial. All these kinds of things, I think. But then I think back, okay.
+
+What was our plan? Where did we want to land? Where do we want to be after some years? And then when I look at the early plans and we were only like three people, we agreed, okay, the goal is we need to get to a point where some stranger on the internet comes to us and wants to work with us and wants to like rattle this product around and change stuff and do awesome stuff. And then we're like, nice. This guy here, the designer Costa, he, don't know them.
+
+Patrick 
+Any time before he just saw the project and thought it's cool and he started designing stuff and he started working with us. Awesome. So what was the next plan we had? And the next plan was we need players to create their own cards and their own decks. This must be so accessible that people will do it. And for this, my inspiration was Walker 3 map editor. So I guess most people won't know it.
+
+But I think I was like 16 or 17 at the time when it was when I was really heavily using it. I think the game was out two years earlier, something like 2004, something like that time. And I didn't realize I was learning programming back at that time because I was just building some maps and then I was doing triggers and I was connecting stuff and...
+
+I tried to create new abilities for heroes that could now throw a fireball that was splitting up in more fireballs and was tracking some other champion stuff like this. But actually I had to put triggers together with like events and when this happens then that and so on. So I was coding a lot of stuff and at some point you could change the GUI, the graphic user interface where you select the abilities and stuff or the triggers. You could change it to text. And then you were just programming classically like writing code.
+
+But at some point I had to switch to this because not all functions were accessible in the GUI. And later there was Dota and there were tower defenses. So the Walker 3 map editor, it was so good that not only new cool games emerged within Walker 3, but they even created one of the most successful genres that we see nowadays and that's League of Legends. That's the mobile genre. It came out of the Walker 3 map editor because it was so good that everyone could make games and I have never seen any place again
+
+where so many game concepts were tried out as the Walker 3 fun maps. So that's where I tell to all the guys working on card control, we have to become like this. It must be really easy and accessible to create cards. And the next step is you must be able to create some kind of adventure. So you go to a tavern and then you talk to the people and then you start a fight and then you go into the battle. And a player must be able to create the scenery and create the fight. So then awesome stuff will happen. I have no idea what will happen, but...
+
+Patrick 
+I'm sure if we do it good, if we make it accessible, awesome things will happen. And we have to accept that's not in our control. So the crowd is in control. And that's why we call it like that. It's a bit of an anti-statement because usually crowd control is the opposite. But the idea here is to put the crowd into control. And one guy of us, he's a very good Magic Tournament player. And he's doing game design and trying out cards and balancing. And for him, it's really hard.
+
+Because he's like, the guys have again, they have changed the balance of the card with their votes. And we're like, yeah, yeah, but let them do it. We need to learn from that. It's all good. And he's like, they're idiots. They don't know the good balance of the cards. So that's, that's like.
+
+Citizen Web3
+I really... Please go on Patrick, please finish. Sorry, sorry, sorry, sorry, sorry. We had a lag there. Sorry, please go on.
+
+Patrick 
+No, no, I just want to say it's really hard to let go. Really hard to let go. But it's important.
+
+Citizen Web3 
+I really like actually the example you were giving. Sorry, there was a small lag there, I guess. But I really like the example you were bringing about coding, the classical coding. remember when I, like a year and a half ago or so, or I don't remember exactly when, but something like that, I started to introduce our designer to more and more AI and more and more learning prompting and mid-journeying. And it was fantastic.
+
+Patrick 
+All good.
+
+Citizen Web3
+fascinating watching how people who have nothing to do with querying databases or any basic understanding of coding were actually using the first versions of mid-journey, but actually they had to learn to put prompts together and querying without understanding by this semi-gamified experience, kind of like you have to put that, click that, then you get click the reaction, whatever. It was helping them to...
+
+do skills that they weren't even thinking about those skills. And this is actually the kind of question I wanted to come to. Once again, I did mention that I used to be a gamer when I was a kid, and up until the age of, I think, 14, 13, I actually played a lot of different strategy games back on PCs. But it went away a long time ago. But I am understanding, and I do understand today, that it seems, I mean, you have to be crazy not to see it, that
+
+gamifying anything or gamifying any sort of especially boring procedure just changes the world. really, you know, like having the sun come up, right? In the middle of the winter kind of or after the winter. And here is a question to you about like sort of crypto products and gamifying processes. It seems that today, you know, wallets explorers, which are
+
+the first points of adoption, regardless of how the blockchains will be in the future. Centralized, decentralized, free, not free. You will still have explorers, you will still have wallets. Impossible to use this without it. It seems that not a lot of them are sort of catching on to that gamifying thing. Not many products in the crypto industry. Some of them are very technical, they're very strong, they're very powerful. Do you think that trying to...
+
+simply introduce some kind of gamifying. This is the first part of the question. Gamifying mechanics into those products could help adoption. And two, what's in your opinion are the most simple examples of gamifying processes such products like crypto explorers or crypto wallets could introduce? I mean, I don't mean like a whole plan, but are there any main general things which are usually known?
+
+Citizen Web3
+If you give users that and they start to, I don't know, collect tokens every day, for example, it seems that their attention grows by, I don't know, 50 % or whatever. Is there anything like that that can, on top of your head, can come up?
+
+Patrick 
+Yes, I think for crypto products, it's exactly what you say. I mean, we are here in Cosmos ecosystem and I would say Cosmos is more on the technical side than the user accessible side in many cases. Sometimes even I was just shaking my head when I heard some responses and people didn't understand how important it is to have like interface to interact with the blockchain.
+
+So stuff like Cosm.js, we wanted to really build this also for C-Sharp so people could directly interact with Cosmos chains on Unity. And Cosmos leadership had no interest in it and they were not understanding why it's important. It's something where I just was like, my God, is hard. We should be really careful about it.
+
+And I think when you asked your question, one thing instantly struck my mind. There was something in the Cosmos ecosystem that was really good in this part. Really accessible, really nice. And it was Terra. So the whole Terra ecosystem, back then, I remember people were like, the DeFi in Terra is still the best. It's very accessible. Everything is clear. You understand how the stuff works and it's so nice. You just collect your MIR AirDrop and you collect this AirDrop and here's ANC staking and everything. So it was...
+
+designed really good around having a good experience, collecting your stuff, getting so rich, it's so nice, but it was all a big Ponzi. So it was such a good Ponzi that most people didn't know it was a Ponzi. So really good. I mean, it would still be a big legal topic if it's really legally considered a Ponzi. But in the end, in the end you were staking some stuff or you were buying the Terra token and you staked it and then some UST was created from that and then UST was constantly thrown out to everyone, but it was not sustainable.
+
+So that sounds pretty much like a Ponzi, but then you say, well, it's like, it's just to establish the product. So it's not meant to go on forever. It's just right now we have this crazy 20 % on UST and it's not going to go on forever. So then you would discuss again, well, yeah, that's how startups work in like Silicon Valley and startup in IT scene. So it's maybe it's not a Ponzi really hard to this, but that's not a question.
+
+Patrick 
+So in Terra, everything was accessible. Everything was like nice. They really focused on that. And for them, it was easy because they didn't have a real product. So they had more like, I mean, they had products. I don't want to talk too negatively about it. I mean, they had the synthesized stocks. You could buy like an Apple stock on the Terra chain. That was really cool. But stuff was accessible. Stuff was gamified. And that's why it exploded so much. mean, Terra, I think it was even in the top 10.
+
+That's something that no other Cosmos chain can really, I mean, of course there's Cosmos derived chains like Binance Smart Chain and stuff like that. But I mean, some, I would say like Cosmos First Chain where they really started from Cosmos and not used Cosmos tech in their whole stack. So all good. And I think it makes a lot of sense to do that because in the end, what's the point of having a blockchain?
+
+that has some really, really nice technological advances, but then nobody's going to use it because it's too complicated or it's not understandable. mean, sometimes products are even good to use. have buttons that are clear and you can access it, but the people don't really know what they're doing there and why they're doing it. So the next example that comes to my mind is osmosis. So I think osmosis has a very nice UI. It's clear and accessible. I think the...
+
+the work out supercharged pools and this stuff, it was a step in the wrong direction. because that's what I often hear from other people. Like, man, I don't want to know what is, I have to shift some, some rulers and then I get knocked out at some other point. And then I need to every day log in and look at it. That's, that's too much degen craziness for me. I just want to invest my product and get my returns and that's it. So I think Osmosis in that case made products really complicated.
+
+I understand that it makes sense from a financial point of view and for absolute professionals, that's really nice to have to control and get higher rewards by having their stuff fluctuate around more. But for user accessibility, I think it was a step in the wrong direction. But still, I also like that Osmosis is expanding on apps and other stuff. They had this pixel board where you could, with a transaction, make the color of a pixel. Stuff like this is cool.
+
+Patrick 
+It's not really something that you absolutely need, but it helps to bring users in touch and in contact with the more complicated product. So yeah, I would totally agree that user and gamification centric stuff makes sense.
+
+Citizen Web3
+Let me ask you, this kind of last question before we jump off into the blitz and wrapping it off. But it's a question, I guess, of experience and something that you guys have already done and you're already doing it. So more of an advice, maybe question. How considering the whole fragmentation in the crypto world with the communities, people are like in Ethereum, they're like,
+
+We are Ethereum community. Then you have people in Cosmos. are Cosmos, Polkadot, have Nier and so on and so forth. How do game developers that are just going to come in into the crypto world, how on earth are they supposed to choose the technology without understanding anything about crypto? Let's see. mean, the goal, guess, of any game developer is to attract as many users as possible, I think, right? And to create a great game.
+
+But it seems that if you choose their own technology here, you are just going to hit a wall or rather you're going to have to reverse everything. So how did it work for you? How did you choose Cosmos, IBC? And maybe like an advice if you had to give of how not to or what to look out for, whatever you feel.
+
+Patrick 
+Yes. It's hard to answer the question because people come from very different backgrounds. So I have two days ago talked to a CEO of a German game dev company and he was like completely surprised like how different it works in blockchain and how it works in game industry.
+
+I think the biggest point where we both like exchanged our experience was when we talked about investors and how in products invested. told him in crypto investors tell us you made a product, you build the game. That's absolute mistake. Build a community. Don't build a product. Once you have raked in the money from your community, then you can build a product. That's what investors keep telling us. And he was like, no, no, in gaming industry, it's the other way around. Investors say just build a product when you're like 70 % finished, then maybe we have some money for you.
+
+So they filter out the talkers in the game industry that just pick out the ones that are so convinced of their game that they just build it without money. They build it in their free time. There's so many indie devs who just build a game to like 70 % or 50 % finished. They do it over two years every evening beside their job. On the weekend, they do that. And then they collect money in a really late stage of the product development. So a really big difference here. And then also, assuming you are a gamer and you get
+
+For some reason want to use crypto technology. You don't know any crypto at all So then you cannot go the way we have went because I was like totally How to say submerged into crypto and then decided to make a game so I had no idea about how you make games But I understood a lot of crypto stuff If you're coming from the other other side you you cannot to be like, okay. I've read the white paper of cosmos I've read the white paper of Ethereum
+
+I understand how Bitcoin works. see Polkadot interesting. for me, was like Polkadot, absolutely no option because I'm not going to auction a slot. It's not going to happen. I'm not going to pay money to use the technology and not knowing if it will be the one I need and if it solves my problem. So for me, Cosmos was absolutely preferable because it does not try to sell me kind of slots that I might not even be able to afford because there's only 100 slots. I mean, back then. So
+
+Patrick 
+I don't know if I have the money to even be in there. But then later I understood, okay, well, you don't need to have one of these slots because then their slots also have sub slots and whatnot. yeah, that's what this was something that completely pushed me away from Polkadot. Then Ethereum, absolute not possible because at the fees, nobody can pay the fees. So back then I could not, we could not choose Ethereum because the fees were just too high. You could pre-d some crypto kitties. Okay, fine.
+
+But if you just give a vote after a game, which card is overpowered, I mean, who's going to pay $20 to give a vote to a game? To help the game get better, you pay $20, it is not going to work out. So that's why we knew Ethereum is not going to work. Today it's different because you have games on L2 which don't even have fees in some cases. So you find some chains that have just put away with fees at all and they pay the fees for putting their state updates on the Ethereum chain. But OK.
+
+So these were things that we had to consider. then the app specific or the app centric application, how did Cosmos call it back then? Application specific blockchains, I think. So the idea in the old times of Cosmos where every product has their own chain and they're all connected via IBC. And that made a lot of sense for us because we knew, okay, we have control of our fees. have like blockchain space is not being clocked by Cryptokitties or whatnot.
+
+It all makes sense for us. It's cool. So that's why we choose Cosmos. But if you are a game developer and you want to get into crypto games, you don't know all of this kind of stuff because you're already interested in crypto, then what would you look at? I think you would see like, OK, I have Unity. I use Unity for 10 years or five years, whatever. And there's some plug-ins where I can directly plug the blockchain in and it exists with MetaMask. Nice. So I can use Ethereum. Cool.
+
+It exists for Solana, also nice. And that's it. So it gets really thin after these two examples. And that's why we made a proposal to AADAO and also to, what was the other thing? Some other like AEC funding where we said, okay, what we want to build.
+
+Citizen Web3 
+a a a a it was it was it was I was gonna help you out a little bit now go on go on go on go on I think I think I think there was a there was there was a a a ICF IMB our DAO a EZ there was like three or four I think entities that I believe we're giving out some some funds
+
+Patrick
+You can you can help me out because I'm not so sure
+
+Patrick 
+Yes. And so we made this proposal, OK, we want to Unity plug-in and C Sharp interface because game developers will mostly code C Sharp because all the frameworks you use mostly use C Sharp. Like even Godot can use it. So I mean, it's web game, JavaScript is nice, CosmGIS all good. But if you use Unity, I mean, Unreal Engine, there's no plug-in. You cannot just directly use Cosmos chains. So that's absolute downer for everybody.
+
+coding games. So that's why we proposed it. And we said, OK, we can build this stuff because we have already built a custom solution for our game. And generalizing it is easy. And then building a Unity plugin where you just directly put it into Unity with one button, and then you have the transactions. Since we have also built something like Ignite that generates you the view binding. So on your website, you can directly use.
+
+all the Cosmos transactions of a certain chain. That's really cool feature because I think at the very beginning it was not existing. So you need to build it yourself. And now you can just auto-generate the code on your website. And it's not only view in Cosmos, you can even use it with like React and all other frameworks. Really awesome. And we wanted, or we built this just customized for our product so we can directly create the interactions, the interface for the blockchain for Unity. So in Unity, don't recode the whole.
+
+wallet stuff, but just auto-generated in the same way Ignite does it. So we just thought it would make a lot of sense to offer this to all kinds of Cosmos chains for everyone. just generalize it. And if we get some funding from ACA, DAO, whatnot, then nice. I mean, it would not be very expensive because we already have like 20 % of it. But we realized nobody's really interested in it. It's something that nobody cares much about. So I was really surprised by this.
+
+So I made also a forum entry in the Cosmos forum and asked like, hey, what's going on with gaming? Is it still a goal? Is it still a thing in Cosmos? Or was it silently given up? Because back then there was a Cosmos hackathon. It had a whole gaming category. We participated and won in one of the gaming categories. It was a really nice experience. And we thought like, awesome, gaming is a thing that Cosmos focuses. And then down the lane two years later, three years later, nothing, no interest.
+
+Patrick 
+at all anymore. I think it comes from the big fight within the Cosmos community where like two parties are fighting against each other. And as long as nobody has really the saying, everyone is like really reluctant to go into new directions and do stuff and push forward like important stuff. So, but also it's people don't understand how important it is for deaf experience to have a unity integration because tell an indie studio with two coders and one designer, tell them, yeah, you need one more. You need to hire a guy who can do your Cosmos transactions.
+
+They will just be like, no, we are off with Solana. That's what's going to happen. And that would be my big advice to Cosmos. If you want to be successful with games, the dev experience must improve a lot. So, but yeah. And I think...
+
+Citizen Web3 
+I agree. I agree. Please finish. Please finish, Patrick. was just I was just saying amen.
+
+Patrick
+So I, yeah, yeah. So I was really confused and.
+
+I mean, I feel bad, I don't want to talk bad about like stuff. I'm not a fan of being like negative and saying like, the Cosmos equals in all shit.
+
+Citizen Web3
+I think it's bad, think reality is reality, you know?
+
+Patrick
+Reality is reality, but some people are just like, you know, nagging and saying like, we don't have success just because the Cosmos ecosystem let us down. I don't want to say stuff like this, you know? I mean, we did not ask big amount of money. We have a Cosmos validator running and this is that we have more money at stake there than getting this, how do you say, the funding for the software or not getting it.
+
+That was not such a big deal, but for me, it was really hard to understand why nobody cares. The only thing is when I talk to like, people who, how would you say, like, central figures, central persons of the cosmos ecosystem. Then at least someone told me, Hey, you should check saga out and saga. They do exactly what you want. And I thought, okay, cool. Nice. Here's the solution. So I go to saga and talk and ask, and then I I'm like, okay, nice. Where's where's the code? And then they're like, I know we don't have code.
+
+I mean, I don't want to talk negatively about Saga, but back then the reality was there were no integrations with Unity plugin or anything like that. Maybe now it's different. But my impression still is that Saga is more offering this Saga-owned chain-led solution instead of something where every game can just use Cosmos chains. So something that really needs to be built by the Cosmos ecosystem, not by...
+
+single entities of the Cosmos ecosystem. Because of course, Saga wants to build stuff that makes people use Saga only. mean, even some guys approached us and said, hey, do you want to build for our chain your solution with Unity and it can only work on our chain and so on and so forth. And I was like, yeah, it's a possibility we could do that because funding is nice, but it's not a good solution to just do it for one chain. But we can talk about it.
+
+I understand this, but nobody can really expect that some smaller chain like Saga or so, that solutions for everyone, which is maybe even like bad for them because then people can use Cosmos tech without Saga, but they want to have people use Cosmos tech only with Saga. So it's fine. And, yeah. And then I kept on talking to other, other people and someone told me, we had also so much trouble getting funding. And I was like,
+
+Citizen Web3
+It makes perfect sense, I would say.
+
+Patrick 
+really, but your product is awesome. It's a really big add-on for the Cosmos ecosystem. And they said, yeah, yeah, but that's, still not so easy. And I had a bit the impression that you really need to be an insider. Then it's easier to get funding. And if you're coming as an outsider, then it's really hard to get any funding, even if what you want to do makes sense and costs only a fraction of money of what others ask, which I think also, how would you say, can be seen at the current trouble with AADAO.
+
+that people are criticizing exactly this. yeah, I see a lot of trouble here and they need to happen a lot of stuff so gaming gets a better standard Cosmos. And I personally would not advise people nowadays to go into Cosmos with a game because I would tell them, well, you can use our tech, we can come together, but that's it. The rest is really, really thin.
+
+Citizen Web3
+I think I want to first of all, thank you for an honest answer, Patrick, because I like when developers come and they give an honest answer of what they think, whether it's a founder or developer or doesn't matter somebody who's building something, which this podcast for five years has been kind of like centered around people, not so much projects. we had different opinions and sometimes people come and they talk a lot of vision and a lot of things which...
+
+You know, they don't get to reality. So I want to thank you for the honest answer. That was very important in my opinion. Let me jump to two quick questions to take us out, to finish the conversation and to take us out of the crypto world and to get us back into reality a little bit. So two very quick questions. You're not expecting them. So they're going to be very strange. I'm sorry. But there we go. One. Go on, go on.
+
+Patrick 
+Should I answer them shortly or should I again talk too much?
+
+Citizen Web3 
+You can if you want to talk too much, you cannot beat me for sure. So for me, nobody talks too much because I talk more than anyone. So I don't I don't have this notion, you know, but but in serious joking aside, feel free. This is like sort of a blitz. But feel free to answer and give an explanation to as to why. So the first one, give me either a movie or a book or a song.
+
+Patrick 
+I guess.
+
+Citizen Web3
+that has a positive influence on Patrick throughout his life. Or, or, or.
+
+Patrick 
+Yes, I was not expecting this. Well, it sounds so cliché if I say like Matrix. That's so cliché. I think...
+
+Citizen Web3 
+It's good. But it's a documentary, not a movie. It's a documentary. You cannot do that. I'm joking. I'm joking. I understand why. But go on, please explain why.
+
+Patrick
+Why? Because in Matrix there are several interesting philosophical aspects. Like I think there's a philosopher called Robert Nozick who had also this idea first. What would it be like if people could just plug a machine to their head and be off in their own dream world and no longer have to face harsh and critical reality?
+
+Yeah, that's a very interesting thought because of course it's very nice and pleasant to do that and to go and I mean if you play games you somehow also leaving the real world and go into some kind of metrixs. Or another friend of mine he played World of Warcraft like crazy when we were young and then he told me for him it was a really really well like horrible moment when the counter in World of Warcraft
+
+It told him how many time, how many hours he spent in the game. And there were a lot of hours and months and days. And at one point it flipped and it said one year. And he realized, oh my God, I spent one year in the matrix. So, so this is like people would, if you ask people, they will always tell you, no, no red pill, blue pill clear. It's all clear. would always choose reality. I don't want to live in artificial fake world, but then you, you put a computer there and you give them World of Warcraft or something. And then people are.
+
+Citizen Web3
+You
+
+Patrick 
+choose the other pill. So then it's no longer like the red pill, then things change. Once you have the real option, maybe you can just go in, go out. You can make the decision every time again. So it doesn't feel like a final decision as it's like in metrics, it's more like you're already in the artificial world and you can go into reality, but you can only choose once and then that happens. So this was a really, really interesting thought and something that becomes
+
+Really important nowadays, I think, because the level how people are able to flee reality is getting crazy and crazy. And even you can be like in a dream world, even though it's about reality. So my, for my opinion, like political, few of people get stranger and stranger. You have people who are like completely crazy on this side, completely crazy on that side. And they think like, this is the only way to feel the world. And then they.
+
+follow like on Twitter only people who reinforce this view of the world. And this is also a dream world because on the one side, the people are just like, it's a big problem everywhere as migrants killing people. On the other side, everyone everywhere as people just beating down minorities. And on both sides, it gets really extreme and they can live in this dream world, even though the dream world is about reality. But with the like digital world, we are able to provide them this dream world.
+
+Citizen Web3 
+Yes. Yes. Yes.
+
+Patrick 
+that reinforces, like that gives them a Matrix experience, even though it's about reality. So, and this Matrix movie, it like played really good with these concepts. And yeah, that's maybe one reason why I think it's a cool movie.
+
+Citizen Web3
+I always say that I always joke, but I don't joke, but it's a joke that I started like five years ago. Whenever people talk about reality in Matrix, I usually say, you haven't seen this documentary from the end of the 90s. You know, there was a documentary. What is it called? The Matrix, the documentary. And they're like, no, there was no documentary. It was a movie. I was like, no, it was a documentary. You just need to wake the fuck up. It was a fucking documentary. Second question. I promise it's the last one. Go on, please, please, please, please, please, please, please, please do.
+
+Patrick
+Yeah, really good. Wait a second. Wait a second. May I also answer it for music? I mean, I wanted to only answer it for movies, but there's a good reason to also answer it for music. And that's Pink Floyd, because you wear this T-shirt now with Pink Floyd on it.
+
+Citizen Web3 
+Please do, by all means. By all means, by all means. By all means. By all means, please do.
+
+Patrick 
+I think I was like 17, 18 years old and I see like, I like rock and metal music and classic and whatnot. So I thought like, okay, there's this rolling stone list of top hundred best rock music. And number one is Pink Floyd. And I was like, Pink Floyd? Okay, maybe I should listen. And I listened to the whole, the whole, how do you say?
+
+Patrick 
+the whole discography, all the music that came out of Pink Floyd. And I was like, that's the best rock music. It's just boring and slow. I don't know what's going on here. So I was like, Pink Floyd, this is the best rock music, but it's really disappointing. It's not, it's slow and boring. And why do people think it's the best? And then about eight years later, I took LSD with a friend and he put in Pink Floyd and then Pink Floyd was playing. And I thought like,
+
+Citizen Web3
+It's the best music suddenly. Definitely.
+
+Patrick
+It's the best music ever! I mean, the answer was really easy because I just knew on the next day, yeah, I was on drugs, so on drugs the music was better, all good. But then I listened again to it, was still awesome. The music, even afterwards, I was no longer on drugs. Top, really awesome music. And then I realized, the reason is that now I'm older, I'm able to longer bear moments when nothing happens.
+
+Now I can accept that there's like for two, three, four seconds, nothing's happening in the music. And that's okay. And when I was 17, everything must be fast and this thing must happen and you need double bass and metal, then the music is good. So that's something I realized then, but I think it's not such an interesting insight as the Matrix stuff, but...
+
+Citizen Web3 
+Yes. Yes. I totally understand.
+
+Citizen Web3 
+No, no, no, actually I I could I think I could develop another hour conversation around that last sentence that you said but I i'm not i'm not i'm gonna i'm gonna push myself not to do that But I can definitely do it. So so I totally agree with you. I understand exactly where you're coming from so last one, let me I I I before I think I was a bit a bit lucky.
+
+Patrick 
+Yeah, okay good.
+
+Patrick 
+But you are a Pink Floyd fan from the beginning.
+
+Citizen Web3 
+I was since I was a kid, like, I think how old was I? It was before I was nine because when I was nine, we moved and anyways, we had we had a Vinyl's my mother had Vinyl's and this was like early 90s, very early 90s, very late 80s. Maybe 1990, 1991, something like that. There was Enigma, Pink Floyd.
+
+Patrick
+Mm-hmm.
+
+Citizen Web3 
+and something else and those vinyls kept repetitively playing for me but it was in me as I grew up so I never questioned whether I like it or not. mean so I was lucky in that way but I totally understand that the explanation is something that I connect to a lot. So let me just jump onto the second one and this one is going to be a bit simpler but still a weird question. Give me one motivational thing.
+
+It keeps Pat waking up Patrick out of bed every day, every morning, afternoon, night. doesn't matter what time you wake up and keep building gaming for the sake of trying to, you know, make a better world, as you say, or not trying to see reality as it is, or trying to, you know, find alternatives as they are, or whatever is the reason apart from what we talked about, something motivational for you that you could share, of course.
+
+Patrick 
+I'm going to die.
+
+Citizen Web3 
+Okay. Lack of time. Okay. That's a good one. I like that.
+
+Patrick 
+Yeah, I mean, it's just like we all going to die at some point. I think that's very motivational. And once I delve into being creative, doing stuff, the flow comes up. I forget that I'm going to die. So that's nice. But it's all sounds so, it sounds so like I'm really afraid to die and now I need to run away from that. That's, not what I mean. It's more like, just our time on the planet is limited.
+
+So let's just do the best, just try to make the best out of it and not just slack around. Sometimes you have to slack, of course, but it's just time is limited. You already captured it. So I'm sorry, I cannot talk really lengthy about it. Yeah, I think it's also an experience of I'm not enjoying consuming so much. So it's like...
+
+holidays for me going on vacation. It's nice, but it's not so fulfilling because I'm just going somewhere and then I'm just looking at nice buildings and on a nice beach and stuff. But I never have this feeling of when I'm really exhausted after fixing like my heating in my house and I have plumped tubes together the whole day and my muscles are aching and I go to bed and this is so fulfilling. This is really nice. And if I'm just consuming.
+
+Citizen Web3
+I understand.
+
+Patrick
+It's not, and then that's some, I've learned and realized that's why I want to be motivated and do stuff because it feels so much better than just not do stuff.
+
+Citizen Web3 
+Just yesterday, am gonna let's do to finish off yesterday. I saw a meme exactly in just what you describe. It was something like this. It's a meme for people who like something like this. The question was, do you find that you have no desire to work and nothing seems interesting? If yes, here's what you need to do. Switch off your telephone, stare at the blank wall for half an hour.
+
+start getting boring, stare a little bit more at a blank wall for another half an hour, get so bored that you will get back to any work and will find it super interesting. So yeah, I totally understand what you mean, you know, being actually, of course it's a joke, but you know, to actually give something back rather than just receive, you know, vitamin D on the beach, of course, makes me tick for sure. And I understand that. So again, thank you for the answer.
+
+Patrick 
+I think Albert Camus captured it best. I think he just captured it so good. He just said, think about Sisyphus, you know, the guy in Creek mythology who has this real big stone rock ball that he needs to push up a cliff, up a hill. And once he reaches the top of the hill, the ball gets rolling back over him and he has to start from anew. And everyone is like getting told the story as this is the worst experience, the worst life you can have.
+
+Citizen Web3 
+Please, please, go on. Yes.
+
+Patrick
+being Sisyphus. And then Albert Camus just says, no, no, must think about how Sisyphus might be really happy. Because for Sisyphus, there's no other way than accepting his reality. And there's no other way than every day trying to get this huge rock up again and just investing all his power, his muscles, getting it up, and then start anew. It's all good. He has to accept it because it's the will of the gods. Only if...
+
+they would tell him something like, you don't have to do this, but you need to find out how, then he would feel miserable about his destiny. But once he knows there's no other way, just do your best in what you're doing now, he can be a happy person. And I think that's the best way describing this type of kind of feeling.
+
+Citizen Web3 
+Once again, I want to remind the listeners, guys, everything me and Patrick mentioned, and there's a lot of cool things Patrick has definitely mentioned this episode. Please find in the show notes. Please, please, please read if you're interested more. And if you're not, I suggest you do open some of those things and read because some of them are very cool, especially Greek mythology, I think. There's a lot of insights in even into today's world and it's cool. But anyways, Patrick, back to us. I want to thank you for coming on. I want to thank you for the question. Sorry for the answers.
+
+and for your time. yeah, actually for the Pink Floyd question at least. Okay, Patrick, please don't hang up. This is just goodbye for the listeners. Everybody else, thank you for tuning in and speak next week. Patrick, thank you.
+
+Patrick 
+I also really grateful for this. Your questions were really good. I love it when people keep digging deeper and ask the real shit. Thanks a lot for this. It was a pleasure.
+
+Citizen Web3 
+Thank you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

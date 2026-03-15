@@ -833,7 +833,9 @@
     "eco tooltip": "Energia Verde",
     "keyhole tooltip": "Fragmentação de Chaves via Horcrux",
     "github tooltip": "Github",
-    "place your interview here": "Coloque Aqui a Sua Entrevista"
+    "place your interview here": "Coloque Aqui a Sua Entrevista",
+    "Podcast Summary": "Resumo AI do Podcast",
+    "Listen to episode": "Ouvir Episódio"
   },
   "ValidatorNetworksPage": {
     "title": "Perfil de validador: Redes Suportadas",

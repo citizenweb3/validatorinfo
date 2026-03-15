@@ -1,5 +1,5 @@
 import logger from '@/logger';
-import { contracts, getL1, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { getContracts, getL1, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
 import { getOrCreateViemClient } from '@/server/utils/viem-client-with-failover';
 
@@ -23,11 +23,11 @@ export const getRewardConfig = async (chainName: 'aztec' | 'aztec-testnet'): Pro
   const l1RpcUrls = l1Chain.nodes.filter((n: any) => n.type === 'rpc').map((n: any) => n.url);
 
   const client = getOrCreateViemClient(l1RpcUrls, 'reward-config');
-  const contractConfig = contracts[chainName];
+  const l1Contracts = await getContracts(chainName);
   const abi = rollupAbis[chainName];
 
   const config = (await client.readContract({
-    address: contractConfig.rollupAddress as `0x${string}`,
+    address: l1Contracts.rollupAddress as `0x${string}`,
     abi,
     functionName: 'getRewardConfig',
   })) as RewardConfigResult;

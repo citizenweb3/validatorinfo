@@ -1,0 +1,576 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/01node
+
+Episode name:
+Bare Metal, Secret Sauce and UX with Chris, Tayo and Faith 
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Cosmos Odyssey, which are our live streams with various validators and projects across the ecosystem. Not just the Cosmos ecosystem, but mainly the Cosmos ecosystem. And today we have Chris and Tayo with us for the second time, because second time is lucky because first time just didn't work technically and faith as well. From ZeroNode, Chris, I'm going to let you say hello first, introduce yourself.
+
+and then go one by one to Faith and Tayo. Hi Chris, again.
+
+chris___01node 
+Hi guys, I'm Chris, I'm the CTO of ZeroR Node.
+
+validator for a lot of blockchains. Most of all, we support the Cosmos universe, the Cosmos ecosystem, but we also validate other chains like Solana, and Nier, and other stuff. As I've said, I'm the CTO, I'm in charge of with all the technical details, with the infrastructure, and...
+
+and uh...
+
+I don't know, technical based decisions.
+
+Citizen Web3 
+How do you, Chris, straight a question, a question straight away to you. How do you, you said you have nodes in various, as the zero node one, I mean, as various ecosystems. One of them is the Cosmos universe. And you said you are in charge of all the technical decisions. How do you make a decision to which universe, using the analogy used to support or which one not to support or the technical decisions is not the main one here, or is it?
+
+chris___01node 
+Yes.
+
+chris___01node 
+The technical decision is not actually the main one, because we are not constrained with hardware or things like this. We are... one of our greatest points is that we run with our own infrastructure. We have two data centers, our own servers, our own bare metals, we have a virtualization platform, and...
+
+we can scale depending on what the networks are asking.
+
+chris___01node 
+Most of the projects or the networks we join is because we are interested in the project or we like the idea, we like how it can help or how it can develop. So for the technical part, the Cosmos ecosystem is not... we don't...
+
+Citizen Web3 
+Makes sense. Makes sense.
+
+chris___01node
+We don't have any issues onboarding networks using our own infrastructure.
+
+Citizen Web3 
+What's the most difficult network you guys had, well, you personally that found maybe not in terms of like how 01Node looked at it. I see Faith is already smiling. Maybe there is something that you guys are already, you have it in mind, right? You have the answer.
+
+chris___01node 
+I don't know. Each network has... Technically, each network has its own individuality and they all are great in what they do and they all are great to sustain, but from the technical point of view, I think Solana is the greatest monster of them all.
+
+Citizen Web3 
+Technically.
+
+Citizen Web3 
+the elephant in the room.
+
+chris___01node 
+Yeah, eating all the resources, but it's okay. We provide quality services on one or two.
+
+Citizen Web3 
+Guys, before I move on to Faith and Tayo to say hello and introduce themselves just for anyone having a deja vu, you're absolutely correct. We did try last week with the guys to launch. Unfortunately, well, it was more on our side. I don't know, something on the internet side, something didn't work. I'm going to Faith move on to you and then finally to Tayo, of course. Faith, hi, welcome.
+
+Faith | 01node 
+Hi, hi Chris, hi Tile, hi everyone. Okay, my name is Faith Braid. I'm actually the Community Manager and also the Lead Marketer at Zero One Node. It's been a really, really interesting journey here at Zero One Node. And...
+
+I'm in charge of the community, I'm in charge of the social, so when you see tricks out there, I'm the one doing them. So it's been really amazing because you know how important community is to a project, so we tend to manage to be.
+
+Citizen Web3 
+It's okay, but it's okay. We're still here. We're still here. I'm falling. It's just on face and so we're still here Faisal come back to us. I was No, no, it's okay. It's okay. I can't hear you face. I can hear you. I can hear you Yes, yes. Yes. Yes. Yes. Yes
+
+Faith | 01node 
+Oh sorry, sorry that was my network there.
+
+okay you can hear me clearly right so yes um we as a project we are also interested in our community knowing how beneficial
+
+community is to the project so we love our community ranging from the different networks we validate just like Chris mentioned Solana, Cosmos, Nyer Protocol and the list goes on and on so yeah it's been an amazing journey
+
+Citizen Web3 
+Faith, before I move to Tayo, how on earth do you combine the role of a marketer and a social media manager in one? Because from experience, there is something that is like, well, it's two big roles, and there's community management, there is social media management, there is like marketing. How do you do it all together?
+
+Faith | 01node
+Okay. Yeah.
+
+Faith | 01node
+Actually, I have an amazing team we were more like a family hehe so um we are actually work tools really helps um with the job um to like schedule stuff and use more actually have like a responsive team to like from the graphics department to um the content departments so we actually have all our teammates really really responsive we don't have to like really follow up on anyone everyone knows what to do and it's it's more like um
+
+ye, it's actually a big role because it demands for you to like think of something innovative on how to like engage the community on how to what next to actually do to like um get in more um community members mostly from um Networks we actually validate but so far it's quite easy because of the teammate having someone like chris and tile and vivian
+
+That's it for me.
+
+Faith | 01node 
+I think your mic is muted. I can't hear you.
+
+chris___01node 
+Yeah, you're on mute.
+
+Citizen Web3 
+Yeah, yeah, I did notice. Sorry, guys. I apologize. My apologies. This is we're gonna win. We're gonna win. We're gonna battle till the end, guys. And Faith, I was saying, I was saying one more question to you before I let you go. As in before I move on to Tayo, not let you go completely. But as a marketer who's one of the tasks, I mean, you mentioned like building community from the networks that you validate. And I assume I'm, of course, making an assumption here. But as a marketer, one of your...
+
+Faith | 01node 
+I'm sorry.
+
+Faith | 01node
+Sorry.
+
+Faith | 01node 
+Okay. Okay, okay.
+
+Faith | 01node 
+Mm-hmm.
+
+Citizen Web3 
+tasks is probably to onboard more delegators to the validator. What is your strategy as a validator? What target audience are you targeting? And why do you target that specific target audience for your validator?
+
+Faith | 01node 
+Yeah.
+
+Faith | 01node 
+okay so that's like a secret though then
+
+Citizen Web3
+No, let's let's leave the secrets outside. Let's have the secrets of the how the how outside only like the what what you can talk about the secrets. No, no, no, let's not talk about them only later.
+
+Faith | 01node 
+Okay.
+
+Faith | 01node 
+
+Well it's actually you know the the blockchain ecosytem is actually dynamic when mixed with marketing, you really can't predict what would actually what is the banger or what actually like hits the nail on their head. So you just have to like try different stuff. But first things first, the the people you're trying to reach out to, for example, the market you're trying to reach out to, they need to understand that you really care about them. For example, in zero one, we have really appealing
+
+selling points for example our commission fees is less and it's not less because we want to like make it Make it fishy, but we really want um um deligatores to really earn very well um we have a responsive community we care so much about our customers so actually like um we tend to make our servises more user sentric so I think that one um major thing when you make we make policies or make changes or we are trying to like stratijise we consider the community first yes the project is also importent as the validator we also consider the deligators um and the community fist like providing guids to like help them for example one of our missions is like to onboard at least a billion users I know it sounds humongus but so onboard a billion is a interweb should show passive income so um like how to like make all add revinue passively which staking is also a part of it so someone who doesn't really understand staking who doesn't understand any of this thing there are guids tutoriol guids is quite seamless like um coming to the ecosystem if you know nothing about staking about deligating so we make our servises user friendly and um 
+
+it's all about the community so that's it community first i think that's what we really do then the other it's a secret yeah okay
+
+Citizen Web3 
+I love it. I love it. I love it. I'm writing down the secret sauce, but I will not let anyone know. I promise. And Tyo, let's let's let's move on to you, man. Hi.
+
+tayo 
+I'm an... Can you hear us? Oh yeah, I can. Can you hear me as well? Yay! Yeah, happy to be here once again. So great warm feet as well, I mean... Would you like to introduce yourself again, like the last time you started, I remember? Could you please, please, please do it again and tell us a little bit about your job at Zero One?
+
+Citizen Web3 
+Can you hear us?
+
+Citizen Web3 
+Yay!
+
+Yes.
+
+Citizen Web3 
+Would you like to introduce yourself again, like from last time you started, I remember, but can you please, please, please do it again and tell us a little bit about your job at 01node.
+
+tayo 
+Oh, got it, got it. So I am Taya. I typically spearhead most of our projects. I mean, Chris mentioned we have over 25 projects now that we validate. So I'm basically in charge of most of our projects and projects want to onboard in the future as well. I mean, I'm in charge of partnerships. So basically, projects we intend on onboarding, the research part,
+
+tayo 
+and Reptory space these days, we definitely, we are zero unknown. People look up to us to onboard great projects. I mean, it's something we are like, we definitely have to like deal with research, meet the teams and all that. So I'm basically in charge of that. And like basically, I also like collaborate with like Chris, with the technical side, marketing side, and like basically like all departments of zero unknown
+
+and like basically make all decisions take so basically that's what I do and once again I'm happy to be here. 
+
+Citizen Web3 
+Tayo, it's nice to have you. Tayo, a question as to you, as to a researcher straight away. What is the secret sauce like Faith already mentioned community for onboarding delegators is the secret sauce. What about the secret sauce for finding the perfect network to onboard and to start validating? What is the strategy? Go to strategy two.
+
+Faith | 01node
+Thanks for watching!
+
+tayo 
+Oh, perfect I mean I love that question so first of all we are more concerned about the vision of the protocol I mean um we are tones of if not millions of protocols launching everyday so 
+
+tayo 
+I mean, we have thousands, if not millions, of protocols launching every day. So I mean, we have like bad ones and we have good ones. So identifying them, definitely we have to know division. Why are these people actually creating this? What's the mission? I mean, what's the real life utility? Are you creating protocols that will help in, I mean, increasing the experience of Web theory users or bringing real life assets to Web theory?
+
+We just really need to know the utility of the projects. I haven't checked, but we definitely want to know. Check out your MVP, if it's a startup in the web space, what have you done, what are you looking to do, where is the team behind this, do you have experience? I mean, you don't definitely have to have experience, but we want to see that drive in projects, we want to see things, milestones you have created, so before we join, before we get embedded as a validator in that particular protocol. So that's pretty much it.
+
+want to know that okay fine this is not a scammy product this is actually a product that has real life utility so i mean that's pretty much what we typically look out for yeah
+
+Citizen Web3 
+You mentioned the word vision several times and I cannot agree less because I think if the project doesn't have a vision, but from the perspective of Zero One Node or from your perspective as a researcher or both, what vision are you looking for in a vision? Because a vision can be different. I mean, building a nuclear bomb is also a vision, right? I know it's an extreme example, but it's also a vision, right?
+
+from your perspective as a researcher or both, what vision are you looking for in a vision? Because a vision can be different. I mean, building a nuclear bomb is also a vision, right? I know it's an extreme example, but it's also a vision, right? So when you say vision, what are you looking for in that vision that, you know, for example, Faith mentioned community, for example.
+
+Citizen Web3 
+So when you say vision, what are you looking for in that vision? Is that, you know, for example, faith mentioned community, for example, do you see that the guys are talking about having the biggest community for their project? Is that kind of the vision you're talking about or a technical vision or anything else maybe?
+
+tayo 
+So a vision is most times, most Reptoria protocols, we really want, because I mean, Reptoria is meant or is thought to be superior to Repto. So you as a protocol founder, as protocol owner, your, I mean, your utility, your use case, your protocol should have superior, like one of your visions should be, I put caution as superior, I mean.
+
+superior user experience, UX, superior advantages compared to Web2 products they are bringing in. So I mean, that's kind of like a COTable vision we look out for. And I mean, if you are creating products, for instance, maybe infrastructure products, mainly for the blockchain space, and like you're not having competitors in Web2 space, I mean, your product, user should be able to use your product easily, I mean, because we all know how some Web3 products have like very bad UX. I mean,
+
+They don't even have like very suitable use case and all that. So I mean, your vision should be having a very, very incredible UX, onboarding more and more Web theory users. I mean, just basically making life easier for Web theory users, Web theory customers and all that. So I mean, that should be one of your visions. And I mean, you should also have a clear path towards generating revenue, generating profits, because there are a lot of products these days that's, I mean, they don't even know what they are doing. So I mean, we really want to work
+
+work with people that really know what they're doing, that have a mission, okay fine, they have a projection. These are the ones that will be in next two years, three years, five years. Project like that, we are looking, we are actively looking out for them. I mean, to help them bring their technical side and their advisory side. So yeah, that's typically what we look out for.
+
+Citizen Web3 
+I can totally understand that. In fact, I think I don't know if I'm going to give it away for faith, but I'm starting to collect the secret sauce thing here. I have revenue, experience, bare metal community. I know faith has fell off, but she will come back and by the time by the end of the show, I'll have the secret sauce. But now guys, the next question, and this is, I don't know, Chris, if you want to take on it, take on it. If you want to add or take on it mainly.
+
+We started last time and this is what we kind of tried to get a profile for a validator, the services that the validator offers. And I know we started last time to talk about it when we tried to record. It was validating over 20 networks. It was investing into, or what's the right word? Maybe not investing, but I don't know, maybe you guys want to use another word. So, so help me out here, but is there a, so there's that.
+
+what you guys do as well. Do you guys do provide any other services or those are the two things you guys are focused on?
+
+chris___01node 
+I'll start with this. Mainly our job, our main focus is validating on networks and onboarding new networks depending on the project. As Artagio also mentioned, we are tech savvy, so we like new projects. Other...
+
+Other main things that we are doing is onboarding projects that help the community or, I don't know, let's say wormhole. It's a bridge that allows people to swap money from place. We're a guardian in wormhole and for that, that comes with other different
+
+challenges You have to run secure RPCs to all the nodes to all the networks that are currently bridging you have to run you have to maintain most of all the security of Everything that's happening there. So From a security point of view I say we were a Little
+
+exaggerated. We do more than it's required. We have fail saves, we have high availability, we have redundancy, but...
+
+chris___01node 
+It's still room for improving. It's all room for improvement.
+
+Citizen Web3 
+I think there is also room improvement, right? I was just going to say the same thing. But I understand totally what you mean with bridges because of course on board in certain networks, even like Evmos requires slightly different infrastructure and like Warren Hall you mentioned there requires, I guess, especially if you're community focused, like Faith mentioned, to create a lot more content. So I guess creating content.
+
+I mean, I guess every validator is a content creator, right? In one way or another, just something that bound to happen. It currently says on the website that you have around half a billion staked in user assets. Is that number more or less correct? The half a billion? 550 million. It says something like that. Over.
+
+chris___01node
+It depends if it's a red day or green day in the networks.
+
+Citizen Web3 
+I love it. I love it. I understand. But the question wasn't about to be honest amount of money. I'm going to direct the question like kind of like into think.
+
+chris___01node 
+Yeah, yes.
+
+chris___01node 
+we have was take a lot of cases because we validate a lot of networks. So validating over 25 networks means a lot and each network has its own.
+
+Citizen Web3 
+Mmm, yeah.
+
+Citizen Web3 
+Of course.
+
+chris___01node 
+has its own amount and the amount differs from market perspective and pegging with the USD and things like this.
+
+chris___01node 
+For example, last year, I think we were over 1 billion in staked values. That was before Luna crashed. But we see an increase. I don't think the amount is the most important one, but the number of users that are staking with us.
+
+So that number is currently is actively rising and it's only going up.
+
+Citizen Web3 
+That is actually, I think a good metric. It's funny. I think we are still going to the point of validator metrics, right? I think we still not, not, not, not, not there to be honest, how to measure course correctly, um, apart from uptime and like amount TVL, I guess, and like stuff like that, they not really always give us the full picture faith. I don't know if you can hear me. Let me know if you can. I have a question for you about what Chris was saying about community.
+
+Faith | 01node 
+Yeah, I can hear you.
+
+Citizen Web3 
+If not, I'll wait until it's okay, then I'll go to tired then. I'm gonna go on by one with and tired. Let me go. Maybe faith. Faith. Can you hear me now? Let me know.
+
+Faith | 01node
+I can hear you.
+
+Citizen Web3 
+a tire.
+
+tayo 
+Okay then.
+
+Citizen Web3 
+Let me know guys, if not, okay. Guys, whenever you can, if you can say some, sorry.
+
+tayo 
+Well, I'm not saying anything. Are you referring to me?
+
+Citizen Web3 
+Ah, but you can hear. Damn, yeah, it's the lag. I understand that there is a lag. I understand. I have to be careful with the lag. Okay. Tio, a question to you or to Faith, guys, whoever can answer. Chris mentioned that there was a big change, of course, after the whole Luna thing happened. And I'm curious whether as a validator
+
+tayo 
+Yeah, I can hear you.
+
+tayo 
+Whether as a validator, from the perspective of community or the perspective of how you interact with the outside world, that really makes such a change, falling down the TDA so much, we said, oh, we're going to do like over 1 billion. But money isn't the main object, and I totally agree. But still, does that affect you?
+
+Citizen Web3 
+From the perspective of community or the perspective of how you interact with the outside world, that really makes such a change. Falling down like in TVL so much. I mean, Chris said, oh, before Luna, it was like over 1 billion, but money isn't the main object. And I totally agree. But still, does that affect your work as a marketer, as a community out there, as a researcher, or am I completely not guessing correctly here?
+
+tayo 
+as a marketer, as a community, or as a researcher, or am I completing it? I'm not guessing correctly here. Okay, got it. I don't know if it's available to answer that, but if she isn't, then I could. Okay, so, I mean, then I could maybe talk a little bit more about the Luna crash. So.
+
+Basically, we all know how unfortunate that experience was, the old TerraCrash. And I mean...
+
+I believe it's led to, perhaps it was like, the two points in the BL markets we have been saying this year, it led to like a lot of users having less confidence in the old web theories place. And I mean, there was something that I wanted to did, which I really, really liked. We provided support to Terra users. And I mean, to now revalidate on Terra Classic, just trying our best to ensure like this community can be made whole.
+
+I mean, we offer that hope. I mean, we participated in various proposals. We were actively also discussing in the Terra forums and all that. And in terms of our community as well, we offered guidance, medium know how everything was. We constantly sent things to note about various networks also safeguard yourself. I mean, I think it's also of the law about community users in, I mean, in the recent FTX crash. I mean, because...
+
+From the Lunar Crash, we kept on talking about security practices, having various articles on outside the ledger and all that. So I mean, ZeroNode really learned from that. Although it impacted us as well, it impacted our users because we were big supporters of TerraBoard. I mean, as Plates rightly said, we are very, very user-centric, community-centric, so we did admit sure our community wasn't affected as much. We provided as much support as we could. So yeah.
+
+tayo 
+I think that answers that.
+
+Citizen Web3 
+It does. It does indeed. Thank you. I was just curious how each validator, I think, to me, works with it. Faith, do you want to add anything to that?
+
+Faith | 01node 
+thrilledThank you.
+
+Yeah, I think so far, looking at 2020, as a project, Zero One Node will really come a long way. We've achieved a lot of success as regards projects we've onboarded.
+
+Faith | 01node
+Said um also um also um validating um my protocol experience and some other project and so ya also we engaging um um the community of other um networks we validate as we get with their knowledge on projects   
+
+Um as regards like the chain and also on zero one also we've been really focused on on boarding new projects Educating and also like interacting with the community And yeah, you know I would Just like I would always say the year actually came with like a lot of good news and also a bit of bad news, but That's what actually like makes us stronger, right?
+
+Looking at 2013 or 2008 as we got the whole crypto crash and everything, we all came out stronger. So definitely Zero One Node is one project that is always futuristic in its approach. 
+
+as regards security as regards community as regards centralization so we are really giving our 100 percent where open to partnerships and um collaborations that would boost um a better and more decentralized ecosystem so ye that's why we're actually here to like play our own part in the decentralized um
+
+blockchain ecosystem. Yeah.
+
+Citizen Web3
+Thanks, Faith. Yeah, that totally makes sense. But we always like I think I guess all my questions are very much concentrated on the now. What I would like to ask you and I think Faith has already mentioned the huge 1 billion users, I love the spirit. And in my opinion, I think we should all be in that spirit for sure. Why not? I mean,
+
+I think if every validator on boards 1 billion users, we only need seven validators and that's it. Now, I'm joking, of course, guys, but what are your plans apart from onboarding a huge number of users for the future, which is, in my opinion, honestly, is one of the best things to have as a validator to be planned? What other plans apart from that grow in the networks, I don't know, maybe becoming a provider for some...
+
+Faith | 01node (29:37.124)
+I would want to say security because the primary assignment of a validator is to help boost decentralization. So we can see how security is really important as regards blockchain. We get to hear a lot of hacks and a lot of...
+
+Citizen Web3 
+other things or anything like that.
+
+Faith | 01node 
+um like shitty news happening blockchain ecosystem so yeah like chris rightly mentioned we are one validator that actually like we have our own infrastructures we don't rely on um on um external infrastructures in a way we have our own bare metal like we're one of the
+
+um two validators who actually like run on bare metal to like boost decentralization just rather than just rely on someone else um one thing we really looking forward to be know um as reliable a validator that's um
+
+really key about decentralization and that also reflects in our uptime. We record in 99.9% uptime on almost all the networks we actually validate. So irrespective of the fact that we are looking forward to like onboarding new persons into the Web3 ecosystem, we are also focused on the ones we already have, how best we're really harnessing and how best we're really performing
+
+so our performance as a validator also matters so yeh I want the security we are really conscious about security because we understand how impactful um um um poor security or poor infrastructure can actually um be detrimental to projects so we really keen on security so I don't know if Chris actually like have like more to add to that since he is into like big tech part of the project yeh
+
+Citizen Web3
+Chris?
+
+chris___01node 
+Yeah, I would like to add things here. As I told in our first attempt of this interview, as a tech group, we are four guys that have over 15 years of experience in IT.
+
+sysadmin, network administrator, network developer, and network designers. And for myself, I'm a security engineer for 10 years now. So everything I do, I do with security in mind. And regarding what Faith said,
+
+We are trying to to have a Huge uptime 99.9% uptime. It's not that easy to get When you want security because security needs patching, patching needs rebooting and also For example we use
+
+which is a multi-signer, so we don't have the validating keys on one machine. The machine that actually signs the blocks are located in a very private network, which is not accessible only by one VPN that is also very secure and not accessible from anywhere. And these machines have to talk to each other because each...
+
+machine have one part of the key and they all have to come in consensus on so they can provide a good signing block. This is a very high security update for infrastructure, but also comes with a lot of... Yes, it's very expensive. Let's say we...
+
+Citizen Web3 
+It's very expensive.
+
+chris___01node 
+For a validator, we run five security, five signer machines and five sentries. So it's not easy.
+
+Citizen Web3 
+Wow. Wow, that's a lot. That is the most I've heard so far. So I've never heard this. It's cool.
+
+chris___01node 
+It's actually between three and five. I'm saying five.
+
+Citizen Web3 
+Still a lot, still a lot. Okay, 1010 would be like number one I've ever heard, but three to five, please go on. Sorry, I was just really curious. This is my topic as well. So I'm really getting excited to talk about it. Sorry.
+
+chris___01node 
+Yes.
+
+Faith | 01node 
+Oh, no.
+
+chris___01node 
+Sure. So having a majority of signers, three or two in case, if you have three signers, you have 12 of them needs to have consensus to be the same network and to sign, or three if you have five signers. So to have this voting algorithm, you have to.
+
+you have to push back or you can't sign the blocks very fast because there has to be calculations done voting and things like this and because the internet is not perfect because our infrastructure as faith said it's in two data centers and one special room where we keep the third
+
+the third the signer and there has to be communications between them and as we all know internet doesn't really work as it should be. You're also missing blocks because you don't have consensus for the keys. This doesn't mean that the valutator is not performing good. It's just not performing.
+
+We prefer to have 99.9 uptime instead of 100 and be secure than having 100 uptime and be unsecured. This is the main idea.
+
+Citizen Web3
+It's, it's, it's, I totally relate. I mean, we also validate and, and we are, you know, I mean, I think what you guys are doing, um, and have been doing is going to in the long term, sooner or later, there will be a point, a big turn. I mean, it's already being heard with Hetzner. It's already been heard with other cloud services and everybody kind of knows that we are sleeping on a big, big elephant, you know, over here and sooner or later, something will happen. Apart from that, you know, some other
+
+small KYC projects that handle data of shitloads of post validators, which I mean, if the big companies have hacks on the data, I'm sure that those guys, I don't know how they handle their data. I'm not going to speculate here, but I'm just saying that I think what you guys are doing is a very important step because there are more and more validators that I've been talking to lately that have...
+
+trying to go that way. And it's funny that still people try to advertise the 100% uptime as like the number one thing because it's not, I agree. It's impossible to achieve 100% uptime if your setting is secure as you describe it. Sorry, did you want to add anything? Go on, please, Chris, please go on.
+
+chris___01node 
+Yeah, I also have a lot of questions from people in the community say, hey, I want to delegate with you, but I saw that in the last 1000 blocks, you have 99% uptime. And as I'm describing them all the process that we do to sign this, oh, so uptime is not that important.
+
+Actually, I think it's important up to one point. You need uptime to stay out of the slashing zone, let's say. So from my point of view, a validator that has 80% uptime and it's very secure is better than a validator with 100% uptime with only one node.
+
+that is validating Sentry and RPC for other projects.
+
+Citizen Web3 
+It's ironic that we're coming back to the blockchain dilemma, even though we speak about validators, right? Decentralization, security and bandwidth, I guess, right? Or I guess we're kind of coming back to that.
+
+chris___01node 
+For example, let me describe a little our infrastructure for Cosmos, for the Cosmos Hub. We have five sentries, two RPCs that we run internally, three signers, and one archive node.
+
+Citizen Web3 
+Please.
+
+chris___01node 
+So all of this
+
+chris___01node 
+we can have by putting everything in one server and using it as a sensory validator and RPC for all the projects, but it's not secure. So.
+
+Citizen Web3 
+And even more so, sorry, just for the listeners out there, just to kind of understand correctly as well, the signers, as far as I understand, it's like a multisig. So it's not just three signers, it's the signers that have to come to consensus on what they sign. And I guess it makes a lot of difference if you're not from that space to hear that. Sorry, sorry, just to help people to understand how complex that is. No.
+
+chris___01node 
+Thank you. Thank you very much. Yeah, we don't always have 100% uptime, but we tend to get security and uptime up. We want more security than uptime, but we also want uptime with better security. So I think we're doing OK.
+
+Citizen Web3
+Sorry, Tom.
+
+chris___01node 
+în considerare de scoatele de scenari, dar oamenii nu îi încălătorează cu cei de scoatele de scenari.
+
+Citizen Web3 
+Slowly but surely. Tayo, go on, go on, go on, please, please, please go on, please.
+
+chris___01node 
+Now, one more thing. As Faith said, we like onboarding new delegators and we want people to delegate, but we won't change our way just to have 100% uptime and less security. So this is a step we want to cross, and we want to make it.
+
+even if it hurts us because a lot of people just watch, look at the uptime, take which one is 100%, look at the commission, takes the lowest one and delegate, not knowing what's behind that 1%.
+
+Citizen Web3 
+I totally feel what you're saying. I mean, I'm going to have a terrible example analogy with Burger King and McDonald's, but it's true. You know, like it is the choice of the fast food. And I know we're talking like commercial shit here and evil shit, but still, you know, Burger King choosing to do the way they do things and not wanting to get more customers when they can just because, well, that's the way they chose to do things. And I can totally see how.
+
+This is just, and I'm not comparing you guys to Burger King, of course, but I think that it's cool that that's what businesses do. And we as a validator definitely have our own little things which can be seen as perks, but can be seen as an obstacle by other people. And okay, but we want to make sure that that is there. So I can totally relate.
+
+Citizen Web3 
+for in your perspective more nodes or different types of nodes or anything that you would like to mention about the plans in future from your perspective for 01 node.
+
+tayo 
+or more nodes or different types of nodes or anything that you would like to mention about the plans and future from your perspective. Oh, yeah, I've actually been waiting for you to, let me talk as well. I mean, Chris and Fitz were in about security, so I think I have like a little bit of alpha for you.
+
+So yeah, we'll be working with SSB in creating a staking pool for Ethereum. I mean, we are launching that soon, like it's in the works already. So I mean, it's something that we are very, very proud of because I mean, we all know how ETH staking is. And I mean, retail users have not really had access to ETH staking mainly because of the high limits that the ETH limits for retailers. So I mean,
+
+I know this coming in and like we are solving this problem with our SSB technology. I don't know that it means shared security validator technology. So basically it's about having various operating kind of like a more to see environment and it's brings in more security to it's it's taken so that's kind of like it to be alpha for you. And that's something we are working on and we are very, very excited about as well.
+
+I also wanted to comment on services we offer. I mean, I think Chris pretty much said most of the services we offer. But I mean, I just wanted to mention we are also node operators on Chainlink. I mean, it's kind of one of our biggest partners and like we are one of like the most reputable node operators on Chainlink. So yeah, we also work with Gains Network, we work with Connex. I mean, and I mean, like Chris mentioned as well,
+
+we validate over 25 chains. And yeah, like we invest in blockchain projects. So I mean, if you have a protocol, if you are listening in, and like if you feel your protocol is very, very amazing, beautiful use case, feel free to send us a mail and then we'll definitely reach out to you as well. Perhaps you'll learn more about your protocol. So yeah, that's pretty much it from my end. I'm also happy to answer more questions you might have.
+
+Citizen Web3 
+Nice. Thanks guys. For sure. If anybody is listening out there and you are wanting to start in a project and you think that you have a vision like I already described and that vision matches what the guys say. I'm sure that reach out to them on 01 as the numbers note.com and from there you will find the contacts.
+
+or 01node blockchain on any search will find them if you didn't catch the website. But of course, there will be notes to the description of this. One thing I didn't ask guys, because usually I ask it at the beginning, but I'll ask it at the end this time. We talked about the now, a little bit about the future. What about the past? How did 01node? And I will tell you why I like to ask that question.
+
+And so I'm going to like direct your channel, your answer a little bit, if I may. Of course, you're welcome not to go that way, but I'll say what's behind my question. As blockchains grow, I think a lot of the validators, you know, as blockchains, if you were to see blockchains as digital nations who are validators, they kind of like different entities that are trying to do something in those digital nations.
+
+let's say citizen of such a digital nation, whether it's Cosmos, Solana or anything else, I would like to know who are those entities and what is in their mind. And why should I give my money to those entities? Because I am in a way, even though not giving it away, but I'm kind of letting them use it, letting them use my voting power. So how did Zero One Node start? What was the beginning? What was the reason to launch? And I mean, whatever you guys, of course, want to want to share.
+
+Please, would love to hear that story.
+
+chris___01node
+Yeah, I think I'll answer that because I'm the oldest in the team. So, yeah, Zero on Node was started by our CEO Claudiu, who really, really liked the idea of blockchain. And he, let's say...
+
+like he was a visionary, he saw the potential and he put all his efforts into making this work. So we...
+
+We're activating, I don't know, six, seven years now. So, you all know this, validating for a lot of time. And we were in genesis in so many networks, in the genesis of so many networks. And mostly it's because, as I always like to say, we are tech-savvy and we like...
+
+we like technical confrontations, let's say like this. And blockchain is a very exhausting example of this technical confrontation.
+
+Citizen Web3 
+Was there anything I mean you said Claudia liked the idea of blockchain and and of course that is something that that helped us And I think we and Claudia only crossed passes like online couple of times I think we exchanged a few messages on discord maybe several years ago probably last time Maybe in a couple of telegram groups, so I never had contact unfortunately with him. But what was the how to say? I mean
+
+If I like bananas, doesn't mean I'm going to grow bananas. I guess that's what I mean, right? I mean, what was the motivation to start validating?
+
+chris___01node 
+and
+
+chris___01node 
+Okay, let's get to the example that you said. If you want bananas, you won't grow bananas. No, but if you like bananas, and you see that bananas can help people with low potassium, and you're in a country that people has low potassium, you're going to grow bananas. So, Claudio, like the idea of blockchain?
+
+Citizen Web3
+Hahaha.
+
+Citizen Web3
+I like it. I like it. I like it.
+
+chris___01node 
+saw its potential, saw how he can help the community get this idea working. And from that, he started being on chain. So practically started in test nets because test nets are very important.
+
+Citizen Web3 
+Nice.
+
+chris___01node 
+Now I think we actually validate more test nets than main nets, just to put it out there, because test nets help developers test things they can improve or they can put up for better causes. We see a lot of projects that look very good on paper.
+
+but when deploying in real life situations like test nets, they fail. Also, we see, we like to invest in projects that are very attractive as what they are trying to obtain, or the main goal. And although we mostly know that
+
+it won't succeed, we still invest in them by giving them the chance to fail so others can learn from what they fail and get to that idea.
+
+Citizen Web3 
+makes sense in my opinion. I think failing better is what we started the episode from, right? To try to record it second time with the network connections. I think failing better is a great word.
+
+chris___01node 
+Yeah.
+
+chris___01node 
+Yeah, but... People say failing is bad. No, failing makes you better. Failing improves you. If you don't fail, you won't improve.
+
+Citizen Web3 
+Yeah, yeah.
+
+Citizen Web3 
+I definitely, I think that applies to anything from psychology to digital nations, I guess. So let's all fail and get better after failing.
+
+chris___01node 
+This is true also for security, because we learn from other people's fails. And doing that allows us to be more secure. If we wait for us to fail, then that is not good. So we look at what's happening in the market, we look at what's happening everywhere in the community. And when we saw...
+
+potential problem that a validator has, we fix it even though we don't have it that time, but you know, it's better to be safe than sorry.
+
+Citizen Web3 
+Definitely, definitely. I hope somebody would say that to Luna before they come. I'm joking. I'm joking, Chris. Chris, it was a joke. It's not a...
+
+chris___01node 
+Yeah, I know. But Luna was a very nice project. I think the idea of Luna is still a very good idea and it should be tried and people should invest in it. But from my point of view, most of the delegators are in just for the money, not for the tech or the ideas.
+
+Citizen Web3
+KURS.
+
+chris___01node 
+people who try to buy one Bitcoin at $1,000 and sell it at $10,000. Not exactly what is happening there.
+
+Faith | 01node 
+I'm sorry.
+
+Citizen Web3 
+Yeah, but if this is what it is, I guess, right? I mean, it is the reality. And I hopefully this is why one of our goals is to try and to show other validators, not just for the amount of like, I know I asked those questions, but it's not just for the amount of TVLDR, but for what they stand and why they do it. Guys, to kind of wrap it up.
+
+I know it's not been perfect. I know not with the sound, not with this. I'm sorry about that. But like Chris said, you know, fail better. It is what it is. You know, we're here to win. Guys, if you want to add anything, Chris, Tire of Faith, please feel free. Other than that, it's been a huge pleasure to try and understand you guys, how you work, what you do.
+
+And I hope to everybody there who's looking for validators and looking not just about ZeroNode, but in general, trying to research this. Here is one amazing, in my opinion, validator who is focused. Faith said, it's a secret sauce, but I have it all written down. It's bare metal, community work, research, revenue, experience. And I think, yeah, guys, of course, all with a smile. Faith, Tayo, if you guys have anything else to add, please feel free.
+
+Faith | 01node 
+Yeah, okay. First of all, it's been an amazing time here. I wish to like turn on my network, my camera but my network won't let me keep stripping off. So I enjoyed myself here and just like I would always say decentralization is really the beauty of blockchain and we are we are
+
+Pushing towards that make the ecosystem more decentralized we love cosmos we love citizen cosmos we love he he yeh we love citizen cosmos we love cosmos ecosystem we love our community and yeh one billion might be actually look like um a cliche like how possible is that well you know never say never um um 
+
+I think some years back some persons actually looked at the theory of Bitcoin and they were like this won't work And this is impossible. What's digital money? But today we are all here celebrating Bitcoin we're all here celebrating blockchain ecosystem. So Um, I believe web3 is here to stay. I believe Blockchain has become more decentralized and zero one is actually committed to that vision We are committed to help
+
+build more solid projects with great infrastructures. We are here to help users understand blockchain more. Whether you're a newbie or you're an OG, we just want to play our vital role in blockchain education and also to help users also earn while doing all this.
+
+Ya, it's been a wonderful time for my aunt so that's it for me.
+
+Citizen Web3 
+Tayo, Tayo I don't know if you can hear us would you like to add anything I know the network hasn't been great ether but please do.
+
+tayo 
+Oh yeah, I can hear. So first of all, that's been amazing being here. I mean, I really enjoyed it. It's about 57 minutes now. I mean.
+
+That's been a very, very great one. So I mean, I also want to talk to our listeners. I mean, if you're a project founder and like you're looking to raise, I mean, if you have like a very, very fantastic project, feel free to send the mail to 01node. Also, if you need validators, if you need infrastructure providers, I mean, also send the mail. We definitely reach out to you. And like, you could brainstorm on your project on your protocol and how we can help you. And also if you're a delegate
+
+to staking, I mean, we've got your back as well. We have a lot of educational materials. We have a lot of blog content. Like Fitz rightly mentioned, if you're a newbie, be an OG, we have got you. So I mean, we cater to various kinds of users. I mean, projects, founders.
+
+basically everybody, you know, everybody looking to get exposed to the web theory space. And even if you're in the web theory space, I mean, we're happy to work with everybody. So yeah, that's pretty much it for me. Thank you, Rostec. You know, I'd love to like show my face, but I mean, my network is kind of like very terrible. I mean, till next time then. Yeah.
+
+Citizen Web3 
+It's still good. We can still make it out. I can definitely make it out. I know, guys, I'm sorry that this platform, by the looks of it, eats a lot of resources. But yeah, this is what it is. But we will definitely do a recap as well, a written recap of everything we spoke about. It will be short, small. And for anyone who didn't manage to catch something for the listeners, guys.
+
+There will be also some written material. It will come probably next week, I'm hoping. And that you can read it all about what we spoke about. Other than that, Chris, Tire, Faith, thank you very, very, very much for joining. And everybody else, thanks for tuning in too.
+
+chris___01node 
+Thank you for having us. Bye guys.
+
+Citizen Web3 
+Thanks. Bye. Bye.
+
+Faith | 01node 
+Thank you.
+
+tayo 
+Thank you. Thank you, bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+

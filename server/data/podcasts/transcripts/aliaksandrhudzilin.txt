@@ -1,0 +1,388 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/aliaksandrhudzilin
+
+Episode name:
+Rebuilding the Internet, Risk Capital and AI Innovation with Aliaksandr Hudzilin
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web Trip Podcast. Today my guest is Alexander Hudzilin, aka Sasha. Sasha, hi, welcome to the show,
+
+Aliaksandr 'Sasha' Hudzilin 
+Thank you for inviting.
+
+Citizen Web3 
+Happy to have you on, You are... Well, I can start the intro myself, but I'm going to not do that because sometimes I spoil it for the listeners. So I will not spoil it. And I will ask you to do either a brief or a long or a medium intro, however you feel. Please tell us all about you. How did you get to Web3? Maybe what you're currently working on or anything else you want to add to that and to your story.
+
+Aliaksandr 'Sasha' Hudzilin
+Cool, yeah. These days, most of my focus is I'm an angel investor. I've met close to 400 startups this year, actually. 393 to be specific, invested in 25 or so of them. Yeah, was working in the Web3 space since August of 2018 and for six or seven years up until this year, actually. And I was mostly near protocol. And the way I got into this was actually fairly interesting. So I was working in a database company called MemSQL. Now it's actually called Single Store. I changed the name.
+
+since then and I met the guy there when I joined and he was the first employee of that database company and as I joined MemSQL he was there for like five or so years and he was interested in exploring something new.
+
+And so funny enough, he was exploring AI, not blockchain at all. So he was curious about exploring artificial intelligence space. was 2016, 2017 timeframe. And he was not able to do that inside of MemSQL. So the database company was figuring out its own kind of product market. He did not have opportunity to do much on an AI front as he wanted to. So one thing led to another. And this guy who became a friend, his name is Alex Kedanov.
+
+He left and he pursued ideas in artificial intelligence space. And so he tried two different projects there, both of them for a couple of different reasons didn't quite work out. And he ended up actually pivoting into blockchain space. that was summertime of 2019. And I was helping him to get somebody else to join as well. And then I ended up joining like two days later. So that started this crazy adventure after that.
+
+Citizen Web3 
+Nice. Man, let me dig this a little bit. So before we go into the whole web3 and stuff space, like to dig a little, you internet is a very public thing and I like to dig a little bit of history. And you have a very few actually touching blog posts, you know, with your story moving from Belarus to San Francisco.
+
+And I connect a lot with your story. I'm also coming from immigration. I was going to say family, but it's not about the family. It's about myself, of course. And I immigrated a lot as a kid. I immigrated a lot as an adult. How do you as an angel, because an angel investor, when I hear an angel investor, let me connect those things. To me, especially in traditional world, At least usually you would think of somebody who has a lot of connections and a lot of people.
+
+Now today, the world is changing to a digital world, to a no-mod-more world, right? And you're always on the move. You're always like, go somewhere. Sometimes you live somewhere for two weeks, for three weeks, for two months. You don't have time to make those connections. So how do you, as an angel investor and somebody who comes from an immigrating background, which is definitely not an easy thing to get yourself back up on the feet, how did you first of all get from relieving that experience? And how do you in today's digital world upkeep and
+
+create connections without living in one place. Or if you do, still the business happens all over the world. Sorry for much intro. Sorry.
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah.
+
+Yeah, for sure. mean, in terms of immigration, for sure, it's something that's life-changing for people. In my case, what really helped was going to school here in US. So that helped to Americanize, so to speak. I think the biggest value was cultural, not even curriculum. Whatever I was learning there, was more culturally understanding people locally, understanding different cultures, that kind of stuff. So that was really helpful. When it comes to angel investing, I do agree with you. It's actually a lot more global place.
+
+These days, when I came here, it was not the case. The capital was mostly coming from kind of Bay Area, was kind of really concentrated here. It's still the case to some extent, but the world is a lot more global, of course. And with Web3 also, you know, like that one is even more global industry than overall tech industry. So yeah, it's all over the place in terms of what's happening. I tend to work with people all over the place consequently as well, slightly biased with...
+
+kind of working with people here in San Francisco, but also work with people across the world. So people based in India, people based in China, yeah, all over.
+
+Citizen Web3 
+Do you feel that it's easier? Because I I've been in this space for a while and several angel investors that I know, I think there's two opinions that I hear. Some people say, well, it's much easier if I was in the center of Bay Area and there was no globalization happening. And somebody is saying, well, the opposite, I sit in my house and I have 100 calls per day and I can connect to anyone from the world. What do you find more efficient, not just easier, but more efficient?
+
+Aliaksandr 'Sasha' Hudzilin
+Yeah, I think it works differently for different people. in case for me, I work with a lot of people locally, but also, as I mentioned, work with people outside of the area. I tend to meet a lot of people online. So it's actually kind of strange to work with a lot of people offline, kind of here locally. But the way I meet them is actually usually online the first time. I don't spend a lot of time in events, although I have co-working space actually. And I do spend some time there for like offline space. I actually meet people online and then I...
+
+for the ones I do start working closely with, I ended up later meeting them offline. So a lot of them are pretty local as well.
+
+Citizen Web3
+I'm gonna dig the near thing a little bit, before that, I usually save the devil's advocate's questions for a little bit later, but I have one. It has just come to mind. I hope you're okay with them. When it comes to, I have to say, this is a bit of background. One of the biggest topics of the podcast is about why values, why they are in Web3, why do they build this? Now in...
+
+a lot of stigmas around investing, that investors are only about money, right? If you invest, you have to follow money and only be about money. Now you're an angel investor, somebody who identifies, know, identity is allowed more these days, identifies as an angel investor in the web space. So somebody who is after results in a space that's built on values originally, how does that combine the teen and young for you personally, of course, and
+
+Aliaksandr 'Sasha' Hudzilin
+Yeah.
+
+Citizen Web3 
+What's your like, I don't know. Let's start with that. How do you combine the Yin and Yang for you personally?
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah. So I mean, like every person is driven by different things. Like for me, it's upside and learning. So usually for me, it's less about earning, but it's more about learning. So if I have upside and learning, then I would do something that kind of had to do with my experiences and career before that joining particular companies, joining particular experiences like Near and others. And so I view investing also through this lens. It allows me to like learn faster and allows me to like work with the best people.
+
+out there in the world and they share what they learned as well. So they kind of give you almost like a shortcut of what they learned and give you like short version of that. So for me, that's my personal motivation, but everyone has their own. When it comes to like values, for example, in Web3, I definitely think that when Near was starting, it was driven largely by values. Now we were like, think a bit ideological. I think certain things we were thinking about didn't quite pan out even six, seven years later, but...
+
+When we started Near, a big part of ideology for early team was thinking about rebuilding the internet. So building web applications. It was very much about web. Maybe because we were local to here, we were thinking about large technology companies like Google and Facebook and how they dominate the internet and whether blockchain can actually be used as something to counterbalance this and create more decentralized.
+
+future of a lot of smaller services dominating, kind of heterogeneous internet, almost like early internet, how it used to be, but combined with economy of the Web2, so people call it. But also, again, I would acknowledge that I think we were a bit ideological about it, because now six, seven years later, still very few examples of where non-financial applications actually work in Web3. So it's still, I would say, philosophical question whether
+
+Blockchain is something that will be used for all kinds of use cases, not just for like economy related ones, financial assets, you know.
+
+Citizen Web3
+There is a lot of cool things that I would like to now pick from what you said in the last sentence. then first of all, I'm going to go with the easy one. You know, what in your opinion are the other sectors that today we can already apply blockchain to apart from financial if there is any at all.
+
+Aliaksandr 'Sasha' Hudzilin
+Yeah, so early on when we were thinking about it, we were thinking about whether social graph can be put on chain, whether reputation can be put on chain. It's still early and whether it will happen is still TBG. The things that are coming up right now, that's becoming more relevant for people is rapid change of AI space. So AI space is moving really fast and there are five dominant players there, foundational model players. There's OpenAI, there is Anthropic, there is XAI, there is...
+
+meta and under his alphabet. so there quite a few people starting to think about it. Oh, okay. so internet became like very much dominated by a couple of companies. And if now this new industry, which is affecting like a lot of things very quickly and requires a lot of capital, if it will be also concentrated in a couple of different big players, whether it will be good or bad. Right. And so where trustless infrastructure like blockchain comes handy is that people starting to think about it. Okay. Maybe we should start initiating.
+
+agents, but those agents should be credibly neutral, meaning that they're not controlled by a particular mega-corp and therefore will not go against human interests. And so that's where people starting to think about trustless infrastructure as well. And there are simply use cases too, like payments, for example. So when people think about agent-to-agent interactions and payments related to that, people thinking that stable coins will actually be a more effective way to do that versus traditional finance rails.
+
+So those are a couple examples.
+
+Citizen Web3 
+about AI and decartelized AI. I used to go a lot to conferences some years ago and then I stopped. And then one of my first big events was recently Berlin Blockchain Week about half a year ago, something like that, or seven months ago. And there was a lot of AI. Okay, there was a lot of projects and a lot of events with the stag.
+
+Slapstick, let's call it like that, know, label, sorry, artificial intelligence. What I found the biggest barrier, and here's my question to you, is that currently almost nobody in this space apart from, I don't want to name projects right now to make advertisements, but like when they talk about the decentralized AI, it seems they either selling...
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah.
+
+Citizen Web3
+computational services in the cloud, in somebody else's cloud, or they are running centralized models on decentralized architecture. But nobody talks about consensus, like teaching the models in the decentralized way. So do you think that we are not there yet? Do you think we will get there or it's too inefficient considering today's blockchain architecture?
+
+Aliaksandr 'Sasha' Hudzilin
+Yeah, so I think it's early days and there are a couple things happening at once. say one, it's very early days on this intersection. So context there is that I talked to a lot of Web3 companies and I talked to a lot of AI companies that has usually nothing to do with Web3 yet, right? And so when you talk to like AI entrepreneurs, very few of them think about using trustless infrastructure unless they're like, as I mentioned this earlier, of ideological, kind want to build credibly neutral agents and stuff like that, right?
+
+So but 99 % of AI researchers and founders building AI companies, they don't think about Web3 at all today. On the other hand, in Web3, there is a lot of buzzwords flying around and people trying to build decentralized AI. Oftentimes, as you mentioned, maybe it could be tokenizing GPUs, could be maybe providing GPU marketplaces and things like that. I actually don't think that the innovation will come from Web3 entrepreneurs as much.
+
+because it's very buzzword-driven and high-hype-driven kind of space. It's fast-moving and narrative-focused as opposed to traction-focused. I hope that it will come from AI space, actually. So from traditional, call it equity companies and some AI entrepreneurs, we'll start exploring use cases where it would make sense. So for example, I invested this year in one company that's doing human to agent payments for voice agents to begin with. so they...
+
+found a problem in which it's very hard to enable payments for those. So there is this PCI compliance for credit cards, and as a result, makes it very hard to get paid for agent, right? And so what they building is rails for human to agent payments using just a traditional system, but for agent to agent, like a year from now or something like this, they're thinking to start using actually stable coins for that, right?
+
+So that will be example of the team that I think will have like slightly higher chance to kind of approach it versus Web3 native team that's kind of like more focusing on hype. So that's my personal bet. I could be wrong. But that's kind how I think about the space in terms of like who is doing a pretty cool stuff in AI in Web3 space. Actually like what Near is doing. So...
+
+Aliaksandr 'Sasha' Hudzilin
+Near has this really interesting story where, as I mentioned earlier, it was coming from AI space. Alex tried two different ideas in the AI space. Both of them, for different reasons, didn't work out. As a byproduct of first idea, he actually recruited Ilya to join his first company as a first employee and ended up being a really good move. They ended up collaborating a lot after that. Funny enough is that now they're coming back to the AI space and I think if anything will be...
+
+one of the first, kind of like on the forefront of this intersection, they are building right now a model, like essentially a new foundational model that's open source. It's on near.ai website. It's still early. They're running some tournaments there, but the idea is to engage AI research community and build open source model competitive with like Llama and some others as well. And I think another thing to mention, it's still early days in like foundational models.
+
+there is still space for experimentation. So even though I mentioned earlier, they're like big five, and it's very expensive to build models, the smaller models are cheaper, and open source has a lot of appeal to people. So there could be a lot of collaboration happening there. As we saw with Llama and Mistral as well, there was quite a bit of interest from the open source community there.
+
+And I think there will be different approaches that will be attempted there, too. It's not just LLMs. And you can see even for big five, they're also tuning their approach. For example, OpenAI started to move away from just pre-training as kind of main focus and moving into reasoning models instead. And so I think it's still early days. And we'll see a lot of experimentation there. So on one hand, you have very big players with a lot of capital moving there. And only cloud providers actually can.
+
+can support this financially. It's not even like venture capitalists. It's just way more money that you need. But on the other hand, you have this like near AI approach, for example, that's trying to innovate their own open source side of things and like smaller models and a set of things. But I'm also biased, you know, like I'm not seeing all this and that's happening and I used to work in near so.
+
+Citizen Web3 
+I understand the bias. I think bias is normal. think when you are sober to understand that you are biased, think bias is normal for all humans. And actually, I was also involved some years ago in a little bit of an AI project. when you talk about the social graph and about trying to put reputation on chain and trying to involve decentralized learning and all of that, I think it's a super interesting use case that I can't wait for.
+
+to see implemented. You mentioned, though, that you think it will come from outside of Web3. You think that possibly it would come from AI. When I go on Sasha.page, and sorry for the listeners, everything me and Alex mentioned here, Alexander, please do find it in the show notes, including all the links, books, I don't know.
+
+projects, whatever, and guys and girls, please do your own research and check out the rest of the info. But back to us, when I go on Sasha.page, you have your investing things. And a lot of them are definitely not Web3. There's a lot of AI projects. Is that the reason? Because you're trying to follow your intuition here that the big thing will come from outside of the Web3 space?
+
+Aliaksandr 'Sasha' Hudzilin 
+would say so. a couple things there. So yeah, for the context session, that page is my website where I have some portfolio of companies I upload. So yeah, so the way I approach it, and this was pretty much the first year I started to do it more or less as a main focus. And up until then, I made a couple investments, 2020, 2022, 2023 timeframe. Those were even not for profit, not professionally. I was just thinking to help our ecosystem. Our ecosystem at the time was super, super early.
+
+I had to get kind of like help out there and write some checks just to make sure some startups actually don't die in hard times throughout 2022 and 2023. Funny enough, some of them ended up being like really successful. So one example of them is HUT protocol. They're like top three in all of crypto right now. And so when I met the founders, they're actually about to, they're about to look for full-time jobs in this band. And the reason this is because they raised initial money from investors.
+
+and not from me, from somebody else, but then they asked their friends where to store their money. And their friends told them like FTX, this is like amazing place to hold your investment. And so they ended up kind of having their money stuck there. It's still stuck as far as I remember a couple of years later. And so I gave them money, just small check, just because they were about to like abandon and look for full time jobs and stuff. But they ended up doing extremely well. And I kind of from.
+
+very beginning was observing how they were growing. They started from zero users. They built mobile wallet on here that got them 200,000 users, unique active wallets, sorry. And then they built Telegram interface for that. They got to million wallets using that approach. And then they expanded multi-chain from there. So they went to like EVMs. They went to Telegram open network. They're thinking about Solana and some other chains now. like I witnessed this kind of like fast growth on the Web3 side from ground up.
+
+by investing a couple years ago. Now, when I started doing things this year, more or less as a kind of main focus now, the way it worked for me is that Web3 companies come to me organically just because I worked in the space for a number of years. But then I go out of my way and reach out to equity companies, to traditional equity companies. A lot of them these days are AI companies. And so this year, I talked to 400 startups, roughly. Out of them, 70 or 80 were in Web3 space. but
+
+Aliaksandr 'Sasha' Hudzilin 
+So vast majority were actually not in Web3 space was in traditional equity companies, a lot of them are AI companies. But when it comes to actual investment decisions, I only invested in two in Web3 space this year. And I did invest in more than 20, I believe 23 on the equity side of things. And yeah, it kind of reflects a little bit of my belief that I think innovation will come from this other side, from equity side of things. But also like one thing to mention, those
+
+two different asset classes, they're quite different, right? So tokens have advantages for potential investors. You can think of tokens as programmable equity. It's like a bit more flexible equity almost the way I think about it. And so it comes with two different advantages. One is it's not dilutive. So for example, when NIR started, we had a billion tokens allocated and pretty much new investors did not have kind of like net new tokens issued. We just had, you know, fixed amount. And so that's actually really useful for investors, right?
+
+And another difference between tokens and equity is that tokens actually get liquid a lot faster. That's what people like in Web3 space. In fact, I have some friends from Web3 space who kind of make fun of me that I'm investing outside of it because they're used to kind of getting liquidity fast. And then here I am putting money in equity, which is usually, you know, like 10 to 15 year cycles these days. It's actually longer than people think. It's long. But the difference is in terms of founders actually
+
+do think that traditional founders like outside of Web3 actually a bit better quality. And it has to do with multiple things, know, like YC for example, Combinator started 2005. So it exists for almost like 20 years at this point. And then there are a bunch of movies like social network and many others that popularized entrepreneurship. So you have like a lot of talent now doing startups and kind of approaching it. It's like part of the norm, I guess. It was not the case 10, 15 years ago. Now it's part of the norm.
+
+And then you have high quality talent going there and approaching this. And then you have places like Y Combinator who then picks top 1 % of those companies. And then I can talk to those top companies in the first place and kind of select across them too. So I find that it's high quality of founders. And they usually tend to have already revenue. They tend to have pretty solid plan. They talk to their customers every day and things like that. And on the Web3 side of things, what I'm noticing is that
+
+Aliaksandr 'Sasha' Hudzilin 
+founders tend to be focused on narratives, future thinking, as opposed to traction, what do they have today? And so that kind of tension of what do you have today? And people are like, well, we don't have much today, but look, in four years, we're going to power all of the, let's say, AI agents, payments, whatnot. That's kind of making me make it makes much harder to make decisions on Web3 side. Maybe I'm a little bit old school when it comes to that.
+
+I found very few of really cool Web3 projects. So this year I invested in two, as I mentioned only. One of them is called Fraction AI. So they do data labeling, but I'm putting it on chain. And one of them is called Riff Exchange. so, yeah, I hope to see more cool Web3 startups, but it probably will take some time.
+
+Citizen Web3 
+It's, I want to reflect a little bit about what you said because it's an interesting point because the more I, know, but the podcast is not our, this is not our primary thing. And I talked to a lot of people though for the past five years and not all of them are from web three. Like, know, yourself, you're on a verge of web two and web three. there is not a lot, there's a big, there's a amount of guests we bring such as yourself on a verge, sometimes even more outside of the space. And.
+
+I hear that line of, invest now more into traditional projects. You are not by far, not the first person to come on who considers themselves working in Web3 and say that in the last year or two years, I was actually going to ask you, have this number 250393 written down and I was actually going to ask you how many of them were Web3 for the context for the listeners. This is what you wrote on your Twitter that you invested, but only so many, but you spoke to...
+
+10 times more, sorry, 15 times more projects. And I was going to ask you, what is the ratio, which you already said. But it's crazy to know, way, to reflect even further, when you were telling the FTX story, I made a note here. It's crazy how many people do these things. Working, and I know personally, because I've done those mistakes and been more than 10 years in this industry. And you know...
+
+I think it's just, don't know. Why do you think that the, do you think it's really because of the concentration on the future that we, the Web3 folk, I'm going to put myself in the Web3 crowd, that we are so airheaded. Can I use airheaded here? Maybe.
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, mean, like some of it has to do with incentives, know, like basically some of the incentives driven by investors too. It's not just founders, right? And it's true, it's outside of Web3 as well. Investors drive a lot of focus there too. And so what happens on the investing side in Web3 is that people demand tokens, right? They want this, like as I mentioned, highly liquid, quick to liquidity instrument. And so...
+
+Part of it has to do with also the way industry is structured. There's founders thinking about, OK, I need to build some kind of project with a token and things like that. And a lot of times, it's unnecessary. Tokens, I guess, make sense for layer ones, layer twos, and a couple other examples. But it's not the case, probably, that all of the things we see on CoinMarketCap actually need it in terms of utility.
+
+But I think some of it has to do with this incentive. And so people also incentivize to build infrastructure as opposed to applications. That's another kind of thing. If you think about Web3 space, there's a lot of infrastructure being built, and there's very little of applications being built. And that also has to do with those incentives I mentioned earlier. On top of it, there are challenges in a space. You deal with really volatile space. It can change up and down.
+
+a lot, right? With that, you might have users one day and then those users might disappear next day, right? So like, it's very tricky space to navigate. I also, yeah, definitely can give a lot of credit for founders who are actually successful in terms of like navigating all of the ups and downs of the crypto space. There are people who have been through a couple ups and downs and like navigated the space for like multiple years, but yeah, the space is just challenging to navigate and then it has weird kind of incentives, as I mentioned.
+
+On top of it, actually, when it comes to US, unfortunately, there was quite a bit of challenge to be doing business out of here for the last number of years because of Securities and Exchange Commission and kind of like this regulation by enforcement as opposed to providing clear guidance for what is security versus what is commodity. So that was another kind of challenge. And so in fact, share of US entrepreneurs dramatically decreased as well in a space. used to be like maybe like 40 % of all.
+
+Aliaksandr 'Sasha' Hudzilin 
+Global talent is US-based founders like five years ago and now it's probably like 20 % or something like this. I forgot the latest numbers from developer report that Electric Capital puts together every year, but that's kind of like another kind of challenge is like we saw a lot less entrepreneurship at least in US when it comes to Web3 space.
+
+Citizen Web3 
+Actually, this is a topic I didn't think to ask you about, but since you mentioned it already, just briefly, let's not dive too much into it. But from your perspective, again, as an angel investor, it seems that the space is becoming more more dangerous. There's a lot of founders that come onto my show who don't want to come actually on the show. I speak to people like, I speak to Ethereum, Polkadot, Cosmos, Monero, Bitcoin, Nier, to all the projects. We are blockchain agnostic, but...
+
+You know, we have people who have refused or when they come, they're like, please don't talk about this or don't talk about this because I might get in trouble. I might be like that. Like as an angel investor, especially in a place where, you say, you know, sounds a bit both mean you will understand this a bit Soviet approach, but you know, first cut, then count, especially in that kind of approach. Why aren't you afraid? Why aren't you afraid that, you know, you're going to
+
+invest into a project and tomorrow the government will say, well, this project is a security and all the investors are, don't know, should send their, I don't know, whatever, let's not go crazy, but what's your opinion on that?
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, I definitely want to work with founders who think about it, who think about compliance side of things and very careful when it comes to the law. But sometimes, as I mentioned, it's like hard to navigate the law when there is not much clarity. So that was the case in US last four or so years. And it was extremely hard for founders to navigate. A lot of wanted to get some.
+
+understanding from SCC, but it was like very hard to get it. For Andreessen Horowitz, for example, for their portfolio, they had 30 companies in their portfolio who got Wells Notice, which was basically kind of like almost a black mark. It's basically saying like...
+
+one day in the future, you might or may not, but you might have lawsuit going on. And so if you have this piece of paper going on, then it's very hard to do business with traditional class, a finance industry, open a bank or things like that. And so that's very challenging. And that's another kind of piece that people need to navigate in this space in addition to this weird incentives and what I mentioned earlier, cycles that are up and down like crazy.
+
+Citizen Web3 
+You owe us money, but you have to guess how much because we won't tell you how much you always, but if you get it wrong, you'll get in trouble. Yeah, I love that. on a different topic though, like I said, let's not get into the second everything. Because obviously you've been through a lot of... You've just spoke about it. You already start saying my next question. You already start talking about it. But if you were to highlight advice to...
+
+Apart from, for example, not launching a token if you don't need it. You already kind of mentioned it. You mentioned about being aware of compliance. You mentioned about being aware of the industry you work in and trying to keep up with it, but still being innovative, staying innovative. What would be the more concrete or more specific advice if you had to, I'm not going to say one, two, three, but something do, something don't.
+
+especially considering the web tree space, because there are founders who listen to our show and I know that and they do talk about this and it's a cool thing to hear from somebody like yourself who is actually, you are the person they are looking for. what do you say to them? What would you, after all this experience, what do you see is the one to do and not to do?
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, I mean, in terms of the things that are like increasing chances of success, I would say important piece like and also again has my own biases. Talking to the market is very important. So talking to users every day ideally and incorporating their feedback in the product and iterating quickly on the product. That's very important. So for example, in case of Near, those actually ended up being pretty important early on. I was talking to a bunch of early projects in the time it was Ethereum space. Most of it when we started, it was mostly Ethereum.
+
+founders that existed, very few of them were doing things outside of Ethereum. That was maybe like 500 founders total or something like this. And so when I talked to them, the interesting thing that came out as a feedback for us, and there was really good timing because we were building blockchain, we had time to incorporate this feedback, was that I was talking to a lot of early stage games in the work-free space, and I was pitching them that, we're building scalable blockchain. Your infrastructure doesn't scale, ours can help you scale. That's useful for you, right? And they're like,
+
+No, it's not at all interesting for us. And I'm like, why? And they're like, well, we don't have gamers. If we have users to begin with, that's when this problem you're pitching us on will become relevant. We will need scale when we have actual users and we actually don't have users. And then I started digging deeper and I was like, how come you don't have users? And they're like, well, actually for every 200 people who try to use MetaMask, there is one who actually succeeds. And so we started talking about, OK, maybe UX is a big...
+
+big problem there, right? Some pieces of UX when it comes to crypto space is kind of like hard to design around. So for example, like you need to do KYC, need to, if you want to buy crypto for the first time, you need to actually show your, I don't know, at least in US, you need to show your ID on camera and kind of open account with number of days and stuff like that. But some pieces of UX you can actually improve on, right? So for example, you built web wallet, something that's easier to navigate for average user or like for somebody like...
+
+our parents, like older generation and things like that. And so by now it became industry standard for crypto. And now it's good that the UX side is very good, but at the time actually it was not. And that piece of feedback allowed us to incorporate this. We actually built web wallet just because we had time. took two and a half years for us to launch blockchain in the first place life. And big part of it was also this user interaction because blockchain is not just a database. It's different database of sorts, but also it has this user interface. And so we were able to incorporate.
+
+Aliaksandr 'Sasha' Hudzilin 
+better version of it based on this feedback from the market. So I think that's important one for any founder. They need to be kind of talking to the market and really incorporating the feedback. Another advice I would recommend is to ship quickly. So to launch something as quickly as possible and iterate from there. So in crypto especially, a lot of founders tend to focus on making system like resilient. You deal with money. It's like very risky. You kind of have to build something that's working.
+
+And that delays kind of launch. And so I noticed that a lot of projects actually took many, many, many months to launch, as opposed to launch something very small and then iterate from there based on user feedback and things like that. So I think that's another important piece, of have iterative mindset and growing from there, as opposed to waiting to build this like really large product and only then launch it. So that's another important piece, I would say.
+
+In crypto, another piece is navigating this cycles. How do you think about the funding side of it if market is so volatile? So kind of having like treasure management, thinking about what are you going to do? Maybe you'll put some money in stables. How do you ensure you actually can go through ups and downs of it? But it's very hard for founders who've never been through cycles to be able to really think about it ahead. With startups, it's always very easy to look back and be like, oh, here is where we screwed up. Here is where we would have...
+
+done things better, like it's very hard kind of looking forward to anticipate those things.
+
+Citizen Web3
+I used to have a cycle joke some time ago. used to say that the biggest secret to, you know, preparing for the, the market, the cycle market is to fuck up early, just really a year before the cycle starts, lose all your money and you don't need to worry because you will start working way in advance. So it happened to me one time, so it works. No, but what about something not to do? Because everything you said was more to do. What about something to avoid specifically?
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, so one thing to avoid is building copycats of things that already work. But that's not even specific to crypto. It's how, unfortunately, innovation works. So for example, when usually something works, like NFT marketplaces is one example. It's like when it was all of a a lot of interest in open sea and that started to work. All of sudden there was a mad rush of investors investing in the next NFT marketplace, but also a lot of founders jumped into the space.
+
+and try to build another NFT marketplace. And that happens all the time. So people see something that works and they try to build exactly the same, could be on different chain, could be slightly different version of it. But there's very little of thinking from ground up, like, what is missing? What is missing in the space, white space type of thing. So what's not to do, what to avoid, would say is copy-cutting blindly what already works because it never is a good...
+
+recipe for success.
+
+Citizen Web3 
+This is actually a very... You would think that the point... mean, the point is loud and clear, but I want to clarify because how does one subjectively understand that it's working? Because founders are very... And I'm going to be honest, I'm a founder, right? So founders are very arrogant people, right? We are. We like to think that, what I create is the best and there is no way that your tool is better than mine. Of course, some of us are a little bit less arrogant, some a bit more, but you need that arrogance also to succeed. Now, how do you...
+
+Aliaksandr 'Sasha' Hudzilin 
+Yes.
+
+Citizen Web3
+stop because sometimes you look, know, in the case, example, of Uniswap and Sushiswap was a cool one, right? But how does a founder understand, okay, there's no point for me developing this theory because there is already existing products on the market at work or they look like they're working and mine is better. Like where is the balance? Where do you find, where do you draw that line?
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, I'll say still goes back to this advice I just mentioned earlier, launch quickly and see if you get feedback from the market and iterate from there. And sometimes you're right. it could be like this advice is never universal, right? Like when I say this is like there are contra examples, as you mentioned, like another one that comes to mind in a kind of similar space. I was just close to this team was one inch. when they were launching, it kind of looks similar in some ways to what already was on the market, but
+
+Citizen Web3 
+launch quickly.
+
+Aliaksandr 'Sasha' Hudzilin 
+they launched this initial version on a hackathon and turns out people starting to use it. And then they go to another hackathon, they build slightly better version, add more exchanges to it. All of a a lot more revenue happening, a lot more activity. And then when they actually went to raise money from investors, that was actually the best fundraiser I ever saw because all of the investors wanted to talk to them because they're actually users of their product. They were actually on their own already using Oneinch and yeah, it was kind of...
+
+crazy experience and you would think that this was space that was already like figured out, tapped out. There was like Uniswap and other tools and now it's like ended up being like really big tool.
+
+Citizen Web3 
+self-reflection note is that, you know, now I'm remembering talking about this with Konstantin Lamashuk four years ago. So from the terms of angel investing for, you know, for myself and for the listeners, you know, because people usually ask, what is the secret sauce? Well, there is no secret sauce. You just follow the existing guidelines because what you say is what Kostya was saying four years ago on the show, you know, there is pretty much the same.
+
+Aliaksandr 'Sasha' Hudzilin 
+be a personal.
+
+Citizen Web3 
+the same thing. it's just about logic. But for example, one thing, UI, know, like we went as far as we are developing an Explorer, but we went as far as hiring a developer who has never worked online, not just in crypto. The person has never worked online and we wanted to because we want adoption. we wanted a person who, you know, like goes and tries to look into things that we Web3 people would close our eyes to. And I don't know, like
+
+Do you think that those are extreme ideas or do you think that Web3 founders in general should go out of their box, you know, not just release quickly, not just talk to the users, but also go out of your comfort box and try to actually, you know, what else I can do to improve this product? What else I can do to make my users happier? What else I can do to make this more efficient?
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, definitely. do think so. That people should be like thinking from the outside of the box. Like for example, it takes near also comes to mind is like when we started working near none of none of us was coming from the crypto space. So on my early team, those like nine or so people and there are two who are like interested in crypto like kind of like mining altcoins. One of them was just buying different coins after ICOs whatnot. most of us were coming from outside and we didn't know anything about crypto and
+
+We were all learning together into the space and figuring it out and exchanging ideas every day and talking about it. But we certainly didn't even have this box to begin with. We were not experts in the space. We kind of had beginner's mind or something. We had no idea about the space. And that was helpful because we were thinking about, OK, how do we actually optimize it for the users? How do we actually?
+
+build something useful, you know? And it started, it was evolution. It started with like, okay, we actually can build scalable system. The conversation that summer was all about scaling Ethereum and that was a big challenge. But then we started talking to users and then UX for the end users became really important focus. Then we started talking to developers. Developer experience ended up being like really important. We went to like Ethereum hackathons, for example, and like realized how long does it take for new developers to become productive? You need to get all this tooling to work. All this tooling is built by different teams, not...
+
+by one particular entity, all of the documentation could be out of date. And so that experience was also like, shoot, this is really suboptimal. We need to actually improve that piece. so ended up being three pillars of the product, almost, scalability, usability for the end user, and then development experience, just because we were just kind of experiencing pieces of the puzzle in this new space as we joined. We certainly didn't have a preconceived notion, a box to work with, because we were just outsiders from the space.
+
+Citizen Web3 
+A lot of the times, it's not just I think the crypto industry, right? A lot of the times, you could hire in, even in hospitality industry, right? You hire sometimes people as bartenders or waiters or whatever who have no work experience, but they work better. it could be, okay, maybe doctors, maybe not the best examples, but there are certainly professions, I think that it works.
+
+I want to take us back a little bit to... Well, first of all, by the way, have a small fun question since you mentioned tokens. What was your, if you can talk about it, of course, what was your worst crypto investment that you did? Like the worst one, not maybe in terms of money, but the one you think, oh my God, like, no.
+
+Aliaksandr 'Sasha' Hudzilin
+Yeah, well, so some of this was, I want to talk about maybe particular companies. I would mention like industries, but for example, when I was thinking about like creator economy and like helping musicians. So when NFTs just started, what was interesting about NFTs is that when DeFi Summer happened, very limited amount of my web developer friends were interested in this. And I tried to, at the time it was early days of Near, I tried to recruit all of my friends left and right to join us.
+
+Citizen Web3 
+Sure, sure, sure, sure.
+
+Aliaksandr 'Sasha' Hudzilin 
+very few of them were interested. When NFT waves started, I noticed that some of my friends were like really kind of like lighted up. like, shit, like this is actually interesting. It's not just about finance. And in fact, software engineer is example of like one type of creator who happens to be paid really well by the market. But there are others like musicians, blog writers, podcasters, all kinds of people, streamers out there.
+
+who don't get paid well. And so they view this NFT approach as a way for creators to build direct relationship with their audiences and monetize it more effectively versus musicians going through labels or game developers working with publishers. Because a lot of this industry is kind of like you can think of it as like a battle between creative people and money people. And it's kind of hard. And so NFTs were this example of like, like actually
+
+we're going to reinvent the whole industry. And that's amazing. And a lot of my web developers friends all of a sudden started to be interested in Web3. And so on that note, I started looking into gaming and music spaces. And I did invest in both of those spaces. But it out it was too early, probably. And it will take probably number of years until we see something successful in those two spaces in Web3. But so far, it has been really challenging.
+
+Citizen Web3 
+can totally imagine that. I think I've done that mistake of social, social phi as they like to call it, right? I'm not sure I like the name social phi, but okay, let's go along with it for the sake of the conversation. I was involved as early as 2016, I did 15, 16, and I think we are still where we started. It's too difficult, economics is too difficult. again, back to you, back to you. There's one more thing I wanted to ask you, like a topic that
+
+Let me try. I'm not sure if it's going to come out a question, but I will try to say a statement and tell me what is your thoughts about it. So you mentioned KYC and you mentioned thinking out the box and we talk about Web3 and investing. Now, there is a lot of talk about, for example, decentralized identity, DIDs as a replacement for KYC or not as necessarily a replacement. Sorry, let me correct myself as an alternative that can somehow develop.
+
+private and public keepers long time ago. Anyways, long story short, is there a similar story with investing and what can Web3 do to investing? For example, I'm going to propose myself something and tell me how do you take on all this? example, foundations taking to validators who promise to build tools in a sense is kind of investing into their product and at any second being able to pull that investment back.
+
+or add to that investment and the end result is there. Is this an example or is there any other examples of what Web3 can do to investing and angel investing such as, for example, the KYC and the Public Keeper stories in KYC? If it makes sense, of course.
+
+Aliaksandr 'Sasha' Hudzilin
+Yeah, so on the foundation side, yeah, I've seen this happening at least on the near side, that there are this relationship between, let's say, foundation and projects where a foundation would give some loans and tokens to validate and the project will earn income from it. And so there is like this relationship they have. So that was done as part of like many different experiments that the near foundation did, trying to figure out how to essentially build up the ecosystem, which is extremely challenging, obviously.
+
+The other types of things I'm noticing is that there's investment daos, know, so that's sort of coming back, although it kind of, you know, died and had like pretty rough time back in the day, alongside with NFTs that also had like really rough time. But investment daos is another kind of approach to this, be angel investing also could be just more efficient way to pull money together for companies. Like there was a lot of conversation also in the previous cycle that there are corporations, corporations are really effective at pulling money together.
+
+And under our cooperatives and cooperatives have like seemingly better structure kind of run by, you know, people who participate there, except for it's much harder to get capital in those. And so if only you can combine two, meaning that you have cooperative model, but also easy access to capital. And so that's kind of like what DAOs in theory are, but you know, like we're still in like early phases of it. Maybe it will come back, maybe not, but that's another kind interesting example on that front.
+
+Citizen Web3 
+I want to ask you, first of all, what comes to mind when you talk about the DAOs and everything is exactly what you said your friend said when you were calling them too near, but then when the GPGs come around, it's more interesting. So maybe DAOs will come back when there is going to be another additional reward because I also seem to get lost in that.
+
+Let me ask you one more thing before we kind of go jump into the bleeds and resume the conversation. Do you think that, you know, we've been talking a lot about money. Sorry. Not do you think, let me rephrase the question. We've been talking a lot about money and we started the conversation with values and money, I guess. Right. And there is stigmas about not just angel investors, but about VCs and angel investors that...
+
+all the after money. once again, if I go on to your, just on the internet and type in your name, there is a lot of information I can find such as interest in pets and in how to develop these things about proactive life. have a really huge, big post, very cool post by the way, some years ago. what I'm trying to ask you here is how do we remove that stigma? Shall we remove that stigma? That's first question.
+
+that angel investors and VCs are just using Web3's exit liquidity and show them that there are other interests, know, like veterinary, pets, saving animals, having a proactive life and so on and so forth.
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, on veterinary, yeah, the funny thing is like, yeah, I had a startup that kind of unfortunately didn't work out. was 2013, 2014, but it was, we're trying to start with online bookings, go into wellness plans for pets. Unfortunately, it didn't work out. I successfully blew through all savings. At the time I had some savings from working finance and I successfully blew through all of them. I had to even live on the floor after that because I didn't have money for rent after that. But that was just bad move, you know, on my part. But when it comes to...
+
+Kind of back to this stigma conversation. venture capital in slightly different form existed for a while actually. There is a really good book about it. It's called VC the American story. I can also send the link for the notes later is that it existed for 400 years, at least in US. I'm sure in some form it existed in Europe, but it existed in US ever since US started. So when US started the very first form of
+
+venture capital was not so great, but it was killing whales. So people would go out and hunt whales, like Moby Dick, some examples of books, you know, on a fiction site about this. But there was essentially like literally people giving money to captains to figure out whether they can go out and actually come back with a lot of whales, you know, because at the time that was the primary way to to power the, there was no like electricity, there was a
+
+main way to actually get lights, right? Once, unfortunately, all of the whales got killed, that was like unfortunate part of that, this industry kind of moved to next one. And so next one was textile things and then it was oil and those railroads, you know? And so there's always this kind of movement towards new and new technology. And there was always a group of people who essentially trying to put money in this thing called like risk capital, I guess, right?
+
+But only since 1950s, 1960s of last century in US, there was a more formal approach to this. So on the East Coast, some of these wealthy East Coast families, they learned about a couple of semiconductors companies that went public and became successful. And they decided to move from the West Coast and formulate the traditional, as we know, venture capital partnerships. And so they built these entities. First ones of them were Kleiner Perkins and Sequoia and some of those.
+
+Aliaksandr 'Sasha' Hudzilin
+early ones and those ended up helping with iconic companies that power a lot of things we do today. So it was Intel and Cisco and Apple, many others at the time. So I think that's really interesting industry overall. It just became a lot more global, a lot more normalized at this point, but it was in one form or another, it existed for hundreds of years at this point.
+
+And angels, angels, just like a small version of that in a way, like there's kind like another kind of interesting meme, meme or piece of history about angels too. Like here in Silicon Valley, we have this guy, Naval Ravikant. And so he had a really hard time with his venture capitalists in his company. So his company didn't work out. He felt he was cheated of the money by his investors. And he in fact did lawsuit against them and won it. And after that, he started this thing called Angel List. And so Angel List was almost a way to...
+
+It started as angel hacks, just a bunch of content about how to, for founders to, you know, to structure things without having to talk to investors right away. And that had to do with a stigma about investors too. And he was pissed off about this kind of like what happened in his company. But then he almost like started this new wave of investors. It became AngelList, became this product where people can pull money together in form of syndicates and almost become an next layer of, you know, this community and almost like remove some power from.
+
+venture capitalists towards angels. And so that was another kind of interesting piece there. But yeah, I do see that people might say there is a stigma with that and like exit liquidity and encrypt. I would say, yeah, it's just kind of byproduct of the space. on an equity side, it's also you can say like there's like exit liquidity in the sense of, let's say in US.
+
+only credit investors who can invest in the private rounds of companies. And then now it takes 10 plus years to actually go public. And so then only normal people can participate 10 years later when all of the growth is kind of taken away from company potentially. that's kind of like, it's not specific to Web3, you know? But I think understanding this context is helpful overall for people to kind of think more about this kind of like this industry and why it exists.
+
+Citizen Web3 
+It's a huge topic that I think we can dedicate at least several hours to for sure. But there is a lot in it. And by the way, thank you for the history because I didn't actually know a few of the facts you mentioned and definitely we'll look for that book. We will definitely add it to the show notes and it's a huge, huge topic. anyways, probably I should have asked about it before, my fault. But to the Blitz, let me go with you to the Blitz. I'm going to ask you three questions, Sasha.
+
+They are not crypto related. This is just to take us out of the conversation and to resume and finish all that. So not to resume, sorry, to finish, to take us out of the crypto stuff. You don't have to answer quick. I call it the Blitz, but you can take your time and explain whatever you want. I just call it the Blitz for the sake of it. So first question, please give me one or a book or a movie or a song that has a positive influence on Sasha for the last years of his life.
+
+Aliaksandr 'Sasha' Hudzilin
+Yeah, so for me, Buddhist books really helped me when I came to US, as you mentioned about immigration, it could be a lot of work or stressful or whatnot. I actually spent a lot of time reading through Buddhist books and that was kind of helpful for me to just have on the side. And that has to do with, maybe it's a West Coast here, there's a lot of influence from Asia.
+
+So things like that I'm curious about. There are all kinds of books about Buddhism. There is no single one that's uniquely useful, but those are the ones I really like. The one I particularly, on a sad note this year, the one that really resonated with me and helped me was called Tibetan Book of Dying and Living.
+
+helped me understand a little bit more about the process of dying and what happens after people die and just kind of normalize it also in my head, like after my mom passed away earlier this year. So that was really helpful. overall, a lot of Buddhist books are really, I find them, they kind of resonate with me.
+
+Citizen Web3 
+My condolences, by the way, I've read your story. was very touching, very good, very good write up, by the way. Well, I guess, you know, the least you can say is just that you feel for the person, right? It's a terrible thing for us to grasp how it all works with our minds. I don't think I'm made for it. What's your one motivational thing, especially today after you went through such a big change this year in your life?
+
+that keeps you waking up still today, out of bed every day, looking for projects that are going to change the world, looking for founders that going to change the world, trying to build a better future, trying to study about death and life, what motivates you personally, subjectively for you?
+
+Aliaksandr 'Sasha' Hudzilin 
+My main motivation, as I mentioned earlier, is just like upside and learning. I really like talking to founders, early stage companies too. But yeah, there are other things in my life. Like have a young daughter, for example, have a young family, so spent a lot of time there. She motivates me a lot. Yeah, and I like hiking, reading, staying healthy. I do rock climbing, doing swimming and stuff like that. yeah, I would say so,
+
+Citizen Web3 
+Proactive. Can I say proactive? Okay. No, no, because that's a cool thing to advise. think, you know, like motivation, be proactive. I think that's a cool one. Is there anything out of curiosity? Is there anything you would pick from all those things and say that that motivates me more than the rest of them?
+
+Aliaksandr 'Sasha' Hudzilin 
+No, think it's a balance of them. Learning, I think, is the main motivator, but it's just like all of these things in tandem kind of work for me at least, but everyone has their own system.
+
+Citizen Web3 
+Learning Balance
+
+Citizen Web3
+Last one, this is going to be the weirdest one. So dead or alive, imaginary or real, could be a writer, family member, a cartoon character, a movie character, your friend, doesn't matter. Not a guru, I don't believe in guru, but a personage that when you kind of stuck and your life is just seems that everything is shutting down in life.
+
+Not that you go to them and call them and ask, save me. No, but you think about that person or that persona or personage again, real or made up, doesn't matter. And it helps you to go and do things and move from the place you are. I don't know if it makes sense, but yeah.
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, so mean, like I have fun enough like that in a life. So for a life, they'll be my best friend. So he is just really good when it comes to psychology. He's just like made up in a way where he's happy go lucky, no matter what happens. He's just like, you know, happy to go along with the flow. And so he has a really good perspective on life. And so like I oftentimes kind of come to him.
+
+whenever something like this happens and just like it's good to talk and get this perspective. So it's just nothing helpful. When it comes to imaginary or that I sometimes think about like Freddie Mercury. like from Queen from back in the day, I used to be a big fan of Queen. yeah, just like the other day was walking in San Francisco and just was reading up that there was this venue that no longer exists in Japantown here.
+
+And so like Queen gave a couple concerts there in early 80s. I sometimes think about him, kind of how he lived his life, even though it was like short life, but he kind of lived it to his fullest, you know. And yeah, he also didn't believe in guru. He was just like creating music and having fun basically.
+
+Citizen Web3 
+I must say that sometimes when I want to get, not motivation, but what would be the right word in English or in Russian, Jesus, like excited kind of thing. You know, there is the live eight concert from 1982 or 1984 or whatever. And just when they film the crowd, when he goes there, the radio song, the E-yo, E-yo, and that just talking about it gives me goosebumps. like...
+
+Like it's crazy. But yeah, I totally understand what you mean by Freddie Mercury. thank you for that answer. Sasha, I want to thank you very much for your time. I want to thank you very much for your answer. I understand how busy talking to just 400 startups can be. So really, really, really thank you for not just your answers in general at the time, but the advice, of course. Everybody else who tuned in, please check out the show notes and once again, see you.
+
+Next week, of course, or hear you next week. And Sasha, thank you and goodbye.
+
+Aliaksandr 'Sasha' Hudzilin 
+Yeah, thank you for inviting me. I appreciate it.
+
+Citizen Web3 
+Please don't hang up just yet Sasha, but thank you and everybody else. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

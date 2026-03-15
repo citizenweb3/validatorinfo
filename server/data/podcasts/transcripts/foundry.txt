@@ -1,0 +1,380 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/foundry
+
+Episode name:
+Decentralized AI, people being innately good and bias with Tommy Eastman
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. And today I have Tommy with me from Foundry Digital. Tommy, hi man, welcome to the show.
+
+Tommy Eastman 
+Thanks, Serge. Appreciate it. Excited to be on.
+
+Citizen Web3
+Yeah, man. You said at the beginning, right before the recording, I said, you know, you're a low key person. That's what you said. I love that. That connects a lot with me, man. Honestly, like people who listen to the show, they know. And this is personally something that I'm, you know, it's a value for me being low key. But still, I'm going to ask you to introduce yourself, even though you said you're low key.
+
+And say anything that you think relates to Tommy, who is Tommy, what does it do? What does it do in web three? How did he get to this life? And so on and so forth, man. It's all yours.
+
+Tommy Eastman
+Awesome, yeah, very open -ended question to start. I like it. I would say I almost stumbled on Web3 accidentally, which I'm sure most people can relate with. I was working on AI stuff, so I was doing just really basic convolutional neural networks for object detection, like with remote sensing stuff. So super interested in AI ML.
+
+And then I saw a job posting a foundry to start working in the AI ML space, Web3. I didn't really know anything about Web3. I had traded Bitcoin a little bit, but certainly was no expert and didn't even understand how it worked. And that's how I kind of got into Web3 is just via foundry, working in foundry. And...
+
+quickly got really, really interested in the decentralized AI slash deep in space as it's now being branded. But really I think of it as a series of decentralized digital commodities. So incentivizing people to bring their digital commodities online, whether it's compute or storage or machine learning models. So I quickly got really interested in the space and sort of tried to carve out.
+
+a niche, a niche foundry of being a node operator that's committed to providing data center grade GPUs to web three protocols. I think you see a lot of companies, a lot of large Bitcoin miners purchasing HPC and hosting HPC, but not really with the commitment of
+
+supplying to these decentralized protocols and I think it is really in my opinion kind of perfectly aligned with the ethos of the of the web3 space to to make that commitment to supply permissionlessly and provide permissionless access access to this to this really important important commute compute yeah so that's kind of what brought me to where I am in
+
+Tommy Eastman 
+in Web3 today, working for Foundry, sort of guiding us through the D -Pen, D -A -I space, which has been super exciting with all the hype around it lately. So much excitement and buzz compared to even just a year ago. It's been really cool to kind of watch that evolve.
+
+Citizen Web3
+We will definitely get into it. I mean, I don't know if you're aware, but we are also a volunteer and I'm personally into ML and AI as well. And we also help to build AI projects, but we'll definitely get into this conversation. But before we, I'm going to dig a little bit, the top a little bit, if you don't mind. So, but, but I mean, I mean, come on, I mean, AI, ML, okay. But Web3 dude, like, like.
+
+Let's let's try to get to the bottom of it. I mean, where did it start? I mean, you didn't just wake up and go, I love ML. And then suddenly the job posting came along. I mean, why, why not? Why not go to work? I don't know. In, in, in, in, in the valley, why not go to, to, to work online? Why not? What draws you to web three? What, what, what is the, what is the curiosity in web three, particularly? Why?
+
+Tommy Eastman
+Yeah, that's a great question. Why not the Valley? I would say I'm not smart enough. Not smart enough to work in the Valley. But yeah, I think I'm really interested in. So my my background is physics. I was I was a physics undergrad. And the thought behind that decision was really just.
+
+Citizen Web3 
+And don't get me started no, I don't believe that I don't believe that man. I don't believe that
+
+Tommy Eastman 
+How can I make sure that I'm doing cool work? How can I create a foundation that allows me to do work that I really enjoy? And work that I really enjoy tends to be, I would say tech that's on the frontier. So not very established, sort of an R &D type of industry. And I think there was just a lot of alignment in Web3 with that. I didn't have a ton of...
+
+I remember telling like, you know, family and friends, I'm going to take this job in crypto. And everybody's like, Whoa, that's super risky. And it didn't seem sure. I guess from the outside, it seems risky. It didn't seem risky to me because I felt like, um, you know, even if something doesn't work out, you're, you're experiencing really new, new tech. And that's something that's exciting to me. I kind of love to, I love to be doing stuff like.
+
+getting up to date on a protocol that doesn't have great documentation and nobody even really knows exactly what it does, but being able to kind of go through the problem solving process, think critically and figure out, figure out what the tech is and then figure out what the product market fit is. And so it's, it's been a really interesting ride for me. I think I've been especially impressed with just the, of course, there's a ton of vaporware and crypto, right? It's just the nature of it, but I do believe that.
+
+There's a lot of really cool tech being done as well. Like I think the fundamentals of crypto are really strong. There's a ton of really cool cryptography. There's so much cutting edge tech and being exposed to that is exactly why I wanted to get into this field.
+
+Citizen Web3
+Man, cryptography is probably, in my opinion, actually, it is not my personal opinion. I remember being in a, I think it was Bitcoin Badger, or what was it, or something like that. It was a Bitcoin only conference like four or five years ago. And I was with a couple of cryptographers and one of them was quite, well, both of them were quite famous in this area. But it was their words to say that,
+
+You know, it's okay, because I was saying, Oh, can you help me to understand this and this because cryptography is like, there's like the most understood field for me in crypto. And they're like, it's okay. Cryptographers don't understand cryptography. It's normal. It's okay. And I was like, dudes, but do you understand cryptography? Are you into cryptography? Are you into like those kinds of things? I mean, the most, of course, you know, the easiest question, do you understand how a key pair works? But then, you know, but then people start to dive into it and it gets like,
+
+It gets magic stuff. There is some voodoo stuff in there that is very difficult to understand a little bit, at least for me personally.
+
+Tommy Eastman 
+Yeah, for sure. No, I definitely do not have a, I do not claim to have a deep understanding of cryptography in any way, more so a hobbyist. I try to keep my, there's so much in crypto that you can very quickly end up like a dog chasing its tail, right? But I'm super interested in it. I'd say my, I've got like a high level understanding, but.
+
+So it can't get me into the technical weeds on that. I try to stay in the technical weeds only on the DAI deep in space for the sanity of myself.
+
+Citizen Web3 
+That is still, man, I have a lot of respect for people to go to cryptography because I have seen tries of, for example, the guy who helped to write slingshots for Stellar at one point. He was trying to do, I remember, with his ex -wife or ex -girlfriend or whatever. Sorry, I shouldn't really say things like that, right?
+
+online, right? So I don't know who was it. It was a long time ago. I'm sure it's okay. You know, like short videos of explanatory video, what is cryptography? And I have lots of respect because it's such a difficult field. But anyways, you mentioned one topic which I didn't think I was going to jump into it, but it's a topic that I think is very important. And you know, you mentioned access and documentation, APIs and...
+
+I started to think and make notes, RPCs and what do you think? What's your opinion? Because today, this industry has been building and I'm not talking about since 2009, I'm talking about really like building, building, let's say at least since 2014, 2015. And as in like the whole industry has been active, not just Bitcoin. And until today, my personal opinion or at least devil's advocate opinion here that
+
+And I kind of agree with it, to be honest, that it's hard to call it Web3 because, you know, when we talk about access and APIs and RPC endpoints and all that, that is as centralized as even worse in some points, what Web2 has, because Web2 at least has the infra and the security to provide it. Web3 today cannot afford to provide. What's your take? What's your opinion on all this side of Web3?
+
+Tommy Eastman 
+Yeah, that's, I definitely have an agreement with you a lot there. I think decentralization is certainly a spectrum. The way the term is used in practice and in Web3. I think you're seeing though a lot of moves in the right direction towards decentralization. And I think that's the important part. And there's always going to be...
+
+centralization at some scale, right? It's just sort of how economies at scale work. Things are going to naturally shift toward centralization. But to me, I think an important part as well is who is in control of that centralization? Like who has the ownership? And so I think generally Web3 is really important because it shifts that ownership out of
+
+out of government control in a way. And the ability still, I think, is important. I think one critical feature of Web3 that is still really, really important is permissionless access to things, which I do still think is, rings true and holds true in a lot of cases. And that's something that we're trying to on the kind of the deep inside, make a really important point like,
+
+It's so difficult right now to be able, like if you want a GPU, it is really, really difficult to go to AWS, GCP, get a GPU. You're going to pay a ton. Often they won't even have the availability. And if you want any sort of scale, if you want any sort of, if you want more than a couple GPUs, you're going to need to lock into a contract. And I think that's really prohibitive.
+
+not it's not even about who the central authority is but it's about the cost right like any smaller players are priced out so even if the app even if anybody can quote unquote access these commodities you in practice that doesn't actually happen because the large players just gravitate towards our other large players large supply meets large demand and everybody's priced out so i think um
+
+Tommy Eastman 
+in alignment with the decentralized thesis, I think the ability to service kind of the entire spectrum of the market is a really important thing. And being able to allow players of different sizes on the supply side and the demand side and kind of create that marketplace is, while the infrared self may be less decentralized than we would hope, I think creating that market.
+
+really plays into the whole decentralized aspect and is important to note.
+
+Citizen Web3 
+I think you're touching on something in my, at least to me, very dear to my heart personally, because well, first we are a validator who uses GPUs and our GPU nodes actually run, but I don't want to talk about us, but I just want to give it as a statement. Our GPU nodes run from home for bare metal that is actually our bare metal, not in a data center. But the reason for that is the price because...
+
+Well, we're trying to move all the infra now, but the reason we moved the first GPU infra was seriously because it was impossible to, you know, it was not, it was a matter of decentralization, but it was also a matter of price. And what I'm trying to say is that I'm kind of lucky because I've been in the industry for a while, but what you're saying is absolutely correct about the smaller price and the big place. And what I'm saying, what I'm lucky is that, okay, even though that's
+
+I'm kind of personally not dependent on the project feeding me and I have the ability to feed the project with some capital because I have been in this industry for some years. It allows me, it gives me the play space, but I can tell you that what I'm doing right now, you know, creating this, all this decentralized infrastructure, I'm using some quotations here, but because it is a bit in quotations, at least for now, it does cost a lot of money and it's not cheap. And I'm not sure how...
+
+players who just get into the industry are supposed to jump onto it in the same way that people like myself have been here for 10 years or like Fondri has been here for several years as a project. I can afford to do it and know how to do it, have the resources. So yeah, I totally agree with you, man. I'm not sure. Do you think there's a solution for that? Do you think there is anything that can be done, maybe not tomorrow, but over the spectrum of time?
+
+Tommy Eastman
+Yeah, I think it's, I think you're right on. I think it's a really difficult question. I think it's, yeah, it's expensive. It's really expensive to get into hosting bare metal hardware. We have the expertise to do it. So it's a lot easier for us to kind of like we pivot that we didn't pivot, but we expanded into this data center GPU hardware hosting space because we had a lot of expertise built up from the Bitcoin side.
+
+and from the staking side. So it was a lot easier for us to go here than for somebody to start from scratch. The best way that I think about that is can we pave, can we kind of pave the way to allow smaller players to get involved as well, right? Because I don't think, like we're not under the impression that we're gonna go out and compete with massive data centers and compete with OpenAI, compete with Microsoft. That's not our goal. It's to service a different market.
+
+Which I think is, to pivot a little bit, I think is really important for the entire decentralized AI community to understand. I think kind of using OpenAI as the North Star is, oh, this is what we need to get to. I think is a bad way of framing it. I think natural synergies between blockchain and AI slash GPU computing should be...
+
+taken advantage of to service different markets. And there's certain things we're going to be able to do better than centralized players. And there's certain things that we're never going to do as well as centralized players. I think that's really important framing. But to answer your original question, I think by paving the way and kind of bootstrapping supply for these decentralized networks like Akash, I think it allows...
+
+It allows a market to exist that can then allow smaller players to enter. There's a great market on Akash right now. There's a lot of demand coming because there's a lot of supply and these cards are in such high demand. And what that allows is it allows one, the Akash team has created really, really good documentation and made the process really easy by onboarding providers like us. So now it's really easy, I think, for anybody with a card to...
+
+Tommy Eastman 
+to supply to the network like Greg Astori, the CEO of Overclock Labs, creative Akash there. He, you know, he bought like a 4090 gaming setup and when he's not using it for gaming, he's supplying it to Akash really easily. So I think, and that's a place that that's a great starting point that you could grow from if it's something that you were serious about and you wanted to get to the point where you had, you know, a bunch of GPUs that you were supplying and making money on. I think,
+
+by medium -sized players like Foundry kind of paving the way for this. I think it's created the marketplace and the onboarding process that allows smaller players to enter more easily.
+
+Citizen Web3 
+Allow me to play a little bit the devil's advocate. This is why I always say to the guests, I want to come around to see if I'm going to annoy them. So let me be a devil's advocate here. I don't necessarily agree with the opinion I'm going to say now, but I definitely want to make it heard because it's an opinion that should exist in my opinion. Now, a second of advertisement for the listeners. If you want to find out more about Akash.
+
+check out our interviews with Greg from three years ago, I believe, or even four years ago, where they just started. And there's a lot of insights into that. But back to you, Tommy, like here is the devil's advocate argument to what you just said. You know, Akash is not the first network to try and build this. We had a lot of other things like Golem, you know, and there was many, not many more before.
+
+Sorry, I think Golem was probably one of the first ones. And I'm not sure if there were any before. I don't remember right now. But anyways, there has been other tries. And those tries didn't succeed. They don't seem to succeed. The question is, because let me go a bit more abstract here. So what I'm trying to say is here, what if the solution, because,
+
+Today, you're talking about, for example, you're saying, oh, Greg has his gaming, the infrared he supplies. Now, I was looking at the report of Nvidia sales of the last quarter from Facebook. So Meta, sorry, excuse me. Meta, Google, and all of them are buying the cards. The last quarter, just the last quarter of the last year.
+
+Some of these buys were bigger than half of the GDP of the countries we know. So what if the solution is not there? What if the solution is more simple? And this is the opinion I want to ask you a question about. What if the solution is something like quadratic voting? Like, for example, I've seen networks that say, hey, let's give those validators or those who supply less more, those who supply more or less. So again, like I said, that was advocate opinion here, but I'm interested what you think. Do you?
+
+Citizen Web3 
+because there is already so much to supply from the big players who will never beat. Could that be a solution going the distribution way and the software way or no? So it has to be hardware.
+
+Tommy Eastman 
+Yeah, so I guess, can you help me understand a little bit more? So you're talking about, should we be trying to target those really big purchases and supply those? Is that what you're getting at?
+
+Citizen Web3 
+I'm saying different. I'm saying, you know, if we're talking about everybody entering the market, you know, should we instead of saying, you know, here is what everybody can give here and they can receive something because the bigger players will have always more to give as they can receive more. What if the solution is more simple? I'm not saying I necessarily agree with it, but what the solution is just to give the smaller players more, even though they supply less.
+
+but because we know they're the smaller players, let's give them more. So it's like quadratic voting, so to speak. We know that we will, for somebody who has, let's say, a validator with 100 tokens, I'm giving an example of validators here, but you can extend it to anybody who supplies GPU, for example. Let's say a validator with such and such power will only get so little, whether a validator who supplies a lot less power and will be at the bottom will get...
+
+a lot more. Same with GPUs. Let's say I'm supplying a house grade GPU. Should I be getting more rewards than the guy who's supplying, I don't know, NVIDIA server grade GPUs to Akash, if it's possible, of course, to supply such. Akash again, is very abstract here. I'm saying Akash, but could be any network out there. So the question is just to resume, whether the solution to help sort of decentralize the market.
+
+Tommy Eastman
+Yeah, sure.
+
+Citizen Web3
+has to be only bound to allowing more players to supply their hardware? Or can a solution to decentralize the market, in your opinion, can be spread to actually distribution and giving people who less more and more less that kind of solution? I don't know if it makes sense, but yeah.
+
+Tommy Eastman
+Yeah, that's an interesting question. I haven't thought of it that way. Can we sort of provide extra incentive to make sure that we get more players, a more diverse set of players, and allow maybe consumer -grade hardware to earn the same rewards or more rewards compared to data center -grade hardware? Putting my Foundry hat on, I would say, no, us with data center -grade hardware want to earn more. But also remove the Foundry hat. And I still think...
+
+I still think it's important that really the way that I see it is it should be a free market. And really like I think the most successful kind of deep in protocols don't want to they don't want to put any restrictions on the pricing or even have really any effect on pricing at all. They just they just want to create the marketplace that allows.
+
+that access and most importantly access at scale. And then the people will decide what they want to pay, right? Like at Foundry, if I go and take our A100s and set the price at $8 an hour, nobody's going to pay. If I go set it at 20 cents an hour, they'll never be open and somebody's going to hold that and probably just rerun it out. So I think my thought is less is more when it comes to kind of thinking about the pricing and just...
+
+the creation of the market, making sure it's as seamless a UI UX as possible, as seamless an onboarding experience for providers as possible is the most important piece.
+
+Citizen Web3 
+Sorry, my biggest enemy is the unmute button. I listen and it's unmute this thing. Sorry. But yeah, and it seems that AI is kind of, at least not AI, but GPUs, or at least that AI need GPUs, right? It seems that they kind of make it more difficult for their adoption in a sense. And I disagree with that, but a lot of people do say that.
+
+But I can see from what we are building that, you know, that the pretty much the costs of running a safe blockchain with AI and not just the node, but, you know, RPCs, archives, whatever, blah, blah, blah, surrounding it are really astonishing. And I want to talk with you a little bit about the AI market, because I know it's also a topic, like you mentioned, and did my little research. I know it's a topic of yours that you enjoy talking about.
+
+Here is I'm going to start from again from from the bean devil's advocate. I'm terrible today. I'm sorry. My apologies Tommy. So today the blockchain market and often the crypto market, the blockchain market likes to put tags on things and people as soon as they see the tag they're like, oh my god, it's good said blockchain. Let's buy it now.
+
+Tommy Eastman 
+Heheheheh
+
+Citizen Web3 
+Unfortunately, at least personally, and we had a lot over the past four years, guests from several AI projects, which in my opinion are fascinating, the stuff they explain, you know, but there's a lot of projects there that, man, I'm sorry to say that, but they've got nothing to do with AI. They've got the tag AI, but that's got nothing to do with machine learning. It's got nothing to do with, I'm not even talking artificial intelligence. Let's just talk machine learning right now, right?
+
+I know it's an on him, but still. So what's your opinion here? How do we, considering we want to decentralize market, we don't want to regulate the market to at least, I don't know. Yeah, again, matter of subjective opinions. What do we do? How do we help people to understand where is AI? What's your personal advice here for a user who opens CoinGecko looking for those Jones, you know, as people say, no, no, joking aside, but you know,
+
+A person, you know, they're trying to do their research. What's your advice? How to really spot an AI project from the shite that's out there. Pardon my French.
+
+Tommy Eastman
+That's a great question. I feel like this is something that when I first got into the industry, I took everything at face value. My first axiom was trust. So I would read a white paper or see a project and be like, wow, this is amazing. Look at the AI research that's going on here. This has endless utility. And I very, very quickly learned.
+
+to actually completely invert that first axiom and say, trust nothing, which is perfect, right? Because that's sort of, don't trust verify, right? That's sort of right in line with crypto. And so I think when I, I truthfully, I've become a skeptic when I first look at projects, I tend to assume that it is vaporware. And then only through,
+
+Only through pretty significant, significant kind of due diligence do I shift that assumption. So I think if I'm giving advice to a user that's looking for an AI project that has real utility, I would say two major things. One would just be volume, volume of projects. You have to see a lot of projects and get involved with the community, read the code.
+
+And over time, you'll start to get, I think, a pretty good intuition for what is vaporware and what is real and what has real utility. And then the second piece is where are there natural synergies between blockchain and AI? Like for me, the federated learning is a big thing that I look for. I think that's a really interesting use case. Federated learning exists in Web2, right? In traditional practice, it's a distributed training.
+
+system in practice and blockchains distributed, right? So I think the natural synergy there to me makes sense. So I think looking for those natural synergies is the best indicator of is this a real project or is this something that's, you know, might have meaning in Web2 but somebody's decided just to try to slap a blockchain or blockchain XAI sticker on it and mint a token.
+
+Citizen Web3 
+Yeah, minting tokens is another, I guess, difficult subject. But before jumping onto that, still to stay with AI. What's for you, though, the AI? Let's go even a step before that. What is decentralized artificial intelligence for you? What is the division between normal artificial intelligence and decentralized artificial intelligence? Where does it start and one end?
+
+Tommy Eastman
+Yeah, that's a great question. I think I almost see it in... To answer, I guess, a tangential question, but just rephrased a little differently. I think the way I think about it is there's bias in everything, right? Everything inherently has bias, right? There's a certain group of developers that train the AI. They selected a certain data set. They were guiding it towards a certain goal.
+
+And so there's obvious impact on the end results, given the group of developers, the company, the controls they put on it, the data that they use to train. So bias isn't, or I guess bias is in my opinion inherently harmful in a vacuum. So if you have one model and it was trained by one dev,
+
+and on one specific data set. Right. And that's what everybody in the world interacts with. You're going to have a ton of unhappy people in the world. So I think the easy solution to that is how can we open up the gates to allow as many developers on as many data sets, like create as much diversity in model production as possible. And so rather than kind of that
+
+centralized versus decentralized. It's how do we get to the most model diversity possible? What steps do we need to take and let's execute.
+
+Citizen Web3
+I want to say amen to that brother because like I'm not a religious person, but I'm going to say, you know, like the blocks, amen, because like, man, people are really seriously underestimating how much this in particularly teaching the model itself and in particularly putting biases on that. You know, it's interesting. I, I, uh, some years ago, about four years ago when I was helping Bostrom to launch,
+
+Well, to launch, with their initial building that they were doing. Can't say I was helping them to launch. It's a bit loud, I guess. But I had a big argument with, because the guys that they're using knowledge graphs to build, but it's their version of a knowledge graph. It's not a textbook definition of a knowledge graph. And basically what they do is they allow...
+
+any user, any developer to teach the model anything the fuck they want, regardless of whether it's true or false, as long as the user uses the resources to do that. And then there was an academia guy and he had such a big argument. He could not like, it was four years ago. And I'm really, I would really love to hear his opinion today because of course things have changed, but for him, the fact that, you know, anyone could say anything to the model.
+
+And that would be teaching the model without even saying, okay, this is this type of file or this type of data, allowing the user to decide on the type as well. And for him, it was a big like thing, but today I would love to be basically what you're saying, you know, allow people to do what they want. If they want to spend their money on saying that a dog is a cat for some reason, this is if somebody was willing to, you know, I don't know, to stake a hundred thousand dollars, let's say, and to bet that.
+
+this image of a cat is actually a lion, maybe that's important to them. Maybe for some reason, if they're willing to put $100 ,000 on it, maybe let's take that bet on, you know? So that's what I'm saying. What's going to happen at the end? It's a different question. It's an experiment, but let's take the bet on. This is a free market, no, if he wants to do that. So yeah, I totally agree with you. And I wish more, I would hear this opinion more often of allowing, you know, decentralizing.
+
+Citizen Web3
+Have you seen... I don't want to go into examples because I don't want to talk about one project over the other, but in your opinion, have you seen any interesting open source LLMs? I don't want to like maybe... If you want to go into projects, feel free. But yeah, I'm personally trying to avoid naming projects because it is very, very subjective with AI. So I'm scared even of saying names and then like, wow, boom, you know.
+
+But have you seen any interesting models that you would suggest for people who want to research into that, can check out?
+
+Tommy Eastman
+Yeah, for sure. I think you're starting to see people care about this a lot more, right? Like you saw, like GPT -3 and 4 had some strange, I guess let's just say nuance when it comes to how you interact with it and the prompts that you're able to get out of it versus what you're not able to get out of it. And then Gemini was even worse, right? Gemini was...
+
+really, really difficult to get. It just had really, really strange behavior. They clearly showed that these biases that we're talking about. And so I think these things are, have served as really big red flags to a lot of people, because it's really not, you don't have to do a ton of thinking to see how these potentially like harmless biases in the context.
+
+that we're talking about can easily end up being a lot more harmful to a lot of different groups if they are the only sources of truth, right? Like I think if you're a believer that AI is going to be deeply integrated with humans in the future, right? Like I don't think it's a massive leap to say that in 10 years, much, much sooner, I believe, but 10 years, let's say,
+
+Nobody's going to be just typing into Google and doing like a standard web search, right? Like you're going to be interacting with AI. It's so much better than a Google search.
+
+Citizen Web3
+Man, Neuralink. Just one word, Neuralink. That's it, right? I mean it's... You know, that's it. Sorry to interrupt, sorry.
+
+Tommy Eastman 
+Yeah, yeah, Neuralink, exactly, right? Yeah, yeah. No, no, you're fine. And so I think, like, if you if you believe that that that that integration is going to happen, and AI is going to be a big part of our lives, the fact that it could be controlled by, you know, three or four groups, whether it's open AI, Microsoft, Google, I think is really concerning and you don't.
+
+You just have no idea what's going on under the hood, right? I think there's clearly a world in which, and this happens to some extent on Google too, but I think it's a little more transparent, or on a normal search too, but it's a little more transparent. Like I could interact with my AI and say, what pair of shoes should I buy? You have no idea what kind of deal is done behind the closed doors. So you have no idea what quality product you're getting. Whereas if you have a ton of diversity and...
+
+all these models are trained in different places. Maybe you go different places and ask different questions and kind of see where these biases may exist. I think Freedom GPT is an interesting project. They're kind of doing something similar. They're trying to open source models that have no restrictions. And I think I'm like sort of a free market maximalist in that...
+
+You know, people should be able to create the models and supply the models that they want. And it should be up to end users if they don't like that. Like if it's producing, you know, hateful and bad content, people aren't going to interact with that. And it's kind of up, this is getting a little grandiose, but it's kind of on the conscious of the collective conscious of society to guide what is valuable, what's not valuable, what's harmful, what's not harmful. And I don't think that that should come.
+
+specific or solely from you know a closed -door corporation.
+
+Citizen Web3
+Absolutely, man. This is like, you know, when people, in my opinion, I don't think it's too grandiose in terms of, you know, it's the responsibility of society because it is, because there has been always, you know, it doesn't matter what the government or the democracy or tyranny is, people still kill, people still murder, people still rape, people still... It doesn't matter. It's not the type of the government.
+
+or the lack of government because I'm an anarchist, right? But it's not about that. It's about the society. It's about our choices and whether we want. So I absolutely agree with you. You know, we did experiments, but I have a different question for you to follow that up because it's a bit of a more philosophical question, but it's following up what you say. Do you think we as humanity or at least the Web3 society, are we ready for that? Are we ready to sort of like click the button and say, well,
+
+Now you guys are responsible. That's it. No more third parties, no more black boxes, intermediaries, no more, you know, now everything you decide, guys, whatever it is. Are we ready for that?
+
+Tommy Eastman 
+That's a great question. I think you'll need a much more enlightened and intelligent person to give you a great answer to that one.
+
+Citizen Web3 
+Awww, come on man, but you're - you're - you're a - I - I - I - I think you are, come on man, what's your opinion?
+
+Tommy Eastman 
+I think...
+
+Tommy Eastman 
+I really do. I'm a really big believer in people being innately good. And so I definitely believe that we're ready and people will rise to the occasion and be responsible. I think that people tend to meet the bar that you set for them. And if that bar is set really low, and by that I mean if...
+
+If the government controls everything, people don't have to think, people don't feel responsible, people don't see that their quote unquote vote matters, then that's how people will exist. And, you know, they won't take on that responsibility. They won't think critically about things. But I think if you raise that bar and say, what your decisions are, how you interact with things, how you treat people, that's what will guide and shape.
+
+you know, the mechanisms that are created in the context of AI. You know, the way in which you interact with AI, the way that you spend your money with AI is going to guide and dictate the way that AI is created. I think people will rise to the occasion, and obviously you'll have your outliers, but I think the vast majority of people will naturally use...
+
+AI in a very positive way and interact with it in a very positive and safe way and that that will then guide the free market like the supply will then follow that demand and you won't see people you know generating harmful AI because they know there's no money they can make out of it. I think money guides all of this stuff and I think that you know society is ready and able to step up and
+
+and have a positive impact and be a positive guide towards creating AI that's aligned with the majority of humanity.
+
+Citizen Web3 
+Just to say, I 150 % agree with you. And I don't even think that about AI. I think that about everything, including governance, including such, you know, we're not going to go into it because it's a different conversation, but much, much bigger things. Because, you know, just to remind everybody, we already went through this with DNS. We already have been through this with social networking. We are still at it with DNS and HTTP.
+
+and trusting somebody and governments and social networking and law and education systems and everything else that doesn't fucking work. But we think that somebody else has got, you know, the million dollar solution to tell us how to do it better than ourselves. So considering AI is such a much bigger fucking, I'm not saying it's bigger than everything else, but it is an aspect that can influence. Yeah, like.
+
+history really in terms of and that's dangerous. And I think that, you know, I hope that what you say that we are ready, you know, as a society, as at least, you know, as a community that can try and say, you know, we don't need closed AI, you know, that people started already to joke on Twitter, you know, but we need really open AI and not open AI, the company, but we really need open AI and alternatives. But, you know, I'm
+
+I want to before we because AI is a huge topic that I can really talk on about for a long time. And I'm sure we both can. But I want to ask you a couple of things just about foundry in general, because I've noticed that and this is a it's going to be like a bit of an abstract question, like the most of them have been today. I'm sorry about that. Usually they're more on target, I hope.
+
+But when I look at what you guys do in terms of the networks you validate, the Bitcoin mining, it's cool. This is exactly... You are like my dream client in quotations. I mean, my dream guest, of course, when I say client, I said it on purpose. But in a way, because sometimes I get validators and we don't just talk just about validators, but sometimes we get founders, which is even worse, and validators that are very...
+
+Citizen Web3 
+how to say they are like, okay, I'm only Ethereum, I'm only Polkadot, I'm only Cosmos, I'm only this, I'm only OpenAI, I'm only Microsoft, I'm only Meta, I'm only one God, I'm only one religion. Now, you guys seem to have beaten that illness, at least to yourselves, at least so it seems to me. Can we talk a little bit about that? Why you guys not like, it's a stupid question, but why aren't you tribalistic? Why don't you follow just Ethereum or just Cosmos or just Polkadot?
+
+Why are you able to to be like that to say, hey, everything is OK. What's the difference? What makes you so good in a sense? How can other people follow that?
+
+Tommy Eastman 
+Yeah, I think it's a really easy answer, honestly. I think we are very committed at Foundry to the long -term success of this space. And I think it's really easy to get fixated on token price. And that's when I think people get very dogmatic about a single protocol or a single ecosystem is because their mind is like, what is the token price today? What is the token price tomorrow? We're able to...
+
+step back, it's really a top -down thesis, I think, from our CEO and really from DCG, we're able to step back and say, where do we want this space to be in five years, in 10 years? And I think zooming out allows us to say, when you think about the space in 10 years, if just Polkadot exists, or if just one of these protocols exists in 10 years, the whole space has failed, right? So I think...
+
+Because we have that end goal in sight, we know that there's going to be a lot of different projects that fill a lot of these gaps. There's really no one -stop solution for all of the problems that Web3 is trying to tackle, that blockchains are trying to tackle. So I just think expanding your scope to the long term makes it really, really easy to say, oh, no, we need to participate in this. We need to support this. This project's great. Let's help out here.
+
+Citizen Web3 
+Now, I'm not going to say amen again, but the failing sentence is a very, I think, a quote, in my opinion, that should be taken. If only Polka -Rota cosmos, I never heard this before, but I really think this should be a quote. If only cosmos exists in Polka -Rota in five years, we failed, right? Absolutely. But still, I'm going to ask a bit of ground question here. I'm going to ground you up a little bit. You're still a project though.
+
+And, you know, there is still a profit in the project and there is still for -profit, I'm assuming there, you know, whether regardless of whether they do the public good or not, which you do, I see, and anybody who goes on your website can see that, you know, but still, how do you select the chains? Because considering you're a bare metal, like infra provider as well,
+
+Yeah, there is a lot of questions here because we're kind of similar. We are small, you're bigger, but still, how do you guys come about and select the chains? Because the chains appear every day like 20 by 20. Some of them must be good, right? I mean, not all of them are shit. So...
+
+Tommy Eastman 
+Yeah, for sure. That's a great question. And I'll speak to my specific role kind of in the deep and decentralized AI space. We have a finite amount of hardware and almost an infinite number of projects that we could supply that hardware to. So truthfully, I think touching upon what we talked about earlier with assessing vaporware versus utility is really important. And the way I think about it personally is how can we make...
+
+a few high conviction bats with our hardware. So how can we do a significant amount of due diligence on a project to make sure it has real utility, it has product market fit, the quality of the project is good, like the code is written well, the processes to onboard are strong and easy to follow, the team is focused on
+
+you know, the right goals, which to me is almost always an end user, user interface and user experience. Um, and, and, and where can we add in addition to hardware, kind of our expertise that we've built up from, you know, dev tooling standpoint, um, to support the growth of the project. I think we could easily, we could easily take a handful of GPUs and send them 30 different places and place all these little bets.
+
+But I think where we've seen a lot of success, like Akash again is a great example, is we got deeply integrated in that ecosystem. We worked closely with them. They've provided us support on a bunch of things, and we've in turn been able to provide a bunch of support to them, and I think create a really good, mutually beneficial kind of symbiotic relationship. That.
+
+is driving towards that end goal of kind of creating real utility on the chain. And we've really already seen a lot of that. So it's been really cool. But yeah, I think doing like, it's a fair amount of due diligence work truthfully to kind of assess projects, talk with teams, go through the code, figure out, have a really strong conviction in the space. Again, back to me talking about synergies in the space.
+
+Tommy Eastman 
+I'm looking for specific projects where I see synergy between blockchain and AI or blockchain and GPU so that I can get a really strong conviction and choose chains to participate in.
+
+Citizen Web3
+On that note, man, I always have a lot of questions and I never be able to ask them. This is unfair. Let me go into the Blitz. The Blitz is not a Blitz, really. This is why I'm going to it a bit early, even though, you know, because it's not quick answers. And I'm sure that we're going to get stuck a little bit on the project question. So I'm going to ask you five questions. You don't have to answer them quick. You can answer them in detail.
+
+So the first one is got nothing to do with projects. And the first one is going to be, but it will make sense why I went to this now because it is about projects. The second question, but the first question is about give me one movie or book or song that has been with you throughout your life, or at least for some time now that you are kind of like, you know, yeah, it's you, part of you.
+
+Tommy Eastman
+Wow. Great question. I love that. I'm going to go with.
+
+I'm gonna go with The Hobbit. I read The Hobbit really young and I'm a huge, huge Tolkien fan and that is kind of, I think that was what gave me my first taste of like exploring new worlds and I think of it in the same way as I think of, I think of tech today.
+
+Citizen Web3 
+I'm not going to say anything because it's a very similar story. That's all I'm saying. What about one, not project, but okay, you have mentioned ML, AI, and I'm assuming you're going to say that, but one direction, technological direction that arouses curiosity in you, is it going to be ML, machine learning, or is it different technology of direction that you would like to mention that arouses curiosity with you?
+
+Tommy Eastman 
+Yeah, for sure. I think ML is probably the easy answer. I'd also love to throw cryptography in there as a hobby, as something I'd like to get more into the weeds in.
+
+Citizen Web3 
+Hahaha.
+
+Hard stuff the hard stuff man, man You you you have to you're gonna you're gonna have to come on and a second time and talk about cryptography because it's it's a topic that is a really fascinating and I think we only had over the last four years, I believe only One not two people and with one of them. There is two episodes but um Yeah, it's a topic that is yeah. Anyways now the question about the projects and why I came to do here
+
+Give me, and I'm gonna, because you're big on your research, I'm gonna ask you to give me a couple. Please don't look at this question as a matter of like hype. It's more about what really, like because you are deep into research, what has really caught your attention lately over the past few months when you've been going into these blockchain projects, something that is not Ethereum or Polkadot or...
+
+Cosmos or, or, or near like not the top projects, please. Something that you were like, Oh my God, this, these guys are really doing the shit.
+
+Tommy Eastman
+Sure, yeah. I think two projects that I think have stood out to me in the last handful of months, again, it's looking for the natural synergies between AI and blockchain. One is FLOC. It stands for Federated Learning on Chain, floc .io. I think they're a great team, really interesting project, natural synergies between blockchain and AI. Again, I feel like a broken record with that, but I think it's important.
+
+Citizen Web3 
+I like it.
+
+Tommy Eastman 
+And then I'd also say Nesana is an interesting one built on Solana. They're looking at consumer grade hardware, but sort of an edge node inference play, which I think is going to end up being really important is where do these GPUs actually lie in relation to geographic relation to the user to maximize inference speeds.
+
+Citizen Web3 
+It's interesting. I've seen some explorers try to introduce that with the Valorator nodes. I'm not sure how much it caught on, but I have seen those things already. Two questions which are going to be a bit more philosophical. I'm also like a broken record, don't worry. That makes both of us. With my philosophy. So the first one is, what is one motivational thing that keeps Tommy getting out of bed?
+
+and researching and building a wall that is a slightly better place than it is today.
+
+Tommy Eastman 
+Yeah, that's a great question that we could probably have a full podcast on. But I would say one thing that I can go ahead. No, you're good. What I would say my like North Star is, is just creating products that have, you know, real utility. I.
+
+Citizen Web3 
+I know I know no no sorry sorry sorry Tommy sorry no no no Tommy sorry sorry sorry sorry sorry sorry my bed my bed my bed
+
+Tommy Eastman
+I played basketball in college and I had a coach once say that you should just always do things that make somebody's life easier. And he was talking about in reference of making sure you throw out your garbage or clean up your tray at the cafeteria. But I think that applies to everything and should be in everybody's mind in their work day. How is what I'm doing making somebody else's life easier? I think that's a really helpful.
+
+framework for me when I kind of evaluate what I'm doing and what I want to do in my career.
+
+Citizen Web3 
+I was going to say before that definitely that this topic is something that, to be honest with you, and this is something that I would love to share with all the listeners out there and with yourself as a guest also, that motivation is definitely a theme of the podcast. It's maybe doesn't sound like that, but I really want the people who build Web3 like yourself to come here.
+
+and talk to the listeners, to everybody in our community to share this. Why are you guys doing it? What is the reason? What is really the reason for you, not for you guys? And here is the last question here to maybe also kind of like that has a hint to that. Give me one person or one character, imaginary, dead, alive, relative, doesn't matter, that has been an inspiration.
+
+for you. It could be a developer, it could be a writer, it could be a cartoon character, it could be a family member. I don't know, it doesn't matter. But it has been an inspiration for you throughout all your life. Not a guru, not an idol, but an inspiration. But it's a big difference.
+
+Tommy Eastman
+Hahaha.
+
+No, that's another good question. I think that that answer to me is really easy. For me, it's my parents. They've been just incredible. I've had so many opportunities as a result of them, but I've also had such good role models, the way that they go through life with grace and compassion, I think has been really, really important for me and really formative for me. So that's an easy question.
+
+Citizen Web3 
+Nice, nice. I love it when people go to talk about the family. It's very touching. I like it. Tommy, thank you very, very, very much for your answers. And like you mentioned yourself, there is a lot of topics that we could do differently separate our podcast on, but thank you very much for your patience with the questions and thank you for the answers. And please don't hang up just yet, by the way. And thank you everybody for tuning in. Thanks, Tommy.
+
+Tommy Eastman 
+Yeah.
+
+Tommy Eastman
+Thank you. Pleasure.
+
+Citizen Web3 
+Thanks everybody, bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

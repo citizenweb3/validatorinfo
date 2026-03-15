@@ -1,0 +1,409 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/trigs
+
+Episode name:
+Cypherpunk, Gateway Drugs and Public Goods with Trigs
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of the Citizen WebTrip Podcasts. And today I'm going to be talking with Trix from Cleomedy's Validator. Trix Heyman, welcome to the show.
+
+Trigs 
+Hey, thanks a lot. Glad to be here.
+
+Citizen Web3 
+I did the correct pronunciation, right? Yeah, man, the Greeks are there. Sorry, yeah, guys, before we started recording, I was doing it all wrong, and Triggs corrected me here correctly, so I'm just happy I'm doing it correctly. Everybody who listens know I was mispronouncing, so I'm so sorry, guys. Triggs, how are you today, man?
+
+Trigs 
+Yeah, you got it.
+
+Trigs 
+I'm doing pretty good. Just kind of getting my day started. It's a morning here for me. So yeah, looking forward to kind of diving in and talking about what we do and just the interesting topics around validation. It's something that I'm passionate about in the areas that I work in. So I'm always excited to kind of dive into it and talk about it.
+
+Citizen Web3 
+Can I then ask you to do a small intro about yourself say anything you want just like you started already kinda But yeah, feel free to extend it or don't but that's up to you
+
+Trigs 
+Sure, yeah. So I'm Triggs. I am one of the co-founders for Clued Media. It's a decentralized validator organization. So we are...
+
+working to try to figure out, you know, like, what does decentralization mean in terms of running a validator organization? You know, I'm sure we'll get into a lot of the details around that, but I, for myself personally, I am more focused on business development, coordinating with other projects. I do a lot of networking and connections. I'm not necessarily the technical person. I've worked in tech my whole life, but always more from like the business side of it. So that's, that's my purview.
+
+Citizen Web3 
+Man, I love it. This is you've been like in the small like one minute preview you did, you touched like on three or four topics that I'm like, oh, let's talk about that, you know? Like, so ironically, you are the second decentralized, well, people who introduced themselves as the central as validators, you're the second guys on our show to do that. So you're not the first, which is cool. So I'm excited for this, man. I'm excited to talk about it. But before we get into the whole like depths of business development and decentralized organization.
+
+It's a lovely topic. I love it. Sorry Why web 3 man? I mean, I don't know like to how much chance you had to listen to the show but our shows a lot about Well, you know values I guess and I like asking this founders co-founders, you know, why web 3? How did the story begin? I mean, you don't wake up one day and say hey, I'm Triggs I'm gonna build a decentralized organization and that's my life from now on. So how did it happen? How did the life get you to this?
+
+Trigs 
+Yeah, for sure. So like I said, I've been in tech for a while. I got I mean, I've pretty much been in tech since tech was invented. I was entrepreneurial, like helping all of our neighbors get computers back in the day, like figuring out what an Apple 2gs was in the green screens and like old school stuff. So I've been, you know, kind of just super tech focused and right out of high school started
+
+in college, I worked in the tech department. And as soon as I graduated college, I went and started working for a tech company. And so that's kind of just been my life, but I got pretty burnt out in it because of the, just the struggles of working in the trad world and all the corporate hierarchy. And especially from my perspective, like what I was doing in tech towards the end before I exited was basically figuring out how to remove people's jobs.
+
+with technology and it just really disheartened me because that didn't feel like the direction that I wanted my life to go. And so I just kind of gave up on it and I quit and I actually spent almost a decade just being a landscaper, working for a small company. I was apprenticing as a stonemason and building stone walls and not doing anything with tech at all because I was just over it. And one day I was helping a buddy of mine buy a used car.
+
+And the guy that we bought the car from when we gave him the stack of cash and he was like, all right, guys, I'm going to tell you what I'm going to do with this money, because I think that you guys should look into it. I'm going to buy this thing called Dogecoin because it's totally like going to make a ton of money. And I was familiar with blockchain before that. I mean, working in the tech world, I remember when the Bitcoin white paper came out and I read it and, you know, looked at I looked into it and it just didn't appeal to me because
+
+I didn't see the application at the time. It seemed like an interesting economic experiment. But it wasn't something that caught my attention. And so I kind of just dismissed it and never really thought about it again. And then when this guy told me that he was going to buy Dogecoin, I was just like, that's crazy that he like actually mentioned that just there's such a random thing. And so I started looking into it. And that's when I learned about Ethereum and smart contracts and all the work that's been going on for the like the decade that I was out sticking my hands in the mud.
+
+Trigs 
+And so I was like, man, I got to get caught up on this because I missed out on some really interesting stuff. So I just like dove into it. And as soon as I started researching it, I was hooked and it's just been like, uh, diving down the rabbit hole ever since. And so the last like, uh, going on three years now, I've just been obsessed with it and learning as much as I can. Because to me, this is the answer to what drove me out of tech in the first place. The ability for people to
+
+coordinate in a decentralized way and be autonomous and like have self sovereign identities of, you know, that encapsulates their value systems and it to me it is the future and I think that I don't know in some senses I'm a little bit of a cypher punk because I believe that this is kind of one of our last chances to really make a change that
+
+changes the course of history. I really appreciated Vitalik Buterin's whole defensive acceleration concept like the future has different paths. There's different ways that we can go and it's gonna like the direction that we end up going is gonna be because of intention. We have to intentionally choose how we build the future. And so I want to be a part of that. And that's why I'm here to intentionally be a part of this, you know, future that I want to see.
+
+Citizen Web3 
+Man, you're not hearing this, but it's like rich, man. Music to my ears, brother. I don't know what to say because I have so many comments. I made like 10 notes, and I'm like, which one am I going to talk about? I was talking recording, sorry. It's still not out to a very cool uncap dude that everybody knows, but I'm not going to reveal it. So anyways, man, I love hearing people come and talk about what
+
+exactly the same reason that I'm here for. And just to calm you down, by the way, one of my first coins I bought was Dev Coin, bro. So it's okay. This is even worse than Dogecoin, man. Man, but okay. So all this and but you have introduced yourself as the co as a co founder. That means that there are other people on the team. And yeah, I said I'm interviewing you, of course, and I am but I'm curious, how do you find because what you've just said?
+
+and goes much deeper. This is a tip of the iceberg. I mean, at least from my, I mean, I'm making assumptions, but knowing what I feel kind of connecting to that. This is a tip of the iceberg that you're okay with explaining to the people before the runaway. Usually, man, you're in the right place. All good. But, um, how, how do you, and it's a question to you, not about your team so much, how do you as a co-founder find like-minded people that you can connect with such deep internal fucking values and
+
+build something to get. That's for me, it's for a person who's not for the first... Anyway, sorry, just yeah, you understand the question, I think.
+
+Trigs 
+Yeah, for
+
+Trigs 
+And so when I first started getting into web 3, I didn't know anybody. I didn't know anything. And it was really intimidating because it was like, you could tell that it was a very small group of people who have known each other for a long time. I mean, most of the core builders in web 3 have been building together for the last decade. And I felt like I missed the boat by stepping out of the industry and playing in the dirt. Like I said, and so it was like this intimidating kind of like barrier to break through. But I just.
+
+put myself out there and started, you know, writing, writing about my thoughts, publishing my thoughts, joining communities and sharing my thoughts with other people. Sometimes people thought I was annoying and I talked too much. Sometimes people were like, dude, yeah, like preach it like you were saying. And so I just keep putting myself out there and I keep taking that risk of being annoying or, you know, being a broken record or whatever, and just keep doing it and keep doing it. And if I push people away, then they're not the people I want to work with.
+
+towards me, those are the people that I want to work with.
+
+And that's literally how our team got put together. I mean, I was working for a different project. It was just like an investment club basically. And I was trying to figure out like, how do we build a decentralized investment club? And the people that got drawn into that project, a couple of them, one guy was like, hey, I got this other decentralized validator organization. I think like you could really help us. You like, you wanna, you know, like help us write our white paper? And I was like, yeah, sure. And as I started, you know, working with them,
+
+me into the group and we drew other people into the group and community members have started contributing and rising up into positions of leadership and now they're part of the core team as well. So for me that's really how it is, you just put yourself out there and see what it attracts.
+
+Citizen Web3 
+That's pretty much what it's in. But it seems, you know what? I'm going to make a stranger comment than I was going to originally. It's interesting from my observation, and I'm going to make a nice assumption about myself here as well and about a lot of other people. But all the good people in Web3 started with investment clubs. Seriously, man, you don't fucking believe it.
+
+I have been talking today to somebody and I realized that I've been getting paid in crypto by myself or by somebody else since 2015. I have not had any other income since crypto. And this is fucking a long time. But what I realized is that since that time and even before that, everybody who I've met who went on to build something and really because of values, seriously, I really made it like an highlighted. They all say, myself included and a lot of other people I know. And like Yusel just said,
+
+Investment clubs. I don't know why maybe it's because it's like a What do you think? What's the reason that we all start over there because there are other builders who don't start with investment clubs and usually they're not the good ones I'm sorry. I'm going to like people gonna hate me for this, but fuck it. I'm gonna say what I feel So like it is how it is like why do you think that there's a could be that connection there?
+
+Trigs 
+Um, I don't know, I guess maybe just a like mindedness, like we're, we're looking for a similar thing. I was just reading something about, um, uh, correlations and like the, uh, somebody was saying how they were in a college class and the professor was saying that all great entrepreneurs experimented with drugs when they were in high school and one of the students was like, is it too late to start now? But that's not the, that's not the takeaway that you should make. It's not like doing drugs in high school.
+
+founder. But if you're going to be a good founder, you probably did drugs in high school because of the mindset that you have. And I think investment clubs is the same thing like good founders are drawn to investment clubs because it really speaks to a core like driving force that pushes them to do greater things as the after they move on.
+
+Citizen Web3 
+Yeah, the drugs also help just saying but and then another but don't just experimenting guys Anyways, no, no to be honest. We had a lot of and a lot of this talk on this show before so it's not a Taboo subject at all. We can talk about that. But um men What is today? the personal mission of trigs what is the Where is like where is the point where you say? Okay? It's done. It's succeeded. It's done. I've done it
+
+Thank you, hooray, I'm going to get drugs, holidays, and that's it, and nothing else.
+
+Trigs 
+That's a tough question to answer. I think for me,
+
+I want to feel like I actually accomplished something in the world that mirrors what I have in my mind. I've always been the kind of person that is driven by ideas. Every new experience that I have, I'm very critical and very analytical. And I like to examine the interactions between people and what they're doing and where the world is going and come up with solutions to problems, identify problems and build a solution for it or help people find a solution for it.
+
+And I think that's something that I've been seeking my entire life is that like creation of a solution that actually matters to people. And so my goal for every project that I've been involved in, but what clean media is no different. I want to be able to leave the project someday I don't want to own it forever. I don't want to, I don't want to be a Steve Jobs where I die wearing the Apple t shirt, you know, like, I want to get it autonomously functioning on its own so that I can walk away.
+
+keep growing and maybe probably grow faster after I leave because good founders don't make good operators. And so that's my goal as a founder is to hand it over to somebody else who can operate it and do something better with it than I ever could.
+
+Citizen Web3
+Fuck man, I just like saying apps are fucking literally the good founders do not make good operators, man This is could not be to in my experience in my life. This is could not be more than the like if some man Yeah, why didn't somebody was telling me that in school when I was like, um 37 now, you know people like now I know that but you know like when I was in school I was like man, why would nobody tell me that founders don't make good operators? No, but it's true But it's fucking completely different cases different skills
+
+completely new mindset completely different fucking everything it's like Yeah, man, but talking about operating let's from to you back to you. Sorry talking about operating. Um, let's talk Like on the first before we go into the centralized organizations because I think that's what I would yeah. Anyways um
+
+Currently, what is Cleomedes as a validator concentrating on as a project in terms of public goods? Are you involved in any public goods or you just validate or... I mean, I can tell you how this question is based in terms of it's important. So originally, this show, even though it wasn't validator focused, but we did do validator interviews as far as four years ago already, was like...
+
+Okay, if we all believe that WebTree is like what you say it is, then validators currently are the biggest fucking businesses and are rotating. I want to know who I'm fucking delegating to because these guys could be building atomic bomb. And I have discovered over four years crazy fucking things with some of the biggest validator names in this fucking industry. So this is like, you know, my question. What are you currently guys doing? Or any plans to do anything? Or, yeah, let's talk about that.
+
+Trigs 
+Yeah, I mean, we were there.
+
+in the midst of hopefully the tail end of but who knows, a pretty protracted bear market. And so there's been a lot of atrophy across the entire ecosystem and we're no different. We're not immune from that. A lot of our contributors and main core team members are part-time because they've had to pick up other work to pay the bills basically. So we don't have a whole lot of
+
+Trigs 
+I'm not out there writing code and building tools or doing anything. So we do...
+
+What I see as our main value right now is that we operate a really solid bare metal validator, uh, node across 30 plus, uh, chains in the cosmos ecosystem. And we run relayers, we run snapshots, like all the services that we can, we try to support all of the chains on, uh, on the infrastructure level. And that's like the base foundation building block that every validator needs to have, right? Like if you're not doing that, you're not a validator. So that's been a big focus of just making sure that we're nailing
+
+that as much as we possibly can considering that we're a bunch of volunteers and people that are self-funding this during a market where there's no money. Unfortunately, we got started right at the peak of the last bull cycle. And so we weren't able to capitalize on that to like build up a treasury of funds to sustain us through the bear market. So we've just been like doing everything we can to get through that. But in terms of like the value that we're that we're offering because I've been able to because of my own, you know.
+
+ability, I guess, is a fortunate case that I'm in. And I think it's the case for a lot of builders, like working in Web3, it's a little bit of a side tangent, but working in Web3 is a privilege. You know, it's not something that is currently accessible to everyone because you it is hard to get paid. And a handful of people have figured out like yourself how to make a living in Web3, but not everybody can right now. So for the most part, it is a privilege to work in Web3. And I feel privileged to be able to work in Web3, despite the fact that we've been going through a bear market.
+
+And so I've been using that for myself to focus on what I can do, what value can I bring to the ecosystem. And so I've been engaging in governance and engaging with the communities and projects that are working towards similar ethos driven kind of like value driven projects.
+
+Trigs 
+and trying to connect those projects together. So I'm working with organizations that are building solutions that we can't build because we don't have the resources to do. I would love to be producing all kinds of tools to maximize decentralization, but that's not accessible to us right now. So instead I'm finding projects who are already doing it. And I think that's the big unlock of Web3 is that ability to collaborate instead of compete. We don't need to have all these different groups in silos trying to copy the other person and do it a little bit faster and a little bit better
+
+get to market first. Like we're all everybody's always so obsessed that being that first person to market. And I'm trying to help people realize that there's a different way that we can work instead of this zero sum game of competing, there's an opportunity to have a positive sum collaboration, we can work together. And that's, that's the beauty of open source software is that we have that ability to build on top of each other. And it's like, it's not a bad thing to fork somebody else's code, you can work together collaboratively.
+
+and encourage people to fork the code that you've made. Thinking about the Rweave and Iris stuff that's going on right now, Iris is trying to fork Rweave. But they're doing it in a way that doesn't fit the structure that Rweave built for forking their code. Rweave knew that forking their code is important. And they built a process and a structure for people to do that. And I think that's the way forward, is to embrace this collaborative mindset. And so that's the public service that I'm personally
+
+provide as a representative of Cleomedes is engaging with these projects and showing them how they can collaborate with each other to build something that's more than the sum of their parts.
+
+Citizen Web3 
+I think what you do is called ecosystem development. You should stop saying just by the way, because that's not just what you're doing. No, it is just, it's not little. You are doing a lot of things, guys. You're doing relays, well, you're doing it all fucking bare metal. You provide an infrastructure for all. I mean, all these networks currently are dependent on this infrastructure and your own network helps. It's ecosystem development, that's what I would call it. It's not, maybe it's still a fancy word, but yeah, maybe it doesn't connect.
+
+I made again a lot of comments here. So sorry, go on, you were gonna say something, go on.
+
+Trigs 
+Yeah, I was just going to say, I guess maybe the reason why I downplay ourselves a little bit is because as a validator who isn't, we don't have a strong developer team producing tools or, you know, other like products in that sense. And so that excludes us from a lot of attention. Like when new chains, we have a really hard time getting into Genesis sets because everyone's like, what have you built? Show us your GitHub. You know, how many, how many commits have you made? And we're like, uh, not really a whole lot, cause that's not what we do.
+
+recognition for the value that we feel like we're providing, because it's not something that is valued by the ecosystem.
+
+Citizen Web3 
+I feel you. And I feel you for a lot of reasons, because it's one of the main reasons why we are going, for example, through this rebranding, which I'm not going to talk about right now, of course, because it's not about us. But you mentioned one thing which I want to just note about work in Web3.
+
+You know, actually one of the main reason this is like I said, there was a reason about understanding validators It came secondary. The main reason Was really to help people understand via other people and their stories that it's not impossible that it might be hard and difficult but there is an alternative way because And this was my kind of understanding that this how I want to share That instead of me trying to talk about my experience
+
+I want to listen to the experience of the people who I think already are in there already part of it and Just by telling their stories, you know Not by saying here is a guidance for you or whatever just by sharing what they say and music to my ears It's worked. For example, you know the guys from stride they said hey Do you know that we found out about cosmos before we started to build by listening to the podcast? I was like, are you fucking serious? And they were like, yeah, just listen to it one day. Well, that's cool
+
+Yeah, and I was like, whoa, you know, and like I wish that story would be true. Maybe it was anecdotal I don't know the guy said it whatever but um Even if it's yeah like yourself, you know, you're talking and you're saying the things you say in my opinion is exactly what what? What what is the gold? The the real oil, you know the data the gold. I don't know what else to call it man Whatever like that. That's that's the value in my opinion. Anyways, I would love other people to also hear that at least
+
+Yeah, man. Let me talk a little bit about Bare Metal Cloud, because actually, as part of our branding, I'm going to share something I got today, my package that I've been waiting for so long. It's a fucking huge 120 kilos of boxes, of the server boxes themselves, because we're building a small server room here. And we're also going through the same process, and we're still in the process. Hopefully, by end of January, we're going to turn on our Bare Metal plugs on.
+
+Citizen Web3 
+Tell me about it, man. Tell me why are you doing bare metal? I mean, I can probably already guess the answer, but tell me why you do bare metal, why not cloud, and how is that experience going for you?
+
+Trigs 
+Yeah, for sure. I mean, the bare metal thing I think is really important. I mean, obviously cloud computing increases accessibility and decentralization is a process. You can't start out with maximum decentralization. You have to work your way towards it. And there's growing pains in that process. So it's unreasonable to expect that everyone is going to be able to do bare metal servers. I mean, I remember when Bitcoin first came out and I kind of dismissed it, but part of me was like, man, I got an old gaming computer. I could just like throw it in the closet
+
+mining, maybe it'll turn into something someday. And like, I wish that I would have. And that was kind of like the promise of, you know, cryptocurrency and blockchains in the beginning was that you could just everyone can spin up their own validator. And we're kind of getting past that point now, because as block space gets more valuable, there's more competition for it and that competition pushes out accessibility.
+
+And so cloud computing kind of levels that playing field a little bit and allows others to, you know, get into the ecosystem and learn and participate. But.
+
+In terms of like geo decentralization, it's essential that we have bare metal servers that are distributed globally everywhere. We need to have, you know, a bare metal server on every single continent, at least one, probably two, like redundancies are really important. For ourselves, like one example, we had a server outage because of massive blackouts. So our server facility that we maintain is in Italy.
+
+Trigs 
+blackout issues from power demand. And it was the first time that we had that level of a blackout. And so it was a real test of our fail safes. And we do maintain some cloud servers to roll over to in case of situations like this. And we have a generator at our facility, but there were some issues with the generator during the blackout. So of course, it was like a black swan event for us. But fortunately, we were able to recover pretty quickly and got things rolled over to our cloud servers in time, and then power came back on.
+
+of the challenges of operating a bare metal server. But in terms of the value to the ecosystem, if everyone is running on the same cloud servers and there's a blackout at that cloud server facility, and that's not just one validator that went down. I mean, when we went down, it didn't affect the network at all. They didn't care that we went down. Our delegators, of course, cared. And we went through that whole process. And fortunately, we didn't have any slashing
+
+of effects to any of our delegators. But if a massive server facility goes down where all the, if Hetzner or some of the AWS facilities or something, if they happen to go down from some catastrophic event, I mean, it makes it a target really. And you have to really think about security from a lot of different perspectives.
+
+And there could be some malicious actor out there who wants to take a network down. And if they do the research and realize like, oh, if I hit these three data centers, it's going to shut down 90% of the blockchains in existence. That's, that's a, an attack vector. And so by distributing across bare metal servers all over the globe, we protect ourselves from that attack vector.
+
+Citizen Web3
+I overestimated myself. I was assuming that your answer is going to be more philosophical. I didn't give enough credit. I gave too much credit to myself for predicting what you were going to say. But I like that. Of course, it's something I think about, but I was thinking more of a philosophical way of decentralization and all that. But yeah, it's a fucking huge attack vector. I can remember understanding. It's also about KYC and Genesis. What are your thoughts, by the way, on that? I mean, we all...
+
+regardless of our like deep end believes, you know, I'm a realist at least. I'm talking about myself, for example. And I have to deal just like I have when I buy Bitcoin and I have to deal with the Bitcoin consensus. When I take in my hands euro, I have to deal with the European Central, the consensus of the European Central Bank. That's how I see it. And unfortunately, I do. I wish I didn't. But unfortunately, I do touch that crap. And I have to. I don't have a choice. And like what I...
+
+What I was going to say is that we all deal with big organizations and we all are dealt with before, you know, and we know that their security is crap. We hear about that breaks all the time, you know, like they lost, I don't know, one million files here, one million files there. I mean, the guys cannot put, you know, sometimes a trillions of dollars. So what do you expect? But anyways, and here we are sitting, you know, in like validators, you know, there is some KYC guys that there is there is there is some small firm.
+
+with one or two servers or three servers. Okay, maybe I'm underestimating somebody here. But somewhere in a garage of whatever that has documents of almost every single validator's dog, validator's wife, name, their addresses, their bank accounts, God, that's a fucking attack vector. I mean, what do you think about that? That's fucking terrible.
+
+Trigs 
+Yeah, that is a pretty scary part of it. I mean, just working in crypto in general, like, I mean, Trigs obviously isn't like the name that's on my birth certificate. If people wanted to know who I was, it wouldn't be that hard. I'm not like obsessive about hiding my identity. And with AI face recognition, I mean, all you'd have to do is scan my picture of any of the videos that I've done. Cause I go on public videos all the time and you could figure out, you know, I've got a Facebook account, so it's out there. Like everyone, the internet knows who I am.
+
+But it's still like there's a level of fear of what we're doing because there's no regulatory clarity and you have no idea what direction that's going to go. And like the KYC stuff is really challenging because
+
+there needs to be, in my opinion, there needs to be compromise, right? Like I believe in a decentralized future where there is less need for regulation, but only if we self-regulate ourselves. If we continue to just be like, anything goes and it doesn't matter and code is law. And like, we wanna believe that code is law, but code isn't perfect yet. And it's a long ways to go until it gets there. And who knows if we'll actually ever get there. And there has to be some sort of self-regulation
+
+on our side to create trust. I mean, we talk about like permissionlessness and trustlessness, but at the end of the day, we're trusting that everything that we've built actually does what we say it does. And we don't know for sure that there's, somebody could have slipped some code in there or somebody just accidentally put a line of code in that had a vulnerability. And we see all kinds of exploits. Like there's a difference between a hack and an exploit. And exploits are following
+
+rule of code of code is law. But they're accomplishing goals that are outside of the consensus of what is intended. And Ethereum encountered that. And that's why we have Ethereum classic. And so there's always going to be this disparity of people who, you know, believe that there should be no KYC and that everybody should be able to be anonymous and there should be no accountability, no consequences. And if you get, you know, if something bad happens to you, that was your fault. And
+
+Trigs 
+I guess that's not a world that I want to live in, but I also don't want to live in a world where everything is just controlled by Big Brother. So that's why I try to hold myself accountable and I try to hold everyone that I work with accountable to encourage that like mindset of self-regulation. And I don't know if that really, you know, directly addresses your question, but I guess that's where my mind went when you asked it.
+
+Citizen Web3 
+No, no, no. And I did want to ask you your opinions about Validities in KYC. It's a topic that I like to ask about. I guess it's a good place, though, to ask you something like this very simple question. What is a decentralized autonomous organization for you? What's a DAO? Could you explain to me, to all the listeners, without, you know what, let us do this. Make it more difficult for you, because I see you already like, I'm prepared for this. But let's make it more difficult.
+
+I'm 16, tell me what a dawa is, but I'm 16 dude, I'm still in high school
+
+Trigs
+Uh, yeah. A DAO is a dream.
+
+That's what I start out with. A Tao is a dream. It's not something that's real yet. It's an idea of something that's possible. And it is something that requires intention to build. And experimentation, that's another big part of what a Tao is. It's an experiment. Anybody who wants to be a part of a Tao needs to understand that they are joining in experiment that might fail. Cause just like any business.
+
+99% of dows are gonna fail because they don't know what they're doing. They're trying things to see what happens, but they don't know what they're doing. But to more clearly define it, I think a dow is...
+
+So let's break it down into the three parts. So it's decentralized. Well, nothing is really decentralized yet. We're trying to figure out what decentralization means, but the goal for decentralization has to do with distribution and accessibility. So a decentralized organization doesn't have barriers to entry that prevent people from joining. Anyone can join a DAO and be a part of it to some degree. Autonomous.
+
+Um, the idea of autonomy to me is that you're not told what to do. If you try to join an organization that says it's a doubt and they tell you what you can and can't do, then it's not autonomous.
+
+Trigs 
+But there has to be some level of organization, which is the final part of it. So it's not like you can't just it's not all chaos in a decentralized autonomous organization isn't just a bunch of random people doing whatever they feel like. There has to be some structure so that organization is like a collection of values that everyone holds to be true. They don't have to stay the same. It can grow and evolve over time, but it is a result of consensus. And so as a distributed group of people.
+
+join a collective and they all start presenting their ideas and their values and then they come to a consensus around what they want to focus on as a group that is forming a DAO
+
+Citizen Web3 
+I like that. I like that. It has a lot to it. I must say that I loved when you started with the dream. I loved it. I loved it. It was a very good 16 year old. And it's very good adult explanation, to be honest, too. So why not bought a dream part? I think I know. No, but it's true. Sometimes people give you know, blockchains this magical. I hate that. And I mean, I've been talking about blockchains publicly like yourself for a very long time, really.
+
+But what I hate is when people start giving this like mystical things that you don't need to do that. You can make it sound Well, it is what it is. You can make it look grand without Pretending it to be some Fairy dust that it's not anyways um So let's shift the focus. Sorry. Did you want to? Say something. No, sorry. Sorry. Um, let's shift the focus a little bit about like, you know
+
+how you introduced yourself and in the first two minutes you said that clemedes there we go the correct pronunciation uh runs a decentralized uh there's a dao on top of clemedes how does it let's reverse like and talk me through it talk me through it and please i would love to understand how you guys work
+
+Trigs 
+Yeah, I would too. It's a challenge. I mean, DAOs are, like we were just talking about, they're undefined. It's an experiment, right? So I wish that I could just say, like, give you like the five minute spiel that just clearly outlines exactly what Cleomedes is, but it's not possible because we are a decentralized, like a distributed group of individuals.
+
+who all are autonomously just stepping into the space and doing what we think matters and trying to come to some consensus around it.
+
+And, um, it's like right now we're doing our year end retrospective and looking back on the last year and examining like what worked, what didn't, what were our goals, did we achieve them to try to examine like who we are and create some definition around what we want to do going into the next year. And so I, like right now I have absolutely no definition of what KaleoMedes is because we're in the process of reevaluating that. And I think that's an important part of, um, every organization really, but for
+
+I mean, we created a constitution. That was one of the first things that we did, was we created this constitution and we published it as an NFT on our, you know, multi-sig. And that constitution, it is just like an idea of what we could be. And it has some concepts around how we could organize. And a lot of it didn't really necessarily play out the way that we identified it in the constitution. And so we're gonna be revisiting that and reassessing, you know, what we are and how we define our organization moving forward.
+
+what Cleomedes is to me is that it's a playground for people who care about this ecosystem. I mean, the one thing that unites the majority of us that are involved in this project is that we very passionately care about the cosmos and we believe in the narrative of the cosmos and we want to do whatever we can to keep growing and perpetuating, you know, this ecosystem that we're a part of and how we accomplish that is by everyone listening to each other and
+
+Trigs 
+approaches we're going to take moving forward. And it's a very flexible dynamic thing that changes over the course of months. I mean, you never know what's going to happen in the ecosystem. I mean, all kinds of crazy stuff happens almost every day, and we just have to react to it and adjust and keep moving forward.
+
+Citizen Web3 
+A side question, but it's a very short side question. I think you already mentioned it a couple of times that it's only Cosmos. You guys only validate for now. You're only validating Cosmos chains, right? You don't validate anything else for now.
+
+Trigs 
+We do have an eth node running, but it's not funded We just spun it up because we wanted to be able to join in like the injective set and some of the other EVM Chains that require an eth node We are looking to expand into other chains We would like to not just be cosmos oriented But cosmos is a very accessible ecosystem and so for our small size and the fact that we're self-funded We have no VCs. We have no external investors We don't have any institutional partnerships that are gonna be like here
+
+Citizen Web3 
+So you'll do.
+
+Trigs 
+There's a big chunk of money to get your validator going. So Cosmos kind of makes it accessible for us. That's where we're focused.
+
+Citizen Web3 
+And let me give you everything that you guys don't have all of that. Because believe me, when I say the amount of stories I have heard about people coming on this show, big guys, like you say, and publicly say, hey, I wish we never did have those PCs, because it's not the best thing in the world. But back to the conversation we were just having, if it's okay. So what is it for a normal user? Not for myself, but for a normal user? I mean, I can like...
+
+and understand and joke about it. But I don't want to make jokes. I want to understand really. I want, I don't want to understand myself. I want everybody who hears it to understand also what is the difference between Cleomedes today and any other validator that doesn't call themselves a decentralized validator. Like how would a user be able to recognize the difference?
+
+Trigs 
+Yeah, I think the biggest thing is transparency.
+
+everything that we do is completely public on the blockchain or in our discord or, you know, whatever tools we might move to because hopefully we can get off of discord because it is definitely not a decentralized tool, but it is it's the most accessible tool to engage a community. So we use it. And I'm constantly does as a business developer, I've got like five projects in my pocket that I'm just like trying to get to replace discord, like how can we get discord out of our lives? But that's
+
+And there's so many validators that do great things for the ecosystem, but you have no idea what is going on behind the scenes. A lot of times you don't even know if they have investors or VC funders. You look across the validator list and you see the commissions and the delegation quantities and sometimes it's confusing. How do you guys have a 50% commission rate and still get this many delegators? Where does that come from? It's just like things don't add up.
+
+we maintain 100% transparency. Every single commission that we earn on every single validator flows through our multi-sig and every single expense that we pay out, every, you know, everything that monetarily that happens in our organization is completely trackable on the blockchain. And so everyone knows what we're doing with the commissions that we're making. And I think that's a really important part that I would like to encourage more validators to start doing because transparency is one of the most crucial components
+
+to have incredible neutrality. You know, in Cosmos, we have this massive issue with like, there's the top 10 validators that are the same across every single blockchain, and nobody really knows their intentions or their motivations, and yet they entirely control the decisions that are made on every single chain. Any controversial proposal that gets put up, they're the ones who decide, and we have no idea why they're making the decisions they're making. So that's the long story.
+
+Trigs
+The wrong answer to the short answer is transparency.
+
+Citizen Web3 
+Uh, please go on as long as you need man that this is actually what i'm looking for But uh just about intentions i'm gonna make a second of self-advertisement guys If you want to know the intentions of the big guys This is exactly what we've been recording these shows for go on the episode lids You will find p2p steak fish everybody before they made it big you will find them there So some of them I can tell you will discover very crazy intentions and things about that. Yeah, sometimes Yeah, makes you think but anyways
+
+By the way, as a side note about Discord, I deleted all mentions of it. I still have the Discord server, but I deleted all mentions of it today on my website because I was like on the citizen web three website, because I was like, no, no
+
+What what about do you know i'm gonna put like for a second my um I've been talking to a lot of validators hat on for a second and play a little bit devil's advocate. Maybe um So do you know post human validator the post human dvs because they're the second guys to do Um, so their approach to this create the central as validator is a bit different from yours as far as I understand like your approach Is saying okay?
+
+Trigs 
+Yeah, yeah.
+
+Citizen Web3 
+We're going to start at the very top, which is the operator, and try to decentralize the operator. But still, now I don't know, because I don't know the details, but there are people who run it via DAO, and everybody can see it. But does that mean somebody can join your DAO, for example? If I, for example, wanted to be a co-owner, I'm doing some brackets here, right? Quotation, sorry.
+
+Trigs 
+Mm-hmm.
+
+Citizen Web3 
+Can I... yeah, man, I'm lost. I need some more info. Sorry, sorry. I'm sorry about it.
+
+Trigs 
+Yeah, no, for sure. Yeah, very much so. I would say that you're correct in saying that we can't post human and us are going about it in a very different way. One of our
+
+Um, team leads right now actually initially tried to join the post-human team. They joined, they started delegating to them and wanted to be a part of the community and joined the Dow, so to say. And they were like, how do I get involved? How do I contribute? And the team was like, uh, sorry, we're not accepting contributions from the community, um, at this point. And he was like, Oh, so I can't really be a part of the Dow. And so then he found Cleomedes and now he's one of our team leads. Um, and so that's very much.
+
+to do is open the path towards community contributors because not everyone can operate a validator. I mean, the reason why I'm a part of this team is because I don't have the technical expertise to run the infrastructure. I would love to be, I always wanted to be a part of a validator because I, like you said earlier in the show, validating is the big business of blockchain right now. And I recognize that very early on, like validating is where it's at. We need to like work on this part of this layer, the validator layer, build that infrastructure so that the businesses that come later
+
+to work from. And so being a part of an organization like Clio Mides for me is, you know, the step forward into Web3. But I couldn't have done it without access to a decentralized group. I mean, I probably could have like found a team that was hiring a business developer and just joined a centralized team and been a part of a larger organization. And sometimes I wonder if maybe I should have, because this is really hard doing it this way. It's really hard. But I've never
+
+the hard path and it's exciting to me to try to figure out like how do we make this work? It very much so is an experiment and I have no idea how it's going to play out. And we've been kind of like backpedaling over this last year and realizing that we do need to centralize our team a little bit more and have a little bit more like structure in the center. We went a little too decentralized too fast, which is was a really common problem and a lot of DAOs realized that over the last couple of years that you can't just like go full decentralization. So that's kind of
+
+Trigs 
+year is to create a little bit more structure. But we still want it to be open because I personally recognize that the biggest thing that CleoMedies needs is more leadership. And I want to encourage people in the community. That's why I'm always out there, you know, engaging with the community, talking with people on governance posts, and, you know, trying to find the leaders that are out there. And I want to attract them to our projects so that they can join us and help us grow as well as help the ecosystem grow. Because
+
+we can't do it just ourselves. And so that's kind of like the ladder, I guess, is like anyone can it starts out at the bottom, just be a delegator. If you want to be a part of the DAO, you can just be a delegator. You'll you'll earn some access to the DAO, you'll become a member. And that's all you have to do. But if you want to do more, you can start making some memes or making some tweet threads or whatever, like there's this gradual progression of contributory increasing your
+
+Contributions to the project and the more involved you get if you find yourself in a niche where like you have a passion That you really value so like the reason why I'm on this podcast is because one of our community members has worked with you guys and He saw the work that I was doing with I was trying to like get a podcast going or do some like Twitter spaces and He just volunteered to help and so now he is growing into a position of leadership in our organization
+
+assisting me in developing our media presentations. And who knows, someday he might be in charge, or maybe that's as far as he goes because that's all he's interested in. And that's the structure that we want. We want accessibility so anyone can just follow their passion and take it wherever they want it to go. We want to support that kind of community initiative.
+
+Citizen Web3 
+This is music to my ears. I love hearing that when I work. And I know that it's not what should be paid attention, but I'm human like everybody. And of course, I'm going to make that comment. I'm sorry, but this is music to my ears. When you say that somebody who works with me is now like, I'm like, yay. But of course, I know who you're talking about. I can guess, I understand by the Twitter comments, but it's awesome. I love when things like that happen. And by the way, you know, but just to make it clear for myself and for everybody as well,
+
+So you said if you stake twice, you kind of get access to the DAW. So but just to really clarify the 101 here, so I go on Kepler or whatever it is because this is cosmos, right? I stake and then how What is the next point of? Entering the DAW like what is the next step?
+
+Trigs 
+Yeah, so we do a token distribution. So our DAO is managed by token. And so all of our delegators receive a share of token for their portion. We do a bunch of math calculations and figure out our entire structure and then break it down to how much each delegation is a portion of the greater whole across all of our networks and then distribute a certain amount of tokens to all delegators. And it's really small. We're not trying to, I mean, to some degree,
+
+write more revenue, that token might become more valuable. But the idea for the delegation really is just to get delegators engaged and have a sense of ownership in the validator by having a token that represents governance as well as future revenue share.
+
+Citizen Web3 
+Perfect. And just like a small note before we go into the Blitz, we have to do it with the Citizen Web Tree because currently Citizen Web Tree actually has a share in the posthuman validator stake. So I think I want to keep this up. I want to keep on doing it because it makes sense now if we're all building the same thing here. So yeah, I need to not... I already made myself a note to do that from the Citizen Web Tree account and to do...
+
+enter the Tao. So yeah. Um, man, a small bleeds, uh, well, small, it's got five questions. It's not that small because it's, it's never a bleeds. I call it a bleeds, but it never is. It's something we talk about for five, 10 minutes with people and I love it. And I'm going to ask you five questions and give me one answer for each one, but feel free, of course, to elaborate on the answer if you wish. So, um, okay. Okay. Uh, yeah, let's start
+
+Citizen Web3 
+book a movie that recently had some sort of influence on you or what you do currently in terms of your life and your work.
+
+Trigs 
+Yeah, I actually recently have been watching through the whole Walking Dead TV series, which said Booker movie, but I mean, it was a webcomic and TV show.
+
+It's been really fascinating to me. I mean, I don't know, my personal opinion is it's not very good. I didn't watch it. I watched the first episode when it first came out and then after that, the second episode, I was like, ah, this is dumb. I don't want to watch it. But I got it. A friend of mine got me back into it. And so I've been rewatching it and it's fascinating seeing the portrayal of human coordination.
+
+and the different types of human coordination that happen in a post apocalyptic world, like building dows and then watching the show just the whole time like, wow, I'm like learning so much about how to like humans work together and collaborate and coordinate. And I don't know, it's just really interesting looking at it from that perspective of like thinking of all the different groups and walking dead as individual, you know, kind of dows or whatever.
+
+And the natural leadership structures and all the challenges that they faced and, you know, leaders that don't want to be leaders, but they have to be because they have the skillset that's necessary and all that kind of stuff. So, yeah.
+
+Citizen Web3 
+I'm gonna reveal a secret. I watched the whole show just pretty much for the same. I like post-apocalyptic shows pretty much for the same reasons. I like to see how they solve the problem. Like, that is my thing. Give me one project, and I'm talking about the blockchain project currently. Please don't say Bitcoin, Ethereum, Cosmos, because that's a bit... Well, you can, of course, but it's up to you. Please then give me an explanation. Give me one project, a blockchain project, that arouses...
+
+curiosity from within yourself personally.
+
+Trigs 
+I recently came across a project called Galactica. They're building an L1 chain on the Cosmos. It's like a network state concept. If you're familiar with the term network state, they're calling theirs the cipher state. But it's been an absolutely fascinating experience getting onboarded into this community because it's so different from everything else that I've experienced in blockchain.
+
+Citizen Web3 
+I can't believe how small this world is. This is like an ironic. This is where we are. We are in the middle of launching a Galactica node as well. So like, yeah. The world is small. What can I say? Sorry, I'm sorry I meant to this reaction, but it was just funny because it's just really, as it happens, it was really like, yeah. Yeah, the world is very small. Give me one technology direction. It could be blockchain, could be AI, could be machine learning. I don't know, whatever.
+
+Trigs 
+Nice.
+
+Citizen Web3 
+that you think is very interesting to watch as you are part of it. Like you are happy to be alive when that development happens.
+
+Trigs 
+AI personal assistance is absolutely the most fascinating thing to me. I've been fantasizing about AI personal assistance ever since the original Iron Man movie and Tony Stark interacting with Jarvis. It was just like, to me, it was obvious that Tony Stark achieved the success that he did because of the power that Jarvis was able to provide. And if every single person in the world could have access to a sovereign AI personal assistant, like that's the part
+
+comes in. It can't be some corporation who's building some AI tool that runs on your phone that's tracking everything you're doing and sending all of that data back. You know, it has to be local, a local AI on a smartphone that has a secure enclave that you control. And you know, that's the important part. But once we get that technological layer in place, that personalized AI assistant is going to revolutionize every individual's ability to be their best self.
+
+Citizen Web3 
+Man, I've been playing music for too many years. I don't know what to say, man. It's just like you. I cannot play devil's advocate because that's what I think. So you're not allowing me to be me. I'm joking, of course. And give me one motiva... No, this is going to be the next two are a bit more difficult. Well, at least that's what people say. Give me one motivational thing that helps tricks to get out of bed every day. Think about decentralization. Keep on building.
+
+Trigs 
+Yeah
+
+Citizen Web3
+Dowers and whatnot was something motivational
+
+Trigs 
+Um, just the knowledge that I can do this. Like if I wasn't doing this.
+
+I would have to be doing something else that makes me hate my life. Like most people that I know. Most people have like my, a good friend of mine, what gets him out of bed in the morning is the espresso machine that he has set on a timer. He hears that the water bubbling and he knows that there's espresso getting him out of bed. And to me, that's just like so demotivating because that's the most exciting part of his day is to just get a straight shot of caffeine right into his veins. And for me, like I wake up thinking about.
+
+that I'm going to solve that day. I woke up this morning thinking about this podcast, and that got me out of bed because I was excited to talk to somebody who was interested in my thoughts. And so that's the motivation for me.
+
+Citizen Web3 
+Thank you. And I love that you said that was very nice and really, really connected to that again, because yeah, I don't know, waking up to, I mean, I don't want to diminish your friend, but, you know, having the best part of you, you know what, I'm going to share something else. There is, there's a guy who's been on the podcast twice, I believe. Yeah. I think the Willy from the Fox, Fox chain and yeah, all that. And, and, and the first time it was on the podcast, he said that
+
+When I asked him how he is, he said, I'm having the best day of my life. And then we went on the whole conversation and apparently it was so, so it's such a imprint on me. He's been saying for five years and I've checked with people that know him on different podcasts. That is true. People have been really saying that it's true. The guy says every day for five years when somebody asks him how is I'm having the best day of my life. And he says, well, I am living it because I've been saying it for five years. And that's exactly what you said right now. I think it connects to, I don't know, in my head at least.
+
+So, last one. Dead or alive, real, made-up, cartoon, developer, I don't care, a persona, a character, a real person, a real human being. That you're in your lifetime, not your guru. I personally don't believe in gurus, so I always try to highlight it. Somebody who inspired you to do somewhere or somehow to do what you are doing today.
+
+Trigs 
+I would say the, probably the most inspirational person in my life has been my grandpa.
+
+He, I grew up on a farm out in the middle of nowhere in the middle of the United States. And he, you know, lived on the farm with us. So as a kid, he was like my best friend and he was always just a huge inspiration to me. So he, he went blind and deaf in his like 50s and 60s. It kind of just like faded out all of a sudden. And even though he lost like two of the most key senses that a human being relies on, it never got him down. He still taught me how to ride a bike. He taught me how to tie my shoes.
+
+It's just like a massive inspiration for me in my life and continues to be as I go forward in life.
+
+Citizen Web3 
+Man, that is a very touching thing. My grandfather is interesting. I can connect to it a lot. And yeah, it makes me very sad to think. It made me very scary to see my grandfather have dementia. And it's not because I was scared of what he was going to do. Because he has inspired me. I understand what you mean. It's a person who has inspired you. And then you see that happening, and there's nothing you can fucking do.
+
+Nothing. And man, thank you for sharing that. That is a very, very touching moment. And thank you for sharing everything you have shared Triggs and for all your thoughts and for keeping on doing. You know, I hope that you will go away thinking about the motivational thing that we spoke about. And yeah, man, thank you for coming on. And thank you for talking to me Triggs.
+
+Trigs 
+Yeah, I appreciate it. It's been great. I've been enjoying listening to your podcast and you know, just appreciate the opportunity to continue talking about myself because I'm hoping that other people can hear this and be inspired themselves. And you know, you don't have to join ClueMedies, but I think that it's important for people to follow their passions and, you know, put yourself out there and, and see who you attract. Don't be afraid to just be yourself and, and get a community of people around you. And who knows?
+
+you might change the world.
+
+Citizen Web3
+Thanks, man. Please don't hang up just yet. This is just for everybody. Thank you guys for tuning in, and hope to see you, hear you next time, guys. Thanks. Bye. 
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+

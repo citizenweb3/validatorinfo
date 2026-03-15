@@ -1,0 +1,486 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/samhart
+
+Episode name:
+Perfect Governance, Art and Ethics with Sam Hart
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of Citizen Cosmos podcast. I have with me Sam Hart today, one of the authors of the Atom 2.0 white paper and not only Sam. Hi, welcome to the show.
+
+sam_hart 
+Hi there.
+
+Citizen Web3 
+Can you, in your own words, would you like to introduce yourself, tell us a little bit about what you do and what you're currently working on?
+
+sam_hart 
+Yeah, I'd love to. So my name is Sam Hart. I've been working at the Interchain Foundation, specifically the subsidiary of the Interchain Foundation, Interchain GPH, for about three years. I was the first hire at Interchain GMPH after the tenement engineering team moved over and the GMPH was formed.
+
+my mandate when I joined was basically to glue the ecosystem back together. At that time, the Cosmos hub had launched, but IBC was not shipped. And there was still a couple of major milestones that needed to be hit before the full technology stack was ready. And
+
+And after it was ready, there was, you we need to kind of kickstart growth in the ecosystem. So I've done kind of a little bit of everything at the Interchain Foundation. ran the grants program. I did investments on behalf of the ICF. I did a whole bunch of product work. I had a big focus on
+
+governance and DAOs. So brought a number of teams into the ecosystem, including Haifa. And we kind of worked to revamp the Cosmos Hub Forum. You know, talked to different teams about joining the Cosmos ecosystem, did various kind of facets of BD.
+
+lot of connecting and coordinating and just making sure that work was scoped and the pieces all fit together and then that there was context between the many, many different core teams. About six months ago, we felt like we hit some inflection point where Cosmos was really starting to pick up steam and
+
+sam_hart 
+there were more and more people coming into the ecosystem and there was kind of this positive feedback loop happening. And at that point, I was assigned to work on the Cosmos Hub because that had been a bit neglected for a while. And it really is a kind of cornerstone of the ICF's strategy. And it's really important for the ecosystem. It's the primary funder of public goods right now. And it has a kind of symbolic importance.
+
+you know, as many listeners to this podcast will know it, you know, it was kind of unclear what it was and what, what was supposed to do. so spent, yeah, the last six months talking to as many people as I could, kind of synthesizing, refining, incorporating new ideas, throwing out other ideas and,
+
+And so I was kind of a coordinator, a nexus point for the creation of this Adam 2.0 paper. And I'm by no means the sole author. It is really like there's so many voices that have kind of in to contribute to that. But I was one of the primary synthesizers and people who were kind of pushing that process forward.
+
+Citizen Web3 
+Would you say that what you do can be referred to as ecosystem development?
+
+sam_hart 
+Yeah, my title right now is Cosmos Hub Strategy Lead.
+
+But prior to that, I didn't really have a title, for better or worse. It was just kind of make sure Cosmos is successful, whatever that may be. But yeah, my lens and kind of strategic framework is very much from an ecosystem level.
+
+Citizen Web3
+Because I think I think I you know, the internet is a magical place and you can find a lot of information about a person so for all the listeners out the sum is definitely being very shy about what he does and the amount of things he does for the cosmos ecosystem because the part of things I have to ask you about that I've written down here is like hundreds and hundreds of them and it's not just the cosmos ecosystem to be honest There's just a lot of things you do in blockchain, which is really cool in my opinion But before we get to to to any of them
+
+you mentioned, that you were the first hire of, the GMBH ICF, right? Is that the one in Berlin, the office that in Berlin? no. some, some of all, sorry, some of our listeners know, but, our very first episode was recorded in that office. it was with, with Gavin, online, but yeah, it was right in the office when during COVID and there was no one there.
+
+sam_hart 
+Yes. Exactly.
+
+sam_hart 
+cool.
+
+Citizen Web3 
+It was just me, Anna, and the girl who was working on the administrator. yeah, it was funny. Some, I have a lot of questions for you, but let's start with some of the easy ones. Considering when you go online and you start to look what you do, and you can see that you have a lot of research work.
+
+Citizen Web3 
+You do a lot of R and D sorry work a lot of implementary work, implement whatever is the word is here work. What is your blockchain story though? How did you, because I was trying to trace like your blockchain origin to how it began and what was the first shit coin you bought, know, but it doesn't say that online. So I'm curious, how did it, how did you get.
+
+sam_hart 
+yeah. So my, academic background is in chemical physics. I started doing protein folding research when I was, when I was in college. so I got kind of, protein folding is a really interesting domain because it, it's basically a kind of combination of computer simulation and, you know, I learned how to program through that.
+
+and like thermodynamics, which is like very kind of statistically driven. So I had a relatively strong statistics background. that both of those things have kind of like carried forward in subsequent work. After college, I moved to, I wanted to move to New York and I got a job doing genomics research, also computational, also statistically driven.
+
+So I was doing like a high throughput sequencing and like, you know, machine learning analysis on, on human genomes. There's kind of a whole saga there that I won't go into, but, you know, learned a lot about, you know, a lot about how kind of nature is.
+
+kind of driven forward and how the human body and ecosystem functions. And then kind of midway through that, my career as a scientist, a couple of things happened. One, on the side, I was actually running an art magazine. was kind of art and technology.
+
+I moved to New York right around the time of Occupy Wall Street. And so there was this kind of like group of kind of politically minded artists and activists that I was very connected to. And that had a big impact on my ideology and my interests. And I did a number of projects for them, with them and kind of
+
+sam_hart 
+edited and helped them kind of push their projects forward. meanwhile, there's also, you know, the financial crisis was also the kind of catalyst for things like Bitcoin as well. So I see these as really kind of parallel developments, like the kind of Occupy Wall Street branch and the kind of motivation behind things like
+
+Bitcoin or really that the kind of catalyst that allowed those to be kind of adopted and like a substantive community to form around them. So I kind of got involved in a little bit of both while I was in New York. And interestingly enough, those kind of activist artist communities and the Bitcoin communities had like certain crossover points. And that's where I kind of found myself like most interested.
+
+So I worked on a number of projects that would eventually become like ICOs effectively. And I was helping them kind of with their economic modeling system design and helping them write their white papers. And I just had a lot of fun doing that. So for several years, I was basically like working two jobs. I was kind of like in the lab doing my research and then...
+
+in the evenings I would kind of work on these other projects and eventually got a full-time job offer at an organization in Berlin and used that as an opportunity to kind of like make a break with my research and move abroad. that's, yeah, I mean, that was kind of my entry into
+
+crypto like really full time. That project kind of quickly decentralized, it kind of dissolved. And so I kind of moved back into doing consulting work. And then when the pandemic started, Billy Rennecamp, who's one of my closest friends in Berlin, he was one of the tenement employees and had moved to the GMPH. And he asked me to join.
+
+sam_hart
+and GPH and the rest is history.
+
+Citizen Web3 
+I knew you were going to say that. No, think everybody knew you going to say that. I'm joking. To be honest, Billy is amazing. We had an episode with Billy, I think one of the most obscure episodes. The conversation was like, it was good. I liked it. It was really a long time ago.
+
+sam_hart 
+One of my favorite humans, period.
+
+Citizen Web3 
+Billy's cool. Billy's cool. I love it. Man, so many things. I keep writing notes when you talk and I don't know which part of them to go for. Let's go this way. I know that you worked for phone, by the way. And well, at least so does the internet say. And if it says on the internet, it must be true. So it's interesting because... Sorry, sorry, sorry, go on some.
+
+sam_hart 
+Yeah, that was.
+
+sam_hart 
+it's just, yeah, that was the first white paper I worked on basically.
+
+Citizen Web3 
+Aha, because it's, it's, I can definitely say that for me as, somebody who is interested in R and D a lot and in communication and, know, I, I see blockchains as, a communication tool, regardless of whether they're digital nations or not, you know, they're a communication tool and it's interesting. Foam is all about, you know, the proof of, time and, and, and, and proof of location, sorry. And,
+
+And the time mechanism that is there in Builder is amazing. And I was just curious because you did work for them and you did say you took part and participate and write in the white paper. Could you share your views on the future maybe of how blockchains will intercommunicate for you? Not necessarily IBC, just I'm talking about how you see it as a big picture because I think those things connect, but even, I don't know.
+
+I want to know your thoughts.
+
+sam_hart
+Yeah. Maybe for the listeners, I can just say a word about foam. So like you're saying, the primary kind of value prop was this proof of location, which you can think of it as an alternative to GPS, but it was kind of bootstrapped through a mesh network of low power wide area network transceivers.
+
+sam_hart 
+Super cool project. They're still working on it. It's been kind of a slow process because the technical design is just extremely complex. There's custom hardware, kind of cutting edge, low latency, like triangulation calculations that need to be produced.
+
+And I just saw that they had a prototype zone that has been bootstrapped, which I'm really excited about. So yeah, I am very interested in crypto projects that kind of touch the real world like that. Maybe I'll say one thing that I thought was so cool about this project that ended up in the paper, but.
+
+So the idea is that you can create these, if you have like four nodes, physical nodes in space, you can do these triangulations between them and get their kind of relative position to one another. if you have two neighboring zones, then you can kind of look at the overlap between them and then kind of build this like contiguous.
+
+location based, network. but one of the coolest thing is that you can, you have this kind of, perimeter, where you have provable location and you can basically, insert or, or you can basically, create an address in a location that doesn't have a,
+
+that doesn't yet have a node and allow a new node to be set up and mine network activity. there's this kind of methodology by which you could expand the mesh network. So I thought that was just like totally mind blowing. I hope they actually go for that at some point. But I think that it's a good like...
+
+sam_hart 
+I think it shows the power of these kind of incentive technologies and particularly as they touch the real world, like you can start to build out new infrastructure and kind of incentivize services or resources that are being offered in specific domains. So I see that.
+
+as something that we're definitely going to see in the future. And there's this of compounding effect. Once you have nodes in specific locations or the ability to layer on specific assurances, that allows you to bootstrap.
+
+one type of trust from another type of trust. And so I think there's going to be a kind of multiplication effect that happens there.
+
+Citizen Web3
+It's funny that you mentioned that because before that you, I'm going to talk about the defects and the communication because you mentioned art and that art for you was like a big connection and it's a big thing for you because it is for me too. And it's interesting in cyber, they have this like thing called the brain, is, it's just a way.
+
+to show what links the person has account created. And it shows an image of those links. And nothing to do with cyber here, but I was talking with some, there's a place here in Madeira where I'm located, an art place, which I help a little bit sometimes. like we have, and then.
+
+Citizen Web3 
+Yeah. And I was showing them like out of curiosity, we're having this conversation and I was showing them those pictures of a brain and they don't have anything to do with technology. guys like they are. you the first thing when you ask what do think it is, the answer is obvious. this is like a cell, a neuron cell network. I'm just trying to say that art and communication. And, you know, I know that you mentioned genes before as well. And, you know, it says
+
+Citizen Web3 
+I'm sorry, I'm not religious and I'm sorry if I will offend anyone, but it says, you know, God created humans in his eyes. computers are, we are the God computers as our humans. We have created them in our image. And of course they resemble. And of course it's about art. Of course it's all like a huge connection for me. And just like, bam, you know, and I don't know, I connect a lot to what you say. That's what I'm trying to say. It's resembles, not resembles, but resonances a lot. So yeah. I know.
+
+I also noticed you had like a scuttlebutt contact and one of your websites, is not everybody has that and it's unusual. Do you use it a lot?
+
+sam_hart 
+I used to use it a bunch. I haven't recently just because I've been super busy. And there's also a bit of churn in the network clients that they use. the community there is really unique. And I've really enjoyed time on there. And I think that the architecture, the protocol architecture is extremely elegant. I'm just a big fan of the design of the network.
+
+Citizen Web3 
+I'm curious if you're familiar with Urbit as well, by the way.
+
+sam_hart 
+Yep, I know some folks at Urbit and there's a lot of similarities for sure. And I have also played around with Urbit.
+
+Citizen Web3
+That is...
+
+Citizen Web3
+Yeah.
+
+Citizen Web3
+It's, I mean, the reason I'm trying to get in all of that is to be honest, is it's all about communication. And it's all about, you know, I know you had some work as well on singularity that I thought you write some things about some of you about, well, I was going to ask you about singularity because I saw that you were writing about like biometrical data onto blockchain. think I found the work that you did.
+
+Citizen Web3 
+which you were talking about how, and I was curious on whether like you think that some of the modern projects or today's blockchain projects, what they try to do is to say, let's say, and it's again about communication, let's take some DNA data or whatever, put it on a blockchain and then let's get on with it. Now I'm curious about your thoughts on this and I'm curious whether you think this kind of thing is...
+
+Citizen Web3
+acceptable or that's the opposite, it's something that's going to lead us into a wrong direction.
+
+sam_hart 
+I have some pretty specific views on this, guess. I I've worked with PHI patient data. So I've handled like human genomes and I...
+
+It's a bit of a tricky area. one, it's obviously intensely personal. If you, and just to kind of illustrate this, there are genetic markers that are indicators for the heritability of alcoholism.
+
+for instance, or depression. And I don't, you know, I'm pretty strongly against, you know, advertisers getting that information and doing targeted ads against that kind of, you know, profile. But at same time, we shed DNA, like, all the time, everywhere. So it's kind of like,
+
+universally available in some sense.
+
+I think there's like a care that needs to be taken with this data. it's kind of like, it's kind of on, you know, us as a society to kind of manage that data in a way that's humane. More than that, if you are going to publish your genetic data,
+
+sam_hart 
+you have to think about the impact that that has on your relatives effectively, because that contains a significant amount of information about your parents, your siblings, your children. And so it's not even a personal, it goes beyond a personal choice. It's actually, you're making a choice about people that you're related to as well. So.
+
+Again, that kind of like adds to the complexity of the problem. I am pretty against unilaterally publishing genome data on the blockchain. I did work with an artist who was actually interested in, he published his own genome. But one of the first things that we had a conversation about was like, okay, who is this impacting? You should have a conversation with your family and making sure that you're getting consent from them.
+
+for doing so. And the whole project was kind of about that tension and the kind of complexity of working with biometric data. So I don't know if that was like a clear or concise answer to your question, but be that as it may, there's like a lot to unpack there.
+
+Citizen Web3
+I understand. It's just a lot of the topics that like, know, when, I do have a point where I want to bring it to Atom 2.0. It is going to be like a tricky point to bring it, but you know, I'm flowing there. I'm flowing there, you know, it's like, because I'm trying to get your views on certain things and then to ask you the question, you know, I'm cheeky like that. But I did say a little bit, I have to be devil's advocate.
+
+Citizen Web3 
+But no, but to be honest, everything we're talking about now, it's not about devil's advocate. It's about, you know, it's about things that in my opinion, make up values that we act upon and those values, know, like a lot of the reasons why the podcast that we do is about the people and not about the projects is because well, we want people to understand.
+
+what is going on and if blockchain is about communication, if art is about communication, if this is all about communication, then we need to communicate. And if we need to communicate, we want to understand what are the values behind the person so we understand how they communicate and how they will communicate. And this is kind of like where, okay, I'm going to try, I'm still going to ask you about other things if you don't mind, but like I do want to ask you about one thing about Atom 2.0 and communication.
+
+I guess one of the biggest like,
+
+Citizen Web3 
+arguments against Atom 2.0 that I've seen so far. And it's not an argument that diminishes the good things that offers, not at all. But it's an argument about communication specifically, and it's about the creation of the treasury, and it's about the creation of a specific, let's call it a multisig. And, you know,
+
+In communication, in expansion, you know, like, I know we didn't talk about singularity, we didn't talk about like all those things, but like, the idea is about expansion, the ideas about things, and it looks like in nature, it's always about that. It's always about, you know, boom, boom, more bigger, more knowledge, more expansion. And that seems that the way the blockchains work, you know, we have like a network and
+
+You know, it expands, wants more knowledge and the more it gets, the more value it gets, you know, Metcalfe and blah, blah, blah. So one of the biggest arguments that come back to the question now, sorry for making it so long, is the creation of those committees. And what I want to understand is it seems that for somebody who's so concentrated on communication like yourself and all the R &D work that you do, it seems that that's a reversal.
+
+Citizen Web3
+And I want to get like inside your head here, if it's possible, to understand why is that, can you explain in your own words why you believe that this reversal is needed in this case and why it's more efficient than us being a chain and deciding things as an on-governance chain? If you could, of course, if it makes sense at all what I'm saying, and if you could, I'm sorry for being so long.
+
+sam_hart
+No, I think I get the question.
+
+sam_hart 
+The paper tries to structure itself in an argumentative form. It's basically like, OK, here's where we're at today. We're building this secure scaling platform. That's like Interchain Security Liquid Staking. That allows us to build applications that are able to interact with other applications.
+
+in the IPC network. so that's kind of like status quo. That's what we have today. And the purported objective is to turn Adam into this Interchain Reserve Asset and to house the kind of core R &D process around the
+
+and security process around the ecosystem on the hub. that would be, know, Tendermint and the SDK and, you know, there's real kind of organizational, like, engineering development processes that we want to make a home for on the Cosmos hub. Those are all kind of like under the umbrella of the ICF right now and...
+
+And the objective is to really make it so that like the ecosystem is autonomous. It's not like controlled by the ICF. So there is some existing process and organizational structure there already. There's a team that's building Tenorman. There's a team that's building the SDK. There's a team that's starting to do the R &D process around the scheduler.
+
+and whatnot. And in order for those kind of artifacts to be produced, they need people, they need labor and resources. moreover, in order to kind of deploy Atom as this reserve asset, it takes work and capital to kind of allocate and create
+
+sam_hart 
+deal structures and to kind of like get it into the hands or the treasuries of other projects. that's kind of the problem that's being solved for is like, we know that we have entities, that we need entities, and we need to somehow make them accountable to the chain and to the Cosmos Hub community.
+
+And there needs to be more of that needs to be a balance because like ten tenor men, for instance, tenor men is not owned by the Cosmos Hub. It's like that that is a community project and we want to like invite that team to to make a home on the Cosmos Hub because it's the best place to work, because it's you know, it's going to be the best place for them to get their, you know.
+
+to kind of produce their product and get the resources that they need. so, it, Tenorman is kind of a guest in the house of the Cosmos Hub in some sense. So it's not like, it's not like the Cosmos Hub can or should be able to kind of mandate every facet of the Tenorman like work process, because this is, you know, it's a public good and there's a lot of stakeholders kind of involved in that process. So.
+
+there needs to be kind of a careful checks and balances system that balances both the ecosystem needs around specific products and the Cosmos hub needs around the kind of application specific infrastructure that's required for the hub. And that's kind of what this council assembly system is supposed to do.
+
+I'm going to be kind posting a little bit more about this, but one thing I actually have been working on this week is like kind of drawing out the accountability relationships between all of the specific parties. Because the objective is to make sure that each of these entities is able to do their work effectively.
+
+sam_hart 
+and to make sure that that work is kind of scoped and resourced by the parties that need that work to be executed. So we need to create this kind of feedback loop where parties that are doing the work are doing it in service of the people who are paying for the work and scoping it.
+
+So, you know, it's a very delicate kind of organizational structure. I totally kind of understand and respect the criticism that one of the main value props of a blockchain is to kind of automate specific functions that were previously, you know, trust-based.
+
+human relationships. But when you're talking about the creation of new software products, it's really hard to specify and automate that effectively.
+
+Citizen Web3 
+Definitely. know what you mean about software products. I recall when we were launching in 2016, the first ICO we were doing in Eastern Europe and it was a big pain in the ass to launch it. I remember that it was definitely not the same way. But then again, the technology was different. I'm sure though, I don't know how we would have acted if we had the technology of today. I don't know who were to go.
+
+You know, all full-stined, decentralized, if we would note. But no, the point. If out of curiosity, if we were to, you know, live out the fact that, you know, smaller groups have a larger surface attack, you know, of course, the bigger the chain, the more securities, the more secure the group is, the more trust I kind of have if the majority is saying one thing. If we were to abstract from that.
+
+In your opinion, in the future, for blockchains, you know, and I know you just mentioned the difficulties of writing software and the difficulties come with it. But more or less, what would be the perfect blockchain governance model that you can currently think of? Not necessarily with today's technology. Maybe we could fantasize a little bit if you're okay with it. Up to you. You could use today's technology or if you want to fantasize, let's fantasize. But I would love to hear.
+
+your vision.
+
+sam_hart 
+Yeah. So I am all for highly automated processes. Well, maybe let me step back. So I get asked a lot about my kind of view on DAOs. And I think about chains as like one form of DAO.
+
+And I basically, whenever I think about this, have this kind of like two, I have like a two by two access. Like on one axis is basically operational automation. So we do this all the time with our communications infrastructure like Slack or Splitwise or Carta or whatever. There's things that allow us to more efficiently
+
+of automate certain aspects of bureaucracy. And on the other accesses is basically the automation of organizational purpose. if you're able to, and so an entity with a highly automated organizational purpose is Bitcoin, for instance. Like it has a very ossified and clear purpose.
+
+you know, it's digital gold. And because there's this strong shelling point around that purpose, it allows for a distributed set of actors to, to kind of self organize around that purpose and evaluate whether or not what they're doing is in service of the purpose. And
+
+And I think that there's a lot to learn from projects like Bitcoin, from projects like Ethereum. I don't know that we're ever going to have that level of automation, particularly in the... I mean, Bitcoin's kind of like pretty far out on either axis there. With the 2.0 paper,
+
+sam_hart 
+We are really for the first time stating what a potential purpose might be or trying to kind of agree upon a purpose. And so over time, I would love to automate more facets of both the operational and kind of purposeful components. But we need to kind of like understand what those are in order to kind of
+
+increase the level of automation. As far as to your original question, like how, you what is my kind of ideal form of governance? I'm not sure that I have an ideal. I think that their governance should really be tailored to what the kind of utility and purpose of the machine is. However,
+
+I do think that there's some interesting ways to automate certain facets. I've been a big fan of the fork futures model for a long time. I've never seen it really implemented in a way that...
+
+that seems like incredibly successful, but I think that there's definitely something there. If anybody wants to know more about that, you should read Paul Stork's writings on doing fork features for Bitcoin.
+
+And yeah, I mean, I think we should definitely strive to have progressive automation and kind of hardening our processes in order to make the, in order to decrease certain aspects of discretionary power within the system.
+
+Citizen Web3 
+Sure. And by the way, could you, would you say that another way of looking at Bitcoin's purpose, you said the digital gold, could you say that another way of looking at it is that Bitcoin's purpose was to distribute wealth from one place to another? From one group of people, sorry, to another.
+
+sam_hart 
+That was certainly the effect that it had. I would say that was the original purpose of Proof of Work, certainly. It was a distribution mechanism. However, I'm not totally sure I would say that that was the purpose, particularly long term when the block subsidy runs out and
+
+and Bitcoin becomes like much more of like a kind of industrial process that has like very small margins.
+
+Citizen Web3
+And I see what you mean. I was just trying to see if it's possible to connect that also to like, know, governance models, I guess, you know, distributing wealth power kind of being more more spread out. And you mentioned like, how you're more or less envision not the perfect model, right? But some of the way we could move. What would you say today is?
+
+the biggest stoppage in governments, especially in proof of stake systems and primarily, what would you say is the biggest issue that we are facing and how can we approach it?
+
+sam_hart 
+This is a great question. So I would say that...
+
+the current incentive model for stakers is a little bit perverse. So there are some like incredibly talented and high performing validators that I don't think get recognition, proper compensation. I think one of the kind of good and bad things is that
+
+There's a strong incentive for validators to be kind of like marketing entities. mean, even Citizen Cosmos, like you have a podcast. I think it's super valuable podcast, but.
+
+that type of work I think like gets recognition, whereas like, you know, doing audits on releases or having like, you know, nuanced like governance opinions, I don't think necessarily gets like the same level of recognition like from this delegation standpoint. So I think that's one of the...
+
+the flaws that we should kind of work towards improving. There's a bit more of this popularity contest thing. And then just the Gini coefficient of the stake ratio, I am not very happy with.
+
+sam_hart 
+top 10 validators, like, I mean, really top seven validators, like controlling the chain.
+
+sam_hart
+particularly when Coinbase and Binance are just not participating whatsoever. It feels like there's a lot of dead weight there. So yeah, that's something I would love to see more experiments around. I was really encouraged to see Juno's kind of proportional subsidy.
+
+that they're proposing. I think that there's some challenges with that methodology. Basically, they want to give smaller validators a small subsidy. It's kind of like increasing as you go down. But I'm very interested to see the results of that effort. And I think that there's a lot more experiments that we could be trying there.
+
+Citizen Web3 
+In your opinion, should we, I mean, you mentioned Binance and Coinbase and there has been several and many, I think, still will be discussions on what to do with those volatiles and how as a chain to act towards them. In your opinion, should we enforce and punish or should we say no, we are a free market?
+
+If you guys come in here and you might not, you're playing by the rules kind of thing, but should we look, I mean, the question is this, should we enforce and punish and regardless if it's Binance and Coinbase or a podcast validator, or should we strive to find models where the market and let the market kind of decide what's going to happen, let it flow economically.
+
+sam_hart 
+Yeah, I'm pretty strongly in favor of the latter. When you say let the market kind of decide, I think there are kind of policies that can be implemented or kind of architectures that can, that end up having an impact on the market. But singling out specific entities,
+
+and saying that you're not allowed in the system or you're being taxed or whatever, I think it's going to have, I mean, it feels very discretionary. okay, now we have to decide what an exchange means, what that is. So is somebody who's doing OTC trades from their validator, are they an exchange? And it just becomes,
+
+Now there's this whole like dimension of like political dimension to this that just wasn't there before. I mean, the best thing that we can do, in my opinion, is just make centralized exchanges irrelevant. Like just build a 10x better product on chain. And that's kind of what the HATIM 2.0.
+
+know, vision is attempting to do is like really make it so that all of the most interesting activities happening on chain and there aren't any UX sacrifices that you're making there.
+
+Citizen Web3 
+Yeah, totally, totally agree. It's interesting you mentioned before as well, the validators and podcasts being a validator. And to be honest, I mean, we only recently started to talk about that we actually validate. And wasn't since the beginning that we started to validate. It was a very, very big journey to go to that. And for us, I guess it's more about, no, no, no, you're correct. I think it was perfect. It was a perfect example. I just want to say...
+
+sam_hart 
+And I don't mean to singular you out there.
+
+Citizen Web3
+I think for us, it's not about like a competition. It's more about actually what we spoke about, about, hey, we're an educational validator. We also develop, we also like developing a game right now and so on and so forth. like, you know, for us, it was more about education, communication, bringing people together and trying to spread that rather than like, you know, and, it's good. And I think people should question more and more of it in my opinion. think,
+
+Ecosystem developers are certainly not, because I consider us to be an ecosystem developer in a lot of terms. And I don't think we should be the only people who follow the chains for sure. There should be builders, pure builders who build that code firsthand probably, and only then probably others because...
+
+sam_hart 
+Actually, question, who do you think is the most underrated validator?
+
+Citizen Web3 
+That's a very good fucking question. That's a very... You mean in the Cosmos Hub or what kind of like... Or a specific name? If I can, let me do this like cheeky style. Let me go open MinScan. Wait, I'm gonna do it properly. Wait, wait, wait, wait. Open MinScan. the overview. What's...
+
+sam_hart 
+On the Cosmos head.
+
+If you have one,
+
+sam_hart 
+can also come back to it at the end if you want.
+
+Citizen Web3 
+No, no, no, no, no, Right now I, I, I now, now, now I have to do it. Wait a minute. I like this question. It's a good question. I like it a lot. Let's do it together. But let's go validator style.
+
+sam_hart 
+I would actually love to know a lot of validators answer to that question. We should be doing more one-ups. You all should pay attention to this validator.
+
+Citizen Web3
+Okay, so let me try to go from the bottom without any particular order. I'm just going to say the ones that are in my opinion, should not be at the bottom. Dragon's Take. Dragon's Take have done in my opinion a lot of work since the very beginning and I don't think they should be at the bottom for sure. They don't deserve to be there. Broin Bro. Broin Bro are a new validator, but I know what they are and I know what they do. They might still be like...
+
+Citizen Web3 
+building, they might still be building momentum, but I know these guys are worth a lot more than they are there. Sentinel is a tricky one. Sentinel is a very tricky one, tricky, Who else? There is some that I don't know for sure, but let me go more up. wait, God, people are going to hate me for this.
+
+There is a lot of jobby, for example. There is... wait, wait, wait. I want to go more staking, staking, staking for sure.
+
+sam_hart 
+Yeah.
+
+sam_hart 
+I've been interacting with Pupmos a little bit recently and he is, they are pretty excellent. He's way at the bottom.
+
+Citizen Web3
+Yes. Yes. Yes. Yes. Yes. Yes. Also, actually, I don't know them that well, but I've seen them before higher and Cosmic Validator, think, if I'm not, no, no, not Cosmic. I'm sorry. I'm I'm sorry to single them out, but it wasn't them that I wanted to say. It was one that fell out. It was Cosmospaces. I think what they do is also interesting. Yes, they might not be.
+
+But they're doing a lot of work, you know, and I don't know, there is a lot, man. There is like, now that you asked that, now that I'm looking at it, there is like some that are at the top that I'm not sure should be at the top. And some that are at the bottom that I definitely should not be at the bottom. In my opinion, I'll tell you what I would like. And I'm sorry again, everybody who's gonna, gonna hate me, but I hope they will not.
+
+sam_hart 
+Definitely.
+
+Citizen Web3 
+I think I would love to see more like a more balanced validator set where let's say we have exchanges, have builders, of course, primarily builders. We have ecosystem developers. have maybe ecosystem developers that are focused pure on marketing, for example, not like us, but let's say maybe like more like Crypto Cito, for example. And, you know, we're very good friends, but I think we need those guys as well. have to have them.
+
+They make a very solid point and they bring a lot of attention. But I think it should be more balanced out. think the problem now that we have a very specific set of validators, which was created a long time ago, and it doesn't feel like the power is balanced in this set of validators. Again, this is a personal take. Sorry people, but that's what I believe.
+
+sam_hart 
+Yeah, we've been doing this thing on the Cosmos Hub forum where validators are invited to just like talk about their service, give a little bit of a breakdown on their setup and their kind of philosophy. So I encourage everybody to take a look at that and like choose some cool validators. There's some great ones out there that aren't getting enough love.
+
+Citizen Web3 
+Well, yeah, for sure. For sure. And where is that when you mentioned on the Cosmos forum or you can, the forum, the forum. Sorry, sorry, sorry, sorry. I heard I misheard you. Sorry, Sam. I heard form. I apologize. So yeah, I also encourage people to definitely do that. And I think what we haven't done is we haven't actually added our philosophy to the profile on the forum. So we should for sure talk a little bit more about that. And it does show a lot. That show a lot. But Sam,
+
+Citizen Web3 
+Before we like start to wrap it up, wrap it up, a couple of questions I do still have for you. Before I go into the bleeds that I will wrap up with that I will ask you with, there's one question I didn't ask you about, I mean, about chemistry. I have a lot of my life connected with chemistry. And my question is when cocaine synthesizer at home? When is it going to happen? Not when Binance, when are we going to synthesize cocaine home? Finally.
+
+sam_hart
+Wow.
+
+sam_hart 
+Great question. I mean, the starting materials are like a little bit hard to come by. Also, to be honest, it's like hard to get your hands on like laboratory equipment these days. I feel like it's harder today than it was like 20 years ago. There's just less people, it's less available. It's like more regulated. So I don't know. I feel like it's getting more and more distant. It's not getting closer, you know.
+
+Citizen Web3 
+Interesting. I know it's an uncomfortable question but it was to you know level out the validator talk ha ha and it's an interesting topic I think it's a topic that should be out well anyway quick blitz to wrap it up. Give me three projects outside the top twenty and please don't say Cosmos 
+
+that you are interested in in terms of what they're building and doing. It excites you. Not because somebody needs to go and buy them, God no, but because it's interesting to technologically.
+
+sam_hart
+three crypto projects outside of Cosmos. So like, ETH based or otherwise.
+
+Citizen Web3 
+whatever, whatever, are decentralization maxis in citizen cosmos, so whatever you feel like.
+
+sam_hart 
+Well, I mean, I can kind of wrap a couple of projects I'm like quasi associated with. It's maybe a bit of a cop out answer, but I do some writing with this organization called Other Internet. And I highly encourage everybody to take a look at that. I also work with Billy on this NFT gallery called Folia. And I think the artwork there is excellent.
+
+But projects that I'm not associated with, I've been chatting a little bit with this kind of game engine organization called 0xpark. And I think they're doing some extremely cool on-chain zero knowledge game development.
+
+sam_hart 
+Hi... Outside of Cosmos.
+
+sam_hart 
+I'm pretty close friends with Kia Kreutler, who's driving a lot of the Gnosis multisig development forward. And I'm like a big fan of kind of how they think about DAOs and their kind of thought leadership in the space.
+
+sam_hart
+I mean, I've definitely drawn a lot of inspiration from like Maker and particularly the kind of debates that they've had recently about their governance processes, which I think are very nuanced and challenging.
+
+sam_hart 
+I don't know, there's so much out there.
+
+Citizen Web3 
+It's good. It's good. It's good. I see what you mean. I understand. It's totally like the world is crazy. What about two things? Give me two things that I mean, we have mentioned probably 10 % of what I wanted to ask you about. like, you know, you do a lot. What are the two things in your daily life that keep you motivated to do those things that you do?
+
+sam_hart
+One is crypto has this kind of incredible quality where like you can turn ideas into like real things by, you know, typing keys on your keyboard. it's, you know, it's like a magic wand kind of, and that is something that's kind of incredible to me is that, you know, you can,
+
+kind of primitives and just ideas that kind of create emergent organization with such a powerful tool. So that's one. And...
+
+sam_hart 
+Yeah, I think the other is probably.
+
+sam_hart 
+the, just the like amount and like density of like, of like learning that, you know, I'm just like learning things every single day. And that's like, that's what ultimately drew me into the space. was just, I just felt like I was learning more working in crypto and the amount that you can learn in like any
+
+possible domain, like the intersections between these things is just absolutely incredible. I think that's a huge opportunity for people who are just interested and excited to continue to learn like myself.
+
+Citizen Web3 
+Last one, one person that you recommend to, it doesn't matter if it's GitHub, Twitter, Medium, Scuttlebutt account, whatever, one person that you recommend everybody to follow and you think that it will help them to whatever they do, in whatever they can be doing to concentrate more on the good things and, you know.
+
+sam_hart 
+Mm-hmm. Like contemporary, living today kind of thing.
+
+Citizen Web3 
+whatever you've... could be an account. Well, I know accounts out there that are definitely not alive anymore, but still updated somehow. But not many, but I do know of some.
+
+sam_hart
+So.
+
+I think they're, well, okay, this is not like contemporary, but I do think that there's like a couple pretty underrated Cypherpunk accounts, accounts like people that are fine in the Cypherpunk mailing list that like just don't really get as much attention as other like Timothy May, for instance, I think it's just like absolutely brilliant. I actually corresponded with him like very briefly right before he passed away.
+
+but he's just kind of like not given as much like love. And I guess if I had to recommend one account that's maybe in the same spirit, would be a Sizzouha, who you've maybe seen. Probably the most badass cyberpunk account. Dystopia Breaker is the actual handle.
+
+Citizen Web3
+Love it.
+
+sam_hart 
+Shout out to this is Wu-Ha.
+
+Citizen Web3 
+Nice, nice. will include, we will definitely include this links man for people to follow because it's a very cool account actually. I don't know. Yeah, it's cool. Man, some, I know it wasn't like, well, at least for me, I wanted, there is a lot more I want to talk to you about and I but we would try to keep them to an hour. And I don't know if I did manage to ask you what
+
+I don't know if you want to mention anything about like Atom 2.0 that you would like everybody to hear, please do. Otherwise, guess next time, but please if you have something to mention that I didn't ask you about, please do.
+
+sam_hart 
+I'll mention something about Adam 2.0.
+
+This project is, it is something that nobody has ever done before. Nobody has tried to, as a community,
+
+debate and kind of agree upon a new purpose for a multi-billion dollar network. Like that's just not a thing that has been done. And we're doing it all out in the open. It's definitely pretty messy, but like it's kind of a beautiful thing. And I know, I definitely feel like I'm a part of history.
+
+participating in this. It's not going to be perfect from day one. We just kind of need to acknowledge that. the objective is to kind of get something that we're pretty happy with at the top level and create this cycle where
+
+like we're learning and improving and making the system better as we go. That's how I kind of think about the Adam 2.0 paper. And there's a lot of detail in there because, I don't know, kind of felt like you had to include a lot of detail. Otherwise people would ask for more. And I've been caught in this like in between world where it's like, some people are like, this is too specific. And some people are like, this is too vague. And it's like, okay, well, you know, there's no...
+
+sam_hart
+There's no solution there. But yeah, we should just kind of think about directionally where we're going and is this going to improve over time? And I hope that we're putting forward something that gets both of those things right.
+
+Citizen Web3 
+Definitely. I think all of the goals are aligned here in terms of, know, we are all here to make things better, to learn and well, majority of us, I guess, we will go that way, hopefully, and it will all grow. for sure, I definitely have a belief in that for sure, which is maybe not the correct thing to work to use after all the conversation belief.
+
+but still, you know, I think it's a good word sometimes.
+
+Citizen Web3
+Sam, thank you very, very, very, very. Yes. Thank you very, very, very, very much. Thank you everybody for listening. Sam, please don't hang up yet, but until next time. Bye.
+
+sam_hart 
+This is a lot of fun.
+
+sam_hart 
+Bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

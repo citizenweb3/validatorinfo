@@ -1,0 +1,297 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/saga
+
+Episode name:
+Web3 Economics, Developers and Civil Theory with Rebecca Liao
+
+Citizen Web3 
+Hi, everyone. Welcome to another episode of Citizen Cosmos. Today we have Rebecca Liao with us, the co-founder and CEO of Sega. There's a lot of questions I have about it, but first, Rebecca, hi. Welcome to the show. Really nice to meet you. Really nice to see you.
+
+rebecca_liao 
+Hi, Sergey. Thanks so much for having me. Big fan of Citizen Cosmos.
+
+Citizen Web3 
+Yay, yay Let's jump straight into it. Do you want to introduce yourself in your own words, introduce what you do? What is the project? What you guys are building?
+
+Citizen Web3
+and who you are in general. It will be very interesting, I think, for everyone to find out.
+
+rebecca_liao 
+Yeah, absolutely. Thanks so much for having me on. As I mentioned, Sys and Cosmos has been amazing for the Cosmos ecosystem and it's just such a great asset in the crypto community in general. So thank you so much for what you do. yeah, I guess a little bit about myself. So Saga is my second crypto startup. I joined the Saga team on January of this year.
+
+to lead the project. I'll tell you a little bit more about Saga in a short while. But before Saga, I was co-founder and COO at another crypto startup called Skew Chain, which focused on offering short-term liquidity to small medium-sized businesses. And after four years, we got to about five billion in annual volume. And this was around 2021 timeframe. When I began to think about, you know,
+
+rebecca_liao
+been here for a while. We've built this wonderful project and I'm ready for a challenge. I'm ready for a new challenge. And I was starting to look at the policy space because I was part of the Biden campaign, the Biden presidential campaign in 2020. I had been part of the Clinton presidential campaign in 2016. And so I've always been interested in policy work. well, this time we won.
+
+It was an opportunity to jump in. But I think what I quickly found out and for all your listeners out there who are in the crypto space, this will be no surprise to you that government service or civil service in theory is very different from civil service in practice. And after a few months of exploring a role in the administration, I called up
+
+a really good friend of mine who was also a co-founder at Skoochay. His name is Zaki Mannion, one of the original builders of Cosmos. And I said, Zaki, I think I'm going to stay in the private sector. And he said, well then, you should talk to this project. And at the same time, Zaki is building Somalia Protocol right now. And he wrote me in to help with that, particularly on any...
+
+rebecca_liao 
+public policy issues, but also to design their DAO. So I'm still involved with that and it's a fantastic project. It's about to make some big waves. But yeah, that's how I found myself back in crypto and at Saga in particular. Going back even further, so before Skuchain, I was an early employee and head of business development and head of Asia for an AI startup called Globality.
+
+rebecca_liao
+which after a year and a half or so we got backed by SoftBank and it's just been a really great platform for procurement of international services. So it's an ERP system specifically focused on services, but it's powered by AI. So it's a pretty cool product, but that was my first foray into startups. I began my career as a corporate lawyer.
+
+So I was in securities law, corporate governance, purchase and acquisitions, the general purview of corporate lawyers for about five, six years before I decided, okay, I wanted to jump to the business side of things and to tech startups in particular. So yeah, that's a little bit about me.
+
+Citizen Web3 
+That is not a little bit. That is why really cool. You have such a huge history like lawyers, government, crypto, DeFi, everything. Wow, that's amazing. That is really, really, really cool. Really impressive. You said at the very beginning when you started to describe everything, you said you wanted a challenge and that's why you essentially left. So has Sega been a challenge so far?
+
+rebecca_liao 
+It has been a wild ride. has been a wild ride. It's only been a couple of months, but as we know in crypto, a couple of months might as well be a couple of years or a couple of decades. So it's been a lot of activity, but it's fabulous. So I decided to join the team because let me tell you about the origin of Saga. So Tendermint was the original
+
+creator of Cosmos. was the original project from which Cosmos was launched. It's still one of the core Cosmos entities. And a few of my co-founding team members, so Jin Kwan, and then a couple advisors to Saga, Mo Sen and Sam Sutcliffe, they've been in Cosmos for a long time.
+
+And they were all in Tendermint and they thought, okay, Cosmos has arguably the best technology in crypto, the way they have thought about self sovereignty and the ability of developers to get onto their own dedicated chains. I mean, this is ultimately what people want. There may be easier ways to get started on blockchain, but this is ultimately what people want. And they built the technology to match such a system, VFT.
+
+tolerant, is also compatible with interoperability of the IBC. And so they thought, okay, if we build such a wonderful product, then people will come. And to a certain extent, that's been true. I think the Cosmos ecosystem has been thriving particularly in the last few months, as we've gotten to the stage in the market where people really are looking at these
+
+rebecca_liao 
+these dedicated chains and at this new community in Cosmos. But nevertheless, it is still quite difficult to develop on top of Cosmos. And so this team got together and said, hey, is it possible to A, make it easier for developers and B, to have a project that is really focused on go to market and really focused on getting projects and developers into the Cosmos ecosystem at a business level?
+
+And hearing about this mission, I thought, OK, this is exactly what the ecosystem needs. And for the future in which crypto is all about dedicated chains for individual developers, developer teams or individual applications, this is is ultimately what's needed. And so I decided to join. And it's been fascinating because your saga started off as a quote, unquote canary network. So
+
+The idea was that we would do a rough cut of the Cosmos base and then allow projects to come on here to set up test nets at will to experiment sort of like a Kusama type project. And I came in and also my co-founder and CTO, Jake McDorman, he came in and we are both of a product background.
+
+The way that we have grown up in startups is we think that the way you get adoption, the way you really solve problems in technology is by building a kick-ass product that people really want to use. And not only are you then solving their problems, but you are also allowing people to solve their problems at scale because you're doing it on a product basis. And so we looked really hard at the protocol that we were building.
+
+rebecca_liao 
+and discovered that a canary is, it is useful, but we can do so much more than that. And so we've arrived at what Saga is today, which is a protocol for allowing the automated deployment of applications onto dedicated chains. So it is still the case that if you just want to set up test nets at will, if you want to experiment, you can absolutely do that. However,
+
+If you also want to just build, you want to build on an environment in which you get your own dedicated chain from the beginning in an automated manner, then you're able to do so and you're able to stay on that chain. Your project can keep on that chain for as long as you like. How are we able to achieve this? So we have the Saga main validator set. So that's our main net. We do...
+
+Interchain security or we offer Interchain security to our dedicated chains or chainlets, as we call them. And that's how these chainlets are able to get the full security of the Saga mainnet without ever having to think about validator recruiting, coordination, maintenance, etc. So we've abstracted the validator problem away from developers who are looking to stand up their own chains.
+
+It's been a wild ride. We stayed stealth for a little while so that we could get alignment on our vision. We could start building our product. We could get our branding together. We just wanted to be prepared for launching into the market because we understand just how important this project is. And we had our public debut just last Monday. And fortunately, the community has been fabulous as they always are.
+
+but we're incredibly grateful for all the support and the feedback so far and just really looking forward to building this thing.
+
+Citizen Web3 
+Congratulations on your debut, by the way. I missed it. What actually was it? you talk about it? What did you guys do? Was it a public event?
+
+rebecca_liao
+yes, so it was so last Monday, we came out with our new name. So we were originally Sagan. That's how the project started and that we are now Saga. Yeah. Yes, exactly. But we're now Saga. And I promise you it was a much more sophisticated and complicated branding exercise and simply dropping the N.
+
+Citizen Web3 
+Carl Sagan, like Carl Sagan.
+
+rebecca_liao
+Although it may seem like that to some outside observers, but I promise you, a lot of thought went into this. And we rolled out our website for the first time last Monday. We rolled out all of our social channels so that the community could reach out to us and we could reach out to the community. We also debuted our light paper so that people understood what it is exactly we're building.
+
+And I mean, now we're out in public and we're able to chat with partners, users, customers, the community, all our different stakeholders. So that was the event. In advance of the public debut, we did sort of signal that we were going to go into the market soon. So we had a Twitter space with Saki and Jack Zamplin. We also did a teaser trailer with
+
+Tony Daddy, just to let people know, we're coming. We're about to debut. But yeah, our debut was all about just letting people know who we are and what it is we're doing.
+
+Citizen Web3
+If you would have done the debut now, considering you just did it and considering the amount of experience you had with all the previous, not even doing crypto projects, I'm talking though like crazy. can imagine what it's like. I can only try, sorry, to imagine what it's like doing a governmental campaign. The amount of headache. Now, if you would have been doing the debut again, do you have any advice for teams out there? Because I know that there is a lot of teams that are working now in stealth mode.
+
+on projects around Cosmos and they probably would love to hear from somebody like you. What would be the one thing you would advise if you guys have been for a long time in stealth mode and you're planning to come out, what would you say to those guys not to do or to do?
+
+rebecca_liao 
+That's a great question, Sergey. I guess my advice would be if you are coming out of stealth mode, so be very thoughtful about why it is you're coming out of stealth mode. So what is it that coming out of stealth is going to do for your project? And for many people, it's obvious. You're out there, you're able to interact with the community. You're also better able to hire if you're out of stealth mode.
+
+And those were two very compelling reasons for us. But we also had gotten to the point where our product idea was pretty well fleshed out and defined. And Jake, again, our CTO just did a wonderful job designing it. So we felt it was time to share it with the world. We could have done the exit from stealth a lot sooner, but we wanted everything to align. And for all of our marketing assets, all of our messaging,
+
+And I mentioned the product idea is just of paramount importance. We wanted all of that to be together so that we could present it to the community as a package and really reward the fact that they had been staying with us through these few months and that there was a lot of anticipation built up. So for those projects who are still in stealth, I would just be very thoughtful about why it is you're coming out of stealth and really play to those objectives. And I know it's difficult in crypto because
+
+So much of the market dynamics are based on hype and marketing in general is just, it's such a huge component of the success of a project. Sometimes the temptation is to really play into the hype or to just start throwing content out there and hope that more and more people will be attracted to the project because you are putting out so much content.
+
+rebecca_liao 
+And I would encourage people to, the classic phrase is under promise and over deliver. So be thoughtful about what you put out into the community, because I do think that crypto in general is entering this phase where, you for the last year and a half, two years, people have been on Twitter just taking in the hype machine. And we're all human. At some point, people do get tired. 
+
+And I do think we're at that point where people want to see something real when there is a project that launches. They want to know what is the technology behind it? What is the team behind it? What is your vision? What is your position in the community? How do you interact with the rest of the ecosystem? So having good answers for all those questions is really important before you come out and start to really beat the drum about the project that you're building.
+
+Citizen Web3
+I think it's great answer. I used to GM restaurants for a while. And one of the first thing I would always teach my team what I would go to in your restaurant. And that would be included waiters, like managers, everybody. If you people order in food and ask you how long it's going to take, don't tell them it's going to take less than it will actually take. Because when you'd say five minutes and you bring the food after 10, person doesn't want to eat it. They just want to throw it at you. When you say 10, but bring it after five.
+
+rebecca_liao 
+Yeah.
+
+Citizen Web3 
+That's when people are happy because you're, you know, you're under promised, you're over delivered and everybody's happy. So I think it goes for everything. Before I ask you a couple of questions about SEGA, I have another question about, so, and I know if you could talk about it or if you, know that, and you mentioned already, Jin Kwon, who is the co-founder of your team. There has been a lot of rumors and I can't help not to ask that.
+
+Citizen Web3 
+Have has Jin Kwon has anything to do with Joke Kwon? J sorry, was Jake one? Have they got anything to do with each other? And are they has has Jin Kwon is the one of the founders of Cosmos because a lot of people ask about it. But I don't think anybody is too many people know exactly the answer. So it's a strange question. Feel free to answer it or not to answer it.
+
+rebecca_liao
+I'm more than happy to answer that, Sergey. What you'll find, and I am somewhat familiar with the Cosmos community now, but I'm sure what the community will find is that I am a pretty open person at the end of the day, and I fully believe in transparency. So that's a great question, and I appreciate your asking it. So it is true that Jin Kwan on our team and Jay Kwan, the original inventor of Cosmos, are related. They are brothers.
+
+So yes, they are related to one another. They are related to one another. So Jaquan was the one who wrote the original code base for Cosmos and really built it out alongside a fabulous team, including Zaki and Jack. And Bucky at ICF, Billy Reinicamp at ICF, Jihan. I mean, it was just a fabulous team that came together.
+
+rebecca_liao
+to build Cosmos, but Jay was the original inventor, that's true. And the company that Jay co-founded was Tendermint. And that is the entity that's also supplying a good part of the core team for Saga as well. Is Jay involved in this project? I would say that he's always there as an advisor.
+
+He's always there as an advisor and I mean, he wrote the damn thing. So I think it's would be foolish to not go back to him with any questions about, you know, how does he see the future of this code? How does he see the future of this technology? And, you know, he's certainly been helpful in that regard. But yes, to answer your question, they are related to one another.
+
+Citizen Web3
+I thought so. It was just like several times over the past few years where I've been involved in Cosmos. There's been a few places where I have noticed gin as well. And a lot of us who have been Cosmos for a while or have been like the original investors of the ICO or whatever, we're still not sure because we didn't see any information. So sometimes like, are they brothers? But well, you never know. mean, so like it's better to ask sometimes and like, well, there we go.
+
+Citizen Web3 
+So anyways, now this Gestalt is closed. But I'm going to ask you in a slightly different way about Sega. So I'm going to take a quote. I like doing this, of your website. And I'm going to ask you to decipher it in an ELI5 manner to myself and to everybody who's listening to that. It's going to be easy. So for you, for sure.
+
+Citizen Web3
+Sega is a protocol that allows developers to take a single tenant VM virtual machine and automatically launch it on a dedicated blockchain, compete with fully provisioned validators and an optimally incentivized security structure. Now it does make sense, but I would like you to like, can we shorten that? Can we like, for anybody who is not a developer, but is really interested in what's going on in Sega.
+
+And I have seen a lot of community members try to take part. And I actually have some questions from you from community members later on. But this sentence seems a bit heavy. Could we say that Sega is just a working environment for developers that has a lot of benefits? Is that a possible way to summarize that?
+
+rebecca_liao 
+That is absolutely true. That is absolutely true that we have endeavored to build the most friendly environment for developers to develop in Web3. That is absolutely true. Now, what does that friendly environment entail? Because there are many environments. So for Ethereum, for instance, you have an amazing community. You have more and more resources available to you if you're interested in learning Solidity. For Solana, it is a very fast chain and also a big user base.
+
+and also very easy to get started. On these monolithic chains, the promise is all you have to do is deploy a smart contract and then you're on your way. And with Cosmos, it's always been a little more than that. Not only do you have to deploy your smart contract, but you got to get your own validator set because you want your own chain after all. So what we're finding is now that more and more users are coming into Web3,
+
+the block space of these monolithic chains is really getting clogged up. Developers are also finding it frustrating to not have full flexibility to upgrade their applications on these monolithic chains. So you're sort of at the mercy of other applications that are sharing the same block space as well as the main net on top of which you're building. And so, you know, with all these challenges as well as the
+
+the market moment where we're seeing demand from all these end users and developers, we felt that Saga and the way that we've designed it is the most optimal environment in which developers can develop going forward as well as scale out their existing projects. So I can go into sort of that dual use case there in a little bit, but Sergey, excuse me.
+
+I think your description was great, that this is the friendliest environment in which developers can be building in Web3.
+
+Citizen Web3 
+So next question, is obvious from the return, I'm going to play devil's advocate here for a little bit. So feel free to stop if you need to be done. So what does an average Cosmos user need Sega for if it's just for developers? What do I care about if I'm not a developer about Sega? Why should I be excited?
+
+rebecca_liao 
+Because we will never charge you gas fees. the way that most protocols work is a little counterintuitive, I would have to say, coming from the world of Web2 originally, where we all started. And now we're all in Web3. But nevertheless, some principles in Web2 are beneficial. So one of those is infrastructure is almost invisible to the end user.
+
+So for example, if you are using your Uber app, you are not paying a fee to AWS. You have no idea which cloud Uber is using. And I think the same principle should apply in Web3. And that's also what we've designed at Saga is that Saga will have a token. I don't think that's a big surprise to anyone, but we'll have a token.
+
+It will be used to pay fees on our system for these dedicated chains, but those fees are not going to be seen by the end user. We will not be charging fees directly to the end user. It is always up to the developer team whether they want to charge the end user or anything. Maybe they want to go with a freemium model. Maybe they'd like to keep it free forever, but find other sources of revenue other than from the end user. And so we don't directly charge.
+
+for use of our protocol. So from the perspective of an end user, it's a nice environment in which to use applications. The other thing I'll note is for end users that are on these other projects, more established projects that are starting to think about scaling very seriously or who are thinking about it more urgently because they're running out of block space, because we do not...
+
+require that our token be used for end users. In fact, it's not used for them at all. That leaves space for other tokens to be used for paying transaction fees. And so when we work with our partners, we allow them to keep charging the end users in their native token. And
+
+rebecca_liao 
+we will charge for provisioning of the dedicated chain, but end users are going to continue to interact with the native token of whatever the application is being built in. And so what Saga has done is it's bifurcated the infrastructure layer and the application layer.
+
+and allow two separate tokens to be used for those layers. And I think that's an important development as we start to expand in crypto and infrastructure becomes much more about scalability, growth, and making sure that it can support all these applications while working with the existing ecosystem. So there are lots of benefits to end users who are using an application that is on a saga chain.
+
+Citizen Web3 
+So basically the end user will get their experience will be more efficient, I guess. And it will be cheaper.  I did have an economics question, but I had another one that's run away. But let's go to the economics. I mean, I can't help not to ask it when talking, when airdrop, when Binance.
+
+Citizen Web3 
+When are all the errors? Where is everything? Like, what the hell? I need an airdrop. No, I'm joking. If you can share any details about the tokenomics, about if you plan on an airdrop, if you plan on some of the tokenomics, if you know already some of the details, please feel free to share. I would love to hear some.
+
+rebecca_liao 
+Yeah, absolutely. Well, Sergey, this is probably the most common question that we get on all of our channels is when airdrop, when token. No, it's a very relevant question. And I'm glad you're asking it here because for the record, if anyone out there is hearing about an airdrop, a snapshot, a token offering, that is fake news. So we have not done anything like that yet. There has not been a snapshot.
+
+rebecca_liao 
+So you have time, in other words, but having said that, for all of our early community members, we definitely want to acknowledge the fact that you've been here early. So when is all of that going to happen? I really don't want to put a date on it right now because I don't want to mislead anyone. I don't want to get anyone's blood worked up. we are a crypto project in Cosmos.
+
+So put it that way, I think there's an understood way in which we reward our community and we build our community. And of course, at some point it's gonna come. I could not tell you a date. What I can tell you is we want to get users on this system as soon as possible.
+
+and we're going to ship in a very iterative manner. So the first version of the network, sort of our alpha version, is going to come out in a couple months. And that is for a group of alpha users who are interested in building on a very early version of the network. And from that, we're going to learn a great deal.
+
+I'm going to learn a great deal about the developer experience as well as how our validator tooling should work. And from that, we will go forward to a definite test net and of course the main net. So the roadmap is pretty methodical, let's just put it that way. And it's meant to be like that to make sure that this technical feat that we're trying to pull off, which is to...
+
+completely abstract away the validator problem for those who are looking to stand up their own chains that we actually pull it off. So yeah, that's the timeline we're looking at. We move fast, but very iteratively.
+
+Citizen Web3 
+That does sound though like the right way in terms of like product development and IT product development. I mean, I've been involved for a while in blockchains and from what I hear what you're saying is the logical way to do things. There is a tweet I found on your Twitter, which is recent and I like it a lot because this is what we do and this is what we believe in. I wanted to ask you some comments about that. There was a tweet I think from Bucky. He said, blockchains are people.
+
+Citizen Web3 
+And then you said you cannot escape the human element of what we do. And it's a lot of what I talk about during the podcast. It's a lot of what we talk about, layer zero, the community. And, it's interesting because you guys target devs so much. it , feels to me as if your main customer, lets say it, main user. don't like the word customer here. Like a developer, but at the same time, you're still saying, well.
+
+Citizen Web3
+The main base is the community. And what are your plans to target A, more developers? And what are your plans in terms of building a bigger, more efficient community or, you know, not repeating the same mistakes that you can see in other blockchains that they do with their communities? what are your plans in general in that direction?
+
+rebecca_liao
+Yeah, absolutely. So I'll answer the first question because it's probably the easier question to answer, even though execution is always difficult. it's an important one for us. You're right that the developer is at the heart of Saga. What we think about day in and day out is the developer and the developer experience. How can we make it better? And in terms of investing in the developer, so a couple of things we've done.
+
+So we understand that for any layer one, you have to go after the organic developer growth, but you also have to start looking at pipelines of developers because there are a lot of projects out there already that have great developer bases. And so with respect to the first group, we are not only reaching out to developers at a very early stage. I mean, Saga was reaching out to developer teams
+
+from the very, very beginning. So back in November time frame, we were already talking to developer teams, asking them, what are your major pain points when you develop in Web 3? And a lot of that feedback has informed our product, ultimately. In addition to keeping close contact with the developer teams that we're already in touch with, we are investing in developer relations. It's not common for projects to have a head of dev rels.
+
+this early on before you've even launched your Alpha network, but we've just hired one. And we're very excited about him. Comes to us from Nvidia. Given our focus in the first instance on gaming and entertainment, it just made sense to hire from someone who comes from a gold standard program in dev rels for gaming technology. So...
+
+really investing in an infrastructure for developers, allowing them to get to know the environment, being very clear in our documentation, being very present in our support, making sure that QA is very well resourced, and giving them their own communities in which to build. So that includes events, meetups, hackathons, et cetera, where they can meet each other and get to know one another, maybe collaborate with each other. So we really are invested in building a great developer infrastructure.
+
+rebecca_liao 
+Now that's on the organic growth side. the pipeline side where we're starting to work with these projects that have extensive developer bases already, what's happening there is we really want to support their ecosystems. So if these...
+
+projects are starting to have to turn away developer teams, for instance, because they don't have the block space or they're not able to resource their developer infrastructure as much as they'd like to. Again, because they're having issues with scaling, then we are infrastructure that helps with that. Basically expands their block space while still allowing the same kind of value to accrue to their token.
+
+That's also another channel in which we are helping out developers, not necessarily in a direct way, but we believe in supporting these ecosystems. So I think that's also going to be incredibly important for our developer outreach. And then in terms of the community, so the community has been, they were very supportive when we were Sagan. They're incredibly supportive now that we're Saga and
+
+we're just very grateful because we understand that people have been patient and they're asking very thoughtful questions about the technology. So it's not, I was joking earlier that the most common question I get is when airdrop, when token. So I certainly do get those questions, but the vast majority of questions are really about, I'm a developer, how do I use this? Or help me understand these dedicated chains, where exactly are you getting that security from?
+
+et cetera. And it's just really, really just humbling and thrilling to have a community that is so thoughtful and engaged. And in terms of how we want to continue engaging them, now of course, there's always close contact with the community. I am personally on channels all the time wanting to get to know people out there who are not just asking us questions, but also creating content for us, volunteering to help.
+
+rebecca_liao 
+and contribute on different parts of the product and marketing. mean, it's fantastic. I do think that as we grow, that's when you start to think about governance. And the tweet that you referenced was about governance, really, and how do you allow this community that you've built to continue to thrive? Because if people are here without any sort of
+
+compensation or incentive really. So they jump into a project because they believe in it and they like being with the other people in the community. And that is a spirit and a feeling that a project should really fight to preserve. And so when you think about the human element of all these projects and when you design a governance system for governance of the community going forward, once...
+
+the project is launched and then the engagement really goes up from there. That's ultimately your North Star is that you want to keep that feeling of, hey, day one, I was really excited to work on this. I feel like I'm contributing. I feel like I'm being seen and heard. People from the core team are more than happy to chat and they're always available to answer questions and to recognize my contributions. I mean, that's a great
+
+That's a great environment that we have right now and whatever government structure we come up with later, it's going to have to preserve that spirit and that community feeling as much as possible.
+
+Citizen Web3
+It's interesting that you mentioned gaming straight away and community because the questions actually have. One of them I already kind of asked, so I'm not going to repeat that. Another one is exactly about that. I'm not a gamer. I'm sorry if I'm going to get some of the words wrong, but it does have to do technology and gaming. And it's actually from your community, but it's actually our community manager from Citizen Cosmos, Andrea. And he asks, can Sagan let
+
+rebecca_liao 
+No, please.
+
+rebecca_liao 
+fabulous. Yeah.
+
+Citizen Web3 
+Yeah, he loves you. loves you. He's in love with Sega. Can Sega Network work with projects already established, let's say MMORPG games or other online games in a plug and play manner, basically tokenizing the already existing economy?
+
+rebecca_liao 
+Yes. So what would happen there is for these gaming studios already have fabulous games, but they're looking to take them to crypto. The only requirement that we have for our developers is that they deploy a smart contract in a VM environment. So the way that we are able to automate deployment of applications onto dedicated chains is we have standardized the deployment process. And how are we able to standardize it?
+
+we work directly with VM environments. And that is a controlled environment in which a developer can develop their application, which makes it a lot more manageable for us to do that deployment. So the only ask there is that these gaming studios that already have these fabulous games, that they think about, OK, what is the token model that I would like? Is there a token model, or am I more into NFTs? For instance,
+
+But think about what it is you'd like to do with the blockchain. What is it that is web three about the game that you're trying to introduce? And based upon that, go ahead and deploy your smart contract into a VM environment and then you can go ahead and work on our chain. So yes, it is a very easy environment in which
+
+a studio that has already developed an extensive RPG game, for instance, could start minting NFTs, could start having their characters or their players interact with players across the ecosystem. So that's a great question with respect to how existing developers in Web2 and in gaming can work with Saga. But honestly, the same applies for any games that are
+
+being developed in Web3 natively, the same thing would apply. It's about getting into your own dedicated block space. It's about getting into Web3 if you're not there already. It's about getting into an environment in which your assets are not locked onto a chain because Cosmos, after all, is all about interoperability and interchain communication.
+
+rebecca_liao 
+And being able to get into a community and ecosystem where these assets can float freely between different chains is a huge benefit for them as well. So yes, for a gamer and for a gaming studio, this is a really easy way to get started in Web3.
+
+Citizen Web3
+Rebecca, it's been such a great explanation about Sega. I still have one question, which I'm going to combine two questions and ask you because I really want to understand. So the question is such. it's going to be in two parts. First of all, what motivated you personally? You did explain this, but I'm going to twist the question.
+
+In terms of values, what motivated you? Not in goals, not like work career goals or like you wanted the challenge or that. In terms of values, what motivated you to do this? What motivated the other people on the team to do this? And the other part of the question is what keeps you motivated in terms of the daily activities to get up and build in this, whether this is for the community, for developers, whatever.
+
+Citizen Web3 
+Interacting with the community like you said all the time to find it out because I have seen you on telegram You're not just saying that I have went on your social channels and I have seen your comments So I know how much work that stuff takes so it's not so you so what so one is like What is the values that motivate you to do that in originally and what motivates you in terms of activities in your daily life? To keep on doing this?
+
+
+rebecca_liao 
+Absolutely, no, sorry that that's a great question and I really want to You know give both questions the attention that they deserve but I You know as you were asking the question I was thinking to myself the answer to both is it's actually the same thing which is the desire to always do better to always do better because you know saga was founded because
+
+all of us on the core team, looked around at the crypto environment and we felt, okay, we had an amazing bull market over the last year and a half. And I think that led to a really dynamic environment in which innovation is always happening, but it also led to somewhat of an ossification around certain product features in crypto that we really should not accept as end users or as developers.
+
+And that's what motivated the founding of SAGA is, let's think about, is it fair or convenient or smooth or even the best business decision to force end users to pay for the infrastructure to make them aware of what the infrastructure cost is? Is it fair to have gas fees that are highly variable and dependent on other applications that share your block space?
+
+are we OK with this level of congestion and low throughput in these monolithic chains? Does a developer have to wait for the rest of the chain to upgrade their stack before they implement a really important new feature for their application? And the answer to all of these questions was no, we shouldn't be complacent with all of that. And that's why Saga was founded.
+
+The team has a mission to always do better, to be other oriented, to be focused really on the developer and the end user, and always looking to make their experiences better. It also informs how we work. We're always looking to push, to do better, and to encourage people to be very proud of their ambitions and to pursue their ambitions. And that's the same thing that we tell developers is, OK, you
+
+rebecca_liao 
+Either you're in Web 3 already and you're looking to build a new project or scale out your existing project. Web 3 is the big unknown for you and you're dipping your toe into Web 3, but you're not entirely sure. Maybe Web 2 is quite comfortable for you. It doesn't matter sort of what position you start from. If you have ambitions to build in this space, we want to encourage you to pursue those. So, I mean, those values really inform the very heart of what we do.
+
+And in terms of my motivation to join SAGA it was the same thing. It's always looking to do better, to build bigger, and to go for the bigger ambition. Because if you see a vision, you find a way to execute on it, you gather the resources to do it, then anything is possible. So that really informs how I work, how the...
+
+the whole team works. we hope that not only do we attract people in the community and attract developers who feel the same way, but that we inspire other people to feel the same way and to awaken those values within themselves. So thanks for asking the question. I think it's a really important one.
+
+Citizen Web3 
+It's a beautiful answer. So well done. Thank you for answering in such an open manner. I like hearing things like that. I think it gives people hope that we're not just like here to build for the sake of take a make a V and say, we'll build this here, really build for people to use something and to change something. And it sounds like this is what you guys set out to do.
+
+rebecca_liao 
+Hahaha
+
+Citizen Web3 
+Rebecca, thank you so much for your time. It's been lovely having you on. been a great conversation. Thank you for all the open answers.
+
+rebecca_liao 
+No, thank you, Sergey. It's been a fabulous time and thank you for having me on for asking such thoughtful questions. Citizen Cosmos is just it's one of the best podcasts out there for the space. And I just knew that this would be a wonderful experience. So thank you so much for this.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

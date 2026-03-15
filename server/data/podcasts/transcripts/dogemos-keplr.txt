@@ -1,0 +1,340 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/dogemos-keplr
+
+Episode name: 
+Community, Dogecoin and privacy issues with Josh Lee
+
+Anna
+hey it's citizen cosmos we're sergeant anna and we discover cosmos by chatting with awesome people from various teams and communities join us if you're curious how dreams and ambitions become code 
+
+Citizen Web3
+hi everyone and we have josh lee with us today or i think most people know him as dogmos he is the korean community advocate and a developer relationship for tendermint and he does many other things which we'll find out about today so josh welcome to the podcast 
+
+Josh
+hey thank you for having me 
+
+Citizen Web3
+yeah how are you today i'm doing great today
+
+Josh
+uh i mean it hasn't been it's in the evening but um hasn't been too long since i woke up living the european us time recently so but yeah it's doing great 
+
+Citizen Web3
+i hope it hasn't been a busy day yet 
+
+Josh
+no oh yeah not yet it's about to get started 
+
+Citizen Web3
+cool so let me ask you like the first question we'll jump straight away so the first question is that judging well from what i know using what i spoke to over the past like few months and judging from your twitter you definitely seem like somebody who anna was told me a new word today w-shaped specialist which means somebody who's very diversified and loads of things that he does i didn't know that so thank you anna for that especially judging from your twitter activity and all your cosmos activity and so on so just describe yourself your roller tendermint and what you do 
+
+Josh
+so yeah that's the first time i heard of you know w-shaped specialist i i mean that's pretty cool um i thought over it also i tend to just kind of call myself like a swiss army knife you know like there's that like master of one and whatever but like i'm just the type of person who's more i'm a very like generalized i do a lot of things so you know in tendermint i help out with the design i've also been around you know cosmos for a while so trying to find the community of approach market approach and on the side i'm working with our developer tony building up kepler working on interchange accounts um i actually don't come from a developer background so that's where you know the people around me help me out a lot but you know the community is so amazing that when i have any questions about a lot of the technical stuff they're always more than happy to help me out try to figure that out better so yeah  in tenderment design community ecosystem development videos content yeah yeah so and then localizing a lot of that in korea as well 
+
+Citizen Web3
+cool a little bit of everything then we will get to kepler definitely i have some questions about it before we get to that we want to try and ask you some weird questions if you think they're too weird you don't have to answer but no i'm joking no weird questions we just like to get to know the person but we'll definitely get to kepler because it's a very interesting part but first question is first and i actually don't have it on my list but white dogmas tell us about that nickname i want to know the story behind it 
+
+Josh
+yeah the story behind dogemo's so how that was put together oh the first time i actually got into crypto i think i was in in college and uh i studied in the us all my family lived in indonesia but i was korean so like during christmas break i i didn't have the luxury of going home for christmas when all my other friends did so you know i just kind of like stay home and look for stuff um online and you know i happened to run across the dogecoin reddit and this was back in like end of 2014 i think and it was something very fascinating because it's like it's the first time i've really seen like internet money concept being used on a forum and back then you know those guys were trying to do crazy stuff like fund a nascar driver that couldn't find a sponsor uh so let's try to fund them in dogecoin and try to get you know big face of a shiba inu on the hood of the car and try to fund the bobsley team uh from jamaica and things like that i was like oh my god this is hilarious so this is exactly the kind of things that i'm really into it's just like a lot of random things and that's how i actually first got bitcoin was to buy dogecoin so dogecoin and just dough in general has a special place in my heart 
+
+Citizen Web3
+Haha ha
+
+Josh
+you know kept it there for a while haven't really actually done anything with the dogecoins um because as soon as i graduated college i had to go back to go to the military and things so that's why like i i wasn't in crypto at all back then when i first i got to know cosmos like in the end of 2017 and i was like cosmos yeah this is this is it and i was just like all right how how do i put the two things together i was like trying to come up with like creative names because i didn't really want to like be you know doing a lot of the activities with my real name at the time so i was like well i'll put the two things i really like most about crypto together so it's like got the doge from dogecoin and most from cosmos so yeah i've just been going with dogemo's now 
+
+Citizen Web3
+i like that i like that but you said a really good point that um uh dodgecoin at one point i think i think they actually sponsored the driver right they did eventually 
+
+Josh
+yep they actually did did get a big shiva you know on the hood of the car i can't remember his name yeah josh someone i think as well 
+
+Citizen Web3
+it wasn't you right josh i mean the connected dots now i'm kidding 
+
+Josh
+yeah yeah 
+
+Citizen Web3
+you also started to mention your cosmos story there and that was my kind of like next question but what how did you get to work for tendermint eventually i mean one thing is getting to know about cosmos and realizing how how cool that is because i think that's why we all kind of got here in the first place but why tendermint and how tendermint 
+
+Josh
+so i think i i first learned about cosmos when i was working as a crypto journalist in korea and this was back in the ico boom so everyone was just going nuts about crypto and this was actually before right before the hype got started and i did a job at starting up like one of these crypto medias here so trying to understand the crypto market and trying to write about it uh in a language that i haven't spoken for 11 years that was real rough but you know the the crypto market itself was just completely insane at the time and that energy i think kind of kept driving me forward and my editor there was a participant in in the cosmos fundraiser and he was doing a lot of the local korean community activity in korea so had got to have a lot of conversation about cosmos the blockchain market and things like that and he he's the one that really got me into this whole cosmos thing and you know one thing led to another joined his validator linument and then i was kind of tasked with building out the community and building out the product too at the time it was called lulogram tried to put a cosmos wallet inside telegram but we kind of ran out of resources at the end so we haven't really been i don't think it's as well maintained now since i've left but yeah and then um got in touch with the tendermint team because we you know we've met through the times that they joined some conferences in korea uh came to some of the cosmos meetups and stuff and got to join the tendermint team from there on 
+
+Citizen Web3
+you mentioned lunamin team and i think i think we have to record an episode with these guys because everyone i speak to where curtis talks about i mean we have to record them i think because it seems like they've been there since the very beginning and i know i know them like not online offline so and okay so a tricky question josh you recently had like a really viral and a cool tweet uh thanks to today in cosmos and thanks to the fact that the content was really cool describing tendermint and cosmos in an le5 manner could you describe in one sentence uh what are the differences between tendermint and cosmos and the benefits of each
+
+Josh
+i i have to think about this 
+
+Citizen Web3
+ha ha ha we can come back to that
+
+Josh
+i'll put that you know question back in to my head and try to come up with a good answer for it that tweet that you mentioned it was like just me thinking over how do i explain all these different stacks in a very simple manner to other people because i get that question a lot and that actually came through with two or three days of thinking with different analogies so i don't expect to have this good answer right away but i'll kind of come back to that yeah 
+
+Anna
+yeah okay then i have another question um what is the beauty of technology behind tendermint 
+
+Josh
+the beauty of tendermint is its simplicity in some ways because you know people are trying to come up with better consensus algorithms that supposedly do this and that better but i think what contributed to the success of tendermint was that it was a relatively and i say relatively with a lot of weight a relatively simple consensus algorithm that was able to be built out very early on which allowed other people to use it very early on and which was be able to be iterated and improved upon before anyone else really had a good way of starting this out i have so much respect for ethan and jay for coming up with this because you know when i first learned about tendermint and i still don't 100 understand tendermint to be honest 
+
+Anna
+Ha ha ha
+
+Citizen Web3
+Ha ha ha
+
+Josh
+from the way that a lot of the technical minds around me described it it's like this is a mathematical problem and you'd be lucky to you know come up with a good solution to one mathematical problem in your life for these two amazing co-founders to kind of have this done so early in their life and actually build it into a product that's absolutely fascinating and it's amazing that i kind of get to be part of this story very early on being used in other applications as well 
+
+Anna
+you know i'm really happy that you first mentioned the simplicity because it's my core point i always tell people that okay let's do very very simple thing and then we can interact and do it more and more complicated but simplicity is one of the most difficult things in our life and in technology spirit to be honest 
+
+Josh
+exactly and that's how most good products like are built in the long run right you start with something simple you just do it really well and then you iterate upon it and you build a better product as you go if you have a big goal with you know really a lot of moving parts and complicated ideas chances are you're not even going to be able to finish it and and that's why i always like to keep it really simple and start out simple the end product might not be simple but you know it's a process not the goal right 
+
+Anna
+yeah and um if we're talking about the beginning of the project for those listeners who are just starting to get an acquaintance with tendermint what would you recommend start with like maybe top three articles posts or whatever
+
+Josh
+i think the key part in understanding why tendermint matters should come from understanding the trade-offs between safety and liveness because i think that's the one component that sets tendermint apart from all of the other consensus algorithms that existed previously i don't know i think just kind of getting to understand proof of work that helped me out initially a lot better and then later getting into kind of understanding liveness properties and safety properties and why each of these matters because you know in the proof of work world having forks and having confirmations this is the norm right and then tendermint comes in here like nope you're all wrong we have this new consensus you don't really need to think about this idea of confirmations later i think just getting a better understanding of proof of work might be very interesting and understanding why tendermint is cool and i personally would not recommend people to get to know cosmos by learning tendermint
+
+Anna
+Ha ha ha
+
+Citizen Web3
+Ha ha ha
+
+Josh
+that's an area that people should not have to start with that would be very painful experience in learning cosmos 
+
+Anna
+very passionate answer ha ha so where do you recommend to find the information about tendermint medium telegram channel twitter or what is the best way 
+
+Josh
+the way that i learned a lot of these concepts was actually through the early cosmos blogs in 2017 so if you kind of scroll back through the cosmos blog and go back to some of the articles that chango written in comparing you know tendermint and casper ffg kind of the value proposition and things like that those articles go in depth into the pros and cons of each architecture and although the title itself sounds like it's a very specific comparison it actually does a very good job of stepping back and looking at the big picture of some of the major components and specialties of consensus so those were really helpful um i know people don't go back on blogs a lot but like highly recommend reading the early blog posts from 2017 and it gives you a new fresh perspective too because like now that it's made and this was three years ago and you're like oh wow like a lot of these things aren't a product until now and it gives you a fascinating view 
+
+Citizen Web3
+it's interesting that you say that because a lot of people that asked me personally about let's say ether or something my first answer is go back to vitalik's blog and have a look like go scroll to the very beginning and read i mean obviously you have to read sometimes like five times the same thing but after you get it you get much better understanding 
+
+Anna
+i want to add that i really like that thread for good projects that you can find out their initial roadmap and how that roadmap become a real thing 
+
+Josh
+yeah yeah that's also really fascinating 
+
+Anna
+and it's true only for mostly for good projects in my opinion sorry guys 
+
+Citizen Web3
+no it's true so yeah let's talk about the community a little of obviously you're apart from kepler which i said we will get to obviously your role as being a community advocate and the question might sound a little bit weird but so here it goes anyways in two parts so the first part is what is the most difficult thing or part in being a community advocate and the second part is obviously community buildings are trending and we can see that they're trending right we understand more and more to a social creatures and blockchain as a communication tool and there's a community that stands behind each project so the second part of the question as somebody who works with the community do you separate community members and speculators or are those the same thing and if you do separate them how do you get to understand who is a community member and who's a speculator 
+
+Josh
+yeah and i'll actually answer the second question first because i think that makes more sense in terms of that yes i absolutely separate the speculators and the general people who are tend to be more interested and i know that can sound very bad when it's taken out of context but here's why because i don't fundamentally believe that speculation is wrong i don't think that's a bad thing i think it actually is what a lot of the value for a lot of these crypto assets came from but for me my end goal would be first identify if are there people within the speculator group that would be willing to learn more about the tech and the product that's driving this and if not then you know there's not something that i can really address for them like there's not much i can do for them right and that kind of leads me into the first part is what is the best part of people who are purely interested in making money and profits into an area of interest where it's more product driven rather than chart driven i think a lot of people have to kind of question what the value of the community is because if you just have a group of people who's willing to trade your tokens for 30 days because they think they're gonna make it money in 30 days there's not a lot of value that's being left for the community rather than that short term that a bunch of people are buying tokens so you make money but beyond that what matters are the users right and i think users are a category of the community i don't think all of the community are users and and that's i think it'd be hypocritical for me to say all of the community should use our product because i think we also have to try to build more interesting and better product that the community members are willing to use simply because it's a good product so it's a twofold question right first of all the users or the community members have to be willing to kind of take that next step into being long-term stakeholders of the system and then on the other side of things you have to build out product that actually has market relevancy it's a very logical step for them to convert them from simply people who are interested in trading into people who are willing to kind of invest more than just financially their time and effort into using and bringing feedback to the product so i think that's the hardest thing and for me the thing that i'm more interested in is how do we iterate on the software that we have so it's more compelling for people to use it that's i think something that everyone in the blockchain space is trying to find out right now 
+
+Citizen Web3
+and what is the most difficult thing for you that you find in working with the community is it the tools or the lack of tools or is it i don't know the diversity of the people is the time frames what do you think is for you personally of course 
+
+Josh
+i tend to think take things a little bit personally sometimes so i know this is something that i have to fix as well but obviously there are topics that different people like and something that i like might not be of interest to other people i think the most difficult thing is like when i get really excited about something and i talk about it and i realize no one else really cares about it so i kind of have to go back and it's like okay like how can i make this what is it the topic itself that's not interesting or is it the delivery that wasn't interesting or is it the product is it the people so i kind of have to go back it's like how can we make this better and more engaging 
+
+Citizen Web3
+yeah that makes sense because obviously i work with the community as well so for me it makes a lot of sense what kind of tools do you use today or rather what kind of tools do you think are appropriate to work with a distributed community are those are the same tools that you would have chosen to work with if you would have worked in pepsi or in i don't know mcdonald's or whatever god forbid of course but yeah no offense to anyone but 
+
+Josh
+that makes sense and when you say tools you mean things like software and how do we communicate to these people and things like that 
+
+Citizen Web3
+i didn't define it on purpose i wanted you to define it in your own in your own way so i didn't want to define one specific on purpose 
+
+Josh
+uh well the best part about crypto community is that there is no one right answer so the fundamentally like i think the humans gets in gets turned into tools and i don't mean that in a way to like de-personify the person but i think fundamentally crypto success will depend on the network effect and the tools will be the people that are preaching the same vision that you believe in and then the in the software like things like telegram twitter that's just the intermediary step to getting these people to fully understand this vision you know what works in terms of discord telegram those aren't very relevant i think how you say what you're saying what you mean and how you deliver it like i think those are more or less the tools rather than the computer that you have in your hand or the software that you're writing 
+
+Citizen Web3
+actually yesterday i was uh giving a talk in a web 3 meetup and we all came to an agreement with this panel and i think all the speakers came to one point in agreement that in web 3 people are actually the content not in a bad way and judging by the last 30 or 40 years content is the king of the internet right i mean we've seen it in web 1 and web 0 web 2 web 3 whatever and um i think it's not totally agree with what you're saying 
+
+Josh
+i think just like the general metrics that a lot of non-blockchain industry uses might not be as relevant here because like you know other people would be like it's like oh how many people visited our website like how many people you know watched our youtube video like things like that i mean it's it's not irrelevant metric but i think what's more important is like who are the people watching it and how did they take it and are they kind of willing to take the next step and what is that next step are they going to talk to other people are they going to create their own content or are they going to come up with better follow-through questions and those are very hard to measure right that's kind of one of the other challenges 
+
+Anna 
+i and talking about metrics uh what kind of metrics uh personally do you use now to measure okay um do the good things and community really need it or just in some other cases 
+
+Josh
+so we're trying to do a mix of things where obviously if you want to convert a lot of people you have to have a lot of people watching so something that i've kind of been really focusing on lately is kind of stepping up on the youtube side rather than going for very boring titles comparison of cosmos and ethereum 2.0 would rather kind of go for can ibc be used for each 2.0 inter-sharp communications or kind of breaking out you know breaking down the two hour meetup video into like three or four minute short clips that a lot of people would be kind of watching i have more tendency to click on and watch and for me really counts is how long these people have watched the video rather than the amount of people that seen it it gives you a good signal when it's an hour long video that people have watched for 40 minutes on average than a three minute video that the average view was 13 seconds if you count doesn't matter as much it's more or less how much time do people commit to things like that 
+
+Citizen Web3
+this is really ironic because the other day we were looking at the metrics of the podcasts and we were discussing with anna and we see the numbers we're like oh those are good numbers for you know for starting podcast and then we're and then we start to look at the time where people fell off and we see that there are episodes that people listen to the end and there are episodes where people fall off and then you start to try to understand but why did this person start to follow from this particular episode here where did i go wrong so i totally see what you're saying there but i have still one more question about the community probably will unless anna has some we will move on you mentioned that you do separate speculators and community members so and this is a little bit devil's advocate question here but what kind of an advantage does a community member has in comparison to speculator because at the end of the day right again this is devil's advocate question end of the day both will get profit but because one was just holding the token and then sold it for i don't know whatever and he made oh well you understand what i'm asking what is the advantage that i'm as a community member will get to just a normal speculator 
+
+Josh
+first of all traders i think any crypto community needs to have a good amount of traders and that's a good signal the bad thing is when you only have traders and no one that's actually trying to think of a good word here when you don't have people that are kind of dedicated to the product itself and i think someone who is kind of committed into that ecosystem the value that they generate is a lot of times the feedback because people who really do care about cosmos are the people that are staking and using the software and they would always run into different issues where this doesn't seem to be working well or this could be improved and they tell you that and that's extremely valuable because when you're when there's people who are building out the core protocol a lot of times they miss out on the end user experience of how that feels like at the other side because i personally think those two people are operating on completely separate brain operating system thinking about the complete separate things i mentioned like you know you start simple and you iterate into building out better software and that was i'm sure the foundation of how cosmos built up product as well and when you have a lot of these people giving you feedback and suggesting directions to go to that's very crucial in trying to find a big product market fit where a room full of engineers will not be able to find on their own 
+
+Citizen Web3
+i think i know i know i had the next question because i know you said the word that triggered anna so you said product market fit
+
+Anna
+but before that i have a one more question about technical team how do you communicate with the developers and how you convert what developers do into some community points and how you explain that uh things behind behind code let's put it that way
+
+Citizen Web3
+how do you make a bridge between the the code and the user 
+
+Josh
+i think the biggest part and the hardest part is for me to understand what those brackets of code means because a lot of times i don't even understand it right so it typically comes with nagging a bunch of developers it's like hey what does this mean what does this do what happens if this doesn't exist is this really hard to make like so just no stupid questions just have to ask them all and try to get them to explain to you until maybe it's a little too much and then you're like okay i'll have to take a step back so that's that's how it starts and then um i always like analogies that's why i like explaining things in simple terms explain the causeways sdk with the success model of how volkswagen like was able to modularize their manufacturing process and that allowed them to create cars more efficiently but also a different variety of cars using the same parts and trying to find correlations in history in you know manufacturing processes in stories where the big picture of the code the intention of the code actually matches up with things that people understand better and that's actually very hard to find sometimes because there might not be one if you try hard enough there's something that works might just not be as good as you're hoping for it's a trial and error process 
+
+Anna
+we just discussed recently with serj over developing or what is the correct term serj do you remember 
+
+Citizen Web3
+i think over development is 
+
+Anna
+over development yeah that just developers love the idea so much that they try to improve it constantly so that brings me to another question about a product market fit could you tell us a little bit about what is it and for your personal point of view and how do you feel about product market fit how to achieve it and so check that things 
+
+Josh
+one example that i would give is with the upcoming stargate upgrade one major component is going from amino to proto and to be honest since i don't have a deep technical knowledge i didn't know what it meant it's like okay like it's faster but like you know what is this thing what does it do what does it mean for the end user and you know when you have that mindset of the engineer you're thinking about you know what types of does this type of like serialization and improve efficiency in this area or like the potential roadblocks in terms of developing on top of this and these are the things that like engineers worry about like on the end user side like does it mean like i can send the transactions in two seconds like but the answer to that is no right so product market fit really comes when you're thinking from the mindset of the user and when you kind of step out of that comfort zone of that like hive mind where everyone thinks alike and this is where i think the community part comes in and this is the biggest benefit that blockchain has that i don't think a lot of the markets outside here have is you have different people working with the same tools achieving different goals and the experimentation and the process that that comes through is i think blockchain's biggest potential to success in finding mass usage you don't have to really step outside of the box and try different things and when you're just you know i'm this type of person that does things this way probably won't be able to find that 
+
+Anna
+in my opinion product market fit is the most tricky things in product management like how to build unicorn and how to find unicorn there is no one way to do it 
+
+Citizen Web3
+there's no perfect equation for that i agree 
+
+Josh
+and i mean to be honest crypto markets product market fit has been speculation like to be honest that is true now we just have to kind of get over that and try to find the next step above that i think we we shouldn't try to lie to ourselves that crypto market and speculation is a completely different thing i think it's the best product market fit that has ever existed so far it's just not a good one and we have to find how do we kind of get beyond this right 
+
+Anna
+oh 
+
+Citizen Web3
+it's really ironic that you say that we just for just literally before the podcast i'm writing this proposal and i came up with this really i'm sure somebody said it before me i've never heard about it value is in the eyes of the beholder and i was like oh that's really cool and that really suits what you're speaking about because value is theoretically like beauty is in the eyes of the beholder and speculation is a massive part of blockchain and people who denied it you know just well end of the day the first use case was money with bitcoin and it's a bit silly to know to say okay let's throw it away even though we both work with communities let's get to kepler finally um what is the story behind kepler do you think it's already found your product market fit is it usable what are your plans and so on tell us everything you want to tell us about it 
+
+Josh
+to be completely honest i don't think kepler has found product market fit yet the initial intention that we had was to move away from the idea that wallets on proof of systems exists to transfer assets and to steak assets to going to the direction where wallets are more in the ethereum sense of like the tool that you use to interact with applications and that's an area that i don't think we saw a lot of building happening within the cosmos ecosystem a lot of the wallets are focused on staking and that's you know that's a very good direction to go because that's where 90 of the people are interested in is staking and asset transfer maybe we're not necessarily trying to build out the most profitable product but rather kind of reinvesting into the ecosystem or people who want to build application wouldn't stop simply because they felt like the infrastructure that they needed for users to interact with their applications didn't exist it's a learning process for us we're trying to experiment with features on making that easier i think the biggest drawback is you have a set of rules that you have to abide by which is you know in the in terms of the cosmos hub you know you have 21 day on bonding periods you have gas prices you have you know specific rules that everyone agrees to and from a user side that can get painful so we're trying to find creative approaches to either get rid of it or make that feel a little better but that's a very long term vision but right now just one step at a time things like adding ens name service right now we're kind of waiting for the next wave of applications to thrive in the cosmos ecosystem probably will come with ibc 
+
+Citizen Web3
+yeah definitely still uh because i've looked i think about a fork i'll be honest with you there was you've told me a few times about it and there were other people as well but the first time i actually really had a look into it i'll be honest was i think i was about a fortnight ago it was a night before we were about to get on a plane and i sat down and i looked at it and i really liked what i saw because i really went to new github and i really started to go and deepen deep into some things i didn't go like really really deep but not an engineer so yeah i don't have that knowledge i do understand some things and i really liked what i saw and i think you guys have something going on i really hope that you guys keep on developing it with ibc that's really important as a user i would say that i think that will be really cool that if you guys carry on that way do you have many users right now like active user 
+
+Josh
+not a ton right now and that's that makes sense because right now the only things you can do is stake and send assets and there are way better wallets to do that so we're mostly kind of thinking not in the immediate but in the post ibc world that sounds like a very magical term like the post-ipc world of kind of just preparing all the tools that we need and you know things like interchain accounts that we're working on i think is one key component of doing it and we're in the early stages of sketching out different ideas of what will wallets in this post-ibc world will look like and this is probably like the first time i've really shared this out in public but we're trying to come up with a new model of wallets where a user will only have to manage one account to get access to asset management and application interactions in all other ibc connected zones if i want to use kosovo sub iris kava in cyber i shouldn't have to manage for different accounts like that's just that's a no-brainer from a user side but right now we don't have that infrastructure so we're trying to come up with right now in the architecture phase and then getting into the building phase you'll probably hear about this more in the upcoming weeks or months 
+
+Citizen Web3
+yeah cool i actually read your i think it was your intro right about again about a fortnight ago about internship accounts i think that actually what made me go and look okay maybe i'm not a typical user but that kind of roused interest and i was like okay that sounds exciting let's go and dig into it josh on your twitter you have a statement that says interoperability isn't a technology it's a state of mind now what does that statement mean for you personally 
+
+Josh
+you can connect all the blockchains but if you don't have the intention of you know if your only intention is to extract value from each other not to add value like that's a very i don't see that as a long term it won't have any long-term interoperability potential like when you're simply there to extract value from each other i think the good thing about cosmos is we come from the mindset that one plus one isn't two when one blockchain is connected to the other there is a multiplier effect of the value that can be generated when each of those when the two are working together and i think that should be the kind of mindset that everyone working in cosmos should have i could think about in terms of interoperating with ethereum and bringing that to cosmos i could say it's like oh ethereum's d5 is really taking off maybe i could extract some of the liquidity that exists there to generate value for my site whereas maybe there is a different way of approaching it where how can we use cosmos to okay let me step back a little bit here because this is something that i've thought about so unit swaps beauty when i first saw it was the fact that i could just have the e token and i could interact with all the other applications that existed on ethereum that used their own tokens because before that i had to go to an exchange if there is an exchange that listed that token buy a very small amount probably like 30 cents to less than a dollar and then move it out of the exchange to my account and then use that token to interact with an application that was just a huge pain process and when unit swap came i was like oh my god this is probably like the first time i've really felt that a decentralized application actually beats the centralized application user experience and that was kind of the my wow factor for unisop initially when i first interacted with it obviously now with the gas prices at insane prices for ethereum everyone talking about yield farming trying to make more comp tokens and balancer tokens the average user isn't able to really experience that for unit swap anymore because you know if i want 30 cents worth of tokens just so that i could try to use this application i'll probably have to pay 60 70 cents worth of gas fees and that just isn't worth it so with interoperability and thinking of cosmos as an extension or something similar to layer two is like how can cosmos bring this initial value that has been lost due to the congestion of the network back to the user and how can the two kind of interoperate in the sense that there's something good being done for ethereum and there's something good being done for cosmos as well so that's just like some some example that i had is as blockchains change and narratives change there's well you know change is good and iteration is also good there's also good narratives and intentions that are being lost in that process and this is something that we can address collectively i believe with a better mindset 
+
+Citizen Web3
+that makes sense i thought this answer is going to be easier but something to think about definitely i like that i haven't known you for too long but we've spoken for roughly like eight months or so and obviously you come across as somebody with a very decentralized state of mind at least well that's how you came across from what you spoke about and this is kind of the next question what's your take on like projects coin full monty into the decentralized approach do you say that it's the way to go uh would you say this still has to be some kind of legal jurisdictional backing that ceo or cto or whatever would you say that well the way to go is okay guys let's get rid of all of that and just what's your take on that 
+
+Josh
+i think decentralization is a factor in deciding that but for me if having a centralized entity helps you achieve your goal faster then go for that if having a decentralized entity helps you achieve your goals faster then go for that and i say that because every situation is different every jurisdiction is different every organization and structure is different for something some of the things that we're trying to work on there's so much ambiguity with in the law of within korea that you know it actually makes more sense for us to kind of have a decentralized team or decentralized entity working on something because you'll never be able to achieve that goal with a centralized entity so i think it really depends on what you're trying to build whatever that helps you achieve that goal better 
+
+Citizen Web3
+a topical scenario is there a way this is what i ask ethan actually and i'm interested in your answer as well in the eutopical scenario will we ever get to the point where every project is decentralized that all the world is decentralized or is this eutopical and that's not of the question 
+
+Josh
+i'm personally in the camp that we will never achieve that but what i'm hoping for is a world where decentralization isn't an inconvenience because that's kind of where we have been and where we are but i think we're going to the direction where having things decentralized doesn't add additional friction and i think that is kind of what makes makes it viable because like when you think about tick tock and things like that everyone knows like someone just you know posted that they take your clipboard you know they can steal what you had in your clipboard every three seconds or so and no one really cares because it's like tick-tock's fun everyone else uses it the same thing with the messengers in korea we most people use cacao talk and you can talk about the awful privacy security downfalls of cacao or wechat even no one really cares like privacy isn't a feature that people would go out of their way for at least at this time so the the approach i think that we should have is how can we offer a product that is compelling that also has privacy rather than privacy itself is the selling point of this product i think developments in this space is really interesting and kind of going to that first point 
+
+Citizen Web3
+i see it's another statement to think about i think very profound i would i like that it's what makes a thing as different from not us as in like me and you here it makes everybody different when you start to realize how things actually step behind the reality and the usual like do i need to care about it the fact that my clipboard is being stolen or do i need to care about the fact that there is a proxy uh server inside my phone right now that god knows what it's doing 
+
+Anna
+do you think that for decentralized project privacy is a core thing or maybe it's not the first thing we can the first task we have to solve 
+
+Josh
+i think privacy is should be the end goal as in the long-term goal but i think if you get into trying to solve privacy in the short term you might not have long term success because going back to the whole speculator versus community thing the truth of the matter is the people that are interested in this space are speculators that's where we found product market fit the question is how do you turn that into something more meaningful and it's the same thing with privacy and utility privacy is important but it shouldn't be what everyone is focused on right now i think it should be the utility i i assume everyone has the mindset of wanting more privacy in this space so when these people are working on useful products i think they will bring useful products with privacy on default rather than you know working on some abstract cryptography things i'm always more of a like a product first person so 
+
+Anna
+yeah cool and you have your personal opinion yeah and you have the general opinion of the community and sometimes it's really super hard not to take things personally what is your secret methods maybe how to deal with the daily level of communication and controversials that you faced during your work with the community 
+
+Josh
+um i think honesty and the nice thing is this my company doesn't force us to kind of have the same mindset as the company statement and company vision and whatnot like we all agree on the same vision but i think they they allow you to kind of think of different ways of getting it and they respect individual opinions and things like that so when people ask me questions that can be uncomfortable i just say here's what i think but this is one person's opinion if you disagree happy to discuss you just have to bring up good points with valid data and things like that i think i think just being honest about it and not having this us versus them mentality rather it's like how is this something that we can kind of solve together 
+
+Citizen Web3
+totally i would probably add plus one to that now going back to the tricky question you promised at the end of the podcast to answer that so talking about your tweets and describing in one sentence the differences between tendermint and cosmos and the benefits of each if it's possible 
+
+Josh
+i'd say tendermint is the engine that powers the car and cosmos sdk would be the kind of like the car itself and cosmos itself is the world that you're driving in so for you to see a lot of these things that exist in this world you need a good engine to get you from point a to point b because if you don't have that car will break down and you want to make sure you get there in a comfortable fashion so you need to have a car that can get you from let's say through that seven-hour drive but cosmos in itself is an ecosystem where many different things exist in different distances and if there is nothing interesting to see seven hours away from you i don't think anyone would like to take that seven hour drive i guess that would be my analogy that i just kind of came over in three minutes 
+
+Citizen Web3
+i like that i like that i had the same problem yesterday where somebody asked us how would you describe web 3 to a 5 year old and then people start coming up with answers 
+
+Josh
+what was your answer for that i'm interested 
+
+Citizen Web3
+at first i gave an answer which was complicated and everybody else gave complicated answers and then i realized that well they are not for five year olds so my answer was let's imagine that you're playing on a playground and there is a girl you really like and you want to tell her that you like her but you don't want the other boys to know that you like her so or the other part is that you have a boy that's playing a playground with you and you really want to exchange your toy for his toy so web 3 is when you would tell that girl that you like her and nobody else would know or where would you exchange that toy with somebody else and you don't need to ask your father's permission for that 
+
+Josh
+that's a good one that's a very good one 
+
+Citizen Web3
+i don't know if it's good or not but we were like go talking about five-year-olds and we're like ah we need to find it but anyways going back to you so this is supposed something we ask everybody that comes on the show and um this is kind of the last question unless you want to add something the question that we ask is not cosmos related not tendermint related not bitcoin not ether because it's too boring of an answer what are the three projects that you're excited about and you're interested in 
+
+Josh
+so just three projects in general 
+
+Citizen Web3
+in blockchain space 
+
+Josh
+i don't know i guess the things that i'm most excited about are the things that i'm working on and i know that's a cop out answer so i'm hella excited for interchange accounts i'm so excited for interchange accounts i think this is gonna be like i know no one else really gets this at this point but i really think this is going to be what drives initial ivc adoption so that's first i'm excited about liquid staking oh in general there's not really anything tangible that we're working on it seems like a lot of the things that excite me are the things that i'm working on which is such a blessing 
+
+Citizen Web3
+what about dogecoin ha ha ha
+
+Josh
+oh yeah dogecoin that's something that i actually wanted to do one time is save the world by changing dogecoin into a proof-of-stake based system because like right now you're having meme coins destroy the planet by being on proof of work so like how can we convert this into proof of stake this was an idea that i had two years ago still haven't really come up with good answer 
+
+Citizen Web3
+i can help you with an answer 
+
+Josh
+awesome 
+
+Citizen Web3
+obviously you've heard about this is something i came up with just when you asked it so i don't know if it's gonna be correct but you've heard about district zero x right 
+
+Josh
+hehim
+
+Citizen Web3
+right so they have a mem factory and obviously uh safe chain is building either mint on cosmos so as soon as they finish it that means that technically the contracts of together with the mem factory of district 0x will start to function on tendermint so you will have an ability i have no idea how it will work because nobody knows how it will work we ask chain safe and they don't know how it will work as well but they're working on it 
+
+Josh
+ha ha
+
+Citizen Web3
+so maybe that's something that you could twist 
+
+Josh
+as important as the ethereum to cosmos peg zone is having a doge coin to cosmos peg zone will be crucial and at least saving the planet one little step at a time like i'd be more than happy to pitch you know donation in for that 
+
+Citizen Web3
+josh maybe something me and anna didn't ask you and you want to mention 
+
+Josh
+yeah i guess i kind of want to get back in get into entertain the council a little bit this is something that tony who is the initial person that came up with the idea and i are working on right now and this is the idea where i mentioned this earlier you have these accounts that are native to the blockchain that's really cool for sovereignty of the blockchain but when you think about it ethereum success didn't come from applications being sovereign it came from applications being interoperable with each other very seamlessly the process that we have right now is you need to have ibc and you have to build these application layer ibcs on top of ibc protocol and it's just like a very long and winded process that each of these applications will have to go through so what we thought was like how can you bring application composability without adding an extra layer of development and research resources being spent into it so we're like okay well if an account on the cover zone can open a cdp and an account on cosmos hub can stake and vote and account on you know let's say some other project is able to access the features of the application and a lot of times like you don't really need to have application to blockchain to blockchain module specific interoperability you can just kind of access a lot of these features through account so we're like okay why can't one zone control an account on another zone and access the application through the account and this is nice because like you don't have to change the staking module to access staking to let the ipc module access it and when you get into that you know who knows what you're changing and you know what vulnerabilities you'll introduce this is nice because like you just have a blockchain within an account and account is basically the blockchain right so if i want to do a cdp in the kaaba zone through an interchange account like i can do it from a completely different account and if i want to search the decentralized like ipfs websites through cyber i could just have an account on the cyber zone and i can do that from another blockchain just using what this account is able to do so this is i think is how a lot of applications will inter-operate in the very early stages of ibc because if not you're going to have to build out this you know interchange standards of how to queries you know how to search things on sidebar how to open cdp's on kava like and that's just a very inefficient way of trying to get application use cases so i think a lot of initial application composability will come through into chain accounts it will also bring the idea of modular wallets that uh like programmable wallet you can automate a lot of the features if you want you're staking words in dollars and not in the native token you can actually program a wallet that controls a lot of these other wallets and other blockchains to kind of do that for you through some type of token swap mechanism or whatnot so this is something we're so excited to kind of see early on in the cosmos ecosystem and we're actively building right now hoping it will be ready as soon as ibc is ready so that's kind of what we're working on and if anyone else has ideas on how this can be extended or if anyone else wants to use this feel free to hit me up 
+
+Citizen Web3
+this sounds like something the way i would describe it is probably like a user manage liquid smart ibc back contract liquid in terms that you could program it and it's yours and like it's a liquid smart contract 
+
+Josh
+yeah yeah it's almost like turning an account into a smart contract because which is something that's that already exists on 
+
+Citizen Web3
+looking forward to that and yes and if anyone has any ideas i hope that you can it's not very hard difficult to find josh so anyways it's been a huge pleasure speaking to you 
+
+Anna
+josh thank you for coming and thank you all our listeners being with us today 
+
+Citizen Web3
+yeah thank you and join us next time for citizen cosmos have a good day bye 
+
+Anna
+bye
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

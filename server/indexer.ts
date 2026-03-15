@@ -121,7 +121,7 @@ const runServer = async () => {
     { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
     { name: 'update-validators-aztec-logos', schedule: timers.everyHour },
     { name: 'sync-aztec-committee', schedule: timers.every10mins },
-    { name: 'update-aztec-l1-contracts', schedule: timers.everyDay },
+    { name: 'update-aztec-l1-contracts', schedule: timers.every6hours },
     { name: 'update-aztec-governance-data', schedule: timers.every30mins },
     { name: 'update-aztec-tvs-history', schedule: timers.every6hours },
     { name: 'update-aztec-apr-history', schedule: timers.every6hours },

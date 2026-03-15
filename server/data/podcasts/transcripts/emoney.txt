@@ -1,0 +1,436 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/emoney
+
+Episode name:
+Stablecoins, Liquidity and Business Development with Henrik Aasted Sørensen
+
+Citizen Web3 
+and good space time to you all. Welcome to another episode of Citizen Cosmos. We have Hendrik Ostell with us today. I hope I pronounced it correctly, the founder of eMoney, a project we would like to learn about. And Hendrik, hey, welcome to the show.
+
+henrik_aasted
+Thank you very much and thanks for having me.
+
+Citizen Web3 
+Yes, first thing is first. Would you like to introduce yourself and what you do in your own words? Explain to everybody what Iman is.
+
+henrik_aasted 
+My name is Henrik Aasted. I'm the co-founder of eMoney. I founded it together with a long-time friend Martin Düring, who three years ago... Martin had participated in the Cosmos fundraiser and had looked into the technology that was being developed and decided that it would be really suitable for payments. So after a lot of talks back and forth, it ended up in a project that issues European stablecoins.
+
+So that's what we're doing now. We both have a technical background. Martin has been co-founding a number of companies for his entire career. I've been doing a lot of consulting primarily inside the financial sector. a lot of everything ranging from national authentication solutions to XML translators inside a big bank.
+
+Citizen Web3 
+So before we go into detail about you, because I have looked obviously at your professional experience, which I was gonna ask about as well. I'm quite curious that you have a lot of, like you said, consultant experience for quite interesting companies. But before we go into that, a little bit more about eMoney. You said you guys are doing stable coins, but what is the mission of eMoney? Like when were you creating the project?
+
+What did you dream about? What did you envision? Where were you going with it? How was it supposed to change the people who were using it? Change their role? Or make it better? something like that?
+
+henrik_aasted 
+When we started out, noticed that the Cosmos technology stack was very suited for actual payments. Like you have the issue with stuff like Bitcoin that it has probabilistic finality. So if you do a payment, you probably have to wait around for about an hour to see if it works, which makes it not so suitable for, for example, small payments and quick payments like in a supermarket. So we realized that this technology could be used for that.
+
+At some point along the road, realized that probably ordinary people would not be doing blockchain payments anytime soon. So we should probably get a foothold inside the crypto ecosystem first. that's how we started calling ourselves a Stablecoin project. We've basically been that since the beginning, but at some point we realized, okay, that's what we should also label ourselves at.
+
+The goal is to create a connection to the traditional banking system, essentially. Like have some very boring stable coins that are collateralized by money in a bank or bonds in the same currency denomination and make sure that people trust these through regular audits and to be regulatory compliant, essentially. Then because we are based in Europe, we decided to
+
+henrik_aasted 
+We decided to start with the European currency. So right now we have the major ones are the Euro and the Swiss franc. And then we also issue the Scandinavian currencies, Swedish krona, Danish krona, Norwegian krona. But there's obviously a smaller market for those exact currencies.
+
+Citizen Web3 
+Let's go like a step backwards. You mentioned stable coins. Let's talk in very like super simple terms because you said boring stable coins as well at some point. So I want to hear your definition of a stable coin and what's the difference between a boring stable coin and a non boring stable coin.
+
+henrik_aasted 
+Oh that's a good question that couldn't probably talk about for a long time. the term stablecoins, it covers all manner of sins, It covers anything from asset-backed stablecoins like the USDT and the USDC to algorithmic stablecoins and crypto collateralized stablecoins like the DAI or some other stablecoins. So when we say boring, we mean that
+
+henrik_aasted 
+We essentially, we keep some money in a bank to support the value of the stable coins. We don't try to do any magic tricks of amplifying the issuance through fractional reserve banking or things like that. And we essentially just try to be a very good and trustworthy stable coin issuer.
+
+Citizen Web3
+What is the difference between your stable coins that you guys issue and algorithmic stable coins and asset-backed stable coins and any other types maybe of stable coins that exist out there, if there is any?
+
+henrik_aasted 
+The asset-backed stablecoins are exact. For example, the DAI, they require you to lock up some kind of crypto collateral. In their case, it's Ethereum. And well, recently they multiplied into other kinds of collateral. In our case, it's just money in a bank that has some advantages and disadvantages. Of course, in our case, it's...
+
+a slightly centralized solution. We need to have a company, legal entity somewhere that requires, maintains banking connections and has the audit done and all this stuff. While some of the crypto collateralized stablecoins, they can be way more decentralized and actually community owned, which is super interesting in my opinion.
+
+Citizen Web3 
+I was actually going to talk to you about Ernst & Young because obviously the financial audits, I'm not sure if I'm calling it correctly, but it's done by Ernst & Young. And that's quite interesting because it's like one of the biggest...
+
+henrik_aasted 
+Yes.
+
+Citizen Web3 
+financial entities, let's call it decentralized, the financial, the typical, the traditional financial world. And this is going to be a slightly controversial question, but.
+
+I would love to hear your answer on this because it's interesting. So how can we trust a centralized entity like Instant Young when they do the financial audit? Sorry, maybe trust is not the right word here. how do we verify this?
+
+henrik_aasted 
+it's intended to be quarterly reports, but so far it took a while to produce the first one, which has just been published. So it's it's a statement from the bank listing the assets that we have in the bank accounts, reserve accounts. And that statement is then notarized by Ernst & Young, who say this is what we received from the bank at this date. This is what they say. And we verified that this is correct. So
+
+That statement is essentially a PDF that we'll publish. well, it's up to people to trust that.
+
+Citizen Web3 
+I guess you could compare it to some what of a multi-sig account with a private multi-sig account that we have to entrust because they say, ok we have signed the message, but we don't really also. I mean, it's like, you know, like a trust in a small multi-sig. And I'm just trying to make a comparison here to understand.
+
+henrik_aasted 
+I mean, in the end, it's a document that is published and notarized by Ernst & Young, but it's true. It could be done with preferably with a lot more cryptography, but I think they're not really there yet. So far, if anyone really doubts it, I guess they would have to contact Ernst & Young and ask for the veracity of the document. in general, being...
+
+Citizen Web3 
+ha ha
+
+henrik_aasted
+Having convinced Ernst & Young to do this is, well, in my humble opinion, somewhat of an achievement because there's still significant crypto skepticism within these big four auditors. So, it was quite a hurdle to climb, but so far it seems to have succeeded. So we hope we can keep them on as our auditors. It should provide a lot of trust in the system once we scale up.
+
+Citizen Web3
+Oh definitely is a fantastic achievement, I think, to get such a huge household name to work with you. think in any type and form, think I would definitely congratulations on that. And I see Anna, had a question there.
+
+magic_host_ 
+Yeah, It's interesting you know that statement that blockchain is trustful solution in a trustless world. So, my question is do believe that Ernst & Young provide trust for your users or it is just a connect between fiat and crypto world?
+
+henrik_aasted 
+Thank you.
+
+henrik_aasted 
+There's definitely a huge interest in crypto inside of Ernst & Young. I mean, they're still trying to... the people we talked to, I mean, it's obviously a huge organization. They're still trying to come to terms with what it actually is and what it can do and what's good, what's bad. But there is an interest I get the sense that they definitely know they'll be dealing much more with crypto in the future and will have to get...
+
+into it somehow. so on that level, I think we also act as a canary in the gold mine for them to be able to say, okay, these people seem pretty trustworthy. We can work with them, learn more about crypto and things like that. It's way to get into it. I think in general, there seems to be all major organizations and banks, seem to...
+
+to be moving into crypto in some way. It's not always very well defined, but there is an interest that no one is ignoring it anymore, that's for sure.
+
+Citizen Web3 
+Was that an insight about Ernst & Young over there about getting into crypto?
+
+henrik_aasted 
+No. It's mostly that... No. Announcing the Ernst & Young coin. No, that was a joke. No, it's mostly the... I mean, it's the fine people that we work with. They have like a curiosity about the whole space that I really like. It's also...
+
+magic_host_ 
+So, It's not an advice. It's not a financial advice defiantly n.
+
+Citizen Web3 
+Hahaha.
+
+henrik_aasted 
+as far as I can tell, partially a passion for them. They're very curious about this emerging space and want to understand it better.
+
+Citizen Web3 
+Because I definitely see so many big companies, big household names. I mean, okay, Ernst & Young is very big household name, but I mean, we saw like even bigger names, right? Get into crypto and it's interesting. And the question I'm kind of going to get at is regulations. And obviously you guys are on the, I guess, more on the regulatory side.
+
+than a lot of other blockchain projects. How do you kind of cope with the, I'm trying to define my own question because it's not defined, but I'm not trying not to make it too controversial because I guess when you work in the blockchain space, a lot of projects, kind of like talk about decentralization and about the banks, we must unbanked everybody, know, we must destroy everyone and blah, blah,
+
+And then there's you who's kind of in a completely on the other leg. Well, one leg here and one leg there, how do you cope with that? How do you try to make yourself say, guys, we want to do this. This is our mission. We're not doing anything bad. how does it work?
+
+henrik_aasted 
+that's excellent question. I mean, in general, I love the disruption aspect of blockchain, but I just I sometimes feel like it turns very quickly into pure toxicity, which is, yeah, that's something I could do without in this industry, to be honest. But I guess that's a lost battle. we spend a lot of time and money talking to lawyers around Europe and also the FSA to make sure that we are compliant and not
+
+stepping over any laws. There's a lot happening in this space regulatory wise in the European Union right now. And we'll be following that and maybe perhaps updating our model as we move along. If there'll be a good regulatory box to fit into at some point, then we'll happily jump into that. So far we are...
+
+We're compliant with the Euro because that's essentially one of our values and part of building a trustworthy system.
+
+Citizen Web3 
+This is an interesting point you mentioned because as far as I remember, especially last year, there was a lot of documents that kept coming out from the regulatory, like European bodies, let's call them so. And a lot of them were about stable coins. There was a lot of rumors, of course. Some of the documents that you could read, some of them, I don't know if you could trust these things that came out,  a lot of the talk was about stable coins and regulating stable coins and going that the really heavy regular
+
+stablecoins like how does it affect e-money and the things that you guys want to do or it doesn't because you guys are compliant and you're like okay well we are compliant we don't care about the bad things we just do the good stuff
+
+henrik_aasted 
+Yeah, that would be easy to say. we're compliant, as I mentioned, it's an area that's definitely moving. So we need to stay up to date on it. with what we can understand the direction it's moving towards, I think we will be good, what the regulators were afraid of like a year ago, it was in particular Facebook's DM.
+
+where they instead of anchoring their tokens to specific currencies, they would put them in a basket and create an entirely new currency. at Facebook scale, that would probably join the G10 of currencies or something. So obviously regulators were scared shitless from that. And I would say for good reason. Then they updated their model to actually resemble ours more where...
+
+They issued tokens that, it's not like it's revolutionary, but they updated the model to issue tokens that were connected one-to-one directly to the underlying currency. I am not up to date with what made them move from Switzerland and back to the US. Actually, what prompted that move? But it seems like most of the stuff that was coming out of the EU bodies was about these giant tech coins. So far, there's been...
+
+There's been nothing that would interfere with what we're doing.
+
+Citizen Web3 
+And do you think that the model that you guys are currently pursuing is not going to be pursued in the future by the bank? or you just, like you say, you're going to shift if the bank started to, the regulator started to pursue say that this model, okay, we don't like it. And we are the only ones who can issue any type of digital Euro or any other type of Euro. Then you will just what like shift to another model  sometimes it's an endless cat and mouse game with the bureaucrats. And that's what I'm kind of like trying to.
+
+Get it? I'm not afraid of that. It's going to be a constant cat and mouse game.
+
+henrik_aasted
+obviously we hope it will be nothing as radical as what you're saying that they will outlaw private stablecoins. I doubt that because European regulators also know that if they did something that drastic, would essentially push the stablecoin market towards the US and Asia. It wouldn't do anything about the stablecoin market. It would push it away. I'm choosing to...
+
+put my faith in the regulators that they want European versions of this as well. I mean another thing that works in our favor is that these regulatory bodies are not very fast moving so I mean you can say we maybe don't expect anything for the foreseeable future that's not predictable from today.
+
+Citizen Web3 
+Oh regulatory bodies stop moving too quickly.
+
+magic_host_ 
+by the way, how big your forecasting period I know that you have a roadmap and then you work so close to finical regulator you should plan not for months but for years.
+
+henrik_aasted
+We essentially don't see anything that will impact our roadmap significantly from regulators. So that's what we hope. The roadmap is going quite well. We launched the third version of our mainnet yesterday, which has means that our chain is now IPC enabled. So now we are moving into what we like to call the business development phase, where we'll be able to... It's basically what we've been waiting for since we started talking about the Cosmos tech stack.
+
+that IPC was available and you would have this ecosystem of zones where tokens would flow freely and everyone could use them permissionlessly. I mean, now we're seeing the quite spectacular actually genesis of this ecosystem, which I'm super excited about. Our token model is designed with this in mind. So what we want is to have our chain where we issue the tokens and then they can travel to other chains to be used in context that we might not even know about like AMMs.
+
+other stable coins maybe it could be there's so many possibilities that it's mind blowing in this space. that's the phase we're in now where we will be integrating with the other platforms, other zones, we'll be building liquidity for the stable coins, we'll be focusing on getting on and off ramps and partnerships essentially making sure that the stable coins are available, that you can get in to them, out of them, things like that.
+
+after a lot of regulatory exploration and a lot of tech building over the years, we sort of finally arrived at the time where we can start doing business development. So we're pretty excited about this phase.
+
+Citizen Web3 
+I actually have a question about business development, but before I ask that, you mentioned IBC, IMMs, going in, going out, the tokens. How do you see, not NGM, we will talk about it as well, but all the stable tokens that you will issue? Because again, you're compliant with the regulations and not obviously all zones are going to be compliant. Are you just not going to connect with those zones? Are you going to have some sort of a peg in between the non-compliant zones and the compliant zones?
+
+that will help to, I don't know if it makes any sense at all,
+
+henrik_aasted 
+Yeah, I understand your point. I mean, there's essentially nothing we can do to restrict tokens from traveling along an IBC road to a zone where they do something, we might not like. on some level, I really like that. It's permissionless. It's very disruptive. the regulatory restrictions we have that we need to do KYC on
+
+OTC transfers and crypto versus fiat. So we cannot put any restrictions on what happens to the tokens once they're once they're inside the ecosystem, which I would say is a design feature, not a bug so much.
+
+Citizen Web3 
+you mentioned, as well business development, which I wanted to ask about. And you said we finally got to work on business development. Could you mention some of the things that you can mention that are related to that? Or is it more of a secret kind of like a surprise that we will see in the future?
+
+henrik_aasted 
+We are in the process of connecting to Osmosis and also to the Gravity Dex. And we are talking to people about building liquidity on there. that's a question of having people buy the Euro, primarily the Euro stablecoin and then putting it into liquidity pools and incentivizing those pools with NGM or down the line, hopefully Osmo as well.
+
+So that would allow us to slowly build liquidity for the EUR stablecoins and build up the issuance. We also have a bridge to Ethereum. It's a custodial bridge, which will also soon expand to Avalanche and other similar change. We have a long list of things we want to bridge to.
+
+So The thing about bridging is that it's not the final step. Once you are on that platform, you need something to do on that platform. So finding a project or building liquidity on the platform is essential to us. That's what the business development aspect we're working on now is mostly about. A lot of platforms really want stablecoins because it's, well, as I see it at least, it's a fundamental building block for the...
+
+henrik_aasted 
+platform. So it looks very interesting.
+
+magic_host_ 
+And I cannot not ask the question about DeFi. Do you think that DeFi provide the demand for stable coins? Or not?
+
+henrik_aasted 
+I think it's definitely somewhere stable coins can be applied very well. DeFi, I would say. You see in most DEXs, you have a huge USDT volume, for example, or USDC. So it seems to me that it is rather essential. A lot of people want to build pairs against something fairly stable. it's a really good application, DeFi.and than
+
+Yeah, then it's going to be interesting to see what comes after that. After the DeFi crash, we're seeing now what will be the next wave. Hopefully, we also can contribute something to that.
+
+Citizen Web3 
+Ha ha, I have a bit of a strange question, but I think with your experience that I looked at, you mentioned it right with the consultancy and the financial projects and you guys just started to talk about DeFi. Why do you think people strive to work with stable coins at all? What did in the first place? Why don't we just stick with the fluctuations and don't care about the stability? What we need it for? What is it needed for at all?
+
+henrik_aasted 
+That's a really good question because it's a rather tough undertaking to do a stablecoin project, especially if you're trying to be compliant because the banking sector are not crazy about you because you do blockchain and the blockchain industry is not crazy about you because they see you as banks. So you're kind of in between everything. Having a trustworthy stablecoins, I would say is essential for
+
+for gaining blockchain adoption by, for example, larger corporates. If you have a large company that wants to do settlement on blockchain, which is a very obvious use case, actually, then they need to have some store of value that they can trust that, for example, doesn't fluctuate. They don't want to suddenly have earned 30 % on what they sent to their Malaysian office. They just want it to be the same value as it was yesterday.
+
+I think there's a definite use case for the kind of stablecoins we have where you can say, yes, the lawyers, they say this is fine and we have a banking connections and we have a legal entity somewhere that is responsible for this stuff. So I see our stablecoins as, I mean, it's usable by every cryptocurrency user essentially, but it is also something that is...
+
+necessary for enterprise and corporate adoption down the line.
+
+Citizen Web3 
+you also mentioned stability before. sorry, liquidity, and again I can not help to ask because of your background, do you think the models that currently exist in DeFi, they are what's needed to provide the necessary liquidity for the money flows around the ecosystem in generally, or do you think that the current models?
+
+the liquidity providers or the IMMs and so on and so forth. Do you think that it's something that can be improved a lot? And if you do, then how? In order to get more liquidity going, flowing around.
+
+Citizen Web3 
+Or do we not need to improve it currently,
+
+henrik_aasted 
+I like the current style of AMMs. I'm actually very impressed with this invention basically. I I didn't know about it before, so it came to me. It was a little bit mind blowing once I started understanding the implications of it. I would have to say I'm basically not smart enough to point out.
+
+an issue with the current AMMs. It seems to work pretty well, but. There's a chance that it, like we've seen a lot of experience with models around blockchain and some of them have failed spectacularly. Some of them keep running and I'm not smart enough to point out where AMMs might fail one day. I think it looks like a solid thing, one thing that might stay. I remember being
+
+Citizen Web3 
+Ha ha ha ha.
+
+henrik_aasted 
+a little bit skeptical about Megatow and the tie, but I mean that has worked out pretty well.
+
+Citizen Web3 
+I think that there was some talk at the beginning, where our which company was it who owned a lot of Maker? one of the big I think it was AZ16, right? Who was it who owned a lot of the MKR token? And then people were saying, oh well, mean, they own so much that they can outvote anybody else and.
+
+that kind of like seem to be a problem. Do you think that those kind of things are a problem, are an issue in that term? I'm talking about the distribution here, I guess.
+
+henrik_aasted 
+I don't remember the details of that particular thing, but I think definitely there is an element of what you call a decentralization theater somewhere around where you say, look how decentralized we are. And then you go look at the token distribution and okay, the two founders have all of it, 90%. So I mean, that does happen. So you can sort of pull the decentralization card and say, ..
+
+Yeah, we have a community and stuff, but then once you dig into it, it's not that well executed.
+
+Citizen Web3
+And what do you guys do about it?  I mean, you're talking is called the NGM, right? If I'm correct, right.
+
+henrik_aasted 
+Yes. the company does have a lot of NGM tokens. What we don't do is we don't say we're decentralized. Essentially, we're calling ourselves a bit hybrid because doing what we do does require a legal entity somewhere to handle the regulatory stuff, to handle banking connections, all that. it would be...
+
+Basically, I lied to say that we decentralized. The service we provide, the stablecoins, is very useful for decentralized services. But we are a hybrid solution, I would say.
+
+Citizen Web3
+Why blockchain in the first place then? I mean, what made you say, okay, we're gonna have to use blockchain and specifically Cosmos even.
+
+Maybe go into a little bit more about why Cosmos. I mean, you did say IBC, so that kind of makes sense, but still, I mean, you weren't sure that it was going to work when you started, right? I mean, nobody believed it until this osmosis suddenly worked. Well, I surely did, even though I was following it from 2016, I was like, wow, it really works. my God. Right. So like, why did you decide with blockchain in the first? What made you come to the blockchain in the first place? I never realized that.
+
+henrik_aasted 
+we're doing stable coins, like I mentioned a hundred times already, but I actually do find the entire space incredibly interesting. And one of the aspects of the space I find most interesting is this composability, where someone delivers a building block and then someone else takes that building block and does something else to it. the whole ecosystem building on top of each other's services is...
+
+Citizen Web3 
+Yeah.
+
+henrik_aasted 
+completely fascinating to me. So I really love that. in that aspect, you could say, we see stablecoins as a fundamental building block for projects, for dapps, for zones, for whatever. And then we wanted to do a European version of that. yeah, it's essentially the permissionlessness and also the possibilities that come down the line with having real
+
+real money available on blockchain for global finance, for finance inclusion, all these things. Like we talk about them occasionally when we're in conferences, but on some level, I don't like to take them out too much because we're far cry from being able to help the financially underserved in sub-Sahara, for example. But in the horizon, you could see that it could be possible to do that.
+
+Why we chose Cosmos was we liked the idea of proof of stake. I'm probably not getting popular by saying this, but I find the Bitcoin proof of work to be a little bit repulsive, like how much energy is being wasted on meaningless calculations. So we like proof of stake. We like the immediate finality provided. Once a transaction was in a block,  
+
+it was in the block and it was executed. You didn't have to wait for it to become finalized down the line or maybe risk forks and stuff like that. And then the whole thing with IPC was incredibly fascinating. Being able to issue tokens, seeing them used in other contexts, that was a draw to the Cosmos Ecosystem. we haven't had a reason to regret going with that stack.
+
+would say that it's been a tumultuous ride and we prefer to have seen it go live earlier, but in the end it's a rock solid stack that has served us well and supports our token model incredibly well.
+
+Citizen Web3 
+Could I try and summarize the mission that I was asking about for motive of our podcast is always to try to understand the motivation of the project. And this is what I've been trying to kind of get at this was I've been digging sorry about that. But I'm what I'm trying to understand is here is like, so basically, what I'm hearing is your mission is to bring in your own world's real liquid money to the blockchain.
+
+henrik_aasted 
+Yes, that's true and a trustworthy European alternative to some of the other stablecoins out there.
+
+Citizen Web3
+And also I read somewhere, I think in your website or your documents, I don't remember that the people who hold these coins are your interest over time. Could you talk a little bit about how it works
+
+henrik_aasted 
+that is one of our great communication challenges is explaining how our tokens are interest bearing. So the thing that happens first when you start thinking about doing a European stablecoin is that you realize that putting money in a European bank is actually a really bad deal because if you're very lucky, you will get 0 % interest, but most likely you will get a negative interest. So what happens then is that we designed a model 
+
+This is for some reason extremely controversial in blockchain that we did away with the traditional one to one pick of stable coins and we replaced it with what we call a dynamic pick. It's a little bit funny that people can accept projects that are sort of recursively build value on top of each other and all that and stuff. But as soon as you say that a one to one pick is stable coin, that it's not one to one pick, people freak out. But if you bear with me.
+
+then what happens is that we replace the one-to-one pick with a dynamic pick that changes very slowly over time. So instead of showing the amount of tokens in the wallet, you would show euro value of the tokens. So that means that we can slowly accrue interest like you would in a bank account essentially with the current economic climate that unfortunately means that it's
+
+that the stable coins will probably be charged an interest of minus one and half percent over a year. Over a year, that's very important to say. So it's a continuous accrual of interest and it takes place very slowly. the exchange rate is applied going in and going out of the stable coins. So essentially, if you get the stable coins and hold them for a week, you will probably not notice a change in value.
+
+If the current economic climate ever picks up and we will hopefully have positive interest on our bank accounts again, then that will actually mean that we'll be able to provide an interest rate for people holding the stablecoins like you do in a traditional bank account. Like we remember from when we were kids, you would actually get an interest, a positive one.
+
+henrik_aasted 
+So one interesting aspect of this model is that it also means that it's actually possible to make stable coins for currencies that have very high interest rates. You see some countries where maybe the financials are not doing too well, so they have an interest rate of 15, 20%. And usually we would say basing a stable coin on that would be very bad because that's essentially like, well, yeah, having cash.
+
+But with the model that we developed, you would be able to take that interest and put it into people's wallets automatically. So it could be used for creating stablecoins in some of these more fragile economies, which I find very interesting down the line. It's not on our roadmap right now to help save those, to help build stablecoins there, but it's interesting. as I said, it's...
+
+It's a major communication effort on our part to convince the crypto community that this is actually a pretty solid model. The one-to-one pick stablecoin is pretty much stuck around crypto, seems.
+
+Citizen Web3
+This is actually a nice question. I have to ask you right here. Who is your customer? Is that crypto community or is that the traditional community who wants to get into crypto, traditional banking community wants to get into crypto because you said we have to convince them that it's not a one to a peg. Then I start thinking, well, do you need to convince them or is that even your customer or not?
+
+henrik_aasted 
+Initially, it's the crypto community we need to convince. Like I said, we are moving into this business development phase. So our current issuance is not impressive, as you can see in our first audit report. But I mean, we are hoping that this will grow significantly and quickly in the next month. So that's interesting. what we are targeting right now is crypto. 
+
+It's too soon to try and talk at the mainstream. would say, mean, people, the user experience for my parents is just not good enough. I mean, I can't give them a ledger and say, write down a seed phrase and then I guess buy a safe to put it in. We're not there yet. I could see crypto reaching the mainstream, definitely at some point. I look very much forward to it, but it would be a...
+
+a little bit stupid to wait around for that. What we're doing now is we're establishing our foothold and traditional along the other stable coins, trying to get a market share there.
+
+Citizen Web3 
+Confusing shopping lists and seed phrases are a terrible thing. 
+
+magic_host_ 
+What do you think about role of Crypto Vaults I know that BitGo is one of the biggest and some others are registered in Switzerland 
+
+henrik_aasted 
+Yeah, my mom could do that.
+
+magic_host_ 
+Do you believe that they help traditional institute to discover the crypto market or they play a role that is still unclear in modern space?
+
+henrik_aasted
+I think there's definitely a market for very good crypto custodial solutions. Like we see banks moving into crypto instruments. They don't want to build their own department, managing and holding these instruments. They probably, a lot of them, won't anyway. So there's going to be a huge market among institutionals for this stuff. Possibly down the line, there could be private market as well. That would be interesting.
+
+I would as wager right now it would be mostly for institutionals.
+
+Citizen Web3 
+What do you think about the more extreme stuff? I mean, again, this is more anecdotal. We don't have any proof for that until it happens. But I'm talking about like custodial and issuing centralized digital currencies without any having any other private companies. Like you said, that you hope that the European regulators will not go as crazy as the Chinese are going. there was some, story where about digital Yuan where
+
+don't remember who said that. I don't know where it came from, and I don't even know if it's real or not. But the thought, think, is a bit crazy, where they said that when the digital yuan is going to happen, one of the things we want to try and play around with the turnover of the money is when people get paid in digital yuan, then if they don't spend, let's say, their wages until the end of the month, that means they don't need it. That means it's going to burn or go back to...
+
+the issue where I mean, that's a bit crazy, of course, but what do think of things like that?
+
+henrik_aasted 
+I guess I have two things to talk about there. I would say that Chinese digital one is probably mostly meant as a surveillance tool. They already have this social ranking social point system and it would hook right into that in very, very unpleasant ways, I would say. So that's my theory at least. I don't think they're doing it to improve the financial system. I think it's a surveillance tool.
+
+In Europe, they're talking about CBDC, centrally banked distributed currencies. And I think they found a shape for it. And I think it's not going to look like what everyone in the crypto community are hoping, praying for. will look like, what people are hoping for is that it will be a European tether where that is backed by the central bank, but that's not the system it is right now.
+
+The latest I heard it will allow people to deposit money in the central bank up to 3000 euro, which it's nice because you avoid some banking risks. but I mean, especially for Northern Europe, I mean, I don't see a point of stashing that amount of money in a central bank for safekeeping because what would I do about the rest? it's going to take a very different shape than people in the crypto community are hoping for.
+
+henrik_aasted 
+I don't see it being that permissionless as people are hoping. There might be blockchain somewhere deep down. It'll probably be some kind of proof of authority. It will most likely more resemble the credit card system than it will resemble any kind of blockchain we have today in the open blockchain.
+
+Citizen Web3 
+Yeah, I've also, think there was an article just either just in a couple of past couple of days about the CBDCs and there some guy doing a huge like, I don't know if it's controversial, not controversial, trying to understand what's really going to happen. don't know if you saw that or not. I don't remember who it was by.
+
+henrik_aasted 
+I didn't see it no. that's one of the good and bad things about this space is there's so much to keep up to speed on that it's actually impossible. I've occasionally started out in the morning thinking, I should keep up to date on this and this and this. And then suddenly it's lunch and I'm like, my, I'm still not even up to date. That's just, which is super fascinating also, but there's so much happening all the time.
+
+Citizen Web3 
+Ha ha
+
+henrik_aasted 
+I didn't see that article, but I tried to keep up on CBDC, so it's near and dear to my heart.
+
+Citizen Web3 
+If I will find it I will definitely send it your way because it was like a really long article the guy trying to Go about how bad it's gonna be and like my god
+
+henrik_aasted 
+there are so many unsolved issues, right? I mean, if we can all start depositing our money straight to the central bank, why would I have any other bank, things like that? already there you have a trillion dollar industry trying to lobby for something different. I don't know what kind of shape this will be, but it's not going to be what we hope for.
+
+Citizen Web3 
+Yeah, well you mentioned by the way tether. What are your thoughts? mean, I cannot not ask because it's a little bit similar to what you guys I guess are doing, but of course with all the scandals and all that.
+
+henrik_aasted
+I think they are the backbone of crypto. I hope their influence will diminish a bit over in the future because it seems like a single point of failure at the moment. They also course have their share of rumors and...
+
+controversial, but in the end, I think they've done a huge service to crypto in general. And I don't think we would be where we are today if someone hadn't created Tether. But as I mentioned, it is a single point of failure. So I think we need to have more initiatives like, yeah, well, USDC and maybe Facebook's thing when that comes out and well, us to spread out the risk. If suddenly there was a bank run on Tether or they just said, don't have, there's no way to redeem this. It would be...
+
+I wouldn't even say nuclear winter. would be like the scene from Armageddon with the meteor hurling towards the crypto world. It would be an extinction level event, I would say, for quite a long time.
+
+Citizen Web3 
+Do you think that the crypto world needs as many stable coins as it can create or this has to be like some sort of limit on that where, okay, there is Tether, there's USDC, there is you guys, there is somebody else and okay, we have like 10 trillions and that's 10 trillions, sorry, that's enough or is it a never endless kind of story?
+
+henrik_aasted
+I I would prefer a future where we had a greater choice also among different currencies. So we're not stuck with the US dollar for stablecoins, So that would be, for most currencies, would have an equivalent stablecoin would be nice. And also, yeah, the whole single point of failure thing makes me think that it would be nice to have a good spread. So we don't suddenly lose a lot of liquidity in the whole ecosystem at once.
+
+if something goes wrong.
+
+Citizen Web3 
+What do you think about stable coins that are backed by something like ETH, for example? Could that ever exist considering...
+
+Citizen Web3
+the controversies behind all this, so by Bitcoin, I mean, I'm not a huge fan of Bitcoin as well, to be honest, but let's take ETH, for example, or ATOM, I don't know.
+
+henrik_aasted
+that already does exist, right, in the form of at least maker. and like I said, I think the maker model seems to have really proven its resilience to market fluctuations. I would say, I mean, there have been hiccups, but they managed them and the die is quite stable. I mean, one issue that people sometimes overlook with this is that going into and out of these stable coins can move the market.
+
+henrik_aasted 
+So if some big corporate comes and say we need to transfer 100 million dollars to our subsidiary in Malaysia, I don't know why I keep using Malaysia. That would mean that they would have to go out into the market, buy, die in an amount that would actually, that would probably move the market if someone big or they would have to spread out the purchase over a long time. Once the Malaysian subsidiary wanted to get out of the die, they would also have to go and sell and also move the price.
+
+Or they could print their own dice by first buying Ethereum and then have that issue that it would be complicated. That's actually one of the strengths of our model. can do over the counter issuance of our stablecoins without moving any of the exchange rates or the value. So if the big corporate with a hundred million dollars would use our stablecoins, they would come to us, do bank transfer, we would issue the tokens and
+
+Like no other token holders would notice that a large amount of liquidity had just flowed into the system.
+
+Citizen Web3
+Before we go into a traditional question, is there anything else we didn't ask you? Because eMoney in Cosmos World has been, for me at least personally, it's kind of been on the side in terms of, I don't like this because it's got to do with compliance, but...
+
+You have guys been more quiet than a lot of the other projects and that's why we don't know so much about you and it's hard to dig deeper. So is there anything else you would like to share any plans or any, any of your idea guys or something we just didn't ask and you think, well, that's important to tell us about.
+
+henrik_aasted 
+we have been in what we joke about calling involuntary stealth mode because we are like two technical founders and there was a lot to do. So essentially we haven't spent the time going to... We have been to conferences, we have met people, but we haven't been able to sort of make so much noise as maybe we want which...
+
+It would probably have been a good idea to have someone on board from the beginning to make noise. But on the other hand, we also kind of don't like making noise before there's something to make noise about. I'm not a big fan of these projects that go out and just make a lot of noise about what's going to happen soon. We've seen this big share of those. Sometimes we have some here in Denmark also that are very good at this. 
+
+With the phase we're going into now, we need to make more noise. We were fortunate to find a very good CMO earlier this year, who is doing a fantastic job of making us more visible. We will be going to conferences and things like that. We'll be at the conference in Lisbon in November, for example. So if you want to meet up, let's grab a beer there.
+
+Citizen Web3
+We are one of the sponsors by the way, we were in fact.
+
+henrik_aasted 
+I saw that.
+
+Citizen Web3 
+so the traditional question we can ask all our guests this season is what Resources and this could be absolutely anything from books to music to blockchain to github accounts to whatever
+
+Citizen Web3 
+something in daily life that motivates you, something that you would love to share with others and say, guys, go read that, go do that, because it will help you to concentrate, build your project, I don't know, whatever, something like this that motivates you.
+
+henrik_aasted 
+That is going to sound a bit cheesy, I guess my kids, it's also when you have kids, you don't really have room for that many hobbies. it's difficult to, but I mean, building a company is, obviously super stressful, but also very exciting. So being successful at that is very motivating for me.
+
+Citizen Web3 
+That's actually a very good answer. We had all different kind of answers and this is the first time I hear this one. So that's a fantastic answer in my opinion. Hendrik, thank you very much for joining us. It's been a stable coin stock, which we are not used to. So sorry if we tried to ask the controversial questions and it's not controversial enough. I don't know how it was. So I hope it was okay.
+
+henrik_aasted
+No? Okay.
+
+henrik_aasted 
+It's been very fun. We enjoyed it. Thank you very much for having me.
+
+Citizen Web3 
+Okay, and thanks everybody for tuning in and listening. Thank you. 
+
+magic_host_ 
+Thank you everyone and bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

@@ -1,0 +1,504 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/esadyusufatik
+
+Episode name:
+Capturing Usage, Hash Flow and Open Source with Esad Yusuf Atik
+
+Citizen Web3
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast I have with me today, Esad from Citria, Bitcoin ZK Rollup project, which I'm excited to hear about. Not just the project, but of course, as always excited to hear from Esad and about him. Hi, man. Welcome to the show.
+
+Esad Yusuf Atik 
+Hello, I'm glad to be here. Thanks for the invitation.
+
+Citizen Web3 
+So my first silly question, am I pronouncing asset correctly?
+
+Esad Yusuf Atik 
+I guess so, it's Esad, yeah.
+
+Citizen Web3
+Okay, thank you. sometimes with my name is the same, know, people are like, Serge, how the hell do we pronounce Serge, Sergei, Sergei, I understand the problem. So I'm kind of getting used to ask, Esad, can I please ask you for myself, for the listeners, to make a small introduction about yourself and maybe focus on the web three aspect. But of course, feel free to add anything else into it you want to. You can start from the very beginning if you want, but up to you. Anything you want us to know about you.
+
+Esad Yusuf Atik 
+Yeah sure, so my name is Esad. I have a journey in crypto not longer than three years maybe. So I used to be very interested in investing and algo trading. That's how I actually ended up in crypto. Because you know crypto is one of the best places.
+
+because it's not yet as regulated as classic financial institutions, you can get an API key from a centralized exchange and just have your way, right? So that's what got me into crypto actually. I started doing some algo trading, trying out arbitrage and those kinds of stuff on my own. And when I really got into crypto was I saw on Twitter an advertisement for
+
+hackathon that Avalanche was doing in Istanbul and I was really interested because at those times you know the market's rising you hear about crypto all the time and you know I felt like this could be a good place that I could learn about crypto maybe find a job maybe find some teammates that we can do something together you know those type of things so at the time I was at the university I wrote into my
+
+Whatsapp chat group for our classes, know, is there anybody who knows about smart contracts? So that's how I met my co-founder Orkun. I said like, look, I know how to do games. know.
+
+programming language and I found out about this hackathon and I'm really interested if you want to go and he said why not and yeah so from there we we both found jobs actually.
+
+Esad Yusuf Atik
+What do you say? He first got an offer from Bidara. It's a USDC fork where, you know, it's a USDC fork for Turkish Dura in short. And after some time they were looking for somebody in the algo trading team and he referred me. I got into Bidara. I got a job in crypto for the first time. I was really excited. What I did was not that different from what I was doing on my own writing, you know, trading bots.
+
+writing market makers maybe was a first time for me there. in time I got more and more into on-chain stuff. Even in media there, right? So, apart from all of this, I always had an entrepreneur mindset, let's say. Even in high school I was involved in robotics.
+
+startup. So at the back of my mind I was saying I gotta find something we gotta do our own thing and so through my friendship with Orkun we were also doing side projects and
+
+Esad Yusuf Atik
+Some time passed and we were like, why are we not taking this series? We also met a few people from our school or from you know graduates one of them is Murat another co-founder and We started taking this series and we said, okay We're gonna do Something we just didn't know it yet. Right and we also had this friend Ekrem was also a very smart guy
+
+Esad Yusuf Atik
+So we met him through university again, it's like four co-founders from the same school, from same service maybe, and we decided to fund Chainmail Labs. At that time, we weren't really sure on what to focus on, but one of our product ideas was, it was RFQ AMM.
+
+Esad Yusuf Atik 
+Kind of like a hash flow. Do you know about the hash flow?
+
+Citizen Web3
+Sorry, let me unmute there. I do a little bit, but if you would tell about it for me and for the listeners again, I would really, really appreciate it.
+
+Esad Yusuf Atik
+All right, so it's like, basically.
+
+Esad Yusuf Atik 
+It's basically a platform, a decentralized exchange where price is settled off chain, but the actual settlement for the assets step on on-chain. So there's like market makers that give out prices for the users and you get to swap them trustlessly on-chain. We started working on that, but you know.
+
+After some time, we started looking for other things as well since we couldn't really get this product rolling. one of the things was ZK, right? It's our topic. We really liked the idea. From a technical perspective, it's crazy that you can prove something without revealing what that thing is in a simple form. again, around the time we found Chainway Labs,
+
+there was the sanctions with TornadoCache. And we were like maybe we could use ZK, the core technology in TornadoCache to make TornadoCache a little more, you know, government friendly, a little more, what do you say? a little more compliant
+
+Esad Yusuf Atik 
+So we started building Proof of Innocence and the first time we announced it, it got really big. Even Vitalik Buterin wrote to us on DMs, it's a cool project, how do you think about productionizing it and those kind of things. We got two grants, one from Privacy Pools, one from Railgun to port our existing Proof of Innocence to their own products.
+
+You know, we were four co-founders. Everything we focused on, we could parallelize it because like, know, somebody deals with something, somebody deals with something other. So we could also do this with products. Around the time you were working on Porting Proof of Innocence, Ordinance came up around like January, 2023, right? And I was really excited for Ordinance because in Ethereum, you know,
+
+is just like a pointer to a URL which holds image, holds the sound, audio, which holds the video and stuff like that. And putting all the data on chain was really interesting, especially for me. And I was, I've just kept saying, we should do something with Ordinance. At the end, a lot would...
+
+After a lot of discussions, we decided to build an Ordnals wallet and we started building Ordnalsafe. It was one of the first Ordnals wallets, web extensions on the market. We launched it around, I guess, March, 22 and 23. Ordnals was very exciting, especially for me because I came from, you when it's Ethereum
+
+background you are used to lot of tooling being available a lot of options for tooling as well not just like a single tool for a single objective right and it makes your life much much easier and when I come to work on something related to Bitcoin I was
+
+Esad Yusuf Atik 
+let's say that after a lot of time, the developer tooling, maybe it's not the case for like experts, people who are in the Bitcoin world space for a long time, it's not the case. But for me, for a newcomer, it was really hard for me to build certain things. So we had to build a lot of stuff from scratch, a data, a UTX indexer that used a relational database.
+
+that's something we built with OrdinalSafe. And I was really surprised that wasn't out in the market. So while working with Ordinals, we realized that, so we, as I said, we're four co-founders, so we can parallelize on different things. So at those times, Orokun especially was really interested in server and roll-ups and roll-ups in general. And...
+
+Since we're working on Bitcoin and since we're working on a
+
+Bitcoin as data storage, it kindled some discussions in the team about like, what if we make a sovereign roll up on Bitcoin? Everybody's using Ordinals for NFT storage. And then some clever guys come along and uses Ordinals to create tokens. Some other guy comes in, let's put EVM data here and run that indexer.
+
+make this like an EVM roll-up and stuff like that and it was really natural to see that the next phase would be using Bitcoin for a sovereign roll-up. this idea became really know obvious to us we really believed in it and we started working on our Bitcoin roll-up which is Straya and
+
+Esad Yusuf Atik 
+steps it was a sovereign roll-up that means like only connection between Bitcoin and our roll-up was using Bitcoin as a data availability platform blockchain and through time a lot of things changed of course especially when Bitcoin came out and here we are we're Chainway Labs we're building Strea a ZK roll-up on Bitcoin
+
+and I am the CTO. So I just noticed that I've never, you know, actually introduced myself. I am the CTO of Chainway Labs. You know, I got three other co-founders rebuilding Strea.
+
+Citizen Web3 
+It's good. I like when people get carried away into their story and they reveal the story and it's good. That means you were really telling the story. It's a good sign, I think. But before I get, I do have of course questions in that direction, but before that, I'm going to, if you don't mind, dig a little bit about you and nothing secret, I promise.
+
+So first is first, I know that if I'm not mistaken, you were on the Turkish who wants to be a millionaire, right?
+
+Citizen Web3
+Yeah
+
+Esad Yusuf Atik 
+I was a junior, no I was, what's it called in US terms? I was in second year in university. So the thing is, we have a university entrance exam, it's a national thing, so anybody who wants to go to a university, whether it's state university or private university, they have to take this exam, right? So let's say every year 2.5, 2 million.
+
+Citizen Web3 
+Aha, secondary, yeah.
+
+Esad Yusuf Atik 
+maybe even 3 million students take it. So I happened to be in the first place in numerical and science field of this exam. And that's very interesting for a lot of Turkish people because there's only a few first place winners, let's say winners, but first place winners every year. And that actually got me to...
+
+be in the, who wants to be a millionaire? Because like every year they, not say, not every year, but every, I don't know. Often they have somebody successful in that exam. And yeah, I just tried my chance. didn't really get a.
+
+Citizen Web3 
+Where did you get to this stage?
+
+Esad Yusuf Atik 
+So there's like two levels, so two price levels, the barriers. No, like there was like 15 questions, but there's like two barriers that you go down to if you answer wrong, right? I think I got eliminated on the second barrier question. And the reason why is, yeah, but I got like 2000 Turkish Liras. So it's like, it was at the time 100 US dollars, right? The reason why I got eliminated is actually funny.
+
+Citizen Web3
+I don't remember. Yeah.
+
+huh.
+
+Citizen Web3 
+Yeah, yes, yes, yes, yes.
+
+Citizen Web3 
+that's good.
+
+Citizen Web3 
+Ha
+
+Citizen Web3
+participation.
+
+Esad Yusuf Atik
+So I said like I got first place in the numerics and science field right they asked the they asked a question about literature I mean I'm not really bad at literature but you know I happen to not know some technical technical stuff or some Let's say classifications especially about Ottoman era
+
+So they ask about which one of these are not a real literary movement. And I know a few, so I eliminated two, I eliminated A and B, some between C and B. And they made a wordplay on one of those. it's like, I feel like I know it, but I'm quite not sure. And they got me there. So there was this one.
+
+Esad Yusuf Atik 
+it's the selection C, it was a real literary movement but I was not sure but on D I felt like I was sure about that they made a bird play so I got in with it.
+
+Citizen Web3 
+tell you why I went particularly to there, not because it's like, you know, a claim to fame kind of thing. And it's an obvious thing to ask about, but I, it's a weird logic that I'm going to give you now, but I would like to hear your thoughts about it. Like my logic, the logic that, sorry, the question why I thought, okay, let me ask about that. Because a lot of the time, especially considering you're a CTO, you know, a lot of the time,
+
+technical guys don't like to be in the spotlight. Like you have Vitalik, okay, and you have a couple other people here and there, but those are individuals, right? Like a lot of the times I feel like people, not just CTOs in crypto, they don't like to be in the spotlight. know, they don't like to be in the center of attention. And it takes some time, a lot, you know, for people to go to a conference, you know, let alone go on a national television and talk. I'm curious.
+
+from a perspective of a guy who is obviously technical, know, a person who is interested, you know, got first place in the numerical and science section of those exams, you know, so which even proves the point further. did you find that experience... Another point here before the question itself is that a lot of the podcasts we talk about motivation, and I think this is maybe a little bit in there as well. And here is the question. Now it will all come together.
+
+Like, did you find that experience for yourself as something that helps you, like, as a person to evolve? Or it was like, you know, okay, I got first place in those exams, they told me to go, so I had to go and like, but I didn't really want to do it. So what I'm trying to see here is a lot when I talk to founders and co-founders, you know, they talk about, you know, being stuck or trying to find
+
+the way to get out of their bubble and kind of conquer the world. So this is the question. Did something like that help you?
+
+Esad Yusuf Atik 
+questions so to be honest when I apply
+
+a millionaire.
+
+Esad Yusuf Atik 
+stage, how it's gonna be. So like I said, I remember saying a lot of stupid stuff there to be honest, but they cut most of it and my specific episode was aired like one and half year later than it was recorded actually so I think they didn't get what they wanted out of me but yeah.
+
+But it taught me something, you know, I was really stressed on the stage. I was really stressed that it was gonna be aired one day, broadcasted or whatever. And I was gonna be very, you know, ridiculed. It was gonna look bad on me and people would make fun of me and stuff like that. So I learned from a friend that wrote to me.
+
+on WhatsApp that my episode was being broadcasted at that time. I told nobody so that nobody would find out. Of course everybody found out. And you know, nobody made fun of me. Everybody was like, I said, okay, you did great. Maybe you didn't get a big prize, but you you try your chances. did great. Okay. And that taught me that if you want to do anything in life, basically, it doesn't have to be a great thing. You gotta...
+
+You gotta stop being afraid, gotta stop being stressful and you just gotta do it. I mean like, just do it and it's not gonna turn as bad as you think. You gotta be, you gotta believe in yourself basically. To this day, I think this is like maybe second or third time that this has been, Who Wants To Be A Millionaire thing has been mentioned outside of my friend circle and you know.
+
+Citizen Web3 
+Sorry. Sorry.
+
+Esad Yusuf Atik 
+No, it's not a big deal, it's not a big deal because... So you said like you don't... You said like a lot of technical people don't like to be under the spotlight. To be honest, that was what.
+
+Citizen Web3 
+I'm being devil's advocate. I'm being devil's advocate a little bit, know, but I have to get the response out to you with the question, you know, so I have to sometimes. But yeah, I do think that actually engineers love being in a spotlight and I understand it, but sorry, please go on, please, please go on.
+
+Esad Yusuf Atik 
+yeah, yeah.
+
+Esad Yusuf Atik 
+Yeah, yeah, I think quite a good amount of them do, actually. And I actually like being at the spotlight too. The thing is, when I think about, let's say, making a speech and joining a panel on the conference, I really want to do it. But as we get close to that occurrence, even for this podcast too, I was really excited for the podcast and as time went by and I'm getting...
+
+and closer and closer to the podcast I'm like what are they gonna ask what I'm gonna talk about I have nothing to talk about and stuff like that I get really stressed but the moment it starts you know I feel like okay here we are now you gotta do what you gotta do you'll do what you can do and you know that's that's always the best you can do and I feel relieved I try to do my best yeah whatever happens it happens
+
+Citizen Web3 
+You
+
+Citizen Web3
+You're doing fantastic, by the way. You're doing fantastic, by the way. Just like you reminded me a little tiny, tiny, still in the spotlight here from you, but just for a minute, I remembered my first public speech in blockchains just now. was 2015 or 16, something like that. And it wasn't a big group of people. It was like maybe 25 people, not even that, maybe 20.
+
+Esad Yusuf Atik
+Thank you.
+
+Citizen Web3 
+And the thing is, it was all people who understood definitely more than I did, think, at least so I feel. And I was building it up to myself and just like 10 minutes before the speech started, I suddenly had to go to the loo and with a number two, like I really had to do it, man. Like, I think I was, was like, my God, I'm so stressed. I cannot just go there and sit in the toilet for the next half an hour, but it helps. I'm just saying sometimes letting go.
+
+You know how you say, helps to go and talk. So yeah, I totally understand what you mean, Esad, let me ask you this thing. A little bit about Setria, but from a zooming out perspective. I've noticed as reading the docs and the blog that and looking at the GitHub, of course, anyways, I'm going to ask the question.
+
+that you guys open source part by parts, right? For example, you open sourced what it was called, Clementine, right? And at one point, and then Clementine, sorry. And the question is this, what do you think, like taking off this Citrea a hat for a second, like Assad himself, about open source? And what do you think makes it different for a project when they open source from the beginning?
+
+Esad Yusuf Atik 
+Clem and Tyne, yeah.
+
+Citizen Web3 
+And when the open source gradually or don't open source at all, like, can you talk a little bit about your views concerning open source technology? And what do you think the best or the correct approach is? Maybe not the best, but the correct approach and why you guys, for example, and Citria chose this approach.
+
+Esad Yusuf Atik
+So let's see.
+
+Esad Yusuf Atik 
+So, being open source, I think is inevitable for crypto projects because if I don't know what...
+
+You running that you're
+
+And I can never fully trust you because you know I cannot verify whatever you did. So even for zero knowledge proofs, what do they enable? You don't tell me your inputs. I don't need to rerun the program but you give me some numbers and an output and I can verify that you actually run the computation and you found this output and I can verify that.
+
+Even for that, I need to know what program you're running to verify. So being open source is a lot about verifiability. We could actually not open source Strea, run nodes and just open some RPC endpoints, give people some compiled minories and ask them to run them in a certain way.
+
+And what you will end up is a network that wants to be trustless, but it's never going to happen because I can, as a user, can I can never verify that in those binaries that you 
+
+Esad Yusuf Atik
+give out to me contains something like don't do any verification except everything you get from the sequencer URL here and you know just provide the output I don't know provide results so especially for projects in crypto this is very important and about the way to open source so
+
+Esad Yusuf Atik 
+Open source, being open source brings possibly a lot of attention from outside and maybe in the early days where you are setting up the project, you might not want that early, you know, early attention. Even if you don't get any attention, even if nobody outside of your team looks at your code, you might feel like...
+
+you know, the imposter syndrome, you might feel like what we're building is not enough yet. This is not good enough code. Nobody's gonna say, okay, this code can support a billion dollars of DeFi. you might, or anybody, somebody in your team might get a little stressed about that. So I think, you know, open sourcing at, you know, one of the milestone as one of the milestones of a project is a pretty valid approach. But you know, what we did was we,
+
+open source even before we launched our DevNet and you know that means like we didn't have any users we didn't have anything that wrong
+
+for the outside before open sourcing. So I think that's important. The moment your app is gonna be used by any kind of user, being open source I think is very important. You know, it can be open source from the day one, especially if you target contribution from outside, so open source contribution. And you know, if...
+
+Maybe you can do it as an audit strategy. Yeah.
+
+Citizen Web3 
+I understand. Go on, please go on, please, please, Please.
+
+Esad Yusuf Atik
+For us, like, yeah, maybe one more thing. Yeah, for us, like, we open source Clementine and maybe two weeks later we open source Strea. So that was maybe a little.
+
+marketing move too. So you announce, you open source your bridge. It gets some attention and you wait a little bit. You open source your sequencer, full node, prover, and you get some attention. But you know, we could open source it all at once. But open sourcing something is also, know,
+
+need some time to work on. You might want to have some docs, even a little bit, just enough for other people to run your code. And you might want to reorganize your repository in a way that it's easier to understand from outside and stuff like that. So that's also another reason we make it, we put some time between the open sourcing of two repos.
+
+Citizen Web3 
+I am a super strong believer in open source and this is like on a personal side, but I'm still going to ask you the question because once again, devil's advocate does get better answers sometimes. What would you say to the opinion and to those founders who say that until I get to a certain point, we will not like, there's a lot of people in crypto.
+
+And which is weird. Not the people are weird, but the situation is weird. They decide not to open source at all. That say that, okay, if I open source, somebody will steal my idea rather than they will build on top of my idea. Their opinion is like, as soon as I'm going to open source, somebody will come take it and make it better than me. So I mean, the sentence itself sounds a little bit silly in my opinion, but what do you think about that? Why do you think people are afraid of that? Should they be afraid?
+
+Esad Yusuf Atik 
+So, Yeah, maybe, because I think this is a very special thing in crypto. Open source is so popular. For an entrepreneur, it's really easy for others to copy your product, right? For example, if you are an on-chain app, just consisting of some front-end and some contracts,
+
+If you're open source, takes five minutes for somebody to figure out how to deploy the same contracts and create a second Uniswap, right? So I can understand the concern, but I think it's all about the, know.
+
+decentralization ethos, blockchain ethos, whatever. For example, if your users are trusting you with their money, they have the right to check out what you're running, what you're doing. Even if they believe you're not malevolent, I don't know if that's the correct word, but if they trust you with their money, you might have some security issues and they might want to double check.
+
+and that's completely fine. So again, I think it's all about what your application does and if open sourcing helps at all. So if your application works with end users and open sourcing it means more security, then I think a blockchain project has to do it. There's no closed source.
+
+But you know, if your application is like an API provider that other people are gonna build on, let's say an NFT API, right? Other people are gonna pull data from your API and do their own thing. They're only trusting you with the data and doesn't really matter if you're open source or closed source. And so, yeah, those are two different things, but if you're dealing with end users and they're trusting you with their money,
+
+Esad Yusuf Atik 
+I guess you have to be a plesurs.
+
+Citizen Web3 
+Do you think that minimizing trust assumptions in general expands utility? Like not just for Bitcoin, but
+
+Esad Yusuf Atik 
+That's a great question. That's a great question. So what do mean when you say utility? Is it something that makes my life easier? Is it like positive value for the society? What is it?
+
+Citizen Web3
+Whatever.
+
+Citizen Web3 
+going to be I'm going to be naughty and I'm going to say choose your own interpretation. The way you understand it like because utility is subjective, it's very subjective thing. So the way you understand to yourself utility, I would like you to answer like that, because it's your opinion that I want to hear.
+
+Esad Yusuf Atik 
+Yeah.
+
+Esad Yusuf Atik 
+Sure.
+
+So when you said utility, told like, you know, positive value for society. And I completely agree. If we have more open source work, we'll have less hacks, less scammers. If we get everybody to of course, you know, understand that they can actually verify what they're dealing with and you know, it's not a perfect world.
+
+not everybody gonna utilize this 100%, but at least there's gonna be more people involved in identifying scams, identifying security issues, that will end up as a positive sum for the world.
+
+Citizen Web3
+I also see it like that, to be honest. also see that, and that's in my opinion is a cause or an effect, sorry. Sorry. It's a cause of the following effect, I think of a utility in terms of tools. think the more people, like because so many people work on Linux, that's why it has a lot of tools, a lot of different, in my opinion, at least I don't know like what other people believe, but this is how I see it. So I totally agree with you on this.
+
+My mouse decided to run out of battery. Different question about... I'm going to make a small, like, again, disagreeable assumption here. you know, feel free to destroy it, to argue with it, or feel free to answer the question. So you guys, in my opinion, have chosen an interesting mission. Like, I think that, you know, building on Bitcoin...
+
+I'm not talking about the project, I'm talking about building on Bitcoin, course. It's expanding, obviously, right? But for anyone who has been long enough in this industry, and not from an arrogant perspective, it's just something about experience. We know that things like liquid, things like lightning network or whatever, right?
+
+let alone not being decentralized, they failed to capture usage over many years. And why do you think that this time around, maybe you personally, yeah, you personally, first of all, or feel free to answer us from the project perspective, of course. Why do you think that this time around this level two Bitcoin revolution will capture usage, will happen? And of course,  ordinals has kind of already proved me wrong.
+
+But I do still want to hear your opinion considering you also consider yourself an ordinal maxi, right? In your Twitter you say I'm an ordinal maxi. So you believe in that revolution. So I would like to know what is the difference between this one and the previous tries of Bitcoin trying to prove to the world that you can build things on top of it and it will be used and it failed to do so previously at least.
+
+Esad Yusuf Atik 
+Yeah, so L2 solutions on Bitcoin, you're right, existed for some time now. And usually the problem was either you
+
+Esad Yusuf Atik 
+There is a trusted federation that moves the funds between Bitcoin and Liquid. And that makes it hard to actually move to another chain if I'm gonna trust my money with some people. For Lightning's case, to be honest, I am not too technically knowledgeable on Lightning, but from what I've seen,
+
+from people that lightning UX was unsuccessful. and I've actually, I've been in a few, I listened to a few discussions about lightning and one of the things that was really interesting for me is like lightning is also not technically capable to onboard the usage we would want from an L2 solution.
+
+because of how onboarding to lightning and how much data it needs. It was actually, I actually heard this from Vitalik on the Twitter space, but I think he was mentioning some other research. Anyway, so I think it's about creating the balance between UX and the trust assumptions in the solution itself. And I think...
+
+What separates us most from the other L2 solutions is we are working on a BitVM based solution, which is very, very new. It's only a year. It's been only a year now and still iterating and we're also in the BitVM Alliance contributing directly to BitVM. And we think it's gonna be
+
+It's not just gonna work for Strea, it's gonna work for a lot of different L2 solutions as a trust minimized or even trustless way to move Bitcoin into these solutions. So I think that's pretty unique. And also the thing is also UX, right? So what are the two ecosystems that test the most users? One is Ethereum and its rollups.
+
+Esad Yusuf Atik 
+The other one is Solano. I think Ethereum has proved itself. Let's not just say Ethereum, but EVM-based chains. EVM-based chains have proved itself to have maybe the perfect balance between developer interest and usage that gives you a great array of tooling, a great array of ready-to-deploy applications and protocols.
+
+and a great amount of users. I feel like these two together, BitVM Security plus an EVM execution environment, it's gonna be a very successful L2 solution for Bitcoin. So that's why we're working on Strea, right?
+
+Citizen Web3
+Charles Hoskinson right now would say no way guys Cardano has more users and more developers than anything else. Sorry. Sorry about that I don't know why he came to the mind, but I was just imagining, know, like Charles sitting there and saying no guys, design is shit. But it's a good it's an interesting point you talk about, know, aesthetics or design I had over the last like four and a half years or whatever we've been doing interviews, a lot of
+
+Esad Yusuf Atik
+You
+
+Citizen Web3
+people like mostly we talk like with co-founders and founders and validators like yourself as a does not necessarily CTO but CTO who's also a co-founder happens to be. That's what I mean. But I noticed that a lot of founders identify not necessarily in terms of education but as designers, as architects, right? As people who say that, okay, unless we pay attention to the architecture of the design, the design of
+
+thing, which is very close how life is, know, then nothing will happen. and, know, one, another interesting point, which is kinda, it's not my point, but I totally agree with it is that regardless of how blockchains will look in the future centralized, decentralized, federated, doesn't matter. The point of adoption is explorers and wallets because that's what every user uses and will have to use. cannot not use an explorer. They cannot not use a wallet. There is a matter of what they're using. So it's about the design. Do you, and
+
+I've noticed that you guys, at least I noticed on your Twitter, several times mentions of aesthetics and stuff like that. is it something, and right now when you were talking, you highlighted design quite a lot. Is it something you believe to be true that unless users can and like, not just can, but like using it, it will not be adopted, it will not be used?
+
+Esad Yusuf Atik
+Yeah, so not just necessarily design, but UX, so user experience is pretty important, right? It's been the decisive factor between lots of different technological devices, websites, pretty much anything that the consumer types, the UX will play a great role.
+
+which one of the options the user is gonna select. we, mean, even before working in blockchain projects, I was aware of that, even though I wasn't in anything that was.
+
+built for users. And I think it's the same in blockchains, lot of activity. not all people are technical 
+
+Esad Yusuf Atik 
+missing that. And you're not just working, you're not just building for technical people. What we want to do is, you know, it's a saying in many crypto circles, bank the bankless, right? If you're gonna bank the bankless, there's 90 % chance of that bankless guy not knowing about anything, know, consensus, blockchains, you know, I don't know.
+
+security assumptions and stuff like that. Yes, the security plays a big, big, role in everything. We want to build the most secure, secures thing that you can build for your users. But it's sad to see, sad to say this as a founder, as a CTO, as a developer, that the users, 90 % of the users, they will not understand what you're building for, the security aspect of it.
+
+What they will understand is, you know, how fast is my transaction is confirmed on the blockchain? How many apps are there can I use? How much yield can I make on one of your applications and stuff like that? even for, I mean, even for a blockchain will operate.
+
+developer it's important to keep in mind that you want to provide the best user experience for users so because they will choose a better blockchain a better roll-up in terms of UX over security
+
+in a lot of different scenarios. So we are highly aware of that and we work to provide the best kind of experience for our rollup users. So that's why we are, we work, you know, let's let's say not just a single explorer, but we work to onboard a lot of different explorers to give the experience.
+
+Esad Yusuf Atik
+you know, one people, one guy.
+
+explore A, the other will explore B. So you want to create this experience, you want to create this platform where everybody feels nice.
+
+Citizen Web3 
+I want to ask you a side question that because of a sentence you said, bank the unbank or unbanked the bank. What is it for you?
+
+Esad Yusuf Atik
+So, maybe I should...
+
+Citizen Web3 
+The first one is bank, the ones that are unbanked already. And the second one is unbanked, the ones that are banked already. What do you think personally? Not as sitre, personally as Esad.
+
+Esad Yusuf Atik
+So I think it's both. It's going to be a very, very mid answer, I guess. Yeah, so for me, it's important that we can get access to finance that people, I'm going to just start over again. I think it's important to provide access to finance that...
+
+Citizen Web3 
+Tricky. Tricky.
+
+Esad Yusuf Atik
+access to people who don't have access to finance. It's pretty important. You know, there are people out there living in another country. They want to send money back to their families in another country. And this is a very, very standard use case for stable coins, right? And I think it's a pretty important aspect to blockchains, but also unbanking the bank.
+
+I interpret this as getting people away from banks and this is a whole...
+
+central bank money policy that we live in, so the classical money is something which I think everybody should...
+
+be questioning for, try to learn, try to understand how money is created, distributed and stuff like that. I think it's very eye-opening and I think crypto gives us a chance to be away from the whole monetary system and I think it's a great value that blockchains bring to us but you we happen to get
+
+sometimes get more centralized in an environment which we try to be decentralized. So what's the most usage we get on blockchains? It's a big portion of the usage we get is stablecoins and the big portion of stablecoin usage is with centralized stablecoin providers actually.
+
+Esad Yusuf Atik
+I mean, again, this whole, everything is not, you know, binary. It's like a scale for some things. You're okay with the, okay, dealing with less, less trust assumptions maybe. But I think crypto captures a great way of doing both, which is banking down banked, unbanking the banked. And I think that's beautiful. So great question.
+
+Citizen Web3 
+think it's... Thank you. But it's the first time I heard the CTO say everything is not binary. No, I'm joking, of course. It was...
+
+Esad Yusuf Atik 
+So what do you think by the way? Which one is important? one is more important? Yes.
+
+Citizen Web3
+To me, personally, unbanked the banked. Unbanked the banked because of what you said. I unfortunately interpreted the first one as a trap. I'm scared of the first one, but this is my personal view. Let me ask you though, I said one last question before I jump with you into a blitz about also what...
+
+in my opinion and personal opinion is mega important. I've been in this industry for a while, one of the things that I've seen as a stopper, as a stoppage from developing anything as a killer of networks, as a killer of ecosystems, even one, there are many examples, let's not go into them now, but anyways, is tribalism.
+
+Correct me if I'm wrong, but what you guys are building is very multi-chain, is blockchain agnostic, but you're building it on Bitcoin. It's kind of like coming to a church and saying, hey guys, now we're going to build a casino in here, which probably some religious people will agree to. But it's like my arrogance and humor aside right now, like a serious question. You guys are coming to the most like cemented piece of
+
+blockchain that are like, we only believe in Bitcoin, right? Not everyone, of course, I'm sorry to all the Bitcoin listeners out there. And it's not like that, of course. But there is a stigma that's like that. And you guys are saying, hey, we're to build something that is for everybody. How are you planning to know not not not how you planning to achieve it, but really, like, how how will you
+
+try to fix in quotations, of course, the word fix that how you planning to battle, sorry, mean, battle anti-tribalism, How you planning to battle tribalism that comes with it and how do you plan unite your community, which is as far as I understand is blockchain agnostic.
+
+Esad Yusuf Atik 
+Good question.
+
+Esad Yusuf Atik 
+So I think the idea that all Bitcoin users are, know, they're tribalistic, there I guess, any kind of developments, I think it's wrong. I used to think like that as well, but in the time I have spent in the Bitcoin space since the beginning of Ordinals, you know, as an outsider, I've noticed that the idea that Bitcoiners are...
+
+new ideas is not really true. There is quite a few individuals, maybe groups of people that are very very loud and you know are against new things for sure but I think they're in the minority. Especially with Ordinals all this activity they're getting the rise of BeatVM
+
+discussions and know speeches around I think people are I mean more and
+
+Esad Yusuf Atik
+The more.
+
+Esad Yusuf Atik 
+think that's beautiful because I... when I...
+
+Esad Yusuf Atik 
+2023. Nobody was talking about rollups or anything. I mean at that time we had that idea but we were focusing on Ordinal's wallet. But now this year when I went to Bitcoin Nashville it was a very very popular topic and from what I've seen there's not that many people against having a rollup on Bitcoin unless
+
+it's as trustless as it gets so that's a pretty important aspect to it. It's like a stereotype, know, Bitcoiners are against everything, it's not the case from what I've seen. And I think Ordinal's changed a lot of things.
+
+Because, you know, we're human beings. We are motivated by being excited, having fun.
+
+I think Ordinal's even converted out of Bitcoiners into being more open, into...
+
+Esad Yusuf Atik 
+new things and it converted a lot of people from other ecosystems into Bitcoiners like us.
+
+Esad Yusuf Atik 
+I don't think we have a lot of negative reactions.
+
+Esad Yusuf Atik
+actions against us I hope this goes on like this so but I believe it'll go on like this there's gonna be some people very loud feel the number against us or against the L2 movement let's say it's not just us right and we're gonna have to deal with them we're gonna have to with them discuss with them
+
+Citizen Web3 
+I'm actually very thankful to you for trying to demystify this because it's a stigma that I kind of personally started. I mean, I was a huge Bitcoin fan and then I was an Ethereum fan and these days I don't give a shit. But it's a stigma that I started to believe myself and I started to actually invite over the last half a year, not a lot, but before that I didn't at all.
+
+And I started to invite guys who are either very outspoken about Bitcoin or... And for the listeners out there, know, by the time this episode come out, there will be several right now queued that are to do with Bitcoin or Bitcoin-related projects that will come out because I do want to demystify this. I don't think that that is the case, but I sometimes believe in it myself. And I really thank you for demystifying this, by the way. A couple of questions to...
+
+help us to finish this off and jump out of our conversation. They are going to be completely different. just to kind of get out of it. So first one, give me either a movie or a book or a song that has had a positive influence on you throughout your life. I did tell you it was going to be different.
+
+Esad Yusuf Atik 
+Yeah, I hate these kind of questions, know, like favorite movie, favorite book, favorite song, I'll think about it.
+
+Citizen Web3 
+We can skip this one we can skip it no no favorite movie forget for forget movie forget movie What what what what forget forget this let's go to the next one good good the next one if you don't like it We skip it. It's not it's not the most
+
+Esad Yusuf Atik
+No, no, no, I mean when I said her heat I don't like answer I don't mean like I don't like answering them I have to think about
+
+Esad Yusuf Atik 
+I'll interpret this question as not life-changing but as a favorite movie question let's say it's District 9 I don't know I just like the movie life-changing I gotta think for a month
+
+Citizen Web3 
+Okay, okay, cool, cool, cool. By the way, for all...
+
+No, no, no, no, I understand totally. When people ask me my favorite color, I get lost. So I'm done. That's it. If you want to see me break, ask me my favorite something, just anything. Just go my favorite color, my favorite movie, and you see me go like a cat, started to go around my own circle. like, by the way, for all the listeners, guys, of course, everything me, as I mentioned, will be in the show notes. So including those movies and the books and the authors and the writers and the papers and the projects, please do check it out. Second question, give me...
+
+and the listeners, something of course you would like to share. One thing that is motivational for Esad that keeps him waking out of bed, building code, minimizing trust assumptions, and trying to build a better future, at least for Web3, something motivational.
+
+Esad Yusuf Atik 
+I feel like this is motivational for me but it probably will not be very motivational for a lot of people you are gonna die someday so work on what you want and not just what you want don't be selfish work on something that will be fact impactful so
+
+Citizen Web3
+Nice.
+
+Esad Yusuf Atik 
+That's something that is impactful, something that you like. It's very important.
+
+Citizen Web3 
+Nice. Man, I got goosebumps. You say it's not motivational. You cannot say it, but I got goosebumps. So it's nice. I like it, man. It's good. I love it. Last one, I promise this is going to be a really weird one and we're finished. I promise, I promise, I promise. So dead or alive, real or made up, could be a cartoon character, a writer, a coder, person of your family, could be a movie star, could be, I don't know, a comics character, could be a person you know from the street.
+
+Not a guru, because I personally don't believe in them. So somebody or something that has sometimes positive influence on you when you think about that personage and you think, yeah, that helps me to kind of remember that I'm still alive.
+
+Esad Yusuf Atik
+Okay, so another hard question.
+
+Citizen Web3
+them.
+
+Esad Yusuf Atik 
+another art question. That helps me that I feel alive. Is that the question? somebody
+
+Citizen Web3
+I was trying to direct it at you, but no, the general question would have sounded like of somebody that you think when you're stuck, it kind of makes you not be stuck. kind of for you, I was going from the motivational thing from what you said. But in a general way, if I was to translate it, it was me like, when I feel stuck, like I don't think that, what would Jesus do? What would Muhammad do? What would anything else do? Right. I think, OK, but sometimes I think, damn, what would
+
+Byron do or what would Shakespeare do? know, for example, you know, like maybe might not might not help me solve anything in the world, but, know.
+
+Esad Yusuf Atik 
+Yeah.
+
+So I'm a pretty religious person, so what would Muhammad do is a good guess, but as you mentioned that, I think this might be my uncle. My uncle is one of those guys that is pretty motivated, feels always urgent, and I like the way how he decides on what to choose, how to do something, you know.
+
+Citizen Web3
+Okay? Okay.
+
+Esad Yusuf Atik 
+And I try to sometimes apply that in my life because you know when you feel stuck of course let's say deciding on something it blocks everything you're gonna do and sometimes you just have to okay I'll do this I'll just select one choose one whatever and you know
+
+deal with it.
+
+Citizen Web3 
+I think it's a great note to wrap it up as well like deal with it. Let it go. You know, remember it you're alive. I love it and Listeners guys girls everybody who is tuned in. Thank you very much and we see you next week. I said I want to thank you very much for your time Please don't hang up just yet. This is just a goodbye for the listeners. Stay with me for a couple more minutes. Otherwise, thank you Thank you for joining us
+
+Esad Yusuf Atik 
+So thank you for having me.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

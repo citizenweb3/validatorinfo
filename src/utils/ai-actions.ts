@@ -6,7 +6,7 @@ import { headers } from 'next/headers';
 const { logWarn } = logger('ai-chat');
 
 export { MAX_MESSAGES };
-export const MAX_STEPS = 5;
+export const MAX_STEPS = 10;
 export const RATE_LIMIT = 10;
 export const RATE_WINDOW = 60;
 
@@ -19,13 +19,11 @@ const isValidRole = (role: string): role is 'user' | 'assistant' =>
 export const isValidMessage = (msg: unknown): msg is ChatMessage => {
   if (!msg || typeof msg !== 'object') return false;
   const m = msg as Record<string, unknown>;
-  return (
-    typeof m.role === 'string' &&
-    isValidRole(m.role) &&
-    typeof m.content === 'string' &&
-    m.content.length > 0 &&
-    m.content.length <= MAX_MESSAGE_LENGTH
-  );
+  if (typeof m.role !== 'string' || !isValidRole(m.role)) return false;
+  if (typeof m.content !== 'string' || m.content.length === 0) return false;
+  // Length limit applies only to user messages (assistant responses can be long)
+  if (m.role === 'user' && m.content.length > MAX_MESSAGE_LENGTH) return false;
+  return true;
 };
 
 export const getClientIp = async (): Promise<string> => {

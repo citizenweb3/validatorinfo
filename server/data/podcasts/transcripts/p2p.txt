@@ -1,0 +1,334 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/p2p
+
+Episode name:
+Staking, the challenges of success and timing with Konstantin Lomashuk
+
+Anna: 
+Hey, it's Citizen Cosmos. We're Serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code. 
+
+Konstantin Lomashuk: 
+We don't have a special source. How do we do it? So one thing that we try to do, we try to find people who have the same values. And this is what we believe in 2014. 
+
+In one day it will be like the centralized autonomous organization that will do some work, the people will work on it and that will be successful. So we change the name for my kitty to Bitcoin and then made an auction and sold it for 200 ETH. 
+
+Citizen Web3: 
+Before we rock it off into the next episode, we are glad to announce our new podcast sponsor Cyber. With the help of such technology as TenderMint, IPFS and Cosmos SDK, Cyber is building a super intelligent decentralized AI protocol with the aim of helping users to gain back control over their data and over the internet by creating a transparent and user-managed base layer for the future web. 
+
+To learn more about Cyber head over to cyber.page test some of the cool apps it has to offer already, learn how you can help to build a new decentralized web and participate in Cyber's incentivized testnet to earn rewards. Hey Cosmonuts, welcome to another episode of Citizen Cosmos and today we have Konstantin Lomashuk with us who is the founder and CEO of P2P. This is going to be a somewhat of a special episode for us because it's the first time I'm interviewing a friend of mine and it's going to be special for all three of us. Hey Konstantin. 
+
+Konstantin Lomashuk: 
+Hi Sergey, hi Anna, I'm very happy to be here. 
+
+Citizen Web3: 
+So are we, we're glad to see you because we've been trying to get you for a long time, you're a busy man. 
+
+Konstantin Lomashuk: 
+Yeah, crypto is working 24-7 and it's really hard to find like one hour when you can sit alone without kids, without work and just answer some questions. So yeah, I mean 2020 was pretty amazing year. It was a lot of work for everyone and I hope 2021 will be even better. 
+
+Citizen Web3: 
+Give us a brief introduction on what are you currently focused on? Is it P2P? Is it lead of finance? Is it everything together? I mean just a brief introduction of what are you guys doing? 
+
+Konstantin Lomashuk: 
+So because P2P.org we started in 2018, we and one more, I'm and one more DevOps started to run Tesla Snow because it was one of the first large-scale proof-of-stake systems. Of course, I mean we start to follow for proof-of-stake market from 2014 when we had a cyber fund, but one of the first notes we started from Tesla's. 
+
+After that in 2019, I think we have launched Osmos and spent about one year in Tesla net before it. Why we started P2P.org? Because we had a vision that governance will be very important and usually when you do in staking, it's also important for you when you also govern the network. So our primary business was investment. So we invest our own money in Tesla's, in Cosmos, in Definity, in Polkadot, in Ethereum, in early stage, ICO, crowd sale, or like seed stage, we also invested in Solana. We understood that to make this product more viable, we need to govern this. And to govern this, we need to run our own nodes and to fill them better. And so we built P2P.org. Now it's pretty big. So we have more than 1 billion and like 200 million assets staked with us. 
+
+We understand that our clients are not really happy. I mean, P2P.org was focused only on non-custodial staking. Why? Because we believe in decentralization and we think that non-custodial staking is very important. And we think that the blockchain has a pretty big risk because tokens can be staked through the centralized exchanges. And the worst case is that we will have like four exchanges and they will have all the tokens and the blockchains will be pretty centralized. And that's why we focused on non-custodial staking. 
+
+And we were pretty successful here. Why? Because we are investors. We also understand that we can make these networks more valuable if we will govern it, if we will vote in governance. And so in 2020, we understand that when we want to start Ethereum staking, we understand that it is not possible to run successful Ethereum staking for us, as we did, for example, in Cosmos or we did in Polkadot. 
+
+And that's how we came to LiDAR.fi. We understand that the best way to do it is to build a liquid staking solution. Because in Ethereum, the user, when he staked his ETH right now, he make it a liquid from six months to three years. And it's a big pain for the user. And also, he will not receive any rewards. 
+
+And also, he need to find the way how he will choose this validator. And if you look to Ethereum staking right now, it's pretty centralized. I think it's even more centralized from the validation side than Cosmos, for example. That's why we built the liquid staking solution. Because also, the user needs 32 ETH to stake Ethereum. And in case of LiDAR, they can use one ETH to stake, or they can use 100,000 ETH. It's easy. So you can just convert your ETH to staked ETH. And also, you have liquidity inside. 
+
+And so we think that LiDAR.fi can be the future of P2P.org. Why? Because also in Cosmos and like Polkadot and any other network, Proof of Stake Network, like Investor, who holds their assets, they don't want to have them bonded or they don't want to have them locked. They want to have them liquid. And in this case, such solution like LiDAR will give an option to have a staking revenue. And in the same time, to have your asset liquid. So this product can really compete with exchanges like Binance, like kraken, because usually, they have something like liquid staking on their exchanges. 
+
+How it works? They have assets. For their own validator. And also, they have another part that is liquid. And if the amount of this liquid part is going down, they unsteak part of the tokens from their validator and give these tokens to the user. And so in case of non-custodial staking, you can do it. And so every user that staked tokens in non-custodial way, they have this unbonding period. That's why the networks are more centralized, because you have more profit if you stake your token on exchanges. And LiDAR is going to change it. 
+
+Citizen Web3: 
+First of all, man, this is a great intro. And thanks for that. Second of all, congratulations on passing the unicorn stage. I think that's great to see that non-custodial services like P2P or LiDAR, which is now your primary product, is receiving such attention. Obviously, we've worked together for a few years back. And it's great to see this development. But you've mentioned so many things. 
+
+And there's a lot of questions that I can derive from there. And the first thing that I would want to ask you, you mentioned centralization of power in proof of stake networks, and especially specifically, you said you did a comparison with Cosmos. Now, in your opinion, why do you think that currently Cosmos is centralized in terms of the staking power? 
+
+Konstantin Lomashuk: 
+In my point of view, Cosmos has a pretty good situation. I mean, to stop the network, you need only a first seven validators to have 33% of the networks, then you can stop this network. But still, I think it is a pretty simple rule of all staking. Then more complex the logic, then more centralized your network. 
+
+Why? In Cosmos, I think the logic is pretty simple. So you can choose the validator. I mean, how much votes this validator have. 
+
+So this will be the validator power. Because in other cases like Polkadot, they have a mission not by voting amount, but they split this emission by amount of nodes. And in this case, for example, in Polkadot, we are not running one node, we are running 25 nodes. 
+
+And we still, for example, have the same percent that, for example, we cannot have in Cosmos if these people will just vote for one node. But it is more complex. And in my thinking, the more complex networks, you have bigger centralization and low amount of validators, for example. And I think that the serial staking is even more complex. And so for small non-custodian validators, it's really very difficult to sell the service to their clients, to find the clients. And so the huge validators who have like bigger reputation, they acquire bigger share. 
+
+I think that the story of Cosmos and how ProFus Stake works there and how you distribute it the way who will sign this block, what is their power. I mean, it's work much more simple and clear for everyone. I mean, in long run, decentralization will be bigger because you will see more actors here. Because for now, the ecosystem is not like so big. And I mean, the application that is running on top of Cosmos, it is like a pretty big ecosystem of blockchains that's running Cosmos SDK. But when it will be more competition around Cosmos chain, I mean, their distribution of voting will be bigger. 
+
+But it's transparent. So you can see how much tokens on any validator. In case of other networks, a lot of validators just split the stake to many nodes. And so it's unclear and they can much more easily to cheat. And so usually it's just for some metrics that give you the number, but it's not real how it's work. 
+
+Citizen Web3: 
+Lately, especially in the market, there's a lot of comparison between Polkadot and Cosmos. And a lot of validators, people, users, and other actors in the blockchain ecosystem say that Polkadot has a huge advantage because of the shared security model. Do you think that this is something that should be compared? Or do you think that it's not a question that we should even look at? 
+
+Konstantin Lomashuk: 
+I think shared security is very important. But I really agree here with Zaki. And I also said him many times that in three, five years, I mean, Ethereum, Polkadot and Cosmos will be pretty similar with some different trade-offs. But I mean, all of them will have a shared security. All of them will have a way how they can transact with other blockchains. So Polkadot made the decision to go first as their shared security chain. And for example, Cosmos moved to more IBC interchain communication protocol. And when you have this interchain communication, you can transact also a validator set to different other chains. I don't understand the complexity how, but it's look like it's much more simple to build shared security than to build this IBC. So I don't think that Polkadot and Cosmos ecosystem, it will have different trade-offs, it will have different architecture, but they think they are targeting the same market. And it's just different vision and different architecture. 
+
+Citizen Web3: 
+Let's talk about your specialty. And I'm going to cheat because I know your specialty, because I know you, but you have built quite a few successful products. I mean, I've known you for what, five years, something like that. And during that time, you had Satoshi Fund, which was very successful. Then there was the story with P2P. Now there is the story with leader finance. What is your secret in building successful products? 
+
+Konstantin Lomashuk: 
+I just want to mention that Satoshi Fund was custodial fund. And that's why we closed it because we didn't want to hold like our users or assets. I mean, it's a big pain. 
+
+And I think it dangerous. And that's how I launched P2P.org also. I didn't want to hold assets of user by myself. And especially like back in 2016, 2017, it was pretty difficult to build a fund with the custody that can have, for example, Cosmos. Because we tried to build a blockchain traded fund, I mean, our idea was to give you like the share in our portfolio as it can be traded on chain. It was pretty difficult to find a legal structure for it. 
+
+So we spent like six months with lawyers and we understand that it's impossible. That's why we closed it. But yeah, it was a pretty successful. We made about 7000 percent to our investors in 2017. And for our portfolio, and we still have a lot of happy people who are telling thank you to us. 
+
+But I think when you're building your product, you have two things. It is timing and the quality of the team. Because we had a pretty good team, pretty good partners. And also, I mean, the timing was really good. But usually, you know, when people see the successful project, they think that it's happening like in three months. But if you look to Satoshi Fund, we spent like two years before it started to be successful. And we published our track record, we published all our data, and we have like pretty good values. It was successful. Then people saw it. That was successful. Also, with P2P.org, in the beginning of 2020, we had only 20 million staked assets in P2P.org. 
+
+So it wasn't a lot. And during this 2020, we grow like 50 times. But to do it, we've worked two years again, try to understand what is better for our clients, what we should build, what we should focus. 
+
+Again, it's a good timing. And there also some good people joined the team, like Vasili, who is also now like co-founder P2P.org and LIDA.fi. So he joined our team in 2020. So when he did a lot, a lot of people, I think, respect him because he's doing like great things. 
+
+So we won, for example, two prizes in Game of Zones in Cosmos, and he did it, no time. And so it's not only about me. It's about people who are doing a business together. 
+
+They found a good idea, and they have a good timing, and then it started to grow. In case of LIDA, it was different because in LIDA, we understand that it is an issue. We feel it, this problem. We spoke with clients, we made a lot of customer developments, and we understood that it is the only solution that can work for Ethereum, for decentralized finance, because I think this staked is that created by LIDA, it is like the first brick of decentralized finance. Why? Because you can use Maker, but in the future, you will never use Maker with Ethereum. 
+
+Why? Because you can use staked is inside Maker, and it will give you additional APYs that can pay the loan for you. So it's much more if you ever choose to use just is without APY, or like staked is with APY, you will choose staked is. So I think staked is can be one of the first brick of this DeFi, because it's giving you the yield from staking straight to the decentralized finance. 
+
+Citizen Web3: 
+Let me be the devil's advocate here for a little bit. Let's play a little game. Of course, the whole beauty or the whole idea behind Maker is not just yield, it's stable. It's the stability of the underlying asset. Of course, with staked ETH, we don't have that stability because it's a fluctuation, the price is fluctuating. 
+
+Konstantin Lomashuk:  
+Oh, sorry. I mean that you will use as a collateral in Maker staked is. 
+
+Citizen Web3: 
+Oh, okay, I get you. 
+
+Konstantin Lomashuk:  
+So first, what you will do is you will change it to staked this, and then you will use it as a collateral, because it's better for you. If you just use ETH, you don't have APY that can pay you alone. In case if you use staked is as a collateral, you can pay by this APY additional like return your loan, for example. 
+
+Citizen Web3: 
+Let me go back for a little bit to the team question, because I want to rephrase it now, because you explained that it's not your success, it's the success of a team, primarily understanding the issue. But you've built those teams. So you must have a secret to know understanding how to build successful teams. 
+
+Konstantin Lomashuk: 
+I don't know this secret. I'm doing like a lot of mistakes, all people that are on me like they're for a long time. So some of them I know maybe like 15 years, maybe even more. Some of them joined like, I know maybe eight years. So it's pretty difficult to hire people. It's one of the biggest tasks because we now, for example, have about like 60 people, and we need to grow to 100. 
+
+And if somebody want to work in P2P.org, just ping us, we will be happy to work with you. Because it's really difficult to find people who you can delegate some part of the work. So or who can build something around you. 
+
+So we are trying to find these people, we try to scale our team. But it's not so easy. We don't have a special source. How we do it. So one thing that we try to do, we try to find people who have the same values. 
+
+I mean, with us who believe like in this civilization, who never line simple values, you know, and when you have these people, they have the same values to work as much more simple because you can trust or everything. We have a pretty horizontal structure, but we try to evolve. And it's also a big challenge. And so we have a goal to evolve on 2021. 
+
+Anna: 
+Do you use polygraph before you hire people?
+
+Konstantin Lomashuk: 
+No, we never use polygraph. I don't think that we even should it. Yes, but you can see that these people are, I mean, the values are pretty clear when you speak with people, when you start to work with people, and if they want to cheat, so you will see it. And so you just can communicate with this person that it's not the way how we want to do business. And if the person is not with the same values, you can change this person to another one. But to scale team, it's a really big task for us. And so we are trying to work with different channel to hire the best people to our team. 
+
+Citizen Web3: 
+What is the biggest mistake you said you make a lot of mistakes? Now, from the top of your head, maybe not the biggest, but one of the biggest mistakes that you made in the past few years in relation to work. 
+
+Anna: 
+Tell us about your failures, not only success. 
+
+Konstantin Lomashuk: 
+Yes, I have so many failures. So I don't know what should I talk right now first. But when you're doing something, you should be focused on it's a lot of things in the space that you want to do it. 
+
+I want to do this one. I see a lot of opportunity here. And so it's really difficult to be focused. 
+
+And also when I run some ideas, for example, we launched a social network called commune, and we have our ideas how it should work to build a social network. It is a really pretty difficult task. Why? Because usually when you build a startup, you try to shoot the problem. In the case of social networks, it's really different. You don't need to shoot the problem. 
+
+I mean, social networks, they are not about the problem. It is about dopamine. It's a question how to build a dopamine for users. So to shoot the problem, I spent about one million of my own funds to test the hypothesis on these social networks. And then I understood that I need to build the dopamine. 
+
+And then you make a decision, like, is it a good for you to build a social network and put the people to stick on your social network because it's dopamine? Do you want to work in this area? My mistake was here that I think I need to, in the next time, if I will do a new venture. So I will make more time on the research to understand the issue, to understand their special area, and also to understand how to work there and do I want to work on this area long term. I don't think that anyone can make something big or like some business if they're not doing mistake at all. So I think it's impossible. 
+
+Anna: 
+What kind of ratio it should be? 80-20, I mean the success project and failures. 
+
+Konstantin Lomashuk: 
+I think when you have experience, because we saw a lot of examples, not about myself, but about different people, that they have like five, ten mistakes and then only successful product. So the biggest thing that you can do, you should understand why it's happened. So why did this fail, it happened? Because, for example, when we started in 2014 and started to work on something like CoinMarketCap to take data from different exchanges, we didn't know even how to build the process of IT development. So we didn't have this experience and it can just happen. 
+
+You can, for example, feel it by some teammate or by some other. But in that case, we didn't have like IT people or developers in our team. And so we tried to hire and so we did so many mistakes. I don't know how many mistakes you should do, but of course, if you have people who can help you and to share some of his mistakes and to give some advice, like coach maybe in some places, maybe it will be better for you. But still, I think, I don't know what should be the ratio. Yes, I think maybe like I did a lot of mistakes, so I don't know how much. 
+
+Anna: 
+Do you have a technical background or are you a developer or not? 
+
+Konstantin Lomashuk: 
+Of course, when I started, I wrote some HTML or something like that and tried to do some stuff, but I'm not a developer. I'm an economist, but I understand that everyone should be good in their own place. So every person has minus and pluses. And you should understand your minuses and to close this by people around you. And but you should also understand your pluses because it's what you can do better and do it, you know. So I'm not a developer. I think I can be like a pretty good developer. 
+
+Why? Because I was pretty good in some math when I started at school. So I won a lot of competitions. 
+
+But after that, I choose economy and I like it. And so I think I can be good here. But you are teaching. So when you have some fails, when you're working with some good teammates, you see how you can understand the timing of your product. It's really difficult to estimate to understand the time, how much do you need to deliver to the product. It's one of the biggest issues of different people when they commit time because it's impossible to do in new space. For example, in blockchain, you can say like ABC, you will deliver ABC like in three months or in one year or in two years because nobody did it. You can estimate only like things what you already did. Or if you have already teams that are already did this development. So when you did also these mistakes, when you're doing first time, you give like estimates and then you understand that you will never do it again. Or like you try to build the team like product team that can have a roadmap and like split for small task and then develop it. So you do it better and better. 
+
+Anna: 
+As I understand, you learn by iteration process. Now you are close to waterfall or agile in terms of development? 
+
+Konstantin Lomashuk: 
+Of course, I want to say Gile, but it depends on the product. If for example, you have a deadline that Ethereum 2.0 will launch like on 1 December, you need to deliver your product in time. 
+
+And how you will do it? Of course, it depends on the team. So usually the best way how we work with it, we have for example, a team who is working on Ethereum and of course they have some deadlines, but they are choosing how to organize the process by themselves. If they want to like by waterfall, they can do it. But in general, of course, we like agile. And yeah, so we try to give an option to the team to choose what way, how they want to work. 
+
+Citizen Web3: 
+We work together on Golas with you, which was a decentralized social network. I remember it one of the biggest difficulties for me. And one of my biggest mistakes was not having the experience of working with remote agile teams. And in 2020, obviously, this is the trend now, right? People are working remotely and I think it will carry on people see the benefits. Now, do you think that it's possible to keep on developing agile methods in the remote world? Or do you think that it's the opposite? This is the way to go forward? 
+
+Konstantin Lomashuk: 
+Our whole team right now is working remote and we did like almost all 2020 without any offices. And the result was pretty good. And we think that it's also depend of the team. So how we approach it. So we give each team, if you have a leader, for example, product manager or like general manager, you give him option to choose what way is better for them. If they want to be located in one city like in San Francisco and have an office with a smoothie in some place, and they're productive and they're giving you a result and they have OKRs and they do it, you know, and you are happy with it. 
+
+Why not? So in general, not all people can work remote. It's much more difficult to work remote for the people. 
+
+And it's different reasons. Some people just want to speak with someone and they're more effective when they're more social. And sometimes people can't work at home because they have a like family inside. And they can't just close the door. 
+
+They can't do it because they have place for work. And so our approach here is that if you want to work from office, you can do it. I mean, if you're the only one in the city, so you can just go to car working. If you like more than two, you can make an office. If your team want to work in one car like city, you also can do it. I mean, it depends what is effective for each team. 
+
+And it's also very, really very flexible. Now we're like remote, but I think when I mean this lockdown, I hope this year they will finish. And we will open some offices in some cities where we have the most amount of employees. 
+
+Citizen Web3: 
+What are your goals for, regardless whether it's Lido or P2P personally? They forget about for a second. I mean, you can talk about Lido, of course, or P2P, but personally, what are your goals? Where are you going to grow? You already made a unicorn. What's the next step? 
+
+Konstantin Lomashuk: 
+Yeah, it's unicorn in total value locked. I mean, it's different things which you can understand. I think my work is my hobby. So I like what I'm doing and maybe I'm doing because I have some ambitions. I'm not doing it for profit. Yes, I have my profit from my investment and I can live on it, you know, on my investment. But from other side, I try to build a company that has a vision. 
+
+We want to really make staking, for example, and maybe long-run decentralized finance, more simple for everyone. And this is pretty interesting. A lot of people are working with us because they like the space. I mean, they like the swipe and they want to share it to everyone, to give options to everyone, also to use the systems. 
+
+And now we're working only on staking, but later maybe we will also add some other products. And in case of me, it's pretty difficult question. So from one side, I have family, yes, and this is important for me. From one side, I have my work and so I'm pretty happy with it. Yeah, I just want to be successful in both places. 
+
+Citizen Web3: 
+It's interesting you mentioned ambitions because the motto of our, not just the podcast, but our brand, right, the citizen cosmos is understanding the ambition of successful people and people who build blockchain. And I mean, you mentioned your goals, you mentioned your values, decentralization and honesty and so on and so forth. 
+
+But what is your ambition? Is your ambition for P2P or Lido to take overall decentralized finance as the best liquid-staking solution? Is your ambition to create the best decentralized, I don't know, whatever. I want to get glued to that word because this is our motto, so it's really interesting that you say that. 
+
+Konstantin Lomashuk: 
+We should understand that Lido, it is not about myself only. Yes, it is the centralized autonomous organization. And this is what we believe in 2014. In one day it will be like the centralized autonomous organization that will do some work, that people will work on it and that will be successful. It was then, it was like 2016, 2017, that a lot of, it was a lot of projects that raised a lot of money, but a lot of them didn't deliver the product, but it wasn't because they were bad guys. Most of them just can't build this product because technology stack wasn't ready. And now technology stack is much better, it's much more easy to build a product and find a user and it looks like it's happening. And so what we're trying to do, we're trying to build a successful DAO. So it is a community, it is a people, it is like one of the best validators in Lido, so like Certos, like Steakfish, like Steakin Facilities and KOROS. And I'm happy to be a friend of them and happy to do it together. 
+
+And I think it's like next level. From one side, you are competitors, you say, oh, we are like in cosmos, we are competing who is the big validator, who has a much stronger boss or something like that. But from other side, we find the way how we can do it better together. And I think this is the answer. So if we will build a successful company with pretty good people and we will feel good from that, I mean, this will be the result that I'm looking for. 
+
+Citizen Web3: 
+That's a good answer. I like that because in my opinion, a lot of the competition between the validators, not just in cosmos, but generally in post networks is absolutely unnecessarily. And I'm hoping to see more and more validators join forces, not just in projects like Lido, but in other examples, building bridges, building dexes, whatever, creating decentralized tools. And in my opinion, there are so many ways that can be done. So I like that. 
+
+Anna: 
+I know that some people believe that decentralized projects or projects related to DLT should be decentralized from the beginning. Decentralized projects should be built by a decentralized team. Do you believe in that statement or you think that it's an opposite or you have some special thinking about it? 
+
+Konstantin Lomashuk: 
+For example, Lido.fi, it starts to be decentralized, but the question is, it's really difficult to build a fully decentralized product from day one. I mean, because you need to build a community and we saw a lot of different experiments, like why finance distributes all the tokens to the community and didn't leave anything for the team and for himself, for example. And he said now that in his post that it wasn't a successful story. And also, I think we can read about step-by-step decentralization. 
+
+It's a lot of things to read from A16Z, from JC, from Variant Fund. So I mean, this is a model where you build a product or something and you find your community and you are doing not token from day one, for example. You found your community, you're building it and then you make it step-by-step decentralization. I mean, both model are work, but the first model, when you just distribute tokens day one, it kind of have more fails. 
+
+Because it's really difficult to predict what will work. And what we try to build, for example, with Lido.fi, we found some amount of people who want to do the same. And this is the initial community. And they have tokens and sizes, and they will distribute this token to other parties who want to build Lido.fi with us. For example, if someone will build their liquid staking for Cosmos, he will just receive some Lido.fi tokens for that. And I think this is pretty good, because when you distribute tokens for the money, it is one issue. Big whales will buy all the tokens. 
+
+If you will distribute the tokens by liquidity mining, it's also going to big whales' hands. But the question is how to understand these people give much more time than they really believe in this product and how to reward these people. And this is one of the biggest issues. I think it is a governance issue, how we will vote for that. And also it is important in Cosmos governance. 
+
+We can reward more people from community fund to distribute to people who already prove that they did a lot. It is a team that around Cosmos SDK. It is there are community members like you and others who are building a community around that. And if we will reward by talking to these people, I think these people did much more than people that just invest their own money to the beginning of the Cosmos. I even think that if we will create 100% more token of Cosmos and we will put it to community fund, it also can be a great idea. Maybe it's crazy, but I mean, in long run, competition around these community funds will give us maybe better result and more activity in Cosmos ecosystem. 
+
+Citizen Web3: 
+This is actually very on one hand a philosophical question, but it's actually a very controversial question because we saw projects like Sushi for example, which managed to launch a decentralized project, but obviously not without controversies. Then we saw projects like EOS, which I'm not going to comment, but and then how you probably have much more to comment about EOS than I do. So do you think though, right, that in the future, maybe not today, we heard what you have to say, but do you think that we should strive that to the point where every single project that is launching has to be launched in a decentralized way? Or is there a room and space for projects that don't have to be decentralized at all? 
+
+Konstantin Lomashuk: 
+I don't think that anyone has an ideal way how you should launch your product. And also from 2017, we saw like many different projects. For example, EOS, it is a pretty centralized project because they didn't share the development with other teams. They didn't motivate it. In their values, they didn't have it at all. They have a pretty large community of people who want to join the development, but they didn't facilitate it at all. And that's why I think that they have such problems right now. If they try to build a community first, they would be more successful. 
+
+But it is their story. And I think we'll see like different products because when we speak about the DAO, what the DAO is doing, usually they're controlling the code base. It's like a board of directors that's vote for new code base. If it is not decentralized, it means that it is one person running and changing the code base. 
+
+It's the same as you have admin keys. But I don't try to say that you don't have a business model for that. For example, Binance Chain. 
+
+What is it? It is a centralized chain. It doesn't have any rewards for validators. Binance token has revenue flows from Binance Exchange. And it's like a reward token. And they're experimenting with different products. 
+
+Is it a good way or bad? It's different. And we will see like different types of organizations. Some of them will be decentralized from day one. Some of them will be decentralized in like three years. Some of them will be never decentralized. 
+
+And we will see what will be more effective. Because for example, I don't think that Uniswap is decentralized right now. It's a pretty small team, but they did a unique product. Are they bad? 
+
+No, they are not bad. There wonderful They build one of the most successful products on Ethereum. And also, when you look at the distribution of Maker, did they have a good distribution? I remember the first day of Ethereum when all the trades were on the Maker forum. you know
+
+They hold all their tokens. Is it a bad product or is it a good? I think it's like a revolutionary product. 
+
+It's a great team. And they step by step build decentralization. You know, now it was like a couple of months ago, maybe three months ago, it was a hype about Fair Launch. But this Fair Launch, most of them wasn't fair. I mean, maybe like this Maker Launch was much more fair with step-by-step decentralization. 
+
+And then for example, Fair Launch, when it was some whales who mind all the tokens and they not believe even in this project by ants, they just sold out it later. So I don't think that we have an answer, but we need to be more open for experiments. Then more will have experiments with different way of decentralization, vision. Then we will have more best practices. And then you will have a framework, for example, the best practice that you are not patient token from day one, like Uniswap did, for example, they didn't have a token. Then when you see that you need to give governance decision or some governance decision, you, for example, create a token. So I think it is already some good practices and yeah, we can use them. 
+
+Anna: 
+I totally agree with your statement that there are different levels. And you know that speaking with our guest and my speaking with a product owner and product leads from the biggest projects among the crypto sphere, among the crypto space, we find out that the star projects start with centralized, very small team and usually they have several stars on board who just very strict in terms of what they want and what they try to build. And then that project have some reborn and the centralized more and more and finally we will see what kind of way of building this project will work. 
+
+Citizen Web3: 
+You mentioned as well as at 16 there, right? And I think they do really have some great articles on how to build your product. And I think one of my favorite ones was actually talking about that you should not distribute your tokens straight away. 
+
+Anna: 
+I know that at 16 they have another amazing article about community and how it's important for all kind of projects, not only for decentralized projects, but also for any kind of VC project now to build their community, to have early adopters very, very close to developers and to have this customer development circle to build it. 
+
+Citizen Web3: 
+So if we say that all projects should be built from centralized and goes towards the decentralization, doesn't that kind of cause the problem and we go back here to Renaissance philosophy of Emmanuel Kant where he said that basically if a person has an idea, it's like a party like China or like North Korea or Russia for example, right? Where one person comes and says this is the party, this is how it's going to be and then we will one day communism will evolve. But again, we saw in 70 over years that communism didn't evolve and it's never going to evolve because it's just a pair of bullshit, right? So the question is, and I want to hear your opinion, do you think that maybe in the future, like you said, there will be best practices but could there be amongst those best practices a way where there is really a decentralized launch, not like the way it's done now? That makes any sense. 
+
+Konstantin Lomashuk: 
+This is a question, who is the leader? I mean, to launch something, it's not like to go just push the button. Usually you need to make a lot of things. Maybe you have like a team of 10 people, maybe 50, maybe even more and they all should be motivated even not by tokens but by some idea and then you have a leader who will push all these people to deliver these products and because usually the products are pretty complicated, it's need a lot of people to be together, to code it, to launch it, to share it, to find a solution in the beginning and it's really difficult to imagine that somebody just in the decentralized way create a code of Cosmos SDK. Guys from TenderMint, they spent a lot of time, like a lot of iteration, then they launched the product and then they split the team for many teams and it's like, I think it's was a pretty successful story and this story about decentralization, is it any option when different team will start build a product? Yeah, I think it's also possible, I call it like not a product manager but community leads. 
+
+So even if you look to the Sushi case, you have a like 0xMaki who is doing like all coordination work and he's pretty great, he's doing like great work here. Even in the centralized community you need coordinators and other leaders, yes they are. Do they have own opinion? 
+
+Yes they have it. Can the community change the leader? Yeah, but it can be like a lot of different leaders. 
+
+In Cosmos for example, that can compete between each other and the ecosystem will be better. Yeah So my answer is that it's pretty difficult to launch the product without a leader. For example Satoshi Nakamoto is a good example of the leader, who brings from idea to the product and we have a lot of other good examples and some of them are good, who launch an idea like Vitalik Buterin and many others and push the community to build on top of it. And some of them wasn't successful like yours for example, who didn't try to give the power to the community. And we see the result. 
+
+Citizen Web3: 
+There was a great speech by a journalist, a country member, his name and ironically this speech was given at a Google conference and he gave a very great example. And the example was when in a country a revolution happens, we usually associate the person who does the revolution, the leader that he has a beret on like Idi Amin, like Saddam Hussein and he said there is a big difference between good revolutioners and bad revolutioners. 
+
+The good revolutioners, when they go into the office, they take the beret off and the bad revolutioners, they forget what they were fighting for and leave the beret on. And the example was about Google, but again, I totally agree. Let's not take it a little bit differently. You mentioned Cosmos and you mentioned DOW. I mean, we obviously have eitherment coming soon and Aragon which is going to be built on eitherment, right? We don't know how it's going to look. We're going to have two Aragon's one there, one there. 
+
+What is your opinion? How are the DOWs are going to be shaping in an IBC world because it's totally different from what it was like on Ethereum or is it going to be different? 
+
+Konstantin Lomashuk: As I understand Aragon will not launch its own chain, so they made a voting. I mean, eitherment will launch, yes? I mean, or Piaxon or something like that, yeah? So they made a decision not to run, I mean, independent Aragon chain. And I think it was a great decision because we don't need like Aselement and Aragon chain with the same code base or something like that. And it's also was pretty complicated for Aragon users to understand and also to support this code base and I think it's better for everyone. In case of your question about DOWs, I think that when we wrote a report in 2014, it was only 100 assets and we split them to like decentralized applications and like DOWs. 
+
+And I'm still seeing that like Bitcoin, Ethereum, like Cosmos, it's also a DOW. It's a decentralized autonomous organization with a lot of people on top of it, with governance, with decisions. Sometimes it's decisions made by social consensus like in Bitcoin, for example, or in Ethereum or it can be like voting like in Cosmos, but it is some governance inside. And I think that this new type of organizations is really worth good for communities because they can coordinate together using like some software. And 2021, you know, a lot of people are betting on NFTs. I think NFTs will be like in 2023 maybe, but not now because they didn't found a product market yet. And But this year will be about the centralize of some organizations and decentralized finance. 
+
+Because decentralized finance is first product that already has users and DOWs, it's the governance of these protocols. And so we will see a lot of different examples, a lot of different products and a lot of fails and success. I think also in Cosmos ecosystem, I know some guys who already building some interesting products on Cosmos. Also, we have Kava that have a pretty good product and that's working also on Cosmos. 
+
+And as I understand, they will also start to use ABC to transfer assets. And I hope that all ecosystems start to work more better with each other. I will look on it so we have already this DOWs, like Kava, like Terra, like Reagan, like many others. And with ABCs, we will start to communicate with each other. And also it will be like some smaller DOWs that will be on top of protocols. And yeah, so it is a huge market. 
+
+Citizen Web3: 
+It's interesting that you mentioned that it's not going to be an NFT year because a lot of people are betting on NFT. I totally agree though, I think this is definitely going to be a continuation of DeFi and of DOWs. It's curious which cases can evolve. 
+
+Konstantin Lomashuk: 
+You remember my story about NFT, yes? 
+
+Citizen Web3: 
+Go on, tell it. Maybe you should tell it. 
+
+Konstantin Lomashuk: 
+Yeah, so it was, I think, like at the end of 2017 or maybe something like that. When we with my friend Dima bought some kitty songs, our kitchen. So I spent about like $4,000 on this kitty. It was an experiment to try what is a Crypto Kitty. 
+
+It was, I think, the first day. So I don't remember what Dima number of the kitty, what he bought. And I bought about kitty number 30. Then I started to understand that our economy, so how it works. 
+
+Also, I didn't send my wife that I bought a kitty for $4,000. Dollars, you know. Then I found that Crypto Kits are pretty centralized, so you have admin keys from them. And so somebody can destroy my NFT. And what I did, and also it was an option to change the name to the kitty. So I changed the name for my kitty to Bitcoin and then made an auction and sold it for 200 ETH. And it was a pretty lot. It was, I think, one of the first cryptos that I sold and bought as a car for this money. 
+
+So I have a car, I still hold it, that was bought for money that I have from Crypto Kitty. But still, also with this case, I mean, it's art. I like NFT, I think it's part of the art. And it's pretty difficult to understand the art economy. I mean real art and crypto art. So for me, it's really difficult to understand how it will evolve. And I think it maybe, it will be like not this year, but maybe like one, two years. 
+
+Citizen Web3: 
+I remember this story, we were sitting in Minsk, I think. We had one of our monthly gatherings. Let's just call it because we were a big team back then. And we all remember, you know, this is just crypto starting to take off. And then suddenly Constantine rolls. He calls somebody to open the gate and we're thinking, why does he want to open the gate? He doesn't have a car. And then somebody goes and opens the car and he gets this like posh car that he comes in and we're like, whoa, what the fuck? Where did that come from? And he's like, I just sold the kitty. 
+
+And we were all laughing very hard. But this is a good example of how crypto really does change the world and it's changing lives. I think it's great. Constantine, do you want to talk about anything else that we haven't asked you or can we ask you our like final question that we ask all our guests? So do you want to say maybe it's something that you said that you guys are hiring for P2P? Maybe you want to say who you guys are looking for? Or maybe you want to mention something else? 
+
+Konstantin Lomashuk: 
+First thing that we are looking for senior or lead developers and not only developers, it can be like sale guys or general managers. So we are trying to build the best team in the crypto and also we are building it like a family. 
+
+So we will be happy to onboard more people. And if you want to work, you can just try to like info at p2p.org and we will be happy to speak with you. We also continue to invest our assets to blockchain projects. So we will be happy to invest in you if you are building a project and trying to change this crypto world and also maybe like to make crypto more simple for all the planet. So we will be happy to be your early investor. We try to help to different products. We think that we're doing it pretty well and that is what we like. So we will be happy to help more people in this space. 
+
+Citizen Web3: 
+And our final question that we do ask all our guests on, I think it really fits in well to what you just said about investments. Could you share with us? It doesn't matter how many, but some of the projects that you currently are excited about. 
+
+Anna: 
+Yeah, but let's avoid maybe big names like Solana, Polkadot and Cosworth, Fyrum. They are amazing, but it's too obvious. 
+
+Konstantin Lomashuk: 
+Yeah, you can go to the website p2pcab.com and you will find almost all assets that we have in our portfolio. So if we are holding it, it means that we believe in it first and so we try to be as transparent as we can. And I think that it's pretty a lot of interesting teams that like develop their product about like two, three years like Swarm, for example, in Ethereum. They built a pretty good tech that is really working already now and waiting when it will be launched. Also, they have a pretty nice application like Fair Drive that you can use instead of Google Drive, for example. 
+
+And you can encrypt your data and put it in the swarm and you can send the link or your data and also can be encrypted. So what I believe in, it's in great teams right now. Why? Because great teams can build great products and great communities. So I like one inch how they build, for example, on Chain Aggregator. I'm not saying that we should, like anyone should invest because I mean the price can be like pretty high, for example, on all DeFi projects. But I mean that it is teams that are building pretty great communities, pretty great products. And also, I think some funds like VentureDow, Onze Allow, they're doing a pretty great work. 
+
+It is a good communities that looking for good projects. You can also look on their portfolio. They have a due diligence and they're investing in pretty good projects. And I think they're like also try to invest as early as they can. And so it's also can be a good signal for people who are looking to find good projects. 
+
+Citizen Web3: 
+Thanks for the answer. And we will definitely include all of those links to the podcast anyways, but there's some great information there. Konstantin, it's been a huge, huge, huge pleasure speaking to you. Thank you for finally finding the time for us. 
+
+I know you're a busy man. And thanks everybody for tuning in. 
+
+Konstantin Lomashuk: 
+Thank you very much. 
+
+Anna:
+Thank you. Bye. Thank you. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

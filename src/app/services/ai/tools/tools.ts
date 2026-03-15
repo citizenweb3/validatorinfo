@@ -3,6 +3,7 @@ import { validatorTools } from './validator-tools';
 import { governanceTools } from './governance-tools';
 import { marketTools } from './market-tools';
 import { explainTools } from './explain-tools';
+import { podcastTools } from './podcast-tools';
 
 export const aiTools = {
   ...chainTools,
@@ -10,4 +11,5 @@ export const aiTools = {
   ...governanceTools,
   ...marketTools,
   ...explainTools,
+  ...podcastTools,
 };

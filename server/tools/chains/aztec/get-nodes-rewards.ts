@@ -2,7 +2,7 @@ import { Abi, getAddress } from 'viem';
 
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
-import { contracts, getL1, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { getContracts, getL1, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { AddChainProps, GetNodeRewards, NodesRewards } from '@/server/tools/chains/chain-indexer';
 import { getChainParams } from '@/server/tools/chains/params';
 import { getOrCreateViemClient } from '@/server/utils/viem-client-with-failover';
@@ -86,7 +86,8 @@ const getNodeRewards: GetNodeRewards = async (chain: AddChainProps) => {
 
     const client = getOrCreateViemClient(l1RpcUrls, `${chainName}-node-rewards`);
 
-    const rollupAddress = contracts[chainName].rollupAddress as `0x${string}`;
+    const l1Contracts = await getContracts(chainName);
+    const rollupAddress = l1Contracts.rollupAddress as `0x${string}`;
     const rollupAbi = rollupAbis[chainName] as Abi;
 
     const dbChain = await db.chain.findFirst({ where: { chainId: chain.chainId } });

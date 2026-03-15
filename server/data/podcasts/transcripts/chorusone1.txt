@@ -1,0 +1,519 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/chorusone1
+
+Episode name:
+Keep it Simple, Stay Focused and Battle Test with Brian Crain
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web 3 podcast. Today I have a guest who was last with me on the Citizen Cosmos podcast. Yeah, so we have a transformation. Brian from Chorus One. Brian, man, welcome back to the show.
+
+Brian 
+Yeah, thanks so much for having me. Pleasure to be here.
+
+Citizen Web3 
+Glad, glad, glad to have you on. I have some questions to follow up to ask you. There has been some progress, but before we get into that, you know, usually I start obviously with, with, with asking people to tell their story and considering, of course, you've had the chance to, to, to say your background story, you know, of how you got into, into Web3 and what was the journey, which to me is as far as I remember. I mean, I did have to look at the show notes. I'm not going to lie. It was two or three years ago, but.
+
+as far as I remember, it had a lot of connections with me. So last time You know, you were on the show, you know, we talked about different things and usually I start with asking guests by introducing themselves. And of course, since you already had the intro and which was a while ago, but still I not the question so much about progress, but a question to you as what in your opinion, in the opinion of Brian crying has changed.
+
+Not in chorus one, but in the industry, in the blockchain industry, in Web3. Has there been any changes in the past three years? Has your personal feeling that we as an industry progressed somewhere? And if somewhere, where?
+
+Brian 
+Yeah. Yeah. Yeah. Well, I mean, I do think there has been progress. I think there is, you know, a bunch of, well, if you think back in time, right. And I think there was a whole bunch of things where you said like, okay, these are big bottlenecks and we have to resolve those things in order to be able to build applications that, you know, really like millions of people are going to use.
+
+Citizen Web3 
+We're gonna start heavy.
+
+Brian 
+And, you know, one of them, for example, was like scalability. Right. So, I mean, and I think we had that, you know, years ago, right. Like more people start using it. Transactions go to, you know, $1 ,500 transaction and it's basically becomes unusable. So I think if you look at scalability as one example, I think we've made like huge progress. And now really there's like a whole bunch of sort of different options, right? You have like Cosmos chains, you have Solana, you have.
+
+If you're in roll -ups, then you have a whole bunch of new layer ones, like Zui, Aptos, Monad, new things that are coming through. So I think that feels like one area where we've made really massive progress. I guess interoperability, I think, is another thing where we've made a lot of progress. Now, maybe it hasn't been quite as full -on victory as with scalability. Scalability...
+
+I would say we've made this progress, but we still haven't really seen the kind of, you know, the battle test, right? Of like actually something that, you know, a lot of people are going to try to use at the same time. So I assume still a lot of things are going to break, but then, you know, I'm super confident that like we can, we can sort this out and we're pretty close. I think interoperability. Yeah.
+
+Citizen Web3 
+Can you, before you go on, before you go on, before you go into probability, give me one example of scalability that you're talking about. For example, something boom, stands out.
+
+Brian 
+Yeah, I mean...
+
+Citizen Web3 
+that we solved.
+
+Brian 
+Yeah. I mean, we've solved, right? So, I mean, I think we have the, you know, here in rollups, for example, they're like doing a lot, like a lot of transactions now. Okay. Maybe a bunch of stuff there is a bit questionable in terms of security assumptions and things like that and decentralization, but still like there's like a, you know, high degree of throughput or, you know, Solana I think is doing, is doing fine again, maybe some issues there, but like with a lot of users.
+
+And I think we also seeing the Cosmos chains, you know, like chains like DYDX, you know, have like a good amount of like activity volume, which can really support a lot of activities. And then, you know, we see new like gaming chains. So, you know, you have these things of just like people using it for the step coins. And it's like actually like millions of people who are like using it for some of these things. So I think, I think we are going to be in a world where...
+
+There's going to be like plenty of good options for you to build like a scalable decentralized application.
+
+Citizen Web3 
+And you were going to mention interoperability as well, but I cut off with examples. What about interoperability then?
+
+Brian 
+Yeah. Yeah. Interoperability, right? We basically had like, I think it's also kind of a success story, you know, where we've had, um, you know, this kind of situation of like isolated different blockchains. And, um, now, you know, we have, for example, IBC, right, which has been working super well and, uh, it's supporting, you know, again, like lots of transactions, lots of transfer, lots of value.
+
+And then we have a whole bunch of other, you know, interoperability protocols, we, you know, things like wormhole, axelar, you know, they're kind of connecting across the chains. I think there's still issues there, right? I mean, we've seen, of course, bridge hacks and user experience is sometimes not great. But still, like, I think we're basically, and then you have, you know, aside from just token transfer, right? We're seeing actually.
+
+very cool cross -chain applications. I think a great example in Cosmos is Stride, where you basically have Stride as a blockchain that then controls an account on another blockchain and that can stake through that account from the Stride chain, Stride now being secured by the Cosmos Hub, and then issue a liquid staking asset. And that's just very cool, right? And it's working.
+
+And so I think we are also seeing like more complex cross -chain applications. And I'm sure we're going to see like lots more of that. So I think these are two big areas where I feel like a lot of progress has been made and, you know, where I'm like very optimistic. Yeah. Yeah.
+
+Citizen Web3 
+I'm gonna wait, before we go on, I'm gonna catch on something that we spoke about also last time, because one of the last topics was one of the biggest one was safety. And that I remember very well, privacy versus safety. And me and you spoke about, to what extent, sorry, freedom versus safety, not privacy, but rather freedom versus safety. To what extent a person is safe while they do something, to what extent some...
+
+Brian 
+you
+
+Citizen Web3 
+What is the difference between privacy and safety and freedom and so on and so forth? Some of the things you mentioned, I have to say, they, you know, let me play my favorite devil's advocate hat on. You know, they are by many considered either economically unsafe or technologically not perfect, which is of course, that's normal. You know, technologically nothing is perfect. What can be perfect, right?
+
+What is the extent that those I mean, what is the price? The question is different. Is there a price and if what is the extent of that price in terms of privacy and safety that end users today pay or maybe they don't have to pay for the scalability and the interoperability solutions that have been introduced over the past years? Are they safe and are they private or are they still not safe and not private and the user has to
+
+Choose between the two.
+
+Brian 
+Yeah, right. Right. So I mean, on the safety side, um, well, obviously interoperability on the interoperability side. Well, I think scalability, I don't think there's, I'm not sure there's really like a trade off there much. I mean, of course, when maybe when you see something like roll ups, you know, you can say, okay, that's not very decentralized. Like you have, uh, but still like, you know, there's actually been no hacks like that. And, and so I think in general, I don't really see.
+
+that like, you know, more scalable blockchains become less secure or something like that. I think when it comes to interoperability, well, I mean, we have always seen a lot of massive hacks of breaches and, you know, it's probably like among the top in terms of a category of applications and money lost. I mean, I'm not sure what the stats are, but breaches will be like near or at the top, right? So clearly there, there's a risk.
+
+I mean, IDC, for example, fortunately has not been hacked and no money's been lost, but doesn't mean that couldn't happen in the future. But still, I think that's a very solvable issue. I mean, I think there's a lot of progress there that's being made. It's actually been a while, I think, now that there's been the last Big Bridge hack. So I think maybe there's already been progress made.
+
+But there's other solutions, for example, you could say, hey, you're going to use different bridge solutions and they have to agree and only if they agree, then the transfer gets effective. So I know there's like some teams that are trying to do something like that, that you almost do sort of like a multi -sig of different bridges. And so I'm pretty confident that that's a very solvable issue. Maybe there will always be some remaining risk, but I think that's fine.
+
+Now, the other question around privacy, I think on the privacy side, things look like way less good than on these others. In general, do I think there's been progress on the privacy side? No, I would actually say it's gotten worse. And breaches are basically, well, they're not helping, certainly.
+
+Brian 
+I mean, I don't think any of the known interoperability bridge designs really have like privacy in mind or have like privacy features. So yeah, they certainly don't reduce the privacy issues. Maybe in some ways, I mean, probably the best privacy solution, right? If you want to go cross -chain, which is of course ridiculous is to use like a centralized exchange, right? If you're going to...
+
+know, put your ETH on Binance and then trade it for Atom and then like withdraw it to your Cosmos account. Well, then actually you cannot really link your ETH, I mean, Binance can link your ETH wallet and your Cosmos wallet, but like only they can not. So from that perspective, I think on the privacy side, I would say situation doesn't look super great and Bridge is certainly not helping.
+
+Citizen Web3 
+To carry on that question while we're still on the topic, not token. Wow. That was a nice Freudian slip topic. Do you think that in general, the surveillance that the blockchains today around there has increased rather than decreased?
+
+Brian 
+For sure, no, no, definitely increased. No question. I think I'm sure it's gotten like much better, more invasive.
+
+Citizen Web3 
+What do we do?
+
+Brian 
+You know, I think it's a really, really hard one. I'm not totally sure. Like, obviously there are some people working on more privacy preserving solutions. I think the issue is, first of all, the amount of money that's going into that is pretty limited.
+
+So let's say if you compare scalability or interoperability, the amount of money that's been raised around this, I mean, it's enormous, like scalability especially. But interoperability too, it's been like, I'm sure there's like a billion or more that's been invested in interoperability protocols and many billions in scalability. Privacy? I don't know, like maybe a few hundred million or something. So it's a lot more limited. And of course there's a lot of risks. I mean, these...
+
+for, I think there's risk for investors, there's risk for developers. I mean, we saw, right, I mean, they arrested Tornado Cash, right, founders. And I saw, I think they arrested the other week, you know, some guy from this Bitcoin wallet, right? This kind of samurai, this privacy -preserving Bitcoin wallet, samurai, yeah, yeah. So, it...
+
+Citizen Web3 
+for. Was wasabi. Also, samurai samurai not wasabi samurai. Yeah, that's right. That's one somewhere. There was more. There was more.
+
+Brian 
+Yeah. So it's obviously like as an entrepreneur, right? Like you have to be like, or as a developer, you have to be like really, you know, it's risky, right? To do something that's like privacy preserving. And then of course, the other thing is that it's very easy for the regulators to say, Hey, you centralized exchanges, you know, don't touch, don't touch any of this stuff. So then you can trade those coins on centralized exchanges or get them delisted.
+
+And because of the whole on -chain tracing, you'd be like, hey, look, if you've touched tornado cash with your ETH, then now you can't deposit that anymore. Because you sort of just assume that if you engage in a private sector and protocols, assume guilt. I think that's kind of like this strategy that regulators and governments are pursuing.
+
+I think it's actually really, really hard. I don't know how to, um, you know, I'm not sure exactly how that can be countered. I mean, fortunately, I think there is techno, the sort of fundamental technology that could enable more privacy, I think keeps progressing. You know, you have like ZK that's like getting a lot of investment in mostly for other reasons, not for privacy, but still. Um, but yeah, I don't know. I mean, I'm.
+
+I guess, I think the best hope I have would be that crypto enables a lot of people to become comfortable with custody in your own assets and with managing private keys and with using wallets. And that you also build a lot of the technology and the infrastructure that would enable more privacy preserving networks. And that at some point, right.
+
+At some point, the pressure will get so high or like, I don't know, at some point people will create that kind of privacy preserving thing and it really like breaks through. But I don't know. I mean, I'm not honestly not sure on this one.
+
+Citizen Web3 
+I'm going to be honest. I have the feeling that the problem here is not the lack of investment into privacy technology or the investment into privacy technology. From what I have seen as a validator, as a member of this market for the last 10, 12 years or whatever, this is the feeling I have and I'm going to make a question from it.
+
+I have seen the approach that 80 to 90 % of founders and other people surrounding projects make regarding privacy is, hey, I don't want to be guilty of having somebody done something bad. So it's not that we don't want to invest in ZK or whatever, that even if we're going to have anything like ZK, we will make sure that we will find a way to ZKKYC or whatever or something else.
+
+And it seems that the whole kind of, well, it seems that people have lost balls. That's why I'm going to be honest with you. I didn't say I'm going to be honest. So this is the question that I have. Like, do you think that really like if somebody comes now with, you know, a trillion or okay, trillion maybe is a lot, but let's say, I don't know, five, 10 billion new euros invested into privacy projects will suddenly, and they will develop, let's say,
+
+Brian  
+Yeah.
+
+Citizen Web3  
+beautiful privacy technology, do you think that other projects will suddenly start implementing it and being like, hey, let's become private now and fuck the regulators? Like, I don't see that happening.
+
+Brian  
+Yeah, no, no, I mean, I agree with you. I think it's a kind of like equilibrium where, you know, nobody is going to invest this 5 billion into privacy crypto because yeah, why would projects risk, you know, going to jail or founders to like implement this stuff and, and then even if they did then...
+
+You know, like other crypto things are just like wall it off or block it or not allow trading of those assets. And so yeah, I think it's a difficult one. I mean, maybe what's needed is, you know, this kind of like network state direction where, you know, maybe there will be some countries that are really saying like, Hey, look, we actually embrace, I mean, historically, right. There's.
+
+A lot of things have, historically, I think governments have often been pretty preserving of privacy. I think there's some law in many places around mail that if you send a letter, someone can't just open the letter, like even the government, I think. But at least in some places, I think it is like that. Or...
+
+You know, they can't just break into your home, right? And like, but they have to have a warrant and things like that. Uh, or that you cash of course, right? I mean, cash is super pricey preserving. And so there's a lot of things, uh, or, you know, in Switzerland, you have this like bank secrecy thing, right? We're like, okay, the government can't even ask the banks, like how much money do you have? Right. Like, um, so historically it has been there, but then I think that has just completely eroded and.
+
+and governments don't really value that anymore, stand up for that anymore. But I think there may be an opportunity there, right? Maybe an opportunity if you see more of a decline of large nation states and more problems, maybe some of them default, and it kind of gives the opportunity maybe for different types of...
+
+Brian  
+governments and states to arise again, then I could imagine some of those saying like, Hey, look, let's really actually embrace privacy and the right for people to privacy, even in this new digital context. And, you know, maybe then people who value it could say, I'm going to move there. And, um, cause I think if all of the nation states are sort of aligned in, Hey, we have to control this thing and it's a threat.
+
+And we need to know whatever we can so we can keep this under control. That's something really hard it stands to be in. And that's where we are today.
+
+Citizen Web3  
+I think just about half a year after Europe, maybe a bit more, the last one, I mean, I had a conversation about privacy with who else but Chris Gohs, right? And he had a very beautiful opinion about semantics and syntax and how we view today the word privacy means so many things, whether, you know, speaking into somebody's window and financial information's a both.
+
+Brian  
+Mmm.
+
+Citizen Web3  
+in the semantical term in the large semantical term mean the same thing and they should not. And it's interesting how he went into a proposal, not proposing, not offering a solution, right, but into this like, of a talk of maybe this is the first step that our semantics and syntax here need to be kind of in order when it comes to privacy. And when it comes to what we understand by privacy, what we understand by secrecy, what is the difference between different types of
+
+private information. And, you know, one thing, again, somebody picking into your home from a window. And one thing is public company sending some information about another public company or public contract they did, for example, right. So, yeah. But yeah, it's a big topic. Let's hope that one day we will survive.
+
+Brian  
+Yeah.
+
+Brian  
+Yeah, I mean, I feel like Norma and that team is like one of the few, right? That's like, you know, really strong technical team that really has valued and worked on more privacy preserving technology. So I'm very excited about, you know, them launching and kind of things they've been building.
+
+Citizen Web3  
+I mean, I promised you at the beginning, and this is I'm going to try and focus it more about chorus one and I want to, but before that, I have one question for you, which derived from a sentence you just said a couple of minutes ago. You were about to say developer or entrepreneur, but you haven't placed yourself in either. So before I start asking, who do you today identify as a developer or an entrepreneur? Because I think it's important.
+
+Brian 
+Yeah, well, I'm not a developer. My technical competency is far too low. So yeah, I would say I do identify as an entrepreneur.
+
+Citizen Web3  
+Okay.
+
+Citizen Web3 
+Okay.
+
+Citizen Web3  
+Okay.
+
+Brian  
+like that. And I think it's something that I enjoy and I imagine something I will kind of continue doing for a long time, even if at some point I work on something different from crypto.
+
+Citizen Web3
+Okay, interesting. But now that that is settled, because I do want to ask about the... I'll tell you the thing. Considering we ourselves became a bare metal validator and we started to build some validator tools and so forth, and we decided to refocus a little bit of just talking only to founders, to talk to people who commit to this economic, the Web3 economic...
+
+as every day, every second, every block. And those are validators, of course. And what has been the validator journey over the past? Because I know you as a person, you do a lot of things. You're involved with foundations. Obviously, you're, I don't know if it's okay. If you identify like that or not, but you know, an angel investor, I guess as well, right? And you really said, just mentioned you're an entrepreneur. And also there is chorus one and I'm
+
+curious what in your opinion role does Chorus One today play in your life and in the life of Cosmos and Ethereum and everybody else because you guys are involved in a lot of things. So let's talk a little bit about Chorus One. What has been the 101 so to speak over the past three, four years with Chorus One and what are you guys working on? What are you focusing on? What is your ambitions?
+
+Brian 
+Mmm.
+
+Brian  
+Yeah, right. I mean, I think you said it before, right? The sort of thing of like, you know, every second, you know, new blocks being created and transactions being processed. And I think that's one of the things that we like about the staking business about Corus One, right? So we run infrastructure for I think something like 60 networks today.
+
+Uh, so, you know, if you, if you just, if you take like, you know, how many, like, let's say on average, I don't know what the average is, but let's say the average is like six seconds or something block time, right. Then it's something like, okay, we're maybe we're involved in like 10 blocks a second or something, either proposing or verifying. And so I think that's, that's, you know, the really core of like running validators is basically you keep.
+
+those blockchains running, you process all the transactions, you create the blocks. So it's really at the very, very core of decentralized networks and blockchains. And I think that's super cool. I really, I'm really like that. I like sort of working on like the fundamental things that like don't change. And, um,
+
+Yeah. So I mean, of course one, right. So that, I mean, that's really the main thing, right? So the main thing for us is running validators and staking infrastructure. Now staking infrastructure has also a lot of different flavors, right? Because there's a lot of different customers, a lot of different needs, a lot of different staking designs. And so, you know, we are, I think we're almost 70 people now, working on this for, yeah, for like, we're working for a lot of individuals who are staking of us. We work.
+
+a lot of VC funds. We work with custodians, we work with exchanges, wallets, we run validators on behalf of other people who have their own brand, their own community. That's by far the number one thing at course one. Then the other thing that we also do is we've been investing and we've been doing that for quite a while as well. I think we started doing it
+
+Brian  
+at the end of 2020. So it's been almost four years that we've been investing. I think our very first investment was LIDL. But yeah, so we've done around 70 different investments. To date, a lot of Cosmos investments too. We've invested in, I think, around 30 different Cosmos projects. And so yeah, that's also...
+
+key thing for us is to look at new things that are coming up, new protocols, new types of companies and services that are all trying to move this forward. And then we invest in the things that we like and we identify with, but also things that we're just like synergies. Either we're going to run infrastructure for it or there's some other type of partnership or integration. So yeah, that's basically Corus One and it's definitely still the number one priority for me.
+
+And I expect it will stay that way for quite a while. I hope it will.
+
+Citizen Web3  
+You know, when I speak to guests, I always make notes of when they talk, what to ask them. And the note I just made is 1 .1 people per chain. I knew it was 60 chains, but 70 people, I was like, okay, it's not 1 .1. Okay, my math is a bit bad, but you know, it was funny. I was like, okay. So this is crazy. If you think about it, it means that you need more than one person to work per chain. That's crazy. It's actually...
+
+Brian  
+Yeah, yeah.
+
+Citizen Web3  
+for people to understand who are out there, you know, like they always ask, what do validators do? Where is the time going? You know, so here you go. You have 60 chains and 70 people on the project. That's, that's talks about it.
+
+Brian  
+Yeah. Now, of course, the CSF, this is like everyone, right? So around engineers is around half of them. And then on the engineering side too, there's, you know, people doing other things, you know, working more on like product front end type of stuff. So, you know, like pure infrastructure, people running infrastructure is maybe like 25 or something like that, 2025. But yeah, it is a good.
+
+Citizen Web3  
+Of course.
+
+Brian  
+It is a good point, right? That I think there's definitely this sort of relationship of, you know, you onboard more chains, it gives you more work and then you need more people. And, you know, we have been in this situation where, where basically the demand for, you know, people coming to us and say, Hey, can you run this infrastructure? Can you, can you support this chain is higher than what we can support. And, uh,
+
+And that has a lot to do with that ratio, right? Because then of course we can maybe grow the team at a certain rate, but that's kind of slow. And of course we don't want to, you know, just hire. I mean, we've always been fairly slow in terms of growth and hiring, but it is, it's definitely, I would say one of the things.
+
+Citizen Web3  
+Ryan, you're a mic. Mic. We've been slow in terms of growth and hiring.
+
+Brian 
+Yeah, so.
+
+Yeah, we've saw it in terms of growth and hiring, but it's definitely one of those things that we want to do to be able to say, hey, we can start growing the number of networks that we support disproportionately. If you say like, okay, maybe we double the engineering team size, but we are able to do four times as many networks. But that's a heart.
+
+hard problem and it's going to take us a while to get there. I think we can. Yeah, I think we can. We do invest quite a lot in AI also around this. And so I think that can be very helpful for this. But again, it's going to take quite a long time, I think, to really realize that.
+
+Citizen Web3  
+Can you, though? Do you think you can? OK. I think to do that, I think we should do it.
+
+Citizen Web3 
+I think today Cosmos Station is probably, I think if I'm not mistaken, the ballad with the biggest amount of support for networks, due to obvious reasons, of course. But I'm very curious. The last time I spoke to David was so long ago. I would be curious to understand how, you know, I mean, well, you have 60 networks and that's already, sorry, 70, you know, it's already, sorry, 60. Like mind blowing when you say, let's double that, you know, to 120. You know, it's like, okay.
+
+Brian  
+Yeah.
+
+Citizen Web3  
+Okay, serious, serious.
+
+Brian 
+Totally, totally. That's very true. There are definitely teams that actually are much smaller than we are and that are supporting as many or more networks than we do. So I have been hats off to them. That's really amazing. And I don't totally understand how they managed to do that.
+
+Citizen Web3  
+Man, I'm -
+
+Citizen Web3  
+I'm going to be honest with you, like over the past year of speaking primary to validators, I've had guests who are one man team and I've had guests like yourself, of course, who are representatives of your founders or very huge team. And sometimes I'm shocked as to how, you know, like one or two guys, cause we are also a validator, you know, and I'm also sometimes like what on earth?
+
+when it comes to guys who says, oh, we're running, I'm running like seven or 10 networks out of my basement. And like, dude, like, you know, I'm going to attend more now. And I'm like, okay, God, man, those guys are crazy. They have the motivation and the efficiency that I think I definitely don't don't possess. But then, man, let me ask you this. You said in the middle of your, when you were talking, you said that, you know, you have came to the point where you started to refuse.
+
+Brian  
+Mmm.
+
+Citizen Web3  
+networks that start coming to you being a validator due to the lack of simply infrastructure possibilities and resources in terms of manpower. What are other reasons that you have been saying have to had already not would say no, but already said no to networks apart from infrastructure? No.
+
+Brian 
+Yeah, I mean, of course we've been, uh, we've been running this process for years, right? We're basically, okay, we have some pipeline. There's like potential network. We do some research on it. And then we decide, oh, maybe we're going to onboard this not. And so this is not a new thing, right? Like we've been doing that since forever, basically. And, you know, it's a simple reason, right? It's just like, oh, we have like limited bandwidth and we have to choose where to allocate it. But in terms of like how.
+
+we make those assessments, there's a whole bunch of different factors. I can go through some of them. Of course, let's say there is a factor of economics, right? Like how big is the market cap? What is inflation? The tokenomics, because we want to be sure that if we have a chance to earn decent revenues from it, then maybe there's the thing of integration, cost, complexity.
+
+Uh, so let's say if it's like a Cosmos network and, you know, we run lots of Cosmos networks, of course it's like much simpler than if it's completely different L1 own staking design, you know, who knows, maybe they have some other kinds of complexities. So that's another one. Uh, you know, then I think it's sort of, you know, like the quality of the project, you know, it's like, is the code well written? Is it, does the vision make sense?
+
+Um, things like that, you know, we said traction or the people using it, building on it. Um, you know, also matters if like, how much stake do we get that, you know, maybe you have like existing investors or customers of ours that are like, Hey, we have this token. We want to stake this token or maybe we don't. So like, you know, that's factors too. Um, so there'll yeah, a lot, a lot of different factors. Um,
+
+Citizen Web3 
+Let me take it a little bit of a different way because I understand that this didn't connect the question, but let me take it a bit of a different way. I want to know, you talk a lot about investment and you talk about, you mentioned investing into different projects and running infrastructure for different projects. I'm still curious today, though, apart from being a business, a for -profit business that, of course, earns you personally, because we're talking about Brian right now.
+
+Brian 
+Yeah.
+
+Brian 
+Okay.
+
+Citizen Web3 
+Um, some revenue, which is perfect, right? But I don't believe that that's your only like thing that drives you inside. I'm curious today after five years or four years of running, uh, this journey, this validator, you know, that has been like, you see, you said yourself, starting with infrastructure, then going into investment, going to other things. What is today remains your vision and for, for, for chorus one.
+
+and that drives you personally as Brian to keep on doing it.
+
+Brian 
+Yeah, yeah. I mean, I would say there's maybe like, so one thing is the thing, I think we talked about it last time, you know, I think it's just the idea that like, okay, blockchains and decentralized networks allow people to have more control over their own assets, their own lives, their own decision making.
+
+and allows people also to build things, you know, to entrepreneurs to like realize their vision and their idea without having to ask for permission without, you know, just going ahead and doing it and you're building on top of other people. So I do feel that like, eventually this can lead to a world that's more open, more fair, more innovative, more wealthy, more...
+
+resilient. So I think that's definitely a big part of it. I would also say I enjoy the aspect of growing an organization and building an organization. So I think there's something just super rewarding around getting a whole bunch of like...
+
+great people together and try to set up a structure and incentives and the culture and methods so that they can work together really well and, you know, kind of form a team and align and then, you know, achieve something together. You know, I think it's just as human beings, if you can, if you can do that, right, if you can kind of get together with other people, have a shared vision, shared goals, and then realize them.
+
+I mean, that's just inherently more satisfying than, you know, doing something on your own. So I, I, I find that aspect like, you know, really satisfying and exciting. And, you know, I care a lot about that. So, you know, I spent a lot of time like interviewing people and, uh, cause you know, I care a lot of the, like, you know, the kind of people we hire. And like, for me, it's like very exciting when we hire like great new, great people that I'm like,
+
+Brian  
+makes me very, makes me happy and excited. And I think that's like definitely also one of my biggest areas of focus is exactly that, like getting great people and then trying to set up a sort of organization and culture where they can do their best work and they're happy and they want to do a great job. So yeah, I feel like these are probably the two main things for me.
+
+Citizen Web3 
+I think it was Steve Jobs, right, who said that an idea becomes a project when it leaves the person's head and at least three other people start to participate in that idea that when it becomes a project, I think it was his sentence. Man, on a... I think it was, I think. I think I was trying to connect to what you were saying about building something rather than having it in your head and doing it solo. But...
+
+Brian  
+Yeah.
+
+I don't know, but yeah.
+
+Citizen Web3 
+On the topic of the validator, I wanted to go back to that. And again, 60 networks, huge number. What is the current setup that you guys use? Are you thinking about bare metal or are you using any bare metal today?
+
+Brian  
+Yeah, I know we are basically almost fully bare metal and have been for years. Yeah.
+
+Citizen Web3  
+didn't know. I didn't know. Okay. Can you talk a little bit about it? Like what what what's what's what's your what's what's your bare metal story and how does it go in? I mean, it's not
+
+Brian 
+Yeah.
+
+Brian  
+Yeah, sure. Sure. I mean, I would say to some extent, it's how, you know, when we started, right, it was like, okay, there's going to be like, you know, we started with Cosmos and then we used UBHSM, right? So there's basically an HSM, a small, a very small and kind of cheap HSM, but still an HSM. HSM means basically like
+
+a separate device where the private key is in there and that does the signing there. So you have kind of like higher security than if the key is just on a server. And someone hacks into the server, they can steal the key. If an HSM, because it's kind of segregated, you have higher security. So from the beginning, we were always like, oh, we should use this, right? And we did. But you cannot use that in the cloud, really. There's no cloud support for like UVHSM. There is limited cloud support for HSM.
+
+other types of HSM, but you know, not, not this and not. So we had from the beginning, we kind of had like, okay, now we did have also quite a bit of infrastructure in like AWS and you know, running nodes there and Google cloud. Uh, but we had, we always had this kind of bare metal, uh, some infrastructure and bare metal. And then, you know, at some point, so I think we're, aside from that security aspect, it was also just a bit of a maybe philosophical thing. Like it wasn't really drawn to the idea of.
+
+of running all this in a big centralized cloud provider. It seems to kind of a little bit defeat the whole purpose of the thing. But then actually at one point we... So this is also now quite a long time ago, maybe like three years ago or four years ago, but we said, okay, we wanted to migrate fully off the cloud. I think at the time actually our...
+
+I remember our infrastructure costs was like 25K a month or something we're paying to Amazon. So it was a lot of money too. And yeah, when we did it also, you know, we just did this massive cost savings with it too. I think cost went down by like 80 % from that change. And yeah, and then, you know, we've also, I think we also have this kind of engineering culture a bit around it, you know, where.
+
+Brian  
+Um, you know, we've always tried to hire people who are. You know, the kind of people who care about the low level stuff and who, you know, care about how does the networking work? And because of course the big difference, right. For, oh, it's basically when you, when you have bare metal, right. You, you control the entire server. So you have to decide all of the software that runs on there. You have to deal with everything yourself. Whereas if you are using something like AWS, then you are.
+
+the kind of the hardware is abstracted from you. And there's a bunch of sort of services that run underneath that are meant to make it easier for you. And that abstracts some of the complexity, but also means you don't deal with a whole bunch of stuff. So I think a lot of engineers, even like DevOps engineers, if they're used to cloud, then they don't really understand the underlying stuff because they don't have access to it if they use AWS. But we had, you know, we also just had always this sort of,
+
+engineering culture. And then, you know, we had the people who started interviewing and they were all like, we just don't hire anybody like that. So we've always been like, trying to hire people who have interest and knowledge of more kind of low level systems, networking, design. So, because yeah, I think you'll, you need very different team as well, if you want to do everything bare metal versus in the cloud. But, you know, for us, it's very deeply ingrained in our culture. So I think it.
+
+you know, but it's, I'm happy we went down that route for sure.
+
+Citizen Web3  
+I'm curious if you can talk about it, of course. It's bare metal that you guys rent still in server spaces or this is privately owned bare metal that you actually... You know the difference, right? There is like some validators. Yeah.
+
+Brian  
+Yeah. No, no, we still, we still, we don't like operate data centers and stuff. So it's basically like, you know, we, we will like buy or lease servers in different data centers. And then, you know, we just control those servers and control what happens in those servers.
+
+Citizen Web3  
+That's interesting. There is also like two camps I've noticed in bare metal who one advocates for, hey, it's only the real bare metal is only if I have the servers in my own server room and then the other guys as well know because I have still access to the servers. And do you think that there is a difference between those two camps or do you think it doesn't really matter as long as it's bare metal?
+
+Brian  
+Yeah, good question. I'm not sure. I mean, in the end, you can think you can still fully control it and you know, you're like SSH into it. And of course, like, well, I mean, what is the worst thing that someone can do who operates this thing? I mean, I think the worst thing they could probably do is just unplug it or something like that. I don't think they can do like much else is my understanding, but they could like, yeah, they could like shut it down. But then, you know, I mean, this, I mean, first of all, we do use a whole bunch of different providers.
+
+Citizen Web3  
+No, no.
+
+Brian 
+And we did also have the experience of, you know, we were, for example, we had a lot of infrastructure in, in this French company called OVH and they had a fire in their data center in France. And we were in that data center. We had a lot of infrastructure in there. So we basically had to then migrate over, you know, things from there to other places, like, you know, super fast. And that actually ended up working pretty well.
+
+I mean, it was still like two weeks or something of like sleepless nights and stuff for a bunch of our engineers. But we had very little downtime, almost no downtime and almost no disruption. So I think it's fine. I mean, of course it's huge running your own data center. I mean, also sometimes we need it in certain geographical locations because of latency and things like that. So.
+
+In the end, we have nodes all over the world and in many different places in Europe and stuff like that. So it's just not practical. Maybe at some point, if you get massive, massive scale, obviously Amazon builds their own data centers and stuff. But obviously we are way, way, way far from that kind of scale. And I think for us, it's...
+
+like just renting space seems like totally fine.
+
+Citizen Web3  
+On the topic you mentioned about using HSMs and some validators of course use Horcrux, somebody use the KMS, somebody uses other solutions like yourselves and there are many different solutions and there are different levels of security validators can take by storing their keys on a ledger, using ledger, whatever. There are...
+
+There are millions of levels and interactions you can go into that. But something I want to ask you because when we started our migration to bare metal about like, I don't know, half a year ago and we're still not finished, you know, because we are working with privately owned bare metal and that's of course creates a lot of a pain in the ass with the current electricity is a very interesting one. But anyways, what we noticed is that, you know, not many validators, comma,
+
+Brian  
+Yeah.
+
+Citizen Web3  
+not many chains give a damn shit, I'm sorry for my French here, about things like being able to sign things from a ledger or about using something like multi -signers, like Horcrux or anything like that. And I'm curious, is it just my terrible experience by talking with... I'm not talking about the guests here, I'm actually talking about my experience with interacting on the internet with our colleagues.
+
+Has it been my experience so negative or I don't know. I mean, I've realized that many chains out there that we come to validate and we want to launch a validate and we want to create, you know, a key. It's simply impossible even because they don't support ledger. They don't. So and it's like, hey, how the hell have you got a chain that's worth, you know, a 50 to a hundred million dollar market cup and you still don't even support ledger in your own chain, you know, and then then you sign in. Yes, yes, yes, yes, yes, yes. For example.
+
+Brian  
+We mean for ledger for the validator operations. Well, because I guess not a lot of people want to use that, right? Like we wouldn't use ledger, for example, you know, because it's like, it's just not very practical to control it remotely, you know, because then someone has to go in there and put the pin and like, how do you do that? And so like, and then, you know, I think he's, yeah.
+
+Citizen Web3
+No. No.
+
+Citizen Web3  
+OTH -Z?
+
+Brian  
+But yeah, these teams, I guess, you know, generally it's just, they're, they have a limited resources, right? And they're in a rush and they're trying to move fast. And then they're just like, and often they have no experience, right? What's it actually like to run a chain and run a validator and run the infrastructure for it. They just like, you know, end up creating something. And of course we have it all the time that like,
+
+You know, we onboard some chain and then there's a whole bunch of issues because, you know, the way they either maybe design the protocol or the way they manage keys or things like that, or it's just not very friendly from an operator perspective. And then we have to decide what to do. You know, either it's like, sometimes maybe we say, Hey, we can't support this chain or maybe we have to build some kind of solution around it. Or we have to develop some own software or maybe we say like.
+
+We have to take some kind of compromise or different solution, maybe than what we would like to. So yeah, I think that's just the reality. And I think that's something that's...
+
+I mean, I think over time, hopefully, especially the projects that do well will tend to invest in this and improve things. But often also things are just design decisions from the beginning and they're kind of a hassle and hard to correct. To give an example, some of the chains, in the Cosmos chains, we use the rewards are distributed automatically. They just go to the users, they can...
+
+claim the rewards whenever they want to, validator can claim the rewards when you want to. But you know, some other chains don't work like that. Some other chains will like send the rewards to the validator and then we have to run some script and send the transactions to send it to the delegators. Horrible, right? Like really annoying experience. Now you have to run the script and maybe it fails, some transaction doesn't go through. You have to check like which didn't go through. And then like it creates a lot of like hassle and overhead.
+
+Brian 
+But you know, some changes still like that, right? And at some point for whatever reason, I don't know, maybe it was hard to do it the other way because of the chain or maybe just think of it, or maybe they thought this wouldn't be an issue or that someone else will have to deal with it. But then, yeah, then you just have to, you have to kind of, yeah, deal with these issues. And, you know, that's a, that's a job too, right?
+
+Citizen Web3 
+Understood. Let me ask you one last question before I'm going to jump into a quick blitz with you and then to wrap up. But the question is going to be more down to earth than rather philosophical. Considering all that experience and considering the success of the operator as an operator, as a validator, which I think can be really said that it's there, honestly, well done on that.
+
+What would be, if you could right now, I know it's impossible, of course, to just top of your head or to summarize something like that, because as a founder, you don't see yourself as other people do, even if it's negative or positive, especially if it's positive, actually, it is the hardest thing to see the positive, at least for me. I don't know if it works the same for you. I mean, in myself, right?
+
+What would be though for you, if you had to try at least now on the top of, on the spot here to suggest, you know, there is a lot of people there who are still interested and the validator from what I see that the world is growing. The numbers are really, really, really growing. The more people joining and understanding that this is a cool way to monetize a web three business. You know, as somebody who has done all this journey and we spoke about something similar last time, but we didn't actually manage to get to that. What would be something you would now.
+
+tell them something, one thing to do and one thing not to do.
+
+Brian  
+So if you were to start a staking company, I mean today.
+
+Citizen Web3 
+Yes, yes, absolutely. Sorry for the miscann... vagueness.
+
+Brian  
+Yeah, well, I mean, the one thing to do, I think, like pretty clear, the first thing that definitely comes to mind is, you know, you have to think about, you know, the distribution, right? Like you have to think about who is going to stake with you and why. And because in the end, there's a ton of valid companies, right? Like there's a lot of options and a lot of good ones too.
+
+And so it's going to be really hard, right? To get, uh, to get steak, to get a significant amount of steak, to grow that steak into like a viable business. Um, I mean, I think if you, if you want to do something that's more kind of, you know, minimal, cheap at home organization, you do it yourself with some friends, and then maybe you can get some steak from some foundations or some kind of programs that try to make it more decentralized.
+
+That kind of thing can maybe work, right? But still, I think you need to be very clear about who's going to stake with you and why and how much and is that going to result in a viable business? Because it's definitely difficult and competitive and a lot of alternatives. One thing not to do... Well...
+
+Citizen Web3  
+I have so many, but I want to hear yours. I fucked everything up. So man, it's okay.
+
+Brian  
+Yeah. Well, okay. I'm going to say two things, maybe. Uh, cause there are like two things that just come to mind or like mistakes, uh, we made. I think one thing is just to keep it simple. You know, I think in the beginning, actually, you know, talking about keys and stuff in the beginning, in the first year, we spent a lot of time trying to build this system with like automated failure where we'd have like two.
+
+values running live and if one goes down, the other one automatically takes over. And in the end, it was stupid, right? In the end, like just having like monitoring, being sure, okay, this one goes down, you spin up the other one. Maybe there's like a minute or two of downtime or five minutes, 10 minutes even, but nobody cares. It's a hundred times simpler. And like, so I think you don't like don't over engineer some really complicated thing, which is.
+
+So that's one thing we definitely messed up. The other thing is focus. I think when you do some startup or project, then I think it's important to stay focused, not to try to do too many things at the same time. But focus on the one thing, do it well and go all the way and improve it as much as you can. Yeah. So I think these would be my two pieces of advice.
+
+Citizen Web3 
+gotta be honest with you, the over, not over complicating things is probably something everyone should hear before they start doing this. This is, I think it should be one of the, at least number one, two, three. I'm sure about it. It's really important, man. Let me do a very click Blitz with you a bit different from the last time. So it's going to be shortened. Give me one book or movie or a song that has been with Brian and being positive throughout your life, something one or book or movie or a song.
+
+Brian  
+Yeah.
+
+Citizen Web3  
+positive influence on you throughout your life.
+
+Brian  
+Okay, I'll go with book. And so I read this book like maybe 15 years ago, maybe with less, but it's called Radical Honesty. And it's basically a book about the idea that a lot of like stress and, you know, disconnect and depression and all kinds of things basically come from lying or not expressing things that you're feeling.
+
+And, and, you know, the idea that like, okay, you should try to be like, you know, completely honest at all times and bring up things you feel like maybe you feel upset with someone, you should talk about it, right? Maybe you feel grateful for something you should express it. So I would say that that book has had a big impact on me.
+
+Citizen Web3  
+Love it. Love it. Love it. Give me one technological direction, not blockchain apart from blockchain. It's for example, machine learning, but you already mentioned machine learning. So I'm going to make you think. Give me another technological direction that you're curious in personally, not blockchain, not, not AI because everybody says those two.
+
+Brian 
+Okay, okay, okay. I mean, I feel like this is going to be a really boring answer because probably like half of the people here would like say the same. Okay, no, I'm going to say another one. Okay, maybe another one then. So I've been interested in... So I'm a big fan of this topic called Obsidian.
+
+Citizen Web3  
+Come on.
+
+SIT. SIT.
+
+Brian  
+And Obsidian is basically some kind of, you know, personal knowledge management tool. Basically you think of like a software where you can take all your notes and you can interlink them and connect them and sort of build up knowledge over time. And I'm a big fan of that. I think that's like super promising and powerful. And, uh, so, and so I'm really excited about this kind of software and this kind of software getting like better with time.
+
+Citizen Web3  
+Personal knowledge graphs. I'm also a geek man. So it's okay. I understand I understand that totally It's a big thing for me as well. So okay last one and I promise we finished last one It's gonna be a bit more more obscene and obscure. Sorry and more and more difficult So dead or alive real or imaginary? Made up or developer or whatever. Give me one person who is not a guru because gurus are not something positive in my opinion
+
+Brian  
+Heheheheh
+
+Citizen Web3  
+But a character or a person or a book character or maybe somebody you know, even that has had a positive influence on you, not necessarily all your life, but at least the last years or so.
+
+Brian  
+Ummm... hmmm...
+
+Person, character who had a positive influence. Yeah, yeah, yeah, yeah. Yeah. Good question.
+
+Citizen Web3  
+could be made up, it could be, you know, Donald Duck, but it could be real.
+
+Donald Trump, I mean, what God is gonna do.
+
+Citizen Web3  
+M.
+
+Brian  
+Okay. I mean, this is like, okay, probably violates your, uh, violates your directive as well. But, uh, you know, I've been interested in Buddhism for a long time and, and, you know, one. I wouldn't say that I wouldn't say there's like a single person that's been like most important there, but maybe, maybe the last few years I've been kind of practicing with this Tibetan.
+
+teacher or his name is Mingyur Rinpoche. And he's really great. I'll write it in the chat. Yeah. And I think he's had some impact, some positive impact.
+
+Citizen Web3  
+Actually very cool. Cool answer. Please. Please.
+
+Citizen Web3  
+Can we reference him? It's okay, right? Can because we like to reference. Okay. Awesome.
+
+Brian 
+Yeah, totally, totally. He's very known, he's quite famous, he's written some very successful books and stuff.
+
+Citizen Web3  
+Cool. I cannot pronounce it correctly, so I'm not going to, so I'm sorry. Apologies. But we will definitely reference it in the show notes. So guys, check it out. Brian, I'm more than thankful for your time and for the second time answering my annoying questions. I understand. I get it. So I appreciate and applaud you for keeping up with me for twice now. And hope. Yeah, you too, man. Hopefully.
+
+Brian  
+Yeah.
+
+Brian  
+No, not at all. Thanks so much for having me. It's been a pleasure.
+
+Citizen Web3  
+We'll talk again in some time and see what has been the progress the next time we talk, man. And hopefully see you in Berlin blockchain like now for everybody, please don't hang up just yet. This is just for everybody. Bye and thank you for joining and see you next time on Citizen Web3 guys. Bye bye. Bye, Brian.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 

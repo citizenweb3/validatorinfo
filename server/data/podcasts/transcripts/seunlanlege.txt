@@ -1,0 +1,463 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/seunlanlege
+
+Episode name:
+Governmental Criminals, Humanity and Philosophy with Seun Lanlege
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web3 Podcast. Today I have Sean Lanlege with me today, AKA Web3 philosopher. Sean, man, hi, welcome to the show.
+
+Seun Lanlege 
+Yeah, thank you for having me, Serge. It's great to be here.
+
+Citizen Web3 
+I actually follow your account personally, the WebThree philosopher, for a little bit. So it's a bit exciting for me to talk to you. I hope I don't get my personal over-excitement over my professional questions. So I'm sorry about that. But I like to to to... It's cool to see, know, like somebody who's been in crypto for a while, it's always cool to talk to the people you followed. But before I get it all hyped up, I'm going to start with the boring thing and ask you to introduce yourself or myself or the listener.
+
+and possibly if you can include in your story, how did you get to Web3? And yeah, anything else you're working on right now as well, if it's possible.
+
+Seun Lanlege 
+Yeah, for sure. So my name is Shun and I'm the current co-founder of Polytube Labs. We're the developers of HyperBridge. I got into crypto early 2017. This was around the time Bitcoin had just hit $1,000 per Bitcoin. you know, my friends were talking about it. I thought it was some sort of MLM scheme. But after it hit $1,000, I thought, OK, I should probably look into this and try to understand what's going on. Right. And I did. And
+
+Basically, I fell down this rabbit hole of crypto-anarchism and I guess anarcho-communism and a lot of the cypherpunk ideologies. Because I think crypto fundamentally is a philosophy, right? It's a movement first, and then there's a technology that enables these ideas. And so I have a lot of interest in philosophy. and
+
+you know, discovering this new wild side of life and sort of discovering actually there's a way to make this a reality through blockchains and through like permissionless P2P systems. I just became a convert, right? I think of myself as a kind of jihadist for crypto, if that's correct.
+
+Citizen Web3 
+Allah Akbar.
+
+Seun Lanlege
+As-salamu alaykum brother.
+
+Citizen Web3 
+Alaykum wassalam brother
+
+Um I like that man. It's interesting. You say a few things there that I want to dig a little bit. I don't know if I interrupted you mid intro there because of the jokes we're making, but I don't know if you carry on the intro or if I can dig in.
+
+Seun Lanlege 
+no, I think that's good intro. Let's not take too much on that.
+
+Citizen Web3 
+Man, let me, no, I'm going to dig in a little bit. I'm sorry. You will see. This is what I meant at the beginning, that you are going to be the star of the show. So of course, if you feel uncomfortable, whatever I'm digging in, just say to me and we will go a different topic. but you mentioned a few things. First of all, philosophy. I'm also, I've studied philosophy when I was in college and you know, it's a big topic for me. I'm always, I'm also like a founder and I'm also kind of a developer, right? I mean, I say kind of because...
+
+I wouldn't put my code in production. But I always get too epic with developers. this is when they say that, so how is it for you? Because I know you're also a developer. And you're not just any developer. You have a lot to do with development from what I follow you. So how do you combine philosophy, which is mostly about epic things and the grand scheme of things, with developers which have to be very specific and very down to earth things?
+
+Seun Lanlege 
+That's a very interesting question. I never really thought about that at all. I mean, for me, philosophy is all about asking questions, right? So I always ask questions, you know, since I was a kid, I think everyone's asked these questions. Why is there something instead of nothing? You know, all these sort of very philosophical questions. I'll take the only difference is, you know, I actually spent a lot of time reading philosophy books and.
+
+trying to understand if there's a way to think about these questions and if there's even answers at all for these kinds of questions. And how do I combine this with being a developer? Well, I think of develop software as a kind of science. I kind of think that science actually is downstream from philosophy. It's like because philosophy, when you ask questions,
+
+Now to go about answering those questions, you need to do a little bit of science, right? So that's, guess, how you can combine both of them. And I also think any kind of respectable kind of science does need some, you know, underlying philosophical ideology that drives it forward so that it's more or less ethical and isn't, you know, just I'm going through something that's going to inevitably bring the end of the world. I'm looking at social media as a good example of this. but
+
+That's just how I think about it. Yeah, technology and science is downstream from philosophy and I've always been interested in philosophy. So it's an actual continuation, becoming a computer scientist and a software engineer.
+
+Citizen Web3 
+I can't say I love short stigmatic questions, but I sometimes do them to try to understand the person and I'm trying to understand which side of how you think right now. in your opinion, is like I said, I don't like stigmatic questions, but I'm going to do it. Was maths invented or discovered? Because this is about philosophy and development in my opinion. people like it kind of shows to me what more about the person of whether they think it's maths or not.
+
+discovered or invented. How is it for you?
+
+Seun Lanlege 
+So this is a very personal answer I'm going to give. I'm not going to make it an authoritative answer. This is definitely the case. But I think math was discovered. think that the language of math, as we describe it, is essentially a description of the universe. We're trying to describe the universe in some way. That language is definitely discovered. It's definitely already in the universe, already embedded in the
+
+fundamental structure of the universe and we're kind of just mapping it out in a sense, right? Like, I think a good example of this is the area of a square, right? Like, I remember I was, you know, back in, you know, primary school and we were taught like, okay, you know, a line sure has a length, but you can also calculate the area of a square. And they just threw the formula on the board and I...
+
+really didn't understand what just happened here. Like, how did we go from this to this? And then I remember reading my textbook back in India, and this is where I fell in love with math. And the book actually says, look, you have to imagine, OK, you have lines that are stacked on top of each other. And then if you take this different dimension, you take the length in this different dimension, you can see how you need to do this multiplication. And basically, they derived the formula visually using geometry. And so for me, I just realized, holy shit, actually,
+
+Math is a description of reality, right? We're not inventing anything here. We're just trying to basically understand what we have. So that's my personal response to this question. In fact, I'll go one step deeper and say, actually, math is a consequence of geometry, right? The fact that we have space and we have shapes and we have solids. that's actually where math comes from. If we maybe lived in this zero dimensional universe,
+
+we wouldn't have math because there'll be nothing to quantify, right? There'll be no quantities to quantify, if that makes sense. And so math is this like alchemy, I guess, of quantities.
+
+Citizen Web3 
+To me, it's always astonishing as how maths, which is considered stigmatically, definitely not a humanitarian subject, right? It's considered to be like an applied science or whatever. I don't know if it's applied science is the correct word here, but it's considered to be a subject that is not humanitarian, that is told by people and learned by people who want to study more scientific things rather than history, geography and so on. But in reality, it's crazy to see how maths
+
+is a perfect form of communication and language. you know And it's like, it's just crazy how it all comes together, regardless of whether it was discovered or invented, and that we are all agreeing with it. mean, there is nothing, doesn't matter what race, language, or religion you are, you will always understand value and numbers. It doesn't matter which market I am. If somebody's trying to explain to me how much, what costs, we will find a way to understand each other without speaking anything of the same and believing in anything of the same. It's crazy. So yeah, I'm absolutely fascinated as well by that. Mm
+
+I have a question. 
+
+Seun Lanlege 
+Yeah, I agree. It's like a universal language.
+
+Citizen Web3 
+Definitely, definitely. Sorry, go on if you want to comment that please feel free. was one of the... 
+
+Seun Lanlege 
+No, no, I'm gonna stop there.
+
+Citizen Web3 
+Man, I want to go back to a little bit about your history and I want to ask you about the mad scientist, of course, but before the med scientist, because the description you have in your Twitter. I want to ask you about that, but before that, I know that you have a history also with Polkadot and then with Ethereum, right?
+
+Seun Lanlege 
+Yes, yes I do.
+
+Citizen Web3
+Do you want to talk a little bit about how you got involved with those and what happened? And if you do, of course.
+
+Seun Lanlege 
+Yeah, sure, sure. So, you know, after I fell down the rabbit hole and, you know, I looked into Bitcoin and of course everyone who discovers Bitcoin inevitably discovers Ethereum, they're kind of like, you know, gold and silver. And I remember, okay, learning about Ethereum and learning about this idea that like you can make, you know, programmable, you can make apps that run on a generalized, you know, blockchain that you can deploy to. I thought this was a really, really crazy idea because, you know, some of the ideas that I was already thinking about in terms of things like
+
+permissionless voting because you know I live in Nigeria and we have the worst election fraud. It's like every four years there's some new scheme to install like you know people who haven't picked by the cabal and whatever. I'm not going to go all deep state on you but you get my point. There's a lot of dissatisfaction with election results and I thought you know blockchains could definitely help solve this and even more so blockchains can help governments be more efficient in terms of allocation and spending.
+
+because things would be transparent and open to everyone. And then I basically started doing a lot of Ethereum open source because I wanted to contribute to this vision. was, like I said, I'm now a jihadist. I'm contributing to Rust libraries for Ethereum and stuff like that. And I think I maybe have contributed to some repos by Parity because Parity was doing all the Rust Ethereum stuff back in the day. I think now we have Paradigm and newer cats on the block. But like back then, everything was Rust and Ethereum.
+
+was Parity. So I ended up discovering that they were hiring engineers for Rust and Ethereum blockchain stuff. So I applied. yeah, I think a few months after I got into Parity, I did an interview with Gav. I did an interview with a few ex Ethereum core devs at the time. we had a really great conversation and we thought it was a good fit. And I started working on Parity in 2018.
+
+I mostly worked on their Ethereum client. So they have this Parity Ethereum client, which was, I don't want to glaze, but it was the best Ethereum client back in the day. It had basically 98 % like market domination and everything. But unfortunately, you know, the falling out between Parity and I guess the Ethereum community happened and then Parity pivoted to solely building Polka. I feel like we could have kept supporting Ethereum. We did have the resources to do this, but I...
+
+Seun Lanlege 
+But I also sense that there was some sort of unamicable split that happened. And so that's why that needed to occur. But we started working on Polkadot. And I saw Polkadot basically as this final solution to the blockchain scalability problem, especially because instead of having a single blockchain, you can have multiple blockchains. And then you could do everything you wanted to do on multiple blockchains instead of having to be constrained to a single environment.
+
+That's basically been my development journey so far into into Web3. Hopefully that touches all the parts you're interested in.
+
+Citizen Web3 
+I remember actually very well that this split. mean, I remember the parity multi-sig hack and I remember it was in the middle of a... 
+
+Seun Lanlege 
+Exactly. 
+
+Citizen Web3
+It was a middle of a fucking conference, dude. I remember we just had like ICOs, like some past and I remember we had like a group of projects together and it was such a fucking story. Fuck, you know, it was crazy, man. Like everybody was believing that everything was gone because it was in the middle of an event as well, right? It was happening, a polkadot event. And it was like people with... It was mental.
+
+Citizen Web3 
+Really sorry, you just brought a lot of memories. but and how did the jump to the mad scientist and polytop labs happen? How did that from believing that you found the solution to scaling and then suddenly boom, and I'm a mad scientist again. And I love it.
+
+Seun Lanlege 
+Yeah, yeah, yeah. So I think what happened was we released Polkadot and then there was a huge, huge mind share in crypto Twitter and everything, but slowly we started to lose mind share and people started to go back to Ethereum and the roll up centric roadmap and everything. at that point I felt like, because I'm talking to a lot of VCs, I'm talking to a lot of builders and a lot of people in the space and I felt like Polkadot...
+
+started to become this non consensus thing, right? Like it used to be consensus that, yeah, Polkadot was great. But now it seemed like people had completely forgotten about it. like, you know, no one really expected anything to come out of Polkadot. You know, again, you know, we dumped the tokens, it's over, we're moving on. And so as a result, I just felt like, you know, I was doing something that wasn't like consensus. And that's basically the hallmark of a mad scientist. That's the hallmark of a person.
+
+who is described as a mad scientist, they're doing something that everyone's like laughing at and saying, I asked them, we're going to work. Like, what are you doing? But these are the people who are often pushing the industry forward. These are the people who often end up making major contributions to the space. that's just my, mad scientist is just my commentary on the fact that, you know, for instance, like hyperbridge, what we've built with hyperbridges, it's actually the end game for interoperability. But like, I guess no one really cares because they're not looking at polkadot. They're not looking.
+
+at the things building on Polkadot. And so maybe when they eventually do, they will realize this.
+
+Citizen Web3 
+So I cannot not help to be a little bit devil's advocate here because, well, we have to, right? I mean, it's content, right? And people listen to this. I'm joking, of course. But, you know, I do want to hear your opinion for sure. Like on a serious joke aside, serious note, as a philosopher, though, as somebody who, I guess, searches for the infinitely searches.
+
+And I'm not talking about you personally, you I'm trying to describe generalized philosophy here, philosophy first. Infinite search for the truth, infinite search for what can be maybe not better, right? But in a sense, philosophy does kind of ask us, you know, like, how can I believe that I'm real? Why do I want to believe I'm real? Because I want to be sure that I'm here so I can do other things deterministically, right? Or whatever. I mean, there is a lot of schools, but how does it combine with your belief?
+
+with your assuredness as a developer that you have found the solution to scalability. to me, personally, when I look at scalability or computation, decentralization, there are all kind of spectrums. mean, yeah, there is a developer side of me that says, they're not spectrums. is zero and one. There is the yes and the no, red and white, whatever. But there are kind of spectrums because every time it's a cut and mouse game, whenever something happens,
+
+On the other side, something that balance, I'm kind showing it with my hands here as if the listeners can see it, but I'm just kind of trying to show balance here where things can shift from right to left. And yeah, I think you get what I'm kind of trying to dig at. Let me know if it makes sense.
+
+Seun Lanlege 
+No, I think I understand you. You're saying that like, it's potentially this, especially the case that, you know, the truth of research for might be in this gray area. It's never going to be this black and white situations. It might sometimes never be mathematical, right? It might be, you know, might fall into humanities, which is always gray areas. I look, I think, you know, first off, we have to understand that we're discussing technical, we're discussing technical things here. And so,
+
+As a result, technical things tend to fall on the mathematical categories. Defending the decentralization of Polkadot is not something I'm going to do. I think the numbers are very, very clear. The Nakamoto coefficient is the highest. That's the number of nodes that's required to take over the network. Polkadot's L2s are not centralized. They have numerous L2s which have fairly decent...
+
+I want to say sequencing sets and it's fully permissionless. People can join, they can leave. I would say that we need to actually look at what else is on the market. Like what are the alternatives? Right? And Ethereum L2 unfortunately does not have any path to decentralization. And that's on both sides of the fork, right? Whether you're on the optimistic side or whether you're on the ZK side. The ZK side is going to require like a lot of computation.
+
+to generate proofs, that's going to be necessarily centralized, to reduce proof latency and reduce wasted work. If you want to have a decentralized set of nodes, racing to generate proofs is very inefficient and you still have to pay all of them. Whereas it just makes more sense to have one single node and super mega node that does all the work. and beyond Ethereum, there's really no other notable L2 or blockchain with an L2 ecosystem, right?
+
+These are the only two options. And so presented with these options, I think we can see that the Polkota tech stack is significantly miles ahead than what the Ethereum ecosystem has to offer.
+
+Citizen Web3 
+Why do you say that there's only two? Because from my perspective, again, I'm kind of always been a blockchain maximalist or decentralization even maximalist, I would say. I don't even care about so much blockchains and ecosystems rather than, I'm curious because to me, when I opened the market, I always see even back as 2018, I think I had an article that described, I didn't really get it right.
+
+I mean, right now, when we go on CoinGecko, we have all these categories like Cosmos ecosystem, Polkadot ecosystem, Nier ecosystem, Bitcoin ecosystem, whatever. It doesn't matter, right? Ripple ecosystem, whatever, regardless of the centralization or centralization of those ecosystems. And I kind of try to describe that we will have different CoinGecko types for each one, which is kind of like when you have with main scan, sub scan, either scan and so on.
+
+To me, when I go there, I do see other things. I'm curious why you only point out that there is only two ecosystems which are worth evaluating.
+
+Seun Lanlege 
+Um, and I look, I don't want to be elitist here and I can say this is, this might come off as an elitist answer, but Ethereum started the idea, the fundamental idea of a programmable blockchain and, uh, its founders, you know, Vitalik, Gav, uh, Hoskinson. Um, they're the ones who really were at the forefronts of, uh, know, decentralization and crypto anarchy and blockchains.
+
+And it's just the unfortunate case that not a lot of other ecosystems took a lot of the learnings that they had on the Ethereum project. I give you an example here. Solana, as an example, they didn't take the learnings of Ethereum. They, in fact, doubled down on why Ethereum sucks, which is a single state machine. And look, it's taking them where they are right now. And so, you know like I said, that's just an example.
+
+So I'm looking at the people who have made all the mistakes and are now trying to fix those mistakes. Solana is, in my opinion, still where Ethereum is at. Like they don't even have L2s and the L1 is suffering for this, right? They don't have any parallelization. And that's the biggest, I think that's the biggest L1 by market cap right now, second to Ethereum. you know, I don't really take the market very seriously because I think the market is just doing its own thing, maximizing profit, which is,
+
+what the market always does is capitalism. What are you going to do about it? But in the technology sphere, there's a few sort of people who have been at this problem since the very beginning and are still on this problem. know, GAV is still pushing a new idea for blockchains called Jam. Vitalik is still pushing, OK, we need to ZK all blockchains. It might not be a solution that is scalable, but at least they're very, very future forward looking.
+
+I just don't see that in any other ecosystem at all. I don't see that research culture in any other ecosystem and pushing really the limits of the scalability of blockchains. Everyone just kind of feels like, no, we've done it. It's over. We're going to close the chapter. I disagree with that sort of, I completely disagree with that sort of stance.
+
+Citizen Web3 
+It's an interesting opinion to hear because like I said, from my perspective, and we're not going to, of course, go into an argument because what's important for me is your opinion here. And I will ask you as to why, how you base it, of course, because that's my goal as an interviewer to understand the guests and why they feel that opinion. But it is interesting to see that because as once again, as somebody who is involved in many ecosystems, I do see that
+
+You know, there are pushes, but what I want to ask you is why do you think that happens? Why do you think that? How did we end up here? How did we, from a goal of creating the internet of blockchains, and I'm not talking about slogans of any ecosystems if they do align, because I do know at least one that aligns and I'm sorry, I'm not trying to push an advert here. From that to what it is today in your opinion, in your picture.
+
+where you only say, as somebody who, in my opinion, is a very good developer because and you you mentioned DeepState before, so feel free to go as DeepState as you want. Believe me, this is this is the right place, by the way. This is I have a lot of guests just just for that, just about DeepState. And I'm personally I'm like that. So you're in the right place. So but how did we go from there and from trying to bottle that to actually creating a much worse situation at DeepState? Basically, what you are describing, what you're saying is correct.
+
+Seun Lanlege 
+Lovely.
+
+Citizen Web3 
+That means that we are worse than the deep state because the deep state at least has more than two parties. We have two by your words, Ethereum and Polkadot. Sorry, I'm shutting up.
+
+Seun Lanlege 
+Yeah.
+
+Seun Lanlege
+Yeah, yeah, I mean I really
+
+Seun Lanlege
+I mean, I don't necessarily think that we have just two, but I say that these two are leading the path. that's maybe that's the correct way to phrase things. think we do have definitely many ecosystems that are, you know, they're worth deploying apps to and people use them anyways, right? People use Tron for fuck's sake, people use BNB. They don't really care. But I think, I think if we're talking about, you know,
+
+who are the leaders in the space, think it's Polkodot and Ethereum. think there's a lot of research and a lot of development that's gone into these ecosystems.
+
+Citizen Web3 
+But you know man, you made a fucking interesting point there. You bring up Tron. And I am all with you. Like believe me when, but it has a fucking use case. Like believe it or not, the fucking reality of of of, like I take myself, right? A person who doesn't want to deal with Tron or fucking Ripple or anything like that. For me, I wouldn't touch it if you told me tomorrow 21,000, I wouldn't fucking touch it still. Those are my fucking personal values. But I have ended up in situations before previously in my life,
+
+where I had to touch it because of exchange of goods. And it's interesting that, you know, people said to me, no, I want Tron. I don't want anything fucking else. And it was ironic. I actually had to ask a person to send me. I didn't have Tron. I had used the T on Tron to pay him, but I never used Tron. So I never had the gas, the Tron. didn't even, I wasn't even aware that you needed Tron to use for gas. So I had to ask the guy who I was paying to you to send me some Tron.
+
+So I could make a transaction to him and use the T on Tron. It was ridiculous, but it has a use case. why does it have a use case then? Why does such shit things have a use case? Why did we end up, I'm not asking what are the correct ecosystems, but why in your opinion did we end up in this situation rather than being in a situation where we are all developing for decentralization, let's say.
+
+Seun Lanlege 
+Yeah, I think I think the problem fundamentally stems from the fact that crypto is this fully permissionless and open environment that unfortunately also allows for grifters and all kinds of unsavory characters to co-opt its messaging and co-opt its narratives for their own personal gain. It's unfortunate, these are the pros and cons of full permissionlessness. I think that blockchains will...
+
+end up becoming very, very tied to specific geographies and specific communities and specific nations, in fact, Primarily because they will need to be developed, they will need to be maintained, they will need to be updated. And it's going to be according to whatever the, I want to say, rules or laws or agreements of any specific place where this blockchain is being maintained. Giving you an example here.
+
+I think we recently saw the Department of Defense sanction the Linux kernel and basically asked them to kick off all Russian developers. Unfortunately, this can also happen to blockchains. The Department of Defense could tell the lead developer about any blockchain, hey, look, you either include this piece of code or we shut you guys down and you guys are put in jail forever.
+
+Right. So blockchains inevitably will inherit the trust and the legal frameworks of whatever countries the lead developer is based in or based out of. And I think this also applies to Ethereum. You know, it's not impossible because the Ethereum foundation still controls the roadmap and the things that should go into the Ethereum code base. don't necessarily have any kind of on-chain governance.
+
+where at the very least, even if the lead developers were co-opted, the network could still resist any malicious code changes, right? But this is not the case for Ethereum. So Ethereum is vulnerable to this. The only network I would say that's probably not vulnerable to this is Polkadot and of course, substrate-based chains that have on-chain code. But blockchains are going to see adoption and are going to see regulatory framework that is inherited, that inherits whatever countries they're in.
+
+Seun Lanlege 
+And as a result, you know basically we get back to the same problem we had, which was that all these different trust networks couldn't easily talk to each other. That was the original problem. There was no commercialized money. Um And this is why I'm working on bridges. This is why I bridges are the most important things to work on, because bridges are a kind of meta protocol that says, OK, as long as all these blockchains are behaving properly, then you can have a meta blockchain that allows them all to communicate with each other.
+
+Hopefully this answers your question.
+
+Citizen Web3 
+I think people forget that bridges are actually considered the most architecturally complex things humans have ever built. Not buildings, not ships, not planes. is true. Architecturally and engineeringly, until now, bridges are, I mean, a real bridge. not talking about, and I think that if we take it to blockchain bridges, we are talking the same, because we are trying to connect two entities and what can go wrong if not in that connection. So a question.
+
+Seun Lanlege 
+Yep.
+
+Citizen Web3
+to you. I mean, you've kind of been between the lines answering it. And it's not been a great, fantastic picture for the industry. But I'm still going to try and ask it like, do you think that, you know, cross chain interoperability or blockchain interoperability, whatever the right term is here, has actually evolved over the years? And you know, the stupid kind of typical interview question, where do you see it heading?
+
+in the next, you know, I don't know, let's say five, 10. I know it's a bit of a silly question after the discussion we just had, but yeah, let's try. Let's see if there is some light.
+
+Seun Lanlege 
+No, no, for sure. I happen to give my corporate answer. Look, I think that blockchains and the interoperability space have come a long way. It's more sophisticated than what it used to be anyways. I think there's more sophisticated methods at play. But ultimately, you know...
+
+The answer, because a lot of people ask me this question, right? Like why hyper bridge? Why trustless bridges? Why not, you know, layer zero with their two of two multi-sig? Like why is that not enough? And the answer I give is that, look, trusted systems can only scale within their networks of trust. I'll give you an example, for instance, Stripe, you know, people in Nigeria can't use Stripe, people in India can't use Stripe because it doesn't scale.
+
+beyond the borders of the American economy and its allies. you know Using, for instance, I guess the WeChat thing as an example, not a lot of people use WeChat outside of China. WeChat is only able to scale within its trusted network. Ethereum, Bitcoin has been able to scale to the entire world. I remember I was in Ghana, I was like two, three years ago.
+
+and you could walk into a shop and give someone Bitcoin and they would just give you the local currency. And that's how much trust the systems can scale. They are no longer bound by the trusted networks. They're not bound by trust. They're bound by, you know, code math. In fact, if you could call it that, you know, and everyone anywhere in the world can use these systems. They don't necessarily need to trust you. don't.
+
+need to know who you are, they don't care who's backing you, they just know it's safe and secure, right So I think the way the interoperative space is going to evolve is that it's going to evolve beyond trust networks like Axelor, Warhol and the like, which have guardians and they have oracles. These systems can only scale within the shared VCs of layer 0 and Axelor, to be very fair with you. They're not going to scale to
+
+Seun Lanlege 
+Eastern Europe, where people are trying to build solutions for themselves, they're not going to scale to Asia, they're not going to scale to the Middle East. And so the only thing that can scale to all these places, to Africa, to South America, is going to be something that doesn't require trusting anyone. And so I think that's the future of interoperability. I think that a trustless platform will emerge that will scale to all of these different places.
+
+Citizen Web3 
+Basically, you're saying that the value of trustless systems will grow in comparison to trusted systems,
+
+Seun Lanlege 
+This is already the case. Bitcoin and Ethereum combined are almost $2 trillion and everything else is like pennies.
+
+Citizen Web3 
+I mean, amen, amen, amen. It's just, you know, hard to, I gotta say like, talk to, I mean, you will bring in examples of scaling, but you were also at the same time trying to bring examples of, you know, how things scale in different geographical locations. And I live in, I'm lucky enough to live in Western Europe and, you know, to live where I choose to live, which is probably what the reality for 15 to 20 % of the world. But, you know, when you talk to young,
+
+libertarians in quotations, young liberals in quotations, young communists in quotations in Western European countries. It's a very funny conversation. I think you understand what I'm getting at, but it's a very funny conversation. The moment they try to bring example and you're like, mean in the whole world, right? And they're like, yeah, in like Western Europe. And you're like, but we need to scale it for the whole world, right? Like there is a bigger population. Europe only accounts for seven and a half percent of that population.
+
+Seun Lanlege 
+Hahaha
+
+Citizen Web3
+Yeah, the whole world. you're like, it's a funny thing. People are always trying to think. this is the question. How do we get people who are not today into trustless systems to start believing that, you know, trustless systems need to scale globally and not just be bound to their little box of, okay, I want to make the world better. But in reality, what I want to do is just make my habitat better. I don't want to make the world better. How do we get people to make the world?
+
+Seun Lanlege 
+Yeah.
+
+Citizen Web3 
+to want to make the world better.
+
+Seun Lanlege 
+I don't know, that's a very hard alignment problem. I'm not too sure how that happens. But like, I don't know. For me anyways, my motivation for this is that like, I'm really building something from my habitat, unfortunately. I'm still very much motivated by the applications of blockchain technology in Africa in making the government more efficient, making the government more accountable.
+
+Citizen Web3 
+Hahaha!
+
+Seun Lanlege
+It's just a side effect that that actually also scales to the rest of the world, right? Like we're doing it in such a way that it can't scale to the rest of the world. And yeah, that's just, it is what it is, right? But then I think a lot of people who are also doing the same thing, but they're just like, okay, since I'm not even trying to scale to the rest of the world, I can just reduce the work I'm doing as a result, right? And just do something that applies specifically in this geography. But for me, as a man of science and philosophy,
+
+I like doing things the right way, which is often the hard way. that's just, yeah, that's just the reality of what we're doing.
+
+Citizen Web3 
+Well, I have two questions that are completely separate from each other, but they're both related to what you said. I don't know which one to ask. I'm going to go with what you were talking about just now about the government and legislation. you have the honest belief that what you are, let's say you build what you set to build, let's say you achieve, don't know, 70, 80 % of what you tried and the product is great and it works.
+
+You know, it's being used by the Nigerian government or I don't know, any other government. Do you think they will really honestly and, know, not, I don't know. I mean, I can give you many scenarios here, but do you think we can trust them even with trustless systems? Can we trust them not to? I mean, I just don't think that we can ever trust people who want to rule other people. I think they're sick in the head. So I think if we give them a trustless system, they will find a way of how to fuck it up.
+
+So my question is,
+
+Seun Lanlege 
+I thought about this, no, no, I thought about this for the longest time and I'm happy to share some of my ideas for sure. Look, the problem I think comes down to voting, right? That's the bottleneck. We need a way for voting to actually count, from voting to actually matter, for the voice of the people to actually be recorded and measured and heard.
+
+And to do this, we need some sort of identity system so that we give every single human being and no more the voice and abilities to vote. But of course, how do you do this authentication of human beings, which is also the identity problem? A lot of people have different ideas. Gab is saying we should tattoo people. The capitalists are saying you should give me your irises and your iris data. I think that the best way to go about this is
+
+actually through taxation. This thing that everyone hates, but could serve as a proof of humanity because who's going to pay taxes? Computers are not going to pay taxes. And if the people who want to rule want to then insert this fake and civil attack system with fake voters, then they have to pay taxes for these voters.
+
+significantly enough, right, that they actually count and, maybe we have some minimum taxation amount or whatever, that becomes very expensive. It becomes a lot like proof of stake, right? So that becomes very expensive for them to do. And so they really now have no choice but to actually make and do the things that the taxpayers want. And taxpayers, you know, they are basically participating in the economy. They know what's good for them. They are, we can say, intelligent agents, right?
+
+are, I mean, if you're able to pay tax, I would assume you understand policies that should grow the economy and you would be more in favor of continuing to have the money to pay taxes and not become homeless or become unemployed in any way. I think that's a good enough solution to the point where if we allow these verified taxable, tax base to vote and decide on not just who
+
+Seun Lanlege 
+should be in office or but also what kind of policies and what kind of legislation should be passed then we might arrive at a world where actually the government becomes smaller as a result and we are actually the ones running the day-to-day of any nation or any country. This is of course all fantasy and techno utopianism but you know that's what motivates me anyways.
+
+Citizen Web3 
+I would go lot further. would say they don't need to government doesn't need to exist. think people there has not been one thing. There has not been one single human being in the history of our planet that at the end of the last death bed on death day stood up and said, fuck, I love my government and died. There is never happened. Never not fucking one time. Never not one fucking time. And maybe at gunpoint surely fucking did for sure. But even then was the point, you know, you know, I actually do agree in a way.
+
+Seun Lanlege 
+for sure.
+
+Seun Lanlege 
+my god.
+
+Citizen Web3 
+that I think incentives, also a big believer that the reason we as humans today, as a society are not interested even in, I forget blockchains, even in day to day participations in our systems. I can see the same in Eastern Europe and Western Europe, in Africa, in Asia. I've traveled a lot and I've seen the same everywhere. I've never seen a difference. I think it's because what you say is lack of incentives. If I was if I knew
+
+that I can be incentivized for making that vote. If I knew that I will be incentivized for participating in politics or let's say quotations again, politics, whatever. think that I as an average person and I personally, because I consider myself to be an average person, would be more interested in those things because of the incentives that I would potentially get. But today it's not like that. Today it's kind of a zero sum game for me because I have to trust somebody to take
+
+what I'm giving them and use it in my own benefits better known, but then I know how to use it. It doesn't make sense. Yeah. yeah, it's, it's, it's a,
+
+Seun Lanlege 
+So I should definitely point out that I'm also for sure in favor of the eradication of the state. I think that the state is a honey pot for, like you said, the most terrible people in the world, right? Because why be a criminal when you can actually be the biggest criminal, which is the government.
+
+Citizen Web3
+This is biggest criminal for sure.
+
+Seun Lanlege 
+Yeah, so definitely I I I think blockchains can put us on a path to a stateless society. And what that looks like, you I really don't know, but I think that we definitely need to get there. Otherwise, the state is going to destroy humanity.
+
+Citizen Web3 
+I hope that what we are doing, I hope that blockchain is the web three world. This is why I always try to make the guests the center of the show because in my opinion, and it was, I'm going to give you an example. I was speaking to Derek Wills some months ago. He's an author of a couple of libertarian, uncap books, whatever you want to put a slap tag on it.
+
+And you know his question because he doesn't have much to do with blockchains and he asked me but but why am I a guest of your show? I said well because if the founders that come onto the show for five years don't hear the values you're talking about why the fuck are we building anything else than what is already existing? There is no point of us doing something else if we're not trying to make it better. This is why I'm kind of trying to always you know play a little bit of devil's advocate and try to get okay but can we get better? So and and that on that note you know mean feel free to comment it but on that note I wanted to ask you
+
+Actually, about developers community and I know you have experience in building developers communities and I know you're a Rust guy and Rust is kind of being on the rise and it probably is the C++ swapper that we all kind of expected. Some people will hate me for saying that, but it's kind of the reality. But anyways, long story short, how do you live with... mean, again, feel free to comment the deep state if you want, but...
+
+Also, how do you today approach with Polytop Labs to building a developer community and what are the challenges that you come across in trying to do so?
+
+Seun Lanlege 
+Yeah, no, we definitely tried a lot of initiatives to do Rust bootcamps. I was in our early days because we needed to hire people and a lot of people didn't actually run the Rust in the beginning. So we had to do bootcamps for Rust, bootcamps for blockchains, basically online sessions where we discussed these things and also physical sessions as well. I think the problem is an incentive problem. A lot of people, unfortunately, I have to say today, have no...
+
+North Star. They have no like, okay, here's what I want to do my life. And they're just kind of in the kind of just getting blown around by capitalism, right? They're just kind of in the winds of capitalism, they have to go wherever it points. That's why we have this like, you know, that's why we have bubbles, right? Right? Because of like, you AI and real estate people will just really just do whatever they think make would make them the most money. And actually, very few people actually have a compass in life. And then they stick with that compass, and they see it to the end, right? So
+
+That's kind of what we noticed is that, know, blockchain does require this like dedication and requires this like, you know, tenacity and a lot of research because it's a fringe, you know, it's not taught in universities. We're literally figuring this stuff out on our own, right? And I don't ever think it's going to be taught in universities for any reason. It's fundamentally anti-state technology. They definitely don't want that to explode more. So we really now have to do the work ourselves, right? There's no one that's going to come teach you what this is. You have to go out there and learn it by yourself.
+
+Honestly, 90 % of the population isn't built for this. They just want to go with the wind and just like, okay, everyone's going here. I'm not going to go there as well. I'm going to do AI. I'm going to learn how to use these chat-shift APIs and whatever. very, very few people actually would be down to do long-term, I would say, world-changing stuff. So that's definitely a challenge, finding these kinds of people. But I'm also very hopeful that we found a few of them.
+
+And essentially the challenge would just be maintaining them and keeping them aligned with the broader vision of the broader goal.
+
+Citizen Web3 
+You mentioned Rust boot camps and stuff like that, but apart from that, how do you encourage innovations for the guys that you find? How do you encourage them to step outside of their box and try to be be not just a developer, but maybe an inventor as well or an engineer? Or is it encouraged at all?
+
+Seun Lanlege 
+Definitely. I mean, I also try to lead by example as well. I mean, I'm also pushing code every day and I'm doing a lot of problem solving as well. I think for me, there needs to be rewards for, I mean, at the very least short-term rewards for you know doing really cool stuff. And we of course have our ways of rewarding people who are pushing the boundaries as well. At the very least, you
+
+know, complementary to what would be the great reward when we all finally get the stuff, right? So that's a really useful way to continue to incentivize people. I also think we should do more events and, you know, be more social and get people to see that, we're actually at the forefronts of technology. Like lot of people aren't actually doing anything. A of people are just kind of like waiting for a chat GPT-5 or something. And that's like their whole thing.
+
+Whereas we actually are in control of our destinies or masses of our destinies, if you will. And we just have more agency over this world. Yeah, I mean, the market does whatever the market does, but I try to ensure people are not too focused on it because it's a distraction ultimately. But of course, you know, the market also kind of dictates our roadmap and kind of our internal operations as well. So finding that balance there is also very tricky. But yeah, that's
+
+Yeah, that's basically how we try to manage this.
+
+Citizen Web3 
+It makes perfect sense what you're talking about, think, trying to create reality, you know I guess, and trying to help people to see between the distractions and the focus. But I have one more question before I'm going to jump into the blitz to kind of wrap it up. But I actually had quite several questions about HyperBridge, but we got a little bit about the more interesting conversation. Sorry, not because of HyperBridge, but to me, DeepState is always more interesting than anything else. So I got to carry the weight with it. Sorry.
+
+Seun Lanlege 
+For sure, for sure.
+
+Citizen Web3
+But I do want to ask one question about hyper bridge About security we have a lot of I mean right now what is it's almost the end of March for the listeners We're recording this at the end of March 2025 but but the question is is this you know, we have a lot of Hacks and bridges they happen all the time
+
+Seun Lanlege 
+Yeah.
+
+Citizen Web3 
+regardless of how good the bridge advertises itself to be. How does HyperBridge you now try to address these security concerns to ensure you know that the cross-chain interactions will be much more secure using HyperBridge than before?
+
+Seun Lanlege 
+Definitely. So I think I want to go back to your previous point about like, no, decentralization is a spectrum and everything. You see, I actually, I fundamentally disagree. And I disagree also in when the libertarians in quotes say that, no, bridge security is definitely a spectrum and it's not like, it's not a fixed thing. And I completely disagree actually. have to apply common sense to this. Bridge security is not a spectrum. There are really only two kinds of bridges at the risk of sounding maga.
+
+There is bridges that use off-chain authentication mechanisms and there's bridges that use on-chain authentication mechanisms. What are we authenticating? Well, to give you a better picture, when you open up Facebook and you maybe try to access your profile or you open up your Twitter or you try to do things like tweet, you have to be authenticated with the server. The server has to know that this tweet or whatever you're doing is coming from you.
+
+That's why you're able to perform these sort of privileged actions. The same thing happens when blockchains need to communicate with each other. These blockchains need to authenticate each other because they will be performing privileged actions, whether that's minting tokens, whether that's calling contracts, right? These things need to be authenticated. Now, this is what I'm talking about. How are these cross-chain messages being authenticated? So I said there's off-chain and on-chain. So let's look at the off-chain method. In the off-chain method, some...
+
+off-chain actor or actors will tell blockchain A that, oh no, these are messages that are definitely coming from blockchain B. You should execute them. However they do this, whether you want to call them DVNs, whether you want to call them ISMs, whether you call them validators, guardians, they're all off-chain and they are an oracle for for chain B, for messages that are coming from chain A.
+
+So that's the off-chain part. An on-chain authentication mechanism will have blockchain A itself verify proofs of the message. So what are these proofs? First off, we need what are called finality proofs, proofs that say that this transaction at this block has now been finalized, can never be reverted. you know We have finality these days with proof-of-stake blockchains. Secondly, they will need to do a, I guess you call them a membership proof.
+
+Seun Lanlege 
+or storage proof where we say, okay, look at the state of the blockchain and you can see that in its state somewhere there is a message emitted by some application, right? So these are what we call interoperability proofs, these finality proofs and these storage proofs. And they are able to tell anyone, both on-chain and off-chain, honestly, you because if you were off-chain then you wouldn't even need an RPC provider. You could just connect directly to the P2P swarm of a network and you could be receiving
+
+these proofs of finality so you know what's the latest chain and you could receive the proofs of storage if you wanted to potentially read like contract storage and you should be fully trustless, right? So the same thing goes on chain. And if you're able to verify these proofs on chain, then you're able to authenticate these messages yourself. So that's the on chain and off chain authentication mechanism. Hybrid falls entirely in this on chain authentication mechanism because it's a blockchain that is able to verify proofs of all these different blockchain messages.
+
+And the reason why we've introduced a new chain is that you see all of these different chains, they were not designed to be verifying these proofs in the first place, right? They were just designed to process user transactions. Interoperability is a sort of after request, right? After they've been deployed, shit, we need interoperability, but there's just no way to retrofit that. But what kind of blockchain trust? Well, a blockchain can trust another blockchain because they're both trustless systems. And as long as they're both behaving correctly,
+
+then they can trust each other. So this is what HyperBridge is. It's a blockchain for, you know, cross-chain transaction verification and aggregation. And yeah, I don't know if there's anything specifically you want to know. I was able to paint a clear picture.
+
+Citizen Web3 
+No, you have actually. And as you were talking about it, like I said, I had several more questions lined up, but I think we're going to try and put a full stop here. But I do want to know, and I will actually probably will try, because this is for the listeners. Everything me and Sean mentioned is in the description notes. So even if it's Rust or whatever, a HyperBridge, go into the show notes.
+
+check out links, do some Dior. And what I was trying to think about it, as you were describing it, was a tweet I think I wrote three years ago, which is basically asking why are bridges just not blockchains doing the same work as what validators doing bridges? Makes perfect sense. Makes perfect sense. And I think the answer to me was three years ago, whether it was four years ago, don't remember, was from somebody that we don't have the cryptography.
+
+Seun Lanlege 
+Yeah, so obvious.
+
+Citizen Web3 
+to achieve that. That was an answer a couple of people gave me back then at least. So good. It looks like we are progressing and we are getting to what is the obvious answer. Though, Sean, I'm going to jump into a blitz here. It's three questions. I call it a blitz. You don't have to answer them quickly if you'll take your time and think about them. This is why I'm going to jump into it. It's kind of like three questions that are not crypto-related. This is to take us out of the conversation and to kind of pshh from it.
+
+So, they're a bit strange, but stick with me, sorry. So first one, please give me either a book or a movie or a song that has a positive influence on the work that you do in the last, I don't know, five, 10 years, all your life, doesn't matter.
+
+Seun Lanlege 
+Interesting. man, I have I have all three actually. Can I just give all three?
+
+Citizen Web3 
+You can give all three, man. Please, please do.
+
+Seun Lanlege
+All right. All right. So for the book, actually, this completely shattered my perception of the world, Simulacra Simulacrum by Jean Baudrillard. It's actually an essay, not really a book. And it's pretty old. I think it came out in 70s. But honestly, like it's so relevant to this digital age of social media and information. think, you know, you should read this before actually going on social media. For a movie that I really loved, I really enjoyed Dune. This was very recent.
+
+But Dune actually sort of tackles the deep states in a way. I really enjoy the way it does it. For a song that I, you know, it has to be something by Radiohead, honestly. I would say, I would say the national anthem. National anthem is very weird post, well, no, no, it's a song by Radiohead actually.
+
+Citizen Web3
+of Nigeria.
+
+Citizen Web3 
+Sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, thought you jumped there, sorry, my bad, I'm sorry, please go on.
+
+Seun Lanlege 
+Yeah, no worries. So I was gonna say basically it's very post-rock, very art jazz rock, but I think the song tackles schizophrenia in a weird way. And, you know, I'm not trying to say I'm schizophrenic, but I do kind of get where it's coming from. I'm not gonna say more, but yes, that's kind of my music movie and book that I'd recommend.
+
+Citizen Web3 
+Man, it's a good thing that you said I wouldn't say more because I would have at the beginning, we would have sure went on the big rabbit hole of schizophrenia and psychology. This is one of my other favorite topics. But OK, let's stick back to reality. So next questions. By the way, I have never read the book, the essay you mentioned. Never, never read it. sorry. But before we go, what did you think about Dune 2?
+
+Seun Lanlege 
+I think it was a great continuation, honestly. It's so perfect. I'm actually very worried that Dune 3 might be a flop because we've had two perfect movies and now, you know, to balance it out, the universe will just give us a third flop, but I'm really, really hoping it's good.
+
+Citizen Web3
+Okay, man. I just remember the other versions, you know, from the 90s and the 70s. And I always got disappointed on the second one. I don't know why. They went from always for serious movie to me, to a bit of a comedy thing. And it's like Dune 1 is like so serious, so anti-state, you know, and then Dune 2 is kind of like, they start with all the like, in between the lines, humor and I don't know. But yeah. Okay, next one. Give me please one motivational thing that...
+
+influences and keeps showing out of bed every morning working on cross-chain solutions, trying to perfect those solutions.
+
+Seun Lanlege 
+Sorry, may have lost you the network was back in. Say that again.
+
+Citizen Web3 
+sorry. Sorry. Sorry. Yes. Yes. Yes. Yes. Yes. Of course. Please give me one motivational thing that keeps Sean out of bed every morning and keeps him building, you know, cross-chain solutions, perfecting those cross-chain solutions and not forgetting about the deep state, the developers. Yeah. Something motivational that helps you to do what it is you're achieving every day.
+
+Seun Lanlege
+So, you know, I like to think of myself as a dreamer. I I spend more time in my thoughts than in, you know, physical based reality. And, you know, in my thoughts, I'm usually I'm just modeling the world like, okay, where are things going to end up? Where are all the chips going to land? And, you know, I hate to go all Dr. Strange on you, but in all of my simulations, like if we don't have blockchains, then it's either we have this totalitarian state dystopia, or we have this, you know, fully decentralized
+
+almost a little communist kind of structure of the world where there's there's multi-polarism and there's more respect for diversity and everything. These are only two possible futures and I just want to continue to building to enable this alternative reality.
+
+Citizen Web3 
+It's a very, actually, think, how to say, motivating answer, at least to me, right? That somebody is trying to make the world better, not just because they want to, but because it has to be. Okay, last one, strangest one. I promise you I will finish after that. So Dead or Alive, real or made up, book character, cartoon character, a real human being, somebody you know, family member, a developer, not a guru.
+
+But the personage or a persona, regardless of whether they're real or made up, who when you're professionally stuck, especially professionally stuck, maybe generally stuck, but especially professionally stuck, you kind of think about that personage or persona or human being and it helps you to move forward. Not as soon as you think about them, but yeah, you understand the process, of course, what I'm talking about.
+
+Seun Lanlege 
+Hmm, interesting. So this is very hard for me because I actually don't have any sort of role models in a weird way. I think we are all human beings and we all have our flaws and putting people on pedestals is usually not a great idea. But people I generally admire in the tech industry and their contributions to, I guess, the world. Vitalik Gav, for sure.
+
+as well as Steve Jobs, know, they're very, he was very revolutionary and visionary in the way he thought about computers and how our relationship with computers would evolve. Elon Musk, but early Elon Musk, not now that he's a Nazi. And yeah, that's, yeah, that's, think really the people I admire in the tech industry for sure.
+
+Citizen Web3 
+Man, Sean, I want to thank you for all your answers. I want to thank you for sticking with the weird questions and the developer questions and finding the time to do this. Please don't hang up just yet. This is going to be a goodbye just for the listeners. For the listeners, thank you very much for tuning in and see you guys next week. Sean, bye.
+
+Seun Lanlege
+Cheers, thanks for having me.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

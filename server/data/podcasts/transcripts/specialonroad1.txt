@@ -1,0 +1,182 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/specialonroad1
+
+Episode name:
+Money, Values and Motivation with Gregory Landua and at Lisbon Blockchain Week
+
+Citizen Web3: 
+Good space time, y'all! In this special on the road episode of the Citizen Cosmos podcast, I catch up with Web3 Builders to ask them more or less the same set of questions revolving around motivation, goals and their current work. The episode consists of two parts and is recorded during the Lisbon Blockchain Week events, so the sound is a bit more or unusual, apologies for that in advance. The first part contains interviews with Gregory Landua from Region Network and JK from Stakefish. 
+
+Gregory Landua: 
+We need something like the blockchain to help secure that truth, because you and I and other people may not trust each other, may not agree with each other. I think young people really care about climate change. That's clear. There's protests, there's all these surveys saying how much millennials or Generation Z care about climate change. It's like chicken or the egg. I'll take both, please. 
+
+Citizen Web3: 
+Ah, nice. I like it. Thank you. Finally, somebody said that. Finally! 
+
+Citizen Web3: 
+A lot of our, I think, values in life, things that we solve are dependent on time. I think time management is very important for values. 
+
+JK: 
+Currently in its current state, antitrust law is reactionary. It's not preventionary. There's nothing to do to prevent it unless the incentives are not there. As I mentioned, the incentives are clearly there for people to try to monopolize. My entry into crypto was not Bitcoin. It was smart contracts, surprisingly. That's why I really emphasize and I really strive for market competition, for more competition, because at the end, competition leads to the best outcome for the end-users' consumers. 
+
+Citizen Web3: 
+Before we rock it off, into our next episode, here are some news from the sponsor of this episode, the Cyber Congress Dow. The foundation has started its delegations policy for validators on the Bostrom blockchain and the Space Pussy network was launched, with 96% of its supply to be dropped to various Cosmos ecosystem chains. 
+
+Citizen Web3:
+So, what's your name? 
+
+JK:
+My name is JK. I used to work at Stakefish as head of business and strategy. Currently officially unemployed, but it's been only four days. 
+
+Citizen Web3: 
+JK, you just ruined the rest of my questions. No, I'm joking. Let's go along with it, but you will see. Feel free to answer whether you want to include some of the philosophy of Stakefish or the views of Stakefish for the next questions, or whether you would prefer to answer from what you're planning to do. Maybe that could be another interesting way for you to answer the questions and for me to understand the answers. 
+
+No, no, again, confused. Could you explain in what field I'm going to try and make it more vague, more abstract, more open? And what field do you work at right now? And what are you planning to do after Stakefish? Whether it's going to be the same field? And yeah, let's start with that. 
+
+JK: 
+Okay. So, what I'm currently doing is I'm currently doing, I take a lot of ideation work. Right now, I'm brainstorming a few ideas of what I wanted to build. So just to clarify a bit, to take a few steps back, I've worked at Stakefish for the past four years and it's been a blast. I loved working as a validator, like basically with other validators as well. Like we basically started validators when really validators weren't even needed. 
+
+There was like only EOS, maybe Tezos Lume Network. There was basically no need for it, but like we saw the growth of how important proof of stake is, staking is, and validators are. And it was just fascinating to be part of that growth. But along the way, I've definitely seen a lot of issues and problems that I felt was worthwhile you know trying to solve. I tried to solve some of these within Stakefish, but also thought that eventually I would want to build a product out to try you know to tackle some of these. So let's fast forward to like now, my main motivation for leaving Stakefish was this passion or this urge to try to start something new, to try to tackle these problems just became too big. 
+
+I just needed to do it. I just need to take the jump and try to start building important tools. I wanted to empower and provide more transparency to what's happening around staking as well as validators. And this is where I'm exploring. I'm spending a lot of time bouncing ideas internally myself, but like with other people as well, trying to see what sort of products I want to tackle first to help empower stakers as well as validators are like. And this eventually, what I'm hoping is will help them further decentralize and power these proof of stake blockchains that do rely on staking of validators. 
+
+Citizen Web3: 
+I like that. Now I know which way we can take it. So could you eli5 the problems that you're talking about? You mentioned problems a lot. Imagine that we are right now, I'm not from the crypto world. Could you eli5 for me the problems that you're trying to solve? 
+
+JK: 
+Yeah, you've made it very difficult for me because I don't foresee the problems I will be solving to be something for my mother or my father or my grandparents. You know, people who are not in the crypto world. Like the thing is like what I want to help empower are the actual products that do face these people in a sense. So like as an example, wallets is a prime example. Wallets have to think so much about how to make it easy for ordinary users to learn the basics of the monics of like safekeeping their key that they have full sovereignty and control of their own assets. 
+
+I think many of them are doing a good job and reiterating on how to improve upon that. So the problem is though, when they are then thinking of enabling staking for their users, like let's take Cosmos as an example. We have so many app chains now with the app chain thesis now fully in effect. It's a challenge for these wallets to integrate staking for each of these chains. It's a challenge for them to even understand how proof of stake is different across these different app chains. 
+
+It's a problem for them to even analyze and understand how these staking economics work. So what I want to do is help empower these wallets and you know wallets is just one example, but it could be explorers, it could be exchanges, you name it. I want to help them really make it easy to integrate staking and then fully then help them further explain it downstream to their end users. So at least I do plan to eventually create retail facing user facing products, but I don't anticipate to have first time users coming and just doing staking because like I really don't recommend that for first time users. I think it's just a learning curve, but at least for experienced users, I know how stakers are suffering, how much difficulty they have chasing down information, and I want to make it easy for them. 
+
+Citizen Web3: 
+Let's try to zoom out then. Let's take the stakers. What product problem are you solving for the stakers? How, I mean, you spoke before about values and what value propositions are you solving for the people who want to stake and why do they need it? I mean, what's going to help them that there are going to be values in it? Why? How is it going to help them to not lose their money or where it's a lot of breakpoints? Come on, it's going to be that question. 
+
+JK: 
+Yeah, I know. So, simply put, if I ask a multi-chain staker, I'm not talking about someone who's very passionate only about one chain and if they're staking only one asset, they're already an expert probably on that chain. They probably have all the assets, all the tool sets necessary. But let's take an example of a very passionate early Cosmos Entrant. These are people who were with the hub launch. They have atoms and if you stake atoms, you were provided a lot of assets on different chains. 
+
+You know, we have Juno, we have Osmosis. There's various different chains where you got a lot of tokens just for being an active staker. So staking atom probably was easy to handle because you have MintScan, you have like some ways of really deep diving into the Cosmos hub. But now you have three, four different chains. Add on any other N number of chains that the staker might have. How do you manage all those staked assets? How do you understand whether or not the validators you've delegated to are actually performing well? There's a lot of stale stake. I just want to make that clear that some of the validators are just not really up to par or performing as well as much as like the other peers are. We do have slashing parameters to basically make sure that, you know, stakers are staying aware, but slashing is relatively lenient penalty. 
+
+Comparatively, because if you really look at like uptime, like there's a lot of validators that really fall behind the par. And so for stakers like these, there's no tool. Like simply put, there's zero tools out there where they can instantaneously tell whether or not their stake is actually being put to good use, where they are earning optimal staking awards, whether their validators are actually performing well. 
+
+This sort of information is just not there. I don't even need to have to go into the wallet end too, right? If you are staking Cosmos, Atoms, Sol, ETH, good luck with wallet management. I hope you have different hardware wallets for each of them or something. I see these as problems and I want to help solve it. 
+
+Citizen Web3: 
+Time management. It's a good pronoun. A lot of our, I think, values in life, things that we solve are dependent on time. I think time management is very important for values. What motivated you to join crypto originally? What was your motivation, personal motivation? 
+
+JK: 
+Yeah, this one's an interesting story. I used to work in antitrust and what this does is basically I work for a consulting firm that helped companies analyze whether or not they've price fixed, whether or not they've monopolized markets. And by markets, I mean really subsectors. You could imagine, give any technology, give any phones or like think about each of those components, they all constitute the market. And if you really dig deeply for the past decade or two decades, a lot of these producers creators of these technology, whether it give it IT or just like actual manufacturing, it all went through these cycles of consolidation thanks to abundant capital. And the fact that the equity markets really compensate, hypergrowth at whatever cost. And so it's all consolidated. 
+
+If you really dig deeply, most of these are all legal polis at this point. My job was to really analyze the data behind how markets have consolidated and whether or not there was harm doing. Well, my conclusion here overall, life-wise, when I introspectively thought about what this all meant was that this cycle, the current entire macro industry cycle was just a game of consolidation. If you've incurred enough pain to monopolize, afterwards then you extract value. 
+
+There's nothing to do. That market can't be disrupted until the government comes in. So basically, currently in its current state, antitrust law is reactionary. It's not preventionary. There's nothing to do to prevent it unless the incentives are not there. But again, as I mentioned, the incentives are clearly there for people to try to monopolize. So that's when I thought that there needed to be a system that challenges the status quo. There needs to be something that, and that's why I really emphasize and I really strive for market competition, for more competition, because at the end, competition leads to the best outcome for the end-users, consumers. And so I wanted to see competition provided to these monopolized markets. 
+
+And that's how I came to the ideas of decentralization, of the fact that there might be ways of a decentralized entity to be created and coordinated so that not necessarily one, centralizing entity will just try to value capture everything. And my entry into crypto was not Bitcoin. It was smart contracts, surprisingly. It's EOS was the first white paper I've read. 
+
+Yeah, people really are shocked when I say that. But interestingly for me, it was smart contracts, a not so much used change now. White paper that really got me first interested. That's after then I got into reading Ethereum. I got into looking at all these different. It was a great paper. And afterwards, I then became interested and realized the importance of Bitcoin. But it's a very different story. Hopefully that was an interesting tidbit. 
+
+Citizen Web3: 
+If we were to put it all together, what's your personal opinion on what motivated you, essentially, is equality, I guess, right? That is the value underneath and manipulations and all that. So do you think that the current industry, the current for the person outside of this industry, which we are not, of course, but there are still a world around us. And do you think that for them, they understand and see it like that, that the average person and I don't mean it in a bad way. I mean it in the most positive way that it can be said for them. Does that equality that you're working towards, that we are working towards as an industry that we are trying to create, does that help today? Does it solve anything for them today or will it in the future? 
+
+JK: 
+So to answer at least the one part of your question, just to clarify, I mean, I do want a egalitarian sort of a society, but also at the same time, I realized that that's never going to happen. Like I think it's too utopian. I think the best we could do is have a fair playing ground for people to actually strive and grow. So what I mean by that is I don't want Wall Street, simply put. Like it's one of the things that really attracted me to crypto. 
+
+If I wanted to find information about what's going on with the projects development, about what's happening exactly with the assets, I look on chain, I go to the core devs call, I look at their transcripts, I have the information right there. Compare that to Wall Street. If a stock goes up, down suddenly all of a sudden, like there's like huge shocks. You're sitting in the black and dark, not knowing what's going on until there's like an official filing by the company. 
+
+I don't know. The market has already reacted and I'm just left wondering like what the heck is going on? There's just no transparency around it. This was the story of the entire decade or two, like where a lot of the cases brought upon like the bank of hedge funds were always about insider trading cases because they had disproportionate information accessibility. I just want to create a fairer playing ground. 
+
+I just want to put it like that. I think we've already, to some extent, have brought a powerful tool, especially in the financial, a store of value asset sense the fact that there are countries where their currencies are crumbling central bankers are just so much distrustic of the central bakers and these people now have a way out it's not easy as like lets say three years ago when regulators right now its a bit difficult I got a admit there's central bankers regulators doing their best to make sure that there currency isn't devaluating or people aren't just flying away with capital but still like that toolset exists and it's already out of bag and it's not going back people already have access to  
+US Doller which is less volatile right now I think eventually this will be displaced with BTC like with actual currency that is out of the hand of central bankers but it's the gateway drug in a scene like the fact that you can own USD wherever you are in the world and have full sovereignty over it that you can you are not tied to the state if there's a war going on if there's some political backlash if there's prosecution of based on your gender, race, religion like you have a way out and the fact we have that tool we have created a tool that is you know not so strangled by the state I think is already powerful enough of course lets be clear we have a long way to go and we gota make sure like that's why we have to have some emphasis on decentralization it always has to be one of the core values that we always strive for because the moment we give in the moment we let go of our values here that's when we just create Wall Street 2.0 and I'm not here to do that.
+
+Citizen Web3: 
+That was very good, thank you. And three quick blitz questions and it's actually perfect moment for the first one Bitcoin or Monero?
+
+JK: 
+Ha ha ha ha I mean personally Bitcoin just probably because it's longest you know running like there's just so much value to the fact that like how long it's been around and it's the father of well everything that we deal so I do value Moneros sort of great it never you know seeds towards like you know it never gives ground when it comes to privacy right like you can not you know that's so valuable and powerful but still we're talking about father of everything so I gota say Bitcoin.
+
+Citizen Web3: 
+Big distributed and decentralized Dows or small and effective Multisigs?
+
+JK: 
+Ho ho ho ho depends on the life cycle of what we're trying to build if it's a new product a new Dap that your creating like a new Defi dap the latter you need to be like you know until you find product market fit and you've passed a certain threshold of saying like there's no coming back that like the product itself Um I don't think any Dap is there yet to be honest this is like still early innings of just like what were trying to create I think arguably that's why L1's maybe there's a lot more argument to be made like you know it's already Durim is a good example, of course Bitcoin is a good example the cosmos is getting there Solana is also on its why there it's like different L1's and I think L1's being total decentralized would be like the first I think to happen and will have like multiple participants holey decentralized of Dow like decision making before on the Dap end I think mostly small efficient is the way to go for now.
+
+Citizen Web3: 
+Last on JK your launching a product you can choose a community of 5000 cool people none of them are developers and their not planning to ever study any development or three very good developers?
+
+JK: 
+That is a tough question wow umm so a least from where I'm starting right now I'm not a Dev myself I need Dev's so I definitely have Devs but the thing is none of these applications or like products matter if you don't have community like I've learned that so wholeheartedly just seeing the different L1's as they you know evolve Dap's you know as they evolve without a community like it doesn't none of this makes sense any why whatever you build so right now just because of my own needs I need these wonderful like smart gigabrain Dev's but if I do id did already have at least a working product like community, community for sure.
+
+Citizen Web3: 
+Thank you, JK and thank you again for the planes breakfast Solan I'm saying breakfast Solan so much I think I'm advertising them I'm going to cut that breakfast Solan JK thank you for finding the time again by the way thanks.
+
+JK: 
+Yeah, of course thanks for inviting me thank for meeting me out here out in Lisbon thank for flying from Madera yeah well you know I've got to really visit Madera I hear it's great so really looking forward to having a cosmoverse there.
+
+Citizen Web3:
+Thanks JK hopefully soon.
+
+Citizen Web3:
+So what's your name?
+
+Gregory Landua:
+I'm Gregory Landua
+
+Citizen Web3:
+What do you do Gregory?
+
+Gregory Landua:
+I'm one of the founders of Regen network and so I'm currently the CEO of R and D ink Regen network development ink and we do core development on the cosmos SDK where also the core developers of Regen leger which is the blockchain that powers Regen network.
+
+Citizen Web3:
+Can you pretend for a minute that I'm not coming from the crypto world and eli5 to me what problem you guys are trying to solve with everything that you do.
+
+Gregory Landua:
+For sure and you've never heard about Crypto or Regen network so what Regen network is doing build a system for communities to come together and track ecological health especially the carbon cycle and be able to assign value for climate positive climate actions so when a forest is regrowing somewhere we can help communities get paid for that positive action when a farmer shifts to regen agriculture and is building soil we can help those farmers get paid for those actions. Those are all public good actions that help stabilize the climate that help build a better planet they have lots of other value into our economy which currently isn't really internalised or understood and so what Regen network is really built to do is help bring that value of ecological health which really underpins all of the economic value that we all depend on without a health planet we don't have a health economy and so by making ecological health visible and valuable bringing it onto peoples balance sheets as assets we're helping fight climate change and bring a new economy online.
+
+Citizen Web3:
+Can you remember what originally was your real motivation that attracted you to this industry? And I promise I will connect it all in a second.
+
+Gregory Landua:
+Yes, so what attracted me to blockchain, web3, crypto whatever you want to call it was an understanding that this is a new expression of social conscious or social consensus I'll take a step back a long long time ago humans had the ability to make agreements with one another in a small scale right and so when we were triable there were currencies these currencies were things like shells, beads or cacow and we would make necklaces with the shell beads or would make a belt and it would be both a treaty and it would be money money was multivalent back then it had multiple purposes is what I mean to say it was both a currency but it was also a type of agreement or social contract. What attracted me to blockchain is that with powered by massive componential potential we're moving back to a capacity to coordinate and have money not just be purely transactional but have money actually represent a unique agreement between parties in the case of my passion its a unique agreement about parties its based on ecological health which we both depend on now we need something like the blockchain to help secure that truth you and I and other people may not trust each other may not agree with each other and by using the consensus of a blockchain system we actually make a lot of these really complicated coordinating challenges when building a new type of money that is reflective natural capital or ecological health I don't see a way of making that happen without something like blockchain in the mix really we can do the different component parts without a blockchain of course like we can do science to tell us about soil health or biodiversity we can make contracts with each other the old fashioned way with paper we could exchange money but blockchain enables all of that to come together into a single unified system just like what I was saying earlier we use to have the capability of that money also being a form of agreement and also being a sort of sacred symbol and all of that is unified as one and with blockchain you have NFT's you have fungible currencies you have verifiable credentials or soul bound tokens all of these different attributes that sort of reconnect us to the essence of what money is which is a social contract between a whole bunch of people by using you're opting into a set of agreements and in the case of Regen network we want the basic agreements that people are opting into when there participating in a economic system in a monetary system to have an ecological heath foundation.
+
+Citizen Web3:
+I what way do you think that and I say it with the biggest respect I can the next word average person and I really do say it with mocking of our industry than mocking anybody else. But I guess some stigmas are sometimes needed to ask the question. In what way do you think the average person or do you think at all the average person cares about those things they wake up every day and think Ah we need to solve this problems we need to solve the finical system we need to solve the ecological do you think a lot of people outside of our world which still exist out there I know for some of us it doesn't but it does in what way do you think it is connected to people and how and is it all connected to them?
+
+Gregory Landua:
+Yeah, I think young people really car about climate change that's clear there's protests there's all these surveys saying how much millennials or generation Z care about climate change so yes I think people care about that I think they wake up caring I think people have a lot of anxiety and a lot of stress about an uncertainty and fear about that and that makes me sad because I want people to feel at home like we have this beautiful planet Earth we can care for it so you know these a whole conversation about so that's one piece so yes people have anxiety stress and they care on the other hand people care about making ends meet people care about status people care about living a good life what is interesting to me is that in the long term none of those things are posable without a healthy ecosystem without a healthy planet so if you put all that together I actually feel a lot of hope there's huge evidence that there's all these studies that happen where if people are given the choice between a product that's more expensive but they know does something good or is better for the world and a product that is less expensive but they know is totally shit for the world people will buy the more expensive product. In that case there just doing it because they've been given the information and when given the information people statistically most people not all the people will choose the right decision even if it costs them a little bit more also people tend to do things for statis also there's an amazing opportunity for conceptualizing ecological health as an asset instead of just sort of like a tax or something we have to do later if you combine all three of those you sort of get a little bit of the sense theory of change of region network this is actually building a new asset class this is build a new form of value a new form of wealth that's aligned with ecological health and is aligned with a new sense of states which is that we can track and reward our ability as society and as individuals to take positive action so there's sort of this stack that I believe does really deeply resonate with sort of the psychology of normal people of you and I and maybe listeners as well that we all have this layers of what motivates us and we have to be hit on all of those layers.
+
+Citizen Web3:
+Thank you, for that because you kind of answered the combining questions it was very good the last question was is going to be easy for you the other guys the validator guys found it harder it was about how is what you do in your opinion solve the problem you were talking about that you just answered so a small blitz towards the end. Bitcoin or Monero?
+
+Gregory Landua: 
+Oh, Bitcoin or Monero. I mean, I guess I would say Bitcoin, because if you asked me Monero or Zcash or Bitcoin or Zcash, I might have had a different answer. Monero, I don't have a big relationship with. I would probably say Zcash. 
+
+Citizen Web3: 
+Second one, distributed DAO, maybe not the central, but a big distributed DAO or a small and effective multi-seg. 
+
+Gregory Landua: 
+So the distributed DAO, it's unclear what, how decisions are made. This is a lot of people, they all belong to a DAO, but 
+
+Citizen Web3:
+you choose. 
+
+Gregory Landua: 
+I mean, I would probably go with the distributed DAO. It's a more interesting design space there. There's lots of dimensions. It's more fun. 
+
+Citizen Web3: 
+I like that. Last one, I promise. You're building a new product in crypto space, of course, and you have a choice. Community of 5,000 cool people, none of them know coding and none of them will ever study coding and ever or three very good developers. Why does everyone get stuck on that one? 
+
+Gregory Landua: 
+No, I'm just thinking. I'm just thinking because, you know, which do you start with? Which do you start with? It's like chicken or the egg. I'll take both, please. 
+
+Citizen Web3: 
+Ah, nice. I like it. Thank you. Finally, somebody said that. Finally. Gregory, thank you very much. Sorry to pull you out. Thank you very much for your time. It was amazing. Thanks. 
+
+Gregory Landua: 
+Yeah, it was awesome. Thank you so much. This has been fun. 
+
+Citizen Web3: 
+This content was created by the Citizen Cosmos Validator. If you enjoyed it, please support us by delegating to Citizen Cosmos and help us to create more educational content. Thank you. 

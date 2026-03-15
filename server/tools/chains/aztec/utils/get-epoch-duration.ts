@@ -3,7 +3,7 @@ import { Abi } from 'viem';
 import logger from '@/logger';
 import {
   AztecChainName,
-  contracts,
+  getContracts,
   getL1,
   rollupAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
@@ -22,7 +22,8 @@ const getEpochDuration = async (chainName: string): Promise<bigint | null> => {
   }
 
   try {
-    const contractAddress = contracts[chainName as AztecChainName].rollupAddress;
+    const l1Contracts = await getContracts(chainName as AztecChainName);
+    const contractAddress = l1Contracts.rollupAddress;
     const abi = rollupAbis[chainName as AztecChainName] as Abi;
 
     const epochDuration = await readContractWithFailover<bigint>(

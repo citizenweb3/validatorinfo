@@ -3,6 +3,7 @@ import { z } from 'zod';
 import logger from '@/logger';
 import ChainService from '@/services/chain-service';
 import ValidatorService from '@/services/validator-service';
+import podcastService from '@/services/podcast-service';
 import { toHumanTokens, resolveChain } from './utils';
 import { getChainValidatorCount } from './ai-data-helpers';
 
@@ -11,6 +12,7 @@ const { logError } = logger('ai-tools:validator');
 const mapValidatorNode = (node: any) => ({
   chain: node.chain.prettyName,
   chainName: node.chain.name,
+  ecosystem: node.chain.ecosystem,
   operatorAddress: node.operatorAddress,
   jailed: node.jailed,
   commission: node.rate,
@@ -83,30 +85,36 @@ export const validatorTools = {
           return { query, total: 0, validators: [], message: `No validators found matching "${query}"` };
         }
 
-        return {
-          query,
-          total: results.length,
-          validators: results.map((v) => ({
-            id: v.id,
-            moniker: v.moniker,
-            identity: v.identity,
-            website: v.website,
-            networks: v.nodes.map((n) => ({
-              chain: n.chain.prettyName,
-              chainName: n.chain.name,
-              operatorAddress: n.operatorAddress,
-              jailed: n.jailed,
-              commission: n.rate,
-              uptime: n.uptime,
-              missedBlocks: n.missedBlocks,
-              tokens: toHumanTokens(n.tokens, n.chain.params?.coinDecimals),
-              delegatorsAmount: n.delegatorsAmount,
-              denom: n.chain.params?.denom ?? null,
-              apr: n.chain.tokenomics?.apr ?? null,
-              currentPrice: n.chain.prices?.[0]?.value ?? null,
-            })),
+        const podcastMap = await podcastService
+          .getEpisodeSummariesBatch(results.map(v => ({ identity: v.identity, moniker: v.moniker })))
+          .catch(() => new Map<string, any>());
+
+        const validators = results.map((v) => ({
+          id: v.id,
+          moniker: v.moniker,
+          identity: v.identity,
+          website: v.website,
+          podcastSummary: podcastMap.get(v.identity)?.summary ?? null,
+          podcastEpisodeUrl: podcastMap.get(v.identity)?.episodeUrl ?? null,
+          podcastEpisodeTitle: podcastMap.get(v.identity)?.title ?? null,
+          networks: v.nodes.map((n) => ({
+            chain: n.chain.prettyName,
+            chainName: n.chain.name,
+            ecosystem: n.chain.ecosystem,
+            operatorAddress: n.operatorAddress,
+            jailed: n.jailed,
+            commission: n.rate,
+            uptime: n.uptime,
+            missedBlocks: n.missedBlocks,
+            tokens: toHumanTokens(n.tokens, n.chain.params?.coinDecimals),
+            delegatorsAmount: n.delegatorsAmount,
+            denom: n.chain.params?.denom ?? null,
+            apr: n.chain.tokenomics?.apr ?? null,
+            currentPrice: n.chain.prices?.[0]?.value ?? null,
           })),
-        };
+        }));
+
+        return { query, total: validators.length, validators };
       } catch (error) {
         logError(`searchValidators failed for "${query}": ${error instanceof Error ? error.message : String(error)}`);
         return { error: `Failed to search validators for "${query}"` };
@@ -128,8 +136,21 @@ export const validatorTools = {
         }
 
         const details = await ValidatorService.getByIdentityWithDetails(validator.identity);
+        const podcastData = await podcastService.getEpisodeSummaryByValidator(
+          validator.identity,
+          validator.moniker,
+        ).catch(() => null);
+
         if (!details) {
-          return { id, moniker: validator.moniker, identity: validator.identity, nodes: [] };
+          return {
+            id,
+            moniker: validator.moniker,
+            identity: validator.identity,
+            nodes: [],
+            podcastSummary: podcastData?.summary ?? null,
+            podcastEpisodeUrl: podcastData?.episodeUrl ?? null,
+            podcastEpisodeTitle: podcastData?.title ?? null,
+          };
         }
 
         return {
@@ -137,6 +158,9 @@ export const validatorTools = {
           moniker: details.moniker,
           identity: details.identity,
           nodes: details.nodes.map(mapValidatorNode),
+          podcastSummary: podcastData?.summary ?? null,
+          podcastEpisodeUrl: podcastData?.episodeUrl ?? null,
+          podcastEpisodeTitle: podcastData?.title ?? null,
         };
       } catch (error) {
         logError(`getValidatorById failed for ID ${id}: ${error instanceof Error ? error.message : String(error)}`);

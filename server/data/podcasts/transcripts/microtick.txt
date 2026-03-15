@@ -1,0 +1,348 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/microtick
+
+Episode name:
+Fair Arbitrage, Punch Cards and Price Discovery with Mark Jackson 
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of Citizen Cosmos. We have Mark with us today, the founder of Microtick. Mark, hi, welcome to the show.
+
+mark 
+Hi, thank you for having me on.
+
+Citizen Web3 
+Yes, thank you for coming. It wasn't that easy to find you from what I heard from my team, but they did get you and they didn't have to look for you. They said you weren't very public, but maybe we can talk about that as well if you want. But first of all, I'm going to let you introduce yourself in your own words, obviously. Tell us who you are, what you do, and anything else you want.
+
+mark
+Sure. My name is Mark Jackson. I founded Microtick back in 2003. was originally a for-profit company. This was prior to Bitcoin, prior to blockchain technology and a series of events. We were trying to figure out ways of bringing forth a new type of financial product at the time, which was a short-term option contract. These option contracts, mean, obviously,
+
+People that are familiar with options know that typically they have fixed expirations and fixed strikes. And that's the way they are standardized. And the challenge is to bring liquidity to all the various issues. And as you deal with shorter and shorter timeframes, your choices for, for standardizations multiply because with shorter timeframes, you might have expirations five minutes, 10 minutes, 15 minutes. I'm exaggerating, of course, but you can see that
+
+providing liquidity for all of the different issues can become a challenge. And so what Microtick was involved with at the time was pioneering a new type, a new way to standardize these options using relative strikes and relative expirations. In other words, as the option contract triggers, the expiration is set at a fixed duration from when the option starts at all times.
+
+And the challenge that you receive or come across when you're trying to standardize in that manner is what is the correct price at a given time? And so the second challenge that we had to solve was how do you get the correct price? And so we figured out a way to use the option contract prices themselves to derive the current price so that we didn't have to import it from a separate exchange. And therefore you create a self-contained market.
+
+And we thought it was pretty innovative. It may not have been. We don't know. But we did talk to several exchanges in the United States in the 2003 to 2005 timeframe. And the feedback that we got was, hey, it sounds pretty cool. at the time, exchanges were not interested in partnering with a small company like that. it was just a lot of, you can imagine the
+
+mark 
+types of discussions when you're talking to a very large entity as a small business, there's a lot of challenges there. so the project got tabled for a while. then moved on. during that timeframe, Bitcoin came along. Ethereum came along. I was very interested in the technology back in those days. In fact, I was at the Miami Bitcoin conference where Ethereum was introduced, where Vitalik
+
+introduced that in Miami in 2014. And I got very interested in Ethereum. And so we started working with Ethereum. had a set of smart contracts that we developed back at the time and had it working and were actually operational on test net, but then realized with CryptoKitties that we were going to do the same thing because with short term options, you're talking about a lot of transactions.
+
+the network just couldn't handle it. There was no layer twos at the time. It was a challenging set of problems that you're facing when the technology is evolving as fast as your development is. And so it's challenging for sure. Go ahead.
+
+Citizen Web3 
+Just a quick question there, something like payment channels couldn't work?
+
+mark
+Yeah, potentially. mean, we looked at various options and what we... I mean, we didn't have a team that could fully investigate all our different options. So what we did is did a high level overview of what the challenges were. And that's what... This is back in 2017, probably that timeframe at that point. And arrived at Cosmos because it was a fairly advanced...
+
+technology at the time compared to some of the other solutions that we saw. And so we did a pivot, a second pivot, and developed a set of
+
+We'll call them smart contract rules, actually Cosmos, you know how it works where you actually develop a blockchain node that has the rules embedded into the code. And we did that. And that's what brought forth the Microtick chain as it is in its current form. yeah, I made a short question into a long answer, but I hope that gives you some background and kind of lets you know where we stand.
+
+Citizen Web3 
+It does, it does, that's for sure. I have a lot of questions, but I'm going to try and go easy. I'm going to ask some questions about you, your history, how you got here yourself, how you got to actually start that company. But before I do that, what I usually try to do is break down my Microtick even more.  
+
+So one of the sentences when we go on the Microtick website, it says, cooperative price discovery. Now, let's break that down. Imagine that somebody doesn't understand a word in that, well, price and discovery are quite make a lot of sense. So it's cooperative. But together, I guess for a lot of people, sometimes myself as well, it could make confusion. So if we were to break that, what is an essence?
+
+in your own words, Cooperative Price Discovery.
+
+mark 
+Yeah, I mean, it's a good question. It's something that is not bantered around in the financial markets. Typically, mean, typically you have a marketplace that's a bid ask order book or something like an automated market maker. And people, you know, trade, take different positions, either going higher or lower based on what they see their outlooks for the market are. That's a form of price discovery. It's competitive price discovery because every position
+
+that you take someone else has an opposing interest in the opposite direction. And price goes up and down based on if participants in the marketplace all share the same outlook, the price will go up sometimes very rapidly in the form of a pump or a dump, if it goes the opposite direction. so competitive price discovery typically results in an unstable market over short.
+
+timeframes because you get these trends forming either pumps or dumps in various directions and then they correct. And so it leads to a lot of volatility. So what we see in terms of cooperative price discovery is a different way to go about the problem of participants agreeing on price. what I mean by that is blockchain technology is decentralized.
+
+allows multiple people to participate from all various jurisdictions and wherever they happen to be. And we know one of the problems in blockchain technology is importing prices onto the chain. And one thing we wanted to do with Microtick is because we were able to take these, what we call price assertions and import them onto the marketplace.
+
+and then average them out in the ways that a lot of these oracles that you see that have been developed work. We're doing the same thing, but the difference with Microtick is that you can actually hedge that price. You can take a position because they're actually making assertions over short timeframes that get traded out as options on the marketplace. And so you end up with a form of price discovery that is cooperative because you have that averaging effect.
+
+mark
+It allows participants to jump on to a market and it gives a voice in the market to people that don't necessarily want to take a position in either going up or down. It's a voice in the market for people that are asserting that the price is what it currently is. And so we think that the two markets side by side, I if you have a competitive market that can be hedged against a cooperative averaging market, it might tend to
+
+average out some of the volatility over short timeframes, which brings benefits to everybody, think, because these pumps, well, except for the people that are profiting off of pumping and dumping. So maybe some of the high frequency trading would tend to result in a little bit less opportunity. But for the most part, it's just a different form of importing prices that we think will will result in a much less volatile process.
+
+if that makes sense.
+
+Citizen Web3 
+Yeah, yeah, of course, this is like basically less room, less space for price manipulation as far as I understand. but, like let's break it down even more. we hear like the words price manipulation. And if you're a trader, if you're technical, you more or less understand, but how would you explain like physically? I have had this question before somebody asked me, how does actually price manipulation occur?
+
+especially on the blockchain, and it's hard a little bit to answer sometimes, like how would you, in your own words, explain how does it actually physically occur price manipulation on a normal, on a regular market where micro tick can prevent?
+
+mark 
+OK, I'm obviously there's probably lots of forms of price manipulation. I may not be familiar with all of them, but I typically what you'll see is market makers flashing large buys or sells just outside of the competitive market and kind of signaling that they have a high volume of opening or of order interest in a certain direction, which then causes other participants to see that.
+
+large wall set up and think that the price is going to actually soon move in a certain direction and therefore they take a position and then the market goes in the other direction. Surprise! That's what I think of when I think of price manipulation on a traditional order book. The way that Microtick would help in that type of situation is we're working with price assertions that can be traded in either direction. So it forces the market maker
+
+take a position in the center of the price. And the orders that get traded first are on the outside of that kind of bell curve of orders that we set up. And therefore, you can't flash an order outside the market without being the most competitive order on the market. And you will get traded first as opposed to a traditional order book where those orders that get flashed on the outside bids and asks.
+
+never get traded and they take them off before the market reaches them. So that's what we mean by helping out with price manipulation and that's specifically referring to order books.
+
+Citizen Web3 
+I'm going to come back to my Microtick. I will. And I want to come back as well to some of the economics. But before that, I do want to understand a little bit more about you. there isn't much information on the Internet that I haven't found.
+
+that I found, quite a large career in quite different companies. It was ShapeShift, Hewlett Packard, Thunderbird Gaming, right and you had lot of patents as well in gaming and trading systematics. And I would love to hear about that. How did you get from what looked like quite a successful career in the normal world to start in MicroTick and then Ethereum and then Cosmos, God forbid.
+
+mark 
+Sure, yeah, you've done your research. Well, I I try to keep my public profile fairly low profile. I'm not really a personality type that participates much in social media or things like that. Career-wise, I've been in a variety of positions. I have a
+
+an extensive coding background. My education was in electrical engineering. So I've got some electrical engineering background, antenna design, things like that, but never used that in the real world. It was all software. I've done quite a, like you said, I've got a few patents. So I've done some innovative work towards in a variety of fields.
+
+What led me to this particular opportunity was just my interest in trading. I've always been interested in the way markets work and the way that you can make them better. And that was even prior to blockchain technology coming along. 	
+
+Citizen Web3 
+was it basically just curiosity and you're like, I'm curious how it's going to work and then start my own project and then see where it goes and see if I can make that system that you were talking about, like finding out about the hedging and about...
+
+Citizen Web3 
+options and is that what was it just pure curiosity or anything else?
+
+mark
+Well, specifically electrical engineering has a field of study called signals and systems with linear time invariant systems that they describe at a high level. And then you start to dive down into the way that you can make these systems work both in the analog and digital discrete time domains. And my interest was always in the computing side of things and specifically in
+
+discrete linear time invariant systems. that's a things like digital filters and things like that that you might build using computer technology. I was working with that kind of stuff. And as a grad student, I never did complete grad school, but that's what I was working on. And then from there, some of the stuff that I worked on with my career was also in the same sort of area. And it was just kind of a natural evolution as you get into markets. And then with the
+
+blockchain technology where blocks come at infrequent intervals, sometimes random, because they're probabilistic in their finality. It leads to a specific set of problems that you can imagine kind of piqued my interest, given my background. So that's what led me down that path. And that's where I'm at right now, why I'm here.
+
+Citizen Web3 
+When did you start working with software? When was it about like, I imagine 25, 30 years ago?
+
+mark 
+Oh yeah, a little bit of background. I'm in my fifties, early fifties. So I'm an older guy, not your typical age group for a lot of this technology. I've noticed that when I was at ShapeShift, was probably one the older guys there, but that's a good thing.
+
+Citizen Web3 
+I had actually sorry to cut you under I had a Willy on a while ago he was the head of this he was actually pretty cool was he really saying to people when you were asking you how is your day that I'm having the best day ever was he really saying that before 
+
+mark 
+I noticed that. Yeah, I know, Willie.
+
+Citizen Web3 
+He surprised me with that. I'm having the greatest day ever. And I was like, what? And he was like, I've been saying that for five years. Sorry to cut you out there. Sorry. just remembered. But by the way, I've noticed, I mean, I've been in blockchain since a while and  I would say we're not that much age difference. I'm closer to 40 or to 50. It depends which side you look from.
+
+But I've seen quite a lot of guys this age, but I know what you mean. Yeah, there is much more younger guys, especially 2017. I think it was like that.
+
+mark 
+Sure. Yeah, I'm exaggerating. mean, of course, older guys can be interested in blockchain technology. answer your question though. Yeah, yeah. To answer your question about when I got started coding. My first computer program was written using punch cards on a mainframe. My mother was enrolled in a class in college and I was a young kid. I was probably...
+
+Citizen Web3 
+At least we have something. 
+
+mark 
+eight or nine years old and she taught me how to do it was in Fortran and I was typing punch cards and made a program to calculate the number of inches from the earth to the sun.
+
+Citizen Web3 
+I would love to use punch cards, I never did, never said it, never said anywhere.
+
+mark 
+That was the only one that I ever did. mean, I was kind of at the tail end of that, of that era, but I did do a punch card program at one point and then moved on to Apple II programming. Back when the Apple II was popular, did some assembly language programming. I actually taught myself assembly language when I was 12. So that kind of gives you some background. I'm a self learner and kind of taught myself a lot of the stuff that I did with respect to code. So.
+
+Citizen Web3 
+Wow.
+
+Citizen Web3 
+Not including the punch cards, what was the first machine that you started to code on? Do you remember?
+
+mark
+Well, that was the mainframe that we used. That was at the university at the time. But the first computer that we ever owned was a, it was actually an Apple II clone. It was a Franklin. And so that's where I started programming using those floppy disks and having to boot up every time and have the OS load. then you drop down into the monitor and start, actually we would hand compile our assembly language programs into bytes.
+
+mark
+And then I would sit there and type these programs in in hexadecimal and boy tracking down the bugs. If there was a bug in or you missed a hexadecimal number, mean, finding the bugs was difficult. it was educational because you really start to understand what is underneath the hood on this and translating that directly into what we're doing with smart contracts. The EVM is kind of at that same level. So understanding and knowing how
+
+mark 
+virtual machines operate and the way bytecode works and things like that. It's directly relevant to a lot of the things that people work on in today's technology even still. So I think I'm actually happy that I had to go through all that trouble at a young age, it was good.
+
+Citizen Web3 
+It makes a lot of sense. It makes a lot of sense in my opinion. I don't remember in what book it was. Was it the code or something like that where he was explaining, the writer was explaining about the, like from coding, but going, starting from mathematics, of course, and about the decimal system. And the reason we use the decimal system is because we have 10 fingers. If it was a dolphin, he would use like,
+
+you know, like, two, right? yeah. But it's, but imagine, this is the thing if you teach a kid, they've done those experiments several times. And if you teach a kid, any other system, apart from decimal, they will know them straight away as an adult, they will know to count in all of them. So I can imagine, like understanding, like you're saying, what's under the hood makes you understand much better what's on the application level and
+
+mark 
+2. Binary. Maybe his nose. 3.
+
+Citizen Web3 
+Well, not the application level in this case, but up to the application level.
+
+mark 
+Certainly, yeah, I definitely agree with that.
+
+Citizen Web3
+By the way, like when you were first, when you first encountered blockchain technology, when was that, by the way?
+
+mark
+Late 2013-ish, maybe a little earlier. I think I had encountered it in 2012, but didn't really act on it. I got interested when it started to become programmable. know, like the colored coins, I think they were called at the time, where Bitcoin was just starting to get the capabilities of doing some programming.
+
+Citizen Web3 
+Was it many Rosenfield or Benny Rosenfield? 
+
+mark 
+It's always had the script.
+
+mark 
+You know, I don't remember and I was also looking at some other technology. forget what it was even called.
+
+But yeah, I guess we're kind of off on a tangent there.
+
+Citizen Web3 
+There was another one at the same time which was doing a similar thing. What was it called? like BlockX? No, not BlockX. don't remember. What was it? you remember the first... Did you buy into the tokens though? Or no? Or you didn't participate in the trading? Or I imagine you did with your interest.
+
+mark 
+with Ethereum for sure. I participated in the Ethereum crowd sale, so that was a good thing.
+
+mark 
+The idea there was that eventually if Microtick was implemented on Ethereum, I'd need to have some coins to pay for gas. So I wanted to have some. yeah, yeah, for sure.
+
+Citizen Web3
+And talking about implementations in Ethereum, and I'm sorry, I'm going to ask it like straight away. I do have more questions about Mikrotik. but now that you mentioned Ethereum, the project, as far as I understand is moving from Tendermint to Ethereum or not, or to something else.
+
+mark 
+Well, specifically we have not decided on a layer two for the chain as it moves forward. What Microtick is trying to do with the move away from maintaining its own chain The project doesn't have enough resources to really properly maintain a Tendermint Cosmos SDK based chain. I mean SDK is great. It makes it easy to develop your rules and everything.
+
+because of IBC and things like that, you need to make sure that your chain is always on the fairly recent tip of the development chain, because otherwise there could be incompatibilities introduced and things like that. And so there's a lot of requirements for code maintenance and chain maintenance that we just don't have. The project has not evolved to that point yet. So we felt it would be the best, the most beneficial to the project to pivot it.
+
+away from having to maintain our own chain and move towards something that might be a little bit more self-contained while we're still trying to get adoption. And at the same time, we have token holders and we realized that a lot of those people have invested into the project and we want to be fair to them. And so we came up with a way to hopefully do that in a fair manner, but still allow us to allocate some tokens for...
+
+for fundraising and things like that. That's the one thing that MicroTick has never done is actually raised funds for the project. It's been bootstrapped from day one and everybody's been pretty much a volunteer up to this point. And at some point, maybe it would make sense to move on and actually create something a little bit more formal in terms of an organization that can support the development. But a lot of that depends on,
+
+proving out the concept, proving out the code. I think we've done that with the current chain. And although it never got a whole lot of adoption, I think I'm pretty comfortable that the idea can work, whereas before I wasn't. So I think we've accomplished something, but it is time for a pivot because we need to make sure that we are realistic about the resources that we can invest in maintaining chain.
+
+Citizen Web3 
+This is a really fair answer and makes a lot of sense in my opinion. I have been involved in launching projects before, so I know how much money they eat. That's the right word I was looking for. By the way, does MicroTick currently have a community pool or it doesn't?
+
+mark 
+It does. Yeah, there's a community pool. Unfortunately, the token, along with every other token, it seems, went through quite a bit of selling pressure over the last six to 12 months.
+
+Citizen Web3
+of course, of course. I was just going to say, but why not use, for example, I don't know in percentage wise, what's the amount of the funds in the community pool, but for sure that could be used as like with bonding curves and raise funds via that on Ethereum. 
+
+mark
+One of the things that we're trying to do, we're obviously, Microtick is going away. The project is going to become Discovery Decks. The community's voted on that. And so we've got a logo set up. We've got a website starting to be set up. We've got a Discord channel that's going to be made public soon. There's been a lot of people helping out with that, which I appreciate greatly. Thanks, guys. And one of the things that we want to do since you brought up automated market making. Microtick, one of the things that we learned is the way that it currently works is market makers have to come up with their price assertions and they also have to come up with some sort of an idea of what is a fair price for volatility. And that is what the option premium is. Because when you specify a premium, you're basically saying, am pricing
+
+the current market volatility at this price over this time duration. And that's how you come up with your price assertion. And the problem with that is nobody understands that, or at least very few people understand it. And that limits your reach and it makes it very, a lot harder to bring people into the market when they have to understand these esoteric concepts. And so what we're trying to do with Discovery Dex
+
+Microtick version two, can call it the same thing. We're trying to move the premium pricing part away from individual market makers competing into a liquidity pool type of an approach that's more of an automated market maker type approach where the premium moves up or moves down based on whether people are buying or selling premium on the market.
+
+And so market makers no longer with discovery version two will no longer have to come up with their own premium. They just contribute liquidity into a pool and then contribute their assertions. And everything else would work kind of the same when trades happen. Trades would get moved from the liquidity pool into the, what we call a collateral pool, which serves as the way the current protocol works is when a trade happens.
+
+mark 
+the individual market maker that's backing the trade has all the risk of price movement over that timeframe. And instead, what we're going to do is in addition to collateralizing, I'm sorry, instead of creating the automated market maker, we're going to create a collateral pool where that risk is democratized among everybody that's involved in the trade. And so you're no longer, you no longer have a risk against a specific trade over a specific time duration, but you're basically involved in a collateral pool where
+
+If a bad trade happens, it's shared among everybody, but at the same time, profit, when it happens, is also shared between parties. And so it's just a way of...
+
+mark 
+creating a...
+
+way to offset some of that risk that was encountered with Microtick version one.
+
+Citizen Web3 
+So stupid question, but I'm still going to ask it. So basically, as soon as Microtick moves to whichever layer 2 it will move to, it doesn't matter for now which one, basically it will become more like a service, well, not a content Oracle, but like an Oracle in this sense because it's a discovery dex, right? Or will it be an application as well of its own?
+
+mark 
+It's going to be a DEX. Initially, it's going to be just the price discovery. One of the interesting things about Microtick is we decouple the price discovery part of markets from the trading part of markets. And to my knowledge, I've not seen that done anywhere else. so it's fairly unique. But I think we've got that kind of a concept working on the current chain.
+
+and it's documented on the website how it will work as we move to the Discovery DEX version 2. And basically, options coupled with futures are a natural way to divide this. If you can get your price discovery working based on option pricing, you can then trade your actual tokens or whatever your asset is using futures and the two can be hedged against each other in a natural way that
+
+allows you to create markets that the price can be discovered in an independent set of smart contracts. And then we can do the futures trading as a separate set of smart contracts that use the Oracle price generated from the first set of smart contracts for the futures price. And what happens when you do that is you come up with an interesting
+
+stable price discovery mechanism based on oracles and averaging that can be hedged against like your AMMs that are sitting out there. So specifically, suppose we're trading futures on a certain set of tokens and then your AMM call it Uniswap or whatever it is, you're trading the same tokens there. Now you've got offsetting positions that you can do. You can arbitrage between those two markets.
+
+mark 
+But at the same time, you can hedge against your oracle price. So it's a different way of arriving at the same result, but we think it's going to be a more stable type of price discovery process. And I think having the two markets side by side is going to be beneficial for both because it's kind of a liquidity engine for both because of the potential for arbitrage.
+
+As a specific example, suppose you have a pump over a short time frame and the Microtick price, Discovery Dex price is lagging because it's an average. And that will tend to happen naturally just because you have market makers that don't all update their quotes at the same time. And therefore, your price on the Microtick market is lagging. The price on the AMM has pumped because all of a sudden you've had
+
+mark
+the alignment of everybody buying at the same time, driving the price up. Now there's an arbitrage opportunity between the microtick price and the AMM price, which will tend to bring selling into that AMM market. And it'll bring buying into the micro tick market, bringing the two prices naturally together without the market makers having to quickly jump on and update their prices like you would have to with a typical Oracle. And so
+
+The fact that you can hedge the price on the microtick market is an advantage over a traditional oracle, I believe.
+
+Citizen Web3 
+As far as I understand the plans of Ethereum, technically, MicroTick can still have in the future its own chain, because it's going to be like a roll-up chain, Essentially, it's kind of the way they are Ethereum.
+
+mark 
+yeah, absolutely. mean...
+
+If we have a standard backing token, and that's the idea of the discovery token or whatever we end up calling it, if that token can be used as the same backing across multiple chains, all of a sudden, because it's just an average, you can combine the liquidity from multiple chains very simply because it's just math. It's not like an order book where combining an order book might be very complicated because you've got a
+
+take all the orders, it becomes intractable quickly because all the orders on the one chain would have to be combined with all the orders on the other chain. And as you do that, you might get crossed markets or whatever else. It's a complicated process. when you're just working with an average, it's two calculations. And you can combine the average on one chain with the average on the other chain to arrive at a combined price. so what you've got there is a...
+
+it a cross-chain oracle where the price is the same on every chain in a way that is hard to do with other types of setups.
+
+Citizen Web3 
+And I would imagine by the time the development will come to the point of not mainnet, but don't know, like production, let's call it that, because mainnet already happened in a way. I imagine there will be maybe some proper bridging that will allow to execute contracts from Ethereum to Cosmos. I don't know, will it be available there via more or less in a decentralized manner? But I don't know if, 
+
+How long do we have to wait for that?
+
+mark 
+It's hard to say. That would be exciting. think that's probably the next challenge facing blockchain technology in general, because multiple chains are not going to go away. The question is, do you combine and make it work for no matter which chain you decide to use? How do you offer services that are compatible and interoperable?
+
+Citizen Web3 
+A couple more questions about Microtick. About the project itself, I'm quite curious because a lot of the times we have like founders on and CEOs and we ask them questions like about the projects about and you kind of explained like the history you've said from where you started and why you started and how you ended up in Cosmos. But
+
+You mentioned as well, like the lack of funs and like quite a humble way of like doing the basically work in a volunteer way and not ever raising funds. So what would be your advice for people out there who are planning to start their own projects, regardless of whether this is an AMM or anything else?
+
+What would be your advice for them to do or not to do in specifics with blockchains, of course?
+
+mark 
+Well, I mean, it is what it is. It came together the way it did because of the personalities of the people that were involved. And every project is going to be distinct because you have different people involved in different projects. but in our case, I can't necessarily advise other projects because I don't know what their situations are. But I can say in our case, I'm comfortable with where the project is at. It's been slower to evolve.
+
+mark 
+Certainly because we didn't take the funding approach. I didn't want to take that type of an approach because I don't necessarily want to approach it as a centralized entity. I to put this out there. Initially we didn't. So initially we had the for-profit company and we tried that approach. We tried talking to exchanges. talked to many of them and it didn't...
+
+work so well, but then you get to the blockchain technology and what happens if you open something like that up and if you can attract developers and things in a decentralized manner. It's kind of an experiment. Will this result in something that is viable or will it just fall flat on its face? think due to lack of resources, I think the current chain hasn't done well and has fallen.
+
+on its face, but we're going to pick it up and pivot while being fair to the token holders. And we've got some, I think, ideas that are going to move it and eliminate a lot of the complexity and let's see where it goes. It's, it's, I've always said that it's a riskier technology because it hasn't been proven when micro tick chain was first started. We had no idea whether it was going to be a stable.
+
+viable process or whether people would want to use it. And we did some experiments internally that we got feedback that once people understood it, they thought it was really fun. And so I think it has potential, but I think we need to figure out the, and this is particular just to this specific project, we need to figure out ways to present it that people understand and are interested in.
+
+mark 
+So to answer your question, advising other projects, that really depends on their set of situations.
+
+Citizen Web3 
+I think I think they're like the advice I can hear from it. And this is what I was going to like summarize what you said. I was going to say, like, even though I'm a token holder, and that's an honest thing to say, I think what you're saying is quite important in a sense that like, I rather see a project with values, then understand that the project I'm investing in or participating in investing, maybe not even money, but investing could be time could be money could be coding could be anything  
+
+to achieve partnerships, whatever. In my opinion, it's much more important to see what there is like value to the project and it's coming in a decentralized way. And sometimes like I see a lot of projects which started off as one kind of like changing towards like the worse as they go. I would actually rather take loss. I know it sounds weird. I know, but I would rather take loss.
+
+but see the project stay true. I don't mean not develop, but stay true to its values and course that originally attracted me to this idea rather than make profit, but in a way that is kind of makes you think that, well, is it really a fair way to make profit? And I don't know if it makes sense, basically the lesson, what I'm saying, the advice I'm hearing from you is basically stay true to your own ideas.
+
+mark 
+Well, it's interesting you say that. mean, if we were to go out and try to get all this funding and become a centralized entity with my personal values, there would be a disconnect there. I don't think that that's a direction that I'm interested in going in. Someone else, I mean, I've opened up this project. The company, Microtick LLC, was disbanded at the end of last year. And the patents that we had,
+
+have been abandoned formally and are no longer, we're not paying for any maintenance on those or anything. So this project has opened up and someone else is that wants to come in and maybe they have the motivation to lead up a centralized entity like that, that would do development. I would love that. That would be something that I would contribute to. But that's not my personality type. It's not something I'm really particularly interested in.
+
+mark 
+doing at this point. I've startups before and didn't have a whole lot of fun with that. So I think you need to, like you say, be true to your values and understand what your objectives are. And in this case, Microtick's been an experiment from day one. And there's been no guarantees. I've put tons of time into it and resources. But it is what it is. If it succeeds, it's not going to be just me doing it.
+
+It's got to have other people involved. And so I've opened it up and let's see what happens, I guess.
+
+Citizen Web3
+I think kudos to that, we're like, think that's the right way to go. Well, this is my personality type as well. guess we can meet each other's values here, but it's unfortunate to see. I know that maybe some people aren't going to like what I'm saying, but over the years, I have not seen many people in blockchain stay true to the values of where all this came from, where all these ideas come from. I like the cypherpunk ideas, decentralization ideas. And I'm not saying that like
+
+blockchain has to follow the centralization philosophy. Those are two separate things. But still, in some ways, it's nice to see that there are still projects and people who do stay true to those ideas. And I think it's very important because if we didn't have that, there would be no balance between, I think, how the technology is developing. And I think there is still is, in my opinion. So kudos to that.
+
+mark 
+Yeah, well, we'll see where it goes. I mean, no guarantees, I'm going to have fun doing it.
+
+Citizen Web3
+Mark one last question to kind of like wrap it up. even though you're a Techie math person I'm still gonna ask it because it's more of a like broader question, but feel free to answer it in your own way, And considering again the journey you had what keeps you motivated in? waking up every morning and carrying on building
+
+It doesn't matter if it's necessarily my critic, but it's the ideas behind it, the strategies behind the price discovery and so on and so forth. What keeps you motivated?
+
+mark
+With my Microtick, it's been the idea of spent so much time thinking about it. It's hard to put it down. And so I just naturally start thinking along the ways of how can we improve it? How can we make the markets better? And since then it's evolved in how can we make blockchain technology in general better? And how can we take the lessons that we've learned and apply them in maybe slightly different ways to solve problems that are out there that maybe other people have that
+
+in the way that we're approaching things. So problem solving, number one, with maybe just a touch of competition and people saying it can't be done. So let's do it.
+
+Citizen Web3 
+Well done, that's a great answer. love it. Mark, thank you very much for coming on and for the old explanations. Really looking forward to see how it's going to go and develop. Thank you again for coming on and all the explanations, man.
+
+mark (47:58.161)
+Sounds good. I hope it was helpful for everybody that's listening and I hope it was and answered all your questions and thanks for being involved.
+
+Citizen Web3
+Thanks.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

@@ -1,0 +1,425 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cosmwasm
+
+Episode name:
+Values, Engagement & the Decentralized World with Ethan Frey
+
+Anna: 
+Hey, it's Citizen Cosmos. We are Serge and Anna and we discover cosmos by chatting with awesome people from various things within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code. 
+
+Ethan Frey: 
+I want to go to university, think, and study math and physics and quickly realize we're going to abstract realms we get lost into, in reality. 
+
+Citizen Web3: 
+This is the difference between holding a smartphone in your hands and Nokia from 20 years ago that doesn't have any apps on it. 
+
+Before we rock it off into our next episode, we are glad to announce the sponsor of our podcast, Cyber. Cyber is building a super intelligent decentralized AI protocol which can help regain control of knowledge and the internet by creating a consensus managed data relevance layer built using web trade technology by the users and not by corporations. 
+
+To learn more about the future of the great web, head over to cb.ai, connect to the app and start testing now. 
+
+Citizen Web3: 
+Good space time to you all and welcome to a new episode of Citizen Cosmos podcast. And today we are joined by Ethan Frey, who is the founder and the CEO of Confio and Cosmosm. And Ethan, welcome to the show. 
+
+Ethan Frey: 
+Thank you.  Great to see you both and be on the show. 
+
+Citizen Web3: 
+Great to hear you. We've been chasing you for a little bit, not too long, but a little bit. You're a hard man to get. 
+
+Ethan Frey: 
+Summer is busy day, busy month. 
+
+Citizen Web3: 
+I like that you said a busy month. That means it's so busy that it all concentrated into one month instead of a season. 
+
+Ethan Frey: 
+Yeah
+
+Anna: 
+Let's start with your personal story. It seems that our roles in today's world become so widely diversified that we can start saying founder or C-level officer. You know It's so little about the person in question. Tell us a little bit about who you are. Are you an engineer, a system architect, a developer, a visionary, or maybe something I can even imagine? 
+
+Ethan Frey: 
+Well, I think of so much more than any role I have, but my role is engineer. Basically, I started as working as that developer right in code. And from that, I became a manager for a while. I was working at IOV as a technical manager, basically VP of engineering, writing as well as leading a team. And with Cosmwasm, I became an entrepreneur, I guess you say, right? I started a project, I got funding, I was making pitches and doing all that as well. 
+
+So I've taken these various levels. I also hope that can evolve there and become a visionary one day. I don't have to worry about the entrepreneur aspect and all the engineering aspect and really just to know, imagine what can happen here. So I got brought into blockchain for the vision so it can happen and hopefully it can evolve. 
+
+Citizen Web3: 
+We know that you studied your biological modeling if I'm not mistaken. How did you end up from that in the decentralized world? How does that go from that to that? 
+
+Ethan Frey: 
+Well, biology is a real decentralized world. If you look at it, it's the most decentralized world we have and the most complex systems we've ever seen. So I mean, I went to university, think I'd study math or physics and quickly really like to go into abstract realms or get lost into, to catch from reality and ended up going for two more practical cases of computer science or biology and I couldn't quite pick. So I went in both and computer science is amazing. 
+
+I could build and make something real, kind of tangible from these ideas. And biology was just inspiring. It's the most complex machine engineering creation that we have. You can study one cell, be amazed and then try to understand the brain, the immune system, the development of biology, how one cell turns into a fish even, not let alone compound eyes. It's truly mind boggling actually. 
+
+And then we think of ecosystems and the whole planet. It's amazingly complex. We don't even know how it works. We have no clue. 
+
+We have these little pieces here and there. We understand that it's amazingly complex. So it inspired me a whole lot. And I love to use inspiration from this in designing systems. 
+
+Anna: 
+You're a little bit a system designer. 
+
+Ethan Frey: 
+Yeah. 
+
+Anna: 
+Yeah. Okay. Okay. 
+
+Citizen Web3: 
+You said like you don't want to go too deep into that, but actually I'm going to pick on you a little bit here because I like to think of myself as an ecosystem developer and also far from that, I'm quite obsessed with a lot of biology and recently I've been like more obsessed with the endocannabinoid system and all the recent studies that have been done into that. And I mean, it's obvious the resemblance between the centralized world and architectures and biology, as you say. So do you still read papers on neuroscience? Do you still go into that? 
+
+Ethan Frey: 
+Yeah. I haven't heard neuroscience in quite some time. I kind of left it a while in the mid-2000s and it was, I mean, I'm a little bit older than all you guys, right? 
+
+So I finished my bachelor in 2000. And anyway, when CRISPR came out, the gene editing one, I just got into more reading what was going on. It seemed like they took actually quantum leaps beyond what I understood of modification. It's actually pretty, both impressive and scary, what's possible these days. I think it's powerful, but depending on how it's being used, I've looked at that some and more than that, it's an ecology. 
+
+So I mean, the environmental problem is first and foremost for 20 years, but really last five years, completely there. I'm trying to understand how the interactions of species, it's amazing to say how the brain works, but then you say, hey, how do the trees in the forest, which is, it's pretty impressive, actually. And I only know a little bit. And this is kind of one of the regions for some months, because I was totally inspired by the same vision they have. 
+
+Citizen Web3: 
+For sure. I mean, we had a conversation with Gregory, and I think it was last year, if I'm not mistaken, in the summer actually, about a year ago. And we talked a lot about that. And with Billy as well, actually, Billy was very profound on how deep we went into talking about not just technology, but into how technology and a lot of the mind have so many similarities. But let's talk about your projects. 
+
+And when you research Ethan Frey, or when you research Confio, we see that other projects come up with Tigray, Confio, Cosmwasm. How do you manage all that? Where do we start? 
+
+Ethan Frey: 
+How do I manage all this? I have no clue. I started doing something, there's something else, give me a launch, I'll do that too, and do one more thing. And at some point, my co-founder says, basically, Ethan, I know you want to do a new thing, but anything's easy for you, but not everyone else can follow you. So you have to limit what you're doing, which is true. 
+
+I can't just start a bunch of things because somebody needs to finish them, maintain them. So yeah, I mean, I started Cosmwasm at Hackathon, and that was actually a really awesome team there. And we had Aaron from Regen and Yehan from Athea, now in Formal, using the Gravity Bridge stuff out there. We had Shane from Stargaze, Stakebird, I think Stargaze these days, and actually Peter from Wild Connect, who's doing awesome stuff too. And somehow we ended up one team of just the random people and built Cosmwasm and a UI for Cosmwasm for fun in two days. 
+
+And they said, hey, this is cool. This is the most inspiring tech I've worked on for a while. I'm just going to work on it straight for tech. And from then it just evolved and evolved, and suddenly it turns into a project. 
+
+And so I can need to build the Wasmd. And then, hey, we need good JavaScript engines. There's no good JavaScript clients like Web 3 for it. So we started Cosmjs to build that. 
+
+And a good colleague of mine, Simon Wurta, worked with the four, had built similar engines. So let's build this out there because if people are building smart contracts, they need a very simple JavaScript engine to run on them. So, okay, so we have this Cosmjs, came out of it. Then there's a relayer problem. We know relayers are going to support contracts. We built the TS relayer. And, hey, we are trying to get funding for Cosmwasm. We have some grant funds. No one, even if people are making millions and millions in the blockchain using Cosmwasm, no one really want to pay for it. So he said, hey, consulting is not working. 
+
+Grants are nice, but I don't want to last too long on grants. So how do we make something? Let's make a blockchain. And after about six months of discussion, we picked T-grade, the whole plan of T-grade, which is pretty cool. 
+
+And Gino's kind of, people say, hey, just make a smart contract chain, launch it, which is what Gino is doing. I think it's fine. We said, no, if we're going to do one, we want to do something more, not just a simple one. So pick a hard one, that's a topic. And as a part of T-grade, we're building up proof of engagement. So we're placing the whole DPUS system from Cosmos to another system, which I think is actually more secure. And we're building an entire governance system on top of it. And so just throw a few more things on top of it. 
+
+Citizen Web3: 
+That's good that you, though, have a sense of, on this, like when you explain it, I mean, it's quite obvious to me at least. And I'm sure that everybody can hear that you have a sense of how you put those projects. And you still remember all of them. 
+
+That's a good sign. I'm going to ask some simple questions here. So because we want to learn from you, from what you say, and from how you explain it. But before we go into that, let me just understand, Confio is the project that is like the mother project, right? Is that correct? 
+
+Ethan Frey: 
+Confio is a company. There's actually two Confios. Confio OU was me for a while. I started in the blockchain and it was annoying to write invoices internationally and worry about this loss. I started with a company and the company is, I can build my company and I employ myself as a company. And so all the international stuff and corporate expenses goes there, the business accounting, and then I have my personal bank account. So all the money goes to me is just income and I pay taxes on it. And I don't have to try to do deducting and fee payment and income and deductions in my personal bank account. It was just a pain. I did that briefly one year and I found this nightmare. 
+
+So I said, I'm just going to separate those two. It was a simple one person consulting company, basically. And as Cosmos got big, I started getting a few more contractors on it. 
+
+But we couldn't really give employment contracts. So we founded Confio GmbH. So the new Confio now you see is Confio.gmbh, which is actually a German company with all the IP basically moved over there, the employees are moving over there, getting employment contracts and everything proper. So it's a very proper sub company. It was meant to be a larger holding company rather than one person consulting company that has a bunch of subcontractors, which was not very stable. It was a nice short term solution. So that is what Confio is. And Confio is running all these things. Confio is running, maintaining all these projects. 
+
+Citizen Web3: 
+Before we go further into detail, what about Cosmwasm? I mean, Cosmwasm is obviously like a smart contract platform or somebody says a smart course from, I don't know, how do you describe it? 
+
+Ethan Frey: 
+I think Cosmwasm is EVM, it's Ethereum basically. And not Ethereum, it's GEF maybe or EVM, right? Don't think of Ethereum as a blockchain. It's not the blockchain. The same way you have, you know, the Ethereum blockchain, the POA blockchain, you have XDI, you have Matic, you have Binance Smart Chain, you have some Hyperledger project based on it. 
+
+It's a million places and every loose is validity and the use validity in like 500 different blockchains. That is the goal of Cosmwasm. And maybe we're not going to be head to head with Ethereum. I don't really care that's a market they have. But in the Cosmo ecosystem, we're established of as basically the thing. 
+
+So it's in secret and terror right now. And I know there are quite a few chains waiting for a one zero provenance. Persistence has been playing with as well, actually. 
+
+Provenance is there and Crypto.com have been looking at quite well and have it on their Iris net also, test nets. I think they're all waiting for one zero out there, stable one zero release. Juno is coming out there. I know the Stargaze is also using it and Region had them doing a test net. 
+
+I'm not sure when they're going to enable it fully. And a lot of it's a list of NIM. NIM is building heavily on it straight up. 
+
+There was actually really, really cool. They're very heavy Rust developers. And so I think they've given it to actually some very nice feedback because they look at it and say, this is so much easier than SDK. 
+
+It's awesome. If you're not worried about the Rust, if Rust makes sense to you, then the programming was super. They're very, very happy with the API. 
+
+So it's really nice to get feedback. So that's the huge thing there. And the idea here is it Cosmwam infrastructure level. It's GE right. So everyone's going to fork and integrate in their own chains and have 10 different chains out there. And as a contract developer, you just learn one language and you can employ your contract anywhere you want to. And that is really the power here to set up an ecosystem. 
+
+So it's not Cosmwasm. Everyone should use it. And I'm happy if people figured it out and embed it into a substrate, which we wanted to do, but well, substrate didn't want us to do it. 
+
+And other language, I'm happy people do this in other chains too. But basically, you said Cosmos, if not smart contracts, you just embed ours easy for everyone to embed it, to customize it, to do what you want. But now as a contract developer, you can just write once and play everywhere in the same language, the same skill set and really build up the same tooling that we can share and we're working on really building up common tools. So I think this is the foundational level. For me, Cosmos is the first infrastructure level we built, along with CosmGS, which is basically for people building apps. And they take these two of them and they're just givens. And everyone can learn these two technologies and then build anything they want to on top of them. 
+
+Citizen Web3: 
+This does sound like I would say that developers kind of dream and you kind of already answered the first part of the question or part of the question that I'm going to ask next. 
+
+The question that we had in mind was for the interchange ecosystem and by the interchange ecosystem, we mean the end users, not just the developers. What is the value proposition of Cosmwasm? And you explained what's the value proposition for the developer. What is the value proposition for the other types of actors that are going to be... And I want you to explain it in simple words so that anyone can understand it as soon as they listen to this. So they will listen to this and they'll be like, yeah, okay, I get that. 
+
+Ethan Frey:
+More apps faster. 
+
+Citizen Web3: 
+I love this. Brilliant. Excellent. Excellent. This is what I wanted to hear. This is what I guess all of us want to hear. 
+
+Ethan Frey: 
+There have been three upgrades in the Cosmos Hub in three and a half years. It was early 2019 at launch. So almost three and a half years. There have been three upgrades. 
+
+They're slow. And the recent one was the first... And I think there's actually no. It's four because the Dex one was done live upgrade. 
+
+It wasn't Shain Restart. So it's four. And the last one was the Dex... 
+
+Does it add IBC? The Dex, the first application. The last one, the fourth one, was the first time you add application level changes to it. Where it's not just staking, but you actually added a Dex to it. You build a new app on it. It's cool. Everest and Gaby Dex is awesome. 
+
+So I'm totally happy with it. But you think of it, what is this rate here? So you build infrastructure, building infrastructure, building some stuff. You deploy an app. 
+
+Maybe in six months, deploy a second app. And it's fine. And they go for stability. And they're building really important key apps. And building IBC as a hub is great stuff. But you see this level of speed. And this is blockchain, normal speed for blockchain. 
+
+Rebuilding the code. Terra, they put Cosmwasm on there, and it had their app. And they deployed within six months, I think they deployed TerraSwap, Miraprotocol, and AnkerProtocol, second derivatives as well. And it was... I mean, they didn't have... They had one Rust dev, kind of, in the start, but they're struggling to have any devs. They even knew this stuff. And they built their entire Rust team up. And they built three apps and launched them in six months. 
+
+So I think that was a totally different speed proposition. And of course, other people can launch on their platform as well. So you can de-stretch what I was saying. But as a user, if you have tokens on a chain, it has smart contracting platform, you can kind of expect to be more messy a little bit, because maybe other people contract on there. But you can expect it to develop much faster, to go richer, to change, to evolve. And you'll have more things you can do with your token. 
+
+Citizen Web3: 
+Would it be safe for me to say that, if I were to summarize what you said, that this is the difference between holding a smartphone in your hands and Nokia from 20 years ago that doesn't have any apps on it, it's just... 
+
+Ethan Frey: 
+Something like it. And you get your new phone, Nokia will give you a new phone, the new phone will have some new features in it. And then you get your new phone every two years. 
+
+Citizen Web3: 
+Okay, we want that, yeah? We want to progress. Oh, I remember spending hours and hours in school. I remember we used to have this first thing. She's still trying to build it up and build it up.  
+
+Ethan Frey: 
+Totally. You don't have a smartphone, but yeah..
+
+Citizen Web3: 
+Anna, you had a question as well in relation to that? 
+
+Anna: 
+Actually, I want to be back to that analogy of backhand and fronthand. So what is the role of blockchain then? Today it's a really important question to discuss. What is blockchain? What is Cosmos in terms of classic system architecture? Is it that part of backhand or not? Or what is it in the system? 
+
+Ethan Frey: 
+That's a good question. It's all kind of word. Distributed, replicated, isn't even fault tolerant state machine or something like that. That's what Ethan Bucking likes to call it, right? And someone can call it just a glorified database, which you can also call it. And these smart cons are just store procedures. 
+
+Someone can imagine that. Well, I think for me, the blockchain is for me backhand. The blockchain is that of the apps of the front end, right? So you need to have that. And I work quite a few years in web development and you'd have the front end back end. And first of all, you maybe have one app that would basically do the database and you have a back end and you'd survey HTML directly. 
+
+You use it, right? And then you separate those out. You have this single page app or the mobile apps that connect to an API server. So if we think of that, the second one is much more like we're at, right? So this is as of 2010 or 12, kind of how the apps are built these days. The blockchain is the back end. It's the database and your business logic. 
+
+And then you want to build a D app to the front end, which is either the mobile app or the web app or the React app or the Vue app, Angular. And that for me, these things, they go together. You don't know what makes sense, but the blockchain itself is just the back end. 
+
+Anna: 
+Good analogy. And I love your refer 2010. And to the time then API become part of basic delivery because if you have a service now, you should have API. 
+
+Ethan Frey: 
+I was very happy that REST JSON won over XML. That was a very nice XML ones. 
+
+Citizen Web3: 
+When you were describing what a blockchain is, the word that came to mind was a magical mystery tour, the Beatles song, but okay. But 
+
+Ethan Frey: 
+that's just like... It's kind of, you know, they want to, but in my mind really is just a back end. It's a reliable back end. It's a back end with no admin. And that is actually very important piece. It's unhackable back end with no admin. For me, that's really the key point. You think what actually needs that, right? So if it is me showing people football stats, it probably doesn't really matter. 
+
+If those football stats aren't that if I'm placing bets and people have lots of money riding in it, well, they probably don't want me to be able to change those numbers as they want to. So in the end, where do you want to have something? It has no admin and unhackable, right? And usually there are two places. One is money and the whole DeFi token realm, obviously, that is governance. The votes. 
+
+I mean, if you look at the countries, don't let the hackers get into our vote machines. That whole theories of that. And so I think these are two key elements and there will be more. 
+
+These are two key elements you understand right now as places you actually want this. And right now, we have done them. We say the banks control the money and the government has election boards and stuff that controls the votes. And you can see some countries have worked quite well. In other countries, it doesn't really work. 
+
+And that's a big difference in functioning democracy, not functioning democracies, is how election machinery works. So I think I'm very, very interested in applying it not for money because I mean, everyone's doing that these days but governance. And that was one of the things that really, really got me interested in the blockchain was not just inventing new tokenomics, which is interesting, not just building a tech, which is extremely interesting. 
+
+And I think Cosmwasm was one of the interesting tech problems that I had in quite some time. But building governance in some situation where they say, hey, we truly have governance that is transparent, it's not corruptible. 
+
+Citizen Web3: 
+This is good thing that you've taken the conversation here because I think, first of all, I would like to talk about performance engagement for a little bit. But before we get there, it's, I think, important to recognize that the blockchain isn't just a DeFi tool and DeFi is just the first product market fit that we managed to find and grade that we found it. 
+
+And we can see how it uptook, like, lifted off. And I'm sure that we will find plenty of other product market fits, like in governance. And this is what I wanted to talk to you about. And you said no central admin. And I'm going to pick at you a little bit again here because I don't have a huge understanding of performance engagement. But as far as I understand, it's proof of authority, right? Proof of engagement? Am I correct? No? Okay. Okay. 
+
+Ethan Frey: 
+We looked at proof of authority and you see the clear problems there. So one person's admin is problematic. Having 10 or 20's admin is better. They hold each other accountable in some way. It's like a giant multi-stake. And if you look at PoA network, they've done some interesting stuff with that. That was one of the primary ones. It went out of just corporate place. 
+
+I think it's interesting. They had some advances there in terms of reliability, accountability, discussions. But they actually issues there too, especially if you're holding large amounts of money. Proof of stake is very powerful in a way it showed. And not just early proof of stake, it was pretty broken, not a consensus proof of stake. A lot of these early changes were using like Lisk and stuff like that and BitShares. But I mean, the 10-minute one, and I mean, I was just saying that polka dots, implantation and Avalanche, these are all proper implantations, BFT. This proof of stake stuff, it says, hey, we've got money on the table. 
+
+It's skin in the game. And if you act up, you get slashed, and so the big people get there. And for me, it's a plutocracy, honestly. So the proof of authority turns into oligarchy, and proof of stake turns into plutocracy. And I think you had this delirious proof of stake, and I think it's even more of a plutoc- It's a weird game because it's not even your money you're playing with. 
+
+You kind of play the other people's money. Which I think turns into kind of some marketing plutocracy, where it's like who the big hype machine, and also loads of strength. So in terms of security, I think the delegation is not actually that cool. It's great for rewards, money, defy. But in terms of security, the chain, the D and D-POS is pretty much a bad idea. 
+
+It's awesome for tokenomics, but bad for security. Let's assume straight up just other stuff, you have POS, which is basically you have plutocracy, another one is oligarchy. You see, these both have different things. One of them says this is the people that have the money, and are running the businesses, and are investing their money, putting the money into it, investors have a say. 
+
+And the other one says, okay, just the old guard has a say. And that's not dynamic. But they've maintained stability in some way. And I think combining the two, those proof engagement attempts do, to actually take the two of them and have a curve between them. Basically, the bonding curve, and it takes two inputs, it's not really a bonding curve, a sig-boy curve we're using, but yeah, it takes two inputs of the engagement and their stake, and use that to get the voting way. So I think that's basically trying to allow a dynamic element into it, as well as authority. So if some random person comes in with a bunch of money, they actually have to have a little trust before they can start doing anything. And the guy that'll have trust that puts nothing on the table, just talking hot air and not putting any money on the table, also has no power. So you need to really have both those. Some trust in the community and some money on the table. 
+
+Citizen Web3: 
+Recently Vitalik actually released a paper talking about DAOs. But what do you think about it, because a lot of what you say kind of relates to what I read. So what do you think about what you were saying? 
+
+Ethan Frey: 
+I agree heavy what you were saying, the DGov stuff, and the fact that DAOs have broken governance is totally true for me. And this is stuff I've been saying for three, four years. 
+
+So I think awesome Vitalik says it, so people will listen to it now. Because no one listened to me for a while, honestly. Oh, not to whine about it, but seriously, I was trying to say the whole governance system on Cosmos was kind of broken back in 2017 because you have any way of off-chain. 
+
+The form is nice, there's something there. But really, there's a lack of any government infrastructure to really do that. And I'm not just saying the fact that you have one token one vote and buying it, but the fact there's no real infrastructure to have these large debates. It's kind of like some random telegram group here, a Discord group in the in-crowd discusses something, they decide to push it, and it's not transparent. It's not clean. 
+
+It's not saying, hey, we have an open place that people can do it. And the idea, I was actually with Goetier designing this in late 2017. I think an awesome idea. I'd love to build this now. 
+
+Now I have my own blockchain, I can build this. But basically saying you'll have a platform for debating governance. And people that have actually votes, who have tokens in there, the proof of stake or the voting rights, they all log in and identify themselves. So you're kind of linked, so you need your key to log into it. 
+
+You sign messages, it's now done in normal Ethereum. You get in the site and just the people actually, have some voting rights, are speaking on it, not just random trolls. And they can discuss stuff. They can debate stuff, they can propose stuff, they have counter arguments. 
+
+And it's kind of the forum, but more designed for this discussion, to really bring discussions to fruition. And that's done before you put something on chain. I think so many things go on chain that people will say, then, oh no, even proposal, wait, let's change it, let's change it. And there's like three, four versions of proposal before anyone actually says, okay, that's the one we're gonna vote on. Because discussion happens after it's on the chain. And that's ridiculous. Like you really want to have the preparation. No one makes a proposal, a lot of vote. 
+
+And then decide, hey, throw it away. They've had like weeks and discussions before it gets proposed to vote. And I think that's really essential to build that infrastructure, to have that, make it transparent. 
+
+Not in hidden telegram groups and private Discord channels, really transparent and open to anyone that has a say to say it, as well as kind of have a spam protection that, hey, if you have nothing to say, if you're not in a group, if you're, you know, I don't know, a Bitcoin fanboy, you're not even going to interrupt our conversation. 
+
+Citizen Web3: 
+It's good that you bring it up now. I mean, I don't know when this episode is actually going to be released, but we're recording it literally like now. It's a nice summer's day, but recently we had all the events with Althea, and to me, to be honest, it's a little bit like too much drama, but it arises from exactly what you say from the miscommunication in those private telegram chats, in Discord chats, and it's a bit annoying to see that we are trying to move into a distributed world, and what we're doing is we're using web-to-closed tools in order to discuss things which we're like building another layer instead of like distributing, we're distributing a layer and then trying to centralize that layer by putting that into like a private, private telegram chat. It's like so ridiculous. I mean, hey, I mean, what's going on? 
+
+Ethan Frey: 
+Yes, and so I agree completely. It's ridiculous. We really need to build something better. And if I know what it comes because the people designing these systems don't know government, they don't understand human governments. And so I like Vitaliks argument. 
+
+It was great. It was Christian of DGov, and the problems of it, once you have lots of money involved, is a great argument because it focuses on the game theoretical elements often, right? You can buy votes, et cetera, et cetera. And for me, the problem with governance really is no one cares about it until there's something at stake. So you can kind of divine a financial system that works all right when there's a little money in it and it gets better and better as more money comes in, maybe no one tries to hack it, but at least like it, you kind of see your idea of how the AMM works when it has 10,000 in it versus 10 million, but kind of work the same. Governance is a whole phase shift. When you have governance and there's $5,000 in the pot, no one cares about it. And there's a million you care about and there's 10 million, like it's a total different focus voting on something that actually has lots of value and really hard to people's heart. And it totally changes how they behave. 
+
+So I think it's really hard to finally have not been able to really test these tools in reality under these conditions, totally different conditions. So I think finally with the money in these DeFi protocols and DAOs, people start actually realizing what governance is when you have all this at stake and realize the failings of it. So I think it's cool he points out the game theoretical points. 
+
+And for me, it's a human point. Like I said, having the organizational patterns, you have a doubt and people just vote on stuff. And but why they're supporting in the own personal opinion of whether this is making profit for the Dow. And maybe they listen to the tweets that go out on the Dow. But where do they have a deep discussion of something makes sense? And where do you have the counter arguments where you say, hey, this investment is not the hottest investment, but it's a long term investment. 
+
+It will pay off in two years because of blah, blah, blah. This level of discussion in depth is ridiculous. Tweet as a medium is for me, we're going back in time. Like you're forced to put a few sentences and it's all like sound bites and memes. And who can have a deep discussion in that noise? 
+
+You can't. For me, it's great to get publicity. It's great for advertising. 
+
+And it's great to get attention, but it's not for having discussions. I miss things like email, where at least people put time to think of something for the set more than a tweet. And at some points, I kind of wish I write letters again, because you know, you think about these things right now in a book. And often when I want to think, I will either close everything on my laptop and just have a office, you know, wherever, doc, program on and nothing else. Or I'll just pull out better, closing in Peter, pull out my notepad and start writing my hand because I can focus. I can focus. 
+
+No distractions. And I think this level of discussion needs to happen. This level of thinking, reflection, discussion needs to happen if we're going to make a better world, if we're going to make any changes. 
+
+If not, it's just knee-jerk reactions and who gets attention faster, which is unfortunately where our world is going. And I think I would like to build something else. If we're going to build something on the blockchain, we need to build something else. We just need to do it differently. 
+
+Citizen Web3: 
+As you talk, I'm looking like with my eyes and my notepad and my pen because I'm the same. If I want to write something that meaningful to me, I'll take a pen and a notepad, close the notebook and I'll start writing it until it makes sense to me. And then exactly as you described, it's just like spot on. 
+
+Anna: 
+Yeah, you know, the method where you can share your thoughts with other people and you start to work with stickers and put one sticker with one thought and another sticker. And finally, you have like 100 stickers. If you do it with several with others, sometimes it's even more. And you can start to group it into some clusters. And then finally, you can figure out that the things is not the same that you think about it. It's have another values and other layers underneath. 
+
+Ethan Frey: 
+I think it's awesome you say that, actually, because we're just talking right now about discussion, tweets and emails and this is all asynchronous. And when you make these stickers and going, it's really a synchronous thing. You have a meeting, you have one shared screen or actually in person is best. 
+
+I remember that you sit there and you have a whiteboard and a bunch of people and you start putting things on the wall. And that shared space, that synchronous shared space is super important really to get that understanding. So it's great for me to think what I want my own and maybe discuss it with you. But to get that shared understanding and synchronous space thing is super important. 
+
+And at the end of the lots of techniques, there's many, many techniques to get this collective intelligence and the collective insights from a lot of people. Which is better than any one of us has. It's not my argument versus your argument. It's me and you coming together and finding out that we have a third way that's better than I or you could individually have made it all. It's actually better than both of ours. And I think that synergy, that creating some higher understanding is what we should work for in governance. 
+
+It's not just do we have A or B. It's really how can we take all these people that are smart, intelligent, come together and create a higher ideal, which is actually the best idea that we can collectively come out with. And not the lowest common denominator that can sell to the most people in this group. It's a very, very different approach. 
+
+Citizen Web3: 
+End of the day, even money is a communication protocol. I mean, people communicate without communications. And it's easily proved that we are social creatures. I mean, if you take a person who is in coma, but he can still think he's not part of the society, even though his brain thinks, but you can be stupid and can be part of the society. 
+
+It's unfortunate, but I want to ask one question before I would like to move on to Tigray a little bit, because it's a good point, I think, to move to Tigray from here. But you mentioned values when you were talking about what's important to us. And the question that I have is how does one signal an emotional value or something that is not an economical value on chain? How does I mean, because you set up a voting, right? And people vote a lot for whatever is valuable for them. And you gave an example of an IMM. And of course, that that's an easily measured example. What if this example is not easily measured? What if it's because I feel something that's meaningful to me because of my emotions? How do I put this on chain? 
+
+Ethan Frey: 
+I mean, that's a very good question. I'm not sure it all belongs on chain, actually. A lot of it can be off chain, which are things off chain site that is kind of based on log into Tigray or other things. The multistakeholder signaling, and you're right, putting money in is voting, and where money goes is voting. And it's one kind of voting we're used to because we get this market think. 
+
+And it works for some class of problems. If there's three alternatives and the one people that money into is the one that is most desired and that should produce more. And the other ones are not producing good quality goods. And there's a class of problems that don't involve communication. It's basically we can aggregate a number of individual choices and aggregation of a number of choices is a collective choice. 
+
+And there's a class of problems like there's five stores selling food and there's only enough people to support two of them. Everyone goes to place their favorite place and eventually the two best places stay. These are places where a sum of individual choices gets to a good collective decision. Voting for money and market decision making handles those class of problems quite well. There's a whole other problem like a couple of goods, paying for water. Like if everyone says, pay what you think for the water and no one pays for the water and then no one ever builds a water treatment plant and we're all suffering. And these are places where some kind of collective action happens and typically the state or government has done that. 
+
+And there are places where it is needed for collective action. So, didn't go off. But yeah, I think there's those signals. 
+
+There's something working on it. No, I don't know if you know the common stack people. There's a CAD CAD and common stack. They didn't really cool token engineering work. 
+
+And they had this deal. I think it's going to continue as a voting. I'm totally blanking in conviction voting. 
+
+Conviction voting is pretty cool of the signaling mechanism. And you could do off chain too, possibly definitely shouldn't be doing a solid on Ethereum on chain. You could maybe have a cheap chain like a cosmwasm chain is cheap enough gas or you do off chain. But the idea is this is like you have 10 different positions and you put your state, your votes, which is made money or maybe it's whatever you have, but you're voting on one position and the longer it stays there, it kind of goes up in value. And then you change it. 
+
+And this is a late period. So if I'm sticking on, oh, I like this place for a while and then it changes another one every individual value in that one. So it's kind of moving slowly. And the longer you stay with one thing, the more your values change. And you can be changing your mind every three days is not as valuable as a person staying really true to one idea. 
+
+They staying with it. I think it shows not just how many votes you have the intensity and the conviction that you have these behind these votes and using that as a way of voting and not necessarily that you control. Yes or no, we're going to buy this thing, but a signal and a great way of signaling out of many alternatives, which alternatives are there and how they evolve over time and what you're interested in. And that's a great signaling mechanism of kind of get capturing kind of collective views. 
+
+Citizen Web3: 
+It's obvious what inspired you now to do that. So that question is out of the way. Fixing governance, which is a great, I think, inspiration, you know, trying to make things more equal. But let's talk about Tigray for a little bit. What is Tigray in your own words, apart from decentralized governance platform? What is it going to do? What's its purpose apart from trying to make governance decentralized? 
+
+Ethan Frey: 
+There's many purposes, but so I want to clarify, we talked earlier, Cosmwasm and CosmGS is kind of foundational level. People build their blockchain time. Tigray is one of these blockchains built in the financial level, providing a platform that we can build their apps on top of. And because Cosmwasm is very powerful, we enable people to build apps more complex than we've ever done in Slidden. Definitely I built stuff here that I would not even imagine doing in Slidden, especially trying to get them audited because of the issues there. 
+
+Yeah, you can write this stuff back and write it production grade, no flaws in it. So the level of complexity of build increases. Tigray, again, is trying to say we're going to allow you to build not just blockchains, but applications a higher level of complexity. Because we are providing you lots of components. 
+
+The main focus here we have is governance, particularly in self-sabbing groups regulating themselves. The reason this is very timely is because regulations are coming to DeFi. We've seen Binance hit down about three, four, five lawsuits internationally. The infrastructure built in the United States has made very strict regulations on DeFi. Micah from the EU, which is a looser hand, but basically saying in three years it better be under regulations because we're starting to move them in and they have pilot regimes and stuff like that where they're going to test out a combination of blockchain finance and regulations and promote these things while they slowly try to phase out the other one. 
+
+It's a little softer hand than the US, but same direction, all going the same direction. So we don't want to become the blockchain that says the gatekeeper and regular gatekeeper and else. And we aren't building that. What we want to build is allow people to build their own regulated groups. Now, if I make a group, a trusted circle on T-grade, is five different UK banks and they onboard all of their members, their clients as members, they create a circle and that circle consists of a bunch of people who have all been AI, ML, KYC checked in the UK and they can issue securities in this thing they want to because it's all legit now, right? Because it's not illegal, it's just securities, illegal securities are the proper thing. 
+
+So they now issue securities, you look at it from a perspective, it shows you a little form about it and now you can buy your Tesla stock in their D app in DeFi and swap it. Me and you can trade as long as we're both customers of the banks. I'm one bank, you're another bank, but we're both customers of some UK bank here and we're on the list. We can swap this all we want against dollars and atoms and Tesla stocks and all we want to because now we have fit the regulations and it's just like trading the stock market. So we can allow them to do these things, you can allow big finance to move in. But it's not just big finance, we can allow communities to build it. So you could have some community in Greece that is having a financial crisis and they decide to create their own money and they create the onboard people based on whether or not they're there and they allow them to do self-solver and say, okay, you know, a group, we can trade it and it's kind of digitalizing what they've been doing for centuries, which is if you see, especially in Southeast Europe, I think, number of stories, but around the world, you'll make your own money. If you have a community with little money, they start making their own. 
+
+It's usually the guy in the store, the general market is issuing chits and chats and notes or the mayor issuing these little notes and that is their money. So we can allow that same thing, community currency, to issue the same thing, the same rules and they would have some sort of governance and not just whoever owns it owns it and so when buys up the community currency and the bank now holds the community currency, no, we can say, hey, no, it's us, it's belonging to us. So it can be both extremes and you can fit any rules you want to. 
+
+So you can have the UK rules, you can have a Singapore rule, you can have your local rules, which are just basically having met you in person. Yes, you're on here. Will you good-bye? 
+
+Do you have an nice beer with you? Yes, yes, yes. Okay. 
+
+And sure. And whether or not the government can respect those rules, if you get shut down or hassled, that's your choice. But we want to allow that to create these things. And so by allowing people to create these kind of regulatory friendly circles and taking the existing DeFi technology and easily embedding in there, we allow, I think, another class of experiments that should be working for the future. So one, you allow some limit to their self-governance and self-regulation, anything self-sovereign circles, and then they can embed their DeFi inside of that. And I think reach higher levels. 
+
+Citizen Web3: 
+So when Tigger don't buy an answer, no, don't answer that. That's a joke. Do you think in your opinion that you mentioned that the regulations in KYC, in your opinion, shall the decentralized world rather strive to a point where it tries to eliminate all that, or the opposite, it tries to embrace that and fix the problems that exist, or if it's a decentralized world, it says, sorry, I'm not going to try either because it's a decentralized world. So whoever wants to do whatever they want to do, they should do whatever they want to do. 
+
+Ethan Frey: 
+I saw an article recently. There was a man in British Citizen who was in Singapore. He refused to wear a mask. It's legal there. So they pulled him into court case. In the court case, he argued he was a sovereign citizen and above the law of nations. Fair enough. This sounds like the DeFi world, right? And you get his argument and the judge says that's full of bullshit. 
+
+Six months in jail. It doesn't matter how much you believe those arguments. You have to go into the state. And honestly, in German, this nice word, Gewaltzmanapol, the state has a monopoly on violence. And the laws are enforced by that. And that's how it exists. 
+
+You are a human being. You are living in some country. If the country disagrees with you, it doesn't matter how clever your arguments are. If the country disagrees with you, even because you violate the laws. 
+
+Hey, follow the laws, but they don't like you because depending on the country you are, you're in jail. So I think we have to realize this is truth. So originally, you know, Bitcoin, Cyberpunk were a new world and it's great for a while until they even cared about it. And when you 2017 and the money started flowing like crazy, then all these governments are looking at it. It takes a little time to figure it out. 
+
+And what's going on here? They figure they can trace everything. They trace the inputs and outputs and they can do this. And it's all transparent. 
+
+So like, sure, everything is going to get watched. And if you're big, you get hit. And if you're small, well, you're low on the list. No one's really safer in this world, honestly. So it's coming. 
+
+We can't stop it. If you want to create some fully anonymous thing based on the Tor network and probably honey badger consensus mechanism and fully decentralized message things, and you can make some dark net cryptocurrency that may be not governable by that and has no ties and decentralized exchanges. That's totally one could build that project, right? 
+
+That project could be built. Basically, it's regulatory free one, but it's not where the one's coming in the newspapers. And if you're there and you have these large groups of people coming there, normal people investing in it, you will have to fit regulations because they will be busting people and they start living some of it and they'll be doing more and more. 
+
+So for me, there are two ways of trying to fight it and say, I'm a sovereign citizen, I'm a void of the rules of law or say, hey, they're coming. We better shape how it works. So let's shape it. We don't want to have to go through the exact same rules they have, but say, hey, we will give them, we'll make a counter proposal. 
+
+So we have this fully decentralized defi one sense and you have this fully regulated bank system old school. We don't like it all, right? So we have these here. 
+
+We say, hey, let's make something else. Let us create a regulatory friendly defi system that implies with the important regulations, which you are really important to you. And maybe not every little detail and maybe it's more customizable than the government likes, but we will check the main boxes. 
+
+Let's propose that. And now they say, hey, we can work with you guys. And so at some point, I expect, especially in Europe, the microchip is much more on the pilot project and let's work with you. I think choosing something that will help shape a regular accept and they'll accept something that is halfway between a defi has the banks have now and they'll accept some middle of the ground. And rather than trying to impose the exact same banking regulations on the blockchain and have a central bank currency and everything else. So I think I'm happy people just running their solvency is an argument. I think some people should probably running this fully decentralized anonymous network that's dark net filling if they want to and they really want to have their own money go for it. 
+
+That's that's their call, right? And they can build the crypto dream. But having the current networks are too transparent and too obvious and too tracked to try to build some like I'm away from I'm immune to all law and all government intervention because everything is too visible. So if you're going to be those systems, I think a cool system, I'm happy the transparency. We have to figure out a way of negotiating. 
+
+Citizen Web3: 
+It's a good point. And I would love to carry on talking about it. I know you don't have much time to live those I want to wrap up. But I remember reading, I think last year, a couple of months ago, one of researchers by Deutsche Bank, they love doing researches. They had a good point, which I did like, which what they mentioned was that one of the big changing points of this century is going to be somewhere in between 1926 and 1930, because that is the year that roughly the voting age around the world on average changes from the boomer generation to the very new generation. And they will have a lot more voting power in general in all of the countries together. And I think that's a very good point that at this state, we will start to see a lot of changes. And it's right if we have all these things prepared, as you say, rather than pretending that we don't live in this world, that we live in some imaginary world, I think that will help a lot. So yeah, totally. 
+
+Ethan Frey: 
+Let's make a counter proposal. So we make a day, say no, we say, OK, we have a counter proposal. It's the second one to try again. And we can shape that a lot more. So on a go to T grade, I agree with you. 
+
+And T grade is not just about this government system, right? It's just one thing we build, but also focus the bank. So I don't if Lloyd DeVlon and Deutsche Bank build their system, that's great. It makes money and it shows that we have a stable system, right? 
+
+I'm fine with that. And we bring them from their world into our world, right? If some local community does that, one thing for me is really bringing money into things that matter. There's a large thing impact investment. ESG funds, environmental, social and governance funds, people trying to put money into things that matter. And I think really we say, hey, we can build that level transparency, because it's a big problem of those. 
+
+It's not transparent. There are many billions, hundreds of billions in impact investment and there's tens of trillions in ESG funds. Truly this is like defy is nothing, right? 
+
+Hundreds of times defy and this ESG funds supposed to be for social good. And this level of is huge. It's huge, really. 
+
+And I would love to get stuff like that on the blockchain because that's the place where transparency shines. So you say, hey, what are the actual impacts? What are the environmental good? What are the social goods by this project? They're writing on the blockchain as we're investing them. 
+
+And if people can call them out as bullshit, if they're bullshit. So this is a big problem. We say someone has greenwashing picture. 
+
+No, what is really there? So I think funds like that benefit from transparency. For me, people that care about the earth and actually trying to use money in a way that's positive for the planet and positive society will embrace transparency. And these are the models that will grow much better in the system. And so by saying something, we're saying we may get regulatory friendly. So people are bringing this old money and not just the crypto investors, but real these large funds in there. And we say this is a place for transparency, for real impact, for real investment. I love personally if Tigray's not just saying, hey, we build something that is OK, the regulators, but with that, using that, so we can actually bring transparency into those markets and bring transparency and environmental impact into these traditional markets to transform them. 
+
+Citizen Web3: 
+Ethan, thanks for that. It's very inspirational, honestly. But before I'm going to let you jump off, very last very quick, quick question. A couple of resources where you pick your ideas from books, podcasts, shows, whatever, something you recommend to our listeners, something that you want to share, something that inspires you, something that drives you, you know, something you wake up and think, oh my God, I'm going to go, definitely going to check it out or something like that. 
+
+Ethan Frey: 
+I listened to some of your shows and I, it's to follow, right? And I liked Ethan Buckman's show with you guys. It's nice to see these things and these ideas floating around. But really out of it is, I have a few friends that are much more. I spent many years outside of kind of the blockchain space and talking about people in traditional environmental activist groups. And I think talking to those people, I have friends at permaculture farms and seeing them talking to them about how they see climate change. 
+
+These are, I would say, my larger influences. I don't read enough these days. I used to read more. 
+
+Taking my work, taking too much time, I don't read enough. Yeah. If so, I can't really recommend, I'm not sure which one I'd recommend, but I would recommend all books. 
+
+Citizen Web3: 
+It'd Okay. 
+
+Ethan Frey: 
+Philosophy. Philosophy is good. 
+
+Citizen Web3: 
+Philosophy. It's cool. It's cool. 
+
+Anna:
+And one small question because I can see that you have like pickup behind you, the one word, the piece of paper with one word breathe. What does it mean? Why you have it? 
+
+Ethan Frey: 
+It's a good reminder a reminder. If we all go fast, I go too fast. I do too many things. I get accelerated and to breathe to return to the present. I mean, honestly, if I have to say one thing to read a book or something, meditate, pick a book, a podcast, a teacher, a yoga class, whatever you want to go to, just stop for a few minutes, 15 minutes a day and just breathe and look at your own breath and look at yourself in the present moment. And stop the running mind. It's transformative. Do all day long doing that and get other levels of consciousness. But I think just even taking a small break and remembering we're breathing, we're live and that's critical is, I think, very powerful. 
+
+Citizen Web3:
+Thank you, Ethan. Thank you. That was a good talk. Really loved it. Really enjoyed it. And thank you for joining us. Thank you everyone for listening and tuning in. Thanks. 
+
+Ethan Frey:
+Cool. 
+
+Anna:
+Thank you. 
+
+Ethan Frey: Thank you very much. Thank you for having me. 
+
+Citizen Web3:
+Bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

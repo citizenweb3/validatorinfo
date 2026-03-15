@@ -1,0 +1,402 @@
+#citizenweb3
+
+Episode link:
+
+https://www.citizenweb3.com/tomtrowbridge
+
+Episode name:
+Reveneu, DePIN and Countering Dominance with Tom Trowbridge
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast. Today I have Tom with me, the co-founder of Fluence and much more than that, to be honest. but Tom, hi, welcome to the show. Glad to have you.
+
+Tom Trowbridge 
+Great, listen, it's good to be here. Thanks for having me.
+
+Citizen Web3 
+Finally, I remember, you know, I think it was in Berlin, blockchain week, I just was saying before we started to record that I approached you and I think I canceled, I had to cancel, then you had to cancel and like it took six months, but finally we did it. Yay.
+
+Tom Trowbridge 
+Yeah, we met at our Berlin DePin Day, which was, think, at this point a while ago, it's crazy, but we did eight of those DePin Days in 2024, and Berlin was a pretty big one. So definitely great that those relationships continue to bear fruit even now, whatever, six, eight months later.
+
+Citizen Web3
+And a small kudos to you straight away. I don't do it very often of the beginning, I must say, but a small kudos. It was my first event in two, two and a half years, my first major event. And I was there for a week and half in Berlin. and I must say that, well, I don't think there was any other interesting events apart from what you did.
+
+Tom Trowbridge 
+Well, listen, that's super nice. We've gotten feedback that are the DePin day events are solid and the Berlin was good, but you know, the one we did in Bangkok, the one we did in Singapore, one around token 24, nine around DEF CON were also really good and were even, think, easier to, easier to manage than the Berlin one. So we've got a big one coming up in Hong Kong and also in early February. And then we have a one in East Denver.
+
+as well so the DePin Day events continue and I think we built them into something pretty interesting so I hope people take your advice seriously and if you're in town please attend them.
+
+Citizen Web3
+Yeah, guys and girls, please whoever's listening to this also check out the show notes and you will find links to those because we do add everything Tom and me going to mention to the show note links. So check it out my personal advice great event, but let's go back to you Tom. I kind of like started with a compliment there, but usually I don't usually I put the guest on a spotlight and say can you please and I'm going to ask you right now. Can you please for myself for the listeners and talk a little bit about yourself about your background Web3 story? How did you
+
+get into Web3, how did you get into DIPIN, anything you want people to know about you and of course, yeah, anything else you want to add.
+
+Tom Trowbridge 
+Well, yeah, happy to listen. my journey started in 2016 when I discovered Hedera Hashgraph. And so I first invested in the parent company called Swirlds, got to know Manson Lehman and they asked me to come on board and basically help found the public ledger, which we later called Hashgraph, well, I later called Hedera. And so, you know, when I joined, there was just a white paper and there was a company called Swirlds, right? And so,
+
+We then created Hedera, we hired team, raised a bunch of money, launched a network, built the governing council, and really built up from a standing start a global L1. And that was really got going in 2017, mid 17, I think is when that really kicked off, kind of early 17, when I got involved, I believe. And then, or maybe it late 17, and then, you know,
+
+frantically ran around building that in 18, launched a token in 19. And that now has a top 17 cryptocurrency right now, HBAR, I think it is 16, 17. It's gotten renewed interest because of the potential of this administration, the Trump administration in the US to potentially eliminate taxes on US-based crypto. So then it's one of the few, is based in the US. It's also kind of interestingly run by two Texas-based
+
+ex-military, you know, Republicans. And so if this isn't the environment for that, I'm not sure what is. So I think that kind of the price action is probably deserved and I think we'll see more of it, but that was my introduction. And then when I left there in 19, one of the investors in Hedera introduced me to the Fluence team and said, listen, these are the most technical founders we know, and you'd be a great compliment and great addition to that team.
+
+And so as soon as my non-compete was up with Hedera, this is not a competing project, but just to be kind of, you know, respectful of it, I joined them as a co-founder and CEO. And Fluence is a, unlike Hedera, which is an L1, you know, basically like a Solana competitor, but faster and cheaper, et cetera. Fluence is a decentralized compute platform. And so it does everything.
+
+Tom Trowbridge 
+that all the work of the internet right now happens on CPUs. Everything you do that's not on your phone or your computer, that's every app in the cloud is running on compute. And almost all that compute, this by the way includes a lot of blockchain nodes, a lot of consensus service. Like all this stuff is happening usually at Amazon, Google or Microsoft. And that is the huge problem for decentralization, brings huge risks. And so decentralized compute,
+
+is hard. We've got decentralized payments with Ethereum, with Bitcoin, with stable coins, et cetera. And we have decentralized storage with R Weave, with Filecoin, with others. We don't yet have a scale decentralized compute. And that's what Fluence is working on solving. And that has been a big challenge. But we have made terrific progress towards it. We launched our token in February. We've gotten the network live. We have CPUs up and running.
+
+We've announced our first customer, so everything is in progress. So anyway, that's both the story and the pitch and understands and sound bites of the first, say the two main projects I've been involved with.
+
+Citizen Web3 
+I'm going to dig probably Fluence a lot more, well, decentralized computing for sure a bit more. But before I get to that, I wanted to dig your story if you don't mind a little bit. But you know, this is part of the podcast and you know, it's part of the question I try to talk about to the guests why, you know, like nobody wakes up and says, doesn't matter what they do, doesn't matter if they're in school, doesn't matter if they work for a great successful company or if they're entrepreneur. It doesn't matter. You don't wake up and you say, well,
+
+Today, I'm going to join a blockchain project. No, it doesn't happen like that. people are driven by something. For example, I know you have some telecom background. I can understand how that could have went from one to another, but I don't want to assume. I do want to know what attracted you to this industry? Why did you decide to join it?
+
+Tom Trowbridge 
+Well, I guess, you know, there's a couple of different things, but, um, I have wanted to do something entrepreneurial for a very long time and was always looking for the right projects to do it. So I kind of tried to, you know, um, um, it's that kind of desire, fulfill a desire by starting things within bigger companies, but that was never really sufficient. so.
+
+meeting the Hedera team, I sort of saw, listen, this is a team with a great technology that seems ready to go. And I am particularly suited to add value to it because I have a lot of institutional relationships and I can add value to these incredibly smart, incredibly technical, but ex-military, effectively more or less academics. And so there's a lot of compliment that I could bring to that and value to bring to that, which is
+
+particularly for Hedera, which was focused on institutions. So it was like, here's a great way to marry my skill set relationships and really compliment something pretty powerful. And on top of that, I think that the decentralized technology is super important just for humanity. And if you even take a step back, my view is that the internet has become more more centralized and it's not.
+
+anybody in particular's fault. It's just the nature of the economics of a global platform where as you get bigger, you make more money, you can spend more on marketing, you attract more customers, you crowd out the small guys, you attract more customers, you make more money, it's sort of a cycle, right? And so that's why you have these huge companies dominating. And that's a dangerous position to be in for a number of reasons. takes a common, and Web3 is effectively the
+
+only tool that we have to counter the dominance of several of the top web two companies whose dominance I think is large and will only continue to grow. And so that to me was a very worthwhile project and kind of endeavor to spend time and effort on.
+
+Tom Trowbridge 
+And I think that, you know, it's obviously interesting to a lot of people. It's interesting to the market. These are also global projects, global problems, global solutions. So the global nature of it, the scale is also really important. It's a huge problem. It's a huge solution. And so I think that's also interesting, but I'm very worried about the creep of kind of oligopolies and what that means effectively for freedom around the world.
+
+Citizen Web3
+You know, there is, it's a lot of topics and I'm I'm gonna, I'm gonna try to be a little bit devil's advocate. Uh, so please, please don't mind that. But before I go there, um, so two, kind of a little bit devil advocate-ish questions. One, I love to ask founders and I'm personally founder myself, so I like to ask it myself as well sometimes. But, um, do you think we, like hand on your heart, you know, right now, if you kind of like think about
+
+our time in blockchain or your personal career in blockchain and the dedication we think as founders, as entrepreneurs, as builders that we contribute. Do you think that there is one person today out there that has benefited from what we build? And I don't mean you personally, or me, myself personally, we as an industry, like a person who's not in the blockchain. I'm not, I'm not meaning a DeFi user. mean, a farmer out there somewhere.
+
+on an island or on whatever country that has found blockchain. was like, wow, that has changed my life. And I don't mean with DeFi.
+
+Tom Trowbridge 
+Hmm, I'm trying to think of what you mean by has changed their life I in terms of in terms of doing commerce in a different way
+
+Citizen Web3 
+Let me dig it a little bit. as usually, it's a very common thing. I actually believer in it. I think that we are at least trying to make a change. We are offering an alternative to the system that exists. But a lot of the time, I find that in blockchain, we tend to a little bit overestimate.
+
+what our solutions are going to bring to people. lot of the time over last 10 or 12 years that I've been in this industry, it's very hard for me sometimes to talk to people who have not heard about blockchain and explain to them why they need the blockchain. Because you sometimes they don't need it, but I'm trying to sell them ideas, you know, that I feel sometimes, do they even need it? Is it going to help them? So my question is to founders, do you think that the technology you have been building so far has changed?
+
+somebody's life for the better, to be more efficient, for the easier, in terms of what it's supposed to do. It's kind of like that, if it makes sense.
+
+Tom Trowbridge 
+Yeah, no, listen, I get it. I mean, I'd say blockchain and crypto have changed lots of people's lives. But let me phrase it differently, which I think is the way I, the bar I would hold. Has it made people freer? Has it made, right, that to me is what we really want to do. And I have to think about that for a second because I don't think it, I think it has that, it certainly continues to have that potential.
+
+But, and actually, as I think about this real time, I think sort Gen 1-ish has, you've got smart contracts, you've got privacy, and you said you kind of cheated by excluding DeFi, but that's kind of the most, you know, built out, that's like the most built out ecosystem in this space. And so, I think that, I think stable coins, the ability to pay quickly, easily, globally, that certainly has.
+
+Citizen Web3
+I did.
+
+Tom Trowbridge 
+Bitcoin has changed people's lives without a doubt, having easy global access to value and moving it around. those have now have, can I point to other particular L1s as having changed people's lives or, you know, like for example, look at Arweave where all the Apple Daily publications from Hong Kong were uploaded, will be there forever. So now those are forever uploaded despite being shut down and banned by China, right? That's valuable.
+
+is that can I point to any individual whose life that's changed? I'm not sure, but I know that's valuable and that's good to have and glad it exists. And that'd be hard. mean, that's possible without blockchain, but blockchain makes that cheap and kind of secure and in perpetuity. that's an example of it, I suppose. I think with Fluence, having decentralized compute is very close to doing that. I think I would say ask me this question in a year when our network is more scaled and we actually have
+
+a lot of uses being built on top of it. And I think I'll be able to give you a precise answer and examples of where Fluence has done that. And the way I'd say it is that...
+
+even having an alternative changes behaviors. so people who are on Amazon right now are subject to their 80 page term of service agreement, which basically allows them to turn you off for any reason, whatever they want. Right? You know that. And so, they can do that. And, and as governments become more more intertwined with these companies that will have that, that, that, that potential continues to happen. Now that doesn't mean they use it, but it means everyone on is aware of it. Now, the more there's alternative,
+
+to those companies, the more they have to be careful about their use of that, which means the people on it are aware that that's less of a threat, right? So even having an alternative just helps the world and the ecosystem overall, even if half doesn't move off it, right? That alternative itself is helpful. anyway, that doesn't help answer your question in particular, but I think you sort of see where I'm going with it.
+
+Citizen Web3 
+think it does. I think it does. I think it answers it perfectly because I'm sorry to kind of interrupt, feel free to add, but I think what you said about alternatives is I think the perfect in my opinion. That's how I see it, to be honest. I wanted your opinion. I said it's a bit devil's advocate-ish. You know, I'm actually exactly of the same opinion that it's about the alternative. It's about giving something instead of saying, hey, whatever you're doing is bad, but we don't know how to solve it. So what blockchain does is exactly that. It's offering the alternative. Over the last 10 years, I noticed that the more I want to pill somebody,
+
+the less about blockchain I need to talk to them. All I need to do is talk about the modern system. And then the question is, ooh, what is the alternative? You know, like, I don't know what is the alternative. Well, they don't know what is the alternative. And here we can come and say, hey, Web3 is the alternative. So I definitely agree with what you say 100%. Sorry to cut you out there little bit.
+
+Tom Trowbridge 
+No, that I agree and I think it's incumbent on us to just be building that alternative and make it as viable and strong as possible.
+
+Citizen Web3 
+You know, the second devil's advocate is part was, and I'm coming from point of a self-hosted validator, know, somebody that uses Starlinks and solar panels to run networks and stuff like that. So I have a lot of guests on my show, especially lately from proof of work networks. And we had Bitcoin, Monero, a couple of other networks and also a few people from analytical tools such as Dune Analytics and stuff.
+
+And I noticed that more and more of them highlight. I mean, it's not like we didn't notice that this industry became a surveillance kind of mechanism, but I noticed how much they highlighted. And we talked about freedom with you just before. the question is, it looks that it's becoming a bit scary to the point of I had people refuse to come on the show because they don't want to talk about specific things or validators saying, I'm not going to go and validate this network because well,
+
+I don't know how the SEC or whatever is going to look at that network and evaluate my work. So what do you think about all this industry heading in that direction? How do we change it if we need to?
+
+Tom Trowbridge 
+know, heading in the direction, sorry, heading in which direction?
+
+Citizen Web3 
+surveillance a lot more surveillance and a lot more less less privacy
+
+Tom Trowbridge 
+Yeah, I mean, listen, it is certainly a tough one. You see clear examples of governments really going after the privacy components of privacy, you know, oriented applications for sure. And I don't I think that it's in every government's DNA to try to control and try to surveil and try to see things, right? That power likes to get more power. So
+
+that I don't think, unfortunately, I don't think, I think that's hard to change. The way though I would phrase it is that even surveillance in this space is still better than surveillance and control in the Web2 space. And so, right, like your Amazon,
+
+Purchases are available to Amazon and the government can just share in a second everything on Facebook boom, right? So so, know when we talk about increasing surveillance in this space that is totally true. I don't think that's going away but you have to come but you were coming from a place where we expect zero and That's great. And that that's a bit of an idea. That's an idealistic You know goal to achieve. I think it's very difficult to achieve that really it may be possible
+
+But if instead you come from the anonymity that you still have for doing different things here, it's still far in excess of anything in Web2 and certainly in excess of the where Web2 is going, which is increasingly surveilled and controlled. And the obvious massive point for everyone to be focused on here is the obviously central bank digital currency space where, you know,
+
+That is kind of the, I how you would phrase it, but like the pinnacle of surveillance slash control by states and the scariest thing to be a part of, and I think our whole world will be that much worse off if our technology ends up being used for countrywide or whatever, know, central bank digital currencies that end up with credit scores and everything else. so, and social credit scores, et cetera, right? Like that.
+
+Tom Trowbridge 
+is the real utter disaster. so, now those aren't really decentralized, right? So that would be using, wouldn't really be a decentralized payment system. And so that is not exactly the use of this technology. It'd just be a digital currency which is used for it. So you could split hairs and say it's actually not the use of what we're building and that's very fair.
+
+But regardless, I think that's the thing I'm most worried about versus anything else.
+
+Citizen Web3
+Yeah, absolutely. It's scary, know, sometimes hearing what people who are experts in this, like, especially analytics that come to the show and the things they say sometimes are like, Whoa, put me a backlog as I thought it was not as bad. And then they come and they're like, Yeah, but we can just do this. And I was like, Whoa. But anyways, let's talk a little bit, not a little bit. Let's talk about DePin, know, and decentralized physical infrastructure. I'm gonna ask you for a very silly thing to start with.
+
+Can you please really ELI5 what is DePin, what is the centralized physical infrastructure?
+
+Tom Trowbridge
+Oh, that's how I depin podcasts. I actually start most of my episodes asking the host to define it because it is, I think it is a term which is people find interesting and they think it's hot. And so every app now is trying to say that. And I'll make this just even bigger point. Masari came out with a report, depin report. And I don't know if you know Haseeb from Dragonfly, but he tweeted that, All of the revenue
+
+or no, but a big chunk of the revenue attributed to DePin comes from a particular application, which has nothing to do with DePin whatsoever, in his opinion, and which I would agree with as well. So, what is DePin? DePin, my definition is basically crowdsourced physical infrastructure put together in a network
+
+that is secured and incented by crypto economics. And I would add one thing, it's physical infrastructure that's providing a useful service in a network secured and incented by crypto economics. And so, right, but a lot of just regular applications are kind of trying to grab the deep end banner when they're just an application. And they're an app, and that's great. There plenty of apps, that's fabulous. Go have a...
+
+super successful scaled app. Great, but that's not DePin.
+
+Citizen Web3
+So what you're basically trying to highlight here, because I like this, is the word decentralized. It's basically saying, hey, you can have physical infrastructure, but it might not be decentralized, then it's not DePin. That's it.
+
+Tom Trowbridge 
+No, it's not even that, it's not even that. It's that the infrastructure has to be used to provide a service. So if my phone is, I'll make an example, if my phone is doing calculations for someone else, or my computer is providing access bandwidth, or my CPU is doing something, or I have an antenna on my roof doing something, or I have a camera in my car,
+
+or my server in my house or a data center, all that stuff works. What doesn't work is like a, just an app on my phone that is a, I don't know, a currency conversion or is a phone calling app, right? That's just something I download and I use it, right? So that's, you're supposed to be selling and monetizing some level of your infrastructure for other people to use. That's the point.
+
+And it doesn't have to, by the way, it doesn't even have to be consumer grade infrastructure. It can be enterprise grade. And Influence, just as an example, we only use enterprise grade, like the highest level T4 data centers for our class four data centers for our infrastructure. So it's not a network of thousands of CPUs. And so that, but.
+
+to us, and I think the real decentralization benchmark is not the number of nodes of participants. It's much simpler. It's the fact that no one or small number of parties control it. Right? So it's almost like a negative definition rather than a positive one. You don't have to have X number. It's more that you just
+
+can't be controlled by one or two entities. That's it. And that's a very different bar than what a lot of people have where they think, are you decentralized enough? And as long as you can switch with like very low friction, then you have a handful of parties that are spread out different ways. I think you you're decentralized compared to any centralized provider.
+
+Citizen Web3 
+You're coming to a very interesting topic that I like. Like I said, I'm going to make a small statement and then ask you a question of what you think about it. So in my experience as somebody who is building decentralized infrastructure, like off the grid infrastructure, that decentralized infrastructure to adoption have not been a helpful thing.
+
+It's interesting that the more complex the infrastructure we try to provide and build as an operator, as a validator, as an entity, I've noticed that networks don't care about it. I've that very little networks that we come to and say, we can work off the grid. We have the capability or we have a unique location or whatever, or we're not in a data center or we use enterprise. Great. I've noticed that nobody cares about it. So what I'm trying to say is...
+
+Is it important that operators provide, you know, the decentralized infrastructure for networks and how important it is to do that?
+
+Tom Trowbridge
+I have two answers to that. So first, every, as far as I can tell, every...
+
+decentralized product at scale has moved to more institutional hardware. Bitcoin being the first. People started mining bitcoin at homes and basements. Now where is it? Purpose built data centers run by publicly traded companies. Then look at like a file coin. Started off people storing files in their homes. Now where is it? There are file coin miners that raise money to just create data centers to only store file coin. Right?
+
+with ROEF. And so no one requested that. The market just took care of it because the economies of scale benefited groups that could invest and scale that infrastructure. You get economies of scale buying, economies of scale running, economies of scale operating, economies of scale servicing, right? It just makes sense. And so I think that will happen with what I would call, you know, if we back up, we think about D-Pen, at least with the
+
+digital DePin or digital services because you just will get better quality and better scale. And then the next thing is that it also depends on what your service is and how reliable, how much your service is dependent on reliability. And if you're doing storage or you're doing compute, people wanna be able to depend on that. And so we very much need to be able to
+
+articulate credibly how secure, stable that infrastructure is. Because that is a real, we're competing against centralized companies who are very stable. And so that's who you're competing with, you need to have it. If you have a different offering with a different customer base that you're providing something brand new, no one's ever used before, it may not matter as much. But if you're trying to displace
+
+Tom Trowbridge 
+incumbents or take business from existing players, you have to have a superior offering and at least meet the minimums across other sort of attributes of that offering.
+
+Citizen Web3 
+It's also a big, I think a lot of operators, at least again, my experience here has been that when you try to enter the DePin kind of world, first of all, you don't know what you're doing. You don't know how to start building. There is no, lot of manuals on the internet. Well, there is, I mean, you can dig them, but not for blockchain infrastructure, for sure not. And I'm curious whether you think that, would you encourage today
+
+people at home to start up their own nodes? Or would you say, hey, again, depending on what the service and the computation and whatever you want to offer, you have to think about it? Or would you discourage even maybe people from starting nodes at home today?
+
+Tom Trowbridge
+so I want to make that question a little more precise. So in terms of mining, I think that's probably makes less and less sense, depending, but it's very project specific. There probably are projects out there, they're early, for which there is not a huge community, which if you believe the token has real value down the road, might make sense to do that. You also could, by the way, just buy the token.
+
+But that to me is, I'm sure they exist. But what I say more importantly is there's a number of deepened projects out there where I think buying and deploying the infrastructure can still make sense. there's, I'll give a, you know, I just did a podcast recently with a group called WingBits, which is creating a new decentralized airplane tracking network. Who, you know, that was real news to me. And right, they have a very specific grid, how many they need to have up there.
+
+to me that's still interesting. I'm buying a couple of those to deploy those. I think that will make sense. So I think there are still plenty of projects out there where buying and deploying that infrastructure makes sense. That's very different, however, from saying you should buy a CPU and start mining Bitcoin. No, that is not gonna be productive.
+
+Citizen Web3
+Yeah, completely. Of course, think the use cases play one of the biggest roles in it. But I want to get back to something you mentioned. You talked about revenue. And by the way, you mentioned an app which was not a DePin app, but was written in the report to get most of the revenue. Can you name the app or you remember it?
+
+Curious. If.
+
+Tom Trowbridge
+the app. give me one second here
+
+I even know because I retweeted Siebs comment on it because I had actually, I found it's such a pet peeve of mine. I'm so aware of it, but I'm trying to find it right now. I can't, sorry.
+
+Citizen Web3
+Don't worry, don't worry, don't worry. We will link the report in the show notes too so everybody can read about it. But let's talk a little bit about revenue. It's an interesting also topic in my opinion. Whenever we look at stock in economics or economics or whatever, any way you want to see it, revenue, especially in my opinion since 2021 in the last cycle, not talking, the first two cycles were a bit different or the first three cycles. The last one.
+
+revenue started to play a much more important role. And people realized that networks don't really have revenue apart from fees and that inflation is not really revenue and so on and so forth. So what do you think about revenue and can DePin as an industry, maybe provide a new type of revenue for blockchain networks?
+
+Tom Trowbridge 
+Yes, and I will actually take that farther. I actually think, you know, I have a presentation where I say DePin isn't a meme. And frankly, maybe it should be a meme, but I think that almost all crypto effectively are memes, to your point, because revenue is so limited and nothing is based on revenue, just based on what people think and where they think it's going, right? And that's why volatility is so high. And everything's a meme. DePin is the only
+
+subsector and I guess you could look at decentralized exchanges are the exception to that, right? They have revenue and their fees there. So that's a real use case with revenue. that's an exception. But then whether it's tied to the token is a whole other thing, right? So we have to sort of, let's leave that out for a second. But D-PIN is very revenue generative. And I think this year is going to be the year of real revenue generated in D-PIN.
+
+which I think has two components, two attributes. One is it will attract a new class of investors to the subsector, investors who are traditional investors who actually can understand this subsector because they get the use case and they also can see revenue come in and there is a link to the token mainly through buy and burn components where they can actually forecast revenue, forecast the demand for the token.
+
+and really figure out what appropriate valuations are. And so what I love about the buy burn is that you can own a token and not one other person needs to find out about it and buy that token because if you're right, the product generates revenue and they do a 90 % buy burn as a number do, then no one other person has to buy that token because that project is buying and burning those tokens every day. And I think we will see the power of that
+
+token economic model start to kick in in 25. It started in 24 minorly in some projects, but I think mid 25 and maybe it's 26, I don't know, but this kind of area. And I think you see deep and then potentially have a different sort of profile from the rest of the industry. It doesn't mean by the way that it becomes worth more because memes continue to have huge power and aren't going away, but I think it means that it becomes much more of a stable
+
+Tom Trowbridge 
+of a stable area with a sort of different, potentially different investor base.
+
+Citizen Web3 
+There is a lot of opinions and I actually started to a little bit also agree with it. The perfect meme coin is Bitcoin, you know, like it's there. It's just, I do agree with what Morad said recently that meme coins don't lie to you. They sell you hope in case for the price to go up whether altcoins trying to sell technology, but in reality they're selling the token. So I kind of tend to, it's hard to argue with that statement. I mean, I don't want agree with it.
+
+But it's hard to argue with it because like people do. I mean, like being again, 10 years here, I also noticed that we are so fragmented as an industry. Like everybody's in their own ecosystem. Everybody's in their own bag. You look at meme tokens. These guys don't care about what technology they're using. They don't care about the tribalism. They've solved the issue we cannot solve for like 10, 15 years with hope. And yeah, I think that, you know, in that way, I know, what do you think about it? So what's your thoughts?
+
+Tom Trowbridge
+Oh, it's complex, but I guess I'd say the other benefit of the meme coin is that, know, if you do the sort of true meme coins, you're in there right away. People are betting and winning and losing together. And it's not like there's a real, I think, frustration with early private buyers, with venture funds kind of, you know, dumping on retail and hyping up projects, et cetera.
+
+I think it's partly that concept of hope, but I think it's more of a community view that the community can do this, the community can profit, the community can lose, but it's doing it together. It's not subject to kind of being manipulated by institutions or by other kind of more moneyed forces, I guess.
+
+Citizen Web3 
+Sorry about the the meme thing in the middle, but but let's get back to revenue I was just curious what you think because you did mention it, you know, and it's a big topic these days Of course, we're recording but it went January for the listeners. So, yeah, it's a big talk of them but anyways back to revenue for a second and Do you think but in blockchain right or in DePin specifically can there be? Other examples of actually real revenue generated by a decentralized ledger apart from fees
+
+Tom Trowbridge 
+but sorry, outside of DePin or including DePin? yeah, I mean for sure, I mean without a doubt. So let's go through some examples here, you know, Helium, right? They are doing, it's effectively decentralized. First it was a network, an IoT network that didn't catch the traction they wanted, it's kind of building a new world.
+
+Citizen Web3 
+Including DePin including DePin
+
+Tom Trowbridge
+They've moved to decentralized wireless offload. So carriers pay them money, dollars, to offload data onto a decentralized crowdsourced network of hotspots effectively. That revenue goes into Helium. And what does Helium do? It takes that money, it buys the token, burns the token, right? That's real revenue, real burning happen every day. Same thing with GeoNet. They do a decentralized RTK network. That's effectively like a,
+
+GPS system, right? But you know far more precise like down to three centimeters so you can you know have robots Mowing lawns or farm machines, you know doing stuff completely automated and this is live operating now They generate real revenue 90 % of that goes that revenue goes in buys a token burns it So the answer is, know, there's just a couple of them. There's wing bits, which is revenue from tracking airplanes. There's
+
+Spexy, which is doing drone mapping of the world as well from drones. I mean, there's a huge number of these things that are out there actually selling to real world customers. Look at HiveMapper, right? It's mapping roads and they're being paid by customers for this data that they then use to burn the token. So this is a huge number of applications in the deep end sector that are generating
+
+revenue from a wide variety of clients that don't care about blockchain, don't care about tokens, many even be aware of tokens behind it. They just want this service and the service is superior or equal to the centralized services, but is usually much, much cheaper. And so that is why there's a clear value proposition and the beneficiaries should be the token holders and a bunch of the token holders should be the infrastructure providers who are paid in tokens. And so
+
+That's how DePin works and that's why I love this sector because the easiest to understand is generating revenue across a large number of sub-sectors all over the world.
+
+Citizen Web3 
+Could I kind of say it in the following way? It's kind of going back to your ELI5 about what DEPIN is, providing a service. It was very important, you said, right? It has to have a service. in this case, our revenue is generated, well, could be any service. So apart from fees, we just have an additional service which provides us the revenue, right? So that's basically what DEPIN introduces apart from giving fees like a normal L1 generates, doesn't have any other revenue. DEPIN also can provide a service.
+
+and generate a payment from that service on top of the fees, right?
+
+Tom Trowbridge 
+Yeah, I mean, I would phrase differently, slightly is that DePin there are no fees. There's just a service people are paying for because they're not L ones. They operate on top of L ones. They're actually the fee payers to the L one.
+
+Citizen Web3
+Okay. Okay. Okay.
+
+OK, OK, OK, sorry, I kind of skipped it. Well, yeah, I mean, guess there's going to be some crazy L1 DePin project one day, right? It has to be there. But we'll see, we'll get to that. By the way, we talk about DePin, DePin, DePin, and I didn't ask you the most. I mean, I guess you're going to get asked that a lot. But I still want to ask you, as somebody who is really, well, in the middle of all of that, more than all of us are, how close are we actually to fully decentralizing?
+
+computing platforms and services right now? What are the challenges that we are still as an industry cannot tackle today?
+
+Tom Trowbridge 
+Listen, I think that question sounds simple, but it's actually pretty complex because compute isn't one thing. And so, where do we stand with decentralized compute? Well, right now, you can have a decentralized server on Fluence if you want it tomorrow. And if you don't like it, you can turn it off and you can rent one from somebody else. And by the way, you can probably do it in Akash, you can probably do it in a couple of others as well.
+
+So on the one hand, we're there. It exists. On the other hand, if you want a decentralized compute service, like a cloud equivalent service with all of the bells and whistles and capabilities of the menu of options you can get from one of the top.
+
+hyperscaler clouds, we are not there and that is gonna take a long time. All right, and so you can rent, decentralize, can run compute decentralized right now by running a server for anybody. Fine, great. And then we at Fluence just added virtual machines, so now you can have pieces of a server, not just a server, right? And so then where we go from there, then you go to server list, right? So you keep,
+
+moving up the chain and moving up the stack and then you add, okay, what about this service? What about that service? What about this service, right? So we keep adding services on top over time until eventually we get to parity with cloud. We are not there, that will take time. The one thing we have working for us though, particularly at Fluence, is that the only way I think you can credibly compete with any of these large companies, Google, Amazon, et cetera,
+
+is if you are able to incent and harness the power and kind of ingenuity of the global developer network. And so that is what can happen and what is gonna happen at Fluence is just like it happened with Linux, which effectively out competed Microsoft, which had billions of dollars and a massive head lead on Linux. Linux had the global developer community tinkering away, working, working, working.
+
+Tom Trowbridge
+building what became a superior product. And it's not just, again, not one product, right? Linux is a whole list, a whole sheet, a whole kind of stack of things that work together well. And on Fluence, we think that having verified services where some small part of that revenue flows back to the people that created those services will help drive incentives for the whole community
+
+to work to build the most interesting, compelling, stable, useful services. And that is how I think we can accelerate the building and deployment of services to compete with the clouds. If we were trying to build all internally, no shot. But if we set up the right incentive mechanisms, then I think we really have a potential chance to do that. And that's the only chance to do it, by the
+
+Citizen Web3 
+That's a big, you're right. It brings a topic that probably I could talk about for the next two or three hours for sure. But I still want to ask at least one question in that direction. It sounds like it might be a little bit of a marketing question, but please put it on top of what you just said because it makes it a lot more interesting. It's not really a marketing question. It's a question about, I mean, we are what right now, 2025, right? So we are however many years, 16 years almost, right? Into it, right? Let's say.
+
+from 2009, let's calculate from the beginning. And we mentioned tribalism. And it's an interesting point. You're saying basically I can bring the community together by sharing the same interests, engineering. Though nobody has so far managed to do that. We try, try, and try to unite communities. it looks like, I mean, Linux did something what
+
+Well, I mean, you do still have Apple users, hardcore Apple users or hardcore Windows users who will not use Linux. But, know, it's slightly different from our case, I guess. my question is how on earth and what are you guys influence doing to do that, to achieve that? Do you unite developers across blockchain? Because, yeah, to me, it's been a puzzle, real puzzle.
+
+Tom Trowbridge 
+so here's the point, I think, where the disconnect is. I'm not talking about developers across blockchain. I'm talking about developers, period. And as you're no doubt aware, developers and blockchain are a little tiny bit of developers globally and developers across, right? You take your slitty developers, which is the most common language, right, in blockchain, and I can't remember the numbers, but that's what, 5 % of the Java, right?
+
+developer number, I don't know, something in that ballpark, right? Even less, yeah, even less, like tiny, tiny. So the point is, there's certainly, and so all we need to be successful is for developers to know that if they build something that's used, there will be some stablecoin payment that flows to whatever wallet they have that accepts stablecoins.
+
+Right? This is not an Ethereum tribe. This is not an avalanche. It's not a Hedera. There's not any of that, right? This is a completely separate thing. And it's important to mention this, like Fluence in particular, we are not an L1. And I want to take a step back here and remember here, our compute happens off chain. We use crypto for incentives, for validation, rewards, right? For security. That's critical, but we're not an L1.
+
+And remember, the most scaled decentralized application, I think, in history existed before Bitcoin, which is effectively file sharing through BitTorrent and obviously Napster. So decentralized applications happened way before Bitcoin. And I think in our community, there is a of a understanding of view, which I think is wrong, that decentralized equals blockchain. That's not true.
+
+There are technologies that pre-existed blockchain. Now they didn't talk about transmission of value and I'm not trying to diminish the innovation of Bitcoin in a blockchain whatsoever. But we came at this problem to figure out how do we get decentralized compute and then where does blockchain fit in to make it most effective and secure? And that's how it works. This is an off-chain thing. But that also, because off-chain opens up the developer
+
+Tom Trowbridge 
+community for all these cloud services, which have nothing to do with blockchain whatsoever and don't have to at all.
+
+Citizen Web3 
+And just to add to your words about the misconception of the word decentralized, I think if you go into like economical history, one of the most ironic thing is that the Medici family, one of the biggest families that brought out banking into Europe and made it a banking. kind of know, not today, it put the roots to it, was thanks to their decentralized networking system that was really there. It's written about centuries ago. The word decentralization has
+
+It's weird why we sometimes mystify things, I guess maybe to add more curiosity to ourselves. I actually want to ask you, with that in mind maybe, to wrap it up, you've done so many dipping days already and you probably see a lot of small projects which in my opinion are important, not just for the industry but for the world itself.
+
+and DePin projects come and you hear about them, what would be your like in a couple of sentences? I know it's very difficult to summarize like that, but maybe one to do and one not to do. If there is a founder right now that's sitting and listening to this and thinking, okay, I want to start a DePin projects or I have an idea how to track, I don't know, ironing boards or chips in McDonald's badges. I don't know, whatever people want to track. What's something one to do?
+
+and one not to do from what you have already seen with the amount of pro dipping projects you went through. Sorry to kind of like this, but.
+
+Tom Trowbridge 
+I guess, well no, what I guess I'd say to that is you must, my view is it's all about the token. And this may sound kind of not the right thing to say depending on where you are, but I really think it's true. And the project must exist in order to drive token value. And the more success the project has, the more traction, the more the token needs, the more,
+
+that has to have a direct link to the token. And if it doesn't, and you're an interesting space, someone else is gonna figure out a better token economic model that probably will outcompete you because the token will have more value, they will have more revenue, they will be able to get more customers, hire more people, et cetera. So I think the technology attracts a lot of really intelligent people, but I think, and I also think that
+
+Tokens sound interesting, but I think the first generation often of DePin projects didn't sort of had a token, it was either way too complex or not even particularly linked to revenue. I think the next generation, which I see a lot of right now, have a lot of this buy and burn. Super simple. This generates money, 90 % used to buy and burn the token. Done, right? So now it's so clear. This generates revenue.
+
+it's gonna make the token, there'll be real demand for the token. That to me is really important to have a very simple, very defined token economic model. And I think that is, and if you get that right, that will drive a lot of value. And then the next thing I say also is in DePin particular, you have to be prepared to do a lot of business development, a lot of sales. And I think that in the previous,
+
+generation, people created L1s and thought everyone was gonna come to them and do a bunch of air drops in DeFi and people will farm the token and do great and that's certainly a way to do it, but particularly in DePin, these services are sold, they are not bought. You have to be out there selling and so either you are that seller as the CEO and founder or you have to find a great team to go do it, but pretty much no matter what, as a founder or CEO, you have to be able to
+
+Tom Trowbridge 
+be confident that you're gonna be the one to secure the first customers. Because if it's not you, you're gonna have a tough time finding someone else to take your place to do it.
+
+Citizen Web3 
+That's actually a very great answer. I wish I was asked earlier to dig it a little bit, but we'll leave it for next time. Tom, I have three questions for you to kind of finish our conversation there. I call them the Blitz. Feel free to answer. Not necessarily fast, but slower if you wish and think about them. And they have nothing to do with crypto. This is just like to resume the hour and take us out of that.
+
+Very quick questions. So first one, name please either a book or a movie or a song that has positive influence on you.
+
+Tom Trowbridge
+I mean, I guess the book I would say, which is interesting to me, which had a positive influence is The Unincorporated Man, science fiction movie about a guy who wakes up thousands of years in the future where everybody's tokenized at birth and what that means. And so it's kind of even before the word tokenized exists, right? It's not even new the word token, but that's effectively what it is. And so
+
+he isn't tokenized and so what that, but he isn't owned by anybody else and so what that means. So that book was, I think, a super interesting kind of perception of what the tokenized world could, the extreme tokenized world could be. This was written even before, I think it came out right around Bitcoin, came out even before. There's nothing to do with Bitcoin, but yet it sort of envisions that world a little bit.
+
+Citizen Web3 
+Second one, one motivational thing that keeps Tom getting out, so that you can share of course publicly, that keeps Tom getting out of bed every day, building DePin, focusing on the centralized ledgers and everything we talked about in terms of values, of course.
+
+Tom Trowbridge 
+I mean, listen, I just want this to work. I want fluence to scale. I want it to be well known. I want this to be a real, real thing. And that takes effort and work and I'm excited to do it. Like I know we can and I know I can add value and really be a part of that. that, I just want that to happen. And by the way, even if it's not fluence that ultimately is, I think what we're doing in fluence is gonna help
+
+the whole sector and the whole industry. So I know even that if there's other better projects that come out, what we're doing is going to help that whole ecosystem grow as well, which I'm very supportive of. So I think the work we're doing is important even beyond Fluence's individual success.
+
+Citizen Web3
+about offering an alternative, right? I like that answer. Last one, a bit weird one, not that the previous ones were not, but this is the weirdest one, but the last one, promise. Dead or alive, real or made up, could be a friend, the character, a developer, a movie personage, doesn't matter. A personage, I don't believe in gurus and we try to talk not about gurus, a personage that when you feel stuck,
+
+Tom Trowbridge 
+Yeah, exactly.
+
+Citizen Web3
+and down, especially in terms of work and you cannot progress, you kind of think about that persona or personage and it helps you to progress.
+
+Citizen Web3 
+It's a weird one, I promise.
+
+Tom Trowbridge
+No, it's an interesting one, but I don't really, it's a great one, but I'm not sure, I don't have an answer off the top of my head for that. I don't know, do I call back? Who do I go to for strength is almost what you're effectively talking about, right? That's what that is, and it's a great concept.
+
+You know, I'm trying to think of other, there's a lot of examples of people out there who've had, succeeded with really difficult times and backgrounds. You know, I guess what I'd say, and this is gonna sound interesting, but, I'll be careful how I phrase this, there's a guy I know who is,
+
+who is hardworking, is successful, I knew him for a year before finding out that he was incredibly short. Like incredibly short. And he has overcome everything, right? Think of the disadvantages of being incredibly short. And he's got
+
+Citizen Web3
+Yeah, I understand.
+
+Tom Trowbridge 
+normal wife, he's got a kid, flies all over the world, he's in Africa, he's everywhere building multiple businesses. So that, and that's the example I use, is that he goes, to rent cars, has to do all this stuff with a really challenging setup. And so that is, I think, a really
+
+Citizen Web3 
+I understand very well.
+
+Tom Trowbridge
+That's something that's sort of at least aware of that is I think kind of an important example I think for me and for everybody.
+
+Citizen Web3
+I totally, by the way, agree. I always draw inspirational strength from people who are, like you said, their setups are socially different and they don't care. They just go on with whatever they have and prove to all of us that, you know, they can do even better. And you're like, wow, and here is me sitting there suffering that, you know, I cannot pick my nose or whatever, you know. So I totally understand what you're saying completely. Thank you for that answer.
+
+Tom, I want to thank you in general for coming on, finding the time, not being annoyed with the questions and providing all the answers. And for everybody else, I want to thank you for tuning in. And once again, Tom, this is going to be goodbye just for the listeners, for all the listeners, goodbye and see you next week. Thanks, Tom.
+
+Tom Trowbridge 
+Great, well listen, thanks so much. Thanks for having me on, really appreciate it, very fun.
+
+Citizen Web3 
+Thanks, Tom. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

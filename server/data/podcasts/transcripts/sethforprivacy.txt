@@ -1,0 +1,402 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/sethforprivacy
+
+Episode name:
+Taking Back Power, Critical Thinking and Privacy with Seth for Privacy
+
+Citizen Web3
+Hi, everybody. Welcome to a new episode of the Citizen Web3 Podcast. Today, I have very exciting guest with me. I've been waiting for a while to record this interview. Hi, Seth For Privacy. Welcome to the show,
+
+Seth For Privacy 
+Thanks so much, Serge. Really, really excited to jump into it. I know that I kind of gave you the run around a little bit getting this schedule, so thank you so much for the flexibility here. Really, really excited to chat with you and dive into some important topics today.
+
+Citizen Web3 
+Perfect man.
+
+Citizen Web3 
+I wouldn't expect otherwise from private people, you No, but yeah, when can we record? don't know. I don't know. Do you want me to tell you that? Man, let me be a little bit boring before we get into some conversation and start chit chatting and talking. Can I please ask you a traditional question for myself or the guests? Make a little introduction in the way you want people to see you. And of course, please do mention if you can.
+
+Seth For Privacy 
+But I keep you guessing. I keep you guessing.
+
+Citizen Web3
+Of course, if it's not private, how you got into Web3, and maybe what are you currently busy on. But again, feel free to do it as subjective as it is important for you.
+
+Seth For Privacy
+Definitely, definitely. So yeah, like you mentioned, my name is Seth for privacy. So I was destined to work on privacy tech, you could say. But really for me, so I guess I would kind of term myself a freedom maximalist is kind of my focus. Privacy is a means to an end and that end is human freedom. So really my focus today is bringing that human freedom through whatever kind of freedom tech helps.
+
+Right now I'm Vice President of Cakewallet. I just joined that team a couple months ago where we're really focusing on cross chain privacy. No matter what your favorite cryptocurrency is, we want to make sure that you have the best privacy tools, all free and open source, lots of great integrated features that don't require KYC, don't require accounts. We try to preserve privacy as best as possible. A little of my background. So I got into this space as many others did purely seeing a way to make money.
+
+And I had no altruistic or human rights or freedom motives at all when I first approached this. My background is all cybersecurity, IT. So the technology interested me, but just purely from the idea of it was something new to learn about. And some coworkers of mine at the time were looking at Bitcoin and just viewing it kind of like a penny stock, like a way to make money outside of a 401k, that kind of thing. So
+
+got into it for that reason, fell down the inevitable rabbit hole of just buying random crap because I could get more tokens. It had nothing to do with what the fundamentals were anything like that. But thankfully, I actually stumbled upon the Monero project purely because at that time, they were GPU mined. And so was a really cool just kind of like tech enthusiast side hobby thing that I could do where I could build a GPU rig. I went out and bought six GPUs and figured out how to
+
+rack mount them all on how to actually get everything up and running and how to manage temperatures. And it was just a fun, fun thing. And again, it had nothing to do I didn't realize that Monero had strong privacy, I didn't feel any need for that privacy. But once I got plugged into that community, they very quickly helped me to understand that financial privacy is critical to human freedom. Even if I don't have the felt need right now, it is a vital thing and an underpinning to the rest of our freedoms.
+
+Seth For Privacy 
+And then broader than financial privacy, personal privacy is broadly under attack, and we have to take steps to reclaim it. And so that was really the wake up call. And that got me into Monero, obviously, that got me back into Bitcoin, because I realized that the reach that Bitcoin had, and at that time, the available privacy tools were good enough, if difficult to use. And then started me looking into Ethereum, looking into broader privacy tech, things like Signal.
+
+And really kind of started that rabbit hole for me. So that's that's kind of the TLDR of how I got into the space. But really, tech, tech is my background. So I love the technology. I love digging into protocols, reading white papers, figuring out exactly how all this stuff works, and doing my best to distill that down for other people. That's kind of how I've kind of made my mark in the space so far is more as an educator, but now I'm much more on the product side at Cake Wallet turning that
+
+knowledge and experience and expertise of mine into a better product at end of the day.
+
+Citizen Web3 
+We have somewhat similar story, I guess, and it connects a lot. It's, when you connect with a person, when you hear it, I mean, I want to say kudos to you because I've been doing the podcast part for five years and well, I've been, you know, talking to people from Web3 for longer, for sure. And not many people have the balls and the decency. I must say that those are two very important things to admit that they arrived here for the money.
+
+Seth For Privacy 
+get.
+
+Citizen Web3
+It's important. think it's important to be straightforward. It's important to say, hey, guys, that matter what I'm doing here. there was a lot of people try to make this story of, hey, I came in here 2000. No, you didn't. No, you did not understand in 2011 that Bitcoin will change the world. That was like there was a hundred of those people. if that, you know, so I really want to say kudos to you because I appreciate that straightforwardness. of curiosity, do you remember the first token that you bought? Shit token.
+
+Seth For Privacy 
+Thank
+
+Seth For Privacy 
+I think it was either Tron or VeChain. I think I got into both of those at about the same time.
+
+Citizen Web3 
+that wasn't that... That's not that long ago. I would have imagined you were gonna go like something 13, 14 kind of times.
+
+Seth For Privacy 
+No, I'm not I'm not really an OG. So I got in at end of 2017, early 2018 is when I got into this space at all. mean, I first heard about Bitcoin in 2011. And just like most people didn't didn't realize what I was dealing with and just kind of moved on and didn't think too much about it. But
+
+Citizen Web3 
+Okay, okay, okay, okay.
+
+Citizen Web3 
+You have since then made a very, not, I don't know, the word big in your case is a very bad description, big name, because you are about privacy. And I don't know why, but to me, big name and privacy are a bit contradictory, but you made a you know, efficient, I guess, like name for yourself in terms of, and I want to ask you first question, sorry, let me stop the chit chat and try to get ahead. You spoke about freedom, about privacy, that those values came after a while. I'm going to ask you a very simple.
+
+Seth For Privacy 
+So.
+
+Citizen Web3 
+Yet I think a very important question. What is freedom?
+
+Seth For Privacy
+Ooh, that's a good one. It sounds easy to answer, but I think the...
+
+The crux of it for me is really giving people the autonomy to do what they view is best for themselves outside of hurting other people. Like, obviously there have to be some limits on freedom and that you can't harm someone else in pursuing what you think is best. But really it's giving back autonomy, giving back power to the individual and making sure that they have the ability to choose their path for themselves.
+
+Citizen Web3 
+Why, I mean, we're going to get a little bit philosophical here, I guess, but why, why, do we have, I mean, it's not a question to you directly, but you know, we are having a conversation here now. Why, why then do we have a law book, a law case in every country where not a single person, including the lawyers and the court system understand instead of don't do to others what you wouldn't do unto yourself and hence keep your freedoms, right? Why not just start with that then?
+
+Seth For Privacy 
+Mm-hmm.
+
+Seth For Privacy 
+Thank
+
+Seth For Privacy
+Mm-hmm.
+
+Citizen Web3 
+And why can't we as a society, in your opinion, course, do it as simple as that. Just like, you know, keep that, your description of freedom, because I technically more or less agree with it. And instead of that, we have to make those, you know, legislation books, which, can, let alone read them, I can't even pick them up sometimes. It's a bit heavy.
+
+Seth For Privacy 
+Mm-hmm.
+
+Seth For Privacy 
+Yeah, I think, for me, it comes down to two things. I think that was really the crux of law for many thousands of years was it was essentially, don't go against your government, because ultimately, many governments historically were authoritarian, and then just don't treat other people poorly. And that was really the core of it. Obviously, there was more than that. But a lot of like the ancient laws that we we can look at are essentially that they're essentially the golden rule that you mentioned.
+
+But I think nowadays, part of the reason why laws are so nuts is because of the complexity of modern life, especially due to technology, I think there's just a lot more, a lot more problems that people are looking to others to solve. And I think that's the other critical thing is that the reason that governments are large, the reason that governments have large amounts of power, the reason that
+
+the laws are just insane, no one can read them, the tax code, much less the rest of the laws that are in place, is ultimately because people, I think there's a natural, unfortunately, a natural desire to offload responsibility to someone else. And that's at the crux of the entire issue with money being broken, privacy being broken. It's people taking advantage of this really laziness in us. And I'm not pointing the finger at other people like this is something that I struggle with as well, but...
+
+It's this desire to have someone else solve this problem for me. And I think that's where a lot of laws come from. Instead of two people just hashing out a situation, they look to a third person to hopefully rule on their side. And every time you have one of those situations, you have precedent, you have potential new laws being created. And then that also feeds this big government idea where they also have incentives to make the laws, especially the tax codes so...
+
+insane that you could never interpret it for yourself or properly follow it so that they have ways to continue growing their power and continue harvesting resources from citizens. So I know there's a lot of different pieces there, but yeah.
+
+Citizen Web3 
+No, amen. know, this is, well, in my opinion, you know, we cannot achieve a lot of things exactly because of that lack of responsibility as humans. And not many people think about doctors, for example, is a good example, because we don't think of doctors as a middleman, yet the doctor is the same way a bank is a middleman between you and your money. A doctor is a middleman between you and health.
+
+The fact that somebody gives you advice on health and developed Western countries, are more used to it. And again, that's not the majority of the world. That's the minority of the world. We don't think of that, but absolutely right. But back to what you said and with the tax code, but I have to be devil's advocate here a little bit. And it's not like I'm going to be taking the government side. I'm sorry, but I want to have a conversation. I just agree with you.
+
+But you don't think the tax code is not just done like that, but it's on purpose because it does seem that why would you complicate a tax code away? Because that's your money. If you're a government, you don't have money. You're making money from the people, right? This is the people who give you money. You don't have, you have zero, you have nothing. So the only way to do is to complex. So wouldn't then the argument be that it's not just lack of responsibility, that it's also, even though I agree with you, wouldn't that then be that it's the lack of responsibility and people in power.
+
+trying to over complicate what then you cannot like, like why the tax code specifically, right? It has a very like feeling to that, right? Like why not the health code, right? Why not the education, whatever, right? You know what I mean?
+
+Seth For Privacy 
+Yeah, yeah. I mean, I think you, you nailed it when you mentioned that it's a combination of I don't know, the tax code is a weird one, because it's like no one wants to pay taxes. It's a little different than I feel like many other things where like healthcare, I think people want someone else to tell them what to do. Like, there's benefits to that. And there's also obviously risks to that. But like no one wants
+
+anyone telling them how much money there's they have to give them without having a choice. Like, so no one and no one likes that. So I don't know if we can attribute that one as much to that kind of lack of personal responsibility, but rather, that's the core that and money printing are the core funding systems for governments. So if they want to continually grow, they need to find ways to be able to get the revenue that they expect and punish people who don't fall in line. And that complex tax code gives them that way to
+
+punish people who don't fall in line because it's very easy to fall out of line if you don't perfectly understand the tax code. And that's why everyone uses some big tax company or a personal accountant or something like that, at least in the US, to be able to make sense of it because none of us normies can possibly understand what's going on. I think I do also want to kind of call out something else here. Like, I'm not saying that all government individuals or government employees are malicious or are seeking this grand scheme of
+
+we want to complicate the tax code in order to have more control. Like, definitely do not think that is true. And I would say probably the majority of people in government don't have that kind of malicious overarching desire. But some people do at the top, and people often fall in line with what the expectation is for them to do so that they can grow their career. And so it creates this kind of, this just broken system, where people who aren't in and of themselves trying to do anything malicious feed the system because they see that as a
+
+a path towards career growth or a path towards advancement. And that, I mean, that's not just government that happens at every level of the corporate ladder and every level of life, unfortunately.
+
+Citizen Web3
+No.
+
+Citizen Web3 
+I don't remember who said that or where I saw that, but it's something I cannot help to agree with. Then it comes with what you're saying. It was, I'm going to call it a guy. I'm sorry, you know, but let's call it a hypothetical guy. And the point was that have you ever thought why is it so difficult specifically to get out of a citizenship? Well, because you're a product, are specifically, you're a product in the tax system.
+
+And the moment you get out of it, the people who make money on you will lose you as a product. So that is why it's so difficult to just simply get out of a citizenship. who never done it don't actually know. And if you ever done that, it doesn't matter whether it's the West and East. I had the luck in quotations to do it twice in my life in the West and in the East. it's a story. It's a serious story, very serious thing to do.
+
+that, you know, they will deny you until the end. Like you really need to have reasons to get out. And yeah, it goes with what you say. don't know. Sad.
+
+Seth For Privacy
+Yeah, there was something really interesting on that, but I know Roger Ver is a very divisive person. So I don't want us to get down that whole rabbit hole. But something really interesting that he said in his interview with Tucker Carlson that he just did was that the like the founding of America is people renouncing their citizenship. Like that's the whole reason America exists. And yet America right now is probably the hardest place on earth to leave.
+
+Citizen Web3 
+Absolutely.
+
+Seth For Privacy 
+to not be a citizen anymore, to not pay taxes anymore. Roger Ver is a perfect example of that, where he tried to do that and is now facing lifetime in jail for it. It's hard to know exactly whether or not he actually broke any tax laws. Obviously, he claims that he didn't at this point, but it's a perfect example of even when you say, hey, I don't align with the values of this country, I want out and you go through the right processes, you're still not free. You're still not free. Even if you don't live in the country, even if you renounce your citizenship.
+
+Because like you said, I mean, this is the way that they fund themselves. This is the way that they have power. They only have power if we as individuals remain within the system and fit in. And unfortunately, there's really no escape with the way things are built right now, at least in the US. I know that in some parts of Europe and other parts of the world, there is a lot more flexibility. Even if it's not easy, there's at least the possibility. like I was talking with a friend of mine who runs a service called Liberation Travel, where basically he helps people to get passports.
+
+in other countries to get dual citizenship to have tax havens or just places that they can have as kind of like a fallback if their country gets crazy. And he gave this whole presentation about like what this could look like great countries to move to and went up to him afterwards. And I was like, this sounds amazing. Like, what does this look like for me? He was like, you're a US citizen. So can't really do anything. You're kind of you're kind of stuck. You don't really have any choices. So yeah, yeah, I was born into it. And I'm gonna die in it, unfortunately, unless something drastic changes.
+
+Citizen Web3 
+You're screwed from the beginning, sorry bro.
+
+Citizen Web3 
+It is ridiculous, right? what extent those things get some time. is really like... Yeah, it's just the last point to say about that because I want to move to another topic to understand, to ask you a couple of things. But just one last point to throw there about the movement, the freedom of travel. Not many people actually know this.
+
+But, you know, I mean, there was passportation the first time the Halifa tried passportation. was passportation tried in as early as I think is the 11th or even the 10th century. But it was very localized. The first time passportation was mostly done was after fucking first World War when the soldiers needed to go back. There was no chance to make order. The whole world was a chaos, was a mess. And they had to get soldiers back. So they started to do passportation because people were going.
+
+And this is when they started to lose money. were like, fuck, we're losing everything. yeah, anyways, but let me actually try to go from here to the next topic. And it's a very controversial thing now going to be considering what we spoke about, not the topic itself. I'm going to say two things and then let you try and, from your side, what you think about it. So.
+
+Citizen Web3 
+I'm going to say sentence and then I'm going to say something before you react because I know your reaction. BTC has been hijacked. Now, the reason I'm saying it's ironic after what we spoke is about the responsibility because of course, you know, it's up to people to make conclusions and you know, of what they hear on the news, of what they read on crypto Twitter. Nothing has been hijacked, of course. You know, I'm being the advocate here. I want to talk about bias. I want to talk about conformational bias, about anchor bias, about why, about responsibility. you carry this on in a way? You know, right now we've seen all this
+
+crap, bullshit, whatever you want to call it, BTC has been hijacked. There is a problem with surveillance and I want you to talk about it as well, of course. But why do we jump to conclusions without really, why are we doing it again? Because here it seems that responsibility shouldn't be a question. There is Bitcoin, there is us, we kind of as a society, as a community, learned for 15 years about this. So shouldn't we finally understand that nothing has been hijacked and we should stop looking at it and we should...
+
+Citizen Web3
+Like, sorry, sorry for the long, and no question. I'm sorry. I'm just going to pass it to you like that and ask you to comment that and see what you think.
+
+Seth For Privacy
+I got you. got you. Yeah, I I mean, this is something I've been thinking about a lot for years because the core issue here is something that is not is not new is not even unique to Bitcoin. And it's I know we're going to get kind of philosophical again, but a lot of what I see as the problem here is ultimately tribalism. It's people wanting to belong and understanding that if they tow the party line, they
+
+they can be a part of what they want to join in on. And again, this is not even unique to cryptocurrency. You'll find this in literally every community. It doesn't matter if it's a religious community, if it's a technical community, you will find this everywhere because everyone has a natural inbuilt desire for community. And when you're passionate about something and there's a community around it, you want to be part of that community. And sometimes those people are willing to be divisive and are willing to say hard things and are willing to push back against the status quo of that community they want to join. But there is great
+
+personal social risk in doing that. And so it ultimately does, I think, circle back a lot to what we said earlier about a lack of personal responsibility, where, yes, you've taken that first step in, let's say, you've bought Bitcoin and you're on Bitcoin Twitter. So you're in in some ways, but there's also continued personal responsibility there. And I think even enhanced personal responsibility that's asked of you because you
+
+now understand a tool for freedom and should be pushing for it to become the best possible tool for freedom and for more people to have access to it than ever before. But in order to do both of those things, often you have to push back against the prevailing narratives. And like I said, there's great social risk in that. So I think a lot of these problems come down to that and I
+
+like I wasn't here during the scaling wars. I wasn't here during the time when Roger Ver was in there. So like I don't I can't speak historically to what it was like at that time. But a lot of what I have seen since has been that the prevailing narratives, the things that I was sold when I came into the space were essentially digital gold. Bitcoin will be how we make more money, how we store our wealth, don't spend it, will
+
+Seth For Privacy 
+pull in any privacy tech and other things that we need from other cryptocurrencies, we'll do it in layers. Like these were the core tenants of what I was pitched by every influencer by the loud voices on Bitcoin Twitter. These were kind of the core principles that were being pushed. And you'll notice that none of those have a lot of the things that like Roger Ver and Bitcoin Cash love, is P2P, which is like circular economies.
+
+is actually spending cryptocurrency regularly. And I think a lot of that was a kind of an immune system reaction in the Bitcoin community of there was a lot of conflict, legitimate conflict in the scaling wars. And there was a visceral reaction where the community said, we're just going to pull completely away from everything that the people on the other side said, and try to go as far away as possible. And once that starts as a narrative from the voices that people respect, most people just go along with it at the end of the day. And most people just want to
+
+again, they want to offload critical thinking, they want to offload hard decisions and nuance to someone else and let someone else do the work and then accept their viewpoint and then parrot it out. And I say this as somebody who has done this myself in the past, I have taken, I took many of these narratives initially, and I ran with them and I parroted them. And then I started to realize like, there's actually a lot more nuance here, there's actually a lot more when you start digging into it. And I think that's
+
+that's the thing that I've been able to carve out as a niche is people crave nuance. Like they actually crave non black and white content, they crave people who are willing to talk about things in a critical light and in a positive light. And there's not much of that in this space. There is some and there's some other really fantastic people doing good work there. But I think that's what people have found refreshing about the approach I take because I care deeply about this stuff. And I
+
+I am willing to take on the social risk of pushing back on prevailing narratives. And that's, that's ultimately kind of like how I've kind of carved out a niche here, but that's a hard thing to do. There is social risk there. And this kind of the smaller your platform, the more risky that is for you being kicked out of the community that you want to be a part of.
+
+Citizen Web3 
+You know, I don't think you're gonna expect for where I'm gonna take this, but not that I'm showing off, it's really because it's the opposite is what the words you say make me think about a couple of things so much that I get lost. And this is why, like, I'm just gonna go with what I'm thinking. because I feel myself as a little bit like what you say, you know, I when I came into the space, it was 2011 12. I had absolutely no intentions.
+
+of even reading the Bitcoin white paper. took me three years to read it. I even made some money before I read and understood. I did look at it. I didn't understand nothing from it. was like, why the fuck am I going to read this? Then it was 2015 already when I anyways and the values they did build up. You know, I also came across Monero in 2014. Well, the first it wasn't Monero, but it was I think, what's it called? Crypto, crypto, no, crypto, crypto note. Yeah, like the whole the protocol. Yeah, yeah, yeah.
+
+And, know, slowly, you know, but anyways, and then to be honest, my value is privacy became much later. And what is my core value in this industry and why I launched projects and I've been working in crypto for 10 years, officially, is actually anti-tribalism. It's actually that, but, and now I'm going to take it to where you were saying it and why I'm making all this long intro. Once again, sorry for the question.
+
+Seth For Privacy
+Your good, man.
+
+Citizen Web3 
+When when you're talking about this and the other guests that I've been lately having which are also in my opinion guests with a lot of value to share a lot of value and they don't have just a name in crypto they really have value and I Appreciate it. It seems that the answer to to how to solve tribalism and I can't believe I'm saying this because half a year ago I would have shot anyone said that is memes. I really I really don't understand what another solution but like
+
+I'm joking at the same time. I'm serious. I can't believe I'm saying this. I can't believe I'm being serious about it's really but half a year ago I would have shot anyone in an argument telling it to me. But right now when I when I hear more odd saying things like but he has a point when he says like but these guys are very honest about what they're achieving is the alt coins that are trying to sell you you know we are here for the privacy we are here for that. Well you are but you're also here for the money. At least these guys are the only community.
+
+They don't care what bug to put. They don't care if they're holding Bob, don't know, whatever other, goat, whatever, crypto squirrel, whatever. I don't know the names of the memes. I'm sorry, but whatever. Right. And it seems that it doesn't divide them. So, okay. Now with all of that long intro back to you. So how do we then get out of this thing where we came to the point that tribalism is dividing us completely because we don't want responsibility. Memes became.
+
+It seems that they have the solution to, and we're both smiling here, but there's nothing else left to do, right? We cannot cry. Where are we right now? Do we need to get out of it? And if yes, how do we get out of it? I'm sorry for the even deeper philosophy, but it seems to be an important question in my opinion.
+
+Seth For Privacy 
+I think I'll kind of touch on the meme thing first. I mean, think part of it, like when I think of like memes and meme coins are two very separate things. So I'll quickly address meme coins. I think the reason there's not tribalism around meme coins is because, like you said, it's clearly all a push to just make money off of other people. So that's a very uniting thing. Like it's hard to be divisive or push back to hold. You're not going to hold Doge and then
+
+talk publicly in the community about how ridiculous it is that there's a meme coin that people use to make money. Like, there's just, there's not really any room for any nuance there because there is no, there's no prevailing narrative other than make money or just have fun with it. So I think that's a reason why there's not much tribalism there. And most people who are in any meme coin are into like, gajillion meme coins. But I think when we talk about memes,
+
+I think that is a very essential piece of this and something that I am absolutely terrible at is figuring out ways to use how people are communicating today to push back on prevailing narratives. And a lot of that does come down to memes that comes down to finding how to, for lack of a better term, hijack the algorithm of the broken social media that we have today and finding ways to
+
+to push against the common prevailing narratives, if they're wrong, obviously, in your community in a way that is engaging, in a way that pulls people in. And so think there is a lot of, like, there's immense value in finding ways to be lighthearted, finding ways to use memes to make people think, to make people second guess the things that they've been told. Because that just hits home with people lot better than super serious stuff coming in here and just ranting about people.
+
+people choosing to give up personal responsibility. Like I think there's a lot higher reach on those things, but we have to be careful because it's very easy to also just engagement hunt to start with the goal being, I'm going to use this, the usefulness of memes, for instance, to tell my point and then get that dopamine hit of realizing that you can actually do this really well when you talk about things that people want to hear instead of things that people don't want to hear. And then you end up being one of the
+
+Seth For Privacy 
+hundreds of Bitcoin Twitter accounts that just talk about price all day long, because what's going to get more engagement? A long thread that explains what's broken with Bitcoin and why Covenants will help it, or someone tweeting that Bitcoin is going to be worth a million dollars in the next 24 hours. It quickly becomes that. So anyone who wants to take that route is going to have to be very careful and do a lot of introspection to make sure that they don't fall prey to
+
+the broken social media networks that we have that reward you for doing things that other people want rather than for doing the right thing. As for like the broader idea of like, where are we in tribalism and how do we get out of it? I mean, again, I think a lot of this comes down to that same broken system. The places we communicate reward their reward dunking on people, their reward telling people what they want to hear, just being a person who just tickles ears and not somebody who
+
+pushes against prevailing narratives. So a lot of the problem is there. If our primary platforms are things like Twitter, it's going to be very hard to push back on those narratives because people who have larger accounts, people who use the prevailing narrative, they're going to have an outsized advantage against people who are pushing back on what people want to hear. So I think that's part of the problem. So having other places to have hard, nuanced conversations is vital. That's one of the things that I love about conferences in this space.
+
+is not the presentations and content, which sounds weird to someone who normally is presenting at these conferences. And I love those opportunities because they do open up avenues for communication that wouldn't otherwise exist. But I think the more value there is that you get to have face-to-face conversations without any algorithm, without dopamine hits of someone liking your post or realizing you could dunk on that person. You get to have these conversations in a way that is just, it's actually human.
+
+and it's actually helpful and it actually allows nuance and allows space for these things. So I think things like that are immensely vital. Having conferences that bring together people across ecosystems is huge. This is one of the reasons why one of my favorite conferences over the years has been Hackers Congress Parallel Nepolis, which unfortunately this was their last year, but hopefully something will continue on. One of the reasons why it's been my favorite is because it brings in people who are hardcore Bitcoiners, hardcore Ethereum users, hardcore Monero users.
+
+Seth For Privacy 
+litecoin, what like what have you people from all walks of life, you have one common purpose in human freedom, come together to talk about it. And when you have that happen, it breaks down these tribalistic barriers. Because when you see that the people on the other side, quote unquote, actually want the same thing as you, they just have a different vision for how they get there technologically, you can understand that there's a lot more room for collaboration and partnership.
+
+then there really is for the tribalism that we have today. And obviously, that also always has to be weighed with what you don't want to partner collaborate with scams or with people who are lying about wanting human freedom and purely seeking profit motives. Like you still have to be discerning, but you should trend towards assuming goodwill, people figuring out why they're really here, trying to make sure and then figuring out what's the what's the common ground? How can we work together? And the fascinating thing, the last thing I'll say on this and I'll throw it back to you.
+
+The fascinating thing that I've noticed is there's a lot of perceived tribalism because on these social media networks, the places where we engage in the space, that's, like I said, that's popular, that's encouraged by these algorithms. But when you actually get past that and you get to the real users, to real people, there are very, very few people who are Bitcoin maximalists or Monero maximalists or Ethereum maximalists or whatever.
+
+There's very few people, the vast majority of people, they want to use the tools that serve them well. And they want to be able to do that in one place. And like, that's one of the kind of wake ups, the realizations that brought me to Cakewallet is this is a multi cryptocurrency world. There's tribalism that we see, but that's not a realistic depiction of the average person who's in this space for freedom. The average person actually just uses the best tools available for the job.
+
+And that's been really kind of a revelation for me that I try to keep in the back of my mind as I push against tribalism in the vocal community, remembering that that's not everyone. It's not everyone.
+
+Citizen Web3
+That's a very, I think, important point you made about, you know, being everyone, not everyone. By the way, about memes, I just want to say something, you know, if anyone who studied history thoroughly, and I don't mean history of specifically any specific country, but in general, you will see memes were used for centuries. The caricatures that people used to do in papers and newspapers and even before that, I'm sure the Boston Tea Party probably had some, you know, posters.
+
+caricatured posters, you know, around whether it was Boston or the surrounding areas, you know, throwing. It is, it is like that. And people think it's just not, not, not we, we forget things, of course, because we have a very short lifespan. It's not our fault. We live only for like 70, 80 years. And that's today in a developed country. And, you know, a hundred years ago, luckily, if you live to 40, you know, 50 or whatever, but you have a lot of optimism, I must say, because
+
+Once again, I'm going to play the devil's advocate. But once again, I am playing it. Well, I think it's important to hear the answers. you know, and I say you have a lot of optimism because in crypto, ironically, my journey, official crypto journey, not not when I first entered, actually started from the centralized social networks. And I was a top writer on Steemit. And then we launched
+
+Golos, was the, I was 2016, it was the official, the first and the last fork of Steemit for the Eastern European community. So it was one of the first decentralized social networks around. And today I was also involved, not today, today, but you know, during the last years with some other, doesn't matter. I'm not gonna, I don't want to name existing projects. This was an existing. But what I realized is that people, like you say, they want the best tools.
+
+But the best tools come above their values. And that's my experience. So like the optimist, when you were saying it, you were saying, OK, people gather here of privacy. And then they look for the best tools to use. Unfortunately, the experience I've seen, and this is where I'm going to come to the question, I guess, or just the statement, they don't put the values first. They go, OK, I'm not going to use this decentralized application because it's uncomfortable, because I don't have a ledger.
+
+Citizen Web3 
+Because I don't want to change endpoints in my wallet. I don't want to, don't know, whatever. Even though I care about privacy. I don't know, do you think that, or maybe what you're doing with cake maybe is different. How are you guys approaching it? Because like I say, experience over the last 10 years, sorry, yeah, 10, 10, 10, 8 to 10 years has not been as optimistic as you described it.
+
+How do you, what do you do about it? How do you change it?
+
+Seth For Privacy 
+Yeah, I mean, you're 100 % right. Most people will pick convenience over decentralization, privacy, you name the technical improvement that fixes the problems. Most people will choose that by default. And so I think there's two ways to kind of think about this. One is that convincing people to use the
+
+decentralized private, et cetera option, if they don't have a perceived need is practically impossible. That was initially my focus in content creation and education was essentially like evangelism for these technologies to get people to wake up to the need for privacy.
+
+But what I quickly realized was for the vast majority of people that doesn't happen because someone on Twitter or whatever talks about it, it happens because something happens in their life to a loved one, to a family member, to a friend, to their country, to a previous country they were in, that sort of thing that wakes them up. And then they go, OK, I need to think differently about this. What tools can I use? And so that's why my focus has shifted from that evangelism of getting you in the door of caring about privacy, caring about Bitcoin, Monero, et cetera, to
+
+building the tools so that when those people wake up, they can turn to it. And that kind of comes to the second major point. And this is something that I've been thinking about and talking a lot about recently is that the only real way that we increase adoption of truly decentralized, truly private technology is that we make it as easy as the alternatives. And or we bundle it in with other things that people want.
+
+And they also happen to get decentralization, privacy, cetera. An example that I've used in the past is Signal, where many, many, many people, would argue probably the overwhelming majority, don't use Signal because they care deeply about personal privacy. They use Signal because it has good, simple features. It works cross-platform. They can have the kind of iMessage experience, even with their Android friends. And at the same time, they're getting the best.
+
+Seth For Privacy 
+message encryption in the world, they're getting fantastic privacy. But most of that is coming just behind the scenes as a default, something they don't notice something they don't have to work towards nothing they need to enable or change or set. And so that mindset, I think has to be core when we're thinking about building these things. And that's a lot of the reason like why I moved to cake and why I love what they're doing is because our goal and it's a very difficult vision to accomplish. But our goal is that
+
+people who use whatever chain that they love, Ethereum, Litecoin, Bitcoin, Monero, they will have the most sane, most powerful, most privacy preserving defaults happening without any extra effort on their part. And that's the vision that gets these things used because it is unfortunately true. Most people are not going to sacrifice convenience for this technology unless they have a very extreme perceived need. So the closer we can get
+
+these tools to the convenient alternative. And the lower we can get that barrier of entry, the more people we can get on board. it very much is, mean, it's, it's maybe not a realistic view that I have right now. It's an optimistic view. And like I try to kind of, my approach is really I try to kind of frame it as pragmatic optimism, because I think we have to be very pragmatic about what the reality is right now about what's actually achievable.
+
+But also, like, we have to remain hopeful that we can actually build out these things in a way that people will want to use them, whether or not they have a felt need for privacy or a felt need for decentralized social media, et cetera. And I think we're rapidly approaching that world. And there's lots of good examples of that right now. But there's also many, many areas where we're failing as developers, as founders, as creators to actually get the tools there. And we're assuming that people are going to come all the way to us.
+
+where we need to really get these tools as close as possible to them, understanding that there is always going to be an extra step. Like if we're talking about cryptocurrency, there's always going to be the need to save some secret. Whether or not that's a seed phrase or that's the login to your Apple account, if you go some different methods of storing secrets, there's always going to be some personal responsibility that comes into play because you're not offloading this to someone else. So there's always going to be a little bit of a hurdle, but we can minimize that.
+
+Seth For Privacy 
+initial barrier of entry as much as possible and then work to make the actual user experience as good as possible. And that's a hard vision to accomplish, but one that I think we have to strive for.
+
+Citizen Web3 
+Apart from UX and UI, you think that education and semantics, and is that the reason why you have a podcast, for example, or you don't do a podcast, but you also have a podcast, right? And is that the reason? Is education, because you think education is one of those things that can help? Especially semantics, because right now privacy is, sorry to prolong the question, but right now, when you say privacy, there is no difference between financial privacy and privacy in my bedroom.
+
+Not semantically, but it should be different, right? One is financial privacy. is, I don't know, government. Well, government should not be private. one is, I don't know, company privacy or whatever. And one is the privacy in my bedroom. Will it help if we kind of started to educate people about the different types of privacy and the different precautions, pros, cons they have?
+
+Seth For Privacy 
+Yeah, definitely. And I think that's, I think that's the most useful type. Obviously, I don't want to prescribe what I view as most useful on anybody else who's doing efforts in the space. But that's what I view as the most useful thing to do in the education, content creation space here is once people wake up, and they go, like, there's something really broken about the way my data is used, like, there's something really broken, like, I should not be getting this ad because I talked about this thing.
+
+in person over coffee with a friend. I shouldn't be getting an ad in my Gmail about this. Something is broken. Like, what can I do to change this? And it's at that point that the education is critical because no one I mean, if no one writes or talks or markets things like Signal, how are they going to know where to turn? And ultimately, they'll just go, okay, there's a problem. But like, like how the hell do I fix this? Like, I don't know.
+
+how to prevent Google from being able to target me with ads about this thing that I talked about over coffee with someone. Unless there's people out there actually talking about. Hey, like you understand the need for privacy now like you're feeling a little bit of this this brokenness. These are ways that you can start to take steps. Towards fixing it, and a lot of that comes down to things being again,
+
+technical people are often the ones who start to make the content around this stuff, and they go way too deep. people, normal people just can't go that deep right away. So slowing down, taking things step by step, and helping people to see, hey, are like maybe the maybe these are the three best browsers you could switch to if you really want to prevent tracking across the websites that you visit. Or like these are the two best messengers that I would recommend and like a
+
+an article that I never thought to write, but people told me to write because they wanted to know more is essentially doing that is saying like, hey, if I was approaching privacy, these are the this is the order I would go in. And these are the tools that I would use having tried many more tools than these. This is the like the prime recommendation 123 options. And that article has been by far the most popular and most useful for what people have told me thing that I've ever written, even though I've many technical guides and technical
+
+Seth For Privacy 
+about the specifics of how signal works and simplex works and all these things. Those are useful and there's a place for them. But most people just want to understand like there's a problem. How do I start to fix it? And they want something that helps them to do that in a cautious step by step way that actually fits the hurried life that unfortunately we all live right now.
+
+Citizen Web3 
+To back this up, I used to also try to do a lot of education. And I think the most popular thing I did is in my private GitHub. It's nothing to do with a project. It's called Privacy Basics. And it was exactly what you say. Describe extensions that I use, describe... And it's the one that got the most stars, the one that why people started to follow back 2019 more my GitHub account, my personal GitHub account. I was like, really?
+
+because I just shared what extensions I use and it's like, yeah, people just want to know simple things. And man, I want to ask you one more question before I'm going to jump into the kind of resume bullets with you. KYC. KYC has been, I mean, it's what it says on the box. Know your customer, right? It's really there. The thing is, it's quite ironic. mean, let's put IML aside because IML and anti-money laundering.
+
+The name is also there. So it kind of KYC know your customer is very friendly name that was invented I think at least judging from What this thing tends to do to know your customer not not for other reasons now today We we use it for of course what we use it and how we use it and in the way we use it I'm not going deeper on purpose, but on purpose but
+
+It's obvious that the digital realm, at least in my opinion, subjective opinion, can offer solutions to knowing your customer without the whole how revealing and bullshit that without the whole terrible trauma, I'm really going to call it a trauma that we have now. The question, do you think we as a digital like web tree or whatever community, whatever, I don't know what slags to stamp on us can
+
+should reinvent and the principle of what is KYC. mean, the simple thing is private and public keepers, right? But anyways, what do you think about KYC and how do you think it can look in the future? Can we do anything with it or it's doomed for the rest of our lives?
+
+Seth For Privacy 
+Yeah, I think, I think it absolutely is something that can be technologically solved today to minimize the harm that KYC brings to the average individual. The hard part is
+
+Seth For Privacy 
+those solutions go against the very nature of how KYC is used today by governments, by law enforcement, by financial surveillance firms and regulatory bodies. But yes, I definitely do think that we should build better solutions that allow people to get verified because there are some legitimate reasons why you would want to make sure that someone is a real person and that they have proven that they're a real person.
+
+Now, I think we need to be really cautious because most of the ways that that's used today, there is no legitimate reason for that. But there are some legitimate reasons out there to do that. And the technology has been around for a very long time that can allow this to be done and then proven after initial verification without revealing any information. mean, zero-knowledge proofs are a core aspect of many of the technologies that are used in Web 3 today. And you could very easily have a sp-
+
+you have to have someone verifying these things. So generally, that's going to be a central entity who's going to verify this person is who they say they are. But after the initial verification, it's trivial to be able to prove that you are a legitimate user without revealing which legitimate user you are and without revealing any specific information about yourself to people after that point. So that is absolutely doable right now. And you can even take it a step further where you can do things like I recently had the
+
+the founder of Kagi, a paid search engine that's absolutely fantastic on my podcast last week or the week before. And something that they're doing is you, because it's a paid service, you have to pay and you have to have an account, but you don't want your searches linked to a single account generally. mean, the best thing for privacy would be that they have no idea what this account is searching for. Obviously, they have a commitment to not log and I do believe that they're doing that and I respect them, but you want to create a technological barrier there.
+
+And again, we have that. This technology has essentially existed since the 90s of blinded credentials, where I can prove that I am a legitimate user without revealing which legitimate user I am and continue to use this service as legitimate user without the service even knowing which person I am, which account I am, that sort of thing. So it's absolutely doable. And I think it's something we have to pursue. The very, very hard part is we have little power as citizens even.
+
+Seth For Privacy
+as voters even to change how KYC AML laws are implemented and how banks and cryptocurrency exchanges, etc. are required to implement these things. And that's where it gets really not optimistic is that there's there's not really any way to change these things. These things are created by regulatory bodies that are not elected individuals that have no we have no
+
+view into what they're doing unless they choose to publish information. The people that we elect to government have no control over those regulatory bodies. So it's very hard to say exactly how we fix this other than raising awareness of the brokenness of the system. And that's something that I've tried to do in the past that someone who has a publication called The Rage, they've been doing fantastic work. It's just the rage.co on trying to bring clarity into how broken the system is and showing things like the
+
+the absolute ridiculousness of how expensive it is for all of these entities to implement KYC, and how little benefit it actually brings for the government or for those individual entities. And so a lot of the power that we have right now is really talking about this stuff, showing people how broken the current way that KYC is used is. And then if we have the technology to fix it, presenting a solution, hey, if you as a government feel like you need KYC for these services, here's how you can do it in a way that doesn't
+
+give anyone this data after the initial verification that doesn't require the user to reveal, hey, I'm set for privacy every time I use the service. And that is doable technologically today, but it's really a social problem, not a technology problem right now. And that social aspect is where we need to keep working.
+
+Citizen Web3 
+It's crazy how what you say aligns with, I think anyone who has been in crypto long enough, like let's say five, 10 years and try to peel other people, you very quickly learn to understand something. If you want to peel somebody about crypto, don't talk about crypto, talk about the broken system. Their first question is, what do I do? There you go. So it's crazy. yeah, but it's just really, really, you really made that thing.
+
+Very, very good point. least something I never looked at it like that about KYC before. Thank you for that. Let me jump into Blitz. This is going to be three questions. I call it the Blitz. You don't have to answer them without thinking. So feel free to answer them as slow as you want. They have nothing to do with crypto. This is just to finish the conversation and take us out of this conversation. So here comes the first one. Book, movie or song?
+
+that has had positive influence on Seth for the past, I don't know, two, three, four, five years, or maybe the whole of your life even.
+
+Seth For Privacy
+Hmm, that's a great question. I mean, I think I didn't touch on it when I was kind of telling my origin story. But the the moment that the actual felt need for personal privacy for me hit home was reading Snowden's latest book, I can't remember the title off the top of my head. But he reading his book reading Glenn Greenwald's book on a similar topic and watching like some of Glenn Greenwald's TED talks.
+
+just showed me that even though I'm an American, and it can be painful to be an American sometimes, I do have like many, many privileges and benefits as an American. But the system is still broken. And I'm still suffering because of a lack of privacy, even if I don't feel that as much today. So that's probably what I would say probably probably Snowden's book as I just, I don't know if I'd be here or at least if I would be here in the sense of actually contributing to the space outside of just taking personal steps towards privacy. I don't think I would.
+
+I would have done that if I hadn't been kind of woken up by what he had written.
+
+Citizen Web3 
+And for all the listeners, just a moment, all the show, everything we mentioned, me and Seth, once again, usual things, it's in the show notes, so books, people, projects. If you want to do some Dior, and I advise you guys do, please look at the show notes and just follow the links. Seth, second question. One thing that you can share that is motivational, that keeps Seth waking up and thinking about privacy, thinking about, you know,
+
+everything we spoke about today, know, it sounds easy, but it's not. It's a lot of headaches, at least to me. So what is the motivation that you have that doesn't give you those headaches or at least maybe gives them to you, but, you know, keeps you going?
+
+Seth For Privacy 
+Yeah, I mean, I think like we talked about a little bit earlier, it's a struggle, but I'm optimistic because like we, we truly are winning in so many ways, as far as like actually leveraging technology to improve human freedom. And it's easy to get like caught up in the ridiculous news cycle and get caught up in the the anti privacy regulation and laws and rhetoric that is going out there. But that's only happening because we're winning.
+
+Like that pushback is happening because these tools actually work and they're actually changing the paradigm and actually stripping power from governments and giving them back to individuals. So I think for me, like that has to be a critical thing that I remind myself of and that friends remind me of, that family remind me of is like the reason we are in a fight is because this stuff actually works. If what we were doing was not influential was not making a difference at all.
+
+there would be no fight. Governments would not need to enact anti-privacy laws. Governments would not need to push back on this. They wouldn't want to implement KYC AML and use that as a lever against cryptocurrency. They wouldn't want to debank cryptocurrency founders and debank exchanges. That's only happening because we're winning. So think just keeping that in mind, the harder the fight gets, it's because this stuff is actually effective. And we need to remember that as we keep going. And ultimately, that's really what wakes me up each morning is knowing that these tools actually work and that the
+
+the broader use we can get for them, the better we can make them, the more people's lives are going to be impacted and benefited by this.
+
+Citizen Web3 
+There is a crazy thought that I have for many years didn't come to myself until you right now said it really. There is a very, very crazy thought that we are actually here because we are winning. And it's ironic that you said, because when you apply it to other parts of life, it's exactly how it works. So, wow. Thank you for that. Last one. This is a strange one.
+
+And I think after we're winning, it's kind of not important anymore, but jokes aside, of course. No, but it is very important point. Sorry, I just don't know why I never, never looked at it like that. Sorry, back to the question. So weird one, but it's the last one I promise. Dead or alive, real or made up. So it could be a writer, could be a developer, could be a cartoon character, could be a family member, could be yourself. I don't know.
+
+Citizen Web3 
+a persona who when you feel stuck, kind of it help when you think of that persona or persona, doesn't matter if they're real or made up. It is kind of whatever it is you do and you manage to get through whatever they're not your guru. I don't believe in gurus. Hence, it's not about gurus. It's about somebody real or alive who helps you to ease through whatever it is difficult situation you are in and
+
+Get back up
+
+Seth For Privacy
+That's a good question. I think I could go a lot of different directions in that. think what just came to mind as you were saying that is the poster that you can see just a little bit of in the background that I desperately need to put on my wall. And a lot of it comes back to remembering what the original vision of the like OG cypher punks were of the OG crypto anarchists. This vision of technology actually
+
+being a tool for freedom and empowerment and not a tool for enslavement. And it really hits on the last point that I said of ultimately we are implementing that vision today. And I think we're finally, finally starting to take some steps to reclaim the internet, to reclaim this brokenness and turn it into something that's beneficial for humanity. But a lot of times it goes back to that of just that people have thought about this and envisioned this and been building towards this for
+
+years. mean, really a lot longer than that. But that's kind of the technology side, at least, is where the last like 30, 40 years. And so that that very much is motivational for me and helpful to realize that like these brilliant people put it all on the line. Like when you talk about like the origin of the crypto wars of PGP being ruled as a munition and just the craziness that happened there, people were willing to go to court to put their name and their reputation and their
+
+freedom on the line to ensure that we had access to tools for encryption. And that's still happening today. I mean, that's that's there's two massive ongoing cases, tornado cash and samurai wallet that will decide a lot of the legality of the privacy tools that we're building. So like, it's a continued, like I said, it's a continued fight. But looking back at those people who foresaw what fight we would be in and foresaw a vision of what technology could be for people, and how positive it could be is something that
+
+again, is helpful to kind of keep me going of remembering like this is this is a long term thing. It's not a new problem for 2024. This has been going on really for as long as civilization has existed. But in the technology world, it's it's a kind of a next level.
+
+Citizen Web3 
+Once again, amen. know, because well, it's, it's, what we need. You know, this is what I know we didn't go to the samurai tornado cash topic, but yeah, I think we can hopefully leave it for next time. But on that note, I do want to thank you, Seth, for your time and for all your answers. And hopefully the things you say, the optimism you have towards privacy will, will prevail and we are really winning the fight.
+
+Please don't hang up just yet. This is going to be a good buy just for the listeners for everybody else Thank you for tuning in and see you next week. Thank you,
+
+Seth For Privacy 
+Thanks for having me, Serge. Fantastic talk.
+
+Citizen Web3 
+Thanks, bye bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

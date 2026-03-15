@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { askAgent } from '@/actions/ai-chat';
@@ -36,12 +36,27 @@ const getErrorMessage = (result: AskAgentResult, t: ReturnType<typeof useTransla
   }
 };
 
+const getEntityKey = (ctx: PageContext): string =>
+  ctx.validatorId || ctx.chainName || ctx.page;
+
 export const useAiChat = (context: PageContext): UseAiChatReturn => {
   const t = useTranslations('AiChat');
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const isLoadingRef = useRef(false);
   const messagesRef = useRef<ChatMessage[]>([]);
+
+  // Clear conversation when the user navigates to a different entity (validator, chain)
+  const entityKey = getEntityKey(context);
+  const prevEntityKeyRef = useRef(entityKey);
+
+  useEffect(() => {
+    if (prevEntityKeyRef.current !== entityKey) {
+      prevEntityKeyRef.current = entityKey;
+      messagesRef.current = [];
+      setMessages([]);
+    }
+  }, [entityKey]);
 
   const sendMessage = useCallback(
     async (text: string) => {

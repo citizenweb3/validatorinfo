@@ -1,0 +1,390 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cudos
+
+Episode name:
+The Cloud, Mining and NFT Gaming with Matt Hawkins
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of Citizen Cosmos. We have Matt with us today from Cudos, the CEO of Cudos actually. Matt, hi, welcome to the show.
+
+matt 
+Hi, it's great to be here. Thanks for having me on.
+
+Citizen Web3 
+Yes, really glad for having you on it was an interesting story of how we got this actually to happen. was behind the scenes. The story was that we were doing some background questions to people of our channel, the Telegram channel we have, people who were like just gathering feedback. And then one of the guys was like, I'm just in a channel because I want to talk about recording an interview.
+
+At the time, were like, which project are you with? And he's like, good. We're like, of course, let's record an interview. Yeah. And then it got from one place to another. So it was like a small interest in backstory. Sorry about that, Matt, first question is first, what I usually ask everyone to do. Please introduce yourself in your own words and tell us what you do and anything else you would like to add to that, of course.
+
+matt 
+Yeah, sure. So yeah, Matt, CEO of Cudos. I guess my background as for Cudos projects itself is previously run in one of the largest data center companies in the UK. So from that experience, we ran that for about 16 years, built one of the largest networks as well, kind of built an early version of decentralized cloud in about 55 locations around the world.
+
+And really we just saw the growth in demand for compute, also all the waste in compute. And really kind of got to 2016 and we realized actually we can now build a platform, use modern technologies to make use of that spare capacity. So if you look kind of that infrastructure market, it's about 20 billion a year. So it's a huge market, but you've got over a billion devices that are unused around the world. And if you look
+
+of 30 % of the spare computing or 30 % of the available capacity in all those devices can then be used for other purposes on average. 60 % of the CO2 that gets produced in building a server stick in the data center is now actually just used up right at the start of its lifetime rather than its operations. And as more more countries and locations move to renewable energy, that number gets bigger and bigger.
+
+We really reduce that CO2 impact by using equipment that already exists, but also making better utilization of capacity that's already out there. So really that's where Cudos came from. And we wanted to build a blockchain that was able to power both traditional cloud computing, which is kind of our background and the infrastructure market, as well as the growing demand needs for computing blockchain today.
+
+And so you have kind of in blockchain, have small amounts of compute, but then you also have much larger demands and there isn't really a solution that we believe that is able to service that. metaverses need thousands of tens of thousands of nodes if they're going to scale users. So we wanted to build and design a blockchain that was designed to scale compute to the levels that traditional cloud is able to support. But again, make it more sustainable.
+
+matt 
+And, know, we're very passionate and being carbon neutral ourselves as a business. You know, we work with a lot of ESG projects in that space, but, and that's very much our background as well is in coming from, think, make things more sustainable and greener. So really, you know, we are the infrastructure blockchain that's able to power traditional infrastructure, cloud infrastructure, as well as the infrastructure that's needed for Web3.
+
+Citizen Web3 
+This is a good, good explanation. And I do have some questions for you, course, about that quite a lot actually. before we get to that, just some more background a little bit. Cudo and Cudos. And are they related? Because there was a confusion for, there is when you go like on the website and everything and there is Cudo and there is Cudos. Are those just the name of the company and the blockchain or is there anything else to understand here?
+
+matt 
+That's essentially it. That's the primary difference. Cudo is how we started out right in the beginning back in 2017. we, Cudo is actually Latin for coin. And we wanted to build a network that was able for anyone to be able to earn from it. So that's where came from. And then Cudos, and they was the name for our blockchain. And that's because we wanted to do good with that network.
+
+And the other phrase for kudos is giving Cudos, you're giving good. that's very much where the network is. We work a lot in sustainable projects and good causes and in that space. But really from a technical separation, that's essentially how they work.
+
+Citizen Web3 
+Yeah.
+
+Citizen Web3
+There is a lot of this happens sometimes in blockchain and in crypto where like the company name is very similar to the blockchain name and people get confused. But I didn't know Cudo was Latin for coin. By the way, about sustainability, what's, I mean, I'm not, I don't mean it as a general question, but as a personal question to you, what's the whole deal with the working with green things and sustainability and trying to, you know, lower carbon emissions? Why is it important to you personally?
+
+matt 
+Yeah, that kind of came from running a data center business. And I was seeing what huge impact that industry has on CO2 in the world and the amount of energy that's used in the world. And, you know, we were, I mean, we had thousands of racks in data centers around the world. So, you know, we were impacting that as well. So when we build our own data center, you know, we made sure that was all renewable energy as efficient and green as we could.
+
+But we're seeing all these other data centers still running inefficiently or still being able to not fill their capacity. that's kind of where it comes from is actually being involved in that inefficiency to start with. And we have the power to improve our own environment, but not to improve the other environments that we were working with. So by building a platform ourselves, we can improve.
+
+environments around the world in many locations in whoever contributes onto the network. probably within my technical capability, it was the biggest impact that I think we could have.
+
+Citizen Web3 
+I have a slightly like devil's advocate question here about sustainability. There is a lot about that mentioned on the website. think there is something in the documentation even that I noticed. And I'm not sure why did this question came to my mind, but like I said, it's a devil's advocate question. And to me, like...
+
+wherever we have computing power, especially at centralized financial entities or entities, like centralized big companies that require some sort of IT security, they will never be ready to share spare computing power, whatever happens, as long as I can see that. Maybe I'm wrong, of course, and I feel free to correct me. So how do we go about this? And the reason I'm asking this, I guess, is because of the mission of the project, Cudos.
+
+that to stop people wasting computing power and make the world a better place, at least like that, which is a great mission. But I think that there is always going to be all these companies that will never ever want to be sharing that. And they use a lot of computing power. What do you say about this?
+
+matt
+Yeah, I definitely agree there. So, you know, we looked at what's the three industries, if you think of our, you know, our blockchain and platforms, really, we kind of connect supply and demand across different types of infrastructure. And from a supply perspective, then we looked at the market first before building anything and look, okay, where are going to get the largest amount of compute and the largest traction? And, you know,
+
+we investigate enterprises and they have security policies. They're very hard to get around. They don't want to run software that they don't necessarily have full control of inside their environments. So it's not actually a suitable environment for them to share kind of under the way things are currently done pretty much in most securities in core enterprises. But where it does suit is home users that don't have those security policies, as long as the application itself
+
+is secure. It is Mining Farms, which we work with, and we make better use of their computing capacity because they're used to running third party applications. also it is, so the home users give you high end graphics cards and processors, but not the best network and not always all of the time. Mining Farms give you very high end graphics cards, which is one of the most expensive resources in compute today.
+
+And our ultimate goal there is to replace proof of work with real work. But it's kind of a staged approach that we do there. And then the last area is around service providers and data centers. And that environment gives you the IT regulations that you need. Like in the UK, it's ISO 27001. In America, it's SAS 70. Wherever those regulations are, really, they've already got those environments that meet the security regulations. They're already
+
+have everything in place to be able to split up that technology to make it as secure as cloud is today. So it's really down to then on the demand side, what type of environment do you want to your computing? So if you've got private data, you're only going to want to run it inside the data center environments, the service environments. If you've got public data, so weather analysis, something like this, any large data sets that are sharded up,
+
+matt 
+that don't have any particular value in them. They're perfect for running out to the end users machines. And then you can get your middle ground, which is things like video rendering of television adverts or social media adverts, things like this that have the IP concern. And that's actually ideal for running inside mining farms, you know, with the high end graphics card. So it's all down to the data types that you're happy to run where you choose. And that's how we designed it. You can kind of decide.
+
+And we've built different software that runs in each of those environments. So we've got a desktop application that runs on Windows and Linux for the home users. We built mining farm management software that actually integrates with mining farm software for that environment. And then we built a specific data center environment version so that we could run in that as well.
+
+Citizen Web3 
+I'm curious whether it's too early to ask that question or whether you've already done that. I'm going to ask. I'm curious as to the type of the reaction that businesses or private or private users as you mentioned refer to them have when you come up to them and say, hey, we want to give you a piece of software and use part of your computing power and you get a reward. What is the reaction that usually like?
+
+People do they're like, no, my God, I'm never going to install. Are you going to like mine on my computer? Are you going to like attack me? Are you going to steal my like, what's the initial reaction that you get?
+
+matt 
+And sure. Well, the, I mean, the desktop version of our software has had about 600,000 users sign up to it so far. So, and that's installed in over 140 countries. So, so they're quite comfortable with that application. we've got various mining farms running our, other, you know, mining farm version of the software. and they see it as a brand new revenue stream. and they're already used to running those types of applications.
+
+And then data centers, you know, that that is our background. We have everything to match the way that they, work generally as a business anyway. So for them, they see it as kind of a new bottom line revenue that's improving their efficiency. So, you know, it's, mean, we've been building this for nearly five years now. there's a lot of progress on that side.
+
+Citizen Web3
+That's actually really, really cool. And that's actually my next question about like the five years. But I'm going to start a bit earlier than that, if you don't mind. You mentioned data centers and you said at your introduction that you were in charge of one of the biggest if not, the biggest data center in the UK. What's the story? How did you end up from working for one of the biggest data centers into starting a blockchain startup? How did the life go down the hill so much? I'm joking, of course.
+
+But how did you bring crypto into that? And how did you go from one thing to another? And how has it been going for five years? Like the whole story, the whole shebang. Go for it.
+
+matt
+Yeah.
+
+matt 
+Yeah, sure. I mean, so I founded that company back in 2000. And that was just as the internet was taking off. I actually had a social media website, which became one of the busiest in the UK back then. And we need lots of traffic and lots of servers. So I started renting and the costs were going up. And I was like, okay, I need to set this environment up myself. So
+
+So we bought some data center space and bandwidth, got it all set up. But we had to get a multiple suppliers. took time, all different contracts. And literally realized actually everyone else as the internet was just taking off must be having exactly the same problem and challenges of getting into cloud essentially. Because this is before Amazon and Google Cloud and all the other providers that we've got today. So we kind of packaged that service up and made it easier for people to build and get onto the early version of cloud, so the internet.
+
+and obviously that's the right time and it's, it's exact, exact parallels of what we're seeing now in blockchain. You know, is, is our approach is to do exactly the same is to make it much easier for people to get on board and, and scale basically. so that model worked well. Yeah. We ended up growing that into, like I said, 55 data centers around the world. we kind of built our own fiber networks. We dug our own networks, lit fiber, built
+
+cloud platforms across multiple data centers. We only built one data center, but we took kind of suites and lots of other data centers. And it kind of just, it was the right time to launch that type of service. You know, it's just as an industry is taking off, where you make that journey easier. And that's essentially how Amazon and Google have succeeded in all these does is all of a sudden that is now an easier version to deploy onto the internet.
+
+And as soon as you bring out a new way for people to deploy new technologies that has adoption, that's where they really accelerate. And that's obviously the accelerations you see in blockchain today. But it got to about 2016 and we just kept having to build server farms, build locations. We were going to build another data center. And it's the physically building it yourself that slows you down.
+
+matt 
+having to build those environments and we see this unused capacity. So for a long time, we'd had a business plan to be able to make use of spare computing, but it was only as of kind of about 2016 containerization and finally got mature enough that we could now kind of move the workloads around that we wanted to. People were used to the sharing economy. So we researched 2000 consumers across the UK, about 60 of them said they would share their computing capacity.
+
+So the market was ready. And we just saw from kind of a technology perspective, everything was in place, broadband connectivity was now good enough. And then finally, was really kind of maturing. The tool sets around blockchain and obviously, we're talking about Cosmos, but they had one of the best tool sets out there that you could build and adapt to blockchain.
+
+And we saw kind of the power that actually this is the first time that you kind of being given the tools in the same way in virtualization, you're given the tools. You know, not many people build their own new hypervisor. You take a hypervisors that are out there. take, know, security containers that people have built around there and you pull them together. They make something better out of the tools that exist. and it was kind of 2016, 2017. We were starting to see the same in that space. so it's kind of just all the technologies coming together.
+
+And actually, you know, we we regularly had people coming to us asking about putting, you know, mining equipment in our data centers that we're in. As it happened, you know, we weren't in Iceland or Sweden or these other locations, which is a much better place to put it. But it just got us interested in a space that we were learning as we were going along. So yeah, we
+
+sold that business basically to build previously where we physically had to build it ourselves. We'd sold that business. So now we can build it in software so that everyone we could run on everyone else's infrastructure.
+
+Citizen Web3
+And did you personally basically find out about crypto because of the mining thing, right?
+
+matt 
+I think actually...
+
+Probably that's where it got my first involvement. But my CTO, he had been one of the first Bitcoin miners, think he was like, the G2010, he was in there. So he knew about it well before I did and I got involved.
+
+Citizen Web3 
+Well done. Well done. That's cool. you did you work? Yes, on your your on probably on your laptop as well, right? Probably on a personal laptop. And and did you when you first heard about crypto, like what did you think? Did you think this is some kind of like Ponzi scheme or it was interesting?
+
+matt 
+That was when you could still do it on your PC.
+
+matt 
+Yeah.
+
+matt 
+I mean, I'm a technologist. So I was really interested in finding, understanding it. When I started seeing the Bitcoin mining, was like, what's really behind this? And then started doing the research. And as I kind of, a lot of people, think say, once you get into this rabbit hole, you're here for good. You know, I was getting more and more into it, understanding the technology and understanding its power. I realized that actually, this is
+
+Citizen Web3 
+Yeah.
+
+matt (19:22.207)
+probably one of the biggest innovations, blockchain itself, since the internet went live. And I think it's got the power to achieve the same as the internet has over the next 10, 20 years. Which for me, as a technologist, is really exciting. And it's a space I really want to get into because the journey that I've done over the previous 15 years, it's like, okay, we can actually do it again in this space.
+
+Citizen Web3
+It's interesting that you mentioned this well before, like similarities between our sorry, of what's going on in the blockchain space now to what you saw before with the internet. And I've heard, not just heard, I I was there as well. And apart from that, I remember very well how the internet was developing, how computing was developing, especially private computing, like after 90s already and in like the middle 90s and the beginning of the zeros.
+
+And the similarities are astonishing, like in terms of like scalability, especially, and L2s and all that. I mean, you're like, whoa, this is exactly what happened like back then, but just different names and different, slightly different things. It's really interesting. By the way, why Cosmos? Why did Kudos decide to work? Well, Ethereum and Cosmos, I guess for you, but why Tendermint? why did you choose the blockchain technology you chose?
+
+matt 
+Yeah, so we did look at the options to start with. Can this be built on someone else's blockchain? Could it be built on a Solana or Ethereum? Obviously, the cost of Ethereum is prohibitive for many types of projects nowadays. And just the performance is what we need. We need much, much higher performance than Ethereum.
+
+And obviously we were nowhere near the future release of Ethereum 2 when that happens. we realized, and we looked at a few other blockchains as well, but the transactions that ultimately are going to be doing on here, we understood that we needed to have our own chain. And then the option is, do you entirely build your own chain from scratch or do you take a tool set that exists?
+
+And I think probably two of the best tool state tool sets out there are Cosmos SDK and Substrate. And we looked at kind of the options between those two. Substrate still had a lot of tie to the core network. And it was much harder to customize if you really want to adapt it a lot and change it for your own purposes. And also I think if you
+
+If you want to kind of pull substrate away from Polkadot, then you become more solid than if you try and build directly on top of the network. So that's not what we want. We want to build an infrastructure blockchain that's accessible by all other blockchains, in which case Cosmos by far has got the interconnects, the IBC connections between every other zone that's on there.
+
+And the technology that they've used is very similar to BGP, which is kind how the internet was designed back in the early days as well, what still is obviously. And we were seeing the similarities and that model is proven. And the way they do kind of the communications across IBC and transfer assets is similar to packet encapsulation. So it was a space that we knew very well, but in the internet domain.
+
+matt
+And we could just see that that model is going to scale better than any other model that I had seen in the blockchain space. So it kind of had the best interconnect potential going forwards. had the best tool set to be able to adapt it. And I think, you know, that outweighed pretty much any other areas that are still playing catch up. And I think from a roadmap perspective, you know, they've got some good releases coming out over the next few quarters about optimizations.
+
+And really, think that's probably a good key area. They've got the interconnects right. Performance optimizations is probably the best, although it's still very high performance. And we're even seeing limitations on some of the other chains at much lower levels than was expected. But the Cosmos chains are holding up pretty well. Even when we've seen the issues with UST and other platforms, the protocol managed to survive the entire time. And I think it was a real
+
+So I say Cudos, maybe you can see how well the protocol itself is able to sustain it. So it was just the correct solution. And as we're a tech stack, we wanted to build a platform that anyone could build the entire solution. So at the moment, if you want to build a live peer or a render token, or any of these type of infrastructure blockchain solutions, you have to build pretty much a layer one yourself.
+
+that's a huge barrier to entry, where we have designed the network so that you can build one of those essentially as adapt with an image that you can then scale out to nodes around the world that running this infrastructure. So it enables other projects to very quickly build infrastructure solutions that typically in the past have taken a very long time. And Cosmos enabled us to do that. So we've built it where you can have everything from, know, you can build your own native tokens.
+
+NFTs, we use Cozumwezen for the smart contracts, but we do have EVM coming in as well. And then you have the compute network that you can scale out to for any computing.
+
+Citizen Web3 
+You mentioned an interesting point there in the middle about that one of the reasons, of the first things for choosing, not the first, but one of the reasons for choosing Cosmos was, well, the way the model that they use is being proven to work with the internet and the internet is still built that way. I have another devil's advocate question here, especially somebody with your experience who has seen the internet grow from, well, the modern internet that's not going to
+
+our ARPANET, Like how it scaled, let's call it that. So the question is this. I'm going to go to the question. Considering like the internet is pretty decentralized, right? But then we have like DNS and we have HTTP, right? Do you think that, let's say Cosmos scales and let's say more and more projects, you know, onboard Cosmos, do you think something like relaying potentially or anything like that might
+
+create the same problem as DNS created in terms of like, don't know if I'm being technically correct here, but in terms of like, know, the relay knows the addresses of the packets where to send one from another. problem with the DNS system, right, is that it's centralized and somebody owns the address book. And that's because somebody owns the address book, we all kind of suffer a little bit. I mean, there is obviously other things like with HTTP and everything, but I mean, forget about relaying even for a second. Do you think...
+
+that we might or we will bump onto something in the Cosmos technology, which will lead instead of scalability to centralization, in the sense that DNS and HTTP led to the centralization of the modern internet.
+
+matt 
+I think there's no doubt that we will hit, I guess, caps and limits in any technology. You always find a limit and usually then it gets upgraded or re-architected. So that's kind of inevitable with any technology solution. It's the fact that you can upgrade that or kind of improve that before it becomes a critical issue, I think. The way
+
+I guess the cost of SDK is built is that each zone is independent. So at least if you are hitting errors, you know, you're not going to take down the whole network, which is the most important thing. And that was one of the kind of key architecture designs. It's a little bit of sort of, I could go back to the internet, but you know, that's the way every service provider kind of has, it's called an AS number, but it's the equivalent of how we do an IBC interconnect between two blockchains.
+
+And you can kind of only mess up. Well, there are ways you can mess other people's up. Typically, you'll only mess your own network up and rather than others. then those improvements that it was called MD5 back then, but it was a way of improving the ability for to make sure the communications are correct between the networks going forward. So I think I've seen the right, you know, I think the roadmap is good and there's constant
+
+areas of improvement from technology from that perspective. From a centralization perspective, I think probably the biggest centralization really is the development team that working on it. But it's also very open and people can submit PRs and add to it as well. The relays, I mean, there's multiple relays out there. And I think a relayer is a very good comparison to a DNS host, where you have, I guess, you've
+
+In DNS, you've got your closest service providers that are direct name records. But then in the back of it, you've got your higher up name servers. Usually, you only lose your local name servers, so the people or the domains directly connected to it go down. But that's why you have secondary and tertiary DNS. I think that's something that should be built in slightly better on IBC.
+
+matt 
+very good is that you can have live secondary and tertiary links. So if you do lose a relayer, it's pretty much, you know, transparent and you would go straight on to a second one that would fail over. As far as I understand it, it's a lot more of manual process at the moment. So I think if you get to that point, you've got a self healing network that works much better. then relays, I mean, you're always going to have single points of risk in any design.
+
+It's kind of how do you handle those failover solutions really.
+
+Citizen Web3 
+think the most simple solution here is just introduce rewards for relays that they have an incentive not to look for other models like DNS hosts did, I guess, at one point, like saying, OK, we need to make money somehow. So what we're going to do is that's what we're going to do. But I guess more and more. And by the way, this is a question. Do you plan any?
+
+incentives for relays on Cudos in terms of the network itself? Is there any talks about it or ideas that you guys have?
+
+matt 
+Not directly for relays at the We haven't set it for validators naturally on the network. We are bringing up our own relay relayer at the moment as well to connect into a number of new channels. I mean, as a connecting to a third party relayer and using their connections, I wouldn't have an objection. And I think it's a good idea in the same way that
+
+validators take a cut of transactions that go through, relays should be able to, and I have seen in the SDK roadmap that that is a proposal as well, that there will be the ability for them to add. So I think that's a really good thing. It's fine initially for people to be able to do things for free, but they're not sustainable at the end of the day. And if the relays then have the choice to set it, and they could be small percentages, 0.1%.
+
+point two, point three, mean, quite a common fee for someone that runs a bridge is running at kind point three, where you transfer assets between the two. So I think people are comfortable with that model. It's just, it's not very easy to do at the moment. So, you know, I wouldn't have a problem that you did that. And, you know, I assume people are in the same mindset because that's how validators work and that's how they're incentivized.
+
+Citizen Web3
+And talking about validators, and I'm sorry for being a bit on the controversial side of the questions today, but this is to find out more things. Talking about validators, currently, if I go on the Big Deeper Explorer, I'm only seeing 26 validators. And I think that, what is it, 80 % of the stake is top five validators right now, right on Cudos?
+
+Do you have plans to attract more validators to the project to decentralize the stake from the top? what is the plan? And of course, if you do have the plans, what are the plans? Or is it more of like the governance in the community thing and less of the blockchain company behind the blockchain? Sorry, I kind of got mixed up, but I think you understood. Sorry, the question. If you didn't, will redo it. Sorry about it.
+
+matt 
+Yeah. So we were looking to have around 30 validators for Genesis, which was only a few weeks ago. So we've only just gone mainnet. We actually had about 70 to 80 validators sign up on Testnet. So we're now going back to those and start to onboard the other validators that we've been working with. So it was kind of a, we've not looked to initiate that just in the first few weeks, just to make sure everything is
+
+As stable as expected, we spent nine months in QA just making sure everything was correct in the way the network had been designed. And then we would then start to go back and get the validators coming back on. So the intention is to get that up over the next six to 12 months to about 80 or so. And then as that happens, then that will be a much larger spread across the base.
+
+Citizen Web3 
+Yeah, yeah, for sure. does build up. I have seen it like some networks of course do manage to attract a lot straight away. But I mostly have seen, especially now that the space is growing and growing and there is more networks and more validators, but at the same time, the space is more competitive. I think it does take time for a network to attract. It's like the best validators that it wants to attract that will definitely...
+
+bring value to the network. And this is actually, think, the next question I'm having. I'm going to ask, I think I read in the documentation that you need a certain amount of Cudos to start a validator. I think it was $2 million, correct me if I'm wrong, which is at today's price is roughly $20k. So the question is, again, about decentralization.
+
+Do you think it's important to have a minimum amount to stake in order to prevent like spam attacks? Or do you think that a minimum amount to stake kind of like puts a boundary on decentralization because then anyone can start unless if they have the equipment, of course, or is spam prevention here or DDoS, let's call it like that DDoS prevention is more important in this case for the network.
+
+matt 
+Yeah, I think for the way that Tendermint is designed, then you should have a minimum because of you really want a stable core network. So we're probably a little bit different to other chains where we use Tendermint as our core layer one network. And then we use our compute network to scale out the compute demand. So on the core network, we run governance, bridging, smart contracts.
+
+consensus on the compute network. And then that's limited to, well, currently around 100 validators that you want to run on that design. And then the computer isn't limited on the number of nodes that can kind of just keep scaling. So we, know, because you always take a sacrifice between performance, security, transactions. So we split it into two that so we can take the benefits of each.
+
+So yeah, on the core network, it's very important that those nodes are as stable as possible, even though Tendermint fails over pretty well. And that means, you know, I think to have that, then you should have service providers that are able to put that kind of, you know, stake those number of tokens and be able to put that investment in to commit onto the platform. And also many of our validators are very experienced in the Cosmos space.
+
+which means they help your support. They help your community. You they'll help other people come in on board as well. So I think certainly for the early stages and, you know, I guess to kind of an individual and home user, that's quite a lot of math, but to a business and typically most of these validators are, they're either data center providers and web two providers. We've got quite a lot of web two providers that this is their first foray into the web three space.
+
+And then also we have, you know, seasoned web three validator that this is their space that they work in. But they have, you know, pretty much five nines environment uptime. They have nodes that are very stable. have high performance networks. Many of them are DDoS protected. So they've kind of got everything you need in place to have that really scalable core global network.
+
+Citizen Web3
+of course. As a validator, we definitely like, also validate and we also definitely try to have, to pay more and more more attention as we go to the infrastructure to make sure it's like, you know, as stable as one can get. And, well, of course, you you cannot have one day, hopefully, luckily, the dream is like, at least for our validators is to also go green. And I really liked that you mentioned that.
+
+and know as green again as possible not green completely and to be as independent as possible to have less dependent on electricity less dependent on on the internet cables and so on and so forth of course some something has to be done but it's great to hear that there is more and more people with the same interests and i guess this is kind of the next question like towards cloud computing like to to bend from from the general questions to there
+
+Like, and the first one is going to be about Akash, like to somebody who comes from the outside. Of course, when you hear cloud computing and Cosmos, the first name that springs to mind, Akash. So what are the differences between Kudos and Akash? And yeah, I'm going to stay, leave it at that and then ask the second question afterwards. What are the differences between Cudos and Akash?
+
+matt 
+Yeah, sure. mean, I think Akash is a good network and I like what they've done. I think they've taken a different approach. We come from previously, you know, building a large data center and sort of global cloud network. So we've sort of come into it purely from that mindset. And because of that, we've decided first, well, we service both markets, we service the Web2 space and we service the Web3. And the Web2 space consumes
+
+in a, but they have different expectations than the web three. When you scale on web three, you kind of expect to scale in your smart contracts, you expect to be able to pay in crypto in the smart contract itself. And to be able to get all of the information directly into that smart contract, whereas in the web two space, they expect a GUI or an API, they expect to be able to pay in fiat, you know, with Stripe or Wada and they
+
+expect support mechanisms, they support teams, SLAs, everything else that you get from an enterprise. So we designed ours to be able to service both of those. And we have two spaces, know, it's, makes growing at a billion years, about a hundred billion this year is that size of that market. So that's a very big space for us to address. And that's probably where we are working with, I guess, much larger providers in that space. Our typical customers spend somewhere between
+
+a few thousand dollars to probably $250,000 a month on cloud. Whereas trying to get a customer in the Web3 space that spends that, there probably isn't any at the moment from an infrastructure perspective. So we designed it to service that typical market. And that's the market that we used to sell to when we ran our last company. So we're kind of very familiar with that. And then in the Web3, then actually
+
+the areas that we focused on is kind of scale. So metaverse is your average metaverse node, for example, needs around 150 players per node. So if you want a million players, you're looking at something like 7,000 servers, always on fixed IP addresses distributed around the world. So it's really, we kind of, we've been building this to do the same performance as, you know, the large hypercalers.
+
+matt
+to scale up to it, but using Web3 technology to do it. So it's quite a different approach from that perspective.
+
+Citizen Web3 
+Yeah, for sure, for sure. And this is where my next question derives from. I'm still going to stick to the same type of questions. Considering over the last, I think, I'm not going to, don't quote me here, but five to six years in the blockchain space, there was a lot of projects in the cloud computing area. Yes, the old head, like you described the differences here with you and Akash, with Cudos and Akash, mean.
+
+There is a different approach and there's of course a different goal always, sometimes a different technology, not sometimes, but always different underlying technology used architecture. But, and I'm not going to take Akash into consideration because Akash is still also a young project like yourself, but a lot of the other projects did fail. They're either still there, you can still find them on CoinGecko or on CMC if somebody uses that still.
+
+They're still there, and it's hard to kill a blockchain kind of thing. And I mean, you did mention you guys have 600k users already signed up, so you already have a huge base. But the question is such, why do you think you guys will succeed in such a hugely difficult competitive, like not competitive more even, but it doesn't seem that cloud computing projects, and again, this is a devil's advocate question, so I really would love to hear your answer. A lot of the cloud computing
+
+matt 
+Yeah.
+
+Citizen Web3
+projects in the blockchain space did fail, why do think you guys will succeed?
+
+matt (42:56.511)
+Yeah, I think and we look at a lot of them before we started building on during building as well. And a lot from my view failed because they purely targeted a web three market. So you could only use the native token, some of them really. Even when you connect your wallet, you need the transactions and you try and go through and you try and run a transaction, it doesn't do anything.
+
+Some of them, which exist now, you go on and they've got like two or three demo apps that work where you can actually do anything. And there's no real incentive to use the platform. It's all about incentives today. Why is someone, they've got the need, you know, if you look in web three, the need is growing very much in AI and metaverses and game servers and things. But in the web two space, the need is already there and existing.
+
+So what's the need to move or what's the incentive rather to move across? Most of these projects, there is no incentive. And all they've gone purely web three and there's currently no market. And that's the problem with coming into a space so early is, and it would have been much harder to do this three years ago in reality. in this kind of previous blockchain cycle, you know, and I do follow kind of the four year cycles from a technology perspective. And I kind of match that a little bit to kind of
+
+the e-limited version S &P and other markets where you see the dot com boom and then all the good projects come out of it. But it takes a few years for those good projects to actually then start getting adoption. And they're only, you know, if you look at kind of Google and these others, they were coming in just as the market was taking off, but it still takes time to get the option. So I think you, they haven't really focused on the wants and the needs.
+
+of the market, I think they've gone straight for the technology. there's some, and if you look at some of the other applications that are vertical based, such as video rendering and AI, they, some of them have tried to go for the traditional markets, but then there's no really incentive to use it over just using a standard video rendering provider. So we decided instead that, you know, you come up with a network that is able to service web two, but be more cost effective and more efficient.
+
+matt 
+and greener. And then you also come up with a network that's able to scale for web three, because that's sort of the two gaps. And that's what we focused on. really, pretty much all the other projects out there that we have seen didn't really take a market first approach. I think they took a technology first approach. And with anything that you build, you need to understand the wants and the needs of the user before you build it.
+
+Citizen Web3
+I really love that answer. That is a perfect answer in my opinion, because I was around building in 2016, 17 already some projects and we were building a social network and yeah, correctly. We didn't go for the market at all. And a lot of the projects from that area from 16, 15, 17, they were not looking at the market. They were looking at, okay.
+
+Somewhere, And unfortunately, most of those who were looking at the market back then were Ponzi's, unfortunately, like BitConnect or whatever. Well, BitConnect is an extreme example, I guess, but there are many others. But you're right. A lot of the small projects really didn't care about marketing and didn't care about blockchain, blockchain, blockchain. And of course, it didn't really work out.
+
+You mentioned 600k users. That is a huge, huge user base. I I don't know. Maybe in terms of cloud computing, it's not. I'm not from that area. Maybe you'd say that, this is nothing. But to me, sounds like to a Web3 person, 600k users, like, whoa, let's have a party. Are you planning to onboard all those to Web3 slowly or seemingly? I mean, I guess not like.
+
+matt 
+Hmm.
+
+Citizen Web3 
+Here is your new Cosmos wallet, go and use it. But do you have any plans like that?
+
+matt
+Yeah, I mean, they actually all signed up for the service and a few hundred thousand of those have been running the software as well. So but what we did is before our blockchain was ready, we were actually paying them out in Ethereum. And so you know, they had a liquid token. But once our blockchain has gone live, which obviously it just has done, gone native, we're now integrating the payouts on
+
+all of those devices being able earn in the kudos token with incentives as well. that means that anyone that connects their hardware to the network can be earning kudos. depending on what the application's doing and the types of work, things like, and we're currently integrating compute into that application as well. So we sort of built things in modules and stages and integrating them together. And once those devices
+
+So all of those in the next few weeks, we'll be able to earn the Cudos token. And you can just go and download the application as well and earn Kudos. And there's incentives and bonus, obviously, for being paid in the Kudos token as well. But then also, once we have compute added to it, a home games machine can be earning kind of 200 pounds a month from its spare computing. So we're working on both sides, like on supply and demand on the network.
+
+We have a real route to market actually on that side is working with big providers. So we've got a partnership with a company called Tingo, who's an African telecoms provider. Over the next six to 12 months, we're bringing on 20 million users with that partnership. And they're all going to be wallet holders. So that's going to be a lot of Cosmos wallet holders that we're to have being integrated into the application. they're actually mobile phones. So we released a mobile phone version of our software.
+
+we make use of that spare computing. But also a big usage of our network has now become tokenization. So we've got things like tokenization of carbon credits, solar power, protected land, know, for for industry, plastics, recycling, things like this. So they also get access to any other tokens that are running on our network. But also if
+
+matt 
+someone that's got those applications is then providing in solar themselves, they can earn in the token or if they're providing wind or other services, they can earn in those tokens. So our aim is to, we very much believe in Metcalfe's law and scaling the size of the users in the network will naturally scale the adoption of the network. So we're working a lot in education as well across Africa, the UK and other regions.
+
+and getting in the actual education layer. So people that are getting into blockchain learning to develop. We are becoming one of those parts of educational curricula for people to build on top
+
+Citizen Web3 
+It's really cool that you guys are thinking about impact as well, not just like we said, blockchain or markets. There's also impact and that's important. There's a lot of mention of gaming and Cudos and you mentioned gaming during the interview already a couple of times. I can kind of guess, but I still would love to hear your answer. What is the deal with Kudos and gaming?
+
+matt 
+And it originally came from a lot of games are running our software because they're the highest earners. And so the games machines are running good revenue out of their infrastructure. But because of that, we started working with a lot of games companies. We've actually got on board the two prior presidents of Sony PlayStation on our board. So they brought out all the way from PlayStation one to PlayStation five.
+
+Chris Dearing, the first one, actually brought out Asetti at home onto the PlayStation back in the day, 10, 15 years ago. so we're very much looking to obviously bring releases onto console of our application as well. And there's over 100 million PlayStations out there. So obviously, that's a very large network. So we just see this as from a home user's device that there's a lot of unused capacity there.
+
+team also on our board is Paul Manuel, he ran the UK's largest game server platform. we will be working, know, as metaverses are going live on our blockchain, so game servers and blockchain servers in that space. So we just see it and all, you multiplayer stateful games need fixed infrastructure. So it kind of all comes together between, you know, supply and demand and
+
+We have also built native support for NFTs into our blockchain, which means that you don't need to build your own smart contracts if you want to publish NFTs. It also means that they run faster, more efficient, and you don't need to audit your own contract as well. So it makes it easier for games to integrate. And then we've got kind of Unity and Unreal plugins coming out to make it much easier to integrate into the game space. So we've sort of just kind of by default fallen into that space through
+
+through what we're doing and it's kind of grown and grown.
+
+Citizen Web3
+Makes a lot, a lot of sense, actually, about the size of the networks that the PlayStation gave. Wow, yeah, for sure. I have two questions here from, I'm sorry, I'm sorry, I'm sorry, I don't have the name, but I'm going to ask them from the audience. So I'm going to just read it out as it is. Ask Matt about when he's expecting the compute power aspect to start.
+
+matt 
+Yeah. So yeah, we've been releasing, as I mentioned, the different platforms in stages. So the blockchain just went live. It would have been last quarter now, so in Q2, that went live. We are intending this quarter for compute to go live. So we've got two elements of compute. We've got, it's already in beta. By the way, we've got service providers on there and we've got buyers on there.
+
+But it's a closed beta in a tech group. But we're actually looking to release integration into the blockchain over the end of this quarter. And that means that you'll then be able to scale either directly via smart contracts or bridges. And then you'll also be able to scale in traditional cloud methods over API and a GUI as well. So we've already built kind of a whole GUI CLI interface so that people from traditional cloud can use it.
+
+Citizen Web3 
+Okay, and the second question, how many users we will have at Compute Power Launch? I think it's over a million users if I remember correctly.
+
+matt (54:36.723)
+And so the first version of the compute power is being released for the data center providers. So we're working with large data center providers that have got anything up to a few hundred thousand servers and integrating with them. So we'll be able to provide data center scale. But currently we're signing up about 14,000 users a month on the home user version as well. But that will be released later on.
+
+So we've just focused on building the data center and releasing that version very quickly after the mining version will be very publicly available. And then finally, the consumer version. really, that just comes down to it's more technically challenging to run on an environment that isn't always there and has variable network and everything. So it's just from a technical perspective. We've been getting the other two right first.
+
+Citizen Web3 
+Nice, nice. have two more questions. This is from my side now. So before I ask the last traditional question though, I'm going to ask the question I hate the most, but I got to ask it. I say it every time. When airdrop.
+
+matt 
+Mwahahahaha
+
+Yes, there is going to be incentives. We haven't finalized what those incentives are, basically what we're going to be rewarding with, as in the numbers and quantities. But what the incentives will be will be based on developers building smart contracts and applications, porting smart contracts from other Rust chains. We are also doing grants as well, which we'll be releasing to get
+
+Citizen Web3 
+Is there going to be one?
+
+matt (56:19.919)
+certain types of applications on the platform. So really utilization. So if people want to get involved in any types of air drops and rewards, then now's the time to create wallets on our platform, start building and testing some smart contracts, even just deploy ones from other Cozum, Wasm chains or templates that already exist out there, and just get used to actually building on our network. Also try
+
+using the native NFT support. you know, that's where we've managed to create some speed and cost efficiencies and see what you can get there. We've got quite a lot of developer tooling, which makes the journey quite easy for anyone that wants to build on top of it. But now's the time to get involved, if you put it that way, and we will be announcing what's coming out.
+
+Citizen Web3 
+Last question, promise. you have, well, not considering even that, it's a general question, but like to pay some compliments here. mean, from what you said, you guys have a lot going on and it's interesting. know, it could be scary though at the same time, I guess, especially like for, for, for not just being a founder, but somebody, you know, so much involved with, with, with a big project. Sometimes it can be a lot of
+
+Not maybe not scary is not the right word, but tension, right? And like thinking about it, thinking about things to succeed. What keeps you motivated in your daily life and keeps you wanting to build Cudos and Cudos is a company to succeed as well. And it could be anything. Maybe it's something that you do specifically, maybe meditation, maybe reading. I don't know, maybe your family, whatever. What keeps you motivated in your daily life to do what you do and to carry on building?
+
+matt 
+Yeah, and I mean, I'm a, like I mentioned, I'm a kind of a technologist, anyway, techie. So it fascinates me that the technology, and I really like building, building things that people can build on top of and build to best and build their own businesses, which is what we did last time. What fascinates me about blockchain is just the openness, the fact that
+
+Because everything is open, everything's transparent and there's so many standards that you can communicate with other platforms that never existed before. It means the speed of innovation now is much greater and faster than has pretty much been possible on anything else that I've seen before. I think this is kind of a, you can kind of take open source code is kind of the first version and this is really the second version after that. And that would accelerate development. So.
+
+What excites me and keeps me going from, I guess, my work perspective is just the ability to, you know, really do some positive impact. We have a really high goal. This is over a number of years, but to raise a billion for good causes. But that can be good causes in, you know, computing that's provided to cancer research. can be revenue and that's generated and donated to charities or individuals.
+
+can be, you know, that's one of the things that we're doing in Africa is enabling people to be able to earn off their mobile phone, you know, because a few dollars a month can actually make the difference between them being out of, you know, send their kids to school or feed them or something. So I think there's a lot of, motivation from that perspective is, know, how, can we have a really big positive impact on the world? and I think this is probably, you know, certainly within my ability, the best way that I can see that we could do that.
+
+That's probably what drives it the most, think, is actually being able to achieve these things. think from blockchain has made that possible, I think it would have been incredibly difficult to do it beforehand.
+
+matt 
+it's the same actually for the unbanked and blockchain is really the first opportunity to bring unbanked in into this world as well, whereas they they're always the ones that have been left behind.
+
+Citizen Web3 
+I like that, I like that a lot. like that more and more people, my opinion, like judging from my guests, at least, they talk about impact. And you could see and hear that it's not just words, but people are really genuinely interested more and more into like having an impact, not just doing something for the sake of doing it. And it's really cool. Matt, thank you so much for your time.
+
+It was a huge, huge, huge pleasure. Thanks you for the explanations. Looking forward to the development of Kudos, of how it's going to go and see more and more the user base grow, because it already seems to be, from what you say, really interesting. So looking really forward to watching out as that grows more.
+
+matt 
+Great, thanks, Aggies. Appreciate it.
+
+Citizen Web3 
+Thank you. Thanks everybody. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

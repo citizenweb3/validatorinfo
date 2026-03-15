@@ -1,0 +1,613 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/markobaricevic
+
+Episode name:
+Semantics, Modular Architecture and Predicting the Future with Marko Baricevic
+
+Citizen Web3:
+Hi everybody, welcome to a new episode of Citizen Cosmos Podcast. Today I have with me Marko from Binary Builders and I'm going to highlight that. Marko will tell us in a minute why I'm highlighting that. Marko, hi, welcome to the show.
+
+Marko:
+Thanks for having me.
+
+Citizen Web3:
+Yeah, glad to be having you, man. I mean, we met a long time ago in Berlin. Finally, glad to be interviewing you as a guest on the show. I've been looking forward to that for a while. Before I start though, do you want to introduce yourself a little bit in any way? Who is Marko? What does Marko do? Anything you want to add?
+
+Marko:
+Yeah. So I'm Marko. I've been in Cosmos for like coming up on four years now. So I joined shortly after the Cosmos Hub launched. Started in the Cosmos SDK as like a developer relations engineer. Then when Tendermint was only one engineer, I went down and worked on Tendermint. And then team slowly got built out. And after the team started getting built up and I moved back to developer relations and then ended up coming to the Cosmos SDK again. And so now leading the Cosmos SDK to a new vision, kind of like we achieved this original vision that Jake won put out and now we're kind of working on what's next in Cosmos.
+
+Citizen Web3:
+You know what, let me throw a question straight away there. I mean, it's usually not the place I start with, you know, we usually start with nicer chit chat, but you said the vision of Jay. What's that vision of Jay that you're talking about? Like, can you describe it? Because not everybody has been in Cosmos for so long. And definitely not all our listeners are from Cosmos and definitely not all of them know that. So it would be nice to hear what exactly you're referring to, if you can, of course.
+
+Marko:
+Yeah, definitely. So, um, with like Jay, Jay was originally the person who pioneered like proof of stake. And so this original vision of like proof of stake. And it's like, what that, what that evolves from like these proof of work chains, like Bitcoin, Ethereum at the time, Dogecoin, many chains, there is like an easier world and the easier world was kind of like proof of stake. But then it's like, you have this problem with these like chain, chains are isolated and how do they communicate to each other? So first of all, we start with like the sovereign communities, which are chains in themselves. And then the next step here, this was like the Cosmos SDK and Tendermag at the time. The next step here would be to add a communication layer between these chains to be able to achieve economic exchange or information exchange. And this is where IBC came in. And this original vision was really strong in the beginning. And it's like, if we look back and look at where blockchain is today, we can see that a lot of that original vision is kind of like what is today's blockchain world. And that was back in 2014, 2015, 2016. And so just really amazing to see there was such a strong vision, such a strong passion from the early people that really fueled the future of Cosmos and in general, almost the future of blockchain in general.
+
+Citizen Web3:
+And I guess you could refer to the whole vision of Jay or to Cosmos specifically as modular, right? In terms
+
+Marko:
+Yep.
+
+Citizen Web3:
+of architect... And I know you're a fan of modular architectures, right? Why? What's the big deal here?
+
+Marko:
+Well, I think it's like, I think like the word modular has been like, it's a bit abused right now. So you have this like modular like stack where it's like, you have things like Celestia where they're separately like execution and data availability and like consensus and stuff like this. And so it's more of like, I like to call it a compartmentalization. So it's like you're putting things in certain boxes that do certain things instead of everything doing one. But then it's like the modular software is kind of like. First of all, it's like modular software allows you to like experiment more with different technologies, with different technologies coming out in the world. And it becomes like a library for how to build the state machine instead of like, Oh, this is how you build a blockchain. And so it's like, um, and so this is, yeah. So it's kind of like the, on the two, two different spectrums of like modularity. But I think that, um, they're both super fun and they're both super interesting. And I think it's like we're really starting to scratch the surface of both of them in Cosmos. So it's like when the Cosmos SDK, if we look how the software was written, if we look how Tendermint was originally written, and if you actually like dive in and get into the mental space of the early authors, you kind of see that these pieces of software were written in a modular fashion. But like due to brought potentially like a lack of time, a lot of time was lost and whatnot because you're developing this technology that is supposed to stand the test of time. A lot of this modularity was lost in order to launch, to move closer to launch. And so now we're kind of like trying to bring that modularity, that original vision of the software into reality.
+
+Citizen Web3:
+Before we go to a bit more back to you, sorry, I couldn't help not to ask those things because it
+
+Citizen Web3:
+was
+
+Citizen Web3:
+actually on my questions. I really swear like it was on
+
+Marko:
+Hehehehe
+
+Citizen Web3:
+the question list, it just popped in the right place. So I'm going to ask like one last question before we get back to you. I want to know your personal opinion considering like so far and thank you for it, by the way, you've been explaining like in a very like, understandable, I think manner to anyone who can hear it, that you don't have to be heard that before probably to understand that. But what's your personal opinion today considering all your experience, not just with Cosmos, but in generally with programming and understanding architectures and how everything works with the opposite of modular stacks with Bitcoin and that approach to cryptocurrency or to blockchain, not to cryptocurrency, sorry, but maybe to blockchain in general, is it still... Is it still feasible? Is it going to, you know, get those networks that are still sticking to those kinds of architectures anywhere in the future?
+
+Marko:
+It's kind of interesting because early on in Cosmos, we had this term called zone, like you're a Cosmo zone. And it's like when you look at the definition of what a zone is, it wasn't even like you're using Tendermint from Cosmos or the Cosmos SDK, it's like you're using IBC. And it's like, we kind of had this thing of like, oh, you're using IBC, you're a zone. But it's kind of like you're pulling everyone into your like... verbiage and it doesn't and sometimes people like want to participate in the economic exchange, but don't want to be like considered Labeled a zone. I think we're kind of going through a similar thing right now in the roll-up world Because it's like if you look at like them, you know, like the centralized sequencers You have decentralized sequencers and then and then you have like sovereign roll-ups. Like what is a sovereign roll-up? A Sovereign roll-up is technically a blockchain that just posts some data to that availability layer And it's like, okay, now everything is a roll up by definition. If you just like try to get a bit more security, it's a, your a roll up all of a sudden. We're kind of going into that like realm of like, oh, like it's, it's like one, one verb for like one adjective to like fit everything. Um, which is kind of like different. I don't know. It's, it's kind of like, we're, um, yeah, I don't know. I find it, I find it weird cause it's like, we did this early in Cosmos and we went away from it. But I do think there's still like, if there's still a really big need for like, um, for chains themselves. So like, I think it's like, you have like Ethereum, Bitcoin, like Solana and Near, like these, uh, these chains that are like, um, Near is a bit more modular, I'd say. But like, um, Solana, these like monoliths, it's like, there's still a huge valid case because it's like not everyone wants to manage their own infra, like managing your own infrastructure is like, And I was just on a call with Bez from the SDK team. And it's like, if we put like deploying a smart contract as level one, and then you put like a blockchain as level 10 in difficulty, then it's like, rollups are kind of like, there's so many different tiers of rollups that rollups have the potential to fill up two, four, six, eight. But it's like for the majority of applications, like you only need level one. Like level one, it's, you don't have to worry about anything. Like level two, all of a sudden is like a centralized sequencer, let's say. then it's like you have to start managing your own infrastructure. You have to manage uptime and all this stuff by deploying a contract. You're just like not worrying about it.
+
+Citizen Web3:
+I do agree. I do think that in a few years time, I'm not sure the word rollup will be, you know, something that we're going to use for sure. Definitely.
+
+Marko:
+I think it's super interesting because it's like people can deploy faster and it's kind of like this bridging between the contract and chain. But it's like, I mean, it's a scalability thing and it's like a scalability thing if fees are high. But like, okay, on Ethereum fees are kind of high. They're not as high as before. But like this idea of like... everyone needs to have their own roll up type thing is kind of like the same thing of like the app chain. Everyone needs to have their own app chain.
+
+Citizen Web3:
+No.
+
+Marko:
+And I think it's like, it makes sense for certain things and it doesn't make sense for others. I think we can see a lot of chains in Cosmos that are launching because during the bull market there is a premium on launching L1s, but it's like they could have just been a smart contract.
+
+Citizen Web3:
+Yeah, it's interesting to see. You know what? But let's save. I'm going to ask you to save this thought, because I want to get back with you for that, because I definitely wanted to talk to you about this. But before we get into that, I still want to pick a little bit about your history, if you don't mind, to get to know Marko a little bit. I remember we met in Berlin when
+
+Marko:
+like
+
+Citizen Web3:
+I came
+
+Marko:
+interchange
+
+Citizen Web3:
+to Berlin.
+
+Marko:
+conversations in like 2019 I think, right?
+
+Citizen Web3:
+Yes, yes, yes. We didn't start, we started just Citizen Cosmos. Then it was the first time we recorded an episode was in the office. But not about Citizen Cosmos. How, when I met you, how did you, I mean, you kind of said the high overview of your story with SDK. But let's go into more details if you want, of course. But how did you get to work there? How did you get? I mean, you're obviously not German. Let me...
+
+Marko:
+Yeah.
+
+Citizen Web3:
+say that so
+
+Marko:
+So I'm
+
+Citizen Web3:
+Yeah
+
+Marko:
+one of the few people in Berlin. So I'm looking in Berlin, Germany. I'm one of the few people that's in crypto in Berlin, Germany from a different country that's been moved to Berlin for crypto. So I was studying in the States, woke up one morning and was like, I want to go to Croatia, my family's from Croatia, so I just wanted to go hang out with my grandparents. Hung out there for eight months. My dad came. And he was like, why don't you go study in Germany? And so I went and studied in Germany for a year. I met my now wife and then she was in Berlin and like I moved to Berlin. And I was kind of like, and like back then I wasn't like programming, I was actually studying business. And I was like, what is a skill that I can learn to get a job in Germany without having to learn German? And I found like computer programming. And so I started teaching myself how to computer program, how to do programming. And ended up at a like blockchain. enterprise company. So it was an enterprise consultancy. And it was really fun because we're building POCs for like every three months of like, different use cases of blockchain, which was like really, really cool and a lot of fun. I got to play with a lot of like, it was mainly we're using quorum from JP Morgan. And so I got to play with a lot of like solidity and all this stuff. And someone was like sharing on our Slack and it was this video of jquon and Ethan Buckman at a meetup in SF. And I watched it and they were like, demoing tenderlands at the time. And I remember like, for some reason I was like, I want to work with these guys. And it just like, and like since that, I started following the Cosmos repo and like started contributing on the open source layer, started following, figuring out how to run nodes and everything. And then around like January of 2019 or like December of 2018, I applied to work at AIV. And it took me four months to get hired. And I went through like four different hiring, three different hiring managers. Cause it's like, the first one was for, I don't know if you remember Fabian Weber from,
+
+Citizen Web3:
+Yes,
+
+Marko:
+from a
+
+Citizen Web3:
+yes,
+
+Marko:
+Looney or Voyager. I forgot
+
+Citizen Web3:
+yes.
+
+Marko:
+what the name was at the end. Um, was for his team and then they were spinning out. And then I went to a Cosmos meetup and there was a panel and I was like, from the crowd, like participating in questions. Cause I was like, I was like studying in Cosmos. I was like enamored by it. Um, and then afterwards they're like, Hey, are you looking for a job? And I was like, I applied like two months ago and haven't heard back. And then Billy, Billy Rennekep was like, give me your email and I'll pass it to the recruiter, to our HR manager. That week the HR manager got fired. So I never heard back. And then Jack Zamplin, for like no reason, just like follows me on Twitter and I like, and I DM him and I'm like, hey, like, if it's a no, tell me it's a no and I'll give up because I really want to work for Cosmos. And I was just like, I was like hell bent on just working for Cosmos. And then like, and then after like two more sets of interviews, I got hired. So it was just kind of like, I know it was like something in the original video that I was just like, I want to work with Jay and you.
+
+Citizen Web3:
+cool story. I like that. Actually, you mentioned JP Morgan, right? I had Will Martino from Cadena, and I believe he was one of the guys who was originally developing the JP Morgan coin.
+
+Marko:
+Oh yeah, corn, yeah.
+
+Citizen Web3:
+It's actually pretty interesting. It's interesting that a lot of people consider them a Cosmos really are but like it's I
+
+Marko:
+Yeah.
+
+Citizen Web3:
+don't know there's a lot of a lot of Cosmos ecosystem projects which sometimes considered
+
+Marko:
+Everything's his
+
+Citizen Web3:
+Cosmos
+
+Marko:
+own.
+
+Citizen Web3:
+ecosystem everything is his own everything is a roll up everything is on the roll up man um but um you are also or used to be I'm not sure if you still officially if the title how what is the name of it still exists um the head of product of SDK right or
+
+Marko:
+Yeah.
+
+Citizen Web3:
+is how does it What does
+
+Marko:
+Uh, I just,
+
+Citizen Web3:
+it mean?
+
+Marko:
+I just say like SDK lead because it's like I do product and project management, um, and so do a mix of both.
+
+Citizen Web3:
+So I want to talk to you about that as well. But before that, what's so basically you kind of answered it. So basically, a head of product is basically an SDK lead, right? Is that what you're that's
+
+Marko:
+Yeah.
+
+Citizen Web3:
+okay. Okay. Because it was interesting. What does the title like SDK product owner? It's interesting. But you mentioned straight away that you do product and project management. This is actually was a question for me to you. How does your typical day look as an SDK product lead and is it
+
+Marko:
+Um,
+
+Citizen Web3:
+more
+
+Marko:
+I
+
+Citizen Web3:
+project
+
+Marko:
+really...
+
+Citizen Web3:
+management or product management?
+
+Marko:
+So right now I'm doing a lot more coding than usual, just because I'm trying to complete some tasks so we can clean up some technical debt while the rest of the team is working on different work scopes. But usually it's like, kind of like wake up, go through all the notifications, check the PRs. If anything stands out, jump in and review it, make sure everything is going smoothly. go to the project boards, make sure everything's ready for the engineers to come in and pick up tasks, make sure all the issues are well explained so people can jump in without having to go ask for the context. After that, that's the project side, organizing the sprint, creating the OKRs for OKRs and master runs for the ICF, managing that relationship. On the product side, it's a lot I don't know, it's kind of like dev rally. It's like going and talking to the teams and being like, hey, what's your issue? But it's like, we aren't, so we do that quite a bit. I would say we probably do a bit less than like, IBC Go, the IBC Go team is like really good at like going out and getting like product feedback. I would say that the reason we do less is because it's like fairly clear for us what we need to clean up in SDK and what we need to fix to create a better experience. And so it's like, when we go talk to users, sometimes they're like, Hey, like, we want this feature, like, because we're trying to do this, and we're like, okay, we like, we understand you want this. But like, there's this other thing that like fixes that, and then fixes these other like five issues that's going to make your life a lot easier. We think like we should work on this instead of this. And they're like, Oh, okay, yeah, that makes sense. And so it's like a lot of like managing that because it's like part like I've been in Cosmos for so long and I kind of like, and I run validators and I like, talk to the teams who like are building the software and I'm in their discords and I understand and I go read their code. I go read the forks, the forks of SDK code. I go and participate in broader blockchain ecosystem. I like player, go read Optimism, go read Arbitrum, go read Substrate, go read Solana, go read Nier, like participate in all these like hackathons. And so like
+
+Citizen Web3:
+Serious
+
+Marko:
+I kind
+
+Citizen Web3:
+shit.
+
+Marko:
+of have an idea of like where things are like, I try to have a better idea of where things are going. future. And it's like, instead of like playing catch up, it's like, how do we make the SDK like meet that point in the future instead of like us always like following behind. And so it's like a bit of like balancing those two acts.
+
+Citizen Web3:
+That's very cool actually, because I wasn't expecting you to give that answer. I wasn't expecting you to give any particular answer, but I wasn't expecting this too. So it's cool to hear that the people that work on important protocols, whether it's the Cosmos SDK or in my opinion, there are several others there, which can be put into not maybe the same category or an ear category, whatever. But... to hear that you stay in focus with the other tech rather than hearing an answer like, oh, no, we don't give a shit about all the other tech
+
+Marko:
+Yeah,
+
+Citizen Web3:
+out there. We're just doing
+
+Marko:
+I mean,
+
+Citizen Web3:
+our own shit.
+
+Marko:
+for me, it's like, I'm not like, I like I love Cosmos because of the original vision. But I'm like not biased on the tech. Like, it's like, I'm when people like, oh, I like I'm a I'm on Cosmos SDK Maxi, like I'm a substrate Maxi. It's like for me, it's like I'm just like a, like a tech Maxi. Like I love like reading different designs and architectures and like learning from that and being like, oh, like, this is how you do it. Like this is how we can make it better and stuff like that.
+
+Citizen Web3:
+I also always also say that I'm a decentralization Maxi. I mean, it's been my
+
+Marko:
+Yeah.
+
+Citizen Web3:
+like, I think to a Twitter Nick for like six or seven years or something. Decentralized decentralization, I think it says for seven years. But man, before you mentioned a couple of like sentences ago, validating now and actually introduced you as somebody from a validator group, right? Or project. Could you talk a little bit about what is a validator for you? But let's try to, I want like, feel free to give any answer you want, but I would love to hear your opinion, not just on a technical side, but rather as like you were just talking about being ahead of product and how you go out and look at other things and obviously you have understanding of what other Like what changes happened because a validator today and a validator five years ago or four years ago, witness note, let's say, right. They're not the same entity. They have different, so it's also developing. So what is a validator for you today? And, and, and where, where is it going? Where, who will validators become? What kind of entities, what will they be responsible for or do in your opinion? Of course.
+
+Marko:
+I think that's a good question. I think it's like the biggest shakeup happening right now in the validating industry is like and like proving technology. And I think that's like a new world. Like where validators were in the past, I remember when the Cosmos Hub launched, the biggest worry was, will there be enough validators? Will there be enough people who know how to do this? And that's why early on AIB had this company policy that you can run validators and they'll delegate because it's like these people know the tech. Now it's changed a lot. Now it's like there's a much more broad ecosystem. And I think I would have to say Cosmos has like the strongest validator community out there. Like not in terms of like running infrastructure, like we are very strong there, but in terms of engagement, like validators really embody this idea that they are like part of the ecosystem. They have a say in the direction of a chain. It's not, it's not really like, if we look at other ecosystems, like It's usually like, oh, the foundation or the team behind it says like, we want to do this. Like, we're just going to push it. We're going to vote on it. We're going to get an expedite, blah, blah. We're going to upgrade the chain. And the validators are usually kind of like just running the software. The software handles itself. And Cosmos, it's like, while it is cumbersome to do the upgrades, it is like a path of engagement. It's not like you can really just let your node run for weeks, for months, and like forget about it. It's like you have to like check in here and there. You have to make sure it's alive. You have to like put an upgrade. It's like you have to engage. What is the upgrade and what are the changes and stuff like this? So I think it's like a lot more engaging and then the governance. I think like, it was funny, I was in New York a couple of weeks ago and everyone was talking about like thief governance and like how it's broken and everything. You're probably gonna get something, someone's gonna say something about that. But then someone in the group was like. Cosmos did it right and I was like, wait, what? Like we think we're doing it wrong. We think it's like, we think we can like fix stuff because it's like we've had all these learnings. But a lot of the, like at one point in that like circle, like I started laughing and like, like under my breath, but cause it's like, they were like talking about like what they want to change about governance. And I was like, guys, we already did this. Like we can already tell you it's not gonna work. Like we, it's like, you want to do this or this. And it was as funny as this kind of like learning from each other and everything. But it was like amazing to hear that like someone in the ETH ecosystem is like, oh, like Cosmos did it better than others.
+
+Citizen Web3:
+It's interesting because a lot of the validators now, including for example ourselves, are striving to be a validator in both ecosystems. And I think that experience will be spread out. I mean, today the validators,
+
+Marko:
+Yeah.
+
+Citizen Web3:
+like yourselves guys, or if you go steakfish P2P, kind of like the big, big household names. So we already even say that to describe the
+
+Marko:
+Yeah.
+
+Citizen Web3:
+big household names.
+
+Marko:
+I mean, it's also like the economic design is entirely different. Like the economic design of proof of stake in Cosmos is like, I don't know if it was on purpose back then, but like it's built for engagement. Like, because if you look at like how like Polkadot does staking, how Ethereum does staking, it's like you can stake, how you make the most money is like running more nodes. instead of getting more stake. And so it's like, because they're like, oh, we need as many nodes as possible for decentralization, but what ends up happening is like the big guys just end up running most of the nodes. But in Cosmos, it's just like a guy in his garage or the guy using like GCP or DigitalOcean because he doesn't know any better, can like get in the set and actually make, make like break even on their setup because it's like they don't have to run 10 different nodes and get those 10 nodes in the set. They can only run, they only have to run one. And so, but it's like, because of that, it's like, they can market more. Like they market their voting. They market like what they're doing in the ecosystem and that gets them more delegations. And so it's like built this like engaging ecosystem.
+
+Citizen Web3:
+It's interesting that you touched on that topic because what's your opinion, for example, on, let's go a little bit like not extreme, but let's go on popular opinions. There is an unpopular opinion, validators should not vote. What do you think about that? Should validators vote or not vote considering decentralization?
+
+Marko:
+I think, I know it's like, it really depends on the chain, because it's like, if you look at something like Osmosis, like Osmosis has too many governance proposals for validators, that's like too much engagement. But it's like, for other chains, it's like whatever, let's say for like the Cosmos Hub, where there's like one in a while, it's fine. But I think it's like, more so than like validators, it's like, there's certain stuff validators should vote on, but there's certain stuff out there you should not vote on. And I think
+
+Citizen Web3:
+Let
+
+Marko:
+that
+
+Citizen Web3:
+me rephrase
+
+Marko:
+gets more
+
+Citizen Web3:
+the question.
+
+Marko:
+interesting.
+
+Citizen Web3:
+Mark, I'm going to interrupt you. I'm going to rephrase the question because I didn't phrase it correctly. Not about right now. What about saying there is an opinion that says that validators should not be involved in governance at all, and it should be left to the delegators only, and validators should not at all be involved because they're centralized entities with self-interest that want to get delegations. So it's not a question about whether do you think validators should, it's a must for validators to vote on or not. But whether do you believe that it's at all fair enough to say that, oh, validators are centralized entities, they shouldn't be involved in governance. Hence it should be just the chain that votes and then everybody by themselves, but not the validator account itself.
+
+Marko:
+I think... I think that's totally valid. And for like a lot of the proposals out there, I think that's like totally valid. The only problem I see is like a lot of delegating and like a lot of these changes, like someone's delegates and like forgets about it comes back in a year and then like does it. And it's like, if those tokens aren't being, I mean, then it's like, you could incentivize voting and like you could do like something like that, which like breeds more engagement. So, I mean, there are ways around it. I think there is a case for validators not to vote, but then there needs to be a different incentivization mechanism to get people to vote.
+
+Citizen Web3:
+There is, and by the way, now considering you mentioned that you are out there and seeing those things, as far as I'm, I haven't read the whole thing throughout, but I think Gnosis had a very interesting paper on validation and on like the whole... Intivacization, sorry, and like how the actors are right. It was crazy, but I didn't like go through it completely. I did like skim through it. I don't know if you saw that. Do you know what I'm talking about or no.
+
+Marko:
+Oh, no, I actually haven't read it. I would actually love to read it.
+
+Citizen Web3:
+It's interesting they were trying to solve governance by trying to get rid of centralization points in blockchain governance. And by the way, this is, I guess, another question that is maybe not about governance, but relating to centralization and your opinion. This is a question I was asking. I would love to ask you. I was asking this during... Lisboa blockchain week. I was interviewing a lot of like Steakfish, again P2P, chorus one, and I was asking him the same set of questions. And one of the questions, and I want to know your opinion as well, if you had a choice, official DAO, like a multi-sig, sorry, an official multi-sig, efficient multi-sig, or a big decentralized DAO, what would be your choice between these two?
+
+Marko:
+I mean,
+
+Citizen Web3:
+without context.
+
+Marko:
+the biggest problem, it's like, it's definitely hard because it's like, I'd say it matters what they're voting on because it's like the biggest problem, like, Cosmos kind of has, I mean, the biggest problem like any governance system has, like we can use Arbitrum, for example. Like it's like, if you, if you put a big number, so let's say like, um, let's say the Cosmos hub team was not getting any funding from the ICF and had to go entirely to the chain to get funding. Like, I'm pretty sure it would be a hard time, like no matter the number that they propose, I'm pretty sure it'd be a hard time because it's like, once you put a number on chain, there's a bunch of people who are going to say that's too expensive. But they don't like those people are kind of like saying it because they're seeing the number, they're not seeing the like manpower the money's going to. And so in this scenario, like for like funding stuff, it's going to be like more efficient to have like a multi SIG with the Dow being able to like override the multi SIG or something like that. But like, yeah, leaving like funding proposals to the masses is always a bit difficult. And this is why I think like, like some proposals on the hub, like were passed not because like the delegators showed up, it's because the validators saw a future, a long-term direction that this funding would help with. While many delegators may only see like, oh, this is a lot of money going to this one entity, like, and they only think like in the shorter term.
+
+Citizen Web3:
+Should everything strive towards decentralization or is that too much to ask for?
+
+Marko:
+I mean, like, in what sense?
+
+Citizen Web3:
+I mean, in any sense, you want to translate the question. That was the whole point. It was like a slight question from going from one point to another to understand whether you think the centralization is a spectrum in
+
+Marko:
+Oh, it's,
+
+Citizen Web3:
+the whole.
+
+Marko:
+yeah, it's definitely a spectrum. And I think it like, I think the centralization, decentralization more so matters like on what application you're building. Like if you're building like a deep right thing, yeah, you want decentralization because you don't want to get sued. But if you're, I don't know, I don't know, let's say, I don't know, building like a marketplace or something like that, then you don't have a token, let's say like. Do you really need decentralization? Like people are just like, let's say buying and selling NFT is like, like open sea isn't decentralized. So it's like, it doesn't need decentralization, but it's on a decentralized ledger.
+
+Citizen Web3:
+No. Yeah, it's interesting. It's interesting. And it actually brings me back to a question I didn't ask you about validation, about decentralized, let's say, a big part of validation. Now, I don't know what part you take in binary builders, but you could, of course, welcome, not could, but welcome to talk about it a little bit. But I'm curious about the business side of where the market is, it's more stable of course, but there was some time where a lot of validators, at least in my interviews, were saying that it's not easy, we're doing it, but it's not like it's an easy road. How's it been for you from your perspective as validation as business?
+
+Marko:
+Um, this is always like a hard question because it's like my like truthful answer might like scare people away. Um, I find
+
+Citizen Web3:
+Let's
+
+Marko:
+like,
+
+Citizen Web3:
+go
+
+Marko:
+uh,
+
+Citizen Web3:
+for it.
+
+Marko:
+I find validating like, it's hard to get started. Like there's no doubt about it. Like it's hard. Like, um, of course, like I'm fortunate enough to be like long in the ecosystem and I know many people and many people know me. So it's like when like, kind of like, kind of like Zucky, like Zucky and myself like are. and Jack and stuff like this, people know us in the ecosystem, people see our commits on the repo, and so people are a bit more trustworthy of us. And so we're able to get that benefit. But someone starting out who's new to the ecosystem, it's very, very hard. In terms of actually running the infrastructure, I think it's fairly easy. And I think this is something that people don't admit or that validators don't really talk about because it's like... Once you have your infrastructure set up, it's running. And, okay, a node goes down. You get a notification, hey, the node's down. You open your laptop, you update it, or you clean it, or whatever, and you just restart it. But it's like that happens once every two weeks. And then it's just like, okay, there's a new chain coming on. Let's join, let's set up the infrastructure. Of course, if you're white labeling, then there's a lot more work, because you need to like... do that engagement, do this extra work and everything. But if you're doing it for yourself, I don't think that validating the infrastructure part is the difficult part. It's the more like how to build a brand around the validator to get delegations is the hard part.
+
+Citizen Web3:
+Can you talk a little bit about that? Can you mention what's in your opinion? For example, let's talk about the brand of binary builders. What is the brand? What is the story behind it?
+
+Marko:
+Yeah, so I mean like, well, like, so we migrated the binary holdings validators to binary builders. And what binary holdings was, was me and a group of friends. It was basically two people from Cosmos and two people from Poker. Sean DePriese, who are all pancreas and owner of Aqua Club. And so that we were running like Poker. Stuff and like their co-leaders for their pair of chains and we're running Cosmos chains. And that was just like having fun. Like we'd like rarely ever sold because it's like we are like our cost was only our infrastructure cost. There was like, we didn't like charge anything for our time or anything like that because it was just kind of like, let's just have fun and like, let's build it. Um, I think like, uh, we'll, and I spent a decent amount of time on it. A lot of people know Will in the validator space. And so like he kind of like helped build that brand. Um, and then when we were transitioning to like binary builders, it's like kind of the like business model changes. because it's like, what is binary builders? Binary builders right now is like the, one of the core maintainers alongside region of the Cosmos SDK. We lead the Interchain Builders Program. And so those two projects are like, kind of core to the ecosystem. And so we want, what we want to do with the validator and the proceeds from the validator is help pay for costs of operating those services. So like, maybe it's like, we can hire an extra engineer. who's not funded by the ICF to work on the SDK. Maybe we can hire another person to build this program. And then we can also add incentives to individuals on the team from the validators. So it's like, we have this model in the company that is the value goes to the value creator. And so we don't like, the equity part is kind of, it's confusing because it's like, kind of if you get equity, it's like, I know like, no, like we're not going to raise, we're not going to like sell equity. Like, no, I don't think anyone wants to buy binary equity. And so it's like the only time the people get their money back out of this equity is like if the company buys it back from them. And we think that's kind of unfair because it's like, we have this like model. And so it's like, we're just going to go with the value created goes to value creator. And so it's like, if someone on the team is helping operate all the validators and like putting time into it and stuff like that, and like building the brand. then it's like the proceeds, the value created on the validator, a portion of that will go directly to that person. And so it's like, kind of like incentivizing, like help build the brand and everything to be able to like build binary better. And so, so yeah, so it's like kind of like changing the game. It's like, you know, like, ideally, the validator stuff is going to help like offset like ICF costs. So we're not charging so that I sort of become more self sustainable. outside of funding from ICF for the SDK and for the Builders Program. So that's how it's changing up a bit.
+
+Citizen Web3:
+I hate the unmute button.
+
+Marko:
+Well.
+
+Citizen Web3:
+You mentioned equity and reminded me while this is why I made the note. I was actually talking to, I think it was Staking Facilities. I think so. And we were talking a lot about validation as a business. It was like a whole episode about how to build. And we're talking about structures of and the use of equity in a validator and by equity here, I mean, it could be your own token or it doesn't have to be Web3. It doesn't have to be outside of Web3. It depends on the validator, what they call equity. But one of the things that they mentioned, which was an interest to me, because it goes with the philosophy, I guess, of what we are doing here, is a reason to have that is so that the team that you hire as the validator grows understands that they own a part of the validator itself and getting also the rewards are not going to one beneficiary but actually spread amongst the holders of that equity. So what do you think about those things? Things like that? Is it the way to go?
+
+Marko:
+I think it's totally valid and I think it's like, it builds a different company. Like it builds different incentives with people. But yeah, like, like for us, it's just like, we want like, okay, we give you equity. And then it's like, we have to buy back the equity. And like, I've had bad experiences with that from like the previous company I was at, if you can connect the dots. But, and, and so it's just kind of like, yeah, like. at the end of the year, instead of like giving everyone equity, we're just like, Hey, yeah, you like, you're part of the company. Like the company generated this much money. Like we want to like give that back to the people who like created that value, which is everyone in the company. And so it just like a direct, it's more of like a bonus payout. And it's like the company can keep operating. Um, and because it's like, if we made that much this year and everyone, it's kind of like, it's, it's kind of like the. the salesperson mentality. It's like you have your base salary, but it's like, that is not the max you can make. That is like, that's the min you can make. Like you can actually make way more than that and stuff like that. And so it's like, now everyone's kind of like, okay, like how do we do that? Like what else can we do? Can we do auditing? Can we do validating? Can we validate on these like another like five chains? Can we do this? Can we do that? And so just kind of like, everyone's kind of like, okay, like everyone's a bit hungrier because they know it's like... There's a min, it's not a max.
+
+Citizen Web3:
+It's interesting also to me because to me, I don't want to pull the quills, but since we started the conversation, this is a very topic that I really feel connected to. To me, it's been weird. We've been a validator for now, like three years, but I've been doing it for longer. I remember doing this, but not Citizen Cosmos, of course. This was just me in 2016 trying out stuff like Grafana and by Grafana I mean Beat Shares and stuff like that. You had witness note. So I've been playing around with it for a while, but with Citizen Cosmos, to me back then about the brand that you said there was no branding about it was just me personally trying things out. With this, what I realized, and this is what I'm going to direct back at you, I found it hard personally to do it, to go and start valid as many chains as possible because I didn't understand why, like what is the reason for me to do that, to earn money then... But I'm not here to do that. Like I could go trading. Like if you're 10 years on the market or 15 years in the blockchain market, well, not 15, of course, but you know, 11,
+
+Marko:
+Thank you.
+
+Citizen Web3:
+10 years before it's happened. But like,
+
+Marko:
+Yeah.
+
+Citizen Web3:
+you know, you, you understand that with like, especially from people like yourself, you know, you're deep into, you know, cosmos as the K. And like we said, if you connect the dots properly, you understand that there is a lot more history to there. So you want. you already understand the market for you validating must be just so you must understand what I'm saying like
+
+Marko:
+Yeah, exactly.
+
+Citizen Web3:
+I
+
+Marko:
+Exactly. I mean, like, it's, it's the biggest dilemma we have, in my opinion,
+
+Citizen Web3:
+Well,
+
+Marko:
+because,
+
+Citizen Web3:
+well.
+
+Marko:
+because it's like, we've been here for so long. And it's like, we're not here because of speculation. We're here because we like fell in love with the ideology of why blockchain was created, of why this like currency was created, and what it truly enables. And it's like, I think on the last podcast we did, like I said, like this disease of speculation that like it's in, like, blockchain. Like, for me, it's just like, it's like having fun. But it's like, the dilemma here is like, I'm having fun. And this is like, created, like, it's one of the like, greatest riches in life to just like, enjoy what you're doing and not have it seem like a job. And like, it's a dangerous thing, because then you end up working nonstop, because your hobby is your job and everything. But like, you have all these people around you who are like, who are opportunistic, and they're like making tons of money, and they're going to like have this like free life. But it's like, which is better? And it's kind of like a never ending dilemma. But it's like for me, I don't know, I'm having fun. For me, as long as I'm having fun, I believe everything will go well. And so I just wanna continue on that mentality. And that's the mentality we're trying to breed in binary. And I think everyone is here, not because, oh, it pays a good salary or like... like we're here because it's like we actually like what we're doing. It's not like, oh, like I'm waking up in the morning after you go get on calls and stuff like this after you go to the office. No, it's just like everyone's like, yes, I woke up. Like now I get to do this today.
+
+Citizen Web3:
+I think out of all the, I haven't worked in that many industries, but I've worked in several and like in crypto, I've worked since 2016, like in the industry officially. And I think it's definitely by far the industry where you see a lot more people who are here, like like-minded people, because a lot of them are here definitely for exactly what you say they're here to. understand them, understood the ideology, they want to have fun and they don't have fun in the meaning of hey, let's go get high and drunk, have fun. It's I'm having fun because I'm doing building this I know that somebody is going to might one day use that or part of it and it's like wow, the reward is fascinating
+
+Marko:
+I mean,
+
+Citizen Web3:
+to me.
+
+Marko:
+this is definitely like what also like keeps me in Cosmos. Because I think it's like we've seen many people in many different ecosystems, like they make it and they kind of get lazier. They slow down, the ecosystem slows down and stuff like this. In Cosmos, like, I mean, like look at Sunny, Dave, Josh, like look at those guys. They launched Osmosis, the number one chain in Cosmos. Josh runs Kepler, the number one wallet in Cosmos. But they're like as hungry. and asked, like willing to hustle as the first day I met them. And that's like what I truly love. It's like the drive hasn't left, even though like they've done all these amazing things.
+
+Citizen Web3:
+I truly, I agree. I still though truly hope that we will see that as more of like the interchange. And this is actually
+
+Marko:
+Yeah.
+
+Citizen Web3:
+when I wanna go back to what we spoke about when I stopped you at the first five minutes. And I wanna ask you about your vision of the interchange. What is the interchange for you? And what is your personal vision of the interchange?
+
+Marko:
+So I think it's like, we've achieved one layer of the Interchain, like the original vision. And it's kind of like looking at what's next. And it's kind of like, the number one complaint of users is really like this launching. And I think it's like, we're gonna start seeing this like roll up world emerge, and it's gonna be like this, like, it's gonna bridge between launching a chain and deploying a contract. And so I think it's like, that is a direction like the Interchain will go to, where it's like, we're gonna have many more chains, but they're not going to be, I'm starting to use the word like many more state machines because it's like, you won't really know if it's a contract, if it's a roll up or it's a blockchain. And so then we kind of like, you create this world of sovereign communities, but it's like, now the limitation of a sovereign community today is launching a chain. But now tomorrow, like the limitation. of a sovereign community won't be launching a chain, it's going to be launching a roll-up and stuff like this, and then launching a contract. And so it's like, we're going to like get a lot more, the ecosystem is going to grow a lot more, but also we're going to have a lot more players who are building products, who want to use a open and transparent ledger for a certain piece of their technology, but don't want to run all the infrastructure come and start playing with the technology. And so that's kind of like the- like the direction I see us going. And that's like what we're, we're like preparing the SDK. We're refactoring the SDK to prepare for that. So people can like really play around with anything they want.
+
+Citizen Web3:
+I had this crazy, sometimes I have this thing of stupid statements that I put on Twitter. One of them was what you are saying kind of related to that. It was when there was a DAO hack, was it with the wrong contract or something? Was it Juno or not Juno? I don't remember who was it, DAO. I don't remember recently, like a month ago. And I was saying, why don't just make DAOs consumer chains? Like why don't take that way where...
+
+Marko:
+Yeah.
+
+Citizen Web3:
+instead of protecting that, that treasurer's will be protected by the whole chain.
+
+Marko:
+Well, I think like the, I think like this has more, this would be more of like a roll up because I think like a chain
+
+Citizen Web3:
+A zone.
+
+Marko:
+in this, yeah, it's a zone, it's all a zone. But I think like a chain in this sense is like too heavy. Like, like, like ICS V1 is too heavy. We need to make it lighter. And I think making it lighter is like going more towards the roll up world.
+
+Citizen Web3:
+You mentioned in your descriptions of the interchange sovereign communities now Taking that into account because I think it's important Does that mean I'm gonna be of course devil I'm playing devil's advocate a little bit with the words here, of course, but Go along with me if you don't mind like when you say that sovereign communities is part of the interchange does that mean that things like Binance chain cannot be part of the interchange Can they be said to have sovereign? Is their community sovereign?
+
+Marko:
+Yeah, I mean, it's like their community is definitely sovereign. They're using the stack and everything, but it's like the, I mean, the interchange is like, the unfortunate thing here is like, it's all like, oh, like I don't want to be part of the interchange because that means I'm part of Cosmos. It's kind of like the same thing that Terra was never like, never brand themselves as Cosmos because they don't want to like be like, um, part of this like brand overall branding. But it's like the interchange, like if you take away the interchange foundation, it's just like a term of chains like communicating. Um, and I think it's like, it can be anything at that point, of course, like getting the chains to that point, like getting finance chain, um, to the point where it can use IPC is like a big endeavor, but like it's, it's on the roadmap and everything. So it's like, it's really like just ideally like creating these sovereign communities and bridging these communities together to exchange value and to exchange information.
+
+Citizen Web3:
+It's interesting, I'll tell you a little secret. We at Citizen Cosmos have been using the word interchange for the last like three or four months already as a plain term because we don't work just with the Co-Ost community, we work outside as well. And we've been using the term interchange as a term to describe the internet
+
+Marko:
+Everything,
+
+Citizen Web3:
+of
+
+Marko:
+yeah.
+
+Citizen Web3:
+blockchains. So interchange, like people should start getting used to that interchange.
+
+Marko:
+I'm presuming it's gonna be like inter-up.
+
+Citizen Web3:
+Inter Um Marko, um I have like a couple of more questions, but um About the kind of more like blitzy questions altogether, but before that one last question uh about the cosmos sdk, you kind of started to say that you started to say that yet, um, you didn't Do you personally have? Like what a dream vision But, and I'm talking from a, not a philosophical perspective here, I'm actually talking technological perspective here. Like from a perspective of a product of Cosmos SDK, the lead, sorry, what's going to be possible to do, what is not possible today in your like wish list with Cosmos SDK in the next several years?
+
+Marko:
+Oh, for sure. I mean, like a lot of the work we're doing right now is like making the SDK like fully composable, fully modular. So in the near future, like probably make Q3, you'll be able to use the Cosmos SDK that isn't tied to Comet. And so you'll be able to use it with RoleKit. If someone develops like different sequencers, you can be able to use it. Like how did the box with that? All you need to do is write a wrapper, an ABCI wrapper around their implementation. and then you'll be able to use it out of the box. And so there's like, there's already that world that we're exploring. When we move one layer up from that, we go into the storage layer. This quarter we're doing a lot of research on commitment structures. And because the like one-liner pitch is that, one-liner pitch is like, blockchain stopped at Merkle trees, but there's so much more. And it's basically saying that like, hey, like we, We have these like assumptions that were like adopted early on in blockchain. And it's been like so many years, but no one's like, and we still kind of like hold those like assumptions core to like what we think of blockchain needs and stuff like that. But there's like, some of these assumptions have been invalidated. Some have been validated, but those that have been invalidated, like we haven't really gone back to the drawing board and been like, okay, these are invalidated. What is the alternative? And so this is like a lot of like what we want to do on the storage layer. Some people are doing it as well, it's not only us. Once we move a layer above storage, we get into the modules. We're revamping all the modules, but then it's like we wanna create a world where you can write a module in any language. So you'll be able to write a module in Rust. But not only that, it is like you'll be able to create a virtual machine and integrate into the SDK very seamlessly. Right now, the Confio team has done an amazing job at WasmD and the WasmVM, but what if there was an easier path to get that? to get that done, to get it in. Like there's ethermint, there's the Polaris from the Verichain guys. Like what if like VM communication was kind of like a first class that it's in STK. And what this really brings out in the STK is what ABCI is, is like ABCI is a super powerful tool that could be a lot bigger than Comet. And I think it's gonna be a lot bigger than Comet. And what then, but it's like the layer between like Comet and your VM, that's a very like tough layer, like you can write it out, but then there's like a lot of issues. There's a lot of research that's gone into this, that like, it makes it very hard to develop and that like people are doing it, but it's like taking a long time. And so what we would enable is like treating the Cosmos SDK like as like a middleware stack between the, like this middleware stack is like the kernel and then that modules are also part of the kernel because they can like call things natively. But then the user space is like this different languages, the user spaces, these virtual machines. So that's kind of like where we're on a trajectory on like where we're going with the SDK. And that's where like, yeah, we have a lot of work to do. Of course, we have a really awesome team doing it. And so everyone's like super excited, but it's also like bringing the SDK back into a new light. It's like, I think that a lot of people think about the SDK as like a, it's like a maintenance project. Like it's not really like, oh, like it's kind of just there now and stuff like that, but it's not. Like we're doing so much more.
+
+Citizen Web3:
+I definitely advise those people that think like that to
+
+Marko:
+Yes.
+
+Citizen Web3:
+come and open the GitHub repositories at least and
+
+Marko:
+Yeah.
+
+Citizen Web3:
+have a look at what's going on. Because I mean, I've also personally been invited, you know, sometimes I get invited to like some spaces or whatever or talks or whatever. And sometimes there's people from different places. And I heard this opinion a couple of times and every time I'm like, come on, dude, it's like... Come on, like you can just see what's going on. Not, you don't need to, but it's cool. The things that you say sounding exciting in terms of the interchange being actually more interchanged. So I think
+
+Marko:
+Yeah,
+
+Citizen Web3:
+it's,
+
+Marko:
+exactly.
+
+Citizen Web3:
+Marko, a blitz, a blitz of three questions. It doesn't have to be like, but it's like, we call it a blitz, but give me three, it's gonna go down the questions first, three things and two things and one thing. So first one is a bit boring, but it's a typical one. Um, and give me three projects that you're technically interested in. It doesn't have to be crypto, by the way, it could be outside of crypto, but they technologically arouse you, so to speak.
+
+Marko:
+I mean, I'm too deep in the rabbit hole. So
+
+Citizen Web3:
+Gone.
+
+Marko:
+I would say the I mean, like everything going on in like ZK world is like, amazing. And I think it's like ZK's use of usability is not only blockchain, it's also a lot wider. So been diving into like that world a lot. Projects there like, like the polymer team is doing like amazing research. like zk-tree and zk-mint work. Super excited for that. Scroll has like some interesting stuff. They're doing like a variation of the zk-vm, EVM. Those are like two teams. Then like let's say like take a step back from like zk-world. What is another project? I would say... I dove into Arbitrum like two weeks ago and like really dove into their code and everything. And like some of the stuff like blew my mind. Like they compiled geth into wasm. Like of course like in that world it's like known, but I was just kind of like, wait, what the fuck? Like this is wild. And so I've just kind of been like playing around in there like tech stack and seeing what's going on.
+
+Citizen Web3:
+They have some interesting projects going on.
+
+Marko:
+Yeah.
+
+Citizen Web3:
+I also actually like roughly, like in the last months, roughly, I started to dive more and more into orbit. And I was like, well, this is actually some pretty cool fucking funky stuff.
+
+Marko:
+Yeah, exactly.
+
+Citizen Web3:
+Two things, two things that motivate you in your daily life to keep on building, not just the SDK, but doing what you describe it, what makes you feel fun, yet motivates you to, you know, to build on bigger things, which we agree on that we
+
+Marko:
+I would
+
+Citizen Web3:
+do.
+
+Marko:
+say like, um... Like what motivates me a lot is like a lot of the Cosmos ecosystem, like seeing, seeing all these like projects using the work that we're writing and what the team's writing. I think that's like really motivating just to see that then like all the collaboration there is like, that's, he has like some amazing teams, like collaborating us with us, notional.com, Osmosis, and the list kind of just goes on and on. Um, and the other part I would say just like, the rate of innovation. I think it's just like the rate of innovation is like something we haven't seen. We haven't seen like this ever. Like it's like someone writes a paper and then like six months later it's
+
+Citizen Web3:
+crazy.
+
+Marko:
+already like there's like a new paper like making it even better.
+
+Citizen Web3:
+It's crazy, absolutely fascinating. And it's not just in crypto world, it's the funny thing. Like you look
+
+Marko:
+Yeah,
+
+Citizen Web3:
+all around
+
+Marko:
+I mean,
+
+Citizen Web3:
+the technological
+
+Marko:
+the
+
+Citizen Web3:
+world.
+
+Marko:
+yeah, the I mean, it's like, I think it's like we're heading towards like a big boost and like a lot of technological like the battery industry that I've been reading some papers on the battery world. It's super cool. And like, there's been some like, really tech breakthroughs that have gone
+
+Citizen Web3:
+Nice.
+
+Marko:
+on. The AI world is booming. It's just kind of like interesting, like
+
+Citizen Web3:
+That's
+
+Marko:
+playing around with it.
+
+Citizen Web3:
+crazy.
+
+Marko:
+Of course, like everyone's there. It's like part of the hype cycle right now.
+
+Citizen Web3:
+Uh-uh.
+
+Marko:
+There's like a lot of innovation happening. At the biotech level, it just there kind of moves slower to paper and into practice. So it's not as exciting because the difference we have is someone writes a paper and it could be in production within three months.
+
+Citizen Web3:
+fascinating. I agree. I always say that people are expecting the future to come yet forget that we are this is
+
+Marko:
+Yeah.
+
+Citizen Web3:
+time doesn't work like that we live here today.
+
+Marko:
+Exactly, exactly.
+
+Citizen Web3:
+So last one, um, person or a character doesn't matter real or made up dead or alive. It could be a coder, a writer, a cartoon character that not a hero, not, not your role model, because I'm not a role model person, but somebody or something or someone that helped you to become better, helped you to strive towards, be more curious, be more explorations, you know, like that way.
+
+Marko:
+I mean it's like a So, I mean, there's a few things, and it's more like tidbits of people. So, I'd say like Zucky's a huge person. He also gave me the term, if you don't feel like you're on the brink of failure, or if you're not pushing yourself to the brink of failure, you're not moving forward. And that in the last, in 2022, there was way too many moments where it was on the brink of failure, or on the brink of insanity. And then like, I was like, Zucky, like I can't do this anymore. Um, but then there's people like, I know like, like Sonny and Dave are like, awesome to me, like they're like two people that like, I love working with. And they're like always so engaged and so, so much, and like, so there. Um, and then of course, like outside of like crypto and like outside the work life, like I think like my grandma has like influenced me the most and like how I try and like treat people because it's like her thing has always been like. Like. like her term was like, why should I treat, I get some like famous person walks in, like why should I treat you any different than, like tell me why I should treat you any different than like another person. And that's like just stuck to my head. And it's like, when I see people who are like, oh, like this amazing person, I'm just like, okay, cool. Like, you're just a person, like you've done some cool things, but like, like I'm just gonna treat you as a normal human being. And I think people like who have those like worlds of like. I know, like Vitalik, I remember like, I was hanging out with him in like, in Lisbon with Zucky and like, we were just like talking, hanging out, nothing. And then like someone from like the SDK team was like, oh, like, are we going to like hang out with Vitalik? Like that's insane, blah, blah. And I was like, oh, like, like if we do like, don't, don't treat him like that. Like he just wants to be treated as like a normal person.
+
+Citizen Web3:
+I'm glad you say that, Wendon. I'm glad you're using real people in your examples because it's not like I'm trying to throw a stone at anyone I'm having conversations with. And I love all these people are fascinating. Love maybe is not the right word here. But it's interesting that a lot of people don't use real people when you ask them that question. They go on to look a lot outside of what the world that surrounds us can give us. Thank you very, very much. I really enjoyed the conversation, really enjoyed everything you've been answering. And thank you for your time.
+
+Marko:
+Leverage, thanks for having me on.
+
+Citizen Web3:
+Thanks. Thanks everybody. Bye
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.

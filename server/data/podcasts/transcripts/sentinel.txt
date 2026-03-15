@@ -1,0 +1,478 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/sentinel
+
+Episode name:
+Web3, DVPN and Crypto Branding with Dan Edlebeck
+
+Anna:
+Hey, it's still Citizen Cosmos, well, Serge and Anna, and we discover cosmos by chatting with awesome people within the cosmos ecosystem and the community. 
+
+Join us if you're curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+Are you cheating on the blue arm? 
+
+Dan Edlebeck:
+We're seeing authoritarian regimes take more and more hold, even since less than a year ago that we've been on the podcast. 
+
+Citizen Web3:
+Before we rock it off into our next episode, we would like to share the latest news of this episode's sponsor, Cyber. The Cyber Congress DAO has recently launched its bootloader network for the Superintelligence Bostrom. The network is stable and the first IBC connection has been established. More news on the activation of Cyber's gift to follow soon. 
+
+To test Cyber, head straight to the app on cyp.ai. 
+
+Citizen Web3:
+And still, good space time to y'all and welcome to a new episode of Citizen Cosmos. And before I'm going to introduce the guest, I'm going to tell a lot of guests about the fuck up we just had. We just started to record with one of our favorite guests. It's so cool. 
+
+I'll introduce him in a second. And then we realized like 10 minutes through the podcast that we forgot to hit the record button. So there we go. Fuck ups happen. But I want to welcome Dan, the CEO of Exidio, the guys who are working on Sentinel. The last time we fucked up, he did one of the most amazing interests to himself and I hope he's going to do it again. 
+
+Dan, welcome to the show. It's all yours again. 
+
+Dan Edlebeck:
+Awesome. Surge and Anna. I love it. Thanks a lot for having me on. 
+
+I love Citizen Cosmos. So basic quick intro. I'm Dan. As you mentioned, Surge, I'm the CEO of Exidio. Exidio is a software development company building tooling and products on the Sentinel network. So Sentinel is a peer-to-peer marketplace for people to share and route traffic through individuals bandwidth. 
+
+And so with this bandwidth marketplace, we at Exidio are building some of the front end applications and some of the core tooling to be able to have other companies leverage the Sentinel network. I'm really excited about where we're at and where we're building and I'm excited to get into kind of more of the details in the episode, but I'm excited to just be back here. You guys are the best. So 
+
+Citizen Web3:
+thanks, Dan. Just to repeat what I was trying to say in the first take, I was just saying, guys, if you haven't heard of Sentinel, first of all, please check out our first episode with Dan. 
+
+It was recorded about nine months ago. Scroll back a few episodes. And one thing I do want to say, which I didn't mention before, Dan is a very huge character and he loves what he does. And I really advise you to listen to what he was talking about, a lot of his personal views in the first episode. But if you haven't, you don't know what Sentinel is, please check out the links under this episode and you will find a lot, a lot of links that aren't. And the first question that I will try to get back to is I was just saying that the first time we spoke to Dan, Exidio was pretty much the only player or the biggest player around Sentinel and the company who was building on it. And you just started to explain to us. And the question was, who are the other players? Are there any other players around Sentinel? Apart from Exidio right now and anything that you want to add to that? 
+
+Dan Edlebeck:
+Awesome. Yeah. Sentinel, the peer-to-peer bandwidth network is the base layer that other companies can leverage to be able to build their own VPN. For example, Anna, if you were starting a company and you had a user base and you said, oh, a product I would love to offer my user base is VPN. Instead of running all your own servers and maintaining all the core infrastructure, you can leverage this peer-to-peer network to build the VPN off of and have those be your nodes that are offering traffic for the network. At Exidio, we're building some of the core tooling and core infrastructure to be able to have other companies build on the network. 
+
+And I'm really excited some of the core infrastructure is finally getting watched. And right now we're recording at the very end of September. I'm assuming this will come out in October. And as this is coming out, our first native application built on the Cosmos network on our own blockchain based on Cosmos will be live on iOS. And then later in the month, we will have these applications also live on Android. And then in the very beginning of November, we'll have these applications native on desktop for Mac, PC and Linux. And as these applications all go out, this will be the core infrastructure that would be built for other companies to be able to use the open source code and build their own applications on Sentinel. 
+
+So I'm really excited about that. And I think that we're really paving the way at Exidio and being able to open up the Sentinel network for a lot of other companies. There's actually six other companies right now that we're in communications with that are excited to build their own applications on top of the Sentinel network. I'm excited to leverage Exidio and our expertise in getting those applications off the ground. And we'll be doing that right after we have this core infrastructure built. So it is a pivotal time in the network. 
+
+I'm really excited. 
+
+Citizen Web3:
+Let's talk about a little bit the core infrastructure a bit more in detail because I have told you before and I think I mentioned it several times, whether it was an episode or whether we're just in conversation. I've been following Sentinel since the very beginning. And I have a lot of other friends who have been following Sentinel since the beginning. And again, you guys have been doing very well and we have been doing very well with you. 
+
+But regardless of that value here, right? There's a lot of conversations about you mentioned applications. And I would love to hear a little bit more, maybe some insights, maybe you can share not dates when they come out, but maybe how they will look, how they will be different from, let's say, the Mysterium application that's out there or any other VPN, like traditional VPNs, not DVPNs, maybe some features that we don't expect or the opposite that everybody expects, something like that. 
+
+If you could share it, of course. 
+
+Dan Edlebeck:
+First off, let's think about the basic architecture of the network and why the Sentinel peer-to-peer decentralized network is far more valuable than just leveraging NordVPN or ExpressVPN. So not only is Surge and Ana, are you able to offer your bandwidth to the network and you receive income, you receive DVPN tokens for doing so. And I'm also able to route my traffic through your IP addresses as a decentralized VPN. But the only way that I know on our search that your nodes are available online is because the details that you know it is posted to the blockchain. 
+
+So the Sentinel-related blockchain, which is our own solid blockchain built leveraging the Cosmos SDK, is connected to all the other Cosmos chains via the IBC, the Inter-Blockchain Communications Protocol, creates a resilient architecture where as long as the blockchain stays active, as long as there's validators that are validating the blockchain and the blockchain is continually producing new blocks, then the front of an application I'm using to connect to your node is showing your node is available because your node is posting that detail to the blockchain and then my application is calling the blockchain via API for the details. So this architecture completely flips the industry on its head. Whereas NordVPN or TunnelBear, they maintain all of their own servers. They're probably playing, they're paying cloud hosting providers to be able to manage their servers and they're at the whim of what those centralized cloud hosting providers stay or do. So with this peer-to-peer network, it's a far more resilient network and we have residential nodes that are far more resilient than nodes that are running exclusively out of big data centers. So with this architecture, now we're able to provide a completely decentralized network and there's no company in the middle that's able to log user data, it's able to track what you're doing and is able to resell your data to other companies. So now you have a peer-to-peer network and you have probably an encrypted connection online and with this architecture, it's far more valuable than ones where you're depending on centralized data centers that are running all your servers. 
+
+And so now we are building out the core products to be able to connect to this network. Sentinel in the past was actually the token was an ERC-20 token built on Ethereum, but more importantly, the network of all the nodes was based on Ethereum. And so all the nodes that were offering bandwidth in the network posted their details to the Ethereum and blockchain, but that wasn't sustainable and it had to route through a master node to be able to disseminate all the information to the front end applications. 
+
+But now that we've completely flipped the architecture and built natively on Cosmos with their own chain, we're able to not have a single master node, but all the nodes are individually connecting to the blockchain. And so for those applications to really scale and for us to build a lot of other companies connecting to the Sentinel network, we need to have strong front end applications and that's what we're building at Exidio. Like I mentioned earlier, the first week of October is when we're launching the Exidio's native Sentinel DBPN application on iOS. So everyone with an iPhone or an iPad will be able to connect. And then shortly after that, I'm an Android person myself. I'll be connecting with my Android phone that application is getting launched. And then in early November, we'll have all the desktop applications live. And with those applications live, that's the core infrastructure. That's the core building blocks that we'll use to be able to customize different white label applications for other companies that want to leverage this growing network. 
+
+Citizen Web3:
+That sounds like you had guys have a lot planned on your plate because I can imagine releasing so many applications simultaneously. That must be a headache of development and a headache of, oh my god, a release, a release, another release, another release, 
+
+Anna:
+headache of product managers. 
+
+If you have some now, 
+
+Citizen Web3:
+for sure, for sure. But before we get into product management, guys, that is mentioned nodes so much. And I know what Dan is getting at. But I want to talk a little bit more about it because to me, and I think to a lot of listeners and to a lot of people generally who care about decentralization, who care about the blockchain, at least in our head, and maybe Dan, you can correct me here. When we talk about decentralized VPN, we all imagine that everybody can run a node and it's so easy as just plug and play. Is it as easy already like that? 
+
+Are you guys working that way? Let's talk a little bit. When is it going to become available for anyone to just, you know, I don't know, buy a small box. 
+
+Anna:
+Mass adoption. 
+
+Citizen Web3:
+Yes, mass adoption. Well, 
+
+Anna:
+our favorite word, you know.
+
+Citizen Web3:
+I don't like the word mass adoption. Fuck mass adoption. No, I was seriously, I want to know where I can go and send in all the  Exidio website, click buy, they'll send me this node. 
+
+I'll just plug and play it in and it just, bam, starts to share the bandwidth and I'm all good to go. Is that ever going to happen or is that too much to wish for? 
+
+Dan Edlebeck:
+So, Anna, you're talking about project management. We got more projects to go. I just talked about the mobile applications. I just talked about the desktop applications and even those are not included in what you're asking about. Surge, which is another additional desktop application as a node hosting software. So after we have the desktop applications to be able to connect to the modes that are available online, then I'm targeting late November for that. Another additional software application, which would be a native application to easily offer your bandwidth to the network and generate passive income for doing so. 
+
+Right now it is entirely possible, but you need to do it via CLI. So if you're not used to command line interface and interacting with that to be able to set the customized settings to be able to offer your bandwidth to the network, if you're not, then you have another option, which is partnering with groups that we're working with to have provide easy node access, generate passive income with a node hosting service. So we partner with StrongBlock and they're kind of a node of nodes provider and they provide core infrastructure for growing blockchains. And we partner with them for individuals to be able to host nodes and have StrongBlock be their partner to offer their bandwidth node. But like I said, at the end of November, we're looking to release another product, which will be a pivotal product, a software application where people can easily configure that application and start earning DPP and tokens by offering their bandwidth to the network and don't need to be as technical and configuring a CLI. 
+
+Citizen Web3:
+The real reason I'm asking is because, you know, we used to be on the road and our I personally used to be on the road and slowly settling in now. And one of the big wishes, of course, is to run as many servers or nodes from home rather than in the cloud as possible. And I think one of the sentinel has always been around my mind, like having a dream of, you know, having a decentralized VPN node running in your house, being part of the network, you know, committing to all that. 
+
+So I can't wait to see those applications come out. And of course, I can go all the technical way. I mean, we do run our own nodes, but I'm still, you know, like you want to see the cool stuff, you know, and I'll be part of the cool kids. So then just quick question about the token, because you guys obviously have made a transition, like you mentioned already from an USAID 20 token to a Cosmos SDK to your own blockchain, which is, I think, huge, huge milestone for you. And my personal opinion, a huge milestone for the whole industry, because as chains become more sovereign, right? We see more and more of this freedom interaction. And I'm sure you will talk about ABC now as well. But for people who maybe haven't heard about what the DVP and token offers, the other possibilities, not about just bandwidth thing, but about pools, maybe about DeFi. I mean, whatever you want to talk about, man, please do share that info with us. 
+
+And we would love to hear it. 
+
+Dan Edlebeck:
+Absolutely. So it's kind of interesting, Anna, you were talking about DVPN, the network of VPNs and Serge is talking about DVPN, but the token is called DVPN. And that was a transition back in March of this year. Since we've last been on the podcast, we've transitioned from the ticker of the token SCNT to DVPN, because I think we probably bought the nomenclature of DVPN to decentralized VPN to the space from early on. And we wanted to kind of claim that as part of our history. So we kind of kept the core branding of DVPN. And now the token is DVPN. So the Sentinel token is DVPN. 
+
+And the token itself is very valuable and I think has been well designed within the architecture of the ecosystem that is the Sentinel network. I think it has a very circular economy for using the DVPN token within the network. So when you purchase the DVPN token, then you can use it in the application to pay for a decentralized bandwidth. And there's incentives to pay with the DVPN token versus other payment methods. 
+
+But you can also use it. But then that DVPN token that you're paying for is not going to Exidio, it's not going to Sentinel, it's going directly to the node host, Serge, you're talking about offering your node, you'd be getting paid that DVPN directly from the users. So it's a direct transition from the token holder that's using it to pay for bandwidth straight to the bandwidth node host that's offering their bandwidth to the network. So in that sense, it's a really cool peer to peer architecture. And then also the token is used for security of the blockchain, right? 
+
+So by holding the token and staking the token, you're helping secure the blockchain, participating in the, securing the blockchain, delegating it to validators and also participating in on-chain governance. And we've seen a lot of participation. It's been really great. We've had seven governance proposals that have been passed on the Sentinel native blockchain since its inception in March. And we've had incredible participation in staking. There's about 80% of all the tokens that have been state are staked. And that actually, that number is down slightly from 90%. And one of the reasons that that number is down is because of the rise of the excitement of the use cases of the token, not only within the circular economy, within Sentinel, but within decentralized applications. 
+
+And we've seen that that's been a really big boom ever since the IBC was launched this year. Now finally, all these sovereign native blockchains are able to communicate and interact with one another. And so people are not only using the token to stake it and participate in on-chain governance, but people in the Sentinel ecosystem are using the DVPN token in exciting protocols like Osmosis or Gravity Dex or SIFChainsDex. We're seeing a kind of a surge in activity and opportunities within the Cosmos ecosystem. And the DVPN token is really valuable in those ecosystems as well. 
+
+Citizen Web3:
+So you mentioned IBC and you mentioned that there's been a lot of interest in the other applications of the DVPN token, in my opinion. And I think you mentioned Cosmos season at the beginning. I know what you're talking about, obviously, but for ourselves, for the Citizen Cosmos podcast, we wanted this to be like the interoperability season, the IBC season. And we started the season with Sunny, with Osmosis, of course. 
+
+I think for everybody was, oh my God, IBC works. Look at that. They can send like all this thing. And what I was trying for you to maybe to talk about is you guys have quite popular pools on IBC. I know our podcast is usually not about money and how to get it. But I think this is an important part, Defi, now of everything. 
+
+And can you maybe talk about all the Defi opportunities that the token DVPN offers? Is that something you want to talk about? 
+
+Dan Edlebeck:
+Yeah. 
+
+Anna:
+Now everybody want to talk about Defi. 
+
+Citizen Web3:
+Yes, yes, yes
+
+Anna:
+It's our reality, you know. 
+
+Citizen Web3:
+I want more and more people to learn about it. And you guys have a fantastic opportunity to share in terms of like your token is already working and all of that. And that's really cool, I think. 
+
+Dan Edlebeck:
+Yeah. So I think whether we're talking about Defi or we're talking about independent access online and getting more sovereignty online with a decentralized VPN, what we're talking about is bringing our rights back and our agency back online. We don't have control by big VPN companies that might be logging our data. We're not being governed and held back by banks that are denying our access to our funds because they say that we can't do the wire transfer or because they're making overdraft fees. We're taking our rights back online. 
+
+We're bringing agency back to us as individuals. And that's the entire power of the movement of the decentralized web, right? That's what we're doing here with the Web 3. So I think Defi is incredibly important as a part of the Web 3 and taking our rights back online and being able to have independence financially. If you think about the power of Defi, you could have a friend that is living halfway across the world that doesn't have a bank account and maybe they had conviction in their past and they had their own journey and they're cut out of the banking system or maybe they live in a culture where women are not allowed to get access to banking or all these other limitations that hold people back from being able to be a part of the global economy that are part of being able to help back from being entrepreneurs because they can't interact and do commerce with other businesses. That has completely flipped on its head with Defi and especially with the IBC, you can transfer those value to individuals across the world within a six second block and you can now participate in lending and in governance and in borrowing and in yeal farming and trading. All of these opportunities are at our fingertips and all you need is an internet connection. It's truly incredible. 
+
+So I cannot stress enough how important this is. The Web3 movement is more than just decentralized VPN. The Web3 movement is more than just decentralized banking services. It's about taking agency and sovereignty back online in a decentralized fashion and we're seeing that happen in real time now with Defi, especially in the cosmos and it's super exciting. 
+
+So like you said, kind of kicking off interoperability season speaking with Sunny, the product they built at Osmosis is just gorgeous. It functions super well and to be able to do real time swaps, people think that operates as if like their two ERC20 tokens and they're not on their own sovereign blockchains because it's so seamless. But you're literally having two blockchains interact with one another. They have their own governance. 
+
+They have their own protocol. They're completely independent blockchains and they're doing swaps seamlessly. Also, not only is Osmosis able to do swaps for tokens, but to be able to provide liquidity, the liquidity incentives, it's so exciting. 
+
+And look at the amount of value locked on Osmosis since it started. It's just literally shot into the roof because people are starting to see the value of this protocol, how seamless it works. And now something that we've been talking about since 2017, right? Independent blockchains that are going to be able to communicate together and we're going to be able to have interblock chain communication and we're going to be able to have applications that make these run smoothly so that it almost feels like it's happening in the background. 
+
+We're starting this to see this actually come into play. So imagine four years from now, what the applications would look like when all these blockchains are actually communicating seamlessly and we're just using what would look like Google Maps, but there's blockchain that's powering it on the back end and we don't even know it. So I'm really excited about the future. And I think DeFi is a crucial part of the future that's happening. And now we're seeing not only Osmosis, right, but we're seeing gravity decks with the front end built by EmRus. 
+
+We're seeing a switch chain building at decks. I think E-Money is bringing out different applications. We're going to see the gravity bridge to Ethereum come out on Cosmos. So we're starting to see the core, I think, excitement of the potential now, not just being a theoretical thing, but actually getting realized. 
+
+Citizen Web3:
+We actually had a recording with Henrik from E-Money last week. I don't know when the episode is going to come out, but yeah, we learned these guys have a lot of plans from a slightly different perspective, but we really like that decentralization can include not just go one direction, but can be decentralized, which is what you guys are pretty much working on in a sense because you're working on bandwidth being decentralized. And this is my actual next question before I will let Anna take over a little bit about DVPN and technology, of course. The question is about liquidity. 
+
+And I don't know how to phrase this question, but I will try. Like the DVPN and token, as you mentioned, is a token that at its core is bandwidth, right? It's a technical kind of use case. 
+
+So the question is like that. Obviously we understand we were realized in the web through world, every kind of token, every type of token, regardless of whether or what it's use case is needs liquidity. And we saw when before DeFi went big, we were struggling, blockchains were struggling. Now the question is, does Exidio or Sentinel or I don't know if you know about this, do you guys participate in liquidity providing for the pools and the DeFi instruments that are out there, or do you guys live it to the community and say, well, doesn't matter. Let's see how we do because liquidity is important as far as I see it. 
+
+And I want to understand how you guys work around it or do you at all work around it with it? 
+
+Dan Edlebeck:
+Yeah, liquidity is crucial, right? And liquidity is so important because if you want to help grow access to decentralized VPN, if you want to have more people that access to participating in the ecosystem, people need to have easy access to get connected to the token. And we're seeing that that has been growing exponentially within Sentinel. And so it's super exciting to see. And yes, the S &T Foundation has put tokens to be able to provide liquidity, these DeFi protocols, and the community has as well, and I have as well. 
+
+It's super exciting. We're seeing that it's easier and easier for people to get access to the token. In the past, Sentinel had issues with liquidity because it wasn't on some of the bigger exchanges and because there wasn't a whole lot of activity with DeFi protocols. That has completely changed with the inception of IBC and also with Sentinel getting a lot more access to bigger exchanges. Sentinel was listed right when I made that on MXC exchange and on Centralize exchange. 
+
+And then it got listed shortly thereafter on a CEMNX, used to be called BitMEX. And now just recently, Sentinel got listed on KuCoin. So as far as Centralize exchanges and people that are more comfortable with those, Sentinel has continued to grow and now is listed on Tier 1 exchange. And under Centralize exchanges, the TVL has grown incredibly as well. So now more than ever, it's really easy to get access to the Sentinel token, to be able to buy it, to be able to use it, to purchase bandwidth, to be able to do swaps with it. 
+
+So this is something I'm really proud of and is really exciting. And I think liquidity is crucial regardless of kind of what your protocol is and what its intention is. We want people to get able to get access. 
+
+And the first step is being able to get access to the token. So yeah. 
+
+Citizen Web3:
+I think you should be proud of that because you guys should be congratulated on that. I think the amount of work, if you follow Cosmos or Sentinel and you can see the transition from where you guys were even nine or 10 months ago, which you already were getting big, you already were getting known to today. And this is again, my next question, I'm going to steal another one about PR and marketing. It's quite obvious that you have guys of either someone new or maybe somebody else has started to really turn the wheels on. But you have guys have really turned the wheels on that in a really good way, in my opinion. You have the Blue Friends Army, right? 
+
+Or whatever they called. I mean, obviously this is a community thing, but still, right? And you guys are in so many like social media channels. How did it happen? How did it suddenly like the market in PR boom? Who's doing all that magic? 
+
+Who's the gnome in the little box pressing the buttons? 
+
+Dan Edlebeck:
+It takes a village, right? I'm definitely not going to take credit myself and I definitely wouldn't take credit myself. I've been really blessed to have awesome people around me. We hired Adriana Mendez earlier this year as the chief marketing officer for Exidio. And I was working with her and kind of messaging her quite a bit and saying that I think you'd be a huge help on this and what we're building. And I see so many alignments and synergies and she's been awesome. 
+
+And she has awesome people on her team. There's Tom, David, there's Arifa and there's Rinchie. And all three of them have been amazing. Our COO Peter at Exidio has done great work in helping to organize and lead the team and provide them the resources that they need. And then we've also built out a big ambassador program. We have amazing community ambassadors. Sentinel has different channels for people from different cultures. 
+
+And I think that we have almost 20 different individual telegram channels in different languages for people that are supporting the Sentinel network and are super excited about it. We've been working with marketing partners in China. We've been working with marketing partners in Vietnam. We've really had a global reach and we're thinking about marketing from a holistic perspective. 
+
+The marketing communications is a very big and important area if you're looking to have people grow and adopt your products and be able to interact with the circular economy within your network. So we think of social media. We think of direct newsletters. We think about influencers and people that can help us disseminate the message. We think about news agencies. We think about paid advertising. We think about PR and getting mentions in press releases. We think about opportunities like this to connect to you guys as citizens of cosmos. We think about interviews. We think about marketing communications from a holistic perspective. And then we think about community. We think about grassroots opportunities to build community. And why are people excited about the Blue Friend Gang? 
+
+What is that all about? I think that because we've been very intentional about it and we've continued to grow it, I think more and more people are going to learn about the power of decentralized networks and the power of decentralized VPN. And all of that is a positive for the blockchain ecosystem. So we kind of see ourselves as having the responsibility of helping to educate and bring people into the fold. 
+
+Citizen Web3:
+Can you talk a little bit more maybe about the ambassador program and is it related to the Blue Friend's army or is it two separate things for anybody who doesn't know who the Blue Friend's army is? 
+
+Anna:
+Let's talk a little bit about Blue Army. 
+
+Citizen Web3:
+Yes. 
+
+And by the way, that is wearing a blue T-shirt. Sorry. I'm going to give it away. 
+
+Anna:
+Then you drink something blue or green. I don't know what is it? 
+
+Dan Edlebeck:
+Yeah, getting those morning nutrients. 
+
+It's a smoothie packed with a lot of spinach. 
+
+Anna:
+Okay. 
+
+Citizen Web3:
+So are you cheating on the Blue Army right now? Great stuff. 
+
+Dan Edlebeck:
+Also got some blue food coloring. 
+
+Citizen Web3:
+But talk a little bit about more about it because I'm sure people who listen to our show would love to hear more information about it. I'm sure not everybody knows about that, but maybe you can share some light on that. 
+
+Dan Edlebeck:
+Yeah, the Blue Friend gang. It's awesome. It's cool. I didn't start it. You know, no one started it. It's kind of a mean culture that has come out of people that are caring a lot about privacy, caring a lot about their sovereignty online. 
+
+One thing that I think Sentinel has had a really big and active community is because it really resonates with people. We're seeing that independence and our freedoms online are often being shrunk every day. Just this morning, it was announced that now the Chinese Communist Party has firewall that's restricted access to CoinMarketCap and CoinGecko, the most basic information websites that we rely on for what's happening in the crypto industry, especially around all the tokens. It has links to all of their websites. 
+
+Data sources are so information rich. And now all of the people in China that are getting stopped by the Chinese firewall are not able to get access to this content. We're seeing authoritarian regimes take more and more hold. Even since less than a year ago that we've been on the podcast, think about governments and the mandates that we've had in really uncertain times with COVID. 
+
+And this isn't a political statement. I think COVID is a very serious disease. And I think we need to take it seriously. 
+
+But at the same rate, we've had a lot of our individual liberties that were stripped away from us in dealing with this pandemic. So I think people are looking for how do we provide better independence online? How do we have more security and privacy online? How can I make sure that I'm still able to get access to information and that I'm not being restricted from it? And I believe personally, and this is why I'm so passionate about what I'm doing, it's our human right to get access to information. 
+
+I think everyone in China should be able to look at CoinMarketCap and CoinGecko. Whether they do anything good or bad with that information, that's up to them. But they should be able to have access to that information. They should really go on Wikipedia and read any article and be in power with that information. 
+
+These are human rights that we have. And with the Sentinel DVPN, you're able to get access to that content because you're routing your traffic through IP addresses that do not blacklist that content. And now you're able to access it. And now you're more informed. 
+
+Now that you're more informed, you can make your own independent decisions. So I think that this is just people that really care about privacy and sovereignty online, and they've all rallied around it. And the Blue Friend Gang is super cool. They've meaning themselves in the blue pep days, and they talk about the importance of privacy online and how we're making sure that we're taking power back for ourselves. So yeah, there's no one company behind it. There's no group behind it. It's not the ambassador program that's running. 
+
+The Blue Friend Gang, it's truly a bunch of independent people that have gotten excited about the community. The ambassador program is helping to disseminate our message, share it on social channels, and share it with cultures in different languages. Our marketing reach only goes so far, and our bandwidth is only so much. But with the growth of the ambassador program, now we're able to have Sentinel Turkey has really taken off. And we have groups in the Middle East. We have a bigger growing Sentinel Spanish community. I just did an AMA in the Ku Kuan Chinese community. And I leverage our partners that are working with us to help grow our adoption in China, and they helped operate it natively in Chinese. 
+
+Yeah, the ambassador program is really helping us global reach. And then those that get excited, they'll probably find that we're at the Blue Friend Gang themselves. 
+
+Citizen Web3:
+Was it Vitalik who recently mentioned that whoever controls the meme economy will control a lot of everything else? 
+
+And I'm not going to say what. Of course, I will try to remember to link to this article for everyone to read. But what's your opinion on that whole mnemology thing, on the whole memes becoming more and more important? I mean, what the hell? 
+
+I mean, like you can buy now an NFT. I don't know. I'm not even going to lay like this. 
+
+Anna:
+I was not going in the direction of it. 
+
+Dan Edlebeck:
+I was going to have an NFT right now. 
+
+Citizen Web3:
+I just want to hear Dan thoughts to be honest, because this is like a crazy thing. And you can see that this is a perfect example and a product of proof that the guys from Sentinel or Exidio or together, I don't know how I should correctly say it with the Blue Friends Army, like it's a perfect example of how these things works. 
+
+And I would really want to hear Dan's opinion on generally on the whole mnemology thing or what I call it that. I don't know. 
+
+Dan Edlebeck:
+The memetics. Our world has become a meme, right? The memetic of our culture is too real, right? We saw that earlier this year when stocks that have some value, right? 
+
+Like AMC or GameStop, these aren't companies that are worthless, but they definitely were not intrinsically valued at the price that they were trading at. But this is because us as individuals are starting to point out that we're kind of living in a clown show, right? The fourth matrix is about to come out. 
+
+And I think we're starting to question our entire reality. I watched the first two and I'm about to watch the third getting excited for the fourth one to come out, but... 
+
+Citizen Web3:
+Don't watch the third. 
+
+Dan Edlebeck:
+Yeah. I mean, I'm going to watch it. 
+
+It's not going to... 
+
+Anna:
+Don't watch the fourth you know. 
+
+Dan Edlebeck:
+Yeah. I have to. 
+
+Too loyal. That movie, I think there's a reason that like we talk in crypto about red pilling someone, right? The whole theme of questioning institutions, questioning if the way that we've been spooked by information is only the true and once sovereign truth and a lot of kind of the rise of authoritarianism, I think in our cultures and the rise of populism. 
+
+I think these are all themes that we're seeing around people questioning institutions, people questioning the information that they were told. You know, a horrible guy that did a lot of badness work, but Jeffrey Epstein, people question, how did he die? There's a lot of information out there and mission media will only tell you that he died because of suicide, but then there isn't a lot of good evidence to support that suicide. 
+
+But this is something that was impacting the biggest and most influential people in our society, including Bill Gates and Bill Clinton and Donald Trump and literally the most powerful people on our planet were very closely connected with this guy. So you've got to start questioning, is everything that you're told exactly how it is or is there an underlying truth that we can seek out? Is there a red pill that we can pop in our mouth and get the gloss over our eyes and start seeing reality for what it is? And then doing so, maybe we realize that some of these huge companies that we're eye on, I call them our digital overlords, Amazon, Apple, Facebook, Microsoft, Google, these companies have massive market share, have massive tons of fine print when you're signing up for their services and you don't know what type of surveillance you're under and you don't know how they're connected to other companies or other agencies or government agencies. And so the meme is the message, right? The meme that we can say, screw you to the big banks in Wall Street, we're going to pump the hell out of A and C stock and you better believe that I'm still holding one GameStop stock and I'm not going to sell that thing ever. I think that we're a part of a younger kind of movement towards looking at what are the ways that we can reclaim our privacy and our sovereignty on the internet and that is the meme. And so people have mean themselves into the blue friend gang saying, hey, we don't need to rely on the services that are handheld to us. 
+
+We can build our own independent network. 
+
+Citizen Web3:
+This is by the way, that was a great speech in my opinion. This should be quoted. 
+
+But I was just going to say we need to link Atlas Shrugged's shoulders to this episode because what that has just been saying, I think it's a perfect example of exactly what you're talking about. 
+
+Anna:
+Yeah. I love your analogy with the metrics that red pill and blue pill, but talking about data and we know that Facebook and Google obviously control the information. But if we're talking about negative content, I think that's the correct term for content they try to limit it. So we have some content that can be controversial. I'm not talking about like porn or information about financial technologies, but for example, the personal data, looking from some exchanges, for example, and we know that a lot of information about people, about ledger owners and like this are available in the network. So do you think that somebody should control somehow that information or not? 
+
+Dan Edlebeck:
+Well, we were talking about DeFi earlier, right? I think that this is absolutely the power of where we're headed. It used to be really weird to think about how to connect to like a decentralized exchange. I don't know if you guys remember back in the day, Ether Delta. It was super clunky and it was weird and it didn't work well, but you maintain your own privacy to your own keys and you're still able to interact with that exchange. 
+
+Now, people are a lot more comfortable connecting their MetaMask to Web 3 protocols. And this doesn't only have to be with decentralized exchanges, right? It can be with NFTs. 
+
+It can be with information. Soon, you won't have to put in, to be able to purchase a pair of shoes online, you won't have to put in your name and your email and your social security number and the names of the children that you want to have when before you even have them. Like you'll be able to connect your decentralized wallet to this decentralized marketplace and it doesn't have to have your personal information. All it has to have is that your funds are transferred to that via the Web 3 protocol. So I do think that decentralized finance is part of the solution to not being reliant on data centers that are controlling all of our information. 
+
+So this is kind of what I'm really excited about with the growth of the decentralized Web. 
+
+Citizen Web3:
+I'm going to play a little devil's advocate to continue on our questions. I want to get a little bit controversial. 
+
+Let's talk about what you just said. But even in a world of Web 3, you're still using for now Web 2 browser to use your MetaMask. So that means it has a print. And that means when I'm connecting my wallet to let's say, DYDX or to Osmosis or to whatever, it's not very hard to understand not where I'm coming from, not what browser I'm using, not what type of software, what computer, what operational system. I'm sure that everybody kind of knows about this, but it was a huge research done a while ago into privacy and how much data you actually need in order to pinpoint who the person is to guess with a 90% chance of who that is. You only need three pieces of information. 
+
+Let's say the location operational system and his favorite color, for example. And that's pretty much, I mean, that's kind of like sounds silly right now what I said, but the research is obviously much, much more goes in depth about it. So it looks that even in this world, and we can kind of see that, I mean, I can kind of already predict that things like, and I hope it's not going to happen, but I can see the type of thing that's the front and Metamask as a front end, or any other extensions like that will probably have to go into the world of KYC, unfortunately, right? 
+
+So what I'm trying to get is will somebody once come to Sentinel and say, guys, you guys are, you know, encrypting hell of a lot of data. And this is DeFi financial data. We want to know the data. We want to know what's inside. And again, I'm being controversial here, but do you see what I'm trying to get it? 
+
+What do you think about all that? 
+
+Dan Edlebeck:
+Yeah. So you said that like they can basically triangulate an individual's information, right, based on different data points of their internet usage? 
+
+Citizen Web3:
+Of course. 
+
+Dan Edlebeck:
+Do you think they should have access to your IP address? 
+
+Citizen Web3:
+This is what I'm trying to get at you to say. Of course, of course they do. Of course. 
+
+Dan Edlebeck:
+But do you think they should? Do you think that's their right? 
+
+Citizen Web3:
+No. 
+
+Dan Edlebeck:
+You know you should do that? 
+
+Citizen Web3:
+Use a VPN. DVPN. 
+
+Dan Edlebeck:
+Use the Sentinel DVPN. 
+
+Citizen Web3:
+Yay. That's what I was trying to get it. 
+
+Dan Edlebeck:
+And now your IP address changes from the one that is your home internet connection from your internet service provider. Your question, I think, is a little more nuanced in the sense that the answer is that it's a cat and mouse game and then it's never black and white. And you don't flip the switch and all of a sudden you have ultimate privacy and ultimate security. And there's always going to be new technologies that help advance the frontier of privacy. There's always going to be new technologies that help advance the frontier of tracking and surveillance. And that is going to go to infinity. But we either continue to find more solutions to help provide privacy and security options for people online or throw our hands up in the air, give up, stop trying and say, you can track everything and you can watch my wife when she's in the shower. 
+
+I'm not okay with that. So I'm going to continue to fight the good fight and provide opportunities and tools for people to have more privacy online because it's our human right. 
+
+Anna:
+It's very interesting because on the one hand, the people who want to restrict the information and protect themselves, they go to the Google and Google have a DMC protocol. If you find that your pictures, for example, from your home camera are available somewhere, you can go and say, okay, guys, I don't give the permission for that people to share my personal pictures with the whole internet. And with the other hand, we have our rights, our human rights to have access to the whole information that we want to have an access. Do you believe that VPN is neutral technology, not going to one side or another side of this cat and mouse story? Or VPN is a black or white side or it's neutral? How are you thinking about that? 
+
+Dan Edlebeck:
+Yeah, I think all technology is a double-edged sword and it can be used for rights for individuals and it can be used for rights nefariously. Technology is just a tool that we can use to enable ourselves to get access to information, get access to accomplishing a task that technology otherwise was not possible. 
+
+I think that you're right, Anna, it's a gray. But what I was getting at is that I think that there's a very black and white line between if I don't want someone looking through my camera and watching the things that happen in my privacy in my home, I should have the right for them not to do that. And I should have the right for my own privacy. 
+
+But if I openly share a content that I want into the world, that's the black side. I don't want anyone to get access to information. I didn't allow it. 
+
+I'm not going to have it. The white side is if I did want people to get access to it and I uploaded to the internet, then everyone on the internet should be able to get access to that information. There's black and white in my mind as far as if we have privacy online and we know what we want to keep private, we should allow that and we should enable that. But if we want to get access to information and share it, we should also enable that. And the VPN itself is a great technology that is being able to be used to get access to content online and people can use any technology for whatever purpose they want. The technology itself doesn't have a moral stance. 
+
+Citizen Web3:
+I know one perfect example of a double-sorted technology, blockchain, because if you give it to China, that's one thing, Russia. And if you give it to somebody who cares about decentralization, and I always say that in my opinion, this is my personal fight, the very least for the past 10 years or so, where I've been using blockchain technology and working with blockchain technology is to make sure that it doesn't get into the hands of people who turn it into surveillance instrument, because it is the perfect fucking surveillance instrument. I don't think we ever had a better theoretical surveillance instrument than a centralized blockchain. 
+
+And that's quite scary. This is why I follow Sentinel so much, for example, because I think there's such a potential to go other way. 
+
+Anna:
+The thing is that in terms of marketing, technology is neutral, I agree with you. But if we want to promote and have the first mass adoption, you know what I mean, because first mass adoption of a blockchain, of a lot, a lot of technologies was like dark market. So the thing is that in fact, for the most of the technologies, it's like there. In terms of marketing, it's always the shadow of, okay, you're going to a great market, and how you try to overcome in your marketing communication, because the technology is neutral. 
+
+And of course, you have haters who say, okay, you're going to help like terrorists or some prohibited organizations and so on and so forth. You need to say, okay, guys, but it's not like this. And it's difficult to overcome that wave. I know it personally, because when you go somewhere and say, okay, I know what is blockchain market and what is technology behind, they say, oh, okay, we know it's special for buying things on the dark market. You can say, no, guys, it's not about that. So how you work with that in your marketing campaigns and your communication with people? What is your secret sauce to speaking about technology and not about moral aspects? 
+
+Dan Edlebeck:
+You got it, Anna. It's about talking about the use cases. It's about thinking about why and how you would apply this technology. Just like you would have the same conversation with Bitcoin, right? Someone says, oh, Bitcoin is only used for X, Y, or Z. 
+
+And then you point to the data and you point to the use cases. You know, less than 0.5% of Bitcoin transactions are used for nefarious purposes. And it's something like 3% or 4% of those same uses are for nefarious purposes, or with cash. So it's like eight times more commonplace to use nefarious purposes with cash than it is with cryptocurrency. 
+
+So you point to statistics and you point to use cases. So for VPN, there have been protesters and there were activists that were sharing information online and were not able to do it. And they use the Sentinel VPN and they were actually posting real-time information that was happening on the ground on Twitter that they were blocked otherwise. 
+
+So that's such a basic human right. In Vietnam, they can't get access to medium.com. So they can't read any articles or any blogs because they've been limited from that content. 
+
+You use the Sentinel VPN, they are able to. So we focus on how are you going to apply this technology to empower yourself to make sure that you have a more fair experience online and that your data is protected. And that's the core use of the technology. If I were to find out that the majority of the use of the technology is for nefarious purposes, then I personally myself would distance myself from that technology because I don't support that. And so it is complicated. 
+
+It is very messy. But what you do is you show the power of the technology in enabling individuals to have independence and sovereignty and what are the different uses that they can have that's going to provide them a better experience and more independence online than otherwise. 
+
+Citizen Web3:
+I just want to share a small note as well to everyone who's listening. This is my personal take, of course. The way I see VPN is not about hiding my IP VPN first and foremost for me personally is securing my data, securing the exchange of my data via the tunnel that has been created, encrypted. And to me personally, that is obviously the off course when Silk Road existed. 
+
+That was very good as well. But anyways, jumping on the Silk Road subject before I get into that, Dan, I have a slightly maybe not summarizing. Wow, how the hell is the time flew by question for you because your great visioner, and in my opinion, you have these great speeches and thoughts about privacy. What is your personal take, but including reality like that we've been talking about right now, that all those obligations and big companies trying to moral stories and everything. What is your vision in the next five or 10 years, whatever you want to say, of Web3? And how is it going to change the world? 
+
+Because I know you have these things in your mind and I really want to hear that how you see that. 
+
+Dan Edlebeck:
+Serge, you were talking earlier about how even when we're connecting to a Web3 protocol and we're using our own independent wallet connecting, there's still a lot of centralized players and centralized parts along that kind of chain that have the ability to track your information and that we don't still have this privacy online, right? And you're still using Chrome and you're still depending on Infura. There's a lot of like centralized points along that user experience. And this is where I think that the decentralized web can actually empower each part of that user experience to become more independent and more decentralized and more privacy focused. We're imagining the web as it was kind of in the early days of Web 1.0 when it was all independent protocols and everyone could spin up their own website and things weren't as easy. It was a little more clunky and we didn't have like great inner communication online, but we had a lot of independence online. Moving back towards that type of independence, I see a future where it can be selective opt-in type of information that you want to disclose, whether it's, oh, I only need to disclose this information to get access to this content. 
+
+I only need to display this username and I can prove that, zero knowledge proof that the other information is true and now I'm able to get access to this portal. And think about the implications of this for healthcare. I've had an issue with my knee. I had knee surgery in like 2006 and 15 years later, I'm still like having knee issues and I'm going to get an injection in my knee and I'm living in Puerto Rico and I called four different doctors and they all kept referring me to different doctors. I'm trying to get an injection in my knee. 
+
+So I finally went to a doctor yesterday. It was a 45 minute drive. I waited in the guest room for 35 minutes. Finally, I know what the doctor had five or 10 minutes with the doctor max. He was like, oh yeah, I don't do that type of injection. After speaking with four different doctors and getting referred to them. And then finally he said, oh, you should talk to this other doctor. And it was a three and a half hours of my day yesterday doing the whole process. 
+
+I had to pay $10 copay for the visit and I got nothing out of that except another referral to another doctor. But think about our emergency medical records and all of our EMRs are super disjointed, speak to one another and the information gets leaked because they're in centralized places. Imagine completely flipping that out of its head and now there's zero knowledge proof that you can prove that you're a doctor and you see someone that's unconscious on the side of the road. And that person is already opted into giving certain information to medical doctors if they see that they're in an emergency situation and immediately we're able to help someone because we have access to the emergency medical records in the moment from the doctor while we're having that there because of the power of the Web 3 and the decentralized Web. 
+
+But there is so much potential here that we think about this as fun and games in a big online casino and everyone's trading their crap at Binance. No, the vision is way bigger. The vision is the things that we use in real life can be built on a decentralized Web and can grant access to content to people based on permissions and based on zero knowledge proofs. And we can provide a better quality of living and a better experience for life as we know it for society as a whole. And we can do this now where it's not only wealthy countries or people that have come from privilege get access to these services. But now anyone with the internet connection is able to participate in this decentralized Web and this growing economy. So I think the future is incredibly bright. 
+
+Citizen Web3:
+A Web 3 amen to that. 
+
+That's what I want to say. 
+
+Anna:
+We're speaking a while about use cases. So do you think that somebody, it can be a real person or like imaginary superhero, I don't know, who can be the face of your brand of DVPN maybe itself like technology? 
+
+Dan Edlebeck:
+I think privacy advocates worldwide, right? Like I think Edward Snowden was such an important person in our culture and being able to disseminate true information and empower individuals. And people could question if he stepped over the bounds by sharing information, even though it was still confidential. 
+
+He was showing that there were human rights that were being completely taken advantage of by the government. It could be someone as powerful as as outwardly spoken as Edward Snowden, or it could be an everyday individual on it could be you. It's every one of us, right? We're the individuals that need our rights online. 
+
+And it doesn't always need to be a big celebrity. It needs to be the power of the individual and the power of the community. That's what I think the blue friend gang actually kind of epitomizes all of that. The blue friend gang really is kind of the epitome of us and our power as individuals and as a community. 
+
+And we don't need one celebrity that we put up on an altar as to be the person that we're exalting. 
+
+Citizen Web3:
+Loving that answer, man. Let's get to our traditional question, but we have changed it since the first season. 
+
+This is going to be a different one. By the way, I just want to say again, last season we used to have a question, what kind of blockchain resources would you recommend to our listeners? And Dan has gave like, I think the best list we had so far for sure. It's like the best list and it's all linked. Most of it, I hope is linked to the episode. So if you guys want to get into more like perspectives on like the podcasts and the people and the builders who build it, look at Dan's suggestions. But anyways, the question that we changed and this is a traditional question, Dan, what again, resources, but this time it could be not necessarily projects, but not necessarily books. It could be even like meditation or, I don't know, your dog or whatever. What motivates you to do what you do now, which is building a DVP and protocol. 
+
+And I know you do a lot of social work as well. What motivates you in your daily day to day life? 
+
+Dan Edlebeck:
+First off, I want to jump in. Last time we asked this, you talked about practice that I find interesting, exciting in the space and outside of the Cosmos ecosystem. And I said, so Rana, and I wish that I took my own advice. I never bought any soul tokens, even though I said that SPF is doing really interesting things. 
+
+And I think the Solana blockchain will do really well. I think one of my pieces of advice for people is listening to yourself. I wish I bought a bunch of soul tokens of you in a much better situation right now. But I definitely saw it coming. I just didn't act on it. But I do believe that the opportunity is too great. The world is too exciting. 
+
+But we talked about earlier, right? Finding someone sick on the street and being able to care for them and bring them immediate attention because we have access to the information that we need to empower us to take action. Decentral VPN isn't the one product that we need to be able to build that whole future. But it is one piece of that whole future. And it is crucially important. And so every day I wake up and I'm like, holy shit, we are building the power and the infrastructure for the reclaiming our independence online. Like that is so massive. And so I take this opportunity seriously. 
+
+And again, excited about it. And actually meditation is another big part of kind of my grounding and focus. I'm meditating a good day and I found mindfulness and not letting kind of the monkey brain run all over and have kind of a clear presence in the moment. 
+
+And then being able to operate from a place of being present in the moment and being intentional with my space and my time and my ideas makes me far more effective as an executor. And I still have a long ways to go. I'm far from perfect. I'm learning every single day. I feel like an imposter at times because I'm not a technologist by trade. And so I'm still learning every single day. And I think that I don't take for granted this opportunity. 
+
+I don't take for granted the fact that there is so much access to information online. And so I try and soak everything up. I try and learn every day. And I realized that if I can provide a positive nurturing experience for the other people on my team at Exideo, then we all stay focused on the big goal at hand. And we all believe that we're making a big impact in building a decentralized peer to peer bandwidth protocol and that we're going to gain adoption on it. 
+
+Then we're going to make a positive impact. And I don't have to be perfect. And I'm not going to have all the right decisions. 
+
+But if I can create a culture where I empower people that are smarter and better than me to do great work and we all work together in concert, then W-A-G-M-I, we are going to make it. 
+
+Citizen Web3:
+Once again, you've been inspiring, in my opinion, and insightful. And guys, check out the previous episode because it's full of other more insights, in my opinion. And Dan already mentioned, for example, the Solano thing, which was one of them. And I think there is more and more of them. 
+
+But anyways, man, we're going to look forward to keep on watching after Sentinel, maybe start a node one day. And I think everybody should do too. Whoever is listening to this. So thank you very much for joining us. And speak soon, Dan, maybe. 
+
+Dan Edlebeck:
+Yeah, you'll know. We'll see you in a couple of months. We're all going to be out in Lisbon. I'm really excited about that Cosmoverse conference. The first kind of like big conference for the entire Adam ecosystem for Adam Autumn. 
+
+It's fall time and Adam moves are falling and we're going to celebrate. So yeah, anyone that's considering it, check out Cosmoverse.org. You see if you can come out to Lisbon. You can meet up with all of us and interact with us. I'll be speaking at the conference and I'm really excited. And I'm excited to see where the Cosmoverse ecosystem is going. I know that there's going to be another big hackathon coming. 
+
+And in general, I'm really optimistic for the future. And not only would I encourage you to offer a bandwidth node, like you mentioned, Serge, but I would encourage anyone to download the app and try it out. I think right as this episode is getting launched, we'll have the iOS app launching. 
+
+And then soon we'll have the Android app launching. And come chat with us in the community. Come find us on Telegram. 
+
+It's Telegram and the ad symbol is Sentinel underscore Co. But yeah, feel free to jump in and let's keep going. The blue friend gang. 
+
+Citizen Web3:
+Thanks so much for your time, guys. And speak soon. 
+
+Anna:
+See you. 
+
+Dan Edlebeck:
+Cheers. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

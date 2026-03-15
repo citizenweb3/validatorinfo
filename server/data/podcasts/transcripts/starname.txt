@@ -1,0 +1,358 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/starname
+
+Episode name:
+Identity, Validators and Good Vibes with Antoine Herzog
+
+Anna: 
+Hey, it's Citizen Cosmos, we're Surgeon Anna and we discover cosmos by chatting with awesome people from various projects and communities. Join us if you're curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+Hey everyone, welcome to another episode of Citizen Cosmos and we are glad to have Antoine with us today. He is the CEO and the co-founder of Star Name or more commonly known as IOV. I hope I'm pronounced it correctly. Welcome to the show, Antoine. 
+
+Antoine Herzog: 
+Thank you, thank you so much to invite me today. 
+
+Citizen Web3: 
+I think we met before, you mentioned during our conversation that we actually small world. 
+
+Antoine Herzog: 
+Yeah, we met at the epicenter community call, it was quite funny actually. 
+
+Citizen Web3: 
+It was a lot of podcast hosts.  
+
+Antoine Herzog: 
+Exactly.
+Everyone has a podcast. 
+
+Anna: 
+Yeah, half of the people over there was a host of their own podcast. 
+
+Antoine Herzog: 
+Exactly. 
+
+Citizen Web3: 
+Do you host your own podcast by the way or did you have one? 
+
+Antoine Herzog: 
+I should probably, I think it's a new trend, right? 
+
+Citizen Web3: 
+Definitely, definitely. A small world. Anyways, shall we dive right into the questions? The first question I have, which is like obvious, what's the correct name? Star Name or IOV? 
+
+Antoine Herzog: 
+The company is called IOV and now we are Star Name just because it's a product and we want everyone to know more about Star Name and we believe that's going to be something big. So we are now Star Name. 
+
+Citizen Web3: 
+Yeah, cool. So we almost got it right. So let's talk a little bit about Star Name. Of course, the first question, well two questions together, but I'll just let you talk about it. Obviously, what do you guys do in your own words and your migration to Cosmos? 
+
+Antoine Herzog: 
+The migration about Cosmos started this year in February before we were using Weave SDK. Which looks like a Cosmos SDK. It has been built by Ethan Frye who used to work with us. And we wanted to just migrate because it makes sense from an application perspective. We wanted to focus on the name service itself and not that much about maintaining our own SDK. So we decided to migrate and it took us a lot of time because it was not that easy at all to change everything. And finally, we made it in August. So it took us a lot of time. We're super happy to be now on Cosmos SDK. We are using the proof of stack. So it means that any validator can join the network. 
+
+Citizen Web3: 
+I do have some questions for you about that, but about the first part of the question is like tell a little bit to the listeners about and to us of course as well in your own words. What does actually Star Name do? Because I have my perspective, but I would love to hear your perspective on that as well. 
+
+Antoine Herzog: 
+Sure. So Star Name is a decentralized username. What it means is like you can register, purchase a star name and with that you can receive crypto payments. Any kind of crypto payments. 
+
+So it could be atoms, Bitcoin, Ether. You know, it's super simple. You also have, you're going to have very soon a crypto profile online where actually you have all the information publicly available. So your star name, all your addresses and some also interesting information. If you're a business, you'll be able to add for instance some certification like KYB for instance. 
+
+So to make sure that you are the real person or the real business. So we see Star Name as a gateway for decentralized identity and we'll embed as many as feature along the way. So we start with crypto payments, but our vision is really to make it more simple for everyone to have a decentralized identity. 
+
+Citizen Web3: 
+Could you say that it's kind of like universal in terms of blockchain registry to make payments and identity easier? Is that correct or no? 
+
+Antoine Herzog: 
+Yeah, Yeah, totally. 
+
+Citizen Web3: 
+And it's blockchain agnostic, right? As far as I understand. 
+
+Antoine Herzog: 
+Totally, yes. I've been involved with specification how to name assets and that's an interesting area. And so yeah, it's totally agnostic. It means that you can receive any kind of crypto payments, not only atoms, but any kind. And the way we do that is like we specified how you could name properly an asset. And from that, it means that any asset can be received on the star name network, star name blockchain. 
+
+Citizen Web3: 
+I guess that kind of makes you a DeFi project, right? And as far as we noticed lately, France has produced a lot of good DeFi projects into the space. Would you agree with that? Is that something you noticed as well? 
+
+Antoine Herzog: 
+I didn't notice that in France. We have a lot of DeFi projects. Good Good to hear that. But yeah, I think that regarding DeFi, we want to achieve some different things. One is being able to bring more people into the space. It's really difficult for someone to manage like long lists of crypto addresses. So by providing star name, we want to simplify new people coming into the space. 
+
+So that's one. And second also, by providing star names, we enable some kind of very simple like atomic swap trades for instance, because then you don't really need to ask all the time, what's your Bitcoin, ETH, blah, blah, blah. Let's say you want to do an atomic swap between ETH and Bitcoin. You would need to ask all these addresses. And with star name, you just ask the star name and you'll do your trading. So in some cases as well, it's really useful. 
+
+Anna: 
+Can I jump in? Because I'm really interested in that case. So actually, I have two questions in that field. The first one is you know that now we have a lot of custodian services in blockchain space. I mean the centralized exchange, some other kind of services, some ICO or projects requires QIC. So do you think that some connections can be arised in between the crypto name and the personality at one point? 
+
+Antoine Herzog: 
+Totally. And we're going to announce some partnerships with like other companies working on this space. And the goal is to be able to, for instance, login to an exchange with a star name at some point, not tomorrow, but midterm. And so you will not need to do again your QIC, for instance. 
+
+You will just need to provide your star name and the exchange will be able to check all the information, most of them off-chain by the way. And so you will not need to, all the time, redo the same procedure, for instance. 
+
+Anna: 
+Oh, quite cool actually. Because sometimes it's really annoying if someone just wants to verify it. 
+
+Antoine Herzog: 
+Yeah, it's really concrete. We are working with a partner, actually really working on these topics. And we believe that the star name plus this partner together plus other partners will be really interesting as a solution for simplifying the login into this exchange place, for instance. 
+
+Anna: 
+Oh, cool. And one more question now, especially for some big hacks of exchange, that some of the coins now are marked as coins that owned by hackers, because they come from that exchange. Do you think that your project can help to figure out how to avoid this problem? 
+
+Because if someone send you that mark coin and it will relate it to their real name, it can be uncomfortable for someone. So what do you think about it? I know that probably you're thinking about it. 
+
+Antoine Herzog: 
+Yeah, yeah. So first of all, the question regarding privacy is really important. And the way we want to solve this problem of privacy, because for sure you want to disclose some public information, but you don't necessarily want that people know all your balance on all the coins, for instance. So the way to fix this issue is actually to have a star name which could be resolved off-chain. I mean, the data could be sent off-chain. So I know your star name, but I don't necessarily, you don't disclose publicly all your address. You will disclose it to me off-chain. And so this way, when I transfer an asset, you will not know unless you are part of this transfer if this coin has been marked. After that, in general, what is interesting for us is the idea of for security tokens, for instance, you have a lot of conditions that needs to be marked in order for someone to send security token. 
+
+So it comes back to the idea of certificate, certification, and we want to provide as a decentralized identity this information. So you have conditional transfer based on some attributes on the star name. 
+
+Citizen Web3: 
+Basically, will star name have more than one token, I presume, right? There will be some security tokens and there will be some non-security tokens. Is that correct? 
+
+Antoine Herzog: 
+Star name itself is just like a data layer regarding your identity itself. But we don't, I mean, your tokens are not on the star name network. It's just like your Bitcoin are on the Bitcoin network and everything. So we don't really touch that at any point. What we just do is we provide this identity layer where actually we can know, I mean, the DAPs can check some status on star name and based on the status, it will do the transfer. Yes or no. So it's more about the DAP developers that can leverage the data layer on star name to do some interesting things. 
+
+Citizen Web3: 
+Would that be correct to say that you have users who are picking the star names and you have customers in the eyes of DAP developers who are after that data? 
+
+Antoine Herzog: 
+Yes, exactly. 
+
+Citizen Web3: 
+Okay, I get it. So one more question about DeFi. I mean, I know it's a big interesting hype, not hype. So there's a lot of talk about NFT and DeFi and what's your thoughts on that? Because obviously that's to do with what you guys, as far as I understand, do. Would love to hear your opinion on that. 
+
+Antoine Herzog: 
+So first of all, star name is NFT in a way that you can register it, you can transfer it. So it's really an NFT and we are part of the NFT group on Cosmos to, you know, trying to make a good specification about NFT. 
+
+There's a lot of interesting conversations on this topic and we're happy to be part of the group. After that, regarding DeFi, I didn't follow the last, you know, event regarding NFT. I know that there's been some NFT token issues, but I'm not that sure. There's really a connection with star name itself. So and I don't really know. So I would be happy to know actually more about it. 
+
+Citizen Web3: 
+I see. Oh yeah, let's get back to the migration a little because we think it would be priceless if you could share like your experience to teams that want to migrate to Cosmos SDK in terms of somebody who did it already. What are the pitfalls to avoid? Are there any hashes that needed to be calculated manually? No, I'm joking, of course. But what would you say like your advice for some teams that want to do that and they haven't done it already? 
+
+Antoine Herzog: 
+That's a good question. So I think one is being transparent with everyone, which means that being able to export the state properly of your whole chain and being able to provide ahead of time the new genesis file. So everyone could check that everything is like correct. 
+
+There is no hidden information. So I think that's very important. First, I would recommend to do it because if you really want to focus on like an application layer, I think that's the right thing to do to really leverage the power of the Cosmos SDK. 
+
+So I would highly recommend it. And maybe three, it depends where you're coming from on our side. We already have very good validators with us. So I think one thing also very important is to really explain to them that you know you're going to migrate. Everything had to plan well the timeline because you cannot just say, okay, I'm migrating tomorrow. So you really need to plan things so they are aware. And then after it's more about rewriting code. 
+
+So you have some business logic needs to be totally rewritten. And in our case, we also contribute to the Cosmos SDK. We publish a crowd module, which is just an indexing module to have secondary index. So we're trying to also give some to the community. And after you know your stress for six months and when after the immigration, you are excited and happy. 
+
+Citizen Web3: 
+I like the last part. And you're perfect. So one kind of like devil's advocate question, I guess it's not really, but it can be thought of it. Has the migration solved the reason why you decided to migrate? 
+
+Antoine Herzog: 
+Oh For sure. It's like in our case, we're working with lots of wireless partners. First of all, I mean, I believe that I mean, before deciding to migrate with SDK has been really important. I believe for Cosmos as well, because we did a lot of good stuff like protobuf for instance, with SDK was in protobuf. Now, you know, Cosmos SDK is moving to protobuf. 
+
+We have SDK used to have a good ORM system, for instance, that some of the piece we put into the module, the way we handle error. I was really beautiful, for instance. So we did a lot of good stuff. So we're happy with the technology. But the reason why we migrate is also because all our partners know as well Cosmos SDK. So when you want to focus on the business logic and all the technical detail for your partners, they know everything about Cosmos SDK and the benefits to migrate is obvious. It's like, you know, they will integrate you much easier because they already did before. 
+
+That's one of the big benefits. The other one is also, you see, Cosmos SDK is doing all the upgrade around Tendermint and we didn't have to maintain that before we needed to even like maintain our SDK upgrade to the new Tendermint version. And it was like, it was a lot of work that now we cannot do. So just more relax, I would say. 
+
+Citizen Web3: 
+You mentioned validators. And I know personally from the experience that I do with Cyber, of course, that it's a hell of a difficult job for smaller projects to attract validators within the larger Cosmos ecosystem because of course, either you need to incentivize them somehow and not everybody wants to go and do test nets. 
+
+And of course, you're a bit different. But still, how's your experience been with it as one of the smaller projects? And what would you suggest for other small projects that come into this space? What things they should do in terms of attract validators? 
+
+Antoine Herzog: 
+In our case, we started very early. So for some people in the project, they think, yeah, you take some time to go there and say, yeah, but I mean, it's a process. So when we started, there was not that many projects. 
+
+So it was maybe some kind of good for us because it was not that difficult to pitch validator and talk about the project. Also, I think that when we started, we wanted more than the number to have a good validator set, not too big, because we knew that at the beginning, you will not necessarily generate a huge turnover in terms of economic reward. So we are thinking like, OK, we can always increase later, but better to start with a small number, good people and we'll increase. But and we guarantee them that when we will increase, they will not get less because the reward will grow. And so we increase this validator set, but the reward will not decrease. We had this approach and being honest, I think it's very important and we are lucky to find a really good validator. And I think also maybe a key is to have good communication with all of them and you know being honest where you are, what you are doing, what you're trying to achieve. And don't be afraid to start with a small number and increase later that trying to get, I don't know, 100 for day one doesn't make any sense. 
+
+Citizen Web3: 
+I like the last thought because when we did it at Cyber, we kind of started straight away. Okay, we'll have like 178 by tomorrow, you know, we started like with big numbers and that was a big disappointment internally that's kind of like puts you down and then you think, okay, well, if you like you said you start gradually and you build it up, 
+
+Antoine Herzog: 
+Yeah
+
+Citizen Web3: 
+then you will not get that internal disappointment and you will realize that you can do your work as you said properly. Cool. Anna, before we move on to the next questions, do you have any more questions in regards to the validators for the migration or anything like that? 
+
+Anna: 
+I have a question but not about validator. I have a question about CoinGecko. I see that you use that platform and have you received much value from it? 
+
+Antoine Herzog: 
+When you are listed to be visible in ways that all this CoinMarketCap, CoinGecko, reference you as a registry, you know, in itself, I think it's good because it's just a way for people, most of them go on these websites to check coins and everything. Consequence of that is like you have a lot of people who want to reach out to you because probably they check all the time the registry of CoinGecko and so you have a lot of people on the tell where I'm coming and say, hey, I'm doing this, do you want that? And it's difficult to be honest to know if it's a good opportunity or not because you have so many. So that's the side effect of being on this platform. 
+
+I think it's a natural step to be on this platform. I don't have any preference between CoinGecko, CoinMarketCap or others. I do think some of our partners use CoinGecko API to get the price feed from their platform. 
+
+Anna: 
+So it looks like it's a marketing channel. Yeah
+
+Antoine Herzog: 
+Yeah, I think it gives some visibility and also ranking. We like competition, so happy to be in the ranking. We love competition. 
+
+Anna: 
+Yeah, tell us about competition because blockchain is quite competitive industry. 
+
+Antoine Herzog: 
+Yeah, it's very competitive. I think we love competition in general. It's funny because one of my competitors called me one day. It was funny call and he said, yeah, you will see, you have no chance. 
+
+And you say, I don't think so. And I love competition and let's go back in one year and we'll see. So yeah, I think that you have a lot of competition in the space, which is good. 
+
+I think it brings a lot of innovation. We are here to make the world a better place at the end. And that's really the only goal matter for us. And so we're happy to compete in order to make the world a better place. And if it's like the gold and gold, you know, and no matter and in any sports, no matter what you win or lose, you do it for like the journey you're doing for like your cause. 
+
+Like, you know what you want to bring as a like values and change in your way, what could be a better future. We like competition. We are obviously very curious about decentralized identity space in general. And yeah, we are here to win. 
+
+Anna: 
+Yeah, but what is your goal then? 
+
+Antoine Herzog: 
+To be number one in our space to be number one. 
+
+Anna: 
+Okay, okay. But number one in blockchain space and 
+
+Antoine Herzog: 
+no in the name service space to be number one. 
+
+Citizen Web3: 
+Would you say that the blockchain field of name services that it's more compatible than other like spaces or like I said, I say, let's take the protocol space within the blockchain, right? Which is probably in my opinion, you have the most competition, right? There are so many everybody's trying to kill ether or doing whatever. And then what about the name space? Is that as compatible? 
+
+Antoine Herzog: 
+We love our space because we see so many things that we want to do better than everyone that we are happy to. I would say it's not the most competitive one. I mean, we have competitors. 
+
+They don't do that much since two years. We see that and say, come on. I mean, this is what you want to do. 
+
+Like, it's been two years you're here and this is what you did. We want to push the limit and, you know, push and do good, ship good product and bring some innovation. So usually I say that our market is not like the 30 million people using Bitcoin. It's really like the four billion people using Internet. So we see the space as something that is going to grow so much and needs names there to grow so much. So we want to really provide this infrastructure so we can bring so much many people into this space. 
+
+Anna: 
+It makes a lot of sense. You mentioned that Internet, community and blockchain space is a good thing about it. It is no border nature. But the people behind projects are real and they weigh off thinking and connecting with the community. So could you tell us a little bit about French blockchain ecosystem, community, and how do you feel about the progressive ideas around you? 
+
+Antoine Herzog: 
+Yeah, I think there is like a few big projects in France that I really like or companies. One of them is Ledger doing the hardware wallet. We use it all the time. That's a good one. And they are really cool and nice people. I really like them. A couple of others. 
+
+One that I really like is Aleph. We're going to do something together. They are doing off-chain data. I really like what they do and the way they do it. And plus, it usually works with a lot of not only just the business, but I connect with the people behind the company. When you have a good fit, it's nice. You build long-term relationships. So and this one, the other one, they are French, but I think they are maybe in Switzerland for the non-profit, is the request network. 
+
+They provide request payment with a make-or-dure and this kind of stuff. So we are partners as well and plus others. So we are a small group, I think, in French ecosystems that we work all together. 
+
+Citizen Web3: 
+I actually follow Aleph quite a bit. I think it's very interesting project in my opinion. I'll hold some tokens. Let's be clear, right? Yes. But just to be clear, it's not an advice. So 
+
+Antoine Herzog: 
+just watch out some news that we will share with Aleph hopefully soon. 
+
+Citizen Web3: 
+Cool. Looking forward to that. 
+
+Antoine Herzog: 
+But yeah, I really am a big fan of the project. Cool project. yeah
+
+Citizen Web3: 
+Have you ever heard just like an off-top question while you were talking about star names and competition that kind of popped into my head? Have you ever heard of a project called orbit? It's not exactly what you guys do, but 
+
+Antoine Herzog: 
+yeah
+
+Citizen Web3: 
+you have heard of orbit. It's interesting in terms of star names and identities. like I can
+
+Antoine Herzog: 
+I'm not sure. I would love to learn more to check it out. Not sure. 
+
+Citizen Web3: 
+They are not your competitor at all. You have similarities in terms of the star names and so check it out. 
+
+Antoine Herzog: Yeah, Yeah I'll check it out. Definitely. 
+
+Citizen Web3: 
+I don't know how close you follow Citizen Cosmos. We hope you do. But when we talk to guests, we also like to dig in into the person themselves and not just the project. And obviously, you're not just a CEO. You're also the co-founder, or shall I say vice versa, you're not just the co-founder. 
+
+You're also the CEO, which means you have to, during your working time, manage teams. You have to manage the idea. You have to manage the code. You have to manage the users. You have to manage the customers. How do you handle all that? How do you do that? Do you have any advice for other people that want to do it? 
+
+Antoine Herzog: 
+Yeah, sure. I think that first, you need to be passionate about what you want to achieve. Otherwise, you cannot do it. And I think that on my side, I've been very curious about the blockchain space. But before, I was working in the software industry before. 
+
+So I think I had a lot of experience of startups and good ones. Sometimes I failed miserably. But at least you understand the logic of the reason why, also why sometimes you win, sometimes you lose. So I think it's important to have this kind of experience before going into this journey. And I think that my way of managing this star name is really to be focused about the product. 
+
+I don't want to be obsessed about the price of the token. I think at the end, it's just the outcome of a good product. And we are really focused on that. And then a good balance between a beautiful, brilliant engineer, and a good balance about like design, creativity, and also maybe a good balance between  good vibe, like happiness, trying to make a team as something that you're really happy about your team. You can really build something strong. It took some time for us to find this balance. But today, we're excited about it. I mean, we find a good balance. 
+
+Anna: 
+How did you manage to find this balance? I mean, it's like a long-term issue, probably a lifetime term. 
+
+Antoine Herzog: 
+Yeah. So I think that you need to trust your instincts a lot. It sounds stupid, but for me, it took so much time and years to really understand what it means. Like, really trust your little voice inside your head. I think that's key because a friend of mine told me that usually when you have instincts, your brain is give you the results of your past experience without any data. 
+
+Just give you these immediate results without taking the data and understand all the parameters of the equation. It just gives you instantly. I think that's super true. First, if you want to just go a little bit fast, just trust your instincts, you will necessarily create a team which matches a little bit your core values. I think that's key. But it's not easy. I mean, you always have like, it's never perfect. You always have to move and fix things. 
+
+Anna: 
+Yeah, it's a difficult balance for sure. 
+
+Antoine Herzog: 
+Yeah, very difficult. 
+
+Citizen Web3: 
+We saw on your LinkedIn a project called CircleCO and it looks like you have worked with a big range of projects, anyways, which is education and function transformation and so on and so on. But as far as we understood, Circle doesn't use blockchain, right? Is there any reason why not? Because obviously you're now in the blockchain space. 
+
+Antoine Herzog: 
+No, I mean, before doing the blockchain, we were having a traditional like web agency business with my co-founder, Karim Ghanem, and we were in New York and having a lot of fun doing some cool stuff on the traditional software and Circle is the name of this company. 
+
+Anna: 
+Hmm And it's a lot about your entrepreneurship experience and all that. Could you say how you think that process? Because if you have that little voice in your head, probably it's not just one day or you was born with it voice. Yeah, you just do a lot of things to get that feeling. Yeah, so how your previous experience with other companies helped you in that field? 
+
+Antoine Herzog: 
+In Star Name, at the beginning, we are lucky to speak with some kind of a coach, you know, some time to time a little bit. And this guy particularly, he taught me a lot about this like inner voice, like, you know, and I read actually a lot of books about it. It was really interesting. One really good is the Enthusiasm of Sol. 
+
+It's really an amazing book because it's speaking about that. But I think that we went into this process because it was not that easy. The very beginning of IOV, it's very fast, everything goes fast and you need to manage different things. It was kind of difficult. And so when you face some difficulty and this is where actually you're going to ask yourself, you know, questions and then you start to go deep around this topic. And I think it's quite recent, this understanding about who we are, I would say. 
+
+I mean, very fundamental questions that can relate to any phase or degree of your life, whatever, it's your business, your personal life. It's super intense, the blockchain space, you know, it's like a roller coaster and you need to be prepared for that. It's really a roller coaster. 
+
+Anna: 
+In terms of being prepared for a roller coaster, you mentioned you ask coach help or do you have some mentor? Could you tell us a little bit because I know that I'm personally very interested in how that helpful. I mean, sometimes, okay, you can see, okay, it's a very experienced entrepreneurship team or whatever this person looks like, knows a lot about business. But blockchain space is quite new and how you can transfer that experience to your space. 
+
+Antoine Herzog: 
+When you start this roller coaster, you need to be able to handle it. And at the beginning, maybe you cannot handle it properly. So you ask yourself a lot of questions. You come into this space with some skills, which means that you think that you can manage control everything. 
+
+Everything is under control. But at some point, it's not possible. There are things that are not under control. Like you can just react to what happened. But what happened, you have no control. So first, you start to be more, more humility, and then take everything as something which comes and goes. So there is nothing, only the blockchain is immutable, but the life, it's the totally opposite of that. And everything is moving. And so being open to this change, permanent change, I would say. 
+
+Anna: 
+Do you think about being the mentor for some projects? 
+
+Antoine Herzog: 
+I'm happy to always give feedback if I can be helpful, you know, yeah, of course. 
+
+Citizen Web3: 
+I'm going to take a topic a little bit in another direction. But are there any announcements in terms of Star Name? Taking into consideration that obviously the podcast takes time to be edited and to released, but still, is there something we didn't ask you that you wanted to announce in terms of like Star Name or Iov? Or you did say that there's going to be some units with Aleph, but anything else maybe? 
+
+Antoine Herzog: 
+Yes, with Aleph, we're going to announce something to, you know, we believe it's the right connection between off chain and on chain. Star Name being on chain and Aleph being more off chain and unlock a lot of possibilities. That's one big announcement. We are always, you know, working with wallet partners. So we're going to also share some announcements around this topic. And we are working on the crypto profile, the big crypto profile that should be released in a couple of weeks from now. That's another big milestone for us because it's becoming concrete for the user. What Star Name is not only just something that you can use with your mobile wallet. 
+
+Citizen Web3: 
+We'll be looking forward to the announcements and I'm sure that everybody who listens will be following and we will definitely share all the links that required. But before we let you go, we do have one traditional question that we ask our guests. 
+
+Antoine Herzog: 
+Yeah
+
+Citizen Web3: 
+Could you name three blockchain projects outside of the Cosmos ecosystem that you're most excited about? 
+
+Antoine Herzog: 
+I'm very curious about Avalanche. I'm very curious about this project to see how it will go. I think it could have a huge potential. So that's one. Polkadot, obviously is big. I'm very curious about it. I think Cosmos has the right approach. So I'm a Cosmos fan and true believer in the vision. I could compare Cosmos as being capitalist versus Polkadot versus communist in some way if you are really extreme. But so I'm very curious to see Polkadot working fully. And the third one, I'm going to give a big name, but I'm also very curious about EtH 2.0. I don't know. I was talking with GK from Steakfish recently and he's working a lot on EtH 2.0. So I asked a lot of questions about it. Very curious to see this happening. And I left it not really a blockchain. So I will not put in the blockchain category. 
+
+Citizen Web3: 
+Cool. Thanks for that. And thanks a lot for the insights you shared about how to guys about immigration and about the mentoring and about the blockchain entrepreneurship. Sorry.
+
+Antoine Herzog: 
+Yeah
+
+Citizen Web3: 
+I think that's useful to everyone. And looking forward to how you guys develop and maybe have another podcast in the future. 
+
+Antoine Herzog: 
+Yeah. We'd love to. And thank you so much for the invitation. It was a really pleasure looking forward to continue to the conversation and to hear more of your podcast. 
+
+Citizen Web3: 
+Sure. Thanks. 
+
+Anna: Thank you. It was our pleasure. 
+
+Citizen Web3: 
+Join everyone next time. 
+
+Anna:
+Bye. 
+
+Citizen Web3: 
+Yeah. Bye. Bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

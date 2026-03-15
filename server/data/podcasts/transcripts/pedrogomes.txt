@@ -1,0 +1,460 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/pedrogomes
+
+Episode name:
+Wallets, Adoption and Fintech with Pedro Gomes
+
+Citizen Web3
+Hi everybody. Welcome to a new episode of Citizen Cosmos podcast. Today I have Pedro Gomez with me today, the founder of wallet connect. Pedro, hi.
+
+pedro_gomes
+Thank you. Thank you for having me. Hi, how are you doing?
+
+Citizen Web3 
+I'm very good, man. I'm glad for having you because even though, you know, not everybody knows yet about wallet connect. I think that it's been, in my opinion, very under the radar for some time. In my opinion, it should be, it's not everybody knows about it, but it should be a lot known. And I think my goal here today is not that is to get to know you, of course, but I think by getting to know you and the audience getting to know you and the listeners and everybody else.
+
+we can get in a wallet connect more as well. So if my first thing to you, just to introduce yourself, tell us about everything you do, what do you work on, what are you interested in, everything you want.
+
+pedro_gomes 
+Yeah. I mean, like, Wallet Connect and me are kind of one in the same. And it's been like that for quite a while because, I mean, I started like programming into like online shops and e -commerce. That was kind of the first thing that got my hands into writing JavaScript. But then one of the things that interested me the most was actually payments, because once you actually complete the order, you have like this whole process with like Stripe credit cards and like PayPal.
+
+And that started getting me really interested. And at the time I was living in London. So I applied to like this very new neo bank at the time. And there was like kind of targeting a youth audience. So when I joined them, it was really cool because you had this experience of what it was like to work in the finance industry or FinTech as they call it.
+
+But it also kind of like revealed a lot of the dark side of it. And I think that's really what brought me into crypto. I actually didn't, I had heard of Bitcoin, but I didn't really pay much attention. I kind of just like, internet money, cool, bye. And I didn't pay attention for it for a long time. And then I joined FinTech and I was like, damn, this could really use some change. And I was working on it and it was really annoying to kind of like build features and then to have the regulators essentially
+
+cool it down to like basically nothing and all of the innovation was like dead there. There was like nothing you could do. So in 2016, I heard about Ethereum and I was like, smart contracts. is this completely different than Bitcoin. Like, this is actually something you could do something you can build, like savings accounts, you could build like people likes sharing expenses and everything you could create some interesting financial products. But for me, the
+
+personal banking was always the most important thing. That's why I started working in wallets. And in 2017, I went on full time into crypto. And I was just trying to build a wallet. actually joined a project back in the day that was called Balance. It's no longer around, but Balance was trying to build both a portfolio manager and a wallet. And we ended up having this issue very early on of like, hey, how do I connect my wallet? And everything was Metamask, Metamask here, Metamask there.
+
+pedro_gomes 
+And it was essentially saying, the normal user is just going to go into your desktop and download the Chrome extension into the Chrome browser. And this is web three. And it was quite a disappointing because I didn't really see that taking off. If you think about the internet, one of the most successful applications on earth is Instagram. And Instagram was a mobile only application from the very start. They didn't even have a browser app for a long time.
+
+So if you didn't make the experience mobile, I Web3 didn't stand a chance. So I essentially designed Wallet Connect as a protocol for that. I was lucky at the time back in 2018 when I started working on Wallet Connect to get a grant from the Tune Foundation. And that's when I went solo to build a project. yeah, the good thing about Web3 is that there's a lot of support for open source. So I was able to focus on it for a long, long time.
+
+And then in 2021, that's when I took it to the next level and we raised our seed round and turned it into a company. went from one to two to 10 to 25 and now we're 25 people working on this and it's such a huge project. And I kind of skipped one of the most important parts, which was when I started getting into Cosmos, because I actually in 2019 was spending some time in Berlin.
+
+And in Berlin, I had some tender men people in the office because I was working at the full node. And they told me about the Cosmos hackathon that was happening. And I was like, damn, this is interesting. Let's, let's do something that's not Ethereum. Let's, let's go to the Cosmos hackathon and work on it. And I, I kid you not, like I got lucky getting the team. I got the winning team. All I did was like, I built a Cosmos wallet and a front end interface for the DAP, but he
+
+You will not believe the winning team was the one who designed Cosmo Wasm, which is now such a huge project. it was like, damn, I was in the same room with that hackathon project. So I'm really glad to have met all those folks who built that. they've been something so impressive with Cosmos Wasm. But what I liked about this hackathon is kind of like opened my mind of what blockchain should be. Like it's so different though, the Ethereum ecosystem.
+
+pedro_gomes 
+And I have to say that it inspired a lot of my work for the Wallet connect version 2 today. Bridging from Ethereum to Cosmos was probably what made Wallet connect version 1 go to version 2.
+
+Citizen Web3
+So just for the record, I am a decentralization, Max. The name is Citizen Cosmos. You have the podcast. Yeah, but we cover Ethereum ecosystem and our goal is to bridge the layer zero, the community and our, you know, I mean, we can go and build all the tools we want, but at the end of the day, this is communication tools. And if the communities will not communicate, there will be nothing to do. So.
+
+This is just for the record. And by the way, what fascinates me, the reason I was smiling all this time was you were like telling your geography, like London, Madeira, full note 2019. And I was like, why don't we know each other? what the fuck, man? like how I was there in full note in 2019. You know, I was, was an ETH before that we spoke about ETH before we started to record with Lisbon. then now what's going on, man? This is fascinating.
+
+pedro_gomes 
+It was a huge coincidence.
+
+pedro_gomes 
+I don't know. Look, even the, the lead investor for Wall Connect was based in full node and we didn't know each other when I was at full nodes. And then we just like ended up, they ended up investing in Wall Connect in 2021. And there was like, you were in the office in 2020 19. So were we. And then we didn't even know each other.
+
+Citizen Web3 
+Men, first question.
+
+Citizen Web3 
+Yes!
+
+Citizen Web3 
+Hilarious, hilarious, Hilarious. I recorded our first episode in full node, actually. The first ever episode of Citizen Cosmos three years ago was recorded in full node. There was nobody there. It was dead. And the episode has really bad sound because we took one of the glass rooms with like... Yeah, was just like not working very well. Pedro.
+
+pedro_gomes
+Mm -hmm.
+
+Citizen Web3 
+Wait, before I go into all my favorite stories, because you mentioned Cozumwasm as well, and Cozumwasm is like one of my favorite, but anyway, let's not go there. So let's talk about you. Wallets. And before we get to wallets though, before we talk about wallets and what does it mean for you and what does it mean for the industry, I have actually some personal questions. And one of them is physics. I know you studied physics.
+
+pedro_gomes 
+You
+
+Citizen Web3 
+And physics for me is again, a very, very kind of topic. I'm, all my life evolves a lot around that. And I'm curious as if you see connections between the world of physics and between the world that we're trying to build in web three. am on purpose of not putting any specific questions. I want to ask you that very vaguely and see your opinion if it's possible.
+
+pedro_gomes 
+I haven't talked about physics in so long. It's quite a refreshing topic. I have to say I forgot most of it. But one of the fields that I was mostly interested was the electromagnetic fields and lights and optics. Because I think that you could draw so many interesting parallels between like
+
+Citizen Web3
+Let's do it.
+
+pedro_gomes 
+sociology and psychology with electromagnetic fields, because electromagnetic fields, essentially, you could sense that, like, if you have a bunch of nodes in the same frequency, they will eventually create a higher intensity field, and that would influence a much bigger field. And you could, you could essentially learn about this electromagnetic just in general, and understand sociology in general.
+
+Like for me, I, I learned more about sociology through physics and reading about sociology. And I think sociology is one of the most important topics because we always talk about economics and economics definitely drives a lot of the incentives for people. But as human beings, we're extremely social and a lot of things that we do are not financially rational. So.
+
+Finance and sociology is what makes economics, but I would say that sociology makes more out of economics than even finance itself. Finance is just a number in economics.
+
+Citizen Web3 
+Can you move back to Madeira? So I have someone to go to coffees with and have conversation with. Like it doesn't work like that, man. Like I need the, yeah, for the audience, I'm sorry. am, we are, it's, it's the listeners, sorry, the audience. So Pedro originally is from Madeira where I live now and Madeira is a very small place. And definitely the, I don't want to pull the quilt, but just to, you know, to, do say that out loud that.
+
+pedro_gomes 
+Hehehehe
+
+pedro_gomes 
+Yeah, yeah.
+
+Citizen Web3 
+Unfortunately, the players in the Web3 industry that Madeira has attracted haven't been the most... What's the right word? Not developers, let's put it like that. Yes, I like it. We are on the same page there. So, unfortunately, is... Yes, even better. Same frequency. Love it. Pedro, though the thing with physics is fascinating. I I have...
+
+pedro_gomes 
+Not builders, yeah, not builders, yeah. Yeah, same frequency.
+
+Citizen Web3 
+Personally, think not just in my interviews, but over the course of the last like 10 years working with blockchains, the amount of people who I met that come from the physics, the chemistry world, the biology world, go into blockchain and then see all those connections where, you know, there is a lot, there is really, really, really a lot of things. And it's fascinating that you are seeing that as well. I really like that.
+
+pedro_gomes
+Yeah, I would say like what's interesting about blockchain is because of its decentralized and permissionless nature. It's not just decentralized because to some extent, Google is decentralized. Google is a massive organization that has data centers all over the world that keeps the internet running, but it's not a permissionless open system.
+
+So if you make it a decentralized, open and privileged system, what you end up having is you have a virtual or digital world that actually acts like a natural world. So you can actually emulate the rules of physics and biology and sociology in the actual digital world. And that's what makes this technology so impressive. Like I came to blockchain because of finance, because I was working in FinTech.
+
+But this has a much, much bigger impact than that. And I would say like one of the, biggest interests today is decentralized identity and how that's actually going to influence DAOs and organizations in the future. So I think that it's really natural that we see all of these different academia people getting attracted to what it would look like, not just simulate, but actually putting in practice all of these models and theories.
+
+that they have been working on for so long.
+
+Citizen Web3
+Absolutely. you know, just again for the record, for the audience there, especially today, because we have a few people in the audience who are asking questions and I will ask them at the end. But we have another recording tomorrow with a very cool Academia guy. And there was a lot there that could be like the dark side, the Academia sometimes bring that, but there is a lot there that we can, I think, explore.
+
+And, and then definitely put in, and I will have some questions with you about the IDs, but first I have, a question for you about wallets and this is not going to be a question, but rather a comment on which I would love to hear your thoughts. so here's the thing, long story short, I was talking, was it two days ago to somebody about wallets and about blockchain. And this is a person not from this world. And I was trying to explain.
+
+And yet again, like I've happened over the last seven, eight, 10 years, you come to the point of a wallet and blockchain isn't really a wallet because well, you don't really have a wallet. You're interacting with a database where you have 12 or 24 words and that's your access. And it's, what does wallet mean for you? What is a wallet for you, for a person who has definitely built today, one of the two or the three biggest like open source, web
+
+three related because not all of the web three big ones are web three, in my opinion, your says. So what's your opinion on wallets? What is it for the industry? And what is a wallet essentially in the blockchain world for you?
+
+pedro_gomes
+I love this question because there's always a lot of misunderstanding. I really dislike when I see people online saying, this user has this wallet. And then they, what I actually refer is to some address on the blockchain. An address on the blockchain is a reference to a blockchain account. And a blockchain account itself is not even a wallet. The wallet is actually the software or even hardware that actually manages the keys that
+
+control different accounts. So at the end of the day, what wallets are, are key managers. And then these key managers have logic associated that control accounts. So you could even go to the most basic scenario, which is the seed phrases, which is the most common, I would say it's like 95 or even higher percent of what wallets are today is essentially the seed phrase is just a form of you recovering the wallet.
+
+and the wallet will be instantiated as a form of software that manages multiple keys. And for each corresponding key, you have an account. And then those accounts are referenced in a specific blockchain as an address. But then the same account could actually mean something different in another blockchain, therefore it gets a different address. And this is a little bit more confusing when it comes to Ethereum because Ethereum created this pattern where
+
+the same account is referenced with the same address in all the blockchains. And we've done some standardization around this to kind of solve this problem. And it's very confusing because people kind of just assume, it's all the same, but it's not because if you have one key in one chain that gives you a different account than the same key on a different chain. So essentially you have two accounts and one key. And then people kind of get confused with all of these semantics. And it's like, which one is the wallet? Well, the wallet is
+
+the control of the keys that give you access to accounts and all of these blockchains. And then the addresses are just way for people to identify as public information of which account is yours.
+
+Citizen Web3 
+I think semantics does definitely play a huge role in understanding to everything. And especially with wallets, we've seen that for sure mix people up completely. It's been a huge, like, I lost my ledger in a boating accident. Like that kind of thing. then you're like, okay, back again to wallets though. What do you think?
+
+pedro_gomes 
+Yeah.
+
+Citizen Web3
+about when, you kind of already started to speak about it. And, still though, like in a more open and detailed way, what's your opinion today on, I don't want to name specific projects, but, there are a lot of projects out there posing as Web3. And a lot of those projects are wallets or some kind of infrastructure for Web3, which are
+
+under the hood, unfortunately, don't really, well, they're shit. So, you know, let's just like say it like that. What's your opinion on all of that and how can we move the industry forward?
+
+pedro_gomes 
+Yeah.
+
+pedro_gomes 
+Well, I think the way that Wallet Connect tries to move the industry forward is to lower the barrier of entry for wallets. By being a company that builds open source software, what we're doing is we're democratizing the access of developers to build better experiences. Because I think that given the open and permissionless nature of blockchain, it's inevitable there will be thousands of wallets.
+
+Like right now on Wallet Connect alone, there's 200 wallets that support it. I expect this number to go 10 times more in the next three to five years. And this is actually a good thing, not a bad thing, because everyone will have a very different experience of how they manage their keys. And at the end of the day, what makes a good wallet, it's how they manage their keys. So if there's a project out there claiming to be a wallet and you do not have control over your keys,
+
+then it's not a wallet. Like it does not fulfill the premise of a wallet. It's a bank account. And the analogies are very clear in the traditional financial world, because in your wallet, you have cash, cash which you control. It's a bearer asset that it's yours because you own it. While when you have money in a bank account, you don't technically own it. You have a contract with the bank to potentially give you back. And now there's regulations that protect you so that banks can't steal from you.
+
+So the definition of a wallet should be that those funds or those assets are in a hundred percent control of yours. So a wallet must fulfill this premise. So if you have something like custodial, like a Coinbase account, a Binance account, a Kraken account, or a Gemini account, these are not wallets because they control the keys. But if there's a wallet out there that gives you a seed phrase or even gives you control over a smart contract wallet or
+
+They have some form of authentication where you control the shards of a multi -party computation. Those are wallets because at the end of the day, the user has the control of what this key does. That's what a wallet definition should be.
+
+Citizen Web3 
+it's quite, well, let me, me, let me rethink that. Sorry. I think for anyone out there who has ever came into contact with, trying to launch, a crypto project, a blockchain project, especially an open source blockchain project. And I'm not talking about infrastructure. I'm talking about like, you know, block chains. I think.
+
+It is quite not obvious, but it is a very big obstacle, signers and wallets. It's a huge, huge obstacle. If you want to keep open source, if you really want to keep Web3, it's a pain in the ass. What's your advice for startups out there that are trying to today to build Web3 open, verifiable blockchains and are looking...
+
+for a good place to onboard users with signers and wallets and whatnot, whatever, what's your advice to those teams?
+
+pedro_gomes 
+Yeah, so I think that something that I always thought was there's so many new blockchain, like not just like blockchains as in they spin up like a new Ethereum chain or Solana or Cosmos, but like they actually build a brand new ecosystem from scratch because they're trying to innovate into something different. They don't want to build on the same building blocks as the existing blockchains.
+
+What they have always missed is the actual user experience. And we don't need to create a dedicated blockchain to change the user experience, but there are certain primitives that should kind of just become the default for new blockchains. And one of the things that has been taught for so many years, like Vitalik has been talking about the account abstraction as this concept.
+
+pedro_gomes 
+And now we have matured to a point where we understand what the account obstruction means. We actually have standards for it. We just have to implement it, but I'm surprised there isn't a blockchain out there that just started from the get -go with the account obstruction built into the protocol. Because if you had the account obstruction built into the protocol, that would mean that like a lot of the wallet design would have completely changed. You don't need to kind of like find all of these
+
+pedro_gomes 
+alternative solutions that go around to make the wallet experience easier because the protocol would support it. So having account abstraction support at the protocol level for a new blockchain would be my best advice I could give because you would have what it takes to onboard the next million users, which current blockchains don't have. And I think that's something that it's still unexplored and I would like to see it like now
+
+pedro_gomes 
+Yeah. So for me, the biggest ask for like new blockchains and I mean like completely new blockchain that's not just another Cosmos based blockchain or like an Ethereum based blockchain is that they would build into the actual protocol some form of account abstraction. And I said that like, was quite surprised to see that account abstraction has been talked about for like years. It's not something as a new concept. In fact, it's been for long. So for that long that
+
+There are standards, there are implementations today about account abstraction, but having it built into the actual blockchain would completely change because a lot of the things that we see today are regarding MPC wallets, like kind of building shards of keys or even smart contract wallets, which has delegate keys. This could all be like first -class citizen into the actual blockchain because it shouldn't be something that we hack away.
+
+around the blockchain, the blockchain itself should already come with this pre -built in. It would completely change how wallets function and it doesn't even change how Wallet Connect would function. It just makes key management significantly easier because it's only hard because the blockchain kind of just took a step aside and said, I don't care about the key management.
+
+Citizen Web3 
+Do you think that responsibility, because key management is a lot about responsibility, right? And I understand what you're saying, which of course helps adoption and it helps onboarding and it helps solve a lot of problems. On the other hand,
+
+If we starting to take responsibility again, are we not getting back to the point where we came from, where we take too much responsibility and then the user is kind of left of hoping that, well, they will do, the blockchain will do everything for me.
+
+pedro_gomes
+Well, I think it's more about like creating enough primitives into the blockchain that makes like the wallet design much easier. At the end of the day, the purpose of wallet design is to make key management secure and easy and trying to balance those two together. But a lot of the things are kind of impossible or just limited by the actual blockchain design.
+
+something as simple as delegate keys. Like delegate keys is something that should kind of just come out of the box. But what has been done today with smart contracts is that you essentially build an application and now you emulate the experience of what an account would look like directly from the key. But now you have the application, which is the smart contract, owning your assets. And then you have like multiple keys that actually can control those assets.
+
+Why is this not just built into the actual protocol? Like it would make so much more sense that you can have multiple keys controlling the account and you have some form of registered method where you can add new keys. This is like pre -standard like everywhere in the internet, but then blockchain is kind of just overseen and didn't really take care of it.
+
+Citizen Web3 
+I believe Beecher's was, well, Grafana, right? And then Steam, I believe, had some solutions to that. And of course, I remember launching a fork of that in 16. And I remember you had four or five sets. I think it was four sets of keys, active key, then a master key. And I think we're coming back to it now. I've seen a lot of that. And this is how we slowly move into the DID topic, right?
+
+pedro_gomes
+Yeah. Yeah.
+
+Citizen Web3
+But, a question then let's, let's go with a question. go with everybody who loves the IDs and I love to hear opinions on this. And again, this is a bit of a devil's advocate question, but it's a question that in my opinion should be answered. so I'm the kind of person and I think a lot of people are out there can see that sometimes overcomplications create.
+
+certain necessities. you know, the most simple example of DID is a private and a public key, right? We have a private and a public key. Why on earth? And this is a question, do we need anything beyond that to identify anyone?
+
+pedro_gomes
+Well, I guess the problem is how you actually associate data to that private key and public key. I think one of the things that kind of took the idea in the wrong direction was they wanted to have as many entities and organizations involved into the project. And then everyone that was involved was kind of
+
+unwilling to coordinate like some standards and best practices. So what they created was an abstraction of saying like, whatever form of authentication you have in your system would be compatible in the ID. just like prefix it, add the new method. And now all of a sudden we created a whole new branch. So the problem is that the fragmentation became extremely over complicated and it's a
+
+a little bit inevitable because everyone will have a slightly different use case, but it's also kind of our job to create like working groups to find a common denominator between those use cases. At the end of the day, what the idea brings that a simple private public key doesn't bring is linked data, is how can I take some form of data, sign it, and then add some more data.
+
+And instead of trying to assign this new data, once again, I can create this web of trust, which I can link back to the original data that I signed and essentially scale the trust from that first signature to far more data than the user needs to sign. It actually tries to reduce the amount of signatures the user needs to control by then delegating responsibility to a third party who can
+
+use an attestation from the first party to then go to another party and it creates this web of trust, right? That's what DIDs try to eventually achieve is creating these attestations that can link data across the whole internet. And we can even use the blockchains as the root of this trust. Actually, one project that does this very well is Ceramic. So Ceramic
+
+pedro_gomes 
+builds the root of trust in a particular blockchain and then builds with the IDs of what they've done is they kind of standardized like the data models around the IDs and created this root of trust from one blockchain account. And then it can link to much bigger data sets and you can actually search data much more easily.
+
+Citizen Web3 
+But I mean, one of them, I mean, it sounds all cool, but you know, like, how do we, well, I guess we cannot avoid like things we cannot know in the future, but where is the guarantee that again, that data, even though it's in a cryptographically encrypted, you know, but it's a cut and mouse game, right? Always between security and cryptography and whatever. Where is again, the proof?
+
+the guarantees are not the proof that in 10 years time or 20 years time, there will be no cool way to decrypt that data. And, know, we will not create another web two on top of web three.
+
+pedro_gomes
+Well, yeah, I guess that's a fight that we always have to fight, right? It's, you want to be pragmatic and you want to build something that works today without actually compromising the values of what it would actually build a more decentralized future. You know, every company has this internal fight, you know, because you don't want to get left behind, but at the same time, you don't want to compromise the ethos of the ecosystem. So.
+
+I think what we're going to eventually achieve is we're going to find a good balance between what goes on chain and what goes off chain and finding that balance that can scale everyone to kind of work on use cases and applications that people care about and are adopted worldwide, but at the same time, utilize blockchain as a way of forming trust, right? Because
+
+At the end of the day, a web of trust is nothing without the root of that trust and blockchains are the best source for that root of trust. So that's what Web3 means. Web3 is how can we have cryptographically insured data that is trusted by proofs on chain? How much on chain do we need to put proofs on? And finding that balance is something that it's still yet to be decided. I guess 10 years from now we'll see whether we have succeeded.
+
+or we have just created a new Web2 with slightly less trusted parties, you know? But, you know, it's moving the needle forward.
+
+Citizen Web3
+Where is the border for you personally as for a founder of not just a big, but an important project in my opinion to today's at least infrastructure for sure. Where is that border that the ethos, I mean, for example, I'll give you mine. I'll give you my border. And for example, right now, we're talking about all these things, we're using...
+
+Riverside and we're kind of like, I'm going to go and use Twitter today. so my border doesn't obviously stop here because I understand that I cannot reach, I am producing educational content. I cannot reach the people I'm trying to help to understand what all that stuff means without going to those platforms. I guess, but where is the border for a project that
+
+Of course has a lot more meaning in terms of to the whole industry, I would say.
+
+pedro_gomes 
+So I guess I would start with what does it look like for engineering to evolve in a completely modular system? If you think about computers, you had to get the hardware and the software from the same vendor, and eventually hardware became commoditized, and now we don't need to get the hardware and software from the same vendor. You can just get any hardware and get any software. And then inside of that software, then you get even more modularized.
+
+server architecture, like we've seen this explosion 10 years ago of microservices, which meant instead of building a monolithic server that has all of the features, and this is what the app looks like, then we started building mini servers that had very clear specific responsibilities, and that eventually kind of modularized, and you could actually distribute the risk or even the trust across different services. They
+
+kind of optimized for different use cases. So that's what Web3 is gonna do. We're gonna slowly split out different parts of the internet and bring more trustlessness into each one of them. And the most valuable ones are gonna get first. That's why finance was the first one. Then we started seeing speculative assets like NFTs and art.
+
+Eventually we'll see like actual organizations, which are probably the most valuable ones, like nonprofit organizations and for -profit organizations actually getting decentralized and not actually living under some form of jurisdiction. And I think that kind of, you always have to treat each case very differently. Let's say we're using this streaming service. What is the primitive behind this that would, if we decentralized it,
+
+would allow to have like multiple clients. Instead of this client would be the official client. There would be a lot of unofficial clients. That's a form of decentralization. If you just break down the service into microservices and then one of the core microservices becomes decentralized, you have taken a step forward into decentralization. In this case of streaming, it would be a transcoder. And there's already projects working on this like LifeBear.
+
+pedro_gomes 
+is essentially a decentralized transcoding service. So if we could make multiple clients for the live peer transcoding service, then you essentially have decentralized what it is a streaming service. And in Wallet Connect, we do the exact same. We basically broke down everything that makes what Wallet Connect is. And we came down with like a publish and subscribe network that essentially routes messages between peers.
+
+And the other components that are not so easy to centralize, we just allow people to self -host. So you can self -host it yourself, or you can use our cloud hosted version. But at the end of the day, we all kind of bind together through the same decentralized relay network that routes messages between peers.
+
+Citizen Web3
+And what about, I mean, you mentioned, you know, decentralization and you mentioned it several times and this is another one of those like, you know, not tricky, 
+
+Citizen Web3 
+Should decentralization be always everywhere or is it not very decentralized to say that everybody should be decentralized? You know what I mean? Like, is there room, like what I'm asking you, do you think that in a world that we will see in 10 years, because we've already been speaking about 10 years, let's go with 10 years, is everything going to be decentralized or is there room, in your opinion, for services and for companies that are not decentralized and might not even ever become decentralized?
+
+pedro_gomes 
+absolutely. It's important to note that decentralization will come to the most valuable services and assets and products that impact people's lives. But there's a lot of satellite asset services and products that will not be decentralized because we can't justify the cost. For example, if you go back a lot of time,
+
+like democracy got a little bit decentralized by creating three powers where you have the executive power, the legislative power, I actually forgot the other one, executive, legislative and jurisdictional power. by jurisdictional power, so by breaking it down, you decentralized what was governance to some extent, and you kind of have to start with the most valuable parts and
+
+Citizen Web3
+jurisdictional power.
+
+pedro_gomes 
+I think right now we have decentralized currency, which was very core to a lot of social economical causes and how humans operate and eventually will decentralize other components. the case of Wallet Connect, that's essentially what I was trying to give the example is like we, we decentralized the most core component, but everything around it, it's still centralized because the cost does not justify the decentralization.
+
+and trying to decentralize it would actually become inefficient. And someone else would just like put out there a centralized version that people would use because it was cheaper to use. So we need to always find the cost to decentralize versus the value that it brings. So if we, if technology hasn't met that mark, it will not become decentralized. So it's a matter of time that more things are decentralized, but it's inevitable that some things cannot be decentralized.
+
+Citizen Web3
+You mentioned that we decentralize currency and my nickname on Twitter, not the Nickshall Nick, but the description of the Nick has been decentralized decentralization for about six years now, five, six years now. Do you think we decentralized like currency? Are you really ready to say that, it is decentralized today? Let me ask you a different question. Do you think that...
+
+People who use currency think that currency is decentralized.
+
+pedro_gomes 
+Well, I guess there's a lot of currency. So when I say we decentralized currency as we decentralized cryptocurrencies, like the most basic functionality of currency for cryptocurrency has been fulfilled. If you want to send some funds from A to B between two parties who are pseudonymous across the internet without any geographical limitations, we have achieved that.
+
+Citizen Web3 
+Let's...
+
+pedro_gomes
+There's no trusted parties in the middle. Like we can do this. I think what we've done once we introduced smart contracts into the picture is that we've gotten way, way more ambitious. It's like, stop at currency? Let's do way more. Let's decentralize the whole internet. And once you decentralize the internet, you have essentially decentralized one of the most core components of society today. The next one would be the governments themselves, but that's even more ambitious.
+
+Citizen Web3 
+I think we should start there, but semantics, think is the last step. No, semantics, decentralizing semantics and understanding that, you know, the mind, the ego. Yeah, I think we can go as far as... Actually, no project working on that. It's crazy. But there are already projects trying to work on that shit as well. And it's absolutely fascinating, this industry. Talking about the industry though, and I did say I'm not going to name projects, but I will name one and I will ask you your opinion about them because...
+
+Citizen Web3 
+I think they have been actually a good light in my opinion. And I, for anybody who's listening, this is by no means any shilling. It's not an advice to use that wallet, but I'm curious about your opinion on frame and what do you think about frame in comparison to all the other, wallets, Web3 wallets out there.
+
+pedro_gomes 
+Well, I think what frame did really well was that they tackled the managing the wallet, like or the keys at the operating system. I think that's something that everyone tells me. What would be like the ideal wallet? And I would always say, the ideal wallet would be no wallet and the operating systems would just support it because we don't currently manage like a wifi app.
+
+or a Bluetooth app. You don't go to your computer and be, I need to install the monitor app so I can actually use my monitor. Like it's not something that you do, right? And eventually wallets will be the same thing. It will just come built into your operating system. So frame, try to emulate that experience as much as possible by having a desktop app, which lives at
+
+closest as possible to the operating system, and then it would talk to multiple browsers. So it's not even secluded to, let's say, Firefox or Chrome or Safari. It would work anywhere within your operating system as a desktop application, but it still does not inherit the same security guarantees as if it was built into the operating system. It's close enough, but it's not perfect.
+
+But what I kind of preferred is that we could do this on the mobile level. As I said in the beginning, my focus is on the mobile experience. Frame is a desktop experience. So essentially, you could say like frame is like the counterparty to Wallet Connect. Frame is to desktop what Wallet Connect is to mobile. And they're trying to achieve what it's like to be the de facto wallet experience for desktop. And Wallet Connect is the de facto experience for mobile.
+
+Having operating systems actually build wallets, SDKs and having it built into it, it's completely changing wallets and so FRAME is good for the desktop user.
+
+Citizen Web3 
+Have you, are you familiar with Orbit by any chance? A project called Orbit?
+
+pedro_gomes 
+I'm familiar with the brand, not familiar with the technical details.
+
+Citizen Web3
+It's an interesting, I'm not going to go into it if you're not, because there's no point, but it's an interesting thing because it's like an operational system and a wallet. I was curious about what you think about what they're doing, do check them out. And then for everybody who's listening, definitely do check them out. Again, not chilling, but they're not really a crypto project as far as per se. So anyways.
+
+pedro_gomes
+Will do.
+
+Citizen Web3 
+What about wallet connect though? You mentioned that you guys have an upcoming event with with is Denver. What about non marketing plans, like in plans in terms of development, of course, you're focusing on mobile. And I don't think it needs an explanation beyond what you already explained. What is the reason for that? What is the other ground plans that are currently you have?
+
+pedro_gomes 
+So yes, we're hosting the first wallet focused conference, March 1st in Denver, which is just the day before Eve Denver, which starts on the 2nd. And we're creating essentially a platform for all the wallets to showcase and shield their best technology in terms of user experience, security, identity, and communications. And obviously Wallet Connect as the host will also shield their own stuff. Like we've been working on Wallet Connect V2 for a long time.
+
+And we did the stable release back in November. And then we announced also that we would sunset the version one in March. So wallet con will be like the pivotal moment where we move away from V1 into V2. And what I like the most about Wallet Connect V2 is that it modularizes the communications protocol because a lot of people misunderstood Wallet Connect as just a wallet provider or a form of aggregating multiple wallets.
+
+but the way it actually functions on the backend is a communication protocol that allows two peers to send end -to -end encrypted messaging. And then with the adoption of Wallet Connect, we're talking about 200 wallets connected to the same network, sending end -to -end encrypted messaging. It's kind of understatement to say that like signing transactions is all you can do with end -to -end encrypted messaging. What we started doing is creating
+
+different APIs built into the same core network so that you can send different types of end -to -end encrypted messages. For example, we created a dedicated one for sign in with Ethereum. So if people want to log in into websites, instead of using sign in with Google, you could sign in with Ethereum. So we created a dedicated API for that that focused on that experience rather than connect your wallet, sign a transaction and all of that. Then we created the chat API.
+
+that allowed essentially two Wallet Connect wallets to message each other. So users that have, let's say, a trust wallet and an IAM token, these are two Wallet Connect wallets. They're both connected to the Wallet Connect network. Why can't these users message each other? So Chat API enables that experience. And it would essentially build what Web2 has been trying to build for a long time, which is like a shared...
+
+pedro_gomes 
+messaging protocol. If you had the ability to have WhatsApp, Telegram, and Signal messaging each other, that would be the perfect scenario. We can do that with the Wallet Connect Network because these wallets are already doing that form of communication. We just needed to create an API that focused on that scenario. And finally, we have the Push API, which would allow dApps to kind of re -engage with users that have visited their applications. So right now, when you connect the wallet to a dApp,
+
+You kind of just do some transactions and you leave it there. But there's a lot of asynchronous activity happening on the blockchain that it's relevant to the users. So with a push API, you would be able to send a notification to kind of bring them back to relevant events. And I think my favorite scenario is when you have like DAO proposals and then people vote on it, they want to keep up to date with the status and receiving an email or a telegram notification doesn't seem right. You voted with your wallet. So the notification should go straight to your wallet.
+
+So yeah, we've been building a lot of open source software, but what we really care about is building the communication tools for a better wallet experience. And we're going to showcase it a lot in, if ever at the wallet con conference as well. And we've been doing it a lot and we have some new products coming in. So.
+
+Citizen Web3 
+Nice. Do we need to decentralize APIs?
+
+pedro_gomes 
+I mean, it depends. Depends what you mean by decentralizing APIs. So one of the APIs that we have is the relay API, which is where you can publish and subscribe these messages to get routed. That one is getting decentralized, but some of the APIs are not decentralized.
+
+Citizen Web3 
+You
+
+Ha
+
+Citizen Web3 
+I guess I'm more referring to stuff like Infura, I guess, at the moment. And I'm not really talking about APIs, but I think the whole thing about when did Infura announce that they will be able to track the user and the IP, and then you're like, shit, we did actually get here. We did get here way before 10 years. We came to this point and...
+
+I guess wallet connect kind of protects you from the doesn't it in a sense because you go through the network of wallet connect, right? Or it doesn't, am I mistaken here?
+
+pedro_gomes 
+I mean, it depends, right? Because at the end of the day, what Wallet Connect enables you is to interface with a DAP from your wallet. But then the actual choice of a node provider, it's always split between the DAP and the wallets. Like we've tried in the past to kind of enforce a more user controlled node selection, but it wasn't actually very successful because
+
+As we talked before, like people want to be pragmatic. They would want to be left behind and there would be a wallet out there that allows you to select exactly the note that you want. But then there's a wallet that shows NFTs. People chose the wallet that shows NFTs over the one that allows you to show the select the note. So the ideal scenario is that the user can control the note that it connects to the blockchain from their wallet. And then the DAP would follow and use the same note provider.
+
+But then that wasn't the scenario because we still need to find the use cases that people care about. And something like NFTs kind of took off and brought a lot of people, even if you didn't have node selection. So it's something that I know that people are building some EIPs, so it's your improvement proposals for it. So maybe we could see some improvements there, but I wouldn't be so confident. Service providers like Infura are still here to stay.
+
+Citizen Web3
+For sure. One, I guess, last question before the blitz is, considering you mentioned mobiles so often, and definitely, think a lot of people building today on... had recently released an episode, the guest was actually quite a while ago. Maybe Boris Mann is a guy who... Maybe you know the guy, they work a for the PFS and they're also building a lot of open source software.
+
+blockchain builders, they build in tools and libraries. you know, we had this conversation with him about mobiles and I fully agree with the opinion of you and him. The thing is, what do we do in terms of, and this is more of a devil's advocate question, but still, what do we do in terms of, you know, all that population whose phones are, you know,
+
+15 years old and we have to be realistic. That is the most of the world's population today. they still going to be able to use all the products that we are creating or do we need to somehow update those two or three billion people with their old phones? And how do we get them on, on, how do we build them into the blockchain? That's the kind of question with all the equipment they have.
+
+pedro_gomes
+That's a hard question, right? Because to what threshold do you accept to be compatible, right? We actually had this question internally and then at Wallet connect what we've decided is that we would follow what the operating system vendor would decide. So for example, if iOS, they say like up to this version number of iOS, we have long -term maintenance, then
+
+that would be the same level of maintenance that Wallet Connect would fulfill. And the same thing happens for Android with Google. So whatever Google says, like, this is the oldest Android version you can use with long -term maintenance. That's what we're going to use. So I think that it's inevitable that other projects will follow that because you can only...
+
+do as much as your operating system can do. And we can't give guarantees to someone who's using, let's say, an Android version three, which is no longer supported by Google. Therefore, we don't know if it works like it may work like technologies that we use at Wallet Connect are pre standard for like the last 20 years. But we have no guarantees whether it's going to work. And then you could say like, what about people who don't even have smartphones?
+
+Then it's a completely different conversation because if you don't have a smartphone, then you don't have a way of generally computing into your device. So I can, I can't even sign a message. Like there's no form of decentralization. If I can't get the most basic functionality, which is like signing a message, as long as someone has an up to date. Smartphone with whatever is the minimum requirement by the operating system and it can sign a message we can.
+
+give decentralization to them.
+
+Citizen Web3 
+Now because I know there is a lot of guides now as well around the internet, which is really cool I love those guides that show you how to turn any old mobile phone into a signer You know to strip away all the old crap and just and I've actually been trying I'm not gonna say I will say because it's not like a big secret There isn't somebody gave me an iPod the very first iPod and I've have a mission to make that shit into a signer, right? I want to know if I'm gonna succeed or not. But let's see. I still didn't get to that.
+
+Pedro a blitz and it doesn't mean the answers have to be quick. I call it the bleeds because it's kind of like three questions and One after another but feel free to answer them in in the way you want to answer them and so give me and you kind of already named ceramic but Give me three projects Outside of the top like 20 projects that you are very curious and what they doing You think that what they're doing is essential for the web 3 industry?
+
+and might actually change something for the best. Not yourself, of course, please.
+
+pedro_gomes
+Yeah, of course. It's hard. It's hard to name projects. I think that, yeah, like one project. Well, I recently have been looking into how can we improve wallet experience beyond just the key management. And one of the things that always comes up is
+
+Citizen Web3
+could be one.
+
+pedro_gomes 
+How do you actually protect users from malicious activity? And I've learned about this project called Blowfish that is protecting users from phishing and malicious activity on chain by having the transactions analyzed before you sign. So that's one project that I think it's going to be really powerful because we really need this kind of form of technology because wallets kind of put a lot of...
+
+pressure on the user user has to make an informed decision whether or not to make a transaction without actually having the information so making the information available is quite important
+
+Citizen Web3 
+We must be on the same frequency because tomorrow I'm interviewing the person who is going for sure to talk to me about formal verifications and formal verifications for smart contracts. It's a guy from the main research of informal systems. And for sure, we're going to be talking about how to check code before it. So yeah, it's the frequencies there. Give me two things in your daily life that keep you motivated to build...
+
+Wallet Connect and to keep you motivated to do build open source software.
+
+pedro_gomes
+I guess the number one thing that keeps Wallet Connect for me interesting is that I don't think I've ever seen something so organically grow as much as Wallet Connect. The ability of building an open protocol is that it essentially sells itself. Sometimes people would come to me and they'd be like, it's so great. You partner with this wallet, you partner with this DAB, and all I did was write
+
+some docs and put out there an SDK that anyone can use. So that's really interesting. And the other part about being open source is not only that anyone can use it, but also anyone can contribute it. Like the amount of times I had like something in my mind that I wanted to do, but I didn't have the bandwidth or time to do it. And then someone just kind of showed up and gave me a PR or showed me some open source repository on GitHub and said, here's this project I did over the weekend because I was bored.
+
+and was exactly what I wanted, it's something that you cannot achieve with like a project that's closed source.
+
+Citizen Web3
+Sure, for sure. One last one. One person to follow dead or alive. And I know it's hard to follow a dead person, but for the sake of semantics, let's leave it like that. That you think whoever that person is, whether it's a writer or a GitHub account or a Twitter account or a Medium account or a book, could help people to succeed in life and whatever it is they're doing and whatever it is they're building out there.
+
+to inspire them, let's say.
+
+pedro_gomes 
+Damn. So what's an inspirational figure, either dead or alive, for me? Huh. Yeah, yeah. The dog is very inspirational. That's a really hard question to pinpoint a single person.
+
+Citizen Web3 
+for you.
+
+Citizen Web3 
+Apart from the dog, because I know you have a dog, so apart from the dog...
+
+pedro_gomes 
+I don't know, like, can I get another one?
+
+Citizen Web3
+No? No, it's good. don't have to. It doesn't have to be. There is no more questions, but it doesn't have to be an answer. know, I mean, the answer doesn't have to exist. It's not...
+
+pedro_gomes 
+Yeah. Yeah.
+
+pedro_gomes 
+Like, I think everyone, everyone kind of brings a little bit of light, you know, like everyone has their like, own like, moment where they bring something so unique and innovative to the world. And it's always great when they output it even in form of like, art or technology, or even just an opinion in an article, and they inspire the next person. So I think that the most inspirational person
+
+is all of us who kind of build like this like hive mind that like build the best world that we could do. Because it's it's I can't say like who's my biggest inspiration like I kind of met so many inspirational people and they all contributed to the person that I am today. So I'm grateful for all of them.
+
+
+Citizen Web3 
+I love it. I love it. I love it. That was a very fucking cool answer. Thank you for that. Pedro, if there is anything I didn't ask you, and I know we had like technical crap in the middle, so I'm apologize for that, but is anything I didn't ask you, please feel free to share. Other than that, it's been very, very, very thankful for your time and for your answers. But if there is anything I didn't ask you that you want to share, please do.
+
+pedro_gomes 
+Well, all I want to share is that I can't wait to see Wallet connect everywhere because Wallet connect already exists in so many places, but there will be this pinpoint moment where we will see Wallet connect become the next Bluetooth and people will just like forget about it. Like when we forget about Wallet connect, I've succeeded to do my job because we just assume that the Web3 experience includes
+
+some form of wall -connect technology on the back. And yeah, that should be the success on any decentralized technology. It's to become boring, but that exists everywhere.
+
+Citizen Web3 
+Nice, nice, I like that. Pedro, thank you very much for your time again. Everybody out there who's been taking the time to listen to us, thank you very, very much for listening to us and see you all next time. Thank you.
+
+pedro_gomes 
+Thank you for having me.
+
+Outro:
+This content was created, by the Citizen Cosmos validator, if you enjoyed it, please support us by delegating to Citizen Cosmos and help us to create more educational content.
+

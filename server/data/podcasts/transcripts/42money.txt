@@ -1,0 +1,559 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/42money
+
+Episode name:
+Thinking Differently, Having Fun and Managing Assets with Daniel 42Money
+
+Citizen Web3
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast. Today, I have Daniel, founder of 42 Money with me. Daniel, hi, welcome to the show.
+
+Daniel
+Hey, thanks so much for having me on the show today. Super excited.
+
+Citizen Web3 
+Yeah, man. We had a conversation with you just recently, and this is for all the listeners to know. So me and Daniel got a little bit acquainted a few weeks ago, but instead of me, as usual, telling people about you, I would love you to introduce yourself for me and for the listeners. Tell us what you do. What is your web three story? And yeah, anything you want to add about yourself, please.
+
+Daniel
+Nice. I can keep, I can go deep or shallow here. So I guess you've left the floor open for me to just chat. I could talk for a long time. Yeah. So I'll give you, I'll give you the, the little background on myself and what we're building, but essentially grew up in South Africa, studied finance and accounting actually worked investment banking for three years at a pretty well known investment bank in South Africa and the UK.
+
+Citizen Web3
+precisely.
+
+Daniel 
+And then I worked at a fintech company for two years after that, heading up a division for them, specifically focused on servicing technology companies, which was amazing. I got to have a startup within a company. Then moved over to Berkeley. So I did an MBA at Berkeley. And during the MBA worked at Menlo Ventures for six months in their entrepreneur and residence program. They're a big Bay Area VC. And then I worked at Binance Labs for six months also during the MBA, which...
+
+That was an amazing experience. That was my first full -time job in crypto. So yeah, I've been investing since 2017, but that was the first time I actually took a job opportunity in crypto. And straight after that, that internship ended, it was, I started 42, which was over two years ago now. So that was about April, 2022.
+
+And started it while I was still studying at Berkeley. And, it was about a month or two before the terror crash. So it was an amazing time to start a company. Obviously, we raised a hundred thousand dollars back then, and then terror crashed and fundraising became almost impossible. And we sort of bootstrapped for the next few months and then started funding. We pivoted, started fundraising again, and then FDX crashed and, we were running out of runway at a.
+
+quick rate and we had to fundraise and somehow we managed to bring in another 140 ,000 just after the FTX crash, which was also super difficult. And I feel like we got really lucky to bring in any money and that gave us a few more months runway. And then, and then we eventually raised a full pre -seed round, which we're super happy about that was also during the bear market. So I know a lot of teams and founders were struggling to fundraise during that time, but I think it was just through like consistency and through.
+
+continually building and not giving up and pivoting and finding the right gaps at the right time, we managed to secure a pre -seed run from really good investors too. So super happy about that. That's pretty much the lowdown on how we got here, but otherwise I love surfing. I can juggle four balls. I can't do both at the same time.
+
+Citizen Web3
+I love this, I love this.
+
+Daniel
+And yeah man, I think a little bit more about me. I like being real and authentic and I think that's how we treat the company and that's how we are.
+
+Citizen Web3 
+Let's dig that.
+
+Citizen Web3
+Let's dig that a little bit. I like, by the way, how you looked at the calendar when you were saying, it's been two years and I could see your eyes go a little bit there to decide there. What day is it today? Damn it. We're finished. Right, right. It's been, it's been. Man, it's interesting. You were talking about the Terra crash, the FTX crash. And I remember when all of those happened and...
+
+Daniel
+What day is it?
+
+Daniel 
+huh.
+
+Citizen Web3 
+the project Citizen Web 3 that I'm running was in big trouble. And as the bear market came in, like I was all happy on the podcast and everybody was coming like, why are you so happy, man? Isn't it a bear market? And I was like, guys, you need to prepare in advance. And they were like, yeah, what do you do? How do you prepare in advance? I said, well, it's really easy. You just fuck up really ahead, lose everything you have before the bear market starts. Then there's no need to prepare, man. You just put in all the power. Yeah.
+
+Daniel
+So... So... So... huh. huh. huh.
+
+Citizen Web3 
+Man, you said a few things that I want to dig, but before I will, you know, one of the main themes of the podcast is like to try to understand why people, you know, what do they want from Web3 and why are they coming to Web3? So, I mean, you didn't just wake up one day and said, Hey, the hell with it. I finished Berkeley. Let's race around. You know, this is my new life. I mean, something must have.
+
+drugged you here or or or yeah well what what was the story man how did it happen
+
+Daniel 
+That's a good question. I think for me, I've always liked sort of going against the grain. And I think there's a lot of arbitrage to be found in sort of undiscovered opportunities. I think like maybe 95 % of the world thinks in a certain direction and there's 5 % who get to sort of do what they want to do, because they understand that there's this arbitrage. And obviously if the whole world...
+
+wanted to take advantage of these arbitrages, then there would be no arbitrage. So it's a kind of like a self fulfilling thing in a way. But I love being part of that smaller group of people that's like, wait, this like I was, I was from a banking and fintech and I was like, this is what 95 % of the world is focusing on. Like, and then I looked at crypto and I was like, I think there's huge opportunity to make a change here to make firstly a change for myself, but also change for the world. Like, how do we start thinking a little bit differently?
+
+So I think that that's sort of what initially drew me to crypto, that it wasn't like, that it's not mainstream, you know, it doesn't, not every person in the world is even now using crypto. So I think that was the initial drawing card for me. I mean, obviously this is besides for the fact that like when I started investing in early 2017, it was like just all the potential that Bitcoin, I mean, I just invested in Bitcoin at the time, but like all the potentials that Bitcoin had.
+
+So I think this sort of arbitrage opportunity drew me to a large degree. And then I think even when I got into crypto, so obviously while I was at Binance, it was very much Ethereum focused to a large degree. But then even once I was in crypto, I was like, well, everyone in crypto is focusing on Ethereum, or most people at least. Like what else is there? And that's actually what initially drew me to Cosmos was I saw it as entrepreneurial arbitrage whereby everyone is focusing on building in Ethereum.
+
+obviously the potentials of Cosmos and having this interconnected world. I was like, no one is focusing there yet and there's so much potential. So like, I almost like saw the art, the 5 % arbitrage and then saw the 5 % arbitrage again and went into that direction. So yeah, I think, I think that that's one of the reasons. And then another reason is I just love the people that self -select into crypto. Like once I started getting into it and just started seeing the types of people that are sort of thinking in new ways and
+
+Daniel 
+Yeah, just really pushing the boundaries on with technology and and having fun and trying to experiment and build new financial rails. I think it's just like that self selects a certain type of person, which I've always found extremely inspiring to be around. Of course, there's obviously a lot of BS and crypto that you need to avoid and a lot of like snake oil. But to a large degree, I find the industry's extremely inspiring.
+
+and fun.
+
+Citizen Web3
+way you can say bullshit. It's okay. Well, it's up to you if you want to say it or not. It's up to you.
+
+Daniel
+Can I? I've never said. It's like, it's like, it's like my dad, my dad always says, my dad always says, don't say fuck in front of the KIDS.
+
+Citizen Web3 
+say back in front of the KIDS. Yeah, I like that. I like that. It was the other day I was listening to a song. I don't remember which song it is. It's a very popular track. It's like a commercial track from some years ago. it's by Whittus. Whizzer Whizzer. Sorry, Whizzer Whizzer. And yeah, and they blank the word gun.
+
+Daniel 
+Ha ha ha ha ha.
+
+Daniel
+Yeah.
+
+Citizen Web3 
+but they're okay with saying the word dick and stuff. And like, you know, but he brings it to school, you know, her boyfriend is a dick. He brings it to school. And it's like, okay, guys, you know, like, well, I'm not sure what's what's worse here. But okay. Anyways, man, you've said a couple of really cool things there. One about thinking differently. And here I cannot help not to put my devil's advocate, my favorite hat on and to ask.
+
+Daniel 
+Huh.
+
+Noooo
+
+Citizen Web3 
+Do you think that what you have been doing in this industry since 2017, so it's been seven years, has helped somehow someone else to start thinking differently?
+
+Daniel 
+Sure, that's a good question. I mean, yeah, I think obviously I haven't been full time in the industry for seven years. I wish I had been, but unfortunately not. But yeah, I've been full time, obviously I think about three years now. So, but yeah, has this allowed other people to start thinking differently? Like has the impact knocked on to people? I mean, I'm sure I've, I know I've spoken to a lot of people about crypto.
+
+So I'm trying to think, trying to think. I mean, I know I speak to a lot of people just about their way of thinking in general. Yeah, I think, I think that's a tough question. I don't necessarily have an answer to it, but I think, I think in, in brief, in brief, I definitely think I generally do try inspire people to think differently and try to inspire people to think for themselves.
+
+Citizen Web3 
+It's okay man, don't have to.
+
+Daniel 
+And I mean, I've worked with some incredible people along the way who I definitely have passed some sort of a torch onto. Like for example, my old co -founder. So he was the guy who initially founded 40. We founded 42 together and he ended up after six months during the pivot, realizing that it wasn't his priority. But I think we, I mean, we ended on very good terms, but I think I've, I just inspired him and like how to think and how to view the world.
+
+I mean, he was young, he was an undergrad at Berkeley still, an engineer. But yeah, there's been countless like amazing inspirational relationships I've had along the way, if that sort of touches on your question in any way.
+
+Citizen Web3
+It does. It's perfectly, I think it's a perfect answer. I always like to, people interpret the questions as they see fit. Sometimes I, of course, give a lot of guidelines, so to speak, of what I want to ask. But, you know, it's interesting sometimes hearing very different answers to the same question, like in completely different backgrounds. And instead of trying to like say, hey, that's not what it is. I want to listen to the opinion and try to understand.
+
+where that leads the conversation. You mentioned thinking a lot of times and you mentioned financial rails a lot of times. And I mean, let's do some theoretical exercise here. What are those financial rails you're talking about? I mean, you know what? Let's start really, really early. Let's really go. I don't know who's going to be listening to this particular episode because we have different...
+
+Daniel 
+show.
+
+Daniel 
+Hmm.
+
+Daniel 
+Mmm.
+
+Citizen Web3 
+Audiences, sometimes they are more technical, sometimes they're less technical. So let's go to, at least for myself, a very silly explanation of what on earth does the term financial rails mean for you and what are those different financial rails that you are talking about that you mentioned twice already now from the ones existing today.
+
+Daniel 
+Mm.
+
+Daniel
+Hmm. Hmm. Nice. So, yeah, I think, and I know you said I have mentioned the word thinking a lot and I do. It's like one of my favorite hobbies. Someone actually asked me recently what one of my hobbies are. And I think there needs to be more thinking in crypto. I think, there is a lot of just, sort of doing or thoughtless acting and it's like, and.
+
+we are building, as you mentioned, the word financial rails, we are building this new financial rails of the future. And there is an element of fun, of course, and some people are just experimenting and having fun. But I think there's also a huge responsibility in this. I mean, obviously, finance has existed for thousands of years. And it's people's livelihood. It's like, so I'm actually busy reading this book at the moment called debt by day. It's called Debt, the first 5000 years by David Graeber.
+
+which got recommended to me through a program that I did called kernel, which is like funded by git coins. So a lot of like the git coins, like a git coin sort of incubated pro program. And, and really what this kernel program starts teaching you is, I guess the philosophy of money and the philosophy of crypto. And, and, and that's going back to your question of why did I get into this? Like, I understood that there was this sort of
+
+deeper fundamental philosophy of what we're doing, that I didn't yet understand. And I still, in all honesty, don't fully understand, but I'm learning and trying to really understand what is, what are financial rails or what is money? You know, like we see money is just like this, I don't know, this green paper that we sort of pass around to each other. But I think it's got like more, like deeper underlying meaning or deeper underlying value than that.
+
+So this book, Debt, sort of talks about how debt actually predates money. So it was like, we think it was like barter, like you took your 10 chickens and you exchange it for a cow. But really, it was to a large degree, you would do a favor for your neighbor and your neighbor that would then owe you a favor later in the future kind of thing. So it's like this whole system of debt that creates the financial rails. Anyway, I'm really trying to...
+
+Daniel
+fundamentally understand what money means. So I think that's the first thing. And then when you ask me sort of what I see as the financial rails. Sorry, just pausing a second for background noise.
+
+Daniel 
+So when you ask me what are financial rails, is this audio okay still?
+
+When you ask me what are financial rails, the way that I think about financial rails is essentially what are like, and to take the literal sense of financial rails, it's like here, sorry, let me step outside.
+
+Citizen Web3
+It's better to talk. This is for the editing, of course, guys. I know, Daniel, this is not you. Our editing guy's name is Daniel. Daniel, this is, of course, to edit. But now for you, for the guest, Daniel, it's better to always talk with one, even if there is the background noise does change. And just keep on talking the same way in terms of if you press pause, of course, for the noise, that was perfect.
+
+Daniel 
+Yes.
+
+Citizen Web3
+But I mean, like changing the level will then be very, very difficult. So right now, I think the level of noise is not the background noise. Yeah, I think it's fine right now, right now, at least. I mean, it will be there, but. So Trey Daniels. So sorry, we were talking about, yeah.
+
+Daniel
+Okay.
+
+Daniel
+You think it's fun? OK. Cool.
+
+Okay, cool. The guy talking is also Daniel.
+
+Daniel 
+Okay, so so All right. So I think so leading on to financial rails, which was one of the key Points of your question the way that I think about financial rails is in the literal sense It's like you got rails and then in the middle is how finance flows and and I guess it's when I talk about financial rails How do we allow? Transfer of value to happen between parties so
+
+If I, for example, am transferring some sort of value in the form of money or some sort of alternative to money that stores value, how does that get from one place to another? Now, currently, the way obviously it works is through the banking system. And I know that this is kind of like, I guess, the most cliched example of crypto, but do we need banks? Banks obviously do serve some important needs.
+
+But I don't think that we need them. And I think in this tech forward world, we're always looking with technologies how to make things more efficient. And I feel like the banking system as the centralized player creates a lot of inefficiencies. And as we progress, we essentially will naturally cut out the middle man. So yeah, and I guess it's like, how do we start doing this in some sort of a responsible manner? Because there are...
+
+Obviously, as we're writing code, not the whole world understands the code. So this is where obviously open source code is super valuable. But yeah, I guess it's how do we allow this transfer of value to happen in a responsible manner for the rest of the world is sort of a huge goal of mine and a huge goal of what we're building with 42.
+
+Citizen Web3 
+I mean, there is so much. I mean, we could probably have probably a three, four hours conversation just about financial rails, obviously. I'm going to first of all, by the way, about books and since you started the topic and by the way, to the listeners, everything me and Daniel will mention obviously be referenced in the show notes. So including the books that Daniel is mentioning now. So please do check them out. I will also mention one more book, which for me was.
+
+Surprisingly, I was surprised because I've been studying money since I was a kid and I'm almost 40 and it's a big hobby of mine and one of the Biggest surprises for me recently like seven eight years ago was the ascent of money. It's a British professor that wrote a book and he made a documentary Yes, not Ferguson. That's the one. Yes, now Ferguson. Well done. Well, I would not remember There is there is a there is a cheat code. There is a cheat. There is a cheat code There is a YouTube nine -hour or 12 -hour
+
+Daniel 
+Niall Ferguson.
+
+I haven't read it yet. I haven't read it yet, but it's on my list. Cool.
+
+Citizen Web3 
+documentary, which pretty much is the same as the book. It's really long. Biggest, biggest suggestion to go with that way. It's really good. I think this is about suggestion about, you know, rails of money. What, what, what, what I want to ask you and what always has been sort of a bottle in me at least, you know, is sometimes you hear like people say,
+
+Daniel 
+Nice. Nice. Nice. Nice. Nice. Nice.
+
+Daniel
+I'm adding that to my list.
+
+Citizen Web3 
+we need to fix the education system. We need to have new rails for the education system. we need to fix the money, see the financial system and new rails for the financials. We need to fix the marriage Institute. Now, sometimes I think like we all need to get society, at least in my opinion, gets to the point. And here's the question that you kind of look at the rails and you, okay, I mean, here's an example, stupid example, but you know, Gulag's times, Soviet Union, there are still until today in the North of Soviet Union,
+
+big railroads that are abandoned, that were built by those rails, those, you know, that were never, never finished. They were not built. They were just abandoned and hundreds of thousands or tens of thousands people died building them. So sometimes maybe it's best, you know, to abandon what is today and kind of, because part of my question to you was about the difference of those financial rails to what you see as financial rails. And, you know,
+
+Daniel
+Mmm. Mmm.
+
+Citizen Web3 
+Do you think that maybe at this point where we spend $5 ,000, with the modern financial system is about 300 years old. Do you think that at this point there is kind of a point for us to say, hey, ain't working, no need to fix the rails, let's bring new, I don't know, whatever it is, maybe not even going to be rails. Again, just a thought, what's your opinion on that here?
+
+Daniel 
+Hmm. Hmm. So, yeah, two things that come to mind there are firstly, a quote someone once said to me is what people do remains the same. It's only the technology underneath that that changes. And that's what I sort of believe to be the case. It's like people will always need to be paying each other or paying for services or transferring value around. But
+
+Is it banks necessarily that will always withstand the test of time? Not necessarily. I think so banks, if we look at them as sort of these financial rails that I guess are the leaders in all the biggest play in the financial rail space, as we talking about it. Banks may always exist also, like these new financial rails could just be an alternative form of banks.
+
+And that's sort of how I view blockchain and crypto, like through the bear markets, when it was hard to, to be like, we are actually building the future. The way that I would like sort of reality check myself or touch the ground again is just being like, there will always be a group of people, no matter how small it is, maybe it's only a hundred thousand or a million or I don't know, 5 million people that just don't want their money sitting at a bank, you know? And that's like the worst case scenario, I would say it's like.
+
+million people who just say, I don't want my money in the bank and I want to actually own my own money. So I think there will always be, and that million people will never disappear. They're like libertarians of the world. So I think there will always be this alternative financial rails, which we know, which is known as blockchain. I think there will always be a use case for it. I think the question is just how much of the banking sector will move over into it. And I don't necessarily think it will be a hundred percent. Maybe it will.
+
+But I definitely think a larger portion of assets will move over onto blockchains.
+
+Citizen Web3 
+You mentioned this sentence there again, which resonates a lot with me. As a self -proclaimed, I wouldn't even say libertarian. I would say I'm too extreme for libertarians. I'm even extreme for some anarchist views, but as that, I'm still very much anti when my libertarian friends come to me and say, we need to destroy the banks because I'm like, well, that's not very libertarian, is it? I'm against the banks. I don't believe in that bullshit, but if somebody like...
+
+wants to believe in that, then that thing has the right to exist. How decentralized it is to say, fuck centralization. Well, yeah, fuck centralization, but it doesn't mean it doesn't have the right and place to exist because some people might still want to use the checkbooks. And yeah, I think it's fair to leave the option in a libertarian world for any type of the... You know, I have...
+
+Daniel 
+Hmm.
+
+Daniel
+Really.
+
+Daniel 
+Yeah.
+
+Citizen Web3 
+One last question for you about money. Of course, feel free to comment and then I want to jump. But what's in your opinion the value of money, your personal opinion without trying to try to use your own words if it's possible, but like your opinion is the value of money.
+
+Daniel 
+No, I love it.
+
+Daniel
+So what is the value of money? Why do we have money essentially? Yeah, it's a very interesting question that why do we have money? The way that I look at it is... Let me think about this for a second.
+
+Daniel 
+I would say as a mechanism to...
+
+there's two sides that I want to speak about. One is that it's a way of, almost like a point system to reward yourself or yourself in this case, to provide value to society. So that's the one side. So if I'm providing a service of value, it's almost like a point system. It's like,
+
+Okay, this person is providing X number of value to society. And that's not always the case, of course, because there's crime or there's, I don't know, all sorts of funky stuff that goes on and or call it people that are wealthy, but don't necessarily provide much value. However, someone is buying what they're what they're putting out. So in that sense, they are. So I would look at it like that. On one side, on one side, on the other side, I look at money or the value of money as just a way of
+
+I guess transacting with other individuals and almost like a form of communication with individuals. I think that's how I think about money.
+
+Citizen Web3 
+I'm routing here because I'm sorry to go in, but I'm routing because I think it is. It's communication. I wrote a huge, huge article on it, but it's not about my opinion here, but I believe it's language and it's language of communication. That's why when you cannot talk your own language, you're not happy. So kind of the same thing there. But, you know, I want to a little bit not move away from money because it's obviously hard to move from money, but I have some...
+
+couple of questions for you that I still would love to ask you in direction. But let's keep money intact because obviously it's a big topic and what you guys do are about money, obviously as well. So we're going to mention it. I want to ask you first about Berkeley because Berkeley is not the first time appearing on this podcast in the past four years and not the second time. And I'm assuming on the last time. And it's also about following the money, right? They say follow the money.
+
+And you will find the thread, right? It seems, I'm going to put like several hats on here. It seems that Berkeley is definitely putting out amazing specialists. A lot of blockchain comes from Berkeley, at least there is a Cosmos ecosystem for sure. There is a second opinion, of course.
+
+my God, you know, all those guys at Berkeley, you know, they have an in -between community there that they're, you know, taking over the world, their secret hats on and, you know, they're, yeah. So what is it like for somebody who's been through Berkeley, you know, and you must have met other people there from this ecosystem or other ecosystems. What is it for you? What experience have you had with Berkeley and blockchain? Yeah, like...
+
+Daniel
+Well, I never got invited to the secret club of the of the of the organizers of World Finance. Or did I or did I maybe they just told me I got to I got to say that. No, so yeah, I think I think Berkeley itself is it's very much a school. I mean, obviously Berkeley like.
+
+Citizen Web3 
+in general.
+
+Citizen Web3 
+Damn! Damn!
+
+Daniel 
+is very much about like freedom and rights and they've had like a lot of sort of very powerful protests over the past year. So I think it's always been a very like philosophical and sort of morally and I want to put this in inverted commas but morally correct school because I mean there obviously is a school of thought now that it's gone too far into the woke side of things and is that morally correct still?
+
+I don't know. I mean, I definitely think it is way too woke. But, anyway, so, but, but nonetheless, I think that side of things, Berkeley does, does sort of attract, I would say like deeper thinking type of people in general. I don't know what it is about the environment there, but a lot of people like to, yeah, like to philosophize. So, yeah. So relating that to blockchain.
+
+I don't know why the blockchain at Berkeley has always had such a powerful gravity to it. I think it's just a lot of the thinkers. Obviously they've got an amazing engineering school and maybe that's what it is. It's the combination of the incredible engineering school plus this philosophical mindset that has allowed a lot of blockchain engineers to flourish. Because I mean, as I was mentioning to you earlier,
+
+There is all the philosophy of blockchain and philosophy of money that the kernel program teaches. And I think a lot of people in crypto kind of ignore. But yeah, I think that's a lot of Berkeley students sort of want to change the world in a positive way with technology and sort of saw blockchain as a way to do that.
+
+Citizen Web3 
+It's a big thing because I guess for a lot of people, we had projects on the show who said, well, I founded my project while I was in Berkeley. And it's interesting to see more people come from there and say, hey, I was in Berkeley because you haven't said 100 % of the story, but from what I picked up, it also sort of happened in Berkeley, right? From what you mentioned. So.
+
+Citizen Web3
+It's interesting, right? There must be something like you say, you know, the thinking and the finance together that goes blooming, brings a flower.
+
+Daniel 
+Plus the fact that it's just outside San Francisco. I mean, it's also got the VC funding element, the startup element. So I think it's just like a sort of culmination of all of that.
+
+Citizen Web3 
+It's a perfect combination for a poison. No, I'm joking. I'm joking. He used a better word than me. I'm sorry. Man, like kind of continuing that kind of not, I guess. But you mentioned in the beginning also that you had a confounder and then you guys went separate ways at the beginning. So that's why I'm kind of connected to Berklee. I can connect to this very much because all the listeners who are with us.
+
+Daniel 
+Yeah, yeah.
+
+Citizen Web3 
+from the beginning to anybody who follows our project since before it was called Citizen Reptory knows that there was another founder. And I actually used to say, I'm the co -founder. I'm not the founder because there was a girl who had the initial idea of, of, back then it was just the podcast and some of the validator ideas and some other ideas. But, you know, I understand how difficult it can be anyways. I don't want to steal, steal the blanket here, but what was.
+
+Like because I want to ask you about your story with 42 and about how you manage it. But before I want to get there, like talk me a little bit about not just me personally, but maybe your experience of somebody who obviously, you know, sees a vision of what they want to do because I can definitely read that. At least I don't know if I'm wrong, but I'm sorry.
+
+Daniel 
+Mm -hmm.
+
+Citizen Web3 
+You know, losing on the way, a big important part, at least I know for me personally, when I have a plan and then something goes wrong, I can get like, yeah, like how do you manage that? How you lose a co -founder and then go on and then, then still build your project. And, you know, yeah.
+
+Daniel 
+Yeah, that's a good question. It's definitely hard, for sure. I think the first year of building 42 was extremely difficult. I think that was, I was actually speaking with a friend today about it and sort of, he's also a startup founder and we're saying the first year is just so hard because what you're doing really is you're like, you're trying to make sense of chaos. There's just like,
+
+you have like this little seedling idea kind of thing and the rest is just chaos and you're trying to grow your seed and like, just avoid getting destroyed by any factor that it can get destroyed by. So, yeah, the first, the first year was, was really hard and it definitely took a toll on me. however, like how did I manage to survive? I guess just like, just consistency, like just keeping to what I say and just like,
+
+always getting up in the morning and trying to make the seed flourish. And there were days where you're like, damn, the seed's going to die. And, and I guess, I guess using that as fuel to, to not let it, I think something else that like, that, resonates with me a lot is, like listening, I listened to some Paul Graham from why I combine a podcast or like, it was like a summary of his essays once. And it was just like, if you're an early stage startup founder, it is hard. Like.
+
+You're not alone. It's like, it's supposed to be hard and acknowledging that kind of helps to a large degree too. You're like, okay, well, this isn't weird. This is just normal for the stage that I'm in. So, so yeah, I think, I think that helps a large degree. I think, being process orientated instead of outcome orientated also helps like just understanding that. That we're going through a process, like don't worry if this thing succeeds. Yes, we want it to succeed, but if you look at the statistics, it's like,
+
+I don't know, maybe it's like 90 % or whatever first time founders fail. And then it drops every time, like 50 % of second time founders fail 30 % of third time founders fail. So it's just like, cool. This is my first startup. I'm fighting the odds here. You know, let's give it my best bash and, but focus on the process, focus on, on the learnings. And then I think one like tangent, which, of pro being process focus, which helped a lot in the second year was,
+
+Daniel
+starting to have fun. Like I think after about a year of running the start up, I think I was a time where I was like almost depressed, like, and not emotionally depressed. Like I could always wake up and get my day going, but like I could feel like in my body, like my body was weak and heavy. And, and then I reached a turning point after a year where I literally just had like a full attitude adjustment. I was like, just have fun. Like two.
+
+What is the most fun thing you can do with this business? And, and just treating it like a game really, really helped like, yeah. And, and, and I guess that that deals a lot with being process oriented, just having fun in the process and not taking it too seriously. And obviously you need to take it seriously. You need to take it seriously, but also have fun.
+
+Citizen Web3 
+You kind of answered my -
+
+Citizen Web3 
+You kind of reading twice into what I was going to say now with the comments. So one was about, of course, I was going to ask you what helps you to be process oriented. And you said being fun. And the second part was that, well, it's not the first time I hear it. And as a founder, as a founder with some years of experience, I understand what you say, but like, I must say like, well.
+
+Daniel 
+Yeah.
+
+Citizen Web3
+Yeah, the question is there, but I cannot ask it because I'm trying to put together like, OK, imagine you're a founder, theoretical founder, and then you have your project and you say don't be result -oriented, be process -oriented, if I'm correct. But when you're seeing things crumble in front of you and you're like, but...
+
+Citizen Web3 
+How can I remain process -orientated? If, if how can you have fun? This is the question. How can you have fun? How can one remain process -orientated when, when, when, you know, you know, that man, when the dog sits and like, it's fine. And everything else is burning. So how do you become the dog with the cup of coffee saying it's fine? You know, how does it happen?
+
+Daniel 
+I think you just have to have a good attitude. I think you've born with it. I don't know. No, it's like I tweeted, I think I tweeted once, like probably in the first year. I'm just remembering this. I think I tweeted something like, like being a founder is so stressful that all you can do is laugh. Like, cause that's the truth. It's like everything is just a mess and just like find humor in it. So I don't know.
+
+Citizen Web3 
+Okay.
+
+Daniel 
+The other side of it is like, generally in my life, and this is what I say to some people, and I'm trying to work on this theory for myself, is I get stressed, okay? Like whether that was studying for an exam or doing a project or working on 42, trying to hit some deadline or whatever it is, I get super stressed, but I always do what I need to do in the end. I've never failed an exam. I always, maybe the deadline gets pushed back a day or two or whatever, but like,
+
+There's never been a time where I've meaningfully missed my target of what I aim to do. Now I get super stressed in that process. And oftentimes I can, and I think a lot of people do this is procrastinate until you're under extreme pressure and then all of a sudden perform, perform, perform. So, but now what I've learned is like, I get super stressed, but I always hit, I always hit the mark most of the time. so now I'm trying to see like, is there a way I can always hit the mark without, with.
+
+avoiding the stress. Like if I start with the end in mind that I will hit the mark, can I just not be stressed? Or is it the stress that actually leads me to hit the mark? I don't know. That's what I'm trying to sort of experiment with. But it definitely is nice to be less straight negatively stressed. Obviously, there's positive stress, which is good, but less negative stress, I would say.
+
+Citizen Web3 
+I had to ask, I mean, you said your personal likes thinking, you know, so I was hoping maybe there was going to be a joke. And actually, it's really good because there is so many. I mean, you mentioned Paul Graham, right? And for me personally, Paul Graham, I don't agree with a lot of things Paul Graham says and I publicly know that he comments me, but I publicly do say that. But, you know, he was for a long time.
+
+Citizen Web3
+an inspiration of a kind, you know, to look and to see, wow, this guy's talking about crypto, you know, like it was 2000, I don't know, 14 or 13 or something like that, right? And it's like, what, what on earth, how, how, yeah, like, yeah. But, you know, and, and, and, you know, you mentioned that he had, you know, like, don't be alone. And this is the thing that I guess I'm trying to get the guests to talk about, when they're having those difficulties is to try to share those stories and to say, Hey,
+
+You are not alone. Like you said, you know, like it happens to everybody. You know, we all fuck up. We all try to stay positive instead of focusing on the negative. And I guess this is kind of the reason I'm asking those questions is, is this for you to share that in hope that somebody who hears it and is in a fuck up state can hear it and say, Hey, okay. Well, Daniel said I need to, you know, keep on focusing, you know, say less negative stress, so maybe it will help them. And I really hope it will, you know, at least one person.
+
+Daniel 
+Mm.
+
+Citizen Web3 
+So yeah, that was a terrible.
+
+Daniel 
+It also maybe helps if you believe that we're all in a big simulation.
+
+Citizen Web3 
+I remember very well, this is a new sentence. I stole this, but it's a new sentence I've been started to say. And I started to say, don't forget the documentary from the year 2000. People like what documentary? I'm like the Matrix, man. It was a really good documentary. You should have watched it. It's like, that was not a documentary. yes, it was. Man, what's your goal, personal goal? What's Daniel's goal for 42 money? Because...
+
+Daniel 
+Yeah, that's funny.
+
+Daniel
+Right.
+
+Hmm.
+
+Citizen Web3
+It's a DeFi project, right? If I can describe it like that, right? But you talk a lot about, you're obviously a person who likes to think a lot, you're obviously a person who likes to process things a lot and to try to see different sides of the matter, at least so you come across. And again, I apologize for the assumption here, but I would love to understand, you know, what's your, not but, I don't know why I said but, and I'd love to understand what is your personal goal for Daniel particularly?
+
+Apart from, I guess, self -realization or money, if those two are goals in any way, by doing what you are doing today, is it changing people's perspective on how they think about financial rails, for example, or is there something else there?
+
+Daniel
+Yeah, my, I mean, I'm trying to think how to take this question because there's two ways I can take it. I mean, my, I'll take it quickly in the first direction, but my personal goal, like Daniel self actualization kind of goal. I think that the simple, the simple one is just have fun in what I'm doing. Cause I believe that's what I'm doing my best work. So that's what I love to do. It's like, and I said that already. It's just like, how can I have.
+
+lot of fun building what I'm building. And treating it all like fun, you know, whether that's doing cool stuff in team meetings or positioning the brand in a fun way, you know, it's like, there's so many ways we can have fun if we like think outside of the box. So that's kind of like what I like to be doing. I'd say the bigger goal. And this is, I guess, Daniel's goal, but also the goal of 42 at the same time is,
+
+help people manage their assets better. Like I, that, that, that is the end state of 42, a way that anyone in the world can log in and understand the best, what their assets are firstly, and the best way to manage their assets. I mean, if we look at how that's currently done today, okay. I mean, I, I mentioned my background. I studied finance and accounting. I worked in banking, worked in fintech, did an MBA, worked in VC.
+
+And I still am really bad at managing my assets, you know, nevermind someone who's earning a salary and like doesn't know what, where to put their money or whatever the case to save for a time and or whatever the case, whatever their personal circumstances are. So it's like, how do we, and then if we look at like the sort of options that, that that person may have, or even a person that, that has a little bit of money, but hasn't studied finance, you give your money to a wealth advisor or whatever it is. And there's, I don't know.
+
+how many thousands or millions of financial planners or wealth advisors exist in the world. And I can almost guarantee you that the majority of them are bang average, if not, I mean, obviously, it's not probably a normal distribution, but, but I think there's probably a lot of really, really poor asset managers. And, and that's what we're really trying to solve is like, how can you come to one place?
+
+Daniel 
+and understand your assets. And this is obviously the way we're thinking about it is AI is going to be managing a lot of people's assets in the future. Obviously, it's not as biased, assuming the code is written in the correct way. And it can process way more data than any human can. So it's pretty obvious that AI is going to be managing our assets. Then if you sort of take that a step back,
+
+I'd say that's like the end goal. There's also like a dystopian end goal there where it's just AI versus AI and whose AI is quicker. I think that's too complex for the human brain to really understand at this point in time, some sort of a singularity. But I think, so, fasting forward, I think a somewhat of an end goal is AI. It's just you give your money to an AI and it manages your assets. I think if you present value that, AI is at least going to be saying, these are all of the options that are available to you.
+
+we recommend this one, do you confirm? And you just click confirm. So it's like, that's like sort of the intermediary approach. And then once present value that one step is, as mentioned, like, these are all of the best options available to you, you decide. And that those are sort of the three stages we're going through with 42. It's like, taking all the vast amount of information and presenting that to users in a meaningful way is the first step. The second step will be like,
+
+AI saying, we think that this is the best. And then the last stage would theoretically just be a you give your money to the 42 platform and we through our algorithms make that hopefully manage your assets better. Yeah.
+
+Citizen Web3 
+Not including, you know, automatized tools, but it's ironic, you know, when you talked about people managing assets and people not having enough education maybe on how to manage assets. The irony, the biggest irony there, not in your words, but in the situation is that whenever you read, there is a cool, I think there's a subreddit on Reddit, where, subreddit on Reddit.
+
+They sometimes like have different people who vouch for who they are, like to the admins, you know, they show their real identity or whatever. And then they like, it's kind of an AMA, ask me anything, but more on the financial side. And ironically, the richer the person who comes to that, the richest one I've read was the guy who they claim he's got $125 million to his personal wealth.
+
+You know, ironically, one of the first things they will say, never fucking give your money to somebody else. Not about automatization tools. Automatization tools are something else that helps us to automate it. But they always go, one of the first mistakes of a person who earned, you know, either like 5, 10 salaries or whatever, like, okay, I'm going to go to a broker, give the money to a broker and they know what's best for me, but they don't know what's best for you. I mean, there is an AI, exactly, like AI automatization, take it a step further.
+
+Citizen Web3 
+But this is what I was going to ask you. Do you guys think that even with the automatization tools, which are obviously a completely different thing, they work in a different manner, they think in a different manner, do you still think that, or I don't know if 42 will work in this direction, because humans are different. And what's good for one guy might be really bad for another guy. Will that AI that is going to be...
+
+in it, will it take into account the person's needs or just the size of their portfolio or also their personality? I don't know. I mean, it's a loud, loud word to say, but yeah.
+
+Daniel 
+Hmm.
+
+Daniel 
+Yes. Yeah. So that's the goal is to have it as personalized as possible. We want to understand what each user's risk return profile is and then from there, allocate their funds to the correct place.
+
+Citizen Web3
+That's cool, man. That is very, I think, like what a lot of tools are missing today to become. It's that, it's individuality. Sometimes they assume that it's like school, cut all your imagination off and then hope that you will imagine something. Man, last question before we jump into the bleeds.
+
+Daniel 
+Thank you.
+
+Daniel 
+Yep. Yep.
+
+Citizen Web3
+Since you had quite a road, could you share at least one of each, one recommend or slash to do one, don't recommend slash don't do for people who are starting their journey. I mean, maybe there are people and we had this already before, so I'm hopeful this will happen again. Somebody hopefully is listening thinking, I want to do my own projects. I have everything ready. I'm about to start, and then they...
+
+Come up with this episode and then they come up to an advice, which is something that please do and please do not. I mean, I know it's very difficult, but if you could sort of top of your head, try and.
+
+Daniel 
+Mm.
+
+Daniel 
+So is this for a startup founder? What is it? Just any please do and please do not do for life or what?
+
+Citizen Web3
+I don't know. I want you to... I want you to... No, I want you... No, no, no, no, no. Sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry
+
+Daniel 
+Cool. Yeah.
+
+I would say for a potential startup founder to just start, like I know for me, I want to start a company for so long and I never had the right idea. But meanwhile, I was sitting back watching all these other people with successful companies and being like, how did they get that idea? Like, what is the right idea? Whatever. And I got like just so fed up with just not starting something that I was just like, let's just start.
+
+and see where it goes. I mean, we started 42 with my old co -founder, we were building like a pretty much a convex fork on Evmos, which is like such a little niche, you know, and then a whole variety of things didn't work out there. However, just from like having the conviction in that little niche, we managed to raise a hundred thousand, you know, and then from that we obviously managed to pivot the idea. Now we're like building in a completely another direction.
+
+But the whole trick is to just start. Like, I think there's a lot of people who just like get caught up on is it the right idea or not? And, and just never start. But most likely the idea is going to change a lot during the way. So yeah, the idea really shouldn't matter that much. I guess it just needs to be something you have a fair amount of conviction in. And even if you don't have conviction in it, you can just try and then pivot along the way. So I think that that's.
+
+That's something I would say is a big do. A big don't is.
+
+Daniel 
+I really know. What would I recommend you not do? I'm trying to think if there's like anything around like co -founders and things to avoid there. But like really it's like I just looked at that co -founder situation as like a trial and error. Like we did it didn't work out and that was fine as the founder you just need to continue. But yeah I'd say I'd say just don't I'd say.
+
+Citizen Web3 
+This is a hard one.
+
+Citizen Web3
+You don't have to have a taunt.
+
+Daniel 
+don't break. If you can. Just like, just continue, just continually don't break, you know, that's what it is. It's like resiliency, you know, like if you don't break for long enough, you'll succeed most probably, I think. Like if you break, you can come close to breaking and then if you can like resurrect yourself, you get all these learnings. But yeah, don't break completely.
+
+Citizen Web3 
+Don't break. Don't break. Don't break, guys. Come on. Don't do that. There's a terrible don't. Don't break. I love it. I love it.
+
+Citizen Web3 
+I love it.
+
+Citizen Web3 
+I like it. I like it. Let's do a quick blitz with you. Five questions where you don't have to be super blitzy, but let's try. But you can answer in detail, of course, if you fancy. Give me one book, one movie or one song or that has been throughout your life with you.
+
+Daniel 
+a movie, a book or a song.
+
+Citizen Web3 
+in a good way.
+
+Daniel
+Yeah, I'm trying to think. No, there's definitely some books out there. I mean, something that kind of stood with me for quite a long time was I once read this book called Wink and Grow Rich, which is like, I guess, a parody on Napoleon Hill's Think and Grow Rich. And I actually just found this book by chance and like I was at a meditation retreat in Bali when I was like 20.
+
+22 or something. And I just saw this book on the shelf. And it sort of it was a little parable about just like life really. And there was this guy who was building these, these money taps. And essentially, you saw the money coming out of the drain, out of the tap down the drain. And then he built it like a way for the money to not flow down the drain, but to flow up again into the same tap. And then through that you were recycling money and learning and that was the difference between
+
+spending money and investing money. So the invested money keeps showing returns and you built out more taps. And then essentially the money was that was being invested, allowed more money to flow and you could spend money and invest money. But then the same was true of time. So then he dropped these time taps where you had things that we spend time and ways of investing time and through obviously we all spend time in certain ways. But we also invest time which is like which creates more time in the future.
+
+And that kind of, that was that always stuck with me to a large degree. How do we invest time? Yeah. Yeah.
+
+Citizen Web3 
+I really like it actually. I like that with the taps. I mean, it seems on top of there, but I never would have thought about that example. Number two and three are going to be easy. Those are the two easy questions. So number two, give me one technological direction, for example, such as blockchain, but of course not that. And AI, that's another one that you cannot say no, that you have an interest in apart from blockchain and AI.
+
+Daniel
+Yeah.
+
+Daniel
+Okay, cool.
+
+Daniel 
+So sorry, you said a topic that...
+
+Citizen Web3
+Yeah, yeah, like technological direction, like let's say machine engineering, I don't know, machine learning blockchain, something that you're curious in. But apart from blockchain and machine learning.
+ 
+Daniel 
+Yeah, like I always say, like, if I wasn't in crypto, something that I would love to try and build is sort of at the intersection of AR VR and like, and experiences. So like ways of like, achieving like a meditative state or through through like sound and visuals. And like, how does that affect your brain waves to enhance different states? That's something that I'm kind of interested in.
+
+Citizen Web3 
+This is actually very interesting. It is a completely different topic, but I've seen a crazy device like that once in Chaos Communication Congress, but it wasn't what you're saying, but it was similar. Yeah, crazy stuff. What about one of, please don't say Bitcoin, Ethereum or Cosmos. Give me one blockchain project that you have an interest in. People probably haven't heard about. Or maybe they have, but it's not.
+
+Bitcoin or Ethereum or Polkadot or Cosmos.
+
+Daniel 
+Maybe Morpheus AI, which is pretty cool. It's also a way of creating AI agents on chain.
+
+Citizen Web3 
+Okay, two more. Those two are a bit obscure, but still the first one is easier. Give me one motivational thing that keeps Daniel every day out of bed, not failing, doing better, doing the new financial rail, something motivational that you could share, of course.
+
+Daniel
+Thank you.
+
+Daniel
+I want to say have fun. I know I've mentioned that a lot of times, but it's kind of true. It's a good one.
+
+Citizen Web3 
+What's a good one. It's a good one. Okay. Okay. Last one then this one is going to be a bit more obscure and I promise that they're done. give me one person or character real made up could be a GitHub developer, could be a writer, could be somebody from your family, could be a cartoon character that isn't a guru because I'm personally don't believe in gurus, but is positive inspiration for you.
+
+Daniel 
+Nalsamandala.
+
+Citizen Web3
+Wow. Okay, unexpected. Unexpected. At least give me one sentence explanation. Come on. Come on. Why?
+
+Daniel 
+Okay, unexpected.
+
+Daniel 
+I guess just so thoughtful, noble, principled. And I mean, he was arrested for 27 years and came out and then liberated a country instead of holding grudge, which...
+
+Citizen Web3 
+Daniel, thank you very much. This was a huge pleasure. I'm going to keep an eye on obviously 42Money and see how you guys progress. And hopefully, thank you for finding the time and answering my questions.
+
+Daniel
+Thank you, Serge. It was great. I love these questions. And thank you to the... Yeah, thank you. I was going to say the same thing. Thank you to the community. Thanks for listening.
+
+Citizen Web3
+Thank you. And thank you everybody.
+
+Citizen Web3 
+We did it. We did it. Okay. Please don't hang up just yet. This is just bye for the recording. Again, guys, bye and see you or hear you or listen to you next time. Okay, guys. Bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+
