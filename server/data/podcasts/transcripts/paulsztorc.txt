@@ -1,0 +1,465 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/paulsztorc
+
+Episode name:
+Fiat, Markets and The Titanic with Paul Sztorc
+
+Citizen Web3 
+Hey everyone, welcome to a new episode of the Citizen WebTree Podcast. Today I have Paul from Lair 2 Labs with me and really glad and excited to hear what Paul has to share with us. So Paul, hi, welcome to the show.
+
+Paul Sztorc 
+Hey, thanks for having me.
+
+Citizen Web3 
+Yeah, very glad. Can I? Well, you I'm personally glad to have you on and ask you some questions that are probably related to your work to Bitcoin and such. But apart from that, you know, you already recommended by a couple of guests ahead on. can't wait to to. Yeah. So you have hi. you see. Well, at least Vlad, at least Vlad, at least Vlad. And I had a couple of my guests in the past.
+
+Paul Sztorc
+Wow, really? Who recommended me?
+
+Citizen Web3
+year so that have mentioned your name, but it got to Bitcoin. So we're going to put the spotlight on you, Paul. Sorry, I'm joking. I'm joking. Paul, before I kick off and start to annoy you with all my questions, could you, for me, for the listeners, do like a brief intro of yourself, your work and how did you get into Web3?
+
+Paul Sztorc
+Okay, great.
+
+Paul Sztorc 
+Well, I've been in Bitcoin for a long time. I started this company, Lair Two Labs. The idea behind Lair Two Labs is that eventually one coin will be able to do everything and that coin is going to win. And so I am a sort of a Bitcoin maximalist in a way.
+
+In the sense that I think only one coin will win. I mean, I certainly hope it's Bitcoin. I think if Bitcoin drops the ball on on on features and on competitiveness, it will be something else. But whatever that is, I think it will eventually displace all the other crypto coins and it will then start taking over the worst fiat currencies and then eventually it will just take everything over. So I do believe in that that maximalist logic. That was the old maximalist logic. So I come from like kind of an even an earlier era.
+
+And I champion this idea that the side chain or now I call it the drive chain. And that is basically the idea that you have one coin, but it can travel to completely different pieces of software. And so now the software can be any shape or size, just like you could have any app on your, on your phone or on your desktop computer. and so these would be like alt coins in that they are completely different software, but they, but they're unlike alt coins in that there's no coin.
+
+For each thing, they're all managing the same 21 million Bitcoin in this. So that's what the company is about. That's sort of what I'm about. The company, Layer 2 Labs, we started it basically December. We were almost at the end of the second year. So we've been a year and a little. we have produced, we have a test network with fake Bitcoin, but it's
+
+Exactly resembles the real Bitcoin network and on that network you can send the coins to like a clone of a Zcash and you can get Privacy there or you can send it to a clone of aetherium and do EVM smart contracts there and you can send them to You know a large block version is of course this famous block size dispute in Bitcoin So I I see myself as kind of almost transcending web 3 or maybe just zoomed out a little where I Think people should be able to do whatever they want, you
+
+Paul Sztorc
+Web3 or large blocks or whatever is he kiss narc privacy? So that's kind of what? The the sidechain drive chain layer to labs Paul stores ideas about this idea of tolerance among all these different pieces of software to Unite everyone behind, know, the winning coin and that's sort of So that should probably be enough of an intro to get I mean, but have all these website drive chain that info layer to labs comm truth coin dot info
+
+Citizen Web3
+I'm going to dig a little bit because you spoke about, I have some questions for you with regards to the beeps that you authored and the Bitcoin improvement protocols, of course. And I have some questions with regards. But if you don't mind, before we go there, because like I said to you before I hit the record button, then the show is mostly about the person rather than what they do.
+
+Paul Sztorc 
+Yeah.
+
+Paul Sztorc 
+Yes, yes, and I authored bips 300 and 301
+
+Citizen Web3
+You know, we all are humans that choose, you know, some path in our lives. You know, somebody chooses, you know, to go fight for the army, you know, go, go be religious, you know, go rebuild blockchains, you know, whatever, you know, fight the banks. It doesn't matter. We all choose. And I want to talk a little bit about Paul, you know, before, not to get deep private, of course, but whatever, like you can share about what you did before 42 labs. What did you do before blockchain? Why did you get drawn to
+
+Paul Sztorc 
+Mm
+
+Citizen Web3 
+working with Bitcoin or trying to unite people over the idea that you just told me about what was what's driving you.
+
+Paul Sztorc
+Yeah, I think one thing that is pretty clear is you can look at like, you know, East Germany versus West Germany, North Korea versus South Korea, and you can just read about, could read like Gulag Archipelago versus like, you know, the Great Gatsby or something. You know, can compare these worlds that were, the worlds are nothing, they're nothing alike at all. And one world is like hell on earth. And the other world is not so bad.
+
+You can think like every problem that anyone has ever faced like some people struggle so much with some problem and if they just had You know penicillin or if they just had toothpaste or if they just knew they just knew a little bit more about You know, psychology or you know like People get defensive we have certain phrases that do a lot of work, you know Just because our culture has accumulated all this knowledge
+
+We know how to deal with when people feel shy or something. for a long time, people didn't have any of this knowledge. They didn't have knowledge about how to build roads or get food. And so I think that's the number one thing. And you think, well, OK, if people cooperate, people can work together. That is a huge upgrade. And that's what things like money do and things like law, things like culture. And so
+
+I just think the internet, the computer, it can give us knowledge, it can protect our rights. It's very, the idea that you could just have all of your money in a 12 word seed phrase and memorize it and then just walk across the border. We want to increase the competitiveness of governments and corporations. We want everyone to be competing for us. So that's big. For me, I'm also very interested in this idea of the prediction market that I championed.
+
+for really long time, but even in terms of blockchain prediction markets like Polymarket, I was writing about doing that on Bitcoin in 2012 and 2013. And I produced software for that and I produced research papers about that. So I'm very interested in that. And that is what drew me into this Blockstream sidechain idea back in 2014. And then they sort of they dropped the ball on that and didn't do it and never released anything useful for that. So I had to do it myself.
+
+Paul Sztorc 
+So that maybe gives you some idea of like, just think, just imagine any problem you've ever had, everyone who's ever, you know, weeped for a dying loved one or been confused about how to handle like a relationship problem or a health problem or just bored or annoyed. And all those problems would be solved if we just had more knowledge, more human capital, more resources and
+
+That's, know, it's like Hong Kong versus mainland China. It's like, we know the formula is freedom, consent, innovation.
+
+Citizen Web3 
+Do you think you think it would help to solve all the world's problem? I'm going to be a bit devil's advocate here. I'm to be a lot devil's advocate in this question. I have to warn you in advance. And you think that it would help to solve the world's problem if America stopped spending one trillion US dollars on the defense budget and the army budget every year? To start with would be a good good start. I think I think I think I think it's way too fucking high. I think it's I think I got to be honest. I got to
+
+Paul Sztorc
+I don't know why you would single that one out. I mean, you think that's too low or too high?
+
+It is pretty high, isn't it? But I bet that it's very low compared to other things. It's not, you know, isn't it like one quarter or something of the federal budget to say nothing of the state and local.
+
+Citizen Web3
+Fuck the federal budget. It's the fact that, you know, what I see, you know, I'm going to try, I'm going to those advocates. So I'm pretty much the same length as you in this industry since 2011, 2012, roughly when I came in. you know, I've been long through all of this, you know, like, okay, we struggle. What I came to realize and what I'm kind of like to want to ask you is that
+
+You know, no matter how and what we do, there is a problem with humans. That's what I came to realize. It's not the problem with technology. It's not a problem with, I don't know, anything else. Money. Well, there is a problem with money. There is a problem with technology. There's a problem with a lot of things. Problem with the government. But at the end of the day, there is a problem with greed and lack of responsibility. And, you know, at the end of the day, when humans care well,
+
+We're going to solve all the world's problem by fixing one, two, three. Why not start with the simple things? Why not start with the simple things? Like we know that wasting a trillion dollars on the state budget, you know, will probably, if it was directed somewhere else, like towards space exploration, probably would have helped a lot already, but it's not. So what I'm trying to ask you is, do you think that, you know, by fixing technology or fixing the unbanked system or bank system, whatever you believe in,
+
+We will manage to solve human greed and the lack of responsibility that humans take.
+
+Paul Sztorc
+No, but that's not really the criterion, is it? I mean, we will never reach a state where we have solved every problem. But that doesn't mean that we like we're climbing the ladder. You know what I mean? Like we start where we're all ignorant subsistence farmers, you know, on day one, the species was in a horrible state. And in fact, in fact, I think a lot of people think that the human race almost went extinct several times and even went down to like maybe 400 people or something.
+
+at one point because there's just not enough genetic variation and some I'm not sure if that's true, but something like almost every and all of their cousin and sister species of Homo sapiens all went extinct, you know, so That was pretty bleak outlook on day one And now people have different problem. They have like the first word
+
+world problems like what do i watch on netflix or or people someone somewhere is being greedy like what you're saying or that the defense budget is you know one trillion like it's the first word world problem and in the future we can only hope that the problems they solve are are different than maybe more about like art or like what planet what colors and planet should be when they create it out of out of space matter they dig out of the sun or something so
+
+We have what we all and people always disagree about what to do next. I think that is also. Just normal and that that fact, I think we should all accept. That we will always disagree, but again, that doesn't mean that we're not. That doesn't mean that we should go back to the Aztecs and say we need more rain, so we should just with what they would do is they would chain a bunch of children together. They smashed like iron hooks into their.
+
+faces and chain them all together and then drag them up the pyramid and and and got them all and killed all this and that's what they would do to bring them to being to bring rain to the to the bring rain to the farmers whereas today we have pipes
+
+Citizen Web3
+Unfortunately, it didn't.
+
+Citizen Web3 
+Well, the Nazis, you know, were doing like what I'm trying to say is that, know, we didn't change the society much because, you know, slavery, Holocaust, those things were legal, you know, so like what I'm trying to say here.
+
+Paul Sztorc 
+Yes, but you wouldn't say that we haven't, I people's attitude towards, for example, I mean, I was about to say the Jews, I was about to the Jews. But distressingly, there has been a bizarre rise of antisemitism recently, which is distressing and bizarre. But I do think what's unusual is that it is met, I mean, certainly if you go back 200 years.
+
+Citizen Web3
+The Holocaust? The Holocaust?
+
+Citizen Web3 
+The heads. The heads.
+
+Paul Sztorc 
+This type of thing would happen all the time and everyone would just look the other way and just be like, well, whatever, they're probably up to something. Whereas today more people do. I know it is. It is. I was very surprised by that, but I don't think that actually when push comes to shove normal people in America and even people who are going to vote based on this issue, I don't think those people look at the. The students protesting for hermass and say, I'm going to vote for that. think they will just quietly ignore that and then they will vote against it.
+
+Citizen Web3
+What's happening today?
+
+Paul Sztorc
+So there will be no actual change in the official policy of the 1 trillion defense budget that to uphold basic Western values and like anti -terrorism and anti like just like complaining about a country existing and it's like So I don't think that that but but yeah, that is that is a weird thing mostly the I We have made enormous moral progress I think you know and people don't put up with
+
+things that would have been common. Even things like bullying or like parents beating their children. Many of these things, the opposite positions were taken for granted. You know, the idea that you could just kill all the Jewish people was that was normal part of life in Europe for a very long time. Now that is, that would be considered grotesque. It is true that some, I don't understand why there is a subculture that has moved.
+
+Citizen Web3
+It's not so much.
+
+Paul Sztorc 
+Extremely in the other direction, but my guess is that it's because that subculture is so defective and irrational that people have just they stop trying to reason with it and so actually That's their own problem. And I think If when push comes to shove the they will have wished that they were more open -minded, let's say
+
+Citizen Web3 
+I guess that what I was referring to wasn't so much, even though the anti -Semitism, of course, I haven't served once upon a time in the Israeli army many years ago. It is kind of close to me, but I'm not that kind of person. I think it was a mistake what I did. But what I was referring to more was that for the last 100 or so years, for example, I forget the word all the time. It's on Wikipedia. It's a German word, a very long one, one of those like 30 letters words, a phenomenon.
+
+Paul Sztorc 
+Yes. What is it about?
+
+Citizen Web3 
+which means, we, I'm going to explain what it is. cannot remember the word. Basically what it means that, you know, as for the last hundred years, we are aware as, as a first, know, as a, let's say white dominant society, are aware of roughly 1 billion people, 1 billion. That's roughly today still, 15 or so, 17 % of the world population dying yearly of five illnesses. is hepatitis B, hepatitis C, malaria.
+
+Paul Sztorc
+Mm
+
+Citizen Web3
+Tuberculosis and something else the cure to each one of those per person is roughly two dollars per year per person now per illness So let's say ten dollars per person per year So that is a lot less than a fucking trillion dollars what I'm trying to say the problems that we are having in the world are not the problems of the first world countries those are the problems that we choose as first world countries to close our eyes to whatever the fuck is happening around us single out a few problems and say well
+
+Paul Sztorc 
+This is
+
+Paul Sztorc 
+Yes.
+
+Citizen Web3 
+Those are all big issues, but let's not look at the big things like that's happening, like 15 % of the world population dying per year, because we decide to build a tank or a plane, you know, so.
+
+Paul Sztorc 
+Let me go back to your earlier like cuz you asked like a big question about I Say I'm gonna solve all these problems. I What I don't say is I'm gonna solve all the problems. I'm just trying to say listen. I'm alive right now I look around what problems do I think here's a list of the problems. I think I can solve Sort that list by importance. Okay. This is the most important problem. I think I could maybe help solve. Okay, I'll do that That's that's pretty reasonable. I think that
+
+We were talking about like whenever gonna solve all the problems that the list will keep going, you know, and That's sort of a good thing because I'm not sure what would exactly happen like what it would mean if we hadn't reached a perfectible state I don't know like that would be I That would almost be its own problem because then it would be like confusing as to like we would That would have some mysteries which you could call problems. So just we're gonna have that for now
+
+Citizen Web3
+go back to that.
+
+Citizen Web3 
+sure I agree no not for sure I
+
+Paul Sztorc 
+Now you have this assertion that the trillion dollars we spend on defense is spent mistakenly. But I think no one really knows if that is correct. Neither you or I really know. We don't know. Maybe things would be way, way worse. know what I mean? Maybe the US, let's say that number was zero instead. And then we could have many authoritarian regimes around the world taking over their neighbors. They are inherently
+
+Citizen Web3
+you
+
+Paul Sztorc 
+If the authoritarians cannot grow as quickly as the free country, so their only option to stay where they are is to expand and sort of Coerce people
+
+Citizen Web3
+I do agree with you that solving all the world's issues is definitely not on the agenda. Here I agree with you. So I'm going to go a little bit back and then ask you about one of
+
+Paul Sztorc 
+One reason I'm interested in prediction markets is because we could make these contracts so we could improve the rational discourse on whether or not one trillion is the right number. You make a special type of contract that I have tried to popularize. It was invented by Robin Hansen, but I tried to popularize it with, and I think I succeeded somewhat, a Vitalik -bauded hook line and Sinker and the Ethereum community knows a little bit about it.
+
+Multi -dimensional prediction markets you say okay if we increase defense spending what will happen to something else like the value of all the land or the life expectancy of the earth or something so you can then maybe start to get a Handle on what you might think when it's like a thermostat you think maybe we've gone too far this we're hitting diminishing returns or hitting negative returns things are getting worse we spend more in this things get worse and More even more to the point
+
+The prediction market gives everyone the same set of prices. So this is at least the beginnings of how to convince everyone else. You've learned the truth. we're spending too much on X Y Z. But now you have to convince everyone else, but prediction markets solve both problems. They also have a superior ability to scale a conversation scales. and squared. doesn't scale very well. You have to have a conversation with each person has to talk to everyone else. That doesn't work. And then you have things like this show, which is like a
+
+Like a podcast type show where you have media elites or get a reputation like Joe Rogan. But even that scales what you might call like log N times N or something. You have a few competing elites and then they choose who to interview and they choose who to believe. The prediction market, the more people involved, the more liquidity the market has, the more accurate it is and the more people who.
+
+are convinced ultimately by this. So it's a superior idea that it actually works better the more people are involved. So in a world of eight billion people. So you may be right about the defense budget being wrong and maybe it should be spent on hepatitis B. One thing to think about is it's true that it's probably true that everything you've said about a lot of people die of hepatitis B, hepatitis B cure is very cheap, less than $2.
+
+Citizen Web3
+Absolutely.
+
+Paul Sztorc
+But that doesn't necessarily mean that we could save those people's lives for $2. There's a lot of other missing pieces of distributing and administering the medicine. And maybe if you give them that, they die from hunger four weeks later. I don't know the facts, but I do think it's kind of implausible, right? Because people prefer being alive. The parents prefer having their children be alive. And if it were really the case, you would think that there would be some kind of ability.
+
+some kind of deal that people could cut if it was just this one two dollar thing a single time you would think that it would but then oftentimes you investigate these matters and it is a Different story for example, we already produce enough food to feed everyone many people die of starvation But this is because of the logistics of the last mile problem It's very easy to get the food almost anywhere but to get it the very last mile if there's no roads and there's no
+
+police and there's no safety and there's no electricity, there's no gas stations, it just can't get there. So I think it's not always obvious what's best for everyone. That's certainly something people disagree about.
+
+Citizen Web3 
+I am definitely going to move to prediction markets because we seem, definitely disagree with what you say here. So let me move a little bit to prediction markets there, but it's good to disagree. I think that, you know, trying to, think alternatives is definitely why, for example, this industry attracts a lot of smart people. In my opinion is, being able to see the amount of alternatives and hear them and then make your own decision for whatever information you think is.
+
+Paul Sztorc 
+Okay, great.
+
+Citizen Web3 
+is right now about prediction markets. like for all the listeners, definitely guys, please check the show notes. If you haven't familiar with the BIP 300 or BIP 301, you will find links and read about them. And some of them happened a while ago. So we're talking 17, 19, if I'm not mistaken. But it's interesting prediction markets, because in my opinion, oracles and prediction markets, I myself wrote a piece about the same time, roughly 1017, 18.
+
+And on that, on the fact that in my opinion, prediction markets are actually the sort of cleanest example of a P2P communication without having, you know, any, else in between, because technically anything can be a prediction market. Now has, has what can you, for the listeners and for myself in your own two words, like just, I mean, you talked about a prediction market and what, how it can be beneficial.
+
+How is that idea currently, since you have came up with it, implemented or not implemented into the Bitcoin protocol and what is happening with it?
+
+Paul Sztorc 
+Yeah, these are very different issues of like I champion this idea that prediction market in abstract and I think it's the best thing since you know, basically I think to me it's like the printing press It's like writing. It's like spoken language writing the printing press the internet like prediction markets So I think like this is like the next big media thing that's very different conversation from How is it actually implemented in our current industry and like what what changes would I make?
+
+What I've decided to do, I have made lots of presentations about this topic. And a lot of people have had some success doing something that I advocated. I'm not saying that they got the idea from me. But in the past, I said we should have completely decentralized blockchain prediction markets on Bitcoin. said that like 2012, 2013. But I also said we should have like, someone can kind of cut the corner of the oracle and just
+
+And they can create I actually told many times we should have like oracle .bitcoin .com or something like that There was this project reality keys by Edmund Edgar and so things so I think You could cut the corners and just start doing it to just get the word out there about this Institution and some people have have done that including I guess polymarket would now be the sort of the bigger one I have a different conception of
+
+how to make this idea work having seen countless ideas fail. And I even wrote like a little paper like the graveyard of prediction markets or something because this idea is tried very often and then it fails. And I have just a huge like amount of like background knowledge and like notes about that. You can go to bitcoinhivemind .com which is like my site and I have like a lot of papers there.
+
+And so what I kind of feel like I want to do now is just build the software exactly the way that I think it should look and operate and then try that because I had mixed results in explaining what to do with other people. But I realize it's not a great answer for anyone who's listening. I'll just be kind of confused by that. some things that are under emphasized are the multi -dimensional markets are they are confusing, but I think people will figure them out. And when they do figure them out, they will.
+
+Paul Sztorc 
+They will like them a lot. For example, they allow you to bet in US dollar terms or in ETH terms or in BTC terms. can just switch by adding that as a dimension to the markets. that would be big. the other thing is with the market scoring rules that people have started to use, again, after I suggested this, Robin Hansen invented this thing, logarithmic market scoring rule. And then it sort of passed into the Ethereum community.
+
+These allow you to just stack all these dimensions together without losing any liquidity. So the user experience can be made to not even notice that these are there. And now you can bet on all kinds of combinations of events. So the idea of this is like, does, is one event related to another event? You say, well, actually if, if what in America, if the, if Donald Trump is elected or if the red team, if the Republican party is elected, will the price of Bitcoin go up?
+
+Relative to the Democratic Party and you just see at a glance you can just see you don't there's no longer a need to debate or You just say okay. Well if I vote This way that would be better for the Bitcoin investment. What will be better for the stock market? What will be better for the? You know anything else that you can measure it doesn't have to be financial So these that that's the key another thing That is related to that is the idea of liquidity. This is always killing the prediction markets, but it's actually easy to convert the
+
+liquidity problem into just Something of just lacking money and then it's very easy to solve with a different Thing I realize this is kind of not a great explanation But that's part of why I think I can just need to make the software as a kind of a demonstration Yeah
+
+Citizen Web3
+No, it's good. It's good. It's good. It's good. I think that, you know, for people who are not familiar with it, what you're explaining will help. And then of course, if anybody wants to check it out, they just go and follow the links, like I said, and read the story because, mean, there is a lot of implementations of oracles and prediction markets and not just on Ethereum, but on various ecosystems and outside of blockchain as well. So I definitely highly suggest.
+
+Paul Sztorc
+Yes.
+
+Citizen Web3 
+for people who are listening to this and curious, please go and check it out. I have different question for you about L2s now. Being sort of a champion in one of the initial ideas of L2, guess, or from, I can see how from what you have been saying long time ago, some of those L2 ideas could have came up. And today, like I'm gonna again, once again, be devil's advocate here, but I want to hear your opinion.
+
+Paul Sztorc 
+Mm
+
+Citizen Web3 
+Like, know, L2s have been around around Bitcoin, especially for a long time with Lightning Network is most famous one. And now I don't know how whoever is listening to this thing, what would they think about Adam Buck? Unfortunately, well, you know, fuck it's in the eyes. It's a centralized piece of shit software today, at least semi centralized, you know, with the the with the that hasn't really.
+
+Paul Sztorc 
+Yes.
+
+Citizen Web3
+done what it's set out to do. And the same goes for Ethereum. have like, we have, they, we, whatever you want to say. There is about 70 L2s now on Ethereum or something like this. It's ridiculous as fuck. So the question is like, the whole L2 thing, how do users choose, do they just follow the same rules as with L1s? Like go by the longest chain and see.
+
+Paul Sztorc 
+Yes.
+
+Citizen Web3
+which L2 generates more, I don't know, revenue or more volume or whatever. How do users understand that L2 is good to use? And if there is many, how do they decide which one is better for them or will keep their money safe?
+
+Paul Sztorc 
+Mm
+
+Paul Sztorc 
+Yes, well, of course the idea of the layer two goes back to this model of the internet where there's like the data, there's like layers where there's like physical layer, like a wire is plugged in, like the ethernet cables are connecting the two computers. then there's like eventually, so these layers, it's like you start electricity flowing, there's their data going back and forth. Then there's like connection, like like two computers, like you and I, our computers are connected.
+
+not directly or connected very indirectly, but the whole premise of the internet, of the packet switching is that you and I have a connection that will survive even if many of the routes along the way get interrupted, someone shuts the computer off. We don't even notice because the packets are streaming across. So the idea is that the internet scales in these layers and that Bitcoin can only do seven transactions per second. Everyone needs to have all the blocks and the entire history.
+
+So that's not ideal at all. That is Will only be one layer and then we'll have a layer above it's called layer two But really of course it would be like layer like whatever like 18 or something and the whole the whole scheme of it just Everything in the world is built at layer. So that's just the layers story If in the abstract but specifically many of the layer twos are
+
+Today are they're just not very good. So just because something's a layer two doesn't mean it's good like if you go to a bar and you order a drink you order a few drinks you have a bar tab They keep track and then they don't charge you don't charge your card until the end That's kind of a layer two, but you can see that that is something of it's sort of a cheating. You know, it's like It's just assuming
+
+It sort of spoils the problem in a way. says, how do we, well, we'll just have one guy do it. know, have one guy just keep track of it all. And then whatever he says goes, right? Or if you just run out the door and call the credit card company and say that my card was stolen, then they'll, so many of these L2s are something like that, where it's just the money all goes to one person or a small tisig, which is a,
+
+Paul Sztorc
+Fancy way of saying one person in practice because it's just like one organization of people. So they'd say that this matters, but in reality it makes no real difference. the average person has no idea how these keys got to people they don't know. Just key ceremony, no one knows, no one cares. So just because something is in L2 doesn't mean that it is a good design. My view is actually that almost all the L2's designs will also be
+
+will also fail and be deleted and only one or two will actually remain in use. And this is actually kind of similar to how in the internet stack, you know, you could have, we have different things, like we have wifi in addition to ethernet cable, and it is possible to have other cables, know, coaxial cable type of a thing. But really there are only so many.
+
+You know, there's really, it's not like there's like 50 different ethernet cables, you know, at different types of different shapes and have different plugs. Really it's like one idea is just the best for that layer and it will win and the others will lose. And I think in particular, any idea that does not pass its fees down faithfully to the L1 miners will probably lose. So that would include all the centralized ones unless they have some kind of way of tallying, you know, and,
+
+Reporting faithfully and guaranteeing that they will report, you know It's like is it if is if the bartender is gonna keep track and say to visa Listen this was actually eight purchases not one. So I'm gonna pay you eight times as much fees, know, and it's just on the honor system like so I don't think that's gonna work and The things like lightning liquid liquid the fees actually go to a wallet controlled by blockstream. So they
+
+As it's currently set up, they pay 0 % of the fees. It's a Lightning Network, as it's currently set up, pays 0 % of the fees. When people join and leave the L2 and they lift or fall, they sometimes call peg in, peg out, but that's awkward. I think lift to the L2 or fall from the, withdraw from the L2 back to the L1, that they pay the L1 fee, but that's because those events happen on L1. So I think what we need is the L2 that pays, it's incentive compatible.
+
+Paul Sztorc
+Because then the miners will be cheering it on. They know that they'll make more money when the L2 is more successful. I think those are the ones that are viable, including the drive chain at BIP 300, 301. So that's what I think actually will win. And I think all these other L2 designs will probably not survive. They're not a label they're including the Lightning Network. think the Lightning Network, we've seen, it always had a lot of theoretical questions, but now,
+
+Citizen Web3
+Makes sense.
+
+Paul Sztorc 
+We have seen like the many of these problems have come to light and then many of the centralized the fake custodial lightning, which is fake lightning. It's not real. It's not it doesn't have Bitcoin actually or lightning at all. It's just a Front -end interface for like a server. It's like the bar tab and extremists And some of those like wallets to toshi got pulled from the app store. So they those have just been killed
+
+So I think that there will be more death in the L2 space and I'll just be... So yes, I think they'll all be gone. I think there will just be one model that survives eventually.
+
+Citizen Web3 
+I saw
+
+Citizen Web3
+I saw yesterday, I think on Twitter. I'm it was yesterday. So today just again for the listeners, like it was 16, 15 of December, September when I saw this on Twitter. And what do you think about what I saw was the first, at least, okay, this is the advertisement. I have to say I didn't go and check like, you know, the documents or the website even I just saw this tweet of big account, the first layer three for Bitcoin and they were deadly serious. These guys were like, you know,
+
+We are, what do you think of that? Do you think it's viable in the future or you think those ideas of layer 3, 4, 27 is already like,
+
+Paul Sztorc 
+No, of course, there will be it's it's trivial to add the layers actually, but they have to be good. So that's sort of what I was trying to emphasize with the bar tab example is that you can imagine a situation where like two different people open a bar tab. They go to the same bar and then one person this often happens with friends. One person says, I'll get this round. And then it says I'll get the next round of drinks. That's like a layer three really.
+
+Because you're saying, what we will put on the tab is... So it's trivial to actually add more layers, but the problem is, are the layers any good? Now, when you're interacting with a friend that you've known for a long time, that you plan on interacting with for years afterwards, this is called the folk theorem in game theory, about the repeated interactions impose discipline because you have so much to lose by betraying the person. You have a friend that you like, and then...
+
+Citizen Web3 
+Makes sense.
+
+Paul Sztorc
+that you'll lose if you betray them. And so this induces people to act with your best interests in mind. And it does folds the field of game theory out. It says like, you're no longer in an adversarial situation. You and the other person are on a team now because you'll interact with them. so in that case, the trust is warranted. And similarly for the bar tab, it's just, since you're physically there and everyone sees you and you have like a reputation in the town and they don't want to call police and it's not worth it for such small amounts. So
+
+When you have the trust, you can use trust and you cheat. you cheat, you don't need to solve the problem. So there's no such thing as the first layer three. would have been many such instances of people saying, agreeing, they have lightning channels open and they're debugging the software and they say, can you send me some test net lightning coins or something. there is no such thing as having the first
+
+Layer three or layer four or whatever that is not a good criterion. The only criterion is does the design solve a problem that is unsolved?
+
+Citizen Web3
+And I guess like, you you spoke in, well, you spoke, you wrote Big 301, you know, and you mentioned blind, merged mining, which is of course a logical economical incentive. Now, today, I want to ask you a question today. Again, once in your feeling or so, in your opinion, I mean, you know, your surroundings, what role
+
+Paul Sztorc
+Yes, by merge mining. Yes.
+
+Citizen Web3
+Because merge mining, I'm not talking about, of course, merge mining for layer 2, like merge mining in general, the whole idea of merge mining has existed at least since, I don't know, 2014 or 2015, since I remember it. But 2010, okay, sorry, apologies, apologies, apologies.
+
+Paul Sztorc 
+2010 So she invented to merge mining before he left and he even co -developed the first Alt coin which was named coin and name coin has been merged mind on the Bitcoin network continuously since 2011 miners can still get an extra You know extra a little bit. I don't know what it is now. It used to be like five the big
+
+Citizen Web3
+Okay.
+
+Citizen Web3 
+Name coin, yes, yes, yes.
+
+Paul Sztorc
+The Bitcoin block used to be worth like $7 ,000 and the name coin block was worth like $5. So now the Bitcoin block is worth who knows, you know, it's like I guess it'd be worth like, you know, basically like 200, $300 ,000 something like that. And the name coin block is worth, don't know how much probably like a similar proportion. I don't know.
+
+Citizen Web3
+That was actually the question though. was like what role today is merge mining? Like, I mean, you kind of started to speak about it, but
+
+Paul Sztorc 
+Very small, in the future it will be life or death and it will be much more than 99 % of minor revenues will come from. Merge mining is my prediction. So my prediction is just that we haven't reached the point where the merge mine chains generate the fees. I think this is inevitable and in fact the hour is nigh.
+
+This is a so far a fringe point of view, but I think it's I'm gonna see there's no reason why I would not I mean miners get more money in return for doing nothing Users get the ability to transact that more at a lower fee They did it's the exchange rate risk is insulated from them. They get to unite under one project that Will win thus reducing the risk of the whole thing failing these are just obvious like
+
+Citizen Web3 
+Do you think?
+
+Paul Sztorc
+Good ideas to me the fact that we had more than 60 % Mining participation with merge mining back when it was only five dollars of like a seven thousand dollar package That suggests that when it will eventually be more than 100 % of the L1 Total fee revenue or total block reward as the subsidy halves. There will be only fees. So
+
+Then there will be enormous adoption of merge mining and once people figure it out once the the miners are very You know, no offense. They're very inept as to far as the what happens with the software They're very skilled when it comes to finding cheap power You know working hard they have their own arena that they fight in and they fight They compete against other miners to mine, so they're very good at that but they don't really realize that
+
+These things are possible that will grow the pie enormously for the whole industry. They just don't. From firsthand experience, I have spoken to many of the mining pools and their CEOs and their CTOs and they just don't understand it yet. Some of them do, of course, but I think this is just in the process of changing. It's just on the cutting edge.
+
+Citizen Web3
+I would tend to agree. mean, as much as the developer is listening to this will hate me, but you know, it's kind of like developers and trading. You have your own arena, but when it comes to trading, unfortunately, most developers tend to, there is a lot of funny stories I know anyways, very sad, but funny stories, but we will not go into them. know, but about, you know, merge mining and about, I want to ask you about security and about the consensus. So
+
+because in proof of stake, for example, there is similar, slightly similar to merged mining, which is shared security, I guess, and is the concept where validators can be hired by smaller networks from bigger networks and sort of, but it hasn't also code on that much. I'm wondering, now I am actually a self -hosted bare metal validator for, we have our own equipment, we don't.
+
+go by a data center. So I kind of understand the game, but, well, it doesn't like to think so. But, you know, the question is, why do you think still, because what you say has every single sense to it, right? Merge mining, more profits, shared security, more profits, less work, more profit. Why doesn't it catch up until now? Neither. And we talk about merge mining, of course, you know, stick with that, but why, why you don't think it's catching up?
+
+Paul Sztorc 
+Yes. I didn't understand exactly what you meant. You mean the idea of a version of proof of stake that what specifically are you asking about?
+
+Citizen Web3
+So basically what I'm asking about is why you think it doesn't catch on the idea of merge mining until now or shared security because I was just saying that shared security in proof of stake is very similar, but there is also lack of adoption, so to speak. mean, it's quite a recent thing still in proof of stake, but what I'm trying to say, in my opinion, merge mining is the first logical step. If I was a miner.
+
+Paul Sztorc 
+Merge Mighty.
+
+security.
+
+Paul Sztorc 
+You
+
+Citizen Web3 
+or if I'm a validator, those are logical steps. Now, why they don't catch up until now, it's a, I'm clueless to that, so I'm asking you. Okay.
+
+Paul Sztorc 
+Yeah, I don't know, but I do have some guesses. mean, I certainly spend a lot of time in the Bitcoin community and I am very familiar with Bitcoin culture. Bitcoin culture, as you probably know, it just at this point presumes that Bitcoin will be the winning coin and it doesn't need anything else. It doesn't even need adoption. Like those people come crawling back, you know, and they want to get into the Citadel or something.
+
+So there's an enormous amount of overconfidence and complacency and just total obsession with the idea that Bitcoin is perfect the way that it is and it's just the price is going to keep going up. And most people have bought into that, or at least I think it's even worse where most people subconsciously believe it, where they actually don't even really realize that this is what they're doing, which I think is truthfully the case, including many miners.
+
+large miners You know mining pools, I think they they wake up in the morning and they just think Okay, I hope what's the what's the latest, you know, Michael Saylor? Presentation or what's the latest meme that will pump the coin? They don't even realize I think they don't even realize that they're doing it and it would never even occur to them to say like how can we get more adoption because more adoption means more transaction fees means more revenue
+
+It means more notoriety for the coin. They just don't think that way. So the culture, as is usually the case, the culture is operating on a subconscious level for many people. They don't even realize why are they going to church? Why are they going to the NFL? Why is it important that their kids go to school? They don't even really realize why they're doing it. There could be really good reasons, but I do think the Bitcoin culture is not set up to reward
+
+merge mind transaction fees because that would involve a different chain and they think that the chain they have is perfect. So that's my guess I would say is the current headwind.
+
+Citizen Web3
+It's a very interesting like, I think it probably has a lot to, I mean, you saw me agreeing there. So I definitely think that it's growing from there because I can tell you that I know at least one very like person who introduced me to crypto. was many years ago, so 2011 roughly. And the person, you know, went in cycles of like Bitcoin, altcoins, Bitcoin altcoins.
+
+But today, what you said describes, I think, person perfectly. They are not aware of the fact that they believe in it. They and they lead their life, but everything they say when you talk to this person just keeps on, you know, kind of pile up on it. Idea is perfect. It doesn't need any improvement. It will finish like that. And yeah, it's a weird thing. And this is actually, guess, kind of like my last question. We're coming up to an hour here, but
+
+Paul Sztorc 
+Mm
+
+Citizen Web3
+To ask you a little bit about that, again, in your own words, you mentioned that at the very beginning of the conversation, the Bitcoin maxi attitude. at least from my perspective, somebody who at least I like to think I've been here long enough to see different behaviors. In my opinion, I see a shift. see a change, a small change. There is, of course, the traditional Bitcoiners who are like, okay, guys.
+
+We are here and nothing will move off. are a wall, you know, like between East and West Berlin and nothing will break us. No Soviet Union will collapse here. And then, you know, you see now on Twitter, especially, unfortunately, Twitter still being, you know, number one kind of platform to get our unusable crypto until 2024. But, you know, you see that you kind of feel that there are people, for example, you know, I'm having you on, I've had Vlad on, I've had a couple more people who are
+
+proclaimed Bitcoiners on the show who don't speak solely about Bitcoin. They started to sort of like expand, you know, whatever they think can be beneficial to the Bitcoin network itself and for crypto in general. Now, the question in short, do you think that that attitude of the maxi logic, is it changing? And if it is, or if it's not, what do you think can, where is it going or what's going to happen with it in five years? I don't know, like a general kind of
+
+statement or a question.
+
+Paul Sztorc 
+Well, I think it has gone wrong and I think it will be fixed before I don't think even five years. I three, I think, I don't think it can go the way it's going for another three years. So maybe I'm wrong about that. but I don't think so. The world of software is just too competitive. The original maximalist view that, mean, I would have proudly adopted and sort of still adopt, you know, it's like 2014, 2015 and earlier, because of course it starts to shift. This is like the block size war sort of shifted it, I think is the issue.
+
+but basically the the old view was something like There's nothing wrong with like it's like we were all in different plots of land or something. It was like here we are in Bitcoin
+
+We have a lot of work to do to make Bitcoin a success, but there's nothing inherently wrong with this plot of land. It's not like we should move to somewhere else. We just have to start over there. We have to start over, build the power plant. It's like we're playing SimCity or something. We to build the power plant. have to build the roads. We have to build the skyscrapers. We have to build the universities. We have this big project here. But it's not like if we just move to Litecoin, it'll be better because of the faster block time.
+
+that everyone rightly called that view out as just being a flimsy pretext for pumping the Litecoin price and it had nothing to do and of course it raised far more questions than it answered like if we move to Litecoin why not move to something else and if the shorter block time is good why not make it like one second block times and there were people who did this it was like Litecoin, Fabricoin, etc on and on and on Dustcoin this went on and on exactly as you'd expect similarly with Bitcoin Cash
+
+It was like, okay, the block size limit is raised, but then why not raise it again? And then as Bitcoin SV, was like, why not just completely remove it? And you know, why not hard fork more times? So this was the old critique that all of that stuff was just nonsense, which I really kind of think it was. But that never meant like that the city on day one is already perfect. that because no one would believe that because back then it was so small.
+
+Paul Sztorc 
+That you couldn't, it was again subconscious. Everyone, when you showed up, you looked around and you saw, okay, this place has potential. But right now it's, no one has heard of us. know, CNBC is laughing at, they ever mentioned Bitcoin. There were sites, it was like, I think it was called like Bitcoincharts .com or something. It had a little news panel. And if anyone mentioned Bitcoin anywhere in any kind of like internet article or whatever.
+
+They would show up there and you would like refresh the page hoping for like maybe one a week, one a day. You know, and you'd refresh the page and you say, is anyone out there going to mention Bitcoin? So it was so small back then. No one would say, it's it's a it's we take it for granted that this is going to be hyper Bitcoinization and there's going to be the Citadel. Everyone was worried all the time that it would just go to zero or that they would just like no one would care or there's something else.
+
+So again, it was subconscious that the idea that we're have to fight to make this a success and then it achieved more success and then a bunch of people who joined You know in the last three years Who don't know anything they kind of just think okay the the the pitch to them was just buy this coin and you'll make a lot of money So that's that's kind of like why the maxi idea has completely shifted to that
+
+And if that won't work that that is the unsinkable Titanic so to speak, you know That is the hubris that is, know, I compared to Star Wars episode 1 or whatever Everyone thought it you know, thought the titan they thought Rome would never fall they thought the Titanic would never sink and they thought everyone thought Star Wars episode 1 would be like a huge success because George Lucas was personally involved etc. Etc. He had on the CGI that he could want and of course, you know It's basically terrible
+
+So this overconfidence and complacency is exactly what will exactly what doesn't work and it is inevitable that it will produce mistakes that will either Kill the project or just have the culture be defeated you already see it to some extent where the ordinal stuff was an attempt to break away from the death cult of Like this is already perfect complacency
+
+Paul Sztorc
+And just do something fun, something that was new and fun. And that actually involved using the software because related to the L2 point is, that the more things that the good model can do, if there's good software out there that does certain things, then the fewer scams people can get away with shilling. they say, here's the thing that already works. You can't sell someone like a word processing scam if they have Microsoft Word and Google docs and all that stuff's already out there for free. So the ordinals people are just saying, okay, we want to use the software and have fun.
+
+And this was initially met with hatred and revulsion by many of the loud cultural people. But since it had real users and it paid fees, the miners were just like, okay, we're collecting the fees. And also it was like, it would sell tickets to like the conferences. So the conference people realigned to promote this type of thing, to promote actual users with actual customers. A lot of people, for example,
+
+I mean, maybe I shouldn't list the examples, but a lot of people have said, one example was that like safety and Amu's pulled out of the Bitcoin conference saying that he didn't want because it was shilling junk, was what he meant like ordinals and it's no longer consistent with his brand or whatever then. But the conference ended up doing very well and eventually attracted, you know, the Donald J. Trump as the speaker. So it became enormously.
+
+prestigious and then all those people had to kind of come crawling back and say that they want to bury the hatchet I don't think Mr. Amos was one of them, but I know a lot of people I just know from talking to the organizers of the car I've been involved with that conference ever since it was created and so I just know some of the people there and they told me all about how These people angrily left before over this ordinals drama Remember, this was like some big issue like two years ago. They fact that Udi was
+
+that Eric Wall was allowed on stage in a wizard costume. is like the guy was foaming at the mouth, swearing on spaces, saying that this is ruining the generational wealth of Bitcoin and that Bitcoin is something for his kids to like save them from dying in poverty. And how can they disrespect him by allowing him up in a wizard costume and like, know, like just crazy people. And then that's revealed for how absurd it is. And then there...
+
+Paul Sztorc 
+Normal people don't want to interface with that. And so then nature sort of heals itself. When the conference is a big success, more of a success because people are actually doing things they like and having fun. Then those people come crawling back and they say, you know, I don't know what came over me. So we're going to hear a lot of that, I think.
+
+Citizen Web3
+Well, I hope you're right. I hope that we keep on progressing as an industry, no matter what we do, no matter whether we're talking about merge mining, shared security, less maximalism or more prediction markets and more decentralization or whatever. I hope that we keep progressing in all directions. I want to thank you very much, Paul, for finding the time for the hour. And I hope even the disagreements, you know...
+
+we can still see that as an industry, our goal is definitely to keep on going, not just to disagree. So thank you very much for joining and answering the question. Yes.
+
+Paul Sztorc 
+Yes, disagreement is good. Consensus might work great for the blockchain, but for humans, it is the kiss of death. So thank you for your polite disagreement.
+
+Citizen Web3 
+Yes. Yes, I agree.
+
+Thank you, Paul. Please don't hang up just yet. This is just a goodbye for the listeners. So, everyone else, thank you for tuning in and see you next week.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+
+

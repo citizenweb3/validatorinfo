@@ -1,0 +1,774 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/monero
+
+Episode name:
+War on Privacy, Blockchain surveillance and Bitcoin WP with Francisco Cabanas
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web3 podcast. Today I have Artik Main, a member from the Monero Core team with me today. I'm super excited for this call. Hi, Francisco. Hi, how are you?
+
+ArticMine 
+How are you? I'm doing really good. Very good.
+
+Citizen Web3 
+I'm very glad to have you considering that I've met you before. Luckily, four or five years ago in CCC, right? You remember that?
+
+ArticMine
+Leipzig's GARS computer congress in 2019 in December.
+
+Citizen Web3 
+Yes, I was very excited to meet to meet all of the Monero team back then. Well, not all, of course, but there was a lot of people there from Monero and it was awesome. How have you been? Tell me how have you been since then?
+
+ArticMine 
+Yeah, yes.
+
+ArticMine 
+Well, I've been very busy. I've been doing some work on scaling in Monero since my talk there. That's what I primarily do in the Monero community. I can speak for hours about Monero and not say the word privacy once. Because basically what I do is basically design...
+
+Citizen Web3 
+Let's do it! Let's do it! We still... We only have one! But let's do it!
+
+ArticMine 
+the scaling parameters of Monero so that it can be used in mass on level one blockchain. We can clear a transaction and settle it in 20 minutes worldwide. Just to give you a comparison, Visa, for example, takes two to three business days to settle actually a Visa transaction worldwide.
+
+And we can theoretically, depending on bandwidth, go into the thousands of transactions per second from one arrow. There's no cap like in Bitcoin with a block size. It's an adaptive block size. And there's a lot of tech behind it. But the bottom line is that we also have to have a tail emission or minimum emission, which allows you to secure the blockchain. And so we...
+
+I'm very confident that Monero has solved the scaling issue in level one blockchains as far as the payment currencies. Now, a privacy coin or so -called privacy coin, I hate the term because Bitcoin is a privacy coin. Let's be realistic about here. Monero is more like an innocence coin where you totally remove the chance of surveillance. It's the toughest type of chain in which to do scaling. And the reason is because...
+
+How do you fight spam? So you cannot censor spam. What you have to do is you have to price it up.
+
+And that's the difference. And so it's the toughest chain you can do scaling on, actually, the work that I do here. I could take all the formulas and we could put them into some Bitcoin clone easily. It won't work if you have a file for the blocker. But that's the problem. So that's kind of what I've been doing. And what I've been presenting in Prague is sort of a latest iteration of refinements on the Monero scaling algorithm.
+
+ArticMine 
+I can honestly say right now we're good enough. We can improve on it, but we're very much good enough where we are right now with the technology. Monero, of course, the community is working very much on full chain membership proofs. And what that basically is is a proof where instead of having 16 possible signers, which we have right now in Monero in your ring,
+
+You basically have all the transactions at a certain point in the chain as the possible sign of a transaction. So you really improve the anonymity set and you really, in what I like to say, take away the illusion of the surveillance.
+
+from Monero.
+
+Citizen Web3
+I like that last illusion of surveillance. I love it. I love it. Francesco, before I let you, we'll go more into Monero. I'm going to do something which is maybe a bit unusual for a person who works for such an amazing, not works for, but contributes to such a huge project and such an important project. I'm going to ask you a little bit to tell me and the listeners.
+
+ArticMine 
+Yes. Yes. Yes.
+
+Citizen Web3
+A little bit about your own Web3 story. How did you get into Web3? How did you start being like, how did you start loving privacy? Why is it important to you? How did you end up contributing to Monero? I want to go a little, if you can, of course.
+
+ArticMine 
+Of course, of course. First of all, I'm an early Bitcoin. I started with Bitcoin in 2011. I started purchasing Bitcoin when you could buy a Bitcoin for about $5 .30 something Canadian. I learned about it in August of 2011. I spent a few months researching it and I started purchasing Bitcoin in early, in October of 2011.
+
+So I called the tail end bear market where the price of Bitcoin crashed from $32 US to $2 US in 2011. I called that tail end of the bear market. And I approached it very much from starting the basics. I mean, in fact, one of the things I did to prepare for this podcast was to actually review the Bitcoin paper again, which I think is a really critical document. I'm not hearing the laughter.
+
+ArticMine 
+Yeah, I'm losing you.
+
+Citizen Web3 
+It's because I, I, I, it's because I mute myself when I, when, when the guests talk. So I am, believe me, you can, you can see me, you can see me laughing, but you cannot hear me, but I'm definitely believe me, believe me. And for all the guests, for all the listeners out here, what's going on here is that Francisco can see me, but he cannot hear me because I'm mute whenever he talks to hear him perfectly, but I'm bursting out already and smiling for the last two minutes.
+
+ArticMine 
+okay, okay, okay, I was wondering...
+
+ArticMine 
+Okay.
+
+Citizen Web3 
+all this story but I'm gonna keep the sound on I'm gonna keep the sound on so you can hear me.
+
+ArticMine 
+Okay, it actually makes it more interesting. But realistically, I approached Bitcoin from the objective of what's called peer -to -peer cash. I am from the last generation. I'm a baby boomer. I was born in the 1950s. And I'm the last generation that experienced cash and fungible money as the dominant.
+
+Citizen Web3 
+Let's make noise. Let's make noise.
+
+ArticMine 
+form of payments. So I see the baby boomers primarily as a transitional generation from no ledger to centralized ledgers. And I make my next prediction, I see the generation alpha will be the transitional generation from centralized ledgers to decentralized ledgers. And this whole thing is totally driven by technological change.
+
+Citizen Web3 
+beautiful.
+
+Citizen Web3 
+You know why I'm smiling right now? Because you're talking music to my ears. This is like you're just reciting a conversation I had literally with somebody three hours ago about generations alpha and generation X and baby boomers and how technology is differently in our brains and how it affects us different. And man, there is, you know what? There is something I have to ask because if I don't ask that, it's my team.
+
+ArticMine 
+Okay, we'll go for it.
+
+Citizen Web3 
+I told you is going to kill me. They prepared like a whole set of questions for me. And to be honest, I don't think that that question is so important, but I'm going to ask it because they said if you don't ask it, they're not going to talk to me again. So and it's good question. It's a good question. They say that, you know, and you say yourself that out of the core development team, there is only two people will one apart from yourself who decided to go public.
+
+now I don't know if fluffy counts or not. I'm not sure if okay
+
+ArticMine
+Well, that's the one. That's the person. That's the other person. There were two. There was Ricardo Espanol and Fafi Pony. This was in 2016. The court team has evolved. And it was a choice. You can either call Plop or you take this very anonymous. So that was the other one. I joined the court in 2016.
+
+Citizen Web3
+the question.
+
+Aren't you afraid? That's what they say. How you come, you're not afraid considering everything that's going on with tornado cash, with with wasabi, with everybody else, with Roman and the other Roman. And why you're not afraid? Where's how does everybody grow both like yours? Wait, Francisco, different question. This is from me. How does everybody grow both like yours? This is my question now.
+
+ArticMine 
+I said four. I... Okay.
+
+Okay, so it's actually quite straightforward. When I actually, it's an interesting question I don't mind sharing. I did my homework on this. Very few cryptocurrency are as compliant and this will shock people as Monero.
+
+And the reason is because we're truly decentralized. If you look at the FinCEN guidance from 2013, they define a decentralized virtual currency. You could not stick your hands in the till. And this is the big thing about Monero. You don't use the block reward to fund development, marketing, blah, blah, blah, blah, blah. Adversely, everybody else does that. The minute you do that, you become an MSP. That's basically what FinCEN said in 2000.
+
+Now read Micah, and it's actually an exemption regulation on the Micah precisely for truly decentralized virtual currencies. So that's the key secret. I would not touch something like tornado cash even. Although tornado cash, simply because they have, it's a quasi, there's elements in there. I don't want to say there's elements in tornado cash that are centralized.
+
+That doesn't mean that the government is totally blown it with respect to their cases But the fact remains that there's a flow of funds in there that comes from the actual transactions through a To pay for the fees in Ethereum that then are there's a reseller Who then gets the cut goes to the developers of to tornado cash They also issued this other tone car token or whatever which is centralized
+
+ArticMine 
+So there are angles that they could go on there, believe it or not. They got into... So there's weaknesses. Now, I'm not saying that's 100%, but Monero is pretty much on a very solid ground because of the fact that we don't stick our hands into the till.
+
+Citizen Web3
+But I mean, still, whenever I talk to over the last four years, you know, I've spoken to so many founders of so -called some of them are privacy projects, some of them, let's be honest, are so -called privacy projects. And, you know, whenever I try to ask them, like, there hasn't been really one, and I'm sorry to say that that has the same balls, you know, and like, the question is, why is everybody so fucking afraid of like the big square, the big window, you know?
+
+I mean, what's the...
+
+ArticMine 
+They have a reason to. They have a reason to. And this is because most of those co -procurrences have been blunt and uncompliant at the protocol level. I mean, this is where if you really get down to the nitty gritty of most projects, they're doing a coin drop. That's basically a security. And I'm not going to be blunt about it. Most of them are. Even Ethereum, I mean, Ethereum when it was launched, the Ether is not a security, in my view.
+
+But the security was just a promise to deliver the ether was it's kind of familiar with the very famous highway test in the United States. Yes. Okay. Think of the origins in how the oranges that were produced by the groves were not securities. That's the theory. The investment contract was to produce the oranges. Now, if they paid the investors in oranges.
+
+Citizen Web3 
+course. Yeah.
+
+ArticMine 
+which is essentially what happened in the case of Ethereum. So that's the kind of the analogy. But I'll give you as an example, but pretty well every other purchase, there's very few projects that really do not have a pre -mining income. I mean, the minute you do any of that, a founder's reward, a debt tax, you're setting yourself up for this stuff. So that's one of the main reasons. So I'll be very selective when I'll touch, I will not touch most of the products on the market. Bitcoin, yes. Admit the requirement.
+
+So it's a bit of research. Now granted, I mean, they're pushing the envelope with one of the arguments with tornado caches that they're pushing the envelope very much on the custodial mixes and all that. Non -custodial and all these issues. There's a lot of legal issues here. I mean, I spent four weeks during the Stirling Offer Trial. I was actually working for the defense. Didn't end up testifying, but for a variety of reasons. But...
+
+I was actually analyzing that trial. And one of the biggest problems that we have today with cryptocurrency, and I'll tell you what it is right now, that's the root cause of the issue of tornado cash, of the issue of samurai wallet, all these other guys, is this business of blockchain surveillance.
+
+Now blockchain is a huge multi -billion dollar business. Now here's the bottom line. It does not work on Bitcoin.
+
+Citizen Web3 
+It's a huge fucking business.
+
+Citizen Web3
+Yes.
+
+Citizen Web3 
+Why?
+
+ArticMine 
+read the Bitcoin white paper because what you're doing is you have flow of funds does not equal flow of control. And it says it right in the Bitcoin white paper. They break the link. And so you create plausible deniability at best or a high degree of error at worst. What that does, and I mean, backtrack for a second. I did not get involved in Monero in 2014 and 2015 over privacy. No.
+
+That's not the reason I got involved with Monero. I got involved with Monero because of scale.
+
+This is shocks people because I tell people, we're working for a privacy project and you know, and the reason I got involved was with scaling. That was my biggest concern with Bitcoin. Privacy you can add to a chain. In fact, Monero has proven that in a big way. Bitcoin is done with things like Taproot. Scaling you can't without getting into real consensus problems. And that's the biggest distinction. So when people are saying,
+
+that you can surveil the Bitcoin blockchain or call Bitcoin a surveillance coin. That's a wrong mistake. Bitcoin is a privacy coin. And it says it right in the white paper, how it does privacy. And what you do is you anonymize the public key. That's the whole concept of Bitcoin. You have an anonymous public key. Typically, private public key cryptography involves a public key that's not anonymous.
+
+The innovation in Bitcoin was to make the public key anonymous. That's the fundamental source of privacy in Bitcoin. Now, these blockchain surveillance companies are saying, well, we can discern somehow, through our proprietary algorithm, that the person who made that transaction is person X, then we're going to accuse of a crime. Well, let me tell you how this works. If you sell Bitcoin privately, that you have KYC to you back to yourself.
+
+Citizen Web3 
+Hehehehehe
+
+ArticMine
+You do not know where that big guy is going to go. You're going to be accused, it's a matter of time, you will be accused of a serious crime, or act of terrorism, sanctions evasion, whatever you want to say, that you have absolutely nothing to do with.
+
+Citizen Web3 
+Of course.
+
+Citizen Web3 
+But this is this is an interesting thing you say, because what scared me during Romans like the what scared me the most after Romans trial was the quote. And I tried I'll try to quote it, but I'm sorry if I cannot quote it correctly, but I'll try to quote. And what the judge said that he's basically the Dutch judge, if I'm not mistaken, said that basically Roman is guilty of of everything that happened on the way of all the crimes. I was laughing because I was saying, well, it basically they are saying to kids.
+
+ArticMine 
+Mm -hmm.
+
+Citizen Web3 
+Don't become don't go work become a criminal because it turns much better to be a terrorist or or or whatever it is, but don't build for them a platform because if you do, you're the guilty one. They're not guilty. You're guilty because you facilitated them to do the crimes and that's scariest shit.
+
+ArticMine 
+Of course it is. But here's the issue.
+
+European jurisprudence and Lashka have the concept of proportionality. It's very strong in European jurisprudence. And what that means is...
+
+And this is really important is that you have to have a balance between the questions. So is there a need for privacy? And so what that judge is trying to say that there's no counterbalance use of big auto nero cash, which is complete nonsense. It's going to, this is why I think I really believe that that's going to be a major appeals issue. In fact, blockchain surveillance, in my opinion, is going to end up in a brutal challenge and it's going to end in Europe is going to end up as a serious violations.
+
+or it's called interferences is the proper term with the European Convention on Human Rights. And by the way, I did a bit of research on this. And although there are no specific issues in the financial privacy, there's tons of interferences on over blockchain surveillance. And essentially what the judge had to argue is that there was no legitimate use for tornado cash in order to sidestep the issue of proportionality.
+
+That's where that's coming from. So this is why in many ways it's forcing the issue into these extreme positions because what's happening is, is you have to totally negate privacy. The source of the problem is the idea that you can do KYC compliance by surveilling the blockchain. So instead of learning about your customer, which is what a bank or exchange should be doing. I mean, I trade between Monero and Canadian dollars.
+
+ArticMine 
+through a fully compliant KYC exchange. It's a private, actually, OTC desk that I use. And I deal with my banker who is well aware of the fact that I'm invested in Monero.
+
+ArticMine 
+So that's not the problem. You can have compliance and a super secure private blockchain. What you cannot do is expect that you can surveil the blockchain to determine criminality and then expect to have privacy at the same time. Well, it's not going to be possible. It's like saying, we're going to have law enforcement walking around neighborhoods, looking in the people's windows to see if crimes have been committed.
+
+And then if people put curtains in, they're basically obstructing law enforcement.
+
+Citizen Web3 
+It reminds me of the of the meme where a policeman on a bike stops a car and he says, sir, you've been speeding. Here is your ticket. And then the right hand underneath, this is when you know it's not about the speeding. It's not about safety. When a guy on a bicycle stops you that doesn't have even a seatbelt and the guy who stops and stops you and tells you, hey, you've been speeding. You don't have a seatbelt.
+
+ArticMine 
+Mm -hmm.
+
+Citizen Web3 
+Well, we all understand that it's not about that. We'll understand what it's about. It's about control and what's what what what what I'm trying to get at here is that I'm afraid that compliance is never going to be enough because for people who chase not you, but for the ones who are trying to make people compliant, it's not about that. They expect all let's let's they're not they're not waiting for the moment. Debit and credit is going to be settled.
+
+that they don't care about the debit and the credit and the $600 or whatever it is else that that they are putting on not in my opinion, in my opinion, what they care about is control what the my opinion what they care about is really putting people and scaring them to the point of when those people do exactly how it was during COVID or 1945 or whatever 1942 whatever, that doesn't matter, you know, it's all the same mass experiment in my eyes what I what I'm
+
+trying to understand this. Where do we? Okay, so let's say somebody like yourself chooses to become perfectly compliant and does everything legally. But how can he be sure that tomorrow the US federal government or, I don't know, doesn't else say, hey, well, you know what? Actually, everything you've been doing was illegal. We don't care that you were compliant.
+
+ArticMine
+Well, you're going to go into the dealing, are you dealing with with a certain issues as an espos facto law, etc. I mean, sure, you can turn the thing into a complete dictatorship. But I will. It's very interesting. I mean, you talk about the 1940s in Europe and of course, the implication. Those were cash societies.
+
+And that's the scary part, if you think about it for a moment. I mean, that was a cash society. And just imagine what could happen if you have the centralized ledger surveillance. So these are technical issues. These are issues which are much broader. Sure, there are elements within law enforcement and within government that say what you're saying, and I don't disagree with that. But there's also...
+
+Citizen Web3 
+Yes.
+
+Citizen Web3 
+course.
+
+ArticMine 
+checks and balances there. You can't just totally throw it out. And the problem that we're dealing with here is that you've got a bunch of companies that have done a sales job on government. So it's a lot more transactional, people realize it is. Create an industry and say, we can know your transaction instead of know your customer. And that's why we're seeing this war on privacy. You can have...
+
+know your customer, you can provide information privately to a bank or an exchange. You can have a government regulate how they use that information. Yes, it's not ideal, but that is not the same as broadcasting the whole information on a public blockchain in order for some company to surveil it and then discern inaccurately that you're guilty of a crime you didn't commit. So we're dealing with two very different things here. Yes, you can have a government that throws out the Constitution.
+
+Citizen Web3 
+Of course, of course.
+
+ArticMine 
+And I understand where you're coming from. I mean, I was driving back with a friend of mine from the United States into Canada, you know, sort of made a bio reference to Trump. And I said, well, I feel like I am driving from Germany into Austria in 1937, you know? And he's like, what? How do you say that? You know, this guy's 20 years my senior.
+
+Citizen Web3 
+the the the the the the the the the the the the the the the the the the the
+
+ArticMine 
+And it was like, it was an interesting comment, but what I was referring to implicitly is the unconstitutional threats of dictatorship. Yes, there is a risk of dictatorship. Absolutely. Yes, there is a risk of totally throwing out the checks and balances of democratic societies. This has happened and it can happen. I've seen countries evolve both ways. I even visited Spain during Franco. I was a teenager at the time. And that was a...
+
+an absolute fascist country. I've been there. And so you can feel the tension. This is 1972, 1971. So I'm well aware of that. But this is not what we're talking about. We're not talking a complete collapse of society, destroying democracy, destroying the checks and balances, which a lot of people are really worried about with reason. Yeah, I know what I'm saying. I'm talking much more basic stuff here.
+
+Citizen Web3 
+I am.
+
+ArticMine 
+And yes, you do need to break surveillance and dictatorship with the kind of centralized ledgers that would be much more draconian than anything that happened in the past. But that's a technological problem, it's not a political problem.
+
+Citizen Web3 
+You know, I was speaking to one of the very few, in my opinion, dudes who is quite a very good engineer to do with privacy as well. And it's a guy who's building his name is Chris Goze. They're building a project called Nomada, Nomada, whatever you want to call it. And
+
+He said an interesting point and I'm going to derive a question to you from that point. When we started talking about privacy, he made the point that there is a big confusion about semantics and what does privacy in general mean? Because somebody peeking into my window and seeing me do something in the house today is considered privacy and so on. Financial data flowing on chain is also considered privacy. And from that, he said that with society, probably, probably not. He's like,
+
+statement but he says probably it makes a confusion and I kind of agree and here's my question do you think that that if if you know if we started rebranding let's say I'm gonna kind of joke about it but you know rebranding the dark web you know and call it the free net you know I don't know or or you know Monero calling the frontier net I don't know whatever I mean let's what I mean unicorns and flowers do you think that people would start looking at
+
+privacy differently because today it seems that people look at it as a sin.
+
+ArticMine 
+Well, basically what has happened, and this is where the issue is, is if you look at the history of the analogy of the curtains, if you have a law enforcement approach to law enforcement, which involves law enforcement surveilling people's homes and peeping into their windows to see if crimes have been committed, and someone sells opaque curtains, like I got right behind me because I sleep right next to... I mean, that's an opaque curtain, I should put a privacy filter...
+
+Citizen Web3 
+I have one too. I have one too, it's good.
+
+ArticMine 
+My point is, then suddenly you become obstructing law enforcement. The problem is that you're going about it the wrong way. And what's occurred in the blockchain is that you're at a bunch of companies and the governments did not ask for this. Let's get ourselves. They were asking for the standard stuff that they've been doing for years with things such as travel rule and know your custom and all this kind of stuff. And they say, no, no, no, you don't need to do all this.
+
+We can tell you where the criminals are. Just let us surveil the blockchain. And they bought the Kool -Aid. Or they drank the Kool -Aid. That's the bottom line here. This is why we have this war on privacy and a head -on collision with compliance. It's not a question of KYC is perfectly compliant with blockchain privacy. You provide your information to the banking institution.
+
+or to the exchange privately. You don't have to broadcast it at the exchange. Anymore than if you go and set up a bank account and you provide information to... or a tenant, for example, I mean, it's funny, provides information to a landlord. I mean, I'm a landlord, I own property. That information, they don't have to broadcast that information publicly and put it everywhere.
+
+And then I have someone surveil it so that I can get it. No, they provide it privately to the landlord. And there's laws, both in Canada and the European Union, that says what you can or cannot do with that information. And there's checks and balances in the system. What you've done with blockchain surveillance is you've suddenly said, no. If you're on a blockchain, if you're on Web3, you've got to broadcast all your financial information publicly in order to allow compliance with anti -money laundering.
+
+And that's utter nonsense!
+
+ArticMine 
+And this is driven by the blockchain surveillance industry.
+
+Citizen Web3
+Well, a question, a question then. Well, because I feel like, you know, for example, I have apart from blockchain, people who are committing to building blockchain, I have different guests on. And for example, sometimes I recently I had a guy who is a libertarian, author. Yes, author. His name is Derek Wills and a fantastic guy.
+
+ArticMine 
+I love you too.
+
+ArticMine 
+Mm -hmm. Mm -hmm.
+
+Citizen Web3 
+And his question was to me, why are you bringing me on? And I said, well, because I want people who build in Web3 to fucking listen to you and to understand how to input those values into their projects before they start building them. So my question to you is this, like, how do we today as people who have been in this industry for 10, 15, whatever, okay, 15, not, but soon to be 15 years. And we want this to continue and we want this to grow. We dedicated, you know, for me, for you, maybe not.
+
+As much as for me, but imagine me, you know, I'm nearly 40. So for me, nearly 15 years is almost so. okay. It's not half, but almost, you know, dedicated to this. And like, I don't want to see this go because I understand as well as you that this blockchain and we had this conversation in 2019 briefly about windows and surveillance and how it's going to grow. And we were right. It has grown beyond. Largest expectations. How to fucking stop this? Where is the.
+
+ArticMine 
+Okay, let me... I love the libertarian example. Because here's the fundamental reason why Bitcoin has failed. It has nothing to do with government. And one of the biggest problems that I have, if you're a statist and you blame the government for something, okay, you're accepting responsibility. If you're a libertarian and you blame the government for something, there's a real risk that you're not accepting responsibility.
+
+The reason Bitcoin has failed is an engineering reason, it's not a political reason. It's because it was designed to fail because it couldn't scale properly, people couldn't use it.
+
+And you're not going to replace Visa that does 65 ,000 transactions a second with a blockchain that is limited at 6 .5 transactions a second. That's just not going to happen. Which is why I ditched Bitcoin in 2014 and 2015 for whatever. And it cannot do this. So we've got to stop for a second here and ask ourselves, OK, we've designed a coin.
+
+If you want to design something, design something that can do what it's supposed to do. So you want to do a project that's Web 3 decentralized, is it decentralized? Can it actually be mass used? If people can't use it, then your project has a serious engineering design flaw. If the problem is that technology hasn't caught up with it, fine, design it in such a way that it can accept technological change. But since, and by the way, it's only been 15 years, since 2009, when the...
+
+Bitcoin block, Genesis block was mined. One megabyte. It's like 500 megabytes today.
+
+ArticMine 
+And they're still stuck on this. Well, you know, this is the fundamental issue here. And so you can't blame the government for something as bad engineering. And that's my point. Yeah. But this is the issue in the Bitcoin community. This is the first problem. I mean, I remember Amir Taki, and he actually was at... He made a post in...
+
+Citizen Web3 
+Hehehehehe
+
+Citizen Web3 
+Of course. Of course. Of course.
+
+Citizen Web3 
+course.
+
+ArticMine 
+2012 on Bitcoin Talk and he talked about how Bitcoin will help people living in squats.
+
+I eat people experiencing homelessness. He's right. He's right. But there's a bigger path out of that. OK, so now I looked at this. This is very interesting. How many people in the world are living out of risk of experiencing homelessness? Probably 10 % of the world's populations. Think into the math. Can the Bitcoin blockchain accommodate this? No.
+
+So you've got to look at it so it's not solving the problem. It's not addressing the problem if a minuscule fraction can only use the problem.
+
+Citizen Web3
+I, I, we had Amir Taki on some years ago as well, of course. And, we, we talked digital dictatorship with them and basically it's interesting to understand that the views are the same, but for some reason, like there is this very small bunch of people in the industry who seems to have, interest in, in, in developing decentralized structures. When I say decentralized, I mean, real decentralized structures. I don't mean.
+
+ArticMine 
+Yes.
+
+Citizen Web3 
+decentralized because it's written decentralized on it. And it seems what I'm trying to understand as somebody who has been committing a lot of his time, all of his time to this industry for the last, I said almost 15 because I was meant for myself because I also started 2011 -12. So it's still not 15 for me. But, you know, I, I, and I didn't start to dedicate my life since 2011 or 2012, of course, to blockchain. Of course not. It was about 2015 when I started really, really deep into it. But.
+
+And seeing that all the time, like, you know, seeing people and hearing people like yourself, like Amir, like, like, like some people who like, like Derek Wills, for example, like seeing some people who still have those balls and still fighting for it and still saying, Hey, no matter what, I don't care if they're gonna like, blah, blah, blah, they know, do courts or, or peep into my, my, my, my windows. I'm still going to try and find possibilities where I didn't fail, where I, like you said, it was a perfect example with statism.
+
+and a libertarian, of course, as a libertarian. Yeah, I kind of laugh and blame the government, but I don't really think the government is guilty. I know the guilty. I'm an anarchist. I don't expect the government to do anything for me. I do it myself. Of course, I'm not expecting to build me a fucking road. But how do we do that? How do we achieve it here? How do we?
+
+ArticMine
+But here my point is that...
+
+You might think the government is guilty. That's not the issue here. But my point is, if you can address the problem yourself, that's what you need to be doing. So I looked at the problem, I said, okay, what can I do about this? Well, you need to have proper scaling. So then I go and the Monero project, they're all focused on privacy. Someone wants to do something and nobody else is really interested in scaling.
+
+Citizen Web3 
+I hear you. I hear you.
+
+ArticMine
+And they welcome me with open arms. Fine, I'm going to do it here. And then I'm going to design it so that people can actually use it. That was my point. And so you design the technology so it can be used. Then you're going to have a social impact. But if you design a technology that only a minuscule fraction of people can use, you will not have a social impact. It's that simple. It's got nothing to do with the government. And this is why I...
+
+Citizen Web3 
+Here we go.
+
+Citizen Web3 
+I hear you. I hear you.
+
+ArticMine 
+I don't have control over my own actions. I don't have control over somebody else's. So what can I do about it? That's the question I want to ask yourself. And you've got to design a project and you've got to work with a project that is willing to accept the fact that it can be mass used. And that's my point. I understand that technology... Sorry.
+
+Citizen Web3 
+now that no no no no no god god don't say don't say that it's just like i i don't say sorry please don't say sorry
+
+ArticMine 
+Yeah. No, no, no, no, no, no, no, no. Yeah. No, no, no, no. Yeah, no, but here's my point about this is that you've got to design the things so people can actually use it. If people can't use it, there's no point. Now I understand that Web3 is still in its infancy. And believe me, doing smart contracts and putting NFTs on blockchains is way more complicated than basic payments. And basic payments is tough enough.
+
+But we're dealing with a technological evolution. And this is the point that we need to understand, that the technological change that has driven centralized ledges. Like for millennia, humans have had fungible currency, whether it's gold, whether it's bills, whether it's tally sticks, whether it's... People have used those sorts of things. But they basically dealt with bearer instruments.
+
+Till the 1960s, 1970s. And this is why I said I was the last generation, baby boomers last generation that saw the transition from the knowledge of the central Dutch language. And I think there are three generations. Gen X, Gen Y millennial, and Gen Zed. No, no, Alpha is the next one. Okay, Alpha is not Gen Zed. Alpha is Gen Zed. So you've got Generation X, baby boomer, Gen X.
+
+Citizen Web3 
+Alpha, Alpha as well. okay, okay, sorry.
+
+ArticMine 
+Gen Y, millennial, Gen Zed. And then we'll go to Gen Alpha. So the Gen Alpha's are people in there right now in the tweens. Yeah, yeah, that, I think of them as a COVID generation. I lived next to an elementary school and I saw in COVID all these kids lining up just like I did 50 years prior, but with a little difference of all being sprayed with hand sanitizer. That was, that's the seminal generation.
+
+Citizen Web3 
+1013 and plus yeah, 1013 plus.
+
+Citizen Web3 
+Ha ha.
+
+Citizen Web3 
+I'm out.
+
+ArticMine 
+But it's really interesting, but that's what I'm talking about in Genoa. So someone would have been in an elementary school in 2020. There's going to be the transition into the decentralized ledger, and this is driven by technology. This is not driven by government, by policy, by any of that. It's a technological aspect. So when we design a project, we've got to decide if we're going to accept this technological change.
+
+Citizen Web3 
+It -
+
+ArticMine 
+I mean, when I was at Monero, I just, I think I got my fiber optic installed just after I got back from Leipzig. That was about the time that it was installed.
+
+Citizen Web3 
+I really like in a sense like what you're saying. You're saying look at yourself and see what you can do. I, for example, started to work on scalability of payments. Now, OK, here is another question. And again, I'm playing kind of devil's advocate here, but I want to hear your opinions and not just me. I want people to hear what you say. OK, so for example, I am a bare metal validator. We are and we are a self privately owned bare metal validator with Starlink solar panels and you know,
+
+ArticMine 
+Mm -hmm. Good.
+
+It is.
+
+Mm -hmm.
+
+Citizen Web3 
+We are, we are, we are, we are the, how to say the cream, the like cream for, for, for some, but, but I can tell you that I talked to a lot of bare metal validators. We just started to be bare metal. It took us a lot of time to project progress because I wanted everything to be pretty and it's very fucking expensive by the way, but whatever. it's just to set up to set up, I mean, to set beautifully with, with, with all the hops and all the privacy and security. Now I can tell you and tell you that almost everybody I talked to, and now I have.
+
+some balls, I like to think so at least, but I can tell you that, you know, like you say, well, what can you do, do something today? And for example, today, I can tell you that validators are fucking even scared to run a privacy based project. I'm not even talking Monero. I'm not even talking Monero. I'm not even talking about Monero because Monero is like up here and here is the like, you know, privacy projects that I'm kind of talking about. And people are scared to run them as validators. They're scared to contribute.
+
+ArticMine 
+Well, the issue there, again, I mean, proof of work, no, but proof of work is a lot safer than proof of stake. Because essentially, I mean, I had some very interesting analysis back in 2014, whether or not dash master notes, for example, were considered decentralized or not. Well, it turns out...
+
+Citizen Web3 
+I have no balls!
+
+ArticMine
+And I know a million Dash people are going to say this, but that there are more banks and federally charted banks and credit unions in the United States than the theoretical maximum number of Dash masternodes. So the banking industry in the United States is more decentralized than this so -called decentralized currency.
+
+Citizen Web3 
+this comparison that was beautiful.
+
+ArticMine
+I mean, come on, this is the stuff that I'm getting at. We've got to be realistic about this stuff. Like if you're looking at validation in chains such as Ethereum, for example.
+
+Citizen Web3 
+Yes, you're right.
+
+Citizen Web3 
+But how can we get more if they're all scared? How are we gonna get more?
+
+ArticMine 
+Well, the reason I mean, I don't know if I'd be comfortable being a validator for something like Ethereum, to be honest. Yeah, because this is the reason why. I mean, you've got to look at what the law says. You've got to actually, you know, I had a really interesting experience when I was a kid and my parents went to the United States and they didn't have a visa. They let us in and they were very nice about it. And then and the travel agent misled us. I was traveling in a Spanish passport.
+
+Citizen Web3
+I understand why.
+
+ArticMine 
+And the agent sent me a very simple thing. The place you need to learn about what the law is, get it straight from the government. If you want to find out what the government is saying, start by reading what they're putting out.
+
+actually read the guidance, actually read the legislation, actually read the stuff. And then instead of making assumptions, and then you'll know whether you're standing on good foot or not, or at least you can mitigate your risk. So a lot of stuff I wouldn't touch. It's about being smart about it. So you've got to say, okay, do I want to deal with a project that has an airdrop? No, I don't want to be involved with it.
+
+I can see where people are. Then you throw privacy into it. And then it becomes a photography. But the truth of the matter is that if you get down to the nitty gritty, you've got to read the law. You've got to read what it says. If you're a validator, how does it start to be different from banking? At what point do you draw the line that you're just approving transactions?
+
+Citizen Web3 
+Of course, they're selling themselves.
+
+ArticMine 
+At what point do we draw the line when you have a proof of stake coin and owners are picking a proof of stake? I'm not a big fan of it. I've argued in fact that proof of stake has to be state regulated. But realistically, with proof of stake coins, what happens is you have a minimum typically, and then it leads to people depositing money with a trusted third party, who are now back into banks again, which need to be regulated, which in turn then becomes a bank and an MSV.
+
+So now they're subject to regulation and they're obliged entity in the United States, in Europe, in the area. So then they got the KYC and all this other stuff. So now you've opened yourself a whole can of worms. So yes, there's things you can do that are decentralized, but it's a very high standard. And I don't know if you read the 2013 NERF Instant Guidance, which in my opinion was a seminal document on Bitcoin, but it...
+
+It set a really, really high standard for decentralized virtual currency. And very few projects actually meet. In fact, I can count them with the fingers on my hand. Bitcoin, Dogecoin, Litecoin, Bitcoin Cash, Monero. Very few.
+
+Citizen Web3 
+I wanna ask you because I know that I can definitely talk, but I wanna ask you a little bit about Monero because again, I will be killed by a lot of people if I don't. And I would love to talk about privacy for the next five hours to be honest. And I wanna just talk about privacy. I wanna make it all privacy, but I have to ask something about Monero. And...
+
+ArticMine 
+Hehehehe
+
+ArticMine 
+Okay. Yeah.
+
+What's that? Okay. Yeah. Okay.
+
+Citizen Web3 
+I'm going to ask two basic things because of the time limit. But the first one is kind of silly and easy, but it's easy. In your opinion, apart from, of course, privacy and scalability, considering in my opinion Monero has solved privacy, right? So privacy is not really an issue for Monero to solve, but of course, there can be improvements.
+
+ArticMine 
+Ooh, ooh, ooh, wherever it is. Big time. Well, we're gonna continue.
+
+Citizen Web3 
+So the question is, what are the biggest issues that can be faced by Monero apart from scalability and privacy in the future, like, I don't know, five, 10, whatever, 15 years?
+
+ArticMine 
+Well, I mean, from a technical perspective, I think it's an incredible position because we have addressed the other problem, which is the issue of.
+
+The following blocker. One of the problems with Bitcoin is that Bitcoin has this idea that fees can replace transaction. Blocker was one error said, no, we have a minimum tail emissions who have addressed that problem.
+
+ArticMine 
+That's been solved. So that's not an issue. I think Monero is getting very close. I would argue Monero right now is good enough, but they can be improved upon. Basically, the main changes that's going to happen in the next two to three years, I think it's going to be what's called full chain membership proofs, some refinements on scaling. There's the Serifest project, which is going to allow for some transaction types.
+
+The view keys are a bit finicky in Monero right now. They need to be cleaned up. So a few things like that. There are technical issues that have been addressed by the project, but the project is getting very close to maturity and very close to a point where it's really can go on for a long time. The biggest obstacle that we have right now is this nonsense of blockchain surveillance. This is idea that...
+
+And that's kind of what's getting in the way, slowing it down. It's essentially kept the lid on Monero because it's being pushed out of a lot of exchanges. But I don't believe that that has a solid legal basis and it's going to get challenged in the courts. I mean, if you look at all the cases, the Tornado Cash case and the Samurai Wallet and even the one, the previous one, Roman Stolling off of the...
+
+Bitcoin fog these things are gonna get appealed and I don't think it's gonna be pretty for for a lot of the blockchain surveillance people is gonna happen
+
+So that's where I see the situation there happening. For the future of Monero, I think it's kind of out of the picture kind of thing, which is a nice thing. You can grow sort of a picture, but that's also the changes that are occurring. But it's a project that is getting to the point where it's getting very close to good enough. It's all right, our argument is good enough. But like I said, we can do better and it's been improved. But that's the point where I...
+
+Citizen Web3
+Do you think I have a weird question here, which I wasn't, I don't think I didn't have, not gonna have time for it, but I will. So I have a couple of more there. It's a tricky question. I like it though. It's also from my team. Do you think that cash and barter are a viable alternative for Monero in terms of privacy and scalability? Compliment. Perfect. Perfect. Perfect.
+
+ArticMine 
+Well, they're a compliment. They're complimentary. I mean, they're not the replacement. This is the other thing that people fail to understand. There are situations when the fiat banking system does a very good job. If you're a billionaire, and you're a millionaire paying a billionaire, credit cards are great in your same country. I am serious about this. I'm serious. If you're a millionaire paying a billionaire in your same country,
+
+Citizen Web3 
+Yes, yes.
+
+Citizen Web3
+hahahaha
+
+ArticMine 
+Credit cards do a phenomenal job. If you're a billionaire paying a billionaire in another country, in a different currency, they start to fail. If you're a poor person trying to get paid or paying with debit, they completely start to fail.
+
+Citizen Web3 
+Ehhhh, it sounds beautiful.
+
+ArticMine 
+If you combine one and two, if you have poor people in country A paying poorer people in country B in different currencies, i .e. remittances, that's the strongest point for something like Monero. So it's not a complete replacement for the banking system. I would never say that. It's a complement. Whether cash and barter are certainly part of it, so is gold. In fact, here's an interesting thing about gold.
+
+Number of grams, a US currency bill weighs one gram. So about 31 grams are at try ons. Once the price of gold goes over $3 ,120.
+
+Gold by weight will be a lighter store of value than paper cash. That's a great change. Keep in mind that paper cash was designed initially to be a lighter store of value than gold.
+
+Citizen Web3 
+Mm -hmm. Makes sense.
+
+Citizen Web3 
+There is there is another store of value. I'm going to make a joke here, of course, but there is another store of value to to cash. If you have 10, 10 million or let's say 100 million in the US dollars in smaller, preferably tens, 20s, fives, banknotes, you also happen to possess about five to 10 kilograms of cocaine, which is also very good for storing value. So so so because.
+
+ArticMine 
+yeah.
+
+ArticMine 
+If you can extract it from, no no, but you got to extract the cocaine from the currency. This is a gold extraction problem. No, no, this is the gold problem. It's actually a very interesting concept. This is the gold issue, because what you have to do is extract the cocaine from the currency, and that's not cheap. No, no, seriously, I don't think anybody's figured that one out. But that is actually what gold is about, is that you have, it's very diluted, incredibly plentiful.
+
+Citizen Web3 
+Yes, yes, you have to extract
+
+Yes. No, no chip, no, no. No.
+
+ArticMine 
+but very dilute and very expensive to extract. So that's the economy of gold right there. But that's an interesting one.
+
+Citizen Web3 
+course.
+
+curse.
+
+It was it was what I had to do. But Francisco, like kind of like the last question on Monero. I mean, you are by far like I don't know why. I have only met you once in real life. But, you know, like talking to you for three, four days, not that we we spend all three, four days talking. You had things to do. But, you know, I was very impressed in terms of.
+
+ArticMine 
+Ha ha ha.
+
+ArticMine 
+Yes.
+
+ArticMine 
+Mm -hmm.
+
+Citizen Web3 
+you know, the way you spoke about privacy and obviously the way you spoke about technology and you are the person working on the scalability currently of the biggest or if not the only privacy project out there. What can others like today, I don't mean philosophically, I mean really physically, I don't mean looking at yourself and like...
+
+ArticMine 
+Thank you.
+
+ArticMine
+Okay!
+
+Citizen Web3
+you know, working on a good project like physically, can somebody go there and contribute today somehow if somebody is listening to it by chance? I don't know.
+
+ArticMine 
+Okay, my comment on contributing to a project is very simple. Find something that you love to do and that nobody else in the project is really interested in doing. Great way to contribute.
+
+Citizen Web3
+Don't build blockchain surveillance fucking things on top of Monero people. That is not what Francisco is saying!
+
+ArticMine 
+well, people have... no, no, no, no, no, no, no, no, no
+
+Citizen Web3 
+there we go.
+
+Beautiful is getting better and better
+
+ArticMine
+That was actually came out, that actually came out. I actually have the actual certification a lot of these people have from my Cypher trace. It's kind of like, it was very, and what was interesting, you know, when I was taking the certification, there was a fair number of law enforcement people in the seminar and they were obsessed with Monero. How can we do, and the guy says, well, you know, we could just give you a probability. Yeah, I know. I thought it was.
+
+Citizen Web3 
+You need to know your enemy. You need to know your enemy.
+
+Citizen Web3 
+How do we arrest you? How do we arrest all of you? Come on!
+
+ArticMine
+No, but realistically, it is from, if you look at it from the perspective of a law enforcement person, this is all ability to be honest. In my opinion, the blockchain surveillance companies have sold governments ability. And in every case where you sell someone ability, you have a willing buyer. This is so appealing. I mean, all you have to do is punch money into a computer and tell you where the criminal is.
+
+Citizen Web3
+That was, that was.
+
+ArticMine 
+of your police officer that's not a that's actually very appealing
+
+Citizen Web3 
+Press enter! Press enter! Press enter! Press enter!
+
+ArticMine 
+It just doesn't happen to work. It just happens not to work.
+
+Citizen Web3
+No, no. And ironically, ironically, ironically, you know, like I would like to because everybody listening to this, you guys can see all the show notes of everything we mentioned. And there is a movie I'm going to mention on purpose because I don't remember the name of it, but we will find it and we will put it in the show notes. It was a movie about exactly what Francisco is talking about. It was a movie about the guys trying to predict crimes by some crazy things. And it didn't fucking work, guys.
+
+ArticMine 
+Yeah.
+
+Citizen Web3
+That's the story. It don't fucking work because if it's not happened, it might not not not happen. So.
+
+ArticMine
+Yeah, there's a lot of danger in that because they sell these people, they sell the agro. There's an appeal to it because it makes it easy. It's kind of like it's a shortcut. Instead of having to do hard work as an investigator, as a detective and actually solve a crime, you don't have this magical software that's going to do it for you. And so it becomes, but it's also very dangerous because it's going to catch a lot of innocent people. This is why the whole thing is going to end up in a clash.
+
+ArticMine 
+civil liberties, human rights. In Europe, I says, it's the Charter, the European Convention of Human Rights. In the United States, it's going to be United States Constitution, likely the First and Fourth Amendments. In Canada, it would be the Charter of Rights and Freedoms. You can go right all over the world, even things like the Magna Carta in British Common Law.
+
+I mean, we're dealing, you know, you have to go back a long time to this issue. It's going to come to a head in the courts. That's my prediction on this issue.
+
+Citizen Web3 
+Interesting.
+
+Citizen Web3 
+You I must say last note, you are more optimistic than me. But from that I will I will I will go to a quiz. I'm going to do a shorter version of the quiz with you because I think your answers are going to be at least they're interesting to me. And I'm sure that a lot of people who are listening to this will also like to hear them. And so the quiz is quite simple, silly couple of questions. First one is give me either a book or a movie or a song.
+
+ArticMine
+Okay. Okay.
+
+ArticMine 
+Mm -hmm.
+
+Citizen Web3 
+that has been through with you throughout all your life and it has had a positive influence on what you do in your life.
+
+ArticMine
+That one is easy. George Orwell's 1984. Now, I will say something about Orwell that Orwell got wrong.
+
+Citizen Web3 
+I knew you were going to say that! I knew that!
+
+Windows?
+
+ArticMine
+No, the telescreens will be carried in people's pockets.
+
+Citizen Web3 
+Pockets, yes, yes, they're not going to be on the screen.
+
+ArticMine 
+but yes, Windows is actually Apple's worse. At one point, Windows was worse, but yeah, George Orwell's 1984 is a really interesting book, particularly, if you look at it from a technical perspective, if I wanted to, I see I, I, I've done land administration and land work. And if I was working for big brother, in the ministry of love and wanted to set up the telescreens using modern technology, I would use iPads and just mount them on the wall.
+
+Citizen Web3 
+Of course, of course. And I, by the way, by the way, just so you know.
+
+ArticMine 
+by the way, I would avoid anything that's GPLV3 like the plague.
+
+Citizen Web3
+That's a nice comment. And by the way, I have used your example to explain on this podcast about that what you just said several times. So it's been heard several times. Second question, Francisco, give me one project, please don't say Monero, Dogecoin, Litecoin, or anything you already mentioned. Give me a privacy project that you personally might not think.
+
+ArticMine
+I'm out.
+
+ArticMine
+Mm -hmm.
+
+Citizen Web3 
+that it's going to build and succeed, but you find it technologically interesting to watch and follow.
+
+ArticMine 
+Okay, an example of PC cache. And I'll tell you why it has a problem. The technology is actually very good. The privacy technology is very good. It's inherent in all the scaling problems of it.
+
+Citizen Web3 
+Okay. Why?
+
+ArticMine 
+And in fact, there was spam attacks. People criticize Ccash because of their privacy technology. You have the ceremony. In my opinion, that's fuddable, but that's not a big issue. Their privacy technology is actually very good. The fact that you had to do the ceremony, that's not the issue with Ccash. Ccash's problem is that if you inherited all the scaling and failures of Bitcoin, there was spam attack quite badly for the same reason.
+
+because basically they have no pricing on their privacy technology. So that's the failure of... But that's more a failure of Bitcoin than anything else. But their privacy technology is phenomenal. It's like you build a great type privacy technology on a really shaky blockchain. That's essentially the issue.
+
+Citizen Web3 
+I understand. I see where you're coming from. I see where you're coming from, I agree.
+
+Citizen Web3 
+Okay, one more. This is going to be slightly weird, but I hope it works for you. Can you share one motivational thing that you happen to happen to you or you do on daily or weekly basis that keeps Francisco concentrated on scalability, privacy and decentralization?
+
+ArticMine
+Mm -hmm.
+
+ArticMine 
+Okay, very simple. This is a very simple issue, paying the poor. Now if you get into this, if it's really interesting, if you look at every value system, religion, spirituality, across the world, across developed countries, developed countries, Aboriginal, First Nations, wherever you want to say, giving alms to the poor is a virtuous act.
+
+Citizen Web3 
+Okay.
+
+ArticMine 
+Now, for millennia we have months, fundamental months of money where you can pay the poor. You could give a poor person an ounce of gold or money, but try paying a person who is experiencing homelessness with a debit card.
+
+ArticMine 
+That is a fundamental problem of the last 50 years. We have created a form of currency as the dominant paying system that makes it impossible to do what humans have considered for millennia to be a highly virtuous act, which is paying the poor.
+
+Citizen Web3 
+I totally understand what you're saying. It's a weird thing to comprehend, I guess, for a lot of people and a lot of people are started. But I agree. I agree. I agree.
+
+ArticMine 
+Now, I give you a very special experience. I give you a very special experience that I had. This was in 2013. At the time, I was in my 50s. My friend was a millennial. He was in his twenties. We were walking in Prince George, down in central North British Columbia. A Gen X approached us. He asked for money. He begged. I didn't give him any money. I didn't make eye contact. I said, I don't have any money.
+
+My millennial friends are something that really stuck with me. I only have debit.
+
+Citizen Web3 
+I'm sorry I'm a crypto millionaire.
+
+ArticMine
+I mean, like, honestly, I mean, this is this is like, like that the bottom line, I'm a very successful crypto. I'm a good man. But this is essentially the don't you could give them crypto. That's the issue. No, no. Yeah, because actually all he needs a QR code and only and in fact, in 2012, people were giving Bitcoin to homeless people in the United States is a project that we're actually doing that.
+
+Citizen Web3 
+It's a big issue, yes.
+
+Citizen Web3 
+BAM!
+
+Citizen Web3 
+Yes, yes, yes, yes, it's true.
+
+ArticMine 
+So that's exactly the problem itself. But you can't do it with a debit card.
+
+Citizen Web3 
+It's true, of course, it's true, it's true.
+
+Citizen Web3
+I have to remember that one. I have to remember that. Francisco, last one. Last one. I promise. I promise last one. And I've done torturing you. I promise. So I'm kidding. Of course I'm kidding. I'm loving this. I want this to go on forever, but I cannot. So one more last one. And this is a bit of a weird one like the previous one, but I like this one. Dead or Alive.
+
+ArticMine 
+Yes.
+
+I don't touch the moon, I'm not having fun.
+
+ArticMine 
+Yeah.
+
+Citizen Web3 
+real real or comics cartoon or or a family member or an author or a coder or a writer doesn't matter doesn't matter from which book doesn't matter from which life from which reality not a guru because i don't personally believe in gurus and i don't advertise on gurus but a person or a character who you sometimes in life look at them and you think okay yeah this is the right
+
+thing to do. Like, and you do not, not, not, not, not God, not guru by no means somebody who has some positive influence on you throughout your life and you look up to them sometimes when you when you're down.
+
+ArticMine 
+Well, I mean, if I was going to look at a living person who is now dead, it would be Mother Teresa of Calcutta who helped a very strong -willed person. But one thing that struck me about her comment, which really is in the City of Joy, and she said quite categorically that she could feed a homeless, hungry person for 60 % of what the government was spending doing the same thing.
+
+Citizen Web3 
+Okay, strong.
+
+Citizen Web3 
+Yes. Yes.
+
+ArticMine 
+That was 66%, something like that. He was talking about the Indian government. But it's an interesting example. You have to be efficient in charity, which is one thing I think is really important. If you're going to give charity to people, it's not just about yourself. Someone making sure it works for the person that you're giving it to. That was a good example of somebody who has had an influence on me, I would say.
+
+Citizen Web3 
+Of course.
+
+Citizen Web3 
+Thats a strong answer. I like it. Francisco, I want to thank you. You're a fascinating speaker and I want to thank you for all your answers. And I would please don't hang up just yet. This is just goodbye for the recording because I still have a couple of things for ask you. So thank you very much. And thank you everybody for tuning in and listening to this. Thanks, people. Bye.
+
+ArticMine 
+Yeah.
+
+ArticMine 
+Thank you, you're very welcome.
+
+ArticMine
+yes.
+
+ArticMine
+Bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 

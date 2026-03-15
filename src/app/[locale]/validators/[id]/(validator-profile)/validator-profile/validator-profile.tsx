@@ -7,9 +7,11 @@ import PlusButton from '@/components/common/plus-button';
 import RoundedButton from '@/components/common/rounded-button';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
+import podcastService from '@/services/podcast-service';
 import validatorService from '@/services/validator-service';
 
-import episodes from './validators_episodes.json';
+import episodes from '@/server/data/podcasts/index.json';
+import PodcastSummary from '@/app/validators/[id]/(validator-profile)/validator-profile/podcast-summary';
 
 interface OwnProps {
   id: number;
@@ -20,7 +22,11 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorProfileHeader' });
 
   const validator = await validatorService.getById(id);
-  const validatorLogoUrl = validator?.url || icons.AvatarIcon;
+  if (!validator) {
+    return null;
+  }
+
+  const validatorLogoUrl = validator.url || icons.AvatarIcon;
 
   const { validatorNodesWithChainData } = await validatorService.getValidatorNodesWithChains(
     id, [], [], 0, Number.MAX_SAFE_INTEGER, 'prettyName', 'asc', true,
@@ -31,14 +37,15 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
     prettyName: node.chain.prettyName,
   }));
 
-  if (!validator) {
-    return null;
-  }
-
-  const foundEpisode = episodes.find((ep) => ep.identity === validator.identity);
-  const playerUrl = foundEpisode?.player_url
-    ? `${foundEpisode.player_url}?theme=dark`
+  const foundEpisode = episodes.find((ep) => ep.identity && ep.identity === validator.identity);
+  const playerUrl = foundEpisode?.playerUrl
+    ? `${foundEpisode.playerUrl}?theme=dark`
     : 'https://player.fireside.fm/v2/7d8ZfYhp/latest?theme=dark';
+
+  const podcastData = await podcastService.getEpisodeSummaryByValidator(
+    validator.identity,
+    validator.moniker,
+  );
 
   const iconsSize = 'h-10 min-h-10 w-10 min-w-10';
 
@@ -55,7 +62,14 @@ const ValidatorProfile: FC<OwnProps> = async ({ id, locale }) => {
               height="200"
             ></iframe>
           </div>
-          {!foundEpisode?.player_url && (
+          {podcastData?.summary && (
+            <PodcastSummary
+              summary={podcastData.summary}
+              episodeTitle={podcastData.title}
+              episodeUrl={podcastData.episodeUrl}
+            />
+          )}
+          {!foundEpisode?.playerUrl && (
             <RoundedButton
               href={''}
               contentClassName="font-handjet text-sm px-5 pt-0 pb-0"

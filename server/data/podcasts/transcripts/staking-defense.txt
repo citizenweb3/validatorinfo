@@ -1,0 +1,302 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/staking-defense
+
+Episode name:
+Staking, the cost of freedom and business with Chris Remus
+
+Anna: 
+Hey, it's Citizen Cosmos. We're Surge and Anna and we discover Cosmos by chatting with awesome people from the various teams and community. Join us if you are curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+Hi everyone, it's yet another episode of Citizen Cosmos and today we have Chris Remus from ChainFlow with us. I hope I pronounced it correctly. He is one of the stake-in providers not just for Cosmos but out in the wild in the blockchain and he actually does a lot more and we will find out about what he does. So Chris, welcome to the show. 
+
+Chris: 
+Hi Anna, hi Serge. Thanks for having me. And yeah, you got my name pretty close to right. It's Remus, but no, you got it really, really close. So thanks for that. I'm happy to have the conversation. 
+
+Citizen Web3: 
+Cool. So just to give like the one-on-one to everybody who's going to listen to this, the way we decided to record this episode was a bit unusual for us so I just want to say which is actually cool. It's a good thing. Like we actually spoke with Chris over Twitter I think and then suddenly Chris said, oh guys, you should be including more like of their, I wouldn't say you're a small validator, but anyways, you said that you should be including more of the small validators and I think that's the purpose of what we want to do is we want to like let everybody find out about the whole of the ecosystem and not just about the CEOs or the big validators or whatever. 
+
+And I'm really glad that we're doing this and I'm really glad. I don't think actually it wants to get into a small validator, but anyways, and now back to you. So maybe you can tell like a little bit about what you do about chain flow or anything else that you want to talk about and just introduce yourself if you want to introduce yourself in any other way. 
+
+Chris: 
+Sure. Thanks. I started referring to small validators a while back and then some people in the community started having a hard time getting their head around that. We're not agreeing with it. So I thought it through and now I think of smaller validators in terms of smaller validator operators. And by that, I mean maybe not small in terms of stake, maybe the smaller validator operator might have a large stake or a relatively large stake, but I'm talking about the operation itself. 
+
+How big is the operation behind the validator? So for example, for chain flow up until about a month ago, it was only me. So I was a, I call myself a solo independent and bootstrapped validator operator. And this means to me that I haven't taken any outside funding. I'm bootstrapping this all out of my own pocket. 
+
+And up until about a month ago, it was only me. So one person behind the scenes pretty much trying to do everything on the different networks that I try and support. So that's the distinction I make when I think of smaller validator versus smaller validator operator. I guess I'll refer to smaller validator operator in our conversation. 
+
+And yeah, I was really happy that you were willing to have me on because one of the things that I do is I really try and advocate for the survival of smaller validator operators. And one of the things that we're lacking typically is a marketing team and resources to do marketing. So as a result, many times the bigger validator operators get all the airtime because they have the marketing resources to capture that. And the smaller validator operators get left behind. So thanks for featuring me and, you know, opening the door to smaller operators. 
+
+So ChainFlow is a smaller validator operator. We operate a number of different networks. Cosmos, actually Cosmos was the second production network that we went live on. I was the one of the first few people to join the Cosmos validator working group back in October 17, 2017, when that working group formed. And they were probably a handful of us fewer than 10 at that time. And I've been participating in Cosmos ever since then. 
+
+So I guess it's coming up on three years in October. But actually, you know, while we were running the test nets on Cosmos, I became an active trans coder on the live peer network. And once Cosmos mainnet launched, state things more or less took off from there. And fortunately, we were in a position to get contacted by a bunch of networks and start validating on either, you know, starting on their test nets and then continuing on to mainnet. And then I've also been doing a lot of advising of the networks themselves. I've helped a number of networks like Solana and New Cipher develop their incentivized test nets. And then I help other networks like Matic and Regen develop their validator communities. So a lot of the work I do behind the scenes is working with these networks to, you know, help them launch their incentivized test nets and then help them progress from the test nets into their mainnet launch plan, while also helping them shape a diverse set of validators to help support the network along the various stages of the network's manifestation and also really advocate for smaller validator operators through that process. And I also operate a podcast, a forum and a telegram channel, of course, called staking defense. 
+
+And the whole point of staking defense is to give smaller validator operators a bigger voice. That's more or less a rundown of what I do here. 
+
+Citizen Web3: 
+That's a lot of things. And when I do go on the chain from websites, and I think it's the same for everybody, like the first thing I noticed is the variety of like all the things you just spoke about it. You have a podcast, you have a few letters, newsletters that you do, right? You have a telegram channel, you do the staking, obviously. I will ask questions more about those. But the main question is what's your current focus in ChainFlow? The main focus?
+
+Chris: 
+Good question. And probably asking that question will help me think it through. So when I started, when I entered crypto late 2015, early 2016, I entered from the perspective of a project and product manager. That's where a lot of my recent experience had been. So when I was looking to contribute to the crypto community, I thought there's a lack of project and product managers in the space. 
+
+I have a pretty thorough number of years of experience doing technical product and project manager work. So I essentially launched Chain with that premise in mind. And what I did was I volunteered to be the project manager for the Ethereum name service. 
+
+If anybody's not familiar with the Ethereum name service, they do the .eth domain names. That was my entry into crypto. So basically as a blockchain project manager. But then pretty much at the same time about mid 2016, actually a little later than staking caught my eye because proof of work had sailed for me. 
+
+I was never going to operate a large mining pool anywhere. But staking caught my eye and I thought, hi, this is something that I could get interested in. I was a UNIX system administrator going back 20 some years. And I hadn't really done much hands on work since then. Probably over the past few years, I had done much hands on work. But I had a pretty long history of doing a lot of hands on work of large telecom and IT infrastructure systems. So the first job I ever had out of school was as a UNIX system administrator working on sprints, first IP internet router backbone. And then from there, I went on to run some pretty big global telecom networks, usually just me and one other person. 
+
+So I had a lot of hands on experience there. And after that, I started doing work in the security, defense, and financial services industries. So I did a lot of work with networks that were somewhat secret. 
+
+You know, I can't really talk about defense related security related. And then I also did work with big banks and also big credit card processors. So I have a lot of experience working with networks that have to be up all the time and have really tight security requirements. So I thought to myself that staking would really be a nice way to brush off those skills and update those skills. And it turns out, you know, once I started experimenting with some of the early staking test nets, I realized this is something I really love to do and I really enjoy. And in addition to the product and project management work, I started to do the staking work. Now, since then, since staking has really accelerated in terms of progress, I've been doing a lot more work in the staking space and less work, you know, in the project and product manager space. 
+
+So to answer your question in an indirect way, my focus right now is primarily on staking. It's operating validators and other infrastructure on test nets and mainnet. And then it's also advising networks, as I talked about earlier. And we've also started to build some products too. 
+
+Citizen Web3: 
+Coming to staking, because you did mention staking a lot of the times. And the obvious question, I think, is how and most importantly, why did you choose Cosmos? Why not any other network? I mean, you do have other networks, obviously have a lot, but why Cosmos? What code you I all the great things. Now, I'm not sure maybe the bad things as well, but like, why Cosmos? 
+
+Chris: 
+Well, I think so a couple of things. One thing was timing, because as I started to look into staking, you know, back in mid 2016, a lot of it was theoretical. 
+
+So I looked at Rocket pool, there wasn't a whole lot I could do with Rocket pool, because there wasn't a whole lot Rocket pool could do without Ethereum proof of stake. And then, you know, at that time, Polkadot caught my eye, Cosmos caught my eye and Tesos caught my eye too. But really, I think there's a lot of beneficial timing involved, because when I was looking for a network to get into, I started to investigate all three of those Tesos Polkadot and Cosmos. And when the Cosmos when the working group launched in 2017, I joined that group. 
+
+And it just happened to be a very welcoming group of supportive and enthusiastic people. And of course, you know, the whole idea of an internet of blockchains resonated with me too, because I still believe to myself, there won't be one chain to rule them all. And a lot of these chains will have to talk together, so on and so forth. So I think it was a combination of timing, the early validator community, and the enthusiasm and support that I felt there. And then of course, the mission of the network itself, as Cosmos continue to iterate really fast, you know, I tried to keep up with Polkadot, I fell behind on Polkadot, tried to keep up with Tesos, you know, I started to fall behind with Tesos too, because I was doing other work. So Cosmos really caught my interest, because there was a lot of fast iteration then, and really tightening a group of people working on this. And I think basically that's how it happened. 
+
+Citizen Web3: 
+I think it's more or less the story with Cosmos for most people that we speak to is the technology and the community like the short kind of thing. You mentioned that in the beginning, that you're fond of all this yourself, so you could like say that you're an independent validator. And the question I have is, what in your opinion incentivizes independent validators these days? Obviously, some test nests do and some test net don't incentivize validators. Some decide that it's not a good enough incentive or it's a good enough incentive, whatever. What is the secret ingredient for any network that is for anyone starting their project or any network starts beginning their test net in proof of stake to attract small independent validators? 
+
+Chris: 
+I'll back up from that question for a second. I think that one of the things that motivates small independent operators is really, I mean, everybody I talk to really loves doing what they do. They really enjoy the challenge and they're really intrigued by the technology and they just really enjoy the work to a point where, you know, it's probably not even work. And I think they get involved and if the community is a supportive one, they feel a sense of connection to that community. And even before money is involved, I mean, at least with a lot of the small validators I talk about, these are the things that motivate and attract these small validator operators. And to me, that feels pretty awesome because I've noticed two types of people, if you will, approaching staking. There's a group of people who have come from the financial services industry and they're driven by finance first and everything else after. 
+
+You know, Cosmos had just gone live, so staking was not everybody's mind. But I'd say more than half the people I met were coming at this from a finance perspective. And, you know, these people because of their training and their experience are primarily driven by financial gain. I'm not particularly in this only for the financial gain. I mean, of course, that is a motivator, but I really enter the crypto space because I want to do what I can to help decentralization and the power of decentralization fully manifest itself. And I think my contributions to staking are one way that I can do that. 
+
+So coming back to smaller validator operators, most of them that I approach are coming at this from an open source decentralization first mindset. So, you know, they're interested in getting involved first and foremost. And then after that, you know, the financial considerations come into play. Of course, there's a contrast because as smaller operators, we have fewer resources too. So the constraints sometimes prevent some of these operators from getting involved or getting involved in as many networks as they want to. So that's why I think it's really important to have a welcoming community for smaller validator operators. 
+
+And this comes back to your question about how networks can attract them. Have a really welcoming community, first of all, you know, cut the trolling out, cut all the, you know, the bullshit elitism among some of the longer standing, larger validators that might be out there. And it's really up to the project at first to maintain, especially their chats as a welcoming place for smaller validator operators. And then it's up to the more experienced validators to make those smaller operators feel welcome. So for example, not criticizing people for asking questions, and that sort of thing. Or, you know, if somebody comes in and, you know, their first question is, can I run a Cosmos validator on their Raspberry Pi? You know, don't butcher them, just explain to them why they can't and they'll get it. 
+
+And if they don't get it, well, then that's a different story. But make it a welcoming place, I think is first and foremost. And then after that, you know, these networks also have to make it very clear that smaller validator operators are welcome. A lot of networks start by attracting, you know, 20 of the better known validator operators of which, you know, chain flow is fortunate to be counted among them. But what these networks also need to do is they need to say, hey, we started with these 20 because we want this network launch to be a success. However, very soon after that, we're going to be opening this up to a number of smaller operators, and you're all welcome. So I'd say, you know, first and foremost, would be a welcoming community. Second, after that is to make it very clear that smaller validator operators are welcome. And third, after that would be, you know, to show these smaller validator operators that it's worth their time and attention, and that when they invest the scarce resources that they have, that there will be a return. And hopefully that return comes maybe six months down the road and not 24 months down the road. 
+
+Citizen Web3: 
+Yeah, it makes sense. I like the idea of the communication approach, right? Is that that would be like the way to put it. And coming back, though, to the story that how we connected in the beginning about the smaller like validator operators and the fact that they should be heard. 
+
+And I think we both, me and Anna, fully agree here. But let's for a second, like, talk about the currency, validate the situation on the Cosmos Hub. What are your general thoughts? Is it centralized? Do exchanges like Binance and, you know, the others control too much power? Is there anything to do about it? I mean, what are your thoughts in general? 
+
+Chris: 
+Way back before Cosmos launched, some of the economics were published in GitHub. And I remember highlighting a couple of points and saying, Hey, you know, if we don't get in front of this now, this can become a rich get richer scenario, because wealth compounds based on wealth. And the response I got then was more of a, well, it's the only way we can do it. And by the way, people are good and people want things to essentially exploit the network. And people will do the right thing, essentially, people will take an altruistic approach. And these potential weaknesses of, you know, the economics of the network won't be exploited by people's greed was the message, you know, I get it. 
+
+It's early, and it's unproven. And, you know, the rich get richer situation in staking is probably one of the hardest problems out there. So I'll focus more on the people are good, and people will do the right thing situation. 
+
+What I've seen is that in the test net, everybody's magnanimous and everybody's altruistic. And then once real money starts to flow, that changes quite a bit. Once the real money starts to flow, the big VC backed validators emerge out of nowhere. Usually I've seen them participate more in the test nets of late, probably because those tests nets are incentivized. 
+
+But, you know, I think for cosmos, particularly, the bigger VC backed validators all of a sudden appear like boom, here we are. And that basically showed me that once the real money starts flowing, human nature takes over and economic weaknesses of any protocol will start to show themselves. Because for better or worse, people have to be incentivized to not exploit these economic weaknesses, because human nature just tends to go that way. And especially if you have people driven primarily by financial gain, then it's even more likely for that to occur. So, you know, I think stakes centralized pretty fast in cosmos. I think, you know, a lot of people were saying, oh, my gosh, look, wow, look how quickly this happened. 
+
+Because, you know, I think a lot of people wanted to believe it wouldn't happen, and then it happened. So, since then, I believe that we're trying to decentralize the stake. I know there have been some efforts to do that. I think some of the larger validators delegating to smaller validators, either in a small way or most recently in the case of Doquia Capital in a pretty big way, go a long way to walk the walk, you know, not just talk the talk. But I think to me, you have the bigger validator operators who command a lot of stake, and then you have the exchanges. 
+
+And the motivations of the two groups are somewhat different. You know, I think staking in general, as a real risk of becoming centralized, I think it has launched in a more centralized fashion than hopefully many of us want to see. I think now it's when we have to do the really hard work to be diligent about that not being accepted, and people not simply saying, well, that's the way the regular financial industry is, and that's what's going to happen here. So who can fight it? Because to me, if all we're doing is looking to recreate the current financial system, then really, what's the point of any of this? 
+
+Citizen Web3: 
+Yeah, that's totally something that I will agree with. And if my memory doesn't play tricks, I think that mean you distinctly agreed on a similar topic, which was discussed in the governance chat about a few months ago, maybe months ago, or something like that. And there was a conversation, a big conversation between the, okay, let's say, the bigger validator operator. 
+
+Actually, not everybody was involved. And there was a topic of enforcing rules onto the blockchain. And I think that boss me, you and me and you distinctly said that whatever happens and forcing rules onto the blockchain is basically recreating the same system. 
+
+Well, we applied on that that we have now, and that's what we're trying to avoid. And the idea is to find solutions, rather than enforce rules. So the question I would want to ask you is, it's not an easy question. And I don't expect you to have an answer. But maybe you can share some thoughts on how you think, or what do you think are the best solutions, or are the best possible ways off to stop people validating like the average small user, which is a nasty word to put it, but sorry for that. 
+
+But anyways, or like the, you know, the average uses to stop validating to the bigger validators like Binance or whatever, right? And start spreading the love amongst like, anyways, like, I think you remember that conversation. 
+
+Chris: 
+Sure. Yeah, I think I do. I said answer your question. Yeah, how can we get delegators to spread the love? That's a really good question. I think there are two parts to it. And I've been thinking about it, because as you said, it's a really hard question to answer. 
+
+And there's no easy answer. To me, there's an education component to it. I think delegators really need to educated as to how their validator selection impacts health of the network, both in the near term and in the future. So let's say there's some delegators who really don't really, they just don't care, right? They don't give a shit. 
+
+They want to put their money and they want to get the most of it out in a shorter period of time as possible. I get the sense, though, that there are other delegators who do actually care about how their stake can help contribute to the security and essentially long term success of the network. So I think this set of validators we need to focus on first. And I can talk about what I think needs to happen. 
+
+I'm not quite sure how to do it. But I think there needs to be more of an education process in place that says when you choose certain validators, here are the things to consider. And it's not only fees. So it's, you know, how does your choice affect the long term safety and security and longevity of the network itself? I think a lot of that comes to what can happen, you know, educating validator, educating delegators on the consequences of stake centralizing and what that means and how that could cause them direct pain. Because in addition to the education, I also think that until we as human beings actually feel pain ourselves, it's really easy to pretend like things aren't happening. So I think that there has to be some component of education. 
+
+And then unfortunately, I think eventually there's got to be some pain felt by people to really get their attention. And I think the education should really focus on the operator behind the machine, the operator behind the name of the moniker of the validator itself. And how can we get people to start focusing on the operator behind the name that's listed in the staking interface and aligned with those validators values, not simply looking to the top of the list, because so many of these lists still default sort by most stake accumulated, which is the worst way to default sort these lists. And they go to the top of the list, they see, okay, the top three to five validators have tons of stake, all of Binance has zero fees. 
+
+Boom, I'm delegating to Binance. It's that type of mentality that somehow we need to break. And I think it's going to come in a combination of education and then some pain being felt. So abstractly, that's what I have my head around right now. 
+
+Citizen Web3: 
+Let me be devil's advocate here for a little bit. So basically, you're saying that freedom has a cost monetary cost, right? 
+
+Chris: 
+Yeah, that's actually really interesting question in the context of the entire global situation, I think, and particularly living in the US right now that resonates on more than one level. As I look out my window here, 
+
+Citizen Web3: 
+I'll expand a little bit because I don't want to like go too deep, but I just want to like, I'm trying to understand because I agree with you, just don't get me wrong, like totally more so, I'll be the first person to stand and argue that basically, we have to change this. And I don't know how by asking the questions, I'm trying to get to the bottom of it. Because for example, you just mentioned like not sorting the validators by stake, which is kind of an obvious thing, right? And we have a project and we didn't think about that. 
+
+Like, I think it's a genius thing, right? Don't sort it out by stake. That's like, so easy. But anyways, like what I'm saying, like being the devil's advocate here, you said that we have to educate people, right? We have to explain to them that, okay, guys, look, the fees are not the most important things and so on and so forth. But basically, I mean, most of the smaller validator operators charge more because when we understand why. 
+
+So by saying freedom has a cost, in that sense, what I mean, so we have to educate people not just about the whole validator ecosystem, we have to tell them that, well, maybe if you want to not be controlled by centralized state, you have to pay for it. Is that what I'm kind of, do you see what I'm kind of getting at that make any sense? 
+
+Chris: 
+It does. It does. Yeah. I mean, you're right. So if you're not going to delegate to a zero fee validator, why would I delegate to someone who charges more? Right now, chain flow is at 12%, for example, and that's like seen as high. 
+
+Right. So why would you delegate to me? Why would you give me 12% of your income versus finances? 
+
+We'll just do nothing and have a super easy staking interface to go with it. But yeah, and that's the hard thing because it does have a cost. And I think that's where the pain comes in. So I think maybe something has to happen on one of these networks where the centralized stake somehow ends up getting exploited and people feel a real loss and real pain and then say, oh, shit. Yeah. 
+
+It matters. Or The other thing I was thinking of is, to such a point, there is a cost. So I think you need to get people, and this may sound idealistic, but I still believe that there are people in the crypto space who really care about manifesting the power of a decentralized future that can break down the current power structures as we live under them in our current society. And I think we need more of these people to speak up and participate, to balance out what's happened so far, which I think is the predominance of a financial services industry mindset that is dominating the stake in conversation so far. 
+
+Citizen Web3: 
+Yeah, I mean, like to sum up the topic for everybody who's listening, because technically, I mean, the things you're bringing up are really important to me personally, because I think this should be important to everybody who considers themselves to be in the blockchain space. It doesn't matter if you're a stake person or a proof of work person, or if you're, I don't know, a proof of shit person. It doesn't matter, right? 
+
+That's not about like naming all the consensuses right now. But I think that people don't realize that the importance of values is much, much higher because the origin of the space comes from values and not from anything else. It's just like to sum up to anyone who's listening, like my advice, go on and check out Chaitra with Liz because they have values. 
+
+And I think that's already one good point. But going back further away from the stake in topic, but like one small question that kind of about stake in and kind of not, you have a forum which is called Staking Defense. And I went on it, I found some interesting things. Can't say I dug like too deep, but I want to ask you what's the purpose of the forum? Is it working? What are your goals? Like, tell us about it. Tell everybody about it. 
+
+Chris: 
+Last year, I started the Staking Defense Forum. I started it under the really long name of the decentralized staking defenders, which I've since shortened to Staking Defense. And it was a response to what I saw as the rapid centralization of the Cosmos stake, as we discussed earlier. So I resisted the urge to do a Telegram channel because we're all inundated with chat channels and chat, coming back to my project manager sensibilities, chat is just a really bad way to manage work because it's too easy to miss stuff and long conversations are just too hard to have in a single threaded environment. I said, I'm not going to do a Telegram channel first. 
+
+I'm going to start a forum, at least provide a forum for people who care about this stuff to talk about what's happening and give people a safe place to air some what could be unpopular opinions about what's happening in the proof of stake space in these early days. So that was the original purpose. And being a one person operation is really hard to keep up. 
+
+So there's not a whole lot of activity there. I would love to find someone who would help me manage that and help keep that updated and fresh because I have plenty of ideas on how to do that. I'm just really limited on time to do that. So since then, I caved in and I started a Telegram chat, which is not the most active of chats, but if someone posts a topic of interest, people will respond. And then finally, I started a podcast, the Staking Defense podcast. And I started that a couple months ago. 
+
+And that seems to be getting some pretty good traction. And the point of the podcast is too similar to like you're doing with inviting me on your show. It's to highlight smaller validator operators and give smaller validator operators a bigger voice while at the same time highlighting other conversations that are of interest to smaller validator operators. So to summarize Staking Defense, I hope will be a place that we can continue to have these conversations about what can be done to prevent the staking economy from going the way of traditional economy and opening up the staking economy to become a more inclusive, welcoming place than the current centralized centers of power in our society, which are tied to finance. 
+
+Citizen Web3: 
+To everybody who's listening to this, I will advise you to check this out because there are some interesting conversations that I managed to find definitely. And I will definitely try to promise to share more time on it because it does look like it's an important thing. It does seem to be something that I think can help to educate people like you say, and which is a great first step in my opinion. 
+
+But back to ChainFlow, enough I think with the Staking for now. But you make a good emphasis in the beginning of the conversation about project and product management. And now we get to Anna's favorite part, by the way, because both Anna and I are very well familiar with project and project management. 
+
+And unfortunately, the pitfalls that go along with it. So can you share what makes you offer project and product management services? In my opinion, let alone project and product management, if I said again, I'm going to go crazy, is a competitive, like filled alone. Project management in blockchain is crazy competitive. 
+
+It's one of the not the easiest market at all, like at all, for a lot of reasons. And I'm sure you know about them. I don't need to explain them to you. Why do you offer your services on such a difficult market? I mean, it's crazy. 
+
+Chris: 
+I like the way you put that. You're the first person that has really said it that way. I've been thinking about for a long time, but yeah, you said it. 
+
+Yeah, it's a fun question. So to frame it, like I said, going back, my most recent experience had been, you know, doing project and product management work. And I saw a need for that in the crypto community, because there's so many smart people building really cool things, but no one really thinking about who would actually use them. One of my earlier contributions to manifesting this decentralized future would be bringing these great ideas to a place where they could actually be used by real people. Because once they can be used by real people, then we have real adoption. 
+
+And once we have real adoption, the power of these decentralized tools can really manifest. So that was my motivation. To your second point, I've never really been afraid of a challenge. So you know, that part to me wasn't, and I really wanted to get into the space too, in a helpful way. 
+
+So those are the things that made me say, hey, you know, I mean, this may not be a super popular thing to do, but I'm going to try anyway, because I think it's really needed. And fortunately, Nick Johnson, essentially the creator of the Ethereum name service, he had a career at, I think it was Google before this. So he recognized the need for, particularly at this point, project management. And based on that, you know, he was an advocate for this work, and I volunteered to do it. 
+
+And we synced up really well. And, you know, fortunately, that helped break the ice of, you know, getting a project manager into the space. To your point, I think what makes it hard is that no one really likes project or product managers. 
+
+Citizen Web3: 
+That is so true. 
+
+Chris: 
+You know, I think that's it, especially in the crypto space and especially in a well, crypto's got the double whammy, if you will, of not wanting any centralized control or coordination whatsoever. And, you know, having that idea, that open source heritage that really resists any sort of centralized control either. So you have the crypto community somewhat resisting project and product management. And then you have the open source community resisting project and product management. 
+
+And as a result, it's a challenge, like you said. But, you know, to me, I find it really rewarding, because when you find the right team, and usually that team has some experience outside the crypto space, and they've seen and they've worked with the rare project or product manager that has not just created busy work to realize that, you know, done well, project and product management can really help them manifest what they're building. Because I think, you know, over the past 18 months, people started to get frustrated that they're building all this cool stuff, but nobody's using it. 
+
+And they're starting to see that, hey, we do need some help from a project or project manager to actually get our work out there and get it realized and really feel satisfied that what we're doing is making a difference. 
+
+Citizen Web3: 
+Yeah, that makes a lot of sense. Well, it doesn't make a lot of sense, but it makes some sense. Sorry, I'm going to continue with the joke. Actually, I really do understand you, but I'm going to give Anna, I'll let Anna to ask some questions because I know this is like her. She's been waiting for this part. So Anna, go ahead with the product manager. 
+
+Anna: 
+Yeah, it's going to be a little bit unusual because, you know, for the product managers, we have someone who came from business, from analysts, sphere or from marketing and so on. But you actually came from other side, from developers. So for you, which is the main point, what is the differences between work like in general as a product and your developer mindset behind it? Is it help you or it's opposite? 
+
+Chris: 
+I guess first of all, I'm more of a system administrator in DevOps background, not necessarily a software developer background. But to your point, I have enough of a technical background and I've worked with enough software development teams to understand how things get built and understand in a way what motivates developers and how I can help them work well and efficiently. 
+
+And I also have somewhat of a business background. So I think it's understanding how the business side thinks about things and needs things done. It's understanding how the developers want to work, need to work and get things done and being able to translate between the two. So for example, it's being able to communicate to the business side what they feel is important, but at the same time, not take the demands of the business side and lay them on the developers without considering the developers. So for example, if the business side were to say, oh my gosh, we need to launch in two days, we need this all done by tomorrow, just go tell the developers to do that. 
+
+I'm not going to do that, right? Because I understand on the developers side, one, it's not fair to them, and two, it's not realistic. But at the same time, if the developers are going to say, come up with seven different options, I'll help them filter that down to maybe two options and then translate that back to the business team and say, hey, these are the two options we have to come up with, help them make that decision, and then translate it back to the development team. So I think it's really an understanding of how both sides think and need to work and what motivates them and being able to translate between the two to bridge the gap between them. 
+
+Anna: 
+Probably it's the most important part to translate product backlog in terms of developers backlog and the opposite. So but for your communication with business people and users, for decentralized projects, it's a little bit different because most of the products are not shaped well for the moment. So how you feel, what is the main challenge in that field? Because it's a little bit part of the future and we need to shape it right now. So how do you do with these challenges? 
+
+Chris: 
+I think then there's another challenge, which is things on the blockchain are supposed to be forever, right? So if people get really hesitant to release something before it's perfect, even more hesitant than they do in the typical startup world. But to your point, I think some of the basics still apply in that it's important to talk to users, whoever those users may be. So your user base may not be millions of people. It may not be hundreds of thousands of people. It may be 10 people. But if it is still talk to those 10 people and make sure that what you're building is what they want and is something they can use, because eventually that 10 people in year one might become 100 people in year two, might become 1000 people in year three, so on. 
+
+So I think you need to start with your set of users who are interested and understand the product as your starting point and talk to them and iterate with them as you go. And don't be afraid to iterate. So for example, Solana with their network has done a great job iterating. And totally one of the founders even said when the main network went live during the soft lines period, hey, things are going to break and we're going to fix them. 
+
+You know, we're going to get as much right as we can from the beginning and things are going to break and we're going to fix them. And that's allowed them to iterate really quickly and at the same time develop a really you know, stable network. So I think that captures a lot of what I believe, which is talk to users early. 
+
+Take their feedback, adapt what you're building to what you're hearing from those users and don't be afraid to iterate because nothing lasts forever, even a blockchain. So I think those are the two keys. 
+
+Anna: 
+Yeah. And where do you find all these first users to talk with? 
+
+Chris: 
+I think it depends on the product and depends on, you know, your resources. But I think you have to start with whatever community you begin to attract. You know, a lot of crypto projects are good at attracting communities. So I think you need to start with the people who come to you first, even if it's five people, talk to them, see who the most active people are in your chats and on Twitter too, see who comes to you, get the word out there as best you can with the resources you have available and see who comes to you. And even if it's three to five people, start with those people. And if they're not exactly your users, you know, ask them who might be and then expand out that way, almost like a tree growing different branches. You plant the seed, these people come to you and, you know, form the first branches and then from there they grow branches out based on their network. 
+
+Anna: 
+Interesting way to think about it. And I think that is really helpful for early stage blockchain projects. So back to marketing. You mentioned before that marketing is really very important for the projects and especially for your project. 
+
+Could you tell us a little bit more about marketing in your product mindset and how you try to, what kind of marketing ways of thinking and ways of communicate with the users you think is not efficient, but I mean good for the centralized market. Because, you know, if we track users, it's not good. And all of us like try to say, OK, the freedom costs something and freedom is our core value, especially in open source products. So what kind of marketing instruments do you use and think that it's good for our decentralized universe? 
+
+Chris: 
+I guess I can give chain flow as an example of that. I don't have a marketing team. So the way I've looked at it is I try and let people know I'm here. And I try and let people know about what I'm doing. And I try and let people know what I make contributions. 
+
+So those two are kind of related. So it's remind people that I'm here, let people know who I am and what chain flows values are and then update them as I'm doing things, whether it's related to the validators themselves or whether it's related to contributions on making the different communities or projects I'm working with. So to me, and I'll also say I'm probably a terrible marketer. To me, it's building an awareness of who I am and what I do and what I can offer and why people might be interested in contacting me and making myself available to those people. I think for me, it's more of a build awareness and let the people who are interested come to me as opposed to trying to go out there, you know, target the people and then reel them in, you know, identify a big room of people, target them, throw a rope around their waist and pull them to me and then keep track, you know, and then plant a chip in their wrist and keep an eye on them no matter what they do. 
+
+You know, that's not what I do. It's more of a, Hey, I'm here. This is what I'm about. 
+
+If you're interested and you think we can have an interesting conversation, let's talk. So I think it's more of that type of approach. I'm not sure if I'm making the distinction clearly though. 
+
+Citizen Web3: 
+There was a meme, like an internet meme that was like a picture said, I don't know who you are, but I will find you in making my lead. So, you know, that's kind of, that's basically what you're saying in a sense. 
+
+Chris: 
+Yeah 
+
+Citizen Web3: 
+And I think that that does make a lot of sense to kind of move on as well. I did have some product manager questions that I wrote down, but I think kind of asked all of them. You do have two like, uh, newsletters. One of them is actually about product management and it's really cool because I didn't know that you do that. I wasn't aware of the newsletter. 
+
+And when I started to, when both of us actually me and Anna started to like investigate, to dig into what you do, we found this newsletter and we thought it was really cool. 
+
+So just like kudos for that. And we hope you carry on with that because it's really impressive and useful. But the second newsletter you do is the question I do have about, because I have a funny, a bit of a funny story. 
+
+Well, it's not really funny, but it's just ironic. Felix, the guy who works with you, like now, I don't actually know him personally, but we used to live in Lisbon and Lisbon has this place called the block, which is like blockchain cafe, like for people who really do blockchain and not bullshit blockchain. And, um, there is a small English group, like English speaking group and telegram called, and it's gone. There's like a South Park kind of thing. And there's five people in it. And both Felix and I are in that group. So this is like a weird connection. This is just how to point out how small is the world. But the question is, I mean, it's kind of obvious what Staking Economy is about. 
+
+The name kind of gives it away. But how do you connect the Staking Economy newsletter with the Staking Defense Forum with your passion towards decentralization? How do you make the dots like tick together? If that makes any sense, I'm not sure if it does the question itself. 
+
+Chris: 
+Yeah. So Staking Defense is a newsletter that Felix started a while back and it caught my eye because I thought, wow, it's needed. And it was early because there weren't a whole lot of people interested in Staking when he launched. So, you know, it was one of the few sources of information that I could look to to keep an eye on what was going on. Because early in late 2017, it was easy. You know, there weren't networks launching every six hours like there are today, but he was doing a really nice job compiling a lot of that information. 
+
+And then I forget exactly when, but I reached out to him and every once in a while, I would send him an article that I wrote and he would usually publish it, which was nice and appreciated. It's like I said, I have no marketing. So any amplification I can get, I appreciate. So he would, you know, be connected that way. And then I forget how it came about, but I reached out to him one day and said, oh yeah, by the way, if you need some help writing the newsletter, I'd be happy to help because I really, I like to write. And one of the ways I market, if you call it that way, is to write. So, you know, my blog on ChainFlow, for example, is a lot of my own. 
+
+It is my own writing, but I also use it to build awareness of what I'm up to and how I'm thinking and how I'm thinking about certain things and communicate my values. And fortunately, again, you know, through Fortuitous timing, Felix wrote back and said, hey, you know, I was at a point where I was thinking about either shutting it down or trying to keep it going. But if you're willing to help me, let's keep it going. And since then we've been working together on it. You know, Felix does writes the bulk of it and I contribute where I can. You know, it is a nice platform for staking defense too, because if there's something of interest on the Staking Defense Forum or a conversation that comes up or my podcast is released, I'm able to include it in the newsletter. 
+
+But really, you know, especially today with so much happening and staking and everything happening so fast, you know, we hope it's a way to help filter the signal through the noise, you know, do that on an every other week basis based on the amount of time we're able to contribute to it. So yeah, it's an outflow of my interest in writing. You know, it helps build an awareness of who I am. This also helps amplify some of the things that I'm doing at Staking Defense. 
+
+Citizen Web3: 
+I'm going to ask you a question, which is completely unrelated to all of that. We saw you've been picking mushrooms. And I told you and we like hiking. What is your advice to people who listen to this to pick mushrooms? 
+
+Chris: 
+Bring along a grandmother who knows what mushrooms are the safe ones and which ones will and which ones will kill you and also make sure that you're on really good terms with the grandmother. 
+
+Citizen Web3: 
+OK, that was just like a kind of now we really do like that. So this is why I'm asking that. But it's cool. Well, I wasn't surprised in a sense. Oh my God, somebody does that. But it's just cool to see that there is a live person behind all that. And again, that's coming back to all the values. 
+
+Chris: 
+Yeah, it was a lot of fun. And we had to expand on that for a second. We had since the COVID-19 crisis started, my family and I really found a love discovered a shared love of hiking, which has been really special. And we were away in the mountains in July and my wife's mom visited us and she lived in Ukraine and she used to do a lot of mushroom foraging. 
+
+So when we went on a trail, she started seeing a lot of mushrooms. And yeah, it's just something the four of us bond. My son, my wife and mother-in-law bonded on really well. And then we had a joke because she said that she knows that we all trust her, but she would taste them first. And so we got home, she prepared them. She made some really good mushroom and barley soup. 
+
+And the next morning she said, Chris, guess what? I tried them last night. I'm still here, so I think you're safe. So I hope you enjoy the soup. So we had a lot of fun with it. 
+
+Citizen Web3: 
+Yeah, I'm originally from the Ukraine, so I can relate to what she said. 
+
+Chris: 
+Well, I was going to add my wife was born there as well. 
+
+Citizen Web3: 
+Oh, cool. So I would like a traditional question to some all of this up, which is kind of a little bit not to do with the values, but to do more about the other side. What are the three blockchain projects that currently excite you outside of Cosmos or at least one? 
+
+Chris: 
+I like Solana quite a bit. I've been fortunate to work closely with their team since over a year now. And in addition to really feeling excited by the technology, I really like that they're focused on use cases. The team is really execution focused and values wise. 
+
+I feel like I really synchronized well with them. A second one that I'm really excited about is New Cipher. It's also a project I've worked closely with and one that I feel like has a really intriguing use case and some really smart cryptography behind it. And last, but not least, and far from, you know, an exhaustive list, I'm really excited about the pocket network, POKT. I'm not sure that one seems to have flown under the radar for some people, but pocket is essentially decentralizing the Web 3 infrastructure experience. So the most powerful use case I see is providing an alternative to Infera. So for example, right now, chain flows operating a full Ethereum node. And if you connect to us through pocket, you can essentially have access to our Ethereum node and you don't have to go to Infera and you would pay the pocket network a lot less than you would pay Infera. Yeah. Solana and New Cipher pocket scales coming up, which I feel pretty excited about. And the secret network being built on Cosmos. Those are the first five that come to mind when you ask the question. 
+
+Citizen Web3: 
+And it's been, I think, really a pleasure to speak with you for both of us. And really, thanks again for coming on. If you want to add anything that we didn't ask, like me or Anna, you feel free to do it now. 
+
+Chris: 
+Yeah, I think you both covered it in a really broad ranging, fun conversation. So I really appreciate that. 
+
+Citizen Web3: 
+Yeah, thanks for coming on, Chris. And for everybody who's been listening, we've been Citizen Cosmos. And thank you for listening to us. Thanks and catch you later next time, guys. Thanks. Bye bye. 
+
+Anna:
+Thank you. Bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational conte

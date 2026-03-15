@@ -1,0 +1,424 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/bradfuller
+
+Episode name:
+DeAI, Going Nuclear and Validating with Brad Fuller
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of Citizen Web three Podcast. Today I have Brad with me from North Tansor Validator. Brad, hi, welcome to the show,
+
+Brad 
+Thanks, good to be on. 
+
+Citizen Web3 
+Glad to have you on, I'm actually very excited for this episode. You are the first person from, well, related to BitTense that we're going to interview. yeah, excited. But first thing is first, before I get too excited, can I please ask you to introduce yourself for myself, for the listeners? Tell us everything you want to know about you, maybe a little bit about your background, a little bit about your Web3 story and anything else you want to put into it.
+
+Brad 
+Sure, sounds good. no, man, that's some pressure on the BitTensor stuff. Hopefully I represent it well. Yeah, so I've been in crypto for like 10 years now. So most of my background is very, you know, classical crypto. You know, I really care about the proof of work kind of stuff very much about the innovation, really solving real problems and all that. So I've been...
+
+Citizen Web3 
+Da da da da!
+
+Brad 
+tons of background in crypto haven't built a whole bunch besides just kind of tweaking and you know, advocating and getting people on ramped. But about a year and a half ago, I got introduced to the BitTensor project, which kind of aligns exactly with old classical crypto proof of work, all of that. So I've spent the past year and a half really heads down in BitTensor, just trying to help
+
+kind of build the community, help provide good solutions for this really killer opportunity for kind of the merge of crypto, proof of work, validation, and AI to take full advantage of what's going on. So we found a North Tensor, it's a validator, four bit tensor. And we're also launching some other projects coming up very soon this week and next, just around, you know.
+
+all the opportunities around getting people on ramped into the AI ecosystem.
+
+Citizen Web3 
+Nice. I'm gonna dig it, of course, if you don't mind me. Can I? Yeah. So first question is first. You've been around long enough. What was the first token you bought? on, first shit coin that you bought. I want to know. come on. No, no, no, no. Give me something more juicy than that. Bitcoin is boring. Come on. Ethereum is boring. Give me something juicy. Something like DEFCOIN.
+
+Brad 
+Please.
+
+Brad 
+I mean Bitcoin was the first one obviously.
+
+Brad 
+totally. It was all about Monero, right? I mean, it was just that, you know, what Bitcoin was supposed to be, right? All about kind of the cypherpunk privacy, you know, more disruption of, you know, the powers that be kind of stuff.
+
+Citizen Web3 
+Okay.
+
+Citizen Web3 
+Yes.
+
+Citizen Web3
+Man, I remember 2014 and Bitcoin talk and when you went to the altcoin thread and you would like just update it every few minutes and there'll be like hundreds of new altcoins coming up, new pages. It's crazy. But how did you get into crypto? What attracted you to this? Like not necessarily industry because probably when you just came into crypto, mean, I'm assuming, of course, but you probably weren't working in crypto. So what attracted you originally to this space?
+
+Brad 
+I've always been kind of that hacker mindset, right? I mean, it's always about trying to find what's new, always browsing the internet, reading RSS threads, figuring out kind of where the cool innovation is and what's next. mean, back then it was like there was still fresh kind of innovation everywhere, not just crypto, even websites, right? I mean, it's just like, you want to be signing up for the next cool thing. What's the next Twitter? What's the next?
+
+whatever else to grab your username, your handle early, and, know, be able to be part of that ecosystem. it was a lot cooler to sign up for stuff than it is now. So, a lot of it's just that, right? I mean, people would talk, they, you know, mentioned the whole, you know, Hey, have you heard of this new thing called Bitcoin? and man, it took a lot of technical expertise to be able to figure out how to get it.
+
+Citizen Web3 
+Did you, did you straight, I mean, I'm going to hear from my story here, like, because for example, for me to actually understand that it was something meaningful took three years from originally touching Bitcoin and to actually understand that, well, at least comprehend it, understand it. What about you? Like, did you jump straight into it or did you take some time to understand that it actually has some meaning to it?
+
+Brad 
+It was just kind of everyone was learning together, right? I we were all just kind of telling these stories about what it would disrupt, what it would solve. You know, I remember them talking, you know, reading on forums and stuff, people talking about how it easily hit 100k one day. And, you know, that was ridiculous. Like, it was like, there's no freaking way this thing's going to go that high, right? mean, that's, know, so it was, I mean,
+
+You understood it from a technical perspective, but looking back now, it's like, man, we had no idea how revolutionary it was and how impactful the concepts were going to be. Some people clearly did. I wasn't there. And honestly, I'm still kind of been unlocking all that stuff.
+
+Citizen Web3 
+Let me put you on a spotlight here. Do you still today after 10 years now crypto aside, let's just look at Bitcoin for a second. said, I'm going to put you on a spotlight. So like, do you think that it's still today, the community of Bitcoin and Bitcoin in general still stands for the same values and in ethos that it's originally at least
+
+Not even described in the white paper, maybe, but originally were going around until 2012, 2013 or so.
+
+Brad 
+I need to be careful with that response. No, that's a good call out. No, it's a good call out. I think it's hard to set expectations for where you thought it should be 10 years ago versus where it is now. I mean, one of the main points of tech is this dynamic. It's about solving problems. Just because you think there's a way to solve a problem doesn't mean it has to be your solution. I mean, you have to be dynamic. You have to kind of say, hey, I did it.
+
+Brad
+didn't go the way I thought it would be, but hey, it's being used this other way in general. Let's open that up. And that's kind of one of the big things that I care about in crypto is, you know, making sure that it's, these projects are open, right? We want to give people the opportunity to go solve things the way they want to solve them and not try and just kind of do a tops down, you know, no, this is my tunnel. This is my project. This is how it should work. It's really just about bringing, you know, new solutions and letting people
+
+innovate and create and collaborate with each other to solve problems in ways that I would never think of and the original founders would never think of, but it really is revolutionary. So Bitcoin specifically, it hasn't followed the direction I want. think there's a lot of alternatives available that do follow Bitcoin's original vision if you care about that stuff. Bitcoin is kind of doing its thing and still being innovative and disruptive. So I support it.
+
+Citizen Web3 
+Absolutely. I agree with a lot of things that touch personally there, like in terms of alternatives, know, and giving alternatives. is a bit, I mean, I'm asking that a lot of people lately because I mean, people that the guests, I mean, it's come into the interview and I get all sorts of responses. But I guess, you know, one of the things that like, I don't know, touches deep inside with me and of course, this is biased, you know, we're all humans, is the fact that, you know, over the last
+
+Citizen Web3 
+12, 13, 14, 15 years or whatever, being around in this industry, well, 15 over exaggerated, but more like 12. It seems like lot of founders, project founders, have lost, I'm gonna say this, a lot of balls, and they're scared of everything. And of course there is some understanding to why that is happening, but this is a question to you. Do you feel that today,
+
+Citizen Web3 
+the projects that arise and the founders that are behind these projects, do you feel that it's less like, know, cyberpunky? Do you feel that there is more laws around it? Do you feel that there is more like bureaucracy around it, people trying to legislate everything or not? Or is this a bias that is coming from people who have been in the industry for like 10, 12 years?
+
+Brad 
+I think it's a tough combo. There's a lot of people that are still there that really care about innovating. I think there's a lot of early founders that
+
+you know, are super rich now and just kind of doing their own thing. So it's hard to keep them motivated when you kind of, you know, transition to a different lifestyle. I think there's a lot of people just because the space is so much more crowded, there's so much more visibility. I think it's just diverse people that weren't, you know, instilled in the cypher punk culture and this idea that, you know, we're disrupting stuff and more of this, you know, I just got a, you know, I don't think they know any better, right? It's they went to their
+
+MBAs and got their degrees and said this is how you do it and they're just following the formula They don't want to try and create something innovative and disruptive They don't have that high-risk tolerance. So I think crypto has attracted a lot of that I think one of the main issues what I'm seeing in crypto really is just kind of you know this association since 2017 with kind of the bro culture of it's just about meme coins and pump and dumps and
+
+And unfortunately, I see a lot of people in the tech community that are anti crypto now because they associate it with NFTs and all this stuff. I'm not against those things, right? don't think, you know, whatever you want, create it. think it's all great. But I think a lot of techie people need to recognize that there's a lot more innovation and disruption than just meme coins and NFTs. And I do think we've lost some of that and I would
+
+like to find ways to kind of bring that back and get people to understand that, you know, crypto really is rooted in cypher punk. It's really rooted in, you know, disruption and creating new solutions. it's not just about pump and dumps and making money as quickly as possible.
+
+Citizen Web3 
+Amen. I think that, know, like when you said following the formula, the first thing that springs to mind is I think that, you know, usually the state education system and this doesn't really matter for it works for each country. Unfortunately, you know, it cuts creativity with a, you know, in crypto, I think in this industry, in the web industry, at least I would like to think that, that, you know, creativity is kind of a driver that's pushing forward this industry. Yeah.
+
+I'm gonna you mentioned memes there, memes, memes, know, whatever some people pronounce it differently, but I'm gonna say like a statement that is I'm not saying I agree or disagree with it, but it's a statement that lately has been more and more I've heard about it and it comes from from a speech on talking 2049 not that I watched the thing, but there was a couple of speeches that I did watch and
+
+Citizen Web3 
+One of the guys, Murad, he said a very interesting sentence in one of his speeches about memes and about the alternative crypto culture, which I'm going to ask you what you think about it since you mentioned it. He said something like this, that the difference between memes and altcoins is quite small. The difference is that memes don't lie to you when they were trying what in what they're trying to sell you. sell you
+
+The difference between memes and altcoins is quite small. The difference is that memes don't like you in what they're trying to sell you. They sell you belief and hope in hype. And they say, this is what we have. And this is it. Where there is altcoins, they do like you. They say that they sell you technology, when in reality they don't sell you technology. In reality, they try to sell you the token. They are building the technology, but they are not selling it. They're selling the token.
+
+Citizen Web3
+Belief and hope in in hype and they say this is what we have and this is it whether he says altcoins They do lie to you They say that they say they sell you technology when in reality they don't sell you technology in reality They try to sell you the token they are building the technology, but they are not selling it They're selling the token and of course like you know, it comes the token because it's you know Not owned by everybody comes kind of we can argue that how it works in the philosophy. But what do you think about that sentence? Do you think that?
+
+Citizen Web3 
+There is an sorry for the listeners like the recording here is happening. And the reason I'm asking this not just what Brad said, but also this is 14th of November. yeah, like the memes are by the looks of it driving the market or whatever. I don't know. Not not my thing to say. But anyway, sorry, Brad, back to you. Like, what do you think about that?
+
+Brad 
+just generally on the honesty around meme coins and how it's really you know it's the same as anything else but it's really about a pump and dump but I think it's accurate right I mean I just think there's more to crypto than making money and yeah a lot of altcoins really are just trying to sell their tokens
+
+I mean, I look at the space, there's so little, there's still a few good projects out there that are actually innovating. So from that perspective, I think there is a lot of altcoins that really are just, know, meme coins that are pretending to be, you know, disruptive and innovative. And then meme coins for the sake of meme coins. And again, you know, build whatever you want, right? I mean, I think it all is great. But don't lose the idea that
+
+The thing that's even powering these meme coins is insanely innovative, right? I mean, the fact that we can trade, you know, currencies with each other and create stuff that we can trust and, you know, it's, fungible or whatever else is, you know, 10 years ago, that was like, you know, crazy and you'd need central institutions to be able to manage that. so even with those, it's great. but
+
+Me personally, I'm just more interested in more interesting problems than just marketing and attracting as much liquidity as possible.
+
+Citizen Web3
+I absolutely agree with you. think the innovation that comes from crypto is definitely not least about money,but the innovation comes first. The money follows the innovation, definitely. I do want to say that over the years what I have come to realize as much as I'm also like really not about the money kind of person and a lot of the time that fires up in the projects that I do because we don't care about the market, we don't care about that, we care about the idea. But okay.
+
+regardless, but I must say that, you know, there is innovation that for example, something stupid like and I'm sorry to say that, but in my opinion, I'm not a big fan of centralized projects, know, and, but you know, when we look at things like, you know, Binance coin or whatever, or Leo coin, whatever, you know, those coins which, which in essence, you know, over overnight kind of gave an opportunity to anybody in the world doesn't matter what they do, doesn't matter what their profession, where they live.
+
+Citizen Web3 
+to own a stake in a multi-billion dollar company, which gives them the opportunity to do whatever they want in whatever they live, which they didn't have before. And that, think, is quite a powerful instrument. And of course, here it's not about the money. Here it's about the accessibility that crypto creates, I think, and the opportunities it gives.
+
+Brad 
+Totally, totaly I agree.
+
+Citizen Web3
+Yeah, and you know, to back to, of course, to a little bit to be tensor and well, first of all, before we tensor, why proof of work you mentioned at the beginning, you said that proof of work, you know, is definitely for you, the winning consensus algorithm. Why?
+
+Brad 
+I don't know if it's a winning consensus algorithm. like it. I like, you know, proof of stake. like, I like all of them, right? They're all awesome. They're all innovative. I like solving all these problems. One of my things that proof of work though is just kind of the, you know, it's more, you know, work means more than just being rich and going and saying, I'm just going to lock up these tokens for however many, many amount of time. Right? I mean, it really takes creativity and innovation.
+
+that's, I think one of the main things, even, even something as simple as Bitcoin, right? I mean, it's just hashing and it's, you know, led to this whole industry around ASICs and you know, real jobs associated with more than just, you know, having value and locking it up somewhere. So I like proof of work because I think it, it, it's more than just the, electricity costs.
+
+that drive the value of it and I think it just brings a foundational value for whatever cryptocurrency is using it.
+
+Citizen Web3 
+What about combined systems which use the proof of work for computation, let's say, or whatever, and then use proof of stake for governance or anything like that?
+
+Brad 
+Yeah. I mean, I, like I said, I like it all bit tensor mixes a whole bunch, right? I mean, it's proof of work for depending on the subnets and what you're doing, but it also requires, you know, a proof of stake. It takes a whole bunch of consensus. There's tons and tons of layers on, you know, a different mix. I think, and I think that's important, right? A mix of being able to contribute and make that decentralized, you know, you can't just have proof of work. If you just have proof of work.
+
+then you consolidate towards people that have the real world money and the supply chain to be able to support it. That's one of the concerns about Bitcoin is consolidated more and more into people that have access to power. Proof of stake on the other extreme is just kind of a who got in early and has all the money and then they kind of can vote on everything. So yeah, I think it's a mix of everything that's required. And that's what we're seeing.
+
+we're helping do with BitTensor and all that is very much just making sure that everyone has a way to contribute.
+
+Citizen Web3 
+Since you kind of gave that last expo, I was going to jump to bit tensor here, but one last question following on what you said. What do you think is then, well, in your opinion, of course, this is your private opinion. I'm not asking for a solution here. But what do you think then would be a solution to the distribution problem? Because obviously, you just mentioned yourself cons and pros with both.
+
+Citizen Web3 
+following. We know that neither proof of work or proof of stake have solved the distribution problem and it's a big issue. What do you think can help potentially for this industry to make it better?
+
+Brad
+That's hard. I think you mentioned it somewhat at the beginning about education, right? I mean, it's a lot of it's just, you know, getting more people involved and aware and educated on kind of what they need to do and how they contribute to, you know, support stuff. Because, I mean, I can't speak for all projects. Obviously, there some that you're going to have, you know, a whole bunch and no one's going to let go. But I think a lot of legitimate projects.
+
+People do recognize that, you know, it's a more valuable project when you have, you know, wider distribution, you know, fewer whales and all that. and I think a lot of the, you know, early adopters of those projects, I'll speak for BidTensor specifically, like I see very much a lot of people that have, you know, a lot were in early and have a lot of stake, but they're very generous with kind of sharing it and making sure that people that really want to contribute are able to contribute. and they'll be compensated for that. They'll get a share.
+
+either through staking or through support and registering subnets so they can start getting a share of the emissions or even just contract work and getting paid directly in TOW for that.
+
+Citizen Web3 
+Let's talk about little bit, sorry, about decentralized AI. It started not that long ago, at least the hype. Some projects are older, some less older. In my personal opinion, I've mentioned this a couple of times on the podcast previously, there is roughly three, four projects that are actually doing something, whether it's BitTensor or Bostrom or...
+
+Cortex, for example, and the other ones are all seem to be selling services for AI. The other ones seem to be either selling your computational power in the cloud or I don't know, GPU power, whatever. Like, what's the deal here with everything being called the decentralized AI then when there is like three, four projects that are actually can be called the decentralized AI.
+
+Brad 
+
+I don't know it's the same like opensource AI what's the real definition of opensource AI or decentralised AI rite I mean you know depending on what you pick and choose for the definition 
+
+It's, you know, it's, it's whatever it's marketing, right? Whatever sells and whatever you can convince. I don't think we've reached consensus on, you know, what those definitions should be. I think a lot of times it's just lacking context. If you have the knowledge and you, you say decentralized, they're talking about a very specific aspect that's decentralized. but then it's a, what are the expectations for what should be decentralized, right? ideally everything is, but.
+
+You can kind of, have to bite off one piece at a time to be able to get there, right? If you just launched a fully decentralized product and dumped it on the world, you you wouldn't get any adoption because, you know, it splinter off and kind of disappear into their own things. I, I don't have any harsh judgment on any, you know, claim of decentralized AI, just as long as we're kind of, you know, headed towards that direction. have a vision for.
+
+what it should be and I think that vocabulary will align on over the coming years.
+
+Citizen Web3
+So BitTensor has been mentioned in several places as not decentralized but federative, right? If I'm not mistaken, correct me if I'm wrong here.
+
+Brad
+I trust you if you hear that. It's an early project. There's a lot of different ways you could put it, right? I I would call it decentralized because it is anyone can launch their own project on it. Anyone can kind of build their own solution. But yeah, there is some aspect of, it is part of a broader ecosystem that is involved with other subnets and all that.
+
+Citizen Web3 
+Can you talk a little bit about the consensus in BitTensor? It would be quite interesting, I think, to hear from your perspective, of course, how you see it, how it works, what's so special about it, or BitTensor in general, if you want.
+
+Brad 
+Yeah. So the main thing about BitTensor, the main thing about kind of OpenTensor Foundation and the founders is it's very much, you know, market driven, right? I mean, I think the vision for, you know, pretty much all of us that are in it is we care about making it, you know, a free market, you know, with the good and bad that comes with that stuff. So a lot of what we're trying to build is how do we enable people to provide their own solutions for AI?
+
+just on top of this chain, this new layer one that incentivizes people to solve problems the way they want. And if you want to collaborate with other subnets and with the broader ecosystem you can, whether if you want to do your own thing and come up with your own incentive mechanism, that's fine. So when it comes to consensus, it's a hard one because I mean, there's the broad consensus of, you know, just BitTensor, but it's just, you know, substrate wallet kind of driven distribution with the 21 million
+
+over the course and it's similar to the Bitcoin emission schedule. But the main innovation is you have these subnets which are just essentially, know, side chains that you can launch. And with it, you can build your own consensus mechanism, Umu consensus was kind of the main thing of being able to not have like a Bitcoin hash one winner takes all kind of thing.
+
+but more of an AI driven, know, this is my judgment. We're minimizing loss, right? What's the loss function that's best performing and then rank those responses from the miners across the consensus. So the consensus is, you know, a bit looser because with AI, it's not about an absolute right answer. It's about one that, you know, minimizing the loss. So a lot of the subnets, you know, follow that, right? I mean, we're building subnets to be able to go and solve.
+
+for specific, you know, probably image generation, right? It's a, can have a bunch of miners that are all, you know, providing solutions to image prompts. You can't go say this one miner got it right. He wins all the, you know, pot. It's really about comparing the results of that and compute, and determining which ones are actually, you know, striving to provide the best response and which ones are, and then ranking and distributing for that. So, but, but for consensus mechanism.
+
+Brad
+You know, it just depends on the individual subnet, right? There's 54, I think today, aiming to add a thousand, over a thousand. So it's, you know, we really just want to kind of allow people to build whatever AI apps they want on top of BitTensor.
+
+Citizen Web3 
+What kind of like some of the interesting you mentioned that the subnets can have different consensus? Is there any subnets that have something that stands out like on out of the blue like out of everybody else?
+
+Brad 
+I don't know one off the top of my head because there's so many that we're juggling. mean, running as a validator, right? That means that we're running, you know, 54 different people's software. Thankfully they introduced it, child hockey staking so that we can go and split the work with each other. but this, the software requirements are, are pretty heavy, and pretty unique depending on each individual one. And then they're independently being updated. So.
+
+I don't have one off the top of my head that I'd say this is super unique because it's really just about kind of solving for X whatever problem they're solving for on the subnet.
+
+Citizen Web3
+What about in terms of problems? Do you remember any subnets coming up with some problems that stood out for you? Something outside of normal text generation or image generation? Something like, that's interesting.
+
+Brad 
+I would suggest you look through them because like I said, there's 54 of them. There's a ton of really cool ones that, you know, have varying degrees of like, I think it's AI. It's all interesting, right? Even just the basic chat prompting is awesome. There's one that I've been working with. Make sure I name the number right. One sec
+
+Brad 
+Yeah, man, there's so many. Right. I mean, we have, we have like compute hoard that's like, you know, decentralized compute, which is really just this, you know, it's a takes a facilitator. can go and have it do tasks and it distributes across, you know, what they're aiming for is, know, tons of GPUs. That's all coordinated through, you know, their own own subnet that's distributed out to validators to validators should be out further to miners.
+
+the miners go and solve the problem however they want. And then we rank, you know, how they solve the problem. it opens up miners to be able to solve problems the way they want. As long as it's solving the problem, that's all that matters. Right. you have, you know, same with, you know, prediction markets, right? Betting or even the stock market and stuff. same kind of thing, right? The idea that we can have, I mean, we were talking to one and they're, they're saying they have.
+
+you connections with some miners that have, you know, sports betting that's, you know, some of the best, you know, prediction on how, how these teams are going to be able to perform. and with BitTensor, you don't need to reveal your algorithm, right? You don't need to go and say, you know, open up exactly how you do it and kind of give away your secrets source. You just need to prove that you can do it. and then you're rewarded for that.
+
+Citizen Web3 
+Let me jump a little bit to the validator side. I'll come back to the AI, because this is actually interesting. We have quite, I think, believe, quite a lot of validator listeners, and we interview a lot of validators. And this is interesting, because as far as I understand, the validating on tau works a bit different from what normal validation. Am I correct? Or can you tell us a little bit about it from your point?
+
+Brad 
+Yeah, yeah. So, so the way the validating works, again, it's every subnet has their own consensus mechanism. They have their own code base that they use to go, you know, define what the miners should be doing. So every subnet is going to be, you know, a different, slightly different validation requirement. So they range anywhere from, I can run it on a little VPS that's just
+
+going and sending out, for example, queries of what's the stock price going to be of this equity tomorrow, right? Let the miners kind of provide their response. I store it. I wait a day. I check it, you know, against how close it was based on all the miners responses and say, Hey, these miners were really close. These miners are really far off. I rewarded them for, you know, how close they were and kind of distribute, you know, my share of emission to Tau based on the results of that.
+
+also could be, you know, w we're working on a data refinement subnet right now where it's a, the miners go and have to take, you know, from find web common crawl and be able to go and collect a collection of data sets to provide me as a validator, I'm going to have to run a, you know, GPU validator to go and train an LLM based on the responses of these data sets and confirm that the data set is actually aligned.
+
+with, you know, the responses and, the, the structure that all the other miners are providing. And if the miners trying to cheat and say, you know, take a shortcut, make something up, so that they can save costs, then we're able to rank that and say, they're not actually, you know, performing the mechanism, the consensus that they're, we're trying to aim for.
+
+Citizen Web3 
+Considering though, every subnet has different algorithm and different requirements. How do you, I'm assuming there is no typical type of node, right? All nodes are different. So is it more like the validator community runs the machines bare metal, self-hosted? Is it cloud? What was the setups like in BitTensor?
+
+Brad 
+Everything, all in everything, right? I use Ansible personally for the deployments. And then we're hosted all over the place, VPSs, bare metal, Locally, just kind of whatever's cheapest, right? It's all about optimizing the costs to be able to get the work done.
+
+Citizen Web3
+Is there a self-hosted culture in BitTensor? Curious, like out of data centers. Okay.
+
+Brad 
+Definitely. Yeah, definitely. There's, you know, we've been working with one validator that's helping support us on a lot round table 21. They're, yeah, investing quite a bit in their own infrastructure.
+
+Citizen Web3 
+Awesome.
+
+Citizen Web3 
+Nice. And does it because a lot of there's a lot of arguments, know, a lot of chains, I mean, that it's not profitable, but I'm curious, well, what's is there any already like, of course, if you say it's only one maybe in still early days, but curious to understand, like, you know, a lot of people, I mean, we personally are a self hosted validator. And you know, you do it because of values. But at one point, you understand the amount of money you invest into the setups, and you're like, wow, that's a lot of money. So
+
+curious what is the 101 on that.
+
+Brad 
+on profitability. It's, it's a mix, right? Sometimes it's worth it. Sometimes it's, I'm doing this because it's the right thing to do. And we really want to kind of see the succeed. and I think, I mean, it's like all tech, right? It's expensive at first you invest in, you take the risk, you bring it on. and I think it's just going to get cheaper. It's going to get easier. It's going to get more competitive to, you know,
+
+Citizen Web3 
+Yeah, while the possibility.
+
+Brad
+Stay, stay relevant. but you know, things smooth out right, right now it's, you know, spikes up and down. It's I'm doing great versus I don't know why I'm doing this. I'm, know, losing my shirt on this. but I think it'll, I think it'll even out, especially with, know, how big AI has gotten. It's kind of the perfect opportunity right now to, to do this kind of stuff, right? Because it's.
+
+You have, you have a lot of people that knew AI, they know machine learning, they understand kind of how these problems are solved, but it's been very focused towards research institutions. now it's, you know, mass market, right? Everyone wants to get into it. It's the next big thing you have corporations, you know, their capital expenditures are insane, how much they're spending, just to stay relevant on the bleeding edge. the way I look at is all of that last gen stuff, all these H 100s that
+
+Even if what a year and a half ago people were panicking trying to get their hold on, they're suddenly like, we don't want them anymore, right? It's throw them out. They're worthless kind of stuff. All those H100 is going to need a new home. And that's a perfect chance, you know, for, you know, the rest of the community to go and actually train their own foundation models and their own solutions. And really, I see that as really kind of the, know, where we're going to see an inflection point around.
+
+broad adoption is allowing individuals to go build their own solutions and integrate tons of stuff. I see BitTensor really being able to support that and unify people to bring real solutions.
+
+Citizen Web3 
+Let me, a small devil's advocate remark on the electricity. AI of course, electricity and AI. So the big question is where's the electricity going to come from? mean, a lot of people argue that if you look at what Meta and the other corporations are building the size of the warehouses, what's going to power them? I mean, considering that I don't care about Facebook and stuff, but we care about our industry.
+
+Brad 
+What's going to power them? I mean, considering that I don't care about Facebook and stuff, but we care about our industry and always things growing and growing.
+
+Citizen Web3 
+And obviously it's growing as well. And obviously if their appetite is growing, it's probably going to go down to retail. Retail appetite is growing in terms of computational power. So end of the day, we're coming back to the electricity question. So what's going to power up all that?
+
+Brad 
+Hopefully, nuclear or something that's right
+
+Citizen Web3 
+Yes. Yes. No, no, no, no. I was I was hoping you're going to say that because people like are afraid to say that. I don't know why, especially in Europe, people are scared of that. I don't know why. I don't understand why. But yeah, sorry, gone.
+
+Brad
+Yeah, no, I mean, that's, that's it. And I think it's great, right? I mean, it's, this is what we need. It's there's, you know, you look at graphs about, you know, power and innovation and, you know, quality of life. And it's just like, if we can just kind of do a step function up on the amount of power, it really allows people to, you know, I, I believe in the power of people, right? I mean, I, we need to get away from all these corporations, you know, being able to do whatever they want. Cause they have, you know,
+
+big pocket books and they're taking, you know, all of the index fund investments and sucking it all up so they can continue to attract the top talent while everyone else is left behind. We need power cheaper. We need to access to these GPUs and to make it cheap so that everyone else can go and build what they want on top of this stuff.
+
+Citizen Web3 
+Hopefully the trend will carry on. It's not an easy trend though, know, like all this. A lot of people for some reason are afraid of building hosting and I don't know, they try to delegate it and it is sad to see. But back to the models and bias kind of things, something I wanted to ask you. So,
+
+I don't know if I'm going to try to make a question out of this, right? I'm going to say a little intro, and then I'm going to try to make a question out of it. So the way I see it, and again, this is a personal opinion, of course. One of the sort of golden grails, or holy grails, whatever, of artificial intelligence, or decentralized artificial intelligence, shall I say, is actually the open sourcing, the learning, the teaching of the model, like opening the complete black box.
+
+Citizen Web3 
+And it's something that I haven't seen a lot of. People are afraid to go down to the consensus level and to actually use a decentralized consensus to teach an AI model, which in a sense would return a decentralized AI model. Why do you think people prefer to rely on models built by other people to do their tasks rather than trying and build their own models? Is it a lack of tooling or?
+
+Brad 
+Yeah, I think it's it's cost right now, right? I mean, it's a it's you look at foundation model cost training and it's crazy. I mean, you have startups, you know, raise hundreds of millions of dollars and they failed at it because it's just too expensive. But back to my point, I think it's just going to get cheaper. Right. I mean, as long as we're throwing money at this and we're innovating and there's a lot of incentive to solve this problem, the cost is only going to go down and we're going to be able to say solve, you know,
+
+Brad 
+more interesting problems the further we go.
+
+Citizen Web3 
+Do you really foresee people in, I don't know, let's five, 10, whatever years time, being able to build their own models at home and actually doing it? Not just being able, but actually doing it. OK.
+
+Brad
+100 % 100 % I mean we're already seeing people try that right? That's the rich people hacker culture kind of thing right? It's gonna get you know especially with bit tensor and being able to use you know this decentralized compute for inference and all that it is I mean I would say as long as we
+
+do rights, right? As long as we have access to data and we don't allow these big corporations to build moats and make data deals. So they're the only ones had access to data sets. They're the ones, only ones that have access to training and legislation that, you know, restricts AI as long as we can prevent that stuff. mean, the tech's there, it's open. People can build their own custom models that are specifically around their use case. It's, there's so much power to that.
+
+literally just in the LLMs. That's not even considering all the other ML applications that we can have for just our personal lives.
+
+Citizen Web3 
+Excuse me. Sorry. It is. mean, the thing is, what pushed me a little bit back was I was at an event. And I don't go to events very often. I really don't. But this was probably the first event in some years that I visited, a big event, which was in Berlin about half a year ago. And there was a conference, sorry, a side event or whatever that I went to.
+
+which was about decentralized AI and it was full of developers. I don't remember the project and if I would, probably wouldn't say it right now, just to point fingers. But it wasn't a big project, it was more or less a small project. But there a lot of people there and most of the people that side event were not just passers by. When you spoke to them, were developers there, smart developers, were a lot of DevOps people there.
+
+a lot of people who are interested in developing AI. But as soon as I tried to speak to any of them in a one-on-one conversation on what is the centralized AI for them, and most of them were literally just talking about launching LLMs built by somebody else in the cloud. And this was the centralized AI for them. And as soon as I would go down to trying to talk about building models, consensus, and so on and so forth, all of them were pushed back.
+
+Citizen Web3
+So I kind of like I am with you on what you say is just when you say that you think it's going to happen in five years. I'm like, mmm, like what I've seen so far kind of pushes me back. I hope you're right. I definitely hope you're right. And that's what happens. Yeah, go on, please.
+
+Brad 
+Yeah, all about education, right? I mean, it's we need people exposed. We need people understanding how they can do it because it's really not that hard, right? I mean, you kind of hop on some of these trainings from people and the hard stuff has been solved by these researchers, right? The libraries are incredible now. It is.
+
+It really is accessible to be able to do this. The main blocker is, you know, energy and compute. and I, I hope that we'll continue to invest in it. know that we're spending tons of money and power on it, but this is what it takes. Corporations, let them take all that risk on spend all that money because as soon as they do, it'll build, you know, a whole supply chain to be able to support this. And it's going to benefit, you know, all of us individually. I think, I think generally you see.
+
+especially early on, mean, a lot of people don't quite comprehend it and a lot of it. I mean, again, not to, you know, accuse anyone, but there's a lot of VC funding in crypto now. and so a lot of these people you talk to, it's just, you know, their head really is just kind of how quickly can get to profit. and, and for them it's a, you know, yeah, we want to own the LLM and, the VC will have these incentives to say, you know,
+
+We want to keep stuff locked up. We want to have the right start foundation model. We want to, we want to turn web three into, you know, essentially AWS except for anyone who can access it using a, you know, a blockchain wallet, but otherwise we're still the, you know, owners of the whole infrastructure. And we, you know, we can charge on top of, you know, all of those transactions. but, I don't think it's going to survive, right? I mean, there's.
+
+there's too much benefit to AI and there's too much attention on it that you're gonna have innovators. I mean, you're seeing it in open AI, right? I mean, you have all these people that founded it and created this now kind of branching off and doing their own thing. You're only gonna kind of see those branches further.
+
+Citizen Web3 
+I only hope you're right. I do see some signs to that and more people using programs like Image Creators and actually prompting without understanding that prompting is actually kind of far away coding. So it's cool to see people get into it like that and sort of kind of go down, down, down level to actually touching LLM itself and on that level.
+
+Please go on and retort, Brad, sorry, retort if you wish to retort.
+
+Brad 
+Yeah, I was just, I was just going to say, mean, that's, and I think that is what powers innovation, right? I mean, I look at the, IOT space and how much opportunity there was in there. And I think it's just dead because corporations strangled it, right? I mean, they had this vision of we're going to own everything. We're going to keep all these rights and have all these patents and stuff and then expect all the broad, broad markets to accept it and adopt it.
+
+And it didn't work because you didn't have that hacker culture be able to go innovate and create stuff that actually is solving problems. They wait, they want it solved. And typically corporate goes and copies that and polishes it and then sells it. Right. You can't change to flip that model. And I think it's the same with AI, right? Right now corporate thinks, you know, they can go and have a polished model and be able to sell it and bring it to market immediately. You need to go through that phase of all these hackers going and building, you know, and making rough edges and, and.
+
+innovating and coming up with the solutions they want. And then you kind of get the really broad polished stuff that corporates good at. And I'm hopeful for AI, right? It's, like you mentioned the image generation, right? There's such a strong culture around people, just even the LLMs, right? Culture of just people running it locally and figuring out how they can go, you know, break stuff and build things the way they want. So I'm personally hopeful.
+
+Citizen Web3 
+It's really interesting that what you say can be easily backed up just like from a podcast, know, my podcast interviews, I've spoken to several fellows over the last four years, which have been at least like two or three people, I believe, that were really, you know, working in the founding of the internet. And I mean, the modern internet, I'm not going to 67, 70s, I'm talking about 80s.
+
+Citizen Web3 
+And like they are saying exactly the same stuff. Their story, their story that already happened is exactly what you describe right now. So, you know, of that culture being born, you know, and actually changing things and pushing innovation forward. Brad, really quickly, like to kind of like start wrapping things up. I didn't ask you about North Tenser and where does it all come in and into what is the vision of North Tenser as a validator? What do you guys do? What is the goal? Like, where is it going for you?
+
+Brad 
+Yeh, I mean I think it aligns with talking about we really just care about accessibility we want to bring people into the BitTensor ecosystem we want to bring innovation like I talked about BitTensor is really cool novel L1 um you build your own consensus on your subnets um it's 
+
+there's tons and tons of opportunity and creativity. So yeah, reach out if you're interested in kind of, you know, collaborating or have ideas or stuff. I'm more happy to, you know, help sponsor and support and be able to get stuff built. We're, we're close to launching, our new website, bit tensor.ai. our hope for that again is, you know, make it easy for people. There's a really broad, audience that's accessible, right? We don't want to just have this bit tensor be narrowed to.
+
+just people that are in AI and know specifically how to design these models. there's a lot more people that, I think need to be involved and we want to kind of help them figure out how they can be involved and help them ramp, whether it's even just, you know, someone that wants to buy and stake, right? Happy to help facilitate that someone that wants to help market tons of opportunity for that. There's just so much out there. so yeah, we'll be launching our bit tensor dot AI site, so that you can create an account and
+
+kind of understand the BitTensor ecosystem more. And our hope is it'll be more of a community hub. And I'm personally spending a lot of resources to just make sure it's successful, BitTensor broadly, and in our projects.
+
+Citizen Web3 
+Actually, let me go one last question here before I jump into a bit bleep, because it's of it's asked to be asked here about the community. this is like one of, well, I personally think for validators, it's one of the most difficult topics. again, talking from validators for years and years now, kind of feel from, doesn't matter which ecosystem validators come from.
+
+One of the biggest pain is always building community. What has been the experience like in NB tenser? Because you mentioned a lot of things right now, which are community building, of course. But what has the experience been like?
+
+Brad 
+I think probably the same as everyone, right? I mean, it's hard. It's hard to attract people. It's hard to, especially again in the ecosystem today, right? There's so much emphasis on kind of, people are drawn to centralization. They're drawn to power. So trying to attract people that are drawn to power to something that may not be so tops down kind of a, we're gonna control everything kind of thing.
+
+It is hard in the space again. And I think a lot of that's ever since kind of meme coin frenzy and this idea of I just want to attach my wagon to someone else and ride with them. You know, it's success. But I think there's a lot of people, I know there's a lot of people, people in the BitTensor ecosystem that are really, you know, striving to kind of make sure it's distributed and decentralized, right? There's a lot of initiatives, you know, from miners union.
+
+around table 21. There's really good teams out there working to, you know, make sure that we're, you know, we're all kind of being successful.
+
+Citizen Web3 
+Nice. I'm gonna jump into the blitz. Well, I call it blitz. You don't have to answer without thinking you can answer. Give me long answers as well. It's up to you. And so those are the questions are not crypto related. This is gonna take us out the conversation to finish this off. here here they go. They're a bit weird, but I warned you. So here's the first one. Give me either a book or a movie or a song that having positive influence on Brad throughout his life.
+
+Brad 
+Man, that's a probably book, chaos theory by James Gleick. That's, that's one that, you know, I was just thinking recently, that's kind of changed. read that when I was thinking about elementary school and that's just one those books that have stuck with me just in the back of your head on how you think about the world and how it works.
+
+Citizen Web3 
+Awesome. I love it. To everybody who's listening, by the way, check out the show notes. So everything me and Brad mentioned, there's a link there and you can find the books and the projects and everything else, the websites. Second question. They're going to get weirder. Give me one motivational thing that you would like that you can share, of course, that keeps you getting out of bed every day and building for the sake of curiosity and innovation and not looking on the.Kind of say the evil side in brackets and quotations, sorry. Something motivational, something that keeps you going every day.
+
+
+Brad 
+It's all about beauty rite whatever you can do to make the world more beautiful do that's what keeps me going you know beautiful solutions to hard ugly problems 
+
+Citizen Web3 
+Amen. Amen to that. Amen to that. Amen to the blocks. And one last one. This one is going to be the weirdest one. always is. Dead or alive, real or not real, made up, doesn't matter. Could be like a cartoon character, could be a character out of a book, historical character. Could be somebody you know personally. Doesn't matter, writer, a coder, family member, not a guru.
+
+Citizen Web3
+because I don't believe in gurus personally and it's not a positive thing in my opinion but a character, a that you know when you're kind of feeling down and stuck in your life you kind of think about that personage and it's somewhere helps you to move on forward
+
+Brad 
+That's a hard one. I don't know. I'm similar to you, right? I mean, I just kind of do my own thing. That's... Yeah, I can't think of anyone that's just like inspiring. I've got no heroes.
+
+Citizen Web3 
+I understand. understand. I get you. get you. I get you. I get you. You're the first person to in a lot of years to say that, by the way. Seriously. Nobody has said no one. Yeah, nobody has said no one. Nobody has said that. Interesting. Really, really interesting. No, it is, man. Like, seriously, it's interesting point, I think. Nobody has not said that. Brad.
+
+Brad 
+Wow, wow.
+
+Brad
+Hope it doesn't make me sound cocky or self-centered. I'm not at all.
+
+Citizen Web3 
+No, no, the opposite. No, no, no, I think it's the opposite. think it shows that, you know, it's like the question of what's your favorite color? And then people go like blue, red. And then if you answer like, I don't have one, they're kind of like, you mean you don't have a favorite color? Well, I don't have a favorite color. This is like simple as that.
+
+Brad 
+Yeah, right, exactly.
+
+Citizen Web3
+Okay, and on that note, Brad, this is just a goodbye for the listeners. Please don't hang up just yet. For the listeners, thank you for tuning in. And Brad, thank you for finding the time and joining us. Thanks. Thanks. Bye bye.
+
+Brad 
+Sure.
+
+Brad 
+Yeah, been a blast.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

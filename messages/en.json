@@ -833,7 +833,9 @@
     "eco tooltip": "Green Energy",
     "keyhole tooltip": "Key Sharding via Horcrux",
     "github tooltip": "Github",
-    "place your interview here": "Place Your Interview Here"
+    "place your interview here": "Place Your Interview Here",
+    "Podcast Summary": "Podcast AI Summary",
+    "Listen to episode": "Listen to Episode"
   },
   "ValidatorNetworksPage": {
     "title": "Validator Profile: Supported Networks",

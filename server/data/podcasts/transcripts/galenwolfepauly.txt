@@ -1,0 +1,440 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/galenwolfepauly
+
+Episode name:
+The Networks around Us, Design Impact and Coding in Runes with Galen Wolfe-Pauly
+
+Citizen Web3
+Hello everybody. Welcome to a new episode of the Citizen Web Trip podcast. And today I have Galen from Tlone with me. Galen is the CEO of Tlone and he's also related with Orbit. He will tell us all about it, how it all comes together. But first of all, Galen, hi, welcome to the show, man.
+
+Galen 
+Thanks for having me. I will try to tell you how it all comes together. I'll do my best.
+
+Citizen Web3 
+So the first thing is first, I'm going to ask you to introduce yourself like I do with all the guests. But before I will, I must say, think Orbit is over the past four years, it's definitely been, we never had anybody from Orbit, but it's definitely one of the most mentioned projects on the show. Even though it's not about Orbit, it's about in general people and computing, but it seems that Orbit
+
+comes as an example of all of that over the past few years, every now and again. But before we get into it, this was just more for the listeners. Galen, can you please introduce yourself? me, tell everybody what you're doing in Web3, how did you get to this life? And yeah, anything you want to mention about yourself, please.
+
+Galen
+Yeah, that's a very broad. You want me to start at very beginning? I'm Galen. I run Tlon. So I run the company that sort of builds the flagship product on top of Urbit. I helped build Urbit over sort of like many, many years in the early days of the project. The way I often frame it is sort of like, I actually come from kind of a hybrid design and engineering background. I always wanted to build.
+
+sort of open ended tools that lived on the network, right? So everything that we use, all sort of connected software we use depends on someone else to run it. I think that's sad to put it simply. And sort of a missed opportunity being someone who grew up around the early computers and so, like the early internet and early computers. So it was very clear to me at a pretty young age that, okay, there's gotta be some way to build a different system on which we can collaborate.
+
+communicate, connect, do all the things that we do, but in a much more long lasting, open -ended, fun, sort of experimental fashion. Turns out that that is impossible with existing technology. Or I started to run up against the limits of, you know, what you could do with the existing technology stack. And that's how I ended up sort of finding Urbit as a very prototype project, but one that seemed
+
+the only thing that could possibly be the foundation of a new category of software or software that really belongs to the user that people can customize. You could do whatever you want with that, you know, maybe has the same character of software that we used in the eighties and nineties, but is, you know, native to the network. So yeah, I spent quite some time helping to build Urbit. I'm not, Urbit is a, was in some ways also like an education and building system software for me because the breadth of its ambition, of course, is to be a platform in a way
+
+you know, nothing I had ever built before was going to be. And that went pretty well. mean, like, you know, obviously it's matured quite a lot. It works pretty well. And what I work on now is really trying to build tools on top of her a bit, which is what I had always wanted. Right. I sort of helped to build her bit because it was the platform that I knew would support the kinds of things that I wanted to exist in the world. And that's what I get to work on now. And some ways I feel like in the last, you know, even just like a year or two, I'm sort of finally working on the stuff that I almost a decade ago was dreaming about.
+
+Galen 
+So that's maybe a, that ignores my, you know, the early, leaving out my childhood, that's a quick summary. Yeah, go for it. Whatever. We can talk about anything. I'm happy to talk about anything actually.
+
+Citizen Web3 
+I will dig it. Not the childhood, don't worry, not the childhood. We're not going to do a therapy session, don't worry. Well, the first thing I'm going to ask you, which is kind of, of course, I know that people ask you, I thanks God for the internet. It's very easy to Google other people interviews and it's very easy to find what you talk to others about.
+
+I'm going to ask this question a bit differently. It's a question you've been asked before. I know that. It's about your architecture background. Thing is though, I'm not going to ask you like who your favorite architects are or what all that. If you want, you can tell me. But what I'm going to ask you is like, I have over the last four years spoke to a few designers and I don't mean designers, people who work as designers as per se. Sometimes they do, sometimes they don't. Sometimes they found their, sometimes they refer to themselves as designer. And I refer, I heard you refer
+
+to yourself as an architect quite a lot. And the question is, how does, and maybe not even how, you know, architecture is a very wide term. can build or architect a building. You can architect life. know, God is an architect of life, right? So how did the architecture background help you to shape your views on computing? And does it at all help you to shape your work that you do in terms of computing?
+
+Galen 
+Sure.
+
+Galen 
+Yeah, yes, definitely.
+
+Let's see. So yeah, so I'm educated as an architect, but educated in very sort of Beaux -Arts, you know, everything made by hand tradition where, you know, we also spent a lot of time where I went to school studying the history of architecture. And the way that that was done in the, in the school that I went to is that you spend a lot of time doing what they called analysis, which is basically
+
+redrawing existing works, both drawing them, building models of them, and sort of trying to understand what was the mindset of the person who made this thing, you know, sort from any period of history, which is a kind of unique way of sort of by osmosis, right, understanding like how the world was made. So instead of looking at things and kind of reading them from a distance,
+
+You have to go and actually remake them. So you really have to understand why was this made this way? Which I think that gets kind of at the root of what architects do, right? They sort of understand the cultural context and they understand the available tools and they understand the available technology and they try to sort of conjure forth structures that can accommodate the way that people want to live.
+
+you know, in this broad variety of contexts, it could be, you know, as mundane as furniture. could be as, you know, sort of every day as a house and it can be as, as, you know, sort of lofty as a, as a cathedral, right? Like, I think that when you, you know, to, to maybe like frame the way that I, well, I just, weird background. I, so I, grew
+
+Galen
+before to just to unearth the childhood, because it's maybe relevant. I grew up around sort of at the edge of Silicon Valley, around people building companies and building software and building things with technology. I completely took it for granted. It was just like the water that I was swimming in. And so when I went to sort of be immersed in the history of human culture through the built environment, know, thinking about sort of design
+
+and making things through the history of architecture, I was already very much aware of the fact that, well, our contemporary tools are digital tools. Like when we build things, we build things with computers. sort of like just, that was obvious to me. And so when I looked at the history of building, I didn't really think about it as necessarily tied to the medium of making buildings. I was thinking about it more as just, this is like, people use the available technology to try and sort of shape culture.
+
+And I think when you look at, think architects are like architectures of the oldest discipline of just like designing things in this is, is, is maybe like one way to think about it, right? Like architects for thousands of years have been doing exactly this. Like they've been looking at their context, looking at their available tools and figuring out how to kind of make the things that facilitate what we want to do. And it was very obvious to me that, well, the built environment.
+
+is kind of, kind of figured it out. Like we've already the tools for getting a building built, you know, all, and I mean the tools from, you know, how do you organize the Capitol? How do you design and, and, organize the space and how do you actually execute, you know, getting a building manufactured basically that's pretty figured out. It's not really that interesting. but the digital world is this just completely.
+
+open problem. It's most of our lives. I mean, even now, right? You're very, you're on the other side of the world, right? And however we're connecting and chatting. So like, where are we? You know, the network kind of warps the world. It creates this other space of how we are connected. And it's a very real thing. has a huge impact on the way we think, on the way that we organize ourselves in the same way that you have to imagine thousands of years ago, the city,
+
+Galen 
+the fora, the church, these are still like new forms for people. They're like organizing the way that culture is. And so the way I looked then, I think sort of like leaving school, I looked at the way the digital world was and I thought, this is sort of like this shapeless space that doesn't have a form. And that's like what architects are supposed to do. They're supposed to give form to the thing that is not yet sort of well understood as culture. So.
+
+I guess in some ways, you know, almost like in a mercenary fashion, I just looked at like, the digital world is this vast expanse. There's so much possibility, you know, there's so much that we can do here. Whereas, you know, how can I really have an impact going and building buildings? I mean, not, no, not really. It seems extremely boring. so maybe that fills it
+
+Citizen Web3 
+Well, mean, you talk about building buildings, but one thing you're not mentioning is architects also burn buildings. there has been many examples in, know it seems that we're going off the subject, but we're not. I'm going to bring us back on. For example, the Tech at St. Paul's Cathedral in London, and it's pretty much not a fact, of course. It's something we can only speculate about. But it's not the only.
+
+It's not the only, know, rumor how the great London fire was started because the architect didn't want the cathedral to look the way it wanted. He wanted it completely different. So architects, I think also a lot of the time when I say architect, you know, maybe, maybe architect in a digital world also like has a lot of weight, a lot of value. And here I'm, I'm, I'm going to like, try and bring it all together. And, and what I was trying to ask and what I was trying to head it
+
+in at least in my kind of view, I think that people who identify as it's a loud word identify as of course, you know, architects, designers, you know, they seem to have a slightly different perspective on things. Their solution sometimes, you know, like Google, you know, Google and their search box, right? It was like, what the fuck, right? Like, where does it come from? Right? Like, but it did and it conquered the world and it wasn't designer architect kind of solution.
+
+Galen
+Sure.
+
+Citizen Web3
+And you also mentioned at the beginning that orbit is very simple. So I think that's where I was going.
+
+Galen 
+Yep.
+
+Galen 
+Yeah, yeah, definitely. Yeah. So I think like the, yeah, the insight of, I mean, the main thing is just that to think from first principles, you know, that's like, sometimes I really like working with people who have a physics background for this reason. I don't think that, I mean, yeah, architecture is kind of like physics in that way, right? You're just like learning to think from, you know, what do, what do people want? What do people need? How to, how to, how can you sort of live well, you know, like it's a very open, difficult question.
+
+lots of different ways to answer it. But the architect is the person who kind of re -asked that question over and over. And I think that there are, you're like comfortable with the breadth of possible answers. And also I think, I mean, a successful architect in my view is yeah, it's probably closer to an entrepreneur basically, because to really have an impact on the world.
+
+You have to see it all the way through. know, it's not just about something being beautiful. I actually think most architecture is way too preoccupied with something being beautiful. What matters is that it can actually land and be useful and grow and grow its sort of enthusiasm for whatever it might be. this can, mean, independent of any medium, know, software, buildings, objects, it doesn't matter.
+
+The point is to make things that you know, yeah, that sort of move the, move the world in some fashion. And doing that is both a design challenge and an operational challenge, you know, and a marketing challenge and a writing. I mean, it's just a very cross -cutting. It's a totally medium agnostic challenge. Someone reminded me the other day of this that I totally forgotten. There's this, the Steve Jobs quote, design is how it's made.
+
+And I think that's kind of like that. The insight is that it's like, mean, when you think of this architecture design, doesn't matter. It's like. To just think holistically about how the thing is made and not just in terms of it's like physical properties or it's technical properties with the source code look like, but just holistically, how does this thing actually work? And how does it, how does it land in the world? that's what I'm interested in. And yeah, I think actually, because I, what I ultimately care about is,
+
+Galen 
+how do people connect with each other and coordinate and how can they do that on their own terms in a disintermediated way? think that in the world of, mean, long -term historically, know, humans have been able to self -organize. They use their own tools to organize themselves towards their own end and communities are able to sort of engineer their own idea of progress, their own idea of what is good.
+
+And the freedom to do that is sort of what defines the complex system of human culture, which is so wonderful. so, while in some ways that's purely sort of an organic thing that exists on its own, it evolves on its own, it's actually very much, it has to be supported by the existence of these kind of cultural tools like buildings, cars, computers, and so on. so tool -making is just such an inbuilt
+
+part of how human culture sustains itself. so that toolmaking is exactly as I was describing before. It is a very difficult design problem to build successful tools that actually kind of like move human culture forward. It's not something you can, I mean, guess, yeah, maybe you can go to architecture school for it. I actually think you can also be a theoretical physicist and do it. But it's something that has existed throughout all of history. And that's where like, that's probably my primary interest.
+
+Citizen Web3 
+It's interesting enough you mentioned physics. don't think like, well, ironically, one of the tattoos I possess on my body is a tattoo that relates to what we're talking about to a theory from quantum physics and that everything in life is related. But I'm going to go take a different direction because one last thing about the architect and allow me here to be devil's advocate because I cannot not help it because it's on the list of my questions. And since we're on the topic, architects, Curtis.
+
+So here's where I'm going to go. you know, a bit in Curtis are have a long history. We don't have to go into it if you don't want to or if you you I don't know what is there. But OK. Well, Curtis is a strange person. So to say the least, right, he's obviously I'm an onlooker. I don't know him personally. So, of course, you can judge a lot more than than than than I have. But from an onlooker's perspective and, you know, and from a devil's advocate perspective, we're talking about architects and
+
+Galen 
+No, it's fine. No, no, no, I...
+
+Citizen Web3
+He is a very scandalous character, at least again from a non -looker's perspective, but he definitely architected somewhat, of course, a rewritten now, whatever we are seeing today is of course not what was back then, the university work that was started 20, 25 years ago, whatever. But in terms of, you mentioned about architects and about solutions, at which point does an architect has
+
+say to themselves, what I'm doing is not something I anymore can contribute to because I already drew the initial sketch. And I did mention Curtis, but it's not really Curtis I wanted to talk about. It's more about to keep on on the main topic that we did. At which point, and this is very crypto related, very web three related, would say, at which point does an architect say, okay, I don't know what I'm doing.
+
+might not be beneficial to the projects anymore or it will be, but I'm not going to be beneficial to the projects anymore. At which point do you think that happens? If it happens at all? And okay, if you want, you can mention, of course, I would love for you to mention, Curtis, sorry, but of course, I don't know to what extent you're able to.
+
+Galen 
+How do you talk about Curtis? don't, I mean, it's not, no, no, no, I'm trying to think of how to, cause like you're asking two different things, right? So there's a question of like, it's almost like a death of the author question, right? So, so is the author as important as their output? and, I think the, tend to care much more about the, the output, just across the board. I mean, we can tell there many different examples.
+
+Citizen Web3 
+Sorry for the old wake.
+
+Citizen Web3 
+Yes, precisely.
+
+Galen 
+And I think there's, so yeah, so maybe two things. So in general, you know, one,
+
+thing I always kind of come back to in my own thinking is that, you know, very successful works
+
+you know, of, architecture and even, you know, basically it's very unusual that, you know, a single individual will produce a really like a lasting, kind of masterwork that stands wholly on its own. that is not influenced or, kind of supported by all of its other sort of adjacent, you know,
+
+So a simple example would be like, you know, great cities. When we think about great cities, we don't think about planned cities. know, hey, what are the greatest cities in the world? No one is going to say, you know, suburbs, right? That are built in one fell swoop. Like we all know that there's something about the suburbs that always feels odd because it's so uniform. sort of doesn't bear, it doesn't feel successful. I think it doesn't feel natural because it doesn't have the influence
+
+all these different people over a long period of time working together, right? You go to Rome or Paris or Kyoto, and it feels like an alive place because it's held in trust by all these different people over a long period of history. And sure, there are masterworks in all of these places, but those masterworks are responding to this very organic process that evolves over a long period of
+
+Galen 
+There are innovations in those cases, There are like, you know, like Bernini has an enormous impact on Rome and is clearly just a brilliant, you know, sort of structural innovator in a way of being able to pull off these massive, just like unbelievable spaces of like the Vatican and its surrounding sort of both Vatican City and then especially the like primary squares.
+
+that influence the city, right? They're just these huge kind of gravity wells within the city that impact the way we perceive space there. So anyway, so I think in, in Urbit's case, like what's important about Urbit technically is thinking about the problem of how do we own and control our computing from totally first principles. So not influenced by
+
+I think almost like a sunk cost fallacy of, well, we've been building it this way for a long time. Like we probably should keep doing it. And instead thinking, okay, if I wanted a system to still exist in a hundred years, if I wanted to hand this down across generations, you know, how would that work? How can I build something that is independent of, you know, that can actually be purely have a really clean layer distinction between.
+
+the new system and the old system. How can that new system handle upgrading itself over long, long periods of time? Because we assume that, as it changes, new features, new things will be built within it. How does that upgrade actually get executed? These are problems not... Basically, the dependency hell of the current software stack is very dangerous.
+
+It's not anti, it's sort of, it's very fragile. and so I think thinking radically about how to get away from that towards the end of this becomes something that you can really trust and commit yourself to, really just, yeah, requires that you think, you know, totally out of the box. It turns out when you're someone who thinks way out of the box, you also have some really bad ideas. This is a characteristic of people who think that way.
+
+Galen 
+And I tend to, I guess I come also from kind of like an academic background where we accept that about, you know, you know, sort of like most brilliant people are, are also, there's something a little bit uncomfortable about them. So the funny thing about Curtis, I guess then sort of shifting gears, my experience, I think I just repeat this every time because I still find it so, strange, but like I found Urbit.
+
+just kind of found it like lying in the middle of the road. I just literally found it on the internet and looked at it on the terms that I was just describing, thinking, because I was already thinking, okay, look, I really want there to exist a system that I can build on top of for a really long period of time. I really just want there to be a personal computer that exists in the cloud, like some lasting tool for me to build on top of and trust. And I found this thing and looked at
+
+purely structurally, okay, is this the prototype of a system that would make sense? thought, this is pretty good. This actually kind of makes sense. It's not finished, it's still very early, but I knew that it was kind of structurally correct. And then very quickly afterwards, I just met Curtis. Because I just reached directly, I just say, hey, let's talk. I'm curious about this thing. And the difference between
+
+Like one of the funny things, actually think this might be true. Maybe this is broadly true, but the funny thing about Curtis just as an individual is that, you know, he's a, we were like very quickly, it's just, he's a pretty disarming and sweet and ordinary and funny. I actually think Curtis and I, probably like make each other laugh like more than anything else. Like he's a, he's a, I just, my relationship with Curtis is very, like easy and friendly and funny. And, he seemed like a very ordinary, sweet.
+
+Yeah, just mild mannered person. The difference between that and sort of Curtis's reputation as very controversial thinker is something I've almost like never been able to reconcile. certainly like empathy. I can see why people like, think, Curtis is, he comes so much from the early internet. He's like, he's, he has a sort of, there's a sort of troll like, quality where I actually think most of time he just likes getting a rise out of people a little bit, but that's
+
+Galen
+That's my own perspective, just knowing him personally and having collaborated with him for quite some time. anyway, yeah, think that Curtis pattern matches to, know, yeah, brilliant people are full of contradictions and chaos. he's definitely, that's definitely true. And I think though that the, you know, the innovation itself, like the underlying technical innovation, which actually to be fair, like Curtis
+
+you know, invention, there are parts of it that remain, but yes, almost everything. There's almost like a joke internally that like, if Curtis touched the code, which actually I think there's probably almost nothing that Curtis touched that's remaining in Urbit, like it probably needs to be rewritten. like Curtis made a great sketch that just, he kind of almost like discovered this thing that was very good. And I stand by the fact that it is good. I don't think you have to really accept, you know, all of Curtis's
+
+ways of thinking to think that urbit is, urbit is good. But, you know, that complicated history is it also pattern matches to, like, almost all it's been fun to watch the rise of Elon in this, in, in, this context, I feel like, I feel like when we started working on this, it was less, we had less of these kinds of chaotic public figures where, know, yeah, they're really, they do really amazing stuff. And they're also like a little bit, a little bit crazy.
+
+And I think that's kind of normal, you
+
+Citizen Web3 
+for all the listeners out there. And of course, you guys can find everything me and Galen mentioned in the show notes, but I'm going to highlight this for all the listeners because I'm going to highlight it for my editing team to put some more information about Curtis because it probably might not make some sense to the listeners. But I do advise you guys if you're listening to this and you're curious, because we have, like I said, mentioned urbit millions of times, but not Curtis. And I do advise you go read. He's an interesting character.
+
+Galen
+Sure.
+
+Citizen Web3 
+So yeah, you will have fun, I think, digging the information up. yeah, sorry. Back to you.
+
+Galen 
+The funny thing, I will say though, that I just find, and I actually find this is true among plenty of Curtis's friends almost. I find Curtis's writing almost illegible. I have no interest in reading Curtis's writing. Curtis and I collaborated on much of the early Urbit mission and documentation and so on. That was a deep collaboration.
+
+were very, like, who knows who wrote that stuff, you know? But when it comes to Curtis' sort of longer form writing, yeah, I find it like totally, I'd just rather hang out with him. It's like totally unintelligible to me. But it's a very particular flavor. It's like, not for, it's like some people love it, some people find it really offensive or crazy, and some people don't, and like, and I find it just totally uninteresting. It's like, no, I just don't even care.
+
+Citizen Web3 
+guess in a way to bring it back to urbit, know, in a way orbit is crazy though. Like in a way when you look at orbit, right itself and like, you know, like I remember discovered, I discovered urbit late in terms of it was 2019. So it was already after like, you know, some time that it's been like in some of the scenes in some of the circles. And, and I remember discovering it. I remember doing the first Hoon course because again, one for all the listeners, Roon is based on
+
+Rune, sorry, Rune. It was so funny. Urbit is based on a runic coding language, right? So maybe you can talk about it and explain how does that, like, what is, I mean, here is the thing. I know a lot of developers. I hang out with a lot of developers. And every time I show a piece of code, how you call out a gate or whatever, anything like that, to some of my friends, look at me they're like, but nobody will ever use that just because of that.
+
+And it's like, let's talk a little bit about that. Is that still a feature today? Because I've heard you talk differently about it. And I heard not just you, I heard Ted talk about it, I you talk about it. I heard Curtin himself mentioned something about it. I heard people from Urbitlone, whatever mentioned it. Okay, sorry, I'm going to shut up. What do you think about the whole shape of Urbit in terms of the runic language and hoon and knock and everything? Is it a feature? Is it something that can become a feature or anything else?
+
+Galen 
+Yeah, so think of... Well, here, let's give it a quick overview, because otherwise I feel like people are going to have go do their own research without any idea what we're talking about. So, no, no, it's okay, it's okay. So, Urbit is a totally encapsulated system. It runs in its own little virtual machine, right, has an interpreter. It can pretty much run on any Unix machine with an internet connection. So, the Urbit approach is to say,
+
+Citizen Web3 
+Sorry, sorry, sorry.
+
+Galen 
+We have practically paved the planet in Unix boxes with the internet connections. You can get one, you know, right now, wherever, next to you, right? With, with, you know, less than 20 milliseconds ping. And to be precise, right? mean, there are data centers everywhere full of Unix boxes, some flavor Unix or Linux, right? With an internet connection is very fast all over the world. This is just a layer of infrastructure that has come to exist.
+
+because of this massive demand for connected services. The problem is the complexity of those services, I mean just very practically, if you want to build any form of connected service, connected software, SaaS, call it whatever you want. You have some new innovation, some way that people are going to, let's say you're building Rome.
+
+which or notion or you're building a tick tock. I mean, it doesn't matter. Like the underlying software stack, they all rhyme with each other, right? You have some data store, you have some message queue, you have some, you know, image processing service, et cetera, et cetera, et cetera. You have all these things that effectively, you know, now maybe we've bundled them out into microservices, but they run as this like very tightly coupled and very complex thing that
+
+that is so complicated actually that a company has to take care of it. The only way we build connected software is that a company kind of cares for the software stack, whether it's running on like an individual instance or it's running in a huge cluster. There is a lot of complexity to building whatever those apps and services might be. And it's purely because the way that software stack works is that it's incredibly chaotic. You have all of these intermingled dependencies, complex data flows,
+
+that ultimately ladder up into a user connects to it through a browser or a phone. So, Urbit says, all right, look, that system is too complicated to ever provide the durability, meaning like, you know, obviously, like if the company goes out of business, you're fucked, like that no one is going to maintain your software anymore, you aren't going to run it because you don't want to do the job of DevOps. And so it disappears. So, Urbit says that's not sustainable.
+
+Galen 
+for something that we want to depend on. We need to build a system that just takes what we know as infrastructure, what we think is sustainable as infrastructure, and builds a clean new layer on top of that that's completely encapsulated and actually feasibly belongs to the user in some meaningful sense. So I would say, I mean, we can dig into whatever it is technically, but if you take that as a prompt, say, OK, we want to build a system.
+
+where an individual can actually meaningfully own their own computing over potentially many generations, what do you build it with? I would argue, I mean, I don't think you need to argue, like there isn't necessarily a system for that, right? That is a white space problem. There are many possible answers to that. I would wager that if you wanted to basically, if you're like, you know what's a really key feature there is like a MongoDB. I'd be like, yeah.
+
+I don't think so. Most of our software stack from, you know, Mongo to even in some ways, Python is so deeply connected. Like its dependencies lie in the underlying Linux system. They're like tightly coupled in a way that is very, very fragile, right? Anyone who has ever built software knows, I just updated my Mac and now it broke all Mongo's dependencies and now
+
+That stuff is actually extremely brittle. So what is the package boundary, right? What is the thing? What do we put this system is in a Docker container? Well, now you have a thousand Docker containers and every single one of them, you know, has a database connection error or something. There's stuff just actually people have tried to do this, right? They've tried to do sort of personal computing in the cloud, but it's all Docker containers. It's just like, totally does not work. taking as a prompt, okay, we want a durable, long lasting, wholly encapsulated system for a person.
+
+you, I think realized very quickly, yeah, you want this thing to have as few dependencies as possible. You need to formalize the IO channels to the underlying system such that almost like you could swap out the underlying system. And the reason that you can see that as a necessary constraint right away is that that's how every successful system in the past works. So the example we used to always give, which is very true is like, okay, people figured out, how, you know, there's an evolution of networking protocols
+
+Galen 
+In general, the way that those protocols were designed was such that, you know, Hey, can route TCP or I can like run TCP IP basically over a phone line through audio, or someday maybe I can get fiber in there, you know? And so obviously we ran the internet over phone lines for quite some time. And then eventually we swapped out the underlying hardware. So, Urbit sort of takes the same approach and says, look, we don't know what's under there someday. Maybe it'll all be dock machines. Like it'll all be like custom Urbit hardware.
+
+We don't care. We just are going to say, Hey, these are the IO channels. this is how the state machine works. And we're just going to like never change any of that basically, like make that a fixed point, which I think is a good, like again, saying nothing about whether or not you need to be programming in ruins. I just say, all right, this is a good, this is a good design. Right. And then the other thing you're trying to achieve there is just simplicity. If you look at any system.
+
+There's actually a tool, like a system that a user can very freely and flexibly customize, make their own, play with. Play is a big part, I think, of how people explore and make things work for them. They need to be able to experiment and discover what can a system do and not do. Systems that are very complicated don't allow users to play in that way, right? Because they're brittle. So, you
+
+there's almost, there are almost no examples in the modern world of sort of SaaS like software where I can actually very freely experiment by running my own code, running my own, so, know, customizing my environment without actually writing my own software. Right. So it's like, yeah, like Facebook is not a computer, right? Like there are very strict boundaries around what I can do within that system. And the reason for that is actually because there's no sandboxing. What does Facebook, yeah, it's Facebook going to like, let you run your own Docker containers on
+
+profile. It's a nightmare from from any tactical person will know like that's just you can't actually, yeah. You yourself. It's true. Like it's just no, no, no, no, no, it's true. It's true. mean, I think that's I'm glad it makes sense. Like,
+
+Citizen Web3 
+I'm sorry that killed me. I just imagined myself doing that and like yeah, okay. Sorry. Sorry. Sorry Colin. That was
+
+Galen 
+Anyway, if you want to review, you're okay, we care about durability, we care about permanence, but we also care about flexibility and play. want someone to actually experience the openness of the system. Well, to achieve that, the system has to be extremely simple. has to actually like the system itself technically has to be simple. I like the number of it has to as few lines of code as possible. It needs to be architecturally clean and clear. And so again, encapsulation is our friend here. We want to actually say, look, we have no outside dependencies whatsoever.
+
+Right? The system can all be everything we need can just be designed in place to achieve what we want in terms of like, you know, what are the affordances that we want the system to have? What do we think are necessary for like personal computing? So anyway, I think of those like the prerequisite sort of design problems and I would challenge, would say, look, you have a better idea about how to do that. Like happy to hear it. And, and there are a few, like people have
+
+kind of worked on this, but no one has really worked on it wholly towards the end of building a system for an individual. The other thing I'll say here actually is if you look at the early PCs, they were very much like this, right? So we had these massive industrial computers, PDPs, like the room -sized computers of the late 70s, mid to late 70s, that were these massive general purpose systems, they're industrial tools. And the early PCs did not use
+
+the operating systems of giant mainframes. actually rewrote their own operating systems in part because they were using much, very limited hardware, but also because they just wanted those things to be very, very easily programmable and understandable by a developer. So Urbit takes a similar approach and just says, look, instead of, if you want to build something where everyone goes to you for their software, if you want to build Notion
+
+Facebook or Instagram or whatever it's going to be. That's that's like industrial computing. Okay. That that's like, yeah, you have this giant data warehouse that serves everyone comes, you know, they determine their connections with your software. We're working on something else where your software comes to you. have your node with your data, you install software on that node and run it yourself. That's a totally different technical problem. and it requires a different technical solution. so yeah, I think that,
+
+Galen 
+If you take those as constraints, you're pretty far off road, right? Or you're going to get off road really quickly in terms of the kinds of solutions you're entertaining.
+
+Citizen Web3 
+think it's worth mentioning that, I mean, how big is the code of how many lines of code is a little bit these days like it was
+
+Galen 
+It's less than a, I mean, yeah, this is, so you have to remember, don't, like, the last couple of years, I'm, uh, the, the, urban, urban has, there's an urban foundation. There's like core developers who work there. I'm certainly like familiar with what urbanism and help develop it. Um, but I am much higher up in the stack. Uh, it, at one point, or it was about the whole kernel was about 30 ,000 lines of code. It's probably closer to a hundred K maybe, but we try and keep that. They've always tried to that number very small. Yeah, it's tiny. Yeah. Super tiny.
+
+Citizen Web3
+It's hilarious. But it's hilarious. It's nothing. It's nothing. It's nothing. It's like if it's just to go to save for what you're saying. Like, you know, like you have one person who can handle the whole fucking
+
+Galen 
+The goal?
+
+Galen 
+Yeah, exactly. That's, that's the goal. The goal is basically like, and a single individual can actually understand and people do. This is like the nice thing that, you know, when we hunt down, you know, strange bugs, which we often do, you actually have someone who can walk through, okay. you're, yeah. Okay. Message isn't delivered. Is it in the client code? No. Is it in the, you know, a user space code? Is it in
+
+you know application model code is it in the networking code is it in the interpreter and you can do that entire tree you know you can actually walk through the whole thing is it in the language itself that takes 10 minutes you know it's like very easy to do um it'd be an absolute nightmare in a conventional system just yeah
+
+Citizen Web3
+I have one more topic, which is a strange topic. It's not a strange topic, sorry. It's continuous to the topic we're talking about, but it's, I don't know why I said strange, but because I guess to a lot of people, they don't think about it and I guess it's strange to them. And you mentioned already a couple of things. You mentioned underlying stock, you mentioned infrastructure. And of course, I don't know if you read the book called The Code or Code.
+
+Fascinating book highly recommended by the way. Yeah, there is a second part apparently that came out now I didn't know that but just as again the reason I'm talking about is because the book just for the listeners out there for the listeners out there the book takes you on an explanation of how basically computing works from the very beginning from the physical part from the cables and up to the very end now orbit today offers
+
+Galen 
+long time
+
+Citizen Web3 
+by at least in my eyes and I don't really know what everybody else thinks in my opinion. It's pretty much the solution to computing. It is, it exists there. It's orbit. There we go. It's a new computer written in a very simple way. Yet Urbit is still and to somebody who's independent of the grid validator, I'm now proud of saying that for a long time I was, we are going to be now we are an independent of the grid validator to as much as of course things permit.
+
+Galen 
+That's exciting.
+
+Citizen Web3 
+What about the physical layer? How do we, you because, you know, they can, so I was going to say some kind of Churchill line, you know, they can take our ones and zeros, but we will still. I will not. But what about the physical layer? mean, yeah, Orbit offers a solution to definitely the software stack, you know, and we can see that. What about the physical layer? There is still that. How do we conquer that? Can we conquer that? Should
+
+Galen 
+Yeah, Yeah, that is a good way to break it up, because I Urbit's goal is
+
+think of it this way so you talk to your most privacy sensitive friends on signal you talk to your shitcoin punter friends on telegram you know you talk to your family on iMessage and it's kind of ridiculous that these things are separate right what's going on there is actually these people have different interface
+
+Your shitcoin punter friends need certain sticker packs or whatever. And, you know, your family doesn't care about this stuff and your privacy sensitive friends, you know, get trust signal. But so those are different UI concerns, but obviously these things should interoperate, right? In an urban world, like the beauty of the way that this thing works is it's like, well, if you're very privacy sensitive, great.
+
+You should run your own node. should be in your closet somewhere. Yeah, it should be solar powered in the, in the Hills of Madera. Like that's great. And then your family should be hosted by us and, you know, installed an app from the app store and they don't think about it, but they are still given the guarantee of long -term ability to exit. Right.
+
+You know, well, they are using the equivalent of sort of Apple messages. Yes, it runs in our infrastructure. They don't, they're definitely not getting the same sort of ownership guarantees that you would if you're running it yourself. But if for some reason they woke up one morning and realized I got to, you know, they become a, started reading the prepared and they're, you know, there's, they're prepping for the end. No problem. You can download this thing and run it yourself and you get no change in user experience. Like it's the same thing, which is the equivalent, right? Of being able to say, you know what? I don't really want
+
+Galen 
+use, I don't want Pavel to run my telegram anymore. I'm just going to run it myself. and so I think the, in some ways it's like a question that I don't have. try like not to be, we're like almost like just not opinionated about. We're like, yeah, people should be able to decide how they want to run this. I mean the company like Tlan, so we build a, our primary goal is to build a sort
+
+super like an intelligent messenger, a really high quality messenger. It's very simple and straightforward to understand and use. It gives you great guarantees over ownership and privacy that you can customize in a similar way to the way you would customize a Slack, a Discord or a Telegram with the long -term goal of reaching the level of sort of customizability that you see in a WeChat or KakaoTalk or Align, these sort of super apps, which I think are actually, they're kind of like the closest thing we have to a PC in this world.
+
+Which is totally ironic because it completely centralized. our approach is obviously to say, well, actually, if this was yours, you ran your own software, it be even more wildly customizable, but could give you incredible guarantees of, of, ownership. So with that, like to achieve that, we do two things. We build that as a product, which is still a nascent product. can check it out. A lot more will come out on that front over the next couple of months. That's not only the product side. It's also, we run a huge.
+
+hosting fleet. So we run a large cluster that can, you know, at any point as people install this thing, spin up nodes on their behalf. So I am, you know, almost by definition in the camp of you don't have to run your own infrastructure. But we build something that is very much a protocol. And if people woke up and decided, you know, there was a mass exodus from our platform to self
+
+There are lots of other ways that we can still provide software to them. And so I think, I don't know, I do think that the cloud is an incredible thing. it really is like that. is as an accomplished, like one of the best things that we got from, you know, the rise of, of apps and services and the web and its current form is just this like global physical infrastructure, which is super flexible. Right? So, I mean, part of this is, you
+
+Galen 
+We don't have this yet, but you could assume that, okay, I'm talking to my family over Tuan's messenger. I get on a plane, I fly across the world, I get off the plane. We notice that you've flown across the world and we take your node, which is very simple, basically a file and event log, and we move it across the world. you got a low latency connection to it. That's only possible because Amazon, Google, and Microsoft have built
+
+Massive physical infrastructure. It's kind of amazing. And I don't think it's going away. the important thing is that you like in a world where we're successful, the cloud is a total commodity and we give the user, you know, we basically just let you leverage that commodity. There's also a world in which you, yeah, like you only run part of your compute. In our hosting or similar, and you do local backups or you keep your most private data at home.
+
+I think that what you want is for people to be able to leverage the convenience of something that your phone can ping in less than 20 milliseconds or whatever, and for them to have good quality of good self -custody options.
+
+Citizen Web3 
+I can definitely back you up or your words at least in terms of being an independent, being somebody who has the, what's the right word here? I'm trying to think what would be the good word here for myself. Let's call it the pleasure of calling myself an independent of the grid validator has definitely given me all
+
+the taste of, I can guarantee you that, know, that when I, because I have, we run on a mixture and it's independent of the grid, but we can also use, course, when we don't need to use independent of the grid, we use the grid. And the grid is much faster. The cloud is much faster. When we have to start to use our StarLinks, when we have to start to use our own electricity that we've been saving, it's a procedure and it's expensive and it's a pain in the ass. So it's not like, it's not like we do it because it's wet dream.
+
+Galen 
+Yeah.
+
+Citizen Web3 
+It's unfortunately just like decentralization is because I know what you think about decentralization. So I'm kind of saying it on purpose to throw some oil in the fire here. But it's out of necessity. It's not like a wet dream. We want to be independent of the green. Are we going to be able to run our own infrastructure? It's more of we've seen what the world and what companies and institutions are capable of, unfortunately.
+
+And by no doubt, I agree with you, the cloud is definitely the, you know, I don't know. I don't even understand how can anyone not understand that. It's like the brain, right? You have the ability to connect to a fucking mega brain. It's awesome. And the problem is that there are some institutions there that, yeah, like to control that, that connect. That is the problem. And of course, orbit offers a solution here. And that is, that is, that that is the beauty, I
+
+Galen 
+Yeah, right. It's probably worth underlining. Like there's a big difference between, you know, world in which we are massively successful is one in which we are much more similar to AWS than we are to Facebook. Right. We are running a massive fleet of basically virtual machines, each one completely encapsulated, right? Like this is not, you are not like a row in a database somewhere. We don't query. We
+
+We aren't querying into your data. We are inspecting your data. We are cross referencing your data. aren't looking at, we aren't trying to sell you ads based on what you're doing. Instead, we are providing a service to you that, yeah, I expect at least some portion of our users pay for. We sell a tool basically. And so it's a different thing that, the foundational guarantee there is definitely like, hey, you could exit at any time.
+
+I think if you, so who's your, like when I think about like, it's kind of a, you know, just think about your threat model or something, right? I don't really use social media that much. Actually, because I just don't really like using it. It's maybe it's not really a threat model question. It's like, I just don't find the user. find it kind of exhausting and uninteresting. I don't, I think the result of my data being mined there or my data being observed or being looked over is.
+
+It's like a net negative from a user experience perspective. I think that we, what I aim at is that we are the opposite, that we give you something where we are not inspecting your data. We are not trying to sell you anything, which means we can give you a quality of user experience. That's very direct. That's very purposeful that is, you know, does exactly what you need it to do when you need it to do that. And, you know, if you, however, like if you
+
+someone who feels like you have a state after adversary, it's important for you to be wholly independent for whatever reason. well, you know, that's great. Like there's a whole company, you know, called native planet that builds urban central hardware. You can order a native planet. You can put it, you could run it at home. and you can connect it to a solar panel and it can give you great peace of mind and potentially, you know, great independence in the case that, you know, I don't know the.
+
+Galen 
+the cloud fully melts down or whatever might happen. It's like the important thing though is that those people interoperate, right? This is like, it's like those people who are, can still connect with one another, still talk to each other. There's like no difference in the user experience, which I think is a really, you know, there's no self -hosted Facebook, right? There's no self -hosted telegram like, yeah. And those, those two options when there have been, they don't interoperate or like the alternatives don't interoperate.
+
+Citizen Web3 
+The aliens come and steal the cloud.
+
+Galen 
+Yeah, we look forward to a world in which it's like, you pick the convenient, you know, pick the threat model that makes sense to you, pick the convenience model that makes sense to you. And you still have better, even in the most convenient case, your options are much, better because you can always exit, which is not the case in the world that we live in today.
+
+Citizen Web3
+I just want to say hello to all my privacy preserving friends that use Signal. Please stop using Signal if you're trying to preserve your privacy and please start using Urbit at the very least or status, I don't know, or something like that. Well, at least Orbit.
+
+Galen 
+Ha!
+
+Galen 
+Well, we're not, we're not, should, would, or it gives you better guarantees of ownership. We still, we're actually smart. We started working on better. we'll do end to end. We don't do full end to end at the moment. I can get it. If you want to get into the full privacy, nerdery of it, I actually think two self hosted urban nodes where you control the TLS connection to that node. Pretty good. I would say signals ratchet is definitely better for forward secrecy. we'll get
+
+So that, there's a big, it's, this is always a tricky one. Difference between privacy and ownership is tricky, right? I think of privacy is kind of like cope for you don't own it, right? All this work has gone into basically like Apple's private compute stuff. Incredible. So impressive. So interesting. I mean, all the work that's gone into making, you know, signal running on SGX. mean, it's unbelievable. It was really impressive, but it's all about making sure basically, right. That the operator cannot inspect what you are doing.
+
+we have a totally different model, which is you are the operator. so, you know, it's, who are you worried about? Really? Right. It's a different
+
+Citizen Web3 
+Of course. Of course. Of course. Makes sense. Well, guys, run your own orbit nodes. Make sure that if you do that... Okay, okay. I'm joking. Okay, to wrap it up, to wrap it up, Galen, I'm gonna give you a quick -ish blitz. So I'm gonna go with the shorter version. Three questions. They're a bit strange, but they're not that bad. So first one, give me a book or a movie.
+
+or a song that has a positive influence on you throughout all your life and helps you in your work somehow. Shaping thoughts, not helping you to code, of course, or to get ideas, but you know, somehow like, whoo, helps you to relax.
+
+Galen 
+I mean, I consume a lot
+
+Citizen Web3 
+Ugh, there has to be a 1. There has to be a 1.
+
+Galen 
+I know, I know.
+
+Galen
+There's like
+
+Those are all very different things that help you with your work or help you to relax. I'll give
+
+Citizen Web3 
+It doesn't have to be the best
+
+Citizen Web3 
+One that comes to the mind, one that comes to your mind.
+
+Galen 
+The... Okay, here's the like. I love Miyazaki, the animator and answer founder of Studio Ghibli. I think, I mean, Miyazaki is deservedly, you know, widely loved. What I think is very worth watching and so is really...
+
+actually starts to show off why the work is so fantastically good is the documentary on their studio. I think it's called the Kingdom of Dreams and Madness. Kind of similar in some ways to what, like you just see, like to me, what makes those movies so beautiful, you can see it in the way that they're drawn. Just literally like the forms are so unique to this, this like
+
+The way those worlds are built is like, it's like someone who just has a very specific touch, you know? And when you see behind the scenes a little bit, you see why. That it is like, it's about the underlying sort of character there. And it's, yeah, it's a wonderful, it's a really good one. And I if you're not, you're somehow not familiar with the Miyazaki Obra, like you should definitely be watching those movies, but the documentary is so, good.
+
+Citizen Web3 
+It's definitely a very unexpected one. wasn't expecting that. Give me one motivational things that helps to keep Gallen out of bed every day and helps you to shape your views on coding, computing and life. And yeah, something motivational that helps to keep you going. What you can share, of course.
+
+Galen 
+I probably derive most of my motivation from being outside. as I know we're audio only, but you can sort of see behind me. I, yeah, I live sort of at the edge of, of Silicon Valley and near the, near both the forest and the ocean. So for me, it's pretty essential to be, yeah, just outdoors and different, you know, I'm, I'm pretty.
+
+active like physically and that's just such a huge huge part of it. That's probably the sort of most instrumental thing and in certainly in terms of like working through what I'm thinking about that's kind of that's how all the that's how most of the work gets done is more like you know going out into the woods for a long time.
+
+Citizen Web3 
+For all the listeners out there, Galen has got a bombastic view. Let's say he put it the least like that on the background. Galen, last one. Last one, I promise it's a weird one, but it's the last one. Dead or alive, real, made up, real personage, somebody from your family. It's another coder. It's another architect. It's, I don't know, a founder. It's a character from a book, a cartoon. Who is not your guru? Because I don't believe in guru.
+
+but it's a character, a persona, a real person who sometimes you do kind of wonder what would they do when you
+
+Galen 
+Wait, what would they do? When, what? When? just like, I think of them as
+
+Citizen Web3 
+When you're stuck when you're stuck you sorry when you stuck sorry sorry when you're stuck in life you like kind of damn
+
+Galen 
+That's a good question. No, no, I understand. Yeah, yeah, yeah. Like just someone you look up to and or kind of like their... I have great admiration for
+
+Citizen Web3 
+Not a guru though, not a guru. It's not a guru though. It's somebody who's like,
+
+Galen 
+sort of pioneering both the climbing and mountaineering community from the early to mid 20th century. people like Walter Bonatti are like, the ethos and attitude of those people is always just so impressive to me. Also the early Yosemite climbers, and not just kind of like Yvonne and Doug who are like kind of the most famous ones,
+
+like Royal Robins and similar. So people kind of put up these initial sort of foundational routes in the Valley. That is a mindset that I appreciate very much. I think actually then similarly. I mean, yeah, there's, have my own sort of collection probably of, yeah, kind of like visual influences music. mean, I think it may be my even zooming out, I would say
+
+It's really valuable to look at people across disciplines and their ways of working because they all kind of rhyme. And when you look at something that's a little, you know, that's kind of 15, 30 degrees off, you know, what, what you're doing and how you're working, can be easier to see, you know, different processes that are, that are maybe more effective or just interesting.
+
+I try to, yeah, I like to consume a pretty vast array of, I don't know. Yeah. But I love, I love like sort of like biographical, whether it's like true at least actually reading a biography or even just like kind of like the history of, you know, an adventure, a company, whatever it might be. It's always like, I take down that stuff voraciously.
+
+Citizen Web3 
+Nice. And I think that's why orbit is such a, that's why orbit, like what you do is orbit. It's a very big yet a very directed scope. And this is exactly what you say. Galen, I want to thank you very much for finding the time in that, in being in Silicon Valley and taking care of the project. I want to thank you very much for finding time and actually coming on and explaining.
+
+Galen 
+Ha ha ha.
+
+Citizen Web3 
+a little bit about Urbit and talking about yourself. Thank you very much for that.
+
+Galen 
+My pleasure. Yeah, this is fun. Thanks for having
+
+Citizen Web3 
+This is just a goodbye for the listeners. Please don't hang up just yet. To all the listeners, thank you and see you next week. Bye bye, guys. Bye, Galen.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 
+

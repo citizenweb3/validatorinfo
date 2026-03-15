@@ -1,0 +1,419 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/sandycarter
+
+Episode name:
+Data Ownership, Love of Tech and Playstorming with Sandy Carter 
+
+Citizen Web3 
+Hi, everyone. Welcome to a new episode of the Citizen Web3 Podcast. And today I have Sandy Carter, the CEO of Unstoppable Domains. Sandy, hi, welcome to the show.
+
+Sandy Carter
+Hello, thank you for having me. I'm so excited to be here.
+
+Citizen Web3
+I am excited to interview you. It's been a while I've been chasing you, but we finally got you. So Sandy, I'm going to start with our traditional slightly boring question, but it's something that helps me, the listeners, to understand who you are, to get into your shoes a little bit. So please, if you could introduce yourself, maybe including the intro story, your Web3 background, how did you even get to that? mean, you know, knowing a lot about you. Yeah, whatever you want to talk about.
+
+yourself, whatever you want people to know about you, please small intro or a long intro, if you may.
+
+Sandy Carter 
+Okay, well, as you said, my name is Sandy Carter. I am the COO of Unstoppable Domains. Unstoppable Domains is a digital identity platform. I know we're gonna chat about that a little bit more later. So let me just give you a little bit of background. I've always been in tech, I've always loved tech and started doing emerging tech. So I've always been focused on things like the cloud when it was just starting out.
+
+Artificial intelligence. started on artificial intelligence back in 2013 with IBM. Funny story. Funny story I think is interesting. was, I'm an adjunct professor at Carnegie Mellon Silicon Valley. I was telling that story. Somebody raised their hand and they said, excuse me, Ms. Carter, chat GPT just came out. You couldn't have been working on AI. So as you know, AI is much broader than just chat GPT. And then,
+
+What happened was I was doing some work at Amazon Web Services and doing a lot of focus on artificial intelligence because Amazon's great in artificial intelligence. And I was asked to take a look at some of the emerging technologies like blockchain, augmented reality, spatial computing. And so I started digging down, going down the rabbit hole and found so many use cases and the power of blockchain.
+
+That's really when I fell in love with just the whole space in particular blockchain itself that has, you know, so many use cases, some of which are for, you know, banks, some are which for hospitals, some of which are for crypto, which is going crazy right now. and so I just thought it was so fascinating. I started doing not only all the things I needed to do for Amazon, but looking at it as a side project and just seeing.
+
+what other things were going on, where were gaps. And I identified an interesting area of identity. So what was going on in identity. I'm a Forbes contributor, write a story about it. And the CEO of Unstoppable and the founder called me, said he was coming up to Seattle, which is where I lived at the time working for Amazon, came up and had dinner. We talked about kind of vision and where we thought things were going. And the rest is history. I came to Unstoppable.
+
+Sandy Carter 
+Almost three years ago, not quite three years ago yet.
+
+Citizen Web3 
+Let me dig that a little bit. There is a lot of things you said there, of course. But one thing I always try to dig a little bit with the guests and of course, feel free to go as far as you feel comfortable. Why? Why does a person with a, you know, for most of the, like probably 80 % of the world, you know, would probably consider you working for Amazon as, you know, like that's it, that's it. You're settled. You need nothing else.
+
+You have the money, have your, I don't know, pension, whatever. Even the countries, I think we can take away the pension, in fact. think like even second and third world countries know what Amazon is. You have a successful job. And then suddenly, you you get yourself into this field, which is all the time fluctuating and all the time. Why? What is the internal driver there?
+
+Sandy Carter 
+Well, I hope all of you have a bucket list of things you want to do because I had a bucket list of things I want to accomplish in my life. Things like jumping on an airplane with a parachute, check. Things like having two kids, check. And on my list is I wanted to raise and have a startup become a unicorn. It was on my list. When I started it at Unstoppable, they were not a unicorn.
+
+That was one of the things I really wanted to do. And the other thing you should know about me is that I started at a startup. I then went to IBM, left IBM, went to a startup, an AI startup, sold my business, went to Amazon, and now I'm at a startup. So if you watch my career, it's startup, big company, startup, big company, startup, big company. And why is that? Well, if you think about it, when you're at a big company, you get frustrated, right? Because you're like,
+
+can do all these things. Like if I just could control everything, I can do it. And so then you go and you do your startup and you're like, yes, I can do all these things, but I don't have enough money. I need more funding. I mean, you more people. So then you go to a big company, you have funding and people, but then you can't do it all. And so that's kind of how my career has rolled, is kind of wanting to have the biggest impact that I could possibly have. And I do, I have a bucket list. I have a list of things that I really want to do.
+
+And they're personal and they're professional and they're family oriented and I do keep a bucket list Hopefully all of you do because it really has been my you know, my guiding light There are things I've crossed off my bucket list and I'm like, why did I ever want to do that? No, I do not want to do that But you know, one of the things I haven't done I want to go to a hundred countries I've been to 89 countries. So now when I plan my vacations, I'm like, okay I need to add a couple more countries like
+
+Where do I want to go that I haven't been? So yeah, that's the main reason. What did you expect?
+
+Citizen Web3 
+You I'm I'm I'm no, I'm going like, you know, I'm unmuted because you can me going, when you said 89, because you beat me because I have a very high number and I'm like, man, that is unfair. I I'm going to I'm going to need to catch up with you because you're beating me. You're beating. It's on my bucket list too. And you're beating me and not not by far. I must say, but but you're doing good. So wait, what would give me one professional thing that you still haven't crossed out of that list?
+
+Sandy Carter 
+I do want to IPO a company.
+
+Citizen Web3
+Does ICO count or IPO? I want to go IPO as in do an IPO in the real, in quotations in the real world.
+
+Sandy Carter
+Yeah, because I've sold my company, I've sold a startup, I've become a unicorn help raise funds. I think there I'd really like to be part of a company that goes IPO. I want to experience that, you know.
+
+Citizen Web3
+Is there anything today that attracts you back in the Web2 kind of like professional? mean, speaking professionally speaking, probably work with a lot of people right now. I mean, if you want to talk a bit about how they look, obviously, all of unstoppable domains, that would be actually quite cool. But before that, is there anything that you actually miss going back to in the Web2 world, even if it's bureaucracy, even if it's anything else?
+
+Sandy Carter 
+Yeah, so well, first, let me tell you about my day. My day is so wicked fun, I have to say. I'll start out with, know, pudgy penguins in the morning. And did I ever think that I would start out with penguins on a call, being a professional at IBM and Amazon? No, I did not. I did not ever imagine that. And so, you I can go from there to doing a
+
+Citizen Web3 
+Please.
+
+Sandy Carter 
+call with a university or with a city, obviously many calls with my team to make sure that we're making progress for our partners and our customers and our users. And then, you know, I'll have outrageous calls with Web2 companies who want me to explain what Web3 is and what is blockchain and what the hell is Bitcoin and why is it at 107? And so, you know, all these calls take place because
+
+We're in that emerging tech space. We've got people who are real believers and they know what it is and I don't have to explain minting or what on chain is and any of that to I have people who want to understand it because they're thinking about doing something like that. And so they're curious. So I might do like 17 calls with them because I have to start with education and go through.
+
+To last night, you know, I work for unstoppable. So we do You know on chain naming services for digital identity and you know, the guy got it We were on the phone literally ten minutes and he's like send me a proposal because I'll give you back the the 20 minutes I sent him a proposal And then 30 minutes the deal was done like that so, you know my day can go from education to talking to pudgy penguins to
+
+you know, talking to an L2 to layer two, hopefully everybody on here knows what that is, to talking to someone in corporate who doesn't know. I will tell you, last week, it was so cool. It really did a big contrast in the two worlds. I'm an adjunct professor at Carnegie Mellon. I was teaching the kids how to set up a wallet and to associate your digital identity to it. So, you know, that's not,
+
+overly easy, right? You still have to go to an exchange, you still have to get currency, you have to... So I was walking them through it. The class was an hour and a half. Literally, I was done in 20 minutes because most of them already had a wallet. They already knew 20 minutes, we worked through bugs and I was done. Then I had a class of 100 chief digital officers at Fortune 1000 companies. Now these people are like, whoa, they're like, you know, like...
+
+Sandy Carter 
+Wow, you you guys are amazing. After an hour and a half, we still had half of the class. We had to do a second class because it's such a different world, right? My kids at Carnegie Mellon grew up playing games. They understand a digital asset. It makes sense. They get it. The user interface isn't a barrier. And then you've got the current generation who's running companies.
+
+and it's hard. And so we, as part of that Web3 industry, we have to fix this. We have to make it accessible to everybody if it's really and truly going to be successful. anyway, long-winded answer, but that's kind of how my days go.
+
+Citizen Web3
+But still one part of the question I'm gonna put you on the spotlight. Is there something you miss from the Web2 world that doesn't exist? mean, it could be even negative. I mean, for example, could be, don't know, bureaucratic approval. I don't know, whatever. But something from the Web2 world that you definitely miss as a professional within your day in the Web3 world.
+
+Sandy Carter 
+yeah.
+
+Sandy Carter 
+So I would say there are two things. One is, know, at Amazon we don't dress up, but we dress professional. I miss that. Like I miss, I went to a black tie dinner in New York City. It was at the Rainbow Club with the NFT group. And of course I had my beautiful gown on and everybody else was dressed up. Not everybody, but a lot of people. But then you had a bunch of people coming in their matching sweatsuits.
+
+And I just think that's interesting, right? I'm not criticizing them, but I do miss going to lavish affairs where I get to dress up. I like to dress up. That's just who I am. The other thing I do miss as well is Amazon had such wicked smart people and they were everywhere. So if I ever had a question, there was someone at Amazon who could answer me like healthcare, we got that. Music, we got that.
+
+Groceries, I got that. Technology, there's Amazon Web Services. So I could go anywhere and find the answer. We have a team of wicked smart people at Unstoppable, but we're obviously not as big and we're definitely not as broad. So a lot of times I have to reach out and use my network to help with different answers or different questions or different things I want. So I do miss that. I miss that proximity of just, you know.
+
+reaching out on Slack and saying, hey, what about this? And it might be a bizarre question, but it's in their industry. They know it, they got it, and we just get going.
+
+Citizen Web3
+think Dyor, do your own research, is one of the mottos of crypto. So rather than like, it's like, understand what you mean. Sometimes you're stuck. Even as like, I would call myself, I know this is a bit maybe seems beheaded, but I would call myself a super user in terms of, I use it for years, for a decade, crypto, crypto, whatever. and of course I get stuck like any normal person, but when you get stuck, you're like, okay, who am I asking this? There is nobody to ask. No one is going to do this.
+
+So I understand. So sorry, sorry, Sandy, what are you going to comment?
+
+Sandy Carter 
+No, mean, and that's one of the things, what you just mentioned is one of the things I love about crypto is there is no freaking playbook, right? So that is one of the things I love about it. Like sometimes you can't ask the question because nobody's done it. And that's really cool because you get to create it. And then people will be asking you the question. I do love that. I really, really, really do love that a lot.
+
+Anyway, that was one of the things. I know you didn't ask me that question, but it just popped into my head. One of the reasons I love it.
+
+Citizen Web3 
+Feel free to, you know, if you want to expand and add, feel free, Sandy. I will just, I will love it all the more, the listeners as well. I'm sure of it. You mentioned, I'm going to try a little bit to move ahead, but if you do want to add, please feel free ahead. Don't hesitate. You mentioned, you know, a couple of things that I think I want to try and go that way. One, you mentioned a very interesting point in my head, at least, know, subjectively about adoption, let's say.
+
+And you gave an example of a class of kids and a class of company founders. And I'm going to try and make a question of it. I have this habit of trying to express an opinion and then asking the guests what they think about it. So I don't know if it's going to be a question or an opinion. And one thing that straight away jumps into my mind when you say that is I have this example, let's call it, of a fork and food and mobile phone.
+
+And if you think of a fork and, you know, a person today, we don't differentiate between the end of our fingers and the end of the tip of the fork. We just eat food from a plate, whether it's a spoon or a fork. And we use the fork or the spoon as if it was our hand. Now, with all of the respect to our generation, and I mean, mine and yours here, to, you know, towards the digital world and what we did, we weren't born with it. So I think that the mobile phone and the thumb
+
+for the kids of today is kind of like the fork. Like go 300 years ago and give somebody a fork. They will not know what to do with that fork unless they spend 10 years or 20 years or 30 years trying to use it. And what do you think? Do you think that adoption, here's gonna be the question. Do you think that, you know, I don't know if I believe personally in what I'm gonna ask you, but still, do you think that adoption cannot happen within our, let's say, generation because of our
+
+digital differentiation, so to speak. Again, I don't know if I believe in what I'm asking, but I'm curious of your opinion as somebody who just gave that example with the classes.
+
+Sandy Carter 
+No, I don't. believe people can learn. even from that class, I still have a couple of chief digital officers who have just really gone gung-ho. They're like, OK, I got to get my more Bitcoin. I got to do this. So they're like into it. I think it's really about your mindset. mean, take my dad. My dad has a wallet. I mean, he does have a wallet that he wears in his.
+
+in his pant pocket too, but I mean, a digital wallet, he's got a wallet, he's playing with crypto. He asks a lot of questions, but you know, he's even the generation before me and he wants to learn it. I think it's about your mindset, you know, one of the leadership principles we have at Amazon is learn and be curious, always be learning. And it's one of the reasons like you take a narrative in.
+
+And people just, you read the narrative, it kind of level sets everybody to the same playing field. But then people just ask questions, ask questions, ask questions. And I see a lot of newbies coming in going, why are people asking all these questions? Like, I don't want to answer these questions. I just want them to approve the document and go. The reason is we're all continuous learners. And if you're a continuous learner, you're going to get it. You're going to move forward. I don't think it has anything to do with your experience or your age. I think it has to do with your
+
+your mental state. really do. I think it has to do with your mindset.
+
+Citizen Web3 
+Do you think, I mean, you touched straight away. I mean, I was going to jump to those questions a bit in a fair, but since we're already here, education is obviously seems to be the big elephant in the room, regardless of what I have a guest that I speak to over the past five years believes in. You know, most of them will agree. Not everybody, of course, but education is the biggest elephant in room. Do you think that considering what you just said, and if you do, or if you don't, of course, please, please explain why not. But if you do,
+
+It seems that educational bias is a very heavy anchor bias. It's very heavy, something we carry from with us and from childhood. And it seems that sometimes it is just lack of education that stops us jumping from where we are today to that adoption, like the big adoption curve. Do you think that this is the case? Or do you think that we are doing already enough as educators over the past 10 years? It's just, you know.
+
+there is a barrier between the information and whoever is receiving it. I don't know.
+
+Sandy Carter 
+I think there are a couple things going on. think one, know, web three, there's like the secret handshake, the secret words, right? Minting and I mean, there's just like a lot of words that we could have used easier things for, right? Like tokenization. I was trying to figure out how to explain tokenization actually to a group of elementary school kids. And I figured out other words to use, right? Like it's, you know, it's gated.
+
+or it is filtered. And as I was doing that, one of the teachers came over and said, you know, had you guys in Web3 used words that everybody could understand, you'd have more adoption. And I was like, you know what? You're actually right. You're right. Like, we shouldn't have done the secret handshake and all the secret words and all the made up words and all that. It's not.
+
+very conducive to having mass adoption, I would say that. So I do think that there are words that we need to adjust, like even keys versus password. mean, there are simpler things we could have done. But two, I do think the user interface. I mean, we learned a lot from chat GPT. User interface, super easy. Anybody can do it. My mom can do it. My grandmother can do it. Like it's super wicked easy. And if you really want something to be mass adopted,
+
+You need to focus on the user interface. In fact, at the last conference I was at, a group of us were sitting around a table at lunch and they said, what we should do in the web three industry is we should go and we should borrow, steal, hire like a hundred Apple engineers. And we should have them come and look at it and then just re orchestrate everything for the user interface. And we'd be like light years ahead. And you know, there's a lot of truth to that. Like the user interface is difficult.
+
+It's just it just is it's just not intuitive. It's not natural and it's still hard today. Like I still get questions of very simple things. Okay, like I have to take my cash to an exchange that I have to take my exchange to a wallet have to take the money to a wallet. Well, why do I have to have a Solana wallet and I have to have an Ethereum wallet? I got all like what's going on there? Like I have one wallet like what I can put a 50 and I put a 10 in it put change in it. Why do I have to have multiple? Well, so there are things like that. I think we need to adjust and then I think the third thing
+
+Sandy Carter 
+has to do with the way people learn. I think web three is about playing with the technology. I think web two, could learn it intellectually and really understand it. Web three, you really can't. Like you really have to get your hands dirty. You really have to, you know, do that Bitcoin transaction. You have to set up a wallet. You really have to get your hands dirty. So I call it play storm versus brainstorm. In the past,
+
+for Web2, you could just brainstorm it, you could teach it. You could actually teach cloud without having ever done anything, set up a node with a cloud. You could really do it, but you can't really hear. I'll just give you another story. I was doing a lecture and I chose to do it in the metaverse. I wanted to try out some of the new tech. And so I was doing a lecture. One of my fellow professors said, I'm gonna come listen to you. And I said, hey, let me teach you how to set up the avatar.
+
+and go in. He's like, no, no, no, no. And so on the day of the lecture, he came in and literally he was stuck on the ceiling. He couldn't figure out how to get his avatar off of the ceiling. And I couldn't help him because I was lecturing. And and he said to me after something that stuck with me, he said, I really should have gone in and played with it. What I did was I read the documentation and I thought, I can do this. Right. It's pretty easy.
+
+But I think in our world, you have to get your hands dirty. So I think those three things, I think the wording, the usability, and playing, playing not just brainstorming it, playstorming it is really important.
+
+Citizen Web3 
+Actually, you were talking about it, it's something that, a question that definitely came into my head. I think it's an important question about having that skin in the game that you were talking about, the responsibility that Web3 brings. We are also building an explorer just for me to agree with everything you said, especially about the UI. And one of the things we are...
+
+We're doing a release this week and we call it the return of the Explorer because what we're trying to do, we got a designer who had nothing to do with crypto previously and they designed it from the bottom up. Of course, they now understand it's been a year since they've been designing it. Of course, they now learn, but it's been an interesting thing though. And here's the question. So this is just to say that I totally understand you, but basically what you're describing, what you're talking about in a sense is that responsibility that we all decide upon.
+
+community, OGs, so to speak. don't consider myself like that, but people who do, they talk about that this is the difference, the responsibility that people need to learn. so we don't end up like in the financial system or any other system today. So the question is this, where do we draw a line between, yeah, in order to use Web3, you need to get your hands dirty. It's the playstorm. It's not a brainstorm anymore.
+
+between the responsibility that we are giving people or wanting people, sorry, and I know this all sounds a bit like an un-raw, uncut, but just filter, to them and between that user experience going completely disastrous and then people are saying, okay, this is unusable because you want me to open a wallet, don't know, draw this, put this, call my neighbor, get my dog out of the street, whatever.
+
+Sandy Carter 
+Well, you know, I think it depends upon your goals. I think the goals that I've heard for Web3 is mass adoption. And if you're going for mass adoption, then it has to be easier. You can't just depend upon, you know, a set of OGs. It's got to be simple enough for the masses, if that's their goal. If that's not the goal, if the goal is to keep it in the hands of a few elite or, you know, only those who will really, really, really put the time in and
+
+who can go through having their wallet rugged and all that, then that's a whole different story. But I think we all believe in the technology. We believe that ownership is key. I know at Unstoppable, we believe that you own your own data. That's why you need a digital identity because why should someone else own your digital data? Like you keep your own wallet with your own driver's license and your own ID card and all that, your own passport. Why give that away digitally? If you believe that,
+
+then your mission needs to be getting that into the hands of everybody. And therefore, you need to take some of that responsibility to help that. you know, at Amazon, one of the things we say with great success comes great responsibility. And with great responsibility, that means it's your responsibility. It's not everybody else's. Like, everybody else is stupid. They can't do this. I can do it. well, that's not the attitude, at least, that we're taking.
+
+Citizen Web3
+What's jumping from here, but still remaining on the topic, what is the goal of Sandy today? And how does it align with the goal of Unstoppable? Or does it align with the goal of Unstoppable? And really, of course, as comfortable as you are, but I'm really curious to what is your personal goal apart from completing bucket list ticks. Of course, there's something else that's driving you.
+
+Sandy Carter 
+Yeah.
+
+Sandy Carter 
+Well, you know, one of the missions that I always had is I believe that we are so lucky and that part of our responsibility is to reach back and pull others with us. And that means around the technology as well. I love to teach. I just finished my next book, which is called AI First, Human Always, which talks about the power of AI and blockchain together. And people ask me, why did you invest time writing a book? Like you really don't make any money on a book.
+
+But I like sharing what I've learned with others because I just believe that we're placed on this earth to do good and to reach back and pull others with us. So that's my mission is to be kind, do good, help pull others along, help them to learn from what I already know. And so I think it aligns very well with Unstoppable. Our mission is to get a digital identity into the hands of everybody. Right now we have 4.1 million of those
+
+on chain domains acting as a digital identity. We need a lot more. We are the largest, but we need more. And so my mission is to educate where I need to educate, to enable where I need to enable and to help people, you know, expand with the possibilities. So for example, I was up in New York and I was with a hundred startups and they're working on healthcare. Like, what do you do with the healthcare data? Well, today, you know, in the U.S.
+
+It's really shocking that you a lot of times can't get your own healthcare data. I just find that appalling. Like I can't get my own data about me, like my body. And so I love the fact that our digital identity could hold healthcare data. When HIPAA and all the regulations are ready, we could have that data and we could store that data and then use that for good. These healthcare companies tell me that 46 % of the time people are misdiagnosed.
+
+They're misdiagnosed because no one has the full view of them. This would enable them to do that. They could get emergency treatment. Like I broke my femur in Brazil. I had to wait 72 hours for the data to come down. I could have immediately given them that data. And so I see such power there and such. So for me, it's all about purpose and profit because you need to make a profit for your company to continue. But I believe the companies who do the best are those with a purpose.
+
+Sandy Carter 
+Like what is your purpose? What are you doing? You know at Amazon we said, know, work hard, play hard, change the world. We wanted to change the world. Like that's what we were doing. We're changing the world. And that's what I believe in. That's what I want to do. And I do believe that blockchain has a lot of that power to do it. And with AI, it's just rocket fuel. I think it can just, you know, I think it can change the world.
+
+Citizen Web3 
+I for anyone listening and still not believing in the power of blockchain, have an advice. What you need to do, doesn't matter where you live, doesn't matter what country of the world, because now I'm certain of it. All you need to do is just spend the day going around to government, like bureaucratical institutions, not thinking, don't think about blockchain. After that day, you will believe in the power of blockchain because the moment you understand all the notary things, all, you know.
+
+the medical care data, what you're describing the education. It's ridiculous. You know, there was a guy recently on Twitter who tweeted something like, I I've spent, what is it? made 60 signatures today in 12 different institutions. Guess what? And I live in Germany. Guess what I'm doing? Or something like that. And it was, and it was actually submitting a person to his daughter to the school system. And it was ridiculous. You know, the guy had to go to 12 different
+
+according to his words, but still, it's ridiculous of how bureaucratic we got and what this can do, definitely. I have a question for you. There is something that you mentioned in the beginning and something that you keep on bringing up, which is AI and blockchain. And we are at a stage where
+
+last year we saw the numbers of the end of the year of what Amazon, meta, Google and who else is, is what I forgot, you know, what, what this, what this, I think so. Yeah. What they were, what they were spending on, on, on, GPUs for, for the eyes. And one of the questions springs to mind, where is the electricity going to come from for the AI? we are.
+
+Sandy Carter 
+I am.
+
+Citizen Web3 
+Like really, if we are to believe what, you know, if anybody was who today is a skeptic of AI, you know, and listens to what you're saying that, you know, it will change the world, believes what we are saying. One of the first questions that to me will spring in mind, where is the electricity going to come from to power this up?
+
+Sandy Carter 
+You know what's fascinating is that companies are buying land, putting solar panels on it to generate electricity or power. There is a huge investment right now. Currently, I am in Phoenix, Arizona. We have a lot of sunshine, but we also have a lot of land. And I see it here. Like, I see all of the
+
+Big companies coming in, they're buying land, they're doing solar plants, they're doing ways to generate more power, more electricity. It is very important to kind of look at that whole supply chain as you're thinking about how will this impact the world? You can't just think about the end product, you got to think about it from the very beginning, like from end to end. And that is one of the things that they are thinking about. I love the fact that they're looking at using solar.
+
+you know, to help generate that power and that electricity. I really haven't studied it a lot, but I just see it happening all around me here in Arizona.
+
+Citizen Web3 
+What about slowly going back to one more AI question, slowly going back to what we spoke about before? A lot of people, again, we are recording this, what is it? December 2024. So by now, it's, I'm going to say something that I'm going to say safe to assume, but it's not safe to assume. A lot of people have tried out ChatGPT or anything similar to ChatGPT. There are millions of them, or sorry, hundreds of them, right?
+
+And one of the questions again, it springs to mind data and ownership of data. How do people today that, you I'm assuming some people don't, you know, give it the darkest things they can give it, right? And where, and now that models are starting to talk to one another, you know, what have they exchanged? Like, how do you see that progressing? And, you know, should there, should people be aware of that?
+
+Sandy Carter
+Well, one of the things that I've been researching lately is the fact that I believe we're going to run out of data. I think there's going to be a data scarcity issue. You know, we talk about data being like oil, you know, just like oil drives the economy today, data drives the economy for AI. I do see there being a lack of data coming up because, you know, these learning models just want more and more and more more more data.
+
+This is why IoT is so powerful today. IoT is Internet of Things, where you're putting sensors on so many things. And this is why I believe in dPen. dPen is based on a decentralized platform. And what you're doing is people are paid for their data. So for example, there's a little, I have a little weather thing sitting over here.
+
+I leave it on, it tracks my weather here in Phoenix and people are paying me for that weather data because they need more and more and more data. I have an app on my phone, it's called Salencio. It measures noise. I go into a restaurant, I can turn the app on, I can make passive income from that noise data, right? And sell it to, I guess they aggregate it, they sell it to Yelp or something. But the interesting thing about that, I believe, is that
+
+There is a difference in that view. That is we're running out of data, so we need people's data, so we're going to pay them for it. That to me is all back to the premise of Web3, which is ownership. Who owns the data? Who is the one that is selling the data and it's all us? So I do see this becoming a bigger problem. I do see Web3 helping with it with a lot of the deep end solutions out there.
+
+In fact, one of my predictions for 2025 is that deep end revenue or selling your own data will start to become even just a little bit of an impact in your passive income as you move forward because we will lack this data.
+
+Citizen Web3 
+Do you think that today, especially where the surveillance on chain, I know this is a bit of a different topic, but in concern to the data, because I had recently in the last, let's say, three, four months, a lot of guests who are either considered some to be analytics or data, I'm sorry, data analytics. And they say that, know, like,
+
+for me to get information today using on-chain information about a person, yeah, it takes minutes. And people underestimate to what extent this can go. it looks like I totally agree. just want to, like, in your opinion, what I'm trying to ask is, you know, between of the promise of Web3 to give passive income to everybody, you know, using the data that we're going to own it.
+
+and between the privacy. Where do you think we should draw again the line or should we at all draw a line or there will be a solution in the future that will, know, in your opinion, allow us to use any type of Web3 future or Web2 apps with in mind that it's not just us who owns the data, but there's also a privacy layer to protect the person who is deciding to sell their data and make money with the data.
+
+Sandy Carter 
+Yeah, I mean, I think you have a couple of really great points there. I'm just gonna break it apart. So one, I do believe that people are naive about blockchain, meaning that people don't know that they... People don't realize that people can see their data. And, know, for example, you know, we've all heard the story about someone who ordered pizza every Friday night using Bitcoin.
+
+And people watch that data and they realized that they could take advantage because they knew he ordered a pizza every Friday night. And this is why I joined the board of Secret Network because Secret Network is really about ensuring that you can place things on the blockchain and you do own it, but there is privacy.
+
+More importantly, confidentiality. It's called confidential computing. So that you don't reveal stuff you don't want to reveal. This is going to become really important because let's imagine that I do put my healthcare data on chain. I don't want everybody to see what I weigh or what my blood pressure is or what my heart rate is while I'm on this show because they think I'm really calm but my heart rate's really pitter pattering, right?
+
+So we do need a confidential view to where you and I protect what data we want to protect, but not everything, right? Like there will be some data that will be free. I know that that goes against some of the Web3 transparency thoughts, but I do believe there is data that you don't want everybody to see. Like I don't want my daughter who's ordering pizza every Friday night. I don't want some predator to know that she does that. I do want her to protect that data.
+
+Citizen Web3 
+I I It's an interesting thing as well that... How are you, by the way, with Devils Advocate questions? Before I'm going to ask that, how are you with Devils Advocates? Okay, let's go. One of the things that if... I'm not going to get it too deep. It's just on a very... Really on the surface, but it's about data. If any user right now... And by the way, sorry. So for the listeners, sorry, because you mentioned Secret Networks. Secret Networks, sorry, we had...
+
+Sandy Carter
+Yeah, sure, let's do it. Let's do it. Yeah, let's do it.
+
+Citizen Web3 
+several, including one of the founders on from, their years ago and read more recently. for the listeners out there, if you want to.
+
+Sandy Carter 
+you did. So you had, was Lisa loud on? Yeah. Okay. Great. No. Okay.
+
+Citizen Web3 
+No, We had Tor on and a couple of more people who work within the sacred network such as validators and building tools. if anybody wants to check it out for the listeners, please do and have a look in more detail what Sandy is talking about. But to go back to the devil's advocate question and the data. So let's do it. So.
+
+It's going to be an easy one, I promise. if I go right now on the Unstoppable Demand website, one of the things that jumps right into your eyes is ICANN accredited. And here it takes me back to our data discussion right now, right? Because this is, of course, debatable thing. we can. But a lot of people today would say that ICANN has been one of the demons, one of the...
+
+reasons why the DNS, the domain name service and the ownership of the internet looks like it is today could be real, could not be real. Regardless, considering what we're talking about, why do you think that being ICANN registered? Here's the question is so important in this case. And how can users or future users of Unstoppable in this case make sure that
+
+you know, because it's ICANN registered, they won't have the same issues that could have happened to them, you know, in the Web2 world because of that registration. And of course, sorry, just for the sake of before you answer, just for the sake of the question, let's assume bad things are non-existent. Let's assume that it's a good case, know, that somebody is not a malicious. Let's not try to talk about the malicious case just for the sake of the conversation.
+
+Sandy Carter 
+Right. So here's what we decided to do. We are very much believers in Web3. So we have domains that serve as your digital identity that are on chain that have nothing to do with ICANN. However, we talked earlier about making what we're doing more widespread mass adoption. And so
+
+You know, we were waiting for people to come to us, right? You there's that saying, you build it and they will come, build it, they will come. Well, people maybe aren't coming as fast, right? And so sometimes you have to take the technology to them. So what we did is we became an ICANN accredited registrar. And when we sell a dot com as a digital identity for a company, we place it on chain. So now that
+
+Identity is now on chain as well. you could take, if I bought sandycarter.com and now it's on chain, I could use sandycarter.com as my wallet address. I could use it as my, to sign into something. I could use it to have my gamer tag. I can use it to do encrypted chats. So now what have I done?
+
+I have now brought Web3 or blockchain to the masses. I have now brought on-chain to the masses because now anybody, mean, everybody knows .com is the number one digital identity for companies around the world. So now what I've been able to do is to bring that to that segment of the audience, which in my mind is pretty amazing.
+
+In fact, I'll go one step further and I will say that I believe that domains are the world's first real digital asset. We talk about, you know, RWA real world assets. think domains are the first real world digital asset. I think it'll be the first industry to go a hundred percent on chain. Why? Because it brings trusted verification. It enables payments and it enables digital finance.
+
+Sandy Carter 
+to consumers globally. So we're providing a choice. If you want to have your domain and it's web three, no one can take it down. There's no censorship. You got it. we have, you know, sandy.x, never gonna be an ICAN domain, never, because it doesn't fit.exe is too short. It's never gonna be one. But if I wanna take sandycarder.com and I wanna place it on chain and still have it be searchable and taggable in the DNS world, I can have that too.
+
+So, you my husband's always saying, he gives me two choices and I pick the third, right? I want my cake and I want to eat it too. That's what we've done here. We're enabling the Web2 world to experience on chain in their world. And at the same time, we're allowing Web3 maxis to have their world as it is. And if you want to be a hybrid and you want to do both, then you have that opportunity as well.
+
+Citizen Web3 
+One more devil's advocate, but a bit easier than that. Today, if I'm...
+
+Sandy Carter 
+But did what I say make sense? Does that make sense?
+
+Citizen Web3 
+Yes, perfect. Perfect. That's why I didn't follow up because it's perfectly makes sense. Usually. Sorry. Sorry. It's a habit. I'm sorry. This is a professional. This is a more of a when, when, when, when, when I quite answer makes sense. You're like, okay, have nothing to ask. Sorry. So one more. it's an easier one. so today as a user, you know, I'm offered, let's say I, I, I, questioning which out of the companies or, or, sorry, not companies, shall I say projects.
+
+Sandy Carter 
+Okay. Okay. Okay. Okay. Okay.
+
+Citizen Web3 
+whether it's unstoppable or Ethereum name service or I don't know, there's a lot of them right now and suddenly they all popped out of my head. But of course, you probably understand already the question, but I'm going to ask it in full. As a user today, let's say I want to buy a domain, a crypto domain, a Web3 domain, and I'm offered with millions of choices, really.
+
+Tom.this.that.that.btc.boom.chrome. Sometimes you get lost. You're like, I'm not going to buy one just because there's too many of them. Not twice and stop all the better. in the way of where each of those projects says, we are doing this to fix this. now it looks like just with the crypto, like with the altcoins, people say, altcoins, there's too many of them. Again, devil's advocate.
+
+It seems at the moment that there is too many dot something web three domains, even though, there is still it's not, but it is. What does the user do? Where does he go? How does he decide, okay, I buy here and not there. This is better. This is worse. Like whatever. What can you help here out, please?
+
+Sandy Carter
+I think it really depends upon what you're trying to accomplish. So if you're kind of hybrid, would say Unstoppable is really good for you because we have you come into the world in a gentle way. You could take your .com, your .io, your .fun, whatever it is, and you can tokenize it. So you can play with it, get your feet wet, play storm, right? Play storm with it.
+
+We also offer you the ability to pay in cash. Let's say you don't really want to figure out a crypto wallet. You just want the freaking domain We allow you to pay in cash or with a credit card with PayPal You have different ways to participate and then you can you know Save it and wait until you have the time to learn it or until it becomes more mass adopted I would also say that people choose their
+
+TLD their top level domain based on what they're really interested in. So for example, we have.crypto. If you're really into crypto, we have.nft. I did a podcast yesterday for, I mean, cult ish following for NFTs, right? And so for them, it was all about.nft. And so I think people pick that, that name, just like today, I can go and buy a shirt from many different places, but
+
+I like red, I like pink, I like a certain designer, I don't like others, I like certain fabrics, not others. And so, you know, over time I learn what I like. We're also providing TLDs or top level domains to communities. So we did a .pudgy. So if you're part of the pudgy community, you probably want a .pudgy. We did it with the city of Austin. If you are living in Austin, you probably want .austin because that
+
+is where your citizen information will be held. And so we're about, you know, really doing this community by community by community. Today we did one with a not for profit for an Islam group. They help out the youth and they're using some of the money to, you know, support learning, teaching, feeding the youth. If that's something that you're passionate about, you're gonna buy that.
+
+Sandy Carter 
+Top level domain, Quantum, we just launched that Quantum. Quantum's like hot right now, right? Google just released their Willow chip. If you think the future's about Quantum, you may get that one. So how do people pick? I think it's the same as how you pick your clothes, how you pick your food. It's a preference for what you're looking for. But I would say that Unstoppable is simple and easy to use. We give you a wallet if you want an easy to use wallet. We have a marketplace if you wanna sell it later. Let's say you buy it, you're like,
+
+I really thought I loved quantum. really don't. want to do pudgy. You can, you know, you can sell and you can rebuy. I think we have a lot of choice. It's why we are the largest because we do this community by community.
+
+Citizen Web3 
+One last question before I'm going to jump into the blitz with you. I guess it's not resuming what we spoke about, and it might seem a little bit out of the rest of the conversation, but it's definitely about Unstoppable. Today, the Web3 scenery is changing, going from silo standalone blockchains. are slowly, finally, not just arriving, you can feel it, that it's more than multi.
+
+multichain landscape. You guys are obviously not working for a particular chain. are a kind of like with your vision, you are chain agnostic. The question that I the last question I will ask is about the community. It seems that, you know, today it's very hard to build a community that is blockchain agnostic. People are very tied emotionally to their bugs, what's called in crypto, right? And there, you know, unless you're a meme community, I guess, but you know, regardless about unstoppable, how do you guys
+
+make sure that you are not just focusing on either Ethereum or either Bitcoin or Solana, that you are really broad working with the community and what's the secret there?
+
+Sandy Carter 
+So we started on Ethereum. So we do today support Ethereum for minting. And you said your audience knows minting, right? So I don't have to explain it. OK. OK. OK. So we started with Ethereum. And then we moved because of the price of gas. We have Ethereum, but we also offer Polygon, which is a layer two, obviously, that helps scalability, reducing cost, and helps the environment.
+
+Citizen Web3 
+they do.
+
+Sandy Carter
+And then of course, new chains pop up. So Base popped up and people really wanted it. We had partners like Proppy Key who said, I want to be on Base, Quantum wanted to be on Base, EtherMail, know, 2.3 million EtherMail users. They wanted a dot EtherMail for their customers. And so they wanted Base. And so we've started to support Base. In January, we'll support Solana. And then we also signed up to support Sonic.
+
+right, to make sure that we have Sonic ready to go. So Sonic is Phantom V2, if you know Phantom, F-A-N-T-O-M, the second, I think, chain after Ethereum came out, awesome chain. There's Sonic, which is Phantom V2, is super wicked fast. So we're also going to support them, as well as abstract chain. I should say abstract chain from Pudgey too. So we're supporting as many chains as we can, because we're, you know, we're
+
+customer obsessed, user obsessed. know, something I learned from Amazon. Amazon is known for having success because they focus on the customer. They don't focus on competitors. They don't focus on a broad generic market. They focus on their users, their customers, their builders. And that's what we're doing as well. We're focusing on building what our users and potential users want.
+
+Citizen Web3 
+That makes sense. it's a difficult thing. That's why I wanted to kind of not remember to ask it. I did think it was a bit solid conversation. Sorry about that, you know, or the data conversation we already had, but I was curious because you guys have a very big community and I think it helps to a lot of people who listen to this if they are doing something like that to understand. Okay, so let me jump into a Blitz with you, Sandy. Very well, it don't have to be very quick. It's up to you.
+
+but three questions non crypto related to take us out of this conversation to finish it off. So first one, either a book or a movie or a song that has positive influence on Sunday throughout the life of for the past five, three years, whatever.
+
+Sandy Carter 
+Okay.
+
+Sandy Carter 
+Hmm. there is a book called, the five habits of dysfunctional teams, and it's a business narrative and it goes through the way to build a team. I'm a big believer that you, you can't accomplish anything by yourself. You have to have an amazing team. And I, I love that book. go back to that book. I fact, I have it right sitting right here because it's got stickers in it and everything, because I still think it's very applicable.
+
+to what we do every day in building a team. And I think teams are so important. So that's why I keep going back to that book over and over and over again.
+
+Citizen Web3
+Nice, nice, nice, nice, nice. And again, for the listeners, everything means Sandy mentioned book names, whatever. Please check out the show notes. Do your own research, as we say, and read the books. Second one, second one, something motivational that is not too private to share that keeps Sandy out of bed every day, morning, day, afternoon, building unstoppable domains, ticking bucket lists, changing between.
+
+Sandy Carter 
+Yeah.
+
+Citizen Web3 
+You know, one thing to another and still being motivated to go ahead and to build for the future.
+
+Sandy Carter 
+Well, it's interesting because, you know, I grew up in a small town. We didn't have much. But my mother, my father and my grandparents were there and they always demonstrated, you know, different things to me. So I would say it's got to be my family. So like from my father, from when I was young, you know, I loved math. And at the time I was growing up, it wasn't cool to be a girl in math or computers. Like that was like, no, you didn't do that, right?
+
+My dad said, know what, you be you. Like you do what you love and I will support you and you might get teased, but you have to be you. So I always took that from him. My grandmother, so I'm five foot eight. My grandmother was four foot eight, a foot shorter than I was. She played basketball. Now imagine, this is not my mother, this is my grandmother. There were only three.
+
+Citizen Web3 
+Wow.
+
+Citizen Web3 
+No way
+
+Sandy Carter 
+women's teams, she was on one of them, four foot eight, she would, no three point shots then, but she had a long shot. And she taught me never to give up, like persevere, persevere. Don't give up, don't give up. So then I've got my dad telling me, you can do what you believe, you have to be you. My grandmother telling me, hey, you can do anything. My grandmother was 92 and she would go to the,
+
+old people's retirement community and she would wash their hair and she would call me and she goes, well, Sandy, I'm on my way to see the old people. I'm like, grandma, you are an old person, right? But she just kept going and going and going. And I love that. So and then my mom, I don't have my necklace on today because it's actually being cleaned. But my mother gave me this necklace. And in the center, there's like one like crystal. And then outside of it, there's all these other crystals. And so
+
+Sandy Carter 
+that says that you can't do it by yourself, right? You may be in that center, but without your family, without your friends, you have to have your tribe. You have to have your tribe. And so from my family, I learned those three invaluable lessons that just keep me going, right? Be you, do what you want, even if it's hard, never, ever, ever give up and do it with your tribe. Like don't do it alone, right?
+
+I love that African proverb that says, you know, if you want to go fast, go alone. If you want to go far, you go with people, you go with your friends, you go with your tribe, right? And so go together, go together. And so that's what I believe.
+
+Citizen Web3 
+That was very good. like it. I loved it. Thank you. No, it was very good. But wait, I have one more and you cannot say now your family, but now you will understand why I'm saying that ahead. Because it's about people. It's about a persona this time. So last one, promise. Persona, dead, alive, made up, real character, book character, family member. I don't know, could be an animal for all I know. Doesn't matter. They don't have to be realistic. Not a guru, but a persona, personage that...
+
+Sandy Carter 
+Okay.
+
+okay.
+
+Okay.
+
+Citizen Web3 
+and moments when you feel sad, stuck, down, nothing is going, you kind of think of that persona and your day brightens up.
+
+Sandy Carter 
+so I would have said yeah, I would have said my some of my family but you're right. just stood there. Yeah, you probably should have reversed those questions. Yeah, I mean, I don't know if I actually think of a person. I guess I always think of you know, experiences in the past because, you know, throughout your life, you go through so many different things and something might be hard now but you figure it out and you go around it with your tribe.
+
+And so I always try to think about positive things or the positive side of things versus the negative. In fact, it frustrates my husband to death. He's like, my God, you're like glass half full like all the time. It's nauseating sometimes, right? Because even when something really bad happens, I'm like, well, we could do this or what about this or something like that. So I think, again, comes from my family and my background.
+
+Citizen Web3 
+That is really funny. My partner, says, I've seen worse sometimes. And it's also nauseating. Sometimes I'm like, what do you you've seen worse? We are always, that's it. It's done. There is no worse. No, I've seen worse. Could be worse. Could be worse.
+
+Sandy Carter 
+I think I'd like your girlfriend. it your girlfriend? Yeah, I like her. I think I would like her. Yeah.
+
+Citizen Web3
+Yes, it is. yes, yes, yes, yes. You would. You guys have a similar personality, definitely, with a positiveness for sure, 100%. Sandy, on that note, on a more serious note, I want to thank you for your time. Thank you for the answers. I understand you can imagine how busy you can be. So, but please don't hang up just yet. This is going to be a goodbye just for the listeners, for all the listeners out there. Thank you for tuning in and see you guys next week. Thank you, Sandy.
+
+Sandy Carter 
+See you guys, bye bye.
+
+Citizen Web3 
+Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

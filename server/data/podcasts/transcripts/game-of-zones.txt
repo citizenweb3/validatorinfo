@@ -1,0 +1,443 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/game-of-zones
+
+Episode name:
+Bow ties and IBC with Jack Zampolin
+
+Anna: 
+Hey, it's Citizen Cosmos. We are Serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code. Hi everyone! 
+
+Citizen Web3: 
+Hey and we have Jack with us today who is one of the people behind the creation of IBC. He is the ex-director of the product at TenderMint and he also runs the Piling Validator. Did I miss anything, Jack? 
+
+Jack Zampolin: 
+Yeah, I think that's totally fair, you know, doing all kinds of Cosmos-y stuff these days. 
+
+Citizen Web3: 
+What else are you doing that I didn't mention? Is there anything? 
+
+Jack Zampolin: 
+Yeah, I advise a couple of companies in the space and work with a number of folks to help them launch their blockchains. I think that that's, yeah, it writes themselves. I contribute to all the open source projects too, so. 
+
+Citizen Web3: 
+I think it's on the Goz website or somewhere that I've found it. 
+
+Jack Zampolin: 
+Oh, well I've got a bunch of bow ties, I can pull some out later. But, as far as product leader, you know, I do think that one of the things that set Cosmos apart from other blockchain ecosystems from the beginning is this strong product vision that we've had where there's these individual blockchains, they communicate with each other over this standardized communication protocol, IBC. You know, we make it easy to build those application chains with this framework that we build called the Cosmos SDK, which is kind of like Ruby on Rails for blockchains. And you know, executing strongly on that product vision and having really strong product is what's kind of driven us forward out in the marketplace and that's why we have a lot of developers using the platform. I do love working with the various different product teams within the ecosystem. 
+
+As far as the aficionado of bow ties, I don't know if you guys remember, but before Cosmos launch, I did wear a bow tie. I have a number of them. Yeah. 
+
+Citizen Web3: 
+You know what? I'm going to go straight into a controversial question. Do you like what you do right now? Are you more comfortable with what you're doing right now than with your at tendermint? 
+
+Jack Zampolin: 
+I mean, it's a lot of the same stuff. All those folks over at tendermint, AIB still doing great work on the ecosystem front and on various fronts. You know, I know Alessio still contributes to the code, so it's a lot of the same stuff and I still love doing it. 
+
+Citizen Web3: 
+Yeah, I guess that's the main thing as long as we enjoy doing what we do, right? When you create amazing product. 
+
+Jack Zampolin: 
+Yeah, I wouldn't be here anymore. 
+
+Citizen Web3: 
+Let's talk about IBC. You probably have a million questions and I've asked you previously like a zillion times. That was me personally. How would you describe IBC in your own words without using any of the terms that you've used to describe it anywhere before? It's just the way you think about it. 
+
+Jack Zampolin: 
+You know, at least think about it. Like the internet, it's like TCP IP. TCP is this protocol that we use all the time and we don't really think about it. This connection is being mediated over a number of different TCP IP connections. And it's this sort of foundational piece of the internet that we've all sort of begun to take for granted developing the IBC protocol. I've like learned a lot more how TCP IP works and how information security over that TLS works as well and like how you do authentication, sort of cryptographic handshakes and doing a bunch of proof systems. And that's basically what IBC is in the same way that the internet allowed individual computers to connect with each other in this sort of trustless manner. IBC allows individual blockchains or databases or communities or companies to connect with each other and transmit information that they're both independently verifying. I think that's the best way to think about it because the two communication protocols are very, very similar from an architectural standpoint. 
+
+Anna: 
+Yeah, it makes sense. It's easy way to describe it. Let's talk a little bit about product development. Now as a product manager, I'm really interested in your way of product development. IBC, it's not only a protocol. IBC is very specific product. We don't have market and users yet like usually we have. So it's hard to define metrics and how you do that. Tell me about how you work with product in that way. 
+
+Jack Zampolin: 
+Yeah, I think that's a great question. There is this thing called IBC and there's this whole ecosystem of blockchains out there that have joined the Cosmos ecosystem and it adopted the Cosmos SDK partially because there is this promise of interoperability. There is this promise of knitting all these communities together. So there's a market there. And you know one way to measure conversion would be to measure the number of chains that we're getting to connect to the hub via IBC. And even broader than that, you could think of each chain having a market cap and you can think of the whole IBC network having. If you're thinking about KPIs, the KPI would be assets under management in the IBC network. And like how do we increase that? Or the number of users on chains in the IBC network. So when I'm thinking about KPIs and in sort of like what value we're going to try to drive for atom holders, that's exactly what I'm thinking about. From those top level goals, like how do we filter those down into more bottom level things? And as you mentioned, it is very difficult to find metrics. And you do kind of have to have a plan and start executing on it. 
+
+Just those few little places where you're sort of finding those measureables along the way, make sure that you're checking your assumptions. But also at the same time, you have this sort of traditional product development cycle on the software side and that's go talk to your users, bring that feedback back to the business, filter that through business goals, bring those requirements to the engineering team and then work with marketing to ship that product out to end users and keep that cycle going as quickly as possible. That's exactly what we're doing with these test nets and starting with the IBC test net that we did a couple of weeks ago. We're going to be restarting that next week and then moving into game of zones. We're trying to constantly seek feedback and validation from the users that we're expecting to adopt this and ensuring that it meets their use cases. And then also at the same time, trying to make it a wonderful and really easy to use product that is an experience that we're kind of driving through this piece of software we call the relayer in TCP IP. You know, each computer can actually has a network card and can make network requests, but a blockchain can't really make network requests. So there needs to be some sort of actor making those requests on behalf of the individual chains and that actor in the system is the relayer. So most of the interaction for users is going to be driven through this concept called a relayer. 
+
+As you're thinking about these big high level goals like asset center management and number of users, how do you filter those down into small product goals, making the product as easy to use as possible? This very complex topic, IBC, you know, connecting blockchains, you'd say it, you're like, wow, what does that even mean? And like, how do we do it? Making that complex topic understandable throughout the tooling and the documentation and the examples that allows the knowledge to spread from what is right now the core team and sort of the goal of Game of Zones is to spread that knowledge out throughout the ecosystem and ensure that everyone understands how IBC works and can use the protocol. So that's kind of the short term goal of IBC that's sort of trying to filter into some of these more long term goals. Does that make sense? 
+
+Anna: 
+Yeah, for sure. It's interesting how you can see the several levels for the product. So do you have just one North Star matrix or not? Or do you think it's not possible for the moment? 
+
+Jack Zampolin: 
+You know, I mean, those two metrics that I mentioned are the kind of North Star metrics, like how do we grow this community and what are those numbers that we want to use to grow the community? 
+
+How do you get those wins? Like if you're aiming for users and assets under management on Cosmos Space Chains, that sort of says, well, we need more chains. So we need more of these experiments and we need to grow those individual experiments. 
+
+We need to provide support for the existing ecosystem members. I think from a software development standpoint, the way people have done this in the past with small teams is you make it as easy to use as possible and you make the software teach the users and then the users start teaching each other. It creates this feedback loop and you get this really cool online community. And you have a group of people who are really bought in and help support and build the software and that's kind of the open source model. So that's what we do here. 
+
+Anna: 
+It's like creating a snowball effect. 
+
+Jack Zampolin: 
+Yeah. 
+
+Anna: 
+For the community and so on. Do you use some extra tools for your product management or your use only GitHub? 
+
+Jack Zampolin: 
+That's a great question. You know, I do use only GitHub. I think that, you know, you mentioned that it is sort of this space where it's like hard to find metrics and it's like very fuzzy and like kind of feely and like, I mean, even in my answer, I kind of got into that. But it's like, yeah, you kind of got to ship and iterate. 
+
+You got to like take this feedback and you got to do something with it. Then you put more software to users and that whole thing does kind of feel like a black box sometimes. I find that the product management tooling that's closest to the folks actually doing the work is going to be the most useful. You know, you can build really gorgeous Gantt charts and dashboards and Asana and all of these tools, but if you don't have your engineers, which are your users for these product management tools actually engaging with that, you've lost your users. So like meeting your users where they are, especially with the PM tooling, I think is really important. So yeah, GitHub is where we're at. 
+
+Citizen Web3: 
+There was a sentence one of my friends said, talking about, I think, Ethereum, saying that Ethereum is a great example of where we see that investors believe what the developers do, because if you hit it the other way around, it would be a terrible, terrible mess. It's developers who just believe blindly what the investors say and develop something random. So yeah. 
+
+Jack Zampolin: 
+I think that was called Web 2.0. 
+
+Citizen Web3: 
+Yeah, exactly. Exactly. Yep. So we have a name for this. 
+
+Jack Zampolin: 
+Yeah. 
+
+Anna: 
+Do you see any specific of the product development in distributed team? You need to collaborate with a lot of people to understand how your product should be shaped. 
+
+Jack Zampolin: 
+Yeah. If you look at sort of a more traditional company, there's a lot of different ways that product management and product development are sort of managed. And you know, there's a lot of companies. There's this kind of like traditional top-down management style. But I think if you see tech companies these days, the product role is more like this role where you have a lot of sort of like implied authority, like you're the product manager, but you don't really actually have people reporting to you. And you can't really force anyone to do anything. So the role ends up kind of being this, you have to talk to all the stakeholders, get alignment, and then make sure everything is happening. 
+
+And you know, that's exactly the way it's been in the Cosmos ecosystem. When I was at Tendermint, I ran the product organization, which was like me and one other guy, Marco, who's fantastic and kind of does what I do for Tendermint. He's in Berlin. He's great. You guys might have met him. And I worked with the whole engineering team. You know, that was definitely sort of the beginning of that. And also throughout that process, being the first point of contact for new projects coming in and trying to talk to them from a product standpoint, talk to them from a roadmap standpoint, ensure that we met their needs. I got kind of used to this sort of multi stakeholder model and ensuring that everyone is aligned and that we can move forward. And now in this world that we're in now, there's a lot more entities within the Cosmos that we do need to coordinate around. So that skill set is working now, but instead of just within one company, it's across a bunch of different companies. 
+
+Anna: 
+One last question about project management. 
+
+Jack Zampolin: 
+I could talk about product management for an hour. So happy to chat about this, Anna.
+
+Anna:  
+What is the most valuable or most challenging part in your product management work is communication with others or engineering part of work? 
+
+Jack Zampolin: 
+Yeah, I think that that's a great question. So I was talking earlier about you get users, you bring the feedback back to the business, you bring the feedback, you bring the roadmap to the engineering team, the engineering team ships it and you work with marketing to ship it. And you can think of that as like a cycle. And basically what you're trying to do is keep that moving. You know, for me, only find myself coding when the engineering part of that cycle is kind of broken and it's not moving quickly. That's the part for me that's kind of easy and fun. 
+
+That's a bit of my background over the last few years prior to coming to Cosmos. I do think some of the biggest problems we have in this world are people talking to people. And if you look at the coronavirus, I think that's a great example of that being probably the biggest problem we have. So people are always the hardest part of any system. You know, the wet code as some people in this industry say, I do think that's that's the hardest part. A lot of the technical challenges in Cosmos are man hours and engineering time. There's not unsolved technical issues. All of those, there's a bunch of projects working on them in the Cosmos vision is that it's modular and that we're going to be able to incorporate these advances as they come to market much more quickly than other ecosystems. 
+
+And we've seen that. There's a few teams working on some privacy tech right now and a few other things. But this ecosystem, all of the really exciting stuff happening in blockchains, you can find happening in Cosmos as well. And I think that that's because of the modularity and the openness of this community. 
+
+Citizen Web3: 
+Yeah, it makes sense. I think one question that arises from it, which I wasn't going to ask, I kind of ask the previous speakers, and it's something that you brought up yourself partially now is as a project gets more decentralized, as we get more and more shareholders and more project joining, like let's say via IBC. Do you think it becomes more difficult in terms of governance? 
+
+Jack Zampolin: 
+Yeah, absolutely. 
+
+Citizen Web3: 
+How do we improve it?
+
+Jack Zampolin: How do we improve it? I think that's a great question. If you think about the network effects, as you add more notes to the network, the number of potential connections grows exponentially. And it's the same way with organizations as well. And when there's this very point to point individual to individual coordination, that has to happen as the size of the ecosystem grows, that coordination cost increases exponentially. 
+
+That's kind of a piece of it. I think in the past, people have always dealt with this through companies and then like adding more layers of management and more that. I think as decentralized communities, we're going to have to rely on governance as a shelling point and be able to build out features there to meet our needs as a community. And I think that right now with the situation with the ICF, that we still have this money from the fundraiser and that we're able to fund the infrastructure development, that's great. And the hub governance is kind of like finding its way and we're doing some great stuff there. But, you know, in a few years, the hub's going to have to start making sure that it funds this activity and it's going to start making decisions on what its inflation percentages are and things like that. As I was saying earlier, the engineering piece of it isn't the hardest part, it's the people part. That governance piece is going to be increasingly important in this ecosystem as we move forward. 
+
+Citizen Web3: 
+Yeah, I mean, that makes a lot of sense. I guess, do you have any examples in the blockchain space of a project that in your opinion succeeded in terms of governance or we still in your opinion, so way young in governance? 
+
+Jack Zampolin: 
+Well, you know, the United States has been around for like 250 years. And would you say we've succeeded in governance? 
+
+Citizen Web3: 
+They're not governed via blockchain. Don't tell me that. Don't tell me I miss when they move on the blockchain. 
+
+Jack Zampolin: 
+Have projects succeeded in governance? I mean, Aragon's doing really cool stuff. 
+
+Citizen Web3: 
+Yeah. 
+
+Jack Zampolin: 
+You know, if you look back in the day, like the decreed folks, I think, or in Dash also, Zcash is doing some very interesting things with their foundation. I think there's a lot of really exciting experiments happen right now, but I don't think we're far enough into it to decide who succeeded or failed. And I think there's a lot of good ideas and experiments at this point. So yeah, that's I guess, kind of a cop out. Sorry. 
+
+Citizen Web3: 
+No, no worries. OK, let's move back to IBC. I think it was last week on a call at the relay office. Offers hours, right? Is that what it's called? Or? 
+
+Jack Zampolin: 
+Yeah, something like that. 
+
+Citizen Web3:
+Sorry, no. I'm terrible with names to be honest with you. 
+
+Jack Zampolin: 
+I am too. I named that calendar invite and I forgot about it. And I guess it is the relay office hours. I trust you on that. 
+
+Citizen Web3: 
+I asked you about what I asked you about. I forgot what I asked you about. 
+
+Jack Zampolin: 
+Sorry. 
+
+Citizen Web3: 
+No I'm kidding. 
+
+Jack Zampolin: 
+You guys are fun. This is a blast. 
+
+Citizen Web3: 
+That was the point you see we try which. 
+
+Jack Zampolin: 
+Good. 
+
+Citizen Web3: 
+Now that you said it, a lot of people ask us. 
+
+Well, a lot. You're the fourth person we record. But let's imagine that we had a lot of recordings. Like what do you want to achieve by that? And the idea is to speak not to projects, but to the people and to understand why do people do what they do? So, OK, I know you do an IBC, but why? 
+
+I should have kind of told you that at the end. But anyways, I asked you during the call about your views on markets that IBC will create, has anything changed since then? Did you have any ideas or no? 
+
+Jack Zampolin: 
+No, you know, I have some very basic ideas of kind of how markets are going to develop. You know, some some zones are like going to produce things like stable coins or other zones are going to have reasons for people to move tokens there like a decentralized exchange or potentially some of these Oracle solutions. You know, Kava, you can lock up tokens in a CDP and then mint stable coins that you can then go use throughout the ecosystem. 
+
+Akash, you're going to be able to buy compute using crypto and sell compute as well. So, you know, there's these fundamental economic imbalances that are going to happen, i.e. tokens move over to one zone, more value is generated and then like what happens to that? So, sort of looking at these zone to zone interactions and seeing where these different sources and uses of value are, I think is going to be really instructive for the early days of IBC, but, you know, in the same way that the internet sort of unlocked a bunch of potential that no one really knew, there's a lot of things that are going to happen over IBC that we just fundamentally aren't going to be able to know. 
+
+For me, I'm kind of a what can I do now to make this situation better? And it's like, try to make the protocol as easy to use, try to make as many people understand it as possible and broaden that knowledge base and the users as much as we can so that 
+
+we can start realizing some of these really, really cool potential ideas out there. You know, it's going to take a lot of work from a lot of people to do that. And I view my role more as sort of making sure that work gets done. 
+
+Citizen Web3: 
+Have you and put in metrics together? Have you heard of any obscure cases for IBC from any of the teams that you thought, oh my God, that's weird. Like, I don't know how they're going to do that. Or, oh my God, that's weird. And that's got nothing to do with what we're doing. Like something obscure. 
+
+Jack Zampolin: 
+I think the Desmos team is working with Bitsong maybe to do like Desmos is kind of a social media platform where, you know, it's sort of kind of like steemit style incentivized lights and stuff like that. And then Bitsong is streaming service where users can put up their tracks and stream them and they were going to do some sort of collaboration over IBC, which is like really cool and you can totally use IBC for that. 
+
+And I'm really looking forward to seeing that code. As far as like weird out there use cases, like I don't think there's anything weird enough or out there enough for IBC at this point. This is the time for like weird experimentation. You know, all those weird GeoCity sites we saw in the 90s, like I want to see that. 
+
+Citizen Web3: 
+So let's bring all the weirdness. 
+
+Jack Zampolin: 
+Yeah, chain entirely for memes where you can trade them over to like an open sea style NFT decks, that stuff would be super cool. And I'd love to play with it. You know, one of my favorite projects on Ethereum is by Billy Renkamp, who works at Cosmos and he built this thing called Clovers, which is like wild and super cool and seeing sort of like art projects like that on Cosmos. 
+
+And like, I think that's really cool because art has value because it's fundamentally beautiful and people like interacting with it. And if you have a zone, you can build some really cool interactions and make those available to people in a way that like exposes the value in the underlying work and like, that's cool. 
+
+And that's kind of what we're doing here. 
+
+Citizen Web3: 
+Yeah, I think that would be amazing. I think talking about argon and memes, I'm sure district zero X has like a meme district. I'm not sure how it works, but I know they have like a district for meme. So that would be interesting if argon is obviously moving on to Cosmos. So they probably will be playing with IBC as well. So hopefully we will see something evolved from that. 
+
+Jack Zampolin: 
+Yeah, I think there's a little bit of Ethermint integration work to do there, but I'm confident that we can make that work. 
+
+Citizen Web3:
+Definitely, definitely. We spoke yesterday as well with Sunny about shared security. What do you, what do you thoughts about that? 
+
+Jack Zampolin: 
+I think it's a critical piece of IBC and it's what I'm planning on working on after we ship game of zones and get this thing on the hub. There's a huge upgrade coming up that includes basically the last year of work from the entire engineering team. 
+
+The last upgrade we had sort of went poorly the first time and then it took another three months to get it on the hub. So there's a lot of work that's queued up. We have Bez and Aaron in the SDK team that substantially refactored Amino out of the code base, which is like this sort of obscure but huge internal change that's going to make it drastically easier for client-side developers entering the ecosystem, which is when we're talking about users and large numbers of users, that means JavaScript and that means writing really nice front-end experiences for them. 
+
+And right now that's kind of a difficult piece of the ecosystem and it's not something that we really designed for. This encoding change designs for JavaScript users and should make it way easier for people to build. Now it also brings a 1,000 times improvement in marshalling and un-marshalling speed, which should result in a huge improvement in transactions per second, i.e. much faster blockchains. So that's this huge change that we have coming through. Another one is the upgrade module. The hub we ship without a weighted upgrade really easily and right now it requires global coordination among the entire hub validator set. 
+
+We have to shut the chain down and then start it back up. It's very involved and really invasive. Region Networks has developed an upgrade module that you just run this little sidecar process and it allows for automated upgrades. And the fastest, I think we've done this global coordination, we got the chain up in under an hour one time, which is great, but that's me and a few other people calling everyone and running a bunch of chat rooms for a few days to make sure that everyone's coordinated and that's not scalable or sustainable for anyone. This upgrade module can bring that time down to a couple of minutes where all these validators are sort of entering this automated restart and upgrade cycle and that's great. Tezos style upgrades basically where we use governance and we're able to sort of automate most of the process. IBC also coming out in a bunch of other really important things like state sync. Right now it takes days to sync a node on mainnet if you don't restore from a backup. State sync's going to allow that to happen in a much shorter amount of time. 
+
+There's this huge upgrade coming up and that's kind of the next big project I'm going to be working on after IBC in addition to shared security, which is critical for add-on value capture, I think. As the hub, we want to be able to validate some of these other zones and earn rent from that. And those zones will in turn receive much greater security and the ability to bootstrap their validator said much more quickly. You know, that's a win-win for the whole ecosystem and just kind of a necessary feature for the hub. We're working with the ICF and the various Cosmos engineering teams to put that on the roadmap and develop it after IBC. 
+
+Citizen Web3: 
+Sounds awesome. Moving to Game of Zones because obviously Game of Zones is a huge part of IBC. How many teams have registered by the way? 
+
+Jack Zampolin: 
+I think we've got 50. 
+
+Citizen Web3: 
+50? Oh my god, that's cool. That's awesome. Are you going to participate yourself, guys? 
+
+Jack Zampolin: 
+I As part of the Game of Zones team, I will be helping run the hub for Game of Zones. Doing a bunch of software troubleshooting. I don't know if I will personally have time to run machines on the Game of Zones, but I do know a number of other teams will. It's like right around 50 right now. I think that we'll probably see a few more folks. That's a great turnout for an extremely complex technical event to basically help us test and ensure the stability of this software for mainnet production. It just goes to show what an awesome community Cosmos is and like how many people we have that are dedicated and willing to spend time and energy doing this. and
+
+Hopefully with the prize pool from the ICF we can help pay some of these folks back for their server costs. Really looking forward to seeing all the innovative zones that come out of this competition. Really looking forward to battle testing IBC. and really looking forward to you know I think it's going to be a lot of fun for everyone involved too. So that's also something I'm really looking forward to. Got a lot of live streams planned and a lot of conversations like this. 
+
+Citizen Web3:
+Bow ties? 
+
+Jack Zampolin: 
+Yes definitely. 
+
+Citizen Web3:
+Doughty. 
+
+Jack Zampolin: 
+Oh for sure. There will be bow ties. 
+
+Citizen Web3: 
+Obviously Game of Stakes, apart from testing, one of its other things was to have some like allocation, like distribution, sorry, interlocation. Really for Game of Zones apart from testing everything, does it have any other purposes? Apart from testing contracts, testing security and so on and so forth. 
+
+Jack Zampolin: 
+Yeah I mean we are going to try to allocate this prize pool pretty widely and ensure that folks who are helping us do that are winning prizes for doing the things that we're asking. So that's going to be a piece of it. And then there will also be sort of larger prizes for individual things and yeah that's, we're working on a lot more detail in that scoring framework and I don't want to say a whole ton of specifics right this moment. But yeah distribution is definitely a part of that, ensuring that the community that helps build and run this and it helps us test this is paid for that essentially. I think that's extremely important. 
+
+Citizen Web3: 
+Yeah it makes sense. Different question completely. I did say I'm going to ask some controversial questions. 
+
+Jack Zampolin: 
+Shoot them, shoot them. Let's do it. 
+
+Citizen Web3: 
+Before I ask, I have to say that I'm all about decentralization. I mean my Nikon Twitter says decentralize decentralization. So I think the more teams that work on anything whether it's code or regardless the better. But I can't help asking what caused the breakdown in the Tenderment team to break into two. 
+
+Jack Zampolin: 
+There's a lot of public blog posts about that. 
+
+Citizen Web3: 
+But I want to hear your opinion. I mean I've read the blog posts. I want to hear your personal opinion. 
+
+Jack Zampolin: 
+I think that the working situation that we've developed now is working better for everyone involved and that's great. 
+
+Citizen Web3: 
+Okay cool. 
+
+Jack Zampolin: 
+Not the greatest answer. Sorry but that's what she got. 
+
+Anna: 
+All kind of amazing projects have their own yellow bricks throughout. 
+
+Jack Zampolin: 
+You know I have tried to just keep the interests of the community in mind and do the best that I can in a difficult situation. And you know I think that that's kind of what everyone has done. And yeah well thank you for, thank you I appreciate that. And I think that's what everyone has done and all trying our best to keep in mind the needs and wants of the community and trying to ensure that this software gets out there. 
+
+I joined Cosmos to help ship this vision. This vision of a bunch of app chains that are each independently sovereign and able to conduct value with each other. I think if you think about the dream of decentralization and the dream of blockchains and this ability for sort of like these mutualist societies to form and us to be able to like form contracts with each other and transact over the open internet in a trustless and really truly like democratic and free way. That's something I fundamentally believe in. 
+
+Working in the blockchain space for the last few years I found Cosmos to be the truest embodiment of that from a software architecture perspective. And I'm here to help ship that and like I want to see that out in the world. And that's selfish on my part you know. It's like that's something I believe in and I want and I'm going to go try to make that happen. And you know I think that there's a lot of other folks in this ecosystem that kind of feel the same way. It's something that makes it special but it also you know when you have a bunch of people who are in it for selfish reasons trying to make the best decision that they can at any given time and you know that's never perfect. And decentralization and if you look at the history of sort of political movements you can see that this kind of thing is relatively common. So these are things that we're going to run into and I think trying to make sure that we handle them in the calmest way possible and keep everyone who wants to be involved still involved and not kick anyone out start excluding I think is really important. 
+
+Anna: 
+You have very positive way of thinking by the way. 
+
+Jack Zampolin: 
+The power of positive thinking you know what they say. 
+
+Anna: 
+Yeah. 
+
+Citizen Web3: 
+To be honest with you that's the kind of answer I was hoping to hear because personally I don't want to still pull the quills but I've been doing blockchain for about 10 years for now something like that. 
+
+Like since the very beginning pretty much professionally for about like five or six years or something like that. A lot of people when you tell them that the reason you do it is not because you're trying to earn money but because you're doing it for a reason to achieve a personal goal for yourself. A lot of people don't understand what you mean by that and I really like your answer because this is exactly the way I feel and this is the reason I do what I do. I don't really care about anything else but achieving letting my point of view be heard by what I do because I think it's going to make some things better and this is what I heard from what you said more or less. 
+
+Jack Zampolin: 
+Yeah absolutely and you know I think that we all kind of feel the same way and everyone involved has made huge contributions to the ecosystem and wants to continue to do that and that's great. And I think of all of the ways this could have gone this is about the best outcome we could have possibly imagined and that's great and that makes me happy for everyone involved. 
+
+Citizen Web3: 
+Yeah thanks for clarifying that. What about Pylon Validator? What's the story? I mean how did that happen? 
+
+Jack Zampolin: 
+So I had the bow tie on, I launched the blockchain and then I turned the live stream off and I thought oh my god I'm a product manager and the thing I just launched I'm not a user of. I gotta fucking fix that. And I went and spun up a Validator and that's how I started my Validator company. 
+
+Citizen Web3: 
+There's a picture when I go on a website I really like there's like a space man going with a space suit, something like with the back. What's the meaning of that picture? 
+
+Jack Zampolin: 
+Well I have a friend that I've known since I was, god I think we were eight when we met. We've been really close friends for a number of years. He and I bought into Bitcoin for the first time back in 2013. 
+
+He actually lost a bunch of tokens in the Mt. Gox hack and we've been in a crypto adventure together for a really long time and just love talking about this stuff and he's a user experience designer and knows a bunch of really talented graphic designers. A couple years ago we back in 2016, 2017 we were looking to start a Bitcoin mining company and you know I was helping him with that and throughout that process we were kind of thinking about names and the name that we ended up coming up with was Pylon. Pylon you can think of as kind of this unit of intrinsic value. It's sort of this modular piece of compute that has some intrinsic value associated with it and you can think of one Pylon leading to a few Pylons and these sort of independent modular business units and mining is one way to think of that business model and validating is also another way to think of this sort of modular business model as well. Validating on each of those independent chains kind of has its own risk and comes with its own costs and servers and we thought that the name would work great for Pylon validation services as well. That's kind of how the name came about and that piece of art was done by this really talented artist named Alex Rice. I think it's really cool and I think it sort of describes what Pylon does into the void. 
+
+Anna: 
+If you're just thinking about being a validator, how do you think how much time do you will be involved in that kind of business? How much time you will keep this going? 
+
+Jack Zampolin: 
+Yeah, I mean it depends on, you know, from a server administration cost, like my major duty goes off very infrequently. Once I've set it up, it has not been a whole ton of work. Now, if you're talking about from, and I mean there's work on the tax side, which has been, you know, that depends on your jurisdiction, beyond those two things, unless you're doing some really intense marketing efforts or you're actively growing to go support a ton of other networks or you're trying to get a lot more delegations, those are activities that you could spend a lot of time on, but I don't really spend any time on those, you know, minor, mainly just admin costs and it's a slightly unusual validator because my marketing essentially is doing things like this and getting out there into the community and building the stuff that the community actually wants. And that's sort of what I do in my day job. I'm maybe not representative of what it's like to start a validator. Yeah, it doesn't take me a whole ton of upkeep time right now. And I also do have a couple other people I work with on it. 
+
+Anna: 
+So it's not a separate type of business, it's just supporting your general cosmos work, yeah? 
+
+Jack Zampolin: 
+I think so, yeah. I have, as a part of my employment at Tendermant, I was, I earned some Atoms and my thought was like, what am I going to do with these Atoms? Like, I do want to stake them. I do want to like be staked in this network. It's something that I'm passionate about and continuing to work on. And the thought of doing that with another validator or a series of other validators, it's like, I could do that. 
+
+I also want to run hardware and support this network and validate the transactions coming across it. I do view it as sort of part and parcel of my work here. And I prior to working in blockchains, I spent a while in cloud infrastructure. So like, I like running services on the internet. So like, this is a great excuse to do that. 
+
+Citizen Web3: 
+If you weren't working on IBC and you weren't involved with Tendermint or Cosmos anyhow, is there any projects out there that you would want to work with? In blockchain, obviously. 
+
+Jack Zampolin: 
+I can't think of anywhere right now. I've been so deep in this rabbit hole lately, like I'm not, I'm not deep into these other projects right now. I do know that there's a lot of exciting stuff going on. You know, I see the near protocol team doing a lot of exciting stuff. 
+
+I think Kodo with CK Snarks is really interesting. You know, the lazy ledger team, Ishmael, who I worked with here at Tendermint, I think is fantastic. Mustafa, just really, really smart guys, really cool idea, excited to see them chase that down. There's one other member on that lazy ledger team whose name I'm forgetting right now, but he's awesome too. 
+
+Anyway, yeah, there's a few cool projects out there, but you know, Cosmos supports large ecosystem in keeping that running up sustainable, ensuring that the software is updated, that security vulnerabilities are patched. Like, that's, that's really what I'm here for right now. 
+
+Citizen Web3: 
+The reason I'm asking is because I found your CV, I think, online and it said that you used to work for three years in a hotel, in a kitchen. Now I come from a managing restaurant and I worked at an F &B manager for big chain hotels. So I know exactly what it's like. 
+
+Jack Zampolin: 
+Oh yeah. 
+
+Citizen Web3: 
+So what's more difficult, working in a kitchen or being a product manager for a crazy, gluing protocol internet project at BC? What's worse? or What's better?
+
+Jack Zampolin: 
+ I think the kitchen is way harder, really. 
+
+Citizen Web3: 
+I've been telling that to everybody, nobody believes me, you know, and I've been saying, guys, look, I've done for 12 years, I've done Horika in three different continents and believe me, I just really, it's really cool. It's like a yellow brick road that you just go along with the wind and there's no trouble. There's like no way, I mean. 
+
+Jack Zampolin: 
+Yeah, it's, you know, there's always the Wicked Witch of the West, like right on the side of the yellow brick road and that's kind of the way of blockchains. Yeah, I don't know. I found the hours to be really tough, you know, working all night every night is tough. I still cook all the time, so I get to do the thing that I really love from that period and make really great food. I think my wife really appreciates it. And it's still something I enjoy, but doing it 12 hours a day is very hard and it's physically challenging in a way that this isn't. Cool to hear that you also, you have also, I spent some time in hotels because like, you know. 
+
+Citizen Web3: 
+A lot, a lot. I spent a lot of time jamming restaurants and then I decided, okay, I'm bored with jamming restaurants. I was about 30, I think. Just before I was 30, I moved to work for a big chain and then I realized, like, hey, I don't want to do that anymore. It's too crazy. I don't want to be working 20 hours per day. 
+
+Jack Zampolin: 
+It's time. Yeah, totally. 
+
+Citizen Web3: 
+Let's do some IT. That's easier. 
+
+Anna: 
+Just some personal question. How many hours you spend for a project now in a day, like 12 hours or 40 or 8? 
+
+Jack Zampolin: 
+I work around 8 to 10. This is something that I am passionate about. I think it's really important is sustainable pace. And I try to talk to all the engineers and other folks I work with about this as well. Try to get good sleep. And I think especially with the sort of 24 hour nature of blockchains and when I'm going to bed at night, people in Asia are waking up. And when I'm waking up in the morning, you guys are like rocking in Europe and I've got the middle of my day. 
+
+It's just so easy to let yourself fall so deep into that hole. You don't take care of yourself and getting out, getting exercise, walking, biking, lifting weights, whatever it is. In addition to sleep and like having some time for yourself and to do things outside of work, I just think is really, really important. So my average day, I kind of wake up early. I deal with a lot of folks in Europe. So this is kind of my Europe time. And then in the afternoon, I try to do focus work, coding, product management, stuff like that and take meetings. I just try to keep a really regular schedule and do the best I can on my off hours. 
+
+Anna: 
+I think it's the most difficult part of working in a distributed team to take care of yourself. 
+
+Jack Zampolin: 
+It is. It is. And you know, ever since I started in software, I've been working as a remote employee. The first job I got, I got hired without having physically met anyone at the company. That was so weird for me. But now it's like so normal for me. That this sort of like idea of like having to manage yourself and like that being a really important part of being able to contribute to work is something that I've been dealing with for a while. So yeah, I just think it's really important and especially in this coronavirus time where everyone is like really fully remote, that self-management and being able to step back, take that time, take a little bit of emotional space, just really, really important. 
+
+Citizen Web3: 
+How big is the current team that's working on IBC right now that you manage? 
+
+Jack Zampolin: 
+You know, I don't manage. I work well with every single one of them. There's Chris and the Interchain Berlin team and I think there's three or four folks over there and then Agorik. You know, it really depends on where we're at in the process. 
+
+During the spec process, there were probably ten-ish folks that were really regularly working on the spec and actively contributing to calls and code reviews and at various points throughout the implementation, we've had more and fewer folks working on it. 
+
+Citizen Web3:
+Cool. It's really great to hear that the people who work on the things we use and the things we as a project are going to use. 
+
+This is the reason why we chose Cosmos three years ago or how many whatever years ago it was when we started to work on our project. It's great to hear that, you know, people take all the things that you set into consideration that they do what they do because they want to do it and not because they're enforced or because this is their only choice and this is every time when I speak to someone here, pretty much the same thing and I get really excited. The people I'm around are excited about what they do. 
+
+Jack Zampolin: 
+I mean, it's cool. You know, we are kind of a bunch of anarcho-mutualists in a way. 
+
+Citizen Web3: 
+Yeah, that's true. that's true. 
+
+Anna: 
+I think it's differences I mean involving can be a part of the life that you're saying it's differences between good and amazing projects and other projects in blockchain space. Let's put it in this way. 
+
+Jack Zampolin: 
+Yeah, I totally agree with you. You know, there's a lot of other strategies and if you go look out there at Tron, you can see a marketing driven strategy that kind of works. 
+
+So, you know, maybe the way we're doing it is wrong too. 
+
+Citizen Web3: 
+Yeah, that's true. That's true. But I don't think we're doing it. You're doing it wrong. 
+
+Jack Zampolin: 
+I don't either. 
+
+Anna: 
+I think the professional dreamers is really important now. 
+
+Jack Zampolin: 
+Now more than ever, for sure. Yeah,
+
+Anna: Yeah, Yeah, maybe we missed something important you want to share with us. 
+
+Jack Zampolin: There's a game of zones live stream happening 10 minutes after this. But other than that, everyone just go sign up for game of zones. If you're at all interested in IBC play, the first the phases are going to be week one is going to be just basically have to keep a connection alive. It's not going to be very difficult phase two, you're sending some transactions. All of this is really easy with the relay or software and some basic Linux skills. So if you have basic Linux skills in Cosmos, come try out game of zones. You're going to win some atoms. Come give it a try. Go sign up. GOZ.cosmosnetwork.dev I think is the website Awesome 
+
+Anna: Thank you
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

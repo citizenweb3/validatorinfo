@@ -1,0 +1,629 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/basementnodes
+
+Episode name:
+Crypto Fairy Tales, Open Source and Ethos with Max Basement 
+
+Citizen Web3 
+hello to everybody who is joining us. Now, I'm a bit lost because it's the first time we're trying a new streaming software, but it seems to be working. Now you can only see my face. And I know people, but I have a guest with me.
+
+And today we're going to have a session of Odyssey Explorer, Citizen Cosmos Odyssey, Explorer and Variators. And today I have with me Max from Basement Notes. Hi, Max.
+
+Max P 
+Hey, how's it going?
+
+Citizen Web3 
+I'm good, man. I'm good. I hope that people are okay with seeing my annoying face all the time. So I apologize for that, people. But at least you'll be hearing a new voice, voice of Max. Now, Basement Nodes, well, I was going to do a small intro, but then you know what? No, I'm going to let Max... I don't know why I decided to take it from you, Max. Can you... Do you want to introduce yourself a little bit? Like, what do you do with Basement Nodes and whose Basement Nodes? And yeah.
+
+Max P 
+Ha ha ha.
+
+Max P 
+Uh, yeah, so that makes it kind of maybe sound a little bit more official than it really is. Like that's just kind of a, a jo- half joking name I came up with. Uh, it's only me. I just, I kind of started doing this as like a, a hobby or just to see if I could. Um, I don't know. It's, it's just been a crazy, uh, learning experience and just kind of seeing how far I can go with it. But it's not nothing too serious, but, uh, I mean, I do try to do it properly.
+
+I try to do good on anything that I do take on. Obviously being at home and having two jobs and everything, it doesn't always go as well as I planned, but yeah.
+
+Citizen Web3 
+It's two apart from the validator that you do or is validator the second one?
+
+Max P 
+Yes, no, that's actually like a side thing. So I'm actually a crane operator. I work just like Monday to Friday. Pretty boring job. I don't do very much. And I do osmosis support on the weekend. So it's a lot. Yeah.
+
+Citizen Web3 
+Nice one.
+
+Citizen Web3 
+Nice man, nice. Bro, this is really cool to hear. This is like, you know what, this is exactly why I wanted to have this little show, I guess, like a side show where we explore who validators are. And yeah, I mean, usually we used to invite like validators to podcast and we tried to do the same kind of style interviews with them. And then we realized that not all validators want to be interviewed in such a manner. They want to be more relaxed, more like talk about like yourself,
+
+Yeah, just a group bunch of people sometimes one, two, three, whatever, gathered together and they're trying to learn and learn something. And this is really cool to hear that this is so, tell me, how, how did you essentially got into that? How did it start?
+
+Max P 
+Yeah.
+
+Max P 
+So for a long time I've been running my own Plex server, just a media server kind of thing. I'll share with family, friends. It's just kind of like having your own Netflix. So I had been running that like 24-7 for, I don't know, maybe two years. It was running on Windows. So I'd never touched any Linux or command line or anything like that. And then I started looking into it when I got into crypto.
+
+After I got involved with Osmosis and just started kind of learning like I have to learn more to do support, right? So as I learned more and more I'm like, well, you know what? I can probably I could probably throw a validator up like I managed to keep this other server up 24-7 for so long Almost no downtime because I'd have like little cousins and stuff like hey, I can't watch this movie anymore So I had to keep it up time like keep a lot of good up time to not get complaints that way
+
+And then I, so I switched that over to Linux and started running it on Linux and realized it's a lot easier than Windows. Like there's, there's a lot, it's a lot more involved, but when you do have a problem, you can usually find many other people that will help you. Like the community is really great with that. There's always people that want to help you and yeah, so it's just, it's, it's a, yeah, it's just a, just a
+
+Citizen Web3 
+Welcome to the dark side.
+
+Max P 
+a big learning experience and kind of the whole thing has just been really interesting.
+
+Citizen Web3 
+And how long ago was that? That was the... you didn't say how long ago or I missed it, but I don't think he said it.
+
+Max P 
+I think I probably started getting into it maybe a year ago. Yeah.
+
+Citizen Web3 
+All right, all right. And what node, what current networks do, does basement nodes? Let's keep on using the name. I like it. I love it.
+
+Max P 
+Right now I got Nomic. I do the Nomic testnet too. And Juno and Dysenter. Which is, that's kind of, yeah I don't know. I don't know why that one's still running honestly, but why not?
+
+Citizen Web3 
+How do you choose the networks? How do you come to choose them? How do you decide to...
+
+Max P 
+Uh, well, so I don't really have like a lot of money to be dumping in and buying into these like big, super busy active chains and stuff. So I just get involved with new ones or, um.
+
+just if I can get like a team delegation, basically. That's more or less it. Like I get community delegations, but I don't try to advertise. I don't like jump into chats and start like tweeting stuff and kind of pushing this out to ask for delegations because I don't really, I don't know. I don't like to see that. So I don't want to do it myself, right?
+
+Citizen Web3 
+It's interesting that you say that because I think it's like one of the biggest obstacles to a lot of people starting validators. And I think it's like one of the biggest difference. It's a big difference, at least between validators who... Go on, go on, go on, go on, go on, please.
+
+Max P 
+It's tough, I mean...
+
+Max P 
+Yeah, like it's tough to kind of find that balance between like asking for, hey, like, please support me and just like throwing your name everywhere and kind of annoying people. So I try to just stay away from it completely.
+
+Citizen Web3 
+I think three or I don't remember, I think three years ago when the Citizen Cosmos Validator started, one of the guys who was helping me at the time to set things up because I didn't understand how to do it in Cosmos and I did do it like validation before on bit shares types networks but then it was different and I wasn't sure I was doing things correctly. So there was a friend who was helping me to set it up and he said, you know,
+
+One thing you should remember, don't be shy to ask. And I can tell you for sure, I am like that. It's only now, it took like over three years and I'm still sometimes not feeling that it's okay to do it. Like I don't even like when we add the line at the end, this content was created by our validator, if you like it, please. I hate doing that. And, but where do you think, do you think there is like a perfect middle ground for that?
+
+Max P 
+Yeah, yeah, I know what you mean. Yeah.
+
+Max P 
+I mean, I try to like that's kind of why I changed my telegram logo and my discord and I did make a Twitter Which I kind of use kind of not Just to have that one Logo, you know if people see it they can maybe notice it going through that list and maybe pick me But I don't I don't like to push it more than that. So it's this It's tough
+
+Citizen Web3 
+I think I've seen you around as well in a few chats, right? With Jacob, right? I think there was one.
+
+Max P 
+Yes, on Telegram I'm in like every IBC group.
+
+Citizen Web3 
+And how has it been, have you been trying to get like delegations around with them, not like you said teams, right? And has that been working?
+
+Max P 
+Yeah, so Jacob offered twice actually and I did take him up on the second one. So he got me, like launched me into the Juno set recently and now even though he's pulled out completely, I'm still active so that's cool. The other team, the Dissenter team has also delegated me. I can't remember why it was a while ago but, so I just kind of keep it running because they did that pretty early on.
+
+There is I think Aribel or Acre Network I heeded to and I don't really know what was going on with them so I kind of just killed that node.
+
+Citizen Web3
+So let me get it straight though, you're running the nodes from home, right? The node cloud, right? Okay. And that's... So, let's see.
+
+Max P 
+Yeah, yeah, it's all from home. The only thing I use anything not self hosted for is just like my domain. That's it.
+
+Citizen Web3 
+Oh, that's it. No, that's not serious. No, I'm joking. I'm joking. That's cool, man. It's cool that you're doing it from home. This is actually one of the reasons, I think, where I wanted to speak particularly with you because in my opinion, I don't know what most people think or how they view. I'm going to use some cheesy terms here, decentralization in the bigger grand of things, right? But in my opinion, you cannot achieve any...
+
+Max P 
+Mm, heh heh.
+
+Citizen Web3 
+distribution or decentralization without infrastructure, regardless of which topic we're discussing. And coming to networks, I think that this particular topic of distributed infrastructure when it comes to validation, I think it should be like a 101. But a lot of people don't see it. I mean, I understand, and it's interesting that people like yourself who you say that are short on funds are probably...
+
+I'm much more better off with doing it from home. Yet people don't, don't are afraid to do it. Why do you think it could be the reason like for people to be afraid?
+
+Max P 
+It is intimidating. I mean, especially like if you've never used any Linux or done anything like this before, it can really be intimidating. And even if you have, it's still it's different, right? Like it's not really something that you can learn from other places. A lot of the documentation is not really great. Like you can kind of use it. But if you don't have someone that's maybe done it before and found the issues to help you, you can really get hung up on a lot of things.
+
+The other issue is that you really need super reliable internet and power. Like if it goes down for any time and you don't catch that, you don't account for it, it could end up being really stressful when you're trying to recover kind of a whole bunch of jailed validators or fix other things like hardware failures, stuff like that. It's a time-consuming side hobby, I think.
+
+Citizen Web3 
+Yeah.
+
+Citizen Web3 
+You want to share your experience in more detail in terms of like, how did you set it up? How did you set up the I'm not talking about, of course, security details, but, you know, in terms of, like the general overview of what obstacles you run into how you solve them, whether it was, like you said, the internet or anything else.
+
+Max P
+So I've actually been really lucky and my internet is like bulletproof somehow, but I do have two connections just in case If I don't even cover that with my commissions if I were to dump them all so like I said, it's kind of just it's just a hobby But I was running on a really old like a 4790 K I seven
+
+server that I kind of built at home out of it was all secondhand parts and I put a really high end NVMe in it and you can do like five networks on an ancient computer pretty much no problem but the only problem then is if like one thing fails it's not going to be a good time so I did build a new server that will never pay for itself
+
+Citizen Web3
+Hehehe
+
+Max P 
+But so that one now I got many, many different drives and they only have like maybe one or two processes each that run off that storage. So it's kind of separated that way. I do have that backup server if that were to really if something else were to fail, I can kind of move a lot of it over to that one. So it's I mean, so what you were saying earlier about kind of decentralization and
+
+people doing this from home, it is important, but it's also important to have like a diverse, I was reading this on some, some new chain put this up and it was kind of interesting on their, their info page, uh, to have diverse networks, not just decentralized, but diverse and that some of it is home gamers, some of it is hosted services, some of it is like even CEX validators and stuff. Having a little bit of each is a lot better than having all of one category.
+
+where they're all kind of strong in some areas and not so strong in others.
+
+Citizen Web3
+I think Litecoin, I think I was talking two years ago or something like that to, or about a year ago, it doesn't matter, to the founder of Litecoin, Phoebe, co-founder, sorry. And she was saying that they are actually happy that the validators that they do and actually approach. And what they do is they have like even validators who I think owners of businesses, like local in whatever their base.
+
+and newspapers or something like that, or some publishing, or editorial teams, because of course, Litecoin is about content. And then they have like, like you say, normal, people like ourselves, like yourselves, and it's interesting, like it gives them, I guess, but I don't know to what extent this helps, of course, but yeah, I don't know. Have you ever looked at Litecoin?
+
+Max P 
+Yeah, I read into it a while ago. Like, the idea of it is interesting. I like this kind of small, simple, single-use case. Kind of like a micro economy kind of thing. I've never looked into the actual network part of it.
+
+Citizen Web3
+Yeah, no, it's not just to go into that. I was just curious because of the it's like the validation is exactly like you mentioned. But you said, by the way, that, you know, you built a server that will never pay for itself. Why do you say that, man? Come on, let's talk about it.
+
+Max P 
+Well, I shouldn't say that. I mean, I could over time, I mean, pay it off if I were to get more networks going, more delegations, but I, again, it's just a side thing and I don't have like the time or really the reasoning to go that hard into it. But I mean, I'm not, I'm not saying it could never happen. Just, it's not really like something I'm working toward.
+
+Citizen Web3 
+What would make you change your mind? I'm curious.
+
+Max P 
+Uh, I don't really know honestly if I got fired from my job. It's just, I just had to, but yeah, I mean, it's, it's nice kind of to keep it as more of a hobby and then you don't start to just dread doing it. Right. Like it's just something that you do on your own, just kind of half as a learning experience for yourself, uh, to kill time and to do something that you, you ultimately do believe in. So it's, it's just a nice hobby to have. And I mean, I've turned.
+
+Citizen Web3 
+if anything.
+
+Max P 
+or tried to turn hobbies into like more of a more of something in the past and it's not really usually a good idea. No.
+
+Citizen Web3 
+It's not is it? I know what you mean, man. Usually, usually starts to take up all your time and all your money. And then you're like, Oh, shit, why did I start doing this crap? But I'm gonna be honest with you, man, I am I can relate to your story a hell of a lot. Because, I mean, I haven't been doing this all my life. And I'm not talking about even this project, crypto in general. And I guess part of me wanted to start this particular project, citizen cosmos, which is
+
+Max P 
+Yeah, yeah, like two years later, like why did I do that?
+
+Citizen Web3 
+In a lot of senses, I've been feeding it. It hasn't been feeding me. It's the other way around. And, but one of the reasons was to prove that anybody can start like a web three business from anywhere. And I think like you have just like also proven that point in a sense that anyone from anywhere can really start to web three business. The question is how much they want to dedicate of time and effort to it. I think.
+
+Max P 
+Yeah, yeah, that's like I was saying earlier about like the basement nodes kind of brand, I guess. That's kind of why I started because I was seeing like these validators, I'm not going to name anyone, but these big validators that say like we have a 20-man team and like dedicated data centers around the world and like no you don't and if you do you're insane because you don't need that. I mean a lot of it is either lying or it's just it's...
+
+not necessary and they're way overspending. I mean to a degree like reliability and then kind of decentralization on that scale is good but I mean let's be real you don't have a 20 man team so if I can do it like probably a lot of people could do it like I said the biggest thing is just having a reliable power and internet that's the like by far the biggest thing.
+
+Citizen Web3 
+I guess a lot of them start to expand their teams, and I can understand where they're coming from, is where they become, but they start to provide different services, whether it's teams that build some tools, for example, with assets producing content, running. I mean, but no, you don't need a big team to run nodes on even 10, 20, 30 networks. Now you can enough with two, three people, you can do that. But of course, as soon as you start to provide services, I guess that's what starts to eat. And with us, for example,
+
+Max P 
+Yeah.
+
+Max P 
+Yeah.
+
+Yeah, if you're building apps and stuff, yeah.
+
+Citizen Web3 
+No, with us, it's a good example as well. This is what happened basically at one point. I mean, I guess now on and off part-time, quarter-time, whatever, we really have a team of about 14, 15 people working in around Citizen Cosmos. But of course you have like a designer, you have content creators, you have community manager, et cetera, et cetera, et cetera. But what's interesting about it is that...
+
+Max P 
+Yeah.
+
+Citizen Web3 
+we are obviously not like a valid infrastructure validator in terms of we don't just provide infrastructure. But it's interesting, man, when you said doing it completely alone, and doing it completely like, do you think you ever let's say that hobby suddenly, you know, next bull market starts to grow. And I don't know, overcomes all your predictions, which is, you know, could happen, you never know, this is crypto.
+
+Sometimes it's a bit like a fairy tale, sometimes it's a bit like a shitty fairy tale. But would you consider expanding that ever?
+
+Max P 
+Yeah.
+
+Max P 
+Uh, yeah, I mean, I would definitely consider probably getting like a partner, like just go 50-50 with someone and... and just maybe mirror each other's, um... efforts or something just to kind of...
+
+have some more resilience and I mean I don't work I mean I shouldn't say I've done it alone and do it alone I don't officially work with anyone but I do have like a small group of people that we kind of just chat all the time help each other it's a lot of other like small time validators everyone from interblock I don't know if you know them they're all really incredible it's cold chain and Luis and all these other osmosis kind of facing people
+
+They're all like everyone in this network and all the networks really are super helpful, but that's kind of one group that I've really leaned on for a lot of assistance in the past. And I try to just pay that back where I can, but I'm not exactly on that level.
+
+Citizen Web3 
+I mean, you seem to be a self-conscious man though, but it's good because I think what you're doing is exactly why a lot of ethos of crypto were set out for people to do. A person by themselves from their basement running nodes because he wants to, not because he has to.
+
+and, you know, proven that it can be done alone and in a decentralized, in that way manner, that it's one person, you know, not one server, of course, but in this case, kind of, you know, let's just stick to the philosophical meaning of the sentence. But, man, you should be more, more like I think it's cool. I think it's like an example, man, of what a lot of crypto projects and crypto validators and infrastructures run and should aim to be, you know, a self-efficient.
+
+kind of place, sorry, project, mission, whatever, that can be run by a small team from anywhere in the world. And yeah, man, I think it's cool.
+
+Max P 
+Yeah, so that's essentially why I got into it. I mean, everyone kind of says like the old term, right? Oh, I made it for the tech. I mean, some people really are. And I think one of those people, it's probably not as many as like I would hope that would be, that do say that. But it is all interesting. I mean, it's especially coming from like a blue collar trade. I like, this is all...
+
+Citizen Web3 
+No.
+
+Max P 
+Everything I do is completely new. It's always like the simplest little thing. I'm like, oh wow, really? Like that could have saved me hours if I knew that months ago. But so every day pretty much like, I've been involved with osmosis and kind of the IVC stuff for two years now, at least. And like almost every day, you still learn something new all the time.
+
+So that's, I mean, beyond anything, that's the biggest benefit to me, I think, is just learning so much. Just whether it'll be useful in the future, I don't know. But it's fun, it's fun right now. It's interesting all the time.
+
+Citizen Web3 
+I think anything can be applied, right? It's not a matter of whether or not it can stick. It's a matter of not how to stick it. I mean, a bad sentence, I understand. But a reality, like joking aside, it is like that. But you said also a second ago that if you said the sentence, I'm going to try and quote it something. Like, if I knew this blah, blah months ago, it would have said me x or y on blah, blah hours, right?
+
+Max P 
+Yeah.
+
+Max P 
+Yeah.
+
+Citizen Web3 
+Can you give an example of those things? Like if you want something you want to share, let's say there's another guy listening to you now to listen to the recording, you know, like, or, you know, down, doesn't matter, like on one year line, somebody's listening to this recording because this is actually like on a 24 hour. This is what I was talking about, that we started a new streaming format and we actually have like a 24 hour TV kind of format running on YouTube where, yeah.
+
+Max P 
+Oh, that's funny because about an hour ago a guy that I've talked to for ages on here, he DM'd me and he's like, Hey man, it's really nice to watch you on the stream. I'm glad you're like as nice of a guy as I thought and stuff. And I was like, did I miss something? Like, what was this? What were you watching, man? Like, I'm like, no, my call is in like an hour right now. He's like, oh, never mind. So yeah, I didn't know what he was talking about there.
+
+Citizen Web3
+Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha
+
+Citizen Web3 
+I think he saw basement notes probably and it still wasn't on, but yeah.
+
+Max P
+Yeah, yeah. And then he turned the channel on and he saw something, but it was not me.
+
+Citizen Web3 
+But you see, there is, there is, you're not the only one. That's what I'm trying to say, man. You see, there are a lot of people, you be surprised, man. This is like us, there is you, and there is a lot of the validators. I'm not saying all the validators we try to interview are like that. Some of them are projects, and some of them, I probably shouldn't say this, especially that this is going like live on a 24 seven thing. Some of them, I have a sticky feeling after I speak with them. I'm gonna be honest with you. And...
+
+Max P 
+Oh yeah, yeah. You're not the only one.
+
+Citizen Web3 
+Yeah, man. And but for me, it's a problem because I shouldn't, right? Because I'm kind of like this interviewer, right? Like, I shouldn't be not be biased, but I am and I cannot help to I'm a human being, man.
+
+Max P 
+Yeah
+
+Max P 
+Well, yeah No, I yeah, I'm the same too. I mean with our with our asmosis support. I mean At one at some point you got to talk as a person part of the community rather than someone giving like some upper kind of knowledge because sometimes I don't really have that knowledge and I gotta go on my feeling so It's yeah, sometimes you gotta do that
+
+Citizen Web3 
+No.
+
+Citizen Web3 
+Yeah.
+
+Citizen Web3 
+And sometimes that feeling is very loud, you know, and it's like, dude, these guys are not like, not believing in decentralization. Let's say like that, you know, and some of them don't hide it, which is, in my opinion, respectful, actually. But then when people started to put that flag on and like, you kind of look at it and like, dude, why you guys like just say that, you know, you're not, you're trying to achieve this and that. And then.
+
+Max P 
+Yeah...
+
+Max P 
+Yeah.
+
+Max P 
+Mm-hmm.
+
+Max P 
+Yeah.
+
+Citizen Web3 
+More people would probably listen to believe you. But man, let me come back to the question. So imagine a year, so this is going on this like live TV thing, going in circles, blah, blah. So I don't know a year down the line or half a year down the line, a guy's listening into this and he's like, oh man, if Max can do it, I can do it, you know? So you said, you know, that you could save hours of time by if you knew these and these things at the beginning. What kind of things are you talking about?
+
+Max P 
+Well, it's like in general just everything like if you if you never use a Terminal interface or you've never kind of using a Linux system like For anything it's all so new and it's so it's so different than just like using your Windows desktop
+
+Even if you have gotten a little bit into the backend, like using Windows Terminal for whatever little things. I mean, it's probably not commonly done on Windows because you don't need to. But so going over to a command line, all Linux, you literally just rely on whatever info you can find online. But there's little things that you wouldn't even know like to look for, like you wouldn't imagine that they could exist, I guess.
+
+So one little thing, this was like the other day, you know when you send like an IBC or you send a token to another network, it will actually be on the chain, it will be like IBC slash a super long number. So it's not the normal token name anymore. And so I thought for the longest time, the only way to find out that number was to send that token. But there's actually like a super simple
+
+Citizen Web3
+Yes.
+
+Max P 
+function that's built into like every shell that you can just do that. So I didn't know that until like two days ago. I'm like, oh, okay. So like it's just a million little tiny things that you're like, oh what like that exists? Okay, that's helpful.
+
+Citizen Web3 
+It's like.
+
+Citizen Web3 
+Just like if you're using the CLI and you're thinking, how the fuck do I write a transaction correctly? The trick is to go to an explorer, find such transaction, go to the details of the JSON, have a look at it and it's right there. And there are so many little tricks. I agree completely. There are so many little tricks and I for sure don't know all of them, but there are a lot.
+
+Max P 
+Yes. Yep.
+
+Max P 
+Yeah, the one thing I tell, like if I'm trying to show someone that doesn't need like complete hand holding, I guess, to use the command line, I just say type whatever command and then help, dash H or two dashes and a help and it will explain the whole thing to you 99% of the time. Might not work, but I mean, it'll show you the info. You just got to figure out how to use it.
+
+Citizen Web3 
+Yeah, and help.
+
+Citizen Web3 
+Uh, it's amazing.
+
+Citizen Web3 
+The might not work for it is very real. Sometimes it doesn't.
+
+Max P 
+Yeah, yeah, yeah. Usually you do it every possible wrong time, and then the last thing that you could possibly try is the right one.
+
+Citizen Web3 
+Hahaha
+
+Citizen Web3 
+That is so true, man. That is so true for sell. I guess everybody who's ever self-learned Linux totally should understand this because that is very, very fucking true. And I'm still like that. I'm still I'm still I haven't been using Linux for so many years because when I started with crypto, I was still using Windows for many years and only in 2000, I think, and 20 or 19, I moved to completely like to Linux. And I was like, no, man, I cannot be using Windows anymore at all.
+
+Max P 
+Yeah.
+
+Citizen Web3 
+It's just, it's so difficult. And when you see a Windows computer, man, do you have the same thing? When you see a Windows computer, are you trying to use it? Are you getting confused now after Linux? No. Okay.
+
+Max P 
+Yeah.
+
+Max P 
+Uh, no, I still use, I still use Windows 10 desktop and like I haven't re-reformatted it for like since it was launched and it's almost completely unusable, it's so old, but it's just, it's familiar, it's, it's what I've used my whole life, um, but so the issue, the biggest difference I found was that like on Linux, if there is...
+
+If there is an issue or an error or something comes up, you can actually find that error. You can. There is a way to dig in and find that error and find why it's happening on Windows. It's like you just start like it's like a car. You just start ripping parts out and putting new parts in, kind of load, load the parts, gun up and start shooting. Right. You don't know something might fix it. And if you do fix it half the time, you don't even know how you fix it. Just kind of. But yes, so Linux is much different that way. You can really learn as you're going.
+
+Citizen Web3
+It's very true.
+
+Max P 
+and kind of know why you're doing what you're doing. So I like that part.
+
+Citizen Web3 
+Mm-hmm. And I think I also found that for Linux, there is a lot easier to find the answers online. Like, it seems that it just takes seconds.
+
+Max P 
+Yeah, the community is really helpful. It's just like all the crypto community is really like, I'm part of a Garuda.
+
+like a Linux that I just started using. So their chat is like super, super helpful. The OpenWRT, if anyone does any of this at home, you probably use a, like kind of a weird router setup, like a PF Sense or OpenWRT, something like that. Their Discord group is really helpful. There's people that always just jump out and they'll give you like professional high level advice most of the time. So that's a really big part of like,
+
+and kind of just open source software in general.
+
+Citizen Web3
+Yeah, man, it is. And it shows how open source is much more powerful, right? I mean, whether it's crypto, whether it's Linux, or whether it's anything else. It's funny, man.
+
+Max P 
+Yeah.
+
+Yeah, it's all about just the people behind it really. Like it's, yeah.
+
+Citizen Web3 
+Absolutely, man. Absolutely. And you know, Max, I still feel like I haven't got part of your story because I mean, you told the story like the, okay, I did this, then suddenly that and suddenly that. But why, man? I want to understand the motivation. Why on earth does anybody that has two jobs, you know, and I'm not, you know, why? What is it that you believe in? What is it that motivates you to do it, man?
+
+Max P
+So yeah, I do really believe in crypto and kind of this decentralized concept of kind of people should have the freedom to do things like this. Like they're not like a lot of people kind of see crypto as this criminal thing or privacy even as like a criminal thing. Like why are you hiding? Why do you want to be private?
+
+It doesn't matter why I want to be private with my finances, with my identity or anything like that. It's just everyone should have that freedom I think. So I do believe in crypto and I do stand behind a lot of it like that.
+
+But a lot of it I don't think is really useful or necessary. And a lot of it is kind of just this hyped up, like pumped up thing. Like this validator might be getting $5,000 a day. And he's like, well, we're doing this and that. And it's very expensive. And we have all this infrastructure in place and all this work goes into it. And I don't really believe a lot of it. So I kind of, this is why I got into validating.
+
+show you know any of you guys can do this if you want to I mean that's what crypto is all about it's all about anyone can take part every person has an equal opportunity like it's by code it's not anything else really there's no one else that can affect that anyone can get involved in
+
+Citizen Web3 
+You know, bro, when somebody like asked me like, why do you want to like cover validator shit? Like, why do you want to talk to validators? I was like, well, I believe sorry, I probably should sit close to the microphone. I believe but I feel relaxed. So that's why I like having these conversations like this more non-official. Like it's because well, you know, I believe in blockchains a lot. I've been dedicating like 11, 12 of my years of life, sorry, 12 years of my life to that.
+
+to those things, regardless of which aspects of them, different aspects of them, because I believe in the same things as you. And what I came to realize is that, well, if I believe that blockchains are digital nations, and I believe that this is how the world is gonna change, then our validators are obviously the initial businesses of those nations. And I wanna know as a taxpayer, so to speak,
+
+Where the fuck is my money going? Is there a person who operates those validators? Are they sitting in there in the basement, you know, building a nuclear bomb or are they actually, you know, giving, or are they struggling and trying to pay off the servers or are they, you know, giving this money to charity? And it made me like kind of open up slowly to different people when I speak to them and understand that there are so many fucking different stories. And it's astonishing, really, really is. But it really does show you that, I'm sorry to say that, but it really does divide.
+
+Max P
+Ha ha ha.
+
+Citizen Web3 
+Not white and black, but it really does divide between the people who are really doing it because of what they say. And I believe in blah, blah. Um, and I'm not mean blah, like to, um, disrespect it. It's just could be anything or I'm doing it because I want to make money. And regardless of what, you know, um, they say it really shows when, when you speak to them, so it's cool to be speaking to somebody that I connect on that level on, on the mental level.
+
+Max P 
+Yeah.
+
+Max P 
+Yeah, I mean, it would be nice to make money doing it, but I'm not gonna change what I'm doing to chase that. That's just not really what I believe in. And yeah, to add on something you said before,
+
+Max P 
+Hang on, sorry.
+
+Citizen Web3 
+No, no, go on, it's okay, all good, all good. All good, man. All good, so... Uh-huh.
+
+Max P
+I'm gonna move this mic here.
+
+Max P
+Yeah, so like the people you kind of said, well, I want to know what the what these guys are doing with their money and whatever. I mean, that's something that I feel that should not be accessible to anyone unless it's if it's public funding. Like, so for example, with the Osmosis Support Lab, we disclose all of our spending because it's public money that we're just asking for.
+
+So that's different, but when it's like someone's personal finances, I mean, unless you're already like suspected of maybe financing terrorism or like on the worst case, I guess, like anything like that without some prior suspicion, I don't think anyone should be should be able to pry into anyone's personal finance.
+
+Citizen Web3
+Let me clarify what I meant. I don't think we went on the same page there. So this is exactly what I meant because I believe that in those things, when we are talking about validators who are basically receiving taxes from the citizens of a nation, in my opinion, the government should be public and the citizens should be private. And that should be like it all over the world. And I hope that in blockchains, this is exactly what happens. This is why my opinion, for example, validators shouldn't even have the right to vote, but it's a different story.
+
+Max P 
+Yeah.
+
+Citizen Web3 
+But like, in my opinions, you know, the validators shouldn't disclose by no means what they're doing with the money. But what I want to know as a citizen, as a taxpayer is I want those validators just like I want my government who's taking at gunpoint literally taxes from me. Well, they call it taxes. I call it stealing. And the same way I want to understand, I don't want to report. I don't need the report to see like a financial. OK, so this is where our money went. F**k that.
+
+Max P 
+Yeah, yeah.
+
+Citizen Web3 
+This is exactly what I'm running away from. But what I do and what I do want to know is that these people, regardless of whether they choose to be public or not public, like yourself, for example, you know, to stay private. And that's absolutely cool. And what did they do when I say what to do with the money? It wasn't meant that I want a financial report, but what I want to understand. And for example, right now, you know, you're saying, this is what I do. I'm fucking trying to survive. And I think that that's pretty much what I meant, you know, and there is somebody else. Yeah.
+
+Max P 
+Yeah.
+
+Max P 
+Oh yeah, I agree there, yeah.
+
+Citizen Web3 
+Yeah, it's not it's the same about you know, like when a government comes to me and says hey dude You know You have to share 40 50 60 percent of your income with us and you're like why it doesn't matter We can put you in jail if you don't And like and then they're like well, but I want to know where the fuck this money is going guys I want to know like but I think I have the right to know that
+
+Max P
+Hahaha. Yeah.
+
+Max P
+Yeah. Well, yeah, and every time they tell you it's like, oh, what? Why did you spend it there? Time and time again, right? Oh, yeah, you got to live with it.
+
+Citizen Web3 
+Yeah, absolutely, man. Max, what about your setup, man? Like the last kind of thing I wanted to touch on, what about your setup, man? What do you think that all those fancy big setups, which I don't even understand how some of them are able, like how possible to afford for small evaluators. But you know, there are different setups, there is like
+
+Setup where we have one server, which is straight away the validator. And then we have like sentry setups. We have horcruxes and there are so many different things you can add on to that. Like 50,000 nodes, if you want to each validator, I guess. But what is the kind of setup that you use that you would say that it's easy to set up at home and that something that easy for anyone to repeat.
+
+Max P 
+Um.
+
+Okay, so one mistake I made actually, like I learned everything I learned the hard way. So one mistake I made was with my first old server. I had a single account, single user account. I know they all tell you to make multiple users. Like if you're going to run maybe two or three nodes, put each one under its own user. I did not do that. That's a mistake. And then at the same time, even if you do that, each different node you run, I mean a lot of people say don't run
+
+Citizen Web3 
+Hehehe
+
+Max P 
+But if you know what your machine can do and if you're not jamming like three different nodes database on one drive or something, you'll be fine. It does suck if your whole machine dies, but I mean, account for that in other ways. But.
+
+So every node that you run on a single machine, you have to change every single port for everything, and that just becomes a huge pain in the ass. And so what you can do, you can run docker implementations of them, but I find that's not, it's not the best way to go. So actually what I learned from Coldchain is he uses LXD or LXC. It's just like a, like how Docker is kind of a
+
+Max P 
+system. So you're basically your own VM provider on your own server and you can just spin up. They're really lightweight like a new Debian or Ubuntu or Arch or literally anything you want. You can make like VMs of ARM64 like a phone CPU or you can emulate Windows, anything you want. It's super, super easy. So I just have I think probably 10 different Debian
+
+Max P 
+and all the different nodes and validators are on different drives so if one of them fails I'm not like panicking trying to get all these things back running and yeah so all those different drives keeping everything separated is really helpful just so you don't have to like do workarounds right you just do the same thing it's just like having ten different computers but it's on one machine
+
+Citizen Web3 
+Nice. Good advice.
+
+Citizen Web3 
+Nice one. It makes a lot of sense, I guess, this separation, I guess, because normally, like you say, a lot of people, they start to separate it with different users.
+
+Max P 
+Or yeah, they'll rent 10 different VMs or something and you end up paying like... I don't even want to know what those guys pay. It seems like a lot.
+
+Citizen Web3 
+Yes.
+
+Yeah, yeah, absolutely. And what about like stuff like sentry nodes and like all those like signers? Do you think that's something that has to be added or something that people
+
+Max P 
+Uh, it's helpful. I mean, I could definitely have benefited from some of that a lot of times just because I Will be testing something else and end up breaking like my entire network for six hours Like now i'm just panicking trying to get it back up and it just it makes it really hard to do some like major, uh, like maintenance or upgrading kind of changes and stuff to my to my network or to that actual machine
+
+it takes a lot of pre-planning and moving stuff to other machines or kind of just planning for like the whole job so you don't kind of end up stuck halfway through and end up getting jailed on three different networks. So like having some external stuff would be nice for that, having some other kind of backups that...
+
+like kind of redundant system entirely, but I don't quite have that yet. I only have one router and if that router goes down, I'm like not happy. Luckily it doesn't happen often. Usually when it does, it's because of me messing around.
+
+Citizen Web3 
+that.
+
+Citizen Web3 
+I think people forget though that you have a window in each network which allows the validator like not to completely crash because people think, oh my God, if my machine went down, that's it. Well, in a sense it is, but then you still have that window where you can fix whatever happened, right?
+
+Max P 
+Yeah, yeah, you just gotta plan for it and hope you can do it. I mean, most networks, I mean, you have, I think the lowest one, like the lowest amount of downtime allowed on any of them.
+
+Is actually probably decenter which I'm on it's like six hours or something you get jailed And they got kind of a higher slash rate than most not hope. Thank God their token is like not very expensive I've maybe used the old slashing refund script a couple times. It does work. So thanks to lavender five for that one
+
+Citizen Web3 
+And I've seen you by the way also around cyber right? I think I've seen you in cyber chats as well. Do you validate?
+
+Max P 
+Yeah, no, I was going to, but one of my friends from these groups wants to, so I don't want to jump in on that. It's a crazy weird project. I don't understand any of it, but...
+
+Then I got into their developer group, and all those guys there are like unreal, man. Like their GitHub is insane compared to so many other chains. It's so in-depth. There's so much to it. There's so many layers to it. And it's just, it's just interesting. It's just a strange and interesting project.
+
+Citizen Web3 
+Yeah, there is.
+
+Citizen Web3 
+I'm glad to say that I wrote part of it. So, you know, like if you go into GitHub, you will see the depths, my GitHub account, you will see that. But a lot of it has been what already I used to do ecosystem development for them. Those are my friends. So like some of my, the two founders, very good friends of mine. And there was a lot of projects that we used to do together before. So I was happy seeing you there, but I was wondering whether you validate.
+
+Max P
+Oh nice.
+
+Yeah.
+
+Max P 
+No, no.
+
+Citizen Web3 
+You should, man. It only requires a GPU, which makes a difference, of course. But you should. It's an interesting project. Nice, nice, nice. Nice. Man, you should definitely try, I think, because they also have a test testnet, which is like a space pussy. And if you're interested, you could try always first running that. And then.
+
+Max P 
+Oh yeah, I do have a small GPU. I don't know how well it would do.
+
+Max P
+Yeah, that's not a bad idea.
+
+Citizen Web3 
+Because Cyber is also a lot for home validators. And in fact, I think it's the chain with probably, I would make that bet and that assumption that Cyber currently has the most proportion-wise house validators in comparison to any other chain out there. And it's great.
+
+Max P 
+Yeah, well, yeah, probably. Yeah, the... Yeah, and I think the documentation is kind of probably what helps that work so well, because a lot of the other networks, you go to read there and there's missing huge chunks of it. But if you go to that one, man, the GitHub there is so big you can't even find half of it. You don't even know half of it's there. There's everything, it's crazy.
+
+Citizen Web3
+Man, if you still haven't discovered probably like the, I don't know if you already discovered the parts about the philosophy and about the man that goes deep, that rabbit hole is really deep. Oh, no, that's the top. But if you go really, really deep, you will find some crazy, crazy shit, man, like really broad. It goes really deep, like experiments between, no, not experiments between species. No.
+
+Max P 
+The big video, the big long intro video, yeah, I watched that not too long ago. Oh, okay.
+
+Citizen Web3 
+proposed different experiments to understand plants or animals. Man, it goes deep, man, trust me. It goes deep, goes very deep. Anyways, Max, what's if there was, I don't know, I mean, you kind of spoke about advice from all over, I've been asking you advice about that, advice about that, advice about that to start. But if there was anything else, like one kind of thing, if I were to sum up what...
+
+you've been doing and you've been saying, well, first of all, overall, has it been, I mean, you've, you've mentioned several times it's a hobby, but I love it. I like doing that, you know, it's interesting and keeps me learning. So first question before the other one, has it been overall a positive experience? And would you say, yes, I would recommend to people to try and do it, even though it's difficult.
+
+Max P 
+Oh yeah, 100%. If you're into kind of techie, kind of just, I guess to me it seems like a really obscure nerd hobby. But it is really interesting. I think you encounter so many unique people and ideas and just kind of things that you might not...
+
+learn anywhere else. I don't know any, I have no formal tech training. It's just kind of a thing I've done my whole life. Always breaking the family computer and fixing it. That's kind of something I said validating the whole time is the best way to learn is to break it and force yourself to fix it. It's not the best way to learn, but it works. I'm pretty good at ending up doing that anyway.
+
+Citizen Web3 
+break.
+
+Max P 
+Yeah, so it's if you like to learn things and you do already enjoy kind of this type of thing It's really a positive thing to do
+
+Citizen Web3 
+And a second and the last part, I promise, I will not annoy you that much more. What is, if you say that it is positive and it is something you would recommend, out of all those recommendations you already gave, which you said a lot of things today, what is the one thing, I mean, I know you could not highlight and choose one thing, but if you were, it doesn't have to be the one thing. Well, what is one of those things which you would really say to folks that wanna do it from home? And I'm not talking about somebody who wants to start a super...
+
+Max P 
+Oh, that's good.
+
+Citizen Web3 
+data center validity. We don't care about those right now. We're talking about like, you know, homies in pun intended, of course. But what is the one thing you would say, guys, watch out for that or don't do that or do this? Could be a couple of things, but you know, you already said a few I know.
+
+Max P 
+Yeah.
+
+Max P 
+Um, so don't be shy to ask questions. Don't be shy to, like, don't be discouraged from asking because some people are kind of not the best helping or don't want to help. Because there's always going to be people that do. And I mean, so my, my kind of goal behind helping people in the way that I always have in all these, uh, IBC communities.
+
+anywhere really is one day that person can turn around and help someone else or two people or three and that's kind of how it grows like this how these communities grow that's how they thrive it's all about the people so I mean pick up I mean I know in crypto like a lot of stuff doesn't make sense like price wise you're like well why did that token pump or why is that token useless when the project is so cool don't worry about that part find a project that you like
+
+and just do, I mean do good for it. The more people help, the greater the community will be. Ultimately it's just like I said it's all about the people so be that person I guess.
+
+Citizen Web3
+Nice man. I love it man. I love it. By the way, there is a comment here in one of the comments that says Max is a child. Let's go Max. And you know man, I agree like listening to you bro, I totally agree. So dudes, delegate to basement nodes. I don't say it very often, but in my opinion, it's something that's worth it. So whoever is, if you're listening to this, I don't know how you got to this, but if you have, you know...
+
+Max P 
+Woo. Ha ha.
+
+Citizen Web3 
+Dude, delegate to basement notes, I think you should. It's a good cause.
+
+Max P 
+Hey, yeah, I mean, even if you don't want to delegate, I mean, just give me a message and if you ever need help or anything, I mean, that's kind of why I'm here. That's what I do as a job. And I mean, I did it before I got paid by osmosis and I'll probably keep doing it long afterward. Ha ha.
+
+Citizen Web3 
+Nice man, nice. Max, it's been a huge pleasure talking with you really. I haven't felt so relaxed talking to someone in... Since I think I talked with Coney Daddy, which was like a year and a half ago, he kind of disappeared. But we had a lot of tequila and a lot of joints during the interview. It was hardcore. But it's been a while since I had such a relaxed conversation completely. So thank you, man.
+
+Max P 
+Oh yeah.
+
+Max P 
+Yeah.
+
+Max P 
+Yeah, no thanks for having me. This is, it was cool. Like the first time I've ever really done a, any, anything like this and yeah, it was cool.
+
+Citizen Web3 
+Thanks man and thanks everybody for joining in. Bye guys. Don't hang up yet Max wait.
+
+Max P 
+See ya.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

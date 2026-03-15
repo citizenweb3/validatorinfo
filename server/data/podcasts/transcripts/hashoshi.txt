@@ -1,0 +1,289 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/hashoshi
+
+Episode name:
+Analyzing crypto, web3 & coffee with Hashoshi
+
+Anna: 
+Hey, it's Citizen Cosmos. We're Serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you're curious how dreams and ambitions become code. 
+
+Hashoshi: 
+Do you think it has staying power and do you think that it is designed properly and you believe in the team behind it? If the answer is yes to all those questions, then you could consider tying up money and that sort of thing. If those things come through and those things follow through, then I think the sky is the limit and I know it's a general statement but those are the themes I'm looking at for 2021 and those would be what brings us to the proverbial moon. 
+
+Citizen Web3: 
+Hey, Cosmos. Welcome to a new episode of Citizen Cosmos. Today we have a joint by a special guest who calls himself a cartoon maximalist. He's a popular YouTube vlogger as well. It's Hashoshi. Hey, man. How are you? 
+
+Hashoshi: 
+Hey, how's it going? Thanks for having me. 
+
+Citizen Web3: 
+Yeah, thanks for coming on. It's our pleasure. How have you been lately? How's all the craze with whatever you are? I don't know. Everybody's crazy these days, so how is it? 
+
+Hashoshi: 
+Yeah, the world's a crazy place but I think you just focus on what you can control and the good thing is is that folks that are in crypto are tending to have some good weeks this past few weeks, so that's definitely a good thing. 
+
+Citizen Web3: 
+Sure, we have a lot of questions for you. We'll end up with that. But we have to admit one thing because usually we have guests from kind of places related to the Cosmos ecosystem, so we have to say one thing. First of all, you're our first YouTube blogger, so you popped our cherry. 
+
+Hashoshi: 
+Cool. Beautiful. I'm cool with that. 
+
+Anna: 
+Should I get some party crackers now? 
+
+Hashoshi: 
+Yeah, champagne. 
+
+Citizen Web3: 
+There we go. And we will attempt to do this a little bit differently and change our regular flow. So on your YouTube description channel, it says that the channel is all about the listener. This time we're going to try and turn it around to make it all about you. 
+
+Hashoshi:
+ All right.  
+
+Citizen Web3: 
+Cool. Different than usual. Excellent. So let's talk a little bit about yourself first and about your YouTube channel. Just introduce yourself, maybe talk a little bit why you started your YouTube channel, how's it going, and so on and so forth. 
+
+Hashoshi: 
+Sure I think for me, the genesis of my YouTube channel, I guess, Blockchain Pun intended, it was I read the Bitcoin white paper by a complete accident 11 years ago, and I was in a class and I was on stumble upon where you just click and you find random things on the web. And I read this paper and it just really resonated with me, the multidisciplinary thing that it is. 
+
+I kept up with it and I've always been a student of tech. So when I finished school and I went to start working, I was working as a Blockchain developer and consultant and I had clients that would often ask me the same questions. And a lot of them were fundamental questions about the frameworks that back Blockchain, what is hashing, how do you do asymmetric encryption and those sorts of things. And so I started the channel really to answer those questions in a format that I could just pass along to them and show them. And then it turned out that other people started watching it also and I actually really enjoyed doing it. And so I just kept making content and the rest is history. It's been a really good hobby for me to carry forward. 
+
+Citizen Web3: 
+Was it your first media experiment, if I can call it like that? 
+
+Hashoshi: 
+Really my first public anything, I really had never taken social media of any kind very seriously. And so I learned the whole thing as I was going. It's definitely been a really cool experience for me because I'm normally like to just keep to myself a very private guy. So being on video was really different for me for sure. 
+
+Citizen Web3: 
+I obviously watched quite a bit of your videos beforehand as well. And you're quite active on them. I wouldn't have guessed it if you said now that you're an internal person and that somebody who's an introvert, I wouldn't have guessed it because you're very, I mean, you get the point across, put it that way. 
+
+Hashoshi: 
+Yeah, it's weird because I think in the workplace you have to present to people fairly often and that is comfortable. And I think the transition is sort of mental gymnastics you have to do to speak to an inanimate object, a camera, like it's a person so that the other people watching your videos feel like you're speaking to them. And that's the weird thing. It's very hard to talk to a camera in a way that feels genuine. And that was definitely weird. If I had to point to one thing, that was weird. 
+
+Citizen Web3: 
+Okay, Anna, please write down, let's not do videos at all. Never go that way. Let's just stick with the audio. We find it hard as it is. Obviously, we read the description of your channel, but I would like to hear it from you in your words. What is the focus of your channel?
+
+Hashoshi:  
+I think the particular niche that my channel fills will probably be two things. 
+
+One would be, I try to give the most middle ground level headed analysis of what's going on. You tend to not find things like huge price prediction promises. And also, I don't panic too much when there's negative stuff going on. And I think it's a place that people can come to just get the facts and then my analysis, but never pressure about one way or the other and no promises one way or the other. And I also think I really have found a niche in describing and explaining technical content and concepts and describing projects and how they work in terms that I think most people can understand. 
+
+And that's the goal for me is to try and make stuff that's accessible to broad swaths of people that are interested in crypto so that it's not gate kept in a way that it has been for a long time because it's hard to understand. 
+
+Anna: 
+Now it is like a lot of information, most of them rubbish to be honest. So how do you manage to filter information, to filter out the crap and keep the main thing behind the technology? 
+
+Hashoshi: 
+Yeah, sometimes it's tough to do, but I think that the key has always been for me to be slow because I think that the faster you go and the more quickly you try and produce content about anything, I think it's easier to miss some of the fluff and then not go that level deeper. So at least I try myself with the time that I have to just keep drilling down deeper and asking myself why something works the way it is or how something works the way it does until I can't ask why or how anymore. And then that's usually where I can start to create analogies that people might be able to grasp and get a good handle on. There's so much information out there and there's often a lot of marketing that uses technical terms, but isn't really a solution design that is functional in any production way. And it's hard to filter even for people that know and understand the way this stuff works and know the patterns for architectures and stuff. It's easy to fall into that trap, truly. 
+
+Anna: 
+If you can give just one advice to everyone how to handle this big, big amount of things if they want to go deeper than ask you in the channel or keep asking in the some Discord chat. So what kind of advice it could be? 
+
+Hashoshi: 
+I'm always happy to give advice wherever possible on different media channels, but I think the best thing that I can say to look for is blog posts on Medium or Twitter posts or sponsored articles on Cointelegraph or one of those other media outlets. 
+
+The issue is not the ad, because ads are legal and people should be able to advertise, but it's the ads at our surface level. We are the fastest proof of stake network or we have achieved X number of transactions per second in testnet. Like these things are face value, okay, you're a proof of stake network or you've achieved this in testnet, but that's not detail. 
+
+That doesn't tell you how they've done that. Those are broad brushstroke descriptors of what a project is done from an architectural perspective. Don't look at those things as qualifiers for why you should buy into a project. 
+
+It should be qualifiers as to whether or not it's worth your time to even study. That's the thing. I think people first look at these marketing things and say, this is why I should buy a token or a coin when they should be, is this worth my time, which is also worth money to further research and then invest if I think it's of any quality. I think the order is just wrong right now for a lot of people. 
+
+Citizen Web3: 
+It's a really good piece of advice, man. I really like this actually. It's right down to earth, I would say. It's something that I wish somebody said to me eight years ago when I began my like blockchain journey or something like that and somebody would have told me, hey man, look at the surface details. Try and go deeper. One last question in that regard before we move to crypto. How do you stay objective, man? Obviously, you understand the question, but I just want to make it a little bit broader. I mean, if I have 10% of my portfolio in a coin, even if I'm the nicest person and I'm a really good guy and really my main reason for giving out information was educational, I will still be like, okay, guys, this is better than what I don't have. So how do you stay objective? 
+
+Hashoshi: 
+Yeah, no, it's fine. So I think you have to compartmentalize. I think that's one of the biggest things is if you look at any cryptocurrency project and then you zoom out and you look at any startup and then you zoom out further and you look at any company, I can tell you something I like and don't like about any company on any list that you can provide me if you give me 25 minutes to do some research. And I think that even if I like a project or I'm heavily invested, I would say Ethereum of any project, I'm the most heavily invested in because almost all of my technical skills started there. 
+
+Almost everything I've built that's really functional and I'm still proud of and works today was on that protocol. And I have a significant amount of personal crypto holding in Ethereum, but I can still understand that ETH 2.0 is taking a long time and it will take a long time. And there's opportunity now for others to take market share. 
+
+And that's a good thing because the more projects that are fighting, the better ETH 2.0 and subsequent updates are going to be because they have to be. And if they fail, then they fail because the odds are no different in crypto than they are in any other startup environment. And I have mentally prepared myself for anything that I invest in to fail completely because those odds are always the same. 
+
+Citizen Web3: 
+I think that's a very good point as well to be prepared mentally for that. If you invest the dollar, be prepared that you already lost that dollar. We couldn't help noticing that you started to mention interoperability coins like DOT, like ATOM. And we couldn't help noticing that you mentioned ATOM. And the first obvious question is what are your honest, genuine thoughts about ATOM as a token and maybe Cosmos as an ecosystem and as a technology in general and genuinely as much as you can please? 
+
+Hashoshi: 
+I'll start with Cosmos as an ecosystem. I think that it's a great counterpoint to some of the other interoperability ideas and solutions that there are. I think the hub and spoke model is models, a lot of architectural patterns that you see in traditional technology, which I think is smart because it's going to make teams that will hopefully and inevitably start wanting to build there. 
+
+It'll give them an easier path to understand how this thing is architected in the first place. I think the other thing that's really important to note is that the zone model where you have sort of functionality zones or protocol zones is also pretty brilliant because you now have the ability to implement something like EtherMint, which is basically a tender mint consensus backed Ethereum network with proof of stake, better scalability. If I'm a DAP developer now and I'm looking at Ethereum's proof of work chain, I'm looking at the suite of Layer2s. 
+
+The Layer2s now are almost just Layer1s where you really have to move your DAP to the Layer2 solution or the Layer2 network to really reap the rewards. If I'm looking at that, I want to maybe move to something that is interoperable long term so I don't have to move again. EtherMint would be a great destination for me and the ATOM token is really just icing on the cake because it's the utility but also the economic driver for counter-party risk mitigation and that sort of thing, which most networks should have if they are going to succeed. I think the token economics are interesting also but definitely a rabbit hole. Folks should get into in the papers. 
+
+Citizen Web3: 
+What about the flows, man? What about the minuses that you see? Some of them are obvious, obviously, but in your opinion, what could be improved? 
+
+Hashoshi: 
+There's been one little thing from my perspective. There's been little to no aggressive... It's not even a marketing, like marketing from their perspective of run Twitter ads or run Instagram ads. It's like create tutorials for people. Do you have a functioning decentralized application that runs in Rinkbee, test them for Ethereum? Why don't you come and try it on EtherMint and here's exactly how to do it and we will even subsidize you to run your DAP to test it in EtherMint. That needs to be done because I don't think that people realize, especially developers who are busy, they don't realize that they have this option. There might not be that many but they don't realize that it's done and it's ready to go and you could deploy something there. That's one. I think there are missed opportunities from marketing. You don't see a whole lot coming from Cosmos in the marketing space and you don't see many stories. 
+
+I think as a consequence of that, run it by independent journalists either. If I go online now, I guarantee you I will find something about Polkadot because there's always something being said and the same is not there for Cosmos. That's a stylistic difference but I think you need to do some of that to stay in the mix. but Functionally, I think that the other challenge is going to be proving out the hub and spoke model from a security perspective but also from a throughput perspective because there are implications when you have to do this almost transitive communication through different zones. I'll be very curious to see what that looks like at scale but of course, it has to get to scale first to see what it's going to look like at scale. 
+
+Anna: 
+I have a very simple question. What is your personal understanding of interoperability and web-free? 
+
+Hashoshi: 
+That's a great question. I think interoperability broadly is simply the ability for a system. It doesn't have to be a piece of technology either to communicate natively without translation with another semi-equal system. I think that interoperability in the context of blockchains becomes a little bit more complicated because each network has its own set of protocol rules that are tuned to likely a specific use case or a specific balance of security throughput in some ways user-friendliness. And so To do interoperability properly, you either have to have a more arduous and almost non-interoperable translation layer between them like bridges or you have to make some sacrifices in terms of the flexibility and the different tuning you can do. 
+
+There are a couple of different options there for projects to take but interoperability really is the ability to sync up one to many systems with each other. Web3 I think is dependent on that happening because Web3 is pitched often and I actually don't like the term Web3 because it's talked about the evolution of the web but in many ways it doesn't function even close to the way that the normal web we think about does and I don't think that they should be talked about in a chronological sequence. This isn't the web, it's something totally different. But Web3 is really talked about as this sort of evolution of all the communication protocols that we see out there and that includes financial communications and forms of exchange, moving to decentralized peer-to-peer broadly encrypted systems, transparent systems. I think that's often the bucket a Web3 gets filled up with. 
+
+Citizen Web3: 
+Do you have a term in mind that you would use and you said that Web3? 
+
+Hashoshi: 
+Yeah, it's tough. I don't want to be the one responsible for marketing this but I will say like it needs to be something clearly delineated and separate because at least presently there is no technology that I see out there that is an adequate replacement for what we call broadly the internet and a lot of the communication protocols that we use, there's a reason why they still exist even though they are flawed old ones and I don't know that people understand the fundamental challenge in replacing a global infrastructure and not just global infrastructure. I would say next to power like power lines, roads and phone lines, the most critical infrastructure that exists on planet earth. It is not easy to re-architect that stuff and just decide one day you're going to change it. So call me pessimistic but I think we need to just be realistic about the timelines and that sort of thing. 
+
+Anna: 
+Actually, your opinion is very close to a serge opinion. We have a huge discussion what is going on because everyone now talk about the trends that global web become to local web from each country. It's small local web and some countries like China, India and even US try to limit it resources, limited services and physical access, have a global internet, turn to local internet. Yeah, and we discuss about this that free and when we will see a new wave of the internet and technologies when people start to broaden their way of thinking through the internet again because it's very uncomfortable for many of us to stay in that limits. 
+
+Hashoshi: 
+Yeah, totally agree. 
+
+Citizen Web3: 
+We had a term once that we came out in one project which was called the Great Web. That's a good term but let's see where it goes. 
+
+Hashoshi: 
+We'll see what sticks. 
+
+Citizen Web3: 
+Yeah, definitely. What are your thoughts on different approaches between Polkadot and Cosmos? I mean you talked to Gimension Security of course and the Habenspok model is different from what Polkadot model is but what is your thoughts about those different approaches and maybe apart from security which is the obvious one where would one win or lose out to the other? 
+
+Hashoshi: 
+I think that in some ways it's harder to join the Polkadot ecosystem from scratch because I think despite the fact that they have the substrate framework so you can design and build your own sort of custom blockchain in a sense that is inherently native and compatible with others on the Polkadot network or Polkadot ecosystem there are still hoops that you have to jump through. You have to build that out ideally. You have to make sure that it is tuned for your use case. And you're going to have to be able to get yourself a slot. That'll cost you, at least pretty penny, I think. It's going to depend. There's going to be more slots and the economics vary. But I think Cosmos might have this opportunity to almost have these pre-built zones where different players can implement their projects, right? You take it a layer up and say, I'm a developer and I want to just build a DAP. Or I want to build some sort of little functionality. Let me find a zone that's already compatible with what I want to do. And to an extent, that is also possible in Polkadot. 
+
+You could say, I have a DeFi idea. I'm just going to use the same parachain that Akala uses and just do the same thing there. But I think it feels less open in terms of how easy it is for you to just jump on, find a parachain that works and just create something. But I will say that I want to stop short of making it into a distinct competition about one is better than the other. Because I think that there's similar enough that you can't even make that argument. 
+
+I believe in the mission that both are pushing for. Amongst others, you have ICON, for example. I think Wanchain is trying to do the same thing. I am more than happy for everyone to start trying to take a bite at this one. One of the biggest problems that we will face in crypto period. And I love not to shout out something that Gavin Wood says on a Cosmos-focused podcast, but it is something that I really resonate with. It's a bet against blockchain maximalism. And that is huge. I think Cosmos would also say we agree. That's exactly what we need right now. 
+
+Citizen Web3: 
+Spot on man, I really support what you said there. Because lately, I don't know how close you follow Cosmos Hub specifically. And currently there is a proposal on to take some atoms out of the community pool and do a big marketing campaign for the atom as a token. Which is a cool idea. Great. 
+
+It's amazing. And we support it as a validator as well. But what I don't like sometimes is that hard narrative where people start to not just compare, because comparison is a good thing. Looking, this is the whole beauty of open source, right? This is why we do open source in the first place. Because we want to connect and do things. And then people, some people come and say, okay, let's crap. 
+
+I don't want to go that way. And how are you different from Bitcoin maximalism guys? This is my question exactly. 
+
+So I love what you said. In general, what's your vision for, I mean, you mentioned protocols. And IBC is a lot of people compared to the TCPIP of blockchain. 
+
+Here we have independent individual silos. And then when IBC comes, they can talk to each other. Hey, hey, we get the internet going. So TCPIP. So not narrowing it down only to Cosmos, but in general, what is your vision when this interoperability thing, Cosmos launches IBC, substrate launches, connects their zones, chains, power chains, whatever together? What is your vision? Is that full-monty KYC free world full of possibilities and so on and so forth? Or is it something completely different and unexpected? 
+
+Hashoshi: 
+If you look at other times in history where a company has created a communication protocol and used it and gotten it adopted, you can look at Google who's created sort of a communication protocol to replace TCP in some use cases within the browsers and stuff like that. Those are really challenging projects to undertake. And I think to do it right takes significant effort. And you almost want to just not talk about it to end users because I think it just confuses them. 
+
+It's almost something you create and no one will know it's there. But if it works, it works. And it will be one of the most critical things that gets developed, these types of protocols in the space. I actually have a feeling that what will end up happening is IBC that connects these different bubbles or clusters in the Cosmos hub and spoke zoned model will really put Cosmos in a place where they can say this was our vision. 
+
+This was the white paper. This is what we fought so hard to build. And then they can start thinking about how to make it now really clean for the user and clean for developers to build stuff. It's going to be, okay, we've done the main functionality. We've got to keep maintaining and working on it and proving it. But the focus now is we need to get users. And to get users, we need developers to build dApps that people like and we need the user experience to be good. That's the cyclical thing. As more users come, you need to improve the protocol more as you improve the protocol more. 
+
+You got to improve it for developers more help them take advantage of the new features that brings more users. That is the like that virtuous cycle. I have a feeling that the IBC and protocols like it could be repurposed to create a much broader ecosystem that I think would speak even much louder to the decentralized let's cooperate and let's create an open source ecosystem. 
+
+That's not totalitarian. And it would be to connect Polkadot to Cosmos to icon and to all of these other networks that have been forced to compete with each other when they really shouldn't be and actually create the world that everyone likes to talk about but actually doesn't seem to take so seriously when it comes down to it in the space. 
+
+Citizen Web3: 
+I love the fact that there are so many projects out there that giving money to developers and not talking about ICF solely with Cosmos which Polkadot Solana Cardano Ethereum obviously and all of those foundations are just ready to give money if you're doing a bridge. And there are so many people building bridges whether they are trustless or well not so much trustless. I mean what's a trustless bridge. 
+
+It's a bit of a paradox in itself but whatever I'm sure one day we'll get to a trustless bridge like a full on trustless bridge but that's yet to happen. But like you said ethermint is a great example of this crazy I mean it's like a virtual machine on another what's going on like you go into those bubbles deeper and deeper and yeah and absolutely agree with you. 
+
+Anna: 
+What's technical innovation from 2020 that you sure will be a general line so will be developed in the years to come maybe in 2021 or even further because we had really interesting here even in terms of technology. 
+
+Hashoshi: 
+I agree. I think that what most projects should be doing in 2021 is focusing on implementing well architected and broadly flexible virtual machines and that would include things like WebAssembly most often. I think Ethereum and some of the other projects already that have done it you know Ethereum obviously isn't the first one they talked about it a long time ago but they obviously haven't implemented yet so they cannot take the credit. 
+
+I think Elrond has a WebAssembly based virtual machine. I think that will allow more developers to come in and functionally build not just apps but also tooling that's compatible because it is relevant to industry. And there are developers I think now that are hesitant to even take the plunge into trying this because the skills they learn will not be broadly applicable anywhere else. But if you're using languages you're familiar with you can contribute to open source code hone your skills. If it comes to nothing you don't really enjoy it you learn something and you can just go back to your day job and things like it WebAssembly is not the only thing are going to be important for the development of the ecosystem in general because of that compatibility and because of the accessibility of the languages that you can use to build things that work. I think the day of the custom language for or scripting language customized for your network like most networks are going to have one but that can't be the only option in my opinion. 
+
+Anna: 
+We need a new docker here. 
+
+Hashoshi: 
+Yeah new tools to work with and things that make it easier to build cool things because I often feel having I would say close to six years I've been using solidity to build things every six months. I feel that I have to relearn solidity because there's new attack vectors there's new functionality new syntax or they change the way that gas is optimized in a way that I need to change my approach. And I think that that is a challenge that a lot of people also feel and they also have and if your job is not solely to build things with solidity that's a heavy time commitment to keep your skills brushed up and learning and I think other languages will be the same to an extent in other ecosystems. Having your own custom language that very limited documentation very limited access to other developers that have the skills solidity obviously is better now because it's been around for so long. That's just a thought I think that's a technology thing that's close to home for me. 
+
+Anna: 
+If I ask you to answer me off the top of your head do you think that community of blockchain developers now is growing community or it's pretty much the same number of people last two or three years. 
+
+Hashoshi: 
+I think it's the same people and I say this based on experience where if you go and you look at hackathons and you look at grants it's always the same groups it's always the same people applying and working and joining and doing these things and that's fine because these people are very committed and that's good. 
+
+But I've noticed that the developer community is growing far slower than the get rich quick scheme people that are buying tokens and that is a problem. And it's the same thing with defi I think defi is fantastic. I think every network should be trying to convince defi developers to build things if cosmos should be reaching out broadly to a bunch of people that are building that can deploy on etherment. But I think the problem is people don't realize what open source means and what on audited code means and even audited code truly security audited code can be broken just the same. And so you haul all your money and you shovel in all your stable coins into these defi projects that are ticking time bombs. That is because the developer community is far less mature than the community of people trying to make money off of these things. And so it's going to be unbalanced for a while. 
+
+Citizen Web3: 
+It's interesting how a lot of projects who compete with Ethereum and not just to compete with Ethereum generally blocking projects who are like technologically advanced projects rather than trying to find developers out there. They're trying to pull developers from another project. And hence like you said they are closing that vicious circle rather than breaking it and saying OK let's go to the universities. 
+
+Let's go to I don't know wherever and then try to explain this to people and sort of agree with you. You mentioned I think I can write but who else apart from Polkadot Cosmos who else is in that Ethereum 2.0. Of course in that competition will for interoperability who else is there in your opinion. 
+
+Hashoshi: 
+Yeah I think the work that Wanchain has done is worth mentioning for sure. Those are the big ones. I know that there are others that are in various states of completion. But if I look at the whole like the landscape of projects that have really worked on this for a long time and are kind of close. 
+
+Those would be the big ones. I will say though that I still think that it's very likely that one of and who knows could be the big winner in interoperability. It just hasn't been invented yet. It's funny because we often see this where people get emotionally invested in a project because of financial investment. And it's as if people forget that things are still being invented and the thing that they like and that they are supporting may not be the end all be all. 
+
+And I think that's very difficult precipice to stand on because the space is very unforgiving. It moves very fast and the same goes for Ethereum. I have full belief in Ethereum delivering on all of its promise and still staying relevant. But at any time someone could really just hit a breakthrough and make Ethereum totally obsolete. And I know a lot of projects say well we've already made Ethereum obsolete. It's better in every other way. 
+
+Every way except for having users and app developers who build things that makes your network useful. That matters too. So I think all in all that's what's missing for a lot of these projects is now that we have the technology ready. 
+
+We're relatively in place. How can we get non-marginal number of users to join and participate that are not just here because they believe in the Cosmos ecosystem and are invested. But there are consumers only. How do we get them here and subsequently then say to developers we have 10,000 people that are here that know how to use the tooling that have wallets that will use your thing that you built. All you need to do is build it. That's how you do it. And that's how you take it to the next level in my opinion. 
+
+Citizen Web3: 
+You can fork the code but you can't fork the network. 
+
+Hashoshi: 
+Yeah. I mean that's why look at Bitcoin and Bitcoin's forks. That's the fundamental example. There's a reason why those forks did not do as well and probably will never do as well because you can fork the code. And that is totally fair. I actually think that gets unhealthy when you say like oh well all Bitcoin forks are useless. I don't think they're all useless. 
+
+They're just not going to replicate the success of Bitcoin Core. I think a lot of this stuff is ideological and people might disagree across these different opinions but it is what it is. 
+
+Citizen Web3: 
+It's great. I disagree. I mean that's the beauty of decentralization. We have two questions from listeners. One is from NJ who was asking about your thoughts on the current VTC, ETH climate and the general old season weather. I read this one. 
+
+Hashoshi: 
+Oh okay. I was first hearing that as like the classic maximalist battles you see on Twitter between Bitcoin and Ethereum. Whenever you see these like 100% moves or we've doubled in like a really short amount of time, I get a little itchy and a little worried about it because the reality is that this is the time when traditionally bigger players take profit which manifests as relatively volatile set of drops and then all of the fickle retail get rich quick schemers then they start to sell also. 
+
+And that often becomes a compounding problem. Shockingly enough we haven't seen that happen. We've had a couple of relatively steep drops at least for Bitcoin. I think Ethereum's still on the early days of its like crazy run but 5% drops have not resulted in massive like 12 to 20s. So the reality is is that anyone asking for a concrete prediction from me, if you watch my channel you know you won't really get one from me because I have no idea. 
+
+And I don't think anyone else has any clue either. So if you go on Twitter and you read we're going to zero or we're going back to 3k during the black swan in March or they say we're going to 100k, odds are both sides of that argument are totally and completely wrong and they're making it on completely baseless argument. I think that long term is all you should be looking at with any relative confidence. Do you believe that the project in question altcoin, Bitcoin, Ethereum, otherwise whatever it is, do you genuinely believe that it will change the game for businesses or people or both? 
+
+Do you think it has staying power and do you think that it is designed properly and you believe in the team behind it? If the answer is yes to all those questions then you could consider tying up money and that sort of thing. But of course only what you can wake up in the morning, still with a smile on your face if it evaporates before your eyes. So I think that's the golden rule across the board. 
+
+Citizen Web3: 
+The second question, I can't help not to read it because well I just have to. It's from a secret listener. The question is when moon? I couldn't help not to read it. I couldn't do it. 
+
+Hashoshi: 
+I can give you my prayer. That's about it. I really hope that by the end of this year there's clarity in two big spaces. Are institutions serious about Bitcoin and will they continue to be serious about Bitcoin following the trends of inflation and other things? If the answer is yes, that's a very good thing for Bitcoin specifically. The other question is where is Ethereum 2.0 at at the end of this year and have these Elrond and Cardano and a bunch of these other projects that are working on smart contracts and stuff. Have they been able to do the really difficult work of pulling users and app developers from that community and into their own? 
+
+And then I think other projects like Cosmos and Polkadot have they been able to implement these really complicated and very challenging the IBC stuff, the cross parachain communication in Polkadot, they've been able to do that. If those things come through and those things follow through, then I think the sky is the limit. And I know it's a general statement, but those are the themes I'm looking at for 2021 and those would be what brings us to the proverbial moon. 
+
+Citizen Web3: 
+We usually ask questions what projects inspire you, but you kind of already answered that with a lot of names. So we have a slightly different question and probably a lot of you listeners already asked you that. What kind of coffee do you prefer, man? We have to know. 
+
+Hashoshi: 
+Oh man, I'm obsessed with coffee. My whole show, man. I would say it's like a meditation for me. I wake up every morning and I make a hand pour over coffee. 
+
+And I like to just try different single origin coffees from different regions, but I would say I love Ethiopian coffee. It's unbelievable. So good. So that's usually what you'll catch me drinking. Just a cup of pour over plain black Ethiopian coffee. 
+
+Anna: 
+Ethiopian coffee is quite strong, by the way. 
+
+Hashoshi:
+Yeah, It's caffeine I need to get through the day. 
+
+Citizen Web3: 
+Man, is there anything else that we didn't ask you that you would like to share or anything about the things that you're planning with your YouTube channel or your podcast, but that we didn't actually mention that you just restarted, I would say again, right? You just did a recent show. I saw that you had a break there. Something that you would like to say about any of your media channels, maybe.
+
+Hashoshi: Sure. If you're interested, you can feel free to check me out on YouTube. I'm sure we can link it up somewhere or you can follow me on Twitter and find it through that. 
+
+It's at hashoshi4 and that's H-A-S-H-O-S-H-I, the number four. I'm pretty responsive on Twitter. I try to be at least. So if you have questions immediately there, you can always ask me. And on YouTube, and actually I'm looking for feedback to improve it. And secondly, to get video topic ideas. 
+
+So if there's something that you're interested in, let me know. I post at least once a week. I sometimes post more often than that, but it's really dependent on the rest of my life cooperating from a time perspective. 
+
+Citizen Web3: 
+You have another life apart from making videos for people on YouTube, right? 
+
+Hashoshi: 
+Yeah, seriously. Unforgivable, honestly. 
+
+Citizen Web3: 
+Man, we will include a lot of links. We have really good descriptions and all of those links to everybody who's listening to it. We'll be included. So by the way, also Citizen Cosmos podcast is now on YouTube, so guys, feel free to check it out. Thanks, man, for your time and thanks for joining us. It was a really huge pleasure chatting. 
+
+Hashoshi: 
+Absolutely. Serge and Anna, it was a pleasure. 
+
+Anna: 
+Thank you and bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

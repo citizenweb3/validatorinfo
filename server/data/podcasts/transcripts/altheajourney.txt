@@ -1,0 +1,419 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/altheajourney
+
+Episode name:
+Mesh Netowrks, Working Nights and Web3 with Althea core team 
+
+Citizen Web3 
+hi everybody welcome to another episode of citizen cosmos and today we have a somewhat special episode we have Deborah and Justin from Alfia with us today and the episode today is Just like a freefall conversation about Alfia and the journey the guys had over this like several years already I assume we will ask them that they will tell us all about it Deborah
+
+Please do. I mean, we had an episode with you already, but do still guys want to introduce yourself? Like say for all the listeners who you are, what you guys do
+
+deborah___althea 
+Yeah, thanks. I think it might be, it'd be good to give some context to the, journey, right? So my name is Sabra Sampir. I'm CEO and co-founder of Althea. And Sturka 2016, 2017 had been, you know, kind of a crypto hobbyist, know, pre-mount gox.
+
+deborah___althea 
+very involved, even before Bitcoin, I got involved in a thing called folding at home, right? So distributed compute power, always very believed in that. And then became a, like a neutrality activist, right? Trying to move the needle from a political perspective. And also lived in a rural area, right? Where, you know, the internet was terrible. You know, money had gotten poured into this community and about a million dollars for 1500 people to build internet. But,
+
+But unfortunately, because the systems and the internet are fundamentally flawed and broken, incentives are underlined, the infrastructure got built where it was already built and then resold and sort of ended up in the same situation. So I was looking for solutions to this problem and also to protect the core freedoms of the internet when I met Justin.
+
+So Justin, if you could share perhaps a little bit of the context and then we can take it from the meeting of the minds there.
+
+Citizen Web3
+ta-da
+
+justin___gravity_bridge 
+Yeah, so hi, I'm Justin, CTO and co-founder of Althea. And for me, Althea existed in my head for a long time as sort of this calling, something that I really wanted to build. So for context, was in early, early on in high school and I was a real Linux nerd, like building my own kernel, playing around with drivers.
+
+running any sort of open source software I could find. I I really love playing around with computers and the more I did it, the better I got at it the more fun I had. And so, you know, it's 2010 and I figure out that Bitcoin exists and I start really reading how it works and I'm like, this is gonna change the world. This is crazy. And I was convinced that
+
+cause you know, if you're a Linux hobbyist and a computer hobbyist, you pretty quickly get into cryptography. which is. I think we could all go on for quite a while about how cool what you can do, with cryptography is sort of, that idea of information is power really distilled. and the ability to, you know, do things, cause that's what, what, excites me about computing is the ability to.
+
+like have an impact on the world to make things better, to build something, you know, very traditional sort of engineering sense, go out with a hammer and make something new. So anyways, I was super excited about Bitcoin. And shortly after, I'm like, you know, you could build a peer to peer bandwidth marketplace with mesh networking. And this was like sophomore year of high school, like
+
+or three months after I learned Bitcoin was a thing, I was already on this. I was like, this is cool. And I had read a good bit about mesh networking and I was interested in it and I saw a lot of possibility there, but I just didn't have the skills. so life goes on. I was a participant in the early Bitcoin community and all of that. so I go to college.
+
+justin___gravity_bridge 
+and I am working on my computer engineering degree. And I stick my head up because, you know, Ethereum is coming out, a lot of stuff is going on. And I look into the crypto world again, and I'm like, surely somebody has to have built this. And I find no credible efforts. And I decide to try and make an attempt at designing it. And this is HawkNet, which as far as I know is like the first real
+
+attempt anybody ever made for an incentivized crypto mesh network system. like, this is, no, this isn't 2017. This is like 2008 or 2009. God, it's been a long time. So anyways, anyways, I feel miserably because I'm a sophomore in college and I have no idea how to design anything. And I distinctly remember I was working on the economics of it.
+
+justin___gravity_bridge 
+with the economics of the design with my microeconomics professor who was sort of vaguely interested in the idea. And he's like, well, I mean, why are you telling me about this? Shouldn't you go in patentage or something? And I'm like, no, I just want it to exist. Where is it? Just please exist. And so, you know, I finished my degree, I graduate, and I get my dream job doing performance engineering at Red Hat.
+
+And that was a really great opportunity and it was fun. And a couple of years into that, crypto is heating up again. So this time it is 2016, 17. And I take a look and I'm like, okay, surely somebody beat me to the punch here. Where are they? And this time I find a bunch of efforts, but all of them are not really credible. They're missing key elements. They don't really work. And so I start.
+
+on and so I decide like, Hey, you know, I'm bored. I've wanted to do this thing for years. and you know, the idea is sort of whispering in the back of my head every time. and I, and I say, okay, I'm going to make an attempt. So I start printing out research papers, on networking, cryptography, mesh networking. And I just, you know, I read two or three with breakfast. I read some with, with, afternoon coffee. I read some in the evening.
+
+justin___gravity_bridge 
+And I do this for months and months. And then I'm like, okay, I think I'm starting to get somewhere. I'm going to revive my old blog from that design attempt in college. And I'm going to just try and do this as a sort of fun side project. And that was when I met our third co-founder, Jahan, who had been working on something similar.
+
+He was sort of trying to do it and he had been reading my blog because if you're looking for crypto mesh networks, was it. The source material was the blog of some college sophomore who had no idea what he was doing. So we got together and we put our heads together on a design and we started making more progress. We started to come up with something that was really practical and workable. And then
+
+you know, I started implementing and really like writing the core networking protocol that we still use today. And we decided to go off and, you know, try and make it a startup. And this is where Debra comes in. You see, she had also been following what I had been doing and then what I and Jahan had been doing. And she reached out and said, you know, I have a place where we're like, we need this sort of software.
+
+There is no practical way to get good internet in my town without this sort of software. So I quit my job at Red Hat and I worked perhaps the hardest three weeks of my life to go from proof of concept to the very, very first version of Althea, which I boxed up and shipped to Deborah.
+
+deborah___althea
+router number zero. I still have it on my shelf.
+
+Citizen Web3 
+Ooooo
+
+deborah___althea 
+Yeah, yeah, so it an old Western digital Netgear router. I think they retailed for like 20 bucks at the time and, you know, with a scribbled on label. you know, the rest, was the beginning. It was the beginning of that history. And it actually, you know, that that particular version of software connected about 25 people that provided them Internet they did not have before. So, yeah, it was pretty exciting. You know, recruiting people to start with this
+
+crazy crypto mesh net and a little tiny town in Oregon was pretty fun too. It's like, hey, this is gonna transform everything for you. You have to try this, this is super cool. But of course like new software too, it went through its ups and downs and I definitely had to bring some gifts and wine and bake some bread and apologize for things not working for the first little.
+
+Citizen Web3 
+How much much how much bottles of wine did that cost you? There we go. There we go. No, like jokes aside, but it's like the things right. I mean, we have to do. But by the way, before we before we get into it, that's perfect context. But I do have one strange question for you. Did you find out about Bitcoin while you were still in high school or in college already?
+
+deborah___althea 
+Yeah, and that's the true, you know, early start up cost, right? You got to factor that in too.
+
+justin___gravity_bridge 
+Oh no, I was in high school. I was running around telling everybody, everybody, everybody that this would change the world. I was selling old pairs of shoes on BitMEX. No, not BitMEX. was BitNit. It was some sort of eBay clone. I forget what it was called. And like, you know, I was, I was doing everything in my power. I was like, yeah. And,
+
+Citizen Web3 
+Wow.
+
+Citizen Web3
+That is so cool. That's so cool. Like knowing about it in school. But did it change your perception of like, this is a strange question,  I guess, for like the generation, like from the eighties and the nineties. And I was talking about this to Eric Henn. was, but he didn't connect to this. I want to see if you do. I'm quite curious. for us, for example, like mobile phones or like smartphones are like part of our lives. And we don't think about it as something out of the...
+
+out of the ordinary. So I'm curious for people who found out about cryptocurrencies in high school. So it must be that for you digital cryptocurrencies are not something that you need to think about. It's just like and it's in your head. Did you see what I'm trying to get it like I don't know if it is like that for you. I'm trying to ask.
+
+justin___gravity_bridge
+Yeah, so I think I constantly alternate between being like, between wondering why technology isn't better and between like being in awe of what exists. So, you know, I'm a big computing history buff. I'm a big sci-fi buff. You know, I was reading Cryptonomicon and then here comes crypto, like it actually happens. And I'm like, okay, wait a second.
+
+Put the book down, what's going on here? So I think I should say that I see it as normal, but it still blows my mind. But really, the thing that I spend a lot of time thinking about is the enormous possibilities that are unexplored. There's a lot of work in cryptography and cryptocurrency that is just
+
+that is flashy, you know, it's like some new feature. It's like, okay, we're going to do, how should I put it? Where they focus on doing something that's new, even if it's not necessarily super practical. And I'm just always walking around and I heard this particular line somewhere, so I can't take credit for it, but it really, I think it's to the core of my point. General purpose computers exist and the world has not yet.
+
+completely reconcile this fact. Like the existence of computation on this scale is something that the world is not completely reconciled. know, there are still people like updating spreadsheets by hand and they change from doing paper to actual spreadsheets. So they only kind of know computers exist. They don't know that you don't need to update them by hand anymore. You know, so how should I put it?
+
+justin___gravity_bridge
+the power in general purpose computing, the power in cryptography and the sort of fundamental shifts it can drive in society and how we work together and connect as people. We're not even at the start yet. Cryptocurrency is kind of banging rocks together. I'm still waiting for the first.
+
+for the first social to deeply embed peer-to-peer cryptography for the purpose of helping prevent spam, helping provide attestation that the content that you're viewing is real, for helping you to verify your day-to-day interactions with just anybody sending you a piece of paperwork. Stuff like this, like the really mundane stuff is missing.
+
+And that's what's really powerful. I think, and I think we sort of, Deborah and I sort of share this bottom up perspective that infrastructure is what changes the world and new technology comes first. You have to get it out there.
+
+Citizen Web3 
+I totally relate to every word you said there. think that people have still not realized, that there is a whole new elephant in the room called data management institution and how it affects our lives, how it works, how we live with it. Some people still think because they live on an island.
+
+or, I don't know, whatever. And they don't really use social networks. that doesn't affect lives, it does guys. It does affect that it goes every day. And you're right. Absolutely. People still didn't still updates spreadsheets by hand. it's crazy how the world will live in them in the future. We always kind of expect the future to come, but it's already here. You don't need to expect it. I mean, you read books and we think, one day that will happen. No, it doesn't work like that. It's kind of this gradual things, you know, and then somebody sent me a video yesterday.
+
+from Moscow where a granny is walking a Yandex robot across the road because he couldn't like the testing some robots for delivery. And she took him by the hand and kind of walked him because she wasn't sure what he's doing there. so, all fun and games, but it is like that to the point of, we still not living there. But back to you guys, like, you said the context of the story, you're sending this thing to Deborah.
+
+Citizen Web3 
+Deborah comes in, Deborah goes buys a case of wine, convinces 25 people to work this thing. What happens later? How do you guys proceed from that point? What's going on?
+
+deborah___althea
+Hahaha
+
+deborah___althea 
+I think kind of the story about technology kind of is a good backdrop for this because I think part of the reason why Althea is successful is because the reasons why technology gets adopted is economic, right? And maybe that's some of the reason why we don't see it getting adopted.
+
+and of people that adopt.
+
+So, you know, and a lot of what we see in crypto is, you know, and one of what we had to do was build the building blocks, right? So we always come in and say, look, the technology is here, we declared victory, everything works. But really, when you start actually getting into building, it's not the case. So we started building with payment channels. you know, Johan had had some experience with that in the past. And we started to try to attack the problem.
+
+because that at the time was kind of the latest and greatest and made a lot of sense. And I think, Justin, you can maybe give some context on to why that wasn't ultimately a winning solution. But I think that's a lot of part of our journey too, trying to build that, recognizing that we had to build all this underlying technology, and then ultimately pivoting from that.
+
+But Justin, I'll let you kind of share a little bit of the reasons why that technology wasn't successful. Then we can talk about TCRs too, which we thought about doing for a little while too. I don't know if anybody in the new crypto world knows what a token curated registry is, but that was also hot at the time.
+
+Citizen Web3 
+Before you, Justin jump in, I remember about payment channels. I remember Spankchain and I remember there was a big, big team. did actually a lot of work for the payment channels thing. And I remember it was 2016, I think. Sorry, Justin, go on. I'm going to let you take it from here. I just remembered for some reason. I don't know why.
+
+deborah___althea 
+Yeah, you know, Amin was also a supporter of Althea and, you know, I think we had similar types of ideas about how and why that would work well. And encountered, I think, similar types of problems that's might change it too. So that was that was an era, the era of payment channels.
+
+justin___gravity_bridge
+In order to describe the fundamental issue with the concept of payment channels as a scaling solution, you really have to get to the goal. If you have many people all wanting to pay one entity consistently, this works well. If you have a more distributed system like Althea,
+
+where one individual may want to pay four or five or six people. However, you know, the network ends up being connected. You need to pay the router next to you for the bandwidth you're using. So that means you need to open a channel with each of them or have a channel hub. And then if you have a channel hub, you have to manage the hub, make sure that it's trustless, make sure that it can't do anything hostile. You also have to manage the various problems of dealing with the hub. And after a certain point,
+
+it becomes easier to, well, I should put it this way. After a certain point, you're realizing you're solving many similar problems. Like you're building some of the same tools as a proof of stake system. And you eventually just start saying, okay, we should maybe just put this on a more efficient L1. And then, so this is how we sort of ended up.
+
+moving away from payment channels because we put a lot of effort into the design. We made, think what to this day is, Jahan wrote, what to this day is like the most efficient payment channel implementation that I know of in terms of Ethereum gas. But we could just never get over the management. Like how do we manage the payment channels? How do we manage the hub? How do we make sure that we're not spending more money than we're saving? And eventually what we were all getting together.
+
+justin___gravity_bridge
+at a little Althea meetup. And I turned to Jehan and Deborah and I say, I think we can skip the payment channels for now. Because I had run the numbers on the gas prices and I'm like, we can do this. It'll be a little painful, but we can do it. And so we set aside payment channels. And as we moved on and worked on the billing implementation, which by the way had a million other complexities,
+
+that showed up that nobody expected. I think I ended up getting the actual payments working after months and months of work by our team to do random things. There was no Ethereum libraries that could build transactions on the MIPS CPU architecture, which was most of the routers that we were programming. So we had to write our own Ethereum transaction generation library. And then finally, I think it was over like...
+
+Christmas, everybody was taking time off and I would wake up, I was visiting my family and I would wake up and work four to six hours every morning from like 5 a.m. to maybe 11. And over the course of two or three weeks, I got the first payment implementation working. Now, working means it works once. There's a big difference between something that works once and something that never breaks. And so over the next two years, I would just be always.
+
+looking at things, you know, I get a report like, there's this issue. This person paid too much. This person paid too little. And I go and I'd look at it be like, yeah, there's an issue. And I put in a patch and then slowly incidents started to become like, no, things are working correctly. And then the number of times I found a bug kept going down until finally I realized that I'd gone six months without finding a book and it was finally stable and working.
+
+I guess this is where we can stop and merge back in to the token curated registry scheme and start talking about sort of, cause on one side there's me trying to build something that I wanted to build since I was very young and hyper-focused on like, I want the product to work. I don't care about any of this other stuff. Why is it all here? Go away. You know, I just wanted it to exist and I wanted it to be.
+
+justin___gravity_bridge
+you know, sitting on my desk, which sometimes still amazes me. You know, this thing that I dreamed of for so long is finally just, here it is. It's not perfect. It's not, you know, it's not absolutely perfect, but it works and it does everything that we wanted it to do and needed it to do. But in the process of getting there, you know, I think I'll hand this off to Deborah.
+
+deborah___althea
+I wanted to say it not only just works, but it's providing internet for networks in six states. We worked on deploying networks in Africa. This provides internet for businesses and fire stations and emergency management and homes all over the country. So part of the complexity here that Justin kind of is abstracting over a bit is that people expect internet to work 99.9 % of the time. So not only did we have to...
+
+Citizen Web3 
+100.
+
+deborah___althea
+Right, so not only did we have to develop this product that was completely new, we have to reinvent how we look at like a routing protocol. We have to look at a different way of metering and paying. had to look at, so we did this all on X-Di. So there were not a lot of a wallet software or things like that. We had to look at the payment rails. Like all of these things had to be built.
+
+and had to also be built and had to also be managed from a perspective onboarding real people to crypto, You your grandma, the local fire chief, all of these folks had to be able to use this, right? So it made for really sort of, you know, complex, but also really exciting and rewarding time, you know, having someone, you know, have internet where they did not have it before and have that being enabled.
+
+completely new system or to see that the payments working and providing a much better in-align system was incredibly rewarding but also super complex.
+
+Citizen Web3 
+This is actually the next question I have. You guys have just told me about a crazy story where there's complexities developing, going from one solution for another solution. And I imagine that's not even half of it. I imagine that's the main things you remember. There are probably more.
+
+Citizen Web3 
+How does somebody who is developing software, How do you know when is the time that the software is developed? When you need to stop trying to knock on that door that is not open anymore, like with the payment channels, I assume that it was not what you guys wanted, right? And to look somewhere else. Is the end goal is to say to yourself, if it works,
+
+then I should stop and that's our first prototype or should you always strive until it's perfect and solve every single bug, blah, blah, blah, blah, blah. If it crashes, it's not perfect. Or should you release the first time it works? I mean, I don't know. How does a team know when is the right time to kind of come together and say, okay, here's our first release, here's our first product. Let's try and ship it. Let's try test it. Is there any difference between the old world and the web 3 or is it still the same thing?
+
+deborah___althea 
+I wanted to say that I think that Althea has always been solving a problem, right? We developed the software because it needed to exist to solve a very fundamental problem. And so we knew that it was ready to be a prototype when people could use it, right? And it like very viscerally solved that problem and then we could build on from there. And I think that's one of the unique properties of this team.
+
+deborah___althea
+is that we interact with regular people using our product on a day-to-day basis. So we have a deployment team and a development team. They talk, they interact. They're always thinking about meeting the needs of that user.
+
+justin___gravity_bridge 
+Yeah, so I'm going to come at this from a much more sort of programmer angle. And that is that, first and foremost, take a look at your design from the fundamentals up. Figure out how your actual system works. If you're coding on Web3 and you have never seen any Ethereum, any like EVM bytecode, learn how to read some basic EVM bytecode. Learn what a transaction actually does. Learn what's going on from the bottom up.
+
+and then carefully think about your design. Read what other people have done. Figure out what worked, figure out what didn't work. Don't take anything for granted and do your research. And this is how you make good foundational decisions. But above all, once you have done your research and you're thinking about the problem and you are putting your metaphorical pen to paper, you want to run headlong into reality as fast as you can. And if that's a brick wall, you want to run right into that brick wall, full speed.
+
+Now, there is no need to hesitate because if your project doesn't have a relationship with reality is what I like to call it. People often end up working without a relationship to reality, their product. They're designing a feature where like, yes, this is great. It's easy. It works wonderfully. It's really complicated to design, but we have the skill to do it. but yes, it costs $500 per use and our customers don't have that much money. It's like, well, wait.
+
+justin___gravity_bridge
+hang on, where is your relationship with reality? And this is why you have to try and ship quickly. That first version of Althea was, you asked if it still works and it does because it was pretty much nothing. You know, it was like five components. It was the very base foundation. had taken everything and the kitchen sink and threw it out the door. And then we updated from there. And a lot of people would have said, well, know, updating is hard. You shouldn't have spent the time to ship a product that
+
+had no payments, had no automatic setup, had no ability for the router to do anything except exactly as it was configured on my desk. There was no installation routine. Like it was, it was a very manual script, but it provided us with lessons, you know, it got things working and it provided us with an environment to iterate with. It provided us with some place to put our software where it would either work or explode. And that is, that is, that is what you need. That's your relationship with reality. So always,
+
+First of all, spend a lot of time in your design and then figure out how you can fail. Because if you can't create the tests that you can fail, then your project, your product, what you're building is not close enough to reality to bother with. You know, you'll never know.
+
+deborah___althea
+Yeah, I think the other thing too, you have to also understand traction. Are you building something that is going to get adopted, is going to get used? So if you don't ever get anything out there, you can't begin to understand how your user is going to interact.
+
+Citizen Web3 
+There was an anecdotal story. I'm not sure how true that is, but I used to be in Israel force many years ago and there was a story. Why does Israel doesn't build their own planes? Well, they do. Apparently they did build one, but the reality was it was so expensive. It was so full of features that it could never be implemented. They had to use planes for that to buy from the States, from NATO, whatever, but it's very true.
+
+Well, how does I mean because I have also like built several products in Web3 So I'm kind of like trying to come from the places where I failed and ask you so that's my kind of game to be honest now How does one? Understand especially like in crypto and Web3. Let's go Web3. Whatever How does one understand the team that the product is not ready to be shipped? but you know, it's it came out of the beta stage or the alpha stage, know, like
+
+Citizen Web3 
+A lot of users, when they go on applications especially, you have this beta on top. And, when does beta stop? When is the next step? A lot of people ask, when do we stop the beta? When do we stop the alpha? When is the real thing going to be released? In crypto, it's really popular to do, especially Bitcoin. still see what software zero points and dot points something. It's been around for what, like 12 years now, right? But we're still there.
+
+In Web3, how do you jump from being a startup to being a full blown project that is working, ready, and you're up there already?
+
+justin___gravity_bridge 
+You're just always trying to do it. And then one day you realize that you've done it.
+
+Citizen Web3 
+Haha Great answer
+
+deborah___althea
+I think that a startup is a series of pivots, right? To finally like really, like it's a series of pivots that get smaller and smaller and smaller as you narrow in on what works, right? So when we started, we built a lot in fixed wireless radios that were inexpensive, that let us iterate quickly. And then we, you know, the landscape changed as it does and it evolves. And now our primary focus is on fiber optic cables and on LTE and 5G and 4G.
+
+that kind of infrastructure, right? So, and then of course, we had to build the gravity bridge, right? And iterating on that and that concept and that's been changing. But if you don't keep that mentality of continuing to iterate, to evolve along with the landscape, certainly in crypto, it's an exceedingly evolving landscape. So whether you call it a startup or a finished profitable company,
+
+might be the delineation between where you are fully profitable. But I think even in a fully profitable company, if you are not evolving, you're either you're either growing or you're dying. There's no in between.
+
+Citizen Web3
+I guess where I was kind of like heading to was more like in the normal world, let's call it like that. You kind of like a single beneficiary or there's five beneficiaries, whatever. And it's kind of obvious when we are all getting money, that means it's working, right? Kind of thing. We have customers, we have money. Here, the beneficiaries are also the users, which is very different from what it was like before.
+
+And now you're not the beneficiary and you're not building it a centralized thing. You're building a decentralized thing. So when is it something decentralized is finished as the kind of question, I guess, never just in kind of was like, you just do it, right? Well, I guess you just go ahead and build it. That's, what I was, trying to imagine in my head.
+
+deborah___althea 
+Yeah, in some ways, sometimes crypto is a bit divorced from the yield of whatever that they're building and that can create...
+
+you know what we see oftentimes is the value of the underlying asset
+
+is not necessarily correspond to the yields, right? And that creates a little bit of a precarious situation. So I think what you're trying to do always is get to where your underlying yield and utility of the blockchain matches the value of your asset.
+
+Citizen Web3 
+Justin, did you want to add something? 
+
+justin___gravity_bridge 
+Yeah, so I mean, we've been talking a lot about the difficulties of building a product and getting users. think that is that it and having users want to use our product. And I think that is what is often missed in like Web3 is that you have two sets of users. You have token holders and you have an actual user of their product.
+
+And you need to be very careful to try and bring these people as close together or to pay attention to them separately. And this has been one of the big issues in Althea is that, and this is in large part my fault, is that we focused excessively on figuring out how to build the product. And we actually got the product built, which is ridiculous. like, I mean, think about all the different things you need to reinvent.
+
+to like say, yes, we're gonna reconsider how the internet service provider system works from the ground up. We're gonna build our own operating system. yeah, we have to make Ethereum transactions too. yeah, we got to do all of this mesh networking stuff too. Okay, sure, we can do all that. It's crazy. But the other side of Althea, the sort of question of what does the, what is now the Althea blockchain look like that started with the token curated registry and other things like that. That was...
+
+not treated as seriously for a long time. And you have to keep these things in balance. And I think that's a mistake we made early on, that nearly, well, Althea was bankrupt for a short period. But we stuck through it, and because our software worked, because our networks were actually profitable, we didn't have to shut down operations. We could keep the homes we had installed. But it was a very tight, what was it, year, eight months?
+
+deborah___althea
+Yeah, this was, so just to add a little bit of context, yeah, we had essentially looked at building in payment channels that got us a little behind. And then we looked at like, okay, well, how do we build this blockchain that's gonna be useful? And the idea of kind of a token curated registry where people would float on the validity of the network and these kinds of things would perhaps be a good fit for a token model. But also as kind of we know that
+
+That's kind of what's a short-lived phenomenon. And then our third co-founder, Johan Trinbeck, stepped down to pursue other things. So it was January, 2020. I stepped up into CEO. We didn't have any money. And we had to sort of reinvent ourselves, right? Which I think blockchain is a great place to do that in, right?
+
+And a lot of the reason too we were behind is because in order to settle directly onto an Althea blockchain, we needed this fundamental bridge, which before we came along was being worked on in Cosmos under a product named called Peggy, but it was very behind in the deliverables. It wasn't coming to fruition. So that's when we started to kind of come in and it was one of those decisions, well, if you need something, sometimes you just have
+
+build it yourself. Right, right. But that I think got us back on to a really solid trajectory, right. And we were able then to also in parallel, as Justin said, deliver the product focus on growing the networks, and on that traction and iterating on the product itself, while building towards the future of the Althea blockchain. And what needed to be built out, but gravity was a
+
+Citizen Web3
+Do it yourself, yeah.
+
+deborah___althea 
+monumental undertaking too, which I think could spend two years now. So it's 2020 when we started that, it's now 2022. And Gravity Bridge launched December of 2021. What was really cool, right? So what, you know, Gravity sort of evolved into is this really amazing, you know, decentralized validator set. We started off decentralized, Justin can share more about that too, but you know, now we have lots of other projects that are part of it, you know.
+
+the context and checked and persistence and stargaze and all these other different, you know, projects are coalescing around this core like piece of infrastructure that's now in the world. So that's really exciting, exciting to see that come to fruition and looking forward now to to where we're at with the Althea blockchain launch in a couple of months. But I don't know, Justin, if you want to talk about the gravity bridge.
+
+justin___gravity_bridge 
+so you know, it's a couple of years ago and Deborah says to me, like, hey, we're gonna need a bridge because customers absolutely demand stable coins. And if we want it to work really well, you're gonna have to build it. And I'm like, you're right, but no, please no. So.
+
+deborah___althea 
+haha
+
+deborah___althea 
+The core logic, well, we got to build it. Dustin's the guy for the job. Nothing for
+
+justin___gravity_bridge 
+Yeah, so after a little bit of arguing back and forth, things worked out the way they always do, which is that Deborah says, Justin, I need something really big and I needed it like two days ago. I'm like, okay, no. And then, you know, a week or two later, like, okay, okay, I'll get serious about this. And yeah, so I mean,
+
+deborah___althea
+Hahaha!
+
+justin___gravity_bridge 
+Gravity Bridge is a, so Gravity Bridge is a bridge between Cosmos SDK based chains and EVM based chains. And I always came at this as like, how do I simplify? Cause I had just come out of building Althea and I knew everything that can go wrong goes wrong. And then it goes wrong again, and then it goes wrong again, and then it goes wrong again. And then maybe a year later, it stops going wrong. So it's not like,
+
+justin___gravity_bridge 
+So complicated products are hard. And I came in with a philosophy of, ok I want to build a really seriously decentralized bridge and it needs to be as radically simple as we can. And this is something we went through the entire design and development process with a focus on avoiding flashy decisions. It doesn't have spinning rooms, but it's very efficient.
+
+It's very decentralized. It's the only cross blockchain bridge that I'm currently aware of that is not upgradable. know, all of these other bridges, they come in, they say they're decentralized, they say they're secured by these validator sets. And they're like, yeah, the team has a two person multi-site that can update the solidity contract at any time and take all the funds. I'm just like, where, once again, where's your relationship with reality? And the answer is that they're focusing on one side of their user base. You know, they're focusing
+
+justin___gravity_bridge 
+on providing a bridge, because that's what a bridge that works that makes token holders happy, but not the actual bridge users. The actual bridge users think they're using something decentralized, and that's just not OK. I don't think that's ethical, the way many of these bridges are presented.
+
+deborah___althea 
+One thing I wanna say here too is like oftentimes we hear these things and call them hacks, right? But really it's just an ill-advised like two-person, multi-sig or three-person, multi-sig, right? So.
+
+Citizen Web3
+Yep, multi-sego respected people, yeah.
+
+deborah___althea
+Yeah, so I think it's mischaracterized a lot of times. I think it's also what Justin is highlighting is really there's just not a lot of transparency into the security.
+
+justin___gravity_bridge
+Yeah. So I mean, you'll find, you know, you'll have a bridge that says they're decentralized and they have an update multi-sig of a couple of people and they're the only ones that can run the relayer. So you're saying, well, okay, I don't see any decentralization here. And in fact, and this is where we put a lot of our effort in Gravity Bridge is to try and make it decentralized. We started with over 100 validators in control of the Gravity Bridge contract from block zero.
+
+So we did an enormous decentralized start with more than 100 validators, and every single one of them is in the light client update that goes to Gravity Bridge. And this provides security that is as close as possible and is, in fact, pretty much a direct mirror of the basic IBC security properties. We can't do some of the more advanced IBC security features, but at a basic level, Gravity Bridge is as close to IBC as you can get practically on Ethereum.
+
+And this was really our goal is to make something that, you know, it's not a generic message passing system. It doesn't have, you know, like a million features. You know, we don't support multiple EVM chains yet, but Gravity Bridge is actually decentralized. And despite that, it's cheaper to operate than some of these 10-person multi-sig bridges. We have 150, 140 validators that are submitting signatures.
+
+And yet it is cheaper to execute than a bridge with only 10 people in it. Because we focus so much on taking things out, simplicity, simplicity, simplicity. Gravity.Soul, the Ethereum contract, it had to be so small, we knew we would never need to upgrade it. And that's crazy. How do you make sure you get it right the first time and say, okay, we're gonna once and done this. And the answer is, it's less than 700 lines. You can go and read the whole thing in the next five, 10 minutes.
+
+justin___gravity_bridge
+And that is how you know you got it. And that's how you make it small enough that it's possible that you know you got it.
+
+Citizen Web3 
+While we're on the topic of Gravity Bridge, I'm going to have two quick questions. One is for everybody who's listening to this and all the listeners who potentially want to become validators of Gravity Bridge, how do they proceed? they just go and do it's all decentralized free, no upper assume, no whitelist, none of this submit your 27 KYC documents, your dog's name, your dog's paws, prints, whatever. That's the first question for everybody who's listening.
+
+Citizen Web3 
+If you want to participate in Web3 and being part of that infrastructure. And Willow is personally going to be looking at it as well in Citizen Cosmos. 		
+
+justin___gravity_bridge 
+okay, for the first question, A, we would love if people would submit pictures of their dogs because we love dog pictures. B, if you want to join the Gravity Bridge Validator set or relay messages to and from Ethereum, you go to github.com, gravity bridge, gravity-bridge, gravity-docs. And that's the GitHub repo containing the documentation. You don't need to ask anybody for anything else. I mean, we'll be happy to help, but...
+
+There are no whitelists. Once you're a validator, your Ethereum key will be updated into the bridge automatically. I'm not going to get into the gas optimizations there, although they're really cool. Anyways, I spent a lot of time over the past few years thinking about gas optimizations.
+
+deborah___althea 
+We still have a great Discord too, so for folks kind of looking to, you know, jump in or ask questions, the community there that can be helpful to that process.
+
+Citizen Web3
+And the second question, since you have built the first decentralized bridge, if the technology, the cryptography and everything else in theory allows for what you have in your head, what would right now in your opinion, the perfect decentralized bridge between two different networks? How would it look like? What would it seem like?
+
+justin___gravity_bridge 
+First of all, I will correct that. Most bridges to and from Ethereum are fairly heavily centralized because Ethereum is really hard. IBC is a truly decentralized bridge and it beat out gravity's release by quite some time. So they get that crown and I want to make sure credit is given where it is due. So.
+
+the future of bridges. I think a lot of this comes down. So I have probably a radically different perspective on this. so you know If you ask this question, you could say that zero-knowledge proofs are really incredibly cool. And they are. You could say that everything is going to use IBC, which is also probably the right direction to go in the future. But 
+
+My concern is about fundamental tooling, something that's really, really boring. I think that the future of bridging and the future of blockchains is first and foremost, improve tooling around syncing nodes. It is so hard to get a fully synced node to just relay an IBC proof because the tooling is not nearly as good as it could be.
+
+We can have Cosmos nodes, Ethereum nodes that sync five, 10 times faster. We could have them use any amount of disk space you want and have enormous data availability. It is possible in terms of software to make Inthura obsolete in probably less money than almost any Web3 project spends. The lack of fundamental attention to tooling is really what's holding back a lot of Web3 in my opinion, is that everybody wants to work on the next
+
+next zero knowledge proof. But when they go to build this proof, they're like, yeah, we need to sync full now that's going to take a week. Okay, everybody, you know, go take a break. And I'm just like, what? know, where is, once again, where's your relationship with reality? Cause you have this incredibly complicated match that people are trying to do with incredible capabilities. And they're like, yeah, we need to get the source data. We're just going to sync every block in order.
+
+justin___gravity_bridge 
+and we're just gonna need to have enough disk space for all of them guys, and we're gonna write them all to the disk one after the other and use a bunch of extra disk I.O. and this all sounds like a great idea to us. And once again, this comes back to what Deborah was talking about, is that what technology is capable of and what actually happens is based on economic incentives. And right now, we're still really missing the economic incentives in the Web3 space.
+
+to dramatically improve the boring foundational tooling. And this is something I think a lot about for Althea because Althea, if we want it to be the way internet is bought and sold, it needs to be reliable. And when I say reliable, I don't mean, yes, it works sometimes. I mean, reliable in the sense of, no, it will never break. And these are the sorts of problems that I think about, like, okay, what's gonna cause the chain to fail? And...
+
+What are the really hard problems around keeping things moving, keeping transactions moving and all of this? And there's just so much inefficiency at these lower levels that everybody above is just sort of putting up with. And I think that is really the next step because once I can start up an IDC relayer, have it sync 10 blockchains in a matter of 15 minutes and then start submitting proofs across all of them seamlessly.
+
+That will be when we are ready for the next stage of bridging.
+
+Citizen Web3
+I understand what you mean because half of the things you said are like life stories. Like, I'm just sending you some files over IPFS because it's decentralized. No worries that it's about a terabyte. I mean, you'll get it eventually. All those things are like, my god, this is like dragging and dragging. I totally understand what you're saying.
+
+deborah___althea
+I think Dustin, what Dustin is saying is like very like viscerally relatable to all of us. all feel that. I was gonna say, I think that there's some interesting things, especially in Cosmos, as we, as many of the validators sets are the same or there's interconnection, right? You're seeing the evolution of things like liquid staking and interchain security and interchain accounts that really sort of blend.
+
+Citizen Web3 
+It's a pain, it's a pain, it's a pain that feels right here. I can feel it.
+
+deborah___althea 
+the security, the underlying security staking and rewards between blockchains. I think that's, I see that evolution coming in the near future and how those things can interact and work together and secure blockchains I think is really fascinating. So I think we'll see a lot of that space evolve.
+
+Citizen Web3 
+A couple of questions. So one, if you had now, I mean, and you have like said million things already, to be honest, both you and Justin, but still, if you had now to pick, let's say two or three pieces of advice, not just do, but also don't really don't do that for somebody who is going to be building.
+
+Especially specifically somebody who's out there and I know there's a lot of teams, especially in stealth mode now building IBC, which is I'm not sure how correct that is, but I'm not going to go that way. Stealth, not stealth. Let's people do whatever they want. Decentralization is the beauty of it. But anyways, so your piece of kind of advice, whether it's do or don't for people who are building not necessarily an IBC base chain, but let's stick to that. Or maybe a chain that is going to be cross EVM IBC.
+
+What would you say to those teams right now?
+
+deborah___althea 
+My perspective is always a bit more toward the business and practical side of it. So we do see a lot of projects come in, build great technology, but lack the underlying business dev fundamentals. And then oftentimes what happens is another chain will come along and iterate on that and be much better at this marketing. So my suggestion is to make sure that you're aligned with your user.
+
+that your product solves a problem and that you're focused on the business and economic access. Trying to just salute back to our early part of the conversation, real change happens because of the incentives being aligned. And that's very fundamental to blockchain, because your user and your provider are aligned in how that works. So if you miss that step, if you build amazing technology,
+
+but don't necessarily align those incentives that change.
+
+justin___gravity_bridge 
+And I think my advice from a technical perspective is everything, all of our tools, all of our programming languages, environment systems are designed for building up, for putting more code on top. And the answer is you need to look down. You need to say, what is under me that is causing me issues? And don't be afraid. A lot of people will say, you know, I can't afford to dig into that. I've got to, I have got to get something done.
+
+quicker. we're going to take this shortcut and this shortcut and this shortcut. And that's fine. You do have to do some of that. You can't build everything to be perfect. But you have to be willing to say, OK, this is really causing issues for me. And I am going to do a deep dive and try to do something that's very technical, that's very hard, that I don't think I should have to do. Somebody should provide me a library that works. I shouldn't have to make my own.
+
+Try it. Be willing to understand what is under you and be willing to go down there and monkey with it. Because if you don't, you'll find yourself building all sorts of weird structures to get around stuff. And eventually that'll all collapse down on you and you'll wonder like, man, you know, it's been a month and I still can't ship a working build of my product. And you know, the answer normally is that you need to look at what's under your product and say, something wrong here.
+
+Citizen Web3
+Totally, think getting your hands dirty is something that a lot of people should be ready to do. they... I think any business, And kind of like, guess, the last resume question, more a little bit about Althea, especially for all the Althea listeners out there, like, what are you guys now that you guys have more or less kind of like, okay, we have a product, a project, it's working. Like Justin said, I don't have to solve a bug every five minutes anymore, it's only now.
+
+It's getting the time between the bugs is growing. Well, hopefully. What is the goals now in front of Alfea? I don't mean like the whole thing, but just like in a couple of words, what you can share, of course, and especially something that is related to the future development of Alfea as a project and growing as a community project, whatever company, whatever.
+
+It's the right word here. get lost sometimes with Web3.
+
+deborah___althea
+Yeah, I think what's exciting about Althea is the blockchain is very imminent, right? And then when you have that core, you know, open source layer of protocol and blockchain, it invites many different people to build on it for their use case, right? So that might look different for, let's say, Africa versus something in the US, right? Where we'll focus on fiber and LTE. So seeing that evolution come from being kind of, you know, our core efforts and then expanding that out, I think is really exciting.
+
+Another thing that we're hearing from telecom and carriers that we're going to be building for is that having markets for these larger scale assets like fiber optic cable or RF spectrum and having that be tokenized and opening that market up is also an expanding space that we can support on the Althea blockchain. I think as Justin said earlier,
+
+deborah___althea 
+A lot of times I'll be like, well, we need this, we got to build this, you're the right guy for the job. I think there is, once the Althea blockchain is out, we're going to be moving on to the next thing to basically, know, solve those pain points in the internet as it is now.
+
+justin___gravity_bridge 
+We're finally at the point where Althea is ready to be used sort of the way we envisioned it with many people, many networks working together and sort of changing the way that internet services bought and sold. And this is crazy ambitious here. Like, what's our goal? It's like, change the way the internet is bought and sold. But it's what needs to happen to make things more equitable, more distributed, and to build a future where the internet is something that we want to use and not something
+
+that is something out of our worst net neutrality nightmares.
+
+Citizen Web3 
+Do you guys want to add anything else that I didn't ask or that you wanted to share or to say guys, I don't know, whatever?
+
+deborah___althea 
+Yeah, I think the only thing that I want to add is, you know, thank you and appreciation to the amazing community in Cosmos. You know, the Interchain Foundation works very hard as well as all these kind of core entities like, you know, Peggy JV, Tendermint to support. Informal does a lot of work, you know, supporting that kind of underlying infrastructure. And the Validator community is amazing.
+
+That's what makes Gravity Bridge able to be so successful. So why don't I just give a shout out to all those folks who work in hard every day behind the scenes, can be sometimes unglamorous, but that's what enables decentralized future.
+
+Citizen Web3 
+Guys, thank you so much for finding the time to give to share all this advice and to share your story. It's been amazing. Thanks.
+
+justin___gravity_bridge 
+Thank you.
+
+deborah___althea
+Thanks so much for having us.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

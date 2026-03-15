@@ -1,0 +1,441 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/ethan-buchman-cosmos
+
+Episode name: 
+The now and then of Cosmos with Ethan Buchman
+
+Anna
+hey it's citizen cosmos we're serge and anna and we discover cosmos by chatting with awesome people from various themes within the cosmos ecosystem and the community join us if you're curious how dreams and ambitions become code 
+
+Citizen Web3
+hi everyone and we have Ethan with us today and i don't know if i should introduce him i mean usually like i take my time to introduce the guest but you know what i'm just going to let you introduce yourself because 
+
+Ethan
+Well why why don't you do it i'd be happy to hear your introduction
+
+Anna
+ha ha ha
+
+Citizen Web3
+ha ha ha let's see now 
+
+Ethan
+now now the pressure's on right 
+
+Anna
+ha ha ha
+
+Citizen Web3
+okay the pressure so second time let's we're gonna keep this i hope anna don't don't delete this we'll keep the two recorders together so we have Ethan Buckman with us today the co-founder of cosmos the ceo of informal systems and i know that Ethan you run a validator as well right 
+
+Ethan
+yeah that's uh that's that's pretty low-key information so
+
+Anna
+ha ha ha
+
+Citizen Web3
+ha ha ha
+
+Ethan
+good for you that you caught that
+
+Citizen Web3
+yeah so you see this is why i wanted you to introduce yourself and to see anyway anyways 
+
+Ethan
+honestly if i was introducing myself i might not have mentioned the validator it usually kind of comes up a little later in conversation but for those of you interested it's obviously it's the best named validator uh on the network so if you just look at the list and try to pick the one with the best name um that one's ours 
+
+Citizen Web3
+i like that i liked it 
+
+Ethan
+cephalopod equipment 
+
+Citizen Web3
+it is a good name by the way 
+
+Ethan
+thank you thank you 
+
+Citizen Web3
+how did you come up with it 
+
+Ethan
+oh so a lot of the credit actually goes to jordan bibla the guy who runs looney you know we've been we were like talking for years about you know starting something together beyond tendermint and thinking about decentralized systems and so on and talked a lot about squids and octopuses as just like awesome animals that have like these really cool decentralized nervous systems i think he read a book about them once and got like really into them and so we were talking about them and how cool their nervous systems are and how like they're a great model for what we're trying to build and we also we were super interested in in cooperatives as a model for building companies uh and one of the primary examples of co-ops at least in toronto is the mountain equipment co-op which is like uh sporting goods you know outside goods so like camping and whatever and so we were sort of joking around and the the idea of like the cephalopod equipment co-op sort of came together from there of course we ended up you know initially we tried to create a co-op for it and so we like filled out the paperwork and in ontario co-ops are regulated differently than corporations so you have to like actually for a corporation you can do it online it takes like two minutes for a co-op you have to like get pieces of paper and sign them in hand and then mail them back in and so we did that and then a few months later we got a response from the government that said there was basically a typo in our paperwork and we had to fix the typo and then resubmit it and at that point we just gave up and just incorporated a normal corporation so now it's the cephalopod equipment corp and jordan's not really involved in it anymore um so it's now run by a few other folks but yeah 
+
+Citizen Web3
+i guess it's easier for octopuses to register their whatever they register if they do 
+
+Ethan
+yeah exactly exactly a little less bureaucracy under the sea 
+
+Citizen Web3
+well yeah i sure hope so anyways i had a list of questions for you then i thought they were all boring so i decided to like just ignore the questions 
+
+Ethan
+oh very good 
+
+Citizen Web3
+and yeah 
+
+Ethan
+well i had a list of answers for you and i'm gonna just ignore those so
+
+Anna
+ha ha ha
+
+Citizen Web3
+ha ha ha
+
+Ethan
+let me just tear that up here 
+
+Citizen Web3
+but i have to ask like the obvious question how does one get to find cosmos 
+
+Ethan
+wow um so first of all one has to be around for a long time so this all this all goes back uh i guess you want sort of the origin story so i've been sort of in bitcoin since 2013 in early 2014 you know we ethereum was pretty much founded in toronto and you know i was in toronto and and vlad zamfir and i were sort of very close at the time we were living together and we were sort of exploring and discovering blockchains together and so we started going to these ethereum meetups and you know we met metallic and vitalik taught us what markle trees were and sort of learned all this stuff later in that year we sort of discovered proof of stake and and you know there was a night we were actually in london and we stayed up all night at amir taki's squat in london he was throwing some party and we weren't hanging out at the party we were just like talking crypto economics uh and like that night we stayed up all night basically convinced ourselves that proof of stake was the future and so from that point forward we were like all right we basically have to have to build this like proof of stake infrastructure because we knew that you know nothing scaled and there were going to be many many blockchains and we needed to kind of rebuild everything to support like the applications we thought were going to come and so basically ever since we've been on a mission to build the you know the infrastructure and you know we're almost there but so you know in late 2014 a cryptocurrency research group started up that had a whole bunch of like the early proof of stake folks on it and that's where i first was introduced to jaekwon who had earlier in that year proposed the idea of tendermint as this you know proof-of-stake cryptocurrency with the slashing mechanism and security deposits and so on and so in early 2015 i met him in person at a conference in in silicon valley the crypto economicon which was a really great early conference where a lot of the early proof of stake people were and everyone was talking about you know visions of the future and stuff that's actually coming to maturity you know five years later and so on and so we hooked up there and i actually moved to san francisco for a couple months uh and jay and i lived together in what was at that time called the proof of stake palace because at any given time you know for a period of a few months there was a set of people working in there anywhere from like four to six people or something all of whom were like fully dedicated to making proof of steak happen and so you know i was living there for a few months too and that's where i really started working heavily on tendermint and that's where we implemented the evm on tendermint together like the very very early kind of ether mint idea and talked a lot about building tendermint based side chains to ethereum and this you know having networks of side chains and having many different tenement-based chains and using the tendermint light client protocol for them to communicate with each other so these were you know obviously we weren't calling it cosmos yet and we didn't have it fully fleshed out yet but a lot of the ideas were kind of there very early on and then you know at the time i was working for aeros industries we were we were building now their monax industries we were building like trying to bring the evm and ethereum tech to enterprises and later in the year i decided i would leave aeris and join jay full time at the tenermant company become a co-founder of that company and we would try to raise you know venture capital and and figure out how to build like a you know profitable business on the back of this great tendermint software i wasn't too involved in the fundraising and jay was going around talking all these vcs and this is early 2016 now and you know there they can hardly get their heads around bitcoin uh let alone proof of stake and we're trying to sell them on this vision of the future where there's going to be like proof of stake validator sets and they're going to run all these applications and we're going to build some kind of platform and we didn't quite know what we were pitching and they had no idea what we were pitching and so that that didn't go well after a few months of that at the time i was actually writing my thesis my master's thesis which started as a machine learning thesis and at one point halfway through it i was like if this is going to be a machine learning thesis then i'm not going to finish it and my prof was flexible enough he was like look ethan as long as it can as long as it counts as computer engineering you do whatever you want so it's very fortunate and so i pivoted to be on tindermant and so in april i wrapped up my thesis and we sort of decided you know this this fundraising thing venture capital isn't working you know uh selling enterprises whatever that was maybe a distraction like let's return to the original vision of like public proof of stake cryptocurrencies and you know solving the problems of the cryptocurrency systems in the world and so we sort of went back to the drawing board thinking about what it would look like to try to launch some kind of public network around the tendermint technology and we actually spent a lot of time trying not to create a coin you know i had a hit single at the time which was called scam train to the hit of april wines fast train you know it's a scam training so
+
+Anna
+Ha ha ha
+
+Ethan
+that was that's really great but you know i was like really ragging on all the Shit coins and you know icos were just starting 
+
+Citizen Web3
+did it make to number one 
+
+Ethan
+yeah in spirit uh it certainly made it to number one of my own my own charts you can find renditions on youtube 
+
+Anna
+Ha ha ha
+
+Citizen Web3
+Ha ha ha
+
+Ethan
+and scam train so anyways i was pretty against like coming up with a currency but uh we basically sort of after iterating through a bunch of designs realized that it wouldn't really be possible to build a proper secure proof of stake system unless we actually had a currency to secure it because you know we were thinking about ways to bridge from ethereum or whatever and what would secure the peg and so on and so we decided okay we'll we'll have our own currency system and and we started really getting into the idea of having many different blockchains you know a big part of kind of our philosophy from the beginning had been ideas around like sovereignty and heterogeneity so that like there would be many chains uh each community would sort of govern their own chain in their own right uh and and each chain could be you know very different from the others in terms of what applications run on them and so after iterating on these ideas many many times we sort of came up with the with the cosmos design of there being many different blockchains of them connecting to each other using a general purpose protocol based on the tenant like client and we sort of formalized that as this ibc idea and the notion of like hubs and zones to reduce the overhead of communication and so all of that really started to come together and you know then we put that paper we wrote that paper the original name was actually it was not cosmos it was nuclear uh with a g so gnu kind of like new linux and we thought that was like super clever but it was an awful terrible name uh that was never gonna catch on and i'm really glad we didn't go with it and i think uh you know we were talking we were talking with zaki a lot at the time uh he was helping sort of ideate through a number of the designs and i think he was really against that name and eventually in one conversation we were like iterating around possible ideas and we sort of came up with like notions of atoms and molecules and we hit on cosmos and that was it um and so then you know we changed the name to cosmos the white paper was already out there cosmos a network of blockchains and that was the summer of 2016 and then it was off to the races and then you know we were off creating a non-profit and raising money for it we had the you know the terms of the token uh fundraiser pretty much fleshed out yeah and then the rest is kind of history 
+
+Citizen Web3
+so you said loads of things then i think like anna has lots of questions as well but i think i'm gonna ask the first one sorry um just because i spoke before you sorry you said that you rewrote the idea a few times how many times did you actually reshape the idea until you came up with what it is now 
+
+Ethan
+i don't know how to count that exactly definitely a few times like they were very early ideas when we were you know the proof of stake palace in 2015 that were sort of hinting at cosmos but weren't that fleshed out about having like ethereum side chains talking to each other and so on uh and then you know we were trying to sell this like proof of stake validator platform to vc so you could consider that in early iteration and then we had some notion of something that's that was like just like a time stamping chain which a bunch of other blockchains could sort of submit their transactions to sort of a little bit like the optimistic roll-ups ideas we're seeing today but also less fleshed out and i think that got changed a few times before it became cosmos so i don't know five or six iterations or something it's hard to count them yeah 
+
+Anna
+yeah and what was the biggest challenge that time 
+
+Ethan
+at that time like technical challenge political challenge economic challenge there were a lot of challenges 
+
+Anna
+for you as a founder you can oversee the future and what you do so what was the most challenge technical challenge maybe or it was not technical it was like in political way or so 
+
+Ethan
+yeah i mean so definitely like figuring out the structure of of the fundraiser was a big challenge and you know we initially thought we would do it in canada and because you know we didn't want to go to switzerland or whatever and you know when we started investigating it in canada and talking to canadian like really the biggest challenge was getting other people to understand what the hell we were talking about right if you had been working on this stuff as long as we had then you knew you know you were deep in the proof-of-stake world you knew the problems and you understood and later that year like in september after the ethereum devcon we won most innovative design award or something right so the people in the know knew but when it came time to explain it to other people or to explain it to lawyers so that we could structure the fundraiser you know or explain it to the larger you know people sort of outside that deep technical understanding of things that was a real challenge and to some extent continues to be 
+
+Anna
+yeah did you one just manage to explain it to some vc 
+
+Ethan
+yeah i mean we did so we did start to get funding we got funding very early on and and then the funding actually funding actually went quite smoothly so once we were once we were building a token because the thing is people knew about tendermint for a long time and usually once you have a blockchain design you know the token comes quickly thereafter and everyone's looking to buy the token and tendermint was this thing it was out there it was good software it was working a lot of developers were adopting it and it had no token so there was already this kind of like inherent demand for a token and at first we were like no we're not going to sell a token we're going to build a business we're going to raise from vcs for business and you know no one knew what we were talking about and so once we started talking about putting a token on it people that were already kind of primed for that were pretty much ready to go and so fundraising was actually you know legal structure and so on aside was pretty straightforward once you found people that were sort of already in the space when we actually opened the fundraiser to the public on april 6 2017 it sold out in 30 minutes and none of us saw that coming we figured it would sell out we figured it would probably hit the limit in a week or a couple weeks or whatever but it sold out in 30 minutes 17 million and like that was that was a shock i remember when i i called my grandfather after it happened you know because like i've had kind of a running thing with my grandparents that because they don't understand what the hell it is i mean my grandma actually was the smartest one she like bought she bought bitcoin when it was like 500 bucks or something so you know kudos to her she gave me 100 bucks she's like buy bitcoin for me so she's done very well but my grandfather's never caught on so after that fundraiser i called my grandpa to tell him that i just raised 17 million in 30 minutes i was actually there was a second there where i was worried i was gonna give him a heart attack i was worried that something was gonna happen on the other side of the line but i think still he didn't he doesn't understand what actually we accomplished and probably never will but 
+
+Citizen Web3
+i think i had about 12 transactions that i didn't manage to get through because i remember it it was such a huge huge demand to go through you know people were just bribing the ethereum miners i call it a bribe you know obviously given the more you can give to the gas just to get that was a big that was a big thing 
+
+Anna
+tell us about the day before funding start before you start the to sell the token 
+
+Ethan
+oh  
+
+Anna
+what do you 
+
+Ethan
+like some of the worst days of my life
+
+like leading up to the fundraiser is without it so first of all i was writing production javascript you know i did not write javascript for a living and never had but i found myself in the weeks and months leading up to the fundraiser writing javascript and you know there were a few people on the team at the time matt bell and pong pong zong who's still there um still with with tendermint and you know they they did a lot of the the heavy lifting on the javascript side so if it wasn't for them you know it would have been much harder for me to figure out with them and me and jay we were writing quite a bit of javascript to make this thing work and auditing it and the ethereum the fundraiser contract i think it's an early version of what parodies funds ultimately got stuck in there's a few hundred lines in that contract and i probably spent an hour on each line or something you know like just a ridiculous amount of time reading that contract over and over again and scared shitless about what might go wrong so that was very very stressful leading up to it there were nights of not sleeping and it got delayed a few times of course but it was crazy when it when it all actually worked 
+
+Citizen Web3
+i mean you said you were expecting the sale of the fundraiser sorry to close it first like in a couple of weeks so you always knew you were gonna succeed with it 
+
+Ethan
+we actually had a two week deadline on it so the the structure was there was a two-week deadline and there was a 10 million 10 million dollar cap but there was a higher cap that was a secret so we had a 17 million dollar cap but we kept it secret so we didn't tell anyone but we published a tweet with a hash so we committed to the cap and i think it was that like if we hit 10 million in the first six hours then the cap moves to the higher cap and so we sort of accommodated in the design for getting higher demand and we expected you know i expected that we would probably raise around 10 million dollars in a week or two and we had that you know that higher cap in there is like just in case maybe things will go crazy but then i mean it's crazy to think because leading up to that thing jay and i were like okay how much money do we need to build this thing let's not raise too much money we worked it out and we were like yeah ten million dollars is enough and i mean you know if you look back at like how much money we've spent it's obviously it's way more than that now i mean surely you know it's it's because the prices went up so much and who knows what we would have been able to do if we were really stuck with 10 million dollars but i guess we're quite fortunate to have raised when we did and for the crypto prices to have gone up so much the way they have 
+
+Citizen Web3
+oh yeah i know you mean about what i mean we did our first fundraiser with golos in 2016. i remember bitcoin just went from i think 300 to 500 at that point and we were like oh my god it's too expensive nobody's gonna have us like fight it and like you know 
+
+Ethan
+Ha ha ha yes
+
+Citizen Web3
+one question that is i can more or less guess what you're gonna say but i'm still gonna ask it because i think it's just it's on everyone's mind looking at polkadot they like raising money and raise money again and at least twice as far as i know and don't get me wrong i like polka dots but building our project on cosmos and obviously i'm doing this and we all prefer cosmos for one reason or the other but the obvious question is why didn't you guys go and raise money again i mean wouldn't it be obvious to just do what everyone is doing like file code polka dot and etc 
+
+Ethan
+um i guess because we launched you mean like why didn't we raise money before we launched 
+
+Citizen Web3
+i don't know maybe you would have raised money after you launched 
+
+Ethan
+yeah i mean look jay and i were extremely conservative in the design of this thing and we wanted to be as fair and as decentralized as possible and i think that you know those values really shine through in the way first of all in the way the fundraiser was structured in the amount that was held back in the treasury for the foundation and for all in bits and in the way the launch actually happened i mean it was an incredibly decentralized launch we committed upfront in the fundraiser terms you know this is it so we sort of straight jacket ourselves that we wouldn't be able to do another fundraiser sure we could have tried to sell off more of the foundation's tokens or something like that but you know we didn't want to get greedy with evaluation we didn't know what was going to happen you know we were trying to raise as little as possible to actually get the job done and really keep the thing fair and decentralized and i think that's been for everyone's benefit i guess we didn't really see a need to have i mean sure it'd be nice to have hundreds of millions of dollars in the treasury like some of these other guys have and you know tezos is publishing its balance sheets and it's got like half a billion dollars or something in there it's probably gonna have a billion dollars soon like you know good for them i would love uh on the one hand i'd love that on the other hand that would kind of be terrible because it's a lot of responsibility right what we're managing is already enough 
+
+Citizen Web3
+this is the kind of answer i was thinking you'd answer but i just wanted to hear it from you going back to what you said about managing money and this is an interesting point there is like two or three different groups we see in blockchain there is the projects that they have a foundation which is has a jurisdiction and that foundation usually sponsors whatever the the team it might sponsor some projects that are building on that blockchain and so on then we have the blockchain projects which go in a completely legal way you know they register 5000 companies and they register a security they go to delaware and so on and so forth and then we get the third type of project which is like bitcoin monero whatever i can't think of many because there are there aren't really many who are completely decentralized what would you say was the best way i mean obviously cosmos went kind of the first way right we have a foundation we have the all in bits which does their job and they they sponsor different projects and as somebody who actually got a small grant from all in bits i know that it works so would you say that's the correct way would you say the correct way is just going completely decentralized 
+
+Ethan
+well i mean i guess you know ours was a mix of the first two because there's there's the foundation on the one hand and there was also all them bits you know the for-profit company on the other most of the funding has actually come from the foundation i guess there's a little bit of funding coming from all in bits i think the idea of like the fully decentralized thing is kind of a facade bitcoin was able to pull it off like it's not true that bitcoin has lots of companies now right like block stream and there's there's a whole bunch of other companies that are where they're paying people full time to work on the protocol so you know the idea that there's not going to be companies employing people to work on these protocols i think is i think is very weird and kind of delusional i don't know what the structure is of monero i think as far as i understood there was a company um that develops core software you know maybe they weren't involved in a fundraiser okay that's fine they you know they they pay for development some other way so you know i don't know what the best or the best way to do things is i mean i think there's a lot of room for improvement in the fundraising design space you know we've seen a bunch of proposals of using token bonding curves and things like this so that there's more lock-up of the fund and there's better governance on how they're dispersed and potentially people can cash out if they decide six months down the line before the project launched that they want their money back or whatever right so i think there's a lot of room for improvement and experimenting in the fundraiser design to some extent our concern you know because early on we were like oh you know there's a lot of ideas here you can do this better than just kind of the standard thing why don't we explore some of that the problem was you had to code it as an ethereum smart contract and at the time and probably still our primary motto was to write as absolutely little salinity code as possible because every line is solid you know it's already the case that every line of code you write is a liability but if you're writing solidity it you know the liabilities magnified like a hundred fold or a thousand fold or something so very dangerous so we didn't want to have like a more complicated mechanism involved i think doing things today okay now there's a lot more tooling you get your contracts formally verified by you know four different organizations so maybe it's a different world and we would design something a little more like these new mechanisms that provided means for reclaiming your donation or uh having better governance over the distribution i don't know exactly i don't think this has been figured out fully but certainly you know what we did wasn't optimal it was trade-off between a whole bunch of things and it worked well for us at the time but moving forward if i were to do it again and for some other project or something probably structured differently and would put in more thought into how it ought to be done and obviously we're living in a different world now from a regulatory perspective and and things like this so yeah it's really challenging how to design a proper fundraising 
+
+Citizen Web3
+would you say the regulatory world as you described it will it launch more and more close into the centralized project or the opposite will decentralization kind of i don't know what's the right word to say uphold and win and there will be no more regulatory for the rest of eternity i mean what's your opinion on 
+
+Ethan
+it's a real challenge in some in some respects like okay on the one hand the ico boom there was a lot of fraud and there were a lot of scams and a lot of people you know lost a lot of money on the other hand there was a lot of really legit projects and a lot of amazing technology and you know the whole space of cryptography has moved forward and formal verification is moving forward and all this like fundamental computer science is being advanced because of money that was raised in those in those fundraisers and nowadays you know it's still possible to raise money the problem is now so much of it is like forced into these either accredited investors or these like much smaller limits where you're coming from retail investors and so you know if you're raising from accredited investors well then your systems are it's much harder to get them decentralized it's much harder to benefit you know the average individual or the average developer who's probably not you know accredited by any means so i think there's definitely a lot of problems in that so i don't think the current state of regulation is very helpful and is probably hurtful to the space and to what we're all trying to do here obviously we need to find the right balance and i'm hopeful that there will be more progress towards innovation and securities law that enables more involvement from people with demonstrated experience or expertise or something like that we're already starting to see some proposals like that i mean you know the there's the you know uh crowdfunding for equity regulations whatever they are in the us and there's there's equivalent stuff in canada now and those are only a few years old so this stuff is starting to change but it's very slow and obviously it'll need to get a lot better before this all really works properly but in the meantime you know we have all these basically like vc coins where most of the funding came from you know a big venture capital firm and like what's that going to do for decentralization is probably not very good so that's kind of unfortunate but yeah 
+
+Citizen Web3
+what about something crazy like let's say i mean cosmos has a community pool right and i'm really glad to see the last few days we've seen from ethan cosmwasm and i was really happy to see that because i think it needs to be used for such things not just for security because if you carry on inflating in the security thing it's not gonna run out but what about using the community pool to make collective decisions about investments into projects which will later on give something back let's say via ipc whatever with that 
+
+Ethan
+oh i love it absolutely i mean in theory that there's there's good ideas there right like if we're gonna build some kind of sustainable economic ecosystem we're gonna have to figure that kind of stuff out right i think we're all a little bit diluted with the extent to which like governance functions well in a super decentralized context and you sort of still need to delegate people to make decisions and to source things and just like a fully decentralized governance process over investments sort of like the original the dow on ethereum was probably a bad idea we don't know to what extent crowdsourcing knowledge works right it seems to work in some context not others we don't have that much data around it and it's not really clear if making investments that are likely to have a return is a domain where that works well but what might work well is to nominate is to use the process to nominate someone to be in charge or some small group of people to be in charge and to make investments on behalf and something like that i think would be very cool and you know so we're starting like in the cosmoswasm what's awesome with the cosmoswasm proposal is that you know it's really the first one for the community pool to actually fund some development and it's structured in a way that the payout is made to a multi-sig by you know a two out of three community uh members and and it's basically on them to sign off on the deliverables right and i think you know starting to experiment with more structures like that actually the one thing cephalopod hasn't voted on it yet because i sort of wanted to talk about this and i hadn't had a chance but you know the one thing that i was sort of hoping to see in the proposal was that we would actually use cosmoswasme to introduce more flexibility into governance right because right now the governance you know process on the hub is quite slow and lengthy and it would be nice to see more flexibility there and be able to script some of the payout conditions to have scripting involved in you know who's involved in the multi-sig or how much gets transferred when and so on so i definitely think there's enormous opportunity to innovate and experiment with the governance system to facilitate more sustainable like economic activity uh and investments and so on so yeah definitely looking forward to that 
+
+Citizen Web3
+going back to sorry kind of aware of customers there with the story and well one question i do have for you which i'm really curious when cosmos started to i don't know how to put it correctly to trade right let's say to trade in 2018 and obviously you guys raised 17 million and the cup of cosmos and we all expected that because we knew it was going to be great was almost what like 700 million at the beginning straight away and what did you feel at that point i mean did you just like say oh my god we just created a unicorn 
+
+Ethan
+nervous yeah you know remember remember that tweet from elon musk a couple weeks ago where he was like you know the price of tesla stock is too high or something 
+
+Citizen Web3
+yeah yeah yeah 
+
+Anna
+yeah
+
+Ethan
+this is perennially my feeling about all of crypto so you know uh when that thing went live i mean well first of all it wasn't trading for a while so that was cool and that was amazing it was much more exciting when it wasn't trading because there's less to be worried about but uh but yeah when i started trading i guess i wasn't surprised that it was that high given everything else going on it's definitely nerve-wracking to see that i mean the truth is with all with pretty much all the cryptocurrencies like there isn't really any real world value being created yet right like it's all very speculative and that's true from ethereum on down pretty much you know maybe there's something to be said about bitcoin i don't know but for pretty much everything else it's very speculative so it's really hard to understand or to make sense of what the value is or what it should be and sort of my whole shtick the whole you know for years has been that i want us to move towards integrating this technology with the real world and have it not just be about finance and you know arbitrage and speculation but actually find ways to connect it with real people and real communities and real productive capacity and things to make society sustainable right for us about sustainability and sustainability concerns is what led jay to invent tendermint in the first place and sustainability concerns is sort of what led me and us to sort of put forth the values we did and to design cosmos the way it is to be to support like sovereignty and sort of independ many many many independent zones designed for what you need because that's what a sustainable society is built out of it's not a top-down thing it's a bottom-up thing right i mean that's what's required to actually enable communities to build more sustainable and actual useful blockchain applications we're just starting to see it happen now we're starting to see some zones that are less focused on some kind of finance use case and more focused on a real world use case and once that starts really kicking in then it's a little easier to understand how and why the tokens have value and you know what gives the atom value as like from a security perspective for securing the communication between all those other things but seeing something be worth a billion dollars with no real world use case i mean i guess it's par for the course right like how much was we work with the juicero or whatever right like all these stupidly inflated valuations of silicon valley companies it's all part of the same bubble i guess yeah 
+
+Citizen Web3
+it's all about the application level though isn't it and i mean at the end of the day money is kind of like application kind of right 
+
+Ethan
+i sort of agree that the killer app is money but first of all no one's using it really as money they're using it for finance there's a big difference between finance and money right finance is it's just all this like speculation and arbitrage right and everyone's just trying to siphon a buck off of everyone else and pretty much all of d5 is just that and so the maker down mechanism and all the stuff like it's freaking awesome and appeals to like my my nerd mind but from my like social science mind or whatever it's like this is all just a complete distraction and a catastrophe and one of like the primary drivers for me in why cosmos was designed the way it is and why i was so motivated and so on to build it is to build infrastructure for local currencies right and to enable smaller communities and smaller like cities and whatever to actually roll out their own currencies for that local area these aren't global currencies that everyone's going to speculate on and that are accessible to anyone anywhere they're local currencies that are meant for like local circulation and to support local supply chains and so on and we're not quite there yet and i'm not currently working on a local currency project though i hope to be at some point but certainly uh that was a huge huge motivation for me to work on and develop cosmos and and get it to where it is and continues to be in i hope to see others start to adopt it for that kind of use case 
+
+Citizen Web3
+i'm really glad that you say that because i'm not one of the people who thinks that money brings value it's kind of the opposite you have to have value first and then out of that value you can create whatever is monetary valuable for somebody else a bit crazy where to see that some people think that daffy will save the world well no defeat came because we had a big slide like slide down the market and when the market was bleeding then it was obvious for daffy to come and this is where daffy came in and people were like oh my god definitely no david did not save it 
+
+Ethan
+i love that you call it daffy 
+
+Citizen Web3
+yeah whatever yeah you know i mean it's all 
+
+Ethan
+i mean yeah the the thing is with defy with defi is that it's it's just the same shit right it's the same financial crap it's just a little you know it's more transparent so it's like everyone is equally screwed it's just more obvious that you're screwed which is good it's good to know you're gonna get fucked right in the financial system you don't know how you're gonna get fucked it's like someone's gonna fuck me but i don't know how in defi you can see exactly where you're gonna get fucked and it's great like the risk is right there but people are like oh it's gonna you know it's it's bullshit and all these everyone is trying to build like a global currency and a new die like sure die is cool but it doesn't change anything materially about the structure of the financial system it is not part of the solution right it's a minor minor step towards something a little bit different but we need something really bottom-up and the mechanism might be might be relevant like the stable coin mechanism that they use is probably going to be very relevant for actually enabling local currencies to still be volatile and accumulate value and yet have a stable coin associated with them but why pegged to the u.s dollar when the us dollar is like the source of so many problems 
+
+Citizen Web3
+i'm glad that you said it because that many people understand not i don't mean like to you know that i didn't expect you understand it but not many people understand what you say so i'm glad that you mentioned it but it's good to know but you need to bring the vaseline with you right i mean when somebody tells you hey come for a cup of coffee by the way don't forget the vaseline because i'm going to fuck you over at least we know that 
+
+Anna
+yeah i have a question about motivation yeah and about tough times uh what keep you going that time 
+
+Ethan
+oh man so yeah i mean there were a lot of tough times but i will say that the community never faltered and showing up like you know in 2016 and 2017 and whatever i spent an enormous amount of time just like manning the slack forum or whatever right and answering people's questions and helping people start to use tendermint and seeing people adopt the software that we had built and seeing them enjoy it and seeing it actually solve their problems in ways that other people's software didn't is infinitely motivating nothing else comes close to that kind of feeling and so the fact that people kept coming and new people kept coming and you'd see you know you had guys like like martin dyrin who's still around today with e-money you know he was there very early on and it would be like he would ask some questions about how something would work i'd explain it to him and then you know a few months later someone else would show up and ask the same questions and now martin was explaining it to them and so to see that kind of onboarding process scale and the community grow like that was just like it's just exhilarating and then to see people like in the telegram groups and whatever talking about all the new business right because like in 2015 and 2016 we're talking about proof of stake validators as a new business model and no one knows what the hell we're talking about and then years later to see those to see that vision actually start to turn into reality and to see people who are starting those businesses talking about those businesses and what they're doing and the challenges they're having or whatever is just like fills me with such immense like joy to see that is so motivating and even sometimes like i would say a lot of the challenges were more recent right they weren't they weren't really in the early days they were sort of in the last couple of years and really scaling the team because in the early days like everything was really exciting and you had a very small team and it was all close knit you didn't really have like a lot of the growth pains that you get once you start to get to like 20 25 30 people and communication break breaks down and it's a lot more challenging to sort of hold the team together and scale it so that's when things got really really tough but early on it was like super motivating to know that we were working on something important and people were using it and the technology was working and it was exciting and i also i guess i just have this like motivation superpower where somehow i'm like always keep going because if you know it's interesting or fun or whatever it is maybe that'll die out at some point but i think i was blessed with some capacity for perseverance they say success is like you know 10 intelligence and 90 perseverance and i think that's one of the truest things i've ever heard so 
+
+Anna
+and how many percent is about fun 
+
+Ethan
+i think uh i think that's baked into to persevere it so if you have fun persevere or something like that i don't know yeah 
+
+Anna
+if i um gonna ask you to describe yourself like a person yeah what you do you're a troubleshooter or maybe a researcher who you are by your nature 
+
+Ethan
+oh boy 
+
+Citizen Web3
+i'm gonna help you you have a description on your twitter says internet biophysicist 
+
+Ethan
+that's my default right so i go back to it so it's like internet biophysicist sustainability existentialist and plain text evangelist i think that's my twitter profile right now and i think those three things capture a lot of my current concerns you know so internet biophysicist i i care a lot about you know i see the internet as like a a major phase in biological systems and sort of i'm and i'm very you know in connection to the next one sustainability i'm very concerned with sustainability and with sustainability of the species and of like just cool emergent phenomenon and so sort of connecting those two and you know approaching the internet with the mindset of a biologist and trying to build more sustainable organic systems on the internet that grow kind of organically and sustainably rather than your facebook group or all these other like virus you know those are like viruses right they're they're not quite alive they're infectious and viral and and that's sort of different than you know the way an organism grows or a forest grows so i care a lot about about that stuff i don't know if that's sort of if that's what you're trying to get at though because those are just like you know my occupational description if you want to know more about my traits it's probably better to ask like people i work with ask my co-workers or ask my girlfriend or something i don't know 
+
+Anna 
+Ha ha ha
+
+Citizen Web3
+well apart from the girlfriend part usually it's actually what you described it usually describes you traits not the other way around right so i mean it's what shapes you i mean these things you said are important to you and it's great because a lot of people compare blockchain to forest i think i've heard so many comparisons about mycelium forests uh ants whatever you know 
+
+Anna
+what is your favorite biologic system by the way i think i can guess but still 
+
+Ethan
+you think you can guess 
+
+Anna
+oh yeah i think i can guess yeah 
+
+Ethan
+what is your guess well i mean what constant what is the limit on a biological system i have different favorites at different layers right depends what scale 
+
+Anna 
+Ha ha ha
+
+Citizen Web3
+Ha ha ha now i want to hear her guess but wait now i'm really curious what's the answer right now 
+
+Anna
+so i think mushrooms they're like perfect yeah it's nutsellum yeah so 
+
+Ethan
+yeah at the like 100 kilometer at like the kilometer scale it's definitely mushrooms yeah mycelia i'm a huge fan of nervous systems like early on i was obsessed with understanding nervous systems subcellular i was obsessed with microtubules for a very long time so tubulin is definitely my favorite protein that used to be my favorite question for like biologists back when i was like a biophysicist and you know i was like oh what's your favorite protein
+
+Citizen Web3
+I think i've read some something on one of your not only github pages but on your old blog there was something about biological systems 
+
+Ethan
+yeah i've written 
+
+Citizen Web3
+i've read it like crossover why did you stop writing by the way 
+
+Ethan
+i'm still writing hey come on i just wrote like uh 
+
+Citizen Web3
+sorry 
+
+Ethan
+i just wrote like a long 
+
+Citizen Web3
+it was in april right the last post 
+
+Ethan
+my last post to the genghis khan one yeah i'm still writing i wish i wrote more i wish right now i'm writing some academic papers so i'm working on a few academic journal articles so that's fun and those are all like blockchain related or a little bit about some of the formal verification work we're doing at informal i wish i wrote more blog posts and i'm trying to find better time for it the problem is so i'm like i'm a little bit of a perfectionist i guess going back to traits and i am very very anal about writing and i i rewrite the opening paragraph of everything like 30 times i'll spit it'll take me like three hours to get the first two paragraphs down and then the rest of it you know flows pretty quickly or whatever so i have to get over that and once i get over that maybe i'll be able to write more 
+
+Citizen Web3
+do you make notes when you when something comes up to your mind like when you're on a plane or something oh my god i know what to write and 
+
+Ethan
+a little bit yeah i could be better at note-taking for sure yeah my note-taking strategies are not where they need to be 
+
+Citizen Web3
+talking about algorithms and machines and obviously coming to an informal systems tell me a little bit about it i mean i looked at the website and i've heard a little bit about it i kind of have a lot of questions but i wanted to hear it from you maybe you can like clarify what you guys do and what it is 
+
+Ethan
+so the statement of informal's mission is that uh we want to bring verifiability to distributed systems and organizations and really what that's driven by is the observation that both the systems we build and the organizations we build suffer from an incredible amount of manual error-prone processes and it's very difficult to verify compliance with any kind of properties right like what are the guarantees that your system provides or that your corporation provides and how do you actually verify that and so you know we think about both of these things you know distributed systems and distributed organizations and so on as in many respects as state machines right like they have some internal internal state there are something like transactions that update that state their inputs and outputs and we sort of want to understand that better and be able to kind of specify things query the system understand what state it's in understand how it transitions and what properties it preserves and that applies both for the distributed systems we build like consensus algorithms and also the companies we built and so you know for instance over the last five years of building tendermint tendermint is this incredible state-of-the-art piece of consensus software there's really nothing else like it on the planet today in terms of level of maturity and functionality and so on parts of it are very complex and very difficult to change right because it's gone through so much rigorous testing and reading and analysis that now if you want to change something of it it's really hard to gain confidence the change is correct and that's that's not really an acceptable state of affairs for for systems like this you need to be able to change them and have confidence in the changes you know what what we really want to build what we're really working towards on the distributed system side is process for more verification driven development so that you can get much stronger guarantees out of your development process that the software complies with your specifications that you understand the specifications and sort of build tooling and processes around the development sort of life cycle to bring software and specs closer together and you know a lot of people have articulated this as goals and it's very challenging and so we're really trying to focus in on doing that and the same sort of applies to corporations you know so i've been running corporations now for like five years and inefficiencies and the lack of verifiability of the state of the corporation puts holes in my brain right like it's so unbelievable that as far as i can tell every private corporation is invalid right like if you look at the rules for what a corporation must do and then you look at the state of the corporation i would put money that there's not a single private corporation that actually fully complies with the rules for one reason or another because it's just too difficult and it's not because anyone is like trying to engage in illicit activity or they're malicious they try they're all trying desperately to comply and to keep their company organized and the tooling just doesn't exist and i consider this you know an embarrassment to the species a complete failure of silicon valley like the fact that people you know silicon valley's been building companies for 20 years 30 years and you know 60 years whatever it is and has not addressed these like fundamental issues um is really shameful right and i would be i would be ashamed to have been in the valley for 40 years into still being you know building companies the same way so anyone who's listening to this you know you should be ashamed of yourselves
+
+Citizen Web3
+Shame shame on you
+
+Anna
+Ha ha ha
+
+Ethan
+you know like when the aliens come down and it's like evaluating us and it's like oh we're destroying the forest and you know we have donald trump as the president and all this all this like shameful stuff like the thing i'm most ashamed of is the the state of our corporations and what we let them get away with and how that they're allowed to exist at all in the state they exist in blows my mind so anyway so everything i said about software and verifying software and understanding software and being able to change it and understand what change you made and so on all that applies to companies as well into organization the mission of informal is really to bring that kind of verifiability both to distributed systems and to companies and organizations so that you can actually operate your companies and operate your distributed systems with a lot more confidence and a lot more uh efficiently and the cost of compliance will go you know goes down at least 10x if not 100x for both 
+
+Citizen Web3
+what is the one metric or the one thing that should be introduced first as the antidote to the poison of any corporation that exists today 
+
+Ethan
+i don't know that there's a single thing i mean huge problem i have is that you have all this corporate data and it's spread out over a bunch of proprietary systems and proprietary formats you have your accounting data in quickbooks and you have a bunch of contracts stored in your google drive and you have you have your cap table on carta and it's just like a mess of proprietary systems many of which are effectively criminal organizations as far as i'm concerned if you look at the kinds of behavior that you know intuit which build quickbooks engages in with respect to like lobbying the government to keep taxes difficult to file so that they have a business model and you know you look at what google does and it's disgusting so to be in a position where you don't really have a choice but to use those products is really really bad and so you know i have tremendous empathy for everyone who's running a company every operator every entrepreneur is a hero essentially to be willing to put up with this and i'm i'm not willing to put up with it so that's why informal is dedicating resources to like trying to address this on the organization side and you know what we're starting what we're looking at trying to do is basically bring as much as possible of the corporate state uh into plaintext and to bring as much as possible of the software engineering practices to bear on running a corporation so keeping your data in plain text in a git repository using version control you know that git gives you building like continuous integration pipelines to to kind of enforce the rules about how things in your corporation can change and who can sign a contract for an employee or you know all this kind of stuff can be encoded as rules and enforced in the same way that we enforce rules about who can merge you know pull requests on a github repository and what kind of linting conditions it has to satisfy and what tests have to run and so on we want to do all the same sort of stuff for corporations so that it doesn't cost you thousands of dollars in legal fees and accounting fees to figure it all out after the fact it sort of starts from the beginning but there's so much and it's such a deep rabbit hole for every different domain of running a corporation that it's really challenging to know which piece to focus on first and so we're sort of spread out a little bit uh and trying to trying to pull things back together and um yeah it's really challenging so to some extent i understand why you know no one's really really focused on and addressed this problem and you know we're not going to be able to do it alone but i'm hoping that the sort of same philosophy that led to cosmos and the kind of open standards that we have in cosmos you know the abc standard the ibc standard and so on um we can bring into you know the corporate operation so that we have like a bunch of low-level open source tools for running corporations and people will be able to build you know proprietary and more domain-specific applications on top of that that cater to particular means but really what we're trying to cater to is the developer entrepreneur right in the short term you're a developer you know how to use git you know how to write code you're comfortable with the command line there should be tools that enable you to manage your corporation the way you manage software and that's sort of what we're targeting in the short term and if we can get that right then you know tools for everyone else will follow 
+
+Citizen Web3
+it sounds like this is your little baby because you sound a lot passionate about it i love this i love this 
+
+Ethan
+yeah well i'm just frustrated that that i still have to deal with the shit that i deal with and you know that i can't like query easily query the state of the corporation and it's like you call the lawyer you know you're like okay what is the state oh you call the lawyer and you ask them and they're like oh well you'll have to talk to the accountant and you talk to the accountant they're like oh you know you have to talk to the lawyer it's like 
+
+Citizen Web3
+i used to work for um a core it's like one of the biggest artilleries in the world few years ago and i remember it's exactly the story you know i mean i i was an fb manager i used to open hotels and you know you go to one place you go like to one person and you ask him a question he sends you to another person who sends you them to the other person to the other person to the other person and by the time you get to the last person your day kind of finished off and you think oh well i might as well not do it because i mean my day is finished and i have to click off and just go home so yeah about a few months ago it was it wasn't winter it wasn't winter time prepare yourself for this because it's going to be controversial i think it was winter time and i saw it on your twitter you were talking about hummus now i mean i'm a big fan of hummus I'm israeli and you know and this is something for me this can go just like i noticed are we talking like israeli hummus are we talking not israeli hummus and this is the question i'm kidding that's easy you know take my hummus seriously so when i saw that tweet i was like that man knows what he's talking about 
+
+Ethan
+i i have a problem with hummus and i guess i guess the tweet you're referring to was probably when i was like uh the great thing about living with your grandmother is she doesn't care how many tubs of hummus you eat so at home you know i live with my girlfriend and i sort of have to you know consuming two tubs of hummus in a day is not an acceptable state of affairs uh you know we need to spread that stuff out so but uh you go shopping with your grandma you buy six types of hummus you eat them all in two days and she's like oh i guess we need to buy more homos you know 
+
+Citizen Web3
+ha ha ha i know exactly what you mean so this is this happens to me every time i go to israel i'm like and i go to my friends and like help yourself with that but but don't go to have you on the hummus i mean we just have like two packs you know like uh screw that i'm just gonna go with 
+
+Ethan
+yeah 
+
+Anna
+i have a question uh concerning the company and the initial founders so do you think that at some stage you should transfer part of your influence on the project to another followers or whatever all another developers on so on how you feel that it should work for the centralized projects 
+
+Ethan
+definitely it's important to expand the bus factor essentially right like the number of people who have to be hit by a bus for the project to really fail i think cosmos has done pretty good job on that front and we're continuing to take it further expanding the number of organizations that not just a number of people but the number of companies that have to i don't know get hit with a lawsuit or go bankrupt for the thing to fail so that's growing too so i you know i put in a lot of work pretty early on to sort of onboard others and to you know empower other engineers to take more ownership over things and i think we've seen a lot of that a lot of amazing work being done by a number of different folks who are sort of starting to run things so i don't want to name too many names i guess but you know like like chris goes for instance who did an incredible job you know we brought him on he was this was back in 2018 i guess he was like yeah you know i i'm i want to like i want to build tazos on tendermint and i want to build like you know bridges from cosmos to tesos and we're like yeah yeah you know this is like march 2018 we're like yeah well you know we're gonna launch in a couple of months so just help us with launch for a few months and then you can do your tazo stuff and he's like okay great you know and so he starts helping out with the cosmos sdk and all the stuff and of course you know launch took a year and by the time we launched we still didn't have ibc and and chris was just like invaluable to the whole effort like he built so much fundamental software for in the cosmos sdk and in the proof of stake mechanisms and and then you know took on took leadership on the ibc specification and is still basically the lead on ibc and it's just been you know it's been amazing working i mean there's so many other folks who have you know like anton on tendermint anton's been working on tendermint basically since you know we hired him at like december 2016 or something like that so he's been working on tendermint pretty much longer than anyone besides me and jay jay stopped working on tendermint more or less a few years ago and i stopped you know sort of last year sometime actually contributing like daily to the core code base right and anton has just been like all the way through he's done you know amazing amount of work and amazing incredible amount of the success of the tenerman project is is due to him and if you look at like every project there's you know one or a couple of people like alexander bes who built a huge amount of the sdk and took a lot of ownership there and so many other folks too so okay i could name the whole team there have been many times where i wanted to just like publish articles about like everyone and all the amazing work they're doing so i feel bad for not now mentioning everyone since i've mentioned a couple people so you know i love all of you 
+
+Citizen Web3
+you could just list the names just all of them just said 
+
+Ethan
+well i do that i'm going to accidentally forget someone or something you know so but i think we're seeing it you know we're seeing you know a lot of other people obviously zacky has stepped up a tremendous amount and is playing a big leadership role in the channels and you know jack is in the channels constantly like answering questions and running things and you see a lot of other folks in there and you know we're seeing a lot of people in the community step up and sort of take on admin roles and you know in the discord and the telegrams and so on so and with the organizational decentralization and there's so many projects and so many different leads on the project you know we're seeing ethan frye now running cozumwazam like fry built the first sdk like i don't know how many people know that but back in 2017 he was one of the earliest developers and with cosmos and was building you know early versions of the sdk and throwing them away and starting again and eventually moved on and now he's back building cosmomwasome and you know a lot of people know who fry is he's he's gonna be the first guy to get funding from the community pool to build something right so yeah it's amazing how many how many sort of developers are starting to be known in the community for the work they're doing and i'm certainly interested in promoting uh more of them and seeing more of that so 
+
+Anna
+so for the moment for cosmos uh we don't have chief visionary 
+
+Ethan
+no i'm not sure we ever had just a single chief visionary you know the vision was always shared and people i mean the thing about it was it was the values of the vision themselves lent themselves to being adopted by other people and not feeling like you know it was someone else's right because of this like you know this value of sovereignty and heterogeneity you could sort of take ownership almost immediately of the cosmos vision for yourself and that and i think that was part of what what made it so successful and why we've seen so many other projects come along and say yeah you know i'm building on cosmos and you see you know like the agoric team is you know it has been done tremendous work for the ibc protocol and is integrating there and they're you know they still they're still blockchain agnostic in in spirit and they want to integrate with all these other chains but you know because cosmos was this kind of a bottom up first and and sort of sovereignty first it's a lot easier for people to buy into that because they're like yeah i don't actually have to give up much to buy into this vision i can sort of make it my own and and mold it for my for myself and versus a lot of other projects have this kind of you know more monolithic structure it's a little more top down it's more associated with a single state machine and a single individual who oversees that state machine the vision of cosmos from the beginning was to was to not have that definitively right and so you know when you throw away the single state machine you throw away the single leader people have been confused about you know whatever is going on with jay and so on like go to jay step down like you know who cares it doesn't matter right like uh there's so many other people leading the charge and so many projects that but everyone is so used to there being like a single ceo for the project and you know so when story or that narrative is challenged the average person is confused but uh you know we're really cosmos is one of these leading experiments in actually like really truly decentralizing the developer ecosystem and the funding ecosystem and you know it's fascinating to see that working to the extent it's working i mean it's still early days and there's still a lot of money flowing out of the foundation so i mean if you have ideas on how we can do this better and how we can promote more of the individual developers and engineers and researchers working on this stuff i would love that 
+
+Citizen Web3
+it's challenging as you said to even ex attempt to explain to people that monolithic hierarchy does not need to be to exist especially when we're talking about not a single state machine but when we're talking about a machine that can replicate its own state or rather you can replicate it or whatever right either way and um and i still have even in cosmos chats like when i talk to some people i still have trouble when some people come in and they say like oh my god something happened to that guy i'm like well it doesn't matter i mean it's it's just really you're not putting the two plus two together and it still takes time and time i think to to get people across one probably one of the last questions because you're probably annoyed with us already but um 
+
+Ethan
+i'm not i'm having a great time so i'm i'm happy to keep going we're talking about a lot of fun stuff here so 
+
+Citizen Web3
+Ha ha ha we just spoke about not having a single visionary but again this is about you so what is your vision personal vision for cosmos in general within i don't know 5 10 whatever years how do you see it apart from being the internet of blockchains because this is too obvious 
+
+Ethan
+i mean look like the a lot about the original vision is still intact right i mean it's still it's still about i mean the internet of blockchains it's cliche to say it but about enabling you know this kind of sovereignty for any community to put up their own blockchain for it to be you know to lower the barrier to doing that as much as possible to start to abolish the abstraction between applications and infrastructure uh you know so much has been abstracted away now everyone's running on jeff bezos's computers and you know there's a lot of implications to that and sort of cosmos is about reverting that and you know even with like ethereum or any of these other monolithic stacks the infrastructure is abstracted away you just deploy your smart contract and that's it and cosmos is about sort of reintegrating those things and so i mean the thing for me if we're actually going to fix the financial system you know the most important thing for me is to establish a sustainable society and all of this and you know the vision i think very much was about that and if we're going to do that we have to fix the financial system and that doesn't mean defy that doesn't mean you know your shit stable coin or whatever you know uniswap i mean uniswaps cool and all you know like i said but it means addressing the fundamental way that we represent value in our societies trying to think about it like an internet biophysicist driven non-equilibrium systems they need to represent their environment so that they can adapt to their environment so that they can you know find energy and keep themselves alive and we're thinking about our whole socio-economic system like this and money plays a very fundamental role there as a representative of value and of information right essentially and so the fact that everyone is using more or less the same token of exchange the same medium of exchange in in the form of the us dollar i think is catastrophe for the representation of value uh accurately in society and so so much is obscured by everyone using that common global currency and so a huge part of the vision of the next five years to me for cosmos is about using it for local currencies and reimagining the financial system from the bottom up to really enable localism and to enable you know smaller communities to establish cities whatever it is whatever the scale is we really need to do it at multiple scales and so figuring out how to do that at one scale to have like a real local economic system and then how to connect those things at multiple scales kind of holistic way that can actually make sense of global supply chains and global trade in a bottom-up way rather than this sort of top-down way and you know there are so many components to that and so many things that need to happen and of course you know in my mind a huge part of that is that we actually formally verify all of the infrastructure underneath it so that we can have a lot of confidence in you know the technology we're building and do roughly the same thing for the organizations and that's a big part of informal's mission um which is you know very heavily aligned with the cosmos vision of course there's still the path from here there is many many ways to get there and there's a lot of stops along the way like you know what's going to happen with the cosmos hub and are we going to add waza and are we going to add other features and what kind of zones need to launch and what kind of you know protocols need to be rolled out on ibc and shared security and optimistic roll-ups and you know all kinds of cryptography and you know there's a tremendous amount of things like exciting technological things that need to happen and i wrote about all of it pretty much in um in in that blog post from on cosmos's first birthday on march 13th or whatever this year um so a lot about the tech but really the the five ten year vision i guess for me is to actually change the structure of the financial system from the bottom up by enabling real local economic systems through local currencies that are integrated with each other in a meaningful way that enables those societies to be sustainable themselves and to compose together sustainably so that we get a globally sustainable society out of it and exactly what that looks like i can't you know begin to really know you know i have some ideas and you know i ought to be writing them up a little more but definitely a lot of the mechanisms we're seeing in crypto economics you know bonding curves and and you know stable coins and so on and ibc of course are going to play a huge role in that that's what it takes for cosmos to be a success in my mind right if cosmos is just connects a bunch of shit coins or connects a bunch of global currencies like you know that you know great now solana and nir and polka dot and cosmos are talking to each other it's like big whoop but you know because what are any of them actually being used for right and so all of those are important technologies and are doing really interesting things and i have you know tremendous respect for all of these projects but until we actually figure out how to integrate it into real local societies you know it's all for naught as far as i'm concerned 
+
+Citizen Web3
+and you mentioned businesses computers there so hello to bezos obviously 
+
+Ethan
+hi jeff 
+
+Citizen Web3
+it's a good thing though because i mean i'm quite positive you know what orbit is right because i think you i've seen you tweet yeah okay and i would love to see some kind of integration between orbit and i don't know how it's going to look but maybe cosmos node on orbit i don't know one day we'll see i'm sure i'm sure we'll do something maybe we'll invent something because i think we're the first project to drop to two cosmos and two orbits so we're like oh my god we love both of them we can't get enough of of the two so we have to get both of them 
+
+Ethan
+cool 
+
+Citizen Web3
+but it's a good thing that you mentioned it like seriously like talking about you know a lot of people uh when they talk about decentralization and about building something another day when you go and do it on a server that belongs to one of the biggest monopolies in the world you gotta ask yourself the question you're like is something am i doing something correct here or am i like you know where is that line yeah so totally but would you say that for for societies would you say that it's more important to first create a decentralized monetary system for a local society or would you say like a decentralized law or the centralized production or or like you say for example within formal systems i guess what would you call it distributed verification right well what's what's the first step to build the correct like in brackets obviously society that goes on and multiplies 
+
+Ethan
+yeah that's a good question and i don't think it's going to be the same thing everywhere right because i mean a big part of the you know the cosmos vision and values is that we don't know what's right for everyone and so we need you know the tools we build and the protocols we build need to be able to be fit and molded to the local circumstances right and so in different places different things are gonna need to happen first i think more or less what's probably common in every place is that you know you want to be able to as much as possible provide the bare necessities for people to stay alive from a local supply chain right like to the extent that you depend on cargo traffic across the ocean or through the sky to get things that that are just like part of basic every day keeping people alive um you you have problems right and so addressing that and establishing local supply chains um and you know more local circulation and you know interestingly enough the whole this whole pandemic is sort of making people realize that a little bit more and it's forcing a lot of countries and jurisdictions to look inward and focus on the strength of their supply chains and you know i think that we're actually somewhat fortunate for that side effect i mean obviously there's going to be a tremendous amount of suffering and destruction as a result of this thing and you know i don't want to be too naive about the rosy outlook but to some extent it feels like one of the least bad things that could have happened like of all the terrible catastrophes that are set to befall humanity this one feels like mild compared to what else could uh you know could be happening uh as a way to sort of force us to reset a little bit on you know our trajectory but i do think that you know local trade systems and ways to basically figure out how to make goods and services flow in loops in a local system is going to be really important and that's basically the heart of any kind of local currency is is is ways to keep keep the thing kind of moving in in circles within within the within the community and basically grow with kind of concentric loops like that rather than just kind of spiraling in every direction like the global uh economy does and so figuring out those those loops like you know from a supplier to a producer to a consumer back to a supplier somehow is going to be really important in mapping those out and there's so much variability in them in every domain in every jurisdiction it's really challenging to try to kind of paint something generic about them but we have you know there there's some precedent like you know there are what are they called like mutual credit unions where like the the veer bank in switzerland there's basically like a union of a bunch of businesses that come together that basically find ways to sort of trade internally uh on mutual credit and so they've you know created this like local complementary economic system born in the 30s like after the depression and it's still around today and it's huge it's processed like you know many many billions of dollars i think looking at that as a model and trying to replicate that sort of thing in other jurisdictions to enable people to get off their dependence on the dollar so that you know just by interacting with other local people you can sort of meet your basic needs without having to to work nine to five just to get dollars to make um you know to pay for your basic necessities i think is is sort of where we need to start so 
+
+Citizen Web3
+i feel what you're saying because it feels like a lot of it's not it's not the people's fault because i was the way i was going to put it i'm going to rephrase this because the way i was going to put it sounds terrible but it feels like the way that this system the current system from the renaissance roughly from the renaissance has been building has put people into the shape and the state of mind where the way to think about making money or or doing something or doing education or working as a very like straight line without the possibility of going left to right and that's not the way it is we have so many possibilities like you say we have so many things to fuck like you know and and covet has actually shown and a lot of holes and a lot of loopholes at the same time and the systems in every single system and i totally agree with what you say cool would you like would you want to add you want to add something maybe we didn't ask something that you wanted to share and 
+
+Ethan
+check out informal systems informal dot systems on the web uh you know find us on twitter and uh follow what we're doing it's super interesting work if you're interested in formal verification or understanding how we can help you um check us out and reach out 
+
+Citizen Web3
+cool thanks for coming on and it's really been a pleasure talking to you and i would really love to do this again like sometime in the future because 
+
+Ethan
+thanks for having me 
+
+Citizen Web3
+and you're still at the front of the bus so 
+
+Ethan
+Ha ha i think i think if i was hit by a bus cosmos would be fine uh i don't think there's a single person that you know i think our bus factor is pretty good by now yeah 
+
+Citizen Web3
+Ha ha ha okay thanks Ethan for coming on and 
+
+Anna 
+thank you everyone 
+
+Citizen Web3
+join us again next time
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

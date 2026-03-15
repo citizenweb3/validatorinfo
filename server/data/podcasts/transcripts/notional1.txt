@@ -1,0 +1,934 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/notional1
+
+Episode name:
+The Heart of a Project, Bare Metal and Rugs with Jacob Gadikan
+
+Citizen Web3 
+So, guys, before, before me and Jacob, like, go crazy on the intros. So, of course, this is Citizen Odyssey, Citizen Cosmos, we're live stream with Notional today, with Jacob. Hi, Jacob.
+
+jacob_gadikian 
+Hey man.
+
+Citizen Web3 
+Man, I'm glad to see you. I'm glad to see you, man. I haven't seen you. I've heard you, but I haven't seen you in a while. So in face, since a couple of weeks ago.
+
+jacob_gadikian 
+Hi.
+
+jacob_gadikian 
+Well, you know, it's cosmos and we really, we keep pretty busy. Stuff is always changing, growing, the stars in the sky, they reconfigure themselves. Hell of a thing.
+
+Citizen Web3 
+Yeah.
+
+Citizen Web3 
+But it's good, right? That's good. That means there's...
+
+jacob_gadikian 
+In auto-cuny, I mean, at this point, I couldn't imagine doing anything else.
+
+jacob_gadikian 
+Feels quite natural, you know Seems like seem like you got your own production, you know really rolling as well
+
+Citizen Web3 
+Mm-hmm
+
+Citizen Web3 
+Well, we are slowly moving into development, moving into game day, slowly building the studios, doing more infrastructure, hiring people, growing. But let's not make it about citizen cosmos. Come on, let's make it. One day we should, we should one day, we should one day, we should one day. I promise, I promise. But Jacob, last time we had a podcast with you,
+
+jacob_gadikian 
+Okay, I really ain't a little bit of a black citizen, Cosworth. You guys got the robot, though, go easy on that.
+
+That'd be cool. Alright.
+
+Citizen Web3 
+I remember when we had, it was, let me see, when was this bugger wait? September 22, 2022. Wow, that's a good day. That's when it came out, but it was recorded before that. So it was recorded, must have been now like eight months or so. And before we like go into, because this time I'm going to want to make it about notional. Last time was about you and the podcast is about people. And this time let's make it about notional. Yes, yes, I promised, I promised.
+
+jacob_gadikian 
+Good.
+
+jacob_gadikian 
+Yeah, I'm really interested in wanting to do that, yeah, man.
+
+Citizen Web3 
+from keeping my promise. I think there is a lot to learn about notional. And I know you are the heart of notional and the head of notional. But, but
+
+jacob_gadikian 
+I mean, we have a team, I do believe 30 people, we count everybody and I certainly do.
+
+Citizen Web3 
+There we go, there we go. And that's what I wanna hear. Ha ha ha. So tell us, tell us about the team. Come on, let's talk about, let's jump into it. I mean, let's talk about the team.
+
+jacob_gadikian 
+I mean.
+
+jacob_gadikian 
+I mean what do you want to hear about the Notional story? You know before you were kind of asking about like the Jacob story right? You want to hear the Notional story?
+
+Citizen Web3 
+I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I, I
+
+Of course, of course, but if you want, because last time, like, I remember the first server story, you know, the Notional Lab taking off, but of course not everyone has heard it. So if you could do like a small recap of the Notional story, not like from the Jacob side, from the Notional side kind of.
+
+jacob_gadikian 
+Where? Ooh-ooh?
+
+jacob_gadikian 
+Oh yeah, okay. Yeah, exactly, from the notional side. So, well one, I didn't really know what to call it, but I wanted to start an Osmosis Validator because I had spoken to Sunny about DEXs, like as a very general concept a few months before Osmosis launched and it was calling them where like I didn't understand a thing.
+
+jacob_gadikian
+I knew that he was really enthusiastic about it and it was sounding super cool. We were the last validator to jump in and basically I thought I want like a playful word like something describes what it was and I was like, ah, notional. Notional because like, you know, hard to define or unclear, right? And at the time, so notional was
+
+myself and Kang and Ricardo and
+
+jacob_gadikian 
+Eh, we started this Osmosis Validator. Now, to keep this focused on, you know, notional as opposed to Jacob, right? So like, we had this quite old office in Hanoi, which is actually like an old apartment. It's not really, you know, it's not like office space. We have office space now, but, you know, back down at just an apartment. And somehow, we,
+
+I believe that we were basically the first to do at home bare metal. A cool part of this, like, I ran into all kinds of problems. And in this case, problems were a blessing, like problems were a good thing because when we hit these problems, we got to solve the problems. So I mean, OK.
+
+jacob_gadikian 
+Me and Kang and Ricardo, and as we began to relay, more and more chains asked us to join their validator set. So we also relay packets for them. I believe that was about the next 13 chains, and also Kang, who is, he's a guys remarkable man.
+
+jacob_gadikian 
+I don't really think that Notional would have the same shape today without him. He began to recruit his friends. And so, you know, one thing about Early Notional was that it was really very informal, right? Like, we were not terribly organized.
+
+jacob_gadikian
+And we were just sort of like going, right? So we expanded to more and more chains. And at some point in here, we began to hit relatively serious engineering problems. And each time, we'd be like, no, we can fix that. We can do it. I'm like, yeah? Oh, yeah. Yeah, we can do it.
+
+jacob_gadikian 
+for everything that we've done since. Like we'll validate a chain. We will learn about how it works. So most of the chains and cosmos are, I usually say 90% the same, right? Now, however, that 10% can be really quite a thing.
+
+jacob_gadikian 
+Sometimes it's sometimes a lot more than 10% you know at most is a pretty unique one right? anyhow, so
+
+jacob_gadikian 
+Right, so then there were two and there were three and there were four and What we what we ended up doing was essentially like we would validate we would solve problems in the stack And then we ended up like doing really well with delegations in the bear market and then at that time We didn't have a software engineering practice. Well a formal one, right that
+
+jacob_gadikian 
+Like we were just like the validator that fixes stuff and At some point in there It was definitely as most of his team first one like no, we would like more of this so we have to figure out like a way to pay you and and So like we worked that out on our end that meant having a company, you know and a whole bunch of other details that really like
+
+we had not considered in depth. I believe our incorporation date was, it wasn't like too tragic, right? A couple of months after we spun up the first nodes. And basically just like everybody mutually agreed, okay? So like all of the agreements that we made, starting with nodes, just, you know, slept that into this here Singapore company.
+
+jacob_gadikian 
+We schlepped the entire thing that we were doing into notional labs, PTE, I think, the Singapore company. We also started a Vietnamese company. And somewhere in there, we also began to do work on DigChain.
+
+Basically, at around the same time, we began to work on a contract basis, Osmo, and then... Well, I think it was actually Dig first, Osmo second, now that I think about it, and...
+
+Citizen Web3 
+That's, that's...
+
+Citizen Web3 
+Do you think we can try and go over, because I tried to collect all of your contributions and I tried to collect all of the projects your guy is now working on and I failed a little bit. So help me out. Let's try to get what Notional is because Notional is contributing a lot of places. So you have Dig, you have validator, you have engineering, you have consulting, you have
+
+jacob_gadikian
+Yeah.
+
+jacob_gadikian
+Bye.
+
+jacob_gadikian 
+Thank you.
+
+jacob_gadikian 
+Yep.
+
+Citizen Web3 
+audits for different repos and different codes, right? You commit to the repos as well.
+
+jacob_gadikian 
+Yeah, well We are developing the audit practice so we check lots of code right and at this time We don't formally do like hey you give us X dollars We're gonna audit your repository. There's actually there's a really clear reason for that When we compare like the work output of by the way here here we go
+
+Citizen Web3
+Mm-hmm
+
+jacob_gadikian 
+right? I'm gonna go ahead and I'm gonna praise the hell out of informal systems. That'll be different for six months ago. Okay. When I look at their audit work output, like, we want to be there and able to... It's not really about... I figured that we would find
+
+Citizen Web3 
+Yeah.
+
+jacob_gadikian 
+and explaining them really well. And so we're actually looking to create, what they have is what's called a document compiler that creates this really nice formatted document that allows them to make an audit into a product. And I suppose right now I'm marketing informal, but I have no problem with that.
+
+jacob_gadikian 
+like they do a tremendous job. And so like once we have that, we'll probably begin to sell that. And currently any auditing we do is, it's funny. So it's more like informal for a formal audit right now. And we're doing informal audits.
+
+Citizen Web3
+informal formal informal formal but not from informal from notionally
+
+jacob_gadikian 
+Well, I don't know if you know this, but the name of that company is a play on words just like no shell
+
+Citizen Web3
+Of course. I mean, let's not go into citizen cosmos, right? I mean, come on. So, let's, so, no, no, but it's cool. But wait, other things, Jacob, because I want people to, my, my, well, not goal, right? But my target is here is to learn about Notional, who is the company, not company, not the equity company, I mean, not the legal company, but company is a project behind Notional. I want people to know,
+
+jacob_gadikian 
+Okay, you knew this
+
+jacob_gadikian 
+Thank you.
+
+jacob_gadikian 
+Hmm? Hmm? What?
+
+Citizen Web3 
+No, some people see notional as a validator. Some people see notional as, oh my God, notional. The guys are always on Twitter. Somebody's like, notional is the guy who is always exposing somebody or somebody. So I want people to stop thinking just about that. And I want people to see what you guys do and to understand that the work that you do is important.
+
+jacob_gadikian 
+Thank you.
+
+jacob_gadikian
+Yeah. That's a very good question. I would characterize our business as like a cosmos-oriented, full-stack blockchain engineering firm. And what I mean by this is that because we began as validators and we started relaying,
+
+jacob_gadikian 
+every piece of the Cosmos stack. And we're actually, we're finally getting, you know, more serious about Cosmosm. For a long time, we were, like we worked on Cosmosm, but not in Cosmosm, you know what I mean? So like, we would maintain and update all the different Go libraries and stuff
+
+jacob_gadikian 
+But we didn't write a lot of code in Cosmobildon, but we have actually a number of really interesting contracts and also some concepts that are flowing out. Here's the point though. So because we do all of these things and have a relatively large team, one of the things that we have that I think really,
+
+jacob_gadikian 
+and informal who have this like ecosystem-wide capacity. Inclusion, yes, fewer team members, I think. Interesting thing about inclusion is, it's like it's the depth of Zuckie's brain.
+
+Citizen Web3 
+Occlusion maybe? Occlusion maybe?
+
+Citizen Web3 
+Mm-hmm. Mm-hmm.
+
+jacob_gadikian 
+Like, he actually, he absolutely is a person who can advise and work at any layer of the snack and he'll also give you super insightful comments in a single sentence, which is very interesting. It's quite different from me actually. I'll use 10, 20 sentences. And 20 sentences more.
+
+Citizen Web3 
+I know what you mean.
+
+Citizen Web3
+Mm-hmm. Yeah.
+
+Citizen Web3
+Yeah, I'm the same as you and I'm the same as you man I also I also envy when zaki like even though I don't agree with a lot of the things he says sometimes and I write something opposite I want to write something opposite, but I'm like damn But like zaki put it into one sentence and for me now to explain my point I'll have to write like a whole article. I'm like, oh fuck it. I'm just gonna like next time next time next time I envy people who can do that, but man, um
+
+jacob_gadikian 
+8 minutes to go. Yeah.
+
+jacob_gadikian 
+It's it's a it's extremely impressive. So Where we're going and what we are are actually probably the same things, right? So what we are
+
+Citizen Web3 
+Yeah
+
+Citizen Web3 
+Yeah, yeah
+
+But Jacob, what if you were like, you know, let me ask you a different one. It's the same question, but it's from a different perspective. Out of all of that today, out of all of that like engineering slash social governance work that you guys do, what is the, maybe not the one, the one direction, but what is the one
+
+jacob_gadikian 
+Hey! Wait?
+
+Citizen Web3
+guys in Notional as a team, you constantly think, ah, we love doing that. This is something we would be doing all day, every day, and never stop. I mean, there's gotta be something that you guys are like, yeah, you're proud of the most as what you achieved as a team, and something that you guys, you know.
+
+jacob_gadikian 
+Oh, I mean, I, it's, well, you want to know our proudest achievement? It was, okay, it was fixing a lunk. And, okay, now let's get a couple of items out of the way. The lunk, obviously, quite controversial. And it should be. One, is lunk a shit coin today? Oh yeah, probably. Two, they have lots of users, lots of market cap. Yeah, definitely.
+
+Citizen Web3 
+Yeah, of course.
+
+jacob_gadikian 
+So when we fixed, LUNC did that solve like a really serious IBC problem, network wide. Actually yeah. So there were like all of these stranded packets all over the place, Osmo, Juno, the Hub. And it had to do with the fact that like they were connected to Lunaclasic, but you know, they no longer were.
+
+jacob_gadikian
+I won't go down a technical rabbit hole on it. And it was really interesting the feedback that we got from people on this. What we were told by third parties was like, well, you know, that was like a one line code fix. But from the governance angle, we had no expectation that you'd be able to pull it off. And actually, I look back at this,
+
+Okay, so the Lunk fix was truly, it was like one, it might have been three lines of code, really tiny, right? And really all it was was like reverting changes that I think that Sunny had made because what's happening during the Lunk death cycle, right? All of the newly like totally free Lunk shit coins, right?
+
+jacob_gadikian 
+That sucked. And so, I mean, basically it was either disabled channels on the Osmo side or the Lunk side. Or even sometimes I think we should have taken Osmo down. But Dave convinced me otherwise. Anyhow. So like.
+
+jacob_gadikian 
+the one day, right, to write this code fix, about three weeks to audit it, so our team audited it. Our team tested it in every way that we could, and then tried to reason about like, okay, how can this break, right? But actually, I don't think that was the hard part either
+
+Team themselves checked it, TFL checked it. The, what the hell are they called? Terra Rebels checked it. Like a lot of people checked it. A lot of skilled people. I don't really think Terra Rebels are so skilled, but like a lot of very skilled people from throughout Cosmos had a look at our little code change and they were like, yes, this is the one line code change you need.
+
+jacob_gadikian 
+on it. And then finally, though, like, you asked about proudest accomplishment. Okay, it was getting through governance proposals that actually in hindsight, they could have been slightly misguided in the sense that
+
+What we did is we the first one was one that said, okay, we'll have a new canonical repository Okay, and that pointed at the Terra rebels repository unfortunately like I said look a little like poopoo queen type problems, right and
+
+jacob_gadikian
+And certainly we never received any funding from Terra Rebels. It was Osmosis grants that funded this work. And so we pointed the repository there. Interestingly, it might have been a first. It might have been the first time that a chain began to direct its own software development so specifically.
+
+And then after that, I mean, there was this other one that was basically, okay, well, we're going to reactivate IBC. So this software upgrade governance proposal was, I mean, it was pretty different from others. And because LUNC had so many problems, it demanded creativity in solving them.
+
+jacob_gadikian 
+rebels rugged, right? After IBC was back up, after terror rebels rugged, and during the brief period of time, maybe one month, that we thought that we were like, gonna continue to work on it, the poo poo got too strong, right? And we ended up not working on it. But
+
+jacob_gadikian 
+Like during that period of time, we came up with another idea. It was like each Git repository, it's an unnecessary dependency for the chain. We shouldn't have a canonical repository because every Git commit hash is unique. So we could have hundreds of repositories and do software upgrades from the commit hash.
+
+jacob_gadikian 
+isn't, to my knowledge, another Cosmos chain that works this way, where you can have your repository anywhere, and your team can be anyone, and the chain can vote that in. Now, technically, because we, OK, I have a new trope, too. I didn't have this trope six months ago. My new trope is, so we were making this governance system, right?
+
+along the way while we were making the governance system, we kind of built a bug. It's called totalitarianism. And like to be really specific about the nature of the totalitarianism bug in Cosmos, okay? So basically one of the firm realizations that we've had
+
+Citizen Web3 
+Oh man.
+
+jacob_gadikian 
+Okay, that two thirds, right? So as soon as you exceed that veto threshold, right? Well, even if you go back as far back, something I'm not proud of, Juno Prop 16, right? And by the way, like, no, proud of it, might've been the right choice though, but like very on the fence. See my hand? See my hand? They're like, question is there, okay? Definite questions.
+
+Citizen Web3 
+Mmm.
+
+Citizen Web3 
+Yeah.
+
+jacob_gadikian 
+But it's actually, it's the same bug. It's the same totalitarianism bug. Because as soon as you pass that 33% veto threshold, and by the way, I mean, how the hell are you ever going to agree on anything? If you allow vetoes say like at 20%,
+
+Citizen Web3 
+It is.
+
+Citizen Web3 
+Yeah.
+
+jacob_gadikian 
+in the least controversial cases. And I mean, I know you're very philosophically cosmos. I know I am too. And frankly, that means we don't really want to take the least controversial decisions. We want to, you know, have the full array of options open to us. Okay, so digital totalitarianism, point being, actually every cosmos chain works this way, but like the user community,
+
+Citizen Web3 
+Mm-hmm.
+
+jacob_gadikian 
+I shall thank Ganzi, Ganzi of Stakeshito, okay, for this. Ganzi of Stakeshito. This young fellow, he lectured me, repeatedly, on, okay, maybe he said this to me 50 times. There is no consensus except social consensus.
+
+So like the really interesting thing is that on LUNC, we actually did change social consensus. And that community, even though it's, I mean, that is one hell of a weird blockchain community, right? They actually are prepared to accept software upgrades from wherever and expect the validators to review that, which is pretty cool.
+
+That's our biggest accomplishment, is like changing the scope of social consensus on luck. That was cool.
+
+Citizen Web3
+I think that's the goal. I think that's the goal, in my opinion, of what anybody who comes into this space for values, at least, and understanding that consensus is only social, and we are social creatures. And even machines that we create will have social consensus, because that's what they know about. That's what they understand. We created them in our eyes, so they will also think the same.
+
+jacob_gadikian 
+Thank you.
+
+Citizen Web3
+how will they react to pets? And my argument was that they will love cats and dogs, no matter, even if they hate humans, they will love and pet cats and dogs and think they're feeling good because it's in built into them. Of course, it's in built into us. We're never gonna design a machine that, well, it's gonna be, I'm again, it's gonna be strange, right? So it's kind of, I think, an automatic thing that I can see that's passing on to them.
+
+jacob_gadikian 
+Because we love them.
+
+jacob_gadikian 
+Yeah, yeah, yeah. Did you happen to see Jack's tweet? Oh, if we're going down an AI tangent, I'll take like just a few seconds on AI here. I'm going to see Jack's tweet on, you know, blockchains are how we're going to control and restrain AI. I replied to him, you're right. I think about this a lot and we better not fuck it up.
+
+Citizen Web3 
+Just sorry.
+
+jacob_gadikian
+So we look out on a longer time scale, right? And it's hard because Zender she changes so damn much. But if we, you know, look out over years or whatever, I actually think that is the final purpose, a lot of the systems that we're building. And seriously, we better not fuck it up. Cause actually the AIs are, dude.
+
+Citizen Web3 
+I can tell you, I'm going to say something which I wish I'm not going to say anything actually, I'm going to like say but without saying it because I'm not supposed to. Well, there is AI projects within Cosmos and I know of one AI projects which has attracted very, I'm, put it this way, I'm going to be, yeah, it's going to be interesting. I'm not going to say anything beyond that, but there is more and more attention that AI projects are getting and I think
+
+jacob_gadikian 
+Okay
+
+jacob_gadikian
+Mm-hmm. Okay.
+
+jacob_gadikian 
+Wait, wait, wait.
+
+jacob_gadikian 
+Well, I mean, I know of two. You must be talking about the same one or one of the two Well, you know, that's a quality one, right? You know quality ones like there's one that does it at the chain layer and then there's another with the abstraction and by the way there
+
+Citizen Web3 
+Of course, we're only talking about the same word, of course. Yeah.
+
+Citizen Web3 
+Definitely not definitely not definitely not talking about fetch AI if that's the question. That's definitely not the project in question
+
+jacob_gadikian
+Yeah, I mean I like fetch AI, but I just don't really see a lot of AI right
+
+Citizen Web3 
+Yeah, it's a bit, yeah, it's a bit, the project itself is cool, but yeah, it's like, there isn't much difference with the existing web too.
+
+jacob_gadikian 
+Well, I mean, you know, they didn't build a global bare metal validator set and require them all to have GPUs. Just just for example, you know, weird, right? Yeah.
+
+Citizen Web3 
+Yes, yes, yes. But yeah, well, you know, I mean, this is by the way an edge validation is something I Kind of respect you guys a lot for and I think a lot of people I am out there and I don't mean to you know sound offensive but I think as not just as a validator but as a I think people underestimate the importance of what the bare metal validation of
+
+jacob_gadikian 
+Yeah.
+
+Citizen Web3 
+What it will change in five years to come or even less, I mean, hopefully it will not be as quick. But I mean, I don't know what's going to happen after the next, during the next bull market where, you know, companies are going to start crazy and shutting down probably validators just without any notices, whether it's AWS, Harris, etc.
+
+jacob_gadikian 
+Yeah, well, I mean, I feel like we already saw that a little bit and Yes, I mean, I mean that's certainly another thing the notion is
+
+Citizen Web3 
+What's your advice? What's your advice to validate your your guys are pioneers in that in my opinion So what's what's what's your advice? Now I want you to give advice, you know, I mean there are validators out there There are people who start in out there are me small small validators like cars. There are medium validators They're big validators, you know, there are different sets but I think all of them should hear this from you because Honestly, I think you guys have done a tremendous job on it. I've seen some crazy videos with them
+
+jacob_gadikian 
+I don't even want to know. You want me to get all beat, yet?
+
+jacob_gadikian 
+Yeah.
+
+Citizen Web3 
+right and give them give them an advice
+
+jacob_gadikian 
+Yeah, it is cool as hell. OK, so props to Long. Let's start there. So Long is the person running the majority of our validators these days, and huge props to him. And since you asked how, I'm going to take really a little bit of time on this, and I'll drill straight way the hell into it.
+
+jacob_gadikian 
+perspective, okay, is it's like a thousand dollar computer. Now unless of course you're validating cyber, you don't necessarily need like an Nvidia, you know, green team GPU, right? But there are a few hard requirements that that can help you get around like really common stumbling
+
+jacob_gadikian 
+So don't look at server grade equipment if you ask me. If you wanna be validating from the edge, the main thing is getting as much bandwidth from your M2 PCIe 4.0. One of those stick hard drives, right? Between that and your CPU. Oh, and by the way, there are now PCIe 5.0,
+
+jacob_gadikian 
+You can try it. They have freaky large heat sinks. We haven't tried it yet. I mean, lead you to that. No, sorry. They have heat sinks and they have fans and moving parts actually scare us from like a physical systems perspective. So we're like, how are guys with fans? I don't know. I don't know. Right? But so these
+
+I'm just gonna put this. Okay, your disc is the most important part. You can get like an AMD Quad II, you know, as much as 16 core desktop CPU. By the way, do not bother with like a Threadripper or an Epic, the desktop ones are fine. Same thing with Intel. With Intel we usually use, with their 13 series,
+
+cheap 14 core Intel CPU that you can buy.
+
+jacob_gadikian 
+Get one of those, slap. It's about 32 gigabytes of RAM per node into it. So like you can and probably should, especially if you're doing this from home, run multiple validators on a single machine. And actually in our case, what I should say is like,
+
+jacob_gadikian 
+show
+
+More demanding nodes will have their own machine Osmo has its own machine Juno has its own machine. Have most has its own machine Chains that are used less they don't have the same CPU and network requirements and we double or triple or quad them up, right and
+
+jacob_gadikian 
+Basically though, as long as you have even a kind of shitty internet connection, like 10 megabits, both directions, reliable, you're good. It'll be fine. And now there will be plenty of people who will tell you not to do this. And quite frankly, they do have their reasons. What I mean by this is that when you validate from your home or office, it is for work.
+
+jacob_gadikian 
+you're going to miss more blocks. If you went and looked at Notionals of Mofs Validator, for example, on Mofs we have I don't know like 95 to 99% block, you know,
+
+Citizen Web3 
+I think on evamos almost everybody misses blocks. I think it's very rare to see 100% constantly on each the same validator on evamos. Very rare. We did before, now we did also for a while and now we had to change machines because we went to a different bare metal machine, the main machine, and we changed the whole setup.
+
+jacob_gadikian 
+Oh
+
+jacob_gadikian 
+Oh, we did it. We used to do it. We used to do it.
+
+Yeah?
+
+jacob_gadikian 
+Move, move.
+
+jacob_gadikian 
+Yeah.
+
+Where were you before? Where do you know?
+
+jacob_gadikian 
+Yeah.
+
+Citizen Web3 
+It was mostly cloud before. And so this time it started to, right now we cannot get to 100. It's I think on 97, 98, between 96 and 97 to 98. And we don't understand yet why.
+
+jacob_gadikian 
+Well, that's really good though, actually. And actually, this is something...
+
+I probably knew this six months ago, but I don't think I was ready to say it. So, get ready people. I'm going to give credit to somebody. So, there's this, there's this particularly salty individual, the Mercha. Okay. He runs the infrastructure at informal systems. And he was the only one who early in my validating career, was like, Jacob, shut the hell up about miss blocks. They don't matter unless you're missing
+
+some ludicrous number of them. I'm like, Mercha, come on now. You gotta catch every single block. You gotta do it 100%. Like you're looking to miss like zero blocks a month. Mercha was right and I was wrong. And I wanna give him credit for that, like 100%. He deserves it. The...
+
+Citizen Web3
+Just want to say, just want to say like on the snow sorry, carry on the photo. I'm just gonna do a second of advertisement guys. If you want to find out about Merchak, who guy who have an episode with him on Citizen Cosmos. So after you listen into free time, listen to the story Jacob carry on. It was just he was he was absolutely like he was first of all, he was a big fan. So for him, it was he was very shaky because he was like, oh my god, I'm such a fan.
+
+jacob_gadikian 
+Oh! Where is he?
+
+Bye.
+
+jacob_gadikian
+Was he salty at all? Was he salty on your top?
+
+Hehehe.
+
+Citizen Web3 
+as well to have him on. It was a while ago, but he was fantastic. He was really, he's what he is. He's what he is.
+
+jacob_gadikian 
+We're here? He really is very proud of us.
+
+jacob_gadikian 
+Exactly. Exactly. And, um, actually, it's like,
+
+Citizen Web3 
+I love it.
+
+jacob_gadikian 
+Yeah, I mean, I really come to appreciate a lot of folks who I previously disagreed with. Now, you wanted to do like a notional episode. Now we've gone very freaking meta, right? Yeah. So it's a four to 16 core CPU, usually 128 gigs of RAM, one or more PCIe 4.0 or 5.0,
+
+Citizen Web3 
+Yes, true, true, true.
+
+jacob_gadikian 
+going up. No, no, no, no, no, no, no. Also, no server CPUs. The reason why no server CPUs is it's not obvious, so I'm going to spell it out. You don't use a server CPU because you can't replace it. If your CPU fails, you might have to mail order that thing. I mean, you're definitely taking a different downtime risk profile when you're validating from home.
+
+jacob_gadikian 
+built with parts that have been built like in very high volume millions. ASRock motherboards all about it. They're great. They're cheap as hell and they are high quality. How do you know they're high quality? Because they build millions of them in batches and that's actually what allows you know a hardware product to
+
+jacob_gadikian 
+the better. Notional uses Samsung hard drives. We endorse them, but we don't get paid by Samsung. But we totally do use Samsung hard drives.
+
+jacob_gadikian 
+about a $7.5 of higher drives at the office. It's insane. And they should be, you know, because I'm promoting it, right? So they should like subsidize them, I think. Anyhow, so Samsung hard drives, the case, so we've been building our systems for physical size. We try to make them as small as possible and as energy efficient as possible.
+
+So we actually tend to use ITX motherboards. And those have cases that are like, like toaster size, right? And the thing is that they have everything you need. You're not putting a spinning hard drive in there. You don't need a bazillion ports.
+
+jacob_gadikian 
+want to learn how to validate from the edge, do not build a server. A reason is once you get into building servers, okay, you are also into maintaining servers. And that's really not pleasant. People ask, so should I use ECC RAM? Yes, no, no, use like really commodity desktop RAM.
+
+Design machines on new egg.com, which is like, again, volume is the trick, right? So that's the most popular American e-commerce site for buying computer hardware. I actually go with whatever is the best seller at the moment for desktop RAM. And what other... Just trying to think of other weirdnesses. Go cheap.
+
+volume. Also, another thing is that really for your network, this probably surprises some people, you don't need much. If you have, say, like a fiber line, and then one of those little USB 4G thingies that you can plug in and get online, should anything happen to your fiber line, you're good. And if your
+
+jacob_gadikian 
+This is a judgment call, okay? I have a history in Bitcoin mining. I am super aware that any generator can literally kill you. And it can kill you in many ways too. So it turns on and it floods your building with carbon monoxide. Well, you could be dead. If it turns on and it burns down your building, well, you could be dead.
+
+jacob_gadikian 
+If for whatever reason it's fuel source catches fire, well, you could be dead. If you are maintaining it, and like you're in that one weird place where your wired power and the generator come together, you could be dead. I keep repeating this because, you know, in the infrastructure business, it is, it's rare,
+
+not unheard of for people to actually have been dead mainly from gas generators and So, you know my my recommendation on backup power is UPS is if If you're doing a gas generator, I'll give you an example the building. I'm currently in Armour building
+
+jacob_gadikian 
+It's supposed to kick on if the power fails. We don't know, right? But like, we think it will. And it's, you know, I'm fairly high up off the ground. One would hope it would, because it would take a long ass time to get downstairs was a problem, right? So the idea is that the building I currently live in
+
+it has a large diesel generator that can supply power for the whole building should the grid go out. That's your best bet. Now, if you're in, you know, a more developed country, probably UPS is fine.
+
+jacob_gadikian 
+the larger cities, right? And we are. However, there are a growing number of one triple A blockchain teams who literally ask me, hey, Jacob, Jacob, where the hell are the validators in South America and Africa? And so if anybody happens to watch this, okay, not NAACION,
+
+is in South America. And I recently met a validator, and I don't remember the name of their team, okay, they're based in West Africa, but servers are in Europe. I assume that at some point, there will be bare metal validators in places that have less reliable grids. And I also wanna say, I really wanna meet you.
+
+We actually don't have points of presence on those continents except for Nishon Crypto and like, hell yeah dudes. And it's important because we do wanna span the world. Like that's our actual goal with this stuff. We wanna cover the whole damn planet. And so if you happen to be watching this video,
+
+than the other ridiculous person with the ridiculous foam on the wall. You know, and you're anywhere on the continent of Africa. Please note, you know, we actually would like to talk to you. We would like to help you set up a validator. And by the way, I have a friend, Igana, and according to him, only way would be a gas generator.
+
+jacob_gadikian 
+If you're using a gas generator, please just love a guy who knows what you're doing. They can kill you.
+
+Citizen Web3
+Please don't die if you lose any guys generator for the love of God. Let's have a fucking only thing to ask Jacob. The main question I wanted to ask you and in my opinion, this would should, what everybody should be asking you actually. If they are even if they don't hold atom, even if they just in a cosmos ecosystem, considering the position of even philosophically
+
+jacob_gadikian 
+It's actually the answer to this. It's exactly that.
+
+jacob_gadikian 
+No.
+
+Citizen Web3 
+of Cosmos Hub, they should be asking you this question. So, RISP Prop 104, I voted yes, of course. We voted yes, sorry. Of course, I was also the one in the forum to tell you, I think one of the first people to say, why on earth aren't you doing a proposal before you guys even did the proposal? But regardless of all of that,
+
+jacob_gadikian 
+Yeah, man. Thank you. Thank you.
+
+jacob_gadikian 
+Yeah, yeah. You know, it made sense. And yes, sir. Yes, sir.
+
+Citizen Web3 
+But wait, wait, let me put, let me take my Serge Harov and put my Cosmos Harov. So Prop 104, technically that's 7% of all the taxpayers' money. So I want to hear what are you, that's a lot of money. People don't think about that, you know, but imagine like, you know, some institution or some business comes and takes 7%, well,
+
+jacob_gadikian 
+Hmm? Hmm? Really, yeah?
+
+Citizen Web3
+in the real world, right? But I think, you know, let's hear about the plans. Let's hear about what is the, like, man, that's a lot. You know, let's talk about, and congratulations, by the way, on getting a yes. But yeah.
+
+jacob_gadikian 
+Yep.
+
+jacob_gadikian 
+Oh yeah!
+
+jacob_gadikian 
+So actually, let me walk through the two different. Oh, thank you so much, dude. Thank you. The first proposal we made, which we eventually abandoned, was for about the same amount of atoms, but over the course of a year. And that was going to actually focus us on, well, there would be less focus, quite frankly. We're going to be on the SDK. We're going to be on IBC. We're going to be feeding that into the app.
+
+Frankly, that is sort of the maintenance scope for the Cosmos Hub. So the Cosmos Hub's big upstreams, right, are the Cosmos SDK, IBC, and now Comet BFT. And those are the major upstream repositories for Cosmos Hub slash Gaia. And actually, we're still going to be doing that,
+
+jacob_gadikian 
+phrase where it's due. While I was reporting a series of issues and making also some software upgrade recommendations to Jihan from Informal, who you should interview, number one. And number two, I think has done a superhuman job of clearing the hub of technical debt. There was a lot.
+
+a lot. And by the way, it's not only him. It's not even only informal, but like, for the first time in a bit, I'm really optimistic about the future of the hub. I wanted to get that out of the way and just like say thanks because basically he helped us to redesign
+
+jacob_gadikian 
+was figuring out, what do we really offer the hub? Well, I'll tell you one thing, may surprise you a little bit, but be very direct about it. Well, I've taught the past two hub teams about the hub, and my contributions began, it might be four hub teams ago.
+
+jacob_gadikian 
+they just small documentation related pull requests to the hub. That was just before, oh dear, I do forget his name, but he's Armenian like myself. Okay, so that was Hublead before Billy Renicamp and before Jehan Trembach, okay? And before that, well, it was like a pre-GOR team.
+
+jacob_gadikian 
+2020, right? And so, you know, the hub team was sort of like Cosmos participants from all over. With probably, I'll name a couple of names. So Alessio Treglia, Jacks Amplin, Zuckie Manian, all doing like, you know, very significant work. And they all did very significant work on the SDK2.
+
+is, Rachel? I can't pronounce his last name, but where is Rachel?
+
+Citizen Web3 
+It's a good question. It's a good question.
+
+jacob_gadikian 
+I want to find Rangel. Anyway, just throwing that out there real quick, because he's one of the most prolific coders of all time on the SDK. And of course, that being an important hub upstream. So check it out. We are going to assist the hub team with what Gion identified with our team in particular,
+
+with what's going on. And by the way, this is not milestones based. This is like, you know, basically, he and by the way, you know, by extension, the community is yes, trusting. And by the way, don't trust us, check our work. But you know, basically is expressing faith in our ability
+
+jacob_gadikian 
+system and make recommendations based on that. And the next piece here is essentially keeping the hub up to date. The next next piece has to do with interchange security. So supporting other validators, supporting consumer chains.
+
+jacob_gadikian 
+with both current consumer chains and future consumer chains. This was actually before prop 104. And so, you know, Jihan helped us to put that together. Oh, and then there's archeology. We're gonna do archeology, blockchain archeology. So currently we're on Cosmos Hub version four. And how should I put this?
+
+There is not one Cosmos Hub version 4. There's a Cosmos Hub version 4 begins with Gaia 4.2.0, then upgrades to V5, then V6, then V7, then V8, and very shortly V9.
+
+jacob_gadikian 
+In fact, I don't actually know if we would have pursued 104 if 8 didn't shape up so gorgeous, right? Because for a long time, the hub had maintenance issues. I think that they kind of came from...
+
+we were sort of treating the hub like the whole ecosystem's test net for the SDK. And then we had this vexing problem, this very difficult problem, where if the hub didn't use a version of the Cosmos SDK, other chains would not trust it. Problem is they were right. I'll give you an example.
+
+SDK46, which we retracted the first six versions of that. So they were pulled back. And if you try to use them, your Go compiler will actually throw you a warning. You'll be like, yo, no, no, no, bad, bad, bad, don't. And there's good reason for this, because the first six versions of SDK46
+
+Really pretty serious bugs All right now to drill down into what this means for the hub and like in the next say quarter or so Well, we're going to Work on porting interchange security to SDK 47 work on getting IBC 7 on the hub and
+
+Then the other piece is and again, so you know, I just named like two concrete miles. Oh the archaeology The archaeology so we're gonna go back through all of the old hub versions and We're gonna equip them with the latest database and IAVL libraries With the goal if you go to the Gaia repository you type in speed races
+
+jacob_gadikian
+Well, you shall see me. And I wrote about this a couple of years ago when I noticed how long it took to sink the Cosmos Hub from Genesis. And frankly, it's only gotten worse since. However, one difference. We're working with Osmosis for, it's embarrassingly long.
+
+jacob_gadikian
+in three, and Osmosis version four, for a year. And recently I actually got it all to work. And I just have to sort of summarize it and make a finalized pull request. Here's the thing, how did I get it to work? I did archeology work on the hub. Maybe you're wondering, what the hell does this have to do with Osmosis? Well, you see, back in the day,
+
+the hub. In order to make my code changes work for osmosis, I actually had to think like the hub. I had to go through and look at what versions of different libraries the hub was using and then literally upgrade the hub and then account for, okay, what does
+
+jacob_gadikian 
+I mean, it took a year, so it was hard. And but there's a big benefit here. OK, why do we even bother to use a blockchain? Because there are giant pains in the ass, right? Like, we could just use any database. We don't need to talk about governance. We don't need to worry about app hash errors, which is, for the audience, I would just say an app hash error
+
+groups of nodes on the network disagree with one another about the state of a block and this just happens if you're a validator like you'll see it and it sucks it's very challenging to deal with and really when you're working on a blockchain as opposed to a database so database might have one copy or many replicated copies but like there's only ever gonna be one state now a blockchain
+
+There must be one state also, but you're maintaining that state across, you know, in the HUB's case, it's 175 machines. If it's one byte off, screw you. It'll explode a bit. So the archaeology piece is actually like the first major task. We're going to go through starting
+
+Version 4.2.0 that's fitting will probably release like a 4.2.1 or a 4.3.0 And this is a version of the cosmos hub this probably like three years old We're not adding any features We're gonna make it sink way the hell faster because why do we use a black chain? There's such pains in the asses well you see we can have verifiable data that we can trust and
+
+if we can't sync from the very start of the chain, and you know the case of Cosmos Hub 4, that's the Genesis file for Cosmos Hub 4, to the very tip, we don't have assurances about the state of the chain. Now we can do this today, however,
+
+jacob_gadikian 
+it two weeks, like two human weeks, 14 days, good luck. Oh, also you're gonna need to change your binary along the way, four, five, six, seven, eight, nine. So that's six, you have to use six different binaries to get to the tip of the chain. Inevitably you end up screwing something up.
+
+Citizen Web3 
+It's really good.
+
+jacob_gadikian 
+Okay, imagine you screw something up on the 12th day. Does this happen to me? Is this real? Well, guess what? Screw you. Back to block one. And, you know, and that adds another 12 days to it. So I'm thinking that this, this like archeology task can probably take that down to five days. That's awesome. And that'll be, you know, something that I believe
+
+completes this quarter. And so that's sort of the scope for the next little period of time. Also, why is it three years? We don't necessarily know what we will do for the hub in the future. Very comfortable working with the current hub team. They can ask us to do literally anything. And we'll chase it down.
+
+Citizen Web3 
+That's, I think, a good thing in development as well, not to try and plan for three years, because it doesn't make sense. A lot of people get lost because things change. Things change, of course. Let me make a quick comment here. There is a guy who is asking in the audience, there was a question. This is not so much. The next one is going to be for you. This is a general one, but then there's one for you that I want to ask.
+
+jacob_gadikian 
+Yeah, yeah, yeah. If we had like a few coke that lasted three years, I, you know, yeah.
+
+jacob_gadikian 
+Cool.
+
+jacob_gadikian 
+Bye.
+
+Citizen Web3 
+comment on the first one and it does also include, I think, notional. The question is here, whether or not there are teams in Cosmos trying to help new investors coming into the ecosystems from getting rack pulled or scams. And then there is like a few more comments on here. And I said like in the comments, I don't know anyone that is concentrated on that, but what I want to comment quickly without going too deep into it is that if you stick to education,
+
+Citizen Web3 
+and how do you check that you see teams that are been there for years? You can see that they validate, you can see that they contribute, you can see their code contributions, you know, you can see their validation contributions, their social contributions. And if you follow those teams, you know, those teams that put their, you know, money with their mouth is they, well, they don't want to get dragged by themselves. So I'm not saying it's 100% going to work, but if you follow people like
+
+jacob_gadikian 
+Yeah.
+
+Citizen Web3
+formal and a lot a lot more that, you know, we live in that, you know, so we would talk about those things and maybe there is nobody specific that specifies us on that, but I think that's the way to kind of help yourself. Jacob, there is a question here for you though.
+
+jacob_gadikian 
+Give it.
+
+jacob_gadikian 
+I want to answer the gentleman in the audience's question real quick. A gentleman in the audience or a gentle lady, I don't know. Check this out. There is actually one person who, to my knowledge, is better than anybody else at
+
+Citizen Web3 
+Please, please
+
+jacob_gadikian 
+detecting scam or rug or just suspicious activity. You can give him a follow on Twitter, RARMA, R-A-R-M-A. He's very good and thorough. And it's unlikely that you'll ever hear like false information out of RARMA. So yeah, there's an endorsement for RARMA for sure. Oh, by the way, he's not in LA.
+
+Citizen Web3 
+Nice, nice. So there is actually...
+
+jacob_gadikian 
+like a guy.
+
+Citizen Web3 
+So there is actually someone to follow, so there we go. So here is a question for you. So this is a quick one because I want to go from that one to a bigger one, which I think we can sort of resume with, but it's going to be, I think, what, yeah, anyways, let's ask this one first. So this is relating prop8 on stride. I'm going to read the whole thing as it is, and then let's make it out together.
+
+jacob_gadikian 
+Most people.
+
+jacob_gadikian 
+Yeah, yeah, yeah.
+
+Citizen Web3 
+8 on stride might be structured. Will it be similar to claiming multiple denominations on Terra? Have options to swap all into one coin type. Any rough ETA, one month, three months, etc.
+
+jacob_gadikian 
+So Stride doesn't have a plan to have swaps, far as I know. Now also, we wrote Prop 8. And basically, look guys, Stride kind of baller. I'll tell you why. Prop 8, what it really did, is stripped the team of rewards and they asked our team to build it.
+
+jacob_gadikian 
+What I mean is that like in the current state of stride, I don't know what the exact reward is for the stride team, but they like get something from your state assets. Or I forget, please excuse me, I don't know the precise flow, but here's the deal. They wanted to follow governance. I was actually mildly surprised and super refreshed.
+
+Yeah, can you tackle it? Yeah. We have a small team on Stride. And as far as I know, the proper implementation is now complete. Now here's another thing. Why do I not know every detail on Stride at this time? One of the reasons is our growth.
+
+jacob_gadikian 
+Please, I suppose if you want to take this as shelling, go for it. Please don't take it as financial advice. They are looking to be the first with IBC 7.1. Means they should be able to connect directly to Polkadot. They're also looking to become a hub consumer chain. And it's interesting because we've had the opportunity at Notional
+
+both code and design work with Quicksilver and Stride. And by the way, like much love to both Quicksilver and Stride. Interestingly, Stride fit as a consumer chain for the hub.
+
+I would say that it's because of how Stride works. Stride, you move your coins to Stride and stake them elsewhere. Quicksilver's ideal vision is something different and I won't actually even get into that right now. But what I'll say is that Stride is likely to have more on it than
+
+I don't know when, right? But that just seems likely to occur. And so, you know, they made this decision to become a consumer chain, which will allow them to dodge this problem because basically their TVL or whatever, with LSD by the way, and you know,
+
+jacob_gadikian 
+music, right? I'm sure that must be why I mean liquid staking derivatives.
+
+Citizen Web3 
+On Ethereum, they're proposing to change it now to Liquid, Staking LST, I think, or something like that. Yeah, it's on Twitter, it's not an AIP, it's a Twitter, it's shit, they don't know what they're saying. They don't know what they're saying, man. No, ignore that.
+
+jacob_gadikian 
+Really?
+
+Unless you
+
+jacob_gadikian
+I mean we're we're coloring Hasbroxen.
+
+jacob_gadikian 
+Well then, we'll have more Fred, those are rainbows in classrooms for sure. Yeah.
+
+Citizen Web3 
+Exactly, right? And by the way, by the way, a second of advertisement again on what Jacob is saying. Quicksilver, Stride, Peacetech, Lido. We all have not just separate episodes with each one of them, but there is also a debate with all four of them present and discussing Liquid Stake-in, which you can watch on our YouTube channel. And yeah, sorry Jacob, with just a little advert there.
+
+jacob_gadikian 
+That's cool.
+
+jacob_gadikian 
+No, no, I don't want to say that's cool as hell
+
+Citizen Web3 
+So, bad, Jacob. Jacob, let me, let me, let me, let me, let me, let me, like, I think like the, the, the cherry for, for me on, on, on the icing of the cherry. And it's like the resume question. And it might seem that it's directed at you, but it's not, it's not. And I will, no, because, because I think, I think it's important. It's important because again, this is about notional and notional, it does say on the
+
+jacob_gadikian 
+I don't even know what you're doing.
+
+Citizen Web3 
+key. So this is why it's directed at notional. And so I want to ask you that. And I want you to not to defend yourself by no means, please, or not to defend notional. I want you to explain why notional is, let's say, reputation is key slogan, not slogan, right? And it is kind of...
+
+jacob_gadikian 
+Why do we believe that?
+
+Citizen Web3 
+why you guys believe that right. But like let me go a bit more dramatic here, right? I'll try to be a bit more dramatic. Why do you think like so, it attracts so much, like a lot of people especially see it like that as drama
+
+Citizen Web3
+when you think is right, or do you think that that is, you know, something, I don't know, that people envy or maybe it's you guys, you know, blowing things up, you know, whatever, like, and of course, you know, again, I'm being devil's advocate and giving you, like, I want the whole possible answers to be heard. And why is it like that in your opinion for notional? And should it be like that? Should it be different?
+
+Citizen Web3
+is a lot to do with it. I think having the balls to say what you want and when you want, when you believe in it is important.
+
+jacob_gadikian 
+Yeah!
+
+So...
+
+I mean, we, okay, every business in crypto.
+
+is going to be given the opportunity to make various compromises. And in fact, in crypto, want to assure anybody watching, you actually can get rich fast.
+
+But I'm not aware of good, like I mean kind or ethical ways to get rich fast. Any in crypto or outside crypto, mind you. Now we're a business. We're absolutely, you know, seeking profit and we've rejected
+
+jacob_gadikian 
+really quite a lot. And
+
+We have been the first to discuss issues really on a number of chains now.
+
+jacob_gadikian 
+And this has had very mixed results. We wrote a report on SIF chain. Actually before things truly and fully went to shit, I mean, stuff was already kind of shit. Okay, I don't want to be like, we were a clairvoyant, we could really see the future and we knew how shit things were gonna get. But looking at the state of that chain,
+
+jacob_gadikian 
+It felt, it was weird. Okay, I'll get really specific about SIF for example. So actually SIF was kind of a self-own. There were,
+
+A couple of like economic modeling mechanisms that essentially broke it. It was causing the price of SIF to be higher on SIF. And then the price of IBC and Ethereum assets to be lower relative to SIF on SIF.
+
+jacob_gadikian 
+on Osmosis or on ETH because there were markets for SIF on both. I think there were a couple of others as well off of the chain, right? So I could get cheap SIF there, move it to SIF, and purchase atoms at a ludicrous discount, like four times cheaper than market.
+
+By the way, that wasn't only a case with Adams. Any liquid asset that was in demand, you could do that with. And...
+
+Probably we caught this about a week in, right? And we were looking at what was going on and we were like, not good, not good. And we actually ended up getting on the phone with both CIF's CEO and CTO. CIF's CTO, who is in the process of joining Notional actually, said, yo, like this is a problem. I like let's get on it. He and I
+
+actually like wrote out that plan. Okay, so like how to fix SIF. It's the one with the big green letters. I don't know if you've ever seen it. Six page long PDF giant green letters basically says, well, if we get rid of all of these monetary policies, they call them monetary policies. You get rid of all of them, you should fix the bugs. Now, we didn't actually know this for certain,
+
+that was the case. I felt that was the case. And JZR...
+
+jacob_gadikian 
+He felt they were very necessary. And that was when, by the way, and this was independent of John, that was when we decided, hey, like we should probably step back here. But before we did that, we released publicly our findings. It was like, actually everything here works fine, but that's sort of the problem. The monetary policies are doing exactly
+
+And that's causing this really very bad ARB situation. So we left. We were, I think, the first validator. Be like, guys, peace. And when we did that, we cited the monetary policies.
+
+jacob_gadikian 
+And we told people why. Interestingly, the community was into this. They were happy to get clear feedback. And I really don't think that the CIFF community was treated super well, right? So that was one example. Another example, pretty controversial, but actually our teams have a super good relationship now
+
+Jackal had a crazy severe bug. Basically, there was a web server and mounted to the folder where your validator keeps the block signing key, and it could be exfiltrated, and that's very bad. Actually, very bad might be too light.
+
+I learned tons from Jackal. I was, doesn't actually mean I did everything right. Cause I made a lot of noise on Twitter and I basically, you know, got the chain shut down, which by the way, that was correct. Method may not have been correct because the validator set was not basically like, nobody was gonna shut down until the team stepped in
+
+And I'll share with the audience my exact reasoning for doing what we did and why in the future, it would still be a judgment call. I don't know what I would do. We looked at the code, we looked at the situation and we decided we didn't want to operate. And so what that means is that, we're actually placing our delegators in harm's way
+
+because if we are down, everybody else is up, comes the knife for the slashee slashee, right? And of course, like our delegators, when it comes to validation, those are our customers. And we wanna make sure we take really good care of that. So I made the decision to tell people exactly,
+
+jacob_gadikian
+In fact, I'll tell you one other thing. I didn't tell people exactly why we went down. Because the problem was so damn severe. And there were other problems that I told the public about the less severe, less exploitable problems. And then when the chain team showed back up, I told them about everything.
+
+Now, I should say this is very challenging work.
+
+Why? Well, you're making highly consequential decisions and you're doing it on behalf of others. You're doing it under pressure. People may not agree with you. Oh, and I'll tell you another thing. They might be right. They could be correct. Because, you know, in a triage situation where things are moving quickly, the chain is live.
+
+You're not a hundred percent sure you want to be as damn close to a hundred percent sure as possible Before you sound any alarm, but you're not a hundred percent sure. I knew that there was a web server I knew it was mounted to that folder. I didn't know the exfiltration was necessarily possible now to If an attacker could exfiltrate
+
+the block signing keys to 66% of stake weight, they could arbitrarily do anything with the chain print and unlimited amount of jackal. And it's just all kinds of crazy shit, right? So that's why I made that decision in that particular case. And now to come back to you, right? You're like, so why is there that drama?
+
+jacob_gadikian 
+I do have to blame myself to some extent. Right? Like, no, no, check it out. I'm a person who speaks their mind. Okay? And I'm not saying it's necessarily a bad thing, right? But as notional CEO, in general, if I see an issue, I will tend toward speaking about it, right?
+
+silent. And I think that the reasoning for that is like, we are very insistent on engineering rigor.
+
+jacob_gadikian
+And I suppose that a lot of that comes from, give prayer words to, comes from Jay.
+
+I'm just asshole, but I mean this in a good way right now. Okay? What I mean is that he is really rigorous on software and I mean if you're doing a threat model with him, it's freaking intense. He'll get into edge cases that I don't think normal people would imagine. And I did that a bunch
+
+it. And, you know, doing that over and over, you learn some stuff. And, yeah, I don't know. Credit where it's due. Credit where it's due. Yep.
+
+Citizen Web3 
+Ah, the mute button. Fair enough. Fair enough. I think that regardless of what it attracts, like people should see beyond it and look at, not at the reasons it arises, sorry, not the result, because it arises as a result of people, of course, trying to defend something. But I think if there is something that
+
+and that people should really look at that and try to understand that it's being done not for the sake of creating hype out of it or creating drama out of it, but...
+
+jacob_gadikian 
+Yeah, yeah. So like, this is, I mean, this is where the challenge multiplies. Okay. There's, it's not actually that many people who can do this. At no
+
+jacob_gadikian 
+you know, let's say Cosmos Analysis skill, a very blessed and lucky organization. And by the way, I frequently feel that way. Watching our team grow and learn is, it's fantastic. Now, outside of our team, another like 15, 20, and then there's, you know,
+
+Citizen Web3 
+Nah.
+
+jacob_gadikian 
+There's a separate area of security that as opposed to applying just to Cosmos applies everywhere. Yeah, lots of people can check for that, right? But I guess I'm speaking more about only the Cosmos stuff. And then finally, there is another PISTO, which doesn't have to do with like software security. It's more economics.
+
+jacob_gadikian 
+You know, I talk to you about the whole truck thing, right? Sometimes I feel like I'm on my second life, okay? So I don't want to get anywhere by harming anybody, very grateful. And so if we see, you know, with SIF, essentially it was dark economic pattern.
+
+Citizen Web3 
+Mm-hm.
+
+jacob_gadikian 
+really bugs, actually I'll say pretty strong. I think the software works perfectly as it was designed. However, you know, like that would harm people. And so finally, I guess to get to the point that becomes quite contentious. And maybe what I'd say to the audience, right,
+
+Citizen Web3 
+Mm-hmm
+
+Citizen Web3
+Yeah.
+
+jacob_gadikian 
+to the best of your ability, don't take my word for it, check. And, you know, yep, exactly.
+
+Citizen Web3 
+check and verify
+
+Citizen Web3 
+Jacob, man.
+
+Citizen Web3 
+I don't know. I think that people, I, my honest opinion, maybe a bit biased, I, I still think people underestimate a lot of what certain people commit in terms of time. And of course, it's not, it's selfish in terms of that, you know, I love your, your, your sentence on, I agree with you totally on here. All validators are centralized selfish entities. And of course we are, right? We do this because we are, we're, but end of the day, you know,
+
+jacob_gadikian 
+Yeah. Yeah, it is.
+
+Citizen Web3 
+You know, out of all, it doesn't mean that all people who run the marathon are wanting to cheat if one of them wants to cheat, right? Or it doesn't mean that if an athlete is cheating and taking steroids, all athletes are cheating and taking steroids, but all of them are there to win end of the day. And that's my analogy here, you know, that, yeah, there are bad actors and there are good actors, and I just want people to, you know,
+
+jacob_gadikian 
+Hehehehe
+
+Yeah, yeah, yeah.
+
+Citizen Web3 
+Like Jacob says, I think that's a good point.
+
+jacob_gadikian 
+Yeah, totally. Totally. Like, you know, to everybody watching, one of the reasons open source is so important is that even if you don't code, you can probably verify most of a DeFi app because most of a DeFi app lives in a few fairly simple functions.
+
+jacob_gadikian 
+from, you know, if you're beyond casual, right, do read the code, check it out. And ask questions, because that, I mean, interestingly, this is where we get into, you know, you have a bunch of selfish entities, which by the way, as humans, like, we're just built that way, we do compete with each other.
+
+jacob_gadikian 
+problems, you're actually helping the spirit of cosmos. You know, this was never meant to be, I'm getting highly opinionated now, I'm not actually one of the founders or whatever, this wasn't meant to be something that you passively accept.
+
+jacob_gadikian 
+user experience and the ability to pick up and read and understand the code, even if you're not a programmer. That was always a very high priority with TenderMint.
+
+jacob_gadikian 
+I would encourage anybody to check through the code and if you have questions, I would also say that Twitter is probably the best place because
+
+The GSDK team is on Twitter. Larry is on Twitter. Guys, Larry's a better programmer than me. Larry's one of our absolute finest. Larry 0x, just to be honest.
+
+Citizen Web3 
+Horrible sky
+
+jacob_gadikian 
+And, you know, there are all these brilliant minds all over Cosmos Twitter, and you can absolutely ask questions and get answers. And frankly, that's how I learned a lot of the stuff that I know today. Yeah?
+
+Citizen Web3 
+Yeah, I think that's the goal of life really to ask questions, right? Guys, if you want to reach Notional, I hope that this helps to get a better understanding of what the guys at Notional do, but reach them on their Twitter. Notional.dow. I'm sure that if you cannot find it, you will find it in the links in the description on a YouTube video.
+
+Citizen Web3 
+Thank you.
+
+jacob_gadikian 
+I hope it was good for you as well. I hope it was good for the audience. And dude, thank you also. Thank you very much.
+
+Citizen Web3 
+Yes!
+
+Thank you. Before you run away, let me just end the stream and I'll say goodbye to you properly. So again, thank you everybody for watching this. Follow Notional guys, delegate to Notional in my personal opinion. Don't say this very often.
+
+jacob_gadikian 
+Okay.
+
+How you doing? How you doing?
+
+jacob_gadikian
+Well, and then delegate, delegate, delegate to Cosmic as well. No, you're not. Wait, wait, wait. It's... Wait, hang on. You're... Citizen Cosmos. There we go. What Cosmic? Oh dude, there's so many names. We gotta get you a one-word name. We gotta get you a one-word name. Can we make you like Adam Robot? Look at your logo. Look at your logo. Adam Robot?
+
+Citizen Web3
+We're not cosmic validators. Oh my God, oh my God, we have, no, no, no, no. That's so many of them. No, no. No. Ha ha. Ha ha. There is a new one coming out soon. There's a new one coming out soon, guys. There's new one coming out soon. OK, let me just end the stream, Jacob. And guys, again, thanks.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

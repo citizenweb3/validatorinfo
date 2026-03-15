@@ -1,0 +1,398 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/davidrakusan
+
+Episode name:
+Financial Revolution, AI and Vanity Metrics with David Rakusan
+
+Citizen Web3 
+Hi, everyone. Welcome to a new episode of the Citizen Web3 podcast today. I have David from Rockaway Venture Capital Firm. I don't know why I decided to say Venture Capital Firm, but I decided to say the whole thing like that. David, I'm sorry for my silly intros. Hi, welcome to the show, man. Glad to have you
+
+David Rakusan 
+Thank you, thanks for having me.
+
+Citizen Web3
+David, I'm going to do it with a traditional intro today, and I'm going to ask you to introduce yourself for me, for the listeners. Tell us what you do. Tell us what you work is concerned. web... Whoa, I don't know what happened to me today. I really apologize for that. But tell us about what you're working on in Web3 particularly, and how did you get to Web3 in general? Thanks, man.
+
+David Rakusan 
+Sure. Yeah. So hi everyone. I'm David. I work for Rockaway X. Rockaway X is a venture capital firm specifically focused on Web3 and crypto. It was founded in 2017 and is in the space for quite some time now already. I joined Rockaway X in 2020 as the first hire in the investment team.
+
+Back then we had just around 6 million AUM and this grew quite a lot since then. Right now we have around 2 billion across venture capital in fund and liquidity provisioning fund as well as staked assets. So we grew quite a lot. It was quite a journey, I must say. But me personally...
+
+Before joining RockawayX, I worked for a family office. It was an investment firm as well, but not necessarily focused on crypto. It was a firm that invested in other VC funds as limited partners. We invested in energy sector, in biotech, as well as real estate and other startups directly. So I was part of
+
+was there as an analyst for several years. And then I came across like Rockaway X. That's why I wanted to join them. And even before that, I'd had several of my project, not necessarily crypto focused, but it wasn't in the crypto space nor any like energy and startup. But then I moved into the investment sector.
+
+Back in 2017, one of those projects that I was trying to do was basically a financial product that would allow hotel owners to hedge themselves against their exposure if they wanted to. So I realized it was not easy to build. when I talked to some traditional finance firms,
+
+David Rakusan
+they expected that it would cost around like 2 million euros. And I was like, no way that I'm going to pay this for MVP. And that's how I came across crypto. Back in 2017, I watched a couple of videos with Vitalik and I was like, yeah, hell, this could change the world. So I was immediately hooked, but didn't make it right away into crypto professionally. It took me another like three
+
+But since then, my interest was sparked in 2017 and since then I'm super interested in
+
+Citizen Web3 
+You know, while you were just saying the last sentence, I realized nobody ever asks people who have been in while in crypto who say that, I watched this video. Do you remember who was the YouTuber you watched? Because we always like as a community, we always like, those YouTubers. And I agree, those fucking YouTubers. But do podcasts, not YouTube. I'm joking, guys. like, really, do you remember who was the YouTuber you watched the first
+
+David Rakusan 
+Actually, it wasn't a YouTuber. It was Vitalik at some conference giving a speech and giving a keynote about Ethereum. And I really liked it. I was super hooked in right away from
+
+Citizen Web3
+Okay. Okay.
+
+Citizen Web3 
+It was proper stuff. Maybe that's why you got hooked. Maybe that's because it wasn't a YouTuber. That's why you actually. OK, that makes sense. Man, you mentioned several things and it's interesting. I'm going to ask you about them like you you said hotels and actually my first career until I was 30 was in hotels. But I want to talk a little bit about your if you don't mind dig it a little bit. But I mean, you said 2020 and 2017 and but before that, what what what sparked? I mean, yeah, one thing I understand.
+
+like you were looking for money for MVP crypto and Vitalik was talking about, I presume right then there was like it was passed already the ICO, but it was the ICO boom, right? 2017. So I'm assuming it was like a lot of a lot of sparks flying around. I remember the time very well. But what attracted you? why? I mean, even though maybe I understand what attracted you, but what made you stay? Let's change the question a little bit in crypto. Why not then go back to
+
+big VC world, especially when the market starts going
+
+David Rakusan 
+Yeah. So there are several reasons why I wanted to stay in crypto and basically specialize in crypto. One of them was that, I mean, I have a financial background and I was since very early ages, I was very interested in finance and I was studying it. I really enjoyed it. I liked the numbers and what it comes with it. Right.
+
+Crypto was in my eyes as a new subsector of finance where it could become a rail, a new rail for finance where it would and bring finance to like basically innovate, you know, the financial world. And I wanted to have an edge because I realized that back then I was pretty young that not many
+
+older people that have experience want to pivot into finance or maybe defy them, right? mean, defy in 2017 wasn't, wasn't a thing yet, but there was this notion that it could actually revolutionize finance even back then in 2017. And I realized that if I specialize in crypto, then I would have a good value at
+
+in the future for potential incumbents that would like to venture into crypto. Right. So like that was one of the reasons. So because I realized there is not many people there, not many talents. So it could be easier to get into like big financial institutions and work for them, for example. But I also really like the way how decentralized finance was planning to revolutionize finance by itself.
+
+by opening the financial world to everyone and giving everyone the possibility to interact with it, not necessarily censoring anyone to interact with finance. My opinion was that finance was quite over -regulated and maybe it still is. And with
+
+David Rakusan 
+decentralized finance. know the regulation is coming with Europe, the MECA regulation, the US will likely have its own regulatory environment soon. But I still think it's not as tightly controlled and it's open for everyone to interact with.
+
+Citizen Web3 
+Now that you went there, I was planning to save this for later, but now that you went there, I was planning to go with easy chit chat first. I'm going to go with a little bit devil's advocate question. You represent, course, and again, is highlighted, this is devil's advocate question, but I want to understand your opinion. I'm going to ask David who works for Rockaway in this particular case, not David the person, David working for Rockaway. Considering you work for ABC,
+
+Currently, you mentioned the word revolutionize a couple of times, and that's what kind of brought the question into mind. Because there is, I guess, many ways to look at DeFi, right? But there is the two big camps. And there is the camp that looks at DeFi from the perspective, OK, I'm a crypto user, and I don't want to deal with the banks. I don't want to deal with all the KYC procedures. I'm not a criminal, but I want to buy American
+
+even if it's synthetic or anything else. And this is my use case. don't know. I'm a house husband, housewife, whatever in Jamaica. I know, whatever. Now, of course, considering you represent the VC, there is the whole, well, you represent yourself, of course, but you happen to work for a VC firm. a lot of them, a big part of the Web3 or the crypto community sees VCs as a negative entity that comes
+
+because they want more regulation, because they want more, you know, legal, I don't know what to say, sticks in the wheels. Let's call them, right? I mean, again, I'm going to like present you with this, let's say, opinion or so, like where, I mean, you already kind of said that you're on the side of the first side, but it's not about sides. How do you kind of like balance them? I mean, being in a VC firm
+
+A lot of the people in this community saying, the VCs just want our money. They want to put like sticks in our wheels and then use us an exit liquidity. And then you have your own opinion is David, which you just mentioned, hey, I don't want all these legalities. I understand that DeFi is a revolutionary product. So how do you balance that? And how do you keep like your head cool with those two, like completely contradictory things?
+
+David Rakusan 
+Well, I think VCs are not necessarily bad for the industry. That's first thing that's what I think. Because VCs usually help the companies in many different ways. First, they help them with providing capital. Second, they open many doors to different customers, connections.
+
+And they also help with running the infrastructure, for example, providing some capital as to bootstrap the DeFi protocols. They also could work and develop some core financial or core features for the products. And these are just a few things that, for example, Rockaway X, the VC company that I work for,
+
+that we are doing, right? So it's, we're partnering with the startups and we are there for them for the long run and we have the founders succeed. So I think this is something that is important to know that VCs usually work closely with the founders and make them, and help them succeed in this way.
+
+Also, we see investors, they invest their capital in the same way as any other investor could do. It's mostly in the private runs, but the market has changed and shifted a bit. In the previous cycle, most of the projects, they seek liquidity events way earlier.
+
+the TGE was way earlier in the stage of the project. Whereas with this cycle, the TGE events are usually pushed a bit further at maybe a bit higher valuations at low float, which I don't necessarily agree with. But that's how usually the project decided to do their TGE events.
+
+David Rakusan 
+So I think, yeah.
+
+Citizen Web3
+No, I'm glad that you say that I wasn't going to argue. I'm just glad that you say that because there are founders who listen to the show. I think even though I personally and I think the listeners know that have like a contrary opinion personally, I think it's only fair I'm myself as a founder for people to understand that, hey, you have solutions and not every VC firm out there is out there to come and make you exit liquidity. So I'm actually very glad that that's your answer. I was just gonna say that. Sorry. Carry on, please.
+
+David Rakusan 
+Yeah, mean, one other thing that is also very valuable for founders that they can seek out help from VC is in the way how to structure, for example, the TGE. know, like we are the eyes and ears for the founders in the market. So we see whether there is like potentially new competitor emerging. We see how many projects, how the projects did
+
+the TGE events, for example, how they decided the strategy. So we can advise and help the founders because we have the experience and visibility how other companies did those things.
+
+Citizen Web3 
+I want to go a little bit into, of course, what you're best at considering you mentioned already 6 million and 2 billion after 4 years. I think it's an impressive achievement. So let me just say that. And you mentioned just 6 million. 6 million is a good number to start with. But of course, getting 6 million to 2 billion, I think it's absolutely fascinating. But before I go into those questions, I want to try to understand, would
+
+Personally, consider yourself more of a researcher or an investor. And I mean, the mindset that you have when you approach working. Where should I go? Should I go the research way or the investor way?
+
+David Rakusan 
+Yeah, I mean, I consider myself more as an investor than a researcher. Although I dive deeper into the white papers and the tech documentation of various projects, I don't have necessarily computer science background. So I came into VC from the business and finance background and learned the technical stuff myself along the way.
+
+Citizen Web3
+How does one teach themselves? This is a different question before again, to sort of finish the chit chat. From my side, what advice would you give? I always ask these people who in my opinion are professionals in what they do. What do you advise to someone listening there and sitting there and thinking, I don't know what to do with my life, but I like money, I like numbers. I don't know, I want to go and work.
+
+teach myself to be an investor who can go and work or a researcher for a VC or for anybody else, what advice would you give
+
+David Rakusan 
+Yeah, mean, the way how I got into Rockaway X was that, I mean, I found them early. Before that, I was working, as I mentioned, to the family office and we were writing checks to other VC funds and Rockaway came to us asking for an LP check because they were fundraising the first fund. And I realized this could be an opportunity for me because Rockaway was very early.
+
+We didn't have, you back then I wasn't part of the firm, but they didn't have any, any, you know, big, big investments, not much capital under management. And there would be likely hiring if they succeed to fundraise the fund. So I saw there the opportunity. So I got in touch with the founders and helped them for around a year, basically alongside my regular job.
+
+So I was not being paid for this help. And I was basically doing some analysis. And after a while, we managed to kind of find a way how I could move into Rockaway X full time. So I was basically doing the stuff for Rockaway X for quite some time. So they already knew my.
+
+value add to the firm before they agreed to employ me. my suggestion would be maybe finding... Depends on the experience of the listener. If one has some investment experience already, getting to know investors, getting to know VC funds and potentially other investors that are active in the space
+
+Providing them with some value to make sure that they know what they would get into if they partner with with that person is something that that worked for me and maybe could work for others as
+
+Citizen Web3
+It sense. It's kind of like a general rule for Web3, at least. If you don't know what to do, you just go and contribute to whatever is publicly possible to contribute, or in this case, publicly available information that you privately can contribute to. yeah, I think it makes perfect sense. Let's talk a little bit about the market and about the stuff that you basically focus on. I met you in Berlin personally.
+
+It was my first time. I put my head out in three years, guess, to, well, not including something in Lisbon. There was some events in Lisbon, but that was for me more to meet people and actually go to the events. I actually just went to the blockchain week to meet some friends and drinking outside. But yeah, nothing to be proud of. like, you know, I'm going to tell you like my personal before I ask the question, I'm going to like say my my feeling. You know, it was the first
+
+and three, three and a half years, I attended like a really big event, what I would say. And in my head, Berlin, you know, has always been kind of a place for the better events, maybe not the best events, but the better events for sure, then more technical, more privacy focused, more less bullshit like Berlin, right? Now I have to say, I don't know if it was like me excited for the first time in three and a half years. And I met you actually at a cool event, actually out of all the events I've been to, I think maybe possibly
+
+Possibly that one was either like top two or top three for me. I don't know if you went there by yourself again or if you went there representing VC looking like as a scout for things. Tell me your personal experience. What did you think about the project? And I said the market because I think it's a good portion to represent the market, right? At least part of the market, what we saw
+
+And I had mixed feelings, so I want to ask about yours and professional and personal if possible.
+
+David Rakusan 
+Yeah, I mean, mean, in, in, at conferences, it's usually that, how we operate is we go to different events and, know, talk to many different people, meet friends. And, you know, the goal is to learn what's happening, from the people and meet them face to face, get introduced to great founders that are building something, you know, and that's.
+
+That was like my purpose at the events. So I think Berlin is pretty, pretty nice. it's not necessarily the largest event in Europe. think that's, that's title goes to ETHVC, I think that was happening a year, sorry, around a month ago, early July, in Brussels this time, previously was in Paris twice. or actually more than twice, but I was there to, you know, the previous two years.
+
+But overall, think those Ethereum events are getting a bit more fragmented than I was experiencing a few years back. So I think ETHCC was quite fragmented. There were around 300, maybe even more, side events and the people were
+
+just didn't know where to go. Every major project had their own side event and wanted to attract as many basically people to their event as possible, but there was so much competition. And I think that's relatively reflecting what is happening in the market on the Ethereum ecosystem, where there are so many different
+
+I think there's actually around 47 different L2s with TVL above 100 ,000 and around 29 with the TVL above 1 million. So there are quite many L2s and I'm not sure if that's great for the Ethereum itself because it's fragmenting the ecosystem.
+
+David Rakusan
+So I think there has been many different upgrades in the past several years. One of them, of course, was the Dengkun upgrade that improved, introduced blobs and improved the scalability. But it also decreased the fees and allowed the L2s to get most of the revenues.
+
+that is not necessarily shared with Ethereum itself. So like the revenue decreased significantly to, I mean, in terms of fees for Ethereum itself, right? So I think right now, like Ethereum is at the crossroad whether it would eventually in the future integrate more features in and enshrine more features, you know, such as, I don't know, pre -confirmation or base sequencing.
+
+That could eventually lead to unifying the L2 ecosystem more than it is right now. But I hope it will happen because it's something that will probably move the ecosystem forward. If the ecosystem is too fragmented and the L2s are competing against the same mine share and trying to get the biggest market share,
+
+I'm not necessarily sure if in aggregate that's the best for ETH itself.
+
+Citizen Web3
+What's your opinion? What's your take or opinion on, you know, the opinion? Sorry. The fact that not the fact. I don't know why I said fact, opinion. Jesus, I'm today like really confused, man. I'm sorry. What's your take on the following thing that L1s or L2s rather in this case have to share part of their revenue with the L1?
+
+Should it be like that or should it be by choice? Because I mean, yeah, I don't want to say anything. I want to ask you. I want to hear your opinion.
+
+David Rakusan 
+Yeah, I mean, it depends on what are you getting from the L1, right? Like you are mostly with Ethereum L2s, they are dealing with the execution and the other stuff is outsourced to Ethereum. So as L2, you should be paying something to the L1, in this case, Ethereum.
+
+You then, mean the L2 then is like the goal would also or should be that the all the L2s that are using Ethereum would be, would be interoperable among themselves, right? That is not necessarily the case right now. At this point, we have the different ecosystem like ZK stack, like polygon stack, know, polygon will eventually do the L2 as well.
+
+We have the Arbitrum stack.
+
+And if you deploy an L2 with that different stack, will likely be, or it will be interoperable within that particular stack. For example, with ZK stack, will be hyper bridges that will be delivering this interoperability. But it would not be easy to interact between Arbitrum and ZK Sync Era, for example.
+
+and not an easy way how to do it. Like there are bridges, right? There will be other like liquidity bridges, for example, as well, but it is not as seamless as interacting within that particular stack. And I think Ethereum could deliver this with the basic sequencing, with the pre -confirmation, and could act as the layer that unifies the different ecosystem, the different L2 ecosystem under one hood. And I think, you know,
+
+David Rakusan 
+something what AgLayer is trying to do, but it's not necessarily a credible neutral project, They have their own interests within, you know, like Polygon and like the different ecosystems. So I think that's something what Ethereum should eventually deliver and unify the different ecosystem under
+
+Citizen Web3 
+I think you said like a really important sentence there that it depends what the L1 gives you, right? Because in other cases, considering we're going into, are closer and closer and closer to a multi -ecosystem Web3, right? Well, closer, closer than we were three years ago, let's say, right? So, you know, it's like, so for example, in the case of Polygon, I mean, this is not a conceptually, right? But in the case of Polygon, if I'm kind of running an Ethereum L2,
+
+And then I'm kind of also using the original tender mint like code that I'm who shall I be paying to to this to this? Of course, I'll be only paying to the ones that give me something in return. But this is the question. Is there any examples today already that you know of where Ethereum or Polkadot or Cosmos on here doesn't matter where the L1 is actually giving something worthy of value to an L2 that does share or doesn't share where like the opposite case with L1 is actually providing real value.
+
+to any L2. I'm assuming Ethereum probably is the leader here, but yeah, I'm trying to think. mean, security, of course, but what else?
+
+David Rakusan
+Yeah, mean, I mean, there are like other ways how L1 could, you know, provide some value to, yeah, in an in developer tooling, right? Like you can, I mean, I would potentially like shift the conversation to Solana, for example, because I think we are quite also heavy in that ecosystem. Because we invested in Solana C -drone in 2017 -18.
+
+Citizen Web3 
+like in money and revenue.
+
+David Rakusan
+and are quite involved with the projects there, what we're seeing in the Solana ecosystem and what Solana Labs, now Anzai, is delivering is improvements in the L1 itself that targets the ease of use for the developers, as well as trying to develop features
+
+you know, companies that are outside of web three. So like Stripe or PayPal and other like financial fintechs. So like one example there is the token standard token 2022, which allowed, you know, many different features to be deployed into your token. So you could, you can create a token and then if you're regulated person or regulated entity,
+
+you could, the token could have different features that allows the project to control the token issuance. Right. And, you know, you could imagine if you're, if you're Stripe and you're issuing or not necessarily Stripe, like if you, you are like a company that is issuing stocks on blockchain and those stocks get, get stolen or hacked, you need
+
+You need a way how you can control for it, right? If there's a legal, like if there's an issue, you would need to get your hands on the shares, for example, as well. you know, these are several tools that Solana ecosystem is delivering and that's why it's getting closer to be more, like better for the web too.
+
+companies to deploy
+
+Citizen Web3
+I understand totally. think that I have seen, you're right, I didn't mention developer tooling, of course, indirectly. It's like infrastructure in this case, right? mean, if I'm doing a web three project and my costs for, let's say, don't know, calls or infrastructure are going crazy and I don't get any help from the L1, then of course I could
+
+Is there any other examples apart from security and developer tooling or infrastructure? Is there any actually examples where an L1 that you know of actually pays, really pays L2 for this L2 using this L1, really transferring them tokens and saying, here is, I don't know, 50K, 10K, five euros, I don't know, whatever, per month.
+
+for using our L1, are there any such examples that exist? I cannot recall from the top of my head, but I don't think
+
+David Rakusan 
+I don't think I have heard anything like that. There might be some grants, but I can imagine in the early stages of some L1, the team is potentially giving out grants to projects to deploy on. And some of those projects could be an L2. So in this way...
+
+Citizen Web3 
+Damn it, no free money.
+
+Citizen Web3 
+course.
+
+Citizen Web3 
+course.
+
+David Rakusan
+there could be a Grand for and L2 from L1 to deploy and use
+
+Citizen Web3 
+What about the other side? Let's pretend as an investor, as a researcher, what do think about that? And the last question in that direction. Because a lot of projects that spring from an L1 then become by themselves an L1. And sometimes, and we've seen these examples, they actually take the share out of the original L1 to themselves. how can
+
+Be safe in this case and make sure that don't spring out competitors or the opposite. This is open source Web3 and whatever happens, whatever happens. What does an L1 to do here in this case? Or again, conceptually, not technically.
+
+David Rakusan 
+I think this is quite some risks for maybe even Ethereum and other L1s as well. Because if an L2 gets to a point where it has so many users and it has the distribution and basically everyone is using it, so to say, why it cannot become
+
+and L1 by itself. It would just need to spin off the validator set and pay for the validators in one way or the other.
+
+The question then would be what would be the values for the L2? Would it want to be as decentralized as Ethereum or maybe it would not be the big requirement to be decentralized? Maybe it would want to be as fast as Solana, for example. So that would be the questions that the L2 needs to face and decide on because it is unlikely they would get the big decentralization
+
+as big as, it is unlikely they would be as decentralized as Ethereum. So if the decentralization is the biggest point that they are valuing, they may be staying an L2 on top of Ethereum, makes
+
+Citizen Web3 
+Sorry, I forgot to unmute, it's my enemy. My listeners know the mute button is my enemy. Sorry, people. I understand. I understand. And it makes a lot of sense, right? It makes a lot of sense. What are you chasing? Are you chasing decentralization or user base or whatever? I want to go slightly, like to remain on that subject, but slightly different direction. And in terms of metrics and in terms of, I guess it's a little bit
+
+but it's also about investment and about understanding the market. And I would like to ask you. So my team has found, know, they like to go through tweets of the people and I like to like ask them what they demand by that. for example, you have a tweet, it was from January, beginning of this year, and you mentioned that TPS and TVL are vanity metrics. And I cannot not help to agree with you. I would be the first person to say, hey,
+
+TVL, TPS, sorry, TVS or TVL or whatever you want to call it or TPS, which is different thing. But again, a vanity metric. But if not them, how on earth do you compare things then? Because at the end of the day, I am 100 % with you on that. But if I want to compare something, especially if I'm a VC or an investor, how can I compare that without going to those vanity metrics?
+
+David Rakusan 
+Yeah, I mean, it's pretty hard, right? It's one needs to understand that TVL is not measured. It could be measured differently, but like at least right now we have many different platforms that are trying that are actually like doing the good work to or good job to measure the TVL correctly or as close to the reality as possible. Like the last cycle, it was pretty hard to be sure what actually the TVL means.
+
+Now we have a bit better understanding. But I just want to mention that if you just compare Solana and Ethereum, the TVL, it's not necessarily comparing apples to apples, right? Because the cost of transacting on Ethereum are way higher than on top of Solana. So the speed with which the assets move on top of Solana is different. So maybe you don't need as much TVL for
+
+capital efficient markets as on Ethereum because the capital on Ethereum is not moving quite fast. So you need a bit more capital there. So that's just like one example of how the TVL differs between the two biggest ecosystems. Same for like TPS, right? So if you are limited by the transaction fees, TPS
+
+something that is also a bit different than on ecosystems or in ecosystems that are quite cheap to transact in. know, like, transacting, if you use both Ethereum and Solana, you usually probably don't care about, you know, doing a transaction on Solana because it's cheap and it doesn't cost anything, right? But if you are interacting with Ethereum, you're
+
+planning more and trying to minimize the number of transactions that you are going to do because it costs quite a lot of money. And that's exactly the reason why it's easy to compare against the different ecosystems. It is easy to game. You can have many Sybils, like you can have many different bots that are just transacting for the sake of transacting.
+
+David Rakusan 
+because they are, they just don't care, they're not optimizing for the transactions. And if it starts to be more expensive, you see that the companies themselves and the bots and all the different entities are starting to optimize for the transactions, for the number of transactions. But that doesn't necessarily mean there are fewer users. It's just that
+
+companies and users are basically more optimizing for the transactions. So, why needs to have these things in mind when looking into the different metrics?
+
+Citizen Web3 
+Isn't the amount of users or fans, whatever you want to call it, it's also a vanity metric at the end of the day,
+
+David Rakusan 
+I think it's, I think altogether, one needs to look into the different metrics holistically, right? If one ecosystem is outperforming on all the different metrics, maybe, you know, like it's, likely the case that it has higher traction. It has more users and other stuff. Whereas if you, if, if, if it's just because
+
+people are trying to get an airdrop, you know, maybe those people will leave when the airdrop happens. Maybe those people are not necessarily only people, but there are institutions that are trying to farm it as much as possible with different apps, then they are controlling thousand different addresses, right? It's just like one entity controlling thousand different addresses and trying to game the project to get the bigger airdrop. So, and when the airdrop comes that particular, like person or institution or whoever that
+
+might not be interested in the ecosystem anymore and will stop transacting. So it's important to look into the details, what's behind and what's driving those metrics, whether it's like real usage or whether it's maybe some expectations of token undergo.
+
+Citizen Web3 
+I wonder how many fathers have said to their kids in 2020 during DeFi summer when they asked them money for an ice cream, said, I don't have any, then press sign a transaction of three or $400. Like, go away, go play football. There's no money in the house. And signing transactions are like two, $300. No, but in a serious note, I think I was probably one of them. On a serious note,
+
+But what does a user do? And I'm coming from a perspective of a real issue here because we are currently building a multi -chain explorer. And what I came to realize recently that wallets, they made the progress of growing multi -chain. They went from being on your desktop to being a single app wallet, to being a single blockchain wallet, to going ecosystem wallet.
+
+So going even multi -chain, multi -ecosystem world, it's now explorers are lagging behind. The best we did with explorers was we managed to do ecosystem explorers, but we are kind of stuck there. is like a couple of, there's one actually on the market today, Blockchire, I believe they are the only multi, really multi -chain explorer, but they are gonna go there. But again, how are they going to compare? Like you say, well, it has to come from real usage. How do you show the end user
+
+like quickly without analyzing the whole thing. Like what is that vanity? What is the golden ranking metric? Here's what I'm striving to like in your opinion that any user, regardless of whether they're technical or validator or delegator proof comes from, I don't know, a proof of work consensus that they can understand and say, okay, this network is definitely more used or this validator, I don't know, this network definitely has more revenue. Like, is there anything like that that we can count on?
+
+or it's all holistic like you
+
+David Rakusan 
+Yeah, one metric that I like is the daily active addresses or maybe like monthly active addresses. But I would be cautious with ecosystems and projects that are expecting an airdrop or token distribution, because that could be then skewed a bit. if the token is live and there is no expectation of airdrop, then I actually think this is a relatively good metric
+
+look into, but it's not necessarily that it is a daily active users, right? It's one user can have multiple different addresses and can at one point interact with many different addresses within that ecosystem. But it is, think, decently good metric to track.
+
+Citizen Web3 
+I definitely agree because I myself hold the opinion that blockchains are lot similar resembling nations and GDP and the amount of active addresses is actually pretty much very, very similar. When we compare price, I've noticed before that if you put a price chart of Ethereum or of anything and you compare it to active addresses, those things really correlate.
+
+And yeah, there is a correlation and I could definitely also notice it.
+
+David Rakusan 
+Yeah, maybe one more thing here is also, I think it also depends on whether the project is focused on retail or is building like a general purpose L2 or general purpose L1. Because if there is an L2, for example, such as Arbitrum that focuses or that has that maybe product market fit in decentralized finance, then there might be other metrics
+
+tax volumes that is maybe more important because the volumes could be created by larger institutions and they are controlling just one wallet. So the volumes might be more important for a particular ecosystem if it's focused on taxes and trading.
+
+Citizen Web3 
+Definitely. It's interesting because, you know, I would love to, I think it's going to be hard today to guess what will be because it's so sometimes, you know, like a thing comes out and you're like, but why did they do it that way? And then all the market kind of agrees on it and you realize you're the only one you're like, well, let's do it this way then. You also, sorry, did you want to finish something? thought, no.
+
+Okay, sorry, because I was going to move to a slightly another topic. And you mentioned also one of your tweets once in the beginning of the year, I think it was also about, you know, Star Wars and AI. a big fan. you know, I have a question for you. There was a look at question. What's going to happen when AI invests better than humans? What's going to happen then?
+
+David Rakusan 
+No, no,
+
+David Rakusan 
+I actually think it might not be that far away. I actually think it might already be happening, but depends on what time frame. Trading could be a subset of investing, probably. It could be considered partially as investing into a project or like a token or asset.
+
+with a time horizon of maybe a couple of hours, minutes, maximum several days. But that's why we call it more or less trading. AI is getting better into distinguishing between the noise and the core things, what is happening, and are able to transact and make decisions.
+
+based on the data that it feeds and sees. So I expect that AI trading bots will, all right, maybe even are at this point, I don't have the numbers, how much volume is done by AI, definitely by algorithms, right? I guess most of the volume is algorithmic. I'm not sure how much volume is pure AI without like, not necessarily like, I'll go.
+
+deterministic ways, like basically doing the volumes. So I mean, I don't have the numbers here, but I would expect that AI will take over it and will slowly increase the investment horizon in which it operates.
+
+Citizen Web3 
+mean, we have seen, this is a silly question, but I'm gonna joke and automatically make it into like a semi -joke. We have seen filters on AI and AI is in quotations becoming woke, not for the good side, right? And like, do you think AI will get emotionally attached to its bugs at one point? like, say...
+
+I'm not selling dog coin man, no way. But I can see that happening with today's development. This is crazy.
+
+David Rakusan 
+Yeah, there has been incredibly fast progress in the AI space. And I think everyone realized this with introduction of ChatGPT, but the speed at which it was progressing was quite fast over several years already. just people realize that with that particular event. And I think it's just going to accelerate. Like these models that we see right now are
+
+Citizen Web3
+Yeah, crazy.
+
+David Rakusan 
+that there will ever be and it will improve significantly. I think the next step in AI development is giving them some reasoning capabilities and planning capabilities. And if that's happened, I think it will be a game changer for many industries as well as investing.
+
+Citizen Web3 
+Absolutely. don't know. It's a whole other topic. So I'm not going to go into it, but it should be like another podcast here. definitely, it's a fascinating topic. yeah, looking forward to how AI is going to get it now. I'm mostly attached to Dogecoin. talking about Dogecoin, meme coins, there is a lot of opinions about the damage of the industry with the celebrities, like tokenizing, blah, But isn't this adoption?
+
+Wouldn't you say that is the adoption that you guys wanted? There you go.
+
+David Rakusan 
+I think it is about the adoption. We always thought about adoption going through the speculative phase where many different projects that don't necessarily have values, intrinsic value, like meme coins or so, people are and traders are speculating on top of them.
+
+they face the risks and they are okay with it. So they don't mind the risk. So if you don't mind the risk for trading meme coins or trading an asset that has no or theoretically shouldn't have any intrinsic value, you don't mind the platform risk. You don't mind the smart contract risk because you already are, you know, transacting with an assets that shouldn't have any value, right? So you
+
+in this way you're testing the underlying technology and you're showing the investors and the users that actually take, that actually care about the risk and want to trade some assets that have some intrinsic value. And they care about the platform risk and the smart contract risk. They will look into these, the environment where the meme coins are traded, for example, and they would say, okay, if meme coins could be traded,
+
+platforms that are traded on is already well tested. It actually functions. It actually does what it should be doing. So maybe it's not a bad to transact on the same platform with an asset that has some intrinsic value. So that is, think, like a step in the right direction and in the adoption curve. So I think it's actually quite positive because it shows
+
+a wider set of users that the technology and the apps work.
+
+Citizen Web3 
+I completely agree. Thank you for sharing that opinion. I probably should have asked this last question before I go into the blitz at the beginning, but I will still ask it because I do want to ask it. think it's a typical question that you've probably been asked in previous interviews, and I tried to avoid them, but I think it's an important question considering the audience that we have.
+
+as in a short, like in a brief kind of like, I don't know, in a couple of sentences, as much as you can, you know, put it into, I don't know, borders and then I'm going to say it and then you will understand what I mean. As a project, you know, out there, there are many, as somebody who wants to start a project or is already doing a project, what shouldn't or what should they do in order to get noticed if they want to be noticed?
+
+course you said talk to VCs you said it at the beginning I'm talking about VCs sorry I didn't ask the question till the end what like a couple of things that projects or founders should do and maybe one or two that they shouldn't do if they want to be find the VC that will partner with
+
+David Rakusan 
+Yeah, so I think they like a project and a founder should always get a warm intro if possible. So no, no cold emails or cold calls, so to say or cold messages. It's it's usually not good. And people just ignore it most of the time. So having a warm intro is the best way how to land a call. I wouldn't
+
+exaggerate any big numbers and over promise. It's usually not a good sign and could lead to having a bad relationship with some investors if it's too exaggerated. But I think it's always good to plan and build a company for the long run. It's not going through the shortcuts.
+
+I actually resonate with the argument and with the opinion of several founders that don't want to do token launch until they have a good and strong product market fit. Because it doesn't make sense to launch a token and incentivize a product that will not stick with its users and customers. So, you know, I think that's like another mistake that a lot of people and lot of founders are doing. They're launching like too fast the token.
+
+without having the correct and good product live and tested.
+
+Citizen Web3 
+Thank you for saying that. Build some meat, Build some meat. It's like the geese, people. Come on, you you don't kill the goose before you feed him, you know? No, I'm sorry, but it's a good example. I mean, it makes sense. I'm going to go quick, quick, quick, blitz three questions. They're a bit weird, but I promise they're easy. So first one, give me either one book or one movie or one song that positively influences
+
+David Rakusan
+One book that influenced me. I think it was Rich Dad, Poor Dad in my life. I think that was one book that influenced myself.
+
+Citizen Web3
+You're like, yeah, it was weird. I you it was going to be weird and kick out of the thing. It's on purpose.
+
+Citizen Web3 
+cannot reach it, but it's not very far from here right now, so sorry to interrupt.
+
+David Rakusan 
+I read it long time ago though, like 10 years more than that, but I think it's a good book to read and to go through.
+
+Citizen Web3
+I have to say it changes, it's as commercial as it is, it does change mindsets, especially if you read it like early enough, it completely changes the mindset. Second question, give me one motivational things that motivates David in their everyday life to keep on finding new projects, know, look in Web3 and not get disappointed from all the noise around.
+
+David Rakusan 
+Yeah, I think it's always the idea that we are changing the world here, right? That we are building projects that will be here 10 years from now and people will interact with on everyday basis, know, 10 years from now. I think that's... this realization helps me to go out there
+
+look for great new projects and founders that will deliver those
+
+Citizen Web3 
+Last one is the weirdest one, I promise. Character, a person or somebody made up or that you know, doesn't matter if they're dead or alive, out of a book, out of your work or out of your family, who, you know, not a guru, but again, an influence that you sometimes like kind of look up to in your life, throughout your
+
+David Rakusan 
+Yeah, my wife. My wife, yeah, she's the best person.
+
+Citizen Web3 
+Nice. It was nice. Thank
+
+Citizen Web3 
+Nice. Nice. love it. I love it, David, I want to thank you very much for your answers, very much for your time. And I hope that the advisors were given, you know, are heard. So thank you very much for finding the time and sticking with the questions.
+
+David Rakusan 
+Thank you, thank you, Sergey, and thank you for having me
+
+Citizen Web3 
+Thanks. Please don't hang up just yet. This is goodbye for all the listeners. Guys, see you next week. Bye bye. Thank
+
+David Rakusan 
+Bye bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

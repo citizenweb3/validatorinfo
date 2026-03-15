@@ -1,0 +1,324 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cyber
+
+Episode name:
+The web, AI and Self-executable programs with Cyber core team
+
+Anna: 
+Hey, it's Citizen Cosmos with Serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you're curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+How does it work? Where did you come from to do that? What did you do before that? Why? 
+
+Dima Starodubcev: 
+We have a very simple answer to such kind of questions because we can. Once it will be there, it will be almost impossible to desearch it. 
+
+Anna: 
+I like the term desearch. 
+
+Citizen Web3: 
+Before we rock it off into our next episode, we would like to announce the sponsor of our podcast Cyber, Superintellect. On the 5th of November at 1pm GMT live from the Cosmoverse Conference at Lisbon, Cyber will launch the Genesis for its bootloader network, Bostrom. 
+
+The event will be broadcasted live on cybe.ai, Centralland and several YouTube channels including Cyber Academy. 
+
+Good space time to you all. Welcome to a new episode of Citizen Cosmos and today we are joined by two guests. I'm going to introduce them MasterCybe and Cyberhead. They will soon introduce themselves. But as you guessed from some of the names, those are the two founders, builders or engineers behind the project called Cyber as most of you know Cyber is our sponsor. 
+
+So it is going to be a special episode of course and we will find out everything that there is to find out about Cyber directly from them. Guys, welcome to the show. Hello. 
+
+Dima Starodubcev:  
+Hello, Sergey. Hello, Anna. 
+
+Dima Starodubcev: 
+Hey, what's up? 
+
+Citizen Web3:
+Very good guys, how are you? 
+
+Dima Starodubcev:  
+Happy to be here. I waited for this so long. So long. 
+
+Citizen Web3: 
+It's been a while that we tried to record this show. I mean, usually people record episodes with their sponsors straight away and we do it a year and a half later. I think it's a good sign. Finally, we did do it. Guys, I want to say to everybody who is going to listen to this. 
+
+So there's probably going to be a lot of laughs in this episode because I mean we're all acquainted very well and we're all friends but still the purpose of the episode is to learn about Cyber and we're going to try to ask the guys some serious questions. 
+
+Anna:
+Yeah, it's Monday morning. 
+
+Citizen Web3:
+Yes, it's Monday morning. 
+
+The episode has been recorded on Monday morning and this is the best thing about podcasting. But anyways, guys, whoever wants to answer just jump ahead. I'm not going to pick on names unless I'm going to go into your stories which I will a little bit. But maybe tell us all you want to tell us about Cyber, what it is, what is its purpose, what are your goals, what it is and why you're doing it. 
+
+Dima Starodubcev: 
+Basically, yeah, it was almost five years ago when an idea came that conventional web stack is going to be changed by the things called right now web three. Five years ago it wasn't clear so much how it's going to work. But yeah, I just sit and start to thinking on how conventional web came out and what service would be very important in the context of web stack which is being created right now. So I start to analyze different web services and came to understanding that actually Google search was kind of killer app of web 2.0 and actually I was using the web probably since 1996, 1997 and I still remember with a port and a Vista things and I also remember how Google came and become the app which enabled the web. And so I started to think, okay, we have potential behind web 3.0 and how the search could be in this new realm. So I started to analyze how web 3.0 in particular and did find some technologies which are kind of connected but can be used in different applications and one such thing is content addressing and IPFS in particular. And I just was blown out by the possibilities behind content addressing because it allows to build very different kind of stack. And I start to think how to build the search engine on top of IPFS and that was like initial idea after like three or four years of development. 
+
+Valera actually came to understanding that we build much more. It's already not a kind of search engine for web 3.0. It looks like a really weird consensus computer which is enable the stuff which wasn't possible in other blockchains before. So we came to understanding that it wasn't actually perceived well from our friends and our community. This idea of competing with Google directly. 
+
+Nobody did believe that it's kind of possible to play this game on this field. And also we find out there are so much of applications with our architecture which is just impossible like using Google. So we came to the concept of superintelligence. Starting from this Sergey Yuriy member with strategic shift it was like one and a half year ago. yeah Since when we are thinking in terms of the consensus computer which is powerful enough to be more intelligent than all humans combined and harness the collective intelligence of all the humans. And of course search engine could be one and very interesting application but it's not the only application on top of the thing we are building. 
+
+Citizen Web3: 
+Let me try to summarize what you are saying. So you started obviously with the idea of the conventional internet stack that you saw that there was a problem with it. You realized that the search was the killer application and you tried to understand how to put it on content addressing and eventually you came to the conclusion that you could build something much more powerful, much more interesting which is basically what you call superintelligence. right
+
+A computer which you mentioned can be more smarter or more powerful than all the existing humans combined. I am going to ask you a couple of questions before I move to Valera because I know Valera's thoughts are more technical and before we move there I want to establish a more foundation to easier understand what you do and why you do it. So the first question is you mentioned that the conventional web stack was not good, not okay, there was something wrong with it. 
+
+And I think it's a good point to maybe talk a little bit more why you think is wrong, what's wrong in your opinion with web 2.0. Why do you think that we need a new search engine or a need super powerful computer? What is the purpose of it? Why do we need it? 
+
+Dima Starodubcev: 
+Sergey, you know that it's hard to find any good thing in existing web stack. Any aspect of it is just have its own problems. The biggest problem I think that the quality of the content in this web is very low. You can say that okay, conventional architecture stack is not censorship resistant. Okay, but it's not easy to understand. You can say that a lot of privacy is harmed in conventional stack. 
+
+Yeah, but okay, I can use them. The real problem is that you actually don't know which content you miss because of this system. And I would say as like a guy who research, for example, my particular field, you know, I am a blockchain space since 2011 and professionally from 2013. So I would say that it's kind of impossible to find a good content in this web. I just cannot explain like people still ask me, okay, how can I get involved into Ethereum and all that craziness and goodness and major quality you're trying to build. And I just still don't have a link which will be like usable to my friends, which will dive them into a really good content. 
+
+All they can do using Google is to get through all that paid advertisement sites. When you will find the really cool stuff, you will spend like months. The quality of content is the problem, the biggest problem. And we even don't know which content could be there because during 25 years of the web so much of good stuff created, so much. And it's impossible to find it due to different reasons. And when censorship and like copyrights, etc. 
+
+Citizen Web3:
+All that bullshit, you can say that. 
+
+Dima Starodubcev:
+What is my personal pain? 
+
+Anna: 
+And what about GitHub, by the way? 
+
+Valery Litvin: 
+I think we have a big issue with GitHub since Microsoft bought them not so long time ago and we need some solution, I think that will come in years because mostly all developers all around the world are locked physically with their own code and communication between each other's developers. As engineers, they are locked into private infrastructure and services that use all data that collected all around the world from all developers to these guys are generating values that are not asking anyone about it. 
+
+Dima Starodubcev: 
+Yeah, I would add in terms of GitHub and the things we build. You remember great service popcorn time. 
+
+Citizen Web3:
+Can you remind us? 
+
+Dima Starodubcev: 
+Yeah, we just cut it out and we don't have access to good tarant. Because we just cut it out. Of course, it has some benefits, but we emphasize the problems which we have with conventional web stuff. 
+
+Citizen Web3: 
+I think it's quite obvious right now currently. I mean, we're recording this using conventional stack and we're in three different locations. The connection is absolutely shit for everybody who's listening. 
+
+You guys are not feeling it because we do the editing, but it takes so much time, so much effort to work on this. It's a good example of maybe we don't see how the current stack is a bit shit, but it is very shit. I want to go back still. I'm going to every time bring us a little bit backwards and you said artificial intelligence. Can you explain in your own terms, but in simple terms, why you call cyber artificial intelligence and why actually do you think it will be smarter than a lot of the existing computers in the world? What's going to make it smarter? 
+
+Dima Starodubcev: 
+Actually, we don't say that it's artificial intelligence. We emphasize that it is superintelligence. And I will explain where is a framework of thinking on the artificial intelligence. I have kind of three types of artificial intelligence. There's a narrow particular neural network which can recognize some videos and classify data, etc. And we have general type of intelligence which can solve any tasks which human can solve. We have such concept of superintelligence which theory is intelligence of different scale which can be smarter than all humans, for example. 
+
+Or part of human. And focus of media and right now focus of different communities are on general artificial intelligence and everyone want to replicate the brain, how the brain works. And still nobody understand how it works, but recent resources shows that different functions almost there. 
+
+It's kind of doable in like following years to replicate the brain. Yeah, but nobody thinking right now about how to create something that order of magnitude smarter. There is a guy Nick Bostrom who is a guy behind simulation argument and he is a professor of computer science fiction. And he actually created this concept of superintelligence and wrote a book. When we start to dig into that we read it and realize that it's actually good direction to think is to how to harness the power of collective intelligence. And according to this guy, this is one of the path the humanity can take to have a kind of intelligence which is an order of magnitude smarter than like any particular brain. Yeah, so we started from where and maybe Valera want to add something. 
+
+Valery Litvin: 
+I think there in 2021 it's already mainstream that blockchains it's a new line of forms that live in new cyberspace that started to be more and more organized, started to be more and more structureized since that humanity develop web. And this one in mainstream, there is one missing thing that's not already mainstream is about consensus computers. Consensus computers, as we know them, we can connect these terms together and think that for example, it's consensus computers that act as backbone for the global whole planet economy. And easy to describe what we are building, that we are building brain superintelligence for their global intelligence. So it's consensus computer for global intelligence. And as we started to realize that it's not simply a search engine but it will be a little bit more after we will launch that computer. 
+
+We started to understand what will happen and this give us some interesting ideas that light us new road to building this superintelligence. And we bring some new concepts in consensus computer design such as concept of resources of the computer. For example, in our system, you need one resource for your bandwidth for creating something to bring data information, your intelligence to the global intelligence. 
+
+Second resource, it gives you power to measure your intelligence, competing to another one. And as I remember, in 2019, we was the first launch computer with GPU with the programs that run on the GPUs in consensus around all nodes in the network. And then we realized that it's most powerful hardware that can create such powerful things that absolutely magic competing to other system. And now we have not only algorithm that allow to put ranks to particles onto the knowledge graph, but also we add measure of the superintelligence that is negative entropy of the whole system. 
+
+It's a negative entropy that creates from more structure, more organization itself into this graph. And this measure will grow and we will have this moment, Hello World, that will begin soon. And we will perfectly understand when it will be. 
+
+Citizen Web3: 
+I think one thing you guys kind of forgot to mention is that this computer and I want to say it's not just told by users, it's a distributed superintelligence. It's very important. Nobody is putting data into it. And more so, it's managed by the users. 
+
+Am I correct? So it's completely not belonging to anyone. There is no corporation behind it, no company behind it. Well, there is some engineers that are building it, but it belongs pretty much to the users. 
+
+And up to what 70% of the original distribution is getting dropped as a gift or a data drop, right? Or what's the right word to use? Am I correct in saying that? 
+
+Dima Starodubcev: 
+Yes, Sergey, I can try to explain how the system works. Actually, we are starting from the concept of particle. Particle is content in the defecator or hash of some particular content, which can be addressed in some content-addressable system, for example, an IPFS or a swarm or whatever. Ya So every user of the system, we call them agents or citizens, because they don't like the concept of a user. It's like drug user or something shady. you know Some agents, they start to interact with this computer by putting information into it in the form of cyber links. Cyber links is a new concept in web. It came to change hyperlinks. You can think about hyperlink as the links to some server, because everywhere behind hyperlink you have some IP address and there is a particular machine which waits for asking. And the problem with hyperlinks is that you have content drift and you have content which is disappearing and content which is changed, etc. When you have hyperlink, you just cannot control, like, actually, some researchers throw more than 90% already of the information in the Internet, they're just gone. 
+
+Even if it's there, it's almost impossible to find it because of how hyperlinks work. And when we have cyberlinks, we don't have such problems. We can connect between two particles, between two files, independently on where they are located, where they are stored. So it's a kind of abstract knowledge graph which everybody starts to link between each other thanks to cyberlinks. And this actually can be called as content addressable knowledge graph thing, yeah? We call it content oracle, or if you compute the ranks, this interconnected structure, you can say that you have the simplest concept of a relevant machine. And actually what computer does, he takes all these cyberlinks and computes the rank right in the consensus. 
+
+And that was the hard part because still after 10 years in the blockchain we just don't have on the market any reputation system which is work. And the problem came because you cannot compute, there is a class of algorithms which is just intractable to compute in like on CPUs, on sequential architectures. They are highly parallelizable. And the ranking and reputation, all in the same class of algorithms which are if computed on GPUs, can be computed like 5, 6 order of magnitude faster. So for example, if you take a knowledge graph with like 1 million cyberlinks which is not a lot and you will try to compute it using Solana or Ethereum or like any CPU computer, you will not be able to compute it faster maybe one day. And if you try to compute it using GPUs, it will be probably 100,000 times faster. So like in cyber computation or the knowledge graph with 1 million cyberlinks take less than 1 second. So the difference in computation capabilities is significant and this was not easy to solve because still you don't have useful GPUs almost in the consensus computing space. Of course there are some functions which can be done in live peer networks in Solana and in Filecoin. So some are using or just start to use GPU but as support functions and they can be interchangeable. 
+
+They are not necessary for the system to work. But in our case for the knowledge graph more than 10,000 links it's almost impossible already to compute on CPUs. So that's actually basicalities of like the thing we are working on. 
+
+Citizen Web3: 
+If we were going back and try to summarize all that now it's getting a more interesting picture because now what we have is not just a computer but a computer with resources that is managed and the information is added in a verifiable and distributed way by anyone to this computer pretty much from what I'm hearing and basically we're getting some kind of a big clever machine that is able to answer us and that has a rank in a reputation system. I know you've been testing for a long, long time and testing publicly for a long time and I know you have some applications that are already running on top of cyber. Can you maybe talk a little bit about them? 
+
+Anna: 
+Can I rephrase a little bit your question because I want to ask as a user if I'm a user how I can use cyber, how I can see the work of cyber for not someone who is an engineer but from like, okay, maybe advanced user not the beginner, not an engineer, how I can see the work of cyber. 
+
+Dima Starodubcev: 
+Easy. In simple terms you have this plain old search input. You put something there and you get an answer but you don't get a link to some particular site. You have a link to like a content which is stored in some distributed network like now we are using APFS. So it can be easily downloaded in your browser and you can instantly watch pictures, videos, some audios, reading PDFs but the most interesting part is that you can actually surf through traditional JavaScript apps. 
+
+So like we start from creating a demo cases in which we put for example Uniswap or like some Solet or Polkadot.js applications which is packed behind APFS hash and land cyber linked so you can go to the search engine like type Uniswap or like Polkadot.js or like Solet and you will find this application and push it and right in the search result you can already interact with that using like your favorite Chrome extension. That is super cool because still it's an issue. For example, you know that Uniswap drop out users from some countries. The protocol is decentralized but the front-end is not. What's the point? 
+
+Fuck them. You can go to cyber, search for Uniswap and find this application. And then you can write there from the search result. You can write the good thing, the great thing that you as a user, as a content creator, as an application developer you can put anything you want to search index and it will be indexed in 30 seconds and you are managing the semantic core for which you want your application or content to appear in search result. Right now it's just not possible. You have to pay either for every click or do some CO magic and the dancing around the fire to have your application in search engine. 
+
+Anna: 
+Let's discuss Uniswap case because it's the particular and very clear user case. To understand if I'm a user from some country that is blocked by official Uniswap website and I want to use Uniswap, so what I have to do? I go to cyber web application. So It's already the kind of decentralized application. Is that correct? 
+
+Dima Starodubcev: 
+Okay, there are two steps involved. The first step is that the knowledge engine, the cyber gust don't invent stuff here it answers the questions for the content that has been put there so somebody have to make the cyberlink for example with word Uniswap and the hash of a quantum. This could be anybody or anyone. So it could be official application developers can distribute the app this way. This could be community members who will go to GitHub, just get cloned with the app, compute the IPFS hash and cyberlink it. This could be you who will go to uniswap.com, push to some extension, in the future we will add this feature and you will able to just compute the hash from any web page and cyberlink it instantly. 
+
+Anna: 
+Still nobody put uniswap into the system. 
+
+Citizen Web3:
+It is. 
+
+Anna: 
+Uniswap hash. 
+
+Dima Starodubcev: 
+There is no system yet. We have test nets which destroy essentially the knowledge graph which was created. So it's not persistent yet. It was there already several times. Right now it's as far as I know it's where. But there is no system yet. We will launch at 5th of November and the knowledge graph become persistent. That's the time when everyone can start to build it. And once it will be there, it will be almost impossible to deserch it. 
+
+Anna: 
+I like the term deserch. 
+
+Citizen Web3: 
+You said you guys are going to launch on the 5th of November and for anybody who doesn't know on the 5th of November there is a conference in Lisbon called Cosmoverse and the guys have a big surprise as far as I know planned for the 5th of November. They have a very interesting performance attendance. I don't know what to call this right. An installation. no
+
+I'm joking. They're going to do a launch of the bootloader network which is called Boostrum and it's going to be live from the conference. We're going to be there as well as Citizen Cosmos to not just cover that but to meet up with everybody else. But I advise everybody to watch out because there might be some surprises. 
+
+Might be interesting surprises or gifts for people. I don't know. Whatever. But anyways, guys, I have a slightly different question because from what you're saying, it's quite obvious that it's pretty much impossible to understand the concept in one go unless you have to really dig into it. It sounds like it's something that is really necessarily in order to make some of the tools that we use work better and more efficient and it sounds like there is a lot in there. But I think the question that maybe at least I know that we personally have and I'm sure that some people that listen to it have, there is a few questions. The first one is how did you come decide to build this computer? 
+
+You mentioned that the web to stack, the conventional stack wasn't good enough. But how does a person wake up and say, well, I want to build the super intelligence because that's what my mission in life is. How does it work? Where did you come from to do that? What did you do before that? Why? 
+
+Dima Starodubcev: 
+We have a very simple answer to such kind of questions with Cyberhead because we can. 
+
+Citizen Web3: 
+I like that, I like that. 
+
+Dima Starodubcev: 
+Valera, want to add something? 
+
+Valery Litvin: 
+No. 
+
+Citizen Web3: 
+I like that, I like that. I do have one ask Valera. You're the engineer behind all that demised architect. How does it feel to be an engineer of a super intelligence? Do you feel nervous? Are you afraid that you're going to fuck it up and the super intelligence is going to kill all the human beings? Are you afraid that it's going to eat you alive one day? I don't know. How do you feel about being an engineer of a super intelligence?
+
+Valery Litvin:  
+I feel amazing. I know that we make everything great and we'll make everything great. 
+
+Dima Starodubcev: 
+I actually can add up that we discuss a lot of philosophy behind the projects. And yeah, if you ask me, I will answer you, we are kind of worried about different outcomes. But what we know for sure is that the first somebody sometime will gonna make it. 
+
+And the second is better that we will make it and ensure that the beast be learned well. I think the biggest problem everybody talk about artificial intelligence came out of nowhere and kill humanity. That is kind of very popular topic now. 
+
+Anna:
+Do you believe that? 
+
+Dima Starodubcev: 
+I don't believe because I don't believe it will be fast. I do believe that it depends on us what we will learn him. 
+
+Generative model behave depending on what information has been put there. And one of the issue we are actually solving, we are not designing supercomputer which is able to compute rank and also we don't solve the best economic system to put incentives. No, I think the biggest problem we are solving with the project is the philosophy where right guys have to have talking rights to these collective intelligence. Because if we will put into the wrong hands, we will have some problems. To ensure we do one year research of Ethereum blockchain to understand how they behave, how they think, to cut off all that fired brains who think that dollar will grow to balance their stakes. Because like proof of stake system is awful in terms of initial distribution. 
+
+It just doesn't solve the problem of the first hand. And in our case, depending on the first hand, this framework will appear. This all semantic collective knowledge. To make it clear, right now you don't have a knowledge graph of the Google. But in our case, any robot will be able to download this knowledge graph and understand how semantics of humanity works. 
+
+That is very powerful. And depending on the first hand, these semantics will form. If they will put these tokens in the wrong hands, humanity, of course, will have problems. If we will do everything right, we will have really smart things which will help humanity to evolve. And we will do everything right. 
+
+Citizen Web3: 
+It's interesting that lately a lot of projects we talked to, for example, I think it was with Ethan from Cosmomwasm and with Sunny and several other people. We come to the conclusion that the biggest problem end of the day is distribution. And it's interesting that we come here again. The correct distribution is a very important thing to make. And you mentioned that you guys did a year research in order to make this distribution as best possible way that in order for that superintelligence, not to do stupid things, but to be told, let's say, correct things. 
+
+I don't know what's the right word to use here. But when you did this distribution, what were the main points that you were trying to look at and to make sure the distribution is correct? So you said one is to look for accounts that don't think that the dollar is going to go up. What are some other things that you had to include in the distribution research to find the correct people, so to speak, to give tokens to? 
+
+Dima Starodubcev: 
+We actually make several assumptions. The biggest is that how you transact define your behavior. So like we split the behavioral types of Ethereum users into seven groups, which can be translated into very easy to understand audiences. I will mention some good cases. The first audience, of course, are developers, programmers, like we call them hackers for a good story. And we analyzed all contracts, deployments into Ethereum and rank addresses who deploy contracts which consume more gas. So this idea that I am as a developer can get more tokens if I am able to produce a more useful program is very powerful and provable. 
+
+You cannot game it. So the second case, for example, is we tried to find the key opinion leaders in the Ethereum blockchain. And we came to understanding that this is actually a top token holder of top projects. 
+
+So we allocate more to these audiences. Another thing we did find out during this research is that actually we did find a way to find content creators in Ethereum blockchain based on analysis of the meaning of NFT tokens and so on. Like in our case, we dropped huge chunk to potential validators in our network. And we decided to drop them to guys who wasn't the genesis of Ethereum, like they are kind of heroes for us. 
+
+And for the guys who put some stake into F2, stake in contract and so on. So we have seven such audiences and one like kind of socks audience, like cypherpunks, so eight audience overall, which is provably behave in desired way. And these audiences have a location in accordance with our understanding of the amount of agents in these audiences. 
+
+Citizen Web3: 
+And as far as I understand that, well, a very important thing for this superintelligence will be for this distribution to carry on right changing hands. So it's not like just stuck in the hands of those initial players, but goes to the robots, so on and so forth. And how will you make sure or how will this superintelligence make sure that this distribution is not stuck in the hands of the initial holders, but carries on growing and growing and growing, getting more developers, more robots, more information and so on and so forth? So Valera, how will this superintelligence make sure that the initial distribution you guys have designed will carry on attracting more developers, more applications, more robots and whoever else it needs to attract? 
+
+Valery Litvin: 
+I think, guys, this year made awesome gift and demo explained already that. And if all that assumptions will work, we will have growth, that great Ethereum, and this growth in our case will be rather more, because we are standing on the distribution of Ethereum, like standing of shoulder-stone genes. So any other better case does not exist. 
+
+Dima Starodubcev: 
+I would add some is actually where we right now model inflation in the system, and supply will inflate like two-fold, it could inflate three-fold. And basically it will inflate, of course, to the existing hand, but you know how it works usually. 
+
+As far as I understand, strategy where like most use stretchers by stakers is to usually selling the staking rewards. We hope that will be like probable outcome in our case also. So this helps to distribute gradually over the years to new coming life forms. 
+
+Citizen Web3: 
+I know that you guys are building certain model which you called the IKP, right? Can you talk a little bit about that knowledge model? 
+
+Valery Litvin: 
+The model that you mentioned, IKP, does not exist yet. It will be an inter-knowledge protocol over IBC that will be developed post-launch in coming months. Because this is major part that we need to launch cyber. Because Wostrom, the first time after launch, will mostly act as a cannery network. 
+
+And it's most best existed analogy that explains that we need to use some parameters, check our assumptions, test code, and we already made a lot of tests, but need to test it in manner. And after that, as we will accumulate some, we didn't choose the yet value that we need to achieve, I mean intelligence, that will be enough to launch cyber. But inter-knowledge protocol will allow a cyber will download the intelligence core from Bostrom. 
+
+And after that moment, Bostrom start the bootloader hub. It will bootload cyber and will bootload other networks that will be launched on foundations that we developed and built already. And we already think a lot about that, because from the beginning we are describing process of our development and launching of the system. And they run in our hub, this project name, LaunchKit. And everybody can use them to launch everything we already do and going to do using everything. License allows you to do everything what you want, no fear. 
+
+Citizen Web3: 
+So basically, as far as I understand, this model will allow cyber to interact via IBC with everybody else, right? 
+
+Valery Litvin:
+It's not a model, it will be practical that we will implement as model in our cyber SDK because we have a lot of models that mostly already form our own SDK. And other guys later would like to launch their projects, their consensus computer based on our models. 
+
+They will use our stack. I would like to mention that inter-knowledge protocol not yet implemented, but we for that moment implement very interesting feature that we think for a long time with master. Because we desire for a long time about absolutely autonomous forms of digital life that can exist in consensus computer and earn, hold and pay for their, just simply live somewhere most fully in digital space. 
+
+And for some reason, guys, before us, for that years didn't do anything in this direction. And we're going to launch a bostrom with a model that we named default mode network. It's a model that will process programs, autonomous programs, allowing them to add themselves to scheduling system and consensus computer. Each block will execute their actions, which they applied to execution and the program will pay for that. And the interesting thing that they will not only pay for that, but they will from day one have ability to earn from execution. We give them 80% of all fees from executions goes not to validators or community pool. The fees goes to programs and this will allow this program build strong foundation and act fully autonomous by their own will. 
+
+Citizen Web3: 
+That sounds a bit crazy. 
+
+Valery Litvin: 
+Yeah. 
+
+Citizen Web3: 
+But it's cool.
+
+Valery Litvin: 
+And we cannot imagine how much very important cases will arise when people start to understand that these programs really unstoppable as they just can pay for their execution. And for Cosmos, that means that as interchain account will be implemented also, these programs that we named in our consensus computer, TOS, this will enable them acts on the interchain. No humans, there will be programs that will act on the interchain and the actions will not meet us and it will be very soon. 
+
+Dima Starodubcev: 
+No human, no crime. 
+
+Citizen Web3: 
+This is true. It's fucking true. 
+
+Dima Starodubcev: 
+Yeah, absolutely. I love this concept and want to extend on that because if you like think on interknowledge protocol is just as extension to IBC, yes, I'm format to exchange like ranks and content identifiers. It's quite a dump and simple, but if you add to the basket is ability to create programs which can self execute. Your imagination can be blown out by the abilities such as indexing different blockchains using I.K .P. For example, like streaming domain knowledge graphs through the interchain accounts, etc. So these cases actually thanks to these two functionalities, we believe that cyber will evolve kind of hub system which just suck an index content from different networks through I.K .P. using these autonomous programs. 
+
+So it will be kind of fully automated index or not. They think we right now expect to use it as a blockchain which we will put cyber links manually. No, we actually understand that the scalability of the blockchains are quite limited. Yes, and we right now don't understand how to put more than 100 million people in one blockchain. 
+
+It's not looks viable. Yeah, and we have to put billions where how we can do it. So we use this idea of interchain and like we create in the tools for creating domain specific knowledge graphs, which you can embed, for example, in different cosmos chains. And then in different other consensus computers. So actually it will be work as a model, a model which any blockchain can put in and index content he believes in. Yeah, and then using inter knowledge protocol and like this default network type of scheduling system, it can be easily synced between different networks. 
+
+Citizen Web3: 
+It sounds that the guys have really designed a system which really includes a lot of the time, especially if you spend a long time in blockchain, more than five, six years, you see that sometimes some ideas that people have might be interesting, but unfortunately they are lacking the simple physics rules of like having resources, having computation, having bandwidth. And it sounds like you guys have managed to really design something very complex, but very by the book according to those computing sorry laws system, which should and will work. And I think it's going to be interesting to see how, especially I.K .P. 
+
+in Cron, or I mean you guys have just gave it a different name to the module that executes the programs by itself will work. I think that's going to be crazy. And I'm surprised nobody else has actually so far as done it in the blockchain space. 
+
+I think you need some balls to allow programs to self execute. And it's going to be very interesting to see how that turns out and where we will end up with it. 
+
+Dima Starodubcev: 
+That's so exciting time to see because Sergei, when Ethereum, you remember when Ethereum was born, a lot of like none of the existing hypes wasn't predictable. Right now we think, OK, this cyber stuff, this knowledge graph, the reliance machine, this kind of Cron scheduling system and like default one network. And actually it's hard to understand and predict the real applications which will take off from this ground. 
+
+If you read the Ethereum white paper, you will not see the stuff which was really take off in Ethereum. And I did in our white paper, I did try to describe like 12 very huge applications for the things they built. Yes, but very broad very broad categories of applications like social networks, for example, like browsers, like search engines, like command line tools, etc. Broad, very broad scope of applications. But I bet that I will not be able to predict what will be really take off in like couple of years. like I think it will be something new which we are just don't understand right now. 
+
+Citizen Web3: 
+That's a good thing. That means that the idea of the super intelligence work and write because it should be smarter than your ability to predict what it will be able to do after it's going to work. 
+
+Dima Starodubcev: 
+For me, it wasn't obvious that we actually do something in the artificial intelligence space. Yeah We just built three years from 5E, built a protocol for computing rank between links. Yes, but for me, the biggest inspiration came from an article on a soft point to all. For me, it was like open my eyes that software industry can be rewritten by the software itself. And it will be rewritten by the networks. And this is article of Andrey Karpaty. 
+
+He is now director at Tesla. He envisioned very simple way to transform where software execution and production itself. So he's saying not about the system in which execution paths are pre-programmed like human architectures. He envisioned a program space as a knowledge graph with weights and execution paths are defined by these weights. So he gave some examples on how program can optimize itself using this kind of architecture. 
+
+And he emphasizes that still like there is no tools, there are no frameworks. It's just a new ground software 2.0 thing which way as I understand, sucks, fully apply in Tesla. And immediately I did find out that actually we build this soft 2.0 stuff but for the blockchain. And we already build it because it's exactly what he described. And I start to think on very different level and realize that actually, yeah, it could be very powerful concept. And these will lead not to just like searching simple search but to constructing very hard answer on the fly using knowledge graph. And executing programs on the fly using this kind of system. So basically I think that was the tipping point of inspiration, this article for me in terms of super intelligence, not in terms of like Google competitor. 
+
+Citizen Web3: 
+It's actually quite interesting to hear that an article was an inspiration for such a huge system machine. It's unusual. Anyways, I think guys let's try to wrap this all up. I think first of all, obviously one episode to understand about what cyber is might not be completely enough because it's such a huge complex system. 
+
+But in my opinion, it's much more easier to understand now what you guys do. And I think that on the 5th of November, like the guys already mentioned a live from the conference in Cosmos in Lisbon, the guys are going to launch the bootloader for the network which is the Bostrom, kind of network. And I think we're going to see from there what crazy things are going to happen when they connect to IBC and when network is going to start to connect to them. And we'll see how cyber progresses. 
+
+And I think it will be interesting to see how programs are going to start to execute themselves and going to progress and what programs and what applications are going to live on cyber because, well, the more decentralized and distributed technology we have, the better. But anyways, on this note, I think we can wrap it up. Thank you for everybody to join in. A lot of those links and I hope most of those links unfortunately in web 2. 
+
+Dima Starodubcev: 
+Yes, 
+
+Citizen Web3: 
+all those links of course we will link it up guys. And thanks you for everybody who joined in and see you next time. Bye bye. 
+
+Dima Starodubcev: 
+See you guys, thanks for inviting us, Sergey. 
+
+Citizen Web3: 
+Thank you for coming on guys. . 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

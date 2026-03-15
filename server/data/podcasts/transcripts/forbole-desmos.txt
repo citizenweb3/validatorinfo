@@ -1,0 +1,259 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/forbole-desmos
+
+Episode name: 
+Next generation socials networks and guitars with Kwun Yeung
+
+Anna
+hey it's citizen cosmos we are serge and anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community join us if you are curious how dreams and ambitions become code 
+
+Citizen Web3
+okay so today we will chat to Kwun who is one of probably the most active members on cosmos that i know he is the co-founder and the conductor of forbal of desmos and big dipper explorer and i believe much more so maybe Kwun maybe you'll want to introduce yourself and add other things that i missed out tell a little bit about yourself to everybody 
+
+Kwun
+hello everybody i'm Kwun and um i'm based in hong kong i'm the co-founder and conductor of football and then i think most of the people in cosmos know about volvo because we are validated on cosmos hub and then we are also validating different networks which built with customers sdk and then we are also validating some other networks right so we um we are developing decimals which is a social media network protocol that developed with cosmos sdk and then we are maintaining big deeper 
+
+Citizen Web3
+cool cool so let's talk about verbal first i'm gonna maybe put i have some information that you think i might not have but i've done my homework both of us me and Anna we think we read uh about creative works right is that correct 
+
+Kwun
+All right
+
+Citizen Web3
+so you found it in 2005 right is that correct 
+
+Kwun
+yeah yeah yeah 2005. 
+
+Citizen Web3
+and i've read that it was a solution and marketing company so what i wanted to to understand is how you got from solution and marketing to validating on cosmos how did that happen
+
+Kwun
+all right so yeah i was in digital marketing and then i was working like a vendor for many companies for brands and companies and we thought of some solutions and then we help them to promote their brands promote their products using digital solutions so we built a lot of apps built a lot of websites some interactive installation in some you know some venues and then so i acquired a lot of different um user experience and marketing knowledge during that period and then so in 2017 there's a client he asked if we have any idea on building iot solutions and then we started studying iot all right and then when we study iot we found out there there are some solutions on iot that are talking about using blockchain on iot okay and then we started studying okay what is blockchain and then um i heard of bitcoin i heard of you know but i don't i didn't really know what blockchain was then i started studying and then terence and i terence is my partner and then so terence and i find out that oh we can build decentralized network decentralized applications on blockchain and then if we can achieve that then we can build a decentralized social media that we can get rid of google we can get rid of facebook because when we was in the cricket works when we were working as a digital agency we helped a lot of companies and brands to you know placing ads and then you know like um infringing users behavior on facebook and then placing us on google's and from time to time we didn't like that we just think i think that it's not right to do that but we didn't know how to change that because it's like in the market there is only such kind of solutions that can push to the economy move and then so until we find out what blockchain was we started studying if we can build a decentralized network using blockchain and then this is how we found the furball so four ball is actually yeah what you you cannot find it in dictionary right this is not a word if not a word because we would like to build a social network with um some philosophy that is four and then for is four and then b-o-l-e is actually a mandarin boiler is like someone who can pick a talent four-ball means someone who can pick a talent and then we we would like to start building a social network that build on business so that someone can pick a talent and then refer the talent to some businesses like that using blockchain all right this is how we get into blockchain 
+
+Citizen Web3
+that makes sense i like that i didn't know that you had a story behind the name that's really interesting so it's like a mixture of an english and a mandarin word that's cool i like that 
+
+Kwun
+yeah 
+
+Citizen Web3
+did you come up with the word use together with your partner 
+
+Kwun
+yeah yeah with terence actually terence came up with that 
+
+Anna
+so and do you have the big idea behind it you know what the ideas that drive you to do what you're doing 
+
+Kwun
+the idea behind so because we were in digital marketing industry we were a digital agency and then we were tired of helping those brands to to like infringing use of user behaviors infringing users privacy so we wanted to stop that 
+
+Anna
+yeah it's one of the biggest problems 
+
+Citizen Web3
+is there something personal that drives you like for example not as a digital marketing company but what personally inside of yourself makes you do what you want to do 
+
+Kwun
+all right so so actually i love social media i want to say social media is uh um it's what we have to it's what we do every day and then it's what we communicate with people and then um I we think that and then we think that if there is a way that we can introduce our friends our family our fellows our students to anyone that we like we trust and then we can refer them to a good position then we are actually bringing we are actually helping people we are actually bringing them um maybe to a bit better future so we would like to some kind of generate that kind of behaviors that kind of like ways of doing things so like how you give and then to help people 
+
+Citizen Web3
+yeah i see so this is a lot where we agree i think on on the values that we have in cyber as well but anyways back back to how did you choose cosmos i mean did you feel that it was going to be successful did you like the technology 
+
+Kwun
+so it was 2017 late 2017 i started to really make my hands dirty so i started coding and then start to start the coding on the social network and then i originally started something on ethereum just like anybody else when i first studied about blockchain it was a time of ethereum and then i started coding something on the field and then i found it it's not possible to work like that it's just not possible to make this also never work and then i started to still think is there any other solutions and then and then i i looked around i did some research and then i found steamy.com i think a lot of people know about steemit and then steaming is a platform for writing blogs and then it's all on blockchain i was very surprised why is so different from ethereum and then i started to take it out and then um i saw that i studied that there is consensus algorithm or consensus engine called graphene which is the consensus engine using on steemit and i i i study about proof of stick and then i thought if there is a way that i can or if there is a way that people can use proof of stake with the consistent engine and build a steamy.com then is there any other similar solutions or product that i can use to build my own network and then i start thinking out with the consensus engine and i found tendamine so i started learning tendamine and then i learned about jaekwon and even buckman so i watched their videos i read the papers and then i liked the research and then i started watching more videos and then i found that i found out one video that they talked about cosmos so it was the late 2017 and then it was like maybe november or december so it's like seven or eight months after the cosmos fundraiser and then they talked about building a customers sdk in order to build the cosmos hub i logged into cosmos sdk and then i think and at that time i thought this is the right solution for building networks because i was in digital marketing and then i built a lot of applications and i understand that with with an sdk with an sdk which you can extend which an extensible sdk you can build a lot of different stuff quickly easily and then you can and then eventually the developers can focus on user experience but not those protocol or those p2p layer or you know the consensus and um yeah this is what i like and then i started studying if we can build the network using cosmos sdk okay so i started reading a cosmos sdk and then started to build the software for the social network and then i found out that if i have to run the network i need validators to run the nodes then where where could i find validators right then because from my digital marketing background i knew that if i have to approach anyone then i have to understand my audience so i try to learn to be a validator and then so in late i think it was late march in 2018 i joined the cosmosphere data wide chat and then start chatting with with the people there and this is how i started to become a better validator 
+
+Citizen Web3
+that's interesting but you guys became a very influential validator and you validate quite a lot of changes that correct in the cosmos ecosystem 
+
+Kwun
+yes yes 
+
+Citizen Web3
+did you did you plan to for such a big thing to to become like as influential as you are today or you just wanted to get experience 
+
+Kwun
+i just wanted to get experience and then but i learned a lot and then i didn't know but maybe because i'm a guy that i like to share so when people talk and then i just keep answering people and then yeah i became quite familiar with the node operation be familiar with the security behind and then quite familiar with the networking the infrastructure and then what the validators should do i still remember there there was an interview from tandermin in june probably in june of july 2018. yeah at that moment i still talked to them that i have no idea on the business model of validator i know nothing about business on validator i just want to explore that and then see how it could help on building our social network yeah but um then i do found that and like so so for better validating customs hub it it it's a must for us because if eventually i built my own social network and then i we would like to use customs hub as the hub for ibc then we have to be a validator on cosmos hub i mean then yeah because we would like to use custom hub as a hub to connect our network and the artist through uh using ibc then we believe that we have to be a validator on custom hub because we have to be a part of that we have we need to have be a stakeholder of the hub and then we have to help securing the hub so we yeah so we somehow we we decided to be a validator and cosmos hub and then so we try our best because we we didn't have any atoms we didn't join the fundraiser we didn't have anything so we tried our best so we participated in game of stakes and then and then we were in a place on the final winners and then this is how we started validating customs hub 
+
+Anna
+cool just in general how many people are you talking during the day 
+
+Citizen Web3
+you did mention that communication is is very important and it's it's I'm curious to know how much time per day you spend on communicating with other people 
+
+Kwun
+wow like anytime and then because yeah you know me sometimes i'm in some channels i'm in some forums and then i'm in some groups and then so like but back back to 2018 it was like 24 hours every day but now we we yeah but but now uh of course uh we spend more time on different networks and also we have to spend more time on decimals 
+
+Citizen Web3
+before we get to desmos though i wanted to ask you about the big dipper before we get to desmos because obviously it's it's it's obvious that big dipper isn't just an explorer it's kind of an application already you can see that and it's if not the best explorer with the most information it's one of the best explorers that i think is used widely by everybody why why did you make it what was i mean there is the obvious answer that you made it to to get some traction and everything but what's what's the inside of why did you decide to do an explorer and not a different application 
+
+Kwun
+actually it was not for traction 
+
+Citizen Web3
+oh sorry sorry sorry sorry my bad my bad
+
+Kwun
+anyway yeah but but it was interesting because so still in the mid 2018 we were building our own pro project and then we need an explorer to to see what's happening on the chain on our test net so at that time i remember there was only hubble running on cosmos test net and then it was not open sourced and then there were there was um an open source customers explorer from tandomi i think uh pang jong did that build that but um it was not what i really want to to read the information of validators and the and broad information and then so i think why don't we just build one for ourselves then then we start building that so it was like june or july maybe in 2018 we built a very simple one that we can read all the blocks and then make sure and then to display the voting power and then the priority of the validators it was very simple but then i don't remember when maybe july again there was the customs hack atom three maybe yeah hackathon three the topic was validator monitoring monitoring and alert tools then i thought but why don't we just make some changes on the on our explorer and then add some features on alerting and then maybe change it to really can monitor the validators performance on cosmos test net then submit it open source it and submit it and this is what we did so we changed some code we change it to be more cosmos hub we changed the explorer to be more cosmos hub that you can see the validators you can see the blocks see the changes of the validators of the delegations you can see how those maybe at that time there is there was still more on the block information and then you can see which metadata miss any blog and then we we submitted another application for alerting which monitor the law of the validator and sending an alert to uh telegram so it's like is is actually a telegram bot um so we submitted that and then again we were in what in we won a place in the hackathon in the hackathon and then yes it became the first community build open source cosmos explorer 
+
+Citizen Web3
+it's interesting to see how things evolve when they evolve organically they evolve much better than when they're pushing 
+
+Kwun
+yeah maybe yeah maybe yeah maybe and then and then it's very interesting people never ask why big dipper is red 
+
+Citizen Web3
+why is this red 
+
+Kwun
+it's red because the the primary color of fobo is red and then we we would we were trying to use that to monitor our chain you know that's why it's red
+
+Citizen Web3
+H ha ha
+
+Kwun
+because a lot of different applications they were trying to to build a style or a theme that is more cost cosmo you know like some galaxies more cosmic views or a little bit darker and purple but no it's red because it was an explorer which it wasn't drawer from from forbole and then i was pretty happy that because the deployment for for big dipper is pretty easy and then so i still remember in november 2018 probably there was a crypto seoul in in seoul so in korea so and then um it was it was the after party of of the event and then on that day there was a new cosmos hub test net online launch and then i could change some configuration and then deploy a new version of big dipper and monitor that test net and then in the party george that dodge most josh he he could show people yeah we can see the new testament launch like that so it becomes one of the first open source community build community build cosmos explorer 
+
+Citizen Web3
+that's really cool what are your plans for for for big dipper do you have any plans for it 
+
+Kwun
+yeah i would like to of course we keep it open source anything everything and then i would like to build well what as many people see we have added some wallet integration the ledger integration on big dipper and that we would like to create another application that is like a companion to the big dipper which is a separate standalone delegation application so you can use that to to see to read the data from big dipper but you can use that platform to delegate your asset and then to manage your asset and then it's a multi-token multi-asset platform 
+
+Citizen Web3
+that makes sense i have a question you said you talked a lot about desmos and the first question i'm gonna ask is gonna be a little bit um devil's advocate question here as somebody who's building a project on cosmos as well in an organic way i can tell that maybe i'm wrong here and correct me if i'm wrong but you guys it looks like you guys have a very organic approach towards the marketing of desmos and and the question is how do you i mean obviously we can see in the blockchain space a lot of projects come in spending shit loads of money on marketing and on you know useless absolutely things do you think that projects like desmos that go for the organic approach in terms of marketing especially being a social network have a chance against those projects to spend tons of money on marketing 
+
+Kwun
+well i don't know but we would like to try and then this is what we think we are different from others we just don't we just we don't want those projects with you know a lot of pc supporting you know we think that a decentralized network or decentralized application belongs to the users if we if we get a lot of money from from investment from venture capital then then they will eventually control the application control platform what if we can do a bottom-up approach we bootstrap it and then we let more users to use it try it and then within the engagement within the activities they can start minting minting some values well actually those tokens will be minted by their engagements so it's like they convert that it's like this work capital they convert their word work done their workload into some values and then we reward them back in terms of tokens so we don't really need any um capital back if we have users and then we believe in that in that and then the whole economy is actually built by the users but not the venture capitals but not money but not you know so we don't really need those money on marketing instead if we can show people what is going on on the network what is going on in the applications and they can use it and they i think yeah we can grow organically
+
+Anna
+how many users do you have now 
+
+Kwun
+well how many users i didn't check and then but but we are not in but we are still in very close beta so it's like 100 something maybe 
+
+Anna
+oh it's good for the better version 
+
+Kwun
+still you know this age because our network our test net only run for four months 
+
+Citizen Web3
+it's been already four months i thought you you're doing it less time it's well it's time goes flies by 
+
+Kwun
+we we launched the test net on right before christmas i think and then what we started uh releasing the mooncake app in february 
+
+Citizen Web3
+again i'm gonna carry on with the slightly provocative questions so don't mind um 
+
+Kwun
+no problem yeah go on
+
+Citizen Web3
+how is for the average cosmos user i mean let's say half a year from now oh no no let's go a year from now a year from now for the average cosmos user how is desmos gonna make their life better 
+
+Kwun
+i cannot guess and i don't really know but this is what i think we have to do i don't believe in a centralized um social network or application empire like google or facebook anymore and then i think um what we are providing is a new way i believe at the end a lot of users they don't really know about they don't really need to know about blockchain they don't really know have to know about the details on the protocol or the tokenomics and then at the end they only have to use the applications and this is why we built mooncake and then because desmos is network is the protocol maybe validators or developers they do need to know something on decimals but at the end i believe like end users maybe they just download mooncake and and then start chatting start uploading pictures start replying messages and then at the end they could get some rewards and then they may even um this is in my mind maybe they can even like capitalize their personal data somehow i don't know yet and then so so your question was how the existing cosmos user would be benefited with decimals i really don't know maybe if we only talked about decimals itself maybe like the transactions between different networks using ibc that's moved to to the hub maybe they would generate some transitions fees for the existing customers users but i think at the end the target group the user group of decimals is not only the existing uses on cosmos but we are looking for how maybe anyone that using internet they don't know nothing about blockchain but they have a phone they have a desktop they can download an app and then they start using that's it maybe one of the benefit is we are trying to more people or we are trying to get more users on the whole cosmos 
+
+Citizen Web3
+yeah that makes sense i mean on boarding via simple and unsuitable applications okay so because i know that you are very opinionated in a good way i read some of your articles and i follow what you guys write and i have slightly another even more provocative question if you remember a while ago there was proposal on the governance working group and along with google and cyber you were one of the validators of the big validator sorry we are small you're big 
+
+Kwun
+not not so big 
+
+Citizen Web3
+still who had a different opinion and you explained your opinion very well why you voted no so and i really like that because i'm not going to like ask you about again about why you voted no because you explained it already but but it's really cool to see that so the question is slightly different how do you see what's or perceive what's happening in the cosmos governance today do you think what's going on is good is it bad do you see it going in your opinion in your personal opinion maybe a different way maybe going the wrong way 
+
+Kwun
+so there is something i would like to try and then i would like to see how that would happen if we change the weight of governance well i will apply that on decimals and then you select the test so basically i think there is a flaw in the design of the governance so why people with more stick have more power this is my question so if everyone yeah because everyone every atom holders they if they have the right to express their opinion why not each address have one vote but one address with more stake with more voting power is counted with more for more photos more cars you know they you cast more votes with more voting power i think this is not correct i think this is a flaw in the design 
+
+Citizen Web3
+do you know how to change it do you have any ideas 
+
+Kwun
+what i'm thinking is like yes we know that there are validators right and then there are there are delegators and dedicators not all of them would come and vote so i think still validators help representing the delegates to to vote so how about we count with the number of delegations if a voting voting from the validators so in that sense then like for example forward we have um 406 delegations then we have 406 votes and then like if you look at like finance finance currently they have more dedications because they have lower their the commission so they're currently two and five percent commissions and then they have more dedication but at the very beginning during the proposal 23 i remember they they had around like five dedications so they they are holding nine million voting power right but they can only vote for five votes 
+
+Citizen Web3
+yeah i see what you mean 
+
+Kwun
+yeah they're not representing a lot of people 
+
+Citizen Web3
+but do you not think it can be abused in terms of i'm just curious about that idea it sounds really interesting but it sounds like it can be easily abused now i mean like if i for example want to give you more voting power i just transfer you 50 times are we talking about unique addresses right 
+
+Kwun
+yeah we we have we have to think of course this is that this can be easily manipulated and then we have to think how we can like minimize that problem i would say and um so i'm still thinking but this is of my very basic idea not using the voting power as the number of votes that generates a lot of problems i would say so currently it's too easy to like make a conclusion on the proposal and then if the validator or the or the one that proposed that proposal is not active or is not popular in the community i saw that basically there is no conversation in that proposal maybe and then suddenly when a proposal is proposed by someone popular then maybe there are a lot of discussion and then it's just too easy for some of these decoder to make the proposal enter the voting period and then start folding and then they may have some high stake and then it's too easy to control the result 
+
+Citizen Web3
+it's interesting that you mentioned it because about somebody popular making a proposal and you mentioned steemit before as well and i'm very well familiar with steemit for one hours at when steemit launched i was a very popular writer on steemit for a while and obviously the team behind cybers launched the golos which was the first fork of steemit and so we we know very well how steemit but it's very interesting to say that because i remember very well that one of the biggest flows on steemit and gollus was when somebody popular writes a post people just go and vote it because that guy is popular regardless of what is inside 
+
+Kwun
+yeah then the money 
+
+Citizen Web3
+yeah yeah exactly and this is exactly the same problem that we see in governance and this is something that is it's good to see that people trying to have innovative approaches to try and adjust it to to a more decentralized fashion to a more decentralized manner to carry on talking about governance and similar things i mean i don't like to spread rumors and don't consider my next question to be in that direction but obviously all of us see different things that between the allen beats and the german uh gmbh and so on and so on so as someone as an onlooker do you think that gets in the way of cosmos development or do you think there is something that doesn't affect cosmos and technologies technology first of all 
+
+Kwun
+i don't think it would affect well maybe in the first off period there is some inferences but i think in long term it is a better it's a better organization i would say yeah i believe in decentralization and then yeah we don't really need one company to build that and at the end a lot of the development was done originally in germany and then it's just the same same group of people and then and along the whole year we see a lot of different teams they get funding from the icf or they have their own way to get fund to build something that interesting and then they contribute back to the cosmos ecosystem i don't really think it would have some bad influence instead i think it's pretty good results actually i think in the long term it will benefit to the whole ecosystem because it's like demonstrating a new way of collaboration in a community rather than one single company controlling all the decisions and then i think in the long run it's even better 
+
+Citizen Web3
+yeah i agree moving from all those like politics okay let's call it decentralized politics and all of that you mentioned decentralization and projects a lot and you use it it sounds like you as horrible because you obviously validate everywhere and it sounds like you evaluate projects a lot i'm interested to hear if there were any projects lately that you've seen in blockchain generally that surprised you 
+
+Kwun
+well i do like our cache you know our cache they're building on top of using using customers sdk and then they they're given a direct solution to a lot of to developers because they're building a cloud platform and then as developers you can just work like usual and then you can deploy your application on the cloud on a on a shared cloud eventually so i i kind of like that idea it's like collaborating with different people i always imagine if there is a world that anyone everyone in the world when they connect to the internet they can be a part of the internet they can be a part of the provider you know and then i think our cache um is kind of doing that way so at the end anyone can share their bandwidth that can share their storage or their computing power for a cloud-based application 
+
+Citizen Web3
+it's an interesting project is there any non-cosmos projects that you think surprised you lately because obviously akash's cosmos sd card so maybe something outside of cosmos 
+
+Kwun
+if you talk about outside of cosmos i think uh the most familiar one to me would be selena 
+
+Citizen Web3
+what do you like about solana out of interest 
+
+Kwun
+well i think solana is more technical side i would say it's extremely fast and then i really like the team the development team and they respond very fast so but people would would say hey valedicting on solana seems like require a very powerful machine but again a gpu but it's just like a sidebar right 
+
+Citizen Web3
+yes 
+
+Kwun
+well i think that they have a roadmap to launch an attire of not that it is but you can be a part of the network that you can share the storage because of the high transaction throughput there there is a lot of data and then they have to store in so the ledger is pretty large and then they have the roadmap to launch another kind of nodes that you can share your storage and 
+
+Citizen Web3
+so one probably last question and going back to cosmos what are your plans for ibc are you going to launch your own models or are you just going to support the network secure the network 
+
+Kwun
+for game zones we are we're planning to run our own chain on using decimals software using decibels so we would like to run a decimal network testnet as a participant in game of thrones we are actually integrating the ibc branch on decimals so i think we are pretty good on the progress is pretty good and i think that we can really run a chain and ibc enable decimals during game of thrones and then it helps us to test software as well and then yeah because the the ibc we are using actually we are trying to make people what from other chain they can use their key and eventually they can write a message on decimals and then we have the identity from another chain and then we can prove that you are someone on the other chain writing a message on decimals and then so you just cross cross chain posting message and we are also thinking we're also discussing with other people in different regions and then see if we can form as a team not just Forbole solely as Forbole with some other friends or individuals in some other regions that we run decimals ibc enabled chain together as a participant 
+
+Citizen Web3
+you know what i thought it was going to be the last question but i have one more question everywhere you have the avatar with the guitar tell me do you play the guitar is it a hobby or is it is it you in the avatar with the guitar 
+
+Kwun
+yeah that's me that's me yes my hobby i'm not professional 
+
+Citizen Web3
+find out it looks like you're very good 
+
+Kwun
+i just i just love that yeah i just love music yeah 
+
+Citizen Web3
+what's the brand of the guitar 
+
+Kwun
+fender 
+
+Citizen Web3
+fender yeah it's the just the good stuff huh okay cool thanks thanks for your time and thanks for sharing all that information it's very cool to hear insights about the projects that we've all been you know following for a while and i think people will um enjoy finding out all the insights that you spoke about 
+
+Kwun
+okay thank you
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

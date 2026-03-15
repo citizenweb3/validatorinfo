@@ -1,0 +1,535 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/stride
+
+Episode name:
+Liquid Staking, Berkeley and Tokenomics with Riley Edmund
+
+Citizen Web3 
+Hey, everybody. Welcome to a new episode of Citizen Cosmos podcast. have with me Riley Edmonds today, the co-founder of Stride Labs. It's a liquid staking blockchains app, specific blockchain. Wow, I confused people. I don't know what's going on today. I'm going to introduce Riley.
+
+Citizen Web3 
+Again, Riley, man. Riley is the co-founder of Stride Labs. There's a blockchain, Stride, with liquids taken, the first liquid stake in blockchain and Cosmos. Riley, man, welcome to the show. I'm sorry, I got it all wrong. I got it confused. It happens.
+
+riley 
+It's very confusing. don't blame you. I've confused it myself, to be honest. But it's great to be here. Thanks for having me on. I'm excited to talk about liquid staking.
+
+Citizen Web3 
+Correct me. First of all, please correct me. did I mean? Stride Labs. That's the entity behind Stride, the blockchain, right?
+
+riley 
+Yeah. was Stride Labs is a team of contributors who have written some code that goes onto the Stride blockchain. The Stride blockchain is a product app blockchain in the Cosmos ecosystem that allows users to liquid stake their tokens across any IPC compatible chain. And then there are a bunch of things under the hood, but from the point of view of someone who wants to use Stride.
+
+riley 
+It allows you to liquefy your tokens.
+
+Citizen Web3 
+Nice. the first platform, well, the first blockchain, it's connected to its atom, right? Right. That's the one I tested two days ago. It did. And it was very, very, very cool experience, very quick. Well, there was some waiting of the confirmation of the transactions, of course, but I guess consensus first and everything else later.
+
+riley 
+Yes. I hope it works.
+
+Citizen Web3
+But the one thing I will ask you about the ledger, ledger compatibility, man, when is it going to be on?
+
+riley 
+Ledger is coming very soon. So we're in touch with the Ledger team, the Kepler team, and a few others. It's a priority for us. in fact, many other teams in Cosmos are using a slightly older version of Kepler. We decided to upgrade the new version. And with that come a few growing pains, including Ledger support. It's not compatible with this version. So we're actually trying to roll that out right now with those teams.
+
+Citizen Web3 
+Nice. know it's not easy because I know when I've worked closely with several teams already and it's always a huge pain in the ass to get ledger working with something specific. It's like, good luck on that. Go on, sorry. No, no, you go ahead.
+
+riley 
+Well, Ledger is compatible already with Osmosis, of course. So if you want to stake your item right now, you can trade into the Staten pool. And that's effectively, this is one of the magical parts about liquid staking. You don't have to use the product to liquid stake. You can go to the pool on Osmosis, trade into ST Atom. And as soon as you're holding it, you start accruing rewards as if you were staked. It's identical. So if you have Ledger today and you want to liquid stake with Tribe, go to the pool and trade in.
+
+Citizen Web3 
+Nice. Nice.
+
+riley 
+Same exact thing on the back end. And then in a few days we'll have it live on the side as well.
+
+Citizen Web3 
+I think it's like one of those things for saying that because like it's one of those obvious things until you hear that it doesn't click in your head. And it's obvious if you're already exposed to ST atom, which you have at a pool, obviously you have ST atom and then you can go swap them. But like sometimes it doesn't click. So thank you for saying that, but.
+
+riley 
+It's unintuitive. Until now, everyone has always staked through Kepler or you go to the command line and you stake there. I don't know how many users are doing that. Or you go through some other interface and you click stake, you get your shares back for staking, but you can finally do it through a DEX.
+
+Citizen Web3 
+Do you have a question for I love that this episode started for me complaining. This usually doesn't happen, but let's carry on. No, no, no. It was just like a really curious question, which I'm sure you probably got asked before. And there is a small section in the fuck about it in the documentation as well. But I want to ask it and I want to hear a bit more of an explanation. And of course you can give me one. So.
+
+riley
+No, please, we want to hear all that.
+
+Citizen Web3
+When I staked atom, the first question that goes to my head, who is this atom staked with? And how do I choose the validator that I want to stake with? let's tell me all about it. How does it work? like everything that's underneath.
+
+riley 
+Yeah, it's a great question. So the goal we started with when thinking about validator choice was this idea of a Nakamoto coefficient. And I'm sure you've heard of this term. It's been thrown around in Quartermotor all the time. But the simple idea is that some number of validators will control one third at stake. And if they collude, they can stop the network from producing blocks, help the networks.
+
+nothing will happen from that point forward. You look across Cosmos, these numbers are anywhere from four in really lower case up to I think 12, maybe even 20 somewhere, but it tends to be between six and eight or nine. And one of our goals with STRIDE is to increase the Nakamoto coefficient. And that's the core goal with validator selection for STRIDE.
+
+So we designed everything around that. Now, we looked at a few models for how various liquid staking providers have approached this problem. And on one hand, you have entities like Lido on Ethereum who choose to have a whitelist. So they choose which validators are in the set. And anytime you come to Lido, you give them your ETH. On the back end, they stake it across validators who are in the whitelist, and they give you back your voucher, the STETH.
+
+On the other end of the spectrum, you have approaches like intense, where the validator set is unlimited. Any validator can be included and users get to choose. But the mechanism by which validators are chosen is not super well defined yet. And from a security perspective, we're not sure how
+
+It's possible to implement something like that in a way that's safe. A very simple example of an attack that one could levy on intents is when you liquid stake, you choose which validator you'd like to your, your stake tokens to be delegated with. And then you sell and you repeat, you can do this in such a way that if you were to spin up a validator with a hundred percent commission and vote your share of the weight up very high.
+
+riley 
+You've essentially attacked the network and now all the other validators have much less stake and the Nakamoto coefficient is actually much lower and all the commission goes to you. So it is kind of a fundamental problem with intense based models. That's the spectrum. Then there are a few players who are kind of in the middle. So Marinade Finance on Solana is a good example. Their approach to validator selection is data driven. So they have
+
+a very clear algorithm by which they choose validators who are going to be included in the set. For example, validators with high uptime, with geographic diversification, with hardware diversification. For example, it's possible that there is a consensus bug or a hardware bug in one type of hardware. And for that reason, you'd like to have different types of hardware, or you don't want all your cloud providers to be in in Hetzer, as you've seen in Cosmos.
+
+If they shut it down, you're in trouble, so you want to diversify across those. Also have some on-prem servers or bare metal validators. So that's just some context for the problem that we mapped out when we first got into this. And the decision we ultimately ended up going with is you have LIDO, you have Intense, and you have Marinade. We're very, very close to the Intense end of the spectrum, where any validator can be included.
+
+The token holders decide which validator gets the stake by voting, but we do it through governance rather than through intents because we think it's much safer yet equally decentralized.
+
+Citizen Web3
+So for now, does that mean there is only some selected validators included already? does that mean, yeah. OK, and those are listed, I think, in the FAC, right, if I'm not mistaken.
+
+riley
+Yeah.
+
+riley
+I don't think we've listed the validators in the FAC, but we have a set that we decided that was minimally opinionated. We just chose the validators. They're already in Cosmos. And now users can vote. Token holders of Stride can vote to increase the weight of any validator, increase the weight of any validator. So it's completely up to governance.
+
+riley 
+We started with a minimally opinionated set, which was just the voting power weighted set on Cosmo. So if you go liquid state today, that's where your tokens will go. But users could vote anytime they'd like to, to alter that set. And in fact, we're working with Thiborg, who's putting out a validator ranking system, working with him to expose a lot of the data around.
+
+riley 
+validator ecosystem contributions, validator uptime, validator time to update. That's an important metric as well. As you've seen with a lot of kind of botched updates around the ecosystem. We're going to expose those metrics so that users can make informed choices when they vote. Because right now, frankly, a lot of it is kind of blind.
+
+Citizen Web3 
+So technically I have a strange question because technically from what I'm hearing, if this is going to be a bit like, I guess, up in the air, but let's go with it. So if the users, docking holders of Stride can vote to increase or decrease the share of any validator via on-chain voting. So let's say, for example, let's pick a crazy situation where the voters of Stride decided the bottom validator on the Cosmos set.
+
+should technically be receiving the biggest that's possible, right? That scenario. But what if, could you like socially game this in a way that the stride governance would be voting only for the validators that are bringing, let's say value to the stride ecosystem. I guess you're not gaming that, right? I guess that's kind of just like the rules of free market. But do you see what I'm getting at? The question is like, could it be
+
+that the stride is held by only a selected few whales and those whales keep on voting on a specific validator to increase his weight in the liquid state. I don't know why they would do it. It would be a crazy situation to get all the puzzle together. But I don't know. I don't know if it's a question there. It's kind of something that comes to mind though.
+
+riley 
+Yeah.
+
+riley 
+Yeah, it's a good question. think this is something that a lot of DeFi protocols who operate through governance face. For example, you saw this on Ethereum a lot with various lending protocols, various dexes who have governance by token holders who vote. Those token holders end up having some amount of power over where the revenue from the protocol is streamed, as well as
+
+over which pools are prioritized, over which lending pairs get various parameters that could be advantageous to them. So it's certainly a possibility. I view it more as a quirk of governance at large and not this specific implementation of governance. But we are thinking of some approaches that we might use down the line to try to mitigate some of these effects.
+
+One is that we're thinking about creating voting vaults. And the idea here is that the Atom community should be voting on the Atom validator set and the Juno community should be voting on the Juno validator set and so forth. So when all stride token holders vote across all the validator sets,
+
+It's possible that there could be a conflict of interest, though this is true with any form of governance. The approach we're considering implementing down the line is to segment the Stride token holders by which underlying token they hold. So users who hold Stride and Atom and bond those, them up, lock them for a certain amount of time, can vote for that zone validator set. And similarly with Juno and...
+
+especially the smaller chains where they might not be as well represented. This will be important once they come online.
+
+Citizen Web3 
+While you were talking, I'm curiously thinking about crazy ideas like future vote selling. I'm not talking about liquid staking right now. I'm just thinking about the amount of things I think in a blockchain, the players in economics, the ever increasing possibilities of what the DeFi Lego created for the digital economics. I think it's so diverse already and it keeps on growing, growing, growing. Like yesterday, was thinking about, I think somebody on Twitter asked, what kind of chains would you like to see in Connect?
+
+next IBC. And I was thinking, I would love to see something stupid and crazy like futures on the central land or something like that, that you could trade in, you know, like, and now that I'm thinking about it, like, wow, I it's gonna be crazy. Like in some years to come, like now that you talk about vaults, for example, it was tried. And then, you know, one blockchain selling their votes right into another. It's like, it's crazy. I think it's, we're never gonna be able to up
+
+keep with everything that's going on. What do you think, by the way, generally of how the general landscape of Defiant tokenomics has evolved over the past two or three years? Obviously, you've launched your own projects with Liquid Staking, which is an example of you participating in it, but what's your thought in general? Are we doing good? Are we improving? What's going on?
+
+riley 
+That's great question. futures for Decentralize sound insane. I don't know if that's a real project or something you made up.
+
+Citizen Web3
+No, it's not. It's not. was just I wrote it as an answer to Crypto City on Twitter, I think yesterday or two days ago. Still there.
+
+riley 
+I'm gonna go
+
+That's great. That's great. Yeah, so we're obviously big fans of Cosmos. The AppChain vision resonates. you ever read Haseeb from Dragonfly wrote this post on blockchains as cities, think last year.
+
+Citizen Web3 
+I view blockchain as cities. I think I know what you're talking about. I viewed it exactly like that. So yeah, I know what you're talking about though. Yeah, I'm a very...
+
+riley 
+Yeah, it's a great thing, Ease, and it resonates well with me. And I think Cosmos has been a bit held back by both lack of a centralized pioneer figure who can market for the ecosystem and frankly, technology that's ahead of its time. For example, Ease and a number of other ecosystems.
+
+riley 
+have had bridges for a long time, but they opted to go for multi-stake bridges. It works and enables a whole host of DeFi applications, but it's not the long-term sustainable model. Cosmos Weighted has IBC and now has bridging technology. As of a week ago, the first blockchain launched with Interchain accounts,
+
+technology that is on no other bridge, the ability to invoke a message server or a smart contract on a foreign chain from your chain and control an account remotely, or to read data securely validated by the validator set on each chain in a way that's proven with proof that's passed back in the packet. This doesn't exist anywhere.
+
+Here of companies like Layer Zero raising insane valuation rounds to do something that's, in my opinion, not quite as robust even as IPC. So I really think IPC here is the future. In terms of tokenomics and the way that DeFi products have done go to market, in the past there have been a ton of...
+
+inflationary reward based DeFi apps. And I think we're starting to move a little bit more towards sustainable business models where real yield and real revenue are acknowledged and rewarded. think Kujira, for example, on Cosmos is not paying any inflation at all. We took a somewhat similar model with Stride. We're paying pretty low inflation, but that's because we have a sustainable business where
+
+the tokens that are locked up in the Stride protocol are earning staking yield and Stride protocol takes a share of that and it could possibly go back to token holders if they were to vote that in. So I think you're really starting to see a shift towards distributed app specific chains that have control over the full layer of the stack who can talk in very
+
+riley 
+detailed ways and who speak the same language. That language is becoming more powerful with the introduction of Interchain accounts and Interchain queries and much more. For example, with ABCI++, there's a ton of new cool features coming in. And tokenomics are starting to shift more towards sustainable business models that you see in Web2, where real yield, real revenue and the acknowledgement
+
+that treasuries are really just balance sheets is starting to catch on. So I'm really hopeful about the future here. We're moving a little bit away from Ponsonomics and trusted intermediaries to a trustless and sustainable model for DeFi.
+
+Citizen Web3 
+really like that you mentioned sustainable modeling and DeFi because this is actually something I wrote down to talk to you about. But before maybe we get into it or we do mention it, I don't know. Let's see. I've already talked about it. I started to talk about it, I guess. I have no idea what's wrong with my linguistics today, man. I'm sorry. I'm confused in every word. It's like I have no clue. Maybe it's the time of the year. So.
+
+Before we get into it, I do want to mention you've worked for Bridgewater, right? Right. So people for anybody who doesn't know that is, you know, huge firm that does huge investment research and whatnot, and you worked as a researcher for them. Am I correct? That is an astonishing achievement, man. That is something that is, I think we should be really proud of. It's really cool.
+
+riley 
+Yeah, that's right.
+
+Citizen Web3 
+And well, I guess as you spend the time in there, you must have seen what you just talked about, what you just mentioned, economics, economics, ponzinomics. And how do you guys, for example, in Stride plan to solve the problem of, my opinion, one of the biggest problems that every crypto project is facing?
+
+And I don't understand why everybody, most people just close their eyes on that, but that's the reality. Sustainability. Like if, if there is no bread in the basket, you cannot feed anyone, you know, there is no fish. Nobody's going to be, everybody's just going to stay hungry. So how do you guys plan to solve that in stride? Like where is the money going to come from? How are you going to keep on feeding developers, feeding yourselves, feeding the community and blockchain and so on.
+
+riley
+Yeah. Yeah. It's a great question. Very, very relevant today. and, I can give a little bit of background on the, on the team in a minute, but I'll, I'll hit that one first. thankfully strides problem. The problem we're solving is very tangible, very clear, and it costs users a ton of money every year.
+
+The problem is the trade-off between staking and DeFi. And if staking is yielding 10 and DeFi is earning 10, the user can only choose one and their opportunity cost is 10 per year. 10 % of staked assets is a really, really big number. And so by solving that,
+
+We charge a very small fee of the staking yield and that's where the bread comes from. This is kind of the standard fee model that most liquid staking providers have opted to take. For example, Lido charges this. I'm not sure exactly what Marinade charges, but if you run the numbers behind the scenes, what's happening is you give your tokens to the Stripe blockchain and they stake them for you.
+
+You were previously earning 10 % on those stake tokens. Now 1 % of that 10 % is going to the Stride protocol. You get back nine, but Stride is auto-compounding for you. So the 10 that you previously got is now more like 12. Previously, you had to do that manually through Kepler every day. People talk about, you know, compounding every day. And so 12 minus 1 % is...
+
+depending on the yield, sometimes more than what you're originally earning. And then you can take those tokens and use them in DeFi elsewhere. So you get the 12 minus 1 % plus whatever you can earn in DeFi. So because it's such a pressing problem that's being solved by liquid staking, I think there is a pretty sustainable revenue model. It's been proven out by Lido on Ethereum. They have a billion dollar treasury. They're earning hundreds of millions of dollars a year. And in just 18 months,
+
+riley 
+the share of state is to know that is staked through Lido is over 30%. We'll see now what happens with the merge, but it's a well proven business model. So I think this one is sustainable. It's less clear for some protocols and cosmos that are doing something new and props to them. It takes a lot of guts to go out and
+
+try to create an altogether new DeFi primitive or altogether new chain with a separate Web3 purpose, but it's less clear that the business model is sustainable there. Though I look forward to seeing where it goes.
+
+Citizen Web3 
+But do you think that fees are like the only solution to to explain what I mean? I mean, like there is this typical how to say Web 2 or I don't know, let's say real real world model, right? Where the way that the tax system works is kind of fees, right? You pay whatever it is. I mean, not for I'm not going to discuss whether that's theft, taxation, whatever.
+
+Let's just, there is a fee model, right? You pay part of your fees, whether you choose to or not to, again, a different question. And then you have that model repeated in banks, I don't know, in private companies and investment funds. And then now we see this model repeated in Ethereum and so on and so forth. Is there anything else apart from fees that blockchains in your opinion should embrace?
+
+as a model that will help them to sustain the treasuries and will help them to build great futures.
+
+riley 
+Well, one that's quite interesting and somewhat unique to Cosmos in an AppChain's ability to capture it is this idea that with an L1 blockchain, the power of the proposer in the block is special. They get to choose which transactions are included. They get to choose the order. And there's some power in that ability.
+
+And in fact, they can extract some money from that power by either reordering the blocks or choosing which blocks are included, which are excluded on Ethereum and on more monolithic chains. The apps that sit on top of the blockchain don't have the ability to extract this value. They typically leak that value to the blockchain. in fact, many, many smarter folks than I have suggested that the
+
+value of the L1 blockchain like Solana or Ethereum is essentially the value of the sum power of these proposers. People call this MEV, but maybe better, I think Sunny said this recently, it'd be better coined, proposer extractable value, because it really comes down to the power of that person. There are tons of other types of extractable value that exist.
+
+in blockchains, liquidations, arbitrage. But at their core, blockchains leak this value. And unless you're building an application specific blockchain where you can tweak the fundamentals at the lower level to capture some of this, you're often leaking it to the token holders of the L1 chain. Now in Cosmos, I know some teams are working on ways to capture this.
+
+And Stride, in fact, I'm not going to reveal any details here, but we plan to do something very similar in the future. So that's another way outside of fees that it's actually very specific to blockchains. It's impossible with Web2 as far as I understand. People make some comparisons to like rent extraction and monopolies and traditional economics, but really it's kind of its own concepts, I think.
+
+Citizen Web3 
+I think there was a very good comment I think was it Twitter? It was today that I saw it on I'm not sure who it was from Twitter it's just what you said about rent extraction and for everybody who's listening I would like to make a comment that there is one thing when you have to follow rules of no I think it was actually Sencom sorry it was Sencom
+
+When you have to follow the rules set out by somebody and one thing when you make your own rules and voluntary choose to follow them. So I think that's like the the centralized dilemma question that, that resonances at the back of my head. When I hear things like that, you know, we're going to have to pay this and this, but you choose to be here. You choose voluntary to be part of this community and you have to understand that in order to make it sustainable, you need to share or do this or that, that, that, or whatever.
+
+riley 
+Yeah. It's huge though. The extractable value. I don't know if you saw a skip protocol put out a leaderboard. The amount of extracted value in the last year on Cosmos is massive. So it's a real... I don't quite... Let me pull it up actually.
+
+Citizen Web3 
+What was the number, do you remember?
+
+Citizen Web3 
+I'm curious, I did see the Ethereum numbers, I don't think I've seen the Cosmos numbers actually.
+
+riley 
+Yeah, I think it's called a satellite. Skip protocol satellite. Let's see. It's massive though.
+
+Citizen Web3 
+I'll be curious to know what it is, I'm interesting, where does it go as well?
+
+riley 
+All right, here it is. So on osmosis, a satellite that skipped out money in the last 30 days, it's $60,000 and the total is almost $7 million. That's a of money.
+
+Citizen Web3 
+Wow, wow, that is a lot of money. This is just osmosis. This is just osmosis. Great. So there we go, folks, you know. By the way, I skipped asking you that, but I might as well now. And that relates to you and to stride in both, guess. I mean, you, did see that. I already mentioned that you worked. Again, I'm mixing up words. I have no clue why. Bridgewater.
+
+riley
+Just awesome, sis.
+
+Citizen Web3
+Stride obviously now Bridgewater before and I know you came from Berkeley. I have a couple of questions from that as well. before that, how did blockchain? Well, I guess Berkeley and blockchain kind of go together already in my head. Yes, it's like Berkeley blockchain. Bam. Just even with the same letter, right, baby? How how what's your blockchain story? And Riley, how did you get into blockchain?
+
+riley 
+So the same thing now.
+
+riley 
+Yeah. We joke that we're trying to Cosmos pill all of Berkeley. I think they're actually teaching a Cosmos course at Berkeley now.
+
+Citizen Web3 
+You
+
+riley 
+Yeah, Sonny is from there, we're from there, but I think Brian, the folks from Akash, all kinds, the...
+
+Citizen Web3 
+Brian, right? I think. Yes. Evmos, Evmos.
+
+riley
+Yeah, yeah, sorry. What I meant is I cough from asthma.
+
+Citizen Web3 
+Yeah, yeah, yeah.
+
+The folks from Akash are kind of old. I mean, I'm sorry guys, but they come before us. They come before Berkeley probably. I love them. I love the guys. They know I'm joking if they hear it, but no, not Akash. Sorry. That's Gregory. That's I'm confusing as well. I'm thinking about not Akash. I'm thinking about sorry to interrupt you about who was it? Wait, Agorik. Agorik. Right. I'm thinking about Agorik and the folks from Agorik are the guys who build smart contracts and the internet pretty much.
+
+There's a bunch of crazy folks, but they definitely come before before us. But anyway, sorry back to your blockchain story, man. We got a distracted.
+
+riley 
+Well, it's all revolves around Berkeley. So I think we're right on topic. So Aidan, one of the co-founders of Stride and I went to Berkeley together. We were project partners there doing computer science and we were very aware of blockchain, but we didn't develop in blockchain. I was part of a club there called Machine Learning at Berkeley. I was a little bit more focused on data science at that time.
+
+but there was a sister club called Blockchain at Berkeley that you're likely aware of. A lot of the Cosmos folks originated from there. I think the Osmosis team recruits from there very heavily and they share an office with Blockchain at Berkeley on campus or just off of campus. Anyway, we're highly aware of what was going on there. I worked in undergrad on machine learning.
+
+in a research lab with a professor who is very involved in crypto and in fact in the Cosmos ecosystem. Dawn Song who created Oasis Protocol, I worked with her on ML but I saw some of her crypto stuff and I was always a little bit curious, always a little bit curious about the econ side of things too. And so after graduating, I followed a professor, a different professor from Berkeley to Bridgewater to...
+
+work in a small machine learning lab there. We're trying to figure out what are the best macro investments and how to build investment models using machine learning. And that's where I met Vishal, the third co-founder. He worked there with me for about a year before leaving to start his own small hedge fund and was aware of crypto there, but eventually ended up on the crypto team at Bridgewater.
+
+And that's where I really went down the rabbit hole and started playing around on the side with some, some development. And at the same time COVID was happening. So Vishal, Aiden and I started traveling around the country, living out of Airbnbs, thinking of, of ideas of what we could build, specifically in Cosmos, because we're really sold from the vision. We had met Tor Bear at a conference and he kind of sold us on the AppChain vision.
+
+riley 
+So we'll always be lifelong fans of Secret Network because of that. And ultimately, we looked to Ethereum. We saw the success of Lido. We saw that the Cosmos ecosystem did not have a solution to this problem. And the solutions that were coming, we didn't think were quite as safe as they could be. And we decided to go for it and build the thing.
+
+in a way that we think will be kind of a long-term sustainable solution to liquid staking. The other thing is we're huge fans of DeFi and our strong thesis is that DeFi has been held back primarily because of the lack of a liquid staking solution. On Ethereum, yields are 5 % for staking. On Cosmos, you see Juno, it's 80%. Why would you ever LP the osmosis pool for Juno?
+
+if you can earn 80 % by staking, it makes no sense. But if you can get both, I think it opens the door for lending markets. You see Umi and Mars building that now. Vaults, quasars building some really cool stuff there. All kinds of new technology that previously was just economically unfeasible because of the trade-offs that are being made. But I went on a tangent there, but I'm happy to introduce the rest of the team too.
+
+They're interesting guys.
+
+Citizen Web3 
+But please, but I'm still, I'm still, I still before you did that, I still, I still want to get to the bottom of thing. But I mean, that, that is more what you said. There is how to say, what, what word should I choose for that? There is the practical side of things. And, and I totally like respect that. And I totally love that you're giving that answer because I think I was speaking with call from orbital apes the other day. And I love this answer when I asked him about motivation, said, well,
+
+I want to be the best. And I was like, well, that's a great answer because, you know, sometimes, yeah, that's, that's, that's your motivation. But, usually apart from the practical side, there is something that comes with it. like, why, why are you a fan of DeFi? Why did you join the blockchain Berycle Club? What was the original like idea to skip classes or to...
+
+Because you enjoyed it, because you liked the idea, like what was the interest in that? What was the, clicked?
+
+riley 
+Great point. Frankly, was at Bridgewater. I was doing quantitative research work, building models for investment, understanding the financial system. But I felt like I was at the zoo looking in and watching all the people play and analyzing and trying to...
+
+make money off the discrepancies and the deviations from the trend and the pattern of linkages that was not manifested in real prices and data rather than changing the system itself. And building DeFi is really the only way that we as 25 year olds have the opportunity to make an impact there.
+
+You can't go create a bank as a 25 year old. You can create an investment company, but you'll be small and it'll take dozens of years until you have enough capital to make a real difference. But DeFi is different because you're really pushing that technology forward. And particularly in Cosmos, there is not much DeFi yet. So there's the opportunity to build something that could
+
+make a real change to how the system is working rather than looking in and playing around the edges.
+
+Citizen Web3 
+change at 35 as well. But apart from that, I'm wondering what happens at 45. I'm still to find that out. It's still a while ago. But by the way, you mentioned LIDL Finance. I don't know if you ever listened. We have an interview with with Konstantin, who's the main co-founder of LIDL, just a week, I think, before LIDL launch. There's a lot of insights of
+
+riley 
+Hehehehe
+
+riley 
+You
+
+Citizen Web3 
+how in his opinion business models work and like things like that. It's a cool interview if you like what they do. Going back to Stride though, and you said you were gonna introduce the team members and what's their background a little bit. So feel free man, I would love to hear about them.
+
+riley 
+Yeah, we have an awesome team. It's growing and we're looking to grow it further actually. I'll give quick intros. Aiden I mentioned was a project partner of mine at Berkeley. He did computer science there, went to work at a startup in San Francisco and then got caught up in the Uniswap Sushi Swap Saga and got pulled into DeFi 100%. Quit his job, started doing a number of side projects and then...
+
+Finally, we decided to work together about a year ago on this. He was building some staking infrastructure in Cosmos, actually. Vishal went to UChicago and had always been in the traditional finance world, was doing a lot of hedge fund work. He worked at an early crypto project, was the first engineer at Basis, not Basis Cash, Basis, important distinction back in the day.
+
+And then came to work with me at Bridgewater, went and started his own hedge fund and then ran tech for a quant fund most recently. And then we have a fourth engineer. All three of us founders are writing code, but we have four people writing code total. The fourth is a stellar engineer by the name of Sam. He's actually a childhood friend of mine who lives in Chicago and went to University of Wisconsin. He...
+
+is a superstar and he joined us about two months ago now. Then we have three folks running community, Sam Atal, Summer Collins, and Hazel. They are superstars as well. And then John Galt, who you may know on crypto Twitter, he joined the team and is helping us with all things biz dev, communications.
+
+And then we have one last team member is Virat Talwar, who is currently at Harvard. He's a student, but he's helping with a lot of the Biz stuff stuff. And we're looking to hire more people. mostly engineers at this point. We're a little bit short staffed. It's tough to both lead the project from the founder perspective, but also be writing code every day. So looking to hire some people there.
+
+Citizen Web3 
+Where should people contact you if they suddenly hear this out here or anywhere else to email or anything else? DM on Twitter is the best way. Okay, cool, cool, cool. You mentioned, by the way, you mentioned the cool thing at the end of your introduction there. You said that it's a very hard job to run a project and to run code.
+
+riley 
+DM us on Twitter.
+
+Citizen Web3 
+And we had this discussion with several founders already on previously. I think the biggest one was with Jack Sampling, actually. We had a big discussion about the product management and how the difficulties of it and all of that. Well, it hasn't changed. In the past year, the things have not changed, right? For CEOs and founders and still writing code and managing, don't go together. Of course, I'm joking, but...
+
+Citizen Web3 
+Like, can you talk a little bit about that? why is it like that? Why, why, why can't, I mean, there's so many questions that derive from it. Like for example, and there's straight away answers, like, why can't you hire somebody else? Well, because you need first of all, the inflow of money to hire these people. Right. But like, what are the current difficulties that you encountered when you were launching the project, and simultaneously doing several tasks, of course, is one of them that you mentioned.
+
+And let's talk either about that or other difficulties, whatever you like to mention here. I would love to hear.
+
+riley 
+Yeah, of course. And lot of respect for Jack Samplin. We're doing nothing quite as interesting as they're doing with their relayers in that Strange Love, but they're helping out. So they've been great. They actually helped us implement interchain queries on the IBC Go relayer. Andrew from their team spent a ton of time with us working on that. So I don't think our problems are nearly as involved as theirs, but...
+
+I can touch on it. The short answer is that I think the crypto company is the most distracting industry to possibly write code in because you have Twitter all the time, you have Discord all the time with anyone who's using the product and everyone's anonymous so they can ask any question freely.
+
+You have Telegram all the time. Any question all the time freely. And your code is open source and the community owns, they're all stakeholders. They own the token. So they're very invested and that energy is incredible. But it also takes a lot of time to be very transparent and communicate clearly and give updates.
+
+and make sure that all the stakeholders feel accounted for. And it's something we take a lot of pride in and try to do properly. But it's just a trade-off between that and going heads down on some of the code, especially when the code is complicated, because you need a six to eight-hour block of uninterrupted focus in order to...
+
+to get something quality across the line. So thank God we have three developers leading the team. I don't know how we do it if we just had one, but we've been trading off and Sam, the fourth developer has been a godsend, but we'd love to get more on board.
+
+Citizen Web3 
+from what you're saying, it sounds like you never expected what you guys did or doing or did and doing together to go bigger than what you expected. So it sounds like you kind of in a place of surprise where you think, like we started that as a side project and it kind of went into a...
+
+Well, now it's not just a working blockchain, but it's a blockchain that's already, I think it probably set some records if you're looking at the, like the, the, the, you, the pool, got the, money and the liquidity, mean, sorry. And so it seems to be the, it sounds that you have a lot of ideas and it looks like you guys have a lot of ideas, but it wasn't something you were expecting. Like that's the question, I guess.
+
+riley 
+We were expecting for this to be a real project and we were expecting to be the first to market and we were expecting to get a lot of traction just because we're solving a very pressing need. But we were also expecting to hire more engineers in the meantime. We did not have time to do that. So that's the part that we weren't able to hit in the middle. Hiring engineers is extremely hard.
+
+And that one we underestimated severely, I think. So ideally we'd have eight engineers on this today, but unfortunately it's four.
+
+Citizen Web3 
+Nah.
+
+riley 
+but that's going to change very quickly.
+
+Citizen Web3 
+I guess as well coming from the background yourself, it's like, know, a shoemaker hiring a shoemaker is always harder than not a shoemaker hiring a shoemaker, if you know what I mean. By the way, I was going to ask you a slightly off topic, but it is a little bit of topic what we just spoke about as somebody who has such an extended background into not just coding, but researching as well.
+
+What is, and crypto being a lot about, you know, the order, own research and, you know, looking at how some people like to say, he looking for those hidden gems on going Gecko. What would be your advice? And I don't mean to crypto people. And I mean, in general, if anybody is planning to research anything and maybe not advice or maybe points that any researcher should, like look for like.
+
+how to understand which sources of information to look at. And doesn't matter what the research is about in general, is there anything like that that you could point out as a researcher to say, hey guys, this is what you should be doing, this is what you shouldn't be doing.
+
+riley 
+This is a tough one. I feel underqualified to answer this question.
+
+Citizen Web3
+haha come on it's okay it's cool it's cool cool but you can still have a take on it no
+
+riley
+Yeah, I'll give a take though. I'll caveat it saying I'm younger than most of your listeners probably. And so I don't presume to know. What has worked well for me has been to start from first principles and understand the very simplest case first.
+
+and explain it like you're 5 with examples. So for example, instead of talking about liquid staking in Cosmos and jumping to buzzwords about validator set, decentralization and interchain queries, interchain accounts, start with I have 10 Adam.
+
+I navigate to the Stride website. I deposit 10 atoms. The Stride website moves those atoms to the atom blockchain and stakes them. One day later, the rewards compound. Now I have a claim on 1.01 times 10 atoms. It's a very, very methodical, slow...
+
+basic numbers, no jargon, explain it like you would to your little brother who doesn't know anything more than basic arithmetic, doesn't know what a blockchain is. And if you can do that, and then you can go to the developer docs and play around with the underlying mechanics of the protocol. If you've touched code before, that's ideal. And if you haven't, then...
+
+I still recommend reading the developer docs. Often they're not as technical as you think. For example, if you go to the Osmosis core documentation page, there are like four or five pages that explain the protocol better than anything I've ever seen in the public. If you read through 15 commands you can issue against the Osmosis blockchain. You understand how the GAM module works, how to...
+
+riley 
+estimate the price for swapping in and out of pools, how to create a pool, how to add external incentives to a gauge, all these things that really underlie the way that Osmosis talked about in the public. But they're presented so, so clearly in those docs in a way that most people, I think, don't read. But if you start there, build with the simple examples, use basic numbers, use simple language, I think you often come away with
+
+an understanding that is higher than if you were to approach it through the buzzwords and try to define interchange queries and define interchange accounts and think about the implications of interchange security. Those are very, very important topics and they naturally emerge once you understand the fundamentals. But if you go straight to them before understanding how a transaction works,
+
+than your Vosheki Foundation, I think.
+
+Citizen Web3 
+guess like breaking things down to the very bottom of things, right? That's what you're saying and going slowly, taking like monothonely. Pretty much what you said, I guess. Considering like I'm not a researcher, but I do like researching things and, you know, being so long in crypto. There is, I guess, like a practical mechanic, which I'm kind of...
+
+riley 
+Yeah. I'm curious about your approach, actually.
+
+Citizen Web3 
+I'm used to already when you you click on the first of all, you check the fundamentals of if we're talking about crypto, of course, and you you start from reading the white paper for me, one of the main things is trying depends if I'm looking, let's say at network, at a blockchain like an L1 blockchain, then I'm looking at that L1 blockchain, whatever, it doesn't matter how complicated the white paper is. And doesn't matter if I even understand all the mathematics.
+
+I look for the simple IT points. Like if a computer has bandwidth storage and computation, it will work. If it doesn't, it will not. And sometimes you read like white papers which present to your computer, but they're lacking the basic understanding of those kinds of things. And that's already like a no-no. Then if I'm looking at application, then I guess I'm more kind of looking at slightly a different thing. So
+
+the research, it definitely goes to what you're saying, breaking down things to the very bottom and trying to slowly look at certain things, you know, is that in place? Is that in place? Is that in place? And if those things are in place, I guess I will follow it and look at it for some time and then try to touch it with my hands. Like you say, you know, try to test it and yeah, and if it all works.
+
+I guess the research is complete for whatever reason the research was done.
+
+riley 
+Yeah, your point about blockchains as computers and comparing blockchains makes me think of something we've discussed in the office here with the guys. We think that debates are often a much better forum for understanding how products work than informational settings. So writing an article about your product.
+
+not that informational because you can embellish it, can tweak how you present, and you can put a special name on a feature. But when you get two people in a room and they're using simple language and going back and forth, you very quickly get to the nut of the difference. So we've seen a few of those in Cosmos. I think Jack Zemplin and Kal Simone got on and...
+
+debated the differences between Cosmos and speedy blockchains. But we'd love to see more of those in Cosmos, think, especially as competing projects arise. It's important for people to understand the differences and it's a really good forum to surface those in a clear way.
+
+Citizen Web3 
+I like the ideas that you throw in it, me there. I like that. No, it's true because like we have that for, again, for the listeners out there, we have another format, which is more new, but it's the YouTube format. Before we just used to copy all our podcast episodes on there, the interviews, but now we decided to start a slightly different format. It's like a live stream. And we now focused on like a validator profiles and like project profiles.
+
+with the podcast, of course, is very different, but that's a very good format. We've been thinking about for a long time. What you're saying, like, trying to get people to talk. It's just, sometimes it's hard to find the right people that you want to talk, put them together in the same room, considering they're like 1000 miles apart.
+
+riley 
+We're consider consider this our our offering to go on and talk with with either Quicksilver or Lido or anyone anyone who wants to discuss the differences. We'd love to come on.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+Man, this is like, you know, you're this is we're still live. So now now now it's on the blockchain. Yeah, that's it. You know, it's in the it's in the thing now. I would love to get you guys together because considering I know, most of the guys from Quicksilver and not most sorry, but I know most of the guys from LIDAR, sorry, and I know the guys from Quicksilver and I've had all three of you on interviews. I would love to put you guys together and.
+
+riley
+Hehehe
+
+and somehow we are not.
+
+Citizen Web3 
+Talk out these things man. That's actually a very cool thing
+
+riley 
+Yeah, we'd love to talk with Quicksilver in particular. actually, Vishal is on a panel right now. Or just finished kind of a debate on liquid staking with the folks from Lido and the folks from Persistence. But it sounds like the Friends Validator was hosting it. They weren't able to get Quicksilver to join. And then there's also a panel at Cosmoverse with the same people and Quicksilver wasn't able
+
+willing you're able to join either. So we're really trying to get them on to talk this through. so if you know them and are able to make that happen, we'd love to talk through the differences.
+
+Citizen Web3
+I will try for sure. will reach out to the guys for sure because I persistence again, I have contacts of all the guys you mentioned and in contact with the guys you mentioned. So definitely we'll try, but let's try to kind of wrap it up. before, before the question, the wrap up question though, well, no, you know what? I'm going to put them in one. So the question, the traditional question asked is about
+
+Motivation and keeps what keeps you going, but I know by the way that I am seen I think it's on the stride website something that mentioned parkour Videos I didn't find I didn't find but what I did find what I did find what I did find Was like and I'm pretty sure it's yours. I'm 100 % sure I'm gonna ask you that though Well, no, no, no, it's it's this it's this
+
+riley 
+I'm so worried.
+
+Citizen Web3 
+robot that the the one that goes like, do you know what I'm talking about? You look at me. Yes, then secretary Robert, there we go. It's a secretary Robert. So I guess what motivates you is exploring. I mean, if we're talking like that, but then how does the parkour come in all that? Like, come on, like, what keeps you like, keep on going? Like, what things do you do to keep motivated?
+
+riley 
+the tensegrity robot.
+
+riley 
+For context, I think we put out a thread about the team yesterday and I admitted that I have a video on YouTube of myself as a 11 year old doing parkour with my dog. That's good. It means I hit it well. I promise it's there, but you'll have to dig a little bit deeper. Yeah, no, and then the other...
+
+Citizen Web3
+I didn't find it, by the way, I didn't.
+
+riley 
+video that I think you're referring to is Tensegrity Robot. This is a research lab I was in at Berkeley. We did robotics research and we were trying to figure out how to get soft malleable robots. And most robots are like hard shells. are, the malleable robots are rods and strings and they pull in various ways and the robot's rolling. It's a video of that robot rolling. But to your question, yeah, I think you hit it on the nose.
+
+I love exploring new technological concepts. And more recently in the last five years, concepts at the intersection of economics and technology, which I got a healthy, healthy dose of economics at Bridgewater. But I felt that the tech side of things was a bit lacking.
+
+So coming into DeFi, it's really a perfect balance of the two where you get to think about governance and token allocation, investing and airdrops and economics of protocol design. But you're also doing some pretty hardcore engineering with interchain packet transmission and acknowledgements and some of these hard problems that haven't
+
+haven't really been cracked yet. So thank you for asking me as a parkour enthusiast. I'm glad you didn't find the video, but it is the...
+
+Citizen Web3
+I will. I Thank you for this answer. I like when people try to explore answers and the word exploration comes again here, but from different perspectives, not just like straight ahead. And thank you, course, for joining. Thank you, of course, for the great idea about Liquids Taken. And we will.
+
+Try to do it. I'm not going to promise. Definitely not for the podcast, but for the live version, I think we could try and do something like that. Maybe after Cosmoverse, see if everybody will be up for it and try to organize a panel for people to talk about that. again, thank you for all the, yeah. Sorry, I did interrupt you there for a second.
+
+riley 
+That'll be a lot of fun.
+
+riley 
+No, I, I interrupted you. was just saying that that would be a lot of fun. Yeah.
+
+Citizen Web3 
+Is there anything Riley I didn't ask I mean again by the way guys to point out Riley's pain is hiring engineers so guys I'm gonna point it out again Riley anything else you want to mention
+
+riley 
+No, we're, so the team has been heads down for four or five months. We, in fact, there's a, there's a bed in our office over here. I can turn the camera off, but.
+
+Citizen Web3 
+Unfortunately, it's an audio version, man. like, but you can, yeah, man, man. Yeah. But we do, we do like promo things. So if you do show me the camera, we can,
+
+riley 
+No, it's not.
+
+riley 
+I don't think you want to see it, but I'll send you a picture for you, not for the wider audience. But to go back to your question, we've been heads down and we know some of the Cosmos community from interactions with teams that we're collaborating with and teams that we know from the Cosmos Berkeley community, but we haven't met everyone. So we are incredibly excited to go to Cosmoverse.
+
+Citizen Web3
+you
+
+riley
+and get to meet the broader community. And so come say hi. We're giving a talk. We have booths. We're on some of the panels, but we're gonna be wearing very bright pink shirts. I'll show you actually. Give me two seconds. I'll grab a shirt.
+
+Citizen Web3 
+nice nice nice nice show me and for everybody who can't see of course it is a pink striped shirt nice
+
+riley 
+It really does stand out. So you'll see us there. And that's it. Yeah, mostly looking to higher engineers, scale up.
+
+Citizen Web3 
+Nice.
+
+riley 
+and meet everyone in Cosmoverse. I'm really excited to meet you as well in person.
+
+Citizen Web3 
+We are not going to be a Cosmoverse physically, but for everybody who is with Cosmoverse, and I'm pretty sure this episode will come out before Cosmoverse still, for everybody who is with Cosmoverse, please remember us when you have a drink because we are the main sponsor of the after party. So you will see those hints. I'm pretty sure that what we are doing, you will see hints that it is us who sponsor the after party. They will not be too annoying, I promise.
+
+but yeah, we will be in spirit, but yes.
+
+riley 
+man, we'll pour out a drink for you.
+
+Citizen Web3 
+Okay, Riley, thanks, man, and looking forward to the panel. Thank you.
+
+riley
+Thanks so much. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

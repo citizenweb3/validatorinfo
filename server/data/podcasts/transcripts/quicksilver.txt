@@ -1,0 +1,366 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/quicksilver
+
+Episode name:
+Capital Efficiency, Staking and DeFi with Joe Bowman
+
+Citizen Web3
+Well, ladies and gentlemen, and who else shall I have a weather conversation with? Apart from somebody from the United Kingdom, of course. We have today with us Joe Bowman, the co-founder of Quicksilver. Joe, hi, welcome to the show.
+
+joe_bowman 
+Hi, how's it going? Thanks for having me on.
+
+Citizen Web3
+Great man. Well, I'm gonna like jump straight in. I'm sorry, like without all those like the red carpet and all that. So Joe, mean, Quicksilver is not being heard of a lot, but lately we're hearing more and more of it. I think everybody who's following the Cosmos ecosystem has sooner or later somewhere, sorry, apologies for that, has heard the word Quicksilver, staking liquid. I'm not gonna go into it myself. I would like you to introduce yourself.
+
+say what you do and what is Quicksilver and what is it all about.
+
+joe_bowman
+Sure, so my name is Joe Bowman. I'm the co-founder here at Quicksilver along with my other co-founders Vish and Roya. So Quicksilver in itself is what we call a liquid staking zone. It enables what we call interchain liquid staking. Now liquid staking has been around for a while, predominantly in chains like...
+
+Ethereum where you have Lido and they kind of pioneered it on the Ethereum side. Then there's Marinade and also Lido over on Solana. And it's not really come to Cosmos ecosystem in the same way until now. And part of the reason for this is that prior to IBC going apoplectic, it wasn't much call for it.
+
+You could stake on the Cosmos hub and you couldn't really do much else with your atoms. You could stake on, say, Terra or on Persistence, or could stake on other chains, Carver, whatever. But you couldn't really do anything outside of those zones before IBC came to fruition. And was really the Osmosis that kicked that off. They came, they saw they conquered, they bought the Osmosis decks. Absolutely fabulous piece of kit. And...
+
+That was really what triggered this rollout of IBC across the entire ecosystem. So all of a sudden you had all these opportunities where previously you could only stake and you could get your 10, 15, 20%, whatever APR on your staking. But what you couldn't do was better that somewhere else. As soon as osmosis came along, you could then unstake your atoms and take them to osmosis and then...
+
+joe_bowman 
+triple digits in liquidity pools, that wasn't an option before. suddenly you have this problem where folks are unbonding from the Cosmos Hub. We saw this when Atom, sorry, when Osmosis was launched, we saw not a huge number, but a decent number of folks unbonding from the Cosmos Hub in order to take their atoms over and use them on Osmosis. Now, as the DeFi ecosystem explodes, we're going to see more of this. We're to see folks unbonding because they can
+
+they can simply can get better yields on their capital by putting them into DeFi products. And that's where Quicksilver comes in, I guess.
+
+Citizen Web3 
+Well, and where is the... Come on now, now we need the big punchline. When airdrops are now joking. But I mean, what is the... mean, to a person, right? I think there is a big confusion for most folks out there between the words liquid staking and everything that comes with it. A lot of people don't really understand...
+
+Me personally, right? mean, there is like fluids taking, liquids taking, then there is like the thing that Osmosis did now. think they used another word for it, I'm not mistaken. Then I think Cyber was doing something as well with the head, like you take one token, you get another token. What is the difference between all those different options when you get, when you stake something and you get something else in return? Is the idea the same everywhere or are there different architecture, like economical models behind all that?
+
+joe_bowman 
+The premise for most liquid staking solutions is the same, in that you stake via said protocol, you receive some representative token, essentially your claim to that stake, and then you can take that token away and do something with it. It's liquid, it's no longer locked up. And in the Cosmos ecosystem, we're talking about 95 % of your stake as a staker is unused because you can only be slashed 5 % as a maximum.
+
+So you've got around $40 billion at today's market locked on IBC chains as staked tokens that you can't use. liquid staking allows you to unlock that $40 billion and put that can be cloud straight into DeFi. And that's gonna hopefully lead to this massive explosion of DeFi. Superfluid staking is ever so slightly different in that with superfluid staking, you have to provide liquidity and liquidity pool. And then you,
+
+the super fluid part ends up being, don't wanna use the word conjured out of minute thin air, it's synthetic basically. If you look at the code, Osmo tokens are created and staked and then they get burned as soon as they get withdrawn. So effectively it's a similar concept. It represents something that already exists in the liquidity pool that locks tokens.
+
+Citizen Web3 
+Hahaha.
+
+Right, right.
+
+Citizen Web3 
+Right.
+
+joe_bowman 
+But they don't become liquid, they're able to use them elsewhere, but your constraints are using them in staking. So it's a similar concept, but most liquid staking solutions are the former where you you stake through a protocol and you receive this liquid token as a representation of your delegation.
+
+Citizen Web3
+So when you guys say, so if I go on a website, let's say, when I go on the Quicksilver websites and I look at the, I don't think, I'm not sure, it doesn't matter which section I think, I think it's about, or, and it says, as a sovereign Cosmos SDK zone, Quicksilver is not subject to the constraints associated with existing approaches to liquid staking. So basically what you're trying to say by that is that you are not subject to one chain, right? You can still like,
+
+make your capital more fluid? Is that what you guys are trying to say about it?
+
+joe_bowman
+Yeah, so one of the reasons we chose to operate as a sovereign SDK chain, like Launch Our Own Zone, was that that comes with it, a valid set and our own set of essentially governance voting system. So, for example, if you were to create a liquid staking solution whereby it was controlled by token holders on Ethereum, then you are very much at the behest of not only those token holders on Ethereum,
+
+but actually the ETH token holders as well. So the ETH token holders could theoretically make some change to the protocol, making some change to the protocol that impacts your Cosmos liquid staking solution because it's based upon smart contracts on ETH. And the same goes for other chains as well. So it was really important to us at Quicksilver that we have our own sovereign zone so that actually
+
+The only people that can decide what happens to Quicksilver as a protocol are the Quick Token holders. As we'll probably discuss later, the whole aim of Quicksilver is to disperse those tokens, those genesis tokens as far and wide as we physically can within the Cosmos ecosystem so that everyone gets a say.
+
+Citizen Web3 
+So if I was trying to summarize that to kind of wrap it up in a short way, would you say that the mission or one of the goals of Quicksilver is in essence to increase efficiency on the capital of the staking capital of a person that is, I can't call it passive capital because it's not passive, because it is not passive at all, but let's call it, don't know, like increase the efficiency of the staking capital of a person who's either trading or investing, right?
+
+joe_bowman 
+Yeah, the whole concept of liquid staking is to increase capital efficiency for stakers.
+
+Citizen Web3 
+Right, right. Okay. Okay. Let's a couple more questions about like some, some history that I wanted to get from you. I have noticed, I think it was a medium article or maybe it was somewhere around else. These day social networks take you to a deep rabbit hole. There was a few mentions of chorus one and a Lido finance as well. So is there any association with those projects or?
+
+If you can talk about it, of course.
+
+joe_bowman 
+So myself, Vish and Roya, three co-founders, were previously employed by Chorus One. That's where I had my first taste of liquid staking. So in 2018 Hackathon in Berlin, we as a Chorus One team created the first proof of concept for liquid staking. That was, let's say, four years ago now. And obviously, as we mentioned earlier, we just ended up not being particularly relevant at the time because there was no IBC in place.
+
+And then fast forward three years, middle of last year, Chorus One starts looking at liquid staking as its own. Chorus One themselves also have done work with Lido because they wrote Lido for Solana. They're an operator on P-Stake. there was a fair bit of history there between liquid staking and Chorus. And Chorus also wrote off the back of that original hackathon,
+
+liquid staking working group report for the Cosmos ecosystem. So that, I think you can still download it from Corus's blog. That was kind of very early research into liquid staking on Cosmos and what shape it might take. But Corus eventually decided they didn't want to execute on this liquid staking zone idea. And obviously it would, as we have...
+
+proving it requires an entire team of people working on it. It's not something that can be a side project and executed well. So, Chorus decided they weren't going to execute on it. After Cosmoverse last year, I had a massive amount of FOMO and decided I needed to build something. And I left Chorus One with the intention of building something. And then it happened that they didn't want to execute on Quicksilver. So I offered to take it up and
+
+take the reins from it and then Vish and Roya joined me on this journey, which is cool.
+
+Citizen Web3 
+Nice man. It's funny how, you know, this old saying, I don't know if you can say, if you say that in English, but in a lot of languages, you say that people are connected via like six or seven handshakes or whatever. The number changes wherever you go in the world. It's funny because like Lido, one of the main, let's say contributors is P2P, which is like Constantine. And that's the person that, well, we did the first blockchain project together with our public blockchain fair.
+
+joe_bowman
+Yep.
+
+joe_bowman 
+Okay.
+
+Citizen Web3 
+It's funny how those things connect essentially.
+
+joe_bowman 
+Yeah, think that number is way less than six in crypto,
+
+Citizen Web3
+Of course, of course, that number, well, it's three right now, you see. there we go. Yeah, well, the blocks, the bandwidth and the holy consensus. But about chorus as well, because chorus is quite a big name, I think, in the Cosmos ecosystem. They've done some development as far as I know. They validate a lot. Are you still affiliated with chorus at all after that? Or no, you're just like...
+
+Now on your own.
+
+joe_bowman
+No, Quicksilver and the development company behind it, which is Ingenuity, are totally separate entities. Corus are the lead investor in our seed round. that's the only connection there. Obviously, those guys are going to continue advising and being part of the Quicksilver ecosystem, hopefully, in the long term as well. But it's an independent company.
+
+Citizen Web3 
+Let's ask questions in different way. I like to always ask the guests their crypto story, how they actually got into crypto, because obviously you mentioned Curvus One. It's a big name. mean, Cosmos ecosystem is a huge name, but usually you don't just land out of there from nowhere. Usually there's an anecdote behind, not always, but sometimes. What's yours?
+
+joe_bowman
+I mean, unfortunately, it's quite boring. I was working on the operations side at a big health research project in the UK prior to finding crypto. One of my colleagues there kind of got me into the kind of crypto space, but it was all the kryptonite proof of work chains that he was into.
+
+Citizen Web3
+Come on!
+
+joe_bowman 
+And then I kind of stumbled across Proof of Stake and thought this is quite a cool thing. And then when I was then looking for a new role, I came across this offer for chorus and applied and it was a good match. So that was four years, beginning of 2018, so shortly after the last crash, actually. And yeah, I know.
+
+Citizen Web3
+Is that is that is that is that a sign? a minute. Are you you for a second?
+
+joe_bowman 
+Every time there's a crash I do something else. So I joined Chorus One as think their fifth or their third hire. So it's Brian and Felix who is now the CCO and there was a chap with Anna who was their first kind of developer. I joined as the first platform's person and built the kind of infrastructure up from ground zero through to the kind of six billion dollars we were at in November.
+
+decided to call it a day. So yeah, it was an absolutely fantastic journey. The first year was literally just reading Cosmos code and understanding it to the lowest level. And then we focused off on various other things, but Cosmos was always core to the validation chorus. And for me, when it came to deciding how to build Quicksilver, it was Cosmos or nothing. There was no choice there.
+
+And for various reasons, firstly, the tech is phenomenal and it has always been close to my heart. And I was digging into it four years ago and it's only got better by many orders of magnitude since then. And we have done development on, or I've done development over the last four years on Polkadot and on Salama and I wouldn't, there was just no contest at all. It was Cosmos or nothing.
+
+Citizen Web3 
+It's, think a lot of folks who have seen build since 2016, no, not 16, sorry, that's a lie. 18, yes, 18, I've chosen Cosmos, you know, a lot for ABC obviously. And then I don't get sick of saying that I think last year when I remember Osmosis came out and you actually tried it out with your ledger for the first time, you're like, my God, it actually working, right? And yeah, I mean, it's definitely no no brainer.
+
+I've looked at your Twitter kind of a lot and you're very lively. It's very opinionated. I like it. Mine is the same. You mentioned governance a lot. And obviously one of the last things you mentioned is, well, mean, we are, you know, I mean, this is a podcast. need some content, know, it's a drama. No, I'm joking. It's not about the drama, but I'm quite curious in your opinions and governance because I see you tweet a lot about it. It's something that it's very close to my heart personally.
+
+joe_bowman
+Thank
+
+Citizen Web3 
+Like, and in my opinion, the decentralized spectrum, the spectrum of decentralization can go very far from one point to another. What are your thoughts on the whole thing with Juno, Prop16? I have seen your tweets, but obviously not everybody has. So maybe like talk a little bit, if you want to talk about it, of course. What's your take on that?
+
+joe_bowman 
+Yeah, so Prop 16 is an interesting one. I'm still not 100 % convinced either way in terms of my own personal opinion. I think the big draw for me for Prop 16 was actually how much of the community responded to that proposal, how much passion the community showed in that proposal, how
+
+divided the community was. Now we're looking at, is it 48 and 52 % or something? It's one of those governance votes that it just genuinely could have gone either way. But for me, and kind of the message I've been pushing for so long with, especially with Quicksilver, about governance and governance participation and how important it is to the ecosystem.
+
+Proposal 16 couldn't have come at a better time in terms of our own advertising. So there is, yeah, there's definitely some positives to take out from it. I think there are also some negatives to take away from Prop 16. I think it was rushed. think it was, the actual proposal itself was fraught with kind of very emotional or emotion laden terms. And I think that, I think when you are...
+
+When you're proposing something, especially as a core development team that is going to be quite so divisive, you need to make sure, from my opinion at least, that what you propose is emotionally neutral and allowing delegators to make their own mind up. think with Prop 16, half of the decision was made for a lot of people already. And you'll find the ones that were very
+
+and prop16 are, I guess, those kind of more hardcore, like, code is law type folks. So yeah, no, it's, I don't want to be drawn either way on it. I'm still not 100 % convinced either way. But it's interesting to see it's still playing out even now. was a new proposal from CCN today about how, well, their latest response, which is still.
+
+joe_bowman 
+as divisive as the original vote was. So I can't see it going away anytime soon. once I went out in the end, I'm sure.
+
+Citizen Web3 
+I think I agree with you there. just don't think that everybody who is anti is code is law, for example.
+
+personally with my personal stake and actually not with Vito, think, which is not a big stake, of course, but it's just an expression of opinion. I'm not necessarily would agree with Cody's law. just think that I think it's acceptable. I think if a chain finds a consensus on anything, then well, you guys found consensus, then this is what it was set out to do originally. Perfect. The blockchain is working. It's just a question of, in my opinion, every action has a consequence.
+
+And in today's reality, like a lot of people have compared it to the DAO hack. And I don't think it's correct to compare it to the DAO hack for the simple reason the market is not at the same stage. What happened then and how it affected Ethereum isn't in my opinion, how this might affect the future of Juno. as a, I don't think it will affect it in a lot of ways, but it will push some people away from, from, from saying, okay, this is what might happen. Maybe.
+
+I don't want to be part of that. And I think it's up to everybody, of course. And this is what's the beauty of decentralization, right? But yeah, but I totally agree with you that this is a very like, yes, no, yes, no, you know, there was a lot of, a lot of concerns about it, a lot of like constraints. What's in your opinion, and especially with your launching Quicksilver, how, well, how are you gonna make sure that, well, not make sure, that's a bad word.
+
+How are you going to avoid this? How are you going to make governance work more efficient? don't know. What's the right word? Better is a bad word for governance, in my opinion. So more efficient, maybe.
+
+joe_bowman 
+For us, I don't think governance is broken. I would absolutely love to see things like quadratic voting in Cosmos so that you are able to have votes that have more than just yes-no answers. I think that it would have been very, very interesting to see if Prop 16 had been a burn, confiscate, some kind of negotiation or do nothing.
+
+it would be interesting with those four votes how it would have panned out because I think the results would have been very different. But I think for us, Quicksilver and governance is really, important. And actually what you find with those, so a lot of liquid staking protocols have this white list of accepted or allowed validators that you can delegate to. Now,
+
+For us, this is problematic because firstly, with a lot of liquid staking protocols, you'll find that those allow lists are a handful of the top 10 validators that already have a disproportionate amount of voting power. And combined with this, actually in Cosmos, will delegate to a validator and unless you override that vote, you assume the validator's vote.
+
+That's all well and good. But the problem herein lies is if you then delegate via a liquid stating protocol and they do not offer any way for you to proxy your vote through them, then what happens is you have to assume that validators vote. Now for us, if there was a predominant liquid stating solution that comes about that then has a small white list of validators,
+
+and you can't override the vote, that ends up being a significant amount of voting power being decided by a very small group of people. Prop 16 for us was a perfect example of the fact that actually a lot of delegators did override their validators. think it was by far the highest turnout in terms of the sheer quantity and percentage of token holders that we've seen to date in Cosmos. So what Quicksilver allows users to do is first and foremost
+
+joe_bowman 
+you can delegate to any validator that you could do natively, which I think is massively important for us. So that's the default position of the protocol. The protocol is not opinionated about who you can delegate to. It may very well be that governance, the governance of the zone decides that it doesn't want you to delegate to centralizing changes, for example, governance has the power to apply that restriction, but the protocol itself doesn't.
+
+Citizen Web3
+That's amazing.
+
+Citizen Web3
+and
+
+joe_bowman
+isn't being related in any way. And the second thing is that there will be a module that we call Governors by Proxy that essentially allows you as a delegator that holds Q assets. So Q atoms, if you have an atom stake, can then vote on hub proposals. So if you hold Q atoms, if a Governor's proposal comes up on the hub,
+
+it will get mirrored on the Quicksilver Zone through this new module. And then up until some very short period before the tally is taken on the hub, you can submit your vote on the Quicksilver Zone. That gets proxied through to the hub and you get the same voting rights essentially that you would do if you were voting natively. So the combination of those two things means that as an end user, from a governance perspective, you have the same
+
+right in terms of a choosing which validator you want to validate to and b being able to override that validator if that is what you want to do. So these are are the kind of two of the kind of core tenets of Quicksilver because decentralization and governance are the things that truly matter to myself and the team.
+
+Citizen Web3 
+I think we talk a lot about validators and you mentioned, for example, you mentioned the word, example, not to a validator who's a centralized exchange. How do you know who is which validator today where the POS industry is like, well, it's not what it was four years ago, right? Not what it was. I I had my first node on a Beecher's type chain, Golos. It's called a witness back then.
+
+And this was 2016. Yeah. 16. And like the post there and this, the industry where it's not, how do we know? How do we like, where?
+
+joe_bowman 
+It is hard. Yeah, it is absolutely not a trivial problem to solve. Certainly the bigger exchanges become quite obvious because they have massive wallets and lots of transactions. And certainly with the likes of Binance, for example, you see the memo field will contain an eight digit string that's your ID. So you can track exactly which transactions are what. But it's definitely a harder problem. I think that the one thing we have on our side is that
+
+there's a lot more scrutiny of what's happening on blockchains than there ever has been before, a lot more analytics. And they do have these telltale patterns of big accounts or accounts where the balance disappears immediately after funds have gone into it. there are ways and means by heuristically checking the behaviors of wallets to determine kind of what they are. But we do largely rely on the folks that are kind of good at that analysis at the end of the day.
+
+Citizen Web3 
+Let me rephrase the question though. Let me rephrase the question because I think that's a bit too obvious. understand that. But let's go a bit bigger. And in the time, and I mean, you mentioned like Corus One, what you said up to 6 billion, right? I mentioned P2P. I don't know what the P2P staking number is, but whatever. It's up in billions. I'm saying like those folks, those companies, the projects stand behind those things. mean, we are Citizen Cosmos as a validator.
+
+We don't secure a lot, but we secure some number. We don't compete with those guys. It's not our goal. But anyways, those projects as companies, they're essentially spending money on something. we are all saying, look, the centralized exchanges, those are the bad guys. I'm not actually, to be honest, that sure. But let's assume. Let's take that as an assumption for a second. Let's be a devil's advocate here. My question is, how do we know who are we validating to? We have companies with $6 billion.
+
+like dollar USD value secured. We're talking, you know, hundreds of thousands of dollars sometimes per day in income. I'm sorry to say that out loud, but it's not very hard to calculate. know, that money is going to the values and the beneficiaries of those. Of course, it's going to building. Of course, I'm not saying that not, but how an average person can make sure like, let's say, for example, today's like, I don't want to buy McDonald's.
+
+or whatever, because it's just an example, right? Because I don't want to sponsor like something, blah, blah, blah. I don't want to like buy clothes from Primark because I don't want to sponsor the whatever, the Indian kid, whatever, like, you know, we can go forever with this. So how does an average person today in this huge post industry know who it's okay to delegate to, in your opinion, who it's not okay? Is it important at all? Is that even a question that should be asked?
+
+joe_bowman 
+I think I do think that delegators should care who they validate to. the tooling is there now to be able to see for an average user, if you look on Mint and Scan for example, it tells you how many proposals a validator has participated in. You can't see the voting power. I think as a delegator,
+
+Of course, it's absolutely up to everyone's own choice. But from my perspective, delegating to those delegators that are active in the ecosystem, so they are participating in governance, they are on forums, they are posting content out regularly. And also delegating to the small guys that aren't necessarily earning bucket loads of money, but are also providing an equally valuable service. That's where...
+
+Delegators should aim to do so it's I mean It's always been the case and I suspect it always will be the case that new folk will come into the ecosystem They won't have a clue which validates a which they will look at the block is poor. Okay, these guys these guys look good their commission rate is okay and Obviously a lot of other people have a trust in them as well So it's that reputation thing is it's hard to escape from and I think that's going to continue but at the same time
+
+Yeah, everyone has to have their own choice, otherwise it doesn't really work, it?
+
+Citizen Web3
+Of course, of course. No, no, no, totally. mean, I'm just curious at which point like we could come to the place where we could start somehow making some kind of proofs, verifiable proofs. I don't know how, I have no clue, but the thought of like some projects, you know, having income of billions of dollars from validations or hundreds of millions of dollars or whatever, right? And thinking that...
+
+joe_bowman 
+Yeah.
+
+Citizen Web3
+Well, if that guy is building a nuclear bomb and he's like close it, I don't really want to sponsor that kind of thing, you know? But anyways, but this is just like kind of thinking out loud. Your website, I'm going to take it a little different direction. Your website mentions a token, if I understand, and it mentions a drop. Sorry to ask that, but when airdrop, sir.
+
+joe_bowman 
+It's my favourite question. The section on the website is literally when AirDrop for that reason. So yes, we will have the QUIC token. The QUIC token will initially be a Covenants token primarily. The plan is to launch with Interchain Staking. Interchain Staking from version 1 will only allow you to delegate in atoms on the Cosmos Hub.
+
+Citizen Web3 
+Whenever, yes, yes, yes, yes.
+
+joe_bowman 
+When Interchain Staking, when Chain Security version 3 comes out, we'll be able to supplement that hub validators set with our own validators, and then it will become a staking token. That is the plan for the QuickToken. In terms of the airdrop, as I said before, it's really, really important to us that this zone, the QuickZilla zone, is managed by the ecosystem. And because this is the plan, 50...
+
+I think 51.35 % or thereabouts of the entire Genesys supply is allocated to incentives and airdrops. So they're all going to this pool. The pool is controlled by governance on the zone. So what will happen is when we come to onboard a new zone, one of the cool features of Quicksilver is that there is no proprietary code to add. So as long as zones have the...
+
+liquidity staking module and interchain accounts which are going to come out in the next couple of Cosmos SDK releases as long as those are installed and the correct parameters in terms of transactions that are allowed are set then we can onboard the zone without any further hassle or configuration or any permission from the third party. So
+
+Every time we want to onboard a new zone, there'll be governance proposal. The governance proposal can be submitted with a manifest of addresses where someone has calculated and run a script to work out what the allocation for that zone is and for those individual users. And then once that proposal has been accepted and we onboard the zone, then all those accounts will get some airdrop of Quick Tokens. Now, the reason we're doing it this way, rather than the traditional, let's work this out ahead of time, put it in Genesis.
+
+is that we also have going into that pool 30 % of the inflation rewards. So that'll be 60 million tokens over the first year and then it drops off by 25 % a year. So we constantly got rewards going back into this pool. Now the beauty of this is that if a zone launches next year and we onboard it as a zone on Quicksilver,
+
+joe_bowman 
+then we can actually airdrop to token holders of the new zone. Now, if we were doing it the traditional way and only airdropping to zones that we snapshot at some point before we launch, but actually anything that comes in the future, any zones we onboard in the future, they don't get these Quick Tokens. Now, we can see that a good chunk of these Quick Tokens in the future will probably end up going to token holders that have received airdrops from other chains. But as the community grows,
+
+Everyone gets more and more folk come in. So there will be new people that come in and get air drops from future air drops that wouldn't necessarily get it if we just did it at Genesis. So there's this kind of, referred to it as a never ending air drop. It probably will end at some point just in terms of physics. But yeah, the plan is kind of this rolling air drop for every single zone.
+
+Citizen Web3 
+Thank
+
+Citizen Web3
+That is really cool that it's a plug and play rather than, essentially it will become a plug and play when all the tools are in place. Do you have any TA? I mean, it's a stupid question. I hate asking, but like not any TA on a date. mean, like as in at least like a quarter of a year, like you hope that you hope to launch it like I assume half or...
+
+joe_bowman 
+Yeah, so the plan originally was late June, early July. I think we are currently going to be held back on Interchain Security Launch, which is slated for August time. I'm not sure I can say that. I might have to let you know otherwise. But yeah, so we currently held back on Interchain Security Launch. So once that's live and the requisite vote has happened on the hub to onboard as a chain, then we will launch shortly after that.
+
+So it's likely to be beginning of September in all reality.
+
+joe_bowman 
+That is exactly why we're doing it then.
+
+Citizen Web3 
+There we go. And that's exactly what it is. I have a block of questions that I also like to try to understand from guests a lot. In my opinion, it's important. And the first one is very straightforward, very weird. Why did you decide to? I mean, you have said the technological. What was your reasoning? What did you want to improve? Did you want to?
+
+What was the idea of building a protocol rather than carry on working for Corus One, you know, like a successful company, then you suddenly like, man, I don't like, like, what, what made you do all this? What's the goal?
+
+joe_bowman
+So I was a developer in my early career and I kind fell out of love with development because I was building software that other people had already done and it was just re-implementing the wheel. It was a bit tedious. So I went over to the operations side and that's how I got into crypto. In the first place was I came to Joint Corridors to run run data nodes. I kind of realized when I did these hackathons how much I still enjoyed coding.
+
+And when I got to the Cosmosverse Conference in November, was... The community is a bunch of folk building to make life better for everybody else. There was a massive disparity between the Solana Conference and the Cosmosverse Conference in that Solana Conference was full of money men and people in suits and it wasn't my saying at all.
+
+Citizen Web3
+horrific
+
+joe_bowman 
+I didn't want to say that word out loud. And then the Cosmolife's conference was a group of friends building stuff together. And that's what made me go, I need to be here. I need to be back in the low level of this community building stuff for the benefit of everybody. Now, the liquid staking stuff had been rolling on in chorus anyway. And this problem of
+
+liquidity being locked up and $40 billion plus of stake kind of sitting there untapped. It's just a phenomenal amount of money to be able to unlock with one protocol to be able to, I guess, kickstart this DeFi ecosystem in Cosmos, which it's kind of, getting there, baby steps, Osmosis has done amazing things and some of the other protocols are doing really cool stuff as well, but...
+
+If we were able to inject another $40 billion into that ecosystem, it will be able to see it fly. It'll be fantastic.
+
+Citizen Web3 
+So what takes you as curiosities from what I'm hearing of seeing what will happen when all this money will come in or?
+
+joe_bowman 
+It's, yeah, I think it's an innate desire to see Cosmos and the community of people that are friends as much as anything else, see everyone do well out of it. And if I can play a small part in making that happen, then...
+
+Citizen Web3
+What's the goal in, let's say, like for yourself personally, not for Quicksilver in, you know, like one of those interview questions. Where are you going to be in 10 years time from today? Well, not here. what's... Yeah, we need to call it daddy with tequila now. I remember that. To be honest, we're not far away, but over my end is nice, Armadera. So come over here.
+
+joe_bowman
+sunning myself on a beach. Not in the UK anymore.
+
+Yeah, yeah.
+
+Citizen Web3
+But seriously, what is the goal for yourself personally? let's say in 10 years time, you achieved that with Quicksilver. That's done. Quicksilver has played its role in building a greater Cosmos ecosystem. What's next?
+
+joe_bowman 
+I mean...
+
+Cosmos isn't going anywhere, it? this is... I... It is. So, think Quicksilver's obviously, for my foreseeable future, is on the horizon. I can't see anything beyond that at the moment. Quite frankly, I can't see anything beyond the end of next week, in terms of my scheduling at the moment. But, yeah, beyond Quicksilver? It's a hard question because, like, even once Quicksilver is...
+
+Citizen Web3
+The cosmos is ever growing, right?
+
+joe_bowman 
+built and launched. Now we already have ideas about what we want to do on top of Quicksilver. Using, with Q-Assets, we want them to become this kind of base asset class for Cosmos DeFi. And what we can build and build on top of Quicksilver as this sort of foundation is anyone's guess. certainly for the next...
+
+Citizen Web3 
+Yeah.
+
+joe_bowman 
+two, three, four years I can see as being busy on that front. Beyond that, who knows? It very much depends on where the next opportunity comes out, but yeah, I can't see anything beyond Quicksilver at the moment really. But if I do, it's almost certainly gonna be in the cosmos ecosystem. I wouldn't wanna leave these guys.
+
+Citizen Web3 
+Nice,
+
+Citizen Web3
+It's true. mean, I Cosmos, I think is like the best name you could have picked for crypto projects. think it's just perfect. And the last question that is in the same kind of thing, but also to wrap it up. What motivates you to keep on? I mean, you're so focused on Quicksilver, obviously, like everything I ask, it always comes back to that. And it's great to see the motivation of a co-founder so focused. So what keeps you...
+
+that focused and motivated apart from trying to evolve that I mean in your daily life, something that you do every day, maybe it's like eating, I don't know, an ice cream every day or going to the gym or reading a book, going on GitHub every day. Is there something you could like share with others that would say, guys do that? That will help you to stay focused.
+
+joe_bowman
+that's an interesting one. I half-way through the question, I had one answer and then you said something and it made me go, I'm not going to say that. No, honestly, the one thing that really keeps me going is my eldest daughter is an absolute geek and she actually came up with the company name for Ingenuity, but she's just every single day, I'll talk to her, she'll probably be listening to this podcast actually, so hi, Maisie, when it comes out.
+
+Citizen Web3 
+Hahaha!
+
+Citizen Web3
+Wow.
+
+joe_bowman 
+every single time, I do something or build something else, I'll show her and she gets it and she's so kind of psyched up by it. And just seeing her go, like, look on her face and that she's proud of what I'm doing, like, that in itself gets me going every single day. This is not me recommending that everyone goes out and procreates. That's the bit that I wasn't gonna suggest.
+
+Citizen Web3 
+You
+
+joe_bowman
+Yeah, and definitely for me, the kids do help.
+
+Citizen Web3 
+That was a beautiful answer. come on. mean, that's that's that's seriously. That's one of the most definitely beautiful answers I've had so far to this question for sure. Thank you for that. Joe, it's been fantastic conversation in my opinion. I loved it. Thank you for coming on. Thank you for explaining the details about the airdrop and about what you guys do and the goals and everything. And hopefully catch you sometime next time.
+
+joe_bowman 
+Never hurt my tool man, thanks very much for having me and if I don't see you before then a Cosmos verse in Medellin hopefully.
+
+Citizen Web3
+Yes, thank you. Bye.
+
+joe_bowman
+Take care, cheers.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

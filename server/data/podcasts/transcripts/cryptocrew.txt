@@ -1,0 +1,601 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cryptocrew
+
+Episode name:
+Baremetal, Security Configurations and Drama with Clemens Crypto Crew
+
+Citizen Web3 
+So, hi everyone! We have today on the Citizen Odyssey Exploring Validators Klemen from CryptoKru Klemen, I'm very glad to have you on, guys.
+
+Clemens CryptoCrew 
+Hi Citizen Cosmos team, thank you very much for the invitation, happy to be here.
+
+Citizen Web3 
+Hey!
+
+Citizen Web3
+Nice exchange of now let's fire. No, I'm joking. Man, you guys are a very cool validators. True, you are. Not all validators, in my opinion, deserve the tag. We will be talking about what you guys do and hopefully to everybody who's either watching this right now and live or regardless of you watching the recording or you're just watching parts of this, it doesn't matter.
+
+Clemens CryptoCrew
+Hahaha
+
+Clemens CryptoCrew
+Thank you.
+
+Citizen Web3 
+Definitely check out Crypto Crew and hopefully you will learn why you should check out Crypto Crew during today's broadcast. So Clement, first of all, can I ask you to please give yourself an intro and you can go free to go beyond Crypto Crew, maybe a little bit about your own history and how you got into blockchain as well and the usual things, the usual suspects.
+
+Clemens CryptoCrew
+Sure. Hi everybody, I'm Clemens, one of the founders of CryptoCrew Validators. Actually, CryptoCrew originated from a Telegram channel called CryptoCrew. It was a Telegram channel of OG Bitcoin investors. It's been there since 2013, private nonprofit Telegram channel. And it's mostly German speaking.
+
+So our company is based in Austria, and the co-founding team, it originated from this CryptoCrew telegram channel. We are quite a diverse founding team, and we got into running nodes, I think, let's say 2017 and 2018, with some early projects, but really started our endowers in the cosmos in 2020.
+
+One with the genesis of osmosis. We joined the active set as a validator shortly after the genesis. And we've been expanding our project and company ever since. We're today live on 35 chains and ever growing. And our main focus besides validation is also IBC relaying. So we have been one of the very first IBC relayers of the interchange. And today we are one of the most active ones.
+
+with well over 10 million IBC transactions relayed over the 35 chains that we support. Our vision is to propel interchange scalability and adoption, and this is why we're providing very powerful service and very secure infrastructure to the chains that we support. Our team is a total team of seven, so we're quite a small team.
+
+We're working together in an office, physically at the same place in Graz in Austria. And we've been loving it ever since and we've been making our journey through the Interchain and through Cosmos and we've been loving it.
+
+Citizen Web3 
+Klemen, stop answering half of my questions ahead of them. Wait, wait. I'm joking, man, I'm kidding. It's a very detailed intro, and I'm gonna be digging at some of the things you said, but we'll get to them, so we'll go one by one. So considering this, I'm gonna, first of all, for all the listeners, viewers, and yourself, of course, primarily, the whole Citizen Odyssey spin-off series,
+
+Clemens CryptoCrew
+Hahaha
+
+Clemens CryptoCrew 
+Awesome.
+
+Citizen Web3
+originally started with two purposes. One was to explore validators and one was to explore projects. Now we decided to drop the exploring projects things because this is not us. It's a bit too vanilla for us and we want to explore validators. So today I'm going to be digging at your validator. And I, but during that, I would like to not just to, I would like to understand what it is that drives you guys. And I will, I want you to try and.
+
+get that message across out as well. So I'm going to start asking questions and then let's see where we roll. So first thing is first, you already said the Valerita story. It began in 2021 with osmosis, but it started from a Telegram group. Why though? What was the, like, I mean, OK, there was seven of us sitting in a room and we just started. Why?
+
+Clemens CryptoCrew 
+Awesome.
+
+Clemens CryptoCrew 
+Yes.
+
+Clemens CryptoCrew
+It was actually one of our advisors who shield Cosmos to us and we totally got into the AppChain thesis and into our probability. Before 2020, everything was very monolithic. Most of the blockchain action was based on Ethereum smart contracts. With the genesis of the Cosmos, the AppChain thesis really...
+
+got its birth and it really got launched into production. And we very much supported this thesis and I guess the more technical people and the people that always wanted to contribute something to blockchain as a whole and always wanted to work in a blockchain ecosystem, out of this telegram group, they just united and they said, yeah, let's build the blockchain infrastructure company focusing on interoperability and the interchain.
+
+Citizen Web3 
+So wait, I'm hearing something quite interesting there. So are you saying to me that some of these people didn't know each other originally, right?
+
+Clemens CryptoCrew 
+Some of us actually did in person, but some of us, we didn't meet in person before. We founded the company, we just met each other in that Telegram chat. And that's actually also quite the main reason why we're keeping that name and we're keeping it because it's also very inclusive. We like it. Crypto Crew is a very inclusive name and it's in honor of the channel, of course.
+
+Citizen Web3 
+That's cool.
+
+Citizen Web3 
+It's cool.
+
+Citizen Web3
+Nice, nice. I love it. I love this story. So it's already... No, I tell you, I'm going to give you a simple reason why I make an emphasis on that because during my years around validators and around blockchain, which is more than 10 now, I have seen different stories that I'm talking about blockchain, of course, not validation. I've seen different stories and I think where that story has a real beginning, like a meaningful, it gives purpose and...
+
+Clemens CryptoCrew 
+Thanks, man.
+
+Citizen Web3 
+whether it's purpose just generally yours or yours and your friends, I think changes the way you guys approach the business. And this is actually my next question. You already said that you have seven people working for you. You said small. I can assure you that some validators are smaller. Some are bigger for sure. Um, what is the architecture of the team currently? If you, of course you choose to talk what you can talk about and my,
+
+Clemens CryptoCrew 
+Yeah, sure.
+
+So the tech department, I think it's quite small. We have three people working in development and DevOps. We're also making some code contributions to, for example, persistence and Comdex. So we have a full-time developer and two DevOps. And then also we have a support and governance person and management and financial department also. So that's quite very much of our team.
+
+Citizen Web3 
+What's the most difficult part of the team that finds the technical or the community part of the team? What's the... Where's the difficulty?
+
+Clemens CryptoCrew 
+I think the challenges are very diverse, of course. You can't quite compare them. For the operator team, for sure, the challenge is, besides running a very secure operation, it is scalability. And for everybody else, it's mostly governance and also business development decisions, because we're right now at the point where I feel that the interchain is scaling very, very quickly.
+
+So we started with like five or 10 chains in 2021, then we had like 50 last year. But I'm sure that by the end of this year, there will be quite a lot of inter-chain connected blockchains. And we need to pick the ones we want to support and we need to pick the ones that we see have a feasible future. And so it's a very diverse job being a validator. I'm always saying,
+
+A validator's job is not only to sign blogs. So that's very much also our vision. We are trying to push the ecosystems forward that we support and that we validate by contributing something to governance, by contributing relays, by contributing code. And every validator can choose the focus of their contributions. So Citizen Cosmos, for example, you're doing quite a great job with your podcasts and
+
+with marketing efforts for the ecosystems that you support, whereas we are more on the technical side of things and also deeply involved in governance.
+
+Citizen Web3 
+Well, we have other things, but not the point. Not the point for not about citizen cosmos right now. Let's stick to the crypto group. But the reason that what happened to the other 15 chains, by the way, you said you're about validating 35 right now, but at one point there was 50 that you were validating, right? Is that what I understood correct or IBC chains?
+
+Clemens CryptoCrew 
+Yeah, cool.
+
+Clemens CryptoCrew 
+Oh, no, no, no, I meant, I mean, IBC chains, yeah. We've not discontinued any chain that we validated except one, and this was really because it was Terra Classic because it really, it took away that we couldn't let our customers...
+
+Citizen Web3 
+Sorry, my apologies, my apologies, I didn't understand.
+
+Citizen Web3 
+which is...
+
+Citizen Web3 
+I'm sorry.
+
+Clemens CryptoCrew 
+be in such a situation. I think currently the chain isn't quite developed very, very well. The dependencies are not on the latest versions, and there are some vulnerabilities maybe. So that's why we decided we are not to, we will not validate this chain anymore. And we announced that during the winter, I think it was still last year, and we spun our Luna Classic validated on last year.
+
+Citizen Web3
+I have a message for Doqqon while you were doing this, I wrote a high to him, it's a bit mirrored but with a heart. So just to say a heart to Doqqon. Of course, of course, of course, of course, of course, of course.
+
+Clemens CryptoCrew 
+With a heart, I can see it. Free the Corona, actually he's free. Have you seen? Yeah, I'm sure you saw the news articles. I have to say personally, I think that it's very hard on his person that he had to go to jail for what he did. Because I'm dearly of the opinion that Terra had the potential to make the world a better place.
+
+Citizen Web3 
+I think for me personally, not to pull the quilt of course, but to me the major issue with, let's say, this is something me and a friend who is also in a long time in blockchain, we invented a ladder of scammers. And depending on the level, they go up and up and up. And I think the worst type is the people who lie.
+
+and pretend to be something that they're not. And I think that is why to me personally, Doc Won has never really publicly came and admitted that the way that the architecture was shaped with, what was it, UST, right? There's a lot of questions to that. And...
+
+Clemens CryptoCrew 
+There were architectural flaws for sure. I'm speaking maybe from a point. I was one of the very first contributors to the early Terra chain. We wrote some code for the mirror protocol when it came online. And back in those days, Doc Rohn was really, really acknowledging. He was quite a really admirable person. And again, my personal opinion, that changed over the course of the...
+
+Citizen Web3 
+Yes.
+
+Citizen Web3 
+Okay.
+
+Citizen Web3 
+He changed.
+
+Clemens CryptoCrew 
+the year after that. And yeah, we all read the tweets. And I personally can also say that I do not agree with all that he said on Twitter. And yeah, but I think it's really hard what happened. It's been really hard to the whole Cosmos ecosystem. And I don't think that he deserved to go to jail or something like that. Because I think the vision of Terra, even though there were obvious architectural flaws, I think the vision was actually really, really great.
+
+Citizen Web3 
+Nah. Of course.
+
+Citizen Web3 
+Hmm.
+
+Citizen Web3 
+Yeah, the vision was, I was a fan myself, but like they say, it is what it is. But wait, let's go back to Crypto Crew. So what about the architecture of a team? There is one more question I want to ask him. I have been speaking with a lot of validators over the past three, four years, and not just in Cosmos ecosystem outside as well. And I've noticed that more and more validators try to...
+
+Well, they call it differently. Some try to call it distributing the voting power. Some call it, excuse me, distributed architectural models. And some introduce a token with ownership of shares. Some introduce like, you know, they actually try to divide the token among not just the workers, but among the community as well.
+
+So I'm curious whether you and Crypto Crew are thinking about things like that, whether you're implementing things like that or have any ideas in that direction at all.
+
+Clemens CryptoCrew
+So I think as a validator, it's crucial to always offer many points of contact for your delegators. That's what we're trying to. We're very public. You can always reach us in Telegram and Twitter, but we also have a TikTok. We also have an Instagram. We're working on a new section on our new website, and we're trying to be really open and communicative, and we always want to give, as I said, a point of contact.
+
+So we're open to feedback from our own community, but also from communities from other validators, because let's be honest, in the end, all we want to achieve is to push forward the ecosystems that we support. So being a validator is very interesting. So you're kind of having other...
+
+validators that you're working together with, you have this shared vision, but then again, you're sharing the markets and you can compete with each other. So this is very much the decentralized world and also the open source world that's happening like this. And I think that most of the teams, they're really acknowledging of contributions. And I have, we've had great time working together with core teams.
+
+but also with other validators. As Relayer, for example, we've been closely working together with many popular teams like Informal Systems, Osmosis, Injective, but also TFL, Skip, Secret Labs, and many more. And validators that we work together with are for sure notional. They're one of our big mentors, and then Crowsnest, Lavender 5, Whispernode.
+
+I can't even mention every one of them and sorry to everybody who didn't get a shout out right now. But yeah, I think it's all about collaboration in the ecosystems that we support and in the wider inter-chain ecosystem as well. And I think that was probably a really broad answer to your question.
+
+Clemens CryptoCrew 
+But we're very happy to receive feedback from anybody and we're trying to act accordingly in the interests of the communities.
+
+Citizen Web3
+No, no, no, it's a good answer. This is your answer. This is your time. You know, it's not... The questions I ask is how you perceive them is how you answer them. This is about... Citizen Cosmos, one thing we always try to make an emphasis is not to try to make conclusions for people. We want to give material, educational material, and people make their own conclusions. So this is also the same for speakers, you know, when they answer the questions, it's how they choose to answer the questions. But let me ask you a question. You mentioned the word interchange. What is the interchange for you?
+
+Clemens CryptoCrew 
+Hehehe
+
+Citizen Web3 
+What is that for you mean? What does it mean for Crypto Crew?
+
+Clemens CryptoCrew 
+The Interchain for us means any blockchain that is connected through the IBC protocol. I think in the future it could also mean Ethereum. What it for sure means is any chain that's built on the Cosmos SDK and currently also
+
+Clemens CryptoCrew 
+They're building modules that can be made compatible also with other blockchains like Polkadot Composable Finance, for example, is one of them. But there's also Avalanche subnet that's compatible with IBC right now. So what we really support is interoperability, the app chain thesis, and IBC becoming the interoperability standard of blockchains of the future.
+
+we really see quite a wave of adoption in IBC being the main interoperability protocol because there's nothing quite comparable. So I would say that the AVAX Cosmos subnet is quite interchained and also for sure composable. So yeah, anything that gets connected to IBC.
+
+Citizen Web3 
+Nice, nice. Let me the next question. We're going to talk a little bit about the projects that, I mean, you already mentioned a lot of them, but let's try to collect all of them. So you guys validate nodes, you have 35 of them, you guys commit to several code bases, so you are quite techy. Does Crypto Crew currently have any other projects that it's working on?
+
+Clemens CryptoCrew 
+Yeah, as I said, we're working together with the informal team with the Hermes portion of informal on the Hermes Relayer on performance improvements because we're very much focused on being a Relayer also. And then we're working together with HIFA on interchange security. We're working together with the neutron team. We supported them quite a bit in their recent launch.
+
+We've been testing there. We made a dedicated production near testing environment where we tested the whole consumer chain launch pre production. And then we supported them also with our relayer systems during the launch, which turned out to be quite critical, actually. And yeah, so we're really happy to support anybody with our expertise and our infrastructure on any project that we.
+
+C contributes to the wider interchain value. So of course, ICS being the major value proposition of the Cosmos Hub at the moment, we're trying to support the launching consumer chains as good as we can.
+
+Citizen Web3 
+I mean, yeah, I remember the whole neutron we were working on more closely with Haifa as well. And by the way, why did you support neutron? Why did you guys decide to support neutron? What's in it for you? And I'm not talking about the physical reward. I'm talking about like the global abstract question.
+
+Clemens CryptoCrew
+As I said, yeah, yeah, I got it. As I said, as a Hub validator, we're deeply invested, not only as a Hub validator, I think as validators in the Interchain, but especially as a Cosmos Hub validator, we're quite invested in the future of the Interchain and of the Cosmos Hub. And we understand and support the value proposition of Interchain security, and that's why we want to help make it launch without any incidents and as frictionless as possible.
+
+Citizen Web3 
+Makes sense. But what about Neutron itself? Do you have any like ideas, whether it's what is the value of Neutron as a chain? Forget about interchain security, for example, or was it purely because of that?
+
+Clemens CryptoCrew 
+I think Neutron has a very valid place. We were one of the people, or one of the validators that voted no to Cosmos on the hub because we said back then, so yeah, we have IBC, we will have Interchain Security, Informal was working on it back then. And yeah, we very much supported.
+
+We think that it's quite in the vision of the AppChain thesis to have a dedicated smart contract chain as a consumer chain to the hub. So we see it as a feature for the Cosmos Hub. And for sure, that's quite valuable. Speaking about projects that can launch on Neutron, what I know is that Astroport will launch their Dex there.
+
+Astroport is a really, really good decentralized exchange, also coming from Terra originally. But it's very performant and it's been attracting lots and lots of liquidity back on the Terra chain. And I think it's like liquidity fractionalization over the interchain is quite a problem. And I think the products like Astroport and also Duality, which we launched as a consumer chain probably later this year.
+
+they're needed to solve the fractionalized liquidity problem.
+
+Citizen Web3 
+Sorry, the unbute button. It happens every... My viewers and my listeners already know that I have a problem with the unbute button, so sometimes I can talk and forget to unmute. Why... Your website says community-based. When I go into descriptions of CryptoCrew Validator, what does community-based mean for you personally, Clements? And what does community-based mean for CryptoCrew as a Validator?
+
+Clemens CryptoCrew 
+Don't worry.
+
+Clemens CryptoCrew 
+So we're a sovereign company and so there's no big venture capital backing us or something. So we're quite invested personally ourselves and we originated from a community of crypto heads and we positioned ourselves or we're positioning ourselves very near to the communities that we support. So that's in my view the definition of a community validator.
+
+Citizen Web3
+You said quite invested ourselves. Was that a slip or is there something? Okay, just a frisk. Okay, okay, okay, okay. No worries. Sorry, I have to dig. No, no, I understood. I just thought that does that mean that there is, I mean, you said there is no VC capital. You said we are a lot invested, but does that mean there is other investors?
+
+Clemens CryptoCrew 
+Oh no, it's just a phrase, maybe. Yeah, just difference of language.
+
+By quite I mean a lot.
+
+Citizen Web3 
+apart from the people who run the Valetta currently, if you can talk about it, of course.
+
+Clemens CryptoCrew 
+Yeah, yeah, I can disclose of course, that's everything is public. We're a registered company in Austria so that everything can be looked up. Yeah, we have an investor, but yeah, as I said, it's not a VC fund and we're quite happy to have that investor because otherwise I don't think that we would have survived the last 12 months.
+
+Citizen Web3 
+talk with you about the costs actually, like validator to validator. Now I'm curious, man. Well, what is, what is, I'm not talking numbers. Don't go into numbers because let's talk percentages, I guess, and whatever you feel comfortable with, of course. But I mean, when you say that we needed an investor, and I see a lot of teams say that, and, you know, we have a team as well right now. It's growing 15 people, I think, or 16 people right now. Yeah, we do a lot of other small things. But...
+
+Clemens CryptoCrew 
+Yeah, sure. Yeah, sure. Happy to do.
+
+Clemens CryptoCrew 
+Yep. Cool.
+
+Clemens CryptoCrew 
+Yeah, you're sure.
+
+Clemens CryptoCrew 
+Mm-hmm. Wow.
+
+Clemens CryptoCrew 
+Mm.
+
+Citizen Web3 
+Not all of them full time, of course. Of course not, by far not. A lot of them work part time, more than half work part time. What is the main cost after... Well, actually what is the main cost for you? It's salaries or infrastructure today.
+
+Clemens CryptoCrew 
+I'm being registered in the European Union, so we have quite a social system. Legally, yeah, we employ everybody in Austria, so for us, it's employment, it's labor cost. But that being said, we spend quite a bit on infrastructure, so we run bare metal nodes. We run at least two secure entry nodes per blockchain, and that scales up to more centric
+
+Citizen Web3 
+Legal.
+
+Citizen Web3 
+Okay. Okay, leprechaun.
+
+Citizen Web3 
+Well done.
+
+Clemens CryptoCrew
+increasing value of the network. And then we employ a Horcrux multi-party threshold signer. So everything is quite expensive to run. And then that's not only two or three nodes that we're running on each network, because we're running RPCs for our own relayers, private RPCs. So on some networks, like on the Hub and Osmosis, for example, we run almost 10 nodes.
+
+Citizen Web3
+Well done.
+
+Clemens CryptoCrew
+10 separate bare metal notes.
+
+Citizen Web3 
+Well done. Now, when you say bare metal for listeners and for viewers, because bare metal can be interpreted as two different things, you have some people refer to bare metal as dedicated note on headsner and some...
+
+Clemens CryptoCrew
+It's actually quite a good point. Well, bare metal server means access to your root server. So we don't have a data center in our office, of course. So we are working together with partnering data centers. We have six data center partners in Europe with over 12 locations that we currently deploy nodes at. And those are rented.
+
+bare metal servers that are deployed within the high availability environment of the data center and that's why we're using dedicated signers and that's why we're using the Horcrux multi-party threshold signer to be able to sign remotely on the data center nodes.
+
+Citizen Web3 
+No, no, again, a little bit about Horcrux for my listeners and for my viewers. Horcrux is basically a tool developed by Strangelove guys. It's a very, very cool piece of tool that allows to up your security. Well, I'm not gonna like estimate by how much, but this is a big difference in game. Can you talk a little bit about how you guys use Horcrux and what role it plays in your architecture?
+
+Clemens CryptoCrew 
+Mm-hmm.
+
+Clemens CryptoCrew 
+Yes.
+
+Clemens CryptoCrew 
+Happy to do so. So we're using dedicated private connections, those connections between our Decentri notes and Horcrux signature notes. So, okay, you have to imagine it like this. A validator must sign a block and for that, it needs a live connection to the blockchain. But the signature it provides, it can be provided from a dedicated remote signer. And this is how Horcrux works. And then...
+
+The signature key, the private validator key, which is a security crucial piece of the software, it's split into three shards or there is a threshold and it makes sense to choose a two or three threshold, but then you could also choose higher thresholds of like four out of five or three out of five or even higher ones, but that increased.
+
+increases total node number and also the monthly cost. But employing this architecture, we are able to do two things. We're able to deploy only a shard of a private validator key and not the full private validator key to a node, which increases operational security. So an attacker would theoretically need to compromise all or at least the threshold of our signer nodes.
+
+to have access to the key. And then it introduces also an element of redundancy because with the threshold, it only means, like when you have a two out of three threshold, it means only two of the three signatures are needed to provide a full signature. So if one of our signature nodes go down, we can detect that and we can easily...
+
+deploy a new signature node, point the cluster to the new node. This is how the old defective node gets moved out of the cluster and then we have a full life cluster again. And this without missing one block. So the cluster will be lively as long there is fresh art of the nodes online. And it's...
+
+Clemens CryptoCrew
+It really improves validator operation quite a bit. So it increases security, it increases liveliness, but also it increases, it makes operation more easier in situations where you might have unforeseen chain holds and you need to reset the validator or something. We've seen that people or validators double signed because of operational errors in such situations.
+
+Horcrux adds an additional protection against double signing.
+
+Citizen Web3 
+Again, I keep saying the person who's going to change this technology with Unmute is going to earn millions. But at least I was at Google change and unbuted me, right? So for the people who are less familiar with Horcrux, does that mean that you have to have three extra? Let's say you're doing two out of three.
+
+Does that mean that each network, let's say Cosmos, needs additional three nodes from your side to add to the architecture, or am I wrong?
+
+Clemens CryptoCrew 
+Exactly, but you can, those nodes don't need to run any blockchain, they don't need to retain any blockchain state, they don't need to run the code. So they just need to provide the signature, you need an entry point, a full blockchain node, but the signature nodes, the Horcrux nodes, they can be designed quite small. So the Horcrux process doesn't take much utility, it doesn't need much from the node. And so...
+
+like you will be fine with a small Horcrux node. But yeah, you're right. You will need, in our case, we choose a two out of three threshold on most of the networks. And that means we need three additional nodes.
+
+Citizen Web3 
+You mentioned an entry point as well though, right? So that means it's not three, it means it's four additional nodes or is there because technically you...
+
+Clemens CryptoCrew
+Mm-hmm.
+
+Clemens CryptoCrew
+Well, you need one to provide the signature. In a single node validator set up, you will need at least one node. And this is the node that runs the blockchain code. And this is the node that syncs the blockchain. And this is the node that you provide the signature on. So you could use that node to provide the signature on. But that would mean you need to have your validator key on that node. This is the most basic set up of a validator that you can choose to have. But it's one.
+
+Citizen Web3
+Right.
+
+Citizen Web3 
+Mm-hmm. Okay.
+
+Clemens CryptoCrew 
+really not very secure, especially not if you run it in a data center like this.
+
+Employing Horcrux, it enables you to take the private validator key off this node and put it on a remote signer. And then use the blockchain node to provide an entry point for the signature. And this is kind of how sentry node architecture works, like secure entry nodes. And we're using at least two entry points for our signatures. So Horcrux signer is connected to two blockchain nodes. If one of those sentry nodes goes down, we can still provide a full signature.
+
+Citizen Web3 
+understand.
+
+Clemens CryptoCrew 
+At least 50% of our sentries can go down, and at least a third of our signature notes can go down with any signature being missed.
+
+Citizen Web3
+Now, having this conversation with you, man, I have to say that I have spoken with several validators, including Strangelove, I've been speaking to for years already to the guys, I mean, like interviews. And I can tell you that they're absolutely, I love them, but like you're having a very good explanation. And now I can tell you that a lot of validators out there are struggling and for them, the word horcrux sounds like something from Harry Potter. And okay, I know, I know, I know, I know, I know, I know it is.
+
+Clemens CryptoCrew 
+They're awesome.
+
+Clemens CryptoCrew 
+It is a word from Harry Potter. But actually it's quite good semantics, because it's quite the way that Voldemort used to protect himself.
+
+Citizen Web3 
+Yes, but what I was going to say, but before we go to that, before I was going to say, I was going to say that it would be lovely to hear you guys speak because the way you are explaining right now is perfect. And I think it would be lovely to, to, for more validators and guys, if you're running a validator, please listen to what Clements is saying. This is crucial stuff. And I think it would be lovely to do maybe like a gathering with Strangelove yourself, Stakee and I know definitely used it and a couple of other guys.
+
+Clemens CryptoCrew 
+Thank you.
+
+Citizen Web3 
+to explain to validators that it's not rocket science, that it really makes a difference for delegators and for them, you can sleep much better at night. And I think what you're saying would help people a lot really, I really do.
+
+Clemens CryptoCrew 
+But I need to point out the Horcrux documentation at this point. So that's located in the Horcrux repository. It's quite a good documentation in my opinion. We have not had any further information than just this documentation and testing it on some test nets for some time. This is what I always can recommend with any new software if operators want to try it.
+
+Do try it, please, because you will see that it's quite relaxing to operate. You can reset your node. The node state will not be connected to the validator state, so the validator state lives on the Horcrux signer. So you can unsafe reset your node, and nothing happens. You don't have to copy your validator state or something and look for that, and you will have some kind of additional double sign protection. And that's very useful for operators.
+
+Citizen Web3 
+And also to add, I don't have my computer, this is my studio thing in front of me, but guys, there is definitely a Horcrux Hangout Chat on Telegram where you can go, and it's a very tiny chat, and I'm sure Clemens is probably over there as well. So if you want to bug him or bug the guys who wrote it, definitely, yes, yes, yes.
+
+Clemens CryptoCrew 
+The guys at Horcrux, they're very lovely people. They're very open, so if you have any question, because it could seem like rock and science, I can assure you it isn't. But if it does, just drop in there, just ask a question. They will respond and they will be happy to help you with any question, I'm sure.
+
+Citizen Web3 
+Do you think, okay, let's a little bit go a little bit further. Do you think it's okay or normal for explorers suddenly to put... Now, I'm going to ask you the question, then I'm going to add something. Wait. So I think it would be on one hand, very cool if some explorers were put in next to a validator name, I don't know, a little horcrux sign that would show delegators that this validator is running horcrux.
+
+Clemens CryptoCrew 
+Sure.
+
+Citizen Web3 
+And maybe a little question on the other hand, here's my question. Do you think doing things like that is a good thing for the sake of decentralization or not a good thing? And I don't have a distribution of course here.
+
+Clemens CryptoCrew
+So a few things here. There is no way to deem by on-chain metrics if a validator uses Horcrux. So you would need to believe them. And this is not good data to publish, I think. So yeah, any validator could say they're running Horcrux, but they don't. So...
+
+I think confirming it is really, really hard. I think that Observatory.Zone, they're making an incredible job visualizing on-chain data. They're analyzing the P2P of the chains they support, and they're visualizing the P2P network, the node locations. And there you could see if a validator employs an architecture where it uses more sentry nodes. And this could mean
+
+Either one of the two, he's using a normal validator behind the sentry nodes or Horcrux cluster or any other remote signature software behind those sentry nodes. So I think it's a little bit hard to visualize and I think it will be probably hard to get good data about this, so I think you probably will need to believe validators that are saying they're using Horcrux, but then again, that's why we're using this.
+
+We're trying to be very public about it. We're trying to be informative. We're publishing articles. I'm talking about it on your show to give the feeling to our delegators that we know what we're doing and that we're really employing it. And the other thing, so we're talking about the explorers on one thing. The other thing is,
+
+software decentralization, I do think. Well, we do have at least two remote signature software or remote signer softwares that are widely used by various teams throughout the wider interchange, speaking of the Tendermint key management software, it's TMKMS and for trucks by Strangelove, TMKMS was, I think, developed by Occlusion back when the Cosmos Hub launched. So we do have to
+
+Clemens CryptoCrew 
+dedicated signer softwares that are developed by dedicated teams and are maintained in dedicated repositories. So I think in terms of having remote signer options, we could probably have more, but as long as you provide a valid signature and you have a way to protect your key, I think it's most important to probably only to use remote signer software. You can choose which one you want to use.
+
+There are advantages that Horcrux has over TMKMS, and there are some advantages TMKMS has over Horcrux, for example, a hardware key support, a hardware key module support. And as I said, it's all about employing more security to validate systems, and it also increases...
+
+uptime in case something happens to your nodes and it also reduces complexity in operation. But then again, there are some payoffs, one being increased latency. So if you have a remote signer, you will have an additional element of latency when you provide your signature. And what you're seeing and what our delegates see is that...
+
+For example, us, we're using Horcrux also on Injective and on the fast networks like, yeah, Injective and Kujira and mostly FMOS is very performance intensive also. And with adding latency to the Horcrux cluster or using the Horcrux cluster and adding latency, it makes us miss more blocks on the fast networks. Like with one second block time on Injective, we currently only achieve 90% uptime. But that's completely suffices
+
+a blockchain to be lively and what blockchains are doing is they're promoting security over live and liveliness. We need a threshold of two thirds of validator signing blocks for the blockchain to be lively. So anything above 90% is fine with us. When we go down to 80%, we need to increase the power of our blockchain nodes. So it will make us sign more blocks. You're muted again, by the way.
+
+Citizen Web3 
+Yes, yes, yes, yes, I remember that. Thank you. Thank you. But it was a good one. I loved it. I loved it. I was like, mmm. I'm joking. And yeah, Evmos is a pain in the butt. I'm sorry. In terms of missing blocks, we have been trying to... Because we also don't have a simple architecture. We have a... But Evmos, the most I think we've been able to get out of Evmos is 97. And usually it's like 92, 95.
+
+Clemens CryptoCrew 
+Okay
+
+Clemens CryptoCrew
+It's actually quite good. Yeah, we're at 95 with the hard crux right now.
+
+Citizen Web3 
+It's we have quite a few century. We don't employ Horcrux on every most unfortunately, but yeah, but quite a few centuries and well, yeah, we've been trying to, but we had actually very good conversation with Jacob. We have several conversations with Jacob about that. And, you know, we've both been saying pretty much the same thing that it doesn't matter. That does not.
+
+Delegators should learn that those 2, 3, 4, 5, 7% do not take away from the validator's credibility or the validator's security.
+
+Clemens CryptoCrew 
+That's very important. In fact, the fact is that many, many valid delegators, they look for those 100.00% uptime. And in most of the cases, this actually means the validator employs less secure architecture than a validator which misses a block from time to time. But then again, a validator missing a block from time to time could also mean that he's just running shitty nodes.
+
+So there's no way to tell that by on-chain metrics. And I know it's really hard for delegators to choose which validates that they want to delegate their coins to, and it's really complex. You have to get to know your validators. That's the best answer I can give.
+
+Citizen Web3 
+Thanks for watching!
+
+This is a hashtag we've been trying to a little bit promote, who are the validators, who are validators. I don't remember what it's called. I think one of my main goals, because I remember in 2016, 17, I was running a Depos witness node on... I remember those things.
+
+Clemens CryptoCrew
+Cool.
+
+Was it Ash?
+
+Citizen Web3 
+Uh, no, no, I was doing golos. Uh, it was a first fork fork of steemit It was a russian-based fork of of steemit And the thing is with that you had to you had to upgrade one of the only things you had to do was upgrade your price feeds And that was basically it you didn't have any punishments or anything like that. There was no it wasn't, you know Bonded proof of stake is with delegate pure delegated proof of stake with 19 witnesses
+
+Clemens CryptoCrew 
+Ah!
+
+Awesome.
+
+Citizen Web3 
+in the round plus one extra. But anyways, the point was that at one point, I was like a key member of the project. And at one point, me and another guy who was the founder, we stopped doing anything with our nodes. We just left them like, like, and people kept on delegating to us. And for us, it was proof that this system was completely broken, that we want, and for me, it was a big sign to
+
+especially as we grew, especially as the ecosystem came to 2018, 19, 2021, 22, or 21 specifically, I think I started to realize, because a lot of my friends do validator work, like P2P, well, I do know them very, very, very, very well. We worked with many years together before P2P existed, and not just them, but not the sheer size of them, for example. I realized that...
+
+especially during the bull market that I believe in blockchains and here is going to follow the question to you. I believe blockchains are sort of digital nations and validators play an interesting role in those digital nations, which is going to be my question to you. But before that, what I wanted to say was what we were trying to do was to, I mean, it's not very hard to calculate how much top validators earn, especially during the bull market. And when you look at those numbers,
+
+to me as a citizen of those nations. My question is like, I want to know what they're doing with that money. Where does it go? I mean, it's like tax money. And I want to know, are they building an atomic bomb inside of there? You never know. Maybe this is like Kim Jong In running Kim Jong-il or whatever his name is, running like top three validators and he's calling himself Cosmo Station or he's calling himself Dokiya Capital or whatever.
+
+But the reality is it's just some guy in North Korea who's building a nuclear bomb and wants to. So my question to you, and I'm sorry for the obscurity here. I love how you try to keep a serious face during the whole of the thing. I love it. Thank you for that. But the question to you, what is the role of CryptoCrew? And by that, I don't mean, yeah, you said at the beginning, OK, we want to develop IBC and we want to come.
+
+Clemens CryptoCrew 
+Yeah, don't worry.
+
+Clemens CryptoCrew 
+Hehehehe
+
+Citizen Web3 
+I get that. This is the usual thing. I mean, you don't wake up with the thought of, hey, I need to counter. What is the role? Where are you guys going? Why are you doing this and not anything else in life? I mean, you could be, I don't know, producing music, growing vegetables, doing art. I don't know, building nuclear bombs in North Korea. But, you know, why this? What's your role?
+
+Clemens CryptoCrew 
+This is a very, it's a question on another level, of course. And I think my answer will also loop back a little bit about feasibility of a validation company, because as you pointed out, everybody sees what validators earn, and what everybody also can see is that during last year, most of the active sets and most of the lower parts, not even the lower parts in some chains,
+
+even most of the active set wasn't making any money. So validation is at the moment actually not a really good business model, especially not if you're contributing more than just block signatures. As I said before, we employ a developer team, but we also run infrastructure for relayers. Then relayers, they also have to pay fees. We have operators operating everything. So that's quite some money to be paid. And as I said also before,
+
+12 months, they weren't even profitable for us. So I think just relying on validation, it can be really, really hard for some companies. But you're right, and also there are quite big validators on valuable chains in the front of the active set that are earning their fair share of money.
+
+You have to look probably into the specific validators while they're doing it. Some of them are early backers. Most of them actually hold lots of supply and they're kind of something early investors or pre-sale investors and they created a validator and they're delegating with the validator. Or other teams, they employ big software development teams like Kepler, like Cosmos Station.
+
+and they finance the development of public goods with it, which is also really, really expensive. So I think validation as a whole is quite not a very good business model, especially not in the bear market. So to loop back maybe to your question, why are we in blockchain? I've asked myself,
+
+Clemens CryptoCrew
+that I didn't ask myself that for a long time, but you remind me of it. Blockchain, it makes a better future possible. It builds an infrastructure for decentralized decision making. And what we are trying at the moment is just we're building tooling and we're building this infrastructure to be better and we're making this infrastructure more, it needs to get better and better, better.
+
+so that at some point in the future the killer application can come, which could be something, I don't know, I think Terra has had a really great vision, as I said before, but I think the killer application for blockchain as a whole is still needed and will probably still see it. And I cannot quite tell you what it will be from today's point of view, but...
+
+Blockchain as a whole, it offers the infrastructure for a better future. This is really what we're trying to support. Speaking a little bit more concrete about the Cosmos, the governance module, it introduces much drama that we're seeing and we also have that beautiful abbreviation like DPS for drama per second. We're very much of the opinion that
+
+DPS is a feature more than something bad, because it really shows the liveliness and the variety of opinions in a really decentralized community. And I feel that outside of Ethereum, the Cosmos community is probably the strongest within and the most decentralized and most diverse. And this is why we're seeing all this drama. But in the end, you have to remind yourself what pushes us forward as a community is the
+
+feedback, critique and reacting to this. So the drama is just here to make ourselves better and we're pushing everything forward with the drama. If you see this feedback and critique and you improve yourself and the systems you're working on, everybody will benefit in the end.
+
+Citizen Web3
+I agree. I agree that the drama per second metric is definitely something too much better that there will be drama than there will not be drama because otherwise it would have been a thing. Now, before I go into the blitz, since we touched on that thing and before we close off, you kind of already mentioned that a little bit and I'm going to ask you the question because I'm currently actually discussing it on the forum, on the governance forum with somebody.
+
+and we're having a lively conversation about that there. Well, it's starting. What's your opinion on, there is such a, there is an opinion that validators should not participate in governance, that it's only should be talking holders participating in governance. What's your take on that?
+
+Clemens CryptoCrew
+I have many takes on this. One thing maybe that says something about how we approach this is we recently decided to abstain from every community spend proposal because we want to align our votes better with the interests of the community, especially when it comes to funding tooling or funding development of the chain.
+
+Citizen Web3
+Go on.
+
+Clemens CryptoCrew 
+So this is one thing that we recently decided. We also, yeah, we're in this situation basically because of the Cosmos white papers, because it said that validators are obligated to vote. In the beginning, even a slashing for not voting was designed, but it never really got employed on some main net, deployed on some main net. So I think the code really even doesn't exist.
+
+So there is no slashing for not voting for validators. But still we have this kind of rule that every validator needs to vote on every proposal. So governance can work. What we also need to know at this point is that the governance module has been designed by Sunny in 2019 and it's not been adopted in any way since that.
+
+So it's a very basic system that we use to in the meantime ask very complex questions. And this leads to governance burnout. It leads to questions that are way too complex for some parties to answer that are out of scope or something. So we need to involve the governance infrastructure in my opinion. And we're seeing some chains doing that, like with employing senates, for example, the Kuchera
+
+And we will see, I think we will see the Cosmos governance evolve to something better structured with more hierarchies. We will see representatives or governors or something you want to call them. Interchain security actually, Interchain security offers some infrastructure for that. So I know that's tried when they migrate to becoming an ICS chain.
+
+Validators that are right now validating Stride, they will become governors on the Stride consumer chain. But this needs to be managed somehow, and I think it will be managed within a smart contract. So, delegators on the Stride chain could then delegate their voting power, not to a validator, because there is no staking module, but they could delegate it to a governor. And the governor could meet decisions within the Stride governance.
+
+Clemens CryptoCrew 
+And for that, the stride delegators still receive coins. And this is just how normal democratic systems work. And I think we're at the moment, as I said before, building the infrastructure on the low level to be able to process complex applications and complex questions. And governance also needs to evolve. And someday in the future, we will be
+
+at a point where blockchain can cater complex questions and we will see the killer app, I'm sure.
+
+Citizen Web3 
+For sure. I'm also curiously waiting for that, but I don't think it's possible to guess with with art and NFTs. I don't think anybody expected that and I don't think that... Yeah, so... But let's get to the Blitz. So three questions. You don't have to answer them super quickly, but I'm gonna ask. So what's your three favorite chains are the ones that you're out of, the ones that you validate? That's the first question.
+
+Clemens CryptoCrew 
+Three favorite chains, huh?
+
+Citizen Web3 
+Clements it doesn't have to be cryptic. This is the question to Clements. Oh Yeah
+
+Clemens CryptoCrew 
+Personal opinion, the hop, the minimalist hop, because it's a beautiful employment of the app chain thesis, then for sure osmosis, because it's been the real hop of the users. And I do think Juno because drama is a feature.
+
+Citizen Web3 
+Now, if you can hear me guys, there we go. Okay. Yeah. Juno. Okay.
+
+Citizen Web3 
+Okay, okay. So hub Juno and I was most as I didn't hear it was most as you disappeared there for a second, okay
+
+Clemens CryptoCrew 
+Osmosis. Okay, yeah, I said osmosis because it was the real hub of the users.
+
+Citizen Web3 
+Ah, nice, nice, nice. Okay, next one. Give me two things that motivate Clements to carry on working on crypto crew blockchain and designing the layers and governance and everything else. What motivates you in your daily life to do that? Two things.
+
+Clemens CryptoCrew 
+For me, it's numbers. I'm a nerd. So solving something, yeah, solving something, it really, on a personal level, I get something from it. And this is really personal, but then also building something that really matters as an infrastructure for the future of the whole world.
+
+Citizen Web3 
+Power to the nerds.
+
+Citizen Web3 
+Nice, nice, I like it. I love the first answer especially because it connects with me too. I'm a bit of a nerd too. One last one. Dead or alive, real or drawn, writer or a cartoon character, developer or an influencer. One person who inspires you and they don't have to be real and they don't have to be alive.
+
+Clemens CryptoCrew
+Awesome.
+
+Clemens CryptoCrew
+Jacob Gileckian, shout out Jacob. We wouldn't be here if it wasn't for Jacob for sure.
+
+Citizen Web3 
+Whoa, that's interesting. Interesting. Interesting. Interesting. I don't know if you know me and Jacob during the first podcast we recorded, we realized we know each other on lines for almost 10 years now since 2014. We were in bitchers together. And when he was saying that on the podcast, I was like, you are for that. No way. You know what? And he was like, of course, I know you. Like, oh my God. It's crazy, man. It was crazy. It's fine. Yeah.
+
+Clemens CryptoCrew 
+Really?
+
+Clemens CryptoCrew 
+That's hilarious!
+
+That's hilarious, that's an amazing story man.
+
+Citizen Web3 
+Almost 10 years now, almost 10 years in the blockchain.
+
+Clemens CryptoCrew 
+What I admire, what I really admire about him is his truthfulness. So he really speaks what's in his mind and that's good. I think that he has his fair share of problems with people for that, but I really admire this and I love him for that. Really, shout out Jacob.
+
+Citizen Web3
+I think like Scarface said, it's about having balls. And I think this is a perfect note for everybody else, for all the other validators, guys. Have balls and be strong. So guys, thank you very much for listening to us today. Clements, thank you very much for your answers.
+
+Clemens CryptoCrew 
+Yeah, yeah, for sure it is.
+
+Clemens CryptoCrew 
+Hehehehe
+
+Clemens CryptoCrew 
+Yeah, thanks for having us. Thanks for having the chance to speak here. It was really a pleasure. It was a cool interview. Thank you, man.
+
+Citizen Web3 
+Thanks, bye.
+
+Clemens CryptoCrew 
+Bye bye, see you!
+
+Citizen Web3 
+So let's stop the stream. Everybody can still hear us. There we go. Now they cannot anymore. And let's stop this.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

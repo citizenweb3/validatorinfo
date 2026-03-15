@@ -1,0 +1,446 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/mayurrelekar
+
+Episode name:
+Ideals, Web3 and Memes with Mayur Relekar
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of the Citizen Web3 Podcast. I have with me Mayor, the CEO of Arcana Network today. Mayor, hi, welcome to the show,
+
+Mayur | Arcana 
+Hey, serj thanks for having me here today.
+
+Citizen Web3 
+Yes, man. Very glad to have you. And I have a whole lot of questions and it's usually traditionally, I'm going to start with kind of a boring one. But actually it's not, it's a boring question, but actually it's the most exciting one in my opinion. Anyways, I'm going to ask you to introduce yourself, please for myself, for the listeners. And if I can ask you please in the intro to talk a little bit about your Web3 story. How did you get to Web3? And of course, how did you get to Arcana Network from there? Thanks.
+
+Mayur | Arcana 
+Yeah, sure. So like you said, I'm one of the founders and CEO here at Arcana. I've been working in tech for 20 years now. I started my journey back, way back in 2005, I think. And I've primarily been attracted to software and software products in general, and primarily tried to work at the confluence of
+
+business, design and tech, all three areas interested me. So I was more of a product guy from the get go. And it was not until 2017, I actually started getting into crypto. It was the time when decentralized exchanges and centralized exchanges started to become commonplace in India where I'm from and um and also ICOs started to become quite the thing.
+
+And so I very obviously used my Indian rupees to get hold of some ETH and then you spent all of that ETH which would have been worth a whole lot more today on a whole bunch of shitty ICOs. But it was great. It was a great way to like start and get in. I got in for all the shitcoins but eventually stayed for the tech. And you know, it was abundantly clear to me
+
+At very early stage, I started looking at things like Ethereum and every other sort of programmable smart contract blockchain, that this was the place where I wanted to spend the rest of my career, so to say. And I was extremely enamored by the ideals and the philosophies of crypto back in the day. And I'll still probably say that a lot of that is pretty much still intact and I'd love to see that.
+
+decentralized middle man less sort of future kind of pan out. But it's probably not going to be as idealistic as I had on many of us that hoped for back in 2017, 2018. But hey, we're still here, still fighting the good fight, so to say. And it was in 2021 when
+
+Mayur | Arcana 
+We started Arcana and the idea with Arcana was to basically play to mine and my co-founders and the small team that we had put together our strong suit, was, you know, how do you productize a lot of these things that we're talking about? Right. We were dabbling with things like decentralized storage and, you know, privacy preserving technology and all of these sorts of things.
+
+And how do you achieve it in a blockchain setting? It seemed like the best way to go about it. But then we started to realize that, you know, building consumer apps and Web3 is really, really hard. And they needed to be a way to be able to kind of abstract away the complexities so that people can build, focus on building apps and rolling out features that people like consumers could.
+
+could tangibly end up using and in a very simple way. And so we sort of doubled down on that use case and said, you know, let's let's try and do something here. And that's sort of like the Genesis story for Arcana. And I think in the four years since we started, the best sort of way of describing Arcana today is the fact that we are
+
+We like to say that we are in the business of abstractions. We've done things like wallet abstraction, gas abstraction, and now doing chain abstraction. And But the idea has remained the same. How do you make it effortless for people to use web-free applications? How do you make it that much more easier for people to build these high-quality web-three applications and basically realize the original dream of more decentralized?
+
+trustless middleman, vent-seeking personless, future.
+
+Citizen Web3 
+I have a lot of questions, I like the intro, but my first one is you remember your shittiest bike from the ICOs? Come on, you have to remember the worst one. What was the worst one? Come on, be honest. What was the worst one?
+
+Mayur | Arcana 
+Okay, this is probably one. It's not a reflection on the project per se, as much as it was like the opportunity I had to kind of cash in what did. And this was a very popular auditing firm today called Quantstamp. And they had an ICO and a token. And now looking back,
+
+There's absolutely no reason or token for that should exist. But I had a clear opportunity of probably my first real 100x sort of opportunity with that back in the day. And like with many other of my investments didn't sell. And I'm just a horrible trader. I just am
+
+Citizen Web3 
+It's an interesting thing you mentioned before, by the way. said during your intro, you actually, think, twice said the phrase. I noted it down. Not as idealistic future as what we hoped for. And I want to talk a little bit about that before we go on, because I have a very similar opinion personally. So I connect to that a lot. Why do you say that? What do you imply by that? I mean, I think I'm kind of guessing, but...
+
+I wanna hear your opinion of course.
+
+Mayur | Arcana 
+Yeah, so like back in 2017, I think all the low hanging fruit when it came to like, what can you build with blockchains was stuff around like, can I, can I prove provenance of something? Can I use this immutable ledger to be able to like say, do something, don't know, in supply chain or, you know, prove some like someone
+
+held something, a tokenized version of a real world asset and those sorts of things. But over the years, have basically seen it basically degenerate into just pure casino. And that's a little disheartening. I fully understand the speculative use cases. I fully understand why DeFi needs to exist.
+
+And obviously it's the only real thing in my opinion that's found like very solid product market fit that entire vertical of decentralized finance. And it's a fantastic thing when you see some of the things that it makes possible. But we've really not been able to go beyond that in a tangible way. And that to me is like
+
+in some senses like a departure from what I had hoped would happen. But yeah, I mean, we're still on that path. think there are enough people who still value many of like, like, like, I'm not I'm not saying I am a cypher punk, but those a lot of those values are very appealing and, you know, very
+
+rebellious in nature, very anti-establishment sort of upsetting the status quo. So that was the status quo that got me excited.
+
+Citizen Web3
+Definitely, you're definitely in the right place to talk about it because we are like that and the podcast is a lot like that. A lot of the guests that come on are a lot, but we have, the thing is I always as a host, my goal is to try to, even though my opinion is more closer to cypherpunk, even more extreme I would say in some places, my idea is to always try to understand not my own opinions. Otherwise it wouldn't be a podcast, it'd be a monologue.
+
+But the guests that come on the show, regardless of whether they come from the legal side of the industry or any other part of the industry or Bitcoin, Ethereum, Cosmos, Polkadot, Nier, it doesn't matter. But it's interesting that I'm hearing more and more and more and more people such as yourself, regardless of whether they are founders or they, I don't know, just evangelists or enthusiasts or VCs even, right? More and more people, at least publicly, they say, hey,
+
+Mayur | Arcana 
+Hmm.
+
+Citizen Web3 
+I was never a cypher punk, but I'm kind of starting to understand that we're going in the wrong direction. And it's an interesting point that why do you think it's happening? Do you think it's because the industry is like, mean, okay, the industry doesn't live up to its standards from what we originally thought. But why is that a problem? The projects are failing, the founders are failing, the communities are failing, the legal is too much. What is the issue in your opinion?
+
+Mayur | Arcana 
+I think it's just that crypto can make a bunch of use cases extremely like hyper financialized very fast and very easily. And that is where sort of like the money really is and money flows and where ever money flows is where markets tend to take you. The markets have clearly spoken and saying that
+
+So there isn't money in Web3 gaming yet. There isn't money in Web3 social yet. There isn't money in a bunch of these different sorts of use cases that we had all dreamt up and were hoping to be able to see. But there is very clearly money in this hyper-financializing of a bunch of traditional finance use cases.
+
+which some dude sitting in a house without understanding potentially the risks can basically rig up in a day and with the right sort of connections and networks can make it quite successful and start attracting an audience of a reasonable size. And that I think is basically like, if it was easy for people to run.
+
+like start up a casino and do it. think many people would cause the house always makes money. So that's sort of like the draw and people love going to casinos and taking their shot at, you know, basically getting hold of some sort of multiplier. So that is what I think has basically happened. This is just markets doing what markets do is following where the money is going and that's
+
+That's perfectly fine. We have to work within that sort of an environment.
+
+Citizen Web3
+It's interesting because, you know, like looking back, you know, in the industry over the last 12 or so years, I mean, yeah, let's say 12 years, like it's obvious to notice that chains and applications that are coming up with ideas such as Casinos or 21 or Blackjack, right, tend to get a lot more attention than chains that trying to come up with a demo of product, let's say, hey, we made in...
+
+Shardin and L1 here, look in our demo, you can play with it and get a contract. And people are like, what? Where's the casino? Where's the Blackjack? So would you say that we were spoiled? Is that what you're trying to say? We got spoiled a little bit as users?
+
+Mayur | Arcana 
+I don't know. I'm not too sure if that's sort of like the word we should use. Everyone here is an adult, really. And you're free to make your own decisions. You can live in Las Vegas and never walk into a single casino. that's perfectly your choice, right? So I think it's just a function of free markets.
+
+Citizen Web3 
+Of course, of course.
+
+curse.
+
+Mayur | Arcana 
+money flowing in a certain direction and then people trying to optimize for where that's flowing and aligning with those sorts of.
+
+Citizen Web3 
+Understood I wasn't trying to put words into your mouth. was just trying to get to the bottom of what you think. You mentioned building apps. Just before we recorded today, maybe two hours before we started to record, we are also builders, we also build apps. And I sent to my work chat, it was a tweet I saw.
+
+Mayur | Arcana 
+Yeah.
+
+Citizen Web3 
+from Andrej Karpathy from the ex-Tesla AI guy. And he made a tweet. I don't know if it was today or yesterday, but I saw it today about the difficulty of building apps, not web three apps. And then he started to write, here is all the points. And I send it like as a kind of as a laugh, not laugh, but like, know, serious note, like not serious, laugh. I don't know, just a thing to my team, you know, to have a look at something I'm interested in.
+
+And I added a comment on that. And you didn't even start with Web3 apps yet. And here you are coming to say exactly the same thing, right? So let's start from the beginning. Let's start with an easy question. Is a Web3 stack even possible in your opinion? Like pure Web3 stack, is it even possible? Is that even a thing or is that just a buzzword?
+
+Mayur | Arcana
+A pure Web3 stack today, don't think anyone has. It is possible, maybe if you are building like a very simplified segments maybe on chain order book. That is as long as it's on some high performance blockchain. I think that's perfectly feasible to do something like that. But most serious apps have some...
+
+from web to component that they need to sort of rely on to make it work one way or another. So, I mean, even if you see like every RPC probably lives on AWS or some centralized, not every, most, like the ones that are popular and used more often than not. But yeah, and...
+
+Citizen Web3 
+Not every, not every.
+
+Mayur | Arcana 
+I don't have a personal grouse with that. I don't think everything needs to be pure Web3. I think it's perfectly okay to kind of, you know, for the developer to walk in and say, hey, I love these parts about what Web3 has to offer. And I really want the dependability and reliance of what these parts of Web2 that exist and have existed and I tried and tested and just worked. And that's perfectly fine. And I think,
+
+you should be able to be free enough to make that call.
+
+Citizen Web3 
+I mean, what you guys are building, I don't mean necessarily. mean, of course, feel free to talk about it. I would like you to talk about our network, but I meant chain abstraction in general as a generalization. I guess it's a step towards simplifying building apps, right Can I say that? Is that okay? Can you talk about...
+
+Mayur | Arcana 
+Yeah, yeah.
+
+Citizen Web3
+How is what you guys are building? Because there has been... I always like to believe there was an advocate, right? And I always like to look at... There was recently the case with Abstract Chain, right? Which had a lot of very promising products and unfortunately got hacked very quickly. There is, of course, the success case of Celestia. I'm sorry that I'm advertising here projects, but I'm not really.
+
+Mayur | Arcana
+Yeah.
+
+Mayur | Arcana 
+Mm.
+
+Citizen Web3 
+But with Celestia, they did make a success case with what they do. And at least for now, let's see what happens in the future. How are you guys entering into that market? And how is what you're doing helping people to lower the difficulty in building an app?
+
+Mayur | Arcana
+Hmm. Yeah. So I think this all starts with like the this modular pieces that Ethereum has and the general like like burst of like chains in general that we have seen nowadays, not just layer tools. But if you look at what's happening Ethereum very clearly said
+
+Execution needs to happen separately and low and behold you have like 40, 50 L2s that exist today, maybe more by now. And they all pretty much do very similar things, but they all existed, and exist. Some of them don't exist anymore. And many of them now allow people to build their own chains on top of them.
+
+Now these could be layer 3s or they could be independent chains like Arbitrum as Arbitrum Orbit, OPA Superchains, ZKS Elastic Chains. And then you have the likes of Celestia who say that you can build your own chain using like a Rollup as service stack with Celestia for DA. And then of course you have Avalanche with their subnets and so on and so forth. You even see Solana guys.
+
+now talk about what's it called extensions, if I'm not wrong. And so we are well and truly entering like this multi-chain future. This has almost gotten cemented to a point where, you know, any app that's its salt is going to perhaps launch its own chain.
+
+because they're not going to sit and share block space with other people. They're not going to share throughput with other people. And people like Uniswap have demonstrated that this is probably the way to go. Things like Hyperliquid have clearly demonstrated that this is probably the way to go. And that is, I think, just great for the ecosystem in general. Because I remember back in the day, and it happens even now, is that when I wanted to kind of choose where to build,
+
+Mayur | Arcana 
+whatever it is that we were building. The choice was hard. I mean, it wasn't, it's not like we've seen web two where I have to say, okay, so this is what I'm trying to build. This is the stack and probably, you know, digital ocean is the best place for me to kind of build or AWS is. And this is purely based on business requirements translated to take technological requirements translated to what should be my infrared requirements. Right. And, but in web three it's.
+
+There's these weird strategic calls that you have to make and you have time them in terms of saying, know what, ZK Sync is going to launch. so probably a lot of liquidity will come there or Monad is going to launch now. We should build on Monad when you were building on, I don't know, Arbitrum three months ago and it was perfectly fine. And that is just a horrible place. I think it just fosters the wrong sort of culture when it comes to building. And you're seeing this, right?
+
+You're seeing people just grand farming. You're seeing people whose roadmap is basically saying, I will build on Arbitrum today, Monad tomorrow, MegaEat then, and then the next chain, and then the next chain. And that's basically it. right So this sort of situation is from a developer's perspective, and for the developer ecosystem, just bad.
+
+You should be making choices purely based on business requirements, translating to technological requirements, translating to what you need, where you want to build. If you need something extremely high throughput that really doesn't worry so much about decentralization or even 99.4959 uptime, then we probably just go to and build on Solana. But if you want the security of
+
+of something like an Ethereum, then build in that ecosystem and use Ethereum as your DA. Don't use Celestia or anyone else. But if none of that matters to you, then maybe just build an Arbitrum orbit chain or like a ZKSync chain and use avail for your data availability. And that's perfectly fine. So now I think that's where we are moving towards because now I have optionality. But the problem again still is where is the liquidity? Where are the users?
+
+Mayur | Arcana 
+And this is born out of the fact that, you know, these chains, are probably the highest up in like the pyramid when it comes to like value and value generation. So at least so far, and these are the ones that would attract the liquidity, attract the users through basically incentive programs, right? They come try out our test net and get, you know, XYZ tokens. And that then...
+
+is what is used as gunpowder to start attracting builders. And these builders will be like, hey, yeah, I'll build with you this week. Then, but next week I'll build with someone else who's doing the same thing. And that sort of whole paradigm needs to get flipped on its head. how it ought to work is like how it works in web two is that I am looking for a solution to my problem. And the app is out there that
+
+provides me that solution to my existing problem. And I just use apps and where that app is should be largely relevant to me. I should probably know where that app is built just to make sure it's not on some obscure long tail chain. So like I can risk assess like if I'm going to be using a DeFi app, then I need to know that, you know, where, where is my money going to be? And is it going to be a place where
+
+You know, it's going to be hard to be getting it out in case of like a black swan. So to make this possible, to make this whole situation possible where people are just using apps and things like that, we needed a way for essentially users not really caring about where their assets are or where they need to spend them and just being able to spend them. Right. We needed a way.
+
+Like I like to use like this example sometimes is like imagine if you had to speak to your friends, let's say five of your friends and but for each one you need to pick up a different phone or you need to switch sims because you can't use this sim to call your this friend in this country or then you need to use switch sims again to call someone else. Yeah, that's just absurd.
+
+Mayur | Arcana 
+But that's what I have to do today. I have to switch wallets. I need to have four or five of them. And then I need to kind of, you know, make sure I have money on each of these chains to be able to use them. And that is, that's no way in which we will ever get to any modicum of like, of adoption. So we need to kind of figure out a way around this.
+
+And that's how like a chain of factions journey began. And I know this is quite a bit of like context, but I just wanted to set it in order to be able to kind of speak about maybe some of the more detailed nuanced stuff.
+
+Citizen Web3
+I'm going to go devil's advocate then straight away because if the first question that arises to mind, I would have been outside the industry, if I'm somebody who... I am actually building a cross-chain product and I know exactly what you're talking about. It's not the first time I'm doing that. I understand very well what you talk about, but I have to go from the perspective of... Let's think of what... When somebody hears, okay, so...
+
+I'm going to make a one entry point for all blockchains, but doesn't that go back in decentralization? Doesn't that kind of say to us if we are, I mean, I don't know today, but right, but there could be an adversary or there could be an entity or a player that, okay, if they're building a technology that allows a single entry point, doesn't that weaken the decentralization and centralization spectrum?
+
+Mayur | Arcana 
+technically what you're saying is correct, but I don't know how it applies here. So let me try and describe how I'm thinking about it. Right. Let's say you're building a cross-chain app today and your app does not need to be cross-chain to deliver its features. Like you're not building cross-chain because you want some features of Solana or you want some features of
+
+app or so on and you want some features of this. You're building it because you're basically, more often than not, trying to find where liquidity is, where users are in order to be successful. And that is something that we want to put a stop to and say, the best place for you to build your app in terms of the features that you want to deliver today and further down in your roadmap. And
+
+You should be able to, on the back of making that choice, not be worried that, will users be able to come and spend on my chain? So as an example, let's take, like for example, let's say fuel. Fuel is an L2, but it's built on the Fuel VM. It's quite hard to build on fuel, but once you get the hang of it, it's fantastic because you can do so much more and it promises.
+
+hundreds of thousands of TPS, there is just the one canonical bridge to fuel. So if I had to do anything, build an app on fuel and then get users to spend, let's say I'm building some sort of DeFi app on fuel because it's the perfect place for me in terms of what I need. But I'm now reliant on people either procuring assets,
+
+that need to be spent on my app to go through the bridging process on the canonical bridge, which is going to take its own sweet time or procure assets on a centralized exchange, perhaps to be able to kind of do this. And that is simply not going to happen. Like we've seen this from the beginning of when Web3 launches that people are not going to go buy your token to use you unless you're
+
+Mayur | Arcana 
+super, super valuable unless you're like, you have a Solana moment of your own. And that is what we want to kind of do away with. We want for you to be able to go make that choice of building on fuel, but people, I, and if let's say someone needs to fuel, USDC fuel, basically USDC that is on fuel, natively on fuel on your app, they should be able to like pull in the USDC that they have across the Arbitrum, OP, base.
+
+and spend it almost instantly without needing to bridge. Right? No context switch for the user. And I am able to spend, I just have money and I'm able to spend it on this app. And I don't have to worry about, you know, going to a bridge, moving all these assets and then using. This basically results in like net positive, like spending by users on your app. And now
+
+you're only going to be reliant on what your app promises to deliver in terms of solving a problem.
+
+Citizen Web3 
+It's, I understand the explanation. I'm still with the same, I'm still, I still want to dig a little bit about the same argument because in one way we are trading, you know, like superpowers for a single failure point, right? Because we're saying, okay, now I gain superpowers to interact with every chain, but now, you know, I have one single point of failure. How do we, how do we maximize?
+
+the efficiency of that point of failure or how do we spread the responsibility of that point of failure back to make it, even though I understand, of course, it would make much more sense if everybody had the superpower to interact with one app. You gave an example of Sims before and not Sims the game, it seems right.
+
+Mayur | Arcana
+Yeah.
+
+Citizen Web3 
+I just remembered that, well, I actually do have friends like that. I do have friends that go, I can only talk on signal. You have to text me from whatever, man. like And then burn your phone. Burn your phone. Sometimes it's kind of fun, of course, talking to them, but sometimes it's annoying. But seriously, like how do we either decrease the responsibility of such points of power?
+
+or how do we spread it out? I don't know the right question here because of course this is theoretical talk.
+
+Mayur | Arcana 
+Yeah, yeah, I think I get what you're saying now. But here's the thing, right? So I decided to build on fuel. Fuel is a decentralized blockchain. If we are going to say a decentralized blockchain is a single point of failure, then we have failed as an industry. If I have to build on multiple blockchains to avoid failure, then there's a much bigger problem. right
+
+This is something that I think it forms the crux of what you're asking. So I think as a builder, need to kind of take into account, is this chain going to survive? I wouldn't be saying this about perhaps like a Ethereum or even maybe like a base or an Arbitrum or Solana or an Aptos today.
+
+And I choose to build on whatever ecosystem goes, hey, you know, my dev team is on the move stack. So I'll build on Actors. And there is enough liquidity that is there. I'm going to get enough support from the foundation and the ecosystem that they've built there. So these are my decision-making points. And based on that, I'm going to build here. But that shouldn't stop someone who has assets on base to be able to interact with my...
+
+app on move because that user's problem may be getting solved by this. So this, these little like echo chambers that we found with these ecosystems of different L1s is what we need to kind of basically blur the lines between them, build the pipes that allow users to freely flow. I mean, this is what the internet does. I can sit in India and
+
+buy something of Alibaba but I don't need Chinese Yuan or a Chinese debit card or a credit card to be able to buy it. I can just go to the internet, go to Alibaba and basically order whatever I want, pay in my native currency and it just works.
+
+Citizen Web3
+I would see that. I don't want to dig it too much, of course, because your answer actually explains it perfectly. Well, then I would say that your example is more like Google because then, know, mean, an explorer, right? In terms of the Internet, the Internet was very spread out until explorers started to put it all kind of together for the end user. But now we know that Google is a fucking little piece of shit. We know it today, right?
+
+Mayur | Arcana 
+No please do.
+
+Citizen Web3 
+I mean, no, they're smart. They're smart. There's no doubt that the guy's a genius to understand what they did 25 years ago. They had to get it right. They had to get it right. But we know that today we want kind of freedom from Google, right? Even though they gave us that abstraction. So yeah.
+
+Mayur | Arcana 
+Yeah, yeah, yeah.
+
+Mayur | Arcana 
+Yeah, I think it's a fair point. again, the thing is here today is that we have as a builder today, I have the choice of building on so many more stacks than I did before. And even compared to like Web2, I would say like I can build on this blockchain because it gives me that edge. This blockchain because it allows me to build in this language. And there's so many options. like and
+
+So that I think has not been stripped away and that optionality exists and that I think is what people ought to leverage and make the choice for the right reasons. And then thereafter not be like, know, essentially, you know, a sense held back because, oh, there was no liquidity here or there are no users here.
+
+I should be able to do web marketing, should be able to do ads, attract users, and they should be able to come and spend whatever they have because I'm solving a legitimate problem and this is the best place for me to build in order to deliver the solution.
+
+Citizen Web3 
+actually agree with probably 90 to 95 % of what you say. Like I said, it's a moral question of trying to kind of balance out of... It's like the whole thing with blockchains. And I'm going to try to move topic, of course, a little bit. I have a couple of more questions for you about Arcana that I do want to dig, just to kind of, know, smoothly go off from here, I would say that, you know, it's kind of the question of...
+
+Is blockchain a P2P technology or is it a decentralized man in the middle? for me, blockchain has always been a decentralized man in the middle. P2P is when me and you interact directly and there's no blockchain in the middle us. But as humans, I don't think we are capable of that. I don't think that as human beings, at least today in our society, we are definitely not, we don't trust each other at all, like to be able to create that. But okay, but I want to ask you something.
+
+Mayur | Arcana 
+Yeah.
+
+Mayur | Arcana 
+Yeah.
+
+Citizen Web3 
+that builds on what you say. Feel free, of course, to comment more to this. But still, I'm going to ask you something that builds up for me on that. I know that you guys are big on security and on privacy. you guys had the ADKG launch, which was basically with a secret, which is several networks done in the past, like Union, like Zcash.
+
+Mayur | Arcana 
+Yeah, yeah.
+
+Yeah.
+
+Citizen Web3 
+And it's cool. So it's big respect for that. I want to ask you a question that builds on top of that. Again, feel free to talk about that as well. But still, you know, we talk about chain abstraction right now, and we talk about builders and we talk about security and we talk about a lot of things. One of the biggest things that springs to mind that when I hear
+
+Mayur | Arcana 
+Yeah.
+
+Citizen Web3 
+such a big technology as Arcana that is trying to bring so many things together. Again, as a builder and as an instant structure provider, binaries. There is like one big problem today, right? That like all builders have to trust where their binaries come from and they're you know, kind of have to trust. They're like, how is, if in any way at all, the way that what Arcana is building in terms of the chain abstraction?
+
+Mayur | Arcana 
+Mm.
+
+Citizen Web3 
+Can it help to solve it? Because for me, that is like the golden thing of the development, right? We cannot make sure that the information is real. Today, we basically have to trust whoever puts the binary out there that, that binary is okay, and we run it. And it's kind of like a dodgy thing, but I'm thinking because  Arcana does chain abstraction, maybe it's actually going to help with that. Or am I wrong here in that thinking?
+
+Mayur | Arcana 
+Yeah, I mean, if you really like start connecting the dots with what we've built and if you draw a dot really far away to what you are talking about, I think you can join those dots, but it's really hard for us to kind of, yeah. Yeah. No, it's, it's, definitely like feasible if you, but I mean, you know, it's, it's, it's going to be a lot of
+
+Citizen Web3 
+Too much, too much. I went too far. Okay.
+
+Mayur | Arcana 
+mental masturbation on my part to kind of connect those dots really at this point. But yeah, I mean, you like, I think many of the things that you mentioned are core to what, how we see things. But I think the one point that I really do want to make is that over the years we've learned to become far more pragmatic.
+
+Citizen Web3 
+I can understand.
+
+Mayur | Arcana 
+We are probably living in an age where, you know, we are learning that users care very little about the things we think they care about, or we want them to care about. And they are basically showing this through their actions, through the way they kind of interact with applications in the space and with their money.
+
+And this I think is like a very important aspect that if we don't come to terms to or terms with that the technology simply is not there for users to care enough about these sorts of things. And till we get to the point that it is like, can just become part of like a user's natural flow that introducing
+
+these hard steps is only going to result in churn and lower adoption. And that is something that we as like for all our idealism at Arcana, we still have a business to run. And that is something that we've basically said and submitted to market forces and said, if this is what the market's saying, then that's the way we are going to go. And it's going to be really
+
+hard to go against the grain because these are extremely strong forces and until and unless there is like full support from a whole ecosystem to push in that direction, then you will always have outliers who will come out and say, mean coins are actually not bad for anyone. It's fantastic. You should go and invest in them. and we see the fallout of that. And then we see chains that promote.
+
+these sorts of coins and make it like normal to be able to accept that these sorts of things exist. So today that's the level of practicality that we're living in. so there have, of course, everyone is free to draw their lines and say this is my limit, but not drawing the line is dangerous for you as a business. So you should learn to accept some of that.
+
+Citizen Web3 
+I guess my next big question, because it is a big topic, so I think we're going to have a few things to discuss here, it relates directly to what you say now. You mentioned memes. I'm going to start from there. And we mentioned use cases, finances and memes. And I think by now, it's kind hard to deny that memes are a use case of crypto, whether we like it or not. It's proven to be very successful use case.
+
+And one thing they teach in crypto to do is to build communities with crazy belief, right? Like with the religion type belief of like, hey, blind and just follow the leader. Well, kind of thing. But I want to ask you again, your guys are building with chain abstraction something that requires connecting different communities.
+
+Mayur | Arcana 
+Mm.
+
+Citizen Web3 
+Especially and apart from that developers are the type of communities that they need to eat. They need to eat and they eat food that costs money. So another thing in crypto, like from the on the other hand, and I'm going to come to a question, but like on the other hand, I want to first make like the case for it. On the other hand, you have like, yeah, I mean, I said memes, but you know, we are still living. I would say.
+
+Mayur | Arcana 
+Yeah.
+
+Mayur | Arcana
+Hmm.
+
+Hehehe.
+
+Citizen Web3 
+individual silo world, still would say so. still maybe ecosystem, we go closer to ecosystems. We're much, much closer to full on ecosystems like the Ethereum, the Cosmos, the Polkadot, whatever, but still, it's still not a cross-chain system. people are, apart from meme tokens, people, they catch to their bugs like, I don't know, like crazy. my God, like Ethereum is going to kill everybody or Solana or I don't care or Nier or whatever.
+
+Mayur | Arcana 
+Mmm.
+
+Citizen Web3 
+So how on earth are you combining all this and putting all this together? How are you building a cross-chain community while maintaining, like you said, as a business and being able to feed the developers that come, whether it's internal or external, and at the same time build a community that, you know, at least maybe, I'm not going to say completely forgot about tribalism, but at least, you know, yeah.
+
+I think you understand what I'm trying to ask. I know, I'm sorry for the...
+
+Mayur | Arcana 
+Yeah, I think tribalism does exist and some of it, some people have done a fantastic job of like fostering it. Some of it, some people have not been able to do a good job. Some other people have been capable to the point of weaponizing the tribalism that they've sort of built and basically using it in action. And I've .. But I have a...
+
+like very strong feeling that eventually all of this sort of like falls, falls, falls apart in a sense. And I mean, you'll have fans of things. And I mean, we just have to look at the traditional finance world, right? You have stock markets. I buy a stock because it's going to give me a return. And I probably become a fan of this company, this publicly traded company. And I'm like, I
+
+I'll buy like I can be a huge fan of Apple, but I don't have to buy their stock. Or I could have bought their stock and use the Samsung phone. And that's perfectly normal. And that's probably if you start to like figure out what, what is happening, you will see that it's not that, I have an Apple phone. have to buy Apple stock. I have Apple stock, so I should use an iPhone.
+
+need not happen and that in most cases, I think that's the way we are going to go eventually in crypto as well. And I think the spark for this will be the fact that people will now start just start using apps instead of using chains. And the fact that an app is on a particular chain, it becomes like a one step in my due diligence process.
+
+of whether I should use this app or not. Like back in the day, you seem like someone who probably will probably remember this or know of this. But when e-commerce sites or just websites in general that were solving different problems started to come up and become like a big thing, I remember like scrolling to the footer of the site and checking if it is MacAfee secured or very, sign certified.
+
+Mayur | Arcana 
+And so that's, that's all I need to kind of, that was my trust market. I would say, okay, I can use this. And then now those things don't exist. Cause cause the idea is that, you know, this app, which is being used, like social proof and social markers, there are reviews of all of these sorts of things. And people use that to determine if they should be using, are my friends using it or 10,000 other people using it.
+
+What are the complaints? And then I decided to use it. And I think that's the direction that will go down and people will just build apps on Solana because they want an extremely fast blockchain. They will build apps on Ethereum because they want the security that Ethereum validators are able to supply in a decentralized manner. And that's basically it. And people will start interacting with apps and basically this tribalism will shift to
+
+like apps and what they have to offer, which is going to be so much more healthier in terms of like the innovation that is needed. like And if we can do this, then it's healthier because then you have genuine revenue streams flowing all the way upstream to these chains who can then innovate on their own and people can then find gaps and say, I'm going to build something that fills this gap instead of building just yet another L2 that
+
+is no different from the 14th equation.
+
+Citizen Web3 
+How do you promote or if, because we kind of mentioned privacy and data, but we didn't really go to talking about it. How do you promote amongst the community, especially like you mentioned validators and you mentioned AWS a couple of times and RPCs in AWS. How do you guys promote decentralization in this case? How do you...
+
+I mean, while maintaining security, of course, and efficiency as a network, how do you... Are you at that stage or are you guys still like... I don't know.
+
+Mayur | Arcana 
+Yeah. Yeah. So we are currently on testnet and so in testnet we basically, I won't go into details of our architecture. think that's a whole other conversation, but essentially we have a Cosmos based chain that whose job is to work like a very traditional blockchain, is as a state machine, a immutable, undisputable ledger, which is manned by a bunch of validators.
+
+So as we come closer to mainnet, the idea is to get these validators on board who are able to... And on this Cosmos chain, we're able to kind of talk to all these other chains through different mechanisms and basically bring their data on chain and for us to know what is the state of affairs when it comes to a user, one holding funds on a bunch of different chains and wanting to spend it on another chain.
+
+was that users are successful in being able to use their assets on change A, B C to spend it on change B and who supplied the funds to this user to be able to do this and basically settle back and things like that.
+
+We most definitely feel like we have made design choices in order to kind of alleviate a lot of like trust assumptions that a user or developer who's building with us would have to make. A lot of the risk that you would typically associate with anything cross chain is now moved upstream to an actor called a solver who basically assumes the risk and fronts...
+
+liquidity to a user. So the way it works is basically a user supplies an intent to say that, you know, I have funds on ABC, but I want to be able to spend on D on this app on chain D and I'm willing to use these funds on ABC and we are like, okay, so here we collect your funds on ABC. That sort of resource locks it. Now you can't double spend it. So you made this commitment to obviously those funds being collected.
+
+Mayur | Arcana 
+And then a solver basically says, Arcana, did this collection happen? And we're like, yes, it up. This did happen. And then it fronts the liquidity to the user. at some point, we basically settled back with the solver. And now because of the system, the user is basically having their funds collected into smart contracts, which...
+
+completely verifiable and it's on chains that the user has funds on. So they obviously trust those chains already. And so it's not an issue there. Now the solvers are basically assuming the risk, they're off chain actors and they're saying, okay, I will trust that Arcana will give me the money and I will collect the fee for basically providing the user this convenience of being able to spend funds on this place where they want to spend now. And basically they're pricing the risk.
+
+And now we basically moved all risk upstream and there are no new trust assumptions for the user. this, and the only place where we need to kind of make sure we are decentralized and we are trustless to a large extent is that state machine that I spoke of, which is going to basically process the settlement back to solvers. Cause if we don't do that, then we basically cheated someone out of their, the money that is owed to them because they've fronted liquidity for someone else.
+
+Right. So that is essentially the system that we're building and the, it is an open system. It's a public system. Privacy does not play a major role here, but at the same time, we, we're dabbling with a few things to figure out, can we do private cross chain payments and transfers in this sort of system? And that is something that we look to do. But largely, you know, we
+
+We've said users, you can use this, no trouble for you. Solvers, it's a much smaller set of people. This is how, these are the, your trust assumptions and this is what you'll have to deal with. But you can of course charge the fee for all this sort of like trusting and fronting that you have to do.
+
+Citizen Web3 
+Mayor, I'm going to jump from here into the Blitz. It's three questions to take us out of the blockchain conversation to lend us down now. They're going to be weird. So prepare. They have nothing to do with blockchain. But it's a typical thing I do. We talk blockchain, blockchain, blockchain, and then you don't have to answer Blitz. I call it the Blitz, but take your time to think, of course. So first one.
+
+Mayur | Arcana 
+Okay.
+
+Citizen Web3
+mayor, can you please give me either a song or a movie or a book that has a positive influence on your work?
+
+Mayur | Arcana 
+Yeah, I think I'm going to say my like I think my favorite movie It's a shawshank redemption I think it's Yeah, it's very apt for the times that we are in right now. We've come through like massive bear and this huge promise of Like a massive bull, but it has not happened and you're having to come through but eventually you get through it
+
+Mayur | Arcana 
+Just to share perseverance and things like that. So think yeah, for sure that one.
+
+Citizen Web3 
+Second one, can you please share something motivational that you can of course share that helps mayor to wake up every morning to get out of bed, to keep on building chain abstraction, keep on looking for a solution, keep on hoping for a better decentralized future and so on and so forth.
+
+Mayur | Arcana 
+Yeah, I don't know if this is motivation for others, but personally for me, I've felt like, you know, what we are doing here is basically for me, it's my life's work. I don't think I will do another thing after this. I simply do not. And that's sort of like, I think, puts very positive constraints for me every day when I wake up and I think about...
+
+you know what I need to do. This is not like, oh shit, there's nowhere to go from here. I mean, there are a hundred places to go from here. But I wake up and I think, okay, so this is what I need to make work because this is that important to me. And because I treated that like that, it's very easy to kind of, you know, take the lows with the highs.
+
+Citizen Web3 
+It reminds me of something smart. think it was Brian from Chorus One, if I'm not mistaken, who said it on my show at least. A lot of people said it, you know, and it's basically what you're saying. A lot of the time when we work, tend to hire workers to complain more because they have a bad salary or bad conditions. What they tend to forget about is that a founder cannot just...
+
+get up and leave a founder when he's there, it's his life's work. If he gets up and leaves in in bracket, I'm doing quotations here, of course, nobody can see it. But if he gets up and leaves, it's a whole different case. It's a matter of, you know, other people's livelihood. It's a matter of 10 or 20 sometimes years or sometimes more years of work. And yes, I totally understand. Totally understand. Last one. It's a bit of a weird one. Dead or alive, real or made up.
+
+Mayur | Arcana 
+Mm.
+
+Mayur | Arcana 
+Mm.
+
+Mayur | Arcana 
+Yeah.
+
+Citizen Web3
+cartoon character, book author, family member, doesn't matter, movie character. A persona, or persona, could be a real persona, who is not a guru for you, because I don't personally believe in them. But when you're stuck with work and you're like, fuck, this is not, I'm tired of this, I'm really tired, I don't want to do anymore, you kind of think of them, of that...
+
+Mayur | Arcana 
+Hmm.
+
+Citizen Web3 
+person or made up or not and it helps you a little bit to progress.
+
+Mayur | Arcana 
+Ha ha ha.
+
+Yeah, yeah. I'm a huge anime fan. And yeah, it can be very cringy and very stereotypical, but you know, lot of this shounen anime with these shounen characters, where I just love how it's like this, it's just pure storytelling at a very basic level. There is a hero, he's going to undergo trauma and pain.
+
+but he's going to overcome for sure and eventually win. So there are a bunch of anime characters that I don't explicitly think about per se, but I'll draw the direct inspiration, but it's really cool and it's very nice. You know exactly what's gonna happen in most of these cases. But yeah, I still like to think about it.
+
+Citizen Web3 
+I think it makes perfect sense what you're saying. I totally understand. To me, does. I'm sure, I had a lot of people actually who I think try to speak of the communication, I guess, that is there something that helps them to progress in a way that I guess you can connect to that. Mayor, I want to thank you very, very, very much for your time, for your answers. This is going to be a goodbye just for the listeners. Please don't get up just yet.
+
+Citizen Web3
+for everybody else who tuned in, thank you and see you next week. Bye mayor
+
+Mayur | Arcana
+Bye bye, thanks man.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

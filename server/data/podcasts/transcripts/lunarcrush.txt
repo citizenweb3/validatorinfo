@@ -1,0 +1,325 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/lunarcrush
+
+Episode name:
+Blockchains, People and Goverments with Jon Farjo
+
+Citizen Web3
+Good space time to you all. Welcome to a new episode of Cities in Cosmos. And today we have with us John, the co-founder and the chief product officer from Lunar Crush. John, welcome to the show.
+
+l__jon 
+Thank you for having me.
+
+Citizen Web3 
+Yeah, thank you for coming. Been chasing you for a little bit. You're a busy man, but finally we got a hold of you, which is a good thing, I guess. means business is going well.
+
+l__jon 
+Yeah, it's been a wild last two months for us, for sure.
+
+Citizen Web3 
+Awesome. first thing is first, not everybody has heard of Luna Crush. It's a great tool. I've been myself using it for, well, before you guys became quite popular actually. But maybe you can tell us all about it. What is Luna Crush? What is your mission? Where are you heading? What are your goals? Whatever you want to talk about, really.
+
+l__jon 
+Sure, absolutely. So I'll go back. I've been in crypto a very long time since 2013. I was looking at all sorts of different projects on social media. Me and I should also add my co-founders as well. There's four of us. And we were investors way early in the space. And we kept discovering things on social and said, it'd be amazing if we could actually capture this information and make sense of it all.
+
+You we sought out to do that. And I'd say like what we're really after doing was saying, can we understand the activity across social media versus just staring at charts all day and looking at market cap? Are there other metrics that we can look at that makes sense to us? Because, you know, when you're on say your Twitter feed, for example, you're seeing just a small piece of what's going on in crypto today. You're seeing your followers and a few degrees away from that.
+
+But you're certainly not seeing how many times people are mentioning Bitcoin today. And really, the posts that are mentioning Bitcoin, is there more engagement on those posts or less? Is there a more bullish sentiment that's going on out there? Is there a more bearish sentiment going on there? How many people are talking about the various coins that you're interested in today? And so we were seeking out to answer those questions.
+
+At first, Lunar Crush wasn't even a company. was an idea. And so it was an experiment for our own purposes because we were investors and we wanted to understand this stuff. And so we got together, we sucked in everything we possibly could from Twitter, and then we moved on to Reddit, and then we moved on to YouTube and Medium. And we also started trying to understand how do we collect news the proper way. Now we have the largest collection of news in the world.
+
+And so we really tried to understand like what is the community activity look like? And I'd say that's where we started and beyond that beyond just, you know, collecting this huge amount of data. It's we like to refer to ourselves as more of a user experience driven company versus a data driven company. The you know, having the quality data is a given. Everyone just expects that of us. But what you do with millions of posts today is a totally different ballgame.
+
+l__jon
+And that's what we're after. We're after building a user experience around collecting all this information to help investors, to give them clarity and help them with their investment strategy and to really look at the market from a new dimension. And that's really what we've been up to. Where this is going, gosh, you would ask that as part of this question, right? So where this is going, so I'll say the last, I think we're at,
+
+Citizen Web3
+I did.
+
+l__jon 
+48 days since we've launched a new version of Lunar Crush. And that's, we have launched a new lunarcrush.com, our website. We launched a mobile app on both iOS and Android. And we launched the Lunar Token because we believe that we can do an entirely new and much more effective business model and really a user driven model. I don't even want to call it a business model. It's a model that,
+
+that creates sort of a benefit to the entire ecosystem. It's much more user driven. We think that we can do some amazing new things versus, say, slapping some ads on our website or charging $99 a month or even saying, it's free, but it's totally free. We promise. We're over on the side here selling your data like a lot of sites do. We don't want to do any of that.
+
+We wanted to keep Lunar Crush free and actually we ended up even paying users for using Lunar Crush with Lunar Token to a degree. And there's a whole long story with that. But I'd say in the 40 some odd days that we've been live here, I mean, we've gone from hundreds of thousands of users to millions of users. It's been wild. And so right now we're scaling. We're totally scaling and we're making things work across millions of users.
+
+We had tested for the nth degree scenario before going live. We did not expect what hit us. We're talking tens of millions of page views a day. We've been really hyper-focused on scaling. That's a really big thing. I'd also say the other big thing that we're focused on right now, beyond just building a model that integrates the token and makes sense,
+
+We're also focused on not just bringing in social content from the outside. We're also, now that we have such a large user base, we're focused on getting their opinions. And so two days ago, we just launched Lunar Crush Opinions. we published it yesterday, but we're getting about 100 to 150,000 opinions an hour coming through the site. And so what that's doing is two things. One, it's
+
+l__jon 
+it's sort of creating new metrics. like, for example, someone could come into lunarcrush.com and see right first thing they're going to see is, how are you feeling about the crypto market today? Well, that's really interesting at scale. When you, know, if you ask one person, it's cool. All right, great. Neat. Not much there, but what if you ask a million people, how are you feeling about the crypto market today? And what if you could break that down by country, by state, by region? What if you could break that down by our Bitcoiners?
+
+in India more bullish than Bitcoiners in the United States. And so you can break this data down. And so we're kind of capturing new metrics there. we literally just, again, it's been, I think it's been 36 hours since we launched this. And so we are capturing that information. But the other much more important thing we're doing is, you know, we currently collect anywhere between two to three million social posts a day that we bring in.
+
+that are crypto related. And as every post comes in, we use machine learning to understand the sentiment of those posts. Is it bullish? Is it bearish? We also try to understand, you know, well, what coin does this specifically relate to? We also try to understand, is this spam? it from a bot? Can we confirm that it's a bot, you know, or not? We also, and so we look at all of this stuff and...
+
+Some of it we dive deep into. Like if someone tweets out a link and it's news, we actually spider the entire article. We understand what they're talking about, the sentiment of that article, all of that. But collecting this much information is sort of like, if you look at this from a machine learning AI perspective, it takes a lot of training. And so we actually, when we first got started, we were hand training. We had whole team training posts and saying, this is bullish, this is bearish.
+
+We created our own crypto specific natural language processing library, not to get too technical on this podcast, but we created our own library of crypto specific terms that are bullish and bearish and there's phrases that are bullish and bearish. so to train at a rate of millions of posts a day, it requires an army. And so you can't hire people to train at that scale. You can build an application that
+
+l__jon 
+that lets them train and that's exactly what we just did at scale. So if you look at what we're doing, you could equate it very much to like what Tesla did with self-driving cars. Tesla makes really amazing cars, but what makes Tesla amazing is the amount of data they have in the training that it has. And they put that training to use in the cars. And so we're doing exactly the same thing. And it's really one of like, it's really an amazing thing when you sort of equate that training with.
+
+At scale across millions of users, Lunar Crush now, we have an army of millions of users training data for us and they're incentivized by a lunar token. And so I'd say that's, you know, that's where we are today. And so what this is doing is it's giving Lunar Crush the absolute most accurate data in the crypto space. And we also have the most first party, we're very quickly becoming the largest market research firm in crypto as well.
+
+So pretty exciting times for us.
+
+Citizen Web3
+That's a lot of info to digest, but basically from what I understand, if I could like narrow it down, and by the way, don't mind getting technical, it's okay. Basically you guys building in social knowledge graph, would say, or a knowledge graph based on social data, and the users are feeding it and that knowledge graph can be probed by the AI or by other users in order to receive an answer from that AI algorithm. The question I have for you is derived from that, and I hope you don't mind like a little bit of controversial questions, but...
+
+Citizen Web3
+I want to hear your opinion, of course. That's my goal. When I first found Lunar Crush, I was really impressed. And this was in, I believe, 2020, but earlyish in 2020. And I loved it because, wow, you could see so many things. You could find influences, for somebody who is like me, an ecosystem developer. And it's a really useful website.
+
+to build communities because you cannot realize who you're looking for. And via that, you start to reach out to these people or whatever is your communication way. And the question I have for you is, what do you think about tools that are verifiable as opposed to tools that are non-verifiable? So what I mean, and I'm going to try to explain, especially with a lot of AI algorithms and especially with a lot of
+
+And like, especially in crypto, right? The data that is somewhere collected and being processed as well as stored as well, right? If it's non-verifiable, how can a user make sure that what he's getting out of the black box is really the answer and not the same black box that Google is feeding us with its algorithms or any other website.
+
+l__jon 
+I think there's a number of things around that. What you're really saying is, do we create transparency around what we're showing? And I think there's elements. The answer to that is also not a few really brilliant words. It's a path towards transparency. And it's a path towards decentralization. And I think there's some things that we're looking at. Like, for example,
+
+l__jon
+every day we give away lunar rewards on our site. This is one example. We're looking to immortalize that on multiple blockchains actually. So that it's very clear what we've given out to how many people every single day. It's not a line item in our database that we're messing with. It's like, cause every day we give out 65,000 lunar to the people that are earning points on our website and the app. And so that's an example of like, okay, we want to take that information and
+
+We want to push that into a blockchain to where everyday people can see over time what's happened. But I'd say also on the posts that we collect everyday and all of that information, yes, that's also really good information. think we look at it as even if something's pushed to a blockchain, then you have to go, which blockchain, what format are you tying to it? What are you pushing up there? What are you not? Is this like a summary of, yes, we collected 2 million posts today.
+
+Does it break down that information further? And so I think there's a lot of things we're looking at. But I mean, from our standpoint, it's more like we're after being complete and holistic about all this information. That's kind of where we're at in our journey right now. There are other, there's a few other sites that have attempted to collect this information. We've audited all of them. We don't even consider them competition, but we do get a bit, I'll say offended.
+
+when we see other sites that claim to say, yes, we do social sentiment. We collect all the social volume and then we audit their information. We're like, it collected like 15 % of what we saw today. What was in our data is really, really good. And so I'm like, wait, so they're going out and selling their API and they only collected 15 % of what was even on Twitter today. And then, and there's, so there's a number of sites that are doing that. There's also other sites that
+
+l__jon 
+We look at the model of what they've done. again, we don't even consider them competitors, but users might. And it's like, wait, you're charging a monthly fee in crypto for information that potentially a lot of users don't even know they need. And so good luck to you. crypto is in its infancy still. so users still, they may not understand yet, but they're learning that community
+
+l__jon 
+is like absolutely everything. Users have been poisoned by staring at graphs and looking at market cap and looking at trading volume. That is a result. That is a result of what's happened. The trading volume is like you have to understand that like that's emotion that drove that trading volume. That's emotion that drove that price higher. It's not a line on a graph that drove the price higher or lower. And if it was that easy, everyone would be billionaires.
+
+l__jon 
+you really have to paint a picture of the types of things you should be looking at on a coin. And I could give many, many examples to you. keep being asked like, well, what have you seen? And man, I saw Chainlink two years ago, two and a half. Saw Dogecoin January 1st. Saw Solana at like five bucks. Saw Terra like five bucks. You know, I could keep going. All because of social information. All.
+
+Citizen Web3 
+It's part of actually what we think we do as well. For example, there was an episode we recorded a few weeks ago. We're trying to remember with the guest, like what we spoke about a year ago and what we were saying, there's Salana at 30 cents or 50 cents,  if we go through our episodes, I mean, I guess when I say ecosystem developers about ourselves, that's what partially we do. This is why we like your tool so much, because for us, it connects a lot.
+
+to how we develop networks and how we like to come into some networks and develop them. And those kind of tools help us a lot. And that was my question of how do you decentralize those tools or do you even need to decentralize those tools? And this is the next questions I want to ask you. You kind of already answered that with the Luna token. And actually I was looking at it today and looking at what you guys did since then. this is kind of next question. Do you think that each project, in this crypto space,
+
+Even if it's a tool, not necessarily a blockchain or an application on top of a blockchain, but for example, in your case or in our case, like we are a podcast, plus we provide nodes, plus we do some blah, blah. We're all calls of ecosystem developer. The question is, do projects like this that provide tools, especially social tools, do they need to decentralize? And if so, in your opinion, to what extent? And again, if so, how?
+
+l__jon 
+This is a super important question. And I think that, you know, if you're talking about decentralization, I'd say, show me one entity that's fully decentralized right now. Right? It almost doesn't exist. it's arguable with Bitcoin, but you could say mining centralized in certain ways. So it doesn't exist. Let's start there. It's a dream and a vision. And I think it's a fantastic one to say that, you know, everyone has
+
+l__jon 
+an equal say in the future of what they care about most. And that's amazing, right? And it's autonomous of any government. It's autonomous. just works, right? Beautiful vision. It's amazing. And then here we are today, right? Where there's debates about how do you structure a Dow? How do you do voting? How does governance work? How do you implement governance? How do you like? So I think what I'm saying is like, there's a gap. We're at point A, and we're trying to get to kind of point Z.
+
+And everyone's talking about as if we're at Z today. And why aren't you at Z today? I need you to be at Z today. Cause everyone's impatient. And so I'd say like, you know, show me, show me who's got governance, a hundred percent perfect so far. Even that isn't right. And then, and then if you do the governance, who's, implementing all that stuff, you know, how do you actually get the team to fully like the team, meaning that's the community. How do you get them to be fully on board and have consensus to move forward on something that was voted on?
+
+l__jon 
+who got to do a proposal versus just vote. So there's all these different things. We are talking about these things. We do want to give our users rights and voting and they can put proposals in place. We're working on a governance plan right now, I should say, to do certain things. But it's a path, right? We are a company that is in the crypto space that now has a token. We want our community to have a say. Over time, if we were looking way out, the dream would be to say, we're out of the picture.
+
+l__jon 
+We're completely out of this. The community owns Lunar Crush. And I think there's a lot of entities that are painting that vision right now. And I think, look, like as everyone's experimenting with this model of governance, you know, there's also NFTs at play here, not just coins. You know, do certain NFT holders have certain rights that coin holders maybe do not? Is there a limited, limited few people that have these NFTs? So there's all these models and look, it's exciting.
+
+Like it is, this is amazing. We are all reinventing business together. And I think, you know, to say decentralization, I think that's a journey. I think that's a path and it's something we're super passionate about on our side. And it's something we really, really want to do more like more from the transparency perspective as well as giving users rights. And I think that's going to be a key use of our token in the future. And we're again, we're working on it just like everyone else is.
+
+And I'd also say that anyone that's publishing their governance roadmap is wrong. They have a great vision. They have a great vision. But guess what? Their timing is off and the actual mechanics are also off. when companies start to say they're decentralized and then they get punched in the face, their whole roadmap changes. And so I think it's going to be an interesting experience. But I love the discussions. I love the vision. I love like
+
+l__jon
+thinking that we can become fully decentralized and fully transparent and users have control over everything. And it's almost a similar vision to say like, countries don't matter in this. We're agnostic to any country because this has no borders. But then the reality is today, there are borders. And so again, that's another hurdle right there. Do the governments of the world want to let you do this?
+
+l__jon
+And are they going to not put up a fight? When you say, yes, we're a Dow, we're no longer a C Corp, a Delaware C Corp, we're a Dow, the government's going to go cool. That's great. Like, this is not going to happen. So I think, again, great conversations.
+
+Citizen Web3 
+I totally agree. fully agree. think a lot of the time and I noticed with I like actually the sentiment that with more and more guests and we discuss and not just guests on our show. I I've personally been in crypto since 2011 actually, and the more and more and more I've been involved has been a long time. I've noticed a lot more people started to come off the point of view that there is black and white in the decentralized centralized to the point of view that you express and I fully agree with it.
+
+Citizen Web3 
+It's not about black and white. is no centralized and decentralized. There is a whole spectrum and that spectrum is so different for everybody else. Some people might think decentralization is this and other people think it's that. And to get to that point, you're absolutely right. They have to go through a whole journey. And I love that you share that vision as well. It's quite exciting.
+
+l__jon 
+Look, there can't be one way to get there. We have to be flexible. I mean, look at the models you're seeing in NFTs, right? Like I hold this NFT, I get access to this, and then I get this thing and that thing, and the community's voting on what we want to do next. there's so many levels of letting users have a voice in it. And I think it's sort of like from our standpoint, we look at it as like, right now I mentioned with opinions on our site, right? Like that's one example of giving users voice.
+
+l__jon 
+And then it actually feeds into the experience, into the data and to their rewards. If they have suggestions for improvement, that feeds into the ecosystem. As those suggestions for improvement become like, hey, wait a minute, those can be put up for a vote and only the token holders can vote on what we're doing. Well, that impacts what the future looks like. It's like progressive. And then eventually it turns into, hey, someday they can vote what employees can work for the entity.
+
+or like where the entity resides in the world, I suppose, or like, is it even an entity anymore? So like there's, it's sort of, again, progressive. What I really hate is hearing people talk about like absolute today, how it will work, as if there's no other alternative. There's one way towards decentralization. And I still, go, well, really? Like based on your experience of running something perfectly decentralized before,
+
+l__jon 
+I get a little bit strange about it.
+
+Citizen Web3 
+I think the biggest argument here for those people and absolutely agrees that, well, if you want to be decentralized, how can you want to... Well, the whole point of decentralization is decentralized. There's a freedom of choice. So like when I hear a lot of people who have been a long time in crypto saying, we're going to destroy all the banks. And I'm like, but wait a second, that's not decentralization. If I, a person want to choose a third party to be involved with my money or with my voting, that's my choice.
+
+And I loved it because that is what I feel as well. And I don't think that there is one way to get there. I'm sure that we're going to see so many different forms evolve of different shapes and different colors. And that's actually my next question to you, because obviously I can hear that you're quite passionate about that, which is great. What is your vision on, I don't want to say five, 10 years, because I don't like those particular question, but on the whole,
+
+, a lot of conversation about L1, L2, L3, like blockchains, L1 are nations, L2 are applications and businesses, whatever. There was a lot of different views on the whole future interchange communication kind of thing. I want to know your opinion, how in your opinion this world of blockchains is going to look in our internet of blockchains. Or will it even be that, or will it be different silos?
+
+Silos that communicate to each other. How, in your opinion, will this world evolved in the next, I don't know, whatever, nearest to middle future?
+
+l__jon 
+So I think there's different things to consider here. So what we like to say is layer zero is community. And that's the thing that matters because you could say layer one is, there's all these incredible layer ones, right? And I could shout out many of them. I'm not gonna, but there's many of them. all of them claim to be the best at this, the best at that. At the end of the day, they all sound kind of similar and they're saying the same thing, right?
+
+l__jon 
+I think I could see some of these layer ones not necessarily focusing only on the technology that might be on par with others, because right now they're fighting, right? These layer ones have funds that are like, there's, you know, one of them just had launched a billion dollar fund. Another one I know has an $800 million fund. Another one I know has a $600 million fund. Like, this is insane. These are the biggest venture capital firms in the world, if you think about it, with their own token.
+
+And so, you know, they are funding ecosystems. And I think right now they're battling, they're all battling. saying, why would you use this chain versus that chain? Why that? No, no, no. You use, you use this one. This one's the better chain. It truly doesn't matter at the end of the day, because, know, it's kind of like, the equivalent would be like, I've, I've built hundreds of websites in my career. have a long history working for digital agencies and things like that. And I built a website platform as well.
+
+Honestly, I probably built thousands of websites with my platform,  it's not about the technology. It's about the output. It's about the user experience. It's about what gets built on it. you know, it's like, even at the enterprise level, when was the last time you heard like a fortune 500 company going, we're awesome because we used Oracle because we used Oracle. That's why we're great. No, they talk about solving problems for their users, for their customers. They talk about new markets.
+
+We're in the stage of crypto. We've been in the stage of crypto where everyone's like technology, technology, technology, and then stuff gets built on these things. And you start to look at the actual data in a block explorer and you're like, wow, they have 300 users. So this amazing thing that they built that looks like a billion dollar company that's valued at $600 million has 300 actual users. Or this other thing out there that sounds like a really amazing concept. They're solving
+
+ a supply chain management. They have nothing in market. They, they, it's all marketing, right? There's it's all fluff and they don't actually have anything in market. And it's going to be coming soon in 10 years as the founders are dumping on you. Right. And so there, there's sort of this, like, I guess we've become too technology centric. And I see some of these layer ones that are going to start to specialize is what I'm saying. Like I could see some of these things specializing, like, Hey, we're about building social applications.
+
+l__jon 
+we're about building metaverse applications, we're about, like this one over here might be amazing at NFTs. I could see different things that are more enterprise focused that are like, that's where we play. I could see some things that are sort of, some of these projects are even like private blockchains for enterprises.  there's different kind of playgrounds that I could see start starting to form.
+
+And I think that's what we're also seeing come out of these funds that are part of these layer ones, is they're starting to specialize. Because , it's getting to a point where, sure, this chain might be a little bit quicker than this chain. This chain might be a little cheaper than this chain. But we're talking like, for the most part, it's pretty small, the difference, until we do a giant leap next. And there's a couple projects that I've talked to that
+
+are getting to sub one second confirmations. And when you get there, you can start to get to the level of playing a video game and it's all on chain and you don't even realize it. It's all happening so fast, the points you're earning, the sword you just got, the car you just built, it's all happening so fast. And that kind of a chain that works on that kind of stuff will focus on gaming.
+
+l__jon 
+They'll focus on real-time applications. They'll focus on cameras and machine learning versus others might focus on applications for banks or private blockchains.
+
+Citizen Web3
+You're absolutely right, there is already, right? Sorry to interrupt you, like Harmony, right? I think they focus on gaming, is it correct?
+
+l__jon 
+It's very fast. It's a very fast chain. Sure.
+
+Citizen Web3 
+I don't know much about harmony. I'm just like, sorry, kind of following what you were saying that L1 harmony kind of follows the gaming kind of thing. That's what I was just going to make the point. Sorry to interrupt you there.
+
+l__jon 
+there's things like BSC as an example, right? You look at how that's evolved. Look at BSC a year ago and look at BSC today and look at where that's probably going to go two to three years from now. That's just giving another example. Look at Cardano. Cardano wasn't even live. Right. And like, you could just imagine these, you have to remember behind the scenes, there are armies of hundreds to thousands of employees working.
+
+at these projects. They're incredibly passionate about what they're doing. This is nowhere near done. Like this competition is going to keep going. But I do think the interoperability piece is going to be increasingly a bigger deal. I would almost say like the winner here is the most interoperable. I think, you know, it's sort of going to be really interesting to see how that evolves. We weren't talking about interoperability a year ago like we are today.
+
+l__jon
+You've been in so long, this wasn't even a word
+
+Citizen Web3 
+I think interchange is a word, not interoperability, but interchange is a word that's only existed for about six months. Even Google still doesn't recognize it as a word that says, no, no, there is no such word. I like to see how it progresses over years where we went from, this is just a big thing with the...
+
+Citizen Web3 
+an application, a consensus, and a network layer, which are all coupled up and there's nothing you can do about it, to separate in the application layer, now separating networking layer and so on and so forth. And now we have, like you say, L1s coming in and offering solutions, for example, for specific specifications.
+
+I love your quote here on that layer zero is the people, is the community. think that blockchains are first of all a communication tool. And a lot of people think that it's a P2P technology. Not really blockchain is the man in the middle. It's not a P2P technology. P2P is when I mean you transact without anybody else in the middle. And a blockchain is just a tool to help us to do that. And I absolutely love that.
+
+Of course, people are at the bottom and that's what we all do that for. 
+
+l__jon
+I want to add one more, element to that. so if you, if the people, if this is all about the people, you know, we have lots of sort of different types of discussions around user experience. And I think the people in crypto think that a better user experience means a more usable DeFi platform, a more usable wallet, a more friendly interface on an exchange or whatever is used. Right. I look at that a lot different. I look at it like,
+
+l__jon 
+Let's remember, let's back up, let's put people first. Most of the world, the overwhelming majority of the world does not use blockchain anything. They don't own crypto, they don't use DApps, they don't have a wallet. So if we're talking about putting people first, this is where I place user experience. I would say that if the average person isn't currently in crypto, it's not building a better DeFi interface. It's building things that they won't even notice.
+
+it's all about empathy and user experience is all based on empathy. And if you look at that and say, well, your average person wakes up in the morning, turns the shower on, brushes their teeth, like follow the path of what an average person does in a day. And then start to realize that there are many interaction points where blockchain could play a role. that's what I look at when I look at user experience in crypto.
+
+l__jon 
+sure. Do we need easier, better wallets? Absolutely. Do we need interoperability? 100%. Things need to be faster and cheaper. Yep. But like talking to an average person out there and you know it, you'll go out to a restaurant, to a bar, to whatever, and you start just talking to random people. They don't care. you're like the strange one in the room talking about blockchain all the time yet again. but they're still going to buy a beer at the bar.
+
+l__jon 
+They're still ordering food and they're still paying. so it's sort of like it needs to become, when we say interoperable, it needs to be like seamless with what people are already doing. They won't even notice it. And I think that's when crypto wins.
+
+Citizen Web3 
+Hahaha!
+
+Citizen Web3
+I think you're right, people need to feel value. I think that's exactly thing that crypto added together, money and ownership and one product, which nobody's ever done before blockchain. Well, not a verifiable way of saying this is ownership and money together. And I think I totally agree. think that people, as soon as they feel that value.
+
+So, wow, I can vote and actually get things done and get money from that. Of course I will participate. oh wow, I can like, you know, brush my teeth and earn a point from my dentist for, a discount of one, I don't know, dollar for the next clean. I don't know, whatever. Like it could be so crazy. Like you could go forever and forever and ever and ever. But I do have a slightly of a different question for you on a slightly different terms because...
+
+We are a podcast that we try to focus on the person. And obviously you are a people's person and you have a people's product. But I've read a little bit about your history. I watched a little bit like some of your talks and different places. my question was, you started advertisement as far as I understood. And you mentioned you did so many websites. What led you to eventually, and you said 2013, that's quite a long time ago.
+
+What led you, what motivated you, what desires you to build? I mean, you did mention in the beginning that people, the investors, they're in a charis and all that, but now listening to you, I hear that maybe there is something else there and I would love to hear what it is. What led you to build a product in blockchain and crypto and what motivates you to do that as opposed to just building that product on anything else like Facebook, or I'm pretty sure you can make more money over there, you know, or anything else or whatever.
+
+l__jon
+sometimes like you do things and you don't realize it until you look way, way back and go, wow, that's why. I got into baseball cards a long, long time ago when I was a little kid. and I think that, that taught me everything that, and I'd say my dad would, get like the wall street journal and I would look at all the numbers in the business section and say, what is all this stuff? And
+
+l__jon 
+trading baseball cards was like, mean, literally exactly the same as NFTs. The entire model of NFTs is built off of trading cards from the 1980s. It's the same thing, except for the fact that now you can actually sell an NFT. Selling baseball cards and all of that was a nightmare because, you might find something that's rare and hold it and then you go to sell it and they're like, yeah, I'll give you half as much as it's worth. oh
+
+there's a bent corner. It's not worth quite as much. so trading cards really taught me mechanics around like every month you're checking
+the price. I was going to card shows and buying new ones and trading them and swapping and buying unopened packs. And still I have some that are unopened today from a long time ago. that kind of led me into trading stocks and I traded stocks for
+
+l__jon
+forever in the background. This is aside from my career. Like I just have always done it. I've always been an investor. one of the things that really, I guess, ticked me off, I'll go back to the housing crash back in 2006, 2007. I saw this nonsense. This was at the time that Bitcoin was created, right? And Satoshi took his anger, their anger, and they did something about it. And so for me, I watched my house get cut in half.
+
+I watched all my friends. saw some my friends filed for bankruptcy. I was okay, luckily. And, you know, I saw all that happen. And I think that that kind of planted a seed in my head. And I'll never forget when I was working one day, this was back in 2013. I was running like digital pretty much for like Hyundai and Genesis and Kia in the United States. I was doing all of their user experience.
+
+on their website and apps and things. And we were working on a project. was like a collaboration with the, there's a TV show, Walking Dead. was like it was zombies and things. yeah, and we took, we took, there was the Hyundai Veloster. It was a car and it was like, it was a Walking Dead collaboration. And it was the Walking Dead chop shop. And you could like put a flame thrower on your car and like a machine gun and like a, like a giant sword off the front of your car. So you could trick it out.
+
+Citizen Web3 
+I know it, 
+
+l__jon 
+And there was a guy that I was working with that was talking about Bitcoin. And I was like, what the heck is that? What are you talking about? And I started learning about it. And I'm going, OK, this is interesting. OK, wait, what's this going on? What's going on here? And that, for me, was the trigger of, like, wait a second. So this is independent of governments. Wait a second. This doesn't actually rely so much on Wall Street or any of stuff.
+
+And in that moment, I set up a Mt. Gox account. And that was fun. Yeah, I'm not going to go there. But also discovered Ethereum and found the DAO. I remember the DAO from a long time ago. And I also got into the DAO and lost some there as well. And I think Ethereum was $13 at the time, if I recall.
+
+Citizen Web3
+Did you lose a lot? haha
+
+l__jon 
+From that moment, I started to realize that there's a world that is going to explode. and that was kind of always with me. Yet at the same time in my career, I was passionate about user experience. I started learning about machine learning and AI. I went to go work for an AI company, and I ran UX and design at a very, very large AI company. And that was right before Lunar Crush. So I think, 
+
+l__jon 
+ building a business in this, it's kind of interesting. Like even if you look at say like an exchange, right? Crypto exchange, like crypto world versus not crypto world. Now we're in an interesting moment here. I just interviewed another project a few weeks ago that I was like, wait a second, that's a good point. They're building DeFi products. And also if someone wants an easier user experience, it can be more C-Fi.
+
+So they don't want to set up a wallet, they don't want to deal with custody, they'll work with them on all that stuff. But if someone wants it more complicated, they can have it be a DeFi product. And I'm like, are you telling me there's not a single C5 point in your DeFi spiel that you're giving me? I'm not buying it. crypto projects are centralized, Exchanges have custody. We're complaining about banks for doing the same thing.
+
+And so there's almost like there's, DeFi, there's, there's crypto centralization, and then there's like standard traditional financial system kind of entities we look at them as the enemy and we're in a sense, we're repeating them. I just look at it like, same thing goes with us in a way. were a web 2.0 SAS entity that just happened to be collecting data. That's what we started as.
+
+again, this goes to like, Does this work? A yes. Okay. It works. B can we, can we scale? Yes. Okay. Now let's become more web 3.0 that, we need a token. We want to get like more decentralized and transparent. We want to have governance. so again, it's the same, it's the same like path, but I think that's, we're passionate about doing that. And I think that's a big difference. Like.
+
+We don't want to live in a Web 2.0 world and we're really focused on Web 3. so I think it's big deal for us.
+
+Citizen Web3 
+I think that's a very good motivation to go with right, I'm going to like ask the kind of traditional question that we ask before we resume. So the question is, what resources in your daily life that you could recommend? it could be anything. It could be anything from a book.
+
+to a podcast, to yoga, to walking the dog, whatever, that motivates you in daily life that you would like to recommend to anybody. It doesn't matter what it is, music, books, again, whatever.
+
+l__jon
+Yeah, I think for one thing, if we're talking crypto at least, I would suggest that Nathaniel Popper has some of the best books, like Digital Gold. That really, really opened my eyes a long time ago. It's pretty old. It's, I think, probably 2015, 2016, something like that, but fantastic book. Read it now. I'd also say look at things like
+
+Don't make me think it's a book, think by like Steve Krug, I believe he wrote it. It's about user experience. And it's about, you know what, like, just because you understand something does not mean that anyone else does. There are, there are patterns that you should be looking at. There are things that you should understand. It doesn't always mean designing and thinking about things for a first grade level. It just means being intuitive. And also adaptive. You notice there's some products you use at first and you're going, my God, what is this? This is crazy.
+
+Kind like what we're talking through right here. There's this interface and I've never used it before. But then like two minutes later, it becomes very intuitive. I think those are really important. Understand the history of crypto. Like, and by doing so, it actually helps you not think about just today. You know, it helps you zoom out and it helps you hold versus trade your way into oblivion. And guess who's making all your money off of trades, not you.
+
+Citizen Web3
+Yeah, it's true
+
+l__jon 
+and even and pay your taxes, I'll say, because that's also another fun topic. there's so many different elements of inspiration. man, you know, another thing that I do, like I exercise almost every single day. And I think that needs to be talked about more in crypto. It is truly taxing to be in an environment that never turns off.
+
+l__jon 
+ I have some comparisons here because again, in my own life, I went from trading baseball cards and checking prices once a month. I went into stocks where I would trade constantly all day long. I was like a day trader trading stocks, like growing up when I was 19, 20 years old. like, the market still closed though. The market closed and it's open for what, seven, eight hours or something.
+
+Crypto, the fact that it's 24-7-365 means that when the market's totally dumping, you can't sleep. if you're like over leveraged or you're too heavy in the market, and if you're up at 2 a.m. checking your phone, stop being greedy. Take some off the table. You will not survive. that's a really big deal. And I'd say like the way that you counter that are things like exercise, things like meditation.
+
+things like yoga, going for a walk, get the hell off of Twitter a few hours a day, get outside. this is actually a big topic in crypto that I do believe needs to be talked about more. I've maybe learned a little more since being in this space for a while here doing this. I've seen people get burnt out. I've seen them become really angry people or they just totally exit crypto and go crypto sucks, I'm out of here. But the reality is they forgot to balance themselves.
+
+I think that's maybe a topic for another podcast, but I do think that like wellness is a really big deal and taking care of yourself is a really, really big deal. And by the way, doing that, you'll make everyone around you happier. So it's a really big deal.
+
+Citizen Web3
+Have you stopped checking prices at 2 a.m. already? Are you at that stage? Are you still doing it?
+
+l__jon
+So I've gotten to a point where I will say that if I ever get up in the middle of the night, I actually have a thing in my head that says, don't check your phone. Don't even look at your phone. don't turn the news on. You don't need to read another article on COVID. You don't need to read anything on politics. You don't need to check the price of Ethereum at 2 a.m. because guess what? Chances are you're not trading at 2 a.m. You're just getting the rush.
+
+l__jon 
+You're not going to trade in any sort of responsible manner in the middle of the night just because you happen to wake up. So I think that's a really big thing. This is really hard, by the way. This is probably the number one problem in crypto that I'm talking about is that it doesn't turn off and people don't talk about it enough. the exchanges love it. They make more money. Like OpenSea loves it when you just ape into some NFT for 14 Ethereum at 2 a.m.
+
+But the reality is again, you're not winning by doing this. You're actually wearing yourself down to make even worse decisions the next day when you're awake. So sleep well, exercise well, eat well, stop drinking so much alcohol, and you'll be a good trader.
+
+Citizen Web3 
+John, it's been a huge pleasure. A lot of things that you said are very insightful in my opinion. I hope that all our listeners also enjoyed it. We will definitely link up all the books and everything else you mentioned to the show. It's been great catching you. Thanks for coming on.
+
+l__jon 
+Likewise, yeah, check out lunarcrush.com to everyone. I can't even talk, I've been talking too much. Check out lunarcrush.com, anyone that's listening still. We got a lot coming. It's gonna be an absolutely amazing next year here for us, so stay tuned.
+
+Citizen Web3
+Thanks. Bye everyone. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

@@ -1,0 +1,485 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/emmanuelaldeguer
+
+Episode name:
+Decentralized AI, Cambrian Explosion and Persevering with Emmanuel Aldeguer
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web Three Podcast. Today I have Emmanuel from Maxson with me. Emmanuel, hi, welcome to the show,
+
+Emmanuel - AXONE 
+Hello, Sergey. Nice to meet you. It's great to be here.
+
+Citizen Web3
+Yes, Dito. Dito, how are you, man? First of all, me how is, I mean, we spoke a little bit before the recording started. This is for the listeners about, guess, busy lives, busy private life. So how's yours going?
+
+Emmanuel - AXONE 
+Yeah. I mean, I have a beautiful life, you know. We have the chance to to every day to do what we like to do and to make things with passion. So definitely I'm very happy, I I mean I hope that everyone is as happy as I am. So definitely everything is perfect.
+
+Citizen Web3
+I like that you're going this way. Motivation is a big topic for the podcast and I will definitely get back and dig a little bit your head about it. But first of all, for myself, for the listeners especially, and can I please ask you to do a slightly boring thing, but a very necessary thing, an intro about yourself. Tell me and the listeners about your Web3 story, Web3 journey, maybe why Web3. And of course, if you can add what you're working on right now would be amazing. Thank you.
+
+Emmanuel - AXONE 
+Sure.
+
+Emmanuel - AXONE 
+Sure, with pleasure. So I'm Emmanuel, I'm 52 years old. So I'm quite a boomer, you know, and I have a quite, let's say, good experience of life. I have five kids and we were discussing before the interview about kids and this is a great thing. This is the best thing ever. And I'm an entrepreneur. That means that...
+
+It's now for more than 25 years that I'm following. I mean, I'm doing what I want and I'm doing what I like. And I like to set up a project and to lead projects and to lead businesses. So, I mean I I like to declare myself as an anti-expert. That means that I know almost nothing upon almost everything because I worked on the first part of my career in media and...
+
+I had to interest myself to a lot of fields and center of interests. And yeah, this is made this is made what I am. also, I mean, my first job was as was as a marketing manager in a big French company was distributing the press, the magazines. And I I mean I spent two years on Excel files. And so this oriented also the Twitter market on data-driven marketing.
+
+It was at the early beginning of the internet at that time and also the early beginning of a of a  business intelligence a a software and all that stuff. and so, yeah, definitely I'm interested about a lot of things. And the three always of my career has always been data-driven and and specifically data-driven marketing and how can how can you make businesses and create value with the data.
+
+And so, with the with the development of the digital way of living, because now digital is everywhere, I mean, I would like to say that I started working my first job. We didn't have emails on the company and I was the only person upon 250 guys who had access to internet. Because, you know, as I was in the marketing, I had the right to surf on the internet.
+
+Emmanuel - AXONE 
+The other one didn't because so people were queuing in front of my office to just have the right to go to see how it is internet. So you have to imagine that. I mean, it seems like, know, I mean, yeah, I I will be like a caveman for sure when I'm saying that stuff, but it it it does exist, you know, and no cell phone and everything. So yeah, I I I have seen this evolution of the things I'm...
+
+The tech, I'm passionate by the tech and by the internet. I love the history of the internet, how it comes. I mean, know, not so long ago, it was the anniversary of the publishing of the Cypherpunks manifesto. And I think you are a citizen Web3 and I think Web3 was meant to be a natural extension of these ideas. And yet...
+
+I mean, I'm very happy to have the opportunity to discuss and to, let's say, fight against the today's climate that, you know, the conversation is completely hijacked by celebrity-backed meme coins, venture capitalists who are seeking quick exit, speculative situation for everything. this is the engagement is on this side rather than innovation. And despite this, it's important to not forget that we are
+
+The Latin expression is nanos gigantum umeris incidentes. That means that we are dwarfs standing on the shoulders of giants. And we have to think about these people. I mean Eric Hughes, mean, all these guys, I mean Tim Berners-Lee, John Gilmore, they are so important for what we are now and for Web3. And so I came to Web3 because of this evolution, because I'm very...
+
+interested by the Cypherpunks movement. This is not libertarian. Maybe people today make the mix between this. And I'm not a fascist. And I would say that this is something very important to know where it's come from. And yeah I came to Web3 not because not because of trading and and on crypto, but because of blockchain technology and the power of the decentralization.
+
+Emmanuel - AXONE
+Definitely it was this. I mean I discovered Ethereum in 2017, 2018 at the end of 2017. mean, Ethereum was just it was just a testnet at that moment. And and it was amazing. The decentralization and the power of decentralization for me was just amazing. That means that thanks to decentralization, it was suddenly the opportunity to be able to align interests.
+
+between individual interests and collective interests. And this is something very, very powerful. You have this paradoxical situation in the game theory where the the the optimum of Pareto will will will never match the balance of Nash. This is the two levels of the of the a mean game theory, but with the blockchain.
+
+this paradoxical situation can be balanced. And this is something amazing, definitely. So, I mean, I truly love it. And since that day, since... Yeah, sorry, go on.
+
+Citizen Web3 
+No, no, please, no, no, no, please go on, please go on. Please. I thought you made a pose. I was going to say that this is exactly no, no, no, no, no, no. This is exactly what I'm looking for. This is the intro. want to I want wanted to thank you for this intro because you went exactly where I wanted you to go. So the only other thing I wanted you to add maybe into the intro is like why why the same why specifically the decentralized artificial intelligence? Because there is so many controversies around it. And we'll go into them a bit later. But
+
+Emmanuel - AXONE
+No, no, I'm sorry. Don't hesitate to interrupt me.
+
+Citizen Web3
+Apart from Web3, why AI?
+
+Emmanuel - AXONE 
+Yeah.
+
+Emmanuel - AXONE
+because AI is the ultimate revolution that will ever happen anymore. What I want to say is that, OK, as I mentioned, I start with the data. so decentralization came, like a new level of the internet, and with the capabilities to, I mean, my issue as a data-driven marketer was, hey, how can I get the value of the data that are not belonging to me?
+
+And I will be able to convince people to share their data with me. And this word share is very important because I didn't say exchange. That means I don't care about the private data of the people. What I do care is what kind of knowledge I can get from this data. Because if you are taking properly the word, I mean, data is, let's say, raw description of reality. Then when you are aggregating this data,
+
+and contextualizing the data, then you have an information. And then when this information is valorized in action, then you have knowledge. So you have data, information, and knowledge. And the real value is in knowledge, is not in data. So why are these people who want to have all the data as possible? Because they want to create knowledge. But in my point of view, we can try to create knowledge by incentivizing people to share their data, but without exchanging them. That means that
+
+in the way that we can give them the opportunity to keep the ownership and the privacy and the property on their own data. But this data can contribute to create value. ok And now when you come to AI, AI needs data to be trained. Now all the giants, they scrap the whole web and the whole public data to train their model. But now there is a threshold and they need more data.
+
+And where are these data coming from? We have two solutions, synthetic data, that means fake data, which is OK, but not so perfect, and private data. And how can you incentivize people to share that private data to train the model with the guarantee that we are not going into this dystopic dimension where you have a big brother who is managing everything? And I think the solution is decentralization. So that's why we are coming to decentralized AI.
+
+Citizen Web3 
+Let me, I'm going to dig this, but before I dig this, again, there's a couple of questions I wanted you to kind of, on your intro, if you don't mind, before we go into the more heavy stuff. So first of all, it's a very simple question. You know, you mentioned the balancing life, just the very beginning of the intro. And it's actually a big topic. mean, I interview founders and CTOs for five years now across all blockchains.
+
+Emmanuel - AXONE 
+No, sure, please.
+
+Citizen Web3 
+And whether it's Bitcoin, Ethereum, Cosmos, Polkadot. And I noticed that people burn out quickly. Now you mentioned having five kids. I know that you're doing several projects and you mentioned that, you you're not 20. You're not 20 and you're not even 30. And I'm not trying to highlight it here, but it does affect at least me personally as I grow older. I know that I become less energetic. It's just as simple as that. I need more exercise. I need more actions, more movement, more thinking. Now, how on earth do you balance
+
+several projects without burning out having kids and it's a serious question because I it's you're not going to believe it how many young kids come into this industry and they don't have the experience you have they don't understand what they do and after a year or two they're like okay well that's it and they just leave and they say i never for me and they go to work at a factory or whatever
+
+Emmanuel - AXONE
+sure.
+
+Emmanuel - AXONE
+I think the answer is in the sense of what you are doing, the purpose. I think people who are burning out is just because they lose the sense of what they are doing. And actually, yeah the balance by definition is unstable. yeah, sometimes I'm tired, maybe exhausted. So I have to rest and I'm taking the time to rest. I think it's very important to yeah to take the time. I mean
+
+Because I think if you are not taking the time, if you don't know why you are doing things, then you are losing the sense and then you are losing yourselves and then it's over. And it's okay to say, hey, I lose the sense of what I'm doing, so I'm changing, I'm going to work elsewhere. And this is a this is life. I mean, it's it's it's a chance to have the opportunity to know what you are doing for what you are doing and this is a real chance. And I think it's
+
+individual on question that you I mean every morning and every evening every morning when you're getting up and every evening when you're going to bed you have to say did Do I will do I will do something that I interesting me Do I like the day that is coming and then at the end of the day? Hey Did I did things good and did I am happy of my life and it's okay to say no So then you have to change, you know
+
+Citizen Web3 
+I guess it's-
+
+Citizen Web3
+I guess it's like itsa cult.
+
+Emmanuel - AXONE
+And I think the people who are doing burnout is because they don't change.
+
+Citizen Web3
+I guess it's like, it's what you're referring to is like in couple psychology or partnership psychology where they say that, you know, if you're really honest about yourself and your partnership every morning when you wake up, you ask yourself a question, do I want to be with this person? And if the answer is yes, then you are with this person. Honestly, it's like, do I, am I doing the right thing for myself? Am I developing myself? What was the biggest, the biggest before, I'm sorry to dig this private topic, but it's just an interesting thing. Please.
+
+Emmanuel - AXONE 
+Yeah.
+
+Emmanuel - AXONE 
+Yes.
+
+Emmanuel - AXONE 
+And I just want to say that it's hard and it's questioning. It's an effort to do that. you know It's not obvious. You have to question yourself. And it's difficult to have an answer. And you can struggle to have an answer. And I think it's very important to accept that you have to struggle to have an answer and to that it's hard. I don't I don't know easy things in life. You know And people who are saying, yeah, my life is so easy and so on, blah, blah. this is
+
+Citizen Web3 
+Yeah. Yeah.
+
+Emmanuel - AXONE 
+There is something wrong because life is not easy. and that doesn't mean that you have to, I you know, I mean  I I love philosophy and I love Spinoza and and the joy, you have to find the joy everywhere. This is something very, very important.
+
+Citizen Web3
+What was the biggest failure during those last, let's say like, know, what 2017 you said, so we have what eight years now that made you kind of benefit the most from it. Stop and say, hey, now I know how I should have been doing things. it told, what was the biggest failure that told you the most in those eight years?
+
+Emmanuel - AXONE 
+I would say that we had we had a very successful, let's say, journey till the FTX collapse FTX collapse. In the sense that we have a company, we get funded, you know everything was perfect. In the sense that we had a real company with equity and also we are running a project in decentralization.
+
+with an association. So everything was perfect on the and very well balanced. We had a good opportunity in business. Of course, as we I mean we took risks, so we hired people, we invested a lot in marketing and so on. So we need a lot of money to run this business. And let's say that we were close to launch our new founding round. Just I mean We launched the new founding round just one week before. FTX
+
+already Luna was the first alert, Luna Terra crash was the first alert, but I was turning it because we were developing on the Cosmos SDK. So I said, hey, this is a proof that Cosmos is very reliable and resilient because look, there is millions of operations of this chain and didn't crash. So you're always telling your stories, but then FTX was a mess and we couldn't get found.
+
+I mean, it was the beginning of the end for the company. we had a lot of difficulties. And then we I said, OK, stop. We will stop we stop the company. And we'll let's stay focused on what is really important, meaning the the protocol and the decentralization and the association. So we shut down the company and and stay focused on the development of the protocol.
+
+And for my life, for my personal balance, it was it was difficult because when you are to fire people, it's not easy and so on. But personally, was kind of relief for me because it was less heavy and really focused on what I wanted to develop and the values that I'm holding.
+
+Citizen Web3 
+Believe it or not, this is the same, even though I've been 10 years, even more in this industry, my biggest lesson was the same. was this. And I know the listeners probably are sick of this, but I have this joke that, you when people ask me, how do you prepare for the bear market? And I say, all you need to do is fuck up in advance. If you lose everything in advance and you you don't need to prepare anymore. You just working ahead already. So, but I know what you mean. I mean, I had to, I had to let go after.
+
+Emmanuel - AXONE 
+Yeah.
+
+Citizen Web3 
+FTX and Luna, was, I think it was a year and a half ago before we pivoted the project. I had to let go of 12 people in one day and it made me feel it was bad, but it was a big relief because it was a big movement. So I totally understand what you mean by that.
+
+Emmanuel - AXONE 
+Yeah. And you know, I mean, I remember I was one of the lucky guys who participated to the ICO of Avalanche. So, and it was crazy, man. I mean, I invested $1,000 and it allows me to live it allows me to live for two years almost. And it was just crazy. So I also fell down in this, you know, crazy things and magical money and...
+
+This was crazy. I had a Binance card and I was, let's say, because my Avalanche were released little by little, so I was selling Avalanche for Bitcoin and I was spending with my Binance card and I was spending money, but I had more money on my account. Can you believe that? I was not spending enough quickly. So, this was a crazy period, I think. Alos
+
+Citizen Web3 
+think that it's crazy. No, no, absolutely. Yeah, go on, please go on. It's crazy.
+
+Emmanuel - AXONE
+No, no, I think we're not. I mean I don't know if I can say that, but I hope that we'll not live this again, you know, because it was, it was completely artificial and crazy. And I think it leads to where we are now in the sense that now, I mean, in all the people who are working on in this business in web three, can you believe that you have 37 million tokens? And in this 37 million tokens, how many are really, I mean, with utility?
+
+1 % maybe. even if that, it's already a lot 1 % because it's 37,000 tokens.
+
+Citizen Web3 
+If that, if that, it's already a lot, it's already a lot. but, but then again, but Emmanuel, like, let me, let me be devil's advocate here a little bit. I actually agree with you, but let me be devil's advocate. You know, when people bring those numbers, you know what my first thinking that comes to mind, and this is a question for you, of course, when we look at a traditional business world, the numbers are not much different. Usually they say that, you know, if you take a hundred businesses in the first two years, maximum 2 % will survive. So,
+
+Are the numbers that different?
+
+Emmanuel - AXONE
+No, no, and I think it, mean, somehow it's like a Cambrian explosion, you know, at the beginning of the world, I mean, of the earth, you had this Cambrian era where you had life everywhere, life was popping up everywhere. And then after, you know, I mean, only the strongest survived. And I think it's like that, you know, we just live the Cambrian explosion of the web three. And I think now, I mean,
+
+Citizen Web3 
+It's quite funny analogy.
+
+Emmanuel - AXONE 
+I don't know if you were about, because we are very close from Outlay Adventures. They are one of the rare VC who are backing up. And this is very courageous from their part. they are, I mean, for me, it's logical that they are backing us because we are very close in the values, terms of things, and so on. And they are developing the post-web thesis. And this is very, very interesting thesis. And...
+
+I mean, I am engaging all the listeners of the podcast to go and see and check post web without layer ventures. And this is really a very deep and strong thesis about what is the future of what we are building right now with the with the fact that the web will shrink in the sense that what we are building is not for human beings, it's for machines. I mean, when you are looking the...
+
+Citizen Web3 
+I like that. I like that. This is... Please go on.
+
+Emmanuel - AXONE
+By bit, when you're looking the by bit hack, which is crazy, $1.5 billion hacked, it was because of the failure of the interface. It was the interface of Noziz, the safe, who has been hacked. With an agent at the head of this, it will never happen. So we have to definitely reduce the interface and the user experience and let this, because it's too complex to machines, because machines...
+
+With one figure in a very long hash address, they will never make any mistake. The address is valid or not. And then we will have access to complex application, but through agents. And I think this this will change definitely. I mean, you have a young kid. Maybe you will have a problem with the screen with the kids. But there will be no more screens, because we don't need screens, because you have an agent who is dealing with application. And and I mean,
+
+If I'm running a a social network, I will be very, very scared of the future because there will be no more interfaces. We'll have just a prompt, even on the ring, you will talk to your agent and the agent will manage with all the difficult stuff and you will be able to focus on the real elements, on the human interaction. And this will be interesting what is coming.
+
+Citizen Web3 
+I don't know if you've seen this recently. It was a couple of developers. released on GitHub a demo of two AI agents. And of course, by the way, for all the listeners, everything Imanual mentioned in here linked in the show notes. So please go on and research, guys and girls and robots, I hope. But back to what I was saying, they released this demo of two AI agents calling each other. And as soon as the first AI agent realized that he was talking to another AI agent,
+
+He was like, shall we just move to a different sound because this human talking is really boring and takes a long time. And then they go, beep, beep, beep, beep, beep, beep, beep, beep, beep, beep, beep, beep, beep, beep, beep, beep,
+
+Emmanuel - AXONE 
+Yes.
+
+Emmanuel - AXONE 
+I am.
+
+Yeah, I mean, there is a lot of crisis, there is a lot of danger, but that means that there are a lot of opportunities also. So so this is great. We are lucky.
+
+Citizen Web3 
+Mano, let me jump a little bit back to data. I don't know how much of the podcast you know, but the listeners know I love playing devil's advocate and I love going otherwise we don't get content out of it. data, let me talk a little bit with data and models and centralization now.
+
+Emmanuel - AXONE 
+Sure.
+
+Citizen Web3
+I have luckily been involved in decentralized AI and everything to do with it also for quite a while. I've been lucky enough to be involved in a project as early as five years ago. So I've seen it all grow and you know I kind of learned a lot about it. And one of the things I noticed when I was in, I haven't been going to conferences for a while. And then I went to a conference in Berlin, Berlin Blockchain Week last year, and it was full of DAI and
+
+I was really disappointed because what I noticed, one of the first things was that the whole decentralized AI you know spectrum is narrowed down pretty much to launching computation services on other people's machines. And they call it DAI. So they call launching centralized models. So basically they take a centralized model that was told in a black box by a black box.
+
+And then they launched it on a cloud and they call it DAI. And I was like, well, guys, but this is not DAI. This has got nothing to do with the decentralization. Now, I know that it's a bit of a controversial topic, but do you think, so there's kind of two questions to hear. First of all, do you think AI can lead to centralization of blockchain because of the teaching of the models? And two, how do you see the whole
+
+thing becoming more decentralized from where we are today, where we are just selling computation power pretty much, and we call it AI services or launching other people's models on other people's machines. So how do you see this developing and can it lead potentially to more centralization or decentralization?
+
+Emmanuel - AXONE
+Yeah, so definitely, is hidden in the details. So you're right. mean, in my point of view that decentralized AI doesn't exist today. Because as you mentioned, there is no decentralized AI. I mean, that doesn't exist. But it is important to say what are you putting behind decentralization. For me,
+
+And this is only my point of view. I'm not an expert. As I mentioned first, I'm an anti-expert. So the disclaimer has to be very clear. So for me, my point of view is that what is interesting about decentralization is the capability to commoditize things in the sense that computation storage can be commoditized. mean, it must be like commodities. ok and
+
+you have I mean to save time, to save money, to save energy, it will be very important to do so that if you have some storage here available that someone can use because they need it. Ok I think this is something important. And decentralization is definitely a solution for that. And DePIN projects for me are, let's say, the base route of what what we can call decentralized AI somehow. Ok Then there is also the problem of the data.
+
+that you have to contribute. When I'm talking about decentralization, and and this is a word that I didn't pronounce yet, it's about governance also. That means that when you have something that can be governed and managed by a community. Of course, you may have some centralized resources. But if you do so, that you are using these centralized resources like commodities, and then you are engaging
+
+different type of tools like ZK proof, like homomorphic inscription, like other stuff who can allow to use some data on some resources to guarantee the privacy of this. So it works. And then when you are adding a layer of governance, which is a collective and collaborative governance on the top of it, I think then you have reached a certain level of decentralized AI.
+
+Emmanuel - AXONE 
+And tomorrow we are talking about agents. think the challenge, and this is maybe when we talk about AXONE, this is where we go, the challenge of what we would like to build is they have the capabilities to to collaboratively manage a model, collaboratively manage an AI agent, to to have transparency on it. Okay. I mean, who cares if the resource is centralized or decentralized, but what is important is to know it and to have the information about it.
+
+and to know who is managing this and to know who has the rights and who can change the rules. And if this can be changed collaboratively, so then you are starting to go on the decentralized way of things. This is my humble point of view.
+
+Citizen Web3 
+It's It's It's a very valid point of view. think I want to ask you like in terms of AXONE, right? And of course you don't have to bring examples from AXONE. You could speak up, you know, whatever is in your mind, but I would love to hear some. what kind of, not progress, because it's a loud word progress, but what kind of things you are guys working on in terms of technological collaboration into AI and governance and AI and monetization?
+
+Is there something you guys are working on or have plans that is, in your opinion, going to make a big game difference for what we have for the industry today?
+
+Emmanuel - AXONE
+This is a tough question. No, no, no, no, I...
+
+Citizen Web3 
+Sorry. You can lower the hype words, lower the change and game change. Just let's talk about the things you guys, it's sometimes I use those words, but it's podcast. Yeah.
+
+Emmanuel - AXONE 
+No, no, no, no. Yeah, but no, it's true. I think that what we are bringing is not so technological because what is very funny is that we are using very, very old technologies. I mean, for example, I mean,
+
+On AXONE, we have three pillars. And the first pillar is the ontology, which is based on the web semantics. like RDF or stuff like that, which is very, I mean, it's the base of the internet. So it's the roots of internet. It's very old. It's 30 years old technologies. Then we have like another pillar is enabling to create rules and governance side of things. And for that, we are using a Prolog language. Prolog is a very old language from the seventies.
+
+So we are not inventing things, but we gather elements in a certain way, with a certain idea, to allow people to build new things on the top of it. And I think this is quite resilient and interesting because we are not relying on one technology. We didn't invent one new technology. are just combining some features and bricks of several technologies.
+
+to allow, with having in mind the fact that we will be able to allow people to create new things on the top of it. This is, I think this is something that is making us very resilient because when I started this project five years ago, we were not talking about AI, we were talking about data sharing. Ok And now we are talking about AI and...
+
+This is a perfect technology for AI. mean, AXONE is a perfect protocol for collaborative AI because there is a need of collaboration. Because the point is that we are not focused. And this is maybe one of the strengths of the project because the founder of the project is not a tech guy. He's rather an anti-expert. And and he had in mind, I I had in mind to say, can we use the blockchain technology to share
+
+Emmanuel - AXONE
+digital resources without exchanging them. And whatever is the technology we're talking about, data sharing, edge, AI, whatever, I mean, it works. And this is what is making the project very resilient, I think. And I'm very proud of it, I have to confess.
+
+Citizen Web3 
+I think that that in my personal opinion, least, it takes determination to invent something, but it takes a genius to put things in the right order that exist and see them in a different light. I Bitcoin didn't invent anything. mean, yeah, consensus computing came out as a result and timestamps came out as a result, provable timestamps, but Bitcoin just put the technologies in the right order, existing things. So yeah, I don't think that's a necessary...
+
+Emmanuel - AXONE 
+Yeah.
+
+Yeah, I like it. This is a very good example because Bitcoin, when you are taking Bitcoins, you can tell the story of Bitcoin from several points. I I like to tell the story of Bitcoin from an accountant point of view because Bitcoin is the perfect expression of the of the third party accounting. But you can take also Bitcoin from the, you can start the tale of Bitcoin from the the cryptography side of things.
+
+or the digital side of things. I mean, yeah, definitely. This is a very good example.
+
+Citizen Web3 
+Do you think that it can potentially lead to a data issue in terms of privacy? what I mean is today, for example, we can see, I I spoke recently to a couple of people from Monero and I spoke recently to a couple of people from Dune Analytics and
+
+You know, it was crazy to hear the guy from Dune Analytics, Boxer. He's considered to be like in Web3, one of the legends of data, you know. And, you know, it was his sentence that he said to me something like, to me, it takes seconds to find out anything about anyone, pretty much, if you use the blockchain. Like he says, I'm not going to do it because I'm the good guy, but it'll take me seconds, literally. And if I get hired, I will do it. So this and then I was speaking to Francisco Cabana recently from Monero as well. And, know, in
+
+and a couple of people from Bitcoin and all of them agree that this industry has the surveillance industry, sorry, on top of the blockchain industry has become in a sense, is becoming larger than the industry itself. So can such things as data driven models lead to a worse situation or are we actually gonna make it slightly better by teaching people that, know,
+
+you need to keep your data, use your data, and so on and so forth. This is a two-way stick kind of thing, so I'm curious about your opinion.
+
+Emmanuel - AXONE
+I think they are right because I as soon as you have, mean, first of all, it's very important to understand that as soon as you are putting things into data, you are making things. What I want to say is that, you know, this is what happened for the Nazis in Germany, because the people were normal people and they were killing millions of people because these people were killed, there were only figures on sales on tables.
+
+And as soon as you are making data upon things, they are becoming things and not human beings anymore. So I think this is a very, this is not at all a technical question. This is a very political question. And I'm proud now to be a European because I think tech as I mean, tech is a politics, tech is a political thing in the sense that
+
+Yeah, I mean, today you have data everywhere and there is data. I mean, I'm sure that before this interview, you went on the internet and looked for Emmanuel, who I am, what I doing, what I wrote, what kind of posts I made. So I mean, of course, and if by any chance, I mean, you can identify, I I will launch a token, so I will be a member of the team of the token. So there is only a few wallets who can belong to me. So you can follow my...
+
+You can follow also my trace on the blockchain, even if it's anonymous. So yeah, I'm sure. But the question is, this is not because this data are available that you have the right to use it. And I think this makes a huge difference.
+
+Citizen Web3 
+You're not going to believe how crazy Grok3 is. mean, it's absolutely crazy with the right questions, with the deep search and thinking. I'm talking about finding information about preparing for interviews. Of course, I have a PA on the team who helps me, you know usually traditionally to put in questions together and get information. And of course I do my own research, but with Grok3 coming out, that thing has became... I mean, I'm not a big fan of proprietary software, but...
+
+I have to give it to Elon Musk here, because the dude that created the model that is up the game completely changed the game. It's crazy what the information is. It's crazy the amount of questions it can suggest in one prompt to ask a certain guest. Like really Of course, I'm not the kind of person to trust it, so I will go and double-check. I'm also a bit of a boomer. So you know I'll go and double-check, but it's crazy how right it is. It's absolutely...
+
+Terrible that that I'm shocked, you know, I look at it and I'm like, wow, know I don't have to check it because it's just giving me pretty much more or less the information I want
+
+Emmanuel - AXONE 
+Yes, but nevertheless, I mean, we had this interview. So even if you prepared and you dig to see who I am, then there is nothing but the conversation that we have now and the moment that we are living about this. And I think, yeah, I mean, this is acceptable. And we have to understand that the data are not the people. This is something.
+
+Citizen Web3 
+You know what?
+
+Citizen Web3 
+have a question for you that was born out of what you just said. Do you think that it's in the future? mean, you can see me right now and I can see you, but this is an audio podcast. And do you think that it's fair, for example, in two, three, four years to say that for the listeners, they won't be able to tell whether this is an AI agent having this conversation or whether this is actually me and you having this conversation unless there is a camera on? And even then, I mean, you could easily deep fake it, right?
+
+Do you think that there is a border to which we should like, you know, do people need to know and have the right to know? they talking to a human, to an AI agent or it doesn't matter in your opinion.
+
+Emmanuel - AXONE 
+There are several questions in the same one. I don't know if it matters. I don't know if it matters. You know, I wrote an article about that, because I'm very interested in the interaction between humans and machines. And I think most of the people say, no, there is a fight, we have to know that it's not a human being and that it's not a machine. But the question, the real question is that
+
+Citizen Web3 
+Sorry.
+
+Emmanuel - AXONE 
+I mean, I know that I'm a human being and what is important in my interaction with you is what I am telling to you for the listener and I think that the real question is not Is the other important or I mean maybe it can be very egocentric but I think at the end The individual is something very important. And what is important is that I have to be true it will be it will be a problem if
+
+I am letting an AI answer at my place. This would be a problem. know, this, this, and I will take the question on the other side. Like, yes, if I let an AI answer in my place, I have to tell it to you because I cannot let you think that it's me, but it's not me. It's just my AI double. So this is important. But the rest.
+
+And so if we are going to the reverse, so you will tell me, it's not me because I don't have time to ask you question. So it will be my AI. So probably that the interaction will be a little bit different because I will know that I will not talk to a human being. But nevertheless, there are a lot of experience that very quickly, I mean, I'm saying thank you to Chad GPT when he's giving me an answer. I'm saying hello. I'm saying please. And not the...
+
+Not only because I'm polite, because you know, you have to know that if one day the machine are taking over a human being, they will remember who has been polite with them.
+
+Citizen Web3 
+At least they say please, at least they will say please and thank you, right? No, I'm the same. I'm the same. think it's our generation thing, man. I think it's just like we were just like that. But you you mentioned egocentrism. And in my opinion, just to say that, just to finish this topic off and jump back to AXONE a little bit, you know, I've always said that in my opinion, the world would have been a much better place if all we have taught kids at schools would be just one thing. Love to learn yourself.
+
+not somebody else, yourself. I think as a society we made egocentrism such a ghost hunt or witch hunt. I don't understand why. I mean, if you want to succeed, you have to love yourself. If you don't love yourself, if you don't focus on what's good for you, you cannot do good to anybody else. I it's just a simple two plus two for me.
+
+Emmanuel - AXONE 
+Yeah.
+
+Emmanuel - AXONE 
+Yeah. And this is, you know, there is a beautiful movie that I love is The Creator. I don't know if you have seen this movie. It's a movie from the actor is John David Washington, the son of Denzel Washington. And it's about the war because there is the US completely banned the robot and the AI and the rest of the world is, I mean,
+
+collaborating with AI and there is a kind of animism with AI and it's interesting because the Asian people are easier because they are animists. And so as you are animist, mean, a stone can have a soul, so why not a robot? And they are gathering with the AI and with the robot. And I think this is something, a proof of humanity to be able to accept the other as a different person. I mean, if you are accepting the other,
+
+I you are, if you, know, I mean, look at people who are, have bad behavior with animals or people who have bad behavior with robots and with things, at the end, have bad behavior with themselves. So, I mean, you know, there is that kind of way of thinking. So I think, and, you know, I love, I love the fact that in chess, because now, I mean, for sure, the machine is better than human being in chess. Okay.
+
+Citizen Web3 
+It's my.
+
+Emmanuel - AXONE 
+But what is very interesting is that now you have teams who are combining human beings and machines and they are calling it Centaur. And this Centaur's teams are very elegant. That means that they are cleaning the game of chess of any mistakes. They are not making mistakes. This is just a field of creativity, inventivity without mistakes. And it's great. And I like this point of view. Yeah.
+
+Citizen Web3 
+I've never heard of this, this is amazing. I've never heard of this by the way. What's it called again? Centaur?
+
+Emmanuel - AXONE
+Centaur, the mythological whore. mean, it is a body of horse with a human body. And I think this is interesting, too. Of course, this is not perfect, because people can say, if you are an advocate of the devil, can say, but mistakes are very interesting because you can create things also. Yes, it's true. But specifically in chess games, when you have mistakes, it's
+
+Citizen Web3 
+Yes, yes, yes, yes, yes, I understand.
+
+It's in Centaur.
+
+Emmanuel - AXONE 
+it's spoiling the game, you know, because, but without mistake, it's making the game very elegant. So it's in that field that it's interesting.
+
+Citizen Web3 
+It's also curious that you mentioned animal cruelty. don't know if you ever read Arthur C. Clarke, one of the most, know, like I would say for me as a kid, it was one of the most renowned sci-fi writers. I remember very well this beginning of one of the, I mean, doesn't, stories, not books, it's stories that are more or less short. But one of the most ones that in my memory was, you know, like aliens come into earth and all this big.
+
+spaceships landing in the main cities and before they even talk to humans, before they do the first initial contact, what happens is all of Earth, the aliens look at the Earth and what they do is they cause every single human who has ever caused pain to a living animal the same amount of pain for all of their lifetime and only after that they decide to talk to humans. They're like, okay, now that you experienced that, we can talk to you. So yeah, I totally understand.
+
+Emmanuel, me jump a little bit back to AXONE just because I want to ask at least one more thing because it seems that what you guys are doing, not seems because, mean, we are also involved in Citizen Web 3 and AXONE, but you guys are working, obviously, and building something that is a multi-chain product. And in my experience, being here, whether it's with Citizen Web 3 or the projects have been...
+
+involved with previously Cosmos, for example, or even before that in 2016-15, I've noticed that communities, these industries are, well, it's a very difficult topic, a very difficult topic. They are very protective, very defensive, very... How to say? What's the right word here? Well, let's just stop here. How do you, how do you manage to, or what is your plan to remove the tribalism?
+
+And actually, because I understand, at least today, looking at the last 10, 11 years of blockchain, I can definitely say that a lot of blockchains have failed because of that. So what...
+
+Emmanuel - AXONE 
+This is a very interesting question. first of all, we have chosen the cosmos. Can you hear me? Because I think I have a lag. I'm sorry. I have a lag. yeah. OK, perfect. Yeah, so the...
+
+Citizen Web3
+One second, no, no, I can hear you. I can hear you. I can
+
+Yeah, so.
+
+Emmanuel - AXONE
+The question is very interesting. Once again, I will give you my own point of view. We built Axon on the Cosmos SDK, not because of the Cosmos community or not because of the community, but because of the the practicality of the things. Cosmos is great because you have this Cosmos SDK which is allowing you to create your own chain. Because it was important for Axon to build on this own sovereign
+
+sovereign chain. But then I think this is the same people are mixing a lot of things when they are thinking about blockchain, because you have, let's say, the main chain where you can do everything, the environment like Ethereum, Solana, this big network. And there is a huge competition between this big network to be the best one. And besides, you have also the Bitcoin maximalist.
+
+Because for the Bitcoin maximalist, there is Bitcoin and the rest are the shitty coins. But I think this kind of curl are not so... I'm not interested in this because I didn't choose a blockchain for the community. And the community that I'm building, I'm not building the community to have my blockchain over the others. I'm just using the blockchain as a technology. mean, if tomorrow there is another better...
+
+chain who are offering what we can do easily, cheaper, whatever, with more security and so on. We'll go on the other blockchain. Blockchain is just a technology. And then you are building your project and then you are building your community. And the purpose is for what? For example, in Axon, this is also something that we are very resilient in, is that we don't want to overpass
+
+or the other project. We are here to bind all the projects. So the more projects there will be, the more bindings and bounds we'll be able to create. So my goal is not to be on the top of the others. So if you have... And I think, for example, this is very interesting to see how Vitalik Buterin is acting and his behavior and what he's a builder. He wants to build the best effective environment and network.
+
+Emmanuel - AXONE 
+for users and for developers to give them the opportunity to build new things on the top of it. And I think this is the same for us. And this is acceptable. And to find the beems and the bounds between project and to see how we can together build something new. If your project is to create a new siloed and to, let's say, kill all the other, I think for me, this is not the knowledge economy. The new economy is the knowledge economy.
+
+Emmanuel - AXONE
+And in this knowledge economy, to share means multiply and not divided as in the normal economy. And if you are in the tech and the digital world, if you don't understand this, I mean, you are missing something and you are for sure will not succeed.
+
+Citizen Web3
+I've never actually heard the term knowledge economy before so this is the first time I hear this is actually very interesting. 
+
+Emmanuel - AXONE
+Yeah. This is a very interesting concept because, know, specifically with the data, the data are non-revolved goods in the sense that it costs nothing to duplicate the data. That's why NFTs are existing. That's why it's so important because, I mean, I have a data. If I want to share it with you, I will send it to you, but I will have no proof that you will not make a copy of this and sell this data over the world. And this is a problem.
+
+So blockchain is here to help to solve this problem. And this is how we are using blockchain technology with Axon.
+
+Citizen Web3
+Emmanuel, let me jump from here into a blitz with you. I have three questions. The questions are made to... They are a bit weird. I'm going have to warn you. I call them blitz. You don't have to answer quickly. But the idea here is to take us out of the blockchain conversation and to kind of lend us and to finish it off on this note. So first question, and they're to get weirder. I always warn my guests, they don't believe me, but they're going to get weirder. So first one is easy.
+
+Citizen Web3
+Give me either a book or a movie or a song that has a positive influence on you for what you do in terms of work throughout, I don't know, the last five years, let's say.
+
+Hahaha
+
+Citizen Web3 
+Doesn't have to be in five years. be a book you like. Could be a book you like or a movie. I mean, you mentioned a lot of them already, but something that is particularly related to work, which helps you to get the best results.
+
+Emmanuel - AXONE 
+with work, to work, yeah.
+
+Emmanuel - AXONE
+I think the book was about the category marketing. And I have to find back who is the writer because I forgot who is that guy who made the category management and category marketing. This is something very, very interesting in the sense that it's reviewed completely the mind of...
+
+how to, let's say, appreciate the marketing and the development of a product and of a project. think this is something very, very interesting. There is a lot of books about category management. And wait, I do remember the title. was...
+
+Making Think Bigger. don't know if you... Yeah, Think Bigger. And the book is... Yeah, it's... Wait, I will tell you the author. Yeah, Think Bigger. The author is  Sheena Iyengar. Sheena Iyengar , yeah.
+
+Citizen Web3 
+No stress, no stress. The author is  Sheena Iyengar. This book was very interesting. Next one. In business, mean in work and business side of things. Next one. One motivational thing you can share that... And you kind of have throughout the conversation to be honest, you kind of answered it, but still I'm going to put you on the spot.
+
+Emmanuel - AXONE 
+This book was very interesting. In business, mean, in work and business side of things.
+
+Citizen Web3 
+One motivational thing that you can share with me and the listeners that keeps Emmanuel waking up every day, being happy with his life, keep on building projects, no matter FTX crashes and lunar crashes and everything else, keeps the focus on the things that he believes in and yeah, just be yourself, be in yourself.
+
+Emmanuel - AXONE 
+Yeah. So I am a basketball player and there is very important basketball player, which is Kobe Bryant. And this man was amazing. And he had an interview because at the end of his career, he had made a lot of interview and become, and I'm thinking about him a lot. said that failure doesn't exist and it's true. That means that, I mean, you know, what is making you sad? What is making you fear?
+
+It's the fear of fail, of failure. I mean, he says something very interesting, know, take it reverse back instead of talking about failure. said, okay, hey, take the fairy tale. Okay. The fairy tale, this is bullshit when you're telling fairy tale to your kids, because when you're saying, they lived very happy and had a lot of kids. This is not life because the day after the man is sleeping on the couch.
+
+and the kids are crying, they are shitting everywhere, and this is the mess. This is not life. I mean, neither the happiness, the full happiness all the time, neither failure exists. The failure just exists because you are declaring it. You say, failed. And this is, mean, this relationship to failure is something very important, and it helps you to persevere. If you want to persevere, if you want to do it, you are never failing.
+
+There is no failure if you are perceiving it. And the difference between the people who are successful and the one who are not successful is because the one who are not successful decided that they failed. Because as long as you are fighting for something, you can succeed. And when you understand this, nothing can stop you. Of course, I'm coming back to the beginning of our interview.
+
+Emmanuel - AXONE 
+That means that you have to know what you want to do. Because if you are persevering in something that you don't want to do, then you are burning out.
+
+Citizen Web3
+There is an interesting thing in in the Russian language. All the fairy tales, they usually end with the sentence. It doesn't matter if they translate it or not, they put the sentence. And... Which means the fairy tale has ended and who listened was a good guy. And then when we all grew up, there was a very peculiar thing we kind of understood.
+
+I mean all the fairy tales all the stories end with them to getting together getting married and having loads of kids and then it says Here is the end of the fairy tale. It's kind of a hint. It's kind of like guys Don't do that. Leave the fairy tale until then then if you go on it's it so but no, I I'm joking of course, but yes, it happens exactly But like, know in reality that said shit happens I think that this is kind of the point that that if you join them together and last question I mean you kind of
+
+Emmanuel - AXONE
+Shit happens.
+
+Citizen Web3
+Partially just answered it, but I'm still gonna ask it because sometimes it could be a different answer. so I don't believe in gurus personally, but Not a guru but a personage and you kind of of course spoke about which or Brian there but Kobe O'Brien sorry, but still you know a Personage dead or alive made up real fairy tale brother sister developer doesn't matter not a guru
+
+a persona or a persona who you when you get stuck like when you're failing and you're like, okay, that's like, that's it. It's not going anymore. It helps you to proceed. Just thinking about that persona or persona and what they would do. And again, it's not a guru. It's somebody that helps you to move from a stuck place.
+
+Emmanuel - AXONE
+Yeah, yeah, yeah.
+
+Emmanuel - AXONE
+So definitely Kobe Bryant is that person. And this is only the sentence which is coming to me that failure doesn't exist only if you are deciding it. And you have to take a big breath and say, what do I want to do? What I really want to do? And just engage and be persistent.
+
+Citizen Web3 
+I think that if most of, know, if not most, but in my opinion, I'm sorry to say this to founders that are listening to this, but in my opinion, if half of us just engage and listen, I mean, I'm talking about founders and Web3, we would really succeed. So thank you for saying that. think that, you know, that little tiny thing of engaging, listening to yourself and understanding what you want, I think makes a whole lot of a difference. Thank you for saying that. It's a very good, very good point.
+
+Emmanuel - AXONE 
+You know , I think there is a really... People are doing very often a mistake, which is to mix the goal and the aim. I mean, the objective and the results. In the sense that being rich, I mean, it can be an objective, but most of the time it's just a result. It's the result of what you are doing. And...
+
+I mean, your objective, I mean, yes, there are people who love money and they just want to be rich. So there are means to be rich. But if you are doing Axon in order to be rich, it's just the success is not here. The success is what you will achieve. And maybe if you achieve something, then maybe the results will be that you will be rich. But it's only the results. It's not the objective. And I think it's a huge difference.
+
+Citizen Web3 
+I can't believe that I'm going to agree on your last thing. I'm joking, of course. I just became devil's advocate. But of course, I think that it's one of those things that I've been honestly saying this so many times in my life to other people.
+
+that I'm a bit shocked of hearing now being said to me because I think that this is half of understanding of success in my opinion, that not mixing up goals and aims, you know, just having the journey and your aims, so to speak, they will happen because you're achieving your goals. But if you mix them up, you won't achieve them. You will just be forever in a hamster.
+
+wheel forever and people I think miss out on that. yeah, once again. Emmanuel, I want to thank you once again for all your answers and for sticking to the question. 
+
+Emmanuel - AXONE
+Sergey, it was a pleasure. It was a pleasure.
+
+Citizen Web3
+Please don't hang up just yet. This is going to be a goodbye just for the listeners. I'm going to still steal one minute of your time. For the listeners, thank you very much for joining. Emmanuel, thanks. 
+
+Emmanuel - AXONE 
+Thank you everyone for the pleasure. Thank you. Talk to you soon, Sergey. Bye bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

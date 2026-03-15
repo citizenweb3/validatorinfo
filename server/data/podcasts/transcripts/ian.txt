@@ -1,0 +1,428 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/ian
+
+Episode name:
+Nothing is Unbreakable, Orchestrators and Politicians with PFC Ian
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 Podcast. And today I have Ian from the Panemian Flower Corporation with me. Ian, hi. Welcome to the show.
+
+PFC 
+Hey, thank you for having me. Welcome. So yeah, I'm Ian. I'm from the Panamanian Flour Company or PFC for short. I'm one of the validators on several Cosmos networks. Been doing it, I think, since 2021, a couple of years now. Started off basically as a hobby and...
+
+the actual name started off as a homage to the person who introduced me to Luna at the time, because that's where I was, a guy called Pete. And he's still around somewhere, but he's basically, I had to change things up. And yeah, it was started off as a hobby, just on a single machine and it just kind of expanded. So I think I'm on 10 or 12 different networks now and I...
+
+host other people's validators as well for them. So I try to keep that confidential and stuff like that. But yeah, I mean, I started hosting others when the original Terra crashed. So they basically, Coinbase was saying, we don't want to have anything to do with it. And there was, I think, five or six validators who still wanted to validate. So I offered them an option to do that. And I think five of them are still with me.
+
+and still validating on Terra 2 and other networks. So yeah, it's been good.
+
+Citizen Web3 
+I'm going to dig into a little bit of those because I had some of them already. Those topics also prepared. So I'm going to dig into some of them if you don't mind. Of course, feel free to pivot from any of them if they don't feel something you fancy talking about. So the first one is the name, of course. Come on, man. I said corporation there, but of course company. Yeah. Yeah, still stays the same, right? So I mean, come on, it's a nice, it's a cool, it's ironic and an interesting name. So.
+
+PFC 
+Yup.
+
+PFC
+corporation company, it changes.
+
+Citizen Web3 
+Tell me let's dig into it. Come on. I want to dig into the story Maybe maybe tell a little bit about what the panemian flower companies to the listeners if you fancy and then
+
+PFC 
+Okay, okay.
+
+PFC 
+Sure. Okay. So I originally started the validator as Pete's fan club. So Pete was the one who came on there and it was more a nod. The logo was somebody in the jazz, in the swing scene and he likes that. So basically it was more just to play on, just to just take the piss out of him more. And he was also running a validator and he was okay with it, but it was kind of, it was getting like, he was getting sick of it.
+
+So I just changed it to PFC. It's changed names to millions of different things along the way. My more favorite one is the porn fan club. I had that one for a while. And yeah, but basically every once in a while it moved around into different things. So the story behind the Panamanian Flower Company or corporation, it doesn't really make a difference.
+
+is I had to register my company. So this is all like most validators were a business. And so we registered in Panama and we needed to come up with a name. So the actual name of my company is AAA Flowers. I don't think hopefully that's not too confidential, but the A's come from my daughter's names. That's the first letters of their names. I've got three daughters, three A's. And my stepkids have flowers in their names.
+
+as their middle names. So it was AAA Flowers and I'm in Panama and Panama Flower Corporation or company is how it came.
+
+Citizen Web3 
+No tax evasion stories. I'm sorry, Ian. Come on. I mean, with the whole this big bank.
+
+PFC 
+man. I just had, it is so painful doing the right thing. They don't make it easy. so I have to go and lodge, you know, my, my taxes are in Panama and I have to go and do it. I'm sitting in the U S I'm not actually American, but I'm sitting in the U S and I have to lodge them there as well. And they're going, well, we just need every transaction that you've done according to the business, every single.
+
+Citizen Web3 )
+Ha ha ha
+
+Citizen Web3 
+Of course, of course, of course.
+
+PFC 
+transaction, I was going, I do around 30 of those a week. And he goes, yep, that'll be nice. and just rack them up and, you know, dealing with that and trying to get a good accounting company, trying to get a good legal lawyer to do all this stuff is interesting to say the least. so I do that. I mean, that was probably the biggest joy is, you know, it would have been so much easier just to keep this stuff off the books.
+
+Citizen Web3 
+Absolutely.
+
+PFC 
+but eventually it has to come into the real world. And I'm not full time doing this yet. I'm very close to quitting a day job, which I do. I do actually consulting on the side and basically just trying to do this full time. If the market didn't dump as much as it did, I'll be further along my way. But Bitcoin being at 60 or 61 or whatever it is, is not helping.
+
+me to be a full -time validator.
+
+Citizen Web3
+I can totally understand a lot of the things you say there and we're going to go into some of these topics, of course, but just a note for the listeners guys to remind you everything we talk about, including the Panama Flower Company. And I don't mean just the validator. I mean, the story itself is going to be on the show notes. So if you fancy reading and I guess my next kind of question to finish off this topic, it's kind of a little bit related to, I guess, Julian Assange, right? He was released a couple of days ago and there is a big relations between that and that.
+
+I don't know if that's a topic important to you, is it something that you follow, the Julian Assange case?
+
+PFC 
+Well, yeah, I mean, we both have white hair. We're both from Australia. So we're basically like, you know, together, but, yeah, of course I followed it. he did something which I thought was positive. He basically let information free and exposed the politicians for the useless. can I say cunts on this? okay. the useless cunts that they are.
+
+Citizen Web3 
+You can say cunts as many times as you want.
+
+PFC 
+And most of it, yes, there was a military thing, but most of it was exposed as just how pathetic they are and how they just talk. And these are supposed to be professionals and all they're doing is having little gossip sessions with everybody else. And it was more embarrassing to the government more than anything else. I mean, he got stuck in Ecuador for a while. Now he's free. So I'm happy for that.
+
+just looking forward to him having a relaxing life and seeing his kids and just having some time to just touch grass. And I'm sure the next thing he does will be more interesting and it probably won't be under his name. He'll probably be a little bit more anonymous. But the other thing I really hated about this was the lack of support from the Australian government. He's an Australian citizen and they were nowhere to be seen. So.
+
+just goes to show you how much, you know, the U S government may suck, but when they have their citizens incarcerated in different places, they actually do something about it. The Australian government really doesn't. yeah. And one other thing, just going back on the, the history of the PFC is I actually worked at a Tara for a while. And when the head hunters came in, they were going, they were telling me about this network and Luna and all this kind of stuff. And the reason I really got the job.
+
+was, hey, I had some background, but they didn't know I ran a validator. And as soon as I ran a validator, I spoke to Doe and he's like, really? Okay. And I think that really sealed it. So that was probably the way I actually got into the Cosmos networks as well. Yes, I ran a validator. That helped get me a day job in an L1. And I still have a lot of those connections and they're still great, you know, still hang out with.
+
+them when I can, they're still great people.
+
+Citizen Web3 
+A lot of the Terra events, we discussed them so much, I think, on a podcast that there has been so many opinions that I sometimes like, I keep on going back to them and I keep on, there is one joke that I had for a while throughout the podcast and a lot of people, I was always saying, if you ever want to know how to prepare for the bear market, ask me. And people were like, why? I was like, all you need to do is you need to fuck up really badly before the
+
+bear market starts, lose all your money on Terra. That's what happened to us. To be honest with you, I don't know. I mean, I never viewed anyone else apart from myself or in general, in this case, the users responsible because Terra was not lying about anything they were doing. Terra was open source. Most of the things Terra was doing was verifiable and anybody could see.
+
+how the economics were shaped and what was tried to do. It was up to everybody else's decision to use it or not use it. And I was personally using it and I understood the risks. So, you know...
+
+PFC 
+Yeah, I lost 90 % of my fortune and the only person I blame is myself. And I had it all stuck on validating it, you know, staked. So I was just watching it. I was in Australia and I think it was 6 a in the morning or 7 a in the morning, just watching it and going, well. And, but yeah, I've got, you know, I don't think anybody did it to us. I think it was, you know, it was an
+
+Citizen Web3 
+Absolutely.
+
+Citizen Web3 
+Absolutely.
+
+PFC 
+It was a financial arb play. It was some big investors, government, whatever. They looked at it and they said, there is this much Bitcoin available. If we short Bitcoin or short UST, they will sell the Bitcoin, which will make it easier for us to buy. And they basically had a position and they just spent billions of dollars. Nothing is unbreakable. It's just how much money you need to spend. And I'm still thinking that, you know, I think he was unjustly accused.
+
+Now he wasn't actually accused, I think, for breaking that. He was accused for the fraud to start with it. So as he was doing all the market hype of saying, this is a wonderful thing, that's what he was accused of and what Tara was accused of. And I don't have an opinion on that. I wasn't there. I didn't see any of that kind of stuff. But I don't think Doe did anything specific to hurt people. He was never there to fuck people over. I think he was fucked over in a big way.
+
+but it is, he is sitting in Montenegro. Hopefully he'll come out of his house one day and say hello to everybody. And again, hopefully, you know, he's got a little kid, you know, he basically, I think his kid's called Luna and hopefully he's spending time with them and his wife and doing what he wants. And he's basically being healthy and stuff like that.
+
+Citizen Web3
+actually brings me to a topic, an interesting topic. And I guess it's kind of like, I don't know if there is so much a question in it, but I will direct it at you. And I'm going to relate first, what I had in my head and what we just talked about. So we talked about Joe and we talked about, you know, like whether he was fucked or whether he was fucking people. Not the point here, you know, we cannot get to the truth. The point is that Web3 for a founder
+
+or for anybody running their business in Web3 can have certain implications. Now, when I go to research information about every guest I have, usually I do like a small research online. My team helps me also. And to me, you are kind of as a founder side of Anonymous, which is a good thing in my opinion, by the way. There isn't like much information about who is the founder of PFC or the founders of PFC. It's up to the person to do that little research if they want to. So the question...
+
+It's not so much a question. It's more of a like, yeah, half a question, half a statement. What do you think? Do you think that people who started their business in Web3 should take the precautions and, you know, regardless of what they do and stay either anonymous, upset or anonymous, or, you know, be open to the world and take the risks of, you know, one day America or yeah, sorry, gone.
+
+PFC 
+So, okay.
+
+Yeah, cool. So first of all, I have been doxed twice. People have actually figured out who my identity is twice. And that was annoying and a bit scary when you get an email to your personal email address saying, hi, I'm not going to tell anybody, but I know who you are. Mainly because sometimes you have to make unpopular decisions as a validator. So you have a group of people who basically want this app given a grant to. And if you say no,
+
+you get all these hate mail. You really do. I've had death threats sent to me. I mean, they were pathetic death threats, but they were death threats nonetheless. So I'd prefer not to expose that. And the main reason why, I mean, as you can tell, but other people probably can't, is I've been around the internet for a long time. And one of my first experiences around there was having my domain name hijacked. And a sp -
+
+speaking to the hijacker, trying to get it back. And he started talking about my kids. And it was like, I don't want anybody to do that kind of stuff. And so what I did is everything I try to do is anonymous. I've tried to unlink my, you know, the stuff I do in crypto with everything else. And I've also got my kids to have a modicum of privacy. So there's not that many photos of them online at all.
+
+So if you search for them, it's going to be very challenging to start with. So I've seen what happens when people are out there now as a founder of a defy application or something where you hold other people's money. Yes, I think it's very important to have some names and some real people, but frankly, it doesn't matter because even if you knew my name was Joe blogs, you don't know my criminal history. You don't know anything about me.
+
+PFC 
+and you don't know really that much around me. So for example, there was one of the other founders whose name I'm not going to, whatever. He was apparently a builder who got accused for ripping people off. And I don't know if it's true or not, but these are some of the things in there. And, you know, his product is great. I don't think, you know, from what I can see, he hasn't ever ripped anybody off in the crypto space.
+
+but these are some of the rumors coming across. So, and also my dealings with terror, I didn't want anybody really to know who I am or what I am. I didn't give any information to them or minimal information to them when I actually joined because we have government institutions who put people in jail for writing software. And I don't want, I don't write those super private things.
+
+And, but again, that's where they are today. Tomorrow they might decide it could be something else. I don't want to be in that, in that predicament, but yeah, I'm fairly, you know, I've people know me, people see my face. I go to conferences and all this kind of stuff. I just try to keep low key. So I'm not completely anonymous, but you know,
+
+Citizen Web3 
+I guess I was trying to hear the thinking was more general, looking at the... I completely agree with you, to be honest. And lately, I must say that I've been professionally in blockchain for 10 years, roughly, right now, since 2015, so nine working. And I've seen... I've moved a lot of... I used to move a lot until some years ago. I live on an island as well, by the way. We are actually...
+
+Ironically, very far from each other and geographically on the world map, not that far from each other. But, you know, the point being is like the more I've spent time in blockchain, I've realized that in different countries, what I was doing over those nine slash 10 years, the law has changed just in those particular countries about things I was doing. So I was going from black, white to gray areas without changing any geographical location. So, you know, it's kind of like
+
+PFC 
+sequence.
+
+Citizen Web3 
+weirds at one point where you like, you know, I mean, talk about, you know, there is a lot of projects we can talk about and then how they end up and it's just scary sometimes, in my opinion, for a founder to, well, not do anything and then suddenly he's wrong. It's like, you know, presumption is forgotten about here.
+
+PFC
+Yeah. And yeah, it's not the regular people of crypto who I'm concerned about. There are some fringe people who are a bit weird, so to speak. It's more the government institutions and it's not that I'm doing anything wrong. Most of the stuff I'm doing, like everybody else has to go on a tax return and all that kind of stuff. It's more just, there are some weird people and there's some weird laws, even having to incorporate the stuff I'm doing in Panama.
+
+was more because it's legal to do validation over there. It's not legal potentially to do it in America. They've got no laws to do that around there. And in Australia, I think it is, but you have to set it up in such a way that it's painful. I was talking to one of the validators who's based over there, and he was telling me about trusts and this and that, and it was just like, whoa, there's a lot of different things that needs to happen in order just to do the right thing.
+
+Citizen Web3 
+will not unfortunately remember at the top of my head the name now but we have had a few months ago. We had several validators from Australia over the years but there was one and we just this is for the listeners more but if you guys type on search on the on the podcast website and type something like validator Australia maybe they will be because he was talking about the laws if anybody's interested to
+
+go over it like they could go back. But back to you, Ian, like, there's one question I missed. And, you know, we started the conversation. So it's a good thing. When I miss questions, it's a good thing. That means the conversation is going well. Like, I usually try to dig because, you know, the podcast is about really the people behind it, whether they're anonymous or they said anonymous or they just don't show it at all. It doesn't matter. But it's about people. And because to me, you know,
+
+PFC 
+No?
+
+Citizen Web3
+blockchain is a communication tool at the end of the day and it's there to help us remove trust in our communication because we as humans cannot do it in the head. So what was the reason? I mean, nobody and considering, sorry, I did, like I said, I did some little bit background research and you have quite what seems to be some experience working in the internet and in the field and you understand obviously what you're doing. Why Web3? I mean, why in 2021?
+
+PFC 
+and
+
+Citizen Web3 )
+decide to suddenly, I mean, nobody just wakes up. I mean, what's driving you to here? What's attracting you to this industry?
+
+PFC 
+Okay.
+
+So yeah, I joined the Cosmos area in 21. Before that I was in EOS and in other networks. I've done other different jobs and I'll try to just keep it at that level so that you don't, so people can't put two and three together. But I came in mainly because of banking. I don't, you know, there's stuff like how banking operates and the 90 % profit margins that they have just seem ludicrous and...
+
+It was more like in web two, they dissent immediate. They basically removed a lot of the middlemen in the retail and the wholesaling their area, disintermediated a lot of those things. And basically the Amazons came in and those kinds of things. So it could be done. And I saw web three is, is doing that. And it's still hold hope that it'll be easier to actually move money around on in crypto than it is by regular banks. So, and at the moment it is,
+
+If I need to move money to Australia, I can basically shove, you know, Fiat onto Coinbase for lack of a better one, transfer it across to another exchange, which has an Australian link, and then send it to my Australian account. I can do that within minutes. Okay. And not now, I don't necessarily have to upload or do Fiat backwards and forwards. I can just do that. And if I wanted to do that using the wire system,
+
+it would probably cost me about the same money, but it'll take me weeks. So that was one of the things. Even getting a home loan or getting, you know, getting lending. So yes, you have the billionaires who don't have to worry about this, but this is where I'm seeing that the next thing, and this is potentially why the regulated stuff is of interest to me as well, is I have assets, real world assets. I would like to put them up as collateral and then get money against it so I can buy a house.
+
+PFC 
+Okay, so for me, the blockchain is, it's not, hey, yeah, great, I'm doing it using a blockchain. It's more, I want to be able to get a cheap rate to basically borrow money to get a house. And at the moment, the only people I can borrow from is banks. While there's all these other people who are fairly well off or mediocre well off, who could potentially put their money into a lending pool and provided that I check out, I've got a good credit history and so on, they can lend me the.
+
+And they can do it at a cheaper rate. So sorry, they can do it at a better rate than that what they would get if they deposited the money in the bank. Right. And I can get a better rate than if I lent money from the bank. I'm happy. They're happy. And that's where I see the, the defy and all those things are happening. Not the, let's go and, you know, farm this or do Delta neutral strategies on that or do that.
+
+This is basically where I'm trying to push. And those are the kind of applications that I really enjoy seeing, where it's the regular person or a small business.
+
+Citizen Web3 
+If you were to summarize your view on banking and crypto, which one of the two sentences is closer to you? Bank then bank or unbank the bank?
+
+PFC 
+Unbanked, unbanked the banked. Yeah, I mean, there's a lot of different, you know, people out there doing stuff in Africa and there's a lot of stuff going on in Africa, which is basically how I see the unbanked, which isn't true. I mean, there's a lot of unbanked in America as I usually walk past them, but it's just the regular Joe trying to get do his job. You know, it doesn't give a shit about blockchain this blockchain that.
+
+Citizen Web3 
+Yay! Yay!
+
+Citizen Web3
+Yay.
+
+PFC 
+He just wants to get along with his life. He gets paid. He wants to go buy a house. Why is he paying so much interest or so much money just to do those things? And I don't know if you've ever filled in the house or bought a house or bought something, but it is just like, I don't know, a room full of paperwork you have to sign and the amount of shit that they need to do just to get a loan. And, you know, it was a small loan. It was...
+
+you know, it wasn't that big a loan to get this place compared to Australian real estate, but the amount of shit you had to go through and that was just annoying. And yeah, so for me that, that is probably where I see the DeFi going and moving. And it may not happen to the, to the regular Joe first, but what I'm seeing is lending pools. So for example, institutional lending. So if I basically own a farm and I want to borrow money, there is that kind of, there's
+
+group of people out there who is lending money to a farm to do those kinds of things. And there's a group of money, a group of people who are willing to put money in that the farmer can borrow against. So these are the things which I find interesting. The derivatives, the perps and all that kind of stuff, they're cool. I actually used to work on a futures and options trading desk on the tech side. So yeah, I've seen these things before. They're cool, but they're very niche.
+
+That's not going to, they're not the ones that's going to change the world. It's going to be just you go in there, you use a debit card or a credit card and it hits your credit, your crypto thing. And I've got one of those things and they work great. You know, so at the moment, most of my infrastructure is paid for by crypto using a crypto wallet, a crypto debit card. So it doesn't actually touch the banking system at all, which I find quite amusing.
+
+Citizen Web3
+I have like, there is a lot I can follow up from there because I wanted to talk to you about as well a bit economics and RWAs, but before that, I still, if you don't mind, if you like questions about the validator. Well, first thing that I wanted to ask was you mentioned several times the infrastructure and hosting and you do some tooling as well.
+
+Now, first question, by the way, that I've actually, ironically, I don't think I've ever asked anybody because I had a lot of validators on the show who talk about white label or hosting other people's validator in normal people's words. I'm curious, as a validator, we are a bare metal validator and we run about 20 chains. We run on our own bare metal, not in a data center. But I'm curious, let's talk a little bit about white label and how
+
+PFC 
+Mm -hmm.
+
+Citizen Web3 
+If you can, of course, how profitable is it for the operator themselves? And what is the other perks or cons, maybe even what are the cons potential that an operator could get?
+
+PFC 
+Okay.
+
+All right. So first of all, I don't, so one of the key things about white labeling, and I'm sure you do these things as well, is we're non -custodial as much as we can be. So when a validator comes online, we basically have the Tendermint key. We give them that and we give them instructions on this is how you can create your node. So we never touch the money. We never can influence voting or anything like that. Impossible. We don't own that kind of stuff. And one of the things we built is a website so they can do that themselves.
+
+Now in some chains you can, some chains you can't, but that's where the tooling came in to enable that kind of stuff. So the economics for me is it's basically it's a downward spiral because everybody basically has spare capacity at the moment. And people are just, you know, for some of them, they're just going, look, I'll do it for 50 bucks. I'll do it for 20. So I've got spare capacity. It's not costing me anything. Other people like charge a huge rate. Now for the actual people,
+
+who host with you, the main reason they do it is they have opinions, they have funding needs, or they have something. They're not technically adept at running blockchains. Or even if they are, they've got better things to do with their time. Now, as you're aware, running a single blockchain is a pain in the neck because you haven't got economies of scale. You might have some experience, but you're not really, that's not what you're doing.
+
+Yes, most people can run a single validator node and it's not that challenging running it. So you got high, high availability becomes a bit more challenging. You have to be aware of certain technologies. You have to know what's going on and running multiple chains becomes an exercise in hitting your head against the wall sometimes. So for example, yesterday there was three upgrades at the same time, literally at the same time, and you had to go and do all those kinds of things. And,
+
+PFC 
+Those are the things where the white labeling helps because you basically build the tools and the automation around you. I personally am not a bare metal, own my own hardware type person. I rent hardware from three different providers and I run in five different data centers and I run something called Kubernetes, which I know that you're aware of, but it's basically an infrastructure tooling set.
+
+And shout out to strange love for running the software, but, you know, I basically run that and my nodes, I usually have three nodes per validator. That's just the way I run. And they can basically go through and run. And if one of the machines crashes, it sucks, but the aim here is you wouldn't see it. Now I can do that because at the point I've got like 20 different machines, give or take, and they're running in different.
+
+places, so it's fairly easy for me to do it. Now, before I went to Kubernetes, I was running these manually, and if a machine crashed, it was way more work. So it's just much easier to do these things. And this is where the economies of scale come in. Once you get to a certain point, you can use a lot more infrastructure tooling and automation to do a lot of the stuff. So right now, my machines are in the middle of rebooting themselves for a security patch. And I haven't...
+
+you know, that's probably one of my pain points at the moment with my infrastructure set up because they, they never come back up perfect. So I just need to basically check that and you know, they come back up and something stalled. And so some of the automation things you, is you do the reboots over three days. So you're not ever having all your machines playing around and stuff like that. Or, you know, if you're flying and there's a reboot happening, which has happened, you know, you're not totally screwed up.
+
+But yeah, automation is the key thing. For me, the bare metal, I like running in data centers. I like having the professional or those things. And I can basically, the machine's dead. Great. Get me another one. And not having to drive down to the data center at 3 AM in the morning and basically do a hot swap. And it happens. I mean, these things, this is where my previous life was before we had remote data centers or hosting services when I was back in the internet.
+
+PFC 
+They did that. And we had hurricanes going through data centers and ripping those things out. And I don't want to, I'm not that, I'm not that guy. I'll let somebody else do that. And, you know, so, but yeah, the bare metal thing, I understand. I try to decentralize softball risk and take, take that risk away by using multiple service providers and multiple data centers. So if one of them comes up to me and says, Hey, we don't like you anymore.
+
+I'm going to, that sucks. I'm going to go to a third one. And, and while I'm bringing that one up, the other one, my validator is still run. So a lot of these things are designed. So if a data center goes down, I shouldn't care care being like 24 hours care, or if a hosting provided goes down, then I shouldn't care either. So these are the resilience you need to do. And I'm sure these are some of the things that you're doing as well on bare metal.
+
+Citizen Web3 
+We are crazy. We don't run out of... Well, we do have cloud infrastructure, of course, and several providers, but we run our own bare metal without data centers on an island with Starlinks and solar panels and other crazy things. And it's a crazy story. It's an absolutely... By the way, definitely shout out to Strangelove and the Horcrux team, especially to Andrew and to everybody else. Those guys are doing an amazing work and helping a lot of validator teams too, and a lot of delegators to secure.
+
+their funds further by introducing simple software solutions, really, I think. And because they are simple, they just work great, really. And then but what do you think in general? I noticed that, you know, like kind of well, one thing that sorry, I didn't you didn't answer so much with I still want to ask in terms of the operator as an operator, how profitable
+
+is hosting other validators or is it profitable at all for you? If you want to talk about it, of course.
+
+PFC 
+So, sure, of course. So basically the way I figured it is running other people's validators pays for my infrastructure. So the way I normally charge is flat fee, X dollars a month. Some of them have done commission. They haven't really worked out that well for me, but every once in a while, just like there was a run a one on a Coogee network.
+
+and did him as a commission. And they basically had an airdrop, which just, I think made 60K. They basically got 60K. My share of their thing was like $60 ,000 worth of commission. So that made the entire year. So that all of a sudden went from lost to profitable just in one day. But in general, my clients, I try to keep it reasonable. I've got various things, but they pay for my infrastructure costs normally.
+
+or close, and then my validators are normally the ones where I actually can become very lucrative. Now there's some networks where I am where, you know, I'm just on a Comdex and Archway and I think I'm getting dollar, like a dollar a week and other validators like Injective, I'm getting way more. And so some, some chains support the other chains and, it's allows me to do it. I mean, I'm
+
+still thinking, you know, should I really be on a network where I'm making a dollar a week? Because it's just hassle. And for those, yeah, and you've had the things. And for me, it's more like how much hassle am I getting from this network? How much time do I have to devote on Twitter or whatever? And I was on Lunk for a while and that one was just taking so much time. It wasn't worth the 40 bucks a week that I was getting. And I just said, I'm not, I'm not.
+
+participating in this one anymore. It's just too much time talking to people too much time, just debating and arguing with people. It's not worth it. But other ones like Comdex, they've actually in the middle of an upgrade, I think today, and it's just painless. So I run them a relay forum, I think. And yeah, it's not necessarily about the money about everything. Sometimes they're great ideas. And there's other networks like we're going back to the IWA is where
+
+PFC
+It's breakeven, but those are bets. I think RWA is going to be a great thing. So I want to be on the networks before they become the great thing so I can establish myself. And I was very lucky that Injective was my second chain. And when I came on Injective was I think $4 or $8 or something like that. So I could actually buy myself into the chain. And then over time, I started getting more and more delegations.
+
+high the Open DeFi network and Gen and all that kind of stuff. But they're the ones who basically, that's a network which has basically allowed me to stay afloat for the most part.
+
+Citizen Web3 
+I'm actually, you know, it's an interesting progress that I'm really glad to hear because I mean, you mentioned EOS and I don't know if I said I know my like, not journey in crypto, because that was before BitShares, but my like real, real concentration that in full time crypto, even before the professional journey started with BitShares. So I can totally relate, you know, to the whole story. And what I was going to say is that
+
+During the time the progress I've seen because you had witness nodes and bichers and there was projects like Steam or Golos and others based before EOS on Depos. I remember running also those nodes, but what I was going to say is what you just said, that progress of validators on networks that by their own way, that have money, that have skin in the game. It's amazing because...
+
+Four years ago, you could almost not find anything like that. It was super rare for somebody to say, I've started a Validator because I've bought my way into it or I've started a Validator because... And I think that's a very, very, very cool decentralization in that way of people who really have skin in the game. They really are interested and yeah. And by the way, shout out to you guys for the GitHub repo.
+
+with the Kubernetes and the example. And yeah, this is a cool thing you guys are doing and well done. Well done on that.
+
+PFC 
+Yeah. Thank you. Yeah. I mean, I'd love to be able to buy myself into some of the other ones. I mean, for example, the Cosmos or the Atom network, but I don't have a million dollars spare just to do those kinds of things. But on smaller networks, especially when you join, I mean, I tried to get myself onto us and to do DYDX. And at the time it was more just pouring money into it just to keep yourself into it. And then after a time it's like, no, I have to, you know, this you have to stop.
+
+And even though I don't run on that chain, I still have a lot of, you know, I still have a bag on there. So just FYI, this is not financial advice. but I still like the, I like the chain, like what it does, but, you know, it's one of those kinds of things, you know, and it's very competitive getting into validators. Every time you open up a test net, there was one like, called the initiate chain or the initia chain. you know, I don't know if you've heard of that. it's great.
+
+they're doing some wonderful things. They're basically building on roll -ups and chain the chains and they're ex -Terry guys. Hopefully that isn't secret. But the thing is their test net, I think had 2000 people running nodes on it to the point where the actual Cosmos hardware couldn't cope. So they couldn't basically push blocks around and just the way it was, they had to tune it. Now,
+
+those guys started talking to the informals and to the osmosis teams like Valor Dragon and all that kind of stuff. And there's been a lot of patches put into it to help them do that. So they're helping, you know, some of the patches that you're seeing with the mempool, some of the patches you're seeing, yeah, basically they're in block propagation in mempool was, you know, they were basically seeing it and they basically pushed their needs through and the informal guys and the Osmo guys started putting patches in to help that. So some of the...
+
+those kinds of things are happening. And there's a lot of what I find, especially on the, on the Cosmos networks is there's a lot of collaboration. You might see them all shit posting on Twitter and saying, this guy's a moron and all this kind of stuff. But they have in the side of the Slack channels, you know, their dev teams are interoperating and there's a lot more of the engineers who are very quiet, just getting shit done as opposed to just, you know, bombarding stuff. So
+
+PFC 
+shout out to everybody on the engineers and there's some, you know, I'm just looking on those things and there's some serious optimizations going through and we should be, you know, most chains are now going down to one second to half a second because of the work they're doing. So you're going to start getting a much better blockchain because all these chains are interoperate, integrating their changes, talking to each other and making for better software.
+
+So yes, could we potentially get a new consensus algorithm? Potentially, but they're squeezing every last drop out of the existing stuff to make it go as fast as possible. And that's where Say comes in and the initia guys and so on, as well as the other ones I mentioned.
+
+Citizen Web3 
+I had some time ago a fascinating conversation with Jarko. I spoke twice to him. He's the lead, I think he's the CTO now at it formal. He was the lead researcher and he's the guy who has a degree in consensus computing from 2008. And this is how, how, and I really highly advise to anyone really,
+
+Simply, really not because this is my podcast. I really highly advise to anyone that is interested in consensus algorithms or in general blockchain, listen to that guy talk. It's interesting. What he says is what we are going to be using in some years because he's working on it and he understands what he's talking about and he's in the center of that. And it's interesting to see like how, what their research and what they're working on. So I absolutely agree that, you know, behind the scenes there is so much that
+
+We don't see and doesn't even matter if you're in the industry, you know, sometimes you see all this shit posting and all this crap on Twitter or Telegram or whatever. But in reality, there is a lot, a lot more to that iceberg. So absolutely.
+
+PFC 
+Yeah. And the union guys have changed the key type. I think they're using a BN 25 type key. It's supposed to tend to mint one that allows them to do hierarchical chains. So instead of just having 20 different nodes running or 50 different nodes, it's going to be 5 ,000. Lanera is, I think that's the name is coming through and they're basically making it so anybody can run a chain. And I'm not sure exactly how it works, but,
+
+There's a lot of innovations going across on the Cosmos SDK and there's a lot of work going at that level and the innovation that's coming because there's multiple teams, multiple agendas, each pushing in their own different way, it helps as opposed to a single product manager who's going through, well, I think we should be doing this and having 20 different people working on that. So everybody basically goes and throws stuff onto a wall and hopefully it all works.
+
+Citizen Web3
+On the other topic that I still have a little bit of time that I wanted to ask you about, it seems that you have, well, you mentioned several times already by yourself, the DeFi interest and real world assets. And when you look at your information available online, there are links to a couple of DeFi projects. And you say that you guys are concentrated on DeFi chains in general, I think in one interview.
+
+I think it was dydx actually, that's where you say that. I'm going to start with the Devil's advocate, my favorite thing, you know, so I'm going to start from there. I'm going to make it a little bit more difficult, but it's easy really. I remember that in 2019, I think it was 2019, I was, don't ask how I got there, but I was doing some work away in mainland Portugal.
+
+And basically what is work away is you go and work in somebody's like project and you can live there for free. They don't pay you, but you just live there while you do the work. And what I did, I was staying in some farms and I remember specifically there was, it was Northern Portugal and it was a very cool place where the farmers, you know, they were swapping, you know, milk for, for, for, for apples or apples for
+
+horse lessons or whatever, you know, it was cool. There was a lot of barter yet. And here is where I'm going to get to our real world asset topic and the devil's advocate thing. I remember, you know, I spent about a month there in that community and I was loving it. You know, they were even, I'm not going to go into details, but it was cool. It was really awesome. But of course it was a while ago and in five years things have changed. But I remember trying my...
+
+PFC 
+Thank you.
+
+Citizen Web3 
+Let's have our dawa talk, you know, on our evening when we sing with the guitars and the fire. Let's have a dawa talk and now let's talk real world assets and farmers. And I was trying to bring in the blockchain from the left, from the right, from the top, from the bottom. End of the day, they were all very interested, but end of the day, you know, they were all looking at me like, man, have you ever really plowed the field? You know, and I have, by the way, but, you know, kind of like, you know, being like, of course, devil's advocate here, but
+
+You know, you talk about real world assets and you mentioned specifically farmers. That's why I got caught into that example. So far over my like I've been met with this huge wall that of real people who say the real Joe, so to speak, which are what we are doing this for. Right. Otherwise, why the fuck are we doing this if we're just doing it for ourselves? We are not. Right. But if we are doing it for those people that they don't really right now, I haven't felt I mean, the question is, is the question to you.
+
+How do we bring it down to the level, not down in terms of like, not looking down, but how do we bring it to a simple terms where we can introduce it to those people whose real world assets this industry needs so much?
+
+PFC 
+Sure. Okay. So there's two different things. I'll go back with the farm analogy. Farmers are very heavy on infrastructure. So they need some very expensive machinery to do their stuff. It's not like you can go out and spend $5 buying a car or a tractor. Those things cost a lot of money. How are you going to get the tractor, first of all? So that's where potentially,
+
+you can go to the lending applications to get money for the tractor. Pulling it back down to that. Now, farms also produce wheat, soy, or whatever, or milk. They have to sell those kind of things. Where are they selling those things? Now, they can sell it to their neighbors, but that's not necessarily the best thing. They need to go and use exchanges, be it a decentralized one or a regular one, to actually trade goods.
+
+What is the price? You know, if I have milk and you have wheat, I'd like to be able to swap those two things so I can get my wheat. Now I don't necessarily need to convert that into a currency. I could use a potential in AMM and saying the exchange between a kilogram of wheat and a liter of milk is this. And then I can basically supply some milk. They can basically, you know, I can trade some wheat. I can give them some milk and wheat. So that's potentially some of the basic points.
+
+that they're doing now. Yes, they have existing systems today to do those things. There'd been systems around now where the defy thing comes in is are these systems better than what they currently have now about the, you know, and also have to buy seed for example, or in all these things. So where I think the defy stuff comes in, especially for a farmer is they have, they are basically mortgage. They have mortgages up to a certain point.
+
+They have, they need to expand. They need to basically become more productive because that's just how farms are. How do they get the money to do that? And what interest rate are they basically getting? Now, the other thing about farms, especially in Australia is they have water rights. So in a lot of countries you have the right because you have so much land, you have access to a river. You have actually, you have the right to use X amount of water or you get X amount of carbon.
+
+PFC 
+You don't necessarily need that much. You can then sell them. How do you sell those water rights to other people? Right? Those are some of the things that, again, it's a marketplace. So I'm talking about just generic marketplaces. Now, yes, I can go into the Ukraine and they've got these huge silos and they become the wheat capital or they used to be the wheat capital of the world, one of them. And that's where an all trades went through them. Great. They could potentially go across.
+
+and potentially use a chain to do those things. Now, where the chain comes in from the ground level is they can provide identity. They can basically provide the validation that this trade actually happened and it was a fair trade as opposed to one that happened on the side or use the wrong price because every transaction is logged and you can always go back and say, my transaction should have happened before that guy's transaction. Forget about MEV for a sec.
+
+and stuff like that. So they provide some core infrastructure on this stuff. Where I see RWAs in general though, is I have a building and at the moment I don't necessarily, if I want to sell a building that I've just built, I have to find a single buyer to do that. An RWA can be created so that I can have you or me owning, I don't know, some amount of the Empire State Building or
+
+some other big retail construction. And that provides me as the investor with some diversification. So I can now get commercial rental, rental income and commercial expenses. But I can basically start saying, well, instead of me just buying a single building and having all the risks that a single building has, I can buy part of buildings in the same community, in the same country across internationally. And I have now diversified it.
+
+So now I'm getting commercial real estate with minimal risk. These are some of the things that RWAs allow you to do. Now, yes, if I was a huge company, I could do that via a huge company, via REIT, but I don't need to do that anymore. So I don't necessarily need to pay the fund managers their 15 % markup or performance fees. I can do that myself. And if I basically say, well, that's great. I just want to concentrate on my, on this suburb in say Richmond, Victoria.
+
+PFC 
+I just, I think that areas can be great. I can basically buy various buildings in that particular suburb and invest that way. Or if I think, you know, I want, you know, I think that this area needs some improvement because there's too many homeless people. I can start basically investing in shelters or investing in other areas in those areas, still making money, but potentially focusing a lot. So what it allows you as a retail investor, even as an institutional is way more choice. And that's why I like the IWAs.
+
+Now the challenge with RWAs is you still need a legal entity. Somebody still physically has to own the building. And this is where the work that Gabe Shapiro and his Metal X company via Borgs and all those kinds of things are saying, well, how do you actually make it so that you can actually own physical assets and just be on chain and be legally protected so that the lawyers or the company, the middleman don't just run off with your money or run off.
+
+the assets. There's a lot of work going on in those things. So that's where I see IWA's going. But there's a lot of legal stuff, which I think is an accounting stuff, which has to be worked out for those things.
+
+Citizen Web3 
+I think the biggest issue that I've tackled in this is, you know, was never so much implementation, but the trust, especially where the government in every country tries to put the farmers particularly not in the best light for a number of reasons. And I think the trust that they require because where I'm based locally, I'm myself, you know, a bit of a
+
+wanna be I'm not a farmer, I'm a wannabe. But you know, like, it's the trust that this guy's think they have to put. I mean, it's hard to explain to them that he the trust is actually removed. But what I found was the difficult issue was that, you know, I mean, you talk about all that and they're like, Yeah, but I still need to trust somebody I still need to trust the guys can trust the blockchain. They're like the government has already fucked us so many times.
+
+I don't want it doesn't matter what you're going to call it blockchain or smoke chain or whatever they they have this you know and I think I think I don't know how to break it I don't know like whether it's not like I'm looking for an answer but you know it would be nice
+
+PFC 
+No, I mean, well, what I tell people is you don't just jump in, you put your toe in. So for the farmers, don't bet the entire mortgage or your entire assets on a new thing. You want to buy a little tractor. If it, you know, if that disappears and it basically turns out to be crap, you've lost a tractor. You haven't lost everything. It's something recoverable. Now over time, as you can build up the trust,
+
+in, look, you know, those guys didn't rip me off for a tractor. let's go and do another one. All of a sudden, you'll find more and more of your assets moving that way. No one's suggesting that you should be trusting it, that you should trial things, you know, and trial, you know, and like I told my kids, don't put money in here. This is pre -terror. Don't put money into these things that you can't afford to lose. And one of my daughters bought some lunar and you know, she was watching it and it literally doubled on it. And she had some Ethereum, she had some lunar.
+
+and it literally doubled on her and she was so happy until the day it crashed. And then she looked at me and said, I'm not going to go into this thing again. It's, you know, I don't trust it. I was just lucky. You know, my other, one of my other daughters is the same for a home deposit. And I was going to use anchor. It's got 20%. Yeah. That would have been very painful, but she didn't, she didn't do it because too much for her. So, but yeah, everybody's got their own risk profile. What you'll find is the people who are less risk averse will try these things.
+
+And then the neighboring farm will basically say, look, I bought a tractor off this. It seems to work and all this kind of stuff. Or I'm basically, you know, basically borrowing money to buy it, to build a new silo. It works. Then the guy next to him and say, well, how are you doing all this? And let word of mouth help, going through. Cause you're not going to, there's people that you're not going to convince. You know, there's people who don't believe the moon landing happened. you're not going to convince them.
+
+Citizen Web3 
+working on it.
+
+PFC 
+They've got their research, they've got their news. But just try the easy ones, try small amounts.
+
+Citizen Web3 
+I hear your advice here and I definitely I'm working on those examples. They're taking much longer than I thought, but I'm trying. I'm really, I'm really, I have some ideas and hopefully they will work. But anyways, back, back again to you, you know, let's do a small to finish it off small blitz three questions. They are bit strange, but very simple. First one, give me or a movie or a book or a song.
+
+That is with you throughout all your life something that you find interesting for most of your life or part of it
+
+PFC
+So most of my life, it's really weird, but it's Broadway musicals. That's the earworms. For example, a chorus line. I don't know why. I've never actually seen it in Broadway, but I got to it. It's got a very catchy tune and that song does it. There's some other stuff by Tim Minchin, who's an Australian musician. There's an album where he's leaving LA. So for me, every time I go back to Australia, I play this because I'm in that airport. I know what he's doing.
+
+Citizen Web3 
+Nice.
+
+PFC 
+and I have the similar emotions. Every time I fly back, I've got that stuff on heavy repeat as I'm going through. So those are probably the, that's the music stuff. As far as the book, I don't have a favorite book of all time. I just read the Iron Flame, which is, I think there's a two of them are out out of the three. That was pretty interesting. And just the things, favorite movie, Blade Runner is pretty cool.
+
+That's probably the one I haven't really watched that many movies lately. So I can't remember. Train spotting is fun as well, but it's dated. Yeah.
+
+Citizen Web3 
+Okay. Ooh, nice, nice, nice, nice. One of my favorites. Okay, two more, two more questions. They're going to be, as we get further, they're going to be stranger. I did warn you. Give me one motivational thing that keeps Ian getting out of bed and keeping on doing, keeping on living his life and doing whatever it is Ian finds good to do.
+
+PFC 
+So for me, it's more like, how do I give my kids a bit of life? I don't know if you have children, but at the moment it's very hard for them to get ahead. So that's basically, you know, what I'm looking for. I've got a, you know, a fuck you money. How do I basically get to enough where I can get enough for me to survive and then give my kids a step up so that they can, you know, in Australia rent rental prices are huge. How do I get them a deposit? How do I get them into a point where they don't have to worry?
+
+about money. They have enough so that they can live the life that they want to live.
+
+Citizen Web3 
+Absolutely. I sigh because it's a food. I don't know if the listeners here heard my side there. But if you could hear it on a recording or if it's edited by the team, but I sigh because it's a painful topic. So it's a big sigh for me. Last one, I promise. Dead or alive, real or made up cartoon character, developer, family member, doesn't matter. Not a guru.
+
+but a personage or a persona, it depends if it's made up or real, that you don't look up to, but you kind of understand that, yeah, I don't know, they have a positive influence on you throughout your life or for the last 5, 10, 20 years, I don't know, whatever.
+
+PFC 
+So the last person who had a positive influence and sometimes I hated him, but was an ex boss. I worked for him for 20 years over multiple companies and he just, you know, he trusted me. He gave me a lot of leeway and you know, he was a hard ass, but you know, at the end of the day, he basically did a lot for me, which was positive and had put a lot of trust into me. Dan.
+
+I know that he asked Dan, he's got a lot of negatives, but some of the things that he was thinking of were ahead of their time. And some of the stuff he was doing was definitely ahead of the time. And, but he was, yeah, again, an a -hole to work with. Sorry, sorry, Dan, love you. But is that, and again, then there was Doe. Doe was always 10 steps ahead. And he could see things that other people couldn't.
+
+And his power was convincing people or basically getting them on the bandwagon, telling them the story, leading them. So really technical, super smart guy, technically, but that, and he could do that stuff. That wasn't where his power was. It was more about how do I basically convince people or tell people that this is getting them on there. So he was basically trying to get those things and how he set up Terra wasn't just about the actual one. It was how do I basically build all these different companies around it?
+
+And one of the really cool things he did, which probably most people don't know, is a lot of the L1 developers in Terra were encouraged to actually go and work on other protocols. So as long as Terra would eventually benefit from them, they would be allowed to go and spend their time and get paid as well on those protocols. So you basically had the core developers moving across into the DApps, into other protocols, and then coming back and saying,
+
+this stat, you know, really had pain points here. We should be fixing these things. And it also built a very solid foundation of the, for these developers. They, everyone knew in the network knew who they were. They knew their strengths and weaknesses and all that. So I think Do did an amazing job at that level. And I think that's probably five, 10 % of the reason why Luna was successful. But it was just all the different applications and all the different ways he tried to integrate all the applications together.
+
+PFC
+from a business level and from a technical level to a people level that really helped it succeed.
+
+Citizen Web3 
+I guess that one of the big key point takeaways here is that, you know, AMN to blockchain developers. On that note, guys, Ian, thank you. I want to thank you very much for your time. Thank you very much for answering. Please don't hang up just yet. This is just a goodbye to the listeners and everybody who tuned in. Thank you very much for listening and see you next time. Thanks.
+
+PFC 
+Yep. Cool. Ciao.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 

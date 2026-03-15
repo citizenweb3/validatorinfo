@@ -1,0 +1,517 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/emeris
+
+Episode name:
+Marketplaces, Motivation and Intuition with Gautier Marin
+
+anna 
+Hey! Hey, it's Citizen Cosmos! We are Serge and Anna and we discover Cosmos by chatting with awesome people from various teams within the Cosmos ecosystem and the community. Join us if you're curious how dreams and ambitions become code.
+
+Citizen Web3 
+And good space time to you all and welcome to a new episode of Citizen Cosmos. We are joined by Gautier Marin today, the director of product at Emeris. Hey man, how are you? Welcome to the show.
+
+gautier_marin 
+Hey, yeah, I'm doing good. Thank you for having me. I'm glad to be here. technically I'm working at Tenement, not Emeris. know it's, but it's fine. I'm working mostly on Emeris these days. So I guess that should be okay. 
+
+Citizen Web3 
+How is...
+
+Uhhhh... Let's sit with...
+
+Citizen Web3 
+I do have a few questions prepared for you actually about this, but I saw the title on the Reddit, Ama, so I thought I was going to take it from there, but you see it's all wrong. let's maybe jump in it straight away. and could you describe for everyone, what is Emeris in your own words? And as somebody who takes care of the product, what's your personal vision for Emeris?
+
+gautier_marin 
+Yeah So, Emeris, the short definition, at least for me, is what I call the interface for the Internet of Blockchains. And at Cosmos, a lot of people that have been working at Tenement for a long time have been thinking about what the UI for this Internet of Blockchains should be. And for those that recall, Tenement already had UI projects in the past.
+
+one called Luni, only the OG Cosmos people maybe remember about it. But it was the first interface and wallet for the Cosmos Hub. But it had great ambitions. And fortunately, it got dropped. basically, at Tenement, was a lot of people have already thought it to be obvious that there would be an interface at some point for this emerging ecosystem of blockchains.
+
+And so the idea wasn't new, but no one was really working on it actively. with the launch of the Gravity Dex and IBC, obviously, we thought, at Tenement, it was time to actually start working on it properly and dedicate resources to it. that's where the project started. But where it starts and what it becomes are two different things.
+
+And so what it aims to become again is this sort of generic interface that is not supposed to be ecosystem specific or blockchain specific. And I guess that's what is setting it apart from other interfaces out there. Because if you look at any other interface or wallet, most of them are ecosystem specific. You have Ethereum wallets, you have Bitcoin wallets, Ethereum dashboard, Solana wallets. But you don't really have wallets and interfaces that are
+
+gautier_marin
+explicitly blockchain agnostic. And that's what Emeris is trying to become. Obviously, you must start somewhere. So we started in the Cosmos ecosystem. that's especially the Cosmos Hub. And that's natural because the Cosmos Hub is the root of this internet of blockchains. But we don't want to limit ourselves to a given ecosystem of blockchain. We really want to take the full advantage of interoperability and
+
+and this new emerging network of chains.
+
+anna 
+Is that correct if I say that you created a marketplace for applications?
+
+gautier_marin 
+so we're already getting into the, I guess the heart of it, like, right now, Emeris is obviously not open source. It supports only one application, eight chains, but that's just, as I said, a starting point. What we want to build ideally is an open platform that would support many, many decentralized applications, no matter which blockchain they're built on. And there are many ways we could build this platform.
+
+gautier_marin
+Right now it's like mostly a website. Obviously we want to also launch a mobile application, possibly a browser extension. the truth is that we don't really know how this ecosystem is going to look like in like a year, two years, five years from now. And it's very difficult to know if the future of blockchain interfaces are in the form of, you know, web three browsers, if we're going to continue in this sort of web hosted applications with browser extensions.
+
+or if we're going to go full, you know, native client. So it's very hard to know where it's going to go. And we don't want to close any doors at Emeris. So to answer your question, it really depends because a marketplace is something, specific and we don't really know if this is going to be the shape that this future internet of decentralized application is going to take. But certainly one of our ambitions is to
+
+let the mass market and as many users as possible access these essential applications in a very easy to use fashion. And we don't want to log them into an ecosystem. So you could say that Emirates is a marketplace. But the true form it will take is still undefined. We're still trying to navigate our way to and find the best.
+
+form for it. certainly, that's one way you could describe it.
+
+anna 
+for me as a product lead, so it's always interesting how you try to find, to fill this product market fit, how you're trying to find a way how to shape your product. Do you use any specific ways, techniques or filling of the market? What is going to be the shape of the product or
+
+anna 
+range of tests maybe or whatever I don't know what are you using really to understand the future product market fit and what is going to be.
+
+gautier_marin 
+I would say there are two answers to this. The first one is you have to start with an existing user base, I would say, because it's very hard to create a user base out of nothing. And for Emeris, a lot of the Cosmos users use Kepler.
+
+most crypto users use browser essentials on mobile applications and very few of them use desktop applications. So it's very hard for us to like come up with a new product that is going to take the shape, for example, of like a browser and like get market fit immediately. So part of it is just seeing what is the current trend and trying to adapt to it in a sense. And then as you start getting traction and you get
+
+brand recognition, in my opinion, then you get into the second stage, like, you know, how do we maintain and like increase this share, right? How do we make sure that we stay relevant into the future? Because, you know, we've seen it already that there are already issues with, you know, web hosted, defined applications, censorship issues, obviously, but we don't even know if like, you know, people in the future will still be using browser extensions, as I said. And so there is a lot of uncertainty and
+
+The way we sort of plan around that, and you have to do it in blockchain, is that you have to be very reactive because this space is moving super fast. But you also have to understand where you are right now and what's the next logical step, even if the next logical step is very hard to predict. But for me right now, A lot of it is based on intuition too, and it's very difficult to explain because for a newcomer into the blockchain space, it's very hard to assess.
+
+the states of the ecosystem. obviously they can understand what is working at the moment, but it's very hard to project themselves in six months, 12 months. And to be honest, it's very hard for everyone to do that in this space. But you can sort of see trends. And right now, in my opinion, we're seeing a regulatory trend where more and more websites are getting another scrutiny of the regulators. And so there is a hint there that maybe web-hosted
+
+gautier_marin 
+essential applications are not the ideal form of censorship resistant front ends. And so maybe we should look somewhere else. But then when you start getting into desktop applications or more censorship resistant solution, then you get new UX issues and you have to create a new user base because right now the users are using Metamask, Kepler, and all these browser extensions. so having them transition to a new key management solution is not an easy task.
+
+So you always have to balance where you want to go and where you think this space is going and where it is right now. So that would be my answer. But there is no easy way to predict the future. 
+
+Citizen Web3
+Do you have a certain vision of that product in a couple of years? mean, your personal vision, it doesn't necessarily has to align with what the project imagines to be self-like in a couple of years time, but maybe, I don't know, you had some ideas probably in your head as somebody who is taking care of it. So would be interested to hear those.
+
+gautier_marin 
+So my wish, my personal wish would be to create an open platform for the front end of the central applications. Because we're always talking about smart contracts and how to build your own applications.
+
+where very few people right now are thinking about like, what's the future of like, know, front end in the, or like, know, user facing clients in this space. And right up there's a shedding points around browser extensions. But then again, we're always asking ourselves like, is it really going to be the case in two to three to five years?
+
+And so you sort of have two routes, in my opinion. The first route is to go the web-hosted route. so if you go this route, then the logical product, in my opinion, to create is a blockchain-agnostic browser extension, or even a desktop client that can communicate with blockchain web-hosted applications. But something that is not
+
+a chain specific and enables people to do key management and developers to easily integrate. So that's one route. And then the second route would be, I wouldn't call it an app store, but a desktop client where that is composable with self-party extensions essentially that you could compose and download.
+
+probably from the chain. mean, you wouldn't store the application on chain, but you would store a hash of it. And then the users would download the application, check the hash of what they downloaded against what is on chain, and to make sure that they're running the good front end. But essentially, I think the future is to let, as usual, third-party developers contribute and not try to build everything yourself. Because right now, we're already seeing that we're already getting a lot of integration requests for Emeris.
+
+gautier_marin
+And we know we won't be able to integrate everything ourselves. So you have to create a way for people to contribute. so these are the two options. And then you have the sort of in-between. So to answer your question, honestly, I don't want to make big grand plans in the future. But what I'm trying to think about right now is how do we let third-party developers contribute to Emeris in an open source,
+
+free fashion in a sense. So that's really the question. And honestly, I don't really have the answer right now. We are exploring different routes, but you know, I don't want to say, you know, this is how it's going to be because frankly, I don't know myself and we have a lot of things to do in the short to medium term already on like the current web hosted application. So we're trying to think about the longer term vision, but it's not well defined yet. 
+
+Citizen Web3 
+What's your favorite front end in the blockchain space right now? 
+
+gautier_marin 
+When you say frontend, Are you thinking about like a wallet or like a dashboard? 	
+
+Citizen Web3 
+You tell me. I don't know. Whatever you like. What's your preference?
+
+Citizen Web3 
+Something that when you use the application, right doesn't matter what it is. You can't say Emeris though, because that's unfair. So it doesn't matter what you use. Doesn't matter what blockchain and you use it and you're like, my God, that is so really cool. That is so easy to use. Doesn't matter if it's ledger live, which it's probably not, I hope, because their interface is not the best in the world, high ledger. you know, it doesn't matter if it's Kepler or it doesn't matter if it's Metamask, could be anything, whatever, or maybe even a desktop wallet. Whatever you like.
+
+gautier_marin 
+A lot of the crypto like non-cursorial solutions are still not ideal in terms of UX. I'm thinking about Kepler. Obviously, Kepler is a great tool.
+
+gautier_marin 
+But it still has a lot to do in terms of UX. And we've tried in  Emeris to address some of these concerns. And when I say UX, don't mean necessarily. I mean, there are lots of components coming to play when you think about UX. The user experience is good, first of all, if the product works. So that's not the first. In that regard, Kepler is quite good, in my opinion, because it works. But in terms of IBC UX, it's not ideal.
+
+And so I can't really say Kepler, but at least Kepler is trying to do some, know, IBC stuff, which is very, very hard to do in terms of UX. we feel the pain on Emeris land too. I would say like the most advanced and easiest to use applications are probably on the Ethereum ecosystem. I'm thinking about things like a matcha, for example, which I've used, which is, very easy to use. And then
+
+I mean, you can criticize them however you want, products like Coinbase, Wallet, are also very user-friendly. if you want to talk about specifically UX, I think you should have our head of design, Nas, in your show, because he is really the one thinking constantly about this. I'm thinking about UX when it comes to crypto UX. How should we represent?
+
+IBC things, how should we deal with like, you know, multi-hub side, you see, and, and fungibility issues and things like that. Or as NAS is more focused on like mainstream user experience, like how do we make this approachable to the masses essentially. And, on that front, the, you know, Coinbase is what I thought the world I have done like a great job. it can still be improved and it will prove very challenging to bring IBC to the mass market, in my opinion. But, you know,
+
+That would be examples of products that are doing a good job in terms of pure UX.
+
+anna 
+You mentioned the product intuition. And for the designer and the sense of the market is super important thing. Could you maybe describe in a couple of words what is product intuition for you? How you...
+
+can say, okay, I do something and probably it will convert into my product intuition, into sense of the market trends because sometimes it's super hard to explain. You can feel something and you can say, especially when you create a product that's gonna be delivered, not like right now, but maybe in several months. Yeah, and you say, okay guys, we need to do this.
+
+anna 
+and the team asks you, okay, but why? And you try to say, okay, we can measure this metrics, but we can play around with the teachers, but actually you don't have real explanation. You cannot say, okay, because of we have a range of metrics that we can measure. So what do you do to create your product intuition? 
+
+gautier_marin 
+Yeah, so it's, yeah, I think you can sort of rationalize part of your intuition always, because, you know, your intuition is always based on facts. You have a part of it that is, you know, I wouldn't say intangible, but it's very hard to pinpoint because, you know, if you spend...
+
+years in this market, you accumulate a lot of information even in your, the back of your mind, even if it's not conscious, you accumulate lot of information and that's what gives you your intuition. And that's why when I first met Jay and he was talking at a conference about Cosmos, like two months after reading the paper, I was just like a freshman in the production space and...
+
+you know, he had a hard time and just like explaining why the cosmos vision made sense. At least to me, it was hard to understand his explanation. but you, could feel that he had like a lot of experience and intuition as to what would become a reality. So I think a lot of it is intangible, but you can rationalize part of it for sure. So for example, what I, what I told you is that
+
+I feel that for regulatory reasons and other reasons, I feel that there are certain possible words or outcomes that are likely to me. And then once you present these different outcomes, it's very hard to know which one it will be. And maybe it will be one you haven't even considered. But when I say it may be that we are going to go
+
+further into this sort of web hosted front ends with web extensions, that's one possible future. And another possible future is, again, a desktop application. It could be like a browser that's brave, where you can sort of navigate the web 2, but also the web 3, and that is more compatible with web 3 than traditional browsers. Or it could be like a pure desktop application that where you download apps, like an app store. Or it could be something else entirely.
+
+gautier_marin
+But based on your intuition, can predict different futures. then I guess what the intuition does is telling you, I think we're going more into this direction than this one. And when you compare very likely outcomes or equally likely outcomes, that's where I think the intuition comes in. yeah, I think, again, you can rationalize part of it. But part of it is just, you know,
+
+You cannot explain it as you said. 
+
+Citizen Web3 
+I have a slightly different question, a different direction. Obviously, Emeris is quite a remarkable product together with the Gravity Deck. This is an amazing thing. And there's a lot of hype that's surrounding Emeris, a lot of expectation. Do you feel that hype? Are you pressured by that? Or do you just take it calmly and go with the flow?
+
+gautier_marin 
+first of all, about Emeris product, I do think we did quite a good job when it came to UX and solving a lot of these core IBC UX issues. I think we still have some work to do when it comes to, for example, relay our stability. We had some reports, and we still get some disruptions when it comes to relay. So the product can still improve in terms of stability, and we have a few bugs too. So I want to acknowledge that.
+
+And yes, when it comes to the hype, you do feel it in a sense. Personally, I archived the Telegram chat because if you spend your day on Telegram, it's not the case anymore. I do check the Telegram chat now because it's important to get user feedback. But before the product launch, when people were saying whatever is constantly, that's why I of archived the chat because you know.
+
+you feel the pressure even if you don't read the Telegram chat. So it's just something you have to, I mean, first be grateful for because it means you have a dedicated community, right? Obviously you have a few bad apples that are going to be super annoying and like insult you and if you don't release on time, that's to be expected. most of the community has been super, they've been super comprehensive and so it's really,
+
+exciting to work for such a dedicated community. So there is a lot of hype, but it also creates a lot of expectation for us to deliver something that is great and that will please the community. So yeah, I would say we feel it, but it's also something that gives us motivation.
+
+Citizen Web3 
+good to hear that it gives us motivation and that, you know, you're not concentrated on just the chats, but you see the bigger picture. think that's really important. And I guess the next question I have is, well, there's going to be a few questions that we have about osmosis, of course. We couldn't escape them. 
+
+Citizen Web3 
+So because there's a lot of people who compare osmosis and Emeris, even though they work slightly differently in the background under the hood, but a lot of people do compare them. And the first question that we have is, what's your personal comparison between these two projects? How do you compare them? How do you see them interact?
+
+gautier_marin
+So osmosis and Emeris are very different. I mean, first of all, you have to specify what you mean by osmosis because the problem with osmosis is that it's a chain, an AMM, like an application, and a frontend too, like a website. 
+
+Citizen Web3 
+I guess the question is more from not the brand side, but the IMM and the front and the DeFi side. Let's keep it at that kind of thing.
+
+gautier_marin 
+The reason why I'm asking that is because you can draw parallels between, obviously, osmosis, the application, and gravity decks. You can draw a parallel between osmosis, chain, and Cosmos Hub. I mean, you need to compare apples. So the right comparison in this context would be the osmosis application, the web application, and Emeris, because Emeris is just an interface. And right now, they sort of work differently.
+
+but it's because the product vision for these two products are different. So on Osmosis, the way it works, I'm sure you've used it, is that you deposit into Osmosis, right? And then you can sort of access your token and swap and things like that. Whereas on Emeris, if you use Emeris, you can see that you don't deposit, right? If you click on swap, you can see all your tokens on all the chains, and we work in like an aggregated fashion. And that's because the goal of Emeris is not to support one AMM.
+
+Contrary to Osmosis, Osmosis has no plans to implement other applications from other chains. It's just a front end for the Osmosis application, the website. Whereas Emeris has plans to obviously integrate other applications, starting potentially with Osmosis. So in the future, from Emeris, you could swap using Gravity Dex, Osmosis, and most likely other dexes too.
+
+And we don't stop at AMMs. We want to implement other applications too in the future. As I said, the goal of Emeris is to become the interface to the internet of blockchains. So the internet of blockchains, hopefully we'll have thousands and thousands of applications. And in the long future, Emeris is aiming to give access to all these applications. 
+
+gautier_marin 
+That's why we implemented it this way, because you can't have, for example, a deposit user flow if you're going to build something that is going to accept many applications, because where do you deposit? You deposit on osmosis. And so with this sort of aggregated approach, we can scale very easily to add many other applications, including osmosis. And so a lot of the...
+
+UX and design choices that we made on Emeris were done with this vision in mind. We built Emeris with this specific vision in mind. That's why it's looking the way it is today.
+
+Citizen Web3 
+This is a really good answer because a lot of people in the community, the comparison that they draw is, okay, this is a yield aggregator and this is a yield aggregator. And for the outsider who's not into technology too much or doesn't matter, maybe some people are into the technology, but they just see it from still from the outside. For them, these are just to like yield aggregate the platforms because obviously it's used to everybody's used to Ethereum.
+
+Citizen Web3 
+And it's nice that you make this division. like the next question, I guess, would be, obviously we have gravity decks, the back and Emeris front. And in your own words, can you explain how do they interact and work under the hood in a few words?
+
+gautier_marin 
+As I said, Emeris is starting with Gravity Dex. That's sort of the first application that it supports, but it's not going to stop at Gravity Dex.
+
+we're going to implement other applications. The way it works right now is fairly simple in the sense that, the hard part is the routing. Is that you have the balances across many chains, right? So you may have AKT on Akash, you may have Osmosis. And in the future, you may have ETH on Ethereum, Luna on Terra, and Sol on Solana. And then you want to swap.
+
+And then Emiris will give you different quotes, potentially, or the best quote, it's still undefined, on different DEXs on different chains. And the hard part is to route your token to the right chain. Because obviously, if you're in the Cosmos ecosystem, you can route using IBC. But if you're outside of it, we need to use bridges. So then the first part is always to route your token, meaning to bring your tokens from the chains you're currently on to the chain where the DEX is.
+
+So right now only have gravity decks. So what we do is we bring your tokens to the Cosmos app, right? So that's the first part. So if you say like your token on IKT, automatically, right? You don't need to deposit actively. Automatically, Emeris will route your token to the Cosmos app and then you'll be able to swap. And then the swapping part is fairly standard, right? We just make a call to the full node. mean, we don't make a call. We construct a transaction and then relay it to the full node. And that's it. We get confirmation and you're done.
+
+Where Emeris really bring something is really in the sort of multi-chain support. That's really the hard part. And that's why it took us a long time to build, because we built it so that it can scale to support different applications on different chains. For us right now, it's relatively easy to add a new application on a different chain, because all the routing and IBC logic is already there.
+
+Citizen Web3 
+I still have another question about osmosis and then I will stop with it, I promise. There has been lately some, let's not call it drama, right? But there has been some conversations about, proposal that came from osmosis and it wasn't accepted, obviously.
+
+Citizen Web3 
+And a lot of people have said, well, Emeris is the true project to Cosmos Hub and it should get more attention and Osmosis is dragging a lot of attention towards themselves. And I mean, I know it's a lot about like not building, but still as somebody who takes care of the project, I would like to hear your opinion and that if you want to answer that, you don't have to, course, but would be interesting to hear your approach on these matters.
+
+gautier_marin
+Yeah, so you mean on the proposal where Osmosis suggested that part of the Atom community pool? 
+
+Citizen Web3 
+I don't mean just the proposal. don't know how much time you spend in the... You already mentioned that you spend more time building than talking, which is great. But there is a lot of talk about osmosis dragging too much attention to themselves, which I personally don't see that. okay, the proposal is one of them. And then there was a lot of drama surrounding...
+
+Citizen Web3 
+like he tweeted something like, create a credible neutrality or something like that. Right. And there was a lot of like, there was a lot of drama surrounding all that.
+
+gautier_marin 
+I see. So my opinion on this, that's only my personal opinion. since I joined Cosmos personally, I think one of the best advantage of Cosmos is, you know, the idea of anti-maximalism, 
+
+gautier_marin
+I don't like tribalism, personally. I don't like the fact that we say, we're going to favor Atom just because it's Atom and we hold it. Obviously, we have a vested interest in Atom doing well. But it might be in the way the Cosmos Hub works and succeeds in the future is by providing real utility. And I don't necessarily agree with Sunny that the DEX is not a core utility or that it breaks credible neutrality.
+
+But I do agree with him in the sense that like, there is no reason why Osmosis cannot freely compete with the Cosmos Hub and make proposal and then the community can decide whatever it wants. know, Osmosis is building on Cosmos Tech and they're doing well and I'm happy for them. And I think it's good for the Cosmos ecosystem. And I think it also motivates the Cosmos Hub community to produce tangible utility.
+
+And I think this is partly in the form of the Gravity Dex, but also in the form of Interchain Staking that is coming out later this year. So yeah, my opinion on this is that personally, I don't feel any tribalism, although I do have Atoms. I obviously work for a company that is heavily invested to the Cosmos Hub. And I do really hope that the Cosmos Hub succeeds. But I do think it's going to be only if it's
+
+provides tangible utility. So for example, you could say, hey, Emeris should only support Gravity Dex. Emeris should only ever support Gravity Dex and the Cosmos Hub application, and that's it. Emeris shouldn't give access to Osmosis or other applications because it will divert some users away from the Cosmos Hub. It's maybe true in the short term, but in the long term, if the Cosmos Hub can only succeed because Emeris restricts access to other applications,
+
+It's not a sustainable business model. I think, the Cosmos Hub will succeed if it builds tangible utility. yeah, so that's it. don't think Osmosis is a malicious actor. And I know sunny personally. sometimes it can appear a bit trolly. It likes to poke people. But I feel it's always in good faith. So yeah.
+
+gautier_marin 
+that's my opinion. 
+
+Citizen Web3
+We love Sunny. mean, he's the only guest who recorded two episodes so far with the first season and the second season. And actually, it was interesting because we asked him as well about his opinions on Emeris and I don't think he mentioned one bad word. So that's pretty good to hear that you guys are in line with, of interacting with one project with one another rather than trying to battle it out. But do you think that the worst proposal was it?
+
+Citizen Web3 
+52, sorry, I had my notes here. had to look at it, which Osmosis did. Do you think that the Cosmos Hub as a hub, as a community should invest into ecosystem projects? I mean, don't know if 52 can be such an example, but do you think that we should invest and make the community pool more sustainable in that term? Or is that something that's not on the agenda in your opinion for now?
+
+gautier_marin
+okay, this is a different topic, personally, I mean, again, it's all personal opinions here, but I do think the hub should look after itself a bit more. Like, I won't cite any specific examples, but there are examples of the hub funding projects that ended up launching their own chains or like are willing to launch their own chain without giving anything back to the hub. I don't think the add-on should
+
+gautier_marin 
+fun projects that will not bring any value to it or you can argue it going to bring value in an indirect way but I you know it still needs to be proven. I want to have like a concrete business model for any proposal and you know a clear understanding and explanation for why it will bring value to atom holders that should be the first and you most important consideration is like is this proposal going to bring value to atom holders
+
+So it's the same for like osmosis governance, if a proposal on osmosis is made, the consideration should be will it bring value to osmosis holder, And to the osmosis ecosystem. So for this proposal, this specific proposal, I think it would have been better if it was like a two way things saying, hey, okay, we need a bit of liquidity on osmo coming for the community pool, but in exchange, we will send.
+
+some osmo liquidity back to the gravity decks, like this sort of two-way deal would have been much better than just the atom going one way to osmosis. 
+
+Citizen Web3
+That was actually the reason why we voted no. We did publicly state that this was one of our reasons. we also thought that as much as we actually do think that we should invest into other projects, think that this proposal, well, our opinion as a validator that this proposal was done a little bit hastily and it should have been done in stages, not just like in a big bunch, but so I totally agree with you here. On a slightly...
+
+Citizen Web3 
+Different topic. Let's talk about you a little bit and about your background, your history. I mean, you did say that we totally got your position wrong with the development, the product thing. But I'm a bit confused. Help me out here. So it says on the Tendermint page that you are the corporate lead development, right? Or what's the?
+
+gautier_marin
+it's just outdated. you can see, I think Tendermint team right now is maybe 80 people. And on the page, we're like 40 maybe. So the website is outdated.
+
+Citizen Web3 
+So would you say that what would you call your position? Do you call it anything? Or what do you do? Who are you?
+
+gautier_marin
+my formal title right now is Director of Product Attendance. That's my formal title. in practice, I'm just the lead on Gamers Project.
+
+That's what I do. I'm the product owner, however you want to call it. I set the vision, the roadmap, coordinate between the various teams working on it. 
+
+Citizen Web3 
+How did you start working for Tendermint? How did you come to blockchain? I mean, what did you wake up one day and say, hey, I'm going to, heard about this company called Tendermint. I saw them online. heard Jay speaking, like you said, the conference and you're like, my God, I'm in love with it. I'm going to do this for the rest of my life. What's the story here?
+
+gautier_marin 
+I got into blockchain in 2015, I believe. like everyone at the time, I got in because of Ethereum, the beginning of Ethereum. So that's what caught my interest. And so I got involved into the Ethereum space initially in France. So I co-founded, association ,
+
+I worked for a company that was doing stuff on Ethereum. And during one of these conferences, I met Jay and we had a chat. He had just released the Cosmos white paper. It was in like January 2017. So I think he released it in like December of, or November of 2016. So it was like a couple of months after he released it. And I think it was the first time he was publicly speaking about it. So I met with him.
+
+His presentation really caught my interest. I grabbed him afterwards and we had a 15-minute chat. And at the time, I was still trying to process Ethereum. It was a very new thing. People were still super excited about a virtual machine, like a blockchain. Everyone was excited about that. And here comes this guy that tells you, that's cool. But the future is many sovereign independent chains all communicating with each other and working on like
+
+using BFT consensus. It is just like, know, mind blowing at the time. Right now it seems like obvious, but at the time I can tell you it was like really, really something no one was talking about. And so, you know, obviously I was super interested and I still had to finish my last year of study. So I did that, but then I immediately applied to Tenement and I joined,
+
+Citizen Web3
+What did you study?
+
+gautier_marin
+So yeah, I studied computer science in France. Yeah, honestly. if you know how France works... So I did what's called a preparatory class in France. I don't know. It's like a very strange system that nobody's using anymore except for France where you work 80 hours a week for like two years.
+
+Citizen Web3 
+You always want it to be involved with IT or with startups, or it just kind of happened by itself.
+
+gautier_marin 
+to prepare some entrance exam for the best schools in the country. It's super intense. And so when you work on this, you cannot think about anything. at the time, I was just working, working, And then I got into the school. And you start to live a little bit. So you don't even want to think about the future. You got into school. Your future is set. Now you just relax and enjoy for a while.
+
+But then, as I was approaching the end of my study, was like, know, okay, I don't know how to do anything. I just chilled for the last two years. Okay, I need to get my shit together. I started learning about programming and stuff. I learned about programming in school, but it was quite basic. So I learned some more advanced programming. And that's where I stumbled about blockchain and stuff.
+
+And then, know, naturally I got interested because I was always like sort of in between computer science and I was, I always had like a keen interest into, you know, macro economics and finance. And I was sort of, you know, hesitating between the two as a carry pass. And like, as a matter of fact, when I applied to Tenement, I, also applied to, you know, wealth management masters at Imperial College in London. And I got, in and I was like, okay.
+
+I reached back to them and I said, if you don't hire me, I'm going this route, so make your decision. And obviously I was hired, but I could have gotten into like wealth management, like banking. I'm pretty happy how it turned out. Yeah.
+
+Citizen Web3
+You almost went to the dark side then or shall I shall we say you did go to the dark side you mentioned you founded an association was that if ETHCC
+
+gautier_marin 
+Yeah, it was called Asset at the time and now it's called Ethereum France. But the other one organizing ETHCC now. But I have no involvement whatsoever in this association anymore. The first token I think was ETH.
+
+Citizen Web3 
+you started to talk about blockchain and kind of interrupted there, but what was the first token did you buy? Do you remember?
+
+Citizen Web3 
+come on, that's boring.
+
+gautier_marin 
+Yeah, I'm sorry. No, not ICO, not even ICO. I bought it randomly on the next channel, Kraken, I think.
+
+anna
+ICO haha
+
+Citizen Web3 
+You used Kraken as the first exchange, man. That's good. That's actually quite a good exchange to use for the first one. Usually people used to go back then with either buy something on Bitcoin talk and then, well, this was 2016, I guess more, and then they expect that somebody will send them tokens, but that never really happened all the time.
+
+gautier_marin 
+At the time, I think Kraken was the only one that accepted, a euro. So that's the only reason why I went for this. I didn't do a lot of research into different exchanges at the time. I just wanted to get some exporters. I think it's just start. Yeah, you have to start somewhere, you know.
+
+Citizen Web3
+Yeah.
+
+Citizen Web3 
+Yeah.
+
+anna 
+The think is just start,
+
+Citizen Web3 
+Once you start with tokens, you never go back. Ana, you were going to ask about the motivation because I want to take it a different way.
+
+anna 
+yes.
+
+anna 
+motivation.
+
+Let's do it my way because motivation for me just the core thing for the whole blockchain industry So what is your motivation? What motivates you to do what you do every day like I mean in blockchain industry?
+
+gautier_marin 
+obviously, lot of people in this space have concerns about privacy and, know, state surveillance and these kinds of things. You know, there is no originality here. I'm like exactly the same. I'm very concerned about, the size and the power that, you know, governments are, you
+
+taking and like the control they have over our lives. I'm not even getting into central banking and all these kinds of things. So I'm not very original here, but like, yeah, I'm concerned about our future when it comes to, know, individual sovereignty, financial freedom, privacy. And I want to give, you know, myself, my family and people I love and obviously everyone in the world, tools that can help them.
+
+free themselves from tyranny. And I hope we don't get there, right. But we're certainly not trending in the right direction, in my opinion. And so I think, we're going to get regulatory backlash in the near future. we've seen that like some politicians seem to, you know, defend it. And I think it's largely, you know, in part because, you know, they didn't care about it. And now you have like maybe 30 or
+
+50 % of the youth that holds the token and the youth is like the future voter base. now they're sort of and they have to not destroy it completely. yeah, I do think the current financial system is crooked. It's creating massive inequalities. And I'm not against inequalities, but I'm against artificial inequalities.
+
+with all this privacy breaking regulation that are coming up and that have been already deployed, I think it's the best space you could be working in if you care about individual rights and this kind of thing. So my primary motivation is to work on something where I think we're doing good for the world. I really believe in this whole movement. I don't know if we'll end up getting anywhere because...
+
+gautier_marin
+Obviously, if governments say, now it's illegal to own any cryptocurrency or use any crypto application, I think it will seriously not stop the movement, but obviously a lot of people will stop using it. And a lot of developers will go completely anonymous behind VPNs in a more hardcore fashion. But yeah, I think these are truly good instruments, and I think they can help create a better society. So that's my primary motivation.
+
+Citizen Web3 
+That's, think, a very good thing to be motivated by. It's the right thing in our opinion, for sure. I think that in the last 10 years, I guess I've been involved with blockchain more or less. And the one thing I realized is that if I want to explain to somebody about blockchain, when somebody asks me, is not to talk about the blockchain, but to talk about the financial system and explain to them how it really works.
+
+Citizen Web3 
+And then when people realize how the financial system really works, the current financial system, they're like, okay, is there an alternative? Please tell me that there is. yeah, there is. And this is the blockchain, the blockchain industry, which hopefully, like you say, you know, will trend the right way. So let's see. I did notice on your last Reddit IMA, I think it was your last IMA, that you mentioned
+
+Citizen Web3 
+mobile technology. I guess you said something like that in the future, see that millions of people will be able to use mobile to connect to Emeris and use it that way. Do you see mobile technology as kind of the future, the way forward?
+
+gautier_marin 
+My biggest problem with mobile technology is obviously
+
+the enormous control that Apple and Google have over it.
+
+So the problem is that like, the world is trending more and more towards mobile first because, you know, people really like to use mobile to access their finances and do their operation. And it's very convenient. Right. So we do want to extend into the mobile world, but if you want to build something like, you know, Emeris with a full vision of like an app store, you cannot build it today because, you know, Apple guidelines won't let you do it. And they have effectively a duopoly over,
+
+the market, right? You can always say, okay, we'll create our own hardware and our own app stores that will be open source and free. And, you know, I think we should support an initiative, serious initiative in that direction, but, you know, it won't happen. would take many years and like effectively right now, if Apple and Google decide to ban you, you don't exist anymore for like 99 % of the population. We can't really build our vision on mobile at the moment because of this.
+
+So the way we see mobile to evolve is in the short to medium term, is more as like a companion to the main application that would be on desktop, right? Or on the web, where it's much harder for these companies to censor you. So you could think of it as like a signer, where you sort of authorize transaction. And then you can do some basic functionalities like send, maybe swap, if it's allowed.
+
+gautier_marin 
+receive tokens, see your balances, things like that. except if Apple and Google change their guidelines, I don't think we'll be able to go full mobile and have all the functionalities you would like to have on mobile. So I do think we could have a large user base, but I don't think most of the functionalities will be on mobile. 
+
+anna 
+do you think that a hallway store is gonna help to diversify the monopoly of Google and Apple in that field or it's just go through in the same direction? It's not gonna help.
+
+gautier_marin 
+Honestly, I don't really know. just take Apple, for example. The problem is that they have control over the entire stack. They have control over the hardware, the software, everything. So it's impossible to distract them if they don't want to be part of their own disruption, right? If they don't want to distract themselves, it's very hard to change that. for better or for worse, they're making easy to use, nice products. a lot of people are using, 
+
+iPhones and it's going to be very hard to take this market share away from Apple. I don't think we can do things like that could have been even like the definitive foundation. They've announced that they wanted to build, like mobile hardware for the blockchain space. these are all very good initiatives and we will most likely help if any serious one emerge, but
+
+you have to be realistic, Like creating, it's more like about market share, right? Like you have to create hardware that is as good as what Apple is doing. That's super hard to do. So yeah, I don't have the latest figures. I don't know like how much of the market, you know, Apple has when it comes to mobile, but I'm pretty sure it's like a big part of it. So not in the sub world countries and like things like that, but like, you know, at least, you know, where we live.
+
+Citizen Web3
+Interesting, by the way, that some third world countries actually use more Apple than,
+
+Citizen Web3
+Before we start to wrap up, I do have another strange question for you, because we already started to talk about it. And you sound like somebody who is interested in technology and in future technologies. Do you have a personal take on what's the future going to look like in terms of technology in like 10 years time? Personal flying cars, cameras, in the eyes, total control, 1984 style. Do you have any ideas on that?
+
+gautier_marin 
+Yeah, so my bold take, would say, I'm not sure it's going to be in 10 years, but I'm waiting for the Singularity personally. And I think it's going to take mostly the form of like being able to increase human intelligence. So obviously you can think of Neuralink, for example, from Elon Musk. And you know, I've shared it a lot with different people about Neuralink and you know, some of them think it's complete bullshit and we'll never get it to work as usual, you know, that it's far too complicated and other people are super excited about it.
+
+I mean, it did manage apparently to get a chimp to play video games with their mind, which is pretty exciting. I have this sort of theory, it's for fun, but as soon as you can improve intelligence, human intelligence even by 10%, then what prevents you from putting this intelligence enhancing chip into the mind of the people that created the chip in the first place?
+
+And then they can sort of create the version two of this chip faster than they would have without the chip. And then they can create, like once you implement, they implement themselves the version two of the chip, they can create the version three of the chip even faster. And you can go from there to like exponentially, right? if you go in that direction, and obviously we need to create the first chip that can even marginally increase your intelligence. Then you can create sort of like human machine beings that are like,
+
+exponentially more intelligent than as merely apes, that we are right now. my bold take is that it's likely not certain because we could destroy ourselves before then, but like, if we're going to trend in this direction, then that could be the next evolution of the human species, right? Like we had like homo sapiens and maybe the next step is like homo machina. But like we have this sort of, you know,
+
+brain enhancing chips that make us super intelligent. then all the problems that are unsolvable right now become trivial immediately because we're so intelligent. And we figure out space travel and all kinds of things. And we evolve into these sort of different beings. And then the last step is that the Earth would become this sort of zoo where people that didn't want to get chips implanted, they're sort of granted this status that, OK, you can get the Earth.
+
+gautier_marin
+And you can live like the old ways and we'll conquer space and do our things. But I'm not saying it's going to happen in 10 years, the thing about the singularity and exponential is that as soon as you create it, you become like immediately the pace of innovation will skyrocket because you can sort of create this intelligence and enhancing chips faster and faster. And you get into this new world much faster than you originally expected. And you sort of break the innovation curve.
+
+anna
+It's so true once you wake up and realize that, ok  I have my robot to cleaning he did it like already, automatically without asking me. I had my robots for doing something for me, like preparing some works and so on. And I have so many gadgets.
+
+anna 
+to help me like gadgets to tracking my sleep or notification that, you need to drink some water or whatever. I sometimes you realize, okay, but I mean, am I in the future? Because everything already happened. Like what I remember from the movies, like 20 years old movies maybe even that cartoon movies is already exist. So 
+
+Citizen Web3
+Imagine in the future how they will all interact over IBC, all these devices, and send the data. It's going to be decentralized. And let's hope that singularity will be distributed. Last question, like a traditional question that we have, we kind of changed it for this season. But still, what are some of the resources from the top of your head? And they don't have to be your favorite.
+
+Citizen Web3
+motivate you or somewhere where you take examples from, just some things, some people that you like to read on the internet, or maybe some developers that you follow on GitHub or books, podcasts, whatever, anything that comes to your mind that you would like to share with everyone and that maybe you'd say, and listen to this or go read that. is something like that.
+
+gautier_marin 
+It really depends because I follow things outside of the blockchain space obviously, So if I want to stay on topic in the blockchain space, my first recommendation would be to follow people that maybe don't get as much.
+
+lights in the Cosmo ecosystem, but that have done a lot of work behind the scenes. for me, it's a good opportunity to talk about these people that are, know, obviously you have like the Sunnies and the Zachies and, you know, they're doing very well for our ecosystem. And we should be thankful because they're out there and like, they're probably the best one to explain, you know, what's going on. But like, we also have like a lot of people working behind the scenes and like thinking hard about things. So one person I have a lot of admiration for is Christopher Goose. I don't know if you had him in...
+
+in the podcast yet, but he is the main person behind the IBC specification. And now he's working on a new project called Anoma. But he also has a very interesting blog, which is hard to read, but I definitely got some very interesting excerpts from it. so yeah, that would be one person, certainly. I'll be honest, I don't listen to many podcasts in the blockchain space. I don't really have no time anymore, unfortunately.
+
+anna 
+We neither. We listen to any podcast to be honest. We listen to some, but not so many. 
+
+gautier_marin 
+I used to listen to Epicenter at the time, but now I don't get time anymore. And when I read, I try to read stuff outside of the blockchain space just because I constantly work within the space. I like to get some break. So yeah, I'm mostly working like...
+
+gautier_marin 
+reading fiction. When it comes to fiction book, of the most, the best book I've read is like the three body problem. So I would recommend this series for anyone interested in science fiction I recommend like for blockchain stuff and like sort of envisioning the impact of blockchain on your society. I think Christopher Goose has like a lot of good articles about that.
+
+gautier_marin 
+So I would really recommend his blog. least that's material I've personally enjoyed reading. That's the one that comes in mind immediately. then, mean, obviously the problem is that I could cite a lot of the others that people have already cited. Most likely, I've listened to a lot of podcasts, read a lot of blog posts, but I would like to shine some light on maybe ones that are maybe a bit less well-known, like the one from Christopher Goes.
+
+Citizen Web3
+I think I met Chris when I was in Berlin when there was still a Tendermint office at the... what's it called? I forgot the name. I forgot there was a co-working together with the NoSys team, I believe, that they were sharing. And I'm pretty sure I met Chris once there last year.
+
+Citizen Web3 
+but we definitely should have him on a podcast because that's a great idea. Thank you very much 
+
+gautier_marin 
+You should definitely have him
+
+Citizen Web3 
+Thanks
+
+anna 
+Thank you
+
+Citizen Web3
+It was great talking to you. It was a great conversation in my opinion, a lot of insights, especially about your views and how you see the project developing. I think there's some good explanations that will definitely help a lot of people to differentiate between osmosis and Emeris
+
+Citizen Web3 
+are like you mentioned, have nothing really to do with each other, but a of people do put them together.
+
+gautier_marin 
+Were working with osmosis team to create aggregation of, know, DEXs within Emeris. So to me, it's a positive sum. You know, we were creating gains for everyone in the ecosystem. And then again, I could understand why people, you know, holding at home could feel threatened by, you know, Emeris supporting other applications. That's something I do want to acknowledge, but at the same time, as I said, I think a sustainable...
+
+business model for the Cosmos Hub will not come from emulation-stacking access to other applications. I think it should come from true utility. And I think there are many things that the Hub can and will do that are already in the works and that will bring true utility, first of which is interaction-stacking, in my opinion. But I do think that the future version of the Gravity Dex have a lot of very interesting things to them, too.
+
+And then, you all constantly have new proposals. The one from Jack very recently is one example. I wish we could have talked about like, IBC UX too, which is one thing that I'm thinking about a lot.
+
+Citizen Web3 
+You can for sure, we'd love to hear your opinion. mean, we can for sure hear about IBC UX. I mean, if you still have time, go for it. 
+
+gautier_marin 
+Yeah, I'm already 17 minutes left for my next meeting. I would assume- 
+
+Citizen Web3 
+haha Okay. No, no, no, 
+
+gautier_marin 
+it's just like about IBC UX, it's like something we spent a lot of time thinking about. And one thing that users may not realize, but it's true for any product, is that when something appears simple and easy to use, can be sure that there was like a lot of work behind the scenes. For us, creating something that is simple and easy to use takes us...
+
+hours and hours and hours because we go through so many different scenarios. And with IBC, the problem is like exponential. Like IBC UX is extremely hard. First of all, you have like, you all these channels obviously, and like go explain to someone outside of, you know, the cosmos niche, what a IBC channel is. They have absolutely no idea. And they shouldn't have to know about this to use a product, right? Like if that's a requirement, it's just like, if you require people, you know, to know what TCP IP is.
+
+or like a port, you know, a server to use internet, right? That's, unthinkable. So a lot of the work we've done is around, making sure we can both secure the experience of the users and make it approachable. And by secure, I means, you know, for example, the fungibility issue is that, if you go through different channels, if you send a token through different channels, they won't be fungible.
+
+So that's something the users have already experienced because if they send via Kepler through a specific channel, they complain that they don't see the token in Emeris. But that's because they're not the same token as the ones that are supported on Emeris. Because if you send Atom from Cosmos up to a cache on channel 0 or on channel 1, they are two different tokens. cannot be pulled together. cannot, you cannot, they're just non-fungible. They're not the same token, 
+
+So that's one issue, but it's also an issue if you send through different IBC routes, even if it's, you use always the same channels, if you send from Cosmos hub to a cache and then Osmosis or directly to Osmosis, These are not the two same tokens. All that has a lot of implication on the UX. And there are lots of rules that Emeris implements so that all these issues are sort of dealt with already and the user doesn't have to.
+
+gautier_marin
+worry about them. that's my rant about IBC UX. 
+
+Citizen Web3 
+It's a good rant and I think it gives a lot of insight to everyone to understand that it is difficult because a lot of people, you're right, don't think about it. I I've worked with UX before and when IBC, of course, didn't even... Actually, it wasn't plans already, I believe, that the white paper or the GitHub already existed back then. But yeah, it's crazy, absolutely. I'm glad that there are people who understand what they're doing and that they're working on...
+
+Citizen Web3 
+on the issues rather than just saying, OK, that's an issue that we're not going to work on. We're not going to solve it and let it just flow. yeah. Once again, really thanks for staying over time. We know you're busy man, 
+
+gautier_marin 
+that was very cool. Thank you. And yeah, I just want to say, I really like about this podcast, you don't need to recall this, but 
+
+gautier_marin
+You, go farther than just blockchain, right? I understand a lot of podcasts out there, they just want to go straight to the topic. And I understand that the audience mostly don't care about what the guests think or what motivates them. They just want to know when next release or whatever. They just want to get some information about that token. I think it's really cool that you're doing that. It gives a lot of...
+
+gautier_marin
+insight into the people actually reading this stuff and for me it's more enjoyable. 
+
+Citizen Web3 
+Thanks everyone for tuning in and Gautier thank you very much for coming on the show. Hopefully speak to soon. 
+
+gautier_marin 
+Yeah, thank you for having me. 
+
+anna 
+Thank you and bye.
+
+Citizen Web3 
+Bye bye everyone.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

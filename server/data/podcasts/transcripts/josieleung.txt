@@ -1,0 +1,429 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/josieleung
+
+Episode name:
+Facilitating Projects, Harry Potter and Startups with Josie
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of the Citizen Web Free Podcast. Today I have Josie from Milky Way Zone. Josie, hi, welcome to the show.
+
+Josie
+Hello, hello. Thank you for having me
+
+Citizen Web3 
+Yes, I'm glad to have you on and I'm going to go straight away with the first traditional questions. Josie, can I ask you to introduce yourself in your own way for me, for the listeners? Tell us what you do, what you're working on and how did you get to Web3 maybe even if you want to catch on to that.
+
+Josie 
+Sure, sure. Yeah, I got to admit, I'm one of those that transitioned from somewhere to Web3, not one of those who jumped directly to Web3, which I think a lot of people are nowadays, especially those like, you know, something, something school dropout and then just joined the class of, you know, something, something. Yeah, so Josie here, I am a co -founder of Milky Way. So before, you know, we talk about Milky Way, a little bit about myself.
+
+I am from Hong Kong myself and I have a kind of Web2 traditional background. So I was actually at LinkedIn for a few years previously before I jumped into the Web3 scene. I did kind of business development and account management over there. And then afterwards, so in terms of why I joined Web2, was basically I was at LinkedIn and then I talked to a lot of different clients, you know, like on the ground, right?
+
+and then spoke with a lot of them and then a lot of their pain points and a lot of them have suggestions in terms of how do they want to kind of improve the product a little bit. And so we would have this like internal feedback system where we like raise tickets and then feedback it back. But that's honestly a big black hole. till this day, I have no idea where that system goes. We never hear anything back. And it's I don't know if they actually see it or it's just like to entertain us in the front line.
+
+The only thing I know is that the product team and the engineering team, they sit in the San Francisco headquarter office. And whether they see it or not, until this day, I don't know. And then so then it's like a little bit, okay, it's like, I've been like, know, kind of like providing services for products that other people build. I have all these feedback stuff that I think would work great. But there's no way to like, know, really be part of it, right? And then so I was like, okay, how do we, how do I actually help to influence this company? And then so people started telling me there is this role called product.
+
+where it's kind of like, you know, sits between business and kind of the tech. And I was like, that sounds really fun. And obviously I looked into it. And as mentioned, product is in San Francisco. So I was like, okay, that's not happening. I'm based in Hong Kong. then so was like, okay, unfortunately, I really love LinkedIn. It's amazing. It got brought by, you know, Microsoft as well. So comes with all the big company perks and all that. But then it's unfortunately, it was time to leave, right? And then so was like, okay, product team and obviously headquarter.
+
+Josie 
+It needs to be a kind of tech firm headquartered in Hong Kong to have the product team in Hong Kong. So I was looking at the different options and that was 2020. So 2020, that was kind of like when COVID first hit. And so a lot of companies were kind of in this like, okay, let's see what's happening kind of phase. And so a lot of them weren't hiring. And I have a friend who was working at product at crypto .com back
+
+And then was like, we're actually, you know, like, it was still bear market, actually, then we're still bear market, but we actually do need people on the product team because it's central exchange and constantly to ship features, right? And would you be interested? And I was like, yeah, I didn't use them. I used Binance then. So I was like, you know, BTC, ETH back then, just, you know, for fun, because everyone was doing it. And then I was like, okay,
+
+understand it and I use interactive broker and all the other like traditional web to kind of stock exchange training platforms. So at least I know the product, I'm interested in the industry. And then so I joined curta .com as their product team, looking after their training application. And where the KPI is like trading volume, right? So basically covered a suite of stuff like Fiat on off ramp, the debit card, which is really good partnership that we had with Visa or still have with Visa.
+
+And obviously the trading, were the first soundtrack exchange to list Ashiba, the token back then. So that brought us a lot of volume, et cetera. So that was really fun actually, working there for a year. having said that, it's still a soundtrack exchange in the end of day. then that's when, like, kind DeFi Summer happened. And I was like, ooh, a lot of on -chain stuff. Actually, that part is more fun. And that's what I was thinking. maybe it'll be more fun to work actually in.
+
+on chain projects like in the DeFi space or NFT space or something like that. And that's when back then, Kurno .com, the token called CRO, it was an ERC20 token. And then DeFi somewhere happened and then they were like, we need to launch a chain to tap into the DeFi market. How do we launch a chain? And so we're looking into the different possibilities of launching the chain. And then we decided to use Tenement Cosmos SDK stack because that's the most versatile.
+
+Josie 
+So I was looking into Tendermint doing all the research and Tendermint was hiring then. And then I was like, okay. Cool. I know you guys. And that's how we chose you guys to launch a chain and you guys are hiring. Great. And so I joined them as their kind of first retail product manager because previously they only focused on like, know, the SDK tech core stack, right? But then back then it was when IBC first launched. So IBC is
+
+kind of bridging that connects all the Cosmos chains. And so there was like, back in the days, was no way to view all your inner positions, et cetera, to do staking across multiple chains. So I joined this team back then called EmRus that basically was building out the first retail for the IBC suite. So I joined their team and was there for a year, approximately. That's where I met my other two co -founders, actually. And then I stayed in the Cosmos space ever since then.
+
+Last year we decided to launch Milky Way together.
+
+Citizen Web3 
+I will definitely, we'll go more into it if you don't mind, because there is a lot of things I want to ask you there. So first of all, you mentioned a wide range of companies, including foundations and big names in crypto, but you mentioned LinkedIn. And I'm curious a little bit what has led you to LinkedIn and how was your experience? mean, you shared part of that experience, of course, but in terms of, you know, working for a giant and then I guess,
+
+from there going to work, even if Informal or Crypto .com are big, of course Crypto .com is not LinkedIn. like, know, how was that different? What was the difference? Was there any difference at all like for you personally or doesn't matter LinkedIn, Crypto .com, you know, my own project, like, did you feel different in terms of the atmosphere, the people, you know, the experts, the industry, anything?
+
+Josie 
+Yes, of course. mean, like you said, like you can't compare. was was at LinkedIn and then I was there when we got bought by Microsoft and then so you can't really get, you know, to much more bigger company than that. Right. But having said that, even though it's such a giant company, the Hong Kong office is actually quite small. So we have under 50 people. And also I requested and always stayed looking at the startup scene. So I've always, you know, the start mentality. And then to me, like,
+
+I've always liked working with new projects or just thinking of new ideas or listening to new ideas. And so obviously, one route would be to go down the Feasy route and then work with all these projects. But then I'm not from a traditional finance background. And so to me, it's a lot more fun because to them, if they're expanding recruiting or doing marketing online, then you kind of really understand their business objectives and their of pay points and stuff.
+
+And so that for me, it was really fun talking to all of these startups. And that's what I really liked about it. So in some way, yes, I was in a very, very big company. But day to day, I was actually interacting with the startups in the greater China region. I was actually just wearing t -shirt and jeans and then going about all of these co -working space on Ironman co -working space, because a lot of them don't even have an office yet. So in that way, the whole startup environment kind of stayed the
+
+throughout my entire career.
+
+Citizen Web3
+What in terms of like, I mean, I know it's a question that is very highly subjective, but it is a question that's constantly not being, it's never really asked, but people do talk about it. There's a lot of references that in Web3, the level of development of the developers is either people who just dropped out of high school and learned solidity. And I can tell you, at least in my experience, it's true, but...
+
+Sometimes those kids are really geniuses. Sometimes they're like really you look at them. They're like blind. Then you go sometimes and sometimes it's the opposite. Sometimes you have teams because I worked with developers teams in crypto before. I am working with one now. Right now I have a great team but I've had experiences where yeah it was difficult like to say the least. So is there could you could you say that you know working for somebody like LinkedIn the developers the development team even though you were working with startups and you saw less of that
+
+Was there a difference in expertise? Do we need in Web3 better developers? That's kind of the question in that
+
+Josie 
+I really wish I could answer that question, but it kind of goes back to how the product and the engineering team set out as well. And I create all those tickets that went to the black hole. there was like, that miscommunication, not sorry, not miscommunication, that's a wrong word. There's just like that gap, like never really interacted.
+
+Citizen Web3
+Hahaha!
+
+Citizen Web3 
+I see.
+
+Citizen Web3 
+Yeah, I understand. You know what? If we're going to shift to the product side, there's something I can tell. This is an interesting observation I made while listening to you talk. Over the past four years or so, we had on the podcast a lot of people who work as products in Web3. And of course, we didn't have just products. had projects, products, CEOs, founders, whatever, CTOs. And there is one observation I have to say I have made just now especially.
+
+Whenever I have somebody who identifies as a product, identity is a very loud topic these days, right? So they always use the word fun when they talk about work. When it's other people, they're always like, you know, I had to do that and I had to do this and it was very, like, yeah, it's really fun. You know, we have all these startups and then like, so how does your work and day look? Well,
+
+Josie 
+I mean, that was just what was written on my contract, right?
+
+Citizen Web3 
+I spent, you know, yeah, it's really fun. spent 20 hours at my office, you know, wait a second. That was also fun. No, I mean, a joke humor aside, you know, but do you think that being a product, you know, especially in such a 24 seven space, I mean, does it not put constraint on yourself? Do you not feel burnt out sometimes if you do feel burnt out? What do
+
+Josie
+Yes, I get where you're coming from, because for sure. Because there are moments when I look at, for example, the engineering team or the designer team or like the teams that were, they talk to less people and they can just kind of like, okay, this is my task and then I do this, right? And then so for them, it's a lot more not easier, of course, like it's just as hard.
+
+but they can very much control their time and then do it whenever they want, wherever they want, Whereas for a product, kind of like, know, stakeholder management, and then if something on production goes on fire, then you basically, you know, don't really sleep. And so it is, it is physically more tiring in a way, I guess, on that sense. But that's to me personally, that's, that's the fun part of it. And that's why I kind of switched from, you know,
+
+giant conglomerate company to this kind of like where things are constantly evolving. And then there are all these like product you basically because product there's no like really fixed JD for it. And there's no to my knowledge, there is no like, you know, college degree for it, right? It's kind of like everything in a way. And so that that's the thing that I really enjoy because there's no repetition. Everything you do is different, like constantly context switching,
+
+I know a lot of my colleagues who do engineers, like, they hate it. And they're like, don't context switch me, please. And then they're always like, how do you do it? How can you go on one fundraising call to one UX design call to one tech call, then to everything can be completely different. And then Slack is all these conversations ongoing. then I don't know. That's what I like. I don't like to be bored.
+
+Citizen Web3 
+It's interesting that you put, and again, we don't have to go into this. This is just like an observation from a conversation. But it's interesting to me, at least, that you put a big gap between engineering and product. Because in my opinion, from what you describe, a product mindset is exactly what I would say an engineer's mindset. Not an expert, let's say, not a particular expert that works on a particular part of the engine, but an engineer.
+
+in terms of a person who has this mindset of, I know how to fix a wall. I know how to fix a factory. I know how to fix a car. It doesn't matter what I will fix. And the same what you're saying as a product, okay? It doesn't matter if I'm fundraising for LinkedIn or if I'm fundraising for crypto .com. I will still go on and do it even if it's the call after a call and they have nothing to do with each other because and to me, I think it's actually a lot of it like comes together is that mindset, I guess, right? Where a person is like, okay, I can do that. Yeah.
+
+Josie 
+yeah.
+
+Josie 
+True, Yeah, true. Especially in the, you know, DeFi Web3 space. Yeah. Cause it's constantly changing.
+
+Citizen Web3 
+For sure. I'm gonna ask you like, I think we don't talk about geography that much on the podcast. It's not the biggest geopolitics. mean, geopolitics is sometimes a big topic, but it depends, of course, on the guests. But you mentioned Hong Kong and, you know, we have a lot of guests from Hong Kong. We had a lot of projects, validators.
+
+I don't know, like really, you name it. There has been a really VCs and a lot of and I've been to Hong Kong. It's a beautiful place several times. I adore it. But what's your personal stance today? Again, I don't want to make it the main topic, but it is an edgy topic, I guess, with Hong Kong. And what's your stance today on the crypto scene on Hong Kong? Do you think that
+
+Josie 
+Thank
+
+Citizen Web3
+Becoming because some people say it's it's starting to change for the better some sick play people say started to judge for the worst this person who lives there and Is co -founded a project from there and is running other projects. What's your opinion?
+
+Josie 
+Yeah, for starters, Milky Way is not based in Hong Kong. I'm the actually, yeah, I'm actually the only one in Hong Kong. other two co -founders, they are in Seoul, South Korea, and they were spread across like eight countries as per tenement style. But back to your question in terms of the crypto scene, right? So what happened the past few years was actually during COVID for like two to three years, approximately, the city was shot.
+
+Citizen Web3 
+Okay, sorry, excuse
+
+Josie 
+in the sense that the borders were closed, not fully closed in the sense that you can't travel, but if you return back to Hong Kong, there was a 21 days quarantine period and the hotels here, rooms here are very small, right? And not to mention not particularly cheap since it's still large city. so back then there were a lot of, it's still now, it's still a financial hub, right? So a lot of banks are here.
+
+FTX was here, the headquarter. And so a lot of people left Hong Kong, including FTX, right? They had like multiple private jets that flew directly from Hong Kong to the Bahamas back then. And so that's on the crypto side, but also on the TradFi side, right? Not just TradFi, just like, know, business, like Web2 business. So a lot of them actually relocated their headquarters out because like there were so many news about
+
+just people going crazy with those constant 21 days quarantine. A lot of people still have to fly, especially when the in 2022 and the Western countries start lifting and then Hong Kong was still, know, there was still that quarantine period. So we lost a lot of talent then. And it's quite hard to ask people to just like, you know, uproot their whole family or to move back or for, you know, companies to re relocate their headquarters again, right? Or their Asia headquarters. So
+
+I think that took a big hit on the business side. so that's why in terms of the government, they're definitely doing a lot of things to revive the economy or not revive, like the economy is still doing well, but like just to give that that little extra boost that that umph. And so they're doing a lot of things across a lot of fronts, like, you know, on the culture side, on the music side, but definitely crypto is also one of the things that they work on because they like
+
+attract haliton general and crypto is one of those because we've always been kind of a free economic zone in that sense because we have very decent taxes on the business side and also on the income side. So that's why people traditionally have liked it here and then they're trying to build that up again.
+
+Citizen Web3 
+Thanks, because it's a mix of opinions. I guess everywhere the same if you were to ask a person from any location, what is the, you there is such a mix and I always tend to try to ask that question, especially people coming from regions like Southeast Asia or South America, because there is such a mixture of opinions and how could it go? yeah, let's see. You know, on a slightly different topic.
+
+I guess in terms of staking and liquid staking, it has been a big topic, I guess, in the whole of this space for a number of years, already not number, but a couple of years. And I remember I'm going to start straight away. I apologize for that. But I'm going to straight away with the devil's advocate question because this way is going to be more interesting. So I'm going to say so.
+
+Josie 
+Go for it!
+
+Citizen Web3 
+Two years ago or roughly one and a half years ago, remember once again, were mostly trying to become a media project, which we pivoted very heavily from. But we had this big life when Liquids was just around, and it was the big projects. It was back then, including Lido Finance and Stride and P -Stake. There were a couple of more projects
+
+And we were talking about different things. And I remember asking them one question, which I want to go back to and ask you right now. It's a devil's advocate question, but it's an important question in my opinion, because back then I had five people there who really had a lot of disagreement about the answer to that. Liquids taken. Now, the whole point of the rewards coming from the inflation, and isn't it kind of dangerous because at the end it's not real value that we're building?
+
+Once again, I'm going to say and warn that it's a devil's advocate question, but I want to hear your opinion. The rewards are coming from the inflation. There is no real value. It's not real accumulated value from fees or from products sold. Isn't that kind of a spiral to the death at a certain point?
+
+Josie 
+You mean for the users or like the for
+
+Citizen Web3 
+For the economics, for the economics, because we're basically printing inflationary tokens to basically go take from the inflation instead of like accumulating value, whether it was in fees or like an Ethereum or anything else, you know, we're just saying, hey, we have more tokens, can liquid stake them, get more, go there. I mean, something is sooner or later bound to break somewhere in the chain, right? So what do we do? Like, how do we make sure that doesn't happen? How does liquid stake in basically, in other words, the question is, how does liquid stake in or
+
+precautions does do liquid staking economical models undertake in order to make sure that the economics don't collapse onto themselves? Because what they do is they print in more tokens or given talking in exchange for another token. So what are like the strong points I would say are the weak points of liquid staking economics. This is another way of asking that I
+
+Josie 
+Yep, of course. So in terms of the yield itself, we're not actually creating more yield because like you mentioned, it's actually coming from the inflationary rewards. So that's completely controlled by a chain that the token supports, which in our case is Celestia. So the inflationary rewards are the staking rewards that's 100 % controlled by the Celestia chain. And so they set it on their end. So we don't create...
+
+more inflation on that sense for the tokenomics. So that's not re -affecting it. So what we're just really providing is that extra chain security for those people who are choosing, do I want to secure the chain, but I also want to use my token for DeFi, right? So we provide that chain security to the chain and also give the users the option to do chain security and also participate in DeFi.
+
+Honestly, like for a lot of people, including me, that I've spoken to, they got scared, right, from Luna. They got scared from Luna that, you know, it suddenly started dying and then all of their tokens were in native state and there was just no way. They just started unbonding immediately, but they still had to wait 21 days and obviously by then Luna was worth not much. So we cater for, you know, obviously the first group that I mentioned and then there's also the second group.
+
+And so it just really helps to boost our DeFi ecosystem. That's where we see it. And in the end of the day, it is down to the user's own choice if they want to do native staking or liquid staking.
+
+Citizen Web3 
+I understand exactly what you mean. guess just to dig a little bit more to hear because I really want to understand an opinion of person who works in such a project. So let me give you different example. let's say, and by the way about Luna, I'm one of those people, heads up, know, so hey, but you know, let's go a bit more into case, you know, so for example, let's say I have liquid Luna or liquid Atom, it doesn't matter right now, you know,
+
+Josie 
+Hehehehehe
+
+Citizen Web3
+necessarily Milky Way case just in general. And let's say I go and as a user, I stake that. I know, I use it in DeFi to buy USD whatever C or liquid USDT that was printed on top of the liquid USDC. This is what I mean. So sooner or later, when we have one token in the economy, let's say we have a euro or whatever, the Bitcoin or Ethereum.
+
+We kind of know that Ethereum is backed by the security of the chain, by the fees, by the consensus. In this case, when we start to add more more obstructions to the economics, when I take Liquid TIA, go take it into DeFi project, the DeFi project doesn't have just Liquid TIA and TIA. Usually they will have like, don't know, Liquid DEAD, Liquid DEAD, Liquid DEAD. So this is kind of the question. How in this term...
+
+Or does the LiquiStakeM provider here, or I think I heard the answer. Basically, the LiquiStakeM provider here says, hey, this is the user choice. What they do with this, we're just providing you the ability to use this token. Am I hearing you correctly
+
+Josie
+Yes, yes, exactly. it's also, so in terms of the risk, right, obviously there is, you know, as per any token, there's always a risk. So for the liquid sticking token, the risk is honestly the DPEG. So that's why, know, when, when I think one of the LRTs a few months back forgot exactly which one there was like a 7 % DPEG or 6%. And then so was like all over CTM on that. And so it is down to
+
+Obviously, it's the user's own choice whether they want to do it, but then it's also the liquid -stakeing provider's responsibility to defend the PEG, per se. And that's why there are a lot of fault strategies out there that help with the funneling of users in terms of when they should liquid -sig, when they should buy, et cetera. So there are a lot of strategies out there to help these protocols with defending the
+
+Citizen Web3
+Do you think apart from Cosmos, have you seen examples of not complex in a bad way, but complex in a good way, models of liquid staking? I don't know, in Ethereum, Polkadot, Nier, whatever, you think that what they do in the economics is a cool example of how it should be done. What maybe in Cosmos doesn't exist today, for example, or the other way, maybe Cosmos has more than, I don't
+
+Is there something where you could talk about examples like that? What's in your opinion the best examples of liquid staking protocols? Apart from, of course, what you do yourself.
+
+Josie 
+Not really on the economics per se, but I think a lot of them when they do really well on the DeFi integration that really helps with the users. also in terms of, guess, you know, obviously a big topic nowadays is on the restaking side. So how do they collaborate closely with the restaking providers and also the liquid restaking providers? So those that kind of care a lot about liquidity fragmentation and UX.
+
+I think that's actually really important because nowadays there are lot of different various forms of tokens and it's very easy for users to get confused with them. So for those that care a lot about the UX side and also the consolidation of liquidity, think those are the ones that do really well.
+
+Citizen Web3 
+Okay, thanks. What's today, personally, the goal, the objective? know, lot of founders, when they come on the show, we try to talk with them about what's the reason you guys are doing the project. What is your goal? it's apart from providing the user the ability to liquidate his talking, which is the use case, what's the personal, let's say, know, goal of Josie in this case? What's the achievement? Where is it going? Where is Josie going with trying
+
+Josie 
+Yes.
+
+Citizen Web3
+or found a liquid stake in protocol.
+
+Josie
+Yeah, sure. we have always been like, I joined Tenement and I met my co -founders at Tenement, right? So we actually are quite similar mentality in the sense that we have always tried to work to gain mass adoption for the crypto scene. I know that sounds really cliche. And so back then what we were doing for like, you know, our little piece of what we could contribute to
+
+to this grand gesture is on the IBC side. So like when we joined Tenermind, like I personally was at IBC Maxi. I mean, I still am, but back then it's all about the whole app chain thesis, right? And I think it's shifted a little bit in terms of with all the modularity data, DA providers, and also all the roll -up thesis, like all the road chains propping up, et cetera, right? And for Celestia, we've always followed them very closely because they have, you
+
+pretty close ties with Tenement as well. So we've always known that they were building the DA provider. And so when Celestia was going to launch last year, basically that's when my co -founder JB, he was talking to some other Cosmos OGs and then they kind of realized that none of the liquid -staking providers can support Celestia. And that's when he was like, okay, such a large upcoming POAS chain definitely need a liquid -staking provider. And we have always been,
+
+believers of their mission. so we're like, because their mission is also to, you know, for mass adoption, right? And so we're like, okay, we're going to do our little piece to, you know, provide chain security for them. And so that's how we started, honestly.
+
+Citizen Web3 
+How do you see mass adoption in terms of, I mean, what is mass adoption? Because you can say that when we had NFTs and they started to, on the telly, you kind of like switch the channels and the auctions on art suddenly cooled the prices in Ethereum in 2021. I remember seeing that. was like, isn't that mass adoption then or not?
+
+Josie 
+So mass is like for us, it's more not the existing crowd, but for the kind of, you know, my mom and my dad kind of people, where if you ask them to, you know, open up a seed wallet, you know, and also to, you know, handle the transactions where they need to wait a few minutes and then to like, you know, transfer things back and forth to them, it's just like, way too confusing. And so that's why like,
+
+I know at the same time, people, there are a lot of memes out there in terms of there are a lot of block space and we don't need more. But to me personally, I still think that's a problem because in terms of, for example, how Celestia is providing the services with the DA, right? It's essentially if you look at all the other Ethereum L2s previously, their average gas fee would be like 0 .15 USD. And you can argue that it's gone down a lot compared to mainnet.
+
+But still like 0 .15 USD per transaction. It's still very high if you need to do a lot of kind of, you know, the more interactive stuff. imagine if you're doing gaming, right? And then every time you shoot a gun and then you need to pay 0 .15 USD, then that's very expensive. and even for like, you know, just any companies that has a lot of transactions and it's still impossible for them to, you know, put those transactions on chain per se.
+
+And that's where the whole block space really comes into place, having that DA provider really helps to lower the DA fee and hence the corresponding gas fee. Because previously, for the L2, it's like 85%. So it goes to the DA fee. So that helped to lower it really, really drastically. And yeah, so that's why we're really kind of keen to help support this mission.
+
+Citizen Web3 
+I think it was Chris Rock, a comedian who did a sketch about 20 years ago on gun control. And his point was that you don't need gun control, need bullet control. As soon as a bullet is to cost $5 ,000, people are going to stop shooting each other because like, I will shoot you as soon as I get the money. I think, know, that there is also of course, but how do you level out, you know, DDoS security?
+
+Josie
+Yeah.
+
+Citizen Web3
+and cheapness on transactions. Where is the perfect balance in terms of, okay, here is our Cibyl resistance and here is our mass adoption price. What's the balance
+
+Josie
+Ooh, I'm not the best person to ask on security. Yeah, I know there are lot of firms doing that.
+
+Citizen Web3 
+Okay, okay, okay. let's let's let's no, no, no, I was we can we can we can turn to talk there was another there was another another sentence you mentioned you talked about, you know, roll ups versus the ABC upchain thesis and again, in terms of like, from your perspective, from the product perspective, how do you think the roll up scene over the past like one and a half years influenced the whole, you know, again, from a product perspective, the whole faces of upchains
+
+Has it influenced it? Has it made it worse? Will upchain still exist? know, all those like 1 million questions that can arise from it. What's your take on that?
+
+Josie 
+Sure. Yeah, I think it's shifted a lot. For example, we just saw about Milky Way, right? So when we launch, as an after we launched liquid staking for TIA, because we actually deployed the contracts on Osmosis, Cosmos and contracts. there, I mean, the team is great. We love them, but it's still not, you know, our home base per se, right? And so we can, we're kind of restricted to deploying contracts.
+
+So after it's we're like, okay, let's kind of find a home base for ourselves. And so it's easier to build custom modules for the future, know, liquid seeking. And we're actually building a reseeking platform right now for the module ecosystem. So, and we wanted to build it writing modules, right? SDK modules. And then so we're like, okay, how do we do it? Do we launch and Cosmos L1 app chain? That's obviously very feasible, but then we'll need
+
+pay the validators quite a bit, right? And then so in the end of the day, we actually decide to, you know, go with our own roll up using the initial framework with Celestia underneath. And then so we, I see a lot of the other projects actually kind of in a similar thought process, because if you, you know, if you launch an L1, you do need to pay the validators quite a bit for the security. And then so it's like, do you want to do that? Or do you want to, you know, go with a roll up? then obviously
+
+comes with a whole centralized sequencer issue, but then you can then decentralize it or you shared sequencer, et cetera. So yeah, like obviously for the huge projects where it's getting enough security is not a problem, for example, know, bare chain monad, then obviously they're gonna launch their own L1. But then for the other smaller ones then, then it's a solution.
+
+Citizen Web3 
+Do you think that the interchange secure, again, from a product perspective, can interchange security provide the solution to that?
+
+Josie
+yeah, yeah, 100%
+
+Citizen Web3 
+Because it's interesting, because it seems, I don't know which aspect to look at it correctly. for example, even Celestia, think, when I think it was Ismail a few years ago, he published a link to a paper from 2015 or 14 of Vitalik, where Vitalik is talking about how in visions rollups will look. And he says,
+
+I took my studies from that paper. And then you have today the whole Cosmo, at least the Polkadot, the Cosmos crowd saying, hey, we already have this Ethereum is taking this idea from us. Of course, that's stupid. It's just fighting between different clans, of course, everybody. it kind of seems that right now there is all those people who are saying, rollups, you don't need to pay for Validity Security. It's really cheap. You just go there and
+
+And then there are people who say, no, but I still want, like you say, like barrel chain or whatever, know, and I have the money to pay for it. then you have, so I'm just trying to, you know, to kind of, I think that the majority of people, you know, they're trying to rub their head around it and they don't see, to me, to me personally. And again, here's the question to you. Do you think that we will get beyond that point to a point where a person who is using the rollup or the chain or whatever, they don't care what it is. They just want to use the product. Like you said, mass adoption, you
+
+And regardless, whether it's a roll up or whether the validators are being paid by a chain or by somebody else, how do we get there and when do we get there?
+
+Josie 
+Yeah, so actually, spoke with or not spoke, speak with the RAS, I was gonna say RAS, but I don't know why they all hate the word RAS. Rollup as a service provider companies, they just, somehow they all of them, hated. And yeah, so I spoke with them quite frequently in terms of like, just curious, like, you know, their customers, like, what kind of like, you know, solutions do they use, right? You know, OB -STED, Carburetor of Orbit, then WJDA provider, et cetera, et cetera, right? And actually,
+
+Citizen Web3 
+Ha ha
+
+Josie 
+The most frequent answer that I get is they don't really care. And that's why they kind of go to these RAS providers and be like, OK, I'm building this, this, this. And I actually don't really care what tech stack I use. Just tell me, what should I use it? And I'm just going to use it. And so I completely agree with you that in the sense that in the future, just whatever is the easiest for those, be it devs or be it.
+
+users and then that's what they are used. It's like why so many people are using Solana just because it's so easy to use, right? And yeah, so I'm actually really looking forward to the day when proper chain abstraction is done right. I think that'll be really cool because users, they just don't care.
+
+Citizen Web3 
+So is Milky Way in that term blockchain agnostic? Would you say that you guys are blockchain agnostic you don't care about?
+
+Josie 
+So we service a modular ecosystem. That's what we've always, we started and then that's what we are still doing. So we started off doing liquid staking for TIA token. And then now we're building the roll up, like I mentioned. And so we're building the restaking platform. Cause after we launched it, we actually took some time to do kind of R &D and to speak with a lot of the upcoming new projects. Cause a lot of projects they still use Cosmos tech stack, even though they probably
+
+brand themselves as causal, but they still use the tech stack, right? And so there are lot of upcoming projects up. And so we talk to them to kind of know what they want. And then so it's a liquid -seeking solution for them. And yes, like obviously they're very interested, but what we've noticed is that a lot of them actually face a pain point of getting the enough security to launch their, be it L1s or their middlewares or their chains, right?
+
+So that's when we decided that restaking is actually needed in the modular ecosystem as well. Because a lot of them, actually saw the restaking that Eigen is doing and they talked to Eigen layer and then they're like, but then it's a different ecosystem. And so they'll need to build a middleware to talk to them. And so they were like, is there a native solution? then so they actually, we got approached by a lot of projects in terms of, yes, it liquid staking. Will you guys build a restaking as well?
+
+That's how we decided to branch out our product suite and then build a reseking platform too.
+
+Citizen Web3 
+I guess I'm going to try and direct again that question a little bit because I directed it maybe too vague, too abstract. guess my question is here. And again, somebody who has seen and experienced working in different projects and you've seen communities come and go. And I guess what I'm saying, blockchain agnostic here in crypto, I have found that at least personally and by talking to people and asking them questions to other founders,
+
+projects who tend and try to build communities from different ecosystems tend to not find it easy. They say, we have to really go through. So this was, guess, my question to you. Since you're saying that you guys are building for mass adoption, you guys are working in the CosmoCycle, but you're also touching upon other ecosystems, how do you find building the community? Because of course, without the users, without the community, the projects won't be there.
+
+So just like without the development team, right? But how do you find it, you know, trying to create a multi -chain community? Is it difficult? Is it easy? Have you faced any difficulties in that direction? Like at all?
+
+Josie 
+Because us personally, we're not doing the multi chain community because in some way, yeah, because in some way liquid staking is a, obviously, you know, there's a token that users will use, but then it's also providing the B2B service to provide chain security, right? And restaking is actually an even more B2B service in that sense, because we're providing that security to projects. So it's very much kind of a business mentality on that sense. And
+
+Citizen Web3
+You're not, okay.
+
+Josie 
+how, when I mentioned the whole mass adoption, it's really to facilitate projects to build easier and faster. Because a lot of them, if they do keep deploying a lot of the Cosmos L ones, and Cosmos is a little bit fragmented in the way, because they each all need to build their own community, right? A lot of them have their own community. And so it's a lot easier for them to just kind
+
+not have to go with the L1 route, for example, and do a roll -up where it's all more tied together, then I think it's a lot easier to achieve that mass adoption. even though we're not building a user facing the app per se for that purpose, because restaking is providing that security, but it's enabling to be able to launch faster. Because for them, they want to build the product that they want to build,
+
+and then getting enough security is actually a burden for them. And that's not part of their product suite, per se. It's just something that they need to make sure that the validators won't want to take over their product. And so that's why we're just letting them be able to build and ship faster. And hence, that's how we be part of the piece that helped to gain mass adoption.
+
+Citizen Web3 
+In terms of Milky Way itself, you guys had, at least again in the Cosmos ecosystem, you guys had like a big, you know, when Celestia came around, you had a big, what's the right word here? Turn around, right? Not turn around, but turn up, turn up. You guys appeared and you were like, boom, milk tea, it was everywhere. Since then, at least again, I might not be the best.
+
+Josie 
+Yeah.
+
+Citizen Web3
+heaviest user of because I'm using a lot of ecosystems, but I try to go deep in everywhere where I use I haven't seen Milky Way as as as Out there as when it appeared first. I remember it was really like a big blast So what is the goal right now? What is the plan of of you guys to? Kind of what are you guys planning behind the scenes and when when when when is it gonna happen?
+
+Josie 
+Yeah, sure. Thank you. And thank you for the support and for noticing us. yeah, it's kind of like how I mentioned in terms of we there like we after we launched, we did take some time to really think about Arctic steps because there are there were three and then now there are four liquid significant providers in cosmos. Right. And they were like, yes, technically we can very easily be the fifth one. But do we want to do
+
+And then we're like, no, we want to really provide that value. And that's why we took quite some time to really talk to so many projects out there to understand their pain points and then to see how we can help. And then hence us building the roll up right now and building the restaking piece right now to really help service these projects. in some way, we have been doing a lot, but then it's all kind of behind the scenes B2B.
+
+aside talking to these projects. And that's why there is less things that can be seen on Twitter or push our product. Because we did get asked a lot, They were like, hey, you guys took two months from team assembly to mainnet launch. And then you haven't really launched anything since then in terms of product -wise. then so because all of these has been going on behind the scenes. Having said that, we actually just did the public testnet launch.
+
+less than 24 hours ago. And so that's for our second liquid staking token, actually, for the init token. Because we are, like I mentioned, the rollup is using the initia framework. And so we will be supporting the initia init token as our second liquid staking token. So users right now, they can actually go in and end liquid stake on our testnet.
+
+Citizen Web3 
+Quick question about the testnet since a lot of validators do listen to this podcast. And I guess it's one of our primary audience. Do you think that you are guys looking for validators? Is it something that is open to people to come and join the testnet or is it a widely selected testnet? Will there be another like what was the 101 here for validators?
+
+Josie 
+Yes, yes. So we are looking for the validator set right now for the liquid seeking for the init token. And we will do the standard checks in terms of making sure that uptime is good, that they will be in the active validator set without our delegation, et cetera. So all of these are prereqs. And yeah, there might be a form coming out shortly. yeah, the finalities haven't been decided. whoever listens to this.
+
+feel free to drop me a DM or ping our general chat that works
+
+Citizen Web3 
+Okay, perfect. Guys, if you're again listening to this, regardless of whether you're a validator or not, please find, of course, everything me and Josie mentioned in the show notes, so including the contacts of Josie, well, Twitter at least, not personal contacts. So, of course, you can find the project as well and text them. Okay, Josie, let me jump to the bleats. Three questions. They're not bleatsy. They sound bleatsy, but, well, I say bleats.
+
+Josie 
+Hehehe
+
+Citizen Web3 
+That's why they sound blitzy, but you don't have to be super quick, but I know you have time. that's why I'm going to be trying to be quicker. So first question, could you share with me one or a movie or a song or a book that has had positive influence on you throughout your career?
+
+Josie 
+career.
+
+Citizen Web3 
+Yes, yes, yes, yes. We are focused on the founders and the experts, so we always try to shift it towards that little angle to see how people, what helps them to be better at what they
+
+what motivates
+
+Josie 
+okay. If it's a book,
+
+Josie
+I won't really say it affected my career per se, but it's more like my life. I've been the biggest Harry Potter fan since I was a kid and I've always liked it. And I mean, it's got nothing to do with like blockchain per se, because back then it didn't even exist. I liked it so much that when the seventh book came out, I was actually the first one in Hong Kong to buy it. I waited at the store at 3 a .m. and then I would just
+
+Citizen Web3 
+huh, huh, huh, huh.
+
+Citizen Web3 
+Nice. Nice.
+
+Citizen Web3 
+wow.
+
+Josie 
+waited for the bookshop to open and I walked in and then the reporters came and that was actually the first and I guess only time I was actually on the news. They interviewed me about how excited I was to buy the book. So no, it doesn't, I don't say like every day when I'm working I'd be like, Harry Potter. But yeah, I really like how, you know, it's a magical world. Everything is possible.
+
+And then really, you know, it's like, pick out the box and then, you know, you might one day you might get that letter from Hogwarts. And yeah, it just kind of shaped me as a person rather than my career per se.
+
+Citizen Web3 
+Okay, that's exactly what I was looking for, by the way. Maybe I like to waste a little bit of the question. second one, give me one that you can share, of course, one motivational thing that helps Josie do her calls every day and work for all those companies, build liquid stake in and so on and so forth. Something motivational that you could share that helps you to get throughout your
+
+Josie 
+Okay.
+
+Josie 
+Sure. So not sure if this is motivational, but personally, this is what brings me the most happiness working on Milky Way because, you know, we covered liquid staking and then we covered restaking. you know, product changes and there's no guarantee that, you know, one thing or one product line is going to stay there forever. Right. You know, like, you know, Facebook has changed, you
+
+all of these, like they start off with Facebook, does anyone still use Facebook, like the site anymore, I don't know. Maybe they do. But then they're branch out. And so, yeah, so in terms of product, even though I love what we're doing right now, but there's no guarantee that it's going to stay here for like 50 years, right? So what I'm, what really motivates me and what really brings me a lot of joy is a team that I'm working with. So we're all ex -colleagues, not directly like, you know, all of us.
+
+But we've all worked with each other in one capacity or the other way, right? And so what brings us a lot of joy is that we get to start this company and that we've all enjoyed working with each other before. And then we get to create this kind of working culture that we all really enjoy and that fits us well.
+
+and that us going to work every day isn't a chore or something that is sad because we're kind of like a close -knit family in that sense where we have each other's back. And then back then, we hit the ground running. And then even now, it's just very happy. And then everyone knows the product can pivot, but it's really the team that matters. And then to me, it's that we can kind of run this company where we bring joy to all of our colleagues. I think
+
+That's what really motivates me and bring me the ultimate joy.
+
+Citizen Web3 
+That's a very good answer. I like it a lot. Thank you for it. And last one, I promise it's a bit of a weird one. And I'm going to make an assumption because of your first answer, because of your book answer that I think there might be something I'm suspect. I might suspect what you're going to answer, but I'm going to ask the question anyways. So Dead or Alive, imaginary, real, developer, book character, cartoon character, movie character, not a guru, not a guru, but somebody who you look up to in your life sometimes.
+
+Josie 
+Look up to.
+
+Citizen Web3 
+Sometimes in difficult situations, you're like, would Harry Potter do?
+
+Josie 
+I thought your question would be who would I want to meet when you say that are alive.
+
+Citizen Web3 
+No, no, no, no, no, no, it's a no, no, no, no, no, no, no, it's a character. It's a car. No, no, no, no, no. Well, in a way, in a way you could answer it like that. That's actually a good way. I like that. I like that. That's a good way of re -asking that.
+
+Josie 
+But no, okay, I'll actually answer your question. Yeah, okay, fine, you were right. It would be JK Rowling. So the Harry Potter's author. That's one fact that I really liked it. Because especially a lot of people are like, you need to like, know, really know yourself or have made it or be on the right courage, you know, path in like your,
+
+Citizen Web3 
+Nice, nice, okay.
+
+Josie (51:18.03)
+when you're 18, for example, and then you're like, I'm going to be a doctor. And so I've set for life or even your 20s, like, you you join investment banking firm and then you kind of set for life. And then she didn't come up with the idea of the Harry Potter on that train ride until she was 30. So and then now she's like one of the richest person in England. it's it's not about the age and it's not about the, you know, the limitation and everything. It's just whatever is possible.
+
+And she brought a lot of joy to a lot of people in the world, including me.
+
+Citizen Web3 
+Thank you for saying that. I did have an assumption, but I didn't know it was going to be such an extended in terms of like, I like how you said that, yeah, you know, she brought a lot of joy to people. And I think on that note, hopefully that, you know, we will be also, know, Web3 will bring a lot of joy to a lot of people out there. So I want to thank you, Josie, for
+
+Josie 
+Yeah, I'm looking forward to it. Yeah, solving the real world problems like, you know, payments and all that.
+
+Citizen Web3 
+Still, thank you for saying that because I think it's important and we do like joy, a little bit of joy sometimes. So thank you, Josie, for using that word quite several needed times in my opinion on this podcast, joy for sure. Josie, thank you very much. Please don't hang up just yet. This is just a goodbye for the listeners and for everybody else who joined us this week. Thank you and see you next week. Bye
+
+Josie 
+Thank you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content. 

@@ -405,6 +405,7 @@ const getByIdentityWithDetails = async (identity: string) => {
               chainId: true,
               name: true,
               prettyName: true,
+              ecosystem: true,
               params: {
                 select: {
                   denom: true,
@@ -499,38 +500,57 @@ const getAztecValidators = async (chainName: 'aztec' | 'aztec-testnet', chainId:
   }) as ValidatorWithNodes[];
 };
 
-const searchByMoniker = async (query: string, take: number = 10) => {
-  return db.validator.findMany({
-    where: {
-      moniker: { contains: query, mode: 'insensitive' },
-    },
-    take,
+const validatorSelect = {
+  id: true,
+  identity: true,
+  moniker: true,
+  website: true,
+  nodes: {
     select: {
-      id: true,
-      identity: true,
-      moniker: true,
-      website: true,
-      nodes: {
+      chain: {
         select: {
-          chain: {
-            select: {
-              name: true,
-              prettyName: true,
-              params: { select: { denom: true, coinDecimals: true } },
-              tokenomics: { select: { apr: true } },
-              prices: { orderBy: { createdAt: 'desc' }, take: 1, select: { value: true } },
-            },
-          },
-          operatorAddress: true,
-          jailed: true,
-          rate: true,
-          uptime: true,
-          missedBlocks: true,
-          tokens: true,
-          delegatorsAmount: true,
+          name: true,
+          prettyName: true,
+          ecosystem: true,
+          params: { select: { denom: true, coinDecimals: true } },
+          tokenomics: { select: { apr: true } },
+          prices: { orderBy: { createdAt: 'desc' as const }, take: 1, select: { value: true } },
         },
       },
+      operatorAddress: true,
+      jailed: true,
+      rate: true,
+      uptime: true,
+      missedBlocks: true,
+      tokens: true,
+      delegatorsAmount: true,
     },
+  },
+};
+
+const searchByMoniker = async (query: string, take: number = 10) => {
+  const exact = await db.validator.findMany({
+    where: { moniker: { contains: query, mode: 'insensitive' } },
+    take,
+    select: validatorSelect,
+    orderBy: { moniker: 'asc' },
+  });
+
+  if (exact.length > 0) return exact;
+  const normalized = query.replace(/[.\-_]/g, ' ').trim();
+  const ids = await db.$queryRaw<{ id: number }[]>`
+    SELECT id FROM validators
+    WHERE LOWER(REPLACE(REPLACE(REPLACE(moniker, '.', ' '), '-', ' '), '_', ' '))
+      LIKE '%' || LOWER(${normalized}) || '%'
+    ORDER BY moniker ASC
+    LIMIT ${take}
+  `;
+
+  if (ids.length === 0) return [];
+
+  return db.validator.findMany({
+    where: { id: { in: ids.map(r => r.id) } },
+    select: validatorSelect,
     orderBy: { moniker: 'asc' },
   });
 };

@@ -1,0 +1,282 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/idena
+
+Episode name:
+Democracy, AI and Quadratic Staking with Idena community members
+
+Citizen Web3: 
+Good Space you all! In this episode of the Citizen Cosmos podcast we spoke with two members of the Idena community, L Traveler and Trav Crypto. Idena is a human-centric proof-of-person blockchain concentrated on achieving equal voting power for its participants. We discussed validation, AI, consensus, mining, power, costs, rewards, plutocracy, quadratic stake in oracles and controversial decisions. 
+
+L Traveller: 
+We are like a whole ecosystem that are using our brain to support that blockchain. There is one very important thing of the mining that you don't need a powerful machine. 
+
+Citizen Web3: 
+I've seen projects fail, rise, and one of the biggest reasons projects fail is the lack of the community involvement, in my opinion, is the lack of the community remembering that this is a decentralized space. 
+
+Trav Crypto: 
+In terms of Idena being a proof-of-person chain or one person, one vote, as far as the consensus mechanism, I think the whole idea is to have a more equal and egalitarian system that anyone in the world can participate in. 
+
+Citizen Web3: 
+Before we rock it off into the podcast, here are the latest news from the sponsor of this episode, Cyber. The Cyber Congress, Dow, has opened the portal and Atom, ETH, Terra, and Osmos users that meet the requirements can claim the gift and the moon citizenship on cib.ai. Good space time, y'all. Welcome to a new episode of Citizen Cosmos. 
+
+I have with me today two guests, L Traveller and Trav Crypto, both community members of Idena. It's also a cosmos-based project. They will tell us all about it. 
+
+It's a very interesting project. I'm not going to say anything. I'm going to let them introduce themselves and speak all about it. So, guys, L Traveller, Trav Crypto, hey, guys, whoever wants to introduce themselves first, welcome. 
+
+L Traveller: 
+Community knows me as L Traveller. I'm in the project like two years, maybe one year and a half. Don't remember exactly. So at the beginning, why Idena caught me because the first thing that really were interesting that you can get into the crypto world without any penny in your pocket, like without any money, and it was pretty cool. Someone tells me, hey, do you want to solve some puzzles and then you're going to get paid? I said, well, that's something interesting. So that's how I got joined into the community. But then I started to discover and when I go deeply, I said, wow, it's not just about to solving tasks. It's actually something new that I have never seen before. 
+
+Then I started to go deeply. I have developed this script that help people to run Idena Node on Linux server. And then I have made my YouTube channel because I really like to, as you can see, there is a chroma key. So I'm making some video tutorials that are explaining how Idena works and how it could help people to develop the fair democracy. So then I joined and I started to help with the translation of Idena Chronicles and other material from English to Russian. And more and more, I feel like, yeah, that's something cool happening. We are building something that can make a revolution in the future. 
+
+Trav Crypto: 
+Yeah. And hey, guys, my name is Trav Crypto. I've been involved in crypto probably since 2016. And I started, I think, like most people as a skeptic, a little bit skeptical of crypto and what all it could really offer. And basically over time, after reading the Bitcoin white paper and other white papers, like the Ethereum white paper, I got really interested in blockchain technology. And basically I came across Idena because of the concept of I wanted to participate in validation, but other blockchains can be very plutocratic and can require you to have a large amount of wealth in order to participate in validation. 
+
+So I wanted to find a layer one blockchain that anyone could participate in no matter how much wealth they had. And that's how I came across Idena. And I've been actively involved at least for the past couple of years. 
+
+And like L Traveler said, the ethos is really, really cool within the community because it's accessible to anyone and everyone. And that kind of brings us where we are today. 
+
+Citizen Web3: 
+I have several questions straight away. Mm traveler to try not to jump and let's go part by part. So the simple question, and for you it's obvious, but let's break it down for myself and for everybody there who might have still not heard about Idena. I'm hoping I pronounced it correctly. Which one of you guys wants to give a brief overview and not just, but also the consensus behind Idena, which is very special. So the idea, I mean, who wants to give a brief overview of what exactly it is and what it is you guys do and why? What is the goal of all that idea behind Idena? 
+
+L Traveller: 
+I think trust crypto will start and I will continue. 
+
+Citizen Web3: 
+Go, go, go. I see you guys are prepared for this. I can see that you've prepared for this. I can see that. Go, man. 
+
+Trav Crypto: 
+Yeah, so Idena basically is a layer one blockchain, like I mentioned, but any human can participate in the validation. So the consensus mechanism is proof of person and rather unlike, let's say, Bitcoin, which is proof of work where you need an ever growing amount of machines to participate or unlike what is soon to be Ethereum 2.0, hopefully if it ever happens, proof of stake where you need an ever growing amount of the actual cryptocurrency in order to stake and participate in validation. You just need yourself. You just need to be a human being and you need to participate in what's called a validation ceremony, which currently happens approximately every three weeks. And that validation ceremony is basically puzzles or flips proving that you're human. So you solve these puzzles over a relatively short period of time and you prove that you're in fact a human. 
+
+And once you do that, you can participate in validation on the blockchain where you can earn mining rewards for validation. So that's the very basic overview. And I think now L Traveler can probably dive into a little bit more of the technicalities. 
+
+L Traveller: 
+So as trav just said, we are developing the network that's going to be part of Web 3. If we look on the process of participation to the network, we can see that as a game. It's like first, when you're just joining to the network, you're just candidate. And to protect our blockchain from bots, we have created a system to invite new members only through the invitation codes. So you cannot just become a candidate and join to the ceremony without invitation code. So first of all, you are taking the invitation code. 
+
+Then the person who invited you is getting rewards for the invitation. So he's motivated to explain you everything clear and to control you like you're participating on time and you know exactly what to do. So it's like your manager, you know, who's going to control you, who's going to check everything, who's going to explain you. So the next step after the first validation, then you will be coming from candidate to newbie. And then since you becoming newbie, you have some new skills that you can do. So you can start mining if you want. But there are words that you are getting that rewards are going to the stake. 
+
+So you cannot just take money. You have to keep going. Then you're going for one more validation, you are getting like a newbie 2 level, but you still newbie. So the money still goes to your stake. And only after third validation, you are becoming identified member, which gives you an opportunity to invest your money into the stake. Why we are making that, as I said, because we are developing a blockchain for human being. 
+
+So we have to make the ecosystem that accepts humans, but do not accept an AE or bots and so on. So I would like to tell you more about the process that a part of solving flips. The first question, what is flip? 
+
+The flip is filters for intelligent people, which means that when you're solving flips, you can solve it because you're a human. But the machine cannot solve it because the way how they made it, which is a story with four images that has beginning and the end of the story. So we have four images in one column and four images in another column. 
+
+So the images are the same, but the order only in one column can be represented as the story that has beginning at the top and the end of the bottom. So since you becoming a newbie from candidate to newbie, then you have one more responsibility. So you have to create flips also. 
+
+And this is very important. It's like people are creating flips and people are solving flips. And we are talking about the validation ceremony. There are two parts. The first part is a short session. The time window of the short session is one minute and 45 seconds. Why we have short session? Because the short session could guarantee that only one identity and one human can be connected. 
+
+It's like the period of the time is very short. So you cannot pass validation from many identities, which is very important. And then we have the second stage. And the second stage is a qualification session, like a main session, a long session. And the purpose of the long session is to check flips that have been created by other people. 
+
+What I mean by checking is to see that all of the keywords are connected to the images and also that there is no marks or hints that helps you to solve the flips. So we are moderators and also we are the people who are examined by other identities. So we are like a whole ecosystem that are using our brain to support that blockchain. And this is more or less like a general explanation. 
+
+Citizen Web3: 
+I like that it's a very decent explanation, easy to understand. I have questions that are going to be some of them devils advocate, of course. So let's play a little bit with some of the things that you said. And I'm going to try to twist maybe some, but I want to hear the answers. 
+
+This is why I'm doing that. So first question, which comes out to me as the obvious, why human only chain? Why does Idena doesn't recognize bots, machines, AI's as a full on intelligent beings capable of participating in life of a chain in equal way to human? 
+
+Trav Crypto: 
+Yeah, that's a great question. I'll take it from a high level, I guess. So my understanding is Bitcoin consensus mechanism originally was kind of one machine or one node so anyone could basically participate with their computer, their laptop, and they could validate on the proof of work blockchain, which is known as Bitcoin. And over time, that's become more and more inherently difficult. As we can see today, there's entire mining organizations. I actually live in Texas here in the United States, so there's Bitcoin mining farms. But I mean, they're located all over the world and you can see how difficult that barrier to entry is for validating on this blockchain. But to answer your question in terms of Idena being a proof of person chain or one person, one vote, as far as the consensus mechanism, I think the whole idea is to have a more equal and egalitarian system that anyone in the world can participate in. And that's currently in place with Idena, which is really cool to see because you can see people participating in the community that are actually participating in validation as well, which is can be somewhat rare in other blockchains. And also to answer your question in regards to why can't AI participate? I think technically speaking, they could participate if they were smart enough to complete the validation ceremonies, which we haven't seen to be the case so far. But I think technically speaking, if an AI were as smart as a human being, smart enough to complete these flips, as L Traveler was explaining previously, I think they very well, in fact, could participate. But there's no AI that's currently at that technical level to participate. 
+
+Citizen Web3: 
+So if I could summarize it, it's not about we don't like robots, we don't like AI. We just think that at the current stage of the implementation, that's a test for them. If they can solve it, they can participate. That means we're smart enough for us. Is that basically what you're trying to get at, right? 
+
+Trav Crypto: 
+Right. The goal is to not have AI participate. That's the ideal. And we've been successful so far. But obviously, we hope that this validation ceremony can prevent AIs from participating in the future, which allows humans to have the power in the consensus mechanism. But we'll see. There obviously have been a lot of attempts so far, but they haven't been successful. 
+
+L Traveller: 
+Yeah, there is one thing I would like to add is that there is a price for people who are going to develop that kind of system. So the developer is going to pay a amount of money for someone who's going to hack the system. It's the first thing. And the second thing that we're always trying to predict that. And since the blockchain was released, it was already like two or three additional protection have been implemented. 
+
+And we have to mention that. Like, first of all, we call it antagonistic noise, which is kind of noise that every image has. And that protects, like when they, for example, Google Vision, trying to check that kind of images with this antagonistic noise, the percentage of correctly recognized images are very low. Also, we have a mechanism when we are putting kind of, it's not a watermark, but it's kind of another image or another background with the low level of opacity that could be noticed. But it didn't break the general sense of the image. Also, there is one more thing that sometimes the system, when you're uploading your flips, it makes like a horizontal mirroring of the image, just in case. So all of that mechanism are making for vision system very hard to recognize images and to solve the flips because actually, if that system going to exist, then the whole blockchain going to be in trouble because it's just destroyed the whole system. 
+
+Citizen Web3: 
+I think it's a good cat and mouse game, right? To see the improvements, it's like with bank security, the people, the hackers, hack the bank security, the bank security improves and so on and so on and so forth, which is, I think, beneficial for the whole industry, really, right? What you guys are trying to do. 
+
+L Traveller: 
+I'm sorry that I'm interrupting, but for us, that kind of AI system that's going to solve flips automatically, it's like a person who can print the money and the money are the same, like as the real money. That's why we are always aware of what's going on. 
+
+Citizen Web3: 
+Second question, it's going to be a bit unrelated to that, but something I want to clear for myself and everyone, a little bit about the proof of work and proof of stake. Can you guys clarify how exactly does it mix everything together? Where does the mining and the validation do they meet each other? 
+
+Where does one start one? And I think I understand. I think I understand from reading the comments, but I would love to hear it from you guys and to hear a proper clarification of where I'm wrong and when I'm not wrong. 
+
+L Traveller: 
+Well, first of all, when you are joining to the network, your first validation ceremony is to pass the test. And since you pass the test, then you can join to the mining. 
+
+But there is one very important thing of the mining that you don't need a powerful machine. You can use whatever computer, of course, better if it would be a virtual private server. Never mind which operation system it is. We have a node client for Linux system, Windows and Mac OS. 
+
+And we have never mind from which ecosystem, like what you prefer, Windows or Mac OS, you can join. And since you start to mine, a very important thing that the mining rewards are the same. Recently was the voting for the new hard fork. And after accepting that hard fork, the new mechanism going to connect the rewards for your mining and the amount of coins that you have in the stake. So basically what we are trying to do is do not connect the mining process to the power of your machine. So the only thing which is important, if you join into the network, you helping the network be decentralized as more as possible. But the main part is your brain, that you're a human and that you can solve and create good plates. And I think maybe Trav Crypto wants to add something. 
+
+Trav Crypto: 
+Yeah, no, that was actually a great summary. I was pretty much going to say all of that same stuff myself. I just wanted to touch on a question that a lot of people typically ask as well. And it's all related to this is, well, why wouldn't I just complete the flips on 10 different computers, complete the validation ceremony with 10 different invitations, and then I could get 10 times the amount of rewards for mining? Well, the answer to that question is this validation ceremony actually takes place at the same time all around the world. So no matter where you live on planet Earth, this validation ceremony takes place all in sync all around the world. 
+
+So obviously it's impossible to be in two places at once, if you will. So each person actually has to complete this validation ceremony on their own personal device. You know, you could do it on a mobile device, you could do it on a laptop, but you complete this validation ceremony in as L Traveler said one minute and 45 seconds, which is a relatively short amount of time to complete six different flips, which are these puzzles, right? 
+
+You have to complete all six of these in a minute and 45 seconds. So it would be difficult to do that at the same time across 10 different machines, right? It would be very difficult. So that's how the network prevents people from having multiple identities for the consensus, right? So it really sticks to one person, one node, if you will. 
+
+Citizen Web3: 
+The next question. First of all, you mentioned plutocracy and you mentioned at the beginning, you said that the plutocracy in the Idena, almost doesn't exist. And that's really cool to hear because like in a lot of the times you come to a community and unfortunately what we see is, I mean, centralization of stake is one thing and using that power to push opinions is one thing. 
+
+But a lot of the time it's not even that it's just there, right? And it's really cool to see that it's community members who are coming onto the podcast to talk about the project and to explain it to other people rather than actually like finding members. So the first question, why is that like that? How come it was community members that reacted? Because we did for a while, we did try for a while, we did like go there, there, there. And we said, hey, guys, come on, let's talk about that. Nobody knows a lot about that. We really want to learn about you. We really want to know. And I know a lot because I know people who validate, Idena, but I've never really listened to anybody explain like you guys do now like properly. 
+
+And this is really amazing. So the first question with like kudos to you, how come it's you guys and not why you don't want to see, right? But it's more like, how come none of the core members want to come on and why is it in your opinion like that? 
+
+Trav Crypto: 
+Just from my perspective as a community member over the past couple of years, first and foremost, I think the developers of Idina are just very, very focused on the development of the blockchain. So they're the ones, you know, technically implementing these new bug fixes and these new additions that some other community members wouldn't be able to contribute. And I think it's also this ethos of a community driven project, right? Like, here's two community members, myself and L Traveler, not to pat myself on the back, but rather to congratulate the entire community is that the community is now representing itself, which I think is very, very unique to other blockchain projects, kind of as you mentioned. And it's really cool to see because there's this ethos not only at the consensus level of one person, one vote and participating in these different Idena improvement proposals It's like the most recent one, IIP5, where we're actually going to make a hard fork. But also at this level, right, on podcasts, like the community really is organized and representing itself, which is pretty rare to see in the space. 
+
+Citizen Web3: 
+Well, Traveler, before you start, I think it's not just a pat for you on the back. It's a pat for the whole industry on the back, in my opinion. I have been in this industry for a long, long time, and I've seen projects fail, rise. One of the biggest reasons projects fail is the lack of the community involvement, in my opinion, is the lack of the community remembering that this is a decentralized space, where that's what we're supposed to do. 
+
+We're supposed to be doing this thing and not having one team to lead you to the light kind of thing, right? But this is, of course, an opinion, and I'm sure there are others, but I really love it, that it's like that. And sorry, L Traveler, I know that you had something to add. 
+
+L Traveller: 
+Well, what I was trying to say is that I think any project is going to get success when you are always in touch with the community. And why I like Idena because the developers actually are listening to what the community thinks. They are also in touch with us. They are checking discussions and so on. And most of the improvements that we have made, it was because of the community feedback, like, for example, we have had a hard time when we have had many really bad flips. And we start to tell to the developers, hey, we have to do something with that because it's just a garbage. 
+
+It couldn't be like that. And then there were a lot of improvements. For example, now we have a qualification part of the flips. It's like, if you really like the flip, you could put the star. And then if that flip, that specific flip, going to get the majority. 
+
+Citizen Web3:
+NFT I was joking
+
+L Traveller: 
+No, no, the majority. 
+
+L Traveller: 
+From the committee where that flip came, then the person who created that cool flip, you know, going to be rewarded. And also now, for example, we have a filtration mechanism so you can approve the flip, you can decline the flip, or if you do not have more reports, you can leave the flip as it is without any mark. So that means that someone else from the committee where that flip goes to be examinated from other identities, if the flip is bad, it's going to be marked as bad flip from someone else. 
+
+And step by step, people learning how to make good flips and how to report bad flips. So we're always in touch. Of course, we do not know each other in face, but we're always talking. We're always getting a feedback. There are always brainstorming. For example, about IIP five, there were a lot of discussions. 
+
+And then finally, everything was integrated into the perfect, wonderful solution. How to make solo miners, how to make them to run independent? No, because we have like a huge pools and we want to be a network more decentralized. So we have created a system how make people to run their independent nod to start mining by themselves. And this is something unique that are happening in our community. 
+
+And I really love that. Nobody wants to listen like all of the technical things and so on. Like most of the people wants to see like, hey, what is that? What is the benefits and how we can participate and so on. And the best people who could explain that it's just a community members. 
+
+Trav Crypto: 
+Just to touch on that real quick too. I think in other blockchains, if you take the total community, the percentage of those community members actually participating in the validation is relatively small. Whereas Idena, it's actually a very large proportion of the community. So they have more incentive to participate in these proposals and these changes. 
+
+And it's actually going to affect the rewards that they get. So I think that incentivizes a lot of involvement within the community. And it creates this environment where these proposals, there's really a lot of activity. And it's cool to see all of the community proposals that people make. 
+
+Citizen Web3: 
+By the way, both proposals and I hope I pronounced it correctly, IAP5, it's about quadratic staking. Can you guys go into it? I mean, I have read obviously before I came, I was preparing myself for the podcast, but I think everyone would love to hear that it's a really pretty interesting solution. Does any of you want to explain what exactly it is and why you guys think it will help? 
+
+Trav Crypto: 
+L traveler, do you want to maybe give like a brief summary of IAP4 and how that was implemented and then how that influenced the creation of IAP5? 
+
+L Traveller: 
+So let's go back to the IAP4, where we introducing the quadratic staking. So in the proof of stake systems, we always have a problem. If you have a huge stake, you're actually getting way more benefits in compare of people who have a small stake. The solution where, which we integrated in Idena blockchain is to make kind of coefficient, which we call like quadratic coefficient, which gonna make the process of getting rewards for the staking in the way like if your stake is small, you are getting more rewards, the percentage of rewards out of your stake, then more your stake, then less the percentage out of stake you are getting. So that's how we making a new members with a small stake, for example, to earn rewards. 
+
+And also how we are making a people with a huge stake also earn, but with not a huge gap between people with a small stake and people with a large stake. 
+
+Trav Crypto: 
+And that IAP applied to validation ceremonies, right? So the rewards that these community members would get from validation ceremonies. But then with IAP five, the changes were you can continue L Traveller. 
+
+L Traveller: 
+Yes, with IAP five, we are getting a new idea that how to connect the stake and the mining rewards. So the more coins you are putting into the stake, the more rewards that you are getting from the mining process. 
+
+Okay, let's go back. Like how was before, before we have had a huge cake of all rewards for mining. And then we just spread all of that pie proportionally to each of the mining member. 
+
+So it was like each of the mining member get the same part of the rewards. We have had a connection to the age of the identity. So if your identity have had more epochs, like more ages, when you are in the system and the blockchain, then you're getting more. So the newbies were getting less. But it wasn't fair because someone came to the community two years ago and someone just now. So the people with more epochs in the blockchain, they're going to earn always, always more than the new members. And the older the blockchain, the more this gap is going to be. 
+
+So we completely changed the rule. And now never mind how old you are, the most important thing, how much coins you have in the stake. So you have more coins, your rewards are going to be bigger. And also it is very good for the economy of the Idena because people are not going to exchange the coin after each validation. So the coin is going to be inside the blockchain. 
+
+Trav Crypto: 
+And a key little point to throw in here too is that this only applies to this quadratic staking for mining applies only to mining rewards. Each person still is one person, one vote in terms of actual consensus mechanism and things like hard forks and implementing these IEPs. Each person will still have their own vote. This quadratic staking is in regards to actual mining rewards. 
+
+Citizen Web3: 
+It's quite interesting that you use the same quadratic voting model because a lot of I've seen it implemented in airdrops a lot, especially where you don't want the whales to be given airdrop. 
+
+So the idea is the less you have, the more you get, the more you have, the less you get. I don't think I've seen a blockchain before, implement it on staking rewards, I think this is the first time, so it's to my knowledge that I've seen this being implemented. And I didn't know about it. I was only when I was preparing for the podcast, I did see, I think on one of your Twitter accounts, like a print screen or a poll about what you guys think. And then I started to research it and I was like, oh, this is quite interesting. 
+
+I've never seen this implemented before. Another really cool thing I've seen across Idena and your guys posts was what I call DEMA, but it's not my words. It's the words from another blockchain, decentralized marketing. So like DeFi, DEMA, they're kind of playing with the same thing. 
+
+But I have noticed that some posts as well and some explanations on how Idena can play a big role in making advertisement decentralized. Do you guys want to talk a little bit about that as well? If you're cool with that? 
+
+L Traveller: 
+Yeah, I think Trav Crypto will start and then I will add like technical things. Yeah. 
+
+Trav Crypto: 
+Yeah. So this is actually, if you're referring to like the concept of decentralized ads, like on chain ads, this is something I actually was most excited about for Idena a while back. 
+
+And I still am. I think the concept of advertising on chain in a decentralized way is like really applying blockchain technology in a way that can really revolutionize like an entire space, like decentralized marketing, as you just mentioned. So how it works is essentially there's this concept of oracles on chain and you can create an oracle, like an ad. And when you create this ad, it goes to the oracles or people to decide whether they're going to approve it. 
+
+Right. So it needs to be approved by the community first. And once it is approved, then it is actually displayed on chain. So like when we go, it's not currently implemented, but after the implementation, it'll be once you're doing the validation ceremony, you'll actually see these ads displayed and the money spent on these ads is actually burned in the form of Idena's native cryptocurrency IDNA. That's actually burned on chain in order to display these ads to people around the world. So I think that concept of decentralized marketing is really, really cool. 
+
+And I think it adds a lot of value to the blockchain because as this IDNA is burned, obviously there's a lower supply and we all know the concepts of supply and demand over time. So yeah, it's really cool to see. 
+
+L Traveller: 
+And one more thing that I would like to add is that you can advertise whatever you want. We don't have rules. The only rule that we have that the community must to approve your ad. So it works like you're sending an advertisement to be examinenated by committee of people that's going to be randomly selected from the whole network. 
+
+And then if you are getting majority that they approve your ad, then you can actually run your advertisement company. And this is very important because nobody's going to tell you, hey, we have rules. You can promote this thing and you cannot promote that thing. So people gonna take a decision what is good and what is bad. And this is the main point of the future, I guess, because we always like know about discrimination about censorship and all of that thing. But for example, why someone gonna choose what is good and what is bad? Because you have to ask, like at least like randomly of some members. 
+
+And if it is good, why not? This is the main principle of our advertisement platform. And also you can run whatever Oracle you want. For example, you can ask whatever thing you can make a poll. There is very large options, many details that you can put into your Oracle voting. And you can get a feedback from the community. 
+
+Yes, of course, you have to pay for that. But the feedback that you're getting, you're getting from the real people. So it is very hard to manipulate of that vote system. And that's actually how we are implementing our IDENA improvement proposals. First, the person who wants to propose that idea has to describe that idea pretty clear. And then we have delegates and that delegates, we are choosing every three epochs. And then if the delegates gonna approve the program, then the program goes to the Oracle vote part. Where everyone from the community is supposed to put his yes vote or his no vote. And this is very important. It's like everyone can propose something. 
+
+Even now we have a community wallet, community foundation. So if you, for example, you're a developer, you want to develop something new, you have to prepare the paper, you have to get the majority of votes from five delegates that we are selecting every three epochs. And then if you're going to get that majority, then that paper gonna be put it into the Oracle voting. And then if the people gonna say yes, then you're gonna get the foundation for your project or for your implementation and so on. 
+
+And actually recently we implement community foundation to translate IDENA chronicles into three languages. And it was implemented in that new mechanism, which is very, very good because the community take a decision what is good for us and what is bad. 
+
+Citizen Web3: 
+What has been the most controversial, like out of memory decision that the community made? They said yes or no. And it was like super controversial in your opinion. 
+
+Trav Crypto: 
+Well, I'll touch on two things real quick. One, oracles can be as controversial as you want them to be. 
+
+Citizen Web3: 
+Give me an example of something you remember, of something you remember, which was like, oh my God, what the hell? 
+
+Trav Crypto: 
+In terms of oracles, I mean, you could ask any question that you possibly want, like whether it's politically, whether it's opinion. So one that I can think of off the top of my head and this is obviously going to be very controversial. 
+
+Citizen Web3: 
+Go for it. 
+
+Trav Crypto: 
+Yeah, I apologize. But like one oracle off the top of my head and this doesn't affect the blockchain in any way or the community. This is just an open question, right? To anyone. One that I saw is should abortion be illegal or illegal? Yes or no? 
+
+Citizen Web3: That's not that controversial. Come on, give me more than that. you gets going and go harder and then Right? Of course. Of course. 
+
+Trav Crypto:  
+it can be controversial depending on political environments. So it's just cool because here you have this democratic system, like true democracy with community members literally all over the world in all different political environments. From all different backgrounds and they can literally just vote. 
+
+They think it should be legal or they think it should be illegal and there you get a true perspective into what people's true thoughts are on any given matter. So I thought that was really cool. I think that's like a concept of true democracy. But then another example, the second point I wanted to say is these improvement proposals like IP five. That was controversial within the community because there's certain people that think these mechanisms should be a certain way. And then there's certain people that think they should be a different way. The coolest part about this is you always have differing opinions. That's just kind of like the basis of human nature. But it's so cool to see when these proposals are brought up. 
+
+It's not always just bipartisan, right? It could be three or four different thought paths and everyone breaks down their own explanation of why they think it should be this way, that way or the other way. And then once you get those explanations, then the community can put in their thoughts and input. And when it's all said and done and you have this very broad overview of this IP five, that's when community members can take action and actually participate in voting. And depending on the results of the vote, that will actually create a hard fork of the blockchain, which you could arguably say doesn't happen in most other blockchain communities. 
+
+L Traveller: 
+I want to add one more thing because everything is private. 
+
+Trav Crypto:  
+That's a key point. Yeah. 
+
+L Traveller: 
+You can ask whatever questions you want. Nobody's going to judge you. 
+
+Citizen Web3: 
+Guys, kind of like a resume wrap up question, which is a traditional question for all the guests that come on the show that I would love to hear from answer from you as well. And again, I guess it's the both of you. So turn by turn. And especially you being community members, this is actually going to be really interesting, I think. What keeps you motivated to do what you guys are doing today, whether it's for Idena or whether it's for the whole of blockchain industry? What keeps you getting out of bed every day and saying, yeah, fuck yeah, I'm going to carry on doing this. And it could be the rewards, of course. But I think from your answers, it will be a bit more elaborative. So I would love to hear that. 
+
+L Traveller: 
+I would like to start because it just reminds me of the story, how that community proposals came out about the translation. I mean, I was like so attracted by the Idena. And I just throw to the developers, I said, hey, I want to translate your chronicles. It would be wonderful because I really feel to do it. I didn't expect any rewards and so on. And then I have made the first translation and the developer said, wow, that's cool. You know, like we're going to pay you. I was like, well, okay, that's fine. 
+
+And then the same thing, like I was thinking it would be wonderful because I have a chroma key. I can do something like for fun. And I start just to create videos and the results was also good. And what I feel that apart from your job where you're, I mean, we need money, you know, like to live and so on. But what I think there should be something that you're really happy to do, like really happy that really makes you enjoy. And you really feel that of what you're doing is important. Like people really can use that and they are using it not because you are paying them because they really need that of what you're doing. And you're really doing that because you really like to do that. 
+
+And I think that the key point of changing our society is to transform it from what I must to do to something what I choose to do. Because I really like to do, I know how to do it good. And of course, I would like to be rewarded for that. But my main purpose, not because I would like to be rewarded, it's because I really like to do that. I really want to share that. And for me, this is the key point. And the ideas of idenas of fair democracy is the representation of that kind of style of society. Yes, we are small, but at least you can feel that. And this is wonderful. 
+
+Citizen Web3: 
+What about you, Trav Crypto? 
+
+Trav Crypto: 
+Yeah, so for me, it's very similar to L Traveler. But in the time that I've been in Web 3 professionally over the past three years and as a community member over the past, I guess, six years, I've seen a lot of different blockchains, a lot of different projects, all promising different things. But the thing that makes me most passionate about IDENA is this concept of a truly decentralized democracy. And what I mean by that is a global democracy where every human is counted, not just these regulatory, this area, this geographical location. 
+
+This is really on a global scale where all humans can participate in this system and their vote can actually be heard. Which is really spectacular to me. I think it's a novel concept that hasn't been done at scale. And I think IDENA is the technology that can allow truly decentralized democracy to happen at scale. 
+
+Citizen Web3: 
+Guys, this has been a huge pleasure to finally hear some good explanations on IDENA because there isn't many out of them. I have, for whoever's listening is interested, I know that you guys participated recently in another podcast. 
+
+So whoever's recently, I don't remember the name, but I will link it up to this podcast. So if I please people to listen, we will also add the links of course of all the channels, all the papers and everything. So we will also do that. Again, thank you very much for your time, guys. And thank you very much for joining us. 
+
+L Traveller: 
+Thank you. 
+
+Trav Crypto: Yeah. Thank you for having us. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

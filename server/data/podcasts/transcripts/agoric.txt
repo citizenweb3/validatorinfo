@@ -1,0 +1,292 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/agoric
+
+Episode name:
+Smart contracts, JavaScript and information sources with Dean Tribble
+
+Anna: 
+Hey, it's Citizen Cosmos, we're Surge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code. 
+
+Dean Tribble: 
+As I mentioned, I worked on the first production smart contract long before they were blockchain. 
+
+Citizen Web3: 
+If we assume that TenderMint is the network in the consensus layer, then Agorek provides the LEGO cubes for the application layer. 
+
+Dean Tribble: 
+What matters is the security model of EVM because your attacker is not going to politely use Ethereum, they're going to use whatever EVM gives them. Having software that enables more cooperation in the world so we have a more cooperative world. 
+
+Citizen Web3: 
+Good space time to you all and welcome to another episode of Citizen Cosmos. We are glad to have Dean Tribble with us today, the CEO of Agorek, who are a secure smart contract platform and welcome to the show then. 
+
+Dean Tribble: 
+Thank you, good morning. 
+
+Citizen Web3: 
+Yes, good afternoon. 
+
+Dean Tribble: 
+Hello to all the cosmos world out there. 
+
+Citizen Web3: 
+Yes, we tried good space time you all today. This is a new one for us. So kind of trying to include all the cosmonauts and cosmos girls and everybody else. How are you this fine morning? 
+
+Dean Tribble: 
+I am doing very well. I am a happy camper. 
+
+Citizen Web3: 
+Great. So let's maybe start with a brief introduction from yourself. 
+
+Dean Tribble: 
+Let's see. I started my first startup company when I was 17, which is way too many years ago. I worked on a few startup companies but ended up at a company called Xanadu, which is where Hypertext happened originally. And there I worked on the first production smart contract for our sister company, American Information Exchange. And this was after having done lots of large scale secure distributed systems programming work at Xerox PARC and research and exploration of some of those areas. But we did the first what became recognized as sort of the first production smart contract in 1989, which is five years before Vitalik was born. So the idea of smart contracts had been around for a long time. Me and our other compatriots like Mark Miller, our chief scientist here at agorac, wrote the agorac open systems papers the year prior to that. 
+
+And it was some of the inspiration for all those kinds of ideas. And we've worked together on that and many other distributed systems projects out into doing large scale e-commerce, the early days of e-commerce, large scale web abstractions. My previous gig to this was a multi-billion dollar payment instrument called Electronic Checks for the US. I worked on a secure operating system for Microsoft called Midori. Markham did open source, large scale, secure language stuff at Google. And so we've been doing this kind of technology for disruptive applications in financial and other parts of the internet space for a long time. And so we came together to do agorac because there were in the year 2017 many interesting projects with many new smart contracts. 
+
+And it was kind of cool. And they had lots of security breaches where security experts would write these programs and they'd lose tens of millions of dollars in just a few minutes with no recourse. Because, and not because they weren't really smart, but because the infrastructure they were building on was just poorly suited to being able to build safe smart contracts. And so we knew Zuko of Electric Coin Company. We, Brian Warner, was on the security review for Ethereum. Various others all came together for a panel that the Foresight Institute put on on object capabilities, which was the security model that we've used in a variety of different commercial systems and blockchain. 
+
+And could you bring those two together? And so we had a panel on that. I'm sort of jumping way ahead here, aren't I? We should probably wind up and I should do a much shorter intro. 
+
+Citizen Web3: 
+Oh, that's good. That's great. Actually, I'll be honest with you, when we were preparing today, one of the first things that obviously strikes you when you start going into agoric is the amount of experience you guys have within your team in terms of security and programming. And that's astonishing. How did you manage to get such a team together? So that's the first question. 
+
+Dean Tribble: 
+Chip Morningstar is one of our people. He was actually the VP of engineering at Amix that did this first production smart contract. And he coined the term avatar because he worked on the first cyberspace application online, multi-user cyberspace at Lucasfilm. 
+
+His phrase for this is, it's the continuous rolling startup company. So I worked with Mark Miller at Xerox Park. I worked with Chris Hibbert at Xerox Park and the Smalltalk Group back in the 80s. We then got together and did Xanadu, which was pushing hypertext forward and they had precursors for the URL and inspired a lot of folks to do hypertext. 
+
+I went off and did a Jule programming language. Mark did the agoric enterprise, which was inspired by the agoric systems papers. We brought those together and did the original company called Agorix with an S that did early smart contract platform at Sun Labs. Chip Morningstar did electric communities, which was a cyberspace venture out into this new thing called the internet. 
+
+And similarly, others of our people, well, I suppose some of them were being born at the time, but others were doing other mixes of startup companies. Mark Miller left Agorix and went over to electric communities and did the e-programming language that led to all of the security innovations that we've driven into JavaScript. And so there's been a variety of different groupings of some overlapping but growing set of people excited about the ideas of large scale distributed cooperation and how can software, how can computers enhance humans ability to cooperate, humans ability to be productive and humans ability to be safe. And applying a lot of those ideas in a variety of different applications, a variety of different purposes have sort of led to overlapping inspiration from each other on an ongoing basis. 
+
+Citizen Web3: 
+And how was Agorix as today's Agorix born? Because obviously it makes sense with all the experience that you guys have. It kind of leads to that. But there's quite a lot of questions. 
+
+But let's start with Agorix for beginners here, right? If I was, let's say, I don't know anything about tendermint. I don't know anything about cosmos. I don't know anything about Agorix. What is Agorix? Okay. 
+
+Dean Tribble: 
+So let me tell that and then we can separately talk about this. So what is Agorix? We are building a public chain that enables programmers worldwide. So as I mentioned, I worked on the first production smart contract long before there were blockchain programmers to be able to build smart contracts. Software that is enforcing the terms of a contract like arrangement between third parties. So from my perspective, eBay, PayPal, Venmo, much of Amazon, much of Uber and Lyft, that whole interaction is software run by a trusted third party that is mediating the cooperation and commercial interaction of people that do not work at that company. And that architecture, that crucial element is what's important in that it lets software and better software do a better job orchestrate cooperation among strangers. And the more cooperation we can foster, the more cooperative world we have, that's a better world that I want to live in and that a lot of us want to live in. That's part of the reason why this has been a long-term inspiring dream for a wide variety of different technical efforts, social efforts, etc. that many of us have had. And so what blockchain then brings to that, people ask, okay, you've been doing smart contracts. 
+
+What the heck's gone on with that? Well, given the examples of these trusts at third parties, obviously it's easily passed a trillion dollars in market cap for smart contracts before blockchain ever happened. What blockchain brings is multiple computers in different administrative zones and jurisdictions, so no systemic compromise is possible. Multiple computers in these different zones voting to agree on things, to agree on data, that guy is Dean or he's got this much money in his account, choices, he paid Angelo before he paid Bob, and computation. 
+
+The result of paying off interest is your balance went down to this much, and Jane got this much interest. And if all these computers in several different administrative zones and several different jurisdictions all agreed that that's what happened as a result of the choices that the people outside the system made, then that gives you a high integrity computation that did not previously exist. It gives you an integrity of computation that exceeds the integrity of any individual computer, of any individual organization. And that's the big win that Ethereum sort of seeded this environment. Well, actually, Bitcoin did. 
+
+Bitcoin is a smart contract. It's just a particular one built into a particular software running on a blockchain, hugely inspirational, very important. Ethereum generalized that so now users could upload their own so that there could be multiple smart contracts running on the same substrate. Obviously, it's got security and scaling challenges and that sort of thing, but it did crack open that ice to let this wonderful world of trillions of dollars of smart contracts now be able to run without that trusted third party I mentioned. So now I could do an eBay that was non-custodial, an eBay that was the software orchestrated, who won the auction and where you're supposed to deliver, and the software did not then take 35% of the deal out of that cooperation. 
+
+Or the software did not go, oh, some DevOps person inside the company who really wanted to win that arranged for his buddy to be the top bidder, or arranged for his buddy to have an inside track on that IPO, or arranged for whatever, that kind of corruption is infeasible in the context of blockchain because being able to corrupt one machine, that just means you're voted out. 
+
+Citizen Web3: 
+Thank you for actually going to that layer. Sometimes we do take our speakers and it's great. I love the explanation. That's fantastic. But here's the thing. Now we get to a GORIC, which is a smart contract platform. So the next question is how the hell the standard and Cosmos come in here. 
+
+Dean Tribble: 
+GORIC is building a platform that allows these general programmers to use the world's most popular programming language, secure version of JavaScript, to build smart contracts. It also uses an architecture to be able to plug these smart contracts together. 
+
+So NPM and React took off, not because it was easy to program in JavaScript, though arguably it was given how many people do it, but because I could take a component from some random other third party and just incorporate it. I didn't have to copy the code. I could just incorporate it. I could plug it together with another component, and I could do so in a safe and constructive fashion. So now instead of building everything from scratch, which is approximately what people are doing in most blockchains now, I could build using components. And that gives me just an accelerating leg up. The more components there are, the higher level my business could be, and so forth. 
+
+Citizen Web3: 
+Could you say, could you narrow it down that if we assume that Tendermint is the network and the consensus layer, then GORIC provides the LEGO cubes for the application layer, and we can play with those LEGO cubes. Actually, GORIC is the LEGO. And then you could, as a developer, you get your LEGO cubes, you build it up, put them together, and obviously those LEGO cubes are not static. 
+
+Dean Tribble: 
+So the big thing that Cosmos does is obviously it's got battle-tested consensus. Our model of pluggable components is largely agnostic to the underlying consensus layer. We require fast finality. We require an account model rather than UTXOs from beginning. But what we want is a good consensus layer. So in that sense, Tendermint just hit the mark. But there's more to our work with Cosmos than that. So it's not just that it's got some good battle-tested stuff, because we also look at other systems, Polkadot, Hot Stuff, etc. There's all good technology in each of those places. But the thing that Cosmos has is, first off, it's got an awesome community. 
+
+So we went to the original 2018 Cosmos conference and met people, and they're just like, wow, these are our people. And a big part of that, you know, Jay, Zaki, Ethan, Adriana, I mean, lots of people that we met, the validators, they really got the idea of loosely coupled systems. One of the problems with Ethereum is it is as tightly coupled as possible. The entire world is a single sequence of actions that runs on a computer with about the power of a cell phone. Now, that's obviously hugely valuable to be able to do commerce in a high integrity fashion, even if you can only share a cell phone's worth of compute power with the entire rest of the world. 
+
+But that's clearly going to hit a brick wall. And we've done lots of large-scale distributed systems, whether payments or cyberspace or coordination. And the fundamental model that covers all of those is islands of sequential programming in a sea of asynchronous communication. That is what the internet is about. That's what the interchange is about. That's what physics requires you to do if you want a system to scale. And Cosmos took that as a starting point. Now, it turns out it's not an accident that Cosmos took that as a starting point. 
+
+There's an article that came out. We met Jay, we met Zaki, we met others, Ethan and Chris Goz and all those. And it turns out that IBC, the Interblockchain Communication Protocol, and the overall vision of the interchange was in fact directly inspired by earlier work by myself, Marc, Chip, Chris, etc. where there is a site that talks about the e-language work that mentions Jool, my programming language, which were all about doing secure, large-scale distributed computations across untrusted networks. And so many of those ideas, many of those concerns, many of those trade-offs were baked into those documents on those websites that are still around today, still maintained today. 
+
+Christopher Weber is inspired by that to do large-scale distributed social media infrastructure. And so that alignment of conceptual basis of things should be loosely coupled with opt-in by the participants. And secure cooperation and permissionless extensibility, just all crucial elements of the vision, much of which are shared across the blockchain. And so we really like a lot of the blockchain space. 
+
+But man, they're just such a deep part of how Cosmos does things that our stuff lined up together. So we could really look at, we were doing an interchange distributed object protocol, just like we've done it on several other platforms to do distributed objects, because that's how we do application to server and server to server communication and failover and secure handoff of connections and all that kind of stuff. And it looked a lot like IBC because IBC was in fact inspired by how we did that. So we started a joint project funded by ICF with Agoraq and AIB fundamentally, and then various other folks around it, to push IBC forward into conclusion, because that's a crucial element of the Cosmos vision and of the interchanged vision. And so thankfully, ICF realized that, sponsored that, the folks on the Cosmos engineering side realized that they were really coming from some of this work we did. And we had mostly design and architecture contributions, requirements process, how to address some of these hard problems that they were going to step into, and how to avoid some of the hard problems that because of this, we carefully avoided stepping into. 
+
+And the result is Stargate rolling out with IBC. So we had not just an alignment of vision, but really shared technology, shared requirements, shared ideas that we were able to collaborate on. 
+
+Citizen Web3: 
+Before we talk about computation and some of the details of Agoraq, the smart contracts, the first question that probably will jump into the head of anyone who listens to this is Cosm Wasm and how are you guys different? 
+
+Dean Tribble: 
+So first off, I really like Cosm Wasm. I'll give you my perspective on Wasm that predates Cosm Wasm. There were a bunch of people that were starting to get excited when EVM was thinking about, we're going to do a Wasm if they ever get there and Polkadot was doing Wasm and everyone was going, oh my gosh, Wasm is the solution to all of your language problems. And what they weren't understanding is, no, Wasm is copying out on all your language problems. Wasm is an assembly language. Nobody programs in Wasm except for a very, very few people that ought to be writing compilers instead. And so it's not a solution. It's a giving up. And going back to this, what's the power of Define Legos? 
+
+React and NPM worked not because they could say, use assembly language. It's awesome. You can do anything. Instead, it was not just here's a language, but here's the architecture around it. Here's the API. Here's the infrastructure to enable these pieces to plug together. That is a solution to enable programmers to do amazing things and to build on each other. Giving me another assembly language is uninteresting. 
+
+If you're going to do that, give me back PDP 11. I'm sorry, that was an awesome assembly. So, no, no, Wasm is great. And as it turns out, if you look at the history, Wasm was inspired by some of the kaha work as well. So the security model in Wasm came from some of the secure capability stuff that Mark Miller drove at Google. We were early participants in the Wasm standards group. 
+
+The mechanism so that one Wasm compartment can talk to another Wasm. We helped design. There was a powwow last year. 
+
+I have no idea what year because of quarantine. A year or so ago about how to use Wasm in blockchain. And they were going to go way off the rails on the security model. 
+
+And we helped fix that and get them back on wheels. So we really respect Wasm. It's really valuable to have a generic assembly language. And it's an assembly language. 
+
+And I'm sorry, there are not millions of programmers that program in assembly language anymore. So from my perspective, as I said, that's awesome. I also like C sharp. And I also like Rust. And I also like that there are 18 million programmers in JavaScript, which one of those is going to get you in a mainstream first. 
+
+So that's a crucial thing. We actually working with other platforms, we looked at arranging to compile our infrastructure or run in Wasm. So the other problem that is a problem with both Wasm and EVM is that the question is for security of a system of security architecture is how does one contract coordinate or have secure interactions with another contract? And there on Ethereum, solidity has nothing to do with it. What matters is the security model of EVM because your attacker is not going to politely use Ethereum. 
+
+They're going to use whatever EVM gives them. And so there is this gap between what you program in, what the semantics the programmer understands, and what the actual security semantics is of what you're running in. And if there's a gap there, there are opportunity for bugs there, and there's opportunity for security exploits. 
+
+It's inevitable until you have some science fiction. So Wasm is stepping directly into my security model is over here in assembly language that you don't understand. Now pick your favorite programming language that maybe you're okay at. 
+
+Use a compiler that you don't understand that does optimization that you don't understand to map it into an execution model that you might have a vague idea about. And now let's hope there aren't any security bugs in that gap. So in terms of being able to build a composable world of smart contracts that work with each other, it's a fragile set of assumptions that you simply can't rely on. The Wasm model of securing a compartment, that's great. But it turns out many security bugs, the event stream bug, come from grabbing a library that had a vulnerability compiling it together with your thing to produce an application. And from analysis of GitHub, for most applications, only 3% of the code is new for that application. And this whole thing about building on other people, if you've got a real component model, 97% of most applications on GitHub is libraries that came from somewhere else. And in the Wasm model of execution, I mean, it's C++, it's C sharp, it's java, all those things, when you load a library, it runs with all your authority, so you're completely vulnerable to it. So if you load a library to help you lay out pretty stuff in your UI, and it instead wants to scrape your private keys and send it off to some other country, well, it has the authority to do it because it's running in that box. So as a security model for composing stuff, that's not a good one. Whereas the model that we have in JavaScript, that we are able to build in JavaScript because we've been doing this architecture for a long time, and working with a JavaScript standards body to get into it the hooks we needed to be able to lock down the world to have the secure programming model, in that model, essentially, each module I load, it can't arbitrarily run off with my authority and do things, it can only talk to the objects I gave it. And programmers kind of understand that model of if I give you keys, you can start my automobile, and if I don't, you can't. 
+
+You can sit in the passenger compartment, thanks. So that model of being able to load that other 97% of your application and have it run safely in a box, just as a much safer model, from the point of view of security exposure. But it's also security to me, to us, it's not about, oh, here's all the things I'm going to stop you from doing. It's because you can safely do this thing, you can do stuff and worry about it less. You can move faster. You can build faster. 
+
+You can build bigger because the components won't crumble out from under you. So being able to have that 97% where, yeah, I didn't give them access to my keys, so they aren't going to get access to my keys. I don't want to use components safely. And so if I want to use a charting component that is from Dr. Evil's Evil Lab of Charting Components, the fact that it wants to be evil, well, it doesn't matter. I'm running it in a box. It can display a chart or it can fail to display a chart. 
+
+It can't steal my secrets. That's sort of the long story around why having a real programming language or that's the semantics you get is crucial, as opposed to whatever the assembly language is underneath. 
+
+Citizen Web3: 
+You kind of already partially started to answer that, but I was going to ask you to talk a little about the SES, Jesse, and, well, you already answered why JavaScript rather than anything else. 
+
+Dean Tribble: 
+So SES is the name for the standards effort for the secure version of JavaScript, secure ECMAScript, the actual standards name of JavaScript is ECMAScript. Nobody cares. So SES has been the term for the secure version of JavaScript for a long time. Now, we talk about it as a, quote, subset of JavaScript, but in fact, it's 99.8% or something of JavaScript. Fundamentally, the architecture of JavaScript has really held this line for ironically political reasons, but we, especially in the person of Mark Miller, have driven into JavaScript the elements needed to be able to secure it. 
+
+So it is off the shelf unsafe because any part of the program can go and change the fundamental elements of the program. So I can change array for each from iterate your elements to copy them and send them off to another country and then iterate your elements. And you tell only I stole all your secrets by modifying what it meant to do an iteration of an array. That kind of malleability might be fine for doing little things. 
+
+That means you can't rely on any part of even the language working correctly if you were to do that. But what we have now in JavaScript and we realized in 2018 when we were putting together Agoric and we were still working on getting this stuff into the standards is, oh, we've already got all the pieces we need. This was part of a collaboration we had with Salesforce. And we realized that in fact, we could lock down JavaScript. So all of that malleability that almost nothing actually used, but could cause anything to be compromised, that malleability, we could lock down. And so thus our ability to actually ship production SES was born. That had been a thing that was going on to gradually secure JavaScript over literally 13 years. 
+
+But suddenly we go, we can make it, we're done. We don't need anything more in the standards in order to lock this world down. And so what SES does, it just locks down JavaScript. So now Array4Each does what the spec says Array4Each does and some random library can't come along and change your mind. So that gives us the safe version of JavaScript. But JavaScript was still not really designed for adversarial programming. 
+
+It was designed for rapid production of good stuff. And so normally in most programming language, you use a subset and in any framework, like if you're using React, you program in a subset of JavaScript according to a particular style so the React tools can help you put together your stuff. What Jesse is, is a much smaller subset of JavaScript. So SES is almost all of JavaScript. It's enough of JavaScript that actually there's a new JavaScript standards group inside of ECMA for JavaScript for embedded systems. So JavaScript is now the most popular programming language in the world. It is now available for embedded systems. So Maytag washers and light bulbs and some ambulance hardware and those things, they're programmed in JavaScript because there's 18 million programmers that can program in JavaScript and getting security reviews on all of this straight forward. But what they did is they go, okay, for embedded systems, we don't want the malleability that's expensive, it's risky. 
+
+The SES subset is actually better for our purposes. They standardized on that quote subset, unquote, which is as I said, most of JavaScript as the version of JavaScript to use for embedded systems. And so that's again, most of JavaScript. But even there, it's got things that are not good patterns. It's got things you can use to fool people. It's got, you know, whatever. So we generally program in a much simpler subset of JavaScripts called Jesse, that is, that doesn't use the class construct, it doesn't use this because everybody gets confused about this. And there's various things that it doesn't use that we just program in. And we have ESL rules to keep us there. But it turns out it is actually, it appears to be a very semantically clean sub language all by itself, right? It looks like actors plus records or scheme plus records. 
+
+So it will be amenable in the future to straightforward, formal analysis, potentially an actual sound type system, as opposed to TypeScript is, is useful for the developer, but doesn't actually give you safety properties that you require out of a type system. So as I said, we just mostly program our contracts and that we will be able to lock down the world in various places. We can say, yeah, that really is only in Jesse. So we can prove these additional properties about it. But Jesse coexist with SES just fine. And so it's just a styling thing that will make it easy to review correctness, assurances, optimize, etc. 
+
+Anna: 
+My question is not about We have a lot of programming language about open source and proprietary program. Do you believe that open source is going to be our future? And we have that controversial issue here, because on the one hand, we all can see the code that are in the public GitHub repositories, but on the other hand, we still need to have ability to understand what is the code about. And even if we understand the code and we can really use it, we still cannot be sure that it has no leaks and vulnerabilities in that code itself. 
+
+Dean Tribble: 
+First off, the security model we have of what we call object abilities, a lot of it is about partitioning things into these separate objects, a lot of it of being able to load a module and knowing that it just can't get out. That as a model dramatically reduces security exposure because it partitions it. So even a particular module is compromised because I didn't read the code. 
+
+Even if it's compromised, the extent to which it can compromise my application and compromise my users is dramatically limited because it's compromised, but it's running in its tiny little box with only the bits of information and access that I give it. And I don't have to give it very much if I design my system correctly. So that's to me, the first bastion of security is use a model where you have least authority and where things are partitioned so they only have the authority they need to do their job. And if they only have the authority they need to do their job, then the only thing they can do is fail to do their job. 
+
+They can't do somebody else's. Okay, so from that perspective, open source versus closed source is mostly in favor of open source because with open source, I can see that it's using the framework so that things are getting locked in a box. So now whatever it is they do, it's reasonably safe or reasonably limited in exposure, hugely valuable. So from a proprietary versus open source stuff, when you have a big enough proprietary system, I worked at Microsoft, Markham worked at Google, Chris worked at Google, you know, Chick-Burke did eBay. 
+
+I mean, you know, we've been at lots of large companies. Here's 15 million lines of code and there's potentially 80,000 engineers that can look at it. K, it might not be open source, but close enough. 
+
+You're never going to notice all of the changes that someone might slip in from some country. I mean, it's all the same issues of open source slipping stuff in. So there's no actual magic there from my perspective and the value of having it be open source so that your customers can see it. So that security auditors can see it so that they can contract with a security auditor or more importantly, they can just verify that this thing you're using is the same thing that they validated for that other project three years ago. 
+
+You didn't change it or if you change it, I can look at the deltas and it's clear you did not add a backdoor. Those are really hugely valuable. So on net, I find open source to be better in general from a security engineering point of view overall and certainly for anything where we want to have large scale public input. 
+
+So if you want to have infrastructure or large scale public use, I certainly would not want to use quote defy anything that's close source is simply not decentralized. You're done. The primary sources of governance is who decided what the code did. So you're just done with the decentralized part. And so it's got to be open source in order to be any notion of decentralized. So then on the other hand, why do we care about open source? Well, part of it is that if it's not open source, it's not decentralized because someone controlled secretly what it was going to do. And whether or not you respected them, that's great. 
+
+You can have people that are trustworthy that have reputations, but it's still centralized in their reputation. The other thing is from our perspective as a company deciding are we doing stuff open source? Hey, we've got 30 years of ideas we need to get out and the more help we can get getting those things out the better. And blockchain is sort of what I would say it's a nascent industry. Yes, it's tens of billions of dollars or hundreds of billions of dollars. 
+
+If you look at Ethereum's or sorry, Bitcoin's current market cap, but compared to the multi trillion dollar market that it touches, it's still three, four, five orders of magnitude to go before it's a fish in the big pond. It's a big fish in the small pond. And so I want to get there, right? I don't want to fight over pieces of the current small market. I want us all to get over into the mainstream. I want this technology, these solutions, this decentralized access, this permissionless ability to cooperate. I want that to be something that is delivered out across the world. The more of it we get, the more cooperation we can get that sort of thing. And that's going to require everybody. That's one of the reasons why A, we're open source and B, we cooperate widely with other parties. Cosmos is wonderful. We're starting with Cosmos. We're working with those people. We've got great alignment. But you know what? There's smart people in other parts of the community. 
+
+I have zero interest in being tribal. There's a lot of great substrate folk, polka dot stuff, Ethereum folk. We love what the Zcash people are doing. 
+
+And indeed, they were in fact our first investor. And so we need all of those ideas. We need, I won't say all of them, but we need a lot of those ideas to come together, to plug together, to produce the broader interchange vision. 
+
+And I realize that Cosmos kind of promulgated that term, but it's much larger than Cosmos. That broader interchange vision out into the real world. And so that's just going to be better promoted by sharing ideas and sharing code. 
+
+And man, there's enough money between here and there that all of us are going to be able to get a piece enough to make us and our investors happy. So fighting over the small pie rather than trying to get a small piece of the much, much bigger pie, I think that the bigger pie is the way to go. 
+
+Citizen Web3: 
+Just for the record, we are quite big opposers of one coin belief system. So this is more of a devil's advocate question. But you mentioned Zcash and I'm going to play a little bit more devil's advocate here. You mentioned a lot of trust and open source. So what about the key ceremony of Zcash the whole beginning? What do you think of that? 
+
+Dean Tribble: 
+Okay, so we'll go back to what I was saying about what's cool about blockchains, which is multiple computers in multiple jurisdictions and administrative zones. So you can take many different things and arrange for them to be opaquely decentralized if you can increase trust by adding more people. There are some places where adding more people does not increase trust or it might increase availability, but it does increase assurance. If I give the same private key to multiple people, it's more likely that one of them will be available to sign something, but I haven't increased the assurance that it won't be misused. If I require N of M, I have now used more people to decentralize access to the key and increase availability and make sure that I've increased the trustworthiness of it because now you'd have to compromise multiple parties in order to compromise. And so the key ceremony was a decentralization process to increase trust in the infrastructure. Now you can argue about, was it decentralized enough? But I think dropping a computer from a helicopter, running seven hours of video to show that nothing was compromised. And these are independent processes run by independent people in different countries that didn't work for the same organization that all believed, or at least that all we needed was 90% of them or 20% of them to believe in the mission there. 
+
+And I know many of these people personally, and I know they all really believe in the mission there. So as a decentralization effort, I think it was fine. I think that worrying about that being compromised is that is sort of off my probability radar versus compared to Zuko was actually replaced by an Android by aliens. And you know, and Sadochi came from the future to in order to give us Bitcoin, all of which have some plausibility to them. But I think they're higher probability than the key ceremony was changed. 
+
+Now, having said that, the Zcash folks, Zuko, all those others, they love Halo and the ability to do something that does not require a key ceremony. We all love that idea because it is yet more decentralized. But the fact that there is always going to be something that is yet more decentralized does not mean what we did 10 years ago wasn't awesome. 
+
+Citizen Web3: 
+Yeah, of course. And this is, I think, coming back to the fact that decentralization is obviously a spectrum and it's not a straight line with two points. But talking forward about trust and about implementations and about decentralization, let's for a second talk about the current implementation and blockchain, so the price and oracles. 
+
+And we have Link, Uma, Bandua, all have slightly different implementations, but all of them have very narrow point of failure that we have to trust Oracle. So could Agoric with its smart contracts or anything else in terms of decentralized computation solve that problem in the near future? Or does it need to be solved right now at all? 
+
+Dean Tribble: 
+I absolutely think it needs to be solved. Oracles are crucial to connecting to the real world and what I want is solutions to connect to the real world. So first off, I think a lot of those groups are doing really cool and in many cases, complimentary stuff. Full disclosure, we are working with Chainlink to be our launch partner on our network going live where they will be an available Oracle on our system so that from my perspective, getting a price. I talk about composing DeFi Legos, the ability to take a Lego, which is a price source that just looks like a JavaScript notifier that will invoke a JavaScript program or send me a JavaScript message when the price crosses 50. 
+
+From the programmer's point of view, that's just a plug in abstraction and they don't know how hard it is to get that price right. So we need lots of different architectures there, but because it is an interface to the real world, one of the other things we need is we need an ecosystem around that in order to maintain it. I used to say when we were doing large scale security architecture for Sun Microsystems, which predates many of the people here. Enterprise security is different from security because you first need to secure the system, then you need to be able to know that you secured the system, which turns out to be harder than secured in the first place. And then you need to be able to maintain that over time. 
+
+Well, oracles are the same thing. You need to be able to get a price. I can check out the last grade and now I've got a price. Yeah, but do I know it's the price and can I provide assurance to anyone else that that's a price or the temperature or whatever it is? And then is my deployment and system such that I have reason to believe that six months from now, I will still be providing you prices that you like. And so that oracle problem is one of these kinds of problems where getting in a position to maintain that and have assurance that it's maintained over time is a big part of that challenge. And so different strategies are all very complementary. And certainly what we're going to want back to this, there are many ways to decentralize and you got to look and redo them is first off, what's the nature of the thing you're getting the oracle information about? 
+
+Is it about something that is fundamentally not decentralized? What is Bloomberg claim the prices at 430 on Friday? What does this weather service say the temperature was at this geo position? The answer is having a thousand people reporting what that site said is not interesting. 
+
+What you want is the signature of what that site said. But then you have this occurring problem. Well, how do you know that they were careful about it? 
+
+How do you know that six months from now that key won't have been compromised? All that kind of stuff. So it takes a lot of effort to maintain that over time. That means that one would imagine that has to be a funded, valuable part of the ecosystem. 
+
+And it's important about how you go about it. And so one of the things that I want to see is that there is a financial stake that the information providers have in doing this. That's one of the reasons why you have in providing the information as opposed to merely the infrastructure providers in reporting the information. And I want to see that there's an ecosystem that is all about maintaining that and developing that over time and that it is thoughtful about how to improve that over time about how to get the various data sources about how to make sure that they're correct about how to get multiple people that are looking over each other's shoulders. 
+
+I mean, in multiple jurisdictions in order to get the same answers and all those kinds of things. And so all of these systems are continually moving forward. We're working with Chainlink because we know those guys, we know they think about it correctly, and we know that they're moving their ecosystem forward in lots of interesting technical directions. They look at not just a price oracle, but we're working with mutual reference partners, which we can't talk about yet for oracle and energy and or sorry for weather for crops. So an oracle is about the temperature in various parts of the world or rainfall or those kinds of things. And so it's a very broad way to think about how do I touch the world. Now, that having been said, for financial things, what's the price of some asset? 
+
+I really, really like the mechanics like the micro tick folk like some of the others. I don't have all of them off the top of my head where they're looking at, okay, what's the price of a free option trading at and people are incentivized as traders in order to trade around the price so that you design a market so that the market price of an asset emerges from that. And that to me is where market prices will need to come from over time as one of the primary sources. I think it's legit that you can't take your prices from one exchange, even a big exchange that doesn't make any sense. They're subject to manipulation. 
+
+They're subject to denial of service of the connection between you and that one particular exchange and so forth. What you really want is a market aggregate information for a product, but there will be new and fancier ways that we will incorporate that. And then what I refer to as sort of a meta oracle, an oracle structure which is I'm going to take multiple sources and aggregate them, which chain link, I think it's fair to say pioneered and other people are also starting to adopt. 
+
+That model is going to be crucial and what you want is people that are incentivized to incorporate in new information sources to get better, more accurate, more timely prices or information signals. And yeah, I think it's crucial. And I think it's hard. And I think that even though any particular DeFi might be able to say, okay, we have a special way to get this particular price, they have to go back to getting the price one time is not easy but straightforward so that you can repeatedly do it and you know you're getting the correct one and nothing in your information supply chain is corrupted. 
+
+That's really hard. And so for us being able to deploy in an information rich environment where programmers can focus on their value add instead of setting up their own infrastructure for getting price information. I think that's just a huge value. 
+
+So we want to roll out so that's just available. And that's the kind of thing where once I'm a multi-billion dollar business, if I'm a DeFi trader, yeah, I might think about investing some of that in my own personal price oracle thing. If it's that great a price oracle, then it ought to be valuable to other people. 
+
+And why are you swimming uphill as opposed to making it something that's generally valuable? If your comparative advantage is not likely to be that you've got a better price oracle, your comparative advantage is going to be here's my DeFi service that is unique to the world. 
+
+Anna: 
+Speaking about oracles and all vulnerabilities in that big architecture, do you think that decentralized system can help us to overcome this problem or how we can deal with people and human mistakes that actually is a reason of most of the world terrible catastrophe in modern world, I mean in modern system world? 
+
+Dean Tribble: 
+The answer is absolutely and we're pretty mission driven folk. If your answer when someone asks you why you work at company X is not because it's the most important thing in the world, then why aren't you finding it the different company that has the most important thing in the world? So back to that original vision, it is having software that enables more cooperation in the world so we have a more cooperative world. And as a business and as a go to market DeFi is the place to start in that ability to rapidly build components and build up new applications can really drive DeFi and really drive a business there. But DeFi and finances is the backbone of a whole lot of the cooperation in the world. But in general, if we can make it easier to cooperate and safer to cooperate with total strangers, then people do cooperate with total strangers. If cooperation is cheaper, then I can afford to cooperate with more people. If cooperation is safer because I don't have to trust that they won't run away with my money. I've just got a smart contract that will make sure that they get their thing when I get my thing and then I'm happy. 
+
+And now I don't need to know anything about them. I can cooperate with more people. The whole point my brother works at the State Department, the US State Department. And one of the whole points about diplomacy is if you can get people talking, you can find the commonalities. Otherwise, it's easy to demonize people you aren't already cooperating with. And so by fostering additional cooperation, now I have reasons to want to do more cooperation with those people because it's in my interest. And so the more interlinked we are by whatever means. 
+
+So if those people are investing in my DeFi thing, then they probably have reason to want to think about whether they're going to attack the building that's running their DeFi operations. And what gradually happens is you sort of get more and more cooperation and suddenly realize that, oh, I'm kind of cooperating with all the people around me and that's doing well for me. And now I can focus on the other changes I would like to make, but I typically am going to have strong incentive and an obvious reward path to do those in a cooperative fashion. 
+
+And that doesn't always work. But man, it's helped to address a lot of the kinds of problems that people create where they discover new ways of cooperating. The other thing is there are many of these kinds of problems that we would like to solve that we think, you know, governmental organizations aren't great at solving. 
+
+And we've seen like pollution credits are really awesome at pulling out and surfacing some of the problems that need chewing on and incentivizing people to solve them in productive ways and in ways that involve non-course of means and freedom of choice to actually go and solve problems that they want to solve and that are made now because of this mechanisms, valuable to solve. And the ability to do smart contracts so we can do all clean up my act if you clean up your act. So now we can tokenize commons and make it so people have incentive to treat it less like a commons. All of those are going to be powerful abstractions for enabling cooperation to solve problems that have been hard to do politically or that political mechanisms have been shown to be. They work for a while, but then organizations inevitably get too big for their britches or they get other incentives or whatever it is. And having a different mechanism to approach these things a different way gives us another tool in our toolkit to be able to solve some of these hard problems. 
+
+Citizen Web3: 
+I definitely think that decentralized law is one of the four pillars of creating a decentralized role here. But I'm going to hate myself. I'm not going to ask you this question before we wrap it up because there's too many things that I can ask you. 
+
+One thing I do want to hear your opinion really a lot. You're obviously an OS expert. What is your opinion on the development of decentralized OS if you think that they exist? Well, I think that they do, but let's hear your opinion. 
+
+Dean Tribble: 
+Just to make sure you do you mean decentralized operating systems? 
+
+Citizen Web3: 
+Yes, yes. 
+
+Dean Tribble: 
+So that's a great question. And any VM blockchain is effectively a decentralized operating system. So EVM is a centralized operating system. In Midori we did an object capability, secure operating system. 
+
+A lot of our architecture comes out of Kiko's, which is one of the early ones. It inspired SEL4 and various other systems. SEL4 being easily the most secure operating system on the planet. In Agoric, in the system architecture, there is a thing we call Swingset that is indeed a secure decentralized operating system. So it has a user mode system mode separation. What we call that's where it's which are effectively secure processes. 
+
+They run on top of it. They can use syscalls. They only have a syscall interface that is pure data and they use those to send asynchronous messages, both among the various processes, among the various VATs as they're called, and two VATs that allow off-chain communication so we can do the same decentralized asynchronous messaging system to communicate with services off the system. So we very much have internally a secure decentralized operating system. And many of the design precepts come very specifically from our earlier work doing secure operating systems. 
+
+And so we will eventually standardize that. The mechanic allows us to do things we just transitioned to where all of that was implemented in JavaScript but with a layer separation and this user mode system mode thing that you need for a real operating system. But it was all implemented in JavaScript in Node. 
+
+But that kernel is sufficiently isolated that we have a toy version that was written in Rust and we'll be able to swap it out just fine in the future completely transparently. And then we just shifted to where while each of these run times is running in JavaScript using Node, we now have the version that we expect to go to production with or the initial version of it where we use the excess JavaScript implementation from Modible. That is the version of JavaScript, the standards compliant version of JavaScript that was designed for embedded systems. So it is what runs in some of these hardware that you potentially use every day for controlling everything from light bulbs to ambulances and washing machines and so forth. And so that has much smaller memory footprint, much easier to security review, much more predictable execution parameters, that sort of thing. And we can now launch one of those as a process. It's now running JavaScript in its little engine. In the future, indeed, we could compile that to Wasm and launch it in Wasm compartment, have Wasm compartments running in this decentralized operating system as well. 
+
+So again, we love Wasm. It's just not the thing that anyone needs to program in. And being able to directly execute in our operating system, programs expressed in JavaScript, obeying the JavaScript semantics, is a much smaller security exposure for programmers. 
+
+And so that's what we run in our operating system. But it's certainly going to be extensible out into the future. And we've talked with various other parties about using it directly to solve some of their problems from in-fuel like systems to file coin policy implementations and that sort of thing. But we have to focus on getting our public chain out first. And then all of that stuff is open source. Other people can pick it up and run with it. But we'll be there to help them with that in the future. 
+
+Citizen Web3: 
+And our sort of traditional question that we do ask all our guests is, what current projects out there excite you? And it doesn't have to be blockchain. We used to stick with blockchain, but now we open that up to everything that you want to go ahead and mention. So is there anything out there that currently excites you? 
+
+Dean Tribble: 
+So first off, there are several in the blockchain space that are really cool. And most of them are in the zero knowledge space from my perspective, simply because, you know, lazy ledger, a few others. A lot of people design funky new crypto things that would simply be better off running that as a secure programming thing just written in JavaScript. That atomic swaps, if you write them in JavaScript, it's just easier to understand. You can even do cross chain things if you've got, if you've done one round of implementing secure communication between chains. And now an atomic swap looks pretty much in JavaScript like a few lines of code and it boils down at the crypto level to doing all of the things you would expect if you designed that natively. But zero knowledge stuff is freaking crypto magic. 
+
+And so I love ZK rollups. I love the stuff that code is doing, the halo stuff. All of those things are really cool. And eventually we certainly want to incorporate that sort of stuff into our system. I also really like a thing that is non crypto, which is the stuff that Christopher Lemmer Weber is doing that I mentioned, where he's taking a lot of the distributed Ocap and our distributed object protocol stuff like that and applying it not to blockchain stuff, though there's some complementarity there, but to distributed secure permissionless social messaging. And so that project is really cool. 
+
+The Spritely Goblin is the way I think of it, but Christopher Weber's work is very cool. So those are kind of the two projects. And then finally, the foresight Institute, they're the ones that brought together that panel for secure distributed object capabilities and blockchain. And is there a solution here that really started the life of Agoric at the company and they're doing a intelligent cooperation series over the next year that is actually driven by a book that our chief scientist, Mark Miller, wrote that will be coming out over the course of the next year. And so that's all about, you know, more cooperation and infrastructure for cooperation leads to a more cooperative world. And here's all the ways we can benefit from that, all the ways we can leverage that and answers to Anna's questions about how do we address some of fundamental world problems because we have these new tools, these new infrastructures. And so those are kind of the three different areas of stuff that are really inspiring outside of Agoric. 
+
+Citizen Web3: 
+Where does somebody like yourself, who is obviously has all the programming experience in the world and a lot of security and financial experience as well, where do you get your information from? What is your sources? Is it newsletters? Is it some kind of aggregators? Is it books, whatever? And I don't mean like academic information. I mean, your everyday resources that you check out. 
+
+Dean Tribble: 
+Generally, it's talking to people and then following the links that they say in order to look at that stuff. So the other part of it is being surrounded by really smart people to talk to. All things blockchain, my number one source nowadays is Zuckie Munion, just talking to him. And the pointers to Twitter that come over are Keybase thing from him and other people, talking to Mark and Chris Everett, Morningstar, Kate Sills, follows all things Twitter, follows all things OpenLawn, is deeply insightful about those things. Our project, we work with the blockchain innovation university in Australia. And so we talk to those guys on a regular basis, both about our economy, but then also the economist view of the rest of blockchain and the rest of the world and that sort of stuff. Various different services of Twitter, Chains and Clubhouse. As I said, listening to other people. 
+
+Citizen Web3: 
+Great answer. Dean, thanks for your time. Thanks for finding the time in the morning and also in the morning for you. It's been a huge pleasure talking to you. 
+
+Anna: 
+And bye everyone. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

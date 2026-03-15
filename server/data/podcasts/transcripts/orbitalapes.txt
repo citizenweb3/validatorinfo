@@ -1,0 +1,372 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/orbitalapes
+
+Episode name:
+NFT, Blockchain Gaming and Validating with CO
+
+Citizen Web3 
+Hi everyone. Welcome to a new episode of the Citizen Cosmos podcast. Today we have with us CO, or is the community overload from orbital apes. And by the way, Co or CO, and we're going to find out about it, doesn't mean community overall. That's the actual nickname because I already got it wrong when we were introducing each other before the show. Co, man, how are you? Hey, welcome to the show.
+
+co___orbital_apes 
+I'm good, thank you for having me here. I'm excited about it.
+
+Citizen Web3 
+Yeah, glad glad to have you. I mean, you guys have the probably the current biggest NFT project in the Cosmos ecosystem. I would love to talk all about it. Do you want to introduce yourself and maybe talk a little bit about Orbital Apes and what you guys do?
+
+co___orbital_apes
+Yeah, for sure. So me, run, I'm Ko. I run the social media marketing and part of the business side of the collection. So Orbital apes all started as an NFT collection, but we like, it's relatively simple to just create the art and push an NFT collection. So we decided to take it one step further and pack it like with utility, as much utility we could give it.
+
+So that's where our idea for the marketplace started. Then we decided to create a validator in the FMOS chain and we're currently building a game for FMOS as well. So we're tying all of these different aspects to the NFT collection. So as a holder of the main collection, you get a piece of everything we build in the future. So all the Orbital apes NFT holders get 50 % of our validator management fees. They get 20 % of the marketplace fees.
+
+and they're going to get a free airdrop for them to mint the new collection for the PvP 2e game. So with all of this, we're trying to tie up the different aspects and everything we develop in the future into the main collection. So holders from now will get access to everything we build.
+
+Citizen Web3
+You just answered one of my next questions, but it's good. It's good. like that. 
+So I have a lot of questions about everything you just said and about all your plans and we're going to get back to them in a second. But the first thing I want to ask is why did you guys decide to go anonymous?
+
+co___orbital_apes 
+So for us, this is just a matter of privacy. Like we don't really have any problems with sharing our identity, but it's like, if we don't need it, we want to have the apes as the core image of the brand itself. We're doxed with the FMOS team because we had to go through full KYC for one of the projects we're running in FMOS. So they know us, they've seen our faces and we're in constant communication with them. But for the public itself,
+
+Maybe in the future we would have plans of not being anonymous, but for now it's just a matter of privacy. Like all of us run social media accounts like Twitter, ask ourselves so people can reach out directly to us. But for now we don't feel identity is the most important thing.
+
+Citizen Web3 
+I absolutely agree with you. don't think so. It's just interesting that you actually had to go through a full KYC, but with the team and here you still decide to stay anonymous. I guess this is in my, actually in my opinion, it might be a little bit better for the team to be anonymous. Cause that way you strip down, you know, the persona behind the person who creates the project and you concentrate on the project. I guess so. This is like my kind of view on this. I'm not sure if you guys.
+
+co___orbital_apes 
+Yeah, exactly. Exactly. So it's a big focus on the brand.
+
+Citizen Web3 
+Yeah, okay, cool.
+
+Okay, cool, cool, cool. That's awesome. And what did you think about having to go through the full KYC? Were you okay with it or were you like hmmm?
+
+co___orbital_apes
+Yeah, I mean, it's with the FMOS team. We know it's just a part of the process with one of the projects we're working on, so not a big issue for us.
+
+Citizen Web3
+What's with the nicknames, man? I love the nicknames. Community Overlord, there is a lot more. Come on, share the story.
+
+co___orbital_apes 
+Yeah, so all of that, like it's just pretty much fun names we came up with as we were looking for nicknames. just like, I'm using my actual nickname. call me Ko in real life. So I went with that. then Mr. Sir is something we say a lot. Like Mr. Sir chose that name because we often refer to each other as Mr. Sir. So that's how that came up. And then Control Alt-Tape was just him thinking about a
+
+cool nickname so he went with it and the rest like similar stories people just chose whatever they felt was cool
+
+Citizen Web3 
+Nice and your team is currently it's about eight eight to ten people roughly, right?
+
+co___orbital_apes
+It's nine people.
+
+Citizen Web3
+people. I was right on the borders. Again, still before we go more into orbital apes, I was going to ask why, and I've seen this a lot, 10,000 NFTs. And I guess 10,000 is a kind of nice round number, which makes sense psychologically, I guess so. But why 10,000? Where did the 10,000 come
+
+co___orbital_apes
+So 10,000 has become pretty much a standard in NFT collections. We know it's a big number and in the current market conditions, it's been a hard push to reach the full mint. But right now we're in 8,000 minted, so it's already 80%. And we plan on pushing even more. So I think it's a realistic number for what we're trying to achieve. Also, with the scope of our projects, it was better for us to split.
+
+to have a lot more NFTs because this would allow more people to get into the ecosystem. Because for example, the game in the future, we're going to want a lot of users. So if we have more holders, we are already preparing a large user base for the game. Also for the marketplace and the validator, the fees that are going to be distributed are significant and are going to continue growing in the future. we felt it was better to split it between.
+
+a lot of people instead of going with a smaller collection.
+
+Citizen Web3
+Makes sense. do have one more intro question about why it's like sorry about the why questions usually a little bit more structured but because There is not I'll be honest with you Like usually where I we prepare a lot a lot a lot with the guest obviously with your team being anonymous It wasn't as easy to prepare. So that's why the whole bunch of why questions. why Fmas? Why not any other?
+
+Citizen Web3 
+We also validate Evmos, so we are also on the same side, but I would love to hear your opinion on why Evmos.
+
+co___orbital_apes 
+Yeah, so for us, we've always been big fans of the Cosmos ecosystem. The IBC, we think it's amazing how everything is connected and how easy it is to move from one place to another. But our experience is in Solidity and in EVM. So as soon as we saw, at most, like this massive project, EVM coming to IBC, we felt like that was the right way for us to go because it combines everything, like all of our experience in the EVM side.
+
+with the interoperability of Cosmos. So it was a perfect match, pretty much. So everything we've done in the past, because our team has experience in solidity, could be translated directly into F-MOS. So it was perfect for us.
+
+Citizen Web3
+When you say you mentioned twice having experience in solidity, would you want to expand on that? Did you do any projects already in Ethereum that we can talk about?
+
+co___orbital_apes 
+Yeah, sure. So our team is half devs, half designers and the devs, they all worked in Silicon Valley companies like Google and Slack and part of their coding experience comes from there. And the team also worked in, worked as freelancers for several EVM based projects. So that's how all of us got
+
+Acquainted to EVM and all of this but this is the first time this team gets together to do a solo project like not working for anybody else But this is actually something we own and we're running ourselves. So it's pretty much our debut as a team
+
+Citizen Web3 
+It's a big debut. you made a good entrance for sure. now, now you're saying that you guys have quite a lot of experience, from what I hear in like big, big companies. Why did all those people gather together and decide to make a game? What was the idea? How, why, why not anything else, but a game?
+
+co___orbital_apes 
+So, we've all been into blockchain and cryptocurrency for a long time. So we've been looking at the type of projects that are successful, the type of projects we will, we wanted to work in. And first of all, the NFT collection was like an easy entry point. It was a way to create a brand, to create community. So this is why we chose that as a centerpiece for everything we wanted to build.
+
+And, like we're all gamers, we're super passionate about it. So it was fun to see how much we could experiment because you can see other games like Axie Infinity, for example, that started in Ethereum, but right now that's not viable. Like they have their own sub chain and everything, but with gas fees and all of that, it becomes impossible to do. Then we've seen several other games in other chains that as they grow, like gas fees can become expensive or the network becomes clogged and everything.
+
+They also like slow down and kind of fade away. But we saw FMOs and the way it interacts with IBC and everything like a much more solid place to develop. we, everything matched perfectly to what we were thinking. So we decided to go for it. And games are a super fun way to interact with the community and to grow a brand. So this is our path.
+
+Citizen Web3 
+I agree about gaming and interacting, but let's talk a little bit more about all the things you mentioned in the beginning. Now you said that obviously you guys have a validator. Let's start talking about the validator. So the idea from what you said is that the people who are community members and owners of the NFT, right, get part of the commission that the validator earns. Is that correct?
+
+co___orbital_apes 
+Yeah, exactly. So like through marketing and through community engagement, we managed to get our validator to the top one spot in FMOS, which was a massive surprise for us, but it also required a lot of effort. So we're happy with the result we got. So from that validator, our users stick with us because they trust the brand. They know how we operate and like the reward system we've created for them. So.
+
+all of the holders are getting the 50 % of the management fees sent to them daily. So at the current rate, I think the apes are getting around 1.3, 1.2k FMOs daily, split into all of them. So every day the collection is getting some rewards. So right now, for example, if you go to Mint and Orbital Ape, instead you still pay the 60 FMOs Mint price, but
+
+As soon as you mint, you can go claim the rewards that have been stacking since release. So right now they hold around three EF mods inside, so the real price you're going to pay is $57. So this is a cool system because in the future, if enough time goes where apes are not minted, they're going to become free at some point. Or if people mint them now, they're going to recover the full price of their mint at some point. So it's a...
+
+sort of self-balancing system. If people invest early, they're going to get the rewards and their NFT is going to be paid off so they can just continue getting rewards or selling it in the future or once the game releases. So it's pretty cool. Like, apes are always going to be generating rewards and the validator right now is the main source of it. But also we run the largest NFT marketplace in FMOS and the ape holders are also collecting rewards from that.
+
+So right now, since we launched our collection, the traded volume for the apes is about 90,000 FMOs. So it's significant right now. And we expect it to continue growing as more NFT collections come to the marketplace. Right now we have some excellent NFTs approaching FMOs. So it's pretty cool. We're excited to see how much the volume increases in the marketplace. And all of this is going to benefit ape holders.
+
+co___orbital_apes
+in the long term. As volume increases, their fees increase.
+
+
+Citizen Web3 
+So basically, what other parts are there to the tokenomics? So you have the marketplace, we have the validator, and are there any parts to the tokenomics?
+
+Citizen Web3
+If you could call it, I'm saying, sorry, sorry, let me repeat the question. So basically there is the marketplace, which generates certain revenue. There is the validator that generates revenue. And are there other parts to the tokenomics apart from it being an NFT collection and being scarce, which is, can guess can also be part of the tokenomics. Are there any more things that we can say, okay, that's part of that.
+
+co___orbital_apes
+So for now, things with actual monetary value are just these. Like this is where we're assigning value, but we also have like rewards, sort of like reward points for people who delegate to us. We created this token, OEV. So people that stake with us get a monthly airdrop of the OEV token, which is not something that has value in itself, but it's something that people can use in the OEV store that we created.
+
+So the whole purpose of this store is to give some incentives for people and rewards for people that delegate to us and that have been loyal to us. And we give something back that they can use to further engage with the brand. So the OAB store contains some exclusive NFT designs. They're all ERC 1155, so it's shared ownership, but people can use the OAB tokens they got from Staking to mint these new apes.
+
+All of these are limited edition apes, so they're going to be there for one month and then they're going to disappear forever. So you can use the OAV tokens you got from staking with us to mint one of these apes. You can use it as a profile picture. You can trade it in the marketplace. And we're creating a system of scarcity by making them time limited. So early stakers who minted one of the current OAV apes are going to have them, but in the future, these are going to be impossible to get.
+
+unless you buy them off secondary. So it's this scarcity system we created to reward holders, early holders especially, because they're the only ones with access to the early releases of OEB.
+
+Citizen Web3
+So could you kind of summarize that the NFTs in this case are like a gateway point, I guess, right, into the ecosystem that you create, right?
+
+co___orbital_apes 
+Yeah, exactly. So if you own an APE, you can be sure that you're going to be part of every single project and you're going to get rewards from every single project we build.
+
+Citizen Web3
+What are if you don't mind talking about and what other plans you say other projects do you want to talk about the other plans that you guys have a little bit more I mean in detail not
+
+co___orbital_apes
+Yeah, so right now, yeah, absolutely. Right now, the game is something we're dedicating our full time right now because it's a pretty complex task to achieve. We've seen games, we've seen how successful they are on a bull run. Especially once the, when the game is new, it continues to like the tokens associated with the game continue to go up like crazy. But this is like,
+
+From history, we see that this is simply not sustainable. every... Pretty much every PlayTourian game that has released eventually collapses. So this is something we're really trying to avoid. Of course, like, teams that release a PlayTourian game can get a lot of capital quick from the increase of the value of the token, but then in the end, still, like, you're responsible for your community for what you promised to the people and...
+
+Having a token falling in price is not something we want to give to our customers. So we're taking our time. We're trying to build a more sustainable Play-to-Earn tokenomic system. So this is why we're going to continue taking our time for the game. Make sure to release it once it's perfect. And also, one of the important things is to release it under a better market condition. Because even if you have the best game in the world,
+
+You really do have to wait for a good market condition for it to be truly successful. If not, launching something that's not going to take off immediately is going to make it way harder to push it in the future. So we're trying to wait for every factor to align itself like everything has done until now for our collection. So that's when we're going to release. And that's also going to be part of the...
+
+reward system for the Apeholders.
+
+Citizen Web3 
+You mentioned two things, market conditions and games failing. Let's talk a little about the games failing first. Why in your opinion, most of the other games, if not all of them fail? We're talking blockchain, of course, right here.
+
+co___orbital_apes 
+Okay, this is, yeah, exactly, blockchain. So the thing in blockchain is that most games have been pretty much just another way to invest. It's not precisely a game. Like we've seen idle games where you just click, send your players to do some activity, but you're not really engaging with the game. So this lack of entertainment in the game is what...
+
+will determine its lifespan. So as long as the tokenomics inside the game are continuing increasing and people are making money, then yeah, it's gonna make sense to play. But if it's not entertaining and the rewards start decreasing, that's where a game fails. So right now the key thing we're focusing on is making a game that you can just, that someone would play on its own, even without a reward system. Because we believe this is the key. This is the only thing that's gonna make any game sustainable.
+
+Because if you purely rely on tokenomics, it's just like releasing a new DeFi protocol, not an actual game. So we're not going to go that route. We're going to make something actually fun for people to play.
+
+Citizen Web3 
+This is an interesting point. would love to expand on that. mean, let's talk psychology a little bit. You say that, you you want to make a game which will make people, which will attract people to play without having a monetary reward. What if you, I mean, I can understand that you probably have a lot of things that you're trying to avoid because of the, like the things that you haven't released yet. But if you can talk a little bit more like in general, psychology wise, what's in your opinion makes people
+
+play a game in the first place if it's not receiving a reward. It doesn't matter, not necessarily money, monetary reward, but any kind of reward.
+
+co___orbital_apes 
+Yeah, so you for anything you're going to need a reward. So in games, for example, XP systems are a pretty good XP and levels are a pretty good incentive. So people have leaderboards, you get to level a hundred and you're in the top pretty much. So you're competing against other people. People can see your name. People know who you are and your NFTs are linked to this. you're
+
+Online, your blockchain identity goes with you into the game and you kind of get some recognition if you do well with the game and all of that. But this is one sort of reward. This is purely on an entertainment and recognition level. We're also going to do a full tokenomic system, but by combining these two and making sure they interact properly with each other, we're going to make it sustainable in the long run. Because only when you achieve a true balance in this, we believe.
+
+a game can succeed. So it's going to be both like a social factor, a rewards factor, and something that will keep people engaged.
+
+Citizen Web3 
+What would you say, like, from the outside of the blockchain world, in your opinion, some successful games that can be an example to what you're building? Not an example to what you're building, but your motivation maybe to what you're building, for you at least.
+
+co___orbital_apes 
+I mean, we can see probably the biggest game right now is by user base is probably Fortnite or all of these like World of Warcraft and all of these games where you create an online persona and your avatar becomes an extension of you. So for example, in Fortnite, you buy some skins in World of Warcraft, you can buy different cosmetics and all of this is important because you create an online persona and you...
+
+pretty much decorated so you get new items for people to see who you are online, like what new thing you have and all of this. So this is an important thing, like the social factor combined with cosmetics you can apply. I think this is what creates a successful game. So if a lot of people are playing and then you have the new most exclusive skin, people are gonna give you some recognition for that. So this is sort of the system you.
+
+we are gonna strive towards too. This is also something we're testing out with the OEV apes, because all of these are limited. They're only gonna be there for one month. So people are actually rushing to buy the apes, because they know like if they buy this now, they're gonna be the only one to have it. And this is something people actually cherish.
+
+Citizen Web3
+You mentioned as well call market conditions before a couple of times. I would love to hear your thoughts in general. So are we are we in depth of a bear market? we in terrible market conditions to release things? If you can talk more about it, I would love to hear your opinion.
+
+co___orbital_apes 
+Yeah, so right now, like, of course, everybody can see it's not the full green candles every day as we experienced in past years. But in the ethmos, I feel like we're kind of in a secluded place because ethmos keeps growing, like more people get interested in the coin. They're coming to the ecosystem. They're seeing the rewards, all the useful features you can have when you combine EVM with IBC.
+
+So right now, FMOS, I would say it's in a pretty good spot. It's getting a lot of attention and as the chain keeps growing, keeps proving people what the possibilities for it are. So right now, like we're waiting also for the user base in FMOS to increase as well, because it's true, it's getting a lot of attention, but it's still very small compared to the potential it could have in the future. And I think that like after
+
+some months, like we're going to have a lot of people really invested into the entire ecosystem. And it's like, that's when it makes sense to release something truly big. But we like, even in this market conditions, we managed to sell 80 % of our collection until now in a couple of weeks from launch. And it looks like we're going to fully mint out in a couple of weeks as well. So it's not.
+
+Terribly bad if you have a solid product it will do well even in not the optimal conditions
+
+Citizen Web3
+What would you for your team or for you personally, what would be the one market event that would trigger you to say, okay, the market conditions have changed, we are ready to go.
+
+co___orbital_apes
+I don't know if it's going to be only one event. Like we have to see like continuous growth throughout a decent enough period of time because that's the only signal you can have of like improving market conditions because like a big green candle for the month is not an indication of anything. So you have to see how people are engaging with Evmos, for example, like how many more wallets.
+
+are creating the chain, how many more DeFi protocols exist, what kind of brands it's attracting. For example, right now, this is not directly related to Cosmos, but DYDX is building their own Cosmos chain. So this is something huge for the Cosmos ecosystem overall. And this is the sort of thing we like to see when...
+
+when we're dealing with FMOS that's fully integrated into Cosmos, then having these massive protocols migrating into Cosmos, seeing the value, that's a very good signal of what's to come in the future. So as we see more protocols migrating into Cosmos and more people discovering the potential of these chains, that's where we can find a great signal. Not one specific market event, but like a series of them for a sustained period of time.
+
+Citizen Web3 
+So I guess we're talking more fundamentals, right? Than technical analysis. Okay. I have a couple of questions, which I'm going to look at because they were from our various chats from community members. And then I also have some more questions, but it is a different, but let me go with those two first. Okay. So one question was on Twitter was, would love to hear your opinion on what are the current
+
+co___orbital_apes 
+Yeah, pretty much.
+
+Citizen Web3
+difficulties in the crypto world and the business.
+
+co___orbital_apes 
+In what sense?
+
+Citizen Web3 
+I guess, yeah, that's a good point because that was the whole question. So I guess the person was asking, I'm going to guess here. Sorry if I'm getting your question wrong if you're listening to this guys. I guess in terms of launching your own project in general and maybe both the market conditions being not in the best situation. I guess.
+
+co___orbital_apes 
+Hahaha!
+
+co___orbital_apes
+Yeah.
+
+Citizen Web3 
+If you encountered, you had a really big success from launch and you already mentioned it, but maybe people like the person asking about more of the difficulties that you had on the journey. And if you could share some of those difficulties, maybe.
+
+co___orbital_apes 
+Yeah, sure. So like, we've learned from years of, we've been in crypto for a long time. So we kind of have seen projects become successful and fail and we determine what makes a project be successful. So I remember there was a point in time where any NFT collection, you just had to release it and the floor price went crazy and everybody made money on that. So it was a period like a fully
+
+bullish period where people just continue to buy mint every collection and the demand for them was crazy. But right now I think the market is more mature. So people know where to find value, how to determine a successful project from a one that's going to fail. So right now it's not enough to just release a profile picture collection, but you actually have to give the user something that they will recognize value in. So right now every user is smart. People know how to do their research. They know what
+
+it works and what doesn't. So if you just try to launch a very simple project, it's not likely to be successful. So that's why the Orbital apes are a full ecosystem. So we have different aspects that kind of hedge the performance of the NFT collection. So the validator, as long as we remain in a good position, is going to continue generating for our project.
+
+The NFT marketplace, we're fully into this industry. So if the NFT industry within Atmos continues to do well as our NFT, then we're going to continue getting benefits from that. So by combining this, having multiple sources of rewards and incentives, it's a much more complete package for our collection. So I would say like right now, if you're going to launch a project, make sure it's something unique and that has...
+
+true value in itself, regardless of market conditions, something that can endure a bear market. Pretty much that like something that can help you push through that. And then of course, in a bull market, it's going to be amazing, but you really need something that can withstand any conditions. So that's how we built the apes. And that's why they made such a loud noise right now, even.
+
+co___orbital_apes
+even with the current conditions.
+
+Citizen Web3 
+What was the most difficult thing for you as a team to overcome? And apart from the market conditions, obviously, what was the one thing, maybe drawing the apes, thinking of the collection or maybe launching the validator? don't think that was that difficult. But what was the most one difficult thing apart from market conditions for you as a team? Or for you personally, maybe you woke up and you said, my God.
+
+co___orbital_apes 
+I don't know if it was just one thing. We feed multiple roadblocks. With Validator, for example, we started it as soon as the chain restarted. for that, we had to make a pretty expensive investment into FMOS when the price was $6.
+
+to get into the active set and that was of course a completely different price than right now. So right from the start, our cost was massive and then we saw that all of that investment go down quickly because we wanted to be there from the start. Then we had to run the validator for over a month without any rewards active because inflation was not active in FFMOS. So that was also an additional cost. Then all of the costs of development like the artist,
+
+software engineers and all of this has been like it was a long period of time where nobody was collecting any profits from anywhere. So it was all our effort pretty much waiting for the time to release. And we also ran the NFT marketplace at zero profit for a long time because we wanted to have everything enabled for the chain to grow. And then for releasing, we kept
+
+We had to adjust to the timeline of FMOS, not necessarily our own, because FMOS was still in the middle of doing upgrades of the claim of Kepler claim issues. So there was multiple factors that had to come through for us to be able to launch. So one of the main things that was preventing us from announcing a minting date or a price was the fact that IVC transactions were not enabled.
+
+pretty much the largest part of the ecosystem, is cosmos. It was hard for them to access F most directly. So we had to wait for all of these, like endure the cost and all the time we spent pretty much just being patient until all the factors aligned and then we could release. And it was the right choice to wait, even though it was hard. And even though we hit many roadblocks, it was...
+
+co___orbital_apes 
+the right choice.
+
+Citizen Web3 
+So holding works, right? I have one more question here, which was sent privately. OK, so the question is like this. Why did you only self-bond 0.08 % of the stake? Is this OK for network security?
+
+co___orbital_apes
+Yeah, so like at first that was the initial self-bundle. That was our, what we had to buy when FMOS was at six. And after that, we just, instead of self-bundling more, we just staked 10 % of the Orbit of Laves mint into the validator. So this is a bit more secure for us. gives us more flexibility. Pretty much every validator keeps a really low self-bundle.
+
+amount because of this, it gives you more security flexibility, but it's just like that pretty much like we want to keep the funds safe. So from anything and this way, like by just staking to the validator, we can do that. people like all of our wallets are public so people can see that we're not only staking 10 % of the mint funds.
+
+to our validator as we promised, but right now we have around 300,000 FMOs staked to smaller validators in the space. like people can go to the addresses that are connected to the validator and they can see everything, how it spreads. Like I think we're currently staking to 15 other validators. Maybe the list has grown, but this is pretty much our way to support the ecosystem because we did realize our validator grew to a...
+
+pretty large size. So initially our plan was to stake with us to continue growing. But right now we don't feel like that's the most responsible thing to do. everything we earn from now, like all the rewards are staked with other people. Like we choose to stake with validators that are providing something to the FMOS chain, to the FMOS ecosystem. So for example, we're a big part of our stake is with EcoStake that
+
+It created the re-stake tool that a lot of people use. Then we delegate to several other validators like Polkachu that is super active in the community. Then Cosmospaces. We delegate to OniValidator, Gata, StakeFritz, TedCrypto. A lot. Like we have a pretty huge list and we're going to continue supporting small validators.
+
+co___orbital_apes
+And this is also something pretty cool for us because we get to engage with a lot of teams. So whenever they've come to us, sometimes people need a little bit of help to remain in the active set or something like that. So we discuss the project and we know what they're going to be adding to the F-MOS chain. And it's amazing to be in this position where we can help others and we know exactly what they're doing to help the chain.
+
+So it's perfect, like we love supporting other people because we really get to see inside of everything that's being built for FMOS.
+
+Citizen Web3
+Thank you. That is I think you guys are doing a very cool job to decentralize the stake. That's well done on that. Kudos. I have one more set, not set of questions, but like it's just a couple of questions. It's going to be harder to ask you since your team is anonymous, but I'm still going to try. Feel free to answer in detail or less detail. So how did you get?
+
+co___orbital_apes 
+Ha
+
+Citizen Web3 
+I mean, you did mention that your team has experience like worked with Google, with Slack, some doing freelance work. But how did you personally, for example, get into crypto? mean, how did it hit you on the head one day?
+
+co___orbital_apes 
+I think like all of us got into crypto in a different period. Me personally, I think I started in 2018. So I started with Bitcoin. Like that was my first purchase. And then as soon as you're invested into something, then you keep track of it and you keep looking for more about it. So I think that was my entry. And then I started looking into other protocols, like getting a lot into DeFi, into NFTs. So by investing in them, you...
+
+get to engage in a much deeper level than people that just read the news because you're like, you have something in it, like you have a stake. So it's important to you. And this is pretty much how all of the team got involved. Some have been in crypto from like 2015. they're like much more experienced and they know what has happened, like through multiple cycles. But right now I think we're all pretty confident in the crypto space. Like we know.
+
+what's going to be the key success factor. So it's pretty cool to also have like a full team of people that you can talk to about different strategies, about different events, because everybody has experience in a, let's say in a different coin, so they know what happened with this one, what made it be successful or any failed investments and all of that. So combining all of this experience into one project has been massively useful for us.
+
+Citizen Web3 
+What's your personal worst buy so far since 2018?
+
+co___orbital_apes 
+I'm not sure what was the worst buy. Like right now everything is pretty tough. But I don't think there's been one complete fail. Like you can always pull out. Like we had some USD. Luckily we were able to sell it quickly. Like as soon as it broke peg. And Luna, we were actually huge fans of Luna before, but luckily we didn't hold it at the time of the crash.
+
+We kept saying like we should have it, we should have it as we saw it go to 120, but we never went back in. I guess that was a good thing, but we, we used to have it when it was around 60, 80, like trading it. But then I don't know, like out of luck, we didn't have it at that point. So we avoided that one.
+
+Citizen Web3 
+Yeah, I guess UST was one of the worst hits for everybody. Personally, it was a big hit for our project. We had like five years worth of money in UST and then yeah, it was a big hit. So I totally understand. Well, shit happens. You know, I mean, this is crypto, right? I mean, things come and go. But you know, one thing I still missing that I'm still going to try to push you towards, and I know I kind of already asked and you answered, but I'm still going to like...
+
+co___orbital_apes 
+Yeah, it was terrible.
+
+Citizen Web3 
+try to go that way again. What, what, what is the like, this is what we do like in the podcast a lot with the guests. try to understand not just, like the project behind, but the people and, and why did they suddenly decide to build a project? And this is my kind of question. It's going to be vague abstract, but the question is why. And basically what was not to like, I mean, obviously I hear from you, there was an idea to create an awesome game.
+
+an idea to create cool economics, an idea to create a community project. hear all of that, but what was the like, you know, internal motivation? Was it to change the world for the better? Was it to create the most decentralized game in the world? Was it to, I don't know, to prove everybody that you can be number one validator? What was the internal motivation?
+
+co___orbital_apes 
+So pretty much like as we said, a lot of the team worked as freelancers for other people and we saw how their projects were becoming super successful and they grew into like actual companies in the crypto space and all of this. So we pretty much wanted to have something on ourselves, like have our work be for us, be pretty much like flexible on work, being able to work on what you really wanted. So.
+
+Like the Orbital Apes is a company like every other business, like we're running a business. So we're using our skills, what do we have to provide value to people? And we pretty much running a company around this. We're going to continue pushing our skills to anything we can do. Like maybe we get into DeFi, maybe we validate in other chains. We, after the game, who knows what else we're going to have ideas for. So pretty much we built a brand.
+
+We're running a business and we're going to continue growing the business. I wouldn't say it's something noble. It's something crazy that will change the lives of people. But at least like right now we're doing our responsibility of keeping the network secure and FMLs helping decentralize. Although we do take a big chunk of the chain, we're doing efforts to decentralize. We're supporting other teams. And just yesterday on the upgrade, it was completely smooth.
+
+Citizen Web3
+Love it.
+
+co___orbital_apes 
+V6 of FMOS happened and our validator was up and running perfectly on time. We didn't miss a single block in there. So it's perfect. Like it makes us feel better to see that we can prove to people that their funds are in a safe place, that we're going to have one of the best uptimes in the network. And that's part of what we're doing for the people. But yeah, I mean, this is a business. This is our baby. We're going to continue running it as a business and growing it.
+
+as much as we can.
+
+Citizen Web3 
+I think it's a very great and fair answer. Not many people, there are some people who do give this answer and it's a straightforward answer, but I love that when people do, because instead of saying, sometimes you ask people and they have like a really complex answer, but sometimes it feels like that answer isn't very, and I'm an apologist, but sometimes it feels like the answer is not genuine. Here I can hear it. What you're saying is exactly what you're doing. You're creating a business. And I think it's a very good way of putting it.
+
+Co, I've asked so many questions. Thank you for all those answers. I'm going to ask one kind of like last question to you personally, maybe not as a member of Orbital Apes team, but as somebody who, well, of course, is a member of the team, but more personal. What keeps you personally motivated and what keeps you personally...
+
+you know, to get out of bed at 6.15 a.m. every day or not every day, hopefully, and, you know, carry on building the business that you are building.
+
+co___orbital_apes 
+So like, would say like running an NFT collection is pretty tough at some points. Like you have to be constantly engaged with the community, constantly developing new things. You're pretty much in the hands of how the market is behaving, how market psychology works. So it's tough. But once you have success in a collection like what we had in the Orbital aps, like that's more than enough to keep you going.
+
+because if you know you were successful in this, then you know what else to do in the future. So what more you can add, what thing to focus on in the future. And it's also pretty fun. Like I run the community mainly like here. So getting to interact with a lot of people in Discord is super fun. Like I know a lot of the people that are in the Discord and there's some that are...
+
+pretty much there 24 seven. So talking to them, getting their feedback about the project, listening to suggestions is also super helpful because even though we are a big team, it's super useful to hear the ideas of the people that are actually using our product and that invested on it because first of all, they give us a lot of different ideas of what to do in the future. we've taken.
+
+a lot of their suggestions and we actually implemented them for them for the whole ecosystem. And you also see when, people react positively towards a new update that you did to the marketplace or towards a new ape design that you released in the OEV store, all of this is super rewarding and fun. It's super fun to see the reactions of people when you release a new sneak peek or something like that. So yeah, and this job, I would say it's.
+
+pretty fun to do like working in crypto is something, especially in your own project, you have all the freedom, all the flexibility you want. So pretty much you work in things you like. So it never becomes a, like a huge load. Of course, at sometimes you're going to be more motivated than in others, but it's overall a pretty fun experience. It's something fun to work in.
+
+Citizen Web3 
+I'll be honest with you, I don't get very many guests who are so business driven and I love that because it's like, you know, it's a motivation in itself to succeed. think success in itself is a very good motivation. So, I'd love to hear that. Thanks. It's been a huge pleasure. Thanks again for finding the time to come on and do this great explanation. It did explain a lot personally to me and I hope that it helps the listeners to get more information on what you guys do.
+
+co___orbital_apes 
+Hahaha
+
+co___orbital_apes 
+Yeah.
+
+Citizen Web3
+I will have all the links to the validator to the games obviously to the episode and if you would like to add anything else that I didn't ask you feel free if not it was a huge huge pleasure but feel free to add anything else if I didn't okay okay
+
+co___orbital_apes 
+Now I think we covered everything. No, I think we covered everything. Actually, thank you for having me here. It's pretty cool to talk about the project.
+
+Citizen Web3
+Okay, thanks man. Thanks everybody. Ciao.
+
+co___orbital_apes 
+Thank you. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

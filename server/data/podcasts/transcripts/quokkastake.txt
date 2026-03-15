@@ -1,0 +1,490 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/quokkastake
+
+Episode name:
+Privacy, Motivations and Points of Failure with Sergey Quokka 
+
+Citizen Web3 
+Hello everyone. Welcome to a new episode of the Citizen Web3 Podcast. Today we have a validator interview and I have Serge or Sergei with me from Quacka Steak. I'm sorry, I'm saying Serge or Sergei. Serge. Serge has got the same name as me. I prefer saying Serge. He prefers Sergei. I don't know, but let's say hello to him. Sergei. Hi, how are you?
+
+Sergey | Quokka Stake 
+Hi, I'm Quite Cool and you?
+
+Citizen Web3 
+I'm good. Is Serge or Sergei? What's the preference? Because I prefer Serge personally. But you?
+
+Sergey | Quokka Stake 
+I would usually use Sergiy with Y at the end, because it can be written differently. Because I have issues with all of my documents, where my name is all written in different documents. So I usually stick with Sergiy with the Y at the end, not I, but Y.
+
+Citizen Web3 
+Yes, yes.
+
+Citizen Web3 
+I totally understand what you say, man. I have like documents from three or four different states and all of them are completely different and it's always a mess, but I gonna get used to it. So that's why I'm asking. Sergey, tell us please about yourself. Tell us about a little bit introduce yourself, who you are, what is quokka steak and what do you do?
+
+Sergey | Quokka Stake
+Okay, so basically I am a person who is interested a lot in technologies and programming and stuff. I have a full-time job as a backend developer, backend slash DevOps. Basically that's what I do for a living. And I'm somewhat interested in crypto in its technical parts, for example, running full nodes, running validators and stuff. And I am also a validator on a few of Cosmos chains, including Cosmos Hub now.
+
+So my validator is running under the morning clock estate because I saw the clock is a cute animal with a smile, which is pretty much me. So yeah, I think that's cool. So that's pretty much it for me. So the validator isn't that big. We are validating like nine chains and two consumer chains, I mean. But yeah, it's all quite interesting, I would say.
+
+Citizen Web3 
+Nine is more than we do in citizen web 3, including consumer chains. So yeah, so you do it more than us. Yeah, I think I lied. Wait, if it's including testnets, I think it's more, but I'm trying to think. So there is Cosmos, Stride, Neutron. That's one, right? I mean, that's like technically one with the consumer chains.
+
+Sergey | Quokka Stake 
+Already. How many we do? How many chains do you validate?
+
+Sergey | Quokka Stake 
+For me it's seven of them. For me it's seven of them because I have seven usual chains and two consumer ones.
+
+Citizen Web3 
+It's we validate mostly we have what do we have? We have Avmas, we have cyber, we have Celestia, we have Litecoin, Bitcana. What about you? Let's talk about you, man. Us is boring.
+
+Sergey | Quokka Stake 
+Yeah, basically my biggest asset now is Cosmos Hub, of course, because I have more than one million of delegations here. And yeah, it's like tricky and difficult and expensive to get into the Cosmos Hub active set. But yeah, so my most valuable asset is Cosmos Hub Validator, of course, but also validate chains like Sentinel, Jakao, which one?
+
+Sergey | Quokka Stake 
+and something else. Let me see. I have the list of it somewhere. Let me check. And also, two consumer chains, Stride and Metron and Nomik, which is not a Cosmos chain, but it's still quite promising. And yeah, these are all main nets. I also validated a few test nets, namely Cosmos, Jakao and Nomik. So yeah, something like this.
+
+Citizen Web3 
+It's actually a question I have for you. I had this question for you much later down the line because usually there is a different flow, but it doesn't matter. We can go in any way we want. And this is actually a question I had for you because I looked at your list of chains, of course, before. I'm curious, to what extent for you is when you choose a chain, when a Quokka, I'm gonna speak to you in a second like Quokka state.
+
+So when Quokka decides to do chain selection, how important is the factor of decentralization and privacy when it comes to? Let's forget about privacy, sorry. How important is the matter of decentralization when it comes to chain selection for you?
+
+Sergey | Quokka Stake
+Actually, usually people are deciding which chain to validate based on how profitable it is. For me, it's not about profits at all, because I have other ways to earn money, let's say. But for me, it's mostly about the project itself. And I'm really passionate about projects which have real utility. For example, I don't like projects like Persistence that much, because I don't see a real value in it. But for example, there are projects like Sentinel, like Akash, like...
+
+Jokal. Firstly, they are all focused on privacy, I would say, in a different way. For example, Sentinel allows you to use EPM in a decentralized way, and Jokal is pretty much a drop box on the blockchain. So yeah, I like these kinds of tools, because this is something you can really touch, you can really use. So you can really use it in some way.
+
+So these kinds of projects are really, really like, but also, for example, for Sentinel, I would say its tokenomics and token price is really not that great, but the project is really good and the idea behind it is really strong. So this was like the key factor for me when I decided to join this validator. And a lot of this also applies to another project. For example, the recent validator I added was Gitopia.
+
+which is pretty much GitHub on blockchain. And for me, it's not profitable at all. And this is like one of the most resource consuming validators I am running, but I like the idea behind it because it's, you know, it's promising, really promising and it really sounds cool. So this is basically, I can't say the biggest factor for me is the project itself and the idea behind it.
+
+Citizen Web3 
+I totally understand. I totally connect with that. We have been trying to avoid, I've been in and out of validation since 2015 when it was called witness nodes. And I've been trying to avoid touching anything that I don't think is, you know, as much as my value. So I totally understand when you say that for you, the most important thing is not profitability.
+
+but use case. Let me ask you a different question here, something that actually I usually start with. How did you end up? I mean, you said you have a DevOps background and a developing background, which is, of course, an amazing thing for Vara and validators. But let me ask you the most difficult question. Why Web3? How did Sergey wake up one day and like, hmm, I'm going to start a validator. No, I mean, it doesn't happen like that, right? What happened? What is the story behind?
+
+Sergey | Quokka Stake 
+Yeah.
+
+Basically, it was my brother who was really into Sentinel a lot, but he's not a technical person, but he's more of like SMM, Social Computing Management guy. So he was really passionate about Sentinel and he decided to join the validator and he needed my help. So I helped him a bit with it and while researching on how does it work, I started to get curious about all of the parts.
+
+on how it's working and yeah, here I am running my validators on my net. Pretty much the story.
+
+Citizen Web3 
+Excuse me
+
+Sergey | Quokka Stake 
+Ahem.
+
+Citizen Web3 
+Why? Why is it important for you? Why is Web3 important for you? What do you see in it?
+
+Sergey | Quokka Stake 
+Yeah, I mean, for me it's also part of the reason why I'm so interested in these aspects and also in privacy on blockchains is also that I live in the country that is kind of you know, out of state. But you know the privacy is important here and I also want to do something to be involved with something that fights for human rights, for privacy and stuff like this. And blockchain is...
+
+There are some blockchains that really make this possible. For example, against Antiniel, for example, Nym, which is like Tor, I would say, in some way. And these kinds of projects are really cool. So for me, this one is interesting a lot. Another aspect for me, why I am still here, is in crypto, I mean, is that I'm really curious about the technical part. For me, it's like really cool and nice and something to play with, I would say, is...
+
+maintaining all these writing tools for the ecosystem and stuff like this. So this is something I really enjoy before, because I mean, for me it's not like something like I do for a living for me. It's more like a hobby. I wouldn't do it if it wouldn't be interesting for me. So yeah, these two aspects are the same.
+
+Citizen Web3 
+When you say privacy technology, do you think, I don't know how long you've been around crypto, but by the way, how long since when did you start roughly not validating crypto in general?
+
+Sergey | Quokka Stake 
+Uh, not that far away actually, maybe in 2021. I think, yeah, maybe in March 2021, I think, or something like this. Yeah.
+
+Citizen Web3 
+And do you think from what you've seen so far that those things you're talking about? I'm curious. I'm being devil's advocate here, because I'm always in, but I want to understand what's inside the head of the people. It's important to me. And what I'm trying to get in here is like, do you think that the things you're talking about are being implemented by different projects or, because sometimes I'm going to, I'm going to like.
+
+do a side sentence before I let you answer. Sometimes I look personally and I don't think it's just my feeling. I'm sure a lot of other people have the same feeling. We look at the market and we're like, it's not about the price. It's about like what people are choosing to do, what projects are choosing to do sometimes. Sometimes projects say they're privacy centered and they go and do something crazy, which is like blows the mind of any privacy advocate, or sometimes they talk about
+
+I don't know, like building decentralized infrastructure and then they use AWS. I don't know, whatever, you know, like, do you think personally, what's your opinion? Have you in those two years as somebody who came in, sorry, three years, 2021. And, you know, do you think that those projects that are talking about privacy technology, are they really doing that? Or do you have like, what's your feeling on that?
+
+Sergey | Quokka Stake 
+Yeah, I would say they are doing it in some way, but the problem is it's not like, I would say it's not like the mass adoption stage when everybody's ditching Web2 apps and turning to Web3 apps because it's not at that stage yet. But I would say it's not the technology that is the bottleneck here, but mostly the marketing because it's not like public as much as Web2 apps, I would say. But yeah, my feeling is that will only come.
+
+I mean, the popularity of web3 apps would be only increasing over time. Cause yeah, the idea is pretty much really promising. I think a lot of people would love to join it at some stage when they will know about it. So once we reach that point, it would get way more interesting than when we are getting here, than the point where we are here right now.
+
+Citizen Web3 
+What is the one app, two questions and one, what is the, in your opinion, one app that will help adoption? And the second part of the question, what has to happen for you to stop being interested in blockchain altogether?
+
+Sergey | Quokka Stake 
+For me, I honestly have no idea what should happen that I would lose my interest in doing so. Because for me, it's again the technical parts that are interesting and there's always something I have to do. Or I can think of doing, for example, I don't know, writing some analytics or whatever. Like, really this thing that is cool for me.
+
+Can you repeat the first part because I didn't quite get it?
+
+Citizen Web3 
+Of course, what in your opinion is the application that will help mass adoption? What will it be? Will it be a, I don't know, mobile application about weather? Will it be a personal assistant AI with blockchain? I don't know, whatever game.
+
+Sergey | Quokka Stake
+I would say there are different use cases for that and different applications. But one thing I really know for sure, for example, that can really benefit is that something we are already having. So we have, as I was saying before, we have Sentinel, which is quite the VPN in the blockchain, and they already have some applications that people are already using. And it would be really cool. It will be really something interesting when we will get to the stage when these applications
+
+would have the same amount of users as regular ones do, regular VPNs I mean. For example, this is one use case I can think of, but I think they are way more than that. But yeah, I think when the future will come, we'll see.
+
+Citizen Web3 
+I understand. Definitely. There is several interesting VPN projects, I think, that I've been following over the past several years. In Cosmos, there is one, also, basically Sentinel, but I think there's also Mysterium in Ethereum. And there was also another one. I forgot what was the name. I don't remember. Sorry. But it's definitely very, very interesting to watch how they develop. What's more interesting to me is how to create
+
+the underlying decentralized infrastructure for these even networks to work. Because today, a lot of people, a lot of the time we talk about decentralization, decentralized networks, decentralized communication, blah, blah. Yet there isn't really a real P2P communication. If we talk about decentralized infrastructure, the internet is there and the internet is cool.
+
+But the problem is the protocols that we have, right? So do you think that we as a WebTree community, let's refer to ourselves, let's be a little bit arrogant. Let's pretend we are the WebTree community right now. And do you think that, we are, we are, we are, but you know, I was kind of elevating our status a little bit here. But you know, do you think that...
+
+Sergey | Quokka Stake 
+Hard to eat.
+
+Sergey | Quokka Stake 
+Thanks for watching!
+
+Citizen Web3
+Creating a decentralized infrastructure, that layer, is an important part to actually achieving decentralized technology.
+
+Sergey | Quokka Stake 
+Yeah, I would say so because for example if an application connects to one server to get data from the blockchain It's like a single point of failure because if somebody blocks this and blocks the server Basically, the app is not working. So it's really important to have something I don't know like p2p or I don't know service discovery or something similar and that is quite a challenging task I would say but it's not only in crypto, but also in general. Yeah, I think part of the problem
+
+not a problem, but part of the issues one can face when developing such a protocol is also B2B communication, service discovery and things like that. So yeah, it's definitely one of the big aspects of having decentralized infrastructure. And I think there will be or already are solutions to that.
+
+Citizen Web3 
+Yeah. Do you think, is there any viable solutions that you would mention that you would advise, excuse me, that you would advise other validator teams to use for their foundation infrastructure, that you would say, guys, use those technologies or don't use those technologies that is safer, that is more secure, there is more P2P or the other way around?
+
+Sergey | Quokka Stake
+Sure.
+
+Sergey | Quokka Stake 
+Just to clarify, are you talking about the validators layer or the blockchain layer itself and how validators are communicating with each other or something different?
+
+Citizen Web3
+was, but you feel free to answer is in any way you understand the question. But I was referring to a validator communication here and validator, primarily validator communication. Yes, that was my primary reference.
+
+Sergey | Quokka Stake 
+Yeah, but basically the underlying layer of Cosmos, aka TenderWind, or nowadays, how would you call it, CometBFT. So this thing is pretty much the P2P thing because it doesn't have a single point of failure. It has a lot of validators communicating with each other and way packages or signatures or transactions. So yeah, this is pretty much P2P infrastructure and it's really beautiful.
+
+I mean, you know the difference between downloading the file from the server and downloading files from Torrent. It's pretty much the comparison. When you download the file from the server, it's pretty much... If the server is down, then nobody can download it. But if it's something like Torrent, if one of the peers is down, then others continue to work. Okay. So yeah, pretty much that's the beauty of Tendermint or CommitPft. So yeah, I would say...
+
+This is really beautiful and this is something that really gets me curious about that.
+
+Citizen Web3 
+There was, um, we have a little minute of, of advertisement we have for, for whoever is interested in, in learning a lot about the listeners, I mean, about tender mint and BFT, um, sorry, I said it as two different words. Um, there is a really cool episode with, uh, Zharko, uh, Milosevic who is the CTO actually, um, uh, the guy for informal systems who
+
+wrote most of, not most of it, sorry, but a lot of that code and who is working on that. And if any listeners are interested to learn more about it, I advise you to check that out. Sergey, what about if we talk about decentralized infrastructure? What about, can we talk a little bit about how is Quokka stake set up today? If you want to talk about it today, do you mostly use cloud? Do you use a mixture of cloud and something else? What is your setup today?
+
+Sergey | Quokka Stake 
+Ahem.
+
+Sergey | Quokka Stake 
+Yeah, this is something I am really proud of, or should I say we, because usually I refer as co-custodian as we because I am technically the only person who is maintaining it and is in charge, but we as a community, because it's not only me, but a lot of people who are staying with me. It really is something, the technical aspect and these parts are something I'm really proud of because I really spent a lot of effort making it as smooth and stable as possible. So for example, I don't have a
+
+made that so far. So yeah, about the technical parts, I am mostly using, not mostly, but all of the validators I am posting are at home. I spend a lot of money buying the servers at home, so I have three servers that are running all of my validators. But also I use public infrastructure, for my public infrastructure, such as public nodes and stuff like this, I use cloud providers and dedicated servers such as Hetzner, for example.
+
+So yeah, I do want to have more control over my infrastructure when it comes to validators. So it's really safe. It's more safe to host it at home. Because for example, imagine a case when you have a server which is somewhere in the cloud and it has a malfunction somewhere and you don't want to get the jail, so you spin a new one and somehow the old one comes back and you end up double signing, which is something you really want to avoid. If something happens to my infrastructure, you can just plug it off.
+
+So it would never get back. So yeah, this is also something that I like about hosting at home. And also for example, I use security measurements like hardware security module. So even if somebody would be able to get access to my servers, they can steal my keys. So yeah, this is something that really put a lot of effort and this is something I can be really proud of and about the monitoring infrastructure because it's really important. Honestly.
+
+I'm seeing a lot of times that some validators who have really a lot of stake, they don't use proper monitoring systems. For example, I know one validator, I wouldn't name it, but the story is, we were joking with one of my friends and they use the delegators and their monitoring solution. For example, if their delegators are joining their chat and saying, hey guys, you are jailed. This is something not a validator should do. So...
+
+Citizen Web3 
+That's bad. That's so bad. I think I know who that is. I'm not going to say anything as well, but I have some names. I talked to a lot of validators and I've heard this terrible joke before. Sergey, wait, but wait, I want to talk about Bermetal because we are actually at Citizen Web 3 and me personally, I am like, yeah, I don't support. Well.
+
+Sergey | Quokka Stake 
+Yeah. Oh yeah, so true.
+
+Sergey | Quokka Stake 
+Yeah.
+
+Citizen Web3 
+I understand what latency means. I understand what liveliness means. I'm not stupid. And of course, you know, when you have cloud servers, you can probably improve your liveliness, sorry, not your latency so much, but your liveliness much higher than, than anything cloud, sorry, than bare metal can do. But with that said, I am a person who's completely pro bare metal as we speak. Part of our branding from Citizen Cosmos, Citizen Web 3.
+
+I'm also building a server room where I'm located. We hope, actually we're almost finished. So hopefully in the months we're gonna launch it. So let's talk about it because I spoke to a lot of validators. Actually, I can tell you that in the four years, more and more validators I speak to are pro bare metal. And okay, we have to use cloud because we need liveliness sometimes.
+
+And I need to like, oh, move that, that. Yeah. And bare metal. Yeah. It's hard to do that. But, um, yeah. What would you advise today on, um, let's say a validator or a guy is listening to this, uh, episodes or recording or, you know, tomorrow, today, it doesn't matter and they're like, yeah, I want to try bare metal too. What's your advice for them?
+
+Sergey | Quokka Stake 
+I would say the same thing that I would say to somebody who is asking who to stay please do your own research because you know It's not there's not like a civil world civil bullet or something like every approach has its own trade-offs It has its own pros and cons So of course while hosting something at home You would get some benefits for example as I was saying you have better control over your infrastructure But also you have to think of redundancy
+
+or something like this. For example, if a server you are running a validator and would have a disk failure and you would need to replace it SAP, otherwise you would get jailed. Also, for example, think of the cases if your internet goes down, I had a few times or if your power goes down. So these kinds of things are something you want to think of in advance because if you are hosting you if you are hosting your server in a data center.
+
+Or if you're renting it, it's way better because it's not you who is taking care of the things, but somebody in the data center. So yeah, so basically I would say it's worth researching it because there are trades off and something if you want to run at home, you have to think about it. So like redundancy namely. Yeah, but yeah, also I would agree with you that I am totally pro-BIM metal because it really feels more safe.
+
+for me as well.
+
+Citizen Web3 
+Of course, it's not even it's not even I think like the safety there is so much privacy safety and decentralization of aspects to it and security as well where yeah, but anyways, I'm not gonna go into the philosophy of that. But I would, by the way, just from my side, guys, if anybody is listening, and you're thinking about the internet, I can say definitely share from, for example, advice from notional team.
+
+is by 20 mobile internets. My advice is a bit different. My advice the way we are setting up currently, we have our broadband and we use Starlink and yeah, we're planning to use a third mobile internet but Starlink is a good option these days especially if you're available where you're located. Starlink, it's definitely a good secondary line for internet option. So yeah. But what about...
+
+you know, things like key management systems, Horcrux or TKMS or anything like that. What's your go-to in this area, in that field?
+
+Sergey | Quokka Stake
+Yeah, I already used Hardware Software module. I bought UBHSM for 650 bucks. Yeah, and it's basically used for all my main network data. So yeah, this is something I really like because as I was saying before, imagine if somebody gets access to your server somehow. I mean, not physical one, but I know remotely. And if you are not using such a solution, somebody can just steal your keys and cause you to double sign.
+
+Citizen Web3 
+Nice.
+
+Sergey | Quokka Stake 
+which is pretty much I think you don't want to. So yeah, if you don't have your keys on any other places, then this hardware security module, it feels really more safe. And also, I mean, this part is about the validator keys as well, but also, for example, for me, I use Ledger also for my validator keys, it's valid to store the mnemonics, so nobody would be able to steal it from me.
+
+So this part here, I really love it. And I really would encourage everybody who is either validating or thinking about validating to use this measurement as well if you can afford it, because it really pays off.
+
+Citizen Web3 
+Yeah, absolutely. Absolutely. It's something that is, I can also share that as a validator, we have already experienced problems because not doing that before and now we are doing that. But definitely that the same line of thinking here from my side. What about crazy things? I mean, this is the last question I have about bare metal, I guess. No, I have two more questions. Sorry, I lied to you. So the first one before the crazy one is I was, again,
+
+While I speak to different validators who do bare metal, I hear different opinions. And for example, there are some validators who say, no, we don't want to use refurbished hardware and some who say, well, I am using only refurbished, well, primarily refurbished secondhand hardware. What's your opinion when coming to validator? Is it applicable? Is it not applicable? Should people do it? Not do it? What's your opinion?
+
+Sergey | Quokka Stake 
+I would say I don't have really a strong opinion on that. I think both may work. I mean for refurbished It can be I don't know. I you mean like second-hand refurbished or something else, right? Yeah, I mean for that I don't know if there if you are buying the server and issues with it So yeah, this can happen off course So you have to I think do your own research again on whether it's good or not But I don't have anything to say about Something to say against that because it's really a cool idea
+
+And also the cool aspect is that I know like recycling and stuff. This is something I really like. But for me, I just bought three servers that are new. Actually not the servers, like I don't have servers as in a box that has something with it and it's running, but I just bought the computer parts and assembled it on my own. It costs way cheaper. I just buying the enterprise great server.
+
+Citizen Web3 
+Yeah, I totally agree. It's an interesting topic because I think it's totally not just okay, but people should do it primarily. But I have had, believe it or not, guests, we have had big discussions about that who came on the show and they were like, no, no. You have to write only enterprise only new. And to me, it was like a bit of, I don't know, but I have a kind of mixed opinion on that. I think that the opposite, I think that it makes much more
+
+this sense in terms of decentralization where refurbished hardware is used. But yeah, and this leads me kind of like to the crazy last question in that direction. What about crazy things? Because, and what I mean crazy things is, and I'm trying to do it personally, I still haven't done it. I am experimenting with it. And I've had at least already one theme who has mentioned that they are working in that direction. So these guys,
+
+are using solar panels and to power their wind. I think they have a mixture of wind energy and solar energy to power their validators and to power their UPSs. And yeah, they're basically trying to create a full independent cycle. What's your opinion on going as crazy? I like the idea, but it seems a lot of work. What's your opinion?
+
+Sergey | Quokka Stake
+Hmm.
+
+Sergey | Quokka Stake 
+soon.
+
+Sergey | Quokka Stake 
+Yeah, I just really love the idea actually. You've described it in the way, so I wanted to do it myself. I think it's actually quite impossible to do it here under these circumstances I'm living in. But yeah, I really love the idea. Because for example here, I don't know, it's not that sunny. I don't think it would ever work as expected. But yeah, the idea is really cool. I would really love to encourage everybody who would love to try it out.
+
+Citizen Web3 
+It's cool. I currently do the setup that we are building. We are, for example, there is several parts to it and I'm not going to go into them, but one of them is that there is a solar panel, a Starlink, and the Starlink is like a secondary line of internet. So if the fiber fails, the Starlink turns on. And the thing is that the Starlink currently is completely independent of the grid. It's powered by a UPS that is powered by solar panels. And that's kind of cool. Like to me, it's, I don't know.
+
+Sergey | Quokka Stake 
+Thank you.
+
+Citizen Web3 
+I understand that it's not really solving today anything, it's just a matter of, but the idea that we have it and we are trying to build towards that, I guess to me, I don't know, I get excited when I hear things like that. I'm like, yeah, let's build decentralized infrastructure, you know, if we can do it.
+
+Sergey | Quokka Stake
+Yeah, I actually love that you're talking about it that much because it's really cool and somebody is I don't know doing something cool and he's ready to share his experience about that This is actually what i'm doing because uh, one of the things that i'm doing is writing a channel on how to be a validator Basically, not how to be a validator but some aspects of it, you know internals because I think it's really important to share Because you know sharing is caring and I think it's really a really cool part of being a validator
+
+I don't want to be a person like, I don't know, doing everything for myself. I want to share as well for others would benefit from it. It's all, you know, a collaborative effort, I would say.
+
+Citizen Web3 
+I think it was your posting a validator channel with your setup when I contacted you. I'm pretty sure that you made in a closed channel for validators and you were talking about your setup and it was that drew attention. I was like, oh my God, that guy is doing exactly what I think, you know, this home validating and decentralized trying to build the infrastructure. And I really believe that.
+
+Yeah, I really believe that is the way to go. What about, sorry, what are you going to say something? I'm sorry to interrupt, Serge.
+
+Sergey | Quokka Stake 
+That's really cool.
+
+Sergey | Quokka Stake 
+Yeah, I say it's really good that you found me this way.
+
+Citizen Web3 
+Ah, yeah, well, I guess, you know, the world is small and, you know, our goal is to talk to validators, not just from within the Cosmos ecosystem. And in my opinion, validator can be any operator, anyone that operates any hardware that secures or does something for a decentralized or a network that calls itself decentralized, at least.
+
+And yeah, I want to understand what those people have in mind. And this is our goal. And this is actually my next question to you as a validator, what has been your biggest challenge so far? What has been your biggest difficulty that you could share?
+
+Sergey | Quokka Stake 
+My biggest difficulty was to get into Cosmos Active Set. And I have a really cool story about this. I'm pretty sure you know this one, but I can share if you want. Basically, the idea was that I applied for Interchain Foundation delegation program and I got some, but it was really enough to get me into the bottom of the Active Set. And then I always had to, I don't know, buy more tokens to stay active.
+
+And somewhere at the bottom of the active set is pretty much a race. Because if somebody is getting kicked out, they don't want to lose their spot and earn money. They want to earn money, so they buy more to stay active and so on and so on. And it's getting more difficult to get active. So basically, I found a thread on the forum of Cosmos Hubs. And when somebody was suggesting we should increase the active set size.
+
+from 175 to 200. And there were some concerns about replication security launch and I don't know, that it's difficult to predict how the active set would, how it would influence the active set and how it will behave. So instead I suggested to squeeze it not by 25 scores but only five to 180. And I basically launched the proposal on Shane and we get it passed.
+
+So basically I secured myself a place in the Nazi camp. Yeah. Then there was another delegation problem when I got some more money. So now I'm not somewhere at the bottom, but I'm now 160 seconds. I think that's, yeah, that's really cool. And I kind of feel more safe now.
+
+Citizen Web3 
+I'm really, I remember that proposal and I'm one of those people who's always, I have only like, I know that a lot of people that might hear it, especially some developers that might hear it might argue with me here, but for me, I don't care. I think that if a network, the goal of a network, one of the goals is decentralization, that means more validators. If that breaks a network,
+
+It means the network needs to fix it. It doesn't mean it needs to have less validators. So in my opinion, the network should always think how to expand the validator set and not how to break the network. Yeah, let's expand it. If it breaks the network means our network is shit and we need to fix the network and expand it even more. Otherwise, yeah, let's do Binance chain, have three nodes, close the names and yeah, well, you know, sign the transactions ourselves, but
+
+Sergey | Quokka Stake
+Yeah.
+
+Sergey | Quokka Stake 
+Hmph.
+
+Citizen Web3
+then what's the point in having a blockchain, right? So I'm really grateful that you did that proposal. I remember that very well. And I was actually arguing to increase it by 15 or by 25, not by five. I was saying, do more, let's do more, more validators. So yeah.
+
+Sergey | Quokka Stake 
+Yeah, like you know, my idea was to compromise because there were some concerns about how it would influence. And my idea was like that we shouldn't have a big expansion, instead it would be better to, I don't know, increase it by five spots and wait some time and see how it would influence the active set and whether there is a desire for new validators to join. And if yes, then we can submit another proposal and another one and another one, and then gradually tweak it until it's somewhere balanced.
+
+Citizen Web3 
+PFFT
+
+Citizen Web3 
+Absolutely, absolutely. No, that is the correct way to do it. It was more like, yeah, more validators. But um, Sergey, what is the one thing in Europe, because I'm gonna do some pre-story to this question. It's a simple question, but it's an important question in my opinion. A lot of, whenever I talk to validators, what most of the guests, and not just validators, founders, validators,
+
+Sergey | Quokka Stake 
+Mm-hmm.
+
+Citizen Web3 
+VCs blah blah, you know authors most of the people more or less There is an understanding that one of the biggest problems And miscommunications, especially when it comes to blockchain. I guess to everything else in life is education Um, what is in your opinion? The one thing that if you could choose to educate every user and future user What would it be? What would that one thing that you would say? Okay?
+
+If everybody knew this, we would have a better blockchain community or a more, more aware, sorry, not a better as in they are bad now, but more aware, more awake.
+
+Sergey | Quokka Stake
+I have two answers to this question and both of them are good. One is do your own research and the other one is never share your seat face with others.
+
+Citizen Web3 
+This is fantastic, fantastic. I love it. We can live it to death.
+
+Sergey | Quokka Stake 
+I think most of these are really important, yeah.
+
+Sergey | Quokka Stake 
+I really adore the do your own research approach because somebody is asking for an opinion. And it's really important to educate people on how could they educate themselves and how they can find the information and how to make up their own opinion. Because it's really important. We don't want to end up in a state when somebody just, for example, voted for a proposal because somebody said them to.
+
+or somebody promised them an airdrop if they bought a specific way or something. It's really important that people can think of how do they think. So they would research a bit, they would see some information and they form their own opinion and act based on it. And I think it's really important because we don't want others influencing people, we want people to make up their own choices.
+
+Citizen Web3 
+Absolutely, absolutely. I see a lot of when in your opinion, though, is the, you know, you said an interesting point and I want to ask you something like, where is the borderline? Because sometimes, you know, I agree, you know, Dior, always Dior. I say every time somebody invites me to talk somewhere, and they start asking me like, Oh, what do you think I say? Please filter everything I say, because I talk a lot of bullshit. So please, like,
+
+Everything I say is probably a bullshit that should be checked 10 times. So where is that opinion when somebody who wants to do education and for good reasons, you know, a lot of people have good intention and they want to share. Like you said, sharing is caring, but where is the line between being good through trying to be good and suddenly where your education becomes dangerous to the public and.
+
+Yeah, is there such a line where people should stop?
+
+Sergey | Quokka Stake 
+I would say there are two different aspects. One is when you are teaching others how to find the information in some way, how to form their own opinion. And the other one is when you are saying what you are really thinking. So you can always say, I think about, I think this and this about this topic, but you are free to disagree with me and you are free to say whatever you want or find any information that can pick you up.
+
+me wrong for example. I think like you know these are not the same and this should be treated differently a bit like when somebody is saying their own opinion they should really also say that others are free to disagree with them so yeah I would say this is very important.
+
+Citizen Web3 
+I agree, I understand. I agree and I understand what you're saying. I think that, I guess, I just see sometimes a lot of influencers or so-called influencers who have good intentions maybe at heart, but sometimes they... How to put this nicely, you know, they don't Dior. They don't do their own research and they just like, they try to be good, you know, and they like...
+
+Sergey | Quokka Stake 
+I don't know.
+
+Citizen Web3
+Oh, look, we are I don't know, validating I'm gonna make this up right now. And Blue Horse chain. And then because they didn't do their own research, they were like, Oh, Blue Horse chain is the best. And then a year later, everybody's like, yeah, but Blue Horse chain is a scum. And that's what I mean. And it's not about validators at all. It's about influencers. It's about like, you know, there might be sometimes like a dangerous line where like,
+
+Sergey | Quokka Stake 
+Uh huh.
+
+Citizen Web3 
+Like, for example, as somebody who tried to do free education, we stopped. We had our product for four years free education. And then we understood there is no point because if you have values, either you have to delete those values or you have to do paid education. And, you know, we decided to go into building, into development, because that way we can educate more people with the tools we build.
+
+Sergey | Quokka Stake
+Hmm.
+
+Citizen Web3 
+rather than by screaming, I don't know, blue horse chain is the best, please go and buy there. Okay, not buy, but let's say some influencers don't make you buy tokens. But I think you understand what I mean. It's like, that's what I mean. What is the danger between being too public and not public enough?
+
+Sergey | Quokka Stake 
+Yeah.
+
+Sergey | Quokka Stake 
+Yeah, it's like when on the other, how do you say it? Like if you compare two cases when you are, I don't know, teaching somebody how to do things or if you are promoting something.
+
+Citizen Web3 
+Yes, yes, yes. Sorry. Sometimes I'm mute and I forget to unmute when I answer short answers. I apologize.
+
+Sergey | Quokka Stake 
+So yeah.
+
+Yeah, I can forget. I mean, yeah, but my point is if somebody is watching this and is thinking about what to do in crypto, like as a delegator, as a validator or something else, I would really suggest to do your own research as in like this applies to really everything, not only in crypto, but really in the world, because it's really important to understand how do you search for information, how do you make up your opinion or something. You don't want to be just, I don't know.
+
+just read some archipelon and think, oh, this is cool. I am going to do this because I don't know, you want to read some more, some more tropics on that to form an opinion because you don't want to be influenced by others. You want to make up your own opinion. And this is really important in the crypto as well.
+
+Citizen Web3 
+Absolutely guys dear dear. I absolutely agree with Sergey here because Dior is doing your own research is really um Really really important when it's to separate Where is your opinion like Sergey said and the opinion of somebody else? Sergey, uh, let's do a little blitz like the final thing. I promise five questions Um, it's gonna be weird questions when I say blitz. You don't actually have to answer them like that I call it blitz, but it's not really a blitz. It's more of like
+
+five slightly random questions, but they allow the listeners to, I think, connect a lot more to the guest and let's do it. So give me one piece of, sorry, one direction of technology, for example, artificial intelligence, machine learning, blockchain is an example that you are the most interested in today currently. Is it blockchain or is it something else?
+
+Sergey | Quokka Stake 
+Blockchain for sure, I would say. Yeah, but I mean, even in blockchain, there are different aspects of it, but yeah, it's so diverse, I would say. Yeah, blockchain in general, I think it's quite promising.
+
+Citizen Web3 
+Is there any specific within blockchain directions that you would like to mention or no?
+
+Sergey | Quokka Stake
+Uh, yeah. It's I will say I really like something that focuses on security, namely something like me does. This is like really crazy. And I want to see more projects like this.
+
+Citizen Web3 
+So you actually answered the second. My second question was, give me one project, but you already said Nim. And by the way, I'm also very, very much interested in Nim and Namada. I think those projects are very interesting solutions to what's going on. So definitely. Okay, so give me.
+
+Sergey | Quokka Stake 
+Yeah, I mean, that's not the only one, because for example, there's Sentinel, there's Santosh, there's Jekyll, a lot of them, but yeah.
+
+Citizen Web3 
+Okay. Is there anything any more? Is there any other project outside of Cosmos that you would name?
+
+Sergey | Quokka Stake 
+I would actually name one that is cool, but it is in the cosmos, but not in privacy and stuff. This is something I really like, and the project is a bit long, because they are really doing something cool. They are trying to make the music and just going into the tree sphere, and they want to do something crazy there, and this is something I really like.
+
+And I wish there were some projects, some more projects like this, because as you can see, for example, I've named already a few projects that are focused on privacy, then this project is focused on the music industry, and basically a lot of industries that are not into blockchain get the information from using the blockchain in some way.
+
+Citizen Web3 
+What about the other three questions that are a bit more difficult, but let's go. Give me one book or one movie that has had some kind of influence on you in the past year. Doesn't matter what influence. Can it be? Yes, for sure. 100%.
+
+Sergey | Quokka Stake
+Mm-hmm.
+
+Sergey | Quokka Stake
+gonna be a TV series.
+
+Sergey | Quokka Stake 
+One of the most interesting and cool TV series I watched was Ted Lasso. And it is kind of therapeutic. I know how to say it. It's really cool and I know more. So I really loved it and enjoyed it. And I think if you would watch it, you would get what I mean. If you haven't.
+
+Citizen Web3 
+I haven't, I haven't, I've heard about it and I haven't. And this is a good answer because it's a very, usually the answers to these questions always are mixed and this is the first time I hear this answer. So it's a good one. So the.
+
+Sergey | Quokka Stake 
+Yeah, I heard a lot of people recommending it because it was really cool and stuff and I didn't get why I say I need to eat that much and then I watched it and I'm like, okay, so now I'm here suggesting it to watch it to you as well.
+
+Citizen Web3 
+Awesome. But it's good man. This is how it goes right spread the love Sherri is Karen. So the last two are the most obscure questions Sergey give me one motivational thing that gets Sergey out of bed every morning and Keeps going to work keeps running nodes one something motivational that you do that keeps you Every day get well, maybe not every day
+
+Sergey | Quokka Stake 
+Yeah. One.
+
+Mm-hmm.
+
+Citizen Web3
+but 95 times, 95% of the time, get out of bed and do what it is you want to do.
+
+Sergey | Quokka Stake 
+For me, it's not like, you know, some quotes or something. I just go to my dashboard and see how much value it sticks with me. So for now, it's more than 3 million.
+
+like, okay, I'm doing something good, so people are trusting me with their tokens and stuff like this. So this is what gets me to be more motivated. But really, it's really cool sometimes that when you feel appreciated for what you're doing, for me, I'm not that, I would say, immediate person. I'm mostly striving in technical contributions, for example, rising infrastructure and stuff like this. So when this is something that is getting appreciated,
+
+That is really cool. For example, again, I'm sensing here, which is mostly active, I think. There are a lot of people saying that the infrastructure and running is the best and they are using it a lot. And I'm like, oh, that's sweet. So yeah, this is something that gets me going, I would say, and it gets me more motivated. But yeah, and of course, do your own research, I would say. And do something that you really enjoy doing, about doing, I would say.
+
+Citizen Web3
+Last one. I, now go on, go on, go on, please.
+
+Sergey | Quokka Stake
+For me, crypto is one of these.
+
+Citizen Web3 
+it's a cool motivational thing to do what you enjoy to do. I think it's a perfectly legitimate answer to the question I was asking. Last one, I promise, and this one is the weirdest one. People say that this one, this is, I don't think so, but let's go. So dead or alive, real or not real, it could be a GitHub.
+
+Sergey | Quokka Stake 
+Go on.
+
+Citizen Web3 
+developer, it could be an author, it could be a cartoon character, it could be somebody from your family. I don't care. Give me one person that inspires or has in the past inspired you to do what at least yeah, to live to exist to be
+
+Sergey | Quokka Stake 
+within like the last year or something.
+
+Citizen Web3 
+No, in your life ever doesn't matter. It could be Mickey Mouse. It could be It could be, you know, the developer of Ethereum and I don't mean Vitalik Buterin, but like whatever could be anybody in the world could be your family. I don't know whatever
+
+Sergey | Quokka Stake
+around.
+
+Sergey | Quokka Stake 
+It was basically like one guy I was watching on YouTube, he was doing some travel videos and he was traveling like a hobo basically because one of his videos when he traveled to Moscow by hitchhiking without any money and was meeting the new year here and it was really cool because like you know, like you are basically like a hobo, you don't have money but you are.
+
+You do have so much energy and are willing to share it with others and this is cool. Really. And this guy really motivated me a lot because you get so much energy just for watching this. This guy is called Bradiaga Fishai. He's a channel on YouTube. So yeah, I really love this guy and he is really cool and passionate and he really motivated me at some point and I think always.
+
+Citizen Web3 
+I like it guys as always all the links and all the things that Sergei mentioned including the YouTube channel We will find it. It will be on the description of the episode when it comes out Other than that Sergei, please don't switch off just yet. We're just gonna say goodbye and stop the recording so thank you everybody for tuning in and Thank you, Sergei for your time and answering my weird questions. Thank you
+
+Sergey | Quokka Stake 
+Thank you for hosting. It was really nice being here. And I wish you really something really cool with your podcast because you are doing a great job here.
+
+Citizen Web3 
+Thank you. 
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

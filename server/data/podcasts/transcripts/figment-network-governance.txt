@@ -1,0 +1,274 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/figment-network-governance
+
+Episode name:
+Governance and the Cosmos ecosystem with Gavin Birch
+
+Citizen Web3: 
+Hey Cosmonauts, welcome to the Citizen Cosmos podcast. My name is Serge and I take care of the ecosystem for cyber, which is one of the projects built on Cosmos, along with my co-host Anna. 
+
+Throughout the podcast, along with our guests, we will discuss the most vital parts of the Cosmos ecosystem, how they function under the hood. In the first episodes, we will talk to Gavin from Fingment Networks about governance, personal trust and related decentralized environments. 
+
+Welcome Gavin to our first episode of the podcast. Gavin is most known in the Cosmos community for all the big amount of the work he does, including the recent creation of the governance working group, creating loads of help of guides, and obviously the trusted validator as well. So have I missed anything, Gavin? 
+
+Gavin Birch: 
+I think that's good. There's literally other things too. I think we have Staking Hub, a channel, like a telegram channel that we do, like AMAs. I mean, it's meant for discussion with people who are kind of professionals or very experienced with staking. To talk about staking environment, but a lot of the conversations that mostly come from the AMAs that we do. So a lot of new networks that are launching will host AMAs to kind of get an early look at what staking will be like on their network. 
+
+Citizen Web3: 
+Right, sounds good. Let's talk about probably what I presume most listeners would love to listen to, and that's the governance working group. How would you describe it yourself? I know you have already done it, and it's probably something everybody keeps asking you, but I will ask you to do it one more time and maybe mention how you think it's helpful to all sorts of users in Cosmos. 
+
+Gavin Birch: 
+Sure, yeah. I don't think it's very I'll start by saying, I don't think it's very useful to users in Cosmos yet. It's still like a forming thing. I started out with this idea of having a group that would make governance work easier, and I didn't really know what that looked like, and the idea would just be to kind of kickstart it and then have kind of other people start to to keep it going. 
+
+But now I'm seeing it in a less formal way. I think it'll just be a group of people who pay attention to governance and do some more or less focused on governance work. So most of the activity takes place in calls. We're doing a mid-month call and a end of month call, and largely the governance working group is focused on education and providing feedback for people who wish to make governance proposals. That ties into some of the other work that I did for the proposal that funded the governance working group. So I created some best practices and documentation for community spend proposals. Those are proposals that are specifically designed to spend money from like a common pool of resources that accumulate on the Cosmos Hub. And then also I did the same thing for parameter change proposals. So those are specifically for changing how the Cosmos Hub functions without having to halt the software. You're just simply using a governance proposal. So with those assets and hopefully other assets, the idea is that when people want to make a proposal to change something or to secure funding from the Cosmos Hub, we can use those as a guide to provide feedback to ensure that people have made high quality proposals so that they don't risk their atoms making a proposal that's maybe incomplete or controversial. 
+
+At least controversial because of an absence of information or because of poor information. And then the idea is also so that people can, because it's hard to make these governance proposals at least high quality ones. So the idea is to lower that barrier so that more people are able to access the resources of the community pool or to make changes that benefit the Cosmos Hub as a whole. 
+
+Citizen Web3: 
+You mentioned a couple of times that it's hard to make governance proposals. What would you say is the most difficult part for you as a user or as a validator? I don't know, just anything that comes to your mind in a governance proposal or in a proposal in general. 
+
+Gavin Birch: 
+So for me, the hardest thing was detailing a proposal in a way that answered any prospective questions that might come from the broader community in advance so that once it was launched, people wouldn't say, well, what about this or what about that? To make sure that I had covered everything, to make sure that all the information was there. Because once you launch a proposal, that's it. It's on chain and once it will go to the voting period, it's just a yes or no question. 
+
+Do we want this or not? And so you can't say, oh, I made a mistake. Like I need to update this proposal. 
+
+I realized something because of a question somebody asked. A lot of times these questions won't come up until the proposal is being voted on. So it's hard to maybe necessarily get that kind of engagement before the proposal goes up. So that leads me to my second challenge, which is engagement before a proposal goes up. For me, I think that was a lot easier because I have relationships with a lot of the people, like a lot of the stakeholders in the hub. 
+
+So people know who I am, so they're more inclined to maybe engage with me as well. So I imagine that to be the biggest problem, probably for most people. So that's probably a problem I'd like to tackle next. How can people get attention of the biggest stakeholders so that they can make, so that their proposals can be more likely to be successful, like if they're high quality proposals, and if they will benefit the hub. But then also that introduces the problem for the stakeholders, for people maybe with a lot of delegations or people with a lot of tokens, is that they might have a lot of proposals coming their way, like people asking off-chain, hey, can you pay attention to this? 
+
+Hey, can you pay attention to that? And eventually, you know, that they just might not want to be paying attention. Figuring out maybe a process for bridging that connection so that people can get the attention they deserve for their proposals. And so that's the other kind of another important part of the governance working group, is that having dedicated attention to people's proposals so that they, like almost a pre-processing. big stakeholders that, hey, this proposal's been reviewed and we think it's complete. So we think it's worthy of your attention now, because, you know, it's not gonna be just like a patched together proposal. 
+
+Like it's gone through a process. There's got like best practices, and people have, it made lots of considerations and people have provided lots of feedback and stuff. So you should be able to get a quick understanding of what this proposal intends and whether or not you want to support it. 
+
+Anna: 
+So it looks like personal communication is a significant part of what you're doing, actually. 
+
+Gavin Birch: 
+Yeah, I think that even though with blockchain technology, and decentralized technologies, the goal is trust minimalization and like automating things, I I still see governance processes as very human and intensely political. 
+
+Citizen Web3: 
+So that actually brings me to kind of a maybe weird question, but more of a personal weird question. Every time I see someone doing something, doesn't matter what it is, and I see that the person really enjoys doing it. I always try to understand or ask the person, what are his personal reasons? Like what is the insight that drove you to do that? I mean, let alone everything you explained about, you know, getting the proposals done right, getting everyone to see structure and communication. What drives you personally to do that and not something else? 
+
+Gavin Birch: 
+Yeah, absolutely. It's a great question. So there are like many layers to that, I think. Do you want them all? At the probably least connected to blockchain, like layer of reasons, my motivation is a personal understanding of what it means to coordinate in a way that effectively considers all of the voices of the stakeholders involved. Like I want to be better at that because I think it'll be important for my family. Everything from a family to a community to, I guess to a country, but I don't, I guess I'm not as interested on that kind of scale. I also think it's valuable, off-chain, because I think that these are really valuable experiments to understand how to coordinate and govern in a way that there's value at risk, because a lot of, because they're real assets with real value, but most of the people that have, like I'm gonna speculate that most people are speculating that they'll be valuable or useful in the future. The people that stand to lose from governance experimentation, I think are the best positioned to lose, but I don't think that they want to lose. 
+
+So I think they'll behave in a way that reflects a lot of the behaviors that we might see in a more human space. So it means we can run experiments that maybe will mirror the broader human governance space, but if we ran similar experiments in like more traditional way, the most vulnerable people would be at risk. I think that we can, it's a great opportunity to experiment without putting vulnerable people at risk, and I think that we can take the things that we learn and we can apply them to the way that we govern outside of blockchain. 
+
+Citizen Web3: 
+Yeah, that totally makes sense, because when I hear about governance and about blockchain at first, it's hard to connect often, and it's great to see that this is what drives you, because to me personally, it makes a lot of sense, and it kind of inputs trust into the person who's doing it, because I know that he's doing it for the same reasons that I feel that it should be done. If you know what I mean, if I'm making any sense here. 
+
+Gavin Birch: 
+Yeah, absolutely. 
+
+Citizen Web3: 
+Not sure if I wanted to ask that, but I will, semi-controversial question, but I mean, obviously, we have to ask something like that, right? 
+
+Otherwise, it wouldn't be as interesting. When you did the proposal, there was some feedback that right now, it's not the way, talking about the governance working group here, obviously, right now, it's not the way that the community funds should be spent. Now, how did that make you feel? Did you feel that this is something like personally against you, or did you feel that maybe that feedback had some sense? I mean, generally, I think you get the question, right? 
+
+Gavin Birch: 
+Okay, so this is interesting. So the way that I thought and the way that I felt were two different things. The way that I feel is it feel like it's a personal attack against me, which I found fascinating, because I know it's not. I think that your first, your initial reaction is just kind of automatic, but I think that the way that you respond to that is really more who you are. I like to remind myself that, because I don't like, the thinking part of me doesn't like the way that I automatically respond to that. 
+
+It feels threatening, it's scary, but I know that it's not personal. I know that people have good intentions with the things that they've written and the things that they're paying attention to. So I appreciate that sort of criticism, and I'm always looking for that because I think it's an opportunity to learn. Like, ideally, it's an opportunity for me to refine what I'm doing and to kind of counter-evidence to what I'm sure is right. 
+
+So, like, I come from a science background, it's kind of become a second nature for me to, when I'm certain about something, to start looking for counter-evidence. Having critical feedback is really important, and I found some of the critical feedback important, and some of it I found to be maybe missing what it was that I was doing. Like, it almost seemed like, I think I was like very methodical with the way that I laid things out, but some of the critical feedback I got, I think, missed a lot of the points, so I tried to address where I could, but one of the challenges that I ran into is that with such public scrutiny, it's hard to answer everybody, and it's hard to read everything they've written. 
+
+So it doesn't scale. So, like, trying to respond to feedback is very challenging when there's a lot of it, because I'm also responding to different kinds of feedback in different ways, so some of it's very public, and some of it is very private, and eventually it makes it really hard for me to do, to actually do the work, because like my attention and time is wrapped up in that. I try to read through some things I have to read through really quickly, and some things I just can't respond to, and one of the things that I didn't respond to is, like, broad criticism around, like, some people had suggested maybe only the people who need it most should get funding from the community pools. So I'm affiliated with a VC-backed, validator operator. We have funding, and others are, like, running on, like, really thin margins, and so maybe we shouldn't be getting access to any of the funds there, because we are much less in need of funding, and so, you know, I respect that, people have different values, and they think that it should be used for different things, and I don't know how it should be used. 
+
+I don't have a strong position in terms of, like, who's deserving and not deserving. I guess I haven't formed a strong position on that, but, like, if I had to guess how the Cosmos Hub wants funds to be used, I would guess that they would want common funds to be used to provide valuable outputs for the hub. Just, like, thinking about where this fund, because this funding isn't just specifically minted for, like, into the community pool. It's being taxed, so it's taken off of any staking rewards. So the source of the funding is 2% of any of the staking rewards, whether that's block rewards, like inflationary block rewards, or whether those are transaction fees. And for the most part, it's just inflationary block rewards at the moment, but in the code, it's called a tax, so, and the way that it behaves. 
+
+I'd say primarily because of the transaction fees aspect to it, but anyway, that's another story. I think it's safe to call it a tax. If we're taxing, I think that those are the ones that are represented with those funds. How it should be used will be determined by how those votes are carried out, which makes sense because voting is proportional to the tokens that are being taxed, or the tokens that are staked so that are being taxed. 
+
+One comes before the other, so I think the voting, we maybe, people can influence how people vote by saying, oh, this is how we should use it by trying to establish norms or whatever, but I think ultimately, people will vote, and then, based on how they vote, that's how the funds should be used. I think it will see in retrospect. I don't know, like, that's really long and convoluted answer. 
+
+I think the Cosmos Hub should get something they value from the funds that have been taxed from their rewards, and they'll vote that way, and then we'll learn about what the Cosmos Hub values. 
+
+Citizen Web3:
+Makes sense, I mean, it's a good answer, I think. That's structured, but I like that because I think it's getting what you feel. That's what I wanted really to hear. I wanted to hear your thoughts rather than structure. Answer where you say one, two, three, and it's much more interesting to me, anyways, at least as somebody who was on both sides to hear the back of what you're thinking, and it makes more sense to me, at least now. One thing you mentioned, and this is just curiosity, you said you have a scientific background, what's your background? This is interesting to hear. 
+
+Gavin Birch: 
+Yeah, I have, like, three quarters of a Bachelor of Science in psych neuroscience and behavior. 
+
+Citizen Web3: 
+Yeah, but I was just saying three quarters sounds good. 
+
+Gavin Birch: 
+Yeah, I took a year off, and then that turned into two, and probably now we're moving to three years off, so. I'm taking a course right now, actually, just one course. At some point, I'll probably have to go back. 
+
+Anna: 
+So, and why you personally decided to work with such kind of things? I mean, to work with a lot of people, it's kind of high pressure, and obviously you need to deal with a lot amount of information. 
+
+Gavin Birch: 
+Yeah, I don't know, like, those weren't... I kind of knew that those would be some of the challenges. Like, just at the periphery, I didn't want to be overwhelmed by all the potential of the challenges, so I kind of thought, well, I'll just take them as they come, because they thought that it's an important work, and I didn't see anybody else doing it, so I just thought, this is something I'm interested in, and it seems like it's important, because the cosmos hub was essentially introduced with just this rudimentary functionality, there was no user manual for... other than how to send a transaction or whatever to make a governance proposal. But other than that, there wasn't really any guidance from the creators, so I thought, well, there's an opportunity here to establish good practices early on and to legitimize that functionality, because the upgrades for the protocol before didn't really use... they were just kind of handed to it from developers at All In Bits. We don't want this to be All In Bits network. We want it to be the centralized network, and this is part of it, so... while it'll be important to use the governance process to direct how those upgrades are done, and then that's part of legitimizing the governance process as well, there's a lot of work to be done here, because there's no layer on it, there's just a function, there's no norms, nothing established. 
+
+So I thought, it would be good to do that early. The reason is because I think that this could be a really big weak point in the network, so everybody's done all this work to make this cryptographically secure, and incentive mechanisms, and all that to make these networks predictable, and we've seen that work with Ethereum and Bitcoin, for the most part. I see this as a giant whole security hole in how the network operates, so anyway, I thought... I think on-chain governance has the potential to be a massive failure and disaster, and so I'm hoping to mitigate that. That's another driving force for engaging in this. 
+
+Anna: 
+Looks like another challenge. 
+
+Gavin Birch:
+Yeah, definitely. 
+
+Citizen Web3: 
+You said the Cosmos hub was introduced with only a minor hardware center transaction. You mentioned Ether, you mentioned Bitcoin. And that was a couple of questions I had. I'll try to put them together. One thing, is how did you get into Cosmos? But straight away I will add something to that because we're friends, we follow each other on Twitter. And I say your Twitter handle says ether Gavin. So I was just wondering how did it all get together? Did you get it to ether first and then into, I mean tell your crypto story. 
+
+Gavin Birch: 
+I think it was in first year university, maybe 2015. Maybe it was 2014. Yeah, I think it might have been 2014. I came across videos on YouTube somehow. I have no idea how. But I came across videos of Vitalik and Steven Tull talking about Ethereum. And it was really fascinating and neat and it was something I couldn't get my head around. So I got in touch with anyone I knew that had computer science background and was like, what do you think about this? 
+
+And they were like, I have no idea what this is. And so it was just these kind of quick little overviews of what Ethereum proposes to do. But it was really a different paradigm. Like I didn't really understand how to get a grasp on it. So I watched these videos over and over again trying to understand what the hell they were talking about. First I thought it was because I didn't have a technical background, but then I realized it was because it was like a ton of other worldly things. Something that just really didn't exist yet in any other kind of form. 
+
+I was really fascinated by it and I couldn't forget it. And anyway, they did a crowd sale and I was like, I don't want to have to get like Bitcoin to do it because it's such a pain in the ass. So I just waited and then eventually I like bought a bunch from the market. And so anyway, I was just mostly a lurker. 
+
+I didn't really contribute in any sort of way. I just kind of followed excitedly like what's gonna happen. Like watching the technology develop, you know, and then when the prices started going crazy, it was kind of surprising how like when Ether was like a dollar 50 and now, and then all of a sudden it's like $100 or something, right? At some point it was $1,000. 
+
+So seeing that was kind of surreal. I tried to avoid a lot of the ICOs and stuff, but then eventually I got sucked in because I was like, wow, it's like free more Ether because I can like buy them and then just sell it back and get more Ether. But like that was my main, like I really was into the base layer protocol. Like that was what I was most excited about. And some of the apps that were being built and that sort of thing, I was pretty excited about. 
+
+So that was thrilling for me for a number of years. And then I put some Ether into the Cosmos fundraiser. Yeah, that took forever for Cosmos to launch. And I started to get interested in what Cosmos was doing, particularly because I went to EdCon 2017, I think it was. 
+
+Maybe it was 2018, I think it was 2018. Anyway, I was like met up with like Sunny and Adrian and Zaki. And at that time I had like no involvement in Cosmos at all. And like I kind of knew who they were a bit, just based on a little bit of the work. I started like kind of getting interested in the work they were doing. And then I wanted to know like how Cosmos worked. 
+
+We chatted a bit about that. And it was a little tough for me to get my head around. I thought, oh, and I was interested in proof of stake because I wanted to stake. But then I was like, ah, there's no way I can stake. Only the top hundred can stake. 
+
+There's no way my pittance of what I put into that crowd sale will put me in a position to validate. So I kind of wrote that off. I didn't even really consider it. Once Cosmos launched, then I started to kind of get interested in like how it worked. I wrote an article about it. It was one of the first articles I wrote. That's when Figment Networks found me. 
+
+I wrote this article about supply side staking because I wanted to learn about what these staking services were doing. And then I tweeted it out and I tagged some relevant people and then they retweeted it. And then Figment Networks picked it up. And within, in the same day, they were asking to hire me. 
+
+I was surprised by that. I wasn't really looking for a job. So I just, I didn't say no, but I said, like, maybe I could do a little bit of work for you or something. 
+
+I was planning to go back to school. So anyway, I did some work for them for maybe like two weeks. I really liked working with them. 
+
+Like it was a really good experience in ways that I hadn't had before. You know, and I've been young family. Like we have an 11 month old boy. And at that time we were pregnant. And anyway, I really liked that they're a family friendly company. A lot of everybody has, well, almost everybody has like young family. 
+
+And Andy, one of the Andrew, we had a scheduled call and he missed the call because he had slept like he'd fallen asleep with his kid. Apparently that's not terribly. That wasn't terribly uncommon for him then. And when that happened, I thought, well, these guys are for real. You know, like they talked about being family friendly, but like combined with some of the things that they had told me, I was really made me believe that they that they were. So anyway, I loved working the work that I had started with them. And then I also loved that they were so flexible with family stuff. 
+
+And they understood it and valued it. I asked for a full time. I said, yeah, is that full time position still available? 
+
+And they're like, yeah, of course. So it's been in May, it'll be a year that I've been working full time with Figment Networks. And I've spent a lot of that time working in Cosmo. I'm excited to keep going. I really like it. 
+
+Citizen Web3: 
+You mentioned Figment Networks a few times and I kind of wanted to live it to the end. I mean, it's the best place to ask about it. While talking about what Figment Network do, and maybe you should mention why they run a validator if you fancy. And what's your role in Figment Network as well? 
+
+Gavin Birch: 
+It's really more. I was writing content. First, I was like kind of understanding the networks that we support and may support at all different levels and understanding what stakeholders want and bridging the connection. I was kind of like the eyes in the ears because like a lot of people were like in Figment Networks were focused on they had a lot of things to pay attention to. 
+
+And it's hard to keep up with like a shifting with the shifting space and the community. And so I was kind of the eyes in the ears for the community. And then translating that into like useful stuff. I guess synthesizing that information into palatable content. And that evolved quite a bit. I mean, I kind of know the Figment story, but I'll probably screw it up. So I just don't want to represent it wrong. 
+
+Citizen Web3: 
+OK, well, why does Figment trying to Cosmos validate? Let's go with the easy way. 
+
+Gavin Birch: 
+Our business is primarily staking. So we provide services for cross networks. It's not just Cosmos. But Cosmos was one of the first, you know, production ready proof of stake networks. 
+
+I don't know this well enough probably to represent it. Why initially we started with Cosmos because I wasn't there. It was probably six months or even more. 
+
+That work joining Cosmos, the Cosmos Hub, was probably six months prior to me being hired. But I know that the reason that we're there is a belief of end user adoption. Figment supports networks that they basically believe will have end user adoption and try to drive that in any way that we can, which is like software development, infrastructure and many other things. I don't know the company line. I don't know the like all of the things that we sell and all that kind of stuff. So like I'm the worst person to represent Figment networks when it comes to that sort of thing. A lot of times I forget that we're running a business. I just get really involved in the in all the other stuff. 
+
+Citizen Web3: 
+One thing I do want to ask is maybe your personal thoughts. And I'll try to structure the question. When I go on a figment website, I see a huge amount of networks. I mean, usually validators don't do even like half of that. And my question is not the figment story behind it. But what are your personal thoughts on a validator picking a chain that he should? 
+
+Gavin Birch: 
+I don't have strong thoughts there. I guess it depends on what your goals are as a validator. I think for startups that are looking to make a business out of being a validator. I almost question whether or not being a validator itself is business worthy. 
+
+I wonder if it's a way to be a pillar of support in a community that opens up new opportunities to differentiate, maybe to establish yourself as a validator, but then use that position to be able to provide other kinds of value to the network. And there are different approaches to that. I think there's the promiscuous approach, which is to kind of get in bed with all potential chains. And then from there decide which ones are the most valuable to really focus on and invest your efforts in. And then there's the more selective approach, which is better for startups or organizations that have fewer resources and maybe even better for some that do have more resources as well. 
+
+That approach allows you to really become more of an expert on the ones that you're taking an earlier position on being an expert. Your resources are less divided. We seem to be a little bit more promiscuous because of the number of networks we support. That there's value there as well because it allows us to compare across networks. It allows us to become experts in staking more generally. It challenges us to be experts more broadly and to learn about these networks in a very practical way rather than just like reading docs and like deciding whether or not we want to support networks. Even though we support many networks, there are many networks we don't support. 
+
+So we're not, they were fully promiscuous. We don't just like jump on any network. The networks that we're on, we have a reasonable degree of confidence that there's a chance of success for end user adoption. So these are the networks that we support. 
+
+And my personal thoughts on that is that it's great. These are great learning opportunities. Every time there's a new network that we support, I get to learn more about proof of stake and I get to learn, I get to contrast across different networks. 
+
+And it kind of reveals things that may have just been assumed that I might not have been able to identify if somebody else hadn't provided that contrast with a different design. We do these AMAs, especially the networks that we are supporting or plan to support. We usually host an AMA and that gives me the opportunity to really try to poke at the design choices. And that helps me to learn, but it also maybe helps the designers to consider things that they may not have considered. And then everybody learns together rather than just doing this as an internal process. You can see in our AMAs a way to see a little bit about what I think about all of these networks and what it is that we value about them. Right. 
+
+Citizen Web3: 
+Right. Makes sense. You mentioned networks, a lot of networks and obviously Cosmos being the blockchain that's supposed to let me correct myself that connects the blockchains together. Obviously the IPC demo is up and running a couple of days and we've seen a few implementations. 
+
+I mean, we did one from our team. I've seen Iris network release something and gone back to governance as somebody who is representing a path from just a Cosmos user or a project that is tandermint in base, the Cosmos base, whichever way you want to put it. A lot of the times I'm trying to think of interchain governance. And I would love to hear you thoughts on how do you see interchain governance? Or maybe now it's not the time to think about it. 
+
+Gavin Birch: 
+I haven't thought about it at all. It's definitely a curiosity of mine, but I haven't given it enough consideration to conceptualize what that may even look like. Do you have any thoughts about that? I don't know that you're asking the questions, but like, you know, now I'm curious. 
+
+Citizen Web3: 
+Well, yes, I think that I don't want to go into too much into my own thoughts because otherwise they'll be like, take the podcast the other way. But generally, I think that it is important. I think that even though we are still not even halfway with the governance on Cosmos Hub, and we're still figuring out like best practices with you helping a lot on that. We're still working with the governance group, trying to understand how to make the proposals and so on and so on. 
+
+I think it may be a good idea to for the other networks to see where Cosmos Hub goes wrong or where it actually goes right and try to implement those things and then understand how to scale it onto the idea of interchain governance. Generally, if we look at how projects in blockchain evolve, especially projects that run on other protocols, what we see is that first we have, for example, let's take Ethereum and at the beginning, everybody had Ether. And then when other projects started on Ether, at first, the users who had Ether definitely had a share in those projects. And then as some of those projects got big, they started to have users who only had a share in those projects, but didn't have a share in Ether, if that makes any sense. And I think that Cosmos will probably somewhere be the same, repeat the story or even have the story on a bigger scale because we have sovereign blockchains. Now, right now, probably each person who owns a share in a project that is Cosmos based probably owns Atom, but at some point we will get to the stage where people who own those shares don't necessarily own Atom. And this will be the place where we have to think, OK, so how do we put all those ideas together? 
+
+How do we make the big governance, the big wheels turn? I think I agree with you. Maybe it's not the time to think about it, but I just wanted to hear what your thoughts are. 
+
+Gavin Birch: 
+Yeah, thank you. So it's actually just something I hadn't thought, like I haven't considered. I've heard people talk about interchain governance, but like I don't know. This is the most I've heard about it. I'm getting the impression that maybe interchain governance back to see if I've got this right. Is the idea that we've got Cosmos Hub ideally like Cosmos Hub strives to be this like the most credible hub in an ecosystem of independent blockchains. So the Cosmos Hub will kind of like the point in which values exchanged and information like data is exchanged between these different zones. 
+
+If the Cosmos Hub becomes dominant in that way, any of the participating zones, like let's say I've got like Kava tokens and I'm using the Kava blockchain and that's relying on the Cosmos Hub to get assets from Terra, for example, for CDPs. They're for Kava's product. They need assets from other chains. And so now Kava depends on Cosmos Hub for that. They're a stakeholder. How are they represented by the Cosmos Hub if Kava users don't have atoms? Is that kind of what the interchain governance problem would be here? 
+
+Citizen Web3: 
+Yeah, well, I think that's part of it. And I think this is a good example where we see that there are so many questions and the answers are not even there yet. 
+
+I'll give you an example in cyber. We tried and this is not really interchain governance, but it's kind of going that way. What we tried to do because we started up a small validator on Cosmos, obviously. And then what we wanted to do is we wanted to get people from our own community to vote on the proposals as well. So the way we try to do it is we try to kind of an off chain. We say to our community, how do you guys think we should vote on that proposal? 
+
+So maybe you don't have atom tokens, but technically you are in the Tendermint ecosystem because you're on cyber. So what do you guys think we should vote? I mean, we didn't really have a lot of feedback, which is a shame. Well, it was test, you know, to see how that would work. This is what I mean. I don't know if it makes sense. 
+
+Gavin Birch: 
+I think so in cyber community, we were like looking for feedback about how cyber as whole entity positions themselves in governance decisions on Cosmos. 
+
+Citizen Web3: 
+Yeah, exactly. Technically, they are still part of and not just them, obviously. That's how I talk about cyber here. I mean, every single project out there, it's Kava, Terra, Iris, Sentinel, whatever. Desmos, they are all part of this big ecosystem. And the more we grow, the more projects we see, right? I mean, if we go in Cosmonauts as well, we see what like hundreds of something projects. 
+
+Gavin Birch: 
+It occurred to me that it's in the Cosmos hub's interest to consider, even if, let's say, cyber had no atoms and no formal vote in Cosmos hub decisions. Cosmos atom holders should care what what a zone like cyber thinks if they care about having cyber use the Cosmos hub. Because, you know, cyber could pick a different hub as a way to communicate with other zones. 
+
+Citizen Web3:
+Right, right 
+
+Gavin Birch: 
+So I imagine that there will be like competition amongst hubs. There could be a way to formalize that or there could be a process to consider what zones that use the Cosmos hub think or would tend to use the Cosmos hub, think about decisions being made on the Cosmos hub. To me, it could be interchange governance, even if it's not algorithmic or on-chain. 
+
+Citizen Web3: 
+You mentioned centralization and the avoidance of centralization numerous times. I'm going to mention coronavirus here. I'll say why. During and after World War One or World War Two, there was a lot of government interference into people's privacy and into businesses. And then it kind of, well, it didn't go away. It was supposed to go away, but it stayed. And the reason I'm mentioning this is how do you see the avoidance of the governance working group and the governance in general of going somewhere, shouldn't go in terms of centralization and trying to keep it as decentralized as possible if that again makes any sense at all. 
+
+Gavin Birch: 
+It's a good question. You've got your initial example, which is government powers post World War Two. Governments like, we need these powers because there's this black swan event. We all need to kind of unify and you need to let us make quick decisions and execute a lot of power that ordinarily there will be checks and balances for. And we need to kind of remove those to make these decisions. 
+
+Right. So that's kind of initially, that's what's going on with this like World War Two event. And then we can see parallels. We see where all of a sudden governments need to make rapid decisions with a lot of power that impact on people heavily, but people are more likely to, to legitimize bypassing checks and balances because this is an extraordinary situation. It's a slippery slope because now these might be norms. 
+
+We've set a precedent. People are used to it or people, these ways of doing things are established and they work easier to do because it's a pain in the ass to move through checks and balances and to listen to different voices when you're just trying to get something done. The same thing can manifest in some governance working group because this might be part of the reason that this sort of thing exists. 
+
+Well, one of the main reasons this sort of thing exists is to make governance easier because it's hard to do. Also, that means we could default. This could set a social norm. Governance working group could become a powerful organization. It could be recognized as the only way to do governance. You don't get governance proposals passed unless you go through the governance working group. So it becomes almost like a power broker situation. Right now, I don't see any risk of that happening mostly because it's mostly just me still. Like there are lots of people joining calls and there are lots of people interested. 
+
+There's not a lot of actions taking place. Like Zaki wants to, Zaki wants to form a legal entity. He wants to do an app. He has an actionable thing that he's working on that could be related to the governance working group. 
+
+It's largely his endeavor. Right now, there's like no risk of that, I think. But like it's definitely, but in order to mitigate that risk, I think it's good to be aware of those power dynamics before kind of establishing these norms and taking be care to, if we recognize that these sorts of power dynamics are forming to work to dismantle them in a responsible way. I shouldn't be the only one who's able to pass the governance proposal. I shouldn't be the only one who's able to help somebody else pass the governance proposal because I have established relationships with a large token holders who, let's say they don't want to be paying attention all the time. They just default to like, does Gavin think this is a good idea? 
+
+Yes or no. And then somebody's like, well, I need to get this governance proposal passed. Like I obviously need to go through Gavin so he can tell big stakeholders. Yeah, yeah, yeah, this is fine. You should vote for it. I am aware that the position that I'm in could lead to me being a power broker. But people could pay me to try to get their proposals passed. And that's what, so this is something these are these are things that I'm aware of that I'm working to dismantle or will be like mindful to the dismantle. But I'm probably a bigger risk in that sense than the governance working group. What I'm trying to do with the governance working group is I'm trying to decentralize the stuff that I've learned and the power that I've kind of accrued. 
+
+I'm trying to disperse that to like other people and hopefully a diverse group of people who are and to build capacity for those people to be able to do governance work effectively. Does that make sense? 
+
+Anna: 
+Yeah, sure. It makes sense. And moreover, you are very reflexive about this thing. Yeah, I mean about being in point of power and you realize that you could push some decision and people to make this decision. It's really cool that you can understand such type of things. 
+
+Gavin Birch: 
+Yeah, I think it's really important until these networks are like worth governing, until there's something that makes them worth governing. People won't care. So I think that the first step is to like make them useful, make the network useful and to be pragmatic and simple, take a simplistic approach. And then make sure that that approach provides room for growth for new stakeholders as the network becomes more useful. We'll see new stakeholders with different preferences and to be able to like make room for that growth so that whatever norms we establish, they're able to either change or develop with the network as the network develops. Hopefully the stuff that I'm doing now will also be useful, like let's say in two years or three years when there's all kinds of new stakeholders, it cosmos fulfills its mission. 
+
+Citizen Web3: 
+For a write up, I just want to say if they do start paying you, I won't tell anyone if you start sharing the money. So that's OK. I'm kidding. I'm kidding, obviously. It's been really great talking to you and it's been really great hearing what's under the hood of the ideas that you have. And I think it'd be really awesome if more people hear this, the way that what I share and I believe that I know a lot of other people who share what you've been saying. 
+
+But sometimes it's not enough to, you know, you want to look under the hood and you don't have the possibility to do it. And this was the whole idea of this conversation. And I'm hoping that for future podcasts, we will have exactly the same thing with people where they are able to share what they really feel of why they do something as rather what they're doing. So yeah, thank you for that. 
+
+Gavin Birch: 
+Yeah, I appreciate that. There's in a trust minimalized environment, it seems to me like trust has never been more important. 
+
+Citizen Web3: 
+Especially with blockchains, right? 
+
+Gavin Birch: 
+Yeah, I think it's probably so I think that this is a great theme. Like if this is, you know, if this is something you're considering as a theme interviews for your podcast, I think it's a really great approach. 
+
+Citizen Web3: 
+I hope so. Thanks again. 
+
+Anna: 
+Thank you. It was really, really nice to speak to you. 
+
+Citizen Web3: OK, thanks to all the listeners. So we'll see you next time on next episode. Thanks. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

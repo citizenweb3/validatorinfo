@@ -1,0 +1,388 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/youssefamrani
+
+Episode name:
+Social Capital, Consenus and Rewards with Youssef Amrani
+
+Citizen Web3
+Hey everybody, welcome to a new episode of Citizen Cosmos. I have with me today, Yousef Amrani. Yousef is an independent Cosmos contributor. He actually is busy on several fronts. I hope we will touch on at least several of those if we have time, of course, today.
+
+Citizen Web3 
+Joseph, first of all, the welcome to the show. Please, if you can, introduce yourself and what you are busy, what you are up to these days.
+
+youssef_amrani 
+Well, first, thank you Serge for having me. It is an honor. to give a bit of context about my background and myself. So my name is Youssef Amrani. I've been in crypto since 2017 and more specifically Cosmos starting 2020. So right now I'm a Cosmos Hub contributor.
+
+I've been involved in one of the co-authors of the Atom 2.0 whitepaper. And then I also advise Agoric with the Interprotocol that is building the IST stablecoin, which is actually launching this week. So very excited about this.
+
+Citizen Web3 
+Wow, that is already a big speck of things I can ask about. But wait, let's take it slowly. one thing I'm going to go the way I would like to go is that, well, I think everybody who is in the Cosmos ecosystem, recently in the Twitter Cosmos ecosystem, more and more of your comments personally, we've noticed them. And I think you have a lot more presence than there was, well...
+
+before that. What would you attribute it to? Is that because of your involvement in Atom 2.0 or is there anything else that made you kind of... Or is that just you were always there and you were always active but people didn't interact as much because there was no Atom 2.0? What's in your opinion that interaction contributes to?
+
+youssef_amrani
+Well, think I've been more active and more engaged on Twitter since basically the day I joined Cosmos because I really developed a strong passion for this ecosystem that is vibrant, rich of ideas, of debates, of governance. So that's why I decided to be more active. And I thought there was a gap in terms of
+
+information available on Cosmos on the education side. So, you know, I decided to play a more active role in educating the audience on Cosmos because I thought it was an amazing ecosystem and that we needed to, you know, to have more, to have to increase our reach by providing relevant data. So educate people on the different protocols, educate people on the vision of the hub. Cause I think the
+
+At first, the last year, Cosmos has been doing a lot of progress in terms of being visible, but we needed at first to educate people. by education, I really meant the basics, like what is the essence of Cosmos? So the essence of Cosmos was mostly sovereignty and interoperability. And obviously,
+
+the IBC technology. it was really about educating people on the tech stack and what it meant for the ecosystem at large.
+
+Citizen Web3
+This is some interesting things you mentioned that I'll explain why I think they are specifically interesting. one of the main things I always try to talk about to guests is motivation. And one of the words you used quite a bit is education. And the essence you mentioned, the essence of the Cosmos ecosystem. I was gonna ask you next your story, blockchain story, how did you get the pill? But we will get to that in a second.
+
+Why is education important to though, man? You mentioned like you want to educate people. What's the, how, I mean, you know, like everybody says something else is important to them. And like I said, I want to get to the bottom of you to get to know you more and how you function and why it is you do what you do. So why, why would you say that education is important?
+
+youssef_amrani 
+Look, I think that's a very good question. So thank you for asking it. So why education is right now, blockchain and crypto in general, it is a very complex topic. If you just look at the job boards, 90 % of the job boards right now are about infrastructure, developers, software, full stack, et cetera. So it is a very complex industry.
+
+to understand for 90 % of the people that just entered the industry. so being able to explain this, whether Cosmos or crypto at large in general, being able to explain this in simple words, what does it mean? It means that you're able to basically reach more people, right? People are just curious, but that can't find
+
+the right information that they can understand. So that's why I thought it was very important to do that. And also the second reason is if crypto is to onboard the next billion users, we need to explain it in very simple terms. So it's also about inclusiveness because if we just stay in our own circle of people who are already familiar with blockchain and crypto, then
+
+we won't be able to expand. I think it's very critical that, you know, we make it as simple as possible, basically. And it's critical, I think, because otherwise we just won't scale. And then once the audience is larger, it becomes like some kind of positive feedback loop where the new entrants that now understand the technology can onboard their family, their friends, et cetera. And that gives us a broader...
+
+base to build from.
+
+Citizen Web3 
+Absolutely agreed 100 million percent. What are your personal like go-to resources when you were exploring crypto for yourself or maybe not or when you suggest to somebody to explore not necessarily cosmos but you know blockchain technology in general What is your like kind of like at hand to go to resources go and look at this go and read this or do you have anything like that?
+
+youssef_amrani 
+Yes. Yeah, that's the, so basically if I refer to my personal journey, and I think it's the same for the vast majority of people who entered the space, let's say from, you know, from the very beginning to let's say 2020 was Bitcoin, right? Bitcoin was a concept that is not easy to grasp. Although it is a very minimalistic concept, Bitcoin doesn't do much, but what it does, it does it at perfection. So
+
+That's that's that advice I can give it to people because you can start with Bitcoin, which is a very simple concept. And then on my end, after Bitcoin, I was like, I'm someone who is very intellectually curious. So I like to learn. I thrive in learning. And so I was like, OK, but what's next? Like, OK, Bitcoin does that, but it's kind of limited. So it has established itself as digital gold. And everyone knows that now, even the
+
+Even the non-informed people see Bitcoin as digital gold because you see it in mainstream media, et cetera. But I was like, okay, what's next? So then I discovered Ethereum. Actually, I discovered pretty much at the same time, but I was more on Bitcoin. And then I discovered Ethereum, which I see as the second generation. So Bitcoin was the first generation of blockchain. Ethereum was the second generation of blockchain because it enables smart contracts, dApps and...
+
+an explosion of different use cases. And then that's why I found out about Cosmos, which is, in my opinion, the third generation blockchain, because on top of Ethereum, it adds sovereignty, interoperability and on-chain governance. So it allows the rise of political economies, which I think is absolutely like mind blowing. So to go back to your question about what I suggest,
+
+Like what kind of media so I talked about that journey and I think you know everyone has to develop His her own journey into into blockchain. It doesn't have to to follow that part that I that I had but in terms of resources I think it's important to go to the source very important because if you don't do that and you just Base your your learning center analysis on someone else who's doing an analysis then there is a bias so you have to like
+
+youssef_amrani 
+Ideally spend some time, for example, reading the white papers, maybe not start with 50 page white papers. But for example, the Bitcoin white paper is very simple and very short. like cutting, cutting the middleman and go straight to the source, I think is very important. I understand that not everybody has the time or the willingness to do it, but that would be my first advice. And then on the media side, on my end,
+
+I learned a lot through two media channels, which were Twitter and YouTube. So YouTube for, you know, to understand, to be able to hear and listen to the founders of the projects, right? So again, going to the source where you have an interview and you're able to understand the motivation of that founder, why he's in blockchain, what problem he's trying to solve. So that's one.
+
+And then to Twitter, I think blockchain is an industry where people are super passionate about what they're doing. And that's what I love. And I was able to feel that. And so it is a platform of public debate where you can exchange with like-minded people and develop that sense of belonging. Because on YouTube, it's not...
+
+a social platform, right? It's mostly content. So, top, bottom, but on Twitter, it's more horizontal where you can exchange with, you when I was just starting, I was able to exchange with huge like founders and, you know, ask them directly the questions and then get an answer from them. It helps you understand better. And again, that sense of belonging and all of that is done
+
+in short format. So Twitter was nice. And like I said, white paper is important. are also platforms like Reddit where you can learn a lot of nice things. And then once you have that basis, that solid basis, you can go maybe one step further. And if I refer to Cosmos, what you could do once you have all those basics is basically get involved in governance, right?
+
+youssef_amrani 
+So, and that's exactly what I did with the Cosmos at large, but also the Cosmos Hub is there is a platform, there is a forum when you can exchange ID and then you have telegram groups and then you have, so all of those things, when you put them together, they give you a comprehensive overview of the blockchain space. They give you the social capital that you can leverage, on which you can build your career.
+
+if you want to start a career in crypto. So yeah, I would say that was pretty much my journey and the advices I would give to the audience.
+
+Citizen Web3 
+absolutely love it. definitely will be... not definitely, but 100%. There will be links of all of them that you mentioned included to the description episodes. So guys, if you missed, don't have to write everything down, it will be in the description. It's lovely to hear though that I think all those journeys you write, they match for sure. I mean, one thing I definitely have to say is that...
+
+After reading the Bitcoin white paper, it took me at least two and a half years, I think, to understand it. But I did come back to it. I think, right? I think maybe more, to be honest. think two and a half, I'm being a bit like nice to myself right now. yeah. You mentioned political economics and social capital. Those are two crazy, important aspects, in my opinion.
+
+youssef_amrani 
+Yes.
+
+Citizen Web3 
+Can we talk about them a little bit more because you mentioned that Twitter is a public debate platform, which is great. Yeah. And I absolutely agree with it because some people see it as a social network, which, which distracts you or does too much marketing or too much hype, but it depends on what you do on it. But you mentioned political economics and social capital and gaining social capital and engaging in, in, in, political, political economics and in debates. can you talk a little bit more about it?
+
+What specifically do you mean by referring to those? What are those things able to give us when we engage in them?
+
+youssef_amrani 
+Yeah, so I'll start with political economies.
+
+youssef_amrani 
+I see crypto most the tech stack of crypto is not that complicated. Like, and it is not as powerful as AI, for example, AI is a much more complex technology. And I was interested in AI at some point. But at some, but at the moment I saw that I saw them. How can I say the dangers of AI if put
+
+in the wrong hands, you know, more surveillance, more centralization. And then that's how I found crypto. I think crypto could be seen as the opposite of AI. And there was Peter Chil, the founder, one of the co-founders of PayPal with Elon Musk. And he was saying, if AI is totalitarian, then crypto is libertarian.
+
+And that was very interesting and struck my mind and I was like, okay, I need to put thoughts on this. I think crypto is about empowering people and crypto is putting people first. So if AI is about excessive centralization, then crypto is about excessive individualization. And so it is a technology that is
+
+serving the people first. So when we talk about political economies, think crypto is mostly a social coordination technology. It doesn't have a strong computing power. I mean, it cannot disrupt the world on the productivity side, etc. That's mostly AI.
+
+Crypto is very different. It's the opposite. And so when we talk about political economies, I think that we're seeing right now, I think Cosmos was the first one to bring it to the table, that concept of, and even better than just political economy and ecosystem of political economies. So Osmosis is a political economy. The Cosmos Hub is a political economy. Evmos is a political economy. Juno is a political economy. And so Cosmos is a web of interconnected.
+
+youssef_amrani 
+political economies through through IBC cross governance, etc. And so I think the promise of crypto fundamentally is to disrupt the legacy political system by bringing by reimagining governance, for example, by reimagining the way we we make money, the way we earn our life, the way we make revenue revenues in a totally
+
+different way where you have this intermediation, where you cut all the intermediaries that can at some point by some people being seen as parasites, right? Where you have like take rates of let's say you go on Uber, you have a commission rate of let's say 30%. What if we can create a decentralized Uber, right? That is owned by the token holders and that becomes its own political economy.
+
+The promise really of crypto as a political economy is disrupt what we have right now because there is a lot of mistrust. think worldwide, I don't think it's success to say that, that worldwide people don't trust any more representative democracy. And so with on-chain governance now, and I'm checking again the example of Cosmos, we're seeing the rise of direct democracy.
+
+But direct democracy has its own problems and its own issues because it doesn't necessarily scale. And that leads me to, to Atom 2.0 where we're trying to find the right balance between direct democracy, like the Switzerland model, with coupled with representative democracy, because we can, if we are to implement, for example, Atom 2.0, which is a very complex roadmap, economical roadmap, we cannot do it.
+
+with the current state of affairs, the current state of governance. It just won't work because there are too many decisions to be made and we cannot just go and do one governance every day where everyone votes, informed people and in informal people. So that's the idea of the political, there is a hope that we can build something better governance, representative democracy, like we see it in the current world.
+
+youssef_amrani 
+I think is dying. That's my personal opinion on the matter. And so we're trying to develop new mental models to reorganize ourselves, produce better results, have more cohesion within society. And crypto is that tool that enables that through better social coordination and better economical inclusiveness, basically.
+
+Citizen Web3 
+definitely. I do think that disruptions come from ideas, which are in turn, of course, born in discussion and exploration. So I think that those things go hand in hand, absolutely agreed as well. You mentioned, what do you think? I have a few questions and I'm trying to see which way to dig here to understand more of the ideas you have because they're definitely amazing in my opinion. And what do you think about the thought that
+
+democracy or well, any type of real world, let's call it governance is, it's a consensus algorithm, just like Tendermint is, or just like proof of work is, for example, because we reach consensus in there and there and there isn't a lot of times I've heard an opinion, not a lot of the times, but I have heard several times an opinion expressed that say that, okay, well,
+
+democracy is what you have, let's say in America or in Netherlands. Well, let's discuss on paper right now, right? Not the real affair of states. And what we have in crypto is is tendermint and not democracy, which is a new type of reaching consensus. Do you think that's a bit too far fetched or or do you think that has some some truth to that?
+
+youssef_amrani 
+No, I think there is some truth to it. So I think what I would really be interested in, and I'm still expanding my mind on it and doing some research, is the proof of stake model. Yes, it has a lot of advantages, but it still discriminates based on how much basically capital you have invested in the product. And so what I would like to see...
+
+And there might be some early projects working toward that is something more about proof of contribution, right? Rather than just proof of stake where you commit your tokens and you have more weight in all the decisions, even though you're not necessarily more informed than someone who has only one token and you have like 1 million token. And that person who has one token is able to bring more to the table.
+
+with their ideas, but because it's proof of stake, they're not able to because they don't have enough weight. So I would love to see something go more toward proof of contribution where contribution is better rewarded and someone who is strongly contributing to the community, bringing new ideas, executing on them, et cetera, can at some point have equal power or even more power.
+
+than someone who's because proof of stake is just basically, I think, a continuation of capitalism just in a different, more decentralized way. And the way I see it, I think, was just earlier, right? So Bitcoin has been around since 2009. So it's been roughly like, what, 13 years now. It's early days. you know, I think we should do much more work on governance. And that's one of the main critic.
+
+that address crypto is yes, people have ideals and want to disrupt, cetera. But when you look at the innovation that is happening in the space, you see that 50 % of the innovation, for example, is going to DeFi, right? And so DeFi was nice and it is nice. I like DeFi, I love it. But it started with some new primitives, right? And then it just became circular and just a copy paste with different protocols doing the same thing.
+
+youssef_amrani 
+I think there is a lack of imagination at some point, not from everyone. Obviously there are thousands of projects. But if you look at the space more broadly, you would see that not a lot of innovation is, at least not the innovation that matters. So yes, we need DeFi. DeFi is inclusive, it allows and enables anyone to participate and make revenues, make yield, et cetera.
+
+without the need for a bank, the need for intermediaries, etc. But I would love to see more projects working on developing new mental models, for example, for governance. I would like to see, for example, governance into politics, into the... think crypto can play a role in the legacy system in politics. for example, the smart contract ID, you can put it...
+
+in the legacy world. How can you do it, for example? And that's an idea that I had a few years ago. I don't know if it's going to happen, but let's say those, you know, the problem with politics right now in the legacy world is that there is no accountability whatsoever. Right. So you make promises as a political candidate, right. And then you get elected and then you only fulfill half of the promise or 25 % of the promise. And you just get away with it. That's fine. Right.
+
+With smart contracts, you could do is say, okay, if as a political candidate or multiple political candidates, what they could do is have their political program displayed to everyone. And then once that person gets elected, you code all those promises into smart contracts, right? That are immutable, that you cannot change.
+
+and they get applied. So let's say the politician that is elected says, okay, I want to reduce the military spend by 10%. I want to spend 25 % more on education. And that's how I want to do education. I want to build more schools, increase the salaries for, and the wages for teachers, et cetera. Well, if all of this is declined, is presented with very specific numbers,
+
+youssef_amrani 
+So a comprehensive, basically, overview of everything that the politician wants to make, then the day he gets elected, all of those things get deployed on chain, right? And there's no way that anyone can change that. And so that makes the politician who got selected 100 % accountable. And that changed everything. Because the reason, I think, one of the main reasons why representative democracy is dying,
+
+is because the lack of accountability where people are able to get away with that. So if you're able to code on chain and make them accountable to their word, that changed the game completely because you won't be able to make promise in the wild anymore and not respect them. So you need to be at this point very pragmatic and be sure that what you're trying to achieve, what you are promising is feasible and is in the interest of the community.
+
+Citizen Web3 
+In your opinion though, is the biggest problem with politics accountability or third parties and the lack of responsibility by those who want third parties to make decisions for them?
+
+youssef_amrani 
+That's a very good question. So I think that they're both right. So I just zoomed in on my first point of accountability, but I think, so not everyone is interested in politics, right? Not everyone has the time to spend on politics. And so there are a few other things that we could be working on. And when I mentioned the education that I was myself doing on Twitter,
+
+That helps a lot. if you do it at scale, that helps even better. And so that's one other thing that blockchain can provide is make sure that the information that the public is provided with are correct, which is not the case right now, right? So if you look at the public debate between Trump and Biden,
+
+a lot of lies, right? A lot of empty promises, etc. And the community cannot make sure that those statements are true. So Balaji was talking about that at a CoinDesk conference last year in Austin, where he was saying that blockchain could be, in politics, could be the first step toward getting truth first. So first we need truth.
+
+Because right now we don't have it, right? You can get away with just talking and saying lies and get elected based on lies. So that's the first step that we need to work on, is having truth. Then reduce the information gap, which is make information and statements and political statements more digestible for the masses. And I think that's critical. And so...
+
+If you look, for example, at the Switzerland model, you have those small, what we call booklets. So those booklets, have you heard about the booklet concept? So.
+
+Citizen Web3
+Yes, I'm familiar with the Swiss model more or less a little bit, mean, to an extent.
+
+youssef_amrani 
+Exactly. So, okay. So the Swiss booklet is basically to guarantee to every voter that before the vote, he or she gets a small pamphlet, small book of two, three, four, five pages, something digestible, where you will have an overview of the proposals, the pros, the cons, who's involved with that, maybe their...
+
+their history, their achievements, and that in return makes you as a voter, as a citizen, more informed about what you're going to vote about. But the problem is that that is, Switzerland is a very small country, And they are super organized, but the question is, can we do that at scale? And so in the offline world, so that's the open-ended question.
+
+I think in the blockchain space we can do that because everything is online, you have communities, have decentralized communities, etc. So if we organize as a community, so let's say small communities, so the Ethereum community, I mean, no, not Ethereum because they don't have on-chain voting, but any platform, any blockchain that has on-chain voting could implement that and reduce that information gap.
+
+And so when you reduce the information gap, happens is that people are more engaged because now instead of having just 10 % or 15 % people who deeply understand what is the governance about, now suddenly you move from that 15 % to maybe 30 % or 50 % of people who understand the mechanics of what we're trying to achieve and who vote with a better informed mind and who are more engaged. And I think that's what we need.
+
+We need like, I don't know the word in English, militantism, think, or I can't remember the name, where just people are more engaged, basically. And I think any democracy has a lot to win from more engaged people because it's healthy, right? It gives public debate, it gives a lot of things. And at the end, the outcome is a healthier...
+
+youssef_amrani 
+Whether it's participant democracy or representative democracies, at this point it doesn't matter. If we have more engaged people, that's a net positive for the entire community.
+
+Citizen Web3
+Do you think, though engagement comes more from the level of informativeness or from, for example, the ability to be rewarded for your, engagement because there's been a lot of, thoughts that I've been definitely trying to research into and hearing. And, it's interesting that you mentioned Switzerland where, the community is much smaller.
+
+And people feel more, how to say that their votes and their engagement does get rewarded, does benefit them directly. For example, I know if I vote for this person, then I know that my area might benefit with, I don't know, a new kindergarten. It's a silly example, but whatever, right? And in crypto, obviously the reward is direct for governance. And do you think that the reward plays a role in the level of engagement in governance?
+
+youssef_amrani 
+100%. Rewards were human beings, So I think rewards always play a role.
+
+But I don't think... So it is critical, rewards, but I don't think it is the most critical. I think the most critical is the meaning. I think the meaning is everything for human beings. And if you don't have the meaning, but you have the rewards, I don't think you can develop a self-sustainable system. So you need the meaning first, and then, yes, rewards are important. And so meaning, how can you create it, is...
+
+while the idea itself, what you are proposing, that can give meaning, but also the engagement. Because if you want people to have more meaning, well, they need to be informed. Again, we always came back to education and to being informed. You need to be informed to develop a stronger meaning.
+
+Citizen Web3 
+I was going to ask you about governance and how an education and informativeness in the agoric space, how do you, are you at all involved in that? How does agoric try to do everything that you were just talking about in terms of the work with its own community?
+
+youssef_amrani 
+So Agoric is the build token and the ecosystem is still fairly young. And so I think that as we see more dApps launching on Agoric, we will see a much better engagement. And so...
+
+I think the ISE stablecoin from InterPorocol that is built by OnAguric is going to be a catalyst for that because stablecoins, I think, are super important, right? Basically, there's no DeFi without stablecoins. You cannot have DeFi without stablecoins. It's impossible. You need a stable currency, right, on which you can refer as a unit account, et cetera. And so I'm already seeing with ISE a lot of movement.
+
+from the community I've been tweeting a bit on the IST stablecoin and I've seen like so far a lot of early engagement and what we're trying to do basically with IST is to build a decentralized stablecoin, right? After the collapse of Terra there was a huge void to this day, right? Huge void. So, Terra was...
+
+Luna I mean usd was a 18 billion dollar market cap and now if you look at what is the size of stable coins on On cosmos, it's not even one-tenth of that To look at the liquidity on on on the smosies. For example, it's it's it's very very small and so I think we're we will be able to drive more engagement from the community through this product, right and then
+
+talking about governance on Aguric, I think it will grow organically as we build more dApps. So right now we have, think, four or five dApps that are live or going live very soon, like by the end of the year, IAC stablecoin being one of them. And so the other thing that is, think, that could help with governance is what I like about Aguric, why I joined this project, is that
+
+youssef_amrani 
+The mission is basically to accelerate the adoption of crypto by onboarding from Web2 to Web3 because JavaScript, is the programming language used for all of Aguric dApps, is one of the most widely used programming languages in Web2. So there's an amazing way to bring people onboard into Web3 and those Web2...
+
+entrepreneurs, programmers, etc. So they're talking about their hearing about crypto, etc. more and more often. And so once they come to build their own application on Aguric using Web3, they get down to the rabbit hole and then they understand what is crypto. And then that creates, I think, a positive feedback loop. So I think over the long run, we will see a lot more
+
+engagement and I'm fully dedicated to that. IST is launching soon. I will try to play a large role in educating again the people so that they like the projects and they get involved with us more and more.
+
+Citizen Web3 
+going to play a bit devil's advocate here right now with ISD, of course, but that's I have to a little bit, otherwise it wouldn't be as interesting. So let's talk a little bit about ISD. And I mean, we spent like half an hour with you. And this is why I'm being devil's advocate. We spent half an hour with you about discussing how we need to progress in our, you know, let's call it disruption.
+
+youssef_amrani 
+Yeah.
+
+Citizen Web3 
+to the world and democracy and debates and you know, this is cool. And I love that because this is the kind of things that I think I'm personally focused on for sure. What I like to understand now because we're progressing now to IST, which is a stable coin fact to the cost of the US dollar. And again, I'm going to be devil's advocate. But do you think that's do you think it's correct? Do you think it's a good thing we're doing by pegging things to fiat stable coins because
+
+It's not difficult to invent something stable, which would not be pegged to a fiat. You know, you could like, let's say, lock up atom and say every one tenth of an atom is a new thing called photon and let's that be stable because you have some supply and some look, whatever. It's not very difficult to, to invent. So why is it that we, the question is such, why is it that we keep on pegging things to, to, to, to dollars, to euros in, in, in the world where we're trying to disrupt?
+
+the ideas that we're trying to disrupt.
+
+youssef_amrani 
+Yeah. I like your question. actually, a while back, I was a proponent of USC, right? From Terra. And at some point, I wrote a tweet about seeing exactly what you're saying. Hey, like, why? Like if we're trying to build a new economical and social system from scratch, which is crypto, then why are we using
+
+dying fiat currencies. And so there are, I think, multiple layers of answers. The first one, the dollar, the American dollar is by far the largest reserve asset on earth. Everyone understands the dollars as the best unit of account, right? Like even if you look at people like...
+
+from all over the world, like Nigeria, Brazil, all the five continents, you know, when they denominate anything, they would do it in dollars. So I say, one day I want to be a millionaire, in dollars, not in their own currency. And so trying to disrupt that now by bringing our own crypto native currency, I think is risky and we're not there yet. So...
+
+Crypto is still very small, You know that, you know the numbers. It's very, very small, it's marginal if you compare it to the wider ecosystem. So the global values right now is, there are different estimates, but it's between 200 and 400 trillion dollars. And what is crypto in all that? It's about a trillion. So that's one of 400 of the world economic production
+
+valuation, etc. So going now, I think it's a bit premature. It's presumptuous. It's like being pretentious basically. So that's the first one. If you want to onboard people in crypto with a stable coin, you cannot do it with something that is not pegged to dollar. I don't believe that. At least not now. So that's first thing. The second thing is
+
+youssef_amrani 
+Stable coin what I like about stable coins and why I joined this this industry with the UST first is It's a lot of experiment, right? We're trying to create private money with no interference whatsoever from states from nation states and It takes a lot of experimentation to reach that that's not something. I mean the first stable coin is better, right?
+
+I mean how old is stutter? I can't remember but it was I think 2016 or 2017. It's five years old, right? Older? Okay, okay. Okay Okay, it is is still it's too young you agree with me and so I with a interprocal IST what we're trying to do is to be very open-minded right and
+
+Citizen Web3 
+I think so, a little bit. I think it's like at least six or something like that.
+
+youssef_amrani 
+Because now I don't think it's the time to be sure about things. We need to be open-minded on the design. And so I'm super proud to be part of this team. So I'm member of the economic committee that is behind IST, on the, like deciding what collateral will be backing IST, what are the debt limit, what kind of votes, what is the policy about vaults.
+
+We can have also incentive with BuildBoost. So a lot of things are happening, but we need to stay open-minded. And so if there is at some point an innovation that makes us rethink that dollar unit of account, we will take it into consideration and we're already pushing for that. We're constantly... So there is this new idea, for example, if you look at some projects like Frax, they've come up with the inflation resistant stablecoin.
+
+That's something super interesting, right? So because a stable coin in the current form is a stable coin and in some ways it is not a stable coin because it's losing value, right? It's back to the inflation. And so there are some ideas that we can use. so my idea in the long term joins your idea where once crypto is large enough, right?
+
+to stand on its feet by itself, then we can envision a non-dollar stablecoin. So that's something that could be a basket of cryptocurrencies with maybe a mix of real world assets. So it could be gold, could be silver, it could be oil, it could be real estate, a lot of things. And that by having that, it would be kind of, you know, more representative
+
+of the real world basically. But my point is it's not the time yet.
+
+Citizen Web3 
+understand what you mean, definitely. it's like though with what I like about the exploration field here is that I guess one of the biggest thing blockchain did in my opinion was create a universal clock and decentralize what we understand this by unit of time, because any block space can be a provable point of time. Just like you mentioned, you know, you mentioned oil real estate and so on and so forth can be provable value per unit of value.
+
+So absolutely agree there. I have, do want to ask you about USDC though. And what are your thoughts on, because I definitely know that you have some, thanks God the internet is easy to research. So what are your thoughts about the USDC coming to Cosmos and can you talk a little bit about that?
+
+youssef_amrani 
+Yes, yes. So, I favor decentralized stablecoins. That's for sure, right? And I think, possibly, I don't have rough numbers, but I think the vast majority of crypto native people who understand what is crypto prefer decentralized stablecoins. USDC, think, has a strong product market fit. They've been executing, I mean,
+
+amazingly well. And I was super impressed with Jérémy Haller, the founder of Circle and all the work. They've been going fast, developing fast. They've been very mindful and careful and cautious with regulators. They have seen what USDT was missing and lacking, the transparency thing with the reserves, and they've been acting on that.
+
+And I think it was a smart move and that was needed in order to scale to the next level to play nice with regulators to be to listen to them and to be transparent basically. So and so I think my vision is that centralized stablecoin are just a step. They are a transition that is needed, right?
+
+to onboard more people and then a transition toward decentralized table coin. And so USC came in, And became instantly a wide success, but it was fragile, right? On the design. And so we will see, I think for a time centralized table coins like Teder and USDC still dominate the space.
+
+like they are today. And then, and I don't know how much time it's going to take. It could be a decade, it be two decades. And then we're to see a progressive move toward censorship resistant stablecoin. So in the current state of affairs, think both centralized stablecoin like USDC and decentralized stablecoin like IST will become have a role to play, can collaborate together.
+
+youssef_amrani
+And then over the long run, my expectation and my hope actually, it's more, I don't know if it's wishful thinking, but I hope that we will see the rise of decentralized stablecoins that are like private money that you cannot censor, that anyone can use from anywhere in the world, that you cannot freeze. So all of these things will happen, but it would just take time. But at this moment, at this very moment,
+
+I think we need USDC and they have a strong role to play.
+
+Citizen Web3 
+You mentioned several times, again, absolutely support what you say, but again, I'm going to play a little bit devil's advocate. You mentioned exploration and experiments, especially when it comes to stable coins and you mentioned USD, you mentioned frax, which all had some type of experiments, regardless of whether they were good or bad. And the question is such to where
+
+How do we know which experiments or to what point shall we experiment before we are starting to cause harm back to the ecosystem that we experiment in? How do we know where to keep that line between getting the experiment so far involved where it starts to damage the economy or if it makes sense?
+
+youssef_amrani
+If we talk about UST from Terra, I think the main mistake was to not communicate properly on the risks. That was, I think, a huge mistake. And also, it just scaled too fast. But that was also because of the design. The design makes it that it can scale faster.
+
+an over collateralized stablecoin. It cannot scale that fast, right? You need a lot of collateral, so by design. So coming back to the experimentation question.
+
+The way I see it is...
+
+youssef_amrani 
+a tragedy like UST is kind of necessary to make the space more resilient, right? Just imagine that UST was still working. What would happen is that you would have a lot of copy paste, right? And then we know that the design was not a good design. So just imagine that
+
+UST went to 50 billion dollar market cap and then you have 10 or 20 other projects and then all of a sudden we end up with 500 billion dollars or 1 trillion that are built on nothing, right? Because of the design, the flaws in the design. That would have been catastrophic and could have like maybe created a crisis, an economic crisis, a recession worldwide, not just within crypto. so failure I think is important.
+
+Because from failure you learn and you iterate. Now, those new innovations, like you see for example from Frax with their design, is much less risky because they have some part of collateral and then there is a smaller part with the algorithmic side. So I think we need innovation. It's super important for the space and the more we innovate, the more the stablecoin space
+
+will become Brazilian. So yeah, that would be my answer to your question.
+
+Citizen Web3 
+Nice. Love it. Man, we launched recently, by the way, a new format which we do like interchange debates. And the first was on Anatomput 2.0, which I would love to talk with you more and more and more, but I know that the time is somehow run out. It's always like that. I always like, you you try to get to talk to the guests and you hear like, wow, I want to know more and more and more and more more and And I go, but it's already been an hour.
+
+but, but, but now it's obvious, it's, coming obvious talking to you that we definitely should do like one of those formats. talking more about stable coins and economics. And, and, and definitely if you would love, if you would like it to, to, to, have you to come on and join that and talk more and more and more about it, because this is in my opinion, the education we all need to, to, you know, to, understand more. if you don't mind though, quick bleeds to, to resume, like I those a little bit.
+
+Can you give us three projects outside the top 20 preferably that you're currently interested in and looking in terms of technological development after? Not Agorica of course, please don't mention Agorica because that's obvious.
+
+youssef_amrani 
+So let me think. So I think within Cosmos, I like secret. think privacy, mean, you cannot do anything without privacy and I'm surprised honestly that people are not paying more attention to privacy-focused projects. So it doesn't have to be secret. There is also Zcash, Monero. But what I like about secret is
+
+basically programmable privacy, right? Because Zcash is not that. And so that's a project that I like. I like Regen. It's a very small project, $40 million market cap, which is a project that is trying to focus on regenerative finance, Regen finance. I think they have a bright future. They have a nice team, not financial advice, please. What others? And I like...
+
+I like one of my thesis is the rise of proof of physical work. That's why I call it the other synonym is proof of physical coverage. So projects like helium, for example, I think those projects can and board a lot of people from the legacy world that don't understand that don't necessarily understand crypto, but they can make side revenues. Right. So
+
+With that, if we see more proof of physical work concept, you can redefine how people make money. So let's say you have a decentralized Uber. So you drive your Uber, your car, you make money. At the same time, you have a camera that do basically what Google Street View is doing, but in decentralized fashion. And then you can have multiple revenues that add up. And at the end,
+
+You just become like someone who doesn't need to be an employee and you empower those people. know, and I think COVID has already paved the way where, you know, now workers are more sovereign, right? Like now they can impose the work from home. And so I think that balance of power is rebalancing in favor of workers and we need to have more initiatives like that. And I think proof of physical coverage is exactly that.
+
+youssef_amrani
+and can participate in accelerating the shift toward crypto, gaining the next billion users.
+
+Citizen Web3 
+Two things that motivate you to keep on building, researching, educating people, two daily things that keep on helping you to do that.
+
+youssef_amrani 
+Well, the first one is just to realize that we're still super early and we talked about it, right? So yes, there are some interesting projects, but there is a lot of crap. And so, you know, I'm curious to see where the space evolves and I contribute with my own time. So that would be the first thing. And then the second thing is just the amount of innovation. I've never seen something like that. I mean, yes, I'm not...
+
+200 years old, but in my living time, I've never seen that, like the passion and dedication from the crypto community. So that's what keeps me going strong. And the innovation is just mind blowing. It's going so fast. when we say one year in blockchain is like 10 years in the real life, I mean it. I think it's true. And it can be very tiring, right? So much is happening. It's difficult to keep up. And at some point you need to specialize because...
+
+And that's why I specialize in Cosmos because I can't keep up with everything, right? And Cosmos is a subset of crypto because since it is an ecosystem, anything that can happen in crypto at large can be duplicated within Cosmos because of interoperability, because of self sovereignty, et cetera. So yeah, I think an advice would be like, it's getting bigger. We're seeing more and more primitives and...
+
+crypto cannot be considered anymore as a whole. mean, yes, the concept, the essence, the philosophy, yes, but then you need to go through the rabbit hole and just specialize and narrow down your focus so that you can have an impact because otherwise it's going to be difficult.
+
+Citizen Web3 
+What helps you to narrow down your focus? Is there something like, I don't know, your family, you meditate, you read books. What helps you to narrow down that focus personally and to help keep on track?
+
+youssef_amrani 
+Yeah, that's a good question. So yes, I do meditate actually. So I'm found of meditation and I think it's just about finding a balance between the on-chain world and the off-chain world. You know, you need to sometimes step back and just take some time off from crypto because if you don't do that...
+
+Citizen Web3 
+There we go.
+
+Citizen Web3
+Awesome.
+
+youssef_amrani
+it becomes a bubble and I think you lose your critical thinking. just like disconnecting and going back to the offline world, which I think is very important. mean, yes, we're building something different with crypto, but we also need to look at the option world and build in it, right? It's like stay healthy, build meaningful relationship with people, et cetera, and that we cannot do it online or on chain. I mean, you can, but it's not as good, I think.
+
+That's something that's a topic that we can discuss at some other time, know, like the like how the online world hurts the off-chain world. And I am a proponent of that. mean, I think it hurts it. And so, you know, we need to do more education on how to stay vigilant about not losing ourselves in the online world, which is super harmful. And how can we find a balance where we keep doing
+
+the stuff that we're doing in the real life and not abandon it. Because right now, the way I'm seeing it is that...
+
+Maybe 70%, 80 % of our time right now is online. And I think it's too much and it's very difficult. I do not have the solution. But I think that's a critical matter that we should discuss as a society because otherwise in a very dystopian scenario, you could have 100 % of your time in VR and then you just completely abandon your body and your real...
+
+connections in the real world and all of that this on on chain this online world at some point is a simulation right it is real I'm not saying it's not real it is real like right now we're talking but it's also some simulation and especially with VR I think it's very dangerous so we need to be mindful about the danger of that and I mean we've been born here on the real world and so we need to preserve it and make sure that we're not disconnected from from it so that's that's how I would frame it
+
+Citizen Web3 
+That is one of my favorite topics to discuss, but I'm holding myself strong not to get into that because I know I promised you an hour and it's been already over. Yousef, that is a lovely discussion. Absolutely lovely talking with you. Thank you very much for finding the time to join. Definitely, I would love to explore doing a debate on stable coins and inviting several people from the ecosystem and yourself included.
+
+youssef_amrani
+I would love that. Yes.
+
+Citizen Web3
+Please, Yousef, is there anything else that you would like to add to anything that I didn't ask you for this episode in particular?
+
+youssef_amrani 
+Well, I would say we didn't talk much about Atom 2.0 and I've been super busy with this project for the past six months. So, you know, I invite everyone from the Cosmos community, since this is a Cosmos podcast, to get informed. There's a lot of content, there are a lot of podcasts, a lot of interesting Twitter threads. So I would love people to get more involved, more engaged, more informed, so that they can make their mind in a better way before...
+
+before the vote and ISG Interprotocol were super excited about that. So I invite people to get more informed on that topic. We have an amazing team of economists working around the clock to bring to market a world-class stablecoin and I'm blown away by the team. And I hope that this project will be successful and I invite people to...
+
+to get to know more about this project as well.
+
+Citizen Web3 
+Thanks, Yousef. Just to add to what you said there, there is quite a few to everybody who's going to listen to this. Absolutely to follow up, sorry, what Yousef is saying. There are several debates already out and we are definitely going to carry on doing those debates on the topic. So please check them out. Read the white paper proposed, sorry, white paper for sure. yeah, get more into that.
+
+Citizen Web3
+Yousef, thank you very, very, very much. It was a pleasure. Yes, until next time. Thank you.
+
+youssef_amrani 
+My pleasure.
+
+Yes, I had a lot of fun. Thank you so much, Serge. And yes, next time. See you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

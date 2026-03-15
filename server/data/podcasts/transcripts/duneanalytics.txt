@@ -1,0 +1,420 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/duneanalytics
+
+Episode name:
+This episode of the #citizenweb3 podcast features Boxer from Dune Analytics
+
+Citizen Web3  
+Hi everybody. Welcome to a new episode of the Citizen Web3 podcast. Today I have Boxer from Dune Analytics. Boxer, hi. Welcome to the show, man.
+
+Boxer  
+Hey man, I'm glad to be here.
+
+Citizen Web3 
+Yeah, man, it's not often we have researchers. I mean, I like to categorize my guests. I'm sorry for doing that. So straight out of the bucket. Boom. So I'm glad to have you on, man. Can you introduce yourself? I mean, boring question for me, for the guests, for the listeners, for everybody. Introduce yourself and tell us what you do in Web3. How did you get to this life, man?
+
+Boxer 
+Sure. Yeah, researcher is a category that I don't think about, like myself, too often. But fair enough. So I do developer relations for Dune and have been doing that for three years. I'm based in Germany. Not a lot of Web3 people in Germany. So I'm kind of like, I mean, now it's getting kind of more, but like as I was starting, there's like a very small scene in Berlin. I'm more in the Western part of Germany. So like I'm...
+
+Citizen Web3 
+There we go, it's a good start!
+
+Boxer
+I'm literally like, I used to live on a like in a small village and I was literally like the only person in like a 50 kilometer radius, like who's able to explain the blockchain. So really kind of like trawled my way into this industry, like by just clawing my... Yeah, it's still not in Berlin. It's a nice city, but like too busy for me. So yeah, I guess researcher, I also have a podcast together with...
+
+Citizen Web3
+Berlin!
+
+Boxer 
+Denning for Flashbots and Hildebert from Dragonfly or Hildobby. And yeah, there we talk Web3 data. We actually take apart different kind of verticals or horizontal, horizontals of the industry and try to make sense of that. So like, I'm kind of a researcher in that position. And I think the job of a dev rel in general is like, you just need to be kind of on, on top of things. Like you need to understand the space deeply so you can...
+
+You can build tutorials, you can write documentation, you can actually help the users out. Because like people on Dune are not researching like, I don't know, like things from yesteryear. They're always like on the bleeding edge. And if I want to be able to help them out, I need to be able to like converse in their language. Like I need to understand the concepts and yeah. So, so that's a, so short, slightly chaotic introduction to myself.
+
+Citizen Web3 
+going to dig it a little bit if you don't mind. I saw you have a pinned tweet on Twitter. Well, it doesn't take a lot to see it. So it wasn't much research. And it talks about pickle finance and how you you I remember pickle finance very well. I remember the jars and everything and all the brine and all that stuff, man. And as originally an Eastern European, it was very dear to my heart. You know, I mean, we Eastern Europeans, we love pickles. So I'm sorry, guys.
+
+But I'm going to make the stigmatic thing. Can you talk me a little bit through that of DeFi Summer or did you actually get to crypto before DeFi Summer? How was that whole swirl happening around you?
+
+Boxer 
+Yeah, there's always a million ways into crypto. Mine was I thought Dogecoin was funny while I was like in my final year of high school. So I was barely 18, so able to sign up for exchange. And then in 2014, yeah, I bought my first Dogecoin for like $10. In hindsight, I should have invested more like that. I would probably be retired, but I just thought it was funny. I was like going to school and telling my friends I bought some of this like
+
+Bitcoin. And I think this was like the height of Dogecoin where they were like sponsoring like the Jamaican like, Bob team, like, Bob's late team or whatever. And they were sponsoring like a NASCAR thing. So like, I just thought that was interesting in this kind of like, the kind of peak internet culture at that time, where it's like, okay, there's this Dogecoin thing is very cool. At that point, like, I didn't understand blockchain. I was just like, this is some like funny, funny, cute little thing in the internet. Basically, like buried all of that.
+
+for like a bunch of years, but I helped my Dolce coin. And then in 2017, I was studying business administration. But obviously in 2017 or like, yeah, early 2017, there was like the first kind of like run up to like three, $400 of Ethereum. And I somehow got wind of that. I think there was some like, there's a YouTube channel, Adept 2030. I recently kind of rediscovered this.
+
+And it's about a guy who's been predicting the next ice ages in the next year for the last 10 years now. It's incredible. It's such a ridiculous, I don't know what I was doing on that channel. I was just, okay, interesting. Let's look at this guy kind of going on with his conspiracy theories about, he's talking about the solar cycles and everything. There's like, I don't know, you can kind of map like.
+
+solar activity to to like civilizational peaks and bottoms so like it actually like there's there's something to this i don't know why this guy like specifically predicts ice age but like i guess that's like a good niche for like conspiracy stuff like he seems to be doing well for himself so kudos to him but he was like okay like like before the next ice age hits like people are preparing by buying like shares in the like newer internet computer and i'm like okay like there's an internet computer like this sounds very cool
+
+Boxer 
+So that was this video. And yeah, I was studying business administration. And like, I think, like, if you think about like, what the world runs on, and like, how difficult like consensus is, and like, how difficult it is to like, do contractual obligations, and like, like all the like, benefits that like a no trust environment has, which we are creating with like this, the shared world computer that like immediately connected with me. And I was always like, kind of tech savvy.
+
+Even though I was studying business administration, I cracked my own games. I come from that era of computing and I was fixing iPhones for a time with my brother just to resell them, refurbish them. My iPhone had CDR since 2013. I never wrote code myself, but I was always a super user of software, a super user of different things.
+
+So yeah, I'm 2017 and then like Ethereum never kind of left me. I obviously like 2018, I absolutely got wrecked. It's like I held everything. And then I was like there in Germany, there's a rule of like, you don't pay taxes if you hold your assets for longer than a year. And I was like, I'm not going to pay taxes, whatever. Like the prices can go up and down. Like I'm not going to pay. And then like I paid the heaviest of prices, which was like, I should have just sold and paid my taxes. And that would have been like a way better deal than like holding everything to zero.
+
+I consolidated into majors at the end, so I didn't get completely wrecked, but it was pretty bad. So that's 2017, 2018. Then I actually took my... That's a year of my life where I exclusively spent on crypto. I didn't drop out of university, I was still technically enrolled, but I think I did... I don't know.
+
+six ECTS credits that year. So like basically nothing. So yeah, and then in 2018, I was like, okay, like I didn't get rich quick. So like, I'll get get back to studying. But it was always like, I was always like, at that time, I think, ETH Finance or like, no, it was not called ETH Finance at that time. Like there was a Reddit sub ETH Trader maybe there was like a split at some point into like ETH Finance and ETH Trader.
+
+Citizen Web3 
+I'm trying to remember, but I don't know if it was ETH Trader, I think, Corey. I also don't remember that, but I remember what you're talking about.
+
+Boxer 
+Yeah, I think ETHRAIDER was like the original one. So like I used to argue with like DC investor in there. Like, I don't know, like just, just like write, write a bunch of posts and like just look for emotional support for my backs. But this was like something I pretty much did every week or like every, like I kept up with the industry. I was like, my God, there's like integrations with SAP, which is like that's like big German enterprise software. Like I was just like,
+
+I'm genuinely still excited about the possibilities of this technology. So this meme of I'm in it for the tech is kind of true for me, where I think it's really interesting. And that's still why I'm in the industry. I wouldn't work here if I thought it was just a way to earn money. And yeah, then I don't know. But as time went on and as the winter got darker, obviously my interest kind of faded. But then I think DeFi Summer 2021.
+
+Was it 2020? Yeah, it was 2021. Time flies. Yeah, it was like end of 2021, start of 2022 or so. he was an idiot later.
+
+Citizen Web3 
+More or less.
+
+Citizen Web3 
+2020, 2021, yeah, yeah. It was a mix. It was a mix. It was a mix.
+
+Boxer 
+Yeah, so somewhere around that, yeah, yeah. So like the rest of the world, I was stuck at home during COVID. And then I was supposed to write my bachelor thesis. So like, I didn't really take my studies too seriously. I think I took like five or six years to like even get to my bachelor thesis. But yeah, I just went on side quests. Like I traveled a lot and...
+
+I don't know, like I did martial arts like really intensively for a year. And then I don't know, like I was like, like I was always like going into university, I was already like, okay, I'm just doing this for this piece of paper. Like I never really like, I was never like, there's these like great people who can treat me great stuff. And it's like, I know I was like, yeah, you like, I guess if I ever want to get like gainfully employed, I need this piece of paper for somebody like to consider me to hire me.
+
+So in like DeFi Summer, somewhere I was writing my bachelor thesis. But then DeFi Summer happened and like everything was exciting and like we were actually like getting to like an on -chain economy and like things were like, things were popping off. And I'd actually, I'd worked for like a big German corporation kind of doing like data analysis, data science, even though like my background was like business administration. But I had like the basics of like, I don't know, I was like an actual monkey, but like not like level one, but like level, level eight. It was like pretty.
+
+I was scripting a lot in DBA and I had taught myself a lot of stuff very quickly while working there. Which was basically just an internship. But they really got me for cheap. I should have earned way more money than I did. At the beginning we were poor interns in that area. When I left it was only me because I had automated everything. It was ridiculous.
+
+But yeah, anyways, so I had all of these skills and then eventually I tried contributing to a bunch of different dials. I thought the idea of like, hey, we can just like, anyone can contribute to these protocols and you could just become a contributor very easily without showing your credentials or without being like, hey, I have this experience or whatever. You can just work and then get retroactively paid. So I thought that was really exciting. And then I submitted governance proposals to a bunch of different, or I was...
+
+Boxer 
+basically trying to contribute by the mechanism of governance proposals. And I submitted some, I think I was in the Yearn forum, then Rari, which was an NFT marketplace. But then I think I already found Pickle, which was like, Pickle was like a fork of Yearn, just a yield farm. And at the time, I think the biggest product was probably Uniswap V2. So Uniswap had just launched their token, and then you could stay kind of a WEF, USDC.
+
+like a Uni V2 liquidity token with Pickle and they would automatically sell your yield, which was in the form of Uni and kind of like compound the position. So like you got an APR of like, I don't know, 20 to 30 % on those. So like that was a pretty good deal. And they were, I think they were a bit more like careless than Yern, which was a foreshadowing for how the project should kind of end.
+
+So they were just like a fuck it ship it will will just like launch all of these like volts or jars as pickle called them and very quickly I kind of became the data guy there. So at first I was like, okay, let's figure out the tokenomics here I did that in like Excel I think but then eventually I think one tech actually like posted like a bunch of dune links on Twitter or like I somehow got like way like I got like I
+
+I got to know June and I was like, my God, I know SQL. I can kind of understand the blockchain. At that point, my knowledge was limited, but I could find my way around Etherscan and I kind of knew the concept. So then I did some work for Pickle and I got retroactively rewarded, which was very nice. You're like, okay, I'm just a guy. I don't even have a bachelor's degree and now I'm basically freelancing and people are actually paying pretty good money for what I'm doing. And then...
+
+Then I was basically, okay, let me do the full accounting of this protocol. And like, before I was only like, I was working with like the ERC -20, like Pickle, which is like, okay, where's the token? Like how many people are staking? How many people are like locked? And then it's like, okay. And now we're like in the complexities of a yield farm where it's like, okay, like, you don't only need to understand Pickle, but you need to understand Compound and you need to understand, I don't know, like Uniswap and you need to understand, I don't know what the other like farms at the time were, but you need to understand like,
+
+Boxer 
+bunch of different protocols, because like it's a yield farm, they're farming other protocols. So like you need to understand like the the state management of like all the different positions and all of that stuff. So like, I submitted like a governance proposal, I was like, I'm gonna do this for like, I don't know, I think my price was like $3 ,000. And like 2000 even, I don't like it was not a lot of money. Or like 0 .5 ETH, I think that that might be like 40. I don't know. Doesn't matter. But like not a significant amount of money.
+
+but, I basically, I had this like contributor, like my pseudonym had gained some like traction, like people were like, okay, boxers, like the guy for data, like, this is interesting. Like I got like the first followers on Twitter and everything. So like, I was like, okay, I have a reputation to lose now. And I basically said like, I'm going to do this thing. And if I say, I'm going to do something, I like.
+
+That's that's like how I got raised. So like, it's very German of me to be like, I'm going to actually do this thing. So like, I ran against the wall for like a month trying to figure out like how all of these different yield farms and like how all of that work. And it's like, it was mental. It was so fucking hard. Like coming in from like a non -deaf like background with like tooling back in like 2021. I it was so fucking hard to like figure out like how all of these yield farms work. But basically.
+
+In the end, I had like one query, which was like 700 lines of code, which did the entire accounting for Pickle Finance. So it showed the entire, like, okay, how many fees are the devs earning? How many fees is the protocol earning? What's the total TVL here? What are the total fees generated? All of this, like how much has been reinvested in all of these different yield forms. And like, it was insane. Like, it's still like, I'm still pretty happy about that work, even though like the code is like spaghetti. Like it's spaghetti.
+
+But yeah, so at that point, I think the price of Ether had even doubled. So my initial payout was double, which was like, that was a fair price to pay for that work. And then I basically realized, whatever I was doing with this bachelor thesis, I'm already earning more money than I would ever be able to achieve. If I went to, my path would have probably been some German consultancy where it's like...
+
+Boxer 
+Smart people in Germany, we've studied business administration who like want to reach something. It's like, they go into consultants, the consultancy because all the big corps in Germany are like, they're really slow and really like rigid and like you need like permission to do anything. And it's like in the consultancies, you can actually move fast. And it's like kind of like the best work environment that, or like the most exciting work environment for like smart young professionals. There's not big tech scene in Germany. So like I would have, would have had to move to Berlin.
+
+or maybe find some small startup, but the positions there are very limited. So that was the path I would have gone on. And yeah, from there, even with that one tweet, I think I even called it one query to rule them all, a lot of the rings.
+
+analogy. And from that tweet, I got like, I think Dej and Spartan started to follow me. And then I knew, I remember sending the screenshot to like different people of like, hey, like this guy is following me. my god, I've made it and stuff. So from that moment on, I kind of freelance for like a bunch of different protocols. And like soon after Pickle Finance got hacked, I think for like 19, 20 million dollars or something. So like that project pretty much sat down. So I was like, okay, let's let's move on. Like, let's do something different.
+
+And like my data analysis work is like, you can do like one thing and then you can kind of dive more and deeper and deeper into this topic. But like my kind of the groundwork was pretty much done. So I was like, okay, that's like, I was working with harvest, they had like a dev contest or like I submitted like that. I submitted my stuff to like dev contests or like community contribution contests. I just randomly like started working for protocols where like, I didn't even ask them. I was just like, here's the dashboard.
+
+And like, you'd get good tips at the time. Like people were really, and I think, I still think you can, I don't know how it is today. Like it's probably like a bit more rigid and structured, but like at the time it was basically like, you and me could have spun up a project. We could have called it whatever. And like people would have just deposited money. It was like the wild West and like the same way, like if, if you and me were working together and some third guy just did our data analysis, we would have been like, yeah, sure. Like he was a couple thousand dollars, like whatever. so like, I just like.
+
+Boxer 
+I kind of like randomly found my way around, I just bounced off different things and people reaching out to me like, hey, can you do data analysis for me? Yeah, at the same time, I was kind of like, I got a lot of help in the pickle, like the pickle community will always kind of be close to my heart, because like the the main death there or like the deaths were like, and I've met one of them in person now, which was like, it was super funny, like we didn't even
+
+Like we took a moment to like realize that that happened. But yeah, like I still talk to some of them from time to time and they're just really nice people. And they were like, really, they onboarded me into this world. Without them, I couldn't have completed that work of like, hey, here's how the yield farms work and everything. And even like back then there was like a dev channel in the Pickle Discord. And Bantek hung out there like from time to time. And he also like helped me on like...
+
+on onboarding. So like this, this like spirit of like, we are all like here to learn together and stuff that like was very deeply embedded within me. So like at the same time, I was just helping people out in the Dune discord where like initially I was the one asking questions and then like as time went on, I was like more and more being the guy who answers the questions. And I was also like giving feedback to Frederick and Mats and so Frederick and Mats are the founders of of Dune. And eventually Frederick is like, hey, like,
+
+We had a bunch of feedback calls and then eventually he reached out to me and said, hey, I think when I called, he was just saying, you're doing all of this work for us for free. That's so amazing. Don't you actually want to get paid for this? And then I had a contractor position with them for a couple of months where I was just answering questions in Discord. And then that worked out so well that eventually they were just saying, don't you actually want to work for us full time?
+
+And that's how I hired myself to do as I think the sixth or fifth employee. So yeah, that's what's behind this, this like pickle financing where like I just, I was shoving my backs around and found like a community that I thought was cool. Found the skillset that I kind of had like diced a bunch of things together and then just ran against the wall for long enough. So my skills actually got to a level where people wanted to pay me good money.
+
+Citizen Web3 
+Now, after listening to your story, I am sure that the word researcher applies even more now because all of your story, man, is about loving to research starting from your childhood, loving to go deep into things. And I mean, maybe the word research here connects semantically to the profession, people who are researching stuff and especially scientists. So maybe that was a little bit of a misconception there. But
+
+Boxer 
+And yeah, I've been with you ever since.
+
+Citizen Web3 
+What I'm trying to do, like, you know, sometimes we have, we have like validators, we have founders, we have people who like to research and people who like to go deeper into things, into consensus, into analytics, and they try to look at things. And I have a weird question for you because we started talking about pickles, you know, and I have a question for you about research methods and like, I wanted to go into it and, but, but I'm going to ask it from a very different perspective. That was once.
+
+when I don't remember how many years ago was this maybe like 15 years ago maybe something like this was this was before crypto I think and I saw I believe an article I believe it was on the internet and it was showing a correlation between some specific type of cancer and eating pickles and of course and it showed that if you eat pickles
+
+The chances of getting this specific type of cancer goes up by 5 ,000 percent. And of course, after giving all this data, the guy was like, guys, I'm fucking with you. Obviously, like the thing is, the real chance of getting that cancer in a person is so low that 5 ,000 percent is nothing added to that number. So all this story, this is just because of the pickles. But I want to go back to you with research and like crypto. So what, in your opinion, considering you have spent
+
+You've practically went, you know, the ideal, like, in my opinion, journey in crypto, you know, you made it yourself. You're like, you prove to yourself that you can do it. You prove to others you can do it. Other people saw it. They took it. Now, as somebody who went through all that, what should people, not even what data, but how should an average person today, it doesn't matter if they've been into crypto, like, okay, our audience might be a little bit longer into crypto than the average person, a lot of founders and stuff like that, but still,
+
+What is the approach, not what data to look for, but what is the mindset that you need to put yourself into to find the right information about the right thing online? Let's put it like that, without going into bias.
+
+Boxer 
+I see, that's a very tough question. Yeah, I mean, to some extent, like, yeah, like, basically, like, how do I make sense of the world in crypto? Like, how do I know what's like?
+
+Citizen Web3 
+For you, for you, for you, for you. What do you do?
+
+Yeah, well, in general, live information, information. I mean, I mean, crypto included, of course, in that. But when you approach something like you said, you know, we started to, you know, to look into mobile phones and technology. And I'm living in a village of 50 people today. The only person talking about. But it is it is still for me like the same thing is researching. You're looking for answers there for information where others people are not. How do you put yourself into that mindset of, hey, today or like Marshall? You said I was constantly martial arts for a year or so. OK, again.
+
+How does a person like, okay, boom, this is what I need and this is how I find it? For you at least, how does it work?
+
+Boxer 
+Yeah, it's an entire life spent on the internet. You kind of figure out. I think the most important thing is to figure out the right sources. So I think in the crypto context, this is what I can most easily speak about. There's like four or five different podcasts where I'm like, okay, these podcasts keep me up to date. I trust these opinions. I know these people are like legit people. I...
+
+Citizen Web3 
+There we go!
+
+Boxer 
+I trust their value calls and I trust their view of the world. But you can't just listen to one guy. There's people who just listen to BitBoy Crypto or to Richard Hart in 2022 and they're all bankrupt and that's stupid. You always got to think for yourself and you got to get this orchestra of different voices going for yourself. Whether you're researching crypto, and I guess sources, for me it's like...
+
+Yeah, I really like podcasts. Like the medium is just like very accessible where I can just like do my dishes or like do like, I don't know, eat breakfast or like do something, take a walk. and, and just like listen to podcasts. It's like really easy. It's kind of like passively information just kind of like does osmosis into my brain. Like I don't need to like intently focus on it. It's even though like some podcasts is like more complicated than others. Sometimes I actually need to sit down and kind of like make sure that I understand everything.
+
+But yeah, like podcast and like really curate your Twitter feed. Like if you're on Twitter a lot, everyone keeps telling me like my for you page absolutely sucks. And then it's like, how many people have you blocked? Maybe five, maybe 10. And it's like, bro, I can scroll through my block list for ages. Like, and there's like, I have like hundreds, hundreds of words muted. And it's like, you just like the algorithm just wants to fuck with you. Like it just wants to like keep your attention.
+
+But like, it doesn't know what you like and what you don't like. So like, you need to like tell, you need to teach the algorithm what you like and what you don't like. And the most kind of like strong signal that you can give it is just like, I don't want to see any of this. Like this just fucking sucks. It's like, like Ansem has been like a main character for NCT for like the better part of two weeks or like five, six weeks. And in the beginning I was like, okay, interesting. Like this guy is kind of, okay, he's like the Solana shot caller. Like, let's see what's happening. And like,
+
+I followed him and like, but now it's just like, he's, I don't know, man. Like he's just gone out there. Like he should go and touch some grass. Like he's just, and like, that's a mute. Like I just like, I'm like, I'm over this topic. I don't think like anything like productive or like fruitful will come out of this. It's just like, go to your muted words, put in an answer and it's like done. So like, you really need to like curate your information diet. I think that's like.
+
+Boxer 
+with anything with like, I really like nutrition. And it's like, dude, have you tried to look into nutrition? Like, like you go to five different people, they'll there's five different people will tell you five different like diets or like the ways to eat or like ways to like achieve like, ultimate health and like, whatever. And like, you just gotta like, you're gonna pick your poison, you gotta like, you gotta educate yourself enough so you can actually like discern like, okay, this is interesting, this is not interesting.
+
+And I think you always like, I always try to understand like the why behind things. Like I'm very, like very anti -authority, which is also like very like why I am in crypto probably. It's like, I don't, like, I don't believe you just because you are a professor or because you are a person with a like PhD in something. I believe you because I can verify the facts myself. Like I like, this is like bullshit. I always need to understand things from first principle and I have like a very hard time like even.
+
+I don't know, except for personal friends where I'm just like, okay, I trust this guy on the merit of his character. I just trust what he's saying. But with, I don't know, belief, the science, it's like, what science? It's really hard to make sense of the world, especially nowadays. And you really got to create your information diet and you really also got to watch out that sometimes I catch myself where people just shit in my brain.
+
+And it's like, if you're stuck on like, I don't know, like a Twitter feed that's not created for you or like, like YouTube shorts, whatever thing, or like, I don't know, like I see a lot of my like, I don't have Instagram on my phone anymore. But like scroll through your Instagram search feed and it's just, or like discover, however they call it. And it's just like, this thing just shits into your brain. It's just like, you don't have like, like you're too, like you as a human are too weak. Like you're.
+
+dopamine systems too weak to resist these things. And you really got to take care of yourself and of your information diet and you really got to create it. So yeah, researching anything, it's like start from first principles, really try to go deep. Make sure that your sources are sound and I don't know, a lot of times it's very hard. Not gonna lie, but that would be my approach or my take on that.
+
+Citizen Web3
+I totally, totally agree with you. Minimizing noise, concentrating, trying to find the right amount of, not the right amount, sorry, trying to find what connects to you, but removing the noise from it. I absolutely understand. I mean, I always try to, I mean, I'm also very anti -authoritative and our podcast has been sometimes a bit extreme, I guess at points, but I try, because I'm anti -authoritative, I try to like, even when I...
+
+I try, I'm not saying I'm a human being, so I make mistakes. And of course, when I speak with friends, I try not to make like the comments that are like good for me. But still, you know, when I see my friends sitting there with Instagram or Twitter, I try to say to them or like whatever, not Twitter is less, but Facebook, Instagram, say, try to find something that is going to bring you value. And if you got, if you have to scroll, try to find something on Instagram, for example, or Facebook, delete the rest of them.
+
+that you find, like even if it's cooking recipes, you know, it's something that is valuable for you and then keep on scrolling, you know, but at least do it with value for yourself because that endless stupid thing is really gonna kill the fucking brain. It does kill the brain in my opinion. So it's crazy. I absolutely agree with you, man. I have, I mean, there's a lot of questions, to be honest, I have for you, but like, I'm gonna try and like a little bit concentrate on what we talk about.
+
+You know, you have obviously went a lot and deep into DeFi analytics and, you know, like finding yields and finding TVLs and stuff like that. There is a huge talk conversation, endless conversations in crypto since 2000, I don't know, 12, 13, as I remember it, about distribution. What?
+
+is your distribution of tokens, you know, how, how is proof of work the correct method to distribute tokens from stake liquidity mining, I don't know, whatever. As somebody who looked at a lot of distributions, probably in their analyzing projects and stuff, you know, and looking like who has what and owns what. Have you seen any examples that you would say, hey, these guys have really made a different approach without, I don't know, that's not necessarily naming projects if you don't want to.
+
+Citizen Web3 
+But at least the methodology of, I don't know, for example, liquidity mining for me was a mind blowing thing that helped to distribute more evenly, not equally, equally is the wrong word in my opinion here, but evenly the tokens even. But what's your opinion? What's your take on that? And where do we go from here to improve it? Sorry, that's the second part of the question, distribution in general. Again, your opinion, not the solution for the industry, you know.
+
+Boxer 
+Yeah.
+
+Boxer 
+Yeah, I guess if we go through the evolution, it's like we went from most networks are POW to now most networks or like the blockchains are actually POS. And then there's like the single like threaded sequencers and everything, or like the single like entity sequencers. And I think in DeFi, we've kind of gone from ICOs or like in on -chain applications, we've gone from ICOs, which was like, I thought ICOs were fun.
+
+I don't know. Can't we go back to ICOs? It's like everyone should just like, can we co -locate in the Bahamas and all just like trade ICOs on a marketplace like a market square like in the center of Tartus? Like that was like, I don't know. I like that era. And it was like arguably more fair and like better distribution than what we're achieving today. Like I think like especially like, like let's quickly like we went from ICOs to liquidity mining and like DeFi Summer.
+
+Citizen Web3 
+I loved it!
+
+Boxer 
+to now like airdrops and it's like really, the airdrop meta absolutely sucks. I think it's like absolutely like value extractive for the industry. It's just like, like there's like very, very big farms. There's like a lot of automation. Like things don't really make sense anymore. Like what's the benefit to a project to like, there's a lot of farmers and like, we actually see this in Dune's user data. We're like,
+
+user data. Do you think there's that many DeFi researchers in Vietnam or in Indonesia? I have my doubts. I don't think there's a population of over 100 ,000 DeFi researchers in Vietnam. That would be odd. I love Vietnam. I've been there. It's a very nice country, but it doesn't strike me as the center of DeFi at the moment, even though there's actually a legit project building from there. But
+
+What I'm alluding to is there's ad -hoc farmers and there's the real ad -hoc farmers, which are just one person having 15, 20 different accounts and they will just manually actually take actions. And then they will try to simple a project that way. And sometimes it's hard to discover them. Sometimes it's not that hard to discover them. And they're all driven by a cabal of probably like a hundred influencers or something who are the ad -hoc influencers and they'll just do these Twitter threads.
+
+And then people just like really stupidly follow all the steps. Like we have this at Dune as well where it's like, we just have like random spikes where it's like, yeah, another Twitter thread of somebody like alluding to a Dune airdrop. And like, it just doesn't get anyone anywhere. Like these people are not like, are they users of Decentralized Fidget? Yeah, I guess. But like the utility for that, like they are purely driven by airdrops. Like they're not solving like a real problem in their lives or something. So like.
+
+What are we actually doing here? So like, does it live like the layer zero, like a drop is like ridiculous. Like people have been like, I actually think that, yeah, layer zero is part of the farmers. And like, that's, I think that's like, that's like, so value extractive. It's like you're taking from like the poor in this ecosystem, even so like, that's like, I don't.
+
+Boxer 
+Not going to lie, it's a reasonable go -to -market strategy. Somebody read the room and said, okay, we can earn money this way and we get our user numbers up. The industry is just not on a level of sophistication in regards to data or understanding context. We're like, we have a million active users on Solana or on Arbitrum. I don't know, we have a million short accesses per second, but it's like, what's the economic value of this? What problems are we solving? What are we actually doing here? All of these things don't really, really make sense. So...
+
+With that being, like, I don't know, the uni airdrop was like, that was cool because it was like, that was the first thing to do that and it was like, quite equitable, everybody got some money. It was like a big hooray moment for DeFi. But everything after that is just like, it jades you more and more away. I think with the Arbitrum airdrop, I really was like, not disgusted, disgusted is the wrong word because what do I care? But there was like...
+
+industrial like there was videos out of industrial farms in China where they literally had like, like these like big boards of phones, like these click farms, and they were just going through there and like collecting collecting the money and I was like, holy shit, like, what are we doing here? Like, this is like, what, like, what's the purpose of this? And it's like, I guess in the end, like the purpose is to decentralize the governance of the arbitrary protocol. So like, maybe we can stay in that example. And it's like,
+
+Who are the people who should govern the arbitrary protocol? Like that's a really hard question. And it's like in traditional like public companies, this is just like, okay, I can be an investor. Like a usual company just does an IPO. And then in that IPO, I can purchase shares and then I have voting rights, like voting rights due to those shares. But then there's also like investment banks or like hedge funds or big organizations or even like...
+
+I don't know, ETF issuers or like people who like ETF like people, like conglomerates of like shareholders who will just buy the token and then in the end it's like who like who governs the protocol is who owns the tokens and it's like we can't really do that due to like security offerings and whatever and like bells and whistles. So like it is really hard to like find reasonable like to find mechanisms.
+
+Boxer 
+But like what we're currently doing is yeah, you are like, basically what happens is like you have the good distribution for like 10 minutes and then all of the other farmers will have dumped their tokens. And then you are back to like, okay, like the hedge funds and the big DeFi wells own your protocol now. And it's like, what have you really achieved? Like all the DeFi researchers in Vietnam are not gonna participate in your protocol governance. So it's like...
+
+I really don't have a solution. I just know the current situation is like, it absolutely doesn't make sense. And all it does is kind of like it's regulatory, like smokes and mirrors where it's like, okay, like we can launch a token. I don't want to say the team got liquidity, but the teams also get liquidity as a byproduct. But it's on the path to decentralization. Sometimes the path to decentralization, like in the Arbitrum case, it's actually more like, I actually believe them of like, we want to make this like...
+
+we want to decentralize our sequencer, we want to decentralize the governance, like that makes more sense. Or in the Optimism case, where it's like, okay, we're gonna like, the Optimism one is actually like kind of more reasonable, where they're doing like the retroactive public goods funding, but they also had a bunch of airdrops, like, there's like, people are starting to like experiment, there's like, they are three or rabbit hole, which are doing like on -chain quests, but on -chain quests, like, the idea of this is very nice, but then like, it turns out this is just a tool to like, except like,
+
+you now have the airdrop threat guys on Twitter and you have layer 3 and Galaxy and Rabbit Hole and they're just like farming, they're just like posting farming recipes and they're actually checking on JD if you've done this. It's like, yeah, it's like the idea of this was nice, but like even like let's assume layer zero, like Rabbit Hole was like, yeah, now we're gonna decentralize the governance to like...
+
+I don't know what's the chain that hasn't have a token right now, like Linear or something. Let's assume Linear launches a token. That's like the consensus blockchain. Let's assume Rabbit Hole puts out like, I think they actually, like there's some like, I think Linear has like a product for this themselves where it's like they have a bunch of different tasks and like use this NFT marketplace and use the stacks and they use all of these things. And it's like, yeah, but like the same civil farmers will just use that. And it's like, is this really gonna, like that's the, like the, the, the,
+
+Boxer 
+CEO of Revitol, like Brian Brantlin or whatever, he's always like, this is like, airdrops are stupid, but like, use our quests instead. And I'm like, but come on, we're just going to do the same thing. And people are just going to like follow your recipes instead of doing random actions. Like, and now, like, I mean, like you could do micro incentivizations of like, okay, like, let's actually like get somebody to like use this NFT marketplace. Maybe they are sticky, but like 99 % of airdrop farmers are not sticky users. Like it's just, it just doesn't work like.
+
+And like in general, like we're building all of this infrastructure. We've built all of this stuff, but like where are the users, where are the actual good use cases? And like, I actually think that like the airdrop farming is like a huge problem for the industry because all the metrics are absolutely horrible. Like we have this in June where like if we get attacked, we are like, okay, bye bye, bye bye metrics. We're just flying blind now. Like this, this fucking sucks. Like we have a feedback board and like, I'm like, there was like a few threats need like the over the last few days. So like.
+
+The feedback board is just getting spammed with bullshit. And like sometimes there's like valuable feedback in there, but like, I, like, I got a filter through like 500 posts. Like you really think that I like take the attention to like really pay attention to like everything that I moderate. So like I might do the good posts and like, we have like problems checking activation and like where people like fall off in the, because they're like from the start, they're not genuine users. And like, that's the same for like all of these networks, all of these products, all of these protocols where like,
+
+In Web3, you actually have incredible rich contextual data on all the addresses because everything is public or pseudonymous. So you can actually track what somebody is doing across all the chains and across all the ecosystems. Are they a DeFi user? Are they an NFT user? Are they also using Zora? Are they on Farcaster? You can build elaborate social context. But because random actions, literally, it's like...
+
+Because people spamming blockchains and just producing garbage. I don't blame these people. Maybe even if I dropped out of university in Germany, I might be an air job farmer. It's a really, really lucrative business. It's almost like you're leaving money on the table, especially with the level of sophistication that us two have. It's like...
+
+Boxer 
+We're just like, okay, I'm not going to engage in this because I think it's morally kind of wrong or I want to spend my time in better ways. The ZK sync airdrop, as the time of recording, I think it's in the process or the allocations have been released a few days earlier. And it's like, I didn't do a single transaction on ZK. I don't have an allocation for that airdrop. I could have set myself a calendar reminder, just do that. And it's like...
+
+But so like, it's a very weird situation here. Like it doesn't make sense.
+
+Citizen Web3
+I'm the same man, so I understand totally.
+
+Boxer 
+Yeah, so yeah, I...
+
+Citizen Web3
+Ma 'am, no, no, go on, go on, finish the sentence. Sorry. I thought, I thought you were, you were making the, the poses. Sorry. no, no, of course. I have to be honest with you. I, I, you know, when I like, it's not, I don't think it's about finding the correct answer because I don't think distribution is very subjective, right? And fairness, fairness is subjective. So if I'm distributing apples or, or, or cows or cars or whatever, or tokens,
+
+Boxer 
+No, I don't have the answers. I can only talk about...
+
+Citizen Web3
+subjective fairness of my distribution is going to be only in my head. So I don't think it's possible to find this ever endless chase for the right, equal, fair, whatever. It doesn't matter if it's just distribution. Equal and right doesn't exist in nature in general. So I don't think... But yeah, but you mentioned one topic which I actually have and my team will kill me if I don't ask you that question because they...
+
+You have to ask him that. You have to ask him that. Like, OK. So I was actually recording with Francisco Cabana, one of the two public guys from Monero, because there's Fluffy Pony and there's Francisco Cabana. The DevOps, I called him. Again, I called you a researcher, so maybe he also doesn't like to be called the DevOps. So anyways, and we were talking about surveillance. And one of his sentences was kind of on the top.
+
+I like that he said it, you know, that one of the biggest threats for the industry today is the surveillance, on -chain surveillance analytics. So, how, as somebody who is in the middle of all of that, right? How do you, and at the same time you mentioned, you know, I don't like authority and the way you talk, you can tell that you're, you know, you have a pseudonymous at least, you know, you're somewhat private person.
+
+And here, you know, I'm being a bit of an advocate, of course, I want to give a reaction from you. But how do you find all that and how do you see the whole on -chain analytics as a... Yeah, I don't know, man. There is no particular question, but I'm just going to give you this information and yeah, whatever you feel about it.
+
+Boxer 
+Yeah, the situation is really untenable to be honest. Everything is so public. It's incredible how public everything is. It's like you have an open bank account. And for most people listening or for most Web3 native people, they probably have more assets in Web3 than not.
+
+So like to like actually have good OPSEC and kind of like...
+
+like divide the like because you want to have some public funds. Like you want to have like a POAPs and like collect NFTs and whatever. Like that's kind of social signaling. But then on the other side, you want to, I just want to like have a savings account or like do investments or whatever. And you want to just like, you want to divide those and like before 10 million cash like got whatever restricted or the US government was like sanctioned, I guess.
+
+It's actually a sub -sanctuaries list. The smart contracts are a sanctions list. But only on Ethereum. It's hilarious. They only on Ethereum and BND or whatever. It's like they missed the deployments and optimisms and everything. So like, technically you could still... It's so stupid. But yeah, with Tornado you could literally, you could kind of distribute those funds and you could be like, okay, this is my play money and this is my public persona money.
+
+And here I collect NFTs and I do all of this stuff or I do maybe angel investing as well. Or like I want to like I buy some tokens to show support to that ecosystem or like kind of like that, even though like nobody really looks at this data. It's kind of like you can like it's kind of a virtual signaling going on where you still do that, even though like nobody really looks at it. I feel like and then on the other side is you could have like your private funds and there's still ways to do this right now. Where you can.
+
+Boxer 
+Like you can just use a centralized exchange and use that as like a obfuscation mechanism. And then the centralized exchange knows what you're doing. And like they know the two addresses, so like they can make the connection. So it's like, if you want to do criminal things, like that's probably not the best way. I would generally advise doing criminal things. So like I don't have like a big problem with that. I think there is methods to like even piece that together. Like there's like advanced.
+
+I don't know. You can track people even through centralized exchanges and there's probably ways to completely avoid that. You can do such elaborate, you can go from Ethereum to a centralized exchange, then from the centralized exchange, you can first of all exchange currencies, then go to Solana, then go to Bitcoin, then go from Bitcoin to Ethereum. There's so many opportunities right now that...
+
+I don't know how chain analysis or like how Zach, like the web... How's that guy called? Is he called Zach?
+
+Citizen Web3 
+I think his name is Zack, I'm pretty sure, but I'm not 100 % Yes, ZackXPT, yes. ZackXPT.
+
+Boxer 
+Zach XPT? Yeah, XPT. I think that's missing. That's why it sounds like not familiar. I don't know how he does it anymore. It's insane. But I don't know. I think they're also using the metadata information of the IP address and all of these different things. But anyways, there's ways to stay at least pseudonymous. For 99 % of the population, you can stay anonymous. But like...
+
+work into a crisis to do those things is like so hard. So like that's, that's like where I'm like, okay, like we need, like if we want to get to like the next billion users, if we want to get to, to like that stage, we need to have more inbuilt privacy and we need to like actually find a way to make this more accessible for the, for the normal person. It's like every like form of security and like,
+
+Yeah, it's not really security, but like it has a user cost and like the user cost right now, or like obfuscation in this case, it's like it has a user cost and like the costs are so high right now. It's like, who's going to do this? Like when tornado was still alive, there's also ways to reject tornado, but it's like, it's way, or like it's still alive, but like now it's like, if you use it, like no centralized exchange is going to take your funds anymore. And like you have some explaining to do and it's like really annoying.
+
+Like one of my addresses, like one of my really old addresses actually, I was using tornadoes. So like now every time like I've been bad for like getting air drops and stuff. I was like, you've used tornado in the past. Like, you, you, you must be some kind of criminal. I'm like, no, I was just a privacy conscious person. so yeah, I think my summary here is like, it's surprised, like it's really frightening actually, how like transparent everything on chain is.
+
+It's like, if you give me like one of our developers just signed up for Farcaster. And from that, I was able to track his entire portfolio because he had made one mistake of like, I'll just send some gas money to another account. And then you find that account and you're like, there's more connections here. Interesting. And then you're like, okay, I now see your entire portfolio. You need to be so vigilant and you need to be so like...
+
+Boxer 
+on fucking on point in order to preserve your three privacy. And that's just the on chain aspect. I'm not even talking about like, rabies probably tracking you, MetaMask is definitely tracking you, ledger is tracking you. All of these, like all of these and like your centralized exchange kind of knows what you're doing. It's really hard and like we need to make it easier for users to at least say pseudonymous. I really like the pseudonymous aspect of this where it's like.
+
+I as a data person, I'm obviously like, okay, like we can actually make sense of all of this data and like we can all use it. And like, I don't know, it's like, it's marketing the most valuable use case, probably not, but like product iteration and all of that stuff. It's like, it's interesting. And like, I think in the end, like data is a way to shape your view of the world and the more accurate, like sense of the world, the more people can do the faster we are going to progress.
+
+as a space, as a civilization, as whatever, where it's like we break down the barriers and it's like, if you only have like anonymous data and if all of this data is like locked away, like we're losing something that's like special here where it's like we can actually iterate and I can learn from the mistakes of others and I can just, like I can verify everything independently and all of these like good attributes that like the openness of Web3 data has at the same time.
+
+Citizen Web3
+I can foresee that in 10 years, you know, the token police, you know, are you hiding tokens under your floorboards? So yeah, but no, it's fucked up. To be honest, it's like, I don't even know what to say. I mean, I can say a lot about it, but I don't really know what to say because I don't know a solution and I don't think like it exists. I don't think there is a solution. I mean, unless you, I don't know, go.
+
+sell all your tokens, I guess, right? Like for fiat money and then take that fiat and like reinvest it somehow through a centralized exchange and then like distribute it on private accounts. I mean, I guess that could be like somewhat working, but I'm not sure about it. Yes. Yes. Damn it. Damn it.
+
+Boxer 
+Yeah, but even then the centralized exchange knows what like, I guess, like, what you what you could do is like, you could go to some, like you can sell like in like, I think even in Istanbul, there's like places we can just walk in, like, say, I want to sell one Bitcoin, they'll just literally give you cash. And then you can take that cash. yeah, everywhere. It's like, you just got to find some not so attentive governments that allow this to happen.
+
+Citizen Web3 
+Even Croatia!
+
+Boxer 
+And then you can walk with that cash. You can walk to maybe three doors down and then those guys will like take your cash and give you a Bitcoin in return. And then I guess it's like, you can also like do relational mapping. So like maybe if you wait four months and then maybe change cities as well, then you're like finally private. So like it is very hard. And like there's ways definitely, but like for the follow like...
+
+everyday user, like even like bridging through all of these different chains, like the data indexing is like so bad for some of them that like, if you bridge to meters and then from meters to fucking like Boba and for Boba to the like whatever, get coin like regenerative chain, like some like at some point somebody's gonna lose your track just because there's no ether scan like Rockstar fucking sucks on that chain or like Dune doesn't have all the data channel system like you can kind of like run but like that's only a matter of time until somebody catches up.
+
+you until the analytics tools are caught up to all of these chains. But for the moment, you can kind of run away, literally run away where you're just doing the most random stuff and people will eventually lose your tracks.
+
+Citizen Web3 
+like we said before we started recording you can invent anything but a five dollar wrench will will help to solve any hiding tracking records I mean solves anything man let me quickly jump into a quick blitz with you three questions I'm going to do a quick one and you can answer slower of course it's not like the first thing that comes into your mind can be up to you and three bit weird questions first one give me one
+
+book, movie or song that has throughout your life had a positive influence on you? I told you it's going to be weird.
+
+Citizen Web3 
+It's gonna be one movie man that you like. Come on.
+
+Boxer 
+No, I'm just thinking of like the thing that most like that has the most it like kind of it kind of it kind of changes from time to time. I think last last winter I read a book. I don't even know how the book is called anymore, but it taught me to if I compliment something to not say good job, but rather to say I love this as a I statement because if you say good job, it implies that I have the authority to judge your work.
+
+Citizen Web3 
+to the most but helps you.
+
+Boxer 
+And by saying, I love this, it's like you're not doing a value judgment. You're just like, this is my per like, this is like, I don't know. I'm not, I'm not kind of like saying that I'm like on a higher level than you. I can't judge if this is a good job or not. Like I'm just saying like, I love this. And like, I think that's, that's like really shaped a lot of my communication where it's like, it's kind of like more like I communication rather than you communication or like very, very value driven, value judgment driven communication. And I, we can put the book.
+
+I'll find it but...
+
+Citizen Web3 
+I don't know the book name, but I can definitely help because there is show notes here, right? Non -aggressive communication is the style of what you're talking about. There is like a whole field of study called non -aggressive communication and it teaches you to talk in I sentences and like try to use like, but if you do find the book, please send me and it will definitely lead it to the show notes. Okay, go, go, go, go, go, go.
+
+Boxer 
+Yeah. Yeah, I'm, I'm generally kind of very off like therapy talk. Like I think like we've like, therapy fight too much of society. And I think sometimes like, it's just like, go out and fucking solve your problems, like no amount of inner work and fucking save your life. Like, I feel like I have talked to people who are like, who have been in therapy for a long time. It's like, they just like kind of like, okay, my life fucking sucks. But like, I'm gonna, I'm just gonna like align my like, inner work to like, like this life and like, that's gonna be all right. I'm like,
+
+Citizen Web3 
+Yes. Yes. Yes. Yes.
+
+Boxer 
+You're like, this is not like you're like swaying away from what you should be like this weird like you've you've manipulated yourself into believing you live.
+
+Citizen Web3
+I can relate to that. So I'll skip on commenting. Second question, second question, second question, man. Give me one or share one motivational thing that helps boxer to keep on digging into information, keeps on trying to find new interesting things, keep on being that person.
+
+There is the only person up to 50 kilometers that can do it. You be you, or something motivational that keeps you being you.
+
+Boxer 
+I really like to create and in order to create you need to understand things deeply. So like every like you can't create cool things if you don't understand what the fuck you're on about. Like I really resonate with artists who've like you can tell like they've been doing this since they're child. They have like traversed a million different variations of whatever thing they're doing. And now they're like, like.
+
+Good art is always like the combination of like a lot of different influences. Like we're always like kind of building on top of what other people are doing. So like, in order to create, you need to understand. And I think like a lot of like, current life is like too little creation and too much consumption. And like people should create more like this. Like I only moved into this place like three weeks ago and like, I have the money to pay people to like...
+
+paint my floors or like paint my walls and like lay new flooring and like do all of the stuff but like I would rather like I've created this I can fix this myself now like I know I know how the pie is made and like I think like too many people are like too comfortable in their life and they're like no this is gonna be work but like I think like that's actually where things get interesting I'm like okay like how how the fuck does like laying flooring work like
+
+I was like the piping in my bathroom, but like I didn't do the piping like that's like too advanced where like there's like a certain threshold you need to find of like what makes sense to like build with this buy with consume with this great but like a lot a lot of modern life is just consumption like you go out and you buy stuff and you I don't know like so much of life is just driven by consumption and like that's like a fleeting kind of like feeling of happiness but like the like you kind of like every time I walk through my flat I'm like damn I've
+
+fucked up that piece of floor, but like in general, this is really nice. And like, it just gives me like a longer sustained happiness other than like being like, okay, this is nice now. It's like, I don't know, like, yeah, creation makes me happy like long -term.
+
+Citizen Web3 
+I can totally relate. I can totally relate to that, man. I think that, I mean, I have, well, I don't want to like, you know, talk about certain things maybe because they're too private, but for sure, like I think doing things, I mean, I spend at least one day a week gardening. I have over 200 plants in my house and like types of plants. So there is actually more, but you know, there's like 30.
+
+Boxer 
+Nice.
+
+Citizen Web3 
+Five types of vegetable fruits growing on a big terrace, you know, and like I spent literally one day from morning to night in a week. Just garden and if I miss a day, then I have to spend two or three sometimes. But like it's not because I cannot have somebody else do it for me. I can't, but I don't want to. This is what brings me happy. It's my meditation. It's my like, yeah, totally, totally. Man, just just before you joined, I did see on Twitter a guy.
+
+posting an image of floors that went wrong after it did it himself. I hope it was not you. So last question, I promise. Last question, last question. Give me one character or person dead or alive. They could be a developer, made up actor, I don't know, Disney character, person from your life. That is not your guru because I personally don't believe in gurus and I don't think it's a correct thing. But...
+
+somebody who positively influences you, who is not a negative influence in you throughout your life. And sometimes when you're stuck, you're like, you don't think what would they do, but maybe like, okay, they could help me right now, at least by just being themselves. Is there such a person or a character or a personage? I don't know what's the right word here.
+
+Boxer 
+Yeah, this goes into a lot of different directions. Like there's like people who inspire me intellectually. There's people who like just motivate me personally. I think in my personal life, it's my big brother who's like, he's really like just shaped how I am. He's like, he's like an incredible workhorse. He just gets shit done. His like sense of agency is something I aspire to. It's like, he's just like, we're going to do this. And then like, it just gets done. And it's like amazing.
+
+Citizen Web3 
+Donald Duck.
+
+Boxer 
+witness that and like it's always been a person I can rely upon who's helped me through like personal crises or like throughout my life, like shaped my life path quite significantly. So like yeah, big love for my big brother. I probably tell him too little how much he means to me.
+
+Citizen Web3 
+Nice man, I like it. Thank you for sharing that by the way. Boxer, thank you in general for all your answers and for all there's a lot of advice in this episode guys. So for the listeners out there, try to look for it. Of course, everything we mentioned will be in the show notes. Once again, Boxer, thank you for your time. Please don't hang up just yet. This is just goodbye for recording. So goodbye everybody.
+
+Boxer 
+Bye everybody.
+
+Citizen Web3 
+Bye man. So.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 
+

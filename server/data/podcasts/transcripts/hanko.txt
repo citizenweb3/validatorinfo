@@ -1,0 +1,375 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/hanko
+
+Episode name:
+Beefy Hardware, Decentralized Finance and SEO with Hanko
+
+Citizen Web3 
+Hi, everybody. Welcome to the new episode of the Citizen Web3 podcast. Whoa, I don't know what happened there. Let me just do it again. Sorry. Let me do it again. Hi, everybody. Welcome to a new episode of the Citizen WebTree podcast. And I have Hanka with me today from Bandito Dao. Hanka, hi. Welcome to the show.
+
+Hanko
+Hay man Thanks for having me.
+
+Citizen Web3 
+Yes, glad to have you on. So now that we figured out before the recording, the weather is not too cold, not too hot. I'm going to ask you, are you the second time? And in that, are you? If I can please, please, please ask you to introduce yourself a little bit more in detail. Tell me and the listeners everything you know us to know about you. How did you get to Web3? What are you doing? And anything else interesting, you know, people to know about you, of course.
+
+Hanko 
+Sure man. Yeah, my name is Hanko. I've been in the Solana scene since beginning of 2021. And then I started running a validator shortly after that. I started playing around with launching a validator, I think like April, maybe like summer, summer 2021. And then, yeah, I ran a validator by myself for a few years and now run it with Bandito DOW. I'm sorry.
+
+Ran my render by myself for about a year and now I run it with bandit. So it's been a few years overall. Prior to this, did affiliate marketing and I still do affiliate marketing and SEO stuff. So I've always been kind of chronically online. And then early on that, you know, 2020, 2021, I started hearing about Solana and getting really interested in it. And yeah, started a validator and that's, that's kind of what I do now for bandito dial. And we're.
+
+yeah, so we have about a hundred thousand soul sticks right now. we've been doing really well. early on when I started the validator, it was, you know, like I said, I started it by myself and, originally like I got into Solana early and, I had a good amount of Solana that I bought at like eight to $10. So, I had about 300 Solana that I bought and early on, I just really wanted to run a validator. got super invested in it.
+
+And I didn't realize how much Solana it would actually take to keep a validator going up. So over that entire like first year that I was running it, year and a half, I burned through all of that 300 Solana just in voting fees. And I just assumed that like, if I got a validator running early on, that like people would just stake to the validator node and it would be profitable. Right. And like, I knew that like I had to get to around 50,000 Sol stakes. And I did briefly, but like,
+
+Ultimately, like it didn't happen fast enough and it wasn't I didn't have enough momentum by myself to to keep it going so Eventually, you know, like I've been in bandito Dow probably six months at that time Bandito Dow is a sub Dow of monkey Dow which is like probably the largest Dow on Solana And we are the monkeys with the sombreros. So anybody with a sombrero attribute Solana monkey business can get into bandito Dow
+
+It can be a generation two or a generation three. doesn't matter. And so what happened though is I was in Bandido down and I make this Twitter post about just in general, I got to shut down my Solana validator because I'm running out of money. like, so also like, should mention this Solana had ran from $8 when I got in at 2021. It ran all the way up to like what 260, I mean the all time high. And that's I was running my validator all the way through then.
+
+And when you run a validator, it's like a double-edged sword because it takes Solana to run the validator. like when it, that means your fees in USD are high for the day if Solana is up, but then you're also making more when you're profitable. But when you're not profitable yet, those fees adds up, right? So Solana had, I had used all this Solana that I had, and then Solana also tanked through the FTX and the SAM stuff. And so it was all the way back down to $8. I just was so tapped out. You know, I had burnt all my soul.
+
+Hanko 
+I have this huge, like I couldn't afford the thousand dollar a month hosting bill. And, you know, I was just, I just kind of thought it was over. And, I posted about it on Twitter and kind of explained what had happened and how I couldn't continue doing it. And that's when people in Bandito Dow started to reach out to me. And so I think it was J five and, Lieutenant lollipop were like the two big ones. They reached out and they were like,
+
+Like how much soul do you need to keep this going? And like, how much money do you need? Like you're in the, you've been in the Dow like months and months, like how do we get this to continue? And they, they basically, I told them just straight up, like if you want to be profitable from day one, we need about like 5,000 soul self-staked in the validator. And then like, I need like 10 grand upfront to buy another year hosting. And so like, I just kind of threw it up there thinking like then.
+
+probably not gonna happen. And they were able to coordinate a bunch of other guys in Bandito DAO. And I think the way that we did this is a really good model to follow. But essentially what we did is we started a council on Bandito DAO, the validator council. So we decided we got to raise this 5,000 soul from within our existing members. We're gonna open up slots at 500 soul apiece.
+
+And people can buy a slot or two slots if they have that kind of soul. And that basically is just going to be self-staked in the validator. And we're going to keep this locked for like a year and see where it goes. And we had a few guys, a few like real big soul ballers step up people that were like buying soul at $8, $10, $12. And we were able to get 5,000 soul for self-staked. so that's when, so we relaunched just immediately. We rebranded.
+
+to from what I was doing it before, we just rebranded it as the Bandito DAO validator. We just kept the same identity and everything. And then we just started, we started the grind and like early on we were profitable. We were profitable enough to keep paying for hosting. But we knew we had to make some changes if we were gonna like take this to the next level. So like one of the big changes that we made early on is we decided that we were gonna get into the.
+
+Hanko 
+Solana delegation program. like prior to this, was doing it all myself. this was when us residents just couldn't get in to the foundation program. Like they just wouldn't delegate. If you were in the U S, they changed that requirement, probably about a year ago, I think. so once, once they changed that requirement, we, applied to that and, we were able to get through.
+
+And basically that involves running a test net node as well. So we expanded the operation, got a second node to run test net. then that's when, and by doing that now Solana matches our delegations one to one, up to like a hundred K so it's been huge. know, so we, yeah, Bandita DAO helped me. They picked, we picked it up. We've had some guys over, over the time period who've needed to pull their investment out, which has been fine. Like we've been able to continue.
+
+moving forward. But we still have the council and I manage the node. going back on like using this as like a model for DAOs, know, originally, I've been very blessed. I was able to contribute a good amount of soul and buy in financially into the council. And like, I've always wanted to do that for myself because I'm a big believer in holding and staking soul just in general. So I have a financial slot in the
+
+in Bandito DAO, but I also have a management position where, so what we do is we like as shareholders, we get our original shares every month. We just do a payout of how much soul we made, but we also give a percentage to the DAO, which, you know, the DAO just gets for us using the Bandito name and, know, it's we pay out, you know, so now the whole Bandito DAO has a treasury that can be accessed and it's like worth like $70,000.
+
+It will be used at the same people to break point. then, as a manager, I also get a small percentage of the proceeds as well. So I think it's a good model for like DOWs who are going to be on Solana and they don't plan on like bridging to Polygon or whatever. If they're committed about Sol and they want to stay on the chain, they're really here for the tech. It's a really good way for a DOW to like invest in the community and also add to their own Sol bags over time.
+
+Hanko 
+So yeah, I'll let you ask more questions here, because I feel like I've been rambling quite a bit now.
+
+Citizen Web3
+No, no, it's good. It's good. This is a good story. So first of all, let me say that it's always cool to hear like a success community story because it sounds like, you know, the community was involved and like, you know, you were
+
+Hanko 
+You cut out there for a second, sorry.
+
+Citizen Web3
+Sorry, let me just repeat that I was saying. So first of all, I think it's always amazing to hear like, you know, a success community story where, you know, you had trouble and then a community came in and this is cool. I think that's amazing. And I have more questions on Bandido DAO, the model, but I want to ask you about 2021. So you mentioned that 2021, you you got into the Solano scene and then you started running a validator.
+
+But usually, usually, at least from my knowledge, my perspective, the jump doesn't happen in a day, it doesn't in a week. You don't just like, here's crypto, here's my validator. What pushed you? What pushed you? Tell me, come on, I want to know.
+
+Hanko
+Mm-hmm.
+
+Hanko
+bro.
+
+Hanko 
+Yeah, that's a, that's a great, that's a great point. It's funny, man. Like I, I told all these stories so many times. It's like, don't even remember sometimes to like even explain all this stuff. So like the first year, like when I say I started a validator, man, like you gotta understand, like I'm a college dropout. I, I don't code like I don't, I'm not a pro. You know what I mean? Like I use windows, I use Mac. I have an iPhone. Like I'm not like the most crazy like coder elite.
+
+guy in the world. So basically, heard Anatoly talk about Solana on the Solana podcast. Back then, think the podcast was called No Sharding, which they quickly got rid of because it was just the funniest thing for a podcast. So anyways, I was listening to the podcast episodes one and two and listening to Anatoly explain what Solana is. And that was the first time for me that I actually was...
+
+got excited about crypto. like, you know, we had like the 2016, 2017 cycle and like I had a lot of friends that were into that stuff. But like before hearing that podcast, I didn't really buy into the whole crypto thing. I'm like, okay, maybe Bitcoin store well, but like ETH and like you're trying to do smart contracts and dapps, but it's like not, it's expensive and like it's slow. Like I don't see it like really working. And then when I heard about Solana, just kind of this whole paradigm shift on how the blockchain works and how just how it makes it
+
+insanely faster and cheaper than what we're used to. I got really excited and I was like, I want to do this. So I'm like, well, how do I mine Solana? Right? Because remember, ETH people used to mine on proof of work. And I figured that's where I would start, to buy some graphics cards or whatever. And it's like, you don't actually mine, right? You run a validator that's just constantly validating transactions and it's a proof of stake network. So I had to learn all this stuff.
+
+But then on top of that, I didn't have that technical experience. I didn't have a whole lot of system admin experience. I certainly didn't know Rust. I hadn't even seen Rust. I had to learn everything. I had to learn Vim versus Nano. I had to learn just basic terminal commands and navigating Linux. Back then too, when I started all this in 2021,
+
+Hanko 
+You know, it was funny, like there was no real documentation for how to run a Solana validator because it was still a relatively new thing. And what I quickly realized is like the people who were really, really into the scene were like people from like Alameda and like people from like these huge tech firms that were like, they understood the tech and they were like dumping millions of dollars into setting up servers and then running validators and like taking that money and trading. They were like so into this. And so I realized
+
+But what I realized there was like all these smart people that were like saying the kind of stuff that I heard on that first Solana podcast, they were all doing this stuff. And so I saw people like, like Zantetsu, like Lane, like there's a, there was endless amounts of them. And some of them weren't, they, those guys were pretty nice to me, but I noticed that like a lot of people in the community were like, they weren't like, they just weren't, they weren't incentivized to like help a newbie out. You know, they had too many.
+
+When you have like a discord of people coming in like hey, how do I also mine Solana? They're like dude. They're like we can't help you right so like I realized that I wasn't gonna get a whole lot of help from those guys and like the Solana discord and that was fine, right like I realized I had to chew my glass and like earn my stripes and stuff and so what I did was I started going to hacker houses and I went to one in Los Angeles
+
+God, I can't remember which one it was, man, but it was one of those early ones. And that was really cool. And I met Raj out there. I like set up my MacBook. It was actually funny. Raj was walking by with, God, who was it? It was like one of the early, early NFT guys. I just, sit down, I was just blown away that I saw Raj. I was like, holy shit, that's the other guy. And I just, I'm sitting there and I'm like,
+
+Yo Raj, can I have a picture? I'm starting a validator. And he just like stops what he's doing. He's like with his like, you know, his whole entourage and he like stops and turned around. He's like, yeah, come here, take a picture. So I got my picture with Raj that day. And I literally bro, like I would set my MacBook up in these, with these, the monitors that they have at these hacker houses. And like, by the way, if you haven't been to a hacker house, I highly recommend it. Like it is such a great time. And you can learn so much.
+
+Hanko 
+So I would plug my MacBook in and like I SSH to my server. I'd pull the terminal up and like this was in the early days. Like I still didn't have the validator running. So like I would like try to follow the docs and like break it. And then I just leave the error on the screen and I would go walking around the room and I'd be like, Hey, do you know anything about solana validators? Or do you know anything about rusts like, do you know what this error means? And then like, or like I'd ask somebody if they knew somebody and then like I would.
+
+Somebody would finally, you know, somebody randomly walks up like, Hey, I hear you're on a validator. You know, they're usually like, yeah, I do. Great. You want to go look at this error on my screen real quick? You know, see, and, that's literally what I did, man. And, I didn't even get this, the validator running that first hacker house. I went to another one like months and months later, maybe even like six months later in New York city. I mean, my buddy drove up from.
+
+from South Florida, we rented a minivan and drove all the way up to New York City. So was me, my other buddy Sammy, and these other two guys. And so there's four of us in this minivan. I think we drove like 18 hours up to New York City or something. And we did the same thing. Sammy ended up helping me a lot. And I can't remember exactly what day it was, but eventually I had a working validator, right? And then that was like the first big thing. And then it's like, okay, it's running, but then it's like,
+
+it's got to be profitable, you know, so then like that's that's was the second challenge that I didn't even realize I had yet. But yeah, man, it was a lot of fun. It was those early days were a grind. And like if you but you know, I'm a big believer in myself and like if there's something that I'm passionate about and that like I want to do, I don't feel like there's anything out there that I can't learn. if it's out there and nowadays, it's much different, right?
+
+Nowadays like you have chat GPT. We have more people running validators Endless the resources are endless now compared to what they were when I started So it's a much different story and people can actually do this stuff, you know, pretty easily now so
+
+Citizen Web3 
+Let me ask you a bit of a strange question, but I think you're the perfect person to ask that. So as somebody like go back in 2021, know, you're in a hacker house, you're kind of trying to find what to do with the validator. You're asking people how to mine Solana, whatever, it doesn't matter. But what did you think after?
+
+Hanko 
+Hmm?
+
+Hanko
+Just to clarify, I wasn't asking people how to mine Solana after I learned how to Solana work. But what I'm saying is there are still noobs that come into the Discord and that say that kind of stuff today. I'm sorry, continue.
+
+Citizen Web3 
+I'm sorry. I'm sorry. I'm sorry. I'm sorry. No, no, no, no, no, no, no,
+
+And it's very hard for me to judge how difficult is the onboarding process. It feels sometimes very easy at this point. Sometimes it feels very hard when something breaks. But I want to, like, from your side, from your story, after like, you know, you had all this, like, people, some people answered, some people didn't answer. Like, do you think that the journey right now for a normal, for a normie into the...
+
+Web3 world and I don't mean just buying and selling tokens but into becoming a validator, a miner, doesn't matter. Is it difficult? Was it super, super, super? I don't know. How was it for you?
+
+What did you think after, I mean?
+
+Hanko 
+So like I was saying, yeah, so after I got in and I started, I mean, let me just be clear, dude, like me running this validator is my dream job. Like this is the best side gig in the world. Like as of right now, like it's not enough income to like just for managing it that I can just do this, right? But like when I started for sure, there was like, I would hear about these people and these nerds out in like Boston. I would have like 10 validators and had like,
+
+ran out and like raised money and they were killing it. So like, that's kind of what got me inspired. But like the thing is, is like, I really do believe in the chain. I believe in Solana. You know, I really don't follow other blockchains. I don't even own any Ethereum. You know, and I've owned very little Bitcoin. Like I really am kind of all in on Solana. I really do believe in the tech. But like running, running the validator is like the best side gig in the world. Like nowadays it's much easier to get it started.
+
+And it is kind of a fun side hobby to do. Like it is profitable, but you got to know what you're doing and you got to do your research. You know, back then, like you could do your research, but you could only learn so much. Like there wasn't, there wasn't like people out there who'd like encountered certain server configurations that would like mean that like that, like there wasn't like stack overflow, like threads out there with like what, you know, common issues, right? So like,
+
+I don't know, man. I think people should get involved if it's something that interests them. Web3 is awesome, but yeah, absolutely.
+
+Citizen Web3 
+I understand.
+
+Citizen Web3 
+I'm trying to paint a picture of how, because my belief is that it's not difficult if you want to achieve it. And that's basically what you're saying. I have an interest, the information is out there and I'm kind of going there, I'm getting it. And I think that's how it should be because sometimes people say that it's impossible, and I don't think there's nothing impossible, right? It's just a matter of resource and desire, right? So I'm trying to get it. But I want to, you said, you kind of told about,
+
+how the story started and what happened during the story. Why? What was the reason for later? I I hear the side gig, hear like, believe in the tech, but what's your story with it in five years? Let's say it becomes profitable and you keep on expanding your horizons. Why? What's your end goal? Where is it going to go?
+
+Hanko 
+That's the most exciting thing, right? Is like, don't know where, like we don't know what's gonna be built on Solana, right? That's the coolest thing about it is like Solana, I look at it as like kind of like a blank canvas. And, you know, I thoroughly believe like if you were able to buy Solana when I bought it, hold it all the way up to 260, hold it all the way down to $8, hold it all the way back up. At this point, like nothing's gonna shake me out. So like, I feel like...
+
+I feel like I've gotten the worst out of my way, you know? And now it's just kind of just like, let's see what gets built on the chain. You know, at the end of the day is like, think that blockchains have a really good use case. I really do believe that Solana can be used as a blockchain that can power like a global decentralized finance system. And just the fact that so many transactions are happening nonstop on the Solana blockchain.
+
+It just fascinates me, right? And like, know it's like, it's like, understand it's like the tech, but like, what's next? It's like, you know, I'm, I don't even know, you know, that's the coolest part is like as a validator, like I'm, I win all, all day long, as long as there's transactions, as long as Solana is being used, the validators get compensated for, for, for the work that they do and the risks that they take by running the node. so
+
+It's cool. It's like a side gig. It's a hobby for me, but it's also like I'm building my Solana bags long term. And like I want to hold, you know, I want to hold a thousand, two thousand Solana one day, you know, and like I think Solana will be over a thousand dollars a day. And, you know, so like I have bigger things that I think it's going to go to. But in the meantime, it's a lot of fun and you get to be involved with the community. You get to, you know, contribute to the blockchain that you're telling everybody about that you really do believe in.
+
+And you're also generating revenue for your Dow. so kind of everybody wins and, the people who are, who originally invested the 500 solar piece to, get us off the ground. like they still have that 500 Solana, but like they're a return on their investment is much higher nowadays. And had they just stake that Solana natively or thrown it into a liquid staking token, like an LST. so everybody that has been involved with this node.
+
+Hanko 
+has benefited from this entire process. And it's just been a lot of fun and along the way. So yeah, it's just been great, man. Like I said, it's a shiny spot in my life. It really is a bright spot in my life.
+
+Citizen Web3 
+Tell me about the model, more about the model in simple terms, Bandido DAO. I'm going to be honest, I have never heard of it. I have had previously Solano validators. Over the past half a year, I've started to invite more Solano validators. They haven't spoken about that, neither Monkey DAO nor Bandido DAO. I'm not very familiar.
+
+Tell me about the model a little bit. How does it work with the validators investing, returning? Like, what's the deal there?
+
+Hanko 
+So just to be very, very, very clear, MonkeyDAO runs a validator and we have nothing to do with it. And like BanditoDAO is completely separate. So I can't speak on their model, what I can say is that BanditoDAO doesn't use DAO funds, didn't use DAO funds to start the validator. And we think that this is very, very important. We have other things that we do in the DAO. And I'll give you another example.
+
+bandito Dow has bandito stables and we had, that's a, it's, have you heard of photo finish? the, yeah. So it's a digital horse racing game for people listening who haven't heard of it. It's sponsored by the Kentucky Derby. And essentially it lets, you buy like NFT horses. can breed them. You can race the horses. You can bet on races. You can race your horses and like when they win, you make money. There's, there's a ton of cool stuff you can do in the game. And it, you know, it's, it's surprisingly fun and it's been popular, right? And.
+
+So about a year ago, we started a stable in photo finish and we did the same exact model that we did with the validator. We did an initial raise. So we didn't use Dow funds, but we went to our community and we said, does anybody want to throw in money to start a photo finish stable? And we did the same thing. We said, you can do increments of $500, as many slots as you want. And then we'll like cap it once we think it's big enough. And we ended up raising like,
+
+I think it's funny, like I think it was actually like $69,000. But we ended up raising that about 48 hours amongst our members. And then we did the same thing. So we said, okay, we're going to give, I think we do 5 % to the manager, the guy who runs it and he's a bandito, like an OG bandito as well. And then we're going to do, I think 20 % goes to the Dow. And then the remaining 75 % is going to get pied out the holders every like quarter.
+
+And so we've done this for a year and I think we've had like three or four payouts. so every single holder has already been made whole a hundred percent. Everybody's made their money back. Whether you put in $500, whether you put $5,000, one slot versus 10 slots, it's the same thing. So that's the same approach that we did with the validator. We didn't say like, you we did an NFT and like we sold all of them and now we have, you know, $5 million worth of Solana. Now we're just going to throw in a validator.
+
+Hanko 
+Like that's not what we're doing, right? we are the reason why we're successful is because the people who were involved with the validator are invested in the validator. The people who are involved with the photo finish table are invested with the photo finish table. And whether you want to be invested as a manager or as a shareholder, either way, the Dow is going to win either way because the Dow gets a percentage of both of those ventures. And in the meantime, the Dow has a thriving discord where we talk, we share plays.
+
+We have a whole channel for the horses. We have a whole channel for the validator. Every month we show the validator report. We show what's been contributed to the DAO. It's great. I think every month the DAO gets around 10 sole just from the validator alone. Long story short, that's why I think the way that Bandito DAO does it is a good example. I'm not going to speak on others, but...
+
+not everybody shares the same mentality as us there. Or maybe they do, but they haven't acted that way. But as a DOW that started with nothing, and we wanted to really grow this from the ground up and just continue to run these, continue to all be involved in Solana, but continue to do these kind of plays in Solana, we're all kind of sticking around. I've been in Bandido now, DOW now for, I don't know, I think it'll be three years in December, officially.
+
+And that'll be in like, I've met some of my best friends there, you know, like some of these guys that like, you know, like I know I could call them if I needed something. I know that like they're there for me. I'm there for them. Like they're, developed into like real friendships. And, you know, that, that's why I say doing what I'm doing and that that's why I feel so invested in the validator, and the Dow in general, you know,
+
+Citizen Web3
+It's amazing. think it's awesome. I saw the other, when was it? don't know when, maybe last week, I believe. It's pitch by Mustop Murad. He's like a famous analyst in, yeah, you heard of him. Yeah. So, and he did like a good
+
+Hanko 
+Yeah.
+
+Of course.
+
+Citizen Web3
+Yeah, a talk on meme tokens. And he was trying to argue that the value is exactly that what you're talking about. That is the utility, not just the value, it's the utility. It's that belonging. It's that connection. And I think it's as much as I might not agree with everything, you cannot argue with that. You know, it's very difficult to put an argument there because I'm the same and I am in the same boat and I felt it and I know it. It's fucking awesome. Yeah.
+
+What I wanted to mention though about when you were talking about the Bandido DAO is that I wanted to ask you actually, I mean, I know you said you're concentrated on Solana, but I can tell you that outside of Solana there are, validators are trying to do different launches. Mostly it's a very like, you know, one man kind of or one company entity. So it's very cool to hear about what you're saying. Is that like in Solana, this is the question on Solana, is that a widespread
+
+practice to kind of dowels to launch validators or invest into validators or similar things.
+
+Hanko 
+It's becoming more more popular for sure. Yeah. And I think, I think the Solana Foundation has done a great job with encouraging communities to run validators. So they have like the delegation program, but I will say like, know, not to tune our horn too much, like Bandito Dow really did kind of pave the way as far as like a homegrown small community ran validator.
+
+that started it from scratch and is using the validator as a tool to build the Dow and not the other way around where we're using the Dow funds to like grow a validator. I think when we do it in that order, when you're like, you're coming together as a community of like-minded people and you're starting a validator from scratch, I think it's just so beneficial for the Dow in the long term. And yeah, I'll tell you. like it wasn't it Bandito Dow, but like also some other ones, some OGs out there, like Thugbirds has a validator as well, obviously.
+
+Monkey doll as well. but like nowadays it's a lot more common to see like NFT projects and dows and, other entities on Solana launching valid validators. Cause it's, it really is like, checks all the boxes. you're, basically saying like, I'm here for the long run. I'm okay with like taking my profits in Sol, right? and in the meantime, it's like, you just have this great instrument that, that makes you more Solana.
+
+You know, so I think it's a popular choice now for communities. And I think the other thing too is like the cost of running a validator has come down a lot over the last year or two. And that has made tremendously helpful as well, obviously.
+
+Citizen Web3 
+Do you have any thoughts on today, if we look deep down inside a validator, doesn't matter what is the architecture? And really, there are many that I heard about. At the end of the day, validators are still centralized entities. They are still beneficial. Well, with the DAO, it's a bit less centralized. But there are still several beneficiaries. It's not like on-chain beneficiaries that receive, I don't know,
+
+not all the chain benefits from it. in that sense, those are centralized entities. Do you think that in the future, or do you have any thoughts at all on the future, like how validators will shape? they, I don't know, become contracts that are run on chain or, I don't know, do you think it's going to change, like become more decentralized or more centralized or only DAOs will own validators? don't know, like anything at all in that direction. What are your thoughts?
+
+Hanko
+Yeah, sure. I think Solana is always striving to be more decentralized. so I think that that's a big, I mean, that's a big part of like why the foundation wants more validators to run on the chain. You the foundation, know, they're just like the ETH foundation, right? Like they don't have like an endless supply of money. So like they have a job and a purpose to fill while they're there. And I think that
+
+It's always been talked about, like the foundation is really straightforward. They really just want to be here for like the first 10 years to help kind of like push us along the way. by the time that they're gone and that like centralized money is kind of distributed out there, you know, among the chain. We do need to have like a really rich infrastructure with multiple clients and multiple validators. Not only just running validators, but developing
+
+on Solana as well. So I think that we've done a great job, right? Like if you look at the Nakamoto coefficient, which is a number that can be used to show how decentralized the blockchain is, Solana has been trending up, which is good, ever since the beginning. And it does rank as like one of the more decentralized blockchains out there. It drives me crazy, but I'll be happy to talk to anybody who says otherwise.
+
+There's people still out there that says, Solana is a centralized chain. And it's like, it's just not true, man. Like it's just, it's not true at all. we have like over a thousand validators right now, like individual people out there that run nodes across the world. you know, have nodes in pretty much every continent now other than Antarctica. And, yeah, it's, it's continuing to get better and better and better every day. So, decentralization is a big part of Solana. And I certainly think that it's going to continue to turn in that direction. Yeah.
+
+Citizen Web3
+Talking about geographical decentralization, what are your thoughts in this direction? You mentioned running in the cloud and guess solo staking, especially on Ethereum is a big topic now and you see more deep in projects popping up here and there, trying to promote somber metal, self-custody and all that. What are your thoughts in that direction? Do you think...
+
+more people should run validators from home or, you know, it of course depends on the situation. Like, what are your thoughts on this?
+
+Hanko 
+It's a great question. So with Solana specifically, the hardware requirements and it's so like the requirements for running a validator are much higher than what you would typically find in a home. So it's more than just the hardware, but let's just start with the hardware. So hardware, you're gonna need like an enterprise server because you're gonna need like an AMD Epic chip or something along that line that is compatible.
+
+consistently run at like a pretty good clock speed and also just has the power to do what a Solana needs to do. So you're usually not gonna find that in like a traditional like PC motherboard form factor. You're gonna need like a server form factor. In addition to that, like for RAM, probably like 256 gigs of RAM is a good place to start. Like ours has 512 gigabytes of RAM.
+
+you know, and again, like you're not going to be able to even put that much RAM on a traditional home, like PC motherboard. so like, let's say you do run a whole server out of your house. The second thing is like, need the internet connection because, like I'll pull up our Solano node now just so can see like what it looks like, but literally all day long, we have up and download speeds of like 400 megabytes or I'm sorry, megabits.
+
+And that can spike. I can go up to like, you know, well over a gigabit. So you need a 10 gigabit connection and it needs to be able to like handle that. like, let's say you do have a 10 gigabit connection at your house. The other thing is how much, how much data transfer you're actually using. Like most ISPs at home will not let you do like, I mean, 80 terabytes of transfer a month, sometimes more. I mean, it's, it really is a lot, right? This a lot of blockchain is a powerhouse.
+
+and it never sleeps, it never stops. Well, it has had its problems, but we're coming up on a year now with no outages. And so what I'm trying to say is you can build this great server, but you need to run it in a data center. So that's what people will say when they say it's centralized or it's more centralized is because it has to be run out of a data center and that leads to an attack vector. But ultimately,
+
+Hanko 
+What we do is we rent a bare metal configuration in Los Angeles. And we don't use cloud infrastructure really. Back in the day, you could kind of get away with running a Hetzner node or even AWS node. But nowadays, the amount of data that you need, it's just not feasible. So the best way to do it is just to rent your hardware, I would say, and just do bare metal month to month.
+
+Hopefully one day we will be able to run a Solana node at home. I think that's something that's been talked about, as of right now Solana needs that beefy hardware.
+
+Citizen Web3 
+Are there any known validators, by the way, that run Solana from out of a data center? No, no, no. Do you know of any validators in Solana that run their validator out of a data center? Not in a data center. Today, there is. No, not.
+
+Hanko 
+like RPC services.
+
+Hanko 
+yeah. not in a data center. So I think Knox, no, no, no, no. Like I think, I think there are, but there's a guy named Knox. I think it's Knox Trades on Twitter. I'm pretty sure, yeah, I think he runs Juicy Steak is what it's called. Like I've seen him post pictures of his hardware. And so like, I know he doesn't rent his hardware. So I know he actually does own his hardware and whether or not he runs it out of his home or data center, not entirely sure.
+
+technically you could do it. Like if you approach your ISP or if you have a good ISP or like, if you have like an office building with a good connection, you could probably do it and like be in front of your note at all times. you know, and I would see like, if somebody's really like, like they want to go like have the most control, you could certainly do it. but for most people, it just ends up working better if you've rent the hardware somewhere else.
+
+Citizen Web3
+Of course. I was curious in terms of what are the current situation. It makes sense. already spoke to everybody. All the validators that come on our show pretty much, they talk about that. The Solano guys, their requirements for running from home are very, very, very difficult to meet. I'm curious whether there is any development. This is a strange question.
+
+technical, so I don't know whether you want to tackle it or not. But I mean, it's not a technical question. It's a general question on a technical topic. Whether there is any development, it's probably going to sound very stupid. Whether there are any developments of light form clients of Solana by the foundation that require a lot less and... Okay, thank you.
+
+Hanko 
+No, it's a, it's a great question. So Fire Dancer, Fire Dancer is being developed by the foundation, but it's being, it is in development. That's from Jump. And they did a demo of a Fire Dancer at Breakpoint. So, so Fire Dancer is a separate client for Solana that is not as compute intensive from what I understand. It's coded in C instead of Rust.
+
+And I think it's designed to be more lightweight. They did a, this has been in development a long time and they did a demo at Breakpoint with basically announcing that it's running on test net. And then they have a separate client that they're calling Franken Dancer. And that's like part Fire Dancer part just vanilla Solana client. And then they demoed that on mainnet. And so like that's, that's running. So Fire Dancer isn't out yet, but I think that
+
+It's coming. Like I think it's coming. And I think over time, the trend will be towards less compute intensive. Like I think there's a big, a big room for that. Absolutely.
+
+Citizen Web3 
+Good. It's good to see a lot of more networks, I guess, pick that topic up and understand. I mean, I guess we kind of skipped it, know, that the conversation for light clients and started, well, I don't know, 10 years ago, more than 10 years ago. And it's good to see that we are finally catching up because every network, every ecosystem today, in my opinion, has the same issue. We're going to there and thick clients, thick clients.
+
+But yeah, anyways, but I wanted to ask you on one of your topics, I'm going to tie it to one of your interests. know, the internet today is a marvelous place to tell us about people's interests. About SEO. So SEO, like, it's a mystery in the blockchain world. I guess it's like a bit of a golden treasure hunt because, you know, if you look at the main authority of some websites in crypto, you kind of like...
+
+Hanko
+Ha ha.
+
+Citizen Web3 
+what the hell is happening here? You know, why is it like that? And then crypto is like, yeah, this is the most popular website in the world. But anyways, like, what's your opinion on that? Do you have any like, I don't know, because you see a lot of the crypto fall kind of making the same mistakes. And people say at the outside, I say, you're I mean, Solana is actually a good exception here with the marketing campaign and how they are putting themselves out there. So what are your thoughts in general about that? Again, I know you're focused on Solana, but you know, maybe something
+
+general, but yeah, could be about Solano too.
+
+Hanko 
+Yeah, sure, sure, sure. Yeah, so I'm actually working on a project right now that is going to utilize my SEO experience for Solana. It's not quite out now, but it's called Solodex. And essentially we're going to be creating a Solana directory that's kind of SEO focused to kind of help projects that are in the early stages get some brand exposure online. Because it's a big thing, right?
+
+We're in this crazy time, not with just crypto developing really fast, but search engines and AI, that's the other huge thing that's going on in our world. And from the SEO perspective, SEO is search engine optimization. We've been using search engines to organize and rank data for the last 20 years. And it's a really good system, but we didn't have AI 20 years ago. So not only is blockchain changing like...
+
+nonstop, like the search landscape is changing a lot too. And you just can't expect, what I've learned is that you can't expect crypto apps, like small little apps with small dev teams to know or care or nor should they care about optimizing, know, doing lengthy SEO campaigns, right? Cause it's, it's just, it's a lot, right? It's a lot and it's usually not something that people are focused on. So.
+
+Definitely when apps have a little bit of a presence and they have some budget, it's something that they start to ask about. And then what you realize is that there's not a huge crossover overlap between the crypto space and people who have extensive amounts of SEO experience. And so I've been helping, I've helped a few projects over the years with their efforts. And yeah, it's cool. It's definitely an interesting space though.
+
+The cool thing with what I'm launching with Solodex is that you brought up domain authority. That's going to be one of the big things that we help projects get when they're launching on Solana is getting some of that domain authority as well. So the idea is that we're going to build this conglomerate, this asset, and we're going to do our link building campaigns. And then we're going to be able to pass that link juice back on to other Solana projects by linking out with do-follow links to their projects.
+
+Hanko 
+And what we've, what I've already learned in like, what's been abundantly clear is that it doesn't take much when a project is in its early stages to like rank in the top three slots on Google for their brand terms. so the idea is that we want to be able to have a Solana project and somebody can say, yeah, like you should go check out like Orca on Solana. And like, if they say that in a bar to somebody, we want to make sure that somebody can go to Google, type in Orca Solana, and then like our page is going to rank up there.
+
+And we've had success already with our preliminary testing. And yes, that's going to be something that we were offering in the not so distant future. So that's going to be a Solana exclusive thing too for Solana projects.
+
+Citizen Web3
+What's your one advice for people working and having their own projects in crypto in terms of do's or don'ts, don't know, like one or two things.
+
+Hanko
+So the do's, you want to just make sure that your traditional stuff is, is taken care of, like your meta tags, your title, your description, your site map, like just connect your site to Google search console and Google analytics. Definitely Google search console and like use their tools to make sure that there's not any flagrant errors in your site. The biggest thing is you just don't want to make your site super difficult for Google to crawl. Google's pretty good. If you, you know, if you build a site that
+
+that like their crawler can hit and it's pretty easy to navigate. Google can take care of a lot. What I see a common mistake though is like you see these really, really immersive UX experiences on front end apps and they're great. But like if the majority of your content doesn't even show for a crawler, like until somebody connects with their wallet, like that site's not gonna, like your stuff's not gonna get indexed, right? Like that site's just gonna be doomed.
+
+So people have been building these really awesome crypto apps that have these immersive experiences, but you still have to have the bread and butter. You got to have some text on that page that explains what it is and whatever. just got to remember Google is a little dumber than what we are used to now with AI and stuff. So you got to kind of just lay stuff out and just remember that your user can understand everything, but you got to make it so the search engines understand everything as well.
+
+Citizen Web3 
+Thanks. Kind of last question about before we jump into a blitz or a small blitz with you about the validator. Once again, I guess it's more Solana focused, but I don't see how it's not applicable to other places as well. Considering that your validator has been part of a DAO for a while, I guess that it's kind of, well.
+
+Hanko 
+Eh?
+
+Citizen Web3
+I'm going to make an assumption, and I'm sorry if it's wrong, and please correct me. It's kind of easier with the community building, but it's an assumption. And this is one part of the question. Is it easier? Is it actually easier to build a community if you're part of a DAO for your validator? And the second part, what's your experience and what's your advice for other people starting validators or running validators already to help themselves build a community? Because it seems to be one of the hardest parts as well for validators.
+
+Hanko 
+Yeah. I would say, community first. I know that sounds cliche, but like, take it from me as somebody who was, I wanted to run a validator more than anything. And I tried more than anything to do it by myself. I really think unless you are just like flush with Solana, like unless you have like 5,000 soul that you're like, I mean, some people are out there. You're gonna have a very small percentage of listeners who like,
+
+are smart enough to run a validator, have the capabilities and have the capital in that case, do it. But other than that, like build a community because you're going to surround yourself with people who are going to help you along the way. Like when you feel like you're losing, they're going to feel like they're losing too. You know, when you feel like when you're winning, they're going to feel like they're winning too. Like there's, there's value in that when you're all kind of riding together for a common purpose. and especially with a validator man, because it's, it's much more than just, starting it up and just in watching it grow.
+
+You know, you got to have procedures for stuff. You got to make sure that somebody's authorized on the server and there's a backup person who knows how to get into the server just in case you get hit by a bus. There's all these kinds of things that you get from benefiting, you benefit from when you team up with other people. And a lot of that is just reflecting what we already know in Web3 and crypto with the benefits of multi-sigs and shared wallet ownership.
+
+Like those are the kinds of stuff that like, it's really applicable for, for not only like running a validator, but managing one as well. so I think starting with the community and building that from the ground up. And then when you're at a point where you can check all the boxes to start a validator, which is, you know, if you're going to be profitable from day one, you need 5,000 self-stake or about 50, 60,000 delegated stake. so it doesn't mean that you have to have that from day one, but
+
+If you surround yourself with a bunch of people that are able to share with you on a loss for a little bit as you build that up, it's a lot more manageable. So you can always start it as long as you're on the right track and you're growing and you're It'll work out.
+
+Citizen Web3
+Makes perfect sense. think that building a community is something a lot of validators kind of skip on. And I'm partially guilty with myself. So I totally understand where you're going with it. So let me do a quick blitz, three questions. They're going to be not about Solana, not about blockchain. They're going to be weird, I warn you. But it's to take us out of the conversation and kind of to finish it off. So first question.
+
+Hanko 
+Okay.
+
+Citizen Web3 
+give me either a movie or a book or a song that have, that has had a positive influence on you throughout your life, or at least since you started with Web3.
+
+Hanko 
+I'm just going to give you one of my favorite movies. It's funny. It's called Trainspotting. It has Ewan McGregor. Yeah, it's a great film. It's hilarious. It's vile. It's graphic. It's motivational. It's got great writing. Just one of my favorite movies of all time. And my favorite line in that whole movie is the beginning when it says, life. that, choose life. It's one of my favorite monologues, So yeah.
+
+Citizen Web3
+Let's go.
+
+Citizen Web3
+Amazing.
+
+Citizen Web3 
+Choose life. Choose life. Yes, absolutely. Absolutely. Guys and girls and robots who listening to this, don't forget show notes. You can check everything, me and Anko mentioned, and especially the movie, of course. Check it out, learn it. Yeah, have a look if you haven't seen. So two more questions. They're going to get weirder. So give me one motivational thing.
+
+that keeps you out of bed every day, running Solana validators, being a part of Bandido DAO and talking to people online, going to hacker houses, trying to do something. What was something motivational that keeps you doing it every day?
+
+Hanko
+Sorry, you kind of cut out there, but for motivational, like what keeps me going? I mean, the biggest thing is Breakpoint every year. Breakpoint is a once a year event that the Solana Foundation runs. It's in a different country every year. And it's just a time where everybody can get together and hang out. like, one of the cool things about running a Solana Validator for my DAO is that they send me to Breakpoint every year. And like, that's big part of it. So they help me with my flight.
+
+Yeah, that keeps me going. It's the best time of the year,
+
+Citizen Web3
+when you come to Portugal, hit hello, hit me hello, definitely. Last one, this is gonna be the weirdest one, but it's the last one, I promise. Dead or alive, a real person or a made up character, could be a cartoon character, could be a writer, an author, doesn't matter. Somebody who is not a guru, because we always try to say we don't believe in gurus, but...
+
+Hanko 
+Absolutely.
+
+Citizen Web3 
+a that when you're stuck, you can't help but to think of them and that helps you to do whatever it is you're doing.
+
+Hanko 
+Hmm, that's a really good one. you know what I like to think about it, maybe it's not just one person, but I, one of my things that really interests me is like quantum physics and a lot of the history, like if you just look at like the very early 1900s, a lot of those guys, Enrico Fermi to, there's a lot of them, but all of those groundbreaking discoveries that they made and just the fact that they did that all with
+
+what they had at the time. And like a hundred years ago, they were able to, to like figure out that we have atoms and then quarks and, and quantum field theory. Like all these things are relatively new things that, that, that they just discovered with sheer brain power. The fact that we, the fact that Einstein was able to calculate, you know, exactly what the energy to mass, you know, calculation is like, all that stuff just really fascinates me. And so whenever I feel like, you know, I'm like, God, I'm like,
+
+I feel like I'm not going to have anything, I feel like I'm not motivated. think about those guys and how they didn't know the amount of stuff that they were going to discover and what was going to happen and everything. And I feel like that's kind what we're dealing with with blockchain. We're kind of at that kind of level of innovation now where it's like we have blockchain and AI and who knows what the next big great thing is going to be. But I know that I'm going to be in the scene when it happens. And that's what keeps me in here.
+
+Citizen Web3 
+I love it. Love it. This was a very good point, I think, to finish on. Hanko, I want to thank you for your answers. Please don't hang up just yet. This is going to be a goodbye for the listeners. For all the listeners, thank you very much for joining us and see you next week. Hanko, thank you.
+
+Hanko 
+Thanks, man.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

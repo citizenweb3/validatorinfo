@@ -1,0 +1,327 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/zenobiagodschalk
+
+Episode Name:
+The catalyst for mass adoption, social responsibility or why choose web3, with Zenobia Godschalk
+
+This episode of the #citizenweb3 podcast features Zenobia Godschalk, SVP of Communications at Hedera Hashgraph, an open source, public network governed by leading organizations around the world
+
+Citizen Web3 
+Good Space Time Yall and welcome to a new episode of the Citizen Cosmos podcast. A source for educational insights into the world of web 3. Today we are joined by Zenobia Godschalk, SVP of communications at Hedera Hashgraph. We discussed, centralized governance and opensource ledgers, tokenization of real estate and solving real world proplems with blockchains.
+
+We look into cyber security as an arms race, the trust layer of the internet and talk about self soverign identity in web3. Finally we dive into social responsibility and the importance of education, empathy and giving back as a source of motivation.
+
+Zenobia 
+They are excited about the fact that anything that they want, they can buy and it will be delivered to their doorstep.
+
+Citizen Web3 
+It's like with taxes, the idea is great but the implimentation is not amazing.
+
+
+Zenobia 
+It's not affordable to buy a house, you can't get in the door. People are thinking about if they've had this problem, they are a Millennial or a Gen Z. Go figure out your market size, go figure out what kinds of features people want, talk to people who may be willing to use it. When you were going from writing physical letters and mailing them to someone to, for example, email, you were not probably thinking about phishing.
+
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Cosmos podcast. And today I have the ecosystem communication lead. I'm going to use like a fancy word for that. Zenobia from Hedera. Zenobia, hi, welcome to the show.
+
+Zenobia 
+Hello, thank you for having me.
+
+Citizen Web3 
+Yeah, I gave you a fancy made up title right now, which I'm sorry for. To keep things in balance and in proper shape, I'm going to ask you to introduce yourself or tell us what you do. What are you working on currently? Anything you want the listeners to know about yourself, please.
+
+Zenobia 
+Sure, absolutely. And again, thank you. It's a little bit complicated, so let me start with the official title and then sort of explain what that means. So my job role is SVP of communications for Swirld's Labs, helping to support and grow the Hedera ecosystem. Hedera is a public distributed ledger, open source ledger.
+
+And Hedera is run by a governing council of today, I think it's about 29 members. They are some of the largest organizations in the world. That core network and core small set of folks comprise really Hedera. There are a number of different parties that are also working in support of the Hedera ecosystem, Swirlds Labs being one of them. So Swirlds Labs provides product and marketing support for the Hedera network and ecosystem. There are also grant giving organizations like the HBAR Foundation and the Hashgraph Association that work to help develop projects that are being built on Hedera. So we work across obviously the network, the governing council members, the product team and the associations to all help. We're all charging in the same direction, which is the growth and development of the Hedera Network.
+
+Citizen Web3 
+Wait, this is the official part. Wait, what about all the rest? No, no, I'm kidding. I'm not going to put you on the spotlight, but I will as we gradually go, but out of curiosity, because I know, well, the question is actually going to follow, but you know what, I'm going to jump with it right ahead. You have a lot of projects you're involved in, and what is currently...
+
+Zenobia 
+Yeah.
+
+Citizen Web3 
+else that excites you that you're working on apart from obviously Hedera.
+
+Zenobia 
+Yeah. So I do have many hats and a lot of background and also do quite a bit of volunteer work. So I think my main focus is Hedera and I think that has shifted a little bit in terms of the types of stories that we tell. So early on, it was really educating the market on, okay, what is public ledger, right? What are the differences between the public ledgers? Why does it matter that our fees are denominated in USD and they're fixed so they don't fluctuate when the price of the coin goes up and down? Now as people have a better understanding of what that network is and what it does, my job and what gets me really excited is telling the stories about what's being built on top of it, right?
+
+Nobody's excited about the internet because it's a bunch of servers and connections and bits and bytes flowing across. They're excited about the fact that anything that they want, they can buy and be delivered to their doorstep in, you know, 24 to 48 hours. They're excited about the fact that they no longer have to figure out how to hail a cab from a random place, they can call Uber. And they're excited about all of the things that the internet empowers. And there's no more debate about this is the best web server, I mean, maybe there is. But typically, there's not debates about what's the best web server, what's the best infrastructure. It is really up-leveled because you want that mass adoption. And you only get to mass adoption when people are really using applications that are built on top of this infrastructure.
+
+So the thing that gets me most excited is finding those stories and thinking about, wow, that is a crazy way that people are using this technology that I never would have thought of. We talk to people like Quarter Homes who are doing tokenization of real estate, right? You hear, especially in the US, you hear about, well, gosh, it's not affordable to buy a house, right? You can't get in the door. You know, people are thinking about, OK, if they've had this problem, you know, they are a Millennial or a Gen Z and they're thinking about it in a completely different way. And they're using this technology to get their foot in the door, to start to get equity in a home, to start to build that equity in a home and have a wonderful place to live in a completely different model than what has ever been possible before. So those are the fun things that we get to start talking about now. Not that talking about the network and what it does and how amazingly fast it is isn't wonderful.
+
+But, at the end of the day, it's really, how are these applications going to change people's lives?
+
+Citizen Web3 
+You were mentioning the servers there and I can hear Tim Berners-Lee with his one server. I remember this picture, you know, the, please do not turn off this computer. It's a server, right? And it was like the one server that was giving out certain things, you know, and people were dependent on the whole internet was pretty much dependent on that one house computer at one point. Yeah. So we have definitely moved a long, I would say, way from sending emails to, like you say, not just hailing cabs, but I mean, you brought up the topic of Gen Z, Millennials, you know, buying a house. So we're going a lot, a lot deeper than just hailing Cubs. I want to ask you this, because you kind of already started to go in that direction. Let's just think of it as an intro question though still. Why Web3, Zenobia? Why on earth like... Zenobia woke up one day and said, you know what? I'm going to make this interesting. I'm going to build this ecosystem. I mean, it didn't happen like that. What drove you? What was your motivation there?*
+
+Zenobia 
+Right. So, you know, my background is for the most part of my career in cyber security, right, and securing this thing that we call Internet One or Internet Two. And I think that the ideals that the internet was built around are very noble, but they were also a little bit too idealistic. And, you know, we put this technology out and we sort of hoped that people would use it to connect to one another. And we didn't think about the fact that people would actually use it for evil, right? They would take advantage of the openness of the internet. They would take advantage of the sort of infrastructure as it is today and do a lot of bad things. So working in cybersecurity, you know, it felt like, gosh, we are just continuing to be in this arms race, right? We build new protections. The bad guys sort of one up us. We figure out that threat and they continue to one up us.
+
+And it's this ongoing arms race where the people who are building applications and infrastructure basically have to be 100% right and 100% perfect in their security. And the bad guys just to have to find that one vulnerability. And so that model did not seem to be something that could be sustainable as you think about everything going online and you look at huge data breaches that have happened, right? I mean, we personally have been affected by a number of those. I think probably most of the people in your audience, either they have been affected and they know it, or they have been affected and they don't know it, right? There's no way you get around that. And so when I first met Dr. Lehman Baird and Mance Harmon, who are the co-founders of Hedera, they started talking about this trust layer of the internet. Can we think about things like owning our own self-sovereign identity? Can we think about things like, how do I grant access only to the people that I want and only for the data that I want? And I think, first of all, having been, you know, having your data exposed through some of those breaches. And then second of all, you know, being just quite frankly, a woman in the world, right, where you feel like, hmm, I'd like to protect certain parts of my identity. I don't necessarily want to share that. You know, I don't you know, show, for example, my driver's license that has my home address on it to someone just to get into a club and prove my age. Those two things should be very separate. And I should, through self-sovereign identity, be able to decide which pieces of my identity I share with whom. And so that was why, you know, coming from a cybersecurity background, it was very compelling to think about, can we do Web3 differently? Can we?
+
+I used to work for Mark Andreessen and he would always say, let's make different mistakes, right? We're always going to make mistakes, but let's learn from the past and let's try to make different mistakes this time.
+
+Citizen Web3 
+My cat is today really wanting to talk with you. She's like really, really excited by all this Web3 talk, by the looks of it. And I'm apologizing for that. But you know what? You mentioned like a lot of things which we can probably have an hour long conversation just on those things. But I like being devil's advocate, I must say. And so thanks in advance for sticking with those questions that are going to follow. But you mentioned, for example, cybersecurity and one of the reasons you were like, oh, we didn't know that people are going to take advantage of the... But don't you think that's pretty much like saying when Albert Einstein was splitting the atom, he said, well, nobody's going to take advantage of that, for sure. I mean...
+
+No way we can make weapons with that technology, you know, but it was kind of, you know, what I'm saying is that do you think that having such tools as completely free markets, markets that are rather motivated by incentives than, you know, controlling?
+
+Um, is that then a bad thing? Is that something that we should try not to do? Not try not to build open technologies. Is that what you kind of saying? Do I hear you correctly?
+
+Zenobia 
+I don't think it's about the markets. I think it's about if you look at a lot of the internet protocols, they were designed to make communication as fast and as seamless as possible. They were not designed to say, okay, let's think about good traffic versus bad traffic. They were designed to make commerce possible. They were designed to make communications possible.
+
+Zenobia 
+When you were going from writing physical letters and mailing them to someone to, for example, email, you were not probably thinking about phishing, right? You were not thinking about somebody sending your, you know, the chances of someone sending your mom a letter and your mom believing that it's you and sending you money, you know, that's just a very different paradigm. So I think that it's not about, you know, whether we are putting regulation in place for commerce and things like that. It's really about, we were not prepared for what we built. We were not prepared for the speed of communication and for the bad actors who said, well, now it's so cheap and simple to send out, millions of phishing emails. And if I get a 0.005% return on that, it's worth it. I've made a bunch of money and, you know, I've been able to, you know, con, typically a bunch of older people out of their money. And that's just not something that you could have done in the past.
+
+Citizen Web3 
+Could I then say that what attracted you to blockchain, maybe not the whole web 3, was the possible solution of the general dilemma, right? Or attacking the city, the generals coming from different side and here comes blockchain that offers kind of a solution to that, right? And I guess coming from cyber security, that must have been an attraction to you, right? 
+
+Zenobia 
+Yeah, that's absolutely right.
+
+Citizen Web3 
+Okay. I have a question. It's like, we're going to come back to those topics, but while we still kind of chit-chating, I'm very curious because looking at your... I'm trying to give it a good word, a fancy word, honors list. No, I'm kidding. Looking at your LinkedIn, for example, and not just your LinkedIn, just following you online and you are not like... typical person and what I mean by that is a good thing. It's a compliment. Let me though. Let me try and bear with it though, because I have a question there. Usually a person, you know, they do one project or two projects and then they move to the next one. Now, when I look at you, you kind of seem to pile all those projects up and keep on going with them. And now, what is the secret? I'm genuinely curious as somebody who considers themselves to be very widespread and I also have different projects off chain on chain but I'm still curious what is your secret there?
+
+Zenobia 
+Sure. I think, you know, I mean, one thing is just that I'm, I am, I think like you, curious, right? There's so many things to be explored. There's so many, we are, you know, for all of the sort of talk about, you know, how, it's the end of world or how bad things are, we live in an amazing time. I mean, we are in a time when, you know, technology is moving faster than it's ever moved. It's interesting, you're able to solve problems, you're able to see people do things quickly and efficiently. So first of all, it's just interesting and I have, I think, that natural curiosity. Second of all, I feel like I'm at a point in my career where I also, you know, I've learned a lot, right? I've made a lot of mistakes and it would be a shame to waste that learning by sort of saying, hey, I'm just going to take a step back now, right? And go sit on a beach or... or there's definitely times where I need to relax and unplug, but it would be a waste to sort of lose all that pattern matching and all of those learnings instead of using them for good. And then I think the third part of it is being a woman in technology, being a first generation US citizen, I do feel a lot of responsibility to give back.
+
+And so you'll see, you know, the organizations that I choose to volunteer with and devote some of my time to are ones that are really encouraging other women and other, you know, first generation immigrants to, to say, you can do it, right. It's, it's valuable to have those role models. It's just valuable to see somebody doing it and to be able to ask them questions and to be able to share knowledge across, whether it's generations or groups of people, because there are still so many of those barriers and there are still so many things that sort of stand in your way. I mean, I remember, you know, I remember sort of my first year in college thinking, wow, like I got here, but there's so much I don't know. And there's so much that all these other kids know that I have no idea what's going on, you know, and I better learn that quick, right? So if there are ways that I can help those people who are in those same situations, I've felt that. I've felt that anxiety. I have felt that angst. I have felt that what am I doing here? And so to be able to encourage other people to say, look, you belong here and here's how you can sort of ramp up your knowledge more quickly. So you feel like you belong here. That's just a great feeling.
+
+Citizen Web3 
+You mentioned a couple of times first generation US immigrant out of curiosity, what is the origin of your family? If it's okay, of course.
+
+Zenobia 
+Sure, yeah. So we actually, my family is, I'm mixed. My mom's side of the family is Chinese and my dad's side is Parsi. And we actually left Iran during the revolution when I was 18 months old.
+
+Citizen Web3 
+That's a wild mix. It's a very wild mix. But I can definitely see like historically, you know, Iran and that time, assuming, you know, some of the dates there, but I can definitely understand it. But it's a wild mix. It's interesting. I have a question actually about one of those things. 
+
+You have on I don't know if it's a volunteer project or it's a project that you do and one of them I think is a school that is a Catholic school. It's a private school and I'm assuming of course I'm going to make assumptions for this question and feel free to correct me. And that you know working on such a project regardless in which level or on what level sorry or as whom you know sooner or later religion since Catholic school, you know, must come into play. How do you mix business values, ethics, religion, and especially Web3 where it's like, again, I don't want to offend anyone here by no means, but definitely my listeners know me as being like, I know I'm an atheist. And again, this is not about this is really genuine curiosity to understand how do you keep that in the same place.
+
+Zenobia
+Sure. So first of all, it's not a Catholic school. It's a non-denominational school. So, yeah, no, no worries. But I do think, you know, I think that it is really about sort of being involved in my kids' education and just, you know, making sure that, you know, that there's a voice there and that they know that their parents are interested in their education. They know that their parents value their education. I mean, I felt that growing up, you know, my mom was...
+
+Citizen Web3 
+Oh, my apologies. My apologies.
+
+Zenobia 
+pretty active volunteering at my school, and I thought that was really important. So my family is actually not Catholic, they are Zoroastrian, which is, you're nodding your head. I'm...
+
+Citizen Web3
+I do. I'm a religion geek a little bit because I'm an atheist. I'm a bit of a religion geek and I do know what Zoroastrianism is, but please do explain because it's not a thing that I'm sure some people would love to hear from yourself especially what it is. So please do.
+
+Zenobia 
+Sure, yeah. So Zoroastrianism is the world's first monotheistic religion. It heavily influenced Judaism and Christianity, and it's a very small religion. I think part of how Zoroastrians survived was by essentially promising not to convert anyone who was outside of the religion. But for that reason, it means that we're a pretty small population today. I think the global estimates are somewhere between 100 and 200,000 worldwide.
+
+So for me, it is important, you know, as part of our family tradition to sort of share those teachings with our family, you know, it was a big part of my family growing up. And the key tenants of Zoroastrianism are good thoughts, good words, and good deeds, right? Good thoughts lead to good words, good words lead to good deeds. And I think that, you know, if you keep it that simple and you sort of follow that as your guiding principles, then and, you know, it's very, you know, makes things much more streamlined and just very, very easy to follow.
+
+Citizen Web3 
+out of curiosity is Baha'ism anyhow, well, of course, it's a separate religion, but coming from sort of the same area and being small and monotheistic, I don't know if you're familiar, is that in any way connected today with Zoroastrianism or?
+
+Zenobia 
+So I don't think they are connected. I know they came about at sort of similar times and I think they have fairly similar belief structures but they're not related.
+
+Citizen Web3 
+Just curious there, sorry. Let's talk a little bit more about what you do and around your work and some of your views. I would love to know some things here. Sorry, to ask you some questions. And I guess the first one... is kind of relating to data control and the internet because I know you're big on that topic. I know you have the talks and I've seen part of it, not just as part of my homework, but also before that then as part of my homework I did see it as well and I'm curious, what is your current stance on the data control on the internet and yeah, just let's start with that.
+
+Zenobia 
+Gosh, it's such a broad topic. I mean, I think that it was interesting. We were just in Europe and every single site that I went to asked about cookies and asked about privacy and sharing. And it really made you realize how different policies are from location to location. And I think that at the end of the day, I think the...
+
+Citizen Web3 
+Sorry.
+
+Zenobia 
+the it's now sort of an old adage is that data is the new oil, right? It's so valuable. And so, you know, when you think about that, okay, great. So who should be, who should be getting that value from your data, right? Should you be getting it? Should Facebook be getting it? Who should be getting that? And I think one of the things that is attractive about web three is that it's not just, you know, the readable web.
+
+sort of web one and it's not just the read writable web, web two, but it is really, okay, read, write and own my data. So if I decide that you, you know, are going to get to advertise to me, then maybe that's a decision I'm willing to make, but maybe I want to be compensated for it. Or if I decide that you're going to be able to, you know, put cookies on my, you know, browsing experience, then maybe I'm compensated for it, or maybe I can control those at a much more granular level.
+
+So I think it is, especially in sort of this era that we're coming into, it is important that people, we now understand data has value, data has tremendous value, and ideally it's shifting that value into the hands of the people who are creating that data.
+
+Citizen Web3
+I did say that I like a bit devil's advocate things. And here's the first one, I guess. And now you own a PR firm, a marketing and a PR firm. How do you combine that stance with owning a marketing and a PR firm? Because obviously, I mean, you know, of course we can divide, you know, the realistic into the kind of the expectations, right? But I'm curious in your personal experience. I mean.
+
+Zenobia
+Yeah.
+
+Citizen Web3 
+because you have to get into those things. I mean, you cannot possibly not get into data and trying to get as much data when you work with PR and marketing, right? How do you balance that?
+
+Zenobia 
+That's right. And I think, you know, it is really about then meeting the customer where they are in their journey, right? It's not, um, I think we have long ago figured out that spamming people and overwhelming them with content and trying to just shove things down their throat does not work. So marketing and PR has really shifted. It's always been about storytelling, right? It's always been how, can I tell you a story that resonates with you? And that makes you potentially want to buy my
+
+product. But I think that is more relevant today than ever before, right? It's meeting people where they are. So I think if you asked PR firms 10 years ago, how much do you engage with people on Reddit or social or discord or any of those places, they would have looked at you like, what are you talking about? That's crazy. But nowadays, there is a lot more of that direct engagement. And it really is about education because I think most marketers have
+
+accepted and embraced good marketers have accepted and embrace the fact that you're going to need to meet the customer where they are. They're not going to fall for, you know, hey, just keep hitting me up with things. They're, you know, they're gonna, they're gonna block you, your brand is not going to be well received in their eyes. But they are, they do want to hear those stories, right? So so many times, we will talk to someone and they will say, well, gosh, I'm trying to do this. Do you know anyone who's done something similar?
+
+And those are the kinds of stories that we want to get out there because they spark ideas and they spark, okay, if I'm trying to build a Web3 application, maybe you haven't built the exact same Web3 application, thank goodness, because I don't want you as my direct competitor, but maybe you've built pieces of it that I can get ideas from. And so that's the kind of storytelling that we do, and that's the kind of storytelling that we see resonates with, you know, with buyers. Now there are still people...
+
+You know, there are still customers, there are still people who just say, Hey, I really want to push this and we have to push back. That's the job of a good marketer is to say that's, that's not a good idea. And here's why. Right? So if you think about, about a year ago, we were a lot of times being told, you should really put your name on a stadium. And we were like, that's not a good idea. And here's why we have seen that playbook and that does not end well.
+
+Zenobia 
+And sometimes that's hard, right? Sometimes people, because marketing is out there for everyone to see, everybody thinks they're an expert. So they're gonna say, oh, you're crazy. Oh, you should have spent that money. Oh, you could have done this, that, and the other. But there are measurable ways that we understand what is engagement, what do people like, what do they want more of, and what do they say, no, thank you, that wasn't valuable to me, so you probably shouldn't do that again.
+
+Citizen Web3 
+Let's try to go a little bit deeper into that. But doesn't it make the person the product? Doesn't it go against ethics then? Because I understand totally what you say and I even agree with a lot of that, but that would say that basically marketing and PR firms are making people the products. And basically, is that ethical to make everybody into a product?
+
+Zenobia 
+I don't think I would agree with the statement that you're making them the product. You're making them the audience, right? So you're not actually trying to pull any data from them in terms of their personal data, but you are allowing them to opt in. So if I like a story, I don't see any issue with having a button on the bottom of the page of that story that says, if you liked this, go here. Here are seven more stories you would like, right? It's...
+
+reminds me of the choose your own adventure books when you were a kid, right? You have the opportunity to opt into that and you have the opportunity. You're also seeing a lot more marketing not be gated, right? We, highly encourage our customers. Don't gate this paper. Don't gate something where people have to register and give you a name and email. They don't want to do that. Um, so just put that information out there, right? Let the customer take their own journey. They will get there when they're ready.
+
+But you as a marketer, your job is to make sure that every single piece of information that they could possibly want is presented to them and they have the opportunity to go find that and you're not sort of holding those things back.
+
+Citizen Web3 
+I totally agree that funneling is probably changed, you know, the way we consume data. Because, I mean, I think pretty, I'm pretty sure that everybody will myself for sure has a story where, you know, you were there on YouTube or, or whatever. And then, and then our Twitter and then, you know, you got recommended something based on what you were doing and it turned out to be astonishing, the best song you've heard, the best movie you've watched, whatever, which is cool. But what about privacy? That brings us again to the double side stick, right? Okay. But the problem is not really the funneling the problem is not the tech here. It's like with the taxes. The idea is great, but the implementation is not amazing because sometimes in some countries and in some places, they kind of disappear, but the idea is fantastic, right? I mean, again, same with funneling. Idea is great. What about the privacy? How do we solve the problem that some of these, first of all, not every marketing and PR firm is good intentions like you, you know, some of them are going to go and sell those marketing profiles or whatever they sell to somebody else. I mean, you understand the question.
+
+Zenobia 
+I think if you take sort of the stance of opt in, right, you, yes, Netflix can give me recommendations, but should that be the default? Or should it only be if I choose for Netflix to have that information? Or should I say great, but you know, abstract me away so that I'm in potentially just a pool of people that sort of, you know, where you don't have that very granular level of detail.
+
+
+If you, and you're starting to see consumer and purchaser behavior drive this, right? People are pushing back on that. And so you're starting to see people say, look, if you want this level of personalization, then I do have to see some things, right? I do have to see what you liked and how long you liked it for. But maybe I don't have to keep that data, right? Maybe I don't have to store that data. Maybe it's, and also maybe you can opt into it on a case by case basis. So you know, maybe you can opt into it for yourself, but not for your kids, right? Or something like that.
+
+Citizen Web3 
+Interesting. It's an interesting take on that. I mean, I'm assuming that probably some marketing campaign leaders are screaming, no, we need all the data. But as a question on the other spectrum, I guess, of your profession, as somebody who has been running a PR and marketing firm and works in web3, what is your solution...
+
+Solution is a loud word, but what is your suggestion, advice? Well, let's first have two questions here. One is going to be about adoption, but maybe the first one, what's your suggestion for project founders, for people who are starting in the web 3 industry, regardless if they have been a user and they just started their own project or they are just starting their own projects? What's your advice as a marketer, as a PR expert for these founders.
+
+Zenobia 
+Yeah, so I think there are, it's twofold. One is really know your audience, right? Spend some time really understanding what are they going to, what do they want? And if you're trying to make this a business and not just a hobby, what are they willing to pay for? Right, because we are sort of beyond that phase of Web3 where people are just willing to fund things and sort of hope that they work out.
+
+So I think it's really important to do sort of the due diligence that has always been required of startups, which is go figure out your market size, go figure out what kinds of features people want, talk to customers, talk to prospects, talk to people who may be willing to use it and understand what are things that are really important to them, not just what looks cool and might be flashy, but what are they willing to use? What will they be entrenched in and what will they pay for?
+
+And then the second part of that is, we talk about Hedera as being enterprise grade and a lot of people say, well, gosh, that means you're just made for the biggest companies. No, we're made for startups who firmly believe that they are going to be the next big thing. So if you are starting a business, don't start it under using the infrastructure and under the assumption that you're always going to be the same size.
+
+Start it and do your homework and research the technology stack that you want to build on that is going to last you for a decade or two decades or however long and however wildly successful you might be. Because you know with even in web one and web two we saw when people had to shift their technology stack and that was a very painful shift and a lot of companies did not make it through that shift. So you have the opportunity now with web three there's a ton of information out there.
+
+You know, you can do all of your research. You're not just, you know, sort of beholden to the promises of a company that's selling you a box. You can understand what each of the pros and cons of different infrastructure stacks are and choose wisely, right? Because you do not want to in three years be saying, you know what, I have a huge user base and I've, I've been successful beyond my wildest dreams. And now oops, like my cost of running that infrastructure is too much, or it doesn't scale the way that I need it to scale, or it doesn't have the functionality that I need. And so I am now stuck essentially rebuilding my entire application from scratch.
+
+Citizen Web3 
+I have been there before and not once and personally and with other... luckily only once, but with other founders I have been there, unfortunately, many times. No, it's not fun because especially when you try to explain to people that, you know, this is what's going to happen. This is exactly what you need to calculate. And unfortunately, usually people like closing their eyes on that topic.
+
+Zenobia 
+It's not fun, right?
+
+Citizen Web3 
+But while we're here on the topic of adoption, I guess that was the second part of the question. What's your take? It's a very, again, super abstract question, super abstract subject. But I guess I'm going to try to narrow it down in terms of a question to you, again, as an expert on PR, as somebody who has been working not just in Web3, but you mentioned yourself. You volunteer for different projects. You mentioned schools, which are, in my opinion, It's kind of like the gold there because well, where else, who's going to be the customers? If not these people, right? The users, the customers, whatever we want to call them. So what's your take on adoption in generally and what's your advice here or vision or goal? I don't know. How is it going to happen? Has it happened adoption already? You know, what's, what's the big take here?
+
+Zenobia 
+Yeah, I think, you know, every technology hopes that they are so radically different that they don't follow sort of historical patterns, but most of them do. So we have seen, you know, there is a great Gartner model that talks about the Gartner hype cycle. Right. And you have sort of this peak where there is the peak of hype, where, you know, people are like, oh, my God, everything is going to change the world.
+
+And then things come crashing down and you have something called the trough of disillusionment where people say, oh, that actually doesn't, it's not going to do anything. We should just write that off. And we actually saw that with the internet, right? When we had pets.com and we had, I can't remember what was the grocery store and all of those things were going to change the way we did everything. And then all of a sudden they were done. And You know, we had a lot of people who said, well, thank goodness that internet experiment is over with and we can get back to business and all the things that we were doing the way we were doing them before. And that was actually when the building happened, right? That was when people said, okay, thank goodness. Now I don't have to compete with 15 companies trying to sell dog food over the internet. I can think about what's a long-term sustainable business. And that's exactly what you see happening right now. 
+
+You see businesses that are focused on, for example, supply chain, where they say, you know what? Blockchain is actually really good at sharing information across multiple players in the supply chain, where each player only needs to know a little bit of information, not everything. Blockchain is actually really good at, you know, tracking carbon credits and holding those things accountable anywhere where you need that transparency and that visibility across multiple parties you're seeing people actually implement those use cases. So I think, you know, if you were trying to get into this space just for the froth of it, those days are done. You're seeing people really building applications, some of them quietly, some of them, you know, visibly in front of the public, but they are getting embedded into, blockchain is getting embedded into applications and hopefully to the point where we won't even know it's happening.
+
+Right? To the point where it is just that trust layer and it is included in your applications and it is super seamless.
+
+Citizen Web3 
+It's interesting that you say it like that. Well, first of all, I got to say pets.com if it still existed. The amount of times it's been mentioned by me and my guests on the show, they really owe us a lot, really. Like we mentioned it almost every other episode, either me or the guests. Like pets.com. That's just it's true, right? It's like I remember I remember it very well. I mean, I was I was still a kid, but I remember it very well. Not like to kid. I was a teenager already. But
+
+Yeah. And I remember it very well. But, um, what, where are we now? Where, where, uh, because I get it before, before to the, where are we now, because I, I personally, uh, think that mass adoption has happened. Mass usage hasn't happened. Mass adoption happened with NFTs and art. And, um, you know, being here for 11, 12 years in this industry, every dog on the street knows that means that the usage hasn't happened yet. People don't use it yet. And I totally agree with you that, you know, we will get to a point probably where the internet of blockchains or whatever you want to call it where doesn't matter what is the technology there, you're going to be using a blockchain. But where are we now? Where are we at this stage of the hype cycle? I mean, I know it's a bit of a hype question, I guess. But yeah, what do you think?
+
+Zenobia
+Sure. So I think we are in the, you know, we are very much in the, okay, you know, let's, we're back down to reality, but let's figure out how this technology actually has promise and has value. So you're seeing things like, I think you're seeing less of this sort of fiefdom, it's my way or the highway, and more of a recognition of a lot of projects are going to use multiple different blockchains and multiple different technologies.
+
+There is, you know, that's already starting to happen. Those discussions are happening, those integrations, those bridges, all of the, you know, behind the scenes, and sort of, you know, sewing that has to happen to knit these fabrics together is happening right now. And I think that's very encouraging because it gives, if you're not native web three, it gives you a sense of, okay, these guys are sort of acting more like grownups, right, they are.
+
+They understand the value of integrations. They understand the value of redundancy and perhaps, you know, writing my data to multiple blockchains so that I have that security and that long-term, you know, safety and confidence in my data. You're also seeing, you know, companies start to say, okay, we can't just push our users into a web three experience straight away.
+
+We can't assume that every consumer is going to download a new Web3 wallet and remember their seed phrase and go do all these things that those of us early to the space jump through all those hoops every day to use. That's not realistic. So you're starting to see in some ways backwards compatibility. You're seeing wallets say, well, maybe I should use authentication measures like you know, like email and other kind of web one and web two measures so that you can be accessible by a segment of the population that was never willing to remember 24 words every day. You're also starting to see projects like, you know, if you look at sort of the Starbucks NFT example, right, you're starting to see those companies say, wait a minute, let me try to let me take it from the perspective of my user.
+
+Zenobia 
+I want to keep them in my ecosystem, and I want to keep them in all of this infrastructure and apps that I've already built, but I want to give them that Web3 functionality. So you're seeing that across a lot of projects. I think if you go into, for example, if you try to go through the Starburst Juicyverse, that's a cool user experience that does not require you to sort of be Web3 native. Those kinds of things are happening today and they are only able to happen because you've been given sort of some of this space and time and not this frenetic, you know, rush to build. You realize that, hey, big companies take a long time. If I'm a big brand and I'm going to roll out something to my consumers, I'm going to test it for six months to a year before I feel like it's really production quality. Because if I don't, I'm going to fall flat on my face. My consumers are not going to have a good experience with my product.
+
+And, you know, so it's essentially the same product cycle that everything else in their brand goes through. So you cannot expect these things to just pop up. They're going to be well thought out and you're starting to see that already happen.
+
+Citizen Web3 
+What about the other end of the spectrum? Again, I'm going to play a little bit here, but we have seen in the past many examples where big companies are trying to build something or say they build something and in reality they were doing, I mean, there are plenty of examples. I mean, we could start with Cambridge Analytica, of course, this is too extreme, but we're not going to go into that. But.
+
+There are plenty, plenty of examples where that backfired, what you say. So, are we, you know, shouldn't we kind of say, because I mean, Web3, I guess, is one of the first industries which works with a lot of values and not everybody, of course, in Web3 works with values. And of course you have, you know, the companies who are after money, of the companies who are after the technology, after the users, but, but still, I think in out of the whole industries, I've been personally involved with in my life. Values here are a big thing.
+
+ethics values, you know, because we kind of live in this age as well. We understand a lot of misinformation, a lot of data, a lot of data control, a lot of privacy issues. So aren't we kind of making a step back by saying, okay, now let's build not with those values in mind, but let's kind of build with in mind that we have to onboard. And before you answer, I'm going to just say one more sentence. It's...
+
+You know, like somebody was talking with me, I think, about adoption. And personally, this is personal opinion, I think adoption is going to happen when, you know, for grandmothers, when we are going to be grandmothers and grandfathers. It's simple because that's what happens in history. People adopted credit cards as they grew up. You know, I'm sure that the first grandmother that was given a credit card looked at it and was like, oh my God, I am not using that. And I'm sure she hasn't. But, you know, so.
+Where is the balance? Where is the balance in your opinion? Let's try to go there.
+
+Zenobia 
+Yeah. So I am more optimistic than that. I don't think it will take that long. And I think we actually have a duty to make it simple, right? If you think about the reasons that Web3 has not been adopted to date, it is if you tried to tell someone, you know, hey, go put your money in this bank. And if the bank loses it, too bad.
+
+Right? That's like pre-FDIC days. You're asking people to have that same kind of trust in new systems or sort of, you know, the same level of sophistication to manage and use these new systems when these systems offer benefits that they could really benefit from. So are you going to ask someone who, you know, is in a, for example,
+look at something like international remittances, right? Today, if you wanna send a, I don't know, a Western Union or whatever it is across the globe, it costs you like 30 to $50 to do that. That's ridiculous, right? 
+
+You should be able to send money for a fraction of a penny across the globe. But are you then gonna also ask that person who is receiving the money in that country to, you know,go download whatever your favorite wallet is and use that new iPhone and have it encrypted and have a hard, cold storage wallet. No, right? It cannot be that hard and that complicated for people to have access to this technology that is really democratizing and is, can be used for all of these use cases that have great benefits. But if we don't make it accessible, then it's on us as an industry, right? We have not leveraged the technology to its full extent and its full power. And if I don't know that we could say that, gosh, that's because we have this ethos of complete 100% decentralization. That doesn't make sense. You can do many things in decentralization. You can think of new ways to make it accessible to a wide swath of the population that could actually benefit from this the most.
+
+Citizen Web3 
+I do agree that accessibility to such thing, accessibility of planes is a lot more complex than accessibility of horse and a carriage. Yet a plane gets you much more further and a lot cheaper than in some cases, because flying 45 or an hour is a lot cheaper than traveling for three days or five days across bridges. But the accessibility level of understanding of how to get a plane ticket a lot more complex than just jumping on a horse in a carriage.
+
+Zenobia 
+I don't know. I mean, I don't know how many people, what percentage of the population owned a horse when that was the most common means of transportation.
+
+Citizen Web3 
+True, true, true. I gotta say, I'm kind of like poking around, but I like to understand that. I think that the main thing for me at least is that, if we are building decentralization, then we should be honest with ourselves in terms of, that means that the user should choose the concept, and the level of the decentralization. I mean, I'm personally pro, you know, let's go fully blockchain, web 3 and all that. But I totally understand that not every user is like that. And I think that, you know, we have to be honest here with ourselves. So, yeah, totally, totally understand what you're saying. But I have before because I don't know how it always happens. I think they should they should we should complain about the time and extending hours to at least 90 minutes.
+
+But I still want to ask you at least about Hedera, at least one question, and at least about the ecosystem, because I'm going to ask it from far away, but the question is very simple, to be honest. It's about what is the outlook now. But before you answer, maybe bear in mind this small statement. Like being in this industry for a long time, I know that... Hedera has had all sorts of reputations and it's been good, it's been bad, it's been the ugly even at some point. And what's going on now? Because you don't hear much about it now. And I guess I just had to make that little pre-statement because, well, I don't know, it's kind of sometimes really there and you see it. And sometimes Hadera just goes really in the background and then you don't see it. And I've been there since.
+
+since it started and then before. So please, I would love to hear at least a little bit about what's going on in the ecosystem. And you are the person to ask, I guess. So.
+
+Zenobia 
+Sure. So, you know, I will start by just saying that the volume of applications and transactions on Hedera has never been higher, right? So I think we just crossed the 10 billion transactions mark. These are applications that are just chugging along. They are creating trust. They are documenting things. They are creating an audit log across a number of different industries. That's not that sexy, but it is people using the network. We are never ones to go out and bash other networks. We're never going to go out and make ridiculous statements just for the sake of it. And so I think that a lot of times, you see people asking us to do that, right? Or you see our ecosystem asking people to do that. And that's just not who we are. We believe that people will continue to build on the network.
+
+We are going to be the network that both large and small enterprises choose. And, you know, we want to be the ones that, um, that everybody is building on. So I think, you know, we have, there are applications that are being built in every geography and across so many different verticals, whether that is healthcare or carbon marketplaces and, you know, eco-friendly applications. And there are supply chain, there are advertising, there are creator galaxies and, you know, web three NFT projects.
+
+We believe that those results will and do speak for themselves. So I think that the more stories that we can get out there about what people are building, the more interesting it is. And again, like I said, we are not going to go out there and bash other projects. That's not our style, never has been and never will be. But we are really focused on educating the market on all of the different use cases and opportunities, the kinds of things that can be built on Hedera.
+
+Citizen Web3 
+Zenobia quickly. I'm gonna ask you three questions. Usually they're not super quick blitz. But again, feel free to answer them as you wish. Give me three projects, they don't have to be blockchain that you are curious in the development of could be blockchain could be outside of blockchain.
+
+Zenobia 
+Sure.
+
+Zenobia 
+Oh gosh. You're going to put me on the spot here. I think, you know, one of the areas that, one of the areas that I don't, you know, I don't know if anything is being built, but one of the areas that I think something needs to be built is in terms of can blockchain keep AI accountable, right? When we have all of this AI generated content.
+
+Citizen Web3 
+Ta-da!
+
+Zenobia 
+Can blockchain serve as sort of an enforcing function to prove the provenance of content and to demonstrate what is really created by, you know, the owner that it says it's created by? I think that's gonna be a problem that is gonna need to be solved sooner rather than later. I think there are also lots of use cases in sort of the payments and micro payment spaces as we've talked about, you know, areas where you are banking the unbanked and democratizing finance and accessibility to banking is another really important area. So I might cheat a bit and just those are my top two.
+
+Citizen Web3 
+And if blockchains remove alone more noises? I'm joking, I'm joking. Two things, two motivational things that keep Zenobia going in daily life and keep on building, not just Hedera, but you mentioned a lot of values and a lot of ethical things throughout the conversation. So what are the two motivational things that keep you going?
+
+Zenobia 
+Yeah, absolutely. I think, you know, it is, it's probably overused, but it's absolutely family first, right? I think we have a responsibility to that next generation to make sure that we leave the world a better place than we found it. And, you know, there are a lot of problems in the world. There are a lot of things that have improved. So how do we tilt those scales so that we are, you know, making more progress on the things that have improved and can be improved,very quickly?
+
+Citizen Web3 
+By the way, it's not overused. There is a much more popular answer if I was going to To make it I think meditation or walking is probably the most popular answer and family is not at all the most popular answer So kudos for saying. That last one. One person or a character could be a writer, a developer, dead, alive, Disney character. Could be a real person that inspires you not a guru but inspires you
+
+Zenobia 
+inspires me. I think, you know, there are so many people who are doing amazing things. I have the privilege of working with a lot of other women in leadership roles who continue to inspire me by their work to help that next generation. But I would have to probably say my parents. I mean, they came to the U.S. with really nothing.
+
+Citizen Web3 
+Nice.
+
+Zenobia 
+You know, they built a life for us. They very firmly said education is going to be, you know, your ticket to the life you want. And I think that is a message for the ages, right? That's a message for generations. That's a message across races, religions, everything.
+
+Citizen Web3 
+That's a good answer. I like it. I like it a lot. People you'll be even practicing. I'm not, no, but it's a good answer. I like it a lot. Um, Zenobia, thank you very much for your answers. Uh, again, I'm going to complain to the people who invented the clock because it's, it's just not okay. But, um, hopefully with blockchains, we can have a different size. We can. So no, thank you. Yes.
+
+Zenobia 
+Beat up time, right. I don't solve that one yet. Ha ha.
+
+Citizen Web3 
+No, thank you. Thank you very much for your answers. And I guess there is a lot still to ask personally, at least on my list. I didn't even ask I think half of the questions I wanted to ask you. But yeah, thank you very much for your time and for your answers.
+
+Zenobia 
+Well, thank you.
+
+Citizen Web3 
+Thank you everybody for listening and tuning in. Thanks.
+
+This content was created by the Citizen Cosmos Validator. If you enjoyed it, please support us by delegating to Citizen Cosmos and help us create more educational content.

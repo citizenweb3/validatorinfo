@@ -1,0 +1,404 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/kadena
+
+Episode name:
+J.P. Morgan, the SEC and Proof of Work with Will Martino and Randy Daal
+
+Citizen Web3
+Hey everyone, welcome to a new episode of Season Cosmos Podcast. We have today two guests with us from Kadena and it's Will Martino, the co-founder and president of Kadena and Randy Dahl, the head of developer experience at Kadena. And they will hopefully tell us all about Kadena, all about themselves and everything else we want to know. Guys, hi, welcome to the show.
+
+will_martino 
+Thanks so much for having us, Sergey.
+
+Citizen Web3
+Yes, really glad. Well, the first things I usually do, there's two of you, so we'll do turn by turn, is I usually, well, one thing is me presenting the guest, but I think it's much cooler when the guest presents themselves and says whatever they want people to know about them. So please Will, I'll let you go first, present yourself, tell us all what you do.
+
+will_martino 
+Sure. So, yeah, I'm the president and co-founder of Kadena. I met my co-founder, Popejoy, at JPMorgan. He had opened up a research desk working in Haskell there, and it was in Brooklyn, and I was living in Brooklyn at the time, and one of my friends from college was working there. So got a gig working there because it was a couple stops away from my apartment. Love having a short commute for work. And we ended up starting to work on crypto because it was back
+
+before Ethereum had launched and everyone under the sun was coming through JP Morgan trying to sell them on enterprise blockchain. And we needed to do due diligence on behalf of the bank and this research group on blockchain. And we ended up building JP Morgan Coin version zero and open sourced it, published it to Hyperledger. yeah, I mean, in the process, like, that informs a lot of how we built Kadena and why we built it because we were doing this work on behalf of the bank and we knew that we would need
+
+you certain answers to certain questions that you just wouldn't be able to get industrial adoption without. And that turned into us leaving and starting Kadena. Back before that, I guess other background stuff that matters. I was at the Scurries and Exchange Commission back before they had a crypto group because I was there when Valerie formed it. I was the tech lead, which you formed the thing. I was back doing high frequency data analytics, building your supercomputing cluster, things like that.
+
+And yeah, then got tired of the government, went to hacker school for three months and to go learn Haskell. And after that went to, JP Morgan and the rest is history. I've been doing cadena for I think six and a half years now, something like that.
+
+Citizen Web3 
+This is a story. I would like drop the mic at this point if I had a point. But to be honest, I know your story, of course. I just wanted to address this. I have a lot, a lot of questions about your story to you. We will get back to them, for sure. But Randy, please introduce yourself.
+
+randy 
+Yes, so I'm lead of developer experience at Kadena. I started in April. not, I only worked for like three months or so. So I don't have that long history, Will has. But I started out as a Java developer at an airline company. I'm based in the Netherlands. And after that, I soon made a transition after four years to frontnet because that was really my passion. And I always...
+
+have a saying that you want to work on something where you find passion, where you're passionate about. So I started, I switched my career to work for front end development and worked there for like 15 years, created all kinds of front end applications for large companies in the Netherlands. At one point in my career, I founded my own company where I started out my own front end consultancy company.
+
+And basically from there on, I started integrating a lot, doing a lot with the community, front end community. I started a foundation called Front Mania where we created all kinds of, did all kinds of fun stuff with front end community, educating people with conferences, meetups, but also doing fun stuff like a front end pop quiz, which was really fun.
+
+as well. And I think somewhere in November, I got into contact with Will. And that was really nice. He told me all about Kadena because at the time, I heard the name, but I didn't know that the tech was that awesome, to be honest. And we got into a conversation and where I could really
+
+help data grow on the front end side. So basically JavaScript, the JavaScript APIs, stuff like that. And he got me really enthusiastic basically. And that's why I started in April working on the developer experience. And until now it's a real nice experience for me to talk to the community, see what they need.
+
+randy 
+We're busy with the home. We have got so much ideas and I will tell you about that later. But it's going to be real fun road for me and I think as well for the whole community.
+
+Citizen Web3 
+Before I'm going to move back to Will, I have a question for you, Randy. Were you not terrified of starting working for, well, it's not easy. mean, the guys done JP Morgan, I'd be scared terribly. If this was my boss, I'd be like, no, guys. I mean, is a big project, Kadena, seriously. I'm to say, joking aside, coming into the space with such a big project and a lot of ideas that Kadena has that we will talk about soon, was it not?
+
+Citizen Web3
+terrifying like to start that big already
+
+randy 
+I'm not really terrified of challenges. Challenges are something I like. really entangle right away. That's something I would like to do. That's basically also my background is I'm a big sports fan. I played sports on a high level. So challenges is a way of life for me. And that's what I like here in this job as well. mean, and I had lots of challenges in the past. Like starting your own company, it's a big challenge as well.
+
+The only difference which you have now is everything is exposed, everything is open source, but everything you do should be spot on. And I'm a perfectionist myself as well. So it's not like a big deal for me. For me, the most fun is working with a lot of smart people and Kadeem is filled with amazing talent and a lot of smart people where I can learn a lot from as well. So...
+
+Not really scared, more enthusiastic to work with such bright minds.
+
+Citizen Web3 
+Nice, that answer. Will, let's get back to you. So I don't even know where to start. I mean, I have like a list of questions, but I'll just gonna go ahead. honestly, cards on a table. I follow Kadena for a while and for everybody who's listening out there, I'm also talking holder. So I'm gonna put my cards on a table straight away just in case people do ask. But let's talk about JP Morgan first. And I mean, I remember when that came around, I don't remember if it was 2016 or 2017.
+
+Maybe I'm mistaken and you can correct me here, course. But I mean, the coin, of course, JP Morgan itself. And how did you end up working for them? And how did you suddenly realize that you wanted to go into something your own?
+
+will_martino 
+That's a long story. yeah, how I ended up there. So there's this tradition inside of banks in New York and I believe London and I think maybe Paris does this too, where sometimes you'll get new CTOs, new management at the very high levels of these investment banks and they'll put together kind of like a pet R &D group to do some critical R &D that you've wanting to do for a long period of time. we, so like that group got formed and the way that you'd
+
+will_martino 
+normally form these is you go and you grab, you know, some very experienced, you know, higher level management and then some extremely experienced, engineers to run the various desks that you're going to form. So I think this one had, I think it had three desks, two to three. And so Stuart Pope joined my co-founder was JP Morgan. He rewrote their, equity, their agency equity trading platform, which actually is a really important part of a kadena story because.
+
+When he was rewriting this, so the business case for this thing was that he was, you know, so the agency desk, had these institutional clients and they would call up their clients and say, Hey, how do you want to trade? And the clients would describe to them basically an algorithm of how they would want to execute their portfolios and balance things. And it used to be that, okay, they call them up and then they spend, and the, know, traders would spend two, two months with like the engineers, like getting these things implemented, getting them rolled into production.
+
+So Stu rewrote the, know, the trading engine, a bunch of other stuff. But the main thing that's relevant for the Kadena story is that you wrote a domain specific language that the traders could actually code on the phone. Basically it's like taking notes, except that you could execute these notes while they're talking with their clients. And this turn, this took the turnaround time from, you know, call to production from two months to about two days. It'd be like one day to get it into QA and then one day to get it, actually shipped.
+
+And these are, you know, non-technical, sorry, these are technical non-programmers, these traders who are now writing this domain specific language for algorithmic trading. And the experience of that, how to write a safe, like, you know, domain specific language for technical non-programmers informs a lot of how we design PATH, or smart contract language, because we see them as very similar things. Blockchains are, you know, they're databases with stored procedures, decentralized.
+
+with coins so like it has the notion of money built into it. But at their core, they're these databases and smart contracts with the store procedures on top. And you can do tons of stuff like that. So when we started working on Kadena, Stuart headed the R &D for PACT and all of that experience of years of writing a language for technical non-programmers informed how we wrote PACT. So that's why we kept PACT simple. It's why we kept the training complete.
+
+will_martino 
+And then that ended up having a lot of benefits later on, like being able to do formal verification that is as easy to code in as the actual language itself. Being able to show contracts to lawyers who are domain experts, but aren't programmers and have them be able to immediately say, it's like, this looks like X product or this looks like Y workflow. Actually be able to like read these things and understand them. So he got selected to, he finished that up and then he didn't retire out of J.C. Morgan, but he took some time off.
+
+And they came back to him six months later and said, Hey, do you want to run this R and D desk? It's down the street from your apartment. How do you feel about it? we said, yeah. And his first hire was one of my good friends, Carter Schoenwald out of Yale university. Cause him and I went to school together and he was a big Haskell guy. Stuart wanted to do a desk in Haskell just kind of to try to see how this would go. Cause we all like the language and I was at hacker school at the time. And so Carter pulled me in and was like, Hey, like I got, you know, we're doing this desk, we're building this desk.
+
+do you want to interview? And I went and interviewed and everyone was like, huh, we weren't expecting you. Like, okay, like this works. And then joined up. within about a year we started, know, blockchain started to enterprise blockchain started to become a thing. And yeah, we just, the way that we ended up as our desk ended up capturing that as like the thing that we could focus on first before any of the other desks was that,
+
+will_martino
+But in doing some of the background research, we're just like, look, we can't understand this stuff. everyone talks about these blog posts and like nothing makes much sense. So we got to build our own. So how do we build our own? And when I was at hacker school, I had written a scheme implementation. like a little domain specific language that looks a little bit like packed. And when we were doing some research at JP, we found this hardened BFT, know, this hardened wrapped variant.
+
+from a Stanford research project that was written in Haskell. So over the course of like, I think it was like a weekend. I think I just stayed up like Friday, Saturday, Sunday, came in on Monday and had a fully functioning private blockchain that was executing around like 500 transactions a second and was able to run EDM and scheme side by side. And that was how we just, we kind of just might drop that. And then we got to work on, you know, we were like the head desk for blockchain up until we left.
+
+Citizen Web3
+That's impressive, man. That's impressive. I mean, I have my first slightly controversial-ish question. Of course, you come from the world of enterprise blockchain, and not just enterprise blockchain, you come from the enterprise world, right? And let's talk stigmas here a little bit. mean, we all think that blockchain, like we have most people who use blockchain, they automatically tie up blockchain technology and decentralization philosophy together.
+
+And, you know, when people from the enterprise world come, they're like, my God, enterprise blockchains, you know, they're going to like, I don't know, destroy us. they're trying to infiltrate into the blockchain world and destroy everything from the inside. What would you say to those things? Are those just crazy talks or is that, does that have any think to it?
+
+will_martino 
+It's a good question. It's hard to say. I I think that enterprise adoption of blockchain technology will matter in the long term. I don't think you can have full adoption of cryptocurrency and blockchain technology without that happening. But as we've seen, it's going to take a long time. This isn't like the internet, which just started quickly taking over a bunch of different domains. This is much more like, you know, admins and money.
+
+which take maybe even up to a generation that actually convert over. So, you know, those aren't the chains that I'm worried about. I'm more worried about like the VC chains and the, you know, the more exchange focused chains because those ones have like, had people that actually, cause enterprise really doesn't understand blockchain. And I would be surprised if we see any major industrial adoption by enterprises before 2030. That's like really, since we started Kadena, like that was our target. It's like assume crypto is a thing. What do we need to build so that by 2030, when enterprise catches up?
+
+we're ready to go. And that's why we built Kadena the way we did. But, I mean, also to solve a bunch of other problems, but in the beginning, that was it. But it's the VC chains that I worry about more because like, you just end up with these, you end up with these like Prubestake networks where you have a few whales who are these major VC funds that do not have a good track record in, you know, doing things for the common good. And they have this massively outsized voting control, but it's also basically hidden because it's pseudo anonymous enough.
+
+will_martino 
+And everyone knows about these chains and knows who controls it, but you can't really track it. So like that's my bigger worry of the two. it's one of the things that I've always loved about Cosmos from the beginning was they weren't one of these chains. did a very decentralized launch. They have a great community and they've stuck to their guns on that since the beginning and didn't try to take the shortcut that some other chains have. So like, those are the ones that I worry about the most. It's like the big VC and the big, you know, the big exchange chains, because those ones, when push comes to shove,
+
+do not have their community's interests at heart. And they're really just kind of waiting to mature and get kind of people like, you know, stuck, like they're waiting for people to not be able to migrate off because like so many things get integrated. And then I suspect that you're going to see, you know, major voting changes that are of course decentralized. And of course, like who knows who's voting, but we all know who's voting. And they're going to change things like the gas model to do some rent extraction because that's what the PCs do.
+
+Citizen Web3 
+Makerdoll.
+
+will_martino 
+I'm not going to name names. That's not really like, that's not our style. We don't do that, but it's like general themes. Like those are the ones that I worried about the most. And anyone who's worried about enterprise blockchain, IBM poisoned that well so hard in 2018 or 2019, because we were still focused on enterprise back then, or not focused on enterprise. We were doing enterprise alongside public and they like IBM's ability to force all of their clients to try to do an enterprise chain.
+
+when their technology wasn't even a blockchain and couldn't even run. Like we sent people to some of their workshops and in the workshops, like the IBM guy couldn't even like get people's computers to run their blockchain. It was like 2019 or something. So, you know, like the well is so poisoned that it's going to take at least five more years. So, you know, for any other projects, like just don't focus on enterprise right now. Just like right now we're in crypto winter, focus on core tech, focus on community.
+
+Focus on making the UX better, focus on user adoption and user stories. You need almost like a cycling of the upper management and companies before you're to be able to really do enterprise blockchain again.
+
+Citizen Web3
+Yeah, yeah, it makes it makes sense. mean, I mean, there are a lot of though, like you said, let's not name names, but I do agree there are a lot, a lot, a lot of VCs out there that by my calculations, some of them could own up to like certain percent and I'm not talking about just a network, I'm talking about the whole market cup. I mean, again, let's not name names, but I think we all know who we're talking about here. Though again, again, I think personally, they do some good things, especially with R &D. They do have a lot of R &D that they bring forward.
+
+And hopefully that R &D can be used to get better and to improve what we are doing in general. But last question about your history kind of thing. Sec. And of course, this is like the F word in the blockchain space. Sec. my God, he said sec. You worked at Sec and you worked at Sec for the committee. Correct me here. Help me out here a little bit. What was the blockchain?
+
+will_martino 
+It was the cryptocurrency working group back then. Now it's the digital ledger technology group. think they might've changed the name again. It was back when it was Valerie who like formed the group. She still runs that now. And it was me and one of the person that were basically like brought on by her to be like the first people in it. And then we grew it from there. Yeah, it all started because, you know, they were, they had some cases they needed to look at and they needed someone who was in the SEC who had the clearance.
+
+who didn't own any coin and who understood the tech. And it was pretty much just me. was like, my Bitcoin was at 60 and I decided between like buying Bitcoin at 60 and going into this. based on like how Korean is done and like, you know, my career since then, I maintained that was the right decision, but it was, it's been close for years. So, yeah, it was fun. can't talk too, too much about it because it is still like, I'm a, like I am a domain expert at the intersection of regulation and technology in this space. So, and like my background at the SEC means that like,
+
+there's just not a ton of like details I can go into. We should all be happy that the SEC didn't go the path that New York did with the bill license because that would have messed up a lot more stuff. At least they've been slow and diligent about it as opposed to coming in and just crashing on the grade.
+
+Citizen Web3
+I think that that experience and that was my actual question. Did that experience give you more understanding of how to, which way to go with Kadena so you don't get into trouble?
+
+will_martino 
+I think it's intuition because there isn't, this stuff isn't set down in case law. way that could be structured and done is, what I hope will be by 2030, the kind of set in stone or at least the guidance that's provided. But until that guidance comes out, you can't be sure. So thus we all have to be super careful. but yeah, I mean, now we've been, you know, we've been decentralized for years. We've been in production for years. It's we're in a very good place now. It's always that launching period. That's hard.
+
+But based on the way that we did it, we're pretty confident that we're like, if we're not good, then most of the entire industry has major problems. So yeah.
+
+Citizen Web3
+So people, if you're listening to this. So go on. I thought you were gonna add something, sorry.
+
+will_martino
+No, that's it. mean, it's, yeah, we'll see. We'll see where it goes. I'm hopeful that we get some clear guidance. I'm very thankful that they didn't come in and do a bit less and some really screw things up.
+
+Citizen Web3 
+so from here, first question about Kadena, it's going to be very silly sound to both of you, but I like to break things down, like really break them down. So a multi-chain network. Let's talk about this. have proof of work, proof of stake, multi-chain network. What on earth does it mean for the regular user out there who's just browsing the Cosmos ecosystem or CoinGecko looking for gems or anything else, but from gems, you know, he's looking for L1s, whatever.
+
+Can you guys, whoever wants to answer this, explain how it works and what does it mean?
+
+will_martino 
+Sure, I'll take a stab at it. It is technical to describe. For people who are like, it's difficult for me to even cover it with people who aren't serious consensus researchers, just in a two minute thing. yeah, Cosmos, you guys are used to hub and spoke. So Cosmos, you have the Cosmos hub, then you have spokes off of it. Those spokes may have their own coins. You can lock up coins and put them on the other chains through IBC. But at the end of the day,
+
+Citizen Web3 
+Let's go, let's go technical.
+
+will_martino 
+They aren't one network. It's a series of networks that can interoperate and talk to each other. So that's like the hub and spoke model. People are also familiar with DAGs, the Directed Acyclic Graph, which basically means that you have a ledger that you can run transactions in parallel in. That is another approach to scaling. Solana is famous for this one. And what we do that is different is we have like real horizontal scaling.
+
+So we have one coin that you can transfer from one chain to another chain. All of these chains are peers with each other and they are all in the same network. And it's proof of work that actually allows us to do this. So if you've heard of web two scaling with like companies like Google, where they do horizontal scaling, where you can just throw more servers at something to scale it up. We do something very similar, but with us it's more chains. Now you can't just throw more chains at our network. We launched with 10 chains. We hard forked up to 20 chains. You can hard fork up to
+
+Theoretically, you can hard fork up to a billion chains. I don't think we're ever going to get there. think a hundred thousand chains, which would represent 15 million transactions a second or something like that is the highest that we would ever see. And I suspect that that would take two decades to get to because like ours is much more demand driven. Like as our network grows and we need more scale, then we hard fork to bigger and bigger networks. of course the thing's all decentralized. know, we do a lot of the core R and D and the core work on it, but we take PRs from
+
+outside the community and if we misbehave as like a foundation, as like a guiding light for the project, then we fully expect people to do what they've done with other proof of work networks and fork them. So the way that ours works is that you have each of these chains is running just like a single chain like in Ethereum or Bitcoin, but they're all in the same network. So you can run transactions on chain one or chain 10 or chain 19 and you can also do cross chain messaging through simple payment verification.
+
+And that's pretty much it. The secret sauce is just that like proof of work is this weird thing where you can actually split up the work that's being done on every chain and make the overall system more efficient. Because right now we have, you know, 20 chains when we go up to say 50 chains, actually let's go, let's say we go up to 40 chains. What we'd do is we chop the difficulty of each chains, you know, the new block in half, keep the overall hash rate the same and actually double our throughput.
+
+will_martino 
+And from an energy use point of view, we increase our overall energy use by maybe 1 % and in return get double the throughput. And this is because proof of work is weird. And because like the amount of mining that goes into a network isn't related to the overall transaction throughput. And you can just really split it up and things actually get more secure as your scale, which is this weird kind of chunk of probability theory that proof of work kind of captures, but it works and it's really simple. you know, just like the problem is, you know, proof of work.
+
+works, it's just not efficient. And we set out to solve that. And then of course we threw on PAK, their smart contract language, and that just allows you to now have this multi-threaded list machine in the sky that you can really do whatever you want with.
+
+Citizen Web3
+So a quick question, Randy, to you. You see, I thought until recently, very recently, until I had the correction from one of your team members that you guys use proof of work and proof of stake. And that's not true. But I believe that actually several people do believe that you guys use proof of stake as well, because especially because you're kind of cosmos related. People do say that.
+
+How does it work for you? Can you talk about the proof where the proof of work is and where does it end?
+
+randy 
+No, we are 100 % proof of work. So all our chains are based on proof of work. We can maybe in the future can go to a hybrid state, but that's not necessary for us now at the moment because yeah, our chain solves all the problems where proof of work currently has. In case of developer experience, that doesn't even, that doesn't,
+
+add something on that as well. So the only thing we need to improve at Kadena, mean, our primary focus of Kadena like the last few years has been to create a state of the art first layer blockchain development solution. And in my opinion, Kadena completely revolutionizes the blockchain world in that part. But one thing, it doesn't matter how good
+
+your technology might be, nothing can really replace a good user experience. That really is essential. So that's why Will basically came up to me and asked me to help them out on that part. And currently, we're busy creating a whole new developer experience that will be truly game-changing. Because at the moment, building
+
+An application or a platform can be tough. You have a pretty high learning curve. As well as the documentation or JavaScript API are written in a more traditional manner. So that's why we're like really focusing on creating new documentation side. We're going to revamp our tutorial section. We're also engaging a lot more with the community of what they need from us.
+
+We're to build a developer academy where people can have certifications and badges. So when a developer comes into Kadena and gets certified, people know that they can show it for, I'm certified Kadena developer, stuff like that. people will know, will get trained in how to do things properly. And with that, we also kind of develop user-friendly tooling.
+
+randy 
+creating robust APIs, SDKs. So it really doesn't really matter if you use proof of stake or proof of work. It's the layer on top of that that brings, well, gives the developer experience. So that basically should be transparent for developers or users.
+
+Citizen Web3 
+And do you?
+
+Citizen Web3 
+What's your number one thing to go out and attract developers? Because today the competition in L1s is enormous to attract developers. And obviously without developers, it's a bit hard to build an open source chain, in my opinion and experience anyways. What's your number one thing to go and catch developers and attract them to Kadena?
+
+randy
+Yes. So the main thing where we need to focus on it should be easy to develop something on Kadena. So if you look at our APIs at the moment, they're very low level APIs. If you want to like, for instance, when a mint and NFT, you have to do a lot of stuff to mint an NFT. It would be great as a developer if you could just say Kadena.mint and your NFT is minted on the platform. So the thing is we should focus on ease of use.
+
+instead of explaining developers of how to build something. And of course, we also need to educate developers as well. But ease of use is like the main thing. I always go back to like the browser wars, the internet wars during the days, like a couple of years ago, you had like that battle between Internet Explorer and Firefox, and they were battling each other.
+
+who was the best browser and then very late Chrome came into play. And if you look nowadays, they are like the main browser people are using. And it's not because they were the better browser, no, they focused on technology and they focused on a good developer experience because it was really easy to build applications by using Chrome. And that's what we need to focus on as well. It should be easy for developers to build something on Kadena. And that's where you get
+
+we'll get a better and greater adoption. And for that, we also need the community to help us out on what they're missing. And that's why we need to interact with the community as well on that part.
+
+Citizen Web3 
+Will, did you want to add something there?
+
+will_martino 
+I do. Actually, I want to amplify some parts of it. Some other parts that we have are a very large grant program that we do for going to, you know, helping people to be able to kickstart, helping projects to able to kickstart actually going out and building. It was very easy to apply for. And I think we're going to have our first major announcement with the newest round of them coming, I think sometime in July.
+
+but on top of that, there's some other parts that I think are important. more at the infrastructure level because Randy folks is more on like the actual developer experience. And, know, like part of the experience is in part of like not only attracting developers, but being able to keep them is, both like the ease of deployment, you know, as Randy mentioned, you being able to just, you know, do mint.nft and is having to go out. That's important, but there's the other part of like, let's say you want to do an NFT platform.
+
+You know some approaches which are still in cosmos. It's still easy or easier But if you want to go and you want to have your own NFT platform You need to roll out your own, you know spoke you need to roll out your own network and then run it and that's a bigger lift to do I like I've always liked the idea that like you you start kind of what I'm like you IDX is doing where they started on aetherium They then went to roll ups and now they're moving on to I think it's cosmos. Yeah, which is a huge deal because they're a big deal
+
+will_martino 
+and they've, they've already built their core community and like by moving onto their own spoke, like that makes sense. But if you're like, if dydx would like launch itself on Cosmos first as its first step, I feel like you would have a lot of adoption problems. So it's one of the reasons that we wanted to scale layer one itself so that you don't have to run your own infrastructure just to deploy your application. You can just deploy it to mainnet, just like you could with Ethereum, which then gets to the second problem that we avoid by.
+
+
+will_martino
+being able to scale and actually having a scalable platform is low gas fees. Our gas prices are meant to avoid dosing, but that's it. Like it's really the core focus of what gas is for. Like it limits the amount of computation so you don't solve a network. And really that just means like we don't want people to dos it. Outside of that, we want the fees to be as low as possible forever. So if all of a sudden, you we don't run into the Ethereum problem where
+
+will_martino 
+launching a new project on Ethereum is now super expensive. like, you know, kid can't, you know, learn, Ethereum and then go and deploy it on domain net. And without, know, a sizable like that from like the, from like an 18 year old's perspective, like a sizable chunk of cash, they can't just go and roll out their own thing and play with it and build new ideas and explore and innovate. so this is one of the other reasons that we think that scaling is so important as it applies to the developer experience, because you just don't have to worry about that.
+
+You know, it's a couple bucks to deploy a contract at most. And then it's a couple bucks to run it for about a month because the gas fees are just so much lower. So, yeah, the part that Randy focused on is more like the developer experience, like how do you actually integrate it? How do you build it? How do you get that front end working? But there are these other parts that we found have been very attractive to developers because we have this story of, okay, you launch CryptoKitties on our platform. Our platform is not going to be congested permanently. Let's say it has like massive, massive adoption.
+
+will_martino 
+And you've just deployed it to chain zero. That's cool. You can now deploy it to chains one through 10 in addition to that. And now you have 10 times the throughput for your application. you just re-out. It takes a little bit of tooling, but you deploy it out. There's no one that can stop you. And now you have 10 times the throughput. And it costs basically the same for you to be able to scale up your app. Now let's say it has so much more adoption that you need more scaling. Okay, you deploy it to the rest of network.
+
+Now let's say that it gets to the point where, you're on every chain and you're saturating all the chains. Well, that's what we talked about when we say like adoption drives the scale of the layer one itself. Because as that time approaches, we're going to notice it and the community is going to notice it and all of us are going to start to get ready for a hard work to 50 chains. that network always grows beyond, know, it always grows that it can meet the capacity of the demand that it has. And this is what we think, and this is like one of my core theses for crypto in general is like what is held at back?
+
+from like really rampant adoption is that every time someone builds an app that starts to get there, then like the network gets clogged and you just kind of get stuck. And being able to solve that is just this huge problem that we took years solving, but we did it. And now we have just, you know, straight decentralized proof of work and we don't have the problem that all the other ones that have come before have of they get clogged and then that's it hampers adoption as time goes on.
+
+Citizen Web3
+I mean, this is a really great answer because a lot of, in my opinion, founders, unfortunately, don't pay attention to attracting developers from the beginning to the scalability of the network. And what we get is, like you said, we get somebody building a cool application which breaks the network, one breaks it, but clogs it, right? And then you have problems and other developers are like, I'm going to go and look for something else. And that's how you start that like...
+
+developer like musical chairs, right? Musical blockchains, whatever. I'm going to ask a question that's going to sound really stupid to you, both of you, but I need to ask it because Kadena is always listed as a Cosmos ecosystem project everywhere. Why is this? What's the reason for this?
+
+will_martino
+I think it's because we've just known Zucky forever. Back before, I mean, like I wouldn't, think they first presented Tendermint, I think they didn't even present it at the first blockchain conference when we were presenting our private blockchain, we were presenting PAC and showing formal verification of our smart contract language. I think it was still in development at that time. That was a really fun conference because you had a bunch of the people who now have a bunch of top projects were there. Dominic came up after my talk and screamed at me for like five minutes.
+
+People literally had to physically get it between us. This is the Insane Clown Palsy, I the internet computer guy. yeah, I see it, totally not Insane Clown Palsy. And yeah, so they, like, I think it's just because we've known them for so long. Like, so we don't see ourselves as being competitive to Cosmos, we see it as complimentary. So similar to like, you know, it serves different needs. We don't have fast finality. There are certain...
+
+Citizen Web3 
+ICP, ICP, yeah.
+
+will_martino
+Because with proof of work, our finality is still in the order of 30 seconds to a minute. Whereas there are certain apps that really do need that. And there are certain apps that you want to a core of your system on a proof of work network, and then you want to run spokes, or you want to run other networks that are more running on a proof of stake. Because let's say you want to do settlement on a proof of work network, because you want that decentralization, but you want the fast finality of a proof of stake system.
+
+So we've always seen it as complimentary and because of that, we've just been working with Cosmos for a long time. We've worked on IBC for a while. We were working with Terra before Terra had its unfortunate implosion. And yeah, I think that like the next place that we'll be looking at with Cosmos is definitely IBC. But I've been recently getting a lot into zero knowledge proofs and zero knowledge bridges from the point of view of bridging. And I suspect that that'll probably be the first time that we have like
+
+bridging between our two networks is getting an IBC system that has some zero-knowledge component so that it can solve the whole who owns the key for the bridges problem.
+
+Citizen Web3 
+Because right now I think if I go into the ecosystem part of the Kadena website and if I go click on the bridges section, IBC does come up but it doesn't have a link to it. So I guess it's all like kind of planned. It gives you kind of the hint that it's coming, but you know.
+
+will_martino 
+Yeah, it's something that's been worked on for a fair bit of time. but definitely Tara's implosion got in the way of, us focusing on like rolling it out this summer. so it's more like we're still figuring out the business case for it. So figuring out like what we're going to do with it. Cause bridges are important for Kadena. There's something that we've been a core piece of critical infrastructure working on them for a bit, but we want to get them right. we had some bridges that were sort of ready to go this time last year that I
+
+didn't pull the plug on, but I basically stalled them because I was looking at them and I'm like, these are so unsafe, they're going to get hacked. Like this approach in general is just not okay. And then over the preceding year, I feel very vindicated in that decision because we've seen so many bridge hacks that I don't really feel bad about like the decision to say it's like, you know what, let's just pause on this for a minute because I don't think the tech is really ready for us to go and deploy it yet. I mean, wormhole.
+
+if they hadn't gotten saved by FTX, or sorry, with jump, like that would have been, I don't know what would have happened to that ecosystem, but like they dodged, they didn't dodge a bullet, they dodged like eight freight trains at once.
+
+Citizen Web3 
+And to be honest, like Wormhole was kind of felt like kind of using blockchain back in 2015. I'm not saying that's a bad thing necessarily, but we are not in 2015 and using Wormhole wasn't a great user experience at all in terms of, but you guys mentioned, I mean, not you guys, I mentioned you answered. We both thought we all talked about it about developer experience and
+
+We talked about easiness of onboarding developers. And now you have Pucked, which is the smart contract language you guys developed. And I think I first saw it in 2017 or 18. I'm not sure. I'm not going to lie. But I did read it and I was quite impressed with the things I saw. There was a lot of concepts there about atomic execution, about Kero model. There was a lot of things that are quite interesting things, which are not new to anything. But I guess the language is kind of
+
+feels more like it's more blockchain developer friendly. I don't know if that's the correct way to put it. Will, Randy, would you correct me here about that? the question, I'm just going to ask quickly, sorry to interrupt you, Randy. Quickly, question is, does PACT actually make developing easier for on board developers easier, or is it still like a stone that you have to overcome and teach developers a new language? That's the kind of question here.
+
+randy 
+Yeah, I think nowadays for every like smart card, even if you go to like Ethereum, you always have to learn like a new language. And back to be honest, it's a very easy language to learn. It's a list based language. So that the only thing people have to, I guess, overcome is all the parentheses. But it's very easy language to learn. And that's what you see in the community as well. Once it clicks.
+
+it clicks. that will be the feedback we're getting a lot that a lot of people like working with PACT. The only thing is if you're working with like for instance a scripting language and you really are focused on a certain way of developing, it can be a bit harder to get acquainted with PACT.
+
+But again, like I just said, once it clicks, it clicks. And it's very intuitive. I think that's what Stuart wanted to accomplish as well, to create a language that's very easy to learn and very quick to create a smart contract. And in my opinion, he succeeded in that.
+
+will_martino 
+Yeah, I think that the thing with PACT is that, we could have gone a different route and had something that looked and felt like JavaScript, which is the path that some other projects have taken, which makes it easier to onboard new developers. Cause you have a bunch of people who aren't very good at JavaScript and you can go and grab them and they make me not very good at your smart contract language. But here's the problem on the internet, that's okay. And you can evolve like your website. You can evolve it to be better for smart contracts. When you deploy them, they are themselves a bug bounty.
+
+And packed doesn't, you know, like we decided, you know, we intentionally decided not to go that route because safety is so paramount. Like the safety matter is more than everything else in when it comes to smart contracts. So instead we have a safe language that is intuitive, but is a little bit different in the beginning to get your head around. But packed is it's closer to the way I've described it. It's much closer to learning SQL for a database for queries than it is to learning like a JavaScript. Cause like JavaScript, yeah, you can get up and running kind of quickly.
+
+But then like as time goes on, like you need to learn more and more and it's hard to do it safely. It's hard to do it at scale. It's hard to do it in a way that, you know, you don't end up shooting your own foot off later on. Whereas like SQL, you need to kind of wrap your head around the idea of a table and this relational algebra that the language is expressing. And then after that, everything clicks and it's very easy. So pack is like that where, but it's for like a blockchain. It's like the domain of blockchain related applications. So writing an Uber in the pack.
+
+would be very difficult, if not impossible. But then again, an Uber would never run on top of a blockchain. What you'd want is you'd want to do settlement on top of the blockchain. You want to do like Uber settlement. You'd want to do some tracking. You'd want to do some other stuff. The things that you don't, that you want to be decentralized, those happen on chain and then everything else happens off chain. So it was that mantra that really drove us to do PAC the way that it is. And then Stu's experience with writing this language for non-programmers that were technical.
+
+informed a lot of how we design things so that it would be very intuitive and very easy to learn. So yes, there's a little bit of like initial onboarding that's more difficult. Because yes, yeah, like most people haven't even worked on a list. But then it's usually it's like two or three days. And I usually just tell people I'm like, look through the coin contracts, like download it, get it running in a rebel, try to try to augment it a little bit. And like once you do that, like try to add a function. And then after that, it usually just clicks for people and they're done. And then the hard part, which is always the hard part of
+
+will_martino 
+programming is figuring out your data model of like, do you want your data to be structured? How do you want it be stored? How do you want to search it? But that is just programming. You can't not have that problem. It's always going to be there. And that's what makes programming hard. But that makes things very easy because that is just everything else gets out of the way. And then you're just focused on the data model. And then you're focused on like, how do you tie the different parts of the data model together into it.
+
+randy
+I also want to add something more. I think the adoption of PACT will also help when bring out the Academy. I think that will help a lot and it will help the onboarding of new developers way more than what it is nowadays. Because now if people want to learn PACT, they really have to dive in. There's a lot of content on the internet to find, but it's not centralized.
+
+And if we centralize all the content, give them a learning path, it will be adopted way more.
+
+Citizen Web3 
+I don't know if you guys heard about more like to you, because you've been probably around longer in blockchain about Urbit and Hoon. Urbit is the idea. It's not the point. Let's not advertise the project, but they have their own language. It's like a runic language and the language there, I see it typing it in straight away. Yeah. Have a look at it. Urbit and Hoon out of curiosity. I'm just talking about like the easiness of onboarding developers here because that language is completely made up pretty much from scratch.
+
+And it's got different concepts to most things. And so I don't think that, especially if you developed a language that is concentrated on security, the opposite. should be, like you say, easier to adopt. And that's a great thing here, of course. One more thing that I did notice, and I think anybody can probably notice it straight away, but considering we think of ourselves as ecosystem developers, we kind of go out and help networks. We help infrastructure.
+
+hard not to notice how much attention Kadena is paying to ecosystem development. You have the accelerator programs, have like the academy you mentioned, you have like a big ecosystem with like Kadex, Marmalade, sorry if I mispronounce it, and so on and so forth. And like the communities is growing all the time. You have a lot of channels where you present. Is that intentional, the focus on ecosystem development on the community or is that just kind of happened?
+
+because you have the experience and you understand what you're doing and you understand that that's important? Or was it a natural evolvement of thing and you kind of attract people from everywhere because that's what it feels like and it's a good thing, of course, in my opinion.
+
+will_martino
+It's a generic guess, I think. mean, the first chunk of Kadana's time was designing how we scale and figuring out what the protocol looks like. And then it was building a protocol. And then we launched and we basically got about a year in and it became much more focused on, okay, we have this thing, it's community time, let's go get adoption. We know it's stable. We've demonstrated that it can scale in production. So that side of it, yes. And then at the same time, we have this community that was clambering for it. like, do more to support us. Okay.
+
+Let's do, let's hire a bunch of people and do more to support you. So it's just a generic yes. But Kadena itself is, it's a longer play and it's a longer project. mean, our entire, you know, token economic system is designed around 120 year, emission schedule, which is just weird for crypto. No one plans that span of time. And every once in a while, someone, get the question during an interview of, it's like, what happens at, you know, 120 years when, you know, he stopped submitting coins. And I'm like, well,
+
+It means that I'm, I guess, immortal or we figured out like aging and we figured out global warming. We figured out so much other stuff. And also it means that crypto is now fully adopted in the global standard. So like we'll cross that bridge when we come to it, it'll be fine. But, yeah, we're, we're much more focused on like we're slower. like, tend, we don't move super fast because it's, if not web two, it's web three. Like you can't move fast and break things because when you do, you get hacked and there's huge problems. So we don't really, we have a different approach and it's a slower.
+
+Citizen Web3
+Yeah.
+
+will_martino
+one where we're like, just keep building and building momentum. So I think it's like, we hit that stage where it made sense for us to, okay, it's time to go like build the foundation for the ecosystems, do tons of grants, build the academy. also it helps that like, you know, we found Randy. had been literally looking for someone who fit Randy's mold for three years. And I had been looking basically continuously for that entire period of time. happened to be married to someone who's like our young staff front end at Spotify runs their conferences.
+
+will_martino
+has open source experience, has startup experience, and I can't hire her because she's my wife. And she's like, fuck no, I'm not going to work for your company, which is a good idea because that would be a terrible idea to do. But finally, just talking with random projects, like, I'm looking for a really senior person who understands front end, how to build a community, knows how to build a team, knows how to do conferences, knows how to build academies, all this stuff. And one of the projects the community was like, yeah, I think I know someone.
+
+hits that mold. And I think he might be like bored of his current job. Like, let me put you in touch. And then low, have Randy and now Randy's building out his own team. And I don't have to pretend to be a TypeScript expert, which is great because I'm not.
+
+randy 
+Hahaha
+
+Citizen Web3
+I love that. I mean, I've been professionally working on blockchain for seven years now and the amount of chains I've seen come and go and die because of the lack of, you know, attention to ecosystem and developer experience is enormous. It's like, like people just close their eyes to that as it doesn't exist and it's great that you're paying attention to it. Love it.
+
+I'm going to take into the last block of questions because you kind of will answered partially of what you said, but I'm going to push you a little bit more in that direction if you don't mind. It's a question to both of you. But first, Will, what was the goal and the motivation in deciding to build an LL1 blockchain? I mean...
+
+Not in terms of like, I'm going to build the most scalable blockchain out there. But I mean, nobody just wakes up and thinks, I'm going to go and build the most scalable product or I don't know, I'm going to do it just to prove that we can scale with proof of work or whatever and so on and so forth. I mean, there must have been something that led you here internally to this point and to say, hey, I want to do this. What was it?
+
+will_martino
+I mean, part of it is the context and the timing at JP Morgan, just like having that experience, having that in our backgrounds, having Stu as a co-founder. Without Stu, never would have done it. Just couldn't have done it. So that was definitely part of it. And part of it was that during this due diligence at the JPMorgan, we ended up with this like, kind of like one page of core questions we knew needed to get answered if there was ever going to be industrial adoption of blockchain.
+
+And we knew that no one, like we knew, we looked at every single project that was either coming up or that was being launched or had already launched. And we knew that nothing answered even like quarter of these things. Very basic things like, okay, how do you upgrade a smart contract in place? You don't even do that in Ethereum really. You just have proxies that point to new contracts. Like just very basic stuff and a bunch of other stuff on top of that. know, how do you have formal verification? How do get a lawyer to be able to understand these things? If they're going to be legal contracts, lawyer needs to read them. And
+
+We had this core belief that crypto is going to be a thing and that it's going to have widespread global adoption within our lifetimes. And we're just like, all right, someone needs to do it. So let's go and fucking do it. So we left and did it. And it was really, I think it was without the JP Morgan side of the equation, I don't think we would have had the motivation because we wouldn't have seen both like the potential because of building JP Morgan coin helped massively, but also
+
+the shortcomings that we saw because there were so few projects that were coming out of anyone who had major financial expertise. Even, know, project, like most of the projects don't even have, you know, founders who have major industrial expertise. Usually they're coming out of either other startups or they're coming out of open source or they're coming out of research and photography. We came at it from a very different angle of, okay, we like, have an industrial background. Let's leverage that because we know what's going to be needed if this thing is ever going to see industrial adoption.
+
+No one else is going to do this and no one has these backgrounds, so let's just go and do it.
+
+Citizen Web3 
+You say that some of them come out from Uber, let's not go that way too, unfortunately. Randy, I didn't ask you for your blockchain story, but what motivated you? What led you to decide to go into blockchain in the first place?
+
+randy
+Yeah, so I was always interested, I think, from to the since 2017 into crypto. But I think the talk I had with Will in November really got me enthusiastic and really dove into like blockchain technology. And that's basically got me in. That's basically what got me into the blockchain technology and into kadena, of course.
+
+yeah, that's, I can't make...
+
+Citizen Web3
+What did he tell you that you can tell us? I come on, we all want to know what was the one thing he told you.
+
+randy 
+Yes, well, basically the people who are working there, like the people working in blockchain, mostly and especially at Kadena are extremely smart. And I like to work with the best of the best because if you work with great people, you will get a great product. And that's what they have done at Kadena. And that's currently what I'm doing at the moment as well. For the developer experience, I'm trying to create like a dream team.
+
+And so we're busy building the best team out there. that focus on building, good enough is not great. Always strive for perfection, you will get excellence. That part, that's what I would enjoy the most.
+
+and will explain to me how they created new blocks and how they solve it with the other soft like scaling part. And that's what basically drove me to Kadena.
+
+Citizen Web3 
+Nice, man. I like motivation. like things that motivate people. And this is my last question to both of you again, Anyone feel free to answer whenever you want. Considering for both of you, you, take care of developer experience and you're building academies now. And this is a huge, huge task from what I see. You will, I'm not even going to start how much you will probably, how your day looks. I can imagine that it looks a lot crazier than what I can imagine.
+
+What motivates both of you to get out of bed day in day and to keep on doing your, whatever it is you're doing, building kadena, building developer academies or, you know, having the best scalable blockchain in the world, whatever. What motivates you in your daily, daily life that you would like to advise maybe others as well?
+
+randy 
+For me, it's like being an entrepreneur within the company itself. motivate me by telling me, just do what you think is best. And for that, I can create my own team, do what I think is best for the community.
+
+creating a whole new developer experience and even if it means like throwing away old stuff and creating new stuff, well that gives me the motivation to build awesome things. That's why I want to get out of bed every morning and start working in a container, hire great talent, work on new stuff, creating an academy, talking with the community of what they need.
+
+getting that into a roadmap that all motivates me basically to work here.
+
+Citizen Web3 
+Will?
+
+will_martino 
+Yeah, I mean, I think it starts with the team. I mean, I've been doing this forever at this point. It's six, seven years. So like, definitely starts with the team. Like the culture we have is amazing. the people that we get to work with are just, they're free and brilliant. And it's just, it's a party. I don't know what else to say. We have this like, maybe we have this like List machine in the sky that we get to work on every day and we get to hack on really cool stuff. And.
+
+It's awesome. don't really like it. just, it's just a ton of fun. It's basically just like, it's just a little party of like, like fucking nerds who are super smart. It was like working on random stuff that all is of course, like, know, strategically like tied together and going in the right direction. And we all find that it's meaningful. all believe that crypto is going to be a thing and that's solving the efficiency problems and the scaling problems do matter long-term. And at the same time, they get to work on this just really cool thing that we built.
+
+yeah, I mean, like when Brandy came on, think I told him early on, was like, yeah, I'm going to write, like you're driving. I'm riding shotgun for maybe a couple of months. And then after that, I'm just going to like, just say yes to whatever ideas you have. Cause I think you're really smart and you're going to figure it out. So yeah, he's like, now he's off to the races, building a team. The Academy thing is just like, yeah, like I got a guy who like knows how to build this. So like, we're going to do it. And like, that sounds awesome. I've wanted to do this for years. I have no idea how to go about it. He's like, yeah, I got the guy. So yeah, it's just like, it's, it's just a really.
+
+well built organization that has just, it's just a ton of fun. I don't really know what else to say about
+
+Citizen Web3 
+like that, I like that. Fun and motivation to build are like I think the perfect combination to build something great. So guys, it's been a huge, huge pleasure. Thank you for finding the time. I know it wasn't easy to find the time. I remember that the conversation between mine and your team was a long one. But thank you for finding the time, guys. I'm looking forward to, and I think everybody is, to when IBC is going to be talking finally with Kadena.
+
+Citizen Web3
+That will be, I think, big plus bonus for both sides. Apart from that, I think we will be watching our personally, still keeping a close, very close eye on Kadena. And I advise everybody else to. There will be loads of links to the description that we can link whatever you guys want. And by the way, if you have anything else to add that I didn't ask, feel free to add if you want.
+
+will_martino 
+No, I'll follow it up with them just like the basic social stuff. you can keep up with us on kadena.io. That's K-A-D-E-N-A dot I-O. You can check out our grants program at cadena.io slash grants. Follow us on Twitter at kadena underscore I-O. And also if you're looking to build, hop into our discord at discord.io slash kadena. It's a party in there and it's tons of fun. And you get to learn some really cutting edge stuff about.
+
+will_martino
+computer science, like capability-based security models, which are super fun. Performing verification stuff is super fun. Coming soon is zero knowledge. I'm hoping to have an announcement about that in the next couple of weeks. And otherwise, yeah, Sergey, thanks for having us.
+
+randy 
+Yes, thanks for having us.
+
+Citizen Web3 
+Thank you guys. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

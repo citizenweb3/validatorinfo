@@ -1,0 +1,464 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/davidblackstone
+
+Episode name:
+The Orchestra, Decentralization and Macroeconomics with David Blackstone
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web three podcast. have David Blackstone with me. He's the founder of Symphony or Orchestra Labs. There is the blockchain and of course the company that is building the blockchain. David, let's hear David all about it. David, hi, how are you? Welcome to the show.
+
+David Blackstone
+Hi, welcome. Glad to be here. With regard, you are asking about the company and the blockchain, like what we're offering.
+
+Citizen Web3 
+Well, I was actually going to let you do the whole long intro and while you're doing it, explain what is the difference for everybody who's listening, the difference between Symphony and Orchestra Lab so people don't get confused. I I did my small intro, but if I can ask you not just to answer that, but maybe in that intro also talk a little bit about yourself for me, for the listeners, tell us what you do, how you got to Web3, and everything you want us to know about you.
+
+David Blackstone
+Alright, well with Orchestra Labs, is the development company itself, Symphony is the blockchain. With the naming structure there, there's a lot in there that's just related to music and it just fits very well. With that...
+
+Symphony is a chain that uses melody as the coin. Melody is made up of notes, so notes are the base thing. Harmony is referring to the stable coin system that's within the chain, embedded within the chain. And overall, I built this when I saw an issue arise within the crypto market. And Nala has chosen this time as the time that she wants to play. So that's why my hand is over here.
+
+Citizen Web3
+Where is she? Wait, wait, wait. I want to see. know the listeners can't see, but people love dogs and cats, man. Let's see her. I want to see her. I want to see. Come on. Is it possible? I'm sorry for all the listeners that there is such an amazing fluffy dog over there. It's not fluffy. I'm sorry. That's my bad. It's a husky. yes, it's a husky. Does she talk?
+
+David Blackstone 
+She does, just not with me very much. She talks a lot with my roommate since he responds to it, but for me specifically, she just walks up to me, looks at me, puts her paw, drops a toy, all this sort of thing.
+
+Citizen Web3
+Ha
+
+Citizen Web3
+Awesome. Okay, let's go back to the intro. So you were talking about harmony. Can you then talk a little bit why all the musical stuff, how did it come to be about?
+
+David Blackstone
+I was thinking of various names and that one seemed to stick the best. With regards to Symphony itself and the algorithm, I didn't come up with that until I had finished making it. And what that ended up requiring was a series of different systems that all came together. So with that, I was looking at various elements towards that and Symphony is one of those specific systems where...
+
+It takes a lot of different things and it brings them all together to make one cohesive whole. And that just ended up working towards that very well with regards to all the other naming schemes. With regards to the whole naming scheme, all the other names within the system.
+
+There's also a quote that goes in there which just happens to tie in. I didn't even think about this at the time, I only found out about it recently. But given that every other stablecoin system is going in the centralized direction in one way or another, for example with MakerDAO, they got onto Secret recently and now people are finding out that when they do that with their system, they'll be able to censor people. They're moving in a more centralized direction with that.
+
+Every other system is moving in a more centralized direction and the quote itself is, if you want to lead an orchestra, you must turn your back to the crowd, which is basically what we're doing and we're orchestra labs. It works so well.
+
+Citizen Web3
+I do want to get in a little bit into the whole DeFi centralization and the way you guys are different. before we get into that, do you mind telling us a little bit about how did you get to being a project founder? I mean, nobody just wakes up one day and goes, yeah, I'm going to solve this problem on the market. I mean, what is the story behind? What drives you to here? Why blockchain? Why Web3? Why...
+
+Why, why, why defy? mean, why not any other field, for example, in blockchain? At least what you want to share, of course, if you would like to share anything about your story here.
+
+David Blackstone 
+Well, that is actually how it happened. I basically just woke up and did it Good. So with Terra, Terra fell and I saw that crash and up until that point, like there was no need for anything else as far as I was concerned because it seemed to work and I didn't dive too deeply into it, which most people didn't. So I saw an error on there. It was pointed out on Twitter and a lot of people saw it, including most likely the attacker.
+
+Citizen Web3 
+Hahaha
+
+David Blackstone
+Doh Kwon himself saw it and the way that he responded was shut up your poor, which basically showed that he did not choose to solve the problem. It got attacked later on and exactly what was pointed out as the problem got triggered and there was that runaway inflation spiral. That basically showed to everyone that this system didn't work. Now, right after that, I started going around as this random guy on the internet just telling people, hey, here's how you can fix the problem. And I was a random guy on the internet, so no one listened.
+
+So because like how do you cut through the crowd if you're just like random commenter number 952? So I got a couple likes on that sure, but no one really no one really paid attention to it what I ended up seeing was a bunch of like what I what my intent was at the time was to Get a company to make it and for me to invest in them and then make money along the way
+
+because then we would have that system that works. I would make money. I'd be able to retire, travel off somewhere, get into a nice country, have some kids, build a family, and just like have the rest of my life. But that no one did it.
+
+What I ended up seeing instead was we had a bunch of different companies who decided to copy Terra and declare that they were making their stablecoin that way. And what ended up happening was they would announce a month or two later, our tests failed and like it didn't work. Well, yeah, because you copied a failed system. Then everyone else went over into the centralized direction and then USDC crashed. But all the rest of them still went in the centralized direction.
+
+None of them basically solved the problem. It's not a two variable problem the way that they're all approaching it. It's a three variable problem. You have to focus on both how asset B moves and corresponds to asset A. Yes, those are the first two variables. But then also what do people do?
+
+David Blackstone
+with people's actions that affects the amplitude of those first two variables. It's a modifier. How are you going to act when that throws off the initial calculations of the regular activity there? That's what a lot of people aren't really counting for. So all they do is change out the collateral and think, that solved the problem. No, no, didn't. If you peg to gold and another Mansa Musa comes along, then the gold price crashes and you're basically in the same place.
+
+It's fixing the collateral does not fix the problem.
+
+Citizen Web3
+Do you think that people were all those companies people, I say people, know, there are people behind companies always, right? Copying Terra quickly without solving the issue because the idea was, you know, because well, they knew about the scam, the problem and wanted to repeat it. They wanted to make exit liquidity or nobody wanted to solve it because well, nobody understood how to solve it. What's your wild guess here?
+
+David Blackstone 
+I see it as really simple problem, so I don't think that anyone couldn't solve it. I think it's more likely that they were just trying to take the quick way out and like, well, maybe they were thinking that our network is large enough that Terra's problem won't affect us or something like that, I don't know. But I don't think it's a very difficult problem to solve. I think it's very simple, actually. With the charts that I put up, with the breakdown and everything, it's a very simple problem.
+
+I've broken it down for people with relations to various other things like the water cycle or the human heart and various other various other systems. Like it's a very simple system to me. I don't see how people didn't come to that same conclusion that they can do this. So I think that it was probably something else as opposed to inability. I think it was like them being lazy or them thinking that it just that
+
+it'll be different for us or something along those lines. But I don't know specifically why they didn't try to solve, why they didn't solve the problem. Maybe they tried and failed, maybe they weren't able to, but I don't know why they didn't actually go towards solving the problem. In some cases, starting up a centralized system, when you already have the money, starting up a centralized system is much faster. So that makes sense.
+
+You don't need to invest time to try to figure out a problem if you don't have the solution on hand. And if you're in a very large company, the CEO probably isn't listening to the developers and how to fix it. If you want to just get into the space real quick because you see an open space.
+
+Sure, that can solve the problem. With regards to others centralizing in other areas, because all of them have, all of them so far basically have an element of centralization. It really just seems like there's a trade off with where they did it, as opposed to the ones that failed, like just copying it. I think that's a different problem. I think throughout crypto, we have an overall problem of just copy pasting solutions all over the place. But that's that's a separate issue.
+
+Citizen Web3 
+Well, I agree. And I do think that there is definitely a copy paste problem. But I think there's two sides to that, which is you have open source tech, right? And in general, technology, I mean, I'm going to be the devil's advocate here. But in general,
+
+Copying something and then building on top of it is not an issue. problem is just like you say, it's not that nobody builds on top of what they copy. They just copy, change the name and release it and hope that something. And I guess, guess, I guess though, I'm going to try and get back a little bit here. know, Well, choose if you want to go that way or if you don't want to zoom out, but if you don't feel comfortable, I mean, not don't want to zoom in out, but.
+
+I guess the reason I'm asking what draws you to this is because, know, like for years about talking to different founders and to different people in general in crypto, I've noticed a lot that the success, there is a big correlation at least. It doesn't mean that, you know, it's like that, but there is definitely a big correlation between the success of a project and how did, you know, this thing came to be. Usually when somebody's
+
+solving the problems because they need and want to solve them. Well, they feel like, I don't know, something drives them to their... Yeah, to me at least, it feels like there is a bigger chances of the project succeeding. Sometimes you see people coming around and they're like, well, I'm here because I don't because I saw this other project. I don't know, whatever. There are many explanations. So I guess by asking what draws you to here, I'm trying to of like, to lay that foundation.
+
+Citizen Web3 
+for myself personally, as having a conversation with you, like how did you arrive to understanding that you want to solve this particular problem? Was it because of something personal that you felt or was it because of, don't know, well, I want to do blockchain or I want to fix the issue I'm seeing in DeFi. And I mean, you weren't born with it, right? You kind of like had your journey probably to it. Something drew you to that. And I'm trying to find that something, I guess that's...
+
+The long way of asking that.
+
+David Blackstone 
+I suppose I probably haven't explored that too much myself, but overall after terra fell there was like I mentioned I was running around telling people how to how to solve the problem. My original intent was well overall my
+
+My intent with all the different businesses that I've started and I've started several none of them have ever actually made it to market but they've always been overshadowed by some larger company that was already in the space. But we've all the different businesses I've started as well as my overall investments that those have done well my.
+
+My whole intent really was to try to get to that point where I could actually have a family and be around to be with that family. I don't like the entire idea of working my entire day, like waking up, going to work, being at work the whole day, coming back, being too tired to do anything with my kids and having to go to sleep. you waste 18 years just seeing them grow and not actually doing anything with them.
+
+I don't like that. I want to be in a place where I can actually be around. to do that, I actually have to make enough money to be able to do that. so I tried to build several businesses, like an actual Pokemon game, which was using maps and using map data. And then I found out that Nintendo made a deal with another company that just reskinned their own game, trying to make a system that could identify objects via
+
+David Blackstone 
+by a picture within the video on every certain number of frames and that was going well. And then I found out that Amazon created their system for that. So the entire idea that I was going to be selling this to stores was thrown out the window. Then I found out later that they just used a bunch of Indians and like looking over the video feed or with that bookstore that I made. Like I made an online bookstore and I had it so you could download to any file type. You could automatically have that be compiled into
+
+a sound file so that way you could listen to literally any book on the site. It all looked good and I had public, I had all the public domain books up on the site ready to go. What I was told by schools was that they were already trying to build system for that so they weren't going to take it and I was giving it to them like $10 a school which wouldn't have even covered server costs. It would have just helped with server costs.
+
+So they weren't taking it. And then Amazon came out with their thing and that does not have all the capabilities of what I built. But like all the deals that I was setting up with different publishers fell through right after they announced. And I was like, okay, well, I can't do that either. So like it's just one after another where it was just not great circumstances. So this one, I was approaching it as an investor. I told people, here's how you solve the problem. None of them actually stepped up to solve the problem.
+
+So since no one else was doing it, I had to do it.
+
+Citizen Web3 
+Do you think that you could summarize... Okay, I'm going to make an assumption and I'm to ask you a question. I could, allow me, if I could summarize your desire to, or your passion, your main driver of building this project is to break out of the matrix. When I call it the matrix, when I call it the wheel, don't know, whatever, the hamster wheel, whatever, let's call it the hamster wheel for...
+
+to make more sense. Again, it's an assumption of what I'm hearing. Would you say that, you know, and it's an interesting thing you talk about, right? Because I think a lot of us, at least I'm also driven partially by that. And I think a lot of people are driven by that, right? We kind of like live in this hamster cycle where, I don't know, like, yeah.
+
+You don't do anything, you don't see anything and then you kind of die and you're like, shit, I didn't do or see anything. know, I was just doing what, yeah, but at the time you wake up, it's too late. Why, if this is what you're talking about, if I'm hearing you correctly, why do you think that cycle exists? Like how, how, how should people in general, at least there is you, right? And you are right now say, say that least what six, seven examples of yourself trying to break that cycle.
+
+Now, most people don't. Most people, unfortunately, I don't know why, but most people unfortunately don't try to break that cycle. So the question is, if that assumption is correct, if I'm hearing you correctly, why do you think most people are stuck in that cycle? And as a person who constantly is trying to break the cycle for yourself, what would you say if anybody was listening and trying to get out of there?
+
+hamster cycle. What is your advice to to break in it? know, not to stop or not to break in it, but not to stop trying to break out of it. Again, if I heard you correctly.
+
+David Blackstone
+Well, with why it is there, that would really depend on, I can't really be in anyone's head, so I can't really say why it would be, but can say probabilities for why it might be. With...
+
+Citizen Web3 
+We went deep.
+
+Citizen Web3 
+Go subjective to you.
+
+David Blackstone 
+Some with some people in power you get those occasional videos where they come out and say like, yeah, we need to lower like literally one guy said something along these lines. We need to lower salaries that way. These people know that they work for us. So he said something along those lines. I don't remember which company the guy worked for, but I remember seeing a video where a guy was saying that and I was like, what do you really think that's the that's the take you want to give? But I don't.
+
+he must have thought that that people would accept that, which means that there must be other people there that think along the same lines. Whether that is a majority of them or enough people to sway things in that direction, I don't know. But there is another aspect where there's inflation. that was a big reason. Inflation, as well as some other aspects related to fixing the market, were a big reason why Bitcoin was made. like, for example, we've bank bailouts and such.
+
+Citizen Web3
+fuck
+
+Citizen Web3
+Yeah.
+
+David Blackstone 
+we see where the Boeing bailouts have gotten us.
+
+Citizen Web3 
+It's funny with with Boeing. to interrupt you, but just just just to say because the Boeing thing is much crazier. But of course, sorry, go on.
+
+David Blackstone
+yeah, yeah, like what? How many? How many insiders are they on now? Like three?
+
+Citizen Web3
+I've meant but the thing is at least banks don't fly don't carry people from one place to another, you know, at least there is no alive people You know, well, it's the works in a different way, of course to being you know, kind of like but yeah, it's crazy really really scary shit really scary shit Sorry go on.
+
+David Blackstone 
+With inflation, well, with the government ties to businesses, and a lot of people say that it's influencing government. I say it's government influencing businesses because you had Microsoft not playing along with all that stuff until basically until they got attacked by the government for being a monopoly. And then all of a sudden they started lobbying the government as well.
+
+things went in a direction from there. So I would say that it's the government trying to influence businesses. If it was the way that it was originally designed, I don't think that it would have been able to because the, well.
+
+affecting things like that is a bit unconstitutional, but then you also have it split amongst all those individual powers and the federal level, it's only affecting things externally. So each business has to work along different lines, basically in the same way as the EU, as if they're in different countries, at least before the EU became like, at least before the EU tried to become the US. But that's one possibility. outside of it being, outside of it being
+
+the overall system and players trying to basically get as much power for themselves or trying to keep people down. There's also the matter of inflation, which that could just be a general side effect of things because, well, not the inflation itself, but the effects on people could be the side effect of things. If maybe they're just trying to be good politicians.
+
+For example, if you have a group of people who want something and they also don't want their taxes raised to pay for the thing, then you have to find another way to do it. that way is like you can really you only really have a couple of different ways to do it. If you want to pay for something as a government, you have raising taxes and you have printing money. And so if that group of people want something and they're going to constantly vote on people, including other people than you.
+
+David Blackstone
+to get that thing and they also don't want to have taxes raised to pay for the thing, then your only real option is to print money, which most people don't realize or at least haven't realized until recently that that's a general tax on the public. it's kind of a hidden tax, but it is a general tax on the public. So you just print money. And once you start that process, you either have to grow faster than the inflation so you can stop printing money or you have to print more money.
+
+And we're currently in the cycle of printing more and more and more. And with where I see things going, I don't think that we're going to be able to stop, especially since there's this hidden line, which I don't know the number for. But after you get past some multiple on debt to GDP, that there's basically no coming back. And so you have to print more money. You have to monetize that debt in some way. Currently, they're doing it in hidden.
+
+Citizen Web3 
+It's, I would, would, I would, you know, argue that good politicians is crazy oxymoron. And, know, just for all the listener, because I know we have listeners definitely from, outside of the, mean, I'm, I'm, I'm like yourself. I'm, I'm, I'm lucky enough, you know, to, be born and then raised, even though I traveled a lot, but I'm lucky enough to be born and raised more or less in the Western part of the world.
+
+But I would unfortunately argue that there is more than two ways. There is other ways like violence and a lot of countries do use them. So it's not just raising taxes and then, you know, there are the third way of, we are lucky enough to live in that, you know, 10 % of the more civilized in quotations world here. But unfortunately, they have more solutions like, yeah, well, raising taxes, inflations don't work. And then we bring out our monopoly on violence.
+
+And it's crazy that it's now being used in countries like Canada and countries like UK, you know, and it's absolutely... But before I go and make everybody too sad, you know, like what is the... I'm going to try and take us out of that and change to the DeFi from here, but to take us out of this conversation, what would you say helps David personally not to...
+
+Well, I mean, I know you want, mean, at least me, I'm gonna, I'm gonna start with myself. Sorry. I'm always zooming out today all the time. At least me, when I think about those things and when I understand those things, I can tell you that it makes me depressed. Like for sure. When I, because I understand this, I don't want to sometimes like, think I'm like, what am I doing, man? There's nothing I can do. So question to you, to David, what helps David to not get stuck because you understand those things and you realize that there is this hamster wheel out of which there has to be a way out.
+
+And what helps you not to be stuck in that wheel personally? Like, what do do?
+
+David Blackstone
+Well, I don't know because I've not quite made it out yet.
+
+Citizen Web3 
+But what do you do to carry on, you know, not to stay in the moment? what, I mean, does it, apart from your like wanting to raise a family, you know, and apart from, like you said before, is there something else that helps you to drive you forward?
+
+David Blackstone
+so mentally, not financially, but mentally. Yeah, with that, my brain's always worked a little bit differently from other people. There are plenty of people who, as shown in multiple ways, it's very easy to test. It's very easy to test for this sort of thing. One of the tests that you can do to see if...
+
+that you can do for say memory or for the ability to abstract thought is to test for a series of numbers and that'll check memory or to test for a hypothetical and that'll test for the ability to abstract thought. A lot of people don't have those abilities so my brain works a little bit differently from a lot of people, not everyone but a lot of people. So a lot of people when they're going about their day they just go about their day.
+
+A lot of others, it's going to be a little bit different. Like you're probably going to get a little bit bored. You're not going to be able to, you can do the work. You can focus on it. You can get the work done quickly. And then you either focus on something else or you have what I like to call background processing, where you have a separate thought just running in the background and then like, hey, new idea pops up. Great. You can start running with that.
+
+Maybe you, maybe daydream or something. I don't know. It, it'll manifest differently, but you, but if you think differently from others, then it'll manifest itself somehow. And you have to focus on that. And some people, it's art. I'm not, I'm not an artistic person. I'm not a comedian, but I have certain ways that I can focus on things. And generally it's problem solving. I see a problem and I, I either focus on that and try to solve it and look up information. I keep going through that until I find a, find a solution or find a set of solutions or
+
+If I need to do something like a nine to five, I go work on that. And I just set that problem to background processing. And maybe sometime throughout the day, maybe lunch hour, maybe when I'm done, maybe halfway through another job, it just pops up. like, wait, that's a potential solution. Let's think about that for a bit. So it's always just there, really. But for...
+
+David Blackstone
+But for focusing or thinking about how to get out or just thinking about general things like an overall goal or keeping focused on potential futures so that way you can avoid it, that is just one of those things where it's a problem that I'm trying to solve and getting towards that area. For other people, you have a general goal to focus on, that may work. If there's something...
+
+If there's something else, like you just want to get there out of spite, maybe that'll work for you. don't know. Overall, with regards to how I'm focusing on a general future that I want, it's just something that I've wanted for a long time. So I'm trying to focus on potential solutions to get there. But for other people, it might work a little bit differently. Maybe you need to focus on something else.
+
+Citizen Web3
+I would understand the thing. I know it sounds ridiculous, but not forgetting to think is super. I usually don't like talking too much about my own examples, I guess, but I definitely now recall this so vividly in my head. remember, think...
+
+I served in the Air Force when I was younger. after the Air Force, I went working in factories. And it was a metal plastic, like factory metal plus, I don't know what was the correct name. And the point being, it was night shifts and day shifts and morning shifts. And I remember the night shifts, were the most terrible, like morning and night shifts. And it was difficult, like physically demanding work. And I remember that
+
+It's exactly what you say. if you, had two choices because the shift was about like six to eight hours. don't remember, but you had two choices. One, you could, you know, just like do the work. It would go quickly, not thinking. And it would go very quick. Your, your, your shift would finish. But I felt like, you know, by looking around me and I don't mean to be offensive here, but I think that maybe it will sound a little bit offensive.
+
+You know, I looked around me at the people who were working there for 10 years and 20 years, and I understood that I don't want to be like that, I want to, and I understood they were not thinking. They didn't think, they were just doing their work, focusing on that, trying to switch their brains off from everything, from all the noise, and their shift would finish in five minutes for them. And, you know, when I heard it, I was like, okay, but I don't want that. I would rather stick earphones in, listen to music, start thinking audiobooks or whatever, start thinking about things. Yeah, my shift is long.
+
+But I'm thinking, and I don't want to be here, and I will not be here. And I'm sorry to kind of steal the blanket here, but I don't usually try not to do that. I try not to do that. But yeah, I guess that's what you're talking about, if I'm correct, right? Kind of like, remember thinking.
+
+David Blackstone
+Yeah, and I actually get my news in roughly the same way. Like I just keep that playing while I, like right now I'm doing development. So while I'm working on Symphony, I do a bit of development or I look around at other things, find what needs to be done. But in the background, just play some YouTube videos or some other channels based off of what's going on so that I still have a general idea about what's happening in the world.
+
+Citizen Web3
+Okay.
+
+David Blackstone 
+which actually served me very well for the investing that I did previously because I would always invest based off macroeconomics and where generally things would trend and that worked very well for getting enough money to be able to do this.
+
+Citizen Web3 
+Do you want to talk a little bit about that? Actually, it's actually interesting. I was going to switch to what you're building there a little bit. if you don't mind, let's gradually switch to that, like, by the investing thing. That's actually interesting. If you want to share, what is your, you you started to talk about macroeconomics there and you were saying that some things have changed because you were listening to videos. Can you talk a little bit more about what's at least worked for you in terms of the market?
+
+And this is the rarest topic. You're not going to believe it, but trading and the tokens are probably like one of the rarest topics on the podcast. from the perspective of macroeconomics and thinking, like how do you evaluate the market and what makes you better or your evaluation better?
+
+work better than other people's? I mean, I know it's a kind of a weird question, but I think along the lines of this, whatever you want to share in that direction.
+
+David Blackstone
+I'm not sure if it could be characterized as better than other people. With my history, I did manage to outperform the S &P, and that was nice, but everyone is a genius in the bull market. But then with the bear market, I did manage to avoid losses well enough, and that was pretty nice. Now, not completely, but I did manage to lose less, again, than the S &P.
+
+Overall now, the S &P is basically the same as the other two indices. Well, not really so much as the, but it's basically the same with the NASDAQ. The S &P is basically all text talks. if things are going well, text talks are gonna go well. If things aren't, then they shouldn't. But that's a little bit different.
+
+now, but that's something else. With overall macroeconomic factors, what I generally focused on was seasonal trading. the seasonal, there's an economic cycle and that is related to seasons with spring, summer, fall, winter, with winter being the time when things are doing badly. Spring being when they're starting to pick up, summer when they're doing well and all that stuff. So I would focus on
+
+general economics and how that would play out with the overall cycle, the up and down. And I would move things around based off of that. And that would change, that would be for the overall larger part of the portfolio. With some smaller parts of the portfolio, I would deal with more theoretical things. So for example, if...
+
+If some company announced that they're doing solid state batteries, that they have this much performance better than the other, then I'll throw a decent bit of the portfolio towards them. And then once that narrative changes, then I'll pull it out and throw it elsewhere. And that worked pretty well. With a lot of people, they told me just to bind to Tesla and stay there. I would not do that. It just looked like a cliff that would drop for me. I could not do that. But...
+
+David Blackstone 
+For the people who made a lot of money off that great. That's wonderful for you, but I just couldn't do it We've with what I did I put it in other places like chips because we technology increasing all over the world and these multinational companies that would produce chips I would throw I threw money in there with a lot of people they had hype over medical companies or artificial intelligence companies and medical companies sure you could you could play off of COVID while that was going through and
+
+I don't know if you need to bleep that word or not, like if that's going to get censored like it was a while during that period, but you'll know more about what to do there than I will. Just maybe write a note for that if you need to. But with regards to that, some people threw into medical plays, I didn't do that because I didn't know what was going to end up happening there. Like if these people actually did have a solution or if they didn't, if they would end up backing out.
+
+because medical companies go up and down very quickly. What I did instead was because there was a lockdown, no one was allowed to fly anywhere. saw that aerospace companies had basically dropped like a rock. So I threw some money into there and those shot up. After everything was announced to be opening back up, those just had a continuous incline. It's various things like that. You just check for the news and you play off of that.
+
+It's a little bit different now, though. With what's going on in the world, there are some parties who want a certain narrative and not another. So even though, as an example, you have issues with... You have issues happening in the Middle East and in Europe with Ukraine and such. Those should be affecting food and oil.
+
+as well as with Yemen stopping trade. And so people have to go all the way around Africa and that affects overall price of goods. But the narrative is that the price is not increasing, that there is record demand for oil. have companies shutting down all over the place that are in oil, but we have record demand for oil, but then also on food. It's like, yeah, they like you have...
+
+David Blackstone
+You have all this stuff happening in Ukraine, but that's not affecting food prices. It's something else like sure sure I believe you you've been lying to me for for a while now, but I believe you but but so I can't I can't advocate for going based off of Factors that should be affecting the market right now because they're not there is With what's happening you should see
+
+a great deal going into oil with the potential risk of inflation, with the potential risks of everything that's going on in the Middle East for all of those different things that just pop off one after another recently. Then you have a system where oil should be going up because there is a danger to the supply. Demand is not going to be going down, but there's a danger to the supply there. And with the government saying that there is, I spoke earlier,
+
+with the government saying there is record supply, that producers have created this new system that's creating supply out of nowhere. There's record supply, oil all over the place, we're raining oil, it's amazing. Why is that not actually being shown to consumers at the gas pump? Why is that something where this has never happened in history before, where you have these people getting...
+
+the oil producers getting affected and whenever oil producers get affected, the price of oil goes up. It's not going up now because all of a sudden America is producing supply, but we also have all these companies shutting down at the same time. That's not something that happens. You don't get companies shutting down when they're making record amounts of their goods that they can sell because they should be getting record profits at that point.
+
+You have them all you have them all shutting down because like there's something happening there. What we're being told is not what's actually going on. At the same time you also have more evidence from other places that don't have a goal here. Like with for example Europe, they are currently buying oil through India because America told them that they can't buy from Russia. Like they were originally buying from Russia.
+
+David Blackstone
+But now with the ban on Russian oil, they're buying through India. Guess who India is buying that oil from? Russia. So they're still buying the same stuff. It's just now a higher price, but the price of oil on the market is not being reflected. Like it's weird. So like we have a very centralized body there just controlling everything because they want to keep their fingers in every pot and say like, yeah, we can do this. And it's not affecting that. They can't fight a war and like they're
+
+not fighting a but they can't fight a war and fight inflation at the same time. So they're just lying about it so that way they can do, so that they can try to do both.
+
+Citizen Web3 
+I think that, you know, I like your positivism about governments trying to fight inflation, because I don't think they are. I don't think they ever understood. Because if people, even if we make the assumption that government is there, because I do make that assumption, but that the government is there again, is the most evil creation we have, you know, then even if that is true,
+
+which I think is true. I still think that, you know, until now, one of them in one country over the last several thousand years, let's say even the last 200 years, you know, the modern system, 170, right? Five, whatever, even from the seventies, you know, let's go 50 years. Let's go, let's take it, you know, to 1971, 1972, right? By now, somebody should have understood something, but I don't think that, I don't think, I don't think that there is an interest. I think to add to your,
+
+To the pessimistic side of what you just said, I would say, well, there is something even worse. We cannot even check a single fucking ledger. All that information, all the data that they supplying and keep on supplying regardless of whether it's inflation, deflation, smithlation, PPP, GDP, nobody can check anything. Not a single fucking piece of data because, because well, yeah, go on, please, please, please. I was just sharing, sharing the love.
+
+David Blackstone 
+Thank you.
+
+David Blackstone 
+They do revise it. They do revise it. It's just that they revised after the fact. So you have the trading bots. And they're not trying to fix it, but they are lying about it so that people don't catch on. Because once people catch on, then all of a sudden, then you start getting that runaway. But overall, with what they're doing, they...
+
+Citizen Web3
+Definitely.
+
+David Blackstone 
+they lie about it upfront and then the trading bots do what the trading bots are going to do. And then they revise the data later. So recently you saw at least with American data, that's what they do. So what happened recently, like all throughout 2023, think it was, yeah, yeah. Well, throughout 2023 you had jobs growth.
+
+At least that's what was reported. And then a little ways into 2024, that was revised and no, there weren't any jobs. That was a lie. We messed up. They did the same for oil. They say there's record supply and then they just revise it afterwards. But the trading bots only really worry about the news that comes out now. So the revision doesn't matter.
+
+because you already have the effect on the market that you want to have. with what the government does, they just say, yeah, here's the official information. The trading bots push up the market. They throw more money into tech because oil is doing well. With what the government's saying, with jobs data, the inflation is going down. the
+
+So the interest rate can go down, which means the tech should be doing well, so let's throw more money into tech. And then last month's numbers are revised, but that doesn't matter because the trading bots aren't running on last month's numbers. They're only running on the most recent information that comes out from the official sources. The official sources having a dog in the fight and not wanting anyone to catch on to what's going on.
+
+Citizen Web3 
+don't know if you ever, know, it reminds me of sometimes they have these stories. happens, it happened in the US and Canada and another country. Like it happens every 10 years or so when they in a newspaper, usually it's in like some yellow newspaper kind of thing, tablets. They publish the story of, know, we have a hamster who is able to predict the price of oil or whatever. And then you have this like, or octopus, you know, in a tank and they show you this octopus for the last 10 years. People go to him and you know, and he goes like,
+
+I do really feel that they are not joking about it sometimes. Like sometimes I see that and I'm like, I don't think they're kidding. I don't think this shit is for real. I think it's like, so how is the job market these days? But to go a little bit to symphony here because we don't have much time left, but I do want to ask you a little bit about that. So you guys are building what you refer to as, it's a bit similar to what we're talking about here in a sense, right? It's a real world asset.
+
+decentralized project, A DeFi project within real world assets spec. You call yourself fully quotations. I'm going to put quotations here because fully decentralized, it's a term. I have to put it in quotations. Why? And what's different? mean, why do people need it? Why real world assets? Sorry, first question. Why real world assets specifically?
+
+Why are you calling it fully decentralized? What is fully decentralized in the perspective and subjective opinion of Symphony of Orchestra Labs?
+
+David Blackstone
+With why it's decentralized, a lot of others will need to hold assets at one point or another. We've circled, tethered, financed the top three stablecoin providers, and I throw stablecoins under the umbrella of real -world assets. You can do it the other way. I'm doing it this way. With those three providers, all of them hold assets in banks.
+
+This is something that all of them do and they all do it in an over -collateralized manner. All of them are holding government bonds though. What ended up happening with Circle was that they decided to centralize all of their reserves at a single bank, Silicon Valley Bank. So when that crashed, they crashed. And then they had to get billed out by the US government. in the same way that Bitcoin, in the same way that formed Bitcoin, like with bank bailout, that was done for them.
+
+They didn't need to abide by the same rules as everyone else of only having a $100 ,000 cap and what they could receive back. The moment that the businesses that were being backed by Silicon Valley Bank went under, the US government stepped in and said, don't worry, we'll bail out all of you. That is, in my opinion, due to underlying economic concerns and trying to make sure that a fire doesn't start. But.
+
+The reason really doesn't matter. What matters is that those providers were centralized to the point that this became a threat to them. The same thing can be said of other providers in that they tend to centralize them one way or another. They try to have control over the asset one way or another. And this is generally on a price -based system. we've...
+
+those backers, they have US bonds and they issue a certain number of those stable coins based off the number of bonds they have. Or at least that's what they tell us. Tether, as far as I'm aware, hasn't shown. Now I could be wrong on that, but I do know that they have been sued several times by the government for not having their reserves. That has actually been shown in the news. With...
+
+David Blackstone
+Some of the others, like I'm pretty sure I brought up MakerDAO as an example previously, they're going to a chain the same way that they had planned before, but instead of making their own chain, excuse me, instead of making their own chain, they're moving over to secret. And what they're doing with that move to secret is they're making it so that they can censor people as they need to.
+
+they're basically getting control in the same way that the others are doing. We don't have either of those and we don't have it such that that
+
+You can sanction anyone like in the currently with the with the more centralized system with centralized finance, you have the US dollar as a backer for the as a backer for the world and they shut off money to Russia. This is something where they felt that was best. Sure. But this is something where it's signal to the world that that could be done for them. And so a lot of them are looking at at trade mediums that could be.
+
+that trade mediums that they could use that can be used in a less trusted manner. This is something that if you can turn off someone's money that it's not, that's not that system. It's the same type of system where overall if you need to, if you need to say something.
+
+politically against your government. Like let's say you're in some random oppressive country somewhere and you are the resistance and you're speaking out against them. They could turn off your money. Like they could just tell the banks like, okay, this person can't bank anymore. That's something that they can do and something that has been done several times. It was done in Canada to the truckers, to just random truckers like who said they didn't want to ship there if...
+
+David Blackstone
+if they had to take the vaccine. Like Canada shut off their banks. Like Canada shut off their bank accounts, shut off their access to money. is something that can be done basically by any government anytime they want. This one you can't do that because that system is decentralized. I can't control it and I specifically made it so I don't control the reserves either. Like that's something where Terra, like those reserves were centralized and Doqan grabbed the Bitcoin that they had as a reserve and ran off with it. We can't do that.
+
+I specifically like that is one of the safeguards. I cannot do that. If someone else comes in, takes my place, they cannot do that.
+
+Citizen Web3 
+you
+
+Citizen Web3
+I want to specify a little bit more within. I'm sorry to cut you out here, but I want you to go a little bit deeper. Let's talk a little bit about real world assets. Because when you say real world assets, are we talking more synthetics and mirror type, UMA type protocol? Or are we talking more maker that you bring the example of and don't know, issuers of...
+
+or Terra, example. Which way are we looking at here, or both?
+
+David Blackstone 
+Yeah, I got a bit off track there. I focused a bit on the stablecoin aspect and not so much on the larger area. having a proper pegged value, the reason why that would be important is because once you have a proper pegged value, you can move assets properly across from centralized to decentralized mediums. All you need really is a way to properly pegged value, a reliable way to pegged value, one that is not going to shake.
+
+because we have a lot of trust in the centralized system. So when you do centralize that system, it needs to have the same properties. It needs to have the same safety. So with this, as long as you're able to properly pay to value, you can move the assets back and forth. So if you, like you don't have to change anything else in the system, all you have to do is have that price mechanism there. So when you buy a house, you buy a house, you go to the bank, you sign all the paperwork, they put the money in escrow and you...
+
+You both do the deal they move the asset in this case. You have a similar thing It's just you make sure that there is a proper active value on that price in same way that they had the contract before you can have the contract now it's just that the medium is changing from Paper and their records to a larger more decentralized record and that's all the that's all blockchain is it's a decentralized record same as same as they have their ledgers now, it's just
+
+decentralization of the ledger. So it's not just one entity holding that ledger. It's not that it's making anything new, it's just making a new way to access it. So it's not just stable coins, it's not just synthetics, it's not just real estate, it's literally anything with a price.
+
+So if you wanted to trade Forex, you could do that. If you wanted to, and that is literally baked into the blockchain itself. Like you can trade one asset to another directly. You can send US dollars have to be received as pesos because all you're doing is sending value and how that value is received does not matter. So.
+
+Citizen Web3 
+If I, would you sort of just to, for the listeners, like to make it easier a little bit and for myself, definitely. And so we're talking synthetic slash mirror, right?
+
+Citizen Web3
+the examples of existing things. X.
+
+David Blackstone 
+Could you define those when you say when you say a mirror versus synthetics? Could you define those for me? I'm not too familiar
+
+Citizen Web3
+Well, the possibility on, I don't know if you know, I mean the protocols, one synth, right? One of the most, I think it's one of the top first protocols that allowed you to put collateral and print, I don't know, any things like Apple or whatever or Microsoft chairs. And Mirror was a protocol on Terra, which allowed you basically to do similar things. So we're talking those kinds of things, right?
+
+David Blackstone 
+Yeah. So we've, as long as it is approved under the information sources that are available, of which there are, like the basic design is to have multiple information sources such that if you put in something, you can't just have it be like one Pikachu and then that's the price that I declare on like here. That won't work.
+
+So you have multiple information sources that come in and through those then you have a set of assets that can be produced. And these assets can be anywhere from crypto to real estate to basically anywhere touched upon by a bank or anywhere touched upon by crypto exchanges. That's all accessible because once you have the information and like what's, how are centralized entities
+
+printing their stuff. They have their information source and then they print their stablecoins through that. This is doing the same thing, just in a decentralized manner. We're not just relying on one there, we're relying on multiple. And I do realize that those can be attacked, which is why there's a safeguard there as well. To make sure that even if the information sources are attacked, this still gets the proper price to value. There's proper peg to value. There's a...
+
+there are safeguards at multiple levels for this. I try to make sure that it is as resistant to attack as possible. I've asked multiple people to try to take a look at this, try to holes in it and figure out where it's going wrong. Now there are a couple places where that aren't published yet, but that's because those are very theoretical aspects and I need to make sure that this gets to mainnet before those can actually be published. But there are a couple of protocols that we have planned that are in place for if the math is wrong.
+
+Now, one of them is to make sure that we can cash out everyone just in case. Just in case of those, like if the math is wrong, make sure that everyone, like at the very end when abandoning the chain, that they can still get their value and leave properly. But then the other is playing along those lines, but then will also help tie into regulations. It's just one of those alternate ways. And that one really isn't even tied to the chain really. It's just a method of access.
+
+Citizen Web3
+I want to dig this, but we kind closing into the hour. I guess maybe I focused a little bit too much before, but we can either one day carry this on, which is one possibility, because I do want to dig a little bit, but I'm going to jump to the Blitz with you here. I'm sorry for us to dive out of it. So I usually try to make it more smooth. But I guess I focused you too much on other things. My fault here.
+
+But to dive out, let me jump into the blitz. It's going to be three questions quick and then I promise I will stop annoying you for today at least. So first question, they are going to be completely separate from what we just talked about. So like I said, we're going to dive out. First question, give me either one song or one movie or one book that has a positive influence on David throughout his life.
+
+Citizen Web3
+Or, or, or.
+
+David Blackstone
+You said book, movie, or what?
+
+Citizen Web3
+awesome
+
+David Blackstone 
+That really changes depending, but most recently there is... Let me see if I can find that. There's one that I have seen recently that I really liked. It's the show The Old Will. But what the name of the song is, I don't remember.
+
+Citizen Web3
+Can be a couple if you want.
+
+David Blackstone
+Thanks.
+
+David Blackstone 
+Hold on, I'm going to be pulling that up. That's all I've got today from the Orville. I really like that iteration of it, as opposed to the older, slower one. The episode in that focuses on a guy who has a relationship with a hologram. so he finds this phone. It's left in a time capsule. He grabs the phone, he puts it into their hologram machine.
+
+Citizen Web3 
+Nice.
+
+David Blackstone
+The AI reads through it, figures out the personality of this girl and all the situations that are happening throughout there, and it creates the perfect replica. He goes into this, throughout the episode he keeps coming back to it, he falls in love with the girl, but he has to let go at some point because the file got corrupted or something, I don't remember, but he has to let go at some point. so throughout it, when he goes to say goodbye, there's this whole
+
+There's a song that plays there called That's All I've Got to Say and throughout that it's the continuous theme of the song is I can't, I tried to do this for you but I couldn't do it so I made this instead and it's all that I have but here it is. And it's throughout mediums there's novel, symphony, and a poem and the person is trying to do all these different things for the person that they love and they can't.
+
+Citizen Web3 
+Nice.
+
+David Blackstone
+They can't quite get there, but they still have the display. And so that's what they're bringing.
+
+Citizen Web3 
+Powerful. Give me the second one, second question, sorry. And by the way, for all the listeners, know, everything that me and David mentioned here, all the links, all the relevant people to movies, to songs, whatever, to books, to countries, even sometimes you can find on the description of the episode, of course, and click and check it out if you want to check more. So last two questions, I promise. Second one, give me two motivational or one, no, give me one motivational thing.
+
+that keeps David, you know, being David, keeps you waking up with a smile day by day, you know, and building what you're building and, you know, living your life.
+
+David Blackstone
+Mmm.
+
+David Blackstone 
+I suppose the progress that I see on it was probably the best aspect for that.
+
+David Blackstone
+Yeah, the progress that's moving forward on this is probably the best aspect on that. If it wasn't moving forward, I imagine it would be much harder. And there were different times when it wasn't really moving forward very much. So I suppose that those would probably be the best areas just when I see that things are still moving forward, that it's probably best. That's probably the most motivation that I get out of it, just when things are actually moving forward.
+
+At some point, is going, at some point it is going to be up fully. And at that point, we're going to see whether or not people do appreciate what's been built here. And at that point, we'll see whether or not there is actually, there is actually demand for it. I do hope there is because the alternatives are all centralized systems that basically control you.
+
+In this system, it's one where your money is operated in the way that you want. It's fast, it's cheap, you can use it for Forex, remittances, anything else you want, really. And you can't be stopped on that. So I'm hoping that the... I know that there are aspects of crypto that still value that original intent of crypto. Whether or not that's enough of the community, we'll see.
+
+Citizen Web3
+Last one, promise. it's a weird one. Real or made up. Somebody, you know, personally or cartoon character or book character or movie personage, they're the live comics from history. Somebody from today, somebody, like I said, you know, personally. a person as a character or a real human who is not your guru.
+
+but is a person who positively influences you or a character that positively influences you. And when you think about them.
+
+David Blackstone
+There are a couple that I could probably bring up there. The ones that I usually gravitate towards are the intelligent ones, the ones that are able to think through things. But the first one that comes to mind on that is probably that one guy from One Punch Man. There's this guy who is at the top of the bottom level within that show. So what that means is he's the best out of the lowest rank of people.
+
+And the reason why bring him up, the reason why he comes to mind is because he is an actual hero. Now the entire show there are hundreds of heroes and all that sort of thing. That guy is an actual hero. What he ends up doing is he is completely powerless. He rides a bicycle around because his motorcycle was taken from him. He has this attack called the Justice Crash where he just like
+
+pedals really quickly and then he flings the bike at the person and considering the level of villain that they're fighting that does absolutely nothing but every single time there's a problem he shows up now it ends up playing out in a comical manner every single time but every single time there's a problem he shows up and he tries to he tries to solve the problem he tries to he tries to keep things moving until other people can get there to actually solve the problem so
+
+He shows up and he tries to fight the villain and he gets beaten down He just keeps getting back up and fighting them again and again and in in one specific in one specific time even like this the scene you'll find it on YouTube there's this there's this fish man that he's fighting like giant thing and He he's already bloodied you see the blood coming out from under his helmet and he just says like it's not about me stopping you It's just about taking you on
+
+and then everyone starts cheering him on and you think there's going to be this big thing and he just gets smacked out. But he was there and so I like him for that.
+
+Citizen Web3
+Yeah
+
+Nice. I think for being there is like, you know, were talking about, you know, keeping on thinking, being there, I think, you know, that is kind of correlates, I guess. David, I want to thank you for your time. Everybody who's tuned in, I want to thank you also for your time, and listening in. This is a goodbye for everybody else. David, is just a goodbye for the listeners. Please stay on for a couple of more minutes. Thank you for coming on, and thank you for answering my questions.
+
+David Blackstone
+Thank you.
+
+Citizen Web3
+Thanks everybody and see you next week. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+
