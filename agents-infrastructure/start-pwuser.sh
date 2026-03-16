@@ -18,6 +18,12 @@ if [ -n "$FIGMA_ACCESS_TOKEN" ]; then
     claude mcp add figma -s user -- npx -y figma-developer-mcp --figma-api-key=$FIGMA_ACCESS_TOKEN --stdio 2>/dev/null || true
 fi
 
+# GitNexus MCP (code intelligence: knowledge graph, impact analysis, execution flows)
+if command -v gitnexus &>/dev/null; then
+    echo "--- CONFIGURING GITNEXUS MCP ---"
+    claude mcp add gitnexus -s user -- gitnexus mcp 2>/dev/null || true
+fi
+
 # Context7 MCP (library documentation)
 echo "--- CONFIGURING CONTEXT7 MCP ---"
 claude mcp add context7 -s user -- npx -y @upstash/context7-mcp 2>/dev/null || true

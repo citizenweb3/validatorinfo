@@ -10,6 +10,7 @@ services:
       - runner-data-builder:/home/pwuser/actions-runner
       - ./workspace-builder:/root/workspace
       - monitoring-data:/data/monitoring
+      - gitnexus-data-builder:/home/pwuser/.gitnexus
     environment:
       - GITHUB_URL=${GITHUB_URL}
       - GITHUB_RUNNER_TOKEN=${GITHUB_RUNNER_TOKEN_BUILDER}
@@ -65,4 +66,5 @@ volumes:
   runner-data-builder:
   runner-data-content:
   monitoring-data:
+  gitnexus-data-builder:
   twitter-profiles:

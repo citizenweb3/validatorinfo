@@ -16,8 +16,8 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
     | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
     && apt-get update && apt-get install -y gh && rm -rf /var/lib/apt/lists/*
 
-# Claude Code CLI
-RUN npm install -g @anthropic-ai/claude-code
+# Claude Code CLI + GitNexus (code intelligence)
+RUN npm install -g @anthropic-ai/claude-code gitnexus
 
 # GitHub Actions Runner (pinned version, auto-detect arch)
 ARG RUNNER_VERSION=2.332.0

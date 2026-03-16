@@ -38,6 +38,14 @@ sqlite3 "$DB" "INSERT INTO agent_logs (run_id, log_type, content)
 sqlite3 "$DB" "INSERT INTO workflow_events (run_id, workflow, event, label, issue_number)
   VALUES ('$RUN_ID', '${WORKFLOW_NAME:-manual}', 'started', 'agent:$AGENT', ${ISSUE_NUM:-NULL})"
 
+# GitNexus: ensure index exists (runs only if missing, ~2-3 min first time)
+if command -v gitnexus &>/dev/null; then
+  if ! gitnexus status &>/dev/null; then
+    echo "--- GITNEXUS: indexing repository (first run) ---"
+    gitnexus analyze . 2>/dev/null || true
+  fi
+fi
+
 # Run Claude CLI (foreground, no background — background + wait causes signal issues)
 # Use stream-json to capture full transcript (tool calls, results, etc.)
 claude -p "$PROMPT" --model claude-opus-4-6 --dangerously-skip-permissions --verbose --output-format stream-json > /tmp/agent-stream.jsonl 2>/tmp/agent-stderr.log
@@ -119,6 +127,11 @@ if grep -q '"TaskCreate"' /tmp/agent-stream.jsonl 2>/dev/null; then
   WORKFLOW_CHECK="${WORKFLOW_CHECK}tasks:yes "
 else
   WORKFLOW_CHECK="${WORKFLOW_CHECK}tasks:NO "
+fi
+if grep -q 'gitnexus' /tmp/agent-stream.jsonl 2>/dev/null; then
+  WORKFLOW_CHECK="${WORKFLOW_CHECK}gitnexus:yes "
+else
+  WORKFLOW_CHECK="${WORKFLOW_CHECK}gitnexus:NO "
 fi
 if grep -q 'index_codebase\|deepcontext' /tmp/agent-stream.jsonl 2>/dev/null; then
   WORKFLOW_CHECK="${WORKFLOW_CHECK}deepcontext:yes "
