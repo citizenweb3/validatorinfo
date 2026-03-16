@@ -3,6 +3,8 @@ services:
     build: .
     container_name: agent-builder
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - claude-data-builder:/root/.claude
       - runner-data-builder:/home/pwuser/actions-runner
@@ -28,6 +30,8 @@ services:
     build: .
     container_name: agent-content
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - claude-data-content:/root/.claude
       - runner-data-content:/home/pwuser/actions-runner
