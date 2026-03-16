@@ -12,7 +12,7 @@ export const aztecTestnet = {
   governanceProposerAddress: '0x01c7d4ca153748d2377968fef22894cb162e9480',
   governanceAddress: '0xcaf7447721447b22cd0076ac7c63877c3afd329f',
   gseAddress: '0xb6a38a51a6c1de9012f9d8ea9745ef957212eaac',
-  stakingRegistryAddress: '0xc3860c45e5F0b1eF3000dbF93149756f16928ADB'
+  stakingRegistryAddress: '0xC6EcC1832c8BF6a41c927BEb4E9ec610FBeDd1C2',
 };
 
 export const aztecMainnet = {

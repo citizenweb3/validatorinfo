@@ -4,7 +4,7 @@ import { Abi } from 'viem';
 import logger from '@/logger';
 import {
   AztecChainName,
-  contracts,
+  getContracts,
   getL1,
   rollupAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
@@ -23,8 +23,10 @@ export const getChainUptime = async (dbChain: Chain) => {
   }
 
   try {
-    const contractAddress = contracts[dbChain.name as AztecChainName].rollupAddress;
-    const abi = rollupAbis[dbChain.name as AztecChainName] as Abi;
+    const chainName = dbChain.name as AztecChainName;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.rollupAddress;
+    const abi = rollupAbis[chainName] as Abi;
 
     const avgTxInterval = await readContractWithFailover<bigint>(
       l1RpcUrls,

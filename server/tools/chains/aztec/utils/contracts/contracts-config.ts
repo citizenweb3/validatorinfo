@@ -7,7 +7,7 @@ import GOVERNANCE_ABI_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/cont
 import GOVERNANCE_PROPOSER_ABI_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/GOVERNANCE_PROPOSER_ABI.json';
 import GSE_ABI_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/GSE_ABI.json';
 import ROLLUP_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/ROLLUP_ABI.json';
-import ROLLUP_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/ROLLUP_ABI.json';
+import ROLLUP_AZTEC_TESTNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec-testnent/ROLLUP_ABI.json';
 import STAKING_REGISTRY_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/STAKING_REGISTRY_ABI.json';
 import TOKEN_ABI_AZTEC_MAINNET from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/TOKEN_ABI.json';
 import db from '@/db';
@@ -87,6 +87,9 @@ export const governanceProposerAbis = {
 };
 
 export const deploymentBlocks = {
-  aztec: 21550000, // Approximate deployment block for aztec mainnet
-  'aztec-testnet': 7300000, // Approximate deployment block for aztec testnet
+  // TODO: Update to Alpha Upgrade activation block after mainnet upgrade (~March 30, 2026)
+  // New Rollup: 0xae2001f7e21d5ecabf6234e9fdd1e76f50f74962
+  // See docs/plans/2026-03-10-aztec-alpha-upgrade-adaptation.md for details
+  aztec: 21550000,
+  'aztec-testnet': 9842614, // GSE/Registry deployment block (earliest contract in current testnet deployment)
 };
