@@ -1,12 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
-import { Proposal } from '@prisma/client';
 import ToolTip from '@/components/common/tooltip';
 import { ChainWithParams } from '@/services/chain-service';
+import { ProposalListItem } from '@/services/proposal-service';
 
 interface OwnProps {
-  proposals: Proposal[];
+  proposals: ProposalListItem[];
   chain: ChainWithParams | null;
 }
 

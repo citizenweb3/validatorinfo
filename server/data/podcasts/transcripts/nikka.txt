@@ -1,0 +1,388 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/nikka
+
+Episode name:
+Validators, Toxicity and MEV with Nika
+
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the citizen web three podcast today. have Nika from a guard validator with me today. Well, I said I have with me today like two or three times, but yeah. Hi, everyone. Hi, Nika. Welcome to the show.
+
+Nika
+Hi, so today probably we will talk about the validators and their behavior. Sometimes it's greedy, sometimes it's enthusiastic, but it is what it is.
+
+Citizen Web3 
+It is definitely what it is. It's something that, I mean, you before we jump in, but I definitely want to say straight away out of the, you know, what's the right sentence here? Straight away from the shore, you know, that I think validators are, at least in my opinion, are centralized entities and very self, with very centered self -interest. would, but we'll talk about it in a second, but before that, Nika.
+
+If I can ask you to, for me, for the listeners to introduce yourself, talk a little bit about, you know, what you do in Web3 and how you start to, you know, be acquainted with Web3. How did you start validating maybe?
+
+Nika 
+Initially for me it was maybe 17 years, I mean 20 and 17. The first time I mentioned crypto, I see crypto and trying to enter in crypto world. And so this is just like about more about like a trading that's all maybe arbing and
+
+stuff like this and so I'm not it's quite sure time that I'm full time in crypto I'm probably from 22 2022 year it's like a just two years in the full time crypto world and I don't don't have any experiences in EVM chains other than Solana I mean
+
+only on Solana from this time.
+
+Citizen Web3 
+What what was what was apart from trading and arbitrage and that made you stay in crypto because of 2017 was a good year then came 2018 19 which weren't so good I guess but you you stayed what made you stay.
+
+Nika 
+I'm just full wrecked in 17.
+
+Citizen Web3
+That's a good reason. There is a very good reason. But it's true. So you stayed for opportunity, right? Can I say that? Can I say it like this?
+
+Nika 
+Yeah, I just attracted to this kind of market. You can trade 24 hours every day. It's not like traditional finance and it's more volatile, more dynamic. It looks like it's more simple. I don't know, is it simpler than TRANFY? But I think it's just more simple than TRANFY because less pro traders, quantitative stuff.
+
+stuff and others just more degenerate market I don't know.
+
+Citizen Web3 
+I understand what you mean. But why then a validator? What drew you to think, okay, today I wake up and I'm like, I'm going to go validate Solana. Why a validator and why Solana? Why not, I don't know, anything else?
+
+Nika 
+It's just my side quest. It just happens. I don't know why. So I don't get any revenge for this activity and just I do this for now for community only. Zero reason for me.
+
+Citizen Web3 
+You know, you you say that, you know, it's, I can tell you that, you know, the whole crypto industry, at least this is my personal opinion, right. And, of course, I'm not saying that that's the law. But I definitely think that, you know, I'm going to say it and then, you know, you can comment if you want. You're more than welcome to like, I think the whole crypto industry, the whole blockchain industry started with Bitcoin mining.
+
+Bitcoin mining was not profitable. Bitcoin didn't cost anything when it started and people joined to mine. I think that becoming a validator to raise awareness in the community and it's not a bad thing. I think that it's a mission. So I'm actually very glad that people like yourself, because I'm like that, we validate. We're a self -hosted bare metal validator as well in several ecosystems. And we started
+
+exactly like that in order to participate in the community. So I think that what you're doing is actually the holy grail of validation, at least my personal opinion, really. So that's why I ask, I want to understand, you know, why do people, you know, we talked to lot of validators and some of them come for the money, some of them come for the technology, some of them come like you for to be part of the community. But I think that, you know, it's very important, you know, to at least to me.
+
+So do you think that your journey, like, I mean, at least you said, I mean, you did say that validator is a side thing, you know, and, know, it's a side quest, sorry. But do you think that after doing it for a while, do you think that today it's something that you still want to do? You think it's helping you to be a part of the community?
+
+Nika 
+Yes, think but I want to talk about the path people solve crypto you mentioned like it's like a you mentioned your vision like an enthusiast path is people do for Just for better things for Make a world better make community better. But one time I listened one thing from Vitalik. It's like a
+
+I call this greedy pass, don't know, like when it first people come in crypto for money and then they stay in crypto for the community, for something more, for the enthusiasm.
+
+Citizen Web3
+Do you think everyone, you think mostly people it's like that? Do think most people come for money and then state for enthusiasm and not vice versa?
+
+Nika 
+I don't know, but I think it's just my past.
+
+Citizen Web3
+Okay. I don't think there's anything wrong. I can tell you that from my guests that come onto the show and that I talk to, I would say I have internal feeling. It's 50 -50. I say 50 % come, at least so they say, know, because some people, you know, of course what they say, I can only trust what they say. So I would say 50 % say I come for the money and then stay for the enthusiasm and 50 % say...
+
+I come from the enthusiasm and stay for the money. you know, I think that no, but you know, it's true. You know, I think like, you know, at least people are honest and I hope so. but OK, you know, why why why Solana? Why not? You know, why not Polkadot, Cosmos, Near, Ethereum? Why not anything else? Why Solana? One Cardano, you know.
+
+Nika 
+Cardano, why not transaction for one hour.
+
+Citizen Web3 
+Okay, you like fast transactions? that like, was that the main thing?
+
+Nika 
+For me, most attractive in Solana is just performance. I think maybe in future it can be more performance than sex. I mean centralized exchange. It's my passion in Solana that I think it's just a new fashion way like you can trade. Maybe. Sometimes I just...
+
+Citizen Web3 
+I understand.
+
+Nika 
+Just check the last time I checked the performance of a web socket with depth with the orders. it's like, it's to compare to blocks and the block streaming, why GRPC in Solana, it's just, it's just very old fashioned, old technology, very slow.
+
+compared to streaming blocks and transactions in Solana. I think if we grow more, more, more, maybe someday we can pass centralized exchanges, speed like 10x, maybe easier. It's like I see in Solana very big potential in terms of speed and performance.
+
+Citizen Web3
+Wow. Yeah.
+
+Citizen Web3 
+Do you think that, I mean, you know, I'm going to be a bit of devil's advocate, but allow me please. And I want you to actually correct me, you know, that by all means, please do correct me. In a lot of ecosystems, I mean, we all know that ecosystems fight, right? Unfortunately, for some stupid reasons, they like to fight, not for some, for greed, that's the main reason, of course, and we understand it. But, you know,
+
+And a lot of, and again, I'm going to be devil's advocate. have to say that. and a lot of ecosystems, especially in validator circles, like I say, in Polkadot, in Cosmos, in Nier, you know, in Ethereum, people always try to attack, not always, but Solana gets attacked a lot. Like probably one of the most attacked, you know, by the other ecosystems, at least I feel so.
+
+outside of their own ecosystems. Usually validators talk about how bad their own ecosystem is, but then they're like, yeah, but then there is Solana. It's always breaking and never works. But it's stupid. Why do you think, I mean, again, I'm being devilish about here, but why do you think Solana gets that bad reputation? Or do you feel that at all? Do you think that it has that?
+
+Nika 
+I don't know, I don't think so. I think when they come to me, when just Salon Validator meet, when they come in and I see the people like Brian from Triton, Zanezu and other Validators guys, but maybe one set point, it's like 60 people, 60 and zero, yeah, 60 people in the meet for this such a...
+
+Phenomenon big blockchain, but but this is these people is such inspiration for me is they are very Very knowledgeable say very wise. I don't know. It's just very inspired inspired me
+
+Citizen Web3 
+What do you do? It's interesting that the only Solana meetup I've ever been, I've never actually been in a Solana meetup, but I've been outside of one. In Lisbon blockchain week some years ago, was a big
+
+Citizen Web3 
+Okay, okay, okay, okay. Okay. I understand. understand. Do you think that Solana gets though, for example, you said no, but I want to ask maybe a rephrase the question a little bit. Do you think that maybe part of the negativity from other chains towards Solana comes from the fact that Solana is just better and that's it like in terms of technology?
+
+People are just jealous maybe or don't know. It's a question of course.
+
+Nika 
+Maybe I just don't see this in Twitter in X. I don't know what you're talking about really. I know that I see usual this is comparison with the TPS transaction per second, but that's all what I see. don't know. Solana have the most decentralization index now. I think most performance indexes. I don't know how it can be.
+
+Citizen Web3 
+I understand.
+
+Nika 
+worse than other blockchain maybe bitcoin bitcoin is just like a narrative it's just like museum exponent i don't know
+
+Citizen Web3 
+It's a good comparison. I think it's a good comparison. I'm not a Bitcoin fan by myself. you know, I appreciate, you know, the start of the universe. But thank you very much. But, you know, it doesn't mean we have to go back to it every time. So I totally understand what you're saying. You know, you mentioned decentralization index. Can you for me and for the listeners, for you personally, at least.
+
+What is a decentralization index? How do you measure decentralization in your opinion? What is the best way? Because there are many ways to do it.
+
+Nika 
+I just like clicking in stake with and just checking validators. No, it's very simple to just collect or IP addresses and just check. But so it can be problems that all validators is owned by one people, but I hope so. It's not true.
+
+Citizen Web3 
+Let me maybe open the question so it's easier. Do you think that decentralization matters more, for example, for a chain, for a blockchain, when more validators are geographically spread, or for example, when the stake is more distributed? What's more important in this case, in your opinion? Distribution of stake or geographical distribution of nodes?
+
+Nika 
+Yeah, it's a popular theme of this cause because it's like currently Solana things to going to implement the TVC. It's like for, to pretend, vote lagging. And, the problem is when validators is when validator, it's very far away from all network.
+
+It can be problem with his behavior can be like his youth like vote lagging, but it's no, but so I think for me distribution is like a stake for many peoples. It's like a people and one person and how many Solana he hold on his validator.
+
+something like this. mean, in this, if you have many validators in many locations, it can be good, but it's not solve the problem. One person have, I don't know, 50 % of stake on 10 validators, 20, 30, I don't know. It's a mistake, it's more important. Yeah.
+
+Citizen Web3 
+Do you think there is, have you ever seen at least a solution? Because I can agree and I would say that blockchains in 15 years did not help solving the distribution problem. I don't agree with it. don't think Bitcoin solved it. I don't think anyone else has. People attempted but they never solved. Have you seen an example?
+
+I mean, you're a trader, said you're a trader, you you do some arbitrage and you're a validator, at least on Solana. Have you seen any networks like with good examples in your opinion of distribution?
+
+Nika 
+I think it's not possible in this time because most of the stakes just re -delegated from foundation, from blockchain foundations. the problem is people just usual very, very aggressively billing these programs. And I know that most people have more than two validators in the foundation programs. It just...
+
+But in future, I think I can't from this. Yeah, yeah, I know more. I know people who are holding 10 validators from this delegation from EF.
+
+Citizen Web3 
+I can tell you that's more, more, more, a lot more. I've seen.
+
+Citizen Web3 
+delegation. it's, it's, it's, it's, it's, you know, I kind of, I have a lot to say, but I want to hear you, you know, and what you say is true, unfortunately, not just for Solana, I can, I can, maybe, you know, on, some ecosystems, it's harder to own multiple validators for one person. For example, I would
+
+try to argue that on Cosmos it's more difficult, but people still do that. And for example, you mentioned before also geographical distribution. For example, we used to be a cloud validator and today we are a self -hosted validator. And I can tell you that one of our first problems was ping. As soon as we started to move from data centers,
+
+we started to be the validator who was being slow. So it's like, hey, we want to be decentralized, but because we want to be decentralized, we had to think of several solutions and it took us some time to fix that. Thanks to virtualization, of course, but you know, it's just difficult. do you think then we will ever go to go to a point where I don't know, maybe not Solana, maybe not Bitcoin, maybe not Ethereum or Cosmos?
+
+Maybe there will be somebody else, some other chain that can come and distribute stake correctly or this is going to be like that for eternity and we are lost and doomed.
+
+Nika 
+I think in future. Just in future. Salam, the mechanisms for this is quite optimal. don't know. You mentioned Bitcoin. know Bitcoin is very centralized, heavy centralized. It's because of these mining mechanisms. People use it like the schemes with the property, with leveraging property.
+
+was just using his like a
+
+Nika
+Like a collateral for new property, likely with miners the same thing.
+
+Citizen Web3 
+collateral.
+
+Nika 
+This is a real level of editing.
+
+Citizen Web3
+I'm going to slightly move the topic, know, because I think like it's a topic that we can definitely carry on discussing. But as we can see that it's a bit sad, you know, everywhere. It doesn't make me happy for sure that it's like this everywhere, you know, it's unfortunate. But I want to ask you about privacy, know, not some validators that come are like yourself. You seem to be a much more private person to me, you know, when we talk, you know, the things that you say.
+
+Is it can I do this? I do that? Like you try to be more private about who you are and what you do. And I think I think personally, it's a good thing. But I'm still going to ask you, you know, why? Why do you choose? Why in your opinion, privacy is important? And why do you prefer to be, you know, pseudo private? Let's call it like that, you know, rather than.
+
+Nika 
+It's not true. I just leave a fully transparent and then when I post their research, make it open, not post, then many people just start to blackmail me and threats me. other, this situation is start...
+
+Citizen Web3 
+okay, okay. You don't feel okay.
+
+Citizen Web3 
+Okay.
+
+Nika 
+very shitty for me, very nervous, very... And now I probably do some... incorporate some privacy in my life, but it's not simple with my photo on just Twitter, how it can be a little... I don't know. The most usual, unusual incident for me from this situation, it's just a threat in official Solana Discord.
+
+Citizen Web3 
+I understand what you mean.
+
+Nika 
+It's just a nonsense. And next, I'm get banned from semi -official Russian validators telegram channel because most of the community are mempool participants. Also, number of people in channel was around thousand and half. They still trying to follow my closed Instagram with fake accounts like, I don't know, with the...
+
+Citizen Web3
+It's very sad.
+
+Nika 
+with one follower, one post created yesterday, yesterday, maybe today.
+
+Citizen Web3 
+That's very sad in my opinion that people try to... My personal problem is that I always say that publicly the problem with Web3 is that 99 % of the people in Web3 lost balls completely a long time ago and they have no courage to... They like to do this what you describe, a person comes and does a research
+
+They publish it, they choose to attack the person rather than discuss the problem within this research. I want to ask you about this research, of course, because this is what made me notice you. And I think it was a very cool research in my opinion. And I want to ask you about that. Can you talk a little bit about what you did and why did you decide to do that research?
+
+Nika 
+For at first short of topic, I just want to be public. It's not a problem for me. I don't this type of person with NFT art on the profile pic and with name, don't know, Bitcoin folder 3000, something like this. I just came to all public community with my name and with my pictures.
+
+I just fully transparent, I just have a no very, very don't know accounts. just, maybe, maybe I was popular person in Russian development, Solana discord and in, in past in Valid, Solana semi -official.
+
+Citizen Web3 
+I understand.
+
+Nika 
+Salana validators Discord one time totally created this but recently I was banned from this. I just started to use Twitter. I hope I can get banned from Twitter for this stuff. So about research, yes.
+
+Citizen Web3 
+Please, please. It's very interesting. And just a second, Nika, before you start for everyone who is listening and you're wondering what on earth we're talking about, of course, and where to look at it. So first of all, go to the show notes, please, guys, for the episode show notes and all the links and including the research and Nika's GitHub. It's in the show notes so you can see that. So yeah, sorry, Nika, please go on.
+
+Nika 
+Thank you so much. so I think it's not well discussed topic, but sandwich currently are big part of Solana. think I want just to bring attention to problem of malicious validators. These people can run anything for money. think they can just, just, I don't know, just front run any transactions. I don't know, just.
+
+stop this transaction to include in blocks and other harmful stuff but only one driver they have just grid I think this is very sad for me it's
+
+Citizen Web3 
+When you say, when you say, you know, validators will be ready to run anything for money because of grid. Could you theoretically, theoretically, give an example? What can such a validator, let's say I am this validator who's, I don't know, pay me money and I will do anything you want, you know, this kind of thing. What can be an example of what I can do bad to the network?
+
+Scripts like scripts that still like like like sandwiching things, know, like basically that's a good example, of course, but anything that basically economically damages the network is that what you mean, right? Like economical attacks, right?
+
+Nika 
+anything.
+
+Nika 
+It's like Mert one time mentioned this in Twitter. You just can exclude all Solana cell transactions from the blockchain. It's like you just can do anything what you want. Anything. don't know. You can heavy snipe tokens with...
+
+Citizen Web3 
+That's heavy. That's heavy.
+
+Nika 
+Front running, and back running. You can do whatever you want, whatever you want.
+
+Citizen Web3 
+Do you think that, you know, without do you think what what before sorry, I'm gonna go step backwards. What was your personal reason though for the research or not personal? Was it just the idea that people see that or did you want to like be, you know, participate more? What what what was your original idea for it? Why did you decide to publish that? Because of course, after publishing it, you started to be in trouble, right? From what you say, people started to attack you.
+
+So why did you decide to... because you must have thought, fuck, if I'm going to do it, people are going to not be happy. So why?
+
+Nika 
+that it's a bit sad topic for me. It's just, I can, I just include the part of private chat and know is it, is it normal? think yes. with Ben and Ben just, Ben Hawkins from SANA Foundation. just asks me, can I just publish this? And I say, yes. I say, why not?
+
+If he thinks it's better to be posted, I will post it. And then I started this game, I know it's Hunger Games, with many validators trying to find me and trying to come to my country and something else. For me, main topic is that it's very sad to see most people fighting for sandwich.
+
+Nika 
+for sandwiching, for toxic MIV activity, they just like... It's a good behavior, it's a process of evolving and they can say anything but fighting for sandwich and more people just stay away from conversation or fighting against and this makes sad me, I don't know, it's...
+
+Recently, Marinade makes steak auctions that are mostly used for sandwiches now. I don't know, probably 100 % of Marinade steak auctions for just all four sandwiches. It's kind of sad for me.
+
+Citizen Web3
+How much money in your opinion, least in percentage, do the sandwich attacks actually steal from users? Well, steal is a big word, but I'm going to put it in quotations because it's economical attack.
+
+Nika 
+Yeah, it's very easy to calculate just the accounts. So it's quite not big number. Yeah, it's probably...
+
+Nika 
+5 to 30 maybe 50 millions in the month.
+
+Citizen Web3 
+What do you think can be done today in order to lower the amount of those attacks or to solve this?
+
+Nika 
+Just stop it. I don't know what's the real problem from Jita to prevent including these bundles. I talked about in Google Meet. I talked about with Jita, but they just say like...
+
+Nika 
+It's very complex for problem. It's like a cat and mice game. so what? I don't know. It's just, I talk about the pretending front run type of bundles. It's just, I don't know. It's just a theory of game problems. This is not just a super complex problem. I think it.
+
+It's possible to just stop these bundles for inclusion in validators blocks. One time we speak with one person about the made patch for validators for just tapping to include front -run attacks to validator leaders blocks, leader slots, I mean.
+
+Citizen Web3 
+Do you think that there is a line in which decentralization gets harmed? I mean, if I, for example, you you can make a white list and say, hey, this validator is a good, this validator is a bad, but of course that white list is very subjective and not very decentralized. Do you think, like where, where is the line between keeping the chain decentralized and allowing people to do game theory, right? Because nothing wrong with game theory.
+
+And where is the line where we say, okay, we are being, you know, centralized, the government who says you, are okay, you are not okay, you are okay, you are not okay. Like, how do we find the golden middle?
+
+Nika 
+I think the blockchain and the web three, it's just about balancing on this. that's all, history of blockchain, we're just trying to balance on this line, on this point. But for me, it's like, it's illegal to do such attacks in threat file.
+
+And if we want to legalize all blockchain stuff to trying to move government on blockchain or something complex things like big businesses on blockchain or something maybe DAOs or more bigger things, I think it's important.
+
+Nika 
+to prevent this behavior from blockchain because it's illegal in ThratFi and it's not ethical in my opinion because you just put some commission from transaction I don't know how I can explain this without
+
+Nika 
+without toxic words like stealing, robbing or something like this. But it's not like, it's not innovation to just front run people. It's not about technology, not about ideas. It's just a simple swap bot on radium and that's all.
+
+It's not what I want to see in Solana. It's not what I want to see in blockchain and in our future. It's like a 200 lines code to build this bot. don't know. It's kind of future for us with just swapping radium tokens in simple curve.
+
+It's very problematic to build something like this on orca and we see this behavior only on radium. It's kind of shocking for me. This future, I mean.
+
+Citizen Web3 
+Do you think validators do it because they are well, I mean, you said greed and I agree with you, know, all validators are, I'm a validator. So I can definitely say, you know, we are a centralized entity. We act in self interest, of course. Yeah, of course we contribute and you know, we contribute a lot, but we are definitely acting self interest. So do you think that in the future, and this is not about today, this is like, you know, let's some fantasy a little bit.
+
+Do you think in the future validators will become more decentralized in quotations or stay like the entity itself, maybe, you know, work via smart contracts or be validator DAOs or something like that? And would that help? don't know. I mean, I'm fantasizing here, but you know, inventing it as I think about it.
+
+Nika 
+For me I think...
+
+Only thing can help. It's just a being a good person in blockchain with good behavior. It's just some people's usually from Russia. I don't know why can still build everything. I don't know. I just, can do everything, layer zero.
+
+they can trying to rob, trying to attack everything what you want free Coca -Cola in McDonald's. so one... I'm just curious, what do you think... You say you're running Valdator, what do you think about mempools? Maybe you're running some now, maybe recently, maybe it's just stuffs.
+
+Citizen Web3
+No, we don't. We are... are... My values are my enemies. So, you know, I've been running validators since 2016 on Dipos, on beat shares like chains. And professionally though, that's what's not professional, it was for myself. Professionally, I've started to run a validator, I say professionally, like a project, you know?
+
+Nika 
+Wait.
+
+Citizen Web3 
+There is no such thing as professional validators. I don't know, maybe three and a half years ago. And for me, it was a very big journey to grow from one chain to where I am today. But what drives me personally is building decentralized infrastructure. So we don't host in data centers. We use Starlinks, we use solar panels. We are crazy. But I like the idea of decentralization.
+
+I like the idea of having alternatives to because what you mentioned, I'm going to go back to you here and I will answer your question as well, though. And you mentioned, you know, people like to steal and you mentioned Russia. I can tell you that, you know, I traveled a lot, a lot, a lot, a lot. And unfortunately, the same shit is everywhere. Shit is everywhere. The grass is always greener on the neighbor side. It doesn't matter how rich is the country.
+
+Doesn't matter how rich are the people. It doesn't matter how good or how educated, how poor, how smart. They're all still fucking greedy. Unfortunately, I'm sorry, but it's just fucking truth, you know, and it's very rare, like you say, to, you know, to come across, you know, good behavior that is not selfishly good behavior. So, yeah, I don't know if it answers your question, but
+
+Nika 
+I just think there are more people with such a mindset, with just people enthusiasts and only they can build strong blockchain. If a person is greedy and he or she comes in blockchain just for money, it's very hard to stop them from...
+
+doing harmful or greedy things.
+
+Citizen Web3 
+How do we check though if somebody is good? Because good is subjective, right? We know that. We know that good is super subjective. And how can we online check if somebody is good?
+
+Nika 
+It's impossible, but I just talk about the mindset. It's just something like magic from Harry Potter or things like this. It's not a real thing. Yeah. It doesn't solve the problem.
+
+Citizen Web3 
+I think that, know, I honestly, because I honestly believe that there are things that can be done. For example, you you mentioned, you know, running mempools and then sandwich attacks. If every validator, for example, for example, automatically was send that was running sandwich attacks, because that's, know, you can prove that on chain, you don't, can verify that was send, let's say a token, you know, an NFT that is not transferable.
+
+You know, and then people can decide for themselves, you know, like, let's say you run sandwich attacks, you get an NFT, you do KYC, get an NFT, you do, don't know, blah, blah, get an NFT, and then people decide for themselves, this is bad NFT or good NFT. You know, I mean, but I think there are many ideas that are possible to work with. think, unfortunately, I definitely agree with you that a lot of people in this industry
+
+don't want this, they don't try to research those things because the mindset that they have is, you know, very narrow, unfortunately. And I hope that it changes. I'm very glad for people like yourself who are either a one person team or small teams that have courage to come up and say, hey guys, I did this. This shows a lot of shit. Please have a look at it. And then, you know,
+
+Yeah, you and like you say, you're not hiding anywhere, you know, you're kind of coming out and saying, hey, guys, here I am. You know, here is the fucking research. Here is the fucking numbers, you know, just just just look at them and you can see it for yourself. So, yeah, I think that there is hope, know, like because because of that. So I do believe that hope is there. So.
+
+Nika 
+And I just, for me at first, the Solana community was a big inspiration for just to stay in Solana, to try to do some things. At first when I come to this. And so I think when maybe someone see my research, me, he or she will...
+
+will be inspired and more good people just came and we can build something more stronger, bigger community. Now for me it's Solana community is in my opinion it's the biggest community from blockchains. It's very strong and supportive I think.
+
+Citizen Web3 
+Thank you for coming forward and talking about all of that and especially being worried about what you're saying, how you're saying, how you sound. I'm very appreciative of you coming on and talking about it. To wrap it up, I'm going to ask you two random questions. They're not to do anything with blockchain. This is just to get out of the conversation. So it's kind of like an end bleeds.
+
+And Nika, give me please one book or one song or one movie that has a positive influence for you. And in the last, I don't know, five years or whatever.
+
+Nika 
+I think I can't give book or song, I just can give an author of books. It's for me, it's Philip King Reddick. It's a very old -style cyberpunk author. I love very, very like all his books. And it is such inspiration for me too.
+
+Citizen Web3 
+Please.
+
+Citizen Web3
+Cool.
+
+Citizen Web3 
+Once again, guys, for everybody who's listening, please, if you never heard and if you want to check, please check the show notes. Okay. Second one, Nika. And I promise we're going to wrap up there. Give me one motivational thing that helps Nika. You know, be courageous, know, stay who you are and publish, you know, researches like that, or, you know, go out there and look for answers, you know, what
+
+What makes you do that? What's driving you? Sorry. What's something motivational?
+
+Nika
+Yes, it's interesting thing. recently listened for some your podcast and I hear many, many strong quotes, but for me, I don't have any strong quotes. just, I just hope sometimes for me, it's just very hard to, to, to get up to start to do things to open laptop and something like this. I just hope for.
+
+for a better future.
+
+Citizen Web3
+think that's one of the strongest ones I heard. Come on, man. Thank you, by the way, for listening. I think that is one of the best answers I probably heard. So for me, for sure, because I think hope is something that is a very undefined thing, a very subjective thing. So I really appreciate that you said that actually, because it connects with me a lot. So I appreciate it. Nika, I think we're going to finish here. I want to thank you for your time. I want to thank you for answering.
+
+And having definitely, I would love to see more of your work online, of course. But thank you for finding the time to answer.
+
+Nika 
+Thank you so much for your attention, for your time and for your patience for blockchains and Web3.
+
+Citizen Web3 
+Thanks everybody else. Thank you and see you next week. Nika, please don't hang up. This is just a goodbye for the listeners. And once again, bye everybody.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

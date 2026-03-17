@@ -1,0 +1,570 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/highlander
+
+Episode name:
+Validating, the Cosmos ecosystem and Airdrops with Highlander 
+
+Citizen Web3 
+So Highlander man how are you welcome to the show man
+
+highlander 
+Excellent mate, I'm buzzing, I listen to your podcast all the time. It's my little late night, you know, chill out, get in touch with what's happening in the Cosmos verse or whatever we're calling it these days. Yeah, it's nice to be on. Thank you very much for having us. We got there and organizing it in the end, smashing.
+
+Citizen Web3 
+Yeah, we did it. did us a while to organize this, but, you know, I mean, with these things, it's always like that. People are busy. People are doing things here, there, everywhere.
+
+highlander 
+I think.
+
+highlander 
+Yeah, as I said I was telling you we're moving house at the moment so the next two weeks is just going to be mental so I do apologize but we got there in the end so all good.
+
+Citizen Web3 
+Well, I hope that your house moving is gonna turn out great because that's the main thing, right? so moving is quite a stressing thing, I guess. I mean, I know myself, I've been moving a lot in my life. So, but man, let's talk like the obvious stuff. First of all, right? Let's get this out of the way. You're a validator.
+
+highlander
+Yep. Connect, yeah.
+
+Citizen Web3 
+Talk about that. How did you get to validate around the cosmos ecosystem? How did this life turn upon you like that?
+
+highlander
+Through medium articles. had, well what I was, well I still am I suppose, it's a touring system engineering and music industry. Well I go on tour with quite substantial acts around stadiums and arenas and Covid really collapsed our industry. I was out of work for the best part of two years, you know I've not went back fully full-time.
+
+So in the meantime, I thought, well, you know, I was investing in crypto during the tail end of the, just before COVID sort of hit. And I think I seen Massey's medium article for Stake and Cosmos. And I was, and he spoke about validation and stuff like that. And you know, I messaged him.
+
+Citizen Web3
+Wow, wow, wow, wow.
+
+highlander 
+I think I'm going back a couple of years now, but I messaged him and just said, you know, like, how do you become a validator? You know, it's saying you could be profitable, you can help secure the network and be an integral part of, you know, growing Cosmos as a whole. And he just put me in touch with Tosh straight away. It introduced me and I think I annoyed Tosh for about two years, but he taught me loads of good stuff and infrastructure. And I had this as a validate Ethereum as well on a
+
+Citizen Web3
+Ha ha ha ha!
+
+highlander 
+on a local box that I have. But getting into that and I wanted to try and validate a Cosmos chain, I think, you know, any chain at the time I was up for. But it was just my DevOps knowledge just wasn't up to scratch to try and get into this box and try and utilise it. And as Tosh mentioned, just use the cloud, you know what I mean? Just use DigitalOcean where it's, you know, you just create a box and it's all safe up there.
+
+highlander 
+We're not saying it's safe, but it's a lot more better for modifying and keeping an eye on things as such. And yeah, so I got going with a few test nets and it was really hard. So coming from a non-computer background, but I am technically good at my other job. So I was confident in studying and trying to get things working. So test nets were a great way for doing that. And then it was the time for Juno was just getting chatted about
+
+and would have been up for getting on that. What a chain to start on, to be honest. It's absolutely amazing what Juno's done. I've went from there and I've moved on to a couple more main nets, but I'll say this, won't be validating loads of chains because I don't have the manpower and I don't have the time to... I want to do something to do it properly. I don't want to be half-assed on things. I want to do it right.
+
+So maybe five or six for me will be good enough for me just to manage and stuff. Yeah, so that's that for that.
+
+Citizen Web3 
+You know, they say you always start with one, then five, then six, then it goes to 20, 30. It gets addictive. It gets addictive. gets, but I know what you mean. know what you mean. But like, you still have any local out of curiosity? mean, it's a bit private question, but do you still have any local?
+
+highlander
+Hahaha
+
+You're right there, Yeah, you're definitely right.
+
+highlander 
+Just the Ethereum one, yeah, just that. And I can't wait it's all done so I can be just out of Ethereum completely because, yeah, I know, well, it's just, you know, a lot of people who have converted, right, there's a big group called Stack Labs, sorry, Labs, right, and it's a great little chat room with 800 strong. And every one of them never really dealt with Cosmos, right?
+
+Citizen Web3 
+I mean, I think.
+
+Citizen Web3
+Really? Really? Why?
+
+highlander 
+And I come in there before Juno was coming out and just recommended, know, have you seen this ecosystem? Have you used it? You know, I mean, and the gas fees on it and how slick it is. Eventually converted them and my validator is is went up a fair few places from people from that group delegating to my validator. And it just shows that people are really going, you know, once you're converted to Cosmos, mate, it's very hard to go back to Ethereum. It is.
+
+I don't know what the developer community's vibe is, but I'm speaking to Jake from Juno and he reckons three months' time will be a lot easier to convert people from EIF onto our chains, without a doubt. And that's incredible.
+
+Citizen Web3
+Ha ha.
+
+Well, I'm always say I'm a decentralization Maxi. So I like it when people validate as many networks as possible. I love it. Actually. Thank you. Ethereum is I'm not a one. I believe that my view here is not like cosmos or Ethereum. I believe that in like five, 10 years time, you know, they're all going to interact with each other anyway. So the merrier, the better.
+
+highlander
+Yeah, cool.
+
+highlander
+Totally agree. Exciting. Yeah, and on that point, know, Eve Moss is potentially going to be awesome, isn't it? You know, it's... I was in about the testnet and I don't know what happened, but again, you know, being busy trying to learn code. It's like, what avenue do I want to go down at the moment? And I don't want to just spread myself too thin. So...
+
+Citizen Web3
+Of of course, of course. Are you planning to validate FMOS by the way?
+
+highlander 
+Even more so than the test net, but I get kicked out the test net validator set because everybody was just gaming it and putting all scripts on and stuff. And I really don't have the time to keep up with it. So I've come out of that. But they did mail me back and asked me, you are you going to come on validate it? So again, you know, I'm not too sure. You know, I will be definitely sticking to validators with that. We even more for sure to support that. Validating that is another issue.
+
+Citizen Web3 
+For sure, for sure, man. So I have like one definitely question I want to ask you. I mean, we had a lot of validators during like different seasons, like the first and the second season on the show. And one thing I try to understand is what is the motivation? Like why, why, and I don't mean to secure the network. That answer doesn't count. I mean, why, why are you doing it? I mean, what's the purpose? What are you?
+
+Where are you heading with it? Where is the validator heading in Europe for you?
+
+highlander 
+Honestly, it's an income for me to stay in the industry. If we don't get some sort of contribution, how can I stay at home and work and look after two kids and a fiance, Although, staking, there's, you know, look at Juneau, right? 40 % inflation for a year. You don't really want to be selling your rewards, do you? You want to be compounding them all the way because...
+
+Citizen Web3 
+Mm-hmm.
+
+Citizen Web3 
+Beautiful.
+
+highlander 
+After the first year, that initially 50 % of its circulating supply is out there. See, now's the time not to be selling your stake, right? So I can't make money off that at the moment. That's a long term thing. We validate it, though. I can at least go with half of the rewards on commission and put it to bills. You know, my digital ocean invoice a month is sky high. But the validator covers it and I get a little bit for myself. But I think...
+
+you need to think about a bear market. It's a different game altogether. think looking at the data, I think we'll be able to survive and not go under during a bear market. But for now, you know, I'm trying to just keep myself in here so I can learn TypeScript, I can learn Rust, I can try and build something and be rewarded from Hack Juno per se, per se, sorry. You know, so yeah, sorry, go on.
+
+highlander 
+Yeah, that's It's just enough to keep you in there so you can contribute to the network. This is what matters at the end of the day. How are you going to attract developers? How are you going to attract anybody if they're not getting sustainable income to leave their main jobs to come and do it? I can, you know, I literally have left an industry that was paying me 60 grand a year and came to this. I believe in Juno and I believe what it's doing.
+
+highlander
+I think it can change, it can help loads of real world problems, right? And I believe I want to stay on this for another year at least to see how this is going. And I've had to speak to the company who I was freelancing for and they were like totally get it, you know, but it's hard for me to go back into that old industry which could just shut down again tomorrow. We don't know. So that's where I'm at. Yeah. So that's why you do it. Validation sort of gives me a little skin in the game, so to speak.
+
+Citizen Web3 
+I think it's very important. think a lot of people who try to kind of leave income and economical incentives out of it kind of forget how blockchain works and blockchain works thanks to economic incentives. That is like one of the main reasons if you read the Bitcoin white paper, the Ethereum white paper, any white paper, one of the main, not one of the main, but I would say right in the middle of it, apart from consensus computing.
+
+And timestamps, have economical incentives which make people carry on do it. And I think it's very important. I love that you, that you have the balls to say it because a lot of people, try to avoid speaking about it. And I don't understand why.
+
+highlander 
+Good.
+
+highlander 
+This is the thing as well, right? I'll be honest with it. know, we're here also to, when I contribute to stuff or try and help a network out, whatever I'm doing, I don't sit there and go, I'm after a reward, I'm after a reward. That's not the way I work. The way I work is we're changing the world here. We're at the forefront of change in loads of different things, right? And it sort of aligns.
+
+The rewards come after for me. It's happened in the past. I'm not even worried about it. And you just know, you know what? You're just like, wow, what am I doing? This is amazing. You're contributing and rewards will come after. You you work hard. You know, it gets noticed, doesn't it?
+
+Citizen Web3 
+Of course. And that's what a lot of people ask me, like, what are you talking about when you say ecosystem development? I say it's exactly what it is. You come to a network, you start to do what you do. And if the network sees value in what you do, it will reward you for it.  one question. I went on your website and I noticed...
+
+So you have the networks that you validate. have Comdex, Juno, and I can't pronounce X-H-I. And we had the guys also on the show. But the controversial question is this.
+
+Citizen Web3 
+Why do you concentrate on what somebody would refer to as only decentralized exchanges of DEXs or rather than concentrating on networks who are, I don't know, doing anything else. And again, this is like a devil's advocate question, so feel free to answer anyway you want, man.
+
+highlander 
+I've not really looked at it that way. You've pointed that out and that's took me by surprise to be honest. No, not totally fine. What I do is I validate chains that I know I can bring a little bit of contribution to. Do you know I've been doing it from the start? Writing documents or whatever. It all helps spreading the word. Keychain, I work with another great validator called, it's pronounced, Qualac.
+
+Citizen Web3 
+shit, shit! I'm joking.
+
+highlander 
+but I think it's like Q13, like some crazy name he's got, he's awesome on the system. So he is. And I've been developing, we'll be out soon, hopefully, once we get it. We'll get to certain things we need to work on. But it will be a staking device that you can just connect to with Kepler. And it just talks to every Cosmos chain. One thing I have noticed with staking is, you know, we do know for a start, you know OmniFlix and
+
+Citizen Web3 
+Nice.
+
+highlander 
+Jan Salaks did a great little UI so people could stake straight away when Juno was released. I just think we were missing this universal UI. It can just do all the chains for you. And we've got something there that we think can do it. Most people probably have other things that are similar, but with Keychain, we said we could do it for them in Comdex as well. So was just like coming to chains that I know I can bring something to the table.
+
+Because if you don't get that foundation delegation, then you're fighting for the scraps really, which we'll talk about in a bit because I highlighted something on Twitter last night about, but that's another topic. We may be going to add later about centralization and decentralization of networks and stuff.
+
+Citizen Web3
+No, no, that's for sure. That's one of the topics I love talking about, think. But before we get to that, because the reason I thought you did that is because you mentioned you have a background in trading, right?
+
+highlander
+Yeah, that's how I began really. was just doing a bit of technical analysis and sort of playing on the charts with Bitcoin and Ethereum and that. once I started understanding a bit of TA, I was making money, also losing money. again, if you're invested in something, you're going to take the time and study things, aren't you? Whereas if you've not got a penny in crypto, you're not assed about anything that does.
+
+You know what mean?
+
+Citizen Web3 
+It's true, man. But if you think about it, this is how we as humans work. mean, a human always makes that flight or fight choice, right? The reward cycle. And if you don't have the reward cycle, you just be a plant, right? So, I mean, exactly the same shit goes over here. I mean, you get, you bring value, you get something in return and that makes you give more value. And I think that that's the fucking thing that keeps us going in it. But
+
+
+Citizen Web3 
+But let's talk about what you just said. I I love talking about that topic, centralizations of network. I mean, let's talk about that.
+
+highlander
+Well, I started this at the beginning with Juno, is those validators at the bottom, right? So once it increased, I think, from 100 to 125 in the set, one of my friends as well was one of those who got in at like 120, that's Qualic who I was talking about. I'm sorry, man, if I pronounced his name wrong, if he listens to us back, but you know, that is what it is.
+
+Yeah, so it's just feeding off the scraps, but you've got loads of validators at the top who'll just scoop up. I think we need Jake and such as mentioned about, I think we're going to try and incentivise more of the outside, the top 10 to try and bring in more delegations to the lower validators. So we started off with this idea of, well, what we'll do is we'll reward once one week of the month.
+
+we can just delegate. I'll personally re-delegate some of my commission towards some of the lower validators. And what I've found to happen is when you do that to the bottom 10, some of them were just dropping out and not even, they were all jailed. And I'm like, you're not even looking after your validator. I'm trying to help you. So fucking, that idea's gone now, think. Do you know what mean? But just showing that it's important that we try and re-delegate and try and not keep it centralized.
+
+Citizen Web3 
+Ha ha ha ha ha ha ha ha ha ha ha ha ha ha
+
+highlander 
+I made a tweet last night, no I'm not angry at anybody or anything, I'm just raising an issue. I think there's bit of a concern with certain validators who might release, especially with JunoSwap coming out, you can just fucking create a coin and it can come out and you can create a meme coin but you're then going, well if you stay with us you're due an airdrop. You know that kind of thing. I think that's, I've got a concern with that, know. There's a lot of...
+
+delegations I'm seeing leaving certain validators who just going to a specific validator because they're offering an airdrop and such, Okay, if they're contributing and building stuff on the network, like Omniflex for instance, they built fucking Juno's website, they've built, you know, they do loads of great stuff, but other than that, just mean tokens, you know, I just think that you're risking potentially a full centralized chain, whatever network that might be. Cosmos wasn't meant to be like that, was it? It was meant to be
+
+to keep it decentralized. So it's just a concern, it's not anything that I'm worried about, I'm kind of just concerned. I just want to hear some of the elite comments on this, do you know what mean? Some of the long term validator statuses on it, what do they think? Just to raise a bit of a topic, that's all. I don't want to into an argument, just want to raise that.
+
+Citizen Web3 
+I think it's a very important topic, man. Because, mean, and again, this is something, I mean, I always talk to with quite a lot of people. And the first node that I ever held, which was, it was a fork of Steemit, which was a Bit.Share-based platform on the same technology. And it used to be called Witnesses.
+
+highlander
+Yeah, yeah, yeah.
+
+Citizen Web3 
+This was 2016. we're talking like, so the validation was a bit different, but because it was different and there was still like no, no punishments and no things like that. People would not care about the validators and what it may do. A lot of networks would die literally because the operators couldn't care shit about the validators. Yeah. Yeah. Yeah. Yeah. Yeah. So what you're raising is a very, very important point to my opinion. More so you're, you're, you're actually like sharing your own income.
+
+highlander 
+okay.
+
+highlander
+That's fucking scary, man, it really is.
+
+Citizen Web3 
+You're kind of saying, hey, guys, I'm doing it out of my own wish to make the network more decentralized, but you guys not looking after your nodes.
+
+highlander 
+Good!
+
+highlander
+You're still earning staking rewards, you know what mean? You might delegate to someone else, but you're you know, if I get, you know, 2000 commission one year, say, right, 2000 Juno, and I redelegate some of that to another, like some validators, you're still getting the 90 odd to 125 % staking APYs, you know what I mean? So you're not killing yourself, do you know what I mean? But you really are helping other.
+
+lower validators and just thought, know, and quite a sort of fell out of that set and I thought I was gutted for him because I thought you deserve to be in top 10 really because you're that good but you know you might just not have the maybe not as, you know what I'm quite active on Twitter and I'm know I'm quite a chatty person I like to I can go and talk to people pretty easily maybe that was the case you need to be like that as a validator I suppose don't you to try and
+
+Citizen Web3 
+Hehehehe
+
+highlander 
+You've got to attract people to delegate to you, it's as simple as that. And when I was on Juno's, mean Juno's Telegram group now is like, I'm just looking at it now, it's fucking mad, it's insane, it's so busy. And I was like, I am not even getting involved in this, that's 5,000 people in a Telegram group and just trying to read these messages. So that's why I channeled Highlander nodes towards Stack Labs. A bit of a sidetrack I did there.
+
+Citizen Web3
+Ha ha ha ha.
+
+highlander 
+I've got 800 people who can read what I'm saying and learn and not 5,000 people just posting, know, how can you keep up with it 5,000? So that's what I kind of did and I think it did help to validate it, it raised awareness in what we do, do know what mean?
+
+Citizen Web3
+I think again, this is a lot of important things that you mentioned because, I mean, we've seen this in a few networks and hopefully there's going to be some solutions for it in the future in terms of like on chain solutions. I don't really know how you could solve it like out of the box, but hopefully that it...
+
+highlander 
+You mean just like the group's been so busy? I mean, know, a community driven project, was kickstarted with just volunteers, man. It was incredible what's happened to it. And I swear to God, man, all the core devs, I'm telling you, I wish them all the luck and help in the world that they deserve every bit of it, Null names, know, Dimi, Jake, Massey, even Tosh, everybody who's on that Discord every day running testnets and doing stuff.
+
+highlander 
+We were all in it together, you know, I was in and out, but most of the time, you know, running UniValidator still just so people can help develop new projects and stuff. It's all important, but it goes unnoticed. know, sorry, it's going unnoticed at the moment, you know. Nobody knows what's happening in the background, but, you know, it's incredible, man. And it should be, it should be like inspiration to anybody. You know, this is what you can do as a community. And it's amazing.
+
+Citizen Web3 
+By the way, about what you do, I've noticed that you kind of also, I guess, took a role of working a lot with the community. I've seen you do validation guides. I've seen you like kind of like be really active on, like you say, on Twitter, on Telegram. I mean, is that something that you feel closer to in terms of that you can do in terms of value?
+
+highlander
+Yeah. Yeah.
+
+highlander 
+Well, I had this idea for Hack Juno, know, Hack Juno's going to be for the next year. We're offering massive rewards to try and onboard some, to try and increase your dev community, suppose, right? So I had this idea of a simple sort of a simple sort of airdrop mechanism or whatever what you could.
+
+Citizen Web3 
+you
+
+highlander 
+earn some Juno tokens to help develop, know, help you on your way and develop in your project or your data and such. But the thing that I was thinking was just it was flawed. could not get away with, you know, it would just be, it would just be a game, right? You would just be claiming, you know, what one Juno can be quite a lot of money in some third world countries, you see. So it would just be spam. You'd run out of the fund that you put in for it to be done, right?
+
+But Doos Labs, I don't know if you're aware of them and Daldal, the chaps from there, they liked the name and I was sort of like, I did a front end for JunoDrop because I ain't no backend developer. Christ, I'm not even a front end developer. I've just been learning on the job, And I had a finished JavaScript front end that was all working with help from some of the community. And then Doos Labs, Orkin and stuff just said, you know, we like the name. We've got this...
+
+Citizen Web3 
+haha
+
+highlander (24:54.097)
+We've got this Merkle drop mechanism, it's smart contract, done, ready to go. Can we get the name? I just went absolutely buzzing with that. I thought, at least the thing's going to get finished and it's going to be brilliant because these chaps are amazing, man, what they can build. then so yeah, so Jake's been on it with, we do slabs. So dial, dial and do slabs and myself, a little bit of a project going. But I don't want to say too much about it. Yeah, Juneau Drop, yeah.
+
+Citizen Web3 
+And this is Junadrop,
+
+highlander 
+And what it is is it's a Merkle tree smart contract, right? It's not a normal airdrop where you distribute over loads of addresses in respect of costing loads of fees, right? A Merkle drop is sort of flips it on the other end where you get a whitelist from whoever wants to. Say you create a token, right? You've got a project and you come to us and you go, there's my whitelisted addresses, right? And we put that.
+
+We don't want to data, it's only centralized. We take that and configure it into the smart contract. And then it basically, all the users who have a wait list have to go through a hash sort of structure to prove that they have due the airdrop. And then it just gets spouted out. It's a lot cheaper to do than a traditional airdrop. And it saves a lot of time and it will enable a new chain to get their tokens out very quickly and get it going.
+
+But Juno Drop is not just the only thing, by the way. At the moment they're doing something a lot bigger and Juno Drop is just going to be a part of that now. So that's where we're going, but I was told not to say too much about it yet. But that, because it's not my baby, mate, to be honest.
+
+Citizen Web3 
+Maybe something maybe maybe maybe maybe maybe a hint like which way like which direction
+
+highlander 
+It's just going to be like a hub, right? You think about it, right? If you're going to be a new chain, you're going to come to us for an airdrop, right? We configure that and do it for you, right? It becomes, you know, Juneau Drop. But it could be a lot more that you can come to us and we could do it for you, innit? Do know what I mean? So we're going to have a little bit more than just Juneau Drop happening. So is that good hint for you?
+
+Citizen Web3 
+It's a good enough hint, we're gonna alpha it here, but let's not ruin it.
+
+highlander
+Yeah man. But just a little, and it's close, I've got a lovely chap from America has been in touch and he's got a great project, it sounds like a brilliant project, it's a classical music industry and they've got this, they want to get a patent thing going, but it's nearly done, what we're doing is nearly done, it's almost there, we just need Jekteb.
+
+Citizen Web3
+you
+
+highlander 
+He said it was funny actually, just said, I need to clone myself. So he's obviously really busy.
+
+Citizen Web3 
+We love tokens. We love tokens. Everybody loves tokens.
+
+highlander 
+Yeah, yeah, exactly. I'm not too sure if, know, JunoJob won't be a token or anything. It's just, it's just, I'll give you the hint of what tools, it's a tool set. You know what mean? We're going to be bringing you tools that can help build your chain or your whole infrastructure. And this is the idea of what's behind it, which is very exciting. And if I can just do a bit of marketing and stuff like that, then it gives me the apprenticeship to try and learn more of.
+
+highlander 
+how these things are being built from the front to the back. I'm happy with that and it keeps me involved, suppose. It keeps me in Cosmos for as long as I can.
+
+Citizen Web3 
+One thing that gets me more, more, more, mostly excited talking, like hearing you actually say what you say is the fact that like a couple of years ago when we started out with Citizen Cosmos. And I mean, I've been like around for a little bit longer, like one of the goals that I wanted to achieve is to show anyone, whatever they are based in the world, doesn't matter which country, doesn't matter what their background is.
+
+Is that web three and having a business in web three that can be monetized is realistic to anyone. And now hearing your story is exactly kind of that is like saying, well, you did something regardless of whether it was highly paid or whether it was, you know, it doesn't matter. It's the fact that you decided to go and change to something you like more and join more for whatever reason. And it does reward you. You do have a reward. You are doing what you love.
+
+highlander 
+Yes.
+
+Citizen Web3
+You're learning new skills. You're learning to fucking program. said, right? I mean, God, I mean, that's not really easy. I know myself and it's, beautiful. It's beautiful.
+
+highlander
+Yeah.
+
+It's fine, yeah. It's amazing. No, you're totally right, mate. You can, you can. And I've shown, I've shown loads of, you know, for instance, my fiance, right, she's on a level four in accountancy, for instance, right. And I have said to her, you know, you're in traditional finance. I think you should start looking into blockchain. I say it's because you will see all these finance companies are already getting in place blockchain engineers because they know where this is going.
+
+highlander 
+It's technology, it just is not going away. And you know, we might see Bitcoin at the moment of recording this take a bit of a dump. But we're confident it's all coming back, aren't we? You know, we've got high inflation going on here. It's high inflation, interest rates are going up. You know, we're now going to see a recession, aren't we?
+
+And I just said to Jade, you know, now is the time to be putting your efforts into this technology here. You know, if you can get going with this, you'll laugh.
+
+Citizen Web3 
+For sure, for sure, for sure. I think, be honest, seeing what three bear markets, what is 11, 13, 18, whatever, or 11, 14, 18, shall I say, I think that in my opinion anyways, like most of the development happens during bear markets.
+
+highlander 
+Yeah. Yeah.
+
+highlander
+Of course, yeah you get peace and quiet man, know, I I've never been, I wasn't a developer during, you know, Bear Market before, but you know all I want to do now is just have enough infrastructure in place where I'm not going under, you know I'm trying to move house as well, know, end of the day it all comes back to assets, doesn't it, so just having enough in place.
+
+and enough staked and you know the things I've got staked with Juno, Atom and any other Cosmos chain that I'm staking with I just think long term that's not getting touched that's there forever you know my kids probably will see that so yeah I can then during the quiet bear market maybe look what I intend doing is getting a bit of a fee income source preferably in crypto if not I will need to go back to touring a little bit not as much
+
+But yeah, that's my sort of idea of where I'm going.
+
+Citizen Web3
+This is a nice point you mentioned there about kids. I had a discussion with a friend recently who's been in crypto since the very beginning, since like the very beginning. He has a very interesting opinion that decentralized software and systems have a much longer lifespan. Now you're talking about being a validator and talking about kids and I'm just wondering.
+
+highlander
+Yeah.
+
+Citizen Web3 
+when your kids grow up and ask you, so daddy, what do you do? And then you say, well, I'm a validator. And it's like, you know, it kind of becomes the new validators will become the.
+
+highlander 
+Yeah
+
+Yeah, yeah, yeah, you're totally right, yeah. Yeah, never thought I'd go like that, you know, but you know, my son's always like, you know, I work for an artist and he's quite, he's quite big, you know, he's doing stadiums, Christ, year, so. And my son's already like going, you know, the act's called Jerry, right? And my son's going, instead of going to, you're going to work, daddy, he's going like that, are you going to Jerry work? Or are you going to, or if I'm in here on the computer, it's like, you're doing that work today?
+
+Citizen Web3
+hahahaha
+
+highlander 
+You know, he just sees the charts and stuff and he thinks, you know, that's the different work I'm doing. It's crazy man, he's only three, like, you know, but it's funny.
+
+Citizen Web3 
+Wha- Wha-
+
+Citizen Web3
+It's funny. mean, if you think about it, what in the 60s, all the kids wanted to be cosmonauts. And then in the 80s, know, the 90s, they wanted to be like businessmen and now they want to be validators. So cosmonauts again. mean, cosmonauts is working again, right? But this time online. So, yeah, man, it's beautiful. I see some drums in the background there, Is that you? You're a musician, right?
+
+highlander 
+Yeah.
+
+highlander 
+Cosmonauts again. Yeah, yeah, that's it.
+
+highlander 
+Yeah, I'm a bit of a music man obviously. Well, I was a performer, not anything special, but I did do bit of band stuff and it wasn't paying my rent, so I ended up going into the industry as a sound engineer. And yeah, I did well with that for a while, doing monitors for big acts in front of house for big acts. Yeah, you see some of the racks that we build and you think, you
+
+At the time I was very scared of flying massive PA rigs into a stadium when you're in control of this three ton weight in the air. But see when you step up and do an upgrade on a validator and you know you've got all that delegation through you, I think that's more scarier. I'm alright with it now but the first time I did that upgrade I was like, you know, just seeing the chain starting again and it's like wow, it's yeah. You just think to yourself all eyes are on you and if you're not getting any blocks signed.
+
+Citizen Web3 
+It is.
+
+highlander 
+Yeah, pretty scary.
+
+Citizen Web3 
+On the other hand, it's interesting that if you look at actually we're talking about Evmos and Evmos was supposed to launch yesterday, but I mean,
+
+highlander 
+I so yeah but what's the what happened I need to catch up with that sorry
+
+Citizen Web3 
+Well, I don't know the whole story, but as far as I understood, there was a problem in the code and the validators couldn't launch the network or the network couldn't be launched, is the correct way to put it. But I think it's a good thing instead of trying to push something, it's going to break and then totally, exactly, exactly. think it's...
+
+highlander 
+Yeah, it's done properly.
+
+highlander
+Well, think when I was doing it, obviously they've got EVM running in there as well. And when I did the test net, there were some things that I recognized when I was doing some solidity stuff. And what had happened, actually uploaded the solidity contract that I did and got it working on the test net and stuff. And I thought, this is going to be great, But that's when I was too busy. I was doing loads of things. Honestly, I wish I could clone myself as well.
+
+Because you've got, you know, I look after my missus' wallet, I look after my dad's wallet, you know, I've got my son and my daughter's wallets as well. And that takes up a full day sometimes, you know, they're all in osmosis, it's all doing a little bit, you know what mean? You've got bits everywhere and yeah, you can just take up a whole day. Ridiculous.
+
+Citizen Web3 
+I totally understand for me, it's usually like dividing my tasks between like, let's say either content or validator or, or, or trading or anything else. And you can never, well, I can never manage doing more than really one thing, at least doing it good in a day. So it's always like trying to, what's going on, what's going on, but coming back to the like validating thing, man, I, I, and
+
+Citizen Web3 
+You know, I was like asking about the goals and you were talking about the income. And let's assume that Highlander, the validator grows, I don't know. I hope so anyways. Grows, grows, grows to the point where you realize, okay, this now is bringing much more income than I anticipated. It's, it's went, I don't know, you validate in six, seven networks, whatever.
+
+What are you, what are your plans? You're going to carry on like developing small projects, well, small and big, like JunoDrop and whatever it is else you're planning? Or are you, do you have any other plans or what?
+
+highlander
+Yeah. Yeah. Yeah.
+
+highlander
+For the moment, we're on, as you know, Juno, Comdex, Keychain, OmniFlex, we're hoping to mainnet on that, and a very interesting project, which I'm hoping to get some more information from Jacob and stuff, but Dig, I think it's got legs to run if it gets on. Yeah, I've always found real estate. One of the first questions I asked myself,
+
+Citizen Web3
+DIG, Is it DIG? I've seen it, I think.
+
+highlander 
+when I get into crypto and blockchain was, can this come into real estate? Imagine buying a house on blockchain and it's like you're just missing out all, I know you need to go through government law and it needs to be valued and all this and that, fair enough, but if it's all on an open ledger like blockchain, don't you cut out all the bullshit in the middle by going through blockchain? I think it's very interesting.
+
+Citizen Web3 
+Well, I think the problem here is the government, is the middleman. So if you kind of take them out of the picture, then you could have easily... There has been a lot of projects over the years that have tried to combine blockchain and real estate, but the problem...
+
+highlander 
+Yeah.
+
+highlander 
+I yeah, real was the talking wasn't it? That's fell flat and it's asked that. They were trying to do it, weren't they?
+
+Citizen Web3
+That was a pile of big Russian shit. And the reason I say that with a bit of hate is because I lost quite a bit of money on that project back in the day. And I know the guys, I know them very well and they didn't really plan to do anything, to be honest. So it was one of those semi-rag pools in my opinion, anyways. That's my opinion. I think the problem is that the people who are...
+
+highlander 
+Yes, yes.
+
+highlander 
+man, that's the shame.
+
+highlander 
+Yeah, yeah, it did, it did. That's unfortunate.
+
+Citizen Web3 
+entering the market and they see the opportunity instead of trying to understand that the government doesn't give a shit about what you're trying to do. Their job is like the mafia is, you know, they're going to like take money in, in, in, they're going to offer you protection. That's what the mafia fucking does. Right. So, and well, that's what the government does. They offer you protection as long as you pay them money. So that's why they're not really interested in all that shit. If you take them out of the picture.
+
+highlander 
+Good night.
+
+highlander 
+Yeah, yeah.
+
+Citizen Web3 
+I think it could be blockchain and real estate would be perfect for each other. But as long as this.
+
+highlander
+Yeah, completely. I do believe that'll be one of their cases for it. So yeah, that's Digg and obviously I could not get on the Wiff train, man. Honestly, that's brilliant. So yeah, we'll see how that goes. But you know, I'm seeing they're doing some good stuff. They've actually got a dev community there. mean, NullNames, Kingnoz, he's a good guy. He's up there in the top.
+
+Citizen Web3
+Nice.
+
+highlander
+I think he's second on that chain. If he's in about it, he's great at documenting stuff. He's such a helpful guy to loads of newer validators. Helped me loads as well. And yeah, I see Chihuahua chain have actually got things happening. They're making things. It's not like Dodge or Shiva or anything. It's a fucking main top coin on Cosmos, man. It's great. So yeah.
+
+Citizen Web3 
+Nice, nice.
+
+Citizen Web3 
+I love it. I love Chihuahua. This is the best.
+
+Citizen Web3 
+I love it.
+
+highlander 
+Yeah, so do them and what else is coming out that I might, as I said, I don't want to go too much.
+
+Citizen Web3 
+Are you planning though to like as you grow, you planning to stay more helping like grow communities? Are you planning to grow more technical and like develop tools?
+
+highlander 
+I think more of the technology, it fascinates me. I've got some great ideas, you see, but I'm having to ask for help. But I would like to learn more and try and, even if, what's happening now is, for instance, if I, if I could get a, I've got another project potentially for Juno, right, and it's a simple, do remember Dice to Win on Ethereum? Remember that betting game? You know, I've got a code working there that,
+
+highlander
+it does a simple, you flip, do you know, 50-50-1 and I've got something ready to go there. But it's like with me, I get it to a stage where I can't go any further and you you bring another developer in, he helps you out with that. It's just like contributing everywhere. And that's how I've been rolling with at the moment. You've been learning a lot, you know, and as I said, you just try and build some useful things for the chain and you know, rewards come after if they do, but who cares, you're just doing it because...
+
+You're helping trying to grow the developer community. mean, Juno is my priority, definitely. It's got me where I am. Other chains, you know.
+
+Citizen Web3
+Well, think you guys have already, with Juno, I've already heard at least two different networks. Well, I'm not going to say anything, but talking about the hackathon for half a year, for a year, I already heard several networks take that idea and they want to do it as well in Cosmos. I think that by creating those little examples of how to do things in a different way, I think it's beautiful, man. It's like you say,
+
+highlander
+Yes, we need that.
+
+highlander 
+Yeah, so mate, you are a developer, know, and even if you're on Ethereum or anything and you are listening to this, it's like, try out Rust, try and get involved in the Discord, speak to people who can guide you, man, and it's worth it. You know, there's so many amazing things that were built on ETH, man. You know, let's see what it's like built on Juno now. Do know what mean? That's it. yes. Good man.
+
+Citizen Web3 
+It's actually exactly what I was going to say, mean, if, well, pretty much about the connections, man, it was like, if you're saying like, you know, I have to ask for help, but in my opinion, you're creating beautiful connections here, man. You're talking to people who you're building, like, you know, some synergy between different validators, between different, and then what helps to build the community. And end of the day, that's what Cosmos is all about. Yeah. Yeah, for sure. For sure.
+
+highlander 
+Yes.
+
+highlander 
+Yeah.
+
+highlander 
+Absolutely none, Cosmos is the best for it. Yeah, you're right man, you're totally right. Yeah, so exciting stuff for Juno coming up. Focusing on at the moment, we need some docks and stuff done for Juno Swap, so I'm in about doing that at the moment, me and a few others, and get that going and then I think Juno Drop should be getting going and obviously Dal Dal will be going hopefully soon as well.
+
+Yeah, there's a lot to do, there's a lot going on, so I'm just standing by and if there's anywhere I can jump in or pipe in, will. That's how I'm playing it at the moment. Bit going can go and fuck off for all I care,
+
+Citizen Web3 
+Nice man, that's the real stuff man. This is what I like. This is why, I mean, there was the reason why I love recording with validators and especially to be honest, I do like recording with the big validators as well, but, you know, I mean, we are a small time, like Citizen Cosmos is also small.
+
+And I don't want to like grow the validator too big. But the reason I love recording this with the operators of smaller validators is because it's real. You get the feel of what the person is about, what they're going to do. And, you know, there was somebody, there was a guy from the Cosmos community, I think it was on Reddit. And he left a comment. said, you know, like when I validate to somebody, I'm validating my money. I'm sorry, delegating, sorry, delegating my money. And I want to understand who's that person.
+
+highlander
+Yeah. Yeah. Yeah. Yeah.
+
+highlander 
+Exactly.
+
+Citizen Web3 
+And by listening to something like this, I'm learning about the person, the personality. I mean, and should I delegate to them? And this is why I like this. I this is the real stuff.
+
+highlander 
+yeah.
+
+highlander 
+Exactly. When I get delegations, know, stuff's been monitored, I've got alert systems put in place, not that I've ever needed it, but you know, it's looked after, it's not mismanaged in any way. I've learned from the best in the community, do you know what mean? And it's something I want to keep going for a while, you know, and if I decide not to one day, the delegators will be well informed.
+
+You know what I mean? To go and delegate somewhere else or whatever. But yeah, for the next, know, Juno's a long-term project. Let's see how we go. You know, my goal as now is to learn code, to develop more of the front end and learn how the back end's working. And also try and learn a bit more about the system ops because, you know, like Kubernetes and stuff is a very interesting technology to learn and very useful, especially with Tendermint.
+
+highlander 
+You know, and there's careers in tenderment. We're always looking for people and that company's grew very, very quickly. I'd imagine come this year possibly, you know, it's going to expand even more, especially if they're talking 200 chains connected and stuff like this. You're going to need a bigger firm, you're going to need more people. So I'm just sort of getting my education up to a level now where I can maybe get, and somewhere is an entry level. We'll just see how it goes. It's a month to month for me at the moment, you know.
+
+Let's just see how January goes with Juno and getting stuff built. This is it. It's hard for me to go like that. This is what I'm doing this year. And that goes for my old job as well. I've said that to them. I have to go month to month at the moment because I am just too busy to be going on a tour. There's too much to manage at the moment. Simple as that.
+
+Citizen Web3 
+Nice. Nice.
+
+Citizen Web3
+nice
+
+I love the realism and I love it. It's fucking it's it's it's this is what in my opinion blockchain is about is about the people and how real they are. Man, before we're like wrap up one like traditional question I kind of like to ask people is what motivates Highlander? You say you go months to months, you've been realistic, you know, but
+
+highlander
+Yeah, it's mad, isn't it? Mad.
+
+highlander
+Yeah, go on.
+
+Citizen Web3
+What what keeps you motivated? What's what's I mean, is it some books? Is that some people? Is it your kids? Is it your drums? I don't know, whatever. What keeps you motivated and going?
+
+highlander 
+Well, I'll tell you what, working from home and seeing the kids every day is something amazing that I've noticed. Although, trying not to be as lazy, I'm a bit of a keen mountain biker, see. So I tend to sit at the desk more than I should. I need to get that changed very shortly. Motivation is getting through little goals, you know, I've set.
+
+terms of building an application or something or just sent me a bit of code for a while and then just you know something works out or I figure it's something that for me when you achieve something like that I just get this buzz I'm like right okay buzz is next thing what we doing you know I mean and then it's like keep your eye on discord and if anything you can just chip in with you know and yes I suppose it's Cosmos's community it keeps me
+
+motivated, you know what I mean? You see things getting built, you see people releasing stuff and you see like, you know when the price turns around man and it starts going up, you see everybody absolutely flying about Cosmos, it's incredible. But you never see any YouTubers talk about it. It's as if like they just dismiss it man, it's freaking, you know, beyond me mate. As if, I know, I know truly like these big YouTubers are all getting paid a fortune to shill
+
+fucking Cardano or whatever, do you know what mean? that's why the cosmos is just like blowing everything out of the water. When you look at it and you see how it works, it's only a matter of time, mate, before it's in, you know, the top two.
+
+Citizen Web3
+Is there anyone you recommend out of the YouTubers? To somebody you would recommend to watch?
+
+highlander 
+I've stopped watching them, but I do like, for a trading point of view, Da Vinci was pretty good at analysing. That Martini guy's a British lad, he's alright, he's bullish all the time. Ivan is, know, Ivan is, he was banging on about Cosmos years ago and it didn't do much, but he said some shit I wasn't too happy about, he was just asking where the...
+
+where the dev community is and stuff like that and you're like, fucking hell they've been building man, have you not noticed? like, look at all the shit that's been released. It's like, know, what are you saying that for? So yeah, I even downed my estimations a bit and then, but it did, I think because Tor at Secret was on his channel, right? And Tor just was absolutely going on about IBC and going on and it was like, this is amazing, look at that. And you could see it in Ivan's face.
+
+Because he like, he slated a bit of Cosmos and he said Tor was just, and he was respected Tor but Tor's just going on about IBC and stuff and I thought that's excellent because that's getting some notice now, you know? And yeah, I think it did, it helped secret a bit but yeah, I mean, it's hard to watch YouTubers man because what the fuck did they know really man, do you know what mean?
+
+Citizen Web3
+I think this is a beautiful note for a finish. What the fuck do YouTubers know? I love it I love it, I hope for you guys, I hope seeing you more and more validate around and hope you guys grow more and more, man. So thanks for...
+
+highlander 
+Exactly man, anybody can go on YouTube.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

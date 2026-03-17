@@ -1,5 +1,3 @@
-import { logError } from 'effect/Effect';
-
 import logger from '@/logger';
 import { AddChainProps, ChainNodeType } from '@/server/tools/chains/chain-indexer';
 import fetchNamadaInfrastructure from '@/server/tools/chains/namada/get-infrastructure';
@@ -11,9 +9,11 @@ interface APIItem {
   provider: string;
 }
 
-const { logWarn } = logger('init-chains');
+const { logWarn, logError } = logger('init-chains');
 
 const ethereumRpcKey = process.env.ETHEREUM_RPC_KEY;
+const sepoliaRpcKey = process.env.SEPOLIA_RPC_KEY;
+
 
 export const ecosystemParams = [
   {
@@ -761,48 +761,48 @@ const chainParams: Record<string, AddChainProps> = {
     tags: ['Cosmos Ecosystem', 'Intents', 'MEV', 'Cross-Chain Liquidity', 'DeFi', 'Staking', 'PoS'],
   },
 
-  // 'symphony-testnet': {
-  //   rang: 5,
-  //   name: 'symphony-testnet',
-  //   prettyName: 'Symphony Testnet',
-  //   chainId: 'symphony-testnet-4',
-  //   bech32Prefix: 'symphony',
-  //   coinDecimals: 6,
-  //   coinGeckoId: '',
-  //   coinType: 118,
-  //   denom: 'MLD',
-  //   minimalDenom: 'note',
-  //   logoUrl:
-  //     'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/symphony-testnet/melody.png',
-  //   nodes: [
-  //     { type: 'grpc', url: 'grpc.symphony-testnet.citizenweb3.com' },
-  //     { type: 'rest', url: 'https://api.symphony-testnet.citizenweb3.com' },
-  //     { type: 'rpc', url: 'https://rpc.symphony-testnet.citizenweb3.com' },
-  //     { type: 'ws', url: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket' },
-  //
-  //     { type: 'grpc', url: 'symphony-testnet-grpc.crouton.digital:29290' },
-  //     { type: 'rest', url: 'https://symphony-testnet-api.crouton.digital' },
-  //     { type: 'rpc', url: 'https://symphony-testnet-rpc.crouton.digital' },
-  //     { type: 'ws', url: 'wss://symphony-testnet-rpc.crouton.digital/websocket' },
-  //
-  //     { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
-  //     { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
-  //     { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
-  //
-  //     { type: 'rest', url: 'https://symphony-api-testnet.cogwheel.zone' },
-  //     { type: 'rpc', url: 'https://symphony-rpc-testnet.cogwheel.zone' },
-  //
-  //     { type: 'rest', url: 'https://testnet-symphony-rpc.konsortech.xyz' },
-  //     { type: 'rpc', url: 'https://testnet-symphony-api.konsortech.xyz' },
-  //
-  //     { type: 'rest', url: 'https://symphony-testnet-api.kgnodes.xyz' },
-  //     { type: 'rpc', url: 'https://symphony-testnet-rpc.kgnodes.xyz' },
-  //   ],
-  //   mainRepo: 'https://github.com/Orchestra-Labs/symphony',
-  //   docs: 'https://orchestralabs.org/documentation/',
-  //   githubUrl: 'https://github.com/Orchestra-Labs',
-  //   twitterUrl: 'https://x.com/orchestra_labs',
-  // },
+  'symphony-testnet': {
+    rang: 5,
+    name: 'symphony-testnet',
+    prettyName: 'Symphony Testnet',
+    chainId: 'symphony-testnet-4',
+    bech32Prefix: 'symphony',
+    coinDecimals: 6,
+    coinGeckoId: '',
+    coinType: 118,
+    denom: 'MLD',
+    minimalDenom: 'note',
+    logoUrl:
+      'https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/symphony-testnet/melody.png',
+    nodes: [
+      { type: 'grpc', url: 'grpc.symphony-testnet.citizenweb3.com' },
+      { type: 'rest', url: 'https://api.symphony-testnet.citizenweb3.com' },
+      { type: 'rpc', url: 'https://rpc.symphony-testnet.citizenweb3.com' },
+      { type: 'ws', url: 'wss://rpc.symphony-testnet.citizenweb3.com/websocket' },
+
+      { type: 'grpc', url: 'symphony-testnet-grpc.crouton.digital:29290' },
+      { type: 'rest', url: 'https://symphony-testnet-api.crouton.digital' },
+      { type: 'rpc', url: 'https://symphony-testnet-rpc.crouton.digital' },
+      { type: 'ws', url: 'wss://symphony-testnet-rpc.crouton.digital/websocket' },
+
+      { type: 'rest', url: 'https://api-symphonyd.vinjan.xyz' },
+      { type: 'rpc', url: 'https://rpc-symphonyd.vinjan.xyz' },
+      { type: 'ws', url: 'wss://rpc-symphonyd.vinjan.xyz/websocket' },
+
+      { type: 'rest', url: 'https://symphony-api-testnet.cogwheel.zone' },
+      { type: 'rpc', url: 'https://symphony-rpc-testnet.cogwheel.zone' },
+
+      { type: 'rest', url: 'https://testnet-symphony-rpc.konsortech.xyz' },
+      { type: 'rpc', url: 'https://testnet-symphony-api.konsortech.xyz' },
+
+      { type: 'rest', url: 'https://symphony-testnet-api.kgnodes.xyz' },
+      { type: 'rpc', url: 'https://symphony-testnet-rpc.kgnodes.xyz' },
+    ],
+    mainRepo: 'https://github.com/Orchestra-Labs/symphony',
+    docs: 'https://orchestralabs.org/documentation/',
+    githubUrl: 'https://github.com/Orchestra-Labs',
+    twitterUrl: 'https://x.com/orchestra_labs',
+  },
 
   'space-pussy': {
     rang: 5,
@@ -1152,7 +1152,7 @@ const chainParams: Record<string, AddChainProps> = {
     chainId: 'MAINNET',
     bech32Prefix: '',
     coinDecimals: 18,
-    coinGeckoId: '',
+    coinGeckoId: 'aztec',
     coinType: 60,
     denom: 'AZTEC',
     minimalDenom: 'AZTEC',
@@ -1219,15 +1219,14 @@ const chainParams: Record<string, AddChainProps> = {
         type: 'rest',
         url: `https://beacon.ethereum.citizenweb3.com/${ethereumRpcKey}`,
       },
-      // {
-      //   type: 'rest',
-      //   url: `https://eth-mainnetbeacon.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
-      // },
-
       {
         type: 'rpc',
         url: `https://rpc.ethereum.citizenweb3.com/${ethereumRpcKey}`,
       },
+      // {
+      //   type: 'rest',
+      //   url: `https://eth-mainnetbeacon.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG`,
+      // },
       // {
       //   type: 'rpc',
       //   url: 'https://eth.llamarpc.com',
@@ -1286,40 +1285,40 @@ const chainParams: Record<string, AddChainProps> = {
     nodes: [
       {
         type: 'rest',
-        url: 'http://168.119.37.164:5152',
-      },
-      {
-        type: 'rest',
-        url: 'https://ethereum-sepolia.core.chainstack.com/9599780fdf3a0a2d1203b2614695f975',
+        url: `https://beacon.sepolia.citizenweb3.com/${sepoliaRpcKey}`,
       },
       {
         type: 'rpc',
-        url: 'https://sepolia.infura.io/v3/0d98a14d4886428bbe5b927b678159b3',
+        url: `https://rpc.sepolia.citizenweb3.com/${sepoliaRpcKey}`,
       },
-      {
-        type: 'rpc',
-        url: 'https://eth-sepolia.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG',
-      },
-      {
-        type: 'rpc',
-        url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
-      },
-      {
-        type: 'rpc',
-        url: 'https://rpc.ankr.com/eth_sepolia/424ac266675ed3c8a9c8bfd421722137a6eb7c9bf94c02f8701deb879704eecc',
-      },
-      {
-        type: 'rest',
-        url: 'http://168.119.37.164:8645',
-      },
-      {
-        type: 'rest',
-        url: 'https://ethereum-sepolia.core.chainstack.com/beacon/9599780fdf3a0a2d1203b2614695f975',
-      },
-      {
-        type: 'rest',
-        url: 'https://lb.drpc.org/rest/Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ/eth-beacon-chain-sepolia',
-      },
+      // {
+      //   type: 'rest',
+      //   url: 'https://ethereum-sepolia.core.chainstack.com/9599780fdf3a0a2d1203b2614695f975',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://eth-sepolia.g.alchemy.com/v2/7SGjTKF9O3zee3Lh-lAVSL7lof9AFSsG',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://nameless-palpable-borough.ethereum-sepolia.quiknode.pro/06140d1fdb46e124cf6fbbcd9bbeef2dd9a16f69',
+      // },
+      // {
+      //   type: 'rpc',
+      //   url: 'https://rpc.ankr.com/eth_sepolia/424ac266675ed3c8a9c8bfd421722137a6eb7c9bf94c02f8701deb879704eecc',
+      // },
+      // {
+      //   type: 'rest',
+      //   url: 'http://168.119.37.164:8645',
+      // },
+      // {
+      //   type: 'rest',
+      //   url: 'https://ethereum-sepolia.core.chainstack.com/beacon/9599780fdf3a0a2d1203b2614695f975',
+      // },
+      // {
+      //   type: 'rest',
+      //   url: 'https://lb.drpc.org/rest/Anw3PC7I404AqGkiXIMyYtkz8rXQJ54R8IYpEjfP07KJ/eth-beacon-chain-sepolia',
+      // },
     ],
     mainRepo: 'https://github.com/ethereum/go-ethereum',
     docs: 'https://ethereum.org/en/developers/docs/',

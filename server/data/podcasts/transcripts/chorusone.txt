@@ -1,0 +1,463 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/chorusone
+
+Episode name:
+DAOs, the Beauty of Blockchain and the Journey of a Validator with Brian Crain
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Cosmos podcast. I have with me Brian from Chorus One today. I've been waiting for this for a while. Hi Brian, welcome to the show. How are you?
+
+brian 
+Hey, thanks so much for having me. It's pleasure to be here.
+
+Citizen Web3 
+It is a pleasure to have you on. I've been, well, hunting you for some time, I guess. You're a busy man. So do you want to introduce yourself for everybody and tell everybody what you do in your own words, what you up to these days and anything else you want to add to that?
+
+brian 
+Sure, Yeah, so I'm from Switzerland originally. I kind of spent a bunch of time in my 20s, studying economics, studying some other things, was interested in technology, tried to learn some programming, but it was kind of searching for something that resonated and that made sense to me. And then in 2013, I discovered Bitcoin.
+
+And I was like really excited about that. I felt, I've always had a bit of an anti-authoritarian streak. You know, I didn't like to listen to teachers in school or parents or governments. So the idea of creating some kind of different system that's more, you know, people can do what they want without coercion, without interference.
+
+That was very exciting. And I felt like, you know, you could kind of see the potential that Bitcoin opened up. So since then, I guess it's now nine and a half years ago, I've been basically in the crypto space and done a whole bunch of different stuff, including being pretty involved in Cosmos in different ways. But I've also been a podcaster for a long time. this Epicenter podcast I started.
+
+with Sébastien Couture at the end of 2013. So I think we're now the longest running crypto podcast. was a few before us, but they've stopped. now I think we're soon 500 episodes in. And then I started a company called CourseOne, which runs staking infrastructure.
+
+and a few other things, primarily runs infrastructure through stake networks. That was about five years ago now also. yeah, I'm also on the board of the Interchain Foundation as well. So that's another thing, but yeah, I'm happy to dive into anything more in particular.
+
+Citizen Web3 
+Yes, we will, we will for sure. Don't worry. I mean, by the way, wow, kudos on 500 episodes. I mean, I think I had Sebastian on before that number was reached. not yet. Damn.
+
+brian 
+No, not yet. Not yet. We aren't there yet. We are like... I mean, it seems... I think we're maybe 470 or something. So it seems kind of close, but it's actually still like half a year or something.
+
+Citizen Web3 
+I have a first question for you though. mean, you said you gave a very good intro into what attracted you to the blockchain industry. I mean, and it's a very honest intro, right? You said, I was a bit of an antiauthoritarian back since I was a kid, you know, da-da-da-da-da, and this attracted me. What motivated you to stay in the blockchain industry? What made you stay? I 2013 is roughly, I mean, I joined before, but I mean, I remember the industry. It was not pretty, so...
+
+Citizen Web3 
+Still not pretty, what made you stay and start all those companies, whether it was Corus One or whether it was anything else? I I still want to talk about Tendermint, of course, with you, but let's start with that.
+
+brian 
+Yeah.
+
+brian
+Yeah. Yeah. I mean, what made me stay? I first of all, I think this original idea of creating a financial system that's open and peer to peer and permissionless and beyond the reach of government, being able to have currencies that are not, know, they're of programmatically managed.
+
+have things like DAOs. I think all of that stuff, have privacy for money online. All of these things, they're not really here yet, right? Or they're kind of here in some ways, but in limited ways.
+
+And so it still feels like pretty early. And at the same time, we are seeing increased censorship, AI, and governments are increasing their reach.
+
+I think rights of individuals are getting like undermined in many places, you know, whether that's in the US, in Europe, in other places, there's basically no rights, like let's say China. So I think we are seeing all of those trends and I think crypto is, to me seems like the one way out, the only way I actually really see so that human beings can have.
+
+freedom and agency. yeah, one question is like, why have I stayed? It's because we haven't accomplished the things we were set to accomplish and they feel just as important, if not more important today than back then. And I find it rewarding to work on those things. Of course, there's also the factor that
+
+brian 
+It's like an exciting industry to work in with lots of opportunities and you know, everything's new so you can create things and you can build things and that's exciting. of course at this point, also have a lot of, basically my entire career has been in this crypto industry pretty much. So I know lots of people, I know quite a lot about it. I have a lot of...
+
+you know, much more able to add value here than I would be in some other industry.
+
+Citizen Web3 
+Exciting is a perfect word for the last few days and for the last few, for the last 10 years, to be honest. I have a bit of a tricky question for you from what you said. And I must say, I did forget to warn you. I did say to every guest that I like being a bit of devil's advocate, but you know, okay, good. So how do you think, you mentioned really important things, at least
+
+brian 
+Yeah
+
+Yeah.
+
+brian 
+I like that.
+
+Citizen Web3 
+to me personally, and I'm sure to a lot of people like privacy, censorship, this is the things that really resonate with me. And you said that those things motivated you to stay. And the question is this, and this is a bit of Dale's advocate question, well, or a trickic, whatever, I think, whatever. How do you think you solved, helped to solve those things with Chorus 1 and with everything else that you did during those last nine and a half or eight and a half years, you said?
+
+How did you contribute to that? which ways? For you personally, did it solve something?
+
+Citizen Web3 
+In terms of, sorry to interrupt you, in terms of like you said, privacy, censorship, do you think that chorus one and tender mint and everything else you've been contributing since then, because those things you said attracted you to stay and those are things important to you, do you think you changed them a little bit, moved them somewhere even by a millimeter?
+
+brian 
+Yeah. Yeah, I think so. mean, I think for first of all, for the podcast, you know, I guess the main thing we do is education, right? Just like you, right? We interview people. So we have done, you know, many, many podcasts about these kinds of topics and, know, like are able to communicate those ideas and so people learn about them. of course, so that's one thing. Now I think with Tenement in Cosmos, you know, what we really did there is create
+
+kind of the tools to make creating blockchains just like way easier and way cheaper and way more efficient. And now we're seeing, you know, proliferation of blockchains in Cosmos, you know, that are, you know, because they're sovereign, I think that increases the resilience of the system, especially. And
+
+You know, one shut down, another one can be created. And of course we also seeing various blockchains started directly trying to address issues like, you know, around privacy, you know, let's say you have a Noma, a Penumbra, and you know, a whole bunch of things like that. Although of course it's still, and then of course one, you know, we are, I think running infrastructure for maybe around 40 different networks at this point. So, you know, we, you know, we can play a small role.
+
+to help like all of these different projects by, you know, making sure the network runs well, making sure governance happens properly, that, you know, it's secure. And I think that's, but yeah, at the same time, I feel like it's such an enormous challenge and such an enormous task. And it's very early and the progress is slower maybe than I think a lot of people would have hoped.
+
+And at the same time, are seeing regulators trying to enforce some kind of surveillance technology on top of blockchain. guess what we're seeing in Ethereum right now with these OFAC sanction lists and flashboards there, where they're basically censoring certain contracts, is a great example of that.
+
+brian
+I feel like, yeah, I mean, we have been able to contribute a bit and we have a lot of innovation has happened, but there's so much more to do and so much further to go. And also I think the backlash is going to increase, right? The pressure is going to increase because for one crypto is just not very popular right now.
+
+And I think the FTX disaster is going to make that worse. And then it's also very clear that in the end, governments don't like to lose control and power. And in the end, if you give more power to the individual, the direct, that just means less power for governments. And so I think that kind of clash...
+
+is something that's going to be ahead for us.
+
+Citizen Web3
+have a couple of questions for you with regards to that because it's a topic I really like. on the topic of privacy first, I just saw recently, I think it was today or yesterday, you tweeted about your bet half doing a podcast with urbit. And I think it's perfect project to mention. I mean, I'm sorry, but I was curious because not many people are involved in urbit that I know. I mean, I've been involved for a while.
+
+And I'm curious, what is your relationship with urbit? really curious for everybody who doesn't know urbit is this amazing project, but we have mentioned it many, many times that is built in personal server, I guess is the very short version. And there will be links that you can guys check out, of course, but sorry, Brian, back to the question.
+
+brian 
+that's cool. You're asking about that. didn't know you were also interested in, in it. Okay, cool. Nice. Nice. Nice. So I, yeah, I can talk happy to talk about that. So I learned about Urbit in 2017, actually doing an epicenter podcast. did an epicenter podcast with Galen about Urbit. So I've been kind of aware of it since then. And then.
+
+Citizen Web3
+Big fun. I own stars and stuff like that. All the good stuff, yes.
+
+brian 
+I liked the vision a lot. liked the idea a lot. Just maybe for briefly for the listeners who are not familiar with it. I mean, you mentioned personal server. In the end, would kind of mean I run my own server and then my applications run on my server and my data lives on my server. So there's this, which is very different from the current cloud model where, you know, Google or Facebook or AWS.
+
+The application runs there, Udata lives there. Right. So there's this different model that I think can have many benefits, but I would say the probably the primary one would be more sovereignty where people have much more control. So I've been aware of urbits for a long time, but I, you know, it seemed like the subtract thing and I was not sure if it was going to happen and going to work. And then I think around
+
+almost two years ago, I started getting a little bit more involved and then started getting quite a bit more involved. And now we have built a team at Core S1 that's focused on Urbit. And we've been actually working on building hosting infrastructure for Urbit. And so we are pretty deeply involved at this point. It's progressing pretty well.
+
+Citizen Web3
+So you do guys Hoon as well, you're right as well, Hoon applications on, no, the team on Hoon, they use the language?
+
+brian 
+Do I write through an application?
+
+brian 
+Well, so right now, not so much. Because, you know, when you're basically working on infrastructure, right, which doesn't really touch the Hoon component so much. We do have some people who know some Hoon. And I think we're looking to hire another, like, front-end engineer who may also, would be nice if they know some Hoon.
+
+And then I think in the future probably there will be more things that touch that but right now it's more I mean in the end the Urbit is you know is some Program that you have to run somewhere and You need you want to do it efficiently in a way that can kind of scale so you can like support lots of users right now every this tiny but of course we expect that it's gonna grow a lot and so we want to be able to
+
+to offer good hosting service for people to use Urbit.
+
+Citizen Web3
+That is really cool, man. And for anybody out there who might happen to know some hoon, guys, you know who to contact to get hired. You mentioned, before I mentioned Orbit, you were talking about how there is some layer of surveillance being built on top of the blockchain layer. And you mentioned Ofax and you mentioned a couple other things.
+
+Do you think that there is a little bit of our fault in that? And I don't mean human beings because we're all human beings. Of course, everything that happens is our fault. But I mean, we, as the people who started this industry, and I don't mean me you, course, but people who have been to before 2015, I I think there's a lot of times in my opinion, at least, that I see some of the infrastructure that is called Web3, but it's not really Web3. Or sometimes we...
+
+Well, we, but you know, you have projects that sell themselves as one, but the reality is that underneath the hood, there is something completely different and it's not, it's not resilient. It's not censored. It's not censorship proof. It's nothing. And we've seen a lot of that. in a sense, do you think that the greediness and human nature of kind of play the role in where the industry is today? And I'm not saying it's in a very bad place. Not at all. Not in my opinion, but it could be better. I think so. What do you think about that? Do you think that is?
+
+brian 
+Yeah.
+
+Citizen Web3 
+something we could improve on here and become better at.
+
+brian 
+Yeah, nice question. I guess two things come to my mind when you asked that. The first thing is that I think a big issue and that actually connects with the urbit topic. The big issue is that the technology stack has not really been, it's been super hard to create a decentralized application that doesn't rely on some web front end.
+
+that then becomes the central point of control and failure and a gate, basically a sort of gatekeeping functionality. So I think there's a great article for people interested in this by this guy Moxie Mullenspike, who is the guy who invented Signal.
+
+And he basically writes about like, Hey, is this web three thing? Like, is this really centralized and like, what does it look like? And then he goes through the architecture of a lot of these things. they're like, actually a lot of it depends on, you know, Infura or like some central provider where you basically calling this API and they give you this response and you're not actually, there may be the blockchain layer that's decentralized, but then there's a lot of stuff built on top that's not. And, and I think.
+
+To a large extent, that's been just a function of the technology stack and the limitation of the internet. And I think that's where it kind of, Urbit does offer an alternative because it will be much easier for somebody to create, you know, some application that then people run on their own server. And that's then the way to access these crypto use cases. And I think that way you can actually have.
+
+you can get much closer to what we want. The other thing that comes to mind is the topic of privacy. And of course we have had projects focusing on privacy for a long time. Two that come to mind is Zcash and Monero.
+
+brian 
+But of course, if you see even the functionality of these projects, it's basically like you can send tokens, right? And you can send tokens in a private way. And a lot of work goes into that. So I think what we just see is that privacy is really, really, really hard. And if you see all of these use cases, people building DAOs and DeFi and all of those things.
+
+If you add the constraint on top that, okay, because it also needs to be like privacy preserving. I think that's just so hard that it really is, it just don't think that was the viable option really. I think you had to do it this way, basically sort of, just go ahead and build it. then, and then at the same time, there are people of course focusing on the privacy and it's going to get better.
+
+And then hopefully we can add more privacy features over time. But it's concerning, you know, because at the same time right now, privacy is really, terrible. And if you're using blockchains, you have to kind of assume that maybe all your data is going to be, I mean, you almost have to assume it's going to be public or like it could be.
+
+And that's kind of scary because the information is there, people will be able to go back in time to figure things out. Governments could very easily use that to track people down. Tax compliance is really hard. It's really hard to file your taxes properly in many places. Let's say if you have every time you buy an NFT, you do staking, you make a crypto transaction, it's a taxable event.
+
+It at least depends on the jurisdiction, but it can be the case. And then to go and file this at the end of the year, it's just can be like impossible even or nightmarishly hard. So I think what you're going to have is a huge amount of crypto people who are just not finding the taxes properly, even if they may have the right intention to do so. But then if you combine that with the lack of privacy,
+
+brian 
+You know, that's a very dangerous scenario, right? Because then the governments could basically go and say, Hey, we're going to go after all these people now, you know, for tax evasion and use that as a way to kind of crack down on crypto. So that's something, for example, I'm very scared about. I think there's a high risk of that happening and I think could be really bad.
+
+Citizen Web3 
+about the most like typical privacy devil's advocate question? I'll honest with you, I don't like it, but I really want to know your opinion. So I'm going to ask it since we are on the topic of already. What's your stance on, you know, the typical, typical dilemma, dilemma, I'm not sure how to pronounce it in English, between full on privacy and
+
+especially within blockchains where it's a decentralized, like an open decentralized blockchain. And to an point where we're saying, okay, so what those people are doing, the information they are submitting can harm someone, can hurt someone. Do we, I mean, is your personal stance here, we route every transaction, no matter what's inside, no matter what's there, or if that privacy of somebody can harm someone else, even if it's subjectively, then we must.
+
+see what they do and their privacy must be removed. Do you see what I'm getting at here? Does it make any sense? I mean, I know it's a tricky one, but like, and of course, I'm not expecting a straight edge answer here. So feel free to take it abstract.
+
+brian
+Yeah.
+
+brian
+Yeah, I mean, I would say on a high level, if you give people, you know, if you give people freedom, then who knows what they're going to do with it, right? And
+
+Most people are good, right? Most people want to like help others and like create things that are beautiful and you know, create things that make life better and more convenient and more rich. And I think if you give people the tools to do that, then that's what they're going to do. And I think human history is, you know, great evidence of that. And
+
+At the same time, of course, there will be some people who will do something that's going to be, you know, like disgusting and people are going to hate and it's going to hurt other people. And that's just, that's just the, I think the unfortunate reality. And I think.
+
+Yeah. And of course, what's the alternative? can live in China. If you want the alternative, you can go live in China. Right. And then you have like social credit score and, like, I don't want to live there. Like that doesn't sound appealing to me. It may be the case. I mean, certainly one can ask like, are there ways that we can, you know, are they sort of, is there a middle ground? Right. Are there ways that you can say, okay, people have,
+
+sovereignty and freedom, but there are some mechanisms, safety mechanisms and probably there are things. But I'm not so sure. I guess I would tend more towards the side of like, we just have to accept that. you know, this is not a new...
+
+brian 
+thing at all, right? Like, I mean, let's look at something like email, right? Like anyone could just send an email to everybody else and we all think that's great, right? Like there's such a fundamental part of how human beings communicate. And well, I mean, Al-Qaeda can use emails to like tell people to go and I don't know, do what, right? So that's just the way it is. But I think if we were now
+
+to say, we're going to have some kind of safety layer so that we make sure that no emails are sent that are harmful. mean, that's a terrible idea. And I don't think it will work. Yeah. Yeah, cache is great example. Absolutely. Exactly. Cache.
+
+Citizen Web3
+Even worse, man, they can use cash. Nobody, nobody thinks about it, but they can all use cash. Just for the record, man, I'm one of those guys. Yes.
+
+brian
+Yeah, that we've relied on for such a long time and people can, hey, can buy drugs with it. They can do whatever with it, right? And, and it's been, you know, I think it's been a valuable thing to have.
+
+Citizen Web3
+be honest with you I'm the kind of person that will just for the record freedom over safety in my opinion for the simple reason that if you don't have safety you don't have well you might if you don't have freedom sorry you don't have really choose whether you have safety or not but if you have freedom at least you can choose whether to have safety or not so in my opinion it's always freedom first so I just was curious your opinion here Brian is slightly different
+
+brian 
+Totally agree.
+
+Citizen Web3
+way of the conversation. You were the CEO at Tendermint, right? If I'm not mistaken.
+
+brian 
+Yeah. Yeah, I mean... What?
+
+Citizen Web3 
+What happened? Why did you stop? mean, why did you go to be a chairman and to see if, am I mixing up or was that not the progress? Was there even a progress or are they connected, not connected? If you could help me out here.
+
+brian
+Yeah, I can talk a bit about that history. So I was like in crypto, right? So this was like 2014 and I was kind of interested in Ethereum. I was doing the podcast, I was running a meetup group in Berlin too, and trying to figure out what to do. I was at the time kind of skeptical that the...
+
+the kind of use case of crypto for like normal people would, I thought it was a far away, know, because I thought the user experience was just really hard. And there was a lot of challenges around the scalability user experience. Like I thought these things are so hard that it's going to be really hard to create compelling user experiences that people are to want to use in the near future. So
+
+In 2015, I joined this company called, it was called Ares Industries back then. It later renamed to Monax and Ares Industries was basically focused on enterprise use cases. So they were like, okay, let's work with companies that have some kind of business to business coordination problem and let's use blockchains and smart contracts to kind of, manage these workflows or manage these transactions. so.
+
+to be more efficient, transparent. And so I joined that company. And that company was using the EVM. They had written their own version of the EVM. And then because they were running these private chains, they also wanted to replace proof of work. They're like, mining doesn't make any sense if you have like 10 organizations running a chain together. So.
+
+They found Tendermint. This was in like 2014, 2015. so Ares Industries became kind of the first user of Tendermint. At the time, Tendermint was, you know, J and Tendermint white paper was out and there was a bit of code, but it was very mature and not production ready. And Ethan Buckman was working with me at Ares Industries. So he was...
+
+brian 
+he was an engineer there and then Ethan started kind of contributing to Tenement, basically getting paid by Aeros Industries to say, let's accelerate this Tenement thing, make it mature. So I kind of knew Tenement since then. I gave, when I joined Aeros Industries, that was 2015, I guess, I gave a talk at the, at the meetup I was running in Berlin about Tenement. cause I felt like, it's pretty cool. I remember Jay was like,
+
+dialing in from like San Francisco to watch the talk. And then, and then I was working for a while in this kind of enterprise use case thing. The next year, Ethan left and to join Jay full time. Right. So he became the sort of co-founder in a way of all in bits or he joined Jay's company the year afterwards. And for a bit, both of them, Aero Industries and
+
+or they had renamed the Monax at the time, think. So Monax, as well as Jane Easton, were working on this kind of enterprise use cases. And they were trying to raise VC funding, but that didn't work out. And then they started working on the Cosmos white paper. I didn't feel like Monax was going somewhere. So I was also didn't enjoy that much working with these big companies and...
+
+I, there was some other issues, so decided to leave. And then I was like, okay, what do I do now? so I was speaking with a few different teams, but of course I knew Jay and I knew Ethan well, and I knew the, I knew I was familiar with Tendement. I liked the Cosmos vision. And so I traveled to San Francisco, I think end of 2016, I knew I spent a bunch of time with Jay.
+
+and then joined them. I think at the time there was Jay, Ethan Pong was there already. And then I joined around the same time as Ethan Frey and Anton, think too. So I think it was something like this. then, yeah, then basically from like January on I was
+
+brian 
+So was like the COO, was the only non-technical person there. you know, started doing things like, I remember we didn't have like a call. There was no call, you know, it was only chat. Nobody was ever speaking with each other. So we started doing some calls and then, you know, hiring and then there was the fund rate, the Cosmos fundraiser. So, you know, like help with that and helped kind of through that year to grow the...
+
+the team, we grew from maybe five people at the start of the year to think around 40 people at the end of the year of 2017. And so was kind of there and helping. And we also opened this co-working space, blockchain co-working space in Berlin called Full Note together with the Gnosis team. So I was quite involved in that. Yeah, but then...
+
+You know, as you know, and as everyone in Cosmos, I think at this point knows, there were some issues. It was a big organizational mess. were different types of issues. think one issue was Jay didn't really trust people much. there was information was often like not accessible and Jane Ethan didn't get along so well anymore.
+
+There started to be a lot of, just a lot of dysfunctionality in the organization. And so I also felt that I wasn't really able to work that effectively anymore in it and contribute effectively. So then at the end of 2017, there was DEFCON in Cancun. And so went there and afterwards there was kind of a Cosmos retreat.
+
+in Playa del Carmen, just near there. So was mostly the team, but there was this few external people as well. including Meher Roy came as well, who was my co-host at the Epicenter podcast. So he also spent some time there at this Cosmos Retreat. And we kind of like talked then and then basically decided there to start the course one together.
+
+brian 
+And then I kept, you know, for a little bit, I was sort of continued working a bit at Tenement. And then I think I left fully in maybe February 2018 around that time. And of course with Course 1, we also first worked on... I mean, the thing was also, you you had this Cosmos white paper and in the Cosmos white paper,
+
+The network is described, right? And it's described that, there's going to be these validators and these validators are going to have this important role. They're going to check the transactions are valid. They're going to create these blocks. They're going to check the other validators blocks. You're going to vote in governance. know, they're going to have this crucial role to make sure the network functions. But when we wrote this, when this white paper was there and like we're working on this thing.
+
+there were no validators, right? That didn't exist. So there was also like a real question about, okay, now there's going to be this software, then who's like, where are these validators going to come from? Like who's going to do this? It wasn't like obvious that there would be, you know, lots of people, lots of entities that would like, would do this. Or maybe it was obvious to some people. It wasn't like obvious to me.
+
+and so we also felt like, it'd be cool to like work on this and, yeah, and be there when Cosmos launches. course, then what happened is Cosmos ended up being very delayed. It ended up taking like way longer than, everybody thought. But it also ended up, ended up taking us way longer to actually, figure out how to do this thing and run validators. Cause
+
+We didn't have the right expertise in the team and it took us a while to build that. And it was also new. There was no, you couldn't like rely on tools or experience of other people. You had to kind of figure things out from scratch. But that was basically sort of how we started. then the Cosmos was our first focus. I think that first year we were really focused.
+
+brian
+primarily on Cosmos and how we could run Cosmos Validator.
+
+Citizen Web3 
+How did the first silly question on topic of validation, how did the name chorus one come together? Why chorus one?
+
+brian 
+Yeah, I think we were, that was actually in Mexico also when we were talking about, what could be the name? And I think I was speaking with Meher about, you know, what's blockchain and what are they good for? And somehow, way I described, one way I thought about it was that, okay, blockchain you basically have.
+
+You have these different disparate individual participants that coordinate and they do something together and the blockchain facilitates that kind of coordination. And then, you know, they create something amazing together, like something greater than, than the sum of its parts. And, and that's chorus is sort of.
+
+is a little bit something like that too, right? Where you have these singular voices that can make up a chorus, you know, as a part of component of this, of a song. So that's kind of where it came from. To like represent this, yeah.
+
+Citizen Web3 
+Nice, I like that. I like that analogy. The next question that springs to mind, I think for anyone is from the moment where you launched Chorus 1 and until today becoming, I would say in the post industry, you're like top five probably, right? Top 10. I'm not sure what the TVL is, which validator is, but I'm sure you guys are like...
+
+from knowing the industry more or less. I think you're like top five or something like that. Has the journey that been what you imagined and expected it to be for a validator, is that or has it not been what you have expected it to be?
+
+brian 
+Yeah, I don't know. It's been a journey. You know, in some ways, in some ways it has... Like, I looked back and like some dick.
+
+Citizen Web3
+Haha.
+
+brian 
+we had about, this is course one, this is what we're doing from like 2018. And it's pretty accurate. You know, it pretty, it actually pretty much reflects how a lot of things have turned out. but at the same time, our path has not been straight forward at all, I would say. Cause we also just did a lot of other things, you know, besides running validators, we
+
+We started a lot of other types of projects and work, explored other ideas. And, and then, but we continued doing staking and validation and staking validations grow and it developed very well. And, know, some of these other projects went in different directions, different things, but, we were not, I think this is, you know, if this is like one thing that we didn't do so well is we weren't focused enough.
+
+You know, we did like, we started a lot of other stuff. And I think over time we've continually tried to become more, you know, more focused, although it's still a challenge, you know, cause like people have a lot of ideas and a lot of ideas are cool. And so we're like, we should work on this. so, yeah.
+
+Citizen Web3 
+But that goes back to the freedom safety thing we just spoke about, right? Like being able to do explore your ideas and being completely focused on one thing. Isn't that about freedom of wanting to do what you want to do now?
+
+brian 
+Yeah, there's a balance, right? There's definitely like a balance there. And I think you can go too far in the direction of, okay, you're just executing on something and you focusing on that and you just try and drive that forward. Or you can be like, I'm constantly starting new stuff and you end up not getting anywhere. I would say we have on this spectrum, have urged too much on the side of exploring lots of ideas.
+
+But, you know, it's still been, you know, I can't complain. Like I think the company is doing well and I'm super happy and grateful for, you know, for the journey we've been through.
+
+Citizen Web3
+What would be the one thing you would definitely talk? I mean, let's say I'm coming to you and I'm already convinced I'm going to launch my own validator. know, I mean, we do a validate, of course, but somebody knew, you know, one of your friends comes up to you and says, Brian, I've looked at your success. We're going to become a validator as well, you know, and, you know, we already like have everything set up. have our DevOps here and we know all the talk.
+
+Citizen Web3 
+docs and all the code and blah, blah, whatever. What is your one piece of advice to them and to say either do or don't do.
+
+brian 
+Well, I guess in this scenario, I think that the important question to ask would be, know, who's like, I mean, why are you doing this? Are you doing this because I know you're just sort of a DevOps expert and love blockchain and you you enjoy it and you want to contribute in some way, you know, like, okay, that sounds, that sounds.
+
+that may be fine, right? Or maybe, right? And maybe this is like your example. You have some community, you know, and you have some brand and then it's sort of aligned and then, you know, people can stake with you and it allows you to turn it into some kind of business model. I think that can, I think that can work pretty well. And you know, we...
+
+And including we work with some, mean, for example, with ZK validator, which kind of falls into that kind of category where they're doing a lot of work, but then, you know, we help with infrastructure. But I do think it's not going to be, it's not so easy, right? To get delegations and to get to the point where it's like a viable business. And then of course you do also have to think of now you're running a validator.
+
+Now there's like chain upgrade or some issue happens, you have to deal with that. And that can be exhausting. And that can be, you know, maybe it happens in Christmas or whenever. And if people are sticking with you, they're going to expect that, you know, you respond quickly and it's up. So I do think that that's something that one just has to think about carefully, right? Cause there's, it does.
+
+It's not that easy. I think we, you know, now we have a pretty, mean, we have seen often, right? Of course one, like on call can be very tough, right? Where you basically have people who have to be basically, you know, like people on call have to go around and carry the laptop everywhere and be like able to respond to stuff going wrong at any time.
+
+brian 
+And, and then I think that becomes sort of a viable thing if you, if you divide it, if you have enough people on a sort of on-call rotation, right? So that people have, you know, a few days a month or something to do that instead of having to do that continuously. So I do think one has to think about some of these things and like, you know, does it actually make sense? of course, if you, just about learning, you could also like run a validator on a test net and it doesn't,
+
+Nobody cares if it's Yeah. But of course it's still the case that the barrier to entry is pretty low. Right? So it's easy to get started. It's easy to do something and it can be, I think a great way to get involved in a blockchain network. And then of course it also depends a little bit on the type of network, kind of how much sense it makes for a hobbyist.
+
+Let's say Ethereum was very much designed to make it easy to run as a hobbyist. And so that could be a good fit. Cosmos networks, somewhere in the middle, I guess. But yeah.
+
+Citizen Web3
+I remember launching, know, Beacher's witness nodes in 2016. And that was a lot of, a lot of fun. it's, it's a witness, Beacher's, Beacher's nodes. used to steam it nodes, Golos nodes, know, back in this is, this was a lot of fun. And back then it was the Depos didn't have slashing in it. So it didn't really care what you did, you know, like that the whole thing was somebody updated their price feeds. Somebody didn't update them, you know, and like people would
+
+brian 
+Which note?
+
+brian 
+Okay. yeah.
+
+brian 
+Bye.
+
+Citizen Web3 
+really delegate to a person just because they knew who they were. And of course that would cause a lot of trouble because like you say, there was some people who were doing it as a hobby and some people, well, everybody was doing it as a hobby, but some people took it a little bit more seriously and started from that. Well, for example, P2P, I think is a great example, right? That went from there and into Cosmos and anything else.
+
+brian
+Hmm.
+
+Citizen Web3
+I'm sure there is more examples, but anyways, last kind of block of questions quickly or last question, shall I say before the typical question that I cannot not help to ask Atom 2.0 and obviously you have an opinion as not just as a validator. I think your opinion, at least from what I would be able to imagine goes
+
+very personal because well, everything is life and personal, but when you spend, what is it? Like you said, nine years or whatever, being, you know, around one thing, not just the industry, but seeing it from the beginning. I'm talking about Tendermint here. Of course, it must be very dear to you. And I would love to hear like, if it's possible. I mean, I know I've kind of left it.
+
+towards the end, but if you want to give like you brief overview of what you think and yeah.
+
+brian
+So I did write up some tweet thread originally where I did have a whole bunch of issues with the Atom 2.0 white paper and different types of issues. I didn't like some of the economic changes.
+
+I especially disliked also having to vote on the entire white paper, know, because I felt like, some things like what are you voting on? Right? Like it's,
+
+If it's not like a concrete change and if it's just like big paper of like a lot of different stuff, it makes it kind of a challenge. Now they have motive, like, you know, we did a podcast with, Ethan and Zaki on Epicenter. did a, podcast with Sebastian, his podcast together with Jay. I had some discussions, you know, with different people about it.
+
+And they ended up making a whole bunch of modifications to it. And we, as Corus 1, we did vote in favor of it. And I would say, feel in, you know, I think on balance, I'm in favor of the Atom 2.0 thing, but like, I feel mixed about it. I still feel, for example, that
+
+It's too much stuff in there. Like some things like this interchange scheduler which seems to be like a super early like potentially interesting idea.
+
+brian 
+Like what's this point it makes to like vote on this? And I think I actually had some discussion with my wife about it at one point when I was trying to explain it to her, because she's also kind of interested in cosmos, but doesn't follow it so closely. So I trying to explain to her this thing, and then she was saying like, it sounds like it's a whole bunch of different people who've been working on stuff. And then they created this white paper to sort of like put it all together and then try to arrange it and say it's a
+
+vision, which I'm not totally sure it's really that much of a coherent vision as it's like, you know, a big list of like stuff and changes to come to Cosmos. Now, of course, it is great that we have people who are dedicated to the Cosmos Hub and to driving the Cosmos Hub forward and that they're putting the energy into this. And I think there are a lot of like nice ideas in there in particular.
+
+You know, I think it's a good idea to have more funding to do stuff with. I would have, I think, favored to just increase the community pool tax. But I don't think the current model is so bad of having like, 4 million atoms going to community pool and then approval. I kind of okay with that too. So yeah, I think.
+
+I was especially also concerned that if it gets rejected, that it would just be a huge psychological setback that a lot of people who've worked a lot on this and kind of committed and want to have the Cosmos Hub succeed, that they would just be very dejected if now this was rejected.
+
+brian 
+and then maybe we'll potentially leave or who knows. So yeah, so that's kind of some of my thoughts, but I guess our expectation is there's going to be a lot more votes coming in the future where we're actually going to talk about concrete changes and concrete issues. Yeah, so I guess it looks like it's going to pass now, although it's still...
+
+still not totally clear, right? Because I think it's actually not, the stake is, it's I guess not that, it's reasonably close.
+
+Citizen Web3
+You only need 3 % for no with Vito, right? And there are still a lot of validators that didn't vote. I mean, there's Sika, there is Paradigm, which I'm probably going to vote yes, but Sika I'm not so sure. I'm not going to speculate anyways. of course, there is still I think room for it not to pass or to pass. I think my biggest like comment that I will make just to, I know we kind of running low on time. is that...
+
+brian 
+Yeah.
+
+brian 
+Right.
+
+Citizen Web3
+Well, I can agree with what you said in your thread about voting for the whole thing was exactly my comment in the forum discussion was one of my very first comments in the thread was to say, Hey, why are we voting on the whole thing? That doesn't make any sense at all. Even if I was in favor of every aspect, I want to be able to analyze every aspect and, but yeah, I'm not saying against or in favor. We still haven't voted still processing it as well. Yeah. Big topic.
+
+Brian, quick, quick, blitz before you run away. Three projects outside of Cosmos that you're interested in. Technologically, of course.
+
+brian 
+Okay, three projects outside of Cosmos that I'm interested in. mean, definitely Urbit would be one of them.
+
+Citizen Web3 
+Yay.
+
+Citizen Web3
+You're opening Koen Gekka aren't you? This is what I do when somebody asks me this. This is what I do when somebody asks me this. I'm like, I don't remember any of them. What projects?
+
+brian
+Let's see... Yeah... Yeah, yeah, no, I'm opening...
+
+so I was checking if there are any other networks you know like this is a tricky question but yeah let me go to coin gecko let's see I mean
+
+Citizen Web3 
+You
+
+Citizen Web3 
+Darn. Darn.
+
+brian 
+Hmm.
+
+Citizen Web3
+It could be just orbit. Urbit is good. It's good enough for three. Come on, it's Urbit.
+
+brian 
+Yeah.
+
+brian 
+I mean, Urbit, I would say I'm pretty interested in there's a project called Oak Bar, which is kind of lost on top of Urbit related. I think that's interesting as well. They're using like CK roll-ups and there's some interesting synergies between that and Urbit. What else?
+
+Citizen Web3 
+Doesn't have to be trade, could be...
+
+brian
+Yeah, yeah, so I can't think of another one right now.
+
+Citizen Web3
+Okay, second one, two things, two things, we're going down three to one. So two things that keep you daily things, daily actions that you do that keep you motivated to keep on building and building for privacy, for lack of censorship, running chorus one, something daily, something that somebody can touch and then use as well.
+
+brian
+Yeah, I mean, I guess for me, I would say like meditation is pretty, you know, it's something that I've spent a lot of time developing in meditation practice and I think it's like a very important thing for me. So would say that that's, yeah, do that kind of first thing in the morning.
+
+Citizen Web3 
+Nice one, nice one. Last one. One person doesn't have to be in crypto doesn't have to be in blockchain. It could be GitHub. It could be medium. I don't I don't doesn't matter. It could be a book. Something that you say to people go and follow this guy or go and read his work or this girl or this this this entity or this robot this AI doesn't matter. Somebody who you recommend to follow.
+
+brian 
+I mean, the person that comes to mind right now is, I guess, the guy who's been in the news a lot, which is ZZ. I think the guy is very, very impressive. Actually, we did an epicenter podcast with him in 2018. Binance was less than a year old at the time.
+
+And this was like one of my favorite podcasts we ever did. It was one of the things I re listened to it like twice, which I never do with podcasts normally. And I was like super, super.
+
+impressed with him. And I actually recently read a few days ago, I read he has this blog post called principles where he writes about, I know how he makes decisions, how he organizes things, how, you know, how he does meetings, how, like the lot of how he thinks about, you know, all kinds of different stuff. And it's really nice read it's so I think he's, definitely someone who I have a tremendous amount of respect for.
+
+And I think that anyone can, especially if you're interested in like entrepreneurship, leadership, then I think there's a lot to learn from him.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+Nice unexpected by the way, which is actually even nicer in my opinion. Yeah, very cool. Yeah, I was it is it is definitely unexpected. You know, I would definitely imagine like, I don't know something else, but it's really cool because it's unexpected. This is the best part about it. I didn't expect anything, but I didn't expect CZ. That was like the last was nice. Nice. I really like that. Cool. Brian, thank you very, very, very much for your time. And I know
+
+brian 
+unexpected yeah
+
+brian
+Yeah, I'm curious what you expected. Yeah, okay, okay. Yeah, no, no, it's easy.
+
+Citizen Web3 
+People are super busy these days and it's very hard to catch an hour of your time to do this. Thank you very much and hopefully, guys, we will catch up more in the future.
+
+brian 
+No, thanks so much, it was a really pleasure to be on. I really enjoyed it. I really enjoyed our conversation and happy to come any time again. It was really nice. Thanks so much for the work you're doing.
+
+Citizen Web3 
+Thanks. Bye everyone. 
+
+Outro:
+This content was created, by the Citizen Cosmos validator, if you enjoyed it, please support us by delegating to Citizen Cosmos and help us to create more educational content.
+

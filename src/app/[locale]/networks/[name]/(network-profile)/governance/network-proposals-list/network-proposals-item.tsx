@@ -1,4 +1,4 @@
-import { Chain, Proposal, ProposalStatus } from '@prisma/client';
+import { Chain, ProposalStatus } from '@prisma/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
@@ -8,9 +8,10 @@ import BaseTableCell from '@/components/common/table/base-table-cell';
 import icons from '@/components/icons';
 import Tooltip from '@/components/common/tooltip';
 import { parseMessage } from '@/utils/parse-proposal-message';
+import { ProposalListItem } from '@/services/proposal-service';
 
 interface OwnProps {
-  proposal: Proposal;
+  proposal: ProposalListItem;
   chain: Chain | null;
 }
 

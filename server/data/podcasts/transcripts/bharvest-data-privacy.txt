@@ -1,0 +1,199 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/bharvest-data-privacy
+
+Episode name: 
+Data Privacy, web3 and risk managment with Lee Hyung Yeon
+
+Anna 
+hey it's citizen cosmos we are serge and anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community join us if you are curious how dreams and ambitions become code 
+
+Citizen Web3
+hey and we have Hyung the ceo of be harvest validator with us today he's probably i would say one of the most successful validators in the cosmos hub and probably one of the most active community members but i would like you to introduce yourself tell your story how did you start cosmos your background anything you would like to share 
+
+Hyung
+thank you i'm hyung from bee harvest we started to participate on cosmos from summer in 2018 and we started with participating on testnet we have been participating almost like a two-year as now and we are very thrilled and happy with the quality of the software and richness of the ecosystem many good players inside the ecosystem so we are really happy to be a part of this big network and ecosystem 
+
+Citizen Web3
+but would you participate in a game of stakes or did you start validating after the game of steaks already 
+
+Hyung
+there was quite before the game of steak so when we are participating i think the validators in testnet was like 10 15 at that time so at that time we are having a great time with fobo and figments kind of old names inside also and we learned a lot from them so well we are really grateful for learning many different things from such old names 
+
+Citizen Web3
+right now you mentioned like some of the big guys but you're currently is probably one of the biggest as well so did you plan to become so successful or did it just happen suddenly and you didn't expect it 
+
+Hyung
+i'm not sure we are one of the biggest one but i think i can agree that we are the one of the loudest one in different channels and different forum and discussions so i think that's what made us so i think very strong opinions and participating in discussions and such kind of activities also we're having a lot of activities on technological sites too so we are participating finding bugs also like contributing new functionalities on tendermint cosmos sdk and participating other networks based on cosmos so that kind of participation makes us one of the biggest names in cosmos 
+
+Citizen Web3
+definitely you talked about participation on the forums i see a lot from you especially conversation in regards to governance and economics and it's obviously that you understand what you talk about it's great to see somebody who has such a different view yet you always manage to prove it with data or with something else what attracts you more economics or governance 
+
+Hyung
+i think that's uh cannot be separated because you know all the people is moved by incentives so governance is how to control the incentives so that's the rule of incentive that's the governance we need to understand both sides so that we can make better rules and governance and i have a different kind of experience i was a trader in financial field and also i was a risk manager so when you risk managing your risk you need to think about risk governance risk governance is that you need to make a rule for every trader so that they cannot exceed their limits and this kind of governance structure will make the network safe so that's traders are thinking about incentives and risk managers thinking about controlling the incentives i think in top level those two kind of thing is relevant to incentives which is economics and one side governance so governance is for make the network safe and incentive is to make the network active 
+
+Citizen Web3
+100% 
+
+Anna
+you mentioned that you have risk management background is that help you in blockchain fields 
+
+Hyung
+yeah yeah there's a lot of common there because risk managers are one of the most conservative persons in financial institution right because they always say no right and in blockchain when you have a lot of security developers they are most conservative persons in i.t world too so they don't like any data on the internet they want to save everything so i think these two kind of characteristic is having a lot of common so our my developed characteristic is really fitting well in this blockchain world 
+
+Anna
+yeah so can i ask some controversial question how do you think what is the risk level in blockchain industry now is it high or low or you think about it in some different way 
+
+Hyung
+i think currently risk is very high because we are building really fast and we are building new things very fast and we are innovating really fast without enough testing or building more strongly several people build a blockchain right so we have like less than 10 people team build a blockchain like tendermint and cosmos sdk it's same too so we need a lot of long period of testing and debugging before using it to the main net so in that sense cosmos has a good two years of testing right that's a very conservative approach but different kind of blockchains they just do a mainnet without enough testing so in that sense i think relatively other blockchains are more riskier than cosmos 
+
+Anna
+makes sense yeah and how you choose cosmos as the blockchain you want to deal with 
+
+Hyung
+or frankly i think that financial industry is going down so the financial industry is not the one i want to be in in 21st century so i was figuring out different kinds of things like machine learnings and big data management so in financial field i used to apply those technology to build my own algorithm this kind of way i found out the blockchain and crypto economy at first i was not a hardcore developer at the moment so i thought i had not enough technology background to get into this industry but i found out that all the technologies are very new even languages are very new so in korea gulen is still very new and worse it's almost like nothing so that maybe i can learn now then maybe i can catch up the technology quite well still i will have some competence so that was what i thought in two years ago but and now i see all the competing companies in korea or they're still behind us so like if you have tendering and cosmos in your hand or you are still in very front line we are very satisfied with uh status right now 
+
+Anna
+you mentioned crypto economics or crypto economy i know that you have some economics background as well economics education do you think that there are a lot of differences between classic economic and crypto economy is that something different or not 
+
+Hyung
+i think finance is not what people make it's already made inside our dna so environmental difference is there but the in basic i think it's the same incentives and rules those kind of things are very similar but i think the background of people is really different so in financial field they are not engineers they are mba graduated or some but in this blockchain field most of the players are hardcore engineers so that makes economy different because people think differently people more think like a engineer so that's why the market is different i think 
+
+Citizen Web3
+as a risk manager do you think that with the team that i work with now one of our main fields of research is what we call cryptonomics because we think it's the most fascinating thing i would love to know your opinion as a risk manager do you think that the development of cryptonomics has a higher risk because it's decentralized and has more opinions or does decentralization and more opinions help it to evolve over time in regular economics we have a centralized institution that educates people on on all the laws of economics and usually people undergo you know like sometimes three five year levels of study in economics in blockchain we see a lot of people who study economics by themselves so in that sense does decentralization increase the risk of this economic failure or does decentralization actually help to get more opinions and to improve economics in general 
+
+Hyung
+yeah yeah with blockchain technology we can imagine something different which is not possible in traditional finance in that sense we can make a lot of different kind of innovations but in risk sense i think still objectively when i see objectively still traditional finance is much more safer than blockchain world not because of its age but also because of its connectivity and the engineering of program because it it's automatically connect all the things and the financial institution does not do it because they want to control the risk but in this world we don't control by any authority so we just connect everything it seems nice when you listen but when you use it as a real protocol for real life then you will think differently so i think innovations are there but in risk management side this industry should care more about the conservative approach to prevent systemic failure 
+
+Citizen Web3
+yeah one strange question do you still trade now are you still trading by yourself 
+
+Hyung
+no you know that is one of the most exhausted you know work in the world i just decided to fly away from it so we actually tried to cash out our operational cashes but it's not trading it's more like fx exchange some kind of thing 
+
+Citizen Web3
+okay
+
+Citizen Web3
+on your github we found a web3 repository so what are your thoughts what is web3 for you personally 
+
+Hyung
+so do you say about web3 or web3 foundation 
+
+Citizen Web3
+well the word web 3 is either in web3 web3 foundation i just want to hear your description of how you see web3 what it is in the broader sense is it like a new kind of internet is it just a different step after web 2 what do you think your personal thoughts 
+
+Hyung
+yeah okay so when the facebook uh launched libra actually they didn't launch yet but when they announced it my feeling was quite different from most of others in blockchain area i think that it will influence a lot in our global economy mostly to poor countries with less infrastructure the blockchain and combined with web3 technology will give freedom to such people who does not have any infrastructure to participate in economic activity i think that is the most important aspect of web3 
+
+Citizen Web3
+what other chains does be i think uh you're interested in polka dot as well right am i correct is bee harvest 
+
+Hyung
+yeah we are trying to participate more on polka dot actually we had a grant to build some functionality on substrate so we are almost finished as now that's just one small step to approach to this big giant repository because you know the substrate is like five times bigger than tendermint and cosmos sdk i mean in complexity view it's really complex so we need a time to learn its structure and the developing culture is different too so we want to be used to this community so we are studying to participating as now yeah 
+
+Citizen Web3
+Hmm you said it's more complicated is that a good thing or is that a bad thing 
+
+Hyung
+Mmm i think one of the reasons is based on the difference in language the rust language makes developers building more complicated and also the organization characteristic will be different tendermint and cosmos sdk developers are really like to make it neat and small and understandable instead in parity they used to build on it so they build differently so i think those two kind of difference makes the complexity but as a participator this is quite a challenge for us to understand and manage the complexity 
+
+Citizen Web3
+do you think that we go on the market right now there are some people saying that oh my god polka dot is going to kill cosmos or somebody else is saying oh my god cosmos is gonna kill polkadot do you think they are competitors or do you think this is two projects that actually help the evolution of blockchain and bring it to the next level 
+
+Hyung
+i think the language lost is having a relative strength in our security in a long sense i think tendermint team wants to build a tendermint also in rust to have a better security so i think their approach about building blockchain in rust is quite meaningful and i admire its direction it's a meaningful step to build such kind of complex blockchain in rust so i think that kind of approach will benefit both of the blockchain because what we need to do is making the pie bigger not competing each other so i think that will help each other 
+
+Citizen Web3
+exactly i agree with you definitely i think the more projects we have that connect things obviously the better it becomes back to cosmos you said been from 2018 in your opinion so far has the development of cosmos can you say it was successful or do you think there is more some things to improve 
+
+Hyung
+oh that's a 200 percent successful tendermint wants to make a multi-chain network right then the package should be easy to use easy to understand and easy to expand the functionalities and in that sense the design and structure of the program is i think more than we can imagine so it's perfect if you compare different kinds of blockchain software you cannot do it you i really don't want to fork other software to build my blockchain this is it you don't have any choice so in that sense it's a very big success 
+
+Citizen Web3
+what is the one module of cosmos and tendermint that you say needs a lot of improvement maybe the governance module or maybe i don't know anything that you can think of something that needs improvement in your opinion like strong improvement 
+
+Hyung
+okay i think i am waiting for this question so uh we are currently working on data privacy functionality on cosmos so in blockchain blockchain is about security but most blockchain does not have any security feature do you know what i mean so everything is open right and we have like privacy or feature like general knowledge or something like that but it is not privacy it's anonymity and anonymity and privacy is different because in as a privacy we want to make the data secret but we want to open to friends or service providers but general knowledge cannot do it general knowledge just hide everything so selective privacy control is what we want to build in cosmos and we are really working hard on researching on that so we will have this announced very soon i think this is one of the most important feature that all the the trend of gdpr and all the regulations all the big platform companies like abusing users data facebook google microsoft hacking and data leach all the problems can be solved with this blockchain but very few teams are trying to solve this problem so i think it is one of the important thing for the real world to utilize blockchain technology 
+
+Citizen Web3
+that sounds very exciting because for example in our own project we specify that we would like one of the things we think is missing is definitely privacy for example like you say zk proves first of all it's more about anonymity second it's really expensive when you trying to build a very long tree using zk so right now mimblewimble it's not tested we don't know what's going to happen so i'll be very excited to see i do have one question you mentioned gdpr there and do you think that as blockchain users or blockchain developers while independent of the big world and we build everything by ourselves do you think we have to comply with gdpr guidelines or we have to make our own or we just don't care about or how do you think in that direction 
+
+Hyung
+definitely gdpr is i think will be a prime rule not only for private blockchain but also for public blockchain in longer term because gdpr is still not completed yet it's continuously improving and in other continent there's no regulation yet so in korea it's like we just want to copy some of the gdpr but it's very limited approach yet so i think it will take like less than like five years to see the whole picture of gdpr so in the future maybe regulators will understand about blockchain more and then they will make even public blockchain have some responsibility for data of clients users if the technology already solved the problem i think the regulation will be not a big burden for project manager but if the technology opens everything then the protocol needs to be fixed 
+
+Citizen Web3
+yeah definitely it's a big question i think and um a lot of times i see a lot of people ask maybe we need to make something new maybe we use that so it's a very complicated process do you have any etas like maybe dates for when you're gonna publish your work regarding what you're doing with privacy or is it still very early maybe this summer or in this year or maybe next year 
+
+Hyung
+yeah this summer i think we will have the full documentation about how we implement this feature we are currently building inside our team 
+
+Citizen Web3
+it's exciting very excited for that okay back to the harvest validator where is the name coming from the harvest i just thought about it what does it mean bee harvest blockchain harvest or is it block harvest 
+
+Hyung
+so one of the incubator invested in our company and we have a siblings of companies which is called bee roots and bee seeds maybe you can understand the context plant the seed and the root is coming up and then we harvest so the validators harvest the rewards right that's the right context for us so that's why we build we name our team yeah be harvest 
+
+Citizen Web3
+in terms of the validator business itself i mean obviously you mentioned that you work with substrate in your research with substrate you mentioned that you doing some work in terms of privacy for cosmos what plans you have other for be harvest are you gonna look for other chains are you gonna make it a real only proof of steak or just your plans 
+
+Hyung
+yeah so we are currently trying to have a connection to government or like hospitals and military institutions and big corporations in korea they all have quite a high demands on blockchain technology but in korea most famous platforms are eos hyper retro those two are the most famous one i cannot see any team applying like this kind of third generation blockchain like tendermint or hot stuff nobody is utilizing it as now so we want to introduce this new technology to governors and be cooperation managers so that they can understand the ability and also the potential of this technology so that we can persuade them to use this new technology so i think that approach is one of the biggest business model for us in the future 
+
+Citizen Web3
+you say that you're trying to speak with different institutions how do they take it did you have anyone who has said yes i'm interested tell me more or does everybody just like oh my god no no no i don't want to hear that what's the feedback that you're getting from these institutions that you speak to 
+
+Hyung
+so cosmos is mostly famous ibc not for the tendermint or cosmos sdk but i think ibc can be employed to any blockchain cosmos is not a special thing for ibc ibc is a multi-chain connection right ibc can be deployed in polkadot it can connect to cosmos so it's not blockchain related all blockchain can be connected by ibc it's a higher level it's not about cosmos about cosmos it's about modularity and easy to understand and expand the feature and all the history of testing and many hundreds of projects are using this blockchain and nobody found any critical problems so this kind of thing is the advantage of cosmos we are trying to make them understand this feature and that's the surprise for them they think about ibc but they don't know much about the structure of this program and stability of this program that much and all the other third generation consensus algorithm is really similar to tendermint so they didn't know it this is the ancestor of all other blockchains 
+
+Citizen Web3
+interesting and talking about blockchain in general obviously you research other blockchains apart from this is there any projects in the blockchain space not cosmos let's forget about cosmos for a second and not polka dot that you think are interesting that surprised you you saw and you think and you thought oh that's interesting is there anything like this in the past year 
+
+Hyung
+it connects to our recent business model data privacy we researched different kinds of network enigma new cipher washi slabs we are quite surprised that new cypher has the skill the right skill to apply to the blockchain for data privacy so and we are surprised that this technology is quite new the papers are printed in like 2010 15 something like that and they come all the technology in one module and those technologies are coming from different kinds of technical papers in cryptography science the combining all the technology into one module this is the biggest step for the older global population for all the users so i think that's very important what i surprised in blockchain world is that it's free to see its open sources and we can utilize it without any cost that's amazing thing in blockchain 
+
+Citizen Web3
+i met i think mike isn't michael from new cipher in 2017 in winter and i was very impressed he was he's one of the core developers and he was very interesting guy to speak to and i can't say i'm very excited about enigma i don't know why but uh i think new news cipher is yeah very interesting one strange question for you that is not to do with blockchain if there was no blockchain today or you know i don't know why what would you do apart from trading of course because obviously you're a risk manager and x trader what else would you do if there was no trading and no blockchain it's a terrible world no blockchain 
+
+Hyung
+i think i would be in the big data industry analyzing big data and i think in that sense also if you want to utilize the big data from private data then you need to care about security too so you need to look into the gdpr i will maybe front blockchain again there you know all the big data companies and machine learning companies they want to utilize personal data but without gdpr they cannot if you want to utilize the gdpr 100 you need to use the blockchain and cryptographic uh technology so i think i would be working in those industry but i will meet blockchain again there 
+
+Citizen Web3
+Ha ha ha that's a good answer i like that 
+
+Hyung
+blockchain is everywhere in fourth generation right so all the cursors you meet blockchain 
+
+Citizen Web3
+absolutely i like their answer
+
+Anna
+you know the strange question a lot of people think that g5 and blockchain and web3 are very close to each other technologies and one technology is helping to another what do you think about it 
+
+Hyung
+um our team is quite researching on kosum wasm and how we can make users easy and also secure to use blockchain technology on web ui and it's really difficult because there is a lot of vulnerability for users to be hacked or attacked or fished by manipulator so those combination is great for the technology but it gives us a lot of challenge to make it easy and safe easy and safe is really difficult there's a lot of things we should do like metamask and all the defy stuff it's just beginning we need to build more safer environment for all the users like our moms and dads can safely use the software without worrying too much 
+
+Anna
+yeah thank you 
+
+Citizen Web3
+i think it's great to that people care about security and understand that just like you said i really like it you said that in terms of risk management we need to test test test test weight give it more time instead of just jumping because i've seen a lot of projects and not just in blockchain and real well the world before blockchain any blockchain where they do things without thinking sometimes not even testing just not thinking and doing and then obviously sometimes it works for a little bit and then it only affects the user at the end where the user is the one who suffers so it's really i think great to hear that you um care about those things and that you guys are working in that field 
+
+Hyung
+yeah yeah great conversation yeah 
+
+Citizen Web3
+thanks for your time thanks a lot and it was really uh great again like i want to say that we've been recording some of the validators and some guys from tendermint and every time i get really surprised that the people we speak to aren't don't just have a technological background they have much more and they understand how to bring that big picture together and it's really cool that we have more people like you guys really thank you for that 
+
+Hyung
+i will listen to all the episodes too are we really interested thank you for invitations 
+
+Citizen Web3
+thanks thanks 
+
+Anna
+thank you
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

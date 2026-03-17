@@ -1,6 +1,7 @@
 import db from '@/db';
 import logger from '@/logger';
 import getL1ContractAddresses from '@/server/tools/chains/aztec/utils/get-l1-contract-addresses';
+import { aztecMainnet, aztecTestnet } from '@/server/tools/chains/aztec/utils/contracts/l1-contracts';
 import { getChainParams } from '@/server/tools/chains/params';
 
 const { logInfo, logError } = logger('update-aztec-l1-contracts');
@@ -38,8 +39,15 @@ const updateAztecL1Contracts = async () => {
         continue;
       }
 
-      // Store as JSON string
-      const contractsJson = JSON.stringify(contractAddresses);
+      const hardcodedContracts = chainName === 'aztec' ? aztecMainnet : aztecTestnet;
+      const enrichedAddresses = {
+        ...contractAddresses,
+        stakingRegistryAddress: hardcodedContracts.stakingRegistryAddress,
+      };
+
+      delete (enrichedAddresses as any).tokenAddress;
+
+      const contractsJson = JSON.stringify(enrichedAddresses);
 
       await db.chainParams.update({
         where: { id: dbChain.params.id },

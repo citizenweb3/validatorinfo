@@ -1,0 +1,451 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/vladcostea
+
+Episode name:
+Cost of Education, Unbanking the Banked and One Coin to Rule Them All with Vlad Costea
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast. Today, have Vlad Kostya with me, the Bitcoin Takeover Podcast's host and founder. Vlad, hi. Welcome to the show.
+
+Vlad 
+Hi, it's really good to be here.
+
+Citizen Web3
+Yeah, man. Nice to see you. You are the first Bitcoin Maxi I have on the show for four and half years. I'm really, really, really glad to finally hear that side of the opinion. But first thing is first, can I please ask you, I I introduced you as a podcast host, but can I please for myself or the listeners ask you to introduce yourself? Tell us what you do in Web3. How did you get here and anything else you want us to know about you?
+
+Vlad 
+Hi, so I am Vlad. I'm the host of the Bitcoin Takeover podcast. I have been doing this for five and a half years and it's a lot of fun. I'm branching out into other stuff these days. So I try to do interviews not only about Bitcoin or Bitcoin per se, but also technologies that can come into Bitcoin. And for me, it's fascinating.
+
+And what else can I say? I also created the free open source BTCTKVR magazines. You can find them on the Bitcoin Takeover website, which is BTCTKVR.com. I bought that domain just for making it convenient. And what else? For Web Free, you mentioned... Well, if you want to see my collection of Bitcoin NFTs, which were inscribed as ordinal inscriptions, but also existed before as counterparty assets.
+
+Then you can go to btcheads.com and you can see these play cards that I created with various famous Bitcoiners and you can do whatever. I don't know. Maybe you can look at them. You can download the JPEG. You can buy the counterparty token if you want. There are a bunch of dispensers. It's a pretty fun project because basically I created like 100 or 1000 of each and then I gave them away to community members. So a bunch of them are selling them now or they're
+
+giving them away or showing them various expos. I think it's a lot of fun.
+
+Citizen Web3
+counterparty man that was a blast from the past right now for me I was like that was a long time ago for me but it
+
+Vlad
+Yeah, for everyone else listening, that was the OG Ethereum. It came out two years before Ethereum and it had this feature to create tokens. In the beginning, I think the goal behind it was to create these decentralized companies that issue shares and can pay dividends to holders. But in the end, I think it was rare prepays, spells of Genesis, fake rares, Bitcoin heads and all of these collections that
+
+prevailed over the other use cases because it's more fun.
+
+Citizen Web3 
+What was the ticker XX something was within X, right? The ticker was XCP. Damn, I was gonna have XX something, but I was like, what was it? Man, this is cool. I mean, when I say Web3, I guess that, you maybe coming from the Bitcoin world, like, I don't know if it's, you know, you guys divide like Bitcoin and Web3. And when I say you guys, I'm sorry to put you like stigmatically there, but I don't mean it like on purpose. It's just, you know, for the sake of the question. But,
+
+Vlad
+XCP.
+
+Citizen Web3
+I guess when I say with trees, how did you get attracted in general to, you know, to cryptocurrency, to Bitcoin? What started the journey? Was it the Bitcoin white paper, somebody telling you? mean, was it some values that attracted you to that?
+
+Vlad 
+it's funny because the first time I heard about Bitcoin it was on a meme page. So if you are on 9gag, sometimes you find some memes which reference stuff that's interesting. So I saw back in 2013 this meme about Bitcoin. It was, I guess, from Cyanide and Happiness. It's this series that has been going for a few years online.
+
+And it was this comic strip that displayed a burglar who was coming to a normal citizen saying, give me all your money. And the citizen said, I don't have any money. I just have Bitcoin. And then the burglar gave him a few dollars and said, you need this. I'm sorry. So that was the joke about it. And it was a bunch of people making fun of Bitcoin. But that's when I looked into it and I searched. I did, you know, a 10 minute Google search of Bitcoin.
+
+Citizen Web3
+You
+
+Vlad 
+And then I said to myself, this is such a stupid idea. I don't see any universe where this is going to work. It's going to get banned by the government. Why would anyone want to use this? They say so at the time, the narrative for Bitcoin was banking the unbanked. That was the way in which they were promoting it. And I was thinking, you know, I'm not unbanked. So this is not for me. Why should I care?
+
+Citizen Web3 
+Hahaha!
+
+Citizen Web3 
+You
+
+Vlad 
+But at the same time, you know, I dismissed it in this 10 minute research that I did, but it's been on the back of my mind because I've seen it on the news. Then the next year I've seen news about the price crashing and the bear market. And I was thinking to myself, you know, I'm such a genius because I didn't buy and I was right. And then in 2015, I was an exchange student in Paris and they asked us.
+
+Citizen Web3
+You
+
+Vlad 
+as a group presentation, it was this class about advocacy for innovation. And my group was assigned to make a presentation about Bitcoin and blockchain. And it was mind blowing, you know, to have this university professor telling you, you know, you should do a presentation about this. So we did this stupid PowerPoint, which basically was information that you could find on the Bitcoin Wikipedia page about what a blockchain is. And
+
+Citizen Web3
+Ironic.
+
+Vlad 
+Still I looked into it, I saw it was like free, no it was 400 something dollars per Bitcoin and I still didn't buy because I thought it was too expensive. So the next year I came back and I said to myself, okay I have some savings, I want to buy some Bitcoin, let's buy Bitcoin. And what happened was that in January of 2016 this developer named Mike Hearn came out and said Bitcoin is a failed project, I'm quitting.
+
+And this headline went all over the place. was in Financial Times. It was in Wall Street Journal. And I read that and I looked at the price. It was still like $600. And I said to myself, you know, I'm happy I didn't buy any last year because look, it turned out to be a bad idea. And then in the early days of 2017, so a year later, I saw that the price went back up. And I was thinking, what the fuck happened, Like,
+
+The media told me that this is a failed project. It's going down. It's going to zero. It's a Ponzi. It's whatever. And it went back to 1 ,000. So it seems like the market is disconnected from the media narrative. And that's when I took it seriously. And that's when I realized, OK, I need to buy some first of all. And then I need to understand how all of this works. Of course, I made my own mistakes along the way, meaning that I participated in bad ICOs.
+
+I did bad trades and by the end of 2017, I don't think I broke even. I think I lost more money than I actually made. But it was, I guess, the cost of education that I paid. Because afterwards, we were hit by that 2018 bear market. And when you see everything collapsing around you, you're asking yourself, okay, what's the point of all this? Why are we even here?
+
+Citizen Web3 
+Education, absolutely.
+
+Vlad
+Speculation is gone. Nobody's really making money these days. So what's the point of this? it's decentralization. So what does that even mean? How do you achieve that? So I started becoming more serious about understanding decentralization. I also started getting some jobs in the space. In the beginning, it was just writing short articles for a website that was called Crypto Globe.
+
+They're based in London and I'm really grateful that they allowed me to express my thoughts around the time. felt like... So I was basically learning by writing and I think that's a very good way to approach learning. Because at first you don't know anything but you're curious on that topic and then you have an assignment to make a summary of maybe 500, 1000 words and that's a challenge for you to look into information, distill what you understand from it.
+
+Try to make sense of what you don't understand from it and then publish an article and hope for the best because there's always someone who's gonna tell you, you you're not technically right and you could have said more about this and then you blame it on your editor and say, you know, there's someone else who read this and said it was fine. It's not really my fault.
+
+Citizen Web3 
+the intern. Man, you said so many things. I can connect to you. One of the most ones that stands right now in my mind is there was this Russian, while you were talking about the story, I remember there was this Russian website. It still exists. I think it's called Live Journal and it's like a blog.
+
+Vlad 
+Yeah, I know. It was fun.
+
+Citizen Web3
+big massive plug publication thing, but for the Russian speaking auditory. And I recently found my blog there from 2013 mentioning Devcoin. Now, I don't know if you remember such a thing as Devcoin, but this was one of those like 2013 first, wasn't an ICO. There was no ICOs back then, of course, but you know, was one of the, it was.
+
+Vlad
+Yeah, everything was proof of work.
+
+Citizen Web3 
+Yes, yes, it was supposed to be coined for the developers. I remember like, you know, shilling it on my blog. I was like, my god. But you know, you mentioned one phrase, unbanked the bank. So and today, what do you think, you know, bank then bank. So this is my question. What what what's today for you bank then bank on bank the bank?
+
+Vlad
+No bank, the unbanked.
+
+Vlad
+No, it's actually unbanking the banked because if you have a bank account and you're using Bitcoin, they're gonna shut it down. That's my experience.
+
+Citizen Web3 
+Okay, perfect.
+
+Perfect. Perfect. Perfect. Yeah, but in general, I mean, would you say, know, we need to like in your personal opinion, you would rather see more people, you know, losing their bank accounts and starting to use crypto or, know, using crypto via the banks and then the whole, you know, custodial story.
+
+Vlad
+You know, in a perfect world we can trust banks. But in the world we live in, we should not trust banks and the sooner we understand this, and I guess the smaller the amount that allows us to understand what's happening, the better. And self -custody these days is not this hard. It sounds frightening when you think about it. if I lose these 12 words, all my money is gone. But once you...
+
+understand that it's no different from any other password. It's no big deal. You should just take care of it and look into ways to back it up. Don't rely on a device on a single device like a laptop or your home computer or your phone to manage your keys. Always take it into cold storage. And by that, I mean just writing it on paper. You can also buy hardware wallets or whatever, but
+
+In my experience, they are not always friendly with the user. They have a learning curve and they're not always the most convenient. The best part is that you have something on which you press one button and you confirm the transaction, which is an extra layer of safety as compared to your mobile phone. But still, I think you're just fine running software on your computer, but keeping your keys offline.
+
+Citizen Web3 
+With Vlad on this here, would say that I'm one of these crazy people that doesn't agree with any password touching digital form. So I'm this crazy, crazy person. I had this huge, I don't know if you Vlad had, but this is a question to you, but what led me to go a little bit even maximizing security and a little bit even.
+
+At some point, obscure, I guess, was going through several hacks in my life. Have you ever had any experiences like that? Have you ever had an experience which led you to really change your security and really start rethinking how you store passwords? Because obviously when you started, you probably didn't think about those things, right?
+
+Vlad 
+I had a bad experience losing Bitcoin because of a burned SSD and that's when I learned the importance of redundancy. Like you should not rely on only one backup. You should have more of them. I was storing I guess a wallet file.
+
+Citizen Web3 
+Absolutely.
+
+Vlad 
+And it just stopped working. was toast. It wasn't starting up. There was nothing I could do about it. No way to recover. And I said, okay, I need to learn from this. I need to get better.
+
+Citizen Web3
+What was in the story that you were, you know, while you were telling your story, kind of started when you want to listen to yourself with being the host of a podcast and then you when you were telling, you told the story of how you connected with Bitcoin. But how did they to connect? How did you decide that, okay, I'm going to start a podcast and why?
+
+Vlad
+When I was writing articles, inevitably I got to the point where I had to interview people. And initially it was just sending out some written questions and waiting for someone to answer them. I wasn't sure if it's the person I was interviewing or some intern was doing the work, but still it was exciting. And then it evolved into video interviews when I moved from Crypto Globe, which is still around, to Crypto Insider, which is now defunct.
+
+I received this new assignment to do video interviews and I was very happy. I interviewed some of the people I was very much looking up to at the time, like Jameson Lopp and Jimmy Song. And it was funny to hear him say, you should spend with your credit card in hindsight. At the time I thought he was a genius in hindsight. I'm like, this guy is not for the spirit of this space, but it...
+
+It pushed me to adapt to this new medium of interacting with people from the space. It wasn't just written. I also had to do podcasts. And then there was the bear market of 2019. You know, in November and December, it was very brutal. I'm not sure if you remember or 2018. No, 2018. Sorry. November and December of 2018, they were very brutal. Like we went from seven thousand
+
+Citizen Web3
+Think 2018.
+
+Vlad 
+to 3000 in two weeks and it hurt very bad. It lowered the confidence in the entire space. Nobody was sure that they're gonna have a job in the space the next week or the next day or whatever. Nobody had any planning figured out. And at the same time, I also had my grandma who was dying and she was not in good health. And I was real, I don't know, I had this existential crisis at the time and I realized that
+
+I can't constantly wait for other people to throw at me some sort of assignment or job or whatever. And I need to start thinking about ways to become independent from employment. So I said to myself, since I'm working right now for these people, not sure if they're going to pay me. Why should I not do this by myself with my own project? Because that actually makes sense. I'm going to, you know, reap the rewards.
+
+all for myself, if there's any. If there's nothing, it's fine. So I started doing the Bitcoin Takeover podcast in January of 2019. At the time, I was only making plans. I came to this idea that I want to set myself apart from the rest of the shows by having seasons. And the way in which I structured seasons was to have 10 episodes and a bonus one.
+
+like a hidden track on the 1990s albums which I used to enjoy. So I recorded 10 interviews in January and then I published them in February and that's how I started. And then I kept going. I got other jobs. I wrote for Bitcoin magazine. They didn't pay too well but I was feeling like I'm important in the space because I write for Bitcoin magazine. And it was interesting. It was an interesting journey. I wasn't fully
+
+How should I put it? I wasn't fully on board with my own project. It was still a side project compared to others that I was doing until the pandemic hit. And then in February of 2020, I decided, okay, I've been doing this for one year. I think it's moderately successful. I should keep going. And that's when I pushed a hundred percent. And I said to myself, this, this is how I should go forward from now on. Four years later, it was a pretty good idea.
+
+Vlad 
+I'm happy I didn't go to coin desk or something and say, hey guys, can you give me a job to write? Because I could. After Bitcoin magazine, I had a lot of opportunities with decrypt, with what's the other one? BTC times and a bunch of others.
+
+Citizen Web3 
+It's interesting to note, you know, I have spoken, well, I've been in this industry for almost 10 years working and, you know, I've spoken over the last four and a half years to numerous people from the industry. And I have noticed a very big correlation of creators becoming founders. I myself as one, your story correlates to that. And I'm talking about founders. mean, the Talek story correlates to that, for example, you know, and
+
+a lot of other people in the industry. don't know how much in the Bitcoin space because I guess Bitcoin is, well, no, it has a lot of side projects and I can, I don't know if it's the same because I'm not so much deep in the Bitcoin ecosystem. But in general, in cryptocurrency, think creators becoming founders is a very, very, very, very, very big trend. And why do you think it is? Why do you think, is it something that, you know,
+
+comes from, I don't know, creators, I guess talking from my own perspective, know, I want to prove something to myself, I want to share something with the world. So I guess finding something and doing it without other people, also something that drove me, I don't know if that drove you, I don't know if you agree with that statement that in cryptocurrency, lot of creators become founders.
+
+Vlad
+So can you make a shorter version of the question so I understand what I should reply?
+
+Citizen Web3 
+Yeah, yeah, yeah, yeah, of course. It wasn't so much a question. was more of a, like, you know, while you were telling your story and, you know, correlate, like, shifting to myself a little bit and to the other stories I heard, I noticed, and the question is for you, do you kind of, do you see the trend by talking with a lot of people as well? That in the cryptocurrency, the industry itself, a lot of creators become founders. They do this path from being a creator of content.
+
+doesn't matter writing for a magazine, doesn't matter having a podcast, doesn't matter doing something else. And then they start their own project, whether again, it's a media project or a crypto project, it doesn't matter. I don't know. So the question is to you whether or not you have also noticed it because it's something I noticed over the last five, six years.
+
+Vlad 
+I think the incentive system of Bitcoin promotes this idea of selfishness. And once you do understand that everyone acts in their best economic interest, you also understand that your bosses, the ones who employ you, are following the same mindset. And then you're saying to yourself, why do I even work for them? Why do I expect them to give me a raise or something when in fact, you know, they're trying to maximize their own profits and they probably will not.
+
+Citizen Web3
+absolutely.
+
+Vlad 
+give me what I want. So how do I get what I want? another way is to get another job or you can take the risk of going independent. And that's where you you're basically on your own. So if you're not good at what you're doing and people don't enjoy your work, you're gonna go bust. If you're pretty good and you keep getting better and you're consistent, I think the Internet is going to respect that and you're gonna get some sort of rewards.
+
+But yeah, I do agree that there a lot of founders and maybe it's in the spirit of decentralization. And it's pretty nice because every time there's a new project that gets launched, the space becomes more decentralized and you, there's this social layer to decentralization, which means that it's not only about having more network nodes or having more miners or having more computers participating in the system.
+
+Citizen Web3 
+Absolutely.
+
+Vlad 
+It's also about the amount of people who have different opinions joining. And the fact that they can all agree to be on the same network, think that's a sign that at the same time there is, you have different opinions, you have arguments, you have people fighting because they don't agree, but at the same time they do agree on some core principles. And that's how communities get built.
+
+Citizen Web3 
+The truth is born in discussion, right? There was an old quote by fuck knows who, but somebody did say that. I remember that, you know, that without discussion, you know, you cannot come to an agreement because if you don't discuss, then there is nothing to discuss. Absolutely. You know, one more thing I want to ask you, which I tend to ask people in this space a lot. And again, I'm going to start.
+
+from the example of my own, when I started Citizen Web3, which had a different name at the beginning, one of my goals was to prove to the world that anyone from anywhere can start a business that is monetized by a Web3. you know, in Web3, by a Web3. What is the goal of Vlad today? What is your personal goal with what you are doing? And I don't mean like
+
+I don't know, to have more listeners. I don't mean the goal of the project. mean, the goal of Vlad. Like, where are you heading with it? Personally.
+
+Vlad 
+Well, my goal is to change the culture because I think the way in which Bitcoin maximalism has evolved is very disconnected from the original intentions of it. And I tend to agree with the original intentions, which was if there is anything interesting, any sort of experiment in the markets that proves itself and has market demand, then bring that to Bitcoin.
+
+Right now there seems to be this culture where they say, no, Bitcoin is already perfect and we don't need to add anything and we don't want these people to use it. And on the other hand, they say that Bitcoin is for everyone. And it's a very strange paradox. And I'm trying to get people to understand on one hand that you have legit communities, not everyone who is outside of Bitcoin is a scammer.
+
+You have people who desire some sort of features and they do play with tokens. They do play with metaverse or whatever. And why would you not want that to be on the more robust network that's been around for the longer time that is more decentralized as the money that is more stable on markets? It does. Maybe it doesn't go up as.
+
+Furiously as something which is new but it also during the bear market. It doesn't destroy people's savings You know, it's not as severe because it's been around for 15 years and it has a larger network effect So why would you not people to trade against that and use that network? Well, they're gonna find reasons and see this is cami. This is horrible. You don't want this We're already fine. If you can't build that on the lightning network, then it should not be built and all of these ideas
+
+And I think the goal of my podcast and the goal of my work right now is to show a different side of this industry and explain, know, for example, one of my sponsors is darkware and they build these zero knowledge proof system, which is working on Ethereum right now. But if we get the up cat soft work added, they can also do it on Bitcoin. And what are the benefits they can make some
+
+Vlad
+pretty good private transactions with good scalability and fairly low fees. Basically, instead of having this way of broadcasting transactions, which is classic and we have known in Bitcoin, you're gonna be able to verify against zero knowledge proofs. And that one is gonna bring some speed and scalability benefits. And I've even heard developers, I'm not gonna name any names because
+
+If they do want to say it out loud, they will. Otherwise, they're just cowards. But I did hear them praise this system and say, you know, it's pretty nice and it could come to Bitcoin and it could make everything more interesting. Add some new use cases that we don't have. But there is also some very strange opposition. they say, if you want to make any change to Bitcoin whatsoever, it doesn't matter what your intention is. It doesn't matter what the benefits are.
+
+You're still a scammer. And I guess I'm trying to bring my contribution to improving Bitcoin in a way that is not going to offend people. And we shouldn't be worried about offending people, but I don't know what happened.
+
+Citizen Web3
+It makes sense. I understand what you mean. And this is actually the right time probably to ask that because I was going to ask you that at the beginning and you kind of already explained it in between the lines. But you have this joke tweet, right? I think it was in July about zero out of 50. is the definition of Bitcoin maximalist? can you can you, know, jokes aside, can you define
+
+for right now. You know what? Don't define it for me. Can you define it for somebody who has just heard of the space recently and wants to understand what is a Bitcoin maxi and in your opinion why this is important for the industry?
+
+Vlad
+There are layers to this so the original meaning of the term maximalist as described by Vitalik in this article from 2014 which is called on Bitcoin maximalism It was everything that Ethereum is going to build is gonna be brought to Bitcoin on counterparty And that was the conversation around the time they were saying okay guys you're gonna spend a lot of time and effort You're gonna build your funny VM
+
+but we're just gonna take your open source code and put it on our network and we have the much better currency and we have more users and we're gonna drain you of your efforts. So this was, I think it's best summarized by this Lord of the Rings inspired meme that says one ring to rule them all. And in the case of Bitcoin maximalism in the classical sense, it's one coin to rule them all. But at the same time, there is network level,
+
+maximalism, which says that you should build everything on top of this robust layer. And from this idea, I guess, inventions like Tether, which was originally on Bitcoin and a bunch of other coins, they merged and they proved themselves on the Bitcoin network because after the 2013 bull market, we had the 2014 bear market. And then 2014, they were trying to find the justification.
+
+for Bitcoin to exist. They were saying, okay, the currency did not get the traction we expected, but we still have the blockchain and we can still use the blockchain to issue all sorts of different assets. It's software. We can make it work in this way also. So in 2014, we had this influx of different inventions to allow you to do tokens and they were calling them meta protocols. And then they had Ethereum, which was competing with a bunch of others like NXT,
+
+Master coin and Omni. No Omni became Master coin. There was another one counterparty. Bit shares also. So you had these five protocols that were competing. I'm not sure exactly what it was about Ethereum that made it successful, but a classical Bitcoin maximalist would look at Ethereum today and say, you know, Uniswap is very useful and it has a lot of volume. Stable coins are very useful and they have a lot of volume.
+
+Citizen Web3
+Bitchers. There's also bitchers.
+
+Vlad 
+And also Polymarket is very useful and they have a lot of value. So is there any way that we can bring that to Bitcoin? That's the classical Bitcoin maximalist approach. But the new one that has emerged, I guess, since 2020 and was spearheaded by minds like Michael Saylor and Seifadeen Amoose and Piero Schardt and Giacomo Zucco and a bunch of others is that no, you don't want that. No.
+
+Bitcoin is already perfect in the way that it's designed. This is the way that it's supposed to be used and nothing else is legit. You should discard everything else on principle. You don't even need to look into how it works or if there's any new cryptography in that or any sort of technological innovation. Just discard it because Satoshi gave us the perfect currency and the perfect network and we should just cherish this.
+
+and promote it with bullish memes and say we're best and we're winning and winning is inevitable and all of these ideas, right? But I disagree because under this mindset, which became dominant, we started seeing how other networks are adopting use cases and they're getting a lot of volume and they are getting mainstream adoption. I still think sometimes about how
+
+All of this NFT mania happened on Ethereum and it could have happened on Bitcoin because that was where the first NFTs were created. They were not even called NFTs at the time. So this could have been the case for Bitcoin, but we missed that train. It was fashionable for a while to trade these tokenized JPEGs. And at one point, I think even the old projects that were created on Bitcoin became fashionable because of Ethereum.
+
+because Ethereum established this market and because of this we also got the Ordinals which I think is the single most influential addition to Bitcoin that we have had in the last seven years maybe since Segwit. It's a big deal and the biggest deal about it is that it requires no permission from anyone around the world. It was added just like that.
+
+Vlad 
+Someone said, okay, you run the software and you can do this.
+
+And on top of that, people figured out how to do zero knowledge proofs, how to do other types of verifications, how to build other layer twos using Gordon rules and it's huge.
+
+Citizen Web3 
+Do you think or not rather do you think but don't Bitcoin maximalists doesn't matter of which type right like it doesn't matter if you're an extreme Bitcoin maximalist like you described the person who doesn't believe in progress or like yourself who a person who does believe in progress who says okay let's go but regardless of that I have this feeling internally which
+
+is something goes something like this, like it feels that if we as an industry and industry, I'm say Web3, you know, like, but whatever, know, Bitcoin, blockchain, the whole shebang, and put our belief in one system, in only one thing, you know, let alone the one religion argument, let's keep that aside. The biggest fear that I have that can come from that is that
+
+then this industry, this financial world that we have created to abandon the previous one will just develop in the same way because the wealth will be concentrated in those same five, six, know, I mean, how many people hold over 5 ,000 Bitcoins, right? Or over 10 ,000 Bitcoins, right? So it's a rhetorical question, of course, but, you know, everybody can go and see, but it's not many. And the point is, that at this stage, you know, if this is how it develops, it feels
+
+It's not a matter of, I didn't get it. It's not enough. No, it's not like that. It's about, we have seen in the traditional financial world what has happened when wealth gets concentrated over generations in, you know, very few beneficiaries. So the question is like this, because it's again, it was a long statement. So the question is like this. Do you think that
+
+maximalism can once again lead to the same mistakes, even though right now we have a blockchain which is accountable, verifiable, blah, blah, blah, blah, blah, But just that part. yeah, this is kind of the class. I know it's kind of all over question, but just what you think about that. Sorry for not being direct.
+
+Vlad 
+Yeah, so there is this idea which caught some traction that you're going to have everything divided by 21 million coins in the future. And if you hold like 0 .1 Bitcoin today, you're going to be like Rockefeller or whatever one of the billionaires of the future because you own a significant chunk of BTC compared to someone who doesn't own any and will have to be a wage slave and
+
+Just get a hundred Satoshi's per month for doing their work and you're gonna be able to not work anymore because you're special. You're smart. Just buy more and you're smart. Don't tell someone else to buy more. Just buy more for yourself. But if someone else buys, that's also fine. Just as much as there are a lot of US dollars coming into the system, it's all good. We don't have to improve anything. Just bring more US dollars. No.
+
+What I'm trying to say right now is that even if you have this perfect world where everyone adopts one money system, which is verifiable, which maybe is going to scale, which maybe is going to be private, which is going to be ideal, you know, and you're going to say perfect. Now we have a world where the entire planet uses this one currency and the governments cannot print more. Right. And that sounds very reasonable. But then you realize how printing works. They don't have to print more Bitcoin.
+
+They can say, okay, we are a government, we have this army and we want to conquer our neighbor. And if we do conquer our neighbor, we're gonna have more resources. So how about this? You buy our bonds with your Bitcoin and we promise that we're gonna give you two Bitcoin at the end of the war, right? And then you're gonna get some insurance companies or hedge funds or whatever. And they're also gonna make bets on these bonds.
+
+And you're gonna create the exact same system that you can see in the big short with these situations that are under collateralized and they create this domino game where if one piece falls there's gonna be a lot of bigger pieces falling. So there is no actual way other than culturally.
+
+Vlad 
+to prevent the fiat system from being perpetuated even under Bitcoin standard as it's presented in the most utopian way. other utopia about the Bitcoin standard is that you're gonna have this elite class of Bitcoiners who are gonna build their own cities like citadels and live there under some sort of feudal system where the more coins you own, the better rank you're going to get, which means you're...
+
+gonna be a noble man but if you have less than one bitcoin or whatever you're gonna wash toilets. First of all nobody's going to want to wash toilets.
+
+Secondly, that only creates more single points of failure because from the point of view of an adversary, it's just one nuke away from destroying Bitcoin, basically. You don't want to have a concentration of all people going into one place having the same type of ideas. And also my understanding of Bitcoin since I discovered it was that the meaning of this mission is to make the world around you a better place.
+
+not give up on the world around you and say, you know, this place sucks. Everyone is so fiat minded. They're a bunch of idiots. I'm so smart because look at me. I discovered this on the internet and I bought it and I have a bunch of friends and we're going to move together because we're so smart and we're going to solve all of humanity's problems by moving into this organization. So I do believe that we should try to make the world around us much better. And that's how Bitcoin is going to succeed.
+
+I don't, I'm not the kind of idealist who's going to say, know, we're going to replace central banks. I don't think that's going to go away. I don't, maybe not in our lifetime. Maybe our kids are going to be more idealistic if we indoctrinate them hard enough. But I'm not sure because it's in human human nature to want to create more value. And if you want to create more value, you're either going to have other coins.
+
+Vlad
+or you're going to have governments issuing their own tokens and saying, you know, you should buy this bond and we promise you're going to get 10 % a year on your Bitcoin. And of course, at one point they can stop paying and find excuses and you can sue your government, try to get your Bitcoin back. Good luck.
+
+Citizen Web3
+I just want one, one second of, of, every two for everybody, for the listeners guys, there was a lot of things mentioned and as always everything that me and blood mentioned are in the show notes. So, so please go check if anything is interest you in more detail, please find those and check them out. Yeah. You mean, I mean, you know, when you were saying that one thing that sprung to mind when you were describing, you know, of course the Citadel model, and I have a lot of Bitcoin Maxi friends. In fact, the guy who got me into this space was is.
+
+It's still a Bitcoin maxi. And one thing you were saying about making the world better, which springs into mind and why I mentioned the show notes as well is George Carlin. I really, I'm not going to talk about this much now, but I really advise to everyone who's listening to this. The guy died some time ago, but he's a standup comedian and there is a standup he has on ecologists and ecology in general. And I really advise you just to type in Google George Carlin ecology.
+
+And this is what Vlad is talking about. This is what you are talking about Vlad, about making the world a better place, not just because for yourself, but because the world needs to be a better place. And there's the big difference of, you know, doing something just because, hey, I want to live in a better environment. This is why I'm an ecologist or I want to make the ecology better because I don't want the fucking people to die, you know. So that has two very different opinions. And I want to ask you, you know, you kind of started already to describe that.
+
+And you also said, of course, there will be banks, will be other coins. Considering that, you know, we are all
+
+I guess with enough logic to understand that there will be more than one blockchain. There will be more than two, three, 20 ecosystems. There will be hundreds of them. There will be private, there will be public ecosystems. There will be verifiable ecosystems. will be unfortunately unverifiable ecosystems with one node running the whole country, probably, unfortunately, but it will happen. How do you see all of that world together with today's financial landscape coexisting? Will there be more, you know,
+
+Citizen Web3
+Mad Max kind of world, know, or will it be the civilized world we are used to today, but with loads of different financial systems, whether verified, whether open source, whether on blockchain, whether closed, whatever.
+
+Vlad 
+Well, I think about this a lot, you know, and I do believe that what we're doing with Bitcoin and other coins is powerful and influential and is going to shape the future in a different way. And I think sometimes these inventions are sort of like blackmail to your government where you say what you can hold against me is the fact that I have to use your government at least your government money at the local level.
+
+And therefore, this is how you control me because you have all of these taxes when I buy something, when I get paid, when I do everything, I have to pay some sort of tax to you. But if I don't use your money and I engage in this peer to peer economy, then I'm basically trying to protest against you. And you're not going to be making some money off of me because I'm engaging in this. So I imagine a world where
+
+Maybe governments are going to be more reasonable and more open and allow citizens to have more optionality and more freedom. At least that's my utopia. Maybe governments are going to be like restaurants and they're going to show you what's on the menu and say, you know, you have this tax rate, you have this degree of safety and you can do this and this and this. We have this climate and whatever. And if you choose to stay here, you have to follow these rules.
+
+and you get to choose as a citizen where you're going to stay and where you want to go. Unfortunately, I think most people around the world are at this poverty line where they have no choice. They are born in families where everyone is working for a small wage just to survive and then they can't make a better life for themselves, which is very unfortunate.
+
+Even though I was born in Eastern Europe and it felt like when I was a child at least everyone was poor and depressed and thinking that we're born in the wrong place and we're cursed or whatever, we did see in the last 20 years or something an improvement. And our life, even if we do complain that we're not as wealthy as the Germans or the French or whatever, our lives were still made better.
+
+Vlad 
+Then again, this is not the merit of the Bitcoin project. I do believe that the invention of Bitcoin is going to bring some prosperity to some individuals and is going to bring some more demand for freedom around the world. I also regard the demand for Bitcoin and cryptocurrencies as being equivalent to the demand for freedom. So in an ideal world where governments were accountable and honest and allowed you to be free, you would have no reason to use this.
+
+You would have no problem paying their taxes and saying, you know, I'm happy with what you're providing for me. I really want to contribute to the society. Please. I'll keep going. Forget about this Bitcoin stuff. But if you have a situation where you feel you're. You're being wronged by your government and you're not being represented and maybe that you're in an adversarial situation like.
+
+billions of people around the world. This is exactly the kind of invention that we need. And this is the kind of fight that anyone can afford to fight. You don't need to pick up your pickaxe or gun or whatever and protest in front of your government building. You just need to not use their money. And that's a much more powerful tool.
+
+Citizen Web3
+I've always seen, you know, money. I've wrote a piece six or seven years ago, which is on, on, on money. it's about money being a language, you know, it's a communication. And then, you know, if you censor a language, which is what governments basically do, they not just censor, they censor all the other languages apart from their own. they make you speak that language and communicate only in that language. And that of course leads to.
+
+everything we know the world has been through. So I completely agree with what I was trying to say, but on a completely different question, which I wanted to ask you before we start to wrap up, you mentioned Ordinals. And because I don't get many people... Well, I don't get Bitcoin Maxis at all, but this was the first one. And I really want to hear more, actually, opinions about the Bitcoin community. But one thing I want to ask you is about Ordinals and...
+
+I think that Ordinance has been widely kind of didn't touch, like being part of Ethereum, Polkadot, Cosmos and a lot of other communities and being in the middle of them, you know, we are a self -hosted validator amongst other things and we run our own intro. But I can tell you that not many people have heard of that outside of the Bitcoin community. Could you like in a five minute description describe
+
+What is the whole thing? Because it was kind of seen by some people. I don't know if you remember DeFi Summer in 2020 in Ethereum. so Ordinance was seen kind of like DeFi Summer for Bitcoin. But I don't think people from outside really kind of grasped on to what it was and what happened. Could you kind of like talk about it in five minutes, please, from your own perspective, of course, and why it's important.
+
+Vlad
+Yeah, so there is nothing new about Ordinals in the sense that Ordinal Fury was proposed maybe 10 years ago on Bitcoin Talk. And there was someone who said, why don't we number every monetary unit of Bitcoin and have the situation where we declared that the ones that come from the Genesis block are the rarest ones and nobody's going to have them. And the ones that come from the having block are also rare.
+
+and we want that for some reason. And the ones that come from these transactions, which are legendary, are also rare. And we're going to have a ranking. This is an issue that you get when the money is not really fungible. And you can trace down some money units to some significant events or some notable people. And you're going to have a situation where you discriminate between money amounts.
+
+And this goes back to colored coins. And if you have been in Bitcoin for as long as you have, you know that colored coins were a big deal. During the Silk Road era, a bunch of people said, how can we mark coins to be sure that these are clean and they're not part of the Silk Road? This was before blockchain analysis. And they were making these special coins that they were marking as being safe with some sort of token. Now, ordinals,
+
+and inscriptions, which are two different terms, are borrowing some elements from these projects, but also adding up this NFT culture, which came along later. And it's interesting that, so basically, ordinalist is a way of ordering every monitor unit, and the inscriptions are a way of putting arbitrary data on the blockchain. So if you want to put your JPEG on the blockchain, of course, you need to compress it because it takes
+
+a large chunk of space. So you want it to have the smallest possible size for the file. But once you put it there, it's considered to be permanent. And it was a way for people to show off for a while and show, you know, I even put the map of Romania on the Bitcoin blockchain. I don't think if that will ever become a curiosity and someone will unravel that in the future. I'm pretty sure that 20 years from now, if Bitcoin survives,
+
+Vlad 
+There's going to be people looking for these artifacts and trying to dig into our culture and understand what kind of memes we were into at the time, what sort of expression we were presenting to the world and what they have to store on their nodes because this has to be stored forever. And it's funny. And this sort of disrupted the NFT market, which was already collapsing when ordinals came along.
+
+And a lot of people who did not care about Bitcoin before, they came to Bitcoin because they were curious to inscribe stuff. And they moved their NFT collections from Ethereum to Bitcoin. And of course it was more expensive, but this came with the promise that they're going to be able to put the art on the blockchain as opposed to having it stored on IPFS or Imgur or other websites that were hosting these.
+
+NFTs because there was this uncertainty right when every NFTs became Fashionable and they were presented on Jimmy Fallon and whatever people were confused like are they buying a Piece of art are they really buying a jpeg or is it something else and of course it was always the token The token is supposed to represent something. It's a string of numbers. It goes all the way back to health any
+
+he came up with this idea in the 90s and said, why don't we create cryptographic trading cards and play with them and have fun with numbers? Except that in this iteration that was popularized on Ethereum, they were having these JPEGs to associate with the token and exchange these and establish some rankings of rarity. It happened the same with Ordinals, but with this UTXO model.
+
+The issue with ordinals was that people were not able to create these collections or issue more assets derived from one inscription. So that's why Casey worked for one year or more to create these runes, which are just a fancy term for issuing more tokens out of the inscriptions. And it was made for people who want to launch entire collections at once. It was wildly popular.
+
+Vlad
+in April or May of this year when they were launched, but they also saw I guess a period of lesser demand. Right now I think the on -chain fees are very low and there's not much stuff happening. I'm pretty sure that the gas fees on Ethereum are also very low right now. There's not as much activity as there used to be. And this is a good time to reflect and prepare for the incoming wave.
+
+We're not sure if it's going to be NFTs or something else, but you have to be ready to scale, be prepared for the next wave of users. The class of 2024, 2025 is going to have different expectations and is going to come to the space wanting to use these networks in a different way. And I guess it's nice to be ready for that. Bitcoin right now is not really improving. I mean, the culture is somehow stacked against any idea.
+
+of improving. are a bunch of developers who say, you know, we can do some very cool stuff if we had this covenant soft fork, which is not even contentious at this point because it's been tested and developers have had the opportunity to break it if there was any bug. But I think the issue is inherently political and cultural. Some people are just against anything that can improve Bitcoin.
+
+just because they perceive every change as an attack.
+
+Citizen Web3
+I, I, I, the funny thing is, you know, it's happening, ironic, I guess, not funny that
+
+I've noticed that maximalism happens everywhere. I have had part of my mission to fight tribalism, what I call tribalism, not maximalism. I started to call it tribalism at one point, not just me, but a lot of other people as well. But I've noticed that it doesn't matter which crypto community you go to, they came there because usually of maximalism or tribalism and started the project. And then in this crypto community, after some time, you will have the same thing started and then be like,
+
+You'll have people in Cosmos saying, we don't go to Ethereum. When people in Ethereum say, we don't go to that. And it's so stupid. And it goes everywhere in a circle. It's a cycle that instead of preparing for the next class of, whether it's 24, 25 or 37, it doesn't matter. It has to happen. Vlad, I'm going to jump into a quick blitz with you to wrap things up. Please, please, please do, please do, do.
+
+Vlad 
+Just a second. I want to add something to this conversation of tribalism. There's also the school of thought, which was pioneered by Satoshi himself. And one of the proponents right now, I think, is Eric Voskil, who wrote the book Crypto Economics. So basically, he's saying that Bitcoin doesn't scale on chain or what changes, but it scales with other chains that get created to be similar to Bitcoin, but have some differences that make it useful for other stuff.
+
+In the beginning, we had the first ever altcoin, which was co -created by Satoshi Nakamoto. It was Namecoin. And the purpose of it was to decentralize domains. Domain names is a big deal. Everyone wants to register a domain name on the internet. But how can you do that without a credit card or without some censorship that comes from one organization that controls the entire domain registration business?
+
+So Namecoin was supposed to disrupt this. It did not get the expected demand or it was not very successful, but it was still a very interesting attempt. And at the time Satoshi said, we shouldn't do this on Bitcoin. Let's start a different blockchain, which serves this individual purpose because it's safer. And it seems like for a while it was just these silly coins that were just changing some
+
+parameters of Bitcoin. Like nobody speaks about fair coin or pure coin or what are some of the other ones like vert coin.
+
+Citizen Web3 
+man, that was lousy, a bird coin was... was... one.
+
+Vlad 
+Panda coin or whatever.
+
+Citizen Web3
+I'm trying to remember now some well, DEF coin that I mentioned, but I'm trying to remember some other ones pre -dead. Man, I remember on Bitcoin talk where on the altcoin page, you could refresh it every 10 minutes in 2013 and there will be new entries appearing and people asking you to send them five or 10 Bitcoins in exchange for the here talking that changes parameters.
+
+Vlad
+I mean that was wild, but my point is that you can also argue that all of these chains like Ethereum, Litecoin, Monero, Zcash, all of these that have been around for a long time and have been resilient and have a market for them and they fulfill purposes that Bitcoin doesn't, they are scaling Bitcoin. Except that instead of having a future where everything is divided by 21 million Bitcoin,
+
+We're going to have a future where everything is divided by 21 million Bitcoin, 100 million Ethereum, ETH or whatever, maybe 100 million Moneros and so on. So we create this monetary inflation which solves a real existing problem, which is scaling and also adds some features that are not brought to Bitcoin yet.
+
+Citizen Web3 
+Okay.
+
+Vlad
+This is also why I'm a fan of drive chains on Bitcoin, but that's another can of worms.
+
+Citizen Web3
+man, let's, let me jump into a quick blitz. It's with you, but I want to first say thank you for saying what you just added because this podcast has long time been about values rather than any particular coin or token or project. And, I think when, if we, as a community, and I mean the whole space, blockchain space build from values.
+
+rather than from greed or from following personal benefits. I'm sure that everybody will benefit in the end of the day whether you're a Bitcoin maximalist or a minimalist or Ethereum or Polkadot, Cosmos, it doesn't fucking matter at the end of the day because there has been no examples in nature where nature goes back, it goes from develops. But yeah, so I totally, totally, totally, totally thank you for saying that. But yeah, let me jump into a quick blitz with you. Three questions.
+
+And they're a bit weird. I'm sorry. But there is it. give me they're going to take you out of the Bitcoin thing in a second. So straight away, because there are different level. But very simple. Give me one song or one movie or one book that has positive influence on blood throughout your life.
+
+Vlad
+I'm gonna choose one book because it's the easiest for me right now to think. You said changed my life. For me it was Republic by Plato and also Nicomachean Ethics by Aristotle. If you read these two, I think you're gonna live a much better life.
+
+Vlad 
+Aristotle basically has this entire book that's called Nika Mahya and Ethics and it asks the question, how do you live a good life? And good life doesn't mean, you know, wealthy or whatever, just to be happy, a satisfied and accomplished life. What does that mean? And it's a very interesting and useful analysis of vices and virtues and everything in life.
+
+Citizen Web3
+Ok, second question: give me one motivational thing that keeps Vlad, getting out of bed everyday, making a podcast, building bitcoin, and so on.
+
+Vlad
+I guess it's changing the culture, but there are also some rivalries along the way, because there's always an opposition to any idea, and it's fun. guess engaging on Twitter is fun as long as people don't get to personal insults or threats or whatever. It's all good spirits and fun.
+
+Citizen Web3
+Last one, I promise. dead or alive. real or made up. a person you know, a relative or an author. basically anyone give me one character or person who is not a guru! because we don't believe in them but someone you look up lets say difficult situations
+
+Vlad 
+That's a hard question because I think of a lot of situations. Usually I'm a big sucker for these simple classical films where you have a clear hero and a clear villain, you know, before postmodernism. And you have these American heroes from American movies. I grew up watching...
+
+So in the early 90s on Eastern European television, you had lot of Arnold Schwarzenegger movies, a lot of Rambo movies and not Rambo, Sylvester Stallone, but we were calling him Rambo around the block. Jean -Claude Van Damme and stuff like that. It was incredible. Steven Seagal. And I used to look up to these role models and think, you know, you should always be strong and project this around.
+
+People and showed not just physically strong but also be able to deal with daily situations Later in life. I discovered Indiana Jones, and I think that's a much better Description of what I'm trying to be because you have this guy who on one hand is stupidly lucky because he gets away from everything But on the other hand he has to constantly adapt to a changing world, and I think that's what we need to do this
+
+know, Sylvester Stallone macho character is very fit for murdering a bunch of people in some jungle. But in real life, you have to adapt to a lot of changing situations and social interactions that are spontaneous and you know nothing about that. And I did have my fair share of situations where I met famous people and I was not even aware of who they are and that they're famous. And
+
+Then I found out much later what they actually did and I felt like an idiot. I guess I'm sort of minus the spectacular stuff. I'm sort of like Indiana Jones. But also I feel sometimes like George Bailey from It's a Wonderful Life. You have to sacrifice yourself a bit and think about the goodness in people and try to see the good side and trust. You know, we say don't trust, verify, but you have to give people some trust.
+
+Vlad
+and invest in them some time in attention and hope that they're gonna grow up to also help you along the way.
+
+Citizen Web3
+Yes, not for selfish reasons and about investing your time into something you know can change things.
+
+Vlad
+But not for the selfish reason that you think they're gonna help you, just because you see some potential in them and you say, you know, I'm gonna help this person and in five years, I'm gonna be proud that I met them, you know.
+
+Citizen Web3
+Vlad I want to thank you very much for your time for the honest answers to my questions and for talking about yourself of course for everyone else this is a good bye and see you next week thank you for tuning in.
+
+Vlad 
+This was fun, bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

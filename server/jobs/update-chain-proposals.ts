@@ -24,7 +24,19 @@ const updateChainProposals = async (chainNames: string[]) => {
       const proposals = await chainMethods.getProposals(chainParams);
       const dbProposals = await db.proposal.findMany({
         where: { chainId: dbChain.id },
+        select: {
+          id: true,
+          proposalId: true,
+          status: true,
+          metadataUrl: true,
+        },
       });
+
+      const proposalsWithFullText = await db.proposal.findMany({
+        where: { chainId: dbChain.id, fullText: { not: null } },
+        select: { id: true },
+      });
+      const hasFullTextSet = new Set(proposalsWithFullText.map((p) => p.id));
       logInfo(`${chainName} proposalsCount: ${proposals.proposals.length}/${dbProposals.length}`);
 
       let proposalsLive = 0;
@@ -50,6 +62,23 @@ const updateChainProposals = async (chainNames: string[]) => {
           dbProposal?.status === $Enums.ProposalStatus.PROPOSAL_STATUS_REJECTED ||
           dbProposal?.status === $Enums.ProposalStatus.PROPOSAL_STATUS_FAILED
         ) {
+          // Backfill metadataUrl and fullText for existing proposals
+          const backfillData: { metadataUrl?: string; fullText?: string } = {};
+          if (proposal.metadataUrl && dbProposal.metadataUrl !== proposal.metadataUrl) {
+            backfillData.metadataUrl = proposal.metadataUrl;
+          }
+          if (!hasFullTextSet.has(dbProposal.id) && proposal.fullText) {
+            backfillData.fullText = proposal.fullText;
+          }
+
+          if (Object.keys(backfillData).length > 0) {
+            await db.proposal.update({
+              where: { id: dbProposal.id },
+              data: backfillData,
+            });
+            logDebug(`Backfilled ${Object.keys(backfillData).join(', ')} for proposal ${proposal.proposalId}`);
+          }
+
           logDebug(
             `Proposal ${proposal.proposalId} ${proposal.title} already processed with status ${dbProposal.status}`,
           );
@@ -69,6 +98,8 @@ const updateChainProposals = async (chainNames: string[]) => {
             votingEndTime: proposal.votingEndTime,
             tallyResult: proposal.tallyResult,
             finalTallyResult: proposal.finalTallyResult,
+            metadataUrl: proposal.metadataUrl || undefined,
+            fullText: proposal.fullText || undefined,
           },
           create: {
             proposalId: proposal.proposalId,
@@ -83,6 +114,8 @@ const updateChainProposals = async (chainNames: string[]) => {
             title: proposal.title,
             description: proposal.description,
             type: proposal.type,
+            metadataUrl: proposal.metadataUrl || null,
+            fullText: proposal.fullText || null,
             chain: {
               connect: { id: dbChain.id },
             },

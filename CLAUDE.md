@@ -66,6 +66,7 @@ Use Context7 for:
 | Chains | `server/tools/chains/AGENTS.md` | Chain-specific implementations (Cosmos, Aztec, etc.) |
 | Aztec Chain | `server/tools/chains/aztec/AGENTS.md` | Aztec L2 implementation (L1 contracts, events, governance) |
 | Services | `src/app/services/AGENTS.md` | Data access layer for frontend and actions |
+| AI Chat | `src/app/services/ai/AGENTS.md` | AI assistant: LLM config, tools, prompt builder, RAG knowledge base |
 
 ---
 
@@ -102,6 +103,7 @@ ValidatorInfo is a Web3 blockchain explorer providing real-time metrics for vali
 |-----------|---------|---------------|
 | `src/app/[locale]/` | Next.js App Router with i18n | - |
 | `src/app/services/` | Data access services | `AGENTS.md` available |
+| `src/app/services/ai/` | AI chat: LLM config, tools, prompt | `AGENTS.md` available |
 | `src/actions/` | Server actions for data fetching/mutations | - |
 | `server/jobs/` | Cron jobs for blockchain data updates | `AGENTS.md` available |
 | `server/tools/chains/` | Chain-specific implementations | `AGENTS.md` available |
@@ -165,18 +167,6 @@ yarn build                  # Production build (type-checks everything)
 
 ---
 
-## Code Style & Conventions
-
-- **Early returns**: Prefer early returns for readability
-- **Styling**: Use TailwindCSS classes exclusively, avoid inline CSS or `<style>` tags
-- **Naming**: Use descriptive names; prefix event handlers with "handle" (handleClick, handleKeyDown)
-- **Components**: Use `const` arrow functions instead of function declarations
-- **Accessibility**: Implement proper ARIA labels, tabindex, keyboard handlers
-- **DRY principle**: Avoid code duplication
-- **SOLID principle**: Develop modules, functions, classes, and components in accordance with the SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
-
----
-
 ## Important Implementation Details
 
 ### Multi-Chain Support
@@ -200,6 +190,16 @@ yarn build                  # Production build (type-checks everything)
 - Examples: chain-service.ts, validator-service.ts, proposal-service.ts
 - Services interact with Prisma models and Redis cache
 - **See `src/app/services/AGENTS.md` for service patterns**
+
+### AI Chat
+
+- AI assistant powered by Google Gemini via Vercel AI SDK (`generateText`)
+- LLM has tools that query real-time data from ValidatorInfo services (chains, validators, governance, transactions, blocks)
+- Server action in `src/actions/ai-chat.ts` handles rate limiting, validation, and LLM orchestration
+- AI service config and tools in `src/app/services/ai/`
+- UI components in `src/app/[locale]/components/ai-chat/`
+- Requires `GOOGLE_GENERATIVE_AI_API_KEY` env var
+- **See `src/app/services/ai/AGENTS.md` for full architecture and tool patterns**
 
 ### Internationalization
 
@@ -255,6 +255,7 @@ Required in `.env`:
 - `REDIS_HOST`: Redis connection (use `redis` in Docker)
 
 Optional:
+- `GOOGLE_GENERATIVE_AI_API_KEY`: For AI chat assistant (Gemini)
 - `GITHUB_API_TOKEN`: For fetching GitHub data
 - `SKIP_API_KEY`: For Skip Protocol integration
 
@@ -284,37 +285,7 @@ When making changes:
 
 ---
 
-## Agent Role
-
-You are a Senior Fullstack Developer/Engineer and an Expert in ReactJS, NextJS, Node.js, JavaScript, TypeScript, HTML, CSS and modern UI/UX frameworks (e.g., TailwindCSS, Shadcn, Radix). You are thoughtful, give nuanced answers, and are brilliant at reasoning. You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
-
-- Follow the user's requirements carefully & to the letter
-- First think step-by-step - describe your plan for what to build in pseudocode, written out in great detail
-- Confirm, then write code!
-- Always write correct, best practice, DRY principle (Dont Repeat Yourself), bug free, fully functional and working code also it should be aligned to listed rules down below at Code Implementation Guidelines
-- Focus on easy and readability code, over being performant
-- Fully implement all requested functionality
-- Leave NO todo's, placeholders or missing pieces
-- Ensure code is complete! Verify thoroughly finalised
-- Include all required imports, and ensure proper naming of key components
-- Be concise. Minimize any other prose
-- If you think there might not be a correct answer, you say so
-- If you do not know the answer, say so, instead of guessing
-
-### Coding Environment
-
-The user asks questions about the following coding languages:
-- ReactJS
-- NextJS
-- JavaScript
-- TypeScript
-- TailwindCSS
-- HTML
-- CSS
-
----
-
-## Code Implementation Guidelines
+## Code Style
 
 Follow these rules when you write code:
 - Always use vercel-react-best-practices skill
@@ -330,6 +301,7 @@ Follow these rules when you write code:
 - Include all required imports and ensure proper naming of key components
 - Use Next.js Image component instead of img tag where it is possible.
 - Use Next.js Links component instead of a tag where it is possible.
+- Avoid code duplication (DRY principle)
 - Develop modules, functions, classes, and components in accordance with the SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
 - Don't use BIGINT for PK autoincrement IDs in Prisma schema: use INT or STRING as ciud
 
@@ -507,3 +479,4 @@ Before completing any code modification task, verify:
 - Generate docs: `npx gitnexus wiki`
 
 <!-- gitnexus:end -->
+- Run `yarn build` before pushing

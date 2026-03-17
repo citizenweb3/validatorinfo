@@ -1,0 +1,480 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/daic
+
+Episode name:
+Trust, government and Sound money with Peter Daic
+
+Citizen Web3
+And hello everybody. Welcome to a new show of citizen web three podcasts. And today I have Peter with me from daic capital. Hi Peter. Welcome to the show.
+
+Peter 
+Hi, welcome, nice to meet you.
+
+Citizen Web3 
+Nice to meet you too. Now before we go in and before I allow you to introduce yourself just for everybody out there Peter, um, well, no, you know what? No, I was gonna make an intro about your validator But then I thought no i'm gonna allow you to to do it and and peter maybe introduce yourself We're gonna do additional thing introduce yourself Tell us everything you do what you do in web3 how you got to web3 And and we will take it from there
+
+Peter 
+Yeah, I'm Peter. I'm Managing Director and Co -Founder from Daic. Yeah, currently at Daic, we are basically known for running validators, but also running certain other services, infrastructure services like RPC or so on. And yeah, we also provide or try to provide a lot for the community. So we...
+
+recently published posts, deep insights around projects, chain agnostic basically. We are also building dashboards, tools and whatever. And yeah, this is what we are doing. And yeah, my background, I have a degree in mechanical engineering and I also started software development and computational science.
+
+Um, and first contacts to crypto were somewhere in 2013, 2014, um, didn't understood what Bitcoin is. Uh, it was at the peak of the boom market. I remember where I found some, some docs where I noted Bitcoin alternative or something. Yeah. Um, started a little bit mining, playing around with the technology as I said, didn't fully got it.
+
+And then in 2015, 2016, I started to learn more about it. And yeah, since then I'm in crypto. And what I really like is everything with data engineering. So I'm doing a lot of on -chain analysis and so on. Also together with my co -founders. So you see a lot of our dashboards are really data driven, on -chain data driven. And yeah.
+
+That's the story.
+
+Citizen Web3
+I know you also didn't mention one thing, out of all these crazy things you didn't mention bare metal, right? You are a guys also are a bare metal validator, right? As far as I'm aware. Okay.
+
+Peter
+Exactly, yeah. Bare metal. Basically bare metal only, yeah.
+
+Citizen Web3
+So we're gonna have a lot to talk about today then. Great. So let's start at the top though, you know.
+
+Peter 
+Located in Austria, bare metal provider from Austria.
+
+Citizen Web3
+But let's wait, let's start at the top. Let's start at the top before we get into like all the balladator stuff and all that business. But I mean, okay, I get it. You have a background which suits perfect crypto. But what's your personal interest? Why not go work in any other field in the world? What attracts you to the Web3 world? Why? What is it important for Peter? What's...
+
+What does it matter? What's the difference between working in blockchain with this degree or not taking those skills anywhere else where probably could be easier and more safer? I don't know. Some people at least would definitely say so.
+
+Peter
+Yeah, first of all, it's the technology itself. So I really like to at least try to understand what the different layer ones, but also layer twos are doing, how they try to solve certain problems. And yeah, in the end, I mean, you all know this field. In my opinion, the brightest people are working in that industry.
+
+Citizen Web3 
+you
+
+Peter 
+I'm at conferences or somewhere. I'm thinking I'm the dumbest in the room. You can really feel the energy and you can feel how smart the people are. And also I find it fascinating the development speed of the technology. Sure, being crypto, we are perfect to burn our own houses again and again. Everything is collapsing as quick as we building it up. Sometimes it feels like this.
+
+But this is how innovation is made. It's quickly shipped and the things typically, the mistakes are not made again, at least that often. Sometimes well -known mistakes are copied again and again, but not more than three times, I would say. Yeah, and it's amazing how quickly this industry evolves, how many knowledge, brain power.
+
+going in there and for sure also how things are done. I mean we often think that in three years the world looks like this and this. This is probably a little bit overestimated but if you look five years or seven years back it's amazing what has been done and also how the challenges are solved. I'm thinking especially about the Ethereum updates.
+
+I mean, there is so complex updates, running so smoothly and so wonderfully tested and deployed. It's amazing. And for sure, the other thing what interests me most is, or what also interests me a lot is sound money. I mean, if you look at Bitcoin, Bitcoin is the strongest money in the earth. It's clear that money needs to be
+
+computational, permissionless. It's not possible that machines, robots, AIs, whatever can work with middlemen, with humans, humans who do mistakes or do things because what do things and they are not neutral, mathematically neutral. So for sure, Bitcoin is the next evolution of money. And yeah, this is also what's...
+
+Peter 
+what's bringing me or binding me to that space.
+
+Citizen Web3
+It's interesting, you know, you mentioned more the technological field and so let's call it intellectual curiosity, right? It's hard to put like, you know, a tag on what you said. But by the way, you know, while you were talking, I remember that I came across somewhere in Ethereum, somewhere where, this was a long time ago, somewhere where I seen Vitalik mentioned the fact that the Ethereum L1 was never meant for humans. It was always meant for robots.
+
+And the plan, you know, it's not the L2s are meant to interact. And, you know, the whole gas wars are pointless in this case, because, well, it's not meant to be cheap and it's not meant to be for human interaction. But it's interesting because yeah, technology evolves at such a, you know, great pace. And from here, I think I'm going to ask you my next question because lately there has been a lot of technological like evolution happen, you know, around AI, of course. And, um,
+
+We hear people talk about morals and about whether AI is going to overtake us and eat us and all that bullshit. What is the value mission of... I don't know if you personally are of that capital, but is there a mission or it's just like, okay, we're curious in technology, we want to kind of like, I don't know, hug it, embrace it, sorry, embrace the technological...
+
+evolution for the sake of technological evolution or is there some kind of mission as well? For example, the sound money you mentioned that, right? That drives you guys to, I don't know, to get more validators, to build more tools and so on and so forth.
+
+Peter 
+I mean, there is no real defined mission, I would say. It's more really driving the technology and the interesting things about the new things which come up. I mean, not every Web3 project needs to deliver sound money. I think with Bitcoin, we have sound money and sound money is one feature. But I mean, it starts on buying tickets for events and concerts.
+
+Recently, my wife wants that we go to a Coldplay concert and for sure it was immediately sold out. So try to get some tickets. For sure, there are a lot of tickets available, but it's amazing how people scamming each other there. Double selling tickets. So it's always fascinating that Maximalists, no matter from which camp they are, they say, okay, a lot of Web3 projects are useless, but I see so many...
+
+use cases where currently Web3 can solve a lot. And this starts on not double selling whatever and ends at decentralized calculations or validations of AI models. Or giving just easy and seamless incentives for whatever task to be done.
+
+which are normally not so easy to coordinate if you need middleman's or whatever.
+
+Citizen Web3
+Let me ask a very devil's advocate. Let me at least not even ask, but at least say a very devil's advocate opinion on what you just said. But it's not the technologies, the humans. I mean, it doesn't matter what technology we're going to have at the end. The human nature will stay the same, right? So I mean, if blockchain definitely is a much more trustless technology, I definitely have been a prophet myself for at least a decade of that technology as long as I remember.
+
+Peter 
+Thank you.
+
+Citizen Web3
+And, um, but at the end of the day, you know, it sometimes brings me thinking, but yeah, it's about human nature. You know, guns don't kill people. People do, you know, it's, it's, it's, it's people who do the shit, not, not, not, not the ledgers because we can cheat them, do the bad things. It's bad people who find those mistakes in the ledgers and want to. So again, it's a devil's advocate of course, opinion, but what's your take on that? I mean, will blockchain technology or something that derives from it, will it help?
+
+Peter 
+Next.
+
+Citizen Web3 
+us as humanity to become a little bit better towards each other? Or no? Or will we stay the same greedy people who trying to look for new holes in a new technology, so to speak?
+
+Peter 
+hopefully humans will be humans also in future. And as I said, the bad things can't be solved by blockchain technology, but blockchain technology and sound money is probably making some stupid things more difficult. So if you look in history, there are a lot of changes in the global, let's say,
+
+geopolitical sphere, which was basically powered by inflation. So I remember when I read a story about a battle between the Hollands and the France and France had the better army and know they will win. And suddenly when they were on the battlefield, they realized, come on, how did that army become so big? Because they inflated and they got purchasing power and were able.
+
+at least for a certain point in time to pump their army because they were able to inflate. So for example, that sound money and mathematically driven money will make such things more complicated. And I mean, for us, all of us at Dyke, we are working together with a lot of partners and clients. And it's amazing because we say trust.
+
+is the most important between relationships, even if we are in the trust less ecosystem. For us, trust is very important. And yeah, probably trusting people in that space. If you can trust people in that space, this is even something more important than in other spaces because we all know, yeah, everywhere are scammers, yeah, everywhere you need to double check.
+
+everything and everybody is trying to scam you, at least it feels like that. But then if you can trust people in that space, that makes it even more amazing.
+
+Citizen Web3
+I think that every single like if you look at the history of you know the big so to say I'm not I don't want to use the word scams you know I'm so used to crypto so I'm going to use the word scams but you know I'm talking about you know stuff like the Mississippi you know campaign and all that stuff it's everywhere everywhere you look at it from big to small it's just cheating in the ledger you know somebody was just dodging the ledger which blockchain does actually solve in a way right of at least
+
+by distributing that, putting a timestamp on it, right? Of course, there was a lot more things to it, but, you know, in a box, so to speak. So definitely, I definitely hope that that optimism is something that's not just within me and you, but other people too. Now, let me, a slightly different way, at Dycapital, you guys are very, like what I say, a great example, in my opinion, to the Web3 Society, you're chain agnostic, at least from...
+
+You know, just looking at what you validate guys and from the way you are talking right now, you know, it doesn't at least what I'm hearing. I mean, I'm not against anybody who is specifically believes only in one chain, but it's weird these days, at least for sure. It's like kind of saying, you know, using a checkbook, you know, in today's age, but.
+
+Is that so? Or am I getting the wrong or the right impression here? Are you guys like Maxis in terms of, okay, only Ethereum, only Cosmos, only Polkadot, or are you like kind of, okay, technology and we're going to embrace... It's about blockchain. It's not about a specific ecosystem.
+
+Peter
+No, absolutely. We are basically chain agnostic and we don't close our eyes for any technology or blockchain. I mean, I think it's important to see how different projects try to solve different things. And sometimes it's more wires that, or at least we think that this is not working out that expected, yeah. And others probably do it better. So.
+
+Yes, basically chain agnostic, but as you can see, for example, now validators, we are strongly focused on the Cosmos ecosystem because we basically believe in the whole inter -chain thesis in the internet of blockchain stuff and think that different applications or different application sectors need different adjustments, but...
+
+We need to be able to communicate and transfer value, transfer data with the rest in a very seamless and automated trustless way. So that's why a lot of our validators are focused on Cosmos.
+
+Citizen Web3
+For sure, I can say that for us, Cosmos is going to be a validator and will always remain like, and as a project, our home as well, even though we've been chain agnostic for a while too, and always have been personally, but for us, it's always, you know, what I've noticed, by the way, something, and I don't know if you noticed that too, and actually this is a semantical mistake, in my opinion, that people should try to remove. I've seen a lot of YouTube...
+
+marketers or big guys when they talk about cosmos and they and when they mention a project what they usually do is for example they will say akasha on cosmos or I know something on cosmos and that would really narrow it down because people then think well it's bound to cosmos was not bound to cosmos it's an L1 that has a connection with the whole of cosmos but it's an L1 that you can still and yeah definitely that interchange that thesis sorry is a very powerful one that I think
+
+And we've seen it evolve, right? I mean, again, I don't want to make this like, so to say, cosmos praise, but it is in a way because it's been a long way how it's grown, in my opinion.
+
+Peter
+Yeah, that's also an amazing, let's say blockchain development. I mean, it's not only the Cosmos SDK if we look on Comet BFT. I mean, that's also part of Cosmos in the end. But on the other hand, you can see that more projects just use the networking and consensus layer and build their own application layer on top. And I mean, the...
+
+biggest success story probably is IBC. I mean, we see IBC gets integrated more and more. It's really the cross -chain messaging protocol. And probably if people read IBC and other ecosystems, probably they also don't really, at least newcomers, don't really associate it with Cosmos at the first thing. Yeah, and I think it's a...
+
+It's a public good. I mean, it's amazing that the Cosmos community made that the standard. And as we can see, it's becoming the standard for all the inter -blockchain communications.
+
+Citizen Web3 (18:23.186)
+I'm very excited to see what's going to happen with Nier because all the rumors of implementing IBC protocol level are a bit like... I don't know. I mean, there is even some work, I believe, done. I personally haven't looked into it. But anyways, different topic. As something that is very important to me personally and to us as a validator, bare metal. I think it's...
+
+Peter 
+you
+
+Citizen Web3 
+Big topic and I want to ask you why you guys choose to use bare metal and yeah, like how did you guys decide that you're going to do bare metal? Is it bare metal by the way that you guys own or is it hosted at some data center where you rent space or is it a mixture? Of course, whatever you think security is bound not to talk about, let's not talk about it. But if we can talk a little bit about your setup and how did you guys decide to go towards that setup would be great, of course.
+
+Peter 
+I mean, it's a virus and I think it was last year or two years ago already when we have the different AWS downtime. So yeah, if you have hospital machines there, basically there's nothing you can do. One data center is burning down somewhere and you don't even have the possibility to act there and ensure that these servers never get switched on again. If I remember.
+
+there was something with Ethereum also a certain time ago when there was really a fire in a data center and there were some slashing because of double signing because that machines came on months later suddenly or something. It was heads, no? Ah, okay.
+
+Citizen Web3 
+That's it.
+
+Citizen Web3
+I think so, I think so, I think so, I'm not 100 % sure but I think sorry to interrupt. I think it was Ethereum and Hetzner, yeah, I think so.
+
+Peter 
+And I think this is the important thing. You need to have some kind of control about your machines on an infrastructure level. And yeah, we are basically trying to run everything from Austria. We are renting machines. We have our own there. Austria, because we have a very great partner who is basically hosting the server for us.
+
+Citizen Web3 
+You
+
+Peter 
+in the data center, we can ensure perfect uptime. We can ensure that all the spare parts are existing and stored directly there so that everything is basically running smooth. And I think in Austria, I mean, shout out to the crypto crew. They're also Austrians. We don't have so many other validators. And especially if you look...
+
+how many servers are running in Austria. It's giving us a great diversification in the whole Gale location space. Yeah, and there are coming also some other benefits. So for example, we can ensure that our servers are running with 100 % green energy and so on. So overall, yeah, basically the controls thing made us to go there where we are.
+
+Citizen Web3 
+you
+
+Citizen Web3 
+So, but let's dig this a little bit. Let's dig this from different sides. So first of all, by the way, a little note for listeners, a little advertisement, guys, we have an episode recorded with Crypto Crew. Great team. Go check it out. Just type Crypto Crew in the search on the podcast website. You will find it, guys. It's a great episode. Really suggest to check it out.
+
+Peter 
+Yeah.
+
+Citizen Web3
+Um, by the way about Austria, I think I've, I've had over the four years, I've been speaking to validators for a long time and, and I'm sure there has been like one or two more crypto crew. And there was somebody else that was definitely somebody else. It was somebody on the show. No, but I haven't, I haven't had the guys on the show, but there was definitely somebody on the show over the, it's been four years, man. It's, it's, it's, it's, but yeah, I have a question.
+
+Peter 
+There is one H2O nodes from something like that. But if you look at the different dashboards, at least you can see that not so many servers are located there. Yeah.
+
+Citizen Web3 
+Yeah, yes, yes, yes, yes, yes through through through I have a question for you about green energy, but before Peter sorry Sorry, sorry before Peter. I want to play out a scenario for you because you said that that that that you know Control is important. And by the way, we are also bare metal but later transition into a bare metal and own bare metal but You know, let me play out a scenario for you
+
+So you said that control here is the most important and you wake up one day and because it's hosted somewhere else. I don't know, whatever happened, can there be a scenario that even with bare metal, the operators lose access to their metal equipment? I mean, it's the...
+
+Peter 
+Lose access to the metal equipment. I mean, probably not in Austria. At least we think so because here we trust the government and also the framework which is built there.
+
+Citizen Web3
+Crazy scenario of course, but can it happen? Okay. Okay.
+
+Peter 
+And we also can see that this is for a lot of projects that is becoming more and more in factor. We are not super easy, let's say, to create companies on whatever. We are here in Austria. It's not always that easy to deal with everything, but the crypto is basically quite well regulated. We have quite clear standards here and we have...
+
+Also in Europe with with Mica a certain framework so that gives us at least some clarity from a government and regulatory perspective. And on the other hand, it's important, for example, for us, the data centers know what we are doing. I mean, we know from other data centers that crypto is... Yeah.
+
+not a hundred percent, I would say, legal or illegal. It's a little bit in the gray. So, and that often there are coming pro crypto statements, non pro crypto statements. Also that is solved on our side. Everybody knows what we are doing, what software we are running there. So we can also avoid, also on a contract basis that we get switched off immediately. So it's more like, I would say, and...
+
+catastrophic scenario, which would close the door, so the ways so we get out. So we're not able to access them.
+
+Citizen Web3
+I guess what I'm trying to dig at here is what's your opinion, take and no, of course what you have mentioned and I do also want to ask you later a little bit about regulatory things. But before that, like what's your take? There has been another, another new sort of not new, it's something that exists way before crypto ever existed. But in crypto, it started also as a new not trend wave.
+
+And it's not called decentralized infra. There is another word for it. I forgot. I think Althea actually within Cosmos where the guys to coin the term not that long ago. And I don't remember what they call it. But anyways, the point was that, you know, not their point specifically, but a lot of the people who talk about it, you know, talking about building, is there such a way or a direction as
+
+to build decentralized infrastructure. Let's say a validator not dependent on the power grid, not dependent on the internet, outages, sorry, out cuts or whatever, not dependent at all on the grid. Is it possible even something like that in today's age or no?
+
+Peter 
+Yeah, I mean, we have, I think, some kind of technology already in place with remote signers. And we're designers, let's say, we can, for example, we could put designers on different locations, and then the sentries, definitely. So, I mean, it's then always a trade off with latency and so on. So probably not for all the chains, it's possible. But in general,
+
+Citizen Web3 
+Horcrux.
+
+Peter 
+And yeah, I mean, there is still one issue that it's still not 100 % decentralized, because as we know, it's very hard to run data centers in areas with ambient temperatures above a certain level. So what you can anyway see is that it's quiet on the northern or the southern hemisphere, but really next to the equator where the huge temperatures are.
+
+It will be quite difficult, I think even impossible to run data centers. So yeah, I think that at least that will be some, let's say kind of restricted areas from a hundred percent decentralization. Yeah.
+
+Citizen Web3 
+I think the biggest data center in terms of the South, if we're talking of longitude here, is in Malta. The guys from SimpleStake, right? Or am I confusing the name? Or Staking? I might be confusing here, but the guys own the biggest data center in Malta. And it's their own data center that have been owned for years. But...
+
+I don't think I know of anything down more south because that weather, of course, is not what you're talking about. One last cut.
+
+Peter 
+I mean, I think every validator needs to be 100 % GEO distributed. I mean, we have validator sets with which are normally big enough. And if the voting power is quite well distributed, I mean, it's quite good. I think that we have different regions. So which have different backbones, different power supplies and total different regulatory perspectives.
+
+but also different signing technologies, different operation systems, maintenance strategies. So I think if we have quite good balanced validator set with diverse validators and diverse strategies, then our chains will survive.
+
+Citizen Web3
+In terms of bare metal, like another question to hear, a lot of the validators and personally ourselves as well, that talk to the, you know, everybody works with different hardware. Somebody works with, you know, hardware that is industrial, server grade hardware, somebody like Notional prefer to, or other. There is not the only team, you know, Basement Nodes, Notional. There's quite a few teams I spoke to who prefer to build their own, you know,
+
+I'm assuming if you guys are hosting a data center, you are more server -grade, right? Then... Or you're...
+
+Peter 
+We are more enterprise -grade. We only have servers with minimum two uplinks and minimum two power supplies. I think this is anyway necessary because uplink issues can always happen. So this is where we really take care that we have that redundancy in circuits and also uplinks. And I think this is absolutely necessary for validators to have that in place.
+
+Citizen Web3
+Enterprise, great, sorry.
+
+Citizen Web3 
+Uplinks.
+
+Peter
+Yes. I mean, it's always happening if you look how often some just some misconfigurations in data centers happening. So if you have different carriers there, you let's say, normally the downtimes are not that long. But I think this is definitely an error which can be caused by humans that your connection to the internet get lost at least for a certain time.
+
+Citizen Web3
+Our first one happened recently. We had a storm on the island and we had one of the experimental still servers connected to, and in a Starlink, connected through a small UPS. And that was a server which was possible to have downtime on when you attend. When there was a lightning storm and the equipment was safe, but we didn't realize until the morning that the UPS actually got
+
+because the lightning must have hit somewhere or not. It was a small UPS, it was one of those. And now we know that you cannot use those kind of UPSs for that kind of equipment. Now it's something we learned as well. But I was going to actually ask you about equipment and stuff like that. What in terms of using and going to the market, finding an equipment, for example, a lot of people talk about problems with disks.
+
+that it's a pain in the ass. Either some people say, I don't know, we only go for Samsung disks. We only need that. We only need to go for that. And what about you guys? Have you been having any particular problems with any particular type of equipment in terms of disks, RAM, or anything else, or something that you can mention, of course, again, and want to talk about?
+
+Peter 
+I mean, discs, yeah, discs are dying, but...
+
+Citizen Web3
+Discs dying, discs die, yes, for sure.
+
+Peter 
+with the right rate of file system in place, at least if they are not dying all at once, which could be a problem if you are small enough and you order some stuff from the same batches, it could be an issue. Yeah, we know that this is dying, can't really say that there is one better than the other. I mean, we currently had some RAM issues.
+
+which were quite interesting with also, which was super interesting. We set up an EBM node from an EBM chain and we often went into data corruption. It was not a validator, it was just a node. And with all the RAM tests and everything, we were not really, it didn't look like a defect RAM. Yeah.
+
+But we had that, yeah. Good that it didn't happen on the validator. And we now know also that that can happen. I mean, we even had defect disks which went through smart scans. We have periodic smart scans in place. And even the smart scan didn't detect them as defects. So a lot can happen. And I think this is also the experience which you need to have in place. And also, yeah.
+
+better change some types, some hardware more often than trying to solve it on a software or driver level. Because in the end, there are so many different kinds of hardware defects there, which you probably couldn't detect 100 % so yeah, that was the most recent issue we had.
+
+Citizen Web3 
+You mentioned something I don't think I had on the agenda today, but you mentioned smart scans and analytics and not just analytics, but monitoring, sorry, so to speak, not analytics and monitoring of the servers is a huge, huge, huge, huge, huge, huge, huge, huge part of the DevOps work and of the validators life. And what's your guys sort of...
+
+life in that area, what do you use? I've seen validators use stuff like Zen Duty. I've seen others use other open source solutions. I've seen validators use the stuff within Grafana itself. I've seen, I think, so many different setups and I haven't actually seen or heard of any standards about monitoring, about alerting, more or less. Monitoring, I've never really heard of standards between validators.
+
+What do you guys do and how do you guys save yourselves and your delegators from worrying about your hardware failing?
+
+Peter 
+Hardware failing, we have some standard hardware monitoring in place. We do that with New Relic. And more important is the application monitoring, I would say. The application monitoring, here we write everything by our own. We are basically writing for each chains our own scripts. These, they are basically the pushing metrics or pushing alerting. And then we have an escalation line in place. So...
+
+Citizen Web3 
+you
+
+Peter
+Basically, it starts with just if it starts from governance proposal, there's a new governance proposal, then there is just a post in the social media channel. If there are missed blocks or whatever downtime, downtime is immediately escalating for sure. But then we have these escalation things in place, which are waking us up one by one in the late night. So that's just how we can guarantee there.
+
+Yeah, as I said, the application monitoring, we are building completely on our own and we are now starting to release some stuff very soon so that also others can use it. So I think in the next days, we will also have a Telegram bot released, which is basically giving you missed blocks alerts and so on. Yeah, I mean, I think most validators...
+
+have anyway they're monitoring, alerting, and escalation strategies in place. But yeah, we will open source our stuff. And probably somebody needs it.
+
+Citizen Web3
+That is a lot, a lot of people. I mean, we use personally different tools from different teams. And if it's open source, we even, I think, try to commit a couple of times to send some fixes because the guys, one chain, for example, didn't work, didn't parse or something like that. But I can tell you that there is some good tools for sure. And shout out to every single team who open sources and builds them. And, but.
+
+Definitely, I cannot say yet though that there is one tool that is like, ah, yeah, this is like the tool we're going to use. We use several, we use some for governance, some for uptime, some of our own. We use such a mixture that is like hearing that you guys are actually trying going to open source something in that direction is great news. I think not just to validators, but to delegators as well. That means more validators. They can be safer and sleep safer.
+
+and more validators will be safer because I think definitely most of the I'm going to use the word fuck ups here that happened with the validator over the past four or five years that I've been running validators for is definitely because of something wasn't noticed or not. It was a human error always, always a human error. Always. It's 99 .9%. Yeah. Yeah. Yeah.
+
+Peter 
+Yeah. I think you have the right monitoring in place and then you don't monitor the right thing and you have an issue. I mean, especially with all the additional software you need to run beside designers. So talking about Oracle is talking about which software or services. I think this is anyway the most critical stuff currently out there ever where you always can see.
+
+Oily data is getting issues because of that.
+
+Citizen Web3 
+Now I know that I'm going to say the phrase, the quote, and then I'm going to ask you what it means. So new community validator model. Now, what does that mean? This is something that I found that in reference to Dyke Capital. And I want to understand what it means for, for not just for you, but for everybody.
+
+Peter
+Yeah, I mean, we as DAIC, we didn't start as validators. We started basically we were five co -founders and we started because we pooled our money to invest together in projects and invest together in crypto. And also let's say leveraging all of our different backgrounds. So that we have, let's say.
+
+heterogeneous bundle. So from our five co -founders, three have a tech background, two have more business, regulatory and trade -fi background mixed. And this is how we started our journey. And most people probably know us because of Danko, because two years ago, we started together with him validating with the Danko Zone.
+
+XDAQ validator, so you know, he was a content creator, created lots of great content and didn't want to sell basically his soul, so you can see it. So validating was the perfect give back and financing that stuff and we basically did the technical part. And I think it's already two weeks ago. So we, because Danku, he quitted crypto, sadly. Yeah.
+
+But with Danku, we built up all that community validating and he made that videos as you know. And we started to make our own stuff like the blog posts, the dashboards, the tools and where else we can support projects and the community. Yeah. And since two weeks, we have basically a partnership with Coinage and Coinage, Zach, shout out to him. He's basically a good friend from Danku and...
+
+took over his stuff. And the amazing thing is that Coinage is a media which is community owned. So we think now that Coinage XStack community validator, as we see ourselves, is really a community validator because even the community, the media which gets produced is community owned and can be, let's say, community
+
+Peter 
+The topics which should be produced there can be upvoted by the community. And we try to do, as I said, as much for the community. And yeah, that is why we have that in place.
+
+Citizen Web3
+I like it. And there is a lot of, a lot of, um, but it is that, that, that, that we speak to and that we unfortunately yet haven't spoken to who try to decentralize themselves, you know, like in, in various ways. Um, it's great to hear what you mentioned, by the way, by the way, before, before I go to the next question, is there a DAO already?
+
+Peter 
+No.
+
+Citizen Web3 
+Yeah, around your validator. Do you already have like a DAO? No, not yet. We have a thing at CitizenWeb3. We decided to, because we talked to a lot of validators and some of them do have DAOs and tokens, we decided to put $100 in every DAO of a validator to buy all validator stakes around. If that's possible, I've decided to do it and put it for CitizenWeb3. And maybe one day, I don't know, one of those validators will become worth a trillion. You never know. So...
+
+Peter 
+Mm -hmm.
+
+Peter 
+So back to the animation.
+
+Citizen Web3 
+So, but what was I gonna ask? Wait, I got lost. No, about decentralization. So, and there's a lot of validators who are teams or validators. Obviously, validators are centralized entities. We all understand that. I hope everybody understands that there are operators who are human beings. And yeah, but like yourselves, you know, there are
+
+teams are trying to do those moves. Have you personally seen the best? I mean, of course, you've got your own approach, which is great. But have you seen another approach apart from the one you described to decentralized validators? And I think Cleomedes and Posthuman, we spoke several times on the show about so
+
+maybe other ones. I'm always curious in that direction. I don't know. There isn't one that I've seen that say, hey, that's the perfect way.
+
+Peter 
+Yeah, you mean decentralized. How do you exactly mean decentralizing?
+
+Citizen Web3 
+Exactly, exactly, exactly. That is the point. There is no specification in that. It's how somebody says that, you know, we decentralized our validator because we give part of our profit to our delegators. Somebody says we decentralized our validator because the tasks are done by members in our community who are also owners. Somebody says we decentralized our validators because we are partners with, you know, a social community on social media.
+
+So exactly, there is no specification to the question. It was more for you to sort of understand how you understand it. Is there such a thing? Can there be? Of course there isn't, but can there be such a thing as a decentralized validator? I mean, is it even possible one day?
+
+Peter 
+I mean, it's a good question in the end. In the end, if there are issues with the hardware, if there are issues with the chain in the end, you need to be quick in problem solving, quick thinking there. As you know, there are often chain updates which get completely out of control. Strange stuff needs to be done, rollbacks and historic snapshots. And we all know how important.
+
+The state is if you have that, for example, on a single sign on a machine, whatever. So decentralizing that, I would say, final control of a machine or a machine cluster is probably not really possible. And currently, we still need humans to do that. There is a lot of possibility to decentralize keystone.
+
+I think that is more as security practicing and they are for sure as everything can be tokenized decentralized but I think also there.
+
+It's, I think, important.
+
+Peter 
+chain itself can be really decentralized. I think several parts of the validator set, they just need to be different to each other. As I said before, different locations, setups, security practices. So that makes it really decentralized. If we would all sit in middle Europe and all follow the same standards and all do the same,
+
+then I think a network's not decentralized. So I think it's better to look on the decentralization of the networks and probably not in detail how the validators are decentralized or so on. But all great if new forms of organizations are built, I like that.
+
+Citizen Web3 
+I can foresee the day the roll -up on which every validator is a DAO launched roll -up validator inside of a roll -up launch. Of course, of course, absolutely. That was at the beginning, of course. But you never know. And I think that one day we will see some crazy stuff like that. I don't think that's far away. But...
+
+Peter 
+I'm thrilled by different AI agents.
+
+Citizen Web3
+You know, something a bit different. You spoke a lot about the tools, public goods tools that you created. And in my opinion, it's very important these days, especially, you know, the market has evolved from a deep post where a validator was just signing off the right block and making sure that he produces the price feed in time.
+
+to slashing and now to the competition that we have today where validators actually produce public goods and either they put their money back into the economy like what you guys pretty much do and launch into Web3 wheel or do whatever else they can do with it. Of course, we have different players on the market. But you spoke a lot about public goods and I think it's great in my opinion. So two questions. What's the most valuable tool?
+
+you have built in your own opinion and what has been the biggest challenge in terms of building those tools for you as a validator.
+
+Peter 
+I mean, I see our tools not as valuable or important like probably other validators do with, we heard Horcrux, signing solutions and all that stuff. So we do a little bit low level tours. We basically try to build especially dashboards or mini apps or whatever, which makes the life for users easier. So if you look on the existing ones, which are online.
+
+There is one which is basically just converting a batch 32 addresses to hex addresses. So minimum thing, but we had so many clicks there. It was important for the users. And especially then we have different dashboards. We build a lot of dashboards in the Terra ages and so on. And we basically try to do what also our delegators ask us to do.
+
+And what we think makes sense for them. So it's a very high idea. Currently, I think we have three dashboards currently online. Two more for delegators, one more for validators. We also changed that a lot. So yeah, I can't really name any which has the most input. As I said, it's not that it's...
+
+like Horcrux or something which is giving that huge impact. So, yeah.
+
+Citizen Web3
+You should not underestimate what you build, man. I've used your tool for converting addresses at least a couple of times. So for sure, it's been a saver when we were doing something with Omniflex and we had to convert tons of addresses. And it was a big, big saver for just the beginning. I don't remember what we were doing, but we were doing something.
+
+Peter 
+Thank you.
+
+Citizen Web3 
+So yeah, man, your guys, you know, your tools are there and people use them. I don't think they should be like important. I mean, for you though, personally, what has been something that you can look back like not as a validator, but as Peter and say, hey, guys, we did that. And I know that tomorrow, even if I'm not a part of that capital anymore, I know that I will use it. And I know that that's going to be something that other people will probably or might at least use.
+
+Peter 
+I think one of the coolest tools we used, I used at that time a lot, was a tool which was built by my co -founders Phil and Simon in the old terror times when they made the first token rich lists for CV20 tokens, because it wasn't 20 tokens. So at that time there were no token rich lists basically out.
+
+And yeah, we created there a rich list where basically all the different tokens got analyzed and the rich lists were built. And I used it quite often at that time. So this was basically the most important, at least for me, which we have ever built.
+
+Citizen Web3
+Nice, nice, nice, nice. I have another question for you before we're going to go to the Blitz to finish it off. What's because again, it's you spoke a lot about chain agnosticism and you spoke a lot about the tools that you guys build and bare metal and we didn't touch on a lot of topics. Of course, it's impossible, but let's pretend that you did. What's what's the role of a validator?
+
+for you or I don't know, it doesn't matter again how you answer this and we're in which hat, but what is the role of a validator?
+
+Peter 
+Firstly, producing blocks, signing blocks. And I think basically there are several clusters of validators. So for example, we have the old ones that are having this institutional clients. So their role is beside producing blocks and securing the chain, bringing in...
+
+traditional money, traditional finance, bringing in more for our ecosystems. So very important role there. I think we have the infrastructure provider validators, which are creating great tools for other validators, for example. I mean, shout out to Paul Katzscher, for example, with all that stuff he is hosting and helping making our life easier. But also the ones who are providing,
+
+the great RPC services for the foundation and basically making the backbone that the users of the blockchain can interact with it. Then there is the validators of which building tools for community or creating content for community, trying to bring the great features out to a larger audience. So I think besides validating blogs, signing blogs,
+
+every, yeah, there needs to be an add -on. And I think whatever skills the validator teams have, if you look to the other ones in Cosmos, which are doing chain audits or spinning up new chains, supporting new chains being built, it's also a new cluster. So I think, yeah, it's that value add that you need to bring as a validator.
+
+And there are so many possibilities to bring that value adds. And if you have a diverse set of validators where everybody can do what they can do best, that makes a great ecosystem. And yeah.
+
+Citizen Web3
+Could you, would you, sorry, could you, but would you agree that we can summarize that as something like ecosystem development?
+
+Peter 
+Yeah, I think so.
+
+Citizen Web3 
+Okay, let's go to the bleeds then five questions. You don't have to answer them quickly. I call it bleeds, but it's more like a chill bleeds. So the first one is he give me a movie or a book or a song that has been with you throughout all of your life.
+
+Citizen Web3 
+Say again Star Wars, okay. Okay. Okay. Okay. Give me one technological direction such as for example blockchain apart from blockchain itself, which you're curious in
+
+Peter 
+Star Wars.
+
+Peter 
+Uhhh...
+
+Citizen Web3
+Don't think about it as a bleach. Think about something that you'll have in more machine learning. I don't know. Whatever. I mean, for sure, engineering for sure. Right. I mean, coding of specific. I don't know anything that particularly has interest to you, to Peter that, you know, for sure, blockchain today keeps you up reading news, you know, in kind of the middle of the night if you need to. What other technological direction?
+
+Apart from blockchain would keep you up until midnight reading news if the situation arose.
+
+Peter
+So first of all, basically everything what's new and interesting, because I like everything what's new and coming up. And what I really like is to combine them. So I love it that I'm able to have understanding in mechanical engineering, electronic engineering, coding, and that I'm able to build stuff, basically whatever I want. So the sum of everything and everything.
+
+Citizen Web3 
+hahahaha
+
+Citizen Web3 
+Perfect, perfect. Okay, give me in blockchain and one or two projects, please not Polkadot, Nier, Ethereum or Cosmos that have been fascinating in what they don't have to be on the radar. They don't have to be traded. Really, it's not about the token. It's really about a couple of projects. One could be one that you've seen recently that's like, well, this is interesting. I like what these guys are doing.
+
+Peter 
+I mean, I really like Torchain and the idea behind Vizorin really being able to swap or trade native currencies and all their clones which are coming up. So technology which is really can really live without any middlemen and making that possible.
+
+Citizen Web3 
+Okay. Okay. Two slightly different questions. Last ones. One, the first one. What is the motivational things, one motivational thing that you could share with others that keeps Peter every morning out of bed, building dashboards, reading news, curious in technology? What is this one motivational thing? Maybe if there is one.
+
+Peter 
+really the interest in everything what's new and what's coming up. And that's really driving me. If I see something, for example, just a new blockchain project, I wanna know new blockchain. I wanna understand how it's working, how they are solving that. I'm easily motivated, let's say like this, yeah. Curiosity, yeah.
+
+Citizen Web3 
+Curiosity Curiosity Okay, okay. Okay. I like it. I like it. Okay last one. This one is a bit more Obstruct but last one dead alive made up human being cartoon character writer coder doesn't matter Give me one personage or a real person or a cartoon or a movie character or a writer or a coder?
+
+that has been not your guru because I don't think gurus is a good thing but an inspiration for you somewhere or throughout your life or sometimes in your life someone that you sometimes look okay yeah or is there's any anybody like that?
+
+Peter 
+There's not really anybody like that, but I basically am amazed by people who are able to think really far in the future. So it's low hanging fruits are Elon Musk. Or even I just heard an interview with Jeff Bezos, how he sees that production is structured in space, how people will live there.
+
+And I really like people and find it inspiring who really are able not to look 10, 150, 100 years, who really think much further. And yeah, these visions, these visionaries and then how they act and doing everything at least to bring humanity a little bit towards their vision, that's what I find very fascinating.
+
+Citizen Web3 
+Perfect. I love that. And yeah, it's actually a nice interview, by the way, for anybody. And of course, for all the listeners, all those things that Peter mentioned will be linked as show notes under the episode. Other than that, Peter, I thank you very much for your time. Thank you very much for the answers, for sticking with the dodgy questions and the normal questions. I was OK. Thank you, everybody, for tuning in. Peter, don't hang up just yet. Thank you, everybody, for tuning in. And see you next time. Thanks, Peter.
+
+Peter 
+Thanks a lot, bye bye.
+
+Citizen Web3 
+Bye, everybody.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+

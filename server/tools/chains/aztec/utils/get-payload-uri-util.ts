@@ -1,8 +1,11 @@
+import logger from '@/logger';
 import { getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
 import GSE_PAYLOAD_ABI from '@/server/tools/chains/aztec/utils/contracts/abis/aztec/GSE_PAYLOAD_ABI.json';
 import { Abi } from 'viem';
+
+const { logDebug } = logger('get-payload-uri');
 
 export const getPayloadUriUtil = async (
   payloadAddress: string,
@@ -38,7 +41,8 @@ export const getPayloadUriUtil = async (
     });
 
     return uri as string;
-  } catch {
+  } catch (e) {
+    logDebug(`Failed to resolve payload URI: ${e}`);
     return null;
   }
 };

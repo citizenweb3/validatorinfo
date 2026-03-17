@@ -7,6 +7,7 @@ import { ReactNode } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import AiChatProvider from '@/components/ai-chat/ai-chat-provider';
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
@@ -123,6 +124,7 @@ export default async function LocaleLayout({
                   </div>
                 </div>
               </div>
+              <AiChatProvider />
             </NextIntlClientProvider>
             <ToastContainer
               className="!-right-1.5"

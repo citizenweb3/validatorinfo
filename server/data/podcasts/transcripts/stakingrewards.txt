@@ -1,0 +1,438 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/stakingrewards
+
+Episode name:
+Staking Rewards and the First Steps to Understand Blockchains with Mirko and Jannik Schmiedl
+
+anna 
+Hey, it's Citizen Cosmos with Serge and Anna, and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code.
+
+Citizen Web3 
+Good space time to you all. Welcome to a new episode of Citizen Cosmos. And we are joined today by the CEO and founder of StakingRewards.com, Mirko. And possibly we might have other guests as well, special guests. I don't know if they're going to speak up or not, but they are present here in the studio with us, in the online studio, shall I say. Mirko, welcome to the show.
+
+mirko 
+Thanks for having me. Great to be here with you guys and have a chat.
+
+Citizen Web3 
+Awesome, awesome, man. Let's jump to some questions straight away. Usually the first question we ask is we ask the founders or somebody to explain in their own words what is project they do. But in your case, guess everybody understands what it is already. So I guess the question I would have is what are the goals of StakingAwards.com? Who's it aimed at?
+
+everything else you want to add to that.
+
+mirko 
+Cool, yeah, definitely. I think the main goal from Staking Awards is to make staking easier for everyone. that's what we do with Staking Awards. We do a lot of research, we aggregate data, we curate information around staking, and we want to help everyone to get into staking, make it easy for them to start staking, to build their staking portfolio, to maintain their staking portfolio. and
+
+to earn interest on the crypto to earn passive income with their crypto. So that's like more of the long-term goal is coming from stacking. Like in the long-term, we want to help people to earn passive income. crypto is a great means for that, I think. There are so many more opportunities and that's like technology enabled where you just have much better.
+
+interest rates and cutting out the middleman. Like most of these fees, they are redistributed to the users now and that's very exciting for us. And this is what drives us to enable each and everyone to earn passive income somehow and leverage the crypto world to get into building some sustainable passive income streams. So that's more of the broader goal for the next.
+
+A few years maybe,
+
+Citizen Web3 
+I think it's a great goal in my opinion. But, the second question I'm going to ask, which is like a simple question as well as why, you already said, why did you decide to build it? But what's the history? And we also, by the way, the studio have Jannik who's the CTO of Staking Awards. And if you want to end after Mirko, anything to the story and how it began and how it developed, how you guys suddenly just woke up and said, Hey, let's make staking easy for everyone. And let's build that. I mean, surely there is some more.
+
+Citizen Web3
+you know, like detail insights or maybe they, you maybe not, but you guys, yeah. Yes, he's not. I gave him up. So Mirko, Jannik, maybe you guys want to whoever wants to tell the history, feel free.
+
+anna 
+Let's make our secret guess not secret anymore. Straight away, yeah.
+
+mirko 
+Pretty much I was involved in crypto since very beginning 2013. And I was fascinated by proof of stake and staking from early on as well. And I was involved with NXT and other staking coins at that time was still like pretty even more niche and no one knew about it. But yeah, I was investing in lot of coins there and playing around and being involved in the communities and so on.
+
+just had some tokens that could be staked. think there was like ARK and others. I was just fascinated by the full concept there and started to do more research on it and everything. And yeah, created the data set. And having all of that, I thought, okay, there's no resource in the market that tracks where you can start staking, how much you can earn and so on.
+
+Yeah, since I was not that tech savvy, I just asked Jannik to join and build a website for that under staconvotes.com. like secure that domain and then, did some wireframes and so on and just put all the information, all the research that I had on a website called staconvotes.com. yeah, Jannik built that, the first version and we launched it 
+
+I think the first idea when I called Jannik on this was like end of 2017. then in February or March 2018, we brought the first version of it. It was very basic, still like a very different design from what we have today. We probably had like only...
+
+30 users in the first month or even less. There was not much traction and I did like a pulse on bitcointalk.org and trying to promote the website and so on. And yeah, I all of that, tried to get some traction slowly and slowly, but surely we've grown and we've continued to grow it. And since then, integrated like over 200 assets and proof of stake has become...
+
+mirko 
+the go-to standards for almost every layer one blockchain. And we've aggregated a huge data set. Yeah, and can split up all the tech infrastructure there for data aggregation and standardizing the data, cleaning the data, and so on. And we've done all the research around staking and proof stake since all these years. yeah.
+
+probably the most knowledgeable on staking and all the different economic designs and incentives designs in the industry really, because we've looked at everything. We've done the, looked at like which metrics are relevant. We have the real-time blockchain connections and then did all the calculations to understand how do these networks function, like how much can you earn when you stake and how much can you earn when more people stake and less people stake and
+
+what do the transaction fees do to the second returns and all these things. And that's how it was started.
+
+Citizen Web3 
+Jannik, do you want to add anything to the story?
+
+jannik 
+Yeah, sure. So, that exactly was like a challenge from the beginning, all this was new, like all these new economic designs, like, not only having the research on the one hand, trying to understand how all this works, but also, which data do we need, actually? How do we present it? How do we save it? How do we do our calculations?
+
+What is interesting to the users? So what of all these data points should be presented to a user? What do you need to know in order to get an impression of what staking is, how you can stake and so on? Now we have more than 200 dynamic assets integrated on the site.
+
+Yeah, now you can see what is probably important to know.
+
+anna 
+actually the very interesting part of your story, and then Mirko mentioned that, What did you do at the beginning? Because I understand that a lot of people, in that ICO boom,
+
+A lot of people say, okay, we need the platform to aggregate all the possible data from any project in blockchain industry. And pretty much all of them are nowhere now. So tell us about your first step.
+
+mirko
+first step I think it was that like the post on Bitcoin talk.org where I posted and just like trying to get like sent it to my friends and posting it in the Telegram channels and Reddit forums and so on and just trying to get traction there and then Slowly, but surely build up the SEO. I think that was like the biggest focus and I've dived
+
+deep into all the different concepts of content production as well and how to structure the website and everything to make it SEO friendly. I think we managed to quickly get some traction there because it was a niche for staking. There was not much SEO for staking, not much Google entries for staking in general. it was like a thing we could catch up pretty fast.
+
+And then I've just continued to build that out and, started with like generally like building a community having the Twitter and Telegram as well. But yeah, I think the biggest driver was really SEO and just distributing it in other channels, posting it everywhere where we think it could add value.
+
+Citizen Web3 
+How was the first reaction on Bitcoin talk. Did you get trolled? Because usually that's what used to happen on Bitcoin talk, especially back in the days. People just post something and then all the trolls come and just start, nah, we don't like you. We hate you. You're rubbish. Your platform is rubbish. Your project is rubbish. Everything is rubbish. We don't know what you do, but it's rubbish.
+
+mirko 
+I think one of the first requests from Bitcoin talk was like, okay, great, but why don't you have this coin listed? that's something we still have all the time. Like the shill hats of the different communities, they don't see their project listed and they tell us and that's great also, but yeah, that was one of the first requests there, which is kind of funny. But there was also like good general feedback.
+
+Citizen Web3 
+haha
+
+mirko
+from there. Not so much maybe, but it was great just to get some thoughts. I always found Bitcoin talk pretty like of high quality anyway.
+
+Citizen Web3
+I didn't know the guys were that old in terms of when it started because I discovered staking rewards in 2019 I believe I'd not in 2018. And since you said you're in crypto since 2013. I have a question that I must ask. What's the worst token that you bought the worst trade?
+
+Citizen Web3 
+You did because if you've been in this space so long and I know I have as well, so I've been here since 2011 and I've done so terrible, terrible things. I'm even going to name these tokens, but what is one of the worst ones that you remember that you got?
+
+mirko 
+There are quite a few very bad ones. I don't know if I want to mention it now. That's like embarrassing. But There was a lot of shit. But back then it was crazy. I really loved it. There were already airdrops. I remember I had an airdrop from Kekcoin.
+
+Citizen Web3 
+haha
+
+Citizen Web3
+You don't have to, you don't have to.
+
+mirko 
+They did something on Bitcoin Talk as well. It's dropped like 10,000 K coin to everyone who posted there and it was like in the top in 2017 it was worth like, $2,000 or something, which was like quite good actually just for an airdrop at that times. Now like with like Uniswap airdrops and something it might sound like not so much, but
+
+I was fascinated by it because it just blew my mind that you could just get a drop something that's worth like $2,000. Just crazy to me. And it was named cat coin. So it makes it even more crazy, I think.
+
+anna 
+going back to, staking rewards and your users. When you feel that, okay, it looks like we are, become maybe not popular, but we achieve our first, remarkable step is that first 1000 users or what is your big number was at that time.
+
+anna 
+Any specific step then you have in your mind, then you feel, okay, it's cool. We get.
+
+mirko 
+Yeah, I think there were a few steps. I think first time when I realized, okay, there are not that many users, but already like some people that I knew that I was following on Twitter, they heard about the website. I remember like just texting someone and they say, hey, I know your website. It's amazing. That was like the first point where I said, okay.
+
+crazy. Our work here gets noted. it's not just a few numbers in Google Analytics. It's actual people, actual investors finding the stuff that we do valuable and love what we do and always getting the feedback on Telegram from early people who texted us, yeah. What we do is helpful for them. I think this was the first time where I said, it's
+
+It's great. Let's keep going because it helps a lot of people and this is something we are on here.
+
+jannik 
+Also, also what, what I found really fascinating is when we had the first referrals from, some YouTube videos in our Google analytics. so when, we saw, okay, there are actually people talking about our website, l in the beginning, they were really niche. themselves had just a couple of views, but still it was fascinating seeing someone talking about our product. so yeah, this.
+
+This was also like a really beginning.
+
+mirko 
+There was also a post on Steemit, I think, who just put a screenshot of our website. And I thought, OK, that's amazing. I mean, someone like, yeah, screenshotting our data there. Pretty cool to see that.
+
+Citizen Web3 
+I was a top writer on Steemit in summer of 2017 for about three months, I think, can still probably scroll in one of top 10 writers. I was like, I have a slightly controversial question that relates to what Anna just asked. So you were talking about how you grow in and the growth and it's not even controversial, but I guess some might take it as it is. Currently, I mean, if you look at Alexa.com, you guys are like top 9,000 websites in the US.
+
+Citizen Web3 
+and top 19,000 websites in the world, which in my opinion makes you a huge player, especially in terms of crypto. Do you think that because you're such a big player, do you think that you have influence on what staking providers people choose?
+
+mirko 
+Yeah, definitely. I think we play a crucial role for the ecosystem as being like one of the only independent parties there, ranking, stacking providers and so on. Not being directly affiliated with any network or provider. I think people trust us and we do have a brand and reputation that's quite good in the industry. And if we...
+
+talk about something people, it gets noted and it also has some influence on like how people stake. And I wrote this how to stake East guide and it got a lot of traction end of last year. There were so many people reading it and we always try to write it from like an independent standpoint, not trying to share on anything or 
+
+getting on any side or something. But I do think, I hope we help people on the journey on finding good stacking providers and we can help them to find stacking providers who support the ecosystems and also help to decentralize the networks and help to bootstrap the token economies and not just leave their coins on the next change. And it's something where we try to educate a lot.
+
+on like self-staking and rather having tokens on your own wallet. I mean, it still makes sense to have your coins on an exchange for some people maybe, but we want to at least be there to educate them and give them an option to choose and then understand how they can do it and how can they get started with it and what this decision-making process can look like.
+
+Citizen Web3 
+You mentioned exchanges and this is a really good mention in my opinion, because a lot of exchanges have became validators, we see Binance and who will be okay, whatever. And they have huge stakes of course, and in a lot of the networks and some communities.
+
+They say even the go as far as saying, let's tax them, let's fine them, you know, and this is of course not very decentralized, but what's your take on that? because they don't participate in the governance and that's why usually people say that let's do something with it. What's your take on this topic?
+
+mirko 
+In general, I think of course it's good when everyone stakes themselves and if everyone had a smartphone and you can just stake on your smartphone, like everyone in the world and it's like very, very decentralized. I think that's just like on a network perspective, that's not very feasible. So there needs to be some sort of centralization, at least at this point of the innovation cycle.
+
+And there are a lot of exchanges and I think the more exchanges stake, the better. if you compare it with mining pools, like not every exchange was running in mining pool and there were probably like only 10 mining pools for Bitcoin, every exchange doesn't have a hard time to staking. So there are like, a hundred exchanges. And if all of them stake, if we make it easy for them to stake, that's not a bad thing because there's going to be people who want to stake themselves and
+
+rather have this total stake than just playing around and do nothing because it secures the network as well and so on. So I think it can be harmful if you think about exchanges and then probably most of them all use the same white label staking solutions in terms of the infrastructure. So there is probably a big infrastructure risk for the networks if most of these stake is...
+
+at the exchanges because it's not like they run their own validators. It's like they all use the same white label staking infrastructure, So that could be a risk. I think probably the best way for exchanges would be if they would be delegating to validators in the network I mean, it's great that they offer these returns for the users and so on. And the best way would really, if we could find a way.
+
+incentivizing exchanges not to stake themselves or not using white label staking solutions, but just delegate to a certain set of validators in the network and choosing the criteria for that. For example, set by someone from their team or from us or whatever as an independent standpoint and then distributing the stake from an exchange to 20, 30 different validators because they have a lot of stake if they would distribute that stake.
+
+mirko 
+And it's just like a five to 10 % fee, rather handed to someone who does it professionally. Most of the accidents are very inefficient. most of them would actually make better returns if they just delegated their stake. that's the easiest way to do for them. And I don't know why they all have to run their own infrastructure or their own white-label solutions. They can just delegate it and they can do so much to help the network just delegating their stake.
+
+So yeah, I think that's my take on Exchange
+
+jannik 
+Actually, I think Coinless does this. For MENA staking, think they delegate their stake to... Is it Fingment Network? I don't know. I think they delegate at least.
+
+Citizen Web3
+I know Figment Network, of course, but I didn't know that they do that.
+
+mirko 
+but it should probably be like even for coinless be more decentralized in a way that they prove they have a partnership with Fickman and then they delegate to Fickman. But they could also delegate to like 20 or 30 different validators. but yeah, I think that there are like some stacking pools who will do this on chain. And if we could do that also for exchanges like off chain, make it easy for them.
+
+to delegate the stake or distribute, decentralize the stake more. they don't have an interest. usually they don't participate in governance anyway. Then like most of them abstain from the votes. It's like, there's this governance risk, but exchanges are not really interested in it. They don't care about doing that. And if there would be an easy solution for them.
+
+to just decentralize the state more. I don't think there would be any harm and I don't think they are that keen on having all the governance power for these networks because, in the end it would harm themself more, I guess.
+
+Citizen Web3 
+Just to say, I mean, we totally agree on this matter. We think that exchanges participate in a fair game. This is an open market. And I really don't like when people start saying things like, let's tax them, let's fine them, let's, I don't know, take their stake away because that's, my opinion, just the stupidest thing like to get it because you're playing an open market. What's the point of going the old ways and, you're right, let's find ways of incentivizing them rather than finding ways of
+
+punishing them for playing a fair game, to be honest. 
+
+anna 
+Let's, go in that direction. You know, then people try to decide where to give their tokens, where to stake the tokens and they need to make a decision to choose the validator or to choose any custodial agent to give some money. So do you think...
+
+Now, kind of criteria can be valuable for the people or maybe it's some unusual thing like secret sauce? What should be done before for sure done before you decide to stake in can choose validator or any kind of passive income provider?
+
+mirko 
+I think the biggest factor is probably security and having like a performance set up. because that's where I think also many, many ex-genders, they, they lack of having like a very performant infrastructure. they don't emphasize this enough. So most of the professional infrastructure providers or like staking providers, they have very good performance and so on. And yeah, that can saves more like a
+
+Sometimes it's a hidden fee kind of if the performance is bad, but the fees are low. So yeah, I think the general infrastructure setup, performance and security is important. But as long as that is given, it's a matter of yeah, like who do you think adds the most value to the ecosystem? I think that's one of the main factors. Like you wanna make sure, you...
+
+take care of the returns and the security and everything and performance. And then on top of that, delegate to those guys who are involved in the communities who actively help to make your investment more valuable. And I think that's where stacking providers play the biggest role really as also being like kind of developers.
+
+for the networks and doing ecosystem contributions in general, supporting wherever they can or even educational material. You guys doing a podcast, which is great and it helps to build the and foster the community around cosmos and all the cosmos chains and so on. I think it's having there like...
+
+It can be an emotional decision as well. If you think some people are great, as long as they have a good performance and security setup in general. Sometimes it's also you want to look at how much stake they have. You can say rather delegate to validators who have less stake to further decentralize, which is great.
+
+mirko 
+That's important for some people. So if you care about decentralization, it's wise to delegate to smaller validators. On the other side, there are also people who care about the general. They don't want to do all the due diligence and everything. So they just look at, who has the most stakes? So I'm delegating to the guy with the most stake, it's legit in a way because, OK, 
+
+you can't get everyone to do a full due diligence process. And it takes a lot of time going through all the details and understanding what all these taken providers are doing and how they operate and so on. It takes a lot of time. Sometimes you just want to make a quick decision or maybe people don't have time to do it at all. But yeah, think if there's enough time, it's always good to look at who.
+
+who's involved in the communities and who's helping the network the most.
+
+anna
+as a researcher, how do you manage to keep your mind clear and cold when you do some research? Because now some founders and some projects have attraction and you can...
+
+anna 
+you can feel, okay, I love the previous project and so on and so forth. So how you manage to keep your mind cold in the research field.
+
+mirko
+usually I just try to see it like very pragmatically and I don't look at it from like an investment perspective, at least not from personal investment perspective. so, blinding that out. and don't think about, okay, like that's something you, want to invest or like just keeping that, out of it. and kind of boxing it.
+
+into like, okay, now it's like only research and you just want to find out, this a good project? How can you stake it? And what are the formulas? What are the metrics? Where do you get it from? So yeah, just looking at from that perspective, that's like, a standard procedure, just looking at the facts and the logic of it.
+
+it's pretty interesting if you just look at the pure effects of it and you don't think about like the community or everything, you just look at like, how does this network work? Like what's the economic design? What's the formula behind it? And like, how does it change? And so on, just looking at the pure effects and numbers, you already understand if that's a good or legit project or not, because...
+
+Sometimes it's just like some weird stuff that just doesn't make sense there. like, if you notice, like there's not even like a proper documentation or no one from their developer team even knows like how this thing works. Like they are in their core team and they don't even know like what's the inflation rate or what's the economics behind the token that they're working on full time for like many months. 
+
+It's a bad sign. I think it's a question of getting to the pure raw effects as fast as possible. If that's an easy way, if that's a pleasant experience, it's usually a good project. But yeah, sometimes it's tricky. Everything is so different. But it's a fun journey looking at all of this. in general,
+
+mirko 
+probably for the research, not doing it as much as I did before anymore, but I love to do it. just going into like a state where you just focused on one thing is always a good thing, not being distracted and, turning off telegram and everything and just looking at one thing and going through like all the blocker explorers and going through all the data and everything that you can find in forums and so on.
+
+mirko 
+the journey, just, having like one goal, I think, in like getting the, the hard facts and the, the right data for project and don't stop until you have it. and don't get distracted. I think, turn off all these social media stuff. 
+
+Citizen Web3
+Can you remember what was the largest amount of projects you had to analyze in a day or a week or whatever period in the top that you had to go through?
+
+mirko 
+That's a tough question. I don't know that that was like a lot of projects sometimes there are like a lot of launches coming up and like a certain period so we try to cover them as soon as possible, but Yeah, that's not always possible Just because of limited resources, too in general like we do have a list of still like we have over 230 assets integrated on our site now and they're probably still
+
+mirko 
+around 60 or 70 that are on our list that we want to get integrated. there are a lot that we are working on. And then it's a matter of prioritization. But it's fascinating. Every day there are new interesting stacking projects that I learn about. And I love it. They're spawned more like not only layer one.
+
+proof of stake, staking with so many more staking concepts in the DeFi world as well. I just found it very fascinating that there's so many more staking concepts coming up and so many more use cases for staking as well. So, great to be around.
+
+anna 
+Do you think that device taking is correct term?
+
+mirko
+So far, I like the term proof of stake staking and DeFi staking to differentiate between something that's responsible for the layer one security of a network as proof of stake staking. And then DeFi staking is more of like a kind of dividend distributing way of staking.
+
+But then there's also like the, example, RV, you have the safety module staking. So it's also responsible for the safety of the network and it's some sort of default staking. So it's not really like about validating transactions, but it's about, providing collateral to secure the network as well, which is the same as proof of stake staking. So this can get slashed in proof of stake and it can get slashed for the safety module stake in RV, for example.
+
+There are others, think Nexus Mutual has a similar model and like these, there's more coming up like this. I found it fascinating. And in general, I see staking as pretty universal broad term that's new since we have, since this came up in the crypto world.
+
+And now it starts to getting like more adopted from so many. And I think it's beautiful. love the word staking and having it is not only proof of stake, but also for like everything that's DeFi and using it as a, distribution of dividends and collateral to secure DeFi protocols. It's great. And it's the same concept.
+
+Citizen Web3 
+You mentioned distribution quite a lot and I can see that this is a topic that you enjoy in economics and I have a bit of a strange question. I'm going to try to phrase it. So a very hot topic among like most founders among crypto projects is distribution because we understand that that can lead to many, many, many bad things later on in the stages. and
+
+not just extensions, but a lot of big players like exchanges. They have those big stakes, they get some airdrops, you know, and then projects, what they do, especially lately with DeFi, they have all these innovative methods to kind of try to eliminate people obtaining too large of a stake.
+
+like liquid mining, or, et cetera, et cetera, et cetera. Like there was a lot of distribution methods these days that are being every day we see new and new methods. What's your take on that opinion on distribution models in general? Do you think that there is a perfect distribution model? Do you have an idea for a perfect distribution model? Do you think it's not important?
+
+mirko 
+I think the distribution is very important. It's probably one of the most relevant points for any crypto network. But also, you can't help that distribution will always kind of naturally collude in some way. And it always centralizes as well. People who really believe in something and they're always early believers, they will stock up.
+
+early on and, I think as long as there's like a lot of liquidity and a lot of traction, then it's like maybe less important to have a good distribution, but especially like for bootstrapping networks, like the early distribution is so important, probably the most important overall to have the right incentives to make something big once it's big.
+
+It will get redistributed anyway. It will collude anyway as long as there's liquidity and traction. but yeah, for the initial phases of anything, any economic model or any crypto network, the distribution is crucial to get it bootstrapped at all, because you want to make sure that those people have the biggest stake who can make something big.
+
+to get the liquidity and to get the traction. that's my take. It's important to distribute it to people who can provide liquidity and who can make something noticed and get traction.
+
+Citizen Web3 
+Yannick, you want to add anything to that?
+
+jannik
+No, actually, I go with Merkel's take. I really find it important. As long as liquidity is there and it's not clumping or is not being moved or anything, it's good.
+
+Citizen Web3 
+Hahaha
+
+Citizen Web3 
+I just, think like it's big, huge topic. There are a lot of projects just really don't take into account as much as they should do. And you guys see, I would assume more economical models than anyone else in the field. I would assume with all the analysis you have to do and you know, like you said, you choose the projects and have you seen them Mirko like a project that you would say, okay, that project has a really good distribution model. can you, I don't know if you can name such projects, if that's
+
+too much biased or something like that, or can you or maybe a bad distribution model the opposite? Like you saw like, my God, that's the worst distribution model I've seen. You know, do you have anything like that in mind? The good or bad one?
+
+mirko
+there are some good and some bad. It's hard to tell like there's like the best or like the worst or something. in general, I think it's very important to have the right incentives, set for the right stage of the protocol. it's something that, moves naturally. Like if the network evolves over time,
+
+I mean, a lot of networks, they do adjust the inflation based on a time schedule, which I think doesn't make sense really, because it should rather be set based on, traction schedule and liquidity schedule to make sure that, there's always the right amount of people. because you like the inflation, it should always be like the bare minimum in order to,
+
+incentivize enough people to have a very strong functioning network that's very secure and that functions fast and validates everything correctly and so on. So that's my take. think time distribution probably doesn't make sense, should be more based on what's happening in the network. And I think there are some...
+
+NIA is doing it quite nice where they offset the inflation by transaction fees. I find it cool. Ethereum is trying to do something similar there where they also offset the inflation now from transaction fees. So I think that's just a smart way to do. And there are many different implementations of it. Obviously, you don't have all the transaction fees in the beginning. So you 
+
+want to make sure that there's inflation to pay the costs for bootstrapping the security of a network, making it strong and resilient from the beginning without any traction. But I mean, general, if there's economic designs that can foster the traction faster, that's also good. So if there are economic designs built into the networks that
+
+mirko
+having an economy directly built on the blockchain inside the networks. I think that's probably one of the smartest designs. I'm thinking about like the currencies. No one has done really like a lot of currencies. I think there's still like a lot of potential to do that more where you actually...
+
+get the real economy more involved with the economics of the network. For example, in the Terra ecosystem, have the UST. It's backed by the whole Terra economy in a way as a collateral for UST. So that's dependent on the growth of the economy. But if you could even create a currency where the price
+
+or the supply changes based on the economic activity. Let's say you have more transaction happening on Monday afternoon compared to Sunday night. So you want to have maybe more supply of the overall network on Monday afternoon and less supply on Sunday night. So you still have a stable price.
+
+finding there. I would love to see more experimentation with that, actually getting the real economy and transaction. And that's beautiful about blockchain. Everything is on chain and you can really even private without exposing anyone. coupling those together, like the economic design of the network and the actual economy, this is something
+
+I find very interesting and like the offset of transaction fees and everything that's first steps into that direction, I think.
+
+Citizen Web3
+But do you think this all should be optimized? mean, like the AB real like time testing, because most of the networks are parameterized, we can see with governance that
+
+Not really, but people don't really want to vote, let alone make proposals like to change the parameters of the computer. Let's say change the inflation or something else. So, but if it's hard-coded, then it's kind of not really decentralized, but if it's not voted on, then it's not going to happen. So what do we do with this? Like, how do you solve that issue where, we, we, I don't want to say the word make.
+
+make proposals and vote of them, even if those are really important economical proposals. But how do we push that thing to really work where the A-B testing really, like you say, happens in real time and the network understands, okay, we really need to ask the people if we need to change the inflation now or it's going to be too late. How will it work in your opinion?
+
+mirko 
+because of AB testing is pretty interesting. I mean, imagine you have a network and just randomly selected 50 % of the network get 5 % inflation, the other 50 % get 3 % inflation. And then what's going to happen is like, the ones with 3 % are they unstaking or the ones with 5 % are staking more or whatever. This would be very interesting to have some kind of AB testing on the blockchain directly. but
+
+I also don't know if that's feasible, but the question is, it's all technology. can program that into something, so you can make them very smart, these systems. a lot of people say the simpler, the better. It's always like, you want to understand, but also like, you need to understand it? I don't know. I get confused by over-engineered networks. Like, don't know, Cardano is...
+
+like very complicated, they have a very like sophisticated economic design and they thought about everything and every parameter and you can adjust them and so on. it's also pretty, makes it just complicated maybe. So I don't know what's the best approach there. If you could find a system that's very easy to understand, but still very sophisticated, that would be the best solution, I think.
+
+I like the concept of A-B testing. Maybe that's something to explore for some blockchain developers out there. 
+
+Citizen Web3 
+Easy to understand this definitely not about Cardano. I just have to say that, you know, but I mean, I love that religion. It's a cool religion. It is the religion, right? They have, they have an icon that they follow. mean, no, I love Cardano personally, but will it work? had to see, right? So.
+
+anna 
+Hahahaha
+
+mirko 
+Hahahaha
+
+anna
+Yeah, and just I want to follow the question. Let's slightly connect to Cardano and all that scientific works. If someone really wants to understand the economy modeling behind the blockchain projects, where is the best idea to start the journey?
+
+Maybe the best idea to start from Bitcoin white paper. Yeah, we all know this recommendation. know, someone just say, okay, you have to start from Bitcoin white paper. And what else? What kind of sources do you recommend for that specific field?
+
+mirko 
+Hahaha.
+
+jannik 
+then directly jump to Cardano white paper.
+
+mirko
+Yeah, probably that. mean, white papers are good, but they're also complicated. if you started the documentations as I mentioned before, sometimes they are not even updated. It's funny that sometimes the documentation doesn't match the actual economic design and sometimes the team don't even know it. So it's not easy to go into the economic design really. Sometimes it's pretty straightforward, but sometimes it's also pretty tough.
+
+If you want to have it as accurate as possible, you need to go into the GitHub repositories. If you want it as high level as possible, there are often explanations on the websites and so on. I mean, we also try to explain these economic models in a basic concept from our website in the FAQs and editorial content and so on, just as an educational tool.
+
+We have the calculator on the website as well where you can slide and then see how much are you making if only 20 % of the network is staking, how much are you making if 80 % of the network is staking. So that's pretty interesting. So we try to make that easier on stakingwots.com. but, if someone really wants to go very deep into it, it's best to go to the documentation or white papers, I guess. it's a bit more of digging 
+
+Citizen Web3 
+I want to consider and this is citizen cosmos and Of course one of the main topics of the podcast is cosmos and the interchain
+
+Citizen Web3 
+And I can see that you guys, you know, list a lot of the providers, including like us, for example, Citizen Cosmos and some of the top providers like Figment Network that you mentioned, P2P, Validator, don't know, whoever else. Not that I'm trying to mention anyone in particular, but just the first ones that came to my mind, sorry. a lot of them do work with Cosmos or with Cosmos Chains. What is your opinion on the Interchain, on IBC, on...
+
+whole interoperability thing.
+
+How do you see that developing?
+
+mirko 
+it's great. think Cosmos is like, it has the most traction from all those projects. And there's so many Cosmos chains who are already massive in scale. And there's so much innovation happening in Cosmos, which I find fascinating. on the different chains. I can name like all of them, like almost every Cosmos education has like some very, very interesting concepts.
+
+start and it's like secret network, a cash and Tara, everyone really. I, found it fascinating that there's so much innovation happening. and it's also a great community, I think. I love the osmosis and the IBC anyway, which is great. I tested it and it's, it's very smooth. it
+
+works like a charm, making a transaction from one chain to another. And that it's amazing, right? And that's the first time you realize, okay, like these are different blockchains, but you can just very easily without any intermediary transfer in between them. It's very, very fascinating. So I'm impressed by the state of the...
+
+Citizen Web3 
+It works!
+
+mirko
+cosmos ecosystem and how far it has come. that's probably still the start here. maybe there will be challenges in like bridging it to other ecosystems or like competing in general with like Ethereum or others and maybe challenges on like the cosmos hub in general for the atom token, which I don't.
+
+see 100 % yet, like how that plays out in general. I'm very optimistic, because that's something you just can't dismiss, like all the innovation happening here. And that's something it's just gonna compound and become more, I think. So Cosmos is not to stop anymore.
+
+Citizen Web3
+Interesting that you said, IBC works. It's true though, you know, I remember like, because I've been following Cosmos documentation since like the beginning. And then I remember like when, Like three months ago, the actual osmosis came out and you could like, wow, it works. oh my God, it's really there. It's like, nobody lied to me, but what's your thoughts generally about like interoperability because
+
+Citizen Web3
+there is so many projects like Polkadot, like Cosmos, like Ethereum, mentioned, know, Solana and so on and so forth that are building ecosystems, right? If I could call it that. Do you think they're all going to one day interact and we're going to see like the massive internet of blockchains or that's not going to happen?
+
+mirko 
+I think we will. It will probably not be like thousands of blockchains, but I can see like a, universal of multi chains. it just makes sense. There different use cases, economically. And so far, like what we have explored with the use cases for blockchains in general is like only, 
+
+maybe 2 % of what's potentially possible there. So this is like still very open and there are so many more use cases. we have like, NFTs and DeFi, that's all we have. And there's so much more to come and thinking about all this, it's gonna be huge, I think like the whole, the economy, everything will be based on networks and blockchains.
+
+Most of it will be gamified. if you think, we're living in a metaverse and there will be different blockchains. And I think everything will work together probably very seamlessly and have different use cases and, different innovation drivers. And maybe even it's easier to build one app on this blockchain compared to another blockchain. There are also different...
+
+smart contract languages and different developer communities and yeah, different like one chain is more secure, one is more faster and so on. It just depends on like what kind of depth you want to build or what kind of general tech product you want to build and then you decide where it doesn't make the most sense to deploy on obviously you need, 
+
+traction and the composability and everything, but I imagine there will be so many bridges, not only within the Cosmos ecosystem, but you have all the other bridges as well and they will become more decentralized. Most of the bricks are still very centralized, but then yeah, something like Torchain is very interesting. like, yeah, it brings everything together.
+
+mirko 
+It's fascinating to see stuff like this, but it's still very early and Yeah, there will be more utilization of all the different Blockchains, I think and they will all be connected
+
+Citizen Web3 
+For Sure, think decentralized bridges is something everybody's looking forward to, finally see something that's really decentralized bridge and not like a multisig of very important people, you know, so which is sometimes like get salts for a bridge and you're like, but just a multisig out of three or four people or five people or whatever. And you're like, that's not a bridge. we're going to ask our like traditional questions, but I think so I'm going to ask both of you and you could like say whatever you guys want.
+
+So the question is a bit vague, but so you feel free to give any answer. What are some of the resources that motivate you in your day to day life not just necessarily in crypto, but it could be books or book or music or people that you read, GitHub pages, podcasts, don't know, whatever, white papers, whatever something that you would want to share and say, guys, go do that. And your life will, really improve or not improve whatever, but something that, that you do every day, read people every day, or maybe not every day, whatever.
+
+mirko 
+I love to do meditation. I don't do it as much as I would love to, but every time when I do it, I'm blown away by the, state of mind and how focused I am after meditation. And, it also helps for creative thinking and everything. So I can, recommend it for everyone. I love it. I also love,
+
+just going out sometimes, just walking the dog and, strolling around, being in nature. That's a lot of inspiration for me usually.
+
+jannik 
+Yeah, for me it's definitely also nature, like being in the woods, being in the greens. this is really calming. Every time I go hiking or anything, it's like, whew, total reset. yeah, I can definitely recommend doing that more.
+
+anna
+Sorry, I cannot keep this covered. What kind of dog do you have?
+
+Citizen Web3 
+Ha
+
+mirko 
+Actually, it's not my dog, it's from my girlfriend and she has like a border collie Australian shepherd mix. But he's very smart and fast. I love to work with him, he's very fun.
+
+Citizen Web3
+Hahaha.
+
+anna 
+Wow. It's super fast.
+
+Citizen Web3
+Awesome, that's cool. Guys, thank you very much for taking the time. I know you're busy guys and you have a lot of businesses and platforms and projects and validators and users. And I don't even know how many other actors are writing to you. So really thank you for taking the time to come and record the show. a huge pleasure.
+
+anna 
+Thank you guys, and bye.
+
+mirko 
+Thanks very much. I appreciate it. And thanks for your time as well. And thanks for having us.
+
+jannik 
+Yeah, thank you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

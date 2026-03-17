@@ -1,7 +1,7 @@
 import { Abi } from 'viem';
 
 import logger from '@/logger';
-import { contracts, getL1, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { AztecChainName, getContracts, getL1, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import getCurrentEpoch from '@/server/tools/chains/aztec/utils/get-current-epoch';
 import { getChainParams } from '@/server/tools/chains/params';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
@@ -22,8 +22,9 @@ export const getTotalProverRewards = async (chainName: string): Promise<bigint |
       loggerName: `${chainName}-apr-prover-rewards`,
     });
 
-    const rollupAddress = contracts[chainName as 'aztec' | 'aztec-testnet'].rollupAddress as `0x${string}`;
-    const rollupAbi = rollupAbis[chainName as 'aztec' | 'aztec-testnet'] as Abi;
+    const l1Contracts = await getContracts(chainName as AztecChainName);
+    const rollupAddress = l1Contracts.rollupAddress as `0x${string}`;
+    const rollupAbi = rollupAbis[chainName as AztecChainName] as Abi;
 
     const currentEpoch = await getCurrentEpoch(chainName);
 

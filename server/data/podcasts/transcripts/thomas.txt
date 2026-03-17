@@ -1,0 +1,414 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/thomas
+
+Episode name:
+Foundations, Quality Infrastructure and Batman with Thomas High Stakes
+
+Citizen Web3
+Hi, everybody. Welcome to a new episode of the Citizen Web3 Podcast. Today, I have Thomas from High Stacks and Thomas, hi, welcome to the show. How are you?
+
+Thomas 
+Hi
+
+Thomas
+Okay, thank you.
+
+Citizen Web3
+Glad to have you on. So before I'm going to go and start interrogating you, no, I'm kidding. Just normal, easy questions. Can you please for myself, for the listeners, introduce yourself in a way that is appropriate to you? Tell me in the listeners all you want us to know about you and what are you working on maybe and how you got into Web3, if it's of course appropriate for you.
+
+Thomas 
+Yeah, sure. So as you said, I'm Thomas. I am one of the co-founders of iStakes and I guess could be considered as the CEO because I handle all the administrative stuff and legal, all that. But I mean, we are three in the company right now and we all take the decisions, you know, jointly. I don't impose my views.
+
+just an honorary title. So IStakes is a registered company in Switzerland. We registered it in 2022. Yeah, yeah, that's it. Because essentially we had started validating Terra, you know, the first one, and it was going great, not really great.
+
+and it was generating a crazy amount of money so we were like with Joe, my younger brother actually, we were like yeah we can't you know absorb these amounts of money personally we need to create a company which we did so it was great until it wasn't so great.
+
+we did the exact same mistake than everyone keeping all the Luna and the UST because it was gaining value and so in a couple days we saw like about a million dollars that just vanished so yeah we're like okay so well let's start again
+
+Fortunately, in the meantime, we had started other validators. We had entered persistence, band protocol, even injective cosmos. So we had the resources, the ability to keep going. But of course, we had to review and put on hold our render.
+
+Thomas 
+plans, which is so, yeah, initially we decided to create this to go into the cryptocurrency. So we've both been interested in that on and off over the past years. And Joel had set up a validator on Terra and he had also a day job, you know, he's an IT engineer at a private bank in Geneva. So
+
+His days are pretty full and from our part I was a sales engineer in IT as well and I was really bored out of my mind with the job so he proposed me to join him and to handle the technical part and also development. yeah, okay let's do this.
+
+Thomas 
+And yeah, no, honestly, I don't think I will ever go back to holding a regular job again, because I'm too used to being my own boss. So Yep.
+
+Citizen Web3
+Let me dig it a little bit. I'm going to dig the story a little bit. first of all, I'm curious, how did you, I I understand like there was an opportunity that you guys saw and then you took it on and you were interested, but how were you around it? mean, nobody just wakes up and goes, I'm a fancy being a validator. mean, what was the initial, like, how did your crypto journey start?
+
+Did you find out about Bitcoin, about Aram, about Ethereum, about, I don't know, Dogecoin, whatever? When did it happen? When was the switch before the validator?
+
+Thomas 
+long ago actually, Bitcoin of course, we are both geeks, so basically we got involved with that, but I was always put a little bit off by the proof of work mechanism, all the energy consumption, which is,
+
+It's a more complex issue than that. But I also grew up with video games and I was a little pissed that for several years you couldn't buy a GPU because of all the miners and also... So when the proof of stake mechanism appeared, I was very interested in that. So...
+
+Yeah, of course we do own some Bitcoin as well, Ethereum and all that, but our primary business is really the Cosmos ecosystem. This is what we are good at, what we know, what we believe in.
+
+Citizen Web3 
+And you mentioned briefly, you said you are three people. And if I'm not mistaken, I usually don't like to go into vanity numbers, but this is quite impressive. So I'm going to ask not from terms of vanity, but from a perspective of success, in my opinion. I think your website currently says you have 85 million in TVL or TVS, whatever you prefer, total value secure, total value locked, staked with you.
+
+and you're currently three people that is very impressive results.
+
+Thomas
+Yes, well we are still a very minor validator in this ecosystem. I guess we did pretty good. Of course most of the TVL we have comes from foundation delegations. We can't make this up. But we are in a rather solid position today after actually a couple...
+
+years that were bit complicated, know, particularly in Cosmos, we were like 175 to 180 in the active set, so it was very complicated, you know, we had to inject more funds into this value data to remain afloat. But we have progressed a lot. So
+
+To us, this is just the beginning really. We plan on really becoming, you know, maybe the size of a Polkashu or that kind of company. So the fact that I'm doing this full time helps a lot because I can handle the infrastructure. can get involved with new project. Be here actually, no exist. When you do that just as a side.
+
+as a hobby, well you can't really be very present so that's one advantage. Another thing is that our third member Bruno who joined us maybe a year and a half ago, he is a French CEO of
+
+his own IT company, you know, it's a mid-sized company. I think there are 10 or 12 people in the south of France. So he has like 15 years of experience in managing a company. So it brings us a lot in terms of strategy, know, administration, all that. And he also provide his own resources, know, he has his own developers.
+
+Thomas
+like a backend or mobile developers. We'll get to that a bit later. But he has iOS and Android developers that he can put to work on our own projects. So that's really a lot of fun.
+
+Citizen Web3 
+I mean, it's a very, like I must say from, I've been speaking to validators for many years, to be honest. And it's a very, very impressive result. it's good that you guys are doing that. And I have a question for you in that term. You mentioned a foundation's delegations. Why did you guys decide? I mean, usually let me go step back here. Usually, know, a validator can choose either you work for retail.
+
+You work for foundations or you work for whales, I guess that's the third option, right? And why did you decide to go for foundations? Was it something easier for you? Was it, I don't know, what was your reasoning to go this way? Because I can relate to that, but I'm curious what's your reasoning here.
+
+Thomas
+Actually, we don't focus on foundations. We do focus on retail. Our aim is actually to have as many small validators as possible. Wails are good, except when they go away, because that stings. Foundations were the fastest way of securing a position in an active set.
+
+Citizen Web3 
+Okay, sorry.
+
+Thomas 
+In particular, for example, on Injective, you honestly you cannot enter this chain anymore because it requires way too much money. So our strategy was to make ourselves useful, providing services, providing interfaces, tools, whatever to the teams so that in reward they would
+
+give us a delegation. mean it's the usual mechanism you know everyone does that but it's not an it's not the final objective to us it's just a means to to secure our spots and while we have it we have that we can focus on getting more people to to delegate with us.
+
+Citizen Web3 
+I know it's kind of like a beat up question, what's your, know, and considering, you know, you're what now three, four, four years, I guess in this three and a half, four years in this, and, you know, seeing delegations come, go, you understand the mechanism. What would you tell validators that are starting out now?
+
+and looking for foundation delegations to avoid. What would you tell them not to do?
+
+Thomas 
+Yeah, I guess right now the most efficient way will be to get involved in new projects rather than trying to yeah, because because I mean, if you want to become a digital on Cosmos, it's it's complicated unless you have access to to well to to really launch capital. So
+
+Citizen Web3
+Test Nets.
+
+Thomas 
+Yeah, probably getting involved in test nets, in new projects, some of which will not yield anything. Others, that will be very profitable, mean like Celestia, Dimension. So yeah, I think that's the sound best strategy.
+
+Citizen Web3
+Let's go a little bit about chain selection. It's a topic I haven't actually discussed for a while properly with validators. Forget about starting validators right now. Let's talk about you. How do you guys select a testnet? What's your criteria when you come in and seeing... don't know. Somebody hands you out 10 testnets, right? And you can only select three. What would be the...
+
+the criteria you are looking first of all in those test nets.
+
+Thomas 
+We've made it our philosophy, basically, from the start to only get involved with projects that we are interested in, that bring value, that are special to us at least. We don't get involved in some stuff that does not...
+
+we don't like, we don't think it brings any value to the ecosystem. So typically, I'm not a fan of NFTs at all. There are use cases like licenses, but for now, the only change that is interesting to me that deals with NFTs is the new one, Story Protocol for the intellectual property.
+
+That's a dissentious case. But all the financial platforms that are only doing just another iteration of an existing system, it's not very interesting. So we just focus on the things that we believe are worth it. Of course, when we also can...
+
+getting to them because for example, dy dx we would have loved to become a validator but we tried but we couldn't stay in the active set so we validate a number of chains and a lot of them we actually lose money because they are not profitable but we
+
+we want to assist the teams in their endeavors to try and help them achieve their objectives. So for example, there is one which is called provenance, which we have been validating for, I don't know, over three years now. And yeah, we haven't earned a single cent over it because, but I am...
+
+Thomas 
+confident that it will become really interesting, it will achieve something of value.
+
+Citizen Web3 
+What about something else apart from, I mean, there doesn't have to be something else, but I'm curious whether there is something else apart from an interesting product and curiosity, personal curiosity. do you have, I mean, not necessarily, but do you have any metrics? Like, I don't know, let's say amount of developers or I don't know.
+
+protocol development or social metrics or you guys don't go that way like and do hardcore metrics for selecting a chain.
+
+Thomas
+Yeah, no, nothing that complicated. It's more about a broad assessment, reading the white paper, looking at the social media, seeing how the team communicates, if they are available, know if we can talk to them or they will just... A lot of people, you know, will...
+
+dismiss anyone like you were just a hobo asking for money. there's a lot of parameters but it's not very strict, we don't have a matrix.
+
+Citizen Web3 
+Yeah, I understand. I'm curious because I noticed that, I think, chain selection, and it's such a widespread process for different validators. And I've noticed actually that sometimes you have smaller validators who are way more focused and make it way more difficult to select a chain. And then you have the bigger validators who are just validating.
+
+whatever they come to validate. You mentioned at the beginning that you aspire, aspire, maybe a loud word aspire, but you are looking at becoming somebody like the size of Polkachu. Why necessarily Polkachu? Why necessarily that size?
+
+Thomas 
+No, that's an example, but we really aim at becoming a bigger company. When we started, really, we had a plan for the future, specifically to develop crypto in Switzerland, because we are in Geneva.
+
+when you see each morning in the traffic jam, people that are driving, you know, Audi's R8 or Mercedes AMG, you get the feeling that they may have a few, you know, some money to put in crypto as well. So there is a really large amount of money, you know, funds.
+
+that we believe we could tap into and bring that to crypto and make people realize that crypto is not just for people who want to speculate or it's not just a larger Ponzi scheme. It also has actual value and can bring something to the general public.
+
+So there are use cases. I in Switzerland, there is an application that allows you to make payments. You if you go to the restaurant with a friend, you can just straight from your phone, let someone pay and just pay him back. You know, you're sure just with a click in your phone. It's easy. You just transfer a Swiss francs. And I mean, we can absolutely envision.
+
+something similar but with crypto, know, just transferring tokens and that's it, paying in shops. So that was the plan, but we had to, you know, with the terror crush, had to switch direction pretty fast, know, try to be flexible and the objective was survival.
+
+Thomas 
+for a while and then it's still our objective but probably in the next few years now. We need to consolidate our position.
+
+Citizen Web3 
+So would you say the goal, the vision today is to adoption? Is that what you're saying basically for you, for the validator? That's where you're aiming, right?
+
+Thomas 
+Yeah, that's... I mean, I know it's... don't think we're even close to this, but by a long shot, but I'm still hopeful that it will happen sometime.
+
+Citizen Web3 
+How, in your opinion, do validators contribute to adoption of cryptocurrencies?
+
+Thomas 
+Well, making sure that the chains are working. Now, today, think one of the major main challenges is when chains are down because there is an upgrade, because there is whatever critical issue that cause us to stop the node. I mean, if you imagine someone who pays in ATOMs or...
+
+or whatever token and you're like, okay, well, I can't pay because the chain is done because we're waiting for Binance or Kraken or Coinbase to upgrade and I think this is one of the main obstacles.
+
+Citizen Web3 
+That sense. Do you think that there are other ways where that validators contribute to adoption? building tools or spreading amongst communities the information about the chains? mean, it sounds like those are also liable ways, right?
+
+Thomas 
+Yeah, absolutely. the main issue I think is that as validators, we tend to be very technical. when we think of tools, of systems, software, we design them based on what we know, what we want, what we like, which is usually not at all what the general public wants. So it ends up being
+
+overly complicated or a great platform that will be used by 100 people monthly. not great. And actually this is what we aim at doing, trying to make it easier for people, for stakeholders, for others to manage their assets and to keep an eye on them.
+
+which is why I was mentioning earlier that Bruno can provide iOS and Android developers. That's because we actually are building a mobile application for users to get notifications directly on their phone and just notifications for all the chains that they follow. For example,
+
+getting being alerted when there is a new governance proposal in voting period when the team will assure something of they give important you know an announcement without all the the usual noise you know you are probably in dozens of discord groups telegram channels and you get hammered constantly with at everyone tags and that kind of thing so this
+
+This application lets you really filter out the noise and only get relevant information. Plus, and maybe that's the main feature of this system, is you can link a wallet. So you get alerted, notified on the phone each time an event that you selected.
+
+Thomas
+happens on your wallet so it can be your validator has changed his commission, that's something that's important. You have received tokens, your tokens have been delegated, or your validator has been jailed. Instantly you get the notification on the phone and since you have decided what you want to be notified of,
+
+you know that every time that you get some notification, it's something important. So.
+
+Citizen Web3 
+You are sorry, it's called Steely, right? Steely, Steely, Steely.
+
+Thomas 
+That's it. Yeah, so it's still a very early version and with a few chains supported But we are actually, you know, really working on this making the UX better We will We plan on adding new chains as soon as possible So Yeah, and surprisingly this is something that doesn't really exist
+
+for the moment. There are other systems like Notify but you need to provide an email address, telegram handle. mean, Steli is absolutely anonymous. It's the Web3 privacy standard. So the association of the wallet is made only with the physical ID of the phone.
+
+You never need to provide any private information. So it's a pretty novel application, I think.
+
+Citizen Web3 
+Is it something you guys builting from scratch or is it based on something existing like Web3 alerts out there? Is there something under the hood?
+
+Thomas 
+No, it's really from scratch. The back end is actually Jorard who designed it. to be honest, it's well, well above my pay grade. I don't understand anything basically to what he has done. But it's some kind of crazy indexer.
+
+Citizen Web3 
+Last question about Steli from me here. Do you guys plan to open source it or do you?
+
+Citizen Web3 
+the application itself, do you guys plan to open source it or is it not or is it something that you don't think is you're gonna do it?
+
+Thomas 
+Probably not. Maybe we could open source part of the backend. But since there is no connection to any wallet, don't need to sign a transaction or whatever, so it doesn't feel necessary to audit or open source it because...
+
+assets are never at risk. It's just a red only basically.
+
+Citizen Web3 
+Why, by the way, Cosmos? didn't ask you. you mentioned and it mentions it straight away on your Twitter profile on high stakes on the website. It mentions that we are not just home with Cosmos, we are concentrated on Cosmos. So I'm curious why only Cosmos and why it started with Cosmos, why it started with Terra? I mean, why not anything else?
+
+Thomas 
+well, mean, it's the proof of stake is what we went for initially. And well, I guess the Cosmos SDK, all the consensus mechanism just appealed to us. And we do have a very strong expertise on this particular software.
+
+now so all our infrastructure, all our monitoring, everything is really tailored for the Cosmos Nuts. We are actually thinking of expanding to other ecosystems but for now it's just a plan.
+
+Citizen Web3 
+And what's I mean, you mentioned the goal of high stakes. What's Thomas's private, private, not private, sorry, but what's Thomas's personal goal? Where are you heading with this? mean, okay, the validator, hear you. This is what you want to do. This is what you want to achieve. What does this mean for you? Why is it important for you in the first place?
+
+Thomas 
+I hardly think of this that way but essentially you know maybe building a company hiring people you know well making allowing people to to earn money thanks to the work that I will have put but I mean I don't I'm not particularly interested in
+
+becoming a millionaire, like you see all these guys on Twitter. It's more of the work, know, participating into this grander scheme.
+
+Citizen Web3
+It's interesting because you mentioned again, Polkachu and bigger validators. like I said, we talked to a lot of validators over last five years and not only, but just on the podcast. It's been almost five years and we were lucky to interview P2P, Steakfish five years ago, four and half years ago. And I'm always curious to try and see what kicked off.
+
+validators are doing today. For a lot of people, I'm going to try to make it into a question, but I'm going make it more of a statement and then see if you have any feedback for it, if it's okay. From a perspective of somebody who uses blockchains a lot and consider myself an active user, so to speak. One of the biggest questions that I've
+
+noticed from fellow users is, okay, if I believe or if I were to assume that blockchains are those digital nations, that we are all citizens who are validators, and the first answer comes to the mind is like, are one of the main entities, they are one of the main businesses. And then when you see a bull market and you're in a bull market where, and we are a validator as well, so I can totally relate to that, validators start to earn a lot of money.
+
+at least some of them, know, and even per hour, you know, like a lot of money. And then the first question I ask myself as a citizen, where is this money going towards? You know, like, what are they doing there? What are they doing in their homes? And I ask myself those questions. So this is kind of like, I guess there is no question here, more like a statement to see what you think about with that. like this is where why I'm kind of asking, what is it for you? What is it there? What are you thinking?
+
+I don't know if you have any comments here or any feedback. So it was just like a general statement. Sorry.
+
+Thomas 
+Yeah, I mean, yeah, this is the biggest validation, they must do a lot of money, that's for sure. They also must have pretty serious costs, you know, I mean, again, Polkasho for example, with all the services that they provide, all these snapshots, I mean, it must be staggering.
+
+Citizen Web3 
+most certainly.
+
+Thomas 
+So we managed to keep our costs pretty tight actually because we could spend money on everything but it's not very sound for a company. We need to keep our cash flow healthy so that we can finance actually our further projects. In particular that means
+
+hiring new people and we would like to hire people in Switzerland and that's not cheap really. So yeah, mean it's a very common criticism that we hear from users that validators are earning too much money, are dumping the tokens in the markets and
+
+Citizen Web3
+Of coarse 
+
+Thomas 
+I mean, yes, I guess that's partly true, but it's after all, it's a business like another. We're not a charity. So I don't really know any validators that are, you know, we could say are malicious and are only interested in making money in dumping the tokens. There are some, I mean, I recall one was on Cosmos.
+
+sunflower or something, they had to their commission to 100 % and I mean you know that these guys are not in for anything else but the money but it's to me it's really a very small minority.
+
+Citizen Web3 
+question about your setup. mean, considering you are a guys validator, setups are a huge discussion on and off, of course. They're not that actually huge because it's an on-off discussion in different ecosystems. I guess, the questions of geographical centralization or cloud services, the common goal in Cosmos.
+
+Currently, wouldn't say it's a big question. I wouldn't say so. I would say though, in general in Web3, it is now on the tongue of at least Ethereum. What's your take as a validator? Of course, feel free to avoid any security issues that might appear from those answers. But what can you tell me about your setup? What do you guys use? Are you cloud?
+
+Do you self-host? What do you think in general about setups? And yeah, anything you can mention about that,
+
+Thomas 
+Yeah, well, basically you can, there are multiple options for validators which range from using cheap VMs or Contabo or something to having your own self-hosted hardware which incidentally was the case for the first Terra validator.
+
+So back in 2020, I think, which was running on a PC, running on Ubuntu at my brother's apartment in Geneva. And yeah, so it was generating something like between, I think, $20,000 to $40,000 per month. And it was just sitting in his living room. So when I joined him, I was like, OK.
+
+No, that's a no-go. We move that right now and we put up some monitoring as well because that's just a... We can do that. you need to, as a validation, you need to take into account multiple parameters, which are the quality of the infrastructure, but also the cost.
+
+You can't... We could have, you know, buy servers and host them in a bunker, underground bunker in Switzerland, but that will be so costly that it will be unsustainable. so there's no point. So actually we have a mix of multiple options. Primarily we use a bare metal...
+
+servers from different providers that are okay with crypto because some aren't so we always confirm in writing with the account manager that they are okay with us running blockchain software on the server so we use a Liseweb, OVH, Scaleway and so on. For very minor
+
+Thomas 
+chains, testnets, do use VNs and also actually at Etzner because honestly you won't find any better deals than Etzner but you know only those that we know that we can move rebuild elsewhere within a few hours at most you know so long before the jail time
+
+Thomas
+We have multiple monitoring systems with a ton of custom scripts which works actually remarkably well because we do not get jailed. In fact it happened once last year I think on Cosmos which was
+
+very very unpleasant because we were climbing the active set and we crossed the top N95 limit and we had a stride node running so it was okay but we didn't have the neutron node and since there was no alert system or whatever about that well one day we just woke up and we were jailed so
+
+I just scrambled to start a Neutron node and we refunded all our stakers with the loss. that was the only event.
+
+Citizen Web3 
+You mentioned multiple monitoring and a lot of self-written script. I guess, at least personally for us, for our validator monitoring is, yeah, I don't even know what to call it. It's something that takes a lot of time. It's something that doesn't let you sleep some time. And especially my pregnant girlfriend, loves the 4 AM.
+
+Wee, wee alarms if something happens, that's her favorite. Well, what's your, you know, like, again, suggestion, not suggestion, you know, if any validators right now or any to become a young validators listening to this, would you say to them, sorry, what not to do or what not or what to do in this particular direction?
+
+Thomas 
+So.
+
+Thomas 
+So one thing that we tend to forget is we don't need to have us 100 % uptime always. I mean, it's a built-in feature of the Cosmos node that you can be offline for a period of time and you don't get any sanction. Nothing happens. You don't even lose rewards.
+
+because it doesn't matter that you signed a block or not, you still get the reward. So we can be a little bit relaxed. And if there is downtime, what's important is that we don't decide to all go in a weekend where there is no network for three days straight. Not simultaneously, at least.
+
+So we have multiple systems, you know, we use a Grafana with primitives, which is basic. We use a Nadius, and I'm probably the last person on Earth that still uses Nadius, but I actually like it, you know, it's old school, and tons of scripts. So what they do is they alert us before anything
+
+any problem happens. So for example if a disk on storage on a BareMetal server will run out of space, I mean the alert occurs long long before it's critical. So I can be proactive. Note typically don't crash. I mean sometimes you will have a crash or something but it's...
+
+doesn't happen really. I mean it requires quite a bit of discipline but it just works. We also try to not be offline too long all of us you know. I mean usually if I go to bed and I know that
+
+Thomas 
+I have like at least 8 hours, even if a node will crash right after I go to bed, I know that I will wake up and I won't be jailed yet, I will have time to restore the node. the main flaw, the main problem that my wife does not like too much actually is that each time we go on vacation or on the weekend or whatever,
+
+I will always need to take my laptop just in case.
+
+Citizen Web3 
+I can relate to that last part a lot, so I understand. You mentioned Steely. The way to pronounce the notification. Thank you. Apologies for mispronouncing there. I also know you guys have one more tool. You have the point reward system called ibex. Do you want to talk a little bit about it? Because it's quite different from other validators.
+
+Thomas 
+Yes.
+
+Thomas 
+yeah. Yeah.
+
+Thomas 
+Yeah, sure. So actually, so it's a loyalty program that allows our takers to get extra rewards, basically. What makes it different from other versions that exist already from other validators is that these points that we provide
+
+can be redeemed against ATOM. So it's not, you know, our own tokens that we created or NFTs or whatever. It's actual magical money from the internet, you know, so. there's a distribution mechanism that is based on quadratic functions. So it rewards people.
+
+based on the USD value of all the delegations across all nodes. So if they state, for example, 200 ATOMs and 300 XPRT and ING, it's the overall value that will be used to calculate the daily points. So we put this in place.
+
+maybe two, bit more than two years ago, maybe three years actually, which was a kind of a last resort option because we needed to be in less danger on Cosmos in particular because you know we were like 180 in the active set so it was very complicated so we
+
+put this program in place and it allows us to gradually climb the active set and right now I think we are just 53 or something so it's a lot safer.
+
+Citizen Web3
+just to get it straight when you say it allows you to exchange points for atoms. So basically a person earns points over time and then they go, I presume, to their own dashboard, right, where they just exchange that for is there a certain rate where you got it depends on what time the person is spent with you right from what you said or
+
+Thomas 
+Yeah, actually, so let's say for example if a user takes overall worth of worth, I don't know, $1500 across all nodes, so he will earn maybe 30 or 35 points per day. As soon as he wants actually, he can redeem
+
+these points against Atom at a rate of, it's an arbitrary fixed rate actually, one ibex point, well, one Atom is worth a thousand ibex points. So just, you you redeem on our website and you just get instantly. it sounds like it's not much.
+
+Citizen Web3 
+Understood.
+
+Thomas 
+But since it's a quadratic function, basically it's like the smaller validator, they get a larger number of points than the biggest. So it's a bit of socialism, really. And yeah, so it can actually increase the APR quite a bit for a lot of people.
+
+Citizen Web3
+I actually want to back you up on that last sentence. We are building a big tool which contains a staking calculator. we were learning to surprise there. Not almost, but all staking calculators don't include either own tokens, slashing parameters. And basically, it's a...
+
+It's a very big gap and hole in that it's very hard to calculate. I understand why. So yeah.
+
+Thomas 
+We do have a staking calculator on our app actually, which I did. And I agree that it's complicated because you need to take into account the community tags, all those different parameters, including the actual number of the block speed, which varies. So it's a...
+
+It's a little complicated, but in fact if you need some data, I will be happy to give you the algorithm notes.
+
+Citizen Web3
+Happy to talk about it after we finish up. Talking about resume, let me jump into Blitz with you. These are going to be three questions. You can answer them slowly, quick, up to you. Call it the Blitz, but it don't have to be like, pow, pow, pow. The questions are going to be not about crypto. So this is kind of like to take us out of the conversation. Here we go. So first one, give me, Thomas, give me either a book
+
+or a movie or a song that has a positive influence on you throughout your life or in the last years I don't know
+
+Thomas 
+Okay, songs I will admit that I... Yeah, no I mean songs I listen mostly to heavy or black metal so... Good influence, I'm not sure but... Yeah, I don't know because I read books always, constantly so...
+
+Citizen Web3 
+be or or or or or movie or song or book
+
+Citizen Web3 
+It's good. It's positive. I like it. I'm with you. I'm with you. I'm with you, brother.
+
+Thomas 
+I tell you that the writings of a US writer that was called Robert Heinlein, who was a science fiction writer, I've read his books over and over for years. think it has become quite old. Sometimes you read things and...
+
+Citizen Web3 
+I know exactly, of course.
+
+Thomas 
+stance about women or something like, yes, that's not great. But yeah, I think that he has been a very important part of my development when I was a child.
+
+Citizen Web3 
+And just again to mention to all the listeners, guys, girls, and everybody else listening to us, all the look on, if you want to see any links, read about what me and Thomas are talking about, check out the show notes. And of course it contains all of the links, projects, books, people, whatever we mentioned, it's all there. Thomas, back to you. So second question, are they going to get weirder?
+
+Give me something motivational that gets you out of bed every day and keeps you building, trying to aim for adoption, build high stakes and carry on other things you do in life. Something motivational for you subjectively, of course.
+
+Thomas
+Yeah, probably the monitoring alerts, you know?
+
+Citizen Web3 
+Ha ha ha ha.
+
+Thomas 
+I mean that's a and probably that's something I need to work on because it's not going to last forever but each morning the first thing I do is grab my phone and look at the alerts and see if there's anything urgent and including on weekends or on the know next day after a party where I saw
+
+Citizen Web3
+I love this.
+
+Thomas 
+I'm not in great shape but I still will wake up at 6am to check the phone.
+
+Citizen Web3 
+Last one, last one. Dead or alive, real or made up, be a book, person from a book, could be somebody you know personally, it could be a writer or developer, I don't know, the cartoon character, doesn't matter. A personage that helps you to get through
+
+But when you imagine when you're in hard times and you think about that person, whether they're real or made up, it helps you a little bit to get over whatever it is you're finding hard to do.
+
+Thomas 
+Well, I mean like pretty much any grown-up man. It's Batman, of course. I mean, when I'm a grown-up, I want to be Batman, you know?
+
+Citizen Web3 
+awesome.
+
+I love this. I love this. Okay, Batman it is. I love this answer. Thank you for it very, very, very much. Thomas, I want to thank you in general for your answers and finding the time of monitoring alerts, of course, with a smile and coming to answer to talk. Please don't hang up just yet. This is going to be a goodbye just for the listeners. And for the listeners, thank you very much for tuning in and see you next week. Thank you, Thomas.
+
+Thomas 
+Thank you.
+
+Citizen Web3 
+Bye bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

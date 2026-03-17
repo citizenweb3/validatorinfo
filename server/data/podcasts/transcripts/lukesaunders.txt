@@ -1,0 +1,454 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/lukesaunders
+
+Episode name:
+AI, Power Consumption and Hustling with Luke Saunders
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web3 podcast. Today I have Luke Sanders from Co -Founder. Sorry, from Co -Founder. He's still from the, he's the Co -Founder of Delphi Labs. Luke, hi, welcome to the show.
+
+Luke 
+I think that's a fun build.
+
+Hey, hey, thanks a lot. Thanks for having me.
+
+Citizen Web3 
+Yeah, man. Glad to have you. We had them, Jose, Macedo from, I think it was over a year ago already back on Citizen Cosmos back then it was called. And we spoke a little bit Delphi Labs, a little bit about VC, a little bit about bug bounties and funding. But before we get into all that, I'm going to do the traditional thing and ask you to introduce yourself and in that introduction, maybe talk a little bit about how you got into Web3 and what are you
+
+Luke 
+yeah.
+
+Citizen Web3
+personally busy on working right now.
+
+Luke 
+Yeah, well, that's a big question. So I'm Luke, I'm the CTO and co -founder of Delphi Labs. I'm also like Jose involved in the venture firm. So if you don't know Delphi as a brand, I would say that split into three different companies. The first being Delphi Digital, which is a research firm. We have a group of analysts, some of the best analysts in the space. We produce research reports and we have subscribers who get access to those reports. So we have like a six or seven finger portfolio.
+
+I think, yeah, definitely makes sense to go and subscribe to that immediately. Then there's Delphi Ventures, which is a VC firm. We invest in projects all across the crypto space. And lastly, Delphi Labs. Delphi Labs is like the builder arm of Delphi. So we incubate projects. We've incubated the first two we did were in Cosmos, Mars, and Astroport, originally on Terra. And now we have some new ones that are coming through.
+
+and how I got into crypto. So I, my background is technical. I was a developer for like 20 years and I started some companies, so a little bit entrepreneurial. I knew, I knew about Bitcoin since the very beginning. I used to like refresh constantly this forum called Hacker News from Y Combinator. So yeah, I knew about it since the very start. I knew about it. It was like a big thing when it got to a dollar even. And I bought some in 20,
+
+12 or 13. And then, you know, I had some like I kind of followed it a bit. And then when Ethereum came out, and the first projects on Ethereum started to launch, like Bancor was the first one that I really took notice of. I was like, this is interesting. I think there's something. Yeah, I'm not sure exactly what's gonna happen here, but I think it could be big. So I wanted to get close to it somehow.
+
+So I started hanging around in the, in the bank or telegram groups is very early though. And at that time there was like 40 people in the telegram group, like crypto communities weren't even really a thing at the time. And yeah, I just started hanging out and answering questions and talking to the founders and stuff. And then when, when bank got bigger, they did an ICO, one of the first big ICOs and as the founders got busier.
+
+Luke 
+you know, doing ICO stuff, they asked me and a few others to be ambassadors and like answer questions and we'll get some tokens and I was like, okay, that's not sure what that will lead to, but might as well do it. Then their ICO is very successful. And yeah, then after that, a lot of other projects went to Bancor and saw Bancor success with their ICO and they asked them what they did and who did you like manage their community and stuff.
+
+And they recommended us the ambassadors. So he put together a company called a Mazex and that was like the very start of the ICO boom. And yeah, we started with, with six of us. And like within a year we'd had over a hundred clients and the team of over a hundred people. It's pretty wild. Yeah. Seven figures, monthly revenue, just crazy times. So that was, that's my full time thing, obviously. And then ICO boom bursts and then.
+
+One thing led to another, and I ended up joining with Jose Delphi. Originally I was a CTO of the research arm and then slowly, well, fairly soon after that transitioned to be the co -founder of Delphi Labs.
+
+Citizen Web3 
+I mean, I'm going to dig it a little bit because I dig it with everybody and you know, it's good because usually everybody starts with the professional story slightly. But, you know, I always say to everybody, nobody wakes up and says, damn, I'm in the digital and IT business and crypto. It doesn't happen like that. What led you personally? What was your personal driver?
+
+that like, okay, you heard about Bitcoin since the beginning. I can show off as well. No, I'm joking. I'm joking. But it was a joke. I'm joking. Look, sorry. But like, seriously, what was your internal drive? I mean, why not? I mean, you were obviously from... I know a little bit about your background and I happen to know a little bit about your background and I know you are a very technical guy and I know that you could have probably, I'm assuming, chosen any path much probably.
+
+I mean, you didn't know that Bunker was going to be a success. Nobody knew that Bunker was going to be a success, that Ethereum would come out. Why did crypto attract you? Why not go work for, I don't know, any successful company, make a good salary and be happy and not bother with this startup thing?
+
+Luke 
+Yeah, well, I tried that at first. I tried that in the first four years of my career. I had a job. I didn't really care about the job that much. I was a developer, but I was in the band at the time. And that was my thing I cared about. And I switched to another job and they use some open source framework. and they said that my job basically is to, to be across this framework. So I started contributing to it and doing ends up falling into doing open source work. And then I ended up.
+
+working a lot, I quit that job and then I started just consulting off the back of being a core member of this open source framework team. And I worked a lot for startups and I saw startups that succeeded and startups that failed. So I became kind of quite entrepreneurial, I think off of that. The thing with consulting for startups is it's very depressing if you consult for one and it fails because the person who started it loses all their money.
+
+It's just like a very depressing experience, to be honest. So I started trying to pick ones that would, I thought would be successful and go and work for them. I got all right. I got pretty good at actually, it's helped me a lot with, with the venture stuff that we do. and so yeah, I became quite entrepreneurial and in tech, when you work in tech, it pays to be at the very like forefront of tech, cause that's where the interesting stuff happens. Like it was crypto in 2016.
+
+it's still crypto now, but it's also AI very much now. And like, if you want to be successful or even just do interesting work, then it just pays to be at like the very edge of technology. If you're just like making web applications for some SaaS business, like that's pretty boring, I think. so I don't want to, don't want to do that. So that's how I found crypto. And I also believed in the crypto ideals. It just made sense to me that you have this like very closed traditional financial system.
+
+And, there's a lot of like skimming off the top in that system from, you know, intermediaries basically. And, when you consider things like email, they're just open standards, like the email goes one way, goes the other way, whatever. And it seemed like money should be like that. It seemed like it should just be open standards, like free deployed on a smart contract network like Ethereum. And I thought that, I thought that that made a lot of sense.
+
+Luke 
+and that some interesting things would happen there. And so that's why I decided really to get into Web3 because like you want to work at the edge of technology and crypto was that and you also, and also I believed in the ideals of crypto and still do. So yeah.
+
+Citizen Web3 
+Here is a strange question for you. What was your success points to selecting the correct startup, making sure that the startup you selected wasn't at the edge. Sorry, was at the edge. Sorry, was at the edge.
+
+Luke
+Yeah.
+
+Yeah. Well, I mean, when I, when I say pick a successful startup, back then, I wasn't thinking of one that would be at the edge of technology. It helps, right. But like, I just wanted one that would not fail basically. And they, they were usually like social networks or whatever. And the thing it's, it's kind of hard to, it's kind of hard to put into words. It's mostly like just a feeling of talking to the founders and just getting like a sense of like, is, does what they, is what they building, does it make sense?
+
+like sometimes you'll see people, this happened, especially after Facebook became big. They come in the idea basically would just to be Facebook and they just want to copy that. And that would be their idea. And you're like, well, it's not going to work with it because Facebook's already Facebook. so there was a lot of that. but the main thing I think is the founders, the founders, just a certain type of person. it's not like, there's not like someone who's, who's got a job doing
+
+something unrelated and they just have this dream of starting their own company. and otherwise they have connections or anything. Most people can be successful, but it's just harder. And the people who tend to be successful are the people who are already pretty connected. They're very good at hustling. They can go out and like get on a call with whoever they need to get on a call with. And also they know people who can like be in the backgrounds, cutting strings, be investors or yeah, other, other big companies or whatever.
+
+So it's kind of, it's hard to describe. I've tried to think about this before as I do venture stuff. But it's most just a feeling sort of meet the founders. Does the idea make sense? And you can weed out 90 % of the projects just based on that really.
+
+Citizen Web3
+What's the difference between doing that when you were doing it for startups and doing it in Web3? What is the biggest, like, I mean, okay, I can hear hustling, I can hear about some red flags here. Are the things in crypto the same? Are those, I would say, characteristics or there is something that makes it stand out from the Web2 world?
+
+Luke 
+It's very similar, yeah, it's very similar. So...
+
+yeah, I think the differences are just like what they're building. So the stuff I just talked about is all the same, but in crypto, you need to be building something that has product market fit in within like crypto and needs to sort of make sense. And, you know, if you come, if you come now and you're, you want to build a new smart contract chain, there's like a million places to build smart contract stuff now. So it's going to be very, very difficult unless you're really differentiated, like even suey and Aptos.
+
+which are, which are good tech. I mean, we had one of our developers dig into it. He thought it was like better than Solana and they struggled to get developers, you know, so you have the right, the right idea at the right time. it doesn't work.
+
+Citizen Web3 
+What is the like last question in that direction? What was like, I don't know, one project? Doesn't matter where there was a startup or crypto doesn't matter that you until the very last second were certain that it was going to succeed. It failed though. And you what did you learn from that failure?
+
+Luke 
+Mm -hmm.
+
+in crypto.
+
+Citizen Web3 
+Doesn't matter crypto or startups, whatever comes to your mind first.
+
+Luke 
+it's not normally so sudden. Like you just sort of, you get a sense it's not working out and it might take six months for it to actually fail. Some are obviously going to fail from the start. I can't think of a good one, honestly. there are some that I thought would be, would be huge and then kind of got overtaken by competition. I think Banker was a pretty good example of that. Like they invented really the AMM, right? They invented the XYK curve.
+
+and all was going well. I think they maybe like put a lot of the community on the wrong side of them when they raised so much money because then the price kind of went down afterwards. But then the main thing that happened was like Uniswap came along. Uniswap was permissionless whereas Banker was very like a bizdevi and then just kind of ate their lunch really. Banker was still a thing obviously but it's not the biggest AMM by far.
+
+So I was kind of surprised by that because normally like the first move has a big advantage. like UD swap seems like the first mover, right? That actually wasn't. So that's probably the one I would say.
+
+Citizen Web3
+And would you say that the takeaway from that was like that? It's not like that, that first movers don't have to have certainly an advantage. Would you say that was the biggest takeaway?
+
+Luke 
+Yeah, it's the same in web two, but let's move is have an advantage for sure. But then if something comes along, which is significantly better or like significantly better product market fit, like the thing they'd normally say in tech is you have to be 10 X better than the, than the incumbent to, to beat it. I guess Uniswap was that because people like the permissionless pools and all the other stuff that Uniswap did. So, so yeah, that's very, yeah. So there's definitely an advantage to being first.
+
+for sure.
+
+Citizen Web3 
+I remember Banker very well. I remember the ICO participated and it was a lot of fun. Of course, of course, of course. I think it was Constantine P2P. Well, back then it was not P2P, of course. Loma Shook, who was the one who was with Cyberfund, the guys were participating. And of course, I was working back then with Golos in 2016. I think it was from a mistake, right? 15, 16.
+
+Luke 
+did you?
+
+Luke 
+You worked with you worked with P2P.
+
+Citizen Web3 
+I worked with before P2P existed, I worked with CyberFund. P2P back then didn't exist. I was... Yes, by a lot, by a lot. It was a lot of fun, but let's not switch sides, because I feel like it's gonna switch sides. I want to concentrate on you, but I'm welcome to answer any questions, of course, but I want to concentrate on you. But tell me, like, do you... I mean, what is... Because...
+
+Luke
+Okay, cyber fun predated PDP interesting.
+
+Luke 
+Okay, okay. Yeah, yeah. Fair, fair.
+
+All right, all right.
+
+Citizen Web3
+Delphi Labs and Delphi, like the VC part of Delphi, right? And the accelerator part of Delphi, there is a lot. And even when I spoke to Jose, you know, which was like, there was a lot, a lot, a lot. But and I spoke to, I tried to speak to him about like the personal mission of Delphi Labs and his personal mission. And how do they align? What about you today, today after so many years of, you know, seeing
+
+Luke 
+Mm.
+
+Citizen Web3 
+failures and successes where you were sure one thing and it happened another thing like with Bunker or the opposite. You saw like you said, there were crazy times with revenue being seven figures or whatever. But internally, did the mission that you had or at least the idea of the mission for yourself that you had as Luke, does it match today with the reality of where Delphi is today and what you guys are trying to achieve and to do?
+
+Luke 
+Yeah.
+
+Citizen Web3 
+And what is it for you?
+
+Luke 
+Yeah. Yeah. My mission, the mission of Delphi, like broadly across the three companies is to make crypto happen better and faster than it would without us. And that's mine too. Like I want to build stuff that gets used for stuff that's valuable, you know, for the world. And that's been the mission since I started in crypto and still is now. And that's, that's especially true of Delphi Labs, you know, Delphi Labs is in a good position where we can
+
+If we see a gap in the space, something that needs to be built, we can make it happen. So that's happening with one of our new projects, which is a capital formation platform. It's not announced yet, but essentially bringing similar to ICOs, bringing those back in a compliant way. Because we see on the VC side that it's not really fair that a lot of our advantage comes from arbitraging our level of access versus, you know.
+
+everyone else's, it shouldn't be like that. It should be equal opportunities for everybody. And then it just comes down to your skill in picking good projects. So that's one example, I think, where, yeah, we saw how the space was, it was like very VC controlled, VCs have access to the early deals. And we thought that wasn't fair. So we tried to find a way to, yeah, allow projects to raise earlier from the community without screwing themselves legally.
+
+So we were very lucky. We had a, at the time he's not IGC anymore because he's working on a project that we're also incubating with Gabe Shapiro. So yeah, he saw that there's this MECA regulation coming out, which allows for token sales. So he wanted to like build something around that. That's a good example, I think, because I think if that exists and that works, it'll be better for the space.
+
+Citizen Web3 
+Sorry, I didn't press my most biggest enemy button is the mute button. You mentioned, like, I mean, it might sound like I'm going to go a little bit off topic. Well, which is a little bit, but it's not in a way. Because a lot of them, there is a correlation that I want to ask you about. A lot of them older, when I say older, I mean people who have been in this industry for, let's say, 10 plus years at least.
+
+people who like around here, when you talk to them, it doesn't matter about their rate of success or what do they do? And I kinda, I'm, I'm sorry if my assumption here is wrong, but I can sort of read between the lines, the same vibe. And here's the vibe and here is what I'm, it's not exactly a question. It's more of a statement. And I'm going to ask you what you think about it. So when I talk to most of the people like that, it seems that regardless of what they do, their main source of,
+
+Let's say income, loud word, but it is what it is, remains tokens and understanding the difference between good and a bad project and knowing how to pick good projects. That little, you called it hustling at the beginning, but not necessarily hustling. I would say maybe it's even R &D, hustling, whatever. It's a little bit of both, I guess. Right. I mean, and it sounds like when you talk about, you know, everything that you had for you, I mean, we only talked for like 18 minutes, but still.
+
+I can kind of hear that between the lines. I might be wrong, but is it the case? And if it is the case, why is it the reason that most of the entrepreneurs, the bigger entrepreneurs in this industry still earn from talking trading and understanding the market rather than from their business? I'm not saying that the business here is not successful, God forbid, but you know, in general, okay, it's a kind of a big statement. I don't know if it makes any sense, but yeah, I'm going to ask you to comment on that.
+
+Luke 
+Sure, I'm not sure that's always true. I think if you're a founder of a web three projects, unless that project fails, probably most of your wealth, like your net worth is gonna be in tokens in that project, because you always get team allocation of tokens, often salaries are pretty low and tokens are like relatively compared to salary quite high. In my case though, I don't trade, but most...
+
+of the money that I've made in crypto has come from outside of my job. So I have a salary, but just around the time that I joined Delphi, I was running a validator for Solana, like when Solana was in testnet phase, right? Yeah, probably know about this if you're involved in cyber funds.
+
+And yeah, and then it became main that beta and I was still running this validator and I said incentivize test net, right? And incentivize main net beta. So you get tokens every month, which at the time, solana was trading below a dollar, I think at the time, time when weren't worth very much. but they, but they were locked. So you couldn't claim them for like a year or something. By the time they were claimable, solana was like at all time highs at the last cycle, 140 or $200 or something. so, so that was, yeah.
+
+ridiculous reward for running a validator. But now, sometimes I do angel deals. Sometimes I invest in projects that I believe in, you know, as an angel. But most of my money, I think, I just kind of put into the fund because the Delphi Ventures, if you don't know, is just internal capital. So basically it's our money that we manage. We don't have external LPs. And I don't believe I can outperform.
+
+You know, the funds on my own. So it just makes sense to put the money in there and have a, have the team kind of manage it. and then I do have, tokens in the projects that we incubate, but it always feels kind of wrong to sell them. So I have a lot of Mars and Astro report, but I've never sold any and probably never will. Yeah.
+
+Citizen Web3 
+I understand how you feel. Is there a point though where you tell yourself like, actually, that's a good topic, I think. Is there a point though? Because I mean, I was involved with several funds over my life and I can definitely say that, I mean, crypto funds. And I can definitely say that I have been sucked into that loophole
+
+of I'm not going to sell because it feels wrong. And I'm talking about personal tokens here. And it was not the correct decision. I don't know how it... I mean, I'm not saying here Mars or Astroport are bad by no means. I think they have their pluses and minuses and we can talk about it. But what about that? When is the right... Let's say if you were to say an advice now for the guys out there, you know, starting their Web3 journey or not starting because I guess that our audience is...
+
+Luke 
+Yeah.
+
+Luke 
+Yeah.
+
+Citizen Web3
+Far from that. But what would be that? How do you find, like, what do you do to find that balance of work -life balance in terms of like selling, knowing when is the right time to, OK, the project is free now. I can get rid of those tokens because it's correct. I don't know. What would be the stage here? How does it work in a correct way? Is there a correct way?
+
+Luke 
+Yeah. I mean, I think the right, I think that, yeah, there's not a correct way for sure. I think the right, the, the morally right way is to sell them when the project is successful and it's achieved all the goals. Right. So for those two projects, Mars and Astro port, originally they were on terror, you know, before they blew up and they were successful. Astro port was the top three AMM in the world, I think at the time. It was like very valuable, very liquids. Then Mars had just launched, but had a very successful launch with its lock drop thing.
+
+Yeah, heads can't remember how much TV are 400 million or something. so if we just like seen out the launch of Mars, then I think it would have been fair to sell some cause like we, we done a good job, you know? and now Mars last report on successful by our, by our measure. So just doesn't seem, doesn't seem right to, to be rewarded for that, you know, should keep on keep on pushing. And then if they would get them to the point where we think they are successful, then then it's fair to sell.
+
+But everyone can make their own decision. That's my logic, but there are other team members who maybe would like to sell or whatever. But I think generally it's ex team members who sell when the project isn't successful and all the people who are still on the team, they feel this like responsibility to not damage the project or like dump on the community or whatever. So I think like generally the teams for those projects haven't sold any really.
+
+some people who left it, but generally I think people want to sell when they think they succeeded and so far it's not the case.
+
+Citizen Web3 
+It's a fair answer, I think, to understand. To have this internal feeling of, OK, I put enough on the map, kind of thing, for the map to give me a cup of tea. I guess I don't know if this is the bottom of it. I'm going to ask you one last question, though, in that direction, and then I'm going to move, change topics slightly to AI. I wanted to ask you a couple of questions. But one last kind of advice, advice, adverse. I don't know how to say it correctly in English.
+
+Luke 
+Mm -hmm.
+
+Citizen Web3 
+And advice type question that I'm going to ask you is, I'm pretty sure that you have a lot of experience in that. So what would be your advice to builders and teams out there that want to scale? I mean, especially teams that are highly technological and don't have that hustle side that you were talking about. What is your advice or a no -go, the opposite, the anti -advice for them?
+
+not to do, you know, if they want to scale and they don't know how to hassle.
+
+Luke 
+scared in the sense of like making the team big going from a small team to a big team that kind of scaring.
+
+Citizen Web3 
+I was going to at first say, look at that question, how you want to look at, but no, I was talking about the project itself. My original question was more about not the team, but okay, let's say they have the technology. The team is there. I don't know. There is five, six, seven, doesn't matter how many, whatever the money to feed the team comes from. But let's say they don't have those, I don't know, side hustles that you, they don't know how to go and pull the strings. They don't know how to do any of that.
+
+Luke
+Okay.
+
+Luke 
+Yeah.
+
+Citizen Web3 
+And they are deeply developers. And we've seen this in crypto many times where you have teams of developers. They are a bit stuck. They don't know what to do. They don't want to go to the big disease. Yeah. So like, what would be your advice here? If any at all, of course, apart from go find somebody who can hustle.
+
+Luke 
+Yeah. Yeah. You need to learn basically. Like there's a, there's a phrase, there's a phrase in web two called say, get out of the building. I think that's what they say. Basically most founders and most builders, they're happy building, right? So they want to build their projects and they're in the house, the office or whatever, and the building. And that's like their comfort zone. And, and if, if you don't have that like drive to just kind of know what to do.
+
+Citizen Web3 
+There we go. I agree.
+
+Luke 
+It's very common for teams, especially technical ones, just like build and then release the thing. And they haven't done any of the other stuff, right? They haven't like, yeah, left the building, so to speak. And so you need to do that. You need to be visible. Helps a lot to have some profile on Twitter or some social media platform or have a podcast or something to give yourself some visibility or like some clouds. I'm very lucky in Delphi that
+
+I don't have that many Twitter followers, but a lot of people in Delphi do. So yeah, it's very helpful to like get the message out there about things. But yeah, if you're like a builder and you're building the space and you're building your project and you really believe in it, you do need to tell people about it. You all need to go and reach out to projects that it might make sense to integrate with and jump on a call with them. I think the highest EV thing you can do, even though it's very time consuming and really
+
+not rewarding at all is just to try and like build a Twitter following. Cause then I think it's much easier to reach out to people. If, if you have a lot of Twitter followers, it's taking more seriously, I think somehow. so, but it is very, it is very hard to do that for some people. for some people, it might be easier to, you know, just hassle people like you to go on their podcasts, beg and plead or whatever, or pitch them what you want to talk about just to be more visible.
+
+get more followers that way. But yeah, it is a, it is an art in itself separate to building.
+
+Citizen Web3
+I, it's ironic. I, when we were called Citizen Cosmos, I was refusing Jay an interview for two and a half years because I wanted him to talk about him and not about Cosmos and not about Nolan. He did agree essentially. And we did do the interview and it was, in my opinion, a big success because it showed like he sides as Jay as Jay, not as the founder of Nolan or Cosmos. And I was like, no, no, no, I don't care. I'm not going to.
+
+Luke
+Okay.
+
+Citizen Web3 
+If we talk only Nolan, no, we're not going to do it. And then essentially you're like, okay, okay, okay, okay. But by the way, for all the listeners out there, Lucas being shy, Lucas has over 13 ,000 followers on Twitter. If I'm not mistaken, it's 13 ,600. And just today I was reading this meme where people were like saying that the web and social media slightly ruined our compox because back 30 years ago, if 12 people...
+
+We're with you out together and watch something the same thing. Now today when you have 12 views, it's very low. But back 30 years ago, if you were in a garage and 12 of your friends came around, you'd be a big success. So like, you know, it's like, but no, I understand what you mean. Of course, of course.
+
+Luke 
+issues.
+
+Cool.
+
+Citizen Web3 
+Go on, sorry, you were going to say something. No, sorry. Sorry, sorry, sorry. You know, I was going to slowly take it because when we originally spoke about the recording, we mentioned AI and agents. I think kind of like an easy topic to take it from where we are to AI is this is kind of with the help of my team, but they found I'm going to look at it because I need some help here from that.
+
+Luke 
+No, I was gonna say nothing. I was gonna say, yeah, it helps and wrap up.
+
+Citizen Web3 
+And they quoted you here about comparing Apple and OpenAI and talking about the way that commoditizing basically that Apple thinks people don't have to pay to get access to AI and OpenAI is more building of a sustainable business. So I'm not going to read the whole quote because it's a bit long, but I think I know what you're talking about just to get you into that mindset.
+
+I don't know when that was because they didn't put a date on it. But before we get to anything, do you still think like that today that the LLMs have to charge money in order to be successful businesses as access points?
+
+Luke 
+Yeah, it's kind of, yeah, I think so. It depends broadly. So in the case of OpenAI, for example, they need to make money somehow, right? So they could use, you know, check GPT as a loss leader and make it free and then make all the money off API access or whatever. The tweet you're referring to about commoditization is there's this conversation that's happening right now in AI.
+
+about whether models will plateau or whether they will like whether it will be an S curve and my plateau for a bit. And then it will go exponentially again in terms of improvement because the improvement from GBT three to GBT four was, was enormous. So yeah, it's just not naturally speculation about GPT five. Would it be as big a jump or would it be kind of plateauing off? And the, the, the tweet you're talking about
+
+trying to get, I'm trying to remember what it was on about. So Apple had just announced their AI thing recently with like confidential computing and stuff and the deal with open AI and Apple doesn't pay open AI, open AI doesn't pay Apple. That's very different from like search where Google pays Apple. So I think that the theory there was that both sides of that deal believe that LLMs are gonna plateau and you know, one big LLM is not gonna be significantly better than another one.
+
+which means that from open AI point of view, distribution is key. You can't rely on having a better product because they're all going to be about the same. And there's no better distribution for AI than Apple devices. That's going to be probably where most people interact with their AI systems from at least most people, you know, have, you have money to pay for it. so it makes sense for open the eye just to like, just to be there.
+
+And then for Apple, if it's going to be commoditized, then they don't need to pay for it. They can just, you know, they know they have the advantage and I assume Apple will make money by, I think the open AI thing is free for now, but I imagine, you know, there'll be like an app store and there'll be a bunch of models in there. And if you want the premium one, you have to pay and Apple will take the 30 % cut. So they're like the, they'll have, Apple has it, will have its own AI, mostly on device and some.
+
+Luke 
+running on confidential compute in the clouds. They'll also have models from other providers and they'll take a chunk of that. So yeah, whether the rate of progress with LLMs drops off and they all become commoditized or not is like a big question right now. It's very important for the crypto AI. Yeah, very important for crypto AI as well. So I'm interested to see how that plays out.
+
+Citizen Web3 
+What do you think in general about... Well, let me go and zoom out a little bit. I was... Since we started to build some time ago, like some products, I mean, developing, and it was a long time before that I didn't attend conferences, like three years. And recently I attended Berlin Blockchain Week, which was just like a month ago, whatever, something like that.
+
+And I attended a lot of side events to do, not a lot, but there was quite a number of side events that advertise themselves as AI related or something like that. Or at least the words AI were somehow in the description or in the title of the event. And I must say, some of them were quite cool, but definitely I met some cool people.
+
+What struck me though, and here is like, you spoke about models, you spoke about plateau. This is where I'm kind of going to try and focus. What struck me though is that on those events, I really didn't meet, I met cool developers, but no doubts, but I really didn't meet thinkers, and I'm sorry if anybody's going to get offended by that, but it is an honest opinion, thinkers that are thinking about how beyond
+
+of what you just said, how to make an LLM model not plateau tomorrow or the day after tomorrow, how to decentralize the consensus that is underlying the LLM model. Like I didn't see anybody in either of those meetups or in the conversations after the after parties or the speaking, or usually people are more open to talk. And when I started to bring up those subjects, people look at me like I'm crazy. They were like, dude, we just want to run our
+
+like more LLM model on a decentralized cloud. This is the AI for us. And I was like, but this has got nothing to do with decentralized AI that is just running centralized model or whatever, you know, because on the cloud. So what was like, I know there's no questions here, but it's like kind of like something that struck me. And I was kind of like, it doesn't seem that there is a huge line of development there. So I guess the first kind of question is like, what do you think about
+
+Citizen Web3 
+the AI and how do we stop it from plateauing? How do we keep on investing effort, the right type of effort into developing it in a more of a decentralized manner rather than running, you know, models on somebody else's computer and calling it decentralized AI.
+
+Luke 
+Yeah. Like for the decentralized things, it needs to be better, right? There needs to be a reason to do it. Ultimately that comes down to resolving in a better product, I think for most people at the end of the day. So like why, so there's a, in terms of creating a model and running a model, there's like a bunch of, there's a bunch of steps that you could decentralize. You could decentralize the data acquisition. You could decentralize the data labeling.
+
+fine tuning, there's just a bunch of stuff. I'm just gonna shut this door.
+
+Citizen Web3 
+Thanks.
+
+Luke 
+Sorry about that. Yeah, there's a bunch of things that you could decentralize. So you need a reason to decentralize them. So just to give an example, you can imagine a future where governments have tried to censor or control AI, either to restrict how powerful AI can be that ordinary people have access to or...
+
+They have like regulations that restricts, you know, what it can say or what it can't say. And in general, you can just kind of imagine if they try and apply the same level of regulations they have to the financial system to AI could get quite, quite nurfed basically. and so in that case, if you wanted to have a model, which like sidesteps all those regulations, they're running it or training and running it in a decentralized way will be one of those, right?
+
+Like there might be privacy concerns that all of these AI providers like OpenAI have to capture your prompts and make them available to the government upon request, which I'm sure that would be the case. And if you don't want that, then yeah, decentralized AI would be an alternative to that. So actually in that scenario, models plateauing would be a good thing because it would mean that open source models would be able to catch up to the state of the art, like closed source models such as that OpenAI is developing.
+
+And if you have like very good open source models, then you can run them in a decentralized way, which would be outside of the reach of governments and regulations and stuff. But it remains to be seen. So that could result in a better product for some people. Then there's other steps, decentralized AI is a big term. So it might be cheaper to train a model on decentralized compute.
+
+Right now that's not possible because when you train a model, all the computers need to be in the same place. They need to be very close together because of back replication, I think. And, but there are, yeah, there are smart people working on solutions to that. The argument for training a model on decentralized compute is that it's cheaper because you can tap into, you know, spare capacity. So I'm a little bit skeptical of that narrative, but I mean, that might play out to be true.
+
+Luke 
+and yeah, there's, there's other, there's other angles of decentralized, decentralized model training. So it's a big space, but yeah, like broadly, it can't just be decentralized for the sake of it, right. It needs to be decentralized to result in a better product. so we just need to, need to do a lot of experimentation and see how things play out to really understand what those are. Cause right now crypto AI overlap is very, very new.
+
+and everyone's just trying to figure out where the value is.
+
+Citizen Web3 
+This is an interesting point that you make about decentralizing the teaching and even more interesting point that there needs to be a reason. To my understanding of the market, and I like to think of somebody who understands the market more or less, and especially with AI, I was lucky enough to see the market a couple of years before it started to evolve from the inside.
+
+lucky and, you know, looking at today, I see that on the market, there is roughly three, four projects. I'm not going to go into them right now because it's not about that. That actually, in my opinion, can be labeled as, okay, this is really something beyond offering services for AI. This is really decentralized AI in one way or another, either on the consensus level, or at least they trying, you know, I'm not saying that they succeeded, but they trying. The thing is that all those
+
+apart from one project, which is very huge and everybody knows about it. And it's not by the way, decentralized. And nobody cares about the other ones because everybody's looking at the market cap and all the market cared about was when, and again, I don't want to like go bad on anybody, but you know, we take in the three projects that were on the for their foundation, spent 80 years on the market. You know, there's fetch, there is singularity and I forgot who was the third one. And
+
+You know, they united to create another marketplace. And it's like, hey, guys, but like, I think we're going to reach the plateau because, yeah, not because the models are going to have a problem, but because we are trying to drastically to reach the plateau, to bump into the plateau. That's the feeling to me. And I'm sorry if it sounds comes across like a bit like opinion, but I don't know. I have that feeling that nobody's interested in it. Nobody has an interest in it. More people are more interested in the money behind it. At least today.
+
+Luke 
+Yeah, I mean, that's, that's like business in general, I think. you, yeah, I mean, there's a mix of both. I mean, the, for a project to be successful, it needs to, you know, a lot of people say the token is the product, right? and ultimately, if you want to build a project in the first place, it needs to, you know, investors of one, one form or another need to think it will be valuable in the future. so yeah, there is a, there is a tendency.
+
+when building projects just to get sucked into thinking about the value. I'd say in crypto AI, that's less true of every other space though. There's a lot of teams where they, cause everyone's trying to find where the value is. And so they're just kind of doing interesting work and seeing if they can figure out how to monetize it later. So there's like, now for example, which
+
+trains open source models like creates and trains open source models. Now it's research that we invested in. You know, they produce these open source models and they're free. I think they have some income from the BitTensor subnet. But yeah, I think generally in business and in crypto, people need to make money. People want a token that's valuable and they kind of need to do that just to raise money in the first place. In crypto AI it is less true and it's just a lot of
+
+Yeah, there's a lot of research going on trying to figure out where the value is and how crypto AI can be good for the world or whatever.
+
+Citizen Web3 
+Do you think that not just for crypto AI, but AI in general and for agents in general, do you think that one of the or what do you think rather of the next again statement that one of the largest or one of the possible largest what's the right word here, walls or obstacles for carrying on
+
+and again, not related to crypto in general and to AI in general, is the fear of letting go of the black box. And what I mean here, we mentioned training, and it seems that when you talk to even very highly specialized AI experts, when you start talking about letting go of the consensus and allowing users to decide what is what, people go like, no, no, no, no, no, no, no, no, no, no, no, no,
+
+And what is a piece of string? Okay, but maybe that is the right way. So I'm just saying, you know, do you think that that fear of keeping to traditions of that, you know, there must be like a central body that when it comes to training and teaching the models cannot be, you know, let go of it has to be remaining with one person or two people or three people or a group of people doesn't matter. Do you think that that
+
+could be one of the biggest obstacles in us as humanity progressing towards SGI or whatever is the correct word to call it.
+
+Luke 
+Yeah, I mean, I don't know. Yeah, it's, the thing to understand is these models are just so expensive to train. There's already talk of, you know, Facebook building a hundred billion dollar cluster, which is just like preposterous amount of money. it would consume as much power as, as like London, I think, by itself, sort of ridiculous. and so if you spend that much money on creating a model,
+
+Citizen Web3 
+Yes.
+
+Citizen Web3 
+Yes.
+
+Luke 
+You know, you're going to want to keep it closed. Like Facebook's models currently are open, but I mean, I imagine they'll go closed at some point. Maybe they're spending that much money. Just because you don't want your competitors to get the model right. And so if your model is closed, you need to kind of run it in a closed way and control it in a closed way. And so it comes back to the plateauing thing. If they do the plateau, then investment will kind of stop and then the open source ones will catch up.
+
+until a new architecture is discovered or whatever, I guess. So yeah, like right now, all of the incentives lead to keeping these models closed and like tightly controlled. That might change over time. We'll have to see. Right now, the trajectory seems to be going more and more closed. So like Facebook's model is open right now. I imagine it will probably will go closed at some point. Mark Zuckerberg has hinted at that.
+
+we'll just have to, we'll just have to see how it plays out. But yeah, right now it's on a closed trajectory, which is, which is a bad thing, I think, but yeah, they might, they might open up. We'll see.
+
+Citizen Web3
+It'll be interesting to see for sure. I mean, I always try to think of the world we live in and the account for open source chips and technology, which allow us to have fridges or lamps or ACs or cars because it's open source, right? Not because it's not patented somewhere with somebody, because if it was, and I think, I mean, of course, industrialism came long way before.
+
+you know, the silicon chip existed, but so we think, no, no, of course, but, you know, still, I think that open source played this huge role in globalizing what we can do with technology, what we are able to achieve inside of our own, you know, without going outside the house, so to speak. But, and I'm hoping that in AI, like, it's going to be the same direction that
+
+It will take that direction and people will see that it's good, not bad. But let's see.
+
+Luke 
+Sure. Open, just the last class comment on that. Open source is very good. If you want to build a platform that people build on, I think. so example I gave in a tweet once was that Facebook once had a dislike developer API. We could come and build apps on top of Facebook. it was very closed and it would change a lot. And you just don't want to build a business on top of that, you know, cause you could get, get wronged at any time.
+
+And that's kind of true of AI models too. If you're going to build a business on, on, on an AI model, which is like very differentiated. So you can't just switch from one to another. It's very risky to do that. If you know the next version of that could be completely different, or they can just turn off your API access or whatever. So open source is, is preferred I think by developers. If they're going to build something, spend a lot of time and effort building on top of something, because then they know they can't get wronged.
+
+So yeah, so we'll, yeah, I'll have to see. It just depends, I don't think it just comes back to whether they, whether they put it or not. Cause I think open source models will win if they do, which would be cool.
+
+Citizen Web3 
+I meant to that. I have one last question before I'll jump into a small blitz and to finish off with it. But you had a tweet a couple of days ago about the podcast of Pompiano. I call him Pompiano, you know, but it's an interesting tweet because it's about the future. And, you know, and you said there that is end goal is to transfer your brain to a gold plated. I'm reading it. Sorry. Container power by to a gold plated container powered by solar panels.
+
+Luke 
+yeah.
+
+Citizen Web3 
+and put it into orbit around the sun. Seems unwise to fate someone with such a goal. Now, my question is here, of course, there's the humorous part, but my question is about, you know, we mentioned AI and we didn't like, we're very on the super tip of the iceberg, you know, hear the conversation, but still, like, if you were to look into the future and you kind of, you know, made a comment about the, I don't know if I want to talk about transhumanism or anything like that or...
+
+how deeply we can get into this conversation when we have at the end of it. But still, like, what is your take on why is it so sad? And what would be your more positive oversight of our end goal as a society?
+
+Luke 
+Yeah. I mean, I tweeted that quite flippantly. I just listened to JP's podcast with, with pump. JP is the one of the founders of Thor chain. he has a new thing now. So he was like, he was like being very visible on Twitter and doing podcasts and stuff. yeah, I don't know if he was joking. I think like slightly humorous, I suppose. or slightly theatrical, but his idea was if you want to make people live longer, don't try and preserve the body, just preserve the brain.
+
+and like hook it up to other electrical inputs. I guess he connected to the internet or something and put it in a jar. And once you've done that, you can like put it into orbit with solar panels and just kind of live forever or the 200 years or however long brains live without the body. So yeah, I don't have much review into that myself. Honestly, I just thought it was kind of funny. So I tweeted it. I'm not sure how it ends up. I think that...
+
+Yeah, I think AI is very interesting if you like project into the future because there's discussion about whether we'll achieve AGI or, you know, super ASI within like four years or 10 years. And I don't know. Like if you try and think to like a thousand years in the future, given computers are only invented like a hundred years ago when I was a kid, they weren't common in businesses or in the home. And in that time, in those like four years, they've gone from being
+
+like nowhere, to being everywhere. And now they're pretty much at the point where they're as intelligent as us at most things. And so if you think of like, that's 40 years, if you think of a thousand years in the future, it's going to be, it's going to be insane. They're going to obviously be much more intelligent than we are. And what that future looks like, I'm not sure. I can't imagine that it ends well. You know, cause it would just, you'll have this super intelligence.
+
+in the hands of everybody basically. So it will be, yeah, just be freely available by that point. So it'd be like having, you know, having nukes available in every corner shop, like at some point, something's going to go wrong. and so, yeah, I hope that's not the case. Like maybe, maybe it can be like regulated somehow, but I just hope that's going to be possible. So yeah, we'll, we'll see. I think probably not in my lifetime, but at some point in the future. Yeah. It's just interesting to think about.
+
+Luke 
+what the future looks like given AI is going to be so much more intelligent than we are, like what our role is in the world. Are we happy? Are we dead? I don't know. It's going to be a wild time for sure the next few hundred years.
+
+Citizen Web3
+I mean, your worst nightmare will have to be between 20 years time. We all wake up with our brains glued to, you know, voyagers and out there in space. Okay. And three quick questions, small blitz to finish it off. Look, give me one movie or one book or one film or one song or whatever movie film is the same thing. That has a positive influence on look throughout your life.
+
+Luke 
+Yeah.
+
+Citizen Web3 
+or at least in the last like some years.
+
+Luke 
+Yeah. I'd like to give a really, I'd like to give a really impressive high brow answer. Anyway, the one that comes to mind that I often like refer to as I'm trying to like be an entrepreneur is Moneyball, that film about baseball, as Brad Pitt in it. there's just like, there's some good advice in that film, about how to, how to like run things, how to like manage people. So I think about that film quite a lot. Yeah. So I'd probably choose that one.
+
+Citizen Web3 
+MMM
+
+Citizen Web3
+Nice. Okay, second one. Give me one that you can share, of course, one motivational thing that keeps you out of bed, keeps looking for new startups that are going to be successful, keeps on studying technologies and being on the edge of technology, something motivational that keeps you going every day that you can share, of course.
+
+Luke 
+Yeah. I mean, you just need a purpose as a person to be happy. so my purpose right now is, is this, and that's what gets me out of bed. I stay in bed all day, be cool for a week or two, but it's become miserable. So yeah, just keep on, keep on pushing, trying to try to do things that are. The valuable useful for people valuable for the world or whatever. So that's the thing that gets me out of bed. I would say.
+
+Citizen Web3
+for everybody out there two weeks in bed. Not good, man. You get tired. Sorry. Last one. This is going to be a strange one. Dead or alive, real or made up. It could be somebody you know, could be something you read about. So a character, a persona, could be a developer, a family member, an actor, a writer. It doesn't matter. Who is not a guru because I personally don't believe in gurus, but somebody who
+
+Luke 
+I'm going to go ahead and close the video.
+
+Citizen Web3 
+positively influences your thinking when you think about that character, person, personage, whatever.
+
+Luke 
+Probably gonna have to be Satoshi, right? Such a crazy, crazy visionary to come up with that and basically nail it perfectly first time is insane. So I'd just love to, yeah, it'd just be wild to hear his thoughts on how it's all played out. Yeah, this is what he wanted or not. And where he sees it going in the future, I imagine he's in.
+
+Citizen Web3 
+Strong.
+
+Luke 
+I imagine he has mixed feelings about how it's ended up. But yeah, it would be great to get his thoughts. Not sure if he's dead or alive or what.
+
+Citizen Web3 
+I thought I was going to say that, you know, what was his feelings would be a great note to end on, but whether is that all live? I was like, that's not a great note to end on. That's quite sad. Is that a num joe? I was joking. Look, I want to thank you very much for your time and everybody for listening and tuning in. Thank you also for listening and tuning in and for your time that didn't come out properly, but okay. Look, thank you again for your opinions of your time and everybody else. Thank you and catch you next time.
+
+Luke 
+Sorry. Yeah.
+
+Citizen Web3 
+Thanks, bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 
+

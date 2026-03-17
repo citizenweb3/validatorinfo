@@ -8,6 +8,9 @@ interface OwnProps {
   proposal: Proposal | null;
 }
 
+const isValidUrl = (url: string) =>
+  url.startsWith('http://') || url.startsWith('https://');
+
 const getStatusLabel = (status: ProposalStatus | undefined) => {
   switch (status) {
     case ProposalStatus.PROPOSAL_STATUS_PASSED:
@@ -53,11 +56,17 @@ const ProposalInformation: FC<OwnProps> = async ({ proposal }) => {
                 )}
               </div>
             )}
-            <Link href={''}>
-              <div className="text-lg font-handjet text-highlight">
-                {t('link to full proposal')}
-              </div>
-            </Link>
+            {proposal?.metadataUrl && isValidUrl(proposal.metadataUrl) ? (
+              <Link
+                href={proposal.metadataUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="text-lg font-handjet text-highlight hover:underline">
+                  {t('link to full proposal')}
+                </div>
+              </Link>
+            ) : null}
             <div className="flex flex-row mt-4 items-end">
               <div className="font-sfpro text-base pb-0.5">{`${t('voting period')}`}:&nbsp;</div>
               <div className="font-handjet text-lg">

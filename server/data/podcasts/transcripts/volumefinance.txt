@@ -1,0 +1,590 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/volumefinance
+
+Episode name:
+Pigeons, Communication and User Adoption with Taariq Lewis
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Cosmos podcast. I have Tarek Lewis with me today, the founder. Guys, get ready for this volume. And that's it. Love it, Tarek, man. So, man, this is great. I love this. Founder of volume. Amazing. Do you want to do it first? And first thing, do you want to explain why and how did you became the founder of volume? What it is?
+
+taariq_lewis 
+Yes! I almost feel full. I feel full already.
+
+Citizen Web3 
+And whatever else you want to share about yourself in your intro, like tell us what you're all about, man.
+
+taariq_lewis
+Yeah. Yeah. Yeah. All right. So volume is the word. And what we do is I created this company because we want to increase the volume of transactions on public blockchains. And we want to increase the volume of transactions in the cosmos. If you're listening to this message, you know that volume really care. We really care about the cosmos ecosystem. And one of the things that we are working on is the Paloma protocol.
+
+And Paloma is a Cosmos SDK chain whose goal it is to increase transaction volume by being a messaging protocol between chains in the Cosmos Interchain universe as well as outside of the universe. So we like to tell folks we really want to use the Cosmos to drive more transactions into the Cosmos and around the Cosmos because we live in a multi-chain world.
+
+Now, most people may not, if you don't know me, I will say that here's my Cosmos Tenement credentials. In 2014, a young man came to me. I was running the SF BitcoinDev's meetup in San Francisco. And this gentleman came to me and said, hey, listen, I know this is a Bitcoin meetup, but I want to make a presentation. And I said, listen, no, no, no, it's Bitcoin presentation, right? said, no, no, I have this thing called Tenement. I'm like, ha ha, that sounds tender.
+
+And we hosted, I hosted the first ever public presentation of the tendermint Protocol by Jay Kwon. So my claim is that, so ever since the beginning, since ever since the very first spoken word of tendermint, I have been in the cosmos and even have worked. Saki Manian, my old co-founder, Simile, was a member of SFbitcoinDev'z crew as well. And we all essentially, many of us,
+
+Citizen Web3 
+Nice! Nice!
+
+taariq_lewis
+helped contribute to Cosmos success. So really passionate about the Cosmos ecosystem, passionate about the multi-chain world. So the multi-chain world has been with us since 2014. We just didn't know it yet. And now it is getting bigger and bigger and the Cosmos is really the leader. And I think that mantle should stay when the Cosmos ecosystem leads us into a multi-chain world.
+
+Citizen Web3
+love that man that you said you mentioned the sentence that the multi-chain world has been there and like for a lot of, I'm going to say the word, I don't like the word users, but screw it. Let's go with the word users. know, like I'm including, man. mean, cause it is using blockchain is more about addiction, right? Really to the blockchain and to the whole like decentralization scene. So.
+
+taariq_lewis 
+Let's go with our users. That's right.
+
+Right? That's right. That's right.
+
+Citizen Web3 
+And it has been
+
+taariq_lewis 
+It's here.
+
+Yes. Yeah.
+
+taariq_lewis 
+That's right.
+
+Citizen Web3 
+there like before 2015 14 it has been there we've just been waiting for it and then finally with Ozmosis I believe was the first example right like the first working example like bam there you go guys back to volume I really love it and I really love it that cosmos is not like shy to make it a little bit silly like the terms like sometimes, we play around with it and people are okay with it, you know. So, man you mentioned at volume that and paloma you mentioned blockchain communication I'm going to go like general a little bit and then feel free to explain how it works in paloma but the question will be general 
+
+Citizen Web3 
+So what do you generally think in terms of the current relaying atmosphere around cross blockchain communication? Is it decentralized enough? How will it be in the future? Will it be more decentralized, less decentralized? are the like downsides? I know it's a lot of questions, but this is a general topic. I would love to hear your opinions as an expert to comment that.
+
+taariq_lewis 
+Absolutely. So it is our view that interchain relaying is a massive problem. It is a massive problem because without the right incentives and without the right structure and architecture, it becomes a choke point for the entire multichain universe. Right? In the cosmos, we know currently that
+
+we sort of have to beg and pray for our IBC relays. Can I use the word IBC in this talk? then, right? If you're in this channel, you know that relaying and when we built, in the Cosmos ecosystem, when we launched Stargate last year, around 2020, that brought the promise of IBC, Interchain Blockchain Protocol to the Cosmos ecosystem, it depends on relays.
+
+Relayers who are doing relaying or sending the transactions or pieces of information from one blockchain to another if they're doing this You know out of the goodness of their heart or altruistically Usually what happens is you have a tragedy of the Commons, right? essentially, it's hard to get your messages out on time because you don't have it you don't have a System to demand performance and so we think that in a multi-chain world particularly led by the cosmos
+
+the relayer network will continue to become more and more important. This means, simply, that relayers need a new architecture. And in Paloma, we're taking the approach that, and we're testing it, we're learning that relayers should be validators and validators must relay. And so in the Paloma architecture, validators have to relay or else they will be slashed.
+
+taariq_lewis 
+So in the, you know, currently most of the Cosmos status quo is that if you are a validator, you don't have to relay. Relay is optional, right? Because you are validating and verifying the chain integrity. What we have said in Paloma is that chain integrity and message latency, which is the message must get to the next chain as fast as possible, is a validator responsibility. Does that make sense?
+
+Citizen Web3 
+It makes perfect sense. The question that derives, and again, I did warn you a little bit. I'm going to play a little bit of devil's advocate. mean, let's, let's, let's, cause I want to get inside of your head. No, no, no, no, no, no, no, no. The funny things, funny, you know, funny thing about this, man, the funny thing about this when I was doing the, and by the way, where did he disappear to? Connie daddy.
+
+taariq_lewis
+Yeah, yeah, yeah. Are those horns? Wait, wait, is that smoke coming out of your ears? What's going on, dude? my God! Listen, forgive me!
+
+Citizen Web3 
+I just realized that I haven't seen him for ages. I remember recording the episode and the thing is while recording the episode and I'm going to make this like how to say, I'm going to confess my sins to everybody while me and Konidari recorded the episode. had like one and a half bottles of tequila and I did smoke two or three blunts. guys, I mean, I'm sorry, but that's the truth. Right. And like, man, it is what it is. It is what it is.
+
+taariq_lewis 
+Yeah.
+
+taariq_lewis 
+Yeah.
+
+taariq_lewis
+That's the truth. It is what it is. me tell you, please go in peace. are forgiven for that beautiful story. That was awesome.
+
+Citizen Web3 
+Where is he? Where is Connie Daddy? But I just I hope it wasn't the episode we recorded.
+
+taariq_lewis 
+I have not seen him in a bit.
+
+Hey, you you might be at Stanford this week. You never know. All right.
+
+Citizen Web3 
+So, but let's go back to the relay. And the first devil's advocate thing that comes to mind is the cost of running a validator node. I mean, you did mention incentives and I would love you to go deeper now. So how do we solve this? mean, because being a validator, I know how hard it is.
+
+taariq_lewis 
+Yes.
+
+Yes. Correct. Correct. Okay. Yeah. Yeah. Yeah. It's funny. In September 2020, I was in Berkeley sitting with Jack Zampolin. We were chatting about the relay problem and the re-incentivization problem. And I said, Jack, how are we going to incentivize relays? Like in this model, if they don't get paid, how do they perform?
+
+And, you know, Jack was like, Tarek, you stress out about these things, man, it's going to work out. And I was like, Jack, I love you, dude. You're so awesome. And I want to give a shout out to Jack Zamplin. He's a visionary. And because of him, we have Cosmos Relayer architecture and a lot of new stuff coming out. So, you know, really good stuff that he's working on in that area. We have, so we're experimenting at Pulluma. We're taking the approach that the way we incentivize the relayers,
+
+because they have to be validators is they get incentivized with gas payments. They get incentivized by providing or getting additional revenue for covering the cost of gas. What this means is in the Paloma network of the Cosmos SDK. And again, if you're using Paloma as a validator in the Cosmos, if you're not running a relayer, you get slashed. So we literally say it's impossible for you not to relay messages if you wanna be a validator. But what we say on the other side of that is the reward.
+
+users who send messages, you get to essentially charge them both a security fee as well as a relay or service fee. And that is free for the validators to price themselves as they would like. So in Paloma, because the relayers are the validators and the validators have to pay for running a node, they have to pay for gas to send the message to the target chain. And in Paloma, target chains can be either messages that go across the IBC network on
+
+taariq_lewis 
+you know, on the IBC network, or it can be messages that go across the EVM network or the Solano network. But users who send messages cover the cost of essentially being a relayer by paying for gas and then relayers, validators, we call them pigeons, get to charge that fee. And it's a market, so they get to charge whatever fee they would like to make it on. And we assume that the curve is going to be somewhat inelastic because they're, you know,
+
+We have a limited number of validators in the set. But we will find out that such that if you want to get your message sent on time, then you're going to want to make sure that the pigeons in the Paloma network are well compensated. And this is the Paloma network.
+
+Citizen Web3 
+Why pigeons man? Why did you choose that word? I mean, I get it. I get it. I get it. I get it. But I mean, come on pigeons.
+
+taariq_lewis 
+I know you're dead! Wait, hold on. Listen, dude, if you go into our telegram on PalomaChain, know, t.me slash PalomaChain, people say, cool, cool. There is a greeting call, cool, cool. So every time, every time a block, people are like, look, we're sick of it, cool, cool. So it's pretty insane.
+
+Citizen Web3
+Coo-Coo!
+
+Citizen Web3 
+I love it.
+
+taariq_lewis 
+So the reason why we chose pigeons is because we believe that message, so message communication should happen anywhere, right? When you think of, don't want to hear this statement, well, I'm in the cosmos, but I can't send a message to Avalanche because we don't have that access yet. We don't have Solana. Those questions should never be, there should never be a doubt. So what we want to bring to the cosmos is essentially any cross-chain communication will happen.
+
+Currently, we have already deployed to Ethereum Mainnet on the Paloma testnet. So if you look at the Paloma testnet right now, it's our testnet 10. We're already execution cross-chain messages on Ethereum Mainnet. We're also currently working on a Solana bridge. It will be the first Solana bridge in the cosmos that will essentially be routing messages to Solana. And that bridge, of course, will be IBC accessible. So even if you're on an IBC chain on osmosis, you can execute a message.
+
+to Salon. and back
+
+Citizen Web3 
+This is really cool man because like there is more there more there there I was like BOOM! Wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait
+
+taariq_lewis 
+Wait, hold on, I wanna say that again. mean, I, I, I, I, I, I, I, I, I, I, I, I, I,
+
+taariq_lewis 
+Are you ready? Are you ready?
+
+Citizen Web3 
+you didn't hear that man, that was supposed to be drum- wait wait because I need to press live, wait wait wait wait wait wait wait wait wait wait wait wait wait wait wait
+
+taariq_lewis 
+Solana to Cosmos messaging back and forth, bi-directional. It's coming. All right. Wait, there's more. Wait, Sergey, come on. Come on, there's more. Is it too much? Is it too much? Do you want a break? I can give you a break. Do you need some water? Because there is more. I mean, so what we want is that anybody on any Cosmos chain can IBC execute queries into Solana, execute transactions on Solana.
+
+Citizen Web3 
+Dragon.
+
+taariq_lewis 
+That's what we want. We want that on avalanche. We want that on Aptos and Sui. Cosmos should be everywhere. And that's our view. So wait, but let's talk about pigeons, right? Now, hold on a second. Where can you find pigeons?
+
+Citizen Web3 
+This is perfect, man. This is really fucking perfect.
+
+Citizen Web3 
+What? I can say but in the city, in the city, in city, no no no let's go in the city. Anywhere, anywhere, anywhere, anywhere, yeah anywhere.
+
+taariq_lewis 
+You find exactly in the city everywhere, everywhere, pigeons are everywhere and they shit on you. Sometimes it can be annoying, but we wanted to have an image of something that is readily like, it's anywhere in any major city. So we say for any major chain, Paloma is there.
+
+Citizen Web3 
+Yeah, this shit on you. That was my like... This shit on you.
+
+taariq_lewis 
+And essentially, Cosmos communication should be there as
+
+Citizen Web3 
+This is really important, what you're saying. you're talking, I want to get back to that about communication, but before that, sorry, before I jump ahead of myself, like I do want to talk a little bit and hear your thoughts about, I mean, we can, we can, I think we can agree that relaying is part of the bigger bridging topic, right? The bigger bridge topic. I want to hear your thoughts on, on, on the whole, how decentralized this bridging currently.
+
+Citizen Web3
+And how can we improve this? And maybe you guys in Paloma already have thoughts about how to make this work better or, or, or maybe it's perfect. I don't know. So you go.
+
+taariq_lewis 
+Yeah, yeah, yeah, it's great. So bridging is not perfect and bridging is high risk. Okay. We have a lot of good people that have lost a lot of good money on bridges that were not secure. And we have a lot of well-intentioned people who are presenting bridge solutions that are highly centralized and can be essentially at risk, put everyone at risk, not for...
+
+essentially an exploit, but for centralized control or rug pull, right? The bridges can rug you, a lot of bridges can rug you. And we have to acknowledge this, but we have to acknowledge this as unacceptable. This is not where we're going to end. It is the Paloma position that validators who have sufficient stake and who have an interest in acquiring stake
+
+and seeing their stake go up in value, will want to do the job of making sure that the bridge is secure. Because their stake in the bridge is also combined to the stake of the user. So if the users lose value, the bridge loses value. It is our view that the Cosmos, essentially proof of stake model, allows us to build a path by which validators can
+
+take on the job of helping secure bridge communications and bridge state because they will be slashed. And if they see activity that is bad behavior, they can quickly respond and take that bad activity out. And so Paloma's approach by requiring the validators to be relayers, as part of our process is that again, consensus on message delivery.
+
+and consensus on bridge activity must be agreed on by all the other pigeons, quote unquote, validators in the set. And if there is not consensus, then not only will the transaction fail, but if there's bad behavior, then pigeons and validators will be slashed. So essentially because the validators have to carry the water and make sure the water reaches the thirsty people, we think that this model is a security model that we
+
+taariq_lewis 
+we are confident should be tested in the public blockchain world. I'm not gonna say, so, know, before I, I don't wanna say anything like, yeah, we're most secure. Something happens to change that. But I would like to say that we have not seen a successful exploit against validator set security model first put forward by the Cosmos. Okay, not yet. And as we say in science, if it hasn't happened yet,
+
+then the general accepted theory is the validator set security model is a secure security model.
+
+Citizen Web3
+I love this because this is what I want to derive the next question for. And for you, it might sound a bit silly, but you know, it's ironic because the longer I talk to other communities about Cosmos and the Interchain and Bridges, and in fact, actually after making this recording, I have, I'm going to go to talk about this again.
+
+taariq_lewis 
+Yeah.
+
+taariq_lewis 
+Fifth course.
+
+Citizen Web3 
+And it's not going to be a question for you to give me an answer so can copy it maybe a little bit. But if you had to, and this is because I have seen this confusion everywhere, because a lot of people when they talk about the web, like not the Web3 and Web2 stack only, but the whole stack of bridging and blockchains, they say, well, isn't IBC just another bridge? I mean, it is just another bridge that's going to get wrecked and hacked.
+
+taariq_lewis
+Yes.
+
+taariq_lewis 
+Hmm.
+
+taariq_lewis 
+Okay.
+
+Citizen Web3 
+So what, how are you guys any different? Not to anybody else. And, I guess like the easiest way to explain it is as inbuilt into the protocol stack. It's a bit different. We're looking at different like, but is there any other way in your own words that you would try to communicate this message or, any other pros or, or, or that you would find easier to help other people to understand?
+
+taariq_lewis
+You
+
+taariq_lewis 
+Correct. Correct.
+
+Citizen Web3
+why the bridging in IBC is different or how and how it is more different and more efficient from the regular bridging that gets hacked like between other places.
+
+taariq_lewis 
+Yeah. Yeah. So, so it's a good question. I think for those folks who need the additional help for understanding why the IBC protocol and, interchange security, which comes out of that is more secure than typical bridge networking. I think what I keep coming back to the first principle of the validator set.
+
+Again, what Cosmos brings to us is a security model where the validators, the ones minting new blocks, are the ones who have to come to consensus on what messages should be sent through the network. And if those validators are both acting as securing the integrity of the transactions, but now also secure or
+
+take on the additional role of securing the integrity of the message, the contents of the message, where it's coming from. It is itself the new thing. It's not just the transaction, but it's also the source of the message, right? Because that's what all this bridging stuff is, is I have a source and I have a target. And in the interchange, we talk about the source chain and the target chain. Some people call the origin chain and the target chain. And so in IBC,
+
+And the beautiful thing about Interchain Security, which I want to say shout out to the Informal team. They are coming out with Interchain Security this month and we're also at Volume, participating with Informal on this, on the consumer chain. You can outsource the security of those connections to other validator sets. And this is something, again, that is really cool about the Cosmos. You can't do this in Bitcoin.
+
+You can try to do this in Ethereum, you'll be starting from scratch, you'll have to copy the Cosmos. And you can't do this in Solana and Avalanche. Only in the Cosmos is it such that the validator set of another chain, we call this Interchain Security, can offer to secure the transactions in your chain using this IVC network. And that's what we think is also great. So Paloma itself can grow to provide security to
+
+taariq_lewis 
+other chains in addition to the Paloma blockchain using Cosmos Interchain Security. All right, now let's take a moment to just breathe what we just said there.
+
+taariq_lewis
+Are you feeling it right now? Wait, hold on. Puff, puff, give. Puff, puff, give, Sergey. What's going on? Go to the left. To the left. Right? To the left. The rotation, Sergey. Get the rotation. I don't... You get a lot, right? I know what kind of friend you are. feel... There is... So I tell folks that the entire...
+
+Citizen Web3 
+I'm feeling it, wait... Nice, nice, nice, nice. To the left, I love this left, this left, people. Not passing around. I get that a lot, I get that a lot, I do get that a lot. I see that.
+
+taariq_lewis
+Cosmos ecosystem. Combination of all the chains can become security guards to other chains, security guards to themselves. This is huge. This is big.
+
+Citizen Web3
+And do you think there is going to be competitions between those chains to become a bigger security guard for the other? Yeah. no, no, it's not a, it's not, it's, that's a good thing. Of course, of course. Of course, of course.
+
+taariq_lewis 
+Well, why not? Absolutely. We want that, right? We want, yeah, yeah, it's a good thing. We want a market of security. We want people to say, listen, you know what, I'm running a Cosmos chain. I can provide security for you over at ABC on an industry and security. You know what, your token as a reward, not really working for me. You have to do more work or your politics must be in line with ours. I think we are at the cusp of a Cambrian explosion of security opportunities in the Cosmos, which are unique.
+
+And as long as people keep launching more Cosmos based chains, I think you're going to see this thing continue to grow. And it's super exciting. And again, unique to where we are in the Cosmos. I think this is pretty cool. So for Paloma, we absolutely agree. And what Paloma is doing is exporting its validator set security to other chains. It's saying, hey, you know what the validator set on Paloma because it's relaying and it has verified that the source and the target transactions occurred.
+
+can now export security or transaction guarantee security to Ethereum, to Solana, to Avalanche, to AptoSui and others. And we're excited to make that happen. And I think that's another thing that you get with Paloma is now exported chain level security moving to other non-cosmos chains.
+
+Citizen Web3 
+And I like how this naturally creates markets because well, that's the whole beauty of like chaos, right? Like it's a natural yin and balance, the natural yin yang that always is kept there. It's a live organism. And on that one little thing that I didn't mention before, but I do want to mention because I did remember as you were talking, as you were like mentioning more things. And I love that idea, by the way, that you guys want to use the gas fees, part of the gas fees or whatever to go to the relay as validators.
+
+taariq_lewis 
+Correct, correct, correct. That's right, that's right. That's right, that's right, yes.
+
+Citizen Web3 
+And, actually I want to bring up one topic on that and ask your opinion. Recently, probably seen the whole, well, it's not recent, but now it's became official. whole message from Hertzner and saying, Hey guys, know, like running validator notes is not allowed. want, and now they said it actually like straightforward. said guys, proof of stake not allowed. So finally, finally the whole market has awoken to the whole thing that we need home servers.
+
+taariq_lewis
+Mm-hmm.
+
+taariq_lewis
+Great.
+
+taariq_lewis 
+Right. That's right. That's right. That's right.
+
+Citizen Web3
+We got there. And what you're saying is the obvious bloody way to solve it guys. Give part of your rewards to the validators for them to be able to afford to buy those servers. What do you think? Do you think that's a good way to like improve the physical stack that we have below the software or can there are other...
+
+taariq_lewis 
+Correct, Yes. Mm-hmm. Yes, that's right.
+
+taariq_lewis 
+Absolutely. Absolutely. we make so, so at Paloma, we have a massive community of Indonesian, Vietnamese, Turkish, Ukrainian, you know, Slavic, Russian members, currently nearly over 4000. And what everyone is trying to do is build a business for themselves where they can be a validator and say, listen, you know, I'm living here in Hanoi, Ho Chi Minh City.
+
+I am validating, I have a great network connection, I have uptime. The path for me to make sure these messages are secure and being sent is available to me. And now I can make money from that. I can make a business. And I can make this business being in a place where, you know what, these regulatory issues are not so much my concern because I am outside of these jurisdictions and my jurisdiction lets me run this computer and I'm running it in my home and I got to set up. And we find a lot of...
+
+community members, even in the Paloma community, sharing scripts, sharing setups, so that even they're giving away the ability to say, hey, here's how you set up your server, here's how get it running. That to me is going to continue to lower the cost. In Paloma, we're really committed to saying, hey, let's continue to lower the difficulty level, lower the barrier of access, what we do with validators. think one key note is when we started our test net, we started with 100 validators. Now our genesis is up to 175. We are like,
+
+we are looking for more ways to increase the validators. And I think a lot of R &D on Paloma will be, hey, how can we continue to upgrade our consensus engine, our block production and block minting engine so that we can go from 175 to 1,750 validators, relayers sending messages so that this is truly a global network. And that's something we're passionate about, absolutely.
+
+Citizen Web3 
+But by the way, do you think Tendermint can pull such a thing as 1750 validators? Not today, not today. I'm gonna give you a secret. Wait, wait, for anybody who doesn't see this, for anybody, this is just for you. You see, you see, this finger's got not today on the, the tattooed on there. And it's this finger, and it's literally is like that, it's got not today.
+
+taariq_lewis 
+Well, not today. Not today. But this is... Yeah. Yeah.
+
+taariq_lewis 
+If I wasn't in different context, I would think differently about that finger, but that is awesome. I love that finger. That's right, right? The secret is safe with me. this is the R. What you have just proposed is the R &D for the cosmos and pretendments going forward. That is the foundation for R &D. How can we continue to scale?
+
+Citizen Web3 
+It's a secret. Guys, I'm sorry that you're not seeing this, but it is a secret. Sorry, sorry.
+
+Woo!
+
+Citizen Web3 
+Of course.
+
+taariq_lewis
+We are looking at models and I think one of the most amazing things is, think that the Mistin team, the founders of Sui, we spoke to them and met with them and we're looking at exploring their novel and Tusk technology as possibly something that could work alongside Tenement. And so there are efforts underway to be able to say, hey, how can we make the consensus layer even better?
+
+so that we can have even more validators join the network. Of course, at scale, there's always going to be a limit, you know, the speed of light in communications. There's only so many nodes you can have on a network, but we think there's a lot of runway to develop and to build more validators into the Cosmos ecosystem. Exciting to see what's coming there, but yes, that will be part of Paloma's
+
+Citizen Web3 
+Do you think that all of those things like increasing the set of validators, allowing, like you say in Paloma, things for using the gas fees to help validators to relay, not to help them to relay, but to help them to keep the costs for the relay and so on and so forth, does that help user adoption? Because I have seen a lot of those things mentioned in Paloma that talking about user experience, about adoption and...
+
+taariq_lewis 
+Right. Yeah. Yep.
+
+taariq_lewis
+Yeah.
+
+Citizen Web3 
+And I would love to do do you think that this is what's gonna help adoption in the bigger scale or there are other things that you guys are concentrated on?
+
+taariq_lewis
+Absolutely. Great question. You know, when we first, the code name we had for Paloma before we landed on the brand was FedExChain. And the reason why we came with FedExChain was because send messages, send them fast and they get delivered on time. And we used to laugh, you know, go ahead. were going to say.
+
+Citizen Web3
+It's coming out man, I cannot hold it, it's like ahhhh I cannot No no no let's let's la la la la la la I'm gonna I'm gonna It's all yours all yours all yours man all yours all yours All yours All yours I cannot do it
+
+taariq_lewis
+I love it. But yes, delivering on time. If we can deliver, if Paloma can deliver the promise that your trade will get executed on time across 19 or 20 different trades, right?
+
+we think more people will say, I want more trades, I wanna do more. And I think just in the same way that FedEx made us all get used to faster mail, right? Because we never thought it was accessible to us and unearthed an entire new era of business. We think fast message delivery, that's what's polymer about. Low latency, fast message. It's funny, we tell people, from 2017 to 2018, it was all about
+
+fastest blockchain, know, as in how many blocks fastest block time We are about lowest latency fastest time to communication fastest trip and that's a different problem and I think what we want to say is if more people are getting their messages if you have a chain that can deliver on the promise that Your message will get to other chains on time We think that will cause more people to say I want more of that I want to use it and I want to use it in ways you never predicted that is adoption
+
+Citizen Web3 
+Basically use improving user experience. Is that what you're saying? Right? Right Okay, and and do you think is in Europe in not not do you think sorry? I mean think how to phrase it in your opinion or in your examples Maybe or experience what would be let's put Paloma aside for a second Give me examples that you think or that you get inspired by to build Paloma That you would say wow, there is great
+
+taariq_lewis 
+Correct. Correct. That's right.
+
+Citizen Web3
+user experience that is amazing. I love that we take those ideas into Paloma. Not necessarily blockchain. go with, mean, Twilio comes to mind with Paloma, kind of like the example straight away, but maybe you have others.
+
+taariq_lewis 
+Yeah, yeah, yeah, yeah, that's right. Yep, yep, yep. So, no, no, so that is one of the key example for us. We love what Twilio did for building SMS messaging APIs. Before Twilio, it was very hard to send a message to another phone, like a text message, right? I mean, this is ridiculous. We can call, we couldn't send a message. Why? Because you had to.
+
+buy infrastructure or you had to rent infrastructure, you had to rent a short code. It was very expensive. And then every network had a different protocol by which to communicate it. In comes Twilio and says, listen, we'll just give you an easy API endpoint. Just hit that endpoint, send a message and return. That's it. You're off to the races. We are taking the same approach. will give you essentially here's an API. Just pick your chain you want to send a message to. And then when it comes back, there you go.
+
+Right? Hello world. We want it to be that, that easy. And we want it to be, again, chain agnostic. The beautiful thing about Twilio was you didn't have to pick your phone service if you wanted to send, you know, say it was AT &T to, you know, to, to Verizon or to T-Mobile, you know, it was, they didn't, you didn't have to decide. The message got where it needed to go. And so we're taking the same approach at Paloma, the message to simply get where it needs to go. And you, it's for the developer, it should be easy.
+
+as an API. We have our Paloma JS and Paloma Pi SDKs today make that possible, and we're going to be building more on those.
+
+Citizen Web3 
+It's interesting that a lot of your work is concentrated from what I'm hearing around improving communication, not just user experience, which is the same as improving user experience, I guess. But it's great how, well, this is the essence of blockchain for me. It's a communication tool between, and this is like, it's right on it. I like it.
+
+taariq_lewis 
+Yeah. That's right. That's right.
+
+taariq_lewis 
+Yeah, that's right. Love it. Yes. Yes. Yeah.
+
+Citizen Web3 
+question that I derive is going to be a different. It's going to be a little bit different this time, but I want to hear your opinion here as well. Obviously, for you guys to like communicate, you have to communicate with smart contracts, right? On other chains. lately, have finally, I say finally, some people say to get scared, I say finally, lately, we have seen, especially from talking to guests, people starting to experiment a little bit with
+
+taariq_lewis 
+Okay.
+
+Yeah.
+
+taariq_lewis
+Yep, that's right. Yeah.
+
+Citizen Web3
+like the architect, not not not the architecture of smart contract, but how should I put it? For example, I've seen chains, you know, put things into those smart like, for example, and the things that I want to ask you, do you think crazy things and how? No, no, not how forget about the how I got lost for a second. Give a little gift to the left, know, remember, keep it on. Keep it fast and keep it fast.
+
+taariq_lewis
+Yeah.
+
+taariq_lewis 
+That's all right, that's all right. Yeah. Stop looking at it and pass it, Sergey. Stop looking at it and pass it.
+
+Citizen Web3 
+Damn, damn, No, no, no, serious. I got it. got it. I can do it. I can do it. Right. So for example, imagine I heard of chains that say, okay, now we're going to give the smart contract the ability to make its own decision. How are going to do it? We're going to give the smart contract part, part of the fees bet. We're going to start, you know, feeding it with its own money. So basically it can become in a way, in a way independent. Of course, somebody has to press the button. So the question is, does that
+
+Citizen Web3 
+influence your guys or for you that doesn't matter because then you have like a kind of another decision layer 
+
+taariq_lewis 
+Yeah, yeah, yeah, yeah. So I want to again give a shout out to Marco Breviac over at Tenement. He's been an amazing advisor to us. And this is something that he brought up. You know, we talked to him a lot. And one of the key things that folks are moving to is allowing smart contracts, you know, either through many of the Cosmos modules like AuthZ.
+
+And others to essentially make payments on behalf of other accounts right make an account allow account to make Now let's now dig deeper can now the account that is actually running or or has deployed a contract and that contract now get funds to run so on Paloma What we have built is that layer so we call it lock we call it what we call it is logic So you come to Paloma if you want to say listen?
+
+I have a message, that message hits my contract, but then what happens is that that contract changes state and that contract has money to go spend to send another message in return because of that first message. Can you do this? So this is what the pigeons are meant to do. The pigeons are essentially saying, hey, listen, contract.
+
+we will send you a message. So user, you send us on a journey, we send a message. We've come back from the chain with a message to the contract, because you just go on. The contract received this message and now there's a change in state. And because the pigeons can say to each other, whoo, whoo, did you see the state? Whoo, whoo, you saw the state. Hold on. Puff, puff, puff. Hold on, two puffs. Because decisions.
+
+are the validators that can see the change in state and approve it to the contract, the contract can execute. It can execute another message. It can execute a state change. So this is something that we love. What you're talking about, we think, is the way to go. So if you're seeing it already, it is a validation of where we're heading on Paloma. Logic and execution of state changes from message awareness by pigeons.
+
+taariq_lewis 
+is something that is already based into the protocol. again, we think that makes it user, what it should do is again, make the user experience even less stressful because, know, we can say, for example, if I executed a trade on chain, on the Ethereum, on let's say I executed a trade on Arbitrum and now state has changed an Arbitrum so that I say, listen, if you see that my, you know, that
+
+that there's a price difference on some peer, arbitrams, on an AM and an arbitram. I don't want to take advantage of that. Go do that. And the contract's already funded. That is what Paloma can allow. You can do that on Paloma. And so that sort of feeds into that vision of, so the contract was funded. It changed, it was aware of its own state. It got verification it could change state. And then it sent off another message and we say, yes. That is what we want is the beginning of some really promising visions around automation.
+
+and a really promising vision of making chains do really, really big things beyond, hey, I just sent one transaction, I gotta wait. So I love what you just described there. Yeah, we have it.
+
+Citizen Web3 
+What do you think though in general about the future of how smart contracts, where can they go and what can they achieve that we are having like hard time with today without that next achievement, whatever that may be in your head?
+
+taariq_lewis 
+Yeah, yeah. I think it's about security, right? Because now that communications, know, now the message is the money, right? We say in Paloma, the message is the money. It is still hard to secure smart contract language and software. It's just hard. It's not impossible. It's hard. And we still have a lot of work to do because again, if, you know,
+
+You know, we just lost $160 million in the last two months, you know, because smart contracts issues. This stuff is painful. And, you know, we, you know, it puts the fear of, you know, it puts the fear of God into us over at Paloma, you know, that, you know, we have to look at it as well as security is big issue. So we want to continue to contribute to security best practices. And I'll say, for example, on Paloma, you know, we advise folks not to use upgradable contracts.
+
+you know, in the Paloma messaging system. If you're deploying a contract on Paloma, with Paloma on Ethereum, we say deploy a new one, don't try to upgrade it because if it's exploited, the last thing you want is that, you know, everybody who, you know, was on the, you know, everybody's funds gets lost. It's hard. And this bridge stuff, it's the surface area, the attack surface area grows as you have more chains. So it's going to be very, very tough area for us. And I think one of the areas we're going to invest a lot in
+
+to help contribute to the security knowledge of the space security. It's big deal.
+
+Citizen Web3
+Do you have already any ideas of how you would like to improve and contribute? you have any things that you can talk about? know those songs, so things can be like private in terms of development, but...
+
+taariq_lewis
+Yeah. So one of the things, so our view again is that the pigeons won't work, right? They're annoying, but they serve a use. And one of the things that we want the pigeons slash the validators to do is we're looking at maybe doing contract awareness, like actually checking contract state as a service. So you could come to this Cosmos chain, Paloma, and say, hey, will you please
+
+you know, execute an audit check on contract A on blockchain Z and then come back and tell me if you see any issues. And if the, and so that means that the pigeon will have to go query the contract ABI, actually debug the contract ABI separately and then send the results, you know, back into the Paloma chain user who requested it. Can that be done? We're looking at those types of things where it's like, wow, dude, that's a new service. yeah.
+
+validators actually providing monitoring security of chain states. Is that possible? It is possible in Paloma. So we're excited about using and exploring again the validators set as worker bees. And then how do you get paid? Well, remember, validators get paid on that gas fee and gas is also incurred for querying. Wow, so you mean validators can start acting as auditors? Well, hold on, I didn't say that. But could we imagine a world in which validators are now running audit systems on behalf of the message system?
+
+if we can.
+
+Citizen Web3 
+I think in general the more role, it's not even that I think that, I think that we can see that happening. There is more and more roles arising whether people giving part of the inflation to the contract that does the most gas or whatever and so on and so forth and so forth. That's cool thing. And right now we see, I think we use the word validators because it's like the obvious thing to pull, but I'm pretty sure that in the future we will.
+
+taariq_lewis 
+That's right. That's right. That's right. That's right. That's right.
+
+taariq_lewis 
+Yeah.
+
+Citizen Web3 
+see those rolls like going boom kaboom
+
+taariq_lewis 
+That's right. That's right. Yeah. Yeah. It's not limited to validators. I'm sorry. That's a good point because we have teams at Paloma who aren't validators who are exploring these questions. And I guess you're quite right. It is not, you know, it is permissionless. So anyone can, you know, sort of try to offer these services. And I think we want to encourage that as well. And I think security services on Paloma network is something we're going to be saying, Hey, let's, you know, how can we continue to encourage this?
+
+using the sort of messaging protocol approach that we have designed. Absolutely agree.
+
+Citizen Web3
+And it's great though that this message and service uses a public ledger, verifiable public ledger, because then we get like the whole web, web three build, build on web two, like with the whole GitHub story, right? Where like, sorry, we're not happy with what your smart contract does. We're going to delete your account.
+
+taariq_lewis 
+Correct. Correct.
+
+taariq_lewis 
+Yep, that's right. That's I know. I know. We're going to deplatform you. Which is, know, pigeons are a nuisance, but they keep coming back. God damn it. It's like rats. So yeah, we actually are very sensitive to the whole censorship issue. And it's an issue for us, something we have to think about as well. You know, what happens when, you know,
+
+Citizen Web3
+Yeah, I loved it
+
+Citizen Web3 
+You
+
+taariq_lewis 
+a pigeon who is sending a message to a chain suddenly finds themselves sending a message to a blacklisted account. How do we protect? How do we provide awareness? But I think our hope is that, folks on the Paloma network will provide these services using the same infrastructure. One, to check, verify state, verify status, and as well as to say, hey, here's how to respond, here's how to protect, and provide resilience.
+
+What we want is a network that's resilient, no matter how much they blacklist us, no matter how much they try to ban us, resilience means that the network will persist and continue to provide value. It's super critical for us.
+
+Citizen Web3 
+It's just an idea, you could have two guys dressed up as pigeons, you know, with a couple of baseball bats going around knocking on them. Pam pam pam. That's not resilient people, you know. Cuckoo, you know, cuckoo. It's pecking, exactly, you know what I'm saying? Cuckoo.
+
+taariq_lewis 
+I know! You know, it's funny, so... Cuckoo, mother... Cuckoo! Cuckoo! my god, dude, you have me in stitches. I love it.
+
+Citizen Web3 
+Bro, that's how it goes. That's how it goes.
+
+taariq_lewis 
+We did have a meme competition on Paloma in the early days and it was funny to see what people would put up as memes. And I think somebody put up one of those like cuckoo, like two gangster pigeons coming in like, you know, we're going to threaten you. Yeah, you, know, we, you know, we won't take it off the table. Okay. So we might leave that on the table. Pigeon mask, us walking around. But yeah, we believe seriously in network resilience and we believe in research and development.
+
+think we want to really continue to advance blockchain technology and really identify ways to see how we again can use research to make the network more resilient and fail safe.
+
+Citizen Web3 
+Another devil's advocate here think while we're on the matter of resilience and censorship. love those. I'm sorry. I'm like a cuckoo kind of shit on it all the time. I have to ask. have to. I always say it's all about the content. No, not me. It's not me. So if I go like start to crawl around the Paloma website, I do find this interesting thing. And again, this is devil's advocate question.
+
+taariq_lewis 
+Yes.
+
+Yeah, yeah, I know!
+
+taariq_lewis 
+Correct. That's it. That's it.
+
+taariq_lewis 
+Yes. Yes. Yes.
+
+Citizen Web3 
+There is a, it says on one point or in one place, one of the pages that your guys are part of the CCC and I don't the cross chain. Yes. Coalition now, now, and here's the devil's advocate thing on one hand. That's cool. On the other hand, isn't the cross check in your opinion, can something like cross chain coalition do more damage than good because they're like a coalition that's already there.
+
+taariq_lewis 
+Right, cross-chain coalition, yeah. Yes, yes.
+
+Citizen Web3
+and deciding things and kind of like, isn't that, is that decentralized? is that to help us not to like, you know, devil's advocate, let's play around here.
+
+taariq_lewis
+You're right. Right. Right.
+
+taariq_lewis 
+No, it's great. Yeah, it's okay. So volume is the founder of the cross-chain coalition. And unlike, you know, Paloma, which is essentially owned by the Paloma Foundation, volume owns the cross-chain coalition and the job of the cross-chain coalition is to educate. We want to educate. So Paloma wants more people who are in the cross-chain world, who are not aware of what you can do with Cosmos technology to
+
+Citizen Web3
+I love it.
+
+taariq_lewis 
+come into the Cosmos ecosystem, participate, start building on Cosmos and start essentially integrating, using Paloma network to send messages to and from Cosmos and Ethereum, as well as Solana. We want more people to come into this world. And so by doing that as a coalition, as a Jared information group, we think is the best way to reduce the idea that people think, hey, yeah, you're here to sell me your token. No, no, no.
+
+you know, you're here to like convince me about blockchains. No, we're just here to educate you about what it means to live in a multi-chain world and how these chains communicate with each other and what it takes to happen. I think right now that group's around 4,000. And what you're going to see is that Paloma hopefully will continue to sponsor educating these individuals so that more people can come aboard this vision of, you know, this increased communication world.
+
+again leveraging Paloma and the Cosmos ST.
+
+Citizen Web3 
+Thank you for finding it because like those kind of things I think do help like in terms of education and I didn't hear about it before. I did only found it yesterday as well when I was like researching some things like trying to go down the rabbit hole. Though I know that we've kind of like, I don't know how it happened, but it's been, how did time go past so quickly? But, but, damn, but cuckoo, know, like.
+
+taariq_lewis 
+Yeah, yeah.
+
+Yeah, yeah, yeah.
+
+Yeah.
+
+taariq_lewis 
+Have we just, wow, yeah, look at that.
+
+Citizen Web3
+I love it. But man, traditional question, a traditional question. I love it because to me it does open up a lot of what's inside a person. And I want to hear your answer. I'm really looking forward to your answer here. What, especially with what you mentioned 2014, Tendermint, pigeons, what keeps you motivated day in day to get out of bed?
+
+taariq_lewis 
+Yeah.
+
+taariq_lewis
+Yeah.
+
+Citizen Web3 
+And, know, to, mean, I didn't ask you blockchain story, which I usually do, but, know, regardless, like, what keeps you motivated to build, to, you know, to keep on trying to make, to, create things like a coalition that's going to educate people about decentralization. Like, why do you do that, man? Well, what's, what's, what's the, what's the deal for you personally and what keeps you motivated to keep on doing that?
+
+taariq_lewis 
+You know, I'll say I'm addicted to people. I'm addicted to, you know, people who continue to push the boundaries of what is possible. You know, I'm a boy who grew up in a Caribbean island, know, Trinidad and Tobago, which is, you know, 1.2 million people, small island, you know, and, you know, our best, know, biggest export was sugar cane and oil.
+
+You know, you know, just having an opportunity to work on a global platform and a global audience of people, wherever in the world, who are constantly saying, you know what, the status quo is not sufficient. We want change, we want freedom, and we want to explore, you know, how, you know, the way we as humans interact with each other keeps me going. And I think the beautiful thing about, you know, the way we've used cryptography,
+
+and this database technology to create new forms of money and new forms of value and even now new communication systems. That is, mean, you I'm lucky to be alive, Sergey. I am lucky to be here. I'm lucky to be talking to you. And this is a privilege for you to have me here and a privilege to share these ideas. I mean, you know, where else in the world can I do this? If I, I told somebody, if I wasn't doing this job, I'd most likely be a taxi driver in Barcelona.
+
+You know? But I'd get to meet more people too. I know, right? You know, I was just there in Barcelona. That's all right. My wife is Spanish, so have to shout out to my beautiful wife. She's like, make it count. But being around these people, you know,
+
+Citizen Web3 
+Why Barcelona? mean a taxi driver I get it. I get the taxi driver thing. Why Barcelona? Come on. I mean, love... Sorry Spanish people.
+
+Citizen Web3 
+I'm sorry. I'm sorry. I'm sorry.
+
+taariq_lewis
+Again, I was lucky to be exposed to Jay Kwan. was lucky to have Zaki Manian, lucky to be exposed to Jack Zamplin, Billy Reinkamp, Jehan Trambach, Justin Kielpat. I mean, I can go on. These folks, Sunny from Asmosis, everybody I've actually had human face-to-face contact with, and it has continues to just be an inspiration. And these people continue to inspire me, and I hope I can continue to inspire others if I can pass it along.
+
+and say, listen, if you have a vision for making the world a better place, come and do it with us. And I think that's what we want to do at Paloma. We want to make blockchains more accessible by making communications even faster and easier.
+
+Citizen Web3 
+I mean, a cuckoo to that, not a cuckoo to that. No, that was beautiful answer, man. I loved it. I loved it. It was great. And for all the folks who are listening out there, all well, we'll try to, of course, put all of the links. If we missed something, guys, I'm sorry, but all of the links that Tarek mentioned, of course, will be like in the description of the episode and everyone will spread around. So.
+
+taariq_lewis 
+Cool, cool, cool, cool. Thank you, thank you. Yeah, yeah, yeah.
+
+taariq_lewis 
+That's right. That's right. That's right.
+
+Citizen Web3
+guys spread the message you know like this is this is the stuff man tarik man thank you very much come join the flock come join the flock i love it i love it i love it i love it let's but remember to pass
+
+taariq_lewis 
+We say come join the flock. We say come join the flock. Come join the flock. Fly with us. Fly with us. Let's fly high. All right. Wait, hold on a second. You saw what I did there? Did you see what I did there? Now you understand why we choose coo coo coo coo. We're still recording. Okay, my goodness.
+
+Citizen Web3 
+We're still recording, Tarek. We're still recording. We're still recording. Damn! Guys, guys, thank you very much for listening. Tarek, thank you very, very, very, very much for coming and finding the time. Guys, see you next time.
+
+taariq_lewis 
+Thank you, Sige. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

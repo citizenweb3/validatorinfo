@@ -1,0 +1,489 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/composable
+
+Episode name:
+Crypto is Cool, the Wild West and Faith with Blas
+
+Citizen Web3 
+Hello everyone, welcome to a new episode of the Citizen Web Trip Podcast. Today I have Blas from Composable Finance with me. Blas, hi, welcome to the show, man. Yeah, man, I've been actually trying to record an episode with you guys, well, I mean, you guys, with somebody from Composable for a while. So it took us a while to get connected, but finally we are here. Blas, can you please introduce yourself?
+
+blas 
+Thank you so much for having me. It's a pleasure.
+
+Citizen Web3 
+to myself, the listeners tell us what you do, how did you get to web three and how did life get you here, man?
+
+blas
+Yeah, of course. So I'm Blas, 35 year old. I live in Buenos Aires, Argentina. So I studied economics and then did a master's in finance, always liked tech since I was a kid. So I think kind of, you know, I got into crypto because of Bitcoin. I mean, just sort of like I remember like Bitcoin coming in and trying to understand and spend so much.
+
+time and you know just like really seeing that this was something groundbreaking on the technology and the impact of like into our lives and you know after that like basically as well like we found the same with with ethereum not really understanding what was it about at the beginning but really so excited you know and then
+
+After this, I realized, I just want to get into crypto. I want to work in this industry. It kind of started forming, right? I started seeing more and more projects. So the first time I started working in crypto was building a derivatives exchange on top of the Lightning Network. That was my first job. So I worked there as a first employee on the startup. Then after this, I moved on to working with roll -ups.
+
+Citizen Web3 
+you
+
+blas 
+worked on the human land, building relapse, what I mean on the team that plays linear on consensus. And then after working on this, I moved to Composable to sort of get my feet wet and see how to shape the interoperability space and make interaction between different chains, not only one, smooth. And I thought it was very exciting.
+
+I've been in proposal ever since and just enjoying the ride now. Crypto is cool again, so it's fun to be here. I agree. I agree. I agree.
+
+Citizen Web3 
+Crypto is always cool man. Crypto is always cool. But let me dig a little bit. Let's dig into your story a little bit if you don't mind. But I mean, okay, you told me your crypto story. You worked here, there. Okay, but why Web3? How did you get here? What drew you to Web3? Why not work in IT company? Why not have your own company? Why not, I don't know, work for Microsoft? Why not do anything else?
+
+blas 
+Of course.
+
+blas 
+I mean, I've done most of this, right? I had my own startup since when I came from university, built something that was meant to be like kind of intersection between statistics and amateur football, soccer. We had a bunch of users, it worked, it was nice. After this, worked a bit in cybersecurity, worked in the banking industry. So I've been doing pretty much.
+
+Citizen Web3 
+you
+
+blas 
+many things, but you know, crypto is so exciting and so special. Like it's so free, it moves so fast. It is so, like the barriers to entry are so low. So it creates an environment for innovation and creativity that I think it has very, very little comparison. I think now maybe with AI on a different level, we're seeing something different, but like special as well.
+
+I'm not particularly interested myself in AI, but I see some of the conditions I would see in crypto there as well, where anybody can come up with something and launch it into market pretty quickly. And it's very novel and it defies also the way we coordinate as human beings. So to me, it has always been so exciting to see it and then to see how the space is progressing at the technical level, but also at the interest level from the society.
+
+and also investment and people just coming up with new ideas that shape progress and the trends. So really, I think being in crypto or Web3, it just has another pace and it's accelerating.
+
+Citizen Web3 
+What is the least exciting thing about the crypto industry for you today?
+
+blas 
+I don't know, to be honest, that's a good question. I don't know, I don't think there's anything right now that I think this is horrible. I think pretty much everything, it's fun or it's interesting. I think we still have a lot to do.
+
+and work and improve. These are certain things that I see, you know, we're still like, still it's a bit difficult to use all this technology, you know, it's this, it's easy to get, you know, your funds locked or get hacked by somebody or whatever and not understand what you're, where you're getting into. But it's also like the wild west, still the wild west. And that's also pretty exciting to me, you know. So I don't, there's nothing specifically where I feel like, wow, this is, this is really bad.
+
+Citizen Web3 
+you
+
+Citizen Web3 
+Okay, okay, we will get back to this point. But but but but I was just wanted to to hear to because you were, you know, using a lot of adjectives. And I wanted to get into like some of the things that a bit deeper. But okay, but what's the personal goal of blasts? In this space? Where Where are you? I'm not okay. It's not an interview, right? It's not like where do you see yourself in five years from now?
+
+blas 
+No one otherwise is. Yeah, yeah.
+
+Citizen Web3 
+But you know, like, what's your personal goal? Like, what was the mission? What are you trying to achieve? Money, fame, cure cancer? I don't know, like, man, what's what's what's what's what's driving you? Apart from excitement, of course, which you mentioned.
+
+blas 
+I think, yes, yes, I think I'd say, you know, so just believe in something, like particularly I do believe in this idea of, you know, technology that allows you to do things in a non -custodial way, like really like, like very much autonomously and free in some way and be part of building something that allows people with these principles.
+
+to do more things, you know? So if I'm able to be part of this, like, okay, you know, like two years ago, three years ago, people were not able to do this, right? Just for instance, like, you know, send money to Africa, right? Like I remember like the first time I went to Africa, I met a person there with a different, and I was doing Argentina, I could send like this person like $10, right? Like in like 10 minutes, that was mind boggling because I come from a country where, you know, sending money is difficult, like receiving money is difficult.
+
+and sending it to Uganda, you know, like, like from that was mind boggling. And like, I think being part of like this, you know, movement that enables this, I just think it's, it's inspiring. And I think still there's a lot of things we can do on that direction that, you know, just makes me be willing to be.
+
+you know, working hard and I'm part of this. Of course, you know, there's this, there's this. Yeah, sorry.
+
+Citizen Web3
+I must say it's crazy.
+
+Go on, go on, no, no, no, no, please, please, go on, Bas, please, please, please, please, please.
+
+blas 
+I mean, there's also, you know, I think pretty much everybody who's been in crypto, web3, it's a bit of a degen or, you know, we got carried out on, you know, on trying to figure out what's coming in and sometimes, you know, seeing where the alpha is and investing and all this, there's always a component, I think, of, you know, of genuine interest and challenge there of, you know, of making money. But I think, I think if you really want to make money, there's plenty of industries, right? Like,
+
+This is just yet another industry to make money, right?
+
+Citizen Web3
+It's crazy thinking that, you know, all you have to do to transfer 10 billions over borders, take any book, circle 12 random words, and that's it. You don't need anything else. Not any wallets, not any ledgers, not any USBs, no nothing. Just remember 12 words, actually. You don't even need a book, to be honest, if you're very clever. Well, I wouldn't advise anyone to do that. Yeah. Unless how much you transfer. What about? What about?
+
+blas 
+Exactly. Exactly.
+
+Citizen Web3
+What about before before before I know here because I will bring you back here. I promise. I promise. I promise. I want to see it's very interesting to me always to see like where is the mission of Composable Finance today? And I want to see if it meets for you because it's curious for me always to try and see whether the guests that come on the show. We have a lot of founders over the years and you know, sometimes they talk about their mission and they talk about the mission of the projects and sometimes.
+
+can like oh but and I'm curious what's here for you at least how do you maybe not what's the mission of Composable but what is the mission of Composable for you because that was your mission.
+
+blas 
+Correct, yeah. I mean, I think at the high level there are kind of two big drivers of Composal's mission. One is to reduce friction of...
+
+using technology that is, as I mentioned, decentralized, non -custodial. I think that's one thing. And the second thing is to become like a unifying force to remove this fragmentation that exists. And it is like a sort of a byproduct of the first, right? So, you know, as we progress, it gets more complicated.
+
+it gets a trickier and in some ways it actually hurts us, you know. So all this that I talked to in the beginning of, wow, look at this technology, what allows us to do, this is exciting, now we can do it cheaper, we can do it faster. Well, but now it just became more difficult or now we cannot obviously do this because of this. So I think Obozzo is trying to, you know, be part of being that this force that...
+
+sort of tries to bring the industry back to not lose those new features that are exciting or that allow these new features that are very exciting not to break onto what we have achieved so far. So I think that's one of the key concepts of Composal that I personally can be very much aligned with.
+
+Citizen Web3 
+Allow me to play devil's adhoka. I promised you in the beginning I will do it. So, and not to say that this is my private opinion by no means in fact, but I do want to ask sometimes questions that might be a little bit uncomfortable because it's curious always to hear the answer. It opens much more interesting points to debate in my opinion. So you mentioned, you know, a very loud mission. This is something that I connect with personally a lot to be honest. And...
+
+You know, you're obviously been into crypto for a while. And, you know, we've seen it, you know, over the last, what, 11, 12 years I've been in this industry. It's crazy. It goes, boom, boom, boom, boom. You mentioned Lightning Network. And again, I'm going to play devil's advocate here. Now today, Lightning Network by many people, even by many, I would say, industry leaders isn't considered to be a useful tool. I mean, the last...
+
+six or whatever or seven years, nothing happened. You know, it's run by a couple of centralized nodes. And what I'm trying to, the devil's advocate I'm playing here, I love your passion, man. Don't get, this is the fire is amazing. But what if, I mean, this is crypto and look what happens with Lightning Network. And it's such a promising still today project in my opinion, that has a lot of potential, but let's see what, there's no economy there in my opinion, which is missing of course, but anyways.
+
+blas 
+True
+
+Citizen Web3 
+What about, you know, with such a loud mission, imagine it doesn't go. Wouldn't that like blow you completely from the inside of like, what would you do like if it doesn't go if the mission of Composable doesn't succeed? And what you're saying just like Lightning so far hasn't succeeded in pretty much doing very similar thing to what you were describing. That's why I went here. And I'm sorry for the uncomfortable.
+
+blas
+No, no, no, but you know, I think the sort of the mission of lightning, you know, I think it has kind of been achieved, but not by lightning, if you want, right? Like, so in some way, like, the sort of the principles and the people who got excited all this and pushed a bit the boundaries sort of showed in some way that, you know, well, man, like you can send money, you can do it quickly, you can do it cheap, you can do it fast, like don't settle.
+
+on what we used to have and still like, you know, be decentralized, secure. You get most of the principles of, you know, the base layer. And like now, you know, you can do it with other networks. You can do it with stable coins, which was also one of the limitations of Lightning, right? Like you had to settle into this like sort of very volatile asset. Now you can send assets pretty fast, secure, decentralized, even, you know,
+
+In some way, you can even use networks that give you full anonymity. It's cheap, it's fast. So I think Lightning contributed to push the boundaries of the industry. I think the solution was, I mean, it's very easy to say now, right? But it was perhaps incomplete. It was not what the industry needed. But I have all the more than that.
+
+but respect on it and I think it has been a major driver of innovation. So, I hope Composal actually has an understanding of what we have to do, what the market needs. But I have no doubt, even if it didn't have, we would have been part of pioneering, sort of shaping what we can become.
+
+as an industry.
+
+Citizen Web3 
+I like that answer. It's what more or less connects with me, right? If something doesn't happen, then you know what happens to the industry as a result of that still, you know, lightning network, as you say, happened in another way, right? I mean, the industry finds its own kind of exits out of it. On exits, I cannot not help to ask you, I'm sorry, I'm gonna be stigmatic. You said you're Argentinian. Of course, we're gonna talk about Javier Millet.
+
+I mean, our podcast is a lot about anarchy. You know, we have writers and a lot of people come on and talk about values. They're in my opinion, I'm missing so much in web three today. Okay. I'm not fond of politicians, but you know, Javier Millet is definitely an interesting character. What's your opinion as somebody who lives there?
+
+blas 
+I mean, I can tell you, I can give you a bit of a color element. I studied economics at the public university of Buenos Aires and I got like last year, I got monetary policy by Javier Millet. So like, you know, 10 years ago, he was my professor in monetary policy. And so, you know, my angle from like, you know, sort of analyzing and judging him is very much biased to my personal relationship.
+
+with him, you know, I mean, like as a student, right? But like, in a course that we were like 30 people and like really being able to see this character and, you know, it's been crazy, like see his evolution from, you know, somebody who was a professor, then, you know, was like a political analyst, got very famous, got very, you know, like popular into just being, you know, a congressman and then like a president in like three years, right? From zero to being a president.
+
+I think he's somebody who came to shake the system, you know.
+
+I think he's crazy, he's really crazy. But I think he's somebody who believes in what he's doing. And I have respect for this. I might disagree with small things, whatever, but I know I can look at somebody in the face and I know they're doing what they believe is the best. And they have really like...
+
+sort of analyze the problem. It's not that they're improvising. And I also really like to have somebody that is charismatic. I think charisma is a very powerful tool and it just helps you a lot. So yeah, it's exciting times, but the country being part of this transformation is actually struggling a lot right now.
+
+Citizen Web3
+Man, there was a lot of charismatic characters, like not very positive one, Mussolini, Hitler, Julius Caesar, they murdered a lot of people. I'm not by far, I don't think there was any similarities there. But what I'm saying is, you know, don't you think that charisma in especially a person who wants to lead other people can also backfire sometimes and in decentralization of consensus.
+
+blas 
+I think, I understand, I mean, yes, fully, but I think it's almost impossible to introduce like ground breaking, you know, transformations without charisma. You know, like you really need to convince so many people to do something different and touch their interests and actually like, you know, take a leap of faith. And it's not possible if, you know, at some point, you know, they can believe in the system, they can believe in your party, but they actually need to believe in you as a leader, right?
+
+So yeah, but we'll see, you I think this guy has to really show results in this year, otherwise he's going to get upheld.
+
+Citizen Web3
+It'll be interesting. It'll be definitely something I'm watching and interesting to see where it ends up. I'm going to ask you now a question that I didn't mean to ask, but since I'm hearing kids in the background, I'm going to ask you the question, man, like, how do you manage blockchain development and a founder's life and have kids, which is obviously, I don't know if I'm hearing one or two, but yeah, I don't have any. No, no, no, no, no, no, no, no, by no means. Don't be sorry.
+
+blas 
+Oh, sorry.
+
+Citizen Web3 
+This is like a real question. How on earth do you manage like being a founder, a developer and have children? I want to know the secret. I don't want you to say, sorry, man, share the secret.
+
+blas 
+Eh.
+
+blas 
+No, I mean, sorry for the noise. I mean, it's a good question. It depends on who you ask and at what time you ask this question. But like I'd say, just the secret or the only advice that I have in general is that, just focus and use the time fully. So when you're working and when you're thinking of like blockchain, like really put all your effort and say, okay, where is it that I can do the...
+
+bigger impact and then like when you when you close your computer you go to your kids and just try to spend the time in the best way right like not just like half be there and and You know, it's never enough. It's always like, you know, you feel like oh I could be working and doing things but I could be with my kids and be better and Just like life, you know, that's always the case but overall I think like if you if you really look at yourself and
+
+look at your kids and the work also the work you're doing and you see how these things evolve and progress. You can tell deep that at least you're giving it all and you're not doing a bad job. You could do it differently, you could do it better in some dimensions, but you can be satisfied. So that's kind of my philosophy. I don't know. I mean, yeah, but I'm happy to take advice.
+
+Citizen Web3 
+I wish I had some and I don't have any kids. I wish I I this is my like, how do you manage that man? I'm like, that's what I'm trying to think. I'm like, we're we're we're to feed them in. I'm not sure. That's why I was I know how well, no, no, let's not go into those jokes. OK, wait, wait, wait. But OK, OK, OK, OK. Educational material. Let's go back to that. So, man, and.
+
+I have a question about, you know, we talk a lot about missions and statements and communities and technology and philosophy and composable finance, for example, you know, it's obviously a blockchain agnostic project in terms of like we are after innovation. This is what you're saying. You know, we are looking to share features with people, not miss features. Now,
+
+This project that I have today, we're a validator, we build products, we have podcasts, etc. We're blockchain agnostic. Yet we started in Cosmos. Even though Cosmos was originally the most blockchain agnostic community, not today, I wouldn't say so. We went through rebranding, blah, blah, blah. But it's not about me, it's about trying to connect to you here. And what I'm trying to say is that one of my personal goals with the project is always being... It's not like a mission, but it's a mission, not a goal.
+
+cure tribalism, you know, sounds like you're in cancer, but you know, cure tribalism. But I found that to be in fact, I now started the spin off project. It's called Web3 Society. And the idea is to try to gather people who stopped caring about an ecosystem, you know, the people who have that went anyways, question to you. To me, it's been a hell like that particular part of getting people to be blockchain agnostic. How's that part?
+
+How on earth are you guys dealing with that part? How you building a community that is blockchain agnostic?
+
+blas 
+Oh, this is a great question. You know, I think, I think it's, it's interesting to understand, you know, why people get so maximalist and so tribal into something, you know, yeah, that's, that's one case, but I think like the majority of people don't like the majority of people are not rich, right? Like, you know, you have the OGs, you have early adopters. Yes. That is easy to understand. Why would they protect their interests? Right. But like,
+
+You also have like a large quality of people that get very excited about something, right? Like even in Cosmos, right? You have like bad kids, right? Like it's super popular and people are like really like passionate about them. And you know, and it's really like a cool culture. I like, you know, I like all this, but sometimes I also wonder like, why would people, you know, get so much into it, right? So there's, it's also like a, like a, I guess like a...
+
+a feeling of belonging that is so appealing for us as human beings, right? And we see this being part of a group and some of this of how do you define being part of a group? Well, you know, it's like also opposing to other groups. So I think that's a bit of part of our human nature. I think the only thing that we try to do at Composer and I like personally and also I try to challenge myself is being open, you know?
+
+Just saying, okay, you know, what is the new technology? What is the new kid on the block? Right? Like, do you IDX, right? They moved from, you know, start where to own chain. Well, like, try to understand this. Why did this happen? You know, can we learn something from it? Did they actually like, like, did they have trade offs? And generally speaking, communities as well. You know, so we have Ethereum, we have L2s. Why are they different to app chains? Why they, you know, and like, I think from us, the beam, as you mentioned, like, you know, chain agnostic, uh,
+
+Like we try to like put the facts and try to like show our community what is exciting about each of these ecosystems that we're opening up to our community. Right. And I think that's the only thing we can do and try to like listen to them and, you know, show them, Hey, like, you know, you were in Polkadot. You like, you know, secure security, like whatever, like just look at Cosmos, you know, they are introducing some of the cool elements of.
+
+blas 
+Polkadot, right? And the way, the other way back, like, look at, like, they also are missing this and that. Why don't you come and, you know, try to use and convince them to use what you have in your community, you know, and try to grow the pie. I think there's still like space for, you know, there's not a zero sum game fully and, and, and there's space for, for, you know, just for, for really like doing synergy between, between these different projects. So for us, even like we say this all the time internally and I have it on my Twitter bio, right? Like.
+
+you know, cross pollination, you know, one block at a time, right? Like getting the best of each of these, you know, spaces and sharing them, right?
+
+Citizen Web3 
+It just sometimes gets extreme. One thing is bugs. Another thing is we are a validator project. We build public goods and stuff. The other weekend, we launched a vault on Interlay between Interlay and BTC. And I had somebody come to me like, but why did you launch a vault on Polkadot? Because it makes sense. We trying to do cross -volution community. We're launching bridges. We have a lot of bridge. We're on Nomic, Evmos, Polo Composable.
+
+blas 
+Yeah.
+
+Citizen Web3 
+Interlay, you know, this is like our way of showing that it's all connected. Nah, but they're not but they they they're a polka dot project man. I was like, what do you even care, dude? We're just like a random validator man. Okay, man, but it gets ridiculous that that's the point and sometimes I'm like, okay, I totally connect with what you say, give people an incentive and they will follow that incentive because they the not because they're stupid, but because well, it's natural. You feel incentive you're connected to that.
+
+curiosity or incentive. Okay. And this is basically what you're saying. We're trying to show the cool features from, but still, you know, a lot of what I noticed as well, apart from the community, you also have, for example, the governance and in different ecosystems, because there is no standard for governance, because we're trying to explore, I've noticed that, you know, governance is not just approached, but even viewed in an extreme spectrum.
+
+like, you know, there is people from Ethereum who are like, real Ethereum hardcore maximalists who don't even want any governance. They're like, well, no governance is a scam, you know, like, okay, it's weird. And then you have like, anyways, you understand what I'm trying to say? Where is the how have you been dealing with that? What are you trying to build? Like, I mean, how should a blockchain agnostic communities governance system look like? Should it?
+
+Introduce its own governance or should it listen to the best things from all the block chains that it's collecting like what's your experience with this because it's a big subject, of course
+
+blas 
+100%. Yeah. And also depends a lot on the structure of, you know, the community in the way of like how incentives and how power is distributed, right? Like, is it delegated? Do you still hold it as a token holder? Like, you know, in Cosmos, like I see validators have a lot of power, right? So that also shapes discussions and shapes interests. You know, in Polkadot, I see it a bit more like atomic.
+
+you know, people are more represented as them, whereas in Cosmos you can really see like, you know, the split between like validators and who they actually validate because they validate different chains, right? And like, so in some way, like, you know, it is, it is like a game of interests and you just need to understand.
+
+First, where are you going to go as a project, as a community? What are your values? And be aligned with your community. Be sure that you're communicating this properly. Because otherwise, people think that they are part of a community that maybe they're not. And I think that's really important. And be aligned 100 % just on this. And the rest is more like choose the structure.
+
+that optimizes those values, right? So for instance, when you parameterize certain things, like, OK, are we going to use no with that? Are we going to use yes, no, whatever? All these things, like at the beginning, try to understand, what are we optimizing for? Are we optimizing for disinteraction? Are we optimizing for moving fast? All these things. The tooling is pretty.
+
+it's pretty granular. So it allows you to say, for example, okay, you know, for these tracks, we're fine with like, you know, this amount of votes. So I think it's, it's about this of really understanding what the tooling gives you, but also what is the value for your community and for your project to sort of stay true to these values, right? But nevertheless, you know, I think governance is a subject that, you know,
+
+blas 
+We don't have much experience as a decentralized community. This is like, these are the first five years in history where we actually sort of get ourselves in this way from different cultures of people who think so differently. Because in some way, it's a bit easier to govern in a decentralized way if you want, if we're in Greece.
+
+because we're all Greek, we all share our history, but like, you know, in Chihuahua chain, like, we don't know each other, right? Like, we don't know who each other is. You know, we don't have, we don't know if we have the same values. Like, it's so, it's a bit random, but it's, yeah, it's special.
+
+Citizen Web3 
+I totally connect to what you say. I mean, it is whenever somebody asks me about governance and, you know, like, oh, look, blockchain, what good does it bring? It's existed, like literally it's been used for a couple of years. What do you expect it to bring? Nothing. Right now, it's an experiment that is trying to, you know, theorize on certain points and assumptions, but it's trying to do something that has not been done before. And yeah, we'll see where it will end up in 10 years. I mean,
+
+Yeah, there is a lot of interesting experiments I think you could do there and go on.
+
+blas 
+You know, what is the value of a vote, right? Like, you know, I've seen some articles of like quadratic vote, right? Or, you know, like a, you know, democracy, like you and I, we have the same vote, but like in crypto, if you have more money than I have, then you have bigger vote. Like, you know, it's interesting and then there's no right and wrong. And like, you know, again, each community is to pick whatever suits the best. It's like a country.
+
+Citizen Web3
+I like to talk about this example. It didn't catch on. Maybe that's already an answer. But about three years ago, one of Ethereum DEX, as they tried, they invented what was called holographic consensus. And it basically introduces a betting layer on top of the governance layer where you can bet on the outcome of the result and get another token as a... And it's like...
+
+blas 
+Okay.
+
+Citizen Web3 
+It's an oracle on top of the governance. It's curious though, you know, it's like how crazy can we go and try to see. Man, what has been your biggest, you talked a lot about challenges. I had the question for you, what was a lot of your challenges, but you already kind of mentioned a lot of them and it's obvious, you know, from what you're talking about, those are the things that you are facing. What has been the biggest success in terms of trying to build a blockchain agnostic project community?
+
+for you personally, something that you didn't expect so easy to happen or to happen at all maybe.
+
+blas 
+I mean, I think our biggest success, at least that I can see like very short term to be like, you know, now that I can measure it, I know what's gonna happen in the next, like with the ongoing projects that, you know, that might come up. But like, you know, when I joined Composable, it was three years ago, I joined initially to build a IBC bridge to Solana, right? And we can do it. Like it was, we spoke with the Solana Foundation, like it was not.
+
+It was not apparently obvious. And there's been several cases of bridges and, you know, sort of sinking ecosystems where we failed or we couldn't find a way. And finally, like, you know, like a year ago, a bit less than a year ago, I started like thinking differently about the problem. And now we're launching it like very soon, like in a matter of days. And to me, because of my history in composo, like, you know, this is where I joined. This was my purpose at the beginning.
+
+And now how much Solana has grown, how much Cosmos has grown, right? And like seeing that we can put IVC into those ecosystems.
+
+blas 
+like, you know, sort of display.
+
+blas 
+with so much, you know, complementary elements. I think this is the thing that...
+
+blas 
+experience at the beginning.
+
+Citizen Web3 
+It's interesting, but you're basically talking about incentives as well for yourself. You're getting incentives in terms of reward. We were talking about what you do to do. Yeah, it's interesting that here is the answer to everyone who is scared to explore other places. It's the incentives you get. That's what comes good from it. Okay, let's talk a little bit about bridges. Let's talk a little bit about bridges. Bridges is a topic that before IBC was almost a taboo in some...
+
+blas 
+Yes.
+
+Citizen Web3 
+to some maximalists. After IBC, it seems to have, sorry, not after, but as IBC kind of, and again, IBC is not the only bridge out there by far, not the only technology by far, very far, but IBC has kind of given people, I guess, hope in bridges. Still, bridges are definitely something that a lot of people in a lot of communities,
+
+you know, they kind of like they carry, they get out the cross or their start of David or whatever, you know, to sprinkle some holy water before they made on the ledger before they make a transaction, you know, what's how you guys are, in a way, a bridge projects, right? Like you're, of course, much more than that. But in a way, you know, it's a bridge, a dock bridge, whatever. I'm sorry if I'm if it's not enough to describe, but I'm, you know, anyways, what would you?
+
+Can we talk a little bit about bridge security and how has it progressed from a multi -sig, I don't know, two out of three account that secures your money and then does it via third party to where we are today in the industry, not necessarily just with IBC, but of course we can pay more attention to that if you want.
+
+blas 
+Yeah, I mean, I think bridging is probably like the use case of the industry within crypto web 3 where it has progressed because of pain, you know, because of people like getting hurt very much and losing a lot of money because of, you know,
+
+Citizen Web3 
+You
+
+blas 
+of projects trying to solve a big problem in a way that, you know, it was short -sighted just to prioritize go to market. But I mean, this can happen anywhere, right? But like, and I think as we have moved on, everybody seems to understand the risks of this and that there is no other way to sort of build something.
+
+that's going to last time if you're not maximizing for security. And there are multiple solutions, as you correctly mentioned, but I think no matter what path you choose, it's like, just saying, I am going to build the most secure thing I can build for this. It seems to become the sort of the standard and the obvious way. And...
+
+And all these companies and all these protocols or whatever you can call it, have been pretty adamant on communicating this to the audiences. Because you as a bridge, you're...
+
+Citizen Web3 
+you
+
+blas 
+You're minting assets, right? You're printing money somewhere, right? Of course, it has a backing. So you really want to be sure that all these protocols have the right tooling and the right mechanisms to protect this, because otherwise, all your effort is worth nothing, right?
+
+Citizen Web3
+If we were to go a little bit more into the security, like maybe a bit more technical even, where would you say we are in terms of like the progression from again, from the bridges we saw five years ago?
+
+And today what has changed? What has made them more secure? If anything.
+
+blas
+Well, yeah, no, I mean, definitely, I have seen in general as sort of generalizing sort of light line connections. I think that's been very powerful because that sets a standard, right? Like, again, like, I mean, you can build still like an intermediate layer with a multi -sig, whatever. But even if you do that, right, you have to level up your game a bit higher, right? You need to explain to your users.
+
+Okay, you know, we have this and that, and these are the measures that we have put in place in order to, so everything is converging towards like with different solutions, right? But towards like a much higher security standard. So I think like CK is being helping a lot because it allows us to increase the budget of what we can do out of chain, but without losing verifiability. So I think that's also like a...
+
+like a really important tool that has allowed us to sort of push the boundaries of the design in a way that we can sort of increase the guarantees of security, right? And that's, I think that that's where the industry is going. You can see this, for example, like Succeed Labs, they recently are showing like a full implementation of Tender Mint, like two actually, two implementation of Tender Mint, you the Lightline.
+
+running on CK, one is raw circuits, the other one is a higher level. So there are more and more efforts showing you, you can do anything in CK now, right? And you can do it at high level, so speed of development becomes faster. So if you just want to do, as you mentioned, three out of four multisig, at some point, everybody would know, this is super lazy, this is very inefficient, I would never risk.
+
+Citizen Web3
+you
+
+blas 
+my fans on this solution, right?
+
+Citizen Web3 
+Yeah, there is a lot of aggregators for users who are not able to, that are appearing lately for users who are not able to unfortunately check the code. And like my advice here is to, right now, I think only L2 .watch for example comes to mind, which is showing the Bitcoin L2. But there are similar websites like this that show bridges and then they even show security, like what are they using? Is it implemented at what level it is? So I definitely advise people to follow that.
+
+blas 
+Yeah, the same with the with roll -ups. Yes, fully agree. Like, you know, you just understand that do they have like what kind of proof they offer, you know, how decentralized is this? Yes, I think as we move on and we have more experience and more, you know, unfortunately more cases where people get rocked, this becomes like a necessity.
+
+Citizen Web3 
+Don't hate me for this, but let's play a game. I'm 16, 15, 15, 16. I've heard the word Bitcoin before. I'm still in high school. Tell me about ZK proofs. I'm 16, man. I've heard Bitcoin before. I've heard Ethereum as well, but at least I heard the word. I even own 0 .1 Bitcoin. There we go. I know how to buy Bitcoin. Tell me what ZK proofs are.
+
+blas
+Okay, that's a difficult question, but I'd say CK proof. That's okay. I mean, you can be 71 is still a difficult question. No, no, no. So, CK proof is essentially a piece of information that encodes.
+
+Citizen Web3 
+Okay, 17. Yes, exactly. I was just gonna say that. But let's try. No, no, but I want to put you on the spot, man. Come on. I'm in high school, man. So that means I don't know what a lot of things mean. Come on.
+
+blas 
+a computation. I know you're not going to understand it, but I'm going to define it and I'm going to allow you to ask me questions. Okay. So it's a piece of information that encodes a computation that somebody can verify. Right. So for example,
+
+You know, you, uh, you solve a problem, like a math, your teacher gave you a problem, right? Uh, you solve a problem. Uh, and you know, for example, like X plus two is five, right? The solution is five, S three, correct? Uh, if you give me a solution, I would actually have a solution. I could solve it myself. I could go to a teacher and, you know, say, Oh, I know as well, the problem, right? The solution to the problem. Are you.
+
+Citizen Web3 
+you
+
+blas 
+You want a mechanism in which you can prove to me that you have the solution, which is three, without me being able to, for example, access to a solution, right? This is one of the properties of CK, right? So, for example, you can go to your dad and say, hey, dad, look, I solved it. And then your dad comes and say, hey, you know, my kid has solved it. But then you have to trust your dad, right? So this is a way to say, you know, I give you something that you can verify without disclosing this. This is one of the properties of CK, right?
+
+it has a sort of anonymity or, you know, zero knowledge.
+
+Citizen Web3 
+You gave me the best example of a ZK proof right now while you were talking man. I'm sorry. You just did it yourself without realizing a parent's note to school about the kid being sick. This is a perfect example of a ZK proof man for a 16 year old. A parent's note to school man to the PE teacher. There we go. ZK proof. There we go. I love it. I love it man. I love it.
+
+blas 
+Okay.
+
+blas 
+Exactly.
+
+blas 
+Exactly, exactly. And for completeness, you know, for people who really care about this, one is the property of not telling you anything about the solution. But the second one is like the verification of it, of that computation is very cheap. And this is a property that we use a lot in blockchain. That's one of the main reasons.
+
+Citizen Web3 
+When we go on the Composable website or the documentation, I don't remember if I saw it in the documentation. I think maybe it is the documentation. There is a line there. I think it's also on the website, to be honest. There is a quote there. It's out of context, but it says something like, IBC -based communication. Now, what is IBC -based communication? Because we all understand what IBC communication is.
+
+What is IBC based? Because it sounds kind of like, is it IBC or it's not IBC? So what's going on here? Let's Elifive that a little bit.
+
+blas 
+Okay. No, that's a great point. I think what this quote intends to say is that we stand on top of IBC, but IBC is not enough for everything. And we want you as a user to say, you know, the IBC principles, we embrace them.
+
+but we want you to be able to do everything where you want cross -chain without having any issues, without having to think about the complexity of it, but still embracing the IBC principles. So it's like we're based, we're IBC based in some way, but we just give IBC wings. That's in some way, I think that's sort of the ethos of this quote.
+
+Citizen Web3 
+Okay, I like that. I like that. There is a lot of talk about, you know, cross chain today, cross chain, cross chain, cross chain, cross chain, exchange, cross chain. In your view, how will cross chain DeFi look in after this bull market or in five years? I don't know, whatever, pick your own time scale. But I want to know your opinion about the future of cross chain DeFi.
+
+blas 
+To be honest with you, and I remember I've seen... No, no, no, no, no, no, no, no, no, no, no, no, no,
+
+Citizen Web3 
+It's not gonna happen
+
+blas 
+um, the Solana, you know, IPC connection with Osmosis in this case, right? Like for me, one of the very exciting things to see and see what happens is like, how fast are these Solana shitcoins, sorry for the word, you know, or like whatever they're called, are going to be breached and create market sauce forces. You know, this is one of the things that to me is a bit like the, uh, sort of the, the tipping point to understand if all this.
+
+really cross -chain economy is going to happen? Or are still people going to just like bridge the funds and operate on the other ecosystem? Or are we just going to have like this speed of globalization within chains? And I think this is one of the first steps where we can see because it's cheap, both are fast, you know, there's little friction. So that this is one of the times where I'm like, you know, very, very like, just really see, is it going to happen?
+
+Citizen Web3 
+At the same time, I personally have the fear and the hope at the same time. And I think we're underestimating to the extent of what's going to happen with cross -chain economies, decentralized economies. I think people are going to build layers on top of those derivatives that are between chains because there is a time when they're, man, I can see that happening. I can see.
+
+blas
+like the Ethereum governance tokens that you're talking about. Yes.
+
+Citizen Web3 
+I can see that. I can see those steroids, man. This is not very far, I think. Let's do it, let's do it. Ape, ape, ape, ape, we have to ape, come on, man. We are here to test it till we die, you know, test it till die trying.
+
+blas 
+The level of degeneracy. Yes, yes, yes, yes, yes, yes, yes.
+
+blas 
+Exactly, exactly. We deserve it, we deserve it.
+
+Citizen Web3 
+Mem, Blas, and this is for all the listeners. Usually we go a little bit longer today. We're going to cut a little bit because unfortunately, both me and Blas have a thing to attend, more or less kind of. But anyways, long story short, I'm going to jump into the blitz. It's five questions. I don't want to do it once again, but yeah, okay, let's do it. I don't want to do it when I have a conversation that flows and I want to like, man, again, it's always like that. Always, always, always, always, always.
+
+Okay, Blitz doesn't mean you have to answer very quickly. I call it Blitz, but you can answer like with an extensive answer would be preferable. So first one is a bit random. Give me a song or a movie or a book that has been with Blass throughout all his life or most of his life and impresses you.
+
+blas 
+Sultan's of swing, Dire straits.
+
+Citizen Web3 
+That was quick. I like it.
+
+blas
+song from I guess the 70s maybe. Just from being a kid myself and enjoying the guitar and the song and not understanding a single word of what these guys were singing to like you know singing it to my sons and you know enjoying it with them as a parent so yeah 100 % is one of the songs and yeah Pieces of Art that has you know been part of my background story.
+
+Citizen Web3 
+I like it, just quick.
+
+Citizen Web3
+you
+
+Citizen Web3 
+Nice. Nice. Okay. And if we're talking about technological directions, blockchain being, for example, one machine learning another, please don't say blockchain, give me a technological direction that apart from blockchain blockchain, I know it's not machine learning and not AI already, that you have a curiosity in.
+
+blas 
+Um...
+
+I think personally, telecommunications, satellite internet, all these things are to me very exciting. And probably there's going to come things that, a satellite becomes cheaper and all these things, and this is just going to blow our minds. Yeah, but communication, telecommunications.
+
+Citizen Web3 
+We're a bare metal validator. I know what I know the obsession you're talking about. I understand. I understand that obsession. I'm already shaking when I talk about this thing. Speed of Elon, the speed of mask. First, we have to break the speed of mask and then we get to the speed of light. Give me one project, blockchain project. Of course, you are welcome to say Ethereum or Cosmos or Bitcoin, but it would be more interesting if you say something that
+
+blas 
+Yeah, going faster and cheaper and faster and cheaper. Yeah, exactly. Exactly. Speed of light.
+
+blas 
+Exactly.
+
+Citizen Web3 
+you know, is less famous. That not about the token, please let's not talk about a token, but something that you think, oh my God, those guys are cool. It doesn't even have to have a token to be honest to the project, but never heard of it. What is it?
+
+blas 
+Jito Labs, Jito Labs, number one project. Oh, so in some way, if I have to explain to you, so Jito Labs is a Solana project, and it's a combination in some way, right? But yeah, just allow me to take a license for this. But it's a combination of Flashboots and Lido.
+
+or Stride if you want. So it's liquid staking token plus MEV and they have, and skip in Cosmos terms and skip. Like you know, skip protocol. So these three things combined, it has huge adoption. Validators have adopted, people have adopted their liquid staking token. So this is like a groundbreaking project that only exists on Solana. But I mean, it could exist somewhere else, right? But yeah.
+
+Citizen Web3
+For all the listeners, of course, all the things me and Blas mentioned, you can find the show notes. So if you want to check it out, check it out. Okay, last two, a bit weirder, a bit more abstract, but I like them more. First one, give me one motivational thing that keeps Blas out of bed every day building blockchain agnostic communities and solving social problems, economical problems and everything else.
+
+blas 
+Basically, you only live once, right? And the best you can do is use your time the best you can and not waste your time, whatever that means to you, whatever that means to me, but just live truthfully to that principle.
+
+Citizen Web3 
+Claro, senora, verdad, claro. Bravo, bravo. Okay, last one. Made up, real person, could be a family, could be a writer, dead or alive, cartoon, movie, doesn't matter. Not an idol, because I don't believe personally in idols, but one personage or a person, or a real character, or a writer, or a developer, doesn't matter. Who inspires bless? Not an idol, not a guru.
+
+has an inspiration on blast throughout your life.
+
+blas 
+Um, the, you know, when I was a teenager, I used to be a huge fan of a piano player from, from Argentina. And there was one week where I went to see him five times in one week, you know? So it went five, five shows. His name is Charly, like Charly Garcia. And he, he really inspired me, you know, on, on, on his career, on the music he made on, on being like groundbreaking, like for example, like, you know, in Argentina we had like a
+
+Citizen Web3 
+What is the name?
+
+Citizen Web3
+Wow.
+
+blas 
+like a military government. And at that time there was like a lot of things were like, you know, forbidden. And this guy's like the language that he would use to just communicate, you know, things that were not allowed to say and like the music and yeah, all the like, and then like, you know, just being like very much rock, being like progressive, like, yeah, very complete. And I think like I've learned from this guy that how nice and how much life is a lot of.
+
+taking risks, right? Like you can be super famous and people could like you and then the guy would just like come up with something extremely new that like half of you will hate. I think if you want to build legacy or you want to build things that are meaningful, you need to be taking risks and live to the, on the edge, you know? And I always got very inspired and I love this guy.
+
+Citizen Web3 
+That is a beautiful answer, man. Thank you. I really liked it a lot. On that note, yeah, I hope that, you know, everybody takes from that what you tried to put into it. At least what I hear I'm taking for myself. But on that note, Blas, thank you very much. Thank you for the time and thank you for answering the questions. And thank you. Thank you. Thank you.
+
+blas 
+Beirada question, thank you so much.
+
+blas 
+Yes.
+
+blas
+But best podcast ever. Thank you so much for everything. Really pleasure.
+
+Citizen Web3 
+Thank you. Please don't hang up just yet. This is just goodbye for the listeners and everybody else who's been listening to us. Thank you for tuning in and until next time. Bye bye everybody. Okay, good.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+

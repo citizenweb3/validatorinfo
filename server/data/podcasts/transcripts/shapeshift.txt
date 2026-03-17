@@ -1,0 +1,381 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/shapeshift
+
+Episode name:
+The Best Day Ever, Laser Eyes and Market Cycles with Willy Ogorzaly
+
+Citizen Web3 
+Hi, everyone. Welcome to another episode of Citizen Cosmos. And today we have with us Willy, who is the head of decentralization for the foundation of ShapeShift. And it does have a little ring to it. I like that. I hope I said it correctly, Willyman. Hi.
+
+willy
+Hey Serge, how's it going? What's up everybody?
+
+Citizen Web3 
+Good, man. How are you, man? How's sunny state, sunny Colorado?
+
+willy 
+it's a sunny day out here. I'm having the best day ever so far. How are you doing?
+
+Citizen Web3
+Nice one. Good man. It's also sunny, also nice. So man, ShapeShift, so much noise, so many years, such a big project. Do you want to maybe introduce yourself? Tell us a little bit what you do? What does it mean to be ahead of decentralization? Like, you know, it's all yours, man. Take it.
+
+willy
+Sure. Thanks, Serge. Yeah, my name is Willie. I've been a part of ShapeShift for almost four years now. So I had the pleasure of being a part of ShapeShift when it was a centralized corporation. And then last year in July, we announced that we were becoming a DAO. And over the next six months, we worked on transitioning from a centralized corporation to a DAO. Employees were let go in three waves. And meanwhile, we were building up the DAO, deploying work streams. And yeah, things have been going really well. about nine months into this DAO journey.
+
+Shapediff has pivoted a bit. So when we first started in 2014, we were the first non-custodial exchange where you could trade crypto across chains from your own wallet rather than having to deposit it onto a centralized exchange. And Shapediff was started right after the Mt. Gox fiasco. So it was built as a solution to having to deposit your funds onto a centralized exchange and give up trust. So we were like doing cross-chain trading before DeFi, before DEXs, even before Ethereum.
+
+So when we saw the advent of these decentralized exchanges, we were really impressed. And we kind of realized that these decentralized exchanges were doing a better job at ShapeShift's original vision than we were. And that the way to do this was to decentralize protocols so that you list any new token as soon as it came up and ideally even be permissionless so that people could come list their own tokens. So we embraced these decentralized exchanges.
+
+We integrated the DEXs on Ethereum. We integrated Thorchain the day that they launched Mainnet. And the day that we integrated Thorchain, we sunset our own trading desk. So now you can think about Shapeshift as a free open source community owned and soon decentralized interface between users private keys and decentralized protocols. So we support multiple wallets, we support multiple chains, and we support multiple protocols on those chains. So now on Shapeshift, you can come and buy, sell, send, receive, trade, earn, yield.
+
+on crypto on 11 different blockchains right now.
+
+Citizen Web3
+And it's all non-custodial, right? Or it is custodial? it is non-custodial. Nice, nice.
+
+willy 
+Yep, all about, yeah, non-custodial is one of our core values. We're all about financial sovereignty. And another one of our core values is just this multi-chain future. We've always believed in ShapeJif as a multi-chain feature. So we love Ethereum, we love Bitcoin, we love Cosmos, absolutely. And on ShapeJif, it's one interface where you can do things on all these different chains and even across chains.
+
+Citizen Web3 
+I remember when ShapeShift came out in 2014, right? I think it was something like that, right? And you just said it as well. but I remember when it came out and I remember using it, I think for the first time in 2015, maybe not 14, but maybe 15, I think I used it for the first time. But tell me about the journey. mean, you had such a long, I mean, I have a lot of questions for you about the decentralization, about the DAO, and I will ask them for sure. But tell me like for some, I mean, in crypto, a project for what is it now?
+
+six, seven, eight years, right? So I mean, that's like history, man. That's like a museum kind of thing, right? Tell me how the journey has been for you personally.
+
+willy 
+Yeah. yeah. For me personally, it's been an awesome journey. And yeah, we've been at ShapeShift, we've been through several market cycles. So we've seen a lot of ups and downs. So yeah, my first experience with ShapeShift was in 2017. My friend showed me ShapeShift as an easy way to trade and I just thought it was so cool. And I've always liked altcoins and hot new tokens and cool visions and stuff. So I'm always looking for the next hot thing. And so...
+
+At the end of 2017, I actually started a company called Bitfract. And it was the first tool where you could trade Bitcoin for multiple cryptocurrencies in a single transaction. So it was built on top of ShapeShift. You could buy any of the tokens or coins that ShapeShift supported. And you could choose what percentage you wanted of each coin, send in Bitcoin, and then would use ShapeShift to execute trades, and then it would send all the crypto to you, whatever addresses you had input. So that was pretty awesome experience. And six months after we started that ShapeShift,
+
+acquired Bitfract and we were brought on to the team to basically build the new version of Shapeshift. So this is the time when Shapeshift was realizing that the original exchange model, first of all, was there were some regulatory issues with it and we came to the conclusion that we needed to implement KYC to continue offering trading functionality. So my first day at Shapeshift actually, we had the All Fox where the whole company was told, hey guys, we actually have to realize that we need to implement KYC.
+
+So that was kind of disappointing because I was a huge fan of Shapeshift as my favorite company, but that was a surprise, right? And before KYC, Shapeshift was the leading way to trade crypto non-custodially. And after we implemented KYC, we lost a lot of our users and our volume and our revenues. A lot of our existing users started, and even wallets that had integrated Shapeshift to power their trades didn't want to start requiring KYC. So they implemented a lot of the copycat projects that had
+
+kind of done the same thing that Shapeshift had done, but weren't requiring KYC yet. So that was a tough couple of years, basically. First of all, we had to spend months building this KYC functionality, not only into our products, but into our organization, bringing on compliance teams and everything. So that was a lot of effort that really ended up hurting us more in the long run. And I wish we could go back in time and just realize, you know what? We should just stop the trading thing now. We shouldn't go down this...
+
+willy 
+centralized route, we should instead just start embracing these decentralized protocols, even though decentralized exchanges weren't quite feasible yet. So that was one of the challenges. didn't have the option at the time to just plug into these decentralized exchanges because they hadn't been built yet. So retrospectively, that was probably not the right decision. But at the time, there were reasons that it made sense for us to make that switch at the time. But yeah, once we saw these decentralized exchanges actually working and able to handle the liquidity and the volume that we had with our users,
+
+we immediately integrated them. since then, things have been going great. We were able to remove KYC, which made our product better. And now as a DAO, things are going better than they ever were at centralized shape shift. I love centralized shape shift, but life at the DAO is even better. So some of the differences, like before at centralized shape shift, first of all, we were closed source. So we could only build however much as we had internal bandwidth to build.
+
+And there's so much to build in the cryptocurrency world. We want to integrate all these protocols, all these chains, right? But we can only, we were always limited to for how much we could prioritize. Also, things were pretty secret at Shapeshift. Like we had, there's a big separation between the internal employees and team and our actual users in the broader community. And I always hated that. Like we'd be working on cool stuff, but I couldn't talk about it at conferences. I couldn't tell anybody about it until it was live. Now at Shapeshift, everything is just open.
+
+Like we have public meetings every day in the Discord. Anyone can just come in and hang out, which is really awesome. I like being able to be just fully transparent. And it's powerful because now we have the support of the community. And ShapeShift, we have such an awesome community because we have been around for so long. We're a recognizable brand. so I don't know if you've got an airdrop, but when we launched the DAO, we airdropped to a million past users. And it was really awesome. Anyone who had ever traded on ShapeShift with an Ethereum address so we knew which address to airdrop tokens to.
+
+got some Fox and a ton of them came into the community. And that's one of my favorite parts about the Dow is just the awesome power of the community builders all around the world coordinating every day and coming up with cool ideas, sharing their unique perspectives and stuff to achieve this vision. And we are now moving faster towards this vision. We're spending less than we did at a centralized company. We're earning more revenues. And this is nine months into it. So we're just getting started. But so far, I don't think we can be hoping for things to be going much better.
+
+Citizen Web3 
+Man, this is fantastic here and things like that. This is what we all I think are here for, right? To see how products progress from centralization to decentralization. Actually, it's interesting. What's your opinion, by the way, on this? I there is, as far as I know, I'm going to ask the question in a weird way, but I would love to hear your opinion end of the day. Like from what I hear, from what I read, there is like two bigger...
+
+big opinions to start in a decentralized manner or the opposite, start centralized and slowly let go of the, like first this, then this, then that, and eventually end up in a decentralized project. What's your opinion? How should applications, protocols, how should they be launched in Web3 in a decentralized manner or a centralized and go towards decentralization?
+
+willy 
+Yeah, it's a really interesting question. I mean, I'm a big fan of decentralization. I do think it is the way. So I think the sooner you can get to that, the better. When ShapeShift started, it wasn't possible to be a decentralized organization. Ethereum didn't exist. DAOs didn't exist. So we had no choice. But if I were starting a new project today, I would absolutely push to start it as a DAO. Because once you do start it as a centralized organization, then it's more difficult to then transition to a DAO. With ShapeShift, was
+
+Pretty interesting though, huge props to Eric and John for getting our shareholders and our board on board with the idea of transitioning to a DAO. We wouldn't have been able to do it without that. But it was, think there were some advantages. The fact that ShapeShift had been around for a while, we weren't just starting from scratch. We had a community, not just of our internal employees who all knew each other and worked together well, but also our users. So that I think was pretty advantageous. And you know,
+
+we were able to do a lot of work as a team internally to then launch the DAO successfully. So instead of launching a DAO and then saying, now we got to, as a community, figure out our governance process. And wait, how do we even pass a proposal to do this? Because we don't have a governance process. We were able to build the DAO stack, build the governance process, and just gift it to the community and say, OK, now going forward, you guys have the ability to change any of this. But at least here is a functional framework that you can use to begin as a starting point.
+
+So yeah, I talked to a lot of people now who are working on new projects and I encourage them to go the DAO route and they say, no, we can't go the Dow route yet. Like we need to start as a centralized company because X, Y, and Z, right? Like we need bank accounts and we're not gonna be able to hire people if like we're paying in tokens and stuff. And I really challenged that. I say, actually, you you can do it. You you think you need these things, but you don't need these things. And maybe it might be a little bit more difficult for you in the early stages to take the decentralized route, but it's gonna pay off in the longterm.
+
+willy 
+and I also think, progressive decentralization is important. You don't have to start day one being fully decentralized because it is difficult, right? And, Right now, not even all the tools exist where you can do everything you need to do as an organization in a decentralized way. Right. But as long as you're progressively getting more decentralized, and I think that's the right, that's the right trend. And as long as you're transparent with the community about where the points of centralization are, then I think that's fine. Right. And you can work together as a community to address each of those points.
+
+Citizen Web3 
+As somebody who's already been through the whole journey of going from a centralized to a decentralized company organization, let's say that, let's call it like that. What would be your number one advice to those who have, are sorry, are doing the same route, unfortunately or fortunately, let's say they didn't launch in decentralized. What's the one thing that you did and you think, man, we should not have done that or done it differently. What would be your advice here?
+
+willy
+Yeah, I think it's a challenge. You you want to launch your DAO, right? But you want to make sure that you have a sufficient, that you're ready to launch, right? The MVP and ideally like an MLP, not just like minimum viable and minimum lovable experience. But you don't need to have everything figured out, right? Like a lot of it's as long as you have that core framework where people can come in and pass proposals and start contributing and coordinating. That's a great place to start. And once you have that, I think the most important things are
+
+You need to really figure out, you need some dank memes basically. You need to like make it really clear what your DAO is about and why anybody who hears about your DAO should be interested, why they might want to get involved, right? And how can you distill that into a really clear mission like get coin, funding open source public goods, give it, building the future of giving. ShapeShift, it's like the one stop shop for cross chain DeFi. I think we still need to work on like that meme so it's catchy but.
+
+From that then you can have you know, can have all the actual cartoons and pictures and funny stuff that go viral and capture people's attention But that's so valuable because the Dow it's all about the community and so you need to start building that community and that was when I've also had experience working with giveth and that was amazing to see unfold in real life because You know giveth is we're building the future of getting and if you're in the crypto space and you want to contribute to that you care about impact thousand philanthropy then giveth is a great community come join and
+
+It was amazing just to see people all around the world just come join the community and say, hey, I believe I've shared the same vision that you guys do. I believe in this mission. How can I help? It's so powerful. And so you need to make it really clear to somebody why they would want to get involved with your community and then make it easy for them to onboard. Think about the user experience of like somebody who actually then lands in your discord. They land on your forum. How can you make it really easy for them to
+
+get engaged, get involved, and ideally start contributing, and then reward them with your governance tokens. And if you can figure out that cycle where people can hear about your DAO, get involved, and then become owners and contribute and add value, then you're off to a great start and the rest can just be built by the community.
+
+Citizen Web3
+In your opinion, Ken, is a DAO suitable for any type of product? mean, let's go crazy. Podcasts, you know, what would a DAO do in a podcast?
+
+willy 
+Yeah, I like to think that DAOs really can apply to just about any business. And the reason I think about that is I just think about like, first of all, DAOs can be designed really however, there, lot of people will say DAOs are flat. They can be, but they can also be a hierarchy with like one person on top as long as the community is ultimately in control in deciding that. so just like you can have a podcast company, right with shareholders and stuff, you can have a podcast DAO and you can bring each of your guests you can give some tokens to, right? So that they have now ownership in your DAO. So yeah, I really do think that you can create just about any kind of business, any organization, you can either do it with a bank account and with a legal entity, or you can do it with the treasury on chain. So.
+
+willy
+I think right now it probably makes most sense for like these digital communities or technology software companies or protocols. But yeah, I don't see any reason why it's in the future. It's going to be, it's not going to be easier to start a DAO and you're going to be able to do all the things that you could do as a centralized corporation as a DAO. There's only a few things we can't do right now. You can't have bank accounts, you can't sign contracts, but like pretty much everything else you could do. But there's infinite things that DAOs can do that centralized companies can't do.
+
+willy 
+you know, why would you want to start an LLC if you could just go online and spend. Yeah.
+
+Citizen Web3
+I don't really understand why anybody wants to start LLCs, man. I really don't get it. It's like people, what are you doing? But it's true. It's crazy. you said a very good point. I mean, the idea of like minting NFTs and giving them to guests and then to listeners or episodes has been in my head for a while. I'm just to be honest, I've been waiting to do it on Cosmos and not on Ethereum. But yeah, so there's many, many things you can do here. Well, I have a slightly different question for you.
+
+willy 
+I hope I get an airdrop when you launch your podcast.
+
+Citizen Web3
+Yes, yes, for sure. For sure. For sure. I think we're going to do everyone. but I have a slightly different question for you. What is, in your opinion, the future of DAOs? Where are we heading? How are they going to look in five, 10 years time? Is it still going to be today? Is it going to be a different architecture? What do think?
+
+willy 
+you
+
+willy 
+Yeah, I think we have barely begin to scratch the surface of like what's possible with DAOs. And you can just see like where DAOs are today versus where they were a year ago and two years ago. They've come so far. And they're still continuing to innovate. And now the pace of innovation is accelerating because there's all these real DAOs that need solutions. And so there's a huge opportunity for entrepreneurs to come build these solutions. I think we're going to
+
+you know, thousand five years, I think it's gonna, it's hard to even imagine what they could look like. Like I just saw a brilliant idea yesterday on Twitter for improving the governance process, making it more like GitHub, where people can like put comments on different verbiage in the proposal, suggest changes, suggest different ideas. And then people can comment on the suggestions and the proposal creator can merge it, or you can fork a proposal. And I'm like, my, yeah, it blew my mind. I'm like, that makes so much sense. I'm like, why hadn't we thought about that yet? Right? So.
+
+Citizen Web3
+That's a really cool idea.
+
+willy 
+Yeah, I think we're just getting started. And I think a big bet that we're making at ShapeShift is that these things right now that you can't yet do as a DAO, like have bank accounts and signed contracts, we are making the bet that these problems will be solved in the coming years. So the foundation, our goal is in four years to dissolve ourselves. And we will do that once ShapeShift is completely decentralized. There's no need for a legal entity. There's no central points of failure. So our mission is to
+
+remove all the central points of failures, replace them with decentralized alternatives so that we can dissolve ourselves and pass complete control over to the Fox token community.
+
+Citizen Web3
+It's interesting. You mentioned values goals a lot. And I don't know if you ever listened to any of the previous episodes, but our focus mainly in the podcast is on values and on motivation. And that's beautiful. That's beautiful. Yeah. For everybody who cannot see Willy's got like nice shape shift values. Leaflet, I would say, right? This is what is it. It's cool, man. But this is my question. Like, I mean,
+
+willy 
+I got the shape shift values right here.
+
+willy 
+Yeah.
+
+Citizen Web3 
+You mentioned it so much that I still haven't even asked because usually I'm the one to ask about that, but it's great that you did, that you bring it up. What is, what was, sorry, first of all, I don't know if you know, but if you do know, what was the original motivation, that shapeshift was created. And the second part of the question, what is the like big kind of like goal.
+
+or let's say the not value, but the goal and the motivation of the DAO right now. Is it still, by the way, aligned with the original thing or is it completely changed and how did it progress if it did?
+
+willy 
+Yeah, that's an awesome question. So I would say our values have really, we've stayed true to our values from day one. And so the core values that SafeShift was founded on was, excuse me, financial sovereignty, enabling financial sovereignty for billions of individuals across the world, borderlessly, unstoppable, trustlessly. And I think we've done a great job sticking to that vision. We've also always believed just in this multi-chain future, and that there's value beyond Bitcoin, beyond Ethereum.
+
+And that if this feature is going to exist, then there should be a way where any individual can access this feature in a way where they're not giving up custody or trust or they can't be censored or stopped. So yeah, think it's cool because the industry has evolved around us. so the way that we've tried to tackle that vision has evolved, absolutely. But now we are embracing just all of these decentralized protocols that are new ones are getting built every single day.
+
+And I just think that's so cool. And so can't, it's hard for me to imagine like a more important mission than enabling this, anyone in the world to access this, all these amazing protocols that are being launched. I think that if we can enable that and bring that to the masses, that is going to have more of a impact on society than anything else that I can think of. And all of these cool protocols like Give It, I love Give It. I think Give It is one of the most amazing things ever.
+
+But in order for anyone to be able to use Giveth, we need to make it easy and we need to build the infrastructure and the tools that people can access Giveth and access it in decentralized way. You can have all these cool decentralized protocols, but if the actual interfaces themselves, or if the backend, the blockchain data that users need to be able to access this itself is centralized, then you can't really enjoy this decentralized feature. So Shapeshift is in a great position to solve that because we've been running nodes and interacting with these chains since 2014.
+
+We have a ton of experience doing this and doing it in a non-custodial way. And now not only do we have this amazing team that's been working at Shapeshift for eight years, but we've got this awesome community. like one thing that's really cool right now that we're open source is that we've been putting bounties on Gitcoin every day. And Shapeshift right now is a top project on Gitcoin for putting bounties out. And so developers out there, if you're interested in getting involved with Web3 and earning some crypto, you can check out the Shapeshift profile on Gitcoin because...
+
+willy
+If you get familiar with our code base, there's new bounties coming out every day. And as a result, we're building faster than ever.
+
+Citizen Web3
+This is so cool that you're... didn't know that ShapeShift was the number one project committing... not committing, sorry, but offering tasks on Gitcoin. I didn't know that this is really cool. Because I have used in several projects Gitcoin and I think it's a fantastic thing. We did an episode as well with Kevin. So, actually, it was in... in Lisbon, in ETHCC, right? That was the name, yeah. So think so, yeah.
+
+willy 
+cool. Yeah.
+
+Citizen Web3
+Great. what about, I mean, values? I understand. What is now though, the main like goal of the DAO? mean, financial sovereignty, I understand that, but let's like get a little bit more to the ground, I would say. What is now the target for the next, I mean, you said in four years, you don't want to dissolve, you want to dissolve the foundation. Makes a lot of sense. Makes any sense. But for those four years, what are the goals?
+
+willy 
+Yeah. So do you go to app.shape shift.com right now I can actually I can show it to you. have have it up and we could we could show you the new cosmos functionality. We could stick some cosmos. And it's beautiful. It's super easy to use. There's there's no fees added ever. So shape shift you can think of us as like an aggregator right now. So we build really great UI UX and you can come to app.shape shift.com right now. Buy sell send receive trade earn yield under crypto all for free and across chains. So
+
+Citizen Web3 
+Nice, nice, nice.
+
+Citizen Web3 
+Wow.
+
+willy 
+Our trade page, looks a lot like Uniswap, where you can trade one asset for another and put the amounts. But it's also got a Thor chain integrated as well. So in that same interface, not only can you trade all the Ethereum assets, and it's not just Uniswap, it's all the top dex is on Ethereum, but you can also trade Ethereum for Bitcoin. And we just launched this. So the way we're building all of this too is with abstraction layers so that we build one UIUX, that's great. And we're constantly optimizing that. And then any protocol that shares that same UIUX, which is like a lot of the trading protocol.
+
+like the exact same. A lot of the lending protocols look the exact same. A lot of the single asset staking yield protocols. It's the same UIUX, right? You approve the token, you choose the amount, you deposit, you see the number go up. So the way we're building things is so that once we build this UIUX once, it's very easy for other protocols to come integrate themselves. For example, the first yield generating protocol we integrated was Yern. And right now we're working on the abstraction layer and we have idle finance ready to come integrate them or...
+
+put a bounty up to get integrated. And we're actually going to partner with them on this bounty. So they're going to put up half the funds from their treasury. We're going to put up half the funds from our treasury. And then anyone in the community who wants to come integrate idle can just come plug it into our existing UI UX and our abstraction layer. Similarly with Cosmos, we built it in a way where now that we have Cosmos support, it's very easy for us to support all the Cosmos zones. So there's a bounty also up from Osmosis. This is another joint bounty from the Osmosis community to get integrated into ShapeShift.
+
+And this is in progress. And now that we have Cosmos support, it's much easier for us to add the Osmosis. So that will be coming soon. Not only Osmosis sending, receiving and staking, but trading and liquidity providing and bonding. And then we want to support all the Cosmos zones, right? So if you're a Cosmos zone, listen to this, come integrate yourself into Shapeshift. Or if you guys are busy, come put a Bounty up to get integrated into Shapeshift. It's going to be really easy. You can check out the UI UX. It's awesome. And obviously the next big milestone that I'm excited about after that is bridging.
+
+enabling bridging between Ethereum and between Cosmos so that in one place you can come connect your Kepler or you can connect your Metamask or you can connect the ShapeShift wallet and it supports both Ethereum and Cosmos and Bitcoin. And you can do cool stuff in Ethereum land and you could do cool stuff in Cosmos land all on one interface, all for free, all open source, all community owned and soon fully decentralized. So I could talk about, I don't know you've heard about Foxchain, but we should absolutely talk about Foxchain. Yeah, okay.
+
+Citizen Web3 
+I was, I was, this is, this is my next question, man. This is exactly what I'm going to get at it. So when are we going to see Fox chain, man, for a Fox chain on Cosmos?
+
+willy 
+Yeah, so right. So yes, if you guys haven't heard about Fox chain, it is a it's a new Cosmos zone that's under development and collaboration with shape shift. And we're also working with Coinbase cloud on building this out. And they've been awesome. So shout out to the Coinbase cloud team. But yes, it's in the early stages of development, or really, we're in like the research phase right now. So we're kind of designing all the protocol, we're doing models and stuff with tokenomics and making sure that I should say what Fox chain is basically what Fox chain is, it's a
+
+Citizen Web3 
+Yeah!
+
+willy 
+It's a network to incentivize node operators to provide blockchain data to end users, clients. So we need this for ShapeShift to be decentralized, right? Like ShapeShift, we've always operated the nodes ourselves, but we need in order to fully decentralize and for the foundation to dissolve, we need to have another source of blockchain data, ideally a decentralized source. And that doesn't exist yet. So what Foxchain does is it incentivizes node operators to run nodes for any blockchain they want to run nodes for.
+
+and then get rewarded in Fox tokens. And it enables any client, including, know, shape shift, we need it for ourselves, but any DAP that actually wants to be decentralized and not just rely on Infura or run their own nodes, can plug into Fox chain to get the blockchain data they need for their end users. So we are in the research phase right now. It's going really well so far. I think we're going to have the first community call to update on progress this month, like in the coming weeks. And yeah, it's pretty cool because I've been...
+
+privy to the meetings between Coinbase Cloud and the Foxchain workstream, which is led by Michael Perklund, the former chief information and security officer at ShapeShift. And it's just a really brilliant group. It seems like we've got the right team of people to solve this really hard problem. so far, anytime that there's a challenge, the team's been able to come up with really creative, awesome solutions to address it. So I'm hoping we'll see Foxchain live in early 2023. So it's going to take a bit.
+
+But we'll see. The next stage basically wants this, the community approved proposal for $300,000 to basically complete this research phase to design kind of the whole spec and architecture and details for Foxchain. And then the next proposal the community will see is like, okay, here's the kind of the optimal design that this team has come up with. Do we want to then fund the development of Foxchain? And I think the community, long as assuming that they come up with a solid design, I assume the community will want to fund it to build it out.
+
+Citizen Web3
+When are you planning to launch the first testnet for validators to come and already validate? Is there going to be an incentivized testnet before it goes live in 2023?
+
+willy 
+I'm sure there will be. There will at least be a test net. And I'm not sure when that will be live. So think hopefully once we complete this research phase, we'll have like a better timeline for when that can be available.
+
+Citizen Web3 
+So the most important question when airdrops of the new Fox chain token. I see. so basically, is there any alpha here? Should other holders, should people go and buy more Fox tokens now of the Ethereum to get more airdrop in the future or no?
+
+willy 
+That's what we're figuring out right now, so yeah.
+
+willy
+I think I'm not supposed to say anything about that. Nice try.
+
+Citizen Web3
+I know you know it. know you know, but I have to ask, know, so nice try though, right? Maybe you kind of, shit, I forgot and then said everything. I'm joking, man. But I'm looking forward to that because I've heard in several places already like this mentioned. yeah, I mean, the more IBC changed, the better. So I have a slightly controversial question. I don't know how you was controversial questions, but I'm going to ask it.
+
+and I'm going to make it up. So this is a made up story, but you know, let's go ahead with it. So you said yourself that, you know, the first day, that you started working in shape shift, there was the whole thing with the introduction of the KYC. Obviously now things have changed and you know, things have progressed again, controversial question. So who, but who is to say that, you know, the foundation that is still there or, some of the company that is still there.
+
+Let's say something bad happens. I don't know what. And the authorities come to shape shift, ask for all the data that people, how do people connect for all the, I don't know which computer they're using, which IP, whatever, where are they coming from? So could that happen? Is that a possibility considering that there was such like an incident already before, similar thing? Of course, it's a controversial thing, a made up story, but do you think something like that can happen? Yeah.
+
+willy
+I'm glad you asked because the foundation, we don't have that data. So we specifically made sure that we received the data necessary to continue operating Shapeshift's legacy infrastructure until we could sunset it and migrate all of our users to the new open source version, which doesn't require KYC and doesn't have any tracking whatsoever actually in the new open source version. There's no user analytics on app.shapeshift.com. So Shapeshift, if you guys know anything about these KYC laws, you're required to keep the data for like five years or something.
+
+willy 
+you collect it. The shape shift is required to keep that data. But shape shift right now is pretty much operating in like skeleton mode. Almost all the employees have moved on. And there's just a small skeleton group that's keeping shape shift alive. Basically, I think for like tax purposes this year, and maybe just to like be the custody of that data, which is all encrypted stored offline and cold storage. And it's data that we didn't want to collect, right? This is like, we had to collect it, but we didn't want to.
+
+But we followed the rules. But fortunately, there was no reason for the foundation to receive this data because we don't need that to continue operating ShapeShift. So we specifically made sure that we didn't have access to the data. And so the regulators come ask us for it. We can't give it to them, which feels pretty good.
+
+Citizen Web3
+I understand what you mean. less you know, the better you sleep now. joking. But it is true. I mean, in this case, that is exactly the case. I know you're not about that, but I did have that question and I do want to ask your opinion because I think you've worked with KYC a lot. What is in your opinion the future of KYC in Web3? I hope it disappears, but what's your opinion here?
+
+willy 
+Yep.
+
+It's a great question. I am excited for like civil tools and stuff. So the ability to like know that an individual address is a real person and stuff and maybe giving individual users the, mean, as long as the users are in control of their data and they can choose whether or not to share their data. think it's a much better status quo than we have right now. And especially if there's, if there's options to do the things that you want to do in finance without being required to share that data, then I think that's a better world. Right. I personally think that.
+
+KYC is kind of ridiculous, right? Like requiring people to give up all their private information when normally it's like innocent until proven guilty. But here we're assuming people are bad actors and stuff. And then it's bad risk. It's like we're just a honeypot of all this data that time and time again is gonna get hacked. So I'm excited about the potential for Web3 to enable users to at least have control of their data. I do think that there probably will be like on-chain KYC types of things that do get built.
+
+And while I probably won't myself use them, maybe there's some benefits. Maybe, maybe I won't say that there's like, there's not, there's no potential for benefits. Maybe it's possible that there people can come up with reasons why that's why that's beneficial. But, yeah, to me, I don't think it needs to exist. And I believe in, you know, borderless, free, sovereign finance and, we don't need KYC for that. So it will be interesting to see how it all plays out, but I do think you're right that these, these
+
+KYC protocols will get built and some projects will choose to implement them and require them. And whether or not those projects are able to compete with the decentralized alternatives that don't require that, it's hard for me to imagine, but we'll see what they can come up with.
+
+Citizen Web3 
+For sure. mean, because I don't want to like say something I'm going to get wrong, but I heard, I read on Twitter the other day, something about tornado cash and somehow they managed to, like, to track users that come from Russia or something like that. And to be honest, I think it's wrong. I think like, this is like as wrong as it gets, like it's an app that is
+
+You know, like a privacy app and suddenly you guys are like, well, I mean, come on. But yeah, that's not up to us to decide, I guess. I have a slightly different question for you. Wait, wait, wait, wait, wait, wait, wait for this, wait for this. This is a strange question. So when I go on your Twitter account, you have an .ether nickname and laser eyes. So how does that work, man? You have to explain this,
+
+willy 
+Heh
+
+willy 
+Yeah.
+
+Yeah, well, you know what, I will say so, I've Ethereum is what got me into this space for sure. It was the first crypto that I bought, but I very quickly also very much became a fan of Bitcoin and the values of sad money, decentralized money. And, you know, I have a lot of appreciation for Bitcoin. And I probably I personally think that Ethereum will flip in Bitcoin. But who knows what's going to happen and right, you know, I definitely believe in a multi chain world.
+
+And so I think that's a good way to just kind of show that, right? Like I love Ethereum, but I also like Bitcoin and I'm open to other chains, right? Whichever chain, whichever protocol best solves what I really care about, which is like decentralized financial sovereignty, then I'm happy to use that chain and support that chain. So I reject like the tribalism and ultimately I think like the real enemies are the banks, right? The legacy centralized infrastructure, the regulators.
+
+Not each other, right? Like we're I like to think we're on the same team and it hurts me to see that the Bitcoin community is becoming so toxic and so maximalist. yeah, I like the good old days where a lot of the innovation happened at Bitcoin and we were all friends, right? So if the Bitcoin community continues going in that direction and Ethereum continues going in the direction that it's going, maybe I will get rid of the laser eyes and say, you know what?
+
+I'm sorry, Bitcoin, but I think Ethereum's doing a better job at actually achieving this initial vision that we all set out to solve. But for now, I still got left for the Bitcoin community. I still got Bitcoin. I still got the laser eyes. I'm still hoping for 100k Bitcoin.
+
+Citizen Web3 
+I'm gonna play devil's advocate a little bit. A lot of people like especially that come came into crypto after 2017 Not a lot but a big majority I've heard use the words that Using Bitcoin today in crypto is kind of like using checks. So it's kind of like so dated and so, you know like
+
+There's no use case, no nothing apart from, it's money, like, know, then any cryptocurrency can do that. Again, I'm playing devil's advocate, but I would love to hear your opinion. What's in your, you said that you love Bitcoin and you like the community still, even though it's becoming toxic. What is the value in your opinion with Bitcoin today?
+
+willy 
+Yeah, before four crypto Bitcoin, used to like gold. So I really believe that like fiat is the biggest evil, the biggest scam in history. And so I'm a big fan of like hard money. And I think Bitcoin has done a great job at solving that. However, I think it's possible that Ethereum is going to do an even better job, right? Like, you're right, there's not a lot you can do with your Bitcoin right now. And I really, I see the transaction fees that Bitcoin is generating right now. And I see how much it costs, costs to secure the network and
+
+the block reward going down. right now it's like, it's not clear if Bitcoin's actual model is going to be sustainable. And that value that it has right now, its biggest utility, I would say is hard money, right? And it's sound money, but Ethereum can't be ultrasound money, right? Like on Ethereum, not only can you do anything, right? And have all of these decentralized finance protocols that add a lot of value and that people are paying a lot to use because it's worth it.
+
+But Ethereum can also be money, right? And if you can have hard money that has utility that people are willing to pay for, right? And have a monetary model where it's actually deflationary, but still sustainable, then that could actually be better at being sound money than Bitcoin. So I'm open to that for sure. But right now Bitcoin has a lot of liquidity and it can still enable
+
+people to have financial sovereignty and to hold their own money and to send it to anyone across around the world, unstoppably. And so that's still very valuable. I still think that's super freaking cool. And I appreciate everything that Bitcoin has done to enable what Ethereum, these other blockchains are doing now.
+
+Citizen Web3 
+sure, for sure. mean, for starting the, let's say, I don't even know how to say it, the circus back in 2009, for sure. I mean, that's one of the biggest thing it did. I but still it's just like, it's hard to understand. mean, I came into crypto in 2011, roughly. yeah, Bitcoin for me, it was a mind blowing thing. And it took me years to understand what the hell is going on, to be honest.
+
+But still, today I guess I'm a bit less enthusiastic than you on Bitcoin, especially with all the toxicity.
+
+willy 
+Same. I actually I got rid of I don't know if you I got rid of my laser eyes a couple days ago. I put up a I put up a new picture. That was the way I did it because I didn't want to just do the same picture with no laser eyes, you know, but I'm like, you know, I got a new headshot might as well switch it out. And because I was thinking about that, too, just what people think you are, you know, a theory maximalist, they're done with Bitcoin and stuff like that. I don't want my credibility to be hurt when they look at my profile and they're like, this guy, you know, he thinks he understands Ethereum, but he's still got the laser eyes and stuff. And I mean, I think I Yep.
+
+Just Yeah, no, I totally hear you. And it's a shame to see what has happened to Bitcoin and that all the innovation has really left because I really I am a futurist and I like innovation, right? Bitcoin is kind of boring these days. So I do think like if you think about if Bitcoin really needs to be be worried, I think because if Ethereum can be better at being the sound money, which right now they're they're on track to achieve the merge goes through and everything goes according to plan, like I think Ethereum is going to be better sound money than Bitcoin. So if you have that if you're better at that core utility that Bitcoin has,
+
+plus infinite more possibilities that can be built on top of Ethereum. How could Bitcoin possibly compete with that? So I hear you. But the Bitcoin community, it's a strong community. They got a lot of supporters and stuff, and we'll see if they're able to survive. I would be happy to live in a world where we have Bitcoin and Ethereum, and they both coexist. And we have it decentralized. have money and applications.
+
+But I'd also be happy to live in a world where Ethereum, you know, ends up achieving that vision and Bitcoin ends up just being the MySpace to Ethereum.
+
+Citizen Web3 
+I think my profile still says decentralization maxi, so I'm kind of like all pro that I just, yeah, but I'm totally, hope that, that, that, that, you know, even it's already kind of happening when shape shift is a great example for providing, you know, the ability to interact with different DeFi protocols already with on different blockchains. think that in five years time, people are not going to know what blockchain they're really using. What is the underlying chain is there. They're just going to be using it. And I hope so at least.
+
+Citizen Web3
+I have two more questions for you. So the first one is more like a story that if you want to share. You kind of mentioned it already, but the whole decentralization of the stake of shapeshift, mean, you mentioned it in many, many, many, many ways. What I would maybe love to hear a little bit more is how did it suddenly, I mean, you said, somebody brought it on the board. Well.
+
+willy 
+Agreed.
+
+Citizen Web3
+I mean, guess people bring to the board different things every day, right? But not everything happens. So if you can go into that story a little bit more, how it happened and why it happened suddenly like that, I would love to hear that. think everybody would love to hear that.
+
+willy (42:10.022)
+Yeah, like why did we decide to decentralize at ShapeShift? Yeah. Yeah. So, I mean, ShapeShift, could see, if you look at like where we were in early 2021, when we kind of started going down this path, we could see around us a lot of the projects that were best achieving like similar visions that we wanted to achieve. They were structured as DAOs, right? A lot of the top DeFi projects were DAOs. I had also had first-hand experience in ETH number 2020.
+
+Citizen Web3 
+Yeah. Yeah.
+
+willy
+I built Cause for the hackathon, which was the DAO to save the world. And we got first place and immediately afterwards started building it. And we ended up joining forces with Gibbeth and built out the new version of Gibbeth and we built a DAO. We launched a token and built a community. And it was amazing to experience because I was able to do that in my free time. This was actually, yeah, this is during the pandemic. So quarantine, lockdown, it was a perfect way for me to stay busy.
+
+So in every week, we're just having these community calls and more people are joining the community. And we built a beautiful product from scratch without any fundraising or anything just off of donations. And that was pretty amazing to see. And so when we were figuring out, you know, what is the best path forward for ShapeShift? What's the best way we can achieve their dream? I was a heavy advocate for
+
+We need to decentralize. We need to structure ourselves as a DAO. We need to drop Fox tokens to all of our users and open source everything and work with the community to build a community-owned interface to these decentralized protocols. And I didn't even know if it would be possible. So at the time I was like, okay, can we do this DAO thing as a centralized corporation? Can we still, how much of a governance token can we make Fox if we're still a centralized entity? And...
+
+when, and then Eric and John basically came to me one day and said that we're going full Dow and we think it's the right way to go. And we've got the shareholders on the board on board with it. And I like jumped out of my chair with excitement. It was like a dream come true because at the time too, for me personally, like I was, you know, deep in DeFi. I was getting really excited about this whole Dow movement. I just think it's so freaking cool. And I think it's like,
+
+willy 
+the idea that you can have these community owned products and ecosystems and not have to have a centralized corporation with a CEO and everything. I just thought it was so freaking cool. So, yeah, so Shapefits going down this centralized path in 2020, at least we're not going down the decentralized path. I see all these projects that are doing the decentralization path and it's awesome. It's like they're crushing it, they're exploding, they've got these awesome communities. And I'm like, I want that. But...
+
+I'm so loyal to shape shift. like, there was like a little bit, I was like starting to get a little bit torn, where it's like, okay, I love shape shift and the values, but are we approaching it in the best way? we taking the wrong approach? And so it was really, it was really awesome. I was so excited when we finally pivoted and went, you know, doubled down on the centralization route. Cause it was like, I finally feel like so energized once again to contribute to shape shift. And I no longer have these questions in the back of my head of like, am I doing the right thing? It's like,
+
+Yes, we are pioneering. We're absolutely doing the right thing. And I couldn't believe that more. So for me, been a really awesome journey. yeah, think just, I was like, at the beginning, there was a lot of hope that things would go as planned, but it's like, there's a lot of uncertainty, right? And I think a lot of people maybe thought like, this sounds crazy. This sounds like a fantasy. Like no way are we actually gonna be able to transform into a DAO and actually still operate or be more productive. But like, there's no doubt in my mind now.
+
+
+willy 
+Like anyone can come in and look at the shapeshift community and see how much we're getting done every single day. If you look at our Twitter, it's like every day there's a new announcement. Marketing's like, slow down you guys. It's like, we can't announce this today because we have this another announcement. Like we'll have to announce that next week. It's awesome. Great problems to have.
+
+Citizen Web3 
+Love it And the last question, which is a traditional question, you are so alive, man, you're so energetic. What on earth motivates you to keep on staying apart from decentralization, apart from the value of, you know, building like the, is there something in your daily life that you could share, whether it's sports, I don't know, meditating, whatever.
+
+I don't know. Something that you do, that you do every day that keeps you motivated like the way you are and keeps you, you know, building the decentralized future we're all striving towards.
+
+willy
+Yeah.
+
+willy 
+Yeah, well for five years now, over five years, I've been saying it's the best day ever, every single day. So kind of become known for that somewhat. And yeah, I love it. I think it's the right attitude to have, you know, and I'm really grateful. I'm super grateful. It's like, I love my job. I love the people that I work with. I'm so passionate about what we're working on. And it's fun. It's like, there's, it's hard to imagine a cooler job where we can just go online, hang out with our internet friends and build cool shit and get rewarded for it. So my values are to...
+
+willy 
+Always, first of all, work on something you love. Work with people that you love. Work hard, obviously that's an important one. Stick to your values. And let see, let me see, I got one more. I don't wanna forget it. How am I forgetting this right now? and have fun, rule number one, have fun. It's so important, yeah. And if you're not having fun, it's like, you're not in the right place. But yeah, I have a lot of fun every single day. And it's pretty cool to be able to.
+
+Citizen Web3 
+Go for it.
+
+Citizen Web3 
+Have fun. Fun,
+
+Citizen Web3
+I love that.
+
+willy 
+have fun and build something that I think is gonna really have a big impact.
+
+Citizen Web3 
+I really, really like the rule number one, have fun, because this is my number one rule as well. And I think that's my biggest value. I love that you say that the best day ever. I've never heard this before. This is fantastic. I'm going to remember this. I'm going to tell people about this. This is really cool. Willie, it's been a huge pleasure having you on. Looking forward to not just Fox chain, but to the way you guys are going to go on about, you say, integrating more and more like Cosmoses and other things. And yeah.
+
+Thank you for coming on.
+
+willy
+Thanks so much, Search. Thanks, everybody.
+
+Citizen Web3
+Thanks, bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+
+
+

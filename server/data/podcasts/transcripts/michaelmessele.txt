@@ -1,0 +1,448 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/michaelmessele
+
+Episode name:
+Empathy, Wallets and Communication with Michael Messele
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Cosmos Podcast. And today I have Michael Masele with me, the co-founder of the PILA project. And not only by the way, but let's say hi to him. Michael, welcome to the show.
+
+Michael 
+Hi there, thank you for having me on guys. I'm Michael Massela and yes it's really nice to meet you. I'm really glad that I'm on the show and I hope we can have a nice chat and I can tell you about my journey in the crypto space maybe over a decade long or so, but my active participation in the past six years being involved in founding Pillar Project
+
+Citizen Web3 
+Very glad. Nice to meet you, man.
+
+Michael 
+account abstraction going through a few life cycles in the crypto world repeating itself and yes, I'm looking forward to having a nice chat.
+
+Citizen Web3 
+That is a very, very good start. I like that. But before we're gonna go into the crypto journey, usually I do ask guests to introduce themselves in a bit more maybe personal manner. So maybe tell us not just about your crypto journey, if it's okay of course with you, but maybe how did you even get to crypto? I mean, even a decade long, you know, you still were obviously older than 10, 11, 15, even 20.
+
+I'm going to make that assumption, even 30, I'm going to make that assumption. So you obviously have there we go, there we go. And then and then so obviously I would love to hear how the journey started from whatever you want to start, of course. So I'm going to give it all to you. So, yeah, let us know all about yourself. Of course, what you want people to know, not the secrets.
+
+Michael 
+I beg your pardon?
+
+Michael 
+I'm sorry.
+
+Michael 
+now you've indirectly called me old let me go through my journey okay I mean most of my career I have been working in the technology space in finance space that I mean working in the city of London with financial houses investment banks doing things in market risk and market data areas then I think
+
+Citizen Web3
+Hahaha!
+
+Citizen Web3 
+I'm old too by the way, so it's okay.
+
+Michael 
+I was trying to pinpoint exactly the day I heard about Bitcoin I can't remember it but I think it was about 2010-2011 when someone mentioned it and I just started looking into it bit by bit and people tell me people that I know about 2012 and 2011 I was preaching to them on about how
+
+Michael 
+and those types of things I mean as a journey so that is how we went and again I discovered about Ethereum by accident I was just checking a few things online and one thing led to another I ended up hang on a minute there is this another one a bitcoin clone then that's how I started looking at that and before I knew it I was involved in I think
+
+I wanted to get my hands dirty before I got involved in hackathon I wrote an article on how clearing houses in terms of the financial space can use a blockchain for that settlement layer and I published it on LinkedIn a few people read it and so forth then I got involved in hackathon I just wanted to get my hands dirty and meet people that are actually developing these things.
+
+And that's how the journey of me being active participant of the space started.
+
+Citizen Web3 
+Let me ask you one thing I like to ask my guests. You know, I mean, we haven't spoken, of course, at all yet. We just started, but this is a question I like to sometimes throw at the beginning, sometimes at the end, depending on the conversation. And I'm going to ask you now, considering your long journey in the crypto space, I mean, I'm not going to call it Web3 because the term Web3, of course, became much, much came around much later.
+
+Do you think that the original feeling that you had when you were joining that space, whatever it was within you, whether it was in order to get your hands dirty or whether it was in order to develop something or whether it was in order to, you know, come to a point to a more decentralized world. Do you still think we are on that way? Do you still think we are there? Is that there for you today?
+
+Michael 
+Interesting you say this because when I did mention about co-founding the Pillar project in 2017, we did it on a book basically called Pool. So what we wanted to create was create a personal data locker where every individual can have ownership of their data, whether it is your health records or your shopping data or your social media, you own your data.
+
+Then with that idea we started in 2017 and going through the cycles the DeFi summer came, NFTs came and then you started thinking, oh no, there is no way we can pull this off because Facebook is still Facebook, Google is still Google, how on earth are we going to get there? And maybe dream shattered. Then in the progression, now you can see in the current cycle, you can see some of a lot of the work we've done.
+
+being a building block towards that. And you do see now startups, basically the whole wave three, becoming a phenomenon and people are thinking, hang on a minute, there is more to it than DeFi. There is more to it than NFT and self sovereignty becoming then a possibility with a few startups. I've come across a startup that does advertising ad network.
+
+but leveraging web3 where you own your data so your data is not cloned and used by the ad companies kind of thing. So in a long way to answer your short question, I went through a phase where yes, high on hope, then low on being able to achieve it. Now gradually thinking we might just put it off at some point.
+
+Citizen Web3 
+You know, I have another one in the same direction. I wasn't going to ask that, but considering it seems that it clicks with you, do you think that what you have set out to build, whether it's with eSport, whether it's with, you know, Pillar Project or with any other projects you were involved to do, and this is not actually just...
+
+both you in particular, this is like the you here is very general, I guess. Like let's say you as a founder and a founder relating to all the other crypto founders there. Do you think that what you are building, what you, because the pillar project hasn't started yesterday, it's, it's been ongoing for several years. And of course we will talk about it, but, um, do you think that those things are solved, like you've kind of touched on that, that the hope is there, but
+
+Are we solving something? Are all of us here who have gathered around Web3? And for example, it's a good question to me, I guess, as well, because, you know, I interview a lot of Web3 for many years now, a lot of Web3 founders and CTOs, COs. And I sometimes ask them that, do you guys think that the people out there, you know, however far they are away from wherever you are based, does it solve something for them? Do you honestly can say that? Yes, you know, we did it. We solved that and that problem.
+
+Michael 
+It's funny you say that in 2017 during all quite a lot of the ICOs the phrase you heard a lot was banking the unbanked. So crypto, yeah so then crypto was meant to go to all these emerging markets where they do not have access to the banks and help them with their banking. But what transpired was, hang on a minute...
+
+Citizen Web3 
+and banking the banked.
+
+Michael 
+For me to even do, because in the medium term, to do any transaction, I was paying a dollar or something. Then when you think of the typical land bank person, per capita income of maybe less than $1,000. So $1 means a whole lot to me. I'm not going to spend anything on a proxy internet transaction paying $1. Are you having me on? So then you start questioning, are we really solving the problem here or are we?
+
+then you think to yourself, are we then creating just a niche application to a certain part of the world and a certain niche community that would have the patience to go through 5, 6, 7, 8, 9 steps to do one DeFi transaction and those that do know that niche and how to operate that niche prosper. But is that the ideal? No, it was not the ideal. But
+
+enthusiasm we all had at the beginning with all the crowd sourcing of funds and those kinds of things it made it sound like we were just going to achieve it the next day oh yeah we'll be doing that and the hype and that little echo chamber that we all had in the space but the realities I mean as it is we've made a marked progress in the space in terms of how much it is worth but
+
+in terms of making it useful to the average person never mind the unbanked even the banked average person we have ways to go we're threatening to come up with ways of doing it but i'll ask you a question back would your grandma use any of the crypto products you use would you use your wallet
+
+Citizen Web3
+It's an interesting thing you say. When people talk about adoption, I usually say that adoption, first of all, adoption has happened. It happened already. Usage hasn't happened yet, mass usage. But the day we're going to start mass using it is when we're going to become the grandmas and the grandpas. And that's what I always say.
+
+Michael 
+You think so? Because see, to me the day becomes mass usage, is the day I'm using it and I don't care what is behind it. I'll give you an example. I use Twitter and do I know how many databases Twitter have in the background, whether I'm uploading a picture, following someone, retweeting. For all I know they can be using Oracle, SQL Server, MongoDB, whatever it is in the background.
+
+Citizen Web3 
+I think so.
+
+Citizen Web3 
+Absolutely.
+
+Michael 
+but as a user I do not know and I don't care.
+
+Citizen Web3 
+Absolutely, absolutely. It is something that I think, I think that was my little comment there, unbanking the bank rather than banking the unbanked, you know, rather than taking it backwards. I think we all, I honestly have the same level of hope, I think, as you are to the point of it doesn't matter whether today or not every grandmother is using blockchain, you know.
+
+Michael 
+Yeah.
+
+Citizen Web3 
+going to change, not going to leave us short or longer away, in my opinion, from a mission that each one of us has set out to do, whatever that mission is. But back to you, back to you. I want to know a little bit as well also about your entrepreneurial background. You are obviously a man who has had like a very long history, not just around crypto.
+
+And you have led several projects and I'm curious what is it for you? Like what are the leadership ethos? I know it's a very fancy, stigmatic, like two words, right? I know that they might not be, maybe a bit vanilla even, but I would like to know yours. I mean, you have obviously led several projects according to, if you look, you know, the internet is a
+
+Vast of information these days. And when you look somebody online, you see, whoa, this guy's done a lot, you know? Like how are you, how are you managing all that? How do you like manage one project, another project, and then go to an, like what's your secret, man?
+
+Michael 
+I've been through, as you said, various projects, even working for companies, as well as being an entrepreneur. So for me, I like being able to communicate on a flatter sort of structure where I can actually try and empathize with what people do by at least trying to do it. And it's not possible to do it when it is a highly technical field.
+
+but I would like to appreciate what they go through and have an understanding to a certain degree to have that empathy with people in terms of depending on the work. Say for instance, tell you when one of the ventures I did set out was a call center in an emerging market. Now in that role, I pretty much did every role that was going just so that I had an appreciation.
+
+But as I said, when you talk about a highly technical blockchain development, I can't be that engineer because it's a technical field. But when you talk about leadership, when we started PILA, we experiment with our management structure as well. I was one of the co-founders then. What we wanted to do was we didn't want to have any interview process. We just wanted anyone to come in.
+
+volunteer with us for a couple of weeks and the team basically votes whether that person should be in or out and we didn't look at CVs, kinds of things. And even though that was very egalitarian our approach, reality thought may lessen that when you run an organisation there are various human needs, human traits, that means you would need human resources.
+
+entity that can deal with those intricacies because someone may want a different pay rise and in fact we even had a salary exercise at one point asking everyone how much do you want to get paid and everyone was saying but it kind of turns into a circus when you do that so for me I learned quite a lot from that what we experimented in having an open really open structure where it
+
+Michael 
+necessarily be very productive in terms of at least in our experience without having someone who is very nuanced with HR intricacies because you can even run foul of the rule of the land whichever country you're running with but in general my approach is to have an a flatter structure with an easier communication so that
+
+because for me when I was a junior developer or person in my early days I would like to understand why I'm doing something if I can understand it and I can try at least see the bigger picture it probably would contribute to my deliveries and deliverables so at the same time getting people to understand those things within reason I think is healthy and
+
+Citizen Web3 
+Now that you, sorry, go on, Michael. I thought you were finished. I'm sorry. I think so. Thank you, usually. It's just because you made a small pause and I thought it was like a good time to ask it. I apologize again. It's something I thought about while you were talking. Like what do you think makes a good leader then? And you know, fuck crypto, you know, like it's not about crypto right now. Like is it just communication then? Or does it have to be other skills that, you know, because over time people have said,
+
+Michael
+No, no, you go ahead.
+
+Yes, yes.
+
+Michael 
+No, no, it's okay.
+
+Citizen Web3 
+different things, you know?
+
+Michael 
+Interesting you say that because one of the earlier things I was reading was army commanders when army generals how in various armies around the world how they communicated some of them went in say the top general went in and checked the bag the equipment bag of the individual soldier and what that meant is you know that is not going to do it on a daily basis but it's a random check
+
+Michael 
+showing empathy with the person on the ground level at the same time to tell the middle ones, guys, I'm going to check, you know, you can report to me in X, Y, Z, but I will check as well. And it's one way of hands-on approach to things. So for me, leadership, I think honesty matters. People do see whatever you think you're doing. From my experience, people do see.
+
+in any organization, your behaviour. That's one aspect how you behave and another thing I've learnt is the ability to do to make analysis because quite a lot of the times you make decisions on incomplete information. Only once you've passed it you know the results so you can even write a book about it but before you make that decision you do not have all the information at hand especially when the pressure is on.
+
+So you're filling the gaps with quite a lot of them. So how well can I do an analysis? And obviously, luck has to do with things as well. So.
+
+Citizen Web3
+By the way, about luck, I can have probably hours long conversation because it's one of the reasons I think. I totally agree by the way completely. But I have a question about honesty here and leadership because this is interesting because especially in the traditional world, honesty can have a very, especially in an hierarchical structure.
+
+Citizen Web3 
+very different ways. You know, sometimes we, I mean, I'm laughing and smiling because, you know, like, especially if you think about a movie or like any movie where there is like, you know, a line of thought where there's like a president and they have to save the president. And the honesty isn't very honest sometimes. And the leaders are, and they portrayed it in the movies, you know, they portray not just in the movies, in anime, movies, in cartoons and series, they always portray that the truth.
+
+that comes from the top to the bottom doesn't, not even worse, it has to be bent to the point of that, those people at the bottom, and I'm on purposely using those words now, because in my opinion it's wrong, it can be bent. So do you think that the same level of honesty and trust should be in trustless systems, or is that only?
+
+Okay, and would it only work with trusted systems or in trustless systems, we need to have a different approach to improve honesty, leadership and everything else.
+
+Michael 
+Interesting, just to regress a little bit on what I said and based on what you said. Actually, when you look at bigger organizations and you look at books and materials on organizational politics, it isn't much about honesty or trust or all those emotions, it is about, in fact, some approach it in such a systemic way. Okay, what can an organization do for me? Who can I be friends with and who can I...
+
+just ignoring who can I step on. So people do use organizations to this end and progress as well. And you do see in bigger organizations, various factions, various in-fightings, because the bigger you are, you can be the most honest person on earth, but when you are leading an organization, it grows from 10 people to 100, from 100 to 1000, from 1000 to 10,000.
+
+your relationship with your colleagues will be limited because only those maybe 10, 15 that work with you know you. The rest when you have 10,000 people it is about the system. So there are various people in various parts of an organization with 10,000 people with their own agendas. So when we talk about trust, honesty, I think...
+
+Potentially we're looking at smaller organizations. So Go on you were going to say something
+
+Citizen Web3 
+I want to give you an example. I want to give an example. Bitcoin, Bitcoin and 1 million bitcoins that belong to Satoshi. Now, I'm not, usually I'm on the other side, but you know, since we are like having a conversation, I like to be devil's advocate. So basically you have an organization Bitcoin with, you know, hundreds of thousands of people who are all trusting the fact in some point that a person that started that organization, I mean, I know it's not like that exactly, but you know, we're going to cut some corners here doesn't have.
+
+the keys or does it's not, there's never going to use the keys to those 1 million bitcoins in order not to ruin the financial structure of this organization. I think, I think this is where I was kind of like having the thought and the, okay, this is the devil's advocate's thought, of course, but what's, what's your opinion? Is that a good example or a bad example?
+
+Michael
+again whether we trust whoever owns that 1 million Bitcoin or not it is in their interest not to come and dump it tomorrow
+
+because they dumped 1 million Bitcoin if they're worth 30 billion right now they won't be worth 30 billion the moment they've dumped it so it's not in their interest to do that either so there is the game theory aside to it you would think a rational entity would want to use that asset to the best not by
+
+Citizen Web3 
+Of course.
+
+Michael 
+just because if they were to dump it and okay even to cash it out into fiat they will take a whole lot of heat and then there will be doxed as well so to say because you can't get away with 30 billion so from the practical angle i'm not sure it is feasible for them to do so but i follow what you're saying so i'm thinking our conversation is steering to dao's and
+
+organizations which
+
+Michael 
+I still say there are still areas, still an area that needs a whole lot more progress in learning because even a simple DAO, just because I'm a governor, I've got a governance token of a certain project, does it make me an expert to vote on that project?
+
+It makes me someone who has a say, who is an enthusiast. As someone said to me once, I love planes, he says to me. I really love planes, but does it make me a pilot?
+
+Michael 
+So.
+
+Citizen Web3
+Yeah, it's true. I was actually I was actually thinking about it the other day. I was actually Plenty for thinking that doesn't make me a footballer. Does it? Yeah, I love it. Oh, I wish yes, I wish Interested Michael what about um, I'm gonna I'm gonna like slightly start taking the topic to towards what you do the conversation sorry towards what you do because we kind of
+
+Michael
+I watch a lot.
+
+Citizen Web3 
+touched, I guess we didn't touch on adoption, but we kind of touch on adoption here and there. And I know that both of the projects that you do, at least the two that I know of, are in my opinion, again, at least in my personal opinion, are very important to adoption because you're kind of targeting two things. They're one project targeting developers, which is, in my opinion, of course, you know, we can think all we want, but you know,
+
+It's a cycle, but no developers, no applications, at least today. And the other project, you're targeting the end user, which is a bullet. And I'm curious, why did you choose those two pillars in order to, when you were working with 3D, was it to do with adoption or is it something else?
+
+Michael 
+I think it came out of our experience. What I mean by that is the Pillar wallet has been going since 2017 then around late 2019 we decided why don't we add a smart wallet to our key based wallet just like any other EOA or externally owned account just any other wallet but what happened was the reason why we wanted a smart wallet is so that you have the ability
+
+to recover your lost wallet if you lose it. You can nominate a few other devices to recover it with. You can put things like spending limits and all these things that are barriers for the average person to use, we realized by using a smart wallet, you can add that. So we added a smart wallet capability within the Pillar Wallet. Then the more we looked at it, we realized
+
+We've created this take, why don't we separate the smart wallet aspect and make our wallet consume it, but other projects can share in consuming that aspect. So that's when Ethosport was born. It was born out of what we had within the pillar wallet. Then we decided from the technological architecture aspect to move it alongside, then make it a product on its own.
+
+So as it stands and you're spot on, the wallet is retail facing for the average crypto user and it's support is the infrastructure. Infrastructure that would make it easy for any dApp or another wallet or any other service that wants to utilize web3 technologies and actually make it easy for the user.
+
+to make it feel like they're using a web2 service. Because I know, in fact, in terms of if the audience do not know the distinction between web2 and web3, do you want me to just quickly define what I mean by those?
+
+Citizen Web3 
+Please, please, I always love when people use like the same definitions because it gives a much wider perspective in my opinion, so please do.
+
+Michael 
+Yes, because it's just jargons when I say web one, web two, web three, because if you think of when we first started using the internet, we used to read information, download things, oh yeah, I can find this, I can find that and think of that as the first iteration of the web and refer to it as web one for this argument. Then the next generation came where you have got all the social media tools.
+
+whether it's the Facebooks, the tweets, the YouTubes, where individuals can crowd source their data. So then the place changed. Instead of just only news media and all those other places providing the information, now crowd sourcing of this data became a big thing. So much so in some of the services we became the commodities because...
+
+our behavior is tracked and our behavior is sold to advertisers so we became the commodities then this iteration goes hang on a minute I still want to do what I did in the first phase of web1 and the web2 but what if I own my own data so when I generate this vast amount of data what if I'm the one who's in control of it if I want to monetize it I can monetize it and I can
+
+the revenues with those platforms instead of they being the owners. So that is where Web3 comes in. So right now we do see Web3 in terms of NFTs and DeFi where you still have that ownership but specific niches and the average person is still looking at them for, oh yeah, I hear about these things. I hear they're complicated. Oh, this DeFi thing, this crypto thing.
+
+Oh yeah, these pictures, these people selling by. But these are the entry points that we have found in terms of the web3. In time, just like we don't call web1 and web2, we just call whatever applications there are. We will not be referring to this as web3 either. You just call whatever app you want to call. So that's what I meant by web1, web2, web3. And what we do is to enable
+
+Michael 
+this web3 so that you can use this decentralized architecture where you can own your own data however you do not lose the UX efficiency you've gained in the average day-to-day web applications you use
+
+Citizen Web3 
+I'm going to make an assumption in my next question, but I will ask you. You have highlighted several times data ownership. Would you say that account obstruction is something that, probably one of the main things that can help to own data in terms of like technologically?
+
+Michael 
+No.
+
+Michael 
+Yes, I mean using a wallet and connecting a wallet to a site and you call it a Dapp distributed app that allows you to own the data but what account abstraction does is effectively it abstracts away the complexities. Let me give you an example you go into a booking site that uses a decentralized architecture so you go and fund that
+
+account that you have created within them and you place bets in this. For argument's sake that booking company becomes insolvent. As soon as they become insolvent what you have right now is any funds you have deposited into your account is still locked in and any of the bets that you've placed are locked in. But in a decentralized booking firm what happens is you do when you do the funding
+
+your funding goes to your specific wallet which you control and when you place a bet it is placed in a smart contract so that even if the business goes down that smart contract says he won or he lost so if you won it sends your asset to your wallet and your wallet is an integral part of that decentralized betting service. Now with account abstraction it can be
+
+made so easy to use it would feel like you are using just any other web 2 service so this is one of the things that so as a user I'm not being asked or because you are using this specific bookmaking application you have to connect to this specific blockchain and this specific blockchain has this gas unit to pay for the gas none of that
+
+All those things are abstracted away to the point where I can't care what blockchain it is connecting to but I do have my own data and I control it kind of thing
+
+Citizen Web3 
+I guess if I was given another example here with social networks, we could say something like a user has an account, not a user. There is some data to verify the identity of the user, but it's obstructed and it could be inserted into Facebook, Instagram, any social... Instead of registering on every social network, you would just connect to that, to the data account. Sorry.
+
+And there we go, right? Is that more or less the same thing with social networks like that?
+
+Michael 
+Yeah a similar thing and the new ways is you can even combine that with your phone's inherent enclave where you can store identities called passkeys so pretty much as a user I'm not even going to create a wallet I'm using my phone to access it but it is me and that accessibility would give me the right to go in and when I go into these applications the ultimate aim
+
+is this Facebook, decentralized Facebook, the data I generate, it is not owned and stored on their server, but it is stored with me having the key to open it. And I can decide who I can share that data with. I can say, okay, you can monetize it and you can mine it for XYZ and I can maybe stipulate a revenue share I can receive from it.
+
+It sort of changed the dynamics we have with the businesses. We pretty much trade something for some gain. Because at the moment, I like to call it, it is, say, if you look at the social media companies, it is like being in the big brother house where they give you somewhere to live. They give you some food, but everything you do is televised. So that's what happens. In fact, everything you do is televised.
+
+you didn't know you were doing is being televised in the social media space.
+
+Citizen Web3 
+It's true.
+
+Michael 
+So, gone? No, no, so.
+
+Citizen Web3 
+I... Yeah, go on, sorry, go on. No, no, there was a little glitch in the, I think, in the timing of the recording that that's why I thought you were stopped, but please go on.
+
+Michael 
+Yeah so this means to highlight how important data ownership is to all of us but how accessible it has to be at the moment it isn't accessible. Web3 is for fans it is for techies by techies because one of the examples I give is imagine I'm a pizza delivery driver and by the way I used
+
+Michael 
+and I've made 40 pounds tips today and I said oh yeah I've heard about this thing called DeFi let me try and invest this to see if I can make some return then it's my first day do you know what I have to go through there is nowhere on earth I can invest that on the first day the things that I have to know oh there is this thing called a wallet there's this thing called the gas fee there are these things called different blockchains and there are these things
+
+Come on, too much. So we have to make it easy.
+
+Citizen Web3
+I have a question about account obstruction. Now, in different ecosystems, and by ecosystem I'm referring here to Ethereum, Polkadot, Cosmos, Nier, whatever, there is a different approach. And you just actually gave a great example about bridges and everything. And sometimes what's worse in different ecosystems, we have completely different slang.
+
+You talk to a person from even, you know, like Polkadot and then, you know, Cosmos or whatever, and they're saying the same thing and they don't understand that they're saying the same thing. So about account abstraction. In the Cosmos ecosystem, there is a lot, a lot, a lot, a lot of conversation, of course, considering the technological structure. It's important. It's probably more important, could be than anything else. Now, the question is a bit beyond that. The question is...
+
+When do you think we could see the first account abstraction that is real cross blockchain? I'm not talking about cross, just, you know, geth. I'm not referring simply to any Ethereum based blockchain. I'm talking, let's, for example, somebody doing a transaction, evolving a smart contract on the Polkadot blockchain and actually calling out a smart contract, I don't know, on, on optimism or something like that, you know, and.
+
+Michael 
+Mm-mm.
+
+Citizen Web3
+Will that happen in our lifetime or is it something that is still, you know, of course, I was joking about the lifetime But when do you think this will happen?
+
+Michael 
+I'm sure, I'm sure it would definitely happen in our lifetime. But I mean, even we, Ethersport is being rolled out on Aptos, which is an EVM chain as well, so that's the first one we are running experiments with because our idea is for me, when I think about say DeFi solutions, I think of this board, dashboard where
+
+I can select any DeFi offer returning X amount of APY irrespective of which chain it is on so as a user if I'm going to put in $200 on this at best I'm willing to click twice I just say okay can you spend this and this is the wallet and do it
+
+I don't believe as a user it is my responsibility to go and find out how your system works. You have to figure that out. So in this frame of mind I do believe it is not too far away where we will have this abstraction because it is about abstraction because let me give you a typical example. Say when I go to New York and use Uber.
+
+and I live in the UK and my Uber account is set up using British Pound, British accounts but when I go to the States and I use an Uber service in New York from place X to place Y I pay the driver by just saying okay this is how much it is and it costs me in dollar I say pay at no point does the Uber app ask me oh because your account is set up in the UK these are the exchange rates
+
+Bank of America offers this one, Barclays offers that one. I never get that. And the Uber app abstracts that away, but there is a financial, an FX transaction happening in there. So the point I'm trying to make is the same principle applies and should apply when we deal with this cross-chain transactions. I mean, the first one we are tackling in anger is EVM based cross-chains. Still they are...
+
+Michael 
+different chains, different realms. So then tackling any other cross-chain should be in the path, in the name of abstracting things away. I know account abstraction is the big term right now, but account abstraction, the actual work, even from what I've said to you before, has been going for a long while, because when we had smart wallet technologies, that is the nitty-gritty of account abstraction.
+
+Citizen Web3
+I can remember Beat Shares in 2013, 2014, technically, well, 2014, I guess more so. I mean, you had a certain level already of account obstruction and that was already way, way long. Some, nobody called it account obstruction, but I have, I have an interesting question for you, which is kind of, I mean, I'm looking kind of my notes here, but I'm trying to.
+
+Michael 
+Yes, exactly.
+
+Citizen Web3
+put it of course to what we are talking about rather than going in there and something that I have here and that I'm trying to put with what you say, what comes to mind, sorry, is more or less like this. So you have mentioned several times, you know, UX and the importance of simplifying that. And I absolutely agree. You know, I think that, well, it's not...
+
+It's not about my thinking here. I think everybody understands that if something is simple, more people tend to use it. Now, what I have seen personally in this space and also being around this space for about 10, 11 years or so is that a lot of the time, I'm gonna use some loud terms here, but a lot of the time, some projects, they find it very hard to balance between having a simple...
+
+like UX that can help them to adopt a lot and having, you know, kind of going the dystopian way, you know, I mean, and, you know, kind of like losing it, the whole, the crypto ethos and, you know, the, the blockchain ethos and they kind of just go, ah, okay, fuck all this, you know, this is too difficult. We're just going to go that way. Now you are making a wallet. I know that, and I know that you are guys, you know, you're a self custody wallet, which is
+
+important. It's educating people about the importance of that. And though at the same time, you know, I understand that as a wallet, you guys want to adopt as many users as you can. In like in your experience in the experience of PILA here, particularly, how do you balance that out? How do you balance that scale of, okay, we want to make the UX as simple as possible. We want to make it
+
+you know, everybody to use it. But at the same time, we still want it to be self-custody. And we still, you know, we don't want to, you know, we still want to go towards a decentralized world rather than just letting everything go, making so easy. But, you know, yeah, going the dystopian way, how do you keep that balance in your project?
+
+Michael
+Yeah, I think that's the hard thing. In fact, when you see the stats show you, I think 65% of the users that we have in the crypto space use centralized entities. And I think only less than 19% or I think 16% of support trade volume is handled by decentralized exchange. That says to you, it's the average person.
+
+favors the ease of use and that's why you have quite a lot of centralized entities. We say if you look at the FTX and the three arrows, all those companies are centralized entities that operate in the crypto space. And that centralization made them accessible for the average person to use them. And as you say, then when things didn't go well, it showed. Hang on a minute. What we mean by
+
+a decentralized entity, it doesn't necessarily mean a company that operates in the crypto space but that holds your asset for you. So being able to give you that usability is hard and from the wallet aspect, you can do so much with the wallet but there are some steps, one or two learnings and that's one of the reasons when we broke the wallet into
+
+So when we did Ethersport, Ethersport itself is a wallet, but it is something you can access programmatically. So when I talked about a bookmaker earlier on, I'm actually thinking in mind an integration that we have. So with such an app, basically the application accesses the wallet and the functionalities programmatically in the background. So that enabling
+
+a decentralized ownership but at the same time giving you the look and feel of a centralized which that's what I meant by web2 a centralized solution so you can achieve that nowadays through account abstraction but when you've mentioned how about true cross-chain when something on cosmos is connecting to something on solana or ethereum again
+
+Michael 
+If the solution we probably have right now would involve one or two more steps than the typical way to centralize players in this one. But with the experience that we are gaining, even within the EVM space, where we can actually give it a one-click action, and with some of the advancement in technologies, we are headed
+
+in that direction but it is hard it isn't easy because two opposite things basically not necessarily opposite thing but two vying options you want to have independence self-sovereignty at the same time you want to have ease of use and when we first started with the self-sovereignty i sign i keep i am my own bank then we realized if i'm my own bank when i lose my key then where do
+
+people losing millions but when you bring it to the average person when we call mass adaption the average person as I gave you the example I'm a pizza delivery driver I have no time to faff around and learn about your thing I just want to get on with my life just make a bit of profit on the side but if I own my data even better for me
+
+Citizen Web3 
+You said the words that are not easy. And I'm going to ask you an easy question. And I'm smiling on purpose because the question is easy, but the answer is not. What's then stop in adoption? I mean, how do we make it happen, in your opinion, of course?
+
+Michael 
+That's easy. Not... Hahahaha Again, usability. To me, Web3 as it stands is not usable. How many people that you hang around, never mind your grandmother, how many of your friends that aren't into crypto, how many questions have they asked you, how many times did you explain it to them, and how many of them say to you, oh yeah I've tried it, yeah yeah, but I've put it in...
+
+Citizen Web3 
+There we go, finally!
+
+Citizen Web3 
+disability.
+
+Michael 
+without naming names, I put my crypto in such and such exchange. Because what that says to me is wave three is not easy to use. We ask people to learn a lot. Then when I have my day job and I'm so tired, then do you really think I fancy learning about some technology at home? Even assuming I haven't got kids running around and I haven't got any chores at home. So that
+
+is what we talk about the usability and account abstraction is really even with the hype that is coming and with the definitions the standards being defined it is an awesome opportunity to remove these barriers and remove them then again bringing in typical wave 2 services into the web 3 world because
+
+One thing is clear. No one is just going to just because you say to them Oh, you've got data ownership and no one's just going to drop everything and do seven signatures to just Click on one thing when I can go to Amazon and add Something in the shopping cart if that was in the web 3 world I would be clicking twice in three times then when I go back and search and add something else Oh, we've connected to another network sit all those things have to go away. All those things have to be abstracted away. So
+
+Web3 has been fought techies by techies and we keep on going on about mass adaption and it's not going to happen until we address.
+
+this space and account abstraction solutions give us a perfect opportunity to do so.
+
+Citizen Web3 
+I'm hoping that it's not hope really, it's more like seeing the amount of developers that I speak to that work on that. I think that we are, I agree, we are a lot closer to even today for the slightly advanced user, you could find UXs which already make it kind of easier. My hope is that...
+
+that feeling won't just stay for advanced users, but in the next, let's say, a couple of years, until we have our next run cycle, so to speak, it becomes more adaptable to a lot of people, like you say.
+
+Michael 
+most definitely because the way I see it is I want to be using a web service as an average person and I'm the oh I'm telling my friend look Apparently I can monetize some of my data. Look at this Without putting too much effort just like when I said oh you can you what I can say something in this thing called Twitter X amount of characters. Look at me. Oh Guess what I can upload my video
+
+Oh, this thing is called YouTube. I, we have to get that type of service and serviceability.
+
+Citizen Web3 
+Absolutely, absolutely. And hopefully, you know, not like we say not to lose ourselves, like the projects I'm referring to in the process of giving up to the easy solutions.
+
+Michael 
+Because I can understand the pressure you have. Say for instance, if you are a certain project and you can create a lot more revenue in a centralized way, then you have a choice. Do I stick to my principles or do I take the revenue? Do I take the revenue because I want to get rich or do I take the revenue because by generating this revenue, I can follow my dream of creating a decentralized tool. But
+
+many approaches so sometimes timing the maturity of technology space the maturity of your audience and the killer apps that come in and connect with the users all those things matter
+
+Citizen Web3
+I think you were mentioning luck early on in the conversation. And I think everything you're saying now could be easily referred to as luck. But I have the last three questions for you, which is kind of like one block of questions. Feel free to choose to answer them quickly or slowly. It's up to you. They're going to go down. So the first one is going to be three answers, then two answers, then one answer.
+
+Michael 
+Yeah.
+
+Citizen Web3 
+First one is easy. Give me three projects. It doesn't have to be crypto projects that you are technologically interested in.
+
+Michael 
+electric cars
+
+and actually flights that I've seen that take 90 minutes to go from London to New York and I think that you utilize that type of technology because with the electric cars I have recently read Toyota have come out with a solution to reduce the battery size, the distance and the charging side, side charging length of time.
+
+make it really interesting. And I mean, asking me from personal side, so I'm impressed with drone technologies and the things that they've been doing, that radio sort of communication that they have and the things that they've been progressing, almost DIY units doing quite a lot of things. So these are completely unrelated to crypto, but it's just three.
+
+Citizen Web3 
+It's great. It's great because sometimes people go just crypto and that's why I sometimes specify it doesn't have to be in crypto. We are having the whole world of outsets out there. Two things, Michael, that motivate Michael in your daily life to not just keep on building pillar or a spot, but...
+
+Not just creating account obstruction, but the slightly bigger things. What are the two motivational things in your daily life that motivate you to wake up and get out of bed and do those things that we were just talking about?
+
+Michael 
+The first one on a personal level, Pillar was set up during the 2017 ICO. And all those people that contributed to the project and supported us, I feel indebted to them. And I would like to make their dreams of the personal data locker a success. So that is a big motivation for me on the day-to-day one. And secondly,
+
+I feel privileged to have lived through this technological revolution. It almost felt like those... What was the startup? The dot-com boom, which I missed, but I lived through this one, and this one can make a real difference in terms of self-sovereignty, how...
+
+we control our own data.
+
+Michael
+in terms of the evolution of how we interact with the internet and the internet has been awesome for this world and when you think of how communication used to happen some 30, 35, 40 years ago and how pretty much we all work from home and we communicate with each other without even knowing where we both sat down and just have real easy communication so
+
+Being able to have to take part in this progression and I feel privileged
+
+So.
+
+Citizen Web3 
+I think it's an interesting mix, like people and the time that we live in. It's interesting. And last one. Dead or alive, real or imaginary? Could be a writer, could be a developer, could be family, could be a cartoon character. Give me one character, again, could be real, dead or alive, doesn't matter.
+
+that inspires you, not somebody you look up to, because that's a bit different, but somebody inspires you, or something.
+
+Michael 
+I suppose there are quite a lot of people but if I go for the dead ones there is an Ethiopian king called King Theodoros that died in 1868. He inspires me because he came from a humble background. He was a technologist and a warrior at the same time. A bit mental but at the same time. The things that he achieved do inspire me. So there you go.
+
+Citizen Web3 
+Nice, nice, I love it. We usually have links as well to all those things. So for all the listeners, of course, to check out because I haven't heard, even though I love history, I have not heard of that persona. So I will definitely be going to check it out. Michael, thank you very much for all your answers. Thank you much for all your time. Hopefully account obstruction will get us to a point of...
+
+bigger, bigger successes. So again, going to watch out for that very, very carefully for how that develops. And thanks again for all your time and nuances.
+
+Michael
+And also I would look forward to coming back next year and to tell you I told you so last year. The counter-abstraction was going to make it easy.
+
+Citizen Web3 
+Now let's make it a date. Let's make it a date. This is definitely something we're gonna make it happen. And now that you talk about it, we do have debates that we can talk separately about that and try to get you on there as well to have a more in-depth conversation about account abstraction. Thanks very much for joining, Michael. Thanks. Thanks everybody. Bye.
+
+Michael 
+Thank you.
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.

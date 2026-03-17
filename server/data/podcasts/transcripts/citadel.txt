@@ -1,0 +1,348 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/citadel
+
+Episode name:
+Innovation in Crypto and Secrets to Success with Anton Pavlutsky and Reena Shtedle
+
+Citizen Web3: 
+Good space time everyone and welcome to a new episode of the Citizen Web3 podcast. A source for educational insights into the Web3 universe and your connection hub to the people that turn code and dreams into decentralized applications and reality. Today we are joined by the Citadel 1 Validator team. We discuss Validator transparency, standardization, the importance of non-custodial staking and revenue streams. We explore governance research, staking in general, upcoming developments and crypto innovations. Finally, we talk about bribes, user tools, privacy and mass adoption. If you enjoy the Citizen Web3 podcast, please share this episode to your favorite social platform and help us spread Web3 values into the universe. 
+
+Reena:
+I was just thinking how come netflic no one actually build this before 
+
+Citizen Web3: 
+When did the Atom brake? Who smashed the atoms?
+
+Reena:
+How explain to my mom what I do is no way to show anyone setup crypto wallet
+
+Anton: 
+For me it was like improved web money or some sort of internet money. 
+
+Citizen Web3: 
+Hi everybody yeah I was kind of to say hello and introduce you guys in a cool way but I spilled water everywhere so, I'm sorry hi everybody  guys we are live by the way with citizens odyssey and we have today with us another project a cool project you probably know them as a validator a top validator and not only validator it's Citadel 1 and
+
+I have with me Anton and Rina. Hi guys. 
+
+Reena:
+Hello Nice to meet you.
+
+Anton: 
+Nice to meet you. 
+
+Citizen Web3: 
+Yes, again, yes, again. I think we actually met with Rina several times and Anton, I'm sure we have met in Moscow possibly several years ago, three or four years ago? 
+
+Anton: 
+No no
+
+Citizen Web3: 
+No
+
+Anton: 
+I'm really a private guy. 
+
+Citizen Web3: 
+You were not at the Tezos meetup like in 2018 or something like that? Damn, wasn't you? Oh well. 
+
+Anton: 
+He looks like this you know, very generic person. 
+
+Citizen Web3: 
+It looks like a generic person, but he's a private guy. I like it. I like it a lot. I can see that Rina, you have some echo, but I don't think it's a problem. So, I mean, it's a stream. I'm sure people will kind of like understand. It's not a problem. Ignored it. But not a big deal. 
+
+While you're playing around with it or if you're going to play around with the sound, which you shouldn't just leave it like that, it's all good. Anton, first question to you. Do you want to introduce yourself and what do you do? How did you come to work at Citadel and what does Citadel do? 
+
+Anton: 
+Okey I start my career as a software engineer. So, I work in on the outsourced development. Many years before Citadel. So, I try to bring new products to the world, which some companies ask us to develop to implement. So, when I met guys over at Rina and Citadel one, I started thinking about the crypto as a nice tool set, which we should bring to our users, our stakers. And it was the first concept of the Citadel to bring some features for our users around different ecosystems, around different networks. 
+
+So, that's how Citadel one starts. So, we were focused on our product mostly. And I tried to lead it. I tried to ship new features. 
+
+And explain for our users how they may stay around different ecosystems. So, that's my role. And that's why I'm not a public guy. Because I focus on the software mostly. 
+
+Reena:
+We were hiding him. 
+
+Citizen Web3: 
+The gem. Rina, before I move on to you, Anton, a bit of a follow-up kind of thing. What about yourself? How did you get into blockchain? How did you connect with Citadel, but in general, what brought you into this industry? 
+
+Anton: 
+Oh, it's a hard question. Because I used Bitcoin many, many years ago. And that was really not strange. But maybe obvious, use case as the money. As the money on the early stages. And I just used it to buy some stuff on the internet. To sell some stuff on the internet. For me, it was like improved web money or some sort of internet money. And
+
+But I don't start like huge parts of my life. It was just the money. And that's it. But one day, while I was a guy from the outsource development company. I met my colleagues. And they, my current colleagues. And they asked me to think about staking when it was on early stages. 
+
+So they asked me to run a node, something like that. I tried, but I failed because I'm not good at DevOps. And I just focused on the on the engineering, on architecture. 
+
+I'm not good at skills to run some notes or some sort of stuff. So that's how we found our city of Gregory. Because he could run our notes. But I started thinking about about Citadel as a product. So we was a validator with product from our first stages, our first steps. So we tried to deliver something for our stakers. And we still try, we still improve it. yeah
+
+Citizen Web3: 
+This is DevOps. Yeah, DevOps is one of those, I think, gold and like, it's DevOps is like community managers. You know, but like the community managers and DevOps impossible to find in crypto. Like, you know, but uh... 
+
+Anton: 
+It's really hard. 
+
+Reena: 
+We now have both yeah. 
+
+Anton: 
+I think for that is the most important guy. Because if you got brilliant DevOps... 
+
+Reena: 
+100%. 
+
+Citizen Web3: 
+Yeah, for sure. For sure, I agree. This is our... Ironically, 10 minutes ago I posted on Twitter from Citizen Cosmos that we are looking for a DevOps. So you see how it works. It works fantastically. Rina, what about you? What's your story? How did you get to blockchain and how did you get to work with Citadel 1? 
+
+Reena: 
+It's a very funny story, though. I hope my echo is not like not that bad. Because I'm literally in the instant classroom. So that's why probably. But I'm sorry. 
+
+Citizen Web3:
+It's ok.
+
+Reena:
+So I started back in the days. I think it was around 2017. 
+
+So it's been like more than four years. Since I started like working with crypto. I was involved mainly with the research first. So, you know, I got acquainted with a bunch of networks. 
+
+As of the first Ethereum, of course. Then I... So like, I was working with some guys who now associated with Citadel 1. But I was mostly focused on research, you know, engaging with some projects as well. So then we started working together with Stakein' Awards. On this, you know, all-encompassing research digest about the Stakein' ecosystem. That's why I was like permanently interested in how Stakein' works. How the Stakein' ecosystem actually develops. And it was like, you know, I'm Stakein' OG. And so, which means when I joined Citadel. So it was really... It was kind of, you know, it put up my interest to be involved with the validator role. But back in the days, it was not as transparent. 
+
+And the validator role itself wasn't that important. So I started doing some, you know, some general operations work. I think I'm still doing a bunch of, you know, of different parts. Like, if something is uncovered, I still... Me and Anton, the people who basically solve the issues, right? If something, you know, comes up. But yeah, I started to work with the business development side. Also keeping my independent research. And I'm switching more to the developer relations person. Because we've been launching over SDK. 
+
+So I'm definitely looking to import like... ...more use cases to Citadel 1. Yeah. And actually, yes, I think when Matt at the TESA was meet up with he and a post-human. And yeah, I was quite a story. Because when I recall this, I actually found the picture. I was speaking in the stage and I spread around this row. It was so amazing. It's just... It's not real. 
+
+Citizen Web3: 
+It didn't happen. I know. I'm joking. 
+
+Reena: 
+I know it didn't. 100% no. 
+
+Citizen Web3: 
+But when you say... By the way, a small follow-up question. When you say independent research, do you want to talk about it a little bit? If you can, of course. 
+
+Reena: 
+Yeah, Yeah, 100%. I was mainly involved with the general research. Nothing as super technical or anything. But then I'm currently involved with some academic programs. And recently, like I think maybe half a year ago, I've been in validated comments. And they were particularly focused on governance research. Associated with this Metagov organization based out of Stanford. 
+
+If I remember correctly. So Basically, there's a bunch of people who are trying to standardize you know the valid practices, governance practices. And so I joined this Metagov thing. I was trying to follow up everything. And then I basically decided to run this academic research focus on Cosmos governance. Basically to figure out how the narrative, the general narrative for the Cosmos ecosystem, affects the governance happening on chain. So it'll be kind of all-encompassing research. So nothing specifically, but I'll be definitely focusing on the level of engagement of volunteers. 
+
+And how it you know actually affects the value accrual for the ecosystem in general. So, yeah. I'm very excited for it, honestly. And I met a bunch of guys who also work in it. For example, like guys from Coruscant. Some guys from Australian universities. It's kind of a doubt. You know I'm breaking to see where it's going. 
+
+Citizen Web3: 
+I would love to hear later on if we have time what you found out about it. But first question first, first Anton, back to you. Could you share with us like the spec of products? Because as far as I understand, you guys have quite a wide range of things that you do. Do you want to talk a little bit about the ones that you want to mention? And maybe the ones that are the flagship products, so to say. And of course the stake in application probably, but maybe something else. 
+
+Anton: 
+Okay. So we start as a dashboard for overall of your rewards and some simple analytics around your stake. So it was the first concept for Citadel. And we still provide such data for our stakers around different ecosystems, not only Cosmos. 
+
+For example, I don't know, IOST users or ICANN or some other systems or Polkadot. So that was, yeah. So it was the first concept. So just a dashboard without any valid features, without any specific features, so without any interactions with the crypto. But when you just ship such a dashboard, you start thinking about how you may unify stake around different ecosystems. So we start thinking about it and we deliver our first version of not the wallet, but some sort of the dashboard like Kepler provide for the users, staking for the redelegation, for claim, for other features around around the stake. 
+
+So after it, we standardize it around different ecosystems and think about delivering more features around crypto because you want to lock your users right on your platform. So that's how we, not an event, but how we start to make some MVPs for depths which based on our platform. What's the difference between depth in just, in some common way and depth on the platform? A depth on the platform can be linked or execute from other application rights on the platform because it's much easier to make some communications between them. So we start to research that approach and we ship our first depth on Citadel, right on the Citadel. 
+
+I think in December 2022 and now we finish our depth center for any developer team who want to start the Citadel as an entry point for the crypto project and they may easily develop some MVP, some Hackathon project and ship it right on the Citadel. If you got some huge project with a ton of the features, you may also create or redevelop your product on our platform. But what the benefits for that approach? You shouldn't think about some integration for example for on-ramp exchange for some Dexs because you may just in the future use some swap aggregator like Apple Pay so you shouldn't think about such complex use cases because now for example, LiDAR wrote you to the one inch if the price become defect from Ethereum so you shouldn't go to another product to buy some tokens and use them in LiDAR after it. 
+
+It's not so good for the user because you should switch one product to another, come back after and do some action stuff. But LiDAR is a simple product for users interaction because you couldn't make a lot of features around it. You could just wrap token or unwrap or get some derivatives but there is not so many features around it. But if you got some complex product, for example, if you got some social network which based on the crypto you need to mint NFTs, you mint some tokens for some interactions, you may implement really many other depths for your social network but now it's really hard problem to solve because you need to implement each depth right on your platform, redevelop it or use existing depths and it's really hard. But it's really strange because crypto don't increase complexity from the beginning because if you try to remember the first hard contracts, they are not on the same level of course but they don't make some leap forward, some increase in the level of the complexity because you still work with some smart contracts and that's it, you don't use bunches of that contracts, you don't use benefits from other depths and that's really strange but I think the only explanation for it is just like we start thinking about web-free world really early and we don't think about that shift from web-three to web-three. We think that we should solve any problem with web-three approach and I don't try to push web-three back to web-three but I do because it's strange too but you may use it as benefits because most of the great solutions for Ethereum for example also got some web-to-features because some data providers store most of the data on the databases they don't provide it directly from the blockchain, they just rework them and they just wrap it in some web-to-services and that's okay, that's not a problem for me. But some people, some crypto guys think that we should use only web-three, only decentralized application and I think it stuck us hard because we couldn't just create some brilliant products or products with really simple usage for regular users right now because regular users want to reach from sex because it's much easier to interact with crypto on sex. You shouldn't think about transaction signing, you shouldn't think about monimonic. But now it starts shift but in any case it's really hard to onboard in crypto and there are many issues around because you need to know so much you need to know how to sign transaction, you should think what you're signing right now and you couldn't just use some service or trust to some service because you need to research each service which you want to use and it's really hard to send your crypto from one network to another but it's just like a basic case especially if you got, I don't know, few ecosystems which are not connected like IBCY, it's really hard to manage it right now and it also had for experienced user because if you know that there is a bridge somewhere between some networks you need to go there, you need to make the transaction that takes really much time so our concept is based on use case on specific applications and interact between them but we are on the early stages because first year we spent for building apps for the first layer of the applications on our platform so in the next year we will provide our Dev Center for new groups of the developers and also we will focus on aggregation applications like DeX aggregator or NFT aggregator and you may mint NFT or use some DeX around any ecosystem which we support, so that's the concept 
+
+Citizen Web3: 
+And Rina considering what Anton just said that you want to be like a layer for onboarding users let's imagine that I was not somebody who was familiar with the concept of staking so eli5 to me what Citadel 1 does, I am not from the crypto world, I have never heard about blockchain 
+
+Reena: 
+Yeah, I mean, 5 minute explanation but Anton is not excessive enough but yeah um So how I explain to my mom what I do because in no way she will be able to set up any crypto wallet she does not have an understanding of different ruin bitcoin and blockchain in general so I'd say we are trying to make crypto accessible for any kind of newbies we are still you know on a very long way to this but I am interface level is like in our values, in our beliefs is the trick of mass adoption if we bring this general financial experience, like general financial application experience to crypto it will be so much easier to onboard and sustain users and we are also trying to not only to provide the basic functionality, not only you know to enable sending or enable staking but we are also trying to provide more complex solutions so by packing and abstracting this cryptologic for users, we are actually bringing a lot of empowerment to the projects while building value so if I am talking to my mom, I would say people are building projects and we are trying to make it easier for users to know and actually access those specific projects and use it so in a couple of words, it will be like making crypto more accessible and in non-custodial way, so you don't have to share any kind of information and also cross platform, so it is usable in various kind of platforms like web platform, web three wallet if you prefer so we are trying to make it all encompassing and you know usable 
+
+Citizen Web3: 
+I guess the main thing is you also can get paid for it, right? get a reward for that, I mean for the normal user, you forgot to say that, come on she doesn't know that you can get paid?
+
+Reena: 
+staking 100% staking, yeah if I try to explain Citadel, it is a bit different to how I explain staking, right? because what we do product level is a bit different to what we do as a validator and I am not sure if I can explain validator to my mom it you know only won't be like you know a short story you know but yeah, staking of course is how you, it is like alternative to the general financial markets but in crypto 
+
+Anton: 
+and it works like a bank deposit 
+
+Reena: 
+right, right, and it is also like, see, it is not looking any solid to her you know, honestly, it is just you know some kind of scheme, right? 
+
+Citizen Web3: 
+you could use solitaire, I guess you could say solitaire but with rewards like you solve solitaire and you get, you know, one, I don't know, one euro for every time you finish solving solitaire now, I guess, bad example, bad example, but in the future maybe, you know, maybe so guys, next question that I have is for both of you and maybe Anton and then Reena you can answer in turns or one of you and I am trying to kind of like put a time frame on when Citadel is starting to expand and I remember the point where Citadel was a very small validator and then very quickly, it was a very quick flip, like you didn't have that progression line like usually, you know, sometimes, not every validator but most validators they are either small, either big or they have the slow growth study or slow growth fall, for you it wasn't like that, it was like bam, bam what do you, I mean, you already said that your focus is, I mean, at least for the outsiders, of course from the inside it might have been very different, I am only judging from the outside right now and of course you already mentioned that your focus is on making things simple, on boarding users and that probably helped you to achieve that. What else in your opinion helped you to become a very, well, not the largest validator but I would say you are a very big validator, so what helped you in your opinion to achieve that place? 
+
+Anton: 
+I think when we start incentivizing our stakers to stake on us, but some validators think that that's a bad practice because in some point of view it sounds like a bribe or some sort of it but I think it's much better than to set zero fee for your, for staking fee like some validators do and most of the validators try to solve that problem either so I think that incentivization is one of our secret sources of that growth 
+
+Reena: 
+Actually, yeah, I think it's like three main points of course, X3 rewards for staking is one of them I'm pretty sure because I mean, Invectives gonna buy your attention but another thing is of course we've been communicating a lot of value to the ecosystem I believe by actually contributing and starting some point, like the more people educated about like who is the good validator to stake with so people understand that the value of contribution that a validator is actually bringing because it's a long term value for the ecosystem and so this is another point, so like people got to use Settle one people understood we're building some tools like we have but we also very consistent in voting, you know, expressing our opinions, you know, just sharing public information about how we cast votes and then of course we got, you know, at some point we started to scale to cosmos, now it's like crazy so I think we've been integrating like maybe 10 projects, maybe 15 projects like in couple of months so it was very easy for us to join new networks and come and contribute there by integrating edits at Settle one and then of course we started to scale the functionality so we started to add labs and, you know, a lot of people are just, you know, running, like when they come to Settle they are sustain as users so like, I think they just come and like us and then stay and bring friends and at some point it was like easier to scale as a validator so yeah, I guess this is like the main three points like existing incentives, the contribution and the communication maybe 
+
+Citizen Web3: 
+I'm gonna like play a little bit devil's advocate now because but it's questions to help me to understand and everybody who's listening and your community how you guys work so all validators incentivize in some way of course because they have to pay out rewards so they're already incentivizing all validators communicate and all validators in their own opinion bring value so everything you said everybody does but not everybody becomes big so what is the, I mean you both mentioned incentivization could you maybe like expand what kind of incentives and like how did you shape that system to help it stand out from other validators because others did it as well but they didn't make it big so obviously you were doing something better so I'm trying to understand what it was 
+
+Reena: 
+XCity is just you know like a cashback for you know for taking a settle on notes while I settle on platform so I haven't seen youu know much people doing that in crypto I know like CleoMedia's validators doing this, Post Human so like AuditOne back in today's did that but it's not like a common practice and it was like one of the main drivers and also I think and that would be like one of the points I was mentioning like with Cleo like faster to you like to bunch of networks and so when users start to use the Cosmos ecosystem it's not only one project it's you know you're taking a cash and then you're taking persistence and also you're getting to know Juno and you just see settle on everywhere and you also use it on platform and I guess this is how we also got our name maybe like the awareness so maybe that was it but I'm not totally sure
+
+Citizen Web3: 
+the package 
+
+Reena: 
+No not the package together but also yeah so like we are you know I think we're a brand now especially after this situation with Jacob Goddikan right everybody knows
+
+Citizen Web3: 
+I have questions I have questions from Jacob but we will leave them towards the end wait we're gonna go progressive because Jacob did ask questions publicly so I will of course ask but let's leave it to the end and no it is true though I think all those things contribute I think like jokes aside like those things of course contribute and I think you were very at one point I remember seeing Citadel everywhere like I remember like okay I did see Citadel somewhere in the Explorer and then at one point Citadel bam bam bam here here and I think I think, of course, that must have contributed to your growth, because of course when you see the project everywhere and you see good things from them, and okay, maybe subjectively you don't agree with something, but still, if the project is growing, you kind of think, okay, they're growing, I want to be part of it. 
+
+So I think that is in my opinion at least contributed to you guys. Another question that I kind of had in mind is, well, that I ask every Valerator that we do a profile in, like, kind of think for is what do you guys plan for? Of course, you kind of gave it away when Anton was talking about all the services that you're planning, but let's talk about more realistic short-term plans, maybe, maybe project. Damn, that's not going to work, is it? But let's try, let's try, like, something that you guys are planning that you can talk about in the next, like, half a year or three, four months, maybe on board in your networks, maybe starting new services. If you could share that, I'll be very, very, very cool. 
+
+Anton: 
+From application perspective, which builds in Citadel, I think we focus on the depth of Dex aggregator. So they try to deliver something like Rengar Exchange, deliver for the users. So we want to aggregate current Dexes to provide a single service, a single application, so which combine Dexes and Bridges. 
+
+So we want to use IBC and Axola to transfer token around different ecosystems, and we may use Dexes to convert the tokens directly from one to another. So that's the plan for next half of the year. I think we also will ship some NFT applications because we need to cover that area of the apps, of the type of the apps. Maybe we'll change a little bit the plans, but that's the main plan for application. From our wallet perspective or dashboard perspective, I think we'll focus on the notification of our users about AirDrops, about new features and new applications because we get a lack of features there. So we ask our users which not use web-three, insurance, web-free login about the email, but we don't send different types of emails because we only send some weekly reports about the staking rewards and that's it. So we want to make it more useful for our users and provide more data, but if they want to get some emails, that's OK, they may just disable it. 
+
+Citizen Web3: 
+Reena, what about from the business development side of your side of the project? What do you have in plans, any new partnerships maybe, or something that you could share with your stakers? or or 
+
+Reena: 
+Yeah, I'm mostly excited for the developer center launch because we'll be able to actually onboard some new use cases you know that are being built separately or already existing projects. But yeah, so I'm mainly working with Ant-Hon regarding the applications so we can you know be very you know consistent in terms of getting new projects onboarded. So I guess we'll be scaling for sure for newly launched networks within the Cosmos ecosystem. 
+
+Archway, quick silver on its launch. We also have some plans to integrate the liquid staking solutions like Stride inside the application section. And actually Stride is working heavily on providing validator metrics which just add to the design. And to have this all aggregated, we got indifference and I'm also looking, me personally, and Settledal is looking to contribute to this. But yeah, we've been in touch with multiple ecosystems and Cosmos and also looking to SUI possibly. But yeah, the best thing about Citadel One as a product is that we can you know we can onboard Ethereum application as easy as we can onboard any kind of content. So in terms of business development, we are super open to any kind you know any kind of opportunity. So we are looking for products where we're not looking to integrate you know some one day bullshit. And you know When it's real use case, it actually has the volume. you know We're definitely having plans to get it integrated into Citadel One. Yeah. 
+
+Citizen Web3: 
+When you talk about values, guys, could you share a little bit? I'll tell you where I'm coming from. And this is going to be kind of like a pre-question, pre-story, sorry. Like especially when we saw the bull market and I think it was very evident to a lot of crypto users, a lot of users even from the side, that there is some kind of entity with in blockchain, with in crypto space, it's called validator. It doesn't matter which validator. And those validators, they make profit, especially during the bull market. 
+
+And if I was to consider myself as somebody who's obsessed with blockchains, which I am, and I think of blockchains as the digital nations, you know, like big nations out there, which we're going to build in the future and so validators to me are kind of like businesses and each business, they build like certain something within those nations. So my obvious question as a citizen of a nation is what is this business doing with this money? I want to know because they're saying the help in my nation grow. So the question to Citadel is what does Citadel stand for? 
+
+What is the, I mean, I understand on boarding new people to crypto. I like that. That is something that I can understand. But what is underneath all of that? I mean, you didn't just guys wake up and say, hey, let's onboard people to crypto. Like what is motivating you? What is pushing you to do what you guys doing? What is your number one, not number one motivation, but what is the motivation? 
+
+Anton: 
+I think I think it's really easy to answer the question, but it's hard to explain it properly because I think crypto moves on right direction. But it's, but that's road should be much longer that anyone tried to imagine in their head because we just want to live in the web three world, but we couldn't just drop all web two features web two advantages and said, okay, we start our true web three lifestyle and use on the depths and we forget about all good practices from web two. 
+
+So I think we just imagine right now that web three was really. It looks like a bright city from the future and the bright future, which should definitely start from, I don't know, next year, but we need much more time. I think all industry need much, much more time because there are no so many approaches, for example, for simple and secure storing of your money money because now I think the best practices is a ledger, but ledger not so good in many use cases. It's hard to use it in some specific ecosystem. It's hard to make some bench of transactions with ledger because they got specific architecture on their side. So I need, I think, much more competition around various solutions around various steps in that crypto, not an activity. And we need much more competition around wallets. We need a much more competition around wallet with extremely secured features and all areas need much more companies and much more competition. That's, I think, motivate us to move that new approach to try to implement new approaches for the wallet, for the platform to deliver that useful crypto experience for everyone. So it's really, it's really easy concept to explain for non-crypto user, but when you try to explain what we try to bring for crypto user, they said, okay, we got the depth and you just try redevelop all depths right on your platform. And that's it. That's a concept. So I think it's much easier to explain it for my mom than for crypto tagging. 
+
+Reena: 
+I do not agree. 
+
+Anton: 
+Okay. 
+
+Citizen Web3: 
+Do you want to add, do you want to add to Anton's answer, Reena? Your own version? 
+
+Reena: 
+Yeah. I mean, if like, because people been asking me like, why was it at all? And I think I share the core values and the, actually the values we have come from, like, we've been non-custodial since day one. And I don't know. People start to understand like how self-cost that it actually matters. And so, so for me, is he just, you know, a coincidence of really good values? Like, you know, we're trying to simplify the way people interact with crypto. 
+
+It's one, of course. I mean, this is what Anton is talking about, like, you know, the find the optimal way to do that and actually abstract a bunch of things from, you know, this natural crypto complexity. But the second one is that we've been fighting for those ideals and even, you know, we've been, we've been speaking in Dubai, I guess this March, maybe, and we've been, you know, telling how we are coming from this non-custodial branch of crypto and how it is important. And back in the days, people would be just like, yeah, but non-custodial, it's a lot of, you know, a lot of points for user management, like, you know, key management and everything. 
+
+And I just, I do believe like, this is, this is why we've been, we've been starting this whole. And this is why we're breaking to have it all in one and making the entrance for crypto in general and the user's story in side crypto, like, last painful. But I don't really think that it's easier to explain this concept to, you know, non-crypto folks, because, I mean, I don't think there's this kind of application in Web 2, honestly, because in Web 2, they have like, completely different issues they're solving. 
+
+So maybe this part is not, you know, not so clear to me. But yeah, you know, being non-custodial and, you know, doing great stuff, like building the user's stories is definitely the value I share personally. 
+
+Citizen Web3: 
+If I was to imagine that in five years' time, or, you know, ten years, this is five, six and a half, six and a half years from now, all the Web 2 features that Anton is mentioning has been, you know, now existing Web 3, and Web 2 is not needed anymore. Just a hypothetical situation, six and a half years. I don't know if it's enough or not. 
+
+Ten years, whatever, doesn't matter. And, you know, Web 3 is now able to do theoretically all the security, as securely as efficiently and as scalably all the things Web 2 today can do. What is Citadel 1 doing in that scenario? What is the role Citadel 1 is playing? Because now the user on board didn't happen. What is Citadel 1 doing next? 
+
+Anton: 
+I think our focus on the long run is to be some sort of the operational system for the crypto. So we just provide features for specific networks or development teams, and they use it like a tool set. So if you know that some network focused on some specific use case, okay, you just use it like a tool set. So from, I think, the developer's perspective, it looks like AWS for development. So if you need to store some data on the blockchain, you use blockchain A. 
+
+If you need some blockchain for NFTs or roll-up in Ethereum world for NFTs, you just use blockchain B. And you on board use directly to that network, and you provide specific features from that network through the applications. So that's from my perspective how that complexity in cruising works. Because you're able to use it directly and provide some generalized interface for all that networks. But that's a single-app for some specific use case like an NFT or whatever you want. 
+
+Citizen Web3: 
+I like that it's an easy concept to comprehend. And what about you, Rina? Do you have the same vision as Anton? 
+
+Reena:
+Oh, 100%. 100%.  
+
+Citizen Web3: 
+Would you want to add this? Yeah, okay. Damn! We got it. Guys, what about like, let's... One more question? 
+
+Oh, two, one, okay, whatever. What is in your opinion, since we're on the topic of onboarding web 2 to web 3, I guess? What is in your opinion the biggest abstraction right now? What is the biggest problem that doesn't allow us today to say, fuck web 2, we don't need web 2 anymore. Here is web 3. Let's use it. It's amazing. 
+
+Reena: 
+Education and key management. This is what I want.
+
+Citizen Web3: 
+Okay. Okay, sorry, good. And Anton, what about you? 
+
+Anton: 
+For me, I think that focus on the one specific address in one moment of your user experience, because it's hard to switch every time, especially on MetaMask, and change your network, and change your address, and change the permissions for address for specific depths. It's really hard for regular users, which are not adopted for that experience. And I think it's hard to start thinking right from the context of your single line address, because I think that's one of the... 
+
+Citizen Web3: 
+So, key management. 
+
+Anton: 
+Some sort of key management. Yeah, okay. Okay, let's generalize it. 
+
+Citizen Web3: 
+No, but it's true. but it's true I remember, I remember like, I mean, I was following Cosmos from 2016, maybe end of 15, maybe I heard, but I didn't read until 2016, nothing. Ah, well, whatever, yeah, something like that. But, you know, I didn't believe when last year, was it last year? Yeah, it was only 2021 in the summer when Osmos is launched. 
+
+And I was like, oh my God, it works. You don't need to like change things. And this was already a progress. 
+
+And this was already a progress. And I can only hope that, you know, in five years time, we're going to forget about what is key management. And I don't know, like Anton, maybe it's going to be like, like you say, different on-boarding points, or it's an operational system, or another system that allows you to start your own project. And I mean, I'm only hoping that that's the future of what's going to look like. 
+
+So, well, let's hope for that. One bit of controversial topic, which I have to ask the whole Jacob story, guys. Like, this was, this was, let's keep it civilized, of course. I am not going to like now go, ah, you have to answer me, right? But I would like to understand because Jacob has left questions publicly. 
+
+So, and I think it's fair enough only for me to ask those questions to you. And what happened? Well, why did you guys suddenly like start, and what, what did the atom break? Who smashed the atoms? 
+
+Anton: 
+No, obviously it was me. But idea of my post was just point Jacob that he need to explain why we act like this, but he don't try to answer it. He starts blaming us on the unsecurity activity that I don't know. I got connections with the Jackal team and that stuff that's endless. 
+
+Bullshit floods on all channels and discord in Twitter. And I don't want to attract additional attention for that situation, especially because Jacob wants to get it and that's it. But if he wants to explain his actions in that situation, he may just easily provide it. He may say, okay, I just ask to stop because of something and I don't found some issues with the Jackal, but he just repeats some strange topics and he changed it and he blamed it. I share some private screenshots, but he also said some private screenshots. 
+
+In any case, that's not a private discord, that's a discord from the validator and anyone who gets a link may be part of that discord. So that's a complex story, but I just want to point Jacob that he should explain why he act like this. That's it. I don't want to attack him. I don't want to add some competition in his activity around the security of the networks because our contribution is a bit different. 
+
+We don't got some developers who rework or review code of the nodes. That's not our part of the work, but he starts to blame us and all bad things around the crypto. He named me a stupid guy and so on and so on. That's a boring story for my perspective because if he wants to answer, he may do it easily, but he wants to create some additional mess. 
+
+Reena: 
+Honestly, it was like a misunderstanding from both sides like and we did not want you know to diminish the value of Jacob as a contributor. He's you know a very good value add to the ecosystem and everything. So I think you know it was just a set of actions that were not you know coordinated properly. So This is very sad and it's been a you know huge exhausting point for us for a couple of you know days as well for Jacob. So I don't think it's necessary to go back to this topic though. 
+
+Citizen Web3:
+Fair enough. I'm going to twist the question to keep your and Jacob's story out of it, but to make it a generalized question that has got nothing to do with you and Jacob, but to understand your opinion on those kind of situations. 
+
+Let's forget about that. What do you think guys about validators transparency should in your opinion validators work be? I'm not talking about just the work we do as validators like the networks we support or or or of course we cannot say where our nodes are because that is security thing. That is stupid. But in terms of let's say accounting for example, right? Or let's say the people we employ or any of the inside kitchen should that kind of because a validator is a public entity? Should all of that work in your opinion or any of it be public or should all of those things be kept private? And that is up to validators to decide because they are at the end private entities even though they public their private entities. So I think you get the question. Should the work of a validator be public or should the validator decide which part be public and which part be private? 
+
+Anton: 
+I think it depends on a validator type because some validators focus on the funds attraction to staking and some validators focus on some small stakers. And there is difference between the types because if you based on the small stakers you need to be more transparent because you try to provide some applications for the stakers, you try to provide some information, some videos, some activity from your side. So I think if such stakers or other validators ask you about your activity and ask you about the transparency, you should answer to that question because you based on the public users, not the funds, not some private entity. 
+
+You should not deal with some sort of it. So I think you should just explain why you act like I don't know like like Jacob did and you should just explain why and what you try to do with some activities like fund spending, some activities like network stop, some major events in your story like a validator. So I think that's a good enough because I remember story how one of our stakers ask us about some junior government's proposals, decisions from our side because they change our opinion and that users ask us why we did like this. 
+
+So why we change our opinion about one of the questions. So I think that's a good situation to explain it. So if you attract people's tokens to your node, you should explain your decisions on the government or some other decisions. So that's why I try to point on Jacob's activity and that situation because he's a public validator and that's it. So I think that's a good explanation of such. 
+
+Citizen Web3:
+Rina, as you said, so we can like leave, let's abstract that question from the situation. 
+
+Reena:
+100%
+
+Anton: 
+I just want to explain it.  
+
+Citizen Web3:
+So abstract that question, if you want to add to that question, abstracting the situation. Do you think validators should be public? I like Anton's answer actually because it's a very logical answer. If you're attracting tokens from delegators, you should go out there and explain why you're making anything. What about you, Rina? Do you think that that's what it should be like that, public or private? 
+
+Reena: 
+100% Yeah, I'm certainly agreeing that it depends on the case but I don't think like validators should keep accountable. So for example, the metrics I'd like to see like from very community based validators like, you know, as basically the reward management. And so the idea I was pushing back in today's is to have this kind of information, not only regarding the contributions of validators, not only like the monitoring, the set up information, you know, just like a formal registry but also, you know, the policies they have, how they vote, how they manage their words, what kind of, you know, structure do they have. And it seems like it's very important metric for outside state groups too. So it's actually good about their consent for, you know, specific structure it has. 
+
+Having this kind of information in public will actually contribute a lot to the general transparency and bring a lot of good valid practices. So I don't believe like for, you know, Castorial validators if we can name them, it's a whole different story. But we're talking about the, you know, retail validators for sure, and we have some public information available. And validators should always keep this kind of communication with the staker if he has any kind of question. It's very important that he cover your, you know, the policies, insurance policies, for example, you know, it just should be available to the general public. 
+
+Citizen Web3:
+Okay, thank you guys. Guys, to wrap it all up, is there something that you as an experienced, not only validator, but the blockchain project with several years of experience already out there? What would you suggest? This is something I like to ask older projects to anyone out there who wants to start, not necessarily a validator, but they want to start to not to work for another company in crypto, but they want to become their own business inside crypto. What is your suggestion to these people today? Somebody who's already did a lot of bumps, how we say in Russian, right? Bam bam, went through a lot. 
+
+Anton: 
+Hmm, it's a hard question for current markets situation. But I think you should think about revenue streams, because if you try to create some new software for the some sorts of the wallet, the biggest issue for all of them is that they couldn't create some revenue stream because you couldn't just add some fee for any transaction on your platform because it's look strange and users will switch to another wallet. So I think you should definitely think about revenue streams and you should try to make it a sustainable business. I understand that it sounds a little bit strange for the crypto sustainability and crypto, but you should try. 
+
+Reena: 
+I have my own perspective to this, like possibly if you can research this stuff and actually dig into the user flow, dig into how the system, specific like ecosystem upgrades, you may find some specific points like quick points from the user perspective, some pain points happening for either project or the users. 
+
+And if no one is trying to build something to cover it, it's right to turn, right? So for example, I've met guys from Rockaway Labs and they started to build this observatory zone, which is, you know, in a sense just the aggregate for Baldera matrix. Like technical, so very viable and also, you know, just very detailed, factual. So and how come I was just like, I was just looking at this product and they've just started it a couple of months ago and they've joined crypto a couple of months ago from cybersecurity perspective. 
+
+And I was just thinking, how come no one actually built this before? And so this is about covering the pain points for various groups of people. So I mean, there's always room and crypto is still in the very initial stage. So it just like, you know, makes sense to figure out what kind of stuff you can actually provide from the user perspective, from the project perspective. So this actually excited me a lot. I was just like, yeah, guys, this is something necessary. 
+
+Citizen Web3:
+Definitely. You guys, like, I mean, both like Anton said, and you said that, oh, it might not go together with crypto. But if I was to suggest, I would suggest the same things because spending a long time in crypto and trying to avoid sustainability and trying to avoid like things like research and all that and going. 
+
+It's very difficult to do it. I mean, there is only so much intuition where intuition, I think stops and then you cannot scale anymore. So I totally agree with what you guys are saying there. Guys, thank you very, very, very much for finding the time to join me. I hope to speak more with you in the future. But thank you. 
+
+Reena: 
+Thank you for having us. 
+
+Anton: 
+Yeah, thank you so much. Thanks, everyone. 
+
+Citizen Web3: 
+Thanks, everyone.  Bye. 
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating any of our nodes.

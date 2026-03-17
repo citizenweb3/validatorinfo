@@ -1,18 +1,26 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FC, useCallback } from 'react';
 
 import Button from '@/components/common/button';
 import icons from '@/components/icons';
+import { emitWindowEvent } from '@/hooks/useWindowEvent';
+import { AI_CHAT_OPEN_EVENT, AiChatOpenEventDetail } from '@/components/ai-chat/ai-explain-button';
 
 interface OwnProps {}
 
 const HeaderActionButtons: FC<OwnProps> = () => {
   const t = useTranslations('Header');
 
+  const handleAiClick = useCallback(() => {
+    emitWindowEvent<AiChatOpenEventDetail>(AI_CHAT_OPEN_EVENT, { message: '' });
+  }, []);
+
   return (
     <div className="mt-2 grid grid-cols-2 gap-8 text-base">
-      <Button component="link" href="/ai" tooltip={t('Explore the AI Rabbit whole')}>
+      <Button component="button" onClick={handleAiClick} tooltip={t('Explore the AI Rabbit hole')}>
         <Image
           src={icons.RabbitIcon}
           alt="AI"

@@ -1,0 +1,544 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/gregorymarkou
+
+Episode name:
+Web3 Governance, the Free Market and Challenges with Gregory Markou 
+
+Citizen Web3
+Hi everybody, welcome to a new episode of the Citizen Cosmos Podcast. Today with me is Gregory Marco, I hope I pronounced the surname correctly, aka Greg the Greek on Twitter. You probably might know him as that. He's the founder of ChainSafe, also the CPO of ChainSafe. Greg, hi, welcome to the show.
+
+greg 
+Hi, thanks for having me on. Pleasure to be here.
+
+Citizen Web3 
+It's a pleasure. The last time I had... I was going to say your kind, your people. No, I'm joking. The last time I had some guys from ChainSafe on was roughly two years ago now. Actually coming up three years. I think it was 2020 still, if it wasn't 2021, maybe two. And we were doing an episode about Aragon Chain. Well, of course, that developed differently.
+
+greg 
+Yeah, yeah, yeah, I actually remember this podcast. Okay, that's funny. I remember that podcast being recorded now I think I think it was with colin and aiden maybe Yeah
+
+Citizen Web3
+Hey, you see Yeah, it was colin aiden and and one of the guys I think he quit horch from aragon one
+
+greg 
+Yeah, it would have been Jorge. Yeah, yeah, he actually just released his new product today, ironically. Yeah. It's called Firm. It's like a new take on the whole like DAO space. It's definitely worth checking out.
+
+Citizen Web3 
+Alright, alright, what is it?
+
+Citizen Web3 
+Nice, nice. Definitely we'll check that out. Thank you for that. Greg, before I proceed with any of the other questions, I mean, I introduced you as the, you know, CPO, founder of ChainSafe and ChainSafe is quite a big, not big in terms of like a huge big grand as in on big physically, but it's big into a lot of the things it's doing. It's in a lot of places in crypto. Do you want to introduce yourself a little bit? Tell us about what you personally work on currently in ChainSafe.
+
+Anything else you want to add to your own intro? Maybe, I don't know, maybe you drink something, some interesting Americano, I'm joking, of course, just an intro for yourself, please.
+
+greg
+Ha ha!
+
+Yeah, no, for sure. Yeah, no, my name's Greg. I'm Greek, I'm not a part of frat life. Sometimes I actually have to clarify that ironically. I started chainsawing for my friends, currently the CPO. Recently transitioned, I used to be the CTO for the last three years and I have like a great honor that David, who was our VP of engineering took over and he's just crushing it already.
+
+Um, so I used to work a lot in like the protocol stuff, like originally, uh, a couple, how many years ago now, four or five years ago, started load star, almost on people internally, which is our E2 consensus client. So I come from like a tech background. Um, now focusing on our products, trying to elevate them, trying to make sure that trying to get like, our gaming and our other ability solutions and honestly, just like our entire ecosystem projects. Um, so like our protocol node implementations, uh, off the ground in, in a way that it's a lot more meaningful and usable for, um,
+
+our developers and consumers of them. So that's kind of why I focus day-to-day, is just working on our product strategy and things like that.
+
+Citizen Web3
+just working on product strategy. One of those things just just just like damn it you know just working on product strategy here.
+
+greg 
+Just working on Friday's show. I'm, you know what, I'll narrow it down for you, you know, without giving away too much. I'm trying to, one of the main focuses right now is looking at, you know, how can we really accelerate the gaming space and make it so that game studios, like traditional ones, aren't here just to look, oh, hey, this is an NFT, another NFT. This is like, how can we leverage?
+
+Decent like actual blockchain decentralized tech to build better games So you might not need crypto and like that's kind of what our whole thing is So that's kind of what we're focusing on trying to like show them that You know whether it's saving resources on server costs by doing like a pure more of a peer-to-peer game Just for peering and you don't need the crypto economic side like things like that That's kind of our main focus right now my main focus right now
+
+Citizen Web3 
+And you know what? I mean, I wasn't planning to go this way. But since you mentioned gaming, since you mentioned it, not true, honestly, I wasn't planning to talk about gaming. I had a set of questions different for you. But while we're on the topic, we actually started Gamedev recently. And I noticed one thing, not going to be advertising ourselves here at all, but I noticed one thing when I was doing the research. I noticed that a lot, a lot more teams and projects out there are...
+
+beginning to be a little more explorations when it comes to blockchain game dev. And what I mean by that is that if previously all of your games were concentrating on, you know, you had the game and it was just running somewhere, somehow not even properly necessarily on some kind of blockchains, usually it was just the NFT stored maybe on a blockchain or whatever or anything like that. And now you have like I had this idea personally in the team had this idea. And I've seen this idea is around. So it's not just like it's not at me being clever. I'm seeing people are really getting there.
+
+greg 
+Mm-hmm.
+
+Citizen Web3 
+I think that people are actually exploring options within gaming. And here I would love to hear your opinion, where it is necessary to use the blockchain account for the person in order to develop his gaming character. And his gaming characteristics of the character are dependent on the way he uses the blockchain. So it kind of incorporates some...
+
+greg
+Oh.
+
+Citizen Web3
+And I've noticed on osmosis, I think something like that, that they were trying, I mean, they didn't do a game, but they were trying and they're playing around with some things in the background. And of course, Avagucci on Ave, right, was one of the first ones to go this way. We personally wanted, and again, what's your opinion on this, I don't know, theory, take, whatever you want to call it.
+
+greg 
+Yeah, so just to clarify, is your idea is kind of like the traits, so to speak, that you would kind of derive based on like your usage of the chain? Yeah, I think it's interesting. Listen, it's challenging, right? Because the only thing I'm not like I'm not into game design, so to speak, as in like game mechanism design extensively. But I foresee a problem there immediately, which is.
+
+Citizen Web3
+Absolutely, absolutely, absolutely.
+
+greg 
+that you need to be careful about, which is, you know, how do you ensure you don't just, how can new participants get like quality, like traits, if that makes sense? You know, so there aren't these like, OP, like overpowered traits or whatever, just by spamming the chain or doing something like that. Um, but I mean, it's a really interesting way for onboarding because the power users and the longer term users or people have just done a lot of things, definitely get interesting access to.
+
+Citizen Web3 
+Ahem.
+
+greg 
+your game right out of the gate, which I think is pretty cool, to be honest. It's an interesting way to bootstrap the community. That's how I see it.
+
+Citizen Web3 
+It's cool that you saved it.
+
+Citizen Web3 
+Well, we are as an ecosystem, I mean, we consider ourselves ecosystem developer and I'm going to start pulling the quilt here just to reflect on what you said though. I think that what you say is great that you said it as the first thing we thought about and that's why we at least when we're redoing it, we always throw it away with we decided to separate and create two entities one that can be just for people that have not yet went that way have not like used that blockchain yet but want to.
+
+And the other one is for those and that created two separate economic actors within the ecosystem. Well, hopefully that will do it. But let's let's let's let's stop pulling the quilt. It was just because you said that I wanted to hear your opinion before we before we go into some more question. You said that you started Jesus for a second. I completely forgot how to say chains. You said that you started chain safe with four friends. And do you want to get into that? I'm quite curious. I mean, you are definitely.
+
+greg 
+Yeah.
+
+greg 
+Yeah.
+
+Citizen Web3 
+Quite a big project with a lot of influence. I would love to hear more of that.
+
+greg 
+Yeah, yeah, yeah. So I'll start, I'll go back a little bit further into like kind of into where to me and how I got into programming. I think that'll probably be the it's kind of a nice segue. I originally back in the day wanted to be like a Bay Street, Wall Street, Bay Street, Toronto version of Wall Street, you know, Wall Street guy, I wanted to do investment banking, got into business and tragically hated it within like a month in university.
+
+When it's, you know, switched campuses went into the economic stream and in the other campus moved into from there. Um, I took one programming course, cause I think it was an easy way to get like a requirement for a different thing and fell in love with Python. Like right then and there I had always, I had played around, you know, like the classic story played around with stuff, but I fell in love, got like 98 or something. Like almost it was the best market I'd ever received. And then later that summer I said, you know, I'll take a bootcamp cause I don't have time in school to like go.
+
+Like I noticed I look at the curriculum and the computer science curriculum was like not where I wanted it to be for my, how I wanted to go about it. And so I took a bootcamp learned like rails, Ruby, that whole thing, node, all that, and that's where I met one of my co-founders and this was in like 2015 somewhere around there and long story short, I ended up continuing doing that. I got kicked out of Cia computer science ended up dropping out of school because well, I
+
+didn't want to do economics with an environment major. Nothing to say against those, but it just wasn't for me. The department told me to go to college and I was just like, nah, I don't want to waste another four years. So I met my co-founder, one of my co-founders, Stu there. He had been then two years later, he had been going to the local Ethereum meetup in Toronto. That was started by the guys that did L4, so, and well, that's long gone now, but for those of us that were around L4.
+
+And where the first meetup I went to I saw a Richard Moore demo ethers jazzed, you know, like a long time ago it was pretty awesome and I went with Stu to that meetup and met the other co-founders and we kept in touch for a few months and then eventually I got a call being like hey, we got this contract like you want to come do with us Some guy wants to build a POC someone else has to build a POC and we built it and then one thing led to another We ended up that's kind of how it formed That's how we kind of all got together
+
+greg 
+To be honest, if Stu had never gone to Ethereum developers meetup, I would have never met the rest of them. And if we didn't do that bootcamp, definitely wouldn't have met them. So wild chain of events over three years, really.
+
+Citizen Web3 
+Cool, right?
+
+Nice. And what did you, but did you have, I mean, when you already like had your initial interest aroused for Ethereum and for blockchain, what was the drive for you to actually decide to work in this space? I mean, considering back 2015, you said, right, I remember the space very well in those years. And, you know, it wasn't
+
+How do I say, very lively? Oh, it was lively. It was actually in a lot of ways, livelier than it is today. I mean, take Bitcoin talk, right? Before the ICO wave, the big ICO wave, but you know, what was your drive to come into this industry? Why?
+
+greg
+It's funny, I wasn't, I didn't have it for a long time. I, in 2015, when I met Stu, I, he was telling me about Ethereum back then. And I said, I kind of shrugged it off. It was in 2017 when we started ChainSafe. Even then, when I did the first POC, you know, I had been working on an app. It was peer to peer lending. So for both on like item level. So I guess it was kind of in the same realm. I just didn't realize it.
+
+And yeah, I eventually just, I had to finish that POC. I saw what smart contracts should do and I still had to sit on it. The initial real click for me was ultimately transferring money. And it was just like a pain. I had to go to Europe and I needed like, I think I needed to pull out like 2000 euros or something. And I was just getting roasted. Like the banks, the tier twos, like everybody just,
+
+bad and I think somebody set me up one of the guy one of my partners set me up with someone in Europe that was like I almost got the deal done at like 0.5% almost flush and I was like ah this is cool and I think that was when it really clicked for me yeah but then I went from that to like protocol development really quickly so should it
+
+Citizen Web3
+Nice, nice. Terrible, terrible stuff, terrible stuff. I mean, going from, I mean, those Europeans, really, really the stuff they have to do for them, right? I mean, seriously. I love it. I love it because I think it's cool, you know, because not, you know, sometimes people expect everybody in Web3 to, to everybody, sorry, expects from founders and builders in the Web3 space to
+
+Coming to Web3 already prepared and it's not like that. Sometimes we all get here to transfer money and we end up in protocol development. And I think that says a lot about how strong the attraction is, right? How strong the force of pulling people in is in my opinion at least. And you mentioned education briefly and I know you did some teaching in O-1 as well in uni. Thanks, thanks God for the internet. You know, I mean, it's an easy thing to.
+
+And what's your opinion? I mean, we're an education business in a way. And then what's your opinion about education and opinions? And to what extent in your opinion, should people who are trying to educate other people, especially when it comes to things like finance, especially when it comes to things like very touchy stuff like governance, like privacy, should they?
+
+promote their own opinion or should they leave it up to, which is of course very difficult, to the person themselves to decide, okay, I hear your information, I hear both sides of the story, let me make my own decision.
+
+greg 
+Thanks for watching!
+
+Citizen Web3
+What was your approach as a teacher?
+
+greg 
+Uh...
+
+Yeah, so I mean, that was a weird time for me. I was in fourth year. I was still in school. I hadn't dropped out yet and got, Chainsafe had got the contract to work at this local college. And I was teaching just fundamental JavaScript. Obviously there's opinions there. But I think when it comes to opinions, this is a challenging one, right? And this is what I, ultimately you have to give your opinion because it's impossible to teach anything without being subjective.
+
+truly don't think you can give be opinionless. I think what's important is that the instructor acknowledges gives an acknowledgement of their learnings, how, and like a background to them so that people understand going in, this is why you are the way you are on the weekend. I was at a hackathon and I was giving a talk and someone asked me, you know, how do you make the best judgment call on what chain to build on?
+
+And I just led with simply like, cause they had been doing Bitcoin research or lightning research or something like that. And I led with, this is what I do, this is what I've done. I used to be a protocol developer for the Ethereum consensus. So I'm gonna tell you an opinion that's a little bit different than what your professor's gonna tell you. And I think that's the easiest way to lead into it. Cause otherwise.
+
+you get stuck in what a lot of university students happen. And a lot of people in school where I experienced too, which is my like third year economics course, I get into fourth year and the fourth year teacher was like, who had this professor? And then like half the classrooms are their hand. And they say, well, I don't agree with their opinions. So everything you learned is wrong. And you know, if you don't lead with that as a starting point, you're going to run into problems with the education. So I think that's the main thing.
+
+greg 
+who's the author? And I think we don't do this well enough in blogs. I don't see your... Like, blogs should even say that. It's like, this is the author and this is who they are. Like, read about the author before you read the tutorial, because that's why the opinion is the way it is.
+
+Citizen Web3 
+like that you said it. I really appreciate it because to me like a good book makes personally of course is a book which tries to as much of less to or warns me that it was influenced by something like that you know that their work was influenced that or says okay you know what you decide what you want to decide. Of course it's very rare these days but yeah. And while we're on like you know the topic of what things mean for you.
+
+And your journey inside of ChainSafe has been, well, it's been different, right? You went from doing one role to another role. Why did you change to product from, well, from the tech side to the product side? What's the importance in your opinion of product development? And why did you personally decide to go that way?
+
+greg
+Yeah, great question. And something I've been trying to articulate well to people, uh, more recently, as it's only been a month. My main driver here is that I think. You know, there's a time there's two things, right? One is like, as a founder, you need to also know when it's time to like step aside and like somebody else needs to like really take the reins because they can do effectively a significantly better job than you that's first and foremost.
+
+And that was one of the main leading decisions. The other one is for the last like year I've been trying, you know, we as ChainSafe have been trying to create a much better developer, you know, environment for people, whether they're building on our SDKs or our stack or just in general. And I, my, most of my focus has been turned towards kind of the DevEx side. And I think it was something that we is very easily.
+
+done from a product nature and I wanted to get more into understanding our users, talking with them, that type of path. So it was a natural progression. My tech skills as CTO, I wasn't even doing much coding anymore. I was falling behind in terms of what the standards were as I was focusing more on our products and how we can look at them from that lens. So it was a natural progression. And to be honest, I think I've always liked building.
+
+products more like especially like POC stage and stuff like that. I think everybody secretly does. Not that I'm building much personally, but it's the flow and like that's yeah, that's high level kind of the main reasons.
+
+Citizen Web3
+What, what, what, what, like, I mean, we're abstracting details. You do want to go into the low, like, I don't know, whatever it may be. If there are any, if we stick to the high level, what's like, do you think that crypto today has enough product development? Do you think that crypto as it is today, uh, is focusing enough on products?
+
+greg 
+Oh, that's an interesting question. So there are many levels. For the longest time, we've only seen product development exist at the application layer in crypto and blockchain. The reason for it is, I don't really know. But if you look at if you look at like the whole stack, right, we've got infrastructure, you know, all everything in between the network infrastructure. The real like Web2 has all this
+
+Citizen Web3 
+Mm-hmm.
+
+Citizen Web3
+Network application.
+
+greg 
+Productized now, I'm not saying we have to like it's everything needs to be paid for at like the p2p layer But the point is there's like product lens being applied to everything And I'm not suggesting that you know, everything changes does is gonna become like a charge for thing It's the idea of just putting a product lens to make sure we're building a good product for developers, right? And I think that's a problem. We're not at a point right now We're starting to get to that point where there is a more of a product lens being applied to the dev tool side
+
+But a lot of it is GitHub issues, Twitter sentiment, which is not how we build good dev tools. And that's also part of the reason why like, this is important to me and why I want to go down this road. And I've embarked on this journey is because there is a much cleaner way. And like much better way to like, make sure this like next wave of developers is going to get what they need. I mean, and I know this question was on your mind, and I, you know, I'm probably
+
+greg 
+at a hackathon in 2018, 2017, 2018, and we messed up the allocation schedule. The developer experience for having two million developers in the ecosystem versus 10,000 or the 5,000 we had, very different. Gurley worked really well when there was five to 10,000 of us. Everybody knew who to reach out to and the faucets weren't getting drained left and right. This is a product design decision that we need to.
+
+go back, rethink and say, like, how do we build this, let it scales? Right. And, and I think this applies to SDKs and everything. And so that's, this is where like my passion sits within product and like the intersection of tech and product.
+
+Citizen Web3
+I'm by the way about go early. I don't know why I sometimes pronounce it go early. I don't know why it sounds like to a foreign ear. It just looks like a natural pronunciation of it. I guess I was gonna let you do it. I was sure that you will do it. So I did my job. There we go. No, I'm joking. I can go that way, of course. But I wanted to keep it about you. I wanted to keep it about your opinions. And you already said why you think it was working then this is what and I like to talk about, like to try and
+
+hear the person's opinions because like we always say, we focus on the person, on the guest, and that the projects that he does is his secondary because if it wasn't for him, those projects might have not been started, might have been done by somebody else we don't know. But it's cool that you talk about it from your perspective and how you see that. That's very important, I think, these days. We're missing that a little bit in Web3, I think.
+
+greg 
+I think we are. I think it's completely disregarded half the time. The app level, not so much. I think the dApps and whatnot are, they have a pretty good lens for the most part, but everywhere else, I don't know. I don't see product people working on SDKs. I don't see product people working, you know, on the node level either, although they're busy. You know, they have a spec to adhere to, I get that, but still, it's kind of missing a little bit.
+
+Citizen Web3
+It's interesting because you said about, you know, product and gitcoin issue, GitHub and of course, to my mind, what came with gitcoin and I was like, but we monetize that, you know, we managed to create a product out of it or we didn't or is that not the product and yet?
+
+greg 
+Um, I think that that's like a different idea, right? I mean, like, there are that's like a DAP again, like it's, I'm referring to more, you know, like the core infrastructure that like we use every day people complain about and the complaints go to GitHub. I mean, this, you know what I'm saying? The simplest thing, like imagine, imagine you just set up once a month you interviewed like
+
+Citizen Web3 
+I understand. I feel it.
+
+greg 
+30 of your SDK users and you sat with them on a Zoom call for 30 minutes each or 15 minutes, actually like figured out what they wanted.
+
+and understand their problems, then like, you could skip the bike shedding that happens on a GitHub issue. I don't know.
+
+Citizen Web3 
+I love this. I love it. If you ever but it's true. But you know, it's funny, I've been working in this space for like six years or seven years. And regardless of whether I've been working with somebody or for who somebody or for myself, it's always the same story. Even even like now, yeah, when it's myself, and I'm knowing that I have to concentrate on it, we try to, but still, even now it took us time. So it's like, I know how hard it is sometimes.
+
+to get off your high seat and say, you know what, hey, I have users, I have community. They probably know what they want. Otherwise they wouldn't come to me. So I want to let them express their opinions and actually do what they say. I understand what you mean.
+
+greg 
+I mean it happens in the open source world, you know, Red Hat didn't get to where they are by just releasing Linux software arbitrarily, you know, like people get interviewed. It's, yeah, yeah. And that's just like touching the surface.
+
+Citizen Web3 
+Yes. Yes. Talking about Web3. Of course not. This is like surface. It's not even the tip of the surface, I think. But it's true. It's true. We have to be honest, right? I mean, otherwise, I think the worst thing about it is when people, especially in crypto, you see this with some protocols. They're not called protocols. There's some scum projects where people pretend to do things. But sometimes people just say, hey, remember there was that
+
+guy who did the most useless ether talking or whatever, the first one, you know, that would, and he got an eye. So he was honest, right? He wasn't lying about his like things and people gave him money, man, you know, like, damn, there you go. But talking about Web3, I want to know, because, I mean, regardless of how, as a founder, you might be shy about what you do, or you might, you know, not accept to fully the...
+
+greg 
+Oh yeah.
+
+Citizen Web3 
+The importance of your work, Chainsafe is a household name to an extent, especially in a specific circle. And Chainsafe includes all those names in it. You know, you have Ethereum, you have Cosmos, you have Polkadot. And Chainsafe advertises itself as a WebTree builder. I want to know what WebTree means for Chainsafe and what WebTree means for Greg. And I'm curious, what is WebTree?
+
+greg 
+Yeah, why don't we start with myself? And I'll go that way. So like, listen, for me, web, you know what, this is kind of both. This is how we both see it too, you know, at a high level, right? Like web three is on a conglomeration of words, right? Like meaning the same thing. Like it's everything from crypto blockchain, you know.
+
+that hole and it can be NFTs. It's like all of that. And really, it's about
+
+removing the need for I truly see it and I think we most of us do at Chainsafe see it as like the fundamental building blocks or it's how can we make things more decentralized? Does that mean it involves crypto? Does it mean it involves NFTs or blockchain tech or whatever? Like it doesn't really matter. It's all of these things. You know, we write cryptography libraries, we write networking libraries, we build nodes, we do a lot of different things, right? We write just SDKs. That's generally speaking.
+
+very high, you know, roughly what, you know, we see it. Personally, for me, it's Web3 is...
+
+greg
+almost like it's like a tool set for people to basically like choose their own adventure, if this makes sense, but like for your own, your, your, yourself, your data, your computer, you know, down the road in five years from now, that web three is literally like a setup wizard on your computer that says this, you know, how do you want to manage how things work?
+
+how you operate on your phone, how you operate your bank account, how you operate data, your photos, you know, just like generally speaking, it's then just, it's the change in technology for like how we can just be own and decide how we use the internet. That is really ultimately how I see it.
+
+I haven't had to answer that in like so long.
+
+Citizen Web3 
+But it's good to remember. You know what? It is a cool thing. The reason I ask you, I was and this is not the reason I ask you is because I want to know your answer for sure. But now that you say that you haven't answered it in so long, I was most recently I don't like to go into conferences in person. In my opinion, it's a waste of time, especially today. But no, honestly, I mean, even the networking can be done online. But okay, I understand. And there was recently the whole blockchain week in Lisbon.
+
+And I went there to do a few interviews in person. I wanted to do like a small road. And I was recording with quite a few interesting builders. And they were like short 10, 15 minute interviews. And it was like also big names. There was like guys from the steak fish. And there were guys from a couple of big projects. There were some big validator names. And I asked all of them almost the same set of questions, more or less, in different words. It was like three or four questions.
+
+Do you think that the reason why you came to Web3 or to this space, whatever you want to call it, as actually solving something for the people out there for, you know, and when, I think when we ask people what is Web3 and they say that, you know, it kind of reminds them why are we doing what we are doing, at least to me, of course, I don't know what it means to you.
+
+greg 
+Yeah, um, it's yeah, I mean
+
+greg 
+This is something I say a lot, especially to students, hackathons and stuff, which is, especially when I'm in North America, which is, I gave this presentation on the weekend about Chainsafe, about very glossary web 3 and stuff like that. One of the first questions was, a lot of people say it's a scam or it's fake or whatever, it's this or that. And I was like, great. Where are you from? Where did you grow up?
+
+What was your like financial situation in terms of access to banks social? Do you have a social security number? You know, and I asked like these like high level ideas and You know most of the time it's north america How to bank out since they can remember, you know these little things and i've said yeah, you're lucky You know if you go to and i've read this quote and you know, i've seen it on reddit a lot you know, there's people that play mmorpgs like runescape where
+
+in Argentina where they'll go and they'll do a nine to five and then do five to ten farming gold and selling that for USD, like a stable coin and direct into their wallet. And they do this because they don't have access to good systems, right? And those are the times that's how I remind myself, right? I think we're doing good if there's someone, if at least we're helping like a few thousand people, that's not bad.
+
+Let's get to a million or a couple million, but I think that's big. And I think Mariano from previously maker has talked about this a lot and how it's like really die really helped his people down in Argentina. So yeah, I don't know. I see it.
+
+Citizen Web3 
+I got it. I do as well. I do as well. And I think like, you know, dedicated like, this is why I think we also wanted to interview people about people, first of all, because, you know, I think people who dedicate their life to to spend in that industry do it for one or another reason. And again, there we go, you know, usually that reason turns out to be that, yeah, like you say, if it helps one person, then hey,
+
+I kind of it achieved something right and rather than but this is actually about an interesting point. I think maybe to ask you about since you mentioned it, you know, go early. But those Europeans, those Europeans and interesting. Here's the devil's advocate question for you about the supply and about the biggest of course.
+
+greg 
+I'm all in.
+
+Citizen Web3
+is discussing how to supply it, costing money. Oh my God, what are we going to do? Everybody's going to die. There's not going to be water. You know, the cows are going to die. And so here's, here's the question. Devil's advocate question for you. Why not let it cost? Why not? It's a blockchain. Come on, we're in a group three. Let it let people let the free market decide for itself, what it wants to do if the free market has decided to. It's like a bit, I'm gonna like before I let you like
+
+do the proper answer. I'm going to give you an example. Imagine it's like a blockchain. I'm really against censorship. But then there was a blockchain where the blockchain voted to, I don't want to go into that, but the blockchain voted to remove the user's funds from a particular. At first you're like, oh my God, that's really bad. But then you're like, well.
+
+greg 
+Yeah.
+
+Citizen Web3 
+Isn't it the job of the governance to decide what they want to do? And if they all decided and they're all in the same game, nobody's hiding that. Okay. Maybe for them that's development. So this is the devil's advocate question. Why not? Why, why? Cause I know you expressed the opinion that it should, it should be free to stay free and I understand why perfectly.
+
+greg 
+Mm-hmm. Was that a Cosmos chain? Just curious. Was that Juno? That was Juno. That's a tricky one. That's a tricky one. Yeah. But let's get into Gurley. Yeah. I think we need historical context, part of this, and I think this is also the prompt. Historically, Ethereum has had free testnets as a public good for the community. This means that anybody can get access.
+
+Citizen Web3
+but still.
+
+Citizen Web3 
+It was a Cosmos Chain. It was a Juno. It was Juno. It was Juno. Very tricky one. Super tricky one.
+
+Citizen Web3 
+Please.
+
+greg
+to it for free. It's a free market, let the free market ride it out. I agree, I've been leading with that statement with like in-person discussions recently and you can't stop it, it's inevitable. I can deploy our bridge to any chain I want and just try and start to suck up liquidity that way too. It's a free market, do whatever you want. But.
+
+greg 
+There's like a moral thing here, you know, in my opinion. And you also have to look at it historically. The first moral thing is that you don't think we would have done this? Like made a market for ourselves. You know, I don't have much anymore. I've given away over like 20 mil over the last like three, four years. Like Gurley's been around, I'm down to like sub 10K, Gurley-Eath, and I've been giving it out. I give it out almost on a weekly basis. But I only give out in 32 increments because people need them for validators. I'm like really...
+
+strict to that. But like from a moral perspective, it's like, I just don't see why we why this should happen. Like, if this is the problem, let's get something new going. Really, that's the fundamental solution I see right is like
+
+It just has like making people charge for something that was always free is ridiculous. And you know, you have seen some arguments while, you know, people are buying it and donating the girly and stuff, but you're just going to create a liquidity trap. There's now a market made that exists that didn't exist. We've got four or five years without a market. Now we have a speculative market where people are sucking up tokens. And yeah, we're people that started it are getting yelled at, you know, and myself, MP, off-race people.
+
+Everywhere are getting yellow because we hold like collectively. I don't know like 20 million tokens or something or 10 million tokens now I think hardly less and we're holding them and No, it's like if I give it out. We're just pumping people's bags like I Don't know we're starting to say it's it's a tough one, but it's just like it should be free I'm sorry like there's you shouldn't have to pay. How is somebody you know?
+
+Here, ETH Global had to contact me to get ETH to hand out at their hackathon. Because their students and their kids showing up couldn't pay for it. They don't want them paying for it. I personally funded the last ETH Global thing and I'm gonna fund the next one and they call me whenever they need it. You know what I mean? It's like, this is the problem. This is why I hold 10,000 is because so that people that like need to use it can get access to it. If you want to pay for it, go for it. I don't really care. But at the end of the day, it's like there's people that can't pay for it and you shouldn't be have to pay.
+
+greg
+Even a dollar, even 10 cents, even a penny just to test your application. That's not why we have them. Right. Um, and you can test locally. Sure. But there's no integrations, right. And that's the problem. You need integrations, which is why people want early. And I get it. Simple is like in a little bit of a weird state, but that's, that's the fundamental problem there. Um, why I don't think you, why, why I really don't believe in the fee market. Right. Um, yeah.
+
+Citizen Web3
+You don't believe in a free market in this case or is that what you mean? Right. Oh, fee market. Fee, fee, fee. Apologize, apologize. I apologize. I apologize. I apologize. That's it. That's it. We're over. No, no, no. I'm cool. I'm cool. Cool. Cool. Cool. Cool. Fee market. No, no, no. Gotcha. Gotcha. Gotcha. But look, let's try to play a little bit with the analogy. Let's try to get more into your head. So imagine like, especially considering like,
+
+greg 
+No, having a fee market like a, sorry, not free, like a fee, fee, fee. Oh my God. No. Oh my God. It's okay. It's okay. Um, yeah. Yeah.
+
+Citizen Web3
+what you say about open source and you know what you say about the free market, not the free market, the free market, you know, the way the way it can change, you know, us as humans as to do better things, you know, to drive us to do better things. So in that, like if we were to stick with it philosophy, and this is not me convincing you I'm trying to get into your opinions, but by no means, please do not think that. So
+
+But by that, to stick to that philosophy, a lot of, you know, if we go into that, it seems only natural to come to the conclusion that any idea that arises, doesn't matter what kind of idea, isn't really a product until it touches more than one person's thoughts. It becomes a product, not an idea when many people come together, start working, and that's already a product. It's not just an idea and somebody sells. So how, like, do you, how do you think we can?
+
+in the future prevent cases like this happening where you guys, you know, originally, you did it for one particular purpose. And this was your idea. But now the market is kind of coming and saying, doesn't matter why. I mean, maybe the market has been selfish and maybe the market is being greedy. And I don't want to like make decisions here. But in this case, it kind of seems that that might be the real case. And this is why that happened, right?
+
+But let's kind of abstract from that and then stick with with with theory. You know, how do we, how can you prevent this from happening where the founder and I'm not saying like that, but where the founder or a small group of people who were at the beginning, uh, prevent the market from developing and going the way it wants to go.
+
+greg 
+Yeah. Again, historical context. I think in this case, there's a lot of arguments to say, hey, we should have a Canary network similar to Kusama. But I still argue that we need a free testnet that's destructive, that doesn't have value for the reasons I listed earlier. Because we have a lot of learnings. Ofri has posted
+
+an immense amount of research, stuff on E3 search. I can share the links with you after. As well as he's been campaigning for the better part of a year, maybe even longer, to adjust the supply because honestly the easiest way is to have an artificial supply that just infinitely grows as people need it. That's the real easy way to do it. Obviously this requires protocol changes that teams don't necessarily want to implement because if we have really specific protocol changes just for a single testnet.
+
+it does introduce risk that like, you know, is questionable. That's what has been discussed a lot. Um, I believe that's the real solution is to have like an infinite supply. Um, then you just simply, there's no point in charging for it, right? You can't have a market if the supply is going to be infinite. At least I don't think you can, but people are weird, you know? Um, yeah.
+
+Citizen Web3 
+One argument against the think infinite supply that I had in my head, or maybe I saw some thing that led me to that thought was, I mean, I cannot think of something, I can think, but I can always think of a solution to it, but there must be something I cannot. So in terms of economical mistakes, like if we're having a chain with infinite supply on one side and we're testing on that.
+
+And then we're going to a chain, which is a complete copy of that. But I'm sure somebody along the way will manage to somehow create something different because of those numbers. And, and, and somewhere down the line, you know, it's like, you create a product and you never thought about clicking this button and the first user that you have clicks that button, you know? So, but again, your opinion.
+
+greg 
+Yeah.
+
+greg 
+So...
+
+greg 
+I think by the time this podcast goes live, we'll have dropped an update, a girly 2.0 style paper or document. Not necessarily actually girly 2.0, but like, you know, let's think about the next version of a test net we've been working on for the last couple of days and incorporating a bunch of the ideas. I think there's ways to do this without actually having
+
+what's the word I'm looking for here without actually causing that like protocol changes. And we can do this behind, yeah. Which is like, there is, first of all, we can create a ridiculously funny genesis file. You know, you've touched a block, you've touched an Ethereum test net or in the last year, you get a million tokens. And then the validators, right? We need like, we need a couple hundred thousand, we need a couple, we can get like how many keys we want, probably let's do like a hundred thousand keys.
+
+Citizen Web3
+the vision.
+
+greg 
+That's going to produce us a ton of ETH. And if we point the rewards address to a faucet and just have it drip out, or we constantly change it, there is infinite supply that will constantly be going every block. That's like two ETH, two and a half ETH. Every six seconds, we'll be minting two and a half. That's plenty for the network to survive, initially, I believe. And also, I don't think testnets should be long standing. It's a challenge with infrastructure, like oracles.
+
+Uh, you know, getting the core building blocks, redeploying all this in front, I think we will get there where somebody will coordinate that. I've been thinking about it myself of like kind of coordinating like a test that infrastructure team where. All right. Maker needs to deploy cool makers deployed now compound go make deploy and make your dye markets. And then like everybody kind of builds on top of that. I think that's one of the other challenges with spinning up a new test net is getting the composability of applications sped up.
+
+But I think that's the start, right? Is, you know, ephemeral, maybe this only lasts for six months. That's enough supply to last you six months. And like we wind it down, spin it right back up. You know, they don't have to go down overnight. It's just getting the infrastructure back up is really the challenging part. Yeah.
+
+Citizen Web3 
+One, let's try to take another subject, but just as a last kind of reflection on that, maybe we can go into talking about crazy ideas, I guess. But one crazy, not crazy, but crazy enough idea I've seen, and this is way before any of this happened. It was the guys designing their, what do you call it, the cannery network.
+
+that supply the tokenomics of the Canary Network in a way would they dropped a percent to the validators that started and then the validators should decide by themselves what to carry on doing it. And the majority, they just did like a huge massive airdrop and said, hey, well, if you're a, you know, we could sit out and single-handedly probably pick developers from accounts by watching what they do, but fuck it. We're just going to drop like a whole, we're going to do a few drops, you know, step by step. You know, there is like a
+
+and essentially just give out the whole supply to that. But again, I'm just curious, again, not going to go early and what to do with that, but I'm curious as what do you think of things like that, of those kind of innovations where you let the community itself decide who the supply goes to or like.
+
+greg 
+It's in a canary network that's different. I will admit, I think, you know, if it's a canary network, you have to run real simulations. So you have to let the validators do whatever they want. Right? They're the core, right? They're where the supply starts. Or all the infinite supply, so to speak, right? That's where the funds get minted. All for it. Do whatever you need to do. Really doesn't matter. In a test network though, I think there's a lot of weird...
+
+incentives and structures you have to really think about. But I'm sticking to my gut here. You know, it needs. I think you just you gotta just airdrop everybody enough at the time at the beginning as a starting point and then whether through protocol change or other just control the like inflow of new tokens coming in, whether like the validators actually don't even receive a reward and the reward goes straight to like some other contract, it doesn't matter to me.
+
+It needs to be done that way. You know, alternative proposals I've seen is that like, you know, we, why not just like pre-mint the deposit contract keys and you basically have like, Hey, um, all the major foundations, like maker foundation, UNISWAP foundation, get coin. All these guys will just get like 10,000 keys, just plug them into like one, you know, machine, run a validator to help the network shouldn't cost it's like 50 bucks a month at most, you know, if you run it in cloud and you can print your own supply and hand out that supply, however you want.
+
+There's a lot of different ideas like that. I think getting the initial balance right is the most important though.
+
+Citizen Web3 
+I know you're big on governance as well. On that note, I'm slowly going to move from that topic. Feel free, of course, to come back to that. But I know you're big on governance. And I wanted to ask you another strange question, my beautiful set of strange questions. What's your opinion on today's governance?
+
+And when I say that, and I'm talking about, of course, crypto here, I mean, what I see, and I'm going to again talk from different sides, but I want to direct and direction, of course. I see a lot of multisigs, which cannot make me happy on chain. I see a lot of people discussing proposals of chain and actually vouching for discuss proposal of chain where I'm sorry, but you can delete information of chain and you can change information of chain people for some reason, like, no, no, no, let's go discuss it off chance. Like, excuse me, but you can, you have an admin who can like delete.
+
+things, you know, and like, but anyways, what do you think about today's like, state of governance? Are we mature enough to say that blockchain as a technology is ready to offer our world a governance solution or maybe for maybe small scale, I don't know, or do we need still to change a lot, a lot of things in progress? Or not?
+
+greg 
+That's a good one. Okay. Can we model existing governance structures?
+
+exist today on chain? Yeah, I think we've done that. I think the notion of one coin, one vote type of style governance that exists, I think in some countries, that's a thing. In Canada, in the United States, it's not. In Canada, we've got these writings, which is just a region and you elect people into that. We can model and build all this. Does the infrastructure exist for us to do that? Yeah. Does current on-chain governance work?
+
+My answer is going to say yes, absolutely. And I think it's working as intended, but it looks really bad because the people, the reason why we're doing governance is just because we have it's fake. Um, a lot of it, not all of it, a good chunk of it, you know, there's a, I think a lot of governance exists as legal risk mitigation and a lot of governance exists as a way for people to just step away from things.
+
+Or at least make it look like they're stepping away from things if you look at most governance systems their Technical committee is small and that's usually the committee that has to bear the weight of a lot of these Proposals and changes and that that's kind of unfortunate But I think to answer your question explicitly I'm gonna repeat what I just said the reason why I think there's doubt in the fact Does governance on chain work?
+
+is simply because we don't have any real use cases as to why we need it at the application layer specifically. I think protocol, I think governance has worked relatively well in the Cosmos and Polkadot ecosystems for their protocol on the protocol level. You have to give kudos there makes it doing exactly what it's supposed to do and it's worked. You know, Polkadot had some parachains that kind of failed.
+
+greg 
+And they had to like revert some stuff and kind of unbrick the parachain so to speak and it worked governance stepped in did its job Amazing, you know, you guys just had Governance turned down prop something like 90 something and it's like that community turned it down that worked You know, like it might not have been wanting what what, you know, some people wanted but like it it's working Because it has something there's real change that is impacted
+
+The application there just doesn't have anything overly that impressive, like a grants program, it works. Yeah.
+
+Citizen Web3 
+I understand. I understand. I understand. But I like that. I like that. It's reassuring because it's nice to hear that we are ready, you know, that we don't have to wait another 100 years. And you mentioned Cosmos, you mentioned Polkadot before I get kind of to the last, I believe it's last kind of question before that. Not an easy one, not a difficult one, not an abstract specific, but very vague, I guess.
+
+Considering ChainSafe and your outreach in many different communities and in many different, especially in projects that are actually building protocols to build other projects, so to speak, what's your vision for the future of the Interchain? And, you know, I mean, by Interchain, I mean, of course, of course, the whole of anything specific here in the next, I don't know, few years.
+
+greg 
+Yeah.
+
+Citizen Web3
+five years, whatever, whatever you choose. You choose a timeframe.
+
+greg 
+Yeah. Um, all right. I probably have a differing opinion from a lot of people you hear in the Ethereum space. That's also probably because, and why we were at chains and we've done built chainsafe the way we have is because, you know, I, a lot of people would say just kind of like L twos on L twos or whatever, rollups on the ropes. Listen, I think the expressiveness you get from an app specific chain that you can build within the cosmos of the polka dot ecosystem is extremely powerful.
+
+And I think these are things that should be complimentary to every ecosystem. The future looks in my opinion, uh, like a seamless, I don't think we're picking networks at that point. I think we're signing transactions on a certain data type or a certain signature curve that is doing something somewhere, uh, interoperability, whether it be through IBC through Sigma, which is what, you know, something chainsafe works on, um, through XTMP over in Polkadot, it doesn't really matter.
+
+This stuff is eventually like we are going to or if it's a roll up like on L2 or an L5, you know, on Ethereum. The future is just like you're going to what's going to best serve you. If it's an ephemeral roll up and you need it only for like 10 hours or 30 minutes, you know, and it's doing something and fine. So be it. But like, I think this like war on.
+
+You know, which app chains better or whatever it's the tech stack, you know, DD, are you better working in what Cosmos offers you, what optimism opts you or what polka dot offers you. You know, that's how you have to decide. And at the end of the day, the interoperability solutions that we're building now and that we're going to have in like the next three to five years. Are you going to make it so that front ends are just slick, you know, wallets or, you know, you're not managing a private key, you're just
+
+pushing like a face ID, you're just doing face ID and all of a sudden next thing you know you're in access and you wanna swap die for polka dot, it's just for dots or for atoms, it's just gonna happen. You know, you're not gonna know that some cross atomic swap happened or, you know, you brokered some weird bridge under the hood three different times, it's just gonna show up in your account. And that's the future of apps really, and we really need to get that like through our heads that.
+
+greg 
+Our independent networks can't survive without each other. We've seen that that doesn't work. Everybody's bridging Denver. Look at Somalia, really good example. I love Somalia. Zach's project in Cosmos. It's DeFi Saver, which I thought was a great project, is an incredible project on Ethereum, on Cosmos, because we can do more advanced stuff off chain. Off chain.
+
+you know, the Somalia chain and then, oh, okay, we're ready to update our like Maker Vault or our complex like urine position on Ethereum. Cool, send a IBC message. Like that's the future. You know, you just don't know what you're using. And you just pick the chain that makes the most sense to like build your custom logic too. Maybe it's cause you know, go better than Rust or whatever it is. That's my two cents. Little bit of a ramble.
+
+Citizen Web3 
+No, absolutely. Thank you. Thank you. No, no, no, no, no. This was, this is thank you for saying that. This is definitely something we as a project see and this is something that we advertise as our goal and direction in community style, of course, we bridge in communities. But yeah, I'm going to ask you the last three questions there, like a small blitz. You choose to whether to answer one each one in a second or a minute. It's up to you. So it's not like a blitz in the game. It's like three questions. It's going to go three to one.
+
+because it could be three things, two things in one. So first one, three projects, which recently you have noticed something technically interesting, please don't say Ethereum, Cosmos, Bitcoin, Polkadot or whatever, I don't know, Nier. Something that really doesn't have to be three really, but at least a couple of projects that technically you saw something that you were like, yeah, that's cool.
+
+greg 
+Do you want to ask me all three questions? Okay, I'll blitz it right now. Sorry. Yeah.
+
+Citizen Web3
+Yeah, we'll go straight away. It's gonna get more complicated, that's why. It's gonna get more complicated, man, that's why.
+
+greg 
+Umm...
+
+Citizen Web3 
+It can be one at least, come on. At least one project that arouses your curiosity.
+
+greg
+Yeah. Okay, Parallel, the card game. They have some really cool in-game economics they're building. I think what they're doing there is actually really interesting. Next one would be... Let's peek my curiosity recently.
+
+Shameless plugs on both, you know, Element Finance. I think their governance system is actually really awesome. I think a lot of people are gonna start using it there. We have a lot of people using it. It's like a governance framework. I'm on the governance board there, but still, the stuff is like light years ahead and they're going in the right direction. Shameless promotion. And because of Enby, yeah, huge. I said it's shameless promotion.
+
+Citizen Web3 
+Shameless promotions, shameless. Absolutely. Absolutely.
+
+greg 
+And only because it launched today, firm. I've beta tested it back. I've gotten zero affiliation, Hori is a friend. But it's actually really slick. I think it really augments NOSA Safe. Those will be my three Ethereum-based for now. But well, no.
+
+Citizen Web3 
+Cool. Two things, two things in your daily life that you do that are gone, gone, gone, gone, gone, go for it, go for it.
+
+greg 
+You know what? One fourth one. Sorry. One fourth one. It's old, but I remembered it about it recently. It's called Canon. Use Canon. Use Canon. Um, it was a hackathon project. I judged at ETH Denver last year and they basically are trying to like Dockerize your test net setup for like contracts. Uh, he's from synthetics really cool project. Cause if you bootstrap that, then you can have your custom environment of like how you want maker to look like. You can have it pre-seeded with like,
+
+Citizen Web3 
+What's this one?
+
+greg 
+a million volts right out of the gate. Really cool project. There we go. There's a non super shamelessly plug one. Ha ha ha.
+
+Citizen Web3
+Nice. I love it Greg, thanks. Sorry, man. Two things in your daily life that motivate you to keep on building Web3.
+
+greg 
+Um...
+
+greg 
+Self-care that encompasses a lot of things like fitness I'm an active like, you know sauna cold plunge type person. I do a lot of work. I work out quite a bit and Not just gym like cardio too, you know no offense to anybody, but get your cardio in and One more
+
+greg 
+self-care and I think that's what like mental health like that's so important that keeps me motivated and honestly it is but like I'm just it's like you know like yeah we need it.
+
+Citizen Web3 
+Wow, that's a big one.
+
+Citizen Web3 
+Yeah, whoever's listening to this should see our faces now. It's like, mental care, you need it.
+
+greg 
+Yeah, yeah, um, honestly what keeps me moving is uh, just
+
+greg 
+talking, you know what, like I talk to my parents like every day, at least for like 20 minutes, probably each one individually, and just telling them about like what's going on or hearing what they're doing and just like you know that little bit of share that that keeps me going every day. It really does you know because it gets you kind of out of your echo chamber. They have no idea what I do. They're super confused. So it's really reminds me you know when they go like oh that's cool. Yeah it's like nice.
+
+Citizen Web3 
+It's lovely.
+
+Citizen Web3 
+No, it's true. It's true. It's really lovely. I love it. And last one, last one, I promise. One person or personage or character or book writer, a coder, a content creator. I don't know. I don't care. It doesn't matter if it's dead or alive, real or not, that influenced you in your life and somehow and keeps on maybe even influence you. I don't know. Maybe you can read this book and you can suggest it. Maybe it's a GitHub account. Maybe it's a dead, invented character. Doesn't matter.
+
+greg 
+Yeah.
+
+greg 
+Yeah, really, really tough one. I've thought about this a lot. Personally, I think it's one of those things that like people just like to say it's like, hey, you know, but you know, there is one. And I don't know if I want to credit to the author or if I want to credit to the fictional character. As a kid, I read a ridiculous amount of Sherlock Holmes based literature.
+
+Not that it's like that good all the time, but it's like the creativity of the character and the proms, I think, are what gave me perhaps some creativity in my life, you know, in terms of like how to think about things. Not that like I can do that. I mean, the guy's crazy. It's fictional. He smokes like heroin or something like that and then like an opium. Yeah. And then just figures out.
+
+Citizen Web3 
+Opium, yes, a lot of opium. It doesn't solve crimes.
+
+greg 
+No, he doesn't solve crimes just in his head. But like, I think the point is like, it's the creativity and of the literature. Yeah, it was a big deal. Yeah.
+
+Citizen Web3 
+Ha ha ha!
+
+Citizen Web3 
+I think Arthur Conan Doyle was a genius for sure, definitely. Somewhere there. Somewhere there. Greg, thank you very much. I'm really, really, really, really thankful that you managed to make it to us. And let's, for everybody, everything, of course, that you mentioned, we will have as links to the episode. Other than that, everybody follow Chain Self and see what are they developing. They're developing some fucking good stuff. So thank you.
+
+greg 
+Oh yeah, that's the names. There you go. Yeah.
+
+greg
+I appreciate it. Thank you so much. And maybe before we go, how about your favorite non-Wood 3 company?
+
+Citizen Web3
+Oh wow, non-web3 company or web3 company?
+
+greg 
+Ha ha ha! Non-web, no, no web three, web two.
+
+Citizen Web3 
+Wow. Wow. You put me on the spot. Okay. That wasn't expected. Can I say the Inquisition? You know, like, for trying to, you know, I'm joking. This is not Web 2. This is a bit earlier than that. I don't know, man. You lost me. You got me. You caught me on the spot. You really caught me on the spot. I don't know. Okay, I will send you. I will send you. I will send you. Okay.
+
+greg
+Tweet it at me later. Tweet it at me later. I'm curious to hear what you say. Yeah. Awesome. Well, thanks for having me on. I appreciate it. I won't hang up yet.
+
+Citizen Web3
+Thank you very much. Don't hang up yet. Thank you. Thanks.
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.

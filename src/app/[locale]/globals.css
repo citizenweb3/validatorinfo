@@ -67,6 +67,29 @@ html.light {
     }
 }
 
+@keyframes ai-bar-pulse {
+    0%, 80%, 100% {
+        transform: scaleY(0.25);
+        opacity: 0.3;
+    }
+    40% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ai-text-glow {
+    0%, 100% {
+        text-shadow: 0 0 4px rgba(229, 196, 107, 0.15);
+        opacity: 0.65;
+    }
+    50% {
+        text-shadow: 0 0 8px rgba(229, 196, 107, 0.5),
+                     0 0 16px rgba(229, 196, 107, 0.2);
+        opacity: 1;
+    }
+}
+
 @layer components {
     .custom-popper .react-datepicker {
         @apply bg-background rounded border-bgSt;

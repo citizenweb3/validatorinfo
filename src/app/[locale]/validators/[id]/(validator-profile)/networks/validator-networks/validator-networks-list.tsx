@@ -13,9 +13,11 @@ interface OwnProps {
   sort: { sortBy: string; order: SortDirection };
   currentPage?: number;
   perPage: number;
+  aggregated: boolean;
+  networks: string[];
 }
 
-const ValidatorNetworksList: FC<OwnProps> = async ({ id, ecosystems, nodeStatus, sort, currentPage = 1, perPage }) => {
+const ValidatorNetworksList: FC<OwnProps> = async ({ id, ecosystems, nodeStatus, sort, currentPage = 1, perPage, aggregated, networks }) => {
   const { validatorNodesWithChainData: list, pages } = await validatorService.getValidatorNodesWithChains(
     id,
     ecosystems,
@@ -24,12 +26,14 @@ const ValidatorNetworksList: FC<OwnProps> = async ({ id, ecosystems, nodeStatus,
     perPage,
     sort.sortBy,
     sort.order,
+    aggregated,
+    networks,
   );
 
   return (
     <tbody>
     {list.map((item) => (
-      <ValidatorNetworksItem key={item.chainId + item.consensusPubkey} item={item} />
+      <ValidatorNetworksItem key={`${item.chainId}-${item.consensusPubkey}`} item={item} aggregated={aggregated} />
     ))}
     <tr>
       <td colSpan={11} className="pt-4">

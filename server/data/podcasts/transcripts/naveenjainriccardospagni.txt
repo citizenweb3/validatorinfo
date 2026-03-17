@@ -1,0 +1,469 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/naveenjainriccardospagni
+
+Episode name:
+Caffeine, Ethos and Privacy with Naveen Jain & Riccardo Spagni
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast. Special one today. We have a double date. Yeah, we do them very rarely for our listeners who know us, but it's a special occasion. I have two very, very, very, very cool guests with me today, Naveen and Riccardo from Tari. I'm going to introduce them as from Tari. Some of you probably know them already, but I'm going to say hello and we'll dive into it. Ricardo, Naveen, hi. Welcome to the show, guys.
+
+Naveen 
+Thank you for having us. We're really excited to be here.
+
+Riccardo Spagni 
+Thanks for having us.
+
+Citizen Web3 
+Yeah, excited. Guys, I'm going to do a traditional thing. I'm going to ask each one of you to introduce themselves, but not specifically, maybe not so much professionally only, but in generally Web3, maybe a little bit of a history. How did you get into Web3? What are you? don't know. Anything you want people to know about you, of course, but in relation to Web3. How did you get here? How did life get so dull?
+
+Naveen 
+Riccardo, you wanna start or you want me to start?
+
+Riccardo Spagni
+Sure. I mean, I can. Yeah, Ricardo Spagni, I'm also known as Fluffy Pony, which is a moniker I've had for a while. I started with Bitcoin in early 2011, built a bunch of things along the way. I built a bunch of tools for miners. I built a payment gateway. I invented something called OpenAdias. And then...
+
+I guess most famously I was the lead maintainer on Monero from its outset till 2019 when I stepped back to build more things. And then have been building and creating with Naveen since 2017. We created an emoji based identity system called Yatt. And more recently we created Tari.
+
+Naveen 
+and I am Naveen.
+
+And I got into our wild and crazy industry as a miner. I was mining Monero and that's how I became aware of the professional known as Fluffy Pony. And I really was a huge fan of his view of the world and
+
+Naveen 
+you know, the Monero project overall. I think it has a, you know, very, very clear objective. And I think it has fulfilled that objective admirably. And I really just love projects like that, you know, that have a very strong ideology, very strong philosophy behind them, and then have like a very strong core group of people that care deeply about it.
+
+And I started working with Ricardo in around 2017, as he mentioned. And yeah, we've had the opportunity to create a lot of fun and amazing things together. Most recently, we're both contributing to this thing called Tari that we're both pretty excited about.
+
+Citizen Web3 
+It's a bit hard to do an intro after Fluffy's introduction, I'm not planning to do one. I'm just saying I understand like Navin that you had a hard job there. That's what I was going to say. But
+
+Riccardo Spagni 
+What?
+
+Naveen 
+You know, that's what it is. I teed him up and that's what it is. He's the headliner, you I'm the opener.
+
+Citizen Web3
+I'm just the opener, yeah, yeah. I'm just the taxi driver, yeah. I get it. I get it when I lot with my girlfriend.
+
+Naveen
+You know, it's like on the Coachella poster. It's like Fluffy Pony and the big marquee. And then in the random EDM tent, in the tent on the side with the random DJs that no one knows about, it says Naveen and like small Times New Roman.
+
+Citizen Web3
+you
+
+Mm -hmm
+
+Citizen Web3 
+But you know, but you know, on a a a joky slash like serious note like Ricardo, does it not feel because like, I understand totally like but jokes aside, right? I mean, you have a huge reputation and like, does it feel do you feel that? Do you feel that when you come when you guys come on together? Do you not feel the spotlight constantly on you like people instead of like, okay.
+
+Naveen
+As long as it's not Comic Stans, you're good. No Comic Stans.
+
+Citizen Web3 
+Okay, let's talk about the Tari to Navin or anything else. then suddenly you come on, do people switch on to you or no? Or it's like normal? I don't know. you find that annoying? I would find it annoying to be honest.
+
+Riccardo Spagni 
+I mean, that's a, that's a good question. I, I feel like they're yeah. Like, like obviously because I've done a lot of stuff that's public and, I am very noisy on Twitter, which, you know, to mostly to my detriment. I, I do end up attracting a lot of, attention, not all of it positive, you know, I mean, I have a lot of people that, that, that have many negative things to say about me.
+
+But I feel like at the end of the day, everything that I've done and I put done in inverted commas, but everything that I've accomplished has not been by myself. And I always try and make extraordinary effort to give credence and to sort of highlight the people that have been a critical part of everything that I've accomplished. Monero is not a product of me.
+
+you know, Monero is a product of literally thousands of people contributing in various ways. And I never want anyone to think that like I somehow sat and, you know, slaved away writing code day and night. and, know, did all this stuff like that's not the case, you know, and even with, with what we're, what we're doing, like, I, I often feel like, Navin.
+
+works significantly harder than I do. He, puts in like way more hours, than I do. And he does it all without needing caffeine, which blows my mind. Cause I like, I can't get through the day without a coffee.
+
+Citizen Web3
+Wait, I have to cut this because like Navin, what is this bullshit about not taking any drugs or caffeine throughout the day and working? Can you please enlighten all of us here who have been here for a while and have twitches in the eyes and like twitches in the legs and like, dude, mean, I'm not even going to say anything, but just tell me how do you do it, bro? No, seriously, serious note, motivation is a big part of the podcast and...
+
+you know, talking to founders and understanding how they get throughout the day is for me like a big part also of this podcast. Like in all seriousness, like, of course, jokes included, but, you know, not having caffeine. How do do it, bro?
+
+Naveen 
+Yeah, think, I mean, first of all, I feel very, very lucky to have the opportunity to do what I do. You know, I am very passionate about what we're doing and it's a lot of fun to have the opportunity to work with amazing entrepreneurs like Ricardo.
+
+you know, terms of the caffeine thing, you know, look, I kind of have the view that we're all sort of like RPG characters. And, you know, I'm not the best at basketball. I'm not like the most athletic person on the planet. But perhaps my one little, you know, genetic blessing is the fact that I have a higher energy level and don't need caffeine as as often as
+
+others do. But yeah, I know in all seriousness, yeah, I just largely drink water. So that's that's really what what I need throughout the day.
+
+And yeah, in terms of motivation, I generally believe that if you're really doing something that, you know, as you're calling, then you kind of have, you know, nearly unlimited energy for that thing. And I also believe that if you're operating within your zone of genius, then generally your energy level will be up anyway. So those are, those are two, I think, contributing factors besides the genetic blessing that I have in this one.
+
+very minute area.
+
+Citizen Web3 
+And you mentioned, like, I think it was when you were doing the intro, I believe, or, or yeah, I think it was when you were doing your intro, Navin, you mentioned projects with strong ethos. Now, I definitely am the one to agree. Monero is one of those. And I'm not the kind of person who will do just because like Ricardo, you are here, believe me, like if you listen to the podcast, you will understand.
+
+But do you think it's a big problem today in the industry projects with any kinds of ethos, let alone strong kind of ethos. So a question to you, like, know kind of straight off the ship here, but what are other projects without like, I don't know, without, course, like what you do and what you are building that you believe today in the web tree industry has strong ethos? Apart from Monero.
+
+Naveen 
+I mean, I guess my view is very simple. think that...
+
+You know, if the technology or the project is, you know, pro -human, is something that is really built for human beings to use and really supportive of human nature. You know, one of the reasons why I think Monero is so great is because, you know, yes, we talk a lot about, you know, privacy being a basic human right and, you know, privacy being about freedom and all these other things.
+
+but if you get down to it, know human beings change over time and the person that you know, I was last week is different than the person I am today and It really just doesn't make a lot of sense For every financial transaction to be a scarlet letter Like I mean imagine every single transaction that you do is a tattoo on your body Does that actually make sense? Like is that actually like a pro?
+
+I don't know. just I look at it I go, you know, oftentimes, you know, have a conversation with someone who's like a surveillance chain enthusiast and I'll ask them I'll say Have you ever made a mistake in your life? And they'll say well, yeah, of course. I'm human. I'm like, okay, well
+
+Tell me about the mistakes you made when you were in high school. Tell me about the mistakes you made when you were in college. Tell me about all the financial mistakes you've made in your life. Because we've all made financial mistakes. We've all done things that we probably regret on some level. And then when it comes to the law, I also oftentimes feel like I have to remind people that the law on earth is a patchwork quilt.
+
+Naveen
+What is legal in one jurisdiction, it may not be legal in another jurisdiction. You for the longest time, know, marijuana was illegal in the state of California, you completely illegal. And they put a lot of people in jail for, for, you know, possessing, it was called possession, just possessing marijuana. And then the amount of marijuana you possessed, you know, would dictate whether or not you got like a long prison term or a short prison term, you know?
+
+and and
+
+You know, you just think about that. You're like, okay, well Gosh, could you imagine if every financial transaction you ever did using something like a cbdc issued on Ethereum? Was tracked and analyzed, know for the rest of time like does that actually make sense? I mean think about the statute of limitations for things like taxes, you know The irs typically only goes back seven years and looks at people's tax returns, you know seven years in the past But i'll tell you what if they could go back 25 years
+
+because all the transactions were recorded on Ethereum, they would love that. And I'm not saying that people shouldn't pay their taxes, obviously they should, but people are human beings. People make mistakes, you know, and I just don't understand why we would be advocates for anti -human technology in this industry and say, no, you can't make mistakes. Every single financial transaction you ever do in your life has to be pristine and has to be perfect.
+
+because it's gonna be on the open, man. It's gonna be on the open. I just think that's a crazy way to live.
+
+Citizen Web3
+Let me, let me return to that and put you a little bit on a spotlight. Gonna play a little bit devil's advocate here and on two sides straight away. I'm going to try and sit on two chairs at the same time since I have two guests. But I'm going to, to you Navin. So like, but by the way, I want to recommend to everyone paying the taxes as long as their government can put their budget together. If they can do that, guys, you should pay your taxes. That's all I'm saying. But if they cannot, you should, you should, because I haven't seen one government yet does it. But anyways.
+
+Of course, pay your taxes and do illegal things, like, what do you think about like things like, you know, El Salvador, for example, is that like a naïve buquel, you know, that's like a big how to say, I mean, some people say it's a path to, you know, decentralization. Some people say it's a lot of bullshit. Some people say it's ethically incorrect. Some people say it's I don't know, there is a lot of opinions and
+
+I feel that what we are talking about, you know, about mistakes and about, course, everybody should have the right to mistake. Right. But like, where is the borderline? Where is like the line that we say, okay, something is ethical, something is unethical. How do we judge without putting so much subjectivism? Right. The reason I'm bringing on Salvador is because it's arouses a lot of emotions in, doesn't matter how long you've been in this industry.
+
+regardless of your opinions about this industry, it will arouse some kind of emotions like you will either say bullshit, clown or no perfect adoption. know, there'll be a lot of people saying different things. So how do we draw the subjectivism line here?
+
+Naveen 
+I'll I'll reply and then obviously I know Rick has a lot of perspective on this too, but I just think that when you reduce human beings down to entries in a database, you lose a lot of information. I'll give you an analogy. It's sort of like listening to music that's been heavily compressed.
+
+you don't get the full picture of the song. And it doesn't sound right. And so what ends up happening is, is if you reduce all the financial transactions, if you reduce human beings to just like judging them entirely by entries in a database, you lose enormous amounts of context. So for example, there was a situation that happened a couple of years ago where there was like a fairly famous
+
+NFT collector, you know, collected a lot of famous art, you know, digital art in our industry. And people obviously track their wallets, you know, it's on Ethereum. That's what people do. People track everyone's wallets on Ethereum. And this person was caught transferring tons of...
+
+art tokens to another wallet. And then that wallet was caught just fire sailing all the art, like, you know, undercutting the floor on countless NFTs, you know, from from very celebrated artists in the industry.
+
+And people start attacking them. They're the collector. People start attacking the collectors saying, hey, WTF, man. You you're supposed to be, you've built your entire image, your entire brand around being pro artists. And here you are destroying artists' floors, destroying their careers, destroying their ability to monetize their work by undercutting the value of their work.
+
+Naveen 
+Well, a week or so passed by and the person finally emerges, know, they had disappeared and they finally emerged and say, hey guys, you know, look, it's none of your business, but it just so happens that I'm going through a divorce and you know, that wallet that's fire sailing all the art is like my ex -wife's wallet. And by the way, it's none of your business, but you know, because this is a surveillance system, I now am forced to provide the context.
+
+And you know, I think about that. think about situations like that or, think about, just imagine the future. I what you have to do in our industry, because we're all futurists here, you have to kind of like imagine, okay, if we keep going down the road we're going and you have products like, you know, Fiat backstable coin products issued on surveillance chains like WorldCoin or Ethereum.
+
+Where do we end up? mean imagine a world where you open up a dating app and Next to your happy smiling face and your you know carefully curated bio You have your entire financial history there, you know
+
+I just think that it's, imagine you apply for a job and you know, like before you even choke for the interview, you submit your CV, your resume, and before you even choke for the interview, they're able to go back and look at your entire financial history and judge all of your actions, you know, based on their perspective on what's right or wrong. Maybe you believe in a different religion than they do. Maybe you come from a different culture and have different cultural norms than they do. Maybe you come from another country.
+
+and there's different norms and perspective in that country, and now you're being judged based solely upon a bunch of entries in a database. That sounds pretty anti -human to me. Doesn't it sound that way to you?
+
+Citizen Web3 
+Absolutely. think what, what is, this is the reason I think I was asking what you think about El Salvador. I got to be honest, my opinion about that is that it's a big clown. And, what is happening is exactly that what you're describing. Unfortunately, people put being put in a database as entries and, in, a big surveillance chain. that's, and that's scary. don't Ricardo. you have, anything to, to, add to that opinion?
+
+Riccardo Spagni 
+So I think there's a couple of things that occur to me. The first is I feel like we should never have a situation where software developers are responsible for the enforcement of rules. And so, you know, when we have some of these discussions, I think about the, you know, I try, I'm happy to play both sides and sort of
+
+you know, think about what is the implication of, of this or what is the implication of that. And most of the time when I think about the implication, boils down to a software engineer needs to build the legal framework for every country on earth and every possible scenario into a piece of code. And that just is it's A impossible and B, you know,
+
+regulations change all the time. If you're considering every planet on, in the world, sorry, every planet, every country in the world, then like, I'm pretty sure regulations change on a daily basis somewhere in the world. And so like enforcement by software is impossible. So I, I take a step back from it and go like, okay, cool. So that's impossible. We can't do that. so what's left, you know, like how, like, like, how is that going to play out? And then.
+
+the other thing, you know, that's sort of quite cogent that, Naveen Naveen touched on is there, there's actually a lot of regulation that is pro privacy. And I think about stuff like, the right to be forgotten, very big in Europe, the right to be forgotten. Now, how is a blockchain ever going to enable the right to be forgotten? If it's like, it's by, by definition, by default.
+
+It doesn't forget anything. It appends all this data and you know, where there's no privacy, then it's like, it's the opposite. In fact, it's like, it's actually significantly worse than something like Google or, you know, some of the, the centralized organizations that we might look at and go, they're really bad. There was this interesting thing that happened a few years ago. There was this researcher who through GDPR managed to uncover that PayPal in Europe,
+
+Riccardo Spagni
+shares data with 600 organizations. And some of those organizations are governments, some of those organizations are law enforcement, but some of those organizations are just like data brokers or advertising firms or whatever, you Now that doesn't mean that PayPal is sharing your specific transaction history if you're in Europe with all 600 of them, but they're sharing it with a portion, maybe even most of them.
+
+which is kind of frightening. You know, it might be aggregate data. It might be hyper -specific data, but still PayPal sharing a lot of data. And somehow we've created an environment with surveillance chains where it's worse than that because it's more than 600 organizations. And you do not have to be law enforcement to look at the blockchain. In fact, you don't even need to be law enforcement or a regulatory body or any sort of government agency to gain access to some of these chain analysis or chain analysis tools.
+
+A lot of them will happily sell you a subscription to access their tools. You just have to of pitch up and go like, we need it for checking stuff, background checks. And they'll charge you a not particularly expensive subscription. And now you have access to all sorts of meaningful information. So, not only is it impossible for software developers to enforce regulations, but we've created something
+
+that by and large is anti existing privacy regulations and is objectively worse than traditional financial systems that don't care about privacy at all, quite the opposite. So I just don't understand how we've even gotten here. And it's really not even about taxation or anything like that. I think it's quite simply about enabling
+
+mass surveillance for people that, quite frankly, people and organizations that quite frankly have no right to conduct such surveillance. And we can argue about whether law enforcement and regulators have that right. But I think that a highly motivated individual who is upset with his girlfriend or a highly motivated organization that wants to snoop on their competitors, they don't have the rights to mass surveillance either.
+
+Riccardo Spagni
+and, or at all, and that we, you know, like we should not be building systems that enable that. So that's, that's kind of my, my intuition and feeling around this.
+
+Citizen Web3 
+I started to laugh because I thought you were going to say that a highly individual, PC -less girlfriend will have more efficiency than the CIA put together or something like that. But I can see that happening. By the way, as you were talking, I thought, kept on going there. And it's about what you said. This is a very good question, I think, a very good topic, in my opinion, that I would like to ask both of you. How did it get to this? Because let's keep
+
+the foreplay here. Okay. We all understand we're kinda in a shit, right? So my personal opinion is actually something you said, you you mentioned law books and enforcing laws. I think we can get even do a zoom out, you know, people shouldn't do that not because it's impossible, but because the law itself isn't perfect and has never worked in any single country perfectly. So trying to adjust that suddenly to web three, let alone trying to enforce it in code.
+
+Let alone nobody fucking knows the law. Is there any one person who knows the law somewhere in one country? No, but it's bullshit, right? A person should fucking understand it. I think that's how we got here. think by making, and you know, I was talking to Francisco, Francisco Cabanas from Monero a couple of months ago. And we were talking about the fact that this surveillance industry today, as there was created on top of blockchain as a result of all this, whatever it is.
+
+that in your opinion began this is getting bigger than blockchain itself or can get bigger than blockchain itself at one point. a question like to kind of to you, how did you think we got here? If we understand that, you know, we are in this deep surveillance kind of
+
+I don't know, state, not state, industry, Web3, you want to put, slash whatever you want to put here. And maybe the second part is, you think something can be done at this point in order for us to, as an industry, to reverse like 180 degrees and start going towards privacy as a basic human right kind of thing?
+
+Naveen 
+Look, here's the good news. I think, you know, we're kind of on this precipice as a society as it relates to sort of developments with artificial intelligence and what that means for people's jobs and well -being in the future.
+
+You know, there's a reason why Sam Altman was funding UBI experiments going all the way back to, you know, 2014, 2015 era in Oakland, California, right? And, you know, obviously he's brilliant. He's genius. But the reason why is because a lot of people in the AI industry know that
+
+Ultimately, there will be meaningful disruption to people's jobs and their ability to earn a living wage as LLMs and AI tools continue to improve. And I think as people start to see that, there will be a natural push back and sort of a question that's being asked, which is, what does it mean to be human? What does it mean to have purpose?
+
+What does it mean to be on this journey that we're all collectively on as individuals and together called life?
+
+And what role should technology play? Should we be attached to devices created by Google and Apple 24 hours a day? I mean, anyone who's listening to this podcast can look at their screen time data and be in shock at the number of hours that they spend in front of screens. We are all in that place together.
+
+Naveen 
+What does it mean to be present? What does it mean to experience nature? What does it mean to have relationships with other human beings? What does all this mean in sort of this like future state? And what does it mean when training data sets are just out in the open with all of your financial transactions from the beginning of time and now you end up in a world that starts to look a lot like Minority Report? I am not a believer in pre -crime.
+
+I think pre -crime is a bad idea, it's a bad concept. I also think it's anti -human. And so I think that these things kind of move in pendulums. It's kind of like a pendulum that's swinging back and forth, right? And all the people who are AI accelerant people, there's that ACC movement, like...
+
+There's like privacy acceleration as people there's the AI people You know people have like this, you know Damn the torpedoes attitude, which I think is like fine. Like I obviously like I'm not a Luddite I'm like totally pro aggressive innovation and let's let's try things at the same time
+
+I think what we'll find is that human beings will naturally react in sort of interesting ways to those experiments, right?
+
+You'll have some people who get addicted to just talking to bots, you know, like they never leave their homes. It's like those people in Japan and other places in the world that just like end up living in homes, you know, in their homes as hermits and just talk to chat bots all day, right? You'll have that as an outcome. I'm sure it's already happening and people will say, wait, that's probably not good. That's probably not a good outcome, right? And then I think the same thing will happen as it relates to surveillance.
+
+Naveen 
+You know as as these like LLMs get better and better and better over time and the training data sets are just out there and people start Training them on blockchain data and starting to anticipate what you may or may not do I think you'll start to see people push back on that and say hey wait, that's crazy. That's not good for us That's not good. It's kind of like what's happening now in the food industry, right in the food industry You have this huge pushback now
+
+against processed foods. Well, let me tell you, in the 90s, you know, when things like high fructose corn syrup and, you know,
+
+artificial food dyes and all of that started to become, started to emerge in processed food products like cereals and candy bars and other kinds of things as sort of like the dominant way to make food products. People were excited about them. People were, you know, I remember drinking, there was a drink called Squeeze It that I used to drink when I was a kid. And I'm telling you right now, if you saw this drink now, you would think it's paint. It was so...
+
+bright like vividly colored with artificial dyes. It's insane. It's absolutely insane how bad it was. Fast forward to today and you have this whole movement around, wait a minute here, what the fuck are we eating?
+
+Are we supposed to be eating, you know, gasoline derivatives and coal tar derivatives? Is that what we're supposed to be putting in our bodies? Is that good for us? And there's a bunch of people out there saying, wait, no, it's not good for us. And by the way, hey, government regulators, you're not protecting us, WTF, right? So I kind of feel like the problem is it just takes a really long time for this pendulum is very slow moving. Does that make any sense?
+
+Citizen Web3 
+You know, you were mentioning also things like human, important values for humanity. And you said, you know, love, nature, experience that unfortunately today though, what I see, right, and what at least every book in psychology tries to teach you or not psychology, but
+
+more sociology and they try to base values on language, on race, on what people do, you know, and it's bullshit, of course, that creates, in my opinion, all those divisions between people instead of united. So how do we, in your opinion, change that to nature, forests and love? And I'm going to type the question to Ricardo.
+
+Naveen
+Yeah, it's a really, really good question. I agree that there are many people out there whose sole focus is on division.
+
+you know, dividing us as human beings. I think that the most important thing that one can do is listen to others. You know, like what I've found is that when you, when you connect with someone, there are two things that I think are really interesting. So one is sometimes when you meet someone and you kind of have a feeling like, I don't like this person, you know, I just, it could be anything about them, right? Like it's, just like, I don't like the way they talk or I don't like,
+
+what they have to say or I don't like, you know, perhaps the way they look or the way they dress, whatever it is about them.
+
+There's this thing that I learned called eating the projection Which is that if you actually look at every other human being effectively as a mirror? And you you kind of look at the person who for whatever reason you don't like it's actually saying something about yourself and And and really what you need to do is look in the mirror and say gosh What is it about myself that I see in this person? That I I'm just not happy with or comfortable with at this moment
+
+And that's effectively called eating the projection. And so I think that's like an important thing that I think pretty much everyone should learn. And then the second thing is just listening, know, listening to others, what they have to say, letting them speak, letting them express their thoughts, their views, because I generally think that most people are more aligned than they may
+
+Naveen 
+believe, know, like if you like here in the US, for example, if you if you sat someone who's like a hardcore liberal down with someone who's a hardcore right winger, and just sat them in a room and just like put all the rhetoric aside and just had them talk as like two human beings having like an open conversation and actually listening to each other. I think you'd probably find that they are more aligned than you think.
+
+And so I think that's kind of like a key part to that. But yes, I agree completely that there are many people out there who essentially profit from division. And I think it's important to call those people out and say, you know, and by the way, a lot of these social networks, that's what they do. Elon Musk profits from division. That's what he does. Like the algorithm is built to trigger you, right? So does Mark Zuckerberg. Like these are two guys that literally make billions of dollars profiting from
+
+Division because that's the entire like way that these algorithms are constructed to trigger you to poke at you To get you to come in and and it's all negative It's all negative like the clout chasing the desire to chase likes to chase followers these superficial metrics
+
+And then the triggering that comes from the content that is served up, like everybody knows the content that's being served up is entirely personalized based on what you react to most, right? And so it's like this grand experiment, you know, it's kind of like a Pavlovian dog -esque experiment that we're all kind of a part of, which is like a very, you know, interesting conversation to have, but I think it's like factually true.
+
+Riccardo Spagni 
+I mean, isn't the, wasn't that thing about, like the YouTube, algorithm favors controversial videos, not, videos that have mostly positive ratings because, controversial videos, people will watch more of it because they'll either be like, you're such an idiot. I can't believe you said that. Or they'll be like, yeah, this guy's totally right. But if it's just like a happy video about puppies, then like, just doesn't perform as well.
+
+Naveen 
+100%. I mean, and this has been, again, this has been brewing for a very long time. And for the longest time, it's like, you don't watch the news to hear good news. You you watch the news because they're going to report on a murder.
+
+You know, like that's that's why you watch the news or my my gosh, there's a tragedy somewhere on earth You know, like that's what the news is reporting. The news most often is not reporting In fact, it's funny when you watch like old news You know when they when they when there is a happy story to report
+
+It's so shocking to even the anchors that they have to call it out. They'll say, they'll say, okay, I've just told you, you know, it's a 30 minute program and, 24 minutes, not including the commercial breaks. And, you know, I just spent the last 20 minutes or 22 minutes just filling your brain with like negative shit. Okay. And,
+
+Citizen Web3 
+Hehehehehe
+
+Naveen 
+And now something positive for a change, you know, let us celebrate the, local high school football team winning the championship, you know, like, let's celebrate this person who, you know, was successfully cured of cancer at a local hospital. And it's like, they have to call it out, like, because they're, they're shocked. Right? So it all comes, you know, from that and that sort of the evolution, you know, of that, right.
+
+Citizen Web3
+Hahaha.
+
+Citizen Web3 
+Hahaha
+
+Citizen Web3 
+But I think, I mean, you don't have to go very far. It's been numerous times previously, like, you know, we, as a project, we do different things and we used to do those debates, like live debates. And there was one debate where it so happened to be that people started to agree with each other and everyone who was listening to this said, what the fuck? This is not interesting. Can you please bring on people who will fight?
+
+And I'm like, but people are agreeing that's a good thing. No, fuck that. That's boring. You know, so yeah, yeah. But, you know, coming back to semantics, Ricardo, if you can make out what I say, do you think that because this is also to do with semantics and how it influences how we think, I think, do you think that that education in that direction can change anything?
+
+Riccardo Spagni 
+So I'm assuming you're asking the question that you put in the chat. So, you know, it's an, that's an interesting one. Like do people, are people going to lean into words like confidentiality? You know, are dudes, does it resonate more with them than privacy? You know, is there like a negative connotation to privacy? And I'm not convinced that there is, you know, privacy doesn't,
+
+Citizen Web3
+Yes.
+
+Riccardo Spagni
+strike me as one of those terms or one of those words where someone will go like, well, know, the only people that need privacy are criminals. You know, I think it's become like a fairly big sticking point in internet topics. And I guess if you want to sort of see a real example of this, it's Apple and their
+
+marketing around privacy. You know, I think if anyone was going to identify the right word to use, it would be Apple. But they know that the word privacy resonates with consumers. They know that people are scared about, like there've been all these hacks, right? Where data has gone into the hands of legitimately bad people, criminals, and it's...
+
+It's kind of scary. People are worried. going, my social security number is, is in the hands of criminal. Every single, every single social security in a number in the U S is in the hands of criminal organizations because of poor security practices. And so Apple I think has, has hooked onto that and gone like the word privacy resonates with people and they, they craft messages around that. Like, you know, iPhone is for privacy or Apple is privacy and so on. And they use that as a direct contrast to.
+
+Google, know, it's like, and Facebook and so on where it's like, well, we don't really care about your face, your, your privacy, we're just going to use your information to sell ads to you. Although I will say it does seem like Facebook's having or meta is having a bit of a renaissance with that. So, you know, who knows, maybe one day Mark Zuckerberg will get up on stage and be like, Facebook is for privacy, you never know. But like, Apple
+
+Apple understands that that is a message that resonates with people. I think the problem, the bigger problem is that a lot of people don't realize that they need privacy. They don't realize how desperately they need privacy until it's too late. Until they're caught in a dragnet of mass surveillance that ends up painting them in a bad light because they clicked on a link, they did something, which...
+
+Riccardo Spagni 
+you know, they did out of innocence and naivety and, you know, curiosity or whatever. And next minute, like they're, they're caught up in something that they never intended to be caught up in that they're, they're actually haven't done anything that's illegal or criminal. They certainly haven't done anything that we would look at and go, you know, like that is morally objectionable. And yet they're, you know, they're, they're stuck.
+
+And it's really challenging and it's bad enough that people need to deal with actual mistakes causing them harm. I read something yesterday with one of the rental companies, like accidentally reporting cars are stolen. So somebody rents a vehicle from like Avis or whatever, they return the vehicle and then the vehicle return isn't captured correctly. Avis reports as the stolen.
+
+And they end up getting arrested and it takes like they can sit in jail for like, you know, two weeks before this gets resolved. And so like stuff like that happens, people already have to combat that. And now they have to combat these other things where like somebody might steal their identity and go and like do a bunch of bad things and they're on the hook for it. And that is about like, frankly, it's like pure privacy related stuff. It's got nothing to do with
+
+you know, anything else other than like just privacy mishaps. So I, I really feel like we need to help people to understand that your desire for privacy shouldn't only happen when the bad thing has already happened to you. The desire for privacy has to start now. And it's the same reason that you close your curtains. If you're a live, if you live on the street and like, and they, people can walk past and look inside. It's not because you're doing bad stuff inside your house.
+
+It's because like, hey, it's your home and you just don't want people walking on the street to look inside. Now, arguably there are times when, you don't mind that, but for the most part, you're gonna like close the curtains. You're gonna have like one of those, you know, lacy like curtains that kind of block the view from the outside because you just don't want people looking inside. You know, it's your personal space and we need to help.
+
+Riccardo Spagni 
+and educate people so that they understand that that extends beyond your home. It extends into your thoughts and your mind, and it extends into your financial privacy too. And that I think is, it's not a big gap. It's not a big bridge that they need to cross. We just need to help them to understand that.
+
+Citizen Web3 
+As Fluffy was talking, I was looking at my curtains and like, they thick enough? know, as my curtains closing the people, I'm like, I think they're good. I think they're good. You know, I totally agree. I totally agree. think that it's all about, you know, finding, it's like something what Navin, you kind of started with, you know, you were saying that in every country, you know, there is a different jurisdiction. Sorry, in every different jurisdiction, not every country, but there is
+
+things that are different. think the same here education has to adapt to the person not to be generalized, you know, for the whole kind of like, it makes sense. I want to ask you while we have like, as we're coming towards the end, you know, I want to ask you like, to ask a little bit about Tari and how Naveen does Tari play a role in the things we are talking about? How does it help, you know, this
+
+in general, this industry and not just in general, maybe like the things also you mentioned, not like just the industry itself, but also about being human, not becoming an entry in a database.
+
+Naveen 
+Yeah, know, Tari is absolutely designed to be as pro -human as we can possibly make it. That starts with the user interface. You know, the user interface for Tari is remarkable. It's the easiest to use crypto app ever created. The Tari miner, we call it Tari universe. The steps to use it are download it for free from the internet.
+
+Install it on your your Mac or PC and run it. That's it. It's that simple So it starts there
+
+It starts with and then it continues with accessibility. The fact that you can use Tari on your existing computer, your existing Mac or PC makes Tari a lot more accessible and fair than other things. And then it continues on forward with confidentiality. You the fact that Tari has meaningful confidentiality features as well. These are all elements that contribute to
+
+being a distinctly pro -human platform because it is built to kind of respect the needs of human beings. You human beings need a user interface that is intuitive and that is delightful.
+
+you know, as human beings, all appreciate beauty. Now, beauty is always in the eye of the beholder, but we appreciate beauty. There's a reason why companies like Apple and others invest so much time and effort into design. Why is Johnny Ive a superstar?
+
+Naveen 
+in the product world because he's a world class designer and design is a crucial component. You can't have world changing software that is hard to use anymore, right? Like we're past that point in time. You know, the confidentiality elements are crucial for all the reasons we talked about. You know, we shouldn't create a world where...
+
+you know, people are being reduced to entries in a database and every financial transaction is a scarlet letter. And, you know, the entire entire Tari database becomes fodder for an infinite number of, you know, LLMs and agents and bots in the future, right? Like we shouldn't want that outcome, right?
+
+And we should we should want these systems to be accessible. We should create a world where it's not just about the crypto elite. It's not just about the people who are already wealthy, the people who have already made a giant bag, whether it's in Bitcoin or Ethereum or Solana.
+
+What about the people in the next generation? You know, one of the things that Ricardo and I chat about, you know, relatively frequently is this idea, this hypothesis that we have that blockchain systems are generational. You know, what if, you know, like social networks are generational, like, you know, what, what if, what if that's true? What if, you know, the generation that was using my space, which is objectively different than the generation that's using Facebook, which is objectively different than the, than the generation that uses tick -tock.
+
+What if the same thing is true about these blockchain systems? you know, the fact that there is a 78 year old former president on stage at a conference shouting about Bitcoin speaks to the boomer nature of the protocol.
+
+Naveen 
+and the fact that it's almost impossible for young people to participate without buying other people's coins or KYC. How do they have the same opportunity that Ricardo had as an early Bitcoiner or as I had relatively early to a project like Monero or as others had?
+
+you know, being early to something like Ethereum or Solana. I mean, and all the people in the ecosystem don't think about that because all they care about is someone buying their bags. That's all they care about. And so we think about things differently. We say, well, gosh, you know, how do you create a world where, you know, if someone is in Gen Z, Gen Alpha, they have a laptop, they're anywhere in the world.
+
+You know, they can just download the software for free from the internet like original Bitcoiners did and start mining on their machine. So these are all the things that, you know, Tari contributors have worked really hard on over a pretty long period of time to do their best to make Tari as pro -human as possible.
+
+Citizen Web3 
+The I think at FaceParty, just to say like I'm going to be a bit of devil's advocate here, FaceParty was similar to Tinder, if you remember FaceParty. This is even before MySpace. This is like the first UK social network. It was like, but it was actually quite similar to what Tinder is today in a little bit like in the logic. So I like that sometimes. But I do agree because I've always been of the opinion, this is actually new to me as well, because I've always been of the opinion that blockchains are
+
+a generation less like the the first tool humanity possesses that doesn't have a lifespan. Now that you kind of bring it, I'm kind of thinking, okay, maybe you're right, because like, maybe I'm only thinking about myself. All right. And like the opportunities, I mean, I'm almost encrypted since 2011, 12, roughly, right? So I've also been very, very lucky to be here very, very early. And what I do, I do try to contribute, but yeah, gone, please.
+
+Naveen 
+Yeah, but...
+
+Yeah, think about this way. know, think about this way. You know, someone who is able to mine Bitcoin or buy Bitcoin for sub 50 cents. Okay. And now Bitcoin is whatever it is today, six over $60 ,000. Now look, you know, do I believe that Bitcoin is is a store of value and will continue to appreciate? Of course, I'm not sitting
+
+Citizen Web3
+Yeah, absolutely.
+
+Naveen 
+here saying otherwise. But do I believe that it's going to go from $60 ,000 a coin to $60 million a token and give people the same level of upside that people had when they were early? Of course not. I just think that's ridiculous. I think that's crazy. And so I think about that and I go, wait a minute here. What about the next generation? What about, you know, what about my kids? You know, I have I have young kids. What are they going to do?
+
+Are they gonna just be buying our old boomer bags? Is that really their only option, their only choice? Or is there another option for them, which is to participate in the birth of something new, in the birth of something that is pro -human and next generation on a number of dimensions. And then the final thing I'll say is, I just think that technology overall is temporal in nature, right? Like...
+
+You know, I grew up with you're playing the original Nintendo playing Duck Hunt and Mario and Metroid and Zelda. And then I graduated to playing F zero on my Super Nintendo, you know, and along the way, you know, new generations of people were born and, know, there are people out there who their first video game console was a Super Nintendo. And then there are people who were born who their first video game console was the play original PlayStation. You know, I remember, you know, when the original
+
+Xbox came out, you the very first Xbox and and you know, are there people out there who still love the original Nintendo and collect and believe? Absolutely. Of course those people exist. But you know, are my kids excited about playing, you know, heavily pixelated side scrollers on the original Nintendo? No.
+
+They're not excited about that. I'm sorry. Like it makes me sad. It makes me die a little inside to know that that's true, but they don't give a crap about that. They want something for themselves. They want something that's new for them. So, and what is that? Is that going to be Ethereum? Is that going to be Bitcoin? Is that going to be them buying our bags? That's something we talk a lot about in the Tari contributor channels.
+
+Citizen Web3 
+It makes a lot of sense just again to kind of to add to the thought. By the way, everybody knows about Mortal Kombat, for example, in FIFA. Doesn't matter what console. mean, even if you start playing a PC, not a console, you know, and by the way, it's interesting to see this progress that I think there are some things that do become generational, like a generation less sorry, that like in the gaming, for example, industry and about the new things, but I can definitely, you know, see
+
+my kids coming up to me and says, daddy, I want to be a validator or daddy, I want to become a minor. know, like I can see those things happening, you know, like daddy, I want to become an LLM specialist, you know, like, of course that that's what that's the new things that are going to happen. But I'm sure about it, you know, like 100%. They will there is already today, you know, we have the minor schools, validator schools and like what's so not. So I think like just to answer what the way I don't disagree, but I definitely think that
+
+We shouldn't be afraid of, you know, like contributing something that will ask. I don't think sometimes what I'm trying to say that sometimes saying the question, like I'm being devil's advocate here, but sometimes asking the questions, who will think about the children stops progress from happening. And I have seen that a lot in different places in history. Well, at least I've read about it, not seen it personally with my eyes where, know, the question, but who will think of the children?
+
+has stopped technological progress from happening. this is the question I'm going to ask Ricardo. Of course, feel free to retort, Naveen, to ask Ricardo, what do you think that progress can be made regardless of what we are going to do? Or is it more like we have to think about the future generations all the time?
+
+And if we don't think about them, then who are we progressing for? Like what's your take on that subject?
+
+Riccardo Spagni 
+Yeah, that's, that's an interesting one. mean, look, I like, of course, you know, we should be building things for the next generation, not just for ourselves. Like that stands to reason. I don't have a, I don't have a fundamental issue with that argument. I do have an issue with it being used as an excuse to, to stall things, you know, the whole like, won't somebody think of the children, argument in the negative sense?
+
+You know, at the end of the day, systems, if systems are going to be abused, or if a service or a tool is going to be abused, then it's going to be abused by adults and children, you know, it's going to be used incorrectly. But we can't, we can't have no progress as a result. And there is a delicate balance there, right? I think a lot about
+
+simple things like kitchen knives. Like a kitchen knife can be used to prepare a beautiful meal, but it can also be used to stab someone. Okay. It can be used to stab someone by a child. It can be used to stab someone by an adult. Now, is there a solution to that? Like, could we design a technologically sophisticated kitchen knife that detects when it's being used to stab someone and, I don't know, drop some sort of like thing to identify the kitchen knife?
+
+Probably, I'm sure we could. Okay, is that feasible? Is that the world that we wanna live in? No, you know, that's ridiculous. And even if we did create that, then like, I'm sure you wouldn't even need much of a black market to make kitchen knife alternatives. So, you know, it just becomes like, it becomes untenable and like ridiculous if you start going down the road. there we go. Okay.
+
+Riccardo Spagni
+I was saying it just becomes, yeah. Okay, cool. It becomes untenable and ridiculous if you're going to try and use technology to solve every potential bad situation or every potential bad thing that could happen. Like it's just not feasible. You can't use technology for that. There are things that ultimately humans are better at than any piece of, 
+
+Naveen
+we lost him. Well, he'll be back, but just to reply to you really quick and then I think we gotta wrap it up.
+
+Citizen Web3 
+I'll lost them completely.
+
+Naveen
+look, I'm not suggesting that we shouldn't develop new things because like, what about the next generation? What I'm saying is that we don't get to control the next generation. We don't get to dictate to the next generation what they're gonna love or what they're not gonna love. And that's my point. So this idea that I feel like we're kind of, it's sort of like your parents saying to you, hey, son or daughter.
+
+Citizen Web3
+Absolutely.
+
+Naveen
+You're gonna love my bitcoins, you know, you're gonna love them because I love them You know when I was you know old and ancient and you know mining them or whatever Yeah Again, that's that's why I brought up the social network thing as an example It's sort of like back in the day people I mean imagine how much time and effort people invested into building up their myspace followings and myspace pages and All this other stuff only to have it all ripped to shreds by Facebook and you know, there were plenty of people
+
+Citizen Web3 
+You're gonna love my knife.
+
+Naveen 
+I was around at that time. Plenty of people were like, my God, Facebook's never gonna work. It's never gonna be successful. And then it started to blow up on college campuses. It started to blow up on college, and then people were like, wait, I don't wanna be left behind. There's something new that's emerging and I don't wanna be left behind. So I'm not saying that this stuff goes away. That's not what I'm saying. What I'm saying is that we don't get to control what the next generation...
+
+you know, uses and every generation that emerges is an opportunity for something new to emerge. And we should just be open minded to that. That's all I'm saying.
+
+Citizen Web3 
+Guys, I know you have to wrap up and jump off. Fluffy, before I'm gonna ask one more question, both of you. it's a short, short question and I'll let you off. Fluffy, do you want to finish your point from before about the knife? Because I was looking forward to that.
+
+Riccardo Spagni 
+Yeah, yeah, so.
+
+Riccardo Spagni
+Yeah. So I was going to say like, ultimately, we can't look to technology as the solution for everything. And humans are particularly good at some things, you know, and I'll say, I'll say this because I don't want to, I don't want to like dwell on this point too much, but it is important. when you think about policing and law enforcement and the prevention of crime, Navin earlier on mentioned just briefly, like the idea of like pre -crime and thought crime and that sort of thing.
+
+and, and technology can, can certainly aid, the police in doing their job, but technology can become a crutch. And I think about the fact that, you know, 50 years ago, a hundred years ago, it wasn't like crime was just rampant and there was just like, you know, mayhem in the streets. Okay. And we only got a handle on it when the internet existed and we could track everyone's location because they had a cell phone in there.
+
+It's not like suddenly crime went away. OK, in fact, I would argue that like we probably like crimes objectively probably gotten much worse than it was in like the early 1900s. And so what's changed? Technology hasn't made things better. Police were able to do their jobs really well. You know how good old fashioned police work, you know, good old fashioned detecting confidential informants, all of these human things. OK, it wasn't through.
+
+surveillance cameras on every street corner. It wasn't through, you know, being able to read everyone's messages on their phone. Okay. It wasn't through interception of mail because mail was sacred. There was better privacy with letters than we have with our phones. It was through good, proper police work. And I feel like we've just fallen into this like technology as a
+
+where law enforcement agencies and law enforcement officers just rely on like, everyone's got a ring doorbell and that's going to hand data over to us. And where there isn't a ring doorbell in the area, don't worry, there's another camera. That's just why have we created that world? There should be a regression there. Law enforcement needs to go back to proper policing, like bodies on the street, like patrolling.
+
+Riccardo Spagni 
+proper detective work where they actually investigate crimes thoroughly instead of like, know, well, we got this printout from the computer and the computer must be right. And that's really all I wanted to say is like technology is not a solution. It's a crutch and there are better ways. Like we need to go back to the human ways in some things. Okay. And use technology as an aid, not as a replacement.
+
+Citizen Web3
+Thank you for saying that. do think like, know, to wrap it up, do think, by the way, that, know, I think if the police also remembered, like, who they work for, like, they don't work for the state, the state is owned by the people, like, it's not the other way around, you know, sometimes it's a big confusion, like, I know, if you guys had it, it's a different topic, and I will not go into it, but I've definitely had that experience where talking to a policeman, where like,
+
+I've asked them, don't ask a policeman that question. Who do you think you work for? It creates all sorts of interesting situations, but if you want to experience them, explain to them who they really work for. You're guaranteed to see some interesting things. Okay, guys, to wrap this up, usually we do a blitz, but I know you have to run, so I'm going to ask you each one question. It's a very, very short one and I promise I'll you go. Can you each give me one motivational thing?
+
+that helps each one of you personally in their everyday life to start a new day and to do whatever it is you're doing and base it on the values that you guys have. So I'm going to start Ricardo since you already might have the mic off, please.
+
+Riccardo Spagni 
+Sure. Yeah. I mean, I, I wake up every day and, I am excited about working on things that I know will be used by people, you know? and sometimes some of the things I, I, you know, work on, like I build a little tool for myself and then I know it might get used by like 10 people in the world. Doesn't matter. Like I'm building stuff to solve my problems and to solve problems for other people. And I just love knowing that.
+
+something that I've created, something that I've worked on, something that I've contributed to might be useful to someone. You I just love knowing that and that really motivates me. you know, like I, I would strongly encourage anyone that's like, you know, trying to, dig in, dig deep and find that motivation to think about the fact that like the stuff that you're working on, the stuff that you're, even if you're working in a call center at a bank, you are literally helping people and changing
+
+the course of their lives and solving problems for them and, you know, affecting the path that people follow. And that is beautiful. That is incredible that we as humans can do like things that help other people just and get paid for it. You know, this isn't like charity work. So, you know, that's really, really cool. And that motivates me.
+
+Citizen Web3 
+Thanks, Nathen. What about you?
+
+Naveen 
+Yeah, you know, what motivates me is similar to Rick just having the opportunity to create things that hopefully people are gonna love out there. You know, I just love creating things. But then the other thing that's just hyper motivating to me is spending time with my kids. You know, I have a rule where, you know,
+
+to the best of my ability. I sometimes I have to say no, but like the vast majority of the time when my kids ask to play or to do something, my default answer is yes. And I always leave that experience, having spent time with my kids, feeling energized, feeling optimistic about the next generation, feeling optimistic about the future, and feeling joy and feeling love.
+
+And I think that's really important. And then I try my very best. And Rick knows this well, that sometimes I don't succeed in this. But I try really, really hard to bring as much of that love to the table in every meeting and every conversation. so yeah, those are two hyper -motivating things for me personally.
+
+Citizen Web3
+Thanks. Guys, know you already mentioned it to me a couple of times that you have to wrap up. So I'm going to wrap up, guys. Thank you very much for your time and thank you for answering the questions and going through the technical craziness that we had. We will make sure it all works. For all the listeners, guys, everything me and Ricardo and Naveen mentioned, you can find in the show notes. So please do click those links, check out the projects and...
+
+whatever else we mentioned apart from that please do so again Naveen Ricardo thank you guys don't hang up just yet this is just a goodbye for the listeners everybody else bye
+
+Naveen
+Yeah, thank you so much.
+
+Riccardo Spagni 
+Thank you for having us.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

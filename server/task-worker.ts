@@ -17,6 +17,7 @@ import updateAztecGovernanceData from '@/server/jobs/update-aztec-governance-dat
 import updateAztecL1Contracts from '@/server/jobs/update-aztec-l1-contracts';
 import updateAztecTvsHistory from '@/server/jobs/update-aztec-tvs-history';
 import updateAztecAprHistory from '@/server/jobs/update-aztec-apr-history';
+import updateAztecTotalEarnedRewards from '@/server/jobs/update-aztec-total-earned-rewards';
 import { updateAztecValidatorsHistory } from '@/server/jobs/update-aztec-validators-history';
 import { updateAztecNodeDistribution } from '@/server/jobs/update-aztec-node-distribution';
 import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
@@ -44,6 +45,8 @@ import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
 import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
+import updateProposalTexts from '@/server/jobs/update-proposal-texts';
+import updateValidatorRanks from '@/server/jobs/update-validator-ranks';
 import updateValidatorsAztecLogos from '@/server/jobs/update-validators-aztec-logos';
 import updateValidatorsByKeybase from '@/server/jobs/update-validators-by-keybase';
 import updateValidatorsBySite from '@/server/jobs/update-validators-by-site';
@@ -142,6 +145,9 @@ async function runTask() {
       case 'update-delegators-amount':
         await updateDelegatorsAmount(chains);
         break;
+      case 'update-validator-ranks':
+        await updateValidatorRanks();
+        break;
       case 'update-average-delegation':
         await updateAverageDelegation(chains);
         break;
@@ -187,11 +193,17 @@ async function runTask() {
       case 'update-aztec-apr-history':
         await updateAztecAprHistory();
         break;
+      case 'update-aztec-total-earned-rewards':
+        await updateAztecTotalEarnedRewards();
+        break;
       case 'update-aztec-validators-history':
         await updateAztecValidatorsHistory('aztec');
         break;
       case 'update-aztec-node-distribution':
         await updateAztecNodeDistribution('aztec');
+        break;
+      case 'update-proposal-texts':
+        await updateProposalTexts();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

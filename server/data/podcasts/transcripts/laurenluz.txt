@@ -1,0 +1,468 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/laurenluz
+
+Episode name:
+Privacy, Blockchain Hippies and the Power of Network Effects with Lauren Luz
+
+Citizen Web3 
+Hello, everybody and welcome to a new episode of the Citizen Cosmos podcast today with Lauren Luz. I hope I pronounced it correctly. If not, she will correct me. Yeah, I did. She works at Giveth. Giveth is a very cool public goods, I would say, and philanthropy platform using blockchain web 3 technology. But before we go into talking about that, let's welcome Lauren. Lauren, hi.
+
+Lauren Luz 
+Hi, I'm really happy to be here. Thank you for having me on.
+
+Citizen Web3 
+Lovely to have you on Um, I was talking I think with um initially Who was it? I think it was fox chain and All of the guys from there and I think it was not there was somebody else as well Who was telling me you have to interview giveith you have to interview giveith So here we are before we go into that. Tell me introduce yourself. Tell us who you are. Who is lauren? What does she do and how did she get here?
+
+Lauren Luz 
+Yeah, so Lauren, who's Lauren? I've been in the crypto space for three years. I actually got into the crypto space through Giveth. So it was kind of my portal to Web3. And, you know, I have a technical background. I studied mechanical engineering in the past life and used to work making ice making equipment and coordinating their production. But apart from that, I'm kind of a bit of a hippie.
+
+My parents are kind of hippies. My mom's a holistic nutritionist, and my dad's been doing energy healing for every ailment since I was eight years old. So I kind of grew up with a combination of this like technical interest and technical background and understanding. And also just like a passion for...
+
+real human connection, spiritual connection, connection to the planet. And so, you know, I did that mechanical engineering thing. And after a couple of years working in that industry, it was really not fulfilling me. So I quit, I studied to be a yoga teacher, and then I just traveled and did work trades all around the world, staying in permaculture farms and intentional communities, and just trying to do a little bit of self-development and growth. And my mission kind of became to build a sustainable
+
+Homestead build myself like an off-grid home kind of separate from the corrupt world that I didn't enjoy and Just sort of like live in peace growing my own food And while I was doing that learning about all those different things. I met Danny Bell who's a great friend of mine and She is also it was also my intro into the web 3 space She actually on boarded me into web 3 by teaching me how to donate in a get coin grant round like she was like
+
+here, this is like this donation platform thing. And so I started learning about that and through her as well, started joining Giveth Calls. I just started joining Calls in the Discord and started figuring out what was Giveth and what was going on here. Learning a little bit about these kind of like people who were very, very smart and they understood all this crazy crypto stuff, but they were really focused on making the world a better place. And so...
+
+Lauren Luz 
+That kind of really resonated with me. And at the time I was just living in Costa Rica kind of doing nothing and sort of like wanting to grow a little bit more and get and kind of nourish that tech side of myself a little bit more. So then I dove into Giveth and the Common Stack. My first project in the Web3 space was actually building the Common Simulator. It was like...
+
+It was a little webcomic video game thing where you got to design your own commons and sort of choose how many people you wanted to start the commons with and what would be your voting protocols. So I helped build that webcomic and just writing tool tips and copy. And from there, it just ended up getting deeper and deeper down the rabbit hole. At the time, Giveth didn't have a comms team, so I sort of became a major part of the comms team. I started writing documentation.
+
+figuring out how things work, started testing the application. And then over the past few years, I've become like a big leader at Giveth. I lead products. I lead our Give Economy products, things like the Give Farms or Give Power, and just kind of do a lot in the Giveth ecosystem, as well as I've been running our Twitter for three years, although I'm trying to stop doing that now. But yeah, so I kind of came into the Web3 space in a totally non-
+
+traditional or non-direct way and just really, really fell in love with the space and the Web3 for Good space where it seems like there's a bunch of people who are just trying to make the world a better place and they are trying to do it with all kinds of amazing coordination tools and technology that we're building here in Web3.
+
+Citizen Web3 
+So you just literally described me in the last five minutes. I really like that. Thank you. Now you can describe yourself. Now this was amazing because you literally described half of my life. You literally described my way to Web3 and all of my interests. This is amazing. We would have made very good friends in real life. That's just to say that because I'm also all about spiritualism, holistic stuff, and hippie stuff, and traveling the world, and da-da-da-da. But yeah.
+
+But it's cool, man. That's cool to know that there are so many like-minded people in crypto because, you know, I mean, I say that quite often, but it's not often that it's completely honest, so to speak, because from what you say, you know, it sounds like you were like, oh, but I had no experience and that, but that is the cool thing. I noticed that most of the people who come into crypto and actually do important things, things that actually mean something. And by that, I don't mean to underestimate anybody's task.
+
+but you guys have a mission and a specific one. I usually come from that type of background and it's really awesome to see that trend is still there. But let me ask you a question. You said that you ended up here and you had all this journey and the journey sounds absolutely fascinating, amazing. Do you still feel like the reason?
+
+that you set out to do and your dreams are still being fulfilled doing this in crypto and Web3.
+
+Lauren Luz 
+You know, it's ever evolving, I think. It's, you know, I've gotten really, like really deep into the rabbit hole. And now I feel like I'm, you know, I'm actually spending maybe 60 hours a week or more working, like I'm always on my computer and just like super focused because I'm just trying to make everything work. And especially right now in the bear market, like things aren't that easy. It's hard to get people interested in crypto, even just like.
+
+you know, the broad population of people who aren't already into crypto in some way, they're like, oh yeah, that scammy thing where everybody lost a ton of money. And so it's like hard even to teach people and that like the stuff that we're building here has a real possibility to change the world. And I think it does. Like, I'm still here and I'm still feeling like it is possible. If we can somehow like improve Web3 onboarding funnels and start teaching people how to DAO.
+
+start teaching people about decentralized governance or like community ownership of public goods, then we can start relying less on corrupt systems, relying less on hierarchical top down, like this person said and the money said, and now it's all the way that the money said, and actually like start creating.
+
+creating a world where people's needs are being taken care of and then they're able to have some impact into those systems. I think that's like stuff we're building here in Dao's, but it's all still relatively new. Like, Giveth is a Dao as well, and we're constantly evolving as a Dao. It's like we were Daoing in one way, now we're kind of building our working groups into Dao's and doing the sub-Daoification, breaking apart and...
+
+kind of trying to figure out a way how we can do giveth best in a way that's decentralized. How do we do hiring and firing in a decentralized way? How do we do HR? And so it's like, even as a DAO, like giveth that's been around since 2016, there's still like a lot that we can learn there. So anyway, it's like all this tech is super new. The perceptions of broad populations are like that crypto is kind of bad right now in the bear market. So it is kind of a struggle. I do feel like I'm still working in alignment with like,
+
+Lauren Luz 
+what I think can make the world better, but it's hard. You know, at the beginning it was a lot easier because I didn't know so much. And so everything I was learning was I was like, this is new stuff I can apply right away. But now I'm kind of deeper in the space where I understand a lot of different things and I'm starting to see some of the problems and limitations, but then also, you know, the opportunities that we still have to improve and make things better.
+
+Citizen Web3 
+It's definitely one of the dearest also things to my ears, music to my ears, music to my heart. I remember I was last year in Boom Festival in Portugal, in Cytron's festival, and there was a group of guys, girls, guys, I think it was mostly guys, but there's a couple of girls there as well that we were communicating with. And, you know, I mean, it's not the kind of place you talk about your job and your work, but one of them, he really like...
+
+Well, it was really annoying because, you know, I didn't tell what I would do, but then I asked him, what do you do? It was like on a fifth day, you know, it was towards the end. And imagine this is like a site run seven day festival, right? So you can understand the state of the open mind that we were all in. And he's like, oh, I'm a GPG trader. And I'm like, well, what's a GPG trader? And he really upset me because, you know, like it really touched me. Like, you know, he, of course, was talking NFTs, but the way he was talking about it, the way that.
+
+You know, and he's like the reason that it upset me because I understood that there are people out there who view this industry as, as, as GPG trading, as you know, is like, and all of those things that you just describe and explained, you know, all that corrupt, that, that anti-corruption fight, you know, that the real movement that is there, it's sometimes felt that it's getting lost between all of the other things of the noise and the scum. Do you have that feeling as well? Or is that personal?
+
+Lauren Luz
+Yeah, definitely. No, definitely. I do feel like it's really a struggle to get people to see the light side of crypto or the crypto for good side of things. And yeah, especially now, you know, it was, I don't know, it's strange because I feel like during the bull market, when everything was pumping, there were just tons more people who were coming in, being attracted to all kinds of different projects, but not necessarily for the same altruistic reasons or same like, let's do things together reasons.
+
+But there was just like tons more people who were like interested. And then out of that like broad population of people who are interested, you catch some who were aligned with the visions. And that was really cool. And now it kind of feels like we're all just like shouting at each other. It's like, but the people who are still here in the Crypto for Good ecosystem are all the builders who are all working towards the same different things. But then the struggle becomes like, how do we get more people interested? You know, instead of just talking to each other here,
+
+There's less people who are being attracted to the space for just pump and dump reasons. So then there's less people who are getting into it for pump and dump reasons and staying for the good stuff. So yeah, I think there's the bull market struggles and there's the bear market struggles. And both of them is how do we teach people that the Web3 space is more than just like, it is a money-making opportunity, but more than a money-making opportunity, it's a way to evolve the way that we coordinate and the way that we...
+
+Yeah, the way we organize ourselves in society so we can take better care of each other.
+
+Citizen Web3 
+You know, interestingly, over the last like sort of 11 years I've been in and around blockchains, I realized that the easiest I've learned over time, not realized, but more like learned to myself that the best way to to peel a person is not to mention blockchain is just to tell them how the system works. So look, this is how the banking system works. This is how the educational system works. The biggest elephant in the room, right? This is like blah, blah, blah, so on and so forth, you know, and then people like, so what do we do? Right?
+
+And it's okay. Now we're talking, right? But, okay. But it's your, your job description, at least on Twitter, your own words say blockchain hippie. What on earth is a blockchain hippie for me and for my listeners? You kind of already, I can already gather that, but I want to hear it in your own words, what's a blockchain hippie?
+
+Lauren Luz 
+Yeah, you know, I think it just it's something that feels like it resonates with me because it's sort of making fun of myself at the same time. You know, like, you know, I'm just a hippie, you know, I just want to sit around a fire and play my guitar and have a nice time, like growing my food and doing my yoga practice in the morning. And I actually think that a lot of people want those things. It's kind of like it's like this hippie lifestyle.
+
+where you live in paradise and you connect yourself to nature and you have strong relationships that are empowering for yourselves and each other. It's like that's who I am and that's who I am in my personal life and what drives me. And the way that I think that we can get there all together is through blockchain. It's through the stuff we're building in Web3, coordination tools, better decentralized governance, funded public goods, like better ways of funding public goods so we can all access abundant
+
+like have our needs met in an abundant way. I think those are the ways that we can actually make it to a place where people are empowered and they can actually do the self-actualizing, self-discovery, like grounding themselves, reconnecting with Earth and stuff that like in our regular corporate world, people are kind of too busy to do or just totally disconnected from. I think, yeah, it's also ironic because I think like in order to get there, now I'm like working so hard. I'm like.
+
+all the time on my computer and just like, just trying to make things go. I'm like, oh, Figma, GitHub, Discord, I'm running around with all these different tabs instead of just really walking outside barefoot. But it's like, I'm trying to do this so that we can all walk outside barefoot. And that's really what it means, blockchain hippie.
+
+Citizen Web3 
+I remember this reminds me of the song. It's a Spanish song. I think it's Spanish. It's definitely in Spanish. I'm not sure if it's Spanish or Latin American as in South American, but last hippies, not now, not now, not now, and then the song is about like, it's called the hippie doesn't have anything, but then she sings about, but your mother washes your clothes and your father, your father pays for your drugs and today that and like the whole irony of, of like being a more than hippie, you know, of like, but totally. And, and actually let's talk a little bit about.
+
+Adoption, you mentioned adoption. And I'm going to play devil's advocate, because this is something that kind of gets the person more involved. So I'm going to apologize straight away for that. But adoption and Daoists. And I remember one case recent. And I want to know what you think about it, because you guys do a lot of public work in philanthropy. And this is the first case.
+
+related a bit. You remember the Constitution case where they had a dower that bought out one of the original four or five copies of the U.S. Constitution? This was like two or three years ago. This is a question. So basically for the listeners out there who don't know about it, there was a story where was it Southbury's or somebody else put up one out, one of the copies of the United States of the original independence declaration.
+
+And there was like four of them or whatever. I'm not, I might be mistaken here in some data, but, but that was the idea. And they gathered like in within second, within, sorry, a day or something, so many hundreds of people or thousands of people who put all this money. And then it was Justin, uh, son from Toronto who outbid them. But here's my question. You know, I was looking at all, then I was like, what, what, I mean, it seemed like a bit of a circus. It's like, why would we use, I mean, what, what is it going to solve? And this is a question like.
+
+to you, you guys do public work. What? It feels sometimes that because of the rewards around it, because of the money around blockchains, because of all the financial thing around blockchain, it seems that when we try to use that for adoption, the good side, it seems that it kind of seems silly from the side. Does it make any sense what I'm saying? Especially the case with the constitution. Again, this is not the same thing you guys are doing, but
+
+Citizen Web3 
+Kind of, in a way.
+
+Lauren Luz 
+but I don't really remember it. It was like, it was a bunch of people who are creating a Dow to sort of like own some sort of constitution, but I don't remember the details.
+
+Citizen Web3
+Yes, to put to put the money together and to buy out the constitution. Yeah.
+
+Lauren Luz 
+Yeah, yeah. And then it didn't work out, I think, as well. Like, I remember they had all this money and it didn't work, so they couldn't... And then what did they do with that money? I can't remember. They raised, like, you know, millions of dollars or something.
+
+Citizen Web3 
+It's like, what does it solve? No, it was just in Tron.
+
+Citizen Web3 
+They raised quite a lot and I think that it was returned. I think it was most of it was returned. I might be wrong here, but I'm just curious, like, well, what's your opinion on blockchain technology being used in such a way? And on one hand, they're gathering people together, but on the other hand, okay, you're buying a piece of paper for millions of dollars. You could donate it to somebody who really needs that. And that would change more things, no.
+
+Lauren Luz 
+Yeah, for sure. I mean, I think that like, all of these things are kind of experiments, you know, and we're, you know, like I said before, I came into space and I was like, I didn't know anything. So everything was learning and I was gathering all this information. Now I'm at this point where I know some things. And then I'm like, oh, we're kind of just bumbling through a lot of the parts of how to Tao and we're trying things and seeing if they work and seeing if they stick and seeing how we can improve them. I think
+
+You know, the Web3 space is evolving at a really rapid rate so that we're getting closer and closer to that. Um, and some of the experiments end up silly and some of them end up impactful. And even I just, I'm learning that at Giveth as a, as a product manager, even. Like we have a, we have a program called Givebacks where you donate to verified projects and you get rewarded with give tokens and it's like, cool, great concept. I mean, I think it's a, it's a cool concept, but it then became very difficult to communicate because the amount of give tokens you get back.
+
+is based on the price of give at the time, the value of your donation, you get up to 75% back, but part of streaming over time, and the price of give might fluctuate, so you don't know exactly how much give you'll get at that time, because it gets distributed later. So there's all these different kind of parts to it, and it's like, we work out all of these complex solutions, but then how we communicate it becomes the next layer of it, because if you can't communicate something well, then it can't really have the impact that you want it to have. So I think...
+
+Anyway, that's one part of it. And then, and yeah, like just, just what I was saying, some experiments are successful, some experiments are not successful. At the beginning of the whole, like when I started learning about NFTs, I was like, what, I don't understand, you know, I don't get it. Why are people paying money to own these JPEGs? It seemed so dumb to me, but, but you know, talking, talking with friends, with friends about like buying land and stuff, buying land is kind of just like buying an NFT. It's like, you have this piece of paper that then,
+
+like says that like you are able to be in this country, for example, like if I were to buy land in another country, then by owning that land, it's like kind of my free ticket into the country, even if my passport's not working, you know, my NFT can. So it's kind of like the NFT concept becomes very, very valuable, the more that we kind of like iterate upon it, experiment with it, see what works and what doesn't work and kind of go from there.
+
+Citizen Web3 
+And nobody expected the NFT, sorry, nobody expected NFTs to be the adoption curve, right? I mean, no one expected it. By the way, I'm going to disappoint you. You're going to, because we give all our guests, we create guest NFT collections and they're dedicated to the guests. So whenever this episode is going to come out, which is going to take a while, but you will have your own, you will be NFT, I'm sorry. And then you will get one, of course, for sure. So, but wait.
+
+Lauren Luz 
+No, that's great! No, no!
+
+Citizen Web3 
+Wait, wait, this is the good stuff. The good stuff is later. Let's talk about the bad stuff. Wait, I have an uncomfortable question for you. How do you guys check that the... I mean, here is like... Because you have an amazing platform and the amount of causes there. Really, guys, if you don't know what the giveth is, I really, really, really, really, I don't do this often. You could hear this throughout a lot of the podcasts. When I do the recommendation, it's because it's cool. Go check it out. But here's the uncomfortable question.
+
+Citizen Web3 
+How do you make sure that... this is something I've always had with donations. How do I know that I've donated $10 to a pet center and those $10 were spent on the pet? So how can we make sure about that with Gibbett?
+
+Lauren Luz
+Yeah, totally. Actually, you know, this is a really interesting question, I think, and something that we've been talking about lately with other organizations as well. I'll tell you how we do it at Giveth first. At Giveth, we have a project verification system, project verification team. It's a centralized team that basically the way that the verification system works is that people apply with their projects for verification. They need to fill out essentially a form and say how the funds are being used, what reputation they have at stake.
+
+They need to, you know, tweet from their official social media account saying, I'm the owner of this Give It project and whatever else. Like link all their different social media so that we can see that they have, like, have showed some photos of actually creating impact. And then they only become verified. They get this verified badge and part of all the many things on Give It, like the Give Backs program I described, if they're approved. Like, if they can show that, like, to our team, that they are providing public goods,
+
+and they're providing value to their community, non-excludable value to their community. So it works because Giveth is like a relatively small platform still. Like actually, well, we have like over 2000 projects on there and, but maybe only like half of them are verified. And our verification team is like every week reviewing applications, looking through these projects and going deep into them. So then also they have a lot of experience in terms of like what to look for. Like...
+
+When is a project, how do you know a project is who they say they are? And they just like check all of the different data that they provide and provide this like verification, this verification badge. And I think this is a really great system because like, I mean, I trust our verification team to do the background checking. They just have a ton of experience doing it, but it's limited because it's centralized. I mean, if the verification team is like sick or you know,
+
+busy, then applications get processed slower. And it's not something that we can just rely on at a huge scale. And so then I think we need to kind of look for decentralized systems on how we can start to verify projects. But I just don't think that we're really there yet. There needs to be some level of humans going in and seeing the impact that somebody is actually making. Yeah, so I give it, you can trust that your funds are going to...
+
+Lauren Luz 
+Like if you're donating to a verified project, you can trust that they're going to the project like who they say they are, because they've gone through this process, they've been reviewed by our team. But yeah, like in a lot of different platforms, it is hard to tell like whether or not the project is legit or not. Like I could create a project somewhere else and say like, I'm Red Cross and like just have, you know, my recipient address or something there. And that's kind of like scams that we need to be aware of. Yeah, what do you think?
+
+Citizen Cosmo
+To mention, I don't know, it sounds good, but what I want to ask you is, is there a future where you see or do you think there is a future where we can not just verify the projects because that's half of the work, but also make sure that the euro that I donated or of course, the loudest voices come from the smallest amounts, but I mean, if we put everybody euro together.
+
+You know, we could make a big change. Not the point. The point is that like, it's always scary to think that those 10 euros aren't going, they might go to the project, but not towards the cause. And do you think there is a future where, um, at least in Web3 where, where we can try and make that next step or shall we even, should we even, or is it too much privacy already?
+
+Lauren Luz 
+This is an interesting thing. And I mean, you know, I have a controversial opinion about it because a lot of people say this too. Wouldn't it be nice if you could see exactly where your donations go to? I think like something to realize is like people's limited time right now in the world that like, it sounds good in practice. I mean, it sounds good. Yeah, it sounds good in theory, but it might not necessarily be good in practice. And Giveth actually built this. It was called Giveth Trace. It was like not our first donation application, but the previous iteration.
+
+Citizen Web3 
+Please.
+
+Lauren Luz 
+of our donation application. You can still see it if you go to trace.giveth.io. It's like our old website, or you can go to our current one, giveth.io. But the way that Trace worked is it used smart contracts and kind of had the projects create overarching communities or campaigns, and then they had to say exactly where those funds would go to, and each of their milestones would have a recipient address. So it might be like, there's a project for...
+
+The common stack and their milestones are actually different contributor salaries. And those milestones are created by the contributors and they're saying like, this is the work that I'm doing. I'd like to be funded for this. And so as a donor, you can donate to the common stack and you can see that your funds went from there and then went to the individual project, or it could trickle along down from there. So it's like, it was this idea that we wanted to have traceable donations on chain. So you could like all the funds went from this address to this address. You could go on ether scan and check to see like who's owning that.
+
+and what are they doing with the funds? So I think like, you know, we have like, in blockchain, we have this just like open ledger. We can just like see all the transactions and that's already providing a lot of value for transparency. But then it's like, people aren't actually that interested in doing that micromanaging, like really knowing exactly, like it went from here to there. What they wanna see, in my opinion, is just like that that project is providing updates, that it's doing stuff, it's creating an impact. So they donate a little bit and then...
+
+the project came and provided an update and they were like, we did all this great stuff with the funding that we've re-raised. And like, you can't exactly, maybe you're not gonna be going looking at all the receipts and micromanaging all of that, but maybe what they're showing you is impact is enough that makes you feel good as a donor that you wanna continue donating. So I think that like, having just more granular visibility into donations isn't necessarily the solution, but over time we can also kind of transition
+
+these like nonprofits or public goods projects into becoming DAOs. And then people who really wanted to have more granular opinion could become part of the DAO, could become shareholders. Maybe they invest in that project, they get tokens, they can then vote in how funds are being used. And I think that like, it's like we give granular control to people who want to have granular control or who should have granular control over the funding. But then like beyond that, like, you know, trying to build these donation applications that just allows like just any
+
+Lauren Luz
+many different details is like more work than most people actually want. And I feel strongly about this because of our history with Giveth and all these applications we've built.
+
+Citizen Web3 
+I definitely support to a big extent your opinion because, well, for one, it's interfering with privacy a lot as well, which is, in my opinion, a right that it's not even a possibility. It's a right that we should just have and that's the end of it. I don't think there should be any, of course, we can discuss it, but like a personal kind of reflection. So I understand totally what you say.
+
+Citizen Web3 
+times in my life I came across and I'm talking about off web three here and of course we're going like zooming out here right now and Especially philanthropy using emotional blackmail, you know, there's the kind of stuff when you kind of sitting in your home and this is the easy stuff, you know when you sit in your home and turn on TV and then you see like a Dog all beaten and this is emotional blackmail. So people are not already donating but
+
+But more so was the amount of projects that behind it were fake. And that was really scary. And even scarier than the fakes, I think the reason I was asking that, and I'm here, I'm going to probably get the word wrong, but I want to like ask what you think about it. So I think the word is related to zeitgeist, the German term of the concept of blah, blah, blah.
+
+Citizen Web3
+What's the right word here? The spirit of mood, the concept of mood, right? But I think it was also referred to, there was like five illnesses in diseases, sorry, in the world that until today, and this is on Wikipedia, they kill up to one billion people per year. This is not a joke. This is one billion, not one million. And those illnesses are stuff like hepatitis B,
+
+Malaria and a couple more. And I'm not sure if malaria still goes into it, by the way. And irony of those five illnesses is that the cure for each one of them per person is like two or three dollars. And we as a society, as like the privileged white civilized, you know, European, like the rich society, we kind of choose to ignore that. And we choose to concentrate on, you know.
+
+The dogs, I myself do that. So I cannot deny that I'm not part of it, but you know, on the puppies on the road or anything else, or, I don't know, somebody with HIV or whatever, when the reality is, and I'm not saying that that's not good, but the reality is that the biggest killer out there is those five diseases that are bound mostly to the African and Asian continent, but we choose to ignore them. So I guess that's why I was asking about tracing whether or not the funds.
+
+go to the actual cause. It wasn't from the perspective of like, okay, let's delete the privacy of all this and do more work. I don't know. Do you have anything to reflect on that? I know there wasn't a question, more of a... Sorry.
+
+Lauren Luz 
+That's okay. I think it's really interesting. It's like, what are people actually interested in supporting, what are they interested in donating to? And I mean, you know, I think like, if somehow we could create ways of empowering the people who are subjected to these illnesses, like the people who are dying of these illnesses, they care, you know? And it's like, if somehow we can empower them to also then be part of the decision-making process around like,
+
+how funds are distributed and what they go into, then we would be able to have better solutions for them. So, but I think from, if we're trying to think, if I was supreme leader of the entire world, it would be really hard for me to decide which causes are most important and rank them all, because there's too much to pay attention to. So what we actually need to have, in my opinion, and give us opinion, is micro economies, smaller...
+
+groups that are organizing around specific causes. And then it's like those people's needs are the ones that are kind of driving the funding and that are kind of like fueling these economic engines. Like right now we just like, like having like one world government and one world economy is just gonna create more problems because it's this like top down, you can't see everything that matters. But like, we need to kind of like trust that like small individual communities can conform around causes that matter and then.
+
+and then they can have systems that they're getting enough funding. So, I mean, this is really what we are trying to build towards at Giveth. Like, we're a donation platform, and right now we're like, we've got causes on here, and you can add your cause, you can donate, you can get givebacks. But where we want to move towards is empowering causes to become DAOs, so that they can have balanced stakeholders, that they can have regenerative funding, and that they can have...
+
+like systems where they're able to meet the demands of their communities in ways that are better. So I think like, if somehow we could have like representation of like we could have a DAO around like malaria, like the malaria in Africa DAO, and then the you know, they could have stakeholders that are representing the communities of people who like maybe are Web3 savvy or whatever, who can then
+
+Lauren Luz 
+like vote because they're like, you know, they're, they're representing a huge population of people. They can vote to distribute funds to allocate, you know, medicine for those people. I think it's like the way our society is built right now is totally broken. And that's the reason that like, we're like, wow, this thing that really matters isn't being taken care of. It's because the incentives aren't aligned because their coordination systems are really poor. They don't implement feedback of the people's needs. And so what we need is to kind of like break that apart, I think, into having like
+
+micro economies or DAOs or empowering people with these coordination tools. Sorry, go ahead.
+
+Citizen Web3 
+I absolutely agree with you. No, no, don't be sorry by no means. This is your time. This is me pulling the quill before, but I absolutely agree. But like I say, I will play the devil's advocate more. I'm looking at the dog. I'm sorry. The dog is amazing. He's a hi. Yeah, I can see him. I can see him. I can see him. Hi, dog. Hi. What's his name? Sorry.
+
+Lauren Luz 
+Oh you can see him? Oh my gosh.
+
+Music. His name's... Max. Max.
+
+Citizen Web3
+Max, well, we soon introducing gate access to our videos via NFTs to our delegators. So by the time this episode is going to come out, some of the viewers will be able to see it as well. So it's cool. Let's talk a little bit about DAOs, I guess, because DAOs is a subject that, yeah, I mean, it's kind of
+
+Lauren Luz 
+Oh yeah.
+
+Citizen Web3
+A very logical thing, right? Which the Romans kind of, in a sense, had a similar idea, I guess, in the Greeks. But by the way, what do you think about, and of course, Giveth is part of the Ethereum ecosystem, but hopefully with the Ethereum ecosystem and the Cosmos ecosystem, the Polkadot ecosystem, all of them evolving, hopefully they're all going to connect sooner than later.
+
+But and I'm talking about decentralized way, not just like centralized bridges. But you guys on Ethereum, we, you, whatever, there are such, it's a concept of rollups. What do you think about Dao's becoming, each Dao becoming a separate rollup and kind of, you know, gaining more independence and sovereignty rather than it is the way it's shaped now? Or is that not very good idea in your opinion?
+
+Lauren Luz 
+You mean like each Tao kind of having its own chain on which that they exist? Hmm.
+
+Citizen Web3 
+Absolutely. Absolutely. I'm trying to push that thought into, in Cosmos, they call it consumer chain. And I'm trying to push that. I'm arguing on the forums right now. I'm like, guys, and they're like, why? I was like, well, because first of all, you have much bigger protection of the treasuries. You know, you can rent from another roll up with a lot of security, you know, their security. And you could have native tokens, you could have a lot more. I don't know. This is just like a thought. I'm kind of curious of what you think. Is that crazy or?
+
+Lauren Luz 
+I've never thought about it at all. So I'm just gonna kind of like pull things out of my butt here. But I think it's I think it's an interesting idea that I've never thought of my first concerns are like, you know, loss of network effects. Right now, like Giveth is talking with other public goods organizations like Optimism and Gitcoin about creating like a public goods network. And this is just like, okay, public goods network. And like, I've also heard these ideas of like, let's even just create like,
+
+Citizen Web3 
+Hehehe
+
+Hahaha!
+
+Lauren Luz
+public goods token balancer pools or something. So like all these tokens have liquid and they balance it to the road or something like that. So it's like, okay, yeah, like you wanna have these like network effects for organizations. But like, yeah, I think like if you really make it super granular and you separate all the DAOs out onto their own chains, then you kind of lose some of that. And then, you know, it also creates like layers. If we want to make things more accessible to people on a global level, the more bridges and like,
+
+new concepts that they need to manage becomes more and more complex. It was one thing for them to understand Ethereum, but then they're like, okay, and Optimism and Polygon and Gnosis Chain. And it becomes like, okay, and then this is how you bridge, like, oh my gosh, have you ever tried to bridge to Cello? It's hard. I had a hard time figuring that out. And so I think, I guess it depends, does the DAO have...
+
+like tokens that have monetary value or like, or do they need to have liquidity for their tokens? Do they want to have liquidity for their tokens across like other chains? You know, it becomes like a very complex thing and I'm not sure it's like, all DAOs should have their own L2, but maybe it would be interesting for some DAOs. You know, right now at Giveth, we have our token on Mainnet. It was a Mainnet native token, but most of it is on GnosisChain.
+
+And now we're also moving it onto optimism and onto cello and onto polygon. And we're like, how do we get liquidity on these different networks? We're doing token swaps with other DAOs and it's like trying to like diversify and spread your token across multiple different chains and try to find chains that are value aligned and like which network effects do you want to create? How do we support each other? It becomes like part of the, part of the question, part of the problem, part of the solution. So anyway, just throwing some ideas out there on an interesting concept I've never thought of.
+
+Citizen Web3
+No, no, it's good. I like it. I like the more constructive criticism around any idea, I think, is what shapes the idea to become possibly to become a reality. I'm curious, what about weaknesses? Do you think that the concept of Dao introduced weaknesses in comparison to the way we are governing our communities at all in your opinion, of course? And what are they?
+
+Lauren Luz 
+Yeah, you mean just like the concept of the Tao versus like how normal communities are.
+
+Citizen Web3 
+Yeah, yeah, yeah. Do you think there is something weak spots that Tao has that the normal normal? I'm doing some things here for nobody, for people who can't see that. The regular way. Yeah, yeah, the real world way.
+
+Lauren Luz
+Yeah, you know, I think there are limitations, or at least there's limitations in perspectives. I think sometimes when people think Dow, they think flat, totally flat organization where there's no leadership. But that's really not the case. And I don't think makes sense to be the case. I think like most functional dows and communities that I've been a part of have like kind of like sub working groups that have some sort of hierarchy. At the end of the day, like for some decisions.
+
+make sense to have like one person make that decision based on like their experience or something. But some things are better to vote on. Some like weak points that like we've had, some things we're working on at Giveth that I think is really interesting is like, how do we do like contributor management in a decentralized way? Like having people come in and join the DAO and how do people exit the DAO in a way that's kind of like fair and decentralized.
+
+and the DAO votes, but then there is some limitations. It's like if every token holder can vote on whether or not any contributor gets hired or gets removed from the DAO, then maybe it doesn't really make sense because a developer might not understand the needs of the social media, you know? And so then it's like, there's some limitations here. So at the end of the day, we still need to, I think, lean on some ideas that are working in regular corporations but then do away with the ones that don't. I don't think that like...
+
+We should have everything be super top-down hierarchical, but we need to have leaders, and we need to have sometimes sub-hierarchies, or yeah, even, and I think there are all kinds of different ways to Dao, and we're still trying to understand how to best use the tools that are available. We can even do interesting things within Dao's, like to create kind of hierarchies, or some people have more power, but not necessarily just because they have more money, but maybe because...
+
+they gain voting power because they're in the organization for a period of time. They get like some reputation tokens in combination with some like transferable tokens. And so there's some kind of like balancing of power distribution and like where it should go to. So anyway, there are definitely weak points in DAOs, especially if you're just thinking as DAOs are just like totally decentralized, flat and chaotic and whatever, like you need to have people who are.
+
+Lauren Luz 
+in leadership roles who make decisions, who take action, and you need to have ways of managing the leaders that are somehow decentralized and also giving people power based on a variety of different experiences and needs. And yeah.
+
+Citizen Web3
+I want to stick on your last sentence. Do you think that it's possible to create that loop of where in a DAO, a manager, or let's call him a potential M, that the distributed decentralized manager manages the flows and the people and the person who manages the manager is the regular token holders? Do you think that loop is possible to create? A working loop like that.
+
+where everybody manages everybody. So the token holders manage the managers, the managers manage the tasks, blah, blah, blah, and so on and so forth.
+
+Lauren Luz 
+it's kind of possible but not just like it's like it needs to be done thoughtfully and it's something that we're also working on Giveth is like how do we decide who leads uh who's in leadership of our different like working groups and in a decentralized way and how do we like swap out leaders and it's like how do we hold them accountable so it's like i think you still need to have things like role proposals or you know like you know metrics you can like check people against it's like this person's in this leadership role
+
+are they doing X, Y, and Z, and then review processes, and then maybe people can vote on it and stuff. One very simple thing we do at Giveth, which I think is really cool, that's different from traditional organizations, is we do, everybody can give feedback to everybody. And so I lead a variety of working groups, and when I have my review calls, it's like the contributors who are working in my working groups give me feedback, and they're like.
+
+Lauren is a tyrant. No, most people don't say that, but like they give feedback and in terms of what I'm doing well, what I can do better at. And then so it's like, I kind of like, then take the needs of the people and try to improve them. So I think there are ways to keep leaders in check and have like, you know, token holders or contributors keep leaders in check. But it can't just like, we can't just do it like totally willy nilly. It needs to be done like thoughtfully and like in a creative process.
+
+If anyone's interested in learning more about that, just jump into the Giveth forum, forum.giveth.io. We're talking all about our HR processes, how we're changing these leadership structures, and it's a whole really interesting and long process that we're trying to do very well.
+
+Citizen Web3 
+And by the way, guys, for everybody who's listening to this, you can find all the links that Lauren is mentioning under the description of the episode. Of course, not on Twitter. Of course, you can either find them on our website, citizencosmos.space, on the YouTube under the episode, and you'll have all everything, all those links. And if it's not, kick us strong and we will fix it. It's an interesting thing because there are so many...
+
+interesting concepts and ideas around DAOs that are, for example, sole-bounded tokens, tokens that are not transferable. One thing which we even thought to implement for the guests that we do because we create like nine NFTs. But then we thought, or maybe we should give the guests one that he cannot, but then we thought, no, okay, let it be like that. But another concept that interesting that I thought, and this is actually come from Ethereum. This is not something that comes from Cosmos. This is...
+
+think it was called holographic consensus. I don't know whatever happened to it. And I don't know if you heard of it. But the idea was that they were trying to introduce basically, it was closely related with Gnosis at some point, and they were trying to introduce a betting layer on top of the governance layer. So you had another extra token, which wasn't not the governance token, it wasn't the native token, but it was like you could bet on the outcome of the proposals.
+
+And depending on that, depending on what you voted for and your bet, you would, it was like, I don't know what ever happened to that, but it was interesting. What do you think about like crazy ideas like that? Do you think it's something not necessarily this, but generally crazy ideas? Well, what are you with that was, of course.
+
+Lauren Luz 
+I think they're so interesting and we don't know what works until we try it out. Like, you know, I give us, I mean, you know, we're working on, I've been thinking about this for a long time that we need to create a page that concisely explains our governance processes because we have so many different things that we're doing because they serve different needs. Like we have a reputation DAO, we give NRGive, NRGive tokens, they're non-transferable tokens to contributors.
+
+if they've been around for a quarter. So if you're contributing consistently for three months, you can get NRGift tokens, and they're distributed according to the Fibonacci sequence. So every quarter, the batch that goes out is way bigger than the previous quarter. So that way we make it so that it's not so, if you've been around since the beginning of time, you have so many more tokens, you have a little bit more tokens than somebody who just came in. So that's a way that we kind of like...
+
+keep new people coming in to be able to have a strong voice as well. But it's our contributor DAO. It's like you can't buy NRGive tokens. You can't like, you can't get them with money. You can only get them if NRGive token holders vote yes on your proposal to request tokens. And then we vote in the NRGive DAO on things like, um, on when give backs should go out, when we send rewards to the people who donate, we also vote on.
+
+like contributors role proposals and like more internal DAO things. And it's like one layer, but then we also have the gift token that you can buy on the open market. You can buy it on Cowswap. And then you can use the gift token to vote in snapshot. You can use the gift token to vote on our roadmap in which products we should launch next. And so it's like, we give power to gift token holders over some decisions and then to end our gift token holders over other decisions.
+
+And so it's like, that's just one way that we're doing it, but I think it's also very interesting to kind of stack these things, like use soul-bound tokens in combination with like a transferable token. And then like those two things can create like a cumulative reputation. That means you have like more voting power and whatever. And then we can also experiment with like wacky and interesting ways of voting, like conviction voting, which was like something that was developed by the common stack.
+
+Lauren Luz
+that you can vote on multiple proposals at once, and the longer you leave your tokens on a proposal, the more voting power that they gain over time. And so it's like, oh, suddenly your voting power is a combination of time or conviction on a proposal and the number of tokens you have. And it's like, let's try the wacky concepts. This is how we're gonna get better at dowing and how we're gonna learn more. Oh, you're on mute.
+
+Citizen Web3 
+I think thank you for saying that. No, no, no, I wasn't talking. I was agreeing with you, like saying absolutely, and not to interrupt you. But I think I'm just supporting what you say, because I think it's absolutely what's needed. And again, it's like you said, though, right? I mean, I think it all kind of goes back as well to the, it might sound complicated, but like you said, if we all as a society, we're doing it from communities outwards and not the other way around, then the people.
+
+The people who are interested in that specific DAO, in the medicine of malaria or whatever DAO, they would spend their time to understand the internal process rather than trying to understand how the whole world works. So thank you to Gibbett, I think, for trying those things out because it's important to, I think a little bit sometimes, I'm going to be honest with you, blockchain lacks balls.
+
+And in the words of Scarface, those are the most important, one of the most important things in the world. But, well, Al Pacino, not Scarface, I guess. But seriously, and I think it takes some balls to experiment, to say, hey, guys, let's go into the central light and collect flowers, have a hippie gathering. And then whoever comes and collects those flowers...
+
+gets a whatever. It's crazy, but it works. I mean, it's interesting that people really connected it. And yeah, yeah. So looking forward to more and more of those experiments. I know, guys, you had hackathon recently. And it was something with AI as well, right? I'm curious, what was your most your personal, at least most interesting project that came out of there?
+
+Lauren Luz
+Oh man, there were so many interesting projects in that hackathon. I'd just like to give a little context to the hackathon. It was like, you know, everyone is going crazy about AI. And Griff Green, who's the founder of Giveth, it was his idea. He's like, let's get everyone in the Giveth galaxy, like all the orgs who are associated with Giveth, Giveth, Comstack, Daphnode, EVM, CRISPR, Blossom Labs. Let's get everybody using AI and see what they can come up with. And so everyone...
+
+was encouraged to take a day off of regular work, basically, to just spend that whole day trying to figure out AI and interesting things that they could do and create. And this is already like, it's crazy how fast the AI space develops, because this is already like, this was before chat GPT could browse the internet. So it was like, people were just starting out with these things, but it was really cool, the stuff that people were coming up with.
+
+Like one thing that's coming out of the hackathon and something I think is really cool is we're developing a giveth bot basically to add to our discord server that, that like kind of checks in our docs and pulls answers and pieces them together and can answer people's questions. So it's like, you could ask the bot how give backs works and then it explains it to you and then you could ask the bot like how, you know, how it was explaining before how give backs, the amount you get is kind of complicated. You could ask the bot like how much give backs you're going to get for donating whatever.
+
+and the bot can access the internet and the calculator and the docs and can figure that out for you which I think is very cool, I mean this is where we're going with it, so like... right?
+
+Citizen Web3 
+It's fucking awesome, to be honest. I'm a nerd when it comes to AI, so I really am. So you can, like this thing's, like, you know how we talk about NFTs and art before? It was the other day when I was looking at our illustrator and designer working with Mid Journey, and she was putting prompts, and I was like, I didn't know that if NFTs was the adoption to, sorry, art was the adoption to NFTs, the adoption to coding will be AI. It's crazy. Art again, art.
+
+by AI, what people are learning, but those prompts are basically very, very, very basic coding. It's astonishing, really.
+
+Lauren Luz 
+It's really amazing. I'm like, I'm, you know, one thing I'm trying to get more into and like skills I'm trying to build is actually design skills and like, I like graphic design and like UI UX design and stuff. So like I've been using mid journey and playing around and my hackathon project was pretty simple, but I mean, I used mid journey and the giveth logo to create like some interesting, like Roy Lichtenstein variations of the giveth logo, but then I used like Kiber and other AI.
+
+video generating tool to make animated videos. That's like the Giveth logo that was this cartoony thing turned into like solar panels and the sun shining. And it was like, I don't know. I'm like, wow, this is so, so cool. And I think, yeah, I think like all the cool things that we can do with art and video creation and the way we can tell stories with AI, I think is like super, super powerful. And yeah, I'm excited for AI June, which is coming up next month. It's our second iteration of this hackathon.
+
+Citizen Web3 
+Nice.
+
+Lauren Luz 
+see when people are going to come up now. Now all this stuff has been out for months. It's going to be really interesting.
+
+Citizen Web3
+When is the second iteration, Loren?
+
+Lauren Luz 
+June, we're having, it was AI April. The whole month, yeah, we had the whole month of April before and then, you know, May was so normal working month. June is gonna be another AI hackathon month where people can work on different projects.
+
+Citizen Web3 
+June, sorry, I didn't hear. I'm sorry, I didn't hear.
+
+Citizen Web3 
+guys also look out again links under the description but look out it's not very hard go to the giveeth website and you can follow it from there i found it very easily i'm sure you can as well um loren um quick blades well quick it doesn't have to be it's not quick actually it's three questions three two one um well as in the first one is three answers then two then one answer um feel free
+
+Citizen Web3
+give me three projects in or outside of crypto that arouse interest in you technologically though, in terms of the technological things that they do.
+
+Lauren Luz 
+Hmm three projects in or outside of crypto like give us projects or just projects I care about in the space whoo No
+
+Citizen Web3 
+up to you. Be artistic. Be artistic. You can go with Giveth projects because that would concentrate on Giveth and let, I think, maybe encourage people to check them out, I hope.
+
+Lauren Luz 
+Yeah, totally. The first one that comes to mind is something I'm interested in. It's called Pairwise. And basically, Pairwise is a voting application that's being built by General Magic. It's like an organization in the Giveth Galaxy. It's also a project on Giveth, I'm pretty sure. But basically, Pairwise gives you two options. It's like two options of something. Like say, I think it's going to be really useful for design use cases. So it's like you could see like.
+
+this one picture of a sloth holding a golfing club or this picture of a sloth holding a golfing club and you decide which of those two ones you like better but then it's showing you a picture of the sloth and golf club and like a parrot and And a pipe and it's like which of those two pictures do you like better and it's like basically you compare between a pair of like things and and just kind of like can make decisions pretty quickly that way and then it aggregates all that data
+
+and says like what is the most popular thing, the second most popular thing based on everybody's results comparing like two different options side by side and they like do just like different variations of what's there compared.
+
+Citizen Web3 
+wait that's called tinder no joking no joking no no
+
+Lauren Luz 
+Kinda, right? I know, you know, it's so funny they're like also saying all the time, it's Tinder UX, but for Dow votes. And I'm like, oh, this is very off-putting slogan, but anyway, it's so funny you brought that up. But the reason I think Parawise is such a cool project is because voting takes too much time and it requires too much like...
+
+of this comparing things in your head without all the information being made available to you in an easy way. And I think like what we need to get towards in order to speed up efficiency in the Tao space, in the coordination space, and in our world is to start using like predicting behavior algorithmically. It's like, what do people prefer without them having to like read these long things and scratch their head about? It's like, what are they all kind of like leaning towards and how can we understand their preferences? Like...
+
+I think Spotify does a really cool job with their algorithms. They're checking what you're listening to, and then they're recommending songs to you. It's like, what if we had this kind of Spotify, but for now votes. It's checking all the ways that you're voting on forum proposals, and then predicting how you would vote on this forum proposal. So I think Parawise is really cool because it's getting us closer to something like that. It's starting to predict behavior instead of just requiring you to read and read and read.
+
+Um, two more! Okay, two more. You know, oh-
+
+Citizen Web3 
+Two more. Two more. It doesn't have to be three. It doesn't have to be three. It's the ones that you like the most though, but if it's three it's good.
+
+Lauren Luz 
+I'm trying to just think of ones that are kind of off the top of my head, sort of interesting. And you know, I'm going to name one that's interesting, maybe not necessarily the most technologically advanced, but something I think is cool because it's really present here in my community in Costa Rica. I have a friend, his name is Ada, and he has a Gibbeth project called the Resource Center. And it's basically like he's trying to make our little community here a zero waste space.
+
+So it's like, he has this like super, super organized recycling center where people are like creating bottle bricks. They're like washing the plastic and drying it and then like packing it into plastic bottles that are then being used as like bricks to pour concrete over to make composting toilets. And I think this is like, this is a super great idea for just like repurposing garbage and add so much value to the community here in Costa Rica where, you know, the community doesn't have waste collection. So people are just burning their trash.
+
+So it's like, hey, let's not burn our trash. And so it's a really interesting thing. It's kind of like low tech, but in some ways like high tech because of the lack of tech in the community. So yeah, the recycling center is a project on Giveeth There that's raising funds. And what's another project? Another project I think is really cool is a project by my friend, Sem, that I kind of don't understand completely. It's EVM CRISPR.
+
+And basically it, you know, the joke is that it can turn your DAO into a duck. It's like, it can like rewrite the genes of DAOs. And so it's like, if you kind of like, we're, we're using it all the time, like in our, in our give DAO, it's like, it's an Aragon DAO that we use for voting on these like role proposals and give backs distribution and stuff like that. And sometimes it's like, we need to like upgrade contracts or change things within the DAO that like, you shouldn't really be able to do. EVM CRISPR makes it like really easy for you to like.
+
+write a simple script that can actually create like these like impactful DAO upgrades. So it's like a super well-needed tool, but it's like also all kinds of tech I don't understand. So like check out, yeah, EVM CRISPR. It is also a project on Giveth and yeah, my friend Sam is basically a genius, so.
+
+Citizen Web3
+like it, I like it. Second question, now this is going to be two answers. Give me two motivational things that you do daily or that happen in your life that keep you motivated to, well, keep Lauren motivated to wake up every day, you know, save the world, fight corruption, build giveth and everything else.
+
+Lauren Luz 
+Yeah, you know, this is a really easy one for me because I'm like an extremely dedicated yogi, you know? Every morning, it's like the first thing I do. I wake up in the morning, I coconut oil, I'll pull, I drink my water and I get on my mat. And for me, I'm like a very fast thinking, very intensely focused person. So I'll like dive into my computer and just be like super hard in it and like disconnected from my body, but.
+
+Like my yoga practice is a time where I like really reconnect and ground into my body and discover all kinds of interesting things. Like I feel like I store my emotions and my stress in just like different parts. So I'll lay down on my mat, just feel how my spine feels and how my back feels and be able to even just kind of like go through an emotional processing or understand deeper and deeper layers of myself. And I do that every day before I get on my computer. And I think it really helps to ground me and reconnect me with.
+
+like my purpose reconnect me with my center so that I can go out into the rest of this like crazy high power tech world and, you know, do my best, do my best for humanity. So I think that's one really, the second one, you know, I think the second one for me is just like, is like holistic, holistic diet lifestyle. Like I've become very, very sensitive.
+
+Citizen Web3
+And second one.
+
+Lauren Luz 
+very sensitive over the years to alcohol. And I drink a lot of water, and I don't eat gluten or dairy, and I eat only fruit on its own. And I've just kind of come up with these nutritional hacks that I think just make me feel really, really energized. And actually, if I can add one more sneaky thing in there, microdosing psilocybin. It really, really helps as well. I actually find that it helps me as well with this like,
+
+processing I was talking about, like with what's going on in my body and my yoga practice. It's like, I think it just makes me a little bit more sensitive and tuned in and grounded to like a deeper connection with nature and with myself and like with with the things I'm trying to achieve. So I think anything that kind of like pulls me sorry, I think anything. Yeah, I was gonna say these things that like pull me out of just like being heavily in my headspace and really get me like deeply grounded into my body.
+
+Citizen Web3 
+You know, the big...
+
+No, no, no, no, no, great. It's great.
+
+Lauren Luz 
+I think just connects me more with my purpose and what I really want to achieve for myself and for the world.
+
+Citizen Web3 
+I said at the beginning we would make good friends. Now I can tell you we'll make even better friends after you said that. Thank you for saying that by the way, because not many people again talk about it for some reason. Now, I mean, of course, yeah, well, I guess you live in Northern America and in Northern America you have a lot of actually podcasts that have in the past five, six years have popularized that, which is a good thing, I guess, because they tried to show, well, we're going into a different conversation here, but again, thank you for saying that. I'm really glad you did. Last thing.
+
+Lauren Luz 
+Thank you.
+
+Citizen Web3 
+One person could be a character, could be dead, could be alive, could be not real, could be made up, could be a cartoon character, a book hero, a writer, a giveth founder, project founder that inspires you, not influences, inspires.
+
+Lauren Luz 
+You know, it's kind of like, feels like the obvious answer, but I'm gonna give it anyways. Griff Green, founder of Giveth, also my fiance, he is the most inspiring person that I've ever met. And like, he's like the yin to my yang. He's like really nice and like open-minded and like energetic. And he dedicates, he works harder than I do. He dedicates like.
+
+Citizen Web3 
+Nice. Nice. Woohoo.
+
+Citizen Web3 
+I love it.
+
+Lauren Luz 
+80 hours a week to just being on calls and trying to just make the world a better place. He's the most giving person that I've ever met and every single day just inspires me to be around.
+
+Citizen Web3 
+I'm really glad as well that you said it because not a lot of people say members that are related to them You know, but you are the second or the third person over many years that actually said, oh my family Well, some people say my family in general, but nobody likes to point person. I really I really like that answer Thank you for for saying that again Lauren it's been a huge huge pleasure It's been very interesting to talk not just about DOS to find out what giveth and again guys check that out if you still don't know what it is
+
+especially if your projects are related in any way to public goods or you're interested yourself in public goods, check it out. Lauren, thank you for your time.
+
+Lauren Luz 
+Thank you so much for having me on. This was a blast and I feel just like so happy to be able to also just connect from like a heart centered space. So thank you, Serge and Citizen Cosmos and everybody listening as well.
+
+Citizen Web3 
+Thanks. Hey, thank you. Bye everyone.
+
+Lauren Luz 
+Bye
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.
+

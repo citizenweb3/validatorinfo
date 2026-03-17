@@ -24,7 +24,7 @@ const ToolTip: FC<Props> = ({ children, tooltip, direction = 'bottom', noWrap = 
     timeout = setTimeout(() => setIsOpened(true), 700);
   };
 
-  const baseStyle = 'pointer-events-none z-[999] min-w-32 bg-primary px-3 py-2 text-center text-white shadow-button before:absolute before:left-0 before:right-0 before:z-[-1] before:mx-auto before:h-4 before:w-4 before:rotate-45 before:bg-primary';
+  const baseStyle = 'pointer-events-none z-[999] min-w-32 whitespace-pre-line bg-primary px-3 py-2 text-center text-white shadow-button before:absolute before:left-0 before:right-0 before:z-[-1] before:mx-auto before:h-4 before:w-4 before:rotate-45 before:bg-primary';
   const typographyStyle = 'font-sfpro text-base font-normal leading-normal tracking-normal';
   const tooltipClassName = twMerge(
     baseStyle,

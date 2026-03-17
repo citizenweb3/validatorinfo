@@ -1,0 +1,436 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/valtersjansons
+
+Episode name:
+Mission Statements and Karmic Motivation with Valters Jansons
+
+Citizen Web3
+Good spacetime everyone, welcome to a new episode of the Citicen Web3 podcast. A source for educational insights into the web3 universe and your connection hub to the people that turn coding dreams into decentralized applications and reality. Today we are joined by Valters Jansons from KJ Nodes. We talk about commitment, project documentation, economical health for validators and UX. We discuss mission statements, karma, cloud versus baremetal and time as a resource. Finally we dive into values, NFT's, identifying new stake holders and breaking things. If you enjoy Citizen Web3 please share this episode on your favourite social platform and help us put web3 values into the universe.
+
+Valters Jansons
+All of the current standards are bad. So let's define a new standard.
+
+These kind of incentives, let's call it that, are different for each person. Sometimes they are ideological, sometimes they are monetary, sometimes there is a mix of both.
+
+We have been around since the good old days of the more regular blockchains. Now everything is modular, everything needs to be very, very fancy.
+
+I don't think the shitty projects are interesting. I mean, they can be fun to look at, but I wouldn't
+
+The counter argument there could be security is overrated.
+
+
+Citizen Web3 
+Hey everyone, good space time. Welcome to a new episode of the Citizen Web 3 podcast. Today I have Valters with me from KJNodes. Valters, how are you, man?
+
+Valters Jansons 
+Doing good. It's crazy this Christmas time, but yeah overall good. How about you yourself?
+
+Citizen Web3 
+You made it. You made it. Wait, how about me? Man, you were driving through blizzards and like snow forces, battling demons to get to this podcast, man. This is tell me about how are you? Wait, what about me? That's not important. What about you, man? Wait.
+
+Valters Jansons 
+Yeah, yeah.
+
+Valters Jansons 
+How about me yeah it's a driving here was crazy you know to the studio overall you know rush hour usually it's heavy but then all of a sudden you have a rolling fog and you see only you know a hundred meters in front of you and yeah it's it gets crazy, accidents everywhere and it just stand stills and yeah you just you know navigate through it but gotta do what you gotta do to get here it's worth it
+
+Citizen Web3
+People, this is the determination that we all have in Web3. Please, please, please bear that in mind, but please be careful people, whenever you drive, whenever you do things, whenever you trade, whenever you connect your wallets or whatever, be careful, have determination. That's I think what me and Valter trying to say here. Walter, man, I... I like that, I like that. Don't trade and drive. Well, well, well.
+
+Valters Jansons
+Yeah, don't trade and drive, that's a big...
+
+Valters Jansons 
+Okay, I mean, yeah, but...
+
+Citizen Web3 
+Man, wait, before we go into the heavy stuff, let's do an intro for you. Can you do an intro about yourself? What do you do? What are you working on? Anything you want people to know about yourself. Please, it's all yours, man.
+
+Valters Jansons 
+Yes, for sure.
+
+Valters Jansons 
+Yeah, so I am a part of KJ nodes. We are a validator, a Web3 validator in the Cosmos ecosystem, branching out on a few different chains, trying to get into some chains, but primarily Cosmos. We started out with the Agoric way back in 21 it was. We didn't join in when Cosmos initially launched. We were kind of late to that party, but Agoric is where we joined in. And...
+
+So KJ himself founded KJ nodes, he couldn't be here today sadly, but I am representing him as the technical lead. And we are kind of a two person team, sometimes a one and a half, because I have a different day job myself as well. That's a different story that we can get into about how the small validators are doing in the current ecosystem. But yeah, I do have a day job as an IT architect. So we just run infrastructure for different projects. Additionally, we are working on tools, trying to branch out because it's tricky being a validator and getting recognized. Other than that, yeah, we just try to do what we think makes sense. That's really the core of what we are, what we represent.
+
+Citizen Web3 
+We definitely gonna talk about the tools you guys build, but before that, let's, I'm gonna direct you a little bit and try to take you in a direction. Feel free to like go along with me or feel free to divert and that's so totally fine. I usually try to like dig a little bit with the guests of why on earth did anybody  sane or insane or whatever mind is, you know, why do you decide to validate? Like, what is that? I mean, you don't wake up and you go, well, today I'm bored. I think I've heard of these things. I'm going to be validating. So like, why? Why did you get into that space? I mean, maybe even why Web3 originally? Like if you if it's OK, of course, to dig there.
+
+Valters Jansons 
+Yeah, of course, of course. These kind of incentives, let's call it that, are different for each person. Sometimes they are ideological, sometimes they are monetary, sometimes there is a mix of both. Maybe it is just that you want to build something cool. Could partially fall into the ideology part, but still about recognition and fame. That's a thing for others.
+
+So for me personally, the main motivation is that I feel like I'm making something that's useful at the end of the day. It could be just interacting with the community, trying to explain some concepts to some people sometimes or explaining some instructions or just for example that we provide instructions as such.
+
+That's helpful to us when we need to grab something real quick, but also helpful for the community as a whole. And other tools we build similarly, it's about just helping people out at the end of the day.
+
+Citizen Web3 
+I'm gonna play devil's advocate slightly. So, I mean, everybody likes helping people. And I mean, I also like helping people. And sometimes, you know, let's go into this classical scenario of helping a grandma cross the road, right? But again, I don't leave my house to help the grandma cross the road. I could be, I could be like this kind of guy who what he does all these days just helps people cross the road here and there. What I'm trying to get at here, I really want to understand with a lot of guests.
+
+I tried to dig into it. What was their original reason? I mean, try to remember why was it just like a lack of buying something and money is okay. It's a lot of people come here and they say, hey, we are here because we want to earn profit. We want to earn revenue way here because we want to help self-realization, like you mentioned, or ideological reasons. And I can tell you that, of course, most people, yeah, like, like somewhere they remember that the ideological reasons. I can't say that everybody still thinks that the.
+
+Well, yeah, it's a mix and match. That's what I'm trying to say. And basically, forget about validating for a second. Why did you having a day job, as you mentioned already, as an IT architect, which is not the worst job in the world. It's a good, I assume, I mean, I'm sorry for the assumptions here. Why would you give all that up and say, let's go into Web3? That is like, I'm going to help people and yeah, whatever. I mean, what's in the head there? What made you do it? What draws you to that?
+
+Valters Jansons 
+It's the community seeing it really. I mean it honestly. Of course there is the money incentive that exists. But at the same time. I do the things I do without really considering that as a primary thing. We might at some point just say, hey, we actually have made enough from this and hey, it's like taking up too much of our time. Hey, we want to make new projects. So we are shutting down the validator business. That could happen, of course. The validation part itself is only a smaller part of it. But the bigger picture that matters to us is making something that's just fun for everyone and enjoyable. And of course, the money is the means of how you can do it. Everything is monetizable and that's a struggle, of course, that exists. Incentivized test nets attract a lot of attention, whereas non-incentivized ones don't so much, right? You can see that happening, but we do believe in just the ideology and making good things.
+
+If that makes sense, I mean, yeah, it's...
+
+Citizen Web3 
+It makes perfect sense. I gotta be honest with you. I think here we have a little bit of not How to say it's not I wouldn't call it a miscommunication trap. I would call it a Industry trap because on most uh, I gotta be honest the most podcast that you will go to a lot of people will talk to you about ICO's, tockens and no we don't talk about that. Actually we, in fact, we don't just avoid it. We actually like completely for the last four years, despise. I mean, I don't mind talking and I had guests on a couple of guests, I guess over the four years. I guess ideology is the main thing and I guess not many, some people, it takes them time to like, oh, really people are gonna ask me about my values, about my opinions. What do they want from me? You know, and I understand like the carefulness of stepping into that conversation. I get it. Let me ask you a different question here then because you said fun, you said helping community. If I was to ask you what is the mission?
+
+Today, at least, it doesn't mean that mission doesn't have to change tomorrow. For you personally, as Valters, and for KJ Nodes maybe, what is your guy's mission in Web3? And for you personally, sorry.
+
+Valters Jansons 
+So the mission, yeah, the mission will be totally different if we compare KJ nodes and me as a person, of course, it will have the same underlying motivation in a sense. But of course, the mission statement is different as for KJ nodes, it is more of a business kind of an aspect. You need to consider that monetary aspect much more and then how things are handled.
+
+For me personally, the mission statement is summarized as maximize the benefit that others can have from what I do. I haven't formalized it previously, but I guess that could be the best way to put it. Like if just I'm thinking on the spot here, because I have a background in IT and software engineering as such. So I feel comfortable applying my tools on the technical side. Of course, I'm working as an IT architect as well that has its own roots in operational tasks. So I have handled site reliability engineering and kind of DevOps team building and other aspects throughout my history. So I feel very comfortable utilizing these skills. And I just want to get the best benefit out of it for the community as such. And I see myself fitting into the Cosmos community.
+
+Citizen Web3 
+It makes sense. I understand you. Why, why, why Cosmos though? I mean, why did you go? I mean, it's a rich question coming from somebody who used to be called Citizen Cosmos. But, but why, why did you guys start with Cosmos? Why not start in any other ecosystem?
+
+Valters Jansons 
+Okay, this is so partially it just happened. It's pure luck that things go the way they do. There is some survivorship bias, for example, if you look at, you know, there are the big successful ecosystems or projects, let's call them that maybe. And then you ask, okay, why did you choose this one when you're talking with kind of 
+people that are still surviving. And then it will be a tricky question to answer for them. Right? It's just, you can't just by looking at them answer, okay, why does this ecosystem make sense? Similar to just other ideological questions. But for us, the summary there is the modularity, I guess. We have been around since the good old days of the more regular blockchains. Now everything is modular, everything needs to be very, very fancy. And a lot of chains do this in different ways. And we strongly believe in the way Cosmos handles this, you know, with IBC being a first party thing that just exists. Whereas in, you know, in other blockchains, you would have very complicated contracts or some other mechanisms. And so we see Cosmos as an easy to get started with kind of platform. And we see a lot of different projects happening.
+
+We see a lot of growth. So that's why we are happy to stay. Again there is no one specific reason why we would be locked in. But similarly as with the you know, this interoperability that exists, it's also easier for us to maintain all of the Cosmos chains because they have for the most part very similar ways how they are built how they are operated. So if we have automation tools for one Cosmos chain, then for the most part we can reuse that. And that also keeps us into the Cosmos ecosystem. These similarities that there's this common SDK, Cosmovisor, different tools that exist. So, but starting out, just yeah, the starting out part was just pure luck really, and that just happens. There is no one particular reason. We did not go into Cosmos thinking oh, this will be the one. This happens for us with all of the things we do. We just try something we see where it goes. If it turns out great then awesome. If not, then okay. We move on to the next thing. I mean, yeah
+
+Citizen Web3 
+It's an interesting sentence that you said there, if we try and we'll see where it goes, because my next comment was gonna be roughly on that note. I'm gonna share something with you from personal experience and it's a kind of a question, of course. I guess that for me, at least as a project founder, as a validator that done it for many years, I can tell you that the step to make that step from exiting Cosmos and going further.
+
+I mean, when I started the project four years ago, I didn't want to be bound to Cosmos, but it took me three years. Three years. I mean, I'm lazy. Okay. I'm not saying that. And my question is here. Do you think that we as validators or, you know, projects have this problem of getting stuck sometimes in this loop, you know, in this kind of like, okay, I'm doing what I'm doing. I'm trying to do something else.
+
+But do you understand what I mean? I mean, I know it's not, yeah, what do you think about that? Do you think it's something that exists really?
+
+Valters Jansons 
+Of course. Yeah, for sure. This is a human thing that we keep doing the things we know, right? It's hard for us to step out of the comfort zone. Yeah, yeah, it's easy to be in the comfort zone, right? That's why it's the comfort zone. And when we know some specific projects, then we want to use them for everything, right? You know, for example, you know how things...
+
+Citizen Web3 
+It's easy.
+
+Valters Jansons 
+work in project A and then all of a sudden project B does things differently and you're annoyed by project B, right? It's an annoying human thing that you just need to kind of try and notice and then recognize and accept over time. It's yeah, just human behavior. We like what we know. That's my two cents on this. For us.
+
+We are running a lot of chains and we are looking at different projects at the same time, of course, to branch out a bit. But we do recognize how much complexity that would bring as well. And this could also be a concern for many, I think, not understanding things entirely.
+
+So not only that kind of being aware of project A and trying to stick with it, but also not fully grasping project B, right? It could be that the documentation of project B isn't that awesome, right? That happens a lot. Sometimes it could be that there is some specific skills that are just missing that happens a lot. And for me as well, that there is some new project that does something that sounds amazing. And I'm just sitting there looking at it and thinking, how does this even work? And then you just spend some evenings and you're like, oh, okay, it makes sense now. But that means you need to sit down with that project's documentation or the people working on it and just ask questions and dig. And so it takes time, it takes effort. Many people will try to find the easy route. It all boils down to that, the comfort zone, the easy route. So yeah, at the end of the day, people say they want to do something but don't do the effort required. So that's...
+
+Citizen Web3 
+Absolutely. I think it's a good spot to ask you about your chain selection criteria because I mean if I go on the KG websites, I mean, yeah, like you mentioned, this is Cosmos Chains, but there's a lot of them, especially for two people. So what is the criteria for chain selection for yourself and for the team, of course, for the project?
+
+Valters Jansons 
+Yeah. So the historical answer, and this is probably true for many small validators, is really we go with the flow. If we see that there is a big project coming up, we will be spending time on looking into it, right? We are not big enough that we are approached by the individual projects directly, right? So for us, it's more so about, you know, showing who we are and trying to get in. Usually during the test net phase and showing that we are a reliable player in the ecosystem, having our name seen, but there isn't historically that big, that much selection criteria as such. Now we are trying to more so put in our own different criteria, what project kind of categories, let's call them that we want to branch into. This goes back to the whole ideology topic that we want to work on something that improves the community.
+
+It could be different kind of, let's say, tools, different initiatives that people are bringing. If we see future in a project, then we want to go for it. And we try to avoid pure hype projects where we don't see a future, right? Because we want to be in this for the longterm.
+
+As I was mentioning, we might, of course, just say that, hey, we are done at some point. That could happen. We are not saying we are here forever. But we are here planning for the long term. And we want to be with projects that we see a future with. And that's the main criteria currently, that some projects will exist that, of course, could make us money, especially when a new project launches, there is usually a big, big spike when it gets listed. And we could of course jump on that, but we try to not do that kind of a thing. And instead go for that long-term vision.
+
+Citizen Web3 
+So is there any type of projects that you guys completely avoid? For example, we don't want to be running, I don't know, DEXs, even if it brings us money, because, or we don't want to be running, I don't know, betting protocols because that's immoral, or I don't know, whatever, something that you guys don't matter what is the criteria, you're going to be like, eh, never, never going to be validating this.
+
+Valters Jansons 
+For us, it boils down to how good the future outlook is, right, as I was saying. And some betting project could come along the way, right? It could have a betting framework and there is some kind of an edge for it, right? That it somehow differentiates itself, adds new value. And then of course we would be happy to look into it.
+
+At the same time, if it is just the same thing that has already been built, and we don't see the new value being added, right, then it's tricky for us to warrant going into that project. There is essentially, if there is no added value, what are we going for? That's, so we would be okay with going into like, for example, different Dexes, even looking at the, let's say call it immoral areas, right? Because at the end of the day, it's just tools. The thing that we run as a validator is just a tool.
+
+Citizen Web3 
+I understand.
+
+Valters Jansons 
+how it gets used, that's a different discussion. Of course, if you are knowingly making something that is illegal, right? If you are knowingly running something that is illegal, then yeah, that's of course a not so good thing. But if you are just hosting a platform for people to gamble, then it becomes more muddy. And for us, hat part is not so clear cut that we would be against it. Yeah, feel free to, yeah, yeah.
+
+Citizen Web3 
+Let me let me let me let me let me let me let me cut out a little bit there because I mean, I think I think that the way I asked it might have started wrong. I guess my question was not about immorality and what is immoral to you because to everybody is to somebody betting is completely fine. And to me, to me, I have no problem with for example, I don't know Silk Road, right? In my opinion, that is not a crime. And I've used that website and I publicly will say that but
+
+And I've been saying it for many years. So for me, that is not a crime. That person didn't commit any crimes, in my opinion. I think the, I guess the question was, what is immoral guys for you? Like what is the one thing that, not what was immoral for somebody else because they say it's immoral, but what is something you guys would say, I'm going to, I don't think that's good. Yeah. If there is something that is.
+
+Valters Jansons 
+Okay, gotcha. Yeah. Gotcha.
+
+We haven't discussed what would be immoral for us. We just have a kind of base understanding and unspoken agreement, I guess. But it has never been formalized. We haven't had that discussion outright. Yeah, for sure, for sure. And for me,
+
+Citizen Web3 
+It will come. I can guarantee you man.
+
+Valters Jansons 
+As I was saying, I don't look at it from that point of view. I look at it as just tools. If there is some chain that everyone knows is being used for something illegal, then yeah, of course that becomes a bit more muddy. But then as with any decision, it would be chain by chain, project by project. So I would say that there isn't such a clear cut immorality line for us.
+
+Citizen Web3 
+I understand. I understand that line of thinking and it was more curiosity. I guess, different like validators, they have completely different opinions on that. And it's really interesting to me to always try to unravel a lot of the thinking that people have behind their like, you know, I guess, for example, I can tell you that for us, you know, like considering the tribalism is something like sacred to us and we don't want to, we want to cure tribalism, right? This is a dream. You know, I have a dream. And so like, and to me, anything that is like bridging thing makes perfect sense to go and validate because all this bridges two ecosystems, you know, I would like to be a validator of that. On the other hand, something that I don't know, like I'm trying to avoid dexes. I got to be honest with this is something a personal thing. But again, this is a very let me let's go a different way.
+
+Let's go. Let's go. Let's go the other way. Let's go the other way. Do you have currently? No, no. You know what? Fuck that. We're going to we're going to go completely different way. We're going to we're going to I understand because you kind of said and explained that this is about tools and that answers, I guess.
+
+Valters Jansons 
+Yeah, new technologies coming out, that's the direction. Yeah, if that was your next follow-up question, for sure. No, okay, okay.
+
+Citizen Web3 
+No, no, the next time. Wait, the next time was bare metal and cloud. So let's go a little bit about bare metal cloud. I know you guys mention on your websites that you primarily learn from the cloud, as far as I understand, but you also have some servers located on grounds, as far as I understand. Could you talk me, not about your particular setup, maybe, because that's be going in too many details, I guess, but In general, do you guys cloud, bare metal? Do you have any plans to go more bare metal or more cloud? I don't know, whatever.
+
+Valters Jansons 
+Yeah, the discussion really is complicated because of the cost involved. Bare metal costs more at the end of the day to run. And it can be helpful for projects to have dedicated hosts. And we ourselves, you know, for validation, we run dedicated systems, but at the same time, we do run a lot of RPC public goods that we publish as just virtual private servers, just as virtual machines. And they serve just publicly available data. So for us, that's the distinction that we try and have more predictable performance for the validation aspect, but running on hardware does have costs, especially when you start looking at clustering things and then there is the bigger discussion about geo-distribution that is a tricky one, because people want geo-distribution, but they don't want the latency, for example, right? It's...
+
+They don't want systems talking in a slower way. They want that speed. But if you have geo-distribution, then speed of light is the limiting factor and it's super fast. Speed of light is really fast, but at the same time, those small little pieces of time, they count up and can slow things down. And that's also something to keep in mind that kind of decentralizing things and...
+
+Valters Jansons 
+Trying to run on the best practices does always have an associated cost. So there are those trade-offs and we believe in doing that. But yeah, that's the main issue that many small validators will be facing at the end of the day.
+
+Citizen Web3 
+And you haven't even started talking about security key management systems, Horcruxes and other facts that add to the latency. In fact, I think that a lot of the time we see some people, I think the education here is lacking that sometimes 100% latency is not a good thing for a validator that means he might be, he might be, we don't know that, but 100% latency, sorry, latency, excuse me.
+
+Valters Jansons (30:25.624)
+Of course.
+
+Citizen Web3 
+100% uptime could not mean a good thing. It could be that a node is run, an operator is just running one single node without any centuries, without any... Yeah, yeah. I mean, it's hard to say, but yeah.
+
+Valters Jansons 
+And not never rebooting. Yeah, exactly. Yeah. But yeah, but I was, you know, touching upon this with the clustering concept there that I mentioned, but essentially, yeah, that's, of course, how do you lock things down? How do you, how do you manage access? Especially if you want to grow and have, let's say, multi cloud provider
+architectures, right? You need to handle different aspects how things interconnect, how do you handle communication, because these chain services, they don't, usually they don't offer encrypted endpoints, right, off the bat. They just have plain text end points for RPC, for all the other protocols that, and you would want to have things protected. Let's say you have one system internally that does some RPC requests, right? API call, whatever it might be to a chain node. You want that thing secured. You want that encrypted somehow. You don't want that going through the public internet and anyone could intercept it and man in the middle, right? That's...
+
+And these concepts, of course, that's a very theoretical attack, but that's something that in my opinion needs to be considered by the different operators and different validators and even development teams as such that they should be caring about this. And yeah, it's. It's tricky to consider all of this. It boils down to just understanding the tools, understanding what needs to be protected, how, what's the risk surface, what's the threat. It can be complicated. Yeah.
+
+Citizen Web3 
+What is... Well, it is complicated. I don't think it... I think it is very fucking complicated. But I'm curious, man, because, I mean, you guys run... I actually came across... No, no, the way I usually find people to interview is, yeah, like there is the big, like bigger validators considering now, like more focused on them. There is like, you know, the founders, whatever, researchers.
+
+But I'm going to be honest with you, like my most best finds. And when I say best finds, it's not that I have like, I do a favorites, I'm a human being. But, you know, my like, really interesting people that I find is mainly through the tools that I need. And with KJ nodes, this is a perfect example. I'm looking for something that I need. I find that I'm like, whoa. These guys have already done it. I don't need to do it. It's open source, you know, or whatever part of it is open source. I can use that. This is amazing. I can recommend to somebody else. I want to talk to these people. I want to know what is in their head. Why do they build those things?
+
+Valters Jansons 
+This goes way back to where we started off with just building tools that are useful. And we have this, I guess it could be called the mantra, this ideology that we make tools by validators for validators essentially. We know the struggles that validators have. We openly say that we don't have the manpower to make all of the tools that we would want to. There is the time factor about how much time we have in the day and time is a precious resource that we have. It's not only tokens and NFTs and everything else, but also time. That's very tricky to manage. So we make what we feel will be the most helpful at that time and what we feel we can accomplish.
+
+So the slash board as an example that we are fairly proud of as a tool that just brings awareness. And we have had people say, oh, you are trying to highlight that someone fucked up. Well, of course that is partially an outcome of it that happens. It isn't the main intention, right? For us, we were intrigued by what's happening on the chain. And we assumed many other validators would be as well. And then we started talking with other projects and hearing that they are interested in seeing these kind of historical data because the Cosmos SDK does not expose this cleanly. So that's why we gathered it. It's just public data that we are aggregating, publishing in a more concise fashion. And similarly with all the other tools that we make, it's an evolution of what exists. So that's why we hope these tools are helpful, that we are building on top of other great things. Essentially everything is a remix anyway in the world. So we are also going that route that if there is a gap, then we try and help out.
+
+So we're happy that you have had good experiences with using our tools as well. That's our goal, really.
+
+Citizen Web3 (36:31.574)
+And of course, just like a moment of marketing moment to everybody who's listening to this. Of course, you can find all the links we are talking about underneath the description. But if you're too lazy to go to the links guys, services dot K J Nodes dot com and you can go from there and find a lot of the things by talking about including the slash board, including some of the RPC. There's a lot of things there. Just go on there, have a look.
+
+If you're a validator or if you're not a validator, if you're a staker, I advise you to also go have a look at it because in my opinion, validator tools are tools for validators and for stakers. And every validator is a staker, every stake, not every staker is a validator, but they could potentially become one. You know, let's not go into a fifth grade mathematics and logic anymore, but come back to the conversation. Man, you mentioned a few times, you know, like during the conversation, especially when you were talking about tools, you mentioned a few... few times things about knowing user trying to get to information, validators trying to get validators for validators. It's kind of like what I want to ask you is what do you think can be done today? And of course, this question is assuming something. But what do you think can be done today in order to improve user literacy, excuse me, listeners, when it comes to validating and validators. Yes, thank you, Valters. Or is there nothing that needs to be improved? That's, by the way, the assumption that I made there when asking the question, of course.
+
+Valters Jansons 
+literacy yes yeah
+
+Valters Jansons 
+I agree with your assumption about the literacy needing to be improved. At the same time, I think a lot is already being done by the different projects. For example,
+if you compare the wallets that exist for Cosmos in particular, right, we are speaking from so I myself and KJ nodes, we are speaking from a very Cosmos centric viewpoint. And we feel that tools that exist, for example, Kepler being a popular wallet, it handles a lot of things very smoothly.
+
+Valters Jansons 
+You can log in with your Google account and you just enter a password for that and all of a sudden you have your account on all of the chains that exist and new chains are added all the time and you don't need to do anything. IBC works out of the box as I previously touched upon right and a lot of the concepts are being abstracted away right and that's super good if you want widespread adoption. You want the wallet to be easy to use you want all of the other tools to be easy to use and understandable. So user experience UX matters. Then again when we have these power users, right we have stakers so in a web2 sense that could be the old money or like the you know, the folks with the money doing different kinds of investing. These players should understand what's happening, right? And different rules apply to retail investors and institutional investors in the kind of old school finance space. And a similar thing happens here as well, that for someone who just wants to transact in a casual way, maybe it is enough, the current situation, it could be improved further, but maybe like it is enough. At the same time, these stakers who want to be staking for the sake of staking, yeah, literacy matters because they will need to make decisions about who they stake with, when they move their funds elsewhere or their tokens elsewhere, they need to determine their criteria well. And...
+
+A lot of the times what happens instead is just, stakers will pick top 10 and go for that, for example. And these kind of things, improving tools could help with this a lot, but at the same time, it's about bringing awareness to things. If we want more actionable items, in my eyes, it's really about documentation, about tool tips, about different pop-ups, different things that you just notice that say when you're trying to stake that could say hey maybe you want to stake with these other things because of you know better decentralization across the chain. That's something that could happen that kind of pushes people into understanding those underlying concepts about how things work, about how how governance works, et cetera. But then again, there are these different places, like let's say Coinbase and Revolut and other exchanges and kind of financial institutions, they are running learning rewards. There is a question of how much people actually read. Maybe they just click through and try answering just without reading the answers and without reading the questions and then you know it may be that the information doesn't help yeah no but yeah that's but it is it is true um how much people will actually read you need to present it in a good way uh but it is about just informing people, from in my eyes for me.
+
+Citizen Web3 
+That's a five thousand year old question. That question is five thousand eight. Sorry to interrupt you, man. I had to make that, cause I'm already... Ha ha ha.
+
+Citizen Web3
+I guess one of the reasons I'm asking, and it's not like because this is a whole, not even an hour, but we can have a 10-hour conversation about it. The thing is, it's not that difficult. And in my opinion, and I'm going to be place devil's advocate here a little bit, of course. I don't think it's difficult. I think we have all the explorers. And I think the explorers are the first stage where users see validators. And what I'm trying to say is,
+
+Valters Jansons
+For sure, for sure.
+
+Citizen Web3 
+If you go to their on every Explorer, on every wallet, what do they do? They don't try to even think. I mean, you have a couple of teams. I've done really extensive research into it over the past few months because we're building something. But, you know, 99%, sorry. Okay. 95%. Let's be, let's be realistic. 95% of most tools about validators. And that's not just Cosmos. We're talking anything that will go by TVL by staked amount, and they will not care about, but it's not, it's so easy to change. I mean.
+
+Valters Jansons 
+Yep. Yes.
+
+Citizen Web3 
+There are millions ways to do that differently, but nobody wants to. What's the, why?
+
+Valters Jansons 
+Of course, if you look at it this way, the why could be a monetary incentive that you know, the big players might lose out on it. That's, understandably, one potential scenario. I am I'm not big enough of a player to know what's happening behind the scenes. So but I would assume that of course, people don't want to lose out on potential stake. It's tricky and it's tricky to answer and I'm not sure. Going back to your devil's advocate's idea that it's easy to change, it is not so easy because then what do you decide to sort by? There will always be someone.
+
+Citizen Web3 
+It's okay, you don't have to man. But if you want...
+
+Citizen Web3 
+I can give you at least five, six examples. I can give you five, six examples which are better. One is random. Random, random, just do it randomly. Do it randomly every time PIP user refreshes the page. Already better, do it alphabetically, already better. Do it, do it, do it, do it.
+
+Valters Jansons 
+Exactly, and that's my point. But that's my point.
+
+Valters Jansons 
+have you seen the XKCD for different standards? That like all of the current standards are bad. So let's define a new standard. And now we have, so the 10 standards that are bad and we make a new one. So there are now 11 competing standards. So there is this issue that how much is staked is an easy number to look at. And it...
+
+Citizen Web3 
+Of course, of course, of course.
+
+Citizen Web3 
+Of course.
+
+Valters Jansons 
+does partially make sense that these are the big players. So you would assume they are more trusted. That's an assumption, of course, that's a... We would need a few more, yeah, we would need a few more hours for that. But really there is this assumption, right? And that's what it's based off of. So I just want to highlight the decision on what to sort on.
+
+Citizen Web3 
+Big assumption, big assumption, big and dangerous assumption.
+
+Valters Jansons 
+will be a big one that will have people complaining, will have people arguing. And if you are a project that is like, let's say, a wallet or some other kind of project that does validator list, you always have to keep the other people around you in mind, right? You have to keep all the stakeholders in mind because your validators will be your stakeholders anyway, whether you want it or not. And you don't want to annoy them, right? Especially the big institutional ones. It's tricky that whole discussion about how to present data. And for us, we...
+
+I understand that it is easier for us to do some more controversial thing because we are not bound by the same kind of institutional ties that others may be. So that makes it easier for us in that sense. Of course, we can't build as many tools as we would want to, because of the more limited resources. But at the same time, it opens more doors as well. And to discuss things that might be unpleasant because someone does have to ask the hard questions at the end of the day there. And yeah, those questions many people will not want to raise. Let's.
+
+Citizen Web3 
+It's true. It's true. It's true. Guys, if you have any ideas, if anybody is listening to this, you know, has any comments, ideas on this discussed topic that I think will remain for many years probably to come a very highlighted topic of our podcast of please leave comments, start discussions. This is just again, a minute of marketing, but moving to the next topic. And I think again, you're an amazing person, I think to ask that at least.
+
+Assumptions. What would be your advice today to a validator team on security? On security. This is a topic that I cannot highlight enough and, I don't know, big letters. But you guys seem quite knowledgeable in that direction. I would really love to ask what would be your advice here for starting validator on security?
+
+Valters Jansons 
+Annoyingly, there is no one single thing you can do to just skip all of the knowledge gaining. For us, we are coming from a Web2 background of running things, of keeping everything going in a software engineering landscape. And so we are moving that knowledge onto the Web3 solutions and continuing to develop on it. But I think that is an important aspect for why we feel so kind of, I'm not sure if the right word would be passionate here because we don't really try and push others as much for the like take care of security aspect. Of course, the slash board as an example is about, not double signing, not missing signatures, so not having outages, but we don't do that much publicity about security because for us, it's just one of those things you always need to have in mind, otherwise you won't know how to do it, right? You'll just need to have it as a core, thing you think about. For example, in a Web2 landscape, there are often different regulations and different certifications that you need to take care of. And then you are audited as a Web2 project operator, let's say where you're running some solution. And you would have audits coming in and taking care of that. And if we want to have kind of a similar understanding of how security matters, how different operational excellence topics matter. I think projects need to look into running their own audits of validators in a more comprehensive way. In particular, there is the danger in self-reported evidence, right? Or rather in self-reported statements and then gathering evidence often gets left out. So when working with the classical software engineering principles, you need to run disaster recovery tests on a predetermined schedule, generally speaking. And you will need to have evidence that you have done it, for example, during the last, let's say last year or last six months or something else. And that is tricky to handle in a Web3 environment where you are pushing for decentralization, no single entity that controls who can do what, right? And so it's complicated to push for it, but I think if projects want to be serious about it, they should try and look into, for example, for foundation and different delegations as such, that could be an easier way to start out. I don't have a clear way how that could be integrated into the chain as such, how you could have on chain proofs of different operational excellence topics. That would then need to be considered like
+
+For example, whether you want to have remote signers enforced for everyone, how would you then prove it, right? That's, that you would need to have a kind of approach for doing it. That makes the solution more complex, maybe for the good, maybe for the bad. That's also a different discussion because the counter argument there could be security is overrated. And the idea is, of course, you need to keep your wallet secure. But if some validator gets breached, you could argue that for the chain as such, if the chain is set up properly, not much happens, right? Of course, those people who are staking with that validator could be impacted, but that should not lead to a widespread issue as such. So that could be a counter argument there, it is overrated. And again, we don't try to push for it that much because we believe there are these other kind of nicer things to discuss about different projects coming up and how things are evolving where things are going. But yeah, that's, that's my ramblings about this, that all the thing could be a thing that gets done in a more systematic way.
+
+If someone wants to do security more and more holistically as a but this would go out to the projects or the kind of the people building the chains themselves more so our foundations instead of validators. Now for validators if they want to grow their experience is just read like honestly home lab, build things, try to break them. That's the best advice I can give because I myself have learned from doing and there is a lot of value in breaking something and then trying to put it back together instead of just shrugging and then discarding it and then putting something new back in place, right? So my advice would be just experiment and then break things and see where that leads you. Yeah, of course don't do it on main, but yeah.
+
+Citizen Web3 
+I like that. I like that. Don't do it on your main net validator. Yeah, I like those. I like this. I like those rumblings as you call them. I don't think they're rumblings. I think they're quite perfect. Perfect advice, especially highlighting that, you know, wallets and validator the damage the breach overlay that can do is something people don't like to talk about, but it is there. Um, one last little section.
+
+
+Citizen Web3 
+Blitz five questions easy. This one is not gonna be that difficult, but you don't have to answer super quickly feel free to take to do it if you want so and Give me one book or movie that has inspired you lately
+
+Valters Jansons 
+Okay, okay.
+
+Valters Jansons 
+Oh, this is a tricky one. A book or a movie? Oh, Jesus. Okay.
+
+Citizen Web3 
+Yeah.
+
+Valters Jansons 
+I have been working on too many projects and I haven't been... Yeah.
+
+Citizen Web3 
+Maybe not lately, maybe long time ago, maybe 10 years ago. 20.
+
+Valters Jansons 
+Ugh, this is one of those, uh...
+
+Citizen Web3 
+It doesn't have to be an answer. They don't have to be an answer. We can, we can.
+
+Valters Jansons 
+Yeah, no, actually, yeah, I don't think... This is super annoying because I would need to then divide them, but this would be a few hours segment itself, I think. I can't narrow it down to one, sadly. It would split between, like, what genres, what moods, what kind of directions. Similar with music for me.
+
+Citizen Web3 
+Okay, give me a genre. Give me a genre in books and movies that you appreciate. At least a genre. Sci-fi.
+
+Valters Jansons 
+Yeah, I would go for so there would be of course, yeah, sci fi of course, different just, you know, when you want to unplug when you want to just have entertainment. That's, but then we get into Yeah, yeah, but I would also highlight just kind of documentaries as well, which is a kind of more boring, but breakdowns of
+
+Citizen Web3 
+Azimov.
+
+Citizen Web3 
+to classical.
+
+Valters Jansons 
+of things that have happened. If we are talking about validators in particular, there is, for example, Phoenix Project and there are different books about the DevOps culture that I would highlight if we're talking about, you know, that the professional space, but it's, yeah, I mean, this again, as I was saying, this goes into a very long discussion that...
+
+Citizen Web3 
+I understand, I understand, I understand, I understand. Okay, next one, next one, let's try. Give me one technological direction, examples, AI, blockchain, that you have a curiosity in.
+
+Valters Jansons 
+I don't think we have time for, you know.
+
+Valters Jansons 
+Hehehe
+
+Valters Jansons 
+Hmm, you're looking for something that I'm curious in but haven't explored or just what? Okay. Hmm.
+
+Citizen Web3 
+Your answer, not mine. Mine is just a question.
+
+Valters Jansons 
+Okay, um...
+
+Yeah, I think I if we're just throwing this out as a very broad question curiosity then machine learning as a direction. Yeah, so that would be AI essentially, but without so my issue with saying AI is it can mean a lot of different things for different people. And when you say machine learning, then you're targeting a specific kind of, you know, automating or training models and making decisions that follow through based on some... What do you call it? You know what I mean.
+
+Citizen Web3 
+I'm going to give it away. I'm going to give it away to you. I'm going to give it away to you. It's not about the answers. It's about the comments. It's about the comments that people make on their own answers that allow a person to understand who they really are. And that's what I'm looking for is those comments that you're doing right now.
+
+Valters Jansons 
+Yeah, of course. Yeah, because.
+
+Valters Jansons 
+Yeah, explaining why you choose something that's like a tricky thing in a concise way, but yeah.
+
+Citizen Web3 
+No, man, you don't have to, but you don't have to. We don't have to. You said you gave it. OK, next one. Give me a blockchain project today, yesterday that, well, you know, please don't say Cosmos or Ethereum or Bitcoin. One blockchain project that maybe doesn't matter if it's big or not, that you're curious and that you think it's an interesting project that you follow for. Personally, it doesn't have to do anything with K J Nodes at all. It's something personal. I like these guys and I think it's interesting. It can be the most biggest shit in the world for all we know, but it's just something you think is interesting.
+
+Valters Jansons 
+I don't think the shitty projects are interesting. I mean, they can be fun to look at, but I wouldn't. So yeah, interesting. That's, but if we are looking for something that tries to build something new, which is the definition of interesting for me, that there is some new development happening, I would look at Namada right now.
+
+Citizen Web3 
+Hahaha!
+
+Valters Jansons 
+I think as the thing that is interesting for me. Yeah, because a lot of their ideological values are very interesting and they're very inspiring or thought provoking. So I am happy to look at where they are going and happy to see what happens there, yeah.
+
+Citizen Web3 
+Absolutely.
+
+Citizen Web3 
+Are you guys running Namada?
+
+Valters Jansons 
+We are looking at getting into the testnet that they have. Sorry.
+
+Citizen Web3 
+It's annoying. Be prepared. It's annoying. Be prepared. It has difficulties.
+
+Valters Jansons 
+Yeah, we have looked at it. We have looked at it. There are some things and of course, if we are talking about that project, it took us a while to get our heads wrapped around the different accounts that they have, right? That they have the split between the shielded and the established and the kind of regular Cosmos style plain accounts.
+
+But then we wrote some useful notes in our services page as well, which hopefully could help someone understand what we went through. But yeah, that's, of course, one of those important aspects that looking at a new project that tries to innovate will take time, as I was mentioning previously. And when there is something new that exists, right, you have these multiple accounts that you need to take care of in a specific way, then yeah, it is more complexity. But we believe that the tools will come around to abstract it away. As we saw with the Cosmos Valets, that things are super smooth. I expect the same to happen with any new innovative project that comes around over time.
+
+Citizen Web3 
+Last two questions. Oh, by the way, sorry, another marketing moment. People, if you're really curious about what the hell me and Walters are talking about, Namada, I advise of course, go. There is an interview with Chris that we did about seven months ago on Citizen Web3. And it's quite interesting interview actually. Chris is not the only time he's been on, but I advise you guys to listen to that interview. So last two questions.
+
+Um, they're going to get more difficult, man. Shit. Um, give me one motivational thing that makes Valters get out of bed every day, every morning, well, afternoon, evening, whenever you get out of bed and, uh, drive to do a podcast interview or run nodes or help the community. What is this one motivational thing that helps you to get through the day?
+
+Valters Jansons 
+I suppose it kind of goes back to what we were discussing previously, this idea of doing things that help others. And so the motivational aspect there is kind of a belief in karma, I guess, could be the idea. That when you do good things and you help others, good things happen to you as well.
+
+And of course, we as KJ nodes, we benefit in a monetary sense from being involved in projects, but we contribute even when there is no monetary involvement, right? And we don't expect that all the projects where we help out will give us monetary value. It's more about just we help people out and we would want others to help us out.
+
+It's just this kind of idea that we promote by being nice. We hope others will be more nice. Of course, it doesn't usually work with the average person. That's a kind of a societal topic and a discussion for a few more hours, but that's what we do and how I keep going. 
+
+But yeah, of course, as I was also touching upon, time is a very valuable resource and people often underestimate its value. That, yeah, it's important to spend time on doing good things. That's my motivational.
+
+Citizen Web3 
+Last one, I promise. Last one, this one is going to be... Usually people say that this is the trickiest one, so I'm sorry. Dead or alive, real or imaginary, writer, coder, family member, a cartoon character. Give me one character, persona.
+
+Valters Jansons 
+Yeah, that is tricky. Yeah, let's go for the last one.
+
+Valters Jansons 
+Let's see, okay.
+
+Citizen Web3 
+Not guru, because we don't believe in gurus. Somebody that somewhere over your lifetime has inspired you or still inspires you to do something particular. It could be a GitHub developer, it could be a writer, it could be a founder, it could be, I don't know, a bugs bunny. It could be anything in the world. Could be God, could be, I don't know, dad, could be... It depends. Somebody is religious, somebody is not.
+
+Valters Jansons
+Yeah, this is a really tricky one because this similar, similar as with, yeah, because similar as with the movies and everything else here, it depends on what sphere or what topic we are looking at. I don't follow the idea that there's just, you know, one influence that we look at and we get inspired by. It's a mix of all of our experiences in life.
+
+Citizen Web3 
+I warned you
+
+Valters Jansons 
+But here to give a specific answer, I will just go with KJ here as inspiring me to keep moving. Yeah, that will be the short and sweet answer here because he's always working on things, working super hard. And then that just shows me that, hey, I got to do it as well kind of pushes me. So, yeah.
+
+Citizen Web3 
+I like it. Bam. I like it. I like it. I like it. I like
+
+Citizen Web3 
+I love it.
+
+Citizen Web3 
+I like it. I like it. Valters, thank you very much for your answers. Please don't hang up just yet. I'm just going to say bye to everybody. Everybody. Thank you for tuning in to this episode. As I like I said, everything me and Valters talk about whether it's I don't know their services or of course all the links, the other links, whether it's people, humans, whatever Valters has mentioned, please find the show notes. Other than that, thank you everybody for tuning in and see you next time on.
+
+Thanks, Walters. 
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

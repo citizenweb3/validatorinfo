@@ -43,7 +43,7 @@
     "Home": "Home",
     "You": "You",
     "Hi, World!": "Hi, World!",
-    "Explore the AI Rabbit whole": "Explore the AI Rabbit whole",
+    "Explore the AI Rabbit hole": "Explore the AI Rabbit hole",
     "Click to login": "Click to login",
     "Click to logout": "Click to logout",
     "Profile": "Profile",
@@ -108,6 +108,14 @@
       "Links": {
         "name": "Links",
         "hint": ""
+      },
+      "Health": {
+        "name": "Health",
+        "hint": "Average uptime of network validators"
+      },
+      "Show TX": {
+        "name": "Show TX",
+        "hint": "View network transactions"
       },
       "Battery": {
         "name": "Battery",
@@ -229,7 +237,11 @@
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",
-    "description": "I've created this Network A-Z Directory to showcase blockchain networks, including key statistics like fully diluted valuation, important links and token symbol. This list is perfect for developers, stakers, and multichain explorers, allowing you to find networks that match your interests and then study their profiles to explore staking potential. With direct links you'll get a clear snapshot of each chain, helping you navigate the web3 landscape and make informed decisions."
+    "description": "I've created this Network A-Z Directory to showcase blockchain networks, including key statistics like fully diluted valuation, important links and token symbol. This list is perfect for developers, stakers, and multichain explorers, allowing you to find networks that match your interests and then study their profiles to explore staking potential. With direct links you'll get a clear snapshot of each chain, helping you navigate the web3 landscape and make informed decisions.",
+    "Active": "Active",
+    "All": "All",
+    "Stopped": "Stopped",
+    "stoppedTooltip": "Network indexing is currently paused by us"
   },
   "NetworkProfileHeader": {
     "Tabs": {
@@ -343,6 +355,8 @@
     "show dropdown": "Show Slashing Events",
     "hide dropdown": "Hide Slashing Events",
     "no-slashing-events": "No slashing events found for this network",
+    "Proposals VS Time": "Proposals VS Time",
+    "no proposals data": "Data not yet available",
     "attesters in committee": "attesters in committee",
     "proposals-title": "Proposals",
     "slashing-events-title": "Slashing Events",
@@ -455,6 +469,9 @@
     "Token Price": "Token Price",
     "Supply Concentration": "Supply Concentration",
     "Token Flow": "Token Flow",
+    "token flow description": "Capital inflows, outflows and revenue over time",
+    "token flow chart title": "Revenue vs Capital Flow chart is under development",
+    "token flow chart description": "This chart will display token capital inflows, outflows and network revenue breakdown over time. Stay tuned!",
     "pending undelegations": "Pending Undelegations",
     "circulating tokens %": "Circulating Tokens %",
     "Distribution": "Distribution",
@@ -510,6 +527,12 @@
         "name": "Missed Blocks",
         "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
       },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Rewards",
+        "hint": "Outstanding rewards balance for this validator"
+      },
       "Infrastructure": {
         "name": "Infrastructure",
         "hint": "Does this validator provide public infrastructure for this network? RPC, Archive, etc. Click on the V to see details"
@@ -517,6 +540,10 @@
       "Committee": {
         "name": "Committee",
         "hint": "Is this validator part of the current epoch committee? Committee members are selected to propose and attest blocks"
+      },
+      "Rank": {
+        "name": "Rank",
+        "hint": "Validator rank, based on the amount of voting power"
       },
       "Governance": {
         "name": "Governance",
@@ -546,6 +573,12 @@
       },
       "Missed Blocks": {
         "name": "Missed Blocks"
+      },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Rewards",
+        "hint": "Outstanding rewards balance for this node"
       }
     }
   },
@@ -629,9 +662,12 @@
     }
   },
   "RumorsPage": {
-    "title": "P2P Chat: Connect with Web3 Stakers and Miners",
-    "description": "Join our anon P2P Chat, a secure and easy-to-use hub for web3 enthusiasts to discuss blockchain networks, mining pools, and validator rumors. Connect with other delegators and miners, share insights on staking strategies and crypto education, or simply - chat. It's your go-to for staking and mining resources, where you can ask \"who to stake with\" and get answers from people who've been there.",
-    "Start": "Start",
+    "title": "P2P Chat & Forum: Connect with Web3 Stakers and Miners",
+    "description": "Join our anon P2P Chat or visit the Forum — a secure and easy-to-use hub for web3 enthusiasts to discuss blockchain networks, mining pools, and validator rumors. Connect with other delegators and miners, share insights on staking strategies and crypto education, or simply - chat. Use the real-time P2P Chat for quick conversations, or head to the Forum for in-depth discussions and lasting threads.",
+    "Start": "Start Chat",
+    "Visit Forum": "Visit Forum",
+    "forumDescription": "Prefer structured discussions? Join the community forum for in-depth topics and lasting threads.",
+    "or": "or",
     "noNameError": "Please enter username to start"
   },
   "MetricsPage": {
@@ -797,11 +833,15 @@
     "eco tooltip": "Green Energy",
     "keyhole tooltip": "Key Sharding via Horcrux",
     "github tooltip": "Github",
-    "place your interview here": "Place Your Interview Here"
+    "place your interview here": "Place Your Interview Here",
+    "Podcast Summary": "Podcast AI Summary",
+    "Listen to episode": "Listen to Episode"
   },
   "ValidatorNetworksPage": {
     "title": "Validator Profile: Supported Networks",
     "description": "The Networks tab provides a comprehensive view of all the blockchain networks supported by this validator, featuring a table with key stats like expected APR, commissions, total value secured, uptime, and active delegators. This is ideal for stakers looking for the best network or those curious about the validator's reach, allowing you to compare performance across chains and choose the best spot for your staking goals. For more detailed information, check out our Network A-Z Directory. These stats are crucial for understanding the validator's performance across ecosystems, helping you make informed decisions in the multichain world.",
+    "Validator": "Validator",
+    "Node": "Node",
     "Table": {
       "Network": {
         "name": "Network",
@@ -1004,6 +1044,7 @@
     "voting power": "Voting Power",
     "validator rank": "Validator Rank",
     "proposals created": "Proposal Created",
+    "activation date": "Activation Date",
     "Medals": "Medals",
     "hash txs tooltip": "Has Tx",
     "horcrux tooltip": "Key Sharding via Horcrux",
@@ -1307,6 +1348,10 @@
     "rejected": "Rejected",
     "failed": "Failed",
     "link to full proposal": "Link to full Proposal",
+    "show proposal text": "Show Proposal Text",
+    "hide proposal text": "Hide Proposal Text",
+    "show ai summary": "Show AI Summary",
+    "hide ai summary": "Hide AI Summary",
     "voting period": "Voting Period",
     "show all proposals": "Show All Proposals",
     "votes": "Votes",
@@ -1357,7 +1402,15 @@
       }
     },
     "votes-title": "Votes",
+    "proposal description": "Description",
+    "proposal full text": "Full Text",
     "ai generated summary": "AI Generated Summary",
+    "ai is thinking": "AI is thinking",
+    "ai summary error": "Failed to generate summary. Please try again later.",
+    "ai summary rate limited": "Too many requests. Please wait a moment and try again.",
+    "ai summary timeout": "Summary generation timed out. Please try again.",
+    "ai summary disabled": "AI summary is currently unavailable.",
+    "render error": "Unable to render proposal text",
     "voting-progress-title": "Voting Progress",
     "for-label": "For",
     "against-label": "Against",
@@ -1486,6 +1539,40 @@
       "title": "Account Analytics Dashboard: Insights into Blockchain Activity",
       "description": ""
     }
+  },
+  "AiChat": {
+    "Ask AI": "Ask AI",
+    "AI Assistant": "AI Assistant",
+    "Type your question": "Type your question...",
+    "Send": "Send",
+    "AI is thinking": "AI is thinking...",
+    "Welcome": "Hi! I'm your ValidatorInfo AI assistant. Here's what I can do:\n\n• Search validators by name and show their metrics\n• Compare networks and show chain statistics\n• Explain governance proposals and voting results\n• Show tokenomics, APR, TVS and market data\n• Provide links to relevant pages\n\nAsk me anything!",
+    "Welcome Chain": "Hi! I'm your AI assistant for {chainName}. I can help with:\n\n• Validators, staking and commission info\n• Governance proposals and voting\n• Network metrics, APR and tokenomics\n• Blocks, transactions and node data\n\nWhat would you like to know?",
+    "Explain with AI": "Explain with AI",
+    "AI unavailable": "AI is temporarily unavailable. Please try again later.",
+    "Rate limited": "You're sending messages too quickly. Please wait a moment and try again.",
+    "Empty response": "I couldn't generate a response. Please try rephrasing your question.",
+    "Invalid request": "Something went wrong with your request. Please try again.",
+    "Key metrics": "Key metrics",
+    "Compare with others": "Compare with others",
+    "Top validators": "Top validators",
+    "Most reliable": "Most reliable?",
+    "Active proposals": "Active proposals",
+    "Voting stats": "Voting stats",
+    "Supply breakdown": "Supply breakdown",
+    "Inflation trend": "Inflation trend",
+    "Explain this block": "Explain this block",
+    "What happened here": "What happened here?",
+    "Network overview": "Network overview",
+    "Staking rewards": "Staking rewards",
+    "Lowest commission": "Lowest commission",
+    "Recent proposals": "Recent proposals",
+    "Token price": "Token price",
+    "Search validator": "Search validator",
+    "APR comparison": "APR comparison",
+    "Node count": "Node count",
+    "AI not configured": "AI assistant is not available at the moment",
+    "Request timed out": "Request timed out. Please try again."
   }
 }
 

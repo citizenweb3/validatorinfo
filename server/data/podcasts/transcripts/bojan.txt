@@ -1,0 +1,457 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/bojan
+
+Episode name:
+Trust, Borrowing and Stablecoins with Bojan Peček
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of the Citizen Cosmos podcast. Today I have with me a guest from Liquity, an Ethereum project. Boyan, the biz dev, hi, head of operations, I should say as well.
+
+bojan 
+Hey, search. Yeah, no worries. We're a small team and we do a lot of different stuff.
+
+Citizen Web3
+How are you, man? First of all.
+
+bojan 
+Very good. Thank you. Business as usual, quite busy with the recent news and announcements and turmoil in Ethereum especially. But good, thank you. Yourself?
+
+Citizen Web3 
+Before, I'm good. It's nice, it's perfect timing. I was gonna ask you about the timing as well. For me, it's perfect. It's just the start of the second half of the day. So it's good. Before we get into all the terminals of Ethereum and all the pains of whatever it is there, because there is a lot of course in crypto. So it's not an easy day any day. I'm gonna ask you to do a small intro for yourself. Like, tell us everything you think we should know about you,
+
+bojan 
+Yeah.
+
+Citizen Web3 
+working on specifically and anything else you would like to add for introduction about yourself.
+
+bojan 
+Cool, yeah. As you already said, my name is Boyan. I'm based in the south of Europe in Macedonia more precisely. And I am a freelancer since over 10 years ago now. So I did all kinds of jobs for the last almost two years with Liquity, which is a borrowing protocol on Ethereum. And before that,
+
+I did all kinds of VC and startup related gigs. Really love this type of work, freelancing, being independent and really suits my needs. So would you like to hear anything else from my side?
+
+Citizen Web3 
+Yeah, you know what? Since you already said it, interesting topic. You said you're freelancer for 10 years. I've quit, I'm trying to think. I think it was seven, eight years ago, corporate work. I was around 30 at the time. And I'm curious, like a person like yourself, you're a business, which is, in my opinion, one of the most busiest positions, I would say.
+
+not demanding in terms of physical work, right? In terms of like, you don't have to put in carry heavy things, but yeah, it's a demanding position. And I'm curious, like you said that it's been 10 years for you now, you know, yeah, I have, of course, here's some questions about your past work as well about the VC experience, but in a bit. But before that, like, I'm interested in a lot of people today, especially with all the financial situation around the world, right? They're trying to look for alternatives,
+
+ways of earning money. A lot of them turn to Web3, but again, freelancing doesn't necessarily correlate with Web3. How has it been for you the journey of 10 years of being a freelancer? And is it better in Web3 being a freelancer than in Web2 or is it the same? Is there no differences? Are there?
+
+bojan 
+In terms of Web 3 versus Web 2, I think there is no difference. People value good work, and that's the same for Web 3 and Web 2. How I started, that's quite funny because I was in not such a good financial position, and I somehow stumbled over Upwork, which is probably the biggest freelancing website. And I just applied to some gig.
+
+was two hours testing of a mobile app for my country. So I'm from Slovenia originally, so they needed someone local. And I applied, I got hired, I tested an app for two hours, and I got paid. I remember that still $22 for that, which was at that time probably four times my hourly rate. So I thought, that's also inflation for you there. So I thought, hmm,
+
+thing actually works. And I started applying, I started out with customer support jobs, various research jobs, and then just expanded on that. So because I was in my school years interested in all kinds of things, just not in finishing school, I don't have a university degree.
+
+bojan 
+find my way around and how to make money, but everything worked out well in the end.
+
+Citizen Web3 
+Sorry, I'm mute button. I'm gonna kill myself because of the mute button. Interesting. You mentioned, sorry about that, you mentioned uni degree and I can really relate to that. I'm the same. The only thing I was interested in school was not being there. I wasn't actually interested in finishing it. So that's a good one. I'm curious, does another topic that is kind of,
+
+A lot of people point the finger at Web3. As for the people, a lot of the time you hear this stigma and I'm curious as to what your opinion on that. That's a lot of the, what's the right word? The people who say that Web3 isn't ready, it's just a big speculation and it's always calm.
+
+You know, they say one of the reasons of that is because, well, the people who build Web3 are not educated, not good enough educated, not... And here's a question, but isn't it kind of like a double stick thing? Because, I mean, a person who goes and again, this is like a devil's advocate kind of thing to say, but what's your opinion? To goes and does an education degree in finances, right? Or in economics. Isn't that kind of already a problem for them? Because...
+
+If they have that information to go into web3, they already go with some prepositions and things that they wouldn't have if they didn't do the degree. So in a sense, I'm trying to say maybe not having that and not being exposed to that system especially, right? Because that's what university gives you the most systematic thinking. Is that a good or a bad thing in web3? And should everybody who works in web3 go and do, you know, economic degrees?
+
+that's not something that's not necessarily in your opinion.
+
+bojan 
+I think the most important thing to start working in any industry is being interested in that industry. So you have to have a passion for that. I don't think that Web 3 attracts uneducated people or anything of that sort, or traditionally not educated but not having degrees etc. I think it attracts a certain type of person.
+
+Either they are kind of libertarian, either they had some kind of lacking or bad experience with the financial system or live in an oppressive country. Either they worked in VEP2 and saw some innovative approaches and which couldn't be done in VEP2 or in traditional finance.
+
+of other reasons and examples why would someone choose Web 3 over other industries. I, in my experience when meeting people at events or conferences, they are very approachable, very nice, very good people. I get along with the vast majority of them. So I haven't had any bad personal experiences.
+
+bojan 
+I think more and more people would join. I mean, you see that people from Google or from the Fank companies are moving over into crypto. Some of them maybe have quick money, wishes or plans, others are genuine, but there will be more and more people coming to the space. And if I revert back a bit to the freelancing question, because I haven't fully understood
+
+answer to your question there. What I do think about often is, especially in global self-country or world countries, it's really very easy to get a freelance job on your computer. You can do very basic jobs like data entry or customer support and earn probably three, four times what you earn, what you would earn in that country or even more.
+
+bojan 
+huge migration of young people from, for example, South of Europe into Germany, into Switzerland, into whatever, while they could live, in my opinion, a better life at home working on a computer.
+
+Citizen Web3
+I personally am based in, well, you could say South Europe. I mean, it's an island, but it's a Portuguese island. And not even that, I see a lot of young people moving to France and Germany for physical jobs. And it's sometimes not a disappointment. I don't want to say that word because it's not the right word, but like it's bright people, you know, bright minds, bronchiite guys, girls that are doing what
+
+bojan
+Yeah.
+
+Citizen Web3
+are used to do for many years, other people. And the thing is that they are a bit wary in discovering. And this is, I think, again, talking about adoption or usage, right? And I noticed, though, that people, it's very hard for me, for example. I've been based here for two or two-something years. And especially, this kind of correlates with the growth of the project, our own project, I mean. And at the time, we've been struggling
+
+guys and girls to work for us because they prefer something physical and that they can touch with their hands.
+
+bojan 
+I think it's also a question of a certain blueprint as to how you should work or where one can get money. I guess from South America, everyone wants to go to the States, from Africa, everyone wants to go to Europe, fear in the Balkans, it's mostly Germany and they don't even allow the thought to penetrate that they can make money at home. Everyone is a scammer and I don't know, politically affiliated.
+
+you if he drives a good car or something so it's a bit of a mind thing as well and we should try to change that I think also for the or mainly for the benefit of the countries.
+
+Citizen Web3
+Absolutely, absolutely. And this is, there is a very good, good, good couple of points. I think you mentioned that, you know, that it reminds me of that experiment, you know, where they put five monkeys in a cage and put the ladder with the bananas. Have you heard about that?
+
+It's, so the scientists put, I don't remember who it's done by, I don't remember what year it's done, but the idea is that you have a ladder with bananas and five monkeys and every time monkey goes up, the ladder to get the bananas, the other monkeys get sprayed with really cold water. So essentially every time a monkey goes up, the other monkeys beat up the monkey and don't let him go up the ladder. And then the scientists change one of the monkeys,
+
+bojan 
+I don't think so. Can you tell it to me?
+
+Citizen Web3 
+straight out of the way it goes up for the bananas, but of course, he gets beaten up and then he gets used to doing that. And then they change one by one the other monkeys to the point of where five original monkeys are changed and the five new monkeys have never been punished with cold water yet because everybody was doing that. They are also doing that and they're still beating up the other monkeys that trying to climb up the ladder. And we're talking about, you know, people getting used to do.
+
+get been doing for years, not really understanding why. And this is like kind of bringing me, I guess, to more your favorite topic. And I guess one of my favorite topics, the centralist finance, right? And why are we still stuck in, but, but you know what, let me go completely different way, something for you that is, I'm gonna, I'm gonna go straight to the, to the, to the harsh question. Why, why pack to, why pack to the S dollar? Why are we still
+
+bojan 
+Okay.
+
+Citizen Web3 
+the web-tree world where our goal is to build, one of our goals I guess, is to build different alternative financial system and not just an alternative financial system, a lot more. I'm not going to be loud right now, but I think we all understand that. What I'm talking about at least, why are we still pegging to fiat currencies? What is the idea behind that? What's the reason?
+
+bojan 
+Well, we are mostly pegging to the US dollar because that is the global reserve currency. And that is what people are used to value things in or the fiat currency they most aspire or desire. We saw experiments with pegging to nothing with Reflexor Finance and Terai coin. And we saw experiments
+
+with begging to other currencies and they just lack traction. People are used to the dollar, people want the dollar, people understand things in the dollar and for the time being it's going to be the dollar. That's pretty much it, in my opinion.
+
+Citizen Web3
+Let me play a little devil's advocate since we just spoke about was herd mentality, you know, and people, you know, people want the US dollar. But does that mean that that's the solution? I mean, I understand. I mean, we all, I mean, let me ask you your opinion. What's what's in your opinion gives value to to to a currency at all, not just to the US dollar, but what would you your personal interpretation be? Not a book interpretation, but, you know, what does boy and how does how do you see it?
+
+what gives any currency value.
+
+bojan 
+I mean, that's a bit of a monetary theory question, something that I'm not too strong in. I think a certain degree is just the belief in it, but the other thing is adoption. So if it can be easily used as a unit of exchange and where and how easily.
+
+some kind of backing. I mean, we don't have a gold standard or anything really backing the dollar, at least anymore. But there is the backing of the US government, the US military, the US financial complex. And all of that together still makes USD the strongest offering.
+
+Citizen Web3 
+Do you think that things that you said, like the US government, the military can be replaced in the digital form, like infrastructure, I don't know, smart contracts, whatever?
+
+bojan 
+If there is a critical mass reached, then yes. But that is...
+
+Citizen Web3 
+Where is the point of the critical mass sorry to interrupt you?
+
+Citizen Web3 
+Hehehe.
+
+bojan 
+I don't know, but we are still far from it in my opinion.
+
+bojan 
+I don't know where is the critical mass. I guess we need to see a lot of financial turmoil, a lot more than we saw now. I mean, there are different currents pulling at the monetary system, not only crypto, there is the BRICS countries, which supposedly want to do a commodity-backed currency. I don't know if that's true.
+
+but there are some papers floating around. There are probably others which want to do something, I don't know, gold backed or cryptos which want to do something with gold. But so far that is still far from challenging the dollar status. And it won't be easy to execute. I mean, the US won't just stand by
+
+Citizen Web3 
+Yeah.
+
+Citizen Web3 
+In all honesty, I'm not sure that that's something that I mean as much as that's one of my dreams I'm gonna be honest, but I don't think it's possible within the next. Yeah, I agree with you. I'm not but let me you mentioned adoption several times and recently, you know, I was Using like everybody I guess me journey and
+
+bojan 
+role.
+
+Citizen Web3 
+I'm also, and I noticed one thing. I have, we have a designer on the team and shout out to her. She's listening and she was using me journey. And I noticed because she's a person, not from the computing world, she's an artist, like a real artist. You know, she, in one day or not one day, but one hour, I think she started using prompts, like, but the command prompts. And my first, my first thought was like, oh, so, you know, NFTs did the half of the adoption
+
+which wasn't expected and now AI is doing the adoption for coding also not expected but you know people using these prompts are technically sending You know a query to a database which basically they doing some coding which before they didn't even think about it What do you think is what's what's what's what's going to give the fight and I'm not talking adoption in in the web 3 world I'm talking adoption outside of the web 3 world What's gonna do we need adoption in the first place for D4?
+
+like as it is today at least.
+
+bojan 
+That is a very good question. And I think that DeFi itself is not sufficiently interesting for the common person or whoever wanna call it. In the same way that stocks and ETFs, et cetera, et cetera, are not too interesting for the common person. I don't know how the process
+
+percentage of people investing is in the US, but I saw just recently some data for Europe and for example Slovenia was 22% for traditional finance. So 22% just 1 in 5 invest in any stocks or bonds or anything. Bulgaria even less, Cyprus 10%. There were some Switzerland and some Sweden with 40-50%.
+
+This is kind of the outlier for Europe. So DeFi, I don't know if it will bring adoption, maybe working as a bank, as a savings account, and you can get 3%, you're very easily on board with your wallet. So onboarding and account abstraction will be very important for adoption. Security will be very important for adoption.
+
+But then as you rightfully said, NFTs did a huge favor to crypto or also to DeFi, even though I personally have no affinity for it. I just don't feel I need to do anything with NFTs, I don't know why, even though I like pretty things I guess, but not just NFTs. When this will happen, you gave great examples also with mid-journey and chatGPT
+
+I think it will happen when the things that people can achieve with them are so mind-blowing that they just can't resist. Similar like with mobile phone. All of a sudden you could phone your mom from anywhere. You could go on the web browser and look things up and receive emails and send messages on telegram.
+
+bojan 
+good and such an improvement and so easy to do, then a bigger mass adoption will happen.
+
+Citizen Web3
+Yeah, for sure. But you mentioned an interesting thing. You said you started comparing numbers from the Balkans and primarily from the Balkans and investing in traditional instruments. And, you know, one of the first things that springs to mind, one of the reasons for it is because in the US, the numbers are higher because, well, the system helps you to trust itself more, whether in the Eastern Europe, I mean, I spend sometimes in the Balkans as well. And in Eastern Europe,
+
+as well. Of course, people don't trust the system. That's why they don't invest in traditional instruments. And the question is, can a trustless instrument, and this is going to be hilarious, but here is the question, this is the paradox, can a trustless project like liquidity help people to establish trust in something that they should have had originally entrusted financial systems?
+
+bojan 
+Yes, actually, do think that is the case and that is happening. And trusted financial systems actually help via their incompetence to push non-trustless financial systems. And the same research I mentioned earlier with Thratfy, it actually checked for Thratfy and crypto adoption. And I think for Croatia,
+
+very similar crypto and threat fire around 16 17%. I remember Cyprus was even higher crypto adoption than threat fire. So it's already happening and it will just accelerate from fear, I think, especially now with all the banks and and centralized exchanges blowing up, etc, etc. that people will wake up to the importance of resilient
+
+and decentralized applications and use cases.
+
+Citizen Web3 
+It's been a while since we've been talking about with several various guests on the podcast that, you know, the next circle or Binance or whoever is going to go down is going to be the probably the biggest push for the next adoption leg of bridges between between the interchange, which will help, of course, to hopefully to transfer liquidity in a trustless manner between blockchains without, you know, multi-sigs and.
+
+You know, because a lot of the bridges are like that. But regardless of that, though, security, maybe a bit later, I have a question for you, something that you mentioned that I didn't ask you. You mentioned about 10 minutes ago, maybe 15 minutes ago, the word passion. And this is another big topic that we always discuss and with the way that liquidity is being used
+
+is shaped, right? Where the smart contracts are kind of in charge, right? Of what's going on. Why? What made you guys as a team, at least what is your personal passion for doing, for working for such a project? Why you, because again, I'm being devil's advocate, but I want to ask you it in that way specifically, why aren't you afraid? Like a lot of the people out there that are saying,
+
+that and we're gonna get, I don't know, like we cannot build tools like that. This is gonna create a universe with murders and killers because they don't exist now, right? But so, like, well, what is the passion of the team behind liquidity and your personal passion for trying to decentralize something, yet at the same time kind of understanding that, you know, that responsibility, you said yourself, the world isn't, you know, the way that defies today,
+
+might not need the adoption. So, you know, the way, I mean, why? Okay, I'm just gonna shut up and ask why. So... So...
+
+bojan 
+Yeah, I think I will answer that by explaining why a liquid did what it did, because it's pretty much aligns with my moral or passion or how everyone I call it. So short intro in liquidity, if some of the guys, some of the viewers don't know it, liquidity is a borrowing protocol, not a landing protocol, but a borrowing protocol
+
+which launched two years ago on Mainnet. It is very similar to MakerDAO. You deposit collateral, you mint a stablecoin. MakerDAO was actually the inspiration for our founders, but also the motivation to build something better because they saw that they can and did improve on the MakerDAO concept. And I did watch stablecoin pot you did a couple of months ago and there were a lot of
+
+make a dial fan, so I'm interested. I would be interested to hear what they think about liquidity if they know it at all. Anyway, liquidity is a boring protocol. It is fully decentralized, fully immutable. When we launched the contracts two years ago, we relinquished any control about it over it. No one can change it. No one can influence it. There is no governance. There is no DAO. Everything is governed algorithmically, not
+
+as in the case of Terra, but as in governed by code and nothing else. Liquidity issues are stablecoin, which is called LUSD, and it is over collateralized. And now I can come to the topic of improving on Baker. Liquidity is the most, as I mentioned, already decentralized protocols, also because we do not run any front ends ourselves,
+
+the metabilities, etc. So the most decentralized protocol, the most capital efficient protocol and the cheapest protocol to borrow against, though some people will be challenging that. So why is this most capital efficient? Because while maker offers are alone to value of 75%, liquidity offers 91%. You deposit 10K of ETH, you can borrow 9K of
+
+bojan 
+So doing that probably is not smart because it can easily get liquidated and it is also the cheapest way to borrow. So there is no interest rate but there is a fee which is almost always half a percent. So you pay half a percent when taking out a loan and never anything again. Why we decided to build something like that?
+
+I think we wanted to build something in the spirit of cryptography and and Ethereum how it is supposed to be done or how it is ideally done meaning in line with the crypto ethos so to say so decentralized immutable
+
+by code, very resilient and just in line with that ethos that all of us in DeFi are striving towards but not many can achieve and that is also in line with what I like and what I'm passionate about and that's why I'm happy that I'm a team member here in Liquid.
+
+Citizen Web3
+I actually stumbled upon liquidity about one and a half, maybe roughly about two and one and a half years ago, because we were searching with some colleagues of mine for projects that are like that, that are, that have the smart contracts independent. So, independent is a loud word, but as much as we can say that, and it's interesting because in Ethereum,
+
+the conversation of, in your opinion, should a smart contract have the fees and not the creator? I mean, should the money technically go back to the smart contract, the gas that it wastes to its smart contract itself and then let the smart contract in the future decide what it wants to do with the money?
+
+bojan 
+I mean, if you build something good, you should be paid for it. I don't know if that is via fees or via some kind of token, you build on top, release on top. So I see nothing wrong with being, getting something out of your work. I mean, that's the case for everything. How that should be done is really up to the builder, to the founder.
+
+Citizen Web3 
+You mentioned talking on top and correctly if I'm wrong, in liquidity protocol, the rewards are paid out in Ethereum, right?
+
+bojan 
+Yeah, so there is a secondary token apart from the stable coin which we call, which is called LQTY and we call it a revenue share token because there's no governance. Usually you call that token a governance token and that token if it is staked will receive 100% of the revenue of the protocol revenue. There are two sources of revenue and liquidity. One is the aforementioned borrowing fee
+
+but people can also redeem or swap their LUSD against ETH. That is actually a PEC maintenance mechanism, but yeah, that's the other source of revenue. And the revenue is a stablecoin, so LUSD, and ETH when people redeem. So that is what has been recently called ReelYield.
+
+Citizen Web3 
+I'm gonna go again, devil's advocate, because we had, this is a topic that, well, in my opinion, very important. And I think not enough people paying attention to that, but not about me, right? So we had this stream with the liquid stake in a debate. When we had, I don't know, this was, I think, a little bit before liquid stake and started to be popular. I think it was cosmos focused, not not Ethereum focused. And this was when
+
+thinking about three, four, no, maybe a bit more. It was still like building up and then the light, of course, was there actually, of course, but apart from that, it was all Cosmos projects. And one of the questions that I had for the four speakers and that I want to ask you is what do you think about, well, in Define generally, and especially when it comes to, well, Define in general, pain rewards out of inflation.
+
+Isn't that kind of like, yeah, hitting yourself in the head with a hammer or something like that? Or no, or is that me being extreme?
+
+bojan 
+Hmm, it's just the most convenient way of doing it, I guess. It, I mean, every project needs liquidity and needs adoption. You just print some money and that's the easiest way to do it. It's what, what started DeFi Summer with Compound. And there was an improvement, a good improvement on that via buying POL, which was introduced by Olympus Dow.
+
+And the team behind Liquity actually made another improvement on that with chicken bonds. Well, that's a totally different topic. And I don't know if you want to go into that, because it's rather complicated. So I think that it's OK and cool to distribute your tokens and kind of inflate it to a certain degree if it's within certain terms.
+
+Citizen Web3 
+We can be if you want. It's up to you.
+
+bojan
+you are actually building towards generating real yield, sustainable yield, and you just kind of use those tokens to kickstart things. That's a thing cool from my perspective.
+
+Citizen Web3 
+Well, what are the other ways that a protocol can generate real yield to the apart from fees or apart from, you know, having, I don't know, DeFi tactics on other projects, but then again, they would have to avoid projects if they are after real yield, right? Then they would have to use projects that generate fees, which aren't that many, right? So are there really any other ways to generate real yield apart from, I don't know, selling
+
+fees in the Web3.
+
+Maybe land, I don't know, the central land, sorry to interrupt.
+
+bojan 
+I think that
+
+Yeah, I think there's nothing wrong with fees per se. You pay a fee to a bank to manage your account or to your fund to manage your finances, whatever. So fees are fine in my opinion. But first and foremost, there should be a product market fit. There should be a reason for someone to use your product and for you to build that product.
+
+usual VC question, why are you building this? What problem is it solving? Who needs this? And if you can't answer that, then you shouldn't build a WebG product. So yeah, you should think about how the product can sustain them itself via some type of revenue. And if that math doesn't work out, then maybe you need to explore
+
+things a bit further and deeper.
+
+Citizen Web3
+But considering your VC experience, here's a question for you. What's the product market fit for liquidity? Is it a decentralized, well, let me divide that. Is that a stable coin? Or is it a project that, where the code is law, where smart contracts kind of rule and there is no, I mean, who is it, amen, who is the prime auto? People who want to use stable coins or people who want to use
+
+Citizen Web3
+to the extent that it can be, of course.
+
+bojan 
+Even though that we received a lot of attention recently, especially recently because of certain events like Paxos not being allowed to mint BUSD anymore, and more recently the USDC and CoD pack, even though we received that because of our stablecoin LUSD,
+
+bojan 
+we wanted to build the best borrowing protocol on Ethereum or in DeFi. And that was the motivation and that was the goal and that is what we succeeded in, I think. But the stablecoin is just a side product, so to say. If I maybe don't play it a little bit, but that's not fair to the token itself. But we wanted to build first and foremost a borrowing protocol
+
+where people bullish on ETH, because only vanilla ETH can be collateral in liquidity. Didn't mention that yet, I think. So where people bullish on ETH can hold, continue holding their ETH, so continue being exposed to the upside, while getting some liquidity on the side, either to buy something, to pay for expenses, to, what I like the most,
+
+I'd like to see most of these people not yield farming, even though we all do it, but kind of using the stablecoin for real world purchases, either to pay your expenses to buy a car, to buy a house, all of that we had with our users. So that's what I hope to see more in the future and that's what I'd like to see the most.
+
+Citizen Web3 
+And do you think that people in terms of, well, in terms of all the, again, devil's advocate, of course, but, you know, in terms of all the regulatory crap that the European central, the financial regulators are, like to get involved in. And, you know, of course, they're their primary target to some extent after Bitcoin and Ethereum is stable coins, right? Oh my God.
+
+they're printing stablecoins. Oh my god, what are we gonna do? So and I understand why I understand why because like you mentioned yourself right if you have somebody that everybody trusts like the US dollar but without all the crap in it of course people are gonna use that and not the real US dollar but um with that in mind do you think and what you said before you know with people actually using LUSD for a purpose do you think those two things will not contradict each other with
+
+like all the bureaucracies that's going on in financial regulator world.
+
+bojan 
+I think we are getting close to some kind of inflection point. It's easy to see if you follow the industry. And yeah, there is a lot of crap shoveling going on on both sides of the Atlantic. I hope because finance and crypto is a very lucrative business. I hope that the decision makers
+
+think more of their own pockets and what kind of money they can make with crypto then kind of what damage it can done to their current revenue streams. I don't know if that makes sense. I think that the decision makers in the western world are plainly said very old people and they have a certain mindset
+
+which can't be changed. And I hope that with time as new people come into position, I think I know that this should be beneficial for crypto, that also the regulatory aspects won't be so damaging and won't be so inhibiting. But it's getting really tight, really, really hot,
+
+bojan 
+just hope that no really stupid decisions will be made.
+
+Citizen Web3 
+But I think we should expect stupid decisions to be made, right? I mean, it's normal. Let's get used to it. But it's good. The more crap they're putting from one place to another using the shovels or a crap shoveling, right? I think the more you said yourself, the more adoption that gives our world.
+
+bojan 
+Yeah.
+
+bojan 
+Yeah, and I guess this gives adoption gives also leverage to this use case and if the masses kinder rise up and demand some kind of different paying system. Though of course they're trying to counter that with CVDCs. That much power to crypto if we have more adoption.
+
+Citizen Web3 
+I noticed over the last, when was I pilled, pilled about 10 years ago or something like that. Of course, I didn't understand straight away what I was doing and took me three years, I think, to read the Bitcoin White Paper. But like, I noticed over the course of those 10, 10 or 11 years or so that if I want to talk to somebody, especially, it doesn't matter what age really, and try to explain what, what is this world needed for.
+
+The best way to do it is not to talk about blockchain, but to explain to a person how the financial system works. And then people are in shock usually. Their eyes go really like, what? No, that can't be true. And they start to Google things and they're like, whoa, it is true. And then they're like, yeah, but they believe Google. Yeah. Um. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah. Yeah.
+
+bojan 
+Absolutely.
+
+Citizen Web3 
+You're going to reflect there. But no, no, no, it's interesting. You also mentioned, by the way, about the time. And I don't know if you know there is those. Oh, of course, you know Deutsche Bank. You've heard of them and they do those. I think it's them, if I'm not mistaken, they do those reports every now and again and on big macro topics. And one of them was actually what you
+
+before, about who are the decision makers. And they were saying that this decade, especially the years between some like 25 to 28, are very interesting because it's the first time in history, well, not the first time, but this time in history, it's where the shift in decision-making, if you take all of the vote in power of the world, is gonna shift from one generation to the next generation.
+
+bojan 
+Yeah.
+
+Citizen Web3 
+roughly between the 25 and 1928, where this will happen. Of course, this is a count in all of the world population as one big voting power. And it's interesting to see, do you think that we will see more places like, I mean, I don't know what to think of it. And I don't know if people are going to hate me for saying that. But like, El Salvador and other crazy decisions like that. I mean, yeah, with whatever people make out of it.
+
+bojan 
+Um, depends on how that goes for El Salvador. I heard the adoption was pretty bad in terms of El Salvadorians, a Bitcoin adoption, which I can understand because it has been kind of forced upon them. And what I like, I like Bukele, from what I can see, his approach and his stance and his
+
+bojan 
+see more and more countries applying to Brics, be it Egypt, be it Saudi Arabia, be it Iran, all of those very populous countries with very good natural resources and young population, which will be the hard currencies in the future, I think, population, demographics.
+
+natural resources. So I actually forgot what was the question, but our more adoption of Bitcoin and countries, so yes, more of that in the future, but slowly and then suddenly.
+
+Citizen Web3 
+I think there was no real question. I think it was just more like a reflection of some thoughts. But it was just us talking about what will drive that, if anything, will drive that. I have quite a few more questions about USD. But one thing I would like to ask you, which is, again, a bit of an interesting topic, unusual topic for sure.
+
+Citizen Web3 
+And this is the last question, the direction for sure. In terms of liquidity and the team behind liquidity, the team is still there and the team still communicates. I mean, anybody can go on the website, go to the About Us page, have a look at that. And even if it's not there, it's not that difficult to follow the team. My question is this, again, considering all of the, I mean, tournÃ©e location and everything else
+
+sometimes happens very suddenly and then very unexpectedly and very stupidly, I should say, right? As well, that should be a very important word to add. Aren't the liquidity team or are, is the liquidity team worried that they could be the backdoor or the kill switch in any way to the success of liquidity? And of course, this brings to the bigger way of, can this be the same for every decentralized projects?
+
+team always be a failure point for decentralized projects.
+
+bojan 
+Mm.
+
+Definitely, it's an easy and it's a big attack factor for everyone who wants to do that. Specifically, liquidity, we tried to remove ourselves from the protocol since day one or even before we launched. Not only by relinquishing control of the protocol, but also via our
+
+bojan 
+work with legal teams and trying to comply with Swiss regulation because the company is established in Switzerland but also of course with mainly US and European regulations so we don't want to do anything stupid we don't want to go against regulation but yeah I mean it's an intact factor even though
+
+bojan 
+be stopped if Chainlink decides not to serve the ETH price anymore or if Ethereum may not get staked down, but those two options are the only options to stop the protocol and to stop LUSD. Of course we can get blacklisted or have a media campaign against us etc. etc. things that happened also to NadoCache.
+
+So that's a possibility. We try to minimize the chances of something like that happening. And as mentioned earlier, I hope that regulators will act, I don't know, reasonably, but time will tell.
+
+Citizen Web3 
+Yeah, you mentioned and I guess I'm going to start to slowly resume, but you mentioned kind of price oracles and price oracles. And you know, and everything Sergei created, which respect, of course, but it's not exactly decentralized. What is in your opinion, the next vision or the next step for decentralizing price oracles? Should it be a completely different design? Or, or what's?
+
+How do we proceed here with this type of, with this part of the infrastructure and Web3?
+
+bojan 
+Oh, technically, I'm really not the person to be asked about that, to be honest. It's a very hard problem, not only from the technical standpoint, but also from the point of chain link being so dominant. I mean, they are doing a good job. They are providing DeFi and wider with reliable price sources, but then they have, I think, a multi-stake.
+
+4 of 9 which can crash and burn all of DeFi. It's very hard to tell how likely something like that would be. I know that there are several teams working on new Oracle solutions, but how likely or how good their solutions are and if they can even gain adoption because without
+
+that. It's very hard if not impossible to say.
+
+Citizen Web3 
+Okay. So, gonna go move to the Blitz kind of thing. It's three questions. You don't have to answer them in a Blitz way. It's not, I would call it the Blitz, but it's not like a Blitz-Blitz. Three projects outside of the obvious answers like Bitcoin, Ethereum, Polkadot, Chainlink, Liquiti. And it doesn't have to be crypto, by the way. That technologically,
+
+bojan 
+Okay.
+
+Citizen Web3 
+In your case, it could be like DeFi projects or anything. And that way, that arouse curiosity. And you've lately been inspired by. And again, doesn't have to be crypto. Can be crypto. Doesn't have to be three.
+
+bojan 
+Okay, so I personally use like another Swiss project, which is actually an off-ramp on-ramp. It is called Mo Pellegar. So empty Pellegarin, you can find it. It's an off-ramp, which is non custodial and you can send your funds from your WebTree wallet to your bank account without any third parties involved.
+
+They are actually non KYC up to 3K, I think. So that's my off-ramp of choice lately. They also integrated LUSD, so that's good. Then one project in the similar vein, which is about to launch this week or launched. This week, we are, what are we? End of March. It's called Holy Health.
+
+non-custodial debit card and you can again find the debit card from your WebTree wallet no third parties no intermediaries involved and then you can actually of course use the web wallet as any monolith or other non KWC or KWC and non custodial wallet because you have all the
+
+cards, you can use it but on top of that you have different integrations, native different integrations, also liquidity, also urine, also alchemics. So you could put some E for your credit card and take it alone against it and pay a drink with it or whatever. So that's really cool, holy health. What else do I like? Let me think.
+
+Citizen Web3 
+It doesn't have to be like three specifically to the two. It's a great answers. But of course, feel free to add if you want to add.
+
+bojan 
+I think a very cool project are just aggregators or apps which simplify things for people, like most recently LamaSwap by the DeFi Lama team, or which try to improve the user experience and user access. A wallet I like is Robby by Debank or Frame.
+
+bojan 
+by InstaDepth, though I haven't tried that yet. And also, last answer, projects which built and expand on the protocol itself, like DeFi saver, the position management app, really cool app as well.
+
+Citizen Web3 
+Frame by the way, yeah, big shout out for creating that's yeah so far The only probably wallet for me, but not the only one I use of course, but anyways Good job the guys did. What are give me two two motivational things that inspire you in your daily life to keep on Working on on liquidity and the web three and everything else
+
+bojan 
+My main motivation is my family, my kids, my wife. That's number one and far and above everything else. The other thing is, might sound cliche, but I really think that DeFi can improve the life of people around the globe, especially in countries which are more repressive, which have bigger inflation issues than we do here. And,
+
+just kind of trying to build in line with the ethos of of crypto punks as close as we try or can get and just improve the lives of people pretty much yeah
+
+Citizen Web3 
+Yeah, nice. Last one. Um, one person or a person, a character dead or alive, uh, coder, writer, poet, blockchain engineer, doesn't matter, made up or cartoon character that inspires you.
+
+bojan 
+So, over the years from high school and even before and above I liked all kinds of people.
+
+but I was never really idolizing persons, but I would like to give a shout out to, and bring attention to Alex Petrushev, the guy behind Tronato Kesh, and kind of bring attention to his case. I'm not fully up to date on the situation right now, but I hope everything
+
+out well for him because writing code is not the offense, it's not the crime and yeah, that's what I wanted to say.
+
+Citizen Web3 
+Hopefully that this attention will go further. I'm not saying I personally actually know Alex, so but hopefully this goes further to Ross and then everybody else that that is.
+
+bojan 
+what's happening with him.
+
+Citizen Web3 
+I don't know the personal case. I know personally the person from some years ago back in Kaliningrad and the days of like 2016, 17, but I don't know what's happening personally to the case now, unfortunately. Hopefully though, Alex and Ross and everybody else who is currently Virgil, right? There's a lot of other people out there
+
+bojan 
+Okay.
+
+Citizen Web3 
+who, yeah.
+
+bojan 
+Yeah, Ross as well, Snowden.
+
+Citizen Web3
+It's not a lot of people there who should not be where they are. I guess that positive note will... But in all honesty, this is what we face, right? So this is the reality.
+
+bojan 
+many people.
+
+bojan 
+Yeah, and showed up to a few people who are trying to push regulation in the right direction, like Jesse Powell from Krakken or Eric Borges and others. So I just wanted to mention that as well.
+
+Citizen Web3
+Um, boy, thank you very, very, very, very much for your time. Thank you for answering all the questions. Um, hopefully going to see liquidity expand. It's rich into the interchaining beyond not just in my opinion, Ethereum, but there are many, many other protocols out there that I would love to see liquidity expand to and hopefully the infrastructure in the future will allow for that to happen. So, um,
+
+Thank you again for your time.
+
+bojan 
+Definitely, I mean, I personally was a big user of Cosmos a while back, so I do know the ecosystem to some degree at least, and I like it a lot. I like what it stands for. Yeah, thank you for having me. It was lots of fun to talk to you. And yeah, wish you all the best.
+
+Citizen Web3 
+Thank you and thank you everybody who tuned in. Thanks.
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.

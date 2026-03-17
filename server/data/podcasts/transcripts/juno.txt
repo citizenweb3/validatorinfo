@@ -1,0 +1,577 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/juno
+
+Episode name:
+Energy and Community with the Juno core dev team
+
+anna 
+Hey, it's Citizen Cosmos, we are Serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code.
+
+Citizen Web3 
+Good space time to y'all and welcome to a new episode of Citizen Cosmos. And today we have a somewhat of a special episode. We have three guests instead of one with us. They are Jake, Demi and Masi and they're the core developers of Juno. And we're going to learn all about it today. I hope. Hey guys, welcome to the show.
+
+wolfcontract
+Hello man!
+
+dimi 
+Thank you, thank you.
+
+jake_hartnell 
+Hey, what's up
+
+Citizen Web3 
+haha Haha, hello, hello, hello. 
+
+Citizen Web3 
+So guys, first question. I will let any of you, whoever wants to jump in and talk.
+
+Citizen Web3 
+First of all, what the hell is Juno? Of course, some I've heard about it, some haven't, but there is three of you. I know there is five core developers overall, so we have the majority right here, right now. Tell us what is Juno? Why you making it and what it's all about?
+
+wolfcontract 
+Thank you Anna, thank you Serge for inviting us. It's really an honor, it's a pleasure. So I'm going to give a quick overview about the project. basically, what's Juno? Juno is the first designated smart contract platform in the Cosmos ecosystem. We started to get together, 
+
+ecosystem contributors, so developers, validators, delegators, early in the year started to get together and wanted to make this a reality. A lot of the people that originally contributed to the idea were people from the Cosmos Hub, so atom stakers. And the core idea behind the movement, it's a community movement. So it's basically led by
+
+contributors from the ecosystem. There's no company or institution behind Juno. So it's a community initiative. So the original vision was to preserve the neutrality of the Cosmos Hub and its performance and reliability and offload the smart contract usage to a designated sister hub. And we named it Juno.
+
+So, and obviously, you know, the next evolution that we wanted to tackle is to force smart contracts to be interoperable. We're going to get into that a little bit later. Jake is going to talk about this in depth on the technical side and also Dimi. so what are some of the things that we wanted to do? So we wanted to tackle, you know, eliminate basically the problems that
+
+that smart contract platforms like Ethereum and other that came before Juno basically have. So issues are scalability, obviously, we know about this in the space, interoperability, high fees, ease of use. And one of the things that we also improved upon now with Juno is a concentrated governance control. the idea of a sister hub to the Cosmos hub also very important point.
+
+wolfcontract
+We want to basically be very well connected with the Cosmos Hub and obviously later on in the year or early in 2022 take advantage of shared security. that was one of the core ideas, obviously to have the governance control of the Juno Hub also in the hands of atom stakers that become Juno stakers. So that's why we also incorporated this into the tokenomics of the network.
+
+everything's really very similar to osmosis in osmosis style where we launched in a fair way by a fair drop or a stake drop. so in the final point I wanted to mention is that we basically, one of the important ideas is also to eliminate potential legal issues that we could have. So in that way, everything's really organic. There's not been any seed sale.
+
+public sale or private sale happened before the launch. So these are basically the core pillars of or the origin of Juno.
+
+Citizen Web3
+Thanks, Marcy. That was a cool intro. But Jake and Dimi, before you guys add anything to that, because Marcy has said so many long, big words there, like Sister Hub and Tokenomics and Smart Contract Platform Dedicated. And this is all cool. And some of us do understand what's on Earth Marcy is talking about. But I want you guys to break it down more. Let's really go into depth and talk about
+
+Citizen Web3 
+I mean, there's other smart dedicated, excuse me, other dedicated smart contract platform, at least they call themselves that, is, either made, which we have a Gorick, we have a cousin wasm and it's on and so forth. So what is the difference between all those and you and how did it all come together? I'm still trying to figure this one out.
+
+dimi 
+Yeah, I think the most important part is that on Juno everyone will be able to deploy his own smart contracts because it's completely permissionless. So if you have experience in writing smart contracts using Rust and CosmoWASM, you will be able to deploy on Juno without asking permission to anyone. On other chains, it happens that...
+
+dimi 
+If you want to deploy a smart contract, you need to be approved by governance. And this is not the case for Juno. On Juno, you can just press deploy and the smart contract will be available to everyone. So this is for sure one of the key points. And we can also compare the different technologies that we can find. So we have Cosmo Wasm, that's a Wasm smart contract implementation. and
+
+There is also other kind of implementation that, for example, Ethereum as the Ethereum virtual machine. And the Ethereum virtual machine has been ported as well on some Cosmos SDK modules. But initially on Juno will be available on the Cosmo wasm some smart contract platform. So it's pretty exciting.
+
+Citizen Web3 
+It sounds very exciting and I have a question for Jake as far as I understand Jake, you're kind of taking care of the blockchain side, right? More of the code behind the blockchain, right? Or no? Am I completely wrong here?
+
+jake_hartnell
+We all do a lot of different things. Juno is very much a community effort. We're all working on different projects. A lot of our contributors are working on different projects, but it's been amazing to watch everybody come together and work on all the different bits and pieces. Even the code, there's a lot of contributors already.
+
+Citizen Web3 
+I have a question for you. Why would anybody need a dedicated smart contract platform as opposed to just making everything on the hub or anywhere else in the world? A question for Jake specifically here. I would love Jake to answer.
+
+jake_hartnell 
+Sure, I think, as Amas he was kind of talking about earlier, we don't want the hub to get too crowded. The whole point of Cosmos is that we don't need to run everything on one chain to rule them all. Having a separate chain or chains really that are dedicated to smart contracts really reduces congestion. that would.
+
+be why I think something like, yeah, Juno is needed. And as Demi mentioned earlier, the whole permission-less nature, there's some really amazing chains out there that are also using Cosmos and smart contracts. My main project, Stargaze, is one of them. We're using them. Terra. But these are all sort of permissions. These contracts have to be enabled by governance. And so we see Juno as kind of like an incubator for a lot of the
+
+contracts in the Cosmos ecosystem because you can just write something and deploy it right away without having to, you know, go through a governance proposal process.
+
+Citizen Web3 
+Masi, you said at the beginning we named it Juno. What is Juno? Why did you name it Juno? Where does it come from?
+
+wolfcontract 
+Yes, so that's a funny story. We were just looking for a name back then and everything that the community decided, because everything in the early steps, it's really important since we don't have on-chain governance yet, that all these questions about the network are polled and off-chain obviously, but polled with all the early contributors.
+
+And we did this with almost every topic that's relevant initially. And also the logos, the brand identity, the name, everything. we had some people throw some names up and then Juno had a meaning that kind of relates to smart contracts or to money or preserving money. And in ancient Rome, there was a goddess Juno.
+
+and she was worshipped for thousands of years as being the protectress of money. In ancient Rome they had a temple also where money was minted and she was the guiding figure, so to say.
+
+And so we said, this is kind of fitting because a smart contract can also protect your money, right? It can hold your, it can hold assets. So this is pretty fitting. So we said, okay, let's call it Juno, you know, 
+
+It was just a community, a community thing, you know, some people threw this name, the other name, then we filtered out some names, then we made another poll and then we stuck with this one.
+
+Citizen Web3
+Who came up with the idea? Who came up with the idea?
+
+wolfcontract 
+And there was like another option because it's the goddess is really called Juno Moneta. And then some people said, no, let's call it Moneta because it sounds more like money, like something like Monero. It's like, no, okay, let's let's go with Juno. it also fits into this whole cosmos thing theme very well. know, Terra Luna, you have Juno, have whatever not, you know, so this is fitting and we went with it, 
+
+Citizen Web3 
+I have two fun facts for you by the way. Monetta in lot of Eastern European languages means coin and another fun fact because you mentioned community. just realized every time Massey comes on the show, we have five people in the studio. And this is the second time Massey is in the show and we have five people in the studio. Massey, you just bring in the crowds with you every time. Now I like that.
+
+wolfcontract
+Yeah, No, but that's a really, really important point that Jake made there also regarding the contributors and the, I really want to emphasize this point because we talked about it before we came on. I mean, it's really, we put on a contributors page on the docs now, which we're basically expanding and it's not only us five, right? It's not only five.
+
+jake_hartnell 
+He's just so fun.
+
+anna 
+Ha ha ha ha!
+
+wolfcontract 
+multi signers, but there's just in terms of active contributors, we're at like 25 people and then you have another about 80 validators also contributing some of them also participating in the Juno hacks. So it's really like approaching 100 people from all from all sides. it's not only the contributors, you have contributors in other ways as well. Right. So people that
+
+just write articles on Medium from the community, people making YouTube videos about the launch. There's so many people involved right now. you got to think about this. We haven't done any promotional activities. We're just basically spreading the word and what we're doing. we, from zero to 4,000, we just crossed 4,500 people on Twitter and 2,000 on Telegram, 2,000 on Discord without any promotion. It's just,
+
+the idea of Juno and everything being so organic and there not being any conflict of interest of any companies forcing on any sales or anything. This resonates with people and that's why you have this kind of engagement. not many projects do this in the space nowadays. And so we're really proud of this.
+
+Citizen Web3 
+You mentioned community several times here. And I guess what we try to do with Citizen Cosmos and I don't just podcast, I mean, the brand itself, we like to call ourselves ecosystem developers because that's what we like to think of ourselves as doing is trying to build an ecosystem around the projects that we kind of participate in. And basically from what I'm hearing from what you guys are doing, well, that's
+
+Citizen Web3
+obviously you're building a blockchain, you're building a project and you're building smart contracts and so on and so forth, not just an ecosystem. But it sounds like it's kind of happened in the same way. there was an, think you're saying community is so important and contributors are so important. And that's really cool to hear. It sounds like you just guys like gathered some people together and said, Hey, we all need this at the same time and the same place. Everybody was there and said, okay, let's do it. No, nothing is behind us. Let's kind of go with the flow.
+
+And that's kind of what makes, I guess, Cosmos stand out with how strong the community can be and how powerful when people gather together with amazing things they can create. And this is my question that I'm going to follow up from here because it's a community project. So like the obvious question, who's paying for the party? I mean, somebody must, 
+
+Feed everybody else or is everybody kind of happy not eating anything. I guess you get the question, right?
+
+wolfcontract 
+yeah, so that's an interesting question, obviously. But the thing is that if you don't have this conflict of interest that a lot of projects have first of all, a lot of them approach something like launching an ecosystem in a wrong way. If you approach it in a way that everything, you're trying to be as neutral as possible. You're trying to not just go for making profits.
+
+So it's about building the ecosystem, right? And building projects on top of Juno. And if you have a base layer like Juno and everything is centralized and not neutral enough, then it's not going to be a fruitful result, right? So we want as many people as possible to build projects on Juno, which is happening right now via the Juno hacks. So this is the key driver, the key motivator is not to make profits here.
+
+Right? Obviously, you have to have an incentive plan in place. And that's why we worked out the game theory to be as appealing as possible to early adopters and to carry on into the future. I suggest anyone to go to the Juno docs and to check out the economic overview, the asset overview, incentive structure. So it's docs.junochain.com.
+
+And you can read up about, for example, the Genesis supply, how everything's broken down. Nearly 80 % of the entire Juno asset supply goes to the community, So they have the biggest incentive to... Well, first of all, I have to mention that, as I mentioned earlier, the...
+
+the Juno holders will all be Atom holders at the beginning, we're doing a state drop. So 47 % of all the Juno that will exist at the beginning go to Atom holders. They will also have the key to on-chain governance. At the same time, 30 % of the Genesis Juno go into the community pool. So the Genesis community pool will be one of the largest in the Cosmos ecosystem. I don't know any other network that has that those many.
+
+wolfcontract 
+those kind of funds available for the community to start building right away. And then we have around 4 % allocated to the JunoHacks, like I mentioned, we have several stages there. then we have a core development fund, which is vested for 12 years. As you can see, there's no motivation to... It's just aligned in a way that we can fund the project for the next decade or decades.
+
+and just build out the ecosystem. That's what it's about, right? it's laid out in a way that also the network participants, the validators, the delegators have really interesting and appealing incentives. So as you know, like a network like Akash and Persistence, they use this improved...
+
+wanted to improve on the staking model that the Cosmos Hub brought with the dynamic inflation. they, like Akash, for example, you know, they brought in this happening event and a fixed supply at the end. And we did something similar with Juno, but in my opinion, it goes a little bit further. So I'm just going to briefly fly over it. 
+
+Citizen Web3 
+Before you do Massey before you do because I know Jake wanted to add something to my question as well he had an answer and I saw that
+
+jake_hartnell 
+we're not getting paid at all, yeah.
+
+dimi 
+No, right now I think we are all volunteers.
+
+wolfcontract 
+That was basically my answer to the question. So that's why I started off with, have over a hundred contributors because, the first way to incentivize people, first you have volunteers. The next stage is to have the JunoHacks. So that already placed into the tokenomics. So when the network is live on October 1st, really important key date for everyone. October 1st, the network launches, then you have the first incentive wave, right?
+
+wolfcontract 
+So who's going to get incentivized first is obviously the people that put in work now into developing dApps for Juno. So we track all this people in phase one of Juno hack. They develop now leading up to the main net launch. And when the network launches, we have a live network. have the actual Juno exist at that point. And then we go into phase two, which is deploying these early applications on the live network.
+
+Citizen Web3 
+let me try to understand. what your answer is. The short answer for who's paying for the party, answer is nobody. It's going to be paid when the network is going to get launched, right?
+
+jake_hartnell 
+Yeah, basically.
+
+wolfcontract 
+Yeah. 
+
+Citizen Web3 
+Yeah, okay. There we go. There we go. Perfect. 
+
+jake_hartnell 
+It's the promise of the future.and that's what's great about it is because of the Adam's stake drop, because of things like hack Juno where if you didn't get the stake drop, you can still write smart contracts, make documentation, make videos, contribute in some way. We're creating something out of nothing. And yeah, no one's getting paid upfront,
+
+Citizen Web3 
+But it's good.
+
+anna 
+by the way, what motivates you personally to do what you're doing? Because, okay, it's not money for the moment, but you should have personal motivation to do what you do because you have to be persistent enough to be a developer in such ambitious project.
+
+jake_hartnell
+I think CosmWalsam and writing smart contracts in Rust is a superior developer experience than writing contracts in Solidity. And so really wanted to build out more of a community around, Walsam-based smart contracts, which we can talk about because they're absolutely amazing.
+
+Citizen Web3 
+Let's talk about them.
+
+jake_hartnell 
+So Cosmwasm contracts are, I think, really next gen. There is way more that you can do with them than you can do with like Solidity contracts. The design decisions that have been made by the team at Confio and many of the contributors are really, really impressive. For example,
+
+One of the things you have to worry about when writing solidity contracts, I actually wrote my first solidity contract in 2016, but one of the things you have to worry about is re-entrancy attacks. That actually led to the big DAO hack in 2016, if you remember. But the way Cosmwasm works is it's based on the actor model. And so it's all done by message passing. Basically that means like it's really hard to write a re-entrancy attack.
+
+if you're writing smart contracts in Cosmwasm. Moreover, you're using Rust, and it opens up the possibility of like, you know, there's so many different libraries you can use, so many different crates. If you wanna do really cool math stuff for, you know, your DeFi project, that's possible. There is the potential of sending out any,
+
+Cosmos message, so that includes IBC messages. So one of the really cool things about Juno is that it's really probably gonna be one of the first live interoperable smart contract platforms. That means if you mince an NFT on Stargaze, you can maybe send it over to Juno contracts and do some cool DeFi collateral thing with it. DAOs on Juno, I'm writing a DAO contract right now, and those DAOs can hold
+
+IBC assets so they can hold assets on osmosis. They can hold assets on Atom and they can, you know, send messages over IBC to control and do things with those assets, which is, I think opens up like a whole incredible space of possibilities that we've only yet we've only just begun to explore. And then the last thing I'll mention, I know it's been a long answer, but there's just so much to say about Cosmwasm and how it's awesome is that right now we support contracts in rust.
+
+jake_hartnell 
+But many different languages can compile to Cosmwasm. One of the things we're really looking for in this whole ecosystem is we need more developers writing smart contracts. you don't want to have to learn a new language. If you already know a TypeScript, or if you already know Golang, or if you already know C-sharp or C++, well, guess what? All those languages can compile to WebAssembly. So that means we can create a smart contract.
+
+framework that can exist in each of those different languages and can compile and be deployed on Juno. That's a really powerful thing.
+
+Citizen Web3 
+before I'm going to repeat the question. I mean, the audience can see that but I'm going to say that now we can see why Jake is doing building Juno because when Jake was talking about contracts, his lights were his eyes were lit up. that was it is what we like. You know, this is what we're trying to get at here. We want to understand you and why you guys doing that.
+
+jake_hartnell 
+I love it.
+
+Citizen Web3 
+And I think everybody wants to understand this. this is by the way, this is cool that we're talking about Cosmwasm because our next episode, it's going to come out and this is going to be out by the time we talk about it is actually going to be with Ethan. we spoke a lot about Cosmwasm Museum and actually it was more a philosophical conversation, but still that's really cool to hear somebody else to actually go over that and, you know, give another opinion about all those contracts. and
+
+I'm going to go to Demi now because, the question Anna asked was what motivates you to build Juno?
+
+dimi 
+so from my side, I'm quite lucky because I already have my full-time job at Steakfish and my job is also my passion so I really love to help whenever I can also other projects and
+
+I think all of us here really believes in decentralization and the future of the monetary system. But not only that, I really believe also that blockchain technology can remove any intermediary party. And for this reason, anytime I see a project that has a potential. I really love to help in that.
+
+And a few months ago I discovered about Juno and there was a help on writing the Genesis. So I offered myself and yeah, now I'm here and I'm contributing to the project. yeah, everything was spontaneous. Thank you.
+
+anna 
+Congratulations 
+
+Citizen Web3 
+by the way, Dimi, you've participated in, I remember in a hackathon that we organized and your team actually. If I'm not mistaken, you guys actually won something, right?
+
+dimi 
+No, I don't think we won.
+
+anna
+haha
+
+Citizen Web3 
+Dimi, say you didn't. I was trying to remember.  no maybe they didn't because I remember the team that was like one of most prized was the map of zones team. But I remember Dimi definitely did work on something. I remember his presentation because I remember being a judge.
+
+anna 
+Yeah, didn't won. Maybe you were in different teams, you know. Do you remember hackathon? Sorry, sorry guys.
+
+Citizen Web3
+But I don't remember if they did win or didn't, but I remember you guys participated.
+
+dimi 
+No, I don't think we won. I think I will remember if...
+
+Citizen Web3 
+oh you didn't win. Just participate. oh dame it sorry. You mentioned what excites you about Juno, what you saw before is potential. What is the potential? What do you see? And I mean, just to say that it's a dedicated smart contract platform, that's cool. But what's really the potential that you see in Juno that you're not seeing in other projects?
+
+dimi 
+Well, if you want to stay in the Cosmos ecosystem right now, the only way to launch something custom is either getting approved by governance in an existing chain, or you can develop your custom SDK module and launch your own chain. But that, of course, have some complication like finding a good set of validators and all the other stuff that...
+
+maintaining a chain implies. What Juno will enable is it will be way quicker for developers to spin up a project inside the Cosmos ecosystem. So taking advantages of all the IBC features and all the other features that Cosmos SDK offer like fast finality and all this kind of stuff. So Juno really will speed up
+
+the development and the creation of new decentralized applications, whatever you can imagine, can be like anything you can develop with a custom SDK module will be able to be created using a smart contract on June, because the Cosmo Wasm really don't have a lot of limitations.
+
+and implements basically all the features of Cosmos SDK modules. I think this is the most important part.
+
+Citizen Web3 
+Massey, my man, are you with us? We want to know your answer now. What motivates you? Because... I was just going to say that you're such a strong Cosmos fan, and I know that.
+
+
+
+wolfcontract 
+Yeah, I wanted to quickly also add something to what Dimmy said. So basically, we've had this question many times. So people were like,  Why do even need smart contracts? If you can just spin up your own SDK based network with your own validator set. And it's very simple, know, not each application doesn't need a its own chain and validator set
+
+wolfcontract 
+if you want to have a strong set, it's quite some work to get this together. So some projects simply don't need it, as we can see from Terra right now. You have the main chain and you have so many small projects launching an application and utilizing the security of the Terra network.
+
+And similar is going to be on Juno. Let's take the easiest, simplest use case. If you want to have an application XYZ and you just need an asset, you can mint that on Juno in two seconds and get started. You don't need to worry about security, right? It's already provided by the Juno network. And you focus on your use cases and work on that.
+
+So yeah, I just wanted to add that to Demi's comment. 
+
+Citizen Web3 
+The general question was and I was going to add to that a little bit for you because like I said, I know you're one of the biggest Cosmos fans I know out there. What motivates you to build Juno? Because obviously it's not money, and you can't say Cosmos because I know that you are a huge Cosmos fan. So I want to hear something else.
+
+wolfcontract 
+That's where I would lead off because the actual what gave the initial spark to even pursue the idea of Juno is basically that my business partner, Tosh and I, you know, we're long time Cosmos Hub supporters. about a year ago, we wanted to see smart contracts on the Hub, 
+
+And then for some reason there was initially the discussion of launching them and then for some reason didn't happen a few months later. And we were still wondering what's going on, what's going on. Then people were gossiping, you know, they want to preserve the neutrality and so that's why nobody's pushing for it and so on. So we're just like, why not take the opportunity? You know, we're a multi-chain ecosystem. Let's just make a designated intraoperable smart contract network.
+
+And then first Block Creators jumped on, then these guys jumped on. before you know it, we were a group of like 25 people on Discord having our first get together, like after a few days. And it grew and it grew and it grew and now we're thousands of people. it just sometimes it's the right moment in the right circumstances and all the energy, the cosmic energy. That's so cute, cliche.
+
+all the cosmic energy pulls you into this direction. And it just happened like that, so once you're in it and you see that the work that you put in, it actually makes sense and it's fruitful, you won't just want to keep going, right? That's the story.
+
+anna 
+could you tell a little bit more about Cosmos Energy? because it's so, it thinks that it exists. Yeah, we can say that, okay, we can feel the differences between ecosystem and people in ecosystem, but for you personally, what is Cosmos Energy?
+
+wolfcontract 
+What is cosmic energy or what is energy in the cosmos ecosystem?
+
+anna 
+For you, what do you feel? Cosmos energy or energy from Cosmos ecosystem?
+
+wolfcontract
+That's an interesting question. I don't know how to answer this.
+
+anna
+Yeah.
+
+wolfcontract 
+I was just referring to basically the... Just coming back to this topic, because I can relate. So basically just the energy of people, the motivation to do something that leads to a purpose, that makes sense for the common good, and that's what I mean by cosmic energy in that sense, 
+
+If I'm not mistaken, that's also how the inception initially of the Cosmos Hub went. So That's for me cosmic energy. I don't know if this has to do something metaphysical out of this world, but you know what I mean.
+
+Citizen Web3 
+Anybody wants to add to that? Jake or Dimi? You guys want to add to the energy story? Perfect. love it. So, You guys, you mentioned governance quite several times.
+
+jake_hartnell 
+energy.
+
+anna 
+hahaha 
+
+Citizen Web3 
+And you emphasized on, community several times on contributing several times. So the question is, let's go with Jake, where do you see yourself as a contributor in Juno in like two years time?
+
+When then the main net is launched already and there's more contributors from around, what are you going to do? I mean, what's, what's going to be your role there?
+
+jake_hartnell
+I don't know, shitpost on Twitter. like some of those. I don't know. I'll probably still like, I'm very involved with like smart contract development. And I've been like kind of advising a few of the projects and hack Juno, which we should definitely talk about some of the projects that are coming out of that because they're awesome. So I probably will just see myself being more involved with like, yeah, people's building really cool stuff on the platform.
+
+Citizen Web3
+Fucking right.
+
+jake_hartnell 
+That's kind of why I'm here. love Smart contracts and I want to see really cool next gen stuff get built.
+
+Citizen Web3
+What about you, Dimmy? How are you going to contribute when after the main event is launched and everybody else is also working on Juno already?
+
+dimi 
+Yeah, for me, it's quite the same of Jake, because I love building smart contracts. I love to help people. I love to help projects. So for sure, I will be working on that front. And also, as always, I will try to do my best to contribute to the core development as well, maybe new implementations, custom modules, everything that the governance and community will ask for.
+
+I can help on building that. also I can't wait to deploy my first smart contract. So, on Juno. So yeah.
+
+Citizen Web3 
+Masi, apart from shitposting on Twitter, because I understood, there's gonna be a lot of shitposting on Twitter.
+
+wolfcontract 
+Yeah. so the idea of contributing, doesn't start, you know, after mainnet. as a core group here, we're not only preparing everything for a proper launch, but we are also actively contributing already in a dozen different projects that are being built on Juno via Juno hack right now.
+
+in phase one. we have just to mention a few, we have Juno Mint right now, which is developed by Easy Staking and is a mint factory for assets, which is going to be in beta very soon. Then we have a WasmSwap right now, which is the first DEX on Juno, which is also already in beta. Everyone can check it out at wasmswap.org. Then we have a CosmBurst NFT marketplace, which is going into beta also very soon.
+
+More details coming than we have just recently a couple days ago someone from the community said he will make a similar to prod a privacy protocol to What is it called tornado cash? He's calling it scrambled thought cash very interesting as well if so if people want to join any of these projects is Really jump into our discord and get involved Then we have Juno rewards by block creators. This is also
+
+being announced soon. have one of the most active developers, John Salix, a coder from Peru. He's working on several very interesting things like a name service, custom CB20 wallet, staking wallet. Then we have Juno Blueprints. then also coming soon is JunoScan.com, which is the custom Juno Explorer.
+
+which is going to be really cool. Shortly after launch, we're also going to enable contracts on the Explorer. Then we have auctions being worked on. Then we have whispers. Also, I'm going to share more about that soon. So as you can see, there's so many things already being worked on right now that also need our active engagement, right? Not only the main at launch, but all these projects we're actively contributing. We're helping, we're coordinating.
+
+wolfcontract
+And that's awesome. it's going to get more and more, right? So the work doesn't stop. It's probably going to be three times as much by the time we reach phase two. So this is really a massive ecosystem already from where it was a year ago.
+
+jake_hartnell
+Bigger than Cardano. 
+
+wolfcontract 
+Confirmed.
+
+wolfcontract 
+I was, that's a funny story. I was shitposting about Cardano on Twitter today. because I said, Juno will have smart contracts before Cardano. And then I checked on just for fun. I Googled if Cardano has smart contracts and they actually went live two days ago with smart contracts. So this meme is over guys.
+
+jake_hartnell 
+Yeah, but they got there one TX per second, 
+
+wolfcontract 
+That's right, that's right.
+
+Citizen Web3 
+Anan we should go to Charles Hoskinson because he owes us so much fucking money for advertisement for fuck sake. We like links so we're gonna include all of things you mentioned. Everything is gonna be in the description including your docs, including all those projects of the ecosystem you mentioned. We're gonna include all of those. A question though, you talk so much about these projects of the ecosystem.
+
+anna 
+Definitely, definitely.
+
+Citizen Web3
+And I know it's kind of like unfair the question I'm gonna ask so you don't have to answer but what's your favorite project so far out of the ecosystem and why?
+
+dimi 
+you mean in the whole Cosmos ecosystem or smart contract built on Juno? On Juno? So yeah, my favorite one for sure is also the newest one because a random guy appeared like two days ago and
+
+Citizen Web3 
+No, Juno
+
+dimi 
+is working on a privacy protocol that's similar to Tornado Cache. And basically, he will use ZKE Snarks to basically unlink the deposits from withdrawal of the smart contracts, allowing people to have brand new addresses that are not linked to anything else. So I think this one is my favorite one because I think it's really needed in the Cosmos ecosystem right now.
+
+There is a secret network, but they have a separate chain, so having also smart contract is maybe more easy to use. So I'm really looking forward to it.
+
+Citizen Web3 
+Any other takers? Jake? What about you?
+
+jake_hartnell 
+I'm kind of teaming up with some people on a basic DAO contract, which I think is really great. I'll throw the link for it in the description in case anyone wants to contribute, but it's pretty cool. It can execute any arbitrary Cosmos message. It can execute any method on any smart contract in Juno, which is really, really cool. I don't know how familiar you are with other.
+
+DAO contracts like in Ethereum. But yeah, it's yeah, so kind of working on like a, you know, governance, a basic governance token slash DAO project with some people in the in the ecosystem. It's not just me. I also think wasmswap.org it just looks really good. It's like a, it's a, they did a very sharp job on the design and the contract's great too.
+
+Citizen Web3
+Are you participating in both of them?
+
+jake_hartnell 
+I did not write any code for, for Walsum swap. but I, I, I did, advise those people and, like kind of recruited some friends to like, to work on it. Like, Hey, Juno's awesome. Come, come build something cool.
+
+wolfcontract 
+I want to quickly throw in something really cool. A couple of weeks ago, the Confio team, who was leading the development for Cosomwasm, they actually decided to move Cosomwasm to Juno. The new home of the Cosomwasm will be on Juno in form of a DAO. Several projects will sign for this DAO.
+
+wolfcontract 
+and it will be on Juno as its home. So this is really a huge honor. So I want to give a shout out to the entire Confio team and also give a big shout out to Tendermint who's been involved in supporting the Juno ecosystem since the very beginning. Huge shout out to them as well.
+
+jake_hartnell 
+Yeah, and the name of that Dao is called Inner Wazim Dao. So in case you want to search for it, it's going to be cool.
+
+Citizen Web3 
+I have a question when you mentioned that because last we spoke to Ethan, like I said, which wasn't very long ago, which was actually several weeks ago. I know that the guys are building, I forgot what is the blockchain called, if somebody can help me here, the governance specific chain Because I'm quite curious of how is it going to work together with Juno. 
+
+wolfcontract 
+You mean T-grade by Konfi or? Yeah, yeah, yeah.
+
+Citizen Web3
+Yes, Tgrade, Tgrade, yes, Tgrade, Tgrade. Is that what you meant? Tgrade is moving to Juna? Or instead of Tgrade, it's going to be Juna? Or how?
+
+wolfcontract 
+No, no. 
+
+jake_hartnell 
+so T-Grade, Terra, Stargaze, they're all application-specific blockchains. They're all going to continue on as is. T-Grade is not moving to Juno. T-Grade is going to be T-Grade. But Juno, as a permissionless, purely community-led effort, serves as a good neutral ground.
+
+to host any smart contracts related to the DAO. that's how it's gonna work. But we all use the same technology. It's all CosmWalsam. I think that's, shout out to Terra for providing funds to support continued CosmWalsam development. And shout out to Confio for A, developing such amazing tech, and then B, steering it towards a more community-governed, community-owned kind of thing.
+
+So yeah, just to clarify there, that's what's happening. The Dow contracts itself are gonna live on Juno, but Inner Walsam Dow is a collection of people all interested in this shared technology called Cosom Walsam and how we can develop it and make it the best smart contracting platform really out there.
+
+Citizen Web3 
+Thanks for that clarification because nobody gets that mess up with Tigrate and Cosmwasm and Juno so it's important to remember.
+
+jake_hartnell 
+Yeah, Cosmwasm is just like the shared technology,
+
+Citizen Web3 
+There is quite a lot of teams that as far as I remember, I can think probably like 10, 15 teams on top of my head that are working right now with Cosmwasm already. And that's pretty amazing, I think. mean, the abilities Cosmwasm gives you, like you mentioned yourself in comparison with Solidity is quite crazy, right?
+
+jake_hartnell
+I'd say it's a 10x dev experience improvement. It's really pretty awesome. And then we're just already starting to see a whole library of smart contracts really emerge, which is really cool to see. And I think that that's when it'll really start taking off is like when we have like a library of smart contracts for this purpose or that purpose that people can just pull from and incorporate or slightly modify in some way.
+
+That's when like the snowball really starts accumulating and becoming bigger and bigger. I don't know.
+
+Citizen Web3 
+haha
+
+Yeah, the network effect, right? And I'm going to slightly change the question for you because you already kind of mentioned all the projects anyways. And I know there is something you mentioned before that you wanted to talk about. And that's what I'm going to ask you because time is slowly running out. you mentioned the tokenomics of Juno. I did cut you out beforehand, like several times.
+
+But can you kind of, do you want to mention it now again? You can be welcome to talk about anything else, of course, but I think it's an important part
+
+wolfcontract
+I can briefly talk about the incentive structure. So basically the way it's set right now, it's that you have 12 phases of incentives for the next 12 years. So each phase is one year. so initially you have via the stakedrop and the community pool, have around 64 million Juno enter circulation on October 1st.
+
+wolfcontract 
+when the network launches. And then you have, that's when the reward schedule starts. contrary to a lot of the ecosystem projects, as you know, most of them have a inflation schedule. we have a fixed inflation. So there's no dynamic inflation that bounces around. It's a fixed inflation, 40 % year one. And then you have a halving for the first
+
+three years, right? So at the end of the first year at the end of the second year at the end of the third year it's not really inflation because you have zero inflation from the beginning but you have that's the in distribution that goes to early adopters of the network so the people that stake the earliest on Juno have the biggest incentive to stake right and this halves for the first three years and then you have a Drop once we reach 
+
+10 % rewards, it drops on a 1 % basis until year 12 where the asset becomes deflationary. we already know the max supply of Juno. There is no dilution in that sense. It's just early distribution and then it gets less and less and less. And then you have similar to Bitcoin, just the max supply that we already know. And that's very, innovative. I don't know any other chains that do it like this.
+
+So yeah, just briefly mentioning that was, nothing important 
+
+Citizen Web3 
+because distribution is quite been quite hot topic on our podcast lately with with several guests and what's in your opinion, the most difficult part of the distribution that you guys are planning? well, the governance is going to plan or whatever. What obstacles do you see in that sense to achieve a really not perfect, but at least a good distribution?
+
+wolfcontract 
+The biggest issue in my opinion is if you compare it to other projects is that a lot of projects just hold several issues. They first they have this huge legal problems from the beginning or legal hurdles I should say some overcome them obviously in some sense but since the entire blockchain space is still a gray area in most of the jurisdictions there's always uncertainty. But if you from the beginning don't even get on this level
+
+and you just eliminate this uncertainty and don't even put yourself in that position, then there's nothing that can happen to a neutral network. If you give away the supply via a stake drop, most of the supply to the community for free, I don't really want to say for free because people actually stake at them on the hub and that's the work that they're doing that rewards, so they get rewarded with Juno for securing the Cosmos Hub.
+
+And that's the love that we're sending to the atom stakers. so there's really no difficulties, just being clear from the beginning that there's no conflict. big issue that a lot of people have, obviously, when they go into a project that they want to support as investors or delegators. The issue is that most of the time it's unclear...
+
+wolfcontract 
+Who actually controls the assets? Who controls governance? Am I going to be the last one that gets in and people dump on me or early investors dump on me? You don't have the situation in Juno. You have the state drop. It comes into circulation on October 1st and that's it. There's no more Juno coming, only the incentive structure. There's nobody from the seed route that can dump on you. No private sale can dump on you. No public sale can dump on you. So this is, in my opinion, a fair launch.
+
+Just to conclude this we have 46,000 unique addresses atom stakers who will have Juno and who will control the Juno hub Yeah, this is amazing in my opinion
+
+Citizen Web3 
+I'm going to be a little bit controversial here. What about everybody who's taking with centralized exchanges like Binance, OKX, and the guys are smiling because they knew it was coming. And you also obviously have an answer for it already. So go on.
+
+wolfcontract 
+Absolutely, man. Absolutely. what we did basically is one of the things I mentioned in the beginning is that we did a lot of polling, So we polled everything with the community. And one of the polls that we did was should exchange validators be included in the stake drop? Several products did a stake drop already. They included exchange validators. We asked the community, the community said, no, we do not want to include exchange validators. They should not get the stake drop primarily because on the Cosmos Hub, they are not participating.
+
+at all in governance. And this is a huge negligence and we have communicated this to the community as well because some are in disbelief that they stake their atom, but for example they stake them in parentheses, they stake them on an exchange, that gets excluded obviously. And the second issue is which we also polled with the community and the Juno
+
+community set, also don't want to incentivize people that stake with exchange validator nodes because you're basically supporting this exchange negligence. So both are excluded. Exchanges basically go out empty-handed from this ecosystem.
+
+jake_hartnell 
+I'll add one more thing is that, for the health of the network, it's better if we keep stake decentralized, delegate to smaller validators because it ultimately leads to a more secure chain. And so, yeah, this might be a tough lesson for some people, but I think it's a good lesson and a good message to put out there because if everyone delegates to Binance and they control like seven or 10 % of the network,
+
+jake_hartnell 
+we're fundamentally less secure. And so it's a hard lesson to learn, but yeah, the community voted and we're sticking with it. it's important to put the message of keeping stake decentralized out there. And then hopefully I hope that other airdrops do a similar thing because that's how we can get the most healthy, secure, like Cosmos ecosystem possible.
+
+Citizen Web3 
+I guess this is a whole different topic to talk about. Unfortunately, we are like coming into an end and I would love to talk about it. We should have started with that because to me it's a super controversial topic. I do have a very different opinion to you guys here, but this is of course the community but this is really great. This is the great thing about decentralization that we can have different opinions and still work together on that. this is the beauty of blockchain and decentralization that you don't.
+
+Citizen Web3 
+you know, push things, you do it and everybody does whatever they do. And together something is born like what the guys are doing with Juno, you know, just out of nowhere, they come together and create this amazing thing. But regardless of that, guys, whoever is listening and still hasn't heard of Juno, there will be links in the description. And I know that for sure if you're atoms with other validates apart from exchanges,
+
+You probably already have a drop, so check it out. You could have a really cool website where you will see your balance. We will include all those links. But I will still ask the final question that we do ask all of our guests. So we're going to go again in a circle. It's going to be a strange question. What are some of the resources?
+
+And this could be anything this could be music. This could be book movie Nature whatever that motivates you in your day-to-day life
+
+wolfcontract
+So something that inspires me, this is very easy, because you know, we live in a troubled time right now. Everything's upside down. so from my personal experience, I basically moved from the I lived in the in the city for around 15 years now. And I just two months ago moved to the countryside.
+
+wolfcontract 
+I have our own house now, you know, the puppy I just explained earlier, puppies jumping around here left and right. But we are completely in the countryside now. And this is this is what inspires me 90 % of the day I'm outside, in nature and this and then I come back in and do what
+
+what brings me joy, you know, which is being in the Cosmos ecosystem and working on Juno now right now and also with SG1 our Validator. So this is what brings me joy and the rest of the time I'm outdoors and this is where I put in most of my energy.
+
+Citizen Web3 
+Amazing man.
+
+dimi 
+Yeah, what inspires me? Let's say is the awareness that I have that with my contribution and I mean anyone with his contribution can make this world happen and can make the world better in general. it can be in the financial system with some kind of
+
+dimi 
+file application, it can be removing the intermediary from something else. this really inspires me. we can really change something in this world and maybe make it better. pretty easy.
+
+Citizen Web3 
+Great answer
+
+jake_hartnell
+I've been thinking this whole time about something really profound to say what inspires me. And I was like, techno music, crypto Twitter. I like reading smart contracts on GitHub. 
+
+Citizen Web3
+Yeah, techno music!
+
+jake_hartnell 
+I think, similar to what Demi says, I'm really inspired by the notion of radical change and that we can, as a bitter millennial, what we're working on gives me a tiny little bit of hope that we can create a new system that replaces the unjust, terrible old system.
+
+Citizen Web3 
+Is there any GitHub coders or GitHub pages with smart contracts that you would recommend to somebody out there to go and check out?
+
+jake_hartnell 
+you know, honestly, I like, and this can sound weird for all that I said about like, you know, like how amazing Cosmos is earlier, but I find all the Ethereum, smart contracts and projects are like really like the first like attempt set, like all these kinds of things. So I honestly like read those. Like I read like for working on a DAO, I read like MlockDAO and compound governance and like, just for like, like everything it's kind of like been done as like a first pass in solidity. So.
+
+I always like reading those and seeing like, how did people like structure that? Like what kind of checks did they put? like can only the owner call this method, things like that. So I highly recommend even if you want to be a Cosmwazim dev and it's way better than writing Solidity. So you should want to be one. But it's still worthwhile to like go back to those like fundamental Ethereum projects and see how they structured things with like kind of like a much more limited language and feature set.
+
+Citizen Web3 
+Dimitri, do you want to add something
+
+dimi 
+I would recommend to read also the Vitalik Buterin blog. His blog posts are really, really technical and very difficult sometimes, but it's so interesting. And it's a good reading for any developer, I guess.
+
+Citizen Web3
+Especially before you go to sleep, it takes me sometimes five times to read one post and then I'm like, that's what he's trying to say. Okay, I get it. No, but it's actually a cool, recommendation. think, I think we heard this one several times on the podcast and I totally agree. This is a really great recommendations guys. Guys, Jake, Demi, Massey, it's been a huge pleasure talking to you.
+
+dimi 
+haha
+
+dimi 
+Yeah.
+
+Citizen Web3 
+And I don't know if anybody else, maybe I'm not following Juno as much as I should, but I haven't heard you guys talk anywhere about Juno specifically, you know, so I don't know if this is going to be the first or not. It's been huge pleasure having you guys on so thank very much for coming on.
+
+anna 
+Thank you guys and bye.
+
+jake_hartnell 
+Adam.
+
+anna 
+I have record. Okay.
+
+jake_hartnell
+Thank you. 
+
+dimi 
+Thanks, 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

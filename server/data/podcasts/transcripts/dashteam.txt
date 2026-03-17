@@ -1,0 +1,500 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/dashteam
+
+Episode name:
+Chain Security, Bridges and Web3 APIs with Ivan Shumkov and Samuel Westrich
+
+Citizen Web3 
+hi everyone. Welcome to a new episode of Citizen Cosmos. We have a part two out of, well, many parts that will be, for now it's two parts. I have with me here Samuel and Ivan from Dash Core Group or Tender Dash. Last time we, this was about a month, a month and a half ago, guys, maybe a little bit more. I'm losing track of time.
+
+The guys introduced what are they doing? How is this related to Tendermint? All of the differences, a lot of pluses that this protocol now has, some of the things that are different. And we spoke about all sorts of things, even about mongoes and grandmothers and whatnot. mean, it was a bit fun, crazy and technical, but guys, hi, welcome back.
+
+samuel_westrich
+It's great to be back.
+
+ivan_shumkov 
+Yeah, hello again.
+
+Citizen Web3
+How are you today? You guys look full of energy today.
+
+samuel_westrich 
+For those that can't see me, no. He's being pretentious. Yeah, well, always up late working, know, heavy sprints recently.
+
+Citizen Web3
+What about you, Ivan?
+
+ivan_shumkov
+Exciting to be here again and yeah, actually Sam expressed our moods pretty precise. We're a hard rush to release our product, so a little bit sleepy.
+
+Citizen Web3
+To be honest, to be honest, it wasn't such a bad joke. It was like, come on guys, look, you you look actually good for somebody who was working all last night. I was just saying to the guys before we kicked off, ironically, before this recording, I was yesterday at another event where one of your guys, Dmitry was speaking and he was saying, and maybe we can start with this. He was actually saying about.
+
+Citizen Web3 
+that because there was a release that TenderMind did and then rolled back because of a bug, that now there is actually a lot more differences between when we last spoke between the code that TenderDash uses and that TenderMind has. So do you guys care to elaborate on that and add comment on that? Is it so? Why is it so? What are the differences? Anything you want, really.
+
+samuel_westrich 
+Yeah, sure. So as people might be aware, Tendermint was on v35 and then going into v36. You know, they were well, well into their ABCI++ v36. They hadn't really worked on same block execution yet, but they had done a lot of other work for same block execution.
+
+Then they got into a very bad P2P bug, it would seem, according to what I've read about it. In the meantime, in our team, we had backported all of v35 into our code base, v36 into our code base, and we came to an interesting fork, choice. We either had to...
+
+continue down the path that we were in, because we had already implemented ABCI++, changed many tasks, made a lot of stuff working, or revert back to v34. And we decided to basically just forge ahead with the code that we had backported and modified quite intensely as well. The biggest drawback is that we will inherit the P2P
+
+bug that Tendermen has, but we're pretty... We believe we'll be able to fix it. So we just went on a different path from the Tendermen crew that decided to revert to v34. We also are currently working and are actually pretty... Pretty well ahead on same block execution.
+
+So I believe that we're going to have that feature out within a few months out in production, which is going to be, well, pretty cool, actually. If people are not aware of the difference between same block execution and next block execution, well, let me first talk about next block execution really quickly. Next block execution is what Tendermint has been using for the last few years. Basically, in a certain block,
+
+samuel_westrich
+the app hash is decided and then in next block it's signed. This actually causes a lot of problems for mobile clients because the state is always signed the block after it is decided and it causes basically kind of like a chicken and egg problem where you can't really give
+
+the state to mobile clients right away, you can't give a proof to mobile clients, to like clients, or even to any client really, very quickly. So, same block execution really solves this problem, but introduces a lot of changes. This was something that was announced by the Tendermen team, but we now believe that very sadly, it will take them longer. So, since we did not have the luxury really,
+
+Awaiting any longer. We just like went straight ahead and and built it ourselves
+
+Citizen Web3 
+Ivan, do you want to add anything?
+
+ivan_shumkov 
+Yeah, so basically the migration from next block execution to same block will make our system much more efficient since, as Sam mentioned already, we're getting this design state only on the next block. So technically we need to keep two copies of state or two divs on the nodes. One is current state and one is.
+
+signed state minus one, what we can respond with the light clients. So it's like extra data for sure. And the many processes will be simplified to this same block execution because for example, we don't need to create extra proof block if up hash is changed and things like that. Also, I would add that
+
+Tendermint guys were going to keep our next block execution as well. So it's supposed to be optional. Either you go with same block or next block. It's configurable. I believe the rationale behind it is to support the previous applications built with Tendermint, kind of backward compatibility.
+
+Probably for some applications simple applications. It's easier because you don't need to keep Simultaneous or state for different rounds different proposers and stuff so like the application can be easier to implement or simpler in our case are Be good to have only same block execution so
+
+We're off all next block execution stuff from Tender Mint because it's easier to implement. It's more like the fast track basically and we don't need to keep the backup compatibility with previous clients. So that's the difference in our approaches at this point.
+
+samuel_westrich 
+Yeah, I would like to add one thing to something that Yvonne said just now and explain what he meant when he said about you need a database that supports same block execution. One of the difficulties is that you can receive multiple blocks that can all be valid. For example, a previous round can actually get the two thirds threshold.
+
+in same block execution, which makes it so you need to have a certain database that allows for multiple, let's say, let me just say like universes of possibilities that can happen on that block, and you have to be able to store all of them, and then basically one is gonna win. And not all databases can really do that.
+
+So, or storage solutions. Thankfully, our storage solution, GroveDB that we basically built from scratch has that capacity. So, we're all good.
+
+Citizen Web3 
+have a of a question that I'm going to build on that, but it's going to be in a sense more, I guess, debate kind of question than a technical question, but in terms of technicality. And it has a reason. A reason? Can I say that? I don't know. that the English language is a weird thing, and especially in morning. It has a reason. That sounds really clever. Yesterday.
+
+samuel_westrich
+Yeah.
+
+Citizen Web3 
+And what we were talking about actually is when a project that grows and I think Dash and Tendermint are good examples of big projects in this case and development and core contributors. Is it a good thing in your opinion as developers and as developers with a lot of experience, both of you, when there is
+
+So there is like two ways, main ways, right? There is like the more centralized way where there is one big developer group that's committing into the code. And we know, okay, this group is committing to the core code. We know when the releases are coming. We know more or less who's responsible for each release, da, da, da, da, da, da, da, know, so on and so forth. Then there is like the other thing, which is now we see in Ethereum.
+
+We're now starting to see it in Cosmos Tendermint and Cosmos SDK. I'm not so familiar with how it goes on in Tendermint and sorry, in Tenderdash. I keep saying Tendermint because the words are so similar. But we now have like over 10, if I'm not mistaken, in Tendermint and Cosmos SDK, you now have over 10 teams and it's becoming a bit harder and harder to start following who's doing what release, what did the... Of course, we can look on GitHub and see all those things, obviously.
+
+But in terms of like developer experience, is that a good thing or does that lead to those kinds of separations where one team like yourselves was working on a code, you were more or less closed and something happened that didn't happen that wasn't, you know, you know what I mean, right? This is like a whole philosophical kind of debate, but I would love to hear your experience, sorry, your opinion as experienced developers in that.
+
+samuel_westrich 
+Now that's a very interesting question that I haven't thought much about before you asked it. I mean, I've thought about it over the years, but hadn't really... So yes, there are two main viewpoints on this. And in the pure open source world, the best thing would really be contributors from everywhere.
+
+samuel_westrich 
+works well, but it's much slower. It's much more efficient. Decentralization is always less efficient, but it has a lot of upsides as well. it's a lot more, when a project is very, very decentralized, it's very hard to, for example, to kill off because, you know, it's like a hydro, there are,
+
+Nine heads, 12 heads, how many heads? tried, somewhere. Basically, you can't kill off a decentralized project that a lot of people all around the world that are sometimes anonymous are just contributing to. When there's a centralized authority, there can be a decision made, like, okay, we're doing this by some manager who does not really understand what the implications of.
+
+what they're even doing really is. Not talking about myself, I'm perfect. But yeah, I think that in the case, so there was probably another question is why did tender dash offshoot? Why did we not do pull requests into the Tender Min code base?
+
+samuel_westrich 
+Well, the real issue there was about speed and time to delivery and thinking about ourselves really. We needed a certain set of features. if we, you know, let's say you have a certain code, right? And you want to make it into the thing you need. There is either the way of like having to support multiple features.
+
+or going with basically an axe, cutting off the stuff you don't need and building the stuff you need. And of course, because we understand the stuff we need the most, we can get that working very quickly. Otherwise, we would have had a lot of pull requests that would have taken a lot of time, a lot of effort on our part. So we went a more kind of
+
+samuel_westrich 
+not the more decentralized approach, generally for the efficiency. It's actually interesting because inside of Dash we have multiple projects and our main, not our main, our payment chain code base, which is written in C++, we get open, we get contributors pretty much from everywhere.
+
+I think for the last release there were like 15 contributors, right? But only six or seven from Dash Core Group. A lot of people just doing small things. Not very big things. A few did a few sizable contributions. yeah. Anyways, Yvonne, do you have anything you'd like to add?
+
+ivan_shumkov 
+Yeah, I totally agree with what you're saying and I hope we could contribute something when we are on the finish line and backport like to provide some valuable changes to Tendermint like to upstream at some point but yeah but for now as Sam said we can't selfish at this point
+
+Yeah, because we have pretty strict deadlines and the strategy is, I think, the best for us at this point. But to share the technologies and solutions what we did with the community, will be valuable, I think, and I would come back to it later.
+
+Citizen Web3 
+Guys, just to say you're very self-critical. The question wasn't about you guys not committing bank, but just saying, it's very nice that you have that process of thoughts in the head. I loved it. That was super self-conscious kind of thing. But I was really genuinely asking like, what's your thoughts in terms of like, for example, in Ethereum, we see it a lot, a lot within Fura, right? Like where the Russian into things somebody committed, bam, there is a bug and everybody's screwed. Everybody's fucked kind of thing.
+
+Citizen Web3 
+I was actually more throwing a stone into the kind of like the Tendermint team here that kind of like rushed into doing a release, which was buggy. And then like my question was kind of like, well, what do you think? Is that like a better thing when there is loads of teams that commit to the code? Do they make it better or will we see more bugs as more and more teams will commit to the code?
+
+samuel_westrich 
+So my view on this is you have to have very, very strong gatekeepers of your code. And that's what's important. I've reviewed pull requests both from internal and external people that just needed a lot of changes. And then sometimes I review pull requests that are wonderful. And you just really need to make sure that there's no type, especially in production software.
+
+and especially for Tendermint, you need to have multiple reviewers that all know the code base perfectly. You have to test things basically to hell, make no assumptions about things just being able to work, and just running the unit test is often not enough. You have to make sure you have good code coverage. Yeah, so it...
+
+had sound, like I'm not extremely aware about the woes inside of Tendermint, but from my understanding, there has been a lot of turnover potentially, and this might have caused some of the more experienced developers not to be gatekeeping the code as well as possible, but please correct me if I'm wrong.
+
+Citizen Web3 
+To be honest with you, this is actually what we're talking with Dmitry a little bit like where on the meetup that I was yesterday. It's a bit hard to understand from the outside because there are more than one team that is committing. And I think I've mistaken one of the main teams and I'm scared to be quoted on that. So people who are listening, please don't quote me on that.
+
+it was one of the Berlin GmbH game, hard teams that was, one of the main co co co contributors, to at one point to Tendermint and the main girl who was one of the main girls, she left a long, long time ago. So it wasn't right now. So I don't know exactly if there was such a thing where there was like a developer change right now. I didn't follow cause to be honest.
+
+the last kind of months and a half I was out because I was on a long holiday, which was really great. But it could have been happened. And I did hear that somebody else mentioned that it might've been a developer switch. I was just curious and like how you guys viewed it, but it's cool to see that the developers are so self-conscious. It's like, shit, we have to give back what we created. I love that. It was very kind of thing.
+
+samuel_westrich 
+Well, one thing that we definitely want to do a pull request to Tender Men for is our BLS signature code.
+
+Citizen Web3
+We want to talk a little bit about that.
+
+samuel_westrich 
+Not really. No, so just for your audience, BLS signatures are a special type of signatures that use elliptical curve pairings. And basically they can create threshold recovered signatures, which
+
+Citizen Web3 
+Love it, love it.
+
+samuel_westrich
+Well, they can create aggregated signatures and threshold recovered signatures. It's a little bit like magic, where let's say you have, well, I'm gonna talk about aggregated signatures first, because that's kind of interesting. Let's say you have five signatures that are all signing the same message. You can aggregate them together. So you have 32, let's say 32 bytes for each signature. You can basically combine five signatures into,
+
+that are all 32 bytes into one signature that is an aggregated signature that's also 32 bytes and has the same level of security. And this actually is very, very cool because you can basically save a lot of space both on disk and on...
+
+Yeah, on P2P connections. Bandwidth, yeah, sorry. The threshold recovered signatures are a little bit different. Basically, it's a little bit like aggregation, but instead it uses, well, it can use, Shermir secret sharing to create one signature if a threshold of signatures has been acquired.
+
+samuel_westrich 
+So like if you have had 60 out of, or 67 out of 100 signatures, in the case of TenderDash, they will aggregate, not aggregate, they will be able to be threshold recovered and you'll get one signature that basically proves the majority of members have signed something. This has one,
+
+which actually is the biggest downside of tender-dash versus tender mint is that it makes you can basically this does not use the power of nodes. Tender mint, every node in the system has a weight to it based off of how much of the token question is actually instaked into that node. In dash, all of our nodes have the same stake.
+
+samuel_westrich 
+So we don't really have that problem. And we are able to make all of our nodes basically on equal footing, which allow for these threshold recoverable signatures. There is mathematics that is possible to create threshold recovered signatures on non-
+
+samuel_westrich 
+on nodes that have different strength, different power, that math is super advanced.
+
+ivan_shumkov 
+Yeah, I read this paper, it's crazy. I'm sure we're gonna implement it soon.
+
+samuel_westrich 
+It's possible though. And I really do think that Tenderman developers should work on this and maybe one day we'll have the capacity to do it as well. So we can, know, I do think that this is kind of the future because it really is much more powerful. It's like kind of the next, in my opinion, it's the next step. So.
+
+Even if it's not to our project, it is something very worthwhile to work on just to create the library for other projects to use.
+
+Citizen Web3 
+Do you guys remember the name of the paper?
+
+samuel_westrich 
+that's actually very interesting. Yvonne, you found it, right?
+
+Citizen Web3 
+Ha ha.
+
+ivan_shumkov 
+Yeah, it's somewhere in our research channel.
+
+Citizen Web3
+Let's search while we talk. It's not important. Even if you find it later, I can like edit later to the description. Would be interesting, I think, for some people that want to look it up. I would definitely look it up. I'm sure there'd be some listeners who for sure would want to look it up. Sounds cool.
+
+samuel_westrich 
+If I'm not mistaken, very quickly, it basically uses a different set of polynomials than Shemir's secret sharing would do to allow for different powers, if I'm not mistaken. it's been three months since I read it.
+
+Citizen Web3 
+My favorite things, especially like on Saturday, Sunday, like eight, nine AM with a coffee. That's the best kind of stuff. 
+
+If we were to keep roughly on the same topic of projects going a little bit separately and bridges. So sooner or later, there will be some kind of bridge that will connect those two projects together. And I think an interesting topic...
+
+lately that has been going around and I would love to hear your thoughts here. We lost what 160 million I think to bridges hacking in the past like month alone or a month and a half alone in crypto in general. And what do you guys think? Where is all this like bridges architecture heading? Like are we going to be get
+
+Maybe even less secure and decentralized. don't know what would be the, you know, the thing we have to give away here or, or, or would it have to be security, decentralization speed for the, for bridges to become better and more efficient. what's your opinion guys?
+
+samuel_westrich 
+Well, I must admit that I do not know about the hacks on Tendermint.
+
+Citizen Web3
+It's not, it's not, it's not ABC related. No, nothing to do with tendermine. This is like crypto general crypto. Yes, crypto. This is crypto. No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no sorry, sorry, sorry this is like I was talking generally like general topic bridges hacking like there was about 160 million in a month and a half and I don't remember it was particularly one bridge I don't really remember what it was nothing to do with this but I'm curious as to what you guys think because obviously you know 
+
+samuel_westrich 
+outside. I was like, is there something I don't know about?
+
+samuel_westrich 
+okay.
+
+samuel_westrich 
+OK.
+
+samuel_westrich 
+Well, I think the problem has to do with two things. The security of each chain that interrupts with, and also the security of the bridge. It's some projects, I believe, rush a little bit too quickly. And they don't really take the time to put a lot of security in. In fact,
+
+Citizen Web3 
+Bridges are bridges.
+
+samuel_westrich
+I have seen so many exploits. Well, it's not like exploits that are, they're just so obvious. When I've read white papers since 2017, I've been sometimes like, what? What? There was actually, for Luna, for example, right? When I was, hey,
+
+I told everybody I could tell, don't touch that. Not with a 10 yard stick. that's not, obviously that's not a good example for bridges. But okay, let me take a little detour and say what we're doing for security in Bash Platform.
+
+Citizen Web3 
+Please.
+
+samuel_westrich 
+One thing that can always create a lot of problems are inflationary bugs in any blockchain, right? Where value can be basically created out of nowhere. And what we're doing to protect that is we've introduced a new type of tree where if you think about how Merkle Tree works,
+
+Basically, you have a left element, you have a right element, and then you hash the two together, and then that gives you the parent node, and that goes all the way to the top of the tree, or to the bottom of the tree, the way that you're looking at your tree. There's obviously no direction. But basically, if you add in the sum of the left element and the right element, you can basically create a system.
+
+where the total amount of credits among all members of the system, or when I say credits, I mean tokens or anything, is known at any time at a low level. So we're implementing this to make sure that there's absolutely no way in Dash Platform to have an inflationary bug. So it's basically a system of checks and balances where the code
+
+verifies that people get, if person A sends to person B a certain amount of tokens or credits or anything, they basically, that code should execute, but there's so much code. What happens if there's an off by one that somehow somebody can exploit?
+
+creating an infinite amount of credits on the system because who knows, right? But this checks and balances system will make it impossible for such a thing to occur. So that's actually pretty cool.
+
+ivan_shumkov 
+Since you're talking about credits, I would like to give credits to Sam. Since he came up with this pretty interesting idea when low-level structure verifies more high-level business logic to provide some protection mechanism. And I think it's a pretty interesting way to approach, especially in layered systems, when you can...
+
+We would fight for such potential attacks. It's super cool.
+
+samuel_westrich 
+Yeah, and what's even funnier is that I don't think anybody's ever done this before. Like, it's pretty, I thought it was a pretty easy idea. Like, I programmed a proof of concept in like two days, and yet why does nobody ever use such a thing? I mean, I guess, you know, nobody had thought about it before. Or people actually trust the code.
+
+But here we're gonna have a double trust in Dash platform, which will make it so such a bug could never occur. Now, could another type of issue where somebody creates a contract and the contract itself has an issue? Yes, of course. But it won't cause an inflationary bug. It will just basically be that somebody interacting with that contract could lose money.
+
+Citizen Web3 
+What about something crazy like a collision?
+
+samuel_westrich
+Collisions, no. In our system, we use Blake 3, and we use Blake 3 with 128 bits of security, meaning Blake 3 256. I believe that has 128 bits of security. Basically, the NIST currently has a recommendation of 112 bits of security, I believe, since 2014.
+
+ivan_shumkov
+Yeah.
+
+samuel_westrich 
+So we're well above that. I don't think anybody has ever broken anything even remotely close to 112 bits of security. It's not something that I'm worried about until...
+
+at least we have quantum supremacy. And if for people that don't know what quantum supremacy is, is quantum computers that can do things better than classical computers and especially solve specific problems in hashing. But hashing, just one little thing, hashing does not have as many problems in terms of security as
+
+public, private public keys. Yes, it's a lot easier to solve hashes using quantum computers, but it isn't evident. It's not like a cakewalk. You still need a lot of qubits.
+
+So basically, what I'm trying to say is signatures will break much, much faster than hashes. So when we get to quantum computers, one day. I've heard about quantum computers since 2005. it's 2022. It's probably still 15 years away.
+
+ivan_shumkov
+Getting back to bridges. that's interesting thing because it's kind of trending thing, right? And many project trying to introduce because the idea behind is pretty cool that they have the possibility between the chains and do like decentralized exchanges and many cool stuff. And I believe that there are many pioneers and now
+
+which like trying to do something like POC, proof of concept and write this feature to test. And as usual, pioneers are suffering. and what I would like to admit that IBC guys, the people who stand behind the standard, did their, they went in their,
+
+different way, different approach. They created pretty comprehensive specification and involve more preliminary work. And it looks pretty major already. I IBC specification and technology itself. And I'm not surprised that we're not seeing, as you said, any significant...
+
+or any attacks on the system. So I'm happy that we're on this side.
+
+Citizen Web3 
+We were talking again yesterday with somebody I was recording, Tarek Lewis, a guy from volume finance and they did a few protocols as well. And we were talking like more philosophically, I guess, in terms of, it was technical, but in a philosophy way about, can you say that it's impossible to hack? Well, of course there is no such thing as impossible, but scientifically, if it wasn't hack.
+
+yet you can assume that it's secure for today, for now. So like that was our like kind of like common denominator that, okay, it's, we're not going to say that it's the safest thing in the world. No, but if it wasn't hacked until today, at least for today, it's safe. What's going to happen tomorrow is what's going to happen tomorrow, of course. And if it's getting hacked in, it's a whole different story. But talking about hacks, some last time we did talk about mangos and now there is news.
+
+about Mongo's Bitcoin being released and it doesn't matter whether you're the lucky one or not the lucky one. What's your thought in general about 10 years later or however many years later, 140k Bitcoin really getting released into the market? Is that going to cause trouble and already is a lot of shaking market or are we okay? Are we safe to breathe?
+
+samuel_westrich 
+Well, yes and no. We have to think about there are 140k being released, but at the same time there has been a percentage of that that's already been sold in advance to companies basically that had leverage positions.
+
+samuel_westrich 
+I'm not sure exactly what percentages are going to the market, but yes, obviously there's going to be a significant amount of Bitcoin sold that is going, in my opinion, to lower the market. But I think that it will recover quite quickly. Bitcoin and the overall crypto markets are extremely resilient.
+
+samuel_westrich 
+Well, save up save up some cash for when that happens.
+
+Citizen Web3 
+Ivan, do you have any thoughts out of curiosity? Because I mean, obviously everybody I think has their own thoughts on such a big event in terms of like, we all in this market, whether we want it or not kind of thing, you know, we are dependent on it because it's our livelihood in a way.
+
+samuel_westrich 
+Wait, before he goes, do we have a date for when it hits already?
+
+Citizen Web3
+not sure. think it's in the next. I think it's actually ironically there was somebody who tweeted that it happens in the same day when the ether is it the same day or the same week with something to do with the the staked ether from the merge also being like released or something like that. And it's kind of like a very interesting week of a lot of like ether being unlocked a lot of bitcoins being released and it's like, okay, you know, like
+
+Is this like sell a sell, sell the sell week or something like this, you know, so somebody was mentioning that I'm not sure if this is really coinciding, but, that is something I heard on Twitter and I have not checked it in double check that information. So it's not double checked, but Ivan out of curiosity, do you have any thoughts on this? mean, considering we are living in this market, you know, regardless of whether we are technical or not technical, we are here, you know, it's, it's around us.
+
+ivan_shumkov
+Honestly, I let other people to think about it because I have enough gray hairs on my head already and I tried to stay away from market and I'm not checking prices and stuff.
+
+Citizen Web3 
+I love their answer. I love it. I love it. I love it.
+
+Citizen Web3 
+Yeah, but the price wasn't about the price was more like generally what we think. I see what you mean. Guys, changing subject, talking about like, I did read on, I don't remember where in the documentation and Dash I found it, or whether it was the documentation or somewhere scrolling along somewhere. There was a thing about Web3 APIs or DAPIs as the documentation and Dash called them, like dappies.
+
+Citizen Web3 
+I like the name Dappy sounds a bit silly, but I like it. So I have like a question about that. And then I have a general question. I'm going to ask the general question first, think again, considering with what happened lately in the crypto space, how on earth or do we need in the first place to build like a web three stack? Because with what happened with tornado cash and GitHub, I don't know if you guys were following that story where the guys from
+
+Citizen Web3 
+You know, the tornado cage thing did get into trouble because of the American bureaucracy or whatever. I'll shorten it to that. And the most atrocious thing was the guys deleting the GitHub accounts of the developers, not even banning them, literally deleting the whole thing, you know? And it was like, what the fuck, you know?
+
+samuel_westrich 
+Well, GitHub, is run by Microsoft, which is an American company, and they can be compelled by the US government to respect orders from, I think this was the Department of Homeland Security, I'm not sure. The issue, I mean, as many people are aware,
+
+is that tornado cash was being used according to the reasons that were being given by North Korean government to, I'm not sure what for what reason, I won't speculate, but that's I think the biggest reason why they went after tornado cash.
+
+I personally believe that it's a very fine line to thread because basically in many systems, when you make a payment, you have a certain degree of privacy. Like for example, if I use my MasterCard to buy something,
+
+I have a certain degree of privacy where the company knows about it. Yes, the government could ask the company, the payment provider about that, but in crypto very often there is no centralized entity and you have only one of two choices, either make it public to everybody or make it private to everybody. And when you make it private to everybody,
+
+well.
+
+samuel_westrich 
+it can also be used for nefarious purposes. But the other side, making every transaction public to everybody, is really horrible. It basically, means that everything that you do is completely public. So the problem is that it hasn't really been found a nice middle ground between those two.
+
+And I'm not sure what, if there will be a middle ground ever be able to be found. So we, you know, it's gonna be a few interesting years in front of us to see what really happens.
+
+Citizen Web3 
+It's a tough subject. It's a tough subject. And I'm always curious, what do developers think? Like, how do we build the stack in Web3? Do we have to still comply? Do we say, screw compliance, we are Web3 and we are like, you know, all for freedom. And of course there are different opinions that, in my opinion, shape the industry and that's how we become decentralized, I guess.
+
+samuel_westrich
+Well, it's always one of those things you don't like, I've been working on this project for five years. I don't want my work to go fund something that's bad. That not I mean, I guess, I guess what is bad, right? But
+
+samuel_westrich
+You know, I don't want it to go funding wars. don't want anything that I do to go funding.
+
+samuel_westrich 
+you know, child pornography, for example, what else, or dictatorship that like hurts human rights or anything like that. At the same time, I have a strong belief that people have a right to not have, let's say somebody buys a dildo online. That shouldn't be known to their grandparents. Like, you know?
+
+ivan_shumkov 
+ha ha
+
+samuel_westrich
+Sorry for being straight up about this, but you need to have the balance between the two and you need to try to find how to do that. I think that eventually we will come up with some type of compromise solution, but that requires both parties to really be open to negotiation. And I don't think that...
+
+there really has been any.
+
+negotiation really. You have one side that's like deep in decentralization, screw compliance, and then there's the other side that this can be used for harm. No privacy at all, right? And you know, it is possible as well that a middle ground can't actually even be found from a technical reason.
+
+and that's what some people have said, it's possible that one can't. It is possible, like when I think of potential solutions, you could have privacy on the level that only governments could actually break, not super great. You could have...
+
+samuel_westrich 
+You could have privacy where you have basically a company or an organization gate-keeping your privacy. That's kind of what you have currently with MasterCard and Visa. Those are potential options. It's not great.
+
+I would much prefer having privacy for everybody, but I do understand what the government has said and how things can be used for bad purposes. you really have to take that into consideration as well. Ivan, go ahead.
+
+ivan_shumkov 
+Yeah, so we have some discussions at this point in our organization how we're going to deal with such content on on Dash platform. mean, if someone decided to host their child pornography website or something on Dash platform and how we can deal with it and what is actually bad and what is not.
+
+what is good and who decides what is bad and what is good. One of their opinions was like the actually the network governance should decide and basically the masternode should vote and that's probably something like middle ground for us and we are developers we don't basically it's not our responsibility to choose.
+
+and the network should decide. That's a very tough question, very philosophical.
+
+Citizen Web3 
+It's a touchy subject. I just want to throw like two stones to whoever is listening. I don't want make conclusions because I think everybody has to make their own conclusions here. I'm just going to throw like a stone of thought to add to what you guys said. So recently, there has been several cases and one of the most interesting in this direction was where in States,
+
+And a guy using Google Cloud, and I think it was Hangouts or something like that. He was calling the doctor and then the child, the baby had a rush and the rush was on genitals. And the doctor asked specifically in the call, can you please send me the photo of the child? So obviously they send the photo of the genitals to the doctor.
+
+And automatically within like some minutes or literally Google didn't just report this guy via the whole system as a child offender. He became, sorry, an offender. blocked, they blocked all his access to everything. Contacts, double second, 2FA. This was crazy. They blocked his like 2FA and they could actually block that. Not many people knew that it would be able to block that thing.
+
+And the whole, like his whole life literally in a matter of seconds, like went from one place to another. And that was crazy. So I don't want make conclusions, just throwing those kinds of things to think for people who are going to debate for themselves, whether it's good or not on that note, moving to the next, cause I see it's a touchy subject, but if you want to add anything, go.
+
+samuel_westrich
+Well, It's always really hard to build decentralized systems that have some sort of self, what's the word I'm looking for? censorship. Yeah, censorship. And we are heavily trying to do this. Like, yes, as I said, I worked on this project for five years.
+
+ivan_shumkov 
+Sensor
+
+samuel_westrich 
+I definitely don't want it to be used for very vile things.
+
+Citizen Web3 
+the taxes. I said like the the taxes that the government uses to sponsor building of weapons, for example, Now, come on, of course, I'm being like, this is like a devil's advocate thing, of course, but I'm just trying to point out I think that we all use things for better good, right?
+
+samuel_westrich 
+What? Taxes?
+
+samuel_westrich 
+Yeah, obviously. The thing that becomes more tricky when you deal with decentralized governance is that various people of the organization live in various countries of the world that all have different laws. Some, for example, outlaw gambling. Some will outlaw pornography completely. Some outlaw
+
+marijuana, some don't outlaw marijuana, for example. Yeah. And so it's, very hard to create a global system with global censorship rules. When there are local constraints to think about, we haven't really touched this subject. And for the first release of a dash platform.
+
+We really don't allow big blobs of data to be inserted in platform. For example, you could write, I think, and in fact, I think it's happened, GIFs have been put into the Ethereum blockchain, into the Bitcoin blockchain.
+
+samuel_westrich 
+that but in any blockchain, yes, you could put bad information into the blockchain. However, without tools to actually decrypt that information, I don't think that it really is a big issue. I think it's already been dealt with in the case of Bitcoin. And in Dash,
+
+In a platform, for example, our idea for the future is to basically, if there are specific nodes of information that have been collectively deemed irresponsible, then we can, the project will actually be called abscission, where,
+
+Basically, haven't, this is years down the line though. And until that, we're going to really just restrict the amount of space that each individual.
+
+blob can contain like that, just like in Bitcoin and Ethereum, it gets very cost prohibitive to store images.
+
+Citizen Web3
+I was going to kind of like on that note It wasn't a great note to wrap up on but I'm gonna change it slightly so we so we so we go down from here but because we spoke about motivation, of course last time a lot and then I want to like ask kind of like for this time again, like a wrap up on the on the nicer kind of thing
+
+samuel_westrich 
+Yeah.
+
+samuel_westrich 
+Yeah.
+
+samuel_westrich 
+Mm-hmm.
+
+Citizen Web3 
+Has there been anything, because we spoke last time, I think that was roughly the beginning of the summer when we spoke. And you guys have gave like a great answer about motivation and it was like a very complete in each other answer. I remember that very well. Has there been anything else that inspired you since then with building, with carrying on? mean, of course.
+
+I've heard a lot of things where you guys have been in lot in producing in terms of like working a lot and it came from different angles. So obviously maybe something did inspire you guys separately. So motivation with the speak about, but current like the current inspiration that happened the last two, three months. Has there been anything like that for any of you guys that you would like to share or would feel safe enough to share?
+
+ivan_shumkov 
+Roadmap, that line become closer. It's really inspiring. We see the line in the tunnel. And actually, we created pretty detailed roadmap, the feature map, literally aligning to specific developer and dependencies between the features.
+
+Citizen Web3
+Motivation! Inspiring!
+
+ivan_shumkov 
+pretty detailed and yeah we were very close to the feature freeze that's very exciting for me personally and you started to write more rust that's what I'm like waking up every morning is a good mood like I gonna write more rust today that's that's very inspiring as well
+
+samuel_westrich 
+For those that don't know, Rust is a programming language, an amazing programming language. And for Yvonne's motivation, I go and meet him sometimes with a pointy stick.
+
+ivan_shumkov 
+You
+
+samuel_westrich 
+you're waking up at noon, Point, point, Wake up, wake up, it's time to code.
+
+Citizen Web3
+I love it. I love it. I love it.
+
+ivan_shumkov 
+You
+
+Citizen Web3 
+That's inspiration. That's love.
+
+ivan_shumkov 
+Yeah, by the way, we're gonna meet each other very soon in Georgia and somewhere like many many people from DCG like the S-Core group is gathering there
+
+Citizen Web3 
+Nice, nice.
+
+Citizen Web3 
+There is a lot of people I know in blockchain space in Georgia, some from Xparity, several people who organize different hackathons and stuff like that. It's getting interesting in Georgia in terms of blockchain developers.
+
+Sam, would you like to add anything to that inspiration story?
+
+samuel_westrich 
+Yeah, it's gonna sound really corny, but my inspiration are the people I work with. It's actually really true. And not just, it sounds so corny though, but I just really like the people I work with. it's always very motivating to work with people that are motivated themselves. And it just creates kind of like this snowball effect. And then you create really cool stuff.
+
+And it feels so good when you start an idea, work on it with two, three people in your team, and then get it to completion. And then that idea with another idea and another idea create a bigger pull request. And then eventually you've merged in this great feature that can be used by hopefully millions of people in the future.
+
+Citizen Web3 
+Nice man, nice. I know there has been a lot of things we haven't mentioned, like a lot of the, some of the killer features. I know that I know, I know, I know, but I did want to keep this more, a little bit like themed this one. And hopefully in a couple of moments, if you're still not sick of us and of me, particularly, we could meet again. And that would be even either closer to the deadline or even beyond the deadline.
+
+and talk about all the killer features, like, specifically. I know we haven't mentioned a lot of those. know, Yeah, go on, Sam.
+
+samuel_westrich 
+I think we should probably talk after we release same block execution.
+
+Citizen Web3
+Yes, that would be very interesting. would love that. But for now, I would really want to keep it like a little bit more general. So we have like this conversation. So that's okay with you guys. before we start talking all the private secrets, let's say goodbye to everybody guys, before we give away all the private secrets between ourselves. Guys, once again, it has been a very, very, very pleasurable talking to you. Thank you very much for everybody who's joined in and listened.
+
+samuel_westrich
+yeah, yeah, for sure, for sure.
+
+Citizen Web3 
+And I know you can't see the guys. They look a little bit tired from working and trying to bring you that code to production already. I'm sure it's getting closer and closer, as they say. But they look happy tired. Guys, don't worry. They look happy tired. I can see the stick going from one window to the other window. So yeah. Thanks, guys. Thanks. OK.
+
+ivan_shumkov
+Yeah, still smiling.
+
+ivan_shumkov 
+You
+
+ivan_shumkov 
+Yeah, thank you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

@@ -1,0 +1,471 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/orbitalapes1
+
+Episode name:
+Semantics, Onchain Randomness and NFTs with Co and Mr Sir 
+
+Citizen Web3
+Guys, welcome to a new episode of citizens Odyssey. And in this format, instead of podcasting, as we've already been doing before, what we do is live streams with different projects across the ecosystem. And specifically today, we're going to do an episode. Well,
+
+We already doing it with Orbital Apes who are validating Evmos. They are one of the biggest, I believe the second biggest, well, they go first to second all the time and we had a podcast episode with them with CEO who's going to join us in a couple of minutes, I believe. And we already have Mr. Say with us, right? Hi, man.
+
+mr_sir 
+Hello, how's it going?
+
+Citizen Web3
+Good man, how are you?
+
+mr_sir 
+All good. Today is governance Thursday in EFMOS.
+
+Citizen Web3
+Yeah, yes, yes. That's why we're gonna, we're gonna like, just have a genuine chit chat with you until everybody join us. Because, guys, for everybody who is watching or listening or either listening to the recording or watching the recording, there has been the Evmus governance call that did go a little bit over time. So I guess the other guys from Orbital Labs will join us as we go. Man, how was it? How was the governance call? Let me ask you the obvious thing.
+
+mr_sir 
+It was all right. There's not really many on-chain proposals at the moment. There are a bunch of Commonwealth pre-discussions. So we were just going over them, mainly some projects asking for funding to start new projects in FMLS. Still very early into the conversations, but yeah, there's a bunch of that stuff.
+
+Citizen Web3
+Anything, any proposals that you're excited to personally, like something that connects to you personally?
+
+mr_sir 
+Uh, not really. There's one, the very interesting proposal about a carbon credits management system based on NFTs, uh, particularly interested in that one because I would bring more NFTs to FMOs and I guess we will host those NFTs in orbit market. Um, yeah, but I'm not really, uh, in favor of that proposal since they are asking $250,000 to start a project from the ground up.
+
+Citizen Web3
+Mm-hmm.
+
+mr_sir 
+And I don't believe it's a public, like it's a for-profit platform using community funds, right? That's not going to benefit all of the community, right? For example, if you request funding for, there was a proposal that passed for funding a randomness oracle, then that randomness oracle is going to provide randomness to every developer in Atmos for free.
+
+So that proposal passed and community funds are going to fund that public good that every member of the community can use. My issue with these private projects requesting for funds is that if they don't bring a value to the community or if they're not like a public good that anybody can use for free, then how much worth it is it to use community funds to fund it in the first place?
+
+So yeah, we're just starting to talk about all the stuff, getting feedback from every community member and seeing how things go.
+
+Citizen Web3
+Yeah.
+
+Citizen Web3
+It's an interesting position where like four or five years ago in blockchain, everybody was talking about, oh, I mean, when community funds will be available, there'll be so many projects. And now obviously, one of the first things that happened in any kind of, I'm not going to call it VC for the sake of it, you know, that projects come unprepared, they don't even have a product, a lot of them, and they're expecting like the community funds to pay for everything just from the idea.
+
+But obviously, like in any VC market, I think it's a very competitive market. And even if it's a decentralized VC market, like with community funds, I think projects cannot expect to come with empty handed to any blockchain and say, hey, we have an idea, give us $250,000 or a million dollars or whatever. I think, I hope that a lot more projects will take into account that.
+
+Blockchains will be prepared to fund them as long as they have a product that benefits the blockchain itself and not just for the sake of giving them money. That's the way I see it anyways, but
+
+mr_sir 
+Exactly. And the main difference with VCs is that VCs don't get screwed because they get a portion of the business, right? Community funds just, they leave and they don't come back ever again. So you have, yeah, we'll have to be very careful. Being, having one of the largest validators put us in a position where teams approach us before writing proposals to try to explain their project to us, right?
+
+Citizen Web3
+Exactly, exactly, exactly.
+
+mr_sir 
+So apart from the proposals that are public right now, we've been talking to a bunch of teams requesting similar type of fundings. And if we're not careful and we don't come together and filter out projects as a community and we start accepting every proposal, the community funds are not gonna last too much, I think. Every week there's a couple of projects that wants more funding. So. It's worth the funds. But yeah, I think, I don't know, things are going very fast.
+
+Citizen Web3
+Mm-hmm.
+
+Citizen Web3
+That's crazy man, I didn't know that.
+
+Citizen Web3
+By the way, Cio is joining us. Cio, man, hi, how are you?
+
+co___orbital_apes 
+Hey, finally got it to work. Sorry for the delay.
+
+Citizen Web3
+It's okay. We kicked off slowly with a conversation about what was going on. We're already live, but we kicked off a couple of minutes before talking about what was on the Evmos governance call and me and Mr. Se were just discussing that projects should be prepared when asking for money, roughly. That was the kind of topic. Was there anything interesting you want to point out from the Evmos community call that you were just on?
+
+Sorry, the governance column in.
+
+co___orbital_apes 
+Yeah, I mean, I think Mr. Sher covered it. Like it's pretty interesting to see people come to talk about their projects and everything, because you do get to learn a lot and you can interact directly with them. But I do feel that people need to be a bit more prepared. Also, like something I do think needs to be worked on is some clarity on the procedures of everything, because us that we've...
+
+being in the ecosystem like in FMOS from the beginning since it relaunched, we know how the process works and how we should pass a proposal, how should we create a Commonwealth post and we've already passed one proposal to add some infrastructure to FMOS. We're familiar with the process but it's not as straightforward for people from the outside so I think this is one of the main focuses we need to do. I don't know if it could be like something we could put for example
+
+a notification in Minscan or a link where you go to the specific instructions on how to go through this process. I think that will also help people prepare for when they submit a proposal because it's going to be pretty strict from now on, I think. People are getting more critical with what they accept and what they want to spend the funds on. So I think it's critical for anybody to be ready for this and to follow the right process because it's what we're used to.
+
+what's been working until now.
+
+Citizen Web3
+I think it's a very interesting point you mentioned about the process, because I think those processes are going to change as the validator set is going to change. So obviously, like, is the community going to change? It might, might not, of course, but I have this kind of image in my head that the process is dictated by the state of the community, right? And if the state of the community, the shift, the power shifts, then maybe the process will shift as well. But I agree definitely that.
+
+the project should be able to kind of be in the current process, should be aware of it, because they come into the concrete community. I mean, if they know that this is the process, that those things are going to be much faster. And by the way, guys, before we carry on the conversation, the idea, just like for everybody who is, again, for everybody who is listening, whether it's recording or whether you're watching this live, and I believe some people are, because we already have like one question.
+
+because we did promise some atoms from our side for some good questions. And I believe that the guys from Orbital Apes kindly also offered possibly an NFT, Ape of course, for a good question. But we will ask them that in a second, see how is that true or the rumor is not true.
+
+co___orbital_apes 
+Yeah, absolutely. It's gonna be an APE NFT and then some FMOs for important questions.
+
+Citizen Web3
+Woo. Yeah, let's see if they arise. And by the way, I was just gonna finish the point. The idea of what we decided like to do, not decided to do, I mean, we've been doing this for a while, this whole educational thing, but the idea of this conversation is like to paint a profile of the Orbital Apes Validator. And of course we had a podcast with CEO already, and me and CEO kind of went into this topic of gaming and a lot of other things, but that was more in my opinion, kind of like...
+
+getting to know CO, the idea of this, I wanted to do this with as many validators as possible. So people really do get a profile, not of what just what validators do, cause I have some questions on that for you, but like what means CO talked about as well, like what motivates a validator to do things. And on that kind of note, one of the first thing I do wanna ask you guys about and feel free to take the conversation any way you want.
+
+is that as far as I'm aware, you guys have actually finished the roadmap that you had planned. And my question is, what are your next plans? What are you guys planning to do? I mean, of course, developing the game, obviously, that is one big thing. But as far as I understood, you did finish your roadmap. Is that correct, what you were planning from the beginning?
+
+co___orbital_apes 
+Yeah, so actually our collection went the opposite way of what people normally do. We finished the roadmap before actually launching the collection. So the NFT marketplace and the validator were up even before we launched and we got to the top before anything. So like I think that it was a pretty strong start. Then for the game, we discussed all of this on the previous call we had.
+
+Citizen Web3
+Hehehehehe
+
+Citizen Web3
+Excellent.
+
+co___orbital_apes 
+So it's still under development. We're still adding more features. We want to make it perfect. Because right now that we build this amazing community, we truly want to make something special. So it's something that takes time. But yesterday we had a Twitter Spaces where we covered pretty much some alpha about our next project. So this is going to be called Orbit Rumble. This is one of the projects we're going to release in the meantime before we finish the game.
+
+This is a fully decentralized raffle system. So I mentioned previously that we were passing a proposal on chain. This was for Dia, a team that's launching a randomness Oracle on chain. So what this allows us to do is to get a seed from the chain. Everything is generated transparently so we can get random results from the chain. So what we're doing is we have created.
+
+a raffle system where we can, users will be able to mint an NFT to be able to access prices. So this is something relatively simple when you consider it this way, but we're taking it a step further with the randomness oracle because by having this in the chain, we can make it so that anybody in the FMOS ecosystem can create their own raffle.
+
+So for example, a project like you can go and offer an NFT, create a raffle and your users will be able to go mint an NFT and access this raffle. So this is a novel approach we're doing to kind of engage further with the community to give people access to different prices, give protocols and apps in the ecosystem a chance to further engage, not with traditional giveaways, but something more exciting, something that can...
+
+drag more people, get more attention. So this is the first thing we're gonna release. Like this is the shortest term. And since we're all about this profit sharing and building on the ecosystem and building for NFT holders, 20% of the profits of this new platform are also gonna be sent to them. So in addition of the validator fees and orbit marketplace fees, they're gonna start receiving their cut from this project. This is gonna be the same approach we're gonna do in the future. So...
+
+co___orbital_apes
+That's what we're working on.
+
+Citizen Web3
+Nice, nice. I did have a question about that. And by the way, you mentioned profit sharing, and I do want to share this with everybody who's listening. I have questions following in the chat, which I will ask in a second. But I do want to say this publicly. This was a very nice gesture when our validator, the Citizen Cosmos validator, Onemus, we are doing more or less okay on the other networks, but Onemus were kind of...
+
+At the bottom when we had some trouble and we did fall out of the set and orbital apes were kind enough, the validator to like they did just mention, CO just mentioned profit sharing. And I do want to say that this is for real. The guys did delegate a little delegation to us, but it made us, it's sorry, helped us to stay afloat and it's still helping us to stay afloat. So.
+
+Guys, if you're like a validator out there who is like us in F most struggling a little bit, the guys in our bottle, they are actually doing what they saying. So that's actually pretty cool. And I think that paints a picture already of what the people are, but sorry for the rambling, but I just wanted to say thank you kind of publicly out for that. There is some questions here that I'm going to, to go to them. There was already few.
+
+Somebody is asking by the way, what was the orbital apes validator vote on the proposal? We just talked about the RNG project. I believe it's referring to the other call not to this one
+
+mr_sir 
+Yeah, well, obviously we voted yes because we were that, that we want. So what happened was we needed these Oracle to use to create the raffles. Right. So we, one of our team members started talking to different teams that offer random oracles. And we came up with a Dia, Dia team. And it seemed like their product had the best fit for what we wanted to do. And for what decentralized.
+
+randomness Oracle should look like. So then we approached them and we asked them how much is it for us to pay for the service? And they said that if you pay for the service, it's not like if we've a real APES team pay for the service, anybody in the chain will be able to use it. Once you pay for it, it's free for everybody. So that's when we decided that it might be a better.
+
+I use the funds to fund it from the community pool because it is a public good that anybody can use for free. And yeah, we voted yes because we wanted it in the first place. And it's going to attract a lot more apps to F-MOS because now you can do many different types of games or applications that uses randomness. Yep.
+
+Citizen Web3
+Makes sense.
+
+Citizen Web3
+Makes sense. There is one more question here about Rumble. Will the new project Rumble use Chainlink, excuse me, we're talking about Oracle for anybody who's not familiar with what Chainlink is, in order to validate the randomness of the ruffle. So, ruffles.
+
+mr_sir 
+Yeah, no, so yeah, Chainlink has a very good product called Chainlink VRF. That's probably what this person is referring to. But Chainlink, from our estimation, is going to take a bunch of time to come to FNOS. So that's why we went and looked for a different provider. And Dia is going to provide us everything. It's going to provide us the random number, the random seats. And you can back check and prove the fairness of the randomness with the...
+
+infrastructure that they have. So it's basically, DIA is replacing Chainlink VRF.
+
+Citizen Web3
+I'm gonna throw in the philosophical questions from my side here. Why do you guys believe randomness is important? This is gonna be devil's advocate question, of course, but I wanna hear your opinion, any of you. Why is randomness that important in anything in gaming and economics in the world? Why?
+
+mr_sir 
+I don't know. See?
+
+mr_sir 
+For example, a very simple use case. You want to build a very simple game. You have a character that's walking straight. And then every now and then, the character is going to, for example, Pokemon. When you're walking around, sometimes you find a Pokemon and you have to fight it. For that to happen, there has to be a randomness. So you can place those Pokemons randomly around the map. So I think it's a bad idea.
+
+Citizen Web3
+But why do you guys think?
+
+mr_sir 
+It's a building block for many, many games. As another example, our raffle system. Because of that oracle, Rumble is permissionless. Nobody controls Rumble. Nobody is the owner of the randomness. Nobody controls the results. And we can get random winners and choose random winners just because we have that functionality. So I think it's the building block for a lot of type. Yeah, a lot of.
+
+different games that we can do in blockchain.
+
+Citizen Web3
+The next one is not a question, more of a comment, but I guess both of you could comment a lot. Feel free to comment whoever wishes. A comment from Blacksmith. It would be very cool if there was an opportunity to customize apes from the main OA collection, combining utility and cool design. So I guess it's a comment if anybody wants to comment.
+
+co___orbital_apes 
+Yeah, so actually, like all of this, of course, can be discussed. One, I guess the closer thing to that would be the custom ape we're selling for, it's claimable for OEV in the OEV store. We expected it to be sold earlier. It's going to be multiple of them. So I think we're going to lower the price for next month, but this is pretty much your chance to talk directly to the design team and design.
+
+whatever you want as an ape and we will mint it for you and it's going to be part of the of the Orbital Apes Limited. Then in the future it's certainly a possibility to alter the designs of the of the apes. The thing we have to consider here is that not like it's going to be a change in the collection so it's not necessarily something that everybody would like because it was
+
+completely random at first, like whatever you minted was a chance or whatever you bought in the marketplace was something you really liked. So you went for that. So I don't know, like we have a governance system for, for example, we had a proposal where we asked people if they wanted to burn OEB at the end of the month for whatever wasn't claimed. So I guess this could also pass to something like that where the community decides. Certainly possible if everybody believes this is a good option.
+
+But it's a big change that we will need to decide. So for now, like the closest thing you can do is get the custom made by Baz and we will design anything you want.
+
+Citizen Web3
+There is a comment or a question, well, there is a question and I'm going to try to make another devil's advocate comment, which I love a lot out of that. Is the marketplace, well, it's a second part of the question, so I'm going to ask the first one. Are the NFT numbers always going to be limited only to 10,000? And is the marketplace can only be used right now for orbital NFT only?
+
+And I'm going to make a little more of a, like I said, a strange comment out of it. And you guys feel free to comment. Um, why, why do you still, uh, like, I mean, I know that to add an NFT, I have to write to, uh, somebody from the team right now, if I'm correct. And on it, it goes through a certain procedure. Um, is there a plan to, to open that up? Like, uh, with, let's say with OpenSea, where you can just come and, uh, click some buttons and add.
+
+mr_sir 
+Yeah, so the reason why we don't have that is the infrastructure needed to sync with every contract deployed on chain automatically is we don't have it in FNOS right now. So for example, our marketplace relies on Graph. Graph is a service that indexes smart contract events and gives developers the tool to present that information into a nice UI, for example.
+
+Ethereum, Avalanche, Phantom, like all of the other ones have the Graph hosted service. That means they can just go to the Graph website and host their Graph and their infrastructure there for free. However, FMOS is three months old and there's no Graph hosted service in FMOS. So we have to rebuild what the infrastructure that Graph provides for free in other chains, if that makes sense. So it's...
+
+Not because we don't want to, but the technical challenge and engineering resources that are needed to achieve that automatic sync are way too much for the beginning of the marketplace. We definitely plan to do it like that in the future, but it's going to be an update, I don't know, maybe in 2023. Or whenever we have more infrastructure, providers come into FNOS.
+
+Citizen Web3
+In the next bull market, no, I'm joking, guys. And by the way, talking about infrastructure providing, I don't know if you're in place to talk about it. If no, say if yes, I would love to hear your comments here. What is, without going into private details, into security details, can you paint for validators out there?
+
+Like in two words, what should be their infrastructural setup if they're planning to start the Validator? Not just on Evmas maybe, but maybe you can talk particularly about Evmas of course, but in Cosmos ecosystem in general, maybe you can mention some of your own things that you do again without doing it a security breach, but maybe like important points of you have to keep so many sentry nodes or I don't know, whatever like ta ta. Is that something you guys are ready to talk about or?
+
+mr_sir 
+Yeah, like we would love to talk about it, but the one member that is in charge of the validator is not in the call right now. I don't much know the specifics. I do know, like we, when the validator was started in the early days, I was just overlooking what control alt-tape was doing. He's the one that manages the validator. And I remember that the Atmos docs were super specific about what you need.
+
+Citizen Web3
+Hahaha Ok, no worries
+
+Citizen Web3
+Uh-huh.
+
+Citizen Web3
+Yeah.
+
+mr_sir 
+However, we found that the minimum memory required, that's like one of the few things I remember from that time, right? Was 32, I think. But if you really want to get it started, you need at least 64, 64 RAM for sure.
+
+Citizen Web3
+64
+
+Citizen Web3
+This is the same thing with Cosmos, I remember. Sorry to interrupt you there.
+
+mr_sir
+Yeah, and it's, I don't know, it's once that, once the validator synced for the first time, it never used the full memory again, right? And it's like, I can write it with 32, but I cannot start it with 32. So I guess we'll just pay double the infra, the specs just to start it.
+
+Citizen Web3
+I think in Cosmos once it runs, I'm afraid to be quoted and then please guys, we will listen to this, don't quote me on that, don't kill me. But as far as I remember, like our validators doesn't use once it starts, not more than like two or four even, but you need a lot to start so true. By the way, do you guys plan to expand your validator to other networks?
+
+mr_sir 
+Yeah, so we just started talking about it with our community members. Like we've had the idea to do it. We were not sure if we should try to go into an existing chain and start like validating there and see how many of the Arial APES community are in those chains. But right now, Go maybe can comment on our ideas for the future in terms of chains that we validate.
+
+co___orbital_apes
+Yeah, so right now we're actually negotiating and talking with a chain to expand our services. I'm not ready to announce it yet, but it's going to come very soon. I think we could potentially make a firm announcement by next week or something like that. But yeah, definitely within our plans, it's something our community wants and it's something that's going to help the ecosystem continue to grow. So it's still going to be within the FMOS, but yeah, we're going to branch out.
+
+Citizen Web3
+It's going to be within EVMOS, right? Is that the hint?
+
+co___orbital_apes 
+No, sorry, within Cosmos.
+
+Citizen Web3
+What letter does it start with? No, I'm joking, I'm joking, I'm joking. There is a question here. The Territory Project has just announced they would target an Orbital Apes community for their airdrop. Does this make sense to see Orbital Apes as a community of the most hardcore, almost early riders? As OGs, almost OGs. That's the question.
+
+co___orbital_apes 
+Yeah, I think pretty much the Orbea Laves became the face of EVMOS. You can see the main team, the core team using their honorary Apes, and we do have the biggest NFT community, at least in EVMOS. And from what I can see in these courts, our Apes are pretty active. So yeah, I mean, this territory airdrop, like they're focusing on us because of this community, because they know how our people engage, how much they participate with the overall ecosystem.
+
+So today it was confirmed like our, the Orbital Ape holders are going to get a portion of the territory airdrop. And I think this is something pretty cool, like being able to reach a size where you're recognized just for your community and for your achievements. And this is part of the value we bring to our holders. Like we're constantly engaging in discussions with other projects, seeing what we can bring to the table. And whenever we find the right match.
+
+people can be sure that we're gonna bring it to them.
+
+Citizen Web3
+What are those values?
+
+co___orbital_apes
+So I mean, I don't mean the values as in like words, but actual value for the NFT like utility or connections, like interactions with other chains.
+
+Citizen Web3
+Ah, sorry, sorry. My apologies, sorry. It's just interesting because we did speak with you a lot about values, right? Not a lot, but we did mention values on the podcast that we did, right? And you had a lot of things about, like, what I liked about your answer was that you're here to succeed. Am I correct to remember that, right?
+
+co___orbital_apes 
+Hehehe
+
+co___orbital_apes 
+Yeah, absolutely. So something I was mentioning is that we run this project as a business. So of course, maximizing the value for stakeholders is our drive. So whenever we can provide something like this, we're going to go for it. Like we're always fully transparent for telling people what we're going to do, trying to involve them in decisions. So pretty much representing them in a bigger ecosystem. So that's how we manage this project.
+
+Citizen Web3
+Strange question. Do you see Stargaze as somebody that the project with the NFTs, as how to say, what's the right word, as competition or as somebody you can work together with to achieve greater NFT future for the cosmos?
+
+co___orbital_apes
+So, I mean, this question, eh, a bit tough. So when it comes to competition, like, I can fully say we believe our marketplace is superior. I think people may recognize that when using it, we have a lot more features and we really focused on bringing what makes the EVM great into Atmos and we're gonna slowly push this into Cosmos. The thing that StarGaze does have is a massive community.
+
+Citizen Web3
+Yeah.
+
+co___orbital_apes 
+And that's the other half of what you need. So first of all, the tech has to be amazing and the community has to be amazing because if you don't have a community to use the tech, then it doesn't make sense to have it. So I think we can learn a lot from Stargaze. It's, I don't think we see them as competition, but as maybe a potential to collaborate with, to continue expanding. Cause they have
+
+an amazing community like this is undeniable. They have so many projects, so many people interacting with them, but it's something we could also try to approach. But we also think we bring a lot of value to the table with what we've built. Like it's, we believe we've set a new standard. So I think this is more of the approach we want the entire cosmos to take when it comes to development, especially in the NFT industry.
+
+Citizen Web3
+Because I have seen around chats, like I'm going to take it like carry on with this analogy, but take it a little bit to the side. I have seen in different chats and again, I'm sorry if I'm going to upset some people who listening to this, but people mentioning that, oh, the orbital apes, you know, have means to self promote and to give things to their, but that's, that's about competition, about free marketing competitions. In my opinion, those kinds of comments from people in a decentralized market are a bit like, eh, but.
+
+that is the free market, you're playing by the rules of the market. Anybody can do it. So, and I remember you, you were saying, the reason I'm mentioning this is because I remember you guys, you specifically CEO saying that competition is very important. And I totally agree with you. I mean, if there was no competition, there'll probably be no innovation. And how can you expect to create, you know, an amazing kind of technology or amazing anything without innovation? I'm not sure. And I don't think, I don't believe that innovation exists without
+
+Do you guys agree?
+
+co___orbital_apes 
+Yeah, absolutely. I mean, we've gotten in trouble. Like we really push our project, we push our brand. Some people don't necessarily agree with what we do, but this is what's ultimately going to drive growth in the chain. So we always play by the rules. We play fair with everyone, but we are making a huge effort to promote our brand. And this is something that we've seen some people complain about it, but I don't think that's the right approach. Like instead of criticizing this.
+
+People could try to mimic our approach just as we are trying to mimic the great people in the ecosystem. Like if we see something that works, then we're going to go for that. Not necessarily go against that, but maybe try to find our own unique approach to take and build on that idea. But it's always about putting yourself beyond what's currently being done. So I don't believe criticism of those innovative plans is the best.
+
+way to do it. Like, of course people can come and give us constructive criticism. Maybe if we're pushing on something we shouldn't do or something like that, then yeah, we will always listen to them, but we're never going to stop developing. We're never going to stop pushing our brand. Of course, always according to guidelines, but yeah, we really make an effort and that's how we reach this position because it's all about innovation and growth. So we're going to continue pushing for that.
+
+Citizen Web3
+Talking about growth, there is a question, I guess a subjective question. Well, it doesn't have to be a subjective answer. Do you see an increase in projects' interest in the EFMOS ecosystem? And what about NFT projects applying to orbit market? I assume that the person is asking, is there an increase in the amount? I hope I'm correct. I'm sorry if I'm not. Please do.
+
+correct me guys, whoever's asking the question. So the question is, I'm gonna summarize it. Do you guys see an increase in interest from other projects in the EFMO Seca system? And is there an increase in the amount of NFT projects applying for orbit markets?
+
+co___orbital_apes
+Yeah, so this like I'm in direct contact with everybody that's going to come for community or when they want to launch a project. So there's definitely interest, but the thing is Cosmos, it hasn't been Solidity based or EVM based. So a lot of the projects already in the ecosystem don't have the tech stack to come directly into F-MOS. So of course there's a lot of interest, but people don't necessarily aren't necessarily ready yet to come and deploy in F-MOS.
+
+What I have seen is that right now people's demand for quality is very high. So they will only invest in the top project. So right now in FMOs, we have a few, we have a few that have endured this market that have grown. But I think that right now, like it's all about finding the right project with quality, with value behind it. And that's gonna.
+
+show up. So while we have had interest from other projects on our side, I was talking about this on the spaces yesterday. When we run the marketplace, it's pretty much tied to our brand. So for us, even though the logic thing would be to onboard, not necessarily logic, but we could onboard every single collection, try to push every
+
+a new project that wants to come as an NFT in the FMOs, but this is not the right thing for users. We sort of tried to add a layer of protection because there's many projects that either don't have the right management to finish their project or just disappear after not having success. So we really want to protect our apes because it's part of our community, part of our brand. So...
+
+Whenever we're associated with someone, it's only going to be when we know the team, when we know what they're doing. We've seen what results they can bring. So all of this is part of it.
+
+Citizen Web3
+What is, it's interesting that you mentioned the word brand a lot. I like it because, but usually people associate the word brand, at least my brain, okay, I'm going to talk from myself, like my brain associates the word brand with, uh, you know, I don't know, Levi's, McDonald's, like typical, uh, big companies or corporations. And obviously my brain does the second straight away, uh, kind of connection from it to the fiat world. So the question is.
+
+What do you guys find the most difficult thing about trying to develop a decentralized brand? Are there any specific difficulties in developing a decentralized brand that apply only to that market and don't apply to the world outside of blockchain?
+
+co___orbital_apes
+Actually, I think these two are extremely connected. Like a brand is going to be universal. It doesn't have to be only web three or only real world. It's pretty much having people recognize what do you stand for? What do you do? So I like to think that when people see the OA of our logo, they know the full range of our products. They know how we started, what our community is like. And this is by no means exclusive to web three.
+
+What Web3 allows you to do is like with decentralization and the blockchain, you can really give more power to the people. Cause for example, with the, the Ape holders are part owners of our project. So they're not only customers, but they're invested with the brand. So the NFT, which is the centerpiece of everything we've built is pretty much the key for them to own a piece of.
+
+of the ecosystem. So this is what really gives you a lot more power when it comes to brand building, because people become part of you. Like I remember before launching that collection, like there was a lot of criticism, a lot of maybe doubts, but as soon as people invest in the project and they see what it's about and they have their NFT, then they're going to push it. They're going to become part of the brand identity. So it's key to.
+
+have people have ownership in the project, have a stake to achieve sustainable growth because it's important for everyone. Now it's not only important for the team, but it becomes like a community of 3000, 4000 holders that want the best for the project.
+
+Citizen Web3
+And there's actually any good thing you mentioned it because there is a question here relating to that We're talking about the apes council that you guys use As as the question here I'm gonna read the question as it is, okay You use apes council as a marketing claim in your Twitter promotions But you run only one vote since launch. Are there any plans to increase the community part in the project?
+
+co___orbital_apes 
+So I saw that question, I think I addressed it on Discord, not really sure. So that question was like the vote he mentions was when we announced the community if they wanted to burn the unclaimed supply of OAB tokens or not. So since this was something that was gonna change the nature of how we operate it, this was something we brought up to a vote. So we haven't had many, like any other
+
+Citizen Web3
+I'm sorry.
+
+co___orbital_apes 
+major decisions like that. So we haven't really used that governance system, but as we discussed before, like with the idea of modifying the visual appearance of the apes, that's something where we would bring that, that feature. So whenever we have something that will change the nature of how we operate, we're going to involve the community. But for now we're launching new projects. We're getting feedback from people for the marketplace, for example. So whenever they give us something small, then we implement it and that's it.
+
+So whenever it's not game breaking, we can do it just like this, but whenever it's something that will alter how things work, then we're going to have to use this system, and that's why it was built. We haven't really needed to use it because nothing huge has been changed, but whenever the time comes, we're going to use the same system.
+
+Citizen Web3
+There is an interesting question here about validating and I think I have some questions to carry that on as well. First the question, what do you think about the common opinion that when you're choosing a validator you should not choose from the top 20? Where did this even come from? And I'm gonna add to this, isn't that kind of, I understand the whole thing, but then if nobody is gonna delegate to the top 20, then eventually those top 20 fall out the top 20 and nobody delegates to the next...
+
+Like, is that creates a good thing or does that create something bad? So what do you guys think about the thing to delegate a top 20? Where did this come from in your opinion? And my part of the question is, should that the way it should be, or is there any, any other models you guys think are appropriate to the centralized and a stake of a network?
+
+mr_sir 
+Yeah, so in my opinion, people shouldn't just delegate to outside 20 because they should just do it. But I think everybody should take a step back, wait one day before delegating and do their research into the validators that are available. Maybe they want to support a specific community. If that community is within the top 20, but if you want to support it, you can support it. You know, like you.
+
+You have to go where you want to go, but based on education, not based because someone in Twitter told you to go outside of the first 50, you know. Um, I believe that it's always important to diversify wealth. Um, so it's also a good idea to have, um, your tokens spread across different validators, uh, and that way you can, you can help more validators in that way. Um,
+
+and also protect yourself from getting slashed by a particular validator. But also, yeah, my main point is research is important. Whether you are doing top 20 or the bottom 20, you have to do your research, make sure that the team is capable, protect yourself, because not only you're going to lose money if they get slashed or hard slashed, right? So just don't go validate because you want to validate. Validate and make.
+
+educate yourself about it and choose your validator that way. That's my point of view.
+
+Citizen Web3
+Definitely, definitely. And talking about education, about painting a profile, there is a question that I will carry on to what I'm going to ask next. But can we do a super quick overview of all the products that you're currently guys working on? Can anybody remember all of them?
+
+mr_sir
+Yeah. Okay. So we can break it down into stages of the Orbit Alibis lifecycle. Okay. So first, the roadmap. The roadmap included the validator and the marketplace. As Comenchant, we delivered that before selling the NFTs. And with that, we basically finished the roadmap for the minting of the NFTs. We also have in our roadmap the...
+
+Orbalypse game. But for the past few months, we have been focused on the Hoobly hackathon. This is an FMOs exclusive hackathon. And there are different rails in which you can compete. But obviously, we're going to be focused on the NFT Metaverse category, right? So for this hackathon, the past few months, we have been working in two things. One.
+
+Orbit V2, which is the update we pushed to Orbit. Basically, you now can create bundles and sell multiple NFTs as a single bundle. And we also introduced auctions. And we introduced the ability to use multiple IVC-bridged tokens. So you can buy and sell NFTs with Atom and Osmo. You can bridge it through IVC and use it in our marketplace.
+
+So that's the first submission and one of the few projects, the two projects that we've been working on the past months. And then our second submission for the hackathon is these permissionless decentralized raffle system. So yeah, that's basically what we have been doing and we're gonna continue to push updates and make the raffle and orbit we do better until September 20th. September 20th is the deadline of the hackathon. And then...
+
+starting that date we move forward into going back and looking into the game and planning the game, developing the game. And so to run the game, honestly, we're going to have to push to get some infrastructure that we currently don't have in FMOS as well, as I mentioned before. So that's also one of one pain point that we have right now. We don't have all the technology and infra that we need to build the game right now. Of course, we can start working ahead.
+
+mr_sir 
+But it's going to get some time for that. So I guess those are all the projects that we have plus the value there.
+
+Citizen Web3
+I was gonna say you forgot the validator. See you always Mr. Seh forgotten anything. Do you have something that you remember that Mr. Seh could forgot?
+
+mr_sir 
+Yeah
+
+co___orbital_apes
+No, I think that's it for now. Like we've been experimenting with a few things. Eh, not ready to announce anything yet, but some community engagement. We're also going to be present in Cosmoverse. I think this is a cool thing. Like I'm going to be there personally. So like if anybody wants to know the team behind it, or they want to know some. Exclusives, maybe some alpha in Cosmoverse, then they're free to approach us. They learn more about the project. And I think this is going to be something that.
+
+could potentially bring us to future stages. Like we plan on, we've already talked to a lot of people in the ecosystem to meet them, to discuss collaborations and partnerships. So I think this event is gonna be one of the next steps for the Orbital Apes. I think building connections and engaging with the Cosmos ecosystem is the right approach. So I think this is gonna open a few doors for us.
+
+Citizen Web3
+I think I'm going to mention one project you both forgot. You didn't forget, but I'm going to mention it. Well, I think helping others is also a project. Decentralizing the network, in a sense, is also a project. So I think I would like to mention that for you. That's OK.
+
+co___orbital_apes
+Yeah, absolutely. I mean, like with you, when you contacted us, like, as Mr. Cere mentioned, like you always have to do your own research when delegating. So as from the mint and from the funds we received, we stake pretty much like the vast majority of them are still staked. So what we were doing in the beginning to help with decentralization and also to diversify as Mr. Cere mentioned was staking to other validators.
+
+So we got to interact with a lot of them, with you included. So what we did was part of our main funds were put into other validators to help them climb the set and to help them be active. And I think it was like pretty successful. Like we managed to bring, keep some super important and key people in FMOs. Some of the teams that validate are amazing. They're bringing infrastructure and all of that. And all they needed was a small push at first.
+
+So it was amazing to be able to do that, to be in that position. And it also helped open doors, because right now we're in constant contact with a lot of new people from the F-MOS ecosystem. We can continue growing and developing with them. So it was awesome to be able to do it.
+
+Citizen Web3
+Thanks a lot for that and thanks a lot for the work that you guys are doing that and carry on doing it and by the way whoever is listening the guys have mentioned the Fmas hackathon and One of the previous episodes that we did actually in fact, it was two well one Sorry with the citizen odyssey if you guys want to look it up on YouTube it is in our channel It is about the hackathon with the hobby team and the guys talk a lot about what they're looking for the guys talk a lot about
+
+their ideas and it's got Nick from Evmos as well that where he mentions it so it's and also about Cosmoverse, whoever is not aware. Cosmoverse is the biggest Cosmos ecosystem, I would say more focused on Cosmos, but it's a Cosmos ecosystem event that is going to be held. This is the second one held in Medellin, Colombia, 26th to 28th of September. And we're
+
+Citizen Web3
+Bostrom and Cyber. So yeah, unfortunately we're not going to be present this time in physically, but the guys from Orbital Apes are present. I think that's already a good enough... Well, at least my curiosity would kill me. If I could go, I would definitely go to see the guys in the face. So the next question, by the way, and this is relating to the project.
+
+Could you describe a little bit more about the OAV token utility and any airdrops going on currently?
+
+co___orbital_apes 
+Yeah. So I think the best for the OEV airdrop is going to be to go to our Discord and check the OEV airdrop channel. Cause there you have like the complete medium where it explains the tokenomics and all of that. In summary, it's a loyalty reward token. So people that stick with us get this token and you can use it to claim OEV apes, the Orville Apes limited collection, which is some fun and community oriented designs that come out each month.
+
+so people can acquire pretty much new designs of the brand every month. And it's something fun we like to do because some of the designs are to have fun with the community. For example, we have the Rekt Ape, which is a McDonald's dressed ape following the meme, that common meme in crypto. Then we have some super crazy designs.
+
+that it's something that Baz from our design team can give more time to. So when he was making that collection, it's a massive job. So you can't really give too many details to individual NFTs, but in this collection, you can really focus on creating something unique and special. So that's the use of OEV. Then the airdrop that was confirmed today, the Territory Network, like we're...
+
+talking to them for future collaborations to expand on what they're building. And it's something all of our holders are going to receive just for holding their apes. So it's something we're really excited about. It's fun to be able to bring value to them while we grow our brand with the Territory network. So yeah, you're going to continue hearing new information this week and next week. Territory mentioned they are going to launch Mainnet this month.
+
+So it's something that's going to happen pretty soon. So people can be expecting that pretty soon.
+
+Citizen Web3
+Nice.
+
+mr_sir 
+Well, I think OED should be looked at, you know, and you go to your pharmacy and maybe they give you a loyalty card and then after shopping a lot in that pharmacy, you can get a free Coke with your points. It's basically the same thing. It's the same thing. It's just a loyalty reward system and you can get one of a kind NFTs with those points once you get enough.
+
+Citizen Web3
+I mean, getting coke in the pharmacy is, I love that. Obviously, Coca, obviously we're talking about Coca-Cola for everybody who is listening out there, nothing else. And I know, thanks for that man, that was good. I know that we run short on time and I know that the guys are, I know that people have a lot of question. I can see that the questions keep coming. I have a lot of questions myself, but just to, I know that the guys are also coming from a back-to-back call and I imagine it's not.
+
+mr_sir 
+Coca Cola.
+
+Citizen Web3
+first one. So I'm going to start slowly wrapping things up. And I'm going to, there's another question here in the chat that I'm going to ask. And then I'm going to slowly start wrapping up guys. Is there any plans in the future to reward long-term APE holders against short-term APE holders? Or is it a core OA value to see each other holders equal?
+
+mr_sir 
+Well, I think just by default, by nature, long-term holders get more rewards, of course, because you've been accruing your validator fees and your orbit fees through a longer period of time, right? So just out of that, you're gonna, a long-term holder is gonna get more, is gonna have more rewards accrued. And you keep, if you keep compounding them, then you're gonna end up with a nice reward system at the end.
+
+But yeah, like, I mean, we're always open to suggestions. We're always open for doing cool things, cool events, cool airdrops, I don't know. So yeah, definitely long-term holders. Like I'm not saying they're not gonna get anything. I'm not saying that they're gonna get it, but we're open to explore different paths.
+
+Citizen Web3
+By the way, for whoever's asking the question, I'm pretty sure that me and CEO went a little bit into like a small philosophical discussion in the podcast episode we did on citizencosmos.space. So feel free to check it out and think the discussion goes a little bit more in depth into that. Guys, as I mentioned, the time is kind, I don't know how it run out, but it's been an hour already. And like I said, the guys are off back to back calls and probably not the first ones. So we're gonna wrap it up.
+
+But before we do, guys, is there any questions that you would like to point out as the best ones? How are we gonna do this? Or was there a question that you think is worth the gift? And I'm not talking about the gift, what we promised, I'm talking about the NFT here, of course. Or not today, as they say.
+
+Citizen Web3
+While the guys are thinking, I'm still gonna mention that yes, we are still gonna send out Atom for three best questions each, but we're gonna do it separately after XCO. Sorry.
+
+co___orbital_apes 
+Yeah, so just let us talk between us. Like there's been some great questions. Honestly, I appreciate people engaging like this and we're going to release, reveal who gets the price.
+
+Citizen Web3
+Okay.
+
+Citizen Web3
+Okay, cool, cool. So guys, whoever is asking the questions, I'm gonna ask Roman, our manager, to drop our Discord link in the YouTube channel where you chat, sorry, where you guys are asking the question. I don't know what's wrong with me. My brain is also frying, I'm sorry, also back to back calls. If you don't see it there, just follow our Twitter.
+
+on cosmos underscore voice or citizencosmos.space join our discord and we will discuss it we will reveal it also there in case you get lost but i'm sure you will not lose orbital apes twitter or and you're able to follow them i'm just saying to follow our prizes as well so thank you very much for the questions everybody who joined in and asking them it's been very lively thank you very much uh co and mr sarah thank you very much for joining the end of i know
+
+probably not another easy day. So thanks.
+
+co___orbital_apes 
+Thank you for having us.
+
+Citizen Web3
+Yes.
+
+mr_sir 
+Yeah, thank you very much. Glad to be here.
+
+Citizen Web3
+Thanks guys, it's been a pleasure and I hope for everybody again who is listening to the recording or listening or watching this live, it helps you to paint a slightly better picture of what Orbital Apes are about a validator. I know Orbital Apes is a big validator already and they're already out there with an open eye with what they do, but still I hope this helps you to get more understanding about what the guys are doing and their motivation behind it. And if not...
+
+Please do also listen to the episode we did with CO that has a lot more in depth kind of things going in But that's been great. So thank you very much again. It's been a huge pleasure and join us next time. Bye. Bye guys
+
+co___orbital_apes 
+See you.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

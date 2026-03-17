@@ -1,0 +1,447 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/meetwithwallet
+
+Episode name:
+Critical Moments, Minimizing Confusion and Trust with Parsa Meetwithwallet
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web3 podcast. Today I have Parsa with me from core team meet with wallet today. Parsa, hi, welcome to the show.
+
+Parsa 
+Hey there, thank you for having me. My name is Parsa. I am mostly in charge of marketing and operations in meet with walletsand happy to be here. And a short introduction of Meet with Wallet, we are a scheduling tool redesigned for the workforce of Web3. Imagine Calendly, but focused mainly on the Web3 and DAO's workforce.
+
+Citizen Web3 
+Before we go into meet with wallet, and of course I will ask you questions about the technology and of course I have some questions as well about what you do more in detail. Tell me about yourself, how did you get into Web3? How did you get into blockchain? How did you decide to dedicate your life to this field of life?
+
+Parsa 
+Yeah, sure. So I got into Web3 around a year ago or so. I started off within another venture called Patterns within R&D. And it is mostly focused on protocols right now. But back then, I did some content writing for the project. And then I moved into Meet with Wallet and started off there.
+
+and picked up the pace and loved working within the environment, loved how positive it is which is different from what you see within other startups or even in corporates.
+
+Citizen Web3  
+Let's dig it up. Let's dig it up a little bit. Tell me your background Tell me how I mean you didn't just wake up one day and we're like, hey I'm gonna be writing a couple of stories for this cool web3 folk. I mean, how did it happen? Tell me tell me the background
+
+Parsa  
+Mm-hmm.
+
+Parsa  
+Yeah.
+
+Parsa  
+Well, at some point I was living a double life as a tech savvy and a fitness influencer and stuff hit the fan with the fitness and so I decided to move more into tech but I'm still into fitness as well.
+
+Citizen Web3  
+I used to be, I'm not so much right now, I do some martial arts, but what's your background in that? I would love to know, man. How did you get into fitness and stuff like that? How did it happen?
+
+Parsa 
+Yeah, .
+
+Yes, so I worked out since I was 10 or 12 years old. I tried different sports, but when I turned 18 I started doing traditional bodybuilding and weightlifting and that's what stuck with me up until now. Which is probably four years now and I've been doing personal training and coaching people for like three years almost. And within the coaching I learned content writing and content creation which helped me a lot into
+
+migrating into Web3.
+
+Citizen Web3 
+It's an interesting pathway because most founders, not most, but a lot of the Web3 founders, there is two types, there is two types of Web3 founders. There is, well, I know you're a member of a core team, but still, this is a pathway laid out already. So there is two types from what I've seen. There is the type of founder who straight away, they jump into like,
+
+raising money for a project and then they get into Web3. And actually, most of the founders that we know today in most of the projects we know today, when you look up their history, a lot of them come from content writing, a lot of them come from community management. I mean, even for example, Vitalik, right? He started writing for BDC Magazine, right? And you have a lot of those guys. It's an interesting...
+
+Parsa  
+Mm-hmm.
+
+Citizen Web3  
+thing to note because I see that a lot of people who get into Web3 get there via, regardless of where they got from, via content creation. Do you think that to you personally, and here's the question, do you think for yourself personally, content creation allowed you, I don't know, because I mean, Web3 is full of like, the community is alive. Everybody's talking. Everybody wants to like feedback something, you know, the validators, the delegators.
+
+the stakers, the miners, the traders, everyone. Do you think that the content creation background helped you to kind of, I don't know, become part of it?
+
+Parsa  
+Mm-hmm.
+
+Parsa 
+Well, I believe it does help since it involves a lot of communicating with outer people from what you do within the project. Like for me to talk, I've done some user interviews, I've done prototype testing which allowed me to connect with a lot of people, a lot of founders, a lot of people who are...
+
+active in different communities and are looking into helping others out as well as making a profit for themselves.
+
+Citizen Web3  
+This is actually another good question to somebody who, like yourself, you said you joined Web3 about a year, a year and a half ago. And you mentioned that the community is very helpful. Now, this is a story I hear from my guests as like a split story. There are guests who definitely say, hey, I found it very difficult to assimilate into the Web3 community. And some
+
+like yourself say that, hey, I found it very easy to assimilate into the web community. So your journey was easy, right? From what I understand, the simulating.
+
+Parsa  
+Well, for me, yes, it was because, well, Amiti Wallet is a venture within R&D. And we have a lot of help, especially when it comes to coordination and collaboration with other people. We have a lot of mentors, we have a lot of people with great experiences and databases that help us out when we try to do the initiatives that we are looking for, because probably someone with...
+
+in another unit has already done it before and they are more than happy to share their experience with us.
+
+Citizen Web3  
+I find that, you know, everything we kind of do in Web3 has already been done before. So it's a bit... No, it was with a smile.
+
+Parsa  
+Definitely, but... Yeah, exactly, but finding the people who has done it before is probably challenging.
+
+Citizen Web3  
+That is a very good point to make. I definitely agree. Sorry, sorry, carry on please. Sorry, I didn't mean to interrupt.
+
+Parsa  
+Mm.
+
+Parsa  
+No problem, as I was saying, it is one of the troubles that was very much solved for us as a unit within R&L.
+
+Citizen Web3  
+And specifically, I mean, you know, you mentioned like a background in before we get further just to finish off this like cheat sheet part, you know, you mentioned that you have a background in fitness, you mentioned that you have a background in content creation. And finally, you arrived at Web3. So would you kind of say from your zooming out from the zoom out of parser, you know, would you say that?
+
+Parsa  
+Mm-hmm.
+
+Parsa  
+Mm-hmm.
+
+Citizen Web3  
+Web3 is a very social structure because obviously for you who had more of a social background, you found it quite easy to get into it even though it's technical social. Would you say that Web3 is for you a kind of a social structure or is the social thing just part of it in this moment for
+
+Parsa  
+Well, definitely I hope so, because what I see when I look at web 3 is that it is mostly focused on humans instead of the actual tasks, if that makes sense.
+
+Citizen Web3  
+There is a sentence, just to finish off the thought, like I said, but not a sentence, but a line of thinking, I guess, that blockchain is a middleman. Blockchain is a middleman that connects humans. It's a decentralized middleman, but it is still there between two people trying to communicate. So of course, blockchain is a communication technology. And that goes...
+
+Parsa  
+Sorry, I'm breaking up. Can you repeat again? I'm so sorry.
+
+Citizen Web3  
+Sure, sure, no, it's okay. I was saying that there is a line of thought, line of thinking, you know, that goes along something like this. Blockchain is essentially a decentralized middleman between two people trying to communicate. So even though blockchains strive to be decentralized, they strive to be open, they are still at the end of the day communication tools which help.
+
+two people or more or 100 people to come to a consensus between themselves, right? And agree to something and remove the trust. So it is definitely a communication tool. I would definitely agree with everything you said there that it's a social tool.
+
+Parsa 
+Yeah, exactly. While it aims to be physically decentralized, the short hope aims to be socially re-centralized between the people who are working within each community and even the communities themselves.
+
+Citizen Web3  
+Absolutely.
+
+Absolutely, absolutely. But by the way, you know, I mean, let's keep the physical part, I think I would love to stick with you on the social part. And this is kind of to jump to the next block, you know, I mean, you mentioned that meet with wallet is a tool that is a mixture of several tools that we already kind of most people know that use web to every day. Could you talk a little bit more about
+
+What is exactly Meet with Wallet and what exactly you guys are? What is the goal? What is the mission of Meet with Wallet today?
+
+Parsa  
+Sure, definitely. So the end goal, the winning aspiration for Metis Wallet is effective communication. I can just summarize it in that. One thing that you see when you look at the communities and the teams that are working within the industry is that currently there is no unified solution used by the industry for scheduling and collaboration.
+
+Having to work through different tools adopted by each individual can lead to frustration and a lack of focus on the task at hand, which in the long run can alter the final roadmap of the project.
+
+Citizen Web3  
+Do you would you say that in a sense, you know, your goal is to help communities become I don't know, more efficient, stronger, I don't know, man, something like that.
+
+Parsa  
+Definitely, definitely. Creating the efficiency that is needed and somehow created because of the remote work, instead of everybody hanging out at the office at one specific location is one of our end goals.
+
+Citizen Web3  
+So let me ask you a devil's advocate question. It's going to be the devil's advocate question. So prepare for it. So you guys advertise meeting with Wallet. It advertises itself as a Web3 style tool, as a tool for Web3. Now, when I look at it directly, what I'm seeing is basically a meeting schedule manager.
+
+Parsa  
+Mm-hmm.
+
+Citizen Web3  
+that uses Discord, which is a Web2 tool, of course, and it uses some other Web2 stack. So now a question for me. On your roadmap, are you guys planning to make it a Web3 tool? What are you planning to do with it? I mean, where is it going? Because I've never heard of anything similar to your tool. So it's the first time I came across something like that. I would love to understand whether the Web3...
+
+Parsa  
+Mm-hmm.
+
+Mmm.
+
+Mm-hmm.
+
+Citizen Web3 
+and how you guys planning to implement Web3 into that.
+
+Parsa  
+Yeah, sure. So you mentioned Discord. Well, Meet with Wallet Discord bot is one of the services we offer, which we have rolled out recently. What Meet with Wallet essentially is when it comes to Web3, I can just say it is privacy. We see a lot of tools out there people use, compromise privacy for efficiency,
+
+can lead to unauthorized access to someone's availabilities in a large to medium community, which might lead to spam. And it can ruin someone's availabilities and time slots. What Meet with Wallet does is we store parts of the public data, such as account info on the IPFS.
+
+to provide a smoother experience, while on the other hand, this data is encrypted and inaccessible to all unauthorized parties, including Meet with Wallet team itself. Data regarding meetings, participants, descriptions, and meeting links are stored on a IPFS, but it is encrypted with the user's private key, which can only be accessed by the user or the participants who are invited to a particular meeting.
+
+Citizen Web3 
+Well, again, that was advocate to carry on, you know, what we're talking about. Why not just use, um, in, in this case. And again, I would like you to answer to this in as much of constra, I know it's not a constructively, the question is not going to be constructively, uh, sorry.
+
+Parsa  
+Mm-hmm.
+
+Citizen Web3  
+not built in a manner which might sound like constructive criticism, but it is. At the end of the day, why not just use any blockchain, like something like Status, for example, like an application built on top of Ethereum. And I'm not advertising Status by any means, but you know, you have Orbit, Status. There are many, I think there is on Cosmos, Bostrom, there are like, there are many blockchains, there is DezO, I think, on Polkadot that provide some
+
+Parsa  
+Mm-hmm.
+
+Citizen Web3  
+type of applications, not sorry, some of them are blockchain, some of them are applications, some of them are smart contracts. Most of them, none of them provide a perfect solution for communication for sure. So I understand what you guys are trying to create, but I would love to understand in this case, after everything you just explained,
+
+Why not just use one of those things and just encrypt your data with the tools they already provide? Why create another tool? And again, this is a Debil's Advocate questions. I want to hear the answer of, you know, the reason.
+
+Parsa  
+Mm-hmm. Yeah.
+
+Parsa  
+Well, the thing is, tools out there, when we can take a look at tools that are built before like Calendly, ZCal, stuff like that, which are built with the 9 to 5 worker in mind, or somebody who is working in a single project in a single team. And while we look at the newer blockchain based projects, I'm not going to...
+
+bash them or anything. I haven't used any of them before myself. But what I believe is that they are mostly focused on one person and not on a whole team. Within Meet It Wallets, we are coming up with a new project called the Project Rabbit, which is basically, we call it that because it's gonna be a let us in killer. And it will essentially
+
+help you as a team member have a better way of communicating and scheduling calls with your team without compromising your own timetable because of the team. Because a lot of us out here are working on multiple different projects which we have to put aside different times for each and every one of them. And we can just have a random meeting pop up on our timetable right in the middle of the...
+
+our focus on the other project.
+
+Citizen Web3 
+I totally understand as somebody who spent a long, long time in this industry and somebody who works with not one, not two, but with several projects. And I totally understand where you're coming from. I'm still partially curious to understand why not use an available blockchain or a variable tool and build it on top of that. But it's something I guess that you guys are going to
+
+go and develop. What I would love to talk with you about else is, you know, you mentioned privacy, and you mentioned privacy as being at the center of the reasoning for creating this. Or one of the main, you know, aspects of creating this, if I understood correctly. Now, you know, I'm going to carry on playing, you know, like my little devil's advocate hat today. So, you know, the last half a year,
+
+hasn't been fantastic news for tools that are privacy-focused. I mean, last few weeks, Samurai Wallet, I know you're not a wallet, but you know your schedule, you know, that uses kind of like a wallet type mechanism, you know, and the SEC, they don't look at what exactly you are, they just hear names, you know. Then we had, of course, Tornado Cash, you know, last year, you know, we had several tools over the last, and laws coming out across.
+
+several jurisdictions such as Europe, the US, and I think I've even seen some Russian laws, anti-privacy laws. I mean, now, how come you guys decided to focus on, personally, I must say, before I ask the question, privacy is probably one of the biggest topics we discuss on a podcast, and I'm personally a huge privacy fan, but I want to show things as they are. And the reality today
+
+Parsa 
+Mm-hmm.
+
+Citizen Web3  
+privacy can create problems for the people who try to create it. So the question to you, how come you're not afraid to, you know, after all these things that happened in the past year, how come you're not afraid to come out there and say, hey, we really want to achieve privacy? Yeah, so let's start with that. I'm curious.
+
+Parsa  
+Thank you.
+
+Parsa  
+Yeah, sure. So, Meet with Wallet, when our founder Ramon started it, it was built with privacy in mind. But we are trying to work in any other process that can help mainstream the usage of Meet with Wallet without compromising the privacy that we promised in the first place.
+
+So it is not going to be the main focus anymore, but at the same time, we try to keep the compromising of privacy at the minimal.
+
+Citizen Web3  
+What is your, so to say, the main features that help the person to keep their privacy while using your scheduling tool? What would be the main? If you can mention them, of course, or maybe it's too early, I don't know.
+
+Parsa  
+Mm.
+
+Parsa  
+Well, I'm not so much in touch with the technical side of Meet with wallet, but what I can say is that the data, the public data, public and private data both are shared on IPFS. Some of them accessible by anyone. For example, if you share your link with someone, they can see your availabilities. But they cannot see...
+
+what other meetings you have because it is shared on, it is stored on your private key. Or hopefully in the future when we move into having email logins, we create internal private keys for you but it is still stored on IPFS.
+
+Citizen Web3 
+Well, now a question, why do you want to create an email login? Well, what's what would be in the form meet with wallet? What would be the reasoning to use email logins?
+
+Parsa 
+Well, from the experience, from the interviews that I've had with people, is that some people are losing the trust within wallets and their privacy itself, not on the projects or the services that are built on them. Like, from what we've seen, yeah.
+
+Citizen Web3  
+That's an interesting, it's a strong statement. I, we are also builder and ironically, you know, the tool we are building, we are actually eliminating any type of login, but Web3 login. So I'm curious always to try to speak with other teams who have a different opinion and to understand what is their logic, you know, because
+
+Parsa  
+Mm-hmm.
+
+Citizen Web3  
+Of course, I mean, I hear what you're saying. You know, I hear that some people are losing the trust. I mean, from a technical perspective, it's hard to understand, of course, knowing how, you know, SSMTP works and how, you know, Web3 login works. The communication there is more secure, but I understand that basically your goal here is to capture a larger audience community. And here is my next.
+
+Parsa  
+Mm-hmm.
+
+Citizen Web3  
+question for you. As personally ourselves as well, we are a blockchain agnostic project. Today, it's still not very common to see projects become blockchain agnostic. We still see projects that only work with Ethereum, projects that only work with Polkadot, projects that only work with Nier, with Cosmos, with Bitcoin, whatever. Now, obviously what you're doing, at least in my understanding, and I'm sorry if I'm wrong,
+
+is kind of more blockchain agnostic. So, and this is even you said yourself, you know, we were trying to introduce email logins in order to have those people who don't trust Web3 logins to use email logins. Now, a question is a bit different from all this long description. How, if I'm correct in my assumption that you guys are blockchain agnostic, how has your experience with building such a community has been? What difficulties have you
+
+what tricks they're using to attract people to use technology and not care about their personal tokens and so on and so forth.
+
+Parsa  
+Well, our target audience are already within this community. They are already using their wallet to some extent, whether it being using it for, I don't know, D-work, coordinate, or for simple saving up any of the coins, NFTs, anything that you buy.
+
+But on some level they are already within the community and they are already using this technology on any level.
+
+Citizen Web3  
+Do you though, like in terms of creating a community, you know, around Meet with Wallet, because obviously I understand that your users and definitely, like you say, they already have a wallet, but I'm assuming you guys have some ideas of building a community just around Meet with Wallet or am I wrong with that?
+
+Parsa  
+Not at the moment, no. We are trying to attract people who are interested in the project, but not so much as creating a community within itself.
+
+Citizen Web3 
+Okay, I understand. This is interesting. Why, by the way, why not, by the way? Why did you guys decide a lot of people, I mean, like we said before, if blockchain is a social tool, why, I mean, is the assumption here that people will always have a wallet, so hence they will always use this? Or how does it work here? I would love to understand.
+
+Parsa 
+Well, what I'm referring to is as of the moment, we are not looking that much into creating a community. We are mostly focused on the tool itself and creating a kind of a seamless tool that doesn't create more problems than it solves.
+
+Citizen Web3 
+Understood. I totally understand it because, you know, I mean, we've personally and over my own experience, you know, I have been stuck sometimes with things that maybe are not as important for the projects. So I totally understand what you mean. I have a question for you about what you think in general about onboarding. And I'm going to start it from a story.
+
+A short story, I promise. Like a couple of, maybe half a year ago, I was recording a guest who happens to be a very experienced UI and UX, not just developer, but an engineer, I would say, working with big corporations and ended up working in Web3 and already having a lot of experience there. And he said a line that has,
+
+last year or so or last half a year, I don't remember the time story confuses here has stuck with me. It's a line that is I don't think there is anything genius in that. I mean, it's kind of one, two, three when you hear it. But I want to make a question out of it for you because you're kind of on the same border. So what he said was that, you know, regardless, I mean, we're talking about adoption.
+
+And he said, you know, regardless what type of user you are, whether you're a trader or a speculator or an investor or a builder or an enthusiast, you know, you are going to use two things, a wallet and an explorer. Hence both of those tools are essential for adoption. And it's kind of obvious what he said. And I kind of agree with him, you know, I never thought about it before, but, um, you know, here is a question that I want to direct at you.
+
+Considering that your tool is an application, I guess, on top of wallet, so it's kind of like already, you know, a separated layer or tries to be or an inbuilt layer. I'm sorry if I'm describing it wrong technically here. But obviously, it also plays, in my opinion, a big role in adoption. Now, the first question is going to be simple. Do you also think that it has to do it will play a role in adoption or not?
+
+Parsa  
+Well, we definitely hope so. Our upcoming project, yeah. Well, our upcoming project, Project Rabbit, is mainly focused on internal groups of a community. For example, if you want for the development team to have a meeting, you don't have to go through
+
+Parsa  
+any of the hassle that you have to right now. Let it be creating a letter smith, checking out everyone's availability, checking out whether person X can make it on today's call or not. And especially when it comes to critical moments within a project, it might come up as trouble and a big problem that can alter the production speed.
+
+We are trying to solve that within our next tool, keeping in mind that people are within different time zones, people have different availabilities, some people like to work in the afternoon, some people like to work within the morning. And we are trying to eliminate any back and forth messaging just to set up a simple call.
+
+Citizen Web3  
+I like that. And I want to still ask you the second part of the question, which is, I guess, more general. It's a bit less to do with Meet with Wallet itself, but it is to do with Meet with Wallet also. So the second part of the question is going to be something like that. Now, considering that if we agree that wallets and explorers are a vital adoption point, there is a lot of...
+
+Parsa 
+Mm-hmm.
+
+Citizen Web3  
+I want to know what is the approach of you guys, for example, of when you're creating designs or when you're creating user interfaces. And I'll tell you where I'm coming from. A lot of the time today, especially in bullets and explorers, you see specific vocabulary being used and you see specific terms and specific designs that have been used for the last...
+
+I would say probably five, six, seven years. And some of them haven't changed. Some of them are debatable. And, you know, I mean, we can go into detail, but that's a different story, I think. But I'm curious when you guys come to, you know, making your designs or designing your user experience or the interface or the linguistics, you guys choose the vocabulary you guys are going to choose for, I don't know whether it's.
+
+I don't know, doesn't anything come to my head right now, but anything from uptime to anything else to... And I know again, you guys are very specific application that still might not even have to use any of that vocabulary, but still, when you come into the design of that, how do you approach that? How do you start, where do you start making the interface from and understand what your users want?
+
+Parsa  
+Well, one thing that our team lead mentioned a couple months ago which stuck with me is that If your product needs a manual It's not a good product yet, which I've seen it Implement into the work of our designers Which I had the opportunity to work with for our recent project We've done a lot of prototype testings
+
+before we even rolled out the MVP of the product. And I've seen how the confusions that people had on the first phase of prototype testing be resolved when we did the second part and the third part and the fourth part and so on. And once we are right now comfortable enough with the project that we don't see.
+
+any confusion, we are now working on the development of the product itself.
+
+Parsa 
+So we keep the vocabulary to the minimum to minimize the confusion, if that makes sense.
+
+Citizen Web3  
+Understood.
+
+Citizen Web3 
+Yeah, understood. I was just curious how you guys approach that. It's a difficult... There are different ways. Some teams go out, like minimize. Some teams go and try testing, live testing. And like you said, your approach here is try not to confuse people, which I totally, by the way, understand. Sometimes you open bridges, especially. And even if you're an experienced user, sometimes it...
+
+can get very difficult to understand what exactly is the user to do in order to complete the task. So yeah.
+
+Parsa  
+Yeah, exactly. Creating the user journey for this recent project was interesting, let's say. It was not difficult per se, but finding the right path to do it's, that either an experienced user or somebody who is just going to do the onboarding and either use it through Discord or sometimes check out to see if
+
+anything popped up on their calendar, you try to mainstream this process for everyone so they can use it.
+
+Citizen Web3  
+One sort of last question before we jump into the blitz that I have for you is about security. And of course, Web3 applications in general haven't been the best known security fortresses, not all of them at least. I mean, blockchains have.
+
+Citizen Web3  
+And even blockchains have failed, you know, and I don't know what is the percentage rate if we count, but I'm pretty sure it's very high. What is your approach? I mean, you mentioned a couple of things throughout the conversation that we had, but how do you make sure that the user, I mean, yeah, they use their wallet to log in, but still there must be some probably security on the application level. Now, how do you guys make sure that stays safe and secure for the end user, whatever they're using with you?
+
+Parsa  
+Yep, so for the meetings itself, the video conferencing tool that is default on Meeted Wallet is HODL01, which is a very secure and lovely project, let's say. I've had some interactions with the people on the project and they're doing some amazing work there.
+
+But even for the people who are not interested in using such a product, or maybe they are more interested in using Zoom or Google Meet because of having a chat bot on it, having a transcript bot, we allow that as well.
+
+Citizen Web3  
+gotcha understood. Pasa let me jump into the Blitz. Five questions for you. You don't have to answer them super quickly. It's called the Blitz but it doesn't have to be like in a Blitz manner so feel free to answer them in any way you want. Now the first one is quite easy but they are going to be weird questions so prepare for them. The first one give me either a book
+
+or a movie or a song that has been something that you enjoy coming back to throughout your life and helps you keep on moving forward, so to speak.
+
+Parsa 
+I'm not much of a book reader myself, but one book that stuck with me in particular and got me back into the reading habit was the Charisma Myth. You have it somewhere around here if I find it, which helped me a lot because of my anxiety and going on through talking with people within different projects as a...
+
+Citizen Web3  
+Nice.
+
+Parsa 
+as someone who faced anxiety for most of his life was something difficult and the book definitely helped me out there.
+
+Citizen Web3 
+Man, this is I think a cool book to recommend. So again, for everybody who is listening, check out the show notes and everything me and Parza mentioned, you can guys find linked up hopefully in the show notes and follow it up. Second question, give me a technological direction, such as blockchain, for example, but not blockchain, for example, machine learning or anything else or.
+
+I don't know, genetic studying or anything else, bioengineering that you're curious about apart from Web3 and blockchain in general.
+
+Parsa 
+I would say if you ask me personally I would say machine learning because it is the main focus of my fitness project which allows you to get a fitness program for free written but by AI but revised by a professional fitness instructor but I'm definitely interested in seeing how it evolves into something that
+
+Citizen Web3  
+Nice, awesome.
+
+Parsa  
+can minimize the interactions and becomes more of an automated process.
+
+Citizen Web3  
+Nice. Now, if we go back into blockchain, what about give me one project that you personally are, I mean, but please don't say Bitcoin, Ethereum or Atom or Polkadot. I mean, you can if you want to, of course, but give me one project that you find interesting keeping an eye on them in the past half a year, let's say, or less or whatever.
+
+Parsa  
+Mm-hmm.
+
+Parsa  
+I would say I like the process that is taken on by R&L and especially one of the units called Together Crew. Which is basically... which helps you...
+
+Citizen Web3 
+Okay.
+
+Parsa  
+I don't know how to explain it right now, but it allows you to create better processes for your communities.
+
+Citizen Web3  
+It's okay.
+
+Citizen Web3  
+Okay, this is actually very interesting. Again, it's a very big topic of discussion for us and a lot of focus for us. So something definitely I personally never heard about it. So I will definitely research it myself. Because I never heard of it. Okay, last two questions, they're going to be even weirder. So had the first one is, give me one motivational thing that keeps parser waking up.
+
+out of bed every day, you know, creating AI bots and building meet with wallet and, you know, keeping fit and getting rid of anxiety, building communities, doing the marketing, something motivational that you would like to share with other people that you do and helps you personally.
+
+Parsa  
+Yeah, sure. I would say taking one step at a time. Like at night when I'm trying to go to sleep I think about the day I had and I think if the day I had was in any way better than the previous day or did it improve me by any chance or did I try to improve anything in other people's lives.
+
+Citizen Web3  
+That's very beautiful. I must say here, I had a guest on who has been on a couple of times and then he's known to say every day when you ask him, how was your day that his answer is I'm having the best day of my life and he's been saying it apparently every day for five or six years and I've actually went back and checked with other people who know him on the show.
+
+And they said, yes, he really does say it every day. And I was like, well, that's amazing. You know, and there's something close to what you're saying right now. And I think it's beautiful to try and, you know, especially in our industry.
+
+Parsa  
+That is actually a great ideology. I don't know if you've seen the show Bojack Horseman. He's a very particularly dark character with a very unfortunate life. But one thing he mentions is that every time someone asks me how I'm doing, I'm saying I'm doing great. Which at some point, even if you're not doing great,
+
+gonna manipulate your own mind into thinking that you're doing great.
+
+Citizen Web3 
+It's true, I think repetition is one of our easiest tricks as humans, right? To learn something or to create the synapse route or anything like that. And last one, wait, for the last one, this one is going to be, well, people usually say it's the more difficult one, but it's the strangest one, I guess, as well. So, oh, sorry, sorry. Can you hear me?
+
+Parsa  
+Yeah.
+
+Exactly.
+
+Parsa  
+Sorry you're breaking up here.
+
+Parsa  
+Okay, I have you now. I have you now. Yeah.
+
+Citizen Web3 (48:56.614)
+Okay, perfect. So last one. Give me one person or one character. Now dead, alive, made up, real, doesn't matter if they from the past or if they're from a fairy tale, if they're from a movie, if it's a real person could be somebody you know, could be somebody you don't know, could be a singer, writer, a developer, a friend, a movie character, cartoon,
+
+comic character, somebody that is not your guru, because I don't believe in gurus personally, but somebody who has a positive influence on your life.
+
+Parsa  
+That's a great question. I would say... Well, nobody that comes to mind.
+
+Parsa  
+I would say I would like to meet the characters from any of the Fallout games. Because living out in the wastelands, but still doing everything you can do to survive, is something that we all can learn from.
+
+Citizen Web3  
+Nice.
+
+Citizen Web3 
+I must admit, that is the most unexpected answer I was prepared for. I love it.
+
+Parsa  
+It is probably influenced by the fallout show that came out recently, but that's what came to mind.
+
+Citizen Web3  
+But it's a great answer if you think about it. I think it's amazing. What would you do if you lived in a wasteland and still had to survive? How would you do it? I love it. Parsa, I want to thank you very much for your time. And I want to thank you very much for your questions. And thank you much for coming on and agreeing to come up. Thank you. Please don't hang up just yet. This is just a goodbye for the guests.
+
+Parsa  
+Thank you for having me. Yeah, no problem.
+
+Citizen Web3  
+Thank you everybody for tuning in and see you next time. Bye bye everyone.
+
+Parsa  
+Thanks everyone.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 
+

@@ -1,0 +1,508 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/epicentertv
+
+Episode name:
+Blockchain Journalism, Bullrun and France with Sébastien Couture
+
+Citizen Web3: 
+Good space time, y'all. In this episode of the Citizen Cosmos podcast, I spoke to the host of Epicentr tv and the interop podcast, Sebastian Couture. We discussed blockchain journalism, podcasting, angel investing, community building, validating, and the upcoming Nebulas Summit in Paris celebrating the cosmos and the interchain ecosystem. 
+
+I will have to put the question that way. It kind of happened to be that you have Brian, Sunny, and it kind of seems that half of the cosmos OGs were started from Epicentr 
+
+Sébastien Couture: 
+So there's definitely a feeling that European regulators really want this to go quick. And I don't know if you saw it today on Twitter, but there's this video of Christine Lagarde saying crypto poses a real threat to financial stability. 
+
+Citizen Web3: 
+Because we have financial stability, right? Of course. 
+
+Sébastien Couture: 
+I think a lot more people got into crypto because they thought they could make money. And then later, the nice touchy-feelys came around with regards to the philosophies and the ideologies of the space. 
+
+Citizen Web3: 
+So if doc1 comes around in a year and says, I have an idea for a project, Luna 3.0, yes or no? 
+
+Before we rock it off, into our next episode, here are some news from our sponsor, Cyber. The Cyber Congress DAWA is working on an upgrade for the Bostrom network to a stable version of Cosmwosm. 
+
+After the upgrade, the DAW is planning to activate the drop and wants to give a huge shoutout to all of the terror that is out there looking to a new home to build. 
+
+Welcome, everybody, to a new episode of Citizen Cosmos. And today I have a very, very, very special guest for myself. 
+
+I will explain in a second why. His name is Sebastian. He's the host of two podcasts at least that I know of, which is the Epicenter TV. And I'm sure I'm going to pronounce it incorrectly, but in the interop podcast, I hope I pronounce it correctly. And the reason he's a special guest before I say hello to him even is because I'm somewhat of a fan and somewhat the reason Citizen Cosmos started this podcast in was actually because I was listening to Epicenter since the very beginning. And hi, Sebastian. 
+
+Sébastien Couture: 
+Wow, that's cool. Hey, nice to be on here. It's not often that I'm on this side of the river side, but yeah, happy to be here. 
+
+Citizen Web3: 
+Yay. Man, so many things I want to ask you because like I said, I'm a little bit of a fan, not like, take my knickers kind of fun, but I'm a little bit of a fan. 
+
+Sébastien Couture: 
+I haven't met that many of those. 
+
+Citizen Web3: 
+Unfortunately, right? Unfortunately, would be a good thing, right? For podcast hosts like, hey, but 
+
+Sébastien Couture: 
+I don't think a lot of crypto podcast hosts get to take my knickers kind of fans. 
+
+Citizen Web3: 
+Oh, man, come on, come on. One day, hopefully we'll walk in into another conference and people say, Hey, Crypto Cido, Hey, Sebastian, Hey, Serge. I'm kidding. I'm kidding, of course. But man, I don't know where to start the conversation. Let's start maybe with Epicenter TV because to me, I mean, I know today and I like to be a little bit controversial, a bit of devil's advocate. 
+
+So I'm going to start from the beginning. Epicenter TV, when it began, it was huge. It was like, oh my God, did you listen to a new episode? If you weren't a crypto, you had to listen to a new episode. If you wanted to understand what's going on, for me, it's still big. I still love it. I still enjoy it. 
+
+I can't say that I listen to every episode, but I do listen to most of them and I pick up things from them for myself as a host for a project or for a lot of things. But in my opinion, it has become smaller. Do you want to comment that out? Do you want to talk a little bit about that? 
+
+Sébastien Couture: 
+Yeah, yeah. This is something that I've come to term moves with. And I think like a lot of us hosts have come to terms with. So I co-founded Epicenter with Brian Crane in late 2013, early 2014. And back then, like there weren't a lot of crypto podcasts. There was Let's Talk Bitcoin, which is actually the reason why we started Epicenter because we were in a Let's Talk Bitcoin contest. The real OGs will remember Let's Talk Bitcoin. 
+
+Nobody else knows who Let's Talk Bitcoin is. And so there weren't a lot of podcasts back then. And certainly there weren't a lot of podcasts, I think, that covered a wide range of crypto projects. 
+
+There were a lot of Bitcoin podcasts and a lot of those don't exist anymore. We've been through several cycles and I think Epicenter really grew to its peak around the 2017, 2018 bull run. And then things have sort of flattened out since then. And I think like every cycle also has its new entrance to the space and that includes also podcasters. And so there's been like a ton of new podcasters come into the space since then that perhaps feel more native to the people who enter like that specific point in the space. So like you have guys like Bankless and Peter McCormick and Pomp and all these guys. And also like they're great media people. I mean, like they've built Pomp and these guys, they've built massive media empires are on their way to building. 
+
+I don't like follow Pomp that much anymore, but I'm sure he's huge. Also, I think Epicenter is kind of unique, right? Because there's always been these many hosts and we've tried to bring a lot of different viewpoints to the show. And so none of us are full time on the show anymore. 
+
+I mean, I was for some time until about a year ago and now we've all, you know, we're all focused on other things. So it's something that we all kind of come back to. We like to do episodes. 
+
+We all like to contribute to keep producing content in this space. But it's none of our like none of the hosts is their main gig, you know, like Sonny's doing osmosis and Brian's a chorus and so is Mayor and Fedeica is an osus. I'm now like starting a Cosmos fun that we can talk about. And, you know, there's been like some other hosts that have joined us here and there. But yeah, we think that Epicenter remains like this sort of institution for a lot of people. A lot of folks don't know what it is like. But that's fine. We like doing it and we're going to keep doing it as long as we like doing it. 
+
+Citizen Web3: 
+Now, when you answer the question, I realized I kind of got a little bit excited with you being on and I didn't ask you to introduce yourself. And I was just started the conversation. 
+
+I was like, everybody knows this guy. We have to talk. Sorry for it being sorry people who is listening. But do you want Sebastian to this with the second question? Maybe I'll let you actually talk a little bit about what you do apart from Epicenter now. Sorry for not asking it. So the way I just got excited. 
+
+Sébastien Couture: 
+Yeah, no problem. My name is Sebastian. I've been in crypto since yeah, 10 years. It's going to be 10 years next year. I found this podcast called Epicenter. A lot of you, I'm sure, are familiar with just because of our proximity to the cosmos. And yeah, I've done a couple of other things in 2015. I co-founded a company in France that was one of the first companies here to raise funds like building a blockchain project. And then since then, I've also been on the policy side of things here in Europe. Co-founding an organization called Adan, which advises and helps promote good sound blockchain and crypto policy in France, but also in the broader European space. And since a couple of months now, I'm working on a new project, which is called Interop Ventures. 
+
+It's a fund that will help back teams in the Cosmos ecosystem that are building protocols and projects that adhere to the interchain vision of intrapodable modular, sovereign proof of state blockchains. And in that same vein, I started this new podcast called the Interop, which is in its eighth episode now, I think, which seems incredible and is more focused on the Cosmos ecosystem. And while I'm organizing a conference next month, which we could also talk about, but yeah, so that's a little in a nutshell, what I'm up to. 
+
+Citizen Web3: 
+Thank you for that introduction. I have all these topics like on my list to cover, but thank you for saying kind of couple of things that I'm actually, I didn't know, which I do want to ask you about. 
+
+Before we move from epicenter, I still have another like couple of questions about it. Was it on purpose? Of course, I don't think it was, but I will have to put the question that way, that it kind of happened to be that you have Brian, Sani, and it's like kind of seems that half of the Cosmos OGs were started from epicenter. You know, how did it happen? 
+
+Sébastien Couture: 
+Well, how did that happen? I think it's just a confluence of people with like-minded individuals meeting. So Brian and I met on a Skype call, which was it was a very chance meeting. And we met on this Skype call that was organized by Adam B. Levine, host, former host, I think he's still the host of Last talk Bitcoin. 
+
+He's now at CoinDesk. And so we started Epicenter together. And then, you know, the space used to be really small. I don't know if you remember, but I mean, like you could fit all the blockchain and crypto people in Europe, like in a big conference room. And so we had been closely following this guy named Meher Roy, who at that time, written a paper called the Internet of Money. You know, he had done a podcast episode about it. And we like this guy's smart, like let's bring him on as a host as well. So we brought him on as a host. 
+
+And so for a while, it was the three of us. And then after some time, yeah, so Brian was working at Tendermint for some time in Berlin. And so he was there in the Berlin space and like help co-found a phone node, Sunny being also at Tendermint. And, you know, we're all kind of hanging out at events and stuff like that. 
+
+At some point, we thought, like, hey, would you like to come on as well? And then similarly, like Federica also works from phone node. And so we were close to her from seeing her there. And so she also at some point, like, you know, ask if she could come on or we approached her. 
+
+I don't remember exactly how that happened. So you'll notice that most of the hosts are in Europe or are based in Europe. And that's not an accident. And I think a lot of that kind of came together around like the Berlin crypto space and phone. Now, even though I've never been based in Berlin, like I'm based in France, but, you know, obviously, I spent a lot of time in Berlin because it's just a short flight away. Brian's there. 
+
+Citizen Web3: So it's a nice place. 
+
+Sébastien Couture: 
+Yeah, it's cool. 
+
+Citizen Web3: 
+I haven't claimed to fame. I mean, I did say it in one of the episodes, but I'm going to say it again now that you're talking about it. The first episode of Citizen Cosmos was recorded in full note. So it was like, yeah. 
+
+Sébastien Couture: 
+At the studio. Yeah, yeah, yeah. 
+
+Citizen Web3: 
+Yes. The sound is terrible because it's like the studio is quite big and it was covid. So all the studios were empty. So it was just literally me there and Anna, the ex-cohost, and we recorded this with Figment. But you could hear like the echo going, 
+
+Sébastien Couture: 
+you were recording in the little studio at  full note there? 
+
+Citizen Web3: 
+It wasn't the little one. That's the thing because it was empty for Covid . We could choose any room and we chose one of the biggest rooms and like the glass wall. And it was like, I don't know why we chose it with like a. 
+
+Sébastien Couture: 
+Well, there's a recording studio there. You should just use the recording studio. 
+
+Citizen Web3: 
+Well, I do know now. 
+
+Sébastien Couture: 
+Yeah. And actually kind of fun fact, the epicenter's audio engineer, Bedron, he set up that studio. 
+
+Citizen Web3: 
+Wow. 
+
+Sébastien Couture: 
+Yeah. So he set up all the gear and everything that that's like epicenter's contribution to full note. 
+
+Citizen Web3: 
+And here is you saying the blockchain world used to be small, right? It's still tiny. Fantastic Fantastic. So last question about epicenter, I guess, considering you just mentioned that all the hosts are kind of going like have projects. What is the future for epicenter? Are you still planning to run it as like a side kind of kick or anything else? 
+
+Sébastien Couture: 
+Yeah, I mean, we all sort of run it together in the last year. Like Federica has taken a more important role on the operations side of things. But yeah, we still all for the most part like produce episodes. As long as we all want to do it and there's like enough of us that want to do it, like we're going to keep doing it. 
+
+Citizen Web3: 
+It's good to hear because it does provide a lot of insights. And we do cross a lot of guests, which I like as well, because I don't want to sound big headed, but I like to handpick the guests kind of thing. In a sense, I prefer to do that rather than coming to me. But I have noticed that we have a lot, a lot of guests in common. 
+
+Sébastien Couture: 
+Yeah, we're the same. 
+
+Citizen Web3: 
+You mentioned France and you mentioned at the beginning that you're kind of on a policy side of things now. And I don't remember where I read that, but there was something about crypto regulations, policies, France. And I wanted to go into that and to say what exactly does you do in your opinion and how it's developing in France and so on and so forth. 
+
+Sébastien Couture: 
+Yeah, so I'm not so involved in that world anymore. But for about a year and a half, I was a comms director of a nonprofit called Adan. So it's adan.eu. And Adan is the French nonprofit that helps promote sound crypto policy. 
+
+So it represents the industry towards policymakers in France. And it has taken a very important role also advising a lot of the EU policymakers in the drafting of Mica. So this European markets and crypto assets regulation that is coming, a lot of the work advising policymakers on what the industry needs in terms of regulation, like how to adapt that regulation and proportionality to what the risks actually are was done by the Adan team. And also another organization that was created as sort of a spin-off of Adan called EU Crypto Initiative. That's now run by former Adan members and some other folks. 
+
+So yeah, I was there for the beginning and we grew that team to now like five or six people. And Adan is now an organization with about 150 members, so a lot of French crypto companies, but also like European crypto companies that are established in France or like want to establish in France. 
+
+Citizen Web3: 
+What's your personal take, though, on regulations and crypto in general? Do you think it's something that should be regulated, shouldn't be regulated? 
+
+Sébastien Couture: 
+My view on here is a little bit nuanced. So I think that some regulation in this space would be beneficial, but the amount of regulation and the speed at which like Mica was passed in a heartbeat compared to some of the other financial regulation that we know in Europe, things like Mithid, which took years to draft, et cetera. So there's definitely a feeling that European regulators really want this to go quick. And like, I don't know if you saw it today on Twitter, but there's this video of Christine Lagarde saying like crypto poses a real threat to financial stability. 
+
+Citizen Web3: 
+Because we have financial stability, right? Of course. 
+
+Sébastien Couture: 
+Yeah, exactly. Because we have financial stability. So I think things like this are not conducive to creating positive narratives around this technology. I think a certain amount of things need to be regulated, but the amount of regulation and the amount of scrutiny that is being put on crypto is just like out of this world compared to other financial services. I mean, in France, for instance, the amount of KYC and AML one needs to do in order to create a crypto exchange account is far beyond what is required for any sort of other bank account, et cetera. 
+
+And so it's just making things harder for a lot of people. And I think what the regulation misses as well is that a lot of regulation in the existing financial space is meant to create protections and systems in place to protect people and to create transparency around a certain number of things, like where transactions go and so on and so forth. But a lot of that stuff is sort of built in into crypto. 
+
+So if you have self custody, well, then you don't need to have a custodian, for instance, you know, like stuff like that. So some of the regulation, I think, misses at what the inherent properties of crypto provide as a base layer and add these unnecessary rules, which just makes users' lives harder, but also service providers and all the companies that are being regulated. 
+
+Citizen Web3: 
+I guess my biggest question here is in a way exactly what you said, transactions. So if all of us remember, like the origins of crypto, and I'm not talking just Bitcoin, I'm talking even before that, right? And one of the main things that you always hear is every transaction should be routed. And with regulation, that kind of like kind of puts a big nail into the thing because if something is regulated, then obviously doesn't matter how it's regulated. And again, I'm being devil's advocate here, but I'm just really curious to hear your opinion considering the amount of time you spent in crypto and the amount of amazing guests you had. The opportunity to form that opinion on hearing so much information. 
+
+Sébastien Couture: 
+What do you mean by every transaction should be routed? I'm not sure I understood that. 
+
+Citizen Web3: 
+I mean, like if we go into like the Bitcoin white paper, right? If we go not the white paper itself, but if we go into what Satoshi was saying, and if we go to like, let's say, somebody like Antonopoulos, right? And again, I'm not the biggest fan, but I am. Used to be anyways. And if we go into some of the Cypherfunk stuff, right? What we hear is that one of the most important things for financial freedom is that every transaction should be routed, no matter the purpose. So if somebody sends a transaction from point A to B, it should go from point A to B and not be in stopped at point C. 
+
+Sébastien Couture: 
+You mean that every transaction should go through and be processed by the network? 
+
+Citizen Web3: 
+Exactly. It doesn't matter what the purpose of the transaction. But if you put regulation, then obviously it doesn't matter even if regulation, even if the light is form, we kind of get in the, well, the question of should it really arrive at point B or should we first like regulate the transaction? 
+
+Sébastien Couture: 
+Well, yeah, I think that comes back to like even just principles that we would see in the internet and like TCPIP. TCPIP doesn't care what goes through the packets. Those considerations are held at higher levels in the stack. And so, you know, with crypto, I don't know that regulators are trying to control what transactions are going through the chain. A lot of the regulation is happening at the edges. So with regards to exchanges and on and off ramps and things like that. 
+
+But there's definitely a risk, I think, that it becomes harder for people to move in and out of off ramps. And so that regulation would create barriers there where certain types of assets, for instance, you know, wouldn't be welcome at a centralized or regulated exchange. Or that things like traceability of funds would make it prohibitive for people to send transactions because they would have to tag each transaction with like providence, including like their KYC information and stuff like that. 
+
+So like there's also privacy concerns, I think that the regulation brings delight and that, in my opinion, are not desirable in a world where, in the traditional world, at least, you know, if you want to have privacy for whatever reason, and I think privacy should always be, we should always have the ability to go back to private means of transacting. In the traditional world, you always have cash. You can always go back to that means of payment. But as we've moved to more digital forms of payment, well, what ends up happening is that all of the means of transacting are now, by definition, not private. And what crypto allowed is it allows you to have a form of payment that was anonymous or to whatever flavor you wanted, depending on the crypto you use, right? So if you want to use like a private crypto like ZCash, you can. What a lot of this regulation, I think, it's not so much the regulation, but I think it's just really like this global sort of a coordinated attempt by the financial sector to have AML, KYC, like on every transaction. Well, what we now have seen is that we're going to be left with if this goes through and if this agenda goes through, no more private means of transacting, which would be really devastating, I think. 
+
+Citizen Web3: 
+I agree totally. By the way, sorry to go into like different topic here, but how did you end up in France? I don't know if you were born in France, if you want to say the story, how did you end up in France? 
+
+Sébastien Couture: 
+No, no, I wasn't. So I was born in Canada. I grew up in the province of New Brunswick, which not a lot of people know, but it's like on the East Coast of Canada. And yeah, I lived there until I was 21. And then when I was 21, I decided to study abroad for six months. And then I came to France and 16 years later, I'm still here. 
+
+Citizen Web3: 
+And where did crypto happen? How did crypto hit you in those 16 years? Where did it happen? 
+
+Sébastien Couture: 
+Yeah, so I was working as a web developer project manager, like after my studies in the north of France and doing responsive email design and stuff like that. I was always a bit technical. Like I didn't study computer science, but I've been coding for as long as I can remember. 
+
+And so I was doing like HTML and CSS and some PHP web development. And yeah, stumbled upon like Bitcoin and started looking into that. And here's one thing I will say about like crypto origin stories. I've interviewed like enough people and have asked this question so many times, like, how did you get into crypto? How did you get into crypto? And one thing, and you probably noticed as well, is like one thing you very rarely hear is I got into crypto because I wanted to make money. Most people will tell you, I got into crypto. 
+
+I read the Bitcoin White Paper. It really resonated with me and the sorts of things I was reading at the time. And for me, it was, you know, I've gotten the crypto. I was like, how I want to mine this stuff and like I want to try to make some money. And then later, you know, all of the interesting sort of philosophical and ideological things that people were talking about started to resonate with me. 
+
+But I'm going to call it out. I think a lot more people got into crypto because they thought they could make money. And then later, the nice touchy feelies came around with regards to the philosophies and the ideologies of the space. 
+
+Citizen Web3: 
+I'm not sure if that's a podcast thing, but I've been asked this question before during interviews. And this was my answer. It took me two years for the Bitcoin White Paper to even resonate to me before that. It was just like mining and making money for two years straight. I didn't understand what I was doing. 
+
+Then after was like, what? 
+
+Sébastien Couture: 
+Yeah. 
+
+Citizen Web3: 
+Nice. Nice. 
+
+I like the straight answers, you know, like I was like this and that and that. Like, well, Well, by the way, talking about making money, I also saw again, somewhere on the broad space of the internet, like Angel investing and both you. And you did mention it as well, that you have a company that do some funding for Cosmos. Let's talk about that. 
+
+Sébastien Couture: 
+Yeah, yeah. So I think like a lot of folks that have entered the space in the last couple of years, been investing in some projects. So I invested in a few projects, a lot of projects like here in France, just because of the proximity that I have to the ecosystem here. 
+
+There's a huge Ethereum community here in France and a lot of really high quality engineers and people working on really interesting projects. I invested in a few of those. And I made a few investments also in the Cosmos space. And yeah, at the moment, I am in the process of raising a fund that will invest in pre-seed and seed rounds in the Cosmos and Interchain ecosystem. And that fund is called Interop Ventures. So at the moment, I actually haven't talked about this publicly very much because it's sort of in stealth and I think that I haven't talked about it very much. 
+
+Citizen Web3: 
+Alpha, alpha, alpha, alpha. 
+
+Sébastien Couture: 
+Yeah, I think people know about it. I just haven't been like, hey, by the way, here. So right now, I'm basically getting a structure, talking to investors, speaking with teams and aligning up all the docs here to start making my first investments in a couple of months with the fund that is. So that's really exciting. 
+
+It's my first time starting a fund maybe a little bit late to the game, but I feel like it's a good time for the Cosmos ecosystem, frankly, because there's not a lot of funds in the Cosmos ecosystem that are... you know There's a few. So of course, there's Strange Love. There's some more ecosystem funds. Regen is starting a fund. I know a lot of the validators are also investing. There are some syndicates and smart people pooling money to invest as well. But this fund, my goal is to really back teams that are building amazing protocols and products and primitives as well and provide them with the value that I bring is the network that I have and my media expertise. And then on the fund, we'll have also a number of advisors that can provide expertise on other things like tokenomics and operations and some technical things as well. 
+
+Citizen Web3: 
+For anyone listening out there, what's your focus at the beginning going to be on what type of project specifically, if any? 
+
+Sébastien Couture: 
+Yeah. So I mean, the focus is quite broad within Interchain. And I know Interchain is also becoming a little bit nebulous because as the Interchain starts to connect with other ecosystems through bridging or through interoperability protocols, that kind of grows. But I think my focus really stems from the Interchain vision. So the focus right from the get-go will be investing in protocols and some D5 primitives that are coming up in this space right now. The main driver for us is like, does this project really embrace the Interchain vision of sovereign, inviropable modular proof-of-stake blockchains and is the team really aligned with that philosophy over the long term and how much value can they bring to the ecosystem? 
+
+Citizen Web3: 
+So if doc1 comes around in a year and says, I have an idea for a project, Luna 3.0, yes or no? 
+
+You don't have to answer that. 
+
+Sébastien Couture: 
+My opinion does not get formed about that. 
+
+Citizen Web3: 
+Let's just put it that way. Come on. Okay. Let's scrape that question. That was a joke, of course. But what's out of interest? What's your considering you've been in crypto for a long time, out of what you remember, top of the head, your worst buy, your worst investment? 
+
+Sébastien Couture: 
+Here's the thing. For a long time, I wasn't actively investing in crypto. For a long time, I held a handful of like layer one tokens and wasn't investing too much. And so during the ICO craze, I did a few layer ones. 
+
+I did Adam. I remember doing Tezos. I didn't do like all the ICOs and like fall into this craze. And also maybe to my own demise, like I was focused on building a company at the time. I was building this company called Stratum. Like we had investors and everything. And I was also running a media company. And so I think in my mind at the time, and I remember having these conversations with people, I felt that there was a certain amount of integrity that I needed to hold in order to like continue doing the podcast and do it well. And that meant not being all in on all the projects that we had on the show. And sometimes I joke around and I'm like, what I should do is I should have a spreadsheet with all the episodes we've had on, all the ones that have had tokens. And the price of that token on the day we interviewed them times $100. 
+
+And just see how much money I could have made had I just invested $100 in all of these books. But I didn't. And I'm happy that I didn't because a lot of those projects turned out being shit. But also because I think it maybe made me a better podcaster. Now I think I've taken a step back and have a little bit more maturity about all that and realize that like it's possible to invest, but also have like intelligent conversations. And so that's where I'm focusing my time now. 
+
+Citizen Web3: 
+It's funny that what you said, we did actually one of the project managers I had working on before the war in Eastern Europe started. He actually did that a couple of times. He took Ethan's episode from Cosmos, Baki Amin and somebody else's. And he took all the projects he mentioned at the time. And then like it took like $1,000 and like we published this tweet and it was even it when the market fell during the summer, it was still something crazy like X 50 or X 60 or something like that. 
+
+We're like, wow. 
+
+Sébastien Couture: 
+Yeah, yeah. 
+
+Citizen Web3: 
+Yeah. Well, well, yeah, but it's nice to hear that what you say is that the focus is not on that rather on intelligent conversations because in my opinion, and I don't know, I shouldn't really say that, but one of the scariest thing crypto has created is really bad home journalism. And I'm happy to hear that there is more people out there who are focused on creating good media, intellectual based good media rather than, you know, oh, let's go and buy this token. 
+
+Let's go and sell this token. And that's I think what drawn me to epicenter at the beginning. And I'm sure that's what draws a lot of other people for sure. 
+
+Sébastien Couture: 
+Yeah. And I mean, like I said, like I don't have a financial background. So investing for me, you know, it took time for me to like get used to investing and like understand investing. And it's only in the last three to four years that I've really become comfortable with investing my own money and projects and being able to like evaluate risks and things like that. 
+
+And so this passion that I've cultivated sort of like on a personal level is now meeting you know, this business that I'm starting, which is in Trap Ventures and hopefully I can do this professionally, if LPs will give me money. 
+
+Citizen Web3: 
+Everybody's listening out there. If you want to give money to Sebastian and cross fingers, but let's talk a little bit about the interrupt and you mentioned also the word Nebulas. And obviously I know that you're holding a conference now. I know that you're holding it in Paris and not in Bali as I originally thought. 
+
+Sébastien Couture: 
+Yeah. 
+
+Citizen Web3: 
+I have for everybody listening out there. That was a funny story when I contacted Sebastian. I thought he was making a conference in Bali, but then he wasn't. It was in Paris. Doesn't matter. Not that funny, I guess. 
+
+Sébastien Couture: 
+No, I was just in Bali for a couple of weeks. Mostly getting engaged. 
+
+Citizen Web3: 
+Wait a second. Engaged in something or engaged as an engaged? 
+
+Sébastien Couture: 
+No, I got engaged with my girlfriend. We've been in Bali. 
+
+Citizen Web3: 
+I don't know what it is and maybe you can actually tell me, but there was a time last summer when me and my ex host anna, we noticed that we had like several guests that came on the show and they would either get engaged or married one after another. So I don't know if you're now starting the trend again for this summer. 
+
+Sébastien Couture: 
+No. No, I think it was the bull run last summer. 
+
+Citizen Web3: 
+bull run last summer. Lovely. Lovely. I didn't think about it that way. Lovely. I loved it. 
+
+Sébastien Couture: 
+Yeah. I was seeing that too. It was like a lot of people are getting engaged and but we can only make it out to Bali now. 
+
+Citizen Web3: 
+Congratulations. Anyways, 
+
+Sébastien Couture: 
+thank you. Thank you. 
+
+Citizen Web3: 
+Anyways, let's talk a little bit about the interop and a little bit about the word you mentioned Nebulas and obviously the conference as well. 
+
+Sébastien Couture: 
+Yeah. So the interop is podcast that started a couple of months ago and it's all about understanding the decentralized economic networks that make up the interchange and my goal here is really to have quite deep and technical conversations with folks in the interchange ecosystem. 
+
+So we've interviewed a couple of folks by now. The website is theinterop.show. For those who are interested, you can also find it on YouTube and SoundCloud and everywhere else. We also live stream it. So it's on YouTube. 
+
+It's mostly a YouTube channel that I then publish as a podcast as opposed to the Epicentr which is the opposite. So we did an episode last week with Ishmael Kofi of Celestia. We've done Christopher Goh's. 
+
+We had Prené Mohan of Nomad and Joe Bowman and Fede of Evmos and Jack Samplin. And yeah, so Le Crem de Le Crem of the Cosmos ecosystem. And so hopefully, yeah, we'll keep doing these maybe at a rate of like twice a month or something like that. And yeah, it's a lot of fun. I like it because it's a little different from Epicenter. 
+
+Like Epicenter has a lot of processes and it's kind of a big ship that takes a lot of energy, I think, to move in different directions. And with this, I just thought, hey, like going to record it live stream, it goes out, no editing, no fancy artwork or anything like that. So I like it. I like it because it's slight. I put it out whenever I want to. 
+
+But the content is also amazing. Like, you know, the conversations that I've been having here, I've been really helpful in helping sort of frame my thinking around where the space is going and how to look at like projects that are coming in and whether or not they sort of adhere to where like the ecosystem is heading. 
+
+Citizen Web3: 
+I'm sorry if I'm wrong here, but are you also interop? Is there also a validator? 
+
+Sébastien Couture: 
+It's not a validator, but there's probably going to be a validator. Yeah. So this is something I've been struggling with. Like if there's anybody out there who wants to help me set up some validators, I'd love to get some help. I'm a little bit technical. So I was actually installing Go earlier today to like start setting up a validator for Evamos. 
+
+But yeah, if there's anyone out there that has like real hard technical expertise and wants to help me set up some validators, I'd love to chat because the Interop Podcast and Interop Ventures deserves its own validator. 
+
+Citizen Web3: 
+You know what? I'm not going to take credit for this, but I will take a little bit. A lot of people who came on the podcast, including for example, CryptoCito, including a lot of other people that did go through here first. And I was like, guys, of course, start your own validators, your ecosystem developers. You're building the whole community. So I would love it to see if in a month's time you also start some validators. 
+
+Sébastien Couture: 
+So you run your own validators. I think you were one of the first podcasters in the place to do that. 
+
+Citizen Web3: 
+Well, I don't want to say we were the first or whatever, but the way that Citizen Cosmos is built is I like the word ecosystem development. I like that we go to the networks that we can support. We give them the instruments we have, which is the podcast, the hackathons, social media, blah, blah, blah, blah, blah. And then we say, well, we also run validators. So if you like what we do, we don't want to work with contracts. Please support us by delegating to us. And that's kind of the model. 
+
+Sébastien Couture: 
+Oh, that's really cool. I once talked to a lawyer who also had a similar model. So instead of billing you for counsel, he would ask you to delegate to his validator, which I thought was really cool. 
+
+Citizen Web3: 
+That's really cool. I like that. 
+
+Sébastien Couture: 
+So I want to ask you a question about this. So do you run it yourself? You're like a one-man team or do you have other people helping you do the validation? 
+
+Citizen Web3: 
+No, no, no, no, no. There is, I have a guy who helps me on the technical side, of course. I'm also like yourself. I'm technical, but I can start up a validator. I can, but I would prefer that if somebody who's professional did help me, which I have. 
+
+And there is a couple of more people who helped me with project management, another one with something else, and so on and so forth. So it has kind of grown. There was a lot of ideas that I had over the past two years that, unfortunately, I didn't manage to do, but let's hope that now the bull run is over. Hopefully they will come into light. 
+
+Sébastien Couture: 
+I think I'm sort of similar to you. I can spin up a validator. I've done it before, and that's not the issue. It's more like running it in production is another thing. 
+
+So I can write the script to do the thing and launch it and whatever, and running it in production, I think, is a whole other ballgame. I like what's his name, Jacob of Notional Dow. Yeah, I like the fact that he's got his, just running from his office. And I was thinking, maybe I should do that too, just buy up the hardware and run it at home. 
+
+Citizen Web3: 
+This is the thing, we only support three networks. And one of them we also support from home. We also have infrastructure home for it. And to be honest, I would love to one day to say that all of my infrastructure is distributed in places where I have access to. 
+
+And it's all not home home, but what I mean, run from places which are my infrastructure, my internet, my electricity, one day, hopefully that will happen maybe in years time. 
+
+Sébastien Couture: 
+Yeah, well maybe we need to talk about this, because there's nothing I really want to get set up. 
+
+Citizen Web3: 
+Let's do it, let's do it. But Nebulas, man, let's talk the event you're doing, which is Cosmos-based event. Let's talk about that. 
+
+Sébastien Couture: 
+Yeah, I'm so excited about this event. So it's called Nebula Summit, and the website is nebula.paris. And so this is a conference that is all about celebrating the Cosmos ecosystem. And so we're going to be having talks and panels and even technical workshops. And so this could be like a ton of developers and researchers and entrepreneurs there. 
+
+And they'll be discussing all the challenges that are facing the interchange and also thinking about the future and where the ecosystem is going. Just before we started this, I was getting ready to push the schedule online. So I'm sure by the time you release this, the schedule will be online. But anyway, the list of speakers is there. 
+
+So we've got about 40 speakers. I'm not going to list them all, but Sonny Agarwal and Junya Butlu and Agent Brink of Enoma. And we have people from Juno and Steakfish and Nomad and Fede from FMOS and Zaki. And yeah, so just a good bunch of folks are going to be there. It's a full day conference. Tickets are 35 euros. 
+
+It's just enough to keep the spam out. And yeah, it's like a really cool venue also. It's happening at this place called La Cazanne, which means fire station in French. And it's Paris' oldest fire station. And so this is a beautiful building with a massive courtyard and there's a rooftop terrace. 
+
+And it's like, it's kind of like this fashion incubator. They've got some rooms there for events. So the venue is super cool. 
+
+It's like right in the center of the 10th arrondissement, so very central. So yeah, if you're in Paris for HCC or if you're in Europe and just like if you want to come over, please get your tickets because they're going fast. 
+
+Citizen Web3: 
+While you were saying that, I was just thinking, I would love to see the first conference, the StarsTalk, accept the tickets, the old USD. That would be fantastic. It's like burning fiat. 
+
+Sébastien Couture: 
+Yeah, no, we only accept euros for this one. I think it's going to go amazing. And I think next year will be even bigger. I'm already thinking of next year. We haven't had the first one yet. I'm already thinking of next year. 
+
+I think next year we'll probably do something over like two days and have it be even bigger. And there is one thing, if there's anybody out there who can help me with this, I'd love to do a proof of attendance sign-in FT for this year's edition. And if anybody can help me do that, reach out to me on Twitter or anywhere. 
+
+Citizen Web3: 
+I think I can put you in contact with a couple of the guys who did this in 2017 as early or 18. And it was like a conference run by a smart contract. If you want, I can put you in touch with them after this. Of course, if anybody is out there and wants to help Sebastian, please do. But I will also put you in touch with a guy who might be able to help you on this. We'll do it after the podcast. 
+
+Sébastien Couture: 
+Well, thank you. That's cool. Yeah, I mean, I'm conscious that there's only a month left here, but maybe we can make it happen. I do want to mention this because they're making this possible, are sponsors for this conference. And that is the MOST Community Pool sponsored, the conference, and also INOMA and Club. So shout out to those guys for helping us fund it. 
+
+Citizen Web3: 
+By the way, and you also are in a Cosmoverse t-shirt. Are you going to Cosmoverse this year? 
+
+Sébastien Couture: 
+Yeah, I think so. Yeah, yeah, yeah. 
+
+Citizen Web3: 
+Okay, awesome. Awesome. What's your plans? Are you going there as Sebastian or are you going there as Interrupt? 
+
+Sébastien Couture: 
+I'm always everywhere as Sebastian. 
+
+Citizen Web3: 
+It's like changing the hats, you know, tick, tick, tick. Do you have plans for the conference, for Cosmoverse? 
+
+Sébastien Couture: 
+I'm not sure if I'm going to go for Cosmoverse plus DevCon, because that means staying in Colombia for three weeks. But yeah, I don't know, maybe, maybe. 
+
+Citizen Web3: 
+Doesn't sound like a bad thing to me. 
+
+Sébastien Couture: 
+Yeah, you know, but I like to be home, you know. But also the other thing is Biddle. Are you going to Biddle in Asia? 
+
+Citizen Web3: 
+Unfortunately, I am stuck on an island in an Atlantic Ocean for the past year and a half. It doesn't sound like a bad thing, but because I'm waiting for my like residency here, I cannot leave. 
+
+Sébastien Couture: 
+I know where you are. 
+
+Citizen Web3: 
+I'm on Madeira. Oh, okay. It's a lovely place. Lovely place. Not a secret, not a secret. 
+
+I'm not a secret. I'm on Madeira, but I'm stuck here till I get my in Portugal, till I get all my paperwork sorted. Unfortunately, the bureaucratic hassle touches all corners of the world. So
+
+Sébastien Couture: 
+Because you're wet with which origin? 
+
+Citizen Web3: 
+Oh, wow. That is a question for like that will take 10 minutes to explain. But I was born in Eastern Europe in the USSR in Crimea. 
+
+Sébastien Couture: 
+Okay. Wow. Okay. Yeah. 
+
+Citizen Web3: 
+That doesn't relate to my story. So it's like, it's a crazy story. 
+
+Sébastien Couture: 
+But yeah, I think I'm going to have to bite the bullet and go to this one too. This Biddle conference. 
+
+Citizen Web3: 
+It will be lovely. There's a few big conferences that are arising everywhere and they're getting better. I mean, because I remember the conferences from 2017 and that was, that was bad. And some of them were good, some were bad, but now you have a lot more interesting things in my opinion and conferences. 
+
+Sébastien Couture: 
+Yeah. I think it'll be good. Like I've heard good things about the one that Erica put on, I guess it was like in 2017. so
+
+Citizen Web3: 
+I'm planning a stream with her actually to see what she will tell about the conference and all those things. So hopefully for everybody who's listening out there, watch out for the stream. 
+
+It will come in July, hopefully. 
+
+Sébastien Couture: 
+Shout out to Erica. 
+
+Citizen Web3: 
+Yes. Big shout out to Erica. Sebastian question. Before I'm going to wrap it up, kind of like resume question. And I do have one more, but first the traditional one. You've been in crypto for 10 years. You recorded God knows how many episodes could together represent her and interrupt and streams and whatever or not. And nobody knows, not even you without joking. 
+
+What keeps you motivated and what do you suggest to anybody who's listening out there who wants to keep on motivated on their tasks to do, read, meditate, walk the dogs, stay home, go to conferences. I don't know. 
+
+Sébastien Couture: 
+Yeah. Like you, when I'm sure like when you've been through so many like ups and downs in this space, that's a good sign. I think that the space is like super resilient and that the people who are really dedicated to building meaningful value out of this technology are like in it for the right reasons. And I was talking about this with someone this morning. I think that the correction that we've seen in recent weeks has really brought a lot of sanity to this space. 
+
+It's brought valuations for everything down to like same levels. And I'm sure a lot of people will leave. A lot of people will check out. Like they did a lot of people left in 2017, 2018 around then. And what's left is like people who are passionate about building meaningful products and creating value. So like that to me is what's been motivating all this time. For a while, I was motivated by creating like amazing content with Epicenter and like still am through Epicenter and like the other podcasts that I'm doing. 
+
+And yeah, the next chapter for me is like creating value by helping teams with capital, but also with like marketing support and operational support and security, hopefully by having a validator. And so yeah, that's what keeps me motivated. It's also, I think, helpful to take some time off once in a while. And I do like to take some time off and like really disconnect for several weeks. You know, that's what I did a couple of weeks ago when I was in Bali and it felt great. And like now I feel recharged and you know, have a new outlook and sort of mindset about where I'm going. So I would encourage people to also do that, turn off Twitter once in a while too. I go in and out of Twitter, but right now I'm in one of those like in between phases. 
+
+Citizen Web3: 
+That is a good answer. Like turn switch and off, I think is very important. And I'm planning something like this next month. So I'm like, yeah, I'm waiting. I'm already counting days. I'm already started. 
+
+You could see things on my wall like in prison, you know, one, two, three, I'm joking. Sebastian, anything else that I haven't asked you that you would like to mention? 
+
+Sébastien Couture: 
+Yeah, I mean, anybody who's interested in building some cool stuff and any way that I can help, please reach out. Whether that's, you know, having a chat on the podcast or potentially talking about having an investment from Interop or setting up a validator. I mean, the initial phases of building this business. And so I'm learning about it, but also like looking for cool and interesting people to collaborate with. 
+
+Citizen Web3: 
+Guys, all the links that Sebastian mentioned obviously will be attached to the description. So please find Sebastian, reach out to him on whatever topics you do connected, whatever I said. 
+
+Sébastien Couture: 
+What I did remember when it was, so we're looking for volunteers for Nebula Summit. So if anybody is in Paris and wants to come to the conference and get a free ticket, please reach out to me on Twitter or on the website. There's a contact form on the website. 
+
+Citizen Web3: 
+From my side, by the way, from our side, from Citizen Cosmos side, please give us info about that. We can also like help you spread some info about Nebula on our social media for sure. We always like to do that. Sebastian, thank you very, very, very much for coming on. It's been a great pleasure. 
+
+Sébastien Couture: 
+Thank you. It's been really fun. I don't do that as often, but this has been one of the funnest podcasts I've done so far. 
+
+Citizen Web3: 
+Yay. Thank you. 
+
+Sébastien Couture: 
+Thanks a lot. 
+
+Citizen Web3: 
+Thanks. Thanks, everybody. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

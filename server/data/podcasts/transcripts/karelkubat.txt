@@ -1,0 +1,417 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/karelkubat
+
+Episode name:
+A Giant Anthill, Humanity's Future and ZK with Karel Kubat
+
+Citizen Web3
+Hi, everybody. Welcome to a new episode of the Citizen WebTree Podcast. Today, have Karel with me from Union. Karel, hi. Welcome to the show,
+
+Karel 
+Hey, thank you so much for having me.
+
+Citizen Web3
+Yeah, glad to have you on, I've heard a lot about your work. I don't know you personally. please, first, like, thing is first, could you please for myself, for the listeners, introduce yourself, tell me and everybody else how you got here. How did your life get you to Web3 and everything else you want us to know about you?
+
+Karel 
+Yeah, of course. So officially I'm the CEO of Union and the founder, but my background is systems engineering. I've been in crypto.
+
+since like the end of 2016 ish so back when kind of the ICO started and Ethereum was only minting ERC 20s before that I was studying biochem so my actual original background is not computer science but more towards the step side I kind of originally fell in love with actually statistics and doing like stuff in Python data analysis etc and that's why I kind of got started with programming
+
+I did my own company to do some data analytics working with some of my professors at the university. That's how I made my first bit of money and fundamentally being a degen, although I didn't know that yet, I ate that into Ethereum back in those days. And that's how I got started in the crypto community itself. I basically
+
+met a few other founders that were doing their ICO raises and such joined their communities early on. And when I was looking to transition my business into crypto itself, and the first things I started doing was actually running validators. As a techie, like looking at the space then that seems to be a good way to get familiar with the tech as well as obviously getting a higher stake.
+
+And that's actually how I made my first connections in space too, because what many might not realize is if you're in a validator, teams will call you up very often at midnight when the chain has bricked, when something is going wrong, right? So you get to actually know all of the founders quite closely. You get to know the major community members. And that's really how I got started. Now.
+
+Karel 
+That kind of gives you like a very high level overview of how crypto works and also how the social dynamics are. And back then, when you were in a validator, it didn't automatically pay out the people that voted on you. So you had to actually write scripts to send everyone their money at the end of the week. You would write a dashboard for them so individuals could see how much they'd earned so far. And so I think we had a couple of thousand people delegate to us that we had to maintain with the discord, et cetera, to make sure that they got what they wanted.
+
+And at that point was when I started really tinkering with blockchain nodes themselves, because to be honest back then the nodes were all garbage. The software was breaking constantly. The RPCs were slow.
+
+And so generating these dashboards took a long time for end users. And so I started forking them to basically get better RPCs because I knew the data was inside the nodes. Now that slowly over time, like that's kind of started my journey. And this transitioned into me like contributing to different alt L1 ecosystems like that Cosmos and Polkadot.
+
+Citizen Web3
+Are you referring to polka dot notes? We're talking like 2018 roughly, right? 2019 or earlier?
+
+Karel 
+Yeah, we ran some ARC and LISC nodes and like for a other networks. Yeah, this is like Steemit days. Like this is like right before like we got the actual ATR projects at very early days.
+
+Citizen Web3 
+Okay, even before that, okay.
+
+Citizen Web3 
+I remember running witness nodes. Yeah, that was fun. That was very fun. At 21 nodes and then in a round, there was only 20 that were seen in the reward and the 21st was always like, yeah, it was fun those days. But the thing is I remember like also, I don't know if you remember that, I remember that running nodes was also kind of, it's on one, like you say, there was a lot of connections, but I feel like
+
+Karel 
+Yeah, yeah.
+
+Citizen Web3
+like the comparison between running nodes now and then, like today as a validator, I feel like, you know, there is all this competition market and it's good, it's cool. Like we have to be part of it. Back then you kind of like run a node and you're like, okay, I'm running a node, you know, like, like something happens. I don't know. Do you have that feeling? The question to you here, do you think that from there, like from what was it? Five, six, seven years ago, the validator market has progressed as it's grown in your opinion from what you saw it before to today and how?
+
+Karel 
+Yet.
+
+Yeah, definitely. basically had to make the choice at some point, like we were making a good revenue on the validators, but nothing of like any institutional scale, right? Like if you look like parties like course one and such, they have billions delegated to them. So at some point I kind of had to make a call like, do I turn this into like a proper company and try to compete with like P2P and course one, right? And really like go after like a high grade white label validator service, or do I do something else? And here I kind of made the choice that like for me, running these validators,
+
+was getting my feet wet in crypto, but not actually like the end goal for me. I was looking to build more like foundational technology, something that would benefit the wider community for a longer period of time. So that's actually why I decided to quit the validator business. It also coincided with like the 2018 bear market. So the validators weren't earning too much at that time. So a very good moment to basically not let anyone down and be able to tell my stakers, all right, we're winding this down and to focus more on core tech.
+
+Citizen Web3 
+Do you think that the good question you mentioned P2P chorus and a small second of advertisement for the listeners out there if you guys want to check we have interviews with both of those numerous interviews with both of those validators. The date some of them four years ago. So yeah, but question back to you. Do you think that smaller validators today come to the market and this is the last I think question about validators but since we're on topic already.
+
+can and should compete? Because you mentioned that, you know, with such giants as, you know, like P2P, I don't know, Corus and all of the steakfish and all of the others. Do you think it's possible for them? Should they compete or should they not try and should they try to focus on their own things like yourself? said, you know, I noticed that for me, the ballet the business wasn't something that I was already happy with, let's say like that, you know, and you went to contribute to chains. Should
+
+Do you think that the smaller barata should all try to look for something like that apart from the validation business should diversify their income? Because it's a big it's a big topic today, especially with the market we have today. It is August, August 2024 for the live people who listen to this live if it's in a few weeks. What do you think about that?
+
+Karel 
+Thank
+
+Karel 
+Yeah, I think that's...
+
+Validators that offer staking services for like 40 different chains, there the competition is really harsh right now. So if you're looking to get into that, I'm not sure how you would do that unless you have large capital yourself to make sure you acquire significant stake. So you have to find like a different edge. And one can be that you have a really strong community behind yourself as a validator, right? You have like 3000 loyal delegators and you build up a community in your region that's very valuable for union, but for basically any project.
+
+we look for or you kind of do the Solana style model where you build an entire business around your validator, right? Where like you offer premium RPC services almost as SaaS around the chain around the product itself.
+
+So that's kind of what I think is probably if you're like new in the space, we should have, for example, we work together with range security. do like USDC monitoring, but also for union, they do security monitoring for our transfers. And one thing that they do as well is to have more skin in the game. They run a validator, right? So they have a business that they do in a core product, but at the same time, they're very ingrained in the product itself.
+
+Citizen Web3
+I did say last question, but considering, course, being CEO of Union and considering that one of the primary audience, if not the primary audience of the show, are validators. Usually I ask those things at the end, but since we're on the topic, what is the current situation with Union? And then we'll focus on you, of course. But what is the current situation for validators with Union? Are you still looking for validators? What kind of validators are you looking for? This is just for everybody there who is listening to this and is a validator.
+
+give like, I usually don't like try to go this way. But since we are on the topic, please, if you if it's possible to ask you.
+
+Karel 
+Yeah, of course.
+
+Yeah, so our testnet right now, I think has something like 80 validators, which is quite a lot to coordinate for testnet. don't think any like testnet has that many. But we obviously with union like, like test the consensus itself, right? Like that's, that's where we operate. So, and that's an important portion for us. For any of with our circuits, like the, the proving time increases when we go up by a factor of two. So 32 validators for us, and then 33 is the same as 64. Like it doesn't matter for the circuit itself. So right now we're
+
+and in between should go to 128 because that's where we get the next increase in proving time and everything below that doesn't really matter so we have a bunch of open slots right now what we are looking for is kind of what I described
+
+validators that have their own community behind them, their own specific edge within their country, that can help us out, like also organizing local events, but also that know their stuff really well. When the network slows down, all of a sudden we'd like validators that run Prometheus metrics, right? And can tell us, yeah, I noticed a spike in this, et cetera. That's usually what teams like us and good teams are looking for in their...
+
+data community. And I think to be honest, that there still is like a good business around it. Maybe not if it's a sole business, but definitely that if you're like building products and kind of working with union itself or building something on top, that it's a good edge to also be running notes.
+
+Citizen Web3 
+On the topic of, thank you by the way for explaining that. then yeah, so we call out guys if anyone is ready, jump in. But on that note, on like more general note, I guess, you mentioned validator sets. I've noticed lately, and maybe this is a subjective feeling of being a validator, but again, a question to you is to somebody who has...
+
+worked with consensus and from your perspective, I noticed lately that a lot of chains have, or not a lot, but some chains, sorry, have reduced or proposed to reduce valid assets, and mainly from economical financial perspectives, considering the situation the market is in. Do you think that's correct step? Or do you think that's like, do you think a chain should like adjust itself depending on the situation or should always try to decentralize itself?
+
+no matter what, doesn't matter how much the talking costs, doesn't matter what is the situation on the market, know, screw that, screw the security, you know, let's have 1 million validators, whatever, what should be the middle here?
+
+Karel 
+Yeah, if I'm completely honest, see it right now on Twitter and all of people talk about chains as if they're business, right? Like finding product market fits and what is your expense on security? And I kind of dislike this. I went into crypto with the idea of rebuilding like decentralized networks, like one BTC is always one BTC, right? So this whole analysis of the kind of VCs brought in where they like to look at a blockchain the same way as they do as a fintech startup or SaaS company.
+
+I kind of dislike that analogy and I'm kind of like, right, like I'm here in my basement running a validate and I'm loving it and having a good time.
+
+in the dark web, right? Like that's the part of crypto that I fell in love with. Now, for some projects, like when we talk with founders, we do notice that their core skill set is not necessarily running a chain. They have a product on top of it that they really love running. And especially in Cosmos, right? Like making sure that you have IBC relays going, that you have an authenticator, such a monitor, all of those, that you stay up to date with Cosmos SDK versions. That's quite like a high burden.
+
+We noticed this with Stride, for example, we recently had them on our testnet. And Stride's testnet wasn't as used as ours was. They kind of like test upgrades on it, but it's not really for third -party teams to test. And so I definitely get where some teams are coming from when they have a smaller team that they just cannot maintain.
+
+multiple environments, multiple test nets. But I don't think the solution to that is just decrease the validator set counts. Or just accept that you're going to earn a single validator chain and call it a roll -up without the security guarantees behind it. Especially if running the validators, objectively for most chains, I think it's like 200 bucks at Hetzner a month. The expense isn't that big.
+
+Citizen Web3 
+It's a big, big topic. think I want to try to shift you to things that I still want to ask you about. This is why I'm going to put a full stop. I know we didn't put a full stop and I apologize for that again, but I'm going to try to go because otherwise we're going to talk about it. I will talk all about validators. know that. So I'm going to try and shift it a little bit. You mentioned the side of crypto you fell in love with. Now, I don't know if you know, but our podcast
+
+It's focused a lot around that. have different authors sometimes. have people who consider themselves, I consider myself to be an anarchist and a crypto anarchist. And it's an interesting thing that you mentioned that, know, and what was, and the question I want to ask you here is something that I've been asking. I wasn't planning to ask you that, but since you kind of talked about that side, it's a question I asked once several founders over
+
+An event, I think it was in Lisbon some years ago, and the question was like this. Do you, as Karel today, not as somebody who has built projects before, but Karel, the person, do you think that what you have set out to do, like you say, in your basement, enjoying the validator, but for a reason, for decentralization or whatever, the values that tick you,
+
+Do you think that since 2016 or 15, since you entered the market internally, that what your mission was to change in the world, you know, or in that, do you think that some of those things have moved? Do you think that that mission is on the path for yourself personally?
+
+Karel
+Yeah, so I'll start off by saying my ego isn't big enough to think I'm the main character. think you do have these founders that go in and really believe like I'm going to be the next Zuckerberg or I'm going to like to fundamentally change the world, which like for anyone might happen.
+
+Citizen Web3
+course.
+
+Karel 
+but you have to have a big ego to go into it like that. But I think also any engineer slash developer in crypto has to sometimes be thinking like, do I go for AI or for crypto, right? Like those seem to be the two biggest like foundational technologies that we have right now that's really could shift humanity. For me, I kind of see them as diametrically opposed as well. What you notice with AI, I put that in the same category.
+
+as what perhaps like TikTok and YouTube shorts are doing to us and what the mobile phone did to us first. Like the mobile phone basically took our ability to remember things away. Like as a kid I knew like 10 phone numbers on the top of my head, now I know zero.
+
+Back then, you would truly remember different facts because you had to go to the library to otherwise figure it out or to computer, but even that was slow because you had no laptop. And the mobile phone really took away our ability to just keep these things in our heads. Now, at some point, we started losing our concentration span as well. And the only thing that we really have left at the moment is our ability to form opinions, right? To create a plan of action and then we can use a computer to
+
+execute the plan of action. And what do we observe right now with AI?
+
+People are asking AI to create the plan for them. Like, tell me what I should do, like in three steps, or tell me what to think of this piece of text. Like, it's the final vestige of our humanity that we've left over that we're kind of now offloading as well. Well, crypto, I feel, does exactly the opposite. And that's why I wanted to it. Crypto tells you, form your own opinions. It's all a psyop or nothing is a psyop. You figure it out. No one's going to tell you.
+
+Karel 
+And you have the ability to 1 million extra money or to make it all go to zero. You can build whatever you want. No one is stopping you. So it is truly like the opposite of that. That's full open Wild West. And so for me, when I look back, like, was it a good move to add to crypto? I still think yes, very much. Like for me, that is completely aligned with what I want. And I'm like,
+
+libertarian, I wouldn't say a full or anarchist. For me, I went into crypto because what I hated about the Netherlands and in Europe in general was I felt regulations were very reactionary. Instead of having a strong 20 year plan for how we're going to make the European economy strong, invest in education, like all of these important things, it seemed to be like
+
+In the news, like some Russian billionaire launders a billion through a bank and the next day the government decides, all right, we need more checks at the banks and now you can only do like transfer up to 3K instead of 5K, right? Like all of this just reactionary bullshit. There is no big plan. It's actually going to zero slowly and like no one's realizing it and every new government we have, like nothing happens. So for me, I was like...
+
+If I have a choice in this, I prefer to control this myself, right? Instead of putting money in the retirement funds or having these governments invest in my future for me, which seems to be going to zero, I prefer to be in full control of this. And I think actually looking at lot of my peers and you as well, I think we share this opinion where it's not like we don't want to help our neighbors and help the people around us, but we do want a certain level of control and kind of lost trust in our leaders, in our governments.
+
+Citizen Web3
+think a very good sentence into the direction I think I heard from George Carlin, of course, died some years ago. He probably would have loved living in today's world. He probably would have been like in his element. But he said, you know, about people caring for things, you know, is exactly how you were saying. I think the difference is here that and what he was trying to say, you know, there are types of people who care about
+
+politics, you know, I'm doing some quotations here with my hands or care about, you know, the environment, but the reality is they only care about how they live and what they want. And those people, unfortunately, who are today, it's not the people themselves, I believe, I believe that it's the way the system is shaped. cannot put anyone into that system and expect them to be different because that's the way it is. There is nothing there and they don't care about,
+
+the greater politics or the greater peace in the Netherlands or Portugal or Russia or whatever. They care about doing their job right here right now to get paid and go home. And in a sense, maybe that's not a bad thing. But when it all goes into that system together, it just doesn't work like that for the other people. So the other people cannot benefit from it, of course, like normal people, and they want to change, of course, makes perfect sense.
+
+Karel
+Yeah, I agree with that. don't think there's some like dark global governments or a mastermind behind this. We've somehow in the last like 60 years managed to create a system where we force politicians to act in a certain way, where we force voters to act in a certain way, and it's become massively unproductive. And we're now in a sort of deadlock where
+
+Citizen Web3 
+I agree.
+
+Karel 
+If you're the type of politician that wants to lay out a 20 year plan, like there's no way you could do that. Right. And get any actual votes and you have to do some really short and extreme points. Like if you look like a lot of looking at kind of old television shows where they do debates, like, back in black and white style. Cause then, like then like each politician was given like a full 20 minutes to discuss one point. Right. And people would watch it for two hours. Now you see it and it's like.
+
+in 30 seconds tell us how to solve the immigration crisis. And the politician has to just slam with a few short points and that's it. And so like nothing can actually be properly discussed anymore.
+
+Citizen Web3 
+Eh.
+
+Citizen Web3
+Something very big we agree on, think, the lack of a conspiracy because a lot of libertarians, anarchists, I find that I talk to and I talk to quite a lot, would say, you know, a lot of them. And it's up to, of course, it's a subjective thing. I'm not against that. I'm just saying that it's very rare. Usually people tend to believe that there is some kind of darker force. But I think if you look on the Internet, it kind of disproves it. You you look at the Internet and it's a semi, almost decentralized tool.
+
+You can say it's a decentralized tool. mean, there is DNS, of course, and HTTP, but the structure itself, the organism itself, and there is no dark forces behind it. We could now go into some, again, DNS, I can, and all of that stories, but that's what I mean. And you have the dark web, and you can use a dark web for good or for bad. You have social media, you can use social media, well, for good, I'm not sure how, but...
+
+You can probably somehow use social media for good, I'm sure about it. Somebody probably can think about it. I don't know, posting pictures of little kiddies, I don't know. That probably makes people happy, but you can use any parts of the internet for bad. And that's what I mean about like the government, the society. It's so big that I don't believe that there is one central force trying to lead it somewhere. It's just, can do what you want, but yeah.
+
+Karel 
+Yeah.
+
+Karel
+Now basically human society is a giant anthill, right? Like we can try to construct a certain ways that behaves. I think that's why crypto is so interesting, right? Because really if you look at crypto, it's a coordination layer. We try to build some very simple ground rules and have some type of like idea on how this economic will start to play out.
+
+Citizen Web3 
+Yes.
+
+Karel
+And sometimes we're proven right, sometimes we're proven wrong. And people figure out that actually the rules are very different to this system. But it's, think, the way how to coordinate. think this is why usually libertarians and anarchists are kind of correcting. And it's like same set of rules for everyone. Let's figure out a set of rules that will also force market participants to slowly make the world better.
+
+Making more money should ensure that you build products that are better and make the world better. And then the market will start taking care of this themselves. It will start self -optimizing, people will compete against each other. And I think what we've seen with kind of very regulation heavy, very socialist countries is that if you do that, then you take away these mechanisms. And the economy stops self -optimizing and you try to add additional rules. The government becomes reactionary and over time,
+
+I think it's over a long period of time, the way, like over 50 to a hundred years, it's kind of collapses in on itself and stops working. And so for me, like what I enjoy doing in crypto is like you see it, I think in the union docs, like code is law, like smart contracts are law, but really what we mean by that is like ground rules are the same and very much codified and that then creates a coordination mechanism that should in the end, like make the whole ecosystem better.
+
+Citizen Web3 
+I always like to bring the example of Eastern European traffic lights or Asian traffic lights. Now in Western Europe, you see that, but a bit less, but you get that. just, it doesn't happen very often. What you were saying, just to finish on that note, sometimes you have this huge junctions in Eastern Europe and in Asia. I've seen this a lot too, where there is a traffic light, which, you know,
+
+that there are is the roads and they have the rules. Like you say, there are set rules which everybody agrees on, you know, but then there's a traffic light and the traffic light stops the traffic and everything works fine until a policeman comes and decides to stop the traffic and try to manually let the traffic. So what happens at this stage? The traffic collapses, not just there, but in the whole city, in the whole area. And it's like, and they try to do it and they're like, no, no, we can do it. And it's not, but you mentioned consensus. I want to ask you something because, know, this is an interesting topic.
+
+And of course, think one of, know, at least for me, at least in my opinion, one of the bigger grails, I would say the holy grails of blockchains is distributed consensus is something that, you know, timestamp consensus and that allowed us to. Yeah. The question is this, I don't know if it's such a question or more of a statement to hear your opinion on it, but do you think that as a society.
+
+Such consensus that we use today is democracy, autocracy, whatever you want to add into that C or ISM list. Do you think they should be ported onto blockchain or blockchain such as, for example, things like Tendermint, Grandpa, whatever? Can they be viewed as consensus that we humans could use and change such thing as democracy or monarchy too?
+
+I don't know if it makes any sense. It's a bit crazy, but I'm curious to hear your thoughts here since you mentioned the topic yourself.
+
+Karel 
+Yeah, think if you look at how we do governance right now on chain, it's usually like a direct democracy, right? Like old school Greece, where a voter directly votes on some subjects, which sometimes leads to issues because even if you have a large stack of tokens, it doesn't mean that you know what's best, right? Conversely,
+
+I also think like giving rich people more votes in the real world also doesn't make a lot of sense. think in the blockchain context, like it is a meritocracy, right? Like if you're good at what you do, you make more tokens, you do MEV or you build a protocol like...
+
+smart people in crypto like usually do better than the people on average. And I think that's why lot of smart people go into crypto because there's a lot of opportunity. I think you have to wonder if you want the same for governments in the sense of do you want smart people to have an advantage over regular people in your country or do you want everyone to have equal opportunity? And that's I think a very philosophical point because the arguments could of course be made that might just be better to give smart people more voting power, right?
+
+or experts on certain subjects, just let them state what it is, right? Then we wouldn't have had Brexit, for example, and the UK economy wouldn't have lost like 3 % on it. So that's difficult one. Could we use blockchain for voting and such and for coordination?
+
+Voting not necessarily like you need to K for that because you don't want like a dictator to be able to see who votes on who writes this Perhaps they might like kill everyone when they get elected but definitely I think there's an insane amount of use cases right now that we could have and for for example, keeping better track of our governments the US Department of Defense What are they like in deficit of right now? Like I think 2 .5 trillion they can't account for right and there's some lame excuse like it's because it's like
+
+Karel
+You need a higher level of clearance to know what we're spending this money on like you can't inspect it. All right Sounds to me like they need a privacy blockchain, right? Then we know how much goes in in total they can spend it internally However, we like but we do know the total sum still matches and if they want to they can selectively show Conquerors. All right, like this portion went here this portion went there like 30 % went in this department and we know because it's blockchain that everything is accounted for
+
+It seems to me like a solved problem and the size of the problem, be honest. I don't know. It's like the size of like what the US tax income is in a year or something. Like it's a massive amount of Like it's a bigger opportunity than Nvidia basically.
+
+Citizen Web3
+I think there is all this topic about what, I'm at least curious what will happen if the US stops spending every year a trillion dollars on the army budget. What if it was spent on, I don't know, developing ZK proofs, for example, that's $1 trillion per year or, I don't know, whatever, anything. It would be just crazy. The world would just be different in two, three years. It would be just a complete different place. talking about ZK proofs, you kind of just like,
+
+LE5 that, know, by giving the example of, you know, here's the Department of Defense of US, you know, they need a private blockchain, information goes in, goes out, kind of LE5. Can you, not LE5, but can you, since you're, you are definitely somebody to ask that, you know, can you, LE5 is difficult because you don't explain those things to a five year old. Let's say I'm a teenager in school, in high school, right? And
+
+I've heard about blockchain and then some dude with two dudes, I don't know, two dudes in this case, talking about ZK proofs. Now, how do you explain to me? I've heard the word Bitcoin before. I've heard Ethereum, I've heard Bitcoin, I've heard privacy. How do you explain to me not what ZK proofs are? Because that's just easy, you just did that. But how do they work? Because people seem to have a very, I don't know why, maybe it's the semantical like, mathematics and that's it.
+
+It seems that for many years it pushes people away. I don't understand how it works. So let's say I'm a teenager now in school and could you explain to me how ZK proofs work?
+
+Karel 
+Yeah, of course. So first a little bit about why and what we're proving. So, by the way, on blockchains and Ethereum, et cetera, we have a piece of code. We have some inputs to that code, right? Which is normally when you click, for example, call.
+
+ERC20 .Transfer and you claim like the output is going to be this other person receives 20. Now the way you naively verify this is you have everyone run this code, right? There's 400 ,000 nodes or a million nodes or however many you have. And if they all have the same outputs, then you're pretty certain that that is the real output, right?
+
+The question then is, can we do better than that? Right? Because running computational 400 ,000 nodes isn't that efficient you're paying for it. That's why gas prices are high. And with TKPs, the idea is, can one person run this code and somehow generate like cryptographic proof that this is indeed the output. And then I send this proof to everyone else and the verification of this proof is more efficient than running the code yourself. Right? So we have like some benefits by doing that.
+
+And now on the cryptography part, I won't go into that too much, but basically this makes use of elliptic curves. And so you can kind of like prove that some computation is within a valid range of outputs without saying where you started. And the other step is called arithmetization. And what that means is that you can take some code, just like regular Rust code or what we like to call like circuits and a program turns that into pure mathematical formulas that fits on that elliptic curve.
+
+And the idea is that then for valid inputs for the CKP, you're going to get that points that are valid on that curve. And if you were to give like the CKP invalid inputs, then they're not going to be on that curve and proving that something is on that curve or verifying that it is, is cheaper than burning the code yourself.
+
+Karel 
+The downside with CKPs is doing this arithmetization and then like running the proof step itself is far more expensive. But the upside is only one person has to do this. Right? So that gets you the computational scaling and that's how we use the engine. Another advantage is to prove that something is on that curve, right? You don't need to give someone all of the inputs. So,
+
+I could, for example, give you a proof saying, I know that X plus one equals three without telling you what X is. And this example, like you know, it's two, but for very large numbers, very complex stuff and different formulas, it becomes more complex. Now you kind of use this to do privacy portion because you don't need to give all of the input values to verify if it's correct or not, which means that you could kind of state, for example,
+
+And this politician has 10 ,000 votes, but you don't actually need to tell who voted on it. You just need to say, this is like the hash of everyone who voted. So those are kind of the two streams of doing, doing ZKPs. And a lot of work goes a on like the curve portion here. That's why you see like different curves being used for different proving systems. That's what sometimes a limiting factor, because if you want to use a different curve.
+
+then you need to have pre -compiles on Ethereum to be able to do cheap operations on it. Otherwise the verification is gonna be very expensive. And all the portions like on the arithmetization, like can you be clever when you do that? And then finally, what we have right now, because kind of like the biggest like way of writing CKPs at the moment is actually no longer writing the circuits yourself, but is by using one step before that, like SP1 or RISC0.
+
+And that basically generates the circuits for you. And so that's more like innovation on the arithmetization portion on how can we make readable codes work.
+
+Citizen Web3
+questions on this topic. So first one, what you're describing, you know, with the ecliptic curve to a layman like myself, right? Sounds like just, you know, private and a public key. So the first question is, why did it take us then so long for the industry? Since you know, we've been using signatures of Bitcoin, didn't invent it, right? It wasn't an invention of Bitcoin. They took what was open source.
+
+But if we, more or less, if I understand correctly, the private and the public keeper, that's how they generate it. You have a secret, you have the cut to curve. So why did it take us so long? And it's still taking us so long as for an industry to go from that to actually implementing pretty much the same conceptual technology into all the other pieces of code. Is it because of the cost of the computation?
+
+Karel 
+Yeah, so if you look back at early papers, like we actually like kind of breakthrough in GKPs came I think around 2021, 2022. I think the GK Sync team had some big improvements and a few before that too.
+
+Before that, if you look at the papers, the proving times were all kind of ridiculously long. The proof sizes were quite big. And so if you're more of a founder looking to build a product that can go to markets like the same year or within two years, then it seemed way too far away to actually be applicable at all. And then we kind of reached this state where I'll write like it is doable, but you have to hand write the circuits. That's kind of when Union was founded as well. So we, we had wrote the circuits ourselves. And back then we were like thankful that our principal engineer
+
+Hussain was skilled enough to do that because I think there were only maybe 100 engineers that were familiar with that and capable of doing it. So for like a project, just the barrier to entry is extremely high. Now with SP1 and V6 .0, I think anyone can do it. And so you can look at a lot of protocols right now and probably like make them a lot more gas efficient or have new applications by using this.
+
+But there's still big advantage when you hand write your circuits to be honest. The performance gain is still quite massive compared to using these VMs.
+
+Citizen Web3
+Would you come up? No, would you? I'm going to phrase the question differently. Considering like, you know, verifiability is probably, you know, one of another holy grail of open source blockchain, right? You have to verify the information. We have to be able to verify the information. At least if I cannot, then somebody who has the resources, who can send me the verification or whatever has to do that. Now, a slightly controversial question, then considering ZK proofs and verifiability. Now.
+
+It's not a statement. So I want you to correct me here. I want you to correct me. Like there is the whole thing of ZK and the ceremonies, the ZK ceremonies. And of course, to reality, know, to logical reality, they are unverifiable unless the people, I don't know, did a video, put it into IPFS. I don't know. Even then, like, you know, did they swap the camera and not swap the camera? Whatever. have, we have like millions of questions.
+
+Karel 
+Mm
+
+Citizen Web3 
+What are ZK ceremonies for myself properly to understand it for the listeners? And how do we verify them and what role do they play in the whole concept of ZK proofs?
+
+Karel 
+Yeah, yeah, so, which is the snarks and verifying snarks.
+
+Basically, like what gets put on chain is what we call a verification key. It's like a short bit of bytes that's used in the computation to verify the CKP and to generate the verification key. You basically need to generate some numbers and then delete those numbers because if you still have those numbers that you use to generate the verification key, you can create fake CKPs for this, right? So if you look at the kind of the early days of CK with Zcash and such, the way they did this is,
+
+they went to a forest with like a laptop or something and they handed it to each other and write to and like hope that there was no malware on the laptop like they bought it brand new never connected to the internet like that's how they generate it and so you can still kind of question right like
+
+Did they really delete it or not? Or did they have a conspiracy? It's kind of secretive. These days, there's a lot of best technology for it. So you can actually coordinate this over the internet and have random people participate here. So we actually are going to run a ceremony too, because the advantage is when you run a ceremony, your verification becomes a lot cheaper. If you do starks, the on -chain cost to verify is much higher.
+
+So with the snarks, like the unit economics of your protocol become a lot better. So over a year, you're going to save your users millions in gas. So you kind of want to do the snarks step. And so what you basically do is you just have thousands of people participate. You make them log in with Google. You make
+
+Karel 
+Your backers, your investors, other prominent participants, all have been part of the ceremony, inspect the codes. And as long as one person is honest and deletes their numbers, then the whole system is secure. So feasibly, like sure, like doing a conspiracy with 30 people, very possible. But doing a conspiracy with 5 ,000 people.
+
+completely infeasible to me, right? There's no way that you can convince your auditors, pronance investors, other founders, community members, et cetera, all to coordinate on defrauding the system. And so for me, my opinion is like,
+
+I feel like people kind of look too much at that portion, right? Because this is very understandable. They see the conspiracy once again. And my first response is like, there's no way to orchestrate this conspiracy. Like, even if I wanted to do this, I couldn't feasibly make sure that no one would tell about this. I'd say like people should be more looking at the circus code itself, right? Because that is actually where, if a team would want to hide something, they'd probably do.
+
+Citizen Web3
+Would you say that the same logic for this conspiracy theory is like, know, the logistic chain, chain, logistic chains logic, it's because of the word logistic logic. Yeah, it doesn't sound right. That is logic. Like, you know how people usually ask, so how would logistic chain work if I just with blockchain, I could just send you bad tomatoes all the time. No, you wouldn't because the first time a seller sends me baked tomatoes in a chain, everybody takes him out of the chain. So
+
+Is that the same kind of logic here? If that happened, everybody would have known about it. Is that basically what we're saying here?
+
+Karel 
+Yeah, because in this case, it's not that like a subset of the participants need to stay quiet about this. You need to make sure that you have five or 10 ,000 people be willing to take part of your conspiracy. And then no one tells about this later. Plus they all run like forked code. They keep their secrets. They send that to one person. Like it's the same as kind of convincing all Ethereum validators to like defraud the network, right?
+
+Theoretically, I could try to call all of them on Telegram, create a massive Telegram group and go, all right, let's take control of Ethereum. But it would be so extremely difficult to orchestrate this. It's completely infeasible, and especially to keep it a secret. You just need one person to leak that someone is doing it. They tweet about it, like, hey, this team is actually trying to run a fake ceremony. And then the community knows.
+
+Citizen Web3 
+As a validator, can definitely say that organizing more than five validators in one time is not going to work for you people. Don't do that. Don't organize validators. Another thing about privacy, it's a question I never actually considered in being in this industry for so long. It's a question that never popped into my head, but it started to pop up into my head recently.
+
+It's a question that relates about privacy and for example, of course, maybe like your perspective on that and adoption. I don't like the word adoption because let's be bit stigmatic for a second. Let's try to stick, know, because it's easier to make conversation like that. So, you know, like it's obviously that for mass adoption or mass usage, you know, to happen, we need explorers, we need wallets. cannot do that with explorers and wallets. If you have a wallet, you want to check your balance, you want to know if the transaction went off.
+
+You need a wallet to do that. You have to have them. So with privacy, course, the information on Explorer is kind of not there. So in terms of not the technical users, not the first early adopters, not even maybe the second wave, but in terms of mass usage of a privacy, of a private -based network or a network which transactions are hidden, the balances are hidden.
+
+What on earth is the Explorer for? And how do users, how does it achieve the adoption? Because users want to go and see that information. How do they, I guess it's, I don't know, reshaping the user's mind. I don't know, what do you think about that? I'm not sure.
+
+Karel 
+Yeah. So I feel like we're really used to seeing like activity and other people's transfers. I definitely think that it's a very sane solution to say like regular transfers are private. For example, you don't see those because that's what we're used to with banking as well. If you look at Dexys, for example, like I can actually like use the Binance API to get a feed of trades, right? Like all of that is public. So I think Penumbra did a really good like intermediate solution there where they have some things private, some things public.
+
+and where it makes sense. With regard to privacy, however, I think it's actually very important to try to build in as much privacy as you can, especially in DeFi protocols, just because of the amount of MEV that's ongoing, right? And we all know about these protocols that say MEV -resistant Oracle, MEV -resistant that, and they never are. The only way to be MEV -resistant is to actually have short -term privacy, right?
+
+If when I inspect the mempool I don't know what this transfer will do or this transaction if I cannot inspect it at all until it's actually in the block and occurs.
+
+then you know that it's kind of safe and you can't like send widgets or anything. So I think there's actually like a very great, a big design space still around that. Cause if we want to have intense work, right? We love talking about intense, like the user says, I want to end up with this many tokens. Okay. If we want users to get good execution on their orders, then there needs to be some level of privacy there.
+
+because otherwise they will always get the minimum they specify, right? I want to get at least 100 tokens. All right, you get exactly 100 tokens, never more than this, always the worst price because that's how sophisticated market participants will solve it for you. And short term privacy, talking about like just private for 10 minutes, something like that, right? That already solves this issue that allows you to get into a block.
+
+Karel 
+And I think that's very underestimated right now because we hear the word privacy. Investors will immediately stop talking to you, by the way, because like tornado cash, of course, et cetera, right? Like you cannot build a company right now with, if you're picking privacy and, users as well, they kind of go like, why would I want this? I'm not looking to launder money. Isn't this for criminals? And obviously like the first thing I say is, yeah, now like we all want a certain level of privacy.
+
+Citizen Web3 
+I never before, I never crossed my mind. what you, it's such a simple explanation. The one you gave with the, you know, minimum amount of tokens, which every user can understand because everybody knows when they enter that, you know, and then Uniswap or Kepler or any other, it doesn't matter where you enter it. It will be the same. You you will get the minimum amount of tokens. It's a great explanation. Yeah. Never, never, never, never, never crossed my mind. Do you think, you know, that the whole
+
+Because the privacy situation is terrible. I was speaking to a couple of guys recently, one was Boxer from Dune Analytics. don't know if you maybe heard the nickname, but he's like this big analytical guru guy. And he was saying, you guys don't even have a clue how ridiculous it all is, how surveyed this is. Everything is there, really. He says, for me, for somebody like me, it takes five, six clicks to get any information I want. And that's it.
+
+It's crazy. Do you think that, you you kind of already obviously said that in between the lines, but, know, to ask and verify, or rather like a slightly question to, sorry, to, with the progress, not do you think, but what do you think we should do today as an industry, as Web3 to get out of that loop, the anti -privacy loop that the industry is stuck in? Is it to introduce
+
+Like you said, minimal privacy to get us into the block or is there other things that are possible to be done to change that?
+
+Karel 
+Yeah, this sounds so, cause I hate people talking about like awareness and stuff in general, but I feel like the value of privacy was a lot higher about five years ago and seen as much more important than this right now. And you see a lot of.
+
+hardcore cryptographers and privacy maximalists in their wording almost switch and they love talk about multi -party computation now or verifiable compute and they kind of mean privacy but they have to like use different words so I almost feel like the industry has to kind of grow a set of balls again because in the end like this is why we build crypto right like this is why we went into this space and support the tornado cash developers even more build more products like that
+
+Right. What I loved when like the whole tornado cash thing happened is that people started routing money through tornado cash and putting it in exchange wallets, in ETF wallets and such to just mark all wallets as having touched tornado cash to just basically make it once again impossible to use these types of means to regulate. So I think we need to like go, go hard on that and kind of go back to our Cypherpunk roots a bit more. And the other thing is.
+
+there is a big opportunity for protocols to make money on their users order flow, right? Like that is where a large portion of the money is. And that's, think, some protocols are hesitant to implement these features, right? Because they can maybe extract 10, 20 million a day of fees and order flow, sell that off to HFTs, to Citadel, to BlocksRoute and search.
+
+So we need apps that are really there for their users, right? Let's see, their users is the main point of value and the other way around as well, users that are loyal to their apps because they're treated this way, right? Because it's kind of trivial to create a new L2.
+
+Karel 
+put in a bunch of points, run a centralized sequencer, no fraud proofs, and then settle for all this order flow that comes in here. And the users get wrecked, get worse execution constantly, but they get a bunch of points, right? And so it's going to be good. And then in a amount of time, like such a protocol extracts all the value. So I think from both sides, like founders need to basically not see their users as a bunch of anonymous bots that they can extract value from, but instead as the people
+
+that they should offer and why you're building this for. And users the same, they should go for protocols that are actually building good products and stay loyal to that and not hop into the next rogue in the hope that they get out in time.
+
+Citizen Web3 
+It's a tweet. I've been tweeting for the past half a year. I'm not joking. The industry has lost its balls. So I fully 100 % agree on that. think that is the main thing this industry needs to gain back. you know, on to finish it off, to wrap it off, kind of. I didn't ask you this. You asked at the beginning, would you say then the mission of you and Union, Corel and Union today is to fix?
+
+that partially at least or is there another mission that you would say is the main thing that drives you today?
+
+Karel
+Yeah, well, we kind of, when we founded Union, what we saw happening is like the early issue, like the small thing that we wanted to fix is building your own app chain or app specific roll up. If you do it well and you're well capitalized, gives you a big market advantage. Like you can build something like Blast or Hyperliquid or DYDX V4 and smart contracts really can't like compete with this. Plus you get like early bridge support. You can have access to a large user base. So.
+
+For a few projects, they can make that move and become very successful, but we're not really enabling the next 10 ,000 builders. And why are we not enabling them? If you're a small time founder, which is like a little bit of seed funding, but that's it, getting like tier A bridge support is not very likely. Like you might have to wait two years before you get support by Layer 0 or XLR because fundamentally, like those have a team that decides who they support and who they don't support, right? Like it's a very web two thing.
+
+And that prevents us from building more of these really good products for end users, right? It puts a limit in cap. Plus it allows other projects to create a mode, right? And just have a much better product and you can never compete if you're only doing smart contracts. So as engineers that annoy us, right? Because we don't want other products to have a mode. We want this all to be equal. So that's why we found a Junion to basically make Interop rightly accessible to make it available.
+
+Like just by basically integrating with smart contracts, never having to talk with the union team fundamentally, right? Like I don't necessarily want to know who's integrating this at some point, but really keep it in that decentralized manner as kind of the first analog to create like a new level playing fields. What we saw happening in the interim was teams build their own bridges.
+
+They say, we have like a keeper set or we're doing our own change. So we're also going to make our validators run the bridge. We've seen that happen before. Ronin Bridge got hacked again. And we saw that happen with Phantom, a world where there's a thousand different bridges all maintained by a thousand different multi -six or small validator sets. It's just a very brittle world because for most teams, like we kind of spoke at the start of this podcast, like that part of the infrastructure is not their core business. Like they want to build.
+
+Karel 
+a deck or a game or something like that and not actually build a bridge. And if they need to spend six months of their building journey doing that and then maintaining it forever, that just leads for more opportunities for hackers to steal user funds. So that was like our mission, like solve this issue. That's our nation focus. And if we can get that done and basically make it so that the concept of bridges or getting bridge support is not something anyone thinks about in the future anymore, then we've been successful. I was like in the nineties where
+
+or 90s and 80s, where getting internet access for your servers was like a real consideration if you could start a company and now it's obviously no issue anymore. We wanted to do the same to Infra.
+
+Citizen Web3 
+I think it's a big concern today considering like, once again, I speak to a large amount of teams and being a validator and a podcast host and working in this industry. And I can tell you that a lot of teams struggle with exactly what you described. You probably know it yourself as you've spent many years here and this is why you're doing it. But I think it's a very good...
+
+goal because lot of the teams spend years on trying to build some side tool that because it's not out there in a decentralized manner. And usually by the time they think they finished building this tool, of course, the market situation is gone. I'm going to jump to a quick blitz, like three questions. They're a bit weird as I am myself. yeah, so the first one.
+
+Give me one book or one movie or one song that has had a positive influence on Karel throughout his life.
+
+Karel
+I recently finished a three body problem. So that would be part two then. Yeah. And I think that's about like making you think like, what's my contribution to humanity? How do I make society accelerate more? think everyone should give that a read.
+
+Citizen Web3 
+nice, nice, nice.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+Unexpected answer. Nice. like it. I like that a lot. Anyway, I'm not going to go into it. Sorry. Sometimes I want to go and I'm like, no, this is I go into it, it's going to be all crazy because I like it a lot as well. OK. One motivational thing that keeps Karel building bridges, getting out of bed, focusing on decentralized things and the things he wants to and not on other things.
+
+Karel 
+I think step by step, like looking back at crypto, it is actually becoming better. Looking back two years, five years, over the start, like actually the products are massively better right now and we are accelerating rapidly. People sometimes doubt and they wonder and they kind of forget how much is being done every single month. So sometimes just like take a step back and have look at that. And the other thing to be honest is whenever someone tweets that they like a new feature or they're excited by something.
+
+That makes me get back to work every single time.
+
+Citizen Web3 
+They just didn't use bitchers in 2013. And that's why they don't appreciate it. Sorry, guys. And the last one, Dead or Alive, made up or it could be a friend, relative, doesn't matter. Not a guru, but a character or a personage or a real person that sometimes don't look up to them, but you wonder how they would solve that.
+
+particular situation you could end up in. I give you positive vibe to solve your own situation. Not a guru, not, not, not, not, yeah, but something like that along the lines.
+
+Karel 
+Yeah, that's, I would say that is my grandfather. He used to work at Bell Labs, sci -fi enthusiast as well. And so for everything that he did and that he built and that he read about, he always approached it both from him being a physicist and trying to really understand what was on.
+
+but with that childlike wonder of reading a sci -fi book. Why is this cool? Why is this interesting? That got me through my STEM courses, which can be very slow and difficult to do. But I was trying to find why is something fundamentally really cool? And to be honest, if you can't find that, then it's probably not worth spending your time on.
+
+Citizen Web3 
+you're the smartest person in the room, you're in the wrong room, right? It's beautiful, beautiful. And Karel, thank you very much for your time. Thank you very much for your answer. Please don't hang up just yet. This is a goodbye for the listeners, everybody else. Thank you for joining us and see you next week. Bye guys.
+
+Karel 
+Thank
+
+Karel 
+Thank you so much. Bye bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content. 

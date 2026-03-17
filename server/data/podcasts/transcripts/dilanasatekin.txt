@@ -1,0 +1,423 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/dilanasatekin
+
+Episode name:
+Web3 Vibes, Community Building and Infrastructure with Dilan Asatekin
+
+Citizen Web3 
+Hi everybody and welcome to our updated in use citizen web three podcasts. And today I have Dylan from ad emperor validator with me today. Dylan. Hi, how are you, man? Welcome to the show.
+
+Dilan 
+Hi everyone, hi Citizen Cosmos listeners, thanks for having me.
+
+Citizen Web3 
+You see, you went with Citizen Cosmos and we are like Citizen Web 3 now. That's it. No, no, no. It's all good, man. It's all good. I'm kidding. But we have got updated, you know, so it is now not just Citizen Cosmos listeners, but Citizen Web 3 listeners. I'm sure it's the same people, but you know, let's pretend that it's not. So, man, how are you this fine day? How is your weather? Let's, let's do some chit chat. How's your weather? How's everything? How's life?
+
+Dilan 
+Thank you.
+
+Dilan
+That makes sense.
+
+Dilan
+Everything is doing good, hopefully. You know, the weather is good where I'm right now currently in Istanbul. Weather is fine. All people are fine. Can't complain to be honest.
+
+Citizen Web3 
+fantastic. I actually am with you on that. Where I'm based, the weather is lovely as well. So it also always helps, I think. Now it like always helps to kind of wake up in a lighter mood or, you know, make, do more tasks. I don't know about you. It does help me. What about you? Does it help you?
+
+Dilan 
+It helped me a lot for example every time that I'm seeing a shiny day, it's like helped me work better, a lot of more implication, it's like changing my mood in general. So yeah, I think the weather is so important from productivity and work totally.
+
+Citizen Web3 
+Nice, nice, nice. Now that we got the cheat sheet out of the way and all the weather out of the way, let's talk some blockchain. So Dylan, I mean, I said Dylan, Emperorater, and I always introduce guests in a very short way because I always ask guests to introduce themselves. Can I ask you to introduce yourself? What do you do? What do you currently, I mean, Emperorater, yeah, but what do you guys do? Anything you want to mention about yourself? Anything you would like people to know about Dylan?
+
+Dilan 
+Of course. I'm the founder of Imperator.co, a validator. I have originally a skill set in data engineering. We do a lot of stuff at Imperator, like, first of all, for sure, doing validation on different blockchains, mainly on the Cosmos ecosystem, but we start to expand to others. We start to work with a lot of new institutions.
+
+like to try to bring them to the ecosystem. So we help them onboard into what we are doing. We help them in the infrastructure side. We do a lot of infrastructure as a service. We are also a layer for the ecosystem. We help a lot the community in different ways. That can be via tutorials, video. We like to bring.
+
+people into the lights and make them aware of what's happening. We also do a lot of, you know, how can I say that, we do a lot of weekly news to help, like everyone, to be updated on what's happening. So we try to be everywhere and doing different kind of jobs. This is not simply validators.
+
+but a lot of community services too.
+
+Citizen Web3
+I like that you did the intro that way. I'll tell you why. The focus of Citizen Cosmos has always been people and understanding people. And the focus of Citizen Web 3 is more validators. And specifically, I've been doing this for years, and I've got interviews with validators for years and years. But I want to really, I want people to understand that
+
+there are real people behind those operators or machines or nodes. And I want people to really grasp their story and either connect with them or not because they are currently the biggest players in the space. And we've been seeing this since roughly the end of 2017, beginning of 2018. Pretty much every project is somehow related to a validator. We can talk about Lido right here, or P2P, or we can give other examples of steakfish. But...
+
+You know, those are big examples, regardless of that, you know, even chains are here and there built by somehow person came out. So I want people to know that. So my question is, the next question is to you is why? Why Web3? Why validate? Why did you wake up one day and were like, okay, man, I'm going to create a validator. I'm going to call it Emperor at your car. And I'm going to let people.
+
+Let people be more in light. Is that, you know, I believe you said, so why?
+
+Dilan 
+So this is a long story, to be honest. I didn't like woke up on the morning and say that I will be a validator. Everything started because I guess like everyone else, I was like investing in crypto, trying like to earn some more money. So, you know, at this time I discovered the project that was Akash, you know, Akash Network. And I met a guy, a French guy that...
+
+Citizen Web3 
+Let's go.
+
+Dilan
+was validating on this chain. So I started to discuss with him and try to understand what was his goal, what was he's trying to do basically. And I love the daily job, the fact that you should have to bring some validators to your turn out to keep gross, et cetera. So I said, okay, I'm a data engineer. I have like skills in DevOps. So why not launching my own validators? So that's.
+
+what I did, I started on the keychain and started to talk with the French community. And you know, there's like a huge community around this kind of project, like with lovely people that you want to help. So my want to help like community started from this community, I would say, because I just wanted to help them like staking, understand what we are doing, what's the goal of staking.
+
+how they can bring value to the ecosystem. I guess it's just a question of randomness. I did not choose to be a validator or whatever. It just comes slowly like this.
+
+Citizen Web3 
+Let me then annoy you a little bit more into that direction. And I mean, you started the story already at the point where you're already trading crypto and you already had DevOps kill. Let's go a little backwards. How did you, why web three? Why? I mean, and the reason I'm asking that is because, you know, I, I'm going to give you a little bit of like a directional hint to where I'm trying to take you here. I had the guests that, you know, come and tell me it's for the money. I had guests and tell me, I want to change the world. I had guests and tell me, well, I started to study that.
+
+And that's something I got into. Now, I mean, I hear in your story that you already kind of had DevOps skills, but then you said, well, I was already trading crypto. So that means you already, and the way you said it sounded kind of that you did it, did it, did it. So I was like, okay, so why web three? What, what drew you initially to that space? Like, you know, was it the decentralization ideas or something else?
+
+Dilan 
+Okay, I got it. So I guess my want to start on Web3 was because I'm originally from Web2, if I can say. I used to work in normal companies with old rules, if I can say. When I discovered what's happening on Web3, kind of everyone is remote working, the mood is so different, etc. I said myself that I should try to go into Web3. And you know, man, when you...
+
+you test the Web3, it's impossible to go back to Web2. And that's why I'm here right now, trying to shape the future in Web3.
+
+Citizen Web3 
+Nice. I like it. I like I like that if you once you go web three, you never go web two. I like that. Okay. What is the bigger I mean, again, you kind of use the words, putting people in light and in different variations a couple of times. I like that, you know, keeping people educated or keeping people informed, maybe even that's like the best way to say it. But what is the
+
+goal if emperator not every validator has one for certain but there is like a bigger mission goal that you see as a founder for the validator
+
+Dilan 
+I think it's to make people's life easier, not only the community, but even the builders. So imagine you're trying to build something and you need awareness. It's hard for you to bring your product to the community and make them know what's happening there. It can be sometimes too tricky, too technical or whatever for the community. So what we aim to do here for the builders is like...
+
+just simplify what they are doing and explain to the community so it can benefit everyone here. That's one of the main goals basically.
+
+Citizen Web3 
+It's a very broad, but it's not the word I'm looking for. I'm looking for a very big goal because I got to be honest to you, I've been in the same business for a while and geez, it's not easy, right? I mean, it's very difficult to have values and to be in the educational business, especially in the free educational business. People find it, at least for me, I don't know what it's for you. And this is, I guess, not a question, but it's like a discussion kind of thing. An opinion I'm throwing here.
+
+Like I found it very, I don't know about you, but I found it very difficult to do free education and to have personal values and to make a product out of it. Because it just doesn't mix for other people by the looks of it. Is that the same experience you had?
+
+Dilan 
+I understand what you mean. The business is not oriented to education. What I'm trying to say here is like kind of a bet. You're betting that the education that you are doing will bring you more value after that. So for example, I'm not telling people come delegate to Imperator, we want to be bigger, etc. Of course, the rule, the goal is to be bigger and be one of the biggest validators. But
+
+To come to this level, you need to bring value. And how we can do that is first by educating people, make you know the world, if I can say, by doing educational job. Of course, this is not the main stuff that we are doing, but it's part of our jobs.
+
+Citizen Web3
+Let me ask you a bit of a controversial, not controversial, but a little bit of a controversial question. At which point, it's something we've been discussing with people online lately on Twitter with a few people. At which point in your opinion does, and I understand education here is not the main business. I just slightly shifting focus here. At which point does education become dangerous? Can it become dangerous? General.
+
+Dilan 
+I think it's at the point where you give financial advices. For example, you should buy this stock and delegate, etc. At this level, you take the responsibility and it can be dangerous because you can tempt people to lose money or having bad habits on investments, etc. So at this level, it can be very tricky and dangerous. That's why we have in France, on other jurisdictions.
+
+some protection for the user where it's like impossible for you to shield tokens. That's why on the indication level you have to bring awareness about the risk involved when investing, staking or whatever.
+
+Citizen Web3 
+sorry, I was respect, I make notes. So sometimes it takes me a second to unmute. But here is an interesting thing. And I'm sorry, I'm digging, but I like, you know, playing devil's advocate a little bit. So let's go that way. I mean, you were talking about risk right now, right? And about chilling and risk for the user. But then just before we spoke about Web3, and the whole freedom of Web3, where do we draw the line between, okay, I'm
+
+trying to, you know, do compliance and protect. Now I'm personally not in that direction. But I know a lot of people do believe that and that's okay. In my opinion, it's fine. Everybody has their own opinions. Your opinion, where do you draw the line between, okay, this is Web3 and it's free for all. And if I want to shill, I don't know, shit coin or whatever it's called, you know, to people and I think it's good, then well, it's Web3 and people listen to me or I say, okay.
+
+I'm an educator or whatever, for whatever reason I want to be educating people. I cannot be risking people's let's do compliance or whatever, not compliance. Sorry, but let's do some restrictions here. Like where do we draw the line?
+
+Dilan 
+So in my opinion, it's very, very hard to draw this line in the Web3. But hopefully we can see some regulation happening slowly. Because the way you are saying that it looks like Web3 is the far west, right? Where everyone brings his own values, he owns rules. But I don't think this is the right thing to do.
+
+Dilan 
+being free etc but in the way where you are shilling tokens and taking risk etc is difficult. So I don't have the right answer here to be honest. This is a tricky question. Yeah exactly.
+
+Citizen Web3 
+There is no right answer. There is no right answer for sure. Here, my goal is just to get as much as I can of your opinion. So for sure, there is no right answer. I know that. I mean, because for example, I don't think, you know, regulations is correct, but then you think it's okay. And in my opinion, that's perfectly fine. It's just an opinion. And I've had guests who are like really, really strictly prodded and guests who are really strictly anti that. And it's really cool to try to find in conversation and in dialogue.
+
+that balance where I think then people who build, which is like yourself, go on and actually do and it's cool. It opens horizons in my opinion.
+
+Dilan 
+Totally, we need a balance between both sides. We can take the good parts of each part for sure. But you know, being free in the web3 as we are speaking is not the right to take risk, if I can say. So that's why you have to take both good parts.
+
+Citizen Web3 
+Let's talk a little bit about more like down to earth, I guess, topics for a validator and the kind of typical questions I usually go into, which I really want people who don't validate it or are far from it and interested to understand is some simple topics, some of them we can go more some less. Let's try. So let's talk about like two of the most basic things in my opinion. One, you guys validate quite a lot of not a lot, but
+
+quite a big amount of networks. How on earth do you guys select chains? What is your criteria? There are some, maybe some projects right now listening to this building like up, maybe they want emperator to be in the list. How do you select?
+
+Dilan 
+So we do due diligence, right? We have different steps to analyze a project. It can be, you know, digging into the team members, looking at the white papers about the utility of the project. And you know, this is like kind of normal process where you evaluate the project you are going to be involved in. And if it's like, okay, then we have it adjourned. And if we see any red flags or...
+
+any controversies, we just prefer to avoid the project and not taking any risk for us or even for the delegators.
+
+Citizen Web3 
+I'm going to annoy you. Everybody says that. If we see red flags, what are those red flags, man? Let's talk about them. Everybody says if we see red flags, that's it. Which red flags? Give me examples.
+
+Dilan 
+Yeah, I can tell you some red flags that we are looking for. For example, team members, first, we need to have track records about what they did previously, if they have been involved in any project, etc. So if you're coming with a totally anonymous project, with anonymous people, we'll definitely not join your validator set. Another red flag can be a fork of another project.
+
+We already have seen this kind of behavior where people were forking also projects like Evmos and trying to burn us a new project and new utilities, etc. These are kind of red flags. Another one that I'm seeing is projects that are not open source where you can't see the code or any tools, for example, any code on GitHub or public that is not public are red flags too.
+
+Citizen Web3
+The open source thing for me is a very, being a very, very big obstacle. I'm very much an open source obsessed person. And it doesn't say that I only use open source right now. We are not using an open source platform to record this. Unfortunately, that's what's available in the market these days, but yeah, I totally understand that. And I have over the last, I mean, I started my first node not to do with this project, but my first node.
+
+It was a bitchers-like project in 2016, Witness Note, so it's been a while. I can tell you that the amount of projects I rejected just because they don't want to open Code Up. It's like, no, we're not going to do it. But why not? What's the point? I don't get it. I'm not understanding what people... What do you think they are scared of?
+
+Dilan 
+People that are hiding their code, I think they are afraid of, I don't need to copypasta, people stealing code in the orange. It depends, in some cases you want to have ownership of your code and don't want to be public, right? So you have the exclusivity of your code, I don't know if you are building a totally new product, you don't want to be copy or whatever.
+
+Citizen Web3 
+Mm-hmm.
+
+Citizen Web3 
+It doesn't make sense, does it?
+
+Dilan 
+In some cases, it makes sense. I can understand this. But if you at the same time an anonymous guy with no track record, it can be at this level a red flag.
+
+Citizen Web3
+I understand, I understand. Dylan, what about the team? I mean, personally, from what I'm hearing, you're from Western Europe. Now you live in the edge of Asia and then Europe, so to speak, you know? So the reason I'm saying this is because it's not always easy to move to a different place. And even though we are living in an online world, I know it's not as easy. So how did you build your team?
+
+And what does the team, if you want to talk about it, of course, what does it look now? And maybe you're looking for people. You can feel free to shout out if you are looking for people.
+
+Dilan 
+Sure. So right now we are four. I'm based in Istanbul, two others are in France, and the last one is in Vietnam. So it's hard to build a team, a completely remote team, because it depends on the teammate preferences. What I want to say is like my co-founder Ibar, you know, he's like...
+
+a friend from my engineering school initially. And this is a guy that don't like to work remote. He prefer see people directly at the office or whatever. So for him, it's hard to deal with this. But in comparison with myself, for example, I really love working from home for different places or whatever. So it's hard to build a team efficient in remote. So...
+
+It's like a lot of due diligence you have to be sure when hiring that the guy is like efficient working remotely, asynchronously and from different places, time zone or whatever. So I would say that it's very hard to build this. And I would like to add that we are currently looking for a busy, so if you are interested, get in touch. But you have to love work remotely.
+
+and asynchronously because we don't have any office.
+
+Citizen Web3
+We might think about it, but we don't have it. I like it. And I'm joking, of course. And I totally understand. We are the same. Like, I mean, no, I don't like working from office. So we're totally the same. By the way, you mentioned Marcel. And I know where Posthuman is based in Marcel. He was actually a guest for a week in my house. A couple of weeks ago, we came to visit. We are good friends from many, many years ago. And a crazy guy like myself. I love him for that.
+
+So here's the next question because we kind of talked about it. What do you think about distributed decentralized validators? Is that a thing? Is that even possible? I mean, some people, some teams like these guys, they try to do, the tools are still not there, of course. And yeah, it's a try. It's an experiment. It's cool. But what's your personal opinion about should validators stay for now?
+
+centralized entities as they are actually, you know, and let's not lie to ourselves or are should uh, but I just strive towards decentralization. I've no idea how that could look, but you know, whatever.
+
+Dilan 
+So I would not say that validators are centralized right now. We have a ton of different entities running all around the world. But I think the most important part in the decentralization of validators is where they run their infrastructure. We have an issue nowadays, it's like all the validators are running their nodes around Europe, between Germany, France, all of these zones.
+
+We need decentralization in this way where we have to run nodes from all around the world. So if you are someone from, I don't know, Australia, you're a validator from Australia and run a node from Germany, it's kind of problematic for me. For the sake of the decentralization, please run your node also in Australia so we can have decentralization all around the world. But it's easy to say that, but...
+
+harder to apply because most of the validators are around Europe. Some projects need to have low latency blocks, so they want all validators to be close to them, right? So what people used to do is to run notes from Germany, from Central Europe. So it's kind of hard. In terms of entities, I think we're doing good. I...
+
+I've never seen, for example, validators from a big institution like a state or whatever. So we still go to the stage where many node operators are as a small team or a single person but from around the world.
+
+Citizen Web3 
+By the way, I can correct, not correct, but I can help you on that. There are teams running validators. There are, for example, you know, Litecoin has some publishers running validators, big public, local publishers running validators. I'm, I know a few other chains, like over the years that I spoke to, I was surprised. Sometimes, for example, we have SimpleStaking. That is one.
+
+big hell of a... I mean, those guys like own, I mean, if you listen to their episode, these guys own the biggest data center in Malta currently. They are and that's just Malta, you know, so we have a lot of big teams. I mean, you have like P2P, for example, you know, that's running a lot of projects are running, you know, so I do totally though, with you on that. And it's just, I'm actually curious, because one of the things that
+
+Currently, we want to do, not want to do, we are in the process and hopefully that process will be done within two months or so. That process is slowly been building up over the four months and what I'm talking about is moving from cloud to bare metal and this is the topic I wanna talk with you about. I mean, if we're talking about decentralization, currently, what is your take on that and what are your plans in that direction, if you have any at all, of course.
+
+Dilan 
+So, bar metal servers for me is the right option to adopt for many reasons. First, just for the technical aspects, more reliable, more performant at cloud services. But for sure, it depends on the provider. But for me, having a mix of both is fine, because you know, as node provider, node operator...
+
+you have to be flexible and bar metal servers are not really flexible at all. You want to, for example, have a main node running somewhere and having the possibility to easily switch this node to another place. So in this case, the clued solutions are better for sure.
+
+Citizen Web3 
+In fact, I think, you know, when I say, for example, we're moving to bare metal, for sure, we're going to be keeping at least 5% to 10% on cloud. And that is not a little, because there is quite a lot of things that we want to keep on cloud one for exactly that, for the amount being able to quickly, suddenly, if we need to change something. And sometimes it's even a security thing. You don't want to be keeping all your eggs in one basket.
+
+it sounds. But do you currently run anything on Bare Metal or everything in the cloud? I'm curious.
+
+Dilan 
+We have both, we are using both. Totally both.
+
+Citizen Web3 
+Okay, cool. Cool. What about men, you know, let's talk a little bit about, it's a kind of like topic that not everybody likes to talk about, so you can skip it if you want. So I will ask the question, you feel free to answer as you want. What is, I mean, you said you have yourself and the co-founder.
+
+A lot of the teams I speak to, they have investors and those investors sometimes can be silent, they can be participants, they can be partnered, but some of them, they can have expectations. Sometimes it can limit the validator to certain things. Sometimes it can open up horizons. What is your case, of course, if you want to talk about it?
+
+Dilan 
+So luckily and hopefully we don't have any investors, we are a self-funded entity. So my co-founder, I taking all the decisions just by brainstorming and discussing, no other third party are involved on the decisions.
+
+Citizen Web3 
+Cool, cool, cool. This is a good thing in my opinion, because it does limit to a lot of, how to say, it has limitations, I guess, when you have investors, even though the money is there. What about, you're going, sorry Dylan, you were gonna comment something, sorry. What about governance? Let's talk a little bit about governance, another big, big topic for validators.
+
+Dilan 
+No, no, that's fine.
+
+Citizen Web3
+And there has recently, of course, you're mostly in, by the way, before we go to that, when we spoke to chains, are you currently completely in Cosmos? No, because you have nodes outside of Cosmos ecosystem already, right? As far as I'm aware.
+
+Dilan 
+Yes, that's correct. We're running on Ethereum and SWI.
+
+Citizen Web3 
+Mm-hmm. And?
+
+Dilan
+and SWI network.
+
+Citizen Web3
+So a network, okay. Oh, sweet, okay. And how was your experience, by the way, after Cosmos to Ethereum, before we talk about governance, I'm curious.
+
+Dilan
+Oh, it's like totally catastrophic man, because on Ethereum it's so hard, they made everything so hard compared to Cosmos. You know, in Cosmos you can delegate your stakes without any minimum amounts, easily, in a no custodian way. So easy to be honest, but when you go to Ethereum everything starts to be very harder.
+
+Citizen Web3 
+I'm out.
+
+Citizen Web3 
+What's what's the hardest thing is it you mean that the software is not there the CLI is not properly ready there what the what do you mean?
+
+Dilan 
+So there are different levels. The first part is the software part. When we had to install the machine, the configuration, everything was so different. And you have to control everything, make sure that all the aspects of your infra is correct. What I can say? I can say, yeah, also about the delegation part. If you want to.
+
+to get some delegators and bring some value to your node, the delegator has to have at least 32 Ethereum to stake. And if they want to do that, they should do it via a small contract that you have to run, that you have to code, et cetera. Everything goes so hard. Yeah.
+
+Citizen Web3
+makes people get into it. I mean, more. Is it a good thing in your opinion that it gets the validator to get more into the network or not?
+
+Dilan 
+No, I don't think it's like something good if you want to attract, you know, community and no tech people Let's say you have like thousand of Ethereum to stake You have to go over a smart contract that the team has built You have no way to verify that the smart contract is safe or even audited So you maybe have no confidence in staking So you're losing also, you know yield on that
+
+I think it's really hard as a user to delegate. I'm talking about the normal delegation, not the liquid staking or whatever. The normal staking way is so hard and need improvement if you compare to Cosmos, where you can do it so easily from a wallet like Kepler or LibWallet.
+
+Citizen Web3
+Yeah, it's pretty much out of the box, right? Isn't it? It's, yeah. So going back to governance though, now that we kind of like understand that you mostly are in Cosmos. And of course, I guess that a lot of your focus because of that, I mean, if you're running your nodes is probably here. You know, I'm curious, we had recently a very controversial proposal, there has been a lot of them. We like them.
+
+No controversy. I always say it's not drama, it's communication. That's my, you know, when people talk about drama, I always say it's not drama, it's communication. Proposal 848, I'm curious, what's your opinion on the inflation? And of course, you know, a lot of validators woke up to losing 20 to 30% of their revenue in one day and nobody's speaking about that, so I'm curious, what's your opinion on that?
+
+Dilan 
+So my personal opinion was abstain or no, because I don't see any value on both sides. Reducing the inflation or keeping it like that will not change anything from my point of view. So yeah, in terms of decision, personally for me, it was mostly an abstain. But on the Imperator side, we had to...
+
+decide carefully because of course the community is divided. We had like ton of discussion with delegators and people via group chat or in DM and we saw a lot of people divided between yes and no. So what we decided at the end is like we did a weighted vote. So we looked at all our delegators, looked at how like percent people voted yes and how much voted no.
+
+for now and we just divided all the votes based on our delegators choice. We think it was the best choice to adopt, to keep the community, just to be simply transparent. I think it was the best decision for delegators, just to respect their decisions.
+
+Citizen Web3
+I think we did once, a weighted vote about a year ago, so no, something. But in general, I mean, you said your personal opinion is like more no abstain. Why is your personal, I mean, and again, my personal opinion, I voted no. So, but I'm curious, why is your personal opinion and no abstain?
+
+Dilan 
+Sure. So the main reason for the yes voters was to say that if we reduce the inflation, people will tend to use other DeFi products on Cosmos. And I'm not totally okay with that because we don't necessarily have a top tier DeFi product on Cosmos ecosystem. We have some that are interesting, but you know...
+
+those are not products that are well... How can I say that? That are not well advertised. So it means that if you want people to stop delegating and use other products, you have to brand it. You have to make aware of it to the community. That is not the current case. So I was expecting that people were just...
+
+going to undeligate and go elsewhere, because the only interesting part for Cosmos at this moment was the staking up here.
+
+What about you by the way? Just want to... about your no.
+
+Citizen Web3
+No problem. No problem. My know is well, one, it's based on a couple of things. One, there is absolutely no correlation between the inflation and the price. There is zero correlation. There has been many charts there. And especially if you're in doesn't matter if you're in crypto, if you're in finance, doesn't really work like that. When you're an established country, those tools, those mechanism, you know, lowering inflation, making inflation higher. Other monetary tools and Web3 don't exactly work.
+
+Dilan 
+Totally.
+
+Citizen Web3 
+as they work in the real money world, so to speak. When I say real, I don't mean to disregard this, actually the opposite. I've been in this for a while and, you know, to see, I mean, Atom is already has an established, in my opinion, what people miss out also in my opinion, has established its price proposition and the price has already proven it for a long time.
+
+And doing this to a very young chain can have very, very... And I've seen this happen for the past 10 years several times, can have very bad effects. So hopefully, though, I think that we are quite... I mean, we, because we are a validator there, and I think that Atom Cosmos Hub is quite a strong project. And I'm pretty sure that it will not have the opposite effect.
+
+Above what people were expecting. I'm hoping that the market actually will Because if the market wasn't gonna twist it would have had the opposite effect The price would have slowly started go down and it would have lost price and people would be like all shouting Oh my god, why is it happening? what's gonna happen is that the market is enough to reverse that and It doesn't matter what little twitches you're gonna be doing on your ecosystem Because right now cosmos in comparison to the market is a little tiny needle the market is gonna go up
+
+It doesn't matter what inflation is going to be. The price will be driven up by the market and that's going to save it. And I think that's a good reason still. I voted no. And the reason for that is because it has no correlation. It's silly in my opinion.
+
+Dilan 
+Got it.
+
+Citizen Web3
+But personal opinion, of course. So what about, you know, I mean, we haven't spoken at all about what, because when I go on your website, you know, you have ventures, you have other things you already spoke about in bringing information, infrastructure. Those are a lot of things that you guys do. Do you want to talk a little bit? Maybe I missed something else. Maybe there are other projects that you're building or doing. Feel free.
+
+Dilan 
+Hehehe
+
+Dilan 
+Yeah, we can talk about the venture side where we love to invest on promising projects that could bring value to the ecosystem in general. But in terms of products that we have built, right now we are managing the data backend of Phosmosis. So, you know, currently indexing all of the data, restitching it to the front-end application, to the Infosmosis website.
+
+Since the team has a data engineering data scientist backend, we worked with Osmosis on making this. So right now, a lot of institutions are using this data, the main application, the community, or even people that are interested with data can consume it and see insightful data and just use it as they want.
+
+Citizen Web3 
+Actually, with regards to that, I don't remember who was it from your team. Was it you or was it somebody else? I was speaking on Discord. I was annoying with some questions about RPC nodes and archive nodes. And I'm not sure if it was you or was it somebody else on Discord, about a week ago, two weeks ago.
+
+Dilan 
+I think it was probably me. Oh yeah, it was me, exactly on Telegram.
+
+Citizen Web3
+I think it was you. It was me. I think it was you. I think it was you. I was annoying because with the tool we're building in the background, we're not new to development, but the guys that are currently on my team are new to development, DevOps, pure DevOps guys. And for them, it's a lot of new things, but it's good. It's a good thing.
+
+Dilan 
+Yeah, I got it. Because it's hard to understand what's happening on the RPC side, on the data side. It's kind of tricky if you're new to this technical ecosystem.
+
+Citizen Web3 
+Yeah, but I think we are slowly building and hopefully we can release something. Maybe I'm not going to say dates because when you say dates it always happens months and months after. So yeah. Man, what about one more topic that I missed out on that I haven't spoken to you. That actually you, in my opinion, out of a lot of teams, again, I'm an onlooker.
+
+Dilan 
+Yeah, never do that. It gives like stress and never do that.
+
+Citizen Web3
+when I judge that, but I have my personal judgment, so I'm going to do it. And then I think you've done a good job in it in comparison to a lot of teams community building. Community building is a very flippant, tricky topic when it comes to validators and Web3, how, what's your secret? What, what, what do you do? I mean, you said you keep people informed, but let's talk a bit more, maybe a little bit more in detail if you can.
+
+Dilan 
+Sure, but what do you mean? What's the question exactly?
+
+Citizen Web3 
+Sorry. Yeah. Sorry. My bad. So I found it that, you know, I went to Valerieta school a couple of times to give some talks, you know, and like I said, I've been doing witness notes for many years, then master notes and essentially, you know, Valerieta notes. What I have found is one of the most difficult things is attracting people to, to become
+
+Not necessarily just delegators, but followers of your validators work, you know slowly building that community, you know outside of just saying Hey, I have the foundation delegating to me and this is my community in quotations, of course here So when I say that I mean, you know getting retail a big retail like what's your go-to-market kind of thing with? You know having a lot of delegators to Emperor on every the smaller delegators. I mean when I want to say that here
+
+Dilan
+I will be totally transparent and maybe you will not trust me, but it's like all based in luck. You have to be at the right place at the right time. It's just kind of a luck. For sure you can build community tool that will attract delegators, retail delegators, et cetera, but you have to do it on the right way and in the right moment. We like, you know, I'm feeling...
+
+lucky on this site because we started doing the community contribution starting from Osmosis. It was like two years ago when we started with the InfoOsmosis website. And at this time, no entities in the Cosmos ecosystem were doing that. So we did not have any data stuff or analytics on the Cosmos ecosystem at this time. And we were the first. So you know, when you're doing something first, you bring a lot of...
+
+attention. I remember at this time everyone was talking about us, like look at the info website from Imperator, a lot of tweets and an engagement on Twitter that helped us a lot on this to bring awareness and having community behind us, following us and just delegating in general. So just total luck and timing conditions.
+
+Citizen Web3 
+You'd be surprised. I have luck references on at least four of tattoos on my body. So I'm totally trusting you on that because I think luck is one of the biggest players in our lives. It's not that luck cannot be created or helped, but luck is a big player in life, I think. So I'm with you.
+
+Dilan 
+Yeah, and in any case, you have to try. If you do not try, you will not see any luck or any results. You have to try whatever you have in your skill set. Just try. This is the main advice I can tell to everyone. Just try.
+
+Citizen Web3
+While we're on that note, it's a good one to go to the Blitz. I have a small new Blitz. This one is going to be from five questions. It's all about 11111111. Blitz has changed many times. So you can, you don't actually have to answer very quickly. I call it the Blitz, but you know, it's more of a name. So what was the first token you ever purchased? Don't say Bitcoin. Come on outside of Bitcoin.
+
+Dilan 
+I can't even remember because we used to invest on cheat coins with a group of friends. It's impossible for me to tell which one it was. Impossible.
+
+Citizen Web3 
+Yes.
+
+Citizen Web3 
+I know what you mean. I know exactly what you mean because, you know, Defcoin is one that's calling out now in my, from 2013, 14, 12 or whatever. I remember a lot of them. And one, give me one person that is an inspired, dead or alive, it doesn't matter. You know, it could be real or it could be a cartoon character. It doesn't have to be a real person. That inspires you, not your idol. I'm not talking about idleship here, but somebody that, you know,
+
+is an inspiration for you. It could be family, it could be a cartoon character, it could be a book character, it could be a developer.
+
+Dilan 
+I think it's my big brother from my childhood. He's like nine years old, bigger than me. People used to compare me to my brother saying, look, he's doing that, he's like an engineer, he's doing this stuff, he's like doing investment, et cetera. And I used to compare myself to him, had a lot of admiration on him and wanted to be as him, basically. Just, yeah, from my family.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+I like it. I like it. I love when people do family references. Not many people, but you'd be surprised out of the hundreds of people I speak to, not many people go here to family references. What about one motivational thing that keeps dealing, that you would like to share with others, that keeps dealing, waking up every day and getting on with his business, you know, keeping on building, keeping on trading, keeping on keeping people informed and so on and so forth. What is the one motivational thing?
+
+Dilan 
+The freedom, definitely. Because you know, I like to wake up at the time I want, travelling and working from places that I want. Just the freedom.
+
+Citizen Web3 
+Okay, okay. Two more. Almost done. Almost done. One book or one film that comes to your mind right now. Give me one. Nice. That was good. I like that. Bam. Okay. Last one. Last question. Give me, and this doesn't have to be crypto. I always say that it does not have to be a crypto token. Give me one project technology. It could be Cybertruck. You know, you could say Tesla.
+
+Dilan
+Interstellar first, directly.
+
+Citizen Web3 
+That's something that arouses in you technological curiosity, arouses in you like, oh my God, that's really cool. I really wanna like understand how, it could be a project, it could be Monero, could be Tesla, I don't care, but something.
+
+Dilan 
+I think the current narrative is so impressive how everything's changed in real life in less than maybe one year. I guess, ChatGPT launched something like one year ago. And I'm seeing that difference between the launch time, the before and after the launch time. I feel like we entered into a new world. Everything's so different starting from now. And I would really like to understand what's happening behind this.
+
+behind what we are seeing right now, because I imagine that we can see like crazier stuff.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3
+Nice, nice. I'm with you, man. I think we're gonna see, I think what we are seeing, in 10 years time, we will surely not be able to recognize the world that we live in today. It's going to be very different.
+
+Dilan
+less than 10 years man we used to say that everything is changing fast but with AI no words for this
+
+Citizen Web3 
+Yeah, yeah, yeah. It's a funny concept, the future, right? People sometimes talk about the future as it's somewhere there, but the future is the next second. That is the future. It doesn't like, one day you don't wake up and things fly, it happens gradually. It's like people forget about that. The future is here, it's just about, yeah. Yes, yes.
+
+Dilan 
+Exactly, just open your eyes and see what's happening around you.
+
+Citizen Web3
+Man, Dylan, this has been a pleasure. I always love finding out that, you know, there are real people behind teams and I'm very glad that this decays with you as well.
+
+Dilan 
+Thank you for the invitation, it was a pleasure, it was very awesome, thank you so much.
+
+Citizen Web3 
+Thanks everybody for joining in and Dylan please don't hang up yet but okay thank you. Bye!
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+

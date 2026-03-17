@@ -9,7 +9,7 @@ networks:
 
 services:
   db:
-    image: postgres:14-bullseye
+    image: pgvector/pgvector:pg14
     container_name: validatorinfo-main-db
     command: postgres -c max_connections=500
     environment:
@@ -128,6 +128,24 @@ services:
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
       EVENTS_DATABASE_URL: postgresql://${EVENTS_POSTGRES_USER:-validatorinfo_events_user}:${EVENTS_POSTGRES_PASSWORD:-events_password}@events-db:5432/${EVENTS_POSTGRES_DB:-validatorinfo_events_db}?schema=public
+    volumes:
+      - uploads_data_main:/app/uploads
+
+  init-podcasts:
+    container_name: validatorinfo-main-init-podcasts
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: migrations
+    command: >
+      sh -c "npx tsx server/tools/init-podcasts.ts"
+    depends_on:
+      init-chains:
+        condition: service_completed_successfully
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
     volumes:
       - uploads_data_main:/app/uploads
 

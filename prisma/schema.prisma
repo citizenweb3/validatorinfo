@@ -105,6 +105,7 @@ model Chain {
   description      String?
   twitterFollowers Int?     @map("twitter_followers")
   tags             String[] @default([])
+  supported        Boolean  @default(true) @map("supported")
 
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
@@ -127,15 +128,17 @@ model Chain {
   validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
   aztecNodeDistributionHistory AztecNodeDistributionHistory[] @relation("chain_aztec_node_distribution_history")
   txMetrics  ChainTxMetrics?  @relation("chain_tx_metrics")
+  podcastEpisodes PodcastEpisode[] @relation("PodcastChain")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
   proposalsPassed Int @default(0) @map("proposals_passed")
 
   // calculated
-  uptimeHeight      Int      @default(0) @map("uptime_height")
-  lastUptimeUpdated DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
-  avgTxInterval     Float    @default(0) @map("avg_tx_interval")
+  uptimeHeight          Int      @default(0) @map("uptime_height")
+  lastUptimeUpdated     DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
+  avgTxInterval         Float    @default(0) @map("avg_tx_interval")
+  totalRewardsLastBlock String?  @map("total_rewards_last_block")
 
   @@map("chains")
 }
@@ -198,6 +201,7 @@ model Node {
   minSelfDelegation      String   @map("min_self_delegation") @db.VarChar(256)
   missedBlocks           Int?     @map("missed_blocks")
   outstandingRewards     String?  @map("outstanding_rewards")
+  totalEarnedRewards    String?  @map("total_earned_rewards")
   outstandingCommissions String?  @map("outstanding_commissions")
   delegatorsAmount       Int?     @map("delegators_amount")
 
@@ -210,6 +214,7 @@ model Node {
   // calculated
   consensusAddress String @default("") @map("consensus_address")
   uptime           Float?
+  rank             Int?
 
   // Aztec committee tracking
   inCommittee    Boolean @default(false) @map("in_committee")
@@ -301,6 +306,10 @@ model Proposal {
   content          Json
   title            String
   description      String
+  fullText         String?   @map("full_text")
+  metadataUrl      String?   @map("metadata_url")
+  fullTextAttempts Int       @default(0) @map("full_text_attempts")
+  aiSummary        Json?     @map("ai_summary")
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
@@ -331,6 +340,7 @@ model Validator {
   chain Chain? @relation("chain_validators", fields: [chainId], references: [id])
   nodes Node[] @relation("validator_node")
 
+  @@index([moniker])
   @@map("validators")
 }
 
@@ -493,4 +503,56 @@ model ChainTxMetrics {
   chain Chain @relation("chain_tx_metrics", fields: [chainId], references: [id])
 
   @@map("chain_tx_metrics")
+}
+
+model PodcastEpisode {
+  id               Int       @id @default(autoincrement())
+  slug             String    @unique
+  title            String
+  description      String?   @db.Text
+  publicationDate  String?   @map("publication_date")
+  duration         String?
+  episodeUrl       String    @map("episode_url")
+  playerUrl        String?   @map("player_url")
+  guestName        String    @map("guest_name")
+  speakerLabel     String?   @map("speaker_label")
+  summary          String?   @db.Text
+  chainName        String?   @map("chain_name")
+  identity         String?
+  moniker          String?
+  primaryProject   String?   @map("primary_project")
+  mentionedEntities String[] @map("mentioned_entities")
+
+  chainId          Int?       @map("chain_id")
+  chain            Chain?     @relation("PodcastChain", fields: [chainId], references: [id], onDelete: SetNull)
+
+  chunks    PodcastChunk[]
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@index([chainId])
+  @@index([identity])
+  @@index([moniker])
+  @@index([primaryProject])
+  @@index([mentionedEntities], type: Gin)
+  @@map("podcast_episodes")
+}
+
+model PodcastChunk {
+  id             Int            @id @default(autoincrement())
+  episodeId      Int            @map("episode_id")
+  episode        PodcastEpisode @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  speakerRole    String         @map("speaker_role")
+  speakerName    String?        @map("speaker_name")
+  question       String?        @db.Text
+  content        String         @db.Text
+  contextPrefix  String?        @db.Text @map("context_prefix")
+  chunkIndex     Int            @map("chunk_index")
+  embedding      Unsupported("vector(768)")
+  embeddingModel String?        @map("embedding_model")
+  createdAt      DateTime       @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime       @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  @@index([episodeId])
+  @@map("podcast_chunks")
 }

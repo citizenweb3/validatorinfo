@@ -43,7 +43,7 @@
     "Home": "Lar",
     "You": "Você",
     "Hi, World!": "Olá mundo!",
-    "Explore the AI Rabbit whole": "Explore o AI Rabbit inteiro",
+    "Explore the AI Rabbit hole": "Explore a toca do coelho AI",
     "Click to login": "Clique para login",
     "Click to logout": "Clique para logout",
     "Profile": "Perfil",
@@ -108,6 +108,14 @@
       "Links": {
         "name": "Links",
         "hint": ""
+      },
+      "Health": {
+        "name": "Saúde",
+        "hint": "Tempo médio de atividade dos validadores da rede"
+      },
+      "Show TX": {
+        "name": "Mostrar TX",
+        "hint": "Ver transações da rede"
       },
       "Battery": {
         "name": "Bateria",
@@ -229,7 +237,11 @@
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Descobrir as Redes Blockchain e a sua Avaliação",
-    "description": "Criei este Network A-Z Directory para apresentar redes blockchain, incluindo estatísticas-chave como avaliação totalmente diluída, links importantes e símbolo do token. Esta lista é perfeita para desenvolvedores, stakers e exploradores multichain, permitindo que você encontre redes que correspondam aos seus interesses e, em seguida, estude seus perfis para explorar o potencial de staking. Com links diretos, você obterá uma visão clara de cada cadeia, ajudando a navegar no cenário web3 e a tomar decisões informadas."
+    "description": "Criei este Network A-Z Directory para apresentar redes blockchain, incluindo estatísticas-chave como avaliação totalmente diluída, links importantes e símbolo do token. Esta lista é perfeita para desenvolvedores, stakers e exploradores multichain, permitindo que você encontre redes que correspondam aos seus interesses e, em seguida, estude seus perfis para explorar o potencial de staking. Com links diretos, você obterá uma visão clara de cada cadeia, ajudando a navegar no cenário web3 e a tomar decisões informadas.",
+    "Active": "Ativas",
+    "All": "Todas",
+    "Stopped": "Parada",
+    "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós"
   },
   "NetworkProfileHeader": {
     "Tabs": {
@@ -357,6 +369,8 @@
     "show dropdown": "Mostrar Eventos de Penalização",
     "hide dropdown": "Ocultar Eventos de Penalização",
     "no-slashing-events": "Nenhum evento de penalização encontrado para esta rede",
+    "Proposals VS Time": "Propostas ao Longo do Tempo",
+    "no proposals data": "Dados ainda não disponíveis",
     "Table": {
       "Validator": {
         "name": "Validador",
@@ -455,6 +469,9 @@
     "Token Price": "Preço do Token",
     "Supply Concentration": "Concentração da oferta",
     "Token Flow": "Fluxo de Tokens",
+    "token flow description": "Entradas, saidas de capital e receita ao longo do tempo",
+    "token flow chart title": "O grafico Revenue vs Capital Flow esta em desenvolvimento",
+    "token flow chart description": "Este grafico exibira a entrada, saida de capital e a receita da rede ao longo do tempo. Fique atento!",
     "pending undelegations": "Delegações Pendentes",
     "circulating tokens %": "Tokens em Circulação %",
     "Distribution": "Distribuição",
@@ -510,6 +527,12 @@
         "name": "Blocos Perdidos",
         "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
       },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Recompensas",
+        "hint": "Saldo de recompensas pendentes para este validador"
+      },
       "Infrastructure": {
         "name": "Infraestrutura",
         "hint": "Este validador fornece infraestrutura pública para esta rede? RPC, Arquivo, etc. Clique no V para ver detalhes"
@@ -517,6 +540,10 @@
       "Committee": {
         "name": "Comitê",
         "hint": "Este validador faz parte do comitê da época atual? Os membros do comitê são selecionados para propor e atestar blocos"
+      },
+      "Rank": {
+        "name": "Classificação",
+        "hint": "Classificação do validador, com base na quantidade de poder de voto"
       },
       "Governance": {
         "name": "Governança",
@@ -546,6 +573,12 @@
       },
       "Missed Blocks": {
         "name": "Blocos Perdidos"
+      },
+      "Att": "Att",
+      "Prop": "Prop",
+      "Rewards": {
+        "name": "Recompensas",
+        "hint": "Saldo de recompensas pendentes para este nó"
       }
     }
   },
@@ -629,9 +662,12 @@
     }
   },
   "RumorsPage": {
-    "title": "Chat P2P: Conecte-se com Stakers e Mineradores Web3",
-    "description": "Junte-se ao nosso chat P2P anon, um centro seguro e fácil de usar para os entusiastas da web3 discutirem redes de blockchain, pools de mineração e rumores de validadores. Ligue-se a outros delegados e mineiros, partilhe ideias sobre estratégias de staking e educação sobre criptomoedas, ou simplesmente - converse. É o seu ponto de referência para recursos de staking e mineração, onde você pode perguntar \"com quem apostar\" e obter respostas de pessoas que já passaram por isso",
-    "Start": "Começar",
+    "title": "Chat P2P e Fórum: Conecte-se com Stakers e Mineradores Web3",
+    "description": "Junte-se ao nosso chat P2P anônimo ou visite o Fórum — um centro seguro e fácil de usar para os entusiastas da web3 discutirem redes de blockchain, pools de mineração e rumores de validadores. Ligue-se a outros delegados e mineiros, partilhe ideias sobre estratégias de staking e educação sobre criptomoedas. Use o Chat P2P para conversas rápidas em tempo real, ou vá ao Fórum para discussões aprofundadas e tópicos permanentes.",
+    "Start": "Iniciar Chat",
+    "Visit Forum": "Visitar Fórum",
+    "forumDescription": "Prefere discussões estruturadas? Junte-se ao fórum da comunidade para tópicos aprofundados.",
+    "or": "ou",
     "noNameError": "Por favor, digite o nome de usuário para começar"
   },
   "MetricsPage": {
@@ -797,11 +833,15 @@
     "eco tooltip": "Energia Verde",
     "keyhole tooltip": "Fragmentação de Chaves via Horcrux",
     "github tooltip": "Github",
-    "place your interview here": "Coloque Aqui a Sua Entrevista"
+    "place your interview here": "Coloque Aqui a Sua Entrevista",
+    "Podcast Summary": "Resumo AI do Podcast",
+    "Listen to episode": "Ouvir Episódio"
   },
   "ValidatorNetworksPage": {
     "title": "Perfil de validador: Redes Suportadas",
     "description": "A aba Networks oferece uma visão abrangente de todas as redes blockchain suportadas por este validador, apresentando uma tabela com estatísticas-chave, como APR esperado, comissões, valor total protegido, tempo de atividade e delegadores ativos. Isso é ideal para os stakers que buscam a melhor rede ou para aqueles curiosos sobre o alcance do validador, permitindo que você compare o desempenho entre as cadeias e escolha o melhor local para atingir seus objetivos de staking. Para informações mais detalhadas, confira nosso Diretório de Redes A-Z. Essas estatísticas são cruciais para entender o desempenho do validador em diferentes ecossistemas, ajudando você a tomar decisões informadas no mundo multichain.",
+    "Validator": "Validador",
+    "Node": "N\u00f3",
     "Table": {
       "Network": {
         "name": "Rede",
@@ -1004,6 +1044,7 @@
     "voting power": "Poder de Voto",
     "validator rank": "Classificação do Validador",
     "proposals created": "Propostas Criadas",
+    "activation date": "Data de Ativação",
     "Medals": "Medalhas",
     "hash txs tooltip": "Has Tx",
     "horcrux tooltip": "Key Sharding via Horcrux",
@@ -1299,6 +1340,10 @@
     "rejected": "Rejeitado",
     "failed": "Falhou",
     "link to full proposal": "link para a proposta completa",
+    "show proposal text": "Mostrar Texto da Proposta",
+    "hide proposal text": "Ocultar Texto da Proposta",
+    "show ai summary": "Mostrar Resumo IA",
+    "hide ai summary": "Ocultar Resumo IA",
     "voting period": "Período de votação",
     "show all proposals": "Mostrar todas as propostas",
     "votes": "Votos",
@@ -1348,7 +1393,15 @@
         "hint": "Número da rodada de governança"
       }
     },
+    "proposal description": "Descrição",
+    "proposal full text": "Texto Completo",
     "ai generated summary": "Resumo gerado por IA",
+    "ai is thinking": "A IA está pensando",
+    "ai summary error": "Falha ao gerar o resumo. Tente novamente mais tarde.",
+    "ai summary rate limited": "Muitas solicitações. Aguarde um momento e tente novamente.",
+    "ai summary timeout": "A geração do resumo expirou. Tente novamente.",
+    "ai summary disabled": "O resumo por IA está indisponível no momento.",
+    "render error": "Não foi possível renderizar o texto da proposta",
     "votes-title": "Votos",
     "voting-progress-title": "Progresso da Votação",
     "for-label": "A Favor",
@@ -1470,5 +1523,39 @@
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",
       "description": ""
     }
+  },
+  "AiChat": {
+    "Ask AI": "Perguntar à IA",
+    "AI Assistant": "Assistente IA",
+    "Type your question": "Digite sua pergunta...",
+    "Send": "Enviar",
+    "AI is thinking": "A IA está pensando...",
+    "Welcome": "Olá! Sou o assistente de IA do ValidatorInfo. Veja o que posso fazer:\n\n• Buscar validadores por nome e mostrar suas métricas\n• Comparar redes e mostrar estatísticas\n• Explicar propostas de governança e resultados de votação\n• Mostrar tokenomics, APR, TVS e dados de mercado\n• Fornecer links para páginas relevantes\n\nPergunte-me qualquer coisa!",
+    "Welcome Chain": "Olá! Sou seu assistente de IA para {chainName}. Posso ajudar com:\n\n• Validadores, staking e comissões\n• Propostas de governança e votação\n• Métricas da rede, APR e tokenomics\n• Blocos, transações e dados de nós\n\nO que você gostaria de saber?",
+    "Explain with AI": "Explicar com IA",
+    "AI unavailable": "A IA está temporariamente indisponível. Tente novamente mais tarde.",
+    "Rate limited": "Você está enviando mensagens muito rápido. Aguarde um momento e tente novamente.",
+    "Empty response": "Não consegui gerar uma resposta. Tente reformular sua pergunta.",
+    "Invalid request": "Algo deu errado com sua solicitação. Tente novamente.",
+    "Key metrics": "Métricas principais",
+    "Compare with others": "Comparar com outros",
+    "Top validators": "Principais validadores",
+    "Most reliable": "Mais confiável?",
+    "Active proposals": "Propostas ativas",
+    "Voting stats": "Estatísticas de votação",
+    "Supply breakdown": "Detalhamento do fornecimento",
+    "Inflation trend": "Tendência de inflação",
+    "Explain this block": "Explicar este bloco",
+    "What happened here": "O que aconteceu aqui?",
+    "Network overview": "Visão geral da rede",
+    "Staking rewards": "Recompensas de staking",
+    "Lowest commission": "Menor comissão",
+    "Recent proposals": "Propostas recentes",
+    "Token price": "Preço do token",
+    "Search validator": "Buscar validador",
+    "APR comparison": "Comparação de APR",
+    "Node count": "Contagem de nós",
+    "AI not configured": "Assistente AI não está disponível no momento",
+    "Request timed out": "Tempo limite excedido. Por favor, tente novamente."
   }
 }

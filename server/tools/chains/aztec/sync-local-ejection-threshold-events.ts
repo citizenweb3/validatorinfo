@@ -2,7 +2,7 @@ import { Abi } from 'viem';
 
 import { eventsClient } from '@/db';
 import logger from '@/logger';
-import { contracts, deploymentBlocks, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { getContracts, deploymentBlocks, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { fetchBlockTimestamps } from '@/server/tools/chains/aztec/utils/fetch-block-timestamps';
 import { getChunkSizeForRpcUrls } from '@/server/tools/chains/aztec/utils/get-chunck-size-rpc';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
@@ -26,7 +26,8 @@ export const syncLocalEjectionThresholdEvents = async (
   const failedRanges: Array<{ start: string; end: string }> = [];
 
   try {
-    const contractAddress = contracts[chainName].rollupAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.rollupAddress;
     const abi = rollupAbis[chainName] as Abi;
     const deploymentBlock = BigInt(deploymentBlocks[chainName]);
     const chunkSize = getChunkSizeForRpcUrls(l1RpcUrls);

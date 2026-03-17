@@ -1,0 +1,371 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/evmos
+
+Episode name:
+Tokenomics, Berkley and Bridges with Federico Kunze Küllmer
+
+ann
+Hey, it's Citizen Cosmos! We are search and online. We discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code.
+
+citizen_cosmos
+Welcome to a new episode of Citizen Cosmos, everybody. And today we have Frederica Kunze Küllmer with us, who is the co-founder of Evmos. very excited to have you, Frederica. Hi.
+
+federico_kunze_k_llmer 
+Hi everyone, thanks for having me today. I'm really excited to talk with you about Evmos and the rest of the Cosmos ecosystem too.
+
+citizen_cosmos 
+Awesome man
+
+ann 
+Yeah, it's just like a couple months since Lisbon meetups and so on. So yeah, sorry Serj go on.
+
+citizen_cosmos 
+No, it's okay. I was actually going to ask the same thing. And I was going to ask Federico to maybe share his, like how was Lisbon for him and Cosmoverse and did you guys get that attention or whatever your goals were during all those conferences, during the hackathons? Did you get attention? I don't mean just like marketing attention. I mean, maybe development attention or other people like users. So if you can share that.
+
+ann 
+Hahaha
+
+federico_kunze_k_llmer 
+Yeah, I think during Lisbon, lot of people were really excited about the project. Right now, also with the recent announcements and the recent partnership that we've been publishing every week with different infrastructure providers, people are realizing the potential of the projec during the hackathon itself and also during...
+
+during the entire Cosmoverse, we got a lot of interest from developers. So we got a few really good projects. The two winners were a wallet that directly integrates the EVM, smart contracts, and MetaMask. So you can see your ERC20s and also Cosmos and IVC tokens. And the second place was BalancerFork.
+
+then it's going to be like one of the first like natively built AMM, directly built on Atmos. So we're really excited about all the support from the entire community and also from developers as well.
+
+ann
+maybe let's start with the very basics. Could you explain like almost from the scratch, what is EVMOS? Because it's not super easy to understand, but let's start from the very beginning.
+
+ann 
+so what is EVMOS? Could you explain like in very short, non-technical terms, what is EVMOS and why everybody like really talking about EVMOS and what is all about?
+
+federico_kunze_k_llmer 
+so, EVMOS is an application specific blockchain that allows you to run smart contracts the same way as Ethereum. So, it supports EVM and you can use your ERC 20s directly on at most. But on top of that, it runs on Cosmos, which allows us to have like interoperability functionalities.
+
+especially in building interoperability between the smaller contracts and other blockchains. So the main goal here is to make smart contract scalables and also scale the entire ecosystem by connecting chains that might not run a smart contract platform directly interact with smart contracts. So these brings a lot of different use cases in the entire ecosystem. So for example, like Somaliere or also like Region.
+
+could interact directly with the smart contracts that are deployed on top of EVMOS through their composability functionalities that we're enabling. So yeah, it's all about smart contract interoperability and fast finality. That's our main selling point. And for that, we're gonna be working a lot with developers, with infrastructure providers, and also with the entire community.
+
+to make the economics of EVMOS really appealing for developers to start migrating and deploying their projects intoEVMOS.
+
+citizen_cosmos 
+now you explained what Evmos is, which is basically a smart contract interoperability platform. What would you classify that as? I mean, it's a bridge between two layer one platforms, and by layer one, mean, like Cosmos and Ethereum, obviously, but I want to hear your opinion. How do you classify it? Where do you put that? Is it infrastructure? Is it a bridge? What is it?
+
+federico_kunze_k_llmer 
+I'll consider EVMOS as a L one. So it has its own barter secure said it doesn't depend on Ethereum. So we don't need to like roll, to Ethereum or any other, EVM based chain or other chain like, cosmos hub or anything. So it's like fully sovereign chain. and it's a platform because it allows you to support.
+
+or like to deploy the smart contracts and interact with the smart contracts are directly deployed to the EVMOS EVM. That's how we also allow bridges to be built on top of EVMOS. So like, for example, all the AVM bridges that are out there connecting Ethereum with different EVM chains like polygon, moon being moon, river, cello, et cetera, also to the other L2s can be actually deployed.
+
+using our EVM because we're fully EVM equivalent. And then that also comes with the IVC components, with the IVC interoperability components that allows developers to interact with all these different other blockchains and then, and thus get more access to liquidity from different sources like Cosmosis or the Cosmos Hub or any other blockchain in the Cosmos ecosystem.
+
+So it's truly like a fully interoperable sovereign smart contract platform that has its own valid or said it's fully governed by the stakeholders of the platform.
+
+citizen_cosmos 
+At same time, it's like a protocol for other bridges as well, which kind of makes it a bit different, I guess, makes it interesting to see how it's going to develop. always been, and I would love to hear your thoughts on that. are like a couple of times discussed with some guests that we had on the show and just in general with people who've been into crypto for a long time and how many layers like a blockchain or like we can handle inside of blockchain. let's say like, Evmos is an AVM.
+
+on top of Cosmos, but you can build something, I guess, on Evmos, which is going to be like, another layer project, which internet layer. Can you build another layer and another layer? is, it even possible what I'm talking about? Does it make sense? Do you think that people are going to be doing that, or are they going to stop it? Like, OK, you have a layer one, layer two, layer three, and that's it. Or are people going to build layer ones on top of layer threes kind of thing?
+
+federico_kunze_k_llmer 
+Well, that's not the scope of the project. It's more like enabling like full smart contract functionality with fast finality as well. so all the smart contracts or like all the transactions that involve the smart contracts are executed after the blog is committed. So it's faster than Ethereum in terms of like finality because it's running BFT.
+
+Also the securities guarantees are different from Ethereum, one third versus 51 % in order to perform an attack. So that's more like the trade-off between like BFP and Nakamoto consensus. the topic about building on top of like different ledgers is something that we are going to work with Celestia.
+
+to support an optimized EVM for rollups as well. so having Celestia as a data availability layer, Evmos, EVM optimized only for rollups to be deployed on top of Evmos and then like you can roll up using a rollup. So it's kind of confusing, that's something that we'll be like working closely with the Celestia team next year.
+
+federico_kunze_k_llmer 
+we recently announced something on our blog post that will be like collaborating with them and work and working on this solution. it's going to end up being like the Evmos team working on where we're best at, which is like EVM and smart contract interoperability components on the Celestial team working on the data availability solution, which is what they were building an optimum as well, which is.
+
+an optimistic tenderness for consensus.
+
+citizen_cosmos
+Good that you mentioned it because I did have a question about it. And it sounds like what you guys are basically doing in collaboration with them. And if I put IBC in there as well, it kind of sounds like the Web3 OSI model kind of thing, an equivalent to that, where you have like a data availability layer, have like the smart contract layer, you have the communication layer. So is it like a kind of an OSI kind of like model kind of thing? Would you describe it as that?
+
+federico_kunze_k_llmer 
+yeah, I think in the future, once Celestia is out, I think we won't see many other L ones being built. I think Celestia is effectively going to be the last layer one solution, which will provide the ability for all these other blockchains as well. it was going to be like the availability layer. like instead of the blockchains, like checking if the blocks are valid
+
+it's, gonna have resulting like the block chains checking if the blocks are available or none on the Celestia availability and the chains themselves instead of being L ones will be like the settlement layer. So,  that's how, I see the ecosystem evolving in a way.
+
+with Celestia being like the data availability for all of the new blockchains being built. What needs to be figured out as well is like a migration path for the existing blockchains. So the data is published on Celestia and migrated from like Tendermint consensus in the case of Cosmos to something that runs on top of Optiment, which is this.
+
+Optimus is Tendermint Celestia building.
+
+citizen_cosmos
+Do you think that this is going to cause the biggest problem? We see now some Web3 projects that are trying to move data from Web2 to Web3. I'm not talking just about IPFS here. There are several others. Some use crawlers or whatever, automized robots to crawl Wikipedia.
+
+uploaded into IPFS and there are many different ways to take data that we have in Web2 and upload it to Web3, but we're seeing that people are not really incentivized to do that. People are not really, how to say, well, of course, blockchains offer economic incentives, but is it still going to be a problem to get people, to transfer, or developers rather, should I say, from existing blockchains to Celesta?
+
+federico_kunze_k_llmer
+Yeah, that's a great question. So I think in general, the migration path is still not clear. I'm not an expert in terms of data availability. So this is definitely a topic that the Celestia team is working on the migration paths for existing blockchains. But what we're building with them is sort of like this cooperation for 
+
+optimized EVM, then access a settlement layer. in terms of costs, like the, this new chain that will act as a settlement layer will be, connect directly connected with EVMOS and like use the EVMOS token for security as well. So I think that's the main,  the first step, in terms of like using the same token for like.
+
+a potential migration, but we'll have to see how the technology evolves. Celestia is still early. They just announced their initial developer net, which is earlier than just a public test net. So once we see that technology like publicly available, we'll be able to see like how other projects are reacting or how like the challenges of migrating the existing solutions to.
+
+to Celestia would be.
+
+citizen_cosmos 
+I want to ask you a question, it's kind of obvious. Like, I mean, obviously the goal of any L1 is to get developers to build projects and users to use those projects. But do you have any specific targets at EVMOS in terms, I don't mean targets in terms of numbers or in terms of, I don't know, we want like 10 developers and a hundred million dollar market cap projects in one month. I mean, 
+
+What kind of projects are you after? I you named it a hackathon, you had a wallet with the fully VM integration and a couple of more projects, but who are you going to try to attract and well, how is a bit of a different story, I guess, but I'm more interested in the who.
+
+federico_kunze_k_llmer
+Yeah. So we're trying to attract projects and want to leverage the interoperability functionality from EVMOS and also like the token economics and like basically getting a new serves. the Cosmos ecosystem has been, even though it has IVC interoperability between like the different blockchains in the ecosystem, it has generally been very isolated with the rest of the Ethereum on
+
+in general like EVM ecosystem. So we want to be the main point of entry for all these different projects like trying to get a new user base from the Cosmos community as well. I know Terra has a few bridges, also Thorchain and a few others and now with the Gravity Bridge as well. But in general, we wanna be the point of entry for all these different projects that wanna expand and have different.
+
+have an access to the entire ecosystem as well. So that's what we're trying to go for and our token economics is being built in terms of how can we create the right incentives for developers to migrate and to deploy their smart contracts on EVMOS and thus expand their user base to the entire Cosmos ecosystem.
+
+citizen_cosmos 
+Talking about the tokenomics, I personally have been waiting for a while to see how you guys actually rolled it out. And I guess the first part that you rolled out was direct airdrops, right? Do you want to share a little bit about that? That's a bit wild. I love it. We all love it.
+
+federico_kunze_k_llmer 
+Yeah. when trying to design the urge of the, first thing that we're discussing is how do we get up like us broad token distribution and how do we incentivize also Ethereum users to basically collaborate,  start working on deploying their contracts to EVMOS and for users and retail users in EVMOS
+
+in the ethereum ecosystem to also interact with contracts directly and that will be deployed on EVMOS. So that's why we've decided to have like different categories. The first category being like Cosmos ecosystem that involves Cosmos Hub and Osmosis users. So Cosmos Hub is gonna be like
+
+Stakers and for as EVMOS will be like Staker's LPs and iron holders as well. So we're gonna like, we're gonna reward like it's like a few different pools on osmosis, iron holders and also like staking on the osmosis side. And so like that's the first category. The second category was like Ethereum.
+
+because we want to bring and incentivize all these different users to start migrating. But we didn't want to just like take the token holders and like have a not fair distribution. the users that we care from Ethereum are the ones that are actually using Ethereum. And that's why we roll out with this concept of the gastrop. So the gastrop is basically you,
+
+filters some of the most used applications. So we created a list of like the application that had like high TVL or high user, a high volume, for example. And then we basically are rewarding users based on the amount of gas that they spent. And the whole narrative behind the rec drop is that all these users are getting wrecked in terms of like,
+
+federico_kunze_k_llmer 
+How much fees are they spending? So the more gass you spend based also on the amount of tokens on yeah, the more gass you spend and because of the gas price for Ethereum is really high right now then you're getting like Some tokens back because of all the gass you spent on Ethereum. So that's kind of like the concept of the track drop for Ethereum users and also
+
+And because we wanted to follow this narrative and create like a lot of discussion in the ecosystem, we wanted to also like reward victims for different like projects that have been hacked in the ecosystem. So we collected the addresses from like several hacks and vulnerabilities in the Ethereum ecosystem.
+
+And we're rewarding like the victims of those projects. So effectively if you've been a victim of an attack of the project that we mentioned in the in the rec drop announcement, you'll be eligible for tokens as well. So that's kind of like the whole concept of the narrative behind the rec drop. The amount of fees that you spend on Ethereum, vulnerabilities, including MEV also like on the rec.
+
+section and for Cosmos is just like the amount of the amount of gass that you then sorry they among the token price that has yeah decreased significantly over the past few months as well.
+
+citizen_cosmos
+Would you share any more details about the tokenomics? If you want, of course. Apart from the drop, the drop, okay, but I know it's pushing you, I know it's pushing you, you don't have to, but if you can, it would be nice to hear.
+
+federico_kunze_k_llmer 
+So we thought about EVMOS itself on any smart content platform to be like sort of like a two-way marketplace in which developers and users meet together and in which, like, for example, like developers deploy their decentralized applications and users interact with these dApps using a UI or so.
+
+Uniswap, you can think of all these apps on Ethereum. For the token economics, we want to incentivize both sides of the marketplace so that developers and users are actually incentivized to use the applications on the users for interacting with these applications. That's kind of the way we're thinking about it. We'll probably be releasing more details about the token economics design.
+
+but that's how we're looking at it right now. the other thing that I can mention is like, we're, another calling of the token economics that we're designing right now is like also, adding, fee rebates for IVC relay years. So we layer sun transfer all these pockets between like two connecting chains in this case, like EVMOS and the cosmos hub or EVMOS and osmosis.
+
+et cetera, will be eligible for fee rebates. This will be a parameter in the chain. depending on the amount of fees, and of course, once the new fee model for IVC transfers will be out, there will also be gaining fees and also getting the rebates for the transactions that they spend the most resources for, which are...
+
+updating the clients, the live clients on each of the connecting chains and obviously transfers.
+
+citizen_cosmos
+That's really great news that you guys are thinking about relays because an incentivization of relays sorry, because there's been a lot of problems recently and people have started to talk about it, speak up, everybody who's launching relays saying, well, it costs a hell of a lot of money. It's not incentivized anywhere at all. And it's a bit of a strange how people are going to expect it to.
+
+hold onto that infrastructure. As an infrastructure provider, we're not a relayer, but we would like to be sometimes. We're a validator. And maybe we'd like in the future to do a relaying as well. And it's great to see that projects are starting to think about it. So it's really cool that you guys do that. Is there any project out there in the blockchain space that you would say that the tokenomics design is something you think is a good example of a tokenomics design? Not something you guys copied into EVMOS or took
+
+know, ideas from or whatever, of course, that's always like that, but a project that you would say, guys, would suggest to check that out in terms of tokenomics.
+
+federico_kunze_k_llmer 
+I think one of the token economics designs was definitely Cosmosis. We took that as a basis for our airdrop and we wanted to expand it. We didn't really like the quadratic voting mechanism that they had because in a way it capped the whales in the
+
+Atom community, it wasn't like something that you could say was like fairly distributed. So we went instead for more like a pro rata approach in which you have like different things that you need to comply with. some of them are like, give you points. and those points have different weights. For example, like if you stay versus if you like LP to one pool, like they, they might have like different weights and those weights.
+
+And those points assigned to each of these tasks will be like pro rata to the amount of tokens that each category will have. So for example, the more points you get, that will be pro rata to the total amount of points of all the users. So the more users, yeah, we'll like distribute everything pro rata.
+
+in that way you're basically incentivizing for usage and not for, for like large token holders or large AOP providers.  that's, that's kind of like the main difference. think like it's, more fair for users that may not have like large amount of like OP shares or, tokens. we're like basically distributing everything pro rata based on these options.
+
+citizen_cosmos 
+I have another strange tokenomics question and I don't know if you've been following the whole bribery, let's call them worse, with Terra, Ethereum and all that and the bridges like giving incentivize and stablecoins to bridges. So my question is, EVMOS is going to be that, I think so and we all think so, I guess, like a place where a lot of
+
+money, well, DeFi is going to enter into Cosmos and some DeFi going to go out to Ethereum from Cosmos. and probably because it has ABC, we're going to see all the other projects like Terra and everybody else joining as well. Do you think that we will get in EVMOS to that bribery wars and will it be good or bad? I mean, the word bribery is kind of like a bit loud, of course. And you could just say incentivization, but like, know, when a
+
+project comes and gives a specific incentivization to a bridge just to incentivize it and to get people to use it more. Would you think it's a problem or is it a loophole? or is it not I mean, what do you think in general about all that?
+
+federico_kunze_k_llmer 
+So I have two
+
+thoughts about this. one is like these different bridges have different layers of different degrees of security. So it's not the same talking about like a single multi-secure bridge than another bridge that has like a optimistic mechanism that you can like.
+
+claim back in case like there's something happening. So there's like a lot of things in terms of like the user can choose a different like bridges based on the security and the risk profile that they have. So that's one thing. So I think like incentivizing different users is I guess it will come down to the end user.
+
+to the preferences that they have. And also in terms of the incentives, so bridges need some liquidity to like be like for your operational. I don't think that's necessarily bad, because otherwise if you don't have the liquidity, then there's no really like enough bridging mechanisms. like if one...
+
+If one side of the bridge is like not really
+
+federico_kunze_k_llmer 
+have enough liquidity, then you won't be able to transfer. And yeah, so in terms of the incentives, I would say it's not necessarily bad for the ecosystem. And in the end, will be resolved by which has the most functionality rather than necessarily like incentives. There are a lot of attacks in areas that also can happen.
+
+through incentives. So like if you're incentivizing enough one bridge and then it has a security vulnerability or like you could, for example, start bridging all these tokens and then like through farming, through bridge farming, you can get a lot of tokens. So that's something like all these chains should be like really aware before incentivizing the different bridges. So yeah, that's kind of like my thought in terms of like user security and risk profiles.
+
+and incentives being another like a tax surface for the smart contract platforms and in general for the bridges.
+
+citizen_cosmos 
+The greatest thing about attacks is that the best ones come from where you don't expect them, only when the platform gets really used and then somebody's like, eh, that's it. I mean, like with a lot of stuff like Mav and stuff like that, right? It all came out much later than we straight, when the whole, mean, it kind of grew with the industry, right? Most of the attack vectors. And I hope that you guys manage to deal with wherever it comes.
+
+Anna, do you have any more questions about EVMOS? I want to move to a couple of more other questions, but maybe you do as well.
+
+ann 
+Not about EVMOS. That excites me more. It's a story of how EVMOS was burned like a project. could you tell a little bit how you get to the idea that, okay, that virtual machine on Cosmos is gonna be the interesting thing.
+
+federico_kunze_k_llmer 
+EVMOS itself, was born, from the concept of these old project called Etherment. Etherment was, an RND project, that started in late 2016. like, even before Cosmos Hub and the Cosmos ICK was being built.
+
+So the whole concept was like proving that you can build the EVM on top of Tendermint so that you can run smart contracts using fast finality. Then this project was migrated to Cosmos and like there were a few teams like working on it, but no one like even like no one gave it enough like resources or support from like a community point of standpoint.
+
+So once these multiple parties decided to de-prioritize the project, we saw the opportunity of not only having just an EVM on Cosmos, but also expanding the scope of the project to be a fully interoperable smart contract platform in which you can build all these interesting economic models for smart contracts to be deployed.
+
+The scope, the initial scope of Ethermin was expanded in a way that wasn't there before. And that's ultimately what we want to do is like create a platform in which we support like interoperability and interchain composability so that other smart contract platform can also interact with smart contracts deployed on EVMOS. And for example, like the Cosmos Hub.
+
+Even though it doesn't have a smart contract, like environment like Cosmos can still like interact with the smart concepts that are deployed on EVMOS. So like it's all about like, inter-chain composability, scalability for smart contracts as well, and giving them access to liquidity. so and how the project started like initially was more or less
+
+federico_kunze_k_llmer
+when I stopped my consulting for chainsafe after they decided not to continue with a project, I reached out to my co-founders, Akasha and Nick, who I was like friends, since like blockchain Berkeley, blockchain Berkeley was this blockchain community, student organization from UC Berkeley where like a lot of projects in the cosmos ecosystem and also from Ethereum ecosystem.
+
+like we're funded by some of the alumni. Sunny was also part of blockchain Berkeley as well with Dave from also co-founder from osmosis and the whole IBC team is also like the core team, like two thirds of the core team was also part of blockchain Berkeley. one of the main reasons why we have IBC today and also osmosis and,
+
+My co-founders were active in the Cosmos ecosystem and in general, the blockchain ecosystem. And they were like really excited to start this year together.
+
+citizen_cosmos 
+I remember we had an episode with ChainSafe. I believe, 2020, right, Ana? And... Yeah, if not even longer. And of course, like, if you take now those two episodes, I guess...
+
+ann 
+Yeah, it was like almost a year ago.
+
+citizen_cosmos 
+It's a big difference between what was planned and how it come. But it was started with Aragon chain, That was the whole kind of like how it probably didn't start with Aragon chain for you, but it started with Aragon chain for the people who heard about it yet. And is ChainSafe at all involved still in EVMOS or no?
+
+federico_kunze_k_llmer
+No, they're not involved. They had other priorities with different ecosystems as well. They started working on other projects. So they haven't supported the project since they left in early 2021. So like run January. So the whole, after Aragon chain pulled the plug on the project and they decided not to go.
+
+with Aragon chain and instead rely on other solutions like, for example, the XDAI chain, cetera.
+
+Yeah, they decided not to continue working on it and also because they didn't have enough resources to spend on the project. That was the main reason, I would say. Yeah, the XDI just rebranded to Gnosis chain. 
+
+citizen_cosmos 
+Now it's Gnosis chain, right? It's a new thing.
+
+citizen_cosmos
+an interesting rebrand. 
+
+ann 
+I'm really interested about Berkeley Lummi group. Could you tell us a little bit about that group, about how that happened? Because I guess at that days it wasn't like so mainstream as it is now. So why you decided to join the group? Why you personally be so interested in
+
+blockchain industry at that time.
+
+federico_kunze_k_llmer
+Yeah. I was in Berkeley for only a semester. I was an exchange student. I studied computer science and industrial engineering in Chile. So when I went to Berkeley, I was working on different like machine learning and AI projects. And when I went to Berkeley initially, like I realized like everyone was working on machine learning and AI. So 
+
+It was a lot of demand, but also a lot of offers from like computer science, and like engineers in general. So I wanted to join like, and learn a new technology that wasn't like so mainstream that I could get early and also like get my career started as well. So I chose blockchain Berkeley because they had.
+
+a consulting arm, like you could work with real companies that were interested in like doing projects with blockchain. So I was involved early on with a project with Qualcomm that they wanted to build like a private blockchain solution with their different providers and suppliers.
+
+But the other thing that I found really interesting about blockchain Berkeley is they provide, they also have like an R and D, like research and also like an education arm, which is really useful to get started with all the blockchain lingo and everything technical about blockchain. So I started like my career, like learning everything about blockchain with blockchain Berkeley. my
+
+Co-founder Akash is one of the co-founders of Blockchain at Berkeley. so my two co-founders were the ones that actually taught me how to write solidity smart contracts early on because they were like the teachers of these Blockchain for Developers course at UC Berkeley. So they have like a lot of experience in terms of like smart contracts and blockchain in general.
+
+federico_kunze_k_llmer
+it was nice to be like, reunite together and like, create this project. They've been working on multiple startups in the space and also like web2 like traditional tech. So they have like a lot of experience in that side as well. And I think like blockchain Berkeley has been foundational for Cosmos ecosystem because Tendermint had an office in Berkeley. So we used to hang out a lot with the Jay Kwan.
+
+also like the entire Berkeley team there. Adrian that is now working for Anoma was also usually there on the entire like Tendermen and Cosmos ecosystem was like heavily involved by the early blockchain Berkeley alumni as well.
+
+citizen_cosmos 
+have a slightly controversial question about that, I guess, which the answer could be both ways. I see pros and cons, but again, we are more interested in your opinion. Do you think it's an issue for decentralization in terms of whatever you believe that Spectre is, between centralization and decentralization, where a large group of people, and again, this is a controversial devil's advocate question, comes from one
+
+like, let's say group where they know each other and they could have bigger stakes or whatever, I guess you understand where the question is going. Do you think that it's bad for decentralization of a future project if it's like such an open project and a big project where a lot of people that have been near the foundation of the projects know each other and could potentially potentially in the future, I don't know, communicate with each other or
+
+found the vector of attack or whatever. mean, again, this is controversial, a devil's advocate question. So feel free to answer it or not to answer it, of course.
+
+federico_kunze_k_llmer 
+I can speak more about that because we were just students. none of us participated in the ICO that were involved in the ecosystem. I joined as an intern, so I didn't have access to any of the token sales or any of the projects. I remember while being...
+
+still with Blockchain Berkeley, I used to read the IVC on Cosmos paper as well, like on the whole governance procedures and all that, how we used to have like different white paper sessions. And really what motivated us was like building these technologies. In terms of decentralization, like I guess and it's still the case like
+
+not many developers were available for different projects. So, I guess, for Cosmos and Tendermint, having like these pool of like young motivated students that were able to like also contribute a lot back to the project was really beneficial for the early stage of the project because literally like all of us knew what blockchain meant and like both at a high level and also from a technical perspective.
+
+We were like doing all these white papers circles like every week where we would read a new white paper that came and also like analyze it from like a point of like a technical perspective. It makes sense or not. And back in 2017, there were a lot of white papers coming out and most of them were like not really like relevant, but I guess, it was very beneficial in terms of having this pool of engineers like early on for the ecosystem.
+
+citizen_cosmos
+I guess it is a great thing in terms of I think AZ16, had it, they were the first to talk about it publicly. Not the first, probably, but one of the biggest companies who said, the index specter of centralization, decentralization, it's actually a really good thing where the project starts from that centralized ball, I guess, and slowly evolves and decentralizes into more and more and more, reaches out to more people and more communities ..
+
+And I guess this is a perfect example of how this is evolving right now. And Anna again, sorry, stealing for another question.
+
+ann
+I just want to ask, do you still spend some time for R &D or are you so involved into the project building and development that you don't have time for that?
+
+federico_kunze_k_llmer
+I would definitely need more time to do more R and D. I'm usually like up to date with everything that's going on in the Cosmos ecosystem. but, it's really hard to catch up with all these different blockchains that are being developed right now. I don't have much context about what's going on with near Celestia, for example, cause I'm not.
+
+heavily involved. So I try to focus my attention mostly like on the theorem slash EVM ecosystem on the Cosmos ecosystem, because that's where we can provide value. My co-founders have been like also involved in different blockchains in different communities. So they know a lot about like all these other blockchains. So as long as each of us like can provide value from different perspectives, that's, I think that's really relevant.
+
+for their project in terms of R and D. 
+
+citizen_cosmos 
+do you think you guys are going to connect to other layer ones? I mean, not via other bridges, but in terms of how you're right now building that connection between, I guess, the two biggest ecosystems today in blockchain?
+
+federico_kunze_k_llmer 
+I guess in the future we'll see. the two main platforms or like smart contract platforms will be like EVM and Wasm. And I would expect every major layer one to have a blockchain or a runtime that supports EVM and also like Wasm.
+
+And we're seeing that already, like, EVM is widely supported by most of the L1s. So you can think of like Celo, also in the Polkadot ecosystem, there are like EVM chains, like also in Solana, Ninger, et cetera. So we'll be indirectly connecting to these ecosystems through the EVM bridges.
+
+So yeah, also Avalanche, so like all these different blockchains will be like also compatible and EVMOS will be the point of entry through the different EVM bridges to like enter the entire Cosmos ecosystem.  
+
+citizen_cosmos 
+Nice, and I guess shared security as well will help you to attract more to the cosmos ecosystem and more validators as well, right? mean, there's a lot of talk about it recently.
+
+federico_kunze_k_llmer 
+Yeah. The next year will be like focusing also like on share security and we plan to make at EVMOS one EVM chain. Then is it's like a hub for the other EVM application specific chains that will spun up and then in the entire Cosmos ecosystem.
+
+citizen_cosmos
+It's been like a really nice description in my opinion the last question, we kind of ask people who we think that it's nice to learn from people who are founders and people who build web 3, generally not necessarily founders of projects, but people who shape the future industry, what motivates them? So the question to you is maybe you could share a couple of motivational things and it could be anything. It could be books, activities, music, GitHub pages, that motivate you in your daily life to build whatever
+
+Well, these days it's Evmos, but maybe in the future it will be more projects, we hope. So what motivates you?
+
+federico_kunze_k_llmer
+What motivates me is to like building the base infrastructure layer for all these different projects to be built in. Right now blockchain is mostly focusing on finance and we're like only seeing a nascent NFT ecosystem. So, but in the future, think like NFTs will be huge in terms of like adoption and like connecting like the real, world with the blockchain.
+
+like increasing transparency and solving coordination problem within the different nations and communities. So my motivation in general is to build this infrastructure layer. Right now, no one has built any smart contract that is fully like interoperable. So that was like my main core when I decided to build EVMOS to build the base infrastructure layer.
+
+and build the right incentives so that people will actually benefit from the interoperability of smart contracts. use cases that we don't even know that will exist right now will be possible through this infrastructure that will be set in place through EVMOS and the entire blockchain ecosystem as well. And we want to be like the main point here is that we want to create all this infrastructure for developers and users to interact with.
+
+in the future. 
+
+citizen_cosmos 
+I'm going to still carry on the question a little bit for you to answer a little bit more. But what helps you in your daily life to not to set off your goal? Like I mean thats, technology is what motivates you. I loved it. But do you listen to a song every morning that you wake up and go, OK, now I listen to it, now I can go and build? Or do you read something? Do you meditate? Do you walk the dog? I don't know, like something like that that gets you in the mood to build the bridge.
+
+federico_kunze_k_llmer
+I try to set some time for myself in the morning, I try to meditate or do sports, I think like balancing like your life, especially when you're in a high stress job is
+
+It's very relevant because if you're not taking care of yourself, then you're not taking care of your company and your employees as well. And also your entire community. So, I think it's really important to be humble and like be aware and mindful of the things that you're doing and at all times. Like being present and instead of like throwing bullshit over there and Twitter, whatever.
+
+And starting like drama fights with whatever other projects out there. that's my mindset at least in terms of, interacting with the community and like taking care of myself and, and like, be mindful of the, of the needs of employees and community and, listen, just listen to the others.
+
+citizen_cosmos
+Nice. love it. But mean, when you said bullshit on crypto Twitter, I was going to say, but Sarah, I isn't that the essence of blockchain? Okay.
+
+federico_kunze_k_llmer
+I think like a lot of people like only care about like making money in this ecosystem. Unfortunately, blockchain is a perfect technology for doing that because then it's like technology plus finance. But at the same time, like we're building like foundational infrastructure and then often is
+
+not really like appreciated from all these different like people that are just
+
+caring about like the money or like how much, how much like, interest they can get over there. or like how high can this work? How expensive their NFT is. and I think like the base layer infrastructure is usually what I care the most about. And like what it would enable to like create all these interesting applications for, users that really need them the most.
+
+citizen_cosmos 
+Your absolutely right, because I mean, just before we had this recording, like an hour before it, I was invited to a round table to speak about some things. there were people, were, there was a couple of guys from YouTube. There was somebody from Holochain. They're still around apparently. And there was a couple of more projects. And after 45 minutes, I had to log off because I mean, the conversation was just about price and NFTs. I said, guys, I'm sorry, it's a bit boring. I'm going to go.
+
+I mean, people talk about prices and NFTs and how to make more money with NFTs and rather than like, talking about things like data availability layers, like talking about IBC rather than talking about the, like you said, the future foundation for infrastructure and God knows how, or let's say Satoshi knows how long will these systems be around for? don't know how many, maybe thousands of years or maybe more. don't know that. So I absolutely agree with you.
+
+Spot on.
+
+federico_kunze_k_llmer
+Yeah, lot of people are investors in general, when they join your community channels are like usually like asking like when the token is going to be available or how can they like buy the token instead of like learning more about the project or asking the right questions. But I think like it's okay. Like we'll be slowly transitioning and it's our job as well to like educate or like give more resources to people to learn on like how to interact and like show them like what is actually being built on top.
+
+of our product. Like all the different products and all these different interesting applications that are built on top, they're not actually like just like money making obligations, but are actually benefiting and like serving coordination problems or actually like giving access to finance to people that weren't, that didn't have access before.
+
+citizen_cosmos
+I think this is a great note to finish up because we like to think of ourselves, that's what we do, try to give people a resource to connect to people like you who build that infrastructure and to learn from, well, if they choose to, of course, from the projects, the infrastructure, that there are other values apart from just earning money 
+
+let's hope that that's going to be the narrative, like you say, in years to come. Federico, thank you very, very, very much for coming. I know you guys are super busy with everything right now, with the testnet and with designing the rest of the tokenomics and everything else. Let's see. We hope that you guys are going to launch the sooner, the better. But of course, don't hurry. Thank you very much, everybody.
+
+ann 
+Thank you. 
+
+ann 
+Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

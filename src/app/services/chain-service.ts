@@ -24,6 +24,10 @@ export type NetworkValidatorsWithNodes = Node & {
   };
   votingPower: number;
   totalSlots: number | null;
+  totalSlotsProposals: number | null;
+  totalSlotsAttestations: number | null;
+  missedSlotsProposals: number | null;
+  missedSlotsAttestations: number | null;
 };
 
 export type CommitteeMember = {
@@ -49,8 +53,12 @@ const getAll = async (
   take: number,
   sortBy: string = 'name',
   order: SortDirection = 'asc',
+  showAll: boolean = false,
 ): Promise<{ chains: ChainWithParamsAndTokenomics[]; pages: number }> => {
-  const where: ChainWhereInput | undefined = ecosystems.length ? { ecosystem: { in: ecosystems } } : undefined;
+  const where: ChainWhereInput | undefined = {
+    ...(ecosystems.length ? { ecosystem: { in: ecosystems } } : {}),
+    ...(!showAll ? { supported: true } : {}),
+  };
 
   const orderBy =
     sortBy === 'fdv'
@@ -167,6 +175,10 @@ const getAztecValidatorsWithNodes = async (
       consensusData: {
         select: {
           totalSlots: true,
+          totalSlotsProposals: true,
+          totalSlotsAttestations: true,
+          missedSlotsProposals: true,
+          missedSlotsAttestations: true,
         },
       },
     },
@@ -213,9 +225,11 @@ const getAztecValidatorsWithNodes = async (
         missedBlocks: null,
         outstandingRewards: null,
         outstandingCommissions: null,
+        totalEarnedRewards: null,
         delegatorsAmount: 0,
         consensusAddress: '',
         uptime: null,
+        rank: null,
         inCommittee: false,
         committeeEpoch: null,
         validator: {
@@ -229,13 +243,19 @@ const getAztecValidatorsWithNodes = async (
         },
         votingPower: 0,
         totalSlots: null,
+        totalSlotsProposals: null,
+        totalSlotsAttestations: null,
+        missedSlotsProposals: null,
+        missedSlotsAttestations: null,
       } as NetworkValidatorsWithNodes;
     }
 
     const firstNode = nodes[0];
     const totalTokens = nodes.reduce((sum, node) => sum + BigInt(node.tokens), BigInt(0));
     const totalDelegatorShares = nodes.reduce((sum, node) => sum + parseFloat(node.delegatorShares), 0);
-    const nodesWithMissedBlocks = nodes.filter((node) => node.missedBlocks !== null && node.missedBlocks !== undefined);
+    const nodesWithMissedBlocks = nodes.filter(
+      (node) => node.missedBlocks !== null && node.missedBlocks !== undefined && node.uptime !== null && node.uptime !== undefined,
+    );
     const totalMissedBlocks =
       nodesWithMissedBlocks.length > 0
         ? nodesWithMissedBlocks.reduce((sum, node) => sum + node.missedBlocks!, 0)
@@ -247,6 +267,10 @@ const getAztecValidatorsWithNodes = async (
     const totalOutstandingCommissions = nodes.reduce((sum, node) => {
       const commissions = node.outstandingCommissions ? parseFloat(node.outstandingCommissions) : 0;
       return sum + commissions;
+    }, 0);
+    const totalTotalEarnedRewards = nodes.reduce((sum, node) => {
+      const rewards = node.totalEarnedRewards ? parseFloat(node.totalEarnedRewards) : 0;
+      return sum + rewards;
     }, 0);
     const totalDelegatorsAmount = nodes.reduce((sum, node) => sum + (node.delegatorsAmount || 0), 0);
 
@@ -269,6 +293,27 @@ const getAztecValidatorsWithNodes = async (
     }
     totalSlots = hasSlots ? slotsSum : null;
 
+    let totalSlotsProposals: number | null = null;
+    let totalSlotsAttestations: number | null = null;
+    let missedSlotsProposals: number | null = null;
+    let missedSlotsAttestations: number | null = null;
+
+    for (const node of nodes) {
+      const cd = node.consensusData;
+      if (cd?.totalSlotsProposals != null) {
+        totalSlotsProposals = (totalSlotsProposals ?? 0) + cd.totalSlotsProposals;
+      }
+      if (cd?.totalSlotsAttestations != null) {
+        totalSlotsAttestations = (totalSlotsAttestations ?? 0) + cd.totalSlotsAttestations;
+      }
+      if (cd?.missedSlotsProposals != null) {
+        missedSlotsProposals = (missedSlotsProposals ?? 0) + cd.missedSlotsProposals;
+      }
+      if (cd?.missedSlotsAttestations != null) {
+        missedSlotsAttestations = (missedSlotsAttestations ?? 0) + cd.missedSlotsAttestations;
+      }
+    }
+
     return {
       ...firstNode,
       tokens: totalTokens.toString(),
@@ -276,11 +321,16 @@ const getAztecValidatorsWithNodes = async (
       missedBlocks: totalMissedBlocks,
       outstandingRewards: totalOutstandingRewards > 0 ? totalOutstandingRewards.toString() : null,
       outstandingCommissions: totalOutstandingCommissions > 0 ? totalOutstandingCommissions.toString() : null,
+      totalEarnedRewards: totalTotalEarnedRewards > 0 ? totalTotalEarnedRewards.toString() : null,
       delegatorsAmount: totalDelegatorsAmount,
       uptime: avgUptime,
       jailed: isJailed,
       votingPower,
       totalSlots,
+      totalSlotsProposals,
+      totalSlotsAttestations,
+      missedSlotsProposals,
+      missedSlotsAttestations,
     } as NetworkValidatorsWithNodes;
   });
 
@@ -310,6 +360,9 @@ const getAztecValidatorsWithNodes = async (
     } else if (sortBy === 'uptime') {
       aVal = a.uptime || 0;
       bVal = b.uptime || 0;
+    } else if (sortBy === 'rank') {
+      aVal = a.rank ?? Number.MAX_SAFE_INTEGER;
+      bVal = b.rank ?? Number.MAX_SAFE_INTEGER;
     } else if (sortBy === 'moniker') {
       aVal = a.moniker || '';
       bVal = b.moniker || '';
@@ -399,6 +452,10 @@ const getChainValidatorsWithNodes = async (
       consensusData: {
         select: {
           totalSlots: true,
+          totalSlotsProposals: true,
+          totalSlotsAttestations: true,
+          missedSlotsProposals: true,
+          missedSlotsAttestations: true,
         },
       },
     },
@@ -434,6 +491,10 @@ const getChainValidatorsWithNodes = async (
       const commissions = node.outstandingCommissions ? parseFloat(node.outstandingCommissions) : 0;
       return sum + commissions;
     }, 0);
+    const totalTotalEarnedRewards = nodes.reduce((sum, node) => {
+      const rewards = node.totalEarnedRewards ? parseFloat(node.totalEarnedRewards) : 0;
+      return sum + rewards;
+    }, 0);
     const totalDelegatorsAmount = nodes.reduce((sum, node) => sum + (node.delegatorsAmount || 0), 0);
 
     const nodesWithUptime = nodes.filter(node => node.uptime !== null && node.uptime !== undefined);
@@ -462,6 +523,29 @@ const getChainValidatorsWithNodes = async (
       totalSlots = hasSlots ? slotsSum : null;
     }
 
+    let totalSlotsProposals: number | null = null;
+    let totalSlotsAttestations: number | null = null;
+    let missedSlotsProposals: number | null = null;
+    let missedSlotsAttestations: number | null = null;
+
+    if (needsConsensusData) {
+      for (const node of nodes) {
+        const cd = node.consensusData;
+        if (cd?.totalSlotsProposals != null) {
+          totalSlotsProposals = (totalSlotsProposals ?? 0) + cd.totalSlotsProposals;
+        }
+        if (cd?.totalSlotsAttestations != null) {
+          totalSlotsAttestations = (totalSlotsAttestations ?? 0) + cd.totalSlotsAttestations;
+        }
+        if (cd?.missedSlotsProposals != null) {
+          missedSlotsProposals = (missedSlotsProposals ?? 0) + cd.missedSlotsProposals;
+        }
+        if (cd?.missedSlotsAttestations != null) {
+          missedSlotsAttestations = (missedSlotsAttestations ?? 0) + cd.missedSlotsAttestations;
+        }
+      }
+    }
+
     return {
       ...firstNode,
       tokens: totalTokens.toString(),
@@ -469,11 +553,16 @@ const getChainValidatorsWithNodes = async (
       missedBlocks: totalMissedBlocks,
       outstandingRewards: totalOutstandingRewards > 0 ? totalOutstandingRewards.toString() : null,
       outstandingCommissions: totalOutstandingCommissions > 0 ? totalOutstandingCommissions.toString() : null,
+      totalEarnedRewards: totalTotalEarnedRewards > 0 ? totalTotalEarnedRewards.toString() : null,
       delegatorsAmount: totalDelegatorsAmount,
       uptime: avgUptime,
       jailed: isJailed,
       votingPower,
       totalSlots,
+      totalSlotsProposals,
+      totalSlotsAttestations,
+      missedSlotsProposals,
+      missedSlotsAttestations,
     };
   });
 
@@ -497,6 +586,9 @@ const getChainValidatorsWithNodes = async (
     } else if (sortBy === 'uptime') {
       aVal = a.uptime || 0;
       bVal = b.uptime || 0;
+    } else if (sortBy === 'rank') {
+      aVal = a.rank ?? Number.MAX_SAFE_INTEGER;
+      bVal = b.rank ?? Number.MAX_SAFE_INTEGER;
     } else {
       aVal = a[sortBy as keyof typeof a] || '';
       bVal = b[sortBy as keyof typeof b] || '';
@@ -588,6 +680,21 @@ const getCommitteeMembers = async (
   }
 };
 
+const getChainHealthMap = async (chainIds: number[]): Promise<Map<number, number>> => {
+  const result = await db.node.groupBy({
+    by: ['chainId'],
+    where: { chainId: { in: chainIds }, uptime: { not: null } },
+    _avg: { uptime: true },
+  });
+  const map = new Map<number, number>();
+  for (const entry of result) {
+    if (entry._avg.uptime !== null) {
+      map.set(entry.chainId, entry._avg.uptime);
+    }
+  }
+  return map;
+};
+
 const ChainService = {
   getAll,
   getTokenPriceByChainId,
@@ -597,6 +704,7 @@ const ChainService = {
   getByName,
   getAllLight,
   getCommitteeMembers,
+  getChainHealthMap,
 };
 
 export default ChainService;

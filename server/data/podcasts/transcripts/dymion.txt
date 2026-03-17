@@ -1,0 +1,512 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/dymion
+
+Episode name:
+Building Communities, Self-Hosting and Space Monkeys with Dymion
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. Today I have Dymion from ValidatorVN with me today. Dymion, hi, welcome to the show,
+
+ValidatorVN
+Hello, thank you for having me to the salt today.
+
+Citizen Web3
+Excited men.
+
+Tell me before, before, before I'm sorry to cut you off there, but before, before we're going to go into, I'm going to ask you a traditional thing. Can you please introduce yourself? Tell me in the listeners, what is it you do in Web3 specifically? And maybe if you want, how did you get to Web3 and everything else you want people to know about you, please, if that's okay.
+
+ValidatorVN 
+Yeah, so basically validator.vn is an entity that runs validators on multiple chains since 2021. And we started with, you know, actually Forex back in 2010. And we moved on to crypto space with Bitcoin and stuff in 2015. Yeah.
+
+So we have pretty much experience and knowledge in the workspace. And now we're just mainly focused on validating and supporting projects, come to Mainnet and validate on Mainnet.
+
+Citizen Web3 
+When you say we started with Forex in 2010, this is interesting. Tell me about that. What was the story there?
+
+ValidatorVN 
+So basically it was like back in the day we don't have many resources but I come online and found out some people talk about Forex and I was wondering what that is and like we, I burned a lot of account back then trading.
+
+currencies mainly and Yeah, so that's how it works
+
+Citizen Web3 
+How did you decide to move from that to crypto? said 2015. How did it happen? What was the story?
+
+ValidatorVN 
+Yeah, it's basically, you know, people around me talk about crypto. At the first sign, I don't really understand what crypto is and you know, what they do. it's like, I don't have any trust or, you know, visualization of the utility and everything. So I decided to first go on Twitter.
+
+and create my account and start researching about Bitcoin and stuff back then. Yeah, so that's really how I started.
+
+Citizen Web3
+What made you because usually, you know, like for me, I know that my story was similar, but you know, I can tell you that researching about Bitcoin didn't help me. It scared me off. And I was like, OK, I don't understand anything by I'm going. So what attracted you? You started to research about Bitcoin and you straight away like understood, wow, this is going to be big or it took or it took something for you to actually, you know, get into it.
+
+ValidatorVN
+So it's not like when you start you immediately understand, Bitcoin can do this, it can do that no. For me, it's like a token that can be trade in futures and spot. It's like that. And over time, like one or two years, we started to see, okay, how is your
+
+How can we utilize it and to send and swap and what can we do with it? Like a decentralized network is more like one or two years later, I just found out their basic function of a.
+
+Bitcoin. Yeah.
+
+Citizen Web3 
+And how did you come around validating after that? How did the story end up to this?
+
+ValidatorVN 
+so, you know, we started with Aptos, you know, they incentivize testnet user back in, if I remember correctly, 2021, right? So I, I come on the docs and read and stuff. And I even told my brother to join in like random server and you
+
+if I remember correctly, Digital Ocean and ran multiple servers and tried to figure it out. And it was, I was really clueless about running a validator back then. It's like a new thing because, yeah. So basically it, I think Aptos, lead the trend of
+
+you know, running validator and, you know, come to join test nest back then.
+
+and incentivize the user to do it.
+
+Citizen Web3 
+You say actually a very interesting sentence there. You say I was clueless about running validators back then. And I think a lot of the people who, well, a lot of people, sorry, who are part of the crypto industry, some of them might be trading, some of them create NFTs, some of them do something else. A lot of them are interested in validation, but are very scared because they don't have a clue. How did...
+
+Because you said, you know, I was clueless and now you're running a validator on quite a lot of networks, you know, so how did you stop yourself from being afraid and starting to learn about, was it just the incentivization that Aptus was doing that helped you or was it some of an internal journey? Like what helped to overcome that fear?
+
+ValidatorVN 
+yeah, so I started a local community back then with just a few people and I started a YouTube channel like, you know, and you know, we actually, we didn't have a lot of resource about running validator as we have right now. And you know, going through docs.
+
+with some people that doesn't have any background on running a validator and they're not familiar with code and Linux and operating system also. yeah, so it's basically imagine a monkey try to do, you know,
+
+Go to the space.
+
+Citizen Web3 
+Well, I mean, if we look at the Soviet Union, that's what they were doing right back in the city, they put in monkeys and trying to send them to space, see what happens to them back in the 70s, the 60s. Right. No, but jokes aside, you know, was it like, like today, if you were, know, if somebody come to you and say, Damian, what would you suggest to me if I, you know, I don't know anything about Linux, I don't know anything about coding.
+
+I am but I am curious and I do know a little bit about crypto. How do I become a validator? What would you say to them? Of course, this is very difficult question, you know, just like some something that comes to your head. What would you suggest?
+
+ValidatorVN
+So.
+
+I suggest them to you know first familiarize themselves with the operating system like we mostly run on Linux and have some basic course like how to type some simple commands and try to read the docs. That part is
+
+you know, pretty hard to do and understand, but it takes time. Like for myself, I didn't have many resources back then. And I just have some people like trying to figure out from scratch. And we really have to spend like several months at least. Yeah, back then.
+
+But now it should be shorter because we have a lot of resource. Yeah, so. And then we can join some testnets and validator and try. It's like we have one line of script everywhere right now.
+
+Citizen Web3
+I understand. understand. I'm still I'm still I'm sorry. I'm going like a lot into that story. I'm curious because a lot of people find at least for me, you know, and I found that it is an interesting thing to understand how do people make the jump, you know, a lot of people sometimes they look and they say, but how do you make the jump? And what I'm trying to to get here is to from from people who I interview, what I see is that
+
+It sounds scary, but it's not. It's usually just a step of saying, okay, I'm going to do something I haven't done before. here's a question. Sorry, go on. You were going to comment. Sorry.
+
+ValidatorVN 
+Yeah
+
+ValidatorVN 
+yeah, so I understand like the leap from trading crypto to validate.
+
+It's really random, like I came across a post about validating on Aptos, a new protocol and something like it's 100 % new to me and they said they have like testnet campaign or something and they give the docs out with Linux and stuff
+
+forced to install and it's like yeah so first time I have to file to run a VPS server and stuff and try to understand the doc. It's like a very random you know random thing that I joined the first time at the validator. Yeah.
+
+Citizen Web3
+makes sense. Makes sense. I still think some today that some of the things we do is a validator or random. Even after you know, like so many years of doing that I sometimes think what am I doing? What do need to do? Like sometimes I like what's happening? Why is it happening? Why is this not working? And why is it happening? I have a question, a different question for you mentioned community.
+
+ValidatorVN 
+you
+
+Citizen Web3 
+And you you mentioned that you had a YouTube channel. Now I don't know exactly the chronological order of what came first, but I find interesting what you say because I noticed a lot of validators that start as validators. They say my biggest problem is finding delegators, is building a community. And then there is your story who says the other way around. Okay, I have a community. Now I have a validator.
+
+What should come first, the community or the validator? What comes first?
+
+ValidatorVN
+Actually, I have a few thousand of people follow me on Twitter before I validate. Yeah, so by then I was talking about crypto and stuff, know, Bitcoin. And then I learned how to become a validator. And then I create
+
+YouTube channel to teach people and My local community how to run a node Yeah, so basically that's
+
+Citizen Web3 
+That makes perfect sense, to be honest, because did it help you think that it helped you to attract delegations and have a core community on your validator?
+
+ValidatorVN 
+Yeah, that's true.
+
+Citizen Web3 
+Okay. Is that something you would say to, know, because most validators after they start the validator, their first question is like, okay, but where do I take now delegations from? So would you say that this is kind of an advice to do to anybody who wants to be a validator, try to build a community?
+
+ValidatorVN 
+Oh, I think that's a really, really hard thing to do,
+
+like
+
+So I was some people that, you know, try out validator on my country. Like I was a pioneer and like we just build community really organic over time, like three years already. And if people right now, they want to build their community.
+
+start from scratch, I think that's really hard and I don't I Actually don't don't know how to give the advice for people to do that
+
+Citizen Web3 
+Okay, what about the other side of the story? What would you say not to do? if somebody's there today trying to create communities, what not to do? What is a mistake when building a community?
+
+ValidatorVN
+yeah, so the mistake I think back then there was a lot of scams community, you know so basically the leader tried to draw people to buy a meme token and pump and dump and yeah it's like a scam and so my community we don't introduce
+
+We don't encourage people to buy anything. Just run the validator and share the knowledge together. And that's it.
+
+Citizen Web3 
+What's the personal mission today of yourself? Like not necessarily validator, VN, but Demian, what's your goal personally? Do you want to like, I don't know, build a bigger project or create the biggest community in Southeast Asia or I don't know. What's your personal goal with all of this? Like, no, not the project, you personally.
+
+ValidatorVN 
+Okay, so personally I want to build a bigger team of validators and we provide extra service. Like if we look at Halius Dev on Solana, are providing massive scale of RPC to their chain. you know, yeah, so I...
+
+I do want to scale more service on our business and maybe a small venture as well on the Web3 community.
+
+Citizen Web3 
+Do you you already when you when you mentioned ventures, I'm assuming you're talking about investing, right? Like, have you already done any any any investing as a project into other smaller projects?
+
+ValidatorVN 
+Yeah, so back then we have C98 and Aura network that started from our country. So we have a small deposit there back then, like a few years ago. And yeah, so just some small things.
+
+Citizen Web3 
+There isn't, the reason I'm asking, sorry again, the reason I'm asking, let me just expand a little bit the question. The reason I'm asking is not so much, well, curiosity of course, but you know, I noticed that validators in general, there is, well, there is a lot of way to divide validators, but I think one of the ways is really investing into other projects and not investing, and I'm curious. I have to be honest, we as a validator, I personally,
+
+Over many years, we haven't touched investing, but that has nothing to do with me personally. I'm talking about my validator venture. Now, I have noticed that a lot of validators, and it makes sense when I think about it, of course, you're coming to test nets, sometimes super early stages before the VC's even see that. So the thing is as a validator, and here I'm going to come to a question, sorry, about the long intro.
+
+Like the thing is, as a validator, I believe you go through so many, you know, networks sometimes, and you don't do the due diligence that VCs are able to do. You don't have not the resource, not the time, not the team. How do you, how should, no, maybe not, maybe you could talk about yourself or generally doesn't matter. But do you think validators, it's those two questions. Do you think validators
+
+should invest into the test nets they're running? And if yes, what is the dangers here? What should they avoid? In your opinion, of course.
+
+ValidatorVN 
+Yeah. So first of all, I don't have much experience in investing. Like I'm not a, you know, what three expert. I, I cannot, you know, evaluate whether a project is good or not. Really? Because what I did back then was, you know, try to support a local, you know, in my country, a project in my country that
+
+that could be launched and they launched on Bainan back then. Yeah, so it's like a personal kind of experience, not like a professional investment, you know. So back then I had a lot of time because we validate on some chain back then and we...
+
+We talk with the project, we know who they are. And yeah, it's like small investment. So for now, as this ad is now, it's really hard because, you know, we have a lot of change, to be honest, to validate. And if we have to make a decision to invest or something like...
+
+For me right now, I won't invest until we have like some professional, you know, go through everything, make it safe. And after that, we should invest.
+
+Citizen Web3 
+As kind of a continuation from that question, do you think that validators should focus apart from validation? like, because, yeah, so this is kind of the question. like, because I agree, investing can be very dangerous game, especially, know, for person, you're a validator. And there is no such thing as professional validators, in my opinion, you know, it only exists for five years. So all of us started from zero and became
+
+ValidatorVN 
+Yeah.
+
+Citizen Web3 
+in quotations, know, professional validators, but I agree that investing is a much different game. so the question is, do you think validators should try and focus more on their own thing rather than try to invest and
+
+ValidatorVN 
+Yeah.
+
+ValidatorVN
+Yeah. So I think from perspective of validator only, they should try not to get in jail or tombstone. That's the most important thing. And we can build and supply additional service, as you know, multiple endpoints and snapshot and exporter.
+
+Citizen Web3 
+Absolutely.
+
+ValidatorVN 
+Two other things we can support, like we support that sticker of the community. As we are building a dashboard for delegators, for them to be notified when a vendor miss some certain block and will go to jail and notify them to re-delegate to secure the fund.
+
+maybe a tool for developers to try to track on validator because when they start their project, I think they haven't had the tool ready for them to monitor the validator. So that's some way we can support the project that we participate in.
+
+Citizen Web3 
+I find it very interesting to see that different validators are more or less coming to the same tools, but still, even in there, you have different validators providing like somebody does like exporters and snapshots or archive or
+
+RPC is very popular. What's yours? I think yours is RPC, right? I've seen you provide snapshots, exporters, RPCs, right? And do you have a focus particularly here or you just provide whatever you can?
+
+ValidatorVN 
+I focus on
+
+I actually provide all the service on the chain that I run on to support. And so we are building a dashboard for Delegator and it should come out like very soon. imagine like on the Cosmos, we have like 500,000 Delegators.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3
+Wow.
+
+ValidatorVN 
+validators they have slashed like 3 to 500 times from the expansion and you know some millions of dollars got wasted and we tried to stop that yeah so that's basically the idea
+
+Citizen Web3
+That's a very good point. I've seen slashing boards from, I think, a couple of times, but it'll be... Yes, KGNodes, And we are... I told you before we started recording that we are also building a tool. And part of the tool is a different type of staking calculator, which includes slashing events. Because today, most calculators,
+
+ValidatorVN 
+a change.
+
+Citizen Web3 
+don't include nothing. They just like to take API, price of the token, multiply, and that's it. And so I'm curious, why did you decide to dig that Slashing hole? Why not something else? Why Slashing? Why was it interesting to you?
+
+ValidatorVN 
+I think it's you know, I haven't seen a open source or any validator or at least publicly try to provide a service like I have seen like 400,000 people on Cosmos and all the chains, know, we have like 200,000 and 300,000
+
+validator got slashed.
+
+Citizen Web3 
+now. I understand.
+
+ValidatorVN 
+Yeah, why haven't anyone built that simple tool to protect their funds? Even like from the foundation themselves, they got slashed because they stick to the chosen validator and they got slashed. And I don't really want to see that, to be honest.
+
+Citizen Web3
+Can a validator, I totally understand, you know, devil's advocate question here. Do you think a validator can be a hundred percent slash protected? Like a million percent guarantee I will, because it's hard, right? I mean, it's equipment, right? So sooner or later, anybody can get slashed, right? Doesn't matter which is validator, right?
+
+ValidatorVN 
+Yes.
+
+ValidatorVN 
+Yes, that's right. Yeah, so that we have to try to protect their delegator because no matter who you are, will get slashed someday.
+
+Citizen Web3 
+This
+
+Citizen Web3 
+course.
+
+Citizen Web3
+Of course. And actually, just to prove your words, would like to, by personal experience, prove your words. We have been running validators, and yeah, we run self-hosted validators, which makes it more difficult, but for a long time. And actually, two days ago, we have been slashed before, but jail time, this was one of the first in like...
+
+two, three years we experienced. the thing, the reason what was led to that was a simple human mistake. We just forgot to track something. And what I'm trying to say here, it doesn't matter who you are, human mistakes happen. It doesn't matter how amazing your system is, you are correct. Like I agree with you, know, so delegators must be protected because everybody will make a mistake. It doesn't matter, you know, what's your name.
+
+ValidatorVN 
+Yeah.
+
+Citizen Web3 
+it will happen. yeah, absolutely agreed 100%.
+
+ValidatorVN 
+Yeah. So speaking of self-hosting, we have some local servers. Yeah.
+
+Citizen Web3 
+Please tell me, please tell me, please tell me about what you can talk about your setup. I don't know if you, if you want to talk about it, if it's to security privacy. So what you can share if you want to share anything at all.
+
+ValidatorVN 
+I think we can talk quickly about it. I tried to set up local servers and we have some problems with it. like First is, know, deep-sea cable is broken every year in my country. So we have internet connection problem already. It's out of control. And sometimes we have
+
+electricity cut like we have backup but it's sometimes very annoying by that and yeah and the download and upload speed with international cable is not that good as you know try to run a server on yeah so we have a lot of problems
+
+Citizen Web3 
+I can totally relate to that because the last year I spent doing that, changing from cloud to not just cloud, but bare metal, cloud bare metal to self-hosted bare metal. And it's been a very, very expensive and a very difficult journey because I don't know about you, but one, this is actually a question I have to you here.
+
+One interesting problem we tackled after changing to self-hosting was a ping issue. the issue is very simple. Because we now self-host in a decentralized location, we are very far away from Hezner and from AWS. So we have found solutions. We are trying to implement them. But it's a...
+
+ValidatorVN 
+Yeah.
+
+ValidatorVN 
+Wow.
+
+Citizen Web3 
+It's well, what we're trying to do and this is a question to you. How did you rework it? What we've been trying to do is we've been trying to basically create virtual networks on top of our physical networks and put those virtual networks working with another like, know, traffic server in the cloud, which is virtually connected. It's a huge, stupid workaround. Now, how do you
+
+I don't know how does it work for you? Have you been having similar kind of issues or what's apart from the internet and electricity issues? Of course, what's what has been your journey like?
+
+ValidatorVN 
+Yeah, so I still struggle with it until today. first of all, we don't have many peers in Southeast Asia, you know, we are centralized on Europe.
+
+Citizen Web3 
+Yes.
+
+ValidatorVN 
+And we have peering problem, we have ping problem, we have internet connection problem. We are out of control. So I feel you man.
+
+Citizen Web3
+It's interesting. I don't want to steal the show here, but a few months ago we were planning to do this frequently and a few months ago we started an initiative. We called it BVC, Bare Metal Validator Coven. It was crazy. We did one call. The idea was to gather self-hosted and bare metal validators.
+
+ValidatorVN 
+Yeah.
+
+Citizen Web3 
+And the first like space we did, we had like 150 to 200 people overall tune in, which was crazy. We didn't expect that. And what we realized is out there, you know, in the wild, there are a lot of validators who either want to go self-hosted or experimenting with self-hosted or trying to touch self-hosted. But everybody has the same problems and nobody knows what the fuck to do with it. And yeah, I don't know. This is scary. I don't know.
+
+So we're trying to kind of like go to do that. yeah, hopefully. What do you think? Do you think that, you know, validators more, do you think more people will become self-hosted validators? Or do you think the problems we talk about now push people away?
+
+ValidatorVN 
+Yeah, it's really hard like in the spectrum of professional validator Like we are talking about big names. They also run on you know server providers and most of them I believe so Yeah, so self hosting is really really difficult and you know
+
+ValidatorVN 
+We cannot really sleep well. No.
+
+Citizen Web3
+No, no, we don't sleep well. That's true. I totally agree. No, it's crazy. It's crazy how, how, how, how, how much stress, so to speak, and how many, no, not so much stress, but you know, there are so many little points to try and take care about and alert and monitoring to. Yeah. And you are absolutely right. Just, just to confirm, you know, for you, for the listeners, you know, we have been interviewing
+
+you know people who work in web3 and validators specifically for the last four and a half years and i think that i can say with confidence that maximum maximum maximum people who self-host is like four to five percent and and even out of these five percent i think that a lot of
+
+people like at least 60 to 70 % they don't self host outside of a data center. They have their own equipment, which they rent a space in a data center and then they put it there. So maybe two and a half percent, maybe 2 % out of the total number really self host in their own locations. And it's even less maybe I would say it's even less but yeah, it's crazy.
+
+ValidatorVN 
+Yeah.
+
+Citizen Web3 
+Do you think that's an issue? Do you think that that can become an issue in the future in terms of like stake, you know, geography centralization and stuff like that?
+
+ValidatorVN
+Yeah, it's like, it's, you know, if we have some kinds of, you know, encouragement because, you know, we, project themselves, they want to decentralize validator to multiple servers, multiple location. If they, you know, try to enforce some kind of punishment or encouragement.
+
+for validator to move away from centralized servers. I think that could maybe encourage people to self-host. But again, that is really a pain to self-host.
+
+Citizen Web3 
+Yeah, completely. I noticed going from your website and looking at your venture as a validator, you advertise yourself as a Tendermint and Cosmos specific validator. But you did mention Solana just before, one of the projects there. So a question, a few questions really. So first of all, do you only... So this is the first question, sorry.
+
+Do you only concentrate on cosmos and tendermint or you're going like around?
+
+ValidatorVN
+So we mostly 95 % 95 % Yeah, we validate on code Yeah, so basically We got familiarize familiarize with it first and then we try to Master it, you know try to understand
+
+Citizen Web3
+Why?
+
+Bye.
+
+ValidatorVN 
+what tenement and cosmos educate talk and try to perfect our system. So right now we can see other you know consensus make make like and with LLM models they they they're trying trying to build a completely new consensus make. Yeah so I do also explore
+
+more outside of cosmos ecosystem.
+
+Citizen Web3 
+How do you select a chain? How does the process look for you? How do you decide whether you're going to do it or not?
+
+ValidatorVN 
+yes.
+
+ValidatorVN
+First thing is I look for chains that select validators, not like everyone can run and join because we cannot differentiate we and them. At least give us some sort of selection and you know.
+
+And we try to look at the docs to see if anything is interesting and we try to see, they're really solving a problem that have existed in the Web3 world. Like some change they try to integrate Bitcoin ecosystem on their
+
+a cosmos chain and some change they try to solve this problem on each that have been like many years haven't solved. Yeah, so I try to find that some innovative project. That's mostly how we try to find and participate.
+
+Citizen Web3 
+Do you go from test nets to main nets mainly or do you go or it doesn't matter if you find a project, if it's main net test net, you go and validate it or I guess the reason I'm asking is I noticed there is like two primary strategies mostly for validators. There is a type of validators who just, they, know, it doesn't matter for them, test net main net, they come in, if they see a network they like, they start to validate. And then there is the strategy of mainly trying to go first through the test net levels.
+
+trying to attract the attention to yourself as a validator, to prove yourself as a validator, and then kind of waiting until the network grows into mainnet. What's your strategy? Or it's none of these maybe.
+
+ValidatorVN 
+Yeah, so our strategy is try to join the testnet as soon as possible and try to support them from like the discos have 1000 members like support them until Main net and be joined Main net. Yeah, that's our strategy. Like we don't try to, you know, join Cosmos after it has been like for
+
+Citizen Web3 
+first.
+
+ValidatorVN 
+4, 5, 6 years from now. Yeah, so that's basically our strategy.
+
+Citizen Web3 
+I also noticed that you guys say in your socials that you do some community management, networking, are active in governance and forums. This is another question. In your opinion, does a validator have to be public in order to be successful or can a validator remain private if they choose to and still be successful?
+
+ValidatorVN 
+that's a really hard question because right now at the the state right now like every every validator they have to public their information like to you know guarantee something like okay I will I won't get slash and if I get slash I will refund
+
+and everything so they can attract first attract delegators and you know try to build a profile that projects then trust them dedicate to them to secure network so private validator I haven't seen or yeah so I haven't seen one that's you know really successful but I don't know
+
+really who they are or their website or you know related information.
+
+Citizen Web3 
+think what about you know, not not if it's not private, let's say not public. Do you think validators also must be public? Or they can also be like not public and successful?
+
+ValidatorVN 
+Yeah, they can be anonymous, really. But yeah, they can hide everything, every information, but not their P2P only. Yeah.
+
+Citizen Web3 
+Of course. Of course.
+
+Do you have, for example, I don't know what's your biggest network right now? What's your largest network today for you? The one that brings you the most financial stability, I mean, for Validator VN today. Is it Aptos or? No.
+
+ValidatorVN 
+know is to date is sent to city K yeah so
+
+Citizen Web3
+Yeah. for example, so for example, do the sent to have any in the top validator list on sent to other any validators who are not participating in the forum who don't talk in the chat to
+
+ValidatorVN 
+Yeah, we do have like 10 or 20 anonymous validators.
+
+Citizen Web3 
+Wow.
+
+Wow, wow, that's a lot. It's a big number. What's your opinion? Why are they successful in comparison? Because the reason I mean, the reason I'm asking is very simple. It's not about, you know, who is private, who is not. The reason here is more from the perspective of mean to be public, a public persona takes effort, it takes energy. And I know personally, you know, that for us to
+
+to either do podcasts or to then do the follow up work on those podcasts or YouTube or forums, governance and so on. It's energy, know, it's human resource, it's time, it's money, it's energy. And then you say, well, we have 10, 20 validators on the network, which are anonymous. know, so how do they achieve it in your opinion? What is the secret? how do you keep the balance? Maybe not how they achieve it, of course, it's a question to them, but
+
+How does one in your opinion keep the balance between, you know, participating in the life of a network and not maybe revealing, you know, all the information about yourself and being this balance between public and non-public? Do you think it exists?
+
+ValidatorVN 
+I think it's like almost doesn't exist because like, you know, like when we try to apply for foundation delegation program, we have to specify ourselves our information, what we do, like our SL aid and everything. Like we can provide like maybe company license.
+
+at sticking provider, know, as some sort of assessment. So what so the thing as sent to I don't really know how, how we, yeah.
+
+Citizen Web3 
+It's a fair answer. It's a fair answer because I also don't answer to this question, you know, and I have been asking people, but it's interesting that, you some people just say, well, provide many tools, you know, but then it's interesting because it's a very... Yeah, yeah, I also don't know the answer. That's the... Let me ask you one last question before we're going to jump into the blitz and kind of wrap this up.
+
+The question is quite simple. I mean, you had quite a journey, you know, even though it's been like three, four years, three and a half years, you know, the journey has been interesting is from what I hear. And what has been your most challenging and most successful part? I'm sorry, man. I'm sorry. But like, maybe the most exciting, you don't have to be, like, well, what's for you been the most easy out of those three years? And what's for you been the most difficult in those three years personally for you?
+
+ValidatorVN
+Yeah, so I think the most difficult thing was the November car did expedition. I believe that you guys have joined also.
+
+Yeah, so basically we have sleepless nights. In Asia, it's like 2 a.m. you know, change hot and everything and building the apps and stuff. It's like two continuous months with sleepless nights and everything. But I believe that was a wonderful experience, no matter what.
+
+the outcome or everybody say about it, we will never have it for the second time in any other chain.
+
+Citizen Web3
+What's the most easy part to have been on this journey?
+
+ValidatorVN 
+Easy part.
+
+Citizen Web3
+Which one? What's easy?
+
+ValidatorVN
+It's the Aptos part. It's like newcomers that don't know anything. A small incentivization for us was really rewarding back then. we expect, at that time we didn't expect anything. To be honest, it's like trying to explore new things.
+
+Citizen Web3 
+Okay.
+
+ValidatorVN
+Yeah.
+
+Citizen Web3 
+I'm going to jump into the blades. It's going to be three questions which are going to be not about crypto. So just to take us out of this conversation and kind of finish it up. So the questions are strange, but here they are. So first question, please give me or one movie or one book or one song that have a positive influence on you that you like that you enjoy.
+
+ValidatorVN 
+that's... yeah, so let's do music because I love classical music and I listen to them every day. So I can recommend people try out Rachmaninoff Piano Concerto No. 1
+
+Citizen Web3
+or or or
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+Wow. Wow. Wow. That's a very unexpected answer because no, because, know, like, I don't think anyone had had a classical music recommendation so far. That is the first one. Well, well done. Cool. I love it. I love it. OK, second one. And by the way, once again, the list for the listeners, everything me and Dymion mentioned. So all the projects, all the recommendations, books, people, whatever.
+
+ValidatorVN 
+Yeah
+
+Citizen Web3 
+Please, this whole link to the show notes links, so you can just check out those links and have a look what we are talking about. So second question, give me one motivational thing that keeps you waking up every day and keep on building a validator, keep on building your community, listen to classical music and being yourself, something motivational. One thing.
+
+ValidatorVN
+Motivational.
+
+Citizen Web3 
+For you, it's motivational for you.
+
+ValidatorVN 
+for me is like to empower my family, my friends, my brothers and people around me. That's the number one. Yeah.
+
+Citizen Web3 
+beautiful answer. It's a beautiful answer. Thank you. okay. That is a very good answer. and number three last question. this one is a weird one. So dead or alive? Real or made up? It could be I don't know, somebody you know, from your family, it could be a writer, it could be a cartoon character, a movie character.
+
+It could be your friend. doesn't matter. Somebody, a persona who makes you feel, you know, like better when you think about them, when you're stuck, when you're stuck in life and you think about that persona or that personage and you're like, OK, that helps me and I can move on with whatever I'm stuck in.
+
+ValidatorVN 
+that's a real tough question.
+
+I think like every day I wake up I think about like what we can do to support our family my family specifically so I think about okay so we have to push push push push push we cannot stop and you know think about my dad my mom for their hard work for like many years taking care of me
+
+Now I have to work to push, take care of them back. Yeah, I think that's them.
+
+Citizen Web3 
+Thank you, Damian. Those are very beautiful answers in my opinion. So thank you for them. Damian, want to thank you very much for finding the time to join me to answer these questions, to not be annoyed at the strange questions too, and to have a laugh. yeah, for everybody else, for the listeners who tuned in, I would like to say goodbye for you, Damian. Please don't hang up just yet. This is just a goodbye for the listeners, everybody else.
+
+ValidatorVN 
+Yeah.
+
+Citizen Web3
+Thank you for listening to us and see you next week. Thanks Dymion.
+
+ValidatorVN 
+Thank you guys.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

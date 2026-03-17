@@ -1,0 +1,379 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/akash
+
+Episode name:
+The cloud, open source and flash loans with Greg Osuri
+
+Anna: 
+Hey, it's Citizen Cosmos. We are Serge and Anna and we discover Web3 by chatting with awesome people from various teams and communities. Join us if you are curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+Hey, Cosmos. Welcome to another episode of Citizen Cosmos. We are joined by the CEO of a akash network today, Greg Osury. I hope I pronounced it right. Greg, did I? 
+
+Greg Osuri: 
+Yes, my name is Greg Osuri and thank you so much for having me here. 
+
+Citizen Web3: 
+Hey, I did get it right. How are you doing? I know it's very early for you in the morning, but I know you have your coffee. So how are you feeling today? 
+
+Greg Osuri: 
+Doing fantastic, actually. Yeah, it's a beautiful winter morning in Midwest, no complaints. 
+
+Citizen Web3: 
+The first question that we wanted to ask you and I think it would be handy to everybody who is going to listen to our show is to describe akash network in your own words, however you feel that it should be described. 
+
+Greg Osuri: 
+Absolutely. So in just the simplest terms, a akash is how to claim the world's first peer-to-peer marketplace for cloud computing. The concept is very simple. You have servers with excess capacity or servers with capacity in general. And you have customers that would like to use cloud capacity and we connect the customer, the tenant, we call them, with the provider in a non-custodial peer-to-peer manner. 
+
+And we built a modern-day cloud, a cloud that's designed for workloads, web 3 to workloads designed in 2021, so that the user experience is more optimal than the cloud, which was built really in the last decade, the Amazon, Google, and Microsoft. And the price is optimal, driven by a market instead of set by any single individual. So in a sense, akash is the first free market driven cloud. 
+
+Citizen Web3: 
+When you say free market driven cloud, could you expand on it a little bit because it's kind of a term that arouses a lot of questions? What does it mean in simple terms? 
+
+Greg Osuri: 
+Today, when you use the cloud, you're really talking about three companies that power the cloud. I mean, 71% market share, and that's increasing, is controlled by three companies. And they set the prices. So Amazon, Google, and Microsoft dictate what the price of compute should be. 
+
+And sure, that's okay. It's just like airlines, airlines dictate the price. But on the other hand, you have 85% of cloud computing capacities, not on Amazon, Google, and Microsoft. So you have this massive capacity that should have its own mechanism to price because it's a free market. You shouldn't have three companies set the price. So when I'm meant by free market, you have essentially a market where the user and the seller or the buyer and the seller set the price without intermediary, which is the big three cloud companies or any institution that dictates the price. 
+
+Citizen Web3: 
+That is a good explanation, which I like. When you say three companies, we're talking Amazon, Google, and the third one is... 
+
+Greg Osuri: 
+Microsoft. 
+
+Citizen Web3: 
+Microsoft. Okay. In terms of market share, what is the current split between those three guys of the market, do you know? 
+
+Greg Osuri: 
+Since we know about the check, the last check was 71% that's combined. I believe one was around 40%. I mean, don't quote me on this, but some around 40%. And I think we have a new contender, Ali Baba, just coming and taking quite a bit of market share as well. So I think it's not four companies that control 85% or 90% of the market. And that's what's scary is this is increasing. It's not decreasing. It's not like more companies are joining the pie. Three companies are getting more and more powerful. Increasingly, one company is getting a lot more powerful, which is Amazon, a web services. You know, the very concept of riches getting richer is happening exactly in the cloud. 
+
+Citizen Web3: 
+I think that kind of arouses the next question. You kind of already answered it, but I think maybe you could expand on that. Why would anyone in the world need a decentralized version of the cloud? I mean, I was surprised. I talked to a lot of people and discuss different things. And some people are still far when you tell them cloud technologies, like, what the hell is a cloud technology? 
+
+They live far away from it. And now we're saying, OK, screw the cloud. We have decentralized cloud technology, which is far better. Could you explain in your own words, why would anyone need decentralized cloud as opposed to normal cloud and what are the benefits of that? 
+
+Greg Osuri: 
+The simplest analogy would be a closed-source operating system, an open-source operating system. If you think of cloud as the operating system for the modern applications, most applications today that you use, you interact with Uber, Facebook, any application on your phone or your desktop, you are somehow or some form interacting with the cloud. So you are paying for the cloud without knowing you're paying for the cloud. There is this infamous term called the Amazon tax. 
+
+Everybody pays an Amazon tax, but you just don't realize it. So it's a very integral part. It's a core fabric that runs the internet and it's closed. So imagine if all the operating system is closed. I mean, we had operating systems that were closed before 1991. There's Unix and all these windows and whatnot. 1991 came about with the introduction of Linux, the first free and open operating system. 
+
+That fundamentally changed the fabric of software. So the benefits are, sure, list out all the benefits, but I'm more excited on the benefits that we don't know, what the opportunities that we haven't discovered. But the known benefits that we can list out are, number one, just better user experience. 
+
+So another comparison I would give is something that our industry as a whole has experienced is DeFi or exchanges. So if you want to swap tokens before you swap, you have to go side-to-side, complete your KYC, wait for a few days to transfer your funds, and then wait another few days to run this capture and solve like 12 ducks. But when you go through this entire hula hoop of things that you do, instead of you go to use swap, connect your man mask, swap, and done. That is the level of user experience that Decentralized Cloud can give. That's exactly the user experience that Akash provides now, minus the web interface, but that's where we're going essentially. So just from a user experience standpoint, I think it's just superior than the incumbent cloud and cost. When you say you're paying Amazon tax, Amazon is the one that's setting the tax rate. 
+
+Decentralized Cloud is the decentralized set of providers and payers that agree on a rate instead of a single company or single entity setting one. And also, if you look at there are structural issues in general. Right So the structural issues with oligopolies are, oligopolies tend to stifle innovation. And historically, if you look at airline industries, if you look at telcos, and you look at a lot of these like, really, arcane industries that haven't innovated, it's not like people stop flying, it's just people stop innovating and flying. 
+
+It's not like people stop making phone calls, just people stop innovating in telecom. The reason for a lot of these is because created these oligopolies with massive modes that prohibit any newcomer to come and participate in this industry. And Cloud is becoming one because single companies like Amazon and Microsoft have taken a lot of share. And they prohibit a lot of open source companies to even participate in this economy. So today, as an open source company, it's impossible or an extreme possible to get funding. 
+
+I can't think of a single open source company that actually got funded in the last over three years or so. And the reason for that is Amazon, 10, the biggest business model for Amazon is not selling computers, selling services. The white label opens our software and they sell it as a managed service and they make a lot more money on that. It's a similar business model of like burgers and fries. 
+
+If you go to a restaurant, McDonald's doesn't make money on burgers, they make money on fries. So they lead you in with the compute and they sell you all these extra services. And these services are open source companies. So they're stealing these open source companies' business models and offering them as their own. And the companies that could offer these hosting services are losing the opportunity and basically have to shut down. 
+
+There's structural problems. Open source, I mean, the central class cloud is creating the stifling innovation in open source software and the pricing inefficiency, so along with user experience inefficiencies, that as a creator, as a developer, it's obvious first, but it's not very obvious for the users yet. But soon enough, it will be a New York Times beautiful op-ed like last year, by end of last year, December on the anti-competitive practices of Amazon. So a beautiful op-ed, recommend anybody to read it and they covered very extensively what Amazon Web Services is doing, especially around competitive stifling competition. 
+
+Anna: 
+I just want to go no deeper, but to highlight some moments that I imagine important. You know, that for open source software, then any extra copies of the software cost pretty much nothing. You just spend time of development once, and then more or less you just can make a lot, a lot of copies of this software. For hardware, the situation is a bit different. And if you just want the part of hardware, yeah, you should have an extra capacity and it costs money. Do you think that discussion about decent price in this case are important, or it just because Amazon Web Services basically provide the cheapest capacity in the market? So do you think that now we can have a decent price for this, or we should talk about business model, how you think about this? 
+
+Greg Osuri: 
+So when I say open source pricing, I really mean open core model. So open source is free. Anybody can use open source software. The software license is free. That's what makes it special. But the business model for open source companies is managed hosting, in the sense, say for example, Elasticsearch. It's a very popular search service. 
+
+So it's a free open source software. You can download an Elasticsearch server. You can write your application, use against it. And you can actually use the server, deploy it on yourself and host it and all that. But managing and maintaining Elasticsearch server clusters are difficult. As a developer, you should be focused on developing your application and not managing an Elasticsearch server cluster. Managing in the sense like when things go down, back up and make sure they're optimal in terms of performance, they're backed up, you don't lose your data, all these operational requirements that you need to fulfill in order to run a healthy production cluster for Elasticsearch. So the creators of Elasticcache offer that service, or managed service, at a cost. 
+
+So the model in open source software, the business model is really open core, where the software in itself is free to use and you can do whatever you want and run it the way you want it. You don't have to pay a thing to the company that built it. But if you want the company that built it to help you manage that for a piece of mind at a premium, at a cost, that's okay. And I think that's a great model because companies now can build open source software and sustain themselves by offering them as a host service. And the user can have a piece of mind. 
+
+Builder has a piece of mind here, knowing that the creators of the software are managing it for themselves. Now, this is a great model, but now Amazon comes in the middle. Now, Amazon takes this open source software and be like, hey, yeah, it's open source, so we can sell it, you're not going to stop us, it's free, and takes their money away. And it's bad for these companies because it's the only business model these companies have. They can't sell software, license. 
+
+So they're taking away their only means of making money. And one of the reasons, Akash, I mean, one of our biggest advisors is Brian Fox. Brian Fox created Bash Shell, if you know what Bash is. And he's very passionate about solving this problem on how do you really make open source software sustainable? 
+
+And Brian Fox is a first employee at Free Software Foundation. He worked with Rich Salman, very credible people. I mean, Salman Hikes, who created Dockr, he's very passionate about solving this problem, a friend of mine. And there are a lot of open source advocates that are very, very passionate about solving sustainability problems with open source software. And I think creating and making our efforts to create the world's first open source cloud that's meant for open source software and meant for open source users. I think it's very, very critical in 2021. 
+
+Citizen Web3: 
+I was going to ask a question before I jump in, but I do have a question before we run away from what Greg was talking about, because one thing did surprise me in your answer. Because usually when we talk about blockchain, we definitely don't talk about user experience being easier. Usually when we say blockchain, we talk about decentralization, we talk about pricing, we talk about ease of access and so on and so forth. And in a sense, it all is user experience. But the way you put it, I kind of liked it because it's the first time that I hear somebody that when they compare in a decentralized service to a normal service, and they say that the decentralized service here has a much better user experience than the centralized version, which is really interesting because I don't think I've heard anyone do this comparison before. 
+
+Greg Osuri: 
+So I think the world is shifting towards understanding what true decentralization means, what true non-custodial software means, what really like an ability to not have a server, the real true serverless software means. Uniswap, I believe, has done a phenomenal job. People have tried before Uniswap to do like this very client server model thinking in blockchain, and that really panned out. If you use any blockchain software, it's just terribly designed. 
+
+But I think Uniswap really came and took it into account. Well, you do have high gas fees because exuberant, but people don't care. I would pay high gas fee versus going on to a centralized exchange and just waiting forever to swap a thing. And yeah, it takes longer time to process transactions. That's fine. 
+
+Make it easily through this. So all these things that user experience things you can employ to actually make the experience far better than centralized software is actually demonstrating. When I saw Uniswap, I'm like, this is how it should look like for a cloud. Even though we all thought about how the non-custodial interface should be, but Uniswap was just for now. And now they set a standard for the rest of the software stack to decentralize networks to at least match, if not exceed the standards. So what we're looking at, Akash is developing in much better, I mean, at least setting Uniswap as the standard and developing on top of that. 
+
+So the cool things we'll be doing is we'll have it deployed to Akash on the GitHub, talking about user experience. We recently launched our testnet, our platform testnet, about nine days ago. And so far we have about 1000 deployments. And the software we have a catalog of things you can deploy on Akash. And that's user contributor catalog, a community catalog, we call that awesome Akash. And last is check we have 32 applications on it, you can deploy anything from like MongoDB clusters to Postgres clusters to lots of blockchain nodes and lots of DeFi applications, all this and all this came in nine days. That's just a testament to the user experience concept I'm talking about. 
+
+I haven't seen any cloud growth this fast ever in my years of experience working in the cloud. We don't know who these people are. We don't care. There's no sign of, there's no login. There's no passwords or emails. There's no KYC, no that nonsense. So they just come and contribute, contribute amazing things that you can share with people. It's just beautiful, I think. 
+
+Citizen Web3: 
+I think what you say here is so uber important. It's something I've actually been trying to discuss with people over the past few days. And it's something people don't want to think about and it scares me. And it's great that you mentioned the repository that you guys have, because I was looking at it last night and looking at the examples. My ether wallet, throne wallet, whatever, any type of nodes. What I was thinking about for a second is today in a lot of networks, and I know networks are obliged sometimes to do that because they're trying to upkeep with the jurisdictional laws that they have. But what scared me for a second there when I thought about it is that a lot of, especially in proof of stake blockchains, which are prone to a lot of economical challenges that we still have to overcome. 
+
+And we will see how we'll do it. What scared me there is the amount of those KYC providers. Where is the database of all those proof of stake validators? 
+
+There is some kind of database that somebody has for about 50 or 60% of the biggest blockchains in the world today with the addresses, their phone numbers, bank details, social security numbers. I mean, that is exactly what the vision of Satoshi was originally against. That we don't want that people to know who is transacting because we want the transactions to go through. And it's interesting that you say that we have a decentralized cloud where we can go and we don't need all of that, we just deploy and we go ahead with it. And it's easy because, like you say, we have the example of Uniswap, which is showing that example, we just come, press a few buttons and deploy whatever you want. And it's decentralized, and it's working, which is exactly what it's supposed to do. 
+
+Greg Osuri: 
+Yeah, exactly. And do what you're supposed to do. You don't need my name or my email to deploy software, it's just software. The same thing with financial transactions, you don't need these things. You just want to transact. 
+
+Yeah, 100%. And it's scary to think about how much information about you out there. We all know the Equinix hack, the credit agency that got hacked recently. My information is on the Black Web or Dark Web. And I get calls, God knows how many of you on a daily basis. 
+
+Citizen Web3: 
+Definitely. And it's not just about hacks. I mean, it's about if I'm a Byzantine actor and I know the KYC provider, let's just imagine for a second that somehow I happen to know which KYC provider collected information on the keep validators on, I don't know, whatever. I don't know why keep came to my mind. 
+
+I'm not advertising keep, but whatever, just any, let's say five or six networks keep and Ethereum or whatever else, Tron, whatever, I don't know. And they collected all that information. I found Byzantine actor, I can just go to that person, pay him money, and then I don't know. I mean, what I can do with that information quite a lot, actually, I can start to bribe these validators at the end of the day, which is scary, but let's hope that it doesn't go that way. Let's hope that you guys build the biggest decentralized cloud and it will solve all of that. 
+
+Anna: 
+Well known that sometimes big hosting providers can ban applications. Now, everyone talk about the last AWS and Parlor case when Amazon give one day notification to the client to move everything to another data provider. Despite of this, Amazon, Google and PlayOcean still the cheapest and consider the provider best selling the market. Do you think it's possible to compete with them? 
+
+Greg Osuri: 
+There used to be a saying you don't get fired for using IBM. I think 2021 you don't get fired for using Amazon. It's more of a credibility thought more than actual sustainability or actual quality of service. In fact, from a quality of service that Amazon is a big and biggest and the best is quite contrary considering what happened in the recent last month or how many times you had Amazon failures. Binance went down because of Amazon failure, FTX went down, Bitmax went down. So there's a lot of incidents in the last month alone that you can point out that yes, this whole like Amazon as a safe bet ideology is actually cracking because the bigger something gets the more inefficient it becomes. That's just a natural law. 
+
+So when something gets inefficient, obviously that void exists and that needs to be fulfilled. And there are about 4,000 cloud providers in the world, but you don't hear any of them. In a lot of these guys are way better at managing cloud because they're focused on you instead of having to focus on the entire world. It's just that there's no market for these providers to come and number one find you and number two transact with you. 
+
+They don't have the software and platforms and whatnot to offer their services. So the idea that Amazon is safe, any big cloud is safe is fundamentally being reverse. And the idea that we can be a lot more sovereign, a lot more decentralized in seeking support, in seeking quality of service is getting popularized. And to answer your question, yeah, there's a lot more people that have talent and capability and the hardware and the capital to actually offer your services. 
+
+Just there's no way to connect them. That's really what we're trying to achieve at Akash. Another little factor I'll put forward is well Akash, one of the biggest providers, in fact, the exclusive provider for Akash that provides data centers and compute is called Equinix. So Equinix is a data center provider. It's the largest data center provider in the world. And it provides compute for Amazon Google and Microsoft. 
+
+In fact, if you want to transfer something from Amazon East to Amazon West, you have to go to Equinix servers. It is the interconnection tool. And there's another cloud provider or another data center provider that sits underneath all these big providers. And they are providing compute to Akash. 
+
+And one of the providers, we're launching with them to have highest service possible even faster than Amazon if you want to really get there because they control the pipes. And the partnership with Equinix did not happen that we went to Equinix and became partners. It actually happened because we were partnered with Packet, which was recently acquired by Equinix. So by luck, our crew agreed, we became partners with Equinix. So our approach has been always to focus on this smaller guy and Packet happened to be this amazing developer focused data center, bare metal provider. Arguably, Akash provides a way better quality and way faster service than Amazon could right now in our test net. 
+
+Anna: 
+So do you think that small and decentralized projects could provide a better user experience or vice versa? 
+
+Greg Osuri: 
+It's not like a motivation. It's just a capability. Amazon as a company's hyper user focused. The whole mantra is user focused. And that's how they built an empire. It's not the ability or the motivation to focus on the users, just that something that gets so big, so quickly, becomes inefficient. I mean, government, for example, is humongous and it's very inefficient. You know what I mean That's why the whole centralization is not about the lack of motivation. It's just about the ability to people to keep up in this just structurally position where a company has to do everything in its interest. It may or may not be aligned with the market, but it's very self's sort of interest fulfillment mechanism. 
+
+It tries to gain market share. right There's a fundamental difference between a company and a market. The mandate for a company is to become a monopoly. The mandate for a market is to have perfect competition, to have multiple providers. So blockchain networks are not companies. 
+
+Blockchain networks are markets. So whereas companies have different ways that they think and different ambitions. That's a fundamental difference between a question network and Amazon company. Network is a more market focused product than a company which is a self focused and self interest focused entity. If that makes sense,
+
+Citizen Web3: 
+you can fork the code, but you can't fork the network. 
+
+Greg Osuri: 
+Yes, exactly. Sure. 
+
+Citizen Web3: 
+Yeah, we've been talking about it a lot lately. It's interesting. I think that it is one of the biggest differences between centralized and decentralized systems is the ability to scale and still sustain the original interest and motivation as opposed to centralized systems which can't do that. And that unfortunately has been proven itself and not just in terms of software, but in terms of governance, in terms of production and so on and so forth. I have a slightly different question here that just popped into my head. Is it already possible to deploy a Cosmos node on Akash? Has anybody done that already? 
+
+Greg Osuri: 
+Yeah, 130 nodes are right now running. Cosmos based nodes are running on Akash right now. 
+
+Citizen Web3: 
+Awesome. 
+
+Greg Osuri: 
+In fact, this week we have guided challenges. So we have Inciniversites that's running for a platform and this entire week is basically running Cosmos based nodes. So I mean, we're obviously going with Akash, which is a Cosmos based node. So it's almost like an inception. So Akash is a Cosmos based chain and then you're running Cosmos nodes on a Cosmos chain and vice versa. Akash is validating itself. 
+
+Citizen Web3: 
+Which is, I think it's cool. I mean, in the citizen Cosmos, we're running big bank nodes right now. I think it's interesting for anybody who is going to listen to this to know that it's possible to deploy a Cosmos node in a decentralized manner using Akash and I'm hoping that people will do that more and more as the market progresses. Talking about motivations and markets, let's for a second talk about I'm talking about Akash token because the latest me and Anna started Akash like thoroughly was back in the summer, I believe. And we looked at the economics, the documentation and so on and so forth. 
+
+But who's better to ask than you? Could you in your own words describe the economics of the token, why we need it and why would it be sustainable in the long term? 
+
+Greg Osuri: 
+Akash is a sovereign. Rochens are the cosmos basis to get change, right? So the economic security for a proof of stake network comes from people staking this token and securing the network. And in exchange, they need incentives. Why would just someone buy tokens of market and stake it? And the higher the value the token has, the more security the chain gets. So Akash AKT token is a staking token. 
+
+People buy this token and stake. In exchange, they get incentives. And those incentives are very important. What kind of incentives? So the main incentive that drives Akash holders or stakers is a share in the revenue. 
+
+We have a model called take model, which essentially takes a percentage of the hosting fees that goes to providers. A percentage of that goes to the stakers. In some cases up to 20%. It really depends on the workload size and whatnot. 
+
+But for hypothetical, the conversation is just for 20%. And the fees are quite a bit. And considering the market today is about $300 billion and a single Ethereum node alone generates about $25,000 in fee. And that's how it costs. 20% of that is sizable. 
+
+So if you're running 100 nodes, Akash, 20% of that, according to the stakers, is sizable. In the early days, when we don't have meaningful revenue, which is a young network we won't, the fees are substituted by staking rewards, inflation rewards. So the staking rewards, it's pretty inflation is decent. And really, the reason why we want to give this inflation is to train the user to understand what kind of incentives you can receive. And we made a bet, and I think the bet worked out really well. The bet was like, well, we have started with a meaningful inflation. With that, we'll have a good bonding ratio, a good engagement ratio, because staking itself is engagement. 
+
+And so far, I think we hit a record of 87.3%. Bonding ratio highest in the Cosmos ecosystem. It's pretty high in the proof of stake ecosystem as well. And it's been consistently over 87% of engagement. 
+
+Akash, I consider that a success. And as this inflation will be replaced by actual network fee sharing, I think it's going to be great. So Akash, the value of EKT is to secure the network. And the security comes through the value of the token. The value of the token comes from its earning potential. 
+
+So that's the cycle of how the Akash organics work at a very, very high level. Now, you can use Akash tokens to pay for compute, but I don't think it's going to be a very optimal way to pay because it is a volatile asset. It's highly staked asset, so there will be less float in the market, so less tokens around. So that less float increases or decreases the token value, really depends on how you look at it. But that contributes to volatility. 
+
+So we are in the future versions, and very, very soon, we'll be introducing multi-token settlement mechanism, where you should be able to pay using any token of choice. And this is also very, very important to us because the future of Akash is not just providing compute, it's providing managed services. And we don't build these managed services. We rely on other managed services. 
+
+For example, NewCypher has key management service, which is pretty good. And we don't want to build the KMS into Akash, and we'd rather use NewCypher. But as you know, the problem with using NewCypher is you need to hold new tokens, and you got to pay using new tokens. Nobody wants to hold these new tokens as an Akash user. And vice versa, new Cypher token holders don't want, may or may not want to hold Akash tokens. 
+
+Plus, how do you get these tokens? Where you got to go to market and friction when it comes to actually using these two networks? So an ideal scenario we want to be is, using Akash network, you can use NewCypher as part of the application, just like how you would use Amazon, use their KMS system, and pay either using Akash token or NewCypher token, or even a stable currency, as a matter of fact, and still be able to leverage your services without having to go and exchange this in place, get exposed to the slippage, whatnot. 
+
+That's really where the IBC comes into play, that's why we're really excited about interoperability. We see Akash as the gateway cloud to the rest of the block decentralized ecosystem, be it NewCypher, be it Filecoin, be it SIA, be it Luzel, Database, be it... There's so many services that are coming out in handshake. There's so many services that are out there now, that are maturing and having products, but it's very hard to use them. So we want to solve the usability problem through interoperability and through frictionless payment mechanisms. And that's really where we're going as a future of Akash. 
+
+Citizen Web3: 
+I think the most important part to catch here was for anyone who is interested in the economy is the economic loop you mentioned. The more usage, the more fees, the higher the price, the more usage. 
+
+Greg Osuri: 
+More security, yep. 
+
+Citizen Web3: 
+The most important thing in a lot of the blockchain economics is that they don't have that loop. 
+
+Well, a lot of them are missing. I'm not going to slag other economic models now, but I like the fact that you guys have thought about it, because it's a very simple thing to think about and to include in the beginning, and a really hard to do after you start your network and to think about how to make it sustainable now suddenly. So it's great that you guys are thinking about it. Talking about competition, and I'm sure you have as well, but we've been around quite a while in blockchain. I personally have been since the beginning, and there has been quite a few tries to do decentralized cloud, mostly using Ethereum, some of them have used their own blockchains. Do you think any of them have succeeded in to doing what they tried to do? 
+
+Greg Osuri: 
+Yeah, no, not really. None of them actually succeeded. I think we can hide here. People have tried, and the reason I think people fail is just wrong things to focus on. Over focus on verifiable compute and less focus on user experience and usability and what really matters to the user. It's just sad. Gollum had a shot. Gollum didn't really pan out, because they were hyper focused on verifiable computing. Of course, they had this friction of building an Ethereum, which is not exactly ready for market use. 
+
+Back then, it was a very high-priced and deep in that hype didn't really pan out. So that kind of like going in the same trap of, yeah, let's build this super complex verifiable computing. I mean, verifiable computing is amazing. We achieve verifiable computing. 
+
+It's a good thing. I don't know when we're going to achieve, but it's going to take a while. But there's a real problem today, which is the cloud. You don't need to sit and wait for verifiable computing to come around to actually go and get the users to solve the problem. 
+
+So I think just focusing on the wrong things is what led to the situation we're in right now. If you go to a traditional cloud developer and be like, hey, here's verifiable computing. There will be what? I mean, they're so used to like deploying the workloads in their language of their choice. And for them, they want to get from A to B. And last thing they want to deal with is rewriting the entire application stack into a language that is subpar with the languages of free book that they're used to. And you cannot create a new language or a new framework and expect people to use it, no matter how much money you raised. You know So ultimately, what matters is what the user wants. 
+
+And what the user wants is to just deploy their things on a cloud. So I think just wrong focus and mispriorities is what led to the situation we're in. And we are hoping to change that. Yeah
+
+Citizen Web3: 
+It's interesting that you mentioned that the whole thing with your own framework and there's a part of me that absolutely agrees with you. I'm sure you heard about orbit, right? 
+
+Greg Osuri: 
+Yeah. 
+
+Citizen Web3: 
+One of those projects that kind of arouses a lot of feelings inside, but I wanna hear your opinion. Do you think that I'm not sure how deep you're familiar with them, but do you think that something what orbit is doing could be together with what Akash is doing is actually not a competition to each other, but rather fulfilling each other because orbit is building the personal server and operational system, but you still have to host it somewhere, right? And here it comes Akash versus, okay, guys, we're better to host an essentialized private and provincial system than on an essentialized cloud server. 
+
+Greg Osuri: 
+So what orbit is doing is operating system app, what we do is operating system end below. That's a fundamental difference. I remain extremely curious about what orbit is doing. I try to keep up with them. They're doing fascinating stuff. 
+
+I'm certainly very curious as to what comes out. It's a project that has been around for a while. It's not something that was created last year or two years ago. They've been working on it for years on out, but it's definitely not fully clear. They do have binaries and there seem to be some action happening there. So I remain insatiably very curious as to how it pans out. 
+
+From the way I see it as of now, it's very complementary. To what we're doing, someone bells a verifiable compute. Akash will support them with the hardware. And last thing you want is a verifiable compute to go and sit on centralized clouds. It's just sad, like 60% of Ethereum nodes are on Amazon. 
+
+We don't want that to happen. We want verifiable compute industry to mature and it looks like orbit is the best possible. A framework that I've seen and I've heard so far, I mean, at least they do have high quality software versus other players that are primarily written in Node.js, which is nothing wrong with Node.js. I just can't really take someone that builds a binary in Node.js to be serious. So yeah, I mean, orbit definitely is looking very, very good. I'm excited about orbit. 
+
+Citizen Web3: 
+By the way, it's not a few years. I'm familiar quite well with orbit. The original phases of the guy, I keep forgetting his name because he's not in the organization anymore, but the guy who wrote all that was like 25 years ago, something like that. 
+
+Greg Osuri: 
+Yeah. 
+
+Citizen Web3: 
+And then he's been, it's crazy. It's been going for so long actually. 
+
+Greg Osuri: 
+I think it's a great opportunity because orbit is competitive space with Apple. 
+
+Citizen Web3: 
+Yes. 
+
+Greg Osuri:
+With Apple apps. No one has innovated at that level, at the UI framework level, at that operating system level in a long time. And that's where orbit is going. I think that's really exciting. Everyone else that talks about operating systems and not operating systems. Not even close to what orbit is doing. Yeah
+
+Citizen Web3: 
+I don't know if you have a listen to citizen customers, but what we usually do is we try to get a little bit about the guest and you have a very rich background. You're a very diverse person of what we started because the internet does give away a lot of information about you, like you said. And nothing secret, don't worry. 
+
+But we are quite interested in to listen. And I mean, you have such a huge, rich background. I mean, you've worked with IBM, with Google, I think, with quite a few big companies. And how did you get into blockchain? I mean, why does anyone in their same mind leave all of those amazing, sustainable, huge companies behind and say, screw that, I'm going to build decentralized cloud? How did that happen? 
+
+Greg Osuri: 
+IBM was a long time ago. That's where I began my career. So you don't want to work at IBM as a country. It's not a company. It's given me a great start. 
+
+I mean, it did get a lot of insight into how big companies work. But then I caught them on the phone with your bug and I moved to San Francisco around 20 2008, around when the financial crisis happened. And I just fell in love with everything San Francisco has to offer. Just the culture, the air of innovation, people thinking about creating companies. 
+
+It was just fascinating. So I started my first company called Angel Hack. 
+
+Citizen Web3:
+A big company. 
+
+Greg Osuri: 
+Small when we started. It was a hackathon-based accelerator. We essentially took the idea of hackathons and made that a popular concept. Before hackathons, before 2010, hackathons were an underground concept. We made hackathons popular. In fact, our first hackathon we threw, I mean, one person showed up. 
+
+It's sad. The next one, a lot of people did. But it became a massive way. By the time I left the company, we had about 150,000 developers in the ecosystem, in about 50 cities all around the world, Australia, to the US, everywhere in the world. 
+
+It was amazing. And every time we did this hackathon, we had amazing press coverage, tech crimes. In Facebook, we'd just write a series of blog posts. 
+
+It ended up happening in Angel Hack. We created this platform for developer companies to launch. And one of the companies that I helped launch is called Firebase. So Firebase, the founder James, he's a phenomenal guy. He's two good friends, still date. 
+
+He came and showed me this amazing cloud database. They didn't have a website back then. It was just, they were pivoting. 
+
+He was a YC company, pivoting from old chat software, something they wrote. And I was just blown away. And I was like, well, they didn't have money to launch. 
+
+Three people in the company. And we actually showcased them. Angel Hack can be introduced into their first investors and all that fun stuff. They got them the first 10 users. And in two years time, they grew big enough that Google made them offer they couldn't refuse. 
+
+And that became Google Firebase. So I had incredible insight into launching companies that are developer focused. And I've been developer focused at Angel Hack since 2010. And one of the best things I learned at Angel Hack is understanding developers and their duress. Really, a hackathon is time limited. 
+
+36 hours get to build from the concept to something that you can show to users. And really sitting with developers understanding how they behave under stress, especially during deployment, gave me a lot of insight into understanding developer experience. So I went about this whole focusing on that very problem. 
+
+What happens after you finish writing software to the time that you had to put on the server? So that led me to doing a lot of work with this new concept called containers. This is before Docker was launched. Docker came around. And containers were being used. Google, Google is the only place that, if you want to play with containers, then you can go and get your hands on. 
+
+And I didn't exactly work at Google, but I was working on a research thing called Omega Project, which was essentially an optimistic scheduler Google proposed to manage fault tolerance in containers. It was fascinating. I was doing a lot of work there. And I ran into this thing called Kubernetes. 
+
+Right around the time the launch, actually, I met this amazing guy called Joe Beta, who created Kubernetes. Fell in love because it didn't have the best scheduler. It had a monolithic scheduler, you call it. It was based on an internal Google project called Borg. So that literally took Borg and made it clean it up and made it open source. 
+
+And Joe was like, well, it doesn't have the best scheduler. It's not as fancy as the Omega scheduler, but it does the job. I mean, it does what you need to do. 
+
+Do some fault tolerance, do some orchestration. Does everything you would need around containers. And Docker was just getting popular, right? And I fell in love with it and probably everything I was doing. And I was like, yeah, Kubernetes is going to be the future. This was in 2014. And I built a company around taking Kubernetes to market in 2015. I started over cloud labs. We raised money mostly from Silicon Valley, Sequoia Scout participated. 
+
+We had Crunch Fund that led the round. The idea was to take edge computing and make Kubernetes multi-cloud. So Kubernetes was very in cluster. And idea was we want to create a very fast cloud. And the way you do that is by reducing network latency by going to the edge. And we use Kubernetes for in cluster load balancing or scheduling and orchestration. And the global orchestration we wrote. So I wrote this demo and I put it out there. 
+
+Big way I would demonstrate this is still on YouTube. I think from 2015 I would do this multi-cloud. You can put up all these Kubernetes clusters around the world. And people were blown away. And that's how I got into the community. And I wrote a bunch of open source libraries that ended up getting used by Kubernetes. Ubuntu, I believe even HashiCore now. 
+
+Some of them they use my libraries. And it was primarily in Go. So that's really how I got embedded community. And long story short, that became Akash network. So essentially all the work we've been doing over the last five years or six years with Kubernetes and developer experience really panned out into this network. 
+
+Citizen Web3: 
+You mentioned a few times while you were saying this started that you kind of fell in love with what you saw. But what made you fall in love with it? Was it the code or was it the feeling that you can do something great with it? But what aroused that feeling? 
+
+Greg Osuri: 
+Are the Kubernetes? 
+
+Citizen Web3: 
+Yes. 
+
+Greg Osuri: 
+So Kubernetes in general solved a parity problem, right? So if you were doing DevOps in any distributed systems back in, let's say 2010, your options for deploying software was Chef and Puppet. I don't know how many of you use Chef and Puppet, but they're horrible. 
+
+At least they were horrible back then. So the idea that infrastructure should be immutable in the sense like the experience for a developer or the outcome the developer intends locally should exactly match the outcome they want on the cloud. So a lot of times what you have locally doesn't really translate very well to what you have on the server. Because you are missing a package, there's so many things you need to put together to run a server. A lot of times when we do an update, we just go and change the server. And that causes all kinds of things. With Docker, you can build your image locally and ship that elsewhere. 
+
+And I was very passionate about solving this problem because if you sit there for hours on out and you're like coding after 24 hours and you want to ship your software, and the last thing you want to do is run it with infrastructure. You should God knows where you got to. It's just very painful. Anybody who's done this is very, very painful. So my passion was just solving the pain, is not doing something fancy and feeling good about it. I just wanted to write something and have a reasonable way to expectation that this thing will work where I deploy. 
+
+It's not unreasonable. This software was just so arcane. Even today, it's pretty arcane, right? So the Docker came and solved that problem and was just fascinated by it. But Docker wasn't the one that solved the problem. It was containers, containers are Linux, right? So containers, but Docker made containers easy to use. 
+
+Before Docker containers were not exactly easy to use. And this is the world we're sitting with VMware or like virtual servers or hypervisor servers. Hypervisor was sort of thinking what we experienced like client server thinking blockchain. Hypervisor was trying to emulate the real world servers, whereas containers shifted the paradigm on how you think about servers and created this container native sort of world where you're developing now mostly using containers. Like the no code, low code, all these were possible because of containers. That's how technology evolves. And it's really fascinating that we got introduced to this thing, these phenomenal technologies when they were like early. And now as we're reaching maturity and burden burns, I mean, the creator, one of the creators of Kubernetes, I think yesterday he said something around the lines of like Kubernetes is like Microsoft DOS. 
+
+We still haven't got to Windows 98 yet. I think that's actually true. I mean, it's a very, in the cloud world, Kubernetes is now the standard. 80% of the cloud today uses Kubernetes. And Akash is built on Kubernetes so we're leveraging a lot of that knowledge. That's one of the reasons why we could do a lot more with a lot less. And no one, I don't think anybody's leveraging Kubernetes really well today in blockchain. 
+
+And we've been in that world for a very long time. And you're seeing a lot of the current like success of Akash is because of the heavy lifting Kubernetes does with us. And also from a blockchain standpoint, all the heavy lifting cosmos does. So we are very careful in choosing the technologies that have similar patterns for Kubernetes. One of the reasons why we chose tendermint in cosmos is because it aligns very well with our thinking. 
+
+And from our experience, it's very similar to how Kubernetes was built very early. So we pick the best of class and we don't try to rebuild and reinvent the tools. Let experts do what they're good at. We're not blockchain people. We rather depend on cosmos. And we, of course, now close enough that we're contributing quite a bit to a cosmos ecosystem. But that's not our original expertise. Our expertise is deployment in cloud. So we rather depend on cosmos for giving us that expertise and we can leverage our Kubernetes knowledge to give you the best in class. 
+
+Citizen Web3: 
+You have jack for that. 
+
+Greg Osuri: 
+So jackal in all more. 
+
+Citizen Web3: 
+Yeah, so he can take care of it. But what I was trying to get at was your motivation. And you've mentioned throughout the podcast, you mentioned user experience a lot. And when you talk about Kubernetes, when you talk about all of those things that you were trying to do, what I'm hearing is that what motivates you and what basically motivates Akash in a sense or what motivates you to create Akash is to create the user experience of cloud, seeming less and as perfect as it can. 
+
+Greg Osuri: 
+Yeah, the vision is intact from the beginning, from 2015, we started the company, just to build the best in class, the best user experience for a developer to take your workload from your workstation to the cloud. The fastest and the quickest. And I think that's really where we're going. And of course, the cheapest and the best. I mean, we don't need to be expensive to deliver a user experience. In fact, it can be a lot more cheaper than the cloud. But the cost of the side benefit, the real benefit is ease of use. 
+
+Anna: 
+Yeah, I think it's time to go to our traditional question. Usually we ask people to share with us three or more blockchain projects that our guests are exciting about. But I think this time we can a little bit modify this question. And could you share with us any software or I don't know, hardware project that you are excited about recently that you think, wow, it's really disruptive kind of innovation. So is it something that pop up in your mind right now? 
+
+Greg Osuri: 
+Yes, so blockchain alone, first thing we are seeing is a Cambrian explosion of decentralized cloud. I think people should take new Cypher and Filecoin and like XIA and these projects a little more seriously and really focus on what's going on here. We are seeing the birth of a new cloud and when Cosmos and IBC comes into fruition, when we have interoperability that comes into fruition, I think is going to be phenomenal. It's just going to be a completely different thing that nobody ever thought was possible. 
+
+And we're just seeing a Cambrian explosion. So and lots of, they're small enough now that actually people are coming together and working together. And I think there's going to be a lot of exciting things that are going to come out in the next year, 2021, with the decentralized cloud. 
+
+I think they have the DeFi moment of 2018 at this stage. And second thing, I think in general, a lot of excitement around scalability in blockchain. So big fan of Solana. Solana is a speedy phenomenon. And they're doing like 50,000 transactions per second. But also if you actually build on Solana and try it out, you'll see the experience is similar to how you would develop a database, local, traditional centralized solution. 
+
+What are a decentralized stack? I think people should take that a little more seriously. I understand there is this whole like, eat maximals that happens, which is kind of sad, but I think people should park their frequency biases and look at technologies like Solana a little more seriously. I think, Zaki and Ethan, they're also pretty excited about Solana, from what I can say, and they really align with the Cosmos ecosystem as well. I think these two are the most interesting things that I can think of the whole decentralized cloud space and the scalability as well. 
+
+And of course, third and most important thing, it would be IBC. And our atomic composability in general, that's where we're going with IBC, composability is amazing, especially when you're doing composability over blockchain networks because it is deterministic. So if you look at DeFi, right, you have like these things like flash loans, which are phenomenal, where you can actually take a loan and use that loan for performing transaction and pay back this loan in the same transaction. That very idea is impossible in traditional finance. 
+
+And it's only possible because it's deterministic, the blockchain world. And imagine doing that across chains, and IBC is very, very prime to facilitate that. And I'm really excited about IBC, especially around atomic composability side of things. 
+
+I think that's just going to open up a whole different world of possibilities that we haven't even thought about. Like flash loans, nobody thought about flash loans were possible like last year, right? Till we actually said, well, we have all the data, the state is pretty much out there, we can make a deterministic call based on the state. And now, yeah, we can create a new financial product. So yeah, interoperability, scalability, and I think Decentral has started the most exciting things that I can think of. 
+
+Citizen Web3: 
+I think people underestimate the amount of use cases that IBC will spring out, because all you hear people talk about are like talking transfer, which is, I mean, what is it talking? It's just a piece of data, right? When we think about that IBC is not toke transfer, it's data transfer. 
+
+So we're talking crazy use cases. And I'm all up for, I can't even imagine where it's going to stop because I don't think it's ever going to stop. I think it's going to be so crazy and I will see. 
+
+Greg Osuri: 
+Yeah, I'm really excited. It's composable, right? Composed across different networks and in a single program, you know, that's really exciting. 
+
+Citizen Web3: 
+Definitely crazy. Greg, it's been a huge, huge, huge, huge, huge, huge pleasure finally talking to you and catching you. And hopefully maybe next year, when you kind of have a little more time, we can have another recording, maybe if you are up for it, would love it. And to hear what you guys have progressed in half a year or whatever, somehow like that. So thank you for coming on. 
+
+Greg Osuri: 
+Absolutely, I would love that. I mean, I'm really excited. I had a great time. Thank you for inviting me. 
+
+Anna: 
+Yeah, thank you. Bye, everything can see you next time. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

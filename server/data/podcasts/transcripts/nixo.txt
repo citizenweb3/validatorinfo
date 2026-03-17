@@ -1,0 +1,393 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/nixo
+
+Episode name:
+Solo Staking, Ethereum Foundation and Oceanography with Nixo
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web3 podcast. Today I have Nixo from Ethereum Foundation. Nixa, hi. Welcome to the show.
+
+Nixo 
+Thanks for having me.
+
+Citizen Web3 
+I know the listeners can't see us, but it looks like it's cold wherever you are, is it?
+
+Nixo 
+It is quite cold, I am wearing like four layers right now.
+
+Citizen Web3 
+I can see, I can see the suffering you've put in on for this podcast. So I hope you're not freezing to death. I'm sorry if you are. But before we go on anyway, and if you fancy talking about where you are, of course, feel free. You don't have to. But please tell tell me the listeners who is Nixo? What is she does? What does she do? How did she get to Web3? How did she get to Ethereum Foundation? And maybe what is she? Anything you want people to know about yourself?
+
+Nixo 
+Sure, so my name is Nixo. I actually was a research scientist before I ever came to crypto. I worked in oceanography and I was a chemist. I got into crypto back in, I wanna say 2012. I bought some Bitcoin.
+
+on LocalBitcoins.org, which meant that I went to someone's house and I sat with him with our laptops next to each other while we transferred money between wallets. And that was my first intro, but of course, like I didn't hold onto that Bitcoin. It was actually a great story because he had like a little six-year-old daughter there who made me a little certificate in Glitter Pen that said, congratulations, you have 100 Bitcoin. And now that
+
+certificate haunts me because I did not hold on to it I just spent it at So I completely ignored crypto I wasn't crypto-pilled on that and at some point Bitcoin hit a thousand dollars and I think I bought it at like between like six and eight dollars a Bitcoin and when it hit a thousand dollars I was like my god I am such an idiot.
+
+Citizen Web3 
+it's hilarious 
+
+Nixo 
+So I started looking into crypto again and I found some sketchy Russian exchange called BTC-E and I bought whatever was on there. I didn't do any research. I was the typical crypto trader at that point. I just bought whatever was on there thinking like this might go up. Did not log in again for six months. And about six months later I logged in thinking like, let's check how my crypto is doing.
+
+logged in and was like, wow, it's doing really badly. I should do some research on what I bought. I did some research and I figured out that I bought some Russian rubles on this sketchy Russian exchange website. So I did some actual research after that. By this time, it's late 2015, 2016. So ETH had launched. I had missed the ICO, but I bought some ETH, kept it on the sketchy Russian exchange, and BTC E.
+
+at some point so I lost that money and then at some point they came back and they said we're now Wex.NZ and if you leave your money in here like we've repopulated your balances and if you leave your money in here then it'll vest to the right amount that you have but if you try to take it out right now then we'll only give you like 40, 50, 60
+
+I forget what percent it was, so I was like, of course, I trust centralized exchanges. I'll leave it in. And then, of course, Wex then rugged again. So I spent some time learning some lessons in crypto. And then I, again, tuned out. was in grad school. I was focusing on work. And then the beacon chain was launching, and I started to see more chatter.
+
+in my Reddit communities I was in, E-Trader, E-Finance. At that point it was E-Finance. And this awesome, very enthusiastic guy named SuperFizz was singing the staking gospel. And I got really excited about what he was posting. I was like, I'm not like super technical person, but I think I can figure out how to do this. So I learned how to stake.
+
+Nixo 
+I started staking in just a few months after the beacon chain. Unfortunately, not in time to be a genesis depositor.
+
+And then once we figured out how to stake, it's kind of like, especially at that point when guides were kind of few and far between, I was very proud of myself for figuring out how to do this like very technical endeavor. And so then I went on the subreddit, the Eastacre subreddit and started helping other people learn how to stake. And I guess I was helping so much that SuperGiz reached out to me and asked me to help moderate the subreddit and asked me to...
+
+helped contribute in other ways. And at that point, COVID was in full swing and I worked a job that was funded by government institutions and they had trouble figuring out their COVID protocols and a majority of my job depended on something that
+
+COVID was not compatible with federal organizations. And so my salary had gone down and my coworkers and I were having a lot of strife with our leadership. And I decided it was probably a good time to try to move to crypto because I was all of my hobby time. I basically spent all of my free time learning about crypto, learning about staking, trying to figure out as much as I can, listening to a lot of bankless at the time.
+
+And I quit my job. moved out of my house. could not I worked in oceanography is like a very poorly paid science. People work in there because they're passionate about oceanography, but it's what they call. I forget what they call it. There's a there's a tax that essentially industries levy on.
+
+Nixo 
+passion industries, which means that they know you want to work there, so they don't have to pay you very much to work there. So I moved out of my place, I went to a coding boot camp, and I thought, you know what, I'm going to become a coder, I'm going work
+
+And about halfway through this coding bootcamp, somebody who worked at Eastaker and where I was already volunteering was doing a startup called GitPullup and needed people on the team for GitPullup. So he hired me to GitPullup. And that lasted about a year, a little less than a year. And then once GitPullup, they shut down and refunded their investors.
+
+I just ended up working at Eastaker full-time because at that point Eastaker had garnered a bunch of donations but it didn't really have a legal structure and it needed a lot of like accounting, legal structure, just organizational things and so Eastaker hired me on full-time. I became the executive director of Eastaker and I spent a couple of years doing stuff that I have learned that I absolutely hate which is
+
+setting up a legal entity and talking with accountants and lawyers and making sure that we were tax compliant and making sure that nothing about the organization or grant or receiving grants was very sketchy. And at some point this year, I saw that the Ethereum Foundation had a job position that was non-technical and that was specifically working with
+
+a bunch of client devs and researchers, is sort of my job at Eastaker had turned a lot into advocating for solo stickers, which meant that I had to be listening to the all core dev call, I had all core dev calls, and I had to be paying attention to research to make sure that the direction of the protocol benefited solo stickers. And because solo stickers are hobbyists, they're not necessarily really engaged with research or like what's going on in the
+
+Nixo 
+implementation of a hard fork. And so it's helpful to have someone paying attention and saying, constantly asking questions. Is this going to harm solo stakers? Is this going to benefit solo stakers? Have you thought about solo stakers in this research idea? And so I had been going to all core dev calls, mostly watching them on YouTube and talking to researchers, especially when the issuance conversations came up. so when the Ethereum Foundation hosted that
+
+stoked to apply to it and they I loved it when they when they interviewed me they said look we would love to have you but we're very concerned because you are a large part of Eastacre and Eastacre is a valuable part of this space what happens if we hire you what happens to Eastacre does it look like we poached you and does Eastacre die? And so they gave me a good four month period where I could
+
+find a replacement for myself off board, transition all my responsibilities to this new person, this new person whose name is Jonathan. And so I am now almost at the end of that four months and I start full time. So I've been half time with the Ethereum Foundation and half time with Eastacre since September and starting January 1st, I will be full time with the Ethereum Foundation and just on the nonprofit board with Eastacre.
+
+Sorry, long-winded.
+
+Citizen Web3
+There is no go on gone. Please please please go on please please add please please do
+
+Nixo 
+No, that's okay. Sorry, that was a long-winded introduction.
+
+Citizen Web3 
+No, I loved it. I was gonna I was gonna like try try to to pick pick on some things there. But please, please do add more to the intro if you want, Nixon. No, okay, we're gonna leave it at that. I was actually going to say that ironically, you you mentioned oceanography and chemistry. And ironically, I have a lot to do with oceanography. I didn't know that you had an oceanography background. And I personally don't have an oceanography background. But I live in an island in an ocean.
+
+And a lot of my friends are actually oceanologists, PhD oceanologists who study, make studies. And I'm the one who works in crypto and we have a lot of these oceanology crypto passion conversations. So I'm actually very familiar with the background you were talking about. And I was like, I actually have a theory that the oceanology population is dying out. It's a joke, of course, but I've noticed that all my oceanologist friends, they're like, they love, they love partying. They, they, I,
+
+Whenever I ask them what they're working on, they're not really sure how to answer me. They're like, sometimes, we're doing some experiments with plastics, about the red and then we starving sea urchins or whatever. I'm like, man, what is happening with oceanologists? gone. No, I live actually, not a bad guess. I live on Madeira. So five straight hours.
+
+Nixo 
+You live in? Do you live in Bermuda?
+
+Nixo 
+Okay.
+
+Citizen Web3 
+from Bermuda to Madeira and yeah, you will find more or less Madeira, sorry, from Bermuda to Europe, you will find Madeira, yeah, more or less.
+
+Nixo
+Oceanographers who live on an island are an entirely different breed because they're they're they basically agreed to be isolated for their job.
+
+Citizen Web3
+Yes, yes, I, I, I, I try to peel them as often as I can. yeah, but they are very passionate. Like you say, they, they don't want to be peeled. just, they just want to blend the plastics and, and, and then starve sea urchins and whatever. I'm sorry. This is what I understand. This is what I understand from when they explained to me, I'm sure that they do much more important stuff, but the way they explain it sometimes it's like, yeah, anyways, but, you know, but back to you,
+
+BTC is something I definitely remember. I remember how it transitioned and I remember the arrest of guy that was one of the... He was arrested in Greece somewhere, I remember, for crossing something with tax evasion or something like that. But all that aside, you mentioned one thing that has really caught at least my personal attention. Well, two things, fact. One, and this is something that I would like to point out before I go to the question. In fact, your journey...
+
+for a lot of people is a dream journey in crypto. You were a trader and you work for the biggest foundation probably. At least in, I don't know. Let's not compare, but I say it's the biggest foundation in crypto. So how do you feel? Do you feel like that, you know, you're lucky or do you feel that you are the person who, you know, luck doesn't happen, right? It's something that we strive towards. We do, we build at least I believe. So what's your opinion? Like, you say that this is a dream journey?
+
+Nixo
+To be clear, was never, well, there was a three week period where I was a trader. In 2017, when things were volatile because of ICOs, I did do a little bit of trading for three weeks until I looked at the tax implications of the trading I was doing and I was like, I don't understand how to do this at all. So I never traded, but in the beginning I was just buying whatever I could. Like there was one time that I just went and dropped
+
+$20 on every coin I could on Poloniex which only ended up being a good idea for Doge randomly Although I actually did some research on that but none of the research I did panned out I for some reason Doge was the only one that panned out from that but I would say that this this is a dream journey for me, and I wouldn't say that Much of it is luck I would say a lot of it is
+
+going where I'm interested instead of trying to follow the money. For me, it's finding what I'm passionate about, finding what I really want to, what is really gonna nerd snipe somebody and following that. Because at first, when I was doing BTC, of course, I was just trying to make money. I was just trying to, I didn't know anything about crypto, I just wanted to buy something. But as time went on and I learned more and more about it, it wasn't.
+
+Before that it wasn't the thing that interested me. The thing that interested me before that was chemistry. And as I felt that shift of caring more about crypto, I followed that. And it wasn't because of the money. It was because of the technical implications of it. And I will say I've never, there's been one time in my life
+
+and it was only for about a year that I have worked for anything except for a non-profit. Right now I work for non-profit. The Ethereum Foundation is a non-profit. East Taker was a non-profit. The science center that I first worked with was a non-profit. The institution that I worked with was a non-profit. And so I really try to make my job things that I feel will affect the world, that I feel will make a large difference in the world.
+
+Nixo
+And granted, like, I'm never gonna get rich off of that. I'm paid, like, nicely right now by the Ethereum Foundation, but I'm not, I'm not, like, paid like a dev. I'm not paid really nicely. Like, I have not made a shit ton of money off of cryptocurrency. But I would call that my dream job because I am surrounded by people who really care about the world and really care about...
+
+where it's going and really believe in Ethereum as something that has the potential to make our existing systems more fair to the general public rather than just create ways for new people to get rich rather than the old guard to get rich.
+
+Citizen Web3 
+I actually love that you're taking the conversation that way. To be honest, I was going to make a joke about synthesizing cocaine, about considering your chemical background. I always ask all the chemists, can we already synthesize cocaine finally or not? What's going on? When is it going to happen? But no, let's talk about serious things because this is actually a big topic of the podcast and seriously, one of the biggest topics over the past five years for me personally, for the guests, at least that I try to dig with them.
+
+has been this is just what you said, know, bigger things. But before we jump onto there, like, there's a couple of things you mentioned when you were doing your intro. And there is something that I have here a note about to ask you from a tweet that you made. And you mentioned that you hate legal. And I can totally relate to that. For me, I get into a state where I cannot control myself and I have to speak to and there we go. It started. I'm starting to stutter. There we go. It's seriously like I go crazy, man.
+
+And you also tweeted something about, know, blockchain without cypherpunks and, know, the sirens are calling. And I totally agree with it. We see a lot of that now. I want to ask why those things are important to you. Why does legal make you cringe? Why, why, why do you think the sirens are calling? Why, why is cypherpunk important? Why isn't it? Why, why did you say, you say you mentioned two or three times the combination of words, bigger things in the world in life. Why is those things important to you? What drives you there?
+
+Nixo 
+So this is going to be two different conversations. I'll address the legal thing first. The reason I hate dealing with lawyers, accountants, and all of the legal issues around starting up a nonprofit is because all of it's really opaque. There's a lot of legalese in it. Lawyers are always trying to convince you that they're more competent than they are. And that translates to them just trying to get you to do things in a way that they're familiar with. And so they usually have one.
+
+thing that they're familiar with and they try to pigeon or like shoehorn everybody into doing the thing that they're already familiar with. And the same with accountants. You meet lots of accountants who say, I can do this for you. And yes, I know exactly how to do this. And it turns out they have no idea what they're doing. And they just dig you into deeper shit than you were in before. And so it's just very difficult to find competent, kind,
+
+lawyers and CPAs. So that's why I hate dealing with the legal stuff. in terms of the tweet that I have pinned on my Twitter, is that blockchain without the cyberpunk ideals is a dystopian world. So one of the things that drove me to that was the idea that cash is disappearing from our society. cash is a way that
+
+People can still stay anonymous. People can still spend their money however they want. They can hold onto it and nobody can take it from them. mean, you can physically take it from them, but they can't like turn off their money or turn off their ability to spend that money. Whereas digital money, very much you can be stopped from using that money, especially bank accounts, any ledger based system that is a centralized system.
+
+can stop you from using that money. And we're moving to a society where fewer and fewer places accept cash. And if you look at how women were allowed to use bank accounts in the 60s, 50s, 60s, 70s, they had to have permission to open bank accounts. They had to their husbands' credit cards. And so they were severely restricted from accessing.
+
+Nixo 
+these financial institutions and spending the money how they wanted to spend the money and if we go to a digital an entirely digital system that is synchronized with each other we will have so much more thorough ways to block people's access to financial systems and that doesn't seem like an issue while we still have cash but
+
+cash disappears and like I know a lot of private institutions that no longer accepts cash at all So as that as that disappears and as more things happen online and you have to make payments online That becomes a really big issue. So if say in the worst-case scenario Ethereum develops in a way that we no longer have solo stakers because it's just not viable. We just haven't built the economic means economic structure for them to be competitive
+
+with large institutions and most of the building on Ethereum is happening by just a few large institutions who have direct contact with the US government or lawmakers or any any government institution who has a lot of influence in the world or even just like collusion with each other they have a lot of contact inclusion with each other we end up in a world where people can be censored quite easily
+
+people can be censored, their transactions can be censored. And right now, what sort of protects us from that is that every system that we have in the world is a discrete system that doesn't really talk to each other. It's really inefficient. We have banks with their own systems that take four days to settle with each other because they're not compatible systems. And if we move everybody onto Ethereum,
+
+Yes, that is a much more efficient system, but we also have a much more efficient way of censoring people and taking away their sovereignty and their ability to transact and interact in the world, order things online, pay for subscription services, pay for housing, pay for utilities. And so I think really like making sure that Ethereum is decentralized, making sure that no one controls it. Nobody has an outsized amount of influence in it, even like even if...
+
+Nixo 
+soft influence, that is the most important thing because without those things Ethereum is actually a really dystopian tool.
+
+Citizen Web3 
+You know, one of the questions that I like to go back to whenever people, and I'm going to play a little bit devil's advocate. I must say, you know, and I say this a lot and the listeners might get a little bit annoyed because, you know, I repeat that, but, you know, it's a different conversation. And I must say that, you know, you're talking to a person who is the first to believe in what you say, but it's not one big conversation if I'm going to agree with everything you say. So, you know, there's the question I...
+
+kind of like to ask founders usually and people who work a long time in Web3. And I did this in, in, in, in, Ethlisbon some years ago I was going around and I was asking like a set of the same question and my favorite one was. If you were right now you know people who started to talk about all this great things and you know ok I I I'm the one to join I'm the first one to join to talk about it but if you were to rite now hand on your heart and you look at your work what 
+
+you did in crypto and blockchain in the digital world. Forget our Oceanography for a second because that's actually much easier to answer that question you will see in a second. Do you think that at least one person life in the world that wasn't using crypto before you started was changed? People who use crypto, okay, they're alive, we can go in easily, but the work that you did, do you think that personally somebody today is like hand on your heart, somebody's life is changing because of your work?
+
+Nixo 
+That is a good question. Yeah, that's a good question. I would say no, because I don't think Ethereum has much impact outside of traders right now, which is another reason why I don't think that we're ready for the institutional adoption, especially of staking. Because in my head, Ethereum is still in its infancy in terms of its actual infrastructure.
+
+Citizen Web3 
+Somebody who's not in crypto.
+
+Nixo 
+we are not ready to to onboard staking ETFs because all that is is just like a money printer right now where we think that we can generate infinite passive income for the world and what that is going to end up being is actually just feeding these financial intermediaries like ETFs and like big banking institutions that opt into this. And so I would say that
+
+The work that I have done so far up to this point, I hope will impact people who currently don't use crypto if Ethereum ends up in this state of censorship resistance and decentralization. And that is when I can be proud. I honestly do get nervous that if Ethereum does end up in this dystopian state where it is censorable and...
+
+influenced by just a few institutions like Liquid Staking Protocols who have outsized and outsized voice in how the protocol develops. I do worry that I will look back at the work that I have done and not be proud of having contributed to Ethereum.
+
+Citizen Web3
+I very not surprised. probably shouldn't. I don't know what the right word is. was a bit upset, put it this way. We used to do some lives and a few years ago I had on four reps from different liquids taking protocols. They're big names, all four of them. One of them I think didn't make it, but okay, was four or five. They were all the biggest ones. And I asked the question, like I remember I asked the question, what do you guys think about revenue that comes from inflation? Isn't it kind of like...
+
+ridiculous in a way if we think about it. And the biggest rep of those liquid staking protocols, they were like, what are you talking about? There is no revenue. I was like, wow, that's rich. know, when, when, and the other ones were quick to correct the other person, you know, they were like very, but it's just ridiculous to the depth that it sometimes gets, you know, that money making machine that puts people in a state of, yeah.
+
+Nixo 
+Yes, it's infuriating because sometimes people treat crypto as like a, as just a passive income generator and it's just like, as long as we can generate income, we are successful. like that is just, that's like a, what is a machine that powers each, what is, what is the term I'm looking for?
+
+Citizen Web3 
+don't know the English term, but I think I understand what you're talking about.
+
+Nixo 
+Yeah, a machine that is powered infinitely without having input generated into it. And so like if we just have a mindset that all we need to do is create infinite passive yield, we're not going to build anything useful and we're not going to solve any problems. We're just going to enrich some intermediaries who figure out how to take a pump of all of the different steps.
+
+Citizen Web3
+I would add we would short term enrich those intermediaries because values in the eyes of the beholder, And value today is not going to be the value tomorrow and not the next day and not for the next community. So absolutely agree with you. For us to jump a little bit from this topic, I want to ask you something typical probably. I know it's a completely different topic, but we will come back to those things. It's just, I do want to ask you that how does a day...
+
+for you of work, Luke and somebody who works for the Ethereum Foundation. I know this is very different and this is very like completely like taking us out of this conversation. But still, think, you know, a lot of people do ask a lot of people like, wow, Ethereum Foundation, know, like, overheld, you know, like, so talk about it a little bit from your perspective. Were you overwhelmed? Are you still overwhelmed? What do do?
+
+Nixo 
+So I am always overwhelmed by the amount of brain power that is in this industry and like I think when I first started looking into Ethereum in like 2015, 2016, 2017, it was really easy to keep up with absolutely everything that was going on in Ethereum and as time went on, like especially as after ICOs happened, it was hard to keep up with every project that happened, but you could still keep up with like the core Ethereum protocol very easily.
+
+But now, as I've been going to all core dev calls more and paying attention to research more, it's even extremely difficult to keep up with one part of Ethereum protocol research or Ethereum protocol implementation. And so I'm always overwhelmed. But I would say my week revolves around, so again, I'm half time, so half of my week is still off-boarding the newspaper stuff.
+
+But the EF part of my job involves, is like centered around these meetings that happen. The testing calls, the all core dev calls, the different breakout rooms that happen, and figuring out where best I can contribute and like where is opaque to other people in this process because the all core devs, like the upgrade process in general has seen a lot of complaints about
+
+I am an app developer and I have this pain point that can be addressed by some sort of change to the protocol, but I don't really know how to talk to other people about writing this EIP. I don't know the structure of an EIP. I don't know who to talk to about getting my EIP in draft mode. I don't know how to get it merged. Do I have to ask permission to go to the all core dev call?
+
+That kind of thing can benefit a lot from a little bit more clarity and a little bit more explicit protocols that people can follow in trying to get these changes in that will benefit apps because primarily the people who work in protocol development, not primarily, would say like 99 % of the people who work in protocol development aren't tuned into these apps. They're not.
+
+Nixo 
+app users themselves. are devs who are laser focused on creating this protocol that works very well. And so we need more people with eyes on like wallets, on DeFi, on all sorts of, on layer twos, on rollups, on all sorts of apps that work on top of Ethereum. We need those people to...
+
+be more familiar with the process while still being able to stay engaged with their own little niche and advocate for what they need in the protocol. So that's sort of like a long-winded way of saying my job is to make systems more clear.
+
+Citizen Web3
+This is perfect. The longer longer the answers are, the better for me. don't have to talk. I'm joking. I'm joking, of course. But do you think that there is like a core value that repeats amongst protocol developers? Like something that you see, for example, passionate about privacy, passionate about decentralization? I don't know. Do you think something that because I don't know why to me, at least values are something that I judge. Well, I do. I'm a person a lot by.
+
+Nixo 
+Hahaha
+
+Citizen Web3 
+And I'm curious what's in your observation. Has there been something that repeats itself, one of those values?
+
+Nixo 
+I would say the beautiful thing about Ethereum is that we have an abundance of differing values and of course you get the jokes about like you have to be aligned and like the question of what is alignment and what are Ethereum's values. I would say that there are like repeating values among researchers like as a pocket.
+
+developers as a pocket, app layer people as a pocket, and they become a little bit more theoretical as you get into the research side, they become practical, they become technical as you get into the core dev side, they become practical as you get into the app developer side, and so I would say that keeping all of those things in harmony is what's going to make Ethereum successful.
+
+in general because if you have a chain that just is full of researchers, isn't that what Cardano is? It's just a bunch of academics. I don't know. It's funny because whenever people talk to me about what I do, I say I work in crypto and I should really stop saying that because then people will start talking about some other blockchain and I'm like, I am sorry. I really know nothing about other blockchains. I have a hard enough time keeping up with Ethereum.
+
+Citizen Web3 
+I thought there was a cult. I thought there was a cult, wait.
+
+Nixo 
+I don't even know what's going on in Bitcoin. yeah, would say keeping all of those values in harmony and making sure all of them have an active voice to advocate for themselves is the value that Ethereum is like the overarching value in Ethereum.
+
+Citizen Web3 
+By the way, if you want to know what's happening in Web3, the answer is very easy. You just have to listen to Citizen Web3, obviously. That was called for. I it was called for the product placement. My team will love me. No, but in all seriousness, we try to stay, I must say, I never interviewed anyone from Cardano. If Charles is up for it and if he's ready for some questions that will be difficult, I'm up for it.
+
+Citizen Web3 
+I try to stay blockchain agnostics and actually this is what I'm going to try to derive some questions to the next question actually. Sorry. And you know, I do interview people from Bitcoin. do it actually quite recent, by the way. I do interview people from Ethereum, Cosmos, Polkadot, Nier. Like really, like we are self-hosted validators. So, you know, we have our own data center, so to speak. And both communities though, what I want to ask you.
+
+Nixo 
+Cool.
+
+Citizen Web3
+Ethereum is definitely today, in my opinion, the biggest decentralized computer out there. mean, tribalism is something that crypto suffers from between different blockchains. You have Bitcoin folk, have... Apart from memes, memes seem to be doing fine. Memes are winning Trump against tribalism, by the way. This is crazy. how do you... mean, when you get all these guys in a call from different...
+
+not ecosystems, they're from Ethereum, but they're different apps. you know, I have had this experience before where I see, you know, apps fighting between each other and constant. I don't know. I think you're by you're nodding. I know that you know what I mean. So I'm going to ask you, how do you keep it away? Because anti tribalism, at least for me, subjectively has been my my goal in crypto for the last 10 years, I would say. So even if I'm not doing anything about it, I believe that I'm doing something about it.
+
+But jokes aside, how do you as somebody who works in the foundation and the protocol support team, how do you deal with it?
+
+Nixo 
+So I think a lot of people fail to realize how small, how very, very, very, very small crypto Twitter is. And there's this wider ecosystem on Twitter that sees crypto Twitter infighting and thinks like this is such a toxic community, especially because Twitter optimizes for things that outrage people.
+
+And so the things that show up on their feed when they're not a crypto person are the outrageous things, the things that lots of people are commenting on, the things that are making people angry. And I don't think that any of that is additive to the ecosystem. These people have these bags that they want to go up, they want number to go up, and so they glom onto these narratives that start on Twitter and they grow on Twitter.
+
+just about, want my coin to go up higher than your coin. And none of that matters. None of that matters in the long term if we're not showing a good face to the general public, if we're not showing a good face to politicians, if we have a bunch of toxic people in our ecosystem that in general people just don't want anything to do with because they're like, that seems like a big old mess. Because as soon as you have
+
+two different people from the same ecosystem saying no he's wrong, no he's wrong, but like they're both quote trying to educate about this thing. It's confusing to outsiders because they're like well you don't even seem to have consensus in your own industry and so clearly there is no consensus and I'm not ready to pay attention to this or try to advocate for it or try to implement it in my organization and so I
+
+I think all of this fighting on Twitter is honestly subtractive from our industry as a whole. Sometimes I'll post educational things on Ethereum and I'll get somebody who comments, why would I use Ethereum when Solana blah blah blah. And my response is usually something like, well if you value speed, then use Solana. If there's something that nerd snipes you on Solana, use Solana.
+
+Nixo 
+I don't care, I'm not going to sit there and say your blockchain sucks. Because if Solana is doing something better, if Cardano is doing something better, if whatever is doing something better than Ethereum, Ethereum should be able to learn from that rather than just put it down and rather than just like minimize it and pretend it doesn't exist.
+
+Citizen Web3 
+Sorry, that is actually a very, very, very good point, you know, rather than putting, you know, learning from it. think that, I mean, I have launched also products before and one thing I can say that subjectively I was wrong about is exactly that, you know, instead of trying to understand what I can learn from mistakes of others that I see that somebody's, or not mistakes, successes even of others, you know, when somebody's bringing me and saying, hey, look what those guys are doing. And instead of thinking, wow, they're doing something better than me, I should go learn.
+
+my decision is always like, yeah, well, they're idiots. They don't know anything about the weather. And it's crazy though, right? How far we are like, I don't know. Yeah, so completely agree with what you're saying.
+
+Nixo 
+We're like evolutionarily predisposed to want to pick a team. I understand the desire to do that. It is very ingrained in us. It is very animalistic in us. but it doesn't, it protects you in the short term, but it doesn't move, it doesn't make progress.
+
+Citizen Web3
+Absolutely. think that our defense mechanism is something we as humans are going to still learn to figure out how to work with this for a long time. I do want to, though, get in here, the solo staking part, because like I mentioned, it's something dear to me personally, and I've also been running validatory notes for a long time. We're talking about delegated proof of stake existing in 2016 and stuff like that, and of course not professionally. But...
+
+solo-staking and sorry, before I ask the question, before I get to it, I'm going to do a tiny like one minute intro to explain why I'm asking this. What I've noticed is because we are a self-hosted bare-metal validator. mean, we use Starlink, we utilize solar panels, blah, blah. We're like crazy. I've noticed that most validators in the space, the bigger, small, doesn't matter one man team or stake fish P2P, doesn't matter. They all call themselves bare-metal.
+
+They're not... It's a bit of a play word here, a bit of trick. Nice, too, because usually people when they hear Vermedal, they think, they're self-hosted. They're somewhere outside of a data center. And what we noticed, we even started a community, which actually we tried to start it. It's still at its infancy because it's called bare meta validator coven. And we had a crazy, crazy outreach. We didn't expect so many people when we started talking about problems of self-hosted validators. But anyways, now to the solo staking.
+
+And recently it became like this is why it's dear. know, it's recently became kind of a thing. People since Vitalik mentioned it, you know, some, some months ago, people start to, to, to notice it more unfortunate. That's how it works. with all of that, blah, blah, blah, blah, blah, they just poured on you. I'm sorry for that. And as a personal pain, since you can see, what do you think about, you know, the, the whole, is it important? First of all, is it even important today for the blockchain industry?
+
+for this space, industry, our Web3 space, to have people hosting nodes outside of data centers? That's one. And two, if it is, or if it's not, please, why? If it is, how are we going to get there? Because it seems we are not miles. We are on Mars, and this is on Pluto. So yeah.
+
+Nixo 
+Yeah, first of all, I'm going to tell you that the term bare metal and like cloud infrastructure, those terms have confused the hell out of me ever since I joined crypto. And I have asked people to define what they meant and everybody's giving me a different definition. But I will say, I do think it is extremely important for people to run things outside of data centers. There was
+
+EtherFi was a liquid staking protocol that was making a big deal of the fact that they were looking at some of the data. I they were looking at maps that showed that a lot of validators were hosted like within, I think, an hour of the CIA headquarters or something. And I don't think those maps were necessarily accurate, but their point stands, which is that if all nodes or validators are hosted in one data center, it's quite easy to...
+
+it's quite easy to shut them down and it's quite easy to intimidate people. It's quite easy to, you don't even have to intimidate the people, node operators. can just tell like Contavo is one of the, is I think it's Contavo is one of the data, the cloud infrastructure providers who told, who basically were like, if you're running an Ethereum validator on us, move, move it out. Like we don't want it. We're going to shut it down. And so you,
+
+really just have to have that data center be intimidated by anybody or have the bandwidth be too high, the usage be too high. It doesn't even have to be the node operator necessarily who is influenced. if, the other thing is like, it is very beneficial for validators and nodes to co-locate.
+
+And so if you're running in data centers and those data centers are concentrated in certain areas or the infrastructure is better in certain areas like the US and Europe, running a validator in a data center in Africa or Australia or South America or Asia is entirely altruistic because why would you do that when it's much better to co-locate and you know all of the nodes are run in a few data centers in like the US or Germany?
+
+Nixo 
+So yes, I do think it is very important for people to run nodes at home and I do think that it is a constant battle because you do get people wanting to scale the O1 at any cost possible and a lot of the times those people aren't necessarily running their own validators and so they have no idea who they're taking off the network by trying to increase these specs and at this point
+
+It's more networking specs than we're seeing hardware specs. Right now, the Ethereum validator set is not constrained at all by hardware. Most validators I know are running on two or four gigabyte SSDs and 16 or 32 gigabyte RAM. And those things are cheap. Those things are not, like you can buy a PC, RAM, and a hard drive to validate on.
+
+for $600 right now. That's about the minimum that you can spend. You can spend all the way up to $10,000 if you really want a very fancy setup, but you're gonna get the same performance with a $600. You're gonna get the same performance and the same yield with a $600 setup. And the bottleneck that we're seeing right now is mostly bandwidth because people can't just buy better specs for their bandwidth. They're usually constrained by
+
+a monopoly or a duopoly of internet staking providers that service their area and that have control over the infrastructure that services their homes. a lot of people are on the highest package available. If you've ever dealt with, I'm pretty sure anyone who is alive has dealt with the fact that you call your ISP and you say, I pay for
+
+this amount of up and down and the ISP responds to you and says, we guarantee up to that, up to those speeds. And so you never know what you're gonna get. You never really have control over whether or not you get what you pay for. ISPs do this thing where they bully people into using their own hardware, their own router, their own modem.
+
+Nixo
+They won't service your house for free. They won't send out service technicians if you're using your own modem or router.
+
+And so a lot of people end up buying, like being forced to use these scams where they charge you monthly for a router that at the end of the two year period or whatever, it still belongs to them even though you've paid for this router three times over. And so a lot of the conversations that we're seeing in terms of like blob increases or gas limit increases affect validator bandwidth and
+
+the conversations kind of usually go like, well, how much can we increase it? What is the minimum spec that we have? And that's a really hard thing to answer because it depends on a lot of networking, a lot of networking questions, which are really hard to measure. Like what is the ISP that you have? What is the speeds that you're guaranteed? What are the actual speeds that you're getting? What are the, what kind of modem and router do you have? And is it affecting
+
+It's not even like about the speeds that your node is getting. It also could be my node is eating up all of the bandwidth and when I try to watch Netflix or my kids try to play some video games or I try to play Call of Duty, like I'm having issues and it's getting frustrating and so I turned my node off because this was way too big of a pain in the ass. And so how many solo stakers do we lose when we up these bandwidth requirements?
+
+The hard thing about that is we don't know. We don't know when a solo sticker turns off their node. Most of the time solo stickers are hobbyists and so they don't, a lot of them aren't on crypto Twitter, they're not on Reddit, they just, they have set this up by themselves, they're not in the community. And so they don't come and say, this was frustrating, I'm shutting down my node. They just shut it down and disappear. And they never participate again in the ecosystem.
+
+Nixo
+And they don't know in the future if something has changed to them to do that without any frustration. And so I would say that retaining those homestakers is more important than retaining those homestakers is paramount because if you lose them you might not necessarily get them back and you don't have contact with them to tell them when it's easier to come back.
+
+Yeah, I don't remember what the initial question for this was.
+
+Citizen Web3 
+I can vouch for everything you say because obviously the biggest is we were a cloud validator and when we changed, which took a lot of money, a lot of time, a lot of work and an unbelievable amount of money and work. Of course, the biggest problem is the ping. Everybody's in head start, but that's solvable. What's not solvable is exactly what you say. When you come to the realization, foundations don't give a fuck. I'm sorry to say that, but foundations just simply do not care.
+
+about whether you're self-hosted or whether you're running in the cloud. What they care about is different things, it's growing. And unfortunately, what you say is a thousand percent truth. You have two problems, ping, which you have to solve, but it's solvable. can solve. you do is you create a node next to Hetzner and you use it as a traffic node. It is wire guard connected to your... Which is crazy, right? But you have to do it.
+
+And then the biggest problem, like you say, is foundations. do you think, like very quickly before we jump into the Blitz, do you think that there is something today that either the solo-stakers or validators, validating outside of a data center or foundations can do to be more of a match for each other?
+
+Nixo 
+Yeah, so actually I'm really stoked about the each Panda Ops team as a testing team out of the Ethereum Foundation. And what they have done recently is they have created a way for home stakers, people on non-commercial networking to contribute their own data to a data set where they are doing a lot of testing and figuring out what
+
+what these validators can handle because we don't really have up until this point, we don't really have good data on the, especially the upload bandwidth that home stakers are using. UQLA speed test publishes download speeds but it doesn't publish upload speeds and I tried to get upload speeds from them. I have tried to contact them and they will not respond to me. But.
+
+their project, ePandaOps, their project is called, it's either called or running on Xatu's X-A-T-U, and anyone can go contribute data, can go contribute data to that project. And so this is exactly the kind of thing that foundations or testing teams or protocol support can do for home stakers is just figuring out, asking validators, like what can you handle, what are your frustrations.
+
+I'm glad that East Acre last year started a an annual survey that they'll be running again in like February of this year where they ask very explicit and a of quantitative questions about what validators are running, what their frustrations are, and whether like what their what their feelings are towards running like are they are they feeling like it's worth it? they
+
+Do they want to exit? Do they want to input more stake? So just on the protocol side, I would say, making an effort to gather that information and analyze that information and make it available to developers and researchers. On the home staker side, I would say advocating for yourself. if you, a lot of people have the issue that they don't have enough confidence in what they're doing.
+
+Nixo 
+And so they figure if they're having issues, it's probably just their own fault. And this isn't necessarily the case. Most people should realize that they're the average user. And so if they're having an issue, probably most other users are having this issue. And so they should not just shut down their validator and say, I'm too stupid to figure out how to do this. They should say, this was difficult because of X, Y, and Z, and I'm going to drop that feedback. And hopefully they'll fix it.
+
+But at least I made my voice heared.
+
+Citizen Web3 
+Absolutely, think speaking up is definitely something that we can all do a little bit more of. Okay, I'm going to jump into what we call the blades trick with questions. You don't have to be super quick. We call them the blades, but yeah. Those questions, nothing to do with crypto. This is just to take us out to finish the conversation and to kind of like, you know, breathe out. So first one, book, movie or song one.
+
+that not one each, either, either, that has a positive influence on Nixo throughout her life or throughout maybe the last couple of years primarily.
+
+Nixo
+Okay, I would say I'm gonna go with books. Any book by Tim Wu, who is a big anti-trust guy, but outside of the technological realm, I'm gonna say my favorite book is Just Kids by Patti Smith. It is a love story between a musician slash poet and a gay man. Like that sounds really, that sounds really...
+
+Citizen Web3 
+thats Awesome.
+
+Nixo 
+Yeah, but one's female, one's male. And it's more of a love story as in like, it's just a tale of their friendship. And so I, that's, think one of my favorite all time books. But I am absolutely, absolutely addicted to Tim Wu because everything he puts out is sort of more of like a review article than it is research. It is very accessible. It makes things very clear. goes into the historical.
+
+Citizen Web3 
+Love it.
+
+Nixo 
+reasons why it goes into like the cycles of antitrust and like how the issues that we're seeing right now have been issues that we've seen throughout every technology's lifetime and how we don't actually end up learning a lot through these cycles because these cycles are so long. So yeah, I highly recommend Tim Wu's book's.
+
+Citizen Web3
+For all the listeners out there, both, of course, the writer and all the things we mentioned, projects, books, names, whatever, everything is under the show notes. So please, people, check it out if you're interested. Click the links, check it out, read the books, read the protocols, anything you want. Sorry, back to you, Nixo. Give me one motivational thing that you can share, of course, publicly that keeps Nixo out of bed every morning, focusing on...
+
+privacy, focusing on rather than legal things, bringing protocols and stakers together, building things for a better future, something motivational subjectively for you, of course.
+
+Nixo 
+I would say the thing that keeps me motivated is I usually have a few people that I admire in my industry and that I just want to impress. And so I have these people in mind and I have these people, I just want to be surrounded by the smartest people that I can. And I want to be useful to them and I want to
+
+communicate their ideas as well as I can. And because I'm not the smartest person that I know. And so I think that a lot of value that I add is paying attention to what these people do and supporting them as well as I can.
+
+Citizen Web3 
+Last one. Dead or alive, imaginary, made up or a real personage. Could be family member, writer, coder, I don't know, singer. Could be a religious figure, not a guru, but it's a personage that when you kind of down and you feel stuck and nothing is going, thinking about them doesn't like solve everything, but kind of like gives a...
+
+easier on you and and and helps you to like okay yeah i can keep on going you know like that kind of thing it's it's it's not an easy one i know
+
+Nixo 
+I don't have an answer for this one, I'm not sure.
+
+Citizen Web3 
+It doesn't have to be. No, you don't have to have one. No, no, that's good. You don't have to have one. That's good. That's good. You don't have to have one. That's good. In a way, you kind of answered. He said people who you work with, you know, and you mentioned before. yeah. Nixa, I want to thank you very, very, very much for your time, for your answers. This is by the way, going to goodbye. Excuse me. This is going to be a goodbye just for the listeners. Please don't hang up just yet. Other than that.
+
+Thank you very, very, very much for your time and your answers and everybody who tuned in. Thank you and see you next week. Bye, Nixo.
+
+Nixo 
+Thank you so much for having me.
+
+Citizen Web3
+Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
