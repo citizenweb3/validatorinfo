@@ -11,7 +11,11 @@ concurrency:
 
 jobs:
   route:
-    if: startsWith(github.event.label.name, 'agent:')
+    if: >-
+      startsWith(github.event.label.name, 'agent:') &&
+      github.event.label.name != 'agent:seo-vi' &&
+      github.event.label.name != 'agent:seo-cw3' &&
+      github.event.label.name != 'agent:biz-dev'
     runs-on: ubuntu-latest
     outputs:
       runner: ${{ steps.pick.outputs.runner }}
@@ -22,9 +26,6 @@ jobs:
           LABEL: ${{ github.event.label.name }}
         run: |
           case "$LABEL" in
-            agent:seo-vi|agent:seo-cw3|agent:biz-dev)
-              echo "runner=content" >> $GITHUB_OUTPUT
-              ;;
             *)
               echo "runner=builder" >> $GITHUB_OUTPUT
               ;;
@@ -50,6 +51,7 @@ jobs:
       - name: Install dependencies and generate Prisma
         timeout-minutes: 30
         run: |
+          rm -rf .next
           if [ -f node_modules/.yarn-integrity ]; then
             echo "node_modules cached, skipping install"
           else
@@ -133,7 +135,7 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
           BRANCH="${{ steps.branch.outputs.branch }}"
-          if [ "$(git log origin/dev..$BRANCH --oneline | wc -l)" -eq 0 ]; then
+          if [ "$(git log origin/updates/dev-update..$BRANCH --oneline | wc -l)" -eq 0 ]; then
             echo "No commits to push"
             exit 1
           fi
@@ -151,5 +153,5 @@ jobs:
           gh pr create \
             --title "feat: ${ISSUE_TITLE}" \
             --body "$PR_BODY" \
-            --base dev \
+            --base updates/dev-update \
             --head "$BRANCH"
