@@ -5,7 +5,7 @@ import logger from '@/logger';
 import podcastService from '@/services/podcast-service';
 import { PODCAST_EMBEDDING_MODEL_ID, PODCAST_EMBEDDING_DIMENSIONS } from '@/server/config/podcast-config';
 
-const { logError } = logger('ai-tools:podcast');
+const { logError } = logger('ai-tools:knowledge-base');
 
 const EMBEDDING_MODEL = google.textEmbeddingModel(PODCAST_EMBEDDING_MODEL_ID);
 
@@ -19,9 +19,9 @@ const embedQuery = async (query: string): Promise<number[]> => {
 };
 
 export const podcastTools = {
-  searchPodcastInsights: tool({
+  searchKnowledgeBase: tool({
     description:
-      'Search Citizen Web3 podcast transcripts (~150+ episodes) for opinions, values, insights and quotes from validators, networks, projects, and people in the blockchain ecosystem. Use when user asks about opinions, values, beliefs, positions, or philosophy of any ecosystem participant.',
+      'Search Citizen Web3 knowledge base: podcast transcripts (~150+ episodes), project documentation, manifesto, and infrastructure details. Use for opinions, values, beliefs, philosophy, or any questions about Citizen Web3 as a project and validator.',
     inputSchema: z.object({
       query: z.string().describe('Semantic search query, e.g. "privacy importance", "decentralization values"'),
       validatorId: z.number().optional().describe('Optional: limit search to specific validator'),
@@ -33,34 +33,26 @@ export const podcastTools = {
         const embedding = await embedQuery(query);
         const OVERFETCH = 40;
         const RESULT_LIMIT = 15;
-        const MAX_PER_EPISODE = 2; // best GUEST + best HOST per episode
+        const MAX_PER_SOURCE = 2;
 
         const raw = await podcastService.searchChunks(embedding, OVERFETCH, validatorId, speakerRole);
 
         if (raw.length === 0) {
-          return { results: [], message: 'No relevant podcast content found for this query.' };
+          return { results: [], message: 'No relevant knowledge base content found for this query.' };
         }
 
-        const MAX_HOST_TOTAL = 3;
-        const episodeCounts = new Map<string, { guest: number; host: number }>();
-        let totalHost = 0;
+        const episodeCounts = new Map<string, number>();
         const deduped = raw.filter((r) => {
           const key = r.episodeSlug;
-          const counts = episodeCounts.get(key) || { guest: 0, host: 0 };
-          const isHost = r.speakerRole === 'HOST';
-
-          if (isHost && (counts.host >= 1 || totalHost >= MAX_HOST_TOTAL)) return false;
-          if (!isHost && counts.guest >= (MAX_PER_EPISODE - 1)) return false;
-
-          if (isHost) { counts.host++; totalHost++; }
-          else counts.guest++;
-          episodeCounts.set(key, counts);
+          const count = episodeCounts.get(key) || 0;
+          if (count >= MAX_PER_SOURCE) return false;
+          episodeCounts.set(key, count + 1);
           return true;
         });
 
         const results = deduped.slice(0, RESULT_LIMIT);
 
-        const mapResult = (r: (typeof results)[number]) => ({
+        const mapped = results.map((r) => ({
           quote: r.content,
           context: r.question,
           speakerRole: r.speakerRole,
@@ -71,16 +63,12 @@ export const podcastTools = {
           episodeTitle: r.episodeTitle,
           episodeUrl: r.episodeUrl,
           similarity: Math.round(r.similarity * 100) / 100,
-        });
-
-        const hostEntries = results.filter((r) => r.speakerRole === 'HOST');
-        const guestEntries = results.filter((r) => r.speakerRole !== 'HOST');
-        const mapped = [...hostEntries, ...guestEntries].map(mapResult);
+        }));
 
         return { results: mapped };
       } catch (error) {
-        logError(`searchPodcastInsights failed: ${error instanceof Error ? error.message : String(error)}`);
-        return { error: 'Failed to search podcast insights' };
+        logError(`searchKnowledgeBase failed: ${error instanceof Error ? error.message : String(error)}`);
+        return { error: 'Failed to search knowledge base' };
       }
     },
   }),
