@@ -21,7 +21,6 @@ fi
 if command -v gitnexus &>/dev/null; then
     echo "--- CONFIGURING GITNEXUS MCP ---"
     claude mcp add gitnexus -s user -- gitnexus mcp 2>/dev/null || true
-fi
 
 # Context7 MCP (library documentation)
 echo "--- CONFIGURING CONTEXT7 MCP ---"
