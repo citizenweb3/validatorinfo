@@ -1,0 +1,104 @@
+name: Content Approval Publisher
+on:
+  issues:
+    types: [labeled]
+
+concurrency:
+  group: content-approve-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event.label.name == 'status:approved'
+    runs-on: [self-hosted, content]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+          clean: false
+
+      - name: Install dependencies and generate Prisma
+        timeout-minutes: 30
+        run: |
+          if [ -f node_modules/.yarn-integrity ]; then
+            echo "node_modules cached, skipping install"
+          else
+            yarn install --frozen-lockfile || yarn install
+          fi
+          npx prisma generate 2>/dev/null || true
+
+      - name: Publish approved content
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WORKFLOW_NAME: content-approve
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          LABELS=$(gh issue view $ISSUE_NUMBER --json labels -q '.labels[].name')
+          BODY=$(gh issue view $ISSUE_NUMBER --json body -q '.body')
+          COMMENTS=$(gh issue view $ISSUE_NUMBER --json comments -q '.comments[-1].body')
+
+          AGENT_FILE=".claude/agents/seo-vi.md"
+          AGENT_ROLE="seo-vi"
+          for ROLE in seo-vi seo-cw3 biz-dev; do
+            if echo "$LABELS" | grep -q "agent:$ROLE"; then
+              AGENT_FILE=".claude/agents/${ROLE}.md"
+              AGENT_ROLE="$ROLE"
+              break
+            fi
+          done
+
+          AGENT_VOICE=$(cat "$AGENT_FILE")
+
+          ./agents-tools/run-agent.sh \
+            --agent "$AGENT_ROLE" --role content --trigger label \
+            --issue "$ISSUE_NUMBER" \
+            -- "${AGENT_VOICE}
+
+          ## TASK: Publish approved content
+
+          The following content was reviewed and approved by a human.
+          Publish it to the platforms specified.
+
+          Issue #${ISSUE_NUMBER}: ${ISSUE_TITLE}
+          Original task: ${BODY}
+          Labels: ${LABELS}
+
+          Last agent comment (contains the approved draft):
+          ${COMMENTS}
+
+          Instructions:
+          1. Extract the draft content from the last agent comment (inside the '### Draft' section)
+          2. Determine target platforms from labels (platform:twitter, platform:telegram, platform:discord)
+             If no platform labels: post to ALL platforms
+          3. Post to each platform using:
+             - node agents-tools/post-twitter.js --text '<content>'
+             - node agents-tools/post-telegram.js --text '<content>'
+             - node agents-tools/post-discord.js --text '<content>'
+          4. After EACH post, log it:
+             ./agents-tools/log-social.sh --agent ${AGENT_ROLE} --platform <platform> --action post \
+               --account therealvalinfo --content '<post text>' \
+               --result <success|failure> --response '<json response>'
+          5. Comment on Issue with published links:
+             ## Published
+             - Twitter: [url]
+             - Telegram: [url]
+             - Discord: posted
+          6. Update labels: remove status:approved, add status:published
+             gh issue edit ${ISSUE_NUMBER} --remove-label 'status:approved' --remove-label 'status:pending-review'
+             gh issue edit ${ISSUE_NUMBER} --add-label 'status:published'
+          7. Close the Issue:
+             gh issue close ${ISSUE_NUMBER}
+
+          Rules:
+          - Post EXACTLY what was approved, do not modify the content
+          - If a platform fails, report it in the Issue comment but continue with others
+          - If ALL platforms fail (e.g. no API keys), comment explaining the failure and do NOT close the Issue
+          - Do NOT use pkill, killall, or any command that kills processes by name"
+
+          if [ $? -ne 0 ]; then
+            echo "::error::Content publish failed for Issue #${ISSUE_NUMBER}"
+            exit 1
+          fi

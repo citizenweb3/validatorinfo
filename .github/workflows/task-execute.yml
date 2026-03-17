@@ -11,7 +11,11 @@ concurrency:
 
 jobs:
   route:
-    if: startsWith(github.event.label.name, 'agent:')
+    if: >-
+      startsWith(github.event.label.name, 'agent:') &&
+      github.event.label.name != 'agent:seo-vi' &&
+      github.event.label.name != 'agent:seo-cw3' &&
+      github.event.label.name != 'agent:biz-dev'
     runs-on: ubuntu-latest
     outputs:
       runner: ${{ steps.pick.outputs.runner }}
@@ -22,9 +26,6 @@ jobs:
           LABEL: ${{ github.event.label.name }}
         run: |
           case "$LABEL" in
-            agent:seo-vi|agent:seo-cw3|agent:biz-dev)
-              echo "runner=content" >> $GITHUB_OUTPUT
-              ;;
             *)
               echo "runner=builder" >> $GITHUB_OUTPUT
               ;;

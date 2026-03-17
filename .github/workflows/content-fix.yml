@@ -1,0 +1,116 @@
+name: Content Fix (Revise Draft)
+on:
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group: content-fix-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    if: >-
+      github.event.issue.state == 'open' &&
+      contains(github.event.comment.body, '/fix') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+    runs-on: [self-hosted, content]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          fetch-depth: 0
+          clean: false
+
+      - name: Check issue has pending-review label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          LABELS=$(gh issue view $ISSUE_NUMBER --json labels -q '.labels[].name')
+          if ! echo "$LABELS" | grep -q "status:pending-review"; then
+            echo "Issue does not have status:pending-review label, skipping"
+            exit 0
+          fi
+
+      - name: Install dependencies and generate Prisma
+        timeout-minutes: 30
+        run: |
+          if [ -f node_modules/.yarn-integrity ]; then
+            echo "node_modules cached, skipping install"
+          else
+            yarn install --frozen-lockfile || yarn install
+          fi
+          npx prisma generate 2>/dev/null || true
+
+      - name: Revise draft
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WORKFLOW_NAME: content-fix
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          FIX_COMMENT: ${{ github.event.comment.body }}
+        run: |
+          LABELS=$(gh issue view $ISSUE_NUMBER --json labels -q '.labels[].name')
+          BODY=$(gh issue view $ISSUE_NUMBER --json body -q '.body')
+
+          # Get all comments to find the last agent draft
+          ALL_COMMENTS=$(gh issue view $ISSUE_NUMBER --json comments -q '.comments[].body')
+
+          AGENT_FILE=".claude/agents/seo-vi.md"
+          AGENT_ROLE="seo-vi"
+          for ROLE in seo-vi seo-cw3 biz-dev; do
+            if echo "$LABELS" | grep -q "agent:$ROLE"; then
+              AGENT_FILE=".claude/agents/${ROLE}.md"
+              AGENT_ROLE="$ROLE"
+              break
+            fi
+          done
+
+          AGENT_VOICE=$(cat "$AGENT_FILE")
+
+          ./agents-tools/run-agent.sh \
+            --agent "$AGENT_ROLE" --role content --trigger comment \
+            --issue "$ISSUE_NUMBER" \
+            -- "${AGENT_VOICE}
+
+          ## TASK: Revise content draft based on feedback
+
+          Issue #${ISSUE_NUMBER}: ${ISSUE_TITLE}
+          Original task: ${BODY}
+
+          Previous comments (includes your earlier draft):
+          ${ALL_COMMENTS}
+
+          Human feedback (fix request):
+          ${FIX_COMMENT}
+
+          Instructions:
+          1. Find your previous draft in the comments (look for '## Draft for Review' section)
+          2. Read the human's /fix feedback carefully
+          3. Revise the draft according to the feedback
+          4. You may query the database again if the feedback requires new data
+          5. Comment on the Issue with a NEW revised draft using the same format:
+             ## Draft for Review (Revised)
+             **Autonomy Level:** [level] ([reason])
+             **Target Platforms:** [list]
+             **Changes made:** [what you changed based on feedback]
+             ### Draft
+             > [revised content]
+             ### Data Sources
+             - [DB queries and sources used]
+             ### Agent Notes
+             [any notes]
+          6. Do NOT change any labels
+          7. Do NOT close the Issue
+
+          Rules:
+          - Address ALL points from the /fix feedback
+          - Keep the same autonomy level unless feedback changes the nature of the content
+          - Always cite data sources
+          - Do NOT use pkill, killall, or any command that kills processes by name"
+
+          if [ $? -ne 0 ]; then
+            echo "::error::Content fix failed for Issue #${ISSUE_NUMBER}"
+            exit 1
+          fi
