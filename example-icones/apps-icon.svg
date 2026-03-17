@@ -1,7 +1,20 @@
 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="1" width="26" height="26" rx="7" stroke="#3E3E3E" stroke-width="2"/>
-<rect x="4.21206" y="4.21206" width="7.98966" height="7.98966" rx="1.65" stroke="white" stroke-width="0.7"/>
-<rect x="4.21206" y="15.7982" width="7.98966" height="7.98966" rx="1.65" stroke="white" stroke-width="0.7"/>
-<rect x="16.281" y="15.7982" width="7.98966" height="7.98966" rx="1.65" stroke="white" stroke-width="0.7"/>
-<path d="M20.8279 4.47803V7.42627H24.0056V8.98096H20.8279V11.936H19.2341V8.98096H16.0642V7.42627H19.2341V4.47803H20.8279Z" fill="black" stroke="#E5C46B" stroke-width="0.7"/>
+  <!-- 2x2 grid of app squares with a plus in top-right -->
+  <rect x="2" y="2" width="10" height="10" rx="2" stroke="#3E3E3E" stroke-width="1.5" fill="none"/>
+  <rect x="2" y="16" width="10" height="10" rx="2" stroke="#3E3E3E" stroke-width="1.5" fill="none"/>
+  <rect x="16" y="16" width="10" height="10" rx="2" stroke="#3E3E3E" stroke-width="1.5" fill="none"/>
+  <!-- Plus icon in top-right quadrant -->
+  <rect x="16" y="2" width="10" height="10" rx="2" stroke="#E5C46B" stroke-width="1.5" fill="none"/>
+  <line x1="21" y1="4.5" x2="21" y2="9.5" stroke="#E5C46B" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="18.5" y1="7" x2="23.5" y2="7" stroke="#E5C46B" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Pixel dots inside squares for retro feel -->
+  <rect x="5" y="5" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="9" y="5" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="5" y="9" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="5" y="19" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="9" y="19" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="5" y="23" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="19" y="19" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="23" y="19" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
+  <rect x="19" y="23" width="2" height="2" fill="#3E3E3E" rx="0.5"/>
 </svg>
